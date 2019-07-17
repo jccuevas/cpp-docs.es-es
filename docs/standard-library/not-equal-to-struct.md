@@ -7,12 +7,12 @@ helpviewer_keywords:
 - not_equal_to function
 - not_equal_to struct
 ms.assetid: 333fce09-4f51-44e0-ba26-533bccffd485
-ms.openlocfilehash: 8dc0e5710790714bab2c0109db3a4aa41f0acbaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ee1ce120490b91a5f904109f49bf36d88e6261f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223602"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243538"
 ---
 # <a name="notequalto-struct"></a>not_equal_to (struct)
 
@@ -39,12 +39,13 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*, *T*, *U* cualquier tipo que admita un `operator!=` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U*\
+Cualquier tipo que admite un `operator!=` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda*<br/>
+*Izquierda*\
 Operando izquierdo de la operación de desigualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha*<br/>
+*Correcto*\
 Operando derecho de la operación de desigualdad. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -106,20 +107,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 1 4 5 8 9 )
 The vector v2 = ( -0 1 -4 5 -8 9 )
 The result of the element-wise not_equal_to comparsion
 between v1 & v2 is: ( 0 0 1 0 1 0 )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

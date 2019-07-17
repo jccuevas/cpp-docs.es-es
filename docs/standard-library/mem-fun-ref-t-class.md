@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 0eb7d20037598e1fa03fa7bf8e1d6b79a788ae1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0879736863a9b8052d19cc86dc5636ba14bcf993
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412909"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240608"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t (Clase)
 
@@ -26,16 +26,15 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
     Result (Type::* _Pm)());
 
     Result operator()(Type& left) const;
-
 };
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pm*<br/>
+*_Pm*\
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*left*<br/>
+*Izquierda*\
 El objeto que la *_Pm* función miembro se llama en.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -44,19 +43,8 @@ Una función unaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` para que devuelva ( **left**.* `_Pm`)( ).
+La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva (**izquierdo**. * `_Pm`) ().
 
 ## <a name="example"></a>Ejemplo
 
 Normalmente, no se usa el constructor de `mem_fun_ref_t` directamente; la función del asistente `mem_fun_ref` se usa para adaptar funciones miembro. Vea [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

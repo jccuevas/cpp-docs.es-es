@@ -7,22 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385224"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245226"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 Define varios tipos y funciones básicos para el funcionamiento de iostreams. Este encabezado se suele incluir automáticamente mediante otro encabezado de iostreams; rara vez se incluye directamente.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <ios>
-```
+**Encabezado**: \<ios >
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> El \<ios > biblioteca usa la `#include <iosfwd>` instrucción.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -36,9 +39,11 @@ istr>> noskipws;
 
 llama a [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
+## <a name="members"></a>Miembros
+
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|||
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|Es compatible con la clase ios de la antigua biblioteca iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Admite operaciones internas.|
@@ -56,6 +61,7 @@ llama a [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Configura los indicadores de un objeto `ios_base` para que utilicen un formato de presentación predeterminado para valores float.|
 |[fixed](../standard-library/ios-functions.md#fixed)|Especifica que un número de punto flotante se muestre en notación de decimal fijo.|
 |[hex](../standard-library/ios-functions.md#hex)|Especifica que las variables de entero aparezcan en notación de base 16.|
+|[hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|Hace que el signo de un número esté justificado a la izquierda y el número se alinee a la derecha.|
 |[left](../standard-library/ios-functions.md#left)|Hace que el texto con un ancho menor que el ancho de salida aparezca en el vaciado de flujo con el margen izquierdo.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Especifica que las variables de tipo [bool](../cpp/bool-cpp.md) aparezcan como 1 o 0 en el flujo.|
@@ -75,9 +81,19 @@ llama a [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|Hace que la salida se procese cuando el búfer no está lleno.|
 |[uppercase](../standard-library/ios-functions.md#uppercase)|Especifica que los dígitos hexadecimales y el exponente en notación científica aparezcan en mayúscula.|
 
+### <a name="error-reporting"></a>Informe de errores
+
+|||
+|-|-|
+|[io_errc](../standard-library/ios-functions.md#io_errc)||
+|[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
+|[iostream_category](../standard-library/ios-functions.md#iostream_category)||
+|[make_error_code](../standard-library/ios-functions.md#make_error_code)||
+|[make_error_condition](../standard-library/ios-functions.md#make_error_condition)||
+
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|La clase de plantilla describe las funciones de almacenamiento y miembro comunes tanto a los flujos de entrada (de la clase de plantilla [basic_istream](../standard-library/basic-istream-class.md)) como a los de salida (de la clase de plantilla [basic_ostream](../standard-library/basic-ostream-class.md)) que dependen de los parámetros de plantilla.|
 |[fpos](../standard-library/fpos-class.md)|La clase de plantilla describe un objeto que puede almacenar toda la información necesaria para restaurar un indicador de posición de archivo arbitraria en cualquier flujo.|

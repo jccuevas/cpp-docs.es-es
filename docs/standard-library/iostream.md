@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 18d6a8517d71cfa9c7e17a45c97f77977ec778f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa90a861194275d8c82a407e2ca8db6e757aab35
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385146"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245225"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-Declara los objetos que controlan la lectura y escritura en los flujos estándar. Suele ser el único encabezado que es necesario incluir para realizar la entrada y salida de un programa de C++.
+Declara los objetos que controlan la lectura y escritura en los flujos estándar. Este se incluyen a menudo es el único encabezado deberá entradas y salidas de un C++ programa.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,19 +31,22 @@ Declara los objetos que controlan la lectura y escritura en los flujos estándar
 #include <iostream>
 ```
 
+> [!NOTE]
+> El \<iostream > biblioteca usa la `#include <ios>`, `#include <streambuf>`, `#include <istream>`, y `#include <ostream>` instrucciones.
+
 ## <a name="remarks"></a>Comentarios
 
 Los objetos se dividen en dos grupos:
 
-- [cin](#cin), [cout](#cout), [cerr](#cerr) y [clog](#clog) están orientados a bytes y realizan transferencias convencionales byte por byte.
+- [CIN](#cin), [cout](#cout), [cerr](#cerr), y [clog](#clog) están orientados a bytes y realizar transferencias convencionales de bytes de una vez.
 
 - [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr) y [wclog](#wclog) se orientan a caracteres anchos y traducen en ambas direcciones los caracteres anchos que el programa manipula internamente.
 
-Tras realizar determinadas operaciones en un flujo, como la entrada estándar, no es posible realizar operaciones de orientación en ese mismo flujo. Por lo tanto, un programa no puede funcionar indistintamente tanto con [cin](#cin) como con [wcin](#wcin), por ejemplo.
+Una vez que realice determinadas operaciones en una secuencia, como la entrada estándar, no puede hacer operaciones de orientación en la misma secuencia. Por lo tanto, un programa no puede funcionar indistintamente tanto [cin](#cin) y [wcin](#wcin), por ejemplo.
 
-Todos los objetos que se declaran en este encabezado tienen en común una propiedad peculiar: se puede suponer que se construyen antes que cualquier objeto estático que se defina, en una unidad de traducción que incluye \<iostream>. De igual forma, se puede suponer que estos objetos no se destruyen antes que los destructores de todos esos objetos estáticos que se definen. (Sin embargo, los flujos de salida se vacían durante la finalización del programa). Por lo tanto, puede leer o escribir sin ningún riesgo en los flujos estándar antes de iniciar el programa y después de la finalización del programa.
+Todos los objetos que declaran en este encabezado una propiedad peculiar: se puede suponer que se construyen antes de cualquier objeto estático que defina, en una unidad de traducción que incluye \<iostream >. Igualmente, puede asumir que estos objetos no se destruyen antes que los destructores de todos esos objetos estáticos que defina. (Sin embargo, los flujos de salida se vacían durante la finalización del programa). Por lo tanto, puede leer o escribir sin ningún riesgo en los flujos estándar antes de iniciar el programa y después de la finalización del programa.
 
-Pero esta garantía no es universal. Un constructor estático puede llamar a una función en otra unidad de traducción. La función a la que se llama no puede suponer que se han construido los objetos que se declaran en el encabezado, dada la incertidumbre del orden con el que las unidades de traducción participan en la construcción estática. Para usar esos objetos en este contexto, primero debe construir un objeto de clase [ios_base::Init](../standard-library/ios-base-class.md#init).
+Esta garantía no es universal, sin embargo. Un constructor estático puede llamar a una función en otra unidad de traducción. La función llamada no puede suponer que se han construido los objetos declarados en este encabezado, dada la incertidumbre del orden en la traducción con unidades de participan en la construcción estática. Para usar esos objetos en este contexto, primero debe construir un objeto de clase [ios_base::Init](../standard-library/ios-base-class.md#init).
 
 ### <a name="global-stream-objects"></a>Objetos de flujo global
 
@@ -58,7 +61,7 @@ Pero esta garantía no es universal. Un constructor estático puede llamar a una
 |[wclog](#wclog)|Especifica el flujo global `wclog`.|
 |[wcout](#wcout)|Especifica el flujo global `wcout`.|
 
-###  <a name="cerr"></a>  cerr
+###  <a name="cerr"></a> Cerr
 
 El objeto `cerr` controla la salida a un búfer de flujo asociado al objeto `stderr`, declarado en \<cstdio>.
 
@@ -104,7 +107,7 @@ int main( )
 }
 ```
 
-###  <a name="cin"></a>  cin
+###  <a name="cin"></a> CIN
 
 Especifica el flujo global `cin`.
 
@@ -122,7 +125,7 @@ El objeto controla las extracciones de la entrada estándar como un flujo de byt
 
 #### <a name="example"></a>Ejemplo
 
-En este ejemplo, `cin` establece el bit de error en el flujo cuando encuentra caracteres no numéricos. El sistema borra el bit de error y quita el carácter no válido del flujo para continuar.
+En este ejemplo, `cin` establece el bit de error en la secuencia en cuanto a través de los caracteres no numéricos. El sistema borra el bit de error y quita el carácter no válido de la secuencia para continuar.
 
 ```cpp
 // iostream_cin.cpp
@@ -152,11 +155,10 @@ int main()
 ```
 
 ```Output
-
 2
 ```
 
-###  <a name="clog"></a>  clog
+###  <a name="clog"></a> CLOG
 
 Especifica el flujo global `clog`.
 
@@ -176,7 +178,7 @@ El objeto controla las inserciones almacenadas en búfer en la salida de error e
 
 Vea [cerr](#cerr) para obtener un ejemplo que usa `clog`.
 
-###  <a name="cout"></a>  cout
+###  <a name="cout"></a> cout
 
 Especifica el flujo global `cout`.
 
@@ -196,7 +198,7 @@ El objeto controla las inserciones en la salida estándar como un flujo de bytes
 
 Vea [cerr](#cerr) para obtener un ejemplo que usa `cout`.
 
-###  <a name="wcerr"></a>  wcerr
+### <a name="wcerr"></a> wcerr
 
 Especifica el flujo global `wcerr`.
 
@@ -216,7 +218,7 @@ El objeto controla las inserciones no almacenadas en búfer en la salida de erro
 
 Vea [cerr](#cerr) para obtener un ejemplo que usa `wcerr`.
 
-###  <a name="wcin"></a>  wcin
+### <a name="wcin"></a> wcin
 
 Especifica el flujo global `wcin`.
 
@@ -236,7 +238,7 @@ El objeto controla las extracciones de la entrada estándar como un flujo ancho.
 
 Vea [cerr](#cerr) para obtener un ejemplo que usa `wcin`.
 
-###  <a name="wclog"></a>  wclog
+### <a name="wclog"></a> wclog
 
 Especifica el flujo global `wclog`.
 
@@ -256,7 +258,7 @@ El objeto controla las inserciones almacenadas en búfer en la salida de error e
 
 Vea [cerr](#cerr) para obtener un ejemplo que usa `wclog`.
 
-###  <a name="wcout"></a>  wcout
+### <a name="wcout"></a> wcout
 
 Especifica el flujo global `wcout`.
 
@@ -279,10 +281,9 @@ Vea [cerr](#cerr) para obtener un ejemplo que usa `wcout`.
 Las instancias `CString` de una instrucción `wcout` deben convertirse a `const wchar_t*`, como se muestra en el siguiente ejemplo.
 
 ```
+CString cs("meow");
 
-    CString cs("meow");
-
-    wcout <<(const wchar_t*) cs <<endl;
+wcout <<(const wchar_t*) cs <<endl;
 ```
 
 Para obtener más información, vea [Operaciones básicas de CString](../atl-mfc-shared/basic-cstring-operations.md).

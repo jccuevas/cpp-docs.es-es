@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], about 64-bit programming
 - programming [C++], 64-bit
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: c95a117205c7c0c1b44c7c7cf00fdc1a90fa3390
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0e2e4dcd1e7dabc2ffc8ac87b1670245101c16d0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220953"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240874"
 ---
 # <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurar los proyectos de C++ de 64 bits, x64 destinos
 
@@ -22,7 +22,7 @@ Esta sección contiene temas sobre cómo destinar 64-bit x64 herramientas de gen
 
 - [Cómo: Configurar proyectos de Visual C++ en plataformas de destino de 64 bits, x64](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Cómo: Habilitar un conjunto de herramientas de Visual C++ de 64 bits en la línea de comandos](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Cómo: Habilitar un conjunto de herramientas MSVC de 64 bits, hospedadas en x64 64 en la línea de comandos](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Problemas comunes de migración a 64 bits en Visual C++](common-visual-cpp-64-bit-migration-issues.md)
 

@@ -74,38 +74,27 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6199c97e19c18075007d5c682c2199a2e5886b29
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412857"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243832"
 ---
 # <a name="ltmemorygt-functions"></a>Funciones &lt;memory&gt;
 
-||||
-|-|-|-|
-|[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|
-|[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|
-|[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|
-|[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|
-|[static_pointer_cast](#static_pointer_cast)|[swap (Biblioteca estándar de C++)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|
-|[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|
-|[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|
-
-## <a name="addressof"></a> addressof
+## <a name="addressof"></a> AddressOf
 
 Obtiene la dirección real de un objeto.
 
 ```cpp
 template <class T>
-T* addressof(T& Val);
+    T* addressof(T& Val);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*Val*\
 Objeto o función para el que se va a obtener la dirección real.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -114,7 +103,7 @@ La dirección real del objeto o función al que hace referencia *Val*, incluso s
 
 ### <a name="remarks"></a>Comentarios
 
-## <a name="align"></a> align
+## <a name="align"></a> Alinear
 
 Encaja el almacenamiento del tamaño especificado, alineado según la especificación de alineación indicada, en la primera dirección posible del almacenamiento especificado.
 
@@ -129,16 +118,16 @@ void* align(
 
 ### <a name="parameters"></a>Parámetros
 
-*Alineación*<br/>
+*Alineación*\
 Límite de alineación que se va a intentar.
 
-*Size*<br/>
+*Tamaño*\
 Tamaño en bytes del almacenamiento alineado.
 
-*Ptr*<br/>
+*PTR*\
 Dirección inicial del bloque de almacenamiento contiguo disponible que se va a usar. Este parámetro también es un parámetro de salida y se establece para que contenga la nueva dirección inicial si la alineación se realiza correctamente. Si `align()` no se realiza correctamente, este parámetro no se modifica.
 
-*Espacio*<br/>
+*Espacio*\
 Espacio total disponible para `align()` que se va a usar para crear el almacenamiento alineado. Este parámetro también es un parámetro de salida, y contiene espacio ajustado que queda en el búfer de almacenamiento después de restar el almacenamiento alineado y cualquier sobrecarga asociada.
 
 Si `align()` no se realiza correctamente, este parámetro no se modifica.
@@ -180,21 +169,97 @@ Crea un elemento `shared_ptr` en objetos asignados y construidos para un tipo de
 
 ```cpp
 template <class Type, class Allocator, class... Types>
-shared_ptr<Type>
-allocate_shared(Allocator Alloc, Types&&... Args);
+    shared_ptr<Type> allocate_shared(Allocator Alloc, Types&&... Args);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc*<br/>
+*Alloc*\
 Asignador usado para crear objetos.
 
-*Args*<br/>
+*args*\
 Cero o más argumentos que se convierten en los objetos.
 
 ### <a name="remarks"></a>Comentarios
 
 La función crea el objeto `shared_ptr<Type>`, un puntero a `Type(Args...)` asignado y construido por *Alloc*.
+
+## <a name="atomic_compare_exchange_strong"></a> atomic_compare_exchange_strong)
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_strong(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+```
+
+## <a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak)
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_weak(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+```
+
+## <a name="atomic_compare_exchange_strong_explicit"></a> atomic_compare_exchange_strong_explicit)
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_strong_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+```
+
+## <a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit)
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_weak_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+```
+
+## <a name="atomic_exchange"></a> atomic_exchange)
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_exchange(shared_ptr<T>* p, shared_ptr<T> r);
+```
+
+## <a name="atomic_exchange_explicit"></a> atomic_exchange_explicit)
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_exchange_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+```
+
+## <a name="atomic_is_lock_free"></a> atomic_is_lock_free)
+
+```cpp
+template<class T>
+    bool atomic_is_lock_free(const shared_ptr<T>* p);
+```
+
+## <a name="atomic_load"></a> atomic_load)
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_load(const shared_ptr<T>* p);
+```
+
+## <a name="atomic_load_explicit"></a> atomic_load_explicit)
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_load_explicit(const shared_ptr<T>* p, memory_order mo);
+```
+
+## <a name="atomic_store"></a> atomic_store)
+
+```cpp
+template<class T>
+    void atomic_store(shared_ptr<T>* p, shared_ptr<T> r);
+```
+
+## <a name="atomic_store_explicit"></a> atomic_store_explicit)
+
+```cpp
+template<class T>
+    void atomic_store_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+```
 
 ## <a name="const_pointer_cast"></a> const_pointer_cast
 
@@ -202,19 +267,18 @@ Constante convertida a shared_ptr.
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-const_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> const_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo controlado por el puntero compartido devuelto.
 
-*Otros problemas*<br/>
+*Otros*\
 Tipo controlado por el puntero compartido de argumento.
 
-*Otros problemas*<br/>
+*Otros*\
 Puntero compartido de argumento.
 
 ### <a name="remarks"></a>Comentarios
@@ -251,17 +315,16 @@ sp1 == 3
 Informa a un recolector de elementos no usados de que los caracteres del bloque de memoria definidos por un puntero de dirección base y el tamaño del bloque no contienen punteros rastreables.
 
 ```cpp
-void declare_no_pointers(
-    char* ptr,
-    size_t _Size);
+void declare_no_pointers(char* ptr, size_t _Size);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*ptr*|Dirección del primer carácter que ya no contiene punteros rastreables.|
-|*_Size*|Tamaño de bloque que comienza por *ptr* que no contiene punteros rastreables.|
+*PTR*\
+Dirección del primer carácter que ya no contiene punteros rastreables.
+
+*_Tamaño*\
+Tamaño de bloque que comienza por *ptr* que no contiene punteros rastreables.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -277,7 +340,7 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*PTR*\
 Un puntero para un área de almacenamiento válida, asignada, accesible.
 
 ### <a name="remarks"></a>Comentarios
@@ -286,28 +349,55 @@ Si *ptr* no es null, la función informa a cualquier recolector de elementos no 
 
 ## <a name="default_delete"></a> default_delete
 
-Elimina los objetos asignados con **new (operador)**. Apto para el uso con `unique_ptr`.
+Elimina los objetos asignados con **new (operador)** . Apto para el uso con `unique_ptr`.
 
 ```cpp
 struct default_delete {
    constexpr default_delete() noexcept = default;
    template <class Other, class = typename enable_if<is_convertible<Other*, T*>::value, void>::type>>
-   default_delete(const default_delete<Other>&) noexcept;
+        default_delete(const default_delete<Other>&) noexcept;
    void operator()(T* Ptr) const noexcept;
 };
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Ptr*<br/>
+*PTR*\
 Puntero al objeto que se va a eliminar.
 
-*Otros problemas*<br/>
+*Otros*\
 Tipo de los elementos de la matriz que se va a borrar.
 
 ### <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un `deleter` que elimina objetos escalares asignados con **new (operador)**, adecuado para su uso con la clase de plantilla `unique_ptr`. También tiene la especialización explícita `default_delete<Type[]>`.
+La clase de plantilla describe un `deleter` que elimina objetos escalares asignados con **new (operador)** , adecuado para su uso con la clase de plantilla `unique_ptr`. También tiene la especialización explícita `default_delete<Type[]>`.
+
+## <a name="destroy_at"></a> destroy_at
+
+```cpp
+template <class T>
+    void destroy_at(T* location);
+```
+
+Igual a `location->~T()`.
+
+## <a name="destroy"></a> destruir
+
+```cpp
+template <class ForwardIterator>
+    void destroy(ForwardIterator first, ForwardIterator last);
+```
+
+Igual a `for (; first!=last; ++first) destroy_at(addressof(*first)); `.
+
+## <a name="destroy_n"></a> destroy_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator destroy_n(ForwardIterator first, Size n);
+```
+
+Igual a `for (; n > 0; (void)++first, --n) destroy_at(addressof(*first)); return first;`.
 
 ## <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
 
@@ -315,19 +405,18 @@ Conversión dinámica a shared_ptr.
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-dynamic_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> dynamic_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo controlado por el puntero compartido devuelto.
 
-*Otros problemas*<br/>
+*Otros*\
 Tipo controlado por el puntero compartido de argumento.
 
-*sp*<br/>
+*SP*\
 Puntero compartido de argumento.
 
 ### <a name="remarks"></a>Comentarios
@@ -370,24 +459,24 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="get_deleter"></a>  get_deleter
+## <a name="get_deleter"></a> get_deleter)
 
 Obtiene el eliminador de shared_ptr.
 
 ```cpp
 template <class D, class Ty>
-D* get_deleter(const shared_ptr<Ty>& sp);
+    D* get_deleter(const shared_ptr<Ty>& sp);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*D*<br/>
+*D.* \
 Tipo del eliminador.
 
-*Ty*<br/>
+*Ty*\
 Tipo controlado por el puntero compartido.
 
-*sp*<br/>
+*SP*\
 El puntero compartido.
 
 ### <a name="remarks"></a>Comentarios
@@ -456,12 +545,12 @@ Asigna almacenamiento temporal para una secuencia de elementos que no supere un 
 
 ```cpp
 template <class Type>
-pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
+    pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*count*<br/>
+*recuento*\
 El número máximo de elementos solicitados para los que va a asignarse la memoria.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -513,15 +602,13 @@ Crea y devuelve un `shared_ptr` que apunta a los objetos asignados que se constr
 
 ```cpp
 template <class Type, class... Types>
-shared_ptr<Type>
-make_shared(Types&&... _Args);
+    shared_ptr<Type> make_shared(Types&&... _Args);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*_Args*|Cero o más argumentos de constructor. La función deduce qué sobrecarga de constructor invocar según los argumentos que se proporcionan.|
+*_Args*\
+Cero o más argumentos de constructor. La función deduce qué sobrecarga de constructor invocar según los argumentos que se proporcionan.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -609,40 +696,38 @@ Crea y devuelve un elemento [unique_ptr](../standard-library/unique-ptr-class.md
 ```cpp
 // make_unique<T>
 template <class T, class... Types>
-unique_ptr<T>
-make_unique(Types&&... Args)
-{
-    return (unique_ptr<T>(new T(forward<Types>(Args)...)));
-}
+    unique_ptr<T> make_unique(Types&&... Args)
+    {
+        return (unique_ptr<T>(new T(forward<Types>(Args)...)));
+    }
 
 // make_unique<T[]>
 template <class T>
-make_unique(size_t Size)
-{
-    return (unique_ptr<T>(new Elem[Size]()));
-}
+    make_unique(size_t Size)
+    {
+        return (unique_ptr<T>(new Elem[Size]()));
+    }
 
 // make_unique<T[N]> disallowed
 template <class T, class... Types>
-typename enable_if<extent<T>::value != 0, void>::type
-make_unique(Types&&...) = delete;
+    typename enable_if<extent<T>::value != 0, void>::type make_unique(Types&&...) = delete;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*T*\
 Tipo del objeto al que apuntará el `unique_ptr`.
 
-*Tipos*<br/>
+*Types*\ (Tipos [Referencia de C#])
 Los tipos de los argumentos de constructor especificados por *Args*.
 
-*Args*<br/>
+*args*\
 Los argumentos que se pasarán al constructor del objeto de tipo *T*.
 
-*Elem*<br/>
+*Elem*\
 Una matriz de elementos de tipo *T*.
 
-*Size*<br/>
+*Tamaño*\
 Número de elementos para los que se va a asignar espacio en la nueva matriz.
 
 ### <a name="remarks"></a>Comentarios
@@ -665,7 +750,7 @@ Permite realizar comparaciones mixtas basadas en la propiedad de punteros compar
 
 ```cpp
 template <class Type>
-struct owner_less; // not defined
+    struct owner_less; // not defined
 
 template <class Type>
 struct owner_less<shared_ptr<Type>> {
@@ -700,10 +785,10 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parámetros
 
-*_left*<br/>
+*a la _izquierda*\
 Un puntero compartido o no seguro.
 
-*right*<br/>
+*Correcto*\
 Un puntero compartido o no seguro.
 
 ### <a name="remarks"></a>Comentarios
@@ -716,12 +801,12 @@ Desasigna la memoria temporal que se asignó mediante la función de plantilla `
 
 ```cpp
 template <class Type>
-void return_temporary_buffer(Type* _Pbuf);
+    void return_temporary_buffer(Type* _Pbuf);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pbuf*<br/>
+*_Pbuf*\
 Un puntero a la memoria que se va a desasignar.
 
 ### <a name="remarks"></a>Comentarios
@@ -772,19 +857,18 @@ Conversión estática a shared_ptr.
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-static_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> static_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo controlado por el puntero compartido devuelto.
 
-*Otros problemas*<br/>
+*Otros*\
 Tipo controlado por el puntero compartido de argumento.
 
-*Otros problemas*<br/>
+*Otros*\
 Puntero compartido de argumento.
 
 ### <a name="remarks"></a>Comentarios
@@ -826,30 +910,30 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="swap"></a> swap (Biblioteca estándar de C++)
+## <a name="swap"></a> intercambio
 
 Intercambiar dos objetos shared_ptr o weak_ptr.
 
 ```cpp
 template <class Ty, class Other>
-void swap(shared_ptr<Ty>& left, shared_ptr<Other>& right);
+    void swap(shared_ptr<Ty>& left, shared_ptr<Other>& right);
 
 template <class Ty, class Other>
-void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
+    void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo controlado por el puntero compartido/débil izquierdo.
 
-*Otros problemas*<br/>
+*Otros*\
 Tipo controlado por el puntero compartido/débil derecho.
 
-*left*<br/>
+*Izquierda*\
 Puntero compartido/débil izquierdo.
 
-*right*<br/>
+*Correcto*\
 Puntero compartido/débil derecho.
 
 ### <a name="remarks"></a>Comentarios
@@ -914,9 +998,7 @@ int main()
 Informa a un recolector de elementos no utilizados de que los caracteres del bloque de memoria definido por un puntero de dirección base y el tamaño del bloque pueden contener ahora punteros rastreables.
 
 ```cpp
-void undeclare_no_pointers(
-    char* ptr,
-    size_t _Size);
+void undeclare_no_pointers(char* ptr, size_t _Size);
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -929,14 +1011,13 @@ Revoca una declaración de accesibilidad para una ubicación de memoria especifi
 
 ```cpp
 template <class Type>
-Type *undeclare_reachable(Type* ptr);
+    Type *undeclare_reachable(Type* ptr);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|---------------|-----------------|
-|*ptr*|Un puntero a la dirección de memoria que va a declararse como no accesible.|
+*PTR*\
+Un puntero a la dirección de memoria que va a declararse como no accesible.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -948,18 +1029,18 @@ Copia objetos de un intervalo de origen especificado a un intervalo de destino s
 
 ```cpp
 template <class InputIterator, class ForwardIterator>
-ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, ForwardIterator dest);
+    ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, ForwardIterator dest);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*first*<br/>
+*Primero*\
 Iterador de entrada que direcciona el primer elemento del intervalo de origen.
 
-*last*<br/>
+*Último*\
 Iterador de entrada que direcciona el último elemento del intervalo de origen.
 
-*dest*<br/>
+*dest*\
 Iterador hacia delante que direcciona el primer elemento del intervalo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1061,13 +1142,13 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parámetros
 
-*first*<br/>
+*Primero*\
 Iterador de entrada que hace referencia al objeto que se va a copiar.
 
-*count*<br/>
+*recuento*\
 Tipo entero con signo o sin signo que especifica el número de veces que se va a copiar el objeto.
 
-*dest*<br/>
+*dest*\
 Iterador hacia delante que hace referencia a dónde van las nuevas copias.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1087,24 +1168,58 @@ La función de plantilla ejecuta lo siguiente:
 
 a menos que el código produzca una excepción. En ese caso, se destruyen todos los objetos construidos y la vuelve a producir excepción.
 
+## <a name="uninitialized_default_construct"></a> uninitialized_default_construct
+
+```cpp
+template <class ForwardIterator>
+    void uninitialized_default_construct(ForwardIterator first, ForwardIterator last); 
+```
+
+### <a name="remarks"></a>Comentarios
+
+Igual que:
+
+```cpp
+for (; first != last; ++first)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type;
+```
+
+## <a name="uninitialized_default_construct_n"></a> uninitialized_default_construct_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator uninitialized_default_construct_n(ForwardIterator first, Size n)
+```
+
+### <a name="remarks"></a>Comentarios
+
+Igual que:
+
+```cpp
+for (; n>0; (void)++first, --n)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type; return first;
+```
+
 ## <a name="uninitialized_fill"></a> uninitialized_fill
 
 Copia objetos de un valor especificado en un intervalo de destino sin inicializar.
 
 ```cpp
 template <class ForwardIterator, class Type>
-void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type& val);
+    void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type& val);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*first*<br/>
+*Primero*\
 Un iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a iniciar.
 
-*last*<br/>
+*Último*\
 Un iterador hacia delante que direcciona el último elemento del intervalo de destino que se va a iniciar.
 
-*val*<br/>
+*Val*\
 Valor que se usará para inicializar el intervalo de destino.
 
 ### <a name="remarks"></a>Comentarios
@@ -1165,18 +1280,18 @@ Copia objetos de un valor especificado en un número especificado de elementos a
 
 ```cpp
 template <class FwdIt, class Size, class Type>
-void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
+    void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*first*<br/>
+*Primero*\
 Iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a iniciar.
 
-*count*<br/>
+*recuento*\
 Número de elementos que se van a inicializar.
 
-*val*<br/>
+*Val*\
 Valor que se usará para inicializar el intervalo de destino.
 
 ### <a name="remarks"></a>Comentarios
@@ -1221,6 +1336,83 @@ int main() {
    for ( i = 0 ; i < N; i++ )
       cout << Array [ i ].get( ) <<  " ";
 }
+```
+
+## <a name="uninitialized_move"></a> uninitialized_move
+
+```cpp
+template <class InputIterator, class ForwardIterator>
+    ForwardIterator uninitialized_move(InputIterator first, InputIterator last, ForwardIterator result); 
+```
+
+### <a name="remarks"></a>Comentarios
+
+Igual que:
+
+```cpp
+for (; first != last; (void)++result, ++first)
+    ::new (static_cast<void*>(addressof(*result)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); 
+        return result;
+```
+
+Si se produce una excepción, algunos objetos en el intervalo podrían quedar en un estado válido, pero no especificado.
+
+## <a name="uninitialized_move_n"></a> uninitialized_move_n
+
+```cpp
+template <class InputIterator, class Size, class ForwardIterator>
+    pair<InputIterator, ForwardIterator> uninitialized_move_n(InputIterator first, Size n, ForwardIterator result);
+```
+
+### <a name="remarks"></a>Comentarios
+
+Igual que:
+
+```cpp
+for (; n > 0; ++result, (void) ++first, --n)
+    ::new (static_cast<void*>(addressof(*result)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); return {first,result};
+```
+
+Si se produce una excepción, algunos objetos en el intervalo podrían quedar en un estado válido, pero no especificado.
+
+## <a name="uninitialized_value_construct"></a> uninitialized_value_construct
+
+```cpp
+template <class ForwardIterator>
+    void uninitialized_value_construct(ForwardIterator first, ForwardIterator last);
+```
+
+### <a name="remarks"></a>Comentarios
+
+Igual que:
+
+```cpp
+for (; first != last; ++first)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type();
+```
+
+## <a name="uninitialized_value_construct_n"></a> uninitialized_value_construct_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator uninitialized_value_construct_n(ForwardIterator first, Size n);
+```
+
+Igual que:
+```cpp
+for (; n>0; (void)++first, --n)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type(); return first;
+```
+
+## <a name="uses_allocator_v"></a> uses_allocator_v
+
+```cpp
+template <class T, class Alloc>
+    inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
 ## <a name="see-also"></a>Vea también

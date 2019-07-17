@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410865"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240961"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
 Define el vector de clases de plantilla de contenedores y varias plantillas auxiliares.
 
 El `vector` es un contenedor que organiza los elementos de un tipo determinado en una secuencia lineal. Permite el acceso aleatorio rápido a cualquier elemento, así como agregar y eliminar elementos de la secuencia de forma dinámica. El `vector` es el contenedor más apropiado para una secuencia cuando el rendimiento de acceso aleatorio es importante.
+
+> [!NOTE]
+> El \<vector > biblioteca también utiliza el `#include <initializer_list>` instrucción.
 
 Para más información sobre la clase `vector`, vea [vector (Clase)](../standard-library/vector-class.md). Para más información sobre la especialización `vector<bool>`, vea [vector\<bool> (Clase)](../standard-library/vector-bool-class.md).
 
@@ -74,21 +77,23 @@ void swap (
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*<br/>
+*Tipo*\
 Parámetro de plantilla para el tipo de datos almacenados en el vector.
 
-*Allocator*<br/>
+*Asignador*\
 Parámetro de plantilla para el objeto de asignador almacenado responsable de la asignación y desasignación de memoria.
 
-*left*<br/>
+*Izquierda*\
 Primer vector (izquierdo) en una operación de comparación
 
-*right*<br/>
+*Correcto*\
 Segundo vector (derecho) en una operación de comparación.
+
+## <a name="members"></a>Miembros
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator! =](../standard-library/vector-operators.md#op_neq)|Comprueba si el objeto de vector en el lado izquierdo del operador no es igual que el objeto de vector en el lado derecho.|
 |[operator<](../standard-library/vector-operators.md#op_lt)|Comprueba si el objeto de vector en el lado izquierdo del operador es menor que el objeto de vector en el lado derecho.|
@@ -99,7 +104,7 @@ Segundo vector (derecho) en una operación de comparación.
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[vector (Clase)](../standard-library/vector-class.md)|Una clase de plantilla de contenedores de secuencias que organiza los elementos de un tipo determinado en una organización lineal y permite el acceso aleatorio rápido a cualquier elemento.|
 
@@ -107,6 +112,7 @@ Segundo vector (derecho) en una operación de comparación.
 
 |||
 |-|-|
+|[hash]()||
 |[vector\<bool> (Clase)](../standard-library/vector-bool-class.md)|Una especialización completa de la clase de plantilla vector para los elementos del tipo `bool` con un asignador para el tipo subyacente utilizado por la especialización.|
 
 ## <a name="requirements"></a>Requisitos

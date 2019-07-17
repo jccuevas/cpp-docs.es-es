@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377249"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243884"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliares.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <array>
-```
+**Encabezado:** \<array>
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> El \<matriz > biblioteca también utiliza el `#include <initializer_list>` instrucción.
+
+## <a name="members"></a>Miembros
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Almacena una secuencia de elementos de longitud fija.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Contiene el tipo de un elemento de matriz.|
@@ -33,7 +38,7 @@ Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliare
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|comparación de matriz, igual|
 |[operator!=](../standard-library/array-operators.md#op_neq)|comparación de matriz, no igual|
@@ -44,7 +49,7 @@ Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliare
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Obtiene el elemento de matriz especificado.|
 |[swap](../standard-library/array-functions.md#swap)|Intercambia el contenido de una matriz con el contenido de otra.|

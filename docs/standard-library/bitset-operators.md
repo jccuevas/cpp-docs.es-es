@@ -12,19 +12,14 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380200"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243331"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
-
-||||
-|-|-|-|
-|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)| |
 
 ## <a name="op_amp"></a> operator&amp;
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
-*right*<br/>
+*Correcto*\
 El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operador&lt;&lt;
 
 Inserta una representación de texto de la secuencia de bits en el flujo de salida.
 
@@ -91,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 Un objeto de tipo **bitset\<N>** que se va a insertar en el flujo de salida como una cadena.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -102,7 +97,7 @@ Representación de texto de la secuencia de bits en `ostr`.
 
 Las sobrecargas de función de plantilla `operator<<`, lo que permite un conjunto de bits que escribirse sin convertirla primero en una cadena. La función de plantilla ejecuta eficazmente:
 
-**ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
+**ostr** << _*derecha*. [to_string](bitset-class.md) <**CharType**, **rasgos**, **asignador**\<**CharType**>>)
 
 ### <a name="example"></a>Ejemplo
 
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="op_gt_gt"></a> Operador&gt;&gt;
 
 Lee una cadena de caracteres de bit en un conjunto de bits.
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Istr*<br/>
+*_Istr*\
 La cadena que se escribe en el flujo de entrada para insertarla en un conjunto de bits.
 
-*right*<br/>
+*Correcto*\
 El conjunto de bits que recibe los bits del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  operator^
+## <a name="op_xor"></a> operador ^
 
 Efectúa una operación bit a bit `EXCLUSIVE-OR` entre dos conjuntos de bits.
 
@@ -235,10 +230,10 @@ operator^(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
-*right*<br/>
+*Correcto*\
 El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  operator&#124;
+## <a name="op_or"></a> operador&#124;
 
 Efectúa una operación bit a bit `OR` entre dos conjuntos de bits.
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
-*right*<br/>
+*Correcto*\
 El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<bitset>](../standard-library/bitset.md)<br/>

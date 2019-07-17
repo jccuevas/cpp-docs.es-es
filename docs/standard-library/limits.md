@@ -7,26 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: c029095d5298048874a7eb6f1a41209d6a6f4779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e23c47b3eaecec92e462af7b2cc47627c5bad86a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413247"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245315"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
 Define la clase de plantilla `numeric_limits` y dos enumeraciones relativas a las representaciones de punto flotante y el redondeo.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <limits>
-```
+**Encabezado:** \<limits>
+
+**Espacio de nombres:** std
 
 ## <a name="remarks"></a>Comentarios
 
 Las especializaciones explícitas de la `numeric_limits` clase describen muchas de las propiedades de los tipos fundamentales, incluido el carácter, entero y tipos de punto flotante y **bool** que son la implementación definida en lugar de corregir las reglas del lenguaje C++. Las propiedades que se describen en \<limits> incluyen precisión, representaciones de tamaño mínimo y máximo, redondeo y errores de tipo de señalización.
+
+## <a name="members"></a>Miembros
 
 ### <a name="enumerations"></a>Enumeraciones
 
@@ -37,9 +39,9 @@ Las especializaciones explícitas de la `numeric_limits` clase describen muchas 
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
-|[numeric_limits (Clase)](../standard-library/numeric-limits-class.md)|La clase de plantilla describe propiedades aritméticas de tipos numéricos integrados.|
+|[Clase numeric_limits](../standard-library/numeric-limits-class.md)|La clase de plantilla describe propiedades aritméticas de tipos numéricos integrados.|
 
 ## <a name="see-also"></a>Vea también
 

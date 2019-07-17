@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405136"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240754"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valores
 
-|`Name`|Descripción|
+|`Name`|DESCRIPCIÓN|
 |------------|-----------------|
 |`none`|Realice el comportamiento predeterminado de la operación.|
 |`skip_existing`|No copie el archivo si ya existe, no informe de un error.|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valores
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valores
 
-|Nombre|Valor|Descripción|
+|Nombre|Valor|DESCRIPCIÓN|
 |----------|-----------|-----------------|
 |`not_found`|-1|Representa un archivo que no existe.|
 |`none`|0|Representa un archivo que no tiene ningún atributo de tipo. (No se admite).|
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|Representa un archivo FIFO en sistemas basados en UNIX. (No se admite).|
 |`socket`|7|Representa un socket en sistemas basados en UNIX. (No se admite).|
 |`unknown`|8|Representa un archivo cuyo estado no se puede determinar.|
+
+## <a name="perm_options"></a>  perm_options
+
+Incluye valores `replace`, `add`, `remove`, y `nofollow`.
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 

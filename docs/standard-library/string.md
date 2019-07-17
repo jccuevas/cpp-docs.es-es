@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412311"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245392"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -36,7 +36,7 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[string](../standard-library/string-typedefs.md#string)|Un tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo **char** como un `string`.|
 |[wstring](../standard-library/string-typedefs.md#wstring)|Un tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo **wchar_t** como un `wstring`.|
@@ -45,7 +45,7 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Concatena dos objetos de cadena.|
 |[operator!=](../standard-library/string-operators.md#op_neq)|Comprueba si el objeto de cadena del lado izquierdo del operador no es igual que el objeto de cadena del lado derecho.|
@@ -61,6 +61,7 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 |||
 |-|-|
+|[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Intercambia las matrices de caracteres de dos cadenas.|
 |[stod](../standard-library/string-functions.md#stod)|Convierte una secuencia de caracteres en un **doble**.|
 |[stof](../standard-library/string-functions.md#stof)|Convierte una secuencia de caracteres en un **float**.|
@@ -74,13 +75,13 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|Función|DESCRIPCIÓN|
 |-|-|
 |[Plantilla getLine](../standard-library/string-functions.md#getline)|Extraiga las cadenas de la secuencia de entrada línea por línea.|
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|Clase|DESCRIPCIÓN|
 |-|-|
 |[basic_string (Clase)](../standard-library/basic-string-class.md)|Clase de plantilla que describe los objetos que pueden almacenar una secuencia de objetos arbitrarios similares a caracteres.|
 |[char_traits (Struct)](../standard-library/char-traits-struct.md)|Clase de plantilla que describe los atributos asociados a un carácter de tipo CharType|

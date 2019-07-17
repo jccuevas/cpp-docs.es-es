@@ -9,22 +9,22 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159423"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243757"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 Define las funciones de biblioteca estándar de C++ que ayudan a construir *los objetos de función*, también conocida como *functors*y sus enlazadores. Un objeto de función es un objeto de un tipo que define `operator()`. Un objeto de función puede ser un puntero a función, pero por lo general el objeto se utiliza para almacenar información adicional a la que se puede tener acceso durante una llamada de función.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <functional>
-```
+**Encabezado:** \<functional>
+
+**Espacio de nombres:** std
 
 ## <a name="remarks"></a>Comentarios
 
@@ -72,18 +72,23 @@ Si un contenedor de llamadas tiene un *tipo de resultado débil*, el tipo de su 
 
 Cada contenedor de llamadas tiene un constructor de movimientos y un constructor de copias. Un *contenedor de llamadas simple* es un contenedor de llamadas que tiene un operador de asignación y cuyo constructor de copias, constructor de movimientos y operador de asignación no producen excepciones. Un *contenedor de llamadas de reenvío* es un contenedor de llamadas al que se puede llamar mediante una lista de argumentos arbitraria y que entrega los argumentos como referencias al objeto contenedor al que se puede llamar. Todos los argumentos de valor R se entregan como referencias rvalue y los argumentos de valor L se envían como referencias lvalue.
 
-## <a name="classes"></a>Clases
+## <a name="members"></a>Miembros
 
-|Clase|Descripción|
+### <a name="classes"></a>Clases
+
+|||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Clase que describe una excepción iniciada para indicar que se ha producido un error en una llamada a `operator()` en un objeto [function](../standard-library/function-class.md) porque el objeto estaba vacío.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función binaria especificada.<br/> (En desuso en C ++ 17). |
 |[binder1st](../standard-library/binder1st-class.md)|Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
 |[binder2nd](../standard-library/binder2nd-class.md)|Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
+|[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
+|[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Clase de adaptadores que permite llamar a una función miembro const que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
 |[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Clase de adaptadores que permite llamar a una función miembro const que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
 |[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Clase de adaptadores que permite llamar a una función miembro const que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de referencia.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
 |[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Clase de adaptadores que permite llamar a una función miembro const que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de puntero.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
+|[default_searcher](../standard-library/default-searcher-class.md)||
 |[function](../standard-library/function-class.md)|Clase que contiene un objeto al que se puede llamar.|
 |[hash](../standard-library/hash-class.md)|Clase que calcula un código hash para un valor.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Clase que prueba si se genera un tipo concreto llamando a `bind`.|
@@ -97,9 +102,9 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Clase que contiene una referencia.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función unaria especificada.<br/> (En desuso en C ++ 17).  |
 
-## <a name="functions"></a>Funciones
+### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Enlaza argumentos a un objeto al que se puede llamar.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Función de plantilla del asistente que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
@@ -109,6 +114,7 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Devuelve el OR lógico bit a bit (operador &#124;) de los dos parámetros.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Devuelve el XOR lógico bit a bit (operador ^) de los dos parámetros.|
 |[cref](../standard-library/functional-functions.md#cref)|Construye un `reference_wrapper` const a partir de un argumento.|
+|[invoke](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Genera un contenedor de llamadas simple.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funciones de plantilla del asistente utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Función de plantilla del asistente utilizada para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.|
@@ -119,9 +125,9 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |[ref](../standard-library/functional-functions.md#ref)|Construye un `reference_wrapper` a partir de un argumento.|
 |[swap](../standard-library/functional-functions.md#swap)|Intercambia dos objetos `function`.|
 
-## <a name="structs"></a>Estructuras
+### <a name="structs"></a>Estructuras
 
-|Struct|Descripción|
+|||
 |-|-|
 |[binary_function](../standard-library/binary-function-struct.md)|Clase base vacía que define los tipos que puede heredar la clase derivada que proporciona un objeto de función binaria.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
 |[divides](../standard-library/divides-struct.md)|La clase proporciona un objeto de función predefinido que realiza la operación aritmética de división sobre elementos de un tipo de valor especificado.|
@@ -141,15 +147,15 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |[plus](../standard-library/plus-struct.md)|La clase proporciona un objeto de función predefinido que realiza la operación aritmética de suma sobre elementos de un tipo de valor especificado.|
 |[unary_function](../standard-library/unary-function-struct.md)|Clase base vacía que define los tipos que puede heredar la clase derivada que proporciona un objeto de función unaria.<br/> (En desuso en C ++ 11, se ha quitado en C ++ 17). |
 
-## <a name="objects"></a>de la empresa
+### <a name="objects"></a>de la empresa
 
-|Object|Descripción|
+|||
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|Marcadores de posición para argumentos reemplazables.|
 
-## <a name="operators"></a>Operadores
+### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|No permite la comparación de igualdad de objetos a los que se puede llamar.|
 |[operator!=](../standard-library/functional-operators.md#op_neq)|No permite la comparación de desigualdad de objetos a los que se puede llamar.|

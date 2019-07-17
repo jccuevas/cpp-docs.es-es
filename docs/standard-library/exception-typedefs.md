@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3904393096422a8986414a253d515342c7382f0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412649"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246043"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; (Typedefs)
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a>  exception_ptr
 
@@ -43,7 +39,7 @@ A pesar de su nombre, un objeto `exception_ptr` no es en sí mismo un puntero. N
 
 Se pueden usar los operadores de igualdad (`==`) y desigualdad (`!=`) para comparar dos objetos `exception_ptr`. Los operadores no comparan el valor binario (patrón de bits) de las estructuras `EXCEPTION_RECORD` que representan las excepciones. En su lugar, los operadores comparan las indicaciones del campo de referencia de excepción de los objetos `exception_ptr`. Por tanto, un `exception_ptr` NULL y el valor NULL se consideran iguales.
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a> terminate_handler
 
 El tipo describe un puntero a una función que se puede usar como `terminate_handler`.
 
@@ -59,7 +55,7 @@ El tipo describe un puntero a una función que se puede usar como controlador de
 
 Vea [set_terminate](../standard-library/exception-functions.md#set_terminate) para obtener un ejemplo de uso de `terminate_handler`.
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a> unexpected_handler
 
 El tipo describe un puntero a una función que se puede usar como un `unexpected_handler`.
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>Ejemplo
 
 Vea [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obtener un ejemplo de uso de `unexpected_handler`.
-
-## <a name="see-also"></a>Vea también
-
-[\<exception>](../standard-library/exception.md)<br/>

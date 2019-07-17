@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: f6ec0855179e41c78f32fe45429ec0bea1ae2e59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412454"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243650"
 ---
 # <a name="ltstackgt-operators"></a>Operadores de &lt;stack&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> operador! =
 
 Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.
 
@@ -40,10 +35,10 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `stack`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -105,10 +100,10 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `stack`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -179,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operador&lt;=
 
 Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.
 
@@ -189,10 +184,10 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `stack`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -246,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operador ==
 
 Comprueba si el objeto de pila del lado izquierdo del operador es igual al objeto de pila del lado derecho.
 
@@ -256,10 +251,10 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `stack`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -321,10 +316,10 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `stack`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -380,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operador&gt;=
 
 Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.
 
@@ -390,10 +385,10 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Objeto de tipo `stack`.
 
-*right*<br/>
+*Correcto*\
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -447,7 +442,3 @@ int main( )
 The stack s1 is less than the stack s2.
 The stack s1 is greater than or equal to the stack s3.
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<stack>](../standard-library/stack.md)<br/>

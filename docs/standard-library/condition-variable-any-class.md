@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecf13974404ec6e223d5d3e7387a70526eeefcc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279065"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244658"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any (Clase)
 
@@ -37,29 +37,23 @@ class condition_variable_any;
 
 ## <a name="members"></a>Miembros
 
-### <a name="public-constructors"></a>Constructores públicos
+### <a name="constructors"></a>Constructores
 
-|Name|Descripción|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable_any](#condition_variable_any)|Construye un objeto `condition_variable_any`.|
 
-### <a name="public-methods"></a>Métodos públicos
+### <a name="functions"></a>Funciones
 
-|Name|Descripción|
-|----------|-----------------|
+|||
+|-|-|
 |[notify_all](#notify_all)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable_any`.|
 |[notify_one](#notify_one)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable_any`.|
 |[wait](#wait)|Bloquea un subproceso.|
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<condition_variable >
-
-**Espacio de nombres:** std
-
-## <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any (Constructor)
+## <a name="condition_variable_any"></a> condition_variable_any)
 
 Construye un objeto `condition_variable_any`.
 
@@ -71,7 +65,7 @@ condition_variable_any();
 
 Si no queda suficiente memoria disponible, el constructor produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error de `not_enough_memory`. Si el objeto no puede construirse porque algún otro recurso no está disponible, el constructor produce un objeto `system_error` que tiene un código de error de `resource_unavailable_try_again`.
 
-## <a name="notify_all"></a>  condition_variable_any::notify_all
+## <a name="notify_all"></a> notify_all
 
 Desbloquea todos los subprocesos que están esperando el objeto `condition_variable_any`.
 
@@ -79,7 +73,7 @@ Desbloquea todos los subprocesos que están esperando el objeto `condition_varia
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable_any::notify_one
+## <a name="notify_one"></a> notify_one
 
 Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable_any`.
 
@@ -87,7 +81,7 @@ Desbloquea uno de los subprocesos que están esperando el objeto `condition_vari
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable_any::wait
+## <a name="wait"></a> Espere
 
 Bloquea un subproceso.
 
@@ -101,10 +95,10 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck*<br/>
+*Lck*\
 Objeto `mutex` de cualquier tipo.
 
-*Pred*<br/>
+*Pred*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="remarks"></a>Comentarios
@@ -118,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable_any::wait_for
+## <a name="wait_for"></a> wait_for
 
 Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.
 
@@ -132,13 +126,13 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck*<br/>
+*Lck*\
 Objeto `mutex` de cualquier tipo.
 
-*Rel_time*<br/>
+*Rel_time*\
 Objeto `chrono::duration` que especifica la cantidad de tiempo que tiene que transcurrir hasta que el subproceso se reactive.
 
-*Pred*<br/>
+*Pred*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -161,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable_any::wait_until
+## <a name="wait_until"></a> wait_until
 
 Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.
 
@@ -187,13 +181,13 @@ void wait_until(
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck*<br/>
+*Lck*\
 Objeto de exclusión mutua.
 
-*Abs_time*<br/>
+*Abs_time*\
 Un objeto [chrono::time_point](../standard-library/time-point-class.md).
 
-*Pred*<br/>
+*Pred*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -217,8 +211,3 @@ return true;
 ```
 
 Los métodos tercero y cuarto utilizan un puntero a un objeto de tipo `xtime` para reemplazar el objeto `chrono::time_point`. El objeto `xtime` especifica el tiempo máximo que hay que esperar una señal.
-
-## <a name="see-also"></a>Vea también
-
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 8c1ed74da939c5f5cc83a2a109d32b43b5ac7f41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414053"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243350"
 ---
 # <a name="binder2nd-class"></a>binder2nd (Clase)
 
@@ -25,7 +25,6 @@ class binder2nd
     : public unaryFunction <typename Operation::first_argument_type,
     typename Operation::result_type>
 {
-public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
@@ -34,22 +33,18 @@ public:
 
     result_type operator()(const argument_type& left) const;
     result_type operator()(argument_type& left) const;
-
-protected:
-    Operation op;
-    typename Operation::second_argument_type value;
 };
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*<br/>
+*Func*\
 El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
-*right*<br/>
+*Correcto*\
 El valor al que se enlazará el segundo argumento del objeto de función binaria.
 
-*left*<br/>
+*Izquierda*\
 El valor del argumento que el objeto binario adaptado compara con el valor fijo del segundo argumento.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -58,9 +53,9 @@ El objeto de función unaria resultante de enlazar el segundo argumento del obje
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función binaria _ *Func* en `op`y una copia de *derecho* en `value`. Define su función miembro `operator()` para que devuelva **op**( `left`, **value**).
+La clase de plantilla almacena una copia de un objeto de función binaria _ *Func* en `op`y una copia de *derecho* en `value`. Define su función miembro `operator()` que devuelva **op**(`left`, **valor**).
 
-Si `Func` es un objeto de tipo `Operation` y c es una constante, a continuación, [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) es equivalente a la `binder2nd` constructor de clase `binder2nd` \<  **Operación**> ( `Func`, `c` ) y más conveniente.
+Si `Func` es un objeto de tipo `Operation` y c es una constante, a continuación, [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) es equivalente a la `binder2nd` constructor de clase `binder2nd` \<  **Operación**> (`Func`, `c`) y más conveniente.
 
 ## <a name="example"></a>Ejemplo
 
@@ -105,20 +100,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: d9a4bf5b72a134bf166fe9297aaa41610718aa8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413091"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246449"
 ---
 # <a name="logicalor-struct"></a>logical_or (struct)
 
@@ -39,12 +39,13 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*, *T*, *U* cualquier tipo que admita un `operator||` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U*\
+Cualquier tipo que admite un `operator||` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda*<br/>
+*Izquierda*\
 Operando izquierdo de la operación de disyunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha*<br/>
+*Correcto*\
 Operando derecho de la operación de disyunción lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -104,23 +105,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( true true false false true false false )
 Original deque:
 d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
 d3 = ( true true false true true true true )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
