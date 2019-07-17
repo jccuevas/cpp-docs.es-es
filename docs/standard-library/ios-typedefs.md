@@ -9,21 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 1f0ff93c22263ca4b35377b5d9af089816e8895a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159267"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245279"
 ---
 # <a name="ltiosgt-typedefs"></a>Definiciones de tipo &lt;ios&gt;
 
-||||
-|-|-|-|
-|[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|
-|[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|
-
-## <a name="ios"></a>  ios
+## <a name="ios"></a> IOS
 
 Es compatible con la clase ios de la antigua biblioteca iostream.
 
@@ -35,7 +30,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 El tipo es un sinónimo de la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
 
-## <a name="streamoff"></a>  streamoff
+## <a name="streamoff"></a> streamoff
 
 Admite operaciones internas.
 
@@ -51,7 +46,7 @@ Admite operaciones internas.
 
 El tipo es un entero con signo que describe un objeto que puede almacenar un desplazamiento de bytes implicado en varias operaciones de posicionamiento de flujo. La representación tiene al menos 32 bits de valor. No es necesariamente lo bastante grande como para representar una posición de byte arbitraria en un flujo. El valor `streamoff(-1)` suele indicar un desplazamiento erróneo.
 
-## <a name="streampos"></a>  streampos
+## <a name="streampos"></a> streampos
 
 Contiene la posición actual del puntero de búfer o el puntero de archivo.
 
@@ -134,7 +129,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 El tipo es un sinónimo de la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
 
-## <a name="wstreampos"></a>  wstreampos
+## <a name="wstreampos"></a> wstreampos
 
 Contiene la posición actual del puntero de búfer o el puntero de archivo.
 
@@ -167,7 +162,3 @@ int main( )
 ```Output
 7
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<ios>](../standard-library/ios.md)<br/>

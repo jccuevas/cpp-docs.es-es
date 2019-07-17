@@ -6,38 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365421"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246655"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 Define la clase de plantilla valarray y numerosas funciones y clases de plantilla auxiliares.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <valarray>
-```
+**Encabezado:** \<valarray>
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> El \<valarray > biblioteca usa la ' #include < initializer_list >' instrucción.
 
 ## <a name="remarks"></a>Comentarios
 
 A estas funciones y clases de plantilla se les permite una latitud inusual con el fin de mejorar el rendimiento. En concreto, cualquier función que devuelve el tipo `valarray<T1>` puede devolver un objeto de algún otro tipo T2. En ese caso, cualquier función que acepta uno o más argumentos de tipo `valarray<T2>` debe tener sobrecargas que acepten combinaciones arbitrarias de esos argumentos, cada uno de ellos se sustituirá por un argumento de tipo T2.
 
+## <a name="members"></a>Miembros
+
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al valor absoluto de los elementos de la valarray de entrada.|
 |[acos](../standard-library/valarray-functions.md#acos)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al arcocoseno de los elementos de la valarray de entrada.|
 |[asin](../standard-library/valarray-functions.md#asin)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al arcoseno de los elementos de la valarray de entrada.|
 |[atan](../standard-library/valarray-functions.md#atan)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al principal valor del arcotangente de los elementos de la valarray de entrada.|
 |[atan2](../standard-library/valarray-functions.md#atan2)|Devuelve una valarray cuyos elementos son iguales al arcotangente de los componentes cartesianos especificados por una combinación de constantes y elementos de valarrays.|
+|[begin](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al coseno de los elementos de la valarray de entrada.|
 |[cosh](../standard-library/valarray-functions.md#cosh)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al coseno hiperbólico de los elementos de la valarray de entrada.|
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al exponencial natural de los elementos de la valarray de entrada.|
 |[log](../standard-library/valarray-functions.md#log)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al logaritmo natural de los elementos de la valarray de entrada.|
 |[log10](../standard-library/valarray-functions.md#log10)|Opera en los elementos de una valarray de entrada, devolviendo una valarray cuyos elementos son iguales al logaritmo común o de base 10 de los elementos de la valarray de entrada.|
@@ -51,7 +58,7 @@ A estas funciones y clases de plantilla se les permite una latitud inusual con e
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|Comprueba si los elementos correspondientes de dos valarrays de igual tamaño no son iguales o si todos los elementos de una valarray no son iguales a un valor especificado del tipo de elemento de la valarray.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Obtiene el resto de dividir los elementos correspondientes de dos valarrays de igual tamaño o de dividir una valarray por un valor especificado del tipo de elemento de la valarray o de dividir un valor especificado por una valarray.|
@@ -74,7 +81,7 @@ A estas funciones y clases de plantilla se les permite una latitud inusual con e
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[gslice (Clase)](../standard-library/gslice-class.md)|Clase de utilidad para valarray que se usa para definir segmentos multidimensionales de una valarray.|
 |[gslice_array (Clase)](../standard-library/gslice-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos de segmentos generales proporcionando operaciones entre matrices de subconjuntos definidas por el segmento general de una valarray.|

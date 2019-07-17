@@ -6,26 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: b6f1cc45f9666fc0fbd2332ac7bb7e539ec77cd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223654"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243550"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
 Define varios tipos y funciones que controlan la asignación y liberación de almacenamiento bajo el control del programa. También define los componentes para la creación de informes de errores de administración de almacenamiento.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <new>
-```
+**Encabezado:** \<new>
+
+**Espacio de nombres:** std
 
 ## <a name="remarks"></a>Comentarios
 
 Algunas de las funciones declaradas en este encabezado son reemplazables. La implementación proporciona una versión predeterminada, cuyo comportamiento se describe en este documento. No obstante, un programa puede definir una función con la misma firma para reemplazar la versión predeterminada en tiempo de vinculación. La versión de reemplazo debe cumplir los requisitos descritos en este documento.
+
+## <a name="members"></a>Miembros
 
 ### <a name="objects"></a>de la empresa
 
@@ -35,30 +37,41 @@ Algunas de las funciones declaradas en este encabezado son reemplazables. La imp
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|||
 |-|-|
 |[new_handler](../standard-library/new-typedefs.md#new_handler)|Tipo que apunta a una función que se puede usar como un nuevo controlador.|
+|[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
+|[hardware_destructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
+|[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
+|[Lave](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Instala una función de usuario que se llama cuando el nuevo controlador no puede asignar memoria.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator delete](../standard-library/new-operators.md#op_delete)|Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para objetos individuales.|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para una matriz de objetos.|
 |[operator new](../standard-library/new-operators.md#op_new)|Función a la que llama una expresión new para asignar el almacenamiento para objetos individuales.|
 |[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Función a la que llama una expresión new para asignar el almacenamiento para una matriz de objetos.|
 
+### <a name="enums"></a>Enumeraciones
+
+|||
+|-|-|
+|[align_val_t](../standard-library/new-operators.md#op_align_val_t)||
+
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
-|[bad_alloc (Clase)](../standard-library/bad-alloc-class.md)|Clase que describe una excepción que se produce para indicar que una solicitud de asignación no se realizó correctamente.|
+|[bad_alloc Class](../standard-library/bad-alloc-class.md)|Clase que describe una excepción que se produce para indicar que una solicitud de asignación no se realizó correctamente.|
+|[Clase bad_array_new_length](../standard-library/bad-array-new-length.md)||
 |[nothrow_t Class](../standard-library/nothrow-t-structure.md)|Clase que se usa como parámetro de función del operador new para indicar que la función debe devolver un puntero nulo para notificar un error de asignación, en lugar de producir una excepción.|
 
 ## <a name="see-also"></a>Vea también

@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450795"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240416"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 Define instalaciones para generar números aleatorios, lo que permite crear números aleatorios distribuidos de manera uniforme.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <random>
-```
+**Encabezado**: \<aleatorio >
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> El \<aleatorio > biblioteca usa la ' #include < initializer_list >' instrucción.
 
 ## <a name="summary"></a>Resumen
 
@@ -496,7 +499,7 @@ Visual Studio dispone de dos URNG de extrema utilidad: `mt19937` y `random_devi
 |URNG|Rápido|Seguro criptográficamente|Propagable|Determinista|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|Sí|No|Sí|Sí<sup>*</sup>|
-|`random_device`|No|Sí|No|No|
+|`random_device`|Sin|Sí|Sin|Sin|
 
 <sup>* Cuando se proporciona con un valor de inicialización conocido.</sup>
 

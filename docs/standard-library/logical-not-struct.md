@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 7fd554a28775a6b625332ac250a46171dd369f50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 731b99faed6515268b93ec3a1a43c96796e49dd3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413104"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246470"
 ---
 # <a name="logicalnot-struct"></a>logical_not (struct)
 
@@ -39,10 +39,10 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*<br/>
+*Tipo*\
 Cualquier tipo que admite un `operator!` que toma un operando del tipo especificado o deducido.
 
-*Izquierda*<br/>
+*Izquierda*\
 Operando de la operación not lógica. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *tipo*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -86,21 +86,11 @@ int main( )
       cout << *iter2 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( false true false true false true false )
 The deque with its values negated is:
 d2 = ( true false true false true false true )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

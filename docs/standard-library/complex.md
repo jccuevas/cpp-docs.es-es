@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212097"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244685"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 Define la clase de plantilla contenedor `complex` y sus plantillas auxiliares.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <complex>
-```
+**Encabezado**: \<complex>
+
+**Espacio de nombres:** std
 
 ## <a name="remarks"></a>Comentarios
 
 Un número complejo es un par ordenado de números reales. En términos puramente geométricos, el plano complejo es el plano real y bidimensional. Las cualidades especiales del plano complejo que lo diferencian del plano real se deben a que tiene una estructura algebraica adicional. Esta estructura algebraica tiene dos operaciones fundamentales:
 
-- Adición, definida como (*un*, *b*) + (*c*, *d.*) = (*un* + *c* , *b* + *d.*)
+- Adición, definida como (*un*, *b*) + (*c*, *d.* ) = (*un* + *c* , *b* + *d.* )
 
-- Multiplicación definida como (*un*, *b*) \* (*c*, *d.*) = (*ac*  -  *bd*, *ad* + *bc*)
+- Multiplicación definida como (*un*, *b*) \* (*c*, *d.* ) = (*ac*  -  *bd*, *ad* + *bc*)
 
 El conjunto de números complejos con las operaciones de suma compleja y multiplicación compleja son un campo en el sentido algebraico estándar:
 
@@ -68,12 +68,20 @@ Los términos usados en estas representaciones estándar de un número complejo 
 
 A menos que se especifique lo contrario, las funciones que pueden devolver varios valores se deben devolver un valor principal de sus argumentos mayor que - π y menor que o igual a + π mantenerlos solo con valores. Todos los ángulos deben expresarse en radianes, donde hay 2π radianes (360 grados) en un círculo.
 
+## <a name="members"></a>Miembros
+
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|Calcula el módulo de un número complejo.|
+|[acos](../standard-library/complex-functions.md#acos)||
+|[acosh](../standard-library/complex-functions.md#acosh)||
 |[arg](../standard-library/complex-functions.md#arg)|Extrae el argumento de un número complejo.|
+|[asin](../standard-library/complex-functions.md#asin)||
+|[asinh](../standard-library/complex-functions.md#asinh)||
+|[atan](../standard-library/complex-functions.md#atan)||
+|[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|Devuelve el conjugado complejo de un número complejo.|
 |[cos](../standard-library/complex-functions.md#cos)|Devuelve el coseno de un número complejo.|
 |[cosh](../standard-library/complex-functions.md#cosh)|Devuelve el coseno hiperbólico de un número complejo.|
@@ -84,6 +92,7 @@ A menos que se especifique lo contrario, las funciones que pueden devolver vario
 |[norm](../standard-library/complex-functions.md#norm)|Extrae la norma de un número complejo.|
 |[polar](../standard-library/complex-functions.md#polar)|Devuelve el número complejo, que corresponde a un módulo y argumento especificados, en formato cartesiano.|
 |[pow](../standard-library/complex-functions.md#pow)|Evalúa el número complejo obtenido al elevar una base que es un número complejo a la potencia de otro número complejo.|
+|[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|Extrae el componente real de un número complejo|
 |[sin](../standard-library/complex-functions.md#sin)|Devuelve el seno de un número complejo.|
 |[sinh](../standard-library/complex-functions.md#sinh)|Devuelve el seno hiperbólico de un número complejo.|
@@ -93,7 +102,7 @@ A menos que se especifique lo contrario, las funciones que pueden devolver vario
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator!=](../standard-library/complex-operators.md#op_neq)|Prueba la igualdad entre dos números complejos, uno de los cuales o ambos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.|
 |[operator*](../standard-library/complex-operators.md#op_star)|Multiplica dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.|
@@ -106,7 +115,7 @@ A menos que se especifique lo contrario, las funciones que pueden devolver vario
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[complex\<double>](../standard-library/complex-double.md)|La clase de plantilla especializada de forma explícita describe un objeto que almacena un par ordenado de objetos, ambos de tipo **doble**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|
 |[complex\<float>](../standard-library/complex-float.md)|La clase de plantilla especializada de forma explícita describe un objeto que almacena un par ordenado de objetos, ambos de tipo **float**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|

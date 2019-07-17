@@ -1,50 +1,62 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 11/04/2016
+ms.date: 04/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.assetid: ef8e38da-7c9d-4037-9ad1-20c99febf5dc
-ms.openlocfilehash: c63421995fdabc94a7e6495df8d9937049dbba9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217344"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246808"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 Define una clase, un operador y varias plantillas que sirven de ayuda para asignar y liberar objetos.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <memory>
-```
+**Encabezado:** \<memory>
+
+**Espacio de nombres:** std
 
 ## <a name="members"></a>Miembros
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|||
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|Obtiene la dirección real de un objeto.|
 |[align](../standard-library/memory-functions.md#align)|Devuelve un puntero a un intervalo de tamaño determinado, en función de la alineación y la dirección inicial proporcionadas,|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crea un elemento `shared_ptr` en objetos asignados y construidos para un tipo determinado con un asignador especificado.|
+|[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
+|[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
+|[atomic_compare_exchange_strong_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_strong_explicit)||
+|[atomic_compare_exchange_weak_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_weak_explicit)||
+|[atomic_exchange](../standard-library/memory-functions.md#atomic_exchange)||
+|[atomic_exchange_explicit](../standard-library/memory-functions.md#atomic_exchange_explicit)||
+|[atomic_is_lock_free](../standard-library/memory-functions.md#atomic_is_lock_free)||
+|[atomic_load](../standard-library/memory-functions.md#atomic_load)||
+|[atomic_load_explicit](../standard-library/memory-functions.md#atomic_load_explicit)||
+|[atomic_store](../standard-library/memory-functions.md#atomic_store)||
+|[atomic_store_explicit](../standard-library/memory-functions.md#atomic_store_explicit)||
 |[const_pointer_cast](../standard-library/memory-functions.md#const_pointer_cast)|Const convertida en `shared_ptr`.|
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Informa a un recolector de elementos no utilizados de que los caracteres que empiezan en una dirección especificada y entran en el tamaño de bloque indicado no contienen punteros rastreables.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informa a la recolección de elementos no utilizados de que la dirección indicada es para el almacenamiento asignado y es accesible.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Elimina objetos asignados a `operator new`. Apto para el uso con `unique_ptr`.|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Forma abreviada `destroy` método.|
+|[destroy](../standard-library/memory-functions.md#destroy)|Forma abreviada `destroy` método.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Forma abreviada `destroy` método.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Conversión dinámica en `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Obtiene el delimitador de `shared_ptr`.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Devuelve el tipo de seguridad del puntero asumido por cualquier recolector de elementos no utilizados.|
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Asigna almacenamiento temporal para una secuencia de elementos que no supere un número especificado de elementos.|
 |[make_shared](../standard-library/memory-functions.md#make_shared)|Crea y devuelve un `shared_ptr` que señala al objeto asignado construido sin argumentos o con algún argumento mediante el asignador predeterminado.|
 |[make_unique](../standard-library/memory-functions.md#make_unique)|Crea y devuelve un elemento [unique_ptr](../standard-library/unique-ptr-class.md) que señala al objeto asignado construido desde cero o con algún argumento.|
-|[owner_less](../standard-library/memory-functions.md#owner_less)|Permite realizar comparaciones mixtas basadas en la propiedad de punteros compartidos y parciales.|
 |[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Una enumeración de todos los valores devueltos posibles para `get_pointer_safety`.|
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Desasigna la memoria temporal que se asignó mediante la función de plantilla `get_temporary_buffer`.|
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Conversión estática en `shared_ptr`.|
@@ -53,12 +65,19 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Informa a `garbage_collector` de que una ubicación de memoria especificada es inaccesible.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Copia objetos de un intervalo de entrada especificado en un intervalo de destino sin inicializar.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Crea una copia de un número especificado de elementos de un iterador de entrada. Las copias se colocan en un iterador hacia delante.|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Forma abreviada `uninitialized_default_construct` método.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Forma abreviada `uninitialized_construct` método.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Copia objetos de un valor especificado en un intervalo de destino sin inicializar.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Copia objetos de un valor especificado en un número especificado de elementos de un intervalo de destino sin inicializar.|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Forma abreviada `uninitialized_move` método.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Forma abreviada `uninitialized_move` método.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Forma abreviada `uninitialized_value_construct` método.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Forma abreviada `uninitialized_value_construct` método.|
+|[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|||
 |-|-|
 |[operator!=](../standard-library/memory-operators.md#op_neq)|Comprueba la desigualdad entre los objetos de asignador de una clase especificada.|
 |[operator==](../standard-library/memory-operators.md#op_eq_eq)|Comprueba la igualdad entre los objetos de asignador de una clase especificada.|
@@ -70,7 +89,7 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|La clase de plantilla describe un objeto que administra la asignación de almacenamiento y la liberación de las matrices de objetos de tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Describe un objeto que determina toda la información que necesita un contenedor habilitado como asignador.|
@@ -82,6 +101,16 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
 |[shared_ptr](../standard-library/shared-ptr-class.md)|Encapsula un puntero inteligente en el que se cuentan las referencias alrededor de un objeto asignado dinámicamente.|
 |[unique_ptr](../standard-library/unique-ptr-class.md)|Almacena un puntero a un objeto en propiedad. El puntero únicamente es propiedad de `unique_ptr`. Se destruye `unique_ptr` cuando se destruye el propietario.|
 |[weak_ptr](../standard-library/weak-ptr-class.md)|Contiene un puntero débilmente vinculado.|
+
+### <a name="structures"></a>Estructuras
+
+|||
+|-|-|
+|[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
+|[default_delete](../standard-library/default-delete-struct.md)||
+|[hash]()||
+|[owner_less](../standard-library/memory-functions.md#owner_less)|Permite realizar comparaciones mixtas basadas en la propiedad de punteros compartidos y parciales.|
+|[uses_allocator)](../standard-library/allocator-class.md#uses_allocator)||
 
 ### <a name="specializations"></a>Especializaciones
 

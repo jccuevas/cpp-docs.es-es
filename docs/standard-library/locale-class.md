@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413182"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245409"
 ---
 # <a name="locale-class"></a>locale (Clase)
 
@@ -140,19 +140,19 @@ Las reglas de formato numérico para las inserciones posteriores a `cout` son la
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[locale](#locale)|Crea una configuración regional, una copia de una configuración regional o una copia de la configuración regional donde una faceta o una categoría se ha reemplazado por una faceta o una categoría de otra configuración regional.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[category](#category)|Tipo entero que proporciona valores de máscara de bits para denotar familias de facetas estándar.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[combine](#combine)|Inserta una faceta de una configuración regional especificada en una configuración regional de destino.|
 |[name](#name)|Devuelve el nombre de configuración regional almacenado.|
@@ -166,18 +166,19 @@ Las reglas de formato numérico para las inserciones posteriores a `cout` son la
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
+|[operator=](#op_eq)|Asigna una configuración regional.|
 |[operator!=](#op_neq)|Comprueba si dos configuraciones regionales son distintas.|
 |[operator( )](#op_call)|Compara dos objetos `basic_string`.|
 |[operator==](#op_eq_eq)|Comprueba si dos configuraciones regionales son iguales.|
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|Clase|DESCRIPCIÓN|
 |-|-|
 |[facet](#facet_class)|Clase que actúa como clase base para todas las facetas de configuración regional.|
-|[identificador](#id_class)|La clase miembro proporciona un identificador único de faceta que se usa como índice para buscar facetas en una configuración regional.|
+|[id](#id_class)|La clase miembro proporciona un identificador único de faceta que se usa como índice para buscar facetas en una configuración regional.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -417,7 +418,7 @@ La clase de miembro describe el objeto de miembro estático requerido por cada f
 
 ## <a name="locale"></a>  locale::locale
 
-Crea una configuración regional, una copia de una configuración regional o una copia de la configuración regional donde una faceta o una categoría se ha reemplazado por una faceta o una categoría de otra configuración regional.
+Crea una configuración regional, una copia de una configuración regional o una copia de la configuración regional donde una faceta o una categoría se ha reemplazado por una faceta o una categoría de otra configuración regional. También incluye un destructor.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -546,6 +549,14 @@ int main( )
 ```Output
 The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
+```
+
+## <a name="op_eq"></a>  Locale:: operator =
+
+Asigna una configuración regional.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
 ```
 
 ## <a name="op_neq"></a>  locale::operator!=

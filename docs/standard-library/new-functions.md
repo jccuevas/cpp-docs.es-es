@@ -2,21 +2,62 @@
 title: Funciones &lt;new&gt;
 ms.date: 11/04/2016
 f1_keywords:
+- new/std::get_new_handler
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: b5803b5fdf44392b6096f9c9a5ebdde7f94eae59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223737"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243660"
 ---
 # <a name="ltnewgt-functions"></a>Funciones &lt;new&gt;
 
-|||
-|-|-|
-|[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|
+## <a name="get_new_handler"></a> get_new_handler
+
+```cpp
+new_handler get_new_handler() noexcept;
+```
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve el valor actual `new_handler`.
+
+## <a name="launder"></a> Lave
+
+```cpp
+template <class T>
+    constexpr T* launder(T* ptr) noexcept;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*PTR*\
+La dirección de un byte en la memoria que contiene un objeto cuyo tipo es similar a *T*.
+
+### <a name="return-value"></a>Valor devuelto
+
+Un valor de tipo *T\**  que apunta a X.
+
+### <a name="remarks"></a>Comentarios
+
+Se conoce también como una barrera de optimización del puntero.
+
+Se utiliza como una expresión constante cuando el valor de su argumento se puede utilizar en una expresión constante. Un byte de almacenamiento es accesible a través de un valor de puntero que señala a un objeto si el almacenamiento ocupado por otro objeto, un objeto con un puntero similar.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+struct X { const int n; };
+
+X *p = new X{3};
+const int a = p->n;
+new (p) X{5}; // p does not point to new object because X::n is const
+const int b = p->n; // undefined behavior
+const int c = std::launder(p)->n; // OK
+```
 
 ## <a name="nothrow"></a> nothrow
 
@@ -44,7 +85,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Pnew*<br/>
+*Pnew*\
 El `new_handler` para instalarse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -117,7 +158,3 @@ Allocating 5000000 ints.
 The new_handler is called:
 bad allocation
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<new>](../standard-library/new.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: 25a7cbdccf1287043659772b760a14fefd52e4ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394317"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244484"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Incluye el encabezado \<stdarg.h> de la biblioteca estándar de C y agrega los nombres asociados al espacio de nombres `std`.
+Incluye el encabezado de la biblioteca estándar de C \<stdarg.h > y agrega los nombres asociados a la `std` espacio de nombres. Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el `std` espacio de nombres.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,9 +23,18 @@ Incluye el encabezado \<stdarg.h> de la biblioteca estándar de C y agrega los n
 #include <cstdarg>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="namespace-and-macros"></a>Macros y Namespace
 
-Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.
+```cpp
+namespace std {
+    using va_list = see below;
+}
+
+#define va_arg(V, P)
+#define va_copy(VDST, VSRC)
+#define va_end(V)
+#define va_start(V, P)
+```
 
 ## <a name="see-also"></a>Vea también
 

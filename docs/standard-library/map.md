@@ -6,28 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413000"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243319"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
 Define la asignación y la asignación múltiple de clases de plantilla de contenedor, así como sus plantillas auxiliares.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <map>
-```
+**Encabezado:** \<map>
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> El \<map > biblioteca también utiliza el `#include <initializer_list>` instrucción.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="operators"></a>Operadores
 
-|Versión de asignación|Versión de asignación múltiple|Descripción|
+|Versión de asignación|Versión de asignación múltiple|DESCRIPCIÓN|
 |-----------------|----------------------|-----------------|
 |[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|Comprueba si el objeto de asignación o asignación múltiple del lado izquierdo del operador no es igual que el objeto de asignación o asignación múltiple del lado derecho.|
 |[operator< (map)](../standard-library/map-operators.md#op_eq_eq)|[operator< (multimap)](../standard-library/map-operators.md#op_eq_eq)|Comprueba si el objeto de asignación o asignación múltiple del lado izquierdo del operador es menor que el objeto de asignación o asignación múltiple del lado derecho.|
@@ -38,13 +41,13 @@ Define la asignación y la asignación múltiple de clases de plantilla de conte
 
 ### <a name="specialized-template-functions"></a>Funciones de plantilla especializadas
 
-|Versión de asignación|Versión de asignación múltiple|Descripción|
+|Versión de asignación|Versión de asignación múltiple|DESCRIPCIÓN|
 |-----------------|----------------------|-----------------|
 |[swap (mapa)](../standard-library/map-functions.md#swap)|[swap (mapa múltiple)](../standard-library/map-functions.md#swap_multimap)|Intercambia los elementos de dos asignaciones o asignaciones múltiples.|
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|||
 |-|-|
 |[value_compare (Clase)](../standard-library/value-compare-class-map.md)|Proporciona un objeto de función que puede comparar los elementos de una asignación comparando los valores de sus claves para determinar su orden relativo en la asignación.|
 |[Clase map](../standard-library/map-class.md)|Se usa para el almacenamiento y la recuperación de datos de una colección en la que cada uno de los elementos tiene una clave única con la que se ordenan automáticamente los datos.|

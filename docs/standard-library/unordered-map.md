@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 6ccb2c0c54f8094110d37e6dfd2c504fa8173641
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7238d36e27b516aa30ad89b7322e6830f57e403
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167600"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243454"
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
 
@@ -23,16 +23,19 @@ Define las clases de plantilla de contenedor [unordered_map](../standard-library
 #include <unordered_map>
 ```
 
+> [!NOTE]
+> El \<unordered_map > biblioteca también utiliza el `#include <initializer_list>` instrucción.
+
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|Clase|DESCRIPCIÓN|
 |-|-|
 |[unordered_map (Clase)](../standard-library/unordered-map-class.md)|Almacena la tabla de hash de pares {key, mapped}.|
 |[unordered_multimap (Clase)](../standard-library/unordered-multimap-class.md)|Almacena la tabla de hash de pares {key, mapped}.|
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|Función|DESCRIPCIÓN|
 |-|-|
 |[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Comprueba si el objeto unordered_map del lado izquierdo del operador no es igual que el objeto unordered_map del lado derecho.|
 |[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Comprueba si el objeto unordered_map del lado izquierdo del operador es igual que el objeto unordered_map del lado derecho.|

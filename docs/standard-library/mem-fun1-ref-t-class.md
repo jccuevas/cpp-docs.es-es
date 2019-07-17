@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-ms.openlocfilehash: d4f0f2064ac6771e2c351b70097137fed12c8262
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ab2c436b3dd3b5a289124e73b6f1b5d21f96a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412883"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243865"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t (Clase)
 
@@ -28,19 +28,18 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
     Result operator()(
     Type& left,
     Arg right) const;
-
 };
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pm*<br/>
+*_Pm*\
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*left*<br/>
+*Izquierda*\
 El objeto que la *_Pm* función miembro se llama en.
 
-*right*<br/>
+*Correcto*\
 El argumento que se entrega a *_Pm*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -49,19 +48,8 @@ Una función binaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva ( **izquierdo**.\* `_Pm`) ( **derecho**).
+La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva (**izquierdo**.\* `_Pm`) (**derecho**).
 
 ## <a name="example"></a>Ejemplo
 
 Normalmente, no se usa el constructor de `mem_fun1_ref_t` directamente; la función del asistente `mem_fun_ref` se usa para adaptar funciones miembro. Vea [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

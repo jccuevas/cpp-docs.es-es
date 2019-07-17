@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220377"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240695"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -89,10 +89,12 @@ Por último, una característica importante de los objetos de ruta de acceso es 
 
 Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Clases
+## <a name="members"></a>Miembros
 
-|Name|Descripción|
-|----------|-----------------|
+### <a name="classes"></a>Clases
+
+|||
+|-|-|
 |[directory_entry (Clase)](../standard-library/directory-entry-class.md)|Describe un objeto devuelto por un `directory_iterator` o `recursive_directory_iterator` y que contiene una ruta de acceso.|
 |[directory_iterator (Clase)](../standard-library/directory-iterator-class.md)|Describe un iterador de entrada que establece una secuencia por los nombres de archivo en un directorio de sistema de archivos.|
 |[filesystem_error (Clase)](../standard-library/filesystem-error-class.md)|Clase base para excepciones que se producen para notificar un desbordamiento de sistema de bajo nivel.|
@@ -100,10 +102,10 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 |[recursive_directory_iterator (Clase)](../standard-library/recursive-directory-iterator-class.md)|Describe un iterador de entrada que establece una secuencia por los nombres de archivo en un directorio de sistema de archivos. El iterador también puede descender a subdirectorios.|
 |[file_status (Clase)](../standard-library/file-status-class.md)|Ajusta un `file_type`.|
 
-## <a name="structs"></a>Estructuras
+### <a name="structs"></a>Estructuras
 
-|Name|Descripción|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info (Estructura)](../standard-library/space-info-structure.md)|Contiene información sobre un volumen.|
 
 ## <a name="functions"></a>Funciones
@@ -116,12 +118,13 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 
 ## <a name="enumerations"></a>Enumeraciones
 
-|Name|Descripción|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|
 
 ## <a name="see-also"></a>Vea también

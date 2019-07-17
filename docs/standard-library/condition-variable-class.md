@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212391"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244623"
 ---
 # <a name="conditionvariable-class"></a>condition_variable (Clase)
 
@@ -39,16 +39,16 @@ class condition_variable;
 
 ## <a name="members"></a>Miembros
 
-### <a name="public-constructors"></a>Constructores públicos
+### <a name="constructors"></a>Constructores
 
-|Name|Descripción|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable](#condition_variable)|Construye un objeto `condition_variable`.|
 
-### <a name="public-methods"></a>Métodos públicos
+### <a name="functions"></a>Funciones
 
-|Name|Descripción|
-|----------|-----------------|
+|||
+|-|-|
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador condition_variable.|
 |[notify_all](#notify_all)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.|
 |[notify_one](#notify_one)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.|
@@ -56,13 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<condition_variable >
-
-**Espacio de nombres:** std
-
-## <a name="condition_variable"></a>  condition_variable::condition_variable (Constructor)
+## <a name="condition_variable"></a> CONDITION_VARIABLE
 
 Construye un objeto `condition_variable`.
 
@@ -74,7 +68,7 @@ condition_variable();
 
 Si no queda suficiente memoria disponible, el constructor produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error de `not_enough_memory`. Si el objeto no puede construirse porque algún otro recurso no está disponible, el constructor produce un objeto `system_error` que tiene un código de error de `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a>  condition_variable::native_handle
+## <a name="native_handle"></a> native_handle
 
 Devuelve el tipo específico de la implementación que representa el identificador condition_variable.
 
@@ -86,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` se define como un puntero a estructuras de datos internas del Runtime de simultaneidad.
 
-## <a name="notify_all"></a>  condition_variable::notify_all
+## <a name="notify_all"></a> notify_all
 
 Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.
 
@@ -94,7 +88,7 @@ Desbloquea todos los subprocesos que están esperando el objeto `condition_varia
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable::notify_one
+## <a name="notify_one"></a> notify_one
 
 Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.
 
@@ -102,7 +96,7 @@ Desbloquea uno de los subprocesos que están esperando el objeto `condition_vari
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable::wait
+## <a name="wait"></a> Espere
 
 Bloquea un subproceso.
 
@@ -115,10 +109,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck*<br/>
+*Lck*\
 Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Pred*<br/>
+*Pred*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="remarks"></a>Comentarios
@@ -132,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable::wait_for
+## <a name="wait_for"></a> wait_for
 
 Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.
 
@@ -151,13 +145,13 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck*<br/>
+*Lck*\
 Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Rel_time*<br/>
+*Rel_time*\
 Objeto `chrono::duration` que especifica la cantidad de tiempo que tiene que transcurrir hasta que el subproceso se reactive.
 
-*Pred*<br/>
+*Pred*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -180,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable::wait_until
+## <a name="wait_until"></a> wait_until
 
 Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.
 
@@ -209,13 +203,13 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parámetros
 
-*Lck*<br/>
+*Lck*\
 Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Abs_time*<br/>
+*Abs_time*\
 Un objeto [chrono::time_point](../standard-library/time-point-class.md).
 
-*Pred*<br/>
+*Pred*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
