@@ -1,18 +1,18 @@
 ---
-title: Compartir o volver a usar la configuración del proyecto de Visual Studio - C++
-ms.date: 03/27/2019
+title: Compartir o volver a usar la configuración de proyecto de Visual Studio:C++
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8f6da3dc754aa9d47d46e26207a02bd1685ea8
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196888"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313191"
 ---
-# <a name="share-or-reuse-visual-studio-project-settings"></a>Compartir o volver a usar la configuración del proyecto de Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Uso compartido o reutilización de la configuración del proyecto de Visual Studio
 
-Para crear un grupo personalizado de configuración que puede compartir con otros usuarios o reutilizar en varios proyectos, use **Administrador de propiedades** para crear un *hoja de propiedades* (archivo .props) para almacenar la configuración para cada tipo de proyecto que desea poder reutilizar o compartir con otros usuarios. Mediante la propiedad hojas son mucho menos propensas a errores que otras formas de crear la configuración "global". 
+Para crear un grupo personalizado de opciones de configuración que puede compartir con otros usuarios o reutilizar en varios proyectos, use **Administrador de propiedades** para crear una *hoja de propiedades* (archivo. props) para almacenar la configuración de cada tipo de proyecto que desea poder reutilizar o compartir. con otras personas. El uso de hojas de propiedades es mucho menos propenso a errores que otras formas de crear valores "globales". 
 
 > [!IMPORTANT]
 > **Los archivos .user y las razones por las que son problemáticos**
@@ -21,13 +21,13 @@ Para crear un grupo personalizado de configuración que puede compartir con otro
 >
 > Aunque los archivos .user todavía se instalan con Visual Studio y participan en la herencia de propiedades, están vacíos de forma predeterminada. El procedimiento recomendado es eliminar la referencia a ellos en el **Administrador de propiedades** para asegurarse de que los proyectos funcionan independientemente de cualquier configuración por usuario y por equipo. Esto es importante para asegurar un comportamiento correcto en un entorno SCC (control de código fuente).
 
-Para mostrar el **Administrador de propiedades**, en la barra de menús, seleccione **Ver**, **Otras ventanas**, **Administrador de propiedades**.
+Para mostrar **Administrador de propiedades**, en la barra de menús, elija **Ver** > **Administrador de propiedades** o **Ver** > **otras ventanas** > **Administrador de propiedades**, en función de la configuración.
 
-Si tiene un conjunto de propiedades común que usa con frecuencia y que quiera aplicar a varios proyectos, puede usar el **Administrador de propiedades** para capturarlas en un archivo de *hoja de propiedades* reutilizable, que por convención tiene una extensión de nombre de archivo .props. Puede aplicar la hoja (u hojas) a nuevos proyectos para que no tenga que establecer sus propiedades desde cero. Para acceder al **Administrador de propiedades**, en la barra de menús, seleccione **Ver**, **Administrador de propiedades**.
+Si tiene un conjunto de propiedades común que usa con frecuencia y que quiera aplicar a varios proyectos, puede usar el **Administrador de propiedades** para capturarlas en un archivo de *hoja de propiedades* reutilizable, que por convención tiene una extensión de nombre de archivo .props. Puede aplicar la hoja (u hojas) a nuevos proyectos para que no tenga que establecer sus propiedades desde cero.
 
 ![Menú contextual del Administrador de propiedades](media/sharingnew.png "SharingNew")
 
-En cada nodo de configuración, podrá ver los nodos para cada hoja de propiedades que se aplica a esa configuración. El sistema agrega hojas de propiedades que establecen valores en función de las opciones que se elijan en el Asistente para aplicaciones al crear el proyecto. Haga clic con el botón derecho en cualquier nodo y seleccione Propiedades para ver las propiedades que se aplican a ese nodo. Todas las hojas de propiedades se importan de manera automática en la hoja de propiedades "maestra" del proyecto (ms.cpp.props) y se evalúan en el orden en que aparecen en el Administrador de propiedades. Se pueden mover para cambiar el orden de evaluación. Las hojas de propiedades que se evalúan después invalidarán los valores de las hojas evaluadas anteriormente. Consulte [herencia de propiedades del proyecto](project-property-inheritance.md) para obtener más información sobre el orden de evaluación en el archivo .vcxproj, los archivos .props y .targets, variables de entorno y la línea de comandos.
+En cada nodo de configuración, podrá ver los nodos para cada hoja de propiedades que se aplica a esa configuración. El sistema agrega hojas de propiedades que establecen valores en función de las opciones que se elijan en el Asistente para aplicaciones al crear el proyecto. Haga clic con el botón derecho en cualquier nodo y seleccione Propiedades para ver las propiedades que se aplican a ese nodo. Todas las hojas de propiedades se importan de manera automática en la hoja de propiedades "maestra" del proyecto (ms.cpp.props) y se evalúan en el orden en que aparecen en el Administrador de propiedades. Se pueden mover para cambiar el orden de evaluación. Las hojas de propiedades que se evalúan después invalidarán los valores de las hojas evaluadas anteriormente. Vea [herencia de propiedades de proyecto](project-property-inheritance.md) para obtener más información sobre el orden de evaluación en el archivo. vcxproj, los archivos. props y. targets, las variables de entorno y la línea de comandos.
 
 Si hace clic en **Agregar nueva hoja de propiedades de proyecto** y selecciona, por ejemplo, la hoja de propiedades MyProps.props, aparecerá un cuadro de diálogo de página de propiedades. Observe que se aplica a la hoja de propiedades MyProps; los cambios que realice se escriben en la hoja, no en el archivo de proyecto (.vcxproj).
 
@@ -44,7 +44,7 @@ En soluciones grandes que tendrán muchos proyectos, puede ser útil crear una h
 
 #### <a name="to-create-a-property-sheet"></a>Para crear una hoja de propiedades
 
-1. En la barra de menús, seleccione **Ver**, **Administrador de propiedades**. Se abrirá el **Administrador de propiedades**.
+1. En la barra de menús, elija **Ver** > **Administrador de propiedades** o **Ver** > **otras ventanas** > **Administrador de propiedades**. Se abrirá el **Administrador de propiedades**.
 
 2. Para definir el ámbito de la hoja de propiedades, seleccione el elemento al que se aplica. Puede ser una configuración concreta u otra hoja de propiedades. Abra el menú contextual para este elemento y después seleccione **Agregar nueva hoja de propiedades de proyecto**. Especifique un nombre y una ubicación.
 
