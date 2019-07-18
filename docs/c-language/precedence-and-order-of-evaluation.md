@@ -1,18 +1,18 @@
 ---
 title: Precedencia y orden de evaluación
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 helpviewer_keywords:
 - associativity of operators [C++]
 - precedence [C++], operators
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 88d0256e2ce948fbdfffb24037517690ef4b7cb7
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152500"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861075"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedencia y orden de evaluación
 
@@ -22,32 +22,32 @@ En la tabla siguiente se resume la prioridad y asociatividad (el orden en que se
 
 ## <a name="precedence-and-associativity-of-c-operators"></a>Prioridad y asociatividad de los operadores de C
 
-|Símbolo <sup>1</sup>|Tipo de operación|asociatividad|
+| Símbolo <sup>1</sup> | Tipo de operación | asociatividad |
 |-------------|-----------------------|-------------------|
-|**\[ ] ( ) . ->**<br /><br />**++** **--** (postfijo)|Expresión|De izquierda a derecha|
-**sizeof & \* + - ~ !**<br /><br />**++ --** (prefijo)|Unario|De derecha a izquierda|
-|*typecasts*|Unario|De derecha a izquierda|
-|**\* / %**|Multiplicativo|De izquierda a derecha|
-|**+ -**|Aditivo|De izquierda a derecha|
-|**\<\< >>**|Desplazamiento bit a bit|De izquierda a derecha|
-|**\< > \<= >=**|Relacional|De izquierda a derecha|
-|**== !=**|Igualdad|De izquierda a derecha|
-|**&**|AND bit a bit|De izquierda a derecha|
-|**^**|OR exclusivo bit a bit|De izquierda a derecha|
-|**&#124;**|OR inclusivo bit a bit|De izquierda a derecha|
-|**&&**|AND lógico|De izquierda a derecha|
-|**&#124;&#124;**|OR lógico|De izquierda a derecha|
-|**? :**|Expresión condicional|De derecha a izquierda|
-|**= \*= /= %=**<br /><br /> **+= -= \<\<= >>= &=**<br /><br /> **^= &#124;=**|Asignación simple y compuesta <sup>2</sup>|De derecha a izquierda|
-|**,**|Evaluación secuencial|De izquierda a derecha|
+| `[` `]` `(` `)` `.` `->`<br/>`++` `--` (postfijo) | Expresión | De izquierda a derecha |
+| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (prefijo) | Unario | De derecha a izquierda |
+| *typecasts* | Unario | De derecha a izquierda |
+| `*` `/` `%` | Multiplicativo | De izquierda a derecha |
+| `+` `-` | Aditivo | De izquierda a derecha |
+| `<<` `>>` | Desplazamiento bit a bit | De izquierda a derecha |
+| `<` `>` `<=` `>=` | Relacional | De izquierda a derecha |
+| `==` `!=` | Igualdad | De izquierda a derecha |
+| `&` | AND bit a bit | De izquierda a derecha |
+| `^` | OR exclusivo bit a bit | De izquierda a derecha |
+| `|` | OR inclusivo bit a bit | De izquierda a derecha |
+| `&&` | AND lógico | De izquierda a derecha |
+| `||` | OR lógico | De izquierda a derecha |
+| `? :` | Expresión condicional | De derecha a izquierda |
+| `=` `*=` `/=` `%=`<br/>`+=` `-=` `<<=` `>>=` `&=`<br/>`^=` `|=` | Asignación simple y compuesta <sup>2</sup> | De derecha a izquierda |
+| `,` | Evaluación secuencial | De izquierda a derecha |
 
-1. Los operadores se enumeran por prioridad, de mayor a menor. Si aparecen varios operadores en la misma línea o en un grupo, tienen la misma prioridad.
+<sup>1</sup> Los operadores se enumeran por prioridad, de mayor a menor. Si aparecen varios operadores en la misma línea o en un grupo, tienen la misma prioridad.
 
-1. Todos los operadores de asignación simples y compuestos tienen la misma prioridad.
+<sup>2</sup> Todos los operadores de asignación simples y compuestos tienen la misma prioridad.
 
-Una expresión puede contener varios operadores con la misma prioridad. Cuando varios operadores de este tipo aparecen en el mismo nivel en una expresión, la evaluación continúa según la asociatividad del operador, de derecha a izquierda y de izquierda a derecha. La dirección de evaluación no afecta a los resultados de las expresiones que incluyen más de un operador de multiplicación (<strong>\*</strong>), adición (**+**) o binario bit a bit (**&**, **&#124;** o **^**) en el mismo nivel. El orden de las operaciones no lo define el lenguaje. El compilador es libre de evaluar estas expresiones en cualquier orden, si puede garantizar un resultado coherente.
+Una expresión puede contener varios operadores con la misma prioridad. Cuando varios operadores de este tipo aparecen en el mismo nivel en una expresión, la evaluación continúa según la asociatividad del operador, de derecha a izquierda y de izquierda a derecha. La dirección de evaluación no afecta a los resultados de las expresiones que incluyen más de un operador de multiplicación (`*`), adición (`+`) o binario bit a bit (`&`, `|` o `^`) en el mismo nivel. El orden de las operaciones no lo define el lenguaje. El compilador es libre de evaluar estas expresiones en cualquier orden, si puede garantizar un resultado coherente.
 
-Solo los operadores de evaluación secuencial (**,**), AND lógico (**&&**), OR lógico (**||**), expresión condicional (**? :**) y llamada a función constituyen puntos de secuencia y, por lo tanto, garantizan un orden de evaluación concreto para sus operandos. El operador de llamada a función es el conjunto de paréntesis que siguen al identificador de función. Está garantizado que el operador de evaluación secuencial (**,**) evalúa sus operandos de izquierda a derecha. (Observe que el operador de coma en una llamada a función no es igual que el operador de evaluación secuencial y no proporciona esta garantía). Para obtener más información, vea [Puntos de secuencia](../c-language/c-sequence-points.md).
+Solo los operadores de evaluación secuencial (`,`), AND lógico (`&&`), OR lógico (`||`), expresión condicional (`? :`) y llamada a función constituyen puntos de secuencia y, por lo tanto, garantizan un orden de evaluación concreto para sus operandos. El operador de llamada a función es el conjunto de paréntesis que siguen al identificador de función. Está garantizado que el operador de evaluación secuencial (`,`) evalúa sus operandos de izquierda a derecha. (El operador de coma en una llamada a función no es igual que el operador de evaluación secuencial y no proporciona esta garantía). Para obtener más información, vea [Puntos de secuencia](c-sequence-points.md).
 
 Los operadores lógicos también garantizan la evaluación de sus operandos de izquierda a derecha. Sin embargo, evalúan el número más pequeño de operandos necesarios para determinar el resultado de la expresión. Esto se denomina evaluación de "cortocircuito". Por tanto, es posible que algunos operandos de la expresión no se evalúen. Por ejemplo, en la expresión
 
@@ -59,28 +59,28 @@ se evalúa el segundo operando, `y++`, solo si `x` es true (distinto de cero). A
 
 La lista siguiente muestra cómo el compilador enlaza varias expresiones de ejemplo automáticamente:
 
-|Expresión|Enlace automático|
+| Expresión | Enlace automático |
 |----------------|-----------------------|
-|a & b &#124;&#124; c|(a & b) &#124;&#124; c|
-|a = b &#124;&#124; c|a = (b &#124;&#124; c)|
-|q && r &#124;&#124; s--|(q && r) &#124;&#124; s--|
+| `a & b || c` | `(a & b) || c` |
+| `a = b || c` | `a = (b || c)` |
+| `q && r || s--` | `(q && r) || s--` |
 
-En la primera expresión, el operador AND bit a bit (**&**) tiene prioridad sobre el operador OR lógico (**||**), por lo que `a & b` forma el primer operando de la operación OR lógica.
+En la primera expresión, el operador AND bit a bit (`&`) tiene prioridad sobre el operador OR lógico (`||`), por lo que `a & b` forma el primer operando de la operación OR lógica.
 
-En la segunda expresión, el operador OR lógico (**||**) tiene una mayor prioridad que el operador de asignación simple (**=**), por lo que `b || c` se agrupa como el operando derecho de la asignación. Observe que el valor asignado a `a` es 0 o 1.
+En la segunda expresión, el operador OR lógico (`||`) tiene una mayor prioridad que el operador de asignación simple (`=`), por lo que `b || c` se agrupa como el operando derecho de la asignación. Observe que el valor asignado a `a` es 0 o 1.
 
-La tercera expresión muestra una expresión correctamente formada que puede generar un resultado inesperado. El operador AND lógico (**&&**) tiene una mayor prioridad que el operador OR lógico (**||**), por lo que `q && r` se agrupa como operando. Puesto que los operadores lógicos garantizan la evaluación de los operandos de izquierda a derecha, `q && r` se evalúa antes de `s--`. En cambio, si `q && r` se evalúa como un valor distinto de cero, `s--` no se evalúa y `s` no se reduce. Si la no reducción de `s` puede provocar un problema en el programa, `s--` debe aparecer como el primer operando de la expresión, o bien `s` se debería reducir en una operación independiente.
+La tercera expresión muestra una expresión correctamente formada que puede generar un resultado inesperado. El operador AND lógico (`&&`) tiene una mayor prioridad que el operador OR lógico (`||`), por lo que `q && r` se agrupa como operando. Puesto que los operadores lógicos garantizan la evaluación de los operandos de izquierda a derecha, `q && r` se evalúa antes de `s--`. En cambio, si `q && r` se evalúa como un valor distinto de cero, `s--` no se evalúa y `s` no se reduce. Si la no reducción de `s` puede provocar un problema en el programa, `s--` debe aparecer como el primer operando de la expresión, o bien `s` se debería reducir en una operación independiente.
 
 La siguiente expresión no es válida y muestra un mensaje de diagnóstico en tiempo de compilación:
 
-|Expresión no válida|Agrupación predeterminada|
+| Expresión no válida | Agrupación predeterminada |
 |------------------------|----------------------|
-|p == 0 ? p += 1: p += 2|( p == 0 ? p += 1 : p ) += 2|
+| `p == 0 ? p += 1: p += 2` | `( p == 0 ? p += 1 : p ) += 2` |
 
-En esta expresión, el operador de igualdad (**==**) tiene una prioridad superior, por lo que `p == 0` se agrupa como operando. El operador de expresión condicional (**? :**) tiene la siguiente prioridad más alta. Su primer operando es `p == 0` y su segundo operando es `p += 1`. Sin embargo, el último operando del operador de expresión condicional se considera `p` en lugar de `p += 2`, puesto que esta instancia de `p` se enlaza de una forma más directa con el operador de expresión condicional que con el operador de asignación compuesta. Se produce un error de sintaxis, porque `+= 2` no tiene un operando izquierdo. Debe utilizar paréntesis para evitar errores de esta clase y que el código sea más legible. Por ejemplo, podría utilizar paréntesis, como se muestra a continuación, para corregir y aclarar el ejemplo anterior:
+En esta expresión, el operador de igualdad (`==`) tiene una prioridad superior, por lo que `p == 0` se agrupa como operando. El operador de expresión condicional (`? :`) tiene la siguiente prioridad más alta. Su primer operando es `p == 0` y su segundo operando es `p += 1`. Sin embargo, el último operando del operador de expresión condicional se considera `p` en lugar de `p += 2`, puesto que esta instancia de `p` se enlaza de una forma más directa con el operador de expresión condicional que con el operador de asignación compuesta. Se produce un error de sintaxis, porque `+= 2` no tiene un operando izquierdo. Debe utilizar paréntesis para evitar errores de esta clase y que el código sea más legible. Por ejemplo, podría utilizar paréntesis, como se muestra a continuación, para corregir y aclarar el ejemplo anterior:
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
 ## <a name="see-also"></a>Vea también
 
-[Operadores de C](../c-language/c-operators.md)
+[Operadores de C](c-operators.md)
