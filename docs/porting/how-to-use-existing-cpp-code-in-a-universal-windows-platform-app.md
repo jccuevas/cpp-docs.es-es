@@ -2,12 +2,12 @@
 title: Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424201"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861131"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
 
@@ -135,7 +135,7 @@ El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que 
 
 2. Abra **Propiedades del proyecto** para el proyecto DLL y establezca **Configuración** en **Todas las configuraciones**.
 
-3. En **Propiedades del proyecto**, en la pestaña **C/C++** > **General**, establezca **Usar extensión de Windows Runtime** en **Sí (/ZW)**. Esto habilita las extensiones de componente (C++/CX).
+3. En **Propiedades del proyecto**, en la pestaña **C/C++**  > **General**, establezca **Usar extensión de Windows Runtime** en **Sí (/ZW)** . Esto habilita las extensiones de componente (C++/CX).
 
 4. En el **Explorador de soluciones**, seleccione el nodo del proyecto, abra el menú contextual y elija **Descargar el proyecto**. A continuación, abra el menú contextual en el nodo del proyecto descargado y elija Editar el archivo de proyecto. Busque el elemento `WindowsTargetPlatformVersion` y reemplácelo por los siguientes elementos.
 
@@ -193,9 +193,9 @@ Sin embargo, puede utilizar una biblioteca estática en una Plataforma universal
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Utilizar una biblioteca estática nativa de C++ en un proyecto de UWP
 
-1. En las propiedades del proyecto para el proyecto de UWP, en la sección **Enlazador**, agregue la ruta de acceso a la biblioteca en la propiedad **Entrada**. Por ejemplo, en el caso de una biblioteca del proyecto que coloque su salida en *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, agregue la ruta de acceso relativa `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. En las propiedades del proyecto UWP, elija **Propiedades de configuración** > **Vinculador** > **Entrada** en el panel izquierdo. En el panel derecho, agregue la ruta de acceso a la biblioteca en la propiedad **Dependencias adicionales**. Por ejemplo, en el caso de una biblioteca del proyecto que coloque su salida en *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, agregue la ruta de acceso relativa `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Agregue una instrucción include para incluir una referencia al pch.h en el archivo de encabezado del proyecto de UWP y comenzar a agregar el código que utiliza la biblioteca.
+2. Agregue una instrucción include para que el archivo de encabezado haga referencia al archivo pch.h (si está presente), o en cualquier archivo .cpp que sea necesario, y comience a agregar el código que utiliza la biblioteca.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -221,7 +221,7 @@ Si desea utilizar las API nativas en una biblioteca estática desde una aplicaci
 
 6. Es posible que ahora haya algún código duplicado. Si tiene más de un encabezado precompilado (por ejemplo, stdafx.h y pch.h), elija el que desea mantener. Copie cualquier código necesario, como incluir instrucciones, en el encabezado que mantenga. Después, elimine el otro y, en las propiedades del proyecto, en **Encabezados precompilados**, asegúrese de que el nombre del archivo de encabezado es correcto.
 
-   Si cambia el archivo para utilizarlo como encabezado precompilado, asegúrese de que las opciones de encabezado precompilado son las adecuadas para cada archivo. Seleccione cada archivo .cpp por orden, abra la ventana de propiedades y asegúrese de que todos están configurados en **Usar (/Yu)**, excepto el encabezado precompilado deseado, que debe configurarse en **Crear (/Yc)**.
+   Si cambia el archivo para utilizarlo como encabezado precompilado, asegúrese de que las opciones de encabezado precompilado son las adecuadas para cada archivo. Seleccione cada archivo .cpp por orden, abra la ventana de propiedades y asegúrese de que todos están configurados en **Usar (/Yu)** , excepto el encabezado precompilado deseado, que debe configurarse en **Crear (/Yc)** .
 
 7. Compile el proyecto y resuelva los errores. Estos errores podrían deberse al uso de la opción `/ZW`, a una nueva versión de Windows SDK, podrían reflejar problemas de dependencia (como archivos de encabezado de los que depende la biblioteca) o diferencias entre la configuración del proyecto antiguo y el nuevo.
 

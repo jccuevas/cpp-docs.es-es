@@ -3,12 +3,12 @@ title: Conexión al sistema Linux de destino en Visual Studio
 description: En este artículo se describe cómo conectarse a una máquina remota Linux o WSL desde un proyecto de Visual Studio C++.
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 7fa09c49df3da39084edb6735a7a2ccc724c34d3
-ms.sourcegitcommit: 3ae8025df7fd50f5f56a0a2b5396533218bcc7dc
+ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285253"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861142"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conexión al sistema Linux de destino en Visual Studio
 
@@ -108,7 +108,7 @@ Para configurar el proyecto para WSL, consulte [Configuración de un proyecto Li
 
 [Configuración de un proyecto de Linux](configure-a-linux-project.md)<br />
 [Configuración de un proyecto de CMake en Linux](cmake-linux-project.md)<br />
-[Implementación, ejecución y depuración del proyecto Linux](deploy-run-and-debug-your-linux-project.md)<br />
+[Implementar, ejecutar y depurar el proyecto de Linux](deploy-run-and-debug-your-linux-project.md)<br />
 
 
 
