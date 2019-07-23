@@ -1,5 +1,5 @@
 ---
-title: Las funciones de codificación de texto ATL
+title: Funciones de codificación de texto ATL
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -25,22 +25,22 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 1e3e44e99e6f3a53a930ed5b3ac1f7cd5ae23063
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449556"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375898"
 ---
-# <a name="atl-text-encoding-functions"></a>Las funciones de codificación de texto ATL
+# <a name="atl-text-encoding-functions"></a>Funciones de codificación de texto ATL
 
 Estas funciones admiten la codificación y descodificación de texto.
 
 |||
 |-|-|
 |[AtlGetHexValue](#atlgethexvalue)|Llame a esta función para obtener el valor numérico de un dígito hexadecimal.|
-|[AtlGetVersion](#atlgetversion)|Llame a esta función para obtener la versión de la biblioteca ATL que está usando.  |
-|[AtlHexDecode](#atlhexdecode)|Descodifica una cadena de datos que se ha codificado como texto hexadecimal, como una llamada anterior a [AtlHexEncode](#atlhexencode).|
+|[AtlGetVersion](#atlgetversion)|Llame a esta función para obtener la versión de la biblioteca ATL que está utilizando.  |
+|[AtlHexDecode](#atlhexdecode)|Descodifica una cadena de datos que se ha codificado como texto hexadecimal, como por una llamada anterior a [AtlHexEncode](#atlhexencode).|
 |[AtlHexDecodeGetRequiredLength](#atlhexdecodegetrequiredlength)|Llame a esta función para obtener el tamaño en bytes de un búfer que puede contener datos descodificados de una cadena con codificación hexadecimal de la longitud especificada.|
 |[AtlHexEncode](#atlhexencode)|Llame a esta función para codificar algunos datos en forma de cadena de texto hexadecimal.|
 |[AtlHexEncodeGetRequiredLength](#atlhexencodegetrequiredlength)|Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.|
@@ -50,21 +50,21 @@ Estas funciones admiten la codificación y descodificación de texto.
 |[BEncodeGetRequiredLength](#bencodegetrequiredlength)|Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.|
 |[EscapeXML](#escapexml)|Llame a esta función para convertir los caracteres que no son seguros para usarlos en XML en sus equivalentes seguros.|
 |[GetExtendedChars](#getextendedchars)|Llame a esta función para obtener el número de caracteres extendidos de una cadena.|
-|[IsExtendedChar](#isextendedchar)|Llame a esta función para comprobar si un carácter especificado es un carácter extendido (menor de 32, mayor que 126, y no una pestaña, un salto de línea o un retorno de carro).|
+|[IsExtendedChar](#isextendedchar)|Llame a esta función para averiguar si un carácter determinado es un carácter extendido (menor que 32, mayor que 126, y no una tabulación, salto de línea o retorno de carro)|
 |[QEncode](#qencode)|Llame a esta función para convertir algunos datos utilizando la codificación “Q”.  |
 |[QEncodeGetRequiredLength](#qencodegetrequiredlength)|Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.|
-|[QPDecode](#qpdecode)|Descodifica una cadena de datos que se ha codificado en formato Entrecomillado imprimible, como una llamada anterior a [QPEncode](#qpencode).|
+|[QPDecode](#qpdecode)|Descodifica una cadena de datos que se ha codificado en formato entrecomillado imprimible, como por una llamada anterior a [QPEncode](#qpencode).|
 |[QPDecodeGetRequiredLength](#qpdecodegetrequiredlength)|Llame a esta función para obtener el tamaño en bytes de un búfer que puede contener datos descodificados de una cadena con codificación entrecomillada imprimible de la longitud especificada.|
 |[QPEncode](#qpencode)|Llame a esta función para codificar algunos datos en formato entrecomillado imprimible.|
 |[QPEncodeGetRequiredLength](#qpencodegetrequiredlength)|Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.|
-|[UUDecode](#uudecode)|Descodifica una cadena de datos UUEncode como mediante una llamada anterior a [UUEncode](#uuencode).|
+|[UUDecode](#uudecode)|Descodifica una cadena de datos que ha sido uuencode, como por una llamada anterior a [uuencode](#uuencode).|
 |[UUDecodeGetRequiredLength](#uudecodegetrequiredlength)|Llame a esta función para obtener el tamaño en bytes de un búfer que puede contener datos descodificados de una cadena con codificación UUEncode de la longitud especificada.|
 |[UUEncode](#uuencode)|Llame a esta función para codificar datos con formato UUEncode. |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlenc.h
+**Encabezado:** atlenc. h
 
 ## <a name="atlgethexvalue"></a> AtlGetHexValue
 
@@ -77,15 +77,15 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="parameters"></a>Parámetros
 
 *chIn*<br/>
-El carácter hexadecimal '0'-'9', 'A'-'F' o 'a'-'f'.
+El carácter hexadecimal ' 0 '-' 9 ', ' contener-'F ' o ' contener-'F '.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El valor numérico del carácter de entrada se interpreta como un dígito hexadecimal. Por ejemplo, una entrada de "0" devuelve un valor de 0 y una entrada de 'A' Devuelve un valor de 10. Si el carácter de entrada no es un dígito hexadecimal, esta función devuelve -1.
+Valor numérico del carácter de entrada interpretado como un dígito hexadecimal. Por ejemplo, una entrada de ' 0 ' devuelve un valor de 0 y una entrada de ' A ' devuelve un valor de 10. Si el carácter de entrada no es un dígito hexadecimal, esta función devuelve-1.
 
 ## <a name="atlgetversion"></a> AtlGetVersion
 
-Llame a esta función para obtener la versión de la biblioteca ATL que está usando.
+Llame a esta función para obtener la versión de la biblioteca ATL que está utilizando.
 
 ```
 ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
@@ -94,25 +94,25 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="parameters"></a>Parámetros
 
 *pReserved*<br/>
-Un puntero reservado.
+Puntero reservado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un valor entero DWORD de la versión de la biblioteca ATL que se compilen o ejecuten.
+Devuelve un valor entero DWORD de la versión de la biblioteca ATL que se va a compilar o ejecutar.
 
 ## <a name="example"></a>Ejemplo
 
-La función debe llamarse como sigue.
+Se debe llamar a la función como se indica a continuación.
 
 [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]
 
 ### <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
-## <a name="atlhexdecode"></a> AtlHexDecode
+## <a name="atlhexdecode"></a>AtlHexDecode
 
-Descodifica una cadena de datos que se ha codificado como texto hexadecimal, como una llamada anterior a [AtlHexEncode](#atlhexencode).
+Descodifica una cadena de datos que se ha codificado como texto hexadecimal, como por una llamada anterior a [AtlHexEncode](#atlhexencode).
 
 ```
 inline BOOL AtlHexDecode(
@@ -125,20 +125,20 @@ inline BOOL AtlHexDecode(
 ### <a name="parameters"></a>Parámetros
 
 *pSrcData*<br/>
-Cadena que contiene los datos que se va a descodificar.
+Cadena que contiene los datos que se van a descodificar.
 
 *nSrcLen*<br/>
-La longitud en caracteres de *pSrcData*.
+Longitud en caracteres de *pSrcData*.
 
 *pbDest*<br/>
-Búfer asignado por el autor de llamada para recibir los datos descodificados.
+Búfer asignado por el llamador para recibir los datos descodificados.
 
 *pnDestLen*<br/>
-Puntero a una variable que contiene la longitud en bytes de *pbDest*. Si la función se realiza correctamente, la variable recibe el número de bytes escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer.
+Puntero a una variable que contiene la longitud en bytes de *pbDest*. Si la función se ejecuta correctamente, la variable recibe el número de bytes escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en bytes del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 
@@ -151,13 +151,13 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de caracteres en la cadena codificada.
+Número de caracteres de la cadena codificada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de bytes necesarios para un búfer que podría contener una cadena descodificada de *nSrcLen* caracteres.
+Número de bytes necesarios para un búfer que puede contener una cadena descodificada de caracteres *nSrcLen* .
 
-## <a name="atlhexencode"></a> AtlHexEncode
+## <a name="atlhexencode"></a>AtlHexEncode
 
 Llame a esta función para codificar algunos datos en forma de cadena de texto hexadecimal.
 
@@ -172,24 +172,24 @@ int * pnDestLen) throw();
 ### <a name="parameters"></a>Parámetros
 
 *pbSrcData*<br/>
-El búfer que contiene los datos que se desea codificar.
+Búfer que contiene los datos que se van a codificar.
 
 *nSrcLen*<br/>
-La longitud en bytes de los datos que se desea codificar.
+La longitud en bytes de los datos que se van a codificar.
 
 *szDest*<br/>
-Búfer asignado por el autor de llamada para recibir los datos codificados.
+Búfer asignado por el llamador para recibir los datos codificados.
 
 *pnDestLen*<br/>
-Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en caracteres del búfer.
+Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de caracteres que se escriben en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en caracteres del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Cada byte de datos de origen se codifica como 2 caracteres hexadecimales.
+Cada byte de los datos de origen se codifica como dos caracteres hexadecimales.
 
 ## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 
@@ -202,11 +202,11 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de bytes de datos que se desea codificar.
+El número de bytes de datos que se van a codificar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de caracteres necesarios para un búfer que podría contener datos codificados de *nSrcLen* bytes.
+Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
 ## <a name="atlhexvalue"></a> AtlHexValue
 
@@ -219,11 +219,11 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="parameters"></a>Parámetros
 
 *chIn*<br/>
-El carácter hexadecimal '0'-'9', 'A'-'F' o 'a'-'f'.
+El carácter hexadecimal ' 0 '-' 9 ', ' contener-'F ' o ' contener-'F '.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El valor numérico del carácter de entrada se interpreta como un dígito hexadecimal. Por ejemplo, una entrada de "0" devuelve un valor de 0 y una entrada de 'A' Devuelve un valor de 10. Si el carácter de entrada no es un dígito hexadecimal, esta función devuelve -1.
+Valor numérico del carácter de entrada interpretado como un dígito hexadecimal. Por ejemplo, una entrada de ' 0 ' devuelve un valor de 0 y una entrada de ' A ' devuelve un valor de 10. Si el carácter de entrada no es un dígito hexadecimal, esta función devuelve-1.
 
 ## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 
@@ -240,13 +240,13 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="parameters"></a>Parámetros
 
 *wszSrc*<br/>
-La cadena Unicode que se va a convertir
+Cadena Unicode que se va a convertir.
 
 *nSrc*<br/>
-La longitud en caracteres de la cadena de Unicode.
+Longitud en caracteres de la cadena Unicode.
 
 *szDest*<br/>
-Búfer asignado por el autor de llamada para recibir la cadena convertida.
+Búfer asignado por el llamador para recibir la cadena convertida.
 
 *nDest*<br/>
 La longitud en bytes del búfer.
@@ -257,9 +257,9 @@ Devuelve el número de caracteres de la cadena convertida.
 
 ### <a name="remarks"></a>Comentarios
 
-Para determinar el tamaño del búfer necesario para la cadena convertida, llame a esta función pasa 0 *szDest* y *nDest*.
+Para determinar el tamaño del búfer necesario para la cadena convertida, llame a esta función pasando 0 para *szDest* y *nDest*.
 
-## <a name="bencode"></a> BEncode
+## <a name="bencode"></a>BEncode
 
 Llame a esta función para convertir algunos datos utilizando la codificación “B”.
 
@@ -275,29 +275,29 @@ inline BOOL BEncode(
 ### <a name="parameters"></a>Parámetros
 
 *pbSrcData*<br/>
-El búfer que contiene los datos que se desea codificar.
+Búfer que contiene los datos que se van a codificar.
 
 *nSrcLen*<br/>
-La longitud en bytes de los datos que se desea codificar.
+La longitud en bytes de los datos que se van a codificar.
 
 *szDest*<br/>
-Búfer asignado por el autor de llamada para recibir los datos codificados.
+Búfer asignado por el llamador para recibir los datos codificados.
 
 *pnDestLen*<br/>
-Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en caracteres del búfer.
+Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de caracteres que se escriben en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en caracteres del búfer.
 
 *pszCharSet*<br/>
-El carácter establecido para la conversión.
+Juego de caracteres que se va a usar para la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
 El esquema de codificación "B" se describe en RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
+## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.
 
@@ -308,20 +308,20 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de bytes de datos que se desea codificar.
+El número de bytes de datos que se van a codificar.
 
 *nCharsetLen*<br/>
-La longitud en caracteres del juego que se usará para la conversión de caracteres.
+Longitud en caracteres del juego de caracteres que se va a usar para la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de caracteres necesarios para un búfer que podría contener datos codificados de *nSrcLen* bytes.
+Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
 ### <a name="remarks"></a>Comentarios
 
 El esquema de codificación "B" se describe en RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="escapexml"></a> EscapeXML
+## <a name="escapexml"></a>EscapeXML
 
 Llame a esta función para convertir los caracteres que no son seguros para usarlos en XML en sus equivalentes seguros.
 
@@ -340,29 +340,29 @@ inline int EscapeXML(
 Cadena que se va a convertir.
 
 *nSrclen*<br/>
-La longitud en caracteres de la cadena que se va a convertir.
+Longitud en caracteres de la cadena que se va a convertir.
 
 *szEsc*<br/>
-Búfer asignado por el autor de llamada para recibir la cadena convertida.
+Búfer asignado por el llamador para recibir la cadena convertida.
 
 *nDestLen*<br/>
-La longitud en caracteres del búfer asignado por el llamador.
+Longitud en caracteres del búfer asignado por el llamador.
 
 *dwFlags*<br/>
-ATL_ESC marcas que describen cómo la conversión es a realizarse.
+Marcas de ATL_ESC que describen cómo se va a realizar la conversión.
 
-- Comportamiento predeterminado de ATL_ESC_FLAG_NONE. Oferta no se convierten apóstrofos y marcas.
-- Apóstrofos y marcas de oferta ATL_ESC_FLAG_ATTR se convierten en `&quot;` y `&apos;` respectivamente.
+- Comportamiento predeterminado de ATL_ESC_FLAG_NONE. No se convierten las comillas y los apóstrofos.
+- Las comillas y los apóstrofos de ATL_ESC_FLAG_ATTR se `&quot;` convierten en y, `&apos;` respectivamente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La longitud en caracteres de la cadena convertida.
+Longitud en caracteres de la cadena convertida.
 
 ### <a name="remarks"></a>Comentarios
 
-Posibles conversiones realizadas por esta función se muestran en la tabla:
+En la tabla se muestran las posibles conversiones realizadas por esta función:
 
-|Source|Destino|
+|source|Destino|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -370,7 +370,7 @@ Posibles conversiones realizadas por esta función se muestran en la tabla:
 |'|&apos;|
 |"|&quot;|
 
-## <a name="getextendedchars"></a> GetExtendedChars
+## <a name="getextendedchars"></a>GetExtendedChars
 
 Llame a esta función para obtener el número de caracteres extendidos de una cadena.
 
@@ -384,15 +384,15 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 Cadena que se va a analizar.
 
 *nSrcLen*<br/>
-La longitud de la cadena en caracteres.
+Longitud de la cadena en caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el número de caracteres extendidos se encuentra dentro de la cadena según lo determinado por [IsExtendedChar](#isextendedchar).
+Devuelve el número de caracteres extendidos que se encuentran dentro de la cadena según lo establecido por [IsExtendedChar](#isextendedchar).
 
-## <a name="isextendedchar"></a> IsExtendedChar
+## <a name="isextendedchar"></a>IsExtendedChar
 
-Llame a esta función para comprobar si un carácter especificado es un carácter extendido (menor de 32, mayor que 126, y no una pestaña, un salto de línea o un retorno de carro).
+Llame a esta función para averiguar si un carácter determinado es un carácter extendido (menor que 32, mayor que 126, y no una tabulación, salto de línea o retorno de carro)
 
 ```
 inline int IsExtendedChar(char ch) throw();
@@ -401,13 +401,13 @@ inline int IsExtendedChar(char ch) throw();
 ### <a name="parameters"></a>Parámetros
 
 *ch*<br/>
-El carácter que se va a probar
+Carácter que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el carácter se ha extendido; FALSE en caso contrario.
+TRUE si el carácter es extendido; en caso contrario, FALSE.
 
-## <a name="qencode"></a> QEncode
+## <a name="qencode"></a>QEncode
 
 Llame a esta función para convertir algunos datos utilizando la codificación “Q”.
 
@@ -424,26 +424,26 @@ inline BOOL QEncode(
 ### <a name="parameters"></a>Parámetros
 
 *pbSrcData*<br/>
-El búfer que contiene los datos que se desea codificar.
+Búfer que contiene los datos que se van a codificar.
 
 *nSrcLen*<br/>
-La longitud en bytes de los datos que se desea codificar.
+La longitud en bytes de los datos que se van a codificar.
 
 *szDest*<br/>
-Búfer asignado por el autor de llamada para recibir los datos codificados.
+Búfer asignado por el llamador para recibir los datos codificados.
 
 *pnDestLen*<br/>
-Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en caracteres del búfer.
+Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de caracteres que se escriben en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en caracteres del búfer.
 
 *pszCharSet*<br/>
-El carácter establecido para la conversión.
+Juego de caracteres que se va a usar para la conversión.
 
 *pnNumEncoded*<br/>
-Un puntero a una variable que, si la devolución, contiene el número de caracteres no seguros que tenía que convertirse.
+Un puntero a una variable que en la devolución contiene el número de caracteres no seguros que tuvieron que convertirse.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -460,22 +460,22 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de bytes de datos que se desea codificar.
+El número de bytes de datos que se van a codificar.
 
 *nCharsetLen*<br/>
-La longitud en caracteres del juego que se usará para la conversión de caracteres.
+Longitud en caracteres del juego de caracteres que se va a usar para la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de caracteres necesarios para un búfer que podría contener datos codificados de *nSrcLen* bytes.
+Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
 ### <a name="remarks"></a>Comentarios
 
 El esquema de codificación "Q" se describe en RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="qpdecode"></a> QPDecode
+## <a name="qpdecode"></a>QPDecode
 
-Descodifica una cadena de datos que se ha codificado en formato Entrecomillado imprimible, como una llamada anterior a [QPEncode](#qpencode).
+Descodifica una cadena de datos que se ha codificado en formato entrecomillado imprimible, como por una llamada anterior a [QPEncode](#qpencode).
 
 ```
 inline BOOL QPDecode(
@@ -489,27 +489,27 @@ inline BOOL QPDecode(
 ### <a name="parameters"></a>Parámetros
 
 *pbSrcData*<br/>
-[in] El búfer que contiene los datos que se va a descodificar.
+de Búfer que contiene los datos que se van a descodificar.
 
 *nSrcLen*<br/>
-[in] La longitud en bytes de *pbSrcData*.
+de La longitud en bytes de *pbSrcData*.
 
 *szDest*<br/>
-[out] Búfer asignado por el autor de llamada para recibir los datos descodificados.
+enuncia Búfer asignado por el llamador para recibir los datos descodificados.
 
 *pnDestLen*<br/>
-[out] Puntero a una variable que contiene la longitud en bytes de *szDest*. Si la función se realiza correctamente, la variable recibe el número de bytes escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer.
+enuncia Puntero a una variable que contiene la longitud en bytes de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de bytes escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en bytes del búfer.
 
 *dwFlags*<br/>
-[in] ATLSMTP_QPENCODE marcas que describen cómo la conversión es a realizarse.
+de Marcas de ATLSMTP_QPENCODE que describen cómo se va a realizar la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-El esquema de codificación Entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
+El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 
@@ -522,17 +522,17 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de caracteres en la cadena codificada.
+Número de caracteres de la cadena codificada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de bytes necesarios para un búfer que podría contener una cadena descodificada de *nSrcLen* caracteres.
+Número de bytes necesarios para un búfer que puede contener una cadena descodificada de caracteres *nSrcLen* .
 
 ### <a name="remarks"></a>Comentarios
 
-El esquema de codificación Entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
+El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpencode"></a> QPEncode
+## <a name="qpencode"></a>QPEncode
 
 Llame a esta función para codificar algunos datos en formato entrecomillado imprimible.
 
@@ -548,35 +548,35 @@ inline BOOL QPEncode(
 ### <a name="parameters"></a>Parámetros
 
 *pbSrcData*<br/>
-El búfer que contiene los datos que se desea codificar.
+Búfer que contiene los datos que se van a codificar.
 
 *nSrcLen*<br/>
-La longitud en bytes de los datos que se desea codificar.
+La longitud en bytes de los datos que se van a codificar.
 
 *szDest*<br/>
-Búfer asignado por el autor de llamada para recibir los datos codificados.
+Búfer asignado por el llamador para recibir los datos codificados.
 
 *pnDestLen*<br/>
-Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en caracteres del búfer.
+Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de caracteres que se escriben en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en caracteres del búfer.
 
 *dwFlags*<br/>
-ATLSMTP_QPENCODE marcas que describen cómo la conversión es a realizarse.
+Marcas de ATLSMTP_QPENCODE que describen cómo se va a realizar la conversión.
 
-- ATLSMTP_QPENCODE_DOT si aparece un punto al principio de una línea, se agregan a la salida como codificado.
+- ATLSMTP_QPENCODE_DOT si un punto aparece al principio de una línea, se agrega al resultado y se codifica.
 
-- Anexa ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` a la cadena codificada.
+- ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` se anexa a la cadena codificada.
 
-Se describe el esquema de codificación Entrecomillado imprimible en [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
+El esquema de codificación entrecomillado imprimible se describe en [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-El esquema de codificación Entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
+El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.
 
@@ -587,19 +587,19 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de bytes de datos que se desea codificar.
+El número de bytes de datos que se van a codificar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de caracteres necesarios para un búfer que podría contener datos codificados de *nSrcLen* bytes.
+Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
 ### <a name="remarks"></a>Comentarios
 
-El esquema de codificación Entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
+El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="uudecode"></a> UUDecode
+## <a name="uudecode"></a>UUDecode
 
-Descodifica una cadena de datos UUEncode como mediante una llamada anterior a [UUEncode](#uuencode).
+Descodifica una cadena de datos que ha sido uuencode, como por una llamada anterior a [uuencode](#uuencode).
 
 ```
 inline BOOL UUDecode(
@@ -612,26 +612,26 @@ inline BOOL UUDecode(
 ### <a name="parameters"></a>Parámetros
 
 *pbSrcData*<br/>
-Cadena que contiene los datos que se va a descodificar.
+Cadena que contiene los datos que se van a descodificar.
 
 *nSrcLen*<br/>
 La longitud en bytes de *pbSrcData*.
 
 *pbDest*<br/>
-Búfer asignado por el autor de llamada para recibir los datos descodificados.
+Búfer asignado por el llamador para recibir los datos descodificados.
 
 *pnDestLen*<br/>
-Puntero a una variable que contiene la longitud en bytes de *pbDest*. Si la función se realiza correctamente, la variable recibe el número de bytes escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer.
+Puntero a una variable que contiene la longitud en bytes de *pbDest*. Si la función se ejecuta correctamente, la variable recibe el número de bytes escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en bytes del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Implementación de esta forma sigue la especificación de POSIX P1003.2b/D11.
+Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
-## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en bytes de un búfer que puede contener datos descodificados de una cadena con codificación UUEncode de la longitud especificada.
 
@@ -642,17 +642,17 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de caracteres en la cadena codificada.
+Número de caracteres de la cadena codificada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de bytes necesarios para un búfer que podría contener una cadena descodificada de *nSrcLen* caracteres.
+Número de bytes necesarios para un búfer que puede contener una cadena descodificada de caracteres *nSrcLen* .
 
 ### <a name="remarks"></a>Comentarios
 
-Implementación de esta forma sigue la especificación de POSIX P1003.2b/D11.
+Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
-## <a name="uuencode"></a> UUEncode
+## <a name="uuencode"></a>UUEncode
 
 Llame a esta función para codificar datos con formato UUEncode.
 
@@ -669,38 +669,38 @@ inline BOOL UUEncode(
 ### <a name="parameters"></a>Parámetros
 
 *pbSrcData*<br/>
-El búfer que contiene los datos que se desea codificar.
+Búfer que contiene los datos que se van a codificar.
 
 *nSrcLen*<br/>
-La longitud en bytes de los datos que se desea codificar.
+La longitud en bytes de los datos que se van a codificar.
 
 *szDest*<br/>
-Búfer asignado por el autor de llamada para recibir los datos codificados.
+Búfer asignado por el llamador para recibir los datos codificados.
 
 *pnDestLen*<br/>
-Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud requerida en caracteres del búfer.
+Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de caracteres que se escriben en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en caracteres del búfer.
 
 *lpszFile*<br/>
-El archivo que se agregará al encabezado cuando se especifica ATLSMTP_UUENCODE_HEADER en *dwFlags*.
+El archivo que se va a agregar al encabezado cuando ATLSMTP_UUENCODE_HEADER se especifica en *dwFlags*.
 
 *dwFlags*<br/>
 Marcas que controlan el comportamiento de esta función.
 
-- ATLSMTP_UUENCODE_HEADE el encabezado se va a codificar.
+- ATLSMTP_UUENCODE_HEADE el encabezado se codificará.
 
-- ATLSMTP_UUENCODE_END final que se va a codificar.
+- ATLSMTP_UUENCODE_END el extremo se codificará.
 
-- Se realizará el llenado de ATLSMTP_UUENCODE_DOT datos.
+- Se realizará el ATLSMTP_UUENCODE_DOT de los datos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
+Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Implementación de esta forma sigue la especificación de POSIX P1003.2b/D11.
+Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
-## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.
 
@@ -711,15 +711,15 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="parameters"></a>Parámetros
 
 *nSrcLen*<br/>
-El número de bytes de datos que se desea codificar.
+El número de bytes de datos que se van a codificar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de caracteres necesarios para un búfer que podría contener datos codificados de *nSrcLen* bytes.
+Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
 ### <a name="remarks"></a>Comentarios
 
-Implementación de esta forma sigue la especificación de POSIX P1003.2b/D11.
+Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
 ## <a name="see-also"></a>Vea también
 
