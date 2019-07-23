@@ -14,7 +14,7 @@
       href: overview/supported-platforms-visual-cpp.md
     - name: Herramientas y características de C++ en las ediciones de Visual Studio
       href: overview/visual-cpp-tools-and-features-in-visual-studio-editions.md
-    - name: Ejemplos
+    - name: Muestras
       href: overview/visual-cpp-samples.md
     - name: Ayuda y comunidad
       href: overview/visual-cpp-help-and-community.md
@@ -114,7 +114,7 @@
       items:
         - name: Compilaciones de versiones de C++
           href: build/release-builds.md
-        - name: 'Procedimientos para: Crear una compilación de versión'
+        - name: Procedimiento Crear una compilación de versión
           href: build/how-to-create-a-release-build.md
         - name: Problemas comunes al crear versiones de lanzamiento
           href: build/common-problems-when-creating-a-release-build.md
@@ -127,7 +127,7 @@
               href: build/using-verify-instead-of-assert.md
             - name: Utilizar la versión de depuración para comprobar si se ha sobrescrito la memoria
               href: build/using-the-debug-build-to-check-for-memory-overwrite.md
-            - name: 'Procedimientos para: Depuración de una compilación de versión'
+            - name: Procedimiento Depuración de una compilación de versión
               href: build/how-to-debug-a-release-build.md
             - name: Comprobar si se ha sobrescrito la memoria
               href: build/checking-for-memory-overwrites.md
@@ -163,7 +163,7 @@
                   href: build/pgomgr.md
                 - name: pgosweep
                   href: build/pgosweep.md
-                - name: 'Procedimientos para: Combinación de varios perfiles PGO en un solo perfil'
+                - name: Procedimiento Combinación de varios perfiles PGO en un solo perfil
                   href: build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
     - name: Uso del conjunto de herramientas de MSVC desde la línea de comandos
       expanded: false
@@ -187,15 +187,15 @@
           href: build/msbuild-visual-cpp.md
         - name: 'Tutorial: Uso de MSBuild para crear un proyecto de C++'
           href: build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
-        - name: 'Procedimientos para: Usar de eventos de compilación en proyectos de MSBuild'
+        - name: Procedimiento Usar de eventos de compilación en proyectos de MSBuild
           href: build/how-to-use-build-events-in-msbuild-projects.md
-        - name: 'Procedimientos para: Agregar un paso personalizado de compilación a proyectos de MSBuild'
+        - name: Procedimiento Agregar un paso personalizado de compilación a proyectos de MSBuild
           href: build/how-to-add-a-custom-build-step-to-msbuild-projects.md
-        - name: 'Procedimientos para: Agregar herramientas personalizadas de compilación a proyectos de MSBuild'
+        - name: Procedimiento Agregar herramientas personalizadas de compilación a proyectos de MSBuild
           href: build/how-to-add-custom-build-tools-to-msbuild-projects.md
-        - name: 'Procedimientos para: Integrar herramientas personalizadas en las propiedades del proyecto'
+        - name: Procedimiento Integrar herramientas personalizadas en las propiedades del proyecto
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
-        - name: 'Procedimientos para: Modificación de la plataforma de destino y el conjunto de herramientas de la plataforma'
+        - name: Procedimiento Modificación de la plataforma de destino y el conjunto de herramientas de la plataforma
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
     - name: 'Tutorial: Crear y utilizar una biblioteca estática (C++)'
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
@@ -302,9 +302,9 @@
           href: build/building-c-cpp-isolated-applications.md
         - name: Compilar ensamblados simultáneos de C/C++
           href: build/building-c-cpp-side-by-side-assemblies.md
-        - name: 'Procedimientos para: Compilar componentes COM de registro gratuito'
+        - name: Procedimiento Compilar componentes COM de registro gratuito
           href: build/how-to-build-registration-free-com-components.md
-        - name: 'Procedimientos para: Compilar aplicaciones aisladas que empleen componentes COM'
+        - name: Procedimiento Compilar aplicaciones aisladas que empleen componentes COM
           href: build/how-to-build-isolated-applications-to-consume-com-components.md
         - name: Introducción a la generación de manifiestos para los programas de C/C++
           expanded: false
@@ -315,7 +315,7 @@
               href: build/manifest-generation-in-visual-studio.md
             - name: Generación de manifiestos en la línea de comandos
               href: build/manifest-generation-at-the-command-line.md
-            - name: 'Procedimientos para: Incrustar un manifiesto en una aplicación de C/C++'
+            - name: Procedimiento Incrustar un manifiesto en una aplicación de C/C++
               href: build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
         - name: Solucionar problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++
           href: build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
@@ -324,9 +324,9 @@
       items:
         - name: 'Configuración de MSVC en destinos de 64 bits, x64'
           href: build/configuring-programs-for-64-bit-visual-cpp.md
-        - name: 'Procedimientos para: Configuración de proyectos de C++ en plataformas de destino de 64 bits, x64'
+        - name: 'Procedimiento Configuración de proyectos de C++ en plataformas de destino de 64 bits, x64'
           href: build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md
-        - name: 'Procedimientos para: Habilitar un conjunto de herramientas de MSVC de 64 bits en la línea de comandos'
+        - name: Procedimiento Habilitar un conjunto de herramientas de MSVC de 64 bits en la línea de comandos
           href: build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md
         - name: Problemas comunes de migración de MSVC de 64 bits
           href: build/common-visual-cpp-64-bit-migration-issues.md
@@ -418,12 +418,14 @@
                   href: build/reference/advanced-property-page.md
                 - name: Directorios de VC++ (Página de propiedades)
                   href: build/reference/vcpp-directories-property-page.md
+                - name: Páginas de propiedades de C/C++
+                  href: build/reference/c-cpp-prop-page.md
+                - name: Páginas de propiedades Vinculador
+                  href: build/reference/linker-property-pages.md
                 - name: Páginas de propiedades Línea de comandos
                   href: build/reference/command-line-property-pages.md
                 - name: Página de propiedades NMake
                   href: build/reference/nmake-property-page.md
-                - name: Páginas de propiedades Vinculador
-                  href: build/reference/linker-property-pages.md
                 - name: Herramienta Manifiesto (Páginas de propiedades)
                   expanded: false
                   items:
@@ -448,9 +450,9 @@
                       href: build/reference/midl-property-pages.md
                     - name: 'Páginas de propiedades MIDL: General'
                       href: build/reference/midl-property-pages-general.md
-                    - name: 'Páginas de propiedades MIDL: Output'
+                    - name: 'Páginas de propiedades MIDL: Salida'
                       href: build/reference/midl-property-pages-output.md
-                    - name: 'Páginas de propiedades MIDL: Avanzado'
+                    - name: 'Páginas de propiedades MIDL: Avanzadas'
                       href: build/reference/midl-property-pages-advanced.md
                 - name: Página de propiedades Referencias Web
                   href: build/reference/web-references-property-page.md
@@ -467,7 +469,7 @@
                       href: build/reference/hlsl-property-pages.md
                     - name: 'Páginas de propiedades HLSL: General'
                       href: build/reference/hlsl-property-pages-general.md
-                    - name: 'Páginas de propiedades HLSL: Avanzado'
+                    - name: 'Páginas de propiedades HLSL: Avanzadas'
                       href: build/reference/hlsl-property-pages-advanced.md
                     - name: 'Páginas de propiedades HLSL: archivos de salida'
                       href: build/reference/hlsl-property-pages-output-files.md
@@ -1311,7 +1313,7 @@
                   items:
                     - name: Información general sobre LIB
                       href: build/reference/overview-of-lib.md
-                    - name: 'Procedimientos para: Establecimiento de las opciones de LIB.EXE en el entorno de desarrollo de Visual Studio'
+                    - name: Procedimiento Establecimiento de las opciones de LIB.EXE en el entorno de desarrollo de Visual Studio
                       href: build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md
                     - name: Archivos de entrada de LIB
                       href: build/reference/lib-input-files.md
@@ -1595,7 +1597,7 @@
           href: ide/adding-a-member-variable-visual-cpp.md
         - name: Agregar un método
           href: ide/adding-a-method-visual-cpp.md
-        - name: Incorporación de una propiedad
+        - name: Agregar una propiedad
           href: ide/adding-a-property-visual-cpp.md
         - name: Agregar un evento
           href: ide/adding-an-event-visual-cpp.md
@@ -1792,11 +1794,11 @@
               href: text/generic-text-mappings-in-tchar-h.md
             - name: Utilizar tipos de datos de TCHAR.H con código _MBCS
               href: text/using-tchar-h-data-types-with-mbcs-code.md
-        - name: 'Procedimientos para: Convertir entre distintos tipos de cadenas'
+        - name: Procedimiento Convertir entre distintos tipos de cadenas
           href: text/how-to-convert-between-various-string-types.md
     - name: Recursos para crear un juego mediante DirectX
       href: windows/resources-for-creating-a-game-using-directx.md
-    - name: 'Procedimientos para: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows'
+    - name: Procedimiento Usar el SDK de Windows 10 en una aplicación de escritorio de Windows
       href: windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md
     - name: Trabajar con archivos de recursos
       expanded: false
@@ -1808,20 +1810,20 @@
           items:
             - name: Archivos de recursos
               href: windows/resource-files-visual-studio.md
-            - name: 'Procedimientos para: Crear recursos'
+            - name: Procedimiento Crear recursos
               href: windows/how-to-create-a-resource-script-file.md
-            - name: 'Procedimientos para: Administrar recursos'
+            - name: Procedimiento Administrar recursos
               href: windows/how-to-copy-resources.md
-            - name: 'Procedimientos para: Incluir recursos en tiempo de compilación'
+            - name: Procedimiento Incluir recursos en tiempo de compilación
               href: windows/how-to-include-resources-at-compile-time.md
         - name: Identificadores de recursos (símbolos)
           expanded: false
           items:
             - name: Identificadores de recursos (símbolos)
               href: windows/symbols-resource-identifiers.md
-            - name: 'Procedimientos para: Crear símbolos'
+            - name: Procedimiento Crear símbolos
               href: windows/creating-new-symbols.md
-            - name: 'Procedimientos para: Administrar símbolos'
+            - name: Procedimiento Administrar símbolos
               href: windows/changing-a-symbol-or-symbol-name-id.md
             - name: Identificadores de símbolo predefinidos
               expanded: false
@@ -1853,31 +1855,31 @@
               items:
                 - name: Editor de cuadros de diálogo
                   href: windows/dialog-editor.md
-                - name: 'Procedimientos para: Crear un cuadro de diálogo'
+                - name: Procedimiento Crear un cuadro de diálogo
                   href: windows/creating-a-new-dialog-box.md
                 - name: Controles de cuadro de diálogo
                   expanded: false
                   items:
                     - name: Controles de cuadro de diálogo
                       href: windows/controls-in-dialog-boxes.md
-                    - name: 'Procedimientos para: Agregar, editar o eliminar controles'
+                    - name: 'Procedimiento Agregar, editar o eliminar controles'
                       href: windows/adding-editing-or-deleting-controls.md
-                    - name: 'Procedimientos para: Controles de diseño'
+                    - name: Procedimiento Controles de diseño
                       href: windows/arrangement-of-controls-on-dialog-boxes.md
-                    - name: 'Procedimientos para: Definir el control de acceso y los valores'
+                    - name: Procedimiento Definir el control de acceso y los valores
                       href: windows/defining-mnemonics-access-keys.md
             - name: Editor de imágenes para iconos
               expanded: false
               items:
                 - name: Editor de imágenes para iconos
                   href: windows/image-editor-for-icons.md
-                - name: 'Procedimientos para: Crear un icono u otra imagen'
+                - name: Procedimiento Crear un icono u otra imagen
                   href: windows/creating-an-icon-or-other-image-image-editor-for-icons.md
-                - name: 'Procedimientos para: Editar una imagen'
+                - name: Procedimiento Editar una imagen
                   href: windows/selecting-an-area-of-an-image-image-editor-for-icons.md
-                - name: 'Procedimientos para: Usar una herramienta de dibujo'
+                - name: Procedimiento Usar una herramienta de dibujo
                   href: windows/using-a-drawing-tool-image-editor-for-icons.md
-                - name: 'Procedimientos para: Trabajar con colores'
+                - name: Procedimiento Trabajar con colores
                   href: windows/working-with-color-image-editor-for-icons.md
                 - name: Teclas de aceleración
                   href: windows/accelerator-keys-image-editor-for-icons.md
@@ -1974,7 +1976,7 @@
               href: cppcx/value-classes-and-structs-c-cx.md
             - name: Clases parciales
               href: cppcx/partial-classes-c-cx.md
-            - name: properties (Propiedades)
+            - name: Propiedades
               href: cppcx/properties-c-cx.md
             - name: Colecciones
               href: cppcx/collections-c-cx.md
@@ -2222,19 +2224,19 @@
       items:
         - name: Biblioteca de plantillas de Windows Runtime C++ (WRL)
           href: cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
-        - name: 'Procedimientos para: Activar y usar un componente de Windows Runtime mediante WRL'
+        - name: Procedimiento Activar y usar un componente de Windows Runtime mediante WRL
           href: cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
-        - name: 'Procedimientos para: Completar operaciones asincrónicas mediante WRL'
+        - name: Procedimiento Completar operaciones asincrónicas mediante WRL
           href: cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
-        - name: 'Procedimientos para: Controlar eventos mediante WRL'
+        - name: Procedimiento Controlar eventos mediante WRL
           href: cppcx/wrl/how-to-handle-events-using-wrl.md
         - name: 'Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation'
           href: cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
-        - name: 'Procedimientos para: Crear un componente COM clásico mediante WRL'
+        - name: Procedimiento Crear un componente COM clásico mediante WRL
           href: cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
-        - name: 'Procedimientos para: Crear instancias de componentes WRL directamente'
+        - name: Procedimiento Crear instancias de componentes WRL directamente
           href: cppcx/wrl/how-to-instantiate-wrl-components-directly.md
-        - name: 'Procedimientos para: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows'
+        - name: Procedimiento Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows
           href: cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
         - name: API clave de WRL por categoría
           href: cppcx/wrl/key-wrl-apis-by-category.md
@@ -2494,15 +2496,15 @@
       items:
         - name: Tareas de C++/CLI
           href: dotnet/cpp-cli-tasks.md
-        - name: 'Procedimientos para: Crear proyectos vacíos de CLR'
+        - name: Procedimiento Crear proyectos vacíos de CLR
           href: dotnet/how-to-create-clr-empty-projects.md
-        - name: 'Procedimientos para: Creación de aplicaciones de consola CLR'
+        - name: Procedimiento Creación de aplicaciones de consola CLR
           href: dotnet/how-to-create-clr-console-applications-cpp-cli.md
-        - name: 'Procedimientos para: Usar referencias de seguimiento en C++/CLI'
+        - name: Procedimiento Usar referencias de seguimiento en C++/CLI
           href: dotnet/how-to-use-tracking-references-in-cpp-cli.md
-        - name: 'Procedimientos para: Usar matrices en C++/CLI'
+        - name: Procedimiento Usar matrices en C++/CLI
           href: dotnet/how-to-use-arrays-in-cpp-cli.md
-        - name: 'Procedimientos para: Definir y consumir clases y structs'
+        - name: Procedimiento Definir y consumir clases y structs
           href: dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
         - name: Semántica de pila de C++ para los tipos de referencia
           href: dotnet/cpp-stack-semantics-for-reference-types.md
@@ -2512,19 +2514,19 @@
           href: dotnet/user-defined-conversions-cpp-cli.md
         - name: initonly
           href: dotnet/initonly-cpp-cli.md
-        - name: 'Procedimientos para: Definición y uso de delegados'
+        - name: Procedimiento Definición y uso de delegados
           href: dotnet/how-to-define-and-use-delegates-cpp-cli.md
-        - name: 'Procedimientos para: Definir y usar enumeraciones en C++/CLI'
+        - name: Procedimiento Definir y usar enumeraciones en C++/CLI
           href: dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
-        - name: 'Procedimientos para: Usar eventos en C++/CLI'
+        - name: Procedimiento Usar eventos en C++/CLI
           href: dotnet/how-to-use-events-in-cpp-cli.md
-        - name: 'Procedimientos para: Definición de un constructor estático de interfaz'
+        - name: Procedimiento Definición de un constructor estático de interfaz
           href: dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
-        - name: 'Procedimientos para: Declarar los especificadores de invalidación en compilaciones nativas'
+        - name: Procedimiento Declarar los especificadores de invalidación en compilaciones nativas
           href: dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
-        - name: 'Procedimientos para: Usar propiedades en C++/CLI'
+        - name: Procedimiento Usar propiedades en C++/CLI
           href: dotnet/how-to-use-properties-in-cpp-cli.md
-        - name: 'Procedimientos para: Usar safe_cast en C++/CLI'
+        - name: Procedimiento Usar safe_cast en C++/CLI
           href: dotnet/how-to-use-safe-cast-in-cpp-cli.md
         - name: Expresiones regulares
           href: dotnet/regular-expressions-cpp-cli.md
@@ -2548,9 +2550,9 @@
           items:
             - name: Ensamblados mixtos (nativos y administrados)
               href: dotnet/mixed-native-and-managed-assemblies.md
-            - name: 'Procedimientos para: Migrar a -clr'
+            - name: Procedimiento Migrar a -clr
               href: dotnet/how-to-migrate-to-clr.md
-            - name: 'Procedimientos para: Compilar código de MFC y ATL mediante -clr'
+            - name: Procedimiento Compilar código de MFC y ATL mediante -clr
               href: dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
             - name: Inicialización de ensamblados mixtos
               href: dotnet/initialization-of-mixed-assemblies.md
@@ -2564,7 +2566,7 @@
               href: dotnet/double-thunking-cpp.md
             - name: Evitar excepciones al apagar CLR cuando se utilizan objetos COM compilados con /clr
               href: dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
-            - name: 'Procedimientos para: Crear una aplicación de confianza parcial quitando la dependencia de la DLL de la biblioteca CRT'
+            - name: Procedimiento Crear una aplicación de confianza parcial quitando la dependencia de la DLL de la biblioteca CRT
               href: dotnet/create-a-partially-trusted-application.md
         - name: Utilizar un control de usuario de Windows Forms en MFC
           expanded: false
@@ -2578,22 +2580,22 @@
               items:
                 - name: Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
                   href: dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
-                - name: 'Procedimientos para: Crear el control de usuario y el host en un cuadro de diálogo'
+                - name: Procedimiento Crear el control de usuario y el host en un cuadro de diálogo
                   href: dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
-                - name: 'Procedimientos para: Enlazar datos DDX/DDV con formularios Windows Forms'
+                - name: Procedimiento Enlazar datos DDX/DDV con formularios Windows Forms
                   href: dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
-                - name: 'Procedimientos para: Recibir eventos de Windows Forms de clases nativas de C++'
+                - name: Procedimiento Recibir eventos de Windows Forms de clases nativas de C++
                   href: dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
             - name: Hospedar un control de usuario de Windows Forms como vista de MFC
               expanded: false
               items:
                 - name: Hospedar un control de usuario de Windows Forms como vista de MFC
                   href: dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
-                - name: 'Procedimientos para: Crear el control de usuario y hospedarlo en una vista MDI'
+                - name: Procedimiento Crear el control de usuario y hospedarlo en una vista MDI
                   href: dotnet/how-to-create-the-user-control-and-host-mdi-view.md
-                - name: 'Procedimientos para: Agregar enrutamientos de comandos al control de Windows Forms'
+                - name: Procedimiento Agregar enrutamientos de comandos al control de Windows Forms
                   href: dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
-                - name: 'Procedimientos para: Llamar a propiedades y métodos del control de formularios Windows Forms'
+                - name: Procedimiento Llamar a propiedades y métodos del control de formularios Windows Forms
                   href: dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
             - name: Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
               href: dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
@@ -2607,81 +2609,81 @@
               items:
                 - name: Utilizar un elemento PInvoke explícito en C++ (Atributo DllImport)
                   href: dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
-                - name: 'Procedimientos para: Llamar a archivos DLL nativos desde el código administrado mediante PInvoke'
+                - name: Procedimiento Llamar a archivos DLL nativos desde el código administrado mediante PInvoke
                   href: dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
-                - name: 'Procedimientos para: Serializar cadenas mediante PInvoke'
+                - name: Procedimiento Serializar cadenas mediante PInvoke
                   href: dotnet/how-to-marshal-strings-using-pinvoke.md
-                - name: 'Procedimientos para: Serializar estructuras mediante PInvoke'
+                - name: Procedimiento Serializar estructuras mediante PInvoke
                   href: dotnet/how-to-marshal-structures-using-pinvoke.md
-                - name: 'Procedimientos para: Serializar matrices mediante PInvoke'
+                - name: Procedimiento Serializar matrices mediante PInvoke
                   href: dotnet/how-to-marshal-arrays-using-pinvoke.md
-                - name: 'Procedimientos para: Serializar punteros a función mediante PInvoke'
+                - name: Procedimiento Serializar punteros a función mediante PInvoke
                   href: dotnet/how-to-marshal-function-pointers-using-pinvoke.md
-                - name: 'Procedimientos para: Serializar punteros insertados mediante PInvoke'
+                - name: Procedimiento Serializar punteros insertados mediante PInvoke
                   href: dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
             - name: Utilizar la interoperabilidad de C++ (PInvoke implícito)
               expanded: false
               items:
                 - name: Utilizar la interoperabilidad de C++ (PInvoke implícito)
                   href: dotnet/using-cpp-interop-implicit-pinvoke.md
-                - name: 'Procedimientos para: Serializar cadenas ANSI mediante la interoperabilidad de C++'
+                - name: Procedimiento Serializar cadenas ANSI mediante la interoperabilidad de C++
                   href: dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
-                - name: 'Procedimientos para: Serializar cadenas Unicode mediante la interoperabilidad de C++'
+                - name: Procedimiento Serializar cadenas Unicode mediante la interoperabilidad de C++
                   href: dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
-                - name: 'Procedimientos para: Serializar cadenas COM mediante la interoperabilidad de C++'
+                - name: Procedimiento Serializar cadenas COM mediante la interoperabilidad de C++
                   href: dotnet/how-to-marshal-com-strings-using-cpp-interop.md
-                - name: 'Procedimientos para: Serializar estructuras mediante la interoperabilidad de C++'
+                - name: Procedimiento Serializar estructuras mediante la interoperabilidad de C++
                   href: dotnet/how-to-marshal-structures-using-cpp-interop.md
-                - name: 'Procedimientos para: Serializar matrices mediante la interoperabilidad de C++'
+                - name: Procedimiento Serializar matrices mediante la interoperabilidad de C++
                   href: dotnet/how-to-marshal-arrays-using-cpp-interop.md
-                - name: 'Procedimientos para: Serializar devoluciones de llamadas y delegados mediante la interoperabilidad de C++'
+                - name: Procedimiento Serializar devoluciones de llamadas y delegados mediante la interoperabilidad de C++
                   href: dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
-                - name: 'Procedimientos para: Serializar punteros insertados mediante la interoperabilidad de C++'
+                - name: Procedimiento Serializar punteros insertados mediante la interoperabilidad de C++
                   href: dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
-                - name: 'Procedimientos para: Extender la biblioteca de serialización'
+                - name: Procedimiento Extender la biblioteca de serialización
                   href: dotnet/how-to-extend-the-marshaling-library.md
-                - name: 'Procedimientos para: Tener acceso a caracteres en un objeto System::String'
+                - name: 'Procedimiento Tener acceso a caracteres en un objeto System::String'
                   href: dotnet/how-to-access-characters-in-a-system-string.md
-                - name: 'Procedimientos para: Convertir char * String en una matriz System::Byte'
+                - name: 'Procedimiento Convertir char * String en una matriz System::Byte'
                   href: dotnet/how-to-convert-char-star-string-to-system-byte-array.md
-                - name: 'Procedimientos para: Convertir System::String en wchar_t* o char*'
+                - name: 'Procedimiento Convertir System::String en wchar_t* o char*'
                   href: dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
-                - name: 'Procedimientos para: Convertir System::String en cadenas estándar'
+                - name: 'Procedimiento Convertir System::String en cadenas estándar'
                   href: dotnet/how-to-convert-system-string-to-standard-string.md
-                - name: 'Procedimientos para: Convertir cadenas estándar en System::String'
+                - name: 'Procedimiento Convertir cadenas estándar en System::String'
                   href: dotnet/how-to-convert-standard-string-to-system-string.md
-                - name: 'Procedimientos para: Obtener un puntero a una matriz de bytes'
+                - name: Procedimiento Obtener un puntero a una matriz de bytes
                   href: dotnet/how-to-obtain-a-pointer-to-byte-array.md
-                - name: 'Procedimientos para: Cargar recursos no administrados en una matriz de bytes'
+                - name: Procedimiento Cargar recursos no administrados en una matriz de bytes
                   href: dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
-                - name: 'Procedimientos para: Modificar la clase de referencia en una función nativa'
+                - name: Procedimiento Modificar la clase de referencia en una función nativa
                   href: dotnet/how-to-modify-reference-class-in-a-native-function.md
-                - name: 'Procedimientos para: Determinar si una imagen es nativa o CLR'
+                - name: Procedimiento Determinar si una imagen es nativa o CLR
                   href: dotnet/how-to-determine-if-an-image-is-native-or-clr.md
-                - name: 'Procedimientos para: Agregar un archivo DLL nativo a la memoria caché global de ensamblados'
+                - name: Procedimiento Agregar un archivo DLL nativo a la memoria caché global de ensamblados
                   href: dotnet/how-to-add-native-dll-to-global-assembly-cache.md
-                - name: 'Procedimientos para: Mantener la referencia a un tipo de valor en un tipo nativo'
+                - name: Procedimiento Mantener la referencia a un tipo de valor en un tipo nativo
                   href: dotnet/how-to-hold-reference-to-value-type-in-native-type.md
-                - name: 'Procedimientos para: Mantener una referencia a objeto en la memoria no administrada'
+                - name: Procedimiento Mantener una referencia a objeto en la memoria no administrada
                   href: dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
-                - name: 'Procedimientos para: Detectar la compilación de -clr'
+                - name: Procedimiento Detectar la compilación de -clr
                   href: dotnet/how-to-detect-clr-compilation.md
-                - name: 'Procedimientos para: Realizar la conversión entre System::Guid y _GUID'
+                - name: 'Procedimiento Realizar la conversión entre System::Guid y _GUID'
                   href: dotnet/how-to-convert-between-system-guid-and-guid.md
-                - name: 'Procedimientos para: Especificar un parámetro out'
+                - name: Procedimiento Especificar un parámetro out
                   href: dotnet/how-to-specify-an-out-parameter.md
-                - name: 'Procedimientos para: Usar un tipo nativo en una compilación con -clr'
+                - name: Procedimiento Usar un tipo nativo en una compilación con -clr
                   href: dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
-                - name: 'Procedimientos para: Declarar controladores en tipos nativos'
+                - name: Procedimiento Declarar controladores en tipos nativos
                   href: dotnet/how-to-declare-handles-in-native-types.md
-                - name: 'Procedimientos para: Envolver una clase nativa para usarla en C#'
+                - name: 'Procedimiento Envolver una clase nativa para usarla en C#'
                   href: dotnet/how-to-wrap-native-class-for-use-by-csharp.md
     - name: Código puro y comprobable
       expanded: false
       items:
         - name: Código puro y comprobable
           href: dotnet/pure-and-verifiable-code-cpp-cli.md
-        - name: 'Procedimientos para: Creación de proyectos de C++ comprobables'
+        - name: Procedimiento Creación de proyectos de C++ comprobables
           href: dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
         - name: Uso de ensamblados comprobables con SQL Server
           href: dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
@@ -2710,11 +2712,11 @@
           href: dotnet/stl-clr-containers.md
         - name: Requisitos de los elementos contenedores de STL/CLR
           href: dotnet/requirements-for-stl-clr-container-elements.md
-        - name: 'Procedimientos para: Convertir una colección .NET en un contenedor STL/CLR'
+        - name: Procedimiento Convertir una colección .NET en un contenedor STL/CLR
           href: dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
-        - name: 'Procedimientos para: Convertir un contenedor STL/CLR en una colección .NET'
+        - name: Procedimiento Convertir un contenedor STL/CLR en una colección .NET
           href: dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
-        - name: 'Procedimientos para: Exponer un contenedor de STL/CLR desde un ensamblado'
+        - name: Procedimiento Exponer un contenedor de STL/CLR desde un ensamblado
           href: dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
         - name: 'for each, in'
           href: dotnet/for-each-in.md
@@ -2800,10 +2802,10 @@
           items:
             - name: Synchronization (Clase lock)
               href: dotnet/synchronization-lock-class.md
-            - name: lock
+            - name: bloquear
               expanded: false
               items:
-                - name: lock
+                - name: bloquear
                   href: dotnet/lock.md
                 - name: lock (Clase)
                   href: dotnet/lock-class.md
@@ -2834,20 +2836,20 @@
           href: dotnet/differences-in-exception-handling-behavior-under-clr.md
         - name: finally
           href: dotnet/finally.md
-        - name: 'Procedimientos para: Detectar excepciones en código nativo iniciadas desde MSIL'
+        - name: Procedimiento Detectar excepciones en código nativo iniciadas desde MSIL
           href: dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
-        - name: 'Procedimientos para: Definir e instalar un controlador de excepciones global'
+        - name: Procedimiento Definir e instalar un controlador de excepciones global
           href: dotnet/how-to-define-and-install-a-global-exception-handler.md
     - name: Boxing
       expanded: false
       items:
         - name: Boxing
           href: dotnet/boxing-cpp-cli.md
-        - name: 'Procedimientos para: Solicitar explícitamente la conversión boxing'
+        - name: Procedimiento Solicitar explícitamente la conversión boxing
           href: dotnet/how-to-explicitly-request-boxing.md
-        - name: 'Procedimientos para: Usar gcnew para crear tipos de valor y usar la conversión boxing implícita'
+        - name: Procedimiento Usar gcnew para crear tipos de valor y usar la conversión boxing implícita
           href: dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
-        - name: 'Procedimientos para: Aplicar la conversión unboxing'
+        - name: Procedimiento Aplicar la conversión unboxing
           href: dotnet/how-to-unbox.md
         - name: Conversiones estándar y conversión boxing implícita
           href: dotnet/standard-conversions-and-implicit-boxing.md
@@ -2906,7 +2908,7 @@
       items:
         - name: Migrar a la Plataforma universal de Windows (C++)
           href: porting/porting-to-the-universal-windows-platform-cpp.md
-        - name: 'Procedimientos para: Usar código C++ existente en una aplicación para la Plataforma universal de Windows'
+        - name: Procedimiento Usar código C++ existente en una aplicación para la Plataforma universal de Windows
           href: porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md
 - name: Procedimientos recomendados para la seguridad en C++
   expanded: false
@@ -2925,7 +2927,7 @@
     - name: Referencia de lenguajes
       expanded: false
       items:
-        - name: Languages
+        - name: Lenguajes
           href: overview/languages-cpp.md
         - name: Referencia del lenguaje C
           expanded: false
@@ -3035,7 +3037,7 @@
                       href: c-language/c-declarations-and-definitions.md
                     - name: Declaraciones y definiciones de función
                       href: c-language/function-declarations-and-definitions.md
-                    - name: Blocks
+                    - name: Bloques
                       href: c-language/blocks.md
                     - name: Programa de ejemplo
                       href: c-language/example-program.md
@@ -3059,7 +3061,7 @@
                   items:
                     - name: 'Duración, ámbito, visibilidad y vinculación'
                       href: c-language/lifetime-scope-visibility-and-linkage.md
-                    - name: Vigencia
+                    - name: Período de duración
                       href: c-language/lifetime.md
                     - name: Ámbito y visibilidad
                       href: c-language/scope-and-visibility.md
@@ -3424,7 +3426,7 @@
                           href: c-language/considerations-when-writing-prolog-epilog-code.md
                     - name: Clase de almacenamiento
                       href: c-language/storage-class.md
-                    - name: Tipo de valor devuelto
+                    - name: Tipo devuelto
                       href: c-language/return-type.md
                     - name: Parámetros
                       href: c-language/parameters.md
@@ -3702,13 +3704,13 @@
                   items:
                     - name: Punteros inteligentes (C++ moderno)
                       href: cpp/smart-pointers-modern-cpp.md
-                    - name: 'Procedimientos para: Creación y uso de instancias unique_ptr'
+                    - name: Procedimiento Creación y uso de instancias unique_ptr
                       href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: 'Procedimientos para: Creación y uso de instancias shared_ptr'
+                    - name: Procedimiento Creación y uso de instancias shared_ptr
                       href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: 'Procedimientos para: Creación y uso de instancias weak_ptr'
+                    - name: Procedimiento Creación y uso de instancias weak_ptr
                       href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: 'Procedimientos para: Creación y uso de instancias CComPtr y CComQIPtr'
+                    - name: Procedimiento Creación y uso de instancias CComPtr y CComQIPtr
                       href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
                 - name: Pimpl para encapsulación en tiempo de compilación (C++ moderno)
                   href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
@@ -3723,9 +3725,9 @@
                   items:
                     - name: Controlar errores y excepciones (C++ moderno)
                       href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: 'Procedimientos para: Diseño para la seguridad de las excepciones'
+                    - name: Procedimiento Diseño para la seguridad de las excepciones
                       href: cpp/how-to-design-for-exception-safety.md
-                    - name: 'Procedimientos para: Interfaz entre código excepcional y no excepcional'
+                    - name: Procedimiento Interfaz entre código excepcional y no excepcional
                       href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: Portabilidad en los límites de ABI (C++ moderno)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
@@ -3738,7 +3740,7 @@
                   href: cpp/overview-of-file-translation.md
                 - name: Juegos de caracteres
                   href: cpp/character-sets.md
-                - name: Tokens
+                - name: tokens
                   href: cpp/tokens-cpp.md
                 - name: Comentarios
                   href: cpp/comments-cpp.md
@@ -3879,7 +3881,7 @@
                   href: cpp/nullptr.md
                 - name: void
                   href: cpp/void-cpp.md
-                - name: booleano
+                - name: bool
                   href: cpp/bool-cpp.md
                 - name: false
                   href: cpp/false-cpp.md
@@ -4099,10 +4101,10 @@
               href: cpp/enumerations-cpp.md
             - name: Uniones
               href: cpp/unions.md
-            - name: Functions
+            - name: Funciones
               expanded: false
               items:
-                - name: Functions
+                - name: Funciones
                   href: cpp/functions-cpp.md
                 - name: Funciones con listas de argumentos de variable
                   href: cpp/functions-with-variable-argument-lists-cpp.md
@@ -4145,7 +4147,7 @@
               items:
                 - name: Clases y estructuras
                   href: cpp/classes-and-structs-cpp.md
-                - name: class
+                - name: clase
                   href: cpp/class-cpp.md
                 - name: struct
                   href: cpp/struct-cpp.md
@@ -4158,11 +4160,11 @@
                       href: cpp/member-access-control-cpp.md
                     - name: friend
                       href: cpp/friend-cpp.md
-                    - name: privado
+                    - name: private
                       href: cpp/private-cpp.md
                     - name: protected
                       href: cpp/protected-cpp.md
-                    - name: público
+                    - name: public
                       href: cpp/public-cpp.md
                 - name: Inicialización de clases y structs sin constructores
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
@@ -5619,7 +5621,7 @@
                   href: assembler/masm/textequ.md
                 - name: .TFCOND
                   href: assembler/masm/dot-tfcond.md
-                - name: Título
+                - name: TITLE
                   href: assembler/masm/title.md
                 - name: TYPEDEF (MASM)
                   href: assembler/masm/typedef-masm.md
@@ -6017,7 +6019,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: enum class
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: event
+            - name: evento
               href: extensions/event-cpp-component-extensions.md
             - name: Control de excepciones
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -6046,7 +6048,7 @@
                   href: extensions/consuming-generics-cpp-cli.md
                 - name: Genéricos y plantillas
                   href: extensions/generics-and-templates-visual-cpp.md
-                - name: 'Procedimientos para: Mejorar el rendimiento con genéricos'
+                - name: Procedimiento Mejorar el rendimiento con genéricos
                   href: extensions/how-to-improve-performance-with-generics-visual-cpp.md
             - name: interface class
               href: extensions/interface-class-cpp-component-extensions.md
@@ -6068,7 +6070,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: Cadena
+            - name: String
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6097,22 +6099,22 @@
                   items:
                     - name: interior_ptr
                       href: extensions/interior-ptr-cpp-cli.md
-                    - name: 'Procedimientos para: Declarar y usar punteros internos y matrices administradas'
+                    - name: Procedimiento Declarar y usar punteros internos y matrices administradas
                       href: extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
-                    - name: 'Procedimientos para: Declarar tipos de valor con la palabra clave interior_ptr'
+                    - name: Procedimiento Declarar tipos de valor con la palabra clave interior_ptr
                       href: extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
-                    - name: 'Procedimientos para: Sobrecargar funciones con punteros internos y punteros nativos'
+                    - name: Procedimiento Sobrecargar funciones con punteros internos y punteros nativos
                       href: extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
-                    - name: 'Procedimientos para: Declarar punteros internos con la palabra clave const'
+                    - name: Procedimiento Declarar punteros internos con la palabra clave const
                       href: extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
                 - name: pin_ptr
                   expanded: false
                   items:
                     - name: pin_ptr
                       href: extensions/pin-ptr-cpp-cli.md
-                    - name: 'Procedimientos para: Anclar punteros y matrices'
+                    - name: Procedimiento Anclar punteros y matrices
                       href: extensions/how-to-pin-pointers-and-arrays.md
-                    - name: 'Procedimientos para: Declarar punteros anclados y tipos de valor'
+                    - name: Procedimiento Declarar punteros anclados y tipos de valor
                       href: extensions/how-to-declare-pinning-pointers-and-value-types.md
                 - name: Reenvío de tipos
                   href: extensions/type-forwarding-cpp-cli.md
@@ -6161,7 +6163,7 @@
                   href: windows/attributes/array-attributes.md
                 - name: Atributos independientes
                   href: windows/attributes/stand-alone-attributes.md
-                - name: Personalización de atributos
+                - name: Atributos personalizados
                   href: windows/attributes/custom-attributes-cpp.md
             - name: Referencia alfabética de los atributos
               expanded: false
@@ -6182,7 +6184,7 @@
                   href: windows/attributes/bindable.md
                 - name: call_as
                   href: windows/attributes/call-as.md
-                - name: case
+                - name: mayúsculas y minúsculas
                   href: windows/attributes/case-cpp.md
                 - name: coclase
                   href: windows/attributes/coclass.md
@@ -6266,7 +6268,7 @@
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: bucear
+                - name: in
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6282,7 +6284,7 @@
                   href: windows/attributes/library-block.md
                 - name: licensed
                   href: windows/attributes/licensed.md
-                - name: local
+                - name: locales
                   href: windows/attributes/local-cpp.md
                 - name: max_is
                   href: windows/attributes/max-is.md
@@ -6304,7 +6306,7 @@
                   href: windows/attributes/odl.md
                 - name: oleautomation
                   href: windows/attributes/oleautomation.md
-                - name: opcional
+                - name: opcionales
                   href: windows/attributes/optional-cpp.md
                 - name: out
                   href: windows/attributes/out-cpp.md
@@ -6346,7 +6348,7 @@
                   href: windows/attributes/satype.md
                 - name: size_is
                   href: windows/attributes/size-is.md
-                - name: source
+                - name: origen
                   href: windows/attributes/source-cpp.md
                 - name: cadena
                   href: windows/attributes/string-cpp.md
@@ -7347,7 +7349,7 @@
                   href: c-runtime-library/reference/fread-nolock.md
                 - name: _fread_nolock_s2
                   href: c-runtime-library/reference/fread-nolock-s2.md
-                - name: libre
+                - name: free
                   href: c-runtime-library/reference/free.md
                 - name: _free_dbg
                   href: c-runtime-library/reference/free-dbg.md
@@ -7789,7 +7791,7 @@
                   href: c-runtime-library/reference/offsetof-macro.md
                 - name: '_onexit, _onexit_m'
                   href: c-runtime-library/reference/onexit-onexit-m.md
-                - name: abierto
+                - name: abrir
                   href: c-runtime-library/reference/open.md
                 - name: '_open, _wopen'
                   href: c-runtime-library/reference/open-wopen.md
@@ -7859,7 +7861,7 @@
                   href: c-runtime-library/reference/rand.md
                 - name: rand_s
                   href: c-runtime-library/reference/rand-s.md
-                - name: read
+                - name: leer
                   href: c-runtime-library/reference/posix-read.md
                 - name: _read
                   href: c-runtime-library/reference/read.md
@@ -8335,7 +8337,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: write
+                - name: escribir
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -8538,6 +8540,8 @@
                   href: standard-library/csetjmp.md
                 - name: <csignal>
                   href: standard-library/csignal.md
+                - name: <cstdalign>
+                  href: standard-library/cstdalign.md
                 - name: <cstdarg>
                   href: standard-library/cstdarg.md
                 - name: <cstdbool>
@@ -8556,6 +8560,8 @@
                   href: standard-library/ctgmath.md
                 - name: <ctime>
                   href: standard-library/ctime.md
+                - name: <cuchar>
+                  href: standard-library/cuchar.md
                 - name: <cvt-wbuffer>
                   href: standard-library/cvt-wbuffer.md
                 - name: <cvt-wstring>
@@ -10055,13 +10061,13 @@
                       items:
                         - name: Migrar de OpenMP al Runtime de simultaneidad
                           href: parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
-                        - name: 'Procedimientos para: Convertir un bucle OpenMP paralelo para usar el Runtime de simultaneidad'
+                        - name: Procedimiento Convertir un bucle OpenMP paralelo para usar el Runtime de simultaneidad
                           href: parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
-                        - name: 'Procedimientos para: Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad'
+                        - name: Procedimiento Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
-                        - name: 'Procedimientos para: Convertir un bucle OpenMP que usa el control de excepciones para usar el runtime de simultaneidad'
+                        - name: Procedimiento Convertir un bucle OpenMP que usa el control de excepciones para usar el runtime de simultaneidad
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
-                        - name: 'Procedimientos para: Convertir un bucle OpenMP que usa una variable de reducción para usar el Runtime de simultaneidad'
+                        - name: Procedimiento Convertir un bucle OpenMP que usa una variable de reducción para usar el Runtime de simultaneidad
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
                 - name: Parallel Patterns Library (PPL)
                   expanded: false
@@ -10073,42 +10079,42 @@
                       items:
                         - name: Paralelismo de tareas (Runtime de simultaneidad)
                           href: parallel/concrt/task-parallelism-concurrency-runtime.md
-                        - name: 'Procedimientos para: Usar parallel_invoke para escribir una rutina de ordenación en paralelo'
+                        - name: Procedimiento Usar parallel_invoke para escribir una rutina de ordenación en paralelo
                           href: parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
-                        - name: 'Procedimientos para: Usar parallel_invoke para ejecutar operaciones en paralelo'
+                        - name: Procedimiento Usar parallel_invoke para ejecutar operaciones en paralelo
                           href: parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md
-                        - name: 'Procedimientos para: Crear una tarea que se complete después de un retardo'
+                        - name: Procedimiento Crear una tarea que se complete después de un retardo
                           href: parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md
                     - name: Algoritmos paralelos
                       expanded: false
                       items:
                         - name: Algoritmos paralelos
                           href: parallel/concrt/parallel-algorithms.md
-                        - name: 'Procedimientos para: Escribir un bucle parallel_for'
+                        - name: Procedimiento Escribir un bucle parallel_for
                           href: parallel/concrt/how-to-write-a-parallel-for-loop.md
-                        - name: 'Procedimientos para: Escribir un bucle parallel_for_each'
+                        - name: Procedimiento Escribir un bucle parallel_for_each
                           href: parallel/concrt/how-to-write-a-parallel-for-each-loop.md
-                        - name: 'Procedimientos para: Realizar operaciones de asignación y reducción en paralelo'
+                        - name: Procedimiento Realizar operaciones de asignación y reducción en paralelo
                           href: parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
                     - name: Contenedores y objetos paralelos
                       expanded: false
                       items:
                         - name: Contenedores y objetos paralelos
                           href: parallel/concrt/parallel-containers-and-objects.md
-                        - name: 'Procedimientos para: Usar contenedores paralelos para aumentar la eficacia'
+                        - name: Procedimiento Usar contenedores paralelos para aumentar la eficacia
                           href: parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
-                        - name: 'Procedimientos para: Usar la clase combinable para mejorar el rendimiento'
+                        - name: Procedimiento Usar la clase combinable para mejorar el rendimiento
                           href: parallel/concrt/how-to-use-combinable-to-improve-performance.md
-                        - name: 'Procedimientos para: Usar la clase combinable para combinar conjuntos'
+                        - name: Procedimiento Usar la clase combinable para combinar conjuntos
                           href: parallel/concrt/how-to-use-combinable-to-combine-sets.md
                     - name: Cancelación en la biblioteca PPL
                       expanded: false
                       items:
                         - name: Cancelación en la biblioteca PPL
                           href: parallel/concrt/cancellation-in-the-ppl.md
-                        - name: 'Procedimientos para: Usar la cancelación para interrumpir un bucle Parallel'
+                        - name: Procedimiento Usar la cancelación para interrumpir un bucle Parallel
                           href: parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md
-                        - name: 'Procedimientos para: Usar el control de excepciones para interrumpir un bucle Parallel'
+                        - name: Procedimiento Usar el control de excepciones para interrumpir un bucle Parallel
                           href: parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md
                 - name: biblioteca de agentes asincrónicos
                   expanded: false
@@ -10121,17 +10127,17 @@
                       href: parallel/concrt/asynchronous-message-blocks.md
                     - name: Funciones que pasan mensajes
                       href: parallel/concrt/message-passing-functions.md
-                    - name: 'Procedimientos para: Implementar varios modelos productor-consumidor'
+                    - name: Procedimiento Implementar varios modelos productor-consumidor
                       href: parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
-                    - name: 'Procedimientos para: Proporcionar funciones de trabajo a las clases call y transformer'
+                    - name: Procedimiento Proporcionar funciones de trabajo a las clases call y transformer
                       href: parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
-                    - name: 'Procedimientos para: Usar la clase transformer en una canalización de datos'
+                    - name: Procedimiento Usar la clase transformer en una canalización de datos
                       href: parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
-                    - name: 'Procedimientos para: Seleccionar tareas completadas'
+                    - name: Procedimiento Seleccionar tareas completadas
                       href: parallel/concrt/how-to-select-among-completed-tasks.md
-                    - name: 'Procedimientos para: Enviar un mensaje a intervalos periódicos'
+                    - name: Procedimiento Enviar un mensaje a intervalos periódicos
                       href: parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
-                    - name: 'Procedimientos para: Usar un filtro de bloque de mensaje'
+                    - name: Procedimiento Usar un filtro de bloque de mensaje
                       href: parallel/concrt/how-to-use-a-message-block-filter.md
                 - name: Estructuras de datos de sincronización
                   expanded: false
@@ -10150,23 +10156,23 @@
                       items:
                         - name: Instancias del programador
                           href: parallel/concrt/scheduler-instances.md
-                        - name: 'Procedimientos para: Administrar una instancia del programador'
+                        - name: Procedimiento Administrar una instancia del programador
                           href: parallel/concrt/how-to-manage-a-scheduler-instance.md
                     - name: Directivas del programador
                       expanded: false
                       items:
                         - name: Directivas del programador
                           href: parallel/concrt/scheduler-policies.md
-                        - name: 'Procedimientos para: Especificar directivas de del programador concretas'
+                        - name: Procedimiento Especificar directivas de del programador concretas
                           href: parallel/concrt/how-to-specify-specific-scheduler-policies.md
-                        - name: 'Procedimientos para: Crear agentes que usen directivas de programador específicas'
+                        - name: Procedimiento Crear agentes que usen directivas de programador específicas
                           href: parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
                     - name: Grupos de programación
                       expanded: false
                       items:
                         - name: Grupos de programación
                           href: parallel/concrt/schedule-groups.md
-                        - name: 'Procedimientos para: Usar grupos de programación para influir en el orden de ejecución'
+                        - name: Procedimiento Usar grupos de programación para influir en el orden de ejecución
                           href: parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md
                     - name: Tareas ligeras
                       href: parallel/concrt/lightweight-tasks.md
@@ -10175,16 +10181,16 @@
                       items:
                         - name: Contextos
                           href: parallel/concrt/contexts.md
-                        - name: 'Procedimientos para: Usar la clase Context para implementar un semáforo cooperativo'
+                        - name: Procedimiento Usar la clase Context para implementar un semáforo cooperativo
                           href: parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
-                        - name: 'Procedimientos para: Usar la suscripción excesiva para compensar la latencia'
+                        - name: Procedimiento Usar la suscripción excesiva para compensar la latencia
                           href: parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
                     - name: Funciones de administración de memoria
                       expanded: false
                       items:
                         - name: Funciones de administración de memoria
                           href: parallel/concrt/memory-management-functions.md
-                        - name: 'Procedimientos para: Usar Alloc y Free para mejorar el rendimiento de la memoria'
+                        - name: Procedimiento Usar Alloc y Free para mejorar el rendimiento de la memoria
                           href: parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
                 - name: Tutoriales del Runtime de simultaneidad
                   expanded: false
@@ -10485,7 +10491,7 @@
                       href: parallel/openmp/reference/openmp-directives.md
                     - name: Cláusulas
                       href: parallel/openmp/reference/openmp-clauses.md
-                    - name: Functions
+                    - name: Funciones
                       href: parallel/openmp/reference/openmp-functions.md
                     - name: Variables de entorno
                       href: parallel/openmp/reference/openmp-environment-variables.md
@@ -11046,7 +11052,7 @@
                       href: data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md
                 - name: Conjunto de registros dinámicos
                   href: data/odbc/dynaset.md
-                - name: Instantánea
+                - name: Depurador de
                   href: data/odbc/snapshot.md
                 - name: Intercambio de campos de registros (RFX)
                   expanded: false
