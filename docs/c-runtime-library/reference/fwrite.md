@@ -22,12 +22,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287552"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376067"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -60,15 +60,15 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fwrite** devuelve el número de completo elementos escritos realmente, lo que puede ser menor que *recuento* si se produce un error. De igual modo, si se produce un error, no se podrá conocer el indicador de posición de archivo. Si bien *secuencia* o *búfer* es un puntero nulo, o si se especifica un número impar de bytes que se escribirán en el modo Unicode, la función invoca al controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve 0.
+**fwrite** devuelve el número de elementos completos escritos realmente, que puede ser menor que *Count* si se produce un error. De igual modo, si se produce un error, no se podrá conocer el indicador de posición de archivo. Si la *secuencia* o el *búfer* es un puntero nulo, o si se especifica un número impar de bytes en el modo Unicode, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve 0.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fwrite** función escribe hasta *recuento* elementos, de *tamaño* longitud cada uno, de *búfer* a la salida *secuencia*. El puntero de archivo asociado *secuencia* (si existe) se incrementa el número de bytes escritos realmente. Si *flujo* se abre en modo de texto, cada avance de línea se reemplaza por un retorno de carro y avance de línea par. Este reemplazo no tiene efecto alguno en el valor devuelto.
+La función **fwrite** escribe hasta el *número* de elementos, de longitud de *tamaño* cada uno, desde el *búfer* hasta el *flujo*de salida. El puntero de archivo asociado al *flujo* (si hay alguno) se incrementa según el número de bytes escritos realmente. Si el *flujo* se abre en modo de texto, cada avance de línea se reemplaza por un par de retorno de carro y avance de línea. Este reemplazo no tiene efecto alguno en el valor devuelto.
 
-Cuando *secuencia* se abre en modo de traducción de Unicode, por ejemplo, si *secuencia* se abre mediante una llamada a **fopen** y el uso de un parámetro de modo que incluya **ccs = UNICODE**, **ccs = UTF-16LE**, o **ccs = UTF-8**, o si se cambia el modo de un modo de traducción de Unicode utilizando **_setmode** y un modo parámetro que incluye **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**:*búfer* se interpreta como un puntero a un matriz de **wchar_t** que contiene datos UTF-16. Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
+Cuando el *flujo* se abre en el modo de conversión Unicode (por ejemplo, si la *secuencia* se abre llamando a **fopen** y usando un parámetro de modo que incluye **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**) o si el modo es cambiado a un modo de conversión Unicode mediante **_setmode** y un parámetro de modo que incluye **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**: el*búfer* se interpreta como un puntero a una matriz de **wchar_t** que contiene Datos UTF-16. Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
 
-Como esta función bloquea el subproceso de llamada, es segura para los subprocesos. Para obtener una versión que no sea de bloqueo, consulte **_fwrite_nolock**.
+Como esta función bloquea el subproceso de llamada, es segura para los subprocesos. Para una versión que no sea de bloqueo, vea **_fwrite_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 
