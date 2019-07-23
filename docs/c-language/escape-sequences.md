@@ -13,7 +13,7 @@ helpviewer_keywords:
 - tab 	 escape sequence
 - "\f escape sequence"
 - quotation marks, single
-- "formfeed \f escape sequence"
+- "form feed \f escape sequence"
 - "\v escape sequence"
 - control character escape sequences
 - " symbol in escape sequences"
@@ -30,20 +30,20 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 9aeb8ca549cce8bddbf5d6ddadb6292c05f573d5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 5de0b5f1a73fcfb6ea0325bea3247ebe4c85d411
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151421"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375829"
 ---
 # <a name="escape-sequences"></a>Secuencias de escape
 
-Las combinaciones de caracteres que consisten en una barra diagonal inversa (**\\**) seguida de una letra o una combinación de dígitos se denominan "secuencias de escape". Para representar un carácter de nueva línea, una comilla simple u otros caracteres de una constante de caracteres, debe utilizar secuencias de escape. Una secuencia de escape se considera un carácter individual y por tanto es válida como constante de caracteres.
+Las combinaciones de caracteres que consisten en una barra diagonal inversa ( **\\** ) seguida de una letra o una combinación de dígitos se denominan "secuencias de escape". Para representar un carácter de nueva línea, una comilla simple u otros caracteres de una constante de caracteres, debe utilizar secuencias de escape. Una secuencia de escape se considera un carácter individual y por tanto es válida como constante de caracteres.
 
-Las secuencias de escape se suelen utilizar para especificar acciones como retornos de carro y movimientos de tabulación en terminales e impresoras. También se emplean para proporcionar representaciones literales de caracteres no imprimibles y de caracteres que normalmente tienen significados especiales, como las comillas dobles (**"**). En la tabla siguiente se enumeran las secuencias de escape ANSI y lo que representan.
+Las secuencias de escape se suelen utilizar para especificar acciones como retornos de carro y movimientos de tabulación en terminales e impresoras. También se emplean para proporcionar representaciones literales de caracteres no imprimibles y de caracteres que normalmente tienen significados especiales, como las comillas dobles ( **"** ). En la tabla siguiente se enumeran las secuencias de escape ANSI y lo que representan.
 
-Tenga en cuenta que el signo de interrogación precedido de una barra diagonal inversa (**\\?**) especifica un signo de interrogación literal en aquellos casos en los que la secuencia de caracteres se malinterpretaría como un trígrafo. Vea [Trígrafos](../c-language/trigraphs.md) para obtener más información.
+Tenga en cuenta que el signo de interrogación precedido de una barra diagonal inversa ( **\\?** ) especifica un signo de interrogación literal en aquellos casos en los que la secuencia de caracteres se malinterpretaría como un trígrafo. Vea [Trígrafos](../c-language/trigraphs.md) para obtener más información.
 
 ### <a name="escape-sequences"></a>Secuencias de escape
 
@@ -70,9 +70,9 @@ Si una barra diagonal inversa precede a un carácter que no aparece en la tabla,
 
 **FIN de Específicos de Microsoft**
 
-Las secuencias de escape permiten enviar caracteres de control no gráficos a un dispositivo de pantalla. Por ejemplo, el carácter ESC (**\033**) se utiliza a menudo como el primer carácter de un comando de control para un terminal o una impresora. Algunas secuencias de escape son específicas del dispositivo. Por ejemplo, las secuencias de escape de tabulación vertical y avance de página (**\v** y **\f**) no afectan al resultado de la presentación, pero realizan las operaciones adecuadas en la impresora.
+Las secuencias de escape permiten enviar caracteres de control no gráficos a un dispositivo de pantalla. Por ejemplo, el carácter ESC ( **\033**) se utiliza a menudo como el primer carácter de un comando de control para un terminal o una impresora. Algunas secuencias de escape son específicas del dispositivo. Por ejemplo, las secuencias de escape de tabulación vertical y avance de página ( **\v** y **\f**) no afectan al resultado de la presentación, pero realizan las operaciones adecuadas en la impresora.
 
-También se puede utilizar la barra diagonal inversa (**\\**) como carácter de continuación. Cuando un carácter de nueva línea (equivalente a presionar la tecla ENTRAR) sigue inmediatamente a la barra diagonal inversa, el compilador omite la barra diagonal inversa y el carácter de nueva línea, y trata la línea siguiente como parte de la línea anterior. Esto es útil principalmente para las definiciones del preprocesador que ocupan más de una sola línea. Por ejemplo:
+También se puede utilizar la barra diagonal inversa ( **\\** ) como carácter de continuación. Cuando un carácter de nueva línea (equivalente a presionar la tecla ENTRAR) sigue inmediatamente a la barra diagonal inversa, el compilador omite la barra diagonal inversa y el carácter de nueva línea, y trata la línea siguiente como parte de la línea anterior. Esto es útil principalmente para las definiciones del preprocesador que ocupan más de una sola línea. Por ejemplo:
 
 ```
 #define assert(exp) \
