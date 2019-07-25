@@ -444,16 +444,7 @@
                 - name: Página de propiedades Recursos administrados
                   href: build/reference/managed-resources-property-page.md
                 - name: Páginas de propiedades MIDL
-                  expanded: false
-                  items:
-                    - name: Páginas de propiedades MIDL
-                      href: build/reference/midl-property-pages.md
-                    - name: 'Páginas de propiedades MIDL: General'
-                      href: build/reference/midl-property-pages-general.md
-                    - name: 'Páginas de propiedades MIDL: Salida'
-                      href: build/reference/midl-property-pages-output.md
-                    - name: 'Páginas de propiedades MIDL: Avanzadas'
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: Página de propiedades Referencias Web
                   href: build/reference/web-references-property-page.md
                 - name: Herramienta Generador de datos XML (Página de propiedades)
