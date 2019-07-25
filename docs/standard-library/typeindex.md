@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <typeindex>
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
-ms.openlocfilehash: e22ce63c01185112ed512217156470e6f2948cd5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 237356a0862ec3fc591264b482b23e62ef2c51cb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278922"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455060"
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 
@@ -29,6 +29,6 @@ La clase `type_index` encapsula un puntero a un objeto `type_info` para facilita
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

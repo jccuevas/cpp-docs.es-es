@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: be81a1bc32f2f86f1d79970868933bddb8dc3620
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212110"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457319"
 ---
 # <a name="conditional-class"></a>conditional (Clase)
 
@@ -30,18 +30,18 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*B*<br/>
+*B*\
 Valor que determina el tipo seleccionado.
 
-*T1*<br/>
+*T1*\
 Resultado del tipo cuando B es true.
 
-*T2*<br/>
+*T2*\
 Resultado del tipo cuando B es false.
 
 ## <a name="remarks"></a>Comentarios
 
-El typedef de miembro de plantilla `conditional<B, T1, T2>::type` se evalúa como *T1* cuando *B* se evalúa como **true**y se evalúa como *T2* cuando  *B* se evalúa como **false**.
+La definición `conditional<B, T1, T2>::type` de tipo de miembro de plantilla se evalúa como *T1* cuando *b* se evalúa como **true**y se evalúa como *T2* cuando *b* se evalúa como **false**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,4 +51,4 @@ El typedef de miembro de plantilla `conditional<B, T1, T2>::type` se evalúa com
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

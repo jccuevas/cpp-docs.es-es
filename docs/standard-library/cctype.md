@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
-ms.openlocfilehash: 19431d02e0742d63df058ca743fc0560131805bd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d1d69b5fe125372c489965949b2b59c4012fdec9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244949"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449848"
 ---
 # <a name="ltcctypegt"></a>&lt;cctype&gt;
 
@@ -19,7 +19,7 @@ Incluye el encabezado \<ctype.h> de la biblioteca estándar de C y agrega los no
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<cctype >
+**Encabezado:** \<> cctype
 
 **Espacio de nombres:** std
 
@@ -48,6 +48,6 @@ int toupper(int c);
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

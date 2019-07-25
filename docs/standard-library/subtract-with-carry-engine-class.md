@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412196"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447411"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine (Clase)
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*UIntType*<br/>
+*UIntType*\
 El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*CON*\
 **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*SEG*\
 **Intervalo corto**. Número de valores íntegros. **Condición previa:** `0 < S < R`
 
-*R*<br/>
+*R*\
 **Intervalo largo**. Determina la recurrencia en la serie generada.
 
 ## <a name="members"></a>Miembros
@@ -62,7 +62,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 La clase de plantilla `substract_with_carry_engine` es una mejora respecto al [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ninguno de estos motores es tan rápido o tiene unos resultados de mayor calidad que el [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un carry de indicador de signo más *R* valores. Estos valores consisten en los últimos *R* valores que se devuelve si `operator()` se ha llamado al menos *R* agota el tiempo, en caso contrario, el `N` valores que se han devuelto y los últimos `R - N` valores de la inicialización.
+Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un indicador de transporte más valores de *R* . Estos valores se componen  de los últimos valores `operator()` de r devueltos si se ha llamado al `N` menos *r* veces, de lo contrario, `R - N` los valores que se han devuelto y los últimos valores de la inicialización.
 
 El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `M - 1`.
 
@@ -84,4 +84,4 @@ Para más detalles sobre el algoritmo de motor de resta con llevadas, vea el art
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

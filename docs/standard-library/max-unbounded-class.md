@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: ba99d6ed3af34363bf88cde1a40e4bf37841cd8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea2f09837e5efc6969e4ab305d106b9c9728412
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412922"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447211"
 ---
 # <a name="maxunbounded-class"></a>max_unbounded (Clase)
 
@@ -35,7 +35,7 @@ class max_unbounded
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[allocated](#allocated)|Aumenta el número de bloques de memoria asignada.|
 |[deallocated](#deallocated)|Reduce el número de bloques de memoria asignada.|
@@ -59,13 +59,13 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro no hace nada. Se llama después de cada llamada correcta por `cache_freelist::allocate` al operador **nuevo**. El argumento *_Nx* es el número de bloques de memoria del fragmento asignado por el operador **nuevo**.
+Esta función miembro no hace nada. Se llama después de cada llamada correcta por `cache_freelist::allocate` al operador **New**. El argumento *_Nx* es el número de bloques de memoria del fragmento asignado por el operador **New**.
 
 ## <a name="deallocated"></a>  max_unbounded::deallocated
 
@@ -77,13 +77,13 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro no hace nada. Se llama a esta función miembro después de cada llamada por `cache_freelist::deallocate` al operador **eliminar**. El argumento *_Nx* es el número de bloques de memoria del fragmento desasignado por el operador **eliminar**.
+La función miembro no hace nada. Se llama a esta función miembro después de cada `cache_freelist::deallocate` llamada realizada por al operador **Delete**. El argumento *_Nx* es el número de bloques de memoria del fragmento desasignados por el operador **Delete**.
 
 ## <a name="full"></a>  max_unbounded::full
 
@@ -99,7 +99,7 @@ La función miembro siempre devuelve **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve **true**, `deallocate` coloca el bloque de memoria en la lista libre; si devuelve false, `deallocate` llama al operador **eliminar** desasignar el bloque.
+Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve **true**, `deallocate` coloca el bloque de memoria en la lista libre; si devuelve false, `deallocate` llama al operador **Delete** para desasignar el bloque.
 
 ## <a name="released"></a>  max_unbounded::released
 
@@ -127,4 +127,4 @@ Esta función miembro no hace nada. Se llama mediante `cache_freelist::deallocat
 
 ## <a name="see-also"></a>Vea también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

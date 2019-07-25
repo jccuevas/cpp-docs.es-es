@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 298aa14c4e41f1473cac72fc79aa3e180dfe183f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243559"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452328"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Incluye el encabezado de la biblioteca estándar de C \<signal.h > y agrega los nombres asociados a la `std` espacio de nombres. Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.
+Incluye el encabezado \<de la biblioteca estándar de C Signal. h > y agrega los nombres `std` asociados al espacio de nombres. Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.
 
 
 ## <a name="syntax"></a>Sintaxis
@@ -24,7 +24,7 @@ Incluye el encabezado de la biblioteca estándar de C \<signal.h > y agrega los 
 #include <csignal>
 ```
 
-## <a name="namespace-and-macros"></a>Macros y Namespace
+## <a name="namespace-and-macros"></a>Espacio de nombres y macros
 
 ```cpp
 namespace std {
@@ -53,6 +53,6 @@ int raise(int sig);
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
