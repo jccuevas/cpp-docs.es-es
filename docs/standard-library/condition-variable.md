@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244575"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457383"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -19,12 +19,12 @@ Este encabezado utiliza el runtime de simultaneidad (ConcRT) para que pueda util
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<condition_variable >
+**Encabezado:** \<> condition_variable
 
 **Espacio de nombres:** std
 
 > [!NOTE]
-> En el código que se compila con **/CLR**, este encabezado está bloqueado.
+> En el código compilado mediante **/CLR**, este encabezado está bloqueado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -49,15 +49,15 @@ Las clases `condition_variable_any` y `condition_variable` tienen tres métodos 
 
 - `wait_for` espera durante un `time interval` especificado.
 
-Cada uno de estos métodos tiene dos versiones sobrecargadas. Uno solo espera y se puede reactivar en falso. El otro toma un argumento de plantilla adicional que define un predicado. El método no vuelve hasta que el predicado es **true**.
+Cada uno de estos métodos tiene dos versiones sobrecargadas. Uno solo espera y se puede reactivar en falso. El otro toma un argumento de plantilla adicional que define un predicado. El método no vuelve hasta que el predicado sea **true**.
 
-Cada clase tiene también dos métodos que se usan para notificar a una variable de condición que su condición es **true**.
+Cada clase también tiene dos métodos que se usan para notificar a una variable de condición que su condición es **verdadera**.
 
 - `notify_one` reactiva uno de los subprocesos que está esperando la variable de condición.
 
 - `notify_all` reactiva todos los subprocesos que están esperando la variable de condición.
 
-## <a name="functions-and-enums"></a>Las funciones y las enumeraciones
+## <a name="functions-and-enums"></a>Funciones y enumeraciones
 
 ```cpp
 void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable (Clase)](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any (Clase)](../standard-library/condition-variable-any-class.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable (Clase)](../standard-library/condition-variable-class.md)\
+[condition_variable_any (Clase)](../standard-library/condition-variable-any-class.md)

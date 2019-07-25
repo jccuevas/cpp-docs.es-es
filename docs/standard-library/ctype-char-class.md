@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: adaad8f76de5b712aea13794ef2d7b9a096fb8ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394161"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455464"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; (Clase)
 
-La clase es una especialización explícita de la clase de plantilla `ctype\<CharType>` escriba **char**, que describe un objeto que puede actuar como una faceta de configuración regional para caracterizar distintas propiedades de un carácter de tipo **char**.
+La clase es una especialización explícita de la clase `ctype\<CharType>` de plantilla para el tipo **Char**, que describe un objeto que puede actuar como una faceta de configuración regional para caracterizar las distintas propiedades de un carácter de tipo **Char**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -108,15 +108,15 @@ protected:
 
 La especialización explícita difiere de la clase de plantilla de varias maneras:
 
-- Un objeto de clase ctype < `char`> almacena un puntero al primer elemento de una tabla de máscara ctype, una matriz de UCHAR_MAX + 1 elementos del tipo `ctype_base::mask`. También almacena un objeto booleano que indica si se debe eliminar la matriz (con `operator delete[]`) cuando se destruye el objeto ctype\< **Elem**>.
+- Un objeto de la clase ctype `char`< > almacena un puntero al primer elemento de una tabla de máscara ctype, una matriz de UCHAR_MAX + 1 elementos de `ctype_base::mask`tipo. También almacena un objeto booleano que indica si se debe eliminar la matriz (con `operator delete[]`) cuando se destruye el objeto ctype\< **Elem**>.
 
-- Su único constructor público le permite especificar `tab`, la tabla de máscara ctype, y `del`, el objeto booleano que es true si la matriz debe eliminarse cuando ctype < `char`> se destruye el objeto, así como el recuento de referencias referencias de parámetro.
+- Su único constructor público le permite especificar `tab`, la tabla de máscara ctype y `del`, el objeto Boolean que es true si la matriz se debe eliminar cuando se destruye el `char`objeto de > ctype <, así como el recuento de referencias. referencias de parámetros.
 
-- La función miembro protegida `table` devuelve la tabla de máscara ctype almacenada.
+- La función `table` miembro protegida devuelve la tabla de máscara ctype almacenada.
 
-- El objeto de miembro estático `table_size` especifica el número mínimo de elementos en una tabla de máscara ctype.
+- El objeto `table_size` miembro estático especifica el número mínimo de elementos de una tabla de máscara ctype.
 
-- La función miembro estática protegida `classic_table`(devuelve la tabla de máscara ctype adecuada para la configuración regional "C".
+- La función `classic_table`miembro Protected Static (devuelve la tabla de máscara ctype adecuada a la configuración regional "C").
 
 - No hay ninguna función miembro virtual protegida [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) o [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Las funciones miembro públicas correspondientes realizan las operaciones equivalentes ellas mismas.
 
@@ -130,6 +130,6 @@ Las funciones miembro [do_narrow](../standard-library/ctype-class.md#do_narrow) 
 
 ## <a name="see-also"></a>Vea también
 
-[Facet (clase)](locale-class.md#facet_class)<br/>
-[ctype_base (Clase)](../standard-library/ctype-base-class.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[facet (Clase)](locale-class.md#facet_class)\
+[ctype_base (Clase)](../standard-library/ctype-base-class.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

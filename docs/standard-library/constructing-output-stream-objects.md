@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-ms.openlocfilehash: 7da7d9dd0fae3ce3fa21ecd774f88643dca49c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7bec211f30986deccc869a879dd5155ea70996b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212006"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457280"
 ---
 # <a name="constructing-output-stream-objects"></a>Construir objetos de flujo de salida
 
@@ -57,4 +57,4 @@ El "manipulador" `ends` agrega el carácter nulo de terminación necesario a la 
 
 ## <a name="see-also"></a>Vea también
 
-[Flujos de salida](../standard-library/output-streams.md)<br/>
+[Flujos de salida](../standard-library/output-streams.md)

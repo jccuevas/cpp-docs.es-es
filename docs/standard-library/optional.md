@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - <optional>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: c73ad2ad94a5de29bc2c457fdf6ca8b9c783615c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268487"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447181"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Define la clase de plantilla contenedor opcional y varias plantillas auxiliares.
+Define la clase de plantilla de contenedor opcional y varias plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<opcional >
+**Encabezado:** \<> opcional
 
 **Espacio de nombres:** std
 
@@ -37,13 +37,13 @@ Define la clase de plantilla contenedor opcional y varias plantillas auxiliares.
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Comprueba si el objeto `optional` en el lado izquierdo del operador es mayor o igual que el objeto `optional` del lado derecho.|
 
 > [!NOTE]
-> Además de comparación relacional, \<opcional > operadores también admiten la comparación con **nullopt** y `T`.
+> Además de las comparaciones relacionales, \<los operadores opcionales de > también admiten la comparación con **nullopt** y. `T`
 
 ### <a name="functions"></a>Funciones
 
 |||
 |-|-|
-|[make_optional](../standard-library/optional-functions.md#make_optional)|Convierte un objeto opcional.|
+|[make_optional](../standard-library/optional-functions.md#make_optional)|Hace que un objeto sea opcional.|
 |[swap](../standard-library/optional-functions.md#swap)||
 
 ### <a name="classes-and-structs"></a>Clases y structs
@@ -51,9 +51,9 @@ Define la clase de plantilla contenedor opcional y varias plantillas auxiliares.
 |||
 |-|-|
 |[hash]()||
-|[Clase opcional](../standard-library/optional-class.md)|Describe un objeto que puede o no puede contener un valor.|
-|[nullopt_t Struct](../standard-library/nullopt-t-structure.md)|Describe un objeto que no contiene un valor.|
-|[Clase bad_optional_access](../standard-library/bad-optional-access-class.md)|Describe un objeto que se inicia una excepción para informar de un intento de acceder a un valor no existe.|
+|[Clase opcional](../standard-library/optional-class.md)|Describe un objeto que puede contener o no un valor.|
+|[Struct nullopt_t](../standard-library/nullopt-t-structure.md)|Describe un objeto que no contiene un valor.|
+|[Clase bad_optional_access](../standard-library/bad-optional-access-class.md)|Describe un objeto que se inicia como una excepción para informar de un intento de obtener acceso a un valor que no existe.|
 
 ### <a name="objects"></a>de la empresa
 
@@ -63,4 +63,4 @@ Define la clase de plantilla contenedor opcional y varias plantillas auxiliares.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

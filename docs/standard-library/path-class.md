@@ -4,16 +4,16 @@ ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10c865aa2bc2431850c69e9dfedbef37414b2cb9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370455"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455098"
 ---
 # <a name="path-class"></a>path (Clase)
 
-El **ruta** clase almacena un objeto de tipo `string_type`, llamado `myname` aquí a efectos de la exposición, que se puede usar como una ruta de acceso. `string_type` es un sinónimo de `basic_string<value_type>`, donde `value_type` es un sinónimo de **wchar_t** en Windows o **char** en POSIX.
+La clase path almacena un objeto de tipo `string_type`, al `myname` que se llama aquí para la exposición, adecuado para su uso como un nombre de ruta de **acceso** . `string_type`es un sinónimo de `basic_string<value_type>`, donde `value_type` es un sinónimo de **wchar_t** en Windows o **Char** en POSIX.
 
 Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).
 
@@ -25,29 +25,29 @@ class path;
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[path](#path)|Construye un objeto `path`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[const_iterator](#const_iterator)|Sinónimo de `iterator`.|
-|[iterator](#iterator)|Un iterador constante bidireccional que designa el `path` componentes de `myname`.|
+|[iterator](#iterator)|Iterador constante bidireccional que designa los `path` componentes de `myname`.|
 |[string_type](#string_type)|El tipo es un sinónimo de `basic_string<value_type>`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
-|[append](#append)|Anexa la secuencia especificada a `mypath`, convertida e insertan un preferred_separator según sea necesario.|
+|[append](#append)|Anexa la secuencia especificada a `mypath`, convertido e insertando un preferred_separator según sea necesario.|
 |[assign](#assign)|Reemplaza `mypath` con la secuencia especificada, convertida según sea necesario.|
-|[begin](#begin)|Devuelve un `path::iterator` que designa el primer elemento de ruta de acceso de la ruta de acceso, si está presente.|
-|[c_str](#c_str)|Devuelve un puntero al primer carácter en `mypath`.|
-|[clear](#clear)|Ejecuta `mypath.clear()`.|
-|[compare](#compare)|Devuelve los valores de comparación.|
-|[concat](#compare)|Anexa la secuencia especificada a `mypath`, convertir (pero no insertan un preferred_separator) según sea necesario.|
+|[begin](#begin)|Devuelve un `path::iterator` que designa el primer elemento path en el nombre de ruta de acceso, si está presente.|
+|[c_str](#c_str)|Devuelve un puntero al primer carácter de `mypath`.|
+|[clear](#clear)|`mypath.clear()`Ejecuta.|
+|[compare](#compare)|Devuelve valores de comparación.|
+|[concat](#compare)|Anexa la secuencia especificada a `mypath`, convertido (pero no insertando un separador) según sea necesario.|
 |[empty](#empty)|Devuelve `mypath.empty()`.|
 |[end](#end)|Devuelve un iterador de final de secuencia de tipo `iterator`.|
 |[extension](#extension)|Devuelve el sufijo de `filename()`.|
@@ -65,46 +65,46 @@ class path;
 |[has_root_name](#has_root_name)|Devuelve `!root_name().empty()`.|
 |[has_root_path](#has_root_path)|Devuelve `!root_path().empty()`.|
 |[has_stem](#has_stem)|Devuelve `!stem().empty()`.|
-|[is_absolute](#is_absolute)|Para Windows, la función devuelve `has_root_name() && has_root_directory()`. Para Posix, la función devuelve `has_root_directory()`.|
+|[is_absolute](#is_absolute)|En Windows, la función devuelve `has_root_name() && has_root_directory()`. Para POSIX, la función devuelve `has_root_directory()`.|
 |[is_relative](#is_relative)|Devuelve `!is_absolute()`.|
 |[make_preferred](#make_preferred)|Convierte cada separador en un preferred_separator según sea necesario.|
 |[native](#native)|Devuelve `myname`.|
-|[parent_path](#parent_path)|Devuelve el elemento primario de componente de ruta de acceso de `myname`.|
+|[parent_path](#parent_path)|Devuelve el componente de ruta de `myname`acceso principal de.|
 |[preferred_separator](#preferred_separator)|El objeto constante ofrece el carácter preferido para separar los componentes de la ruta de acceso, según el sistema operativo host. |
-|[relative_path](#relative_path)|Devuelve el componente de ruta de acceso relativa de `myname`. |
+|[relative_path](#relative_path)|Devuelve el componente de ruta de `myname`acceso relativa de. |
 |[remove_filename](#remove_filename)|Quita el nombre de archivo.|
 |[replace_extension](#replace_extension)|Reemplaza la extensión de `myname`. |
 |[replace_filename](#replace_filename)|RReplaces el nombre de archivo.|
-|[root_directory](#root_directory)|Devuelve el componente del directorio raíz de `myname`. |
-|[root_name](#root_name)|Devuelve el componente de nombre de raíz de `myname`. |
-|[root_path](#root_path)|Devuelve el componente de ruta de acceso raíz de `myname`.|
+|[root_directory](#root_directory)|Devuelve el componente de directorio raíz `myname`de. |
+|[root_name](#root_name)|Devuelve el componente de nombre de `myname`raíz de. |
+|[root_path](#root_path)|Devuelve el componente de ruta de `myname`acceso raíz de.|
 |[stem](#stem)|Devuelve el `stem` componente de `myname`.|
 |[string](#string)|Convierte la secuencia almacenada en `mypath`.|
-|[swap](#swap)|Ejecuta `swap(mypath, right.mypath)`.|
+|[swap](#swap)|`swap(mypath, right.mypath)`Ejecuta.|
 |[u16string](#u16string)|Convierte la secuencia almacenada en `mypath` UTF-16 y la devuelve almacenada en un objeto de tipo `u16string`.|
 |[u32string](#u32string)|Convierte la secuencia almacenada en `mypath` UTF-32 y la devuelve almacenada en un objeto de tipo `u32string`.|
-|[u8string](#u8string)|Convierte la secuencia almacenada en `mypath` a UTF-8 y la devuelve almacenada en un objeto de tipo `u8string`.|
+|[u8string](#u8string)|Convierte la secuencia almacenada en `mypath` UTF-8 y la devuelve almacenada en un objeto de tipo `u8string`.|
 |[value_type](#value_type)|El tipo describe los elementos de la ruta de acceso preferidos de sistema operativo host.|
-|[wstring](#wstring)|Convierte la secuencia almacenada en `mypath` a la codificación preferida por el sistema host para un `wchar_t` secuencia y la devuelve almacenada en un objeto de tipo `wstring`.|
+|[wstring](#wstring)|Convierte la secuencia almacenada en `mypath` a la codificación preferida por el sistema host para una `wchar_t` secuencia y la devuelve almacenada en un objeto de tipo `wstring`.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
-|[operator=](#op_as)|Reemplaza los elementos de la ruta de acceso con una copia de otra ruta de acceso.|
-|[operator+=](#op_add)|Diversos `concat` expresiones.|
-|[operator/=](#op_divide)|Diversos `append` expresiones.|
-|[string_type (operador)](#op_string)|Devuelve `myname`.|
+|[operator=](#op_as)|Reemplaza los elementos de la ruta de acceso por una copia de otra ruta de acceso.|
+|[operator+=](#op_add)|Varias `concat` expresiones.|
+|[operator/=](#op_divide)|Varias `append` expresiones.|
+|[operador string_type](#op_string)|Devuelve `myname`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<filesystem >
+**Encabezado:** \<> filesystem
 
 **Espacio de nombres:** std::experimental::filesystem
 
-## <a name="append"></a> Path:: Append
+## <a name="append"></a>Ruta de acceso:: Append
 
-Anexa la secuencia especificada a `mypath`, convertido e insertar un `preferred_separator` según sea necesario.
+Anexa la secuencia especificada a `mypath`, convertido e insertando `preferred_separator` según sea necesario.
 
 ```cpp
 template <class Source>
@@ -116,16 +116,16 @@ path& append(InIt first, InIt last);
 
 ### <a name="parameters"></a>Parámetros
 
-*source*<br/>
+*fuentes*\
 Secuencia especificada.
 
-*first*<br/>
+*lugar*\
 Inicio de la secuencia especificada.
 
-*last*<br/>
+*guardado*\
 Final de la secuencia especificada.
 
-## <a name="assign"></a> Path::Assign
+## <a name="assign"></a>Ruta de acceso:: Assign
 
 Reemplaza `mypath` con la secuencia especificada, convertida según sea necesario.
 
@@ -139,40 +139,40 @@ path& assign(InIt first, InIt last);
 
 ### <a name="parameters"></a>Parámetros
 
-*source*<br/>
+*fuentes*\
 Secuencia especificada.
 
-*first*<br/>
+*lugar*\
 Inicio de la secuencia especificada.
 
-*last*<br/>
+*guardado*\
 Final de la secuencia especificada.
 
-## <a name="begin"></a> Path:: begin
+## <a name="begin"></a>Ruta de acceso:: Begin
 
-Devuelve un `path::iterator` que designa el primer elemento de ruta de acceso de la ruta de acceso, si está presente.
+Devuelve un `path::iterator` que designa el primer elemento path en el nombre de ruta de acceso, si está presente.
 
 ```cpp
 iterator begin() const;
 ```
 
-## <a name="c_str"></a> path::c_str
+## <a name="c_str"></a>Ruta de acceso:: c_str
 
-Devuelve un puntero al primer carácter en `mypath`.
+Devuelve un puntero al primer carácter de `mypath`.
 
 ```cpp
 const value_type& *c_str() const noexcept;
 ```
 
-## <a name="clear"></a> Path::Clear
+## <a name="clear"></a>Ruta de acceso:: Clear
 
-Ejecuta `mypath.clear()`.
+`mypath.clear()`Ejecuta.
 
 ```cpp
 void clear() noexcept;
 ```
 
-## <a name="compare"></a> Path:: Compare
+## <a name="compare"></a>Ruta de acceso:: Compare
 
 La primera función devuelve `mypath.compare(pval.native())`. La segunda función devuelve `mypath.compare(str)`. La tercera función devuelve `mypath.compare(ptr)`.
 
@@ -184,18 +184,18 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pval*<br/>
-Ruta de acceso para comparar.
+*pval*\
+Ruta de acceso que se va a comparar.
 
-*str*<br/>
+*CAD*\
 Cadena que se va a comparar.
 
-*ptr*<br/>
-Puntero a comparar.
+*anota*\
+Puntero que se va a comparar.
 
-## <a name="concat"></a> Path::Concat
+## <a name="concat"></a>path:: concat
 
-Anexa la secuencia especificada a `mypath`, convertir (pero no insertan un preferred_separator) según sea necesario.
+Anexa la secuencia especificada a `mypath`, convertido (pero no insertando un separador) según sea necesario.
 
 ```cpp
 template <class Source>
@@ -207,16 +207,16 @@ path& concat(InIt first, InIt last);
 
 ### <a name="parameters"></a>Parámetros
 
-*source*<br/>
+*fuentes*\
 Secuencia especificada.
 
-*first*<br/>
+*lugar*\
 Inicio de la secuencia especificada.
 
-*last*<br/>
+*guardado*\
 Final de la secuencia especificada.
 
-## <a name="const_iterator"></a> path::const_iterator
+## <a name="const_iterator"></a>Ruta de acceso:: const_iterator
 
 Sinónimo de `iterator`.
 
@@ -224,7 +224,7 @@ Sinónimo de `iterator`.
 typedef iterator const_iterator;
 ```
 
-## <a name="empty"></a> Path:: Empty
+## <a name="empty"></a>Ruta de acceso:: vacío
 
 Devuelve `mypath.empty()`.
 
@@ -232,7 +232,7 @@ Devuelve `mypath.empty()`.
 bool empty() const noexcept;
 ```
 
-## <a name="end"></a> Path:: end
+## <a name="end"></a>Ruta de acceso:: end
 
 Devuelve un iterador de final de secuencia de tipo `iterator`.
 
@@ -240,7 +240,7 @@ Devuelve un iterador de final de secuencia de tipo `iterator`.
 iterator end() const;
 ```
 
-## <a name="extension"></a> Path:: Extension
+## <a name="extension"></a>Ruta de acceso:: Extension
 
 Devuelve el sufijo de `filename()`.
 
@@ -250,13 +250,13 @@ path extension() const;
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve el sufijo de `filename() X` tal que:
+Devuelve el sufijo de `filename() X` este que:
 
 Si `X == path(".") || X == path("..")` o si `X` no contiene ningún punto, el sufijo está vacío.
 
 De lo contrario, el sufijo comienza con (e incluye) el punto situado más al derecha.
 
-## <a name="filename"></a> Path:: filename
+## <a name="filename"></a>path:: FILENAME
 
 Devuelve el componente del directorio raíz de myname, específicamente `empty() path() : *--end()`. El componente puede estar vacío.
 
@@ -264,7 +264,7 @@ Devuelve el componente del directorio raíz de myname, específicamente `empty()
 path filename() const;
 ```
 
-## <a name="generic_string"></a> path::generic_string
+## <a name="generic_string"></a>Ruta de acceso:: generic_string
 
 Devuelve `this->string<Elem, Traits, Alloc>(al)` con (en Windows) cualquier barra diagonal inversa convertida en una barra diagonal.
 
@@ -278,7 +278,7 @@ template <class Elem,
 string generic_string() const;
 ```
 
-## <a name="generic_u16string"></a> path::generic_u16string
+## <a name="generic_u16string"></a>Ruta de acceso:: generic_u16string
 
 Devuelve `u16string()` con (en Windows) cualquier barra diagonal inversa convertida en una barra diagonal.
 
@@ -286,7 +286,7 @@ Devuelve `u16string()` con (en Windows) cualquier barra diagonal inversa convert
 u16string generic_u16string() const;
 ```
 
-## <a name="generic_u32string"></a> path::generic_u32string
+## <a name="generic_u32string"></a>Ruta de acceso:: generic_u32string
 
 Devuelve `u32string()` con (en Windows) cualquier barra diagonal inversa convertida en una barra diagonal.
 
@@ -294,7 +294,7 @@ Devuelve `u32string()` con (en Windows) cualquier barra diagonal inversa convert
 u32string generic_u32string() const;
 ```
 
-## <a name="generic_u8string"></a> path::generic_u8string
+## <a name="generic_u8string"></a>Ruta de acceso:: generic_u8string
 
 Devuelve `u8string()` con (en Windows) cualquier barra diagonal inversa convertida en una barra diagonal.
 
@@ -302,7 +302,7 @@ Devuelve `u8string()` con (en Windows) cualquier barra diagonal inversa converti
 string generic_u8string() const;
 ```
 
-## <a name="generic_wstring"></a> path::generic_wstring
+## <a name="generic_wstring"></a>Ruta de acceso:: generic_wstring
 
 Devuelve `wstring()` con (en Windows) cualquier barra diagonal inversa convertida en una barra diagonal.
 
@@ -310,7 +310,7 @@ Devuelve `wstring()` con (en Windows) cualquier barra diagonal inversa convertid
 wstring generic_wstring() const;
 ```
 
-## <a name="has_extension"></a> Path::has_extension
+## <a name="has_extension"></a>Ruta de acceso:: has_extension
 
 Devuelve `!extension().empty()`.
 
@@ -318,7 +318,7 @@ Devuelve `!extension().empty()`.
 bool has_extension() const;
 ```
 
-## <a name="has_filename"></a> path::has_filename
+## <a name="has_filename"></a>Ruta de acceso:: has_filename
 
 Devuelve `!filename().empty()`.
 
@@ -326,7 +326,7 @@ Devuelve `!filename().empty()`.
 bool has_filename() const;
 ```
 
-## <a name="has_parent_path"></a> Path:: has_parent_path
+## <a name="has_parent_path"></a>Ruta de acceso:: has_parent_path
 
 Devuelve `!parent_path().empty()`.
 
@@ -334,7 +334,7 @@ Devuelve `!parent_path().empty()`.
 bool has_parent_path() const;
 ```
 
-## <a name="has_relative_path"></a> Path::has_relative_path
+## <a name="has_relative_path"></a>Ruta de acceso:: has_relative_path
 
 Devuelve `!relative_path().empty()`.
 
@@ -350,7 +350,7 @@ Devuelve `!root_directory().empty()`.
 bool has_root_directory() const;
 ```
 
-## <a name="has_root_name"></a> path::has_root_name
+## <a name="has_root_name"></a>Ruta de acceso:: has_root_name
 
 Devuelve `!root_name().empty()`.
 
@@ -358,7 +358,7 @@ Devuelve `!root_name().empty()`.
 bool has_root_name() const;
 ```
 
-## <a name="has_root_path"></a> path::has_root_path
+## <a name="has_root_path"></a>Ruta de acceso:: has_root_path
 
 Devuelve `!root_path().empty()`.
 
@@ -366,7 +366,7 @@ Devuelve `!root_path().empty()`.
 bool has_root_path() const;
 ```
 
-## <a name="has_stem"></a> path::has_stem
+## <a name="has_stem"></a>Ruta de acceso:: has_stem
 
 Devuelve `!stem().empty()`.
 
@@ -374,15 +374,15 @@ Devuelve `!stem().empty()`.
 bool has_stem() const;
 ```
 
-## <a name="is_absolute"></a> path::is_absolute
+## <a name="is_absolute"></a>Ruta de acceso:: is_absolute
 
-Para Windows, la función devuelve `has_root_name() && has_root_directory()`. Para Posix, la función devuelve `has_root_directory()`.
+En Windows, la función devuelve `has_root_name() && has_root_directory()`. Para POSIX, la función devuelve `has_root_directory()`.
 
 ```cpp
 bool is_absolute() const;
 ```
 
-## <a name="is_relative"></a> Path::is_relative
+## <a name="is_relative"></a>Ruta de acceso:: is_relative
 
 Devuelve `!is_absolute()`.
 
@@ -390,9 +390,9 @@ Devuelve `!is_absolute()`.
 bool is_relative() const;
 ```
 
-## <a name="iterator"></a> Path:: Iterator
+## <a name="iterator"></a>path:: iterator
 
-Un iterador constante bidireccional que designa los componentes de ruta de acceso de `myname`.
+Iterador constante bidireccional que designa los componentes de la `myname`ruta de acceso de.
 
 ```cpp
 class iterator
@@ -409,37 +409,37 @@ class iterator
 
 ### <a name="remarks"></a>Comentarios
 
-La clase describe un iterador constante bidireccional que designa el `path` componentes de `myname` en la secuencia:
+La clase describe un iterador constante bidireccional que designa `path` los componentes `myname` de en la secuencia:
 
 1. el nombre de raíz, si está presente
 
 1. el directorio raíz, si está presente
 
-1. los elementos restantes del directorio del elemento primario `path`, si está presente, terminan con el nombre de archivo, si está presente
+1. los elementos de directorio restantes del elemento `path`primario, si está presente, que terminan con el nombre de archivo, si está presente
 
 Para `pval` un objeto de tipo `path`:
 
-1. `path::iterator X = pval.begin()` designa el primer `path` elemento en la ruta de acceso, si está presente.
+1. `path::iterator X = pval.begin()`designa el primer `path` elemento del nombre de ruta, si está presente.
 
-1. `X == pval.end()` es true cuando `X` puntos inmediatamente después del final de la secuencia de componentes.
+1. `X == pval.end()`es true cuando `X` apunta inmediatamente después del final de la secuencia de componentes.
 
-3. `*X` Devuelve una cadena que coincide con el componente actual
+3. `*X`Devuelve una cadena que coincide con el componente actual.
 
 1. `++X` designa el componente siguiente de la secuencia, si está presente.
 
 1. `--X` designa el componente anterior de la secuencia, si existe.
 
-1. Modificar `myname` invalida todos los iteradores que designan elementos en `myname`.
+1. Al modificar, se invalidan todos los iteradores que designan elementos en `myname`. `myname`
 
-## <a name="make_preferred"></a> path::make_preferred
+## <a name="make_preferred"></a>Ruta de acceso:: make_preferred
 
-Convierte cada separador para un `preferred_separator` según sea necesario.
+Convierte cada separador en un `preferred_separator` según sea necesario.
 
 ```cpp
 path& make_preferred();
 ```
 
-## <a name="native"></a> Path::Native
+## <a name="native"></a>Ruta de acceso:: nativo
 
 Devuelve `myname`.
 
@@ -447,9 +447,9 @@ Devuelve `myname`.
 const string_type& native() const noexcept;
 ```
 
-## <a name="op_as"></a> path::operator=
+## <a name="op_as"></a>path:: Operator =
 
-Reemplaza los elementos de la ruta de acceso con una copia de otra ruta de acceso.
+Reemplaza los elementos de la ruta de acceso por una copia de otra ruta de acceso.
 
 ```cpp
 path& operator=(const path& right);
@@ -461,19 +461,19 @@ path& operator=(const Source& source);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
-El [ruta](../standard-library/path-class.md) que se copia en el `path`.
+*correcta*\
+La [ruta de acceso](../standard-library/path-class.md) que se `path`copia en el.
 
-*source*<br/>
-La ruta de acceso de origen.
+*fuentes*\
+Ruta de acceso de origen.
 
 ### <a name="remarks"></a>Comentarios
 
-Las copias de operador miembro primera `right.myname` a `myname`. El segundo operador miembro mueve `right.myname` a `myname`. El tercer operador miembro comporta igual que `*this = path(source)`.
+El primer operador miembro copia `right.myname` en `myname`. El segundo operador miembro se `right.myname` mueve `myname`a. El tercer operador miembro se comporta igual que `*this = path(source)`.
 
-## <a name="op_add"></a> Path:: operator +=
+## <a name="op_add"></a>path:: Operator + =
 
-Diversos `concat` expresiones.
+Varias `concat` expresiones.
 
 ```cpp
 path& operator+=(const path& right);
@@ -490,20 +490,20 @@ path& operator+=(Elem elem);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
-La ruta de acceso se ha agregado.
+*correcta*\
+La ruta de acceso agregada.
 
-*str*<br/>
-La cadena se ha agregado.
+*CAD*\
+Cadena agregada.
 
-*ptr*<br/>
-El puntero se ha agregado.
+*anota*\
+El puntero agregado.
 
-*elem*<br/>
-Agregado `value_type` o `Elem`.
+*Elem*\
+Agregado `value_type` o .`Elem`
 
-*source*<br/>
-El origen se ha agregado.
+*fuentes*\
+El origen agregado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -521,9 +521,9 @@ Las funciones miembro se comportan igual que las siguientes expresiones correspo
 
 1. `concat(path(basic_string<Elem>(1, elem)));`
 
-## <a name="op_divide"></a> Path:: operator / =
+## <a name="op_divide"></a>path:: Operator/=
 
-Diversos `append` expresiones.
+Varias `append` expresiones.
 
 ```cpp
 path& operator/=(const path& right);
@@ -534,11 +534,11 @@ path& operator/=(const Source& source);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
-La ruta de acceso se ha agregado.
+*correcta*\
+La ruta de acceso agregada.
 
-*source*<br/>
-El origen se ha agregado.
+*fuentes*\
+El origen agregado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -548,7 +548,7 @@ Las funciones miembro se comportan igual que las siguientes expresiones correspo
 
 1. `append(source);`
 
-## <a name="op_string"></a> Path:: operator string_type
+## <a name="op_string"></a>path:: Operator string_type
 
 Devuelve `myname`.
 
@@ -556,9 +556,9 @@ Devuelve `myname`.
 operator string_type() const;
 ```
 
-## <a name="parent_path"></a> Path::parent_path
+## <a name="parent_path"></a>Ruta de acceso::p arent_path
 
-Devuelve el elemento primario de componente de ruta de acceso de `myname`.
+Devuelve el componente de ruta de `myname`acceso principal de.
 
 ```cpp
 path parent_path() const;
@@ -566,9 +566,9 @@ path parent_path() const;
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve el elemento primario de componente de ruta de acceso de `myname`, específicamente el prefijo de `myname` después de quitar `filename().native()` y los separadores de directorio inmediatamente anterior. (Igualmente, si `begin() != end()`, es la combinación de todos los elementos del intervalo `[begin(), --end())` aplicando consecutivamente `operator/=`.) El componente puede estar vacío.
+Devuelve el componente de ruta de `myname`acceso primaria de, en `myname` concreto el `filename().native()` prefijo de después de quitar y los separadores de directorio inmediatamente anteriores. (Igualmente, si `begin() != end()`es, es la combinación de todos los elementos del intervalo `[begin(), --end())` mediante la aplicación `operator/=`sucesiva). El componente puede estar vacío.
 
-## <a name="path"></a> Path:: path
+## <a name="path"></a>Ruta de acceso::p gistro
 
 Construye un `path` de varias maneras.
 
@@ -593,38 +593,38 @@ path(InIt first, InIt last, const locale& loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
-La ruta de acceso de los cuales la ruta de acceso construido va a ser una copia.
+*correcta*\
+Ruta de acceso de la que la ruta de acceso construida va a ser una copia.
 
-*source*<br/>
-El origen del que la ruta de acceso construido es a ser una copia.
+*fuentes*\
+Origen del que la ruta de acceso construida va a ser una copia.
 
-*loc*<br/>
-La configuración regional especificada.
+*Loc*\
+Configuración regional especificada.
 
-*first*<br/>
+*lugar*\
 Posición del primer elemento que se va a copiar.
 
-*last*<br/>
-La posición del último elemento que se va a copiar.
+*guardado*\
+Posición del último elemento que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
-Los constructores todos construcción `myname` de varias maneras:
+Todos los constructores construyen `myname` de varias maneras:
 
-Para `path()` es `myname()`.
+Para `path()` ello es `myname()`.
 
 Para `path(const path& right`) es `myname(right.myname)`.
 
-Para `path(path&& right)` es `myname(right.myname)`.
+Para `path(path&& right)` ello es `myname(right.myname)`.
 
-Para `template<class Source> path(const Source& source)` es `myname(source)`.
+Para `template<class Source> path(const Source& source)` ello es `myname(source)`.
 
-Para `template<class Source> path(const Source& source, const locale& loc)` es `myname(source)`, obtiene cualquier codecvt necesaria de `loc`.
+Para `template<class Source> path(const Source& source, const locale& loc)` `loc`ello ,obtienecualquieraspectodecodecvtnecesariode.`myname(source)`
 
-Para `template<class InIt> path(InIt first, InIt last)` es `myname(first, last)`.
+Para `template<class InIt> path(InIt first, InIt last)` ello es `myname(first, last)`.
 
-Para `template<class InIt> path(InIt first, InIt last, const locale& loc)` es `myname(first, last)`, obtiene cualquier codecvt necesaria de `loc`.
+Para `template<class InIt> path(InIt first, InIt last, const locale& loc)` `loc`ello ,obtienecualquieraspectodecodecvtnecesariode.`myname(first, last)`
 
 ## <a name="preferred_separator"></a> path::preferred_separator
 
@@ -642,9 +642,9 @@ static constexpr value_type preferred_separator == '/';
 
 Tenga en cuenta que en la mayoría de los contextos en Windows también se permite usar L '/' en su lugar.
 
-## <a name="relative_path"></a> Path:: RELATIVE_PATH
+## <a name="relative_path"></a>Ruta de acceso:: relative_path
 
-Devuelve el componente de ruta de acceso relativa de `myname`.
+Devuelve el componente de ruta de `myname`acceso relativa de.
 
 ```cpp
 path relative_path() const;
@@ -652,9 +652,9 @@ path relative_path() const;
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve el componente de ruta de acceso relativa de `myname`, específicamente el sufijo de `myname` después de quitar `root_path().native()` y los separadores de directorio redundantes inmediatamente posteriores. El componente puede estar vacío.
+Devuelve el componente de ruta de `myname`acceso relativa de, específicamente `myname` el sufijo `root_path().native()` de después de quitar y cualquier separador de directorios redundante inmediatamente posterior. El componente puede estar vacío.
 
-## <a name="remove_filename"></a> Path:: remove_filename
+## <a name="remove_filename"></a>Ruta de acceso:: remove_filename
 
 Quita el nombre de archivo.
 
@@ -662,7 +662,7 @@ Quita el nombre de archivo.
 path& remove_filename();
 ```
 
-## <a name="replace_extension"></a> Path::replace_extension
+## <a name="replace_extension"></a>Ruta de acceso:: replace_extension
 
 Reemplaza la extensión de `myname`.
 
@@ -672,14 +672,14 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="parameters"></a>Parámetros
 
-*newext*<br/>
+*newext*\
 La nueva extensión.
 
 ### <a name="remarks"></a>Comentarios
 
-Quita primero el sufijo `extension().native()` desde `myname`. A continuación si `!newext.empty() && newext[0] != dot` (donde `dot` es `*path(".").c_str()`), a continuación, `dot` se anexa a `myname`. A continuación, *newext* se anexa a `myname`.
+En primer lugar, `extension().native()` quita `myname`el sufijo de. Después, `!newext.empty() && newext[0] != dot` si ( `dot` donde `*path(".").c_str()`es), `dot` se anexa a `myname`. A  continuación, se anexa newext `myname`a.
 
-## <a name="replace_filename"></a> path::replace_filename
+## <a name="replace_filename"></a>Ruta de acceso:: replace_filename
 
 Reemplaza el nombre de archivo.
 
@@ -689,8 +689,8 @@ path& replace_filename(const path& pval);
 
 ### <a name="parameters"></a>Parámetros
 
-*pval*<br/>
-La ruta de acceso del nombre de archivo.
+*pval*\
+Ruta de acceso del nombre de archivo.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -705,7 +705,7 @@ return (*this);
 
 ## <a name="root_directory"></a> path::root_directory
 
-Devuelve el componente del directorio raíz de `myname`.
+Devuelve el componente de directorio raíz `myname`de.
 
 ```cpp
 path root_directory() const;
@@ -715,9 +715,9 @@ path root_directory() const;
 
 El componente puede estar vacío.
 
-## <a name="root_name"></a> Path:: root_name
+## <a name="root_name"></a>Ruta de acceso:: root_name
 
-Devuelve el componente de nombre de raíz de `myname`.
+Devuelve el componente de nombre de `myname`raíz de.
 
 ```cpp
 path root_name() const;
@@ -727,9 +727,9 @@ path root_name() const;
 
 El componente puede estar vacío.
 
-## <a name="root_path"></a> Path:: root_path
+## <a name="root_path"></a>Ruta de acceso:: root_path
 
-Devuelve el componente de ruta de acceso raíz de `myname`.
+Devuelve el componente de ruta de `myname`acceso raíz de.
 
 ```cpp
 path root_path() const;
@@ -737,9 +737,9 @@ path root_path() const;
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve el componente de ruta de acceso raíz de `myname`, concretamente `root_name()`  /  `root_directory`. El componente puede estar vacío.
+Devuelve el componente de ruta de `myname`acceso raíz `root_name()`de, en concreto  / . `root_directory` El componente puede estar vacío.
 
-## <a name="stem"></a> Path::stem
+## <a name="stem"></a>Ruta de acceso:: tallo
 
 Devuelve el `stem` componente de `myname`.
 
@@ -749,9 +749,9 @@ path stem() const;
 
 ### <a name="remarks"></a>Comentarios
 
-Devuelve el `stem` componente de `myname`, concretamente `filename().native()` con cualquier finales `extension().native()` quitado. El componente puede estar vacío.
+Devuelve el `stem` componente de `myname`, en `filename().native()` `extension().native()` concreto, con cualquier final quitado. El componente puede estar vacío.
 
-## <a name="string"></a> Path:: String
+## <a name="string"></a>path:: String
 
 Convierte la secuencia almacenada en `mypath`.
 
@@ -763,7 +763,7 @@ string string() const;
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función de miembro (plantilla) convierte la secuencia almacenada en `mypath` del mismo modo que:
+La primera función miembro (plantilla) convierte la secuencia almacenada de `mypath` la misma manera que:
 
 1. `string()` para `string<char, Traits, Alloc>()`
 
@@ -773,9 +773,9 @@ La primera función de miembro (plantilla) convierte la secuencia almacenada en 
 
 1. `u32string()` para `string<char32_t, Traits, Alloc>()`
 
-La segunda función miembro convierte la secuencia almacenada en `mypath` a la codificación preferida por el sistema host para un **char** secuencia y la devuelve almacenada en un objeto de tipo `string`.
+La segunda función miembro convierte la secuencia almacenada en `mypath` a la codificación preferida por el sistema host para una secuencia **Char** y la devuelve almacenada en un objeto de tipo `string`.
 
-## <a name="string_type"></a> path::string_type
+## <a name="string_type"></a>Ruta de acceso:: string_type
 
 El tipo es un sinónimo de `basic_string<value_type>`.
 
@@ -783,15 +783,15 @@ El tipo es un sinónimo de `basic_string<value_type>`.
 typedef basic_string<value_type> string_type;
 ```
 
-## <a name="swap"></a> Path:: swap
+## <a name="swap"></a>path:: swap
 
-Ejecuta `swap(mypath, right.mypath)`.
+`swap(mypath, right.mypath)`Ejecuta.
 
 ```cpp
 void swap(path& right) noexcept;
 ```
 
-## <a name="u16string"></a> Path::u16string
+## <a name="u16string"></a>Ruta de acceso:: u16string
 
 Convierte la secuencia almacenada en `mypath` UTF-16 y la devuelve almacenada en un objeto de tipo `u16string`.
 
@@ -799,7 +799,7 @@ Convierte la secuencia almacenada en `mypath` UTF-16 y la devuelve almacenada en
 u16string u16string() const;
 ```
 
-## <a name="u32string"></a> Path::u32string
+## <a name="u32string"></a>Ruta de acceso:: u32string
 
 Convierte la secuencia almacenada en `mypath` UTF-32 y la devuelve almacenada en un objeto de tipo `u32string`.
 
@@ -807,17 +807,17 @@ Convierte la secuencia almacenada en `mypath` UTF-32 y la devuelve almacenada en
 u32string u32string() const;
 ```
 
-## <a name="u8string"></a> Path::u8string
+## <a name="u8string"></a>Ruta de acceso:: u8string
 
-Convierte la secuencia almacenada en `mypath` a UTF-8 y la devuelve almacenada en un objeto de tipo `u8string`.
+Convierte la secuencia almacenada en `mypath` UTF-8 y la devuelve almacenada en un objeto de tipo `u8string`.
 
 ```cpp
 string u8string() const;
 ```
 
-## <a name="value_type"></a> path::value_type
+## <a name="value_type"></a>Ruta de acceso:: value_type
 
-El tipo describe el `path` elementos preferidos de sistema operativo host.
+El tipo describe los `path` elementos que el sistema operativo host favorece.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -827,9 +827,9 @@ typedef char value_type;
 #endif // filesystem model now defined
 ```
 
-## <a name="wstring"></a> Path::wstring
+## <a name="wstring"></a>Ruta de acceso:: wstring
 
-Convierte la secuencia almacenada en `mypath` a la codificación preferida por el sistema host para un **wchar_t** secuencia y la devuelve almacenada en un objeto de tipo `wstring`.
+Convierte la secuencia almacenada en `mypath` en la codificación preferida por el sistema host para una secuencia **wchar_t** y la devuelve almacenada en un objeto de tipo `wstring`.
 
 ```cpp
 wstring wstring() const;
@@ -837,4 +837,4 @@ wstring wstring() const;
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

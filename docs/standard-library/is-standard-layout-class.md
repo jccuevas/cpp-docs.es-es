@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 75691c1b09b71580474cc22cdc8382bff55a5e29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413507"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457416"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout (Clase)
 
@@ -27,13 +27,13 @@ struct is_standard_layout;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Ty*|El tipo que se va a consultar.|
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia de este predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un diseño estándar de objetos miembro en la memoria, en caso contrario, es false.
+Una instancia de este predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un diseño estándar de objetos miembro en memoria; en caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,4 +43,4 @@ Una instancia de este predicado de tipo contiene true si el tipo *Ty* es una cla
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
