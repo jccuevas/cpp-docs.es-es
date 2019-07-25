@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411999"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459988"
 ---
 # <a name="timepoint-class"></a>time_point (Clase)
 
@@ -33,7 +33,7 @@ class time_point;
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`time_point::clock`|Sinónimo del parámetro de plantilla `Clock`.|
 |`time_point::duration`|Sinónimo del parámetro de plantilla `Duration`.|
@@ -42,13 +42,13 @@ class time_point;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[time_point](#time_point)|Construye un objeto `time_point`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[max](#max)|Especifica el límite superior de `time_point::ref`.|
 |[min](#min)|Especifica el límite inferior de `time_point::ref`.|
@@ -56,14 +56,14 @@ class time_point;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[time_point::operator+=](#op_add_eq)|Suma un valor especificado a la duración almacenada.|
 |[time_point::operator-=](#operator-_eq)|Resta un valor especificado de la duración almacenada.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<chrono >
+**Encabezado:** \<> crónico
 
 **Espacio de nombres:** std::chrono
 
@@ -101,7 +101,7 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*Respectivamente*\
 Objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*Respectivamente*\
 Objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -140,17 +140,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*Respectivamente*\
 Un objeto [duration](../standard-library/duration-class.md).
 
-*TP*<br/>
+*Supervisor*\
 Objeto `time_point`.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto cuyo valor `duration` almacenado es igual a [duration::zero](../standard-library/duration-class.md#zero).
 
-El segundo constructor crea un objeto cuyo valor de duración almacenado es igual a *Dur*. A menos que `is_convertible<Duration2, duration>` es true, el segundo constructor no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).
+El segundo constructor crea un objeto cuyo valor de duración almacenado es igual a *Dur*. A `is_convertible<Duration2, duration>` menos que sea true, el segundo constructor no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).
 
 El tercer constructor inicializa su valor `duration` mediante `Tp.time_since_epoch()`.
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

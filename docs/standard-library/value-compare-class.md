@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 4b7fff1bef091a9d47e6ea4dc0e53e86ce39ad7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365294"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452365"
 ---
 # <a name="valuecompare-class"></a>value_compare (Clase)
 
@@ -39,7 +39,7 @@ protected:
 
 ## <a name="remarks"></a>Comentarios
 
-Los criterios de comparación proporcionados por value_compare entre `value_types` de elementos enteros incluidos en un objeto hash_map se induce de una comparación entre las claves de los respectivos elementos mediante la construcción de la clase auxiliar. El operador de la función miembro usa el objeto `comp` de tipo `key_compare` almacenado en el objeto de función proporcionado por value_compare para comparar los componentes clave de ordenación de dos elementos.
+Los criterios de comparación proporcionados por `value_types` value_compare entre todos los elementos contenidos en un hash_map se inducen de una comparación entre las claves de los elementos respectivos mediante la construcción de la clase auxiliar. El operador de función miembro usa el `comp` objeto de `key_compare` tipo almacenado en el objeto de función proporcionado por value_compare para comparar los componentes de clave de ordenación de dos elementos.
 
 Para hash_set y hash_multiset, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, value_compare es equivalente a `key_compare`. No lo es para hash_map y hash_multimap, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.
 
@@ -55,6 +55,6 @@ Vea el ejemplo de [hash_map::value_comp](../standard-library/hash-map-class.md#v
 
 ## <a name="see-also"></a>Vea también
 
-[binary_function (Struct)](../standard-library/binary-function-struct.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function (Struct)](../standard-library/binary-function-struct.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

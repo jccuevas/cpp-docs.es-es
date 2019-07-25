@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370676"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450080"
 ---
 # <a name="packagedtask-class"></a>packaged_task (Clase)
 
@@ -42,14 +42,14 @@ class packaged_task;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[packaged_task](#packaged_task)|Construye un objeto `packaged_task`.|
 |[packaged_task::~packaged_task (Destructor)](#dtorpackaged_task_destructor)|Destruye un objeto `packaged_task`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[get_future](#get_future)|Devuelve un objeto [future](../standard-library/future-class.md) que tiene el mismo estado asincrónico asociado.|
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Llama al objeto que se puede llamar que está almacenado en el estado asincrónico asociado y almacena el valor devuelto de forma atómica.|
@@ -59,7 +59,7 @@ class packaged_task;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[packaged_task::operator=](#op_eq)|Transfiere un estado asincrónico asociado de un objeto especificado.|
 |[packaged_task::operator()](#op_call)|Llama al objeto que se puede llamar que está almacenado en el estado asincrónico asociado, almacena el valor devuelto de forma atómica y establece el estado en *Listo*.|
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<futura >
+**Encabezado:** \<> futuro
 
 **Espacio de nombres:** std
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha*<br/>
+*Correcta*\
 Objeto `packaged_task`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -122,7 +122,7 @@ Objeto `packaged_task`.
 
 ### <a name="remarks"></a>Comentarios
 
-Después de la operación, *derecha* ya no tiene un estado asincrónico asociado.
+Después de la operación, la *derecha* ya no tiene un estado asincrónico asociado.
 
 ## <a name="op_call"></a> packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
+**true** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
 
 ## <a name="packaged_task"></a> packaged_task::packaged_task (Constructor)
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha*<br/>
+*Correcta*\
 Objeto `packaged_task`.
 
-*alloc*<br/>
+*Alloc*\
 Asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).
 
-*fn*<br/>
+*FN*\
 Objeto de función.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto `packaged_task` que no tiene ningún *estado asincrónico asociado*.
 
-El segundo constructor crea un `packaged_task` objeto y transfiere el estado asincrónico asociado de *derecha*. Después de la operación, *derecha* ya no tiene un estado asincrónico asociado.
+El segundo constructor crea un `packaged_task` objeto y transfiere el estado asincrónico asociado de la *derecha*. Después de la operación, la *derecha* ya no tiene un estado asincrónico asociado.
 
-El tercer constructor crea un `packaged_task` objeto que tiene una copia de *fn* almacenados en su estado asincrónico asociado.
+El tercer constructor crea un `packaged_task` objeto que tiene una copia de *FN* almacenada en su estado asincrónico asociado.
 
-El cuarto constructor crea un `packaged_task` objeto que tiene una copia de *fn* almacenados en su estado asincrónico asociado y usa `alloc` para asignación de memoria.
+El cuarto constructor crea un `packaged_task` objeto que tiene una copia de *FN* almacenada en su estado asincrónico asociado y utiliza `alloc` para la asignación de memoria.
 
 ## <a name="dtorpackaged_task_destructor"></a> packaged_task::~packaged_task (Destructor)
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha*<br/>
+*Correcta*\
 Objeto `packaged_task`.
 
 ## <a name="valid"></a> packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
+**true** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

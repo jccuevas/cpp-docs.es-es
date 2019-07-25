@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244623"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449458"
 ---
 # <a name="conditionvariable-class"></a>condition_variable (Clase)
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|
 
-## <a name="condition_variable"></a> CONDITION_VARIABLE
+## <a name="condition_variable"></a>condition_variable
 
 Construye un objeto `condition_variable`.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 Si no queda suficiente memoria disponible, el constructor produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error de `not_enough_memory`. Si el objeto no puede construirse porque algún otro recurso no está disponible, el constructor produce un objeto `system_error` que tiene un código de error de `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
 Devuelve el tipo específico de la implementación que representa el identificador condition_variable.
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` se define como un puntero a estructuras de datos internas del Runtime de simultaneidad.
 
-## <a name="notify_all"></a> notify_all
+## <a name="notify_all"></a>notify_all
 
 Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.
 
@@ -88,7 +88,7 @@ Desbloquea todos los subprocesos que están esperando el objeto `condition_varia
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> notify_one
+## <a name="notify_one"></a>notify_one
 
 Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.
 
@@ -96,7 +96,7 @@ Desbloquea uno de los subprocesos que están esperando el objeto `condition_vari
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> Espere
+## <a name="wait"></a>currir
 
 Bloquea un subproceso.
 
@@ -112,7 +112,7 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 *Lck*\
 Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Pred*\
+*Pronostica*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="remarks"></a>Comentarios
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
 Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.
 
@@ -151,18 +151,18 @@ Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 *Rel_time*\
 Objeto `chrono::duration` que especifica la cantidad de tiempo que tiene que transcurrir hasta que el subproceso se reactive.
 
-*Pred*\
+*Pronostica*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el primer método `cv_status::timeout` si la espera termina cuando *Rel_time* ha transcurrido. De lo contrario, el método devuelve `cv_status::no_timeout`.
+El primer método devuelve `cv_status::timeout` si la espera termina cuando *Rel_time* ha transcurrido. De lo contrario, el método devuelve `cv_status::no_timeout`.
 
 El segundo método devuelve el valor de *Pred*.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer método se bloquea hasta que el `condition_variable` objeto se señaliza mediante una llamada a [notify_one](#notify_one) o [notify_all](#notify_all) o hasta que el intervalo de tiempo *Rel_time* ha transcurrido. También se puede reactivar en falso.
+El primer método se bloquea hasta `condition_variable` que se señaliza el objeto mediante una llamada a [notify_one](#notify_one) o [notify_all](#notify_all) o hasta que haya transcurrido el intervalo de tiempo *Rel_time* . También se puede reactivar en falso.
 
 En efecto, el segundo método ejecuta el código siguiente.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
 Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.
 
@@ -209,14 +209,14 @@ Un objeto [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 *Abs_time*\
 Un objeto [chrono::time_point](../standard-library/time-point-class.md).
 
-*Pred*\
+*Pronostica*\
 Cualquier expresión que devuelva **true** o **false**.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Los métodos que devuelven un `cv_status` escriba volver `cv_status::timeout` si la espera termina cuando *Abs_time* transcurre. De lo contrario, los métodos devuelven `cv_status::no_timeout`.
+Los métodos que devuelven `cv_status::timeout` un `cv_status` tipo devuelven si la espera termina cuando transcurre *Abs_time* . De lo contrario, los métodos devuelven `cv_status::no_timeout`.
 
-Los métodos que devuelven un **bool** devolver el valor de *Pred*.
+Los métodos que devuelven un valor **booleano** devuelven el valor de *Pred*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -236,5 +236,5 @@ Los métodos tercero y cuarto utilizan un puntero a un objeto de tipo `xtime` pa
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[<condition_variable>](../standard-library/condition-variable.md)
