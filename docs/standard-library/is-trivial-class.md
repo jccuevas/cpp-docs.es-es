@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivial
 ms.assetid: 6beb11d4-2f38-4c7e-9959-ca5d26250df7
-ms.openlocfilehash: 609fdd9c3d0d00eea607db4aefd31163234a9a00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d218848fd65ca68022e3e66df02201582626711
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413520"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457413"
 ---
 # <a name="istrivial-class"></a>Clase is_trivial
 
@@ -26,12 +26,12 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo trivial; en caso contrario, es false. Los tipos triviales son tipos escalares, tipos de clase que se pueden copiar de forma trivial, matrices de estos tipos y versiones de tipo cv-qualified (const, volatile, const volatile) de estos tipos.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo trivial; en caso contrario, contiene false. Los tipos triviales son tipos escalares, tipos de clase que se pueden copiar de forma trivial, matrices de estos tipos y versiones de tipo cv-qualified (const, volatile, const volatile) de estos tipos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo triv
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

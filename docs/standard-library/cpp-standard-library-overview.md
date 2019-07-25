@@ -7,16 +7,16 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210806"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452450"
 ---
 # <a name="c-standard-library-overview"></a>Información general sobre la biblioteca estándar de C++
 
-Todas las entidades de la biblioteca de C++ declaradas o definidas en uno o varios encabezados estándar. Esta implementación incluye dos encabezados adicionales, \<hash_map > y \<hash_set >, que no sean necesarios para la C++ estándar. Para obtener una lista completa de los encabezados que admite esta implementación, vea [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md).
+Todas las entidades de la biblioteca de C++ declaradas o definidas en uno o varios encabezados estándar. Esta implementación incluye dos encabezados adicionales, \<hash_map > y \<hash_set >, que no son necesarios para el C++ estándar. Para obtener una lista completa de los encabezados que admite esta implementación, vea [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md).
 
 Una implementación independiente de la biblioteca de C++ solo proporciona un subconjunto de estos encabezados:
 
@@ -60,4 +60,4 @@ Para obtener más información sobre las bibliotecas en tiempo de ejecución de 
 
 ## <a name="see-also"></a>Vea también
 
-[Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

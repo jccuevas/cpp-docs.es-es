@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412246"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450244"
 ---
 # <a name="syncshared-class"></a>sync_shared (Clase)
 
@@ -32,13 +32,13 @@ class sync_shared
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Caché*|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[allocate](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
@@ -60,7 +60,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*count*|El número de elementos de la matriz que se van a asignar.|
 
@@ -82,7 +82,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
@@ -101,17 +101,17 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Caché*|El tipo de caché asociado al filtro de sincronización.|
 |*Otros problemas*|La caché para comparar la igualdad.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el resultado de `cache.equals(Other.cache)`, donde `cache` representa el objeto de caché, es **true**; en caso contrario, **false**.
+**true** si el resultado de `cache.equals(Other.cache)`, donde `cache` representa el objeto de caché, es **true**; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
 ## <a name="see-also"></a>Vea también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

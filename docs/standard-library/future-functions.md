@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159514"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447326"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; (Funciones)
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parámetros
 
-*policy*<br/>
+*directivas*\
 Valor [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Comentarios
@@ -63,9 +63,9 @@ La segunda función devuelve un objeto `future<Ty>` cuyo *estado asincrónico as
 
 A menos que `decay<Fn>::type` sea un tipo distinto de launch, la segunda función no participa en la resolución de sobrecarga.
 
-El estándar de C++ indica que si launch::async directiva, la función crea un nuevo subproceso. Sin embargo la implementación de Microsoft es actualmente no conforme. Obtiene los subprocesos de ThreadPool de Windows, que, en algunos casos, puede proporcionar un subproceso reciclando en lugar de una nueva. Esto significa que el `launch::async` directiva se implementa realmente como `launch::async|launch::deferred`.  Otra implicación de la implementación basada en el grupo de subprocesos es que no hay ninguna garantía de que las variables locales del subproceso se destruirán cuando finaliza el subproceso. Si el subproceso se recicle y proporciona a una nueva llamada a `async`, las variables anteriores seguirán existiendo. Por lo tanto, se recomienda que no use variables de subproceso local con `async`.
+El C++ estándar indica que, si la Directiva se inicia:: Async, la función crea un nuevo subproceso. Sin embargo, la implementación de Microsoft no se ajusta actualmente. Obtiene los subprocesos de Windows ThreadPool, que en algunos casos puede proporcionar un subproceso reciclado en lugar de uno nuevo. Esto significa que la `launch::async` Directiva se implementa realmente como `launch::async|launch::deferred`.  Otra implicación de la implementación basada en ThreadPool es que no hay ninguna garantía de que las variables locales del subproceso se destruyan cuando se complete el subproceso. Si el subproceso se recicla y se proporciona a una nueva `async`llamada a, las variables anteriores seguirán existiendo. Por lo tanto, se recomienda no usar variables locales de subproceso `async`con.
 
-Si *directiva* es `launch::deferred`, la función marca su estado asincrónico asociado como que contiene un *función aplazada* y devuelve. La primera llamada a cualquier función no cronometrada que espera hasta que el estado asincrónico asociado esté listo llama a la función aplazada evaluando `INVOKE(dfn, dargs..., Ty)`.
+Si  la directiva `launch::deferred`es, la función marca su estado asincrónico asociado como que contiene una *función aplazada* y devuelve. La primera llamada a cualquier función no cronometrada que espera hasta que el estado asincrónico asociado esté listo llama a la función aplazada evaluando `INVOKE(dfn, dargs..., Ty)`.
 
 En todos los casos, el estado asincrónico asociado del objeto `future` no se establece en *listo* hasta que la evaluación de `INVOKE(dfn, dargs..., Ty)` no se completa, ya sea iniciando una excepción o volviendo normalmente. El resultado del estado asincrónico asociado es una excepción si se produjo alguna, o cualquier valor devuelto por la evaluación.
 
@@ -92,7 +92,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Errno*<br/>
+*Errno*\
 Valor [future_errc](../standard-library/future-enums.md#future_errc) que identifica el error notificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Errno*<br/>
+*Errno*\
 Valor [future_errc](../standard-library/future-enums.md#future_errc) que identifica el error notificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -130,12 +130,12 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
+*Salido*\
 Objeto `promise` izquierdo.
 
-*Derecha*<br/>
+*Correcta*\
 Objeto `promise` derecho.
 
 ## <a name="see-also"></a>Vea también
 
-[\<future>](../standard-library/future.md)<br/>
+[\<future>](../standard-library/future.md)
