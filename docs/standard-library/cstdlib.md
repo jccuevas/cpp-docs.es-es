@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 70e05ad734fa49ba8cb96e4bf83bc05b99c5f55c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 298d6a512b2863a326bda0670f33fe8f1bda0688
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246528"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449407"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
-Incluye el encabezado de la biblioteca estándar de C \<stdlib.h > y agrega los nombres asociados a la `std` espacio de nombres. Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el `std` espacio de nombres.
+Incluye el encabezado \<stdlib. > h de la biblioteca estándar de C y agrega los nombres `std` asociados al espacio de nombres. Incluir este encabezado garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar `std` de C se declaran en el espacio de nombres.
 
 > [!NOTE]
-> \<STDLIB.h > no incluye el tipo **wchar_t**.
+> \<stdlib. h > no incluye el tipo **wchar_t**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -26,7 +26,7 @@ Incluye el encabezado de la biblioteca estándar de C \<stdlib.h > y agrega los 
 
 **Espacio de nombres:** std
 
-## <a name="namespace-and-macros"></a>Macros y Namespace
+## <a name="namespace-and-macros"></a>Espacio de nombres y macros
 
 ```cpp
 namespace std {
@@ -43,7 +43,7 @@ namespace std {
 #define MB_CUR_MAX
 ```
 
-## <a name="exposition-only-functions"></a>Solo las funciones de exposición
+## <a name="exposition-only-functions"></a>Funciones de solo exposición
 
 ```cpp
 extern "C" using c-atexit-handler = void();
@@ -56,16 +56,16 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 |Función|DESCRIPCIÓN|
 |-|-|
-|[_Exit](#_exit)|Finaliza el programa sin usar destructores o funciones registradas.|
+|[_Exit](#_exit)|Finaliza el programa sin usar destructores ni funciones registradas.|
 |[abort](#abort)|Finaliza el programa sin usar destructores.|
-|[atexit](#atexit)|Registra la función de finalización del programa.|
-|[exit](#exit)|Destruye los objetos con subproceso y almacenamiento estático, a continuación, devuelve el control.|
+|[atexit](#atexit)|Registra la función para la finalización del programa.|
+|[exit](#exit)|Destruye objetos con el almacenamiento estático y el subproceso y, a continuación, devuelve el control.|
 |[at_quick_exit](#at_quick_exit)|Registra la función sin argumentos para la finalización del programa.|
 |[quick_exit](#quick_exit)|Registra la función con objetos conservados para la finalización del programa.|
-|[getenv](#getenv)|Consulte la referencia de la biblioteca estándar de C.|
-|[system](#system)|Consulte la referencia de la biblioteca estándar de C.|
+|[getenv](#getenv)|Consulte referencia de la biblioteca estándar de C.|
+|[system](#system)|Consulte referencia de la biblioteca estándar de C.|
 
-### <a name="_exit"></a> _Exit
+### <a name="_exit"></a>_Exit
 
 ```cpp
 [[noreturn]] void _Exit(int status) noexcept;
@@ -73,9 +73,9 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 #### <a name="remarks"></a>Comentarios
 
-El programa finaliza sin ejecutar los destructores para objetos de automático, el subproceso o la duración de almacenamiento estática y sin llamar a funciones que pasan a `atexit()`. La función `_Exit` tiene seguridad de la señal.
+El programa finaliza sin ejecutar destructores para los objetos de duración de almacenamiento automático, de subproceso o estático y sin llamar a las funciones `atexit()`que se pasan a. La función `_Exit` es segura para señales.
 
-### <a name="abort"></a> Anulación
+### <a name="abort"></a>aborta
 
 ```cpp
 [[noreturn]] void abort() noexcept;
@@ -83,9 +83,9 @@ El programa finaliza sin ejecutar los destructores para objetos de automático, 
 
 #### <a name="remarks"></a>Comentarios
 
-El programa finaliza sin ejecutar los destructores para objetos de automático, el subproceso o la duración de almacenamiento estática y sin llamar a funciones que pasan a `atexit()`. La función `abort` tiene seguridad de la señal.
+El programa finaliza sin ejecutar destructores para los objetos de duración de almacenamiento automático, de subproceso o estático y sin llamar a las funciones `atexit()`que se pasan a. La función `abort` es segura para señales.
 
-### <a name="at_quick_exit"></a> at_quick_exit
+### <a name="at_quick_exit"></a>at_quick_exit
 
 ```cpp
 int at_quick_exit(c-atexit-handler * func) noexcept;
@@ -94,13 +94,13 @@ int at_quick_exit(atexit-handler * func) noexcept;
 
 #### <a name="return-value"></a>Valor devuelto
 
-Cero si el registro es satisfactorio, distinto de cero si se produce un error.
+Cero si el registro se realiza correctamente, distinto de cero si se produce un error.
 
 #### <a name="remarks"></a>Comentarios
 
-El `at_quick_exit()` funciones registran la función señalada por *func* llamarse sin argumentos cuando `quick_exit` se llama. No se especifica si una llamada a `at_quick_exit()` que no se producen antes de todas las llamadas a `quick_exit` se realizará correctamente y el `at_quick_exit()` funciones no introducen una anticipación de datos. El orden del registro puede ser indeterminado si `at_quick_exit` desde más de un subproceso y, puesto que se llamó `at_quick_exit` son distintos de los registros de la `atexit` registros, las aplicaciones pueden necesitar llamar a ambas funciones de registro con el argumento de la mismo. La implementación debe admitir el registro de al menos 32 funciones.
+Las `at_quick_exit()` funciones registran la función a la que apunta *FUNC* para que se llame `quick_exit` sin argumentos cuando se llama a. No se especifica si una llamada a `at_quick_exit()` no se produce antes de que todas las llamadas a `quick_exit` se realicen correctamente y que las `at_quick_exit()` funciones no presenten una carrera de datos. El orden de registro puede ser indeterminado `at_quick_exit` si se llamó desde más de un subproceso `at_quick_exit` y, dado que los registros `atexit` son distintos de los registros, es posible que las aplicaciones necesiten llamar a ambas funciones de registro con el mismo argumento. La implementación de debe admitir el registro de al menos 32 funciones.
 
-### <a name="atexit"></a> atexit
+### <a name="atexit"></a>AtExit
 
 ```cpp
 int atexit(c-atexit-handler * func) noexcept;
@@ -109,13 +109,13 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>Comentarios
 
-El `atexit()` funciones registran la función señalada por *func* llamarse sin argumentos en la finalización normal del programa. No se especifica si una llamada a `atexit()` que no se producen antes de llamar a `exit()` se realizará correctamente y el `atexit()` funciones no introducen una anticipación de datos. La implementación debe admitir el registro de al menos 32 funciones.
+Las `atexit()` funciones registran la función a la que apunta *FUNC* para que se llame sin argumentos en la finalización del programa normal. No se especifica si una llamada a `atexit()` no se produce antes de que una llamada a `exit()` se realice correctamente `atexit()` y las funciones no presenten una carrera de datos. La implementación de debe admitir el registro de al menos 32 funciones.
 
 #### <a name="return-value"></a>Valor devuelto
 
-Devuelve cero si el registro es satisfactorio, distinto de cero si se produce un error.
+Devuelve cero si el registro se realiza correctamente y es distinto de cero si se produce un error.
 
-### <a name="exit"></a> salir
+### <a name="exit"></a>abandonar
 
 ```cpp
 [[noreturn]] void exit(int status);
@@ -123,21 +123,21 @@ Devuelve cero si el registro es satisfactorio, distinto de cero si se produce un
 
 #### <a name="remarks"></a>Comentarios
 
-En primer lugar, los objetos que tienen duración de almacenamiento thread y asociados con el actual subproceso se destruyen.
+En primer lugar, se destruyen los objetos con duración de almacenamiento de subprocesos y asociados al subproceso actual.
 
-A continuación, se destruyen objetos con una duración de almacenamiento estática y funciones registrado mediante una llamada a `atexit` se denominan. No se destruyen objetos automáticos como resultado de llamar a `exit()`. Si el control abandona una función registrada llamada `exit` porque la función no proporciona un controlador de excepción producida, `std::terminate()` se denominará. Se llama a una función para cada vez se registra. Todos los objetos con una duración de almacenamiento automática se destruyen en un programa cuya función principal no contiene ningún objeto automática y ejecuta la llamada a `exit()`. Puede transferir el control directamente a esa función principal iniciando una excepción que se detecta en main.
+A continuación, se destruyen los objetos con duración de almacenamiento estática y `atexit` se llama a las funciones registradas mediante una llamada a. Los objetos automáticos no se destruyen como `exit()`resultado de una llamada a. Si el control deja una función registrada a `exit` la que llama porque la función no proporciona un controlador para una `std::terminate()` excepción iniciada, se llamará a. Se llama a una función cada vez que se registra. Los objetos con la duración de almacenamiento automática se destruyen en un programa cuya función Main no contiene ningún objeto automático y ejecuta `exit()`la llamada a. El control se puede transferir directamente a esta función principal iniciando una excepción que se detecta en Main.
 
-A continuación, todos los abiertos secuencias de C (como mediada por las firmas de función declaradas en <cstdio>) con datos almacenados en búfer tácitas son vaciado, todos los abiertos se cierran las secuencias de C y todos los archivos se crean mediante una llamada `tmpfile()` se quitan.
+A continuación, se vacían todas las secuencias de c abiertas (como las correcciones <cstdio>de las firmas de función declaradas en) con datos almacenados en búfer no escritos, se cierran todas las secuencias `tmpfile()` de c abiertas y se quitan todos los archivos creados mediante una llamada.
 
-Por último, el control se devuelve al entorno de host. Si el estado es cero o EXIT_SUCCESS, se devuelve un formulario definido por la implementación de la finalización correcta de estado. Si el estado es EXIT_FAILURE, se devuelve un formulario definido por la implementación de la terminación de estado incorrecto. En caso contrario, el estado devuelto es definido por la implementación.
+Por último, se devuelve el control al entorno de host. Si status es cero o EXIT_SUCCESS, se devuelve un formulario definido por la implementación de la finalización correcta de status. Si el estado es EXIT_FAILURE, se devuelve un formulario definido por la implementación de la terminación de estado incorrecto. De lo contrario, el estado devuelto es definido por la implementación.
 
-### <a name="getenv"></a> getenv
+### <a name="getenv"></a>getenv
 
 ```cpp
 char* getenv(const char* name);
 ```
 
-### <a name="quick_exit"></a> quick_exit
+### <a name="quick_exit"></a>quick_exit
 
 ```cpp
 [[noreturn]] void quick_exit(int status) noexcept;
@@ -145,9 +145,9 @@ char* getenv(const char* name);
 
 #### <a name="remarks"></a>Comentarios
 
-Las funciones registran por llamadas a `at_quick_exit` se llaman en orden inverso de su registro, excepto en que se llama a una función después de que cualquiera registrado previamente las funciones que ya se había llamadas en el momento en que se registró. No se destruirán los objetos como resultado de llamar a `quick_exit`. Si el control abandona una función registrada llamada `quick_exit` porque la función no proporciona un controlador de excepción producida, `std::terminate()` se denominará. Una función registrada a través de `at_quick_exit` invocada por el subproceso que llama `quick_exit`, que puede ser un subproceso diferente de lo que lo registró, registrados por lo que las funciones no debe confiar en la identidad de objetos con una duración de almacenamiento de subproceso. Después de llamar a funciones registradas, `quick_exit` recurrirá a `_Exit(status)`. No se vacían los búferes de archivos estándar. La función `quick_exit` tiene seguridad de señal cuando las funciones que se registra con `at_quick_exit` son.
+Las funciones registradas por `at_quick_exit` las llamadas a se llaman en el orden inverso a su registro, con la excepción de que se llamará a una función después de las funciones registradas previamente que ya se hayan llamado en el momento en que se registró. Los objetos no se destruirán como resultado de llamar `quick_exit`a. Si el control deja una función registrada a `quick_exit` la que llama porque la función no proporciona un controlador para una `std::terminate()` excepción iniciada, se llamará a. Una función registrada mediante `at_quick_exit` se invoca mediante el subproceso que llama `quick_exit`a, que puede ser un subproceso diferente al que lo registró, por lo que las funciones registradas no deben confiar en la identidad de los objetos con duración de almacenamiento de subprocesos. Después de llamar a las `quick_exit` funciones registradas, debe llamar a. `_Exit(status)` No se vacían los búferes de archivo estándar. La función `quick_exit` es segura para señales cuando las funciones registradas `at_quick_exit` con son.
 
-### <a name="system"></a> Sistema
+### <a name="system"></a>integrado
 
 ```cpp
 int system(const char* string);
@@ -176,9 +176,9 @@ unsigned long long int strtoull(const char* nptr, char** endptr, int base);
 
 #### <a name="remarks"></a>Comentarios
 
-Estas funciones tienen la semántica especificada en la biblioteca de C estándar.
+Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
 
-##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Cadena multibyte y ancho y funciones de conversión de caracteres
+##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Funciones de conversión de caracteres y cadenas multibyte/ancho
 
 ```cpp
 int mblen(const char* s, size_t n);
@@ -190,7 +190,7 @@ size_t wcstombs(char* s, const wchar_t* pwcs, size_t n);
 
 ### <a name="remarks"></a>Comentarios
 
-Estas funciones tienen la semántica especificada en la biblioteca de C estándar.
+Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
 
 ## <a name="algorithm-functions"></a>Funciones de algoritmo
 
@@ -203,7 +203,7 @@ void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
 
 ### <a name="remarks"></a>Comentarios
 
-Estas funciones tienen la semántica especificada en la biblioteca de C estándar.
+Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
 
 ## <a name="low-quality-random-number-generation-functions"></a>Funciones de generación de números aleatorios de baja calidad
 
@@ -214,7 +214,7 @@ void srand(unsigned int seed);
 
 ### <a name="remarks"></a>Comentarios
 
-Estas funciones tienen la semántica especificada en la biblioteca de C estándar.
+Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
 
 ## <a name="absolute-values"></a>Valores absolutos
 
@@ -236,7 +236,7 @@ lldiv_t lldiv(long long int numer, long long int denom);
 
 ### <a name="remarks"></a>Comentarios
 
-Estas funciones tienen la semántica especificada en la biblioteca de C estándar.
+Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
 
 ## <a name="functions"></a>Funciones
 
@@ -251,6 +251,6 @@ void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
