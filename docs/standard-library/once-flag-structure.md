@@ -4,16 +4,16 @@ ms.date: 09/17/2018
 f1_keywords:
 - mutex/std::once_flag
 ms.assetid: 71bfb88d-ca8c-4082-a6e1-ff52151e8629
-ms.openlocfilehash: 004a5545e2eccab83b0846e2ae30b88c8431c99d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb85bd48f9b1ac10ec2fefbc6738aae777f67bcf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371443"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455208"
 ---
 # <a name="onceflag-structure"></a>once_flag (Estructura)
 
-Representa un **struct** que se utiliza con la función de plantilla [call_once](../standard-library/mutex-functions.md#call_once) para asegurarse de que la inicialización se llama al código una sola vez, incluso en presencia de varios subprocesos de ejecución.
+Representa un **struct** que se usa con la función de plantilla [call_once](../standard-library/mutex-functions.md#call_once) para garantizar que solo se llame una vez al código de inicialización, incluso en presencia de varios subprocesos de ejecución.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,11 +27,11 @@ Los objetos de tipo `once_flag` pueden crearse, pero no pueden copiarse.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<mutex >
+**Encabezado:** \<exclusión mutua >
 
 **Espacio de nombres:** std
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

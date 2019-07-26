@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159306"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455358"
 ---
 # <a name="initializerlist-class"></a>initializer_list (Clase)
 
@@ -32,7 +32,7 @@ class initializer_list
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Type*|Tipo de datos de elementos que se va a almacenar en la `initializer_list`.|
 
@@ -48,13 +48,13 @@ El compilador transforma las listas de inicializadores entre llaves con elemento
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[initializer_list](../standard-library/forward-list-class.md#forward_list)|Construye un objeto de tipo `initializer_list`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |value_type|Tipo de los elementos de `initializer_list`.|
 |referencia|Tipo que proporciona una referencia a un elemento de `initializer_list`.|
@@ -65,7 +65,7 @@ El compilador transforma las listas de inicializadores entre llaves con elemento
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[begin](#begin)|Devuelve un puntero al primer elemento de `initializer_list`.|
 |[end](#end)|Devuelve un puntero a un elemento más allá del último elemento de `initializer_list`.|
@@ -114,10 +114,10 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*Guardado*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -202,4 +202,4 @@ Número de elementos de la lista.
 
 ## <a name="see-also"></a>Vea también
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

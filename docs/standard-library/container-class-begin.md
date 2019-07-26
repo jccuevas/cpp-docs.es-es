@@ -4,17 +4,17 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - begin method
 ms.assetid: 633708cb-17fe-488b-9fb1-1b5f2da0f46c
-ms.openlocfilehash: 1d3ea3501282c1570d9858f523c96b2eae234ecc
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: d5cb494a7d2471f7b18d80685dd8eafe7f2f1a44
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221731"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457374"
 ---
 # <a name="container-classbegin"></a>Clase de contenedor::begin
 
 > [!NOTE]
-> Este tema es el de Visual Studio C++ documentación como un ejemplo funcional de los contenedores usados en el C++ biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema se encuentra en la documentación C++ de Visual Studio como un ejemplo no funcional de los contenedores que C++ se usan en la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
 Devuelve un iterador que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía).
 
@@ -29,4 +29,4 @@ iterator begin();
 
 ## <a name="see-also"></a>Vea también
 
-[Clase contenedora de ejemplo](../standard-library/sample-container-class.md)<br/>
+[Clase contenedora de ejemplo](../standard-library/sample-container-class.md)

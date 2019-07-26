@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: 14dda03e835ec411013b2d827bd1ccaa77f8982e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 58ebd91fb4fa32cf31d2c49429d0445b92fe0c82
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245017"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449906"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-Incluye el encabezado de la biblioteca estándar de C \<assert.h > y agrega los nombres asociados a la `std` espacio de nombres. Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el `std` espacio de nombres.
+Incluye el encabezado \<de la biblioteca estándar de C Assert. h > y agrega los `std` nombres asociados al espacio de nombres. Incluir este encabezado garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar `std` de C se declaran en el espacio de nombres.
 
 > [!NOTE]
-> \<Assert.h > no define el `static_assert` macro.
+> \<Assert. h > no define `static_assert` la macro.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,11 +34,11 @@ Incluye el encabezado de la biblioteca estándar de C \<assert.h > y agrega los 
 
 ### <a name="remarks"></a>Comentarios
 
-`assert(E)` solo es constante, si se define NDEBUG donde `assert` por última vez está definido o redefinido, o *E* puede convertir en bool se evalúa como **true**.
+`assert(E)`es solo constante, si NDEBUG se define donde `assert` se define o se vuelve a definir por última vez o *se convierte en* bool como **true**.
 
 ## <a name="see-also"></a>Vea también
 
-[assert (macro), _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)\
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

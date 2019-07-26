@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - csetjmp header
 ms.assetid: 8f21fddd-5e9b-4219-a848-581cdd3569d9
-ms.openlocfilehash: 3eba0b4521c0abf414de1416f02039a67c896644
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8f3a1a622776d5dd2ef3d22aaa3436933c5a7137
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244517"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452398"
 ---
 # <a name="ltcsetjmpgt"></a>&lt;csetjmp&gt;
 
@@ -43,6 +43,6 @@ Incluir este encabezado también garantiza que los nombres declarados mediante v
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

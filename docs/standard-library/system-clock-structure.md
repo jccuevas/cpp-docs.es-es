@@ -9,12 +9,12 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a9fd83840883de5172df8b2e1e451984a95ea47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412155"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450188"
 ---
 # <a name="systemclock-structure"></a>system_clock (Estructura)
 
@@ -38,7 +38,7 @@ Un reloj es *constante* si es *monotónico* y si el tiempo entre los ciclos de r
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`system_clock::duration`|Sinónimo de `duration<rep, period>`.|
 |`system_clock::period`|Sinónimo del tipo que se utiliza para representar el período de ciclo en la creación de instancias contenida de `duration`.|
@@ -47,7 +47,7 @@ Un reloj es *constante* si es *monotónico* y si el tiempo entre los ciclos de r
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|Estático. Devuelve el `time_point` que más se aproxima a una hora especificada.|
 |[now](#now)|Estático. Devuelve la hora actual.|
@@ -55,20 +55,20 @@ Un reloj es *constante* si es *monotónico* y si el tiempo entre los ciclos de r
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[system_clock::is_monotonic (Constante)](#is_monotonic_constant)|Especifica si el tipo de reloj es monotónico.|
 |[system_clock::is_steady (Constante)](#is_steady_constant)|Especifica si el tipo de reloj es constante.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<chrono >
+**Encabezado:** \<> crónico
 
 **Espacio de nombres:** std::chrono
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-Método estático que devuelve un [time_point](../standard-library/time-point-class.md) que más se aproxima a la vez que se representa mediante *Tm*.
+Método estático que devuelve el [time_point](../standard-library/time-point-class.md) que más se aproxima a la hora representada por *TM*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -76,7 +76,7 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*TM*<br/>
+*TM*\
 Un objeto [time_t](../c-runtime-library/standard-types.md).
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic (Constante)
@@ -125,7 +125,7 @@ Un objeto [time_point](../standard-library/time-point-class.md) que representa l
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-Método estático que devuelve un [time_t](../c-runtime-library/standard-types.md) que más se aproxima a la vez que se representa mediante *tiempo*.
+Método estático que devuelve el [time_t](../c-runtime-library/standard-types.md) que más se aproxima a la hora representada por *Time*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -133,11 +133,11 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Tiempo*<br/>
+*Tiempo*\
 Un objeto [time_point](../standard-library/time-point-class.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[steady_clock (struct)](../standard-library/steady-clock-struct.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[steady_clock (struct)](../standard-library/steady-clock-struct.md)
