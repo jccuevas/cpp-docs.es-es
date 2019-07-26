@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 6b271adbaf3fe4d2d5c3b41e974bf3036e7b1947
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 984e53a4662b8e3bc18cf06f9fc71d5a614b86ea
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159345"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448695"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset (Clase)
 
@@ -109,13 +109,13 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*<br/>
+*Clave*\
 Tipo de datos de elemento que se almacenará en hash_multiset.
 
-*Rasgos*<br/>
-Tipo que incluye dos objetos de función, uno de clase que es comparar un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es una clave asignación predicado unario valores de los elementos en tipos sin signo enteros de tipo `size_t`. Este argumento es opcional y `hash_compare<Key, less<Key> >` es el valor predeterminado.
+*Rasgos*\
+Tipo que incluye dos objetos de función, uno de clase Compare que es un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es un predicado unario que asigna valores de clave de los elementos a sin signo. enteros de tipo `size_t`. Este argumento es opcional y `hash_compare<Key, less<Key> >` es el valor predeterminado.
 
-*Allocator*<br/>
+*Asignador*\
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de hash_multiset. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -138,7 +138,7 @@ En general, la elección del tipo de contenedor se debe tomar según el tipo de 
 
 La clase hash_multiset debe ser el contenedor asociativo preferido cuando la aplicación cumpla las condiciones que asocian los valores a sus claves. Los elementos de una clase hash_multiset pueden ser varios y actuar como sus propias claves de ordenación, por lo que las claves no son únicas. Un modelo para este tipo de estructura es una lista ordenada, por ejemplo, de palabras en las que las palabras pueden aparecer más de una vez. Si no se permitieran varias repeticiones de las palabras, la estructura de contenedor adecuada sería un hash_set. Si se asociaron definiciones únicas como valores a la lista de palabras clave únicas, la estructura adecuada para contener estos datos sería una clase hash_map. Si, por el contrario, las definiciones no son únicas, un hash_multimap sería el contenedor preferido.
 
-El objeto hash_multiset ordena la secuencia que controla mediante una llamada a un objeto traits hash almacenado de tipo [value_compare](#value_compare). Se puede obtener acceso a este objeto almacenado mediante una llamada a la función miembro [key_comp](#key_comp). Este tipo de objeto de función debe comportarse igual que un objeto de clase `hash_compare<Key, less<Key> >`. En concreto, para todos los valores *clave* typu `Key`, la llamada `Trait(Key)` produce una distribución de valores de tipo `size_t`.
+El objeto hash_multiset ordena la secuencia que controla mediante una llamada a un objeto traits hash almacenado de tipo [value_compare](#value_compare). Se puede obtener acceso a este objeto almacenado mediante una llamada a la función miembro [key_comp](#key_comp). Este tipo de objeto de función debe comportarse igual que un `hash_compare<Key, less<Key> >`objeto de clase. En concreto, para todos  los valores clave `Key`de tipo, `Trait(Key)` la llamada produce una distribución de valores de `size_t`tipo.
 
 En general, se debe poder comparar si los elementos son menores que otros para poder establecer este orden; de este modo, dados dos elementos cualesquiera, se puede determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. En un sentido más técnico, la función de comparación es un predicado binario que induce una ordenación débil estricta en el sentido matemático estándar. Un predicado binario *f*( *x*, *y*) es un objeto de función que tiene dos objetos de argumento x e y, y un valor devuelto de True o False. Una ordenación impuesta en un objeto hash_multiset es una ordenación débil estricta si el predicado binario es irreflexivo, antisimétrico y transitivo, y si la equivalencia es transitiva, donde dos objetos x e y se definen como equivalentes cuando tanto *f*( *x*, *y*) como *f*( *y*, *x*) son False. Si la condición más fuerte de igualdad entre las claves reemplaza la de equivalencia, la ordenación se convierte en total (en el sentido de que todos los elementos se ordenan entre sí) y las claves coincidentes serán indiscernibles unas de otras.
 
@@ -148,19 +148,19 @@ El iterador proporcionado por la clase hash_multiset es un iterador bidirecciona
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[hash_multiset](#hash_multiset)|Construye un `hash_multiset` que está vacío o que es una copia de todo o de parte de otro `hash_multiset`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo que representa la clase `allocator` para el objeto `hash_multiset`.|
-|[const_iterator](#const_iterator)|Un tipo que proporciona un iterador bidireccional que puede leer un **const** elemento en el `hash_multiset`.|
-|[const_pointer](#const_pointer)|Un tipo que proporciona un puntero a un **const** elemento en un `hash_multiset`.|
-|[const_reference](#const_reference)|Un tipo que proporciona una referencia a un **const** elemento almacenado en un `hash_multiset` para leer y realizar **const** operaciones.|
-|[const_reverse_iterator](#const_reverse_iterator)|Un tipo que proporciona un iterador bidireccional que puede leer cualquier **const** elemento en el `hash_multiset`.|
+|[const_iterator](#const_iterator)|Un tipo que proporciona un iterador bidireccional que puede leer un elemento **const** en `hash_multiset`.|
+|[const_pointer](#const_pointer)|Un tipo que proporciona un puntero a un elemento **const** en un `hash_multiset`.|
+|[const_reference](#const_reference)|Un tipo que proporciona una referencia a un elemento **const** almacenado en un `hash_multiset` para leer y realizar operaciones **const** .|
+|[const_reverse_iterator](#const_reverse_iterator)|Un tipo que proporciona un iterador bidireccional que puede leer cualquier elemento **const** en `hash_multiset`.|
 |[difference_type](#difference_type)|Tipo entero con signo que proporciona la diferencia entre dos iteradores que direccionan elementos dentro del mismo `hash_multiset`.|
 |[iterator](#iterator)|Tipo que proporciona un iterador bidireccional que puede leer o modificar cualquier elemento de `hash_multiset`.|
 |[key_compare](#key_compare)|Tipo que proporciona un objeto de función que puede comparar dos claves de ordenación para determinar el orden relativo de dos elementos en el `hash_multiset`.|
@@ -174,7 +174,7 @@ El iterador proporcionado por la clase hash_multiset es un iterador bidirecciona
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[begin](#begin)|Devuelve un iterador que direcciona el primer elemento del `hash_multiset`.|
 |[cbegin](#cbegin)|Devuelve un iterador constante que direcciona el primer elemento del `hash_multiset`.|
@@ -204,7 +204,7 @@ El iterador proporcionado por la clase hash_multiset es un iterador bidirecciona
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
 |[hash_multiset::operator=](#op_eq)|Reemplaza los elementos del objeto hash_multiset por una copia de otro objeto hash_multiset.|
 
@@ -248,7 +248,7 @@ Iterador bidireccional que direcciona el primer elemento del objeto hash_multise
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de `begin` se asigna a un `const_iterator`, no se puede modificar los elementos del objeto hash_multiset. Si el valor devuelto de `begin` se asigna a un `iterator`, los elementos del objeto hash_multiset pueden modificarse.
+Si el valor devuelto `begin` de se asigna `const_iterator`a, los elementos del objeto hash_multiset no se pueden modificar. Si el valor devuelto `begin` de se asigna `iterator`a, los elementos del objeto hash_multiset se pueden modificar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -544,7 +544,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*key*<br/>
+*clave*\
 El criterio de los elementos cuya coincidencia debe buscarse a partir del objeto hash_multiset.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -793,7 +793,7 @@ iterator insert(ValTy&& val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |-|-|
 |*val*|Valor de un elemento que se va a insertar en el objeto [hash_multiset](../standard-library/hash-multiset-class.md) a menos que `hash_multiset` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
 
@@ -845,10 +845,10 @@ iterator insert(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |-|-|
 |*val*|Valor de un elemento que se va a insertar en el objeto [hash_multiset](../standard-library/hash-multiset-class.md) a menos que `hash_multiset` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
-|*_Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Inserción se puede realizar en tiempo constante amortizado, en lugar de tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*.)|
+|*_Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (La inserción se puede realizar en tiempo constante amortizado, en lugar de en tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*).|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -856,7 +856,7 @@ La función miembro [hash_multiset::emplace](#emplace) devuelve un iterador que 
 
 ### <a name="remarks"></a>Comentarios
 
-Inserción se puede realizar en tiempo constante amortizado, en lugar de tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*.
+La inserción se puede realizar en tiempo constante amortizado, en lugar de en tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -952,7 +952,7 @@ Iterador bidireccional que direcciona la ubicación que sigue al último element
 
 ### <a name="remarks"></a>Comentarios
 
-`end` se usa para comprobar si un iterador ha llegado al final de su objeto hash_multiset. El valor devuelto por `end` no se debe desreferenciar.
+`end`se usa para comprobar si un iterador ha llegado al final de su hash_multiset. El valor devuelto por `end` no se debe desreferenciar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1011,7 +1011,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*key*<br/>
+*clave*\
 La clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_multiset que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1100,16 +1100,16 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Where*<br/>
+*_Where*\
 Posición del elemento que se va a quitar de hash_multiset.
 
-*first*<br/>
+*lugar*\
 Posición del primer elemento que se quitó de hash_multiset.
 
-*last*<br/>
+*guardado*\
 Posición inmediatamente siguiente al último elemento que se quitó de hash_multiset.
 
-*key*<br/>
+*clave*\
 Clave del elemento que se va a quitar de hash_multiset.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1221,7 +1221,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*key*<br/>
+*clave*\
 Clave de argumento que debe coincidir con la clave de ordenación de un elemento del objeto hash_multiset que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1230,9 +1230,9 @@ Clave de argumento que debe coincidir con la clave de ordenación de un elemento
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve un iterador que direcciona un elemento del objeto hash_multiset cuyo criterio de ordenación es `equivalent` para el argumento de clave de un predicado binario que induce una ordenación basada en un menor-que la relación de comparabilidad.
+La función miembro devuelve un iterador que direcciona un elemento de la hash_multiset cuyo criterio de `equivalent` ordenación es la clave de argumento de un predicado binario que induce a una ordenación basada en una relación de comparabilidad menor que.
 
-Si el valor devuelto de `find` se asigna a un `const_iterator`, no se puede modificar el objeto hash_multiset. Si el valor devuelto de `find` se asigna a un `iterator`, se puede modificar el objeto hash_multiset.
+Si el valor devuelto `find` de se asigna `const_iterator`a, el objeto hash_multiset no se puede modificar. Si el valor devuelto `find` de se asigna `iterator`a, el objeto hash_multiset se puede modificar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1411,13 +1411,13 @@ hash_multiset(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |-|-|
-|*Al*|Clase de asignador de almacenamiento que se va a utilizar para este objeto `hash_multiset`, que toma como valor predeterminado `Allocator`.|
-|*Comp.*|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos de `hash_multiset`, que toma como valor predeterminado `hash_compare`.|
+|*Alabama*|Clase de asignador de almacenamiento que se va a utilizar para este objeto `hash_multiset`, que toma como valor predeterminado `Allocator`.|
+|*COMP*|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos de `hash_multiset`, que toma como valor predeterminado `hash_compare`.|
 |*Derecha*|`hash_multiset` del que el `hash_multiset` construido va a ser una copia.|
 |*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*Guardado*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|
 
 ### <a name="remarks"></a>Comentarios
@@ -1428,9 +1428,9 @@ Todos los constructores inicializan sus hash_multisets.
 
 Todos los constructores almacenan un objeto de función de tipo `Traits` que se usa para establecer un orden entre las claves del objeto `hash_multiset` y que se puede devolver más adelante mediante una llamada a [hash_multiset::key_comp](#key_comp). Para obtener más información sobre `Traits`, vea el tema [Clase hash_multiset](../standard-library/hash-multiset-class.md).
 
-Los tres primeros constructores especifican un inicial vacío `hash_multiset`, el segundo especifica el tipo de función de comparación (*Comp*) que se usará en establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (*Al*) que se usará. La palabra clave **explicit** suprime ciertos tipos de conversión automática de tipos.
+Los tres primeros constructores especifican un inicial `hash_multiset`vacío, el segundo especifica el tipo de función de comparación (*COMP*) que se va a usar para establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (*al*) que se va a usar. La palabra clave **explicit** suprime ciertos tipos de conversión automática de tipos.
 
-El cuarto constructor mueve el `hash_multiset` `Right`.
+El cuarto constructor mueve `hash_multiset`. `Right`
 
 El quinto, el sexto y el séptimo constructores utilizan una initializer_list.
 
@@ -1480,12 +1480,12 @@ iterator insert(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |-|-|
 |*Val*|Valor de un elemento que se va a insertar en el hash_multiset a menos que el hash_multiset ya contenga ese elemento o, más en general, un elemento cuya clave esté ordenada de manera equivalente.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (La inserción se puede realizar en tiempo constante amortizado, en lugar de en tiempo logarítmico, si el punto de inserción sigue inmediatamente a `_Where`).|
 |*First*|Posición del primer elemento que se va a copiar de un hash_multiset.|
-|*Último*|Posición situada más allá del último elemento que se va a copiar de un hash_multiset.|
+|*Guardado*|Posición situada más allá del último elemento que se va a copiar de un hash_multiset.|
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1498,7 +1498,7 @@ La tercera función miembro inserta la secuencia de valores de elemento en un ob
 
 ### <a name="remarks"></a>Comentarios
 
-Inserción se puede realizar en tiempo constante amortizado para la versión de sugerencia de insert, en lugar de tiempo logarítmico, si el punto de inserción sigue inmediatamente a *donde*.
+La inserción se puede realizar en tiempo constante amortizado para la versión de sugerencia de INSERT, en lugar de en tiempo logarítmico, si el punto de inserción sigue inmediatamente a *Where*.
 
 ## <a name="iterator"></a>  hash_multiset::iterator
 
@@ -1513,11 +1513,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Comentarios
 
-Un tipo `iterator` puede usarse para modificar el valor de un elemento.
+Un tipo `iterator` se puede usar para modificar el valor de un elemento.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [comenzar](#begin) para obtener un ejemplo de cómo declarar y usar `iterator`.
+Vea el ejemplo de [Begin](#begin) para obtener un ejemplo de cómo declarar y `iterator`usar.
 
 ## <a name="key_comp"></a>  hash_multiset::key_comp
 
@@ -1532,9 +1532,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el parámetro de plantilla hash_multiset *rasgos*, que contiene los objetos de función que se usan para el hash y ordenar los elementos del contenedor.
+Devuelve los *rasgos*del parámetro de plantilla hash_multiset, que contiene objetos de función que se usan para aplicar un algoritmo hash y para ordenar los elementos del contenedor.
 
-Para obtener más información sobre *rasgos* vea el [clase hash_multiset](../standard-library/hash-multiset-class.md) tema.
+Para obtener más información sobre los *rasgos* , vea el tema sobre la [clase hash_multiset](../standard-library/hash-multiset-class.md) .
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1608,9 +1608,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Comentarios
 
-`key_compare` es un sinónimo del parámetro de plantilla *rasgos*.
+`key_compare`es un sinónimo de los *rasgos*del parámetro de plantilla.
 
-Para obtener más información sobre *rasgos* vea el [clase hash_multiset](../standard-library/hash-multiset-class.md) tema.
+Para obtener más información sobre los *rasgos* , vea el tema sobre la [clase hash_multiset](../standard-library/hash-multiset-class.md) .
 
 Tenga en cuenta que `key_compare` y value_compare son sinónimos para el parámetro de plantilla *Traits*. Ambos tipos se proporcionan para las clases hash_set y hash_multiset, donde son idénticos, para la compatibilidad con las clases hash_map y hash_multimap, donde son distintos.
 
@@ -1631,11 +1631,11 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`key_type` es un sinónimo del parámetro de plantilla *clave*.
+`key_type`es un sinónimo de la *clave*de parámetro de plantilla.
 
 Tenga en cuenta que `key_type` y [value_type](../standard-library/hash-set-class.md#value_type) son sinónimos para el parámetro de plantilla *Key*. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
 
-Para obtener más información sobre *clave*, vea la sección Comentarios de la [clase hash_multiset](../standard-library/hash-multiset-class.md) tema.
+Para obtener más información sobre la *clave*, consulte la sección Comentarios del tema [clase hash_multiset](../standard-library/hash-multiset-class.md) .
 
 ### <a name="example"></a>Ejemplo
 
@@ -1656,7 +1656,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*key*<br/>
+*clave*\
 La clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_multiset que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1761,13 +1761,13 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |-|-|
 |*right*|Objeto [hash_multiset](../standard-library/hash-multiset-class.md) que se copia en el objeto `hash_multiset`.|
 
 ### <a name="remarks"></a>Comentarios
 
-Después de borrar todos los elementos existentes en un `hash_multiset`, `operator=` copia o mueve el contenido de *derecho* en el `hash_multiset`.
+Después de borrar los elementos existentes en un `hash_multiset`, `operator=` copia o mueve el `hash_multiset`contenido de la *derecha* al.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1820,7 +1820,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Comentarios
 
-Un tipo `pointer` puede usarse para modificar el valor de un elemento.
+Un tipo `pointer` se puede usar para modificar el valor de un elemento.
 
 En la mayoría de los casos, se debe usar un elemento [iterator](#iterator) para obtener acceso a los elementos de un objeto multiset.
 
@@ -2139,7 +2139,7 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 Objeto hash_multiset de argumentos que proporciona los elementos que se van a intercambiar con el objeto hash_multiset de destino.
 
 ### <a name="remarks"></a>Comentarios
@@ -2215,7 +2215,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*key*<br/>
+*clave*\
 La clave de argumento que se comparará con la clave de ordenación de un elemento del objeto hash_multiset que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2291,15 +2291,15 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el parámetro de plantilla hash_multiset *rasgos*, que contiene los objetos de función que se usan al hash y ordenar los elementos del contenedor.
+Devuelve los *rasgos*del parámetro de plantilla hash_multiset, que contiene los objetos de función que se usan para aplicar un algoritmo hash y para ordenar los elementos del contenedor.
 
-Para obtener más información sobre *rasgos* vea el [clase hash_multiset](../standard-library/hash-multiset-class.md) tema.
+Para obtener más información sobre los *rasgos* , vea el tema sobre la [clase hash_multiset](../standard-library/hash-multiset-class.md) .
 
 ### <a name="remarks"></a>Comentarios
 
 El objeto almacenado define una función miembro:
 
-**bool operator**( **constKey&**`_xVal`, **const Key&** *_yVal*);
+**bool operator**( **constKey&** `_xVal`, **const Key&** *_yVal*);
 
 que devuelve **True** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.
 
@@ -2372,11 +2372,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Comentarios
 
-`value_compare` es un sinónimo del parámetro de plantilla *rasgos*.
+`value_compare`es un sinónimo de los *rasgos*del parámetro de plantilla.
 
-Para obtener más información sobre *rasgos* vea el [clase hash_multiset](../standard-library/hash-multiset-class.md) tema.
+Para obtener más información sobre los *rasgos* , vea el tema sobre la [clase hash_multiset](../standard-library/hash-multiset-class.md) .
 
-Tenga en cuenta que ambos [key_compare](#key_compare) y `value_compare` son sinónimos para el parámetro de plantilla *rasgos*. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
+Tenga en cuenta [](#key_compare) que key_compare `value_compare` y son sinónimos para el parámetro de plantilla *traits*. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2435,5 +2435,5 @@ The hash_multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
