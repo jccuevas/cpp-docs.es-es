@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1519fa105f2cd73c1165bb30264828aa987fbd35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159332"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458457"
 ---
 # <a name="future-class"></a>future (Clase)
 
@@ -46,13 +46,13 @@ Cada *proveedor asincrónico* estándar devuelve un objeto cuyo tipo es una crea
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[future](#future)|Construye un objeto `future`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[get](#get)|Recupera el resultado almacenado en el estado asincrónico asociado.|
 |[share](#share)|Convierte el objeto en un `shared_future`.|
@@ -63,13 +63,13 @@ Cada *proveedor asincrónico* estándar devuelve un objeto cuyo tipo es una crea
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[future::operator=](#op_eq)|Transfiere el estado asincrónico asociado de un objeto especificado.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<futura >
+**Encabezado:** \<> futuro
 
 **Espacio de nombres:** std
 
@@ -84,14 +84,14 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Otros problemas*<br/>
+*Distinta*\
 Objeto `future`.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto `future` que no tiene ningún estado asincrónico asociado.
 
-El segundo constructor crea un `future` objeto y transfiere el estado asincrónico asociado de *otros*. *Otros* ya no tiene un estado asincrónico asociado.
+El segundo constructor crea un `future` objeto y transfiere el estado asincrónico asociado de *otro*. *Otro* ya no tiene un estado asincrónico asociado.
 
 ## <a name="get"></a>  future::get
 
@@ -111,7 +111,7 @@ Antes de recuperar el resultado, este método bloquea el subproceso actual hasta
 
 Para la especialización parcial `future<Ty&>`, el valor almacenado es realmente una referencia al objeto que se ha pasado al proveedor asincrónico como el valor devuelto.
 
-Dado que no existe ningún valor almacenado para la especialización `future<void>`, el método devuelve **void**.
+Dado que no existe ningún valor almacenado para `future<void>`la especialización, el método devuelve **void**.
 
 En otras especializaciones, el método mueve su valor devuelto del valor almacenado. Por tanto, llame a este método solo una vez.
 
@@ -125,7 +125,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha*<br/>
+*Correcta*\
 Objeto `future`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -134,7 +134,7 @@ Objeto `future`.
 
 ### <a name="remarks"></a>Comentarios
 
-Después de la transferencia, *derecha* ya no tiene un estado asincrónico asociado.
+Después de la transferencia, la *derecha* ya no tiene un estado asincrónico asociado.
 
 ## <a name="share"></a>  future::share
 
@@ -158,7 +158,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
+**true** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
 
 ## <a name="wait"></a>  future::wait
 
@@ -183,7 +183,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Rel_time*<br/>
+*Rel_time*\
 Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo máximo que el subproceso bloquea.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -205,7 +205,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parámetros
 
-*Abs_time*<br/>
+*Abs_time*\
 Un objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica un tiempo después del cual se puede desbloquear el subproceso.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -218,5 +218,5 @@ Un estado asincrónico asociado está *listo* únicamente si su proveedor asincr
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

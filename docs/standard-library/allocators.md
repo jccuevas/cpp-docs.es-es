@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252732"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457540"
 ---
 # <a name="allocators"></a>Asignadores
 
@@ -28,7 +28,7 @@ La biblioteca estándar de C++ proporciona una implementación predeterminada pa
 
 ## <a name="writing-your-own-allocator-c11"></a>Escribir su propio asignador (C++11)
 
-El asignador predeterminado usa **nueva** y **eliminar** para asignar y desasignar memoria. Si quiere emplear otro método de asignación de memoria, como el uso de memoria compartida, debe crear su propio asignador. Si quiere usar C++11 y tiene que escribir un asignador personalizado nuevo, haga que sea un asignador mínimo si es posible. Si ya ha implementado un asignador de estilo antiguo, considere la posibilidad de modificarlo para que sea un *asignador mínimo* y aprovechar la mayor eficacia del método `construct()` que se proporcionará automáticamente.
+El asignador predeterminado usa **New** y **Delete** para asignar y desasignar memoria. Si quiere emplear otro método de asignación de memoria, como el uso de memoria compartida, debe crear su propio asignador. Si quiere usar C++11 y tiene que escribir un asignador personalizado nuevo, haga que sea un asignador mínimo si es posible. Si ya ha implementado un asignador de estilo antiguo, considere la posibilidad de modificarlo para que sea un *asignador mínimo* y aprovechar la mayor eficacia del método `construct()` que se proporcionará automáticamente.
 
 Un asignador mínimo requiere mucha menos repetición y le permite centrarse en las funciones miembro `allocate` y `deallocate`, que hacen todo el trabajo. Al crear un asignador mínimo, implemente solo los miembros que se muestran en el ejemplo siguiente:
 
@@ -123,4 +123,4 @@ Para más información sobre estas definiciones de tipos y métodos, vea [alloca
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

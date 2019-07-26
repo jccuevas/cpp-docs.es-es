@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224108"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455618"
 ---
 # <a name="iterator-struct"></a>iterator (Struct)
 
-Un struct base vacío que se utiliza para garantizar que una clase de iterador definida por el usuario funciona correctamente con `iterator_trait`s.
+Struct base vacío que se usa para garantizar que una clase de iterador definida por el `iterator_trait`usuario funciona correctamente con s.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,7 +47,7 @@ El struct de plantilla se usa como tipo base para todos los iteradores. Define l
 
 - `reference` (sinónimo para el parámetro de plantilla `Reference`).
 
-Tenga en cuenta que `value_type` no debe estar a tipo de constante, incluso si `pointer` apunta a un objeto de **const** `Type` y la referencia designa un objeto de **const** `Type`.
+Tenga en `value_type` cuenta que no debe ser un tipo de `pointer` constante aunque los puntos en un objeto de **const** `Type` y Reference designen un objeto de **const** `Type`.
 
 ## <a name="example"></a>Ejemplo
 
@@ -61,6 +61,6 @@ Vea [iterator_traits](../standard-library/iterator-traits-struct.md) para obtene
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

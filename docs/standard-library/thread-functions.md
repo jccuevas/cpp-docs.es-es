@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279039"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458502"
 ---
 # <a name="ltthreadgt-functions"></a>Funciones de &lt;thread&gt;
 
@@ -52,12 +52,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rel_time*<br/>
+*Rel_time*\
 Un objeto [duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función bloquea el subproceso que realiza la llamada para al menos el tiempo especificado por *Rel_time*. Esta función no produce ninguna excepción.
+La función bloquea el subproceso de llamada durante al menos el tiempo especificado por *Rel_time*. Esta función no produce ninguna excepción.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -72,7 +72,7 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parámetros
 
-*Abs_time*<br/>
+*Abs_time*\
 Representa un punto en el tiempo.
 
 ### <a name="remarks"></a>Comentarios
@@ -81,7 +81,7 @@ Esta función no produce ninguna excepción.
 
 ## <a name="swap"></a>  swap
 
-Intercambia los Estados de dos **subproceso** objetos.
+Intercambia los Estados de dos objetos  de subproceso.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,11 +89,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*<br/>
-La izquierda **subproceso** objeto.
+*Salido*\
+Objeto de **subproceso** izquierdo.
 
-*Derecha*<br/>
-El derecho de **subproceso** objeto.
+*Correcta*\
+Objeto de **subproceso** correcto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Vea también
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

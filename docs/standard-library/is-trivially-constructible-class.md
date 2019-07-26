@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
-ms.openlocfilehash: c83bea8be5c88876ffa25337464caa62b998ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f177463b985d3e7b2f7ab7783f9c3db0dcd5722
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413481"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448014"
 ---
 # <a name="istriviallyconstructible-class"></a>Clase is_trivially_constructible
 
@@ -26,15 +26,15 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
-*Args*<br/>
-Para obtener coincidencias en un constructor de los tipos de argumento *T*.
+*Args*\
+Los tipos de argumento que deben coincidir en un constructor de *T*.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es construir de forma trivial mediante los tipos de argumento en *Args*, en caso contrario, es false. Tipo *T* es construir de forma trivial si la definición de variable `T t(std::declval<Args>()...);` tiene el formato correcto y se sabe que llamar a ninguna operación no trivial. Ambos *T* y todos los tipos de *Args* deben ser tipos completos, **void**, o matrices de límite desconocido.
+Una instancia del predicado de tipo contiene true si el tipo *T* se construye de forma trivial mediante los tipos de argumento de *args*; en caso contrario, contiene false. El tipo *T* se construye de forma trivial si la definición `T t(std::declval<Args>()...);` de variable tiene el formato correcto y se sabe que no llama a ninguna operación no trivial. *T* y todos los tipos de *args* deben ser tipos completos, **void**o matrices de enlazados desconocidos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,4 +44,4 @@ Una instancia del predicado de tipo contiene true si el tipo *T* es construir de
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

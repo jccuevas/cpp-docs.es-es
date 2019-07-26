@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::codecvt [C++], out
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
-ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 936b3ab63b454e8f7e0490c2d155356a7c3b240f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405246"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459830"
 ---
 # <a name="codecvt-class"></a>codecvt (Clase)
 
@@ -60,20 +60,20 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo usado dentro de un programa para codificar caracteres.
 
-*Byte*<br/>
+*Bytes*\
 Tipo usado para codificar caracteres fuera de un programa.
 
-*StateType*<br/>
+*StateType*\
 Tipo que se puede usar para representar los estados intermedios de una conversión entre los tipos internos y externos de representaciones de caracteres.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que puede actuar como un [faceta de configuración regional](../standard-library/locale-class.md#facet_class), para controlar las conversiones entre una secuencia de valores de tipo *CharType* y una secuencia de valores de tipo *bytes*. La clase *StateType* caracteriza la transformación y un objeto de clase *StateType* almacena cualquier información de estado necesaria durante una conversión.
+La clase de plantilla describe un objeto que puede actuar como una [faceta de configuración regional](../standard-library/locale-class.md#facet_class), para controlar las conversiones entre una secuencia de valores de tipo *CharType* y una secuencia de valores de tipo *byte*. La clase *StateType* caracteriza la transformación, y un objeto de la clase *StateType* almacena cualquier información de estado necesaria durante una conversión.
 
-La codificación interna emplea una representación con un número fijo de bytes por carácter, normalmente de tipo **char** o tipo **wchar_t**.
+La codificación interna utiliza una representación con un número fijo de bytes por carácter, normalmente de tipo **Char** o de tipo **wchar_t**.
 
 Como ocurre con cualquier faceta de configuración regional, el `id` de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en `id`.
 
@@ -86,31 +86,31 @@ template<>
 codecvt<wchar_t, char, mbstate_t>
 ```
 
-Convierte entre **wchar_t** y **char** secuencias.
+convierte entre secuencias **wchar_t** y **Char** .
 
 ```cpp
 template<>
 codecvt<char16_t, char, mbstate_t>
 ```
 
-Convierte entre `char16_t` secuencias codificadas como UTF-16 y **char** secuencias codificadas como UTF-8.
+convierte entre `char16_t` secuencias codificadas como UTF-16 y secuencias de **caracteres** codificadas como UTF-8.
 
 ```cpp
 template<>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-Convierte entre `char32_t` secuencias codificadas como UTF-32 (UCS-4) y **char** secuencias codificadas como UTF-8.
+convierte entre `char32_t` secuencias codificadas como UTF-32 (UCS-4) y secuencias de **caracteres** codificadas como UTF-8.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[codecvt](#codecvt)|Constructor de objetos de clase `codecvt` que actúa como faceta de configuración regional para controlar las conversiones.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[extern_type](#extern_type)|Tipo de carácter que se usa para las representaciones externas.|
 |[intern_type](#intern_type)|Tipo de carácter que se usa para las representaciones internas.|
@@ -118,7 +118,7 @@ Convierte entre `char32_t` secuencias codificadas como UTF-32 (UCS-4) y **char**
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[always_noconv](#always_noconv)|Comprueba si no es necesario realizar ninguna conversión.|
 |[do_always_noconv](#do_always_noconv)|Función virtual a la que se llama para comprobar si no es necesario realizar ninguna conversión.|
@@ -202,20 +202,20 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles de la *_Refs* parámetro y su importancia son:
+Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
 
 - 1: La duración del objeto debe administrarse manualmente.
 
 - 2: Estos valores no están definidos.
 
-El constructor inicializa su `locale::facet` objeto base con **locale::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
+El `locale::facet` constructor inicializa su objeto base con locale **::** [Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="do_always_noconv"></a>  codecvt::do_always_noconv
 
@@ -227,7 +227,7 @@ virtual bool do_always_noconv() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función miembro virtual protegida devuelve **true** solo si todas las llamadas a [do_in](#do_in) o [do_out](#do_out) devuelve `noconv`.
+La función miembro virtual protegida devuelve **true** solo si cada llamada a [do_in](#do_in) o [do_out](#do_out) devuelve `noconv`.
 
 La versión de plantilla devuelve siempre **True**.
 
@@ -237,7 +237,7 @@ Vea el ejemplo de [always_noconv](#always_noconv), que llama a `do_always_noconv
 
 ## <a name="do_encoding"></a>  codecvt::do_encoding
 
-Una función virtual que comprueba si la codificación de la `Byte` secuencia es depende del estado, si la proporción entre la `Byte`s usados y el `CharType`s generados es constante y, si es así, determina el valor de esa relación.
+Función virtual que comprueba si la codificación del `Byte` flujo depende del estado, si la relación entre los `Byte`s usados y los `CharType`s generados es constante y, en tal caso, determina el valor de esa proporción.
 
 ```cpp
 virtual int do_encoding() const throw();
@@ -259,7 +259,7 @@ Vea el ejemplo de [encoding](#encoding), que llama a `do_encoding`.
 
 ## <a name="do_in"></a>  codecvt::do_in
 
-Una función virtual llamada para convertir una secuencia de externo `Byte`s en una secuencia de interno `CharType`s.
+Función virtual a la que se llama para convertir una `Byte`secuencia de s externa en una `CharType`secuencia de s internos.
 
 ```cpp
 virtual result do_in(
@@ -274,38 +274,38 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1*<br/>
+*first1*\
 Puntero al principio de la secuencia que se va a convertir.
 
-*last1*<br/>
+*last1*\
 Puntero al final de la secuencia que se va a convertir.
 
-*next1*<br/>
+*next1*\
 Puntero más allá del final de la secuencia convertida, al primer carácter sin convertir.
 
-*first2*<br/>
+*first2*\
 Puntero al principio de la secuencia convertida.
 
-*last2*<br/>
+*last2*\
 Puntero al final de la secuencia convertida.
 
-*next2*<br/>
-Puntero a la `CharType` que viene después de convertir la última `CharType`, al primer carácter sin modificaciones en la secuencia de destino.
+*next2*\
+Puntero al `CharType` que viene después del último convertido `CharType`en el primer carácter sin modificar de la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un valor devuelto que indica si la operación se ha realizado correctamente, parcialmente o no se ha realizado correctamente. La función devuelve:
 
-- `codecvt_base::error` Si la secuencia de origen está enferma formada.
+- `codecvt_base::error`Si la secuencia de origen tiene un formato incorrecto.
 
 - `codecvt_base::noconv` si la función no realiza ninguna conversión.
 
-- `codecvt_base::ok` Si la conversión se realiza correctamente.
+- `codecvt_base::ok`Si la conversión se realiza correctamente.
 
-- `codecvt_base::partial` Si el origen no es suficiente o si el destino no es suficientemente grande como para la conversión se realice correctamente.
+- `codecvt_base::partial`Si el origen no es suficiente o si el destino no es lo suficientemente grande, para que la conversión se realice correctamente.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -329,37 +329,37 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1*<br/>
+*first1*\
 Puntero al principio de la secuencia externa.
 
-*last1*<br/>
+*last1*\
 Puntero al final de la secuencia externa.
 
-*_Len2*<br/>
-El número máximo de `Byte`s que pueden ser devueltos por la función miembro.
+*_Len2*\
+Número máximo de `Byte`s que puede devolver la función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un entero que representa un recuento del número máximo de conversiones, no mayor que *_Len2*, definido por la secuencia de origen externo en [ `first1`, `last1`).
+Un entero que representa un recuento del número máximo de conversiones, no mayor que *_Len2*, definido por la secuencia de origen externa en [ `first1`, `last1`).
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida llama eficazmente a `do_in`( `_State`, `first1`, `last1`, `next1`, `_Buf`, `_Buf`  +  `_Len2`, `next2`) para *_State* (una copia del estado), un búfer `_Buf`y los punteros `next1`y `next2`.
+La función miembro virtual protegida llama eficazmente `_State`a `first1` `do_in`( `last1` `next1` ,,`_Buf`,, ,,`next2`)para _ `_Len2` `_Buf`  +   *Estado* (una copia del estado), algunos búferes `_Buf`y punteros `next1`y. `next2`
 
-A continuación, devuelve `next2`  -  `buf`. Por lo tanto, cuenta el número máximo de conversiones, no mayor que *_Len2*, definido por la secuencia de origen en [ `first1`, `last1`).
+Después, devuelve `next2`.  -  `buf` Por lo tanto, cuenta el número máximo de conversiones, no mayor que *_Len2*, definidas por la secuencia de origen en `first1`[ `last1`,).
 
-La versión de plantilla devuelve siempre el menor de *last1* - *first1* y *_Len2*.
+La versión de plantilla siempre devuelve el menor de *last1* - *first1* y *_Len2*.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [longitud](#length), que llama a `do_length`.
+Vea el ejemplo de [longitud](#length), que llama `do_length`a.
 
 ## <a name="do_max_length"></a>  codecvt::do_max_length
 
-Una función virtual que devuelve el número máximo de externo `Byte`s necesarios para generar un interno `CharType`.
+Función virtual que devuelve el número máximo de s externos `Byte`necesarios para generar un interno. `CharType`
 
 ```cpp
 virtual int do_max_length() const throw();
@@ -367,11 +367,11 @@ virtual int do_max_length() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número máximo de `Byte`s necesarios para generar un `CharType`.
+Número máximo de `Byte`s necesarios para generar uno `CharType`.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida devuelve el mayor valor posible que puede devolver [do_length](#do_length)( `first1`, `last1`, 1) para los valores válidos arbitrarios de *first1* y *last1*.
+La función miembro virtual protegida devuelve el mayor valor permitido que puede devolver [do_length](#do_length)( `first1` `last1`,, 1) para los valores válidos arbitrarios de *first1* y *last1*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -394,38 +394,38 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1*<br/>
+*first1*\
 Puntero al principio de la secuencia que se va a convertir.
 
-*last1*<br/>
+*last1*\
 Puntero al final de la secuencia que se va a convertir.
 
-*next1*<br/>
-Referencia a un puntero al primer sin convertir `CharType`, después del último `CharType` convertir.
+*next1*\
+Referencia a un puntero al primer sin convertir `CharType`, después del último `CharType` convertido.
 
-*first2*<br/>
+*first2*\
 Puntero al principio de la secuencia convertida.
 
-*last2*<br/>
+*last2*\
 Puntero al final de la secuencia convertida.
 
-*next2*<br/>
-Referencia a un puntero al primer sin convertir `Byte`, después del último `Byte` convertir.
+*next2*\
+Referencia a un puntero al primer sin convertir `Byte`, después del último `Byte` convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
 La función devuelve:
 
-- `codecvt_base::error` Si la secuencia de origen está enferma formada.
+- `codecvt_base::error`Si la secuencia de origen tiene un formato incorrecto.
 
 - `codecvt_base::noconv` si la función no realiza ninguna conversión.
 
-- `codecvt_base::ok` Si la conversión se realiza correctamente.
+- `codecvt_base::ok`Si la conversión se realiza correctamente.
 
-- `codecvt_base::partial` Si el origen no es suficiente o si el destino no es lo suficientemente grande como para la conversión se realice correctamente.
+- `codecvt_base::partial`Si el origen no es suficiente o si el destino no es lo suficientemente grande como para que la conversión se realice correctamente.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -449,35 +449,35 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first2*<br/>
+*first2*\
 Puntero a la primera posición del intervalo de destino.
 
-*last2*<br/>
+*last2*\
 Puntero a la última posición del intervalo de destino.
 
-*next2*<br/>
+*next2*\
 Puntero al primer elemento sin modificaciones en la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
 La función devuelve:
 
-- `codecvt_base::error` Si _ *estado* representa un estado no válido
+- `codecvt_base::error`Si _ *State* representa un estado no válido
 
 - `codecvt_base::noconv` si la función no realiza ninguna conversión
 
-- `codecvt_base::ok` Si la conversión se realiza correctamente
+- `codecvt_base::ok`Si la conversión se realiza correctamente
 
-- `codecvt_base::partial` Si el destino no es lo suficientemente grande como para la conversión se realice correctamente
+- `codecvt_base::partial`Si el destino no es lo suficientemente grande como para que la conversión se realice correctamente
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida intenta convertir el elemento de origen `CharType`(0) en una secuencia de destino que almacena dentro de [ `first2`, `last2`), excepto para el elemento que finaliza `Byte`(0). Siempre almacena en *next2* un puntero al primer elemento sin modificaciones en la secuencia de destino.
+La función miembro virtual protegida intenta `CharType`convertir el elemento de origen (0) en una secuencia de destino que almacena en [ `first2`, `last2`), excepto en el elemento `Byte`de terminación (0). Siempre almacena en *Next2* un puntero al primer elemento sin modificar en la secuencia de destino.
 
-_ *State* debe representar el estado de conversión inicial al principio de una nueva secuencia de origen. La función modifica su valor almacenado según sea necesario para reflejar el estado actual de una conversión correcta. Normalmente, al convertir el elemento de origen `CharType`(0) deja el estado actual en el estado de conversión inicial.
+_ *State* debe representar el estado de conversión inicial al principio de una nueva secuencia de origen. La función modifica su valor almacenado según sea necesario para reflejar el estado actual de una conversión correcta. Normalmente, la conversión del elemento `CharType`de origen (0) deja el estado actual en el estado de conversión inicial.
 
 ### <a name="example"></a>Ejemplo
 
@@ -493,7 +493,7 @@ int encoding() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si el valor devuelto es positivo, ese valor es el número constante de `Byte` caracteres necesarios para producir el `CharType` caracteres.
+Si el valor devuelto es positivo, ese valor es el número constante `Byte` de caracteres necesarios para generar `CharType` el carácter.
 
 La función miembro virtual protegida devuelve:
 
@@ -563,42 +563,42 @@ result in(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1*<br/>
+*first1*\
 Puntero al principio de la secuencia que se va a convertir.
 
-*last1*<br/>
+*last1*\
 Puntero al final de la secuencia que se va a convertir.
 
-*next1*<br/>
+*next1*\
 Puntero más allá del final de la secuencia convertida, al primer carácter sin convertir.
 
-*first2*<br/>
+*first2*\
 Puntero al principio de la secuencia convertida.
 
-*last2*<br/>
+*last2*\
 Puntero al final de la secuencia convertida.
 
-*next2*<br/>
-Puntero a la `CharType` que viene después de convertir la última `Chartype` al primer carácter sin modificaciones en la secuencia de destino.
+*next2*\
+Puntero al `CharType` que viene después del último convertido `Chartype` en el primer carácter sin modificar en la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un valor devuelto que indica si la operación se ha realizado correctamente, parcialmente o no se ha realizado correctamente. La función devuelve:
 
-- `codecvt_base::error` Si la secuencia de origen está enferma formada.
+- `codecvt_base::error`Si la secuencia de origen tiene un formato incorrecto.
 
 - `codecvt_base::noconv` si la función no realiza ninguna conversión.
 
-- `codecvt_base::ok` Si la conversión se realiza correctamente.
+- `codecvt_base::ok`Si la conversión se realiza correctamente.
 
-- `codecvt_base::partial` Si el origen no es suficiente o si el destino no es lo suficientemente grande como para la conversión se realice correctamente.
+- `codecvt_base::partial`Si el origen no es suficiente o si el destino no es lo suficientemente grande como para que la conversión se realice correctamente.
 
 ### <a name="remarks"></a>Comentarios
 
-*_State* debe representar el estado de conversión inicial al principio de una nueva secuencia de origen. La función modifica su valor almacenado según sea necesario para reflejar el estado actual de una conversión correcta. Después de una conversión parcial, *_State* debe establecerse con el fin de permitir la conversión se reanude cuando lleguen nuevos caracteres.
+*_State* debe representar el estado de conversión inicial al principio de una nueva secuencia de origen. La función modifica su valor almacenado según sea necesario para reflejar el estado actual de una conversión correcta. Después de una conversión parcial, debe establecerse *_State* para permitir que la conversión se reanude cuando lleguen nuevos caracteres.
 
 La función miembro devuelve [do_in](#do_in)( `_State`, _ *First1,  last1,  next1, First2, _Llast2,  next2*).
 
@@ -665,21 +665,21 @@ int length(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1*<br/>
+*first1*\
 Puntero al principio de la secuencia externa.
 
-*last1*<br/>
+*last1*\
 Puntero al final de la secuencia externa.
 
-*_Len2*<br/>
+*_Len2*\
 El número máximo de Bytes que puede devolver la función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un entero que representa un recuento del número máximo de conversiones, no mayor que *_Len2*, definido por la secuencia de origen externo en [ `first1`, `last1`).
+Un entero que representa un recuento del número máximo de conversiones, no mayor que *_Len2*, definido por la secuencia de origen externa en [ `first1`, `last1`).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -724,7 +724,7 @@ int max_length() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número máximo de `Byte`s necesarios para generar un `CharType`.
+Número máximo de `Byte`s necesarios para generar uno `CharType`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -770,26 +770,26 @@ result out(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first1*<br/>
+*first1*\
 Puntero al principio de la secuencia que se va a convertir.
 
-*last1*<br/>
+*last1*\
 Puntero al final de la secuencia que se va a convertir.
 
-*next1*<br/>
-Referencia a un puntero al primer sin convertir `CharType` después del último `CharType` convertir.
+*next1*\
+Referencia a un puntero al primer desconvertido `CharType` después del último `CharType` convertido.
 
-*first2*<br/>
+*first2*\
 Puntero al principio de la secuencia convertida.
 
-*last2*<br/>
+*last2*\
 Puntero al final de la secuencia convertida.
 
-*next2*<br/>
-Referencia a un puntero al primer sin convertir `Byte` una vez convertido el último `Byte`.
+*next2*\
+Referencia a un puntero al primer desconvertido `Byte` después del último convertido. `Byte`
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -850,7 +850,7 @@ El tipo es un sinónimo del parámetro de plantilla `StateType`.
 
 ## <a name="unshift"></a>  codecvt::unshift
 
-Proporciona el `Byte`s necesarios en una conversión dependiente del estado para completar el último carácter en una secuencia de `Byte`s.
+Proporciona los `Byte`s necesarios en una conversión dependiente del estado para completar el último carácter de una secuencia de `Byte`s.
 
 ```cpp
 result unshift(
@@ -862,41 +862,41 @@ result unshift(
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*<br/>
+*_State*\
 El estado de conversión que se mantiene entre las llamadas a la función miembro.
 
-*first2*<br/>
+*first2*\
 Puntero a la primera posición del intervalo de destino.
 
-*last2*<br/>
+*last2*\
 Puntero a la última posición del intervalo de destino.
 
-*next2*<br/>
+*next2*\
 Puntero al primer elemento sin modificaciones en la secuencia de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
 La función devuelve:
 
-- `codecvt_base::error` Si el estado representa un estado no válido.
+- `codecvt_base::error`Si el estado representa un estado no válido.
 
 - `codecvt_base::noconv` si la función no realiza ninguna conversión.
 
-- `codecvt_base::ok` Si la conversión se realiza correctamente.
+- `codecvt_base::ok`Si la conversión se realiza correctamente.
 
-- `codecvt_base::partial` Si el destino no es lo suficientemente grande como para la conversión se realice correctamente.
+- `codecvt_base::partial`Si el destino no es lo suficientemente grande como para que la conversión se realice correctamente.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida intenta convertir el elemento de origen `CharType`(0) en una secuencia de destino que almacena dentro de [ `first2`, `last2`), excepto para el elemento que finaliza `Byte`(0). Siempre almacena en *next2* un puntero al primer elemento sin modificaciones en la secuencia de destino.
+La función miembro virtual protegida intenta `CharType`convertir el elemento de origen (0) en una secuencia de destino que almacena en [ `first2`, `last2`), excepto en el elemento `Byte`de terminación (0). Siempre almacena en *Next2* un puntero al primer elemento sin modificar en la secuencia de destino.
 
-*_State* debe representar el estado de conversión inicial al principio de una nueva secuencia de origen. La función modifica su valor almacenado según sea necesario para reflejar el estado actual de una conversión correcta. Normalmente, al convertir el elemento de origen `CharType`(0) deja el estado actual en el estado de conversión inicial.
+*_State* debe representar el estado de conversión inicial al principio de una nueva secuencia de origen. La función modifica su valor almacenado según sea necesario para reflejar el estado actual de una conversión correcta. Normalmente, la conversión del elemento `CharType`de origen (0) deja el estado actual en el estado de conversión inicial.
 
 La función miembro devuelve [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, `next2` ).
 
 ## <a name="see-also"></a>Vea también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Páginas de códigos](../c-runtime-library/code-pages.md)<br/>
-[Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Páginas de códigos](../c-runtime-library/code-pages.md)\
+[Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

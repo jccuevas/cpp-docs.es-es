@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244125"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453772"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -25,7 +25,7 @@ Define la pila de la clase de plantilla y dos plantillas auxiliares.
 **Espacio de nombres:** std
 
 > [!NOTE]
-> El \<pila > biblioteca también utiliza el `#include <initializer_list>` instrucción.
+> La \<biblioteca de > de pila también `#include <initializer_list>` utiliza la instrucción.
 
 ## <a name="members"></a>Miembros
 
@@ -54,6 +54,6 @@ Define la pila de la clase de plantilla y dos plantillas auxiliares.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: b5f24033d8da0933b8252fdace60fb419ef2e605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370832"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453449"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Otros manipuladores de flujos de salida con un argumento
 
-En el ejemplo siguiente se usa una clase `money`, que es un **largo** tipo. El manipulador `setpic` adjunta una cadena formato de "imagen" a la clase que puede usarse mediante el operador de inserción de secuencia sobrecargado de la clase `money`. La cadena de imagen se almacena como una variable estática en la clase `money` en lugar de como un miembro de datos de una clase de secuencia, por lo que no tiene que derivar una nueva clase de flujo de salida.
+En el ejemplo siguiente se usa `money`una clase, que es de tipo **Long** . El manipulador `setpic` adjunta una cadena formato de "imagen" a la clase que puede usarse mediante el operador de inserción de secuencia sobrecargado de la clase `money`. La cadena de imagen se almacena como una variable estática en la clase `money` en lugar de como un miembro de datos de una clase de secuencia, por lo que no tiene que derivar una nueva clase de flujo de salida.
 
 ## <a name="example"></a>Ejemplo
 
@@ -77,4 +77,4 @@ int main( )
 
 ## <a name="see-also"></a>Vea también
 
-[Manipuladores personalizados con argumentos](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[Manipuladores personalizados con argumentos](../standard-library/custom-manipulators-with-arguments.md)

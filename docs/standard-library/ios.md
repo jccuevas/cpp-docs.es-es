@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245226"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449133"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ Define varios tipos y funciones básicos para el funcionamiento de iostreams. Es
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado**: \<ios >
+**Encabezado**: \<> de iOS
 
 **Espacio de nombres:** std
 
 > [!NOTE]
-> El \<ios > biblioteca usa la `#include <iosfwd>` instrucción.
+> La \<Biblioteca > de iOS utiliza `#include <iosfwd>` la instrucción.
 
 ## <a name="remarks"></a>Comentarios
 
-Un grupo grande de funciones son los manipuladores. Un manipulador declarado en \<ios> modifica los valores almacenados en su objeto de argumento de la clase [ios_base](../standard-library/ios-base-class.md). Otros manipuladores realizan acciones en flujos controlados por objetos de un tipo derivado de esta clase, tales como una especialización de una de las clases de plantilla [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Por ejemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) borra la marca del formato `ios_base::skipws` en el objeto `str`, que puede ser de uno de estos tipos.
+Un grupo grande de funciones son los manipuladores. Un manipulador declarado en \<ios> modifica los valores almacenados en su objeto de argumento de la clase [ios_base](../standard-library/ios-base-class.md). Otros manipuladores realizan acciones en flujos controlados por objetos de un tipo derivado de esta clase, tales como una especialización de una de las clases de plantilla [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Por ejemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) borra la marca `ios_base::skipws` de formato en el objeto `str`, que puede ser de uno de estos tipos.
 
 También puede llamar a un manipulador insertándolo en un flujo de salida o extrayéndolo de un flujo de entrada, gracias a las operaciones especiales de inserción y extracción proporcionadas para las clases derivadas de `ios_base`. Por ejemplo:
 
@@ -81,7 +81,7 @@ llama a [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|Hace que la salida se procese cuando el búfer no está lleno.|
 |[uppercase](../standard-library/ios-functions.md#uppercase)|Especifica que los dígitos hexadecimales y el exponente en notación científica aparezcan en mayúscula.|
 
-### <a name="error-reporting"></a>Informe de errores
+### <a name="error-reporting"></a>Informes de errores
 
 |||
 |-|-|
@@ -101,7 +101,7 @@ llama a [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programación con iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)

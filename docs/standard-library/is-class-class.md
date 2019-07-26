@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383651"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456650"
 ---
 # <a name="isclass-class"></a>is_class (Clase)
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo definido como un **clase** o un **struct**, o un `cv-qualified` formulario de uno de ellos; en caso contrario, contiene false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo definido como una **clase** o un **struct**, o `cv-qualified` un formulario de uno de ellos; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 
@@ -71,6 +71,6 @@ is_class<int> == false
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound (Clase)](../standard-library/is-compound-class.md)<br/>
-[is_union (Clase)](../standard-library/is-union-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase is_compound](../standard-library/is-compound-class.md)\
+[Clase is_union](../standard-library/is-union-class.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 41298909b53de1c7acf3cb8ae4b999eb6260765d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413273"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448126"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator (Clase)
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo que representa el tipo de caracteres para istreambuf_iterator.
 
-*Rasgos*<br/>
+*Rasgos*\
 Tipo que representa el tipo de caracteres para istreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentarios
@@ -53,13 +53,13 @@ Después de crear o de incrementar un objeto de clase istreambuf_iterator con un
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[istreambuf_iterator](#istreambuf_iterator)|Construye una clase `istreambuf_iterator` que se inicializa para leer caracteres del flujo de entrada.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo que proporciona el tipo de los caracteres de `ostreambuf_iterator`.|
 |[int_type](#int_type)|Tipo que proporciona un tipo entero para `istreambuf_iterator`.|
@@ -69,13 +69,13 @@ Después de crear o de incrementar un objeto de clase istreambuf_iterator con un
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[equal](#equal)|Comprueba si dos iteradores de búfer del flujo de entrada son iguales.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
 |[operator*](#op_star)|El operador de desreferenciación devuelve el siguiente carácter del flujo.|
 |[operator++](#op_add_add)|Devuelve el siguiente carácter del flujo de entrada o copia el objeto antes de incrementarlo y devuelve la copia.|
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 Iterador con el que se va a comprobar la igualdad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -151,7 +151,7 @@ Iterador con el que se va a comprobar la igualdad.
 
 ### <a name="remarks"></a>Comentarios
 
-Un intervalo se define mediante el `istreambuf_iterator` a la posición actual y el iterador de final de secuencia, pero desde la secuencia de todos los que no son de fin de los iteradores son equivalentes en el `equal` función miembro, no es posible definir ningún subintervalo mediante `istreambuf_iterator`s. Los operadores `==` y `!=` tienen la misma semántica.
+Un intervalo se define mediante el `istreambuf_iterator` objeto en la posición actual y el iterador de final de secuencia, pero dado que todos los iteradores de la secuencia que no son de `equal` fin son equivalentes en la función miembro, no es posible definir ningún `istreambuf_iterator`subintervalo mediante s. Los operadores `==` y `!=` tienen la misma semántica.
 
 ### <a name="example"></a>Ejemplo
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*strbuf*<br/>
+*strbuf*\
 Búfer de flujo de entrada al que se va a adjuntar `istreambuf_iterator`.
 
-*_Istr*<br/>
+*_Istr*\
 Flujo de entrada al que se va a adjuntar `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el puntero de búfer de secuencia de entrada con *strbuf*. El segundo constructor inicializa el puntero de búfer de secuencia de entrada con *_Istr*. `rdbuf`y después, intenta extraer y almacenar un objeto de tipo `CharType`.
+El primer constructor inicializa el puntero de búfer de flujo de entrada con *strbuf*. El segundo constructor inicializa el puntero de búfer de flujo de entrada con *_Istr*. `rdbuf`y finalmente intenta extraer y almacenar un objeto de tipo `CharType`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>Comentarios
 
-El primer operador, intenta extraer y almacenar un objeto de tipo `CharType` del flujo de entrada asociado. El segundo operador realiza una copia del objeto, lo incrementa y, después, devuelve la copia.
+Finalmente, el primer operador intenta extraer y almacenar un objeto de tipo `CharType` del flujo de entrada asociado. El segundo operador realiza una copia del objeto, lo incrementa y, después, devuelve la copia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>Vea también
 
-[iterator (Struct)](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Struct iterator](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409751"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451136"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc (Clase)
 
@@ -32,7 +32,7 @@ class rts_alloc
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Caché*|El tipo de instancias de caché contenido en la matriz. Puede ser [cache_chunklist (Clase)](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md)|
 
@@ -42,7 +42,7 @@ Esta clase de plantilla contiene varias instancias del asignador de bloques y de
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[allocate](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
@@ -64,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*count*|El número de elementos de la matriz que se van a asignar.|
 
@@ -74,7 +74,7 @@ Un puntero al objeto asignado.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` viene determinada por el tamaño de bloque solicitado *recuento*, o bien, si *recuento* es demasiado grande, devuelve `operator new(count)`. `cache`, que representa el objeto de caché.
+La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` viene determinado por el recuento de tamaño de bloque solicitado, o bien, si el recuento `operator new(count)`es demasiado grande, devuelve. `cache`, que representa el objeto de caché.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -86,14 +86,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro llama a `caches[_IDX].deallocate(ptr, count)`, donde el índice `_IDX` viene determinada por el tamaño de bloque solicitado *recuento*, o bien, si *recuento* es demasiado grande, devuelve `operator delete(ptr)`.
+La función miembro llama `caches[_IDX].deallocate(ptr, count)`a, donde el `_IDX` índice viene determinado por el recuento de tamaño de bloque solicitado, o bien, si el recuento es demasiado grande, devuelve.  `operator delete(ptr)`
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -105,16 +105,16 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Cache*|El objeto de caché asociado con el filtro.|
 |*_Other*|El objeto de caché para comparar la igualdad.|
 
 ### <a name="remarks"></a>Comentarios
 
-**True** si el resultado de `caches[0].equals(other.caches[0])`; en caso contrario, **false**. `caches` representa la matriz de objetos de caché.
+**true** si el resultado de `caches[0].equals(other.caches[0])`; en caso contrario, **false**. `caches` representa la matriz de objetos de caché.
 
 ## <a name="see-also"></a>Vea también
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

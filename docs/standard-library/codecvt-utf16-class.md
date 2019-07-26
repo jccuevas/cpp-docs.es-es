@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 18b95884bb673305398739968ef2530e8c4778d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca66a3273567a8d30a982211a6e977c129b00f5f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405227"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459708"
 ---
 # <a name="codecvtutf16"></a>codecvt_utf16
 
@@ -24,13 +24,13 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+*Elem*\
 Tipo de elemento de carácter ancho.
 
-*Maxcode*<br/>
+*Maxcode*\
 Número máximo de caracteres de la faceta de configuración regional.
 
-*Modo*<br/>
+*Modo*\
 Información de configuración de la faceta de configuración regional.
 
 ## <a name="remarks"></a>Comentarios
@@ -43,4 +43,4 @@ El flujo de bytes debe escribirse en un archivo binario; puede dañarse si se es
 
 Encabezado: \<codecvt >
 
-Namespace: std
+Espacio de nombres: STD

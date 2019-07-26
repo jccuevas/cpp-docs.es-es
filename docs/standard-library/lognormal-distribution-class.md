@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449795"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453807"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution (Clase)
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
-El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución Log-Normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución de registro normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*m*<br/>
+*f*\
 El parámetro de distribución `m`.
 
-*s*<br/>
+*seg*\
 El parámetro de distribución `s`.
 
-*parm*<br/>
+*PARM*\
 La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*m*<br/>
+*f*\
 El parámetro de distribución `m`.
 
-*s*<br/>
+*seg*\
 El parámetro de distribución `s`.
 
-*right*<br/>
+*correcta*\
 La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -247,4 +247,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

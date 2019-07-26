@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 8dbb4f91da8d7a0bf0a90b3edc4fce2918d52a9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6317b6665adb7f3a06da564fcf049d0b64eb42e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411206"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456570"
 ---
 # <a name="addlvaluereference-class"></a>Clase add_lvalue_reference
 
@@ -29,12 +29,12 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a modificar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del modificador de tipo contiene un tipo modificado que es *T* si *T* es una referencia lvalue, de lo contrario, `T&`.
+Una instancia del modificador de tipo contiene un tipo modificado que es *t* si *t* es una referencia lvalue; de lo `T&`contrario,.
 
 ## <a name="example"></a>Ejemplo
 
@@ -67,5 +67,5 @@ add_lvalue_reference_t<int> == int
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_reference (Clase)](../standard-library/remove-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_reference (Clase)](../standard-library/remove-reference-class.md)

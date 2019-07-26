@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405305"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459386"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base (Clase)
 
-Una clase base para la clase codecvt que se utiliza para definir un tipo de enumeración denomina `result`, que se usa como el tipo de valor devuelto para las funciones miembro de faceta para indicar el resultado de una conversión.
+Una clase base para la clase codecvt que se usa para definir un tipo de enumeración al `result`que se hace referencia como, que se usa como tipo de valor devuelto para las funciones miembro de la faceta para indicar el resultado de una conversión.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,11 +40,11 @@ protected:
 
 La clase describe una enumeración común a todas las especializaciones de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). El resultado de la enumeración describe los posibles valores devueltos de [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok` Si se realiza correctamente la conversión entre las codificaciones de caracteres internas y externas.
+- `ok`Si la conversión entre las codificaciones de caracteres internas y externas se realiza correctamente.
 
-- `partial` Si el destino no es lo suficientemente grande como para la conversión se realice correctamente.
+- `partial`Si el destino no es lo suficientemente grande como para que la conversión se realice correctamente.
 
-- `error` Si la secuencia de origen está enferma formada.
+- `error`Si la secuencia de origen tiene un formato incorrecto.
 
 - `noconv` si la función no realiza ninguna conversión.
 
@@ -56,4 +56,4 @@ La clase describe una enumeración común a todas las especializaciones de la cl
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

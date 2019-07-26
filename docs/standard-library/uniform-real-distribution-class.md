@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 389d7c96867ee0ca597330c1bee61b71e9777802
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 752226c9cacfdd36b93890502d62187f7b44a8da
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348944"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454941"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution (Clase)
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
-El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -189,20 +189,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*a*<br/>
+*un*\
 Límite inferior para los valores aleatorios (incluido).
 
-*b*<br/>
+*b*\
 Límite superior para los valores aleatorios (excluido).
 
-*parm*<br/>
+*PARM*\
 La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
 **Condición previa:** `a < b`
 
-El primer constructor crea un objeto cuyo almacenado *un* valor contiene el valor *un* y cuyo almacenado *b* valor contiene el valor *b*.
+El primer constructor crea un objeto cuyo *valor almacenado contiene* el valor *a* y cuyo valor *b* almacenado contiene el valor *b*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
@@ -224,13 +224,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*a*<br/>
+*un*\
 Límite inferior para los valores aleatorios (incluido).
 
-*b*<br/>
+*b*\
 Límite superior para los valores aleatorios (excluido).
 
-*right*<br/>
+*correcta*\
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
@@ -241,4 +241,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

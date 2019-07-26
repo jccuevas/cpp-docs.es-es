@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370936"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448173"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -27,10 +27,10 @@ Define la clase de plantilla [basic_ostream](../standard-library/basic-ostream-c
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crea un tipo de `basic_ostream` que está especializado en **char** y `char_traits` especializado en **char**.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crea un tipo de `basic_ostream` que está especializado en **wchar_t** y `char_traits` especializado en **wchar_t**.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Crea un tipo a `basic_ostream` partir de que está especializado en `char_traits` **Char** y está especializado en **Char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Crea un tipo a `basic_ostream` partir de que se especializa en `char_traits` **wchar_t** y se especializa en **wchar_t**.|
 
 ### <a name="manipulators"></a>Manipuladores
 
@@ -43,19 +43,19 @@ Define la clase de plantilla [basic_ostream](../standard-library/basic-ostream-c
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
 |[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Escribe varios tipos en la secuencia.|
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|Clase|DESCRIPCIÓN|
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|La clase de plantilla describe un objeto que controla la inserción de objetos codificados y elementos en un búfer de secuencia.|
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programación con iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 7ceecfd4751d3c86e26f9a6911776de92c9471f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28c162f6a868c8d6640ba17af875d84fef78c79a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413351"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458873"
 ---
 # <a name="isvoid-class"></a>is_void (Clase)
 
@@ -27,12 +27,12 @@ struct is_void;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es **void** o un formulario completo del visualizador de simultaneidad de **void**, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *T* es **void** o una forma con el valor CV completo de **void**; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 
@@ -74,4 +74,4 @@ is_void<void> == true
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

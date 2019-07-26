@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 9136a2ce744e19754b3a660e7bc9c15f05babbbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5b69ef3f47a173ef768283bbae4f6e3b5f5190
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411011"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458138"
 ---
 # <a name="allocatorsuballoc-class"></a>allocator_suballoc (Clase)
 
-Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo *tipo* mediante una memoria caché de tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).
+Describe un objeto que administra la asignación de almacenamiento y la liberación de objetos de tipo *Type* mediante una memoria caché de tipo [cache_suballoc](../standard-library/cache-suballoc-class.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,13 +27,13 @@ class allocator_suballoc;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Type*|Tipo de elementos que asigna el asignador.|
 
 ## <a name="remarks"></a>Comentarios
 
-El [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro pasa esta clase como el *nombre* parámetro en la siguiente instrucción: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+La macro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) pasa esta clase como parámetro *Name* en la siguiente instrucción:`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,4 +43,4 @@ El [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 
 
 ## <a name="see-also"></a>Vea también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

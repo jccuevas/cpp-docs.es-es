@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 4c63f37c07a56144fdd18531af5e8f9fbdac656a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412259"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458999"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution (Clase)
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
-El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **doble** si se proporciona ninguno, distribuido según Student *t*-distribución. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución *t*de Student. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -174,10 +174,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*n*<br/>
+*n*\
 El parámetro de distribución `n`.
 
-*parm*<br/>
+*PARM*\
 Paquete de parámetros utilizado para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -205,10 +205,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*n*<br/>
+*n*\
 El parámetro de distribución `n`.
 
-*right*<br/>
+*correcta*\
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
@@ -219,4 +219,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

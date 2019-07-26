@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394187"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449356"
 ---
 # <a name="ctypebase-class"></a>ctype_base (Clase)
 
@@ -69,7 +69,7 @@ Define una máscara de enumeración. Cada constante de enumeración caracteriza 
 
 - **graph** (función [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Puede caracterizar una combinación de clasificaciones al aplicar la operación OR a estas constantes. En concreto, es siempre true que **alnum** == ( **alfa** &#124; **dígitos** \) y **graph** \= \= \( **alnum** &#124; **punct**).
+Puede caracterizar una combinación de clasificaciones al aplicar la operación OR a estas constantes. En concreto, siempre es true que **alnum** = = ( **dígito** \) **alfa** &#124; y **gráfico** \= \= \( **alnum** &#124; **punct**).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -79,4 +79,4 @@ Puede caracterizar una combinación de clasificaciones al aplicar la operación 
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

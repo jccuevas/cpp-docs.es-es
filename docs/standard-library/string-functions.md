@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412350"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455609"
 ---
 # <a name="ltstringgt-functions"></a>Funciones &lt;string&gt;
 
@@ -76,13 +76,13 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Parámetros
 
-*is*<br/>
+*is*\
 La secuencia de entrada de la que se extraerá una cadena.
 
-*str*<br/>
+*CAD*\
 La cadena en la que se leen los caracteres de la secuencia de entrada.
 
-*delim*<br/>
+*DELIM*\
 El delimitador de línea.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -91,27 +91,27 @@ El flujo de entrada *es*.
 
 ### <a name="remarks"></a>Comentarios
 
-El par de firmas de función marcado como `(1)` extraer caracteres *es* hasta *delim* se encuentra, almacenarlos en *str*.
+El par de `(1)` firmas de función marcadas como extraer caracteres de *es* hasta que se encuentre *DELIM* , almacenándolos en *Str*.
 
-El par de firmas de función marcado como `(2)` usa una nueva línea como el delimitador de línea predeterminado y se comporten como **getline**(`is`, `str`, `is`. `widen`(' `\n`')).
+El par de firmas `(2)` de función marcadas como usar newline como el delimitador de línea predeterminado y se comporta como `is` **getline**(`is`, `str`,. `widen`(' `\n`')).
 
 La segunda función de cada par es análoga a la primera para admitir las [referencias rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
 La extracción se detiene en los siguientes casos:
 
-- Al final de archivo, en cuyo caso se marca el estado interno de *es* está establecido en `ios_base::eofbit`.
+- Al final del archivo, en cuyo caso la marca de estado interno de *se* establece en `ios_base::eofbit`.
 
 - Después de que la función extraiga un elemento que se compare con relación de igualdad con `delim`, en cuyo caso el elemento no se vuelve a colocar ni se anexa a la secuencia controlada.
 
-- Después de que la función extraiga `str.` [max_size](../standard-library/basic-string-class.md#max_size) elementos, en el que caso la marca de estado interno de *es* está establecido en `ios_base::failbit`.
+- Después de que la `str.`función Extraiga los elementos [max_size](../standard-library/basic-string-class.md#max_size) , en cuyo caso la marca de estado interno de `ios_base::failbit` *se* establece en.
 
-- Otros errores distintos de los enumeran anteriormente, en cuyo caso se marca el estado interno de *es* está establecido en `ios_base::badbit`
+- Otro error distinto de los enumerados anteriormente, en cuyo caso la marca de estado interno de *se* establece en`ios_base::badbit`
 
 Para obtener información sobre las marcas de estado interno, vea [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
-Si la función no extrae ningún elemento, marca el estado interno de *es* está establecido en `ios_base::failbit`. En cualquier caso, `getline` devuelve *es*.
+Si la función no extrae ningún elemento, la marca de  estado interno de se `ios_base::failbit`establece en. En cualquier caso, `getline` Returns *es*.
 
-Si se produce una excepción, *es* y *str* quedan en un estado válido.
+Si se produce una excepción, *es* y *Str* se deja en un estado válido.
 
 ### <a name="example"></a>Ejemplo
 
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="stod"></a>  stod
 
-Convierte una secuencia de caracteres en un **doble**.
+Convierte una secuencia de caracteres en un **valor Double**.
 
 ```cpp
 double stod(
@@ -173,18 +173,18 @@ double stod(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|El valor del índice del primer carácter que no se convertirá.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-El **doble** valor.
+Valor **Double** .
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte la secuencia de elementos de *str* en un valor `val` typu **dobles** como si se llamara a `strtod( str.c_str(), _Eptr)`, donde `_Eptr` es un objeto interno a la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr -  str.c_str()` en `*idx` y devuelve `val`.
+La función convierte la secuencia de elementos de *Str* en `val` un valor de tipo **Double** como si se llamara `strtod( str.c_str(), _Eptr)`a, donde `_Eptr` es un objeto interno de la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr -  str.c_str()` función `*idx` almacena en `val`y devuelve.
 
 ## <a name="stof"></a>  stof
 
@@ -202,7 +202,7 @@ float stof(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|El valor del índice del primer carácter que no se convertirá.|
@@ -213,7 +213,7 @@ El valor del float.
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte la secuencia de elementos de *str* en un valor `val` typu **float** como si llamara a `strtof( str.c_str(), _Eptr)`, donde `_Eptr` es un objeto interno a la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr -  str.c_str()` en `*idx` y devuelve `val`.
+La función convierte la secuencia de elementos de *Str* en `val` un valor de tipo **float** como si se llamara `strtof( str.c_str(), _Eptr)`a, donde `_Eptr` es un objeto interno de la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr -  str.c_str()` función `*idx` almacena en `val`y devuelve.
 
 ## <a name="stoi"></a>  stoi
 
@@ -237,7 +237,7 @@ El valor del entero.
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|Contiene el índice del primer carácter que no se convertirá en la devolución.|
@@ -245,15 +245,15 @@ El valor del entero.
 
 ### <a name="remarks"></a>Comentarios
 
-La función `stoi` convierte la secuencia de caracteres en *str* en un valor de tipo **int** y devuelve el valor. Por ejemplo, cuando se pasa la secuencia de caracteres “10”, el valor devuelto por `stoi` es el número entero 10.
+La función `stoi` convierte la secuencia de caracteres de *Str* en un valor de tipo **int** y devuelve el valor. Por ejemplo, cuando se pasa la secuencia de caracteres “10”, el valor devuelto por `stoi` es el número entero 10.
 
 `stoi` se comporta de manera similar a la función `strtol` con caracteres de byte único cuando se llama a esta función con la forma `strtol( str.c_str(), _Eptr, idx)`, donde `_Eptr` es un objeto interno de la función. Con caracteres anchos, es similar a la función `wcstol` cuando se llama a esta función de modo similar, `wcstol(Str.c_str(), _Eptr, idx)`. Para más información, vea [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).
 
-Si `str.c_str() == *_Eptr`, `stoi` lanza un objeto de tipo `invalid_argument`. Si esa llamada establecería `errno`, o si el valor devuelto no se puede representar como un objeto de tipo **int**, produce un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr - str.c_str()` en `*idx`.
+Si `str.c_str() == *_Eptr`es `stoi` , produce un objeto de tipo `invalid_argument`. Si esta llamada hubiera establecido `errno`, o si el valor devuelto no se puede representar como un objeto de tipo **int**, produce un objeto de tipo. `out_of_range` De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr - str.c_str()` función `*idx`almacena en.
 
 ## <a name="stol"></a>  stol
 
-Convierte una secuencia de caracteres en un **largo**.
+Convierte una secuencia de caracteres en un **valor Long**.
 
 ```cpp
 long stol(
@@ -269,7 +269,7 @@ long stol(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|El valor del índice del primer carácter que no se convertirá.|
@@ -281,11 +281,11 @@ El valor de entero largo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte la secuencia de elementos de *str* en un valor `val` de tipo **largo** como si llamara a `strtol( str.c_str(), _Eptr, idx)`, donde `_Eptr` es un objeto interno a la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr -  str.c_str()` en `*idx` y devuelve `val`.
+La función convierte la secuencia de elementos de *Str* en `val` un valor de tipo **Long** como si se llamara `strtol( str.c_str(), _Eptr, idx)`a, donde `_Eptr` es un objeto interno de la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr -  str.c_str()` función `*idx` almacena en `val`y devuelve.
 
 ## <a name="stold"></a>  stold
 
-Convierte una secuencia de caracteres en un **long double**.
+Convierte una secuencia de caracteres en un **valor doble largo**.
 
 ```cpp
 double stold(
@@ -299,22 +299,22 @@ double stold(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|El valor del índice del primer carácter que no se convertirá.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-El **long double** valor.
+Valor **Long Double** .
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte la secuencia de elementos de *str* en un valor `val` typu **long double** como si llamara a `strtold( str.c_str(), _Eptr)`, donde `_Eptr` es un objeto interno a la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr -  str.c_str()` en `*idx` y devuelve `val`.
+La función convierte la secuencia de elementos de *Str* en `val` un valor de tipo **Long Double** como si se llamara `strtold( str.c_str(), _Eptr)`a, donde `_Eptr` es un objeto interno de la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr -  str.c_str()` función `*idx` almacena en `val`y devuelve.
 
 ## <a name="stoll"></a>  stoll
 
-Convierte una secuencia de caracteres en un **long long**.
+Convierte una secuencia de caracteres en Long **Long**.
 
 ```cpp
 long long stoll(
@@ -330,7 +330,7 @@ long long stoll(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|El valor del índice del primer carácter que no se convertirá.|
@@ -338,11 +338,11 @@ long long stoll(
 
 ### <a name="return-value"></a>Valor devuelto
 
-El **long long** valor.
+Valor **largo** largo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte la secuencia de elementos de *str* en un valor `val` typu **long long** como si llamara a `strtoll( str.c_str(), _Eptr, idx)`, donde `_Eptr` es un objeto interno a la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr -  str.c_str()` en `*idx` y devuelve `val`.
+La función convierte la secuencia de elementos de *Str* en `val` un valor de tipo **Long Long** como si se llamara `strtoll( str.c_str(), _Eptr, idx)`a, donde `_Eptr` es un objeto interno de la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr -  str.c_str()` función `*idx` almacena en `val`y devuelve.
 
 ## <a name="stoul"></a>  stoul
 
@@ -362,7 +362,7 @@ unsigned long stoul(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|El valor del índice del primer carácter que no se convertirá.|
@@ -374,11 +374,11 @@ El valor del entero largo sin signo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte la secuencia de elementos de *str* en un valor `val` typu **unsigned long** como si llamara a `strtoul( str.c_str(), _Eptr, idx)`, donde `_Eptr` es un objeto interno a la función . Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr -  str.c_str()` en `*idx` y devuelve `val`.
+La función convierte la secuencia de elementos de *Str* en `val` un valor de tipo unsigned **Long** como si se llamara `strtoul( str.c_str(), _Eptr, idx)`a, donde `_Eptr` es un objeto interno de la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr -  str.c_str()` función `*idx` almacena en `val`y devuelve.
 
 ## <a name="stoull"></a>  stoull
 
-Convierte una secuencia de caracteres en un **long long sin signo**.
+Convierte una secuencia de caracteres en un entero largo **sin signo**.
 
 ```cpp
 unsigned long long stoull(
@@ -394,7 +394,7 @@ unsigned long long stoull(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
 |*idx*|El valor del índice del primer carácter que no se convertirá.|
@@ -402,11 +402,11 @@ unsigned long long stoull(
 
 ### <a name="return-value"></a>Valor devuelto
 
-El **long long sin signo** valor.
+Valor Long Long **sin signo** .
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte la secuencia de elementos de *str* en un valor `val` de tipo **long long sin signo** como si llamara a `strtoull( str.c_str(), _Eptr, idx)`, donde `_Eptr` es un objeto interno para el función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *idx* no es un puntero nulo, la función almacena `*_Eptr -  str.c_str()` en `*idx` y devuelve `val`.
+La función convierte la secuencia de elementos de *Str* en `val` un valor de tipo unsigned **Long Long** como si se llamara `strtoull( str.c_str(), _Eptr, idx)`a, donde `_Eptr` es un objeto interno de la función. Si ` str.c_str() == *_Eptr`, lanza un objeto de tipo `invalid_argument`. Si esa llamada, al ejecutarse, establecería `errno`, lanza un objeto de tipo `out_of_range`. De lo contrario, si *IDX* no es un puntero nulo, la `*_Eptr -  str.c_str()` función `*idx` almacena en `val`y devuelve.
 
 ## <a name="swap"></a>  swap
 
@@ -419,15 +419,15 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Una cadena cuyos elementos se deben intercambiar con los de otra cadena.
 
-*right*<br/>
+*correcta*\
 La otra cadena, cuyos elementos se deben intercambiar con los de la primera cadena.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla ejecuta la función miembro especializada *izquierdo*.[ intercambio](../standard-library/basic-string-class.md#swap)(*derecho*) para las cadenas, lo que garantiza una complejidad constante.
+La función de plantilla ejecuta la función miembro especializada *.* [intercambio](../standard-library/basic-string-class.md#swap) de (*right*) para las cadenas, lo que garantiza una complejidad constante.
 
 ### <a name="example"></a>Ejemplo
 
@@ -482,7 +482,7 @@ string to_string(long double Val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Val*|El valor que se va a convertir.|
 
@@ -492,23 +492,23 @@ string to_string(long double Val);
 
 ### <a name="remarks"></a>Comentarios
 
-La función convierte *Val* en una secuencia de elementos almacenados en un objeto de matriz `Buf` interno a la función como si llamara a `sprintf(Buf, Fmt, Val)`, donde `Fmt` es
+La función convierte *Val* en una secuencia de elementos almacenados en un objeto `Buf` de matriz interno de la función como si se llamara `sprintf(Buf, Fmt, Val)`a `Fmt` , donde es
 
-- `"%d"` Si `Val` tiene tipo **int**
+- `"%d"`Si `Val` tiene el tipo **int**
 
-- `"%u"` Si `Val` tiene tipo **int sin signo**
+- `"%u"`Si `Val` tiene el tipo **int sin signo**
 
-- `"%ld"` Si `Val` tiene tipo **largo**
+- `"%ld"`Si `Val` tiene el tipo **Long**
 
-- `"%lu"` Si `Val` tiene tipo **unsigned long**
+- `"%lu"`Si `Val` tiene el tipo unsigned **Long**
 
-- `"%lld"` Si `Val` tiene tipo **long long**
+- `"%lld"`Si `Val` tiene el tipo Long **Long**
 
-- `"%llu"` Si `Val` tiene tipo **long long sin signo**
+- `"%llu"`Si `Val` tiene el tipo unsigned **Long Long**
 
-- `"%f"` Si `Val` tiene tipo **float** o **dobles**
+- `"%f"`Si `Val` tiene el tipo **float** o **Double**
 
-- `"%Lf"` Si `Val` tiene tipo **long double**
+- `"%Lf"`Si `Val` tiene el tipo **Long Double**
 
 La función devuelve `string(Buf)`.
 
@@ -530,7 +530,7 @@ wstring to_wstring(long double Val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |`Val`|El valor que se va a convertir.|
 
@@ -542,24 +542,24 @@ Cadena de tipo ancho que representa el valor.
 
 La función convierte `Val` en una secuencia de elementos almacenados en un objeto de matriz `Buf` interno de la función como si se llamara a `swprintf(Buf, Len, Fmt, Val)`, donde `Fmt` es
 
-- `L"%d"` Si `Val` tiene tipo **int**
+- `L"%d"`Si `Val` tiene el tipo **int**
 
-- `L"%u"` Si `Val` tiene tipo **int sin signo**
+- `L"%u"`Si `Val` tiene el tipo **int sin signo**
 
-- `L"%ld"` Si `Val` tiene tipo **largo**
+- `L"%ld"`Si `Val` tiene el tipo **Long**
 
-- `L"%lu"` Si `Val` tiene tipo **unsigned long**
+- `L"%lu"`Si `Val` tiene el tipo unsigned **Long**
 
-- `L"%lld"` Si `Val` tiene tipo **long long**
+- `L"%lld"`Si `Val` tiene el tipo Long **Long**
 
-- `L"%llu"` Si `Val` tiene tipo **long long sin signo**
+- `L"%llu"`Si `Val` tiene el tipo unsigned **Long Long**
 
-- `L"%f"` Si `Val` tiene tipo **float** o **dobles**
+- `L"%f"`Si `Val` tiene el tipo **float** o **Double**
 
-- `L"%Lf"` Si `Val` tiene tipo **long double**
+- `L"%Lf"`Si `Val` tiene el tipo **Long Double**
 
 La función devuelve `wstring(Buf)`.
 
 ## <a name="see-also"></a>Vea también
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

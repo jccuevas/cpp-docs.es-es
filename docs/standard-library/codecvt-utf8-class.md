@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf8 class
 ms.assetid: 2a87478f-e2d4-4b8d-ad9c-00add01d1bb0
-ms.openlocfilehash: 3e3ddeccac2c18eedb96746f1c442c6b42349783
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcbb34c300d7c15f89c4a882275be0efd68359dc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405257"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458717"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -24,13 +24,13 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+*Elem*\
 Tipo de elemento de carácter ancho.
 
-*Maxcode*<br/>
+*Maxcode*\
 Número máximo de caracteres de la faceta de configuración regional.
 
-*Modo*<br/>
+*Modo*\
 Información de configuración de la faceta de configuración regional.
 
 ## <a name="remarks"></a>Comentarios
@@ -39,6 +39,6 @@ El flujo de bytes puede escribirse en un archivo binario o en un archivo de text
 
 ## <a name="requirements"></a>Requisitos
 
-Encabezado: \<codecvt > \
+Encabezado: \<codecvt >
 
-Namespace: std
+Espacio de nombres: STD

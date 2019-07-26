@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 76b04c3c26f6ec49f1d816feaeec7e21312d79a9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: eaae94bcffcda6e113001dd7070bcc80e7c14d09
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246278"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458079"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -28,7 +28,7 @@ Define los tipos, funciones y operadores de las biblioteca estándar de C++ que 
 Los pares se usan ampliamente en la biblioteca estándar de C++. Son necesarios como argumentos y valores de devolución para distintas funciones y como tipos de elemento para contenedores como [la clase map](../standard-library/map-class.md) y la [clase multimap](../standard-library/multimap-class.md). \<map> incluye automáticamente el encabezado \<utility> para ayudar en la administración de los elementos de tipo de par clave/valor.
 
 > [!NOTE]
-> El \<utilidad > encabezado utiliza la instrucción `#include <initializer_list>`. También hace referencia a `class tuple` tal como se define en \<tupla >.
+> El \<encabezado > de la utilidad utiliza `#include <initializer_list>`la instrucción. También hace referencia a `class tuple` tal y como \<se define en la tupla >.
 
 ## <a name="members"></a>Miembros
 
@@ -36,7 +36,7 @@ Los pares se usan ampliamente en la biblioteca estándar de C++. Son necesarios 
 
 |||
 |-|-|
-|[chars_format](../standard-library/chars-format-class.md)|Formato de punto flotante para la conversión numérica primitivo.|
+|[chars_format](../standard-library/chars-format-class.md)|Formato de punto flotante para la conversión numérica primitiva.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Clase que contiene el tipo de un elemento `pair`.|
 |[tuple_size](../standard-library/tuple-size-class-tuple.md)|Clase que contiene el recuento de elementos `pair`.|
 
@@ -54,7 +54,7 @@ Los pares se usan ampliamente en la biblioteca estándar de C++. Son necesarios 
 |||
 |-|-|
 |[as_const](../standard-library/utility-functions.md#asconst)|Devuelve el tipo.|
-|[declval)](../standard-library/utility-functions.md#declval)|Evaluación de expresiones de la forma abreviada.|
+|[declval (](../standard-library/utility-functions.md#declval)|Evaluación de Expresiones abreviadas.|
 |[exchange](../standard-library/utility-functions.md#exchange)|Asigna un nuevo valor a un objeto y devuelve su valor anterior.|
 |[forward](../standard-library/utility-functions.md#forward)|Impide que el reenvío directo oculte el tipo de referencia (`lvalue` o `rvalue`) del argumento.|
 |[from_chars](../standard-library/utility-functions.md#from_chars)||
@@ -80,15 +80,15 @@ Los pares se usan ampliamente en la biblioteca estándar de C++. Son necesarios 
 
 |||
 |-|-|
-|[from_chars_result](../standard-library/from-chars-result-structure.md)|Un struct que se usa para `from_chars`.|
+|[from_chars_result](../standard-library/from-chars-result-structure.md)|Struct que se utiliza `from_chars`para.|
 |[identity](../standard-library/identity-structure.md)|Estructura que proporciona una definición de tipo como parámetro de plantilla.|
-|[revisión de in_place_t](../standard-library/in-place-t-struct.md)|También incluye structs `in_place_type_t` y `in_place_index_t`.|
+|[in_place_t](../standard-library/in-place-t-struct.md)|También incluye Structs `in_place_type_t` y `in_place_index_t`.|
 |[integer_sequence](../standard-library/integer-sequence-class.md)|Representa una secuencia de enteros.|
 |[pair](../standard-library/pair-structure.md)|Tipo que proporciona la capacidad de tratar dos objetos como uno solo.|
-|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Un tipo que se utiliza para mantener independiente constructor y la sobrecarga de funciones.|
-|[to_chars_result](../standard-library/to-chars-result-structure.md)|Un struct que se usa para `to_chars`.|
+|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Tipo que se usa para mantener la sobrecarga de constructor y función independiente.|
+|[to_chars_result](../standard-library/to-chars-result-structure.md)|Struct que se utiliza `to_chars`para.|
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

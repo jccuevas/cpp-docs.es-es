@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240397"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458353"
 ---
 # <a name="queue-class"></a>queue (Clase)
 
@@ -42,7 +42,7 @@ class queue
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*\
+*Automáticamente*\
 El tipo de datos de los elementos que se va a almacenar en la cola
 
 *Contenedor*\
@@ -50,11 +50,11 @@ El tipo del contenedor subyacente que se usa para implementar la cola.
 
 ## <a name="remarks"></a>Comentarios
 
-Los elementos de la clase `Type` estipulada en la primera plantilla de parámetro de un objeto de cola son sinónimos de [value_type](#value_type) y debe coincidir con el tipo de elemento de la clase de contenedor subyacente `Container` estipulado por la segundo parámetro de plantilla. El `Type` debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
+Los elementos de la `Type` clase estipulados en el primer parámetro de plantilla de un objeto de cola son sinónimos de [value_type](#value_type) y deben coincidir con el tipo de elemento `Container` de la clase contenedora subyacente estipulada por la segunda plantilla. parámetro. `Type` Debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
 
-Clases de contenedor subyacente adecuadas para cola incluyen [deque](../standard-library/deque-class.md) y [lista](../standard-library/list-class.md), o cualquier otro contenedor de secuencias que admita las operaciones de `front`, `back`, `push_back`, y `pop_front`. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
+Entre las clases contenedoras subyacentes adecuadas para la cola se incluyen [deque](../standard-library/deque-class.md) y [List](../standard-library/list-class.md), o cualquier otro contenedor `front`de secuencias `push_back`que admita `pop_front`las operaciones de, `back`, y. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
 
-Objetos de la cola son comparables de igualdad si y solo si los elementos de la clase `Type` son comparables igualdad y son menores-que comparable si y solo si los elementos de la clase `Type` son menores-que comparable.
+Los objetos de cola son comparables por igualdad si y solo si `Type` los elementos de la clase son comparables por igualdad y son menos que comparables `Type` si y solo si los elementos de la clase son menos que comparables.
 
 Existen tres tipos de adaptadores de contenedor que se definen mediante la biblioteca estándar de C++: stack, queue y priority_queue. Cada uno restringe la función de alguna clase de contenedor subyacente para proporcionar una interfaz controlada de manera precisa para una estructura de datos estándar.
 
@@ -91,7 +91,7 @@ Existen tres tipos de adaptadores de contenedor que se definen mediante la bibli
 |[push](#push)|Agrega un elemento a la parte trasera de `queue`.|
 |[size](#size)|Devuelve el número de elementos de `queue`.|
 
-## <a name="back"></a> Atrás
+## <a name="back"></a>Atrás
 
 Devuelve una referencia al último elemento que se ha agregado más recientemente en la parte trasera de la cola.
 
@@ -107,7 +107,7 @@ El último elemento de la cola. Si la cola está vacía, el valor devuelto es in
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de `back` se asigna a `const_reference`, el objeto queue no puede modificarse. Si el valor devuelto de `back` se asigna a un `reference`, se puede modificar el objeto de cola.
+Si el valor devuelto de `back` se asigna a `const_reference`, el objeto queue no puede modificarse. Si el valor devuelto `back` de se asigna a `reference`un, el objeto de cola se puede modificar.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento en una cola vacía.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 Un tipo que proporciona el contenedor base que debe adaptarse.
 
@@ -155,7 +155,7 @@ Para obtener más información sobre `Container`, vea la sección Comentarios de
 
 Vea el ejemplo de [queue](#queue) para obtener un ejemplo de cómo declarar y usar `container_type`.
 
-## <a name="empty"></a> vacío
+## <a name="empty"></a>vacía
 
 Comprueba si una cola está vacía.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a> front
+## <a name="front"></a>end
 
 Devuelve una referencia al primer elemento en la parte delantera de la cola.
 
@@ -217,9 +217,9 @@ El primer elemento de la cola. Si la cola está vacía, el valor devuelto es ind
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de `front` se asigna a `const_reference`, el objeto queue no puede modificarse. Si el valor devuelto de `front` se asigna a un `reference`, se puede modificar el objeto de cola.
+Si el valor devuelto de `front` se asigna a `const_reference`, el objeto queue no puede modificarse. Si el valor devuelto `front` de se asigna a `reference`un, el objeto de cola se puede modificar.
 
-La función miembro devuelve un `reference` al primer elemento de la secuencia controlada, que debe estar vacía.
+La función miembro devuelve un `reference` al primer elemento de la secuencia controlada, que no debe estar vacío.
 
 Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se producirá un error en tiempo de ejecución si intenta acceder a un elemento en una cola vacía.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a> POP
+## <a name="pop"></a>emergente
 
 Quita un elemento de la parte delantera de la cola.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a> inserción
+## <a name="push"></a>enviar
 
 Agrega un elemento a la parte trasera de la cola.
 
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a> cola
+## <a name="queue"></a>pone
 
 Construye una cola que está vacía o que es una copia de un objeto contenedor base.
 
@@ -370,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Correcto*\
+*correcta*\
 El contenedor **const** del que la cola construida va a ser una copia.
 
 ### <a name="remarks"></a>Comentarios
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a> Tamaño
+## <a name="size"></a>ajusta
 
 Devuelve el número de elementos de la cola.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Un tipo entero sin signo que puede representar el número de elementos de una cola.
 
@@ -482,7 +482,7 @@ El tipo es un sinónimo de `size_type` del contenedor base adaptado por la cola.
 
 Vea el ejemplo de [queue::front](#front) para obtener un ejemplo de cómo declarar y usar `size_type`.
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Un tipo que representa el tipo de objeto almacenado como elemento en una cola.
 
@@ -526,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

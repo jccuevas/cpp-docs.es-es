@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: f535122b67f854b8b204664b829ce9da5fe3c6a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159826"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448808"
 ---
 # <a name="hashcompare-class"></a>hash_compare (Clase)
 
@@ -23,15 +23,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Comentarios
 
-Cada contenedor asociativo de hash almacena un objeto de rasgos de hash de tipo `Traits` (un parámetro de plantilla). Puede derivar una clase de una especialización de hash_compare para reemplazar de forma selectiva ciertas funciones y objetos o puede proporcionar su propia versión de esta clase si cumple ciertos requisitos mínimos. En concreto, para un objeto hash_comp de tipo `hash_compare<Key, Traits>`, los contenedores anteriores requieren el siguiente comportamiento:
+Cada contenedor asociativo hash almacena un objeto traits hash de tipo `Traits` (un parámetro de plantilla). Puede derivar una clase de una especialización de hash_compare para reemplazar de forma selectiva ciertas funciones y objetos o puede proporcionar su propia versión de esta clase si cumple ciertos requisitos mínimos. En concreto, para un objeto hash_comp de `hash_compare<Key, Traits>`tipo, los contenedores anteriores requieren el siguiente comportamiento:
 
-- Para todos los valores `key` typu `Key`, la llamada **hash_comp**(`key`) sirve como función hash, que produce una distribución de valores de tipo `size_t`. La función suministrada por hash_compare devuelve `key`.
+- Para todos los `key` valores de `Key`tipo, la llamada a`key`hash_comp () actúa como una función hash, que produce una distribución de valores de `size_t`tipo. La función suministrada por hash_compare devuelve `key`.
 
-- Para cualquier valor `key1` typu `Key` que precede a `key2` en la secuencia y tiene el mismo valor hash (valor devuelto por la función hash), **hash_comp**(`key2`, `key1`) es false. La función debe imponer una ordenación total en los valores de tipo `Key`. La función proporcionada por hash_compare devuelve *comp*(`key2`, `key1`) `,` donde *comp* es un objeto almacenado de tipo `Traits` que puede especificar cuándo se construir el objeto hash_comp. Para el valor predeterminado `Traits` tipo de parámetro `less<Key>`, claves de ordenación nunca disminuyen en valor.
+- Para cualquier valor `key1` de tipo `Key` que preceda `key2` a en la secuencia y que tenga el mismo valor hash (valor devuelto por la función hash)`key2`, `key1` **hash_comp**(,) es false. La función debe imponer una ordenación total en los `Key`valores de tipo. La función proporcionada por hash_compare devuelve *COMP*(`key2`, `key1`) `,` donde *COMP* es un objeto almacenado de tipo `Traits` que se puede especificar al construir el objeto hash_comp. En el caso `Traits` del tipo `less<Key>`de parámetro predeterminado, las claves de ordenación nunca disminuyen en el valor.
 
-- La constante entera `bucket_size` especifica el número medio de elementos por "depósito" (entrada de tabla hash) que el contenedor debe intentar no superar. Debe ser mayor que cero. El valor proporcionado por hash_compare es 4.
+- La constante `bucket_size` de tipo entero especifica el número medio de elementos por "bucket" (entrada de tabla hash) que el contenedor debe intentar no superar. Debe ser mayor que cero. El valor proporcionado por hash_compare es 4.
 
-- La constante entera `min_buckets` especifica el número mínimo de depósitos que se deben mantener en la tabla hash. Debe ser una potencia de dos y mayor que cero. El valor proporcionado por hash_compare es 8.
+- La constante `min_buckets` de tipo entero especifica el número mínimo de depósitos que se deben mantener en la tabla hash. Debe ser una potencia de dos y mayor que cero. El valor proporcionado por hash_compare es 8.
 
 ## <a name="example"></a>Ejemplo
 
@@ -45,5 +45,5 @@ Vea los ejemplos de [hash_map::hash_map](../standard-library/hash-map-class.md#h
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

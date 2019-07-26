@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_default_constructible
 ms.assetid: c576fcc9-5be1-43aa-b93a-64d3f1848887
-ms.openlocfilehash: d635c8a06d3acc45d214dbe7cb1eb7800f56dc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76b58800a454f42f6b5b6fcea23df161c37564b2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148489"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455929"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>Clase is_nothrow_default_constructible
 
@@ -26,12 +26,12 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow constructor predeterminado, en caso contrario, es false. Una instancia del predicado de tipo es equivalente a `is_nothrow_constructible<Ty>`.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un constructor predeterminado nothrow; en caso contrario, contiene false. Una instancia del predicado de tipo es equivalente a `is_nothrow_constructible<Ty>`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothr
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

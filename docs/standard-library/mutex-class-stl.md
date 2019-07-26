@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 099cf17db7b99f9cd1d953a603db70f75c33358e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158583"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457066"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex (Clase, biblioteca estándar de C++)
 
@@ -37,14 +37,14 @@ class mutex;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[mutex](#mutex)|Construye un objeto `mutex`.|
 |[mutex::~mutex Destructor](#dtormutex_destructor)|Libera todos los recursos utilizados por el objeto `mutex`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[lock](#lock)|Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.|
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador de exclusión mutua.|
@@ -53,7 +53,7 @@ class mutex;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<mutex >
+**Encabezado:** \<exclusión mutua >
 
 **Espacio de nombres:** std
 
@@ -89,7 +89,7 @@ Libera todos los recursos usados por el objeto `mutex`.
 
 Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.
 
-## <a name="native_handle"></a>  mutex::native_handle
+## <a name="native_handle"></a>mutex:: native_handle
 
 Devuelve el tipo específico de la implementación que representa el identificador de exclusión mutua. El controlador de exclusión mutua puede usarse en aspectos específicos de la implementación.
 
@@ -111,7 +111,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el método obtiene correctamente la propiedad de la `mutex`; en caso contrario, **false**.
+**true** si el método obtiene correctamente la `mutex`propiedad de; de lo contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -131,5 +131,5 @@ Si el subproceso que realiza la llamada no posee `mutex`, el comportamiento es i
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

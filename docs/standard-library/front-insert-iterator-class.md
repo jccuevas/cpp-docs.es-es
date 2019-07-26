@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159592"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454118"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator (Clase)
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parámetros
 
-*Contenedor*<br/>
+*Contenedor*\
 El tipo de contenedor en cuyo inicio `front_insert_iterator` va a insertar los elementos.
 
 ## <a name="remarks"></a>Comentarios
@@ -39,24 +39,24 @@ El contenedor debe satisfacer los requisitos para una secuencia de inserción en
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[front_insert_iterator](#front_insert_iterator)|Crea un iterador que puede insertar elementos en el inicio de un objeto contenedor especificado.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[container_type](#container_type)|Tipo que representa el contenedor en el que se va a hacer una inserción inicial.|
 |[reference](#reference)|Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
-|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción inicial.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión \* `i`  =  `x` de iterador de salida para una inserción inicial.|
 |[operator++](#op_add_add)|Incrementa el `front_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|
-|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción inicial.|
+|[operator=](#op_eq)|Operador de asignación usado \* para implementar la expresión `i`  =  `x` de iterador de salida para una inserción inicial.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -116,7 +116,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cont*<br/>
+*_Cont*\
 Objeto contenedor en el que `front_insert_iterator` va a insertar elementos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -183,7 +183,7 @@ La función miembro devuelve el valor del elemento al que se dirige.
 
 ### <a name="remarks"></a>Comentarios
 
-Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si `Iter` es un iterador que direcciona un elemento en una secuencia, a continuación,  **\*Iter** = **valor** sustituye ese elemento con el valor y no cambia el número total de elementos de la secuencia.
+Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si `Iter` es un iterador que direcciona un elemento de una secuencia  **\*** , el**valor** ITER = reemplaza ese elemento con el valor y no cambia el número total de elementos de la secuencia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parámetros
 
-*val*<br/>
+*Val*\
 Valor que se va a asignar al contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

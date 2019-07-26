@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 93271ebe48d2734a5d248b4a4b19689612427ded
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 2eac3324516cf88a114064cf0145593c7bf4806b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450203"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459472"
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution (Clase)
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
-El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-El uniforme generador motor de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG*\
+Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de la especificada por el usuario de punto flotante tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución chi cuadrado. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución Chi cuadrado. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -235,10 +235,10 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*n*<br/>
+*n*\
 El parámetro de distribución `n`.
 
-*parm*<br/>
+*PARM*\
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -266,10 +266,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*n*<br/>
+*n*\
 El parámetro de distribución `n`.
 
-*right*<br/>
+*correcta*\
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
@@ -280,4 +280,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

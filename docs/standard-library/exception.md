@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 5036f2efc782c3b2f385960cd9cbf6935212f720
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240768"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457901"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -42,11 +42,11 @@ Define varios tipos y funciones relacionados con el control de excepciones. El c
 |[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|Obtiene la función `unexpected_handler` actual.|
 |[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|Crea un objeto `exception_ptr` que contiene una copia de una excepción.|
 |[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|Inicia una excepción pasada como parámetro.|
-|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|Las conversiones y produce la excepción si anidados.|
+|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|Convierte y produce una excepción si está anidada.|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|Establece un nuevo `terminate_handler` al que se llamará cuando finalice el programa.|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|Establece un nuevo `unexpected_handler` cuando se encuentra una excepción inesperada.|
 |[terminate](../standard-library/exception-functions.md#terminate)|Llama a un controlador de finalización.|
-|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|Produce la excepción si anidados.|
+|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|Produce una excepción si está anidada.|
 |[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|Devuelve **True** solo si se está procesando actualmente una excepción iniciada.|
 |[unexpected](../standard-library/exception-functions.md#unexpected)|Llama a un controlador inesperado.|
 
@@ -60,5 +60,5 @@ Define varios tipos y funciones relacionados con el control de excepciones. El c
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

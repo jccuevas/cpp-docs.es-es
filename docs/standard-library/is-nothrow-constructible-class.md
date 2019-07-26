@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: 9ea11d54d49bf8f6ae6416f9663c2593cc66ea3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ec4fc3ef5d9a799d5d77124870fbb337061c94c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383612"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455991"
 ---
 # <a name="isnothrowconstructible-class"></a>Clase is_nothrow_constructible
 
@@ -26,15 +26,15 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
-*Args*<br/>
-Para obtener coincidencias en un constructor de los tipos de argumento *T*.
+*Args*\
+Los tipos de argumento que deben coincidir en un constructor de *T*.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es que se puede construir mediante los tipos de argumento en *Args*y el constructor es conocido por el compilador no se inicia; en caso contrario, es false. Tipo *T* es que se puede construir si la definición de variable `T t(std::declval<Args>()...);` tiene el formato correcto. Ambos *T* y todos los tipos de *Args* deben ser tipos completos, **void**, o matrices de límite desconocido.
+Una instancia del predicado de tipo contiene true si el tipo *T* se construye mediante el uso de los tipos de argumento en *args*y el compilador sabe que el constructor no se inicia; en caso contrario, contiene false. El tipo *T* se construye si la definición `T t(std::declval<Args>()...);` de la variable tiene el formato correcto. *T* y todos los tipos de *args* deben ser tipos completos, **void**o matrices de enlazados desconocidos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,4 +44,4 @@ Una instancia del predicado de tipo contiene true si el tipo *T* es que se puede
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
