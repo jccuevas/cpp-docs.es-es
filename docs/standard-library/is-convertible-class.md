@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_convertible class
 - is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
-ms.openlocfilehash: cdc3276f229fb9c1ac059a9eeb29e77655b4fc69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c90fe5687992e4df49e8655387cfdd14b40aa529
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337380"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454625"
 ---
 # <a name="isconvertible-class"></a>is_convertible (Clase)
 
@@ -27,10 +27,10 @@ struct is_convertible;
 
 ### <a name="parameters"></a>Parámetros
 
-*From*<br/>
+*De*\
 Tipo desde el que se va a convertir.
 
-*Ty*<br/>
+*Ty*\
 Tipo al que se va a convertir.
 
 ## <a name="remarks"></a>Comentarios
@@ -77,5 +77,5 @@ is_convertible<char, int> == true
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_base_of (Clase)](../standard-library/is-base-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase is_base_of](../standard-library/is-base-of-class.md)

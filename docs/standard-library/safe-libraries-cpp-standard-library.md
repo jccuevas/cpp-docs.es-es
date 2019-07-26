@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220468"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454556"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bibliotecas seguras: Biblioteca estándar de C++
 
-Se realizaron varias mejoras a las bibliotecas que se suministran con Microsoft C++, incluido el C++ biblioteca estándar, para que sean más seguras.
+Se han realizado varias mejoras en las bibliotecas que se suministran con C++Microsoft, incluida C++ la biblioteca estándar, para que sean más seguras.
 
 Varios métodos de la biblioteca estándar de C++ se identificaron como potencialmente inseguros porque podrían provocar una saturación del búfer u otro defecto de código. El uso de estos métodos no es recomendable. Se crearon nuevos métodos más seguros para reemplazarlos. Todos estos nuevos métodos terminan en `_s`.
 
@@ -46,4 +46,4 @@ Si se llama a cualquiera de los métodos potencialmente inseguros detallados má
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)

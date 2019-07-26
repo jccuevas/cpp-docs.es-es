@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159865"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454002"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -26,7 +26,7 @@ Este encabezado utiliza el runtime de simultaneidad (ConcRT) para que pueda util
 ## <a name="remarks"></a>Comentarios
 
 > [!NOTE]
-> En el código que se compila con **/CLR**, este encabezado está bloqueado.
+> En el código compilado mediante **/CLR**, este encabezado está bloqueado.
 
 Un *proveedor asincrónico* almacena el resultado de una llamada de función. Se usa un *objeto de devolución asincrónico* para recuperar el resultado de una llamada de función. Un *estado asincrónico asociado* proporciona la comunicación entre un proveedor asincrónico y uno o varios objetos de devolución asincrónicos.
 
@@ -38,15 +38,15 @@ Un estado asincrónico asociado está *listo* únicamente si su proveedor asincr
 
 La función de plantilla `async` y las clases de plantilla `promise` y `packaged_task` son proveedores asincrónicos. Las clases de plantilla `future` y `shared_future` describen objetos de devolución asincrónicos.
 
-Cada una de las clases de plantilla `promise`, `future`, y `shared_future` tiene una especialización para el tipo **void** y una especialización parcial para almacenar y recuperar un valor por referencia. Estas especializaciones solo difieren de la plantilla principal en las signaturas y la semántica de las funciones que almacenan y recuperan el valor devuelto.
+Cada una de las clases `promise`de `future`plantilla, `shared_future` , y tiene una especialización para el tipo **void** y una especialización parcial para almacenar y recuperar un valor por referencia. Estas especializaciones solo difieren de la plantilla principal en las signaturas y la semántica de las funciones que almacenan y recuperan el valor devuelto.
 
-Las clases de plantilla `future` y `shared_future` no bloquear nunca en sus destructores, excepto en un caso que se conserva por compatibilidad con versiones anteriores: A diferencia de otros de futures, para un `future`, o el último `shared_future`, que está asociado a una tarea iniciada con `std::async`, el destructor se bloquea si la tarea no se ha completado; es decir, se bloquea si este subproceso aún no ha llamado a `.get()` o `.wait()`y todavía se está ejecutando la tarea. La siguiente nota de facilidad de uso se ha agregado a la descripción de `std::async` en el estándar de borrador: "[Nota: Si se mueve un futuro obtenido std::async fuera del ámbito local, otro código que usa el futuro debe tener en cuenta que el destructor del futuro puede bloquear para que el estado compartido esté listo. — fin de la nota] "en todos los demás casos, `future` y `shared_future` los destructores son necesarios y se garantiza que nunca se bloqueará.
+Las clases `future` de plantilla `shared_future` y nunca bloquean en sus destructores, excepto en un caso que se conserva por compatibilidad con versiones anteriores: A diferencia de los demás futuros, para un `future`(o el último `shared_future`) que está asociado a una tarea iniciada `std::async`con, el destructor se bloquea si la tarea no se ha completado; es decir, se bloquea si este subproceso `.get()` aún no ha llamado a o `.wait()`y la tarea todavía se está ejecutando. La siguiente nota de uso se ha agregado a la descripción `std::async` de en el borrador estándar: "[Nota: Si un futuro Obtenido de STD:: Async se mueve fuera del ámbito local, otro código que use el futuro debe ser consciente de que el destructor del futuro puede bloquearse para que el estado compartido se convierta en listo. — end Note] " `future` en `shared_future` todos los demás casos, y los destructores son necesarios y se garantiza que nunca se bloqueen.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="classes"></a>Clases
 
-|Name|Descripción|
+|Name|DESCRIPCIÓN|
 |----------|-----------------|
 |[future (Clase)](../standard-library/future-class.md)|Describe un objeto de devolución asincrónico.|
 |[future_error (Clase)](../standard-library/future-error-class.md)|Describe un objeto de excepción que pueden producir los métodos de tipos que administran objetos `future`.|
@@ -56,14 +56,14 @@ Las clases de plantilla `future` y `shared_future` no bloquear nunca en sus dest
 
 ### <a name="structures"></a>Estructuras
 
-|Name|Descripción|
+|Name|DESCRIPCIÓN|
 |----------|-----------------|
 |[is_error_code_enum (Estructura)](../standard-library/is-error-code-enum-structure.md)|Especialización que indica que se puede utilizar `future_errc` para almacenar un elemento `error_code`.|
 |[uses_allocator (Estructura)](../standard-library/uses-allocator-structure.md)|Especialización que siempre contiene true.|
 
 ### <a name="functions"></a>Funciones
 
-|Name|Descripción|
+|Name|DESCRIPCIÓN|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|Representa un proveedor asincrónico.|
 |[future_category](../standard-library/future-functions.md#future_category)|Devuelve una referencia al objeto `error_category` que caracteriza los errores asociados a objetos `future`.|
@@ -73,7 +73,7 @@ Las clases de plantilla `future` y `shared_future` no bloquear nunca en sus dest
 
 ### <a name="enumerations"></a>Enumeraciones
 
-|Name|Descripción|
+|Name|DESCRIPCIÓN|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Proporciona nombres simbólicos para los errores notificados por la clase `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Proporciona nombres simbólicos para los motivos que una función que ha agotado el tiempo de espera puede devolver.|
@@ -81,4 +81,4 @@ Las clases de plantilla `future` y `shared_future` no bloquear nunca en sus dest
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

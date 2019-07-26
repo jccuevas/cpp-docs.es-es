@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245392"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459189"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 - Matrices de caracteres terminadas en null, que a menudo se llaman “cadenas de C”.
 
-- Los objetos de clase de plantilla, de tipo `basic_string`, que administran todos los **char**-como argumentos de plantilla.
+- Objetos de clase de plantilla, `basic_string`de tipo, que administran todos los argumentos de plantilla similares a **Char**.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nombre de tipo|DESCRIPCIÓN|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Un tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo **char** como un `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Un tipo que describe una especialización de la clase de plantilla `basic_string` con elementos de tipo **wchar_t** como un `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo  `string`char como.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo  `wstring`wchar_t como.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char32_t`.|
 
@@ -63,13 +63,13 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 |-|-|
 |[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Intercambia las matrices de caracteres de dos cadenas.|
-|[stod](../standard-library/string-functions.md#stod)|Convierte una secuencia de caracteres en un **doble**.|
-|[stof](../standard-library/string-functions.md#stof)|Convierte una secuencia de caracteres en un **float**.|
+|[stod](../standard-library/string-functions.md#stod)|Convierte una secuencia de caracteres en un **valor Double**.|
+|[stof](../standard-library/string-functions.md#stof)|Convierte una secuencia de caracteres en un valor de **tipo float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Convierte una secuencia de caracteres en un entero.|
-|[stold](../standard-library/string-functions.md#stold)|Convierte una secuencia de caracteres en un **long double**.|
-|[stoll](../standard-library/string-functions.md#stoll)|Convierte una secuencia de caracteres en un **long long**.|
-|[stoul](../standard-library/string-functions.md#stoul)|Convierte una secuencia de caracteres en un **unsigned long**.|
-|[stoull](../standard-library/string-functions.md#stoull)|Convierte una secuencia de caracteres en un **long long sin signo**.|
+|[stold](../standard-library/string-functions.md#stold)|Convierte una secuencia de caracteres en un **valor doble largo**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Convierte una secuencia de caracteres en Long **Long**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Convierte una secuencia de caracteres en un entero **largo sin signo**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Convierte una secuencia de caracteres en un entero largo **sin signo**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Convierte un valor en `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Convierte un valor en una `string` ancha.|
 
@@ -77,7 +77,7 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 |Función|DESCRIPCIÓN|
 |-|-|
-|[Plantilla getLine](../standard-library/string-functions.md#getline)|Extraiga las cadenas de la secuencia de entrada línea por línea.|
+|[Plantilla getline](../standard-library/string-functions.md#getline)|Extraiga las cadenas de la secuencia de entrada línea por línea.|
 
 ### <a name="classes"></a>Clases
 
@@ -103,5 +103,5 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

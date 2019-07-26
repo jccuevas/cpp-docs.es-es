@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240961"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448067"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -20,7 +20,7 @@ Define el vector de clases de plantilla de contenedores y varias plantillas auxi
 El `vector` es un contenedor que organiza los elementos de un tipo determinado en una secuencia lineal. Permite el acceso aleatorio rápido a cualquier elemento, así como agregar y eliminar elementos de la secuencia de forma dinámica. El `vector` es el contenedor más apropiado para una secuencia cuando el rendimiento de acceso aleatorio es importante.
 
 > [!NOTE]
-> El \<vector > biblioteca también utiliza el `#include <initializer_list>` instrucción.
+> La \<biblioteca de > vectoriales también `#include <initializer_list>` utiliza la instrucción.
 
 Para más información sobre la clase `vector`, vea [vector (Clase)](../standard-library/vector-class.md). Para más información sobre la especialización `vector<bool>`, vea [vector\<bool> (Clase)](../standard-library/vector-bool-class.md).
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*\
+*Automáticamente*\
 Parámetro de plantilla para el tipo de datos almacenados en el vector.
 
 *Asignador*\
 Parámetro de plantilla para el objeto de asignador almacenado responsable de la asignación y desasignación de memoria.
 
-*Izquierda*\
+*salido*\
 Primer vector (izquierdo) en una operación de comparación
 
-*Correcto*\
+*correcta*\
 Segundo vector (derecho) en una operación de comparación.
 
 ## <a name="members"></a>Miembros
@@ -123,6 +123,6 @@ Segundo vector (derecho) en una operación de comparación.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

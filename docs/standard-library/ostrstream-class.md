@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370877"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458057"
 ---
 # <a name="ostrstream-class"></a>ostrstream (Clase)
 
@@ -38,13 +38,13 @@ El objeto almacena un objeto de clase `strstreambuf`.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[ostrstream](#ostrstream)|Construye un objeto de tipo `ostrstream`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[freeze](#freeze)|Hace que un búfer de secuencia no esté disponible a través de las operaciones de búfer de secuencia.|
 |[pcount](#pcount)|Devuelve un recuento del número de elementos que se escriben en la secuencia controlada.|
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Freezeit*<br/>
-Un **bool** que indica si desea que la secuencia se detenga.
+*_Freezeit*\
+Un valor **booleano** que indica si desea que se inmovilizar la secuencia.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -76,7 +76,7 @@ La función miembro llama a [rdbuf](#rdbuf) -> [freeze](../standard-library/strs
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) para obtener un ejemplo que usa `freeze`.
+Vea [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) para obtener un ejemplo que `freeze`usa.
 
 ## <a name="ostrstream"></a> ostrstream::ostrstream
 
@@ -92,22 +92,22 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*anota*\
 El búfer.
 
-*count*<br/>
+*contabiliza*\
 El tamaño del búfer en bytes.
 
-*_Mode*<br/>
+*_Mode*\
 El modo de entrada y salida del búfer. Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener más información.
 
 ### <a name="remarks"></a>Comentarios
 
-Los dos constructores inicializan la clase base mediante una llamada a [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), donde `sb` es el objeto almacenado de clase [strstreambuf](../standard-library/strstreambuf-class.md). El primer constructor inicializa también `sb` mediante una llamada a `strstreambuf`. El segundo constructor inicializa la clase base de una de estas dos maneras:
+Ambos constructores inicializan la clase base mediante una llamada a [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), donde `sb` es el objeto almacenado de la clase [strstreambuf](../standard-library/strstreambuf-class.md). El primer constructor también se inicializa `sb` mediante una `strstreambuf`llamada a. El segundo constructor inicializa la clase base de una de estas dos maneras:
 
-- Si `_Mode`  &  **ios_base:: App**== 0, a continuación, `ptr` debe designar el primer elemento de una matriz de `count` elementos y el constructor llama a `strstreambuf`(`ptr`, `count`, `ptr`).
+- Si `_Mode` **ios_base::** `count` `strstreambuf` `count``ptr`App = = 0, debedesignarelprimerelementodeunamatrizdeelementosyelconstructorllamaa(,,`ptr`  &  `ptr`).
 
-- En caso contrario, `ptr` debe designar el primer elemento de una matriz de elementos count que contiene una cadena de C cuyo primer elemento designado por `ptr`y el constructor llama a `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- De lo `ptr` contrario, debe designar el primer elemento de una matriz de elementos Count que contiene una cadena de C cuyo primer elemento `ptr`está designado por y el `strstreambuf`constructor llama `count`a (`ptr`,, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a> ostrstream::pcount
 
@@ -143,7 +143,7 @@ Un puntero al objeto strstreambuf asociado del flujo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve la dirección del búfer de flujo almacenado de tipo `pointer` a [strstreambuf](../standard-library/strstreambuf-class.md).
+La función miembro devuelve la dirección del búfer de secuencia almacenado de tipo `pointer` a [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -167,11 +167,11 @@ La función miembro devuelve [rdbuf](#rdbuf) -> [str](../standard-library/strstr
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [strstream:: str](../standard-library/strstreambuf-class.md#str) para obtener un ejemplo que usa `str`.
+Vea [strstream:: STR](../standard-library/strstreambuf-class.md#str) para obtener un ejemplo que `str`usa.
 
 ## <a name="see-also"></a>Vea también
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programación con iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)

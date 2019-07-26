@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299736"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492134"
 ---
 # <a name="c-project-property-page-reference"></a>C++referencia de la página de propiedades del proyecto
 
@@ -47,21 +47,7 @@ aislado[, avanzadas](advanced-manifest-tool.md)
 
 [Página de propiedades General (Archivo)](general-property-page-file.md)
 
-
-
-
-
 [Páginas de propiedades HLSL](hlsl-property-pages.md)
-
-[Páginas de propiedades HLSL: avanzado](hlsl-property-pages-advanced.md)
-
-[Páginas de propiedades HLSL: general](hlsl-property-pages-general.md)
-
-[Páginas de propiedades HLSL: archivos de salida](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [Páginas de propiedades Vinculador](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ aislado[, avanzadas](advanced-manifest-tool.md)
 
 [Páginas de propiedades MIDL](midl-property-pages.md)
 
-[Páginas de propiedades MIDL: avanzado](midl-property-pages-advanced.md)
-
-[Páginas de propiedades MIDL: general](midl-property-pages-general.md)
-
-[Páginas de propiedades MIDL: resultados](midl-property-pages-output.md)
-
 [Página de propiedades NMake](nmake-property-page.md)
 
 [Páginas de propiedades Recursos](resources-property-pages.md)
-
-
 
 [Página de propiedades Referencias Web](web-references-property-page.md)
 
@@ -91,5 +69,5 @@ aislado[, avanzadas](advanced-manifest-tool.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Procedimientos: Creación y eliminación de dependencias del proyecto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
-[Procedimientos: Crear y editar configuraciones](/visualstudio/ide/how-to-create-and-edit-configurations)
+[Cómo: Creación y eliminación de dependencias del proyecto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[Cómo: Crear y editar configuraciones](/visualstudio/ide/how-to-create-and-edit-configurations)

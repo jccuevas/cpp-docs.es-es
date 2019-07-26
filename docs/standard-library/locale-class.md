@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 495e82d54a2d3b010e40403271713cd799b9b8ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245409"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453538"
 ---
 # <a name="locale-class"></a>locale (Clase)
 
@@ -204,27 +204,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de un **int** tipo que puede representar un grupo de elementos distintos de una máscara de bits de tipo clase locale o se puede usar para representar cualquiera de las categorías de configuración regional de C correspondientes. Los elementos son:
+El tipo es un sinónimo de un tipo **int** que puede representar un grupo de elementos distintos de un tipo de máscara de máscara local a la configuración regional de clase o se puede usar para representar cualquiera de las categorías de configuración regional de C correspondientes. Los elementos son:
 
-- `collate`, correspondiente a la categoría LC_COLLATE de C
+- `collate`, que se corresponde con la categoría LC_COLLATE de C
 
-- `ctype`, correspondiente a la categoría LC_CTYPE de C
+- `ctype`, que se corresponde con la categoría LC_CTYPE de C
 
-- `monetary`, correspondiente a la categoría LC_MONETARY de C
+- `monetary`, que se corresponde con la categoría LC_MONETARY de C
 
-- `numeric`, correspondiente a la categoría LC_NUMERIC de C
+- `numeric`, que se corresponde con la categoría LC_NUMERIC de C
 
-- `time`, correspondiente a la categoría LC_TIME de C
+- `time`, que se corresponde con la categoría LC_TIME de C
 
-- `messages`, correspondiente a la categoría LC_MESSAGES de Posix
+- `messages`, correspondiente a la categoría POSIX LC_MESSAGES
 
 Además, dos valores útiles son:
 
 - `none`, correspondiente a ninguna de las categorías de C
 
-- `all`, correspondiente a la unión de C de todas las categorías LC_ALL
+- `all`, que corresponde a la Unión C de todas las categorías LC_ALL
 
-Puede representar un grupo arbitrario de categorías mediante `OR` con estas constantes, como en `monetary` &#124; `time`.
+Puede representar un grupo arbitrario de categorías `OR` mediante con estas constantes, como en. &#124; `time` `monetary`
 
 ## <a name="classic"></a>  locale::classic
 
@@ -292,12 +292,12 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Loc*<br/>
+*Loc*\
 Configuración regional que contiene la faceta que se va a insertar en la configuración regional de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función miembro devuelve un objeto de configuración regional que reemplaza o agrega al  **\*esto** la faceta `Facet` enumerados en *Loc*.
+La función miembro devuelve un objeto de configuración regional que reemplaza o agrega a  **\*esta** faceta `Facet` incluida en *Loc*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -361,7 +361,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Loc*<br/>
+*Loc*\
 Configuración regional que el programa usará como configuración regional predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -414,7 +414,7 @@ class id
 ```
 ### <a name="remarks"></a>Comentarios
 
-La clase de miembro describe el objeto de miembro estático requerido por cada faceta de configuración regional única. Tenga en cuenta que no se puede copiar o asignar un objeto de clase `id`.
+La clase de miembro describe el objeto de miembro estático requerido por cada faceta de configuración regional única. Tenga en cuenta que no puede copiar o asignar un objeto `id`de clase.
 
 ## <a name="locale"></a>  locale::locale
 
@@ -437,40 +437,40 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parámetros
 
-*Locname*<br/>
+*Locname*\
 Nombre de una configuración regional.
 
-*Loc*<br/>
+*Loc*\
 Configuración regional que se va a copiar en la construcción de la nueva configuración regional.
 
-*Otros problemas*<br/>
+*Distinta*\
 Configuración regional de la que se va a seleccionar una categoría.
 
-*CAT*<br/>
+*Catalítica*\
 Categoría que se va a sustituir en la configuración regional construida.
 
-*Fac*<br/>
+*FAC*\
 Faceta que se va a sustituir en la configuración regional construida.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el objeto para que coincida con la configuración regional global. Los constructores segundo y tercero inicializan todas las categorías de configuración regional para tener un comportamiento coherente con el nombre de la configuración regional *Locname*. Los demás constructores copian *Loc*, con las excepciones que se indican:
+El primer constructor inicializa el objeto para que coincida con la configuración regional global. Los constructores segundo y tercero inicializan todas las categorías de configuración regional para tener un comportamiento coherente con el nombre de configuración regional *Locname*. Los constructores restantes copian el *Loc*, con las excepciones indicadas:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-reemplaza desde *otros* las facetas que se corresponden con una categoría C para la cual C & *Cat* es distinto de cero.
+reemplaza de *otras* caras correspondientes a una categoría c para la que c & *CAT* es distinto de cero.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-reemplaza desde `locale(Locname, _All)` las facetas que se corresponden con una categoría C para la cual C & *Cat* es distinto de cero.
+reemplaza de `locale(Locname, _All)` las caras correspondientes a una categoría c para la que c & *CAT* es distinto de cero.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-reemplaza (o se agrega a) *Loc* la faceta *Fac*si *Fac* no es un puntero nulo.
+reemplaza en (o agrega a) *Loc* la faceta *FAC*, si *FAC* no es un puntero nulo.
 
-Si un nombre de configuración regional *Locname* es un puntero nulo o no es válida, la función produce [runtime_error](../standard-library/runtime-error-class.md).
+Si un nombre de configuración regional *Locname* es un puntero nulo o no es válido, la función produce [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -551,7 +551,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="op_eq"></a>  Locale:: operator =
+## <a name="op_eq"></a>configuración regional:: Operator =
 
 Asigna una configuración regional.
 
@@ -569,7 +569,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 Una de las configuraciones regionales cuya desigualdad se va a comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -633,10 +633,10 @@ bool operator()(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Cadena izquierda.
 
-*right*<br/>
+*correcta*\
 Cadena derecha.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -702,7 +702,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 Una de las configuraciones regionales cuya igualdad se va a comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -759,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Vea también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Páginas de códigos](../c-runtime-library/code-pages.md)<br/>
-[Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Páginas de códigos](../c-runtime-library/code-pages.md)\
+[Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

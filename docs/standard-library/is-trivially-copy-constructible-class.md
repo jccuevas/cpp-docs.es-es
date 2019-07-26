@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413442"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447984"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible (Clase)
 
@@ -26,14 +26,14 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es una clase que tiene un constructor de copias triviales, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *T* es una clase que tiene un constructor de copias trivial; en caso contrario, contiene false.
 
-Un constructor de copias para una clase *T* es trivial si se está declarado implícitamente, la clase *T* no tiene funciones virtuales o bases virtuales, todas las bases directas de la clase *T* tiene constructores de copias triviales, las clases de todos los miembros de datos no estáticos del tipo de clase tienen constructores de copias triviales y las clases de todos los miembros de datos no estáticos de la matriz de tipo de clase tienen constructores de copias triviales.
+Un constructor de copias para una clase *T* es trivial si se declara implícitamente, la clase *t* no tiene ninguna función virtual o base virtual, todas las bases directas de la clase *t* tienen constructores de copias triviales, las clases de todos los miembros de datos no estáticos. del tipo de clase tienen constructores de copias triviales y las clases de todos los miembros de datos no estáticos de la matriz de tipo de clase tienen constructores de copias triviales.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,4 +43,4 @@ Un constructor de copias para una clase *T* es trivial si se está declarado imp
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

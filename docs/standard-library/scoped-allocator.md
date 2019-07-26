@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 101edcf31114252911eac90d07f5f44249f98fb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e1a51f1f9f5693b422ec1e680784a199541bb4a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295765"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451798"
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
 
@@ -25,19 +25,19 @@ Define la clase de plantilla contenedor, scoped_allocator.
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
 |[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Comprueba si el objeto scoped_allocator del lado izquierdo del operador no es igual que el objeto de lista del lado derecho.|
 |[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Comprueba si el objeto scoped_allocator del lado izquierdo del operador es igual que el objeto de lista del lado derecho.|
 
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|Clase|DESCRIPCIÓN|
 |-|-|
 |[scoped_allocator_adaptor (clase)](../standard-library/scoped-allocator-adaptor-class.md)|Una clase de plantilla que encapsula una anidación de uno o más asignadores.|
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

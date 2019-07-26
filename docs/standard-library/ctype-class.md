@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15efae85baf3f03b764c7117538d7cc179553050
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394148"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450885"
 ---
 # <a name="ctype-class"></a>ctype (Clase)
 
@@ -56,7 +56,7 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo usado dentro de un programa para codificar caracteres.
 
 ## <a name="remarks"></a>Comentarios
@@ -65,48 +65,48 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 La biblioteca estándar de C++ define dos especializaciones explícitas de esta clase de plantilla:
 
-- `ctype<char>`, una especialización explícita cuyas diferencias se describen por separado. Para obtener más información, consulte [ctype&lt;char&gt; clase](../standard-library/ctype-char-class.md).
+- `ctype<char>`, una especialización explícita cuyas diferencias se describen por separado. Para obtener más información, [vea&lt;ctype&gt; char Class](../standard-library/ctype-char-class.md).
 
 - `ctype<wchar_t>`, que trata los elementos como caracteres anchos.
 
-Otras especializaciones de la clase de plantilla `ctype<CharType>`:
+Otras especializaciones de la clase `ctype<CharType>`de plantilla:
 
-- Convertir un valor *ch* typu *CharType* en un valor de tipo **char** con la expresión `(char)ch`.
+- Convierte un valor *CH* de tipo *CharType* en un valor de tipo **Char** con la expresión `(char)ch`.
 
-- Convertir un valor *bytes* typu **char** en un valor de tipo *CharType* con la expresión `CharType(byte)`.
+- Convierte un valor *byte* de tipo **Char** en un valor de tipo *CharType* con la expresión `CharType(byte)`.
 
-Todas las demás operaciones se realizan en **char** valores en la misma manera que la especialización explícita `ctype<char>`.
+Todas las demás operaciones se realizan en valores **Char** de la misma manera que para la especialización `ctype<char>`explícita.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[ctype](#ctype)|Constructor de objetos de clase `ctype` que actúan como facetas de configuración regional para los caracteres.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo que describe un carácter usado por una configuración regional.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[do_is](#do_is)|Función virtual a la que se llama para comprobar si un carácter individual tiene un atributo determinado, o para clasificar los atributos de cada carácter de un intervalo y almacenarlos en una matriz.|
-|[do_narrow](#do_narrow)|Una función virtual llamada para convertir un carácter de tipo `CharType` usado por una configuración regional en el carácter correspondiente de tipo **char** en el carácter nativo establecido.|
+|[do_narrow](#do_narrow)|Función virtual a la que se llama para convertir un `CharType` carácter de tipo usado por una configuración regional en el carácter correspondiente de tipo **Char** del juego de caracteres nativo.|
 |[do_scan_is](#do_scan_is)|Función virtual a la que se llama para buscar el primer carácter de un intervalo que coincide con una máscara especificada.|
 |[do_scan_not](#do_scan_not)|Función virtual a la que se llama para buscar el primer carácter de un intervalo que no coincide con una máscara especificada.|
 |[do_tolower](#do_tolower)|Función virtual a la que se llama para convertir a minúsculas un carácter o un intervalo de caracteres.|
 |[do_toupper](#do_toupper)|Función virtual a la que se llama para convertir a mayúsculas un carácter o un intervalo de caracteres.|
-|[do_widen](#do_widen)|Una función virtual llamada para convierte un carácter de tipo **char** en el juego en el carácter correspondiente de tipo de caracteres nativo `CharType` usado por una configuración regional.|
+|[do_widen](#do_widen)|Una función virtual a la que se llama para convertir un carácter de tipo **Char** del juego de caracteres nativo en el carácter `CharType` correspondiente de tipo usado por una configuración regional.|
 |[is](#is)|Comprueba si un carácter individual tiene un atributo determinado, o clasifica los atributos de cada carácter de un intervalo y los almacena en una matriz.|
 |[narrow](#narrow)|Convierte un carácter de tipo `CharType` usado por una configuración regional en el carácter correspondiente de tipo char del juego de caracteres nativo.|
 |[scan_is](#scan_is)|Busca el primer carácter de un intervalo que coincide con una máscara especificada.|
 |[scan_not](#scan_not)|Busca el primer carácter de un intervalo que no coincide con una máscara especificada.|
 |[tolower](#tolower)|Convierte a minúsculas un carácter o un intervalo de caracteres.|
 |[toupper](#toupper)|Convierte a mayúsculas un carácter o un intervalo de caracteres.|
-|[widen](#widen)|Convierte un carácter de tipo **char** en el juego en el carácter correspondiente de tipo de caracteres nativo `CharType` usado por una configuración regional.|
+|[widen](#widen)|Convierte un carácter de tipo **Char** del juego de caracteres nativo en el carácter correspondiente de tipo `CharType` usado por una configuración regional.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -140,14 +140,14 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles de la *_Refs* parámetro y su importancia son:
+Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
 
 - 1: La duración del objeto debe administrarse manualmente.
 
@@ -155,7 +155,7 @@ Los valores posibles de la *_Refs* parámetro y su importancia son:
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
-El constructor inicializa su objeto base `locale::facet` con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+El constructor inicializa su objeto base `locale::facet` con **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="do_is"></a>  ctype::do_is
 
@@ -174,19 +174,19 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Parámetros
 
-*maskVal*<br/>
+*maskVal*\
 El valor de máscara para el que se probará el carácter.
 
-*ch*<br/>
+*Cam*\
 Los caracteres cuyos atributos se van a probar.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres cuyos atributos se van a clasificar.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo cuyos atributos se van a clasificar.
 
-*dest*<br/>
+*dest*\
 Un puntero al principio de la matriz en que se van a almacenar los valores de máscara que caracterizan a los atributos de cada uno de los caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -205,7 +205,7 @@ Vea el ejemplo de [is](#is), que llama a `do_is`.
 
 ## <a name="do_narrow"></a>  ctype::do_narrow
 
-Una función virtual llamada para convertir un carácter de tipo `CharType` usado por una configuración regional en el carácter correspondiente de tipo **char** en el carácter nativo establecido.
+Función virtual a la que se llama para convertir un `CharType` carácter de tipo usado por una configuración regional en el carácter correspondiente de tipo **Char** del juego de caracteres nativo.
 
 ```cpp
 virtual char do_narrow(
@@ -221,30 +221,30 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*Cam*\
 El carácter de tipo `Chartype` usado por la configuración regional que se va a convertir.
 
-*default*<br/>
-El valor predeterminado que se asignará a la función miembro a caracteres de tipo `CharType` que no tienen caracteres equivalente de tipo **char**.
+*predeterminada*\
+El valor predeterminado que asignará la función miembro a caracteres de tipo `CharType` que no tienen caracteres homólogos de tipo **Char**.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
-*dest*<br/>
-Un puntero al primer carácter de tipo const **char** del intervalo de destino que almacena el intervalo de caracteres convertido.
+*dest*\
+Un puntero const al primer carácter de tipo **Char** del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro protegida devuelve el carácter nativo de tipo char que corresponde con el carácter de parámetro de tipo `CharType` o *predeterminada* si no se ha definido ningún homólogo.
+La primera función miembro protegida devuelve el carácter nativo de tipo char que corresponde al carácter de parámetro de tipo `CharType` o *default* si no se ha definido ningún homólogo.
 
 La segunda función miembro protegida devuelve un puntero al intervalo de destino de caracteres nativos convertidos a partir de caracteres de tipo `CharType`.
 
 ### <a name="remarks"></a>Comentarios
 
-La segunda función miembro protegida plantilla almacena en `dest`[ `I`] el valor `do_narrow`( `first` [ `I`], `default`), para `I` en el intervalo [0, `last`  -  `first`).
+La segunda función de plantilla miembro protegida almacena `dest`en `I`[] el `do_narrow`valor `first` ( `I`[] `default`,), `I` para en el intervalo [0 `last` ,  -  `first`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -263,22 +263,22 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Parámetros
 
-*maskVal*<br/>
+*maskVal*\
 El valor de máscara que debe coincidir con un carácter.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo que se va a examinar.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al primer carácter de un intervalo que coincide con una máscara especificada. Si no existe este valor, la función devuelve *última*.
+Un puntero al primer carácter de un intervalo que coincide con una máscara especificada. Si no existe este valor, la función devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida devuelve el puntero más pequeño `ptr` en el intervalo [ `first`, `last`) para el que [do_is](#do_is)( `maskVal`, \* `ptr`) es true.
+La función miembro protegida devuelve el puntero `ptr` más pequeño en el intervalo [ `first`, `last`) para el que [do_is](#do_is)( \* `maskVal`, `ptr`) es true.
 
 ### <a name="example"></a>Ejemplo
 
@@ -297,22 +297,22 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Parámetros
 
-*maskVal*<br/>
+*maskVal*\
 El valor de máscara que no debe coincidir con un carácter.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo que se va a examinar.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al primer carácter de un intervalo que no coincide con una máscara especificada. Si no existe este valor, la función devuelve *última*.
+Un puntero al primer carácter de un intervalo que no coincide con una máscara especificada. Si no existe este valor, la función devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida devuelve el puntero más pequeño `ptr` en el intervalo [ `first`, `last`) para el que [do_is](#do_is)( `maskVal`, \* `ptr`) es false.
+La función miembro protegida devuelve el puntero `ptr` más pequeño en el intervalo [ `first`, `last`) para el que [do_is](#do_is)( \* `maskVal`, `ptr`) es false.
 
 ### <a name="example"></a>Ejemplo
 
@@ -332,22 +332,22 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*Cam*\
 El carácter que se va a convertir en minúscula.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro protegida devuelve la forma en minúsculas del parámetro *ch*. Si no hay ninguna forma en minúsculas, devuelve *ch*. La segunda función miembro protegida devuelve *última*.
+La primera función miembro protegida devuelve la forma en minúsculas del parámetro *CH*. Si no existe ninguna forma en minúsculas, devuelve *CH*. La segunda función miembro protegida devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
-La segunda función de plantilla miembro protegida reemplaza cada elemento `first` [ `I`], para `I` en el intervalo [0, `last`  -  `first`), con `do_tolower`( `first` [ `I`]).
+La segunda función de plantilla miembro protegida reemplaza cada `first` elemento `I`[], `I` para en el intervalo [0 `last`,  -  `first`), `do_tolower`con `first` ([ `I`]).
 
 ### <a name="example"></a>Ejemplo
 
@@ -367,22 +367,22 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*Cam*\
 El carácter que se va a convertir en mayúscula.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro protegida devuelve la forma en mayúsculas del parámetro *ch*. Si no hay ninguna forma en mayúsculas, devuelve *ch*. La segunda función miembro protegida devuelve *última*.
+La primera función miembro protegida devuelve la forma en mayúsculas del parámetro *CH*. Si no existe ningún formulario en mayúsculas, devuelve *CH*. La segunda función miembro protegida devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
-La segunda función de plantilla miembro protegida reemplaza cada elemento `first` [ `I`], para `I` en el intervalo [0, `last`  -  `first`), con `do_toupper`( `first` [ `I`]).
+La segunda función de plantilla miembro protegida reemplaza cada `first` elemento `I`[], `I` para en el intervalo [0 `last`,  -  `first`), `do_toupper`con `first` ([ `I`]).
 
 ### <a name="example"></a>Ejemplo
 
@@ -390,7 +390,7 @@ Vea el ejemplo de [toupper](#toupper), que llama a `do_toupper`.
 
 ## <a name="do_widen"></a>  ctype::do_widen
 
-Una función virtual llamada para convierte un carácter de tipo **char** en el juego en el carácter correspondiente de tipo de caracteres nativo `CharType` usado por una configuración regional.
+Una función virtual a la que se llama para convertir un carácter de tipo **Char** del juego de caracteres nativo en el carácter `CharType` correspondiente de tipo usado por una configuración regional.
 
 ```cpp
 virtual CharType do_widen(char byte) const;
@@ -403,23 +403,23 @@ virtual const char *do_widen(
 
 ### <a name="parameters"></a>Parámetros
 
-*byte*<br/>
-El carácter de tipo **char** en el juego se conviertan de caracteres nativo.
+*byte*\
+Carácter de tipo **Char** del juego de caracteres nativo que se va a convertir.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
-*dest*<br/>
+*dest*\
 Un puntero al primer carácter de tipo `CharType` del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro protegida devuelve el carácter de tipo `CharType` que se corresponde con el carácter de parámetro de tipo nativo **char**.
+La primera función miembro protegida devuelve el carácter de tipo `CharType` que se corresponde con el carácter de parámetro de tipo nativo **Char**.
 
-La segunda función miembro protegida devuelve un puntero al intervalo de destino de caracteres de tipo `CharType` utilizado por una configuración regional convertida a partir de caracteres nativos de tipo **char**.
+La segunda función miembro protegida devuelve un puntero al intervalo de destino de caracteres de tipo `CharType` usado por una configuración regional convertida a partir de caracteres nativos de tipo **Char**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -444,24 +444,24 @@ const CharType *is(
 
 ### <a name="parameters"></a>Parámetros
 
-*maskVal*<br/>
+*maskVal*\
 El valor de máscara para el que se probará el carácter.
 
-*ch*<br/>
+*Cam*\
 Los caracteres cuyos atributos se van a probar.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres cuyos atributos se van a clasificar.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo cuyos atributos se van a clasificar.
 
-*dest*<br/>
+*dest*\
 Un puntero al principio de la matriz en que se van a almacenar los valores de máscara que caracterizan a los atributos de cada uno de los caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro devuelve **true** si el carácter probado tiene el atributo descrito por el valor de máscara; **false** si no puede tener el atributo.
+La primera función miembro devuelve **true** si el carácter probado tiene el atributo descrito por el valor de máscara; **false** si no tiene el atributo.
 
 La segunda función miembro devuelve un puntero al último carácter del intervalo cuyos atributos se van a clasificar.
 
@@ -510,7 +510,7 @@ int main() {
 
 ## <a name="narrow"></a>  ctype::narrow
 
-Convierte los caracteres de tipo `CharType` utilizado por una configuración regional para los caracteres correspondientes de tipo **char** en el carácter nativo establecido.
+Convierte caracteres de tipo `CharType` usados por una configuración regional en los caracteres correspondientes de tipo **Char** del juego de caracteres nativo.
 
 ```cpp
 char narrow(CharType ch, char default = '\0') const;
@@ -524,24 +524,24 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*Cam*\
 El carácter de tipo `Chartype` usado por la configuración regional que se va a convertir.
 
-*default*<br/>
-El valor predeterminado que se asignará a la función miembro a caracteres de tipo `CharType` que no tienen caracteres equivalente de tipo **char**.
+*predeterminada*\
+El valor predeterminado que asignará la función miembro a caracteres de tipo `CharType` que no tienen caracteres homólogos de tipo **Char**.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
-*dest*<br/>
-Un puntero al primer carácter de tipo const **char** del intervalo de destino que almacena el intervalo de caracteres convertido.
+*dest*\
+Un puntero const al primer carácter de tipo **Char** del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro devuelve el carácter de tipo nativo **char** que se corresponde con el carácter de parámetro de tipo `CharType default` si homólogo no está definido.
+La primera función miembro devuelve el carácter nativo de tipo **Char** que corresponde al carácter de parámetro de tipo `CharType default` si no se ha definido homólogo.
 
 La segunda función miembro devuelve un puntero al intervalo de destino de caracteres nativos convertidos a partir de caracteres de tipo `CharType`.
 
@@ -588,18 +588,18 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Parámetros
 
-*maskVal*<br/>
+*maskVal*\
 El valor de máscara que debe coincidir con un carácter.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo que se va a examinar.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al primer carácter de un intervalo que coincide con una máscara especificada. Si no existe este valor, la función devuelve *última*.
+Un puntero al primer carácter de un intervalo que coincide con una máscara especificada. Si no existe este valor, la función devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -644,18 +644,18 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Parámetros
 
-*maskVal*<br/>
+*maskVal*\
 El valor de máscara que no debe coincidir con un carácter.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo que se va a examinar.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al primer carácter de un intervalo que no coincide con una máscara especificada. Si no existe este valor, la función devuelve *última*.
+Un puntero al primer carácter de un intervalo que no coincide con una máscara especificada. Si no existe este valor, la función devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -699,20 +699,20 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*Cam*\
 El carácter que se va a convertir en minúscula.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro devuelve la forma en minúsculas del parámetro *ch*. Si no hay ninguna forma en minúsculas, devuelve *ch*.
+La primera función miembro devuelve la forma en minúsculas del parámetro *CH*. Si no existe ninguna forma en minúsculas, devuelve *CH*.
 
-La segunda función miembro devuelve *última*.
+La segunda función miembro devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -754,20 +754,20 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*Cam*\
 El carácter que se va a convertir en mayúscula.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que va a pasar de mayúsculas a minúsculas (o viceversa).
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro devuelve la forma en mayúsculas del parámetro *ch*. Si no hay ninguna forma en mayúsculas, devuelve *ch*.
+La primera función miembro devuelve la forma en mayúsculas del parámetro *CH*. Si no existe ningún formulario en mayúsculas, devuelve *CH*.
 
-La segunda función miembro devuelve *última*.
+La segunda función miembro devuelve *Last*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -800,7 +800,7 @@ The uppercase string is: HELLO, MY NAME IS JOHN
 
 ## <a name="widen"></a>  ctype::widen
 
-Convierte un carácter de tipo **char** en el juego en el carácter correspondiente de tipo de caracteres nativo `CharType` usado por una configuración regional.
+Convierte un carácter de tipo **Char** del juego de caracteres nativo en el carácter correspondiente de tipo `CharType` usado por una configuración regional.
 
 ```cpp
 CharType widen(char byte) const;
@@ -809,23 +809,23 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*byte*<br/>
+*byte*\
 El carácter de tipo char en el juego de caracteres nativo que se convertirá.
 
-*first*<br/>
+*lugar*\
 Un puntero al primer carácter del intervalo de caracteres que se va convertir.
 
-*last*<br/>
+*guardado*\
 Un puntero al carácter inmediatamente después del último carácter del intervalo de caracteres que se van a convertir.
 
-*dest*<br/>
+*dest*\
 Un puntero al primer carácter de tipo `CharType` del intervalo de destino que almacena el intervalo de caracteres convertido.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La primera función miembro devuelve el carácter de tipo `CharType` que se corresponde con el carácter de parámetro de tipo nativo **char**.
+La primera función miembro devuelve el carácter de tipo `CharType` que se corresponde con el carácter de parámetro de tipo nativo **Char**.
 
-La segunda función miembro devuelve un puntero al intervalo de destino de caracteres de tipo `CharType` utilizado por una configuración regional convertida a partir de caracteres nativos de tipo **char**.
+La segunda función miembro devuelve un puntero al intervalo de destino de caracteres de tipo `CharType` usado por una configuración regional convertida a partir de caracteres nativos de tipo **Char**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -863,5 +863,5 @@ Hello everyone!
 
 ## <a name="see-also"></a>Vea también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

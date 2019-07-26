@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 163729b401fa917d7df0002c621998f5021757f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279169"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452136"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -25,7 +25,7 @@ Los iteradores comprobados garantizan que los límites del contenedor no se han 
 
 Para obtener información sobre cómo deshabilitar las advertencias generadas por iteradores comprobados, vea [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-Puede usar la macro de preprocesador [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) para habilitar o deshabilitar la característica de iteradores comprobados. Si _ITERATOR_DEBUG_LEVEL se define como 1 o 2, el uso no seguro de iteradores produce un error de tiempo de ejecución y el programa finaliza. Si se define como 0, se deshabilitan los iteradores comprobados. De forma predeterminada, el valor de _ITERATOR_DEBUG_LEVEL es 0 para las versiones de lanzamiento y 2 para las compilaciones de depuración.
+Puede usar la macro de preprocesador [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) para habilitar o deshabilitar la característica de iteradores comprobados. Si _ITERATOR_DEBUG_LEVEL se define como 1 o 2, el uso no seguro de iteradores produce un error en tiempo de ejecución y el programa finaliza. Si se define como 0, se deshabilitan los iteradores comprobados. De forma predeterminada, el valor de _ITERATOR_DEBUG_LEVEL es 0 para las compilaciones de versión y 2 para las compilaciones de depuración.
 
 > [!IMPORTANT]
 > La documentación y el código fuente antiguos pueden hacer referencia a la macro [_SECURE_SCL](../standard-library/secure-scl.md). Use _ITERATOR_DEBUG_LEVEL para controlar _SECURE_SCL. Para obtener más información, vea [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
@@ -60,7 +60,7 @@ Los adaptadores de iterador que admiten iteradores comprobados son [checked_arra
 
 ## <a name="example"></a>Ejemplo
 
-Cuando se compila utilizando _ITERATOR_DEBUG_LEVEL establecido en 1 o 2, se producirá un error de tiempo de ejecución si intenta tener acceso a un elemento que está fuera de los límites del contenedor mediante el operador de indización de algunas clases.
+Al compilar con _ITERATOR_DEBUG_LEVEL establecido en 1 o 2, se producirá un error de tiempo de ejecución si intenta tener acceso a un elemento que está fuera de los límites del contenedor mediante el operador de indización de ciertas clases.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +89,7 @@ Este programa imprimirá "67" y después mostrará un cuadro de diálogo de erro
 
 ## <a name="example"></a>Ejemplo
 
-De forma similar, cuando se compila utilizando _ITERATOR_DEBUG_LEVEL establecido en 1 o 2, en tiempo de ejecución se producirá un error si intenta tener acceso a un elemento mediante `front` o `back` en clases de contenedor cuando el contenedor está vacío.
+Del mismo modo, al compilar con _ITERATOR_DEBUG_LEVEL establecido en 1 o 2, se producirá un error en tiempo de ejecución si intenta tener `front` acceso `back` a un elemento mediante o en las clases de contenedor cuando el contenedor está vacío.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -113,7 +113,7 @@ Este programa muestra un cuadro de diálogo de error de aserción con informaci�
 
 ## <a name="example"></a>Ejemplo
 
-En el código siguiente se muestran distintos escenarios de casos de uso de un iterador con comentarios sobre cada uno. De forma predeterminada, _ITERATOR_DEBUG_LEVEL se establece en 2 en compilaciones de depuración y en 0 en las compilaciones comerciales.
+En el código siguiente se muestran distintos escenarios de casos de uso de un iterador con comentarios sobre cada uno. De forma predeterminada, _ITERATOR_DEBUG_LEVEL se establece en 2 en las compilaciones de depuración y en 0 en las compilaciones comerciales.
 
 ```cpp
 // checked_iterators_3.cpp
@@ -219,5 +219,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
+[Debug Iterator Support](../standard-library/debug-iterator-support.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159565"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448928"
 ---
 # <a name="gslicearray-class"></a>gslice_array (Clase)
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Comentarios
 
-La clase describe un objeto que almacena una referencia a un objeto `va` de clase [valarray](../standard-library/valarray-class.md)**\<tipo >**, junto con un objeto `gs` de clase [ gslice](../standard-library/gslice-class.md) que describe la secuencia de elementos para seleccionar desde el `valarray<Type>` objeto.
+La clase describe un objeto que almacena una referencia a un objeto `va` de la clase [valarray](../standard-library/valarray-class.md) **\<Type >** , junto con un `gs` objeto de la clase [GSlice](../standard-library/gslice-class.md) que describe la secuencia de elementos que se van a seleccionar. `valarray<Type>` objeto.
 
-Construir un `gslice_array<Type>` objeto escribiendo una expresión de formato [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase gslice_array se comportarán como las firmas de función correspondientes definidas para `valarray<Type>`, excepto que solo la secuencia de elementos seleccionados se ve afectada.
+Solo se construye `gslice_array<Type>` un objeto escribiendo una expresión de la forma [va&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase gslice_array se comportarán como las signaturas de `valarray<Type>`función correspondientes definidas para, excepto en que solo la secuencia de elementos seleccionados se ve afectada.
 
 La clase de plantilla se crea indirectamente por determinadas operaciones valarray y no se puede usar directamente en el programa. En su lugar, el operador de subíndice de segmento usa una clase de plantilla auxiliar interna:
 
-`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).
+`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&** ).
 
-Construir un `gslice_array<Type>` objeto escribiendo una expresión de formato `va[gsl]`, para un segmento `gsl` de valarray `va`. Las funciones miembro de la clase gslice_array se comportarán como las firmas de función correspondientes definidas para `valarray<Type>`, excepto que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por gslice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el primer segmento, el número de elementos en cada segmento y la distancia entre los elementos de cada segmento.
+Solo se construye `gslice_array<Type>` un objeto escribiendo una expresión con el formato `va[gsl]`, para un segmento `gsl` de valarray `va`. Las funciones miembro de la clase gslice_array se comportarán como las signaturas de `valarray<Type>`función correspondientes definidas para, excepto en que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por gslice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el primer segmento, el número de elementos en cada segmento y la distancia entre los elementos de cada segmento.
 
 En el ejemplo siguiente:
 
@@ -89,4 +89,4 @@ Vea el ejemplo de [gslice::gslice](../standard-library/gslice-class.md#gslice) p
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

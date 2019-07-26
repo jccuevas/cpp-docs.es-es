@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 641ab1bfe99360320509b806149fcedfe1068879
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d7a13b98ba8cff78839b2afb98371ffba5ced461
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240360"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458335"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
@@ -24,7 +24,7 @@ Define las clases de plantilla priority_queue y queue, así como varias plantill
 **Espacio de nombres:** std
 
 > [!NOTE]
-> El \<cola > biblioteca también utiliza el `#include <initializer_list>` instrucción.
+> La \<biblioteca de > de colas también `#include <initializer_list>` utiliza la instrucción.
 
 ## <a name="members"></a>Miembros
 
@@ -54,6 +54,6 @@ Define las clases de plantilla priority_queue y queue, así como varias plantill
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

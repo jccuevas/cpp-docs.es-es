@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-ms.openlocfilehash: 7682ce8fd8f127ac20a20fb0918e69d8c2d76947
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 229083f4569647bd65d1ce7e640f753a9418371d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413676"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455961"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible (clase)
 
@@ -26,12 +26,12 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow constructor de copias, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un constructor de copias nothrow; en caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothr
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

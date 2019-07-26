@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 4c35d34c9c51c8ebd6885b1a1cd07c28bcb61d1b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243884"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456747"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliares.
+Define la **matriz** de clases de plantilla de contenedor y varias plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,7 +24,7 @@ Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliare
 **Espacio de nombres:** std
 
 > [!NOTE]
-> El \<matriz > biblioteca también utiliza el `#include <initializer_list>` instrucción.
+> La \<biblioteca de > de matriz también `#include <initializer_list>` utiliza la instrucción.
 
 ## <a name="members"></a>Miembros
 
@@ -56,5 +56,5 @@ Define la clase de plantilla contenedor **matriz** y varias plantillas auxiliare
 
 ## <a name="see-also"></a>Vea también
 
-[\<tuple>](../standard-library/tuple.md)<br/>
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<tuple>](../standard-library/tuple.md)\
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

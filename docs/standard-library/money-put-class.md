@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383547"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460235"
 ---
 # <a name="moneyput-class"></a>money_put (Clase)
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Tipo de iterador en el que las funciones monetary put escriben sus resultados.
 
 ## <a name="remarks"></a>Comentarios
@@ -49,13 +49,13 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[money_put](#money_put)|Constructor para los objetos de tipo `money_put`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[iter_type](#iter_type)|Tipo que describe un iterador de salida.|
@@ -63,7 +63,7 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[do_put](#do_put)|Una función virtual a la que se llama para convertir un número o una cadena en una secuencia de caracteres que representa un valor monetario.|
 |[put](#put)|Convierte un número o una cadena en una secuencia de caracteres que representa un valor monetario.|
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parámetros
 
-*next*<br/>
+*Nueva*\
 Un iterador que se dirige al primer elemento de la cadena insertada.
 
-*_Intl*<br/>
+*_Intl*\
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*_Fill*<br/>
+*_Fill*\
 Un carácter que se usa para el espaciado.
 
-*val*<br/>
+*Val*\
 Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -129,9 +129,9 @@ Un iterador de salida que se dirige a la posición siguiente del último element
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función miembro virtual protegida genera elementos secuenciales, empezando por *siguiente* para producir un campo de salida monetario el [string_type](#string_type) objeto *val*. La secuencia controlada por *val* debe comenzar con uno o más dígitos decimales, opcionalmente precedidos por un signo menos (-), que representa la cantidad. La función devuelve un iterador que designa el primer elemento más allá del campo de salida monetario que se ha generado.
+La primera función miembro virtual protegida genera elementos secuenciales que comienzan en el *siguiente* para generar un campo de salida monetaria a partir del *Val*del objeto [string_type](#string_type) . La secuencia controlada por *Val* debe comenzar con uno o más dígitos decimales, de manera opcional precedida por un signo menos (-), que representa la cantidad. La función devuelve un iterador que designa el primer elemento más allá del campo de salida monetario que se ha generado.
 
-La segunda función miembro virtual protegida comporta igual que la primera, excepto que TI eficazmente primero convierte *val* en una secuencia de dígitos decimales, opcionalmente precedido por un signo menos, a continuación, convierte esa secuencia como anterior.
+La segunda función miembro virtual protegida se comporta igual que la primera, salvo que primero convierte de forma eficaz el valor de *Val* en una secuencia de dígitos decimales, opcionalmente precedido por un signo menos, y después convierte esa secuencia como arriba.
 
 El formato de un campo de salida monetario se determina por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class) fac devuelta mediante la llamada (eficaz) a [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -191,22 +191,22 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles de la *_Refs* parámetro y su importancia son:
+Los valores posibles para el parámetro *_Refs* y su importancia son:
 
 - 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
 - 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: no se definen estos valores.
+- \>1: estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
-El constructor inicializa su objeto base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+El constructor inicializa su objeto base con **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="put"></a> money_put::put
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>Parámetros
 
-*next*<br/>
+*Nueva*\
 Un iterador que se dirige al primer elemento de la cadena insertada.
 
-*_Intl*<br/>
+*_Intl*\
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*_Fill*<br/>
+*_Fill*\
 Un carácter que se usa para el espaciado.
 
-*val*<br/>
+*Val*\
 Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -295,6 +295,6 @@ El tipo describe una especialización de clase de plantilla [basic_string](../st
 
 ## <a name="see-also"></a>Vea también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Facet (clase)](../standard-library/locale-class.md#facet_class)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet (Clase)](../standard-library/locale-class.md#facet_class)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

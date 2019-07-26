@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349126"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460189"
 ---
 # <a name="moneypunct-class"></a>moneypunct (Clase)
 
-La clase de plantilla describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo *CharType* utilizado para representar un campo de entrada monetario o un campo de salida monetario. Si el parámetro de plantilla *Intl* es *true*, se respetan las convenciones internacionales.
+La clase de plantilla describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo *CharType* que se usan para representar un campo de entrada monetaria o un campo de salida monetario. Si el parámetro de plantilla *Intl* es *true*, se respetan las convenciones internacionales.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo usado dentro de un programa para codificar caracteres.
 
-*Intl*<br/>
+*Intl*\
 Una marca que especifica si las convenciones internacionales deben respetarse.
 
 ## <a name="remarks"></a>Comentarios
@@ -80,20 +80,20 @@ El objeto estático constante intl almacena el valor del parámetro de plantilla
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[moneypunct](#moneypunct)|Constructor de objetos de tipo `moneypunct`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[string_type](#string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[curr_symbol](#curr_symbol)|Devuelve una secuencia específica de la configuración regional de los elementos que se usan como símbolo de moneda.|
 |[decimal_point](#decimal_point)|Devuelve una secuencia específica de la configuración regional de los elementos que se usan como separador decimal.|
@@ -277,7 +277,7 @@ Una regla específica de la configuración regional para determinar cómo se agr
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [agrupación](#grouping), donde se llamó la función miembro virtual `grouping`.
+Vea el ejemplo de [agrupación](#grouping), donde llama a `grouping`la función miembro virtual.
 
 ## <a name="do_neg_format"></a> moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad negativa. Cada uno de los cuatro elementos de `pattern::field` puede tener los valores:
+La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad negativa. Cada uno de los cuatro elementos `pattern::field` de puede tener los valores siguientes:
 
-- `none` Para hacer coincidir cero o más espacios o generar nada.
+- `none`para buscar coincidencias con cero o más espacios o no generar nada.
 
-- `sign` para buscar o generar un signo positivo o negativo.
+- `sign`para buscar o generar un signo positivo o negativo.
 
-- `space` Para hacer coincidir cero o más espacios o generar un espacio.
+- `space`para buscar coincidencias con cero o más espacios o generar un espacio.
 
-- `symbol` para buscar o generar un símbolo de moneda.
+- `symbol`para hacer coincidir o generar un símbolo de moneda.
 
-- `value` para buscar o generar un valor monetario.
+- `value`para hacer coincidir o generar un valor monetario.
 
-Se generan los componentes de un campo de salida monetario y los componentes de un campo de entrada monetario se hacen coincidir en el orden en que estos elementos aparecen en `pattern::field`. Cada uno de los valores `sign`, `symbol`, `value`y `none` o `space` deben aparecer exactamente una vez. El valor `none` no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si `Intl` es true, el orden es `symbol`, `sign`, `none`, a continuación, `value`.
+Los componentes de un campo de salida monetario se generan y los componentes de un campo de entrada monetaria coinciden en el orden en que estos `pattern::field`elementos aparecen en. Cada uno de los `sign`valores `symbol`, `value`, y `none` , o `space` bien, debe aparecer exactamente una vez. El valor `none` no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si `Intl` es true, el orden es `symbol`, `sign`, `none`y, `value`a continuación,.
 
 La versión de plantilla de `moneypunct`\< **CharType**, **Intl**> devuelve `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -523,14 +523,14 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles de la *_Refs* parámetro y su importancia son:
+Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
 
 - 1: La duración del objeto debe administrarse manualmente.
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Vea también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

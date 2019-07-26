@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5faf55eebecf473f45074f862ef64929df6f4374
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245771"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452983"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -40,7 +40,7 @@ Los iteradores son una generalización de los punteros; realizan una abstracció
 
 Los iteradores que tienen mayores requisitos y por tanto tienen un acceso más eficaz a los elementos se pueden usar en lugar de los iteradores con menos requisitos. Por ejemplo, si se llama a un iterador hacia delante, se puede utilizar en su lugar un iterador de acceso aleatorio.
 
-Visual Studio ha agregado extensiones a los iteradores de la Biblioteca estándar de C++ para admitir varias situaciones en modo depuración para los iteradores comprobados y no comprobados. Para obtener más información, consulte [bibliotecas seguras: C++Biblioteca estándar de](../standard-library/safe-libraries-cpp-standard-library.md).
+Visual Studio ha agregado extensiones a los iteradores de la Biblioteca estándar de C++ para admitir varias situaciones en modo depuración para los iteradores comprobados y no comprobados. Para obtener más información, [vea bibliotecas seguras: C++Biblioteca](../standard-library/safe-libraries-cpp-standard-library.md)estándar.
 
 ## <a name="members"></a>Miembros
 
@@ -87,27 +87,27 @@ Visual Studio ha agregado extensiones a los iteradores de la Biblioteca estánda
 
 |||
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos en un contenedor de tipo `Container`, que se accede mediante protegido `pointer` objeto que almacena denominado contenedor.|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para un `iterator_category` función que representa un iterador bidireccional.|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos en un contenedor de tipo `Container`, al que tiene acceso a través del objeto protegido `pointer` que almacena denominado contenedor.|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para una `iterator_category` función que representa un iterador bidireccional.|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Clase que tiene acceso a una matriz mediante un iterador comprobado de acceso aleatorio. **Nota:**  Esta clase es una extensión de Microsoft de la biblioteca estándar de C++. El código implementado mediante esta función no es portable a los entornos de compilación estándar de C++ que no admiten esta extensión de Microsoft.|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para un `iterator_category` función que representa un iterador hacia delante.|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos en un contenedor de tipo `Container`, que se accede mediante protegido `pointer` objeto que almacena denominado contenedor.|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para un `iterator_category` función que representa un iterador de entrada.|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos en un contenedor de tipo `Container`, que se accede mediante protegido `pointer` objeto que almacena denominado contenedor. También almacena protegido `iterator` objeto de clase `Container::iterator`, llamado `iter`.|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|La clase de plantilla describe un objeto iterador de entrada. Extrae objetos de clase `Ty` desde un flujo de entrada, que se accede mediante un objeto que almacena, de tipo puntero a `basic_istream` \< **Elem**, **Tr**>.|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|La clase de plantilla describe un objeto iterador de entrada. Inserta elementos de la clase `Elem` en un búfer de secuencia de salida, que tiene acceso a través de un objeto que almacena, de tipo `pointer` a `basic_streambuf` \< **Elem**, **Tr** >.|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para una `iterator_category` función que representa un iterador hacia delante.|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos en un contenedor de tipo `Container`, al que tiene acceso a través del objeto protegido `pointer` que almacena denominado contenedor.|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para una `iterator_category` función que representa un iterador de entrada.|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos en un contenedor de tipo `Container`, al que tiene acceso a través del objeto protegido `pointer` que almacena denominado contenedor. También almacena el objeto protegido `iterator` , de clase `Container::iterator`, denominado `iter`.|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|La clase de plantilla describe un objeto iterador de entrada. Extrae objetos de clase `Ty` de un flujo de entrada, al que tiene acceso a través de un objeto que almacena, de `basic_istream`tipo Pointer a \< **Elem**, **TR**>.|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|La clase de plantilla describe un objeto iterador de entrada. Inserta elementos de clase `Elem` en un búfer de flujo de salida, al que tiene acceso a través de un objeto que almacena, de tipo `pointer` a `basic_streambuf` \< **Elem**, **TR**>.|
 |[iterator](../standard-library/iterator-struct.md)|La clase de plantilla se usa como tipo base para todos los iteradores.|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|Clase de plantilla del asistente que proporciona los tipos críticos asociados a diferentes tipos de iterador para que se pueda hacer referencia a ellos de la misma manera.|
 |[move_iterator](../standard-library/move-iterator-class.md)|Un objeto `move_iterator` almacena un iterador de acceso aleatorio de tipo `RandomIterator`. Se comporta como un iterador de acceso aleatorio, excepto cuando se desreferencia. El resultado de `operator*` se convierte implícitamente a `value_type&&:` para crear `rvalue reference`.|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta objetos de clase `Type` en un flujo de salida, que tiene acceso a través de un objeto que almacena, de tipo `pointer` a `basic_ostream` \< **Elem**, **Tr**>.|
-|[ostreambuf_iterator (Clase)](../standard-library/ostreambuf-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos de la clase `Elem` en un búfer de secuencia de salida, que se accede mediante un objeto que almacena, de tipo puntero a `basic_streambuf` \< **Elem**, **Tr**>.|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para `iterator_category` función que representa un iterador de salida.|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor devuelto para `iterator_category` función que representa un iterador de acceso aleatorio.|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta objetos de `Type` clase en un flujo de salida, al que tiene acceso a través de un objeto que almacena, de tipo `basic_ostream` `pointer` a \< **Elem**, **TR**>.|
+|[ostreambuf_iterator (Clase)](../standard-library/ostreambuf-iterator-class.md)|La clase de plantilla describe un objeto iterador de salida. Inserta elementos de clase `Elem` en un búfer de flujo de salida, al que tiene acceso a través de un objeto que almacena, de tipo Pointer a  `basic_streambuf` \<Elem, **TR**>.|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor `iterator_category` devuelto para la función que representa un iterador de salida.|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Una clase que proporciona un tipo de valor `iterator_category` devuelto para la función que representa un iterador de acceso aleatorio.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|La clase de plantilla describe un objeto que se comporta como un iterador de acceso aleatorio, solo en orden inverso.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Clase que tiene acceso a una matriz mediante un iterador no comprobado de acceso aleatorio. **Nota:**  Esta clase es una extensión de Microsoft de la biblioteca estándar de C++. El código implementado mediante esta función no es portable a los entornos de compilación estándar de C++ que no admiten esta extensión de Microsoft.|
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

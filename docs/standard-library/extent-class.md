@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 7463b424d15ee86f851b7d81953abf3fe1c98fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393979"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457788"
 ---
 # <a name="extent-class"></a>extent (Clase)
 
@@ -27,15 +27,15 @@ struct extent;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
-*I*<br/>
+*CONFIGUR*\
 La matriz que se enlaza a la consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Si *Ty* es un tipo de matriz que tiene al menos *me* dimensiones, la consulta de tipo contiene el número de elementos de la dimensión especificada por *me*. Si *Ty* no es un tipo de matriz o el rango es menor que *me*, o si *me* es cero y *Ty* es de tipo "matriz de límite desconocido de `U` ", la consulta de tipo contiene el valor 0.
+Si *Ty* es un tipo de matriz que tiene al menos *I* dimensiones, la consulta de tipo contiene el número de elementos de la dimensión especificada por *I*. Si *Ty* no es un tipo de matriz o su rango es menor que *I*, o si *I* es cero y *Ty* es de tipo "matriz de límite desconocido `U`de", la consulta de tipo contiene el valor 0.
 
 ## <a name="example"></a>Ejemplo
 
@@ -69,6 +69,6 @@ extent 1 == 10
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents (Clase)](../standard-library/remove-all-extents-class.md)<br/>
-[remove_extent (Clase)](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents (Clase)](../standard-library/remove-all-extents-class.md)\
+[remove_extent (Clase)](../standard-library/remove-extent-class.md)

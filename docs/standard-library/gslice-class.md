@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159475"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448896"
 ---
 # <a name="gslice-class"></a>gslice (Clase)
 
@@ -25,13 +25,13 @@ Clase de utilidad para valarray que se usa para definir subconjuntos multidimens
 
 ## <a name="remarks"></a>Comentarios
 
-La clase almacena los parámetros que caracterizan a un objeto de tipo [gslice_array](../standard-library/gslice-array-class.md). El subconjunto de una valarray se crea indirectamente cuando un objeto de clase gslice aparece como argumento de un objeto de clase [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Los valores almacenados que especifican el subconjunto seleccionado de la valarray primaria incluyen:
+La clase almacena los parámetros que caracterizan a un objeto de tipo [gslice_array](../standard-library/gslice-array-class.md). El subconjunto de una valarray se crea indirectamente cuando un objeto de clase gslice aparece como argumento de un objeto de clase [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Los valores almacenados que especifican el subconjunto seleccionado de la valarray primaria incluyen:
 
 - Un índice de inicio.
 
-- Un vector de longitud de la clase `valarray<size_t>`.
+- Vector de longitud de la `valarray<size_t>`clase.
 
-- Un vector de intervalo de clase `valarray<size_t>`.
+- Un vector de intervalo de `valarray<size_t>`clase.
 
 Los dos vectores deben tener la misma longitud.
 
@@ -41,13 +41,13 @@ Las operaciones en valarrays solo se garantizan si los subconjuntos de origen y 
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[gslice](#gslice)|Define un subconjunto de un `valarray` que consta de varios segmentos de la `valarray` que todas comienzan a partir de un elemento especificado.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[size](#size)|Busca los valores de la matriz especificando el número de elementos en un segmento general de un `valarray`.|
 |[start](#start)|Busca el índice inicial de un segmento general de un `valarray`.|
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>Parámetros
 
-*_StartIndex*<br/>
+*_StartIndex*\
 El índice de valarray del primer elemento del subconjunto.
 
-*_LenArray*<br/>
+*_LenArray*\
 Una matriz que especifica el número de elementos de cada segmento.
 
-*_IncArray*<br/>
+*_IncArray*\
 Una matriz que especifica el intervalo de cada segmento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El constructor predeterminado almacena cero para el índice de inicio y vectores de longitud cero para los vectores de longitud e intervalo. El segundo constructor almacena *_StartIndex* para el índice de inicio, *_LenArray* para la matriz de longitud y *_IncArray* para la matriz de intervalo.
+El constructor predeterminado almacena cero para el índice de inicio y vectores de longitud cero para los vectores de longitud e intervalo. El segundo constructor almacena *_StartIndex* para el índice de inicio, *_LenArray* para la matriz de longitud y *_IncArray* para la matriz de STRIDE.
 
 ### <a name="remarks"></a>Comentarios
 
-**gslice** define un subconjunto de una valarray que consta de varios segmentos de la valarray que empiezan en el mismo elemento especificado. La capacidad de usar matrices para definir varios segmentos es la única diferencia entre `gslice` y [slice::slice](../standard-library/slice-class.md#slice). El primer segmento tiene un primer elemento con un índice de *_StartIndex*, un número de elementos especificado por el primer elemento de *_LenArray*y un intervalo especificado por el primer elemento de *_IncArray* . El siguiente conjunto de segmentos ortogonales tiene primeros elementos proporcionados por el primer segmento. El segundo elemento de *_LenArray* especifica el número de elementos. El intervalo viene determinado por el segundo elemento de *_IncArray*. Una tercera dimensión de segmentos podría tomar los elementos de la matriz bidimensional como los elementos de inicio y continuar de forma análoga
+**gslice** define un subconjunto de una valarray que consta de varios segmentos de la valarray que empiezan en el mismo elemento especificado. La capacidad de usar matrices para definir varios segmentos es la única diferencia entre `gslice` y [slice::slice](../standard-library/slice-class.md#slice). El primer segmento tiene un primer elemento con un índice de *_StartIndex*, un número de elementos especificado por el primer elemento de *_LenArray*y un intervalo proporcionado por el primer elemento de *_IncArray*. El siguiente conjunto de segmentos ortogonales tiene primeros elementos proporcionados por el primer segmento. El segundo elemento de *_LenArray* especifica el número de elementos. El intervalo lo proporciona el segundo elemento de *_IncArray*. Una tercera dimensión de segmentos podría tomar los elementos de la matriz bidimensional como los elementos de inicio y continuar de forma análoga
 
 ### <a name="example"></a>Ejemplo
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

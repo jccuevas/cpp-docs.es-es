@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 9313df5d75efa043f2fb9df6090c125de75a2636
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 168785abb09ca198435c301040d7628a6dd12b26
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220260"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460153"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 
 > [!NOTE]
-> Este tema es de Microsoft C++ documentación como un ejemplo funcional de los contenedores usados en el C++ biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema se encuentra en la C++ documentación de Microsoft como un ejemplo no funcional de contenedores usados en C++ la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
 Sobrecarga `operator==` para comparar dos objetos de la clase de plantilla [Container](../standard-library/sample-container-class.md).
 
@@ -38,8 +38,8 @@ bool operator==(
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve `left.` [tamaño](../standard-library/container-class-size.md) ` == right.size && equal(left.` [comenzar](../standard-library/container-class-begin.md)`, left.`[final](../standard-library/container-class-end.md)`, right.begin)`.
+Devuelve `left.` [el](../standard-library/container-class-size.md) [final](../standard-library/container-class-end.md)del [Inicio](../standard-library/container-class-begin.md).`, left.``, right.begin)` ` == right.size && equal(left.`
 
 ## <a name="see-also"></a>Vea también
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246736"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454481"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
@@ -22,7 +22,7 @@ Define la clase de plantilla de contenedores deque y varias plantillas auxiliare
 **Encabezado**: \<deque>
 
 > [!NOTE]
-> El \<deque > biblioteca también utiliza el `#include <initializer_list>` instrucción.
+> La \<Biblioteca > de deque también utiliza `#include <initializer_list>` la instrucción.
 
 ## <a name="members"></a>Miembros
 
@@ -51,6 +51,6 @@ Define la clase de plantilla de contenedores deque y varias plantillas auxiliare
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

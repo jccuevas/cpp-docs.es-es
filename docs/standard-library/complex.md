@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244685"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449436"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Define la clase de plantilla contenedor `complex` y sus plantillas auxiliares.
+Define la clase `complex` de plantilla de contenedor y sus plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -28,17 +28,17 @@ Define la clase de plantilla contenedor `complex` y sus plantillas auxiliares.
 
 Un número complejo es un par ordenado de números reales. En términos puramente geométricos, el plano complejo es el plano real y bidimensional. Las cualidades especiales del plano complejo que lo diferencian del plano real se deben a que tiene una estructura algebraica adicional. Esta estructura algebraica tiene dos operaciones fundamentales:
 
-- Adición, definida como (*un*, *b*) + (*c*, *d.* ) = (*un* + *c* , *b* + *d.* )
+- Suma definida como (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)
 
-- Multiplicación definida como (*un*, *b*) \* (*c*, *d.* ) = (*ac*  -  *bd*, *ad* + *bc*)
+- Multiplicación definida como (*a*, *b*) \* (*c*, *d*) = (*BD*de*AC* - ,*BC*de *ad* + )
 
 El conjunto de números complejos con las operaciones de suma compleja y multiplicación compleja son un campo en el sentido algebraico estándar:
 
 - Las operaciones de suma y multiplicación son conmutativas y asociativas, y la multiplicación se distribuye sobre la suma exactamente como lo hace con la suma y multiplicación reales en el campo de los números reales.
 
-- El número complejo (0, 0) es la identidad aditiva y (1, 0) es la identidad multiplicativa.
+- El número complejo (0,0) es la identidad aditiva y (1,0) es la identidad multiplicativa.
 
-- El inverso aditivo de un número complejo (*un*, *b*) es (-*un*, -*b*) y el inverso multiplicativo de todos estos números complejos excepto (0, 0) es
+- El inverso aditivo de un número complejo (*a*, *b*) es (-*a*,-*b*) y el inverso multiplicativo de todos estos números complejos excepto (0, 0) es
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
@@ -46,15 +46,15 @@ Mediante la representación de un número complejo *z* = (*una*, *b*) en el form
 
    (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* = -4 + 7*i*
 
-El sistema de números complejos es un campo, pero no es un campo ordenado. No hay ningún orden de los números complejos, como sucede con el campo de números reales y sus subconjuntos, por lo que las desigualdades no se puede aplicar a números complejos tal como están para números reales.
+El sistema de números complejos es un campo, pero no es un campo ordenado. No hay ningún orden de los números complejos como el campo de los números reales y sus subconjuntos, por lo que no se pueden aplicar desigualdades a los números complejos como si fueran números reales.
 
 Existen tres formas comunes de representar un número complejo *z*:
 
-- Cartesiana: *z* = *un* + *bi*
+- Cartesiano: *z* = a*BI*  + 
 
 - Polar: *z* = *r* (cos *p* + *i* sen *p*)
 
-- Exponencial: *z* = *r* \* *e*<sup>*ip*</sup>
+- Exponencial: *z* = *r* \* *e*<sup>*IP*</sup>
 
 Los términos usados en estas representaciones estándar de un número complejo se conocen como se indica a continuación:
 
@@ -64,9 +64,9 @@ Los términos usados en estas representaciones estándar de un número complejo 
 
 - El módulo o valor absoluto de un número complejo *r*.
 
-- El ángulo de fase o argumento *p* en radianes.
+- El argumento o el ángulo de fase *p* en radianes.
 
-A menos que se especifique lo contrario, las funciones que pueden devolver varios valores se deben devolver un valor principal de sus argumentos mayor que - π y menor que o igual a + π mantenerlos solo con valores. Todos los ángulos deben expresarse en radianes, donde hay 2π radianes (360 grados) en un círculo.
+A menos que se especifique lo contrario, las funciones que pueden devolver varios valores deben devolver un valor de entidad de seguridad para sus argumentos mayores que-π y menor o igual que + π para mantenerlos con un solo valor. Todos los ángulos deben expresarse en radianes, donde hay 2π radianes (360 grados) en un círculo.
 
 ## <a name="members"></a>Miembros
 
@@ -117,9 +117,9 @@ A menos que se especifique lo contrario, las funciones que pueden devolver vario
 
 |||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|La clase de plantilla especializada de forma explícita describe un objeto que almacena un par ordenado de objetos, ambos de tipo **doble**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|
-|[complex\<float>](../standard-library/complex-float.md)|La clase de plantilla especializada de forma explícita describe un objeto que almacena un par ordenado de objetos, ambos de tipo **float**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|
-|[complex\<long double>](../standard-library/complex-long-double.md)|La clase de plantilla especializada de forma explícita describe un objeto que almacena un par ordenado de objetos, ambos de tipo **long double**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|
+|[complex\<double>](../standard-library/complex-double.md)|La clase de plantilla especializada explícitamente describe un objeto que almacena un par ordenado de objetos, ambos de tipo **Double**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|
+|[complex\<float>](../standard-library/complex-float.md)|La clase de plantilla especializada explícitamente describe un objeto que almacena un par ordenado de objetos, ambos de tipo **float**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|
+|[complex\<long double>](../standard-library/complex-long-double.md)|La clase de plantilla especializada explícitamente describe un objeto que almacena un par ordenado de objetos, ambos de tipo **Long Double**, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.|
 |[complex](../standard-library/complex-class.md)|Clase de plantilla que describe un objeto que se usa para representar el sistema de números complejos y realizar operaciones aritméticas complejas.|
 
 ### <a name="literals"></a>Literales
@@ -128,11 +128,11 @@ El encabezado \<complex> define los [literales definidos por el usuario](../cpp/
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Devuelve: `complex<long double>{0.0L, static_cast<long double>(d)}`|
-|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Devuelve: `complex<double>{0.0, static_cast<double>(d)}`.|
-|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Devuelve: `complex<float>{0.0f, static_cast<float>(d)}`.|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Devuelve`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Devuelve: `complex<double>{0.0, static_cast<double>(d)}`.|
+|`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|Devuelve: `complex<float>{0.0f, static_cast<float>(d)}`.|
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

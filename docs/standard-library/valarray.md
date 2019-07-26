@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246655"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448336"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -24,11 +24,11 @@ Define la clase de plantilla valarray y numerosas funciones y clases de plantill
 **Espacio de nombres:** std
 
 > [!NOTE]
-> El \<valarray > biblioteca usa la ' #include < initializer_list >' instrucción.
+> La \<Biblioteca > de valarray utiliza la instrucción ' #include < initializer_list > '.
 
 ## <a name="remarks"></a>Comentarios
 
-A estas funciones y clases de plantilla se les permite una latitud inusual con el fin de mejorar el rendimiento. En concreto, cualquier función que devuelve el tipo `valarray<T1>` puede devolver un objeto de algún otro tipo T2. En ese caso, cualquier función que acepta uno o más argumentos de tipo `valarray<T2>` debe tener sobrecargas que acepten combinaciones arbitrarias de esos argumentos, cada uno de ellos se sustituirá por un argumento de tipo T2.
+A estas funciones y clases de plantilla se les permite una latitud inusual con el fin de mejorar el rendimiento. En concreto, cualquier función que `valarray<T1>` devuelva un tipo puede devolver un objeto de algún otro tipo T2. En ese caso, cualquier función que acepte uno o más argumentos de tipo `valarray<T2>` debe tener sobrecargas que acepten combinaciones arbitrarias de esos argumentos, y cada uno de ellos se reemplazaría por un argumento de tipo T2.
 
 ## <a name="members"></a>Miembros
 
@@ -89,15 +89,15 @@ A estas funciones y clases de plantilla se les permite una latitud inusual con e
 |[mask_array (Clase)](../standard-library/mask-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre matrices de subconjuntos.|
 |[slice (Clase)](../standard-library/slice-class.md)|Clase de utilidad para valarray que se usa para definir subconjuntos unidimensionales de tipo vector de una valarray.|
 |[slice_array (Clase)](../standard-library/slice-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos de segmentos proporcionando operaciones entre matrices de subconjuntos definidas por el segmento de una valarray.|
-|[valarray (Clase)](../standard-library/valarray-class.md)|La clase de plantilla describe un objeto que controla una secuencia de elementos de tipo `Type` que se almacenan como una matriz y diseñado para realizar operaciones matemáticas a alta velocidad, optimizadas para ofrecer un alto rendimiento.|
+|[valarray (Clase)](../standard-library/valarray-class.md)|La clase de plantilla describe un objeto que controla una secuencia de elementos de `Type` tipo que se almacenan como una matriz y se diseñan para realizar operaciones matemáticas de alta velocidad, optimizadas para el rendimiento computacional.|
 
 ### <a name="specializations"></a>Especializaciones
 
 |||
 |-|-|
-|[valarray\<bool> (clase)](../standard-library/valarray-bool-class.md)|Una versión especializada de la clase de plantilla valarray\<**tipo**> a elementos de tipo **bool**.|
+|[valarray\<bool> (clase)](../standard-library/valarray-bool-class.md)|Una versión especializada de la clase de plantilla\<valarray**Type**> a elementos de tipo **bool**.|
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

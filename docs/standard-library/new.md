@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243550"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457690"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -33,7 +33,7 @@ Algunas de las funciones declaradas en este encabezado son reemplazables. La imp
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Proporciona un objeto que se usará como un argumento para el **nothrow** versiones de **nueva** y **eliminar**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Proporciona un objeto que se va a usar como argumento para  las versiones nothrow de **New** y **Delete**.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -48,7 +48,7 @@ Algunas de las funciones declaradas en este encabezado son reemplazables. La imp
 |||
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
-|[Lave](../standard-library/new-functions.md#launder)||
+|[blanqueo](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Instala una función de usuario que se llama cuando el nuevo controlador no puede asignar memoria.|
 
 ### <a name="operators"></a>Operadores
@@ -76,5 +76,5 @@ Algunas de las funciones declaradas en este encabezado son reemplazables. La imp
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

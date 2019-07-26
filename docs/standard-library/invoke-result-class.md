@@ -9,16 +9,16 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404856"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447639"
 ---
 # <a name="invokeresult-class"></a>Clase invoke_result
 
-Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificado en tiempo de compilación. Agregado en C ++ 17.
+Determina el tipo de valor devuelto del tipo al que se puede llamar que toma los tipos de argumento especificados en tiempo de compilación. Agregado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,15 +33,15 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>Parámetros
 
-*Callable*<br/>
+*Llamadas*\
 El tipo que se puede llamar para la consulta.
 
-*Args*<br/>
+*Args*\
 Los tipos de la lista de argumentos para el tipo que se puede llamar para la consulta.
 
 ## <a name="remarks"></a>Comentarios
 
-Use esta plantilla para determinar el tipo de resultado de *Callable*(*Args*...) en tiempo de compilación, donde *Callable* y todos los tipos de *Args* son cualquier tipo completa, una matriz de límite desconocido o una posiblemente cv calificado `void`. El `type` el tipo de valor devuelto de los nombres de miembro de la clase de plantilla *Callable* cuando se invoca utilizando los argumentos *Args*... El `type` sólo se define un miembro si *Callable* se puede llamar cuando se invoca utilizando los argumentos *Args*... en un contexto no evaluado. En caso contrario, la clase de plantilla no tiene ningún miembro `type`, lo que permite SFINAE pruebas en un conjunto determinado de tipos de argumento en tiempo de compilación.
+Utilice esta plantilla para determinar el tipo de resultado de Callable (*args*...) en tiempo de compilación, donde se *puede llamar* a y todos los tipos de *args* son de tipo completo, una matriz de límite desconocido `void`o un posible calificado con la VC. El `type` miembro de la clase de plantilla denomina el tipo de valor devuelto al que se *puede llamar* cuando se invoca mediante los argumentos *args*.... El `type` miembro solo se define si  se puede llamar a Callable cuando se invoca mediante los argumentos *args*... en un contexto no evaluado. De lo contrario, la clase de plantilla `type`no tiene ningún miembro, lo que permite pruebas SFINAE en un conjunto determinado de tipos de argumento en tiempo de compilación.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,5 +51,5 @@ Use esta plantilla para determinar el tipo de resultado de *Callable*(*Args*...)
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)
