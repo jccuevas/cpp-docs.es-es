@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
-ms.openlocfilehash: 366b40af45c57d058d918c4c2f21d1b2ba486d35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44de1f1fae1ea542aa247c0b39f04ee6bbd6308a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217331"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455904"
 ---
 # <a name="isnothrowdestructible-class"></a>Clase is_nothrow_destructible
 
@@ -26,12 +26,12 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo puede destruir y el destructor se sabe que el compilador no se inicia. En caso contrario, es False.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo puede destruir y el compilador sabe que no se produce el destructor. En caso contrario, es False.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo pued
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)
