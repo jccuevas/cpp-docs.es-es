@@ -5,24 +5,24 @@ helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 421930088dcbf9762d50b5af37d994b9008890eb
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222212"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606380"
 ---
 # <a name="compiler-com-support"></a>Compatibilidad con COM del compilador
 
 ## <a name="microsoft-specific"></a>Específicos de Microsoft
 
-Microsoft C++ directamente, el compilador pueda leer las bibliotecas de tipos de componente objeto COM (modelo) y traducir el contenido en C++ código fuente que puede incluirse en la compilación. Existen extensiones de lenguaje disponibles para facilitar la programación COM en el cliente.
+El compilador de Microsoft C++ puede leer directamente bibliotecas de tipos de modelo de objetos componentes (com C++ ) y traducir el contenido en código fuente que se puede incluir en la compilación. Las extensiones de lenguaje están disponibles para facilitar la programación COM en el lado cliente de las aplicaciones de escritorio.
 
-Mediante el uso de la [directiva de preprocesador #import](../preprocessor/hash-import-directive-cpp.md), el compilador puede leer una biblioteca de tipos y convertir las interfaces en un archivo de encabezado de C++ que describe el COM como clases. Existe un conjunto de atributos `#import` disponible para el control por parte del usuario del contenido de los archivos de encabezado de biblioteca de tipos resultantes.
+Mediante el uso de la Directiva de preprocesador de [#import](../preprocessor/hash-import-directive-cpp.md), el compilador puede leer una biblioteca de C++ tipos y convertirla en un archivo de encabezado que describe las interfaces com como clases. Existe un conjunto de atributos `#import` disponible para el control por parte del usuario del contenido de los archivos de encabezado de biblioteca de tipos resultantes.
 
-Puede usar el [__declspec](../cpp/declspec.md) atributo extendido [uuid](../cpp/uuid-cpp.md) para asignar un identificador único global (GUID) a un objeto COM. La palabra clave [__uuidof](../cpp/uuidof-operator.md) puede utilizarse para extraer el GUID asociado a un objeto COM. Otro **__declspec** atributo, [propiedad](../cpp/property-cpp.md), puede utilizarse para especificar el `get` y `set` métodos para un miembro de datos de un objeto COM.
+Puede usar el [UUID](../cpp/uuid-cpp.md) del atributo extendido [_ _ declspec](../cpp/declspec.md) para asignar un identificador único global (GUID) a un objeto com. La palabra clave _ _ [uuidof](../cpp/uuidof-operator.md) se puede usar para extraer el GUID asociado a un objeto com. Otro atributo **_ _ declspec** , [propiedad](../cpp/property-cpp.md), se puede utilizar para `get` especificar `set` los métodos y para un miembro de datos de un objeto com.
 
-Se proporciona un conjunto de clases y funciones globales de soporte técnico de COM para admitir la `VARIANT` y `BSTR` tipos, implementar punteros inteligentes y encapsular el objeto de error iniciado por `_com_raise_error`:
+Se proporciona un conjunto de funciones y clases globales que admiten com para `VARIANT` admitir `BSTR` los tipos y, implementar punteros inteligentes y encapsular el objeto de error `_com_raise_error`producido por:
 
 - [Funciones globales COM del compilador](../cpp/compiler-com-global-functions.md)
 
