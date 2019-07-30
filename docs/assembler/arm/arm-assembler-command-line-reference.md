@@ -26,7 +26,7 @@ Una combinación de cero o más de las siguientes acciones:
 - **-errors** *filename*<br/>
    Redirigir los mensajes de error y advertencia para *filename*.
 
-- **-i** *dir*[**;**<em>dir</em>]<br/>
+- **-i** *dir*[ **;** <em>dir</em>]<br/>
    Agregue los directorios especificados en la ruta de búsqueda.
 
 - **-predefinir** *directiva*<br/>
