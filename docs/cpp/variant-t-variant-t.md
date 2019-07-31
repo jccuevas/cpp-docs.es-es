@@ -208,7 +208,7 @@ Un **__int64 sin signo** valor que se copiará en el nuevo `_variant_t` objeto.
 
 - **_variant_t (VARIANT &** *varSrc* **, bool**`fCopy` **)** construye un `_variant_t` objeto a partir de una máquina `VARIANT` objeto. Si *fCopy* es **false**, **VARIANT** objeto se adjunta al nuevo objeto sin crear una copia.
 
-- **_variant_t (short***sSrc* **, VARTYPE**`vtSrc` **= VT_I2)** construye un `_variant_t` objeto de tipo VT_I2 o VT_BOOL desde un **corto** valor entero. Cualquier otro `VARTYPE` produce un error E_INVALIDARG.
+- **_variant_t (short** *sSrc* **, VARTYPE**`vtSrc` **= VT_I2)** construye un `_variant_t` objeto de tipo VT_I2 o VT_BOOL desde un **corto** valor entero. Cualquier otro `VARTYPE` produce un error E_INVALIDARG.
 
 - **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc` **= VT_I4)** construye un `_variant_t` objeto de tipo VT_I4, VT_BOOL o VT_ERROR desde un **largo**  valor entero. Cualquier otro `VARTYPE` produce un error E_INVALIDARG.
 
