@@ -16,7 +16,7 @@ En este artículo proporciona información de línea de comandos sobre el ensamb
 ## <a name="syntax"></a>Sintaxis
 
 > **armasm** [*opciones*] *sourcefile* *objectfile*
-> **armasm** [*opciones *] **-o** *objectfile* *sourcefile*
+> **armasm** [*opciones*] **-o** *objectfile* *sourcefile*
 
 ### <a name="parameters"></a>Parámetros
 
