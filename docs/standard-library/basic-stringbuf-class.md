@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0445c2f8868fc9f2863ad4a2a12cc00261546c75
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409764"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447842"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf (Clase)
 
@@ -51,13 +51,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*Elem*<br/>
+*Elem*\
 Tipo de elemento básico de la cadena.
 
-*Tr*<br/>
+*Anticipo*\
 Rasgos de caracteres especializados en el elemento básico de la cadena.
 
 ## <a name="remarks"></a>Comentarios
@@ -72,24 +72,24 @@ Un objeto de clase basic_stringbuf< `Elem`, `Tr`, `Alloc`> almacena una copia de
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[basic_stringbuf](#basic_stringbuf)|Construye un objeto de tipo `basic_stringbuf`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[allocator_type](#allocator_type)|El tipo es un sinónimo del parámetro de plantilla *Alloc*.|
 |[char_type](#char_type)|Asocia un nombre de tipo al parámetro de plantilla *Elem*.|
-|[int_type](#int_type)|Hace que este tipo dentro de `basic_filebuf`del ámbito equivalga al tipo con el mismo nombre en el *Tr* ámbito.|
-|[off_type](#off_type)|Hace que este tipo dentro de `basic_filebuf`del ámbito equivalga al tipo con el mismo nombre en el *Tr* ámbito.|
-|[pos_type](#pos_type)|Hace que este tipo dentro de `basic_filebuf`del ámbito equivalga al tipo con el mismo nombre en el *Tr* ámbito.|
+|[int_type](#int_type)|Convierte este tipo dentro `basic_filebuf`del ámbito de su equivalente al tipo del mismo nombre en el ámbito *TR* .|
+|[off_type](#off_type)|Convierte este tipo dentro `basic_filebuf`del ámbito de su equivalente al tipo del mismo nombre en el ámbito *TR* .|
+|[pos_type](#pos_type)|Convierte este tipo dentro `basic_filebuf`del ámbito de su equivalente al tipo del mismo nombre en el ámbito *TR* .|
 |[traits_type](#traits_type)|Asocia un nombre de tipo al parámetro de plantilla *Tr*.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[overflow](#overflow)|Función virtual protegida a la que se puede llamar cuando se inserta un carácter nuevo en un búfer lleno.|
 |[pbackfail](#pbackfail)|La función miembro virtual protegida trata de colocar un elemento en el búfer de entrada y, después, convertirlo en el elemento actual (indicado por el siguiente puntero).|
@@ -128,17 +128,17 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Mode*<br/>
+*_Mode*\
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*<br/>
+*CAD*\
 Un objeto de tipo [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor almacena un puntero nulo en todos los punteros que controlan el búfer de entrada y el de salida. Para obtener más información, vea la sección Comentarios del tema [basic_streambuf (Clase)](../standard-library/basic-streambuf-class.md). También almacena *_modo* como el modo de stringbuf. Para obtener más información, vea la sección Comentarios del tema [basic_stringbuf (Clase)](../standard-library/basic-stringbuf-class.md).
+El primer constructor almacena un puntero nulo en todos los punteros que controlan el búfer de entrada y el de salida. Para obtener más información, vea la sección Comentarios del tema [basic_streambuf (Clase)](../standard-library/basic-streambuf-class.md). También almacena *_Mode* como el modo stringbuf. Para obtener más información, vea la sección Comentarios del tema [basic_stringbuf (Clase)](../standard-library/basic-stringbuf-class.md).
 
-El segundo constructor asigna una copia de la secuencia controlada por el objeto de cadena *str*. Si `_Mode & ios_base::in` es distinto de cero, establece el búfer de entrada para que comience a leer al inicio de la secuencia. Si `_Mode & ios_base::out` es distinto de cero, establece el búfer de salida para que comience a escribir al inicio de la secuencia. También almacena *_modo* como el modo de stringbuf. Para obtener más información, vea la sección Comentarios del tema [basic_stringbuf (Clase)](../standard-library/basic-stringbuf-class.md).
+El segundo constructor asigna una copia de la secuencia controlada por el objeto de cadena *Str*. Si `_Mode & ios_base::in` es distinto de cero, establece el búfer de entrada para que comience a leer al inicio de la secuencia. Si `_Mode & ios_base::out` es distinto de cero, establece el búfer de salida para que comience a escribir al inicio de la secuencia. También almacena *_Mode* como el modo stringbuf. Para obtener más información, vea la sección Comentarios del tema [basic_stringbuf (Clase)](../standard-library/basic-stringbuf-class.md).
 
 ## <a name="char_type"></a>  basic_stringbuf::char_type
 
@@ -150,7 +150,7 @@ typedef Elem char_type;
 
 ## <a name="int_type"></a>  basic_stringbuf::int_type
 
-Hace que este tipo dentro del ámbito de basic_filebuf equivalga al tipo con el mismo nombre en el `Tr` ámbito.
+Convierte este tipo en el ámbito de basic_filebuf's equivalente al tipo del mismo nombre en el `Tr` ámbito.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -158,7 +158,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="off_type"></a>  basic_stringbuf::off_type
 
-Hace que este tipo dentro del ámbito de basic_filebuf equivalga al tipo con el mismo nombre en el `Tr` ámbito.
+Convierte este tipo en el ámbito de basic_filebuf's equivalente al tipo del mismo nombre en el `Tr` ámbito.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -174,16 +174,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta*<br/>
+*_Meta*\
 El carácter que se va a insertar en el búfer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función no se ejecuta correctamente, devuelve `traits_type::eof`. De lo contrario, devuelve **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Si la función no se ejecuta correctamente, devuelve `traits_type::eof`. De lo contrario, devuelve **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Comentarios
 
-Si  *\_Meta* no son iguales a **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la función miembro virtual protegida intenta insertar el elemento  **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) en el búfer de salida. Puede hacerlo de varias maneras:
+*Si\_meta* no es igual a **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof), la función miembro virtual protegida intenta insertar el elemento **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_meta*) en el búfer de salida. Puede hacerlo de varias maneras:
 
 - Si está disponible una posición de escritura, puede almacenar el elemento en la posición de escritura e incrementar el puntero siguiente para el búfer de salida.
 
@@ -199,16 +199,16 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parámetros
 
-*_Meta*<br/>
+*_Meta*\
 El carácter que se va a insertar en el búfer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función no se ejecuta correctamente, devuelve `traits_type::eof`. De lo contrario, devuelve **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Si la función no se ejecuta correctamente, devuelve `traits_type::eof`. De lo contrario, devuelve **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Comentarios
 
-Si *_Meta* igual a **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), el elemento que se va a devolver es realmente el ya está en el flujo por delante del elemento actual. De lo contrario, ese elemento se sustituye por **bytes** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*). La función puede devolver un elemento de distintas maneras:
+Si *_Meta* compara igual a **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof), el elemento que se va a devolver es realmente el que ya está en la secuencia antes del elemento actual. De lo contrario, ese elemento se sustituye por **bytes** = **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*). La función puede devolver un elemento de distintas maneras:
 
 - Si está disponible una posición de devolución y el elemento almacenado es igual a byte, puede disminuir el puntero siguiente para el búfer de entrada.
 
@@ -216,7 +216,7 @@ Si *_Meta* igual a **traits_type::**[eof](../standard-library/char-traits-struct
 
 ## <a name="pos_type"></a>  basic_stringbuf::pos_type
 
-Hace que este tipo dentro del ámbito de basic_filebuf equivalga al tipo con el mismo nombre en el `Tr` ámbito.
+Convierte este tipo en el ámbito de basic_filebuf's equivalente al tipo del mismo nombre en el `Tr` ámbito.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -235,13 +235,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
-La posición para buscar relativa a *_Way*. Para obtener más información, vea [basic_stringbuf::off_type](#off_type).
+*_Off*\
+Posición que se va a buscar en relación con *_Way*. Para obtener más información, vea [basic_stringbuf::off_type](#off_type).
 
-*_Way*<br/>
+*_Way*\
 El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Mode*<br/>
+*_Mode*\
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura. Para obtener más información, vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -254,13 +254,13 @@ Para un objeto de la clase `basic_stringbuf<Elem, Tr, Alloc>`, una posición de 
 
 La nueva posición se determina de la siguiente forma:
 
-- Si `_Way`  ==  `ios_base::beg`, la nueva posición es el principio del flujo más *_Off*.
+- Si `_Way` es == ,la nueva posición es el principio del flujo más *_Off.* `ios_base::beg`
 
-- Si `_Way`  ==  `ios_base::cur`, la nueva posición es la posición actual del flujo más *_Off*.
+- Si `_Way` es == ,la nueva posición es la posición de la secuencia actual más *_Off.* `ios_base::cur`
 
-- Si `_Way`  ==  `ios_base::end`, la nueva posición es el final del flujo más *_Off*.
+- Si `_Way` es == ,la nueva posición es el final de la secuencia más *_Off.* `ios_base::end`
 
-Si `_Mode & ios_base::in` es distinto de cero, la función modifica la siguiente posición de lectura en el búfer de entrada. Si `_Mode & ios_base::out` es distinto de cero, la función modifica la siguiente posición de escritura en el búfer de salida. Para que un flujo se vea afectado, debe existir su búfer. Para que una operación de posicionamiento se realice correctamente, la posición del flujo resultante debe encontrarse dentro de la secuencia controlada. Si la función afecta a ambas posiciones del flujo, *_Way* debe ser `ios_base::beg` o `ios_base::end` y ambos flujos se colocan en el mismo elemento. En caso contrario (o si no se ve afectada ninguna posición), se produce un error en la operación de posicionamiento.
+Si `_Mode & ios_base::in` es distinto de cero, la función modifica la siguiente posición de lectura en el búfer de entrada. Si `_Mode & ios_base::out` es distinto de cero, la función modifica la siguiente posición de escritura en el búfer de salida. Para que un flujo se vea afectado, debe existir su búfer. Para que una operación de posicionamiento se realice correctamente, la posición del flujo resultante debe encontrarse dentro de la secuencia controlada. Si la función afecta a ambas posiciones de flujo, *_Way* `ios_base::beg` debe `ios_base::end` ser o y ambos flujos se colocan en el mismo elemento. En caso contrario (o si no se ve afectada ninguna posición), se produce un error en la operación de posicionamiento.
 
 Si la función modifica correctamente una o las dos posiciones del flujo, devuelve la posición del flujo resultante. De lo contrario, se produce un error y devuelve una posición de flujo no válida.
 
@@ -274,10 +274,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sp*<br/>
+*_Sp*\
 La posición que se va a buscar.
 
-*_Mode*<br/>
+*_Mode*\
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -302,7 +302,7 @@ void str(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Newstr*<br/>
+*_Newstr*\
 La nueva cadena.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -375,11 +375,11 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función no se puede ejecutar correctamente, devuelve **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). De lo contrario, devuelve el elemento actual en el flujo de entrada, que está convertido.
+Si la función no se puede ejecutar correctamente, devuelve **traits_type::** [eof](../standard-library/char-traits-struct.md#eof). De lo contrario, devuelve el elemento actual en el flujo de entrada, que está convertido.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida intenta extraer el elemento actual `byte` del búfer de entrada, avanzar la posición de la secuencia actual y devolver el elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bytes**). Puede hacerlo en un aspecto: Si una posición de lectura está disponible, toma `byte` como el elemento almacenado en la posición de lectura y avanza el puntero siguiente del búfer de entrada.
+La función miembro virtual protegida `byte` intenta extraer el elemento actual del búfer de entrada, avanzar la posición de la secuencia actual y devolver el elemento como **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**). Puede hacerlo de una manera: Si hay una posición de lectura disponible, toma `byte` como el elemento almacenado en la posición de lectura y avanza el puntero siguiente para el búfer de entrada.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 
@@ -391,7 +391,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parámetros
 
-*other*<br/>
+*distinta*\
 El parámetro basic_stringbuf cuyo contenido se intercambiará con este basic_stringbuf.
 
 ### <a name="remarks"></a>Comentarios
@@ -406,13 +406,13 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parámetros
 
-*other*<br/>
+*distinta*\
 Un basic_stringbuf cuyo contenido, incluidas las características de configuración regional, se asignará al stringbuf del lado izquierdo del operador.
 
 ### <a name="remarks"></a>Comentarios
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programación con iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)
