@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313393"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661538"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>Sujet
 
 Compara un valor con un límite superior e inferior, y devuelve una referencia al valor si está entre los límites, o una referencia al límite superior o inferior si el valor está por encima o por debajo de ellos, respectivamente.
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 En un intervalo de elementos, copia los elementos que son **true** para la condición especificada.
@@ -894,6 +909,61 @@ La función de plantilla evalúa
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 una vez por cada `N` del intervalo `[0, last - first)`, con los valores de `N` incrementados de forma estricta empezando por el valor inferior. Si *dest* y *First* designan regiones de almacenamiento, *dest* no debe estar en el intervalo `[ first, last )`.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -4783,7 +4853,7 @@ Valores devueltos
 
 La primera función de plantilla devuelve
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
 
 La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `pred(X, Y)`.
 
@@ -5514,7 +5584,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 Los elementos son equivalentes, pero no necesariamente iguales, si ninguno es menor que el otro. El `sort` algoritmo no es estable y no garantiza que se conserve la ordenación relativa de los elementos equivalentes. El algoritmo `stable_sort` conserva esta ordenación original.
 
-La complejidad media de ordenación parcial es O`last`((- - `first`)`sortEnd`registro (`first`)).
+La complejidad media de ordenaciónparcial es O`last`((- - `first`)`sortEnd`registro (`first`)).
 
 ### <a name="example"></a>Ejemplo
 
@@ -5775,7 +5845,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, `pred( a, b )` si ambos son `pred( b, a )` false y es false, donde *Pred* es el predicado especificado por el parámetro. El `partition` algoritmo no es estable y no garantiza que se conserve la ordenación relativa de los elementos equivalentes. El algoritmo `stable_partition` conserva esta ordenación original.
 
-La complejidad es lineal: hay `(last - first)` aplicaciones preparadas y, a lo sumo  `(last - first)/2` , intercambios.
+La complejidad es lineal: hay `(last - first)` aplicaciones preparadas y, a lo sumo `(last - first)/2` , intercambios.
 
 ### <a name="example"></a>Ejemplo
 
