@@ -1,6 +1,6 @@
 ---
 title: 'Sintaxis de especificación de formato: Funciones printf y wprintf'
-ms.date: 07/02/2019
+ms.date: 07/30/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 95573821ff2b213765184e7c121e693e1eb0ac0a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552254"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682356"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
-Las distintas funciones `printf` y `wprintf` toman una cadena de formato y argumentos opcionales y generan una secuencia de caracteres con formato para la salida. La cadena de formato contiene cero o más *directivas*, que son caracteres literales para la salida o *especificaciones de conversión* codificadas que describen cómo dar formato a un argumento en la salida. En este tema se describe la sintaxis utilizada para codificar las especificaciones de conversión en la cadena de formato. Para obtener una lista de estas funciones, vea [E/S de secuencia](../c-runtime-library/stream-i-o.md).
+Las distintas funciones `printf` y `wprintf` toman una cadena de formato y argumentos opcionales y generan una secuencia de caracteres con formato para la salida. La cadena de formato contiene cero o más *directivas*, que son caracteres literales para la salida o *especificaciones de conversión* codificadas que describen cómo dar formato a un argumento en la salida. En este artículo se describe la sintaxis utilizada para codificar las especificaciones de conversión en la cadena de formato. Para obtener una lista de estas funciones, vea [E/S de secuencia](../c-runtime-library/stream-i-o.md).
 
 Una especificación de conversión consta de campos opcionales y obligatorios con este formato:
 
@@ -62,7 +62,7 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**u**|Integer|Entero decimal sin signo.|
 |**x**|Integer|Entero hexadecimal sin signo; usa “abcdef”.|
 |**X**|Integer|Entero hexadecimal sin signo; usa “ABCDEF”.|
-|**e**|Punto flotante|Valor con signo que tiene el formato [-]*d.dddd*__e±__*dd*[*d*], donde *d* es un dígito decimal, *dddd* es uno o varios dígitos decimales en función de la precisión especificada, o seis de manera predeterminada, y *dd*[*d*] son dos o tres dígitos decimales en función del [formato de salida](../c-runtime-library/set-output-format.md) y el tamaño del exponente.|
+|**e**|Punto flotante|Valor con signo que tiene el formato [-]*d.dddd*__e±__*dd*\[*d*], donde *d* es un dígito decimal, *dddd* es uno o varios dígitos decimales en función de la precisión especificada, o seis de manera predeterminada, y *dd*\[*d*] es dos o tres dígitos decimales en función del [formato de salida](../c-runtime-library/set-output-format.md) y el tamaño del exponente.|
 |**E**|Punto flotante|Es idéntico al formato de **e** salvo que el exponente se introduce mediante **E** en lugar de **e**.|
 |**f**|Punto flotante|Valor con signo que tiene el formato [-]*dddd* __.__ *dddd*, donde *dddd* es uno o varios dígitos decimales. El número de dígitos que hay delante del separador decimal depende de la magnitud del número y el número de dígitos que hay detrás del separador decimal depende de la precisión solicitada, seis de forma predeterminada.|
 |**F**|Punto flotante|Idéntico al formato **f** salvo que la salida infinito y nan se ponen en mayúsculas.|
@@ -70,7 +70,7 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**G**|Punto flotante|Es idéntico al formato de **g**, salvo que el exponente se introduce mediante **E** en lugar de **e** (cuando corresponda).|
 |**a**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0x*h.hhhh*__p±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras minúsculas) de la mantisa y *dd* corresponde al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|
 |**A**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0X*h.hhhh*__P±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras mayúsculas) de la mantisa y *dd* corresponde al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|
-|**n**|Puntero para entero|Número de caracteres que se han escrito correctamente en el flujo o búfer. Este valor se almacena en el entero cuya dirección se indica como argumento. El tamaño del entero apuntado se puede controlar mediante un prefijo de especificación del tamaño de argumento. El especificador **n** está deshabilitado de forma predeterminada; para información, consulte la nota de seguridad importante.|
+|**n**|Puntero para entero|Número de caracteres que se han escrito correctamente en el flujo o búfer. Este valor se almacena en el entero cuya dirección se indica como argumento. El tamaño del entero al que se apunta se puede controlar mediante un prefijo de especificación del tamaño de argumento. El especificador **n** está deshabilitado de forma predeterminada; para información, consulte la nota de seguridad importante.|
 |**p**|Tipo de puntero|Muestra el argumento como una dirección de dígitos hexadecimales.|
 |**s**|String|Cuando se usa con funciones `printf`, especifica una cadena de caracteres de byte único o multibyte; cuando se usa con funciones `wprintf`, especifica una cadena de carácter ancho. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
 |**S**|String|Cuando se usa con funciones `printf`, especifica una cadena de carácter ancho; cuando se usa con funciones `wprintf`, especifica una cadena de caracteres de byte único o multibyte. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
@@ -96,7 +96,7 @@ Antes de Visual Studio 2015, CRT utilizaba un formato diferente no estándar par
 |Indefinido (igual que un valor NaN simple)|*dígitos* `.#IND` *dígitos aleatorios*|
 |NaN|*dígitos* `.#NAN` *dígitos aleatorios*|
 
-Cualquiera de estas cadenas podía ir precedida de un signo y tener un formato ligeramente diferente según el ancho de campo y la precisión, a veces con efectos inusuales. Por ejemplo, `printf("%.2f\n", INFINITY)` imprimía `1.#J` porque #INF se “redondearía” a una precisión de 2 dígitos.
+Cualquiera de estas cadenas podía ir precedida de un signo y tener un formato ligeramente diferente según el ancho de campo y la precisión, a veces con efectos inusuales. Por ejemplo, `printf("%.2f\n", INFINITY)` imprimiría `1.#J` porque #INF se "redondearía" a una precisión de 2 dígitos.
 
 > [!NOTE]
 > Si el argumento correspondiente a `%s` o `%S`, o el campo `Buffer` del argumento que corresponde a `%Z`, es un puntero nulo, se mostrará "(null)".
@@ -131,13 +131,13 @@ El primer campo opcional en una especificación de conversión contiene *directi
 
 En una especificación de conversión, el campo de especificación de ancho opcional aparece después de cualquier carácter de *marcas* . El argumento *ancho* es un entero decimal no negativo que controla el número mínimo de caracteres que aparecerán en la salida. Si el número de caracteres en el valor de salida es menor que el ancho especificado, se agregan espacios en blanco a la izquierda o a la derecha de los valores, dependiendo de si se especifica la marca de alineación a la izquierda ( **-** ), hasta que se alcanza el ancho mínimo. Si *ancho* tiene como prefijo 0, se agregan ceros iniciales a las conversiones de entero y punto flotante hasta que se alcanza el ancho mínimo, excepto cuando la conversión sea a un infinito o NaN.
 
-La especificación de ancho nunca provoca el truncamiento de un valor. Si el número de caracteres del valor de salida es mayor que el ancho especificado, o si el argumento *ancho* no se proporciona, todos los caracteres del valor aparecen en la salida, sujeto a la especificación del argumento *precisión*.
+La especificación de ancho nunca provoca el truncamiento de un valor. Si el número de caracteres del valor de salida es mayor que el ancho especificado, o si el argumento *width* no se proporciona, todos los caracteres del valor son de salida, de acuerdo con la especificación del argumento *precision*.
 
 Si la especificación de ancho es un asterisco (`*`), un argumento `int` de la lista de argumentos proporciona el valor. El argumento *ancho* debe preceder al valor al que se asigna formato en la lista de argumentos, tal y como se muestra en este ejemplo:
 
-`printf("%0*f", 5, 3);  /* 00003 is output */`
+`printf("%0*d", 5, 3);  /* 00003 is output */`
 
-Una valor de *ancho* ausente o pequeño en una especificación de conversión no provoca el truncamiento de un valor de salida. Si el resultado de una conversión es más ancho que el valor de *ancho*, el campo se expande para incluir el resultado de la conversión.
+Si el valor de *width* es pequeño o no está disponible en una especificación de conversión, el valor de salida no se truncará. Si el resultado de una conversión es más ancho que el valor de *ancho*, el campo se expande para incluir el resultado de la conversión.
 
 <a name="precision"></a>
 
@@ -145,7 +145,7 @@ Una valor de *ancho* ausente o pequeño en una especificación de conversión no
 
 En una especificación de conversión, el tercer campo opcional es la especificación de precisión. Consta de un separador (,) seguido de un entero decimal no negativo que, según el tipo de conversión, especifica el número de caracteres de cadena, el número de posiciones decimales o el número de dígitos significativos que se van a generar.
 
-A diferencia de la especificación de ancho, la especificación de precisión puede provocar el truncamiento del valor de salida o el redondeo del valor de punto flotante. Si *precisión* se especifica como 0 y el valor que se va a convertir es 0, el resultado no es ninguna salida de caracteres, tal y como se muestra en este ejemplo:
+A diferencia de la especificación de ancho, la especificación de precisión puede provocar el truncamiento del valor de salida o el redondeo del valor de punto flotante. Si *precision* se establece en 0 y el valor que se va a convertir es 0, el resultado no es ninguna salida de caracteres, tal y como se muestra en este ejemplo:
 
 `printf( "%.0d", 0 );      /* No characters output */`
 
@@ -165,13 +165,13 @@ El carácter de *tipo* determina la interpretación de *precisión* o la precisi
 |**e**, **E**|La precisión especifica el número de dígitos que se almacenarán después del separador decimal. El último dígito impreso se redondea.|La precisión predeterminada es 6. Si *precisión* es 0 o no aparece un número detrás del punto (.), el punto decimal no se imprime.|
 |**f**, **F**|El valor de precisión especifica el número de dígitos que siguen al separador decimal. Si aparece un separador decimal, aparece al menos un dígito antes. El valor se redondea al número adecuado de dígitos.|La precisión predeterminada es 6. Si *precisión* es 0 o si no aparece un número detrás del punto (.), el punto decimal no se imprime.|
 |**g**, **G**|La precisión especifica el número máximo de dígitos significativos que se imprimen.|Se imprimen seis dígitos significativos y se truncan los ceros finales.|
-|**s**, **S**|La precisión especifica el número máximo de caracteres que se imprimen. Los caracteres que rebasen el valor de *precisión* no se imprimen.|Los caracteres se imprimen hasta que se encuentra un carácter nulo.|
+|**s**, **S**|La precisión especifica el número máximo de caracteres que se imprimen. Los caracteres que rebasen el valor de *precision* no se imprimen.|Los caracteres se imprimen hasta que se encuentra un carácter nulo.|
 
 <a name="size"></a>
 
 ## <a name="argument-size-specification"></a>Especificación del tamaño del argumento
 
-En una especificación de conversión, el campo *tamaño* es un modificador de longitud del argumento del especificador de conversión *tipo*. Los prefijos del campo *tamaño* para el campo *tipo*, que pueden ser **hh**, **h**, **j**, **l** (L minúscula), **L**, **ll**, **t**, **w**, **z**, **I** (i mayúscula), **I32** e **I64**, especifican el "tamaño" del argumento correspondiente (largo o corto, de 32 o de 64 bits, carácter de un solo byte o carácter ancho) en función del especificador de conversión que modifican. Estos prefijos de tamaño se usan con los caracteres de *tipo* de los grupos de funciones `printf` y `wprintf` para especificar la interpretación del tamaño de los argumentos, como se muestra en la tabla siguiente. El campo *tamaño* es opcional en algunos tipos de argumento. Cuando no se especifica ningún prefijo de tamaño, el formateador consume argumentos de entero (por ejemplo, `char`, `short`, `int` y `long` con signo o sin signo, y tipos de enumeración) como tipos `int` de 32 bits y los argumentos de punto flotante `float`, `double` y `long double` se consumen como tipos `double` de 64 bits. Esto coincide con las reglas de promoción de argumentos predeterminadas de las listas de argumentos variables. Para obtener más información acerca de la promoción de argumentos, consulte Ellipses and Default Arguments (Elipses y argumentos predeterminados) en [Postfix expressions](../cpp/postfix-expressions.md) (Expresiones Postfix). En los sistemas de 32 y 64 bits, la especificación de conversión de un argumento de entero de 64 bits debe incluir un prefijo de tamaño de **ll** o **I64**. De lo contrario, el comportamiento del formateador no queda definido.
+En una especificación de conversión, el campo *tamaño* es un modificador de longitud del argumento del especificador de conversión *tipo*. Los prefijos del campo *tamaño* para el campo *tipo*, que pueden ser **hh**, **h**, **j**, **l** (L minúscula), **L**, **ll**, **t**, **w**, **z**, **I** (i mayúscula), **I32** e **I64**, especifican el "tamaño" del argumento correspondiente (largo o corto, de 32 o de 64 bits, carácter de un solo byte o carácter ancho) en función del especificador de conversión que modifican. Estos prefijos de tamaño se usan con los caracteres de *tipo* de los grupos de funciones `printf` y `wprintf` para especificar la interpretación del tamaño de los argumentos, como se muestra en la tabla siguiente. El campo *tamaño* es opcional en algunos tipos de argumento. Cuando no se especifica ningún prefijo de tamaño, el formateador consume argumentos de entero (por ejemplo, `char`, `short`, `int` y `long` con signo o sin signo, y tipos de enumeración) como tipos `int` de 32 bits y los argumentos de punto flotante `float`, `double` y `long double` se consumen como tipos `double` de 64 bits. Este comportamiento coincide con las reglas de promoción de argumentos predeterminadas de las listas de argumentos variables. Para obtener más información acerca de la promoción de argumentos, consulte Ellipses and Default Arguments (Elipses y argumentos predeterminados) en [Postfix expressions](../cpp/postfix-expressions.md) (Expresiones Postfix). En los sistemas de 32 y 64 bits, la especificación de conversión de un argumento de entero de 64 bits debe incluir un prefijo de tamaño de **ll** o **I64**. De lo contrario, el comportamiento del formateador no queda definido.
 
 Algunos tipos tienen tamaños diferentes en código de 32 bits y de 64 bits. Por ejemplo, `size_t` es de 32 bits en el código compilado para x86 y de 64 bits en el código compilado para x64. Para crear código de formato independiente de la plataforma para los tipos de ancho variable, puede usar un modificador de tamaño de argumentos de ancho variable. Como alternativa, puede usar un modificador de tamaño de argumentos de 64 bits y promover explícitamente el tipo de argumentos de ancho variable a 64 bits. El modificador de tamaño de argumentos **I** (i mayúscula) específico de Microsoft controla los argumentos de entero de ancho variable, pero se recomiendan los modificadores **j**, **t** y **z** específicos del tipo para la portabilidad.
 
@@ -198,7 +198,7 @@ Los tipos `ptrdiff_t` y `size_t` son `__int32` o `unsigned __int32` en plataform
 
 En Visual C++, aunque `long double` es un tipo bien diferenciado, tiene la misma representación interna que `double`.
 
-Un especificador de tipo **hc** o **hC** es sinónimo de **c** en las funciones `printf` y de **C** en las funciones `wprintf`. Un especificador de tipo **lc**, **lC**, **wc** or **wC** es sinónimo de **C** en las funciones `printf` y de **c** en las funciones `wprintf`. Un especificador de tipo **hs** o **hS** es sinónimo de **s** en las funciones `printf` y de **S** en las funciones `wprintf`. Un especificador de tipo **ls**, **lS**, **ws** o **wS** es sinónimo de **S** en las funciones `printf` y de **s** en las funciones `wprintf`.
+Un especificador de tipo **hc** o **hC** es sinónimo de **c** en las funciones `printf` y de **C** en las funciones `wprintf`. Un especificador de tipo **lc**, **lC**, **wc** o **wC** es sinónimo de **C** en las funciones `printf` y de **c** en las funciones `wprintf`. Un especificador de tipo **hs** o **hS** es sinónimo de **s** en las funciones `printf` y de **S** en las funciones `wprintf`. Un especificador de tipo **ls**, **lS**, **ws** o **wS** es sinónimo de **S** en las funciones `printf` y de **s** en las funciones `wprintf`.
 
 > [!NOTE]
 > **Específico de Microsoft** Los prefijos del modificador de tamaño de argumento **I** (i mayúsculas), **I32**, **I64** y **w** son extensiones de Microsoft y no son compatibles con ISO C. El prefijo **h**, cuando se usa con datos de tipo `char`, y el prefijo **l** (l minúscula), cuando se usa con datos de tipo `double`, son extensiones de Microsoft.
