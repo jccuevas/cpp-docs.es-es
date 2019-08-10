@@ -1,5 +1,5 @@
 ---
-title: CPrivateObjectSecurityDesc (clase)
+title: Clase CPrivateObjectSecurityDesc
 ms.date: 11/04/2016
 f1_keywords:
 - CPrivateObjectSecurityDesc
@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: cc726892515ea38a559bdf182affa96f84be3449
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503301"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915808"
 ---
-# <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc (clase)
+# <a name="cprivateobjectsecuritydesc-class"></a>Clase CPrivateObjectSecurityDesc
 
 Esta clase representa un objeto de descriptor de seguridad de objeto privado.
 
@@ -33,31 +33,31 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|El constructor.|
 |[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|Llame a este método para convertir un descriptor de seguridad y las listas de control de acceso (ACL) en un formato que admite la propagación automática de entradas de control de acceso heredable (ACE).|
-|[CPrivateObjectSecurityDesc::Create](#create)|Llame a este método para asignar e inicializar un descriptor de seguridad autorelativo para el objeto privado creado por el Administrador de recursos que realiza la llamada.|
-|[CPrivateObjectSecurityDesc::Get](#get)|Llame a este método para recuperar información de descriptor de seguridad de un objeto privado.|
+|[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|Llame a este método para convertir un descriptor de seguridad y sus listas de control de acceso (ACL) a un formato que admita la propagación automática de entradas de control de acceso (ACE) heredables.|
+|[CPrivateObjectSecurityDesc::Create](#create)|Llame a este método para asignar e inicializar un descriptor de seguridad autorelativo para el objeto privado creado por el administrador de recursos que realiza la llamada.|
+|[CPrivateObjectSecurityDesc::Get](#get)|Llame a este método para recuperar información del descriptor de seguridad de un objeto privado.|
 |[CPrivateObjectSecurityDesc::Set](#set)|Llame a este método para modificar el descriptor de seguridad de un objeto privado.|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Operador de asignación.|
+|[operador =](#operator_eq)|Operador de asignación.|
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase, derivada de [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), proporciona métodos para crear y administrar el descriptor de seguridad de un objeto privado.
+Esta clase, que se deriva de [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), proporciona métodos para crear y administrar el descriptor de seguridad de un objeto privado.
 
-Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](/windows/desktop/SecAuthZ/access-control) en el SDK de Windows.
+Para obtener una introducción al modelo de control de acceso de Windows, consulte [Access Control](/windows/desktop/SecAuthZ/access-control) en el Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -67,11 +67,11 @@ Para obtener una introducción al modelo de control de acceso en Windows, consul
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h
+**Encabezado:** ATLSecurity. h
 
 ##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit
 
-Llame a este método para convertir un descriptor de seguridad y las listas de control de acceso (ACL) en un formato que admite la propagación automática de entradas de control de acceso heredable (ACE).
+Llame a este método para convertir un descriptor de seguridad y sus listas de control de acceso (ACL) a un formato que admita la propagación automática de entradas de control de acceso (ACE) heredables.
 
 ```
 bool ConvertToAutoInherit(
@@ -84,16 +84,16 @@ bool ConvertToAutoInherit(
 ### <a name="parameters"></a>Parámetros
 
 *pParent*<br/>
-Puntero a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objeto que hace referencia el contenedor primario del objeto. Si no hay ningún contenedor primario, este parámetro es NULL.
+Puntero a un objeto [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) que hace referencia al contenedor primario del objeto. Si no hay ningún contenedor primario, este parámetro es NULL.
 
 *ObjectType*<br/>
-Puntero a un `GUID` estructura que identifica el tipo de objeto asociado al objeto actual. Establecer *ObjectType* en NULL si el objeto no tiene un GUID.
+Puntero a una `GUID` estructura que identifica el tipo de objeto asociado al objeto actual. Establezca *objecttype* en NULL si el objeto no tiene un GUID.
 
 *bIsDirectoryObject*<br/>
-Especifica si el nuevo objeto puede contener otros objetos. Un valor true indica que el nuevo objeto es un contenedor. Un valor false indica que el nuevo objeto no es un contenedor.
+Especifica si el nuevo objeto puede contener otros objetos. Un valor de True indica que el nuevo objeto es un contenedor. Un valor de False indica que el nuevo objeto no es un contenedor.
 
 *GenericMapping*<br/>
-Puntero a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) estructura que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
+Puntero a una estructura [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -101,7 +101,7 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 ### <a name="remarks"></a>Comentarios
 
-Este método intenta determinar si la lista de las ACE en el control de acceso discrecional (DACL) y una lista de control de acceso de sistema (SACL) del descriptor de seguridad actual se heredan el descriptor de seguridad del elemento primario. Lo llama el [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) función.
+Este método intenta determinar si las ACE de la lista de control de acceso discrecional (DACL) y la lista de control de acceso del sistema (SACL) del descriptor de seguridad actual se heredaron del descriptor de seguridad primario. Llama a la función [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -129,7 +129,7 @@ El destructor libera todos los recursos asignados y elimina el descriptor de seg
 
 ##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create
 
-Llame a este método para asignar e inicializar un descriptor de seguridad autorelativo para el objeto privado creado por el Administrador de recursos que realiza la llamada.
+Llame a este método para asignar e inicializar un descriptor de seguridad autorelativo para el objeto privado creado por el administrador de recursos que realiza la llamada.
 
 ```
 bool Create(
@@ -152,28 +152,28 @@ bool Create(
 ### <a name="parameters"></a>Parámetros
 
 *pParent*<br/>
-Puntero a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objeto que hace referencia el directorio principal en que se se crea un nuevo objeto. Se establece en NULL si no hay ningún directorio primario.
+Puntero a un objeto [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) que hace referencia al directorio primario en el que se crea un nuevo objeto. Se establece en NULL si no hay ningún directorio primario.
 
 *pCreator*<br/>
-Puntero a un descriptor de seguridad proporcionado por el creador del objeto. Si el creador del objeto no pasar explícitamente información de seguridad para el nuevo objeto, establezca este parámetro en NULL.
+Puntero a un descriptor de seguridad proporcionado por el creador del objeto. Si el creador del objeto no pasa explícitamente la información de seguridad para el nuevo objeto, establezca este parámetro en NULL.
 
 *bIsDirectoryObject*<br/>
-Especifica si el nuevo objeto puede contener otros objetos. Un valor true indica que el nuevo objeto es un contenedor. Un valor false indica que el nuevo objeto no es un contenedor.
+Especifica si el nuevo objeto puede contener otros objetos. Un valor de True indica que el nuevo objeto es un contenedor. Un valor de False indica que el nuevo objeto no es un contenedor.
 
-*Token*<br/>
-Hacer referencia a la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para el proceso de cliente en cuyo nombre se está creando el objeto.
+*Muestras*<br/>
+Referencia al objeto [CAccessToken](../../atl/reference/caccesstoken-class.md) para el proceso de cliente en cuyo nombre se crea el objeto.
 
 *GenericMapping*<br/>
-Puntero a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) estructura que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
+Puntero a una estructura [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
 
 *ObjectType*<br/>
-Puntero a un `GUID` estructura que identifica el tipo de objeto asociado al objeto actual. Establecer *ObjectType* en NULL si el objeto no tiene un GUID.
+Puntero a una `GUID` estructura que identifica el tipo de objeto asociado al objeto actual. Establezca *objecttype* en NULL si el objeto no tiene un GUID.
 
 *bIsContainerObject*<br/>
-Especifica si el nuevo objeto puede contener otros objetos. Un valor true indica que el nuevo objeto es un contenedor. Un valor false indica que el nuevo objeto no es un contenedor.
+Especifica si el nuevo objeto puede contener otros objetos. Un valor de True indica que el nuevo objeto es un contenedor. Un valor de False indica que el nuevo objeto no es un contenedor.
 
 *AutoInheritFlags*<br/>
-Un conjunto de marcas de bits que controlan cómo se heredan las entradas de control de acceso (ACE) de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obtener más detalles.
+Conjunto de marcas de bits que controlan el modo en que las entradas de control de acceso (ACE) se heredan de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obtener más información.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -183,14 +183,14 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 Este método llama a [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) o [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
-El segundo método permite especificar el tipo de objeto GUID del nuevo objeto o controlar cómo se heredan las ACE.
+El segundo método permite especificar el GUID del tipo de objeto del nuevo objeto o controlar cómo se heredan las ACE.
 
 > [!NOTE]
->  Un descriptor de seguridad autorelativo es un descriptor de seguridad que almacena toda su información de seguridad en un bloque de memoria contiguo.
+>  Un descriptor de seguridad autorelativo es un descriptor de seguridad que almacena toda la información de seguridad en un bloque de memoria contiguo.
 
 ##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get
 
-Llame a este método para recuperar información de descriptor de seguridad de un objeto privado.
+Llame a este método para recuperar información del descriptor de seguridad de un objeto privado.
 
 ```
 bool Get(
@@ -201,10 +201,10 @@ bool Get(
 ### <a name="parameters"></a>Parámetros
 
 *si*<br/>
-Un conjunto de marcas de bits que indican las partes del descriptor de seguridad para recuperar. Este valor puede ser una combinación de la [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) marcas de bits.
+Un conjunto de marcadores de bits que indican las partes del descriptor de seguridad que se van a recuperar. Este valor puede ser una combinación de las marcas de bits [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
 
 *pResult*<br/>
-Puntero a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objeto que recibe una copia de la información solicitada del descriptor de seguridad especificado.
+Puntero a un objeto [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) que recibe una copia de la información solicitada del descriptor de seguridad especificado.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -212,7 +212,7 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 ### <a name="remarks"></a>Comentarios
 
-El descriptor de seguridad es una estructura y los datos asociados que contiene la información de seguridad para un objeto protegible.
+El descriptor de seguridad es una estructura y datos asociados que contienen la información de seguridad para un objeto protegible.
 
 ##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =
 
@@ -225,11 +225,11 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="parameters"></a>Parámetros
 
 *rhs*<br/>
-La `CPrivateObjectSecurityDesc` objeto que se va a asignar al objeto actual.
+`CPrivateObjectSecurityDesc` Objeto que se va a asignar al objeto actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el texto actualizado `CPrivateObjectSecurityDesc` objeto.
+Devuelve el objeto `CPrivateObjectSecurityDesc` actualizado.
 
 ##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set
 
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>Parámetros
 
 *si*<br/>
-Un conjunto de marcas de bits que indican las partes del descriptor de seguridad para establecer. Este valor puede ser una combinación de la [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) marcas de bits.
+Un conjunto de marcadores de bits que indican las partes del descriptor de seguridad que se van a establecer. Este valor puede ser una combinación de las marcas de bits [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
 
-*Modificación*<br/>
-Puntero a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objeto. Las partes de este descriptor de seguridad indican por el *si* parámetro se aplica al descriptor de seguridad del objeto.
+*Produzca*<br/>
+Puntero a un objeto [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) . Las partes de este descriptor de seguridad indicadas por el parámetro *si* se aplican al descriptor de seguridad del objeto.
 
 *GenericMapping*<br/>
-Puntero a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) estructura que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
+Puntero a una estructura [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
 
-*Token*<br/>
-Hacer referencia a la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para el proceso de cliente en cuyo nombre se está creando el objeto.
+*Muestras*<br/>
+Referencia al objeto [CAccessToken](../../atl/reference/caccesstoken-class.md) para el proceso de cliente en cuyo nombre se crea el objeto.
 
 *AutoInheritFlags*<br/>
-Un conjunto de marcas de bits que controlan cómo se heredan las entradas de control de acceso (ACE) de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obtener más detalles.
+Conjunto de marcas de bits que controlan el modo en que las entradas de control de acceso (ACE) se heredan de *pParent*. Consulte [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) para obtener más información.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -277,7 +277,7 @@ El segundo método permite especificar el GUID del tipo de objeto del objeto o c
 
 ## <a name="see-also"></a>Vea también
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc (clase)](../../atl/reference/csecuritydesc-class.md)

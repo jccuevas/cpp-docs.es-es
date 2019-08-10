@@ -1,31 +1,30 @@
 ---
 title: Creación de un proyecto de archivos Make de C++ en Visual Studio
-ms.date: 05/16/2019
+ms.date: 08/05/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
-- Makefile projects, creating
-- project files [C++], Makefile projects
+- Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837386"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866129"
 ---
 # <a name="create-a-c-makefile-project"></a>Creación de un proyecto de archivos Make de C++
 
-Un *archivos Make* es un archivo de texto que contiene instrucciones sobre cómo compilar y vincular o *crear* un conjunto de archivos de código fuente en C++. Un programa *Make* lee el archivo Make e invoca un compilador, un vinculador y posiblemente otros programas para crear un archivo ejecutable. La implementación de Microsoft del programa *make* se denomina [NMAKE](nmake-reference.md);
+Un *archivos Make* es un archivo de texto que contiene instrucciones sobre cómo compilar y vincular o *crear* un conjunto de archivos de código fuente en C++. Un programa *Make* lee el archivo Make e invoca un compilador, un vinculador y posiblemente otros programas para crear un archivo ejecutable. La implementación de Microsoft del programa *Make* se denomina [NMAKE](nmake-reference.md).
 
 Si tiene un proyecto de archivo Make existente, tiene estas opciones si desea codificarlo o depurarlo en el IDE de Visual Studio:
 
 - Cree un proyecto de archivos Make en Visual Studio en el que se use el archivo Make existente para configurar un archivo .vcxproj que Visual Studio usará para IntelliSense. (No tendrá todas las características del IDE que obtendrá con un proyecto de MSBuild nativo). Vea [Para crear un proyecto de archivos Make](#create_a_makefile_project) a continuación.
-- Use el asistente para **Crear nuevo proyecto de archivos de código fuente existentes** para crear un proyecto de MSBuild nativo a partir del código fuente. Después de esto no se usará el archivo Make original. Para obtener más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../how-to-create-a-cpp-project-from-existing-code.md).
+- Use el asistente para **Crear nuevo proyecto de archivos de código fuente existentes** para crear un proyecto de MSBuild nativo a partir del código fuente. Después de esto no se usará el archivo Make original. Para obtener más información, consulte [Cómo Crear un proyecto de C++ a partir del código existente](../how-to-create-a-cpp-project-from-existing-code.md).
 - **Visual Studio 2017 y versiones posteriores**: Use la característica **Abrir carpeta** para editar y compilar un proyecto de archivos Make como está, sin participación alguna del sistema MSBuild. Para más información, vea el artículo sobre los [proyectos Abrir carpeta para C++](../open-folder-projects-cpp.md).
 - **Visual Studio 2019 y versiones posteriores**: Cree un proyecto de archivos Make de UNIX para Linux.
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para crear un proyecto de archivos Make con la plantilla de proyecto de archivos Make
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para crear un proyecto de archivos Make con la plantilla de proyecto de archivos Make
 
 En Visual Studio 2017 y versiones posteriores, la plantilla de proyecto de archivos Make está disponible cuando se instala la carga de trabajo de Desarrollo de escritorio de C++.
 
@@ -39,7 +38,7 @@ El archivo de salida que especifique en el proyecto no afectará al nombre que g
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Para crear un proyecto de archivos Make en Visual Studio 2019
 
-1. En el menú principal de Visual Studio, seleccione **Archivo** > **Nuevo** > **Proyecto** y escriba "archivo Make" en el cuadro de búsqueda. O bien, en el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C++** > **General** (Visual Studio 2015) u **Otros** (Visual Studio 2017) y, después, seleccione entre las dos opciones en función de si se va a destinar a Windows o Linux.
+1. En el menú principal de Visual Studio, seleccione **Archivo** > **Nuevo** > **Proyecto** y escriba "archivo Make" en el cuadro de búsqueda. O bien, en el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C++**  > **General** (Visual Studio 2015) u **Otros** (Visual Studio 2017) y, después, seleccione entre las dos opciones en función de si se va a destinar a Windows o Linux.
 
 1. **Solo Windows**: En la página **Configuración de depuración**, escriba la información sobre comandos, salida, limpieza y recompilación para las compilaciones de depuración y comercial. Haga clic en **Siguiente** si quiere especificar otros valores para una configuración de versión.
 
@@ -51,7 +50,7 @@ El archivo de salida que especifique en el proyecto no afectará al nombre que g
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Para crear un proyecto de archivos Make en Visual Studio 2015 o Visual Studio 2017
 
-1. En la página de inicio de Visual Studio, escriba "archivo Make" en el cuadro de búsqueda **Nuevo proyecto**. O bien, en el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C++** > **General** (Visual Studio 2015) u **Otros** (Visual Studio 2017) y después seleccione **Proyecto de archivos Make** en el panel Plantillas para abrir el asistente para proyectos.
+1. En la página de inicio de Visual Studio, escriba "archivo Make" en el cuadro de búsqueda **Nuevo proyecto**. O bien, en el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C++**  > **General** (Visual Studio 2015) u **Otros** (Visual Studio 2017) y después seleccione **Proyecto de archivos Make** en el panel Plantillas para abrir el asistente para proyectos.
 
 1. En la página **Configuración de la aplicación**, escriba la información sobre comandos, salida y limpieza, y la información de recompilación para las compilaciones de depuración y comercial.
 

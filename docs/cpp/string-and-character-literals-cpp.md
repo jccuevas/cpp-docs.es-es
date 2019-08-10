@@ -1,7 +1,7 @@
 ---
 title: Literales de cadena y carácterC++()
 description: Cómo declarar y definir literales de cadena y carácter en C++.
-ms.date: 07/29/2019
+ms.date: 08/06/2019
 f1_keywords:
 - R
 - L
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 9fce1ef9636aaa85be71cafffb5c4247e5c2e2d9
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661526"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866093"
 ---
-# <a name="string-and-character-literals--c"></a>Literales de cadena y carácterC++()
+# <a name="string-and-character-literals-c"></a>Literales de cadena y carácterC++()
 
 C++ admite varios tipos de cadenas y caracteres, y proporciona maneras de expresar valores literales de cada uno de esos tipos. En el código fuente, el contenido de los literales de carácter y cadena se expresa mediante un juego de caracteres. Los nombres de carácter universal y los caracteres de escape permiten expresar cualquier cadena con tan solo el juego básico de caracteres de código fuente. Un literal de cadena sin formato permite evitar la utilización de caracteres de escape y puede usarse para expresar todos los tipos de literales de cadena. También puede crear `std::string` literales sin tener que realizar pasos adicionales de construcción o conversión.
 
@@ -37,6 +37,9 @@ int main()
     auto c2 =  L'A'; // wchar_t
     auto c3 =  u'A'; // char16_t
     auto c4 =  U'A'; // char32_t
+
+    // Multicharacter literals
+    auto m0 = 'abcd'; // int, value 0x61626364
 
     // String literals
     auto s0 =   "hello"; // const char*
@@ -76,7 +79,7 @@ Un *literal de carácter* está compuesto por un carácter de constante. Se repr
 
 - Literales de caracteres ordinarios de tipo **Char**, por ejemplo`'a'`
 
-- Literales de caracteres UTF-8 de tipo **Char**, por ejemplo`u8'a'`
+- Literales de carácter UTF-8 de tipo **Char** (**char8_t** en c++ 20), por ejemplo`u8'a'`
 
 - Literales de caracteres anchos de tipo `wchar_t`(por ejemplo, `L'a'`)
 
@@ -90,9 +93,9 @@ El carácter utilizado para un literal de carácter puede ser cualquier carácte
 
 Los literales de carácter se codifican de manera diferente según su prefijo.
 
-- Un literal de carácter sin prefijo es un literal de carácter ordinario. El valor de un literal de carácter ordinario que contiene un carácter único, una secuencia de escape o un nombre de carácter universal que se puede representar en el juego de caracteres de ejecución tiene un valor igual al valor numérico de su codificación en el juego de caracteres de ejecución. Un literal de carácter ordinario que contiene más de un carácter, una secuencia de escape o un nombre de carácter universal es un *literal multicarácter*. Un literal multicarácter o un literal de carácter ordinario que no se puede representar en el juego de caracteres de ejecución se admite condicionalmente, tiene el tipo **int**y su valor está definido por la implementación.
+- Un literal de carácter sin prefijo es un literal de carácter ordinario. El valor de un literal de carácter ordinario que contiene un carácter único, una secuencia de escape o un nombre de carácter universal que se puede representar en el juego de caracteres de ejecución tiene un valor igual al valor numérico de su codificación en el juego de caracteres de ejecución. Un literal de carácter ordinario que contiene más de un carácter, una secuencia de escape o un nombre de carácter universal es un *literal multicarácter*. Un literal multicarácter o un literal de carácter ordinario que no se puede representar en el juego de caracteres de ejecución tiene el tipo **int**y su valor está definido por la implementación. Para MSVC, consulte la sección **específica de Microsoft** más adelante.
 
-- Un literal de carácter que comienza con `L` el prefijo es un literal de caracteres anchos. El valor de un literal de carácter ancho que contiene un carácter único, una secuencia de escape o un nombre de carácter universal tiene un valor igual al valor numérico de su codificación en el juego de caracteres anchos de ejecución, a menos que el literal de carácter no tenga ninguna representación en el juego de caracteres anchos de ejecución, en cuyo caso el valor está definido por la implementación. El valor de un literal de caracteres anchos que contiene varios caracteres, secuencias de escape o nombres de carácter universal está definido por la implementación.
+- Un literal de carácter que comienza con `L` el prefijo es un literal de caracteres anchos. El valor de un literal de carácter ancho que contiene un carácter único, una secuencia de escape o un nombre de carácter universal tiene un valor igual al valor numérico de su codificación en el juego de caracteres anchos de ejecución, a menos que el literal de carácter no tenga ninguna representación en el juego de caracteres anchos de ejecución, en cuyo caso el valor está definido por la implementación. El valor de un literal de caracteres anchos que contiene varios caracteres, secuencias de escape o nombres de carácter universal está definido por la implementación. Para MSVC, consulte la sección **específica de Microsoft** más adelante.
 
 - Un literal de carácter que comienza con `u8` el prefijo es un literal de carácter UTF-8. El valor de un literal de carácter UTF-8 que contiene un carácter único, una secuencia de escape o un nombre de carácter universal tiene un valor igual a su valor de punto de código ISO 10646 si se puede representar mediante una única unidad de código UTF-8 (que corresponde a los controles C0 y latín básico Bloque Unicode). Si el valor no se puede representar mediante una única unidad de código UTF-8, el programa tiene un formato incorrecto. Un literal de carácter UTF-8 que contiene más de un carácter, una secuencia de escape o un nombre de carácter universal tiene un formato incorrecto.
 
@@ -121,6 +124,10 @@ Hay tres tipos de secuencias de escape: simple, octal, hexadecimal. Las secuenci
 | Alerta (campana) | \\un |
 | Hexadecimal | \\xhhh |
 
+Una secuencia de escape octal es una barra diagonal inversa seguida de una secuencia de uno a tres dígitos octales. Una secuencia de escape octal finaliza en el primer carácter que no es un dígito octal, si se encuentra antes del tercer dígito. El valor octal más alto posible `\377`es.
+
+Una secuencia de escape hexadecimal es una barra diagonal inversa seguida del `x`carácter seguido de una secuencia de uno o más dígitos hexadecimales. Los ceros a la izquierda se ignoran. En un literal de carácter normal o U8, el valor hexadecimal más alto es 0xFF. En un literal de carácter ancho con prefijo L o prefijo u, el valor hexadecimal máximo es 0xFFFF. En un literal de carácter ancho con prefijo U, el valor hexadecimal máximo es 0xFFFFFFFF.
+
 En este código de ejemplo se muestran algunos ejemplos de caracteres de escape que usan literales de carácter ordinarios. La misma sintaxis de secuencia de escape es válida para los demás tipos de literales de carácter.
 
 ```cpp
@@ -143,23 +150,26 @@ int main() {
 }
 ```
 
+El carácter de barra diagonal\\inversa () es un carácter de continuación de línea cuando se coloca al final de una línea. Si quiere que un carácter de barra diagonal inversa aparezca como un literal de carácter, debe escribir dos barras diagonales inversas en una fila (`\\`). Para obtener más información sobre el carácter de continuación de línea, consulte [Phases of Translation](../preprocessor/phases-of-translation.md).
+
 **Específico de Microsoft**
 
-Para crear un valor a partir de un literal de carácter ordinario (uno sin prefijo), el compilador convierte el carácter o la secuencia de caracteres entre comillas simples en valores de 8 bits dentro de un entero de 32 bits. Varios caracteres del literal rellenan los bytes correspondientes según sea necesario de orden superior a orden inferior. Para crear un valor **Char** , el compilador toma el byte de orden inferior. Para crear un valor wchar_t `char16_t` o, el compilador toma la palabra de orden inferior. El compilador advierte que el resultado se trunca si cualquiera de los bits se establece por encima del byte o la palabra asignados.
+Para crear un valor a partir de un literal multicarácter estrecho, el compilador convierte el carácter o la secuencia de caracteres entre comillas simples en valores de 8 bits dentro de un entero de 32 bits. Varios caracteres del literal rellenan los bytes correspondientes según sea necesario de orden superior a orden inferior. A continuación, el compilador convierte el entero al tipo de destino siguiendo las reglas habituales. Por ejemplo, para crear un valor **Char** , el compilador toma el byte de orden inferior. Para crear un valor wchar_t `char16_t` o, el compilador toma la palabra de orden inferior. El compilador advierte que el resultado se trunca si cualquiera de los bits se establece por encima del byte o la palabra asignados.
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
+int i0     = 'abcd';    // 0x61626364
 ```
 
-Una secuencia de escape octal es una barra diagonal inversa seguida de una secuencia de hasta 3 dígitos octales. El comportamiento de una secuencia de escape octal que parece contener más de tres dígitos se trata como una secuencia octal de tres dígitos seguida de los dígitos subsiguientes como caracteres, lo que puede dar lugar a resultados sorprendentes. Por ejemplo:
+Una secuencia de escape octal que parece contener más de tres dígitos se trata como una secuencia octal de tres dígitos seguida de los dígitos subsiguientes como caracteres en un literal de varios caracteres, que puede proporcionar resultados sorprendentes. Por ejemplo:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-Las secuencias de escape que parecen contener caracteres que no son octales se evalúan como una secuencia octal hasta el último carácter octal, seguido del resto de los caracteres. Por ejemplo:
+Las secuencias de escape que parecen contener caracteres que no son octales se evalúan como una secuencia octal hasta el último carácter octal, seguido del resto de los caracteres como los caracteres siguientes en un literal de multicarácter. Se genera una advertencia C4125 si el primer carácter que no es octal es un dígito decimal. Por ejemplo:
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -167,14 +177,16 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
 ```
 
-Una secuencia de escape hexadecimal es una barra diagonal inversa seguida del carácter `x`y seguida de una secuencia de dígitos hexadecimales. Una secuencia de escape que no contiene ningún dígito hexadecimal produce el error del compilador C2153: “los literales hexadecimales deben tener al menos un dígito hexadecimal”. Los ceros a la izquierda se ignoran. Una secuencia de escape que parece tener caracteres hexadecimales y no hexadecimales se evalúa como una secuencia de escape hexadecimal hasta el último carácter hexadecimal, seguido de los caracteres no hexadecimales. En un literal de carácter normal o U8, el valor hexadecimal más alto es 0xFF. En un literal de carácter ancho con prefijo L o prefijo u, el valor hexadecimal máximo es 0xFFFF. En un literal de carácter ancho con prefijo U, el valor hexadecimal máximo es 0xFFFFFFFF.
+Una secuencia de escape octal con un valor `\377` mayor que produce el error C2022: '*Value-in-decimal*': demasiado grande para el carácter.
+
+Una secuencia de escape que parece tener caracteres hexadecimales y no hexadecimales se evalúa como un literal multicarácter que contiene una secuencia de escape hexadecimal hasta el último carácter hexadecimal, seguido de los caracteres no hexadecimales. Una secuencia de escape hexadecimal que no contiene ningún dígito hexadecimal produce el error del compilador C2153: "los literales hexadecimales deben tener al menos un dígito hexadecimal".
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
 ```
 
-Si un literal de carácter ancho con prefijo `L` tiene más de un carácter, el valor se toma del primer carácter. Los caracteres siguientes se omiten, a diferencia del comportamiento del literal de carácter ordinario equivalente.
+Si un literal de carácter ancho con `L` el prefijo contiene una secuencia de varios caracteres, el valor se toma del primer carácter y el compilador genera la advertencia C4066. Los caracteres siguientes se omiten, a diferencia del comportamiento del literal multicarácter normal equivalente.
 
 ```cpp
 wchar_t w1 = L'\100';   // L'@'
@@ -186,9 +198,7 @@ wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
 ```
 
-**FINALIZAR específico de Microsoft**
-
-El carácter de barra diagonal\\inversa () es un carácter de continuación de línea cuando se coloca al final de una línea. Si quiere que un carácter de barra diagonal inversa aparezca como un literal de carácter, debe escribir dos barras diagonales inversas en una fila (`\\`). Para obtener más información sobre el carácter de continuación de línea, consulte [Phases of Translation](../preprocessor/phases-of-translation.md).
+**Finalizar específico de Microsoft**
 
 ###  <a name="bkmk_UCN"></a> Nombres de carácter universal
 
@@ -241,7 +251,7 @@ const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
 ```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t y char32_t (C++11)
+#### <a name="char16_t-and-char32_t-c11"></a>char16_t y char32_t (C++11)
 
 C ++ 11 incluye los tipos de caracteres portables `char16_t` (Unicode de 16 bits) y `char32_t` (32 bits Unicode):
 
@@ -333,7 +343,7 @@ wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
 ```
 
-Puede hacer que el compilador emita un error cuando un literal de cadena se convierte en un puntero de carácter non_const al establecer la opción del compilador [/Zc: strictStrings (deshabilitar la conversión de tipo de literal de cadena)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) . Es recomendable para el código portable que cumple los estándares. También se recomienda usar la palabra clave **auto** para declarar punteros inicializados con literales de cadena, ya que se resuelve en el tipo correcto (Const). Por ejemplo, en este ejemplo de código se detecta un intento de escribir en un literal de cadena en tiempo de compilación:
+Puede hacer que el compilador emita un error cuando un literal de cadena se convierte en un puntero de carácter no const al establecer la opción del compilador [/Zc: strictStrings (deshabilitar conversión de tipo de literal de cadena)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) . Es recomendable para el código portable que cumple los estándares. También se recomienda usar la palabra clave **auto** para declarar punteros inicializados con literales de cadena, ya que se resuelve en el tipo correcto (Const). Por ejemplo, en este ejemplo de código se detecta un intento de escribir en un literal de cadena en tiempo de compilación:
 
 ```cpp
 auto str = L"hello";
@@ -410,6 +420,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 
 ## <a name="see-also"></a>Vea también
 
-[Juegos de caracteres](../cpp/character-sets.md)<br/>
-[Literales numéricos, booleanos y de puntero](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
+[Character Sets](../cpp/character-sets.md)\
+[Literales numéricos, booleanos y de puntero](../cpp/numeric-boolean-and-pointer-literals-cpp.md)\
 [Literales definidos por el usuario](../cpp/user-defined-literals-cpp.md)
