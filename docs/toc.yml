@@ -10529,22 +10529,8 @@
                   items:
                     - name: Subprocesamiento múltiple con C y Win32
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: Programas multiproceso
-                      href: parallel/multithread-programs.md
-                    - name: Compatibilidad de bibliotecas con el subprocesamiento múltiple
-                      href: parallel/library-support-for-multithreading.md
-                    - name: Archivos de inclusión para el subprocesamiento múltiple
-                      href: parallel/include-files-for-multithreading.md
-                    - name: Funciones de la biblioteca en tiempo de ejecución de C para el control de subprocesos
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: Ejemplo de programa multiproceso en C
                       href: parallel/sample-multithread-c-program.md
-                    - name: Crear un programa Win32 multiproceso
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: Compilar y vincular programas multiproceso
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: Evitar áreas de riesgo en programas multiproceso
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: Almacenamiento local para el subproceso (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: Subprocesamiento múltiple con C++ y MFC
