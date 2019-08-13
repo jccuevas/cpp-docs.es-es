@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661538"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956978"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
 
@@ -658,7 +658,7 @@ Devuelve una referencia a *Lower* si `value < lower`, o una referencia a *Upper*
 
 ### <a name="remarks"></a>Comentarios
 
-El comportamiento es indefinido si *Upper* es *menor que el*menor.
+El comportamiento es indefinido si *Upper* es menor queel menor.
 
 ## <a name="copy"></a>copiar
 
@@ -788,7 +788,7 @@ Iterador bidireccional que direcciona la posición de un elemento más allá del
 
 ### <a name="return-value"></a>Valor devuelto
 
-Iterador de salida que dirige a la posición situada una posición después del último elemento del intervalo de destino, es decir, el iterador se *dirige a la* promediación: (*último* - *primero*).
+Iterador de salida que dirige a la posición situada una posición después del último elemento del intervalo de destino, es decir, el iterador se dirige a la promediación: (*último* - *primero*).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2991,7 +2991,7 @@ La primera función de plantilla devuelve [is_heap_until](../standard-library/al
 
 La segunda función de plantilla devuelve
 
-`is_heap_until(first, last, pred) == last`.
+`is_heap_until(first, last, pred) == last`
 
 ## <a name="is_heap_until"></a>is_heap_until
 
@@ -4853,7 +4853,7 @@ Valores devueltos
 
 La primera función de plantilla devuelve
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`
 
 La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `pred(X, Y)`.
 
@@ -5176,7 +5176,7 @@ Iterador bidireccional que direcciona la posición de un elemento más allá del
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla evalúa `*(destEnd - N - 1) = move(*(last - N - 1))` una vez por `N` cada del intervalo `[0, last - first)`, para aumentar de forma estricta `N` los valores de empezando por el valor más bajo. Después, devuelve `destEnd - (last - first)`. Si no se *propone* y *primero* se designan regiones de *almacenamiento, no* debe estar en el intervalo `[first, last)`.
+La función de plantilla evalúa `*(destEnd - N - 1) = move(*(last - N - 1))` una vez por `N` cada del intervalo `[0, last - first)`, para aumentar de forma estricta `N` los valores de empezando por el valor más bajo. Después, devuelve `destEnd - (last - first)`. Si no se *propone* y *primero* se designan regiones de almacenamiento, no debe estar en el intervalo `[first, last)`.
 
 `move` y `move_backward` son funcionalmente equivalentes a utilizar `copy` y `copy_backward` con un iterador de movimiento.
 
@@ -5845,7 +5845,7 @@ El intervalo al que se hace referencia debe ser válido; todos los punteros se d
 
 Los elementos *a* y *b* son equivalentes, pero no necesariamente iguales, `pred( a, b )` si ambos son `pred( b, a )` false y es false, donde *Pred* es el predicado especificado por el parámetro. El `partition` algoritmo no es estable y no garantiza que se conserve la ordenación relativa de los elementos equivalentes. El algoritmo `stable_partition` conserva esta ordenación original.
 
-La complejidad es lineal: hay `(last - first)` aplicaciones preparadas y, a lo sumo `(last - first)/2` , intercambios.
+La complejidad es lineal: hay `(last - first)` aplicaciones preparadas y, a `(last - first)/2` lo sumo, intercambios.
 
 ### <a name="example"></a>Ejemplo
 
@@ -7646,7 +7646,7 @@ Iterador hacia delante que dirige a la posición situada una posición después 
 Objeto de función de predicado definido por el usuario que define la condición que se debe cumplir si dos elementos se van a tomar como equivalentes. Un predicado binario toma dos argumentos y devuelve **true** si se cumplen y **false** si no se cumplen.
 
 *buscador*\
-El buscador que encapsula el patrón que se va a buscar y el algoritmo de búsqueda que se va a usar.
+El buscador que encapsula el patrón que se va a buscar y el algoritmo de búsqueda que se va a usar. Para obtener más información sobre los buscadores, vea [clase default_searcher](default-searcher-class.md), clase [boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)y [clase boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Valor devuelto
 
