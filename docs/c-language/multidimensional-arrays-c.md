@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151018"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62233368"
 ---
 # <a name="multidimensional-arrays-c"></a>Matrices multidimensionales (C)
 
@@ -21,7 +21,7 @@ Una expresión de subíndice también puede tener varios subíndices, como se in
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, *expression1* **[** *expression2* **]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (<strong>\*</strong>) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).
+Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, *expression1* **[** *expression2* **]** , se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (<strong>\*</strong>) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).
 
 Las expresiones con varios subíndices hacen referencia a elementos de “matrices multidimensionales”. Una matriz multidimensional es una matriz cuyos elementos son matrices. Por ejemplo, el primer elemento de una matriz tridimensional es una matriz con dos dimensiones.
 

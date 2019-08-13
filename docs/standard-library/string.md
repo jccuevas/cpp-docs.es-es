@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459189"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957132"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -38,8 +38,8 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 |Nombre de tipo|DESCRIPCIÓN|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo  `string`char como.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo  `wstring`wchar_t como.|
+|[string](../standard-library/string-typedefs.md#string)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo `string`char como.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo `wstring`wchar_t como.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char32_t`.|
 
@@ -61,7 +61,7 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 |||
 |-|-|
-|[hash]()||
+|hash|Genera un hash de una cadena.|
 |[swap](../standard-library/string-functions.md#swap)|Intercambia las matrices de caracteres de dos cadenas.|
 |[stod](../standard-library/string-functions.md#stod)|Convierte una secuencia de caracteres en un **valor Double**.|
 |[stof](../standard-library/string-functions.md#stof)|Convierte una secuencia de caracteres en un valor de **tipo float**.|

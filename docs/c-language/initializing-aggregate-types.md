@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151499"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326084"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializar tipos de agregado
 
@@ -22,8 +22,8 @@ Un tipo *agregado* es una estructura, una unión o un tipo de matriz. Si un tipo
 ## <a name="syntax"></a>Sintaxis
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* Para la inicialización de agregados \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Para la inicialización de agregados \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -35,7 +35,7 @@ Para cada lista de inicializadores, los valores de las expresiones constantes se
 
 Si *initializer-list* tiene menos valores que un tipo agregado, los miembros o los elementos restantes del tipo agregado se inicializan en 0. El valor inicial de un identificador automático no inicializado explícitamente es indefinido. Si *initializer-list* tiene más valores que un tipo agregado, se produce un error. Estas reglas se aplican a cada lista de inicializadores incrustada, así como al agregado en conjunto.
 
-El inicializador de una estructura es una expresión del mismo tipo o una lista de inicializadores para sus miembros delimitada por llaves (**{ }**). Los miembros de campo de bits sin nombre no se inicializan.
+El inicializador de una estructura es una expresión del mismo tipo o una lista de inicializadores para sus miembros delimitada por llaves ( **{ }** ). Los miembros de campo de bits sin nombre no se inicializan.
 
 Cuando se inicializa una unión, *initializer-list* debe ser una expresión constante. El valor de la expresión constante se asigna al primer miembro de la unión.
 

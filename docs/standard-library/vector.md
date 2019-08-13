@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448067"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957064"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -112,7 +112,7 @@ Segundo vector (derecho) en una operación de comparación.
 
 |||
 |-|-|
-|[hash]()||
+|hash|Devuelve un hash del vector.|
 |[vector\<bool> (Clase)](../standard-library/vector-bool-class.md)|Una especialización completa de la clase de plantilla vector para los elementos del tipo `bool` con un asignador para el tipo subyacente utilizado por la especialización.|
 
 ## <a name="requirements"></a>Requisitos
