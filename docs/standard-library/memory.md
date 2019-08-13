@@ -1,18 +1,18 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451889"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957086"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -108,7 +108,7 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[hash]()||
+|hash|Proporciona sobrecargas especializadas para `unique_ptr` y `shared_ptr`.|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Permite realizar comparaciones mixtas basadas en la propiedad de punteros compartidos y parciales.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ Define una clase, un operador y varias plantillas que sirven de ayuda para asign
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|Una especialización del asignador de la clase de plantilla para el tipo void, que define los únicos tipos miembro que tienen sentido en este contexto especializado.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Una especialización de la clase de plantilla allocator en el tipo **void**, que define solo los tipos de miembro que tienen sentido en este contexto especializado.|
 
 ## <a name="see-also"></a>Vea también
 
