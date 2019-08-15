@@ -8,14 +8,14 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 97932dfe0e187a13b72ae5fe70d761224721c3ff
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314252"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509501"
 ---
-# <a name="debugbreak"></a>__debugbreak
+# <a name="__debugbreak"></a>__debugbreak
 
 **Específicos de Microsoft**
 
@@ -29,16 +29,16 @@ void __debugbreak();
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
 |`__debugbreak`|x86, x64, ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Comentarios
 
-El `__debugbreak` compilador intrínseco, de forma similar a [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), es una manera portable de Win32 para producir un punto de interrupción.
+La `__debugbreak` función intrínseca del compilador, similar a [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak), es una forma portable de Win32 de producir un punto de interrupción.
 
 > [!NOTE]
->  Cuando se compila con **/CLR**, una función que contiene `__debugbreak` se compilará en MSIL. `asm int 3` produce una función que se va a compilar en código nativo. Para obtener más información, consulte [__asm](../assembler/inline/asm.md).
+>  Al compilar con **/CLR**, una `__debugbreak` función que contiene se compilará en MSIL. `asm int 3` produce una función que se va a compilar en código nativo. Para obtener más información, vea _ _ [ASM](../assembler/inline/asm.md).
 
 Por ejemplo:
 
@@ -60,7 +60,7 @@ main() {
 
 en un equipo x86.
 
-En ARM64, el `__debugbreak` intrínseca se compila en la instrucción `brk #0xF000`.
+En ARM64, el `__debugbreak` intrínseco se compila en la instrucción `brk #0xF000`.
 
 Esta rutina solo está disponible como función intrínseca.
 
