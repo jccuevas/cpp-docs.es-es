@@ -1,5 +1,5 @@
 ---
-title: CPen (clase)
+title: Clase CPen (
 ms.date: 11/04/2016
 f1_keywords:
 - CPen
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952d270acd47b5834a06b731f7875ea2efdd4695
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372925"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502949"
 ---
-# <a name="cpen-class"></a>CPen (clase)
+# <a name="cpen-class"></a>Clase CPen (
 
 Encapsula un lápiz de la Interfaz de dispositivo gráfico (GDI) de Windows.
 
@@ -39,29 +39,29 @@ class CPen : public CGdiObject
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CPen::CPen](#cpen)|Construye un objeto `CPen`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CPen::CreatePen](#createpen)|Crea un lápiz de cosmético o geométrico lógico con el estilo especificado, el ancho y el pincel atributos y se adjunta a la `CPen` objeto.|
-|[CPen::CreatePenIndirect](#createpenindirect)|Crea un lápiz con el estilo, ancho y color de un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estructurar y lo adjunta a la `CPen` objeto.|
-|[CPen::FromHandle](#fromhandle)|Devuelve un puntero a un `CPen` objeto cuando se especifica un HPEN de Windows.|
-|[CPen::GetExtLogPen](#getextlogpen)|Obtiene un [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) estructura subyacente.|
-|[CPen::GetLogPen](#getlogpen)|Obtiene un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estructura subyacente.|
+|[CPen::CreatePen](#createpen)|Crea un lápiz cosmético o geométrico lógico con los atributos de estilo, ancho y pincel especificados y lo adjunta al `CPen` objeto.|
+|[CPen::CreatePenIndirect](#createpenindirect)|Crea un lápiz con el estilo, el ancho y el color especificados en una estructura [logpen (](/windows/win32/api/wingdi/ns-wingdi-logpen) y lo adjunta al `CPen` objeto.|
+|[CPen::FromHandle](#fromhandle)|Devuelve un puntero a un `CPen` objeto cuando se proporciona un HPEN de Windows.|
+|[CPen::GetExtLogPen](#getextlogpen)|Obtiene una estructura subyacente de [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) .|
+|[CPen::GetLogPen](#getlogpen)|Obtiene una estructura subyacente de [logpen (](/windows/win32/api/wingdi/ns-wingdi-logpen) .|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CPen::operator HPEN](#operator_hpen)|Devuelve el identificador de Windows asociado a la `CPen` objeto.|
+|[CPen (:: Operator HPEN](#operator_hpen)|Devuelve el identificador de Windows asociado al `CPen` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre el uso de `CPen`, consulte [objetos gráficos](../../mfc/graphic-objects.md).
+Para obtener más información sobre `CPen`el uso de, vea [objetos gráficos](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -98,74 +98,74 @@ CPen(
 ### <a name="parameters"></a>Parámetros
 
 *nPenStyle*<br/>
-Especifica el estilo de lápiz. Este parámetro en la primera versión del constructor puede ser uno de los siguientes valores:
+Especifica el estilo del lápiz. Este parámetro de la primera versión del constructor puede ser uno de los valores siguientes:
 
 - PS_SOLID crea un lápiz sólido.
 
-- PS_DASH crea una pluma discontinua. Válido solo cuando el ancho del lápiz es unidades de 1 o menos, en el dispositivo.
+- PS_DASH crea un lápiz discontinuo. Solo es válido cuando el ancho del lápiz es 1 o menos, en unidades de dispositivo.
 
-- PS_DOT crea un lápiz con puntos. Válido solo cuando el ancho del lápiz es unidades de 1 o menos, en el dispositivo.
+- PS_DOT crea un lápiz punteado. Solo es válido cuando el ancho del lápiz es 1 o menos, en unidades de dispositivo.
 
-- PS_DASHDOT crea una pluma con alternos guiones y puntos. Válido solo cuando el ancho del lápiz es unidades de 1 o menos, en el dispositivo.
+- PS_DASHDOT crea un lápiz con guiones y puntos alternos. Solo es válido cuando el ancho del lápiz es 1 o menos, en unidades de dispositivo.
 
-- PS_DASHDOTDOT crea un lápiz con guiones y puntos dobles alternos. Válido solo cuando el ancho del lápiz es unidades de 1 o menos, en el dispositivo.
+- PS_DASHDOTDOT crea un lápiz con guiones alternativos y puntos dobles. Solo es válido cuando el ancho del lápiz es 1 o menos, en unidades de dispositivo.
 
-- PS_NULL crea una pluma de null.
+- PS_NULL crea un lápiz nulo.
 
-- Funciones que especifican un rectángulo delimitador de salida de PS_INSIDEFRAME crea un lápiz que dibuja una línea dentro del marco de las formas cerradas producido por la GDI de Windows (por ejemplo, el `Ellipse`, `Rectangle`, `RoundRect`, `Pie`y `Chord`funciones miembro). Cuando este estilo se usa con funciones de salida de GDI de Windows que no especifican un rectángulo delimitador (por ejemplo, el `LineTo` función miembro), el área de dibujo de la pluma no está limitado por un marco.
+- PS_INSIDEFRAME crea un lápiz que dibuja una línea dentro del marco de las formas cerradas producidas por las funciones de salida de Windows GDI que especifican un rectángulo delimitador ( `RoundRect`por `Pie`ejemplo, `Ellipse`, `Rectangle`,, y `Chord`funciones miembro). Cuando este estilo se utiliza con funciones de salida de Windows GDI que no especifican un rectángulo delimitador (por `LineTo` ejemplo, la función miembro), el área de dibujo del lápiz no está limitada por un marco.
 
-La segunda versión de la `CPen` constructor especifica una combinación de tipo, estilo, extremo final y los atributos de combinación. Los valores de cada categoría se deben combinar mediante el operador OR bit a bit (&#124;). El tipo de lápiz puede ser uno de los valores siguientes:
+La segunda versión del `CPen` constructor especifica una combinación de tipo, estilo, extremo final y atributos de combinación. Los valores de cada categoría se deben combinar mediante el operador bit a bit OR&#124;(). El tipo de lápiz puede ser uno de los siguientes valores:
 
-- PS_GEOMETRIC crea una pluma geométrica.
+- PS_GEOMETRIC crea un lápiz geométrico.
 
-- PS_COSMETIC crea una pluma de cosmética.
+- PS_COSMETIC crea un lápiz cosmético.
 
-   La segunda versión de la `CPen` constructor agrega los siguientes estilos de lápiz para *nPenStyle*:
+   La segunda versión del `CPen` constructor agrega los siguientes estilos de lápiz para *nPenStyle*:
 
-- PS_ALTERNATE crea un lápiz que establece todos los demás píxeles. (Este estilo es aplicable sólo a lápices cosméticos).
+- PS_ALTERNATE crea un lápiz que establece todos los demás píxeles. (Este estilo solo es aplicable a los lápices cosméticos).
 
-- PS_USERSTYLE crea un lápiz que usa una matriz de estilo proporcionados por el usuario.
+- PS_USERSTYLE crea un lápiz que usa una matriz de estilo proporcionada por el usuario.
 
-   El extremo puede ser uno de los siguientes valores:
+   El extremo final puede ser uno de los siguientes valores:
 
-- Delimitadores PS_ENDCAP_ROUND son redondear.
+- Los extremos de PS_ENDCAP_ROUND se redondean.
 
-- Son cuadrados PS_ENDCAP_SQUARE delimitadores.
+- Los extremos finales de PS_ENDCAP_SQUARE son cuadrados.
 
-- Delimitadores PS_ENDCAP_FLAT son fijos.
+- Los extremos de PS_ENDCAP_FLAT son planos.
 
-   La combinación puede ser uno de los siguientes valores:
+   La combinación puede ser uno de los valores siguientes:
 
-- Une PS_JOIN_BEVEL son biselada.
+- Las combinaciones de PS_JOIN_BEVEL están biseladas.
 
-- Se une PS_JOIN_MITER ángulo cuando estén dentro del límite actual establecido por el [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) función. Si la combinación supera este límite, se biselada.
+- Las combinaciones de PS_JOIN_MITER se definen en un ángulo cuando están dentro del límite actual establecido por la función [SetMiterLimit](/windows/win32/api/wingdi/nf-wingdi-setmiterlimit) . Si la combinación supera este límite, está biselado.
 
-- Une PS_JOIN_ROUND son redondear.
+- Las combinaciones PS_JOIN_ROUND son round.
 
 *nWidth*<br/>
 Especifica el ancho del lápiz.
 
-- Para la primera versión del constructor, si este valor es 0, el ancho en unidades de dispositivo siempre es 1 píxel, independientemente del modo de asignación.
+- En el caso de la primera versión del constructor, si este valor es 0, el ancho de las unidades de dispositivo siempre es 1 píxel, independientemente del modo de asignación.
 
-- Para la segunda versión del constructor, si *nPenStyle* es PS_GEOMETRIC, el ancho se expresa en unidades lógicas. Si *nPenStyle* es PS_COSMETIC, el ancho debe establecerse en 1.
+- En el caso de la segunda versión del constructor, si *nPenStyle* es PS_GEOMETRIC, el ancho se proporciona en unidades lógicas. Si *nPenStyle* es PS_COSMETIC, el ancho debe establecerse en 1.
 
 *crColor*<br/>
-Contiene un color RGB para la pluma.
+Contiene un color RGB para el lápiz.
 
 *pLogBrush*<br/>
-Apunta a un `LOGBRUSH` estructura. Si *nPenStyle* es PS_COSMETIC, el *lbColor* miembro de la `LOGBRUSH` estructura especifica el color del lápiz y el *lbStyle* miembro de la `LOGBRUSH` estructura debe establecerse en BS_SOLID. Si *nPenStyle* es PS_GEOMETRIC, todos los miembros que deben usarse para especificar los atributos de pincel del lápiz.
+Apunta a una `LOGBRUSH` estructura. Si *nPenStyle* es PS_COSMETIC, el miembro *lbColor* de la `LOGBRUSH` estructura especifica el color del lápiz y el miembro *lbStyle* de la `LOGBRUSH` estructura debe establecerse en BS_SOLID. Si *nPenStyle* es PS_GEOMETRIC, todos los miembros deben usarse para especificar los atributos de pincel del lápiz.
 
 *nStyleCount*<br/>
-Especifica la longitud, en unidades de palabra doble, de la *lpStyle* matriz. Este valor debe ser cero si *nPenStyle* no es PS_USERSTYLE.
+Especifica la longitud, en unidades palabra, de la matriz *lpStyle* . Este valor debe ser cero si *nPenStyle* no es PS_USERSTYLE.
 
 *lpStyle*<br/>
-Apunta a una matriz de valores de palabra doble. El primer valor especifica la longitud del primer guión en un estilo definido por el usuario, el segundo valor especifica la longitud de la primer espacio y así sucesivamente. This (puntero) debe ser NULL si *nPenStyle* no es PS_USERSTYLE.
+Apunta a una matriz de valores palabra. El primer valor especifica la longitud del primer guión de un estilo definido por el usuario, el segundo valor especifica la longitud del primer espacio, etc. Este puntero debe ser NULL si *nPenStyle* no es PS_USERSTYLE.
 
 ### <a name="remarks"></a>Comentarios
 
-Si usa el constructor sin argumentos, debe inicializar resultante `CPen` objeto con el `CreatePen`, `CreatePenIndirect`, o `CreateStockObject` funciones miembro.
+Si utiliza el constructor sin argumentos `CPen` , debe inicializar el objeto resultante con las `CreatePen`funciones miembro, `CreatePenIndirect`o. `CreateStockObject`
 
-Si usa el constructor que toma argumentos, ninguna inicialización adicional es necesaria. El constructor con argumentos puede producir una excepción si se producen errores, mientras que el constructor sin argumentos siempre se realizará correctamente.
+Si usa el constructor que toma argumentos, no es necesario realizar ninguna inicialización adicional. El constructor con argumentos puede producir una excepción si se producen errores, mientras que el constructor sin argumentos siempre se realizará correctamente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -173,7 +173,7 @@ Si usa el constructor que toma argumentos, ninguna inicialización adicional es 
 
 ##  <a name="createpen"></a>  CPen::CreatePen
 
-Crea un lápiz de cosmético o geométrico lógico con el estilo especificado, el ancho y el pincel atributos y se adjunta a la `CPen` objeto.
+Crea un lápiz cosmético o geométrico lógico con los atributos de estilo, ancho y pincel especificados y lo adjunta al `CPen` objeto.
 
 ```
 BOOL CreatePen(
@@ -192,26 +192,26 @@ BOOL CreatePen(
 ### <a name="parameters"></a>Parámetros
 
 *nPenStyle*<br/>
-Especifica el estilo para la pluma. Para obtener una lista de valores posibles, vea el *nPenStyle* parámetro en el [CPen](#cpen) constructor.
+Especifica el estilo del lápiz. Para obtener una lista de los valores posibles, vea el parámetro *nPenStyle* en el constructor [CPen (](#cpen) .
 
 *nWidth*<br/>
 Especifica el ancho del lápiz.
 
-- Para la primera versión de `CreatePen`, si este valor es 0, el ancho en unidades de dispositivo siempre es 1 píxel, independientemente del modo de asignación.
+- En la primera versión de `CreatePen`, si este valor es 0, el ancho de las unidades de dispositivo siempre es 1 píxel, independientemente del modo de asignación.
 
-- Para la segunda versión de `CreatePen`si *nPenStyle* es PS_GEOMETRIC, el ancho se expresa en unidades lógicas. Si *nPenStyle* es PS_COSMETIC, el ancho debe establecerse en 1.
+- En el caso de la `CreatePen`segunda versión de, si *nPenStyle* es PS_GEOMETRIC, el ancho se proporciona en unidades lógicas. Si *nPenStyle* es PS_COSMETIC, el ancho debe establecerse en 1.
 
 *crColor*<br/>
-Contiene un color RGB para la pluma.
+Contiene un color RGB para el lápiz.
 
 *pLogBrush*<br/>
-Apunta a un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura. Si *nPenStyle* es PS_COSMETIC, el `lbColor` miembro de la `LOGBRUSH` estructura especifica el color del lápiz y el *lbStyle* miembro de la `LOGBRUSH` estructura debe establecerse en BS_ SÓLIDO. Si nPenStyle es PS_GEOMETRIC, todos los miembros deben usarse para especificar los atributos de pincel del lápiz.
+Apunta a una estructura [logbrush (](/windows/win32/api/wingdi/ns-wingdi-logbrush) . Si *nPenStyle* es PS_COSMETIC, el `lbColor` miembro de la `LOGBRUSH` estructura especifica el color del lápiz y el miembro *lbStyle* de la `LOGBRUSH` estructura debe establecerse en BS_SOLID. Si nPenStyle es PS_GEOMETRIC, todos los miembros deben usarse para especificar los atributos de pincel del lápiz.
 
 *nStyleCount*<br/>
-Especifica la longitud, en unidades de palabra doble, de la *lpStyle* matriz. Este valor debe ser cero si *nPenStyle* no es PS_USERSTYLE.
+Especifica la longitud, en unidades palabra, de la matriz *lpStyle* . Este valor debe ser cero si *nPenStyle* no es PS_USERSTYLE.
 
 *lpStyle*<br/>
-Apunta a una matriz de valores de palabra doble. El primer valor especifica la longitud del primer guión en un estilo definido por el usuario, el segundo valor especifica la longitud de la primer espacio y así sucesivamente. This (puntero) debe ser NULL si *nPenStyle* no es PS_USERSTYLE.
+Apunta a una matriz de valores palabra. El primer valor especifica la longitud del primer guión de un estilo definido por el usuario, el segundo valor especifica la longitud del primer espacio, etc. Este puntero debe ser NULL si *nPenStyle* no es PS_USERSTYLE.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -219,21 +219,21 @@ Distinto de cero si se realiza correctamente, o cero si se produce un error en e
 
 ### <a name="remarks"></a>Comentarios
 
-La primera versión de `CreatePen` Inicializa un lápiz con el estilo especificado, ancho y color. El lápiz puede seleccionarse posteriormente como el lápiz actual para cualquier contexto de dispositivo.
+La primera versión de `CreatePen` Inicializa un lápiz con el estilo, el ancho y el color especificados. Posteriormente, el lápiz se puede seleccionar como el lápiz actual para cualquier contexto de dispositivo.
 
-Lápices que tienen un ancho superior a 1 píxel siempre deben tener el estilo PS_NULL, PS_SOLID o PS_INSIDEFRAME.
+Los lápices que tienen un ancho mayor que 1 píxel siempre deben tener el estilo PS_NULL, PS_SOLID o PS_INSIDEFRAME.
 
-Si un lápiz tiene el estilo PS_INSIDEFRAME y un color que no coincide con un color en la tabla de colores lógico, el lápiz se dibuja con un color interpolado. El estilo de lápiz PS_SOLID no se puede usar para crear un lápiz con un color interpolado. El estilo PS_INSIDEFRAME es idéntico al PS_SOLID si el ancho del lápiz es menor o igual que 1.
+Si un lápiz tiene el estilo PS_INSIDEFRAME y un color que no coincide con un color de la tabla de colores lógicos, el lápiz se dibuja con un color dipuesto. El estilo de lápiz PS_SOLID no se puede usar para crear un lápiz con un color El estilo PS_INSIDEFRAME es idéntico a PS_SOLID si el ancho del lápiz es menor o igual que 1.
 
-La segunda versión de `CreatePen` Inicializa un lápiz de cosmético o geométrico lógico que tiene el estilo, ancho y los atributos de pincel especificados. El ancho de un lápiz de cosmético siempre es 1; el ancho de un lápiz geométrico siempre se especifica en unidades universales. Después de una aplicación crea un lápiz lógico, puede seleccionar ese lápiz en un contexto de dispositivo mediante una llamada a la [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) función. Después de selecciona un lápiz en un contexto de dispositivo, puede usar para dibujar líneas y curvas.
+La segunda versión de `CreatePen` Inicializa una plumilla lógica o estética lógica que tiene los atributos de estilo, ancho y pincel especificados. El ancho de un lápiz cosmético siempre es 1; el ancho de un lápiz geométrico siempre se especifica en unidades universales. Después de que una aplicación crea un lápiz lógico, puede seleccionar ese lápiz en un contexto de dispositivo mediante una llamada a la función [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) . Una vez que se selecciona un lápiz en un contexto de dispositivo, se puede usar para dibujar líneas y curvas.
 
-- Si *nPenStyle* es PS_COSMETIC y PS_USERSTYLE, las entradas de la *lpStyle* matriz especificar longitudes de guiones y espacios en unidades de estilo. Una unidad de estilo se define por el dispositivo en el que se usa el lápiz para dibujar una línea.
+- Si *nPenStyle* es PS_COSMETIC y PS_USERSTYLE, las entradas de la matriz *lpStyle* especifican las longitudes de los guiones y espacios en las unidades de estilo. Una unidad de estilo se define mediante el dispositivo en el que se usa el lápiz para dibujar una línea.
 
-- Si *nPenStyle* es PS_GEOMETRIC y PS_USERSTYLE, las entradas de la *lpStyle* matriz especificar longitudes de guiones y espacios en unidades lógicas.
+- Si *nPenStyle* es PS_GEOMETRIC y PS_USERSTYLE, las entradas de la matriz *lpStyle* especifican las longitudes de los guiones y espacios en unidades lógicas.
 
-- Si *nPenStyle* es PS_ALTERNATE, la unidad de estilo se omite y se establece todos los demás píxeles.
+- Si *nPenStyle* es PS_ALTERNATE, se omite la unidad de estilo y se establece el resto de píxeles.
 
-Cuando una aplicación ya no requiere un lápiz determinado, debe llamar a la [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) miembro función o destruir la `CPen` de objeto para el recurso ya no está en uso. Una aplicación no debe eliminar un lápiz cuando el lápiz está seleccionado en un contexto de dispositivo.
+Cuando una aplicación ya no requiere un lápiz determinado, debe llamar a la función miembro [CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) o destruir el `CPen` objeto para que el recurso ya no esté en uso. Una aplicación no debe eliminar un lápiz cuando se selecciona el lápiz en un contexto de dispositivo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -241,7 +241,7 @@ Cuando una aplicación ya no requiere un lápiz determinado, debe llamar a la [C
 
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect
 
-Inicializa un lápiz que tiene el estilo, ancho y color proporcionado en la estructura que señala *lpLogPen*.
+Inicializa un lápiz con el estilo, el ancho y el color especificados en la estructura a la que apunta *lpLogPen*.
 
 ```
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
@@ -250,7 +250,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="parameters"></a>Parámetros
 
 *lpLogPen*<br/>
-Apunta a la Windows [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) estructura que contiene información acerca de la pluma.
+Apunta a la estructura [logpen (](/windows/win32/api/Wingdi/ns-wingdi-logpen) de Windows que contiene información sobre el lápiz.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -258,9 +258,9 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 ### <a name="remarks"></a>Comentarios
 
-Lápices que tienen un ancho superior a 1 píxel siempre deben tener el estilo PS_NULL, PS_SOLID o PS_INSIDEFRAME.
+Los lápices que tienen un ancho mayor que 1 píxel siempre deben tener el estilo PS_NULL, PS_SOLID o PS_INSIDEFRAME.
 
-Si un lápiz tiene el estilo PS_INSIDEFRAME y un color que no coincide con un color en la tabla de colores lógico, el lápiz se dibuja con un color interpolado. El estilo PS_INSIDEFRAME es idéntico al PS_SOLID si el ancho del lápiz es menor o igual que 1.
+Si un lápiz tiene el estilo PS_INSIDEFRAME y un color que no coincide con un color de la tabla de colores lógicos, el lápiz se dibuja con un color dipuesto. El estilo PS_INSIDEFRAME es idéntico a PS_SOLID si el ancho del lápiz es menor o igual que 1.
 
 ### <a name="example"></a>Ejemplo
 
@@ -268,7 +268,7 @@ Si un lápiz tiene el estilo PS_INSIDEFRAME y un color que no coincide con un co
 
 ##  <a name="fromhandle"></a>  CPen::FromHandle
 
-Devuelve un puntero a un `CPen` objeto especifica un identificador a un objeto pen de GDI de Windows.
+Devuelve un puntero a un `CPen` objeto dado un identificador a un objeto Pen de Windows GDI.
 
 ```
 static CPen* PASCAL FromHandle(HPEN hPen);
@@ -277,7 +277,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="parameters"></a>Parámetros
 
 *hPen*<br/>
-`HPEN` identificador de lápiz GDI de Windows.
+`HPEN`identificador del lápiz de Windows GDI.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -285,7 +285,7 @@ Un puntero a un `CPen` objeto si es correcto; de lo contrario, NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-Si no hay un objeto `CPen` asociado al identificador, se crea y asocia un objeto `CPen` temporal. Este temporal `CPen` objeto es válido solo hasta que la próxima vez que la aplicación tenga tiempo de inactividad en su bucle de eventos, que hora gráfico temporal todos los objetos se eliminan. En otras palabras, el objeto temporal sólo es válido durante el procesamiento de mensajes de una ventana.
+Si no hay un objeto `CPen` asociado al identificador, se crea y asocia un objeto `CPen` temporal. Este objeto `CPen` temporal solo es válido hasta la próxima vez que la aplicación tenga tiempo de inactividad en su bucle de eventos, momento en el que se eliminarán todos los objetos gráficos temporales. En otras palabras, el objeto temporal solo es válido durante el procesamiento de un mensaje de ventana.
 
 ### <a name="example"></a>Ejemplo
 
@@ -293,7 +293,7 @@ Si no hay un objeto `CPen` asociado al identificador, se crea y asocia un objeto
 
 ##  <a name="getextlogpen"></a>  CPen::GetExtLogPen
 
-Obtiene un `EXTLOGPEN` estructura subyacente.
+Obtiene una `EXTLOGPEN` estructura subyacente.
 
 ```
 int GetExtLogPen(EXTLOGPEN* pLogPen);
@@ -302,7 +302,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ### <a name="parameters"></a>Parámetros
 
 *pLogPen*<br/>
-Apunta a un [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) estructura que contiene información acerca de la pluma.
+Apunta a una estructura [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) que contiene información sobre el lápiz.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -310,27 +310,27 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-El `EXTLOGPEN` estructura define el estilo, ancho y atributos de pincel de un lápiz. Por ejemplo, llamar a `GetExtLogPen` para que coincida con el estilo determinado de un lápiz.
+La `EXTLOGPEN` estructura define los atributos de estilo, ancho y pincel de un lápiz. Por ejemplo, llame `GetExtLogPen` a para que coincida con el estilo determinado de un lápiz.
 
-Vea los temas siguientes en el SDK de Windows para obtener información acerca de los atributos del lápiz:
+Vea los temas siguientes en la Windows SDK para obtener información sobre los atributos de los lápices:
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)
+- [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)
 
-- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
-- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)
+- [ExtCreatePen](/windows/win32/api/wingdi/nf-wingdi-extcreatepen)
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo de código siguiente se muestra cómo llamar `GetExtLogPen` para recuperar los atributos de un lápiz y, a continuación, crear un lápiz de cosmético, nueva con el mismo color.
+En el ejemplo de código siguiente `GetExtLogPen` se muestra cómo llamar a para recuperar los atributos de un lápiz y, a continuación, crear un nuevo lápiz cosmético con el mismo color.
 
 [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]
 
 ##  <a name="getlogpen"></a>  CPen::GetLogPen
 
-Obtiene un `LOGPEN` estructura subyacente.
+Obtiene una `LOGPEN` estructura subyacente.
 
 ```
 int GetLogPen(LOGPEN* pLogPen);
@@ -339,7 +339,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ### <a name="parameters"></a>Parámetros
 
 *pLogPen*<br/>
-Apunta a un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estructura para contener información acerca de la pluma.
+Apunta a una estructura [logpen (](/windows/win32/api/wingdi/ns-wingdi-logpen) para que contenga información sobre el lápiz.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -347,25 +347,25 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-El `LOGPEN` estructura define el estilo, color y el patrón de un lápiz.
+La `LOGPEN` estructura define el estilo, el color y el patrón de un lápiz.
 
-Por ejemplo, llamar a `GetLogPen` para que coincida con el estilo de lápiz concreto.
+Por ejemplo, llame `GetLogPen` a para que coincida con el estilo determinado del lápiz.
 
-Vea los temas siguientes en el SDK de Windows para obtener información acerca de los atributos del lápiz:
+Vea los temas siguientes en la Windows SDK para obtener información sobre los atributos de los lápices:
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo de código siguiente se muestra cómo llamar `GetLogPen` para recuperar un carácter de lápiz y, a continuación, crear un lápiz sólido, de nuevo con el mismo color.
+En el ejemplo de código siguiente `GetLogPen` se muestra cómo llamar a para recuperar un carácter de lápiz y, a continuación, crear un nuevo lápiz sólido con el mismo color.
 
 [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]
 
-##  <a name="operator_hpen"></a>  CPen::operator HPEN
+##  <a name="operator_hpen"></a>CPen (:: Operator HPEN
 
-Obtiene el identificador de Windows GDI adjunto de la `CPen` objeto.
+Obtiene el identificador de GDI de Windows asociado `CPen` del objeto.
 
 ```
 operator HPEN() const;
@@ -373,13 +373,13 @@ operator HPEN() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcto, un identificador para el objeto GDI de Windows representado por la `CPen` objeto; de lo contrario, NULL.
+Si es correcto, identificador del objeto GDI de Windows representado por el `CPen` objeto; de lo contrario, NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-Este es un operador de conversión, que admite el uso directo de un objeto HPEN.
+Este operador es un operador de conversión, que admite el uso directo de un objeto HPEN.
 
-Para obtener más información sobre el uso de objetos gráficos, vea el artículo [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en Windows SDK.
+Para obtener más información sobre el uso de objetos gráficos, vea el artículo [objetos gráficos](/windows/win32/gdi/graphic-objects) en Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 

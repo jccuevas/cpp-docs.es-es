@@ -1,5 +1,5 @@
 ---
-title: CRTThreadTraits (clase)
+title: Clase CRTThreadTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CRTThreadTraits
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-ms.openlocfilehash: b5fa9273e3d24f5c912ebe30fab93baa6c9ff5c1
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 9e12e64041e38b8fa014815870132a75885014bf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503164"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496566"
 ---
-# <a name="crtthreadtraits-class"></a>CRTThreadTraits (clase)
+# <a name="crtthreadtraits-class"></a>Clase CRTThreadTraits
 
-Esta clase proporciona la función de creación de un subproceso de CRT. Utilice esta clase si el subproceso va a usar las funciones de CRT.
+Esta clase proporciona la función de creación para un subproceso de CRT. Utilice esta clase si el subproceso va a utilizar funciones de CRT.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,29 +34,29 @@ class CRTThreadTraits
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CRTThreadTraits::CreateThread](#createthread)|(Estático) Llame a esta función para crear un subproceso que puede usar funciones de CRT.|
+|[CRTThreadTraits::CreateThread](#createthread)|Estático Llame a esta función para crear un subproceso que pueda usar funciones de CRT.|
 
 ## <a name="remarks"></a>Comentarios
 
-Rasgos de subproceso son clases que proporcionan una función de creación de un tipo determinado de subproceso. La función de creación tiene la misma firma y la misma semántica que el Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) función.
+Los rasgos de subprocesos son clases que proporcionan una función de creación para un tipo determinado de subproceso. La función de creación tiene la misma signatura y semántica que la función [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) de Windows.
 
-Rasgos del subproceso se utilizan las clases siguientes:
+Las clases siguientes utilizan rasgos de subprocesos:
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-Si el subproceso no va a utilizar las funciones de CRT, use [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) en su lugar.
+Si el subproceso no va a utilizar funciones de CRT, utilice [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) en su lugar.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
 ##  <a name="createthread"></a>  CRTThreadTraits::CreateThread
 
-Llame a esta función para crear un subproceso que puede usar funciones de CRT.
+Llame a esta función para crear un subproceso que pueda usar funciones de CRT.
 
 ```
 static HANDLE CreateThread(
@@ -74,30 +74,30 @@ static HANDLE CreateThread(
 Los atributos de seguridad para el nuevo subproceso.
 
 *dwStackSize*<br/>
-El tamaño de pila para el nuevo subproceso.
+Tamaño de la pila para el nuevo subproceso.
 
 *pfnThreadProc*<br/>
-El procedimiento de subproceso del subproceso nuevo.
+Procedimiento de subproceso del nuevo subproceso.
 
 *pvParam*<br/>
-El parámetro que se pasa al procedimiento de subproceso.
+Parámetro que se va a pasar al procedimiento de subproceso.
 
 *dwCreationFlags*<br/>
-La creación de indicadores (0 o CREATE_SUSPENDED).
+Marcas de creación (0 o CREATE_SUSPENDED).
 
 *pdwThreadId*<br/>
-[out] Dirección de la variable DWORD que, si se ejecuta correctamente, recibe el identificador de subproceso del subproceso recién creado.
+enuncia Dirección de la variable DWORD que, si se ejecuta correctamente, recibe el ID. de subproceso del subproceso creado recientemente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el identificador al subproceso recién creado o NULL en caso de error. Llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para obtener más información.
+Devuelve el identificador del subproceso recién creado o NULL en caso de error. Llame a [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) para obtener información de error extendida.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) para obtener más información sobre los parámetros para esta función.
+Vea [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) para obtener más información sobre los parámetros de esta función.
 
-Esta función llama a [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) para crear el subproceso.
+Esta función llama a _ [beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) para crear el subproceso.
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../../atl/atl-class-overview.md)
+[Información general sobre clases](../../atl/atl-class-overview.md)

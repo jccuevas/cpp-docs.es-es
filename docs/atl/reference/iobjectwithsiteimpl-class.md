@@ -1,5 +1,5 @@
 ---
-title: IObjectWithSiteImpl (clase)
+title: Clase IObjectWithSiteImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IObjectWithSiteImpl
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-ms.openlocfilehash: ad27c4288d7e16949fe38ea6b8a686e3d6916ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e857f739e3ff7235c473e99abbef6aab0d3f4205
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275235"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495834"
 ---
-# <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl (clase)
+# <a name="iobjectwithsiteimpl-class"></a>Clase IObjectWithSiteImpl
 
-Esta clase proporciona métodos que permiten a un objeto para comunicarse con su sitio.
+Esta clase proporciona métodos que permiten a un objeto comunicarse con su sitio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,31 +33,31 @@ template <class T>
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-La clase derivada de `IObjectWithSiteImpl`.
+La clase, derivada de `IObjectWithSiteImpl`.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[IObjectWithSiteImpl::GetSite](#getsite)|Consulta el sitio para un puntero de interfaz.|
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Proporciona el objeto con el sitio `IUnknown` puntero.|
-|[IObjectWithSiteImpl::SetSite](#setsite)|Proporciona el objeto con el sitio `IUnknown` puntero.|
+|[IObjectWithSiteImpl::GetSite](#getsite)|Consulta el sitio para obtener un puntero de interfaz.|
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Proporciona el objeto con el puntero del `IUnknown` sitio.|
+|[IObjectWithSiteImpl::SetSite](#setsite)|Proporciona el objeto con el puntero del `IUnknown` sitio.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Administra el sitio `IUnknown` puntero.|
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Administra el puntero del `IUnknown` sitio.|
 
 ## <a name="remarks"></a>Comentarios
 
-El [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) interfaz permite que un objeto para comunicarse con su sitio. Clase `IObjectWithSiteImpl` proporciona una implementación predeterminada de esta interfaz e implementa `IUnknown` mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.
+La interfaz [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) permite que un objeto se comunique con su sitio. La `IObjectWithSiteImpl` clase proporciona una implementación predeterminada de esta interfaz e `IUnknown` implementa enviando información al dispositivo de volcado en las compilaciones de depuración.
 
-`IObjectWithSiteImpl` Especifica los dos métodos. El cliente llama primero `SetSite`, pasando el sitio `IUnknown` puntero. Este puntero se almacena dentro del objeto y, más adelante se puede recuperar mediante una llamada a `GetSite`.
+`IObjectWithSiteImpl`especifica dos métodos. El cliente llama primero `SetSite`a, pasando el puntero `IUnknown` del sitio. Este puntero se almacena en el objeto y se puede recuperar más adelante mediante una llamada a `GetSite`.
 
-Normalmente, deriva la clase de `IObjectWithSiteImpl` cuando se crea un objeto que no es un control. Para los controles, derive la clase de [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), que también proporciona un puntero de sitio. No se derivan la clase de ambos `IObjectWithSiteImpl` y `IOleObjectImpl`.
+Normalmente, la clase se deriva de `IObjectWithSiteImpl` cuando se crea un objeto que no es un control. En el caso de los controles, derive la clase de [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), que también proporciona un puntero de sitio. No derive su clase de `IObjectWithSiteImpl` y. `IOleObjectImpl`
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -67,11 +67,11 @@ Normalmente, deriva la clase de `IObjectWithSiteImpl` cuando se crea un objeto q
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlcom.h
+**Encabezado:** atlcom. h
 
 ##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite
 
-Consulta el sitio para un puntero a la interfaz identificada por `riid`.
+Consulta el sitio para obtener un puntero a la interfaz identificada por `riid`.
 
 ```
 STDMETHOD(GetSite)(
@@ -81,13 +81,13 @@ STDMETHOD(GetSite)(
 
 ### <a name="remarks"></a>Comentarios
 
-Si el sitio admite esta interfaz, se devuelve el puntero a través de `ppvSite`. En caso contrario, `ppvSite` se establece en NULL.
+Si el sitio admite esta interfaz, el puntero se devuelve a `ppvSite`través de. De lo `ppvSite` contrario, se establece en NULL.
 
-Consulte [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) en el SDK de Windows.
+Vea [IObjectWithSite:: GetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) en el Windows SDK.
 
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite
 
-Administra el sitio `IUnknown` puntero.
+Administra el puntero del `IUnknown` sitio.
 
 ```
 CComPtr<IUnknown> m_spUnkSite;
@@ -95,11 +95,11 @@ CComPtr<IUnknown> m_spUnkSite;
 
 ### <a name="remarks"></a>Comentarios
 
-`m_spUnkSite` inicialmente recibe este puntero mediante una llamada a [SetSite](#setsite).
+`m_spUnkSite`recibe inicialmente este puntero a través de una llamada a [SetSite](#setsite).
 
 ##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite
 
-Proporciona el objeto con el sitio `IUnknown` puntero.
+Proporciona el objeto con el puntero del `IUnknown` sitio.
 
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -108,7 +108,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="parameters"></a>Parámetros
 
 *pUnkSite*<br/>
-[in] Puntero a la `IUnknown` puntero de interfaz del sitio de administración de este objeto. Si es NULL, el objeto debe llamar a `IUnknown::Release` en cualquier momento en que el objeto ya no conoce su sitio de sitio existente.
+de Puntero al `IUnknown` puntero de interfaz del sitio que administra este objeto. Si es null, el objeto debe `IUnknown::Release` llamar a en cualquier sitio existente, en el que el objeto ya no conoce su sitio.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -116,7 +116,7 @@ Devuelve S_OK.
 
 ##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite
 
-Proporciona el objeto con el sitio `IUnknown` puntero.
+Proporciona el objeto con el puntero del `IUnknown` sitio.
 
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
@@ -124,8 +124,8 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) en el SDK de Windows.
+Vea [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../../atl/atl-class-overview.md)
+[Información general sobre clases](../../atl/atl-class-overview.md)

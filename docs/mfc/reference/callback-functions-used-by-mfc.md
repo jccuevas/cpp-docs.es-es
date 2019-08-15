@@ -7,18 +7,18 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 84581a4a1147a5b0b046e1bf2fbe412bffe9c662
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612254"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507697"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funciones de devolución de llamada usadas por MFC
 
-Tres funciones de devolución de llamada aparecen en la biblioteca Microsoft Foundation Class. Estas funciones de devolución de llamada se pasan a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), y [CDC:: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc). Tenga en cuenta que todas las funciones de devolución de llamada deben interceptar las excepciones de MFC antes de volver a Windows, puesto que no se puede producir excepciones en los límites de devolución de llamada. Para obtener más información sobre las excepciones, vea el artículo [excepciones](../../mfc/exception-handling-in-mfc.md).
+En el biblioteca MFC aparecen tres funciones de devolución de llamada. Estas funciones de devolución de llamada se pasan a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: GrayString](../../mfc/reference/cdc-class.md#graystring)y [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Tenga en cuenta que todas las funciones de devolución de llamada deben interceptar excepciones de MFC antes de volver a Windows, ya que no se pueden iniciar excepciones en los límites de devolución de llamada. Para obtener más información sobre las excepciones, vea el artículo [excepciones](../../mfc/exception-handling-in-mfc.md).
 
-|Name||
+|NOMBRE||
 |----------|-----------------|
 |[Función de devolución de llamada para CDC::EnumObjects](#enum_objects)||
 |[Función de devolución de llamada para CDC::GrayString](#graystring)||
@@ -28,9 +28,9 @@ Tres funciones de devolución de llamada aparecen en la biblioteca Microsoft Fou
 
 **Encabezado:** afxwin.h
 
-## <a name="enum_objects"></a> Función de devolución de llamada para CDC:: EnumObjects
+## <a name="enum_objects"></a>Función de devolución de llamada para CDC:: EnumObjects
 
-El *ObjectFunc* nombre es un marcador de posición para el nombre de función proporcionada por la aplicación.
+El nombre *ObjectFunc* es un marcador de posición para el nombre de la función proporcionada por la aplicación.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -43,20 +43,20 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>Parámetros
 
 *lpszLogObject*<br/>
-Apunta a un [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) o [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura de datos que contiene información sobre los atributos de la lógicas del objeto.
+Apunta a una estructura de datos [logpen (](/windows/win32/api/Wingdi/ns-wingdi-logpen) o [logbrush (](/windows/win32/api/wingdi/ns-wingdi-logbrush) que contiene información sobre los atributos lógicos del objeto.
 
 *lpData*<br/>
-Apunta a los datos proporcionados por la aplicación pasa a la `EnumObjects` función.
+Apunta a los datos proporcionados por la aplicación pasados `EnumObjects` a la función.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función de devolución de llamada devuelve un **int**. El valor de esta devolución es definido por el usuario. Si la función de devolución de llamada devuelve 0, `EnumObjects` deja de enumeración al principio.
+La función de devolución de llamada devuelve un valor **int**. El valor de esta devolución está definido por el usuario. Si la función de devolución de llamada `EnumObjects` devuelve 0, detiene la enumeración pronto.
 
 ### <a name="remarks"></a>Comentarios
 
-El nombre real se debe exportar.
+Se debe exportar el nombre real.
 
-## <a name="graystring"></a>  Función de devolución de llamada para CDC:: graystring
+## <a name="graystring"></a>Función de devolución de llamada para CDC:: GrayString
 
 *OutputFunc* es un marcador de posición para el nombre de la función de devolución de llamada proporcionada por la aplicación.
 
@@ -72,25 +72,25 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>Parámetros
 
 *hDC*<br/>
-Identifica un contexto de dispositivo de memoria con un mapa de bits de al menos el ancho y alto especificados por `nWidth` y `nHeight` a `GrayString`.
+Identifica un contexto de dispositivo de memoria con un mapa de bits de al menos el ancho `nWidth` y `nHeight` el `GrayString`alto especificados por y por.
 
 *lpData*<br/>
 Apunta a la cadena de caracteres que se va a dibujar.
 
 *nCount*<br/>
-Especifica el número de caracteres a la salida.
+Especifica el número de caracteres que se van a generar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor devuelto de la función de devolución de llamada debe ser TRUE para indicar que es correcto; en caso contrario, es FALSE.
+El valor devuelto de la función de devolución de llamada debe ser TRUE para indicar que se ha realizado correctamente; en caso contrario, es FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
 La función de devolución de llamada (*OutputFunc*) debe dibujar una imagen en relación con las coordenadas (0,0) en lugar de (*x*, *y*).
 
-## <a name="setabortproc"></a>  Función de devolución de llamada para CDC:: SETABORTPROC
+## <a name="setabortproc"></a>Función de devolución de llamada para CDC:: SetAbortProc
 
-El nombre *AbortFunc* es un marcador de posición para el nombre de función proporcionada por la aplicación.
+El nombre *AbortFunc* es un marcador de posición para el nombre de la función proporcionada por la aplicación.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -103,18 +103,18 @@ BOOL CALLBACK EXPORT AbortFunc(
 ### <a name="parameters"></a>Parámetros
 
 *hPr*<br/>
-Identifica el contexto de dispositivo.
+Identifica el contexto del dispositivo.
 
 *code*<br/>
-Especifica si se ha producido un error. Es 0 si no se ha producido ningún error. Es SP_OUTOFDISK si el Administrador de impresión se está quedando sin espacio y más espacio en disco estará disponible si la aplicación espera. Si *código* es SP_OUTOFDISK, la aplicación no tiene que anular el trabajo de impresión. Si no es así, debe dar al administrador de impresión mediante una llamada a la `PeekMessage` o `GetMessage` función de Windows.
+Especifica si se ha producido un error. Es 0 si no se ha producido ningún error. Es SP_OUTOFDISK si el administrador de impresión tiene actualmente espacio en disco y hay más espacio disponible en disco si la aplicación espera. Si el *código* es SP_OUTOFDISK, la aplicación no tiene que anular el trabajo de impresión. Si no es así, debe proporcionar al administrador de impresión una llamada a la `PeekMessage` función `GetMessage` o de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de la función de controlador de la anulación es distinto de cero si el trabajo de impresión es para continuar y 0 si se cancela.
+El valor devuelto de la función Abort-handler es distinto de cero si el trabajo de impresión va a continuar y 0 si se cancela.
 
 ### <a name="remarks"></a>Comentarios
 
-El nombre real debe exportarse como se describe en la sección Comentarios de [CDC:: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc).
+El nombre real debe exportarse tal y como se describe en la sección Comentarios de [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
 ## <a name="see-also"></a>Vea también
 

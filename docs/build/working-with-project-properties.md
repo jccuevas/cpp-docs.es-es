@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313441"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498122"
 ---
 # <a name="set-compiler-and-build-properties"></a>Establecer propiedades del compilador y compilación
 
@@ -39,7 +39,7 @@ En la ilustración siguiente se muestra la misma página de propiedades de proye
 
 ## <a name="target-platforms"></a>Plataformas de destino
 
-*Plataforma de destino* hace referencia al tipo de dispositivo o sistema operativo en que se va a ejecutar el archivo ejecutable. Un proyecto se puede compilar para más de una plataforma. Las plataformas de destino disponibles para los proyectos de C++ dependen del tipo de proyecto; se incluyen, pero no se limitan a Win32, x64, ARM, iOS y Android.     La plataforma de destino **x86** que es posible que vea en el **Administrador de configuración** es idéntica a **Win32** en los proyectos nativos de C++. Win32 significa Windows de 32 bits y **x64** significa Windows de 64 bits. Para obtener más información sobre estas dos plataformas, vea [Running 32-bit applications](/windows/desktop/WinProg64/running-32-bit-applications) (Ejecución de aplicaciones de 32 bits).
+*Plataforma de destino* hace referencia al tipo de dispositivo o sistema operativo en que se va a ejecutar el archivo ejecutable. Un proyecto se puede compilar para más de una plataforma. Las plataformas de destino disponibles para los proyectos de C++ dependen del tipo de proyecto; se incluyen, pero no se limitan a Win32, x64, ARM, iOS y Android.     La plataforma de destino **x86** que es posible que vea en el **Administrador de configuración** es idéntica a **Win32** en los proyectos nativos de C++. Win32 significa Windows de 32 bits y **x64** significa Windows de 64 bits. Para obtener más información sobre estas dos plataformas, vea [Running 32-bit applications](/windows/win32/WinProg64/running-32-bit-applications) (Ejecución de aplicaciones de 32 bits).
 
 El valor de plataforma de destino **Cualquier CPU** que es posible que vea en el **Administrador de configuración** no tiene ningún efecto en los proyectos nativos de C++; es relevante para proyectos de C++/CLI y otros tipos de proyecto de .NET. Para obtener más información, consulte [/CLRIMAGETYPE (especificar tipo de imagen de CLR)](reference/clrimagetype-specify-type-of-clr-image.md).
 
@@ -52,7 +52,7 @@ Para obtener más información sobre cómo establecer las propiedades de una com
 
 ## <a name="c-compiler-and-linker-options"></a>C++opciones del compilador y del vinculador
 
-C++las opciones del compilador y del enlazador se encuentran  en los nodos del enlazador de **CC++ /** y en el panel izquierdo, bajo **propiedades de configuración**. Estos se convierten directamente en las opciones de línea de comandos que se pasarán al compilador. Para leer la documentación sobre una opción específica, seleccione la opción en el panel central y presione **F1**. También puede examinar la documentación de todas las opciones de las opciones del compilador de [MSVC](reference/compiler-options.md) y [las opciones](reference/linker-options.md)del vinculador de MSVC. 
+C++las opciones del compilador y del enlazador se encuentran en los nodos del enlazador de **CC++ /** y en el panel izquierdo, bajo **propiedades de configuración**. Estos se convierten directamente en las opciones de línea de comandos que se pasarán al compilador. Para leer la documentación sobre una opción específica, seleccione la opción en el panel central y presione **F1**. También puede examinar la documentación de todas las opciones de las opciones del compilador de [MSVC](reference/compiler-options.md) y [las opciones](reference/linker-options.md)del vinculador de MSVC. 
 
 El cuadro de diálogo **páginas de propiedades** solo muestra las páginas de propiedades que son relevantes para el proyecto actual. Por ejemplo, si el proyecto no tiene un archivo .idl, la página de propiedades de MIDL no se muestra. Para obtener más información sobre la configuración en cada página de propiedades, vea [páginasC++de propiedades ()](reference/property-pages-visual-cpp.md). 
 

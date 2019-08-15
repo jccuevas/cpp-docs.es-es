@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMappingBase (clase)
+title: Clase CAtlFileMappingBase
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMappingBase
@@ -16,19 +16,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: d31bc72e485fbb15ed595a7c777c3685a00865c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260349"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497771"
 ---
-# <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase (clase)
+# <a name="catlfilemappingbase-class"></a>Clase CAtlFileMappingBase
 
-Esta clase representa un archivo asignado a memoria.
+Esta clase representa un archivo asignado a la memoria.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,39 +40,39 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|El constructor.|
 |[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Llame a este método para copiar desde un objeto de asignación de archivos.|
 |[CAtlFileMappingBase::GetData](#getdata)|Llame a este método para obtener los datos de un objeto de asignación de archivos.|
 |[CAtlFileMappingBase::GetHandle](#gethandle)|Llame a este método para devolver el identificador de archivo.|
 |[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Llame a este método para obtener el tamaño de asignación de un objeto de asignación de archivos.|
 |[CAtlFileMappingBase::MapFile](#mapfile)|Llame a este método para crear un objeto de asignación de archivos.|
-|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Llame a este método para crear un objeto de asignación de archivos que permite el acceso completo a todos los procesos.|
-|[CAtlFileMappingBase::OpenMapping](#openmapping)|Llame a este método para devolver un identificador para el objeto de asignación de archivos.|
-|[CAtlFileMappingBase::Unmap](#unmap)|Llame a este método para anular la asignación de un objeto de asignación de archivos.|
+|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Llame a este método para crear un objeto de asignación de archivos que permita el acceso completo a todos los procesos.|
+|[CAtlFileMappingBase::OpenMapping](#openmapping)|Llame a este método para devolver un identificador al objeto de asignación de archivos.|
+|[CAtlFileMappingBase::Unmap](#unmap)|Llame a este método para desasignar un objeto de asignación de archivos.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CAtlFileMappingBase::operator =](#operator_eq)|Establece el objeto de asignación de archivos actual a otro objeto de asignación de archivos.|
+|[CAtlFileMappingBase::operator =](#operator_eq)|Establece el objeto de asignación de archivos actual en otro objeto de asignación de archivos.|
 
 ## <a name="remarks"></a>Comentarios
 
-Asignación de archivos es la asociación de contenido de un archivo con una parte del espacio de direcciones virtuales de un proceso. Esta clase proporciona métodos para crear los objetos de asignación de archivos que permiten programas para tener acceso fácilmente a y compartir datos.
+La asignación de archivos es la Asociación del contenido de un archivo con una parte del espacio de direcciones virtuales de un proceso. Esta clase proporciona métodos para crear objetos de asignación de archivos que permiten a los programas acceder fácilmente a los datos y compartirlos.
 
-Para obtener más información, consulte [asignación de archivos](/windows/desktop/Memory/file-mapping) en el SDK de Windows.
+Para obtener más información, vea [asignación de archivos](/windows/win32/Memory/file-mapping) en el Windows SDK.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlfile.h
+**Encabezado:** atlfile. h
 
 ##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase
 
@@ -86,11 +86,11 @@ CAtlFileMappingBase() throw();
 ### <a name="parameters"></a>Parámetros
 
 *orig*<br/>
-El objeto de asignación del archivo original a copiar para crear el nuevo objeto.
+Objeto de asignación de archivos original que se va a copiar para crear el nuevo objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Crea un nuevo objeto de asignación de archivos, utilizando opcionalmente un objeto existente. Sigue siendo necesario llamar a [CAtlFileMappingBase::MapFile](#mapfile) abrir o crear el objeto de asignación de archivos de un archivo determinado.
+Crea un nuevo objeto de asignación de archivos y, opcionalmente, usa un objeto existente. Todavía es necesario llamar a [CAtlFileMappingBase:: MapFile](#mapfile) para abrir o crear el objeto de asignación de archivos para un archivo determinado.
 
 ### <a name="example"></a>Ejemplo
 
@@ -106,7 +106,7 @@ Destructor.
 
 ### <a name="remarks"></a>Comentarios
 
-Libera todos los recursos asignados por la clase y llama a la [CAtlFileMappingBase::Unmap](#unmap) método.
+Libera los recursos asignados por la clase y llama al método [CAtlFileMappingBase::](#unmap) dislocate.
 
 ##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom
 
@@ -119,11 +119,11 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="parameters"></a>Parámetros
 
 *orig*<br/>
-El objeto de asignación de archivos original para copiarlos.
+Objeto de asignación de archivos original desde el que se va a copiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ##  <a name="getdata"></a>  CAtlFileMappingBase::GetData
 
@@ -139,7 +139,7 @@ Devuelve un puntero a los datos.
 
 ##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle
 
-Llame a este método para devolver un identificador para el objeto de asignación de archivos.
+Llame a este método para devolver un identificador al objeto de asignación de archivos.
 
 ```
 HANDLE GetHandle() throw ();
@@ -159,11 +159,11 @@ SIZE_T GetMappingSize() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el tamaño de asignación.
+Devuelve el tamaño de la asignación.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
+Vea el ejemplo de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
 ##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile
 
@@ -181,35 +181,35 @@ HRESULT MapFile(
 ### <a name="parameters"></a>Parámetros
 
 *hFile*<br/>
-Handle para el archivo desde el que se va a crear un objeto de asignación. *hFile* debe ser válido y no puede establecerse en INVALID_HANDLE_VALUE.
+Identificador del archivo desde el que se va a crear un objeto de asignación. *hFile* debe ser válido y no puede establecerse en INVALID_HANDLE_VALUE.
 
 *nMappingSize*<br/>
-El tamaño de asignación. Si es 0, el tamaño máximo del archivo de asignación objeto es igual al tamaño actual del archivo identificado por *hFile.*
+Tamaño de la asignación. Si es 0, el tamaño máximo del objeto de asignación de archivos es igual al tamaño actual del archivo identificado por *hFile.*
 
 *nOffset*<br/>
-El desplazamiento de archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.
+El desplazamiento de archivo donde se va a comenzar la asignación. El valor de desplazamiento debe ser un múltiplo de la granularidad de asignación de memoria del sistema.
 
 *dwMappingProtection*<br/>
-La protección que desea para la vista del archivo cuando se asigna el archivo. Consulte *flProtect* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.
+La protección deseada para la vista de archivos cuando el archivo está asignado. Consulte *flProtect* en [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) en el Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
+Especifica el tipo de acceso a la vista de archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) en el Windows SDK.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Una vez creado un objeto de asignación de archivos, el tamaño del archivo no puede superar el tamaño del objeto de asignación de archivos; Si es así, no todos el contenido del archivo estará disponibles para uso compartido. Para obtener más información, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) y [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
+Una vez creado un objeto de asignación de archivos, el tamaño del archivo no debe superar el tamaño del objeto de asignación de archivos. en caso contrario, no todo el contenido del archivo estará disponible para el uso compartido. Para obtener más información, consulte [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) y [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
+Vea el ejemplo de [CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase).
 
 ##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem
 
-Llame a este método para crear un objeto de asignación de archivos que permite el acceso completo a todos los procesos.
+Llame a este método para crear un objeto de asignación de archivos que permita el acceso completo a todos los procesos.
 
 ```
 HRESULT MapSharedMem(
@@ -224,30 +224,30 @@ HRESULT MapSharedMem(
 ### <a name="parameters"></a>Parámetros
 
 *nMappingSize*<br/>
-El tamaño de asignación. Si es 0, el tamaño máximo del archivo de asignación objeto es igual al tamaño actual del objeto de asignación del archivo identificado por *szName*.
+Tamaño de la asignación. Si es 0, el tamaño máximo del objeto de asignación de archivos es igual al tamaño actual del objeto de asignación de archivos identificado por *szName*.
 
 *szName*<br/>
-El nombre del objeto de asignación.
+Nombre del objeto de asignación.
 
 *pbAlreadyExisted*<br/>
-Apunta a un valor booleano que se establece en TRUE si el objeto de asignación ya existía.
+Apunta a un valor BOOL que se establece en TRUE si el objeto de asignación ya existía.
 
 *lpsa*<br/>
-El puntero a un `SECURITY_ATTRIBUTES` estructura que determina si el identificador devuelto se puede heredar mediante procesos secundarios. Consulte *lpAttributes* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.
+Puntero a una `SECURITY_ATTRIBUTES` estructura que determina si los procesos secundarios pueden heredar el identificador devuelto. Consulte *lpAttributes* en [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) en el Windows SDK.
 
 *dwMappingProtection*<br/>
-La protección que desea para la vista del archivo, cuando se asigna el archivo. Consulte *flProtect* en `CreateFileMapping` en el SDK de Windows.
+La protección deseada para la vista de archivo cuando se asigna el archivo. Vea *flProtect* en `CreateFileMapping` en el Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
+Especifica el tipo de acceso a la vista de archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) en el Windows SDK.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`MapShareMem` permite que un objeto de asignación de archivos existente, creado por [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)para compartirse entre los procesos.
+`MapShareMem`permite que un objeto de asignación de archivos existente, creado por [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), se comparta entre los procesos.
 
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
 
@@ -264,28 +264,28 @@ HRESULT OpenMapping(
 ### <a name="parameters"></a>Parámetros
 
 *szName*<br/>
-El nombre del objeto de asignación. Si hay un identificador abierto a un objeto de asignación de archivos con este nombre y el descriptor de seguridad en el objeto de asignación no entra en conflicto con el *dwViewDesiredAccess* la operación de apertura de parámetro, se realiza correctamente.
+Nombre del objeto de asignación. Si hay un identificador abierto para un objeto de asignación de archivos por este nombre y el descriptor de seguridad del objeto de asignación no entra en conflicto con el parámetro *dwViewDesiredAccess* , la operación de apertura se realiza correctamente.
 
 *nMappingSize*<br/>
-El tamaño de asignación. Si es 0, el tamaño máximo del archivo de asignación objeto es igual al tamaño actual del objeto de asignación del archivo identificado por *szName*.
+Tamaño de la asignación. Si es 0, el tamaño máximo del objeto de asignación de archivos es igual al tamaño actual del objeto de asignación de archivos identificado por *szName*.
 
 *nOffset*<br/>
-El desplazamiento de archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.
+El desplazamiento de archivo donde se va a comenzar la asignación. El valor de desplazamiento debe ser un múltiplo de la granularidad de asignación de memoria del sistema.
 
 *dwViewDesiredAccess*<br/>
-Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
+Especifica el tipo de acceso a la vista de archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) en el Windows SDK.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
 En las compilaciones de depuración, se producirá un error de aserción si los parámetros de entrada no son válidos.
 
-##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =
+##  <a name="operator_eq"></a>CAtlFileMappingBase:: Operator =
 
-Establece el objeto de asignación de archivos actual a otro objeto de asignación de archivos.
+Establece el objeto de asignación de archivos actual en otro objeto de asignación de archivos.
 
 ```
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
@@ -294,7 +294,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="parameters"></a>Parámetros
 
 *orig*<br/>
-El objeto de asignación de archivos actual.
+Objeto actual de asignación de archivos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -302,7 +302,7 @@ Devuelve una referencia al objeto actual.
 
 ##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap
 
-Llame a este método para anular la asignación de un objeto de asignación de archivos.
+Llame a este método para desasignar un objeto de asignación de archivos.
 
 ```
 HRESULT Unmap() throw();
@@ -310,13 +310,13 @@ HRESULT Unmap() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) en el SDK de Windows para obtener más detalles.
+Consulte [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) en el Windows SDK para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 
 [CAtlFileMapping (clase)](../../atl/reference/catlfilemapping-class.md)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)
+[Información general sobre clases](../../atl/atl-class-overview.md)

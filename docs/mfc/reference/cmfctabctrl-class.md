@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821250"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504888"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Lo llama el marco de trabajo cuando se arrastra el cursor por primera vez a la ventana de control de pestañas.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Lo llama el marco de trabajo durante una operación de arrastre cuando el mouse se mueve sobre la ventana de destino de colocación. (Invalida [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover)).|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Muestra un menú emergente de ventanas con pestañas, espera hasta que el usuario selecciona una pestaña y hace que la pestaña seleccionada sea la pestaña activa.|
-|`CMFCTabCtrl::PreTranslateMessage`|Traduce los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Invalida [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)).|
+|`CMFCTabCtrl::PreTranslateMessage`|Traduce los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Invalida [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)).|
 |`CMFCTabCtrl::RecalcLayout`|Vuelve a calcular el diseño interno del control de ficha. (Invalida [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)).|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Establece la pestaña actual de un control de ficha como la pestaña activa de un grupo de pestañas de la interfaz de varios documentos.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Activa una pestaña. (Invalida [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)).|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 de Apunta a un objeto de datos que contiene los datos que el usuario arrastra.
 
 *dwKeyState*<br/>
-de Contiene el estado de las teclas modificadoras. Este parámetro es una combinación bit a bit (o) de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, vea la sección **parámetros de mensaje** [sobre la entrada del mouse](/windows/desktop/inputdev/about-mouse-input).
+de Contiene el estado de las teclas modificadoras. Este parámetro es una combinación bit a bit (o) de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, vea la sección **parámetros de mensaje** [sobre la entrada del mouse](/windows/win32/inputdev/about-mouse-input).
 
 *point*<br/>
 de Contiene la ubicación actual del cursor en coordenadas de cliente.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 de Puntero a un objeto [COleDataObject](../../mfc/reference/coledataobject-class.md) que se está arrastrando sobre el destino de colocación.
 
 *dwKeyState*<br/>
-de El estado de las teclas modificadoras, que es una combinación bit a bit (o) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, vea "parámetros de mensaje" en acerca de la [entrada del mouse](/windows/desktop/inputdev/about-mouse-input).
+de El estado de las teclas modificadoras, que es una combinación bit a bit (o) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, vea "parámetros de mensaje" en acerca de la [entrada del mouse](/windows/win32/inputdev/about-mouse-input).
 
 *point*<br/>
 de La posición actual del mouse.

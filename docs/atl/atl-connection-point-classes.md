@@ -9,32 +9,32 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-ms.openlocfilehash: f3794b5c9e4f6297cca6611929c75d0b0133557e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8644fc087d7f0a651724c40d2868e96c9b6ec96a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252235"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491820"
 ---
 # <a name="atl-connection-point-classes"></a>Clases de puntos de conexión ATL
 
-ATL utiliza las siguientes clases para admitir puntos de conexión:
+ATL utiliza las clases siguientes para admitir puntos de conexión:
 
 - [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementa un punto de conexión. El IID de la interfaz de salida que representa se pasa como un parámetro de plantilla.
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementa el contenedor de punto de conexión y administra la lista de `IConnectionPointImpl` objetos.
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementa el contenedor de puntos de conexión y administra la lista `IConnectionPointImpl` de objetos.
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementa un punto de conexión que representa el [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaz.
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementa un punto de conexión que representa la interfaz [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) .
 
 - [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) administra un número arbitrario de conexiones entre el punto de conexión y sus receptores.
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) administra un número predefinido de conexiones según lo especificado por el parámetro de plantilla.
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md) administra un número predefinido de conexiones tal y como se especifica en el parámetro de plantilla.
 
-- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) notifica al receptor de un cliente que ha cambiado una propiedad del objeto o que va a cambiar.
+- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) notifica al receptor de un cliente que la propiedad de un objeto ha cambiado o está a punto de cambiar.
 
-- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) proporciona compatibilidad para puntos de conexión para un objeto COM de ATL. Estos puntos de conexión se asignan mediante un mapa de receptor de eventos, que se proporciona mediante el objeto COM.
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) proporciona compatibilidad para los puntos de conexión de un objeto COM ATL. Estos puntos de conexión se asignan a una asignación de receptor de eventos, proporcionada por el objeto COM.
 
-- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funciona junto con el mapa de receptores de eventos en la clase para enrutar eventos a la función de controlador adecuado.
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funciona junto con el mapa del receptor de eventos en la clase para enrutar los eventos a la función de controlador adecuada.
 
 ## <a name="see-also"></a>Vea también
 
