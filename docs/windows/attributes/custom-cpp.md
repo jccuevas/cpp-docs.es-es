@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490996"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -32,13 +32,13 @@ Define los metadatos de un objeto en la biblioteca de tipos.
 Identificador único.
 
 *value*<br/>
-Un valor que se puede colocar en una variante.
+Valor que se puede colocar en una variante.
 
 ## <a name="remarks"></a>Comentarios
 
-El **personalizado** atributo de C++ hará que la información para colocarse en la biblioteca de tipos. Necesitará una herramienta que lee el valor personalizado de la biblioteca de tipos.
+El atributo **personalizado** C++ hará que la información se coloque en la biblioteca de tipos. Necesitará una herramienta que lea el valor personalizado de la biblioteca de tipos.
 
-El **personalizado** atributo tiene la misma funcionalidad que el [personalizado](/windows/desktop/Midl/custom) atributo MIDL.
+El atributo **personalizado** tiene la misma funcionalidad que el atributo MIDL [personalizado](/windows/win32/Midl/custom) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -46,10 +46,10 @@ El **personalizado** atributo tiene la misma funcionalidad que el [personalizado
 
 |||
 |-|-|
-|**Se aplica a**|No COM **interfaz**, **clase**, **enum**s, `idl_module` métodos, los miembros de interfaz, los parámetros de la interfaz, **typedef**s, **unión**s, **struct**s|
+|**Se aplica a**|**Interfaz**no com, **clase**, **enumeración**, `idl_module` métodos, miembros de interfaz, parámetros de interfaz, **typedef**s, **Union**s, **struct**s|
 |**Reiterativo**|Sí|
 |**Atributos requeridos**|**coclase** (cuando se usa en la clase)|
-|**Atributos no válidos**|Ninguna|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 33f002143e306c99b4d17b7a01ddd4a9738e38e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341075"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493276"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Crear C/C++ dll en Visual Studio
 
@@ -80,15 +80,15 @@ Describe el código de inicialización del archivo DLL que se debe ejecutar cuan
 Describe cómo la biblioteca en tiempo de ejecución realiza la secuencia de inicio del archivo DLL.
 
 [LoadLibrary y AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-Describe el uso  de LoadLibrary `AfxLoadLibrary` y para vincularse explícitamente a un archivo dll en tiempo de ejecución.
+Describe el uso de LoadLibrary `AfxLoadLibrary` y para vincularse explícitamente a un archivo dll en tiempo de ejecución.
 
 [GetProcAddress](getprocaddress.md)<br/>
 Describe el uso de **GetProcAddress** para obtener la dirección de una función exportada en el archivo dll.
 
 [FreeLibrary y AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
-Describe el uso  de FreeLibrary `AfxFreeLibrary` y cuando el módulo DLL ya no se necesita.
+Describe el uso de FreeLibrary `AfxFreeLibrary` y cuando el módulo DLL ya no se necesita.
 
-[Orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[Orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/win32/Dlls/dynamic-link-library-search-order)<br/>
 Describe la ruta de acceso de búsqueda que usa el sistema operativo Windows para encontrar un archivo DLL en el sistema.
 
 [Estados de módulos de un archivo DLL de MFC estándar vinculado dinámicamente a MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
