@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916680"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502621"
 ---
 # <a name="cshellmanager-class"></a>Clase CShellManager
 
@@ -113,7 +113,7 @@ de Cadena que contiene la carpeta seleccionada de forma predeterminada cuando se
 de Título del cuadro de diálogo.
 
 *ulFlags*<br/>
-de Marcas que especifican las opciones del cuadro de diálogo. Consulte [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) para obtener una descripción detallada.
+de Marcas que especifican las opciones del cuadro de diálogo. Consulte [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) para obtener una descripción detallada.
 
 *piFolderImage*<br/>
 enuncia Puntero al valor entero en el que el método escribe el índice de imagen de la carpeta seleccionada.
@@ -156,7 +156,7 @@ Un puntero a la nueva lista de elementos si la función se ejecuta correctamente
 
 ### <a name="remarks"></a>Comentarios
 
-Este método crea un nuevo [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) lo suficientemente grande como para contener *pidl1* y *pidl2*. Después, copia *pidl1* y *pidl2* en la nueva lista.
+Este método crea un nuevo [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) lo suficientemente grande como para contener *pidl1* y *pidl2*. Después, copia *pidl1* y *pidl2* en la nueva lista.
 
 ##  <a name="copyitem"></a>  CShellManager::CopyItem
 

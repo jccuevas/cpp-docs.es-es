@@ -8,18 +8,18 @@ helpviewer_keywords:
 - header controls [MFC], processing notifications
 - header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
-ms.openlocfilehash: 3c5d147741123f97a53b18a854db9204738d0a2f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f60a0c918476702881984f976b220130727cf4b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339622"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507943"
 ---
 # <a name="processing-header-control-notifications"></a>Procesar notificaciones del control de encabezado
 
-En la clase de vista o cuadro de diálogo, utilice la ventana Propiedades para crear un [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) función de controlador con una instrucción switch para cualquier control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) mensajes de notificación que desee controlar (consulte [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)). Las notificaciones se envían a la ventana primaria cuando el usuario hace clic o hace doble clic en un elemento de encabezado, arrastra un divisor entre elementos y así sucesivamente.
+En la vista o la clase de cuadro de diálogo, use la ventana Propiedades para crear una función de controlador de [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) con una instrucción switch para los mensajes de notificación de control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) que desee controlar (consulte [asignación de mensajes a funciones). ](../mfc/reference/mapping-messages-to-functions.md)). Las notificaciones se envían a la ventana primaria cuando el usuario hace clic o hace doble clic en un elemento de encabezado, arrastra un divisor entre los elementos, etc.
 
-Los mensajes de notificación asociados con un control de encabezado se enumeran en [referencia de Control de encabezado](/windows/desktop/controls/header-control-reference) en el SDK de Windows.
+Los mensajes de notificación asociados a un control de encabezado se enumeran en [referencia de control de encabezado](/windows/win32/controls/header-control-reference) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

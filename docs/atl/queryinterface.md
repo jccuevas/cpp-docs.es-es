@@ -7,22 +7,22 @@ helpviewer_keywords:
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-ms.openlocfilehash: 28f3781706981b06d49829c0277014c09574ef6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2762cff3d697261e159336d866a5a7cb10fafa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250365"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492005"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
-Aunque hay mecanismos mediante el cual un objeto puede expresar la funcionalidad que proporciona estáticamente (antes de se crea una instancia), el mecanismo fundamental de COM es usar el `IUnknown` método llamado [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+Aunque hay mecanismos por los que un objeto puede expresar la funcionalidad que proporciona de forma estática (antes de que se cree una instancia), el mecanismo com fundamental es `IUnknown` usar el método denominado [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
 
-Cada interfaz se deriva `IUnknown`, por lo que cada interfaz tiene una implementación de `QueryInterface`. Independientemente de la implementación, este método consulta un objeto mediante el IID de la interfaz a la que el llamador desea un puntero. Si el objeto admite esa interfaz, `QueryInterface` recupera un puntero a la interfaz, mientras llama a `AddRef`. En caso contrario, devuelve el código de error E_NOINTERFACE.
+Cada interfaz se deriva de `IUnknown`, por lo que cada interfaz tiene una `QueryInterface`implementación de. Independientemente de la implementación, este método consulta un objeto utilizando el IID de la interfaz a la que el llamador desea un puntero. Si el objeto admite esa interfaz, `QueryInterface` recupera un puntero a la interfaz, mientras que también llama `AddRef`a. De lo contrario, devuelve el código de error E_NOINTERFACE.
 
-Tenga en cuenta que debe obedecer [recuento de referencias](../atl/reference-counting.md) reglas en todo momento. Si se llama a `Release` en un puntero de interfaz para reducir el recuento de referencias en cero, no debe usar ese puntero nuevo. En ocasiones necesitará obtener una referencia débil a un objeto (es decir, puede que desee obtener un puntero a una de sus interfaces sin incrementar el recuento de referencias), pero no es aceptable para ello, llame a `QueryInterface` seguido `Release`. El puntero obtenido de manera no es válido y no debe usarse. Esto con más facilidad hace evidente cuando [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) está definido, por lo que definir esta macro es una forma útil de los errores de recuento de referencias de búsqueda.
+Tenga en cuenta que debe obedecer las reglas de recuento de [referencias](../atl/reference-counting.md) en todo momento. Si llama `Release` a en un puntero de interfaz para reducir el recuento de referencias a cero, no debe volver a usar ese puntero. En ocasiones, puede que necesite obtener una referencia débil a un objeto (es decir, puede que desee obtener un puntero a una de sus interfaces sin incrementar el recuento de referencias), pero no es aceptable hacerlo llamando `QueryInterface` a seguido de. `Release` El puntero Obtenido de este modo no es válido y no debe usarse. Esto se hace más fácil cuando se define [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) , por lo que la definición de esta macro es una manera útil de buscar errores de recuento de referencias.
 
 ## <a name="see-also"></a>Vea también
 
 [Introducción a COM](../atl/introduction-to-com.md)<br/>
-[QueryInterface: Desplazarse en un objeto](/windows/desktop/com/queryinterface--navigating-in-an-object)
+[QueryInterface Desplazarse por un objeto](/windows/win32/com/queryinterface--navigating-in-an-object)

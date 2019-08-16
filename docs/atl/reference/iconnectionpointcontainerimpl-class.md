@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointContainerImpl (clase)
+title: Clase IConnectionPointContainerImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointContainerImpl
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-ms.openlocfilehash: 06baa4dac3248d783648b8ce37e51250e0de2498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278ca6b1b9aac9539680d90b6fa0b18df22fc2f0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275521"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496023"
 ---
-# <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl (clase)
+# <a name="iconnectionpointcontainerimpl-class"></a>Clase IConnectionPointContainerImpl
 
-Esta clase implementa un contenedor de punto de conexión para administrar una colección de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objetos.
+Esta clase implementa un contenedor de puntos de conexión para administrar una colección de objetos [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,24 +33,24 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-La clase derivada de `IConnectionPointContainerImpl`.
+La clase, derivada de `IConnectionPointContainerImpl`.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|Crea un enumerador para recorrer en iteración los puntos de conexión admitidos en el objeto conectable.|
 |[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Recupera un puntero de interfaz al punto de conexión que admite el IID especificado.|
 
 ## <a name="remarks"></a>Comentarios
 
-`IConnectionPointContainerImpl` implementa un contenedor de punto de conexión para administrar una colección de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objetos. `IConnectionPointContainerImpl` proporciona dos métodos que un cliente puede llamar para recuperar más información acerca de un objeto conectable:
+`IConnectionPointContainerImpl`implementa un contenedor de puntos de conexión para administrar una colección de objetos [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) . `IConnectionPointContainerImpl`proporciona dos métodos a los que un cliente puede llamar para recuperar más información sobre un objeto conectable:
 
-- `EnumConnectionPoints` permite al cliente determinar qué tipo de salida el objeto admite las interfaces.
+- `EnumConnectionPoints`permite al cliente determinar qué interfaces de salida admite el objeto.
 
-- `FindConnectionPoint` permite al cliente determinar si el objeto admite una interfaz de salida específica.
+- `FindConnectionPoint`permite al cliente determinar si el objeto admite una interfaz de salida específica.
 
 Para obtener información sobre el uso de puntos de conexión en ATL, vea el artículo [puntos de conexión](../../atl/atl-connection-points.md).
 
@@ -62,7 +62,7 @@ Para obtener información sobre el uso de puntos de conexión en ATL, vea el art
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlcom.h
+**Encabezado:** atlcom. h
 
 ##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints
 
@@ -74,7 +74,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IConnectionPointContainer:: EnumConnectionPoints](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) en el SDK de Windows.
+Vea [IConnectionPointContainer:: EnumConnectionPoints](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) en el Windows SDK.
 
 ##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint
 
@@ -86,9 +86,9 @@ STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IConnectionPointContainer:: FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) en el SDK de Windows.
+Vea [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 
-[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)
+[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)<br/>
+[Información general sobre clases](../../atl/atl-class-overview.md)

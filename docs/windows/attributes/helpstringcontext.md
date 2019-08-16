@@ -1,21 +1,21 @@
 ---
-title: helpstringcontext (atributo de COM de C++)
+title: helpstringcontext (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409582"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501489"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.
+Especifica el identificador de un tema de ayuda en un archivo. hlp o. chm.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,11 +26,11 @@ Especifica el identificador de un tema de ayuda en un archivo .hlp o chm.
 ### <a name="parameters"></a>Parámetros
 
 *contextID*<br/>
-Un identificador de contexto de Ayuda de 32 bits en el **ayuda** archivo.
+Un identificador de contexto de ayuda de 32 bits en el archivo de **ayuda** .
 
 ## <a name="remarks"></a>Comentarios
 
-El **helpstringcontext** atributo de C++ tiene la misma funcionalidad que el [helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL (atributo).
+El atributo **helpstringcontext** C++ tiene la misma funcionalidad que el atributo ODL de [helpstringcontext](/windows/win32/Midl/helpstringcontext) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -55,9 +55,9 @@ __interface IMyI
 |||
 |-|-|
 |**Se aplica a**|**clase**, **interfaz**, método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

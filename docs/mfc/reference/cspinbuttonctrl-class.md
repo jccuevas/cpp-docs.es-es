@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916702"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502441"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *dwStyle*<br/>
-Especifica el estilo del control de botón de número. Aplique cualquier combinación de estilos de control de botón de número al control. Estos estilos se describen en los [estilos de control de arriba](/windows/desktop/Controls/up-down-control-styles) en el Windows SDK.
+Especifica el estilo del control de botón de número. Aplique cualquier combinación de estilos de control de botón de número al control. Estos estilos se describen en los [estilos de control de arriba](/windows/win32/Controls/up-down-control-styles) en el Windows SDK.
 
 *rect*<br/>
 Especifica el tamaño y la posición del control de botón de número. Puede ser un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [Rect](/previous-versions/dd162897\(v=vs.85\))
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parámetros
 
 *dwExStyle*<br/>
-Especifica el estilo extendido del control que se va a crear. Para obtener una lista de los estilos extendidos de Windows, consulte el parámetro *dwExStyle* para [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el Windows SDK.
+Especifica el estilo extendido del control que se va a crear. Para obtener una lista de los estilos extendidos de Windows, consulte el parámetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) en el Windows SDK.
 
 *dwStyle*<br/>
-Especifica el estilo del control de botón de número. Aplique cualquier combinación de estilos de control de botón de número al control. Estos estilos se describen en los [estilos de control de arriba](/windows/desktop/Controls/up-down-control-styles) en el Windows SDK.
+Especifica el estilo del control de botón de número. Aplique cualquier combinación de estilos de control de botón de número al control. Estos estilos se describen en los [estilos de control de arriba](/windows/win32/Controls/up-down-control-styles) en el Windows SDK.
 
 *rect*<br/>
 Referencia a una estructura [Rect](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
@@ -200,7 +200,7 @@ UINT GetAccel(
 Número de elementos de la matriz especificada por *pAccel*.
 
 *pAccel*<br/>
-Puntero a una matriz de estructuras [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) que recibe información de aceleración.
+Puntero a una matriz de estructuras [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) que recibe información de aceleración.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Parámetros
 
 *nAccel*<br/>
-Número de estructuras [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) especificadas por *pAccel*.
+Número de estructuras [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) especificadas por *pAccel*.
 
 *pAccel*<br/>
 Puntero a una matriz de estructuras UDACCEL que contienen información de aceleración. Los elementos deben ordenarse en orden ascendente según el `nSec` miembro.

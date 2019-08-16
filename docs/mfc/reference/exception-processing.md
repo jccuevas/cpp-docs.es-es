@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957503"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502562"
 ---
 # <a name="exception-processing"></a>Procesamiento de excepciones
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a esta función si se produce un error en las llamadas a asignadores de memoria del sistema subyacentes (como **malloc** y la función de Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) ). No es necesario llamarlo para **nuevo** porque **New** producirá automáticamente una excepción de memoria si se produce un error en la asignación de memoria.
+Llame a esta función si se produce un error en las llamadas a asignadores de memoria del sistema subyacentes (como **malloc** y la función de Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) ). No es necesario llamarlo para **nuevo** porque **New** producirá automáticamente una excepción de memoria si se produce un error en la asignación de memoria.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -491,7 +491,7 @@ Identificador de un código de resultado que indica la razón de la excepción.
 
 ### <a name="remarks"></a>Comentarios
 
-La versión que toma HRESULT como argumento convierte ese código de resultado en el SCODE correspondiente. Para obtener más información sobre HRESULT y SCODE, vea [estructura de los códigos de error com](/windows/desktop/com/structure-of-com-error-codes) en el Windows SDK.
+La versión que toma HRESULT como argumento convierte ese código de resultado en el SCODE correspondiente. Para obtener más información sobre HRESULT y SCODE, vea [estructura de los códigos de error com](/windows/win32/com/structure-of-com-error-codes) en el Windows SDK.
 
 ### <a name="requirements"></a>Requisitos
 

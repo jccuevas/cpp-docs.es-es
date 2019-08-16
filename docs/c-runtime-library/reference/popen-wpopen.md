@@ -33,14 +33,14 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156166"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499599"
 ---
-# <a name="popen-wpopen"></a>_popen, _wpopen
+# <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Crea una canalización y ejecuta un comando.
 
@@ -70,15 +70,15 @@ Modo del flujo devuelto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error es un parámetro no válido, por ejemplo, si *comando* o *modo* es un puntero nulo, o *modo* no es un modo válido, **errno** está establecido en **EINVAL**. Vea los modos válidos en la sección de comentarios.
+Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error es un parámetro no válido, como si el *comando* o el *modo* es un puntero nulo, o el *modo* no es un modo válido, **errno** se establece en **EINVAL**. Vea los modos válidos en la sección de comentarios.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_popen** función crea una canalización y ejecuta de forma asincrónica una copia generada del procesador de comandos con la cadena especificada de *comando*. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
+La función **_popen** crea una canalización y ejecuta de forma asincrónica una copia generada del procesador de comandos con el *comando*de cadena especificado. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
 
-|Modo de acceso|Descripción|
+|Modo de acceso|DESCRIPCIÓN|
 |-|-|
 |**"r"**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
 |**"w"**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
@@ -86,9 +86,9 @@ El **_popen** función crea una canalización y ejecuta de forma asincrónica un
 |**"t"**|Abrir en modo de texto.|
 
 > [!NOTE]
-> Si se usa en un programa de Windows, el **_popen** función devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el SDK de Windows.
+> Si se usa en un programa de Windows, la función **_popen** devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y la salida, vea [crear un proceso secundario con entrada y salida](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) redirigidas en el Windows SDK.
 
-**_wpopen** es una versión con caracteres anchos de **_popen**; el *ruta* argumento **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan exactamente igual.
+**_wpopen** es una versión con caracteres anchos de **_popen**; el argumento de *ruta de acceso* a **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan de manera idéntica.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

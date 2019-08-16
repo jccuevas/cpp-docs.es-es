@@ -1,21 +1,21 @@
 ---
-title: first_is (C++ atributo COM)
+title: first_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409608"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501555"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-Especifica el índice del primer elemento de matriz que se transmitan.
+Especifica el índice del primer elemento de la matriz que se va a transmitir.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,15 +26,15 @@ Especifica el índice del primer elemento de matriz que se transmitan.
 ### <a name="parameters"></a>Parámetros
 
 *expression*<br/>
-Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
+Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
 ## <a name="remarks"></a>Comentarios
 
-El **first_is** C++ atributo tiene la misma funcionalidad que el [first_is](/windows/desktop/Midl/first-is) atributo MIDL.
+El atributo **first_is** C++ tiene la misma funcionalidad que el atributo MIDL [first_is](/windows/win32/Midl/first-is) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra varias maneras para especificar una sección de una matriz:
+En el código siguiente se muestran varias maneras de especificar una sección en una matriz:
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

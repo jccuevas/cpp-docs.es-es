@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownToolbarButton (clase)
+title: Clase CMFCDropDownToolbarButton
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDropDownToolbarButton
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 5027b43e1519d9f8cc2880cc4de005d5137bbb67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcfb521e309463da81d0064451297b3b73610d2f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237707"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505331"
 ---
-# <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton (clase)
+# <a name="cmfcdropdowntoolbarbutton-class"></a>Clase CMFCDropDownToolbarButton
 
-Un tipo de botón de la barra de herramientas que se comporta como un botón normal cuando se hace clic en él. Sin embargo, se abre una barra de herramientas desplegable ( [CMFCDropDownToolBar (clase)](../../mfc/reference/cmfcdropdowntoolbar-class.md) si el usuario presiona y mantiene el botón de la barra de herramientas.
+Un tipo de botón de la barra de herramientas que se comporta como un botón normal cuando se hace clic en él. Sin embargo, abre una barra de herramientas desplegable ( [clase CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) si el usuario presiona y mantiene presionado el botón de barra de herramientas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -63,48 +63,48 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|Construye un objeto `CMFCDropDownToolbarButton`.|
 |`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Copia las propiedades de otro botón de barra de herramientas a la actual. (Invalida [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Copia las propiedades de otro botón de la barra de herramientas en el botón actual. (Invalida [CMFCToolBarButton:: CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)).|
 |`CMFCDropDownToolbarButton::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
-|[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Se abre una barra de herramientas desplegable.|
-|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Copia el texto en el botón de barra de herramientas a un menú. (Invalida [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|
-|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Recupera la barra de herramientas de la lista desplegable que está asociado con el botón.|
-|`CMFCDropDownToolbarButton::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
-|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Determina si la barra de herramientas desplegable está abierto actualmente.|
-|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Determina si se puede mostrar el botón con un borde extendido. (Invalida [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|
-|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Lo llama el marco de trabajo para calcular el tamaño del botón para el contexto de dispositivo especificado y el estado de acoplamiento. (Invalida [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
-|`CMFCDropDownToolbarButton::OnCancelMode`|Lo llama el marco de trabajo para controlar la [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) mensaje. (Invalida `CMCToolBarButton::OnCancelMode`).|
-|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Lo llama el marco cuando el botón se inserta en una nueva barra de herramientas. (Invalida [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|
-|[CMFCDropDownToolbarButton::OnClick](#onclick)|Lo llama el marco cuando el usuario hace clic en el botón del mouse. (Invalida [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
-|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Lo llama el marco cuando el usuario suelta el botón del mouse. (Invalida [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|
-|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Lo llama el marco de trabajo cuando la barra de herramientas primario controla un mensaje WM_HELPHITTEST. (Invalida [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
-|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Cuando la aplicación muestra un menú contextual en la barra de herramientas primario se modifica el menú proporcionado. (Invalida [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|
-|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Lo llama el marco de trabajo para dibujar el botón mediante el uso de las opciones y estilos especificados. (Invalida [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
-|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Lo llama el marco de trabajo para dibujar el botón de la **comandos** panel de la **personalizar** cuadro de diálogo. (Invalida [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
-|[CMFCDropDownToolbarButton::Serialize](#serialize)|Lee este objeto de un archivo o lo escribe en un archivo. (Invalida [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
+|[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Abre una barra de herramientas desplegable.|
+|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Copia texto del botón de la barra de herramientas en un menú. (Invalida [CMFCToolBarButton:: ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)).|
+|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Recupera la barra de herramientas desplegable que está asociada al botón.|
+|`CMFCDropDownToolbarButton::GetThisClass`|Lo usa el marco de trabajo para obtener un puntero al objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) asociado a este tipo de clase.|
+|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Determina si la barra de herramientas desplegable está abierta actualmente.|
+|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Determina si el botón se puede mostrar con un borde extendido. (Invalida [CMFCToolBarButton:: IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)).|
+|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Lo llama el marco de trabajo para calcular el tamaño del botón para el contexto de dispositivo y el estado de acoplamiento especificados. (Invalida [CMFCToolBarButton:: OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)).|
+|`CMFCDropDownToolbarButton::OnCancelMode`|Lo llama el marco de trabajo para controlar el mensaje de [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) . (Invalida `CMCToolBarButton::OnCancelMode`).|
+|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Lo llama el marco de trabajo cuando el botón se inserta en una nueva barra de herramientas. (Invalida [CMFCToolBarButton:: OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)).|
+|[CMFCDropDownToolbarButton::OnClick](#onclick)|Lo llama el marco de trabajo cuando el usuario hace clic con el botón del mouse. (Invalida [CMFCToolBarButton:: OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)).|
+|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Lo llama el marco de trabajo cuando el usuario suelta el botón del mouse. (Invalida [CMFCToolBarButton:: OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup)).|
+|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Lo llama el marco de trabajo cuando la barra de herramientas primaria controla un mensaje WM_HELPHITTEST. (Invalida [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)).|
+|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Modifica el menú proporcionado cuando la aplicación muestra un menú contextual en la barra de herramientas primaria. (Invalida [CMFCToolBarButton:: OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)).|
+|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Lo llama el marco de trabajo para dibujar el botón usando los estilos y las opciones especificados. (Invalida [CMFCToolBarButton:: OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw)).|
+|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Lo llama el marco de trabajo para dibujar el botón en el panel **comandos** del cuadro de diálogo **personalizar** . (Invalida [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)).|
+|[CMFCDropDownToolbarButton::Serialize](#serialize)|Lee este objeto de un archivo o lo escribe en un archivo. (Invalida [CMFCToolBarButton:: Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)).|
 |[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|Establece el comando predeterminado que usa el marco cuando un usuario hace clic en el botón.|
 
 ### <a name="data-members"></a>Miembros de datos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Especifica el período de tiempo que un usuario debe mantenerse presionada el botón del mouse antes de que aparezca la barra de herramientas desplegable.|
+|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Especifica el período de tiempo que un usuario debe mantener presionado el botón del mouse antes de que aparezca la barra de herramientas desplegable.|
 
 ## <a name="remarks"></a>Comentarios
 
-Un `CMFCDropDownToolBarButton` difiere de un botón normal porque tiene una pequeña flecha en la esquina inferior derecha del botón. Después de que el usuario selecciona un botón de la barra de herramientas de la lista desplegable, el marco de trabajo muestra su icono en el botón de barra de herramientas de nivel superior (el botón con la flecha pequeña situada en la esquina inferior derecha).
+Un `CMFCDropDownToolBarButton` difiere de un botón normal en que tiene una flecha pequeña en la esquina inferior derecha del botón. Después de que el usuario selecciona un botón de la barra de herramientas desplegable, el marco de trabajo muestra su icono en el botón de la barra de herramientas de nivel superior (el botón con la flecha pequeña en la esquina inferior derecha).
 
-Para obtener información sobre cómo implementar una barra de herramientas de la lista desplegable, vea [CMFCDropDownToolBar (clase)](../../mfc/reference/cmfcdropdowntoolbar-class.md).
+Para obtener información sobre cómo implementar una barra de herramientas desplegable, vea [CMFCDropDownToolBar (clase](../../mfc/reference/cmfcdropdowntoolbar-class.md)).
 
-El `CMFCDropDownToolBarButton` objeto puede exportarse a un [CMFCToolBarMenuButton (clase)](../../mfc/reference/cmfctoolbarmenubutton-class.md) de objeto y se muestra como un botón de menú con un menú emergente.
+El `CMFCDropDownToolBarButton` objeto se puede exportar a un objeto de la [clase CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) y se muestra como un botón de menú con un menú emergente.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -120,7 +120,7 @@ El `CMFCDropDownToolBarButton` objeto puede exportarse a un [CMFCToolBarMenuButt
 
 ##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom
 
-Copia las propiedades de otro botón de barra de herramientas a la actual.
+Copia las propiedades de otro botón de la barra de herramientas en el botón actual.
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -129,11 +129,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>Parámetros
 
 *src*<br/>
-[in] Una referencia al botón de origen desde el que se va a copiar.
+de Referencia al botón de origen desde el que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a este método para copiar otro botón de barra de herramientas en este botón de barra de herramientas. *src* debe ser de tipo `CMFCDropDownToolbarButton`.
+Llame a este método para copiar otro botón de la barra de herramientas en este botón de la barra de herramientas. *src* debe ser de tipo `CMFCDropDownToolbarButton`.
 
 ##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton
 
@@ -150,26 +150,26 @@ CMFCDropDownToolbarButton(
 ### <a name="parameters"></a>Parámetros
 
 *lpszName*<br/>
-[in] El texto predeterminado del botón.
+de Texto predeterminado del botón.
 
 *pToolBar*<br/>
-[in] Un puntero a la `CMFCDropDownToolBar` objeto que se muestra cuando el usuario presiona el botón.
+de Puntero al `CMFCDropDownToolBar` objeto que se muestra cuando el usuario presiona el botón.
 
 ### <a name="remarks"></a>Comentarios
 
-La segunda sobrecarga del constructor de copia en el botón de lista desplegable el primer botón de la barra de herramientas que *pToolBar* especifica.
+La segunda sobrecarga del constructor copia en el botón desplegable el primer botón de la barra de herramientas que especifica *pToolBar* .
 
-Normalmente, un botón de barra de herramientas desplegable usa el texto en el botón usado más recientemente en la barra de herramientas que *pToolBar* especifica. Utiliza el texto especificado por *lpszName* cuando el botón se convierte en un botón de menú o se muestra en el **comandos** pestaña de la **personalizar** cuadro de diálogo. Para obtener más información sobre la **personalizar** cuadro de diálogo, vea [CMFCToolBarsCustomizeDialog (clase)](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).
+Normalmente, un botón de la barra de herramientas desplegable usa el texto del botón usados más recientemente en la barra de herramientas que *pToolBar* especifica. Usa el texto especificado por *lpszName* cuando el botón se convierte en un botón de menú o se muestra en la pestaña **comandos** del cuadro de diálogo **personalizar** . Para obtener más información sobre el cuadro de diálogo **personalizar** , consulte [clase CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCDropDownToolbarButton` clase. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo construir un objeto de `CMFCDropDownToolbarButton` la clase. Este fragmento de código forma parte del [ejemplo de demostración de Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]
 
 ##  <a name="dropdowntoolbar"></a>  CMFCDropDownToolbarButton::DropDownToolbar
 
-Se abre una barra de herramientas desplegable.
+Abre una barra de herramientas desplegable.
 
 ```
 BOOL DropDownToolbar(CWnd* pWnd);
@@ -178,23 +178,23 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-[in] La ventana primaria del marco de la lista desplegable, o NULL para usar la ventana primaria del botón de barra de herramientas desplegable.
+de La ventana primaria del marco desplegable o NULL para usar la ventana primaria del botón de la barra de herramientas desplegable.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el método es correcto; en caso contrario, es 0.
+Distinto de cero si el método es correcto; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-El [CMFCDropDownToolbarButton::OnClick](#onclick) método llama a este método para abrir la barra de herramientas desplegable cuando el usuario presiona y mantiene el botón de la barra de herramientas.
+El método [CMFCDropDownToolbarButton:: OnClick](#onclick) llama a este método para abrir la barra de herramientas desplegable cuando el usuario presiona y mantiene presionado el botón de barra de herramientas.
 
-Este método crea la barra de herramientas desplegable utilizando el [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) método. Si la barra de herramientas primario está acoplado vertical, este método coloca la barra de herramientas desplegable en el lado izquierdo o derecho de la barra de herramientas principal, según el ajuste. En caso contrario, este método coloca la barra de herramientas de la lista desplegable debajo de la barra de herramientas primario.
+Estos métodos crean la barra de herramientas desplegable mediante el método [CMFCDropDownFrame:: Create](../../mfc/reference/cmfcdropdownframe-class.md#create) . Si la barra de herramientas primaria está acoplada verticalmente, este método coloca la barra de herramientas desplegable en la parte izquierda o derecha de la barra de herramientas primaria, en función del ajuste. De lo contrario, este método coloca la barra de herramientas desplegable debajo de la barra de herramientas primaria.
 
-Este método produce un error si *conquistado* es NULL y el botón de barra de herramientas desplegable no tiene una ventana primaria.
+Este método produce un error si *PWND* es NULL y el botón de la barra de herramientas desplegable no tiene una ventana primaria.
 
 ##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton
 
-Copia el texto en el botón de barra de herramientas a un menú.
+Copia texto del botón de la barra de herramientas en un menú.
 
 ```
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
@@ -203,7 +203,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="parameters"></a>Parámetros
 
 *menuButton*<br/>
-[in] Una referencia al botón de menú de destino.
+de Referencia al botón de menú de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -211,13 +211,13 @@ Distinto de cero si el método es correcto; de lo contrario, 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método llama a la implementación de la clase base ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) y, a continuación, se anexa al botón de menú destino un menú emergente que contiene cada elemento de menú de la barra de herramientas en este botón. Este método no anexa submenús en el menú emergente.
+Este método llama a la implementación de la clase base ( [CMFCToolBarButton:: ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) y, a continuación, anexa al botón de menú de destino un menú emergente que contiene cada elemento de menú de la barra de herramientas de este botón. Este método no anexa menús secundarios al menú emergente.
 
-Este método produce un error si la barra de herramientas principal, `m_pToolBar`, es NULL o la implementación de la clase base devuelve FALSE.
+Este método produce un error si la barra `m_pToolBar`de herramientas primaria,, es null o la implementación de la clase base devuelve false.
 
 ##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar
 
-Recupera la barra de herramientas de la lista desplegable que está asociado con el botón.
+Recupera la barra de herramientas desplegable que está asociada al botón.
 
 ```
 CMFCToolBar* GetDropDownToolBar() const;
@@ -225,7 +225,7 @@ CMFCToolBar* GetDropDownToolBar() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La barra de herramientas de lista desplegable que está asociado con el botón.
+Barra de herramientas desplegable que está asociada al botón.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -233,7 +233,7 @@ Este método devuelve el `m_pToolBar` miembro de datos.
 
 ##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown
 
-Determina si la barra de herramientas desplegable está abierto actualmente.
+Determina si la barra de herramientas desplegable está abierta actualmente.
 
 ```
 BOOL IsDropDown() const;
@@ -241,15 +241,15 @@ BOOL IsDropDown() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la barra de herramientas desplegable está abierto actualmente; en caso contrario, es 0.
+Distinto de cero si la barra de herramientas desplegable está abierta actualmente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-El marco de trabajo abre la barra de herramientas desplegable mediante el [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) método. El marco de trabajo cierra la barra de herramientas desplegable cuando el usuario presiona el botón izquierdo del ratón en el área no cliente de la barra de herramientas desplegable.
+El marco de trabajo abre la barra de herramientas desplegable con el método [CMFCDropDownToolbarButton::D ropdowntoolbar](#dropdowntoolbar) . El marco de trabajo cierra la barra de herramientas desplegable cuando el usuario presiona el botón primario del mouse en el área no cliente de la barra de herramientas desplegable.
 
 ##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize
 
-Determina si se puede mostrar el botón con un borde extendido.
+Determina si el botón se puede mostrar con un borde extendido.
 
 ```
 virtual BOOL IsExtraSize() const;
@@ -257,15 +257,15 @@ virtual BOOL IsExtraSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si se puede mostrar el botón de barra de herramientas con un borde extendido; en caso contrario, es 0.
+Distinto de cero si el botón de la barra de herramientas se puede mostrar con un borde extendido; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información acerca de los bordes extendidos, vea [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).
+Para obtener más información sobre los bordes extendidos, vea [CMFCToolBarButton:: IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).
 
 ##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay
 
-Especifica el período de tiempo que un usuario debe mantenerse presionada el botón del mouse antes de que aparezca la barra de herramientas desplegable.
+Especifica el período de tiempo que un usuario debe mantener presionado el botón del mouse antes de que aparezca la barra de herramientas desplegable.
 
 ```
 static UINT m_uiShowBarDelay;
@@ -273,11 +273,11 @@ static UINT m_uiShowBarDelay;
 
 ### <a name="remarks"></a>Comentarios
 
-El tiempo de retraso se mide en milisegundos. El valor predeterminado es 500. Puede establecer otro retraso cambiando el valor de este miembro de datos compartido.
+El tiempo de retardo se mide en milisegundos. El valor predeterminado es 500. Puede establecer otro retraso cambiando el valor de este miembro de datos compartido.
 
 ##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize
 
-Lo llama el marco de trabajo para calcular el tamaño del botón para el contexto de dispositivo especificado y el estado de acoplamiento.
+Lo llama el marco de trabajo para calcular el tamaño del botón para el contexto de dispositivo y el estado de acoplamiento especificados.
 
 ```
 virtual SIZE OnCalculateSize(
@@ -289,25 +289,25 @@ virtual SIZE OnCalculateSize(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] El contexto de dispositivo que muestra el botón.
+de Contexto de dispositivo que muestra el botón.
 
 *sizeDefault*<br/>
-[in] El tamaño predeterminado del botón.
+de Tamaño predeterminado del botón.
 
 *bHorz*<br/>
-[in] El estado de acoplamiento de la barra de herramientas primario. Este parámetro es TRUE si la barra de herramientas está acoplado horizontalmente o está flotando, o FALSE si la barra de herramientas está acoplada verticalmente.
+de Estado de acoplamiento de la barra de herramientas primaria. Este parámetro es TRUE si la barra de herramientas está acoplada horizontalmente o es flotante, o FALSE si la barra de herramientas está acoplada verticalmente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un `SIZE` estructura que contiene las dimensiones del botón, en píxeles.
+`SIZE` Estructura que contiene las dimensiones del botón, en píxeles.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método extiende la implementación de la clase base ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) agregando el ancho de la flecha desplegable a la dimensión horizontal del tamaño del botón.
+Este método extiende la implementación de la clase base ( [CMFCToolBarButton:: OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) agregando el ancho de la flecha desplegable a la dimensión horizontal del tamaño del botón.
 
 ##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd
 
-Lo llama el marco cuando el botón se inserta en una nueva barra de herramientas.
+Lo llama el marco de trabajo cuando el botón se inserta en una nueva barra de herramientas.
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -316,15 +316,15 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="parameters"></a>Parámetros
 
 *pWndParent*<br/>
-[in] La nueva ventana primaria.
+de Nueva ventana primaria.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método invalida la implementación de la clase base ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) desactivando la etiqueta de texto ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) y estableciendo el [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) y [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) los miembros de datos en FALSE.
+Este método invalida la implementación de la clase base ( [CMFCToolBarButton:: OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) borrando la etiqueta de texto ( [CMFCToolBarButton:: m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) y estableciendo [CMFCToolBarButton:: m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) y [CMFCToolBarButton :: m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) los miembros de datos a false.
 
 ##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick
 
-Lo llama el marco cuando el usuario hace clic en el botón del mouse.
+Lo llama el marco de trabajo cuando el usuario hace clic con el botón del mouse.
 
 ```
 virtual BOOL OnClick(
@@ -335,24 +335,24 @@ virtual BOOL OnClick(
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-[in] La ventana primaria del botón de barra de herramientas.
+de Ventana primaria del botón de la barra de herramientas.
 
 *bDelay*<br/>
-[in] TRUE si el mensaje debe controlarse con un retraso.
+de TRUE si el mensaje se debe controlar con un retraso.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el botón procesa el mensaje clic; en caso contrario, es 0.
+Distinto de cero si el botón procesa el mensaje de clic; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método extiende la implementación de la clase base, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), actualizando el estado de la barra de herramientas desplegable.
+Este método extiende la implementación de la clase base, [CMFCToolBarButton:: OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), actualizando el estado de la barra de herramientas desplegable.
 
-Cuando un usuario hace clic en el botón de barra de herramientas, este método crea un temporizador que espera el período de tiempo especificado por el [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) miembro de datos y, a continuación, se abre la lista desplegable barra de herramientas mediante el uso de la [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) método. Este método cierra la barra de herramientas desplegable en la segunda vez que el usuario hace clic en el botón de barra de herramientas.
+Cuando un usuario hace clic en el botón de la barra de herramientas, este método crea un temporizador que espera el período de tiempo especificado por el miembro de datos [CMFCDropDownToolbarButton:: m_uiShowBarDelay](#m_uishowbardelay) y, a continuación, abre la barra de herramientas desplegable mediante [CMFCDropDownToolbarButton ::D método ropDownToolbar](#dropdowntoolbar) . Este método cierra la barra de herramientas desplegable la segunda vez que el usuario hace clic en el botón de la barra de herramientas.
 
 ##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp
 
-Lo llama el marco cuando el usuario suelta el botón del mouse.
+Lo llama el marco de trabajo cuando el usuario suelta el botón del mouse.
 
 ```
 virtual BOOL OnClickUp();
@@ -360,19 +360,19 @@ virtual BOOL OnClickUp();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el botón procesa el mensaje clic; en caso contrario, es 0.
+Distinto de cero si el botón procesa el mensaje de clic; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método extiende la implementación de la clase base, [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), actualizando el estado de la barra de herramientas desplegable.
+Este método extiende la implementación de la clase base, [CMFCToolBarButton:: OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), actualizando el estado de la barra de herramientas desplegable.
 
-Este método detiene el temporizador de la barra de herramientas de lista desplegable si está activa. Cierra la barra de herramientas de la lista desplegable si está abierto.
+Este método detiene el temporizador de la barra de herramientas desplegable si está activo. Cierra la barra de herramientas desplegable si está abierta.
 
-Para obtener más información acerca de la barra de herramientas de lista desplegable y el temporizador de la barra de herramientas de lista desplegable, vea [CMFCDropDownToolbarButton::OnClick](#onclick).
+Para obtener más información sobre la barra de herramientas desplegable y el temporizador de la barra de herramientas desplegable, vea [CMFCDropDownToolbarButton:: OnClick](#onclick).
 
 ##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp
 
-Lo llama el marco de trabajo cuando la barra de herramientas primario controla un mensaje WM_HELPHITTEST.
+Lo llama el marco de trabajo cuando la barra de herramientas primaria controla un mensaje WM_HELPHITTEST.
 
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -381,21 +381,21 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-[in] La ventana primaria del botón de barra de herramientas.
+de Ventana primaria del botón de la barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el botón procesa el mensaje de ayuda; en caso contrario, es 0.
+Distinto de cero si el botón procesa el mensaje de ayuda; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método extiende la implementación de la clase base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) mediante una llamada a la [CMFCDropDownToolbarButton::OnClick](#onclick) método con *bDelay*establecida en FALSE. Este método devuelve el valor devuelto por [CMFCDropDownToolbarButton::OnClick](#onclick).
+Este método extiende la implementación de la clase base ( [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) llamando al método [CMFCDropDownToolbarButton:: OnClick](#onclick) con *bDelay* establecido en false. Este método devuelve el valor devuelto por [CMFCDropDownToolbarButton:: OnClick](#onclick).
 
-Para obtener más información sobre el mensaje WM_HELPHITTEST, vea [TN028: Compatibilidad con la Ayuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
+Para obtener más información sobre el mensaje WM_HELPHITTEST, [consulte TN028: Compatibilidad con](../../mfc/tn028-context-sensitive-help-support.md)la ayuda contextual.
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
-Cuando la aplicación muestra un menú contextual en la barra de herramientas primario se modifica el menú proporcionado.
+Modifica el menú proporcionado cuando la aplicación muestra un menú contextual en la barra de herramientas primaria.
 
 ```
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
@@ -404,7 +404,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ### <a name="parameters"></a>Parámetros
 
 *pMenu*<br/>
-[in] Para personalizar el menú.
+de Menú que se va a personalizar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -412,7 +412,7 @@ Este método devuelve TRUE.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método extiende la implementación de la clase base ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) al deshabilitar los siguientes elementos:
+Este método extiende la implementación de la clase base ( [CMFCToolBarButton:: OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) deshabilitando los siguientes elementos de menú:
 
 - **Copiar imagen del botón**
 
@@ -424,11 +424,11 @@ Este método extiende la implementación de la clase base ( [CMFCToolBarButton::
 
 - **Imagen y texto**
 
-Invalide este método para modificar el menú contextual que muestra el marco de trabajo en el modo de personalización.
+Invalide este método para modificar el menú contextual que el marco de trabajo muestra en modo de personalización.
 
 ##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw
 
-Lo llama el marco de trabajo para dibujar el botón mediante el uso de las opciones y estilos especificados.
+Lo llama el marco de trabajo para dibujar el botón usando los estilos y las opciones especificados.
 
 ```
 virtual void OnDraw(
@@ -445,36 +445,36 @@ virtual void OnDraw(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] El contexto de dispositivo que muestra el botón.
+de Contexto de dispositivo que muestra el botón.
 
 *rect*<br/>
-[in] El rectángulo delimitador del botón.
+de Rectángulo delimitador del botón.
 
 *pImages*<br/>
-[in] La colección de imágenes de barra de herramientas que está asociada con el botón.
+de Colección de imágenes de la barra de herramientas que está asociada al botón.
 
 *bHorz*<br/>
-[in] El estado de acoplamiento de la barra de herramientas primario. Este parámetro es TRUE cuando el botón está acoplado horizontalmente y FALSE cuando el botón está acoplado vertical.
+de Estado de acoplamiento de la barra de herramientas primaria. Este parámetro es TRUE cuando el botón se acopla horizontalmente y FALSE cuando el botón está acoplado verticalmente.
 
 *bCustomizeMode*<br/>
-[in] Especifica si la barra de herramientas está en modo de personalización. Este parámetro es TRUE cuando la barra de herramientas está en modo de personalización y FALSE cuando la barra de herramientas no está en modo de personalización.
+de Especifica si la barra de herramientas está en modo de personalización. Este parámetro es TRUE cuando la barra de herramientas está en modo de personalización y FALSE cuando la barra de herramientas no está en modo de personalización.
 
 *bHighlight*<br/>
-[in] Especifica si el botón está resaltado. Este parámetro es TRUE cuando el botón está resaltado y FALSE cuando no se resalta el botón.
+de Especifica si el botón está resaltado. Este parámetro es TRUE cuando el botón está resaltado y FALSE cuando el botón no está resaltado.
 
 *bDrawBorder*<br/>
-[in] Especifica si el botón debe mostrar su borde. Este parámetro es TRUE cuando el botón debe mostrar su borde y FALSE cuando el botón no debe mostrar su borde.
+de Especifica si el botón debe mostrar su borde. Este parámetro es TRUE cuando el botón debe mostrar su borde y FALSE cuando el botón no debe mostrar su borde.
 
 *bGrayDisabledButtons*<br/>
-[in] Especifica si se deben sombrear los botones deshabilitados o usar la colección de imágenes deshabilitado. Este parámetro es TRUE cuando los botones deshabilitados deberían ser sombreada y FALSE cuando este método debe usar la colección de imágenes deshabilitado.
+de Especifica si se deben sombrear los botones deshabilitados o usar la colección de imágenes deshabilitadas. Este parámetro es TRUE cuando los botones deshabilitados deben estar sombreados y FALSE cuando este método debe utilizar la colección de imágenes deshabilitadas.
 
 ### <a name="remarks"></a>Comentarios
 
-Invalide este método para personalizar el dibujo del botón de barra de herramientas.
+Invalide este método para personalizar el dibujo del botón de la barra de herramientas.
 
 ##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList
 
-Lo llama el marco de trabajo para dibujar el botón de la **comandos** panel de la **personalizar** cuadro de diálogo.
+Lo llama el marco de trabajo para dibujar el botón en el panel **comandos** del cuadro de diálogo **personalizar** .
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -486,23 +486,23 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] El contexto de dispositivo que muestra el botón.
+de Contexto de dispositivo que muestra el botón.
 
 *rect*<br/>
-[in] El rectángulo delimitador del botón.
+de Rectángulo delimitador del botón.
 
 *bSelected*<br/>
-[in] Si se selecciona el botón. Si este parámetro es TRUE, se selecciona el botón. Si este parámetro es FALSE, no se selecciona el botón.
+de Indica si el botón está seleccionado. Si este parámetro es TRUE, el botón está seleccionado. Si este parámetro es FALSE, el botón no está seleccionado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El ancho, en píxeles, del botón en el contexto de dispositivo especificado.
+Ancho, en píxeles, del botón en el contexto de dispositivo especificado.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método es invocado por el cuadro de diálogo de personalización ( **comandos** pestaña) cuando se requiere el botón para que se muestre en el cuadro de lista dibujado por el propietario.
+Este método se llama mediante el cuadro de diálogo Personalización (pestaña **comandos** ) cuando el botón debe mostrarse en el cuadro de lista dibujado por el propietario.
 
-Este método extiende la implementación de la clase base ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) cambiando la etiqueta de texto del botón en el nombre del botón (es decir, en el valor de la *lpszName* parámetro que se pasó al constructor).
+Este método extiende la implementación de la clase base ( [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) cambiando la etiqueta de texto del botón al nombre del botón (es decir, al valor del parámetro *lpszName* que pasó al constructor. ).
 
 ##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize
 
@@ -515,11 +515,11 @@ virtual void Serialize(CArchive& ar);
 ### <a name="parameters"></a>Parámetros
 
 *ar*<br/>
-[in] La `CArchive` objeto desde la que o que se va a serializar.
+de Objeto `CArchive` del que se va a serializar o en el que se va a serializar.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método extiende la implementación de la clase base ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) al serializar el identificador de recurso de la barra de herramientas primario. Cuando se está cargando el archivo ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) devuelve un valor distinto de cero), este método establece el `m_pToolBar` miembro de datos en la barra de herramientas que contiene el identificador de recurso serializado.
+Este método extiende la implementación de la clase base ( [CMFCToolBarButton:: Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) serializando el identificador de recurso de la barra de herramientas primaria. Cuando se carga el archivo ( [CArchive:: IsLoading](../../mfc/reference/carchive-class.md#isloading) devuelve un valor distinto de cero), este método establece `m_pToolBar` el miembro de datos en la barra de herramientas que contiene el identificador de recurso serializado.
 
 ##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand
 
@@ -532,11 +532,11 @@ void SetDefaultCommand(UINT uiCmd);
 ### <a name="parameters"></a>Parámetros
 
 *uiCmd*<br/>
-[in] El identificador del comando predeterminado.
+de IDENTIFICADOR del comando predeterminado.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a este método para especificar un comando predeterminado que el marco de trabajo se ejecuta cuando el usuario hace clic en el botón. Un elemento con el identificador de comando especificado por *uiCmd* debe estar ubicado en la barra de herramientas de lista desplegable del elemento primario.
+Llame a este método para especificar un comando predeterminado que el marco de trabajo ejecuta cuando el usuario hace clic en el botón. Un elemento con el identificador de comando especificado por *uiCmd* debe estar ubicado en la barra de herramientas desplegable primaria.
 
 ## <a name="see-also"></a>Vea también
 

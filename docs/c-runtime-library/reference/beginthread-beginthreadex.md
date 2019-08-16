@@ -29,14 +29,14 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 27bc850281f7591b4fa23a03e9adc3bc02bda87b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504537"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500306"
 ---
-# <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
+# <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
 Crea un subproceso.
 
@@ -74,65 +74,65 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>Parámetros
 
 *start_address*<br/>
-Dirección de inicio de una rutina que comienza la ejecución de un nuevo subproceso. Para **_beginthread**, la convención de llamada es [__cdecl](../../cpp/cdecl.md) (para código nativo) o [__clrcall](../../cpp/clrcall.md) (para código administrado); para **_beginthreadex**, es [__stdcall](../../cpp/stdcall.md) (para código nativo) o [__clrcall](../../cpp/clrcall.md) (para código administrado).
+Dirección de inicio de una rutina que comienza la ejecución de un nuevo subproceso. Para _ **beginthread**, la Convención de llamada es [_ _ Cdecl](../../cpp/cdecl.md) (para código nativo) o [_ _ clrcall](../../cpp/clrcall.md) (para código administrado). para _ **beginthreadex**, es [_ _ Stdcall](../../cpp/stdcall.md) (para código nativo) o [_ _ clrcall](../../cpp/clrcall.md) (para código administrado).
 
 *stack_size*<br/>
 Tamaño de la pila de un subproceso nuevo, o 0.
 
 *arglist*<br/>
-Lista de argumentos que se pasarán a un nuevo subproceso, o **NULL**.
+Lista de argumentos que se va a pasar a un nuevo subproceso, o **null**.
 
 *Seguridad*<br/>
-Puntero a una estructura de [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si *seguridad* es **NULL**, no se puede heredar el identificador. Debe ser **NULL** para aplicaciones de Windows 95.
+Puntero a una estructura de [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si la *seguridad* es **null**, el identificador no se puede heredar. Debe ser **null** para aplicaciones de Windows 95.
 
 *initflag*<br/>
-Marcas que controlan el estado inicial de un nuevo subproceso. Establecer *initflag* en 0 para ejecutar inmediatamente, o en **CREATE_SUSPENDED** para crear el subproceso en un estado suspendido; use [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) para ejecutar el subproceso. Establecer *initflag* a **STACK_SIZE_PARAM_IS_A_RESERVATION** marca para usar *stack_size* como inicial reservar el tamaño de la pila en bytes; si esta marca no se especifica, *stack_size* especifica el tamaño de confirmación.
+Marcas que controlan el estado inicial de un nuevo subproceso. Establezca *initflag* en 0 para que se ejecute inmediatamente o en **CREATE_SUSPENDED** para crear el subproceso en un estado suspendido. Use [ResumeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-resumethread) para ejecutar el subproceso. Establezca *initflag* en **STACK_SIZE_PARAM_IS_A_RESERVATION** para usar *STACK_SIZE* como tamaño de reserva inicial de la pila en bytes. Si no se especifica esta marca, *STACK_SIZE* especifica el tamaño de confirmación.
 
 *thrdaddr*<br/>
-Señala a una variable de 32 bits que recibe el identificador del subproceso. Si es **NULL**, no se utiliza.
+Señala a una variable de 32 bits que recibe el identificador del subproceso. Si es **null**, no se utiliza.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, cada una de estas funciones devuelve un identificador al subproceso recién creado; Sin embargo, si el subproceso recién creado sale demasiado rápido, **_beginthread** no puede devolver un identificador válido. (Vea la explicación en la sección Comentarios). Produce un error, **_beginthread** devuelve-1 L y **errno** está establecido en **EAGAIN** si hay demasiados subprocesos al **EINVAL** si el argumento es no válido o el tamaño de pila es incorrecto, o a **EACCES** si no hay suficientes recursos (como memoria). Produce un error, **_beginthreadex** devuelve 0, y **errno** y **_doserrno** se establecen.
+Si es correcto, cada una de estas funciones devuelve un identificador al subproceso creado recientemente; sin embargo, si el subproceso recién creado sale demasiado rápido, _ **beginthread** podría no devolver un identificador válido. (Vea la explicación en la sección Comentarios). En un error, _ **beginthread** devuelve-1L y **errno** se establece en **EAGAIN** si hay demasiados subprocesos, en **EINVAL** si el argumento no es válido o el tamaño de la pila es incorrecto, o en **EACCES** si no hay suficientes recursos ( como memoria). En un error, _ **beginthreadex** devuelve 0 y se establecen **errno** y **_doserrno** .
 
-Si *start_address* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
+Si *start_address* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1.
 
 Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Para obtener más información acerca de **uintptr_t**, consulte [tipos estándar](../../c-runtime-library/standard-types.md).
+Para obtener más información sobre **uintptr_t**, consulte [tipos estándar](../../c-runtime-library/standard-types.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_beginthread** función crea un subproceso que comienza la ejecución de una rutina en *start_address*. La rutina en *start_address* debe utilizar el **__cdecl** (para código nativo) o **__clrcall** (para código administrado) la convención de llamada y no debe tener ningún valor devuelto. Cuando el subproceso vuelve de la rutina, finaliza automáticamente. Para obtener más información sobre los subprocesos, consulte [Compatibilidad del código antiguo con multithreading (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+La función _ **beginthread** crea un subproceso que comienza la ejecución de una rutina en *start_address*. La rutina de *start_address* debe usar la Convención de llamada **_ _ Cdecl** (para código nativo) o **_ _ clrcall** (para código administrado) y no debe tener ningún valor devuelto. Cuando el subproceso vuelve de la rutina, finaliza automáticamente. Para obtener más información sobre los subprocesos, consulte [Compatibilidad del código antiguo con multithreading (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-**_beginthreadex** es similar a Win32 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) API más estrechamente que **_beginthread** does. **_beginthreadex** difiere **_beginthread** de las maneras siguientes:
+_ **beginthreadex** es similar a la API [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) de Win32 más estrechamente que _ **beginthread** . _ **beginthreadex** difiere de _ **beginthread** de las siguientes maneras:
 
-- **_beginthreadex** tiene tres parámetros adicionales: *initflag*, *seguridad*, y **threadaddr**. El nuevo subproceso se pueden crear en un estado suspendido, con una seguridad especificada y puede obtenerse mediante el uso de *thrdaddr*, que es el identificador de subproceso.
+- _ **beginthreadex** tiene tres parámetros adicionales: *initflag*, *Security*y **threadaddr**. El nuevo subproceso se puede crear en un estado suspendido, con una seguridad especificada, y se puede tener acceso a él mediante *thrdaddr*, que es el identificador del subproceso.
 
-- La rutina en *start_address* que se pasa a **_beginthreadex** debe utilizar el **__stdcall** (para código nativo) o **__clrcall** (para código administrado) la convención de llamada y debe devolver un código de salida del subproceso.
+- La rutina de *start_address* que se pasa a _ **beginthreadex** debe utilizar la Convención de llamada **_ _ Stdcall** (para código nativo) o **_ _ clrcall** (para código administrado) y debe devolver un código de salida del subproceso.
 
-- **_beginthreadex** devuelve 0 en el error, en lugar de-1 L.
+- _ **beginthreadex** devuelve 0 en caso de error, en lugar de-1L.
 
-- Un subproceso que se crea mediante **_beginthreadex** termina con una llamada a [_endthreadex](endthread-endthreadex.md).
+- Un subproceso que se crea mediante _ **beginthreadex** se termina mediante una llamada a _ [endthreadex](endthread-endthreadex.md).
 
-El **_beginthreadex** función le ofrece más control sobre cómo se crea el subproceso que **_beginthread** does. El **_endthreadex** función también es más flexible. Por ejemplo, con **_beginthreadex**, puede usar la información de seguridad, establecer el estado inicial del subproceso (ejecución o suspendidas) y obtener el identificador de subproceso del subproceso recién creado. También puede usar el identificador de subproceso devuelto por **_beginthreadex** con la sincronización API, lo que no se puede hacer con **_beginthread**.
+La función _ **beginthreadex** le proporciona más control sobre cómo se crea el subproceso que _ **beginthread** . La función _ **endthreadex** también es más flexible. Por ejemplo, con _ **beginthreadex**, puede usar la información de seguridad, establecer el estado inicial del subproceso (en ejecución o suspendido) y obtener el identificador del subproceso del subproceso recién creado. También puede usar el identificador de subproceso devuelto por _ **beginthreadex** con las API de sincronización, lo que no se puede hacer con _ **beginthread**.
 
-Es más seguro usar **_beginthreadex** que **_beginthread**. Si el subproceso que genera **_beginthread** sale rápidamente, el identificador que se devuelve al llamador del **_beginthread** podría no ser válido o señalar a otro subproceso. Sin embargo, el identificador devuelto por **_beginthreadex** tiene que estar cerrada por el llamador de **_beginthreadex**, por lo que se garantiza que sea un identificador válido si **_beginthreadex** no se ha devuelto un error.
+Es más seguro usar _ **beginthreadex** que _ **beginthread**. Si el subproceso generado por _ **beginthread** sale rápidamente, el identificador que se devuelve al autor de la llamada de _ **beginthread** podría no ser válido o señalar a otro subproceso. Sin embargo, el identificador devuelto por _ **beginthreadex** debe cerrarlo el autor de la llamada de _ **beginthreadex**, por lo que se garantiza que sea un identificador válido si _ **beginthreadex** no devolvió un error.
 
-Puede llamar a [_endthread](endthread-endthreadex.md) o **_endthreadex** explícitamente para terminar el subproceso; sin embargo, **_endthread** o **_endthreadex** se denomina automáticamente cuando el subproceso vuelve de la rutina que se pasa como un parámetro. Si se finaliza un subproceso con una llamada a **_endthread** o **_endthreadex** ayuda a garantiza una recuperación correcta de los recursos asignados para el subproceso.
+Puede llamar a _ [endthread](endthread-endthreadex.md) o _ **endthreadex** explícitamente para terminar un subproceso; sin embargo, se llama a _ **endthread** o _ **endthreadex** automáticamente cuando el subproceso vuelve de la rutina que se pasa como parámetro. La terminación de un subproceso con una llamada a _ **endthread** o _ **endthreadex** ayuda a garantizar la recuperación correcta de los recursos que se asignan para el subproceso.
 
-**_endthread** automáticamente cierra el identificador de subproceso, aunque **_endthreadex** no lo hace. Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API. Este comportamiento difiere de la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32.
+_ **endthread** cierra automáticamente el identificador del subproceso, mientras que _ **endthreadex** no lo hace. Por lo tanto, cuando use _ **beginthread** y _ **endthread**, no cierre explícitamente el identificador del subproceso llamando a la API [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) de Win32. Este comportamiento difiere de la API [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32.
 
 > [!NOTE]
-> Un archivo ejecutable vinculado con Libcmt.lib, no llame a Win32 **ExitThread** API para que no impiden que el sistema de tiempo de ejecución reclamar recursos asignados. **_endthread** y **_endthreadex** reclamar recursos de subprocesos asignados y, a continuación, llame a **ExitThread**.
+> En el caso de un archivo ejecutable vinculado con libcmt. lib, no llame a la API **ExitThread** de Win32 para no evitar que el sistema en tiempo de ejecución recupere los recursos asignados. _ **endthread** y _ **endthreadex** reclaman recursos de subprocesos asignados y después llaman a **ExitThread**.
 
-El sistema operativo controla la asignación de la pila cuando cualquier **_beginthread** o **_beginthreadex** se denomina; no tiene que pasar la dirección de la pila de subprocesos a cualquiera de estas funciones. Además, el *stack_size* argumento puede ser 0, en cuyo caso el sistema operativo utiliza el mismo valor que la pila que se especifica para el subproceso principal.
+El sistema operativo controla la asignación de la pila cuando se llama a _ **beginthread** o _ **beginthreadex** ; no tiene que pasar la dirección de la pila de subprocesos a cualquiera de estas funciones. Además, el argumento *STACK_SIZE* puede ser 0, en cuyo caso el sistema operativo utiliza el mismo valor que la pila que se especifica para el subproceso principal.
 
-*arglist* es un parámetro que se pasará al subproceso recién creado. Normalmente, es la dirección de un elemento de datos, como una cadena de caracteres. *arglist* puede ser **NULL** si no es necesaria, pero **_beginthread** y **_beginthreadex** debe proporcionarse un valor para pasar al nuevo subproceso. Se terminan todos los subprocesos si cualquier subproceso llama a [anular](abort.md), **salir**, **_exit**, o **ExitProcess**.
+*arglist* es un parámetro que se va a pasar al subproceso recién creado. Normalmente, es la dirección de un elemento de datos, como una cadena de caracteres. *arglist* puede ser **null** si no es necesario, pero _ **beginthread** y _ **beginthreadex** deben tener algún valor para pasar al nuevo subproceso. Todos los subprocesos se terminan si cualquier subproceso llama a [Abort](abort.md), **Exit**, **_exit**o **ExitProcess**.
 
-La configuración regional del nuevo subproceso se inicializa con la información de configuración regional de actual global por proceso. Si está habilitada la configuración regional por subproceso mediante una llamada a [_configthreadlocale](configthreadlocale.md) (tanto globalmente como para nuevos subprocesos solamente), el subproceso puede cambiar su configuración regional independientemente de otros subprocesos mediante una llamada a **setlocale** o **_wsetlocale**. Subprocesos que no tienen el marcador de la configuración regional por subproceso pueden afectar a la información de configuración regional en todos los demás subprocesos que también no establecer la marca de configuración regional por subproceso, así como todos los subprocesos recién creado. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La configuración regional del nuevo subproceso se inicializa con la información de configuración regional actual de cada proceso. Si la configuración regional para cada subproceso está habilitada por una llamada a [_configthreadlocale](configthreadlocale.md) (tanto globalmente como para nuevos subprocesos solamente), el subproceso puede cambiar su configuración regional independientemente de otros subprocesos llamando a **setlocale** o **_wsetlocale**. Los subprocesos que no tienen establecida la marca de configuración regional por subproceso pueden afectar a la información de configuración regional de todos los demás subprocesos que tampoco tienen establecida la marca de configuración regional por subproceso, así como todos los subprocesos recién creados. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Para **/CLR** código, **_beginthread** y **_beginthreadex** tienen dos sobrecargas. Uno toma un puntero de función de convención de llamada nativa y la otra toma un **__clrcall** puntero de función. La primera sobrecarga no es una aplicación de dominio seguro y nunca lo será. Si está escribiendo **/CLR** código debe asegurarse de que el nuevo subproceso entra en el dominio de aplicación correcto antes de tiene acceso a los recursos administrados. Para ello, por ejemplo, use [call_in_appdomain (Función)](../../dotnet/call-in-appdomain-function.md). La segunda sobrecarga es la aplicación de dominio seguro; el subproceso recién creado finalizará siempre en el dominio de aplicación del llamador de **_beginthread** o **_beginthreadex**.
+Para el código **/CLR** , _ **beginthread** y _ **beginthreadex** tienen dos sobrecargas. Uno toma un puntero de función de Convención de llamada nativo y el otro toma un puntero de función **_ _ clrcall** . La primera sobrecarga no es una aplicación de dominio seguro y nunca lo será. Si está escribiendo código **/CLR** , debe asegurarse de que el nuevo subproceso entra en el dominio de aplicación correcto antes de tener acceso a los recursos administrados. Para ello, por ejemplo, use [call_in_appdomain (Función)](../../dotnet/call-in-appdomain-function.md). La segunda sobrecarga es segura para el dominio de aplicación; el subproceso recién creado finalizará siempre en el dominio de aplicación del llamador de _ **beginthread** o _ **beginthreadex**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -147,11 +147,11 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 Solo las versiones de multiproceso de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md) .
 
-Para usar **_beginthread** o **_beginthreadex**, la aplicación debe vincularse a una de las bibliotecas de tiempo de ejecución de C multiproceso.
+Para usar _ **beginthread** o _ **beginthreadex**, la aplicación debe vincularse a una de las bibliotecas en tiempo de ejecución multiproceso de C.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se usa **_beginthread** y **_endthread**.
+En el ejemplo siguiente se usa _ **beginthread** y _ **endthread**.
 
 ```C
 // crt_BEGTHRD.C
@@ -271,7 +271,7 @@ Presione cualquier tecla para finalizar la aplicación de ejemplo.
 
 ## <a name="example"></a>Ejemplo
 
-Ejemplo de código siguiente muestra cómo puede utilizar el identificador de subproceso devuelto por **_beginthreadex** con la API de sincronización [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject). El subproceso principal espera que el segundo subproceso finalice antes de continuar. Cuando el segundo subproceso llama a **_endthreadex**, hace que el objeto del subproceso ir al estado señalado. Esto permite que el subproceso principal continúe ejecutándose. Esto no es posible con **_beginthread** y **_endthread**, porque **_endthread** llamadas **CloseHandle**, que destruye el subproceso objeto antes de que se puede establecer en el estado señalado.
+En el código de ejemplo siguiente se muestra cómo se puede usar el identificador de subproceso devuelto por _ **beginthreadex** con la API de sincronización [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject). El subproceso principal espera que el segundo subproceso finalice antes de continuar. Cuando el segundo subproceso llama a _ **endthreadex**, hace que su objeto de subproceso vaya al estado señalado. Esto permite que el subproceso principal continúe ejecutándose. Esto no se puede hacer con _ **beginthread** y _ **endthread**, porque _ **endthread** llama a **CloseHandle**, que destruye el objeto de subproceso antes de que se pueda establecer en el estado señalado.
 
 ```cpp
 // crt_begthrdex.cpp
@@ -325,4 +325,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)
+- [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

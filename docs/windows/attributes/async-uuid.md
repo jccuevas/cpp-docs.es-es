@@ -1,21 +1,21 @@
 ---
-title: async_uuid (C++ atributo COM)
+title: async_uuid (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364979"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501864"
 ---
-# <a name="asyncuuid"></a>async_uuid
+# <a name="async_uuid"></a>async_uuid
 
-Especifica el UUID que indica al compilador MIDL para definir las versiones sincrónicas y asincrónicas de una interfaz COM.
+Especifica el UUID que dirige el compilador MIDL para definir versiones sincrónicas y asincrónicas de una interfaz COM.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,11 +26,11 @@ Especifica el UUID que indica al compilador MIDL para definir las versiones sinc
 ### <a name="parameters"></a>Parámetros
 
 *uuid*<br/>
-Un UUID que identifica la versión de la interfaz.
+UUID que identifica la versión de la interfaz.
 
 ## <a name="remarks"></a>Comentarios
 
-El **async_uuid** C++ atributo tiene la misma funcionalidad que el [async_uuid](/windows/desktop/Midl/async-uuid) atributo MIDL.
+El atributo **async_uuid** C++ tiene la misma funcionalidad que el atributo MIDL [async_uuid](/windows/win32/Midl/async-uuid) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -53,8 +53,8 @@ __interface ICustom {
 |||
 |-|-|
 |**Se aplica a**|`interface`|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|**dual**, **dispinterface**|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).

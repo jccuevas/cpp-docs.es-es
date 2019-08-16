@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09a9846cc3d242ef7d812cb31b4dcdd515d5f6ef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403937"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506077"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (clase)
 
@@ -43,55 +43,55 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Construye un objeto `CMDIChildWnd`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CMDIChildWnd::Create](#create)|Crea la ventana secundaria de MDI de Windows asociada con el `CMDIChildWnd` objeto.|
-|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Devuelve al elemento primario de marco MDI de la ventana de cliente MDI.|
-|[CMDIChildWnd::MDIActivate](#mdiactivate)|Activa esta ventana MDI secundaria.|
-|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Esta ventana MDI secundaria se destruye.|
-|[CMDIChildWnd::MDIMaximize](#mdimaximize)|Esta ventana MDI secundaria se maximiza.|
+|[CMDIChildWnd::Create](#create)|Crea la ventana secundaria MDI de Windows asociada al `CMDIChildWnd` objeto.|
+|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Devuelve el marco MDI primario de la ventana del cliente MDI.|
+|[CMDIChildWnd::MDIActivate](#mdiactivate)|Activa esta ventana secundaria MDI.|
+|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Destruye esta ventana secundaria MDI.|
+|[CMDIChildWnd::MDIMaximize](#mdimaximize)|Maximiza la ventana secundaria MDI.|
 |[CMDIChildWnd::MDIRestore](#mdirestore)|Restaura esta ventana secundaria MDI de tamaño maximizado o minimizado.|
-|[CMDIChildWnd::SetHandles](#sethandles)|Establece los identificadores de recursos de menú y el acelerador.|
+|[CMDIChildWnd::SetHandles](#sethandles)|Establece los identificadores de los recursos de menú y acelerador.|
 
 ## <a name="remarks"></a>Comentarios
 
-Una ventana secundaria MDI se parece mucho a una ventana marco típica, excepto en que la ventana secundaria MDI aparece dentro de una ventana marco MDI en lugar de en el escritorio. Una ventana secundaria MDI no tiene una barra de menús de su propio, pero en su lugar, comparte el menú de la ventana de marco MDI. El marco de trabajo cambia automáticamente el menú de marco MDI para representar la ventana secundaria MDI activa actualmente.
+Una ventana secundaria MDI tiene un aspecto muy similar al de una ventana de marco típica, excepto en que la ventana secundaria MDI aparece dentro de una ventana de marco MDI en lugar de en el escritorio. Una ventana secundaria MDI no tiene una barra de menús propia, sino que comparte el menú de la ventana de marco MDI. El marco de trabajo cambia automáticamente el menú marco MDI para representar la ventana MDI secundaria actualmente activa.
 
-Para crear una ventana secundaria MDI útil para su aplicación, derive una clase de `CMDIChildWnd`. Agregar variables miembro a la clase derivada para almacenar datos específicos de la aplicación. Implemente funciones miembro de controlador de mensajes y un mapa de mensajes en la clase derivada para especificar qué ocurre cuando los mensajes se dirigen a la ventana.
+Para crear una ventana secundaria MDI útil para la aplicación, derive una clase de `CMDIChildWnd`. Agregue variables de miembro a la clase derivada para almacenar datos específicos de la aplicación. Implemente funciones miembro de controlador de mensajes y un mapa de mensajes en la clase derivada para especificar qué ocurre cuando los mensajes se dirigen a la ventana.
 
 Hay tres formas de crear una ventana secundaria MDI:
 
-- Crear directamente mediante `Create`.
+- Construya directamente mediante `Create`.
 
-- Crear directamente mediante `LoadFrame`.
+- Construya directamente mediante `LoadFrame`.
 
-- Construirla indirectamente a través de una plantilla de documento.
+- Construya indirectamente a través de una plantilla de documento.
 
-Antes de llamar a `Create` o `LoadFrame`, debe construir el objeto de ventana de marco en el montón mediante C++ **nuevo** operador. Antes de llamar a `Create` también se puede registrar una clase de ventana con el [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global para establecer los estilos de icono y de clase para el marco.
+Antes de llamar `Create` a `LoadFrame`o, debe construir el objeto de ventana de marco en el montón mediante C++ el operador **New** . Antes de `Create` llamar a, también puede registrar una clase de ventana con la función global [AfxRegisterWndClass (](application-information-and-management.md#afxregisterwndclass) para establecer el icono y los estilos de clase para el marco.
 
-Use el `Create` función miembro para pasar parámetros de creación del marco de inmediatos como argumentos.
+Utilice la `Create` función miembro para pasar los parámetros de creación del marco como argumentos inmediatos.
 
-`LoadFrame` requiere menos argumentos que `Create`y recupera en su lugar, la mayoría de sus valores predeterminados de recursos, incluidos el título del marco, icono, tabla de aceleradores y menús. Para tener acceso a `LoadFrame`, todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, IDR_MAINFRAME).
+`LoadFrame`requiere menos argumentos que `Create`y, en su lugar, recupera la mayoría de los valores predeterminados de los recursos, incluidos el título, el icono, la tabla de aceleradores y el menú del marco. Para que sea accesible `LoadFrame`para, todos estos recursos deben tener el mismo identificador de recurso (por ejemplo, IDR_MAINFRAME).
 
-Cuando un `CMDIChildWnd` objeto contiene documentos y vistas, crea indirectamente el marco de trabajo en lugar de directamente por el programador. La `CDocTemplate` objeto organiza la creación del marco, la creación de las vistas que contienen y la conexión de las vistas para el documento adecuado. Los parámetros de la `CDocTemplate` constructor especifica el `CRuntimeClass` de las tres clases implicadas (documento, marco y ver). Un `CRuntimeClass` objeto se usa el marco de trabajo para crear de forma dinámica nuevos marcos al especificado por el usuario (por ejemplo, mediante el comando nuevo archivo o el comando nuevo de ventana MDI).
+Cuando un `CMDIChildWnd` objeto contiene vistas y documentos, el marco de trabajo los crea indirectamente en lugar de hacerlo directamente por el programador. El `CDocTemplate` objeto orquesta la creación del marco, la creación de las vistas contenedoras y la conexión de las vistas al documento adecuado. Los parámetros del `CDocTemplate` constructor especifican el `CRuntimeClass` de las tres clases implicadas (documento, marco y vista). El `CRuntimeClass` marco de trabajo usa un objeto para crear dinámicamente nuevos marcos cuando lo especifica el usuario (por ejemplo, con el comando archivo nuevo o el comando nueva ventana MDI).
 
-Deriva una clase de ventana de marco `CMDIChildWnd` debe declararse con DECLARE_DYNCREATE para el mecanismo RUNTIME_CLASS anterior funcione correctamente.
+Una clase de ventana de marco derivada `CMDIChildWnd` de se debe declarar con DECLARE_DYNCREATE para que el mecanismo de RUNTIME_CLASS anterior funcione correctamente.
 
-El `CMDIChildWnd` clase hereda gran parte de su implementación predeterminada de `CFrameWnd`. Para obtener una lista detallada de estas características, consulte el [CFrameWnd](../../mfc/reference/cframewnd-class.md) descripción de clase. La `CMDIChildWnd` clase tiene las siguientes características adicionales:
+La `CMDIChildWnd` clase hereda gran parte de su implementación predeterminada de `CFrameWnd`. Para obtener una lista detallada de estas características, consulte la descripción de la clase [CFrameWnd](../../mfc/reference/cframewnd-class.md) . La `CMDIChildWnd` clase tiene las siguientes características adicionales:
 
-- Junto con el `CMultiDocTemplate` (clase), varios `CMDIChildWnd` objetos desde la misma plantilla de documento comparten el mismo menú, ahorrando recursos de sistema de Windows.
+- Junto con la `CMultiDocTemplate` clase, varios `CMDIChildWnd` objetos de la misma plantilla de documento comparten el mismo menú, guardando los recursos del sistema de Windows.
 
-- El menú de ventana de secundario MDI activo reemplaza completamente el menú de la ventana de marco MDI y se agrega el título de la ventana secundaria MDI activa actualmente al título de la ventana de marco MDI. Para obtener más ejemplos de funciones de ventana secundaria MDI que se implementan junto con una ventana marco MDI, consulte el `CMDIFrameWnd` descripción de clase.
+- El menú de la ventana secundaria MDI actualmente activo reemplaza por completo el menú de la ventana de marco MDI y el título de la ventana MDI secundaria activa actualmente se agrega al título de la ventana de marco MDI. Para obtener más ejemplos de funciones de la ventana secundaria MDI que se implementan junto con una ventana de marco `CMDIFrameWnd` MDI, vea la descripción de la clase.
 
-No use C++ **eliminar** operador para destruir una ventana de marco. Utilice `CWnd::DestroyWindow` en su lugar. El `CFrameWnd` implementací `PostNcDestroy` eliminará el objeto de C++ cuando se destruye la ventana. Cuando el usuario cierra la ventana de marco, el valor predeterminado `OnClose` controlador llamará `DestroyWindow`.
+No use el C++ operador **Delete** para destruir una ventana de marco. Utilice `CWnd::DestroyWindow` en su lugar. La `CFrameWnd` implementación de `PostNcDestroy` eliminará el C++ objeto cuando se destruya la ventana. Cuando el usuario cierra la ventana de marco, el controlador `OnClose` predeterminado llamará `DestroyWindow`a.
 
-Para obtener más información sobre `CMDIChildWnd`, consulte [marco Windows](../../mfc/frame-windows.md).
+Para obtener más información `CMDIChildWnd`sobre, consulte [ventanas de marco](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -111,7 +111,7 @@ Para obtener más información sobre `CMDIChildWnd`, consulte [marco Windows](..
 
 ##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd
 
-Llamada a construir una `CMDIChildWnd` objeto.
+Llame a para construir `CMDIChildWnd` un objeto.
 
 ```
 CMDIChildWnd();
@@ -119,15 +119,15 @@ CMDIChildWnd();
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a `Create` para crear la ventana visible.
+Llame `Create` a para crear la ventana visible.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CMDIChildWnd::Create](#create).
+  Vea el ejemplo de [CMDIChildWnd:: Create](#create).
 
 ##  <a name="create"></a>  CMDIChildWnd::Create
 
-Llame a esta función miembro para crear una ventana secundaria MDI de Windows y adjuntarlo a la `CMDIChildWnd` objeto.
+Llame a esta función miembro para crear una ventana secundaria MDI de Windows y adjuntarla al `CMDIChildWnd` objeto.
 
 ```
 virtual BOOL Create(
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *lpszClassName*<br/>
-Apunta a una cadena de caracteres terminada en null que se nombra la clase de Windows (un [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura). El nombre de clase puede ser cualquier nombre registrado con el [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global. Debe ser NULL para un estándar `CMDIChildWnd`.
+Apunta a una cadena de caracteres terminada en null que nombra la clase de Windows (una estructura [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) ). El nombre de clase puede ser cualquier nombre registrado con la función global [AfxRegisterWndClass (](application-information-and-management.md#afxregisterwndclass) . Debe ser NULL para un estándar `CMDIChildWnd`.
 
 *lpszWindowName*<br/>
-Apunta a una cadena de caracteres terminada en null que representa el nombre de la ventana. Se utiliza como texto de la barra de título.
+Apunta a una cadena de caracteres terminada en null que representa el nombre de la ventana. Se usa como texto para la barra de título.
 
 *dwStyle*<br/>
-Especifica el período de [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos. Se requiere el estilo WS_CHILD.
+Especifica los atributos de [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) de ventana. El estilo WS_CHILD es obligatorio.
 
 *rect*<br/>
-Contiene el tamaño y posición de la ventana. El `rectDefault` valor permite que Windows especificar el tamaño y la posición del nuevo `CMDIChildWnd`.
+Contiene el tamaño y la posición de la ventana. El `rectDefault` valor permite que Windows especifique el tamaño y la posición de la `CMDIChildWnd`nueva.
 
 *pParentWnd*<br/>
-Especifica el elemento primario de la ventana. Si es NULL, se usa la ventana principal de la aplicación.
+Especifica el elemento primario de la ventana. Si es NULL, se utiliza la ventana principal de la aplicación.
 
 *pContext*<br/>
-Especifica un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estructura. Este parámetro puede ser NULL.
+Especifica una estructura [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Este parámetro puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -165,9 +165,9 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-La ventana de marco de secundario MDI activa puede determinar el título de la ventana de marco principal. Esta característica está deshabilitada si se desactiva el bit de estilo FWS_ADDTOTITLE de la ventana de marco secundario.
+La ventana de marco secundario MDI activa actualmente puede determinar el título de la ventana de marco primario. Esta característica se deshabilita desactivando el bit de estilo FWS_ADDTOTITLE de la ventana de marco secundario.
 
-El marco llama a esta función miembro en respuesta a un comando de usuario para crear una ventana secundaria, y el marco de trabajo usa el *pContext* parámetro conectar correctamente a la ventana secundaria a la aplicación. Cuando se llama a `Create`, *pContext* puede ser NULL.
+El marco de trabajo llama a esta función miembro como respuesta a un comando de usuario para crear una ventana secundaria y el marco usa el parámetro *pContext* para conectar correctamente la ventana secundaria a la aplicación. Cuando se llama `Create`a, *pContext* puede ser null.
 
 ### <a name="example"></a>Ejemplo
 
@@ -177,7 +177,7 @@ Ejemplo 1:
 
 ### <a name="example"></a>Ejemplo
 
-Ejemplo 2:
+Ejemplo 2:
 
 [!code-cpp[NVC_MFCWindowing#8](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_2.cpp)]
 
@@ -185,7 +185,7 @@ Ejemplo 2:
 
 ##  <a name="getmdiframe"></a>  CMDIChildWnd::GetMDIFrame
 
-Llame a esta función para devolver el marco MDI primario.
+Llame a esta función para devolver el marco primario MDI.
 
 ```
 CMDIFrameWnd* GetMDIFrame();
@@ -193,15 +193,15 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la ventana de marco principal MDI.
+Puntero a la ventana de marco primario MDI.
 
 ### <a name="remarks"></a>Comentarios
 
-El marco devuelto es dos padres quitados el `CMDIChildWnd` y es el elemento primario de la ventana de tipo MDICLIENT que administra el `CMDIChildWnd` objeto. Llame a la [GetParent](../../mfc/reference/cwnd-class.md#getparent) función miembro para devolver el `CMDIChildWnd` primario MDICLIENT inmediato del objeto como un archivo temporal `CWnd` puntero.
+El marco devuelto es que se han quitado dos elementos primarios de `CMDIChildWnd` y es el elemento primario de la ventana de tipo MdiClient que administra el `CMDIChildWnd` objeto. Llame a la función miembro [GetParent](../../mfc/reference/cwnd-class.md#getparent) para devolver `CMDIChildWnd` el elemento primario MdiClient inmediato del objeto como `CWnd` un puntero temporal.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
+  Vea el ejemplo de [CMDIFrameWnd:: MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
 
 ##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate
 
@@ -213,11 +213,11 @@ void MDIActivate();
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se activa el marco, también se activará la ventana secundaria que se activó por última vez.
+Cuando el marco se activa, la ventana secundaria que se activó por última vez también se activará.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
+  Vea el ejemplo de [CMDIFrameWnd:: GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
 
 ##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy
 
@@ -245,7 +245,7 @@ void MDIMaximize();
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se maximiza una ventana secundaria, Windows cambia su tamaño para que su área de cliente ocupe el área cliente de la ventana de marco. Windows coloca el menú ventana secundaria del Control en la barra de menús del marco para que el usuario puede restaurar o cerrar la ventana secundaria y agrega el título de la ventana secundaria en el título de ventana de marco.
+Cuando una ventana secundaria está maximizada, Windows la cambia para que su área cliente rellene el área cliente de la ventana de marco. Windows coloca el menú de control de la ventana secundaria en la barra de menús del marco para que el usuario pueda restaurar o cerrar la ventana secundaria y agregue el título de la ventana secundaria al título de la ventana de marco.
 
 ### <a name="example"></a>Ejemplo
 
@@ -265,7 +265,7 @@ void MDIRestore();
 
 ##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles
 
-Establece los identificadores de recursos de menú y el acelerador.
+Establece los identificadores de los recursos de menú y acelerador.
 
 ```
 void SetHandles(
@@ -276,20 +276,20 @@ void SetHandles(
 ### <a name="parameters"></a>Parámetros
 
 *hMenu*<br/>
-El identificador de un recurso de menú.
+Identificador de un recurso de menú.
 
 *hAccel*<br/>
-El identificador de un recurso de aceleradores.
+Identificador de un recurso de acelerador.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a esta función para definir los recursos de menú y acelerador utilizados por el objeto de ventana secundaria MDI.
+Llame a esta función para establecer los recursos de menú y acelerador utilizados por el objeto de ventana secundaria MDI.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo MDI de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MDI de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
-[Ejemplo SNAPVW de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

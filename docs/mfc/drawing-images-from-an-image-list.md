@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916410"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508610"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Dibujar imágenes a partir de una lista de imágenes
 
@@ -28,7 +28,7 @@ Los estilos **ILD_BLEND25** y **ILD_BLEND50** interpolan la imagen con el color 
 
 Una imagen no enmascarada se copia en el contexto del dispositivo de destino `SRCCOPY` usando la operación de trama. Los colores de la imagen aparecen igual independientemente del color de fondo del contexto del dispositivo. Los estilos de dibujo especificados en `Draw` también no tienen ningún efecto en la apariencia de una imagen no enmascarada.
 
-Además de la función miembro Draw, otra función, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), amplía la capacidad de representar una imagen. `DrawIndirect`toma como parámetro una estructura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) . Esta estructura se puede usar para personalizar la representación de la imagen actual, incluido el uso de códigos de operación de trama (ROP). Para obtener más información sobre los códigos ROP, vea [códigos de operación de trama](/windows/desktop/gdi/raster-operation-codes) y mapas de [bits como pinceles](/windows/desktop/gdi/bitmaps-as-brushes) en el Windows SDK.
+Además de la función miembro Draw, otra función, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), amplía la capacidad de representar una imagen. `DrawIndirect`toma como parámetro una estructura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) . Esta estructura se puede usar para personalizar la representación de la imagen actual, incluido el uso de códigos de operación de trama (ROP). Para obtener más información sobre los códigos ROP, vea [códigos de operación de trama](/windows/win32/gdi/raster-operation-codes) y mapas de [bits como pinceles](/windows/win32/gdi/bitmaps-as-brushes) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

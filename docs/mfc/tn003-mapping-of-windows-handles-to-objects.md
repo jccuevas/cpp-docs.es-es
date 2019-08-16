@@ -1,5 +1,5 @@
 ---
-title: 'TN003: Asignar identificadores de Windows a objetos'
+title: 'TN003: Asignación de identificadores de Windows a objetos'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mapping
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45492963e1b686e03eb59c320fdc3d52d1534f7d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306385"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513539"
 ---
-# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Asignar identificadores de Windows a objetos
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Asignación de identificadores de Windows a objetos
 
-Esta nota describe las MFC rutinas que admiten la asignación de Windows objeto identificadores de objetos de C++.
+En esta nota se describen las rutinas de MFC que admiten la C++ asignación de identificadores de objetos de Windows a objetos.
 
 ## <a name="the-problem"></a>El problema
 
-Objetos de Windows se suelen representar por distintos [controlar](/windows/desktop/WinProg/windows-data-types) objetos clases MFC el ajustan manipuladores de objeto de Windows con los objetos de C++. El identificador de las funciones de la biblioteca de clases MFC de ajuste le permite buscar el objeto de C++ que se ajuste el objeto de Windows que tiene un identificador determinado. Sin embargo, en ocasiones, un objeto no tiene un objeto de contenedor de C++ y en estos momentos, el sistema crea un objeto temporal para que actúe como el contenedor de C++.
+Los objetos de Windows normalmente se representan mediante varios objetos de [identificador](/windows/win32/WinProg/windows-data-types) . las clases MFC ajustan los identificadores de objetos de Windows con C++ objetos. Las funciones de ajuste de identificador de la biblioteca de clases MFC permiten C++ encontrar el objeto que ajusta el objeto de Windows que tiene un identificador determinado. Sin embargo, a veces un objeto no tiene C++ un objeto contenedor y, en estos momentos, el sistema crea un objeto temporal para C++ que actúe como contenedor.
 
 Los objetos de Windows que utilizan asignaciones de identificadores son los siguientes:
 
-- HWND ([CWnd](../mfc/reference/cwnd-class.md) y `CWnd`-las clases derivadas)
+- HWND (clases derivadas de[CWnd](../mfc/reference/cwnd-class.md) y `CWnd`)
 
-- HDC ([CDC](../mfc/reference/cdc-class.md) y `CDC`-las clases derivadas)
+- HDC (clases derivadas de[CDC](../mfc/reference/cdc-class.md) y `CDC`)
 
 - HMENU ([CMenu](../mfc/reference/cmenu-class.md))
 
@@ -48,40 +48,40 @@ Los objetos de Windows que utilizan asignaciones de identificadores son los sigu
 
 - SOCKET ([CSocket](../mfc/reference/csocket-class.md))
 
-Especifica un identificador a uno de estos objetos, puede encontrar el objeto MFC que encapsula el identificador llamando al método estático `FromHandle`. Por ejemplo, dado un HWND llamado *hWnd*, la siguiente línea devolverá un puntero a la `CWnd` que ajusta *hWnd*:
+Dado un identificador a cualquiera de estos objetos, puede encontrar el objeto MFC que ajusta el identificador llamando al método `FromHandle`estático. Por ejemplo, dado un HWND denominado *hWnd*, la línea siguiente devolverá un puntero a `CWnd` que contiene *hWnd*:
 
 ```
 CWnd::FromHandle(hWnd)
 ```
 
-Si *hWnd* no tiene un objeto contenedor específico, un archivo temporal `CWnd` se crea para encapsular *hWnd*. Esto permite obtener un objeto de C++ válido de cualquiera de ellos.
+Si *hWnd* no tiene un objeto contenedor específico, se crea un `CWnd` temporal para ajustar *hWnd*. Esto permite obtener un objeto válido C++ de cualquier controlador.
 
-Una vez que un objeto contenedor, puede recuperar su identificador de una variable de miembro público de la clase contenedora. En el caso de un `CWnd`, *m_hWnd* contiene el HWND para ese objeto.
+Una vez que tenga un objeto contenedor, puede recuperar su identificador de una variable de miembro público de la clase contenedora. En el caso de `CWnd`, *m_hWnd* contiene el HWND para ese objeto.
 
-## <a name="attaching-handles-to-mfc-objects"></a>Asociar controladores a los objetos MFC
+## <a name="attaching-handles-to-mfc-objects"></a>Adjuntar controladores a objetos MFC
 
-Proporciona un objeto de contenedor de identificador recién creado y un identificador a un objeto de Windows, puede asociar las dos mediante una llamada a la `Attach` funcione como se muestra en este ejemplo:
+Dado un objeto Handle-wrapper recién creado y un identificador a un objeto de Windows, puede asociar los dos llamando a `Attach` la función como en este ejemplo:
 
 ```
 CWnd myWnd;
 myWnd.Attach(hWnd);
 ```
 
-Esto crea una entrada en la asociación de asignación permanente *myWnd* y *hWnd*. Una llamada a `CWnd::FromHandle(hWnd)` ahora devolverá un puntero a *myWnd*. Cuando *myWnd* es eliminado, el destructor se destruye automáticamente *hWnd* mediante una llamada a la Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) función. Si esto no es el deseado, *hWnd* se debe desasociar de *myWnd* antes *myWnd* se destruye (normalmente al salir del ámbito en el que *myWnd*se ha definido). El `Detach` método hace esto.
+Esto crea una entrada en el mapa permanente que asocia *myWnd* y *hWnd*. Llamar `CWnd::FromHandle(hWnd)` a devolverá ahora un puntero a *myWnd*. Cuando se elimina *myWnd* , el destructor destruye automáticamente *hWnd* mediante una llamada a la función [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) de Windows. Si no se desea, *hWnd* debe desasociarse de *myWnd* antes de que *myWnd* se destruya (normalmente al mantener el ámbito en el que se definió *myWnd* ). El `Detach` método lo hace.
 
 ```
 myWnd.Detach();
 ```
 
-## <a name="more-about-temporary-objects"></a>Más información acerca de los objetos temporales
+## <a name="more-about-temporary-objects"></a>Más información sobre los objetos temporales
 
-Objetos temporales se crean cada vez que `FromHandle` se especifica un identificador que no tiene todavía un objeto contenedor. Estos objetos temporales se desasocian de su identificador y eliminados por el `DeleteTempMap` funciones. De forma predeterminada [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) llama automáticamente a `DeleteTempMap` para cada clase que admita asignaciones de identificadores temporales. Esto significa que no se puede suponer que un puntero a un objeto temporal serán válido más allá del punto de salir de la función donde se ha obtenido el puntero.
+Los objetos temporales se crean `FromHandle` siempre que se proporciona un identificador que aún no tiene un objeto contenedor. Estos objetos temporales se desasocian de su identificador y se eliminan de las `DeleteTempMap` funciones. De forma predeterminada, [CWinThread:: OnIdle](../mfc/reference/cwinthread-class.md#onidle) llama `DeleteTempMap` automáticamente a cada clase que admita asignaciones de identificadores temporales. Esto significa que no se puede asumir que un puntero a un objeto temporal será válido más allá del punto de salida de la función en la que se obtuvo el puntero.
 
-## <a name="wrapper-objects-and-multiple-threads"></a>Objetos de contenedor y varios subprocesos
+## <a name="wrapper-objects-and-multiple-threads"></a>Objetos contenedor y varios subprocesos
 
-Objetos temporales y permanentes se mantienen en una base por subproceso. Es decir, un subproceso no puede tener acceso a objetos de contenedor de C++ de otro subproceso, independientemente de si es temporal o permanente.
+Tanto los objetos temporales como los permanentes se mantienen por subproceso. Es decir, un subproceso no puede tener acceso C++ a los objetos contenedores de otro subproceso, independientemente de si es temporal o permanente.
 
-Para pasar estos objetos de un subproceso a otro, siempre envíelos como su nativo `HANDLE` tipo. Pasar un objeto de contenedor de C++ desde un subproceso a otro suelen provocar resultados inesperados.
+Para pasar estos objetos de un subproceso a otro, envíelos siempre como su `HANDLE` tipo nativo. Pasar un C++ objeto contenedor de un subproceso a otro suele producir resultados inesperados.
 
 ## <a name="see-also"></a>Vea también
 

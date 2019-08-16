@@ -1,21 +1,21 @@
 ---
-title: ID (atributo de COM de C++)
+title: ID (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409504"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501417"
 ---
 # <a name="id"></a>id
 
-Especifica un *dispid* parámetro para una función miembro (una propiedad o un método en una interfaz o interfaz dispinterface).
+Especifica un parámetro de DISPID para una función miembro (ya sea una propiedad o un método, en una interfaz o dispinterface).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,15 +26,15 @@ Especifica un *dispid* parámetro para una función miembro (una propiedad o un 
 ### <a name="parameters"></a>Parámetros
 
 *dispid*<br/>
-El identificador de envío para el método de interfaz.
+IDENTIFICADOR de envío del método de interfaz.
 
 ## <a name="remarks"></a>Comentarios
 
-El **id** atributo de C++ tiene la misma funcionalidad que el [id](/windows/desktop/Midl/id) atributo MIDL.
+El atributo **ID** C++ tiene la misma funcionalidad que el atributo MIDL [ID](/windows/win32/Midl/id) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [enlazable](bindable.md) para obtener un ejemplo de cómo usar **id**.
+Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de cómo usar **ID**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,9 +43,9 @@ Vea el ejemplo de [enlazable](bindable.md) para obtener un ejemplo de cómo usar
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

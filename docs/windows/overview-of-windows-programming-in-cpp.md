@@ -2,12 +2,12 @@
 title: Información general de la programación para Windows en C++
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607514"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514794"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -21,9 +21,9 @@ Las aplicaciones de consola de C++ se ejecutan desde la línea de comandos en un
 
 ## <a name="native-desktop-client-applications"></a>Aplicaciones cliente de escritorio nativo
 
-Una *aplicación cliente de escritorio nativo* es una aplicación C++ de c o con ventanas que usa las API nativas de [Windows c originales o las API del modelo de objetos componentes (com)](/windows/desktop/apiindex/windows-api-list) para tener acceso al sistema operativo. Esas API se escriben principalmente en C. Hay más de una manera de crear una aplicación de escritorio nativo: Puede programar mediante las API de Win32 directamente, mediante un bucle de mensajes de estilo C que procesa los eventos del sistema operativo. O bien, puede programar con *Microsoft Foundation Classes* (MFC), una biblioteca ligeramente orientada C++ a objetos que contiene Win32. Ninguno de los enfoques se considera "moderno" en comparación con el Plataforma universal de Windows (UWP), pero ambos siguen siendo totalmente compatibles y tienen millones de líneas de código que se ejecutan en el mundo de hoy en día. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabaje explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 se puede compilar como un binario de 32 bits (x86) o 64 bits (x64). En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.
+Una *aplicación cliente de escritorio nativo* es una aplicación C++ de c o con ventanas que usa las API nativas de [Windows c originales o las API del modelo de objetos componentes (com)](/windows/win32/apiindex/windows-api-list) para tener acceso al sistema operativo. Esas API se escriben principalmente en C. Hay más de una manera de crear una aplicación de escritorio nativo: Puede programar mediante las API de Win32 directamente, mediante un bucle de mensajes de estilo C que procesa los eventos del sistema operativo. O bien, puede programar con *Microsoft Foundation Classes* (MFC), una biblioteca ligeramente orientada C++ a objetos que contiene Win32. Ninguno de los enfoques se considera "moderno" en comparación con el Plataforma universal de Windows (UWP), pero ambos siguen siendo totalmente compatibles y tienen millones de líneas de código que se ejecutan en el mundo de hoy en día. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabaje explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 se puede compilar como un binario de 32 bits (x86) o 64 bits (x64). En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.
 
-Para empezar a trabajar con la C++ programación tradicional de Windows, consulte Introducción [a C++Win32 y ](/windows/desktop/LearnWin32/learn-to-program-for-windows). Una vez que conozca el funcionamiento de Win32, será más fácil obtener información sobre [las aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md). Para ver un ejemplo de una C++ aplicación de escritorio tradicional que usa gráficos sofisticados, consulte [hilo: Desarrollo C++ de aplicaciones para](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Para empezar a trabajar con la C++ programación tradicional de Windows, consulte Introducción [a C++Win32 y ](/windows/win32/LearnWin32/learn-to-program-for-windows). Una vez que conozca el funcionamiento de Win32, será más fácil obtener información sobre [las aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md). Para ver un ejemplo de una C++ aplicación de escritorio tradicional que usa gráficos sofisticados, consulte [hilo: Desarrollo C++ de aplicaciones para](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
 
 ### <a name="c-or-net"></a>C++o .NET?
 
@@ -39,7 +39,7 @@ También es posible combinar la eficacia y la eficacia de con C++ la programaci�
 
 ## <a name="com-components"></a>Componentes COM
 
-El [Modelo de objetos componentes (COM)](/windows/desktop/com/the-component-object-model) es una especificación que permite que los programas escritos en lenguajes diferentes se comuniquen entre sí. Muchos componentes de Windows se implementan como objetos COM y siguen las reglas COM estándar para la creación de objetos, la detección de interfaces y la destrucción de objetos.  El uso de objetos C++ com desde aplicaciones de escritorio es relativamente sencillo, pero escribir su propio objeto com es más avanzado. En [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) se proporcionan macros y funciones auxiliares que simplifican el desarrollo de COM. Para obtener más información, vea [componentes de escritorio com de ATL](../atl/atl-com-desktop-components.md).
+El [Modelo de objetos componentes (COM)](/windows/win32/com/the-component-object-model) es una especificación que permite que los programas escritos en lenguajes diferentes se comuniquen entre sí. Muchos componentes de Windows se implementan como objetos COM y siguen las reglas COM estándar para la creación de objetos, la detección de interfaces y la destrucción de objetos.  El uso de objetos C++ com desde aplicaciones de escritorio es relativamente sencillo, pero escribir su propio objeto com es más avanzado. En [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) se proporcionan macros y funciones auxiliares que simplifican el desarrollo de COM. Para obtener más información, vea [componentes de escritorio com de ATL](../atl/atl-com-desktop-components.md).
 
 ## <a name="universal-windows-platform-apps"></a>Aplicaciones de la Plataforma universal de Windows
 
@@ -55,7 +55,7 @@ Visual Studio 2017, versión 15,4 y versiones posteriores, le permite crear un p
 
 ## <a name="games"></a>Juegos
 
-Los juegos de DirectX se pueden ejecutar en PC o en Xbox. Para obtener más información, consulte [gráficos y juegos de DirectX](/windows/desktop/directx).
+Los juegos de DirectX se pueden ejecutar en PC o en Xbox. Para obtener más información, consulte [gráficos y juegos de DirectX](/windows/win32/directx).
 
 ## <a name="sql-server-database-clients"></a>Clientes de SQL Server Database
 
@@ -67,7 +67,7 @@ Los controladores son componentes de bajo nivel que hacen que los datos de los d
 
 ## <a name="windows-services"></a>Servicios de Windows
 
-Un *servicio* de Windows es un programa que se puede ejecutar en segundo plano con poca o ninguna interacción del usuario. Estos programas se denominan *demonios* en sistemas Unix. Para obtener más información, consulte [servicios](/windows/desktop/services/services).
+Un *servicio* de Windows es un programa que se puede ejecutar en segundo plano con poca o ninguna interacción del usuario. Estos programas se denominan *demonios* en sistemas Unix. Para obtener más información, consulte [servicios](/windows/win32/services/services).
 
 ## <a name="sdks-libraries-and-header-files"></a>SDK, bibliotecas y archivos de encabezado
 
@@ -110,7 +110,7 @@ Visual Studio incluye un depurador eficaz de código nativo, herramientas de an�
 |[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[Trabajo con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, tablas de cadenas y otros recursos a una aplicación de escritorio.|
 |[Recursos para crear un juego con DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Vínculos a contenido para crear juegos en C++.|
-|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
+|[Procedimientos: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
 |[Implementación de aplicaciones de escritorio nativas](deploying-native-desktop-applications-visual-cpp.md)|Implementar aplicaciones nativas en Windows.|
 
 ## <a name="related-articles"></a>Artículos relacionados

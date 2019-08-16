@@ -8,31 +8,31 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197463"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495459"
 ---
 # <a name="server-registration-global-functions"></a>Funciones globales de registro de servidor
 
 Estas funciones proporcionan compatibilidad para registrar y anular el registro de objetos de servidor en el mapa de objetos.
 
 > [!IMPORTANT]
->  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Las funciones enumeradas en la tabla siguiente no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 |||
 |-|-|
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|Esta función se invoca para registrar todos los objetos del mapa de objetos.|
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Esta función se invoca para anular el registro de todos los objetos del mapa de objetos.|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Esta función se invoca para registrar los objetos de clase.|
-|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Esta función se invoca para revocar los objetos de clase desde un módulo COM.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Esta función se llama para obtener el objeto de clase.|
+|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Se llama a esta función para revocar objetos de clase de un módulo COM.|
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Se llama a esta función para obtener el objeto de clase.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
 ##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
 
@@ -51,20 +51,20 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 Puntero al módulo COM.
 
 *bRegTypeLib*<br/>
-TRUE si la biblioteca de tipos es que se registrarán.
+TRUE si se va a registrar la biblioteca de tipos.
 
 *pCLSID*<br/>
-Señala el CLSID del objeto que se registrarán. Si es NULL, se registrarán todos los objetos en el mapa de objetos.
+Apunta al CLSID del objeto que se va a registrar. Si es NULL, se registrarán todos los objetos del mapa de objetos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`AtlComModuleRegisterServer` recorre el mapa de objetos ATL generado automáticamente y se registra cada objeto en el mapa. Si *pTypeInfo* no es NULL y, a continuación, solo el objeto al que hace referencia *pTypeInfo* está registrado; en caso contrario, todos los objetos están registrados.
+`AtlComModuleRegisterServer`recorre el mapa de objetos generados automáticamente por ATL y registra cada objeto en el mapa. Si *pCLSID* no es null, solo se registra el objeto al que hace referencia *pCLSID* ; de lo contrario, se registran todos los objetos.
 
-Esta función se invoca [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).
+[CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver)llama a esta función.
 
 ##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
 
@@ -83,20 +83,20 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 Puntero al módulo COM.
 
 *bUnRegTypeLib*<br/>
-TRUE si la biblioteca de tipos es que se registrarán.
+TRUE si se va a registrar la biblioteca de tipos.
 
 *pCLSID*<br/>
-Señala el CLSID del objeto que se va a anular. Si NULL se anula todos los objetos en el mapa de objetos.
+Apunta al CLSID del objeto del que se va a anular el registro. Si es NULL, se anulará el registro de todos los objetos del mapa de objetos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`AtlComModuleUnregisterServer` recorre el mapa de objetos ATL y anula el registro de cada objeto en el mapa. Si *pTypeInfo* no es NULL y, a continuación, solo el objeto al que hace referencia *pTypeInfo* no está registrada; en caso contrario, todos los objetos se eliminan del registrados.
+`AtlComModuleUnregisterServer`recorre el mapa de objetos ATL y anula el registro de cada objeto en el mapa. Si *pCLSID* no es null, solo se anula el registro del objeto al que hace referencia *pCLSID* . de lo contrario, se anula el registro de todos los objetos.
 
-Esta función se invoca [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).
+[CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver)llama a esta función.
 
 ##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
 
@@ -115,18 +115,18 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 Puntero al módulo COM.
 
 *dwClsContext*<br/>
-Especifica el contexto en el que se ejecutará el objeto de clase. Los valores posibles son CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Consulte [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) para obtener más detalles.
+Especifica el contexto en el que se va a ejecutar el objeto de clase. Los valores posibles son CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Consulte [CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) para obtener más información.
 
 *dwFlags*<br/>
-Determina los tipos de conexión para el objeto de clase. Los valores posibles son REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE o REGCLS_MULTI_SEPARATE. Consulte [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) para obtener más detalles.
+Determina los tipos de conexión para el objeto de clase. Los valores posibles son REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE o REGCLS_MULTI_SEPARATE. Consulte [REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls) para obtener más información.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función auxiliar utilizan [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsoleto en ATL 7.0) y [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
+La función auxiliar se emplea en [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsoleto en ATL 7,0) y [CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
 ##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
 
@@ -143,11 +143,11 @@ Puntero al módulo COM.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función auxiliar utilizan [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsoleto en ATL 7.0) y [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
+La función auxiliar se emplea en [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsoleto en ATL 7,0) y [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
 ##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
 
@@ -167,21 +167,21 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 Puntero al módulo COM.
 
 *rclsid*<br/>
-El CLSID del objeto que se va a crear.
+CLSID del objeto que se va a crear.
 
 *riid*<br/>
 IID de la interfaz solicitada.
 
 *ppv*<br/>
-Un puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *ppv* se establece en NULL.
+Puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *PPV* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función auxiliar utilizan [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (obsoleto en ATL 7.0) y [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).
+La función auxiliar se emplea en [CComModule:: getclassobject (](ccommodule-class.md#getclassobject) (obsoleto en ATL 7,0) y [CAtlDllModuleT:: getclassobject (](catldllmodulet-class.md#getclassobject).
 
 ## <a name="see-also"></a>Vea también
 

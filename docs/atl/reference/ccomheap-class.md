@@ -1,5 +1,5 @@
 ---
-title: CComHeap (clase)
+title: Clase CComHeap
 ms.date: 11/04/2016
 f1_keywords:
 - CComHeap
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ded73047b895a44a22bdd5730886f7fc088c77a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259383"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497343"
 ---
-# <a name="ccomheap-class"></a>CComHeap (clase)
+# <a name="ccomheap-class"></a>Clase CComHeap
 
-Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación de memoria COM.
+Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) con las funciones de asignación de memoria de com.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,16 +35,16 @@ class CComHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
-|[CComHeap::Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
-|[CComHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|
+|[CComHeap::Free](#free)|Llame a este método para liberar un bloque de memoria asignado por este administrador de memoria.|
+|[CComHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño asignado de un bloque de memoria asignado por este administrador de memoria.|
 |[CComHeap::Reallocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
 
 ## <a name="remarks"></a>Comentarios
 
-`CComHeap` implementa funciones de asignación de memoria mediante las funciones de asignación COM, incluidos [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)y [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). La cantidad máxima de memoria que se puede asignar es igual a bytes INT_MAX (2147483647).
+`CComHeap`implementa funciones de asignación de memoria mediante las funciones de asignación COM, como [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize) [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc). La cantidad máxima de memoria que se puede asignar es igual a INT_MAX (2147483647) bytes.
 
 ## <a name="example"></a>Ejemplo
 
@@ -79,13 +79,13 @@ Devuelve un puntero al principio del bloque de memoria recién asignado.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a [ccomheap:: Free](#free) o [ccomheap:: ReAllocate](#reallocate) para liberar la memoria asignada por este método.
+Llame a [CComHeap:: Free](#free) o [CComHeap::](#reallocate) allocate para liberar la memoria asignada por este método.
 
-Implementa mediante [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).
+Implementado mediante [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc).
 
 ##  <a name="free"></a>  CComHeap::Free
 
-Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.
+Llame a este método para liberar un bloque de memoria asignado por este administrador de memoria.
 
 ```
 virtual void Free(void* p) throw();
@@ -98,11 +98,11 @@ Puntero a la memoria previamente asignada por este administrador de memoria. NUL
 
 ### <a name="remarks"></a>Comentarios
 
-Implementa mediante [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).
+Se implementa mediante [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree).
 
 ##  <a name="getsize"></a>  CComHeap::GetSize
 
-Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.
+Llame a este método para obtener el tamaño asignado de un bloque de memoria asignado por este administrador de memoria.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -115,11 +115,11 @@ Puntero a la memoria previamente asignada por este administrador de memoria.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el tamaño del bloque de memoria asignada en bytes.
+Devuelve el tamaño del bloque de memoria asignado en bytes.
 
 ### <a name="remarks"></a>Comentarios
 
-Implementa mediante [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).
+Se implementa mediante [IMalloc:: se obtiene](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize).
 
 ##  <a name="reallocate"></a>  CComHeap::Reallocate
 
@@ -143,14 +143,14 @@ Devuelve un puntero al principio del bloque de memoria recién asignado.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a [ccomheap:: Free](#free) para liberar la memoria asignada por este método.
+Llame a [CComHeap:: Free](#free) para liberar la memoria asignada por este método.
 
-Implementa mediante [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
+Implementado mediante [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
 
 ## <a name="see-also"></a>Vea también
 
-[DynamicConsumer Sample](../../overview/visual-cpp-samples.md)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)<br/>
+[Ejemplo de DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
+[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
 [CWin32Heap (clase)](../../atl/reference/cwin32heap-class.md)<br/>
 [CLocalHeap (clase)](../../atl/reference/clocalheap-class.md)<br/>
 [CGlobalHeap (clase)](../../atl/reference/cglobalheap-class.md)<br/>

@@ -1,17 +1,17 @@
 ---
-title: opcional (atributo de COM de C++)
+title: opcional (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: bc6422ff652cfaba5fa71285294b93c1f0e8990e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407593"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514348"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,11 +25,11 @@ Especifica un parámetro opcional para una función miembro.
 
 ## <a name="remarks"></a>Comentarios
 
-El **opcional** atributo de C++ tiene la misma funcionalidad que el [opcional](/windows/desktop/Midl/optional) atributo MIDL.
+El atributo **opcional** C++ tiene la misma funcionalidad que el atributo MIDL [opcional](/windows/win32/Midl/optional) .
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente código muestra cómo **opcional** podría utilizarse:
+En el código siguiente se muestra cómo se puede usar **opcional** :
 
 ```cpp
 // cpp_attr_ref_optional.cpp
@@ -51,9 +51,9 @@ __interface IFireTabCtrl : IDispatch
 |||
 |-|-|
 |**Se aplica a**|Parámetro de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

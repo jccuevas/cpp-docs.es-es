@@ -1,17 +1,17 @@
 ---
-title: ReadOnly (atributo de COM de C++)
+title: ReadOnly (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514132"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -25,7 +25,7 @@ Prohíbe la asignación a un miembro de datos.
 
 ## <a name="remarks"></a>Comentarios
 
-El atributo de C++ **readonly** tiene la misma funcionalidad que el atributo MIDL [readonly](/windows/desktop/Midl/readonly) .
+El atributo de C++ **readonly** tiene la misma funcionalidad que el atributo MIDL [readonly](/windows/win32/Midl/readonly) .
 
 Si quiere prohibir la modificación de un parámetro de método, use el atributo [in](in-cpp.md) .
 
@@ -54,9 +54,9 @@ __interface IFireTabCtrl
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

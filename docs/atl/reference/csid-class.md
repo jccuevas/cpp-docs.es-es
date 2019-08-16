@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ed19ed3cdeb77612e20d826480ab73b9361366e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915698"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496449"
 ---
 # <a name="csid-class"></a>CSid (clase)
 
@@ -97,7 +97,7 @@ La `SID` estructura es una estructura de longitud variable que se usa para ident
 
 Las aplicaciones no deben modificar `SID` directamente la estructura, sino que usan los métodos proporcionados en esta clase contenedora. Vea también [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)y [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).
 
-Para obtener una introducción al modelo de control de acceso de Windows, consulte [Access Control](/windows/desktop/SecAuthZ/access-control) en el Windows SDK.
+Para obtener una introducción al modelo de control de acceso de Windows, consulte [Access Control](/windows/win32/SecAuthZ/access-control) en el Windows SDK.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -117,7 +117,7 @@ Devuelve el LPCTSTR que apunta al nombre de la cuenta.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método intenta encontrar un nombre para el (identificador `SID` de seguridad) especificado. Para obtener información completa, vea [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Este método intenta encontrar un nombre para el (identificador `SID` de seguridad) especificado. Para obtener información completa, vea [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
 Si no se `SID` puede encontrar ningún nombre de cuenta para `AccountName` , devuelve una cadena vacía. Esto puede ocurrir si un tiempo de espera de red impide que este método encuentre el nombre. También se produce para los identificadores de seguridad que no tienen el nombre de cuenta `SID` correspondiente, como un que identifica una sesión de inicio de sesión.
 
@@ -208,7 +208,7 @@ Devuelve el `LPCTSTR` que señala al dominio.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método intenta encontrar un nombre para el (identificador `SID` de seguridad) especificado. Para obtener información completa, vea [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Este método intenta encontrar un nombre para el (identificador `SID` de seguridad) especificado. Para obtener información completa, vea [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
 Si no se `SID` puede encontrar ningún nombre de cuenta para `Domain` , devuelve el dominio como una cadena vacía. Esto puede ocurrir si un tiempo de espera de red impide que este método encuentre el nombre. También se produce para los identificadores de seguridad que no tienen el nombre de cuenta `SID` correspondiente, como un que identifica una sesión de inicio de sesión.
 
@@ -232,7 +232,7 @@ Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) en el Windows SDK para obtener más información.
+Consulte [EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) en el Windows SDK para obtener más información.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -360,7 +360,7 @@ El nombre de la cuenta.
 Nombre del sistema. Esta cadena puede ser el nombre de un equipo remoto. Si esta cadena es NULL, se utiliza en su lugar el sistema local.
 
 *pSid*<br/>
-Puntero a una estructura de [SID](/windows/desktop/api/winnt/ns-winnt-sid) .
+Puntero a una estructura de [SID](/windows/win32/api/winnt/ns-winnt-sid) .
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -368,7 +368,7 @@ Devuelve TRUE si es correcto, FALSE en caso de error. Para obtener información 
 
 ### <a name="remarks"></a>Comentarios
 
-`LoadAccount`intenta buscar un identificador de seguridad para el nombre especificado. Vea [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) para obtener más detalles.
+`LoadAccount`intenta buscar un identificador de seguridad para el nombre especificado. Vea [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw) para obtener más detalles.
 
 ##  <a name="operator_eq"></a>CSid:: Operator =
 
@@ -542,7 +542,7 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve la `SID` estructura como una cadena en un formato adecuado para la presentación, el almacenamiento o la transmisión. Equivalente a [ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).
+Devuelve la `SID` estructura como una cadena en un formato adecuado para la presentación, el almacenamiento o la transmisión. Equivalente a [ConvertSidToStringSid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw).
 
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse
 

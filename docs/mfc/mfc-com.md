@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: 67c7ea3e93b3158abc552c552c450c31c109be80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab688022c311f3d20fc092736ee4c7d37232a43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239198"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508089"
 ---
 # <a name="mfc-com"></a>MFC COM
 
-Un subconjunto de MFC está diseñado para ofrecer compatibilidad con COM, aunque la mayoría de Active Template Library (ATL) está diseñado para la programación COM. Temas de esta sección describe la compatibilidad con de MFC COM.
+Un subconjunto de MFC se ha diseñado para admitir COM, mientras que la mayoría de los Active Template Library (ATL) están diseñados para la programación COM. En esta sección de temas se describe la compatibilidad de MFC con COM.
 
-Tecnologías activas (como ActiveX controles, contención de documentos activos, OLE y así sucesivamente) usan el modelo de objetos componentes (COM) para habilitar los componentes de software interactuar entre sí en un entorno de red, independientemente del lenguaje con el que fueran creado. Tecnologías activas pueden utilizarse para crear aplicaciones que se ejecutan en el escritorio o en Internet. Para obtener más información, consulte [Introducción a COM](../atl/introduction-to-com.md) o [el modelo de objetos componentes](/windows/desktop/com/the-component-object-model).
+Las tecnologías activas (como los controles ActiveX, la contención de documentos activos, OLE, etc.) usan el modelo de objetos componentes (COM) para permitir que los componentes de software interactúen entre sí en un entorno en red, independientemente del idioma con el que se encontraran. creado. Las tecnologías activas se pueden usar para crear aplicaciones que se ejecutan en el escritorio o en Internet. Para obtener más información, vea [Introducción a com](../atl/introduction-to-com.md) o [el modelo de objetos componentes](/windows/win32/com/the-component-object-model).
 
-Tecnologías activas incluyen tecnologías de cliente y servidor, incluido lo siguiente:
+Las tecnologías activas incluyen tecnologías de cliente y de servidor, incluidas las siguientes:
 
-- Controles ActiveX son objetos interactivos que se pueden utilizar en contenedores como un sitio Web. Para obtener más información sobre los controles ActiveX, vea:
+- Los controles ActiveX son objetos interactivos que se pueden utilizar en contenedores como un sitio Web. Para obtener más información sobre los controles ActiveX, vea:
 
    - [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
 
@@ -34,19 +34,19 @@ Tecnologías activas incluyen tecnologías de cliente y servidor, incluido lo si
 
    - [Información general: Internet](../mfc/mfc-internet-programming-basics.md)
 
-   - [Actualizar un ActiveX Control existente que se usará en Internet](../mfc/upgrading-an-existing-activex-control.md)
+   - [Actualizar un control ActiveX existente para su uso en Internet](../mfc/upgrading-an-existing-activex-control.md)
 
-   - [Depurar un Control ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
+   - [Depurar un control ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
 
-- Active scripting controla el comportamiento integrado de uno o varios controles ActiveX desde un explorador o el servidor. Para obtener más información sobre secuencias de comandos ActiveX, vea [tecnología activa en Internet](../mfc/active-technology-on-the-internet.md).
+- Active Scripting controla el comportamiento integrado de uno o más controles ActiveX desde un explorador o un servidor. Para obtener más información sobre Active Scripting, vea [tecnología activa en Internet](../mfc/active-technology-on-the-internet.md).
 
-- [Automatización](../mfc/automation.md) (anteriormente conocida como automatización OLE) permite que una aplicación manipule objetos implementados en otra aplicación o "exponer" objetos de forma que se puedan manipular.
+- [Automatización](../mfc/automation.md) de (antes conocida como automatización OLE) permite que una aplicación manipule objetos implementados en otra aplicación o "exponga" objetos para que se puedan manipular.
 
    El objeto automatizado puede ser local o remoto (en otra máquina accesible a través de una red). La automatización está disponible para objetos COM y OLE.
 
-- En esta sección también proporciona información sobre cómo escribir componentes COM mediante MFC, por ejemplo, en [puntos de conexión](../mfc/connection-points.md).
+- En esta sección también se proporciona información sobre cómo escribir componentes COM mediante MFC, por ejemplo, en [puntos de conexión](../mfc/connection-points.md).
 
-Para obtener una explicación de lo que todavía se denomina OLE en comparación con lo que ahora se denomina tecnología activa, vea los temas sobre [OLE](../mfc/ole-in-mfc.md).
+Para obtener una explicación de lo que se sigue llamando OLE frente a lo que ahora se denomina tecnología activa, vea los temas sobre [OLE](../mfc/ole-in-mfc.md).
 
 ## <a name="in-this-section"></a>En esta sección
 

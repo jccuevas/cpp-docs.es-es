@@ -1,21 +1,21 @@
 ---
-title: ODL (atributo de COM de C++)
+title: ODL (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407645"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514316"
 ---
 # <a name="odl"></a>odl
 
-Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL). El compilador de MIDL no requiere la **odl** atributo; se reconoce solo por compatibilidad con archivos .odl anteriores.
+Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL). El compilador MIDL no requiere el atributo **ODL** ; solo se reconoce por compatibilidad con archivos. ODL más antiguos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,7 +25,7 @@ Identifica una interfaz como una interfaz de lenguaje de descripción de objetos
 
 ## <a name="remarks"></a>Comentarios
 
-El **odl** atributo de C++ tiene la misma funcionalidad que el [odl](/windows/desktop/Midl/odl) atributo MIDL.
+El atributo **ODL** C++ tiene la misma funcionalidad que el atributo MIDL de [ODL](/windows/win32/Midl/odl) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -56,9 +56,9 @@ public:
 |||
 |-|-|
 |**Se aplica a**|**interface**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

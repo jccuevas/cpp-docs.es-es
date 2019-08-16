@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ atributo COM)
+title: size_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407333"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514032"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño punteros a punteros de tamaño y solo - o matrices multidimensionales.
+Especifique el tamaño de la memoria asignada para punteros de tamaño, punteros de tamaño a punteros de tamaño y matrices de un solo o multidimensionales.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,11 +26,11 @@ Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño
 ### <a name="parameters"></a>Parámetros
 
 *expression*<br/>
-El tamaño de memoria asignada para un tamaño punteros.
+Tamaño de la memoria asignada para los punteros de tamaño.
 
 ## <a name="remarks"></a>Comentarios
 
-El **size_is** C++ atributo tiene la misma funcionalidad que el [size_is](/windows/desktop/Midl/size-is) atributo MIDL.
+El atributo **size_is** C++ tiene la misma funcionalidad que el atributo MIDL de [size_is](/windows/win32/Midl/size-is) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -42,9 +42,9 @@ Vea el ejemplo de [first_is](first-is.md) para obtener un ejemplo de cómo espec
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|`max_is`|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
