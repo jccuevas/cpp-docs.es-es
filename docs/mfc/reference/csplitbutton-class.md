@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916769"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502847"
 ---
 # <a name="csplitbutton-class"></a>Clase CSplitButton
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>Comentarios
 
-La `CSplitButton` clase se deriva de la clase [CButton](../../mfc/reference/cbutton-class.md) . El control de botón de expansión es un control de botón cuyo estilo es BS_SPLITBUTTON. Muestra un menú personalizado cuando un usuario hace clic en la flecha de lista desplegable. Para obtener más información, consulte los estilos BS_SPLITBUTTON y BS_DEFSPLITBUTTON en los [estilos de botón](/windows/desktop/Controls/button-styles).
+La `CSplitButton` clase se deriva de la clase [CButton](../../mfc/reference/cbutton-class.md) . El control de botón de expansión es un control de botón cuyo estilo es BS_SPLITBUTTON. Muestra un menú personalizado cuando un usuario hace clic en la flecha de lista desplegable. Para obtener más información, consulte los estilos BS_SPLITBUTTON y BS_DEFSPLITBUTTON en los [estilos de botón](/windows/win32/Controls/button-styles).
 
 En la ilustración siguiente se muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha desplegable (2) y se muestra el submenú (3).
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*pNMHDR*|de Puntero a una estructura [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) que contiene información sobre la notificación de [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
-|*pResult*|enuncia (No se usa; no se devuelve ningún valor). Valor devuelto de la notificación [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
+|*pNMHDR*|de Puntero a una estructura [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) que contiene información sobre la notificación de [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
+|*pResult*|enuncia (No se usa; no se devuelve ningún valor). Valor devuelto de la notificación [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
 
 ### <a name="remarks"></a>Comentarios
 

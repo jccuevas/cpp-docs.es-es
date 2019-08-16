@@ -25,12 +25,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156569"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499627"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -60,7 +60,7 @@ Objeto de destino.
 Objeto de origen.
 
 *count*<br/>
-Número de bytes (**memmove**) o caracteres (**wmemmove**) para copiar.
+Número de bytes (**memmove**) o caracteres (**wmemmove**) que se van a copiar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -68,11 +68,11 @@ El valor de *dest*.
 
 ## <a name="remarks"></a>Comentarios
 
-Copias *recuento* bytes (**memmove**) o caracteres (**wmemmove**) desde *src* a *dest*. Si algunas regiones del área de origen y del destino se superponen, ambas funciones se aseguran de que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.
+Copia los bytes de recuento (**memmove**) o los caracteres (**wmemmove**) de *src* a *dest*. Si algunas regiones del área de origen y del destino se superponen, ambas funciones se aseguran de que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.
 
-**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+**Nota de seguridad** Asegúrese de que el búfer de destino sea del mismo tamaño o mayor que el búfer de origen. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-El **memmove** y **wmemmove** funciones solo dejarán de estar si la constante **_CRT_SECURE_DEPRECATE_MEMORY** se define antes de la declaración de inclusión en orden para las funciones en desuso, como en el ejemplo siguiente:
+Las funciones **memmove** y **wmemmove** solo quedarán desusadas si la constante **_CRT_SECURE_DEPRECATE_MEMORY** se define antes de la instrucción de inclusión para que las funciones queden en desuso, como en el ejemplo siguiente:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

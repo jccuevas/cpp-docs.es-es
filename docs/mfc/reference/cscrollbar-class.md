@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 5bc9c0190ea200b25b8ea3b20311c98c1c131838
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: cd0c1ed85969d50548cf6b2be1d5677ed62110bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821269"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502575"
 ---
 # <a name="cscrollbar-class"></a>Clase CScrollBar
 
@@ -203,7 +203,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="parameters"></a>Parámetros
 
 *pScrollInfo*<br/>
-Puntero a la estructura [SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) .
+Puntero a la estructura [SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) .
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -211,7 +211,7 @@ Devuelve TRUE si es correcto, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro emula la funcionalidad del mensaje [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) , tal y como se describe en el Windows SDK.
+Esta función miembro emula la funcionalidad del mensaje [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo) , tal y como se describe en el Windows SDK.
 
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo
 

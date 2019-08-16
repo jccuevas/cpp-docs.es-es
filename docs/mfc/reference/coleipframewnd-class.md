@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 483998529b83d9b28c6ab1b219c4f5288dbd8ec7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224561"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503831"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd (clase)
 
@@ -33,22 +33,22 @@ class COleIPFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Construye un objeto `COleIPFrameWnd`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Lo llama el marco de trabajo cuando se activa un elemento para su edición en contexto.|
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Lo llama el marco de trabajo para volver a colocar la ventana de edición en contexto.|
+|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Lo llama el marco de trabajo cuando un elemento se activa para la edición en contexto.|
+|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Lo llama el marco de trabajo para cambiar la posición de la ventana de edición en contexto.|
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase crea y las barras en la ventana de documento de la aplicación de contenedor de control de las posiciones. También controla las notificaciones generadas por incrustada [COleResizeBar](../../mfc/reference/coleresizebar-class.md) objeto cuando el usuario cambia el tamaño de la ventana de edición en contexto.
+Esta clase crea y coloca barras de control dentro de la ventana de documento de la aplicación contenedora. También controla las notificaciones generadas por un objeto [COleResizeBar](../../mfc/reference/coleresizebar-class.md) incrustado cuando el usuario cambia el tamaño de la ventana de edición en contexto.
 
-Para obtener más información sobre el uso de `COleIPFrameWnd`, consulte el artículo [activación](../../mfc/activation-cpp.md).
+Para obtener más información sobre `COleIPFrameWnd`el uso de, vea el artículo [activación](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -64,11 +64,11 @@ Para obtener más información sobre el uso de `COleIPFrameWnd`, consulte el art
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxole.h
+**Encabezado:** afxole. h
 
 ##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd
 
-Construye un `COleIPFrameWnd` objeto e inicializa su información de estado local, que se almacena en una estructura de tipo OLEINPLACEFRAMEINFO.
+Construye un `COleIPFrameWnd` objeto e inicializa su información de estado en contexto, que se almacena en una estructura de tipo OLEINPLACEFRAMEINFO.
 
 ```
 COleIPFrameWnd();
@@ -76,11 +76,11 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información, consulte [OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) en el SDK de Windows.
+Para obtener más información, vea [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) en el Windows SDK.
 
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars
 
-Las llamadas de framework la `OnCreateControlBars` funcionar cuando se activa un elemento para su edición en contexto.
+El marco de trabajo `OnCreateControlBars` llama a la función cuando un elemento se activa para la edición en contexto.
 
 ```
 virtual BOOL OnCreateControlBars(
@@ -102,15 +102,15 @@ Puntero a la ventana de nivel de documento del contenedor. Puede ser NULL si el 
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si se ejecuta correctamente; en caso contrario, es 0.
+Distinto de cero si se ejecuta correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-La implementación predeterminada no hace nada. Reemplace esta función para llevar a cabo ningún procesamiento especial necesario cuando se crean barras de control.
+La implementación predeterminada no hace nada. Invalide esta función para realizar cualquier procesamiento especial necesario cuando se crean barras de control.
 
 ##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame
 
-Las llamadas de framework la `RepositionFrame` función miembro para diseñar barras de control y la posición de la ventana de edición en contexto para que todo esté visible.
+El marco de trabajo `RepositionFrame` llama a la función miembro para colocar las barras de control y cambiar la posición de la ventana de edición en contexto para que todo esté visible.
 
 ```
 virtual void RepositionFrame(
@@ -121,18 +121,18 @@ virtual void RepositionFrame(
 ### <a name="parameters"></a>Parámetros
 
 *lpPosRect*<br/>
-Puntero a un `RECT` estructura o un `CRect` coordenadas de posición actual de la ventana, en píxeles, relativo al área cliente de marco que contiene el contexto del objeto.
+Puntero a una `RECT` estructura o un `CRect` objeto que contiene las coordenadas de la posición actual de la ventana de marco en contexto, en píxeles, con respecto al área cliente.
 
 *lpClipRect*<br/>
-Puntero a un `RECT` estructura o un `CRect` coordenadas del rectángulo de recorte actual de la ventana, en píxeles, relativo al área cliente de marco que contiene el contexto del objeto.
+Puntero a una `RECT` estructura o un `CRect` objeto que contiene las coordenadas actuales del rectángulo de recorte en contexto, en píxeles, con respecto al área cliente.
 
 ### <a name="remarks"></a>Comentarios
 
-Difiere de diseño de las barras de control en la ventana del contenedor que realiza mediante una ventana de marco que no son compatibles con OLE. La ventana de marco que no son compatibles con OLE calcula las posiciones de las barras de control y otros objetos de un tamaño de ventana de marco determinado, como se muestra en una llamada a [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). El área de cliente es lo que queda después de que se resta espacio para las barras de control y otros objetos. Un `COleIPFrameWnd` ventana, por otro lado, coloca las barras de herramientas con arreglo a un área de cliente determinado. En otras palabras, `CFrameWnd::RecalcLayout` funciona "desde el exterior," mientras que `COleIPFrameWnd::RepositionFrame` funciona "desde dentro hacia fuera."
+El diseño de las barras de control en la ventana del contenedor difiere del que realiza una ventana de marco no OLE. La ventana de marco no OLE calcula las posiciones de las barras de control y otros objetos a partir de un tamaño de ventana de marco determinado, como en una llamada a [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). El área cliente es lo que queda después de restar espacio para las barras de control y otros objetos. Por `COleIPFrameWnd` otro lado, una ventana coloca las barras de herramientas de acuerdo con un área cliente determinada. En otras palabras, `CFrameWnd::RecalcLayout` funciona "desde fuera de," mientras que `COleIPFrameWnd::RepositionFrame` funciona "desde el interior".
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md)

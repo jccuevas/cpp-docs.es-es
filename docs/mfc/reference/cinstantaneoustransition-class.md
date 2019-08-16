@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-ms.openlocfilehash: 6e28c7d51fd80771d0348ab42021d196f81d3474
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3861bbbc0fc138dcb0f2a8b969ed9bde41335bd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345752"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505938"
 ---
 # <a name="cinstantaneoustransition-class"></a>Clase CInstantaneousTransition
 
@@ -33,25 +33,25 @@ class CInstantaneousTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CInstantaneousTransition::CInstantaneousTransition](#cinstantaneoustransition)|Construye un objeto de transición e inicializa su valor final.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CInstantaneousTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CInstantaneousTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulada. (Invalida [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)).|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|El valor de la variable de animación al final de la transición.|
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Valor de la variable de animación al final de la transición.|
 
 ## <a name="remarks"></a>Comentarios
 
-Durante una transición instantánea, el valor de la variable de animación cambia al instante desde su valor actual en un valor final especificado. La duración de esta transición es siempre cero. Dado que todas las transiciones se borran automáticamente, se recomienda asignada a ellos mediante el operador nuevo. El objeto COM IUIAnimationTransition encapsulado se crea por CAnimationController::AnimateGroup, hasta que es NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.
+Durante una transición instantánea, el valor de la variable de animación cambia inmediatamente de su valor actual a un valor final especificado. La duración de esta transición es siempre cero. Dado que todas las transiciones se borran automáticamente, se recomienda asignarlas mediante el operador new. CAnimationController:: AnimateGroup crea el objeto COM encapsulado IUIAnimationTransition, hasta que sea NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -76,11 +76,11 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 ### <a name="parameters"></a>Parámetros
 
 *dblFinalValue*<br/>
-El valor de la variable de animación al final de la transición.
+Valor de la variable de animación al final de la transición.
 
 ##  <a name="create"></a>  CInstantaneousTransition::Create
 
-Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado.
+Llama a la biblioteca de transición para crear el objeto COM de transición encapsulada.
 
 ```
 virtual BOOL Create(
@@ -91,7 +91,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *pLibrary*<br/>
-Un puntero a un [IUIAnimationTransitionLibrary interfaz](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define una biblioteca de transiciones estándares.
+Puntero a una [interfaz IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), que define una biblioteca de transiciones estándar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -99,7 +99,7 @@ TRUE si la transición se crea correctamente; en caso contrario, FALSE.
 
 ##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue
 
-El valor de la variable de animación al final de la transición.
+Valor de la variable de animación al final de la transición.
 
 ```
 DOUBLE m_dblFinalValue;

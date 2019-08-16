@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505441"
 ---
 # <a name="cmfcrebar-class"></a>Clase CMFCReBar
 
@@ -120,7 +120,7 @@ de Especifica el texto que se va a mostrar en el rebar. El texto no forma parte 
 [in, out] Especifica el mapa de bits que se va a mostrar en el fondo de rebar.
 
 *dwStyle*<br/>
-de Contiene el estilo que se va a aplicar a la banda. Para obtener una lista completa de los estilos de banda, vea `fStyle` la descripción de en la estructura [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) en la documentación de Windows SDK.
+de Contiene el estilo que se va a aplicar a la banda. Para obtener una lista completa de los estilos de banda, vea `fStyle` la descripción de en la estructura [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) en la documentación de Windows SDK.
 
 *clrFore*<br/>
 de Representa el color de primer plano del rebar.
@@ -150,7 +150,7 @@ BOOL Create(
 [in, out] Puntero a la ventana primaria de este control rebar.
 
 *dwCtrlStyle*<br/>
-de Especifica el estilo del control rebar. El valor de estilo predeterminado es **RBS_BANDBORDERS**, que muestra líneas estrechas para separar las bandas adyacentes en el control rebar. Para obtener una lista de estilos válidos, vea los [estilos de control rebar](/windows/desktop/Controls/rebar-control-styles) en la documentación de Windows SDK.
+de Especifica el estilo del control rebar. El valor de estilo predeterminado es **RBS_BANDBORDERS**, que muestra líneas estrechas para separar las bandas adyacentes en el control rebar. Para obtener una lista de estilos válidos, vea los [estilos de control rebar](/windows/win32/Controls/rebar-control-styles) en la documentación de Windows SDK.
 
 *dwStyle*<br/>
 de Estilo de ventana del control rebar. Para obtener una lista de estilos válidos, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).

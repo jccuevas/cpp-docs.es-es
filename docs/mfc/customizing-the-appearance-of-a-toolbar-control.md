@@ -11,46 +11,46 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 590f0dce6c50ee6d0ca30c4c68e21787563bd686
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241818"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508729"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizar la apariencia de un control de barra de herramientas
 
-Clase `CToolBarCtrl` proporciona muchos estilos que afectan a la apariencia (y, en ocasiones, el comportamiento) del objeto de barra de herramientas. Modificar el objeto de barra de herramientas estableciendo el `dwCtrlStyle` parámetro de la `CToolBarCtrl::Create` (o `CToolBar::CreateEx`) función miembro, al crear el control de barra de herramientas.
+La `CToolBarCtrl` clase proporciona muchos estilos que afectan a la apariencia (y, en ocasiones, al comportamiento) del objeto de barra de herramientas. Modifique el objeto de barra de herramientas `dwCtrlStyle` estableciendo el parámetro `CToolBarCtrl::Create` de la `CToolBar::CreateEx`función miembro (o), cuando cree por primera vez el control de barra de herramientas.
 
-Los estilos siguientes afectan el aspecto "3D" de los botones de barra de herramientas y la colocación del texto del botón:
+Los estilos siguientes afectan al aspecto "3D" de los botones de la barra de herramientas y a la posición del texto del botón:
 
-- **TBSTYLE_FLAT** crea una barra de herramientas plana donde la barra de herramientas y los botones son transparentes. Texto del botón aparece debajo de los mapas de bits de botón. Cuando se utiliza este estilo, automáticamente se resalta el botón situado debajo del cursor.
+- **TBSTYLE_FLAT** Crea una barra de herramientas plana donde la barra de herramientas y los botones son transparentes. El texto del botón aparece en mapas de bits de botón. Cuando se usa este estilo, el botón situado debajo del cursor se resalta automáticamente.
 
-- **TBSTYLE_TRANSPARENT** crea una barra de herramientas transparente. En una barra de herramientas transparente, la barra de herramientas es transparente, pero los botones no están. Texto del botón aparece debajo de los mapas de bits de botón.
+- **TBSTYLE_TRANSPARENT** Crea una barra de herramientas transparente. En una barra de herramientas transparente, la barra de herramientas es transparente, pero no los botones. El texto del botón aparece en mapas de bits de botón.
 
-- **TBSTYLE_LIST** lugares botón texto a la derecha de los mapas de bits de botón.
+- **TBSTYLE_LIST** Coloca el texto del botón a la derecha de los mapas de bits del botón.
 
 > [!NOTE]
->  Para evitar problemas repaint, el **TBSTYLE_FLAT** y **TBSTYLE_TRANSPARENT** estilos deben establecerse antes de que el objeto de barra de herramientas está visible.
+>  Para evitar problemas de Repaint, se deben establecer los estilos **TBSTYLE_FLAT** y **TBSTYLE_TRANSPARENT** antes de que el objeto de barra de herramientas esté visible.
 
-Los estilos siguientes determinan si la barra de herramientas permite que un usuario a volver a colocar botones individuales dentro de un objeto de barra de herramientas mediante el método arrastrar y colocar:
+Los estilos siguientes determinan si la barra de herramientas permite a un usuario cambiar la posición de botones individuales dentro de un objeto Toolbar mediante arrastrar y colocar:
 
-- **TBSTYLE_ALTDRAG** permite a los usuarios cambiar la posición de un botón de barra de herramientas, arrástrelo manteniendo presionado ALT. Si no se especifica este estilo, el usuario debe mantener presionada la tecla MAYÚS al arrastrar un botón.
+- **TBSTYLE_ALTDRAG** Permite a los usuarios cambiar la posición de un botón de la barra de herramientas arrastrándolo mientras mantiene presionada la tecla ALT. Si no se especifica este estilo, el usuario debe mantener presionada la tecla Mayús mientras arrastra un botón.
 
     > [!NOTE]
-    >  El **CCS_ADJUSTABLE** estilo debe especificarse para habilitar los botones de barra de herramientas.
+    >  Se debe especificar el estilo **CCS_ADJUSTABLE** para permitir que se arrastren los botones de la barra de herramientas.
 
-- **TBSTYLE_REGISTERDROP** genera **TBN_GETOBJECT** notificación de mensajes de solicitud quitar objetos de destino cuando el puntero del mouse pasa por encima de los botones de barra de herramientas.
+- **TBSTYLE_REGISTERDROP** Genera mensajes de notificación **TBN_GETOBJECT** para solicitar la eliminación de objetos de destino cuando el puntero del mouse pasa por encima de los botones de la barra de herramientas.
 
-Los estilos restantes afectan a aspectos visuales y del objeto de barra de herramientas:
+Los estilos restantes afectan a los aspectos visuales y no visuales del objeto Toolbar:
 
-- **TBSTYLE_WRAPABLE** crea una barra de herramientas que puede tener varias líneas de botones. Botones de barra de herramientas pueden "encapsular" a la línea siguiente cuando la barra de herramientas se vuelve demasiado estrecho para incluir todos los botones en la misma línea. Ajuste se produce en los límites y de separación.
+- **TBSTYLE_WRAPABLE** Crea una barra de herramientas que puede tener varias líneas de botones. Los botones de la barra de herramientas pueden "ajustarse" a la línea siguiente cuando la barra de herramientas se vuelve demasiado estrecha para incluir todos los botones en la misma línea. El ajuste se produce en los límites de separación y de no agrupación.
 
-- **TBSTYLE_CUSTOMERASE** genera **NM_CUSTOMDRAW** cuando procesa los mensajes de notificación **WM_ERASEBKGND** mensajes.
+- **TBSTYLE_CUSTOMERASE** Genera mensajes de notificación de **NM_CUSTOMDRAW** cuando procesa mensajes **WM_ERASEBKGND** .
 
-- **TBSTYLE_TOOLTIPS** crea un control de información sobre herramientas que una aplicación puede utilizar para mostrar texto descriptivo para los botones en la barra de herramientas.
+- **TBSTYLE_TOOLTIPS** Crea un control de información sobre herramientas que una aplicación puede usar para mostrar el texto descriptivo de los botones de la barra de herramientas.
 
-Para obtener una lista completa de los estilos de barra de herramientas y los estilos extendidos, vea [Control de barra de herramientas y los estilos de botón](/windows/desktop/Controls/toolbar-control-and-button-styles) y [estilos extendidos de barra de herramientas](/windows/desktop/Controls/toolbar-extended-styles) en el SDK de Windows.
+Para obtener una lista completa de los estilos de barra de herramientas y los estilos extendidos, vea el [control de barra de herramientas y](/windows/win32/Controls/toolbar-control-and-button-styles) los estilos [extendidos](/windows/win32/Controls/toolbar-extended-styles) de barra de herramientas en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

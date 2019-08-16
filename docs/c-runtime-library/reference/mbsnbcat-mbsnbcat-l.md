@@ -32,14 +32,14 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: c1da330ee0faba922f1e5b193fa095b97d3f4745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 476909858a8537fb96d56d3230fd48719d5564ed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285565"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499834"
 ---
-# <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
+# <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
 Anexa, como máximo, los primeros **n** bytes de una cadena de caracteres multibyte en otra. Hay disponibles versiones más seguras de estas funciones; vea [_mbsnbcat_s, _mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md).
 
@@ -84,7 +84,7 @@ Cadena de destino de caracteres multibyte terminada en NULL.
 Cadena de origen de caracteres multibyte terminada en NULL.
 
 *count*<br/>
-Número de bytes desde *src* para anexar a *dest*.
+Número de bytes de *src* que se van a anexar al *destino*.
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -95,13 +95,13 @@ Configuración regional que se va a usar.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnbcat** función anexa, como máximo, los primeros *recuento* bytes de *src* a *dest*. Si el byte que precede inmediatamente al carácter nulo en *dest* es un byte inicial, el byte inicial de *src* sobrescribe este byte inicial. En caso contrario, el byte inicial de *src* sobrescribe el carácter nulo de terminación de *dest*. Si aparece un byte nulo en *src* antes *recuento* bytes se anexan, **_mbsnbcat** anexa todos los bytes de *src*, hasta el carácter nulo. Si *recuento* es mayor que la longitud de *src*, la longitud de *src* se utiliza en lugar de *recuento*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **_mbsnbcat** anexa, como máximo, el primer *número* de bytes de *src* a *dest*. Si el byte que precede inmediatamente al carácter nulo en *dest* es un byte inicial, el byte inicial de *src* sobrescribe este byte inicial. De lo contrario, el byte inicial de *src* sobrescribe el carácter nulo de finalización de *dest*. Si aparece un byte nulo en *src* antes de que se anexen bytes de recuento, **_mbsnbcat** anexa todos los bytes de *src*, hasta el carácter nulo. Si el recuento es mayor que la longitud de *src*, se usa la longitud de *src* en lugar de *Count*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. El **_mbsnbcat** versión de la función usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la **_mbsnbcat_l** versión es idéntica, salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión **_mbsnbcat** de la función usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión de **_mbsnbcat_l** es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-**Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+**Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-Si *dest* o *src* es **NULL**, la función generará un error de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función devuelve **EINVAL** y establece **errno** a **EINVAL**.
+Si *dest* o *src* es **null**, la función generará un error de parámetro no válido, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función devuelve **EINVAL** y establece **errno** en **EINVAL**.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: baa3131a7ca533af30e9ed73cd2698c06011488e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344450"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509444"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funciones intrínsecas de _InterlockedCompareExchange
+# <a name="_interlockedcompareexchange-intrinsic-functions"></a>Funciones intrínsecas de _InterlockedCompareExchange
 
 **Específicos de Microsoft**
 
-Un bloqueo de comparación e intercambio.
+Realiza una comparación e intercambio interbloqueados.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -182,10 +182,10 @@ __int64 _InterlockedCompareExchange64_rel(
 [in, out] Puntero al valor de destino. El signo se omite.
 
 *Exchange*<br/>
-[in] Valor de Exchange. El signo se omite.
+de Valor de intercambio. El signo se omite.
 
-*Elemento de comparación*<br/>
-[in] Valor que se compara con el destino. El signo se omite.
+*Comparand*<br/>
+de Valor que se va a comparar con el destino. El signo se omite.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -193,7 +193,7 @@ El valor devuelto es el valor inicial del puntero `Destination`.
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
@@ -202,27 +202,27 @@ El valor devuelto es el valor inicial del puntero `Destination`.
 
 ## <a name="remarks"></a>Comentarios
 
-`_InterlockedCompareExchange` realiza una comparación atómica de la `Destination` valor con el `Comparand` valor. Si el valor `Destination` es igual al valor `Comparand`, el valor `Exchange` se almacena en la dirección especificada por `Destination`. En caso contrario, se realiza ninguna operación.
+`_InterlockedCompareExchange`realiza una comparación atómica del `Destination` valor con el `Comparand` valor. Si el valor `Destination` es igual al valor `Comparand`, el valor `Exchange` se almacena en la dirección especificada por `Destination`. De lo contrario, no realiza ninguna operación.
 
-`_InterlockedCompareExchange` proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) función.
+`_InterlockedCompareExchange`proporciona compatibilidad intrínseca del compilador para la función [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) de Win32 Windows SDK.
 
-Hay diversas variaciones en `_InterlockedCompareExchange` que varían en función de los tipos de datos que implican y si se adquieren específico del procesador o liberación de semántica se usa.
+Hay varias variaciones en `_InterlockedCompareExchange` que varían en función de los tipos de datos que implican y de si se utiliza la adquisición o la semántica de liberación específicas del procesador.
 
-Mientras el `_InterlockedCompareExchange` función opera con valores enteros largos, `_InterlockedCompareExchange8` opera en valores enteros de 8 bits, `_InterlockedCompareExchange16` opera con valores enteros cortos, y `_InterlockedCompareExchange64` opera en valores enteros de 64 bits.
+Mientras que `_InterlockedCompareExchange` la función opera con valores enteros largos, `_InterlockedCompareExchange8` opera con valores enteros de 8 bits, `_InterlockedCompareExchange16` opera con valores enteros cortos y `_InterlockedCompareExchange64` funciona con valores enteros de 64 bits.
 
-En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` para adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos ARM con un `_nf` sufijo ("sin límite") no actúan como una barrera de memoria.
+En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` para adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos ARM con un `_nf` sufijo ("sin barrera") no actúan como una barrera de memoria.
 
 Los intrínsecos con un sufijo `_np` ("sin captura previa") impiden que el compilador inserte una posible operación de captura previa.
 
-En las plataformas de Intel que admiten instrucciones de Elisión de bloqueo de Hardware (HLE), los intrínsecos con sufijos `_HLEAcquire` y `_HLERelease` incluyen una sugerencia para el procesador que puede acelerar el rendimiento mediante la eliminación de un paso de escritura de bloqueo en el hardware. Si se llama a estos intrínsecos en plataformas que no son compatibles con HLE, se omite la sugerencia.
+En las plataformas de Intel que admiten instrucciones de Elisión de bloqueo de Hardware (HLE), los intrínsecos con sufijos `_HLEAcquire` y `_HLERelease` incluyen una sugerencia para el procesador que puede acelerar el rendimiento mediante la eliminación de un paso de escritura de bloqueo en el hardware. Si se llama a estos intrínsecos en plataformas que no admiten HLE, se omite la sugerencia.
 
 Estas rutinas solo están disponibles como intrínsecos.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, se utiliza `_InterlockedCompareExchange` para la sincronización de subprocesos simple de bajo nivel. El enfoque tiene sus limitaciones como base para la programación multiproceso; se presenta para ilustrar el uso típico de los intrínsecos entrelazados. Para obtener mejores resultados, utilice la API de Windows. Para obtener más información acerca de la programación multiproceso, consulte [escribiendo un programa Win32 multiproceso](../parallel/writing-a-multithreaded-win32-program.md).
+En el ejemplo siguiente, se utiliza `_InterlockedCompareExchange` para la sincronización de subprocesos simple de bajo nivel. El enfoque tiene sus limitaciones como base para la programación multiproceso. se muestra para ilustrar el uso típico de los intrínsecos entrelazados. Para obtener mejores resultados, utilice la API de Windows. Para obtener más información acerca de la programación multiproceso, vea [escribir un programa Win32 multiproceso](../parallel/multithreading-with-c-and-win32.md#writing-a-multithreaded-win32-program).
 
-```
+```cpp
 // intrinExample.cpp
 // compile with: /EHsc /O2
 // Simple example of using _Interlocked* intrinsics to

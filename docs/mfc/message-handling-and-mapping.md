@@ -6,30 +6,30 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: 41f3432b3741019a787ee24b0f508fe8e65e0470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0321d98d8b92af0b80259bc49e84e69b987577a4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383976"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508244"
 ---
 # <a name="message-handling-and-mapping"></a>Controlar y asignar mensajes
 
-Esta serie de artículos describe cómo se procesan los mensajes y comandos del marco de trabajo de MFC y cómo conectarse a las funciones de controlador.
+En esta familia de artículos se describe cómo se procesan los mensajes y comandos en el marco de trabajo de MFC y cómo se conectan a sus funciones de controlador.
 
-En los programas tradicionales de Windows, se tratan los mensajes de Windows en una gran instrucción switch en un procedimiento de ventana. En su lugar utiliza MFC [mapas de mensajes](../mfc/message-categories.md) para asignar mensajes a funciones miembro de clase distinto. Mapas de mensajes son más eficaces que las funciones virtuales para este propósito, y permiten mensajes controlarse en el objeto de C++ más adecuado: aplicación, documento, vista y así sucesivamente. Puede asignar un único mensaje o un intervalo de mensajes, los identificadores de comando, o identificadores de control.
+En los programas tradicionales para Windows, los mensajes de Windows se controlan en una instrucción switch grande en un procedimiento de ventana. En su lugar, MFC usa [mapas de mensajes](../mfc/message-categories.md) para asignar mensajes directos a funciones miembro de clase distintas. Los mapas de mensajes son más eficaces que las funciones virtuales para este fin y permiten que los mensajes se controlen por C++ el objeto más adecuado (aplicación, documento, vista, etc.). Puede asignar un solo mensaje o un intervalo de mensajes, ID. de comando o ID. de control.
 
-WM_COMMAND (mensajes), normalmente generados por los menús, botones de barra de herramientas o aceleradores, también usar el mecanismo de mapa de mensajes. MFC define un estándar [enrutamiento](../mfc/command-routing.md) de mensajes de comando entre la aplicación, marco de ventana, vista y documentos activos en el programa. Puede invalidar esta ruta si necesita.
+Los mensajes WM_COMMAND (normalmente generados por menús, botones de barra de herramientas o aceleradores) también usan el mecanismo de mapa de mensajes. MFC define un [enrutamiento](../mfc/command-routing.md) estándar de mensajes de comandos entre la aplicación, la ventana de marco, la vista y los documentos activos en el programa. Puede invalidar este enrutamiento si es necesario.
 
-Mapas de mensajes también proporcionan una manera de actualizar los objetos de interfaz de usuario (por ejemplo, menús y botones de barra de herramientas), habilitar o deshabilitar para adaptarlas al contexto actual.
+Los mapas de mensajes también proporcionan una manera de actualizar objetos de la interfaz de usuario (como menús y botones de barra de herramientas), habilitando o deshabilitando para adaptarse al contexto actual.
 
-Para obtener información general sobre los mensajes y las colas de mensajes en Windows, consulte [mensajes y las colas de mensajes](/windows/desktop/winmsg/messages-and-message-queues) en el SDK de Windows.
+Para obtener información general sobre mensajes y colas de mensajes en Windows, consulte [mensajes y colas](/windows/win32/winmsg/messages-and-message-queues) de mensajes en el Windows SDK.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
 - [Mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md)
 
-- [Cómo el marco llama a un controlador de mensajes](../mfc/how-the-framework-calls-a-handler.md)
+- [Cómo el marco de trabajo llama a un controlador de mensajes](../mfc/how-the-framework-calls-a-handler.md)
 
 - [Cómo busca el marco los mapas de mensajes](../mfc/how-the-framework-searches-message-maps.md)
 
@@ -37,9 +37,9 @@ Para obtener información general sobre los mensajes y las colas de mensajes en 
 
 - [Asignación de mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)
 
-- [Cómo mostrar información de comandos en la barra de estado](../mfc/how-to-display-command-information-in-the-status-bar.md)
+- [Cómo Mostrar información de comandos en la barra de estado](../mfc/how-to-display-command-information-in-the-status-bar.md)
 
-- [Actualización dinámica de objetos de interfaz de usuario](../mfc/how-to-update-user-interface-objects.md)
+- [Actualización dinámica de objetos de la interfaz de usuario](../mfc/how-to-update-user-interface-objects.md)
 
 - [Cómo: Crear un mapa de mensajes para una clase de plantilla](../mfc/how-to-create-a-message-map-for-a-template-class.md)
 

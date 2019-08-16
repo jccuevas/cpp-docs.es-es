@@ -1,17 +1,17 @@
 ---
-title: dispinterface (atributo de COM de C++)
+title: dispinterface (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346300"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501623"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -29,7 +29,7 @@ Cuando el atributo de C++ **dispinterface** precede a una interfaz, hace que est
 
 A menos que especifique una clase base, se derivará una interfaz de envío de `IDispatch`. Debe especificar un [id](id.md) para los miembros de una interfaz de envío.
 
-El ejemplo de uso de [dispinterface](/windows/desktop/Midl/dispinterface) en la documentación de MIDL:
+El ejemplo de uso de [dispinterface](/windows/win32/Midl/dispinterface) en la documentación de MIDL:
 
 ```cpp
 dispinterface helloPro
@@ -49,8 +49,8 @@ Consulte el ejemplo de [bindable](bindable.md) para ver un ejemplo de cómo usar
 |||
 |-|-|
 |**Se aplica a**|**interface**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 31b013a14f24dcd59b9e7f23bc5284d882039990
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 55c40fc04934f00ccb541a01cce611d9532bee1a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916175"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506175"
 ---
 # <a name="cgopherfilefind-class"></a>Clase CGopherFileFind
 
@@ -161,7 +161,7 @@ Marcas que describen cómo controlar esta sesión. Las marcas válidas son:
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
+Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -177,7 +177,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si hay más archivos; cero si el archivo encontrado es el último del directorio o si se produjo un error. Para obtener información de error extendida, llame a la función [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32. Si el archivo encontrado es el último archivo en el directorio o si no se encuentran archivos coincidentes, la `GetLastError` función devuelve ERROR_NO_MORE_FILES.
+Distinto de cero si hay más archivos; cero si el archivo encontrado es el último del directorio o si se produjo un error. Para obtener información de error extendida, llame a la función [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32. Si el archivo encontrado es el último archivo en el directorio o si no se encuentran archivos coincidentes, la `GetLastError` función devuelve ERROR_NO_MORE_FILES.
 
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parámetros
 
 *pTimeStamp*<br/>
-Puntero a una estructura [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se creó el archivo.
+Puntero a una estructura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se creó el archivo.
 
 *refTime*<br/>
 Referencia a un objeto [ctime](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -205,7 +205,7 @@ Distinto de cero si se realiza correctamente; 0 si no se realiza correctamente. 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `GetCreationTime`de llamar a.
 
 > [!NOTE]
->  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para obtener información sobre los formatos de hora. En algunos sistemas operativos, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
+>  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para obtener información sobre los formatos de hora. En algunos sistemas operativos, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
 
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime
 
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Referencia a un objeto [ctime](../../atl-mfc-shared/reference/ctime-class.md) .
 
 *pTimeStamp*<br/>
-Puntero a una estructura [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se produjo el último acceso al archivo.
+Puntero a una estructura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se produjo el último acceso al archivo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -233,7 +233,7 @@ Distinto de cero si se realiza correctamente; 0 si no se realiza correctamente. 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `GetLastAccessTime`de llamar a.
 
 > [!NOTE]
->  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para obtener información sobre los formatos de hora. En algunos sistemas operativos, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
+>  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para obtener información sobre los formatos de hora. En algunos sistemas operativos, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
 
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parámetros
 
 *pTimeStamp*<br/>
-Puntero a una estructura [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se escribió por última vez en el archivo.
+Puntero a una estructura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se escribió por última vez en el archivo.
 
 *refTime*<br/>
 Referencia a un objeto [ctime](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -261,7 +261,7 @@ Distinto de cero si se realiza correctamente; 0 si no se realiza correctamente. 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `GetLastWriteTime`de llamar a.
 
 > [!NOTE]
->  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para obtener información sobre los formatos de hora. En algunos sistemas operativos, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
+>  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para obtener información sobre los formatos de hora. En algunos sistemas operativos, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
 
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength
 
@@ -277,7 +277,7 @@ La longitud, en bytes, del archivo encontrado.
 
 ### <a name="remarks"></a>Comentarios
 
-`GetLength`utiliza la estructura de Win32 [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para obtener el valor del tamaño de archivo en bytes.
+`GetLength`utiliza la estructura de Win32 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para obtener el valor del tamaño de archivo en bytes.
 
 > [!NOTE]
 >  A partir de MFC 7,0 `GetLength` , admite tipos enteros de 64 bits. El código existente creado con esta versión más reciente de la biblioteca puede producir advertencias de truncamiento.

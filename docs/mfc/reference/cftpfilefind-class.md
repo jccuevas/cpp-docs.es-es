@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916066"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506245"
 ---
 # <a name="cftpfilefind-class"></a>Clase CFtpFileFind
 
@@ -121,7 +121,7 @@ Marcas que describen cómo controlar esta sesión. Estas marcas se pueden combin
 
 - INTERNET_FLAG_DONT_CACHE no almacenan en caché los datos, ya sea de forma local o en cualquier puerta de enlace.
 
-- INTERNET_FLAG_RAW_DATA invalida el valor predeterminado para devolver los datos sin procesar (estructuras [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para FTP).
+- INTERNET_FLAG_RAW_DATA invalida el valor predeterminado para devolver los datos sin procesar (estructuras [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para FTP).
 
 - INTERNET_FLAG_SECURE protege las transacciones en la conexión con Capa de sockets seguros o PCT. Esta marca solo es aplicable a las solicitudes HTTP.
 
@@ -129,7 +129,7 @@ Marcas que describen cómo controlar esta sesión. Estas marcas se pueden combin
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
+Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -149,13 +149,13 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si hay más archivos; cero si el archivo encontrado es el último del directorio o si se produjo un error. Para obtener información de error extendida, llame a la función [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32. Si el archivo encontrado es el último archivo en el directorio o si no se encuentran archivos coincidentes, la `GetLastError` función devuelve ERROR_NO_MORE_FILES.
+Distinto de cero si hay más archivos; cero si el archivo encontrado es el último del directorio o si se produjo un error. Para obtener información de error extendida, llame a la función [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32. Si el archivo encontrado es el último archivo en el directorio o si no se encuentran archivos coincidentes, la `GetLastError` función devuelve ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Comentarios
 
 Debe llamar a esta función al menos una vez antes de llamar a cualquier función de atributo (vea [CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).
 
-`FindNextFile`ajusta la función [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)de Win32.
+`FindNextFile`ajusta la función [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)de Win32.
 
 ### <a name="example"></a>Ejemplo
 

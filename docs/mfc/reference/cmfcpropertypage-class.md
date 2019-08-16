@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyPage (clase)
+title: Clase CMFCPropertyPage
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyPage
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: 62e33da998f1e5332436d887c38d3fd65526561b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4be584135ef789d7fbe3b1743ac0ad6ce66ac5b1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310494"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505036"
 ---
-# <a name="cmfcpropertypage-class"></a>CMFCPropertyPage (clase)
+# <a name="cmfcpropertypage-class"></a>Clase CMFCPropertyPage
 
-La `CMFCPropertyPage` clase admite la visualización de los menús emergentes en una página de propiedades.
+La `CMFCPropertyPage` clase admite la presentación de menús emergentes en una página de propiedades.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,25 +29,25 @@ class CMFCPropertyPage : public CPropertyPage
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|Construye un objeto `CMFCPropertyPage`.|
 |`CMFCPropertyPage::~CMFCPropertyPage`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`CMFCPropertyPage::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
-|`CMFCPropertyPage::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
-|`CMFCPropertyPage::OnSetActive`|Esta función miembro se llama el marco de trabajo cuando la página elegida por el usuario y se convierte en la página activa. (Invalida [notificaciones CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
-|`CMFCPropertyPage::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. Para obtener más información y la sintaxis de método, consulte [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CPropertyPage::PreTranslateMessage`).|
+|`CMFCPropertyPage::GetThisClass`|Lo usa el marco de trabajo para obtener un puntero al objeto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) asociado a este tipo de clase.|
+|`CMFCPropertyPage::OnSetActive`|El marco de trabajo llama a esta función miembro cuando el usuario elige la página y se convierte en la página activa. (Invalida [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive)).|
+|`CMFCPropertyPage::PreTranslateMessage`|Traduce los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Para obtener más información y la sintaxis de método, vea [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CPropertyPage::PreTranslateMessage`).|
 
 ## <a name="remarks"></a>Comentarios
 
-La `CMFCPropertyPage` clase representa páginas individuales de una hoja de propiedades, también conocido como un cuadro de diálogo de pestaña.
+La `CMFCPropertyPage` clase representa las páginas individuales de una hoja de propiedades, también conocida como cuadro de diálogo de pestaña.
 
-Use la `CMFCPropertyPage` clase junto con el [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) clase. Para usar los menús en una página de propiedades, reemplace todas las apariciones de la `CPropertyPage` clase con la `CMFCPropertyPage` clase.
+Use la `CMFCPropertyPage` clase junto con la clase [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) . Para usar menús en una página de propiedades, reemplace todas las apariciones de `CPropertyPage` la clase por `CMFCPropertyPage` la clase.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -65,7 +65,7 @@ Use la `CMFCPropertyPage` clase junto con el [CMFCPropertySheet](../../mfc/refer
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxpropertypage.h
+**Encabezado:** afxpropertypage. h
 
 ##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage
 
@@ -84,19 +84,19 @@ CMFCPropertyPage(
 ### <a name="parameters"></a>Parámetros
 
 *nIDTemplate*<br/>
-Identificador de recurso de la plantilla para esta página.
+IDENTIFICADOR de recurso de la plantilla para esta página.
 
 *nIDCaption*<br/>
-Identificador de recurso de la etiqueta a colocar en la ficha para esta página. Si es 0, se obtiene el nombre de la plantilla de cuadro de diálogo para esta página. El valor predeterminado es 0.
+IDENTIFICADOR de recurso de la etiqueta que se va a colocar en la pestaña de esta página. Si es 0, el nombre se obtiene de la plantilla de cuadro de diálogo de esta página. El valor predeterminado es 0.
 
 *lpszTemplateName*<br/>
-Señala al nombre de la plantilla para esta página. No puede ser nulo.
+Apunta al nombre de la plantilla para esta página. No puede ser nulo.
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información acerca de los parámetros del constructor, vea [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
+Para obtener más información sobre los parámetros de constructor, vea [CPropertyPage:: CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
 
 ## <a name="see-also"></a>Vea también
 

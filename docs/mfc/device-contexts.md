@@ -32,46 +32,46 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 7893b446c224dd84514ab63dc97cae467792750c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5337e8d8b83a641458a15612803feeec3b6361c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405981"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508657"
 ---
 # <a name="device-contexts"></a>Contextos de dispositivo
 
-Un contexto de dispositivo es una estructura de datos de Windows que contiene información sobre los atributos de dibujo de un dispositivo, como una pantalla o una impresora. Todas las llamadas de dibujos se realizan a través de un objeto de contexto de dispositivo, que encapsula las API de Windows para dibujar líneas, formas y texto. Contextos de dispositivo permiten dibujos independientes de dispositivo en Windows. Contextos de dispositivo pueden utilizarse para dibujar en la pantalla, a la impresora o en un metarchivo.
+Un contexto de dispositivo es una estructura de datos de Windows que contiene información sobre los atributos de dibujo de un dispositivo, como una pantalla o una impresora. Todas las llamadas de dibujo se realizan a través de un objeto de contexto de dispositivo, que encapsula las API de Windows para dibujar líneas, formas y texto. Los contextos de dispositivo permiten dibujar en Windows de manera independiente del dispositivo. Los contextos de dispositivo se pueden usar para dibujar en la pantalla, en la impresora o en un metarchivo.
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md) objetos encapsulan la expresión común de Windows, una llamada a la `BeginPaint` función, dibujar en el contexto de dispositivo y, luego, llamar a la `EndPaint` función. El `CPaintDC` llamadas de constructor `BeginPaint` para usted y el destructor llama a `EndPaint`. Es el proceso simplificado crear el [CDC](../mfc/reference/cdc-class.md) objeto, dibujar y, a continuación, destruya el `CDC` objeto. En el marco de trabajo, se automatiza gran parte de este proceso. En concreto, su `OnDraw` función se pasa un `CPaintDC` ya preparado (a través de `OnPrepareDC`), y simplemente dibuje en él. Se destruye el marco de trabajo y se libera el contexto de dispositivo subyacente para Windows tras la devolución de la llamada a su `OnDraw` función.
+Los objetos [CPaintDC](../mfc/reference/cpaintdc-class.md) encapsulan la expresión común de Windows, llama `BeginPaint` a la función, dibujan en el contexto del dispositivo y `EndPaint` , a continuación, llaman a la función. El `CPaintDC` constructor llama `BeginPaint` a para usted y el destructor llama `EndPaint`a. El proceso simplificado es crear el objeto [CDC](../mfc/reference/cdc-class.md) , dibujar y, a continuación, `CDC` destruir el objeto. En el marco de trabajo, gran parte de este proceso es automático. En concreto, se `OnDraw` pasa a la función `CPaintDC` una ya preparada ( `OnPrepareDC`a través de) y simplemente se dibuja en ella. El marco de trabajo lo destruye y el contexto del dispositivo subyacente se libera a Windows al volver de la llamada a `OnDraw` la función.
 
-[CClientDC](../mfc/reference/cclientdc-class.md) objetos encapsulan trabajando con un contexto de dispositivo que representa el área de cliente de una ventana. El `CClientDC` constructor llama a la `GetDC` función y el destructor llama a la `ReleaseDC` función. [CWindowDC](../mfc/reference/cwindowdc-class.md) objetos encapsulan un contexto de dispositivo que representa la ventana completa, incluido su marco.
+Los objetos [CClientDC (](../mfc/reference/cclientdc-class.md) encapsulan el trabajo con un contexto de dispositivo que solo representa el área de cliente de una ventana. El `CClientDC` constructor llama a `GetDC` la función y el destructor llama a `ReleaseDC` la función. Los objetos [CWindowDC](../mfc/reference/cwindowdc-class.md) encapsulan un contexto de dispositivo que representa toda la ventana, incluido su marco.
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md) objetos encapsulan el dibujo en un metarchivo de Windows. Por el contrario el `CPaintDC` pasado a `OnDraw`, en este caso debe llamar a [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) usted mismo.
+Los objetos [cmetafiledc (](../mfc/reference/cmetafiledc-class.md) encapsulan el dibujo en un metarchivo de Windows. A diferencia de lo `CPaintDC` que se `OnDraw`pasa a, en este caso se debe llamar a [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) personalmente.
 
-## <a name="mouse-drawing"></a>Dibujar con el mouse
+## <a name="mouse-drawing"></a>Dibujo del mouse
 
-La mayoría de dibujo en un programa de framework y, por tanto, la mayoría del trabajo contexto de dispositivo, se realiza en la vista `OnDraw` función miembro. Sin embargo, todavía puede usar los objetos de contexto de dispositivo para otros fines. Por ejemplo, para proporcionar comentarios de seguimiento para el movimiento del mouse en una vista, necesita dibujar directamente en la vista sin esperar `OnDraw` llamarse.
+La mayoría del dibujo en un programa de Framework (y, por tanto, la mayor parte del trabajo de `OnDraw` contexto del dispositivo) se realiza en la función miembro de la vista. Sin embargo, todavía puede usar objetos de contexto de dispositivo para otros propósitos. Por ejemplo, para proporcionar comentarios de seguimiento para el movimiento del mouse en una vista, debe dibujar directamente en la vista sin esperar `OnDraw` a que se llame a.
 
-En tal caso, puede usar un [CClientDC](../mfc/reference/cclientdc-class.md) objeto de contexto de dispositivo para dibujar directamente en la vista.
+En tal caso, puede usar un objeto de contexto de dispositivo [CClientDC (](../mfc/reference/cclientdc-class.md) para dibujar directamente en la vista.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Contextos de dispositivo (definición)](/windows/desktop/gdi/device-contexts)
+- [Contextos de dispositivo (definición)](/windows/win32/gdi/device-contexts)
 
 - [Dibujo en una vista](../mfc/drawing-in-a-view.md)
 
 - [Interpretación de la entrada del usuario a través de una vista](../mfc/interpreting-user-input-through-a-view.md)
 
-- [Líneas y curvas](/windows/desktop/gdi/lines-and-curves)
+- [Líneas y curvas](/windows/win32/gdi/lines-and-curves)
 
-- [Formas rellenas](/windows/desktop/gdi/filled-shapes)
+- [Formas rellenas](/windows/win32/gdi/filled-shapes)
 
-- [Fuentes y texto](/windows/desktop/gdi/fonts-and-text)
+- [Fuentes y texto](/windows/win32/gdi/fonts-and-text)
 
-- [Colores](/windows/desktop/gdi/colors)
+- [Colores](/windows/win32/gdi/colors)
 
-- [Espacios de coordenadas y transformaciones](/windows/desktop/gdi/coordinate-spaces-and-transformations)
+- [Espacios de coordenadas y transformaciones](/windows/win32/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>Vea también
 

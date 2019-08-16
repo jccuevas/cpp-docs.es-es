@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339486"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499999"
 ---
-# <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
+# <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
 Genera un informe con un mensaje de depuración y lo envía a tres destinos posibles (solo versión de depuración).
 
@@ -63,13 +63,13 @@ int _CrtDbgReportW(
 ### <a name="parameters"></a>Parámetros
 
 *reportType*<br/>
-Tipo de informe: **_CRT_WARN**, **_CRT_ERROR**, y **_CRT_ASSERT**.
+Tipo de informe: **_CRT_WARN**, **_CRT_ERROR**y **_CRT_ASSERT**.
 
 *filename*<br/>
-Puntero al nombre del archivo de código fuente donde se produjo la aserción o el informe o **NULL**.
+Puntero al nombre del archivo de código fuente donde se produjo la aserción o el informe o **null**.
 
 *linenumber*<br/>
-Número de línea en el archivo de código fuente donde se produjo la aserción o el informe o **NULL**.
+Número de línea del archivo de código fuente donde se produjo la aserción o el informe o **null**.
 
 *moduleName*<br/>
 Puntero al nombre del módulo (.exe o .dll) donde se produjo la aserción o el informe.
@@ -78,35 +78,35 @@ Puntero al nombre del módulo (.exe o .dll) donde se produjo la aserción o el i
 Puntero a la cadena de control de formato utilizada para crear el mensaje de usuario.
 
 *argument*<br/>
-Argumentos de sustitución opcionales utilizados por *formato*.
+Argumentos de sustitución opcionales utilizados por el *formato*.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Para todos los destinos de informe, **_CrtDbgReport** y **_CrtDbgReportW** devolver -1 si se produce un error y 0 si no se encuentran errores. En cambio, cuando el destino del informe es una ventana de mensajes de depuración y el usuario hace clic en el botón **Reintentar**, estas funciones devuelven 1. Si el usuario hace clic en el botón **Anular** de la ventana de mensajes de depuración, estas funciones se anulan inmediatamente y no devuelven ningún valor.
+En todos los destinos de informe, _ **crtdbgreport** y **_CrtDbgReportW** devuelven-1 si se produce un error y 0 si no se encuentran errores. En cambio, cuando el destino del informe es una ventana de mensajes de depuración y el usuario hace clic en el botón **Reintentar**, estas funciones devuelven 1. Si el usuario hace clic en el botón **Anular** de la ventana de mensajes de depuración, estas funciones se anulan inmediatamente y no devuelven ningún valor.
 
-El [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) depurar macros llamada **_CrtDbgReport** para su depuración de generar informes. Las versiones de caracteres anchos de estas macros, así como [_ASSERT, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) y [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), utilice **_CrtDbgReportW** a generar sus informes de depuración. Cuando **_CrtDbgReport** o **_CrtDbgReportW** devuelven 1, estas macros inician el depurador, siempre que esté habilitada la depuración just-in-time (JIT).
+Las macros de depuración [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) llaman a _ **crtdbgreport** para generar los informes de depuración. Las versiones con caracteres anchos de estas macros, así como _ [Assert,](assert-asserte-assert-expr-macros.md)_ asserte, [_RPTW](rpt-rptf-rptw-rptfw-macros.md) y [rptfw (](rpt-rptf-rptw-rptfw-macros.md), usan **_CrtDbgReportW** para generar los informes de depuración. Cuando _ **crtdbgreport** o **_CrtDbgReportW** devuelven 1, estas macros inician el depurador, siempre que esté habilitada la depuración Just-in-Time (JIT).
 
 ## <a name="remarks"></a>Comentarios
 
-**_CrtDbgReport** y **_CrtDbgReportW** puede enviar el informe de depuración a tres destinos distintos: un archivo de informe de depuración, un monitor de depuración (el depurador de Visual Studio) o una ventana de mensaje de depuración. Se usan dos funciones de configuración, [_CrtSetReportMode](crtsetreportmode.md) y [_CrtSetReportFile](crtsetreportfile.md), para especificar los destinos de cada tipo de informe. Estas funciones permiten controlar por separado los destinos de los informes de cada tipo de informe. Por ejemplo, es posible especificar que un *reportType* de **_CRT_WARN** solo ser enviados al monitor de depuración, mientras que un *reportType* de **_CRT_ASSERT** enviarse a una ventana de mensaje de depuración y un archivo de informe definido por el usuario.
+_ **Crtdbgreport** y **_CrtDbgReportW** pueden enviar el informe de depuración a tres destinos distintos: un archivo de informe de depuración, un monitor de depuración (el depurador de Visual Studio) o una ventana de mensaje de depuración. Se usan dos funciones de configuración, [_CrtSetReportMode](crtsetreportmode.md) y [_CrtSetReportFile](crtsetreportfile.md), para especificar los destinos de cada tipo de informe. Estas funciones permiten controlar por separado los destinos de los informes de cada tipo de informe. Por ejemplo, es posible especificar que un *reportType* de **_CRT_WARN** se envíe solo al monitor de depuración, mientras que un *reportType* de **_CRT_ASSERT** se envía a una ventana de mensajes de depuración y a un archivo de informe definido por el usuario.
 
-**_CrtDbgReportW** es la versión de caracteres anchos de **_CrtDbgReport**. Todos sus parámetros de salida y de cadena son cadenas de caracteres anchos; por lo demás, es idéntica a la versión de caracteres de un solo byte.
+**_CrtDbgReportW** es la versión con caracteres anchos de _ **crtdbgreport**. Todos sus parámetros de salida y de cadena son cadenas de caracteres anchos; por lo demás, es idéntica a la versión de caracteres de un solo byte.
 
-**_CrtDbgReport** y **_CrtDbgReportW** crear el mensaje de usuario para el informe de depuración sustituyendo el *argumento*[**n**] argumentos en el *formato* de cadena, utilizando las mismas reglas definidas por el **printf** o **wprintf** funciones. Estas funciones, a continuación, generan el informe de depuración y determinan el destino o destinos en función de los modos de informe actuales y el archivo definidos para *reportType*. Cuando el informe se envía a una ventana de mensaje de depuración, el *filename*, **lineNumber**, y *moduleName* se incluyen en la información mostrada en la ventana.
+_ **Crtdbgreport** y **_CrtDbgReportW** crean el mensaje de usuario para el informe de depuración sustituyendo los argumentos del *argumento*[**n**] en la cadena de *formato* , con las mismas reglas definidas por **printf** o  **wprintf** (funciones). A continuación, estas funciones generan el informe de depuración y determinan el destino o los destinos, en función de los modos de informe actuales y del archivo definido para *reportType*. Cuando el informe se envía a una ventana de mensajes de depuración, el *nombre de archivo*, **lineNumber**y *ModuleName* se incluyen en la información que se muestra en la ventana.
 
-La tabla siguiente enumeran las opciones disponibles para el modo de informe o modos y archivo y el comportamiento resultante de **_CrtDbgReport** y **_CrtDbgReportW**. Estas opciones se definen como marcas de bits en \<crtdbg.h>.
+En la tabla siguiente se enumeran las opciones disponibles para el modo de informe o los modos y el archivo, así como el comportamiento resultante de _ **crtdbgreport** y **_CrtDbgReportW**. Estas opciones se definen como marcas de bits en \<crtdbg.h>.
 
-|Modo de informe|Archivo de informe|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
+|Modo de informe|Archivo de informe|_ **Crtdbgreport**, comportamiento de **_CrtDbgReportW**|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|No es aplicable|Escribe el mensaje mediante la API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) de Windows.|
-|**_CRTDBG_MODE_WNDW**|No es aplicable|Llama a la API [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clic **anular**, **_CrtDbgReport** o **_CrtDbgReport** anula inmediatamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clic **omitir**, la ejecución continúa y **_CrtDbgReport** y **_CrtDbgReportW** devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|
-|**_CRTDBG_MODE_FILE**|**__HFILE**|Escribe el mensaje proporcionado por el usuario **controlar**, mediante el Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API y no se comprueba la validez del identificador de archivo; la aplicación es responsable de abrir el archivo de informe y pasar un archivo válido identificador.|
+|**_CRTDBG_MODE_DEBUG**|No aplicable|Escribe el mensaje mediante la API [OutputDebugString](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringw) de Windows.|
+|**_CRTDBG_MODE_WNDW**|No aplicable|Llama a la API [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clicen anular, _ **Crtdbgreport** o _ **crtdbgreport** se anula inmediatamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clicen omitir, la ejecución continúa y _ **crtdbgreport** y **_CrtDbgReportW** devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|
+|**_CRTDBG_MODE_FILE**|**__HFILE**|Escribe el mensaje en el **identificador**proporcionado por el usuario, usando la API [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) de Windows y no comprueba la validez del identificador de archivo. la aplicación es responsable de abrir el archivo de informe y de pasar un identificador de archivo válido.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Escribe el mensaje en **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Escribe el mensaje en **stdout**.|
 
 El informe se puede enviar a uno, dos o tres destinos, o a ninguno. Para obtener más información sobre cómo especificar los modos de informe y el archivo de informe, consulte las funciones [_CrtSetReportMode](crtsetreportmode.md) y [_CrtSetReportFile](crtsetreportfile.md). Para obtener más información sobre el uso de las macros de depuración y las funciones de creación de informes, consulte [Macros para los informes](/visualstudio/debugger/macros-for-reporting).
 
-Si la aplicación necesita más flexibilidad que la proporcionada por **_CrtDbgReport** y **_CrtDbgReportW**, puede escribir su propios informes de función y enlazan con los informes de la biblioteca en tiempo de ejecución de C mecanismo mediante el uso de la [_CrtSetReportHook](crtsetreporthook.md) función.
+Si la aplicación necesita más flexibilidad que la que proporciona _ **crtdbgreport** y **_CrtDbgReportW**, puede escribir su propia función de creación de informes y enlazarla al mecanismo de informes de la biblioteca en tiempo de ejecución de C mediante [_CrtSetReportHook](crtsetreporthook.md) funcionalidad.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -115,7 +115,7 @@ Si la aplicación necesita más flexibilidad que la proporcionada por **_CrtDbgR
 |**_CrtDbgReport**|\<crtdbg.h>|
 |**_CrtDbgReportW**|\<crtdbg.h>|
 
-**_CrtDbgReport** y **_CrtDbgReportW** son extensiones de Microsoft. Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+_ **Crtdbgreport** y **_CrtDbgReportW** son extensiones de Microsoft. Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

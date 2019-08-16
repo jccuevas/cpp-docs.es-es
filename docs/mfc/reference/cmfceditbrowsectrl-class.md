@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 31fadc0a960ddfcf216951e1af481983b122ea0f
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: db99c5e72e84bb359184f4c62594fcddff7d8ff6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821304"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505353"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Clase CMFCEditBrowseCtrl
 
@@ -65,7 +65,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Vuelve a dibujar el control de exploración de edición actual.|
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Lo llama el marco de trabajo para dibujar el botón examinar.|
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Lo llama el marco de trabajo cuando se escribió un nombre de archivo no válido en el control de edición.|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Traduce los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Para ver la sintaxis y obtener más información, vea [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Traduce los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Para ver la sintaxis y obtener más información, vea [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Establece una imagen personalizada para el botón examinar.|
 
 ## <a name="remarks"></a>Comentarios
