@@ -1,21 +1,21 @@
 ---
-title: usesgetlasterror (atributo de COM de C++)
+title: usesgetlasterror (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407073"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513884"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Indica que el llamador que si se produce un error al llamar a esa función, a continuación, el llamador puede, a continuación, llamar a `GetLastError` para recuperar el código de error.
+Indica al llamador que, si se produce un error al llamar a esa función, el llamador puede llamar `GetLastError` a para recuperar el código de error.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,11 +25,11 @@ Indica que el llamador que si se produce un error al llamar a esa función, a co
 
 ## <a name="remarks"></a>Comentarios
 
-El **usesgetlasterror** atributo de C++ tiene la misma funcionalidad que el [usesgetlasterror](/windows/desktop/Midl/usesgetlasterror) atributo MIDL.
+El atributo **usesgetlasterror** C++ tiene la misma funcionalidad que el atributo MIDL [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte la [idl_module](idl-module.md) ejemplo para obtener un ejemplo de cómo usar **usesgetlasterror**.
+Vea el ejemplo de [idl_module](idl-module.md) para obtener un ejemplo de cómo usar **usesgetlasterror**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,10 +37,10 @@ Consulte la [idl_module](idl-module.md) ejemplo para obtener un ejemplo de cómo
 
 |||
 |-|-|
-|**Se aplica a**|**módulo** atributo|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|**Module** (atributo)|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

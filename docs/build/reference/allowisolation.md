@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: 02012e7561fe8462f5f25ae13d961c35561666ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 359a68d5ec0a8c7390b5f0343530864e880a057c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273149"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493115"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -28,16 +28,16 @@ Especifica el comportamiento de la búsqueda de manifiesto.
 
 ## <a name="remarks"></a>Comentarios
 
-**/ ALLOWISOLATION** hace que el sistema operativo realice cargas y búsquedas de manifiestos.
+**/ALLOWISOLATION** hace que el sistema operativo realice búsquedas y cargas de manifiestos.
 
-**/ ALLOWISOLATION** es el valor predeterminado.
+**/ALLOWISOLATION** es el valor predeterminado.
 
-**/ALLOWISOLATION:no** indica que se cargan los archivos ejecutables como si no hubiera ningún manifiesto y causas [referencia de EDITBIN](editbin-reference.md) para establecer el `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit en el encabezado opcional `DllCharacteristics` campo.
+**/ALLOWISOLATION: no** indica que los ejecutables se cargan como si no hubiese ningún manifiesto y hace que la referencia `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` de [EDITBIN](editbin-reference.md) establezca el bit en `DllCharacteristics` el campo del encabezado opcional.
 
-Cuando se deshabilita el aislamiento para un ejecutable, el cargador de Windows no busca ningún manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tiene un contexto de activación predeterminado, incluso si hay un manifiesto en el propio ejecutable, o si hay un manifiesto con el nombre *nombre-ejecutable*. exe.manifest.
+Cuando se deshabilita el aislamiento para un ejecutable, el cargador de Windows no busca ningún manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tiene un contexto de activación predeterminado, incluso si hay un manifiesto en el propio ejecutable o si hay un manifiesto con el nombre *ejecutable-Name*. exe. manifest.
 
 ## <a name="see-also"></a>Vea también
 
 [Opciones de EDITBIN](editbin-options.md)<br/>
 [/ALLOWISOLATION (Búsqueda de manifiesto)](allowisolation-manifest-lookup.md)<br/>
-[Referencia de los archivos de manifiesto](/windows/desktop/SbsCs/manifest-files-reference)
+[Referencia de archivos de manifiesto](/windows/win32/SbsCs/manifest-files-reference)

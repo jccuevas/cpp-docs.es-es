@@ -1,5 +1,5 @@
 ---
-title: COleStreamFile (clase)
+title: Clase COleStreamFile
 ms.date: 11/04/2016
 f1_keywords:
 - COleStreamFile
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96e8fee71f02ea750fd8b33f41fd2fd517e9081e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373519"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503686"
 ---
-# <a name="colestreamfile-class"></a>COleStreamFile (clase)
+# <a name="colestreamfile-class"></a>Clase COleStreamFile
 
 Representa una secuencia de datos (`IStream`) en un archivo compuesto como parte de almacenamiento estructurado OLE.
 
@@ -41,30 +41,30 @@ class COleStreamFile : public CFile
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleStreamFile::COleStreamFile](#colestreamfile)|Construye un objeto `COleStreamFile`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleStreamFile::Attach](#attach)|Asocia un flujo con el objeto.|
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Crea una secuencia de la memoria global y lo asocia con el objeto.|
-|[COleStreamFile::CreateStream](#createstream)|Crea una secuencia y lo asocia con el objeto.|
-|[COleStreamFile::Detach](#detach)|Desasocia la secuencia desde el objeto.|
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Crea un flujo a partir de la memoria global y lo asocia al objeto.|
+|[COleStreamFile::CreateStream](#createstream)|Crea una secuencia y la asocia al objeto.|
+|[COleStreamFile::Detach](#detach)|Desasocia el flujo del objeto.|
 |[COleStreamFile::GetStream](#getstream)|Devuelve la secuencia actual.|
-|[COleStreamFile::OpenStream](#openstream)|Abre una secuencia y lo asocia con el objeto de forma segura.|
+|[COleStreamFile::OpenStream](#openstream)|Abre de forma segura una secuencia y la asocia al objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
-Un `IStorage` objeto debe existir antes de la secuencia se puede abrir o crear a menos que sea una secuencia de memoria.
+Debe `IStorage` existir un objeto antes de que se pueda abrir o crear el flujo a menos que sea una secuencia de memoria.
 
-`COleStreamFile` se manipulan los objetos exactamente igual que [CFile](../../mfc/reference/cfile-class.md) objetos.
+`COleStreamFile`los objetos se manipulan exactamente igual que los objetos [CFile](../../mfc/reference/cfile-class.md) .
 
-Para obtener más información acerca de la manipulación de secuencias y almacenamientos, vea el artículo [contenedores: Archivos compuestos](../../mfc/containers-compound-files.md)...
+Para obtener más información sobre cómo manipular flujos y almacenamientos, consulte el [artículo contenedores: Archivos](../../mfc/containers-compound-files.md)compuestos..
 
-Para obtener más información, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) y [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) en el SDK de Windows.
+Para obtener más información, vea [IStream](/windows/win32/api/objidl/nn-objidl-istream) y [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) en el Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -76,11 +76,11 @@ Para obtener más información, consulte [IStream](/windows/desktop/api/objidl/n
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxole.h
+**Encabezado:** afxole. h
 
 ##  <a name="attach"></a>  COleStreamFile::Attach
 
-Asocia la secuencia OLE suministrada con el `COleStreamFile` objeto.
+Asocia el flujo OLE proporcionado al `COleStreamFile` objeto.
 
 ```
 void Attach(LPSTREAM lpStream);
@@ -89,13 +89,13 @@ void Attach(LPSTREAM lpStream);
 ### <a name="parameters"></a>Parámetros
 
 *lpStream*<br/>
-Apunta a la secuencia OLE (`IStream`) que se asociará con el objeto. No puede ser nulo.
+Apunta al flujo OLE (`IStream`) que se va a asociar al objeto. No puede ser nulo.
 
 ### <a name="remarks"></a>Comentarios
 
-El objeto no ya debe estar asociado con una secuencia OLE.
+El objeto no debe estar ya asociado a un flujo OLE.
 
-Para obtener más información, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) en el SDK de Windows.
+Para obtener más información, vea [IStream](/windows/win32/api/objidl/nn-objidl-istream) en el Windows SDK.
 
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile
 
@@ -108,17 +108,17 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="parameters"></a>Parámetros
 
 *lpStream*<br/>
-Puntero a la secuencia OLE que se asociará con el objeto.
+Puntero a la secuencia OLE que se va a asociar al objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Si *lpStream* es NULL, el objeto no está asociado con una secuencia OLE, de lo contrario, el objeto está asociado con la secuencia proporcionada de OLE.
+Si *lpStream* es null, el objeto no está asociado a un flujo OLE; de lo contrario, el objeto está asociado a la secuencia OLE proporcionada.
 
-Para obtener más información, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) en el SDK de Windows.
+Para obtener más información, vea [IStream](/windows/win32/api/objidl/nn-objidl-istream) en el Windows SDK.
 
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream
 
-Con seguridad crea un nuevo flujo fuera de la memoria compartida global donde es una condición normal, se esperaba un error.
+Crea de forma segura un flujo nuevo fuera de la memoria compartida global donde un error es una condición normal y esperada.
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -127,21 +127,21 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="parameters"></a>Parámetros
 
 *pError*<br/>
-Apunta a un [CFileException](../../mfc/reference/cfileexception-class.md) objeto o NULL que indica el estado de finalización de la operación de creación. Proporcione este parámetro si desea supervisar posibles excepciones que se genera al intentar crear la secuencia.
+Apunta a un objeto [CFileException](../../mfc/reference/cfileexception-class.md) o null que indica el estado de finalización de la operación de creación. Proporcione este parámetro si desea supervisar las posibles excepciones que se generan al intentar crear la secuencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la secuencia se ha creado correctamente; en caso contrario, es 0.
+Distinto de cero si la secuencia se crea correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-La memoria está asignada por el subsistema OLE.
+El subsistema OLE asigna la memoria.
 
-Para obtener más información, consulte [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) en el SDK de Windows.
+Para obtener más información, vea [CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) en el Windows SDK.
 
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream
 
-Con seguridad crea un nuevo flujo en el objeto de almacenamiento proporcionada donde es una condición normal, se esperaba un error.
+Crea de forma segura una nueva secuencia en el objeto de almacenamiento proporcionado donde un error es una condición normal y esperada.
 
 ```
 BOOL CreateStream(
@@ -154,30 +154,30 @@ BOOL CreateStream(
 ### <a name="parameters"></a>Parámetros
 
 *lpStorage*<br/>
-Señala al objeto OLE de almacenamiento que contiene la secuencia que se va a crear. No puede ser nulo.
+Apunta al objeto de almacenamiento OLE que contiene la secuencia que se va a crear. No puede ser nulo.
 
 *lpszStreamName*<br/>
-Nombre de la secuencia que se va a crear. No puede ser nulo.
+Nombre del flujo que se va a crear. No puede ser nulo.
 
 *nOpenFlags*<br/>
-Modo de acceso que se utilizará al abrir la secuencia. Exclusivo, lectura y escritura y los modos de crear se usan de forma predeterminada. Para obtener una lista completa de los modos disponibles, consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Modo de acceso que se va a utilizar al abrir la secuencia. De forma predeterminada, se usan los modos exclusivo, de lectura/escritura y de creación. Para obtener una lista completa de los modos disponibles, vea [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Apunta a un [CFileException](../../mfc/reference/cfileexception-class.md) objeto o NULL. Proporcione este parámetro si desea supervisar posibles excepciones que se genera al intentar crear la secuencia.
+Apunta a un objeto [CFileException](../../mfc/reference/cfileexception-class.md) o null. Proporcione este parámetro si desea supervisar las posibles excepciones que se generan al intentar crear la secuencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la secuencia se ha creado correctamente; en caso contrario, es 0.
+Distinto de cero si la secuencia se crea correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Si se produce un error en la apertura, se producirá una excepción de archivo y *pError* no es NULL.
+Se producirá una excepción de archivo si se produce un error de apertura y el perror no es NULL.
 
-Para obtener más información, consulte [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) en el SDK de Windows.
+Para obtener más información, vea [IStorage:: CreateStream (](/windows/win32/api/objidl/nf-objidl-istorage-createstream) en el Windows SDK.
 
 ##  <a name="detach"></a>  COleStreamFile::Detach
 
-Desasocia la secuencia desde el objeto sin cerrar la secuencia.
+Desasocia la secuencia del objeto sin cerrar la secuencia.
 
 ```
 LPSTREAM Detach();
@@ -185,17 +185,17 @@ LPSTREAM Detach();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la secuencia (`IStream`) que estaba asociado con el objeto.
+Puntero a la secuencia (`IStream`) asociada al objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Debe cerrarse la secuencia de algún otro modo antes de que el programa finaliza.
+La secuencia se debe cerrar de otra manera antes de que finalice el programa.
 
-Para obtener más información, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream) en el SDK de Windows.
+Para obtener más información, vea [IStream](/windows/win32/api/objidl/nn-objidl-istream) en el Windows SDK.
 
 ##  <a name="getstream"></a>  COleStreamFile::GetStream
 
-Llame a esta función para devolver un puntero a la secuencia actual.
+Llame a esta función para devolver un puntero al flujo actual.
 
 ```
 IStream* GetStream() const;
@@ -203,11 +203,11 @@ IStream* GetStream() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la interfaz de la secuencia actual ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)).
+Puntero a la interfaz de flujo actual ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)).
 
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream
 
-Se abre una secuencia existente.
+Abre un flujo existente.
 
 ```
 BOOL OpenStream(
@@ -220,26 +220,26 @@ BOOL OpenStream(
 ### <a name="parameters"></a>Parámetros
 
 *lpStorage*<br/>
-Señala al objeto OLE de almacenamiento que contiene la secuencia que se puede abrir. No puede ser nulo.
+Apunta al objeto de almacenamiento OLE que contiene la secuencia que se va a abrir. No puede ser nulo.
 
 *lpszStreamName*<br/>
-Nombre de la secuencia que se puede abrir. No puede ser nulo.
+Nombre del flujo que se va a abrir. No puede ser nulo.
 
 *nOpenFlags*<br/>
-Modo de acceso que se utilizará al abrir la secuencia. Exclusivo y lectura/escritura se usan los modos de forma predeterminada. Para obtener la lista completa de los modos disponibles, consulte [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Modo de acceso que se va a utilizar al abrir la secuencia. De forma predeterminada, se usan los modos exclusivo y de lectura y escritura. Para obtener la lista completa de los modos disponibles, vea [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Apunta a un [CFileException](../../mfc/reference/cfileexception-class.md) objeto o NULL. Proporcione este parámetro si desea supervisar posibles excepciones que se generan al intentar abrir la secuencia.
+Apunta a un objeto [CFileException](../../mfc/reference/cfileexception-class.md) o null. Proporcione este parámetro si desea supervisar las posibles excepciones que se generan al intentar abrir la secuencia.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el flujo se abre correctamente; en caso contrario, es 0.
+Distinto de cero si la secuencia se abre correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Si se produce un error en la apertura, se producirá una excepción de archivo y *pError* no es NULL.
+Se producirá una excepción de archivo si se produce un error de apertura y el perror no es NULL.
 
-Para obtener más información, consulte [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) en el SDK de Windows.
+Para obtener más información, vea [IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

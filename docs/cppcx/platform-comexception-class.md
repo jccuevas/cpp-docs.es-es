@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383352"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500548"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (Clase)
 
@@ -34,7 +34,7 @@ COMException también tiene los siguientes tipos de miembros.
 
 **Constructores**
 
-|Miembro|Descripción|
+|Member|DESCRIPCIÓN|
 |------------|-----------------|
 |[COMException](#ctor)|Inicializa una nueva instancia de la clase COMException.|
 
@@ -46,16 +46,16 @@ La clase COMException hereda los métodos Equals(), Finalize(), GetHashCode(), G
 
 La clase COMException tiene las propiedades siguientes.
 
-|Miembro|Descripción|
+|Member|DESCRIPCIÓN|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|HRESULT correspondiente a la excepción.|
+|[Excepción:: HResult](#hresult)|HRESULT correspondiente a la excepción.|
 |[Exception::Message](#message)|Mensaje que describe la excepción.|
 
 ## <a name="derived-exceptions"></a>Excepciones derivadas
 
 Las excepciones predefinidas siguientes se derivan de COMException. Difieren de COMException únicamente en su nombre, el nombre de su constructor y el valor HRESULT subyacente.
 
-|Name|HRESULT subyacente|Descripción|
+|NOMBRE|HRESULT subyacente|DESCRIPCIÓN|
 |----------|------------------------|-----------------|
 |COMException|*hresult definido por el usuario*|Se produce cuando se devuelve un HRESULT no reconocido de una llamada al método COM.|
 |AccessDeniedException|E_ACCESSDENIED|Se produce cuando se deniega el acceso a un recurso o a una característica.|
@@ -81,7 +81,7 @@ Las excepciones predefinidas siguientes se derivan de COMException. Difieren de 
 
 **Metadatos:** platform.winmd
 
-## <a name="ctor"></a> Constructor de COMException
+## <a name="ctor"></a>COMException:: COMException (constructor)
 
 Inicializa una nueva instancia de la clase COMException.
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 Valor HRESULT de error representado por la excepción.
 
-## <a name="hresult"></a> Propiedad COMException
+## <a name="hresult"></a>COMException:: HResult (propiedad)
 
 HRESULT correspondiente a la excepción.
 
@@ -113,9 +113,9 @@ Valor HRESULT que especifica el error.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información acerca de cómo interpretar el valor HRESULT, vea [estructura de códigos de Error COM](/windows/desktop/com/structure-of-com-error-codes).
+Para obtener más información sobre cómo interpretar el valor HRESULT, vea [estructura de los códigos de error com](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a> Propiedad COMException
+## <a name="message"></a>COMException:: Message (propiedad)
 
 Mensaje que describe la excepción.
 

@@ -1,21 +1,21 @@
 ---
-title: switch_is (C++ atributo COM)
+title: switch_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407255"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513980"
 ---
-# <a name="switchis"></a>switch_is
+# <a name="switch_is"></a>switch_is
 
-Especifica la expresión o el identificador que actúa como la unión discriminante que selecciona al miembro de unión.
+Especifica la expresión o el identificador que actúa como discriminante de Unión que selecciona el miembro de Unión.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,11 +25,11 @@ Especifica la expresión o el identificador que actúa como la unión discrimina
 
 ## <a name="remarks"></a>Comentarios
 
-El **switch_is** C++ atributo tiene la misma funcionalidad que el [switch_is](/windows/desktop/Midl/switch-is) atributo MIDL.
+El atributo **switch_is** C++ tiene la misma funcionalidad que el atributo MIDL [switch_is](/windows/win32/Midl/switch-is) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte la [caso](case-cpp.md) ejemplo para un ejemplo de uso de **switch_is**.
+Vea el ejemplo de [caso](case-cpp.md) para ver un ejemplo de uso de **switch_is**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,9 +38,9 @@ Consulte la [caso](case-cpp.md) ejemplo para un ejemplo de uso de **switch_is**.
 |||
 |-|-|
 |**Se aplica a**|**typedef**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

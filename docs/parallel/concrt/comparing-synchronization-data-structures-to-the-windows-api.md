@@ -5,44 +5,44 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d58431ae3f9859677302010f15a75b37ebedbf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414040"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510598"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Comparar estructuras de datos de sincronización con la API de Windows
 
 En este tema se compara el comportamiento de las estructuras de datos de sincronización que proporciona el Runtime de simultaneidad con las que proporciona la API de Windows.
 
-Las estructuras de datos de sincronización que proporcionan el Runtime de simultaneidad siguen el *cooperativa de modelo de subprocesos*. En este modelo, las primitivas de sincronización ceden explícitamente sus recursos de procesamiento a otros subprocesos. Esto difiere de la *preferente de modelo de subprocesos*, donde los recursos de procesamiento se transfieren a otros subprocesos por el sistema operativo o el programador de control.
+Las estructuras de datos de sincronización que proporciona el Runtime de simultaneidad siguen el *modelo*de subprocesos cooperativo. En este modelo, las primitivas de sincronización ceden explícitamente sus recursos de procesamiento a otros subprocesos. Esto difiere del *modelo*de subprocesos preferente, donde los recursos de procesamiento se transfieren a otros subprocesos por parte del programador de control o del sistema operativo.
 
-## <a name="criticalsection"></a>critical_section
+## <a name="critical_section"></a>critical_section
 
-El [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) es similar a la Windows `CRITICAL_SECTION` estructura porque puede usarse únicamente por los subprocesos de un proceso. Para obtener más información acerca de las secciones críticas en la API de Windows, consulte [objetos de sección crítica](/windows/desktop/Sync/critical-section-objects).
+La clase [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) es similar a la `CRITICAL_SECTION` estructura de Windows porque solo la pueden usar los subprocesos de un proceso. Para obtener más información sobre las secciones críticas de la API de Windows, vea [objetos de sección crítica](/windows/win32/Sync/critical-section-objects).
 
-## <a name="readerwriterlock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a>reader_writer_lock
 
-El [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) es similar a bloqueos finos de lector/escritor (SRW) de Windows. En la tabla siguiente se explican las similitudes y las diferencias.
+La clase [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) es similar a los bloqueos de lector fino de Windows (SRW). En la tabla siguiente se explican las similitudes y las diferencias.
 
 |Característica|`reader_writer_lock`|Bloqueo SRW|
 |-------------|--------------------------|--------------|
 |No reentrante|Sí|Sí|
-|Puede promover un lector a un escritor (compatibilidad de actualización)|No|No|
-|Puede degradar un escritor a un lector (compatibilidad de degradación)|No|No|
-|Bloqueo de preferencia de escritura|Sí|No|
-|Acceso FIFO a escritores|Sí|No|
+|Puede promover un lector a un escritor (compatibilidad de actualización)|Sin|Sin|
+|Puede degradar un escritor a un lector (compatibilidad de degradación)|Sin|Sin|
+|Bloqueo de preferencia de escritura|Sí|Sin|
+|Acceso FIFO a escritores|Sí|Sin|
 
-Para obtener más información sobre los bloqueos SRW, vea [bloqueos finos de lector/escritor (SRW)](https://msdn.microsoft.com/library/windows/desktop/aa904937) en Platform SDK.
+Para obtener más información acerca de los bloqueos SRW, consulte bloqueos finos de [lector/escritor (SRW)](/windows/win32/sync/slim-reader-writer--srw--locks) en el SDK de la plataforma.
 
 ## <a name="event"></a>evento
 
-El [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) es similar a un evento de restablecimiento manual sin nombre, de Windows. Sin embargo, un objeto `event` se comporta de forma cooperativa, en tanto que un evento de Windows se comporta con preferencia. Para obtener más información acerca de los eventos de Windows, consulte [objetos de evento](/windows/desktop/Sync/event-objects).
+La clase [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) es similar a un evento de restablecimiento manual sin nombre de Windows. Sin embargo, un objeto `event` se comporta de forma cooperativa, en tanto que un evento de Windows se comporta con preferencia. Para obtener más información sobre los eventos de Windows, vea [objetos de evento](/windows/win32/Sync/event-objects).
 
 ## <a name="example"></a>Ejemplo
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
 Para comprender mejor la diferencia entre la clase de `event` y los eventos de Windows, considere el siguiente ejemplo. Este ejemplo permite que el programador cree dos tareas simultáneas a lo sumo y, a continuación, llama a dos funciones similares que utilizan la clase `event` y un evento de restablecimiento manual de Windows. Cada función crea en primer lugar varias tareas que esperan hasta que se señaliza un evento compartido. A continuación, cada función cede el paso a las tareas en ejecución y, después, señala el evento. Posteriormente, cada función espera por el evento señalado.
 
@@ -83,7 +83,7 @@ Windows event:
 
 La clase `event` se comporta de forma cooperativa, por lo que el programador puede reasignar los recursos del procesamiento a otro contexto cuando un evento está esperando para entrar en el estado señalado. Así, la versión que utiliza la clase `event` realiza más trabajo. En la versión que utiliza los eventos de Windows, cada tarea de espera debe entrar en el estado señalado antes de que se inicie la tarea siguiente.
 
-Para obtener más información acerca de las tareas, consulte [paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Para obtener más información sobre las tareas, consulte [paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
 ## <a name="see-also"></a>Vea también
 

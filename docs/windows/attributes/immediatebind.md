@@ -1,21 +1,21 @@
 ---
-title: immediatebind (atributo de COM de C++)
+title: immediatebind (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 1844e72ecd1fe7c0f4255426eb48f5c70471e5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c659f23d6828616c4a48522b61330336e994cbb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409478"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514650"
 ---
 # <a name="immediatebind"></a>immediatebind
 
-Indica que la base de datos será notificada inmediatamente de todos los cambios a una propiedad de un objeto enlazado a datos.
+Indica que se notificará inmediatamente a la base de datos todos los cambios efectuados en una propiedad de un objeto enlazado a datos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,11 +25,11 @@ Indica que la base de datos será notificada inmediatamente de todos los cambios
 
 ## <a name="remarks"></a>Comentarios
 
-El **immediatebind** atributo de C++ tiene la misma funcionalidad que el [immediatebind](/windows/desktop/Midl/immediatebind) atributo MIDL.
+El atributo **immediatebind** C++ tiene la misma funcionalidad que el atributo MIDL [immediatebind](/windows/win32/Midl/immediatebind) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [enlazable](bindable.md) para obtener un ejemplo de cómo usar **immediatebind**.
+Vea [enlazable](bindable.md) para obtener un ejemplo de cómo usar **immediatebind**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,9 +38,9 @@ Consulte [enlazable](bindable.md) para obtener un ejemplo de cómo usar **immedi
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

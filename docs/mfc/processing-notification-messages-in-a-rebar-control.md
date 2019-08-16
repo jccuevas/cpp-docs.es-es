@@ -7,38 +7,38 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8ac225802bd1d0a0a4b0f30e017fa677f1072fd3
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339631"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507960"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Procesar mensajes de notificación en un control Rebar
 
-En la clase primaria del control rebar, cree un `OnChildNotify` función de controlador con una instrucción switch para cualquier control rebar (`CReBarCtrl`) mensajes de notificación que desee controlar. Las notificaciones se envían a la ventana primaria cuando el usuario arrastra objetos sobre el control de rebar, cambia el diseño de las bandas rebar, elimina bandas del control rebar y así sucesivamente.
+En la clase primaria del control rebar, cree una `OnChildNotify` función de controlador con una instrucción switch para los mensajes de notificación de control rebar (`CReBarCtrl`) que desee controlar. Las notificaciones se envían a la ventana primaria cuando el usuario arrastra objetos sobre el control rebar, cambia el diseño de las bandas Rebar, elimina las bandas del control rebar, etc.
 
-El objeto de control rebar pueden enviar los mensajes de notificación siguiente:
+El objeto de control rebar puede enviar los siguientes mensajes de notificación:
 
-- RBN_AUTOSIZE se envía mediante un control rebar (creado con el estilo RBS_AUTOSIZE) cuando el control rebar cambia automáticamente de tamaño.
+- RBN_AUTOSIZE enviado por un control rebar (creado con el estilo RBS_AUTOSIZE) cuando el rebar cambia automáticamente de tamaño.
 
-- RBN_BEGINDRAG se envía mediante un control rebar cuando el usuario comienza a arrastrar una banda.
+- RBN_BEGINDRAG enviado por un control Rebar cuando el usuario comienza a arrastrar una banda.
 
-- RBN_CHILDSIZE se envía mediante un control rebar cuando se cambia el tamaño de ventana secundaria de la de la banda.
+- RBN_CHILDSIZE enviado por un control Rebar cuando se cambia el tamaño de la ventana secundaria de una banda.
 
-- RBN_DELETEDBAND se envía mediante un control rebar después de que se ha eliminado una banda.
+- RBN_DELETEDBAND enviado por un control rebar después de que se haya eliminado una banda.
 
-- RBN_DELETINGBAND se envía mediante un control rebar cuando una banda está a punto de eliminarse.
+- RBN_DELETINGBAND enviado por un control Rebar cuando una banda está a punto de eliminarse.
 
-- RBN_BEGINDRAG se envía mediante un control rebar cuando el usuario deja de arrastrar una banda.
+- RBN_ENDDRAG enviado por un control Rebar cuando el usuario deja de arrastrar una banda.
 
-- RBN_GETOBJECT se envía mediante un control rebar (creado con el estilo RBS_REGISTERDROP) cuando se arrastra un objeto a través de una banda en el control.
+- RBN_GETOBJECT enviado por un control rebar (creado con el estilo RBS_REGISTERDROP) cuando se arrastra un objeto sobre una banda en el control.
 
-- RBN_HEIGHTCHANGE se envía mediante un control rebar cuando ha cambiado su alto.
+- RBN_HEIGHTCHANGE enviado por un control Rebar cuando su alto ha cambiado.
 
-- RBN_LAYOUTCHANGED se envía mediante un control rebar cuando el usuario cambia el diseño de las bandas del control.
+- RBN_LAYOUTCHANGED enviado por un control Rebar cuando el usuario cambia el diseño de las bandas del control.
 
-Para obtener más información sobre estas notificaciones, consulte [referencia del Control Rebar](/windows/desktop/controls/rebar-control-reference) en el SDK de Windows.
+Para obtener más información sobre estas notificaciones, vea [referencia de control rebar](/windows/win32/controls/rebar-control-reference) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

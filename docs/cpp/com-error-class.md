@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155207"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498744"
 ---
-# <a name="comerror-class"></a>_com_error (Clase)
+# <a name="_com_error-class"></a>_com_error (Clase)
 
 **Específicos de Microsoft**
 
-Un **_com_error** objeto representa una condición de excepción detectada por las funciones de contenedor de control de errores en los archivos de encabezado generados a partir de la biblioteca de tipos o por una de las clases de compatibilidad con COM. El **_com_error** clase encapsula el código de error HRESULT y asociada ninguna `IErrorInfo Interface` objeto.
+Un objeto **_com_error** representa una condición de excepción detectada por las funciones contenedoras de control de errores en los archivos de encabezado generados a partir de la biblioteca de tipos o mediante una de las clases de compatibilidad con com. La clase **_com_error** encapsula el código de error HRESULT y cualquier objeto `IErrorInfo Interface` asociado.
 
 ### <a name="construction"></a>Construcción
 
 |||
 |-|-|
-|[_com_error](../cpp/com-error-com-error.md)|Construye un **_com_error** objeto.|
+|[_com_error](../cpp/com-error-com-error.md)|Construye un objeto **_com_error** .|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operator =](../cpp/com-error-operator-equal.md)|Asigna una existente **_com_error** objeto a otro.|
+|[operador =](../cpp/com-error-operator-equal.md)|Asigna un objeto **_com_error** existente a otro.|
 
 ### <a name="extractor-functions"></a>Funciones de extractor
 
 |||
 |-|-|
-|[Error](../cpp/com-error-error.md)|Recupera el valor HRESULT pasado al constructor.|
+|[Error](../cpp/com-error-error.md)|Recupera el HRESULT que se pasa al constructor.|
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Recupera el objeto `IErrorInfo` pasado al constructor.|
-|[WCode](../cpp/com-error-wcode.md)|Recupera el código de error de 16 bits asignado en el valor de HRESULT encapsulado.|
+|[WCode](../cpp/com-error-wcode.md)|Recupera el código de error de 16 bits asignado al HRESULT encapsulado.|
 
 ### <a name="ierrorinfo-functions"></a>Funciones de IErrorInfo
 
@@ -53,24 +53,24 @@ Un **_com_error** objeto representa una condición de excepción detectada por l
 
 |||
 |-|-|
-|[ErrorMessage](../cpp/com-error-errormessage.md)|Recupera el mensaje de cadena para HRESULT almacenado en el **_com_error** objeto.|
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Recupera el mensaje de cadena para HRESULT almacenado en el objeto **_com_error** .|
 
 ### <a name="exepinfowcode-to-hresult-mappers"></a>Asignadores de ExepInfo.wCode a HRESULT
 
 |||
 |-|-|
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Asigna el valor HRESULT de 32 bits a 16 bits `wCode`.|
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapas de bits de 16 `wCode` HRESULT de 32 bits.|
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Asigna HRESULT de 32 bits a 16 bits `wCode`.|
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Asigna de 16 bits `wCode` a HRESULT de 32 bits.|
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<comdef.h >
+**Encabezado:** \<comdef. h >
 
-`Lib:` omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)
+`Lib:`omsuppw. lib o comsuppwd. lib (vea [/Zc: wchar_t (Wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)
 
 ## <a name="see-also"></a>Vea también
 
 [Clases de compatibilidad con COM del compilador](../cpp/compiler-com-support-classes.md)<br/>
-[IErrorInfo Interface](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+[IErrorInfo (interfaz)](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

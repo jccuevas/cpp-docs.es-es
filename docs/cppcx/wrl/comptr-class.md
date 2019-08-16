@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606488"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498413"
 ---
 # <a name="comptr-class"></a>ComPtr (clase)
 
@@ -84,7 +84,7 @@ Clase a la que el actual `ComPtr` es un amigo. (La plantilla que usa este parám
 
 `ComPtr<>`declara un tipo que representa el puntero de interfaz subyacente. Utilice `ComPtr<>` para declarar una variable y, a continuación, use el operador de acceso`->`de miembro de flecha () para tener acceso a una función miembro de interfaz.
 
-Para obtener más información sobre los punteros inteligentes, consulte la subsección "punteros inteligentes de COM" del tema [prácticas de codificación com](/windows/desktop/LearnWin32/com-coding-practices) en MSDN Library.
+Para obtener más información sobre los punteros inteligentes, consulte la subsección "punteros inteligentes de COM" del tema [prácticas de codificación com](/windows/win32/LearnWin32/com-coding-practices) en MSDN Library.
 
 ## <a name="members"></a>Miembros
 

@@ -2,12 +2,12 @@
 title: Programación web y para la nube en Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.openlocfilehash: 3f4786d8b17aed2d7faeddf1e2c32a825fd8d0e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65790361"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498869"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programación web y para la nube en Visual C++
 
@@ -48,11 +48,11 @@ En C++, existen varias opciones para conectarse a la Web y a la nube.
 
   Una clase de cliente HTTP de Windows en tiempo de ejecución modelada en la clase .NET Framework del mismo nombre en el espacio de nombres System.Web. `HttpClient` es totalmente compatible con la carga y descarga asincrónica a través de HTTP y con los filtros de canalización que habilitan la inserción de controladores HTTP personalizados en la canalización. Windows SDK incluye filtros de ejemplo para redes de uso medido y autenticación de OAuth, entre otros. Para las aplicaciones que tienen como destino la Plataforma universal de Windows, se recomienda que use la clase `Windows::Web:HttpClient`.
 
-- [Interfaz IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [Interfaz IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
   Proporciona una interfaz COM nativa que se puede usar en aplicaciones de Windows Runtime o en aplicaciones de escritorio de Windows para conectarse a Internet a través de HTTP y emitir comandos GET, PUT y otros comandos HTTP. Para obtener más información, vea [Tutorial: conexión con tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
+- [Windows Internet (WinInet)](/windows/win32/WinInet/portal)
 
   API de Windows que se puede utilizar en aplicaciones de escritorio de Windows para conectarse a Internet.
 

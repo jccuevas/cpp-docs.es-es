@@ -20,75 +20,75 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: c52921d2e9c4265d42b3e0187af1396ff8946bde
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400799"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498608"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 
 **Específicos de Microsoft**
 
-La sintaxis siguiente describe el **try-finally** instrucción:
+La sintaxis siguiente describe la instrucción **try-finally** :
 
-> **\_\_try**<br/>
+> **\_\_prueba**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;código protegido<br/>
 > }<br/>
-> **\_\_Por último**<br/>
+> **\_\_terminar**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;código de finalización<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;código de terminación<br/>
 > }
 
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;try de la instrucción compuesta  **Finally-Statement\_ \_**  **\_ \_**
 
-El **try-finally** instrucción es una extensión de Microsoft a los lenguajes C y C++ que permite a las aplicaciones de destino garanticen la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. El **try-finally** instrucción resulta especialmente útil para las rutinas que tienen varios lugares donde se realiza una comprobación para un error que podría provocar prematura de devolución de la rutina.
+La instrucción **try-finally** es una extensión de Microsoft para los C++ lenguajes C y que permite a las aplicaciones de destino garantizar la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. La instrucción **try-finally** es especialmente útil para las rutinas que tienen varios lugares en los que se realiza una comprobación de un error que podría provocar la devolución prematura de la rutina.
 
-Para obtener información relacionada y un ejemplo de código, vea [intente-excepto instrucción](../cpp/try-except-statement.md). Para obtener más información sobre el control general de excepciones estructurado, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obtener más información sobre cómo controlar las excepciones en aplicaciones administradas con C++ / c++ / CLI, consulte [control de excepciones en /clr](../extensions/exception-handling-cpp-component-extensions.md).
+Para obtener información relacionada y un ejemplo de código, vea [instrucción try-except](../cpp/try-except-statement.md). Para obtener más información sobre el control de excepciones estructurado en general, vea [control de excepciones estructurado](../cpp/structured-exception-handling-c-cpp.md). Para obtener más información sobre cómo controlar las excepciones en C++las aplicaciones administradas con/CLI, vea [control de excepciones en/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
-> El control de excepciones estructurado funciona con Win32 para archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo. Para los programas de C++, se recomienda utilizar el mecanismo de control de excepciones de C++ ([try, catch y throw](../cpp/try-throw-and-catch-statements-cpp.md) instrucciones).
+> El control de excepciones estructurado funciona con Win32 para archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo. En C++ el caso de los programas, se recomienda usar C++ el mecanismo de control de excepciones (instrucciones[try, Catch y Throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
-La instrucción compuesta después de la **__try** cláusula es la sección protegida. La instrucción compuesta después de la **__finally** cláusula es el controlador de terminación. El controlador especifica un conjunto de acciones que se sale de la sección protegida, con independencia de que se salga de la sección protegida a causa de una excepción (finalización anómala) o un paso explícito (finalización normal).
+La instrucción compuesta después de la cláusula **_ _ try** es la sección protegida. La instrucción compuesta después de la cláusula **_ _ Finally** es el controlador de finalización. El controlador especifica un conjunto de acciones que se sale de la sección protegida, con independencia de que se salga de la sección protegida a causa de una excepción (finalización anómala) o un paso explícito (finalización normal).
 
-El control alcanza un **__try** instrucción mediante la ejecución secuencial simple (paso explícito). Cuando el control entra en el **__try**, su controlador asociado se vuelve activo. Si el flujo de control alcanza el final del bloque try, la ejecución continúa del modo siguiente:
+El control alcanza una instrucción **_ _ try** mediante una ejecución secuencial simple (paso a través). Cuando el control entra en el **_ _ try**, su controlador asociado se activa. Si el flujo de control alcanza el final del bloque try, la ejecución continúa del modo siguiente:
 
 1. Se invoca al controlador de terminación.
 
-1. Cuando se complete el controlador de terminación, la ejecución continúa después de la **__finally** instrucción. Independientemente de cómo los protegidos de los extremos de la sección (por ejemplo, mediante un **goto** fuera del cuerpo protegido o un **devolver** instrucción), se ejecuta el controlador de terminación *antes* el flujo de control salga de la sección protegida.
+1. Cuando el controlador de terminación finaliza, la ejecución continúa después de la instrucción **_ _ Finally** . Independientemente de cómo finalice la sección protegida (por ejemplo, a través de un **goto** fuera del cuerpo protegido o una instrucción **Return** ), el controlador de terminación se ejecuta *antes* de que el flujo de control salga de la sección protegida.
 
-   Un **__finally** instrucción no bloquea la búsqueda de un controlador de excepciones adecuado.
+   Una instrucción **_ _ Finally** no bloquea la búsqueda de un controlador de excepciones adecuado.
 
-Si se produce una excepción en el **__try** bloque, el sistema operativo debe buscar un controlador para la excepción o se producirá un error en el programa. Si se encuentra un controlador, todos los **__finally** se ejecutan bloques y se reanuda la ejecución en el controlador.
+Si se produce una excepción en el bloque **_ _ try** , el sistema operativo debe encontrar un controlador para la excepción o se producirá un error en el programa. Si se encuentra un controlador, se ejecutan todos los bloques **_ _ Finally** y se reanuda la ejecución en el controlador.
 
-Por ejemplo, suponga que una serie de llamadas de función vincula la función A a la función D, como se muestra en la ilustración siguiente. Cada función tiene un controlador de finalización. Si una excepción se genera en la función D y se controla en A, los controladores de terminación se llaman en este orden mientras el sistema desenreda la pila: D, C, B.
+Por ejemplo, suponga que una serie de llamadas de función vincula la función A a la función D, como se muestra en la ilustración siguiente. Cada función tiene un controlador de finalización. Si se produce una excepción en la función D y se controla en, se llama a los controladores de finalización en este orden cuando el sistema desenreda la pila: D, C, B.
 
-![Orden de terminación&#45;ejecución del controlador](../cpp/media/vc38cx1.gif "orden de terminación&#45;ejecución del controlador") <br/>
+![Orden de ejecución&#45;del controlador](../cpp/media/vc38cx1.gif "de terminación orden&#45;de ejecución del controlador de finalización") <br/>
 Orden de terminación-ejecución de controladores
 
 > [!NOTE]
-> El comportamiento de try-finally es diferente de otros lenguajes que admiten el uso de **finalmente**, como C#.  Una sola **__try** puede tener, pero no ambos, de **__finally** y **__except**.  Si se van a usar ambos conjuntamente, una instrucción try-except externa debe incluir la instrucción try-finally interna.  Las reglas que especifican cuándo se ejecuta cada bloque también son diferentes.
+> El comportamiento de try-finally es diferente de otros lenguajes que admiten eluso de Finally C#, como.  Un único **_ _ try** puede tener, pero no ambos, de **_ _ Finally** y **_ _ Except**.  Si se van a usar ambos conjuntamente, una instrucción try-except externa debe incluir la instrucción try-finally interna.  Las reglas que especifican cuándo se ejecuta cada bloque también son diferentes.
 
-Para ofrecer compatibilidad con versiones anteriores, **_try**, **_finally**, y **_leave** son sinónimos para **__try**, **__ Por último**, y **__leave** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
+Por compatibilidad con versiones anteriores, **_try**, **_finally**y **_leave** son sinónimos para **_ _ try**, **_ _ Finally**y **__leave** a menos que la opción del compilador [/za \(deshabilite extensiones de lenguaje. ](../build/reference/za-ze-disable-language-extensions.md)se especifica.
 
-## <a name="the-leave-keyword"></a>La palabra clave __leave
+## <a name="the-__leave-keyword"></a>La palabra clave __leave
 
-El **__leave** palabra clave sólo es válida en la sección protegida de un **try-finally** instrucción y su efecto es saltar al final de la sección protegida. La ejecución continúa en la primera instrucción del controlador de finalización.
+La palabra clave **__leave** solo es válida dentro de la sección protegida de una instrucción **try-finally** y su efecto es saltar al final de la sección protegida. La ejecución continúa en la primera instrucción del controlador de finalización.
 
-Un **goto** instrucción también puede saltar fuera de la sección protegida, pero el rendimiento se degrada porque invoca el desenredo de pila. El **__leave** instrucción es más eficaz porque no produce el desenredo de pila.
+Una instrucción **goto** también puede saltar fuera de la sección protegida, pero degrada el rendimiento porque invoca el desenredo de la pila. La instrucción **__leave** es más eficaz porque no produce el desenredado de la pila.
 
 ## <a name="abnormal-termination"></a>Finalización anómala
 
-Salir de un **try-finally** instrucción mediante el [longjmp](../c-runtime-library/reference/longjmp.md) función en tiempo de ejecución se considera una finalización anómala. No es válido saltar dentro un **__try** instrucción, pero sí fuera. Todos los **__finally** las instrucciones que están activas entre el punto de partida (terminación normal de la **__try** bloque) y el destino (el **__except** que bloquear controla la excepción) se debe ejecutar. Esto recibe el nombre de desenredado local.
+Salir de una instrucción **try-finally** mediante la función [longjmp](../c-runtime-library/reference/longjmp.md) en tiempo de ejecución se considera una finalización anómala. No es válido saltar a una instrucción **_ _ try** , pero es legal salir de una. Se deben ejecutar todas las instrucciones **_ _ Finally** activas entre el punto de salida (terminación normal del bloque **_ _ try** ) y el destino (el bloque **_ _ Except** que controla la excepción). Esto recibe el nombre de desenredado local.
 
-Si un **intente** bloque esté terminado prematuramente por cualquier motivo, incluido un salto fuera del bloque, el sistema ejecuta asociado **finalmente** bloque como parte del proceso de desenredo de la pila. En tales casos, el [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) función devuelve **true** si se llama desde dentro el **finalmente** bloquear; en caso contrario, devuelve **false**.
+Si un bloque **try** se termina prematuramente por cualquier motivo, incluido un salto fuera del bloque, el sistema ejecuta el bloque Finally asociado como parte del proceso de desenredado de la pila. En tales casos, la función [AbnormalTermination](/windows/win32/Debug/abnormaltermination) devuelve **true** si se llama desde dentro del bloque **Finally** ; de lo contrario, devuelve **false**.
 
-No se llama al controlador de terminación si un proceso se elimina en medio de ejecución de un **try-finally** instrucción.
+No se llama al controlador de terminación si un proceso se elimina en medio de la ejecución de una instrucción **try-finally** .
 
 **FIN de Específicos de Microsoft**
 
@@ -97,4 +97,4 @@ No se llama al controlador de terminación si un proceso se elimina en medio de 
 [Escribir un controlador de finalización](../cpp/writing-a-termination-handler.md)<br/>
 [Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
-[Sintaxis de controlador de terminación](/windows/desktop/Debug/termination-handler-syntax)
+[Sintaxis del controlador de terminación](/windows/win32/Debug/termination-handler-syntax)

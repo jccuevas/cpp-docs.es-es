@@ -1587,7 +1587,7 @@
     - name: 'Tutorial: Crear una aplicación de escritorio de Windows'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Asistente para escritorio de Windows
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Biblioteca de plantillas activas (ATL)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1607,10 +1607,6 @@
               items:
                 - name: Información general de fecha y hora
                   href: atl-mfc-shared/date-and-time.md
-                - name: 'Fecha y hora: Compatibilidad de automatización'
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 'Fecha y hora: Compatibilidad con bases de datos'
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: Tipo de fecha
                   href: atl-mfc-shared/date-type.md
             - name: Cadenas (ATL y MFC)
@@ -2888,6 +2884,8 @@
 - name: Referencia
   expanded: false
   items:
+    - name: Lenguaje C/C++ y bibliotecas estándar
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: Referencia de lenguajes
       expanded: false
       items:

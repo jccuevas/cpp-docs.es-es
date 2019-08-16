@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337718"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512816"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparar el runtime de simultaneidad con otros modelos de simultaneidad
 
@@ -33,7 +33,7 @@ Los modelos de programación preferente y cooperativa son dos métodos comunes p
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Programación preferente y cooperativa
 
-La*programación preferente* es un mecanismo round robin basado en la prioridad que proporciona a todas las tareas acceso exclusivo a un recurso informático durante un período determinado y, luego, pasa a otra tarea. Este tipo de programación es habitual en los sistemas operativos de multitarea, como Windows. *La programación cooperativa* es un mecanismo que proporciona todas las tareas acceso exclusivo a un recurso informático hasta que la tarea finaliza o cede su acceso al recurso. El Runtime de simultaneidad usa la programación cooperativa junto con el programador preferente del sistema operativo. De este modo, consigue el mayor uso posible de los recursos de procesamiento.
+La*programación preferente* es un mecanismo round robin basado en la prioridad que proporciona a todas las tareas acceso exclusivo a un recurso informático durante un período determinado y, luego, pasa a otra tarea. La programación preferente es habitual en los sistemas operativos de multitarea, como Windows. La *programación cooperativa* es un mecanismo que proporciona a todas las tareas acceso exclusivo a un recurso informático hasta que la tarea finaliza o hasta que la tarea produce su acceso al recurso. El Runtime de simultaneidad usa la programación cooperativa junto con el programador preferente del sistema operativo. De este modo, consigue el mayor uso posible de los recursos de procesamiento.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Diferencias entre los programadores preferente y cooperativo
 
@@ -63,7 +63,7 @@ La API de Windows usa el lenguaje de programación C para exponer el modelo de p
 
 ### <a name="threads-and-thread-pools"></a>Subprocesos y grupos de subprocesos
 
-El mecanismo de simultaneidad central en la API de Windows es el subproceso. Normalmente se usa la función [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) para crear subprocesos. Aunque los subprocesos son relativamente fáciles de crear y de usar, el sistema operativo asigna una cantidad significativa de tiempo y otros recursos para administrarlos. Además, aunque se garantiza que todos los subprocesos reciben el mismo tiempo de ejecución que cualquier otro subproceso que esté en el mismo nivel de prioridad, la sobrecarga asociada hace que deba crear tareas suficientemente grandes. Para las tareas pequeñas o más específicas, la sobrecarga asociada a la simultaneidad puede pesar más que la ventaja de ejecutar las tareas en paralelo.
+El mecanismo de simultaneidad central en la API de Windows es el subproceso. Normalmente se usa la función [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) para crear subprocesos. Aunque los subprocesos son relativamente fáciles de crear y de usar, el sistema operativo asigna una cantidad significativa de tiempo y otros recursos para administrarlos. Además, aunque se garantiza que todos los subprocesos reciben el mismo tiempo de ejecución que cualquier otro subproceso que esté en el mismo nivel de prioridad, la sobrecarga asociada hace que deba crear tareas suficientemente grandes. Para las tareas pequeñas o más específicas, la sobrecarga asociada a la simultaneidad puede pesar más que la ventaja de ejecutar las tareas en paralelo.
 
 Los grupos de subprocesos son una forma de reducir el coste de la administración de subprocesos. Los grupos de subprocesos personalizados y la implementación de grupos de subprocesos proporcionada con la API de Windows permiten que los elementos de trabajo pequeños se ejecuten en paralelo de forma eficaz. El grupo de subprocesos de Windows mantiene los elementos de trabajo en una cola «primero en entrar, primero en salir» (FIFO). Todos los elementos de trabajo se inician en el orden en que se agregaron al grupo.
 
@@ -77,7 +77,7 @@ En Windows XP y Windows Vista, las aplicaciones que usan el Runtime de simultane
 
 En Windows 7 y Windows Server 2008 R2, el sistema operativo admite la simultaneidad y la escalabilidad. Por ejemplo, estos sistemas operativos admiten los equipos que tienen más de 64 subprocesos de hardware. Las aplicaciones que usan la API de Windows deben modificarse para poder aprovechar estas nuevas características, aunque las aplicaciones que usan el Runtime de simultaneidad usan automáticamente estas características, por lo que no es necesario hacer modificaciones.
 
-[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[Arriba](#top)]
 

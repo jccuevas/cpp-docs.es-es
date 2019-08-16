@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350093"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509357"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>Funciones intrínsecas _InterlockedIncrement
+# <a name="_interlockedincrement-intrinsic-functions"></a>Funciones intrínsecas _InterlockedIncrement
 
 **Específicos de Microsoft**
 
-Proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) función.
+Proporcione compatibilidad intrínseca del compilador para la función [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) de Win32 Windows SDK.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -109,7 +109,7 @@ El valor devuelto es el valor incrementado resultante.
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
 |`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
@@ -122,7 +122,7 @@ Mientras que la función `_InterlockedIncrement` opera con valores enteros de 32
 
 En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` si necesita adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.
 
-La variable a la que apunta el parámetro `lpAddend` debe estar alineada en un límite de 32 bits; de lo contrario, esta función produce un error en sistemas x86 multiprocesadores y en sistemas que no son x86. Para obtener más información, consulte [alinear](../cpp/align-cpp.md).
+La variable a la que apunta el parámetro `lpAddend` debe estar alineada en un límite de 32 bits; de lo contrario, esta función produce un error en sistemas x86 multiprocesadores y en sistemas que no son x86. Para obtener más información, consulte [align](../cpp/align-cpp.md).
 
 La función de Win32 se declara en `Wdm.h` o `Ntddk.h`.
 
@@ -130,7 +130,7 @@ Estas rutinas solo están disponibles como intrínsecos.
 
 ## <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo de cómo usar `_InterlockedIncrement`, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Para obtener un ejemplo de cómo usar `_InterlockedIncrement`, vea [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **FIN de Específicos de Microsoft**
 

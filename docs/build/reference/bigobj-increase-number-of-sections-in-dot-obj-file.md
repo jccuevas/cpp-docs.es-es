@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 46399dc0c1ff552b4fc963b686ac6aa6df8b6f71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30c02c72496e3bb91da3b39e1870f1dc5a2c040a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272980"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493112"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Aumentar el número de secciones en el archivo .Obj)
 
-**/bigobj** aumenta el número de secciones que puede contener un archivo de objeto.
+**/bigobj** aumenta el número de secciones que puede contener un archivo objeto.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,19 +25,19 @@ ms.locfileid: "62272980"
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, un archivo objeto puede contener hasta 65.279 (casi 2 ^ 16) secciones direccionables. Este límite se aplica independientemente de qué destino de plataforma especificada. **/bigobj** incrementa esa capacidad de direccionamiento a 4.294.967.296 (2 ^ 32).
+De forma predeterminada, un archivo objeto puede contener hasta 65.279 (casi 2 ^ 16) secciones direccionables. Este límite se aplica independientemente de la plataforma de destino que se especifique. **/bigobj** aumenta la capacidad de la dirección a 4.294.967.296 (2 ^ 32).
 
-La mayoría de los módulos nunca generan un archivo .obj que contiene más de 65.279 secciones. Sin embargo, el código generado a la máquina o código que hace un uso intensivo de las bibliotecas de plantillas, puede requerir archivos .obj que puedan contener más secciones. **/ bigobj** está habilitada de forma predeterminada en los proyectos de plataforma Universal de Windows (UWP) porque el código XAML generado por la máquina incluye un gran número de encabezados. Si deshabilita esta opción en un proyecto de aplicación para UWP, el código puede generar el error del compilador C1128.
+La mayoría de los módulos nunca generan un archivo. obj que contiene más de 65.279 secciones. Sin embargo, el código generado por el equipo o el código que hace un uso intensivo de las bibliotecas de plantillas puede requerir archivos. obj que pueden contener más secciones. **/bigobj** está habilitado de forma predeterminada en los proyectos de plataforma universal de Windows (UWP) porque el código XAML generado por el equipo incluye un gran número de encabezados. Si deshabilita esta opción en un proyecto de aplicación para UWP, el código puede generar el error del compilador C1128.
 
-Para obtener información sobre el formato de archivo objeto COFF de PE, consulte [formato PE](/windows/desktop/debug/pe-format) en la documentación de Windows.
+Para obtener información sobre el formato de archivo de objeto PE-COFF, consulte [formato PE](/windows/win32/debug/pe-format) en la documentación de Windows.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
+1. Seleccione la página de propiedades **Propiedades de configuración** > **C/C++**  > **Línea de comandos**.
 
-1. Escriba el **/bigobj** opción del compilador en el **opciones adicionales** cuadro.
+1. Escriba la opción del compilador **/bigobj** en el cuadro **opciones adicionales** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 

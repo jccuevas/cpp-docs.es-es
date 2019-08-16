@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: d6e1be0b06beed8cf68a1ec90571281b592af21d
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 3b00bf78d286ba530dee85240236a2a9ea171113
+ms.sourcegitcommit: a146b169664c001406a0cccc7fbda1b8d7be5078
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980460"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024641"
 ---
 # <a name="delete-operator-c"></a>delete (Operador) (C++)
 
@@ -21,7 +21,8 @@ Desasigna un bloque de memoria.
 
 ## <a name="syntax"></a>Sintaxis
 
-> [`::``::`] `delete` *Cast-Expression* [] `delete []` *Cast-Expression*
+> [`::`] `delete` *Cast: expresión*\
+> [`::`] `delete []` *Cast: expresión*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -35,7 +36,7 @@ delete MyDialog;
 
 El uso de **Delete** en un puntero a un objeto no asignado con **New** proporciona resultados imprevisibles. Sin embargo, puede usar **Delete** en un puntero con el valor 0. Esta disposición significa que, cuando **New** devuelve 0 en caso de error, es inofensivo eliminar el resultado de una operación **New** con errores. Para obtener más información, vea [los operadores New y DELETE](../cpp/new-and-delete-operators.md).
 
-Los operadores **New** y **Delete** también se pueden usar para los tipos integrados, incluidas las matrices. Si `pointer` hace referencia a una matriz, ponga corchetes vacíos delante de `pointer`:
+Los operadores **New** y **Delete** también se pueden usar para los tipos integrados, incluidas las matrices. Si `pointer` hace referencia a una matriz, coloque corchetes`[]`vacíos `pointer`() antes de:
 
 ```cpp
 int* set = new int[100];
@@ -89,10 +90,10 @@ Para obtener ejemplos del uso de **Delete**, vea [New (operador](../cpp/new-oper
 
 El operador Delete invoca la función de **operador Delete**.
 
-Para los objetos que no son de tipo de clase ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)o [Union](../cpp/unions.md)), se invoca el operador Delete global. Para los objetos de tipo de clase, el nombre de la función de desasignación se resuelve en el ámbito global si la expresión de eliminación comienza con el operador unario de resolución de ámbito (::). Si no, el operador delete invoca el destructor de un objeto antes de la desasignación de memoria (si el puntero no es nulo). El operador delete puede definirse clase por clase; si no existe esta definición para una clase determinada, se invoca el operador delete global. Si la expresión de eliminación se utiliza para desasignar un objeto de clase cuyo de tipo estático tenga un destructor virtual, la función de desasignación se resuelve mediante el destructor virtual del tipo dinámico del objeto.
+Para los objetos que no son de tipo de clase ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)o [Union](../cpp/unions.md)), se invoca el operador Delete global. Para los objetos de tipo de clase, el nombre de la función de desasignación se resuelve en el ámbito global si la expresión de eliminación comienza con el`::`operador unario de resolución de ámbito (). Si no, el operador delete invoca el destructor de un objeto antes de la desasignación de memoria (si el puntero no es nulo). El operador delete puede definirse clase por clase; si no existe esta definición para una clase determinada, se invoca el operador delete global. Si la expresión de eliminación se utiliza para desasignar un objeto de clase cuyo de tipo estático tenga un destructor virtual, la función de desasignación se resuelve mediante el destructor virtual del tipo dinámico del objeto.
 
 ## <a name="see-also"></a>Vea también
 
-[Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)<br/>
-[Palabras clave](../cpp/keywords-cpp.md)<br/>
+[Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)\
+[Palabras clave](../cpp/keywords-cpp.md)\
 [Operadores new y delete](../cpp/new-and-delete-operators.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866093"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498526"
 ---
 # <a name="string-and-character-literals-c"></a>Literales de cadena y carácterC++()
 
@@ -107,7 +107,7 @@ Los literales de carácter se codifican de manera diferente según su prefijo.
 
 Hay tres tipos de secuencias de escape: simple, octal, hexadecimal. Las secuencias de escape pueden ser cualquiera de las siguientes:
 
-|Valor|Secuencia de escape|
+|Value|Secuencia de escape|
 |-----------|---------------------|
 | Nueva línea | \\n |
 | Barra diagonal inversa | \\\\ |
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Los nombres de carácter universal no pueden codificar valores en el intervalo de puntos de código suplente D800-DFFF. En el caso de pares suplentes Unicode, especifique el nombre de carácter universal mediante `\UNNNNNNNN`, donde NNNNNNNN es el punto de código de ocho dígitos para el carácter. El compilador genera un par suplente si es necesario.
 
-En C++03, el lenguaje solo permitía representar un subjuego de caracteres mediante sus propios nombres de carácter universal. También permitía algunos nombres de carácter universal que, en efecto, no representaban ningún carácter Unicode válido. Este error se corrigió en el estándar de C++ 11. En C++11, tanto los literales de carácter y cadena como los identificadores pueden usar nombres de carácter universal.  Para obtener más información sobre los nombres de carácter universal, consulte [Character Sets](../cpp/character-sets.md). Para obtener más información sobre Unicode, consulte [Unicode](https://msdn.microsoft.com/library/dd374081). Para obtener más información sobre los pares suplentes, consulte [Pares suplentes y caracteres complementarios](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+En C++03, el lenguaje solo permitía representar un subjuego de caracteres mediante sus propios nombres de carácter universal. También permitía algunos nombres de carácter universal que, en efecto, no representaban ningún carácter Unicode válido. Este error se corrigió en el estándar de C++ 11. En C++11, tanto los literales de carácter y cadena como los identificadores pueden usar nombres de carácter universal.  Para obtener más información sobre los nombres de carácter universal, consulte [Character Sets](../cpp/character-sets.md). Para obtener más información sobre Unicode, consulte [Unicode](/windows/win32/intl/unicode). Para obtener más información sobre los pares suplentes, consulte [Pares suplentes y caracteres complementarios](/windows/win32/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Literales de cadena
 
