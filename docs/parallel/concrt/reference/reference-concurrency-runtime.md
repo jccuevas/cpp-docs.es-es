@@ -454,18 +454,18 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180152"
 ---
 # <a name="reference-concurrency-runtime"></a>Referencia (Runtime de simultaneidad)
 
 Esta sección contiene información de referencia para el Runtime de simultaneidad.
 
 > [!Note]
-> El estándar del lenguaje C++ reserva el uso de los identificadores que comienzan con un carácter de subrayado (_) para implementaciones como bibliotecas. No utilice estos nombres en el código. El comportamiento de los elementos de código cuyos nombres siguen esta convención no está garantizado y está sujeto a cambios en el futuro. Por estos motivos, dichos elementos de código se omiten en la documentación del Runtime de simultaneidad.
+> El C++ estándar del lenguaje reserva el uso de los identificadores que comienzan con un carácter de subrayado (_) para implementaciones como bibliotecas. No utilice estos nombres en el código. El comportamiento de los elementos de código cuyos nombres siguen esta convención no está garantizado y está sujeto a cambios en el futuro. Por estos motivos, dichos elementos de código se omiten en la documentación del Runtime de simultaneidad.
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -474,4 +474,4 @@ El espacio de nombres de simultaneidad proporciona clases y funciones que le pro
 
 [espacio de nombres std](std-namespace.md)
 
-[espacio de nombres stdx)](stdx-namespace.md)
+[stdx namespace](stdx-namespace.md)

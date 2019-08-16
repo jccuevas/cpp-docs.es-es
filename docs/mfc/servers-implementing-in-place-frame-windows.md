@@ -9,11 +9,11 @@ helpviewer_keywords:
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
 ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307957"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementación de Windows de marco en contexto
 
@@ -52,6 +52,6 @@ Para obtener más información, consulte [COleIPFrameWnd](../mfc/reference/colei
 ## <a name="see-also"></a>Vea también
 
 [Servidores](../mfc/servers.md)<br/>
-[servidores: Implementación de un servidor](../mfc/servers-implementing-a-server.md)<br/>
-[servidores: Implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)<br/>
-[servidores: Elementos del servidor](../mfc/servers-server-items.md)
+[Servidores: implementar un servidor](../mfc/servers-implementing-a-server.md)<br/>
+[Servidores: implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)<br/>
+[Servidores: elementos del servidor](../mfc/servers-server-items.md)

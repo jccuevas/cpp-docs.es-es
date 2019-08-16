@@ -1,6 +1,6 @@
 ---
 title: Versiones de la biblioteca MFC
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537662"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524795"
 ---
 # <a name="mfc-library-versions"></a>Versiones de la biblioteca MFC
 
@@ -85,7 +85,7 @@ Los proyectos MFC utilizan el símbolo de preprocesador \_UNICODE para indicar l
 
 Bibliotecas estáticas de MFC utilizan las siguientes convenciones de nomenclatura. Los nombres de biblioteca tienen el formato
 
-> <em>u</em>AFX<em>cd</em>. LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 donde las letras en cursiva en minúsculas son marcadores de posición para los especificadores, cuyo significado se muestra en la tabla siguiente:
 
@@ -103,8 +103,8 @@ Todas las bibliotecas que se muestran en la tabla siguiente se incluyen creado p
 |NAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC, versión de depuración|
 |UAFXCW.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de lanzamiento|
 |UAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de depuración|
-|AFXNMCD. LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de lanzamiento|
-|AFXNMCDD. LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de depuración|
+|AFXNMCD.LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de lanzamiento|
+|AFXNMCDD.LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de depuración|
 
 Los archivos de depurador que tienen el mismo nombre base y una extensión .pdb también están disponibles para cada una de las bibliotecas estáticas.
 
@@ -119,7 +119,7 @@ Los archivos DLL de MFC tienen *versión* números que indican la compatibilidad
 |MFC*versión*. ARCHIVO DLL|Versión de DLL de MFC, ANSI o versión MBCS|
 |MFC*versión*U.DLL|DLL de MFC, versión de lanzamiento de Unicode|
 |MFC*versión*D.DLL|Versión de DLL de MFC, ANSI o MBCS de depuración|
-|MFC*versión*UD. ARCHIVO DLL|DLL de MFC, versión de depuración de Unicode|
+|MFC*version*UD.DLL|DLL de MFC, versión de depuración de Unicode|
 |MFCM*versión*. ARCHIVO DLL|DLL de MFC con controles de Windows Forms, versión de MBCS o ANSI|
 |MFCM*versión*U.DLL|DLL de MFC con controles de formularios de Windows, versión de lanzamiento de Unicode|
 |MFCM*versión*D.DLL|DLL de MFC con controles de Windows Forms, versión ANSI o MBCS de depuración|
@@ -129,7 +129,7 @@ Las bibliotecas de importación necesarias para crear aplicaciones o archivos DL
 
 Si se vincula dinámicamente a la versión compartida del archivo DLL de MFC, ya sea desde una aplicación o desde un archivo DLL de extensión MFC, debe incluir la búsqueda de coincidencias MFC*versión*. Archivo DLL o MFC*versión*U.DLL al implementar el producto.
 
-Para obtener una lista de DLL de Visual C++ que se puede distribuir con sus aplicaciones, consulte [código distribuible para Microsoft Visual Studio 2017 y Microsoft Visual Studio 2017 SDK (incluye utilidades y archivos BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098).
+Para obtener una lista de Visual C++ archivos DLL que se puede distribuir con sus aplicaciones, consulte [código distribuible para Microsoft Visual Studio 2017 y Microsoft Visual Studio 2017 SDK (incluye utilidades y archivos BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) o [ Código distribuible para Visual Studio de 2019](/visualstudio/releases/2019/redistribution).
 
 Para obtener más información sobre la compatibilidad con MBCS y Unicode en MFC, vea [juego de caracteres Multibyte (MBCS) compatibilidad con Unicode y](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 

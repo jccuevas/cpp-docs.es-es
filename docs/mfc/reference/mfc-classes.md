@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: e31e7d68676a40da51f214496a13072d0d4d2b28
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dab5c716cc21c0a07eaf03def7e0346c877f55b5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288659"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502048"
 ---
 # <a name="mfc-classes"></a>Clases de MFC
 
@@ -20,7 +20,7 @@ Las clases de la siguiente lista se incluyen en la biblioteca MFC (Microsoft Fou
 >  Para obtener información sobre [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) y otras clases que son comunes en la programación con MFC y ATL, consulte [Classes Shared by MFC and ATL](../../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md).
 
 > [!IMPORTANT]
->  Las clases MFC y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Las clases MFC y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -127,7 +127,7 @@ Implementa una propiedad de control OLE transferida de forma asincrónica y alma
 Proporciona la funcionalidad de un cuadro de lista de comprobación de Windows.
 
 [CClientDC (clase)](../../mfc/reference/cclientdc-class.md)<br/>
-Administra la llamada de funciones de Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) en tiempo de construcción y [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) en tiempo de destrucción.
+Administra la llamada de funciones de Windows [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) en tiempo de construcción y [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) en tiempo de destrucción.
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 Clase base para la arquitectura de mapa de mensajes de la biblioteca MFC (Microsoft Foundation Class).
@@ -160,7 +160,7 @@ Encapsula una transición constante.
 Administra menús de acceso directo, también conocidos como menús contextuales.
 
 [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)<br/>
-Clase base para las clases de barra de controles [CStatusBar (clase)](../../mfc/reference/cstatusbar-class.md), [CToolBar (clase)](../../mfc/reference/ctoolbar-class.md), [CDialogBar (clase)](../../mfc/reference/cdialogbar-class.md), [CReBar (clase)](../../mfc/reference/crebar-class.md)y [ COleResizeBar (clase)](../../mfc/reference/coleresizebar-class.md).
+Clase base para las clases de barra de control [CStatusBar clase](../../mfc/reference/cstatusbar-class.md), [clase CToolBar](../../mfc/reference/ctoolbar-class.md), clase [CDialogBar](../../mfc/reference/cdialogbar-class.md), [clase CReBar](../../mfc/reference/crebar-class.md)y [clase COleResizeBar](../../mfc/reference/coleresizebar-class.md).
 
 [CCriticalSection (clase)](../../mfc/reference/ccriticalsection-class.md)<br/>
 Representa una "sección crítica", que es un objeto de sincronización que permite que solo un subproceso cada vez tenga acceso a un recurso o sección de código.
@@ -385,7 +385,7 @@ Encapsula el cuadro de diálogo de archivos común para Windows.
 Representa una condición de excepción relacionada con archivo.
 
 [CFileFind (clase)](../../mfc/reference/cfilefind-class.md)<br/>
-Realiza búsquedas de archivos locales y es la clase base para [CGopherFileFind (clase)](../../mfc/reference/cgopherfilefind-class.md) y [CFtpFileFind (clase)](../../mfc/reference/cftpfilefind-class.md), lo que realizar búsquedas de archivos de Internet.
+Realiza búsquedas de archivos locales y es la clase base de la clase [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) y de la [clase CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), que realiza las búsquedas de archivos de Internet.
 
 [CFindReplaceDialog (clase)](../../mfc/reference/cfindreplacedialog-class.md)<br/>
 Permite implementar los cuadros de diálogo Buscar/Reemplazar de cadena estándar en la aplicación.
@@ -409,7 +409,7 @@ La clase base utilizada para las vistas de formulario.
 Proporciona la funcionalidad de una ventana de marco de interfaz de un único documento (SDI) de Windows superpuesta o emergente, junto con los miembros para administrar la ventana.
 
 [CFrameWndEx (clase)](../../mfc/reference/cframewndex-class.md)<br/>
-Implementa la funcionalidad de una interfaz de un único documento (SDI) de Windows superpuesta o una ventana de marco emergente y proporciona miembros para administrar la ventana. Extiende la [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md) clase.
+Implementa la funcionalidad de una interfaz de un único documento (SDI) de Windows superpuesta o una ventana de marco emergente y proporciona miembros para administrar la ventana. Extiende la clase de [clase CFrameWnd](../../mfc/reference/cframewnd-class.md) .
 
 [CFtpConnection (clase)](../../mfc/reference/cftpconnection-class.md)<br/>
 Administra la conexión FTP a un servidor de Internet y permite la manipulación directa de directorios y archivos en ese servidor.
@@ -430,7 +430,7 @@ Proporciona la funcionalidad para buscar y leer archivos en un servidor gopher.
 Ayuda en las búsquedas de archivos de Internet de servidores gopher.
 
 [CGopherLocator (clase)](../../mfc/reference/cgopherlocator-class.md)<br/>
-Obtiene un "localizador gopher" de un servidor gopher, determina el tipo de localizador y pone el localizador a disposición [CGopherFileFind (clase)](../../mfc/reference/cgopherfilefind-class.md).
+Obtiene un "localizador" Gopher de un servidor gopher, determina el tipo de localizador y pone el localizador a disposición de la [clase CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).
 
 [CHeaderCtrl (clase)](../../mfc/reference/cheaderctrl-class.md)<br/>
 Proporciona la funcionalidad del control común de encabezado de Windows.
@@ -445,7 +445,7 @@ Proporciona la funcionalidad del control ActiveX de WebBrowser en una ventana de
 Representa un componente de edición HTML.
 
 [CHtmlEditDoc (clase)](../../mfc/reference/chtmleditdoc-class.md)<br/>
-Con [CHtmlEditView (clase)](../../mfc/reference/chtmleditview-class.md), proporciona la funcionalidad de la plataforma de edición WebBrowser en el contexto de la arquitectura de vista-documento MFC.
+Con la [clase CHtmlEditView](../../mfc/reference/chtmleditview-class.md), proporciona la funcionalidad de la plataforma de edición WebBrowser en el contexto de la arquitectura de vista-documento de MFC.
 
 [CHtmlEditView (clase)](../../mfc/reference/chtmleditview-class.md)<br/>
 Proporciona la funcionalidad de la plataforma de edición WebBrowser en el contexto de la arquitectura de vista/documento de MFC.
@@ -517,7 +517,7 @@ Proporciona la funcionalidad de un cuadro de lista de Windows.
 Encapsula la funcionalidad de un "control de vista de lista", que muestra una colección de elementos cada uno de los cuales consta de un icono (de una lista de imágenes) y una etiqueta.
 
 [CListView (clase)](../../mfc/reference/clistview-class.md)<br/>
-Simplifica el uso del control de lista y de [CListCtrl (clase)](../../mfc/reference/clistctrl-class.md), la clase que encapsula la funcionalidad de control de lista, con la arquitectura de vista-documento de MFC.
+Simplifica el uso del control de lista y de la [clase CListCtrl](../../mfc/reference/clistctrl-class.md), la clase que encapsula la funcionalidad de control de lista, con la arquitectura de vista-documento de MFC.
 
 [CLongBinary (clase)](../../mfc/reference/clongbinary-class.md)<br/>
 Simplifica el trabajo con objetos de datos binarios de gran tamaño (a menudo denominados BLOB, u "objetos binarios grandes") en una base de datos.
@@ -550,19 +550,19 @@ Admite mapas de punteros void con clave de palabras de 16 bits.
 Proporciona la funcionalidad de una ventana secundaria de la interfaz de múltiples documentos (MDI) de Windows, junto con los miembros para administrar la ventana.
 
 [CMDIChildWndEx (clase)](../../mfc/reference/cmdichildwndex-class.md)<br/>
-Proporciona la funcionalidad de una ventana secundaria de MDI (interfaz de varios documentos) de Windows. Amplía la funcionalidad de [CMDIChildWnd (clase)](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.
+Proporciona la funcionalidad de una ventana secundaria de MDI (interfaz de varios documentos) de Windows. Extiende la funcionalidad de la [clase CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.
 
 [CMDIFrameWnd (clase)](../../mfc/reference/cmdiframewnd-class.md)<br/>
 Proporciona la funcionalidad de una ventana de marco de MDI (interfaz de varios documentos) de Windows, junto con miembros para administrar la ventana.
 
 [CMDIFrameWndEx (clase)](../../mfc/reference/cmdiframewndex-class.md)<br/>
-Extiende la funcionalidad de [CFrameWnd (clase)](../../mfc/reference/cframewnd-class.md), una ventana de marco de interfaz múltiples documentos (MDI) de Windows.
+Extiende la funcionalidad de la [clase CFrameWnd](../../mfc/reference/cframewnd-class.md), una ventana de marco de la interfaz de múltiples documentos (MDI) de Windows.
 
 [CMDITabInfo (clase)](../../mfc/reference/cmditabinfo-class.md)<br/>
 Se usa para pasar parámetros al método [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) . Establezca miembros de esta clase para controlar el comportamiento de MDI con grupos con pestañas.
 
 [CMemFile (clase)](../../mfc/reference/cmemfile-class.md)<br/>
-El [CFile (clase)](../../mfc/reference/cfile-class.md)-clase derivada que admite archivos de memoria.
+La clase derivada de la [clase CFile](../../mfc/reference/cfile-class.md)que admite archivos de memoria.
 
 [CMemoryException (clase)](../../mfc/reference/cmemoryexception-class.md)<br/>
 Representa una condición de excepción de memoria insuficiente.
@@ -589,7 +589,7 @@ Botón que muestra u oculta una [CDockablePane Class](../../mfc/reference/cdocka
 Implementa la funcionalidad básica para las ventanas con pestañas.
 
 [CMFCButton (clase)](../../mfc/reference/cmfcbutton-class.md)<br/>
-Agrega funcionalidad a la [CButton (clase)](../../mfc/reference/cbutton-class.md) clase como alinear el texto del botón, combinar el texto del botón y una imagen, seleccionar un cursor y especificar una información sobre herramientas.
+Agrega funcionalidad a la clase de [clase CButton](../../mfc/reference/cbutton-class.md) , como alinear el texto del botón, combinar el texto del botón y una imagen, seleccionar un cursor y especificar una información sobre herramientas.
 
 [CMFCCaptionBar (clase)](../../mfc/reference/cmfccaptionbar-class.md)<br/>
 Barra de control que puede mostrar tres elementos: un botón, una etiqueta de texto y un mapa de bits. Puede mostrar un solo elemento de cada tipo al mismo tiempo. Puede alinear cada elemento al borde izquierdo o derecho del control o al centro. También puede aplicar un estilo plano o 3D a los bordes superior e inferior de la barra de título.
@@ -601,7 +601,7 @@ Implementa un botón que se muestra en la barra de título de un panel acoplable
 Representa una barra de controles de acoplamiento que puede seleccionar colores en un documento o aplicación.
 
 [CMFCColorButton (clase)](../../mfc/reference/cmfccolorbutton-class.md)<br/>
-El `CMFCColorButton` y [CMFCColorBar (clase)](../../mfc/reference/cmfccolorbar-class.md) clases se usan conjuntamente para implementar un control de selector de colores.
+Las `CMFCColorButton` clases de [clase y CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) se usan conjuntamente para implementar un control de selector de colores.
 
 [CMFCColorDialog (clase)](../../mfc/reference/cmfccolordialog-class.md)<br/>
 Representa un cuadro de diálogo de selección de color.
@@ -628,7 +628,7 @@ Dibuja el rectángulo de arrastre que aparece cuando el usuario arrastra un pane
 Una barra de herramientas que aparece cuando el usuario presiona y mantiene presionado un botón de la barra de herramientas de nivel superior.
 
 [CMFCDropDownToolbarButton (clase)](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-Un tipo de botón de la barra de herramientas que se comporta como un botón normal cuando se hace clic en él. Sin embargo, se abre una barra de herramientas desplegable ([CMFCDropDownToolBar (clase)](../../mfc/reference/cmfcdropdowntoolbar-class.md) si el usuario presiona y mantiene el botón de la barra de herramientas.
+Un tipo de botón de la barra de herramientas que se comporta como un botón normal cuando se hace clic en él. Sin embargo, abre una barra de herramientas desplegable ([clase CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) si el usuario presiona y mantiene presionado el botón de barra de herramientas.
 
 [CMFCDynamicLayout (clase)](../../mfc/reference/cmfcdynamiclayout-class.md)<br/>
 Especifica cómo se mueven y cambian de tamaño los controles de una ventana cuando el usuario cambia el tamaño de la ventana.
@@ -658,7 +658,7 @@ Admite un control que asigna comandos a teclas del teclado.
 Muestra un botón como hipervínculo e invoca el destino del vínculo cuando se hace clic en el botón.
 
 [CMFCListCtrl (clase)](../../mfc/reference/cmfclistctrl-class.md)<br/>
-Extiende la funcionalidad de [CListCtrl (clase)](../../mfc/reference/clistctrl-class.md) clase proporcionando la funcionalidad de control avanzado de encabezado de la [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).
+Extiende la funcionalidad de la clase de [clase CListCtrl](../../mfc/reference/clistctrl-class.md) al admitir la funcionalidad de control de encabezado avanzado de la [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).
 
 [CMFCMaskedEdit (clase)](../../mfc/reference/cmfcmaskededit-class.md)<br/>
 Admite un control de edición enmascarado, que valida los datos proporcionados por el usuario en una máscara y muestra los resultados validados de acuerdo con una plantilla.
@@ -670,10 +670,10 @@ Una barra de menús que implementa el acoplamiento.
 Un botón que muestra un menú emergente e informes en las selecciones de menú del usuario.
 
 [CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
-Un panel con pestañas con el aspecto visual del **Panel de navegación** en Microsoft Outlook 2000 u Outlook 2003. El `CMFCOutlookBar` objeto contiene un [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md) objeto y una serie de pestañas. Las pestañas pueden ser [clase CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) objetos o `CWnd`-objetos derivados. Para el usuario, la barra de Outlook aparece como una serie de botones y un área de presentación. Cuando el usuario hace clic en un botón, se muestra el panel de control o botón correspondiente .
+Un panel con pestañas con el aspecto visual del **Panel de navegación** en Microsoft Outlook 2000 u Outlook 2003. El `CMFCOutlookBar` objeto contiene un objeto de la [clase CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) y una serie de pestañas. Las pestañas pueden ser objetos de [clase CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) u `CWnd`objetos derivados de. Para el usuario, la barra de Outlook aparece como una serie de botones y un área de presentación. Cuando el usuario hace clic en un botón, se muestra el panel de control o botón correspondiente .
 
 [CMFCOutlookBarPane (clase)](../../mfc/reference/cmfcoutlookbarpane-class.md)<br/>
-Un control derivado de [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md) que puede insertarse en una barra de Outlook ([CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md)). El panel de barra de Outlook contiene una columna de botones grandes. El usuario puede subir y bajar la lista de botones si es mayor que el panel. Cuando el usuario desasocia un panel de barra de Outlook de la barra de Outlook, puede flotar o acoplarse en la ventana de marco principal.
+Un control derivado de la [clase CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) que se puede insertar en una barra de Outlook ([clase cmfcoutlookbar (](../../mfc/reference/cmfcoutlookbar-class.md)). El panel de barra de Outlook contiene una columna de botones grandes. El usuario puede subir y bajar la lista de botones si es mayor que el panel. Cuando el usuario desasocia un panel de barra de Outlook de la barra de Outlook, puede flotar o acoplarse en la ventana de marco principal.
 
 [CMFCOutlookBarTabCtrl (clase)](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 Un control de pestaña que tiene el aspecto visual del **Panel de navegación** de Microsoft Outlook.
@@ -715,7 +715,7 @@ Barra de control que proporciona información de diseño, persistencia y estado 
 Implementa un botón especial situado en la esquina superior izquierda de la ventana de la aplicación. Cuando se hace clic, el botón abre un menú que contiene normalmente los comandos comunes del menú **Archivo** , tales como **Abrir**, **Guardar**y **Salir**.
 
 [CMFCRibbonBaseElement (clase)](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-Clase base para todos los elementos que se pueden agregar a un [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.
+Clase base para todos los elementos que se pueden agregar a una [clase CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.
 
 [CMFCRibbonButton (clase)](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 Implementa botones que puede colocar en elementos de barra de cinta como paneles, barras de herramientas de acceso rápido y menús emergentes.
@@ -724,7 +724,7 @@ Implementa botones que puede colocar en elementos de barra de cinta como paneles
 Permite organizar un conjunto de botones de la cinta de opciones en un grupo. Todos los botones del grupo son directamente adyacentes a otros horizontalmente y se incluyen en un borde.
 
 [CMFCRibbonCategory (clase)](../../mfc/reference/cmfcribboncategory-class.md)<br/>
-Implementa una pestaña de cinta que contiene un grupo de [CMFCRibbonPanel (clase)](../../mfc/reference/cmfcribbonpanel-class.md).
+Implementa una pestaña de cinta que contiene un grupo de la [clase CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md).
 
 [CMFCRibbonCheckBox (clase)](../../mfc/reference/cmfcribboncheckbox-class.md)<br/>
 Implementa una casilla que puede agregar a un panel, una barra de herramientas de acceso rápido o un menú emergente de la cinta.
@@ -757,7 +757,7 @@ Implementa una etiqueta de texto no seleccionable en una cinta.
 Implementa un hipervínculo que se coloca en una cinta. El hipervínculo abre una página web cuando se hace clic en él.
 
 [CMFCRibbonMainPanel (clase)](../../mfc/reference/cmfcribbonmainpanel-class.md)<br/>
-Implementa un panel de cinta de opciones que se muestra al hacer clic en el [CMFCRibbonApplicationButton (clase)](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+Implementa un panel de cinta que se muestra al hacer clic en la [clase CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
 
 [CMFCRibbonMiniToolBar (clase)](../../mfc/reference/cmfcribbonminitoolbar-class.md)<br/>
 Implementa una barra de herramientas emergente contextual.
@@ -802,25 +802,25 @@ Proporciona información sobre la ficha MDI sobre la que el usuario sitúa el mo
 Implementa una lista de elementos seleccionables (tareas).
 
 [CMFCTasksPaneTask (clase)](../../mfc/reference/cmfctaskspanetask-class.md)<br/>
-Clase auxiliar que representa las tareas para el control de panel de tareas ([CMFCTasksPane (clase)](../../mfc/reference/cmfctaskspane-class.md)). El objeto de tarea representa un elemento en el grupo de tareas ([clase CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Cada tarea puede tener un comando que el marco ejecuta cuando un usuario hace clic en la tarea y en un icono que aparece a la izquierda del nombre de tarea.
+Clase auxiliar que representa las tareas para el control de panel de tareas ([clase CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). El objeto de tarea representa un elemento del grupo de tareas ([clase CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Cada tarea puede tener un comando que el marco ejecuta cuando un usuario hace clic en la tarea y en un icono que aparece a la izquierda del nombre de tarea.
 
 [CMFCTasksPaneTaskGroup (clase)](../../mfc/reference/cmfctaskspanetaskgroup-class.md)<br/>
-Clase auxiliar utilizada por la [CMFCTasksPane (clase)](../../mfc/reference/cmfctaskspane-class.md) control. Los objetos de tipo `CMFCTasksPaneTaskGroup` representan un *grupo de tareas*. El grupo de tareas es una lista de elementos que el marco muestra en un cuadro independiente con un botón de contraer. El cuadro puede tener una leyenda opcional (nombre de grupo). Si un grupo está contraído, la lista de tareas no está visible.
+Clase auxiliar utilizada por el control de la [clase CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) . Los objetos de tipo `CMFCTasksPaneTaskGroup` representan un *grupo de tareas*. El grupo de tareas es una lista de elementos que el marco muestra en un cuadro independiente con un botón de contraer. El cuadro puede tener una leyenda opcional (nombre de grupo). Si un grupo está contraído, la lista de tareas no está visible.
 
 [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md)<br/>
-Es similar a [CToolBar (clase)](../../mfc/reference/ctoolbar-class.md), pero proporciona compatibilidad adicional para las características de la interfaz de usuario. Se incluyen las barras de herramientas planas, las barras de herramientas con imágenes activas, los iconos grandes, los botones de buscapersonas, las barras de herramientas bloqueadas, los controles rebar, el texto en imágenes, las imágenes de fondo y las barras de herramientas con pestañas. La clase `CMFCToolBar` también contiene compatibilidad integrada para la personalización de usuario de barras de herramientas y menús, arrastrar y colocar entre las barras de herramientas y menús, botones del cuadro combinado, botones del cuadro de edición, selectores de colores y botones acumulados.
+Se parece a la [clase CToolBar](../../mfc/reference/ctoolbar-class.md), pero proporciona compatibilidad adicional para las características de la interfaz de usuario. Se incluyen las barras de herramientas planas, las barras de herramientas con imágenes activas, los iconos grandes, los botones de buscapersonas, las barras de herramientas bloqueadas, los controles rebar, el texto en imágenes, las imágenes de fondo y las barras de herramientas con pestañas. La clase `CMFCToolBar` también contiene compatibilidad integrada para la personalización de usuario de barras de herramientas y menús, arrastrar y colocar entre las barras de herramientas y menús, botones del cuadro combinado, botones del cuadro de edición, selectores de colores y botones acumulados.
 
 [CMFCToolBarImages (clase)](../../mfc/reference/cmfctoolbarimages-class.md)<br/>
 Administra imágenes de la barra de herramientas que se cargan de recursos de la aplicación o de archivos.
 
 [CMFCToolBarInfo (clase)](../../mfc/reference/cmfctoolbarinfo-class.md)<br/>
-Contiene los identificadores de recursos de las imágenes de la barra de herramientas en diversos estados. `CMFCToolBarInfo` es una clase auxiliar que se usa como un parámetro de la [cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) método.
+Contiene los identificadores de recursos de las imágenes de la barra de herramientas en diversos estados. `CMFCToolBarInfo`es una clase auxiliar que se utiliza como parámetro del método [CMFCToolBar:: LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) .
 
 [CMFCToolBarMenuButton (clase)](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 Un botón de la barra de herramientas que contiene un menú emergente.
 
 [CMFCToolBarsCustomizeDialog (clase)](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
-Un cuadro de diálogo no modal de tabulación ([CPropertySheet (clase)](../../mfc/reference/cpropertysheet-class.md)) que permite al usuario personalizar las barras de herramientas, menús, métodos abreviados de teclado, herramientas definidas por el usuario y el estilo visual de una aplicación. Normalmente, el usuario tiene acceso a este cuadro de diálogo seleccionando **Personalizar** en el menú **Herramientas** .
+Cuadro de diálogo no modal de tabulación ([clase CPropertySheet](../../mfc/reference/cpropertysheet-class.md)) que permite al usuario personalizar las barras de herramientas, menús, métodos abreviados de teclado, herramientas definidas por el usuario y estilo visual de una aplicación. Normalmente, el usuario tiene acceso a este cuadro de diálogo seleccionando **Personalizar** en el menú **Herramientas** .
 
 [CMFCToolTipCtrl (clase)](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
 Implementación extendida de información sobre herramientas basada en [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Una información sobre herramientas basada en la clase `CMFCToolTipCtrl` puede mostrar un icono, una etiqueta y una descripción. Puede personalizar su apariencia visual mediante un relleno de degradado, colores de texto y bordes personalizados, texto en negrita, esquinas redondeadas o un estilo de globo.
@@ -844,7 +844,7 @@ Proporciona a una aplicación un aspecto de Microsoft Visual Studio 2005.
 Simula el aspecto de Microsoft Windows XP o Microsoft Vista cuando el usuario selecciona un tema de Windows XP o Vista.
 
 [CMFCVisualManagerWindows7 (clase)](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)<br/>
-Proporciona la apariencia de una aplicación de Windows 7 a una aplicación.
+Proporciona a una aplicación el aspecto de una aplicación de Windows 7.
 
 [CMFCWindowsManagerDialog (clase)](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
 Permite a un usuario administrar ventanas secundarias MDI en una aplicación MDI.
@@ -853,13 +853,13 @@ Permite a un usuario administrar ventanas secundarias MDI en una aplicación MDI
 Representa una ventana de marco de altura media, como las que se suelen ver alrededor de las barras de herramientas flotantes.
 
 [CMonikerFile (clase)](../../mfc/reference/cmonikerfile-class.md)<br/>
-Representa una secuencia de datos ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) nombrada por un [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Representa una secuencia de datos ([IStream](/windows/win32/api/objidl/nn-objidl-istream)) nombrada por un [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker).
 
 [CMonthCalCtrl (clase)](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 Encapsula la funcionalidad de un control de calendario mensual.
 
 [CMouseManager (clase)](../../mfc/reference/cmousemanager-class.md)<br/>
-Permite a un usuario asociar diferentes comandos a un determinado [clase CView](../../mfc/reference/cview-class.md) objeto cuando el usuario hace doble clic dentro de esa vista.
+Permite a un usuario asociar diferentes comandos a un objeto de [clase CView](../../mfc/reference/cview-class.md) determinado cuando el usuario hace doble clic dentro de esa vista.
 
 [CMultiDocTemplate (clase)](../../mfc/reference/cmultidoctemplate-class.md)<br/>
 Define una plantilla de documento que implementa la interfaz de múltiples documentos (MDI).
@@ -871,7 +871,7 @@ Representa el mecanismo de control de acceso utilizado para controlar el acceso 
 Un cuadro de diálogo de varias páginas muestra varias páginas HTML secuencialmente y administra los eventos de cada página.
 
 [CMultiPaneFrameWnd (clase)](../../mfc/reference/cmultipaneframewnd-class.md)<br/>
-Extiende [CPaneFrameWnd (clase)](../../mfc/reference/cpaneframewnd-class.md). Puede admitir varios paneles. En lugar de un único identificador incrustado para una barra de control, `CMultiPaneFrameWnd` contiene un [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md) objeto que permite al usuario acoplar un `CMultiPaneFrameWnd` a otro y dinámicamente crear varios flotante, con pestañas en Windows.
+Extiende la [clase CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Puede admitir varios paneles. En lugar de un único identificador incrustado en una barra de `CMultiPaneFrameWnd` controles, contiene un objeto de la [clase CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) que permite al `CMultiPaneFrameWnd` usuario acoplar un a otro y crear dinámicamente varias ventanas flotantes con pestañas.
 
 [CMutex (clase)](../../mfc/reference/cmutex-class.md)<br/>
 Representa una exclusión mutua, que es un objeto de sincronización que permite que un subproceso tenga acceso de manera exclusiva mutua a un recurso.
@@ -922,7 +922,7 @@ La clase base de la que se deriva un objeto de módulo de control OLE.
 Proporciona compatibilidad con interfaces de control de cliente personalizadas.
 
 [COleConvertDialog (clase)](../../mfc/reference/coleconvertdialog-class.md)<br/>
-Para obtener más información, consulte el [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) estructura en el SDK de Windows.
+Para obtener más información, vea la estructura [OLEUICONVERT](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw) en el Windows SDK.
 
 [COleCurrency (clase)](../../mfc/reference/colecurrency-class.md)<br/>
 Encapsula el tipo de datos `CURRENCY` de la automatización OLE.
@@ -1012,7 +1012,7 @@ Se utiliza para servidores de edición visual OLE, servidores de automatización
 Se utiliza para un caso especial del cuadro de diálogo Editar vínculos de OLE, que se debe utilizar cuando se necesita actualizar solo los objetos existentes vinculados o incrustados en un documento.
 
 [COleVariant (clase)](../../mfc/reference/colevariant-class.md)<br/>
-Encapsula el tipo de datos [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
+Encapsula el tipo de datos [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) .
 
 [CPagerCtrl (clase)](../../mfc/reference/cpagerctrl-class.md)<br/>
 La clase `CPagerCtrl` ajusta el control de paginación de Windows, que puede desplazar en la vista una ventana contenida que no cabe en la ventana contenedora.
@@ -1021,7 +1021,7 @@ La clase `CPagerCtrl` ajusta el control de paginación de Windows, que puede des
 Encapsula los servicios proporcionados por el cuadro de diálogo Configurar página OLE común de Windows con compatibilidad adicional para configurar y modificar márgenes de impresión.
 
 [CPaintDC (clase)](../../mfc/reference/cpaintdc-class.md)<br/>
-Deriva una clase de contexto de dispositivo [CDC (clase)](../../mfc/reference/cdc-class.md).
+Una clase de contexto de dispositivo derivada de la [clase CDC](../../mfc/reference/cdc-class.md).
 
 [CPalette (clase)](../../mfc/reference/cpalette-class.md)<br/>
 Encapsula una paleta de colores de Windows.
@@ -1030,7 +1030,7 @@ Encapsula una paleta de colores de Windows.
 Mejora de [CControlBar Class](../../mfc/reference/ccontrolbar-class.md). Si está actualizando un proyecto MFC existente, debe reemplazar todas las apariciones de `CControlBar` por `CPane`.
 
 [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md)<br/>
-Componente básico del modelo de acoplamiento implementado por MFC. Un objeto de esta clase almacena punteros en dos paneles de acoplamiento o dos instancias de `CPaneContainer.` ; también almacena un puntero divisor que separa los paneles (o contenedores). Anidando contenedores dentro de contenedores, el marco puede compilar un árbol binario que representa diseños complejos de acoplamiento. La raíz del árbol binario se almacena en un [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md) objeto.
+Componente básico del modelo de acoplamiento implementado por MFC. Un objeto de esta clase almacena punteros en dos paneles de acoplamiento o dos instancias de `CPaneContainer.` ; también almacena un puntero divisor que separa los paneles (o contenedores). Anidando contenedores dentro de contenedores, el marco puede compilar un árbol binario que representa diseños complejos de acoplamiento. La raíz del árbol binario se almacena en un objeto de la [clase CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) .
 
 [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md)<br/>
 Administra el almacenamiento y la presentación del diseño de acoplamiento actual.
@@ -1099,7 +1099,7 @@ Representa un conjunto de registros seleccionados de un origen de datos.
 Una vista que muestra registros de una base de datos en controles.
 
 [CRect (clase)](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Similar a un Windows [estructura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
+Similar a una [estructura Rect](/windows/win32/api/windef/ns-windef-rect)de Windows.
 
 [CRectTracker (clase)](../../mfc/reference/crecttracker-class.md)<br/>
 Permite mostrar, mover y cambiar de tamaño un elemento de distintas maneras.
@@ -1117,22 +1117,22 @@ Encapsula una transición de inversión.
 Encapsula una región de la Interfaz de dispositivo gráfico (GDI) de Windows.
 
 [CRichEditCntrItem (clase)](../../mfc/reference/cricheditcntritem-class.md)<br/>
-Con [CRichEditView (clase)](../../mfc/reference/cricheditview-class.md) y [CRichEditDoc (clase)](../../mfc/reference/cricheditdoc-class.md), proporciona la funcionalidad del control rich edit en el contexto de la arquitectura de vista de documento de MFC.
+Con las clases [CRichEditView](../../mfc/reference/cricheditview-class.md) y [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), proporciona la funcionalidad del control Rich Edit en el contexto de la arquitectura de la vista del documento de MFC.
 
 [CRichEditCtrl (clase)](../../mfc/reference/cricheditctrl-class.md)<br/>
 Proporciona la funcionalidad del control Rich Edit.
 
 [CRichEditDoc (clase)](../../mfc/reference/cricheditdoc-class.md)<br/>
-Con [CRichEditView (clase)](../../mfc/reference/cricheditview-class.md) y [CRichEditCntrItem (clase)](../../mfc/reference/cricheditcntritem-class.md), proporciona la funcionalidad del control rich edit en el contexto de la arquitectura de vista de documento de MFC.
+Con las clases [CRichEditView](../../mfc/reference/cricheditview-class.md) y [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), proporciona la funcionalidad del control Rich Edit en el contexto de la arquitectura de la vista del documento de MFC.
 
 [CRichEditView (clase)](../../mfc/reference/cricheditview-class.md)<br/>
-Con [CRichEditDoc (clase)](../../mfc/reference/cricheditdoc-class.md) y [CRichEditCntrItem (clase)](../../mfc/reference/cricheditcntritem-class.md), proporciona la funcionalidad del control rich edit en el contexto de la arquitectura de vista de documento de MFC.
+Con la clase [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) y la [clase CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), proporciona la funcionalidad del control Rich Edit en el contexto de la arquitectura de la vista del documento de MFC.
 
 [CScrollBar (clase)](../../mfc/reference/cscrollbar-class.md)<br/>
 Proporciona la funcionalidad de un control de barra de desplazamiento de Windows.
 
 [CScrollView (clase)](../../mfc/reference/cscrollview-class.md)<br/>
-Un [clase CView](../../mfc/reference/cview-class.md) con capacidades de desplazamiento.
+Una [clase CView](../../mfc/reference/cview-class.md) con capacidades de desplazamiento.
 
 [CSemaphore (clase)](../../mfc/reference/csemaphore-class.md)<br/>
 Representa un "semáforo", que es un objeto de sincronización que permite que un número limitado de subprocesos de uno o varios procesos obtenga acceso a Mantiene un recuento del número de subprocesos que actualmente tienen acceso a un recurso especificado.
@@ -1144,7 +1144,7 @@ Incluye las funciones API de Windows, proporcionando una interfaz orientada a ob
 clase del asistente que se puede usar para crear instancias de [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).
 
 [CSharedFile (clase)](../../mfc/reference/csharedfile-class.md)<br/>
-El [CMemFile (clase)](../../mfc/reference/cmemfile-class.md)-clase derivada que es compatible con archivos de memoria compartida.
+La clase derivada de la [clase CMemFile](../../mfc/reference/cmemfile-class.md)que admite archivos de memoria compartida.
 
 [CShellManager (clase)](../../mfc/reference/cshellmanager-class.md)<br/>
 Implementa varios métodos que permiten trabajar con punteros en listas de identificadores (PIDL).
@@ -1165,7 +1165,7 @@ Encapsula una transición de intervalo sinusoidal que tiene un intervalo determi
 Encapsula una transición de progreso sinusoidal cuya amplitud determina el progreso inicial de la variable de animación.
 
 [CSize (clase)](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Similar a la estructura [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) de Windows, que implementa una coordenada relativa o una posición.
+Similar a la estructura [SIZE](/windows/win32/api/windef/ns-windef-size) de Windows, que implementa una coordenada relativa o una posición.
 
 [CSliderCtrl (clase)](../../mfc/reference/csliderctrl-class.md)<br/>
 Proporciona la funcionalidad del control deslizante común de Windows.
@@ -1204,7 +1204,7 @@ Una barra de control con una fila de paneles de salida de texto o "indicadores".
 Proporciona la funcionalidad del control de barra de estado común de Windows.
 
 [CStdioFile (clase)](../../mfc/reference/cstdiofile-class.md)<br/>
-Representa un archivo de secuencia de tiempo de ejecución de C tal como lo abre la función de tiempo de ejecución [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md).
+Representa un archivo de secuencia en tiempo de ejecución de C tal como lo abre la función de tiempo de ejecución [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md).
 
 [CStringArray (clase)](../../mfc/reference/cstringarray-class.md)<br/>
 Admite matrices de objetos `CString` .
@@ -1222,7 +1222,7 @@ Implementa la funcionalidad de un panel con pestañas separables.
 Proporciona la funcionalidad del control de pestaña común de Windows.
 
 [CTabView (clase)](../../mfc/reference/ctabview-class.md)<br/>
-Simplifica el uso de la clase de control de pestaña ([CTabView (clase)](../../mfc/reference/ctabview-class.md)) en las aplicaciones que utilizan la arquitectura documento/vista de MFC.
+Simplifica el uso de la clase de control de pestaña ([clase CTabView](../../mfc/reference/ctabview-class.md)) en aplicaciones que utilizan la arquitectura de vista/documento de MFC.
 
 [CTaskDialog (clase)](../../mfc/reference/ctaskdialog-class.md)<br/>
 Un cuadro de diálogo emergente que funciona como un cuadro de mensaje pero que puede mostrar información adicional al usuario. `CTaskDialog` también incluye funcionalidad para recopilar información del usuario.
@@ -1261,10 +1261,10 @@ Admite matrices de enteros sin signo.
 Se inicia para detener una operación de usuario final.
 
 [CUserTool (clase)](../../mfc/reference/cusertool-class.md)<br/>
-Elemento de menú que ejecuta una aplicación externa. El **herramientas** pestaña de la **personalizar** cuadro de diálogo ([CMFCToolBarsCustomizeDialog (clase)](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite al usuario agregar herramientas de usuario y para especificar el nombre, comandos, argumentos, y directorio inicial para cada herramienta de usuario.
+Elemento de menú que ejecuta una aplicación externa. La pestaña **herramientas** del cuadro de diálogo **personalizar** ([clase CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) permite al usuario agregar herramientas de usuario y especificar el nombre, el comando, los argumentos y el directorio inicial para cada herramienta de usuario.
 
 [CUserToolsManager (clase)](../../mfc/reference/cusertoolsmanager-class.md)<br/>
-Mantiene la colección de [CUserTool (clase)](../../mfc/reference/cusertool-class.md) objetos en una aplicación. Una herramienta de usuario es un elemento de menú que ejecuta una aplicación externa. El objeto `CUserToolsManager` permite al usuario o al programador agregar nuevas herramientas de usuario a la aplicación. Admite la ejecución de los comandos asociados a las herramientas de usuario y también guarda información sobre las herramientas de usuario en el Registro de Windows.
+Mantiene la colección de objetos de la [clase CUserTool](../../mfc/reference/cusertool-class.md) en una aplicación. Una herramienta de usuario es un elemento de menú que ejecuta una aplicación externa. El objeto `CUserToolsManager` permite al usuario o al programador agregar nuevas herramientas de usuario a la aplicación. Admite la ejecución de los comandos asociados a las herramientas de usuario y también guarda información sobre las herramientas de usuario en el Registro de Windows.
 
 [CView (clase)](../../mfc/reference/cview-class.md)<br/>
 Proporciona la funcionalidad básica para las clases de vista definidas por el usuario.

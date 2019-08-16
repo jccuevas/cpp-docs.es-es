@@ -1,5 +1,5 @@
 ---
-title: is_invocable, is_invocable_r, is_nothrow_invocable, clases is_nothrow_invocable_r
+title: clases is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006866"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456230"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, clases is_nothrow_invocable_r
+# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>clases is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Estas plantillas determinan si un tipo se puede invocar con los tipos de argumento especificados. `is_invocable_r` y `is_nothrow_invocable_r` también determinan si el resultado de la invocación es convertible a un tipo específico. `is_nothrow_invocable` y `is_nothrow_invocable_r` también determinan si la invocación se sabe que no producen excepciones. Agregado en C ++ 17.
+Estas plantillas determinan si un tipo se puede invocar con los tipos de argumento especificados. `is_invocable_r`y `is_nothrow_invocable_r` también determinan si el resultado de la invocación se puede convertir en un tipo específico. `is_nothrow_invocable`y `is_nothrow_invocable_r` también determinan si se sabe que la invocación no inicia excepciones. Agregado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parámetros
 
-*Callable*<br/>
+*Llamadas*\
 El tipo que se puede llamar para la consulta.
 
-*Args*<br/>
-Para consultar los tipos de argumento.
+*Args*\
+Los tipos de argumento que se van a consultar.
 
-*Convertibles*<br/>
-El tipo de resultado de *Callable* debe ser convertible a.
+*Convertirse*\
+El tipo al que se *puede llamar* se debe poder convertir a.
 
 ## <a name="remarks"></a>Comentarios
 
-El `is_invocable` predicado de tipo contiene true si el tipo que se puede llamar *Callable* puede invocarse utilizando los argumentos *Args* en un contexto no evaluado.
+El `is_invocable` predicado de tipo es true si se *puede* invocar el tipo al que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado.
 
-El `is_invocable_r` predicado de tipo contiene true si el tipo que se puede llamar *Callable* puede invocarse utilizando los argumentos *Args* en un contexto no evaluado para generar un tipo convertible de resultado en  *Convertible*.
+El `is_invocable_r` predicado de tipo es true si se *puede* invocar el tipo al que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado para generar un tipo de resultado convertible en convertible.
 
-El `is_nothrow_invocable` predicado de tipo contiene true si el tipo que se puede llamar *Callable* puede invocarse utilizando los argumentos *Args* en un contexto no evaluado y que se conoce esta llamada no se inicia una excepción.
+El `is_nothrow_invocable` predicado de tipo es true si se puede invocar *el tipo al* que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado, y se sabe que dicha llamada no produce una excepción.
 
-El `is_nothrow_invocable_r` predicado de tipo contiene true si el tipo que se puede llamar *Callable* puede invocarse utilizando los argumentos *Args* en un contexto no evaluado para generar un tipo convertible de resultado en  *Convertible*, y que se conoce esta llamada no se inicia una excepción.
+El `is_nothrow_invocable_r` predicado de tipo es true si se *puede* invocar el tipo al que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado para generar un tipo de resultado que se pueda convertir en convertible y que se sepa que dicha llamada no se inicia. excepción.
 
-Cada uno de los tipos *Convertible*, *Callable*y los tipos en el paquete de parámetros *Args* debe ser un tipo completo, una matriz de límite desconocido o una posiblementecalificadoparacv**void**. En caso contrario, el comportamiento del predicado es indefinido.
+Cada uno de los tipos convertibles, *Invocables*y los tipos en el paquete de parámetros *args* debe ser un tipo completo, una matriz de enlace desconocido o un **vacío**posiblemente calificado con la VC. De lo contrario, el comportamiento del predicado es undefined.
 
 ## <a name="example"></a>Ejemplo
 
@@ -122,5 +122,5 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[invoke](functional-functions.md#invoke)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[invoke](functional-functions.md#invoke)

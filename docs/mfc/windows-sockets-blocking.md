@@ -9,11 +9,11 @@ helpviewer_keywords:
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371969"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: Bloqueo
 
@@ -40,15 +40,15 @@ Para obtener más información acerca del bloqueo, vea la especificación Window
 
 Para obtener más información, consulte:
 
-- [Windows Sockets: Usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: usar sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)
+- [Windows Sockets: fondo](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: sockets de secuencias](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vea también
 

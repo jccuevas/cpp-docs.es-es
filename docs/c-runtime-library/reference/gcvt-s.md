@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332308"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -65,7 +65,7 @@ Búfer en que se va a almacenar el resultado de la conversión.
 *sizeInBytes*<br/>
 Tamaño del búfer.
 
-*valor*<br/>
+*value*<br/>
 Valor que se va a convertir.
 
 *digits*<br/>
@@ -77,7 +77,7 @@ Cero si es correcto. Si se produce un error debido a un parámetro no válido (v
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*sizeInBytes*|*valor*|*digits*|Volver|Valor de *búfer*|
+|*buffer*|*sizeInBytes*|*value*|*digits*|Volver|Valor de *búfer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|No modificado.|
 |No **NULL** (apunta a la memoria válida)|cero|any|any|**EINVAL**|No modificado.|

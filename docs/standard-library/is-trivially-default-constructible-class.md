@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: b35458ca280285eb699c9b12b15b705660299ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563675"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459653"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible (clase)
 
@@ -26,12 +26,12 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor trivial; en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor trivial; en caso contrario, contiene false.
 
 Un constructor predeterminado para una clase *Ty* es trivial si:
 
@@ -39,7 +39,7 @@ Un constructor predeterminado para una clase *Ty* es trivial si:
 
 - la clase *Ty* no tiene ninguna función virtual
 
-- la clase *Ty* tiene ninguna base virtual
+- la clase *Ty* no tiene ninguna base virtual
 
 - todas las bases directas de la clase *Ty* tienen constructores triviales
 
@@ -55,4 +55,4 @@ Un constructor predeterminado para una clase *Ty* es trivial si:
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

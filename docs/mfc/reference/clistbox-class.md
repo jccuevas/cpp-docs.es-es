@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778772"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243580"
 ---
 # <a name="clistbox-class"></a>CListBox (clase)
 
@@ -123,13 +123,13 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Construye un objeto `CListBox`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|Agrega una cadena a un cuadro de lista.|
 |[CListBox::CharToItem](#chartoitem)|Invalidar para proporcionar WM_CHAR personalizado para los cuadros de lista dibujado por el propietario que no tienen las cadenas de control.|
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|Devuelve el número de cadenas en un cuadro de lista.|
 |[CListBox::GetCurSel](#getcursel)|Devuelve el índice de base cero de la cadena seleccionada actualmente en un cuadro de lista.|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|Devuelve el ancho en píxeles que se puede desplazar horizontalmente un cuadro de lista.|
-|[CListBox::GetItemData](#getitemdata)|Devuelve el valor de 32 bits asociado al elemento de cuadro de lista.|
+|[CListBox::GetItemData](#getitemdata)|Devuelve un valor asociado al elemento de cuadro de lista.|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|Devuelve un puntero a un elemento de cuadro de lista.|
 |[CListBox::GetItemHeight](#getitemheight)|Determina el alto de los elementos de un cuadro de lista.|
 |[CListBox::GetItemRect](#getitemrect)|Devuelve el rectángulo delimitador del elemento de cuadro de lista como se muestra actualmente.|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Establece el ancho de columna de un cuadro de lista de varias columnas.|
 |[CListBox::SetCurSel](#setcursel)|Selecciona una cadena de un cuadro de lista.|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|Establece el ancho en píxeles que se puede desplazar horizontalmente un cuadro de lista.|
-|[CListBox::SetItemData](#setitemdata)|Establece el valor de 32 bits asociado al elemento de cuadro de lista.|
+|[CListBox::SetItemData](#setitemdata)|Establece un valor asociado al elemento de cuadro de lista.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Establece un puntero al elemento de cuadro de lista.|
 |[CListBox::SetItemHeight](#setitemheight)|Establece el alto de los elementos en un cuadro de lista.|
 |[CListBox::SetLocale](#setlocale)|Establece el identificador de configuración regional para un cuadro de lista.|
@@ -341,7 +341,7 @@ Un puntero largo a un `COMPAREITEMSTRUCT` estructura.
 
 Indica la posición relativa de los dos elementos que se describe en el [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) estructura. Puede ser cualquiera de los siguientes valores:
 
-|Valor|Significado|
+|Value|Significado|
 |-----------|-------------|
 |-1|Elemento 1 se ordena antes que el elemento 2.|
 |0|Elemento 1 y el elemento 2 ordenan de la misma.|
@@ -702,7 +702,7 @@ Especifica el índice de base cero del elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El valor de 32 bits asociado al elemento, o LB_ERR si se produce un error.
+El valor asociado al elemento, o LB_ERR si se produce un error.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1261,7 +1261,7 @@ Para establecer o quitar una selección en un cuadro de lista de selección múl
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
-##  <a name="sethorizontalextent"></a>  CListBox::SetHorizontalExtent
+##  <a name="sethorizontalextent"></a>  CListBox:: SetHorizontalExtent
 
 Establece el ancho, en píxeles, por el que se puede desplazar horizontalmente un cuadro de lista.
 
@@ -1288,7 +1288,7 @@ Esta función miembro no es útil para los cuadros de lista de varias columnas. 
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-Establece un valor de 32 bits asociado con el elemento especificado en un cuadro de lista.
+Establece un valor asociado con el elemento especificado en un cuadro de lista.
 
 ```
 int SetItemData(

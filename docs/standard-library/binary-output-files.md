@@ -6,16 +6,16 @@ helpviewer_keywords:
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4562f5c1167aeadc6689313e73545ed1ad9bbcf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615651"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376331"
 ---
 # <a name="binary-output-files"></a>Archivos de salida binarios
 
-Los flujos se diseñaron originalmente para texto, por lo que el modo de salida predeterminado es texto. En modo de texto, el carácter de nueva línea (hexadecimal 10) se expande a un retorno de carro-salto de línea (solo de 16 bits). La expansión puede causar problemas, como se muestra aquí:
+Los flujos se diseñaron originalmente para texto, por lo que el modo de salida predeterminado es texto. En el modo de texto, el carácter de avance de línea (nueva línea) se expande a un par de retorno de carro y avance de línea. La expansión puede causar problemas, como se muestra aquí:
 
 ```cpp
 // binary_output_files.cpp
@@ -30,7 +30,7 @@ int main( )
 }
 ```
 
-Puede esperar que este programa envíe la secuencia de bytes { 99, 0, 10, 0 }; en su lugar, envía { 99, 0, 13, 10, 0 }, lo que provoca problemas para un programa que esperaba una entrada binaria. Si necesita una salida binaria True, en la que se escriben caracteres sin traducir, puede especificar la salida binaria mediante el argumento openmode del constructor [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream):
+Puede esperar que este programa envíe la secuencia de bytes { 99, 0, 10, 0 }; en su lugar, envía { 99, 0, 13, 10, 0 }, lo que provoca problemas para un programa que esperaba una entrada binaria. Si necesita una salida binaria verdadera, en la que los caracteres se escriben sin traducir, puede especificar una salida binaria mediante `openmode` el argumento del constructor de [InStream](../standard-library/basic-ofstream-class.md#basic_ofstream):
 
 ```cpp
 // binary_output_files2.cpp
@@ -50,4 +50,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Flujos de salida](../standard-library/output-streams.md)<br/>
+[Flujos de salida](../standard-library/output-streams.md)

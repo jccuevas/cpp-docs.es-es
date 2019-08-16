@@ -1,5 +1,5 @@
 ---
-title: Filtrar Proporcionar funciones de trabajo a las clases call y transformer
+title: Procedimiento Proporcionar funciones de trabajo a las clases call y transformer
 ms.date: 11/04/2016
 helpviewer_keywords:
 - call class, example
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
 ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205795"
 ---
-# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Filtrar Proporcionar funciones de trabajo a las clases call y transformer
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Procedimiento Proporcionar funciones de trabajo a las clases call y transformer
 
 En este tema se ilustra varias maneras de proporcionar funciones de trabajo para el [Concurrency:: call](../../parallel/concrt/reference/call-class.md) y [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) clases.
 

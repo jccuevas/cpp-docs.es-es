@@ -1,6 +1,6 @@
 ---
 title: Intervalos de tipo de datos
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - float keyword [C++]
 - char keyword [C++]
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: 88fbb128d995338e5976fbb3df939524f3ef8b63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9eed9b35df6f5a970d05b09a604507df719345db
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495035"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222174"
 ---
 # <a name="data-type-ranges"></a>Intervalos de tipo de datos
 
-Los compiladores de 32 bits y 64 bits de Visual C++ reconocen los tipos de la tabla que se incluye más adelante en este artículo.
+Microsoft C++ compiladores de 32 bits y 64 bits reconocen los tipos de la tabla más adelante en este artículo.
 
 - `int` (`unsigned int`)
 
@@ -71,11 +71,11 @@ Los intervalos que se especifican en la tabla siguiente son inclusivo-inclusivo.
 |**int**|4|**signed**|De -2.147.483.648 a 2.147.483.647|
 |**unsigned int**|4|**unsigned**|De 0 a 4.294.967.295|
 |**__int8**|1|**char**|De -128 a 127|
-|**__int8 sin signo**|1|**unsigned char**|De 0 a 255|
+|**unsigned __int8**|1|**unsigned char**|De 0 a 255|
 |**__int16**|2|**short**, **short int**, **firmado short int**|De -32 768 a 32 767|
-|**__int16 sin signo**|2|**entero corto sin signo**, **int short sin signo**|De 0 a 65.535|
+|**unsigned __int16**|2|**entero corto sin signo**, **int short sin signo**|De 0 a 65.535|
 |**__int32**|4|**firmado**, **firmado int**, **int**|De -2.147.483.648 a 2.147.483.647|
-|**__int32 sin signo**|4|**sin signo**, **int sin signo**|De 0 a 4.294.967.295|
+|**unsigned __int32**|4|**sin signo**, **int sin signo**|De 0 a 4.294.967.295|
 |**__int64**|8|**long long**, **long long con signo**|De -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|
 |**unsigned __int64**|8|**long long sin signo**|De 0 a 18.446.744.073.709.551.615|
 |**bool**|1|ninguna|**false** o **true**|

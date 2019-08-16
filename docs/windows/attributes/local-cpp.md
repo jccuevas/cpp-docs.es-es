@@ -1,21 +1,21 @@
 ---
-title: local (atributo de COM de C++)
+title: local (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033075"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514416"
 ---
 # <a name="local-c"></a>local (C++)
 
-Cuando se utiliza en el encabezado de la interfaz, permite usar el compilador de MIDL como un generador de encabezado. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.
+Cuando se usa en el encabezado de la interfaz, permite usar el compilador MIDL como generador de encabezados. Cuando se usa en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,11 +25,11 @@ Cuando se utiliza en el encabezado de la interfaz, permite usar el compilador de
 
 ## <a name="remarks"></a>Comentarios
 
-El **local** atributo de C++ tiene la misma funcionalidad que el [local](/windows/desktop/Midl/local) atributo MIDL.
+El atributo **local** C++ tiene la misma funcionalidad que el atributo MIDL [local](/windows/win32/Midl/local) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [call_as](call-as.md) para obtener un ejemplo de cómo usar **local**.
+Vea [call_as](call-as.md) para obtener un ejemplo de cómo usar **local**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,9 +37,9 @@ Consulte [call_as](call-as.md) para obtener un ejemplo de cómo usar **local**.
 
 |||
 |-|-|
-|**Se aplica a**|**interfaz**, método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Se aplica a**|**interface**, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|`dispinterface`|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - typeindex/std::hash
 ms.assetid: e5a41202-ef3b-45d0-b3a7-4c2dbdc0487a
-ms.openlocfilehash: ba05d70692b2f85c1a14f319fb1e92dcadc0ccce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8484c8987534051c79ea02a1f87f0df1cd1f027
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582265"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456359"
 ---
 # <a name="hash-structure"></a>hash (Estructura)
 
@@ -18,15 +18,23 @@ La clase de plantilla define su método para que devuelva `val.hash_code()`. El 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <>
-struct hash<type_index>
+template <> struct hash<type_index>
 : public unary_function<type_index, size_t>
 { // hashes a typeinfo object
     size_t operator()(type_index val) const;
-
 };
+```
+
+## <a name="specialized-types"></a>Tipos especializados
+
+### <a name="system_error"></a>\<> system_error
+
+```cpp
+template <class T> struct hash;
+template <> struct hash<error_code>;
+template <> struct hash<error_condition>;
 ```
 
 ## <a name="see-also"></a>Vea también
 
-[\<typeindex>](../standard-library/typeindex.md)<br/>
+[\<typeindex>](../standard-library/typeindex.md)

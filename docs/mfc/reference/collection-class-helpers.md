@@ -1,8 +1,6 @@
 ---
 title: Asistentes de clase de colección
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.classes
 helpviewer_keywords:
 - DestructElements function
 - ConstructElements function
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6839427d916068deaf2041dd21a282e0b470f404
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266151"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612264"
 ---
 # <a name="collection-class-helpers"></a>Asistentes de clase de colección
 

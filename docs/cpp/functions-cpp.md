@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154141"
 ---
 # <a name="functions-c"></a>Funciones (C++)
 
@@ -190,13 +190,13 @@ De forma predeterminada, los argumentos se pasan a la función por valor, lo que
 void DoSomething(std::string& input){...}
 ```
 
-Cuando una función modifica un argumento que se pasa por referencia, modifica el objeto original, no una copia local. Para evitar que una función modifique dicho argumento, califique el parámetro como const&:
+Cuando una función modifica un argumento que se pasa por referencia, modifica el objeto original, no una copia local. Para evitar que una función modifique dicho argumento, califique el parámetro como const &:
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** para controlar explícitamente los argumentos que se pasan por referencia de lvalue o rvalue referencia, utilice una y comercial doble en el parámetro para indicar una referencia universal:
+**C++ 11:**  Para controlar explícitamente los argumentos que se pasan por referencia de lvalue o rvalue referencia, utilice una y comercial doble en el parámetro para indicar una referencia universal:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -363,7 +363,7 @@ Hay varias maneras de devolver más de un valor de una función:
     }
     ```
 
-1. **Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): uso de enlaces estructurados. La ventaja de los enlaces estructurados es que se inicializan las variables que almacenan los valores devueltos al mismo tiempo que se declaran, que en algunos casos puede ser mucho más eficaz. En esta instrucción--`auto[x, y, z] = f();`--los soportes presentan e inicializar los nombres que están en ámbito para el bloque de función completa.
+1. **Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Utilice los enlaces estructurados. La ventaja de los enlaces estructurados es que se inicializan las variables que almacenan los valores devueltos al mismo tiempo que se declaran, que en algunos casos puede ser mucho más eficaz. En esta instrucción--`auto[x, y, z] = f();`--los soportes presentan e inicializar los nombres que están en ámbito para el bloque de función completa.
 
     ```cpp
     #include <tuple>

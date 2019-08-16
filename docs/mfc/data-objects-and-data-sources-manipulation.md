@@ -13,11 +13,11 @@ helpviewer_keywords:
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
 ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241554"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objetos de datos y orígenes de datos: Manipulación
 
@@ -37,7 +37,7 @@ Cómo se insertan datos en un origen de datos depende de si los datos se proporc
 
 - Llamar a `COleDataSource::CacheGlobalData` repetidamente para cada formato de Portapapeles en el que está proporcionando los datos. Pase el formato del Portapapeles para su uso, un identificador de la memoria que contiene los datos y, opcionalmente, un **FORMATETC** estructura que describe los datos.
 
-     O bien
+     -o bien-
 
 - Si desea trabajar directamente con **STGMEDIUM** estructuras, se llama a `COleDataSource::CacheData` en lugar de `COleDataSource::CacheGlobalData` en la opción anterior.
 
@@ -47,7 +47,7 @@ Se trata de un tema avanzado.
 
 - Llamar a `COleDataSource::DelayRenderData` repetidamente para cada formato de Portapapeles en el que está proporcionando los datos. Pase el formato del Portapapeles que se usará y, opcionalmente, un **FORMATETC** estructura que describe los datos. Cuando se solicitan los datos, el marco llamará `COleDataSource::OnRenderData`, que debe reemplazar.
 
-     O bien
+     -o bien-
 
 - Si usa un `CFile` objeto para proporcionar los datos, llame a `COleDataSource::DelayRenderFileData` en lugar de `COleDataSource::DelayRenderData` en la opción anterior. Cuando se solicitan los datos, el marco llamará `COleDataSource::OnRenderFileData`, que debe reemplazar.
 

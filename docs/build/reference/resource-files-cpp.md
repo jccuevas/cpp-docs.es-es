@@ -1,23 +1,22 @@
 ---
 title: Archivos de recursos (C++)
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 helpviewer_keywords:
 - resource files
 - resources [C++]
-- file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: b3e15c024b84bdf04c7c5611584dc1b14d82816f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 20e57aa51cff8c4e3392c313645468387c2a4244
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827174"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707402"
 ---
 # <a name="resource-files-c"></a>Archivos de recursos (C++)
 
-Los recursos son elementos de interfaz que proporcionan información al usuario. Los mapas de bits, los iconos, las barras de herramientas y los cursores son todos recursos. Algunos recursos se pueden manipular para llevar a cabo una acción, como seleccionar en un menú o escribir datos en un cuadro de diálogo.
+Los recursos son elementos de interfaz que proporcionan información al usuario. Los mapas de bits, los iconos, las barras de herramientas y los cursores son todos recursos. Algunos recursos pueden realizar una acción como seleccionar en un menú o escribir datos en un cuadro de diálogo.
 
-Vea [Trabajar con recursos](../../windows/working-with-resource-files.md) para obtener más información.
+ Para más información, vea [Trabajar con recursos](../../windows/working-with-resource-files.md).
 
 |Nombre del archivo|Ubicación del directorio|Ubicación del Explorador de soluciones|Descripción|
 |---------------|------------------------|--------------------------------|-----------------|
@@ -32,4 +31,4 @@ Vea [Trabajar con recursos](../../windows/working-with-resource-files.md) para o
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de archivos creados para proyectos de Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Tipos de archivos creados para proyectos de C++ de Visual Studio](file-types-created-for-visual-cpp-projects.md)

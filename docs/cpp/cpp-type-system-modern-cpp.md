@@ -3,12 +3,12 @@ title: Sistema de tipos de C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476908"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222129"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Tipos (integrados) fundamentales
 
-A diferencia de algunos lenguajes, C++ no tiene un tipo base universal del que se deriven todos los demás tipos. La implementación del lenguaje de Visual C++ incluye muchas *tipos fundamentales*, también conocida como *tipos integrados*. Esto incluye los tipos numéricos, como **int**, **doble**, **largo**, **bool**, más el **char** y **wchar_t** tipos de caracteres ASCII y UNICODE, respectivamente. Los tipos más fundamentales (excepto **bool**, **doble**, **wchar_t** y tipos relacionados) todos tienen versiones sin signo, que modifican el intervalo de valores que puede almacenar la variable. Por ejemplo, un **int**, que almacena un entero con signo de 32 bits, puede representar un valor entre -2.147.483.648 a 2.147.483.647. Un **int sin signo**, que también se almacena como 32 bits, puede almacenar un valor comprendido entre 0 y 4.294.967.295. El número total de valores posibles en cada caso es el mismo; solo cambia el intervalo.
+A diferencia de algunos lenguajes, C++ no tiene un tipo base universal del que se deriven todos los demás tipos. El lenguaje incluye muchas *tipos fundamentales*, también conocida como *tipos integrados*. Esto incluye los tipos numéricos, como **int**, **doble**, **largo**, **bool**, más el **char** y **wchar_t** tipos de caracteres ASCII y UNICODE, respectivamente. Los tipos más fundamentales (excepto **bool**, **doble**, **wchar_t** y tipos relacionados) todos tienen versiones sin signo, que modifican el intervalo de valores que puede almacenar la variable. Por ejemplo, un **int**, que almacena un entero con signo de 32 bits, puede representar un valor entre -2.147.483.648 a 2.147.483.647. Un **int sin signo**, que también se almacena como 32 bits, puede almacenar un valor comprendido entre 0 y 4.294.967.295. El número total de valores posibles en cada caso es el mismo; solo cambia el intervalo.
 
 El compilador reconoce los tipos fundamentales y tiene reglas integradas que rigen las operaciones que se pueden realizar en esos tipos y cómo se pueden convertir en otros tipos fundamentales. Para obtener una lista completa de tipos integrados y su tamaño y los límites numéricos, vea [tipos fundamentales](../cpp/fundamental-types-cpp.md).
 
@@ -90,11 +90,11 @@ PI = .75 //Error. Cannot modify const variable.
 
 El **const** calificador se usa habitualmente en las declaraciones de función y la variable y "exactitud de const" es un concepto importante en C++; básicamente significa usar **const** para garantizar que, en tiempo de compilación que los valores no se modifican involuntariamente. Para obtener más información, consulte [const](../cpp/const-cpp.md).
 
-Un **const** tipo es distinto de su versión no const; por ejemplo, **const int** es un tipo distinto de **int**. Puede usar C++ **const_cast** operador en esas raras ocasiones en las que deba quitar *declaración como constante* desde una variable. Para obtener más información, consulte [las conversiones de tipos y seguridad de tipos](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Un **const** tipo es distinto de su versión no const; por ejemplo, **const int** es un tipo distinto de **int**. Puede usar el C++ **const_cast** operador en esas raras ocasiones en las que deba quitar *declaración como constante* desde una variable. Para obtener más información, consulte [las conversiones de tipos y seguridad de tipos](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>Tipos string
 
-En realidad, el lenguaje C++ no tiene ningún tipo de cadena integradas; **char** y **wchar_t** almacenan caracteres individuales: debe declarar una matriz de estos tipos para aproximarse a una cadena, agregando un valor final null (por ejemplo, ASCII `'\0'`) al elemento de matriz más allá del último carácter válido (también denominado una *cadena de estilo C*). En las cadenas de estilo C, era necesario escribir mucho más código o usar funciones de bibliotecas de utilidades de cadena externas. Pero en C++ moderno, tenemos los tipos de biblioteca estándar `std::string` (de 8 bits **char**-escriba las cadenas de caracteres) o `std::wstring` (de 16 bits **wchar_t**: escriba las cadenas de caracteres). Estos contenedores de la biblioteca estándar de C++ pueden considerarse como tipos de cadena nativa porque forman parte de las bibliotecas estándar que se incluyen en cualquier entorno de compilación de C++ compatible. Solo tiene que usar la directiva `#include <string>` para que estos tipos estén disponibles en el programa. (Si usa MFC o ATL, la clase CString también está disponible, pero no forma parte del estándar de C++). En el lenguaje C++ actual, se desaconseja completamente usar matrices de caracteres que terminen con un valor null (las cadenas de estilo C mencionadas previamente).
+En realidad, el C++ lenguaje no tiene ningún tipo de cadena integradas; **char** y **wchar_t** almacenan caracteres individuales: debe declarar una matriz de estos tipos para aproximarse a una cadena, agregando un valor final null (por ejemplo, ASCII `'\0'`) al elemento de matriz un elemento más allá del último carácter válido (también denominado una *cadena de estilo C*). En las cadenas de estilo C, era necesario escribir mucho más código o usar funciones de bibliotecas de utilidades de cadena externas. Pero en modern C++, tenemos los tipos de biblioteca estándar `std::string` (de 8 bits **char**: escriba las cadenas de caracteres) o `std::wstring` (de 16 bits **wchar_t**-escriba las cadenas de caracteres). Estos contenedores de la biblioteca estándar de C++ pueden considerarse como tipos de cadena nativa porque forman parte de las bibliotecas estándar que se incluyen en cualquier entorno de compilación de C++ compatible. Solo tiene que usar la directiva `#include <string>` para que estos tipos estén disponibles en el programa. (Si usa MFC o ATL, la clase CString también está disponible, pero no forma parte del estándar de C++). En el lenguaje C++ actual, se desaconseja completamente usar matrices de caracteres que terminen con un valor null (las cadenas de estilo C mencionadas previamente).
 
 ## <a name="user-defined-types"></a>Tipos definidos por el usuario
 

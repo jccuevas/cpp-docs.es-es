@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605346"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451805"
 ---
 # <a name="messagesbyname-class"></a>messages_byname (Clase)
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*<br/>
+*_Locname*\
 Una configuración regional con nombre.
 
-*_Refs*<br/>
+*_Refs*\
 Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
-Su comportamiento viene determinado por la configuración regional con nombre *_Locname*. Cada constructor inicializa su objeto base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
+Su comportamiento viene determinado por el *_Locname*de configuración regional con nombre. Cada constructor inicializa su objeto base con [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -57,4 +57,4 @@ Su comportamiento viene determinado por la configuración regional con nombre *_
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

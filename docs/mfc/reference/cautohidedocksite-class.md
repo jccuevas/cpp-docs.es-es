@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
 ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388480"
 ---
 # <a name="cautohidedocksite-class"></a>Clase CAutoHideDockSite
 
@@ -67,7 +67,7 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|nombre|Descripción|
+|Name|Descripción|
 |[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Define el tamaño del espacio entre las barras de herramientas y el borde de la barra de acoplamiento. Este espacio se mide desde el borde izquierdo o el borde superior, según la alineación para el espacio de acoplamiento.|
 
 ## <a name="remarks"></a>Comentarios

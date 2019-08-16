@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 11/19/2018
+ms.date: 07/15/2019
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894418"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -51,7 +51,7 @@ friend class F;
 friend F;
 ```
 
-El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno. **C ++ 11**: el segundo formulario no presenta una nueva clase; se puede usar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.
+El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno. **C++11**: El segundo formulario no presenta una nueva clase; se puede usar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.
 
 Use `class friend F` cuando el tipo que se hace referencia no ha declarado:
 
@@ -119,7 +119,7 @@ Para declarar dos clases que son de tipo friend entre sí, la segunda clase comp
 
 ## <a name="friend-functions"></a>funciones de confianza
 
-Un **friend** es una función que no es un miembro de una clase pero tiene acceso a miembros privados y protegidos de la clase. Las funciones friend no se consideran miembros de clase; son funciones externas normales que tienen privilegios de acceso especiales. No están en el ámbito de la clase, y no se las llama usando los operadores de selección de miembro (**.** y -**>**) a menos que sean miembros de otra clase. Un **friend** función se declara la clase que concede el acceso. El **friend** declaración puede colocarse en cualquier lugar en la declaración de clase. No se ve afectada por las palabras clave de control de acceso.
+Un **friend** es una función que no es un miembro de una clase pero tiene acceso a miembros privados y protegidos de la clase. Las funciones friend no se consideran miembros de clase; son funciones externas normales que tienen privilegios de acceso especiales. No están en el ámbito de la clase, y no se las llama usando los operadores de selección de miembro ( **.** y - **>** ) a menos que sean miembros de otra clase. Un **friend** función se declara la clase que concede el acceso. El **friend** declaración puede colocarse en cualquier lugar en la declaración de clase. No se ve afectada por las palabras clave de control de acceso.
 
 En el ejemplo siguiente se muestra una clase `Point` y una función friend, `ChangePrivate`. El **friend** función tiene acceso al miembro de datos privados de la `Point` recibe como un parámetro de objeto.
 
@@ -224,7 +224,7 @@ int main() {
 
 La confianza no es mutua a menos que se especifique explícitamente como tal. En el ejemplo anterior, las funciones miembro de `YourClass` no pueden tener acceso a los miembros privados de `YourOtherClass`.
 
-Un tipo administrado no puede tener funciones, clases o interfaces de confianza.
+Un tipo administrado (en C++/CLI) no puede tener cualquier funciones friend, las clases friend o interfaz friend.
 
 La confianza no se hereda, lo que significa que las clases derivadas de `YourOtherClass` no pueden tener acceso a los miembros privados de `YourClass`. La confianza no es transitiva, por lo que las clases de confianza de `YourOtherClass` no pueden tener acceso a los miembros privados de `YourClass`.
 
@@ -235,9 +235,7 @@ Implicaciones de relaciones de confianza
 
 ## <a name="inline-friend-definitions"></a>Definiciones friend en línea
 
-Las funciones friend se pueden definir dentro de declaraciones de clase. Estas funciones son funciones insertadas y como funciones insertadas de miembro, se comportan como si se hubieran definido inmediatamente después de haberse considerado todos los miembros de clase pero antes de cerrarse el ámbito de clase (el final de la declaración de clase).
-
-Las funciones friend definidas dentro de declaraciones de clase no se consideran en el ámbito de la clase envolvente; están en el ámbito de archivo.
+Dentro de declaraciones de clase, se pueden definir funciones Friend (dada un cuerpo de función). Estas funciones son funciones insertadas y como funciones insertadas de miembro, se comportan como si se hubieran definido inmediatamente después de haberse considerado todos los miembros de clase pero antes de cerrarse el ámbito de clase (el final de la declaración de clase). Funciones Friend definidas dentro de declaraciones de clase están en el ámbito de la clase envolvente.
 
 ## <a name="see-also"></a>Vea también
 

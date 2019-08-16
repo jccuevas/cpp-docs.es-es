@@ -1,37 +1,40 @@
 ---
 title: Seleccionar y manipular registros
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - records, selecting
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: fa8b63dab24c921804c474df73f6b6da192a4cd8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027498"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707808"
 ---
 # <a name="selecting-and-manipulating-records"></a>Seleccionar y manipular registros
 
-Normalmente cuando selecciona los registros de un origen de datos mediante una instancia de SQL **seleccione** instrucción, obtendrá un conjunto de resultados, que es un conjunto de registros de una tabla o una consulta. Con las clases de base de datos, se usa un objeto de conjunto de registros para seleccionar y obtener acceso al conjunto de resultados. Se trata de un objeto de una clase específica de la aplicación que deriva de la clase [CRecordset](../../mfc/reference/crecordset-class.md). Al definir una clase de conjunto de registros, especifica para asociarlo con el origen de datos, la tabla y las columnas de la tabla. El Asistente para aplicaciones MFC o **Agregar clase** (como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) crea una clase con una conexión a un origen de datos específico. Los asistentes para escribir el [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) función miembro de clase `CRecordset` para devolver el nombre de tabla. Para obtener más información sobre cómo usar los asistentes para crear clases de conjunto de registros, vea [soporte técnico de la base de datos, Asistente para aplicaciones MFC](../../mfc/reference/database-support-mfc-application-wizard.md) y [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+> [!NOTE] 
+> El Asistente para consumidores ODBC MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor manualmente.
 
-Mediante un [CRecordset](../../mfc/reference/crecordset-class.md) objeto en tiempo de ejecución, puede:
+Normalmente, cuando selecciona registros de un origen de datos mediante una instrucción **SELECT** de SQL, obtiene un conjunto de resultados, que es un conjunto de registros de una tabla o una consulta. Con las clases de base de datos, usará un objeto de conjunto de registros para seleccionar el conjunto de resultados y tener acceso a él. Se trata de un objeto de una clase específica de la aplicación que se deriva de la clase [CRecordset](../../mfc/reference/crecordset-class.md). Al definir una clase de conjunto de registros, debe especificar el origen de datos con el que va a asociarla, la tabla que se va a usar y las columnas de la tabla. El Asistente para aplicaciones MFC o **Agregar clase** (como se describe en [Agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) crean una clase con una conexión a un origen de datos específico. Los asistentes escriben la función miembro [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) de la clase `CRecordset` para que devuelva el nombre de tabla.
 
-- Examine los campos de datos del registro actual.
+Mediante el uso de un objeto [CRecordset](../../mfc/reference/crecordset-class.md) en tiempo de ejecución, puede hacer lo siguiente:
+
+- Examinar los campos de datos del registro actual.
 
 - Filtrar u ordenar el conjunto de registros.
 
-- Personalizar el código SQL predeterminado **seleccione** instrucción.
+- Personalizar la instrucción **SELECT** predeterminada de SQL.
 
 - Desplazarse por los registros seleccionados.
 
-- Agregar, actualizar o eliminar registros (si el origen de datos y el conjunto de registros son actualizables).
+- Agregar, actualizar o eliminar registros (si tanto el origen de datos como el conjunto de registros son actualizables).
 
 - Comprobar si el conjunto de registros permite volver a consultar y actualizar el contenido del conjunto de registros.
 
-Cuando termine de utilizar el objeto de conjunto de registros, cierre y destruirlo. Para obtener más información acerca de los conjuntos de registros, vea [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md).
+Cuando acabe de usar el objeto de conjunto de registros, ciérrelo y destrúyalo. Para obtener más información sobre los conjuntos de registros, vea [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md).
 
 ## <a name="see-also"></a>Vea también
 

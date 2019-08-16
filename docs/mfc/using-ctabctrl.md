@@ -7,18 +7,18 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272079"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510785"
 ---
 # <a name="using-ctabctrl"></a>Usar CTabCtrl
 
-Un "control de ficha" es análogo a los divisores de un bloc de notas o las carpetas etiquetadas de un archivador. Utilice el control de ficha, representado por la clase [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar varias páginas de información o controles a un usuario, una vez, en un formato que se sugiere un elemento del mismo nivel o una relación lógica entre cada página.
+Un "control de pestaña" es análogo a los divisores de un bloc de notas o las carpetas etiquetadas en un archivo. cab. Utilice el control de pestaña, representado por la clase [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar varias páginas de información o controles a un usuario, de una en una, en un formato que sugiera una relación del mismo nivel o lógica entre cada página.
 
-Para obtener más información sobre los controles de ficha, consulte [controles de ficha](/windows/desktop/Controls/tab-controls) en el SDK de Windows.
+Para obtener más información sobre los controles de ficha, vea [controles de ficha](/windows/win32/Controls/tab-controls) en el Windows SDK.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 

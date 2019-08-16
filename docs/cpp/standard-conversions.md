@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267286"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 
@@ -203,10 +203,10 @@ En la tabla siguiente se muestra la accesibilidad de la clase base para la situa
 ||Public|Sí|
 |Función miembro B (en ámbito B)|Private|Sí|
 ||Protegido|Sí|
-||Público|Sí|
-|Función miembro C (en ámbito C)|Privado|No|
+||Public|Sí|
+|Función miembro C (en ámbito C)|Private|No|
 ||Protegido|Sí|
-||Público|Sí|
+||Public|Sí|
 
 El segundo caso en el que un puntero a una clase se puede convertir a un puntero a una clase base es cuando se utiliza una conversión de tipos explícita. (Consulte [operador de conversión de tipos explícita](explicit-type-conversion-operator-parens.md) para obtener más información sobre las conversiones de tipo explícito.)
 

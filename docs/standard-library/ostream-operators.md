@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: ee1a9a6829dbef13b034300d696c43ddba48d9d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449428"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453529"
 ---
 # <a name="ltostreamgt-operators"></a>Operadores &lt;ostream&gt;
 
@@ -80,22 +80,22 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ch*<br/>
+*_Ch*\
 Un carácter.
 
-*_Elem*<br/>
+*_Elem*\
 El tipo de elemento.
 
-*_Ostr*<br/>
-Un objeto `basic_ostream`.
+*_Ostr*\
+Objeto `basic_ostream`.
 
-*str*<br/>
+*CAD*\
 Una cadena de caracteres.
 
-*_Tr*<br/>
+*_Tr*\
 Rasgos de los caracteres.
 
-*Val*<br/>
+*Val*\
 El tipo
 
 ### <a name="return-value"></a>Valor devuelto
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-Determina la longitud N = `traits_type::` [longitud](../standard-library/char-traits-struct.md#length)(`str`) de la secuencia que comienza por *str*e inserta la secuencia. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), entonces la función también inserta una repetición de `_Ostr.width` - N caracteres de relleno. La repetición precede la secuencia si (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). De otro modo, la repetición sigue la secuencia. La función devuelve *_Ostr*.
+determina la longitud N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)(`str`) de la secuencia que comienza en *Str*e inserta la secuencia. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), entonces la función también inserta una repetición de `_Ostr.width` - N caracteres de relleno. La repetición precede la secuencia si (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). De otro modo, la repetición sigue la secuencia. La función devuelve *_Ostr*.
 
 La función de plantilla
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-excepto en que cada elemento *_Ch* de la secuencia que comienza por *str* se convierte en un objeto de tipo `Elem` mediante una llamada a `_Ostr.` [colocar](../standard-library/basic-ostream-class.md#put)(`_Ostr.` [widen](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
+salvo que cada elemento *_Ch* de la secuencia que comienza *en Str* se convierte en un objeto de `Elem` tipo mediante `_Ostr.`una llamada`_Ostr.`a [Put](../standard-library/basic-ostream-class.md#put)([Wide](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 La función de plantilla
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-salvo que *_Ch* se convierte en un objeto de tipo `Elem` mediante una llamada a `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
+con la excepción de que *_Ch* se convierte en un `Elem` objeto de `_Ostr.put`tipo `_Ostr.widen`llamando `_Ch`a (()).
 
 La función de plantilla
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(No tiene que ampliar *_Ch* antes de insertarlo.)
+(No tiene que ampliar *_Ch* antes de insertarlo).
 
 La función de plantilla
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-Devuelve `_Ostr` << (`const char *`) `str`.
+Devuelve `_Ostr` < < (`const char *`) `str`.
 
 La función de plantilla
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-Devuelve `_Ostr` << (`char`) `_Ch`.
+Devuelve `_Ostr` < < (`char`) `_Ch`.
 
 La función de plantilla:
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-Devuelve `_Ostr` << (`const char *`) `str`.
+Devuelve `_Ostr` < < (`const char *`) `str`.
 
 La función de plantilla:
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-Devuelve `_Ostr` << (`char`) `_Ch`.
+Devuelve `_Ostr` < < (`char`) `_Ch`.
 
 La función de plantilla:
 
@@ -269,4 +269,4 @@ Vea [flush](../standard-library/ostream-functions.md#flush) para obtener un ejem
 
 ## <a name="see-also"></a>Vea también
 
-[\<ostream>](../standard-library/ostream.md)<br/>
+[\<ostream>](../standard-library/ostream.md)

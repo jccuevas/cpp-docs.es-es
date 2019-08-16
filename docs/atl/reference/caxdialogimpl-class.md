@@ -17,19 +17,19 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: d6f08553a9eff421923ef348caee2022849674ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301992"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497667"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl (clase)
 
-Esta clase implementa un cuadro de diálogo (modal o no modal) que hospeda los controles ActiveX.
+Esta clase implementa un cuadro de diálogo (modal o no modal) que hospeda controles ActiveX.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,49 +41,49 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-La clase derivada de `CAxDialogImpl`.
+La clase, derivada de `CAxDialogImpl`.
 
 *TBase*<br/>
-La clase de ventana base para `CDialogImplBaseT`.
+Clase de ventana base para `CDialogImplBaseT`.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o no notificar todas las entradas de mapa de asignación de eventos de receptor del objeto.|
+|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o desaconsejar todas las entradas del mapa de eventos del mapa de receptores del objeto.|
 |[CAxDialogImpl::Create](#create)|Llame a este método para crear un cuadro de diálogo no modal.|
 |[CAxDialogImpl::DestroyWindow](#destroywindow)|Llame a este método para destruir un cuadro de diálogo no modal.|
 |[CAxDialogImpl::DoModal](#domodal)|Llame a este método para crear un cuadro de diálogo modal.|
 |[CAxDialogImpl::EndDialog](#enddialog)|Llame a este método para destruir un cuadro de diálogo modal.|
-|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Llame a este método para obtener un puntero a la `DialogProc` función de devolución de llamada.|
+|[CAxDialogImpl::GetDialogProc](#getdialogproc)|Llame a este método para obtener un puntero a `DialogProc` la función de devolución de llamada.|
 |[CAxDialogImpl::GetIDD](#getidd)|Llame a este método para obtener el identificador de recurso de plantilla de cuadro de diálogo|
-|[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|Llame a este método para determinar si un mensaje está destinado a este cuadro de diálogo y, si es así, procesar el mensaje.|
+|[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|Llame a este método para determinar si un mensaje está pensado para este cuadro de diálogo y, si es así, procesar el mensaje.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CAxDialogImpl::m_bModal](#m_bmodal)|Una variable que existe solo en modo de depuración se compila y está establecido en true si el cuadro de diálogo modal.|
+|[CAxDialogImpl::m_bModal](#m_bmodal)|Una variable que solo existe en las compilaciones de depuración y está establecida en true si el cuadro de diálogo es modal.|
 
 ## <a name="remarks"></a>Comentarios
 
-`CAxDialogImpl` le permite crear un cuadro de diálogo modal o no modal. `CAxDialogImpl` proporciona el procedimiento de cuadro de diálogo, que usa el mapa de mensajes predeterminado para dirigir mensajes a los controladores adecuados.
+`CAxDialogImpl`permite crear un cuadro de diálogo modal o no modal. `CAxDialogImpl`proporciona el procedimiento de cuadro de diálogo, que utiliza el mapa de mensajes predeterminado para dirigir los mensajes a los controladores adecuados.
 
-`CAxDialogImpl` se deriva de `CDialogImplBaseT`, que a su vez se deriva de *TBase* (de forma predeterminada, `CWindow`) y `CMessageMap`.
+`CAxDialogImpl`deriva de `CDialogImplBaseT`, que a su vez se deriva de *TBase* (de forma predeterminada `CWindow`,) `CMessageMap`y.
 
-La clase debe definir a un miembro IDD que especifica el identificador de recurso de plantilla de cuadro de diálogo. Por ejemplo, al agregar un objeto de cuadro de diálogo ATL mediante el **Agregar clase** cuadro de diálogo agrega automáticamente la siguiente línea a la clase:
+La clase debe definir un miembro de IDD que especifique el identificador de recurso de la plantilla de cuadro de diálogo. Por ejemplo, al agregar un objeto de cuadro de diálogo ATL mediante el cuadro de diálogo **Agregar clase** , se agrega automáticamente la siguiente línea a la clase:
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/caxdialogimpl-class_1.h)]
 
-donde `MyDialog` es el **nombre corto** especificadas en el Asistente de cuadro de diálogo ATL.
+donde `MyDialog` es el **nombre corto** escrito en el Asistente para cuadros de diálogo ATL.
 
-Consulte [implementa un cuadro de diálogo](../../atl/implementing-a-dialog-box.md) para obtener más información.
+Vea [implementar un cuadro de diálogo](../../atl/implementing-a-dialog-box.md) para obtener más información.
 
-Tenga en cuenta que un control ActiveX en un cuadro de diálogo modal creado con `CAxDialogImpl` no será compatible con las teclas de aceleración. Para admitir las teclas de aceleración en un cuadro de diálogo creado con `CAxDialogImpl`, crear un cuadro de diálogo no modal y, con su propio bucle de mensajes, usar [CAxDialogImpl::IsDialogMessage](#isdialogmessage) tras recibir un mensaje de la cola para controlar un tecla de aceleración.
+Tenga en cuenta que un control ActiveX en un cuadro de diálogo `CAxDialogImpl` modal creado con no será compatible con las teclas de aceleración. Para admitir las teclas de aceleración de un cuadro de `CAxDialogImpl`diálogo creado con, cree un cuadro de diálogo no modal y, mediante su propio bucle de mensajes, use [CAxDialogImpl:: IsDialogMessage](#isdialogmessage) después de obtener un mensaje de la cola para controlar una tecla de aceleración.
 
-Para obtener más información sobre `CAxDialogImpl`, consulte [preguntas más frecuentes sobre contención de Control de ATL](../../atl/atl-control-containment-faq.md).
+Para obtener más información `CAxDialogImpl`sobre, vea [preguntas más frecuentes sobre contención de controles ATL](../../atl/atl-control-containment-faq.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -99,11 +99,11 @@ Para obtener más información sobre `CAxDialogImpl`, consulte [preguntas más f
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlwin.h
+**Encabezado:** atlwin. h
 
 ##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap
 
-Llame a este método para notificar o no notificar todas las entradas de mapa de asignación de eventos de receptor del objeto.
+Llame a este método para notificar o desaconsejar todas las entradas del mapa de eventos del mapa de receptores del objeto.
 
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
@@ -112,11 +112,11 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="parameters"></a>Parámetros
 
 *bAdvise*<br/>
-Se establece en true si todas las entradas de receptor recibir información; son entradas de False si todos los receptores que se deben notificar.
+Establézcalo en true si se van a notificar todas las entradas de receptor; false si se van a desaconsejar todas las entradas del receptor.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ##  <a name="create"></a>  CAxDialogImpl::Create
 
@@ -130,23 +130,23 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 ### <a name="parameters"></a>Parámetros
 
 *hWndParent*<br/>
-[in] El identificador de la ventana propietaria.
+de Identificador de la ventana propietaria.
 
 *dwInitParam*<br/>
-[in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
+de Especifica el valor que se va a pasar al cuadro de diálogo en el parámetro *lParam* del mensaje WM_INITDIALOG.
 
 *RECT&*<br/>
-Este parámetro no se utiliza. Este parámetro se pasa `CComControl`.
+Este parámetro no se utiliza. Este parámetro se pasa por `CComControl`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El identificador para el cuadro de diálogo recién creado.
+Identificador del cuadro de diálogo que se acaba de crear.
 
 ### <a name="remarks"></a>Comentarios
 
-Este cuadro de diálogo se adjunta automáticamente a la `CAxDialogImpl` objeto. Para crear un cuadro de diálogo modal, llame a [DoModal](#domodal).
+Este cuadro de diálogo se adjunta automáticamente al `CAxDialogImpl` objeto. Para crear un cuadro de diálogo modal, llame a [DoModal](#domodal).
 
-El segundo reemplazo se proporciona solo por lo que se pueden usar los cuadros de diálogo con [CComControl](../../atl/reference/ccomcontrol-class.md).
+La segunda invalidación solo se proporciona, por lo que los cuadros de diálogo se pueden usar con [CComControl](../../atl/reference/ccomcontrol-class.md).
 
 ##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow
 
@@ -158,11 +158,11 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la ventana se destruyó correctamente; en caso contrario, FALSE.
+TRUE si la ventana se destruye correctamente; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-No llame a `DestroyWindow` para destruir un cuadro de diálogo modal. Llame a [EndDialog](#enddialog) en su lugar.
+No llame `DestroyWindow` a para destruir un cuadro de diálogo modal. En su lugar, llame a [EndDialog](#enddialog) .
 
 ##  <a name="domodal"></a>  CAxDialogImpl::DoModal
 
@@ -177,20 +177,20 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parámetros
 
 *hWndParent*<br/>
-[in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) función de Win32.
+de Identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la función [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) de Win32.
 
 *dwInitParam*<br/>
-[in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
+de Especifica el valor que se va a pasar al cuadro de diálogo en el parámetro *lParam* del mensaje WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, el valor de la *nRetCode* los parámetros especificados en la llamada a [EndDialog](#enddialog); en caso contrario, -1.
+Si es correcto, el valor del parámetro *nRetCode* especificado en la llamada a [EndDialog](#enddialog); de lo contrario,-1.
 
 ### <a name="remarks"></a>Comentarios
 
-Este cuadro de diálogo se adjunta automáticamente a la `CAxDialogImpl` objeto.
+Este cuadro de diálogo se adjunta automáticamente al `CAxDialogImpl` objeto.
 
-Para crear un cuadro de diálogo no modal, llame a [crear](#create).
+Para crear un cuadro de diálogo no modal, llame a [Create](#create).
 
 ##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog
 
@@ -203,22 +203,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>Parámetros
 
 *nRetCode*<br/>
-[in] El valor que va a devolver [DoModal](#domodal).
+de Valor que va a ser devuelto por [DoModal](#domodal).
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se destruye el cuadro de diálogo; en caso contrario, FALSE.
+TRUE si el cuadro de diálogo está destruido; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-`EndDialog` debe llamarse mediante el procedimiento de cuadro de diálogo. Después de que se destruye el cuadro de diálogo, Windows utiliza el valor de *nRetCode* como el valor devuelto para `DoModal`, que crea el cuadro de diálogo.
+`EndDialog`se debe llamar a mediante el procedimiento de cuadro de diálogo. Una vez destruido el cuadro de diálogo, Windows usa el valor de *nRetCode* como valor devuelto `DoModal`para, que creó el cuadro de diálogo.
 
 > [!NOTE]
->  No llame a `EndDialog` para destruir un cuadro de diálogo no modal. Llame a [DestroyWindow](#destroywindow) en su lugar.
+>  No llame `EndDialog` a para destruir un cuadro de diálogo no modal. En su lugar, llame a [DestroyWindow](#destroywindow) .
 
 ##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc
 
-Llame a este método para obtener un puntero a la `DialogProc` función de devolución de llamada.
+Llame a este método para obtener un puntero a `DialogProc` la función de devolución de llamada.
 
 ```
 virtual DLGPROC GetDialogProc();
@@ -230,11 +230,11 @@ Devuelve un puntero a la `DialogProc` función de devolución de llamada.
 
 ### <a name="remarks"></a>Comentarios
 
-El `DialogProc` trata de una función de devolución de llamada definido por la aplicación.
+La `DialogProc` función es una función de devolución de llamada definida por la aplicación.
 
 ##  <a name="getidd"></a>  CAxDialogImpl::GetIDD
 
-Llame a este método para obtener el identificador de recurso de plantilla de cuadro de diálogo.
+Llame a este método para obtener el identificador de recurso de la plantilla de cuadro de diálogo.
 
 ```
 int GetIDD();
@@ -242,11 +242,11 @@ int GetIDD();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el identificador de recurso de plantilla de cuadro de diálogo.
+Devuelve el identificador de recurso de la plantilla de cuadro de diálogo.
 
 ##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage
 
-Llame a este método para determinar si un mensaje está destinado a este cuadro de diálogo y, si es así, procesar el mensaje.
+Llame a este método para determinar si un mensaje está pensado para este cuadro de diálogo y, si es así, procesar el mensaje.
 
 ```
 BOOL IsDialogMessage(LPMSG pMsg);
@@ -255,19 +255,19 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>Parámetros
 
 *pMsg*<br/>
-Puntero a un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) estructura que contiene el mensaje se va a comprobar.
+Puntero a una estructura [MSG](/windows/win32/api/winuser/ns-winuser-msg) que contiene el mensaje que se va a comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si el mensaje se ha procesado, FALSE en caso contrario.
+Devuelve TRUE si se ha procesado el mensaje; de lo contrario, devuelve FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método está pensado para ser llamado desde dentro de un bucle de mensajes.
+Este método está pensado para ser llamado desde un bucle de mensajes.
 
 ##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal
 
-Una variable que existe solo en modo de depuración se compila y está establecido en true si el cuadro de diálogo modal.
+Una variable que solo existe en las compilaciones de depuración y está establecida en true si el cuadro de diálogo es modal.
 
 ```
 bool m_bModal;
@@ -276,4 +276,4 @@ bool m_bModal;
 ## <a name="see-also"></a>Vea también
 
 [CDialogImpl (clase)](../../atl/reference/cdialogimpl-class.md)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)
+[Información general sobre clases](../../atl/atl-class-overview.md)

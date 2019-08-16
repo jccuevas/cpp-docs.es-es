@@ -7,24 +7,24 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-ms.openlocfilehash: 4516c4506419169ac3ab284e6c59cae71595be59
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43a68d63f7888d762eee031196453eb156ecf105
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286869"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508768"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Selección actual en un control Rich Edit
 
-El usuario puede seleccionar texto en un control rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mediante el mouse o el teclado. La selección actual es el intervalo de caracteres seleccionados, o la posición del punto de inserción si no hay caracteres están seleccionadas. Una aplicación puede obtener información acerca de la selección actual, establezca la selección actual, determinar cuándo resaltar los cambios de selección actual y mostrar u ocultar la selección.
+El usuario puede seleccionar texto en un control Rich Edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mediante el mouse o el teclado. La selección actual es el intervalo de caracteres seleccionados o la posición del punto de inserción si no se selecciona ningún carácter. Una aplicación puede obtener información sobre la selección actual, establecer la selección actual, determinar cuándo cambia la selección actual y mostrar u ocultar el resaltado de la selección.
 
-Para determinar la selección actual en un control rich edit, utilice la [función miembro GetSel](../mfc/reference/cricheditctrl-class.md#getsel) función miembro. Para establecer la selección actual, utilice el [función miembro SetSel](../mfc/reference/cricheditctrl-class.md#setsel) función miembro. El [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) estructura se usa con estas funciones para especificar un intervalo de caracteres. Para recuperar información sobre el contenido de la selección actual, se puede utilizar el [función miembro GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) función miembro.
+Para determinar la selección actual en un control Rich Edit, utilice la función miembro [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) . Para establecer la selección actual, utilice la función miembro [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) . La estructura [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) se utiliza con estas funciones para especificar un intervalo de caracteres. Para recuperar información sobre el contenido de la selección actual, puede usar la función miembro [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) .
 
-De forma predeterminada, un control rich edit muestra y oculta el área resaltada de selección cuando recibe y pierde el foco. Puede mostrar u ocultar resaltado de la selección en cualquier momento mediante el [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) función miembro. Por ejemplo, una aplicación podría proporcionar un cuadro de diálogo de búsqueda para buscar texto en un control rich edit. La aplicación podría seleccionar el texto coincidente sin cerrar el cuadro de diálogo, en cuyo caso debe usar `HideSelection` para resaltar la selección.
+De forma predeterminada, un control Rich Edit muestra y oculta el resaltado de la selección cuando gana y pierde el foco. Puede mostrar u ocultar el resaltado de la selección en cualquier momento mediante la función miembro [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) . Por ejemplo, una aplicación podría proporcionar un cuadro de diálogo de búsqueda para buscar texto en un control Rich Edit. La aplicación podría seleccionar texto coincidente sin cerrar el cuadro de diálogo, en cuyo caso debe usar `HideSelection` para resaltar la selección.
 
-Para obtener el texto seleccionado en un control rich edit, use el [función miembro GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) función miembro. El texto se copia en la matriz de caracteres especificada. Debe asegurarse de que la matriz es lo suficientemente grande como para contener el texto seleccionado más de un carácter nulo de terminación.
+Para obtener el texto seleccionado en un control Rich Edit, utilice la función miembro [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) . El texto se copia en la matriz de caracteres especificada. Debe asegurarse de que la matriz es lo suficientemente grande como para contener el texto seleccionado más un carácter nulo de terminación.
 
-Puede buscar una cadena en un control rich edit mediante el [FindText](../mfc/reference/cricheditctrl-class.md#findtext) función miembro el [FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa) estructura utilizada con esta función especifica el intervalo de texto de búsqueda y la cadena de búsqueda. También puede especificar opciones tales como la búsqueda no distingue entre mayúsculas y minúsculas.
+Puede buscar una cadena en un control Rich Edit mediante el uso de la función miembro [FindText](../mfc/reference/cricheditctrl-class.md#findtext) la estructura [FINDTEXTEX](/windows/win32/api/richedit/ns-richedit-findtextexw) usada con esta función especifica el intervalo de texto que se va a buscar y la cadena que se va a buscar. También puede especificar estas opciones como si la búsqueda distinga entre mayúsculas y minúsculas.
 
 ## <a name="see-also"></a>Vea también
 

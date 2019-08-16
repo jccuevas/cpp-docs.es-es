@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300276"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503717"
 ---
 # <a name="cevent-class"></a>CEvent (clase)
 
@@ -110,7 +110,7 @@ Si es TRUE, especifica que el objeto de evento es un evento manual, de lo contra
 Nombre del objeto `CEvent`. Se debe proporcionar si el objeto que se va a utilizar los límites del proceso. Si el nombre coincide con un evento existente, el constructor crea un nuevo `CEvent` objeto que hace referencia a los eventos de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es un evento, se producirá un error en la construcción. Si es NULL, el nombre será null.
 
 *lpsaAttribute*<br/>
-Atributos de seguridad para el objeto de evento. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) en el SDK de Windows.
+Atributos de seguridad para el objeto de evento. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -119,7 +119,7 @@ Para obtener acceso a o liberar una `CEvent` , cree un [CMultiLock](../../mfc/re
 Para cambiar el estado de un `CEvent` objeto marcado (subprocesos no tienen que esperar), llame a [SetEvent](#setevent) o [PulseEvent](#pulseevent). Para establecer el estado de un `CEvent` objeto en no señalado (subprocesos deben esperar), llame a [ResetEvent](#resetevent).
 
 > [!IMPORTANT]
->  Después de crear el `CEvent` de objeto, utilice [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para asegurarse de que ya no existe la exclusión mutua. Si la exclusión mutua existía inesperadamente, puede indicar un proceso invasor es uso inapropiado y es posible que pretende usar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupados por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.
+>  Después de crear el `CEvent` de objeto, utilice [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para asegurarse de que ya no existe la exclusión mutua. Si la exclusión mutua existía inesperadamente, puede indicar un proceso invasor es uso inapropiado y es posible que pretende usar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupados por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.
 
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent
 

@@ -46,14 +46,14 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 4b6dd55f90a3766dc250040e27b80f9b1c64fde3
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 8eb73a5149c1127332b9b8e464da02c6d528610e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210333"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499022"
 ---
-# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+# <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
 Escribe un resultado con formato mediante un puntero a una lista de argumentos. Hay disponibles versiones más seguras de estas funciones; vea [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
@@ -124,7 +124,7 @@ int _vswprintf_l(
 Ubicación de almacenamiento del resultado.
 
 *count*<br/>
-Número máximo de caracteres que se va a almacenar en las versiones de cadena de caracteres anchos de esta función.
+Número máximo de caracteres que se van a almacenar, en las versiones de cadena ancha de esta función.
 
 *format*<br/>
 Especificación de formato.
@@ -137,20 +137,20 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**vsprintf** y **vswprintf** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si *búfer* o *formato* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
+**vsprintf** y **vswprintf** devuelven el número de caracteres escritos, sin incluir el carácter nulo de terminación, o un valor negativo si se produce un error de salida. Si *buffer* o *Format* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, se da formato y escribe los datos especificados en la memoria que apunta *búfer*.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato y escribe los datos especificados en la memoria a la que apunta el *búfer*.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 > [!IMPORTANT]
-> Uso de **vsprintf**, no existe ninguna forma de limitar el número de caracteres escrito, lo que significa que el código mediante esta función es susceptible de saturaciones del búfer. En su lugar, use [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que *formato* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> Mediante **vsprintf**, no hay forma de limitar el número de caracteres escritos, lo que significa que el código que usa esta función es susceptible a las saturaciones del búfer. En su lugar, use [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que el *formato* no sea una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-**vswprintf** se ajusta a la Standard ISO C, que requiere que el segundo parámetro, *recuento*, del tipo **size_t**. Para imponer el anterior comportamiento no estándar, defina **_CRT_NON_CONFORMING_SWPRINTFS**. El comportamiento anterior no puede ser en una versión futura, por lo que debería modificarse el código para usar el nuevo comportamiento estándar.
+**vswprintf** se ajusta al estándar ISO C, que requiere el segundo parámetro, *Count*, de tipo **size_t**. Para forzar el comportamiento no estándar anterior, defina **_CRT_NON_CONFORMING_SWPRINTFS**. Es posible que el comportamiento anterior no esté en una versión futura, por lo que se debe cambiar el código para que use el nuevo comportamiento compatible.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

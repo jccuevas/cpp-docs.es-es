@@ -11,11 +11,11 @@ helpviewer_keywords:
 - banners, suppressing startup
 ms.assetid: 75930d8b-b11c-4db8-99e5-b52f97da0693
 ms.openlocfilehash: 1e48989a8e433296856ae58560823e601e36008f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320466"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/NOLOGO (Suprimir el titular de inicio) (C/C++)
 
@@ -45,5 +45,5 @@ Suprime la presentación de la pancarta de copyright cuando se inicia el compila
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

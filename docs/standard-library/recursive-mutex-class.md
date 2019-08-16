@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534412"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451683"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex (Clase)
 
@@ -35,14 +35,14 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|Construye un objeto `recursive_mutex`.|
 |[~recursive_mutex (Destructor)](#dtorrecursive_mutex_destructor)|Libera todos los recursos usados por el objeto `recursive_mutex`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[lock](#lock)|Bloquea el subproceso de llamada hasta que este obtiene la propiedad de la exclusión mutua.|
 |[try_lock](#try_lock)|Intenta obtener la propiedad de la exclusión mutua sin bloquearla.|
@@ -50,7 +50,7 @@ class recursive_mutex;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<mutex >
+**Encabezado:** \<exclusión mutua >
 
 **Espacio de nombres:** std
 
@@ -96,11 +96,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el método obtiene correctamente la propiedad de la `mutex` o si el subproceso que realiza la llamada ya posee el `mutex**; otherwise, **false`.
+**true** si el método obtiene correctamente la propiedad de `mutex` o si el subproceso que realiza la llamada ya posee el. `mutex**; otherwise, **false`
 
 ### <a name="remarks"></a>Comentarios
 
-Si el subproceso que realiza la llamada ya posee el `mutex`, la función devuelve inmediatamente **true**, y el bloqueo anterior permanece vigente.
+Si el subproceso que realiza la `mutex`llamada ya posee, la función devuelve inmediatamente **true**y el bloqueo anterior permanece en vigor.
 
 ## <a name="unlock"></a> unlock
 
@@ -118,5 +118,5 @@ Si el subproceso que realiza la llamada no posee `mutex`, el comportamiento es i
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

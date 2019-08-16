@@ -1,6 +1,6 @@
 ---
 title: CComSafeArray (clase)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,16 +28,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280685"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496993"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray (clase)
 
-Esta clase es un contenedor para el `SAFEARRAY` estructura.
+Esta clase es un contenedor para la `SAFEARRAY` estructura.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -55,22 +55,22 @@ Tipo de datos que se va a almacenar en la matriz.
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|El constructor.|
 |[CComSafeArray::~CComSafeArray](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CComSafeArray::Add](#add)|Agrega uno o más elementos, o un `SAFEARRAY` estructura, un `CComSafeArray`.|
-|[CComSafeArray::Attach](#attach)|Asocia un `SAFEARRAY` estructura a un `CComSafeArray` objeto.|
-|[CComSafeArray::CopyFrom](#copyfrom)|Copia el contenido de un `SAFEARRAY` estructura en el `CComSafeArray` objeto.|
+|[CComSafeArray::Add](#add)|Agrega uno o más elementos, o una `SAFEARRAY` estructura, a un `CComSafeArray`.|
+|[CComSafeArray::Attach](#attach)|Asocia una `SAFEARRAY` estructura a un `CComSafeArray` objeto.|
+|[CComSafeArray::CopyFrom](#copyfrom)|Copia el contenido de una `SAFEARRAY` estructura en el `CComSafeArray` objeto.|
 |[CComSafeArray::CopyTo](#copyto)|Crea una copia del objeto `CComSafeArray` .|
 |[CComSafeArray::Create](#create)|Crea un objeto `CComSafeArray`.|
 |[CComSafeArray::Destroy](#destroy)|Destruye un objeto `CComSafeArray`.|
-|[CComSafeArray::Detach](#detach)|Desasocia un `SAFEARRAY` desde un `CComSafeArray` objeto.|
+|[CComSafeArray::Detach](#detach)|Desasocia un `SAFEARRAY` de un `CComSafeArray` objeto.|
 |[CComSafeArray::GetAt](#getat)|Recupera un único elemento de una matriz unidimensional.|
 |[CComSafeArray::GetCount](#getcount)|Devuelve el número de elementos de la matriz.|
 |[CComSafeArray::GetDimensions](#getdimensions)|Devuelve el número de dimensiones de la matriz.|
@@ -86,21 +86,21 @@ Tipo de datos que se va a almacenar en la matriz.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Convierte un valor en un `SAFEARRAY` puntero.|
+|[CComSafeArray:: Operator LPSAFEARRAY](#operator_lpsafearray)|Convierte un valor en un `SAFEARRAY` puntero.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Recupera un elemento de la matriz.|
 |[CComSafeArray::operator =](#operator_eq)|Operador de asignación.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CComSafeArray::m_psa](#m_psa)|Este miembro de datos contiene la dirección de la `SAFEARRAY` estructura.|
+|[CComSafeArray::m_psa](#m_psa)|Este miembro de datos contiene la dirección de `SAFEARRAY` la estructura.|
 
 ## <a name="remarks"></a>Comentarios
 
-`CComSafeArray` proporciona un contenedor para la clase [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , lo que facilita la creación y administración de matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT.
+`CComSafeArray` proporciona un contenedor para la clase [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) , lo que facilita la creación y administración de matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT.
 
 `CComSafeArray` simplifica el paso de matrices entre procesos y, además, proporciona seguridad adicional al comprobar los valores de índice de matriz con los limites superior e inferior.
 
@@ -110,7 +110,7 @@ Use [CComSafeArray::Create](#create) para crear un objeto `CComSafeArray` y [CCo
 
 Un elemento `CComSafeArray` puede contener el siguiente subconjunto de tipos de datos VARIANT:
 
-|VARTYPE|Descripción|
+|VARTYPE|DESCRIPCIÓN|
 |-------------|-----------------|
 |VT_I1|char|
 |VT_I2|short|
@@ -123,7 +123,7 @@ Un elemento `CComSafeArray` puede contener el siguiente subconjunto de tipos de 
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
 |VT_R4|float|
-|VT_R8|double|
+|VT_R8|Doble|
 |VT_DECIMAL|puntero decimal|
 |VT_VARIANT|puntero variant|
 |VT_CY|Currency (tipo de datos)|
@@ -138,7 +138,7 @@ Un elemento `CComSafeArray` puede contener el siguiente subconjunto de tipos de 
 
 ##  <a name="add"></a>  CComSafeArray::Add
 
-Agrega uno o más elementos, o un `SAFEARRAY` estructura, un `CComSafeArray`.
+Agrega uno o más elementos, o una `SAFEARRAY` estructura, a un `CComSafeArray`.
 
 ```
 HRESULT Add(const SAFEARRAY* psaSrc);
@@ -152,30 +152,30 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 Puntero a un objeto `SAFEARRAY` .
 
 *ulCount*<br/>
-El número de objetos que se va a agregar a la matriz.
+Número de objetos que se van a agregar a la matriz.
 
 *pT*<br/>
-Un puntero a uno o más objetos que se agregarán a la matriz.
+Puntero a uno o varios objetos que se van a agregar a la matriz.
 
 *t*<br/>
-Una referencia al objeto que se agregarán a la matriz.
+Referencia al objeto que se va a agregar a la matriz.
 
 *bCopy*<br/>
 Indica si se debe crear una copia de los datos. El valor predeterminado es TRUE.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Los nuevos objetos se anexan al final de la existente `SAFEARRAY` objeto. Agregar un objeto a multidimensional `SAFEARRAY` objeto no es compatible. Cuando se agrega una matriz de objetos existente, ambas matrices deben contener elementos del mismo tipo.
+Los objetos nuevos se anexan al final del objeto existente `SAFEARRAY` . No se admite la adición de un objeto `SAFEARRAY` a un objeto multidimensional. Al agregar una matriz de objetos existente, ambas matrices deben contener elementos del mismo tipo.
 
-El *bCopy* marca se tiene en cuenta cuando se agregan elementos de tipo BSTR o VARIANT en una matriz. El valor predeterminado es true, se garantiza que se crea una nueva copia de los datos cuando el elemento se agrega a la matriz.
+La marca *bCopy* se tiene en cuenta cuando se agregan elementos de tipo BSTR o Variant a una matriz. El valor predeterminado TRUE garantiza que se crea una nueva copia de los datos cuando el elemento se agrega a la matriz.
 
 ##  <a name="attach"></a>  CComSafeArray::Attach
 
-Asocia un `SAFEARRAY` estructura a un `CComSafeArray` objeto.
+Asocia una `SAFEARRAY` estructura a un `CComSafeArray` objeto.
 
 ```
 HRESULT Attach(const SAFEARRAY* psaSrc);
@@ -184,15 +184,15 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>Parámetros
 
 *psaSrc*<br/>
-Un puntero a la `SAFEARRAY` estructura.
+Puntero a la `SAFEARRAY` estructura.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Asocia un `SAFEARRAY` estructura a un `CComSafeArray` objeto, por lo que la existente `CComSafeArray` métodos disponibles.
+Asocia una `SAFEARRAY` estructura a un `CComSafeArray` objeto, haciendo que los métodos `CComSafeArray` existentes estén disponibles.
 
 ##  <a name="ccomsafearray"></a>  CComSafeArray::CComSafeArray
 
@@ -210,26 +210,26 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parámetros
 
-*bound*<br/>
+*enlaza*<br/>
 Un estructura `SAFEARRAYBOUND`.
 
 *ulCount*<br/>
 Número de elementos de la matriz.
 
 *lLBound*<br/>
-El valor de límite inferior; es decir, el índice del primer elemento de la matriz.
+Valor de límite inferior; es decir, el índice del primer elemento de la matriz.
 
 *pBound*<br/>
-Un puntero a un `SAFEARRAYBOUND` estructura.
+Puntero a una `SAFEARRAYBOUND` estructura.
 
 *uDims*<br/>
-El número de dimensiones de la matriz.
+Número de dimensiones de la matriz.
 
 *saSrc*<br/>
-Una referencia a un `SAFEARRAY` estructura o `CComSafeArray` objeto. En cualquier caso el constructor usa esta referencia para realizar una copia de la matriz, por lo que no se hace referencia a la matriz después de la construcción.
+Referencia a una `SAFEARRAY` estructura u `CComSafeArray` objeto. En cualquier caso, el constructor utiliza esta referencia para realizar una copia de la matriz, por lo que no se hace referencia a la matriz después de la construcción.
 
 *psaSrc*<br/>
-Un puntero a un `SAFEARRAY` estructura. El constructor usa esta dirección para realizar una copia de la matriz, por lo que no se hace referencia a la matriz después de la construcción.
+Puntero a una `SAFEARRAY` estructura. El constructor utiliza esta dirección para hacer una copia de la matriz, por lo que no se hace referencia a la matriz después de la construcción.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -249,7 +249,7 @@ Libera todos los recursos asignados.
 
 ##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom
 
-Copia el contenido de un `SAFEARRAY` estructura en el `CComSafeArray` objeto.
+Copia el contenido de una `SAFEARRAY` estructura en el `CComSafeArray` objeto.
 
 ```
 HRESULT CopyFrom(LPSAFEARRAY* ppArray);
@@ -258,15 +258,15 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="parameters"></a>Parámetros
 
 *ppArray*<br/>
-Puntero a la `SAFEARRAY` para copiar.
+Puntero al `SAFEARRAY` que se va a copiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método copia el contenido de un `SAFEARRAY` en actual `CComSafeArray` objeto. Se reemplazará el contenido existente de la matriz.
+Este método copia el contenido de `SAFEARRAY` en el objeto actual. `CComSafeArray` Se reemplaza el contenido existente de la matriz.
 
 ##  <a name="copyto"></a>  CComSafeArray::CopyTo
 
@@ -279,15 +279,15 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="parameters"></a>Parámetros
 
 *ppArray*<br/>
-Un puntero a una ubicación en la que se va a crear el nuevo `SAFEARRAY`.
+Puntero a una ubicación en la que se va a crear `SAFEARRAY`el nuevo.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método copia el contenido de un `CComSafeArray` objeto en un `SAFEARRAY` estructura.
+Este método copia el contenido de un `CComSafeArray` objeto en una `SAFEARRAY` estructura.
 
 ##  <a name="create"></a>  CComSafeArray::Create
 
@@ -304,21 +304,21 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 Puntero a un objeto `SAFEARRAYBOUND` .
 
 *uDims*<br/>
-El número de dimensiones de la matriz.
+Número de dimensiones de la matriz.
 
 *ulCount*<br/>
 Número de elementos de la matriz.
 
 *lLBound*<br/>
-El valor de límite inferior; es decir, el índice del primer elemento de la matriz.
+Valor de límite inferior; es decir, el índice del primer elemento de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Un `CComSafeArray` objeto puede crearse a partir de una máquina `SAFEARRAYBOUND` estructura y el número de dimensiones, o especificando el número de elementos en la matriz y el límite inferior. Si la matriz es necesario acceder desde Visual C++, el límite inferior debe ser 0. Otros lenguajes pueden permitir otros valores para el límite inferior (por ejemplo, Visual Basic admite matrices con elementos con un intervalo de -10 a 10).
+Un `CComSafeArray` objeto se puede crear a partir de `SAFEARRAYBOUND` una estructura existente y el número de dimensiones, o especificando el número de elementos de la matriz y el límite inferior. Si se va a tener acceso a la matriz C++desde, el límite inferior debe ser 0. Otros lenguajes pueden permitir otros valores para el límite inferior (por ejemplo, Visual Basic admite matrices con elementos con un intervalo como-10 a 10).
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 
@@ -330,15 +330,15 @@ HRESULT Destroy();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Destruye una existente `CComSafeArray` objeto y todos los datos que contiene.
+Destruye un objeto existente `CComSafeArray` y todos los datos que contiene.
 
 ##  <a name="detach"></a>  CComSafeArray::Detach
 
-Desasocia un `SAFEARRAY` desde un `CComSafeArray` objeto.
+Desasocia un `SAFEARRAY` de un `CComSafeArray` objeto.
 
 ```
 LPSAFEARRAY Detach();
@@ -350,7 +350,7 @@ Devuelve un puntero a un `SAFEARRAY` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método separa el `SAFEARRAY` objeto desde el `CComSafeArray` objeto.
+Este método Desasocia el `SAFEARRAY` objeto `CComSafeArray` del objeto.
 
 ##  <a name="getat"></a>  CComSafeArray::GetAt
 
@@ -363,11 +363,11 @@ T& GetAt(LONG lIndex) const;
 ### <a name="parameters"></a>Parámetros
 
 *lIndex*<br/>
-El número de índice del valor de la matriz para devolver.
+Número de índice del valor de la matriz que se va a devolver.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve una referencia al elemento de matriz requiere.
+Devuelve una referencia al elemento de matriz necesario.
 
 ##  <a name="getcount"></a>  CComSafeArray::GetCount
 
@@ -380,7 +380,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="parameters"></a>Parámetros
 
 *uDim*<br/>
-La dimensión de matriz.
+La dimensión de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -388,7 +388,7 @@ Devuelve el número de elementos de la matriz.
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se usa con una matriz multidimensional, este método devolverá el número de elementos de una dimensión específica solo.
+Cuando se usa con una matriz multidimensional, este método devolverá solo el número de elementos de una dimensión específica.
 
 ##  <a name="getdimensions"></a>  CComSafeArray::GetDimensions
 
@@ -413,7 +413,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="parameters"></a>Parámetros
 
 *uDim*<br/>
-La dimensión de matriz para que se va a obtener el límite inferior. Si se omite, el valor predeterminado es 0.
+La dimensión de la matriz para la que se va a obtener el límite inferior. Si se omite, el valor predeterminado es 0.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -421,7 +421,7 @@ Devuelve el límite inferior.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el límite inferior es 0, esto indica una matriz de tipo C cuyo primer elemento es el elemento número 0. Si se produce un error, por ejemplo, un argumento no válido de dimensión, este método llama a `AtlThrow` con un valor HRESULT que describe el error.
+Si el límite inferior es 0, indica una matriz similar a C cuyo primer elemento es el número de elemento 0. En caso de error, por ejemplo, un argumento de dimensión no válido, este método llama `AtlThrow` a con un valor HRESULT que describe el error.
 
 ##  <a name="getsafearrayptr"></a>  CComSafeArray::GetSafeArrayPtr
 
@@ -433,7 +433,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la [CComSafeArray::m_psa](#m_psa) miembro de datos.
+Devuelve un puntero al miembro de datos [CComSafeArray:: m_psa](#m_psa) .
 
 ##  <a name="gettype"></a>  CComSafeArray::GetType
 
@@ -445,9 +445,9 @@ VARTYPE GetType() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el tipo de datos almacenados en la matriz, que podría ser cualquiera de los siguientes tipos:
+Devuelve el tipo de datos almacenado en la matriz, que puede ser cualquiera de los siguientes tipos:
 
-|VARTYPE|Descripción|
+|VARTYPE|DESCRIPCIÓN|
 |-------------|-----------------|
 |VT_I1|char|
 |VT_I2|short|
@@ -460,7 +460,7 @@ Devuelve el tipo de datos almacenados en la matriz, que podría ser cualquiera d
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
 |VT_R4|float|
-|VT_R8|double|
+|VT_R8|Doble|
 |VT_DECIMAL|puntero decimal|
 |VT_VARIANT|puntero variant|
 |VT_CY|Currency (tipo de datos)|
@@ -476,15 +476,15 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="parameters"></a>Parámetros
 
 *uDim*<br/>
-La dimensión de matriz para que se va a obtener el límite superior. Si se omite, el valor predeterminado es 0.
+La dimensión de la matriz para la que se va a obtener el límite superior. Si se omite, el valor predeterminado es 0.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el límite superior. Este valor es inclusivo, el máximo índice válido para esta dimensión.
+Devuelve el límite superior. Este valor es inclusivo, el índice válido máximo para esta dimensión.
 
 ### <a name="remarks"></a>Comentarios
 
-Si se produce un error, por ejemplo, un argumento no válido de dimensión, este método llama a `AtlThrow` con un valor HRESULT que describe el error.
+En caso de error, por ejemplo, un argumento de dimensión no válido, este método llama `AtlThrow` a con un valor HRESULT que describe el error.
 
 ##  <a name="issizable"></a>  CComSafeArray::IsSizable
 
@@ -496,11 +496,11 @@ bool IsSizable() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve TRUE si el `CComSafeArray` puede cambiarse, FALSE si no es posible.
+Devuelve true si se `CComSafeArray` puede cambiar el tamaño de, false si no puede.
 
 ##  <a name="m_psa"></a>  CComSafeArray::m_psa
 
-Contiene la dirección de la `SAFEARRAY` estructura acceder.
+Contiene la dirección de la `SAFEARRAY` estructura a la que se obtiene acceso.
 
 ```
 LPSAFEARRAY m_psa;
@@ -517,14 +517,14 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="parameters"></a>Parámetros
 
 *alIndex*<br/>
-Puntero a un vector de índices para cada dimensión de la matriz. La dimensión más a la izquierda (más significativa) es `alIndex[0]`.
+Puntero a un vector de índices para cada dimensión de la matriz. La dimensión situada más a la izquierda ( `alIndex[0]`más importante) es.
 
 *t*<br/>
-Devuelve una referencia a los datos.
+Referencia a los datos devueltos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ##  <a name="multidimsetat"></a>  CComSafeArray::MultiDimSetAt
 
@@ -537,20 +537,20 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="parameters"></a>Parámetros
 
 *alIndex*<br/>
-Puntero a un vector de índices para cada dimensión de la matriz. La dimensión (menos significativa) más a la derecha es `alIndex`[0].
+Puntero a un vector de índices para cada dimensión de la matriz. La dimensión situada más a la derecha ( `alIndex`menos significativa) es [0].
 
 *T*<br/>
 Especifica el valor del nuevo elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Se trata de una versión de multidimensionales [SetAt](#setat).
+Se trata de una versión multidimensional de [CComSafeArray:: SetAt](#setat).
 
-##  <a name="operator_at"></a>  CComSafeArray::operator \[\]
+##  <a name="operator_at"></a>CComSafeArray:: Operator\[\]
 
 Recupera un elemento de la matriz.
 
@@ -562,17 +562,17 @@ T& operator[]int nindex) const;
 ### <a name="parameters"></a>Parámetros
 
 *lIndex, nIndex*<br/>
-El número de índice del elemento necesario en la matriz.
+Número de índice del elemento necesario de la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el elemento de matriz correspondiente.
+Devuelve el elemento de matriz adecuado.
 
 ### <a name="remarks"></a>Comentarios
 
-Realiza una función similar a [CComSafeArray:: GetAt](#getat); sin embargo, este operador solo funciona con matrices unidimensionales.
+Realiza una función similar a [CComSafeArray:: getadt](#getat); sin embargo, este operador solo funciona con matrices unidimensionales.
 
-##  <a name="operator_eq"></a>  CComSafeArray::operator =
+##  <a name="operator_eq"></a>CComSafeArray:: Operator =
 
 Operador de asignación.
 
@@ -593,7 +593,7 @@ Puntero a un objeto `SAFEARRAY` .
 
 Devuelve el tipo de datos almacenado en la matriz.
 
-##  <a name="operator_lpsafearray"></a>  CComSafeArray::operator LPSAFEARRAY
+##  <a name="operator_lpsafearray"></a>CComSafeArray:: Operator LPSAFEARRAY
 
 Convierte un valor en un `SAFEARRAY` puntero.
 
@@ -617,21 +617,21 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="parameters"></a>Parámetros
 
 *pBound*<br/>
-Un puntero a un `SAFEARRAYBOUND` estructura que contiene información sobre el número de elementos y el límite inferior de la matriz.
+Puntero a una `SAFEARRAYBOUND` estructura que contiene información sobre el número de elementos y el límite inferior de una matriz.
 
 *ulCount*<br/>
-El número solicitado de objetos de la matriz cuyo tamaño ha cambiado.
+Número solicitado de objetos en la matriz cuyo tamaño se ha cambiado.
 
 *lLBound*<br/>
-El límite inferior.
+Límite inferior.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método solo cambia el tamaño de la dimensión más a la derecha. No cambiará de tamaño las matrices que devuelven `IsResizable` como FALSE.
+Este método solo cambia el tamaño de la dimensión situada más a la derecha. No cambiará el tamaño de las matrices que `IsResizable` devuelven como false.
 
 ##  <a name="setat"></a>  CComSafeArray::SetAt
 
@@ -644,25 +644,25 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Parámetros
 
 *lIndex*<br/>
-El número de índice del elemento de matriz para establecer.
+Número de índice del elemento de la matriz que se va a establecer.
 
 *t*<br/>
-El nuevo valor del elemento especificado.
+Nuevo valor del elemento especificado.
 
 *bCopy*<br/>
 Indica si se debe crear una copia de los datos. El valor predeterminado es TRUE.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-El *bCopy* marca se tiene en cuenta cuando se agregan elementos de tipo BSTR o VARIANT en una matriz. El valor predeterminado es true, se garantiza que se crea una nueva copia de los datos cuando el elemento se agrega a la matriz.
+La marca *bCopy* se tiene en cuenta cuando se agregan elementos de tipo BSTR o Variant a una matriz. El valor predeterminado TRUE garantiza que se crea una nueva copia de los datos cuando el elemento se agrega a la matriz.
 
 ## <a name="see-also"></a>Vea también
 
-[Tipo de datos SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY, tipo de datos](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)
+[Información general sobre clases](../../atl/atl-class-overview.md)

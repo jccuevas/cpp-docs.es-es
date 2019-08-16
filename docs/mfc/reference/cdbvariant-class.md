@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
 ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253327"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant (clase)
 
@@ -55,25 +55,25 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Construye un objeto `CDBVariant`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Borra la `CDBVariant` objeto.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|Contiene el tipo de datos del valor almacenado actualmente. Escriba `DWORD`.|
 
 ### <a name="public-union-members"></a>Miembros públicos de unión
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Contiene un valor de tipo **BOOL**.|
 |[CDBVariant::m_chVal](#m_chval)|Contiene un valor de tipo **unsigned char**.|

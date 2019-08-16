@@ -18,6 +18,7 @@ apilocation:
 - ucrtbase.dll
 - ntoskrnl.exe
 apitype: DLLExport
+topictype: APIRef
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 4feaa692ced7777d757b579c1b131b541dccea66
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
+ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210242"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265627"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 

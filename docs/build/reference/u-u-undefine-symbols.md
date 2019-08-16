@@ -14,11 +14,11 @@ helpviewer_keywords:
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
 ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317008"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Anular la definición de símbolos)
 
@@ -71,8 +71,8 @@ De forma predeterminada, el compilador define los siguientes símbolos específi
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/J (El tipo de carácter predeterminado no tiene signo)](j-default-char-type-is-unsigned.md)<br/>
 [/GR (Habilitar la información de tipo en tiempo de ejecución)](gr-enable-run-time-type-information.md)<br/>
 [/EH (Modelo de control de excepciones)](eh-exception-handling-model.md)<br/>

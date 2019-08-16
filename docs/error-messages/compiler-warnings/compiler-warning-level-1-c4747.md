@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4747
 ms.assetid: af37befd-ba1f-4bdc-96e1-a953f7a2ad9c
 ms.openlocfilehash: ecaabd482049771b1d3915470a2be7a52e36d361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404031"
 ---
 # <a name="compiler-warning-level-1-c4747"></a>Advertencia del compilador (nivel 1) C4747
 
-Una llamada a 'entrypoint' administrado: no se puede ejecutar código administrado en un bloqueo del cargador, incluido el DLL entrypoint y las llamadas alcanzadas desde el punto
+Llamada administrada 'entrypoint': No se puede ejecutar código administrado en un bloqueo del cargador, incluido el DLL entrypoint y las llamadas alcanzadas desde el punto
 
 El compilador encontró un punto de entrada DLL (probable) compilado para MSIL.  Debido a posibles problemas con la carga de un archivo DLL cuyo punto de entrada se ha compilado en MSIL, se desaconseja encarecidamente compilar una función de punto de entrada DLL en MSIL.
 

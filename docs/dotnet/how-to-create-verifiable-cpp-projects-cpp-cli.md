@@ -1,17 +1,17 @@
 ---
-title: Filtrar Crear proyectos de C++ comprobables (C++ / c++ / CLI)
+title: Procedimiento Crear proyectos de C++ comprobables (C++ / c++ / CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817389"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448112"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Cómo: crear proyectos de C++ comprobables (C++ / c++ / CLI)
 
@@ -20,7 +20,7 @@ Asistentes para aplicaciones de visuales C++ no crean proyectos comprobables.
 > [!IMPORTANT]
 > En desuso de Visual Studio 2015 y Visual Studio 2017 no admite la **/CLR: pure** y **/CLR: safe** creación de proyectos que se pueda comprobar. Si necesita código comprobable, se recomienda que trasladar el código en C#.
 
-Sin embargo, si usa una versión anterior del conjunto de herramientas del compilador de Visual C++ que admite **/CLR: pure** y **/CLR: safe**, se pueden convertir los proyectos para que sea comprobable. Este tema describe cómo establecer las propiedades del proyecto y modificar archivos de código fuente del proyecto para transformar los proyectos de Visual C++ para generar aplicaciones comprobables.
+Sin embargo, si está utilizando una versión anterior de Microsoft C++ conjunto de herramientas del compilador que admita **/CLR: pure** y **/CLR: safe**, se pueden convertir los proyectos para que sea comprobable. Este tema describe cómo establecer las propiedades del proyecto y modificar archivos de código fuente del proyecto para transformar su Visual Studio C++ proyectos para producir aplicaciones comprobables.
 
 ## <a name="compiler-and-linker-settings"></a>Configuración de compilador y vinculador
 

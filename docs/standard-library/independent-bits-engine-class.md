@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635843"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456342"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine (Clase)
 
@@ -26,13 +26,13 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*Motor de*<br/>
+*Motor*\
 El tipo de motor base.
 
-*W*<br/>
+*CON*\
 **Tamaño de palabra**. Tamaño, en bits, de cada número generado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
+*UIntType*\
 El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Miembros
@@ -46,7 +46,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla describe un *adaptador de motor* que produce valores volviendo a empaquetar bits de los valores devueltos por su motor base, lo que resulta en *W*-valores de bit.
+Esta clase de plantilla describe un *adaptador de motor* que produce valores volviendo a empaquetar los bits de los valores devueltos por su motor base, lo que da como resultado valores de *W*-bit.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,4 +56,4 @@ Esta clase de plantilla describe un *adaptador de motor* que produce valores vol
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

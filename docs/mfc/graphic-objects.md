@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4abc2764abd0f31b83253f37b8cb459be638ae5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279580"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508538"
 ---
 # <a name="graphic-objects"></a>Objetos gráficos
 
 Windows proporciona diversas herramientas de dibujo que se usan en contextos de dispositivo. Incluye lápices para trazar líneas, pinceles para rellenar interiores y fuentes para dibujar texto. MFC proporciona clases de objetos gráficos que equivalen a las herramientas de dibujo de Windows. En la siguiente tabla se recogen las clases disponibles y los tipos de identificador de Interfaz de dispositivo gráfico (GDI) de Windows equivalentes.
 
 > [!NOTE]
->  Para obtener más información, consulte la documentación de SDK de GDI + en: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Para obtener más información, vea la [documentación del SDK de GDI+](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
 En este artículo se explica el uso de estas clases de objetos gráficos:
 
@@ -66,14 +66,14 @@ En este artículo se explica el uso de estas clases de objetos gráficos:
 |[CFont](../mfc/reference/cfont-class.md)|**HFONT**|
 |[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|
 |[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|
-|[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
+|[Crgn (](../mfc/reference/crgn-class.md)|**HRGN**|
 
 > [!NOTE]
->  La clase [CImage](../atl-mfc-shared/reference/cimage-class.md) proporciona compatibilidad con mapas de bits mejorada.
+>  La clase [CImage](../atl-mfc-shared/reference/cimage-class.md) proporciona compatibilidad mejorada con mapas de bits.
 
 Cada clase de objeto gráfico en la biblioteca de clases tiene un constructor que permite crear objetos gráficos de esa clase. Este constructor se tiene que inicializar con la función de creación adecuada, como, por ejemplo, `CreatePen`.
 
-Cada clase de objeto gráfico en la biblioteca de clases tiene un operador de conversión que convierte un objeto MFC en el identificador de Windows asociado. El identificador resultante es válido hasta que el objeto asociado lo desconecta. Utilice el objeto `Detach` función miembro para desconectar el identificador.
+Cada clase de objeto gráfico en la biblioteca de clases tiene un operador de conversión que convierte un objeto MFC en el identificador de Windows asociado. El identificador resultante es válido hasta que el objeto asociado lo desconecta. Utilice la función miembro `Detach` del objeto para desasociar el identificador.
 
 El siguiente código convierte un objeto `CPen` en un identificador de Windows:
 
@@ -81,9 +81,9 @@ El siguiente código convierte un objeto `CPen` en un identificador de Windows:
 
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>Para crear un objeto gráfico en un contexto de dispositivo
 
-1. Defina un objeto gráfico en el marco de pila. Inicialice el objeto con la función de creación específica del tipo, como `CreatePen`. Como alternativa, inicialice el objeto en el constructor. Consulte la explicación [creación de una fase y en dos fases](../mfc/one-stage-and-two-stage-construction-of-objects.md), que proporciona el código de ejemplo.
+1. Defina un objeto gráfico en el marco de pila. Inicialice el objeto con la función de creación específica del tipo, como `CreatePen`. Como alternativa, inicialice el objeto en el constructor. Vea la explicación de la [creación en una fase y en dos fases](../mfc/one-stage-and-two-stage-construction-of-objects.md), que proporciona código de ejemplo.
 
-1. [Seleccione el objeto en el contexto de dispositivo actual](../mfc/selecting-a-graphic-object-into-a-device-context.md), se guarda el objeto gráfico anterior que seleccionó antes.
+1. [Seleccione el objeto en el contexto del dispositivo actual](../mfc/selecting-a-graphic-object-into-a-device-context.md)y guarde el objeto gráfico anterior que se seleccionó anteriormente.
 
 1. Cuando termine con el objeto gráfico actual, seleccione el objeto gráfico anterior en el contexto de dispositivo para restaurar su estado.
 
@@ -94,7 +94,7 @@ El siguiente código convierte un objeto `CPen` en un identificador de Windows:
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Construcción de una fase y en dos fases de objetos gráficos](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Construcción de objetos gráficos en una fase y en dos fases](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
 - [Ejemplo de creación de un lápiz en una y dos fases](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 

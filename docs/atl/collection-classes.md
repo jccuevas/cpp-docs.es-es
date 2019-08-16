@@ -5,84 +5,84 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 0a91b34dc28ace3a8fc0fe1ac1c59d86b19ece43
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fe795e54274e1d32dddb7310446bfa5aea22091a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290075"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492476"
 ---
 # <a name="collection-classes"></a>Clases de colección
 
-Las clases siguientes proporcionan compatibilidad para matrices, listas, asignaciones y los métodos de rasgos para ayudar en las comparaciones y acceso de elemento.
+Las clases siguientes proporcionan compatibilidad con matrices, listas, asignaciones y métodos de rasgos para ayudar con las comparaciones y el acceso a elementos.
 
-- [CAtlArray](../atl/reference/catlarray-class.md) esta clase implementa un objeto de matriz.
+- [CAtlArray](../atl/reference/catlarray-class.md) Esta clase implementa un objeto de matriz.
 
-- [CAtlList](../atl/reference/catllist-class.md) esta clase proporciona métodos para crear y administrar un objeto de lista.
+- [CAtlList](../atl/reference/catllist-class.md) Esta clase proporciona métodos para crear y administrar un objeto de lista.
 
-- [CAtlMap](../atl/reference/catlmap-class.md) esta clase proporciona métodos para crear y administrar un objeto de mapa.
+- [CAtlMap](../atl/reference/catlmap-class.md) Esta clase proporciona métodos para crear y administrar un objeto de mapa.
 
-- [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) esta clase proporciona métodos útiles al construir una matriz de punteros inteligentes.
+- [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) Esta clase proporciona métodos útiles al construir una matriz de punteros inteligentes.
 
-- [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) esta clase proporciona métodos, funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros inteligentes.
+- [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) Esta clase proporciona métodos, funciones estáticas y definiciones de tipo útiles al crear colecciones de punteros inteligentes.
 
-- [CAutoPtrList](../atl/reference/cautoptrlist-class.md) esta clase proporciona métodos útiles al construir una lista de punteros inteligentes.
+- [CAutoPtrList](../atl/reference/cautoptrlist-class.md) Esta clase proporciona métodos útiles al construir una lista de punteros inteligentes.
 
-- [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) esta clase proporciona métodos, funciones estáticas, y definiciones de tipos útiles al crear colecciones de punteros inteligentes mediante vector nuevas y eliminación operadores.
+- [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) Esta clase proporciona métodos, funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros inteligentes mediante operadores New y Delete de vector.
 
-- [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) esta clase proporciona métodos, funciones estáticas, y definiciones de tipos útiles al crear colecciones de COM de punteros de interfaz.
+- [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) Esta clase proporciona métodos, funciones estáticas y definiciones de tipo útiles al crear colecciones de punteros de interfaz COM.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) esta clase es un contenedor para el [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) estructura.
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Esta clase es un contenedor para la estructura de [tipo de datos SafeArray](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) .
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) esta clase es un contenedor para un [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estructura.
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) Esta clase es un contenedor para una estructura [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-tagsafearraybound) .
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) esta clase almacena **IUnknown** punteros y está diseñado para usarse como un parámetro a la [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) clase de plantilla.
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md) Esta clase almacena punteros **IUnknown** y está diseñado para usarse como un parámetro para la clase de plantilla [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) .
 
-- [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) esta clase proporciona dos funciones estáticas para la conversión de caracteres entre mayúsculas y minúsculas.
+- [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) Esta clase proporciona dos funciones estáticas para convertir caracteres entre mayúsculas y minúsculas.
 
-- [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) esta clase proporciona funciones de comparación de elemento de predeterminado.
+- [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) Esta clase proporciona funciones de comparación de elementos predeterminadas.
 
-- [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) esta clase proporciona funciones y métodos predeterminados para una clase de colección.
+- [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) Esta clase proporciona métodos y funciones predeterminados para una clase de colección.
 
-- [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) esta clase proporciona una función estática para calcular los valores hash.
+- [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) Esta clase proporciona una función estática para calcular los valores hash.
 
-- [CElementTraits](../atl/reference/celementtraits-class.md) esta clase se utiliza por las clases de colección para proporcionar funciones y métodos para mover, copiar, comparación y operaciones de hash.
+- [CElementTraits](../atl/reference/celementtraits-class.md) Las clases de colección usan esta clase para proporcionar métodos y funciones para mover, copiar, comparar y realizar operaciones hash.
 
-- [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) esta clase proporciona métodos de copia y movimiento para una clase de colección de predeterminado.
+- [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) Esta clase proporciona los métodos de copia y movimiento predeterminados para una clase de colección.
 
-- [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) esta clase proporciona métodos, funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros del montón.
+- [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) Esta clase proporciona métodos, funciones estáticas y definiciones de tipo útiles al crear colecciones de punteros de montón.
 
-- [CHeapPtrList](../atl/reference/cheapptrlist-class.md) esta clase proporciona métodos útiles al construir una lista de punteros del montón.
+- [CHeapPtrList](../atl/reference/cheapptrlist-class.md) Esta clase proporciona métodos útiles al construir una lista de punteros de montón.
 
-- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) esta clase proporciona métodos útiles al construir una matriz de punteros de interfaz COM.
+- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) Esta clase proporciona métodos útiles al construir una matriz de punteros de interfaz COM.
 
-- [CInterfaceList](../atl/reference/cinterfacelist-class.md) esta clase proporciona métodos útiles al construir una lista de punteros de interfaz COM.
+- [CInterfaceList](../atl/reference/cinterfacelist-class.md) Esta clase proporciona métodos útiles al construir una lista de punteros de interfaz COM.
 
-- [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) esta clase proporciona métodos predeterminados y las funciones de una clase de colección formado por tipos de datos primitivos.
+- [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) Esta clase proporciona métodos y funciones predeterminados para una clase de colección compuesta de tipos de datos primitivos.
 
-- [CRBMap](../atl/reference/crbmap-class.md) esta clase representa una estructura de asignación, mediante un árbol binario rojo-negro.
+- [CRBMap](../atl/reference/crbmap-class.md) Esta clase representa una estructura de asignación, utilizando un árbol binario rojo-negro.
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) esta clase representa una estructura de asignación que permite que cada clave que se va a asociar a más de un valor, utilizando un árbol binario rojo-negro.
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md) Esta clase representa una estructura de asignación que permite asociar cada clave a más de un valor, mediante un árbol binario rojo-negro.
 
-- [CRBTree](../atl/reference/crbtree-class.md) esta clase proporciona métodos para la creación y uso de un árbol rojo-negro.
+- [CRBTree](../atl/reference/crbtree-class.md) Esta clase proporciona métodos para crear y usar un árbol rojo-negro.
 
-- [CSimpleArray](../atl/reference/csimplearray-class.md) esta clase proporciona métodos para administrar una matriz simple.
+- [CSimpleArray](../atl/reference/csimplearray-class.md) Esta clase proporciona métodos para administrar una matriz simple.
 
-- [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) esta clase es una aplicación auxiliar para el [CSimpleArray](../atl/reference/csimplearray-class.md) clase.
+- [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) Esta clase es una aplicación auxiliar para la clase [CSimpleArray](../atl/reference/csimplearray-class.md) .
 
-- [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) esta clase es una aplicación auxiliar para el [CSimpleArray](../atl/reference/csimplearray-class.md) clase.
+- [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) Esta clase es una aplicación auxiliar para la clase [CSimpleArray](../atl/reference/csimplearray-class.md) .
 
-- [CSimpleMap](../atl/reference/csimplemap-class.md) esta clase proporciona compatibilidad para una matriz de asignación simple.
+- [CSimpleMap](../atl/reference/csimplemap-class.md) Esta clase proporciona compatibilidad con una matriz de asignación simple.
 
-- [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) esta clase es una aplicación auxiliar para el [CSimpleMap](../atl/reference/csimplemap-class.md) clase.
+- [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) Esta clase es una aplicación auxiliar para la clase [CSimpleMap](../atl/reference/csimplemap-class.md) .
 
-- [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) esta clase es una aplicación auxiliar para el [CSimpleMap](../atl/reference/csimplemap-class.md) clase.
+- [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) Esta clase es una aplicación auxiliar para la clase [CSimpleMap](../atl/reference/csimplemap-class.md) .
 
-- [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) esta clase proporciona funciones estáticas usadas por las clases de colección para almacenar `CString` objetos.
+- [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) Esta clase proporciona funciones estáticas usadas por las clases `CString` de colección que almacenan objetos.
 
-- [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) esta clase proporciona funciones estáticas relacionados con las cadenas almacenadas en objetos de clase de colección. Es similar a [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), pero realiza comparaciones entre mayúsculas y minúsculas.
+- [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) Esta clase proporciona funciones estáticas relacionadas con las cadenas almacenadas en objetos de clase de colección. Es similar a [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), pero realiza comparaciones que no distinguen mayúsculas de minúsculas.
 
-- [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) esta clase proporciona funciones estáticas relacionados con las cadenas almacenadas en objetos de clase de colección. Los objetos de cadena se tratan como referencias.
+- [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) Esta clase proporciona funciones estáticas relacionadas con las cadenas almacenadas en objetos de clase de colección. Los objetos de cadena se tratan como referencias.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
@@ -90,5 +90,5 @@ Las clases siguientes proporcionan compatibilidad para matrices, listas, asignac
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../atl/atl-class-overview.md)<br/>
+[Información general sobre clases](../atl/atl-class-overview.md)<br/>
 [Clases de colección](../atl/atl-collection-classes.md)

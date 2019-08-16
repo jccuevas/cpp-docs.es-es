@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
 ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181515"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dos maneras de crear un objeto CArchive
 
@@ -70,4 +70,4 @@ Cuando haya terminado de almacenar o cargar datos desde o hacia el `CArchive` de
 
 ## <a name="see-also"></a>Vea también
 
-[Serialización: Serializar un objeto](../mfc/serialization-serializing-an-object.md)
+[Serialización: serializar un objeto](../mfc/serialization-serializing-an-object.md)

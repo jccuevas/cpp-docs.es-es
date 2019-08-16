@@ -1,13 +1,13 @@
 ---
 title: Excepciones (C++/CX)
-ms.date: 01/18/2018
+ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471706"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552180"
 ---
 # <a name="exceptions-ccx"></a>Excepciones (C++/CX)
 
@@ -15,7 +15,7 @@ Control de errores en C++ / c++ / CX se basa en excepciones. En el nivel más fu
 
 ## <a name="exceptions"></a>Excepciones
 
-En el programa de C++, puede iniciar y detectar una excepción que provenga de una operación en tiempo de ejecución de Windows, una excepción que se deriva de `std::exception`, o un tipo definido por el usuario. Tiene que producir una excepción en tiempo de ejecución de Windows solo cuando cruce el límite de la interfaz binaria (ABI) de la aplicación; por ejemplo, cuando el código que detecta tu excepción se escribe en JavaScript. Cuando una excepción de C++ que no son de Windows en tiempo de ejecución alcanza el límite de ABI, la excepción se traduce en un `Platform::FailureException` excepción, que representa un HRESULT E_FAIL. Para obtener más información acerca de la ABI, consulta [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+En el programa de C++, puede iniciar y detectar una excepción que provenga de una operación en tiempo de ejecución de Windows, una excepción que se deriva de `std::exception`, o un tipo definido por el usuario. Tiene que producir una excepción en tiempo de ejecución de Windows solo cuando cruce el límite de la interfaz binaria (ABI) de la aplicación; por ejemplo, cuando el código que detecta tu excepción se escribe en JavaScript. Cuando una que no sean Windows en tiempo de ejecución C++ excepción alcanza el límite ABI, la excepción se traduce en un `Platform::FailureException` excepción, que representa un HRESULT E_FAIL. Para obtener más información acerca de la ABI, consulta [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Puede declarar un [Platform:: Exception](platform-exception-class.md) mediante uno de los dos constructores que toman un parámetro HRESULT, o un parámetro HRESULT y un [Platform:: String](platform-string-class.md)^ parámetro que se puede pasar a través de la ABI a cualquier aplicación de Windows en tiempo de ejecución que los controle. O bien puedes declarar una excepción utilizando una de las dos sobrecargas del [método Exception::CreateException](platform-exception-class.md#createexception) que toman un parámetro HRESULT, o un parámetro HRESULT y un parámetro `Platform::String^` .
 
@@ -27,7 +27,7 @@ No puedes derivar tu propio tipo de excepción de `Platform::Exception`. Para pr
 
 En la tabla siguiente se enumeran las excepciones estándar.
 
-|nombre|HRESULT subyacente|Descripción|
+|Name|HRESULT subyacente|Descripción|
 |----------|------------------------|-----------------|
 |COMException|*hresult definido por el usuario*|Se produce cuando se devuelve un HRESULT no reconocido de una llamada al método COM.|
 |AccessDeniedException|E\_ACCESSDENIED|Se produce cuando se deniega el acceso a un recurso o a una característica.|
@@ -43,7 +43,7 @@ En la tabla siguiente se enumeran las excepciones estándar.
 |OperationCanceledException|E\_ANULAR|Se produce cuando se anula una operación.|
 |OutOfBoundsException|E\_LÍMITES|Se produce cuando una operación intenta tener acceso a datos que están fuera del intervalo válido.|
 |OutOfMemoryException|E\_OUTOFMEMORY|Se produce cuando la memoria es insuficiente para completar la operación.|
-|WrongThreadException|RPC\_E\_INCORRECTO\_DE SUBPROCESOS|Se produce cuando un subproceso llama mediante un puntero de interfaz que es para un objeto proxy que no pertenece al contenedor del subproceso.|
+|WrongThreadException|RPC\_E\_WRONG\_THREAD|Se produce cuando un subproceso llama mediante un puntero de interfaz que es para un objeto proxy que no pertenece al contenedor del subproceso.|
 
 ## <a name="hresult-and-message-properties"></a>Propiedades HResult y Message
 
@@ -63,7 +63,7 @@ Para detectar las excepciones que se producen durante una operación asincrónic
 
 ## <a name="unhandlederrordetected-event"></a>Evento UnhandledErrorDetected
 
-En Windows 8.1, puede suscribirse a la [unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) evento estático, que proporciona acceso a los errores no controlados que están a punto de acabar el proceso. Independientemente de dónde se originó el error, llega a este controlador como un objeto [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) que se pasa con los argumentos del evento. Cuando llamas a `Propagate` en el objeto, se crea y se produce una excepción `Platform::*Exception` del tipo correspondiente al código de error. En los bloques catch, puedes guardar el estado del usuario si es necesario y, a continuación, permitir que termine el proceso llamando a `throw`o realizar alguna acción para devolver el programa a un estado conocido. En el ejemplo siguiente se muestra el patrón básico:
+En Windows 8.1, puede suscribirse a la [unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) evento estático, que proporciona acceso a los errores no controlados que están a punto de acabar el proceso. Independientemente de dónde se originó el error, llega a este controlador como un objeto [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) que se pasa con los argumentos del evento. Cuando llamas a `Propagate` en el objeto, se crea y se produce una excepción `Platform::*Exception` del tipo correspondiente al código de error. En los bloques catch, puedes guardar el estado del usuario si es necesario y, a continuación, permitir que termine el proceso llamando a `throw`o realizar alguna acción para devolver el programa a un estado conocido. En el ejemplo siguiente se muestra el patrón básico:
 
 En app.xaml.h:
 

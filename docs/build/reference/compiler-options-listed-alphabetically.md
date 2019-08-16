@@ -1,14 +1,14 @@
 ---
 title: Opciones del compilador por orden alfabético
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 7e69aa501dd0a7dbf2af51b6fa2c5bf4339eb416
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424123"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693429"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opciones del compilador por orden alfabético
 
@@ -34,7 +34,7 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/E](e-preprocess-to-stdout.md)|Copia los resultados del preprocesador a resultados estándar.|
 |[/EH](eh-exception-handling-model.md)|Especifica el modelo del control de excepciones.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia los resultados del preprocesador a resultados estándar.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Permite proporcionar directamente al equipo de Visual C++ información sobre los errores internos del compilador.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Le permite proporcionar información de error (ICE) internos del compilador directamente a Microsoft C++ team.|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Establecer el juego de caracteres de ejecución.|
 |[/F](f-set-stack-size.md)|Establece el tamaño de la pila.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Genera código que está optimizado para un específico x64 arquitectura o para las características de microarquitecturas en arquitecturas en las arquitecturas de AMD64 y de Extended Memory 64 Technology (EM64T).|
@@ -153,11 +153,12 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/Zc](zc-conformance.md)|Especifica un comportamiento estándar bajo [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (deshabilitar extensiones de lenguaje)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje.|
 |[/Zf](zf.md)|PDB mejora el tiempo de generación en las compilaciones en paralelo.|
-|[/Zg](zg-generate-function-prototypes.md)|Se quitó en Visual C++ 2015. Genera prototipos de función.|
+|[/Zg](zg-generate-function-prototypes.md)|Se quitó en Visual Studio 2015. Genera prototipos de función.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Incluye la información de depuración en una base de datos de programa compatible con Editar y continuar.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera información de depuración completa.|
 |[/Zl](zl-omit-default-library-name.md)|Quita el nombre de la biblioteca predeterminada del archivo .obj (solo x86).|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Especifica el límite de asignación de memoria del encabezado precompilado.|
+|[/Zo](zo-enhance-optimized-debugging.md)|Genera información de depuración mejorada para código optimizado.|
 |[/Zp](zp-struct-member-alignment.md)|Empaqueta los miembros de la estructura.|
 |[/Zs](zs-syntax-check-only.md)|Comprueba únicamente la sintaxis.|
 |[/ZW](zw-windows-runtime-compilation.md)|Genera un archivo de salida para ejecutarse en el tiempo de ejecución de Windows.|

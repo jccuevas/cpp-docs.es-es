@@ -1,6 +1,6 @@
 ---
 title: Exportar desde un archivo DLL mediante __declspec(dllexport)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810242"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220794"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportar desde un archivo DLL mediante __declspec(dllexport)
 
-Microsoft introducida **__export** en la versión del compilador de 16 bits de Visual C++ para permitir que el compilador genera automáticamente los nombres de exportación y colocarlos en un archivo .lib. Este archivo .lib puede utilizarse como una biblioteca .lib estática para vincularlo a un archivo DLL.
-
-En las versiones del compilador más recientes, puede exportar datos, funciones, clases o funciones miembro de clase desde un archivo DLL mediante la **__declspec (dllexport)** palabra clave. **__declspec (dllexport)** agrega la directiva de exportación al archivo objeto no es necesario usar un archivo .def.
+Puede exportar datos, funciones, clases o funciones miembro de clase desde un archivo DLL mediante la **__declspec (dllexport)** palabra clave. **__declspec (dllexport)** agrega la directiva de exportación al archivo objeto no es necesario usar un archivo .def.
 
 Esta conveniencia es más aparente al intentar exportar decora los nombres de función de C++. Dado que no hay ninguna especificación estándar para la decoración de nombres, el nombre de una función exportada podría cambiar entre las versiones del compilador. Si usas **__declspec (dllexport)**, volver a compilar los archivos dependientes .exe y DLL es necesaria solo para la cuenta para los cambios de convención de nomenclatura.
 
@@ -51,11 +49,6 @@ Al compilar el archivo DLL, normalmente se crea un archivo de encabezado que con
 
 **__declspec (dllexport)** almacena nombres de tabla de exportación del archivo DLL de función. Si desea optimizar el tamaño de la tabla, vea [exportar funciones desde un archivo DLL por Ordinal en lugar de por nombre](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-> [!NOTE]
->  Al trasladar el código fuente de DLL de Win16 a Win32, reemplace cada instancia de **__export** con **__declspec (dllexport)**.
-
-Como referencia, busque el archivo de encabezado Winbase.h de Win32. Este archivo contiene ejemplos de **__declspec (dllimport)** uso.
-
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
 - [Exportar desde un archivo DLL mediante archivos .def](exporting-from-a-dll-using-def-files.md)
@@ -68,7 +61,7 @@ Como referencia, busque el archivo de encabezado Winbase.h de Win32. Este archiv
 
 - [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importación a una aplicación mediante __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -76,7 +69,7 @@ Como referencia, busque el archivo de encabezado Winbase.h de Win32. Este archiv
 
 - [La palabra clave __declspec](../cpp/declspec.md)
 
-- [Importar y exportar funciones inline](importing-and-exporting-inline-functions.md)
+- [Importación y exportación de funciones insertadas](importing-and-exporting-inline-functions.md)
 
 - [Importaciones mutuas](mutual-imports.md)
 

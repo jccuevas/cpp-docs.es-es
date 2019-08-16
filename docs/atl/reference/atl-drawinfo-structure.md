@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301823"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503414"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO (estructura)
 
@@ -60,7 +60,7 @@ Información de contexto para el dispositivo de destino que apunta `ptd` desde e
 El contexto de dispositivo en el que se va a dibujar. Para un objeto sin ventana, el `hdcDraw` miembro está en el `MM_TEXT` modo de asignación con sus coordenadas lógicas coincidencia de las coordenadas de cliente de la ventana contenedora. Además, el contexto de dispositivo debe estar en el mismo estado que normalmente se pasa por un `WM_PAINT` mensaje.
 
 `prcBounds`<br/>
-Puntero a un [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) estructura que especifica el rectángulo en `hdcDraw` y en la que se debe dibujar el objeto. Este miembro controla el posicionamiento y la ampliación del objeto. Este miembro debe ser NULL para dibujar el objeto activo en contexto sin ventana. En todas las otras situaciones, NULL no es un valor válido y debe tener como resultado un `E_INVALIDARG` código de error. Si el contenedor pasa un valor distinto de NULL a un objeto sin ventana, el objeto debe representar el aspecto solicitado en el contexto de dispositivo especificado y el rectángulo. Un contenedor puede solicitarla desde un objeto sin ventana para representar una vista en segundo lugar, no activos del objeto o para imprimir el objeto.
+Puntero a un [RECTL](/previous-versions//dd162907\(v=vs.85\)) estructura que especifica el rectángulo en `hdcDraw` y en la que se debe dibujar el objeto. Este miembro controla el posicionamiento y la ampliación del objeto. Este miembro debe ser NULL para dibujar el objeto activo en contexto sin ventana. En todas las otras situaciones, NULL no es un valor válido y debe tener como resultado un `E_INVALIDARG` código de error. Si el contenedor pasa un valor distinto de NULL a un objeto sin ventana, el objeto debe representar el aspecto solicitado en el contexto de dispositivo especificado y el rectángulo. Un contenedor puede solicitarla desde un objeto sin ventana para representar una vista en segundo lugar, no activos del objeto o para imprimir el objeto.
 
 `prcWBounds`<br/>
 Si `hdcDraw` es un contexto de dispositivo de metarchivo (consulte [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) en el SDK de Windows), este es un puntero a un `RECTL` estructura que especifica el rectángulo delimitador en el metarchivo subyacente. La estructura de rectángulo contiene la extensión de la ventana y el origen de la ventana. Estos valores son útiles para dibujar metarchivos. El rectángulo indicado por `prcBounds` está anidada dentro de este `prcWBounds` rectángulo; están en el mismo espacio de coordenadas.

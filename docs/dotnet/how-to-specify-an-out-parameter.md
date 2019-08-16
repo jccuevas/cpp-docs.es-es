@@ -7,13 +7,13 @@ helpviewer_keywords:
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
 ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387231"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>Filtrar Especifique un fuera parámetro
+# <a name="how-to-specify-an-out-parameter"></a>Procedimiento Especifique un fuera parámetro
 
 En este ejemplo se muestra cómo especificar que un parámetro de función es un parámetro de salida y cómo llamar a esa función desde un programa de C#.
 

@@ -3,87 +3,87 @@ title: Biblioteca de plantillas de Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 5c1a4e7df424499f400dbd70d675956deef6bc5d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: ee3414968e5d619d640d8cdac981741aecb2316c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58785816"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500389"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
 
 La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de plantillas que proporciona una manera de bajo nivel de crear y usar componentes de Windows Runtime.
 
 > [!NOTE]
-> WRL ahora es reemplazada por C / c++ / WinRT, una proyección de 17 del lenguaje C ++ estándar para Windows Runtime APIs. C++ / c++ / WinRT está disponible en el SDK de Windows 10 desde la versión 1803 en adelante. C++ / c++ / WinRT se implementa completamente en archivos de encabezado y ha diseñado para proporcionar acceso de primera clase a la API de Windows moderna.
+> WRL se ha sustituido por C++/WinRT, una proyección de lenguaje c++ 17 estándar para api de Windows Runtime. C++/WinRT está disponible en el SDK de Windows 10 de la versión 1803 en adelante. C++/WinRT se implementa completamente en los archivos de encabezado y está diseñado para proporcionar acceso de primera clase a la API moderna de Windows.
 >
-> Con C / c++ / WinRT, puede consumir y crear con cualquier compilador de 17 C ++ conforme a los estándares de Windows en tiempo de ejecución APIs. C++ / c++ / WinRT normalmente funciona mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Se seguirá admitiendo C++ / c++ / CX y WRL, pero se recomienda encarecidamente que utilicen las nuevas aplicaciones C++ / c++ / WinRT. Para obtener más información, consulte [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Con C++/WinRT, puede consumir y crear Windows Runtime API con cualquier compilador de c++ 17 compatible con los estándares. C++ / c++ / WinRT normalmente funciona mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Seguiremos admitiendo C++/CX y WRL, pero recomendamos encarecidamente que las nuevas aplicaciones usen C++/WinRT. Para obtener más información, consulte [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ## <a name="benefits"></a>Ventajas
 
-La biblioteca de plantillas C++ de Windows en tiempo de ejecución le permite implementar y consumir los componentes del modelo de objetos componentes (COM) más fácilmente. Proporciona técnicas de mantenimiento como recuento de referencias para administrar la vigencia de objetos y probar los valores HRESULT para determinar si una operación se realizó correctamente o no. Para usar correctamente la biblioteca de plantillas C++ de Windows en tiempo de ejecución, debe seguir detenidamente estas reglas y técnicas.
+La biblioteca C++ de plantillas de Windows Runtime permite implementar y consumir componentes del modelo de objetos componentes (com) más fácilmente. Proporciona técnicas de mantenimiento como el recuento de referencias para administrar la duración de los objetos y probar los valores HRESULT para determinar si una operación se realizó correctamente o no. Para usar correctamente la biblioteca C++ de plantillas de Windows Runtime, debe seguir detenidamente estas reglas y técnicas.
 
-C++ / c++ / CX es una manera de alto nivel, en función de lenguaje a usar los componentes de Windows en tiempo de ejecución. Tanto la biblioteca de plantillas C++ de Windows en tiempo de ejecución y C++ / c++ / CX simplifican la escritura de código para el tiempo de ejecución de Windows por automáticamente tareas de mantenimiento en su nombre.
+C++/CX es una forma de alto nivel basada en el lenguaje de usar Windows Runtime componentes. Tanto la biblioteca C++ de plantillas de C++Windows Runtime como/CX simplifican la escritura de código para la Windows Runtime mediante la realización automática de tareas de mantenimiento en su nombre.
 
-La biblioteca de plantillas C++ de Windows en tiempo de ejecución y C++ / c++ / CX ofrecen diversas ventajas. Estos son algunos motivos que desea usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución en lugar de C++ / c++ / CX:
+La biblioteca C++ de plantillas de C++Windows Runtime y/CX proporcionan diferentes ventajas. Estas son algunas de las razones por las que podría querer C++ usar el Windows Runtime biblioteca de C++plantillas en lugar de/CX:
 
-- Biblioteca de plantillas C++ de Windows en tiempo de ejecución agrega poco nivel de abstracción sobre el Windows en tiempo de ejecución binaria de aplicación interfaz (ABI), lo que le ofrece la capacidad de controlar el código subyacente para adquirir una mejor crear o usar APIs de Windows Runtime.
+- Windows Runtime C++ biblioteca de plantillas agrega poca abstracción sobre la Windows Runtime la interfaz binaria de aplicaciones (ABI), lo que le ofrece la posibilidad de controlar el código subyacente para crear o usar Windows Runtime API mejor.
 
-- C++ / c++ / CX representa los valores HRESULT de COM como excepciones. Si ha heredado una base de código que usa COM, o uno que no usa excepciones, es posible que la biblioteca de plantillas C++ de Windows en tiempo de ejecución es una manera más natural para trabajar con el tiempo de ejecución de Windows ya no es necesario utilizar excepciones.
+- C++/CX representa los valores HRESULT de COM como excepciones. Si ha heredado una base de código que usa COM, o una que no usa excepciones, puede que la biblioteca de C++ plantillas de Windows Runtime sea una forma más natural de trabajar con la Windows Runtime porque no tiene que utilizar excepciones.
 
    > [!NOTE]
-   > La biblioteca de plantillas C++ de Windows en tiempo de ejecución utiliza los valores HRESULT y no inicia excepciones. Además, la biblioteca de plantillas C++ de Windows en tiempo de ejecución utiliza punteros inteligentes y el modelo RAII para ayudar a garantizar que los objetos se destruyen correctamente cuando el código de aplicación produce una excepción. Para obtener más información sobre los punteros inteligentes y RAII, vea [punteros inteligentes](../../cpp/smart-pointers-modern-cpp.md) y [recursos propios de los objetos (RAII)](../../cpp/objects-own-resources-raii.md).
+   > La biblioteca C++ de plantillas de Windows Runtime usa Valores HRESULT y no inicia excepciones. Además, la biblioteca de C++ plantillas de Windows Runtime utiliza punteros inteligentes y el patrón RAII para ayudar a garantizar que los objetos se destruyen correctamente cuando el código de la aplicación produce una excepción. Para obtener más información sobre los punteros inteligentes y RAII, vea [punteros inteligentes](../../cpp/smart-pointers-modern-cpp.md) y [objetos propios (RAII)](../../cpp/objects-own-resources-raii.md).
 
-- El propósito y el diseño de la biblioteca de plantillas C++ de Windows en tiempo de ejecución está inspirado por la Active Template Library (ATL), que es un conjunto de clases C++ basadas en plantillas que simplifican la programación de objetos COM. Como biblioteca de plantillas C++ de Windows en tiempo de ejecución utiliza el estándar de C++ para ajustar el tiempo de ejecución de Windows, puede puerto más fácilmente e interactuar con muchos componentes COM existentes escritos en ATL para el tiempo de ejecución de Windows. Si ya conoce ATL, es posible que la programación de la biblioteca de plantillas C++ de Windows en tiempo de ejecución es más fácil.
+- El propósito y el diseño de la C++ biblioteca de plantillas Windows Runtime está inspirado en el Active Template Library (ATL), que es un conjunto de clases C++ basadas en plantillas que simplifican la programación de objetos com. Dado que C++ Windows Runtime biblioteca de plantillas C++ utiliza el estándar para encapsular el Windows Runtime, puede portar más fácilmente e interactuar con muchos componentes com existentes escritos en ATL en la Windows Runtime. Si ya conoce ATL, es posible que descubra que Windows Runtime C++ la programación de la biblioteca de plantillas es más fácil.
 
 ## <a name="getting-started"></a>Introducción
 
-Estos son algunos recursos que pueden ayudarle a trabajar inmediatamente con la biblioteca de plantillas C++ de Windows en tiempo de ejecución.
+A continuación se muestran algunos recursos que pueden ayudarle a trabajar con C++ la biblioteca de plantillas de Windows Runtime inmediatamente.
 
-[La biblioteca de Windows en tiempo de ejecución (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
-En este vídeo de Channel 9, obtenga más información sobre cómo la biblioteca de plantillas C++ de Windows en tiempo de ejecución ayuda a que escribir aplicaciones de plataforma Universal de Windows (UWP) y cómo crear y consumir los componentes de Windows en tiempo de ejecución.
+[Biblioteca de Windows Runtime (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+En este vídeo de Channel 9, obtenga más información sobre cómo C++ Windows Runtime biblioteca de plantillas le ayuda a escribir aplicaciones plataforma universal de Windows (UWP) y cómo crear y consumir componentes Windows Runtime.
 
-[Cómo: Activar y usar un componente de tiempo de ejecución de Windows](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
-Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para inicializar el tiempo de ejecución de Windows y activar y usar un componente de Windows en tiempo de ejecución.
+[Procedimientos: Activar y usar un componente de Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
+Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para inicializar el Windows Runtime y activar y utilizar un componente de Windows Runtime.
 
 [Cómo: Completar operaciones asincrónicas](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
-Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.
+Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para iniciar operaciones asincrónicas y realizar el trabajo cuando se completan las operaciones.
 
-[Cómo: Controlar eventos](how-to-handle-events-using-wrl.md)<br/>
-Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para suscribirse y controlar los eventos de un objeto en tiempo de ejecución de Windows.
+[Procedimientos: Controlar eventos](how-to-handle-events-using-wrl.md)<br/>
+Muestra cómo utilizar la biblioteca de C++ plantillas de Windows Runtime para suscribirse a los eventos de un objeto Windows Runtime y controlarlos.
 
 [Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
-Obtenga información sobre cómo crear una aplicación UWP que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+Obtenga información sobre cómo crear una aplicación para UWP que use [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-[Cómo: Crear un componente COM clásico](how-to-create-a-classic-com-component-using-wrl.md)<br/>
-Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente COM básico y una forma básica de cómo registrar y utilizar el componente COM de una aplicación de escritorio.
+[Procedimientos: Crear un componente COM clásico](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para crear un componente com básico y una forma básica de registrar y utilizar el componente com de una aplicación de escritorio.
 
-[Cómo: Crear instancias de componentes WRL directamente](how-to-instantiate-wrl-components-directly.md)<br/>
+[Procedimientos: Crear instancias de componentes WRL directamente](how-to-instantiate-wrl-components-directly.md)<br/>
 Obtenga información sobre cómo utilizar las funciones [Microsoft::WRL::Make](make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md) para crear instancias de un componente a partir del módulo que lo define.
 
-[Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
+[Procedimientos: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Muestra cómo utilizar componentes personalizados de Windows en tiempo de ejecución desde la WRL mediante la creación de un archivo IDL a partir de los metadatos .winmd.
 
 [Tutorial: Conexión con tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
-Se muestra cómo usar el [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) y [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto con las tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.
+Muestra cómo utilizar las interfaces [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) junto con las tareas para enviar solicitudes HTTP GET y post a un servicio Web en una aplicación de UWP.
 
-[Ejemplo de Bing Maps Trip Optimizer](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-Usa el `HttpRequest` clase que se define en [Tutorial: Conectar usando tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) en el contexto de una aplicación UWP completa.
+[Ejemplo del optimizador de recorridos de mapas de Bing](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+Usa la `HttpRequest` clase que se define en [el tutorial: Conexión mediante tareas y solicitudes](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) http XML en el contexto de una aplicación UWP completa.
 
-[Creación de un componente DLL en tiempo de ejecución de Windows con el ejemplo de C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
-Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente DLL en proceso y utilizarlo desde C++ / c++ / CX, JavaScript y C#.
+[Crear un componente DLL de Windows Runtime C++ con el ejemplo](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+Muestra cómo usar el Windows Runtime C++ biblioteca de plantillas para crear un componente dll en proceso y consumirlo desde C++/CX, JavaScript y. C#
 
-[Ejemplo de juego marble maze con DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
-Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para administrar la duración de los componentes de COM como DirectX y Media Foundation en el contexto de un completo juego en 3D.
+[Ejemplo de juego Marble Maze de DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para administrar la duración de los componentes com como DirectX y Media Foundation en el contexto de un juego 3D completo.
 
-[Cómo enviar notificaciones de ejemplo de aplicaciones de escritorio](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
-Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para trabajar con notificaciones del sistema de una aplicación de escritorio.
+[Ejemplo de envío de notificaciones del sistema de aplicaciones de escritorio](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para trabajar con notificaciones del sistema desde una aplicación de escritorio.
 
-## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de plantillas C++ de Windows en tiempo de ejecución y ATL
+## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows Runtime C++ biblioteca de plantillas en comparación con ATL
 
-Biblioteca de plantillas C++ de Windows en tiempo de ejecución se parece a Active Template Library (ATL) porque se puede usar para crear rápidamente objetos COM pequeños. Biblioteca de plantillas C++ de Windows en tiempo de ejecución y ATL también comparten conceptos tales como definición de objetos en los módulos, registro explícito de interfaces y abra la creación de objetos mediante generadores. Es posible que cómodo con la biblioteca de plantillas C++ de Windows en tiempo de ejecución si está familiarizado con ATL.
+Windows Runtime C++ biblioteca de plantillas es similar a la Active Template Library (ATL) porque se puede utilizar para crear objetos com pequeños y rápidos. Windows Runtime C++ biblioteca de plantillas y ATL también comparten conceptos como la definición de objetos en módulos, el registro explícito de interfaces y la creación de objetos mediante generadores. Es posible que se sienta cómodo C++ con Windows Runtime biblioteca de plantillas si está familiarizado con ATL.
 
-Biblioteca de plantillas C++ de Windows en tiempo de ejecución es compatible con las funcionalidades COM que es necesaria para aplicaciones UWP. Por consiguiente, y a diferencia de ATL, omite la compatibilidad directa para características COM como:
+Windows Runtime C++ biblioteca de plantillas admite la funcionalidad de com que se requiere para las aplicaciones UWP. Por consiguiente, y a diferencia de ATL, omite la compatibilidad directa para características COM como:
 
 - agregación
 
@@ -105,7 +105,7 @@ Biblioteca de plantillas C++ de Windows en tiempo de ejecución es compatible co
 
 ## <a name="concepts"></a>Conceptos
 
-Biblioteca de plantillas C++ de Windows en tiempo de ejecución proporciona tipos que representan algunos conceptos básicos. En las siguientes secciones se describen estos tipos.
+Windows Runtime C++ biblioteca de plantillas proporciona tipos que representan algunos conceptos básicos. En las siguientes secciones se describen estos tipos.
 
 ### <a name="comptr"></a>ComPtr
 
@@ -113,7 +113,7 @@ Biblioteca de plantillas C++ de Windows en tiempo de ejecución proporciona tipo
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) representa una clase de la que se ha creado una instancia que hereda un conjunto de interfaces especificadas. Un `RuntimeClass` objeto puede proporcionar una combinación de la compatibilidad con una o varias interfaces de COM en tiempo de ejecución de Windows o una referencia débil a un componente.
+[RuntimeClass](runtimeclass-class.md) representa una clase de la que se ha creado una instancia que hereda un conjunto de interfaces especificadas. Un `RuntimeClass` objeto puede proporcionar una combinación de compatibilidad para una o varias interfaces com Windows Runtime, o una referencia débil a un componente.
 
 ### <a name="module"></a>Module
 
@@ -125,11 +125,11 @@ La función [Callback](callback-function-wrl.md) crea un objeto cuya función mi
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](eventsource-class.md) se utiliza para administrar los controladores de eventos *delegados* . Usar biblioteca de plantillas C++ de Windows en tiempo de ejecución para implementar un delegado y usar `EventSource` para agregar, quitar o invocar a delegados.
+[EventSource](eventsource-class.md) se utiliza para administrar los controladores de eventos *delegados* . Utilice Windows Runtime C++ biblioteca de plantillas para implementar un delegado y utilizar `EventSource` para agregar, quitar e invocar delegados.
 
 ### <a name="asyncbase"></a>AsyncBase
 
-[AsyncBase](asyncbase-class.md) proporciona los métodos virtuales que representan el modelo de programación asincrónico de Windows en tiempo de ejecución. Invalide los miembros de esta clase para crear una clase personalizada que pueda iniciar, detener o comprobar el progreso de una operación asincrónica.
+[AsyncBase](asyncbase-class.md) proporciona métodos virtuales que representan el Windows Runtime modelo de programación asincrónica. Invalide los miembros de esta clase para crear una clase personalizada que pueda iniciar, detener o comprobar el progreso de una operación asincrónica.
 
 ### <a name="ftmbase"></a>FtmBase
 
@@ -137,7 +137,7 @@ La función [Callback](callback-function-wrl.md) crea un objeto cuya función mi
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) es un tipo puntero inteligente que representa una *referencia débil*y que hace referencia a un objeto al que se puede obtener o no acceso. Un `WeakRef` objeto se puede usar solo el tiempo de ejecución de Windows y no COM clásico.
+[WeakRef](weakref-class.md) es un tipo puntero inteligente que representa una *referencia débil*y que hace referencia a un objeto al que se puede obtener o no acceso. Un `WeakRef` objeto solo se puede usar en el Windows Runtime y no en com clásico.
 
 Un objeto `WeakRef` normalmente representa un objeto cuya existencia se controla mediante una aplicación o un subproceso externo. Por ejemplo, un objeto `WeakRef` puede hacer referencia a un objeto de archivo. Cuando se abre el archivo, `WeakRef` es válido y se puede tener acceso al archivo de referencia. Pero cuando se cierra el archivo, `WeakRef` no es válido y no se tiene acceso al archivo.
 
@@ -145,7 +145,7 @@ Un objeto `WeakRef` normalmente representa un objeto cuya existencia se controla
 
 |||
 |-|-|
-|[API clave por categoría](key-wrl-apis-by-category.md)|Se resaltan los tipos, funciones y macros de biblioteca de plantillas C++ de Windows en tiempo de ejecución principal.|
-|[Referencia](wrl-reference.md)|Contiene información de referencia para la biblioteca de plantillas C++ de Windows en tiempo de ejecución.|
-|[Referencia rápida (en tiempo de ejecución de Windows y Visual C++)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente el C++/CX características compatibles con el tiempo de ejecución de Windows.|
-|[Usar los componentes de Windows en tiempo de ejecución en Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Se muestra cómo usar C++ / c++ / CX para crear un componente básico de Windows en tiempo de ejecución.|
+|[API principales por categoría](key-wrl-apis-by-category.md)|Resalta los tipos C++ , funciones y macros principales de la biblioteca de plantillas de Windows Runtime.|
+|[Referencia](wrl-reference.md)|Contiene información de referencia para la C++ biblioteca de plantillas de Windows Runtime.|
+|[Referencia rápida (Windows Runtime y visual C++)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente las C++características de/CX que admiten el Windows Runtime.|
+|[Usar componentes de Windows Runtime en VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Muestra cómo usar C++/CX para crear un componente de Windows Runtime básico.|

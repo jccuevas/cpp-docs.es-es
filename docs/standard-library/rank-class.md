@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: a0658d7278ef31d01d371eff11aec09c19c8011e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518897"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458176"
 ---
 # <a name="rank-class"></a>rank (Clase)
 
@@ -27,12 +27,12 @@ struct rank;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-La consulta de tipo contiene el valor del número de dimensiones del tipo de matriz *Ty*, o 0 si *Ty* no es un tipo de matriz.
+La consulta de tipo contiene el valor del número de dimensiones del tipo de matriz *Ty*o 0 si *Ty* no es un tipo de matriz.
 
 ## <a name="example"></a>Ejemplo
 
@@ -69,5 +69,5 @@ rank<int[5][10]> == 2
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent (Clase)](../standard-library/extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[extent (Clase)](../standard-library/extent-class.md)

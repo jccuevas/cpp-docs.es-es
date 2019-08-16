@@ -2,16 +2,16 @@
 title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445713"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447239"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
-Puede usar Visual Studio para crear un archivo DLL para Win32 estándar o un componente en tiempo de ejecución de Windows del archivo DLL que puede utilizarse en aplicaciones de plataforma Universal de Windows (UWP). Un archivo DLL estándar que se creó con una versión de Visual Studio o el compilador de Visual C++ anterior a la de Visual Studio 2012 puede no cargarse correctamente en una aplicación para UWP y puede no pasar la prueba de comprobación de la aplicación en la Microsoft Store.
+Puede usar Visual Studio para crear un archivo DLL para Win32 estándar o un componente en tiempo de ejecución de Windows del archivo DLL que puede utilizarse en aplicaciones de plataforma Universal de Windows (UWP). Un archivo DLL estándar que se creó con una versión de Visual Studio o Microsoft C++ compilador anterior a de Visual Studio 2012 puede no cargarse correctamente en una aplicación para UWP y puede no pasar la prueba de comprobación de la aplicación en la Microsoft Store.
 
 ## <a name="windows-runtime-component-dlls"></a>Archivos DLL de componente en tiempo de ejecución de Windows
 

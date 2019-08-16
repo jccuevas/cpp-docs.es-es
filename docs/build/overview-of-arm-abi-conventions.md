@@ -3,11 +3,11 @@ title: Información general de las convenciones ABI de ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295249"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Información general sobre las convenciones ABI de ARM32
 
@@ -15,7 +15,7 @@ La interfaz binaria de aplicaciones (ABI) para código compilado para Windows en
 
 ## <a name="base-requirements"></a>Requisitos básicos
 
-Se da por hecho que Windows en ARM se ejecuta en todo momento en una arquitectura ARMv7. El hardware debe disponer de compatibilidad con punto flotante con el formato de VFPv3-D32 o posterior. El VFP debe admitir puntos flotantes de precisión sencilla y precisión doble en el hardware. Windows en tiempo de ejecución no admite la emulación de puntos flotantes para permitir la ejecución en un hardware distinto de VFP.
+Se da por hecho que Windows en ARM se ejecuta en todo momento en una arquitectura ARMv7. El hardware debe disponer de compatibilidad con punto flotante con el formato de VFPv3-D32 o posterior. El VFP debe admitir puntos flotantes de precisión sencilla y precisión doble en el hardware. Windows Runtime no admite la emulación de puntos flotantes para permitir la ejecución en un hardware distinto de VFP.
 
 El hardware también debe contar con compatibilidad con Extensiones SIMD avanzadas (NEON), lo que engloba operaciones tanto de entero como de punto flotante. No se proporciona compatibilidad en tiempo de ejecución para la emulación.
 

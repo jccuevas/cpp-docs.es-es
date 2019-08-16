@@ -1,21 +1,21 @@
 ---
-title: HelpContext (atributo de COM de C++)
+title: HelpContext (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038179"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490909"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el **ayuda** archivo.
+Especifica un identificador de contexto que permite al usuario ver información sobre este elemento en el archivo de **ayuda** .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,16 +25,16 @@ Especifica un identificador de contexto que permite al usuario ver información 
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*<br/>
-Identificador de contexto del tema de ayuda. Consulte [ayuda HTML: Ayuda contextual para los programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) para obtener más información sobre identificadores de contexto.
+*id*<br/>
+IDENTIFICADOR de contexto del tema de ayuda. Vea [la ayuda HTML: Ayuda contextual para los programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) para obtener más información sobre los identificadores de contexto.
 
 ## <a name="remarks"></a>Comentarios
 
-El **helpcontext** atributo de C++ tiene la misma funcionalidad que el [helpcontext](/windows/desktop/Midl/helpcontext) atributo MIDL.
+El atributo **HelpContext** C++ tiene la misma funcionalidad que el atributo MIDL de [HelpContext](/windows/win32/Midl/helpcontext) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [defaultvalue](defaultvalue.md) para obtener un ejemplo de cómo usar **helpcontext**.
+Vea el ejemplo de [DefaultValue](defaultvalue.md) para obtener un ejemplo de cómo utilizar **HelpContext**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -42,10 +42,10 @@ Vea el ejemplo de [defaultvalue](defaultvalue.md) para obtener un ejemplo de có
 
 |||
 |-|-|
-|**Se aplica a**|**interfaz**, **typedef**, **clase**, método, propiedad|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|**interface**, **typedef**, **Class**, Method, Property|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

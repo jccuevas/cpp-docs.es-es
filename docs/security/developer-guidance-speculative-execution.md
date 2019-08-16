@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b3895cdb060d45d3f75c75f75c930e868b3654b2
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750551"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448612"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa
 
@@ -21,7 +21,7 @@ En este artículo contiene instrucciones para desarrolladores ayudar a identific
 
 Las instrucciones proporcionadas en este artículo está relacionado con las clases de vulnerabilidades representadas por:
 
-1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. El `/Qspectre` también está disponible en Visual Studio 2015 Update 3 a través de conmutador [4338871 KB](https://support.microsoft.com/help/4338871). La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso.
+1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. Microsoft C++ compilador en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. El `/Qspectre` también está disponible en Visual Studio 2015 Update 3 a través de conmutador [4338871 KB](https://support.microsoft.com/help/4338871). La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso.
 
 2. CVE-2018-3639, también conocido como [especulativa Store omisión (SSB)](https://aka.ms/sescsrdssb). Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa de una carga por delante de un almacén dependiente como resultado de una predicción de acceso de memoria.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Debe tenerse en cuenta que en ambos ejemplos implican la modificación especulativa de punteros de rama indirecta asignada a la pila. Es posible que también se puede producir especulativa modificación para incluso memoria de sólo lectura en algunas CPU, memoria asignados por montón y variables globales. Memoria asignada a la pila, el compilador de Visual C++ ya realiza los pasos para que sea más difícil de modificar anticipa destinos asignada a la pila de bifurcación indirecta, como reordenando las variables locales de forma que los búferes se colocan junto a una cookie de seguridad como parte de la [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) característica de seguridad del compilador.
+Debe tenerse en cuenta que en ambos ejemplos implican la modificación especulativa de punteros de rama indirecta asignada a la pila. Es posible que también se puede producir especulativa modificación para incluso memoria de sólo lectura en algunas CPU, memoria asignados por montón y variables globales. Memoria asignada a la pila, Microsoft C++ compilador ya realiza los pasos para que sea más difícil de modificar anticipa destinos asignada a la pila de bifurcación indirecta, como reordenando las variables locales de forma que los búferes se colocan junto a la seguridad cookie como parte de la [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) característica de seguridad del compilador.
 
 ## <a name="speculative-type-confusion"></a>Confusión de tipo especulativa
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barrera de especulación a través de la instrumentación en tiempo de compilador
 
-El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que inserta automáticamente una barrera de especulación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. Es importante tener en cuenta que esta marca no cubre todos los modelos de codificación potencialmente vulnerables y por lo tanto los desarrolladores no deben confiar en ella como una solución completa para esta clase de vulnerabilidades.
+Microsoft C++ compilador en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con el conmutador que inserta automáticamente una barrera de especulación para un conjunto limitado de modelos de codificación potencialmente vulnerables CVE-2017-5753. La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. Es importante tener en cuenta que esta marca no cubre todos los modelos de codificación potencialmente vulnerables y por lo tanto los desarrolladores no deben confiar en ella como una solución completa para esta clase de vulnerabilidades.
 
 ### <a name="masking-array-indices"></a>Los índices de matriz de enmascaramiento
 

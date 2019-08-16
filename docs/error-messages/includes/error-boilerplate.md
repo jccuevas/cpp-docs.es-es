@@ -1,18 +1,19 @@
 ---
-ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 980cdc1c4ac82015cab61133a64fa54fbd030843
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805133"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68821109"
 ---
-Los compiladores de Visual Studio y las herramientas de compilación pueden notificar muchas clases de errores y advertencias. Después de que se encuentra un error o advertencia, las herramientas de compilación pueden realizar suposiciones sobre la intención del código e intentar continuar, para que se pueden notificar más problemas al mismo tiempo. Si las herramientas hacen una suposición incorrecta, es posible que los errores o advertencias posteriores no se apliquen al proyecto. Cuando corrija problemas en el proyecto, empiece siempre por el primer error o advertencia notificados y recompile a menudo. Una solución posible desaparecerá muchos errores posteriores.
+> [!IMPORTANT]
+> Los compiladores y las herramientas de compilación de Visual Studio pueden informar de muchos tipos de errores y advertencias. Después de encontrar un error o una advertencia, las herramientas de compilación pueden realizar suposiciones sobre la intención del código e intentar continuar, de modo que se puedan informar más problemas al mismo tiempo. Si las herramientas hacen una suposición incorrecta, es posible que los errores o advertencias posteriores no se apliquen al proyecto. Cuando corrija problemas en el proyecto, empiece siempre por el primer error o advertencia notificados y recompile a menudo. Una corrección puede hacer que se eliminen muchos errores posteriores.
 
-Para obtener ayuda sobre un determinado mensaje de diagnóstico en Visual Studio, selecciónelo en la **salida** ventana y presione la **F1** tecla para abrir la página de documentación de ese error, si existe alguno. También puede usar la herramienta de búsqueda anterior para encontrar artículos sobre errores o advertencias concretos o examinar la lista de errores y advertencias por la herramienta y el tipo en el panel de navegación.
+Para obtener ayuda sobre un mensaje de diagnóstico determinado en Visual Studio, selecciónelo en la ventana de **salida** y presione la tecla **F1** . Visual Studio abre la página de documentación correspondiente al error, si existe. También puede usar la herramienta de búsqueda anterior para buscar artículos sobre errores específicos o advertencias. O bien, examine la lista de errores y advertencias por herramienta y escriba en el panel de navegación de esta página.
 
 > [!NOTE]
-> No todos los errores de Visual Studio o advertencia está documentada. En muchos casos, el mensaje de diagnóstico proporciona toda la información que está disponible. Si descargados en esta página cuando usó **F1** y piensa que el error o mensaje de advertencia necesita una explicación adicional, háganoslo saber. Puede utilizar el formulario de comentarios en esta página, agregue un comentario en la sección de comentarios, o [genere un problema en GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues). También puede enviar comentarios y escribir errores en el IDE. En Visual Studio, vaya a la barra de menús y elija **Ayuda > Enviar comentarios > notificar un problema**, o enviar una sugerencia mediante **Ayuda > Enviar comentarios > enviar una sugerencia**.
+> No todos los errores o advertencias de Visual Studio están documentados. En muchos casos, el mensaje de diagnóstico proporciona toda la información que está disponible. Si ha descargado en esta página cuando utilizó **F1** y cree que el mensaje de error o ADVERTENCIA necesita una explicación adicional, háganoslo saber. Puede usar los botones de comentarios de esta página para generar un problema de documentación en [GitHub](https://github.com/MicrosoftDocs/cpp-docs/issues)o un problema del producto en el sitio de la [comunidad de desarrolladores](https://developercommunity.visualstudio.com/spaces/8/index.html) . También puede enviar comentarios y escribir errores en el IDE. En Visual Studio, vaya a la barra de menús y elija **ayuda > enviar comentarios > notificar un problema**o enviar una sugerencia mediante la **Ayuda > Enviar comentarios > enviar una sugerencia**.
 
-Puede encontrar ayuda adicional para errores y advertencias en los foros públicos de Microsoft. Puede buscar el error o el número de advertencia en el [Comunidad de desarrolladores](https://developercommunity.visualstudio.com/spaces/8/index.html) sitio. También puede buscar errores y advertencias y formular preguntas en [Stack Overflow](http://stackoverflow.com/) para buscar soluciones.
+Puede encontrar ayuda adicional para errores y advertencias en los foros públicos de Microsoft. O bien, busque el número de error o de advertencia en el C++ sitio de la [comunidad de desarrolladores](https://developercommunity.visualstudio.com/spaces/8/index.html) de Visual Studio. También puede buscar errores y advertencias y formular preguntas en [Stack Overflow](https://stackoverflow.com/) para buscar soluciones.
 
-Para obtener vínculos a ayuda adicional y recursos de la Comunidad, vea [ayuda de Visual C++ y la Comunidad](../../overview/visual-cpp-help-and-community.md).
+Para obtener vínculos a ayuda adicional y recursos de la comunidad, vea la [ayuda y comunidad de C++ visual](../../overview/visual-cpp-help-and-community.md).

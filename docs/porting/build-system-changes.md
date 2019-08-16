@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: 621e62379657da66d6eaec7a3ceff780fd610066
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828181"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449012"
 ---
 # <a name="build-system-changes"></a>Cambios del sistema de compilación
 
-Para compilar proyectos de Visual C++, se usa el sistema MSBuild. Sin embargo, en Visual Studio 2008 y versiones anteriores, se utilizaba el sistema VCBuild. Ciertos conceptos y tipos de archivo que dependían de VCBuild no existen o se representan de forma distinta en el sistema actual. En este documento se describen las diferencias introducidas en el sistema de compilación actual.
+Para compilar proyectos de Visual Studio C++, se usa el sistema MSBuild. Sin embargo, en Visual Studio 2008 y versiones anteriores, se utilizaba el sistema VCBuild. Ciertos conceptos y tipos de archivo que dependían de VCBuild no existen o se representan de forma distinta en el sistema actual. En este documento se describen las diferencias introducidas en el sistema de compilación actual.
 
 ## <a name="vcproj-is-now-vcxproj"></a>.vcproj ahora es .vcxproj
 
@@ -37,7 +37,7 @@ En la versión actual, la extensión de nombre de archivo de la hoja de propieda
 
 ## <a name="custom-build-rules-and-rules-files"></a>Reglas de compilación personalizada y archivos .rules
 
-En versiones anteriores, un *archivo de reglas* era un archivo basado en XML que tenía una extensión de nombre de archivo .rules. Los archivos de reglas permiten definir reglas de compilación personalizada e incorporarlas en el proceso de compilación de un proyecto de Visual C++. Las reglas de compilación personalizada, que pueden asociarse con una o varias extensiones de nombre de archivo, permiten pasar archivos de entrada a una herramienta que crea uno o varios archivos de salida.
+En versiones anteriores, un *archivo de reglas* era un archivo basado en XML que tenía una extensión de nombre de archivo .rules. Los archivos de reglas permiten definir reglas de compilación personalizada e incorporarlas en el proceso de compilación de un proyecto de Visual Studio C++. Las reglas de compilación personalizada, que pueden asociarse con una o varias extensiones de nombre de archivo, permiten pasar archivos de entrada a una herramienta que crea uno o varios archivos de salida.
 
 En esta versión, las reglas de compilación personalizada se representan mediante tres tipos de archivo (.xml, .props y .targets), en vez de hacerlo con un archivo .rules. Cuando un archivo .rules creado con una versión anterior de Visual C++ se migra a la versión actual, se crean los archivos .xml, .props y .targets equivalentes y se almacenan en el proyecto junto con el archivo .rules original.
 
@@ -50,7 +50,7 @@ En versiones anteriores, la macro **$(Inherit)** especifica el orden en que apar
 
 En la versión actual, se admite la herencia mediante la especificación del valor de una propiedad como la concatenación de una o más macros de propiedades y valores literales. Las macros **$(Inherit)** y **$(NoInherit)** no se admiten.
 
-En el ejemplo siguiente, se asigna una lista delimitada por punto y coma a una propiedad de la página de propiedades. La lista consiste en la concatenación del literal *\<value>* y del valor de la propiedad `MyProperty`, a la que se accede mediante la notación de macro **$(**<em>MyProperty</em>**)**.
+En el ejemplo siguiente, se asigna una lista delimitada por punto y coma a una propiedad de la página de propiedades. La lista consiste en la concatenación del literal *\<value>* y del valor de la propiedad `MyProperty`, a la que se accede mediante la notación de macro **$(** <em>MyProperty</em> **)** .
 
 ```
 Property=<value>;$(MyProperty)

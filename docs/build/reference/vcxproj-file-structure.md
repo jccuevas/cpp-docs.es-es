@@ -1,19 +1,19 @@
 ---
 title: Estructura de los archivos .vcxproj y .props
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827964"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837517"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Estructura de los archivos .vcxproj y .props
 
-[MSBuild](../msbuild-visual-cpp.md) es el sistema de proyectos predeterminado en Visual Studio; cuando se selecciona **Archivo** > **Nuevo proyecto** en Visual C++ se crea un proyecto de MSBuild cuya configuración se almacena en un archivo de proyecto XML con la extensión `.vcxproj`. El archivo de proyecto también puede importar archivos .props y .targets en los que se puede almacenar la configuración. En la mayoría de los casos, nunca tendrá que editar manualmente el archivo de proyecto y, en realidad, no debería modificarlo de forma manual a menos que tenga un buen conocimiento de MSBuild. Siempre que sea posible debe usar las páginas de propiedades de Visual Studio para modificar la configuración del proyecto (vea [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md). Pero en algunos casos es posible que tenga que modificar manualmente un archivo de proyecto o una hoja de propiedades. Para esos escenarios, este artículo contiene información básica sobre la estructura del archivo.
+[MSBuild](../msbuild-visual-cpp.md) es el sistema de proyectos predeterminado en Visual Studio; cuando se selecciona **Archivo** > **Nuevo proyecto** en Visual C++ se crea un proyecto de MSBuild cuya configuración se almacena en un archivo de proyecto XML con la extensión `.vcxproj`. El archivo de proyecto también puede importar archivos .props y .targets en los que se puede almacenar la configuración. En la mayoría de los casos, nunca tendrá que editar manualmente el archivo de proyecto y, en realidad, no debería modificarlo de forma manual a menos que tenga un buen conocimiento de MSBuild. Siempre que sea posible, debe usar las páginas de propiedades de Visual Studio para modificar la configuración del proyecto (vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md)). Pero en algunos casos es posible que tenga que modificar manualmente un archivo de proyecto o una hoja de propiedades. Para esos escenarios, este artículo contiene información básica sobre la estructura del archivo.
 
 **Importante:**
 
@@ -21,13 +21,13 @@ Si decide editar manualmente un archivo .vcxproj, tenga en cuenta estos hechos:
 
 1. La estructura del archivo debe seguir un formato establecido, que se describe en este artículo.
 
-1. En la actualidad, el sistema de proyectos de Visual C++ no admite caracteres comodín en los elementos de proyecto. Por ejemplo, esto no se admite:
+1. En la actualidad, el sistema de proyectos de C++ de Visual Studio no admite caracteres comodín en los elementos de proyecto. Por ejemplo, esto no se admite:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. En la actualidad, el sistema de proyectos de Visual C++ no admite las macros en las rutas de acceso de los elementos de proyecto. Por ejemplo, esto no se admite:
+1. En la actualidad, el sistema de proyectos de C++ de Visual Studio no admite macros en las rutas de acceso de los elementos de proyecto. Por ejemplo, esto no se admite:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -104,7 +104,7 @@ El grupo de elementos `ProjectConfigurations` no se usa en tiempo de compilació
 
 ### <a name="projectconfiguration-elements"></a>Elementos ProjectConfiguration
 
-En el fragmento de código siguiente se muestra una configuración de proyecto. En este ejemplo, "Debug|x64" es el nombre de la configuración. El nombre de la configuración de proyecto debe estar en el formato $(Configuración)|$(Plataforma). Un nodo de configuración del proyecto puede tener dos propiedades: Configuración y plataforma. Estas propiedades se establecerán de manera automática con los valores especificados aquí cuando la configuración está activa.
+En el fragmento de código siguiente se muestra una configuración de proyecto. En este ejemplo, "Debug|x64" es el nombre de la configuración. El nombre de la configuración de proyecto debe estar en el formato $(Configuración)|$(Plataforma). Un nodo de configuración del proyecto puede tener dos propiedades: Configuration y Platform. Estas propiedades se establecerán de manera automática con los valores especificados aquí cuando la configuración está activa.
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -224,7 +224,7 @@ Los metadatos deben tener condiciones de configuración para cada configuración
 </ItemGroup>
 ```
 
-En la actualidad, el sistema de proyectos de Visual C++ no admite caracteres comodín en los elementos de proyecto.
+En la actualidad, el sistema de proyectos de C++ de Visual Studio no admite caracteres comodín en los elementos de proyecto.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ En la actualidad, el sistema de proyectos de Visual C++ no admite caracteres com
 </ItemGroup>
 ```
 
-En la actualidad, el sistema de proyectos de Visual C++ no admite las macros en los elementos de proyecto.
+En la actualidad, el sistema de proyectos de C++ de Visual Studio no admite macros en los elementos de proyecto.
 
 ```xml
 <ItemGroup>
@@ -272,7 +272,7 @@ Incluso la experiencia de tiempo de diseño del IDE depende hasta cierto punto d
 
 ## <a name="how-the-ide-uses-element-labels"></a>Cómo usa el IDE las etiquetas de elemento
 
-En el IDE, al establecer la propiedad **UseOfAtl** en la página de propiedades general, se escribe en el grupo de propiedades de configuración del archivo de proyecto, mientras que la propiedad **TargetName** de la misma página de propiedades se escribe en el grupo de propiedades sin etiqueta de cada configuración. Visual Studio busca en el archivo .xml de la página de propiedades la información sobre dónde se escribe cada propiedad. Para la página de propiedades **General** (suponiendo que tenga una versión en inglés de Visual Studio Enterprise Edition), ese archivo es `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. En el archivo de reglas XML de página de propiedades se define la información estática sobre una regla y todas sus propiedades. Parte de esta información es la posición preferida de una propiedad de regla en el archivo de destino (es decir, el archivo donde se escribirá su valor). La posición preferida se especifica mediante el atributo Label de los elementos de archivo de proyecto.
+En el IDE, al establecer la propiedad **UseOfAtl** en la página de propiedades general, se escribe en el grupo de propiedades de configuración del archivo de proyecto, mientras que la propiedad **TargetName** de la misma página de propiedades se escribe en el grupo de propiedades sin etiqueta de cada configuración. Visual Studio busca en el archivo .xml de la página de propiedades la información sobre dónde se escribe cada propiedad. Para la página de propiedades **General** (suponiendo que tenga una versión en inglés de Visual Studio 2019 Enterprise Edition), ese archivo es `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. En el archivo de reglas XML de página de propiedades se define la información estática sobre una regla y todas sus propiedades. Parte de esta información es la posición preferida de una propiedad de regla en el archivo de destino (es decir, el archivo donde se escribirá su valor). La posición preferida se especifica mediante el atributo Label de los elementos de archivo de proyecto.
 
 ## <a name="property-sheet-layout"></a>Diseño de la hoja de propiedades
 
@@ -288,9 +288,9 @@ El fragmento de código XML siguiente es un diseño mínimo de un archivo de hoj
 </Project>
 ```
 
-Para crear una hoja de propiedades propia, copie uno de los archivos .props de la carpeta VCTargets y modifíquelo para sus fines. Para Visual Studio 2017 Enterprise Edition, la ruta de acceso predeterminada de VCTargets es `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`.
+Para crear una hoja de propiedades propia, copie uno de los archivos .props de la carpeta VCTargets y modifíquelo para sus fines. Para Visual Studio 2019 Enterprise Edition, la ruta de acceso predeterminada de VCTargets es `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
 ## <a name="see-also"></a>Vea también
 
-[Establece el compilador de C++ y crear propiedades en Visual Studio](../working-with-project-properties.md)<br/>
+[Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md)<br/>
 [Archivos XML de página de propiedades](property-page-xml-files.md)

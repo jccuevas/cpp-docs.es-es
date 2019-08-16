@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: 0b849ffb585ef99512cc68e1c734dc5b3a87d507
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2651a83c50b03dfffd1ac0238b6c6d0a61888c88
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304930"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741556"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Información detallada sobre la compatibilidad agregada por el Asistente para ATL
 
@@ -37,4 +37,4 @@ Cuando se agrega compatibilidad con ATL a un proyecto de DLL de MFC, verá algun
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navegar por la estructura de clases](../../ide/navigate-code-cpp.md)

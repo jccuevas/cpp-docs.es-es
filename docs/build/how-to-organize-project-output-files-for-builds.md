@@ -1,16 +1,16 @@
 ---
-title: Filtrar Organizar archivos de salida del proyecto para compilaciones
-ms.date: 11/04/2016
+title: Procedimiento Organizar archivos de salida del proyecto para compilaciones
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, output files
+- C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: a675b535577b8757e92246249c94cd9760534740
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827094"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220664"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Procedimiento Organizar archivos de salida del proyecto para compilaciones
 
@@ -70,4 +70,4 @@ La ubicación de los archivos de salida puede ser un problema importante cuando 
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de proyecto de Visual C++](reference/visual-cpp-project-types.md)
+[C++tipos de proyecto en Visual Studio](reference/visual-cpp-project-types.md)

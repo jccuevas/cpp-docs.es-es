@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555602"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449615"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Error de las herramientas del vinculador LNK2019
 
@@ -86,7 +86,7 @@ Bibliotecas y archivos objeto vinculados en el código deben compilarse para la 
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Mezcle código que usa wchar nativo\_t con código que no
 
-. El trabajo de conformidad de lenguaje C++ que se realizó en Visual C++ 2005 convirtió `wchar_t` en un tipo nativo de forma predeterminada. Debe usar la opción del compilador [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para generar código compatible con los archivos de objeto o biblioteca compilados con versiones anteriores de Visual C++. Si no todos los archivos se han compilado con la misma **/Zc:wchar\_t** configuración, el tipo no pueden resolver las referencias a tipos compatibles. Compruebe que los tipos `wchar_t` de todos los archivos de objeto o biblioteca sean compatibles, ya sea actualizando los tipos que se usan o mediante el uso de una configuración **/Zc:wchar_t** coherente cuando compile.
+C++trabajo de conformidad del lenguaje que se realizó en Visual Studio 2005 realizado `wchar_t` un tipo nativo de forma predeterminada. Debe usar el [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opción del compilador para generar código compatible con los archivos de objeto o biblioteca compilados con versiones anteriores de Visual Studio. Si no todos los archivos se han compilado con la misma **/Zc:wchar\_t** configuración, el tipo no pueden resolver las referencias a tipos compatibles. Compruebe que los tipos `wchar_t` de todos los archivos de objeto o biblioteca sean compatibles, ya sea actualizando los tipos que se usan o mediante el uso de una configuración **/Zc:wchar_t** coherente cuando compile.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemas de la biblioteca de terceros y de Vcpkg
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Para corregir este error, cambie `unsigned short` a `wchar_t` o `WCHAR`, o compile LNK2019g.cpp con **/Zc:wchar_t-**.
+Para corregir este error, cambie `unsigned short` a `wchar_t` o `WCHAR`, o compile LNK2019g.cpp con **/Zc:wchar_t-** .
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Para obtener más información sobre las posibles causas y soluciones para el error LNK2001, consulte la pregunta desbordamiento de pila [¿qué es un error de símbolo externo sin definir referencia/unresolved y cómo lo corrijo?](http://stackoverflow.com/q/12573816/2002113).
+Para obtener más información sobre las posibles causas y soluciones para el error LNK2001, consulte la pregunta desbordamiento de pila [¿qué es un error de símbolo externo sin definir referencia/unresolved y cómo lo corrijo?](https://stackoverflow.com/q/12573816/2002113).
 

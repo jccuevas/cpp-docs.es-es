@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 7635f999b227d02ec7fd56296fef1b0b047abd29
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564975"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525416"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature (Clase)
 
@@ -41,7 +41,7 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupportedfeature"></a>unsupported_feature
+## <a name="unsupported_feature"></a> unsupported_feature
 
   Crea una nueva instancia de la `unsupported_feature` excepción.
 

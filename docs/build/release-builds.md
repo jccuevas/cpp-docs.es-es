@@ -6,12 +6,12 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038169"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400480"
 ---
 # <a name="release-builds"></a>Versiones de lanzamiento
 
@@ -25,7 +25,7 @@ Una versión de lanzamiento usa las optimizaciones. Cuando usa las optimizacione
 [Usar la versión de depuración para comprobar si se ha sobrescrito la memoria](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
 [Cómo: Depuración de una compilación de versión](how-to-debug-a-release-build.md)<br/>
 [Comprobar si se ha sobrescrito la memoria](checking-for-memory-overwrites.md)<br/>
-[Optimizar el código](optimizing-your-code.md)<br/>
+[Optimizar el código](optimizing-your-code.md)
 
 ## <a name="see-also"></a>Vea también
 

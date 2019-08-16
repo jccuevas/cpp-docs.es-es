@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743065"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457662"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution (Clase)
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
-El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución Normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Las funciones de propiedad `mean()` y `stddev()` devolver los valores de los parámetros de distribución almacenado *significa* y *stddev* respectivamente.
+Las funciones `mean()` de propiedad `stddev()` y devuelven los valores para los parámetros de distribución almacenados *Mean* y *StdDev* , respectivamente.
 
 El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.
 
@@ -95,7 +95,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
 
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener más información sobre la distribución normal, vea el artículo de Wolfram MathWorld sobre la [distribución normal](http://go.microsoft.com/fwlink/p/?linkid=400924).
+Para obtener más información sobre la distribución normal, vea el artículo de Wolfram MathWorld sobre la [distribución normal](https://go.microsoft.com/fwlink/p/?linkid=400924).
 
 ## <a name="example"></a>Ejemplo
 
@@ -198,13 +198,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*mean*<br/>
+*aritmética*\
 El parámetro de distribución `mean`.
 
-*stddev*<br/>
+*StdDev*\
 El parámetro de distribución `stddev`.
 
-*parm*<br/>
+*PARM*\
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -233,13 +233,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*mean*<br/>
+*aritmética*\
 El parámetro de distribución `mean`.
 
-*stddev*<br/>
+*StdDev*\
 El parámetro de distribución `stddev`.
 
-*right*<br/>
+*correcta*\
 La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -250,4 +250,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

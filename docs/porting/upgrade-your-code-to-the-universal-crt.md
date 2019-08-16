@@ -2,12 +2,12 @@
 title: Actualizar código a CRT universal
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898770"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448999"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Actualizar código a CRT universal
 
@@ -19,7 +19,7 @@ Con esta refactorización se han cambiado los nombres o las ubicaciones de mucho
 
 ## <a name="where-to-find-the-universal-crt-files"></a>Dónde encontrar los archivos de CRT universal
 
-Como componente de Windows, los encabezados y los archivos de biblioteca UCRT ahora forman parte del kit de desarrollo de software (SDK) de Windows. Cuando se instala Visual Studio, también se instalan los elementos del SDK de Windows necesarios para usar UCRT. El instalador de Visual Studio agrega las ubicaciones de los encabezados UCRT, las bibliotecas y los archivos DLL a las rutas de acceso predeterminadas empleadas por el sistema de compilación de proyectos de Visual Studio. Al actualizar los proyectos de Visual C++, si usan la configuración de proyecto predeterminada, el IDE busca automáticamente las nuevas ubicaciones de los archivos de encabezado y el vinculador usa automáticamente las nuevas bibliotecas predeterminadas UCRT y vcruntime. De forma similar, si usa un símbolo del sistema para desarrolladores para las compilaciones de línea de comandos, las variables de entorno que contienen rutas de acceso para encabezados y bibliotecas se actualizan y además funcionan automáticamente.
+Como componente de Windows, los encabezados y los archivos de biblioteca UCRT ahora forman parte del kit de desarrollo de software (SDK) de Windows. Cuando se instala Visual Studio, también se instalan los elementos del SDK de Windows necesarios para usar UCRT. El instalador de Visual Studio agrega las ubicaciones de los encabezados UCRT, las bibliotecas y los archivos DLL a las rutas de acceso predeterminadas empleadas por el sistema de compilación de proyectos de Visual Studio. Al actualizar los proyectos de Visual Studio C++, si usan la configuración de proyecto predeterminada, el IDE busca automáticamente las nuevas ubicaciones de los archivos de encabezado y el vinculador usa automáticamente las nuevas bibliotecas predeterminadas UCRT y vcruntime. De forma similar, si usa un símbolo del sistema para desarrolladores para las compilaciones de línea de comandos, las variables de entorno que contienen rutas de acceso para encabezados y bibliotecas se actualizan y además funcionan automáticamente.
 
 Los archivos de encabezado de la biblioteca estándar de C ahora se encuentran en el SDK de Windows en una carpeta de inclusión en un directorio específico de la versión del SDK. Una ubicación típica de los archivos de encabezado es el directorio Archivos de programa o Archivos de programa (x86) en Windows Kits\\10\\Include\\_sdk-version_\\ucrt, donde _sdk-version_ corresponde a una versión o actualización de Windows, por ejemplo, 10.0.14393.0 para la Actualización de aniversario de Windows 10.
 
@@ -29,7 +29,7 @@ Los archivos DLL UCRT comerciales y de depuración se encuentran en ubicaciones 
 
 La biblioteca de compatibilidad en tiempo de ejecución específica del compilador de C y C++, **vcruntime**, contiene el código necesario para admitir el inicio del programa y características como el control de excepciones y los valores intrínsecos. La biblioteca y sus archivos de encabezado todavía se encuentran en la carpeta de Microsoft Visual Studio específica de la versión del directorio Archivos de programa o Archivos de programa (x86). En Visual Studio 2017, los encabezados se encuentran en Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include y las bibliotecas de vínculos se encuentran en Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_, donde _edition_ es la edición de Visual Studio instalada, _lib-version_ es la versión de las bibliotecas y _architecture_ es la arquitectura del procesador. Las bibliotecas de vínculos para OneCore y la tienda también se encuentran en la carpeta de bibliotecas. Las versiones comercial y de depuración de la biblioteca estática son libvcruntime.lib y libvcruntimed.lib. Las bibliotecas de vínculos dinámicos de código auxiliar comercial y de depuración son vcruntime.lib y vcruntimed.lib, respectivamente.
 
-Al actualizar los proyectos de Visual C++, si ha establecido la propiedad del **Enlazador** del proyecto **Omitir todas las bibliotecas predeterminadas** en **Sí** o si usa la opción `/NODEFAULTLIB` del enlazador en la línea de comandos, debe actualizar la lista de bibliotecas para incluir las nuevas bibliotecas refactorizadas. Reemplace la biblioteca CRT anterior, por ejemplo, libcmt.lib, libcmtd.lib, msvcrt.lib o msvcrtd.lib, por las bibliotecas refactorizadas equivalentes. Para más información sobre las bibliotecas concretas que se van a usar, vea [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).
+Al actualizar los proyectos de Visual Studio C++, si ha establecido la propiedad del **Enlazador** del proyecto **Omitir todas las bibliotecas predeterminadas** en **Sí** o si usa la opción `/NODEFAULTLIB` del enlazador en la línea de comandos, debe actualizar la lista de bibliotecas para incluir las nuevas bibliotecas refactorizadas. Reemplace la biblioteca CRT anterior, por ejemplo, libcmt.lib, libcmtd.lib, msvcrt.lib o msvcrtd.lib, por las bibliotecas refactorizadas equivalentes. Para más información sobre las bibliotecas concretas que se van a usar, vea [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Implementación y redistribución de CRT universal
 

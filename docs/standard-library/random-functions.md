@@ -6,12 +6,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520619"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240383"
 ---
 # <a name="ltrandomgt-functions"></a>Funciones &lt;random&gt;
 
@@ -29,19 +29,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
+*RealType*\
 Tipo integral de punto flotante. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*Bits*<br/>
+*Bits*\
 Generador de números aleatorios.
 
-*Gen*<br/>
+*Gen*\
 Generador de números aleatorios.
 
 ### <a name="remarks"></a>Comentarios
 
 Las llamadas de función de plantilla `operator()` de *Gen* varias veces y empaqueta los valores devueltos en un valor de punto flotante `x` typu *RealType* hasta reunir el número especificado bits de mantisa en `x`. El número especificado es menor de *Bits* (que debe ser distinto de cero) y el número total de bits de mantisa en *RealType*. La primera llamada proporciona los bits de orden más bajo. La función devuelve `x`.
-
-## <a name="see-also"></a>Vea también
-
-[\<random>](../standard-library/random.md)<br/>

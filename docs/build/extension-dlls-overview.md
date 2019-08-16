@@ -1,6 +1,6 @@
 ---
 title: 'Archivos DLL de extensión: Información general'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - AFXDLL library
 - MFC DLLs [C++], MFC extension DLLs
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: ea8e950e28907ea1a4a85c1f39392d5505f08c49
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816482"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221362"
 ---
 # <a name="mfc-extension-dlls-overview"></a>Archivos DLL de extensión MFC: Información general
 
@@ -22,8 +22,6 @@ Una extensión MFC DLL es un archivo DLL que implementa clases reutilizables der
 También se puede utilizar archivos DLL de extensión para realizar transferencias de objetos derivados de MFC entre la aplicación y el archivo DLL. Las funciones miembro asociadas al objeto transferido existen en el módulo en que se creó el objeto. Dado que estas funciones se exportan correctamente al usar la versión compartida del archivo DLL de MFC, puede pasar libremente MFC o punteros a objetos derivados de MFC entre una aplicación y la carga de DLL de extensión MFC.
 
 Para obtener un ejemplo de un archivo DLL que satisfaga los requisitos básicos de un archivo DLL de extensión MFC, vea el ejemplo de MFC [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk). En concreto, examine los archivos Testdll1.cpp y Testdll2.cpp.
-
-Tenga en cuenta que el término AFXDLL ya no se usa en la documentación de Visual C++. Un archivo DLL de extensión MFC tiene las mismas características que los antiguos archivos AFXDLL.
 
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 

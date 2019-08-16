@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568537"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449939"
 ---
 # <a name="messages-class"></a>messages (Clase)
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
 ## <a name="remarks"></a>Comentarios
@@ -55,20 +55,20 @@ Básicamente esta faceta abre un catálogo de mensajes definidos en la clase bas
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[messages](#messages)|Función constructor de la faceta de mensajes.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo de carácter usado para mostrar mensajes.|
 |[string_type](#string_type)|Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[close](#close)|Cierra el catálogo de mensajes.|
 |[do_close](#do_close)|Una función virtual llamada para perder el catálogo de mensajes.|
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El catálogo que se va a cerrar.
 
 ### <a name="remarks"></a>Comentarios
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El catálogo que se va a cerrar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida cierra el catálogo de mensajes *_Catval*, que debe haberse abierto mediante una llamada anterior a [do_open](#do_open).
+La función miembro protegida cierra el catálogo de mensajes *_Catval*, que debe haber sido abierto por una llamada anterior a [do_open](#do_open).
 
 *_Catval* debe obtenerse de un catálogo abierto anteriormente que no esté cerrado.
 
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer*<br/>
+*_ Establecer*\
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo*<br/>
+*_Message*\
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault*<br/>
+*_Dfault*\
 La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -167,7 +167,7 @@ Devuelve una copia de *_Dfault* en caso de error. De otro modo, devuelve una cop
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida intenta obtener una secuencia de mensajes desde el catálogo de mensajes *_Catval*. Es posible que el uso de *_Establecer*, *_cuerpo*, y *_Dfault* de esta manera.
+La función miembro protegida intenta obtener una secuencia de mensajes del catálogo de mensajes *_Catval*. Puede hacer uso de *_ Set*, *_Message*y *_Dfault* para hacerlo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname*<br/>
+*_Catname*\
 El nombre del catálogo que se va a buscar.
 
-*_Loc*<br/>
+*_Loc*\
 La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -197,7 +197,7 @@ Devuelve un valor que se compara con menos de cero en caso de error. De otro mod
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro protegida intenta abrir un catálogo de mensajes cuyo nombre es *_Catname*. Es posible que el uso de la configuración regional *_Loc* hacerlo
+La función miembro protegida intenta abrir un catálogo de mensajes cuyo nombre es *_Catname*. Puede hacer uso de la configuración regional *_Loc* al hacerlo.
 
 El valor devuelto debe usarse como el argumento en una llamada posterior a [close](#close).
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*<br/>
+*_Catval*\
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer*<br/>
+*_ Establecer*\
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo*<br/>
+*_Message*\
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault*<br/>
+*_Dfault*\
 La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-*_Locname*<br/>
+*_Locname*\
 El nombre de la configuración regional.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles de la *_Refs* parámetro y su importancia son:
+Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
-El constructor inicializa su objeto base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+El constructor inicializa su objeto base con **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="open"></a> messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname*<br/>
+*_Catname*\
 El nombre del catálogo que se va a buscar.
 
-*_Loc*<br/>
+*_Loc*\
 La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -314,6 +314,6 @@ El tipo describe una especialización de clase de plantilla [basic_string](../st
 
 ## <a name="see-also"></a>Vea también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[messages_base (Clase)](../standard-library/messages-base-class.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[messages_base (Clase)](../standard-library/messages-base-class.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

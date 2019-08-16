@@ -1,23 +1,20 @@
 ---
 title: Referencia del lenguaje C++
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- language reference
 - C++, language reference
-- language reference, Visual C++
-- Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774040"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222479"
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
 
-Esta referencia explica el lenguaje de programación C++ tal como se implementa en Microsoft Visual C++. La organización se basa en [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) de Margaret Ellis y Bjarne Stroustrup y en los estándares de internacionales de C++ de ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.
+Esta referencia explica el C++ lenguaje de programación como se implementa en Microsoft C++ compilador. La organización se basa en [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) de Margaret Ellis y Bjarne Stroustrup y en los estándares de internacionales de C++ de ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.
 
 Para obtener información general de las prácticas de programación de C++ moderno, consulte [Bienvenido a C++](welcome-back-to-cpp-modern-cpp.md).
 
@@ -90,7 +87,7 @@ Una referencia a las clases específicas de Microsoft y funciones globales utili
 Extensiones de Microsoft a C++.
 
 [Comportamiento no estándar](../cpp/nonstandard-behavior.md)<br/>
-Información sobre el comportamiento no estándar del compilador de Visual C++.
+Información sobre el comportamiento no estándar de Microsoft C++ compilador.
 
 [Aquí está otra vez C++](welcome-back-to-cpp-modern-cpp.md)<br/>
 Información general sobre procedimientos recomendados para escribir programas seguros, correctos y eficaces de programación moderna de C++.
@@ -98,7 +95,7 @@ Información general sobre procedimientos recomendados para escribir programas s
 ## <a name="related-sections"></a>Secciones relacionadas
 
 [Extensiones de componentes para plataformas de tiempo de ejecución](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Material de referencia sobre el uso de Visual C++ para .NET de destino.
+Material sobre el uso de Microsoft de referencia C++ compilador que tienen como destino .NET.
 
 [Referencia de compilación de C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Opciones del compilador, opciones del vinculador y otras herramientas de compilación.
@@ -107,7 +104,7 @@ Opciones del compilador, opciones del vinculador y otras herramientas de compila
 Material de referencia sobre instrucciones pragma, directivas de preprocesador, macros predefinidas y el preprocesador.
 
 [Bibliotecas de Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Una lista de vínculos a las páginas de inicio de referencia para las diferentes bibliotecas de Visual C++.
+Páginas de inicio de una lista de vínculos a la referencia de las diversas Microsoft C++ bibliotecas.
 
 ## <a name="see-also"></a>Vea también
 

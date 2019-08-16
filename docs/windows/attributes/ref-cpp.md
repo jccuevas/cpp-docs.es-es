@@ -1,17 +1,17 @@
 ---
-title: ref (atributo de COM de C++)
+title: Ref (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041382"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514117"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -25,11 +25,11 @@ Identifica un puntero de referencia.
 
 ## <a name="remarks"></a>Comentarios
 
-El **ref** atributo de C++ tiene la misma funcionalidad que el [ref](/windows/desktop/Midl/ref) atributo MIDL.
+El atributo **ref** C++ tiene la misma funcionalidad que el atributo MIDL [ref](/windows/win32/Midl/ref) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo usar el **ref** atributo:
+En el código siguiente se muestra cómo usar el atributo **ref** :
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -49,10 +49,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Se aplica a**|**TypeDef**, parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|**typedef**, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN064: Subprocesamiento de modelo en los controles ActiveX'
+title: 'TN064: Subprocesamiento de modelo Apartamento en controles ActiveX'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.activex
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2c6b9dd3ed244f7169e5055eebe7a34e3345e841
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261172"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513323"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Subprocesamiento de modelo en los controles ActiveX
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Subprocesamiento de modelo Apartamento en controles ActiveX
 
 > [!NOTE]
 >  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.
 
-Esta nota técnica explica cómo habilitar el modelo de subprocesamiento controlado en un control ActiveX. Tenga en cuenta que subprocesamiento de modelo solo se admite en versiones de Visual C++ 4.2 o posteriores.
+En esta nota técnica se explica cómo habilitar los subprocesos de modelo de apartamento en un control ActiveX. Tenga en cuenta que los subprocesos del modelo de Apartamento C++ solo se admiten en las versiones de Visual 4,2 o posterior.
 
-## <a name="what-is-apartment-model-threading"></a>¿Qué es el modelo de subprocesamiento controlado
+## <a name="what-is-apartment-model-threading"></a>Qué es el subprocesamiento de modelo de apartamento
 
-El modelo de apartamento es un enfoque para aceptar objetos incrustados, como los controles ActiveX, dentro de una aplicación de contenedor multiproceso. Aunque la aplicación puede tener varios subprocesos, cada instancia de un objeto incrustado se asignará a un "contenedor," que se ejecutará en un solo subproceso. En otras palabras, todas las llamadas en una instancia de un control se realizará en el mismo subproceso.
+El modelo de apartamento es un enfoque para admitir objetos incrustados, como controles ActiveX, dentro de una aplicación contenedora multiproceso. Aunque la aplicación puede tener varios subprocesos, cada instancia de un objeto incrustado se asignará a un "Apartamento", que se ejecutará en un solo subproceso. En otras palabras, todas las llamadas a una instancia de un control se producirán en el mismo subproceso.
 
-Sin embargo, se pueden asignar distintas instancias del mismo tipo de control a apartamentos diferentes. Por lo tanto, si varias instancias de un control comparten los datos en común (por ejemplo, los datos globales o estáticos), a continuación, acceso a los datos compartidos deberá estar protegido por un objeto de sincronización, como una sección crítica.
+Sin embargo, se pueden asignar diferentes instancias del mismo tipo de control a distintos apartamentos. Por lo tanto, si varias instancias de un control comparten datos en común (por ejemplo, datos estáticos o globales), el acceso a estos datos compartidos tendrá que protegerse mediante un objeto de sincronización, como una sección crítica.
 
-Para obtener información detallada sobre el modelo de subprocesamiento controlado, consulte [procesos y subprocesos](/windows/desktop/ProcThread/processes-and-threads) en el *referencia del programador OLE*.
+Para obtener detalles completos sobre el modelo de subprocesos de apartamento, vea [procesos y](/windows/win32/ProcThread/processes-and-threads) subprocesos en la *Referencia del programador de OLE*.
 
-## <a name="why-support-apartment-model-threading"></a>¿Por qué admiten subprocesamiento de modelo
+## <a name="why-support-apartment-model-threading"></a>¿Por qué admitir subprocesos de modelo de apartamento?
 
-Los controles que admiten el modelo de subprocesamiento controlado pueden usarse en aplicaciones de contenedor multiproceso que también admiten el modelo de apartamento. Si no habilita el modelo de subprocesamiento controlado, limitará el posible conjunto de contenedores en el que podría utilizarse el control.
+Los controles que admiten subprocesos de modelo de apartamento se pueden usar en aplicaciones de contenedor multiproceso que también admiten el modelo de apartamento. Si no habilita el subprocesamiento de modelo apartamento, limitará el conjunto potencial de contenedores en los que se podría usar el control.
 
-Habilitación de subprocesamiento de modelo es fácil para la mayoría de los controles, especialmente si tienen poca o ninguna datos compartidos.
+La habilitación de subprocesos de modelo apartamento es fácil para la mayoría de los controles, especialmente si tienen pocos o ningún dato compartido.
 
-## <a name="protecting-shared-data"></a>Protección de datos compartido
+## <a name="protecting-shared-data"></a>Protección de datos compartidos
 
-Si el control usa datos compartidos, como una variable de miembro estático, el acceso a que los datos deben estar protegidos con una sección crítica para evitar que más de un subproceso modificando los datos al mismo tiempo. Para configurar una sección crítica para este propósito, declare una variable de miembro estático de la clase `CCriticalSection` en la clase del control. Use la `Lock` y `Unlock` las funciones miembro de esta sección crítica de objeto siempre que el código tiene acceso a los datos compartidos.
+Si el control usa datos compartidos, como una variable miembro estática, el acceso a esos datos debe protegerse con una sección crítica para evitar que más de un subproceso modifique los datos al mismo tiempo. Para configurar una sección crítica para este propósito, declare una variable miembro estática de clase `CCriticalSection` en la clase del control. Use las `Lock` funciones `Unlock` miembro y de este objeto de sección crítica siempre que el código tenga acceso a los datos compartidos.
 
-Considere, por ejemplo, una clase de control que necesita para mantener una cadena que es compartida por todas las instancias. Esta cadena puede se mantienen en una variable miembro estática y protegida por una sección crítica. Declaración de clase del control podría contener lo siguiente:
+Considere, por ejemplo, una clase de control que necesita mantener una cadena compartida por todas las instancias. Esta cadena se puede mantener en una variable miembro estática y estar protegida por una sección crítica. La declaración de clase del control incluiría lo siguiente:
 
 ```
 class CSampleCtrl : public COleControl
@@ -53,14 +53,14 @@ class CSampleCtrl : public COleControl
 };
 ```
 
-La implementación de la clase incluiría las definiciones de estas variables:
+La implementación de la clase incluiría definiciones para estas variables:
 
 ```
 int CString CSampleCtrl::_strShared;
 CCriticalSection CSampleCtrl::_critSect;
 ```
 
-El acceso a la `_strShared` miembro estático, a continuación, se puede proteger mediante la sección crítica:
+A continuación, `_strShared` la sección crítica puede proteger el acceso al miembro estático:
 
 ```
 void CSampleCtrl::SomeMethod()
@@ -74,9 +74,9 @@ if (_strShared.Empty())
 }
 ```
 
-## <a name="registering-an-apartment-model-aware-control"></a>Registrar un apartamento-compatible con el modelo de Control
+## <a name="registering-an-apartment-model-aware-control"></a>Registrar un control compatible con el modelo de apartamento
 
-Los controles que admiten el modelo de subprocesamiento controlado deben indicar esta funcionalidad en el registro, sumando el valor con nombre "ThreadingModel" con un valor de "Contenedor" en su entrada de registro de Id. de clase bajo el *Id. de clase* \\ **InprocServer32** clave. Para hacer que esta clave se registre automáticamente para el control, pase el *afxRegApartmentThreading* marca en el sexto parámetro `AfxOleRegisterControlClass`:
+Los controles que admiten el subprocesamiento de modelo Apartamento deben indicar esta capacidad en el registro, agregando el valor con nombre "ThreadingModel" con un valor de "Apartment" en su entrada de registro de ID. de clase en el *ID.* \\  **de clase Clave InprocServer32** . Para que esta clave se registre automáticamente para el control, pase la marca *afxRegApartmentThreading* en el sexto parámetro a `AfxOleRegisterControlClass`:
 
 ```
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
@@ -101,11 +101,11 @@ else
 }
 ```
 
-Si se ha generado el proyecto de control ControlWizard en Visual C++ versión 4.1 o posterior, esta marca ya estará presente en el código. No hay cambios son necesarios para registrar el modelo de subprocesos.
+Si el proyecto de control lo generó ControlWizard en la C++ versión de Visual 4,1 o posterior, esta marca ya estará presente en el código. No es necesario realizar ningún cambio para registrar el modelo de subprocesos.
 
-Si el proyecto generado por una versión anterior de ControlWizard, el código existente tendrá un valor booleano como el sexto parámetro. Si el parámetro existente es TRUE, cámbiela a *afxRegInsertable | afxRegApartmentThreading*. Si el parámetro existente es FALSE, cámbielo a *afxRegApartmentThreading*.
+Si el proyecto se generó con una versión anterior de ControlWizard, el código existente tendrá un valor booleano como el sexto parámetro. Si el parámetro existente es TRUE, cámbielo a *afxRegInsertable | afxRegApartmentThreading*. Si el parámetro existente es FALSE, cámbielo a *afxRegApartmentThreading*.
 
-Si el control no cumple las reglas de subprocesamiento de modelo, no se debe pasar *afxRegApartmentThreading* en este parámetro.
+Si el control no sigue las reglas de subprocesamiento de modelo apartamento, no debe pasar *afxRegApartmentThreading* en este parámetro.
 
 ## <a name="see-also"></a>Vea también
 

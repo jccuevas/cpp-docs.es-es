@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 94d1104b66fc6bd84e209caa23ce309cffd9fa85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1795a44d2d31cfbad964b41ef03e4bf65b401352
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457465"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246205"
 ---
 # <a name="badexception-class"></a>Clase bad_exception
 
@@ -20,7 +20,12 @@ La clase describe una excepción que se puede iniciar desde un controlador inesp
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-class bad_exception    : public exception {};
+class bad_exception : public exception {};
+
+bad_exception();
+bad_exception(const bad_exception&);
+bad_exception& operator=(const bad_exception&);
+const char* what() const override;
 ```
 
 ## <a name="remarks"></a>Comentarios
@@ -34,14 +39,3 @@ Para obtener una lista de miembros heredados por la clase `bad_exception`, vea [
 ## <a name="example"></a>Ejemplo
 
 Vea [set_unexpected](../standard-library/exception-functions.md#set_unexpected) para obtener un ejemplo de uso de [unexpected](../standard-library/exception-functions.md#unexpected) iniciando `bad_exception`.
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<exception>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[exception (Clase)](../standard-library/exception-class.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

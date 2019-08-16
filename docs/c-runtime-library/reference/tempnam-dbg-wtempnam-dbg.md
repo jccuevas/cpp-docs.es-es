@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
 ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258141"
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 
@@ -65,7 +65,7 @@ wchar_t *_wtempnam_dbg(
 *dir*<br/>
 Ruta de acceso que se usa en el nombre de archivo si no hay variable de entorno TMP, o si TMP no es un directorio válido.
 
-*Prefijo*<br/>
+*prefix*<br/>
 La cadena que se va a anteponer a los nombres devueltos por **_tempnam**.
 
 *blockType*<br/>

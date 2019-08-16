@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518650"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449593"
 ---
 # <a name="c-standard-library-containers"></a>Contenedores de la biblioteca estándar de C++
 
@@ -166,11 +166,11 @@ Todos los contenedores sobrecargan el operador == para comparar dos contenedores
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparar contenedores diferentes (C++14)
 
-En C ++ 14 y versiones posteriores, puede comparar contenedores y tipos de elementos diferentes mediante uno de los `std::equal`, `std::mismatch`, o `std::is_permutation` sobrecargas que toman dos intervalos completos de funciones. Estas sobrecargas le permiten comparar contenedores de distintas longitudes. Estas sobrecargas son mucho menos susceptibles a errores del usuario y están optimizadas para devolver false en tiempo constante cuando se comparan contenedores de longitudes diferentes. Por tanto, se recomienda usar estas sobrecargas a menos que (1) tenga un motivo muy claro para no hacerlo o (2) use un contenedor [std::list](../standard-library/list-class.md), que no se beneficia de las optimizaciones de doble intervalo.
+En c++ 14 y versiones posteriores, puede comparar contenedores y/o tipos de elementos no distintos mediante una de las `std::equal`sobrecargas `std::is_permutation` de función, `std::mismatch`o que toman dos intervalos completos. Estas sobrecargas le permiten comparar contenedores de distintas longitudes. Estas sobrecargas son mucho menos susceptibles a errores del usuario y están optimizadas para devolver false en tiempo constante cuando se comparan contenedores de longitudes diferentes. Por tanto, se recomienda usar estas sobrecargas a menos que (1) tenga un motivo muy claro para no hacerlo o (2) use un contenedor [std::list](../standard-library/list-class.md), que no se beneficia de las optimizaciones de doble intervalo.
 
 ## <a name="see-also"></a>Vea también
 
-[Contenedores](../cpp/containers-modern-cpp.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<sample container>](../standard-library/sample-container.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Contenedores](../cpp/containers-modern-cpp.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)\
+[\<contenedor de ejemplo>](../standard-library/sample-container.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

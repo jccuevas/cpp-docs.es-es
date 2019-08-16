@@ -1,17 +1,15 @@
 ---
 title: Identificadores de comandos y ventanas estándar
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - standard command and Window IDs
 ms.assetid: 0424805c-fff8-4531-8f0c-15cfb13aa612
-ms.openlocfilehash: e5f6955407f565d5cc06ef57e9bd273f6c0f7712
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97123d681efbebc59891459a43cfbc16b5333a7a
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267256"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611693"
 ---
 # <a name="standard-command-and-window-ids"></a>Identificadores de comandos y ventanas estándar
 

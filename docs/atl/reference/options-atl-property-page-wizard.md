@@ -1,42 +1,53 @@
 ---
 title: Opciones, Asistente para páginas de propiedades ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298989"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707001"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opciones, Asistente para páginas de propiedades ATL
 
-Utilice esta página del Asistente para definir el nivel de agregación y de modelo de subprocesamiento de página de propiedades que se va a crear.
+
+::: moniker range="vs-2019"
+
+El Asistente para páginas de propiedades ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Use esta página del asistente para definir el modelo de subprocesos y el nivel de agregación de la página de propiedades que está creando.
 
 - **Modelo de subprocesos**
 
-   Especifica el modelo de subprocesos utilizado por la página de propiedades.
+   Especifica el modelo de subprocesos que usa la página de propiedades.
 
-   Consulte [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.
+   Consulte el artículo sobre [cómo especificar el modelo de subprocesos del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.
 
    |Opción|Descripción|
    |------------|-----------------|
-   |**Single**|La página de propiedades solo se ejecuta en el subproceso COM principal.|
-   |**Apartment**|La página de propiedades puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.|
+   |**Single**|La página de propiedades se ejecuta solo en el subproceso COM principal.|
+   |**Apartment**|La página de propiedades se puede crear en cualquier apartamento de un único subproceso. El valor predeterminado.|
 
 - **Agregación**
 
-   Agrega compatibilidad con la agregación para la página de propiedades que se va a crear. Consulte [agregación](../../atl/aggregation.md) para obtener más información.
+   Agrega compatibilidad con la agregación para la página de propiedades que está creando. Consulte [Agregación](../../atl/aggregation.md) para obtener más información.
 
    |Opción|Descripción|
    |------------|-----------------|
-   |**Sí**|Crear una página de propiedades que se puede agregar.|
-   |**No**|Crear una página de propiedades que no se puede agregar.|
-   |**Solo**|Crear una página de propiedades que solo se puede crear instancias mediante agregación.|
+   |**Sí**|Cree una página de propiedades que se pueda agregar.|
+   |**No**|Cree una página de propiedades que no se pueda agregar.|
+   |**Solo**|Cree una página de propiedades de la que se puedan crear instancias a través de la agregación.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 

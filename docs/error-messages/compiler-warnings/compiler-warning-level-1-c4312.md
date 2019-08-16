@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 666df7904a7aac88983af40d31a67271beaa0b1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440240"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510079"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Advertencia del compilador (nivel 1) C4312
 
@@ -21,7 +21,7 @@ Esta advertencia detecta un intento de asignar un valor de 32 bits a un tipo de 
 
 Puede tratarse de una conversión no segura, incluso para los valores de puntero que se ajusten a 32 bits cuando se produce la extensión de signo. Si un entero negativo de 32 bits se asigna a un tipo de puntero de 64 bits, la extensión de signo provoca que el valor del puntero haga referencia a una dirección de memoria distinta a la del valor del entero.
 
-Esta advertencia solo se genera para destinos de compilación de 64 bits. Para obtener más información, consulte [reglas para usar punteros](/windows/desktop/WinProg64/rules-for-using-pointers).
+Esta advertencia solo se genera para destinos de compilación de 64 bits. Para obtener más información, consulte [reglas para usar punteros](/windows/win32/WinProg64/rules-for-using-pointers).
 
 El ejemplo de código siguiente genera el error C4312 cuando se compila para destinos de 64 bits:
 

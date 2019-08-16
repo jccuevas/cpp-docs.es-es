@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - MMX instruction set
 ms.assetid: 705deb2d-c3fd-4696-9e22-8bcf25866daf
-ms.openlocfilehash: 3b2de7896c4a688c3428cddc13144a838f906557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: b8b2697fa106506dadfdaa96149fd6b0b093c844
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603871"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445875"
 ---
 # <a name="intel39s-mmx-instruction-set"></a>Intel&#39;conjunto de instrucciones MMX s
 
 **Específicos de Microsoft**
 
-El compilador de Visual C++ permite utilizar el conjunto de instrucciones MMX (extensión multimedia) de Intel en el ensamblador insertado. Las instrucciones MMX también son compatibles con el desensamblado del depurador. El compilador genera un mensaje de advertencia si la función contiene instrucciones MMX pero no contiene una instrucción EMMS para vaciar el estado multimedia. Para obtener más información, vea el sitio web de Intel.
+Microsoft C++ compilador permite usar establecido en el ensamblador alineado de instrucciones MMX (extensión multimedia) de Intel. Las instrucciones MMX también son compatibles con el desensamblado del depurador. El compilador genera un mensaje de advertencia si la función contiene instrucciones MMX pero no contiene una instrucción EMMS para vaciar el estado multimedia. Para obtener más información, vea el sitio web de Intel.
 
 **FIN de Específicos de Microsoft**
 

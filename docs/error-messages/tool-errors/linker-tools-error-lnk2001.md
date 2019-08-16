@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808110"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449627"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Error de las herramientas del vinculador LNK2001
 
@@ -71,7 +71,7 @@ Este error puede producirse si el código hace referencia a un símbolo de una v
 
 Actualmente no hay ningún estándar para [C++ nomenclatura](../../error-messages/tool-errors/name-decoration.md) entre los proveedores de compiladores, ni entre versiones diferentes de un compilador. Por lo tanto, vincular archivos objeto compilados con otros compiladores puede no producir el mismo esquema de nomenclatura y esto provocará el error LNK2001.
 
-[Opciones de compilación de combinación en línea y no en línea](../../error-messages/tool-errors/function-inlining-problems.md) en módulos diferentes puede causar el error LNK2001. Si se crea una biblioteca de C++ con la inclusión de funciones activado (**/Ob1** o **/Ob2**), pero el archivo de encabezado correspondiente que describe las funciones tiene desactivada (no hay `inline` palabra clave), este error se produce. Para corregir este problema, defina las funciones `inline` en el archivo de encabezado incluido en otros archivos de origen.
+[Opciones de compilación de combinación en línea y no en línea](../../error-messages/tool-errors/function-inlining-problems.md) en módulos diferentes puede causar el error LNK2001. Si se crea una biblioteca de C++ con la inclusión de funciones activado ( **/Ob1** o **/Ob2**), pero el archivo de encabezado correspondiente que describe las funciones tiene desactivada (no hay `inline` palabra clave), este error se produce. Para corregir este problema, defina las funciones `inline` en el archivo de encabezado incluido en otros archivos de origen.
 
 Si usas el `#pragma inline_depth` compilador la directiva, asegúrese de tener un [establecer valor de 2 o mayor](../../error-messages/tool-errors/function-inlining-problems.md)y asegúrese también de usar el [/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md) opción del compilador.
 
@@ -101,5 +101,5 @@ En algunos casos, el vinculador solo puede notificar el nombre representativo pa
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Para obtener más información sobre las posibles causas y soluciones para el error LNK2001, consulte la pregunta desbordamiento de pila [¿qué es un error de símbolo externo sin definir referencia/unresolved y cómo lo corrijo?](http://stackoverflow.com/q/12573816/2002113).
+Para obtener más información sobre las posibles causas y soluciones para el error LNK2001, consulte la pregunta desbordamiento de pila [¿qué es un error de símbolo externo sin definir referencia/unresolved y cómo lo corrijo?](https://stackoverflow.com/q/12573816/2002113).
 

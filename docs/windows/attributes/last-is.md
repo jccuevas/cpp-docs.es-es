@@ -1,21 +1,21 @@
 ---
-title: last_is (C++ atributo COM)
+title: last_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033292"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514509"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
-Especifica el índice del último elemento de matriz que se transmitan.
+Especifica el índice del último elemento de la matriz que se va a transmitir.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,15 +26,15 @@ Especifica el índice del último elemento de matriz que se transmitan.
 ### <a name="parameters"></a>Parámetros
 
 *expression*<br/>
-Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
+Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
 ## <a name="remarks"></a>Comentarios
 
-El **last_is** C++ atributo tiene la misma funcionalidad que el [last_is](/windows/desktop/Midl/last-is) atributo MIDL.
+El atributo **last_is** C++ tiene la misma funcionalidad que el atributo MIDL [last_is](/windows/win32/Midl/last-is) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
+Vea [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -42,10 +42,10 @@ Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar un
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

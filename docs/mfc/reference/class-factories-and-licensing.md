@@ -1,17 +1,15 @@
 ---
 title: Generadores de clases y licencias
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.classes
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 18d86122e57af056a50a4d94bac89d65a7b71c7d
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289588"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611844"
 ---
 # <a name="class-factories-and-licensing"></a>Generadores de clases y licencias
 

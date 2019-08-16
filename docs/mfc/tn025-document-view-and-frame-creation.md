@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
 ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306001"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: Documento, vista y creación de marco
 

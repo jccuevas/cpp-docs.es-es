@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429162"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447750"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator (Clase)
 
@@ -36,29 +36,29 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*<br/>
+*Automáticamente*\
 Tipo de objeto que se extraerá del flujo de entrada.
 
-*CharType*<br/>
-Tipo que representa el tipo de caracteres para `istream_iterator`. Este argumento es opcional y el valor predeterminado es **char**.
+*CharType*\
+Tipo que representa el tipo de caracteres para `istream_iterator`. Este argumento es opcional y el valor predeterminado es **Char**.
 
-*Rasgos*<br/>
+*Rasgos*\
 Tipo que representa el tipo de caracteres para `istream_iterator`. Este argumento es opcional y el valor predeterminado es `char_traits`< `CharType`>.
 
-*Distance*<br/>
+*Posición*\
 Tipo entero con signo que representa el tipo de diferencia para `istream_iterator`. Este argumento es opcional y el valor predeterminado es `ptrdiff_t`.
 
 Después de crear o incrementar un objeto de clase istream_iterator con un puntero almacenado no null, el objeto intenta extraer y almacenar un objeto de tipo `Type` del flujo de entrada asociado. Si se produce un error en la extracción, el objeto reemplaza el puntero almacenado con un puntero NULL, creando de esta forma un indicador de fin de secuencia.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[istream_iterator](#istream_iterator)|Construye un iterador de fin de secuencia como `istream_iterator` predeterminado, o bien un `istream_iterator` inicializado en el tipo de flujo del iterador del que lee.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo que proporciona el tipo de los caracteres de `istream_iterator`.|
 |[istream_type](#istream_type)|Tipo que proporciona el tipo de flujo de `istream_iterator`.|
@@ -66,7 +66,7 @@ Después de crear o incrementar un objeto de clase istream_iterator con un punte
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
 |[operator*](#op_star)|El operador de desreferencia devuelve el objeto almacenado de tipo `Type` señalado por `istream_iterator`.|
 |[operator->](#op_arrow)|Devuelve el valor de un miembro, si existe.|
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Istr*<br/>
+*_Istr*\
 Flujo de entrada que se va a leer usado para inicializar `istream_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el puntero del flujo de entrada con un puntero null y crea un iterador de fin de flujo. El segundo constructor inicializa el puntero del flujo de entrada con *& _Istr*, a continuación, intenta extraer y almacenar un objeto de tipo `Type`.
+El primer constructor inicializa el puntero del flujo de entrada con un puntero null y crea un iterador de fin de flujo. El segundo constructor inicializa el puntero del flujo de entrada con *& _Istr*y, a continuación, intenta extraer y almacenar un `Type`objeto de tipo.
 
 El iterador de fin de flujo se puede usar para probar si `istream_iterator` ha llegado al final de un flujo.
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El objeto almacenado de tipo `Type`.
+Objeto almacenado de tipo `Type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -255,7 +255,7 @@ Valor de un miembro, si existe.
 
 ### <a name="remarks"></a>Comentarios
 
-`i->m` es equivalente a `(*i).m`
+`i->m`es equivalente a`(*i).m`
 
 El operador devuelve `&*this`.
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer operador miembro devuelve una referencia al objeto incrementado de tipo `Type` extraído de la secuencia de entrada y la segunda función de miembro devuelve una copia del objeto.
+El primer operador miembro devuelve una referencia al objeto incrementado de tipo `Type` extraído del flujo de entrada y la segunda función miembro devuelve una copia del objeto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>Vea también
 
-[input_iterator_tag (Struct)](../standard-library/input-iterator-tag-struct.md)<br/>
-[iterator (Struct)](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[input_iterator_tag (Struct)](../standard-library/input-iterator-tag-struct.md)\
+[Struct iterator](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

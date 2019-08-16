@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-ms.openlocfilehash: 06d4c19208bd242169e1cd07a71e8a568f46f7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9c1774fe7cd4a6883aa79f384cc64521a57ed17
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466097"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448005"
 ---
 # <a name="compiler-error-c2383"></a>Error del compilador C2383
 
@@ -19,7 +19,7 @@ ms.locfileid: "50466097"
 
 El compilador de C++ no permiten argumentos predeterminados en punteros a funciones.
 
-Este código fue aceptado por el compilador de Visual C++ en las versiones anteriores de Visual Studio 2005, pero ahora produce un error. Para el código que funciona en todas las versiones de Visual C++, no asigne un valor predeterminado para un argumento de puntero a función.
+Este código fue aceptado por el Microsoft C++ compilador en las versiones anteriores de Visual Studio 2005, pero ahora produce un error. Para el código que funciona en todas las versiones de Visual C++, no asigne un valor predeterminado para un argumento de puntero a función.
 
 ## <a name="example"></a>Ejemplo
 

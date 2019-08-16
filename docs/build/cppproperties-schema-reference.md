@@ -1,14 +1,14 @@
 ---
 title: Referencia del esquema de CppProperties.json
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
-- CMake in Visual C++
-ms.openlocfilehash: 43ffa0e92649fe233c6a743d4b64a2749cb28f5a
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+- CMake in Visual Studio
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356106"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516361"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Referencia del esquema de CppProperties.json
 
@@ -17,9 +17,9 @@ Los proyectos Abrir carpeta que no usan CMake pueden almacenar valores de config
 
 ## <a name="default-configurations"></a>Configuraciones predeterminadas
 
-Visual Studio proporciona configuraciones predefinidas para depuración y versión x86 y x64. De forma predeterminada, el proyecto tiene una configuración de depuración x86 en `CppProperties.json`. Para agregar una nueva configuración, haga clic en el archivo `CppProperties.json` en el **Explorador de soluciones** y elija **Agregar configuración**:
+Visual Studio proporciona configuraciones predefinidas para depuración y versión x86 y x64. De forma predeterminada, el proyecto tiene una configuración de depuración x86 en `CppProperties.json`. Para agregar una nueva configuración, haga doble clic en el `CppProperties.json` archivo **el Explorador de soluciones** y elija **Agregar configuración**:
 
-![Abrir carpeta y agregar configuración](media/open-folder-add-config.png "Open Folder add new configuration")
+![Abra la carpeta - agregar nueva configuración](media/open-folder-add-config.png "Abrir carpeta agregar nueva configuración")
 
 Aquí se muestran las configuraciones predeterminadas:
 
@@ -115,14 +115,14 @@ Una configuración puede tener cualquiera de las propiedades siguientes:
 |`compilerSwitches`|Uno o varios modificadores adicionales que pueden influir en el comportamiento de IntelliSense.|
 |`forcedInclude`|Encabezado que se va a incluir de forma automática en todas las unidades de compilación (se asigna a /FI para MSVC o -include para clang).|
 |`undefines`|Lista de macros de las que se van a anular las definiciones (se asigna a /U para MSVC).|
-|`intelliSenseMode`|Motor de IntelliSense que se va usar. Puede especificar variantes específicas de la arquitectura para MSVC, gcc o Clang:<br/><br/>-windows-msvc-x86 (valor predeterminado)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Motor de IntelliSense que se va usar. Puede especificar las variantes específicas de la arquitectura de MSVC gcc y Clang:<br/><br/>- windows-msvc-x86 (valor predeterminado)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-Nota: Los valores `msvc-x86` y `msvc-x64` por motivos de herencia solo se admiten. Use el `windows-msvc*` variantes.
+Nota: Los valores `msvc-x86` y `msvc-x64` solo se admiten por motivos de herencia. Use el `windows-msvc-*` variantes en su lugar.
 
 ## <a name="custom-configurations"></a>Configuraciones personalizadas
 
 
-Puede personalizar cualquiera de las configuraciones predeterminadas en `CppProperties.json`, o bien crear nuevas configuraciones. Todas aparecerán en el menú desplegable de configuración:
+Puede personalizar cualquiera de las configuraciones predeterminadas de `CppProperties.json`, o bien crear configuraciones. Todas aparecerán en el menú desplegable de configuración:
 
 ```json
 {
@@ -208,7 +208,7 @@ Se pueden definir variables de entorno personalizadas en `CppProperties.json` de
 ```
 ## <a name="per-configuration-environment-variables"></a>Variables de entorno por configuración
 
-También se puede definir una propiedad **environments** dentro de una configuración, para que solo se aplique a esa configuración y reemplace las variables globales del mismo nombre. En el ejemplo siguiente, la configuración x64 define una variable **INCLUDE** local que invalida el valor global:
+También puede definir un **entornos** propiedad dentro de una configuración. Se aplica solo a esa configuración y reemplaza las variables globales del mismo nombre. En el ejemplo siguiente, la configuración x64 define una variable **INCLUDE** local que invalida el valor global:
 
 ```json
 {
@@ -264,9 +264,9 @@ Dentro de `CppProperties.json` tiene acceso a las macros integradas siguientes:
 |-|-|
 |`${workspaceRoot}`| la ruta de acceso completa a la carpeta del área de trabajo.|
 |`${projectRoot}`| la ruta de acceso completa a la carpeta donde se coloca `CppProperties.json`.|
-|`${vsInstallDir}`| la ruta de acceso completa a la carpeta donde está instalada la instancia en ejecución de VS 2017.|
+|`${env.vsInstallDir}`| la ruta de acceso completa a la carpeta donde está instalada la instancia en ejecución de Visual Studio.|
 
-Por ejemplo, si el proyecto tiene una carpeta de inclusión y también incluye windows.h y otros encabezados comunes de Windows SDK, es posible que le interese actualizar el archivo de configuración `CppProperties.json` con estos archivos de inclusión:
+Por ejemplo, si el proyecto tiene una carpeta de inclusión y también incluye windows.h y otros encabezados comunes desde el SDK de Windows, es posible que desee actualizar su `CppProperties.json` incluye el archivo de configuración con lo siguiente:
 
 ```json
 {
@@ -289,11 +289,8 @@ Por ejemplo, si el proyecto tiene una carpeta de inclusión y también incluye w
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` y `%VCToolsInstallDir%` no se establecen como variables de entorno globales, por lo que debe asegurarse de iniciar devenv.exe desde un "Símbolo del sistema para desarrolladores para VS 2017" que defina estas variables.
+> `%WindowsSdkDir%` y `%VCToolsInstallDir%` no se establecen como variables de entorno globales, por lo que debe asegurarse de iniciar devenv.exe desde un Símbolo del sistema para desarrolladores que defina estas variables. (Escriba "desarrollador" en el menú de inicio de Windows).
 
 ## <a name="troubleshoot-intellisense-errors"></a>Solución de errores de IntelliSense
 
 Para solucionar problemas de errores de IntelliSense causados por la ausencia de rutas de acceso de inclusión, abra la **Lista de errores** y filtre los resultados por "Solo IntelliSense" y el código de error E1696 "no se puede abrir el archivo de código fuente...".
-
-
-

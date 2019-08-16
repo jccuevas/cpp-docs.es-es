@@ -15,12 +15,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676660"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450416"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine (Clase)
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*Motor de*<br/>
+*Motor*\
 El tipo de motor base.
 
-*K*<br/>
+*K*\
 **Tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa:** `0 < K`
 
 ## <a name="members"></a>Miembros
@@ -52,7 +52,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla describe un *adaptador de motor* que genera valores reordenando los valores que su motor base devuelve. Cada constructor rellena la tabla interna con *K* valores devueltos por el motor de base y se selecciona un elemento aleatorio de la tabla cuando se solicita un valor.
+Esta clase de plantilla describe un *adaptador de motor* que genera valores reordenando los valores que su motor base devuelve. Cada constructor rellena la tabla interna con los valores *K* devueltos por el motor base, y se selecciona un elemento aleatorio de la tabla cuando se solicita un valor.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -62,4 +62,4 @@ Esta clase de plantilla describe un *adaptador de motor* que genera valores reor
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -1,6 +1,6 @@
 ---
 title: Determinar qué archivos DLL se redistribuirán
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: dd600e2b3e094b1547badd93596a9dbed2438fb3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894482"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinar qué archivos DLL se redistribuirán
 
 Al compilar una aplicación que usa los archivos DLL de biblioteca proporcionados por Visual Studio, los usuarios de la aplicación también deben tener esos archivos DLL en sus equipos para ejecutar la aplicación. Dado que la mayoría de los usuarios probablemente no tengan instalado Visual Studio, debe proporcionarles estos archivos DLL. Visual Studio ofrece estos archivos DLL como *archivos redistribuibles* que se pueden incluir en el instalador de la aplicación.
 
-Para que resulte más fácil incluir los archivos DLL redistribuibles con el programa de instalación, también están disponibles como *paquetes redistribuibles* independientes. Se trata de archivos ejecutables específicos de la arquitectura que usan la implementación central para instalar los archivos redistribuibles en el equipo del usuario. Por ejemplo, vcredist\_x86.exe instala las bibliotecas de 32 bits para x86 equipos, vcredist\_x64.exe instala las bibliotecas de 64 bits para x64 equipos y vcredist\_ARM.exe instala las bibliotecas para los equipos ARM. Se recomienda la implementación central para que Microsoft pueda usar el servicio Windows Update para actualizar estas bibliotecas de forma independiente. Además de la copia en la instalación de Visual Studio, los paquetes redistribuibles actuales están disponibles para la descarga. Para obtener vínculos a los paquetes redistribuibles compatibles más recientes para los conjuntos de herramientas actuales y anteriores, vea [Descargas más recientes compatibles de Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Se pueden encontrar versiones anteriores específicas de los paquetes redistribuibles si se busca "Paquetes redistribuibles de Visual C++" en el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=158431).
+Para que resulte más fácil incluir los archivos DLL redistribuibles con el programa de instalación, también están disponibles como *paquetes redistribuibles* independientes. Se trata de archivos ejecutables específicos de la arquitectura que usan la implementación central para instalar los archivos redistribuibles en el equipo del usuario. Por ejemplo, vcredist\_x86.exe instala las bibliotecas de 32 bits para los equipos x86 y x64, vcredist\_x64.exe instala las bibliotecas de 64 bits para x64 equipos y vcredist\_ARM.exe instala las bibliotecas de ARM equipos. Se recomienda la implementación central para que Microsoft pueda usar el servicio Windows Update para actualizar estas bibliotecas de forma independiente. Además de la copia en la instalación de Visual Studio, los paquetes redistribuibles actuales están disponibles para la descarga. Para obtener vínculos a los paquetes redistribuibles compatibles más recientes para los conjuntos de herramientas actuales y anteriores, vea [Descargas más recientes compatibles de Visual C++](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Se pueden encontrar versiones anteriores específicas de los paquetes redistribuibles si se busca "Paquetes redistribuibles de Visual C++" en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
 
 El número de versión principal del paquete redistribuible que se implemente debe coincidir con la versión del conjunto de herramientas de Visual Studio que se use para crear la aplicación, y el número de versión secundaria debe ser el mismo o superior. Visual Studio 2017 y Visual Studio 2015 tienen números de versión de conjunto de herramientas compatibles, lo que significa que las aplicaciones compiladas con el conjunto de herramientas de Visual Studio 2015 pueden usar los archivos redistribuibles de Visual Studio 2017. Aunque puedan ser compatibles, no se admite el uso de los archivos redistribuibles de 2015 en aplicaciones compiladas con el conjunto de herramientas de 2017. Solo se admite el uso de un paquete redistribuible que sea igual o más reciente que la versión del conjunto de herramientas.
 
@@ -29,7 +29,7 @@ Los archivos DLL redistribuibles individuales también se incluyen en la instala
 
 Para determinar qué archivos DLL se tienen que redistribuir con la aplicación, recopile una lista de archivos DLL de los que depende la aplicación. Normalmente, estos se muestran como entradas de biblioteca de importación al enlazador. Algunas bibliotecas, como vcruntime y la biblioteca en tiempo de ejecución Universal C (UCRT), se incluyen de forma predeterminada. Si la aplicación o una de sus dependencias usa LoadLibrary para cargar un archivo DLL de manera dinámica, es posible que ese archivo DLL no se muestre en las entradas al enlazador. Una manera de recopilar la lista de archivos DLL cargados de forma dinámica consiste en ejecutar Dependency Walker (depends.exe) en la aplicación, como se describe en [Descripción de las dependencias de una aplicación de Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md). Desafortunadamente, esta herramienta no está actualizada y puede notificar que no encuentra determinados archivos DLL.
 
-Cuando tenga la lista de dependencias, compárela con la lista vinculada al archivo Redist.txt que se encuentra en el directorio de instalación de Microsoft Visual Studio, o bien con la "lista REDIST" de archivos DLL redistribuibles a los que se hace referencia en la sección "Archivos de código distribuibles" de los Términos de licencia del software de Microsoft para la copia de Visual Studio. Para Visual Studio 2017, vea [Código distribuible para Microsoft Visual Studio 2017 (incluye utilidades, extensibilidad y archivos BuildServer)](http://go.microsoft.com/fwlink/p/?linkid=823098). Para Visual Studio 2015, vea [Código distribuible para Microsoft Visual Studio 2015 y Microsoft Visual Studio 2015 SDK (incluye utilidades y archivos BuildServer)](http://go.microsoft.com/fwlink/p/?linkid=799794). En Visual Studio 2013, la lista está disponible en línea en [Código distribuible para Microsoft Visual Studio 2013 y Microsoft Visual Studio 2013 SDK](http://go.microsoft.com/fwlink/p/?LinkId=313603).
+Cuando tenga la lista de dependencias, compárela con la lista vinculada al archivo Redist.txt que se encuentra en el directorio de instalación de Microsoft Visual Studio, o bien con la "lista REDIST" de archivos DLL redistribuibles a los que se hace referencia en la sección "Archivos de código distribuibles" de los Términos de licencia del software de Microsoft para la copia de Visual Studio. Para Visual Studio 2017, vea [Código distribuible para Microsoft Visual Studio 2017 (incluye utilidades, extensibilidad y archivos BuildServer)](https://go.microsoft.com/fwlink/p/?linkid=823098). Para Visual Studio 2015, vea [Código distribuible para Microsoft Visual Studio 2015 y Microsoft Visual Studio 2015 SDK (incluye utilidades y archivos BuildServer)](https://go.microsoft.com/fwlink/p/?linkid=799794). En Visual Studio 2013, la lista está disponible en línea en [Código distribuible para Microsoft Visual Studio 2013 y Microsoft Visual Studio 2013 SDK](https://go.microsoft.com/fwlink/p/?LinkId=313603).
 
 En las versiones de Visual Studio anteriores a Visual Studio 2015, la biblioteca de tiempo de ejecución de C (CRT) se incluye como un archivo DLL redistribuible, en msvc*versión*.dll. A partir de Visual Studio 2015, las funciones de CRT se refactorizaron en vcruntime y UCRT. UCRT es ahora un componente del sistema de Windows 10, administrado por Windows Update. Está disponible en todos los sistemas operativos Windows 10. Para implementar la aplicación en sistemas operativos anteriores, es posible que también tenga que redistribuir UCRT. Una versión anterior de UCRT se incluye en los archivos redistribuibles de Visual Studio, que solo se instala en sistemas operativos anteriores a Windows 10, y solo si no hay instalada ninguna versión de UCRT. Para obtener una versión instalable de UCRT para sistemas de nivel inferior como un paquete de actualización de sistema de Microsoft, vea [Tiempo de ejecución de C universal de Windows 10 ](https://www.microsoft.com/download/details.aspx?id=48234) en el Centro de descarga de Microsoft.
 
@@ -37,7 +37,7 @@ No puede redistribuir todos los archivos que se incluyen en Visual Studio; únic
 
 En la tabla siguiente se describen algunos de los archivos DLL de Visual C++ de los que su aplicación puede depender.
 
-|Biblioteca de Visual C++|Descripción|Se aplica a|
+|Biblioteca de Visual C++|DESCRIPCIÓN|Se aplica a|
 |--------------------------|-----------------|----------------|
 |vcruntime*versión*.dll|Biblioteca en tiempo de ejecución para código nativo.|Aplicaciones que usan los servicio de inicio y finalización normales del lenguaje C y C++.|
 |vccorlib*versión*.dll|Biblioteca en tiempo de ejecución para código administrado.|Aplicaciones que usan los servicios del lenguaje C++ para código administrado.|

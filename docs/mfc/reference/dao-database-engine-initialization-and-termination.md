@@ -1,18 +1,16 @@
 ---
 title: Inicialización y terminación del motor de bases de datos DAO
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.data
 helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: 8ad0c1df2f5b6a7b1b48d2db119b04e4b3234f10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b8186627f00105cf782586060b41ae0fb627d76
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297646"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611938"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Inicialización y terminación del motor de bases de datos DAO
 

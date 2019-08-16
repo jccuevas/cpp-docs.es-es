@@ -1,14 +1,14 @@
 ---
 title: Conversiones de tipos y seguridad de tipos (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
-ms.translationtype: MT
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220652"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221866"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversiones de tipos y seguridad de tipos (C++ moderno)
 
@@ -30,8 +30,8 @@ En una conversión de ampliación, un valor de una variable menor se asigna a un
 |----------|--------|
 |Cualquiera con o sin el signo de tipo entero excepto **long long** o **__int64**|**double**|
 |**BOOL** o **char**|Cualquier otro tipo integrado|
-|**short** o **wchar_t**|**int**, **largo**, **long long**|
-|**int**, **largo**|**long long**|
+|**short** o **wchar_t**|**int**, **long**, **long long**|
+|**int**, **long**|**long long**|
 |**float**|**double**|
 
 ### <a name="narrowing-conversions-coercion"></a>Conversiones de restricción (coerción)
@@ -84,7 +84,7 @@ El compilador no advierte sobre las conversiones implícitas entre los tipos ent
 
 ### <a name="pointer-conversions"></a>Conversiones de puntero
 
-En muchas expresiones, una matriz de estilo C se convierte implícitamente a un puntero al primer elemento de la matriz y las conversiones de constantes pueden ocurrir de forma silenciosa. Aunque esto es conveniente, también es potencialmente propenso a errores. Por ejemplo, el ejemplo de código mal diseñado siguiente es absurdo, pero se compilará en Visual C++ y genera un resultado de "p". Primero, el literal de la constante de cadena "Ayuda" se convierte en `char*`, que señala al primer elemento de la matriz; ese puntero se incrementa en tres elementos para que señale al último elemento "p".
+En muchas expresiones, una matriz de estilo C se convierte implícitamente a un puntero al primer elemento de la matriz y las conversiones de constantes pueden ocurrir de forma silenciosa. Aunque esto es conveniente, también es potencialmente propenso a errores. Por ejemplo, el ejemplo de código mal diseñado siguiente es absurdo, y aún se compilará y se genera un resultado de "p". Primero, el literal de la constante de cadena "Ayuda" se convierte en `char*`, que señala al primer elemento de la matriz; ese puntero se incrementa en tres elementos para que señale al último elemento "p".
 
 ```cpp
 char* s = "Help" + 3;

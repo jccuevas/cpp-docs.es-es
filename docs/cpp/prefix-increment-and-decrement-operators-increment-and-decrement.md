@@ -14,11 +14,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
 ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392107"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operadores de incremento y decremento prefijos: ++ y --
 
@@ -35,7 +35,7 @@ El operador de incremento de prefijo (**++**) suma uno a su operando; este valor
 
 El operador de decremento de prefijo (**--**) es análogo al operador de incremento de prefijo, salvo que el operando se reduce en uno y el resultado es este valor disminuido.
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el operando de un operador de incremento o decremento no puede ser de tipo **bool**.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): El operando de un operador de incremento o decremento no puede ser de tipo **bool**.
 
 Los operadores de incremento y decremento de prefijo y postfijo afectan a sus operandos. La principal diferencia entre ellos es el orden en que se realiza el incremento o el decremento al evaluar una expresión. (Para obtener más información, consulte [postfijo de incremento y decremento](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) En la forma de prefijo, el incremento o decremento tiene lugar antes de que el valor se use en la evaluación de la expresión, por lo que el valor de la expresión es diferente del valor del operando. En la forma de postfijo, el incremento o decremento tiene lugar después de que el valor se use en la evaluación de la expresión, por lo que el valor de la expresión es el mismo que el valor del operando. Por ejemplo, el siguiente programa imprime “`++i = 6`”:
 

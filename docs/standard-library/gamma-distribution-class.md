@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: a5dcd2ed80a2858ac08d2d8e9cb03095ddfec5b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac6a82cc7f342f6a96b5f79f36b23d23a1d27097
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550480"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453940"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution (Clase)
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
-El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-El uniforme generador motor de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG*\
+Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de la especificada por el usuario de punto flotante tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución Gamma. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución gamma. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -97,7 +97,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
 
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener más información sobre la distribución gamma, vea el artículo de Wolfram MathWorld sobre la [distribución gamma](http://go.microsoft.com/fwlink/p/?linkid=401111).
+Para obtener más información sobre la distribución gamma, vea el artículo de Wolfram MathWorld sobre la [distribución gamma](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
 ## <a name="example"></a>Ejemplo
 
@@ -199,13 +199,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*alpha*<br/>
+*canal*\
 El parámetro de distribución `alpha`.
 
-*beta*<br/>
+*Beta*\
 El parámetro de distribución `beta`.
 
-*parm*<br/>
+*PARM*\
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -234,13 +234,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*alpha*<br/>
+*canal*\
 El parámetro de distribución `alpha`.
 
-*beta*<br/>
+*Beta*\
 El parámetro de distribución `beta`.
 
-*right*<br/>
+*correcta*\
 La instancia `param_type` que comparar con esta.
 
 ### <a name="remarks"></a>Comentarios
@@ -251,4 +251,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

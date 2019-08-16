@@ -1,24 +1,24 @@
 ---
 title: Utilizar las plantillas Agregar nuevo elemento de Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826312"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217760"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilizar las plantillas Agregar nuevo elemento de Visual C++
 
-Se pueden agregar fácilmente elementos que son comunes a los proyectos de Visual C++ mediante el comando **Agregar nuevo elemento**. Cuando se usa el comando **Agregar nuevo elemento**, aparece el cuadro de diálogo `Add New Item` con una lista de plantillas de elemento, que agregan los archivos apropiados al proyecto.
+Puede agregar fácilmente los elementos que son comunes a los proyectos de Visual Studio mediante el uso de la **Agregar nuevo elemento** comando. Cuando se usa el comando **Agregar nuevo elemento**, aparece el cuadro de diálogo `Add New Item` con una lista de plantillas de elemento, que agregan los archivos apropiados al proyecto.
 
-En la tabla siguiente se muestra una lista alfabética de las plantillas de Agregar nuevo elemento de Visual C++.
+En la tabla siguiente es una lista alfabética de las plantillas Agregar nuevo elemento de Visual Studio.
 
 |Plantilla|Descripción|
 |--------------|-----------------|
@@ -38,7 +38,7 @@ En la tabla siguiente se muestra una lista alfabética de las plantillas de Agre
 |Clase de instalador|Agrega una clase que hereda de <xref:System.Configuration.Install.Installer> mediante las características de CLR.|
 |Archivo MIDL (.idl)|Crea un archivo de Lenguaje de definición de interfaz.|
 |Archivo de definición de módulo (.def)|Crea un archivo de definición de exportación de DLL.|
-|Hoja de propiedades (.props)|Crea un archivo de hoja de propiedades de Visual C++.|
+|Hoja de propiedades (.props)|Crea un archivo de hoja de propiedades.|
 |Script de registro (.rgs)|Crea un archivo de script de registro de ATL.|
 |Informe (.rdlc)|Crea un archivo de informe.|
 |Archivo de recursos (.rc)|Crear un archivo de recursos de Win32.|

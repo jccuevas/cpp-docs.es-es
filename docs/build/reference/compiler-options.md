@@ -1,6 +1,6 @@
 ---
 title: Opciones del compilador MSVC
-ms.date: 01/29/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: ab41a5de027f28b361937e58fb179fd72db54e4e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816521"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221737"
 ---
 # <a name="compiler-options"></a>Opciones del compilador
 
-cl.exe es una herramienta que controla los compiladores de C++ y Microsoft Visual C++ (MSVC) C y el vinculador. cl.exe se puede ejecutar solo en sistemas operativos que admiten Microsoft Visual Studio para Windows.
+cl.exe es una herramienta que controla el Microsoft C++ (MSVC) C y C++ compiladores y el vinculador. cl.exe se puede ejecutar solo en sistemas operativos que admiten Microsoft Visual Studio para Windows.
 
 > [!NOTE]
 > Puede iniciar esta herramienta solo desde un símbolo del sistema de Visual Studio para desarrolladores. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos. Para obtener más información, consulte [usar el conjunto de herramientas desde la línea de comandos MSVC](../building-on-the-command-line.md).
@@ -40,7 +40,7 @@ Para buscar una opción del compilador determinado, consulte una de las listas s
 
 El tema de cada opción del compilador describe cómo se puede establecer en el entorno de desarrollo. Para obtener información sobre cómo especificar opciones fuera del entorno de desarrollo, consulte:
 
-- [Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+- [Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
 
 - [Archivos de comandos de CL](cl-command-files.md)
 

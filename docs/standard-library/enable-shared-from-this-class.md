@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_shared_from_this class
 - enable_shared_from_this
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
-ms.openlocfilehash: 9bf5055aefe505461e81703373ecb042a1f7224a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 152a5e0433f2eab5160fbdedde8f18f42f2303e6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547828"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245867"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this (Clase)
 
@@ -26,6 +26,8 @@ public:
     shared_ptr<Ty>
         shared_from_this();
     shared_ptr<const Ty> shared_from_this() const;
+    weak_ptr<T> weak_from_this() noexcept;
+    weak_ptr<T const> weak_from_this() const noexcept;
 protected:
     enable_shared_from_this();
     enable_shared_from_this(const enable_shared_from_this&);
@@ -36,7 +38,7 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo controlado por el puntero compartido.
 
 ## <a name="remarks"></a>Comentarios
@@ -47,13 +49,7 @@ Los constructores, el destructor y el operador de asignación están protegidos 
 
 Para obtener un ejemplo de uso, vea [enable_shared_from_this::shared_from_this](#shared_from_this).
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<memory>
-
-**Espacio de nombres:** std
-
-## <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this
+## <a name="shared_from_this"></a> shared_from_this
 
 Genera un `shared_ptr` que comparte la propiedad de la instancia con propietarios `shared_ptr` existentes.
 
@@ -100,7 +96,9 @@ int main()
 sp2->val == 3
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="weak_from_this"></a> weak_from_this
 
-[enable_shared_from_this:: shared_from_this](#shared_from_this)<br/>
-[shared_ptr (Clase)](../standard-library/shared-ptr-class.md)<br/>
+```cpp
+weak_ptr<T> weak_from_this() noexcept;
+weak_ptr<T const> weak_from_this() const noexcept;
+```

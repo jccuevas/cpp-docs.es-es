@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571202"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447186"
 ---
 # <a name="compiler-error-c3867"></a>Error del compilador C3867
 
-'func': falta la lista de argumentos de la llamada a la función; utilice '&func' para crear un puntero al miembro
+'func': Falta lista de argumentos; la llamada a función Utilice ' & func' para crear un puntero a miembro
 
 Ha intentado tomar la dirección de una función miembro sin calificar la función miembro con su nombre de clase y el operador de dirección.
 
-Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: conformidad de puntero a miembro mejorada. El código compilado antes de Visual C++ 2005 ahora generará el error C3867.
+Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: conformidad de puntero a miembro mejorada. El código compilado antes de Visual Studio 2005 generará el error C3867.
 
 ## <a name="example"></a>Ejemplo
 

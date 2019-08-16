@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: ff418fa332adffa1885ec9ca6d7626000e753609
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779406"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447364"
 ---
 # <a name="compiler-error-c2065"></a>Error del compilador C2065
 
@@ -222,7 +222,7 @@ int main() {
 
 ## <a name="example-ccli-attribute-parameters"></a>Ejemplo: C++ / c++ / parámetros de atributo de la CLI
 
-Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: comprobación de parámetros de atributos de Visual C++.
+Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: comprobación de parámetros de Visual C++ atributos.
 
 ```cpp
 // C2065_attributes.cpp

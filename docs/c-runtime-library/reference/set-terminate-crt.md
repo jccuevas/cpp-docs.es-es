@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356451"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ Devuelve un puntero a la función anterior registrada por **set_terminate** para
 
 ## <a name="remarks"></a>Comentarios
 
-El **set_terminate** función instalaciones *termFunction* como la función llamada por **finalizar**. **set_terminate** se usa con el control de excepciones de C++ y se puede llamar en cualquier momento en el programa antes de que se produce la excepción. **Finalizar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamar a **set_terminate** con el nombre de la función como su argumento. **Finalizar** llama a la última función especificada como argumento a **set_terminate**. Después de llevar a cabo cualquier tarea de limpieza, de deseada *termFunction* debe salir del programa. Si no existe (si se devuelve a su llamador), [anular](abort.md) se llama.
+El **set_terminate** función instalaciones *termFunction* como la función llamada por **finalizar**. **set_terminate** se usa con C++ control de excepciones y se puede llamar en cualquier momento en el programa antes de que se produce la excepción. **Finalizar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamar a **set_terminate** con el nombre de la función como su argumento. **Finalizar** llama a la última función especificada como argumento a **set_terminate**. Después de llevar a cabo cualquier tarea de limpieza, de deseada *termFunction* debe salir del programa. Si no existe (si se devuelve a su llamador), [anular](abort.md) se llama.
 
 En un entorno multiproceso, las funciones de finalización se mantienen por separado para cada subproceso. Cada subproceso nuevo debe instalar su propia función de finalización. Por lo tanto, cada subproceso se encarga de su propio control de finalización.
 

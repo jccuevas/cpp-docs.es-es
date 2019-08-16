@@ -9,11 +9,11 @@ helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
 ms.openlocfilehash: 25fc2be80ba0e5d8c7f76cee1f22eed4d1bb4fc7
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384873"
 ---
 # <a name="marshalcontext-class"></a>serializar_context (Clase)
 
@@ -35,14 +35,14 @@ El mismo `marshal_context` puede usarse para varias conversiones de datos. Volve
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|nombre|Descripción| 
+|Name|Descripción| 
 |---------|-----------| 
 |[marshal_context::marshal_context](#marshal-context)|Construye un `marshal_context` objeto va a usar para la conversión de datos entre los tipos de datos administrados y nativos.| 
 |[marshal_context::~marshal_context](#tilde-marshal-context)|Destruye un objeto `marshal_context`.| 
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|nombre|Descripción| 
+|Name|Descripción| 
 |---------|-----------| 
 |[marshal_context::marshal_as](#marshal-as)|Realiza el cálculo de referencias en un objeto de datos específicos para convertirla entre administrado y un tipo de datos nativos.| 
 
@@ -109,7 +109,7 @@ Esta función realiza el cálculo de referencias en un objeto de datos específi
 
 Si se intenta serializar un par de tipos de datos que no se admiten, `marshal_as` generará un error [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) en tiempo de compilación. Lea el mensaje proporcionado con el error para obtener más información. El error `C4996` se puede generar para algunas funciones, aparte de las que están en desuso. Dos de las condiciones que generan este error se intenta serializar un par de tipos de datos que no son compatibles e intentar usar `marshal_as` para una conversión que requiere un contexto.
 
-La biblioteca de serialización se compone de varios archivos de encabezado. Cualquier conversión requiere solo un archivo, pero puede incluir archivos adicionales si los necesita para otras conversiones. La tabla de `Marshaling Overview in C++` indica qué archivo de cálculo de referencias debe incluirse en cada conversión.
+La biblioteca de cálculo de referencias se compone de varios archivos de encabezado. Cualquier conversión requiere solo un archivo, pero puede incluir archivos adicionales si los necesita para otras conversiones. La tabla de `Marshaling Overview in C++` indica qué archivo de cálculo de referencias debe incluirse en cada conversión.
 
 ### <a name="example"></a>Ejemplo
 

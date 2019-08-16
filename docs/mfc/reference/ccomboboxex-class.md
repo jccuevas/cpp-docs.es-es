@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767774"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507180"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (clase)
 
@@ -57,56 +57,56 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Construye un objeto `CComboBoxEx`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CComboBoxEx::Create](#create)|Crea el cuadro combinado y lo adjunta a la `CComboBoxEx` objeto.|
-|[CComboBoxEx::CreateEx](#createex)|Crea un cuadro combinado con los estilos extendidos de Windows especificados y lo adjunta a un `ComboBoxEx` objeto.|
+|[CComboBoxEx::Create](#create)|Crea el cuadro combinado y lo adjunta al `CComboBoxEx` objeto.|
+|[CComboBoxEx::CreateEx](#createex)|Crea un cuadro combinado con los estilos extendidos de Windows especificados y lo adjunta `ComboBoxEx` a un objeto.|
 |[CComboBoxEx::DeleteItem](#deleteitem)|Quita un elemento de un `ComboBoxEx` control.|
 |[CComboBoxEx::GetComboBoxCtrl](#getcomboboxctrl)|Recupera un puntero al control de cuadro combinado secundario.|
-|[CComboBoxEx::GetEditCtrl](#geteditctrl)|Recupera el identificador de la parte del control de edición de un `ComboBoxEx` control.|
-|[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Recupera los estilos extendidos que están en uso para un `ComboBoxEx` control.|
-|[CComboBoxEx::GetImageList](#getimagelist)|Recupera un puntero a la lista de imágenes asignada a un `ComboBoxEx` control.|
-|[CComboBoxEx::GetItem](#getitem)|Recupera información de artículos un determinado `ComboBoxEx` elemento.|
-|[CComboBoxEx::HasEditChanged](#haseditchanged)|Determina si el usuario ha cambiado el contenido de la `ComboBoxEx` editar control escribiendo.|
+|[CComboBoxEx::GetEditCtrl](#geteditctrl)|Recupera el identificador de la parte del control de edición de `ComboBoxEx` un control.|
+|[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Recupera los estilos extendidos que se usan para un `ComboBoxEx` control.|
+|[CComboBoxEx::GetImageList](#getimagelist)|Recupera un puntero a la lista de imágenes asignada a `ComboBoxEx` un control.|
+|[CComboBoxEx::GetItem](#getitem)|Recupera información del elemento para un elemento `ComboBoxEx` determinado.|
+|[CComboBoxEx::HasEditChanged](#haseditchanged)|Determina si el usuario ha cambiado el contenido del control `ComboBoxEx` de edición escribiendo.|
 |[CComboBoxEx::InsertItem](#insertitem)|Inserta un nuevo elemento en un `ComboBoxEx` control.|
-|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos dentro de un `ComboBoxEx` control.|
-|[CComboBoxEx::SetImageList](#setimagelist)|Establece una lista de imágenes para un `ComboBoxEx` control.|
+|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos `ComboBoxEx` dentro de un control.|
+|[CComboBoxEx::SetImageList](#setimagelist)|Establece una lista de imágenes para `ComboBoxEx` un control.|
 |[CComboBoxEx::SetItem](#setitem)|Establece los atributos de un elemento en un `ComboBoxEx` control.|
-|[CComboBoxEx::SetWindowTheme](#setwindowtheme)|Establece el estilo visual de que el cuadro combinado extendido de control de cuadro.|
+|[CComboBoxEx::SetWindowTheme](#setwindowtheme)|Establece el estilo visual del control de cuadro combinado extendido.|
 
 ## <a name="remarks"></a>Comentarios
 
-Mediante el uso de `CComboBoxEx` para crear los controles de cuadro de cuadro combinado, ya no necesita implementar su propia imagen de código de dibujo. En su lugar, use `CComboBoxEx` a las imágenes de acceso de una lista de imágenes.
+Al usar `CComboBoxEx` para crear controles de cuadro combinado, ya no es necesario implementar su propio código de dibujo de imagen. En su lugar, `CComboBoxEx` use para tener acceso a las imágenes de una lista de imágenes.
 
-## <a name="image-list-support"></a>Compatibilidad de la lista de imágenes
+## <a name="image-list-support"></a>Compatibilidad con la lista de imágenes
 
-En un cuadro combinado estándar, el propietario del cuadro combinado es responsable de dibujar una imagen mediante la creación del cuadro combinado como un control dibujado por el propietario. Cuando usas `CComboBoxEx`, no es necesario establecer los estilos de dibujo CBS_OWNERDRAWFIXED y CBS_HASSTRINGS porque ya que están implícitas. En caso contrario, debe escribir código para realizar operaciones de dibujo. Un `CComboBoxEx` control es compatible con hasta tres imágenes por cada elemento: uno para un estado seleccionado, uno para un estado no seleccionado y otro para una imagen de superposición.
+En un cuadro combinado estándar, el propietario del cuadro combinado es responsable de dibujar una imagen creando el cuadro combinado como un control dibujado por el propietario. Al usar `CComboBoxEx`, no es necesario establecer los estilos de dibujo CBS_OWNERDRAWFIXED y CBS_HASSTRINGS porque están implícitos. De lo contrario, debe escribir código para realizar operaciones de dibujo. Un `CComboBoxEx` control admite hasta tres imágenes por elemento: una para un estado seleccionado, una para un estado no seleccionado y otra para una imagen superpuesta.
 
 ## <a name="styles"></a>Estilos
 
-`CComboBoxEx` es compatible con los estilos CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST y WS_CHILD. Se omiten todos los demás estilos que se pasa al crear la ventana por el control. Después de crea la ventana, puede proporcionar estilos de cuadro otro combinado mediante una llamada a la `CComboBoxEx` función miembro [SetExtendedStyle](#setextendedstyle). Con estos estilos, puede:
+`CComboBoxEx`admite los estilos CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST y WS_CHILD. El control omite todos los demás estilos que se pasan al crear la ventana. Una vez creada la ventana, puede proporcionar otros estilos de cuadro combinado llamando a la `CComboBoxEx` función miembro [SetExtendedStyle](#setextendedstyle). Con estos estilos, puede:
 
-- Conjunto de búsquedas de cadenas en la lista para distinguir mayúsculas de minúsculas.
+- Establezca búsquedas de cadena en la lista para distinguir entre mayúsculas y minúsculas.
 
-- Crear un control de cuadro combinado que usa la barra diagonal ('/'), barra diagonal inversa ('\\') y el período ('. ') caracteres como delimitadores de palabras. Esto permite a los usuarios saltar palabras, con el método abreviado de teclado CTRL + FLECHA.
+- Cree un control de cuadro combinado que use los caracteres de barra diagonal ('/'),\\barra diagonal inversa (' ') y punto ('. ') como delimitadores de palabras. Esto permite a los usuarios saltar de Word a Word con el método abreviado de teclado CTRL + flecha.
 
-- Establezca al cuadro combinado del control de cuadro para mostrar o no una imagen. Si no se muestra ninguna imagen, el cuadro combinado puede quitar la sangría del texto que dé cabida a una imagen.
+- Establezca el control de cuadro combinado para mostrar o no mostrar una imagen. Si no se muestra ninguna imagen, el cuadro combinado puede quitar la sangría de texto que contenga una imagen.
 
-- Crear un control de cuadro combinado estrecha, incluido el ajuste de tamaño, por lo que recorta el cuadro combinado más amplio que contiene.
+- Cree un control de cuadro combinado estrecho, incluido su tamaño, de modo que recorte el cuadro combinado más amplio que contiene.
 
-Estas marcas de estilo se describe más detalladamente en [usar CComboBoxEx](../../mfc/using-ccomboboxex.md).
+Estas marcas de estilo se describen con más detalle en el [uso de CComboBoxEx](../../mfc/using-ccomboboxex.md).
 
-## <a name="item-retention-and-callback-item-attributes"></a>Retención de los elementos y atributos del elemento de devolución de llamada
+## <a name="item-retention-and-callback-item-attributes"></a>Atributos de elementos de devolución de llamada y retención de elemento
 
-Información de elemento, como los índices para los elementos y las imágenes, los valores de sangría y cadenas de texto, se almacena en la estructura de Win32 [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema), tal y como se describe en el SDK de Windows. La estructura también contiene a miembros que corresponden a las marcas de devolución de llamada.
+La información del elemento, como los índices de elementos e imágenes, los valores de sangría y las cadenas de texto, se almacena en la estructura de Win32 [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw), tal y como se describe en el Windows SDK. La estructura también contiene los miembros que corresponden a las marcas de devolución de llamada.
 
-Para obtener información conceptual detallada, vea [usar CComboBoxEx](../../mfc/using-ccomboboxex.md).
+Para obtener una explicación detallada conceptual, vea [usar CComboBoxEx](../../mfc/using-ccomboboxex.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -126,7 +126,7 @@ Para obtener información conceptual detallada, vea [usar CComboBoxEx](../../mfc
 
 ##  <a name="ccomboboxex"></a>  CComboBoxEx::CComboBoxEx
 
-Llame a esta función miembro para crear un `CComboBoxEx` objeto.
+Llame a esta función miembro para crear `CComboBoxEx` un objeto.
 
 ```
 CComboBoxEx();
@@ -134,7 +134,7 @@ CComboBoxEx();
 
 ##  <a name="create"></a>  CComboBoxEx::Create
 
-Crea el cuadro combinado y lo adjunta a la `CComboBoxEx` objeto.
+Crea el cuadro combinado y lo adjunta al `CComboBoxEx` objeto.
 
 ```
 virtual BOOL Create(
@@ -147,32 +147,32 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *dwStyle*<br/>
-Especifica la combinación de los estilos de cuadro combinado que se aplica al cuadro combinado. Consulte **comentarios** a continuación para obtener más información sobre los estilos.
+Especifica la combinación de estilos de cuadro combinado aplicada al cuadro combinado. Vea la **sección Comentarios** a continuación para obtener más información sobre los estilos.
 
 *rect*<br/>
-Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que es la posición y tamaño del cuadro combinado.
+Referencia a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [Rect](/previous-versions/dd162897\(v=vs.85\)) , que es la posición y el tamaño del cuadro combinado.
 
 *pParentWnd*<br/>
-Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del cuadro combinado (normalmente un `CDialog`). No debe ser NULL.
+Un puntero a un objeto [CWnd](../../mfc/reference/cwnd-class.md) que es la ventana primaria del cuadro combinado (normalmente `CDialog`). No debe ser NULL.
 
 *nID*<br/>
-Especifica el identificador del control. del cuadro combinado
+Especifica el identificador de control del cuadro combinado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el objeto se creó correctamente; en caso contrario, es 0.
+Distinto de cero si el objeto se creó correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Crear un `CComboBoxEx` objeto en dos pasos:
+Cree un `CComboBoxEx` objeto en dos pasos:
 
-1. Llame a [CComboBoxEx](#ccomboboxex) para construir un `CComboBoxEx` objeto.
+1. Llame a [CComboBoxEx](#ccomboboxex) para construir `CComboBoxEx` un objeto.
 
-1. Llame a esta función miembro, que crea el cuadro combinado de Windows extendido y lo adjunta a la `CComboBoxEx` objeto.
+1. Llame a esta función miembro, que crea el cuadro combinado de Windows extendido y lo adjunta al `CComboBoxEx` objeto.
 
-Cuando se llama a `Create`, MFC inicializa los controles comunes.
+Cuando se llama `Create`a, MFC inicializa los controles comunes.
 
-Cuando se crea el cuadro combinado, puede especificar alguno o todos de los siguientes estilos de cuadro combinado:
+Al crear el cuadro combinado, puede especificar cualquiera de los siguientes estilos de cuadro combinado o todos ellos:
 
 - CBS_SIMPLE
 
@@ -184,13 +184,13 @@ Cuando se crea el cuadro combinado, puede especificar alguno o todos de los sigu
 
 - WS_CHILD
 
-Se omiten todos los demás estilos que se pasa al crear la ventana. El `ComboBoxEx` control también es compatible con los estilos extendidos que proporcionan características adicionales. Estos estilos se describen en [ComboBoxEx controlar estilos extendidos](/windows/desktop/Controls/comboboxex-control-extended-styles), en el SDK de Windows. Establecer estos estilos mediante una llamada a [SetExtendedStyle](#setextendedstyle).
+Se omiten todos los demás estilos que se pasan al crear la ventana. El `ComboBoxEx` control también admite estilos extendidos que proporcionan características adicionales. Estos estilos se describen en [ComboBoxEx control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles), en el Windows SDK. Establezca estos estilos mediante una llamada a [SetExtendedStyle](#setextendedstyle).
 
-Si desea usar los estilos extendidos de windows con el control, llame a [CreateEx](#createex) en lugar de `Create`.
+Si desea utilizar estilos extendidos de Windows con el control, llame a [CreateEx](#createex) en lugar `Create`de a.
 
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx
 
-Llame a esta función para crear un control de cuadro combinado extendido (una ventana secundaria) y asócielo con el `CComboBoxEx` objeto.
+Llame a esta función para crear un control de cuadro combinado extendido (una ventana secundaria) y asociarlo `CComboBoxEx` al objeto.
 
 ```
 virtual BOOL CreateEx(
@@ -204,19 +204,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parámetros
 
 *dwExStyle*<br/>
-Especifica el estilo extendido del control que se está creando. Para obtener una lista de los estilos extendidos de Windows, consulte el *dwExStyle* parámetro [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) en el SDK de Windows.
+Especifica el estilo extendido del control que se va a crear. Para obtener una lista de los estilos extendidos de Windows, consulte el parámetro *dwExStyle* para [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) en el Windows SDK.
 
 *dwStyle*<br/>
-Estilo del control de cuadro combinado. Consulte [crear](#create) para obtener una lista de estilos.
+Estilo del control de cuadro combinado. Vea [crear](#create) para obtener una lista de estilos.
 
 *rect*<br/>
-Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Referencia a una estructura [Rect](/previous-versions/dd162897\(v=vs.85\)) que describe el tamaño y la posición de la ventana que se va a crear, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
-Un puntero a la ventana que es primario del control.
+Puntero a la ventana que es el elemento primario del control.
 
 *nID*<br/>
-Identificador de ventana secundaria. del control
+IDENTIFICADOR de la ventana de elemento secundario del control.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -224,9 +224,9 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Use `CreateEx` en lugar de `Create` para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.
+Use `CreateEx` en lugar de `Create` para aplicar los estilos extendidos de Windows, especificados por el **WS_EX_** de estilo extendido de Windows.
 
-`CreateEx` crea el control con los estilos extendidos de Windows especificados por *dwExStyle*. Debe establecer los estilos extendidos específicos para un control de cuadro combinado extendido mediante [SetExtendedStyle](#setextendedstyle). Por ejemplo, usar `CreateEx` para establecer estos estilos como WS_EX_CONTEXTHELP, pero usa `SetExtendedStyle` para establecer estos estilos como CBES_EX_CASESENSITIVE. Para obtener más información, vea los estilos que se describe en el tema [estilos extendidos ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) en el SDK de Windows.
+`CreateEx`crea el control con los estilos extendidos de Windows especificados por *dwExStyle*. Debe establecer los estilos extendidos específicos de un control de cuadro combinado extendido mediante [SetExtendedStyle](#setextendedstyle). Por ejemplo, use `CreateEx` para establecer tales estilos como WS_EX_CONTEXTHELP, pero use `SetExtendedStyle` para establecer tales estilos como CBES_EX_CASESENSITIVE. Para obtener más información, vea los estilos descritos en el tema [ComboBoxEx control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) en el Windows SDK.
 
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem
 
@@ -243,15 +243,15 @@ int DeleteItem(int iIndex);
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de elementos que quedan en el control. Si *iÍndice* es válido, la función devuelve CB_ERR.
+Número de elementos que quedan en el control. Si *iIndex* no es válido, la función devuelve CB_ERR.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro implementa la funcionalidad del mensaje [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), tal y como se describe en el SDK de Windows. Cuando se llama a DeleteItem, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) se enviará el mensaje de notificación CBEN_DELETEITEM a la ventana primaria.
+Esta función miembro implementa la funcionalidad del mensaje [CBEM_DELETEITEM](/windows/win32/Controls/cbem-deleteitem), tal y como se describe en el Windows SDK. Cuando se llama a DeleteItem, se enviará un mensaje [WM_NOTIFY](/windows/win32/controls/wm-notify) con la notificación CBEN_DELETEITEM a la ventana primaria.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
-Llame a esta función miembro para obtener un puntero a un control de cuadro combinado en un `CComboBoxEx` objeto.
+Llame a esta función miembro para obtener un puntero a un control de cuadro combinado `CComboBoxEx` dentro de un objeto.
 
 ```
 CComboBox* GetComboBoxCtrl();
@@ -263,9 +263,9 @@ Puntero a un objeto `CComboBox` .
 
 ### <a name="remarks"></a>Comentarios
 
-El `CComboBoxEx` control consta de una ventana primaria, que encapsula un `CComboBox`.
+El `CComboBoxEx` control está compuesto de una ventana primaria, que encapsula un `CComboBox`.
 
-La `CComboBox` objeto al que señala el valor devuelto es un objeto temporal y se destruyen durante la próxima vez que el procesamiento inactivo.
+El `CComboBox` objeto al que apunta el valor devuelto es un objeto temporal y se destruye durante el siguiente tiempo de procesamiento inactivo.
 
 ##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl
 
@@ -277,17 +277,17 @@ CEdit* GetEditCtrl();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un [CEdit](../../mfc/reference/cedit-class.md) objeto.
+Un puntero a un objeto [CEDIT](../../mfc/reference/cedit-class.md) .
 
 ### <a name="remarks"></a>Comentarios
 
-Un `CComboBoxEx` control utiliza un cuadro de edición cuando se crea con el estilo CBS_DROPDOWN.
+Un `CComboBoxEx` control usa un cuadro de edición cuando se crea con el estilo CBS_DROPDOWN.
 
-La `CEdit` objeto al que señala el valor devuelto es un objeto temporal y se destruyen durante la próxima vez que el procesamiento inactivo.
+El `CEdit` objeto al que apunta el valor devuelto es un objeto temporal y se destruye durante el siguiente tiempo de procesamiento inactivo.
 
 ##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle
 
-Llame a esta función miembro para obtener los estilos extendidos utilizados para un `CComboBoxEx` control.
+Llame a esta función miembro para obtener los estilos extendidos usados `CComboBoxEx` para un control.
 
 ```
 DWORD GetExtendedStyle() const;
@@ -295,15 +295,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El valor DWORD que contiene los estilos extendidos que se usan para el control de cuadro combinado.
+Valor DWORD que contiene los estilos extendidos que se usan para el control de cuadro combinado.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [estilos extendidos ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) en el SDK de Windows para obtener más información acerca de estos estilos.
+Vea [ComboBoxEx control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) en el Windows SDK para obtener más información acerca de estos estilos.
 
 ##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList
 
-Llame a esta función miembro para obtener un puntero a la lista de imágenes usa un `CComboBoxEx` control.
+Llame a esta función miembro para obtener un puntero a la lista de imágenes utilizada `CComboBoxEx` por un control.
 
 ```
 CImageList* GetImageList() const;
@@ -311,15 +311,15 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto. Si se produce un error, esta función miembro devuelve NULL.
+Un puntero a un objeto [CImageList](../../mfc/reference/cimagelist-class.md) . Si se produce un error, esta función miembro devuelve NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-La `CImageList` objeto al que señala el valor devuelto es un objeto temporal y se destruyen durante la próxima vez que el procesamiento inactivo.
+El `CImageList` objeto al que apunta el valor devuelto es un objeto temporal y se destruye durante el siguiente tiempo de procesamiento inactivo.
 
 ##  <a name="getitem"></a>  CComboBoxEx::GetItem
 
-Recupera información de artículos un determinado `ComboBoxEx` elemento.
+Recupera información del elemento para un elemento `ComboBoxEx` determinado.
 
 ```
 BOOL GetItem(COMBOBOXEXITEM* pCBItem);
@@ -328,19 +328,19 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="parameters"></a>Parámetros
 
 *pCBItem*<br/>
-Un puntero a un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) estructura que recibirá la información del elemento.
+Puntero a una estructura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) que recibirá la información del elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la operación se realizó correctamente; en caso contrario, es 0.
+Distinto de cero si la operación se realizó correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro implementa la funcionalidad del mensaje [CBEM_GETITEM](/windows/desktop/Controls/cbem-getitem), tal y como se describe en el SDK de Windows.
+Esta función miembro implementa la funcionalidad del mensaje [CBEM_GETITEM](/windows/win32/Controls/cbem-getitem), tal y como se describe en el Windows SDK.
 
 ##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged
 
-Determina si el usuario ha cambiado el contenido de la `ComboBoxEx` editar control escribiendo.
+Determina si el usuario ha cambiado el contenido del control `ComboBoxEx` de edición escribiendo.
 
 ```
 BOOL HasEditChanged();
@@ -348,11 +348,11 @@ BOOL HasEditChanged();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el usuario ha escrito en el cuadro de edición del control; en caso contrario, es 0.
+Distinto de cero si el usuario ha escrito en el cuadro de edición del control; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro implementa la funcionalidad del mensaje [CBEM_HASEDITCHANGED](/windows/desktop/Controls/cbem-haseditchanged), tal y como se describe en el SDK de Windows.
+Esta función miembro implementa la funcionalidad del mensaje [CBEM_HASEDITCHANGED](/windows/win32/Controls/cbem-haseditchanged), tal y como se describe en el Windows SDK.
 
 ##  <a name="insertitem"></a>  CComboBoxEx::InsertItem
 
@@ -365,19 +365,19 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="parameters"></a>Parámetros
 
 *pCBItem*<br/>
-Un puntero a un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) estructura que recibirá la información del elemento. Esta estructura contiene valores de indicador de devolución de llamada para el elemento.
+Puntero a una estructura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) que recibirá la información del elemento. Esta estructura contiene valores de marca de devolución de llamada para el elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El índice donde se insertó el nuevo elemento si es correcto; en caso contrario,-1.
+Índice en el que se insertó el nuevo elemento si se realiza correctamente; de lo contrario,-1.
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se llama a `InsertItem`, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) de mensajes con [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) se enviará una notificación a la ventana primaria.
+Cuando se llama `InsertItem`a, se enviará un mensaje [WM_NOTIFY](/windows/win32/controls/wm-notify) con la notificación [CBEN_INSERTITEM](/windows/win32/Controls/cben-insertitem) a la ventana primaria.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 
-Llame a esta función miembro para establecer los estilos extendidos utilizados para un cuadro combinado extendido el control.
+Llame a esta función miembro para establecer los estilos extendidos usados para un control extendido de cuadro combinado.
 
 ```
 DWORD SetExtendedStyle(
@@ -388,24 +388,24 @@ DWORD SetExtendedStyle(
 ### <a name="parameters"></a>Parámetros
 
 *dwExMask*<br/>
-Un valor DWORD que indica qué estilos en *dwExStyles* son se vea afectado. Solo los estilos extendidos en *dwExMask* se cambiará. Todos los demás estilos se conservará tal cual. Si este parámetro es cero, entonces todos los estilos en *dwExStyles* se verán afectados.
+Un valor DWORD que indica qué estilos de *dwExStyles* se van a ver afectados. Solo se cambiarán los estilos extendidos de *dwExMask* . El resto de los estilos se conservarán tal y como están. Si este parámetro es cero, se verán afectados todos los estilos de *dwExStyles* .
 
 *dwExStyles*<br/>
-Un valor DWORD que contiene el control de cuadro combinado extendido estilos que se va a establecer para el control.
+Valor DWORD que contiene los estilos extendidos del control de cuadro combinado que se van a establecer para el control.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor DWORD que contiene los estilos extendidos utilizados anteriormente para el control.
+Valor DWORD que contiene los estilos extendidos utilizados previamente para el control.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [estilos extendidos ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) en el SDK de Windows para obtener más información acerca de estos estilos.
+Vea [ComboBoxEx control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) en el Windows SDK para obtener más información acerca de estos estilos.
 
-Para crear un cuadro combinado extendido el control con los estilos extendidos de windows, use [CreateEx](#createex).
+Para crear un control extendido de cuadro combinado con estilos extendidos de Windows, use [CreateEx](#createex).
 
 ##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList
 
-Establece una lista de imágenes para un `ComboBoxEx` control.
+Establece una lista de imágenes para `ComboBoxEx` un control.
 
 ```
 CImageList* SetImageList(CImageList* pImageList);
@@ -414,17 +414,17 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="parameters"></a>Parámetros
 
 *pImageList*<br/>
-Un puntero a un `CImageList` objeto que contiene las imágenes que puede usar con el `CComboBoxEx` control.
+Un puntero a un `CImageList` objeto que contiene las imágenes que se van `CComboBoxEx` a utilizar con el control.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto que contiene las imágenes utilizadas previamente por el `CComboBoxEx` control. Es NULL si anteriormente no se estableció ninguna lista de imágenes.
+Un puntero a un objeto [CImageList](../../mfc/reference/cimagelist-class.md) que contiene las imágenes utilizadas previamente por `CComboBoxEx` el control. ES NULL si no se ha establecido previamente ninguna lista de imágenes.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro implementa la funcionalidad del mensaje [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), tal y como se describe en el SDK de Windows. Si cambia el alto del control de edición de forma predeterminada, llame a la función de Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) para cambiar el tamaño de su control después de llamar a `SetImageList`, o no se mostrarán correctamente.
+Esta función miembro implementa la funcionalidad del mensaje [CBEM_SETIMAGELIST](/windows/win32/Controls/cbem-setimagelist), tal y como se describe en el Windows SDK. Si cambia el alto del control de edición predeterminado, llame a la función de Win32 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) para cambiar el tamaño del control después `SetImageList`de llamar a, o no se mostrará correctamente.
 
-La `CImageList` objeto al que señala el valor devuelto es un objeto temporal y se destruyen durante la próxima vez que el procesamiento inactivo.
+El `CImageList` objeto al que apunta el valor devuelto es un objeto temporal y se destruye durante el siguiente tiempo de procesamiento inactivo.
 
 ##  <a name="setitem"></a>  CComboBoxEx::SetItem
 
@@ -437,19 +437,19 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="parameters"></a>Parámetros
 
 *pCBItem*<br/>
-Un puntero a un [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) estructura que recibirá la información del elemento.
+Puntero a una estructura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) que recibirá la información del elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la operación se realizó correctamente; en caso contrario, es 0.
+Distinto de cero si la operación se realizó correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro implementa la funcionalidad del mensaje [CBEM_SETITEM](/windows/desktop/Controls/cbem-setitem), tal y como se describe en el SDK de Windows.
+Esta función miembro implementa la funcionalidad del mensaje [CBEM_SETITEM](/windows/win32/Controls/cbem-setitem), tal y como se describe en el Windows SDK.
 
 ##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme
 
-Establece el estilo visual de que el cuadro combinado extendido de control de cuadro.
+Establece el estilo visual del control de cuadro combinado extendido.
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -458,7 +458,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="parameters"></a>Parámetros
 
 *pszSubAppName*<br/>
-Un puntero a una cadena Unicode que contiene el estilo visual del cuadro combinado extendido para establecer.
+Puntero a una cadena Unicode que contiene el estilo visual del cuadro combinado extendido que se va a establecer.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -466,7 +466,7 @@ No se utiliza el valor devuelto.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro emula la funcionalidad de la [CBEM_SETWINDOWTHEME](/windows/desktop/Controls/cbem-setwindowtheme) del mensaje, como se describe en el SDK de Windows.
+Esta función miembro emula la funcionalidad del mensaje [CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme) , tal y como se describe en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

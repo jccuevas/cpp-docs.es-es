@@ -1,20 +1,18 @@
 ---
 title: 'TN024: Los recursos y los mensajes definidos por MFC'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.messages
 helpviewer_keywords:
 - resources [MFC]
 - Windows messages [MFC], MFC-defined
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 300819878bd7422dc8f3970493e303aa52346a58
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278137"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611424"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Los recursos y los mensajes definidos por MFC
 
@@ -172,7 +170,7 @@ La barra de herramientas predeterminado proporcionado por el Asistente para apli
 
 Un formato de los recursos privados de MFC se usa para almacenar información de inicialización del cuadro de diálogo adicional. Esto incluye las cadenas iniciales almacenadas en un cuadro combinado. El formato de este recurso no está diseñado para editarse manualmente, pero se controla mediante Visual C++.
 
-Visual C++ y este recurso RT_DLGINIT no tienen que usar las características relacionadas de MFC, puesto que no hay alternativa al uso de la información en el recurso de la API. Uso de Visual C++ facilita mucho más fáciles de escribir, mantener y trasladar la aplicación a largo plazo.
+Visual C++ y este recurso RT_DLGINIT no son necesarios para usar las características relacionadas de MFC, puesto que no hay alternativa al uso de la información en el recurso de la API. Uso de Visual C++ facilita mucho más fáciles de escribir, mantener y trasladar la aplicación a largo plazo.
 
 La estructura básica de un recurso RT_DLGINIT es como sigue:
 

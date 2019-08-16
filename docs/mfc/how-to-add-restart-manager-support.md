@@ -6,13 +6,13 @@ helpviewer_keywords:
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
 ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389533"
 ---
-# <a name="how-to-add-restart-manager-support"></a>Filtrar Agregar compatibilidad con el Administrador de reinicio
+# <a name="how-to-add-restart-manager-support"></a>Procedimiento Agregar compatibilidad con el Administrador de reinicio
 
 El Administrador de reinicio es una característica agregada a Visual Studio para Windows Vista o sistemas operativos posteriores. El Administrador de reinicio agrega compatibilidad para la aplicación en caso de cierre o reinicio de forma inesperada. El comportamiento del Administrador de reinicio depende del tipo de aplicación. Si la aplicación es un editor de documentos, el Administrador de reinicio permite que la aplicación guarde automáticamente el estado y el contenido de cualquier documento abierto y reinicia la aplicación después de que se cierre de forma inesperada. Si la aplicación no es un editor de documentos, el Administrador de reinicio reinicia la aplicación, pero no puede guardar el estado de la aplicación de forma predeterminada.
 

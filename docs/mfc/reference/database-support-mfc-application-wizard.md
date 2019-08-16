@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259963"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525455"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Compatibilidad con bases de datos, Asistente para aplicaciones MFC
 
@@ -46,15 +46,15 @@ Esta página proporciona opciones que le permiten especificar el nivel de base d
 
 - **Origen de datos**
 
+   > [!NOTE]
+   > El Asistente para consumidores OLE DB ATL y el Asistente para consumidores ODBC de MFC no están disponibles en Visual Studio de 2019 y posterior. Todavía puede agregar la funcionalidad de forma manual. Para obtener más información, consulte [crear un consumidor sin utilizar un asistente](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
    Haga clic en el **origen de datos** botón para configurar un origen de datos mediante el controlador especificado o el proveedor y la base de datos. Si seleccionó OLE DB en el **tipo cliente** muestra este botón de opción, el **propiedades de vínculo de datos** cuadro de diálogo. Si seleccionó ODBC en el **tipo cliente** opción que proporciona este botón el **Seleccionar origen de datos** cuadro de diálogo. Esta opción está disponible solo si elige incluir una vista de base de datos en la aplicación.
 
    |Opción|Descripción|
    |------------|-----------------|
    |**Propiedades de vínculo de datos** (OLE DB)|Establece el origen de datos especificado mediante el proveedor OLE DB especificado. Debe especificar el proveedor OLE DB, la ubicación de los datos, el origen de datos, Id. de inicio de sesión y (opcionalmente) una contraseña. Para obtener más información sobre este cuadro de diálogo, vea **origen de datos** en [el Asistente para consumidores OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).|
    |**Seleccionar origen de datos** (ODBC)|Establece el origen de datos especificado mediante el controlador ODBC especificado. Debe seleccionar un nombre de origen de datos para elegir una tabla del origen de datos. El Asistente enlaza a todas las columnas de la tabla a las variables de miembro de un `CRecordset`-clase derivada. Para obtener más información sobre este cuadro de diálogo, vea **origen de datos** en [Asistente para consumidores ODBC de MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).|
-
-   > [!NOTE]
-   > En versiones anteriores, MAYÚS y haciendo clic en el **origen de datos** botón abre un cuadro de diálogo Abrir archivo para que pueda seleccionar un archivo de Data Link (.udl). Ya no se admite esta funcionalidad.
 
 - **Generar clase con atributos de la base de datos**
 

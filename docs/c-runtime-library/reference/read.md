@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264795"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376304"
 ---
 # <a name="read"></a>_read
 
@@ -56,23 +56,23 @@ Descriptor de archivo que hace referencia al archivo abierto.
 Ubicación de almacenamiento de los datos.
 
 *buffer_size*<br/>
-Número máximo de bytes que se leen.
+Número máximo de bytes que se van a leer.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_read** devuelve el número de bytes leídos, que puede ser menor que *buffer_size* si hay menos de *buffer_size* bytes restante en el archivo, o si el archivo se abrió en modo de texto. En el modo de texto, cada línea de retorno de carro fuente par `\r\n` se reemplaza por un carácter de avance de línea `\n`. Solo se cuenta el carácter de avance de línea en el valor devuelto. El reemplazo no afecta al puntero de archivo.
+_ **Read** devuelve el número de bytes leídos, que puede ser menor que *buffer_size* si quedan menos de *buffer_size* bytes en el archivo, o si el archivo se abrió en modo de texto. En el modo de texto, cada par `\r\n` de retorno de carro y avance de línea se reemplaza por un carácter `\n`de salto de línea único. Solo se cuenta el carácter de avance de línea en el valor devuelto. El reemplazo no afecta al puntero de archivo.
 
-Si la función intenta leer al final del archivo, devuelve 0. Si *fd* es no válido, el archivo no está abierto para lectura, o el archivo está bloqueado, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EBADF**.
+Si la función intenta leer al final del archivo, devuelve 0. Si *FD* no es válido, el archivo no está abierto para lectura o el archivo está bloqueado, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y establece **errno** en **EBADF**.
 
-Si *búfer* es **NULL**, o si *buffer_size* > **INT_MAX**, se invoca el controlador de parámetros no válidos. Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EINVAL**.
+Si *buffer* es **null**, o si *buffer_size* > **INT_MAX**, se invoca el controlador de parámetros no válidos. Si la ejecución puede continuar, la función devuelve-1 y **errno** se establece en **EINVAL**.
 
 Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_read** función lee un máximo de *buffer_size* bytes en *búfer* desde el archivo asociado *fd*. La operación de lectura se inicia en la posición actual del puntero de archivo asociado al archivo en cuestión. Después de la operación de lectura, el puntero de archivo señala al siguiente carácter no leído.
+La función _ **Read** Lee un máximo de *buffer_size* bytes en el *búfer* del archivo asociado a *FD*. La operación de lectura se inicia en la posición actual del puntero de archivo asociado al archivo en cuestión. Después de la operación de lectura, el puntero de archivo señala al siguiente carácter no leído.
 
-Si el archivo se abrió en modo de texto, la lectura finaliza cuando **_read** encuentra un carácter CTRL+Z, que se trata como un indicador de fin de archivo. Use [_lseek](lseek-lseeki64.md) para borrar el indicador de fin de archivo.
+Si el archivo se abrió en modo de texto, la lectura finaliza cuando _ **Read** encuentra un carácter Ctrl + Z, que se trata como un indicador de fin de archivo. Use [_lseek](lseek-lseeki64.md) para borrar el indicador de fin de archivo.
 
 ## <a name="requirements"></a>Requisitos
 

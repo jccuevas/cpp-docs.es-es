@@ -1,6 +1,6 @@
 ---
-title: 'Errores graves del compilador: de C999 a C1999'
-ms.date: 11/17/2017
+title: Errores irrecuperables del compilador de C999 a C1999
+ms.date: 04/21/2019
 f1_keywords:
 - C1034
 - C1036
@@ -52,16 +52,16 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857388"
 ---
-# <a name="compiler-fatal-errors-c999-through-c1999"></a>Errores graves del compilador: de C999 a C1999
+# <a name="compiler-fatal-errors-c999-through-c1999"></a>Errores irrecuperables del compilador de C999 a C1999
 
-Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el compilador.
+Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el Microsoft C /C++ compilador.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -214,3 +214,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error irrecuperable C1903](fatal-error-c1903.md)|no se puede recuperar de errores anteriores; se detiene la compilación|
 |[Error irrecuperable C1904](fatal-error-c1904.md)|interacción con el proveedor incorrecta: '*file*'|
 |[Error irrecuperable C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|Front-end y back-end no compatibles (el destino debe ser el mismo procesador).|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md)

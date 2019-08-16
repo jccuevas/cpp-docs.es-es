@@ -1,17 +1,15 @@
 ---
 title: Mapas de conexiones
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a36c112de8c760f91afd5cf544b355f7cb8e1bed
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271156"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612275"
 ---
 # <a name="connection-maps"></a>Mapas de conexiones
 

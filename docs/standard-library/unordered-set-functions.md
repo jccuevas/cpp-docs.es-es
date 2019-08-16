@@ -5,20 +5,16 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522615"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243434"
 ---
 # <a name="ltunorderedsetgt-functions"></a>Funciones de &lt;unordered_set&gt;
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a> swap (unordered_set)
 
 Intercambia el contenido de dos contenedores.
 
@@ -32,22 +28,22 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*<br/>
+*Clave*\
 El tipo de clave.
 
-*hash*<br/>
+*hash*\
 El tipo de objeto de la función hash.
 
-*Pred*<br/>
+*Pred*\
 El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El primer contenedor que se va a cambiar.
 
-*right*<br/>
+*Correcto*\
 El segundo contenedor que se va a cambiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -102,18 +98,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
 
 Intercambia el contenido de dos contenedores.
 
 ```
-
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,22 +116,22 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Key*<br/>
+*Clave*\
 El tipo de clave.
 
-*hash*<br/>
+*hash*\
 El tipo de objeto de la función hash.
 
-*Pred*<br/>
+*Pred*\
 El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*Izquierda*\
 El primer contenedor que se va a cambiar.
 
-*right*<br/>
+*Correcto*\
 El segundo contenedor que se va a cambiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -194,12 +188,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Vea también
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

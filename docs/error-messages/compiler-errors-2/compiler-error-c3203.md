@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: 65b7e1d8f03b5e59bd21091531bc9d21472e4ae4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535192"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447799"
 ---
 # <a name="compiler-error-c3203"></a>Error del compilador C3203
 
@@ -19,7 +19,7 @@ ms.locfileid: "50535192"
 
 Se pasó un argumento no válido a una plantilla de clase o genérico. La plantilla de clase o el genérico esperan un tipo como parámetro.
 
-Este error puede generarse como resultado de una operación de ajuste del compilador efectuada para Visual C++ 2005: una plantilla de clase no especializada no puede usarse como argumento de plantilla en una lista de clases base. Para evitar el error C3203, agregue explícitamente los parámetros de tipo de plantilla al nombre de clase de plantilla cuando lo use como parámetro de plantilla en una lista de clases base.
+Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: una plantilla de clase no especializada no puede usarse como un argumento de plantilla en una lista de clases base. Para evitar el error C3203, agregue explícitamente los parámetros de tipo de plantilla al nombre de clase de plantilla cuando lo use como parámetro de plantilla en una lista de clases base.
 
 ```
 // C3203.cpp

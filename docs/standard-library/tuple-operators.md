@@ -9,21 +9,16 @@ f1_keywords:
 - tuple/std::operator<=
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677044"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241660"
 ---
 # <a name="lttuplegt-operators"></a>Operadores de &lt;tuple&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> operador! =
 
 Compara objetos `tuple` para determinar si no son iguales.
 
@@ -36,7 +31,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+*TN*\
 Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
@@ -101,7 +96,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+*TN*\
 Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
@@ -153,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operador&lt;=
 
 Compara objetos `tuple` para detectar valores inferiores o iguales.
 
@@ -166,7 +161,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+*TN*\
 Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
@@ -218,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operador ==
 
 Compara objetos `tuple` para determinar si son iguales.
 
@@ -231,7 +226,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+*TN*\
 Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
@@ -296,7 +291,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+*TN*\
 Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
@@ -348,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operador&gt;=
 
 Compara objetos `tuple` para determinar si son mayores o iguales.
 
@@ -361,7 +356,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*<br/>
+*TN*\
 Tipo del enésimo elemento de la tupla.
 
 ### <a name="remarks"></a>Comentarios
@@ -412,7 +407,3 @@ int main() {
 true
 false
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<tuple>](../standard-library/tuple.md)<br/>

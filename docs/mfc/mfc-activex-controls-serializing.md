@@ -16,11 +16,11 @@ helpviewer_keywords:
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
 ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324745"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controles ActiveX MFC: Serializar
 
@@ -52,7 +52,7 @@ Si desea que sea una propiedad persistente, modificar `DoPropExchange` mediante 
 
 En la tabla siguiente se enumera las funciones de intercambio de propiedad posibles que puede usar para serializar las propiedades del control:
 
-|Funciones de intercambio de propiedad|Propósito|
+|Funciones de intercambio de propiedad|Finalidad|
 |---------------------------------|-------------|
 |**PX_Blob( )**|Serializa un tipo de propiedad de datos de objetos binarios grandes (BLOB).|
 |**PX_Bool( )**|Serializa un tipo de propiedad booleana.|

@@ -3,11 +3,11 @@ title: C. Gramática de OpenMP C y C++
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
 ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362951"
 ---
 # <a name="c-openmp-c-and-c-grammar"></a>C. Gramática de OpenMP C y C++
 
@@ -106,7 +106,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 *unique-for-clause*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `ordered`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *schedule-kind*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *tipo de programación* `,` *expresión*    `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *tipo de programación* `,` *expresión*   `)`
 
 *schedule-kind*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `static`<br/>

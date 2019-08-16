@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_null_pointer
 ms.assetid: f3b3601b-f162-4803-a6e9-dabf5c3876cc
-ms.openlocfilehash: 10979e790cb1f3e1ae3eace4f88a0328cb9a7f01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b306753146a51bde842b55e4f36d3c1afa82591d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480397"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455843"
 ---
 # <a name="isnullpointer-class"></a>Clase is_null_pointer
 
@@ -26,12 +26,12 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es `std::nullptr_t`, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el  tipo T `std::nullptr_t`es; en caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Una instancia del predicado de tipo contiene true si el tipo *T* es `std::nullpt
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

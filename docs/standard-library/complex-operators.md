@@ -15,27 +15,20 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 8641e2f8bcc80cd2ba9b6b68e5574a476f60312e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a8f8b623ad53b84b8e614a1831d1a060df890931
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525371"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244707"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; (Operadores)
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|
-|[operator/](#op_div)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> operador! =
 
 Prueba la igualdad entre dos números complejos, uno de los cuales o ambos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.
 
 ```
-
 template <class Type>
 bool operator!=(
     const complex<Type>& left,
@@ -54,11 +47,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
-Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
+*Izquierda*\
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.
 
-*right*<br/>
-Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
+*Correcto*\
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -194,10 +187,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la \* operación.
 
-*right*<br/>
+*Correcto*\
 El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a multiplicar mediante la \* operación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -268,7 +261,7 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a> operator +
 
 Suma dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.
 
@@ -295,10 +288,10 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.
 
-*right*<br/>
+*Correcto*\
 El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a agregar mediante la operación +.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -409,7 +402,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a> operator-
 
 Resta dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.
 
@@ -435,10 +428,10 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 El primero de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.
 
-*right*<br/>
+*Correcto*\
 El segundo de dos números complejos o un número que es del tipo de parámetro para un número complejo que se va a restar mediante la operación -.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -551,7 +544,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a>  operator/
+## <a name="op_div"></a> operador /
 
 Divide dos números complejos, donde uno de ellos o los dos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.
 
@@ -574,10 +567,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*Izquierda*\
 Un número complejo o un número que es del tipo de parámetro para un número complejo que es el numerador que se dividirá por el denominador con la operación /.
 
-*right*<br/>
+*Correcto*\
 Un número complejo o un número que es del tipo de parámetro para un número complejo que es el denominador que se usará para dividir el numerador con la operación /.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -671,7 +664,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operador&lt;&lt;
 
 Inserta un número complejo especificado en el flujo de salida.
 
@@ -684,10 +677,10 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ostr*<br/>
+*Ostr*\
 El flujo de salida en que se introduce el número complejo.
 
-*right*<br/>
+*Correcto*\
 El número complejo que se introduce en el flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -733,7 +726,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operador ==
 
 Prueba la igualdad entre dos números complejos, uno de los cuales o ambos pueden pertenecer al subconjunto del tipo para las partes reales e imaginarias.
 
@@ -757,11 +750,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
-Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
+*Izquierda*\
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.
 
-*right*<br/>
-Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad. 
+*Correcto*\
+Un número complejo o un objeto de su tipo de parámetro para el que se va a probar la desigualdad.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -873,7 +866,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="op_gt_gt"></a> Operador&gt;&gt;
 
 Extrae un valor complejo del flujo de salida.
 
@@ -887,10 +880,10 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parámetros
 
-*ISTR*<br/>
+*ISTR*\
 El flujo de entrada del que se extrae el número complejo.
 
-*right*<br/>
+*Correcto*\
 El número complejo que se extrae del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -932,7 +925,3 @@ int main( )
 Input a complex number ( try: 2.0 ): 2.0
 2.0
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<complex>](../standard-library/complex.md)<br/>

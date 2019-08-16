@@ -33,14 +33,14 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fab53d70df1c5361bc56bc0df16d0d2171f07a94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483556"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499912"
 ---
-# <a name="makepath-wmakepath"></a>_makepath, _wmakepath
+# <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
 Cree un nombre de ruta de acceso desde componentes. Hay disponibles versiones más seguras de estas funciones; vea [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
@@ -68,23 +68,23 @@ void _wmakepath(
 *path*<br/>
 Búfer de la ruta de acceso completa.
 
-*Unidad*<br/>
-Contiene una letra (A, B, etc.) correspondiente a la unidad deseada y un signo de dos puntos final opcional. **_makepath** inserta los dos puntos automáticamente en la ruta de acceso compuesta si está presente. Si *unidad* es **NULL** o apunta a una cadena vacía, letra de unidad no aparece en la composición *ruta* cadena.
+*drive*<br/>
+Contiene una letra (A, B, etc.) correspondiente a la unidad deseada y un signo de dos puntos final opcional. **_makepath** inserta los dos puntos automáticamente en la ruta de acceso compuesta si falta. Si la *unidad* es **null** o apunta a una cadena vacía, no aparece ninguna letra de unidad en la cadena de *ruta de acceso* compuesta.
 
 *dir*<br/>
-Contiene la ruta de acceso de los directorios, sin incluir el designador de unidad ni el nombre de archivo real. La barra diagonal final es opcional y una barra diagonal (/) o una barra diagonal inversa (\\) o ambos se pueden utilizar en una sola *dir* argumento. Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **NULL** o apunta a una cadena vacía, no hay ruta de acceso de directorio se insertará en la composición *ruta* cadena.
+Contiene la ruta de acceso de los directorios, sin incluir el designador de unidad ni el nombre de archivo real. La barra diagonal final es opcional y se puede usar una barra diagonal (/) o una barra diagonal\\inversa (), o ambas, en un solo argumento *dir* . Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **null** o apunta a una cadena vacía, no se insertará ninguna ruta de acceso de directorio en la cadena de *ruta de acceso* compuesta.
 
 *fname*<br/>
-Contiene el nombre de archivo base sin ninguna extensión de nombre de archivo. Si *fname* es **NULL** o apunta a una cadena vacía, ningún nombre de archivo se insertará en la composición *ruta* cadena.
+Contiene el nombre de archivo base sin ninguna extensión de nombre de archivo. Si *fname* es **null** o apunta a una cadena vacía, no se inserta ningún nombre de archivo en la cadena de *ruta de acceso* compuesta.
 
 *ext*<br/>
-Contiene la extensión de nombre de archivo real, con o sin punto inicial (.). **_makepath** inserta el punto automáticamente si no aparece en *ext*. Si *ext* es **NULL** o apunta a una cadena vacía, sin extensión se insertará en la composición *ruta* cadena.
+Contiene la extensión de nombre de archivo real, con o sin punto inicial (.). **_makepath** inserta el período automáticamente si no aparece en *ext*. Si *ext* es **null** o apunta a una cadena vacía, no se inserta ninguna extensión en la cadena de *ruta de acceso* compuesta.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_makepath** función crea una cadena de ruta de acceso compuesta de componentes determinados y almacena el resultado en *ruta de acceso*. El *ruta* podría incluir una letra de unidad, ruta de acceso de directorio, nombre de archivo y extensión de nombre de archivo. **_wmakepath** es una versión con caracteres anchos de **_makepath**; los argumentos de **_wmakepath** son cadenas de caracteres anchos. **_wmakepath** y **_makepath** se comportan exactamente igual.
+La función **_makepath** crea una cadena de ruta de acceso compuesta a partir de componentes individuales y almacena el resultado en la *ruta de acceso*. La *ruta de acceso* puede incluir una letra de unidad, una ruta de directorio, un nombre de archivo y una extensión de nombre de archivo. **_wmakepath** es una versión con caracteres anchos de **_makepath**; los argumentos de **_wmakepath** son cadenas de caracteres anchos. **_wmakepath** y **_makepath** se comportan de manera idéntica.
 
-**Nota de seguridad** Use una cadena terminada en nulo. Para evitar la saturación del búfer, la cadena terminada en null no puede superar el tamaño de la *ruta* búfer. **_makepath** no garantiza que no supera la longitud de la cadena de ruta de acceso compuesta **_MAX_PATH**. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+**Nota de seguridad** Use una cadena terminada en nulo. Para evitar la saturación del búfer, la cadena terminada en NULL no debe superar el tamaño del búfer de *ruta de acceso* . **_makepath** no garantiza que la longitud de la cadena de ruta de acceso compuesta no supere el valor de _ **MAX_PATH**. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -92,9 +92,9 @@ El **_makepath** función crea una cadena de ruta de acceso compuesta de compone
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-El *ruta* argumento debe apuntar a un búfer vacío suficientemente grande para contener la ruta de acceso completa. El compuesto *ruta* debe ser no puede superar el **_MAX_PATH** constante, definida en Stdlib.h.
+El argumento *path* debe apuntar a un búfer vacío lo suficientemente grande como para contener la ruta de acceso completa. La *ruta de acceso* compuesta no debe ser mayor que la constante _ **MAX_PATH** , definida en stdlib. h.
 
-Si la ruta de acceso es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, **errno** está establecido en **EINVAL**. **NULL** se permiten valores para todos los demás parámetros.
+Si path es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, **errno** se establece en **EINVAL**. Se permiten valores **null** para todos los demás parámetros.
 
 ## <a name="requirements"></a>Requisitos
 

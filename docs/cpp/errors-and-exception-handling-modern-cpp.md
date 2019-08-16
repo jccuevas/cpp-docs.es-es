@@ -1,14 +1,14 @@
 ---
 title: Controlar errores y excepciones (C++ moderno)
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
-ms.translationtype: MT
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220574"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222146"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Controlar errores y excepciones (C++ moderno)
 
@@ -90,17 +90,17 @@ Excepciones y aserciones son dos mecanismos diferentes para detectar errores en 
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Excepciones de C++ frente a excepciones SEH de Windows
 
-Programas de C y C++ pueden utilizar el mecanismo de (SEH) en el sistema operativo Windows de control de excepciones estructurado. Los conceptos en SEH se parecen a las excepciones de C++, salvo que SEH utiliza el **__try**, **__except**, y **__finally** construye en lugar de **intente** y **catch**. En Visual C++, las excepciones de C++ se implementan para SEH. Sin embargo, al escribir código de C++, use la sintaxis de la excepción de C++.
+Programas de C y C++ pueden utilizar el mecanismo de (SEH) en el sistema operativo Windows de control de excepciones estructurado. Los conceptos en SEH se parecen a las de C++ excepciones, salvo que SEH utiliza el **__try**, **__except**, y **__finally** construye en lugar de **intente**  y **catch**. En Microsoft C++ (MSVC), compilador C++ las excepciones se implementan para SEH. Sin embargo, al escribir código de C++, use la sintaxis de la excepción de C++.
 
 Para obtener más información sobre SEH, vea [control de excepciones estructurado (C/C ++)](../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="exception-specifications-and-noexcept"></a>Especificaciones de excepciones y noexcept
 
-Especificaciones de excepciones se incluyeron en C++ como una manera de especificar las excepciones que puede producir una función. Sin embargo, las especificaciones de excepción resultó problemáticas en la práctica y están en desuso en el estándar de borrador C ++ 11. Se recomienda que no usan las especificaciones de excepciones, excepto para `throw()`, lo que indica que la función no permite que las excepciones escape. Si debe utilizar las especificaciones de excepción del tipo `throw(` *tipo*`)`, tenga en cuenta que Visual C++ se sale del estándar de determinadas maneras. Para obtener más información, consulte [especificaciones de excepciones (throw)](../cpp/exception-specifications-throw-cpp.md). El `noexcept` especificador se introdujo en C ++ 11 como la alternativa preferida para `throw()`.
+Especificaciones de excepciones se incluyeron en C++ como una manera de especificar las excepciones que puede producir una función. Sin embargo, las especificaciones de excepción resultó problemáticas en la práctica y están en desuso en el estándar de borrador C ++ 11. Se recomienda que no usan las especificaciones de excepciones, excepto para `throw()`, lo que indica que la función no permite que las excepciones escape. Si debe utilizar las especificaciones de excepción del tipo `throw(` *tipo*`)`, tenga en cuenta que MSVC sale del estándar de determinadas maneras. Para obtener más información, consulte [especificaciones de excepciones (throw)](../cpp/exception-specifications-throw-cpp.md). El `noexcept` especificador se introdujo en C ++ 11 como la alternativa preferida para `throw()`.
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: La interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Cómo: Interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

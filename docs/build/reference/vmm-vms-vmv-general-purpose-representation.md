@@ -20,11 +20,11 @@ helpviewer_keywords:
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
 ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316735"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Representación de propósito general)
 
@@ -67,5 +67,5 @@ Al especificar una de estas opciones de modelo de herencia, se utiliza ese model
 ## <a name="see-also"></a>Vea también
 
 [/vmb, /vmg (Método de representación)](vmb-vmg-representation-method.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

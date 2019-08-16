@@ -1,21 +1,21 @@
 ---
 title: 'Tutorial: Compilación de un proyecto (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: d23412bcc740cbbda4227e0271842b4d44b436af
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57809019"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400993"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Tutorial: Compilación de un proyecto (C++)
 
-En este tutorial, va a introducir deliberadamente un error de sintaxis de Visual C++ en el código para obtener información acerca de cómo es un error de compilación y cómo corregirlo. Cuando compila el proyecto, un mensaje de error indica cuál es el problema y donde se produjo.
+En este tutorial, va a introducir deliberadamente un error de sintaxis de C++ en el código para obtener información acerca de cómo es un error de compilación y cómo corregirlo. Cuando compila el proyecto, un mensaje de error indica cuál es el problema y donde se produjo.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -55,7 +55,7 @@ En este tutorial, va a introducir deliberadamente un error de sintaxis de Visual
 ## <a name="next-steps"></a>Pasos siguientes
 
 **Anterior:** [Tutorial: Trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Siguiente:** [Tutorial: Probar un proyecto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Siguiente:** [Tutorial: Probar un proyecto (C++)](../ide/walkthrough-testing-a-project-cpp.md)
 
 ## <a name="see-also"></a>Vea también
 

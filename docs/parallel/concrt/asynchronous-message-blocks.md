@@ -7,11 +7,11 @@ helpviewer_keywords:
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237082"
 ---
 # <a name="asynchronous-message-blocks"></a>Bloques de mensajes asincrónicos
 
@@ -117,7 +117,7 @@ En la siguiente tabla se muestra cómo se relacionan estas características con 
 |`choice`|Ambos|Por orden |10|1|
 |`join`|Ambos|Por orden |Ilimitado|1|
 |`multitype_join`|Ambos|Por orden |10|1|
-|`timer`|Origen|No es aplicable|No es aplicable|1|
+|`timer`|Source|No es aplicable|No es aplicable|1|
 
 En las secciones siguientes se describen los tipos de bloques de mensajes con más detalle.
 

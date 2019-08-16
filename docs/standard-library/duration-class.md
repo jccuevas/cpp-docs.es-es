@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565576"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454306"
 ---
 # <a name="duration-class"></a>duration (Clase)
 
@@ -41,20 +41,20 @@ El argumento de plantilla `Rep` describe el tipo que se utiliza para almacenar e
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |duration::period (Typedef)|Representa un sinónimo para el parámetro de plantilla `Period`.|
 |duration::rep (Typedef)|Representa un sinónimo para el parámetro de plantilla `Rep`.|
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[Duración](#duration)|Construye un objeto `duration`.|
+|[Duration](#duration)|Construye un objeto `duration`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[count](#count)|Devuelve el número de pasos del reloj del intervalo de tiempo.|
 |[max](#max)|Estático. Devuelve el valor máximo permitido del parámetro de plantilla `Ref`.|
@@ -63,7 +63,7 @@ El argumento de plantilla `Rep` describe el tipo que se utiliza para almacenar e
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[duration::operator-](#operator-)|Devuelve una copia del objeto `duration` junto con un recuento de pasos negado.|
 |[duration::operator--](#operator--)|Disminuye el recuento de pasos almacenado.|
@@ -77,7 +77,7 @@ El argumento de plantilla `Rep` describe el tipo que se utiliza para almacenar e
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<chrono >
+**Encabezado:** \<> crónico
 
 **Espacio de nombres:** std::chrono
 
@@ -109,29 +109,29 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rep2*<br/>
+*Rep2*\
 Un tipo aritmético para representar el número de ciclos.
 
-*Period2*<br/>
+*Period2*\
 Una especialización de plantilla `std::ratio` para representar el período de ciclo en unidades de segundos.
 
-*R*<br/>
+*R*\
 El número de ciclos del período predeterminado.
 
-*Duración*<br/>
-El número de ciclos del período especificado por *Period2*.
+*Respectivamente*\
+Número de TICs del período especificado por *Period2*.
 
 ### <a name="remarks"></a>Comentarios
 
 El constructor predeterminado crea un objeto que no se ha inicializado. La inicialización de un valor mediante llaves vacías inicializa un objeto que representa un intervalo de tiempo de cero ciclos de reloj.
 
-El segundo, el constructor crea un objeto de argumento de una plantilla que representa un intervalo de tiempo de *R* ciclos de reloj mediante un período predeterminado de `std::ratio<1>`. Para evitar el redondeo de recuentos de pasos, es un error construir un objeto de duración de un tipo de representación *Rep2* que puede tratarse como un punto flotante cuando escriba `duration::rep` no se puede tratar como un tipo de punto flotante.
+En el segundo, un constructor de argumento de plantilla crea un objeto que representa un intervalo de tiempo de ciclos de reloj de *R* mediante `std::ratio<1>`un período predeterminado de. Para evitar el redondeo de los recuentos de pasos, es un error construir un objeto de duración a partir de un *Rep2* de tipo de representación que se puede tratar como `duration::rep` un tipo de punto flotante cuando no se puede tratar como un tipo de punto flotante.
 
-La tercera, el constructor de argumento de plantilla dos crea un objeto que representa un intervalo de tiempo cuya longitud es el intervalo de tiempo especificado por *Dur*. Para evitar el truncamiento de los ciclos de reloj, es un error construir un objeto de duración a partir de otro objeto de duración cuyo tipo es *inconmensurable* con el tipo de destino.
+El tercer constructor de argumento de plantilla crea un objeto que representa un intervalo de tiempo cuya longitud es el intervalo de tiempo especificado por *Dur*. Para evitar el truncamiento de los ciclos de reloj, es un error construir un objeto de duración a partir de otro objeto de duración cuyo tipo es *inconmensurable* con el tipo de destino.
 
 Un tipo de duración `D1` es *inconmensurable* con otro tipo de duración `D2` si `D2` no se puede tratar como un tipo de punto flotante y [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) no es 1.
 
-A menos que *Rep2* es implícitamente convertible a `rep` y `treat_as_floating_point<rep>` *cumple* o `treat_as_floating_point<Rep2>` *contiene false*, el segundo constructor no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).
+A menos que *Rep2* se pueda convertir `rep` implícitamente `treat_as_floating_point<rep>`en y sea `treat_as_floating_point<Rep2>` *true* o *contenga false*, el segundo constructor no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).
 
 A menos que no se induzca ningún desbordamiento en la conversión y `treat_as_floating_point<rep>`*sea True* o ambos `ratio_divide<Period2, period>::den` sean iguales a 1 y `treat_as_floating_point<Rep2>`*sea False*, el tercer constructor no participa en la resolución de sobrecarga. Para obtener más información, vea [<type_traits>](../standard-library/type-traits.md).
 
@@ -195,8 +195,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parámetros
 
-*Div*<br/>
-Para el primer método, *Div* representa un recuento de pasos. Para el segundo método, *Div* es un `duration` objeto que contiene un recuento de pasos.
+*Div*\
+Para el primer método, *div* representa un recuento de pasos. En el segundo método, *div* es un `duration` objeto que contiene un recuento de pasos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -212,7 +212,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parámetros
 
-*Mult*<br/>
+*Mult*\
 Valor del tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -229,7 +229,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parámetros
 
-*Div*<br/>
+*Div*\
 Valor del tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -270,7 +270,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*Respectivamente*\
 Objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parámetros
 
-*Duración*<br/>
+*Respectivamente*\
 Objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -312,7 +312,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parámetros
 
-*Div*<br/>
+*Div*\
 El divisor, que es un objeto de duración o un valor que representa los recuentos de pasos.
 
 ### <a name="remarks"></a>Comentarios
@@ -321,6 +321,6 @@ La primera función miembro reduce el módulo del recuento de pasos almacenado D
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[duration_values (Estructura)](../standard-library/duration-values-structure.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[duration_values (Estructura)](../standard-library/duration-values-structure.md)

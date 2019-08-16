@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602311"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500286"
 ---
-# <a name="chdrive"></a>_chdrive
+# <a name="_chdrive"></a>_chdrive
 
 Cambia la unidad de trabajo actual.
 
@@ -48,7 +48,7 @@ int _chdrive(
 
 ### <a name="parameters"></a>Parámetros
 
-*Unidad*<br/>
+*drive*<br/>
 Entero de 1 a 26 que especifica la unidad de trabajo actual (1=A, 2=B, etc.).
 
 ## <a name="return-value"></a>Valor devuelto
@@ -57,9 +57,9 @@ Cero (0) si la unidad de trabajo actual se ha cambiado correctamente; de lo cont
 
 ## <a name="remarks"></a>Comentarios
 
-Si *unidad* está fuera del intervalo comprendido entre 1 y 26, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, el **_chdrive** función devuelve -1, **errno** está establecido en **EACCES**, y **_doserrno** está establecido en  **ERROR_INVALID_DRIVE**.
+Si la *unidad* no está en el intervalo comprendido entre 1 y 26, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función **_chdrive** devuelve-1, **errno** se establece en **EACCES**y **_doserrno** se establece en **ERROR_INVALID_DRIVE**.
 
-La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, consulte [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
+La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, vea [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 La función **_chdrive** solo cambia la unidad de trabajo actual; **_chdir** cambia el directorio de trabajo actual.
 

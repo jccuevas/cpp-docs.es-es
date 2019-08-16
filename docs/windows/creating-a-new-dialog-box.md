@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59036333"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344207"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Procedimiento Crear un cuadro de diálogo (C++)
 
 La ubicación y el tamaño de un cuadro de diálogo de C++ y la ubicación y tamaño de los controles dentro de ella, se miden en unidades de cuadro de diálogo. Los valores de los controles individuales y el cuadro de diálogo aparecen en la esquina inferior derecha de la barra cuando seleccionarlas de estado de Visual Studio.
 
 > [!NOTE]
-> Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
+> Si el proyecto no contuviera un archivo .rc, vea [crear un nuevo archivo de Script de recursos](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="how-to"></a>Procedimientos
 
@@ -38,7 +38,7 @@ El **Editor de cuadro de diálogo** le permite:
 
 1. En el **Agregar recurso** cuadro de diálogo, seleccione **diálogo** en el **tipo de recurso** lista y luego elija **New**.
 
-   Si un signo más (**+**) aparece junto a la **diálogo** tipo de recurso, significa que están disponibles plantillas de cuadro de diálogo. Seleccione el signo más para expandir la lista de plantillas, seleccione una plantilla y elija **New**.
+   Si un signo más ( **+** ) aparece junto a la **diálogo** tipo de recurso, significa que están disponibles plantillas de cuadro de diálogo. Seleccione el signo más para expandir la lista de plantillas, seleccione una plantilla y elija **New**.
 
    Se abre el cuadro de diálogo nuevo en el **Editor de cuadro de diálogo**.
 

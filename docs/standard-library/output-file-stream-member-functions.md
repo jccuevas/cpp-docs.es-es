@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c23008d0c46a532f11e89442328ed25cc203077
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621772"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453051"
 ---
 # <a name="output-file-stream-member-functions"></a>Funciones de miembro de flujo de archivos de salida
 
@@ -17,9 +17,9 @@ Las funciones miembro de flujo de salida tienen tres tipos: las que son equivale
 
 ## <a name="the-open-function-for-output-streams"></a>La función Open para flujos de salida
 
-Para usar una secuencia de archivo de salida ([ofstream](../standard-library/basic-ofstream-class.md)), debe asociar esa secuencia con un archivo de disco específico en el constructor o el `open` función. Si usas el `open` función, puede reutilizar el mismo objeto de secuencia con una serie de archivos. En cualquier caso, los argumentos que describen el archivo son los mismos.
+Para usar un flujo de archivo de[](../standard-library/basic-ofstream-class.md)salida (enstream), debe asociar la secuencia con un archivo de disco específico en el `open` constructor o en la función. Si usa la `open` función, puede volver a usar el mismo objeto de secuencia con una serie de archivos. En cualquier caso, los argumentos que describen el archivo son los mismos.
 
-Al abrir el archivo asociado a un flujo de salida, generalmente especifica una `open_mode` marca. Puede combinar estas marcas, que se definen como enumeradores en la clase `ios`, con el operador OR bit a bit ( &#124; ). Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener una lista de los enumeradores.
+Al abrir el archivo asociado a un flujo de salida, normalmente se especifica una `open_mode` marca. Puede combinar estas marcas, que se definen como enumeradores en la clase `ios`, con el operador OR bit a bit ( &#124; ). Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener una lista de los enumeradores.
 
 Tres situaciones comunes de flujo de salida tienen en cuenta las opciones de modo:
 
@@ -52,7 +52,7 @@ Tres situaciones comunes de flujo de salida tienen en cuenta las opciones de mod
    // When ofile goes out of scope it is destroyed.
    ```
 
-## <a name="the-put"></a>La put
+## <a name="the-put"></a>El
 
 La función **put** escribe un carácter en el flujo de salida. Las dos instrucciones siguientes son las mismas de manera predeterminada, pero la segunda se ve afectada por los argumentos de formato de la secuencia:
 
@@ -63,9 +63,9 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply
 ```
 
-## <a name="the-write"></a>La operación de escritura
+## <a name="the-write"></a>La escritura
 
-El `write` función escribe un bloque de memoria en una secuencia de archivo de salida. El argumento de longitud especifica el número de bytes escritos. Este ejemplo crea un flujo de archivos de salida y escribe el valor binario de la estructura `Date` en este:
+La `write` función escribe un bloque de memoria en una secuencia de archivos de salida. El argumento de longitud especifica el número de bytes escritos. Este ejemplo crea un flujo de archivos de salida y escribe el valor binario de la estructura `Date` en este:
 
 ```cpp
 // write_function.cpp
@@ -86,7 +86,7 @@ int main( )
 }
 ```
 
-El `write` función no se detiene cuando llega un carácter null, por lo que se escribe la estructura de clase completa. La función toma dos argumentos: un **char** puntero y el número de caracteres que se va a escribir. Tenga en cuenta la conversión necesaria a **char** <strong>\*</strong> antes de la dirección del objeto de estructura.
+La `write` función no se detiene cuando llega a un carácter nulo, por lo que se escribe la estructura de clase completa. La función toma dos argumentos: un puntero **Char** y un recuento de caracteres que se van a escribir. Tenga en cuenta la conversión necesaria a **Char** <strong>\*</strong> antes de la dirección del objeto de estructura.
 
 ## <a name="the-seekp-and-tellp-functions"></a>Las funciones Seekp y Tellp
 
@@ -94,9 +94,9 @@ Un flujo de archivos de salida mantiene un puntero interno que señala a la posi
 
 ## <a name="the-close-function-for-output-streams"></a>La función Close para flujos de salida
 
-El `close` función miembro cierra el archivo de disco asociado a una secuencia de archivo de salida. El archivo debe cerrarse para completar toda la salida de disco. Si es necesario, el `ofstream` destructor cierra el archivo, pero puede usar el `close` funcionando si necesita abrir otro archivo para el mismo objeto de secuencia.
+La `close` función miembro cierra el archivo de disco asociado a una secuencia de archivo de salida. El archivo debe cerrarse para completar toda la salida de disco. Si es necesario, `ofstream` el destructor cierra el archivo, pero puede usar la `close` función si necesita abrir otro archivo para el mismo objeto de secuencia.
 
-El destructor de flujo de salida cierra automáticamente solo si de una secuencia archivo al constructor o el `open` función miembro abre el archivo. Si se pasa al constructor un descriptor de archivo para un archivo ya está abierto o utilizar el `attach` función miembro, debe cerrar el archivo de forma explícita.
+El destructor de flujo de salida cierra automáticamente el archivo de una secuencia solo si el constructor `open` o la función miembro abrieron el archivo. Si pasa el constructor a un descriptor de archivo para un archivo ya abierto o `attach` usa la función miembro, debe cerrar el archivo explícitamente.
 
 ## <a name="vclrferrorprocessingfunctionsanchor10"></a> Funciones de procesamiento de errores
 
@@ -105,13 +105,13 @@ Use estas funciones miembro para probar errores al escribir en una secuencia:
 |Función|Valor devuelto|
 |--------------|------------------|
 |[bad](basic-ios-class.md#bad)|Devuelve **True** si hay un error irrecuperable.|
-|[fail](basic-ios-class.md#fail)|Devuelve **True** si hay un error irrecuperable o una condición "esperada", como un error de conversión, o si el archivo no se encuentra. A menudo puede reanudar el procesamiento después de llamar a `clear` con un argumento de cero.|
+|[fail](basic-ios-class.md#fail)|Devuelve **True** si hay un error irrecuperable o una condición "esperada", como un error de conversión, o si el archivo no se encuentra. A menudo, el procesamiento se puede reanudar después de una llamada a `clear` con un argumento cero.|
 |[good](basic-ios-class.md#good)|Devuelve **True** si no existe ninguna condición de error (irrecuperable o de otro tipo) y la marca de fin de archivo no se establece.|
 |[eof](basic-ios-class.md#eof)|Devuelve **True** en la condición de fin de archivo.|
 |[clear](basic-ios-class.md#clear)|Establece el estado de error interno. Si se ha llamado con los argumentos predeterminados, borra todos los bits de error.|
-|[rdstate] (basic-ios-class.md #rdstate|Devuelve el estado de error actual.|
+|[rdstate](basic-ios-class.md#rdstate|Devuelve el estado de error actual.|
 
-El operador **!** operador está sobrecargado para llevar a cabo la misma función que el `fail` función. Por lo tanto, la expresión:
+El operador **!** el operador está sobrecargado para realizar la misma función que `fail` la función. Por lo tanto, la expresión:
 
 ```cpp
 if(!cout)...
@@ -135,8 +135,8 @@ es igual a:
 if(!cout.fail())...
 ```
 
-El **void\*()** operador no es equivalente a `good` porque no se prueba para el final del archivo.
+El **operador\*void ()** no es equivalente a `good` porque no comprueba el final del archivo.
 
 ## <a name="see-also"></a>Vea también
 
-[Flujos de salida](../standard-library/output-streams.md)<br/>
+[Flujos de salida](../standard-library/output-streams.md)

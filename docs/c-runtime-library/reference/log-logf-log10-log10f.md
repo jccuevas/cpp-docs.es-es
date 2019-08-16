@@ -41,11 +41,11 @@ helpviewer_keywords:
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
 ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286017"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>registro, logf, logl, log10, log10f, log10l
 
@@ -80,7 +80,7 @@ El **registro** funciones devuelven el logaritmo natural (base *e*) de *x* si se
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|+ QNAN, IND|ninguna|_DOMAIN|
+|± QNAN, IND|ninguna|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
@@ -94,7 +94,7 @@ C++ permite las sobrecargas, es posible llamar a las sobrecargas de **registro**
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**Registro**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**log**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

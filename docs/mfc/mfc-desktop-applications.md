@@ -1,6 +1,6 @@
 ---
 title: Aplicaciones de escritorio de MFC
-ms.date: 11/04/2016
+ms.date: 07/28/2019
 f1_keywords:
 - MFC
 - mfc
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 042412000ba59c8400c5a3a64edae5d60756116a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766500"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68607536"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicaciones de escritorio de MFC
 
-La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office.
+La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office. Para obtener documentación sobre la propia plataforma Windows, consulte la [documentación de Windows](/windows/index). Para obtener información sobre cómo compilar aplicaciones de Windows en sin MFC, vea compilar aplicaciones de Windows de C++ [escritorio mediante la API de Win32](/windows/win32/index).
 
 La referencia de MFC incluye las clases, las funciones globales, las variables globales y las macros que constituyen la biblioteca MFC (Microsoft Foundation Class).
 
@@ -29,9 +29,9 @@ La documentación de cada clase incluye información general sobre la clase, un 
 Los miembros de clase públicos y protegidos se documentan solo cuando se utilizan normalmente en programas de aplicación o clases derivadas. Vea los archivos de encabezado de clase para obtener una lista completa de miembros de clase.
 
 > [!IMPORTANT]
->  Las clases MFC y sus miembros no se puede usar en aplicaciones que se ejecutan en el entorno en tiempo de ejecución de Windows.
+>  Las clases MFC y sus miembros no se pueden usar en aplicaciones que se ejecutan en el entorno de Windows Runtime.
 >
->  Las bibliotecas MFC (DLL) para la codificación de caracteres multibyte (MBCS) ya no se incluyen en Visual Studio, pero están disponibles como complemento de Visual Studio. Para obtener más información, consulte [complemento DLL de MBCS de MFC](mfc-mbcs-dll-add-on.md).
+>  Las bibliotecas MFC (DLL) para la codificación de caracteres multibyte (MBCS) ya no se incluyen en Visual Studio, pero están disponibles como complemento de Visual Studio. Para obtener más información, vea [complemento dll de MBCS para MFC](mfc-mbcs-dll-add-on.md).
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -41,7 +41,7 @@ Artículos conceptuales sobre temas de MFC.
 [Gráfico de jerarquías](hierarchy-chart.md)<br/>
 Detalla visualmente las relaciones entre clases en la biblioteca de clases.
 
-[Información general de clases](class-library-overview.md)<br/>
+[Información general sobre clases](class-library-overview.md)<br/>
 Muestra las clases de la biblioteca MFC por categorías.
 
 [Tutoriales](walkthroughs-mfc.md)<br/>
@@ -59,7 +59,7 @@ Proporciona vínculos e información de archivo de encabezado para las clases MF
 [Clases internas](reference/internal-classes.md)<br/>
 Se utiliza de forma interna en MFC. Por integridad, en esta sección se describen estas clases internas, pero no están destinadas a usarse directamente en el código.
 
-[Macros y funciones globales](reference/mfc-macros-and-globals.md)<br/>
+[Macros y variables globales](reference/mfc-macros-and-globals.md)<br/>
 Proporciona vínculos a las macros y funciones globales en la biblioteca MFC.
 
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](reference/structures-styles-callbacks-and-message-maps.md)<br/>
@@ -76,7 +76,7 @@ Cómo usar archivos de recursos para administrar datos de la interfaz de usuario
 [Categorías de gráfico de jerarquías](hierarchy-chart-categories.md)<br/>
 Describe el gráfico de jerarquías de MFC por categoría.
 
-[Clases compartidas ATL y MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
+[Clases compartidas de ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Proporciona vínculos a las clases que se comparten entre MFC y ATL.
 
 [Ejemplos de MFC](../overview/visual-cpp-samples.md)<br/>

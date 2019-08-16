@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581940"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448072"
 ---
 # <a name="istrstream-class"></a>istrstream (Clase)
 
@@ -33,13 +33,13 @@ El objeto almacena un objeto de clase `strstreambuf`.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[istrstream](#istrstream)|Construye un objeto de tipo `istrstream`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[rdbuf](#rdbuf)|Devuelve un puntero al objeto `strstreambuf` asociado de la secuencia.|
 |[str](#str)|Llama a [freeze](../standard-library/strstreambuf-class.md#freeze) y, después, devuelve un puntero al principio de la secuencia controlada.|
@@ -72,15 +72,15 @@ istrstream(
 
 ### <a name="parameters"></a>Parámetros
 
-*count*<br/>
-La longitud del búfer (*ptr*).
+*contabiliza*\
+Longitud del búfer (*ptr*).
 
-*ptr*<br/>
+*anota*\
 Contenido con el que se inicializa el búfer.
 
 ### <a name="remarks"></a>Comentarios
 
-Todos los constructores inicializan la clase base mediante una llamada a [istream](../standard-library/istream-typedefs.md#istream)(**sb**), donde `sb` es el objeto almacenado de clase [strstreambuf](../standard-library/strstreambuf-class.md). Los dos primeros constructores también inicializan `sb` mediante una llamada a `strstreambuf`(( **const** `char` \*) `ptr`, 0). Los dos constructores restantes llaman a `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
+Todos los constructores inicializan la clase base mediante una llamada a [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), donde `sb` es el objeto almacenado de la clase [strstreambuf](../standard-library/strstreambuf-class.md). Los dos primeros constructores también se `sb` inicializan `strstreambuf`llamando a (( `ptr` **const** `char` \*), 0). Los dos constructores restantes llaman a `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -120,11 +120,11 @@ La función miembro devuelve [rdbuf](#rdbuf) -> [str](../standard-library/strstr
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [strstream:: str](../standard-library/strstreambuf-class.md#str) para obtener un ejemplo que usa `str`.
+Vea [strstream:: STR](../standard-library/strstreambuf-class.md#str) para obtener un ejemplo que `str`usa.
 
 ## <a name="see-also"></a>Vea también
 
-[istream](../standard-library/istream-typedefs.md#istream)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programación con iostream](../standard-library/iostream-programming.md)<br/>
-[Convenciones de iostreams](../standard-library/iostreams-conventions.md)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programación con iostream](../standard-library/iostream-programming.md)\
+[Convenciones de iostreams](../standard-library/iostreams-conventions.md)

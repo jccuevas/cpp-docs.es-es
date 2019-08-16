@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 2e8998000187b65b62886660116c4758c1f03962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512903"
 ---
 # <a name="using-clistctrl"></a>Usar CListCtrl
 
-Usar un control de lista para mostrar cualquier organización de iconos con etiquetas, como en el Explorador de archivos o listas de columnas de texto, con o sin iconos. Para obtener una descripción de las cuatro posibles "vistas" (no debe confundirse con las vistas MFC) puede tener un control de lista, vista de iconos, vista de iconos pequeños, vista de lista y vista de informe, vea las vistas en el [CListCtrl](../mfc/reference/clistctrl-class.md) información general de clases.
+Use un control de lista para mostrar cualquier disposición de iconos con etiquetas, como en el explorador de archivos o listas de columnas de texto, con o sin iconos. Para obtener una descripción de las cuatro posibles "vistas" (que no se deben confundir con las vistas de MFC), puede tener en un control de lista (vista de iconos, vista de iconos pequeños, vista de lista y vista de informe), vea vistas en la información general de la clase [CListCtrl](../mfc/reference/clistctrl-class.md) .
 
-En algunas vistas, los usuarios pueden arrastrar iconos de distintas posiciones o editar etiquetas de icono. Por ejemplo, vea el panel derecho en el Explorador de archivos, que usa un control de lista en una ventana nondialog. Puede experimentar con las vistas disponibles en el menú Vista del explorador.
+En algunas vistas, los usuarios pueden arrastrar iconos a diferentes posiciones o etiquetas de iconos de edición. Por ejemplo, vea el panel de la derecha en el explorador de archivos, que usa un control de lista en una ventana que no es de cuadro de diálogo. Puede experimentar con las vistas disponibles en el menú Ver del explorador.
 
-Para obtener información relacionada, consulte [acerca de los controles de vista de lista](/windows/desktop/Controls/list-view-controls-overview) en el SDK de Windows.
+Para obtener información relacionada, vea acerca de los [controles de vista de lista](/windows/win32/Controls/list-view-controls-overview) en el Windows SDK.
 
 > [!NOTE]
->  El SDK de Windows hace referencia a los controles de lista como "controles de vista de lista". Este uso de "vista" no hace referencia a clases de vista MFC, especialmente `CListView`. Para obtener más información, consulte [Control de lista y vista de lista](../mfc/list-control-and-list-view.md).
+>  El Windows SDK hace referencia a los controles de lista como "controles de vista de lista". Este uso de "vista" no hace referencia a las clases de vistas de `CListView`MFC, en particular. Para obtener más información, vea [control de lista y vista de lista](../mfc/list-control-and-list-view.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 

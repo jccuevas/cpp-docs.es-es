@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 0808f66c4d4c4e99b3038ea18a1f71f4ebaca89a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424045"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446177"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows en tiempo de ejecución)
 
-Compila el código para admitir las extensiones de componente de C++ de Visual C++ / fuente c++ / CX para la creación de aplicaciones de plataforma Universal de Windows (UWP).
+Compila el código para admitir Microsoft fuente C++ extensiones de componentes C++/CX para la creación de aplicaciones de plataforma Universal de Windows (UWP).
 
 Cuando usas **/ZW** para compilar, especifique siempre **/EHsc** también.
 

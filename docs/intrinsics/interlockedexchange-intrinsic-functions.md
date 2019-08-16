@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59021500"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509394"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>Funciones intrínsecas _InterlockedExchange
+# <a name="_interlockedexchange-intrinsic-functions"></a>Funciones intrínsecas _InterlockedExchange
 
 **Específicos de Microsoft**
 
@@ -144,11 +144,11 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Parámetros
 
-*Target*<br/>
-[in, out] Puntero al valor que se van a intercambiar. La función establece esta variable en `Value` y devuelve su valor anterior.
+*Destino*<br/>
+[in, out] Puntero al valor que se va a intercambiar. La función establece esta variable en `Value` y devuelve su valor anterior.
 
 *Valor*<br/>
-[in] Valor van a intercambiar con el valor señalado por `Target`.
+de Valor que se va a intercambiar con el valor al que `Target`apunta.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -156,7 +156,7 @@ Devuelve el valor inicial al que apunta `Target`.
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
 |`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
@@ -164,7 +164,7 @@ Devuelve el valor inicial al que apunta `Target`.
 
 ## <a name="remarks"></a>Comentarios
 
-`_InterlockedExchange` proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) función.
+`_InterlockedExchange`proporciona compatibilidad intrínseca del compilador para la función [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) de Win32 Windows SDK.
 
 Hay diversas variaciones en `_InterlockedExchange` que varían en función de los tipos de datos que implican y de si se utiliza la liberación o la adquisición de semántica específica del procesador.
 
@@ -178,7 +178,7 @@ Estas rutinas solo están disponibles como intrínsecos.
 
 ## <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo de cómo usar `_InterlockedExchange`, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Para obtener un ejemplo de cómo usar `_InterlockedExchange`, vea [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **FIN de Específicos de Microsoft**
 

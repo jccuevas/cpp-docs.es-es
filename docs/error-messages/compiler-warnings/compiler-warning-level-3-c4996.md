@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401506"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilador (nivel 3) de la advertencia C4996
 
@@ -19,7 +19,7 @@ El compilador encontró una declaración en desuso. **Esta advertencia siempre e
 
 Estos son algunos mensajes de advertencia C4996 comunes generados por la biblioteca en tiempo de ejecución de C y la biblioteca estándar, pero no es una lista exhaustiva. Siga los vínculos o siga leyendo para que ver formas de solucionar el problema o para desactivar la advertencia.
 
-- [El nombre POSIX de este elemento está en desuso. En su lugar, use el nombre conforme a ISO C y C++: *new_name*. Consulte la ayuda en línea para obtener información detallada.](#posix-function-names)
+- [El nombre POSIX de este elemento está en desuso. En su lugar, use ISO C y C++ nombre conforme: *new_name*. Consulte la ayuda en línea para obtener información detallada.](#posix-function-names)
 
 - [Esta función o variable puede no ser seguro. Considere el uso de *safe_version* en su lugar. Para deshabilitar el desuso, utilice \_CRT\_SECURE\_n\_advertencias.  Consulte la ayuda en línea para obtener información detallada.](#unsafe-crt-library-functions)
 
@@ -65,7 +65,7 @@ Estas son algunas de las fuentes comunes de errores y advertencias C4996.
 
 ### <a name="posix-function-names"></a>Nombres de función POSIX
 
-**El nombre POSIX de este elemento está en desuso. En su lugar, use el nombre conforme a ISO C y C++:** *new_name*. **Consulte la Ayuda en línea para obtener más información.**
+**El nombre POSIX de este elemento está en desuso. En su lugar, use ISO C y C++ nombre conforme:** *new_name*. **Consulte la Ayuda en línea para obtener más información.**
 
 Microsoft ha cambiado el nombre de algunas funciones POSIX en CRT para ajustarse a C99 y C ++ 03 reglas para los nombres de funciones globales definidos en la implementación. Solo los nombres POSIX originales están en desuso, no las propias funciones. En la mayoría de casos, se agregó un carácter de subrayado inicial al nombre de función POSIX para crear un nombre conforme al estándar. El compilador emite una advertencia de desuso para el nombre de función original y sugiere el nombre preferido.
 

@@ -3,11 +3,11 @@ title: Conversión boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
 ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257970"
 ---
 # <a name="boxing-ccx"></a>Conversión boxing (C++/CX)
 
@@ -21,7 +21,7 @@ Aunque no tengas que aplicar conversión boxing de forma explícita a una variab
 
 ### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Usar Platform:: ibox\<T > para admitir tipos de valor que aceptan valores null
 
-C# y Visual Basic admiten el concepto de tipos de valor que aceptan valores NULL. En C / c++ / CX, puede usar el `Platform::IBox<T>` tipo para exponer métodos públicos que admiten parámetros de tipo de valor que acepta valores NULL. El ejemplo siguiente muestra C + + / método público de CX que devuelve null cuando un llamador de C# pasa null para uno de los argumentos.
+C# y Visual Basic admiten el concepto de tipos de valor que aceptan valores NULL. En C / c++ / CX, puede usar el `Platform::IBox<T>` tipo para exponer métodos públicos que admiten parámetros de tipo de valor que acepta valores NULL. El ejemplo siguiente se muestra un C++/CX método público que devuelve null cuando un C# /el llamador pasa null para uno de los argumentos.
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 

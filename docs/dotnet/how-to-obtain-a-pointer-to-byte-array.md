@@ -1,5 +1,5 @@
 ---
-title: Filtrar Obtener un puntero a la matriz de bytes
+title: Procedimiento Obtener un puntero a la matriz de bytes
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
 ms.openlocfilehash: 28feb039cf7b91bbf12d94b1abebe0e5b9501d7f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400544"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>Procedimiento Obtener un puntero a la matriz de bytes
 

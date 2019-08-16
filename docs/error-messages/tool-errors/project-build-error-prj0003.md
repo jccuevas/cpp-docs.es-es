@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039525"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450758"
 ---
 # <a name="project-build-error-prj0003"></a>Error PRJ0003 al compilar el proyecto
 
@@ -21,7 +21,7 @@ El *línea de comandos* comando tiene el formato de entrada en el **páginas de 
 
 Las posibles razones para este error incluyen:
 
-- El proyecto depende del servidor ATL. A partir de Visual Studio 2008, servidor ATL ya no se incluye como parte de Visual Studio, pero se ha publicado como un proyecto de código fuente compartido en CodePlex. Para descargar las herramientas y el código fuente del servidor ATL, vaya a [herramientas y la biblioteca de servidor ATL](http://go.microsoft.com/fwlink/p/?linkid=81979).
+- El proyecto depende del servidor ATL. A partir de Visual Studio 2008, servidor ATL ya no se incluye como parte de Visual Studio, pero se ha publicado como un proyecto de código fuente compartido en CodePlex. Para descargar las herramientas y el código fuente del servidor ATL, vaya a [herramientas y la biblioteca de servidor ATL](https://go.microsoft.com/fwlink/p/?linkid=81979).
 
 - Recursos del sistema insuficientes. Cierre algunas aplicaciones para resolver este problema.
 

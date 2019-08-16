@@ -11,11 +11,11 @@ helpviewer_keywords:
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
 ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294543"
 ---
 # <a name="cl-invokes-the-linker"></a>CL invoca el vinculador
 
@@ -58,5 +58,5 @@ CL pasa los nombres de los archivos .obj, junto con el nombre de MYGRAPH.lib al 
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
 [Establecer las opciones del compilador](compiler-command-line-syntax.md)

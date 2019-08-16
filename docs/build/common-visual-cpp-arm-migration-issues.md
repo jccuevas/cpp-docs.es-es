@@ -1,17 +1,17 @@
 ---
 title: Problemas comunes de migración de ARM en Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 78d87000240acd394edf823a778ae29060c6d09c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816261"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220886"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problemas comunes de migración de ARM en Visual C++
 
-Cuando se usa Microsoft Visual C++ (MSVC), el mismo código fuente de C++ puede producir resultados diferentes en la arquitectura ARM superior que en las arquitecturas x86 o x64.
+Cuando se usa Microsoft C++ compilador (MSVC), el mismo C++ código fuente podría producir resultados diferentes en la arquitectura ARM superior que en las arquitecturas x86 o x64.
 
 ## <a name="sources-of-migration-issues"></a>Orígenes de problemas de migración
 

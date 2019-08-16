@@ -15,11 +15,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304826"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346121"
 ---
 # <a name="ole-background-containers-and-servers"></a>Nociones de OLE: Contenedores y servidores
 
@@ -39,5 +39,5 @@ Un contenedor con este medio de comunicación, no es necesario conocer los detal
 [Nociones de OLE: Implementación de MFC](../mfc/ole-background-mfc-implementation.md)<br/>
 [Contenedores](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)<br/>
-[Contenedores: Elementos de cliente](../mfc/containers-client-items.md)<br/>
-[servidores: Elementos del servidor](../mfc/servers-server-items.md)
+[Contenedores: elementos de cliente](../mfc/containers-client-items.md)<br/>
+[Servidores: elementos del servidor](../mfc/servers-server-items.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Declarador de referencia rvalue: &amp;&amp;'
+title: Declarador de referencia de valor r:&amp;&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d6aa6aa9caed77f92b3b183cc49c63aaaa6c724f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328914"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498565"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referencia rvalue: &amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referencia de valor r:&amp;&amp;
 
 Mantiene una referencia a una expresión de valor R.
 
@@ -25,17 +25,17 @@ type-id && cast-expression
 
 ## <a name="remarks"></a>Comentarios
 
-Las referencias de valor R permiten distinguir un valor L de un valor R Las referencias de valor L y valor R son sintáctica y semánticamente similares, pero siguen reglas algo distintas. Para obtener más información acerca de lvalues y rvalues, vea [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Para obtener más información acerca de las referencias de valor l, vea [declarador de referencia Lvalue: &](../cpp/lvalue-reference-declarator-amp.md).
+Las referencias de valor R permiten distinguir un valor L de un valor R Las referencias de valor L y valor R son sintáctica y semánticamente similares, pero siguen reglas algo distintas. Para obtener más información sobre lvalues y rvalues, vea [lvalues y rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Para obtener más información sobre las referencias lvalue, consulte declarador de [referencia lvalue: &](../cpp/lvalue-reference-declarator-amp.md).
 
-Las secciones siguientes describen cómo las referencias rvalue son compatibles con la implementación de *semántica de transferencia* y *el reenvío directo*.
+En las secciones siguientes se describe cómo las referencias rvalue admiten la implementación de *semántica de transferencia de movimiento* y reenvío *directo*.
 
 ## <a name="move-semantics"></a>Semántica de transferencia de recursos
 
-Referencias a valor r admiten la implementación de *semántica de transferencia*, lo que puede aumentar significativamente el rendimiento de las aplicaciones. La semántica de transferencia de recursos permite escribir código que transfiere recursos (tales como memoria asignada dinámicamente) de un objeto a otro. La semántica de transferencia de recursos funciona porque permite transferir recursos desde objetos temporales a los que no se puede hacer referencia en otra parte del programa.
+Las referencias rvalue admiten la implementación de la *semántica de transferencia de movimiento*, lo que puede aumentar significativamente el rendimiento de las aplicaciones. La semántica de transferencia de recursos permite escribir código que transfiere recursos (tales como memoria asignada dinámicamente) de un objeto a otro. La semántica de transferencia de recursos funciona porque permite transferir recursos desde objetos temporales a los que no se puede hacer referencia en otra parte del programa.
 
-Para implementar la semántica de movimiento, suelen proporcionar un *constructor de movimiento,* y, opcionalmente, un operador de asignación de movimiento (**operador =**), a la clase. Las operaciones de copia y asignación cuyos orígenes son valores R aprovechan entonces automáticamente la semántica de transferencia de recursos. A diferencia del constructor de copia predeterminado, el compilador no proporciona un constructor de movimiento predeterminado. Para obtener más información sobre cómo escribir un constructor de movimiento y cómo utilizarlo en su aplicación, consulte [constructores de movimiento y operadores de asignación de movimiento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Para implementar la semántica de movimiento, normalmente se proporciona un *constructor de movimiento* y, opcionalmente, un operador de asignación de movimiento (**operador =** ), a la clase. Las operaciones de copia y asignación cuyos orígenes son valores R aprovechan entonces automáticamente la semántica de transferencia de recursos. A diferencia del constructor de copia predeterminado, el compilador no proporciona un constructor de movimiento predeterminado. Para obtener más información sobre cómo escribir un constructor de movimiento y cómo utilizarlo en la aplicación, vea constructores de movimiento [y operadores de asignaciónC++de movimiento ()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-También puede sobrecargar funciones y operadores normales para aprovechar la semántica de transferencia de recursos. Visual C++ 2010 presenta la semántica de movimiento en la biblioteca estándar de C++. Por ejemplo, la clase `string` implementa operaciones que realizan semántica de transferencia de recursos. Considere el ejemplo siguiente que concatena varias cadenas e imprime el resultado:
+También puede sobrecargar funciones y operadores normales para aprovechar la semántica de transferencia de recursos. Visual Studio 2010 presenta la semántica de movimiento en C++ la biblioteca estándar. Por ejemplo, la clase `string` implementa operaciones que realizan semántica de transferencia de recursos. Considere el ejemplo siguiente que concatena varias cadenas e imprime el resultado:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,23 +51,23 @@ int main()
 }
 ```
 
-Antes de Visual C++ 2010, con cada llamada a **operator +** asigna y devuelve un nuevo archivo temporal `string` objeto (un valor r). **operator +** no se puede anexar una cadena al otro porque no sabe si las cadenas de origen son valores l o valores r. Si las cadenas de origen son ambas valores L, puede que se haga referencia a las mismas en otra parte del programa y, por consiguiente, no se deben modificar. Mediante el uso de las referencias rvalue, **operator +** puede modificarse para que acepte valores r, que no se puede hacer referencia en otro lugar en el programa. Por lo tanto, **operator +** ahora se puede anexar una cadena a otra. Esto puede reducir significativamente el número de asignaciones de memoria dinámica que la clase `string` debe realizar. Para obtener más información sobre la `string` de clases, vea [basic_string (clase)](../standard-library/basic-string-class.md).
+Antes de Visual Studio 2010, cada llamada a **Operator +** asigna y devuelve un nuevo objeto temporal `string` (un valor r). **Operator +** no puede anexar una cadena a la otra porque no sabe si las cadenas de origen son lvalues o rvalues. Si las cadenas de origen son ambas valores L, puede que se haga referencia a las mismas en otra parte del programa y, por consiguiente, no se deben modificar. Mediante el uso de referencias rvalue, **Operator +** se puede modificar para tomar rvalues, a los que no se puede hacer referencia en otra parte del programa. Por lo tanto, **Operator +** ahora puede anexar una cadena a otra. Esto puede reducir significativamente el número de asignaciones de memoria dinámica que la clase `string` debe realizar. Para obtener más información sobre `string` la clase, vea [clase basic_string](../standard-library/basic-string-class.md).
 
-La semántica de transferencia de recursos también ayuda cuando el compilador no puede utilizar la optimización del valor devuelto (RVO) o la optimización del valor devuelto con nombre (NRVO). En estos casos, el compilador llama al constructor de movimiento si el tipo lo define. Para obtener más información acerca de la optimización de valor devuelto con nombre, vea [denominada optimización del valor devuelto en Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
+La semántica de transferencia de recursos también ayuda cuando el compilador no puede utilizar la optimización del valor devuelto (RVO) o la optimización del valor devuelto con nombre (NRVO). En estos casos, el compilador llama al constructor de movimiento si el tipo lo define. Para obtener más información sobre la optimización del valor devuelto con nombre, vea [optimización del valor devuelto con nombre en Visual Studio 2005](/previous-versions/ms364057(v=vs.80)).
 
 Para entender mejor la semántica de transferencia de recursos, considere el ejemplo de la inserción de un elemento en un objeto `vector`. Si se supera la capacidad del objeto `vector`, el objeto `vector` debe reasignar memoria para sus elementos y, a continuación, copiar cada elemento en otra ubicación de memoria para dejar espacio al elemento insertado. Cuando una operación de inserción copia un elemento, crea un nuevo elemento, llama al constructor de copias para copiar los datos del elemento anterior en el nuevo elemento y, a continuación, destruye el elemento anterior. La semántica de transferencia de recursos permite mover objetos directamente sin tener que realizar una asignación de gran consumo de memoria ni operaciones de copia.
 
 Para aprovechar la semántica de transferencia de recursos en el ejemplo `vector`, puede escribir un constructor de movimiento para mover los datos de un objeto a otro.
 
-Para obtener más información sobre la introducción de semántica de movimiento en la biblioteca estándar de C++ en Visual C++ 2010, consulte [biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md).
+Para obtener más información sobre la introducción de la semántica de transferencia C++ de datos en la biblioteca estándar de Visual Studio 2010, vea [ C++ biblioteca estándar](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Reenvío directo
 
-El reenvío directo reduce la necesidad de funciones sobrecargadas y ayuda a evitar el problema de reenvío. El *problema de reenvío* puede producirse cuando se escribe una función genérica que acepta referencias como parámetros y pasa (o *reenvía*) estos parámetros a otra función. Por ejemplo, si la función genérica toma un parámetro de tipo `const T&`, la función llamada no puede modificar el valor de ese parámetro. Si la función genérica toma un parámetro de tipo `T&`, no se puede llamar a la función mediante un valor R (tal como un objeto temporal o un literal entero).
+El reenvío directo reduce la necesidad de funciones sobrecargadas y ayuda a evitar el problema de reenvío. El *problema* de reenvío puede producirse cuando se escribe una función genérica que toma referencias como sus parámetros y pasa (o reenvía) estos parámetros a otra función. Por ejemplo, si la función genérica toma un parámetro de tipo `const T&`, la función llamada no puede modificar el valor de ese parámetro. Si la función genérica toma un parámetro de tipo `T&`, no se puede llamar a la función mediante un valor R (tal como un objeto temporal o un literal entero).
 
 Normalmente, para solucionar este problema, debe proporcionar versiones sobrecargadas de la función genérica que acepten tanto `T&` como `const T&` para cada uno de sus parámetros. Como resultado, el número de funciones sobrecargadas aumenta exponencialmente con el número de parámetros. Las referencias de valor R permiten escribir una versión de una función que acepte argumentos arbitrarios y los reenvíe a otra función como si se hubiera llamado directamente a la otra función.
 
-Considere el ejemplo siguiente en el que se declaran cuatro tipos, `W`, `X`, `Y` y `Z`. El constructor para cada tipo toma una combinación diferente de **const** y no-**const** referencias lvalue como parámetros.
+Considere el ejemplo siguiente en el que se declaran cuatro tipos, `W`, `X`, `Y` y `Z`. El constructor de cada tipo toma una combinación diferente de las referencias de valor l **const** y no**const** como parámetros.
 
 ```cpp
 struct W
@@ -124,7 +124,7 @@ T* factory(A1&& a1, A2&& a2)
 }
 ```
 
-En este ejemplo se usan referencias de valor R como parámetros para la función `factory`. El propósito de la [std:: Forward](../standard-library/utility-functions.md#forward) función es reenviar los parámetros de la función de generador al constructor de la clase de plantilla.
+En este ejemplo se usan referencias de valor R como parámetros para la función `factory`. El propósito de la función [STD:: Forward](../standard-library/utility-functions.md#forward) es reenviar los parámetros de la función de generador al constructor de la clase de plantilla.
 
 En el ejemplo siguiente se muestra la función `main` que usa la función `factory` revisada para crear instancias de las clases `W`, `X``Y` y `Z`. La función `factory` revisada reenvía sus parámetros (ya sean valores L o valores R) al constructor de clase adecuado.
 
@@ -146,9 +146,9 @@ int main()
 
 ## <a name="additional-properties-of-rvalue-references"></a>Propiedades adicionales de referencias de valor R
 
-**Puede sobrecargar una función para que tome una referencia de valor l y una referencia rvalue.**
+**Puede sobrecargar una función para que tome una referencia de valor l y una referencia de valor r.**
 
-Mediante la sobrecarga de una función tome un **const** referencia lvalue o una referencia rvalue, puede escribir código que distinga entre objetos no modificables (valores l) y valores temporales modificables (valores r). Puede pasar un objeto a una función que toma una referencia rvalue, a menos que el objeto está marcado como **const**. El ejemplo siguiente muestra la función `f`, que se sobrecarga para aceptar una referencia de valor L y una referencia de valor R. La función `main` llama a `f` con ambos valores L y un valor R.
+Al sobrecargar una función para que tome una referencia de valor l o una referencia de valor r, puede escribir código que distinga entre objetos no modificables (lvalues) y valores temporales modificables (rvalues). Puede pasar un objeto a una función que toma una referencia rvalue a menos que el objeto se marque como **const**. El ejemplo siguiente muestra la función `f`, que se sobrecarga para aceptar una referencia de valor L y una referencia de valor R. La función `main` llama a `f` con ambos valores L y un valor R.
 
 ```cpp
 // reference-overload.cpp
@@ -238,9 +238,9 @@ In g(MemoryBlock&&).
 
 En este ejemplo, la función `main` pasa un valor R a `f`. El cuerpo de `f` trata el parámetro con nombre como valor L. La llamada de `f` a `g` enlaza el parámetro a una referencia de valor L (la primera versión sobrecargada de `g`).
 
-- **Puede convertir un valor de l en una referencia rvalue.**
+- **Puede convertir un valor l en una referencia rvalue.**
 
-La biblioteca estándar de C++ [std:: Move](../standard-library/utility-functions.md#move) función le permite convertir un objeto en una referencia rvalue a ese objeto. Como alternativa, puede usar el **static_cast** palabra clave para convertir un valor de l en una referencia rvalue, tal como se muestra en el ejemplo siguiente:
+La C++ función [STD:: Move](../standard-library/utility-functions.md#move) de la biblioteca estándar permite convertir un objeto en una referencia rvalue a ese objeto. Como alternativa, puede usar la palabra clave **static_cast** para convertir un valor l en una referencia de valor r, como se muestra en el ejemplo siguiente:
 
 ```cpp
 // cast-reference.cpp
@@ -279,11 +279,11 @@ In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-**Las plantillas de función deducen sus tipos de argumento de plantilla y, a continuación, usar las reglas de contracción de referencias.**
+**Las plantillas de función deducen sus tipos de argumento de plantilla y, a continuación, usan reglas de contracción de referencias.**
 
-Es común escribir una plantilla de función que se pasa (o *reenvía*) sus parámetros a otra función. Es importante saber cómo funciona la deducción de tipos de plantilla para plantillas de función que acepten referencias de valor R.
+Es habitual escribir una plantilla de función que pase (o *reenvíe*) sus parámetros a otra función. Es importante saber cómo funciona la deducción de tipos de plantilla para plantillas de función que acepten referencias de valor R.
 
-Si el argumento de función es un valor R, el compilador deduce que el argumento será una referencia de valor R. Por ejemplo, si se pasa una referencia de valor R a un objeto de tipo `X` a una función de plantilla que acepta el tipo `T&&` como su parámetro, la deducción de argumento de plantilla deduce que `T` será `X`. Por consiguiente, el parámetro es de tipo `X&&`. Si el argumento de función es un valor l o **const** de valor l, el compilador deduce que su tipo será una referencia lvalue o **const** referencia lvalue de ese tipo.
+Si el argumento de función es un valor R, el compilador deduce que el argumento será una referencia de valor R. Por ejemplo, si se pasa una referencia de valor R a un objeto de tipo `X` a una función de plantilla que acepta el tipo `T&&` como su parámetro, la deducción de argumento de plantilla deduce que `T` será `X`. Por consiguiente, el parámetro es de tipo `X&&`. Si el argumento de función es un valor l o **const** lvalue, el compilador deduce que su tipo es una referencia de valor l o una referencia de valor l de tipo **const** de ese tipo.
 
 En el ejemplo siguiente se declara una plantilla de estructura y, a continuación, se especializa para distintos tipos de referencia. La función `print_type_and_value` acepta una referencia de valor R como parámetro y lo reenvía a la versión especializada adecuada del método `S::print`. La función `main` muestra las diversas maneras de llamar al método `S::print`.
 

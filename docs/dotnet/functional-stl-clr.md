@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393758"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -322,7 +322,7 @@ El tipo del functor almacenado.
 |Operador|Descripción|
 |--------------|-----------------|
 |operator()|Calcula la función deseada.|
-|operador delegate_type^()|Convierte el functor a un delegado.|
+|operator delegate_type^()|Convierte el functor a un delegado.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -401,7 +401,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parámetros de plantilla
 
-*arg*<br/>
+*Arg*<br/>
 Tipo del argumento.
 
 *Diversión*<br/>
@@ -482,7 +482,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parámetros de plantilla
 
-*arg*<br/>
+*Arg*<br/>
 Tipo del argumento.
 
 *Diversión*<br/>
@@ -597,7 +597,7 @@ El tipo del functor almacenado.
 |Operador|Descripción|
 |--------------|-----------------|
 |operator()|Calcula la función deseada.|
-|operador delegate_type^()|Convierte el functor a un delegado.|
+|operator delegate_type^()|Convierte el functor a un delegado.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -702,7 +702,7 @@ El tipo del functor almacenado.
 |Operador|Descripción|
 |--------------|-----------------|
 |operator()|Calcula la función deseada.|
-|operador delegate_type^()|Convierte el functor a un delegado.|
+|operator delegate_type^()|Convierte el functor a un delegado.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -787,7 +787,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos y el valor devuelto.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -806,7 +806,7 @@ El tipo de los argumentos y el valor devuelto.
 |Operador|Descripción|
 |--------------|-----------------|
 |operator()|Calcula la función deseada.|
-|operador delegate_type^()|Convierte el functor a un delegado.|
+|operator delegate_type^()|Convierte el functor a un delegado.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -888,7 +888,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -907,7 +907,7 @@ El tipo de los argumentos.
 |Operador|Descripción|
 |--------------|-----------------|
 |operator()|Calcula la función deseada.|
-|operador delegate_type^()|Convierte el functor a un delegado.|
+|operator delegate_type^()|Convierte el functor a un delegado.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater"></a> mayor (STL/CLR)
+## <a name="greater"></a> greater (STL/CLR)
 
 La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es mayor que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.
 
@@ -989,7 +989,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1090,7 +1090,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1191,7 +1191,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1292,7 +1292,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1393,7 +1393,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1492,7 +1492,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1584,7 +1584,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1685,7 +1685,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos y el valor devuelto.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1786,7 +1786,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos y el valor devuelto.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1887,7 +1887,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos y el valor devuelto.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate"></a> Negate (STL/CLR)
+## <a name="negate"></a> negate (STL/CLR)
 
 La clase de plantilla describe un functor que, cuando se llama, devuelve su argumento negada. Usarlo especificar un objeto de función en términos de su tipo de argumento.
 
@@ -1986,7 +1986,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to"></a> Not_Equal_To (STL/CLR)
+## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento no es igual que el segundo. Usarlo especificar un objeto de función en términos de su tipo de argumento.
 
@@ -2078,7 +2078,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -2332,7 +2332,7 @@ public:
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 El tipo de los argumentos y el valor devuelto.
 
 ### <a name="member-functions"></a>Funciones miembro
@@ -2418,7 +2418,7 @@ generic<typename Arg,
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 Tipo del argumento.
 
 *Resultado*<br/>
@@ -2483,7 +2483,7 @@ generic<typename Arg>
 
 #### <a name="parameters"></a>Parámetros
 
-*arg*<br/>
+*Arg*<br/>
 Tipo del argumento.
 
 ### <a name="remarks"></a>Comentarios
@@ -2579,7 +2579,7 @@ El tipo del functor almacenado.
 |Operador|Descripción|
 |--------------|-----------------|
 |operator()|Calcula la función deseada.|
-|delegate_type ^|Convierte el functor a un delegado.|
+|delegate_type^|Convierte el functor a un delegado.|
 
 ### <a name="remarks"></a>Comentarios
 

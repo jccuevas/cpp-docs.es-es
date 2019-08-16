@@ -1,17 +1,17 @@
 ---
 title: Exportar desde un archivo DLL mediante archivos DEF
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817002"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220784"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportar desde un archivo DLL mediante archivos DEF
 
@@ -36,7 +36,10 @@ EXPORTS
 
 Si usas el [Asistente para archivos DLL de MFC](../mfc/reference/mfc-dll-wizard.md) para crear una DLL de MFC, el asistente crea un archivo DEF esqueleto para usted y lo agrega automáticamente al proyecto. Agregue los nombres de las funciones que se exportarán a este archivo. Para que no son archivos DLL en MFC, cree el archivo DEF usted mismo y agregarlo al proyecto. A continuación, vaya a **proyecto** > **propiedades** > **vinculador** > **entrada**  >  **Archivo de definición de módulo** y escriba el nombre del archivo DEF. Repita este paso para cada configuración y plataforma, o hacerlo a la vez seleccionando **configuración = todas las configuraciones de**, y **plataforma = todas las plataformas**.
 
-Si va a exportar funciones en un archivo de C++, tendrá que colocar los nombres representativos en el archivo DEF o definir las funciones exportadas con vinculación C estándar utilizando extern "C". Si tiene que colocar los nombres representativos en el archivo DEF, se puede obtener mediante la [DUMPBIN](../build/reference/dumpbin-reference.md) herramienta o mediante el enlazador [/MAP](../build/reference/map-generate-mapfile.md) opción. Tenga en cuenta que los nombres representativos producidos por el compilador serán específicos del compilador. Si coloca los nombres representativos producidos por el compilador de Visual C++ en un archivo DEF, las aplicaciones que estén vinculadas al archivo DLL deben compilarse también utilizan la misma versión de Visual C++ para que los nombres representativos de la aplicación que realiza la llamada coincidan con los nombres exportados f DEF del archivo DLL ile.
+Si va a exportar funciones en un archivo de C++, tendrá que colocar los nombres representativos en el archivo DEF o definir las funciones exportadas con vinculación C estándar utilizando extern "C". Si tiene que colocar los nombres representativos en el archivo DEF, se puede obtener mediante la [DUMPBIN](../build/reference/dumpbin-reference.md) herramienta o mediante el enlazador [/MAP](../build/reference/map-generate-mapfile.md) opción. Tenga en cuenta que los nombres representativos producidos por el compilador serán específicos del compilador. Si coloca los nombres representativos producidos por Microsoft C++ compilador (MSVC) en un archivo DEF, las aplicaciones que se vinculan al archivo DLL deben también compilarse con la misma versión de MSVC para que los nombres representativos de la aplicación que realiza la llamada coincidan con los nombres exportados archivo de definición del archivo DLL. 
+
+> [!NOTE]
+> Un archivo DLL compilado con Visual Studio 2015 puede utilizarse en las aplicaciones compiladas con Visual Studio 2017 o Visual Studio de 2019.
 
 Si está creando un [archivo DLL de extensión](../build/extension-dlls-overview.md), y exportando mediante un archivo DEF, coloque el código siguiente al principio y al final de los archivos de encabezado que contienen las clases exportadas:
 
@@ -66,7 +69,7 @@ Tenga en cuenta que MFC utiliza archivos DEF para exportar funciones y clases de
 
 - [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importación a una aplicación mediante __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -78,7 +81,7 @@ Tenga en cuenta que MFC utiliza archivos DEF para exportar funciones y clases de
 
 - [Nombres representativos](reference/decorated-names.md)
 
-- [Importar y exportar funciones inline](importing-and-exporting-inline-functions.md)
+- [Importación y exportación de funciones insertadas](importing-and-exporting-inline-functions.md)
 
 - [Importaciones mutuas](mutual-imports.md)
 

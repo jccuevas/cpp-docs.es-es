@@ -1,8 +1,6 @@
 ---
 title: 'TN058: Implementación de estado del módulo MFC'
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.implementation
 helpviewer_keywords:
 - thread state [MFC]
 - module states [MFC], managing state data
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], module states
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
-ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d803dba36b7790173b21dacb6cb34241f27dfb96
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626057"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65610961"
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058: Implementación de estado del módulo MFC
 
@@ -30,7 +28,7 @@ Antes de leer esta nota, consulte "Administrar el estado de datos de los módulo
 
 ## <a name="overview"></a>Información general
 
-Hay tres tipos de información de estado MFC: estado del módulo, el estado de proceso y estado del subproceso. A veces se pueden combinar estos tipos de estado. Por ejemplo, asignaciones de identificadores de MFC son módulo local y local de subprocesos. Esto permite que dos módulos diferentes tener diferentes mapas en cada uno de sus subprocesos.
+Hay tres tipos de información de estado MFC: Estado del módulo, el estado de proceso y estado del subproceso. A veces se pueden combinar estos tipos de estado. Por ejemplo, asignaciones de identificadores de MFC son módulo local y local de subprocesos. Esto permite que dos módulos diferentes tener diferentes mapas en cada uno de sus subprocesos.
 
 Estado de proceso y el estado de los subprocesos son similares. Estos elementos de datos son las cosas que han sido tradicionalmente las variables globales, pero que deba ser específico para un determinado proceso o subproceso para admite Win32s adecuado o compatibilidad con multithreading adecuado. Categoría a la que se ajusta un elemento de datos determinado depende de ese elemento y la semántica deseada con respecto a los límites del proceso y subproceso.
 

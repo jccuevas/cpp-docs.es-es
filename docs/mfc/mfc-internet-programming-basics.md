@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750290"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449722"
 ---
 # <a name="mfc-internet-programming-basics"></a>Fundamentos de programación para Internet de MFC
 
@@ -70,11 +70,11 @@ MFC proporciona clases que admiten la programación de Internet. Puede usar [COl
 
 ##  <a name="_core_web_sites_for_more_information"></a> Sitios Web para obtener más información
 
-Para obtener más información acerca de la tecnología de Internet de Microsoft, consulte el [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) sitio Web. (Vínculos pueden cambiar sin previo aviso.)
+Para obtener más información acerca de la tecnología de Internet de Microsoft, consulte el [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) sitio Web. (Vínculos pueden cambiar sin previo aviso.)
 
 Este sitio Web para desarrolladores contiene información sobre el uso de herramientas de desarrollo de Microsoft y las tecnologías y los artículos principales sobre conferencias recientes y futuros. Desde esta página, puede saltar a muchos sitios para desarrolladores relacionados, incluidos .NET y centros para desarrolladores de XML. También puede descargar los SDK beta y ejemplos.
 
-El [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publica especificaciones de HTML, HTTP, CGI y otras tecnologías de World Wide Web.
+El [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publica especificaciones de HTML, HTTP, CGI y otras tecnologías de World Wide Web.
 
 ##  <a name="_core_more_internet_help"></a> Más ayuda de Internet
 

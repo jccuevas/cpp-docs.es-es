@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: b6e514a6b13aced4fcd765df091810504f948588
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 384ea563853906a76e2c9993cbcedb3b15c354f2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809579"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217593"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Compatibilidad del vinculador con las DLL de carga retrasada
 
@@ -51,5 +51,5 @@ Los temas siguientes describen la DLL de carga retrasada:
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../dlls-in-visual-cpp.md)<br/>
-[Referencia MSVC del vinculador](linking.md)
+[Crear archivos DLL de C o C++ en Visual Studio](../dlls-in-visual-cpp.md)<br/>
+[Referencia del enlazador MSVC](linking.md)

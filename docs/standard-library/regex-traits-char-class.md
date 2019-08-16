@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
-ms.openlocfilehash: 6a685dfa00b49ecfa7c2da2a8618b49cbc38cc01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d359e8dcc2778c6b312b24fea93f96c3c18f9f05
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607446"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451523"
 ---
 # <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; (Clase)
 
-Especialización de `regex_traits` para **char**.
+Especialización de `regex_traits` para **Char**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,7 +26,7 @@ class regex_traits<char>
 
 ## <a name="remarks"></a>Comentarios
 
-La clase es una especialización explícita de la clase de plantilla [regex_traits](../standard-library/regex-traits-class.md) elementos del tipo **char** (de modo que pueda aprovechar las funciones de biblioteca que manipulan objetos de este tipo).
+La clase es una especialización explícita de la clase de plantilla [regex_traits](../standard-library/regex-traits-class.md) para los elementos de tipo **Char** (para que pueda aprovechar las funciones de la biblioteca que manipulan objetos de este tipo).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,12 +36,12 @@ La clase es una especialización explícita de la clase de plantilla [regex_trai
 
 ## <a name="see-also"></a>Vea también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants (Clase)](../standard-library/regex-constants-class.md)<br/>
-[regex_error (Clase)](../standard-library/regex-error-class.md)<br/>
-[Funciones de \<regex>](../standard-library/regex-functions.md)<br/>
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)<br/>
-[Operadores de \<regex>](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)<br/>
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Clase regex_constants](../standard-library/regex-constants-class.md)\
+[Clase regex_error](../standard-library/regex-error-class.md)\
+[\<funciones regex >](../standard-library/regex-functions.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores regex >](../standard-library/regex-operators.md)\
+[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Clase regex_traits](../standard-library/regex-traits-class.md)\
+[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)

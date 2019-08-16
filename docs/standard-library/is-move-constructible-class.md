@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 1b1e450338a123c51b80f40f2369207c8b987cd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c83ed4365fd0e73a7daa8b9894c5e85f20387a79
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509002"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456116"
 ---
 # <a name="ismoveconstructible-class"></a>Clase is_move_constructible
 
@@ -26,12 +26,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 El tipo que se debe evaluar
 
 ## <a name="remarks"></a>Comentarios
 
-Un predicado de tipo que se evalúa como true si el tipo *T* puede crearse mediante el uso de una operación de movimiento. Este predicado es equivalente a `is_constructible<T, T&&>`.
+Predicado de tipo que se evalúa como true si el tipo *T* se puede construir mediante una operación de movimiento. Este predicado es equivalente a `is_constructible<T, T&&>`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,4 +41,4 @@ Un predicado de tipo que se evalúa como true si el tipo *T* puede crearse media
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

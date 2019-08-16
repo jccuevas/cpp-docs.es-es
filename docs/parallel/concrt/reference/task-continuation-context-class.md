@@ -13,11 +13,11 @@ helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
 ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212862"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context (Clase)
 
@@ -73,7 +73,7 @@ El `get_current_winrt_context` método captura el contexto del subproceso del ll
 
 El valor devuelto por `get_current_winrt_context` puede utilizarse para indicar al tiempo de ejecución que la continuación debe ejecutarse en el modelo de apartamento del contexto capturado (STA frente a STA), independientemente de si la tarea antecedente es el reconocimiento de apartamento. El reconocimiento de tarea es una tarea que desajusta un tiempo de ejecución de Windows de un apartamento `IAsyncInfo` interfaz o una tarea que desciende de dicha tarea.
 
-Este método es similar a la `use_current` método, pero también está disponible para código C++ nativo sin C++ / c++ / compatibilidad con las extensiones CX. Está destinado a usuarios avanzados usando escribir C + + / código de biblioteca independiente CX nativos y los autores de llamadas en tiempo de ejecución de Windows. A menos que necesite esta funcionalidad, se recomienda la `use_current` método, que solo está disponible para C + + / clientes CX.
+Este método es similar a la `use_current` método, pero también está disponible para código C++ nativo sin C++ / c++ / compatibilidad con las extensiones CX. Está destinado a usuarios avanzados usando escritura C++código de la biblioteca /CX-agnostic nativos y los autores de llamadas en tiempo de ejecución de Windows. A menos que necesite esta funcionalidad, se recomienda la `use_current` método, que solo está disponible para C++/CX clientes.
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 

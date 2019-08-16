@@ -1,35 +1,39 @@
 ---
 title: Agregar funcionalidad con los asistentes para código (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57822579"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741638"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Agregar funcionalidad con los asistentes para código (C++)
 
 Una vez haya creado un proyecto, le interesará cambiar o ampliar su funcionalidad. Estas tareas incluyen crear clases, agregar funciones miembro y variables nuevas, y agregar métodos y propiedades de automatización. Los asistentes para código están diseñados para permitir hacer todo esto.
 
-> [!WARNING]
-> Varios asistentes de código de ATL y MFC han quedado en desuso y se quitarán en una versión futura de Visual Studio. Estos asistentes se usan con poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de estos asistentes. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
+> [!NOTE]
+> Los siguientes asistentes de código, usados con muy poca frecuencia, se han quitado de Visual Studio 2019. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de estos asistentes. El código de ejemplo para estas tecnologías se archiva en Microsoft Docs y el repositorio VCSamples de GitHub.
+
+- Asistente para componentes ATL COM+ 1.0
+- Asistente para componentes de páginas Active Server ATL
+- Asistente para proveedores OLE DB ATL
+- Asistente para páginas de propiedades ATL
+- Asistente para consumidores OLE DB ATL
+- Consumidor ODBC MFC
+- Clase MFC de un control ActiveX
+- Clase MFC de TypeLib
+
 
 > [!NOTE]
 >  Ahora, mediante la [ventana Propiedades](/visualstudio/ide/reference/properties-window), se pueden agregar controladores de mensajes y asignarles mensajes, y reemplazar funciones virtuales de MFC.
 
-## <a name="accessing-visual-c-code-wizards"></a>Acceder a los asistentes para código de Visual C++
+## <a name="accessing-c-code-wizards"></a>Acceder a los asistentes para código de C++
 
-Hay tres ubicaciones desde las que se puede acceder a los asistentes para código de Visual C++:
+Hay tres ubicaciones desde las que se puede acceder a los asistentes para código de C++:
 
 - En el menú **Proyecto**, el comando **Agregar nuevo elemento** permite mostrar el cuadro de diálogo `Add New Item`, que sirve para agregar archivos nuevos al proyecto. El comando **Agregar clase** muestra el cuadro de diálogo [Agregar clase](../ide/add-class-dialog-box.md), que a su vez abre asistentes para cada uno de los tipos de clase que se pueden agregar al proyecto. El comando **Agregar recurso** muestra el cuadro de diálogo [Agregar recurso](../windows/add-resource-dialog-box.md), desde el que se puede crear o seleccionar un recurso para agregarlo al proyecto.
 
@@ -72,6 +76,6 @@ Hay tres ubicaciones desde las que se puede acceder a los asistentes para códig
 ## <a name="see-also"></a>Vea también
 
 [Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Navegar por la estructura de clases](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Tipos de proyecto de Visual C++](../build/reference/visual-cpp-project-types.md)<br>
-[Tipos de archivos creados para proyectos de Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Navegación en el código de C++ en Visual Studio](../ide/navigate-code-cpp.md)<br>
+[Tipos de proyectos de C++ en Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
+[Tipos de archivos creados para proyectos de C++ de Visual Studio](../build/reference/file-types-created-for-visual-cpp-projects.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 6ccb2c0c54f8094110d37e6dfd2c504fa8173641
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627505"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454758"
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
 
@@ -23,16 +23,19 @@ Define las clases de plantilla de contenedor [unordered_map](../standard-library
 #include <unordered_map>
 ```
 
+> [!NOTE]
+> La \<Biblioteca > de unordered_map también utiliza `#include <initializer_list>` la instrucción.
+
 ### <a name="classes"></a>Clases
 
-|Clase|Descripción|
+|Clase|DESCRIPCIÓN|
 |-|-|
 |[unordered_map (Clase)](../standard-library/unordered-map-class.md)|Almacena la tabla de hash de pares {key, mapped}.|
 |[unordered_multimap (Clase)](../standard-library/unordered-multimap-class.md)|Almacena la tabla de hash de pares {key, mapped}.|
 
 ### <a name="functions"></a>Funciones
 
-|Función|Descripción|
+|Función|DESCRIPCIÓN|
 |-|-|
 |[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Comprueba si el objeto unordered_map del lado izquierdo del operador no es igual que el objeto unordered_map del lado derecho.|
 |[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Comprueba si el objeto unordered_map del lado izquierdo del operador es igual que el objeto unordered_map del lado derecho.|
@@ -43,5 +46,5 @@ Define las clases de plantilla de contenedor [unordered_map](../standard-library
 
 ## <a name="see-also"></a>Vea también
 
-[unordered_multiset (Clase)](../standard-library/unordered-multiset-class.md)<br/>
-[unordered_set (Clase)](../standard-library/unordered-set-class.md)<br/>
+[unordered_multiset (Clase)](../standard-library/unordered-multiset-class.md)\
+[unordered_set (Clase)](../standard-library/unordered-set-class.md)

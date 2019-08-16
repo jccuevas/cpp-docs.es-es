@@ -1,19 +1,17 @@
 ---
-title: Filtrar Agregar herramientas de compilación personalizadas a proyectos de MSBuild
+title: Procedimiento Agregar herramientas de compilación personalizadas a proyectos de MSBuild
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 05f160e650c0dd717d7ce0f29259f866d751fdba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 812932d9e668ab5ee0eb75eadbf75be3d791cddb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815273"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220717"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Filtrar Agregar herramientas de compilación personalizadas a proyectos de MSBuild
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Procedimiento Agregar herramientas de compilación personalizadas a proyectos de MSBuild
 
 Una herramienta de compilación personalizada es una herramienta de línea de comandos, definido por el usuario que está asociada a un archivo determinado.
 
@@ -50,6 +48,6 @@ Pasos de compilación personalizada y herramientas de compilación personalizada
 
 ## <a name="see-also"></a>Vea también
 
-[Tutorial: Uso de MSBuild para crear un proyecto de Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Tutorial: Uso de MSBuild para crear un proyecto de C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Cómo: Usar de eventos de compilación en proyectos de MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Cómo: Agregar un paso personalizado de compilación a proyectos de MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)

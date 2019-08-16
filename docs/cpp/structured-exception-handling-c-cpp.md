@@ -9,40 +9,40 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4555690476bc149687c680fc2baae53b96658a4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534568"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498491"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Control de excepciones estructurado (SEH) es una extensión de Microsoft C para controlar determinadas situaciones excepcionales de código, como errores de hardware correctamente. Aunque Windows y Visual C++ admiten SEH, se recomienda que utilice el control de excepciones de C++ estándar de ISO porque hace que el código más portátil y flexible. No obstante, para mantener el código existente o para determinados tipos de programas, aún tendrá que usan SEH.
+El control de excepciones estructurado (SEH) es una extensión de Microsoft a C que controla ciertas situaciones de código excepcionales, como errores de hardware, sin problemas. Aunque Windows y Microsoft C++ admiten SEH, se recomienda usar el control de excepciones C++ de ISO estándar, ya que hace que el código sea más portátil y flexible. Sin embargo, para mantener el código existente o para determinados tipos de programas, es posible que tenga que usar SEH.
 
-**Específicas de Microsoft:**
+**Específico de Microsoft:**
 
 ## <a name="grammar"></a>Gramática
 
-*try-except-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *expresión* **)** *compound-statement*
+*try-except-Statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
-*try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
+*try-finally-Statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **_ _ try** *instrucción compuesta* **_ _ Finally** *instrucción compuesta*
 
 ## <a name="remarks"></a>Comentarios
 
-Con SEH, puede asegurarse de que se liberen los recursos como bloques de memoria y los archivos correctamente si la ejecución finaliza inesperadamente. También puede controlar determinados problemas, por ejemplo, memoria insuficiente, mediante el uso de código estructurado conciso que no se basa en **goto** instrucciones ni realiza pruebas detalladas de los códigos de retorno.
+Con SEH, puede asegurarse de que los recursos como los bloques de memoria y los archivos se liberan correctamente si la ejecución finaliza inesperadamente. También puede controlar problemas específicos (por ejemplo, memoria insuficiente) mediante el uso de código estructurado conciso que no depende de instrucciones **goto** ni de probar los códigos de retorno.
 
-Las instrucciones try-except y try-finally mencionadas en este artículo son extensiones de Microsoft al lenguaje C. Admiten SEH al permitir que las aplicaciones tomen el control de un programa después de que se produzcan eventos que de lo contrario finalizarían la ejecución. Aunque SEH funciona con archivos de código fuente de C++, no está diseñado específicamente para C++. Si se utiliza SEH en un programa de C++ que se compila con la [/EHa o/EHsc](../build/reference/eh-exception-handling-model.md) opción, los destructores para objetos locales se denominan pero otro comportamiento de ejecución podría no ser los esperados. Para obtener un ejemplo, vea el ejemplo más adelante en este artículo. En la mayoría de los casos, en lugar de SEH se recomienda usar la norma ISO [control de excepciones de C++](../cpp/try-throw-and-catch-statements-cpp.md), que también admite Visual C++. Mediante el control de excepciones de C++, puede asegurarse de que el código sea más portátil y puede controlar excepciones de cualquier tipo.
+Las instrucciones try-except y try-finally mencionadas en este artículo son extensiones de Microsoft al lenguaje C. Admiten SEH al permitir que las aplicaciones tomen el control de un programa después de que se produzcan eventos que de lo contrario finalizarían la ejecución. Aunque SEH funciona con archivos de código fuente de C++, no está diseñado específicamente para C++. Si utiliza SEH en un C++ programa que se compila mediante la opción [/EHA o/EHsc](../build/reference/eh-exception-handling-model.md) , se llama a los destructores para los objetos locales, pero es posible que otro comportamiento de ejecución no sea el esperado. Para ver una ilustración, vea el ejemplo más adelante en este artículo. En la mayoría de los casos, en lugar de SEH, se recomienda usar el [ C++ control de excepciones](../cpp/try-throw-and-catch-statements-cpp.md)de ISO estándar C++ , que el compilador de Microsoft también admite. Mediante el control de excepciones de C++, puede asegurarse de que el código sea más portátil y puede controlar excepciones de cualquier tipo.
 
-Si tiene código de C que se utiliza SEH, se pueden mezclar código C++ que usa el control de excepciones de C++. Para obtener información, consulte [controlar las excepciones estructuradas en C++](../cpp/exception-handling-differences.md).
+Si tiene código de C que usa SEH, puede combinarlo con C++ el código que usa C++ el control de excepciones. Para obtener más información, vea [controlar excepciones C++estructuradas en ](../cpp/exception-handling-differences.md).
 
 Existen dos mecanismos de SEH:
 
-- [Los controladores de excepciones](../cpp/writing-an-exception-handler.md), o **__except** bloques, que pueden responder a la excepción o descartarla.
+- [Controladores de excepciones](../cpp/writing-an-exception-handler.md)o bloques **_ _ Except** , que pueden responder o descartar la excepción.
 
-- [Los controladores de terminación](../cpp/writing-a-termination-handler.md), o **__finally** bloques, que siempre se llaman si una excepción provoca la terminación o no.
+- [Controladores de terminación](../cpp/writing-a-termination-handler.md)o bloques **_ _ Finally** , a los que se llama siempre, independientemente de que una excepción cause la terminación o no.
 
 Estas dos clases de controladores son distintas, pero están estrechamente relacionadas mediante un proceso conocido como "desenredo de la pila". Cuando se produce una excepción estructurada, Windows busca el controlador de excepciones instalado más recientemente que está activo actualmente. El controlador puede hacer una de tres cosas:
 
@@ -52,9 +52,9 @@ Estas dos clases de controladores son distintas, pero están estrechamente relac
 
 - Reconocer la excepción y controlarla.
 
-El controlador de excepciones que reconoce la excepción puede no estar en la función que se estaba ejecutando cuando se produjo la excepción. En algunos casos, puede estar en una función situada mucho más arriba en la pila. La función que se está ejecutando actualmente y todas las demás funciones del marco de pila finalizan. Durante este proceso, la pila se "desenreda"; es decir, las variables locales de no estáticos de las funciones finalizadas se borran de la pila.
+El controlador de excepciones que reconoce la excepción puede no estar en la función que se estaba ejecutando cuando se produjo la excepción. En algunos casos, puede estar en una función situada mucho más arriba en la pila. La función que se está ejecutando actualmente y todas las demás funciones del marco de pila finalizan. Durante este proceso, la pila se "Desenreda", es decir, las variables locales no estáticas de las funciones terminadas se borran de la pila.
 
-A medida que se desenreda la pila, el sistema operativo llama a cualquier controlador de terminación que haya escrito para cada función. Mediante un controlador de terminación, se pueden limpiar recursos que de lo contrario quedarían abiertos debido a una finalización anormal. Si ha especificado una sección crítica, puede salir del controlador de finalización. Si el programa se va a cerrar, se pueden realizar otras tareas de mantenimiento como cerrar y quitar archivos temporales.
+A medida que se desenreda la pila, el sistema operativo llama a cualquier controlador de terminación que haya escrito para cada función. Mediante un controlador de terminación, se pueden limpiar recursos que de lo contrario quedarían abiertos debido a una finalización anormal. Si ha escrito una sección crítica, puede salir en el controlador de terminación. Si el programa se va a cerrar, se pueden realizar otras tareas de mantenimiento como cerrar y quitar archivos temporales.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -66,7 +66,7 @@ A medida que se desenreda la pila, el sistema operativo llama a cualquier contro
 
 ## <a name="example"></a>Ejemplo
 
-Como se indicó anteriormente, los destructores para objetos locales se llaman si se utiliza SEH en un programa de C++ y se compila utilizando el **/EHa** o **/EHsc** opción. Sin embargo, el comportamiento durante la ejecución puede no ser el esperado si también se utilizan excepciones de C++. En este ejemplo se muestra estas diferencias de comportamiento.
+Como se indicó anteriormente, se llama a los destructores para los objetos locales si se utiliza C++ SEH en un programa y se compila mediante la opción **/EHA** o **/EHsc** . Sin embargo, el comportamiento durante la ejecución puede no ser el esperado si también se utilizan excepciones de C++. En este ejemplo se muestran estas diferencias de comportamiento.
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Si usas **/EHsc** para compilar este código, pero la macro de control de pruebas local `CPPEX` es undefined, no hay ninguna ejecución de la `TestClass` destructor y la salida tiene el aspecto como este:
+Si usa **/EHsc** para compilar este código pero la macro `CPPEX` de control de pruebas local no está definida, no se ejecuta el `TestClass` destructor y la salida tiene el siguiente aspecto:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-Si usas **/EHsc** para compilar el código y `CPPEX` se define mediante el uso de `/DCPPEX` (de modo que se produce una excepción de C++), el `TestClass` ejecuta el destructor y el resultado tendrá un aspecto similar al siguiente:
+Si usa **/EHsc** para compilar el código `CPPEX` y `/DCPPEX` se define mediante (para que se C++ produzca una excepción), el `TestClass` destructor se ejecuta y el resultado tiene el siguiente aspecto:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Si usas **/EHa** para compilar el código, el `TestClass` destructor se ejecuta independientemente de si se produjo la excepción mediante el uso de `std::throw` o mediante SEH para desencadenar la excepción, es decir, si `CPPEX` definido o no. La salida es similar a la siguiente:
+Si usa **/EHA** para compilar el código, `TestClass` el destructor `std::throw` se ejecuta independientemente de si la excepción se produjo mediante o mediante SEH para desencadenar la excepción, es decir, si `CPPEX` se define o no. La salida es similar a la siguiente:
 
 ```Output
 Throwing C++ exception
@@ -147,5 +147,5 @@ Para obtener más información, consulte [/EH (Modelo de control de excepciones)
 [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Controlar errores y excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[(Windows) de control de excepciones estructurado](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)
+[Errores y control de excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Control de excepciones estructurado (Windows)](/windows/win32/debug/structured-exception-handling)

@@ -1,12 +1,12 @@
 ---
 title: Información general sobre las convenciones ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
-ms.translationtype: MT
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639451"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220990"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Información general sobre las convenciones ABI ARM64
 
@@ -50,6 +50,24 @@ Como con el ARM32 versión de Windows en Windows ARM64 se ejecuta en modo little
 Que se ejecutan en ARM64 de Windows permite que el hardware de CPU para controlar de forma transparente los accesos desalineados. En una mejora con respecto a AArch32, esta compatibilidad ahora también funciona para todos los accesos de entero (incluidos los accesos de múltiples palabras) y para accesos de punto flotante.
 
 Sin embargo, los accesos a la memoria caché (dispositivo) sigue siempre se deben alinear. Si el código posiblemente podría leer o escribir datos mal alineados de la memoria caché, debe asegurarse alinear todos los accesos.
+
+Alineación del diseño predeterminado para las variables locales:
+
+| Tamaño en bytes | Alineación en bytes |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+Alineación del diseño predeterminado para las variables estáticas y variables globales:
+
+| Tamaño en bytes | Alineación en bytes |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registros de enteros
 
@@ -185,7 +203,9 @@ De hecho, es el mismo que las reglas siguientes C.12–C.15 asignar argumentos a
 
 Se devuelven los valores enteros en x0.
 
-Valores de punto flotante se devuelven en s0, d0/v0 según corresponda.
+Valores de punto flotante se devuelven en s0, d0 o v0, según corresponda.
+
+Valores HFA y HVA se devuelven en s0 s3, d0 d3 o v0-v3, según corresponda.
 
 Tipos devueltos por el valor se tratan de forma diferente dependiendo de si tienen algunas propiedades. Tipos que tienen todas estas propiedades,
 
@@ -231,7 +251,7 @@ Debe describirse con tablas de función dinámica a través de código que se ge
 
 ## <a name="cycle-counter"></a>Contador de ciclos
 
-Todas las CPU de ARMv8 son necesarios para admitir un contador de ciclos registrar un registro de 64 bits que configura Windows para que sean legibles en cualquier nivel de la excepción, incluido el modo de usuario. Se puede acceder a través de la PMCCNTR_EL0 especial registrar, utilizando el código de operación MSR en código de ensamblado, o el `_ReadStatusReg` intrínsecas en el código de C o C++.
+Todas las CPU de ARMv8 son necesarios para admitir un contador de ciclos registrar un registro de 64 bits que configura Windows para que sean legibles en cualquier nivel de la excepción, incluido el modo de usuario. Se puede acceder a través de la PMCCNTR_EL0 especial registrar, utilizando el código de operación MSR en código de ensamblado, o la `_ReadStatusReg` intrínseco en C /C++ código.
 
 El contador de ciclos aquí es un contador de ciclos auténtico, no un reloj de pared. La frecuencia de recuento varía según la frecuencia del procesador. Si cree que debe conocer la frecuencia del ciclo de contador, no debería usar el contador de ciclos. En su lugar, desea medir el tiempo de reloj, en los que debe usar `QueryPerformanceCounter`.
 

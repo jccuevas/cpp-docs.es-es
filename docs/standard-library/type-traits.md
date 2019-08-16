@@ -7,16 +7,16 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006735"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455045"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Define las plantillas para las constantes de tiempo de compilación que aportan información sobre las propiedades de sus argumentos de tipo, o generan tipos transformados.
+Define plantillas para las constantes en tiempo de compilación que proporcionan información sobre las propiedades de sus argumentos de tipo o producen tipos transformados.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,22 +26,22 @@ Define las plantillas para las constantes de tiempo de compilación que aportan 
 
 ## <a name="remarks"></a>Comentarios
 
-Las clases y plantillas de \<type_traits > se utilizan para admitir la inferencia, clasificación y transformación en tiempo de compilación. También se usan para detectar errores relacionados con el tipo y que le ayudarán a optimizar el código genérico. Rasgos de tipo unario describen una propiedad de un tipo, rasgos de tipo binario describen la relación entre los tipos y rasgos de transformación modifican una propiedad de un tipo.
+Las clases y plantillas de \<type_traits > se usan para admitir la inferencia, clasificación y transformación de tipos en tiempo de compilación. También se usan para detectar errores relacionados con los tipos y para ayudarle a optimizar el código genérico. Los rasgos de tipos unarios describen una propiedad de un tipo, los rasgos de tipo binario describen una relación entre los tipos y los rasgos de transformación modifican una propiedad de un tipo.
 
-La clase auxiliar `integral_constant` y sus especializaciones de plantilla `true_type` y `false_type` forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *cumple*, se deriva públicamente, directa o indirectamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *contiene false*, se deriva públicamente, directa o indirectamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La clase `integral_constant` auxiliar y sus `true_type` especializaciones de plantilla y `false_type` forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *contiene true*, se deriva públicamente, directa o indirectamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *contiene false*, se deriva públicamente, directa o indirectamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificador de tipo* o *rasgo de transformación* es una plantilla que toma uno o más argumentos de plantilla y tiene un miembro `type`, que es un sinónimo del tipo modificado.
 
 ### <a name="alias-templates"></a>Plantillas de alias
 
-Para simplificar las expresiones de rasgos de tipo, [plantillas de alias](../cpp/aliases-and-typedefs-cpp.md) para `typename some_trait<T>::type` se proporcionan, donde *some_trait* es el nombre de clase de plantilla. Por ejemplo, [add_const](../standard-library/add-const-class.md) tiene la plantilla de alias para su tipo `add_const_t` definida así:
+Para simplificar las expresiones de tipo rasgos, se `typename some_trait<T>::type` proporcionan plantillas de [alias](../cpp/aliases-and-typedefs-cpp.md) para, donde *some_trait* es el nombre de la clase de plantilla. Por ejemplo, [add_const](../standard-library/add-const-class.md) tiene la plantilla de alias para su tipo `add_const_t` definida así:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Estos son los alias proporcionados para el `type` miembros:
+Estos son los alias proporcionados para los `type` miembros:
 
 ||||
 |-|-|-|
@@ -89,7 +89,7 @@ Categorías de tipo compuesto
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Comprueba si el tipo es una referencia.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Comprueba si el tipo es aritmético.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Comprueba si el tipo es **void** o aritmético.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Comprueba si el tipo es **nulo** o aritmético.|
 |[is_object](../standard-library/is-object-class.md)|Comprueba si el tipo es un tipo de objeto.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Comprueba si el tipo es escalar.|
 |[is_compound](../standard-library/is-compound-class.md)|Comprueba si el tipo no es escalar.|
@@ -100,7 +100,7 @@ Propiedades de tipo
 |||
 |-|-|
 |[is_const](../standard-library/is-const-class.md)|Comprueba si el tipo es **const**.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Comprueba si el tipo es **volátil**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Comprueba si el tipo es **volatile**.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Comprueba si el tipo es trivial.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Comprueba si el tipo se puede copiar de manera trivial.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Comprueba si el tipo es un tipo de diseño estándar.|
@@ -110,6 +110,7 @@ Propiedades de tipo
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Comprueba si el tipo es una clase polimórfica.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Comprueba si el tipo es una clase abstracta.|
 |[is_final](../standard-library/is-final-class.md)|Comprueba si el tipo es un tipo de clase marcado como `final`.|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Comprueba si el tipo es un entero con signo.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Comprueba si el tipo es un entero sin signo.|
 |[is_constructible](../standard-library/is-constructible-class.md)|Comprueba si el tipo se puede construir con los tipos de argumento especificados.|
@@ -119,6 +120,8 @@ Propiedades de tipo
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Comprueba si al primer tipo puede asignarse un valor del segundo tipo.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Comprueba si a un tipo puede asignarse un valor de referencia constante del tipo.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Comprueba si a un tipo puede asignarse un valor de referencia R del tipo.|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|Comprueba si el tipo se puede destruir.|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Comprueba si el tipo no usa ninguna operación no trivial cuando se construye usando los tipos especificados.|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Comprueba si el tipo no usa ninguna operación no trivial cuando se construye de manera predeterminada.|
@@ -135,12 +138,15 @@ Propiedades de tipo
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Comprueba si el tipo se puede asignar mediante el tipo especificado y se sabe que la asignación no se inicia.|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Comprueba si el tipo se puede construir mediante copia y se sabe que la asignación no se inicia.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Comprueba si el tipo se puede asignar mediante movimiento y se sabe que la asignación no se inicia.|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Comprueba si el tipo se puede destruir y se sabe que el destructor no se inicia.|
 |`has_virtual_destructor`|Comprueba si el tipo tiene un destructor virtual.|
-| [is_invocable](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante los tipos de argumento especificados.<br/> Agregado en C ++ 17. |
-| [is_invocable_r](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante los tipos de argumento especificados y el resultado es convertible al tipo especificado.<br/> Agregado en C ++ 17. |
-| [is_nothrow_invocable](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante el argumento especificado, tipos y se sabe que no producen excepciones.<br/> Agregado en C ++ 17. |
-| [is_nothrow_invocable_r](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante el argumento especificado, tipos y se sabe que no se inicia las excepciones y el resultado es convertible al tipo especificado.<br/> Agregado en C ++ 17. |
+|`has_unique_object_representations`||
+| [is_invocable](is-invocable-classes.md) | Comprueba si se puede invocar un tipo al que se puede llamar mediante los tipos de argumento especificados.<br/> Agregado en C++ 17. |
+| [is_invocable_r](is-invocable-classes.md) | Comprueba si se puede invocar un tipo al que se puede llamar mediante los tipos de argumento especificados y el resultado se puede convertir al tipo especificado.<br/> Agregado en C++ 17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Comprueba si se puede invocar un tipo al que se puede llamar mediante los tipos de argumento especificados y se sabe que no inicia excepciones.<br/> Agregado en C++ 17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Comprueba si se puede invocar un tipo al que se puede llamar mediante los tipos de argumento especificados y se sabe que no inicia excepciones y el resultado se puede convertir al tipo especificado.<br/> Agregado en C++ 17. |
 
 Consultas de propiedad de tipo
 
@@ -162,9 +168,9 @@ Modificaciones de const y volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Genera un **const** tipo del tipo.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Genera un **volátil** tipo del tipo.|
-|[add_cv](../standard-library/add-cv-class.md)|Genera un **const volatile** tipo del tipo.|
+|[add_const](../standard-library/add-const-class.md)|Genera un tipo **const** a partir de un tipo.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Genera un tipo **volátil** a partir de un tipo.|
+|[add_cv](../standard-library/add-cv-class.md)|Genera un tipo **volatile const** a partir de un tipo.|
 |[remove_const](../standard-library/remove-const-class.md)|Genera un tipo no constante a partir del tipo.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Genera un tipo no volátil a partir del tipo.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Genera un tipo no constante y no volátil a partir del tipo.|
@@ -208,10 +214,18 @@ Otras transformaciones
 |[conditional](../standard-library/conditional-class.md)|Si la condición es true, genera el primer tipo especificado, de lo contrario, el segundo tipo especificado.|
 |[decay](../standard-library/decay-class.md)|Genera el tipo tal y como se pasa por valor. Crea un tipo que no es de referencia, const o volatile, o bien convierte un puntero al tipo.|
 |[enable_if](../standard-library/enable-if-class.md)|Si la condición es true, genera el tipo especificado, de lo contrario, no genera ningún tipo.|
-|[invoke_result](invoke-result-class.md)|Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados. <br/>Agregado en C ++ 17. |
-|[result_of](../standard-library/result-of-class.md)|Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados. <br/>Agregado en C ++ 14, en desuso en C ++ 17. |
+|[invoke_result](invoke-result-class.md)|Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados. <br/>Agregado en C++ 17. |
+|[result_of](../standard-library/result-of-class.md)|Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados. <br/>Agregado en C++ 14, en desuso en C++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Genera el tipo entero subyacente para un tipo de enumeración.|
+
+Rasgos de operadores lógicos
+
+|||
+|-|-|
+|[cooperación](../standard-library/conjunction-class.md)||
+|[disyunción](../standard-library/disjunction-class.md)||
+|[negación](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Vea también
 
-[\<functional>](../standard-library/functional.md)<br/>
+[\<functional>](../standard-library/functional.md)

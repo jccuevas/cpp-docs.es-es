@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 4098a1467b0f81b5f66a2e45a4bb2138e8c1c262
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356249"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449952"
 ---
 # <a name="c-amp-overview"></a>Información general sobre C++ AMP
 
@@ -102,7 +102,7 @@ void CppAmpMethod() {
 
 Los mismos elementos básicos están presentes, pero se utilizan construcciones de C++ AMP:
 
-- Datos: Utilice las matrices de C++ para construir tres C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objetos. Se proporcionan cuatro valores para construir un `array_view` objeto: los valores de datos, el rango, el tipo de elemento y la longitud de la `array_view` objeto en cada dimensión. El rango y tipo se pasan como parámetros de tipo. Los datos y la longitud se pasan como parámetros del constructor. En este ejemplo, la matriz de C++ que se pasa al constructor es unidimensional. El rango y longitud que se usan para construir la forma rectangular de los datos en el `array_view` objeto y los valores se usan para rellenar la matriz de datos. La biblioteca en tiempo de ejecución también incluye el [array (clase)](../../parallel/amp/reference/array-class.md), que tiene una interfaz similar a la `array_view` clase y se explica más adelante en este artículo.
+- Datos: Usa C++ matrices para construir tres C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objetos. Se proporcionan cuatro valores para construir un `array_view` objeto: los valores de datos, el rango, el tipo de elemento y la longitud de la `array_view` objeto en cada dimensión. El rango y tipo se pasan como parámetros de tipo. Los datos y la longitud se pasan como parámetros del constructor. En este ejemplo, la matriz de C++ que se pasa al constructor es unidimensional. El rango y longitud que se usan para construir la forma rectangular de los datos en el `array_view` objeto y los valores se usan para rellenar la matriz de datos. La biblioteca en tiempo de ejecución también incluye el [array (clase)](../../parallel/amp/reference/array-class.md), que tiene una interfaz similar a la `array_view` clase y se explica más adelante en este artículo.
 
 - Iteración: El [parallel_for_each (función) (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) proporciona un mecanismo para recorrer en iteración los elementos de datos, o *dominio del cálculo*. En este ejemplo, el dominio del cálculo especificado por `sum.extent`. El código que desea ejecutar se encuentra en una expresión lambda, o *función kernel*. El `restrict(amp)` indica que se usa solo el subconjunto del lenguaje C++ que C++ AMP pueda acelerar.
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Bibliotecas matemáticas
 
-C++ AMP incluye dos bibliotecas matemáticas. La biblioteca de precisión doble en la [precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) proporciona compatibilidad para las funciones de precisión doble. También proporciona compatibilidad para las funciones de precisión sencilla, aunque sigue siendo necesaria la compatibilidad de doble precisión en el hardware. Cumple con el [especificación C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). El acelerador debe admitir doble precisión completa. Puede determinar si lo hace comprobando el valor de la [accelerator::supports_double_precision miembro de datos](reference/accelerator-class.md#supports_double_precision). La librería matemática rápida, en el [fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contiene otro conjunto de funciones matemáticas. Estas funciones, que solo admiten `float` operandos, ejecutar más rápidamente, pero no son tan exactas como las de la biblioteca matemática de precisión doble. Las funciones contenidas en el \<amp_math.h > archivo de encabezado y todas se declaran con `restrict(amp)`. Las funciones de la \<cmath > archivo de encabezado se importan en ambos el `fast_math` y `precise_math` espacios de nombres. El **restringir** palabra clave se usa para distinguir el \<cmath > versión y la versión C++ AMP. El código siguiente calcula el logaritmo en base 10, mediante el método rápido de cada valor que se encuentra en el dominio del cálculo.
+C++ AMP incluye dos bibliotecas matemáticas. La biblioteca de precisión doble en la [precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) proporciona compatibilidad para las funciones de precisión doble. También proporciona compatibilidad para las funciones de precisión sencilla, aunque sigue siendo necesaria la compatibilidad de doble precisión en el hardware. Cumple con el [especificación C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). El acelerador debe admitir doble precisión completa. Puede determinar si lo hace comprobando el valor de la [accelerator::supports_double_precision miembro de datos](reference/accelerator-class.md#supports_double_precision). La librería matemática rápida, en el [fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contiene otro conjunto de funciones matemáticas. Estas funciones, que solo admiten `float` operandos, ejecutar más rápidamente, pero no son tan exactas como las de la biblioteca matemática de precisión doble. Las funciones contenidas en el \<amp_math.h > archivo de encabezado y todas se declaran con `restrict(amp)`. Las funciones de la \<cmath > archivo de encabezado se importan en ambos el `fast_math` y `precise_math` espacios de nombres. El **restringir** palabra clave se usa para distinguir el \<cmath > versión y la versión C++ AMP. El código siguiente calcula el logaritmo en base 10, mediante el método rápido de cada valor que se encuentra en el dominio del cálculo.
 
 ```cpp
 #include <amp.h>
@@ -473,13 +473,13 @@ Al igual que otras bibliotecas de C++, puede utilizar C++ AMP en sus aplicacione
 
 - [Uso de C++ AMP en aplicaciones de UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Tutorial: Crear un componente básico de Windows Runtime en C++ y llamarlo desde JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Tutorial: Crear un componente básico de Windows Runtime en C++ y llamarlo desde JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [Optimizador de recorridos de una aplicación de la ventana Store en JavaScript y C++ de mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Optimizador de recorridos de una aplicación de la ventana Store en JavaScript y C++ de mapas de Bing](https://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Cómo usar C++ AMP de C# con el tiempo de ejecución de Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Cómo usar C++ AMP de C# con el tiempo de ejecución de Windows](https://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Cómo usar C++ AMP desde C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Cómo usar C++ AMP desde C#](https://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Llamar a funciones nativas desde código administrado](../../dotnet/calling-native-functions-from-managed-code.md)
 
@@ -508,4 +508,4 @@ Módulo y la división de enteros sin signo tienen un rendimiento significativam
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Sintaxis de la expresión lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Referencia (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Programación en paralelo en código nativo](http://go.microsoft.com/fwlink/p/?linkid=238472)
+[Programación en paralelo en código nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)

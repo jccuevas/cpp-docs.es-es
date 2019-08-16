@@ -1,19 +1,17 @@
 ---
 title: Notas técnicas de MFC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.technotes
 helpviewer_keywords:
 - MFC, technical notes
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 82e107e82596b1063b507851c5943797bffbc0c5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3621bca8116e3dd8edf202f4efa758bcb2590fcc
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262732"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65610923"
 ---
 # <a name="mfc-technical-notes"></a>Notas técnicas de MFC
 

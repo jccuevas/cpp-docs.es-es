@@ -11,11 +11,11 @@ helpviewer_keywords:
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
 ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292489"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Dirección base fija)
 
@@ -49,5 +49,5 @@ Si se especifica /FIXED:NO, se generará una sección de cambio de ubicación en
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 9632227619d0cad337a1cb026a20c9af0ec9d2a7
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006414"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244147"
 ---
 # <a name="divides-struct"></a>divides (struct)
 
@@ -39,12 +39,13 @@ struct divides<void>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*, *T*, *U* un tipo que admita un `operator/` que toma operandos de los tipos especificados o deducidos.
+*Tipo*, *T*, *U*\
+Tipo que admite un `operator/` que toma operandos de los tipos especificados o deducidos.
 
-*Izquierda*<br/>
+*Izquierda*\
 Operando izquierdo de la operación de división. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *T*.
 
-*Derecha*<br/>
+*Correcto*\
 Operando derecho de la operación de división. La plantilla no especializada toma un argumento de referencia de valor l de tipo *tipo*. La plantilla especializada realiza el reenvío de valor l directo y los argumentos de referencia de valor r del tipo deducen *U*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -99,21 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 The vector v1 = ( 0 7 14 21 28 35 )
 The vector v2 = ( 2 4 6 8 10 12 )
 The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
-*/
 ```
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<functional>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

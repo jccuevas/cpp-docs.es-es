@@ -1,17 +1,17 @@
 ---
 title: Constructores (C++)
-ms.date: 04/06/2018
+ms.date: 07/02/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: a45cee1abd9351a8fef56769706fe8944a7965b8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 98e4a35a362b659307d92e57d826e7ac85b9bd09
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779107"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552296"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-Este es un ejemplo del problema de Most Vexing Parse. Dado que la expresión del ejemplo se puede interpretar como la declaración de una función o como la invocación de un constructor predeterminado, y dado que los analizadores de C++ prefieren las declaraciones sobre otras cosas, la expresión se trata como una declaración de función. Para obtener más información, consulte [Most Vexing Parse](http://en.wikipedia.org/wiki/Most_vexing_parse).
+Este es un ejemplo del problema de Most Vexing Parse. Dado que la expresión del ejemplo se puede interpretar como la declaración de una función o como la invocación de un constructor predeterminado, y dado que los analizadores de C++ prefieren las declaraciones sobre otras cosas, la expresión se trata como una declaración de función. Para obtener más información, consulte [Most Vexing Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
 
 Si se declaran constructores no predeterminados, el compilador no proporcionará un constructor predeterminado:
 
@@ -636,7 +636,11 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
+::: moniker range=">=vs-2017"
+
 **Visual Studio 2017 versión 15.7 y posteriores:** El **mediante** instrucción **/std: c ++ 17** modo pone en el ámbito de todos los constructores de la clase base excepto los que tienen una firma idéntica a los constructores de la clase derivada. En general, es mejor usar constructores que heredan cuando la clase derivada no declara ningún constructor o miembro de datos nuevo. Vea también [mejoras en Visual Studio 2017 versión 15.7](../overview/cpp-conformance-improvements.md#improvements_157).
+
+::: moniker-end
 
 Una plantilla de clase puede heredar todos los constructores de un argumento de tipo si dicho tipo especifica una clase base:
 

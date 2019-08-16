@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777290"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503565"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (clase)
 
@@ -493,7 +493,7 @@ Una variante que se usa para especificar argumentos de salida del comando.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) en el SDK de Windows.
+Consulte [IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) en el SDK de Windows.
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) valor, tal como se describe en el SDK de Windows.
+Un [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) valor, tal como se describe en el SDK de Windows.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1307,7 +1307,7 @@ Invalidar `OnFrameWindowActivate` para reaccionar ante la `OnFrameWindowActivate
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-Esta función miembro se llama el marco de trabajo cuando el [FullScreen](https://msdn.microsoft.com/library/aa752119.aspx) propiedad ha cambiado.
+Esta función miembro se llama el marco de trabajo cuando el [FullScreen](/previous-versions/aa752119\(v=vs.85\)) propiedad ha cambiado.
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ Invalidar `OnHideUI` para reaccionar ante la `HideUI` notificación del control 
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-Esta función miembro se llama el marco de trabajo cuando el [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx) propiedad ha cambiado.
+Esta función miembro se llama el marco de trabajo cuando el [MenuBar](/previous-versions/aa752131\(v=vs.85\)) propiedad ha cambiado.
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ La dirección URL para el que no se pudo navegación.
 El nombre del marco en el que el recurso es ser mostrada, o NULL si el recurso no se dirigió a ningún marco con nombre.
 
 *dwError*<br/>
-Un código de estado error, si está disponible. Para obtener una lista de los posibles códigos de estado HTTP y HRESULT, vea [NavigateError códigos de estado de evento.](https://msdn.microsoft.com/library/aa768365.aspx)
+Un código de estado error, si está disponible. Para obtener una lista de los posibles códigos de estado HTTP y HRESULT, vea [códigos de estado de evento NavigateError.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
 
 *pbCancel*<br/>
 Especifica si se debe cancelar la navegación a una página de error o cualquier búsqueda automática adicional. Si es TRUE (valor predeterminado), continúe con la navegación a una página de error o la búsqueda automática; Si es FALSE, cancelar la navegación a una página de error o la búsqueda automática.
@@ -1490,7 +1490,7 @@ Especifica si se debe cancelar la navegación a una página de error o cualquier
 
 Invalide este método para proporcionar control de errores de exploración personalizada.
 
-Para obtener más información, consulte [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)
+Para obtener más información, consulte [DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ Invalidar `OnShowUI` para reaccionar ante la `ShowUI` notificación del control 
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-Esta función miembro se llama el marco de trabajo cuando el [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) propiedad ha cambiado.
+Esta función miembro se llama el marco de trabajo cuando el [StatusBar](/previous-versions//aa768270\(v=vs.85\)) propiedad ha cambiado.
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ Una cadena que contiene el texto de la barra de estado nuevo.
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-Esta función miembro se llama el marco de trabajo cuando el [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx) propiedad ha cambiado.
+Esta función miembro se llama el marco de trabajo cuando el [TheaterMode](/previous-versions/aa768273\(v=vs.85\)) propiedad ha cambiado.
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ Para HTML, puede cambiar el título; mientras aún está descargando el HTML, se
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-Esta función miembro se llama el marco de trabajo cuando el [barra de herramientas](https://msdn.microsoft.com/library/aa768274.aspx) propiedad ha cambiado.
+Esta función miembro se llama el marco de trabajo cuando el [barra de herramientas](/previous-versions/aa768274\(v=vs.85\)) propiedad ha cambiado.
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>Parámetros
 
 *nLevel*<br/>
-La dirección de la variable que especifica el nivel de actualización. Las variables posibles se definen en [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), en el SDK de Windows.
+La dirección de la variable que especifica el nivel de actualización. Las variables posibles se definen en [RefreshConstants](/previous-versions/aa768363\(v=vs.85\)), en el SDK de Windows.
 
 ### <a name="remarks"></a>Comentarios
 

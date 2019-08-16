@@ -1,21 +1,21 @@
 ---
-title: cadena (atributo de COM de C++)
+title: String (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023937"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514007"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indica que unidimensional **char**, **wchar_t**, `byte` (o equivalentes) el puntero a este tipo de matriz o matriz debe tratarse como una cadena.
+Indica que la matriz **Char**, **wchar_t**, `byte` (o equivalente) unidimensional o el puntero a dicha matriz se deben tratar como una cadena.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,11 +25,11 @@ Indica que unidimensional **char**, **wchar_t**, `byte` (o equivalentes) el punt
 
 ## <a name="remarks"></a>Comentarios
 
-El **cadena** atributo de C++ tiene la misma funcionalidad que el [cadena](/windows/desktop/Midl/string) atributo MIDL.
+El atributo de **cadena** C++ tiene la misma funcionalidad que el atributo MIDL de [cadena](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra cómo usar **cadena** en una interfaz y en una definición de tipo:
+En el código siguiente se muestra cómo usar String en una interfaz y en una definición de **tipo** :
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -50,10 +50,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Se aplica a**|Matriz o puntero a una matriz, el parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|Matriz o puntero a una matriz, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
 ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223498"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT (clase)
 
@@ -73,7 +73,7 @@ El tipo de carácter de la `CStrBufT` clase. Puede ser uno de los siguientes:
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CStrBufT::AUTO_LENGTH](#auto_length)|Determinar automáticamente la nueva longitud de la cadena de la versión.|
 |[CStrBufT::SET_LENGTH](#set_length)|Establecer la longitud del objeto de cadena en tiempo de GetBuffer|

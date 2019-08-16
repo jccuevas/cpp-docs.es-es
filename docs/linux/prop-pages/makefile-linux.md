@@ -1,15 +1,23 @@
 ---
 title: Propiedades generales (proyecto de archivos Make de C++ para Linux) | Microsoft Docs
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a64066ad3c8d7e6ca8bfa9d3d82670ff1da4b527
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524597"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821453"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Propiedades del proyecto de archivos Make (C++ para Linux)
+
+::: moniker range="vs-2015"
+
+La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones posteriores.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 A continuación se muestra una lista parcial de las propiedades disponibles en un proyecto de archivo Make de Linux. Muchas de las propiedades de los proyectos de archivos Make son idénticas a las de la aplicación de consola de C++ de Linux.
 
@@ -20,7 +28,7 @@ Propiedad. | Descripción | Opciones
 Directorio de salida | Especifica una ruta de acceso relativa al directorio de archivos de salida; puede incluir variables de entorno.
 Directorio intermedio | Especifica una ruta de acceso relativa al directorio de archivos intermedios; puede incluir variables de entorno.
 Archivo de registro de compilación | Especifica el archivo de registro de compilación en el que se escribe cuando está habilitada la opción de registro de compilación.
-Tipo de configuración | Especifica el tipo de salida que genera esta configuración. | **Biblioteca dinámica (.so)**: biblioteca dinámica (.so)<br>**Biblioteca estática (.a)**: biblioteca estática (.a)<br>**Aplicación (.out)**: aplicación (.out)<br>**Archivo Make**: archivo Make<br>
+Tipo de configuración | Especifica el tipo de salida que genera esta configuración. | **Biblioteca dinámica (.so)** : biblioteca dinámica (.so)<br>**Biblioteca estática (.a)** : biblioteca estática (.a)<br>**Aplicación (.out)** : aplicación (.out)<br>**Archivo Make**: archivo Make<br>
 Máquina de compilación remota | Máquina o dispositivo de destino que debe usarse para la compilación, implementación y depuración remotas.
 Directorio raíz de la compilación remota | Especifica una ruta de acceso a un directorio de la máquina o el dispositivo remotos.
 Directorio del proyecto de compilación remota | Especifica una ruta de acceso a un directorio de la máquina o el dispositivo remotos para el proyecto.
@@ -101,3 +109,5 @@ Línea de comandos de Compilar | Especifica la línea de comandos que se ejecuta
 Línea de comandos de Recompilar todo | Especifica la línea de comandos que se ejecuta para el comando "Recompilar todo". Esto se ejecuta en el sistema remoto.
 Línea de comandos de limpieza | Especifica la línea de comandos que se ejecuta para el comando "Limpiar". Esto se ejecuta en el sistema remoto.
 Salidas | Especifica las salidas generadas por la compilación remota en el sistema remoto.
+
+::: moniker-end

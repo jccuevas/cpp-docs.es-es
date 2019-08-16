@@ -1,16 +1,44 @@
 ---
-title: 'Errores de BSCMAKE: de BK1500 a BK4505'
-ms.date: 11/17/2017
+title: Errores y advertencias de BSCMAKE
+ms.date: 04/16/2019
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
-ms.openlocfilehash: b24e82f22a54772541d414c1f7b676a943c08d66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e6abc334d9ecf5df54d200ab242c91a7035ab226
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479708"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856367"
 ---
-# <a name="bscmake-errors-bk1500-through-bk4505"></a>Errores de BSCMAKE: de BK1500 a BK4505
+# <a name="bscmake-errors-and-warnings-bkxxxx"></a>Errores y advertencias de BSCMAKE (BKxxxx)
 
-En esta sección es una referencia a los errores y advertencias generadas por la BSCMAKE herramienta de compilación.
+En esta sección es una referencia a los errores y advertencias generadas por la BSCMAKE herramienta de compilación. BSCMAKE errores y advertencias tienen el formato "bk"*xxxx*, donde *xxxx* es un número de cuatro dígitos.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="error-messages"></a>Mensajes de error
+
+[Error BSCMAKE BK1503](bscmake-error-bk1503.md) \
+[Error BSCMAKE BK1504](bscmake-error-bk1504.md) \
+[Error BSCMAKE BK1505](bscmake-error-bk1505.md) \
+[Error BSCMAKE BK1506](bscmake-error-bk1506.md) \
+[Error BSCMAKE BK1507](bscmake-error-bk1507.md) \
+[Error BSCMAKE BK1508](bscmake-error-bk1508.md) \
+[Error BSCMAKE BK1509](bscmake-error-bk1509.md) \
+[Error BSCMAKE BK1510](bscmake-error-bk1510.md) \
+[Error BSCMAKE BK1512](bscmake-error-bk1512.md) \
+[Error BSCMAKE BK1513](bscmake-error-bk1513.md) \
+[Error BSCMAKE BK1514](bscmake-error-bk1514.md) \
+[Error BSCMAKE BK1515](bscmake-error-bk1515.md) \
+[Error BSCMAKE BK1516](bscmake-error-bk1516.md) \
+[Error BSCMAKE BK1517](bscmake-error-bk1517.md)
+
+## <a name="warning-messages"></a>Mensajes de advertencia
+
+[BSCMAKE BK4502 de advertencia](bscmake-warning-bk4502.md) \
+[BSCMAKE BK4503 de advertencia](bscmake-warning-bk4503.md) \
+[BSCMAKE BK4504 de advertencia](bscmake-warning-bk4504.md)
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Referencia de BSCMake](../../build/reference/bscmake-reference.md)

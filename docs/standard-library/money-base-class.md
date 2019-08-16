@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610458"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455562"
 ---
 # <a name="moneybase-class"></a>money_base (Clase)
 
@@ -28,17 +28,17 @@ struct pattern
 
 ## <a name="remarks"></a>Comentarios
 
-La enumeración `part` describe los posibles valores de los elementos del campo de matriz en el patrón de estructura. Los valores de `part` son:
+La enumeración `part` describe los valores posibles de los elementos del campo de matriz en el patrón de estructura. Los valores de `part` son:
 
-- `none` Para hacer coincidir cero o más espacios o generar nada.
+- `none`para buscar coincidencias con cero o más espacios o no generar nada.
 
-- `sign` para buscar o generar un signo positivo o negativo.
+- `sign`para buscar o generar un signo positivo o negativo.
 
-- `space` Para hacer coincidir cero o más espacios o generar un espacio.
+- `space`para buscar coincidencias con cero o más espacios o generar un espacio.
 
-- `symbol` para buscar o generar un símbolo de moneda.
+- `symbol`para hacer coincidir o generar un símbolo de moneda.
 
-- `value` para buscar o generar un valor monetario.
+- `value`para hacer coincidir o generar un valor monetario.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,4 +48,4 @@ La enumeración `part` describe los posibles valores de los elementos del campo 
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,17 +1,17 @@
 ---
 title: Preguntas más frecuentes sobre archivos DLL de MFC
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
-ms.translationtype: MT
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57821942"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220936"
 ---
 # <a name="dll-frequently-asked-questions"></a>Preguntas más frecuentes sobre archivos DLL
 
@@ -41,11 +41,7 @@ Una DLL de MFC que crea un nuevo subproceso MFC durante el inicio dejará de res
 
 ## <a name="mfc_multithreaded_2"></a> ¿Puede una aplicación multiproceso tener acceso a una DLL de MFC en distintos subprocesos?
 
-Aplicaciones multiproceso con comportamiento pueden tener acceso a archivos DLL de MFC estándar vinculados dinámicamente a MFC y archivos DLL de extensión MFC desde subprocesos diferentes. Y, a partir de Visual C++ versión 4.2, una aplicación puede tener acceso a archivos DLL de MFC estándar vinculados estáticamente a MFC desde varios subprocesos que se crean en la aplicación.
-
-Antes de la versión 4.2, sólo un subproceso externo puede adjuntar a una DLL de MFC regulares que están vinculados estáticamente a MFC.
-
-Tenga en cuenta que el término USRDLL ya no se usa en la documentación de Visual C++. DLL MFC estándar que se vincula estáticamente a MFC tiene las mismas características que el archivo USRDLL anterior.
+Aplicaciones multiproceso con comportamiento pueden tener acceso a archivos DLL de MFC estándar vinculados dinámicamente a MFC y archivos DLL de extensión MFC desde subprocesos diferentes. Una aplicación puede tener acceso a archivos DLL de MFC estándar vinculados estáticamente a MFC desde varios subprocesos que se crean en la aplicación.
 
 ## <a name="mfc_prohibited_classes"></a> ¿Existen clases MFC o funciones que no se puede usar en una DLL de MFC?
 
@@ -69,4 +65,4 @@ Una posible causa de la pérdida de memoria es que MFC crea objetos temporales q
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

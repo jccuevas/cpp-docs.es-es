@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814974"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221200"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Llamar a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic
 
@@ -72,4 +72,4 @@ Para que archivos DLL ser llamado por programas escritos en Visual Basic, la té
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
-ms.openlocfilehash: f7327b7d2b0cc9fa4b617a9a6033116c43db6258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16c111a0fb8608615abaee495680fa38920b6c77
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528680"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447348"
 ---
 # <a name="compiler-error-c2990"></a>Error del compilador C2990
 
@@ -40,7 +40,7 @@ ref struct GC;
 ref struct GC {};   // C2990
 ```
 
-C2990 también puede producirse debido a un cambio importante en el compilador de Visual C++ para Visual C++ 2005; Ahora, el compilador requiere que sea idéntica con respecto a la especificación de la plantilla varias declaraciones para el mismo tipo.
+C2990 también puede producirse debido a un cambio importante en Microsoft C++ compilador para Visual Studio 2005; Ahora, el compilador requiere que sea idéntica con respecto a la especificación de la plantilla varias declaraciones para el mismo tipo.
 
 El ejemplo siguiente genera el error C2990:
 

@@ -1,17 +1,17 @@
 ---
-title: exclusivo (atributo de COM de C++)
+title: Unique (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: c5d7a2d60dc295a4390f777a9ff3718f41321ddd
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038795"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514899"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,11 +25,11 @@ Especifica un puntero único.
 
 ## <a name="remarks"></a>Comentarios
 
-El **único** atributo de C++ tiene la misma funcionalidad que el [único](/windows/desktop/Midl/unique) atributo MIDL.
+El atributo **Unique** C++ tiene la misma funcionalidad que el atributo MIDL [único](/windows/win32/Midl/unique) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte la [ref](ref-cpp.md) ejemplo para un ejemplo de uso de **único**.
+Vea el ejemplo de [referencia](ref-cpp.md) para obtener un ejemplo de uso de **Unique**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,10 +37,10 @@ Consulte la [ref](ref-cpp.md) ejemplo para un ejemplo de uso de **único**.
 
 |||
 |-|-|
-|**Se aplica a**|**TypeDef**, **struct**, **unión**, parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|**typedef**, **struct**, **Union**, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

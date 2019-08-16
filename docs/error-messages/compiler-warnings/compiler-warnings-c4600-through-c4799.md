@@ -1,6 +1,6 @@
 ---
-title: Compilador advertencias C4600 a C4799
-ms.date: 07/03/2018
+title: Advertencias del compilador de C4600 a C4799
+ms.date: 04/21/2019
 f1_keywords:
 - C4609
 - C4658
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C4767
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: d1b1e06d3a2be71d6386554c704c547c6f2a4672
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3df17b115797f4d68621854d072c41aca14a0fd8
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328379"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857562"
 ---
-# <a name="compiler-warnings-c4600-through-c4799"></a>Compilador advertencias C4600 a C4799
+# <a name="compiler-warnings-c4600-through-c4799"></a>Advertencias del compilador de C4600 a C4799
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de advertencia generados por el compilador.
 
@@ -131,7 +131,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': ADVERTENCIA!! atributo puede causar una generación de código no válido: usar con precaución|
 |[Advertencia del compilador (nivel 1) C4685](compiler-warning-level-1-c4685.md)|se esperaba '> >' pero se encontró '>>' al analizar los parámetros de plantilla|
 |[Advertencia del compilador (nivel 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'tipo definido por el usuario': posible cambio de comportamiento, cambio en la convención de llamada devuelta definida por el usuario|
-|[Advertencia (Error) del compilador C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': una clase abstracta sellada no puede implementar una interfaz 'interface'|
+|[Advertencia C4687 (Error) del compilador](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': una clase abstracta sellada no puede implementar una interfaz 'interface'|
 |[Advertencia del compilador (nivel 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|'constraint': la lista de restricciones contiene un tipo privado de ensamblado 'type'|
 |Advertencia del compilador (nivel 1) C4689|'%c': carácter en #pragma detect_mismatch; no admitido #pragma omitidas|
 |[Advertencia del compilador (nivel 4) C4690](../../error-messages/compiler-warnings/compiler-warning-level-4-c4690.md)|\[ emitidl (pop)]: más elementos POP que Push|
@@ -151,7 +151,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4711](../../error-messages/compiler-warnings/compiler-warning-level-1-c4711.md)|función 'función' seleccionada para expansión automática alineada|
 |[Advertencia del compilador (nivel 4) C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)|la función 'función' marcada como __forceinline no está entre línea|
 |[Advertencia del compilador (nivel 1) C4715](../../error-messages/compiler-warnings/compiler-warning-level-1-c4715.md)|'function': no todas las rutas de acceso de control devuelven un valor|
-|[Advertencia (nivel 1, Error) del compilador C4716](../../error-messages/compiler-warnings/compiler-warning-level-1-c4716.md)|'function': debe devolver un valor|
+|[Advertencia del compilador (nivel 1, Error) C4716](../../error-messages/compiler-warnings/compiler-warning-level-1-c4716.md)|'function': debe devolver un valor|
 |[Advertencia del compilador (nivel 1) C4717](../../error-messages/compiler-warnings/compiler-warning-level-1-c4717.md)|'function': recursiva en todas las rutas de control, función provocará el desbordamiento de pila en tiempo de ejecución|
 |[Advertencia del compilador (nivel 4) C4718](compiler-warning-level-4-c4718.md)|'llamada de función': llamada recursiva no tiene efectos secundarios, eliminar|
 |Advertencia del compilador (nivel 1) C4719|Al especificar Qfast - utilice 'f' como sufijo para indicar precisión sencilla se encontró una constante doble|
@@ -164,17 +164,17 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4727](../../error-messages/compiler-warnings/compiler-warning-level-1-c4727.md)|PCH denominado archivo_pch con la misma marca de tiempo en archivo_obj_1 y archivo_obj_2.  Usar el primer PCH.|
 |Advertencia del compilador (nivel 1) C4728|/ Opción Yl-omitida porque se requiere la referencia PCH|
 |Advertencia del compilador (nivel 4) C4729|función demasiado grande para advertencias basadas en gráficos de flujos|
-|[Compilador advertencia (nivel 1) C4730](../../error-messages/compiler-warnings/compiler-warning-level-1-c4730.md)advertencia del compilador (nivel 1) C4730|'main': mezcla de _m64 y expresiones pueden ocasionar código incorrecto de punto flotante|
-|[Advertencia del compilador (nivel 1) C4731](../../error-messages/compiler-warnings/compiler-warning-level-1-c4731.md)|'pointer': 'registro' modificado por código ensamblador en línea de registro de puntero de marco|
+|[(Nivel 1) C4730 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4730.md)advertencia del compilador (nivel 1) C4730|'main': mezcla de _m64 y expresiones pueden ocasionar código incorrecto de punto flotante|
+|[(Nivel 1) C4731 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4731.md)|'pointer': 'registro' modificado por código ensamblador en línea de registro de puntero de marco|
 |Advertencia del compilador (nivel 1) C4732|intrínseco '%s' no se admite en esta arquitectura|
-|[Advertencia del compilador (nivel 1) C4733](../../error-messages/compiler-warnings/compiler-warning-level-1-c4733.md)|Inline asm que asigna a 'FS: 0': controlador no está registrado como controlador seguro|
-|[Advertencia del compilador (nivel 3) C4738](../../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)|almacenando el resultado flotante de 32 bits en memoria; posible pérdida de rendimiento|
+|[(Nivel 1) C4733 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4733.md)|Inline asm que asigna a 'FS: 0': controlador no está registrado como controlador seguro|
+|[Advertencia (nivel 3) C4738 del compilador](../../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)|almacenando el resultado flotante de 32 bits en memoria; posible pérdida de rendimiento|
 |[Advertencia del compilador (nivel 1) C4739](compiler-warning-level-1-c4739.md)|la referencia a la variable 'var' supera su espacio de almacenamiento|
-|[Advertencia del compilador (nivel 4) C4740](../../error-messages/compiler-warnings/compiler-warning-level-4-c4740.md)|flujo dentro o fuera del código inline asm suprime la optimización global|
-|[Advertencia del compilador (nivel 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' tiene una alineación diferente en 'archivo1' y 'archivo2': número y número|
-|[Advertencia del compilador (nivel 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' tiene un tamaño diferente en 'archivo1' y 'archivo2': número y el número de bytes|
-|[Advertencia del compilador (nivel 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' tiene un tipo diferente en 'archivo1' y 'archivo2': 'type1' y 'type2'|
-|[Advertencia del compilador C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|acceso volátil de '*expresión*' está sujeta a /volatile:\<iso&#124;ms >; considere el uso de funciones intrínsecas __iso_volatile_load/store|
+|[(Nivel 4) C4740 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-4-c4740.md)|flujo dentro o fuera del código inline asm suprime la optimización global|
+|[(Nivel 1) C4742 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' tiene una alineación diferente en 'archivo1' y 'archivo2': número y número|
+|[(Nivel 1) C4743 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' tiene un tamaño diferente en 'archivo1' y 'archivo2': número y el número de bytes|
+|[(Nivel 1) C4744 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' tiene un tipo diferente en 'archivo1' y 'archivo2': 'type1' y 'type2'|
+|[Advertencia C4746 del compilador](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|acceso volátil de '*expresión*' está sujeta a /volatile:\<iso&#124;ms >; considere el uso de funciones intrínsecas __iso_volatile_load/store|
 |[Advertencia del compilador (nivel 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Llamada administrada 'entrypoint': No se puede ejecutar código administrado en un bloqueo del cargador, incluido el DLL entrypoint y las llamadas alcanzadas desde el punto|
 |Advertencia del compilador (nivel 4) C4749|condicionalmente compatible: offsetof aplicado al tipo que no son estándar diseño '*tipo*'|
 |[Advertencia del compilador (nivel 1) C4750](compiler-warning-level-1-c4750.md)|'identificador': función con _alloca() insertada en un bucle|
@@ -189,15 +189,20 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 3) C4768|se omiten los atributos __declspec anteriores a la especificación de vinculación|
 |Advertencia C4770 del compilador|valida parcialmente enum '*nombre*' utilizar como índice|
 |Advertencia C4771 del compilador|Los límites se deben crear con un puntero simple; MPX intrínseca que se ignorará|
-|[Del compilador (nivel 1, Error) de la advertencia C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import hace referencia a un tipo de una biblioteca de tipos que faltan; 'falta_tipo' como marcador de posición|
+|[Advertencia del compilador (nivel 1, Error) C4772](../../error-messages/compiler-warnings/compiler-warning-level-1-c4772.md)|#import hace referencia a un tipo de una biblioteca de tipos que faltan; 'falta_tipo' como marcador de posición|
 |Advertencia del compilador (nivel 4) C4774|'*cadena*': se esperaba en el argumento de cadena de formato *número* no es literal de cadena|
 |Advertencia del compilador (nivel 3) C4775|ha utilizado una extensión en la cadena de formato '*cadena*'de la función'*función*'|
 |Advertencia del compilador (nivel 1) C4776|' %*carácter*'no se permite en la cadena de formato de la función'*función*'|
 |Advertencia del compilador (nivel 4) C4777|'*función*': cadena de formato '*cadena*'requiere un argumento de tipo'*type1*', pero el argumento variádico *número* tiene el tipo '*type2*'|
 |Advertencia del compilador (nivel 3) C4778|'*función*': sin terminar la cadena de formato '*cadena*'|
-|[Advertencia del compilador (nivel 1) C4788](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|'identifier': identificador se ha truncado a 'número' caracteres|
-|[Advertencia del compilador (nivel 1) C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|se producirá una saturación del búfer 'identificador' con un tamaño de N bytes; se escribirán M bytes empezando en el desplazamiento L|
+|[(Nivel 1) C4788 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4788.md)|'identifier': identificador se ha truncado a 'número' caracteres|
+|[(Nivel 1) C4789 de advertencia del compilador](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|se producirá una saturación del búfer 'identificador' con un tamaño de N bytes; se escribirán M bytes empezando en el desplazamiento L|
 |Advertencia del compilador (nivel 2) C4792|la función '%s' declarada usando sysimport a hacer referencia desde código nativo; biblioteca de importación requerida para vincular|
-|[Advertencia del compilador (niveles 1 y 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|'function': función compilada como nativa: \n\t'reason'|
+|[Advertencia del compilador (nivel 1 y 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|'function': función compilada como nativa: \n\t'reason'|
 |[Advertencia del compilador (nivel 1) C4794](compiler-warning-level-1-c4794.md)|segmento de almacenamiento local de subprocesos de variable '%s' cambiado de '%s' a '%s'|
 |[Advertencia del compilador (nivel 1) C4799](../../error-messages/compiler-warnings/compiler-warning-level-1-c4799.md)|la función 'función' tiene una instrucción máquina EMMS|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Advertencias del compilador C4000 - C5999](compiler-warnings-c4000-c5999.md)

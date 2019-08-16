@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039402"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400926"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador que están desactivadas de forma predeterminada
+# <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador desactivadas de forma predeterminada
 
 El compilador admite las advertencias que están desactivadas de forma predeterminada, porque la mayoría de los desarrolladores no le resulten útiles. En algunos casos, advierte acerca de una opción de estilo o expresiones comunes en código antiguo. Son otras advertencias acerca del uso de una extensión de Microsoft para el lenguaje. En otros casos, indican un área donde los programadores a menudo realizan suposiciones incorrectas, lo que pueden provocar un comportamiento inesperado o no definido. Si está habilitada, algunas de estas advertencias pueden aparecer varias veces en encabezados de la biblioteca. Las bibliotecas en tiempo de ejecución de C y las bibliotecas estándar de C++ están diseñadas para no emitir ninguna advertencia sólo en el nivel de advertencia [/W4](../build/reference/compiler-option-warning-level.md).
 
@@ -159,7 +159,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup> esta advertencia está disponible a partir de Visual Studio 2019 RTM.<br/>
 ::: moniker-end
-<sup>Perm</sup> esta advertencia está desactivada, a menos que el [/ permissive-](../build/reference/permissive-standards-conformance.md) se establece la opción del compilador.<br/>
+<sup>Perm</sup> esta advertencia está desactivada, a menos que el [/ permissive-](../build/reference/permissive-standards-conformance.md) se establece la opción del compilador.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Advertencias desactivado de forma predeterminada en versiones anteriores
 

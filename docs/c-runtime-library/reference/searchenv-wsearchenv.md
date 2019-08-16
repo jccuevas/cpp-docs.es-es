@@ -35,11 +35,11 @@ helpviewer_keywords:
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
 ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356776"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -80,10 +80,10 @@ void _wsearchenv(
 *filename*<br/>
 Nombre del archivo que se va a buscar.
 
-*VarName*<br/>
+*varname*<br/>
 Entorno en el que se va a buscar.
 
-*ruta de acceso*<br/>
+*pathname*<br/>
 Búfer en el que se va a almacenar la ruta de acceso completa.
 
 ## <a name="remarks"></a>Comentarios

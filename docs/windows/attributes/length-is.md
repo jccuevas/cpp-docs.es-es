@@ -1,21 +1,21 @@
 ---
-title: length_is (C++ atributo COM)
+title: length_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039915"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514530"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
-Especifica el número de elementos de matriz que se transmitan.
+Especifica el número de elementos de matriz que se van a transmitir.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,15 +26,15 @@ Especifica el número de elementos de matriz que se transmitan.
 ### <a name="parameters"></a>Parámetros
 
 *expression*<br/>
-Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
+Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
 ## <a name="remarks"></a>Comentarios
 
-El **length_is** C++ atributo tiene la misma funcionalidad que el [length_is](/windows/desktop/Midl/length-is) atributo MIDL.
+El atributo **length_is** C++ tiene la misma funcionalidad que el atributo MIDL [length_is](/windows/win32/Midl/length-is) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
+Vea [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -42,10 +42,10 @@ Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar un
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

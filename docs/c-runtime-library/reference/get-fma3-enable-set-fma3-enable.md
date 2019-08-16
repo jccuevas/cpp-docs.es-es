@@ -20,11 +20,11 @@ helpviewer_keywords:
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
 ms.openlocfilehash: 19eabc3b5a11246d5b0056bdafbb169e2a7de9f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332200"
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -39,7 +39,7 @@ int _get_FMA3_enable();
 
 ### <a name="parameters"></a>Parámetros
 
-*Marca*<br/>
+*flag*<br/>
 Establézcalo en 1 para habilitar las implementaciones de FMA3 de las funciones de punto flotante biblioteca math transcendentales en X64 plataformas, o 0 para usar las implementaciones que no usan instrucciones de FMA3.
 
 ## <a name="return-value"></a>Valor devuelto

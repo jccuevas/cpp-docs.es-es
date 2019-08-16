@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774924"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447297"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procedimiento Definir y utilizar clases y Structs (C++ / c++ / CLI)
 
@@ -127,7 +127,7 @@ Puede controlar la visibilidad de los tipos de Common Language Runtime (CLR) de 
 
 `public` indica que un tipo es visible para cualquier archivo de código fuente que contiene un `#using` la directiva para el ensamblado que contiene el tipo.  `private` indica que un tipo no es visible para los archivos de código fuente que contienen un `#using` la directiva para el ensamblado que contiene el tipo. Sin embargo, los tipos privados son visibles dentro del mismo ensamblado. De forma predeterminada, la visibilidad de una clase es `private`.
 
-De forma predeterminada antes de Visual C++ 2005, los tipos nativos tenían accesibilidad pública fuera del ensamblado. Habilitar [advertencia del compilador (nivel 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) para ayudarle a ver dónde se utilizan los tipos nativos privados incorrectamente. Use la [make_public](../preprocessor/make-public.md) pragma para dar accesibilidad pública a un tipo nativo en un archivo de código fuente que no se puede modificar.
+De forma predeterminada antes de Visual Studio 2005, los tipos nativos tenían accesibilidad pública fuera del ensamblado. Habilitar [advertencia del compilador (nivel 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) para ayudarle a ver dónde se utilizan los tipos nativos privados incorrectamente. Use la [make_public](../preprocessor/make-public.md) pragma para dar accesibilidad pública a un tipo nativo en un archivo de código fuente que no se puede modificar.
 
 Para obtener más información, vea [#using (directiva)](../preprocessor/hash-using-directive-cpp.md).
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-El ejemplo siguiente muestra que el compilador de Visual C++ llama a una función de la clase más derivada (aunque se requiera una conversión para que uno o varios parámetros coincidan) y no llama a una función de una clase base que es una coincidencia mejor para la llamada de función.
+El ejemplo siguiente muestra que Microsoft C++ compilador llama a una función de la clase más derivada, incluso si se requiere una conversión para que coincida con uno o varios de los parámetros y no llamar a una función en una clase base que es una coincidencia mejor para la llamada de función.
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ El recolector de elementos no utilizados de CLR elimina los objetos no utilizado
 
 Un finalizador de Visual C++ no es igual que el método <xref:System.Object.Finalize%2A>. (En la documentación de CLR, el finalizador y el método <xref:System.Object.Finalize%2A> se usan como sinónimos). El recolector de elementos no utilizados llama al método <xref:System.Object.Finalize%2A>, que invoca cada finalizador en una cadena de herencia de la clase. A diferencia de los destructores de Visual C++, una llamada al finalizador de clases derivadas no hace que el compilador invoque el finalizador en todas las clases base.
 
-Dado que el compilador de Visual C++ admite que los recursos se liberen de forma determinista, no intente implementar los métodos <xref:System.IDisposable.Dispose%2A> o <xref:System.Object.Finalize%2A>. Sin embargo, si está familiarizado con estos métodos, a continuación se muestra cómo se asignan un finalizador de Visual C++ y el destructor que llama al finalizador al patrón de <xref:System.IDisposable.Dispose%2A>:
+Dado que Microsoft C++ compilador admite la liberación determinista de recursos, no intente implementar la <xref:System.IDisposable.Dispose%2A> o <xref:System.Object.Finalize%2A> métodos. Sin embargo, si está familiarizado con estos métodos, a continuación se muestra cómo se asignan un finalizador de Visual C++ y el destructor que llama al finalizador al patrón de <xref:System.IDisposable.Dispose%2A>:
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Un tipo administrado puede utilizar también recursos administrados que sería preferible liberar de forma determinista, y no dejar que el recolector de elementos no utilizados los libere de forma no determinista en algún momento después de que el objeto no se necesite. La liberación determinista de recursos puede mejorar significativamente el rendimiento.
 
-El compilador de Visual C++ permite la definición de un destructor para limpiar objetos de forma determinista. Utilice el destructor para liberar todos los recursos que desee liberar de forma determinista.  Si hay un finalizador, llámelo desde el destructor para evitar la duplicación del código.
+Microsoft C++ compilador permite la definición de un destructor para limpiar los objetos de manera determinista. Utilice el destructor para liberar todos los recursos que desee liberar de forma determinista.  Si hay un finalizador, llámelo desde el destructor para evitar la duplicación del código.
 
 ```cpp
 // compile with: /clr /c

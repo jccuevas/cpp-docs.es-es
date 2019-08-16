@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: 08510ecc3b7469e8f88a61dcb0df28541e170892
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbc39a169f9a4bbac3e78b208b3a1a31e4e30ff2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666459"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456376"
 ---
 # <a name="maxfixedsize-class"></a>max_fixed_size (Clase)
 
@@ -36,19 +36,19 @@ class max_fixed_size
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Max*|Clase máxima que determina el número máximo de elementos que se van a almacenar en `freelist`.|
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[max_fixed_size](#max_fixed_size)|Construye un objeto de tipo `max_fixed_size`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[allocated](#allocated)|Aumenta el número de bloques de memoria asignada.|
 |[deallocated](#deallocated)|Reduce el número de bloques de memoria asignada.|
@@ -72,13 +72,13 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro no hace nada. Esta función miembro se llama después de cada llamada correcta por `cache_freelist::allocate` al operador **nuevo**. El argumento *_Nx* es el número de bloques de memoria del fragmento asignado por el operador **nuevo**.
+La función miembro no hace nada. Se llama a esta función miembro después de cada llamada `cache_freelist::allocate` correcta por al operador **New**. El argumento *_Nx* es el número de bloques de memoria del fragmento asignado por el operador **New**.
 
 ## <a name="deallocated"></a>  max_fixed_size::deallocated
 
@@ -90,13 +90,13 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro no hace nada. Se llama a esta función miembro después de cada llamada por `cache_freelist::deallocate` al operador **eliminar**. El argumento *_Nx* es el número de bloques de memoria del fragmento desasignado por el operador **eliminar**.
+La función miembro no hace nada. Se llama a esta función miembro después de cada `cache_freelist::deallocate` llamada realizada por al operador **Delete**. El argumento *_Nx* es el número de bloques de memoria del fragmento desasignados por el operador **Delete**.
 
 ## <a name="full"></a>  max_fixed_size::full
 
@@ -108,11 +108,11 @@ bool full();
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si `Max <= _Nblocks`; en caso contrario, **false**.
+**true** si `Max <= _Nblocks`; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve **true**, `deallocate` coloca el bloque de memoria en la lista libre; si devuelve false, `deallocate` llama al operador **eliminar** desasignar el bloque.
+Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve **true**, `deallocate` coloca el bloque de memoria en la lista libre; si devuelve false, `deallocate` llama al operador **Delete** para desasignar el bloque.
 
 ## <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size
 
@@ -152,4 +152,4 @@ Esta función miembro aumenta el valor almacenado `_Nblocks`. Esta función miem
 
 ## <a name="see-also"></a>Vea también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

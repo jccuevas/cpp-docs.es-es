@@ -16,21 +16,14 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: b6d2ac108652e33fdd76abaac9b982840d4fce7f
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565339"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956955"
 ---
 # <a name="ltmapgt-operators"></a>Operadores de &lt;map&gt;
-
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-|[operator!= (multimap)](#op_neq_multimap)|[operator&gt; (multimap)](#op_gt_multimap)|[operator&gt;= (multimap)](#op_gt_eq_multimap)|
-|[operator&lt; (multimap)](#op_lt_multimap)|[operator&lt;= (multimap)](#op_lt_eq_multimap)|[operator== (multimap)](#op_eq_eq_multimap)|
 
 ## <a name="op_neq"></a> operator!=
 
@@ -44,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -90,10 +83,11 @@ int main( )
    else
       cout << "The maps m1 and m3 are equal." << endl;
 }
-/* Output:
+```
+
+```Output
 The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
-*/
 ```
 
 ## <a name="op_lt"></a> operator&lt;
@@ -108,10 +102,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -154,13 +148,14 @@ int main( )
    else
       cout << "The map m1 is not less than the map m3." << endl;
 }
-/* Output:
-The map m1 is less than the map m2.
-The map m1 is not less than the map m3.
-*/
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+```Output
+The map m1 is less than the map m2.
+The map m1 is not less than the map m3.
+```
+
+## <a name="op_lt_eq"></a>Operator&lt;=
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es menor o igual que el objeto de mapa del lado derecho.
 
@@ -172,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -220,14 +215,15 @@ int main( )
    else
       cout << "The map m1 is greater than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than or equal to the map m2.
 The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es igual que el objeto de mapa del lado derecho.
 
@@ -239,10 +235,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -285,10 +281,11 @@ int main( )
    else
       cout << "The maps m1 and m3 are not equal." << endl;
 }
-/* Output:
+```
+
+```Output
 The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
-*/
 ```
 
 ## <a name="op_gt"></a> operator&gt;
@@ -303,10 +300,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -367,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `map`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -415,14 +412,15 @@ int main( )
    else
       cout << "The map m1 is less than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than the map m2.
 Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
-*/
 ```
 
-## <a name="op_neq_multimap"></a>  operator!= (multimap)
+## <a name="op_neq_multimap"></a>operador! = (Multimap)
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador no es igual que el objeto de mapa múltiple del lado derecho.
 
@@ -434,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -480,10 +478,11 @@ int main( )
    else
       cout << "The multimaps m1 and m3 are equal." << endl;
 }
-/* Output:
+```
+
+```Output
 The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
-*/
 ```
 
 ## <a name="op_lt_multimap"></a> operator&lt;
@@ -498,10 +497,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -544,10 +543,11 @@ int main( )
    else
       cout << "The multimap m1 is not less than the multimap m3." << endl;
 }
-/* Output:
+```
+
+```Output
 The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
-*/
 ```
 
 ## <a name="op_lt_eq_multimap"></a> operator&lt;=
@@ -562,10 +562,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -610,14 +610,15 @@ int main( )
    else
       cout << "m1 is greater than m4" << endl;
 }
-/* Output:
+```
+
+```Output
 m1 is less than or equal to m2
 m1 is greater than m3
 m1 is less than or equal to m4
-*/
 ```
 
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="op_eq_eq_multimap"></a>operador = =
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es igual que el objeto de mapa múltiple del lado derecho.
 
@@ -629,10 +630,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -675,10 +676,11 @@ int main( )
    else
       cout << "m1 and m3 are not equal" << endl;
 }
-/* Output:
+```
+
+```Output
 m1 and m2 are not equal
 m1 and m3 are equal
-*/
 ```
 
 ## <a name="op_gt_multimap"></a> operator&gt;
@@ -693,10 +695,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -739,13 +741,14 @@ int main( )
    else
       cout << "The multimap m1 is not greater than the multimap m3." << endl;
 }
-/* Output:
-Multimap m1 is not greater than multimap m2.
-The multimap m1 is greater than the multimap m3.
-*/
 ```
 
-## <a name="op_gt_eq_multimap"></a> operator&gt;=
+```Output
+Multimap m1 is not greater than multimap m2.
+The multimap m1 is greater than the multimap m3.
+```
+
+## <a name="op_gt_eq_multimap"></a>Operator&gt;=
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es mayor o igual que el objeto de mapa múltiple del lado derecho.
 
@@ -757,10 +760,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*left*<br/>
+*salido*\
 Objeto de tipo `multimap`.
 
-*right*<br/>
+*correcta*\
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -805,13 +808,10 @@ int main( )
    else
       cout << "The multimap m1 is less than the multimap m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multimap m1 is less than the multimap m2.
 The multimap m1 is greater than or equal to the multimap m3.
 The multimap m1 is greater than or equal to the multimap m4.
-*/
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<map>](../standard-library/map.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: CBrush (clase)
+title: Clase CBrush (
 ms.date: 11/04/2016
 f1_keywords:
 - CBrush
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778876"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507432"
 ---
-# <a name="cbrush-class"></a>CBrush (clase)
+# <a name="cbrush-class"></a>Clase CBrush (
 
 Encapsula un pincel de la Interfaz de dispositivo gráfico (GDI) de Windows.
 
@@ -45,36 +45,36 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CBrush::CBrush](#cbrush)|Construye un objeto `CBrush`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializa un pincel con el estilo, el color y el patrón especificado en un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura.|
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicializa un pincel con un patrón especificado por un mapa de bits independientes del dispositivo (DIB).|
-|[CBrush::CreateHatchBrush](#createhatchbrush)|Inicializa un pincel con el patrón de sombreado especificado y el color.|
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializa un pincel con el estilo, el color y el patrón especificados en una estructura [logbrush (](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
+|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicializa un pincel con un patrón especificado por un mapa de bits independiente del dispositivo (DIB).|
+|[CBrush::CreateHatchBrush](#createhatchbrush)|Inicializa un pincel con el modelo de sombreado y el color especificados.|
 |[CBrush::CreatePatternBrush](#createpatternbrush)|Inicializa un pincel con un patrón especificado por un mapa de bits.|
 |[CBrush::CreateSolidBrush](#createsolidbrush)|Inicializa un pincel con el color sólido especificado.|
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Crea un pincel de color predeterminado del sistema.|
-|[CBrush::FromHandle](#fromhandle)|Devuelve un puntero a un `CBrush` objeto cuando se especifica un identificador a un Windows `HBRUSH` objeto.|
-|[CBrush::GetLogBrush](#getlogbrush)|Obtiene un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura.|
+|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Crea un pincel que es el color predeterminado del sistema.|
+|[CBrush::FromHandle](#fromhandle)|Devuelve un puntero a un `CBrush` objeto cuando se proporciona un identificador a un `HBRUSH` objeto de Windows.|
+|[CBrush::GetLogBrush](#getlogbrush)|Obtiene una estructura [logbrush (](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CBrush::operator HBRUSH](#operator_hbrush)|Devuelve el identificador de Windows asociado a la `CBrush` objeto.|
+|[CBrush (:: Operator HBRUSH](#operator_hbrush)|Devuelve el identificador de Windows asociado al `CBrush` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
-Para usar un `CBrush` objeto, construya un `CBrush` objeto y pasarlo a cualquier `CDC` función miembro que requiere un pincel.
+Para usar un `CBrush` objeto, construya un `CBrush` objeto y páselo a cualquier `CDC` función miembro que requiera un pincel.
 
-Pinceles pueden ser sólidos, generan o entramado.
+Los pinceles pueden ser sólidos, sombreados o con patrones.
 
-Para obtener más información sobre `CBrush`, consulte [objetos gráficos](../../mfc/graphic-objects.md).
+Para obtener más información `CBrush`sobre, vea [objetos gráficos](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -102,37 +102,37 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="parameters"></a>Parámetros
 
 *crColor*<br/>
-Especifica el color de primer plano del pincel como un color RGB. Si el pincel se generan, este parámetro especifica el color de la sombreado.
+Especifica el color de primer plano del pincel como color RGB. Si el pincel está sombreado, este parámetro especifica el color del sombreado.
 
 *nIndex*<br/>
 Especifica el estilo de sombreado del pincel. Puede ser cualquiera de los siguientes valores:
 
-- Sombreado HS_BDIAGONAL hacia abajo (de izquierda a derecha) a 45 grados
+- HS_BDIAGONAL sombreado descendente (de izquierda a derecha) a 45 grados
 
-- HS_CROSS Horizontal y vertical rayado
+- HS_CROSS trama vertical y horizontal
 
-- HS_DIAGCROSS Sombreado doble de 45 grados
+- Trama HS_DIAGCROSS en 45 grados
 
-- HS_FDIAGONAL hacia arriba sombreado (de izquierda a derecha) a 45 grados
+- HS_FDIAGONAL sombreado ascendente (de izquierda a derecha) a 45 grados
 
-- Sombreado HS_HORIZONTAL Horizontal
+- Trama horizontal HS_HORIZONTAL
 
-- Sombreado Vertical HS_VERTICAL
+- Trama vertical HS_VERTICAL
 
 *pBitmap*<br/>
-Apunta a un `CBitmap` objeto que especifica un mapa de bits que pinta el pincel.
+Apunta a un `CBitmap` objeto que especifica un mapa de bits con el que pinta el pincel.
 
 ### <a name="remarks"></a>Comentarios
 
-`CBrush` con cuatro constructores sobrecargados. El constructor sin argumentos crea sin inicializar `CBrush` objeto que se debe inicializar antes de poder usarlo.
+`CBrush`tiene cuatro constructores sobrecargados. El constructor sin argumentos crea un `CBrush` objeto no inicializado que se debe inicializar antes de que se pueda usar.
 
-Si usa el constructor sin argumentos, debe inicializar resultante `CBrush` objeto con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), o [CreateDIBPatternBrush](#createdibpatternbrush). Si usa uno de los constructores que toma argumentos, a continuación, ninguna otra inicialización es necesaria. Los constructores con argumentos pueden producir una excepción si se producen errores, mientras que el constructor sin argumentos siempre se realizará correctamente.
+`CBrush` Si utiliza el constructor sin argumentos, debe inicializar el objeto resultante con [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush)o [ CreateDIBPatternBrush](#createdibpatternbrush). Si usa uno de los constructores que toman argumentos, no es necesario realizar ninguna inicialización adicional. Los constructores con argumentos pueden producir una excepción si se producen errores, mientras que el constructor sin argumentos siempre se realizará correctamente.
 
-El constructor con un único [COLORREF](/windows/desktop/gdi/colorref) parámetro construye un pincel sólido con el color especificado. El color especifica un valor RGB y puede crearse con la macro RGB en WINDOWS. H.
+El constructor con un único parámetro [COLORREF](/windows/win32/gdi/colorref) crea un pincel sólido con el color especificado. El color especifica un valor RGB y se puede construir con la macro RGB en WINDOWS. C.
 
-El constructor con dos parámetros, crea un pincel de trama. El *nIndex* parámetro especifica el índice de un patrón de sombreado. El *crColor* parámetro especifica el color.
+El constructor con dos parámetros crea un pincel de trama. El parámetro *NINDEX* especifica el índice de un modelo sombreado. El parámetro *crColor* especifica el color.
 
-El constructor con un `CBitmap` parámetro construye un pincel de entramado. El parámetro identifica un mapa de bits. Se supone que el mapa de bits se han creado mediante el uso de [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), o [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). El tamaño mínimo para un mapa de bits que se usará en una trama de relleno es 8 x 8 píxeles.
+El constructor con un `CBitmap` parámetro crea un pincel con patrón. El parámetro identifica un mapa de bits. Se supone que el mapa de bits se ha creado mediante [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: loadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)o [CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). El tamaño mínimo de un mapa de bits que se va a usar en un patrón de relleno es de 8 píxeles por 8 píxeles.
 
 ### <a name="example"></a>Ejemplo
 
@@ -140,7 +140,7 @@ El constructor con un `CBitmap` parámetro construye un pincel de entramado. El 
 
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect
 
-Inicializa un pincel con un estilo, el color y el patrón especificado en un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura.
+Inicializa un pincel con un estilo, color y patrón especificados en una estructura [logbrush (](/windows/win32/api/wingdi/ns-wingdi-logbrush) .
 
 ```
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -149,7 +149,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="parameters"></a>Parámetros
 
 *lpLogBrush*<br/>
-Apunta a un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura que contiene información sobre el pincel.
+Apunta a una estructura [logbrush (](/windows/win32/api/wingdi/ns-wingdi-logbrush) que contiene información sobre el pincel.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -157,9 +157,9 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 ### <a name="remarks"></a>Comentarios
 
-Posteriormente se puede seleccionar el pincel como pincel actual para cualquier contexto de dispositivo.
+El pincel se puede seleccionar posteriormente como el pincel actual para cualquier contexto de dispositivo.
 
-Un pincel que se creó utilizando un mapa de bits monocromático (plano 1, 1 bit por píxel) se dibuja utilizando los colores de texto y fondo actuales. Con el color de texto actual se dibujará píxeles representados por un bit establecido en 0. Píxeles representados por un bit establecido en 1 se dibujarán con color de fondo actual.
+Un pincel creado mediante un mapa de bits monocromo (1 plano, 1 bit por píxel) se dibuja con los colores de texto y de fondo actuales. Los píxeles representados por un bit establecido en 0 se dibujarán con el color de texto actual. Los píxeles representados por un bit establecido en 1 se dibujarán con el color de fondo actual.
 
 ### <a name="example"></a>Ejemplo
 
@@ -167,7 +167,7 @@ Un pincel que se creó utilizando un mapa de bits monocromático (plano 1, 1 bit
 
 ##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush
 
-Inicializa un pincel con el patrón especificado por un mapa de bits independientes del dispositivo (DIB).
+Inicializa un pincel con el patrón especificado por un mapa de bits independiente del dispositivo (DIB).
 
 ```
 BOOL CreateDIBPatternBrush(
@@ -182,17 +182,17 @@ BOOL CreateDIBPatternBrush(
 ### <a name="parameters"></a>Parámetros
 
 *hPackedDIB*<br/>
-Identifica un objeto de memoria global que contiene un mapa de bits empaquetado de independientes del dispositivo (DIB).
+Identifica un objeto de memoria global que contiene un mapa de bits independiente del dispositivo empaquetado (DIB).
 
 *nUsage*<br/>
-Especifica si el `bmiColors[]` campos de la [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) estructura de datos (parte de la "DIB empaquetan") contienen explícita los valores RGB o índices en la paleta lógica realizada actualmente. El parámetro debe ser uno de los valores siguientes:
+Especifica si los `bmiColors[]` campos de la estructura de datos [bitmapinfo (](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) (una parte del "DIB empaquetado") contienen valores RGB o índices explícitos en la paleta lógica actualmente realizada. El parámetro debe ser uno de los siguientes valores:
 
-- La tabla de colores DIB_PAL_COLORS consta de una matriz de índices de 16 bits.
+- DIB_PAL_COLORS la tabla de colores consta de una matriz de índices de 16 bits.
 
-- DIB_RGB_COLORS la tabla de colores contiene los valores RGB literales.
+- DIB_RGB_COLORS la tabla de colores contiene valores RGB literales.
 
 *lpPackedDIB*<br/>
-Apunta a un DIB empaquetado que consta de un `BITMAPINFO` estructura seguido inmediatamente por una matriz de bytes que se definen los píxeles del mapa de bits.
+Apunta a un DIB empaquetado que consta de una `BITMAPINFO` estructura inmediatamente seguida de una matriz de bytes que define los píxeles del mapa de bits.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -200,25 +200,25 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Posteriormente se puede seleccionar el pincel para cualquier contexto de dispositivo que admita operaciones de trama.
+El pincel se puede seleccionar posteriormente para cualquier contexto de dispositivo que admita operaciones de tramas.
 
-En la forma de que controlar el formato DIB se diferencian las dos versiones:
+Las dos versiones difieren en la forma en que se controla el DIB:
 
-- En la primera versión, para obtener un identificador para el formato DIB llamar a la Windows `GlobalAlloc` función para asignar un bloque de memoria global y, a continuación, rellene la memoria con el formato DIB empaquetado.
+- En la primera versión, para obtener un identificador del DIB, se llama a la `GlobalAlloc` función de Windows para asignar un bloque de memoria global y, a continuación, rellenar la memoria con el DIB empaquetado.
 
-- En la segunda versión, no es necesario llamar a `GlobalAlloc` asignar memoria para el formato DIB empaquetado.
+- En la segunda versión, no es necesario llamar `GlobalAlloc` a para asignar memoria para el DIB empaquetado.
 
-Consta de un DIB empaquetado de un `BITMAPINFO` seguido inmediatamente de la matriz de bytes que define los píxeles del mapa de bits de estructura de datos. Los mapas de bits que se usa como tramas de relleno deben ser de 8 x 8 píxeles. Si el mapa de bits es mayor, Windows crea una trama de relleno con solo los bits correspondientes a las 8 primeras filas y 8 columnas de píxeles en la esquina superior izquierda del mapa de bits.
+Un DIB empaquetado consta de una `BITMAPINFO` estructura de datos seguida inmediatamente de la matriz de bytes que define los píxeles del mapa de bits. Los mapas de bits utilizados como patrones de relleno deben ser de 8 píxeles por 8 píxeles. Si el mapa de bits es más grande, Windows crea un patrón de relleno usando solo los bits que corresponden a las 8 primeras filas y 8 columnas de píxeles en la esquina superior izquierda del mapa de bits.
 
-Cuando una aplicación, selecciona un pincel de patrón DIB dos colores en un contexto de dispositivo monocromático, Windows pasa por alto los colores especificados en el formato DIB y en su lugar mostrará el pincel de modelo mediante los colores de texto y fondo actuales del contexto del dispositivo. Asignada al primer color (en el desplazamiento 0 en la tabla de colores DIB) de la imagen DIB de píxeles se muestran utilizando el color del texto. Píxeles que se asigna al segundo color (en desplazamiento 1 en la tabla de colores) se muestran usando el color de fondo.
+Cuando una aplicación selecciona un pincel de patrón DIB de dos colores en un contexto de dispositivo monocromo, Windows omite los colores especificados en el DIB y, en su lugar, muestra el pincel de patrón usando el texto y los colores de fondo actuales del contexto del dispositivo. Los píxeles asignados al primer color (en el desplazamiento 0 en la tabla de colores DIB) del DIB se muestran utilizando el color del texto. Los píxeles asignados al segundo color (en el desplazamiento 1 de la tabla de colores) se muestran con el color de fondo.
 
-Para obtener información sobre el uso de las siguientes funciones de Windows, consulte el SDK de Windows:
+Para obtener información sobre el uso de las siguientes funciones de Windows, consulte la Windows SDK:
 
-- [CreateDIBPatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrush) (esta función se proporciona únicamente por compatibilidad con aplicaciones escritas para versiones de Windows anteriores a la 3.0; utilice el `CreateDIBPatternBrushPt` función.)
+- [CreateDIBPatternBrush](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrush) (Esta función solo se proporciona por compatibilidad con las aplicaciones escritas para versiones de Windows anteriores a 3,0; `CreateDIBPatternBrushPt` use la función).
 
-- [CreateDIBPatternBrushPt](/windows/desktop/api/wingdi/nf-wingdi-createdibpatternbrushpt) (esta función debe usarse para las aplicaciones basadas en Win32).
+- [CreateDIBPatternBrushPt](/windows/win32/api/wingdi/nf-wingdi-createdibpatternbrushpt) (Esta función debe usarse para las aplicaciones basadas en Win32).
 
-- [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)
+- [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)
 
 ### <a name="example"></a>Ejemplo
 
@@ -226,7 +226,7 @@ Para obtener información sobre el uso de las siguientes funciones de Windows, c
 
 ##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush
 
-Inicializa un pincel con el patrón de sombreado especificado y el color.
+Inicializa un pincel con el modelo de sombreado y el color especificados.
 
 ```
 BOOL CreateHatchBrush(
@@ -239,20 +239,20 @@ BOOL CreateHatchBrush(
 *nIndex*<br/>
 Especifica el estilo de sombreado del pincel. Puede ser cualquiera de los siguientes valores:
 
-- Sombreado HS_BDIAGONAL hacia abajo (de izquierda a derecha) a 45 grados
+- HS_BDIAGONAL sombreado descendente (de izquierda a derecha) a 45 grados
 
-- HS_CROSS Horizontal y vertical rayado
+- HS_CROSS trama vertical y horizontal
 
-- HS_DIAGCROSS Sombreado doble de 45 grados
+- Trama HS_DIAGCROSS en 45 grados
 
-- HS_FDIAGONAL hacia arriba sombreado (de izquierda a derecha) a 45 grados
+- HS_FDIAGONAL sombreado ascendente (de izquierda a derecha) a 45 grados
 
-- Sombreado HS_HORIZONTAL Horizontal
+- Trama horizontal HS_HORIZONTAL
 
-- Sombreado Vertical HS_VERTICAL
+- Trama vertical HS_VERTICAL
 
 *crColor*<br/>
-Especifica el color de primer plano del pincel como un color RGB (el color de la sombreados). Consulte [COLORREF](/windows/desktop/gdi/colorref) en el SDK de Windows para obtener más información.
+Especifica el color de primer plano del pincel como color RGB (el color de las tramas). Vea [COLORREF](/windows/win32/gdi/colorref) en el Windows SDK para obtener más información.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -260,7 +260,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Posteriormente se puede seleccionar el pincel como pincel actual para cualquier contexto de dispositivo.
+El pincel se puede seleccionar posteriormente como el pincel actual para cualquier contexto de dispositivo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -285,15 +285,15 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Posteriormente se puede seleccionar el pincel para cualquier contexto de dispositivo que admita operaciones de trama. El mapa de bits identificado por *pBitmap* normalmente se inicializa con el [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), o [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) función.
+El pincel se puede seleccionar posteriormente para cualquier contexto de dispositivo que admita operaciones de tramas. El mapa de bits identificado por *pBitmap* se inicializa normalmente mediante la función [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: loadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)o [CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) .
 
-Los mapas de bits que se usa como tramas de relleno deben ser de 8 x 8 píxeles. Si el mapa de bits es mayor, Windows usará solo los bits correspondientes a las 8 primeras filas y columnas de píxeles en la esquina superior izquierda del mapa de bits.
+Los mapas de bits utilizados como patrones de relleno deben ser de 8 píxeles por 8 píxeles. Si el mapa de bits es mayor, Windows solo usará los bits correspondientes a las 8 primeras filas y columnas de píxeles en la esquina superior izquierda del mapa de bits.
 
-Un pincel de modelo se puede eliminar sin afectar el mapa de bits asociado. Esto significa que el mapa de bits puede usarse para crear cualquier número de pinceles de trama.
+Se puede eliminar un pincel de patrón sin que ello afecte al mapa de bits asociado. Esto significa que el mapa de bits se puede usar para crear cualquier número de pinceles de patrón.
 
-Un pincel que se creó utilizando un mapa de bits monocromático (plano de color de 1, 1 bit por píxel) se dibuja utilizando los colores de texto y fondo actuales. Se dibujan los píxeles representados por un bit establecido en 0 con el color de texto actual. Se dibujan los píxeles representados por un bit establecido en 1 con el color de fondo actual.
+Un pincel creado con un mapa de bits monocromo (1 plano de color, 1 bit por píxel) se dibuja utilizando los colores de texto y de fondo actuales. Los píxeles representados por un bit establecido en 0 se dibujan con el color de texto actual. Los píxeles representados por un bit establecido en 1 se dibujan con el color de fondo actual.
 
-Para obtener información sobre el uso de [CreatePatternBrush](/windows/desktop/api/wingdi/nf-wingdi-createpatternbrush), un Windows de función, consulte el SDK de Windows.
+Para obtener información sobre el uso de [CreatePatternBrush](/windows/win32/api/wingdi/nf-wingdi-createpatternbrush), una función de Windows, vea el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
@@ -310,7 +310,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="parameters"></a>Parámetros
 
 *crColor*<br/>
-Un [COLORREF](/windows/desktop/gdi/colorref) estructura que especifica el color del pincel. El color especifica un valor RGB y puede crearse con la macro RGB en WINDOWS. H.
+Estructura [COLORREF](/windows/win32/gdi/colorref) que especifica el color del pincel. El color especifica un valor RGB y se puede construir con la macro RGB en WINDOWS. C.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -318,17 +318,17 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Posteriormente se puede seleccionar el pincel como pincel actual para cualquier contexto de dispositivo.
+El pincel se puede seleccionar posteriormente como el pincel actual para cualquier contexto de dispositivo.
 
-Cuando una aplicación ha terminado con el pincel creado por `CreateSolidBrush`, seleccionaría el pincel fuera del contexto de dispositivo.
+Cuando una aplicación ha terminado de usar el pincel creado `CreateSolidBrush`por, debe seleccionar el pincel fuera del contexto del dispositivo.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CBrush::CBrush](#cbrush).
+  Vea el ejemplo de [CBrush (:: CBrush (](#cbrush).
 
 ##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush
 
-Inicializa un color de pincel.
+Inicializa un color del pincel.
 
 ```
 BOOL CreateSysColorBrush(int nIndex);
@@ -337,7 +337,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-Especifica un índice de color. Este valor corresponde al color usado para pintar uno de los elementos de la ventana de 21. Consulte [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) en el SDK de Windows para obtener una lista de valores.
+Especifica un índice de color. Este valor corresponde al color que se usa para pintar uno de los 21 elementos de la ventana. Vea [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) en el Windows SDK para obtener una lista de valores.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -345,9 +345,9 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Posteriormente se puede seleccionar el pincel como pincel actual para cualquier contexto de dispositivo.
+El pincel se puede seleccionar posteriormente como el pincel actual para cualquier contexto de dispositivo.
 
-Cuando una aplicación ha terminado con el pincel creado por `CreateSysColorBrush`, seleccionaría el pincel fuera del contexto de dispositivo.
+Cuando una aplicación ha terminado de usar el pincel creado `CreateSysColorBrush`por, debe seleccionar el pincel fuera del contexto del dispositivo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -355,7 +355,7 @@ Cuando una aplicación ha terminado con el pincel creado por `CreateSysColorBrus
 
 ##  <a name="fromhandle"></a>  CBrush::FromHandle
 
-Devuelve un puntero a un `CBrush` objeto cuando se especifica un identificador a un Windows [HBRUSH](#operator_hbrush) objeto.
+Devuelve un puntero a un `CBrush` objeto cuando se proporciona un identificador a un objeto [hbrush](#operator_hbrush) de Windows.
 
 ```
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
@@ -364,7 +364,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="parameters"></a>Parámetros
 
 *hBrush*<br/>
-IDENTIFICADOR de un pincel de GDI de Windows.
+IDENTIFICADOR de un pincel de Windows GDI.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -372,17 +372,17 @@ Un puntero a un `CBrush` objeto si es correcto; de lo contrario, NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-Si un `CBrush` objeto no está asociado al identificador, un archivo temporal `CBrush` objeto creado y conectado. Este temporal `CBrush` objeto es válido solo hasta la próxima vez que la aplicación tiene tiempo de inactividad en su bucle de eventos. En este momento, se eliminan todos los objetos de gráficos temporales. En otras palabras, el objeto temporal es válido solo durante el procesamiento de mensajes de una ventana.
+Si un `CBrush` objeto todavía no está asociado al identificador, se crea y `CBrush` se adjunta un objeto temporal. Este objeto `CBrush` temporal solo es válido hasta la próxima vez que la aplicación tenga tiempo de inactividad en su bucle de eventos. En este momento, se eliminan todos los objetos gráficos temporales. En otras palabras, el objeto temporal solo es válido durante el procesamiento de un mensaje de ventana.
 
-Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en el SDK de Windows.
+Para obtener más información sobre el uso de objetos gráficos, vea [objetos gráficos](/windows/win32/gdi/graphic-objects) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
-  Vea el ejemplo de [CBrush::CBrush](#cbrush).
+  Vea el ejemplo de [CBrush (:: CBrush (](#cbrush).
 
 ##  <a name="getlogbrush"></a>  CBrush::GetLogBrush
 
-Llame a esta función miembro para recuperar el `LOGBRUSH` estructura.
+Llame a esta función miembro para recuperar `LOGBRUSH` la estructura.
 
 ```
 int GetLogBrush(LOGBRUSH* pLogBrush);
@@ -391,29 +391,29 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="parameters"></a>Parámetros
 
 *pLogBrush*<br/>
-Apunta a un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura que contiene información sobre el pincel.
+Apunta a una estructura [logbrush (](/windows/win32/api/wingdi/ns-wingdi-logbrush) que contiene información sobre el pincel.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función se realiza correctamente, y *pLogBrush* es un puntero válido, el valor devuelto es el número de bytes almacenados en el búfer.
+Si la función se ejecuta correctamente, y *pLogBrush* es un puntero válido, el valor devuelto es el número de bytes almacenados en el búfer.
 
-Si la función se realiza correctamente, y *pLogBrush* es NULL, el valor devuelto es el número de bytes necesario para contener la información de la función se almacenaría en el búfer.
+Si la función se ejecuta correctamente y *pLogBrush* es null, el valor devuelto es el número de bytes necesarios para contener la información que la función almacenaría en el búfer.
 
 Si se produce un error en la función, el valor devuelto es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-El `LOGBRUSH` estructura define el estilo, color y el patrón de un pincel.
+La `LOGBRUSH` estructura define el estilo, el color y el patrón de un pincel.
 
-Por ejemplo, llamar a `GetLogBrush` para que coincida con el patrón de un mapa de bits o un color determinado.
+Por ejemplo, llame `GetLogBrush` a para que coincida con el color o el patrón determinados de un mapa de bits.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]
 
-##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH
+##  <a name="operator_hbrush"></a>CBrush (:: Operator HBRUSH
 
-Utilice este operador para obtener el identificador de Windows GDI adjunto de la `CBrush` objeto.
+Utilice este operador para obtener el identificador de GDI de Windows asociado `CBrush` del objeto.
 
 ```
 operator HBRUSH() const;
@@ -421,13 +421,13 @@ operator HBRUSH() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcto, un identificador para el objeto GDI de Windows representado por la `CBrush` objeto; de lo contrario, NULL.
+Si es correcto, identificador del objeto GDI de Windows representado por el `CBrush` objeto; de lo contrario, NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-Este es un operador de conversión, que admite el uso directo de un objeto HBRUSH.
+Este operador es un operador de conversión, que admite el uso directo de un objeto HBRUSH.
 
-Para obtener más información sobre el uso de objetos gráficos, consulte [gráfico de objetos](/windows/desktop/gdi/graphic-objects) en el SDK de Windows.
+Para obtener más información sobre el uso de objetos gráficos, vea [objetos gráficos](/windows/win32/gdi/graphic-objects) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 

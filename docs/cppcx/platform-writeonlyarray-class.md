@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744397"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500520"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (Clase)
 
 Representa una matriz unidimensional que se utiliza como parámetro de entrada cuando el llamador pasa una matriz para el método que se va a rellenar.
 
-Esta clase ref se declara como privada en vccorlib.h; por consiguiente, no se emite en los metadatos y solo se puede usar desde C++. Esta clase está diseñada únicamente para su uso como un parámetro de entrada que recibe una matriz que el llamador ha asignado. No se puede crear desde el código de usuario. Permite a un método de C++ escribir directamente en dicha matriz, patrón que se conoce como *FillArray* . Para obtener más información, consulte [Array y WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Esta clase ref se declara como privada en vccorlib.h; por consiguiente, no se emite en los metadatos y solo se puede usar desde C++. Esta clase está diseñada únicamente para su uso como un parámetro de entrada que recibe una matriz que el llamador ha asignado. No se puede crear desde el código de usuario. Permite a un método de C++ escribir directamente en dicha matriz, patrón que se conoce como *FillArray* . Para obtener más información, vea [array y WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,7 +37,7 @@ private ref class WriteOnlyArray<T, 1>
 
 Estos métodos tienen accesibilidad interna, es decir, solo están accesibles desde la aplicación o componente de C++.
 
-|nombre|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[WriteOnlyArray::begin](#begin)|Un iterador que apunta al primer elemento de la matriz.|
 |[WriteOnlyArray::Data](#data)|Puntero al búfer de datos.|
@@ -54,7 +54,7 @@ Estos métodos tienen accesibilidad interna, es decir, solo están accesibles de
 
 Opción del compilador: **/ZW**
 
-**Metadatos:** Platform.winmd
+**Repositorio** Plataforma. winmd
 
 **Espacio de nombres**: Plataforma
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Valor booleano que indica si la matriz es FastPass.
 
-## <a name="get"></a>  Writeonlyarray (método)
+## <a name="get"></a>WriteOnlyArray:: get (método)
 
 Devuelve el elemento que se encuentra en el índice especificado.
 
@@ -139,7 +139,7 @@ T& get(unsigned int indexArg) const;
 ### <a name="parameters"></a>Parámetros
 
 *indexArg*<br/>
-El índice que se utilizará.
+Índice que se va a usar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -185,9 +185,9 @@ Una referencia al elemento que se acaba de establecer.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información acerca de cómo interpretar el valor HRESULT, vea [estructura de códigos de Error COM](/windows/desktop/com/structure-of-com-error-codes).
+Para obtener más información sobre cómo interpretar el valor HRESULT, vea [estructura de los códigos de error com](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Vea también
 
-[Plataforma Namespace](platform-namespace-c-cx.md)<br/>
+[Espacio de nombres de plataforma](platform-namespace-c-cx.md)<br/>
 [Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

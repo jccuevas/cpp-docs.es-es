@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 027ed3052f5341860112f564974b7a96aea7ff51
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524604"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447042"
 ---
 # <a name="lttypetraitsgt-functions"></a>Funciones de &lt;type_traits&gt;
 
@@ -37,12 +37,13 @@ ms.locfileid: "51524604"
 |-|-|-|
 |[is_assignable](#is_assignable)|[is_copy_assignable](#is_copy_assignable)|[is_copy_constructible](#is_copy_constructible)|
 |[is_default_constructible](#is_default_constructible)|[is_move_assignable](#is_move_assignable)|[is_move_constructible](#is_move_constructible)|
-|[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|[is_trivially_move_assignable](#is_trivially_move_assignable)|
-|[is_trivially_move_constructible](#is_trivially_move_constructible)|
+|[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_nothrow_swappable](#is_nothrow_swappable)|[is_nothrow_swappable_with](#is_nothrow_swappable_with)|
+|[is_swappable](#is_swappable)|[is_swappable_with](#is_swappable_with)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|
+|[is_trivially_move_assignable](#is_trivially_move_assignable)|[is_trivially_move_constructible](#is_trivially_move_constructible)|
 
 ## <a name="is_assignable"></a>  is_assignable
 
-Comprueba si un valor de *desde* tipo puede asignarse a un *a* tipo.
+Comprueba si un valor de tipo *from* se puede asignar a un *tipo.*
 
 ```cpp
 template <class To, class From>
@@ -51,15 +52,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*En*<br/>
+*Para*\
 El tipo del objeto que recibe la asignación.
 
-*From*<br/>
+*De*\
 El tipo del objeto que proporciona el valor.
 
 ### <a name="remarks"></a>Comentarios
 
-La expresión no evaluada `declval<To>() = declval<From>()` debe tener un formato correcto. Ambos *desde* y *a* deben ser tipos completos, **void**, o matrices de límite desconocido.
+La expresión no evaluada `declval<To>() = declval<From>()` debe tener un formato correcto. Tanto *desde* como *hasta* deben ser tipos completos, **void**o matrices de enlazados desconocidos.
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -72,12 +73,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un copia operador de asignación, en caso contrario, es false. Equivalente a is_assignable\<Ty&, const Ty&>.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un operador de asignación de copia; en caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -90,12 +91,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de copias, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de copias; en caso contrario, contiene false.
 
 ### <a name="example"></a>Ejemplo
 
@@ -142,12 +143,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo de clase que tiene un constructor predeterminado, en caso contrario, es false. Es equivalente al elemento `is_constructible<T>`del predicado. Tipo *T* debe ser un tipo completo, **void**, o una matriz de límite desconocido.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo de clase que tiene un constructor predeterminado; en caso contrario, contiene false. Es equivalente al elemento `is_constructible<T>`del predicado. El tipo *T* debe ser un tipo completo, **void**o una matriz de enlazada desconocida.
 
 ### <a name="example"></a>Ejemplo
 
@@ -194,7 +195,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
@@ -212,12 +213,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 El tipo que se debe evaluar
 
 ### <a name="remarks"></a>Comentarios
 
-Un predicado de tipo que se evalúa como true si el tipo *T* puede crearse mediante el uso de una operación de movimiento. Este predicado es equivalente a `is_constructible<T, T&&>`.
+Predicado de tipo que se evalúa como true si el tipo *T* se puede construir mediante una operación de movimiento. Este predicado es equivalente a `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -230,12 +231,36 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un nothrow mover operador de asignación, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* tiene un operador de asignación de movimiento nothrow; en caso contrario, contiene false.
+
+## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
+
+```cpp
+template <class T> struct is_nothrow_swappable;
+```
+
+## <a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
+
+```cpp
+template <class T, class U> struct is_nothrow_swappable_with;
+```
+
+## <a name="is_swappable"></a>is_swappable
+
+```cpp
+template <class T> struct is_swappable;
+```
+
+## <a name="is_swappable_with"></a>is_swappable_with
+
+```cpp
+template <class T, class U> struct is_swappable_with;
+```
 
 ## <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable
 
@@ -248,14 +273,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es una clase que tiene un copia trivial operador de asignación, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *T* es una clase que tiene un operador de asignación de copia trivial; en caso contrario, contiene false.
 
-Un constructor de asignación para una clase *T* es trivial si se proporciona implícitamente, la clase *T* no tiene ninguna función virtual, la clase *T* tiene ninguna base virtual, las clases de todos los miembros de datos no estáticos del tipo de clase tienen operadores de asignación triviales y las clases de todos los miembros de datos no estáticos de la matriz de tipo de clase tienen operadores de asignación triviales.
+Un constructor de asignación para una clase *T* es trivial si se proporciona implícitamente, la clase *t* no tiene ninguna función virtual, la clase *t* no tiene ninguna base virtual, las clases de todos los miembros de datos no estáticos del tipo de clase tienen una asignación trivial los operadores y las clases de todos los miembros de datos no estáticos de la matriz de tipo de clase tienen operadores de asignación triviales.
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -268,12 +293,12 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un movimiento trivial operador de asignación, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un operador de asignación de movimiento trivial; en caso contrario, contiene false.
 
 Un operador de asignación de movimiento para una clase *Ty* es trivial si:
 
@@ -281,7 +306,7 @@ se proporciona de forma implícita
 
 la clase *Ty* no tiene ninguna función virtual
 
-la clase *Ty* tiene ninguna base virtual
+la clase *Ty* no tiene ninguna base virtual
 
 las clases de todos los miembros de datos no estáticos del tipo de clase tienen operadores de asignación de movimiento triviales
 
@@ -298,12 +323,12 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ### <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de movimiento trivial, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una clase que tiene un constructor de movimiento trivial; en caso contrario, contiene false.
 
 Un constructor de movimiento para una clase *Ty* es trivial si:
 
@@ -313,11 +338,11 @@ sus tipos de parámetro son equivalentes a los de una declaración implícita
 
 la clase *Ty* no tiene ninguna función virtual
 
-la clase *Ty* tiene ninguna base virtual
+la clase *Ty* no tiene ninguna base virtual
 
 la clase no tiene ningún miembro de datos no estáticos volátil
 
-todas las bases directas de la clase *Ty* tienen constructores de movimiento trivial
+todas las bases directas de la clase *Ty* tienen constructores de movimiento triviales
 
 las clases de todos los miembros de datos no estáticos del tipo de clase tienen constructores de movimiento triviales
 
@@ -325,4 +350,4 @@ las clases de todos los miembros de datos no estáticos de la matriz de tipo de 
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

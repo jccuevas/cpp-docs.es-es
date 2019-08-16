@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511857"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458292"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 Define instalaciones para generar números aleatorios, lo que permite crear números aleatorios distribuidos de manera uniforme.
 
-## <a name="syntax"></a>Sintaxis
+## <a name="requirements"></a>Requisitos
 
-```cpp
-#include <random>
-```
+**Encabezado**: \<> aleatorio
+
+**Espacio de nombres:** std
+
+> [!NOTE]
+> La \<Biblioteca > aleatoria utiliza la instrucción ' #include < initializer_list > '.
 
 ## <a name="summary"></a>Resumen
 
@@ -39,7 +42,7 @@ Estos vínculos llevan a las secciones principales de este artículo:
 
 ### <a name="quick-tips"></a>Sugerencias
 
-Estas son algunas sugerencias que tener en cuenta al usar \<aleatorio >:
+A continuación se muestran algunas sugerencias que deben tenerse en \<cuenta al usar > aleatorios:
 
 - En la mayoría de los casos, los URNG generan bits sin formato a los que las distribuciones deben dar forma. (Una excepción significativa a este respecto es [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), ya que usa un URNG directamente).
 
@@ -49,7 +52,7 @@ Estas son algunas sugerencias que tener en cuenta al usar \<aleatorio >:
 
 - El emparejamiento más útil en la mayoría de los casos es la del motor `mt19937` con `uniform_int_distribution`, tal y como se muestra en el [código de ejemplo](#code) que aparece más adelante en este artículo.
 
-Hay muchas opciones para elegir en la \<aleatorio > encabezado y cualquiera de ellos es preferible a la función en tiempo de ejecución C obsoleta `rand()`. Para obtener información acerca de cuál es el problema con `rand()` y cómo \<aleatorio > aborda estas desventajas, consulte [este vídeo](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Hay muchas opciones entre las que elegir en el \<encabezado > aleatorio y cualquiera de ellas es preferible a la función `rand()`de tiempo de ejecución de C obsoleta. Para obtener información sobre qué es el `rand()` problema con \<y cómo el > aleatorio soluciona estas deficiencias, vea [este vídeo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Ejemplos
 
@@ -212,13 +215,13 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
 
 A menudo, los URNG se describen según los siguientes aspectos:
 
-1. **Longitud del período**: número de iteraciones necesarias para repetir la secuencia de números generada. Cuanto más largo, mejor.
+1. **Duración del período**: número de iteraciones necesario para repetir la secuencia de números generada. Cuanto más largo, mejor.
 
-2. **Rendimiento**: rapidez con la que se pueden generar los números y cantidad de memoria que requiere. Cuanto menos, mejor.
+2. **Rendimiento**: rapidez con que los números se generan y cantidad de memoria empleada. Cuanto menos, mejor.
 
-3. **Calidad**: cercanía de la secuencia generada a los números aleatorios auténticos. Esto se suele conocer como "*aleatoriedad*".
+3. **Calidad**: proximidad de la secuencia generada a números aleatorios auténticos. Esto se suele conocer como "*aleatoriedad*".
 
-Las siguientes secciones enumeran los generadores de números aleatorios (Urng) uniformes proporcionados en el \<aleatorio > encabezado.
+En las secciones siguientes se enumeran los generadores de números aleatorios uniformes ( \<URNG) proporcionados en el encabezado > aleatorio.
 
 ####  <a name="rd"></a> Generador no determinista
 
@@ -326,7 +329,7 @@ Los adaptadores de motor son plantillas que adaptan otros motores (base). Por lo
 
 ###  <a name="distributions"></a> Distribuciones de números aleatorios
 
-Las secciones siguientes enumeran las distribuciones que se proporcionan en el \<aleatorio > encabezado. Las distribuciones son un mecanismo de procesamiento posterior que suelen usar una salida de URNG como entrada y distribuir esa salida mediante una función de densidad de probabilidad estadística definida. Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
+En las secciones siguientes se enumeran las distribuciones proporcionadas en el \<encabezado de > aleatorio. Las distribuciones son un mecanismo de procesamiento posterior que suelen usar una salida de URNG como entrada y distribuir esa salida mediante una función de densidad de probabilidad estadística definida. Para obtener más información, vea la sección [Motores y distribuciones](#engdist).
 
 #### <a name="uniform-distributions"></a>Distribuciones uniformes
 
@@ -342,7 +345,7 @@ Las secciones siguientes enumeran las distribuciones que se proporcionan en el \
 
 |||
 |-|-|
-|[bernoulli_distribution (Clase)](../standard-library/bernoulli-distribution-class.md)|Genera una distribución de Bernoulli de **bool** valores.|
+|[bernoulli_distribution (Clase)](../standard-library/bernoulli-distribution-class.md)|Genera una distribución de Bernoulli de valores **bool** .|
 |[binomial_distribution (Clase)](../standard-library/binomial-distribution-class.md)|Genera una distribución binomial de valores enteros.|
 |[geometric_distribution (Clase)](../standard-library/geometric-distribution-class.md)|Genera una distribución geométrica de valores enteros.|
 |[negative_binomial_distribution (Clase)](../standard-library/negative-binomial-distribution-class.md)|Genera una distribución binomial negativa de valores enteros.|
@@ -386,7 +389,7 @@ Las secciones siguientes enumeran las distribuciones que se proporcionan en el \
 
 ### <a name="utility-functions"></a>Funciones de utilidad
 
-Esta sección enumeran las funciones de utilidad generales proporcionadas en el \<aleatorio > encabezado.
+En esta sección se enumeran las funciones de utilidad \<generales que se proporcionan en el encabezado > aleatorio.
 
 |||
 |-|-|
@@ -394,7 +397,7 @@ Esta sección enumeran las funciones de utilidad generales proporcionadas en el 
 
 ### <a name="operators"></a>Operadores
 
-En esta sección se enumera los operadores proporcionados en el \<aleatorio > encabezado.
+En esta sección se enumeran los operadores \<que se proporcionan en el encabezado > aleatorio.
 
 |||
 |-|-|
@@ -405,13 +408,13 @@ En esta sección se enumera los operadores proporcionados en el \<aleatorio > en
 
 ## <a name="engdist"></a> Motores y distribuciones
 
-Consulte las secciones siguientes para obtener información sobre cada una de estas categorías de clase de plantilla definidas en \<aleatorio >. Estas dos categorías de clase de plantilla toman un tipo como argumento y usan nombres compartidos de parámetros de plantilla para describir las propiedades del tipo que son posibles como tipo de argumento real, como se indica a continuación:
+Consulte las secciones siguientes para obtener información sobre cada una de estas categorías de clase de \<plantilla definidas en > aleatorio. Estas dos categorías de clase de plantilla toman un tipo como argumento y usan nombres compartidos de parámetros de plantilla para describir las propiedades del tipo que son posibles como tipo de argumento real, como se indica a continuación:
 
-- `IntType` indica un **corto**, **int**, **largo**, **long long**, **entero corto sin signo**,  **int sin signo**, **unsigned long**, o **long long sin signo**.
+- `IntType`indica un **Short**, **int**, **Long**, **Long Long**, unsigned **Short**, unsigned **int**, unsigned **Long**o unsigned **Long Long**.
 
-- `UIntType` indica **entero corto sin signo**, **int sin signo**, **unsigned long**, o **long long sin signo**.
+- `UIntType`indica **unsigned short**, **unsigned int**, unsigned **Long**o unsigned **Long Long**.
 
-- `RealType` indica un **float**, **doble**, o **long double**.
+- `RealType`indica un valor de tipo **float**, **Double**o **Long Double**.
 
 ### <a name="engines"></a>Motores
 
@@ -496,14 +499,14 @@ Visual Studio dispone de dos URNG de extrema utilidad: `mt19937` y `random_devi
 |URNG|Rápido|Seguro criptográficamente|Propagable|Determinista|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|Sí|No|Sí|Sí<sup>*</sup>|
-|`random_device`|No|Sí|No|No|
+|`random_device`|Sin|Sí|Sin|Sin|
 
 <sup>* Cuando se proporciona con un valor de inicialización conocido.</sup>
 
-En Visual Studio, `random_device` se implementa de forma que es seguro criptográficamente, aunque la norma ISO C++ no lo requiera. (El término “seguro criptográficamente” no implica ninguna garantía, sino que hace referencia al nivel mínimo de entropía —y, por lo tanto, el grado de posibilidad de predicción— que proporciona un algoritmo de aleatorización. Para obtener más información, vea el artículo de la Wikipedia sobre el [generador de números seudoaleatorios seguros criptográficamente](http://go.microsoft.com/fwlink/p/?linkid=398017)). Dado que la norma ISO C++ no requiere esto, puede que otras plataformas implementen `random_device` como un generador de números seudoaleatorios simple (no seguro criptográficamente) que solo sea adecuado como origen de valores de inicialización para otro generador. Consulte la documentación de esas plataformas cuando use `random_device` en código con varias plataformas.
+En Visual Studio, `random_device` se implementa de forma que es seguro criptográficamente, aunque la norma ISO C++ no lo requiera. (El término “seguro criptográficamente” no implica ninguna garantía, sino que hace referencia al nivel mínimo de entropía —y, por lo tanto, el grado de posibilidad de predicción— que proporciona un algoritmo de aleatorización. Para obtener más información, vea el artículo de la Wikipedia sobre el [generador de números seudoaleatorios seguros criptográficamente](https://go.microsoft.com/fwlink/p/?linkid=398017)). Dado que la norma ISO C++ no requiere esto, puede que otras plataformas implementen `random_device` como un generador de números seudoaleatorios simple (no seguro criptográficamente) que solo sea adecuado como origen de valores de inicialización para otro generador. Consulte la documentación de esas plataformas cuando use `random_device` en código con varias plataformas.
 
 Por definición, los resultados de `random_device` no son reproducibles. Un efecto secundario de esto es que puede que se ejecute de forma significativamente más lenta que otros URNG. La mayoría de las aplicaciones que no tienen que ser seguras criptográficamente usan `mt19937` o un motor similar, aunque probablemente quiera propagarlo con una llamada a `random_device`, como se muestra en el [código de ejemplo](#code).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

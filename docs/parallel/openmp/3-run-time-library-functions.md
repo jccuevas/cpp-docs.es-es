@@ -1,13 +1,13 @@
 ---
 title: 3. Funciones de biblioteca en tiempo de ejecución
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087319"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611189"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funciones de biblioteca en tiempo de ejecución
 
@@ -40,7 +40,7 @@ Las funciones descritas en esta sección afectan y supervisión el entorno en pa
 - [omp_set_nested](#319-omp_set_nested-function)
 - [omp_get_nested](#3110-omp_get_nested-function)
 
-### <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads () (función)
+### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads () (función)
 
 El `omp_set_num_threads` función establece el número predeterminado de subprocesos que se utilizarán más adelante las regiones paralelas que no especifican un `num_threads` cláusula. El formato es como se detalla a continuación:
 
@@ -55,6 +55,8 @@ Esta función tiene los efectos que se ha descrito anteriormente, cuando se llam
 
 Esta llamada tiene prioridad sobre la `OMP_NUM_THREADS` variable de entorno. El valor predeterminado para el número de subprocesos, lo que se pueden establecer mediante una llamada a `omp_set_num_threads` o estableciendo la `OMP_NUM_THREADS` variable de entorno, se pueden reemplazar explícitamente en una sola `parallel` directiva especificando el `num_threads` cláusula.
 
+Para obtener más información, consulte [omp_set_dynamic ()](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -62,7 +64,7 @@ Esta llamada tiene prioridad sobre la `OMP_NUM_THREADS` variable de entorno. El 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variable de entorno
 - [num_threads](2-directives.md#23-parallel-construct) cláusula
 
-### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads () (función)
+### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads () (función)
 
 El `omp_get_num_threads` función devuelve el número de subprocesos actualmente en el equipo de ejecución de la región paralela desde el que se llama. El formato es como se detalla a continuación:
 
@@ -75,13 +77,15 @@ El `num_threads` cláusula, el `omp_set_num_threads` función y el `OMP_NUM_THRE
 
 Si el número de subprocesos no se ha establecido explícitamente por el usuario, el valor predeterminado es definido por la implementación. Esta función se enlaza a la envolvente más cercana `parallel` directiva. Si se llama desde una parte de la serie de un programa, o desde una región paralela anidada que se serializa, esta función devuelve 1.
 
+Para obtener más información, consulte [omp_set_dynamic ()](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
 - [num_threads](2-directives.md#23-parallel-construct)
 - [parallel](2-directives.md#23-parallel-construct)
 
-### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads () (función)
+### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads () (función)
 
 El `omp_get_max_threads` función devuelve un entero que se garantiza que al menos tan grande como el número de subprocesos que se usaría para formar un equipo si una región paralela sin un `num_threads` cláusula fuera a verse en ese momento en el código. El formato es como se detalla a continuación:
 
@@ -109,7 +113,7 @@ El `omp_get_max_threads` valor devuelto de la función puede utilizarse para asi
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
 - [num_threads](2-directives.md#23-parallel-construct)
 
-### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num () (función)
+### <a name="314-omp_get_thread_num-function"></a>3.1.4 omp_get_thread_num () (función)
 
 El `omp_get_thread_num` función devuelve el número de subprocesos dentro de su equipo, del subproceso que ejecuta la función. Los archivos de número de subproceso entre 0 y `omp_get_num_threads()`-1, ambos inclusive. El subproceso principal del equipo es 0.
 
@@ -126,7 +130,7 @@ Si se llama desde una región de la serie, `omp_get_thread_num` devuelve 0. Si s
 
 - [omp_get_num_threads ()](#312-omp_get_num_threads-function) (función)
 
-### <a name="315-ompgetnumprocs-function"></a>3.1.5 omp_get_num_procs () (función)
+### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs () (función)
 
 El `omp_get_num_procs` función devuelve el número de procesadores que están disponibles para el programa en el momento en que se llama a la función. El formato es como se detalla a continuación:
 
@@ -135,7 +139,7 @@ El `omp_get_num_procs` función devuelve el número de procesadores que están d
 int omp_get_num_procs(void);
 ```
 
-### <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel () (función)
+### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel () (función)
 
 El `omp_in_parallel` función devuelve un valor distinto de cero si se llama dentro de la extensión dinámica de una región paralela que se ejecutan en paralelo; en caso contrario, devuelve 0. El formato es como se detalla a continuación:
 
@@ -146,7 +150,7 @@ int omp_in_parallel(void);
 
 Esta función devuelve un valor distinto de cero cuando se llama desde dentro de una región que se ejecutan en paralelo, incluidas las regiones anidadas que se serializan.
 
-### <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic () (función)
+### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic () (función)
 
 El `omp_set_dynamic` función habilita o deshabilita el ajuste dinámico del número de subprocesos disponibles para la ejecución de las regiones en paralelo. El formato es como se detalla a continuación:
 
@@ -165,13 +169,19 @@ Una llamada a `omp_set_dynamic` tiene prioridad sobre la `OMP_DYNAMIC` variable 
 
 El valor predeterminado para el ajuste dinámico de subprocesos es definido por la implementación. Como resultado, los códigos de usuario que dependen de un número específico de subprocesos para su ejecución correcta, deben deshabilitarse subprocesos dinámicos. Las implementaciones no son necesarias para proporcionar la capacidad de ajustar dinámicamente el número de subprocesos, pero son necesarios para proporcionar la interfaz para admitir la portabilidad entre todas las plataformas.
 
+#### <a name="microsoft-specific"></a>Específicos de Microsoft
+
+La compatibilidad actual de `omp_get_dynamic` y `omp_set_dynamic` es como sigue: 
+
+El parámetro de entrada `omp_set_dynamic` no afecta a la directiva de subproceso y no cambia el número de subprocesos. `omp_get_num_threads` siempre devuelve el número definido por el usuario, si se establece, o el número de subprocesos de forma predeterminada. En la implementación actual de Microsoft, `omp_set_dynamic(0)` desactiva threading dinámica para que se pueda reutilizar el conjunto existente de subprocesos para la siguiente región paralela. `omp_set_dynamic(1)` activa el subprocesamiento dinámica descartando el conjunto de subprocesos existente y crear un nuevo conjunto para la región paralela próximas. El número de subprocesos en el nuevo conjunto es el mismo que el conjunto anterior y se basa en el valor devuelto de `omp_get_num_threads`. Por lo tanto, para un rendimiento óptimo, use `omp_set_dynamic(0)` reutilizar los subprocesos existentes.
+
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic () (función)
+### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic () (función)
 
 El `omp_get_dynamic` función devuelve un valor distinto de cero si realizar un ajuste dinámico de subprocesos está habilitado y lo contrario, devuelve 0. El formato es como se detalla a continuación:
 
@@ -180,13 +190,13 @@ El `omp_get_dynamic` función devuelve un valor distinto de cero si realizar un 
 int omp_get_dynamic(void);
 ```
 
-Si la implementación no implementa el ajuste dinámico del número de subprocesos, esta función siempre devuelve 0.
+Si la implementación no implementa el ajuste dinámico del número de subprocesos, esta función siempre devuelve 0. Para obtener más información, consulte [omp_set_dynamic ()](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - Para obtener una descripción de ajuste dinámico del subproceso, vea [omp_set_dynamic ()](#317-omp_set_dynamic-function).
 
-### <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested () (función)
+### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested () (función)
 
 El `omp_set_nested` función habilita o deshabilita el paralelismo anidado. El formato es como se detalla a continuación:
 
@@ -208,7 +218,7 @@ Cuando se habilita el paralelismo anidado, el número de subprocesos usados para
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested () (función)
+### <a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested () (función)
 
 El `omp_get_nested` función devuelve un valor distinto de cero si se habilita el paralelismo anidado y 0 si no lo está. Para obtener más información sobre el paralelismo anidado, vea [omp_set_nested ()](#319-omp_set_nested-function). El formato es como se detalla a continuación:
 
@@ -241,7 +251,7 @@ Para las siguientes funciones, la variable de bloqueo debe tener tipo `omp_nest_
 
 Las funciones de bloqueo de OpenMP tener acceso a la variable de bloqueo de manera que siempre lea y actualice el valor más reciente de la variable de bloqueo. Por lo tanto, no es necesario que un programa OpenMP para incluir explícita `flush` directivas para asegurarse de que el valor de la variable de bloqueo es coherente entre diferentes subprocesos. (Es posible que sea necesario para `flush` directivas para que los valores de otras variables sean coherentes.)
 
-### <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock y omp_init_nest_lock funciones
+### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock y omp_init_nest_lock funciones
 
 Estas funciones proporcionan el único medio de inicializar un bloqueo. Cada función inicializa el bloqueo asociado al parámetro *bloqueo* para su uso en las llamadas futuras. El formato es como se detalla a continuación:
 
@@ -253,7 +263,7 @@ void omp_init_nest_lock(omp_nest_lock_t *lock);
 
 Se desbloquea el estado inicial (es decir, no hay ningún subproceso posee el bloqueo). Un bloqueo anidable, el recuento inicial de anidamiento es cero. No es conforme al llamar a cualquiera de estas rutinas con una variable de bloqueo que ya se ha inicializado.
 
-### <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 omp_destroy_lock y omp_destroy_nest_lock funciones
+### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 omp_destroy_lock y omp_destroy_nest_lock funciones
 
 Estas funciones, asegúrese de que el apunta al bloquear la variable *bloqueo* no está inicializada. El formato es como se detalla a continuación:
 
@@ -265,7 +275,7 @@ void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 
 Es no conforme para llamar a cualquiera de estas rutinas con una variable de bloqueo que ha sin inicializar o desbloqueado.
 
-### <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock y omp_set_nest_lock funciones
+### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock y omp_set_nest_lock funciones
 
 Cada una de estas funciones bloquea el subproceso que ejecuta la función hasta que el bloqueo especificado está disponible y, a continuación, Establece el bloqueo. Un bloqueo simple está disponible si está desbloqueada. Un bloqueo anidable está disponible si está desbloqueado o si ya tiene propietario por el subproceso que ejecuta la función. El formato es como se detalla a continuación:
 
@@ -279,7 +289,7 @@ Un bloqueo simple, el argumento para el `omp_set_lock` función debe apuntar a u
 
 Un bloqueo anidable, el argumento para el `omp_set_nest_lock` función debe apuntar a una variable inicializada de bloqueo. Se incrementa el recuento de anidamiento, y el subproceso se concede o conserva la propiedad del bloqueo.
 
-### <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 omp_unset_lock y omp_unset_nest_lock funciones
+### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 omp_unset_lock y omp_unset_nest_lock funciones
 
 Estas funciones proporcionan los medios de liberar la propiedad de un bloqueo. El formato es como se detalla a continuación:
 
@@ -295,7 +305,7 @@ Para obtener un bloqueo simple, el `omp_unset_lock` función libera el subproces
 
 Para obtener un bloqueo anidable, el `omp_unset_nest_lock` función disminuye el recuento de anidamiento y las versiones el subproceso que ejecuta la función de la propiedad del bloqueo, si el recuento resultante es cero.
 
-### <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 omp_test_lock y omp_test_nest_lock funciones
+### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock y omp_test_nest_lock funciones
 
 Estas funciones intentan establecer un bloqueo, pero no bloquean la ejecución del subproceso. El formato es como se detalla a continuación:
 
@@ -318,7 +328,7 @@ Las funciones descritas en esta sección admiten un temporizador del reloj port�
 - El [omp_get_wtime ()](#331-omp_get_wtime-function) función devuelve el tiempo de reloj transcurrido.
 - El [omp_get_wtick ()](#332-omp_get_wtick-function) función devuelve los segundos entre ciclos de reloj sucesivos.
 
-### <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime () (función)
+### <a name="331-omp_get_wtime-function"></a>3.3.1 omp_get_wtime () (función)
 
 El `omp_get_wtime` función devuelve un valor de punto flotante de precisión doble igual que el tiempo de reloj transcurrido en segundos desde alguna "hora del pasado".  El "tiempo real en el pasado" es arbitrario, pero garantiza que no cambian durante la ejecución de la aplicación. El formato es como se detalla a continuación:
 
@@ -340,7 +350,7 @@ printf_s("Work took %f sec. time.\n", end-start);
 
 Los tiempos de devueltos son "veces por subproceso" por lo que supone que no es necesario que sea globalmente coherente entre todos los subprocesos que participan en una aplicación.
 
-### <a name="332-ompgetwtick-function"></a>3.3.2 omp_get_wtick () (función)
+### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick () (función)
 
 El `omp_get_wtick` función devuelve un valor de punto flotante de doble precisión igual al número de segundos entre ciclos de reloj sucesivos. El formato es como se detalla a continuación:
 

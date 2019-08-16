@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10cd1d51c2cd6053dcbaa0f5bf1548f80ed01659
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492662"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448239"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; (macros)
 
@@ -112,4 +112,4 @@ Si un compilador admite la compilación de aplicaciones de un único subproceso 
 
 ## <a name="see-also"></a>Vea también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

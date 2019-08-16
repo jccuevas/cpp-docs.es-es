@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575635"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450494"
 ---
 # <a name="sharedfuture-class"></a>shared_future (Clase)
 
@@ -46,33 +46,33 @@ Los objetos `shared_future` no están sincronizados. Llamar a métodos en el mis
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[shared_future](#shared_future)|Construye un objeto `shared_future`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[get](#get)|Recupera el resultado almacenado en el *estado asincrónico asociado*.|
 |[valid](#valid)|Especifica si el objeto no está vacío.|
-|[Espere](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
+|[wait](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
 |[wait_for](#wait_for)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|
 |[wait_until](#wait_until)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|Asigna un nuevo estado asincrónico asociado.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<futura >
+**Encabezado:** \<> futuro
 
 **Espacio de nombres:** std
 
-## <a name="get"></a>  shared_future::Get
+## <a name="get"></a>  shared_future::get
 
 Recupera el resultado almacenado en el *estado asincrónico asociado*.
 
@@ -92,7 +92,7 @@ Antes de recuperar el resultado, este método bloquea el subproceso actual hasta
 
 Para la especialización parcial `shared_future<Ty&>`, el valor almacenado es realmente una referencia al objeto que se pasó al *proveedor asincrónico* como el valor devuelto.
 
-Dado que no existe ningún valor almacenado para la especialización `shared_future<void>`, el método devuelve **void**.
+Dado que no existe ningún valor almacenado para `shared_future<void>`la especialización, el método devuelve **void**.
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -105,8 +105,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha*<br/>
-Un objeto `shared_future`.
+*Correcta*\
+Objeto `shared_future`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -114,9 +114,9 @@ Un objeto `shared_future`.
 
 ### <a name="remarks"></a>Comentarios
 
-Para el primer operador, *derecha* ya no tiene un estado asincrónico asociado después de la operación.
+Para el primer operador, *right* ya no tiene un estado asincrónico asociado después de la operación.
 
-Para el segundo método, *derecha* mantiene su estado asincrónico asociado.
+En el segundo método, *right* mantiene su estado asincrónico asociado.
 
 ## <a name="shared_future"></a>  shared_future::shared_future (Constructor)
 
@@ -131,18 +131,18 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Derecha*<br/>
+*Correcta*\
 Un objeto [future](../standard-library/future-class.md) o `shared_future`.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor crea un objeto `shared_future` que no tiene ningún *estado asincrónico asociado*.
 
-Los constructores segundo y terceros crean un `shared_future` de objetos y transferir el estado asincrónico asociado de *derecha*. *Derecha* ya no tiene un estado asincrónico asociado.
+El segundo y el tercer constructores construyen un `shared_future` objeto y transfieren el estado asincrónico asociado de la *derecha*. *Right* ya no tiene un estado asincrónico asociado.
 
-El cuarto constructor crea un `shared_future` objeto que tiene el mismo estado asincrónico asociado que *derecha*.
+El cuarto constructor crea un `shared_future` objeto que tiene el mismo estado asincrónico asociado que a la *derecha*.
 
-## <a name="valid"></a>  shared_future::Valid
+## <a name="valid"></a>  shared_future::valid
 
 Especifica si el objeto tiene un *estado asincrónico asociado*.
 
@@ -152,7 +152,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
+**true** si el objeto tiene un estado asincrónico asociado; en caso contrario, **false**.
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -178,7 +178,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rel_time*<br/>
+*Rel_time*\
 Un objeto [chrono::duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo máximo que el subproceso bloquea.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -201,7 +201,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parámetros
 
-*Abs_time*<br/>
+*Abs_time*\
 Un objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica un tiempo después del cual se puede desbloquear el subproceso.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -214,5 +214,5 @@ Un estado asincrónico asociado está listo solo si su proveedor asincrónico ha
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476843"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155773"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Pasar opciones al vinculador)
 
@@ -33,7 +33,7 @@ La opción del vinculador o las opciones que se pasarán al vinculador.
 
 ## <a name="remarks"></a>Comentarios
 
-El **/link** opción y sus opciones del vinculador deben aparecer detrás de los nombres de archivo y las opciones de CL. Se requiere un espacio entre **/link** y `linkeroptions`. Para obtener más información, consulte [referencia de vinculador MSVC](linking.md).
+El **/link** opción y sus opciones del vinculador deben aparecer detrás de los nombres de archivo y las opciones de CL. Se requiere un espacio entre **/link** y las opciones del vinculador. Para obtener más información, consulte [referencia de vinculador MSVC](linking.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -45,7 +45,7 @@ Esta línea de comandos de ejemplo compila *hello.cpp* y lo vincula al archivo d
 
 Normalmente, el IDE envía comandos independientes para compilar y vincular el código. Puede establecer las opciones del vinculador en sus páginas de propiedades del proyecto.
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** carpeta.
 

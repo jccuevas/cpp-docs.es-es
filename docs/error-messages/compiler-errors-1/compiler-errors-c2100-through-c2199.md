@@ -1,6 +1,6 @@
 ---
-title: Error del compiladors C2100 through C2199
-ms.date: 11/17/2017
+title: Errores del compilador de C2100 a C2199
+ms.date: 04/21/2019
 f1_keywords:
 - C2119
 - C2123
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857400"
 ---
-# <a name="compiler-errors-c2100-through-c2199"></a>Error del compiladors C2100 through C2199
+# <a name="compiler-errors-c2100-through-c2199"></a>Errores del compilador de C2100 a C2199
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el compilador.
 
@@ -59,15 +59,15 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2116](compiler-error-c2116.md)|las listas de parámetros de función son distintas|
 |[Error del compilador C2117](compiler-error-c2117.md)|'*identificador*': desbordamiento de límites de matriz|
 |[Error del compilador C2118](compiler-error-c2118.md)|subíndice negativo|
-|C2119 de Error del compilador|'*identificador*': el tipo para '*tipo*' no se puede deducir de un inicializador vacío|
+|Error del compilador C2119|'*identificador*': el tipo para '*tipo*' no se puede deducir de un inicializador vacío|
 |[Error del compilador C2120](compiler-error-c2120.md)|'void' no es válido con todos los tipos|
 |[Error del compilador C2121](compiler-error-c2121.md)|'#': carácter no válido: posiblemente el resultado de una expansión de macro|
 |[Error del compilador C2122](compiler-error-c2122.md)|'*identificador*': parámetro de prototipos de no es válido de nombre de la lista|
-|C2123 de Error del compilador|'*identificador*': las plantillas de alias no pueden estar especializadas parcial o explícitamente|
+|Error del compilador C2123|'*identificador*': las plantillas de alias no pueden estar especializadas parcial o explícitamente|
 |[Error del compilador C2124](compiler-error-c2124.md)|división (normal o módulo) por cero|
-|C2125 de Error del compilador|'constexpr' no es compatible con '*token*'|
-|C2126 de Error del compilador|'*identificador*' no se puede declarar con el especificador 'constexpr'|
-|C2127 de Error del compilador|'*identificador*': inicialización no válida de la entidad 'constexpr' con una expresión no constante|
+|Error del compilador C2125|'constexpr' no es compatible con '*token*'|
+|Error del compilador C2126|'*identificador*' no se puede declarar con el especificador 'constexpr'|
+|Error del compilador C2127|'*identificador*': inicialización no válida de la entidad 'constexpr' con una expresión no constante|
 |[Error del compilador C2128](compiler-error-c2128.md)|'*función*': alloc_text/same_seg aplicable solo a funciones con vinculación C|
 |[Error del compilador C2129](compiler-error-c2129.md)|función static '*identificador*' declarada pero no definida|
 |[Error del compilador C2130](compiler-error-c2130.md)|#line esperaba una cadena que contiene el nombre de archivo, se encontró '*token*'|
@@ -76,7 +76,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2133](compiler-error-c2133.md)|'*identificador*': tamaño desconocido|
 |[Error del compilador C2134](compiler-error-c2134.md)|'*función*': llamada no da como resultado una expresión constante|
 |[Error del compilador C2135](compiler-error-c2135.md)|'*operador*': operación de campo de bits no válida|
-|C2136 de Error del compilador|no permitido el contrato de API de creación|
+|Error del compilador C2136|no permitido el contrato de API de creación|
 |[Error del compilador C2137](compiler-error-c2137.md)|constante de caracteres vacía|
 |[Error del compilador C2138](compiler-error-c2138.md)|no es válido definir una enumeración sin miembros|
 |[Error del compilador C2139](compiler-error-c2139.md)|'*clase*': no se permite una clase no definida como argumento para el rasgo de tipo intrínseco '*rasgo*'|
@@ -116,9 +116,9 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2173](compiler-error-c2173.md)|'*función*': el parámetro real no es un puntero: parámetro *número*, lista de parámetros *número*|
 |[Error del compilador C2174](compiler-error-c2174.md)|'*función*': parámetro real es de tipo 'void': parámetro *número*, lista de parámetros *número*|
 |[Error del compilador C2175](compiler-error-c2175.md)|'*configuración regional*': configuración regional no válido|
-|C2176 de Error del compilador|una instrucción return no puede aparecer en el controlador de un bloque de try de función asociado con un constructor|
+|Error del compilador C2176|una instrucción return no puede aparecer en el controlador de un bloque de try de función asociado con un constructor|
 |[Error del compilador C2177](compiler-error-c2177.md)|constante demasiado grande|
-|[Error de compilador C2178](compiler-error-c2178.md)|'*identificador*'no se pueden declarar con'*especificador*' especificador|
+|[Error del compilador C2178](compiler-error-c2178.md)|'*identificador*'no se pueden declarar con'*especificador*' especificador|
 |[Error del compilador C2179](compiler-error-c2179.md)|'*tipo*': un argumento de atributo no puede usar parámetros de tipo|
 |[Error del compilador C2180](compiler-error-c2180.md)|expresión de control es de tipo '*tipo*'|
 |[Error del compilador C2181](compiler-error-c2181.md)|'else' no válido sin el correspondiente 'if'|
@@ -127,9 +127,9 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2184](compiler-error-c2184.md)|'*tipo*': tipo no válido para la expresión __except|
 |[Error del compilador C2185](compiler-error-c2185.md)|'*identificador*': asignación con base no válida|
 |[Error del compilador C2186](compiler-error-c2186.md)|'*operador*': operando no válido de tipo 'void'|
-|C2187 de Error del compilador|error de sintaxis: '*token*' inesperado aquí|
+|Error del compilador C2187|error de sintaxis: '*token*' inesperado aquí|
 |[Error del compilador C2188](compiler-error-c2188.md)|'*número*': demasiado grande para el carácter ancho|
-|C2189 de Error del compilador|el atributo 'alignas' no puede aplicarse a un campo de bits, un parámetro de función, una declaración de excepción o una variable declarada con 'registro' clase de almacenamiento|
+|Error del compilador C2189|el atributo 'alignas' no puede aplicarse a un campo de bits, un parámetro de función, una declaración de excepción o una variable declarada con 'registro' clase de almacenamiento|
 |[Error del compilador C2190](compiler-error-c2190.md)|primera lista de parámetros más larga que la segunda|
 |[Error del compilador C2191](compiler-error-c2191.md)|segunda lista de parámetros más larga que la primera|
 |[Error del compilador C2192](compiler-error-c2192.md)|parámetro '*número*' diferente de la declaración|
@@ -140,3 +140,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2197](compiler-error-c2197.md)|'*función*': hay demasiados argumentos para la llamada|
 |[Error del compilador C2198](compiler-error-c2198.md)|'*función*': demasiado pocos argumentos para la llamada|
 |[Error del compilador C2199](compiler-error-c2199.md)|error de sintaxis: se encontró '*identificador* (' en el ámbito global (era una declaración?)|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errores del compilador de C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

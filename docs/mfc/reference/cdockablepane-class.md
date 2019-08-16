@@ -1,6 +1,6 @@
 ---
 title: CDockablePane Class
-ms.date: 10/18/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CDockablePane
 - AFXDOCKABLEPANE/CDockablePane
@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 9ba5cfa2fc30c19cabc3f9f45a10f2c23e7d4269
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769698"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552322"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_signed class
 - is_signed
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
-ms.openlocfilehash: eacc271697930bec64630c0a1be612bd89eeb91f
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.openlocfilehash: 153970412f324f070bb66ae4a1bb6a8c204a5886
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59534141"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457503"
 ---
 # <a name="issigned-class"></a>is_signed (Clase)
 
@@ -27,12 +27,12 @@ struct is_signed;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo entero con signo o un `cv-qualified` integral un tipo con signo, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo entero con signo `cv-qualified` o un tipo entero con signo; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 
@@ -77,5 +77,5 @@ is_signed<float> == true
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_unsigned (Clase)](../standard-library/is-unsigned-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase is_unsigned](../standard-library/is-unsigned-class.md)

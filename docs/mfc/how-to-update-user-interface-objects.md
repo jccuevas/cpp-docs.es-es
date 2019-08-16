@@ -14,13 +14,13 @@ helpviewer_keywords:
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
 ms.openlocfilehash: 0dee9bb48c11cf061af60ebaf9a80c0123d339be
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160281"
 ---
-# <a name="how-to-update-user-interface-objects"></a>Filtrar Actualizar los objetos de interfaz de usuario
+# <a name="how-to-update-user-interface-objects"></a>Procedimiento Actualizar los objetos de interfaz de usuario
 
 Normalmente, los elementos de menú y los botones de barra de herramientas tienen más de un estado. Por ejemplo, un elemento de menú está deshabilitado (atenuado) si no está disponible en este contexto. Los elementos de menú también pueden ser activada o desactivada. También se puede deshabilitar un botón de barra de herramientas si no está disponible o se puede proteger.
 

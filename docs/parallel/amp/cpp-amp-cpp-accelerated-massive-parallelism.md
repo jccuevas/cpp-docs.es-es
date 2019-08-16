@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ AMP (see C++ Accelerated Massive Parallelism)
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
-ms.openlocfilehash: f8ac71023f66868a66fb8c54a5e86678225378a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dbd7d646b455ac57833d28b18602b533c8388e6
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613179"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450351"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
@@ -37,6 +37,6 @@ C++ AMP (C++ Accelerated Massive Parallelism) acelera la ejecución del código 
 
 ## <a name="other-resources"></a>Otros recursos
 
-[Programación en paralelo en código nativo](http://go.microsoft.com/fwlink/p/?linkid=238472)<br/>
-[Proyectos de ejemplo de C++ AMP para su descarga](http://go.microsoft.com/fwlink/p/?linkid=248508)<br/>
+[Programación en paralelo en código nativo](https://go.microsoft.com/fwlink/p/?linkid=238472)<br/>
+[Proyectos de ejemplo de C++ AMP para su descarga](https://go.microsoft.com/fwlink/p/?linkid=248508)<br/>
 [Análisis de código de AMP de C++ con el visualizador de simultaneidad](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

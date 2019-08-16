@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594381"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499329"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
 Escribe salida con formato en la consola mediante un puntero a una lista de argumentos. Estas versiones de [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) tienen mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -97,16 +97,16 @@ Para obtener más información, vea [Sintaxis de especificación de formato: Fun
 
 Número de caracteres escrito o un valor negativo si se produce un error en la salida.
 
-Al igual que las versiones menos seguras de estas funciones, si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, a diferencia de las versiones menos seguras de estas funciones, si *formato* no especifica un formato válido, se genera una excepción de parámetro no válido. Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen **errno** para ese código de error. El código de error predeterminado es **EINVAL** si no se aplica un valor más concreto.
+Al igual que las versiones menos seguras de estas funciones, si el *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, a diferencia de las versiones menos seguras de estas funciones, si *Format* no especifica un formato válido, se genera una excepción de parámetro no válido. Si la ejecución puede continuar, estas funciones devuelven un código de error y establecen **errno** en ese código de error. El código de error predeterminado es **EINVAL** si no se aplica un valor más específico.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola. **_vcwprintf_s** es la versión de caracteres anchos de **_vcprintf_s**. Toma una cadena de caracteres anchos como argumento.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la consola. **_vcwprintf_s** es la versión con caracteres anchos de **_vcprintf_s**. Toma una cadena de caracteres anchos como argumento.
 
-Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
+Las versiones de estas funciones que tienen el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
 
 > [!IMPORTANT]
-> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

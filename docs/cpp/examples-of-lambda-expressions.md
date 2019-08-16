@@ -1,15 +1,15 @@
 ---
 title: Ejemplos de expresiones lambda
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663962"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222092"
 ---
 # <a name="examples-of-lambda-expressions"></a>Ejemplos de expresiones lambda
 
@@ -61,7 +61,7 @@ Aunque las expresiones lambda se suelen declarar en el cuerpo de una función, s
 
 ### <a name="example-2"></a>Ejemplo 2
 
-El compilador de Visual C++ enlaza una expresión lambda a sus variables capturadas cuando se declara la expresión, no cuando se llama a la misma. En el ejemplo siguiente se muestra una expresión lambda que captura la variable local `i` por valor y la variable local `j` por referencia. Como la expresión lambda captura `i` por valor, la reasignación de `i` más adelante en el programa no afecta al resultado de la expresión. Sin embargo, puesto que la expresión lambda captura `j` por referencia, la reasignación de `j` afecta al resultado de la expresión.
+Microsoft C++ compilador enlaza una expresión lambda a sus variables capturadas cuando se declara la expresión en lugar de cuando se llama a la expresión. En el ejemplo siguiente se muestra una expresión lambda que captura la variable local `i` por valor y la variable local `j` por referencia. Como la expresión lambda captura `i` por valor, la reasignación de `i` más adelante en el programa no afecta al resultado de la expresión. Sin embargo, puesto que la expresión lambda captura `j` por referencia, la reasignación de `j` afecta al resultado de la expresión.
 
 ### <a name="code"></a>Código
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Ejemplo
 
 Las expresiones lambda se pueden usar en el cuerpo de una función. La expresión lambda puede tener acceso a cualquier función o miembro de datos al que pueda tener acceso la función envolvente. Se puede capturar explícita o implícitamente el **esto** puntero para proporcionar acceso a los miembros de datos y funciones de la clase envolvente.
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): capturar **esto** por valor (`[*this]`) cuando la expresión lambda, se usará en las operaciones asincrónicas o paralelas donde el código podría ejecutarse después el objeto original queda fuera del ámbito.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Capturar **esto** por valor (`[*this]`) cuando la expresión lambda, se usará en las operaciones asincrónicas o paralelas donde el código podría ejecutarse después de que el objeto original queda fuera del ámbito.
 
 Puede usar el **esto** puntero explícitamente en una función, como se muestra aquí:
 

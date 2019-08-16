@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_array class
 - is_array
 ms.assetid: 61fb2201-8de3-4746-9721-617f02df170f
-ms.openlocfilehash: daaa4faa82dba7f98a6636cc06b2637534cfc99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c54664ed5f56411929c60a0f15ae3c4f0e4581ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544851"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456657"
 ---
 # <a name="isarray-class"></a>is_array (Clase)
 
@@ -27,12 +27,12 @@ struct is_array;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de matriz, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es un tipo de matriz; en caso contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 
@@ -74,6 +74,6 @@ is_array<int[5]> == true
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[extent (Clase)](../standard-library/extent-class.md)<br/>
-[rank (Clase)](../standard-library/rank-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Clase extent](../standard-library/extent-class.md)\
+[Clase rank](../standard-library/rank-class.md)

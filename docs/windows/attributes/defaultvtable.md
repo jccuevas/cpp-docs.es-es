@@ -1,21 +1,21 @@
 ---
-title: defaultvtable (atributo de COM de C++)
+title: defaultvtable (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028352"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501646"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Define una interfaz que la interfaz de vtable predeterminada para un objeto COM.
+Define una interfaz como la interfaz vtable predeterminada para un objeto COM.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,15 +26,15 @@ Define una interfaz que la interfaz de vtable predeterminada para un objeto COM.
 ### <a name="parameters"></a>Parámetros
 
 *interface*<br/>
-La interfaz designada que se desea tener la vtable predeterminado para el objeto COM.
+La interfaz designada que desea que tenga la tabla vtable predeterminada para el objeto COM.
 
 ## <a name="remarks"></a>Comentarios
 
-El **defaultvtable** atributo de C++ tiene la misma funcionalidad que el [defaultvtable](/windows/desktop/Midl/defaultvtable) atributo MIDL.
+El atributo **defaultvtable** C++ tiene la misma funcionalidad que el atributo MIDL [defaultvtable](/windows/win32/Midl/defaultvtable) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra los atributos en una clase que utilice **defaultvtable** para especificar una interfaz predeterminada:
+En el código siguiente se muestran los atributos de una clase que usan **defaultvtable** para especificar una interfaz predeterminada:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -69,9 +69,9 @@ class CMyC3 : public IMyI3 {};
 |||
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
-|**Reiterativo**|No|
+|**Reiterativo**|Sin|
 |**Atributos requeridos**|**coclase**|
-|**Atributos no válidos**|Ninguna|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
 ms.openlocfilehash: 9d5a0b24bb08a9485b2d212058fa8f0bd82e5842
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183679"
 ---
 # <a name="ifexists-statement"></a>__if_exists (Instrucción)
 
@@ -32,7 +32,7 @@ statements
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*identifier*|El identificador cuya existencia se desea probar.|
-|*Instrucciones*|Una o varias instrucciones que se ejecutarán si *identificador* existe.|
+|*statements*|Una o varias instrucciones que se ejecutarán si *identificador* existe.|
 
 ## <a name="remarks"></a>Comentarios
 

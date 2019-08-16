@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: 9577447b2201c1c9e53192b99abad1979f45d15f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467223"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450399"
 ---
 # <a name="slicearray-class"></a>slice_array (Clase)
 
@@ -42,13 +42,13 @@ public:
 
 ## <a name="remarks"></a>Comentarios
 
-La clase describe un objeto que almacena una referencia a un objeto de la clase [valarray](../standard-library/valarray-class.md)**\<Type>**, junto con un objeto de la clase [slice](../standard-library/slice-class.md), que describe la secuencia de los elementos que se pueden seleccionar desde el objeto **valarray\<Type>**.
+La clase describe un objeto que almacena una referencia a un objeto de la clase [valarray](../standard-library/valarray-class.md) **\<Type>** , junto con un objeto de la clase [slice](../standard-library/slice-class.md), que describe la secuencia de los elementos que se pueden seleccionar desde el objeto **valarray\<Type>** .
 
 La clase de plantilla se crea indirectamente por determinadas operaciones valarray y no se puede usar directamente en el programa. Una clase de plantilla auxiliar interna que usa el operador de subíndice de segmento:
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-Construir un `slice_array<Type>` objeto escribiendo una expresión de formato [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), para un segmento `sl` de valarray `va`. Las funciones miembro de la clase slice_array se comportarán como las firmas de función correspondientes definidas para `valarray<Type>`, excepto que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por slice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el segmento, el número de elementos y la distancia entre los elementos. Una slice_array obtenida de valarray `va` declarado por **va**[ `slice`(2, 5, 3)] selecciona elementos con índices de 2, 5, 8, 11 y 14 de `va`. Los índices deben ser válidos para que el procedimiento sea válido.
+Solo se construye `slice_array<Type>` un objeto escribiendo una expresión con el formato [va&#91;SL&#93;](../standard-library/valarray-class.md#op_at), para un segmento `sl` de valarray `va`. Las funciones miembro de la clase slice_array se comportarán como las signaturas de `valarray<Type>`función correspondientes definidas para, excepto en que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por slice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el segmento, el número de elementos y la distancia entre los elementos. Un corte slice_array de valarray `va` declarado por **Virginia**[ `slice`(2, 5, 3)] selecciona elementos con índices 2, 5, 8, 11 y 14 de. `va` Los índices deben ser válidos para que el procedimiento sea válido.
 
 ## <a name="example"></a>Ejemplo
 
@@ -62,4 +62,4 @@ Vea el ejemplo de [slice::slice](../standard-library/slice-class.md#slice) para 
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

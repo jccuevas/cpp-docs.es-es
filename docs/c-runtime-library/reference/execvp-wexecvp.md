@@ -28,11 +28,11 @@ helpviewer_keywords:
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
 ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339108"
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 
@@ -56,7 +56,7 @@ intptr_t _wexecvp(
 
 ### <a name="parameters"></a>Parámetros
 
-*CmdName*<br/>
+*cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
 *argv*<br/>
@@ -66,7 +66,7 @@ Matriz de punteros a parámetros.
 
 Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de -1 indica un error, en cuyo caso el **errno** se establece la variable global.
 
-|**errno** valor|Descripción|
+|**errno** value|Descripción|
 |-------------------|-----------------|
 |**E2BIG**|El espacio necesario para los argumentos y la configuración de entorno supera los 32 kB.|
 |**EACCES**|El archivo especificado tiene un bloqueo o una infracción de uso compartido.|

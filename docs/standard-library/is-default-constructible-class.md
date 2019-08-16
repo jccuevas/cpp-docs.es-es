@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 7fc1c70a1244688888174b834fe653d5d6d2497b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520938"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452783"
 ---
 # <a name="isdefaultconstructible-class"></a>Clase is_default_constructible
 
@@ -26,12 +26,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parámetros
 
-*T*<br/>
+*H*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo de clase que tiene un constructor predeterminado, en caso contrario, es false. Es equivalente al elemento `is_constructible<T>`del predicado. Tipo *T* debe ser un tipo completo, **void**, o una matriz de límite desconocido.
+Una instancia del predicado de tipo contiene true si el tipo *T* es un tipo de clase que tiene un constructor predeterminado; en caso contrario, contiene false. Es equivalente al elemento `is_constructible<T>`del predicado. El tipo *T* debe ser un tipo completo, **void**o una matriz de enlazada desconocida.
 
 ## <a name="example"></a>Ejemplo
 
@@ -75,4 +75,4 @@ is_default_constructible<Simple2> == false
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

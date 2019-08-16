@@ -1,19 +1,17 @@
 ---
 title: Procedimiento Usar eventos de compilación en proyectos de MSBuild
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814127"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221474"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Filtrar Usar eventos de compilación en proyectos de MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedimiento Usar eventos de compilación en proyectos de MSBuild
 
 Un evento de compilación es un comando que MSBuild se realiza en una determinada fase del proceso de compilación. El *anterior a la compilación* evento se produce antes de que empiece la compilación; el *anterior a la vinculación* evento tiene lugar antes de iniciar el paso de vínculo; y la *posterior a la compilación* evento tiene lugar después de la compilación finaliza correctamente. Se produce un evento de compilación solo si se produce el paso de compilación asociada. Por ejemplo, el evento anterior a la vinculación no se produce si no se ejecuta el paso de vinculación.
 
@@ -39,7 +37,7 @@ La siguiente tabla enumera cada *use compilación* elemento:
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se puede agregar dentro del elemento de proyecto del archivo myproject.vcxproj creado en [Tutorial: Usar MSBuild para crear un proyecto de Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Un *anterior a la compilación* evento hace una copia de main.cpp; un *anterior a la vinculación* evento hace una copia de main.obj; y un *posterior a la compilación* evento hace una copia de myproject.exe. Si el proyecto se compiló con una configuración de lanzamiento, se ejecutan los eventos de compilación. Si el proyecto se compiló con una configuración de depuración, no se ejecutan los eventos de compilación.
+En el siguiente ejemplo se puede agregar dentro del elemento de proyecto del archivo myproject.vcxproj creado en [Tutorial: Usar MSBuild para crear un C++ proyecto](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Un *anterior a la compilación* evento hace una copia de main.cpp; un *anterior a la vinculación* evento hace una copia de main.obj; y un *posterior a la compilación* evento hace una copia de myproject.exe. Si el proyecto se compiló con una configuración de lanzamiento, se ejecutan los eventos de compilación. Si el proyecto se compiló con una configuración de depuración, no se ejecutan los eventos de compilación.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ En el siguiente ejemplo se puede agregar dentro del elemento de proyecto del arc
 ## <a name="see-also"></a>Vea también
 
 [MSBuild en la línea de comandos - C++](msbuild-visual-cpp.md)<br/>
-[Tutorial: Uso de MSBuild para crear un proyecto de Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Tutorial: Uso de MSBuild para crear un proyecto de C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

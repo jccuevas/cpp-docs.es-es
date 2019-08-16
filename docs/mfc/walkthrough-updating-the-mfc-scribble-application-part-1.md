@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Actualizar la aplicación Scribble MFC (parte 1)'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258767"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450512"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 
@@ -24,7 +24,7 @@ En este tutorial se ha modificado el ejemplo clásico de MFC Scribble 1.0 que pe
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-El [ejemplo Scribble de MFC 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obtener ayuda sobre la conversión a Visual Studio 2017, consulte [Guía de migración: Scribble de MFC](../porting/porting-guide-mfc-scribble.md).
+El [ejemplo Scribble de MFC 1.0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obtener ayuda sobre la conversión de Visual Studio 2017 o posterior, consulte [Guía de migración: Scribble de MFC](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Secciones
 
@@ -171,7 +171,7 @@ Consta de una cinta de opciones de la **aplicación** botón, que es el botón g
 
 1. En la vista Diseño, haga clic en el **aplicación** botón para mostrar sus propiedades. Cambie los valores de propiedad de la manera siguiente: **Imagen** a `IDB_RIBBON_MAIN`, **Prompt** a `File`, **claves** a `f`, **imágenes grandes** a `IDB_RIBBON_FILELARGE`y **Imágenes pequeñas** a `IDB_RIBBON_FILESMALL`.
 
-1. Las modificaciones siguientes crean el menú que aparece cuando el usuario hace clic en el **aplicación** botón. Haga clic en el botón de puntos suspensivos (**...** ) junto a **Main Items** para abrir el **Editor de elementos**.
+1. Las modificaciones siguientes crean el menú que aparece cuando el usuario hace clic en el **aplicación** botón. Haga clic en el botón de puntos suspensivos ( **...** ) junto a **Main Items** para abrir el **Editor de elementos**.
 
    1. Con el **elemento** tipo **botón** seleccionado, haga clic en **agregar** para agregar un botón. Cambio **título** a `&New`, **ID** a `ID_FILE_NEW`, **imagen** a `0`, **imagen grande** a `0`.
 
@@ -199,7 +199,7 @@ Consta de una cinta de opciones de la **aplicación** botón, que es el botón g
 
 1. La modificación siguiente crea un botón Salir que aparece en la parte inferior de la **aplicación** menú del botón.
 
-   1. En el **propiedades** ventana, haga clic en el botón de puntos suspensivos (**...** ) junto a **botón** para abrir el **Editor de elementos**.
+   1. En el **propiedades** ventana, haga clic en el botón de puntos suspensivos ( **...** ) junto a **botón** para abrir el **Editor de elementos**.
 
    1. Con el **elemento** tipo **botón** seleccionado, haga clic en **agregar** para agregar un botón. Cambio **título** a `E&xit`, **ID** a `ID_APP_EXIT`, **imagen** a `8`.
 
@@ -269,4 +269,4 @@ Ha modificado el clásico ejemplo de Scribble de MFC 1.0 para usar el **Ribbon D
 ## <a name="see-also"></a>Vea también
 
 [Tutoriales](../mfc/walkthroughs-mfc.md)<br/>
-[Tutorial: Actualizar la aplicación Scribble MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Tutorial: actualizar la aplicación Scribble de MFC (Parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

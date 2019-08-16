@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591651"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456442"
 ---
 # <a name="allocatorbase-class"></a>allocator_base (Clase)
 
@@ -58,20 +58,20 @@ class allocator_base
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*Type*|Tipo de elementos que asigna el asignador.|
-|*sincronización*|Directiva de sincronización del asignador, que es [sync_none (Clase)](../standard-library/sync-none-class.md), [sync_per_container (Clase)](../standard-library/sync-per-container-class.md), [sync_per_thread (Clase)](../standard-library/sync-per-thread-class.md) o [sync_shared (Clase)](../standard-library/sync-shared-class.md).|
+|*Sincronícelo*|Directiva de sincronización del asignador, que es [sync_none (Clase)](../standard-library/sync-none-class.md), [sync_per_container (Clase)](../standard-library/sync-per-container-class.md), [sync_per_thread (Clase)](../standard-library/sync-per-thread-class.md) o [sync_shared (Clase)](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[allocator_base](#allocator_base)|Construye un objeto de tipo `allocator_base`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[const_pointer](#const_pointer)|Tipo que proporciona un puntero constante al tipo de objeto administrado por el asignador.|
 |[const_reference](#const_reference)|Tipo que proporciona una referencia constante al tipo de objeto administrado por el asignador.|
@@ -83,10 +83,10 @@ class allocator_base
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
-|[_Charalloc](#charalloc)|Asigna almacenamiento para una matriz de tipo **char**.|
-|[_Chardealloc](#chardealloc)|Libera almacenamiento para la matriz que contiene los elementos de tipo **char**.|
+|[_Charalloc](#charalloc)|Asigna almacenamiento para una matriz de tipo **Char**.|
+|[_Chardealloc](#chardealloc)|Libera almacenamiento para la matriz que contiene elementos de tipo **Char**.|
 |[address](#address)|Encuentra la dirección de un objeto cuyo valor se especifica.|
 |[allocate](#allocate)|Asigna un bloque de memoria lo suficientemente grande como para almacenar al menos un número especificado de elementos.|
 |[construct](#construct)|Crea un tipo concreto de objeto en una dirección especificada que se inicializa con un valor especificado.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Asigna almacenamiento para una matriz de tipo **char**.
+Asigna almacenamiento para una matriz de tipo **Char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -110,7 +110,7 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*count*|El número de elementos de la matriz que se van a asignar.|
 
@@ -124,7 +124,7 @@ Los contenedores usan esta función miembro cuando se compilan con un compilador
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Libera almacenamiento para la matriz que contiene los elementos de tipo **char**.
+Libera almacenamiento para la matriz que contiene elementos de tipo **Char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -132,7 +132,7 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*Val*\
 Valor const o nonconst del objeto cuya dirección se busca.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -177,7 +177,7 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Nx*|El número de elementos de la matriz que se van a asignar.|
 |*_Hint*|Este parámetro se ignora.|
@@ -203,7 +203,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*right*|Objeto de asignador que se va a copiar.|
 
@@ -237,10 +237,10 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*ptr*|Puntero a la ubicación donde se va a crear el objeto.|
-|*Val*|Valor con el que se va a inicializar el objeto que se está creando.|
+|*val*|Valor con el que se va a inicializar el objeto que se está creando.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -256,7 +256,7 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*_Nx*|El número de objetos que se van a desasignar del almacenamiento.|
@@ -275,7 +275,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*ptr*|Puntero que designa la dirección del objeto que se va a destruir.|
 
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>Vea también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

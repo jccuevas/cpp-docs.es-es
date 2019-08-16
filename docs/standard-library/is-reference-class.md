@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 793a84f03dba762ff686627004ffe3830a5d98d8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517753"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455683"
 ---
 # <a name="isreference-class"></a>is_reference (Clase)
 
@@ -27,12 +27,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 Tipo que se va a consultar.
 
 ## <a name="remarks"></a>Comentarios
 
-Una instancia del predicado de tipo contiene true si el tipo *Ty* es una referencia a un objeto o una función, en caso contrario, es false.
+Una instancia del predicado de tipo contiene true si el tipo *Ty* es una referencia a un objeto o una función; de lo contrario, contiene false.
 
 ## <a name="example"></a>Ejemplo
 
@@ -77,5 +77,5 @@ is_reference<int(&)()> == true
 
 ## <a name="see-also"></a>Vea también
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_pointer (Clase)](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_pointer (Clase)](../standard-library/is-pointer-class.md)

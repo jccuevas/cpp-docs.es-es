@@ -1,6 +1,6 @@
 ---
 title: Transportar excepciones entre subprocesos
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464448"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221923"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportar excepciones entre subprocesos
 
-Visual C++ admite *transportar una excepción* desde un subproceso a otro. El transporte de excepciones permite detectar una excepción en un subproceso y hacer que parezca que la excepción se produce en un subproceso diferente. Por ejemplo, esta característica se puede utilizar para escribir una aplicación multiproceso en la que el subproceso principal controla todas las excepciones producidas por sus subprocesos secundarios. El transporte de excepciones es útil principalmente para los desarrolladores que crean bibliotecas de programación o sistemas paralelos. Para implementar transporte de excepciones, Visual C++ proporciona el [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo y el [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), y [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funciones.
+Microsoft C++ compilador (MSVC) admite *transportar una excepción* desde un subproceso a otro. El transporte de excepciones permite detectar una excepción en un subproceso y hacer que parezca que la excepción se produce en un subproceso diferente. Por ejemplo, esta característica se puede utilizar para escribir una aplicación multiproceso en la que el subproceso principal controla todas las excepciones producidas por sus subprocesos secundarios. El transporte de excepciones es útil principalmente para los desarrolladores que crean bibliotecas de programación o sistemas paralelos. Para implementar transporte de excepciones, MSVC proporciona el [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo y el [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), y [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funciones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,7 +42,7 @@ namespace std
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*No se especifica*|Clase interna sin especificar que se utiliza para implementar el tipo `exception_ptr`.|
+|*unspecified*|Clase interna sin especificar que se utiliza para implementar el tipo `exception_ptr`.|
 |*p*|Objeto `exception_ptr` que hace referencia a una excepción.|
 |*E*|Clase que representa una excepción.|
 |*e*|Instancia de la clase del parámetro `E`.|

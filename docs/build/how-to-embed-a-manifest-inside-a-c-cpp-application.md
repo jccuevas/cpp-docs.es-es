@@ -1,21 +1,21 @@
 ---
-title: Filtrar Incrustar un manifiesto en una aplicación C o C++
-ms.date: 11/04/2016
+title: Procedimiento Incrustar un manifiesto en una aplicación C o C++
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809787"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220702"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Filtrar Incrustar un manifiesto en una aplicación C o C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedimiento Incrustar un manifiesto en una aplicación C o C++
 
-Se recomienda que una aplicación de C o C++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, Visual Studio intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen. consulte [Manifest Generation en Visual Studio](manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar archivos MAKE existente para insertar automáticamente el manifiesto dentro del archivo binario final.
+Se recomienda incrustar el manifiesto de la aplicación o biblioteca dentro del archivo binario final porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, Visual Studio intenta incrustar el manifiesto cuando compila un proyecto. Para obtener más información, consulte [Manifest Generation en Visual Studio](manifest-generation-in-visual-studio.md). Sin embargo, si compila la aplicación mediante el uso de nmake, deberá realizar algunos cambios en el archivo MAKE. En esta sección se muestra cómo cambiar los archivos MAKE para que inserta automáticamente el manifiesto dentro del archivo binario final.
 
 ## <a name="two-approaches"></a>Dos enfoques
 
@@ -23,15 +23,19 @@ Hay dos maneras para incrustar el manifiesto en una aplicación o biblioteca.
 
 - Si no está realizando una compilación incremental puede insertar directamente el manifiesto mediante una línea de comandos similar a lo siguiente como un paso posterior a la compilación:
 
-   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    o
 
-   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 para un archivo EXE, 2 para un archivo DLL).
+   Utilice 1 para un archivo EXE y 2 para un archivo DLL.
 
-- Si está realizando una compilación incremental, editar el recurso directamente, como se muestra aquí se deshabilitará la compilación incremental y produzcan una recompilación completa; por lo tanto, se debe tomar un enfoque diferente:
+- Si está realizando una compilación incremental, siga estos pasos:
 
    - Vincule el archivo binario para generar el archivo MyApp.exe.manifest.
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Si esta secuencia de comandos se ejecuta sin cambios con Visual C++, crea correctamente MyApp.exe. También crea el archivo de manifiesto externo MyApp.exe.manifest, para su uso por el sistema operativo para cargar ensamblados dependientes en tiempo de ejecución.
+Si esta secuencia de comandos se ejecuta sin cambios con Visual Studio, crea correctamente MyApp.exe. También crea el archivo de manifiesto externo MyApp.exe.manifest, para su uso por el sistema operativo para cargar ensamblados dependientes en tiempo de ejecución.
 
 El script nmake para MyLibrary.dll es muy similar:
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Ahora cree el archivo makefile.targ.inc y copie lo siguiente:
+Ahora cree **makefile.targ.inc** y copie lo siguiente:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

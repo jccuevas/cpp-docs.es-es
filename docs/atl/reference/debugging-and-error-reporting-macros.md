@@ -1,6 +1,6 @@
 ---
 title: Macros de depuración e informe de errores
-ms.date: 03/27/2019
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: a243351ff337cb517f8a8231c18c495c8d2ca302
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775054"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221078"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuración e informe de errores
 
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>Parámetros
 
 *exp*<br/>
-[in] La cadena y variables para enviarlas al objeto Visual C++ ventana de salida o cualquier aplicación que intercepta estos mensajes.
+[in] La cadena y las variables para enviar a la ventana de salida o cualquier aplicación que intercepta estos mensajes.
 
 *category*<br/>
 [in] Tipo de evento o método en el que al informe. Vea la sección Comentarios para obtener una lista de categorías.
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>Parámetros
 
 *exp*<br/>
-[in] Cadena que se enviará al objeto Visual C++ ventana de salida o cualquier aplicación que intercepta estos mensajes.
+[in] La cadena para enviar a la ventana de salida o cualquier aplicación que intercepta estos mensajes.
 
 *category*<br/>
 [in] Tipo de evento o método en el que al informe. Vea la sección Comentarios para obtener una lista de categorías.

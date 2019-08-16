@@ -6,13 +6,13 @@ helpviewer_keywords:
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
 ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387485"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Filtrar Crear aplicaciones de consola CLR (C++ / c++ / CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Procedimiento Crear aplicaciones de consola CLR (C++ / c++ / CLI)
 
 Puede utilizar la plantilla Aplicación de consola para crear un proyecto de aplicación de consola que ya tiene referencias y archivos esenciales del proyecto.
 

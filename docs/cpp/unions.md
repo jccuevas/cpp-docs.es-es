@@ -1,20 +1,23 @@
 ---
 title: Uniones
-ms.date: 11/19/2018
+ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894468"
 ---
 # <a name="unions"></a>Uniones
+
+> [!NOTE]
+> En C ++ 17 y versiones posteriores, el **std::variant** clase es una alternativa de seguridad de tipos de uniones.
 
 Un **unión** es un tipo definido por el usuario en el que todos los miembros comparten la misma ubicación de memoria. Esto significa que, en un momento dado, una unión no puede contener más de un objeto de su lista de miembros. También significa que, independientemente de cuántos miembros tiene una unión, en todo momento usa únicamente la memoria suficiente para almacenar al miembro más grande.
 
@@ -31,7 +34,7 @@ union [name]  { member-list };
 *name*<br/>
 Nombre del tipo dado a la unión.
 
-*lista de miembros*<br/>
+*member-list*<br/>
 Miembros que puede contener la unión. Vea la sección Comentarios.
 
 ## <a name="remarks"></a>Comentarios
@@ -64,7 +67,6 @@ int main()
 En el ejemplo anterior, el código que acceda a la unión debe saber qué miembro mantiene los datos. La solución más común a este problema es incluir la unión en una estructura junto con un miembro de enumeración adicional que indica el tipo de datos almacenados actualmente en la unión. Esto se denomina un *unión discriminada* y en el ejemplo siguiente se muestra el patrón básico.
 
 ```cpp
-#include "stdafx.h"
 #include <queue>
 
 using namespace std;

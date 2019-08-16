@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338836"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -76,9 +76,9 @@ Si es correcto, devuelve el exponente de base 2 de *x*, es decir, 2<sup>x</sup>.
 
 |Problema|Volver|
 |-----------|------------|
-|*x* = ± 0|1|
-|*x* = - INFINITY|+0|
-|*x* = + INFINITY|+INFINITY|
+|*x* = ±0|1|
+|*x* = -INFINITY|+0|
+|*x* = +INFINITY|+INFINITY|
 |*x* = NaN|NaN|
 |Error de intervalo de desbordamiento|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
 |Error de intervalo de subdesbordamiento|Resultado correcto después del redondeo|
@@ -93,7 +93,7 @@ Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **exp2** que toma
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf**, **expl**|\<math.h>|\<cmath>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

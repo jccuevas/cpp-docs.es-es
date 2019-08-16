@@ -1,8 +1,6 @@
 ---
 title: Archivos DLL de extensión
-ms.date: 11/04/2016
-f1_keywords:
-- afxdll
+ms.date: 05/06/2019
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820447"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220765"
 ---
 # <a name="mfc-extension-dlls"></a>Archivos DLL de extensión MFC
 
@@ -52,7 +50,7 @@ Un archivo DLL de extensión de MFC utiliza una versión compartida de MFC de la
 
 Antes de la versión 4.0 de MFC, este tipo de DLL se denominaba AFXDLL. AFXDLL hace referencia a la `_AFXDLL` símbolo de preprocesador que se define al compilar el archivo DLL.
 
-Las bibliotecas de importación para la versión compartida de MFC se nombran según la convención descrita en [convenciones de nomenclatura para archivos DLL de MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ proporciona versiones pregeneradas de los archivos DLL de MFC, junto con una serie de archivos DLL que no están basados en MFC y que puede utilizar y distribuir con las aplicaciones. Éstos aparecen documentados en Redist.txt, el cual se instala en la carpeta Archivos de programa\Microsoft Visual Studio.
+Las bibliotecas de importación para la versión compartida de MFC se nombran según la convención descrita en [convenciones de nomenclatura para archivos DLL de MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual Studio proporciona versiones pregeneradas de los archivos DLL de MFC, además de un número de no - archivos DLL de MFC que puede utilizar y distribuir con sus aplicaciones. Éstos aparecen documentados en Redist.txt, el cual se instala en la carpeta Archivos de programa\Microsoft Visual Studio.
 
 Si va a utilizar un archivo .def para exportar, coloque el código siguiente al principio y al final del archivo de encabezado:
 
@@ -132,4 +130,4 @@ Si el archivo DLL de extensión MFC requiere mantener datos adicionales para cad
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

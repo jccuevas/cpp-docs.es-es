@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
 ms.openlocfilehash: f394a48c0326058be705d14fb0413e23e8052ae2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386166"
 ---
 # <a name="bstrt-class"></a>_bstr_t (Clase)
 
@@ -43,12 +43,12 @@ Un `_bstr_t` objeto encapsula el [tipo de datos BSTR](/previous-versions/windows
 
 |||
 |-|-|
-|[operador =](../cpp/bstr-t-operator-equal.md)|Asigna un nuevo valor a un objeto `_bstr_t` existente.|
+|[operator =](../cpp/bstr-t-operator-equal.md)|Asigna un nuevo valor a un objeto `_bstr_t` existente.|
 |[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|Agrega caracteres al final del objeto `_bstr_t`.|
 |[operador +](../cpp/bstr-t-operator-add-equal-plus.md)|Concatena dos cadenas.|
 |[operador !](../cpp/bstr-t-operator-logical-not.md)|Comprueba si encapsulado `BSTR` es una cadena NULL.|
 |[operador ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Compara dos objetos `_bstr_t`.|
-|[operador wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrae los punteros al objeto `BSTR` multibyte o Unicode encapsulado.|
+|[operator wchar_t* &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrae los punteros al objeto `BSTR` multibyte o Unicode encapsulado.|
 
 **FIN de Específicos de Microsoft**
 

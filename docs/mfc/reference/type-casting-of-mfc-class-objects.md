@@ -1,8 +1,6 @@
 ---
 title: Conversión de tipos de objetos de clase de MFC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.classes
 helpviewer_keywords:
 - macros [MFC], type casting
 - pointers [MFC], type casting
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c7586f3c3f3aefd78fa868cc847df27e8aac58ab
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299366"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611652"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Conversión de tipos de objetos de clase de MFC
 

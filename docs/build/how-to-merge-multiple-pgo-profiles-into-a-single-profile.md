@@ -1,18 +1,18 @@
 ---
-title: Filtrar Combinar varios perfiles PGO en un solo perfil
+title: Procedimiento Combinar varios perfiles PGO en un solo perfil
 ms.date: 03/14/2018
 helpviewer_keywords:
 - merging profiles
 - profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
 ms.openlocfilehash: 451c0f30a271f5dce3974e172766da4a23340b93
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188878"
 ---
-# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Filtrar Combinar varios perfiles PGO en un solo perfil
+# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Procedimiento Combinar varios perfiles PGO en un solo perfil
 
 Optimización guiada por perfiles (PGO) es una excelente herramienta para crear archivos binarios optimizados basados en un escenario que se generan perfiles. Pero, ¿qué ocurre si tiene una aplicación que tiene varios escenarios importantes, pero distintos? ¿Cómo crear un perfil único que puede utilizar PGO entre varios escenarios distintos? En Visual Studio, el Administrador PGO, [pgomgr.exe](pgomgr.md), realiza este trabajo.
 

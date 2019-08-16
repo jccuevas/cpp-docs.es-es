@@ -1,18 +1,18 @@
 ---
 title: 'Tutorial: Trabajar con proyectos y soluciones (C++)'
-ms.date: 09/14/2018
+ms.date: 05/14/2019
 helpviewer_keywords:
 - solutions [C++]
 - projects [C++], about projects
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820070"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400946"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Tutorial: Trabajar con proyectos y soluciones (C++)
 
@@ -22,24 +22,43 @@ En Visual Studio, el trabajo se organiza en proyectos y soluciones. Una solució
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-Para completar este tutorial, necesita Visual Studio 2017 versión 15.3 o posterior. Si necesita una copia, aquí tiene una guía breve: [Compatibilidad con Install C++ en Visual Studio](../build/vscpp-step-0-installation.md). Si todavía no lo ha hecho, siga los pasos siguientes después de la instalación del tutorial "Hello, World" para asegurarse de que Visual C++ está instalado correctamente y todo funciona.
+Para completar este tutorial, necesita Visual Studio 2017 o posterior. Si necesita una copia, aquí tiene una guía breve: [Compatibilidad con Install C++ en Visual Studio](../build/vscpp-step-0-installation.md). Si todavía no lo ha hecho, realice los siguientes pasos después de la instalación del tutorial "Hello, World" para asegurarse de que los componentes de C++ están instalados correctamente y de que funciona.
 
 Resulta útil conocer los fundamentos del lenguaje C++ y saber para qué se usa un compilador, un vinculador y un depurador. En el tutorial también se supone que está familiarizado con Windows y cómo usar los menús y los cuadros de diálogo.
 
 ## <a name="create-a-project"></a>Crear un proyecto
 
-Para crear un proyecto, primero elija una plantilla del tipo de proyecto. Para cada tipo de proyecto, Visual Studio establece la configuración del compilador y, en función del tipo, genera código de inicio que se puede modificar después.
+Para crear un proyecto, primero elija una plantilla del tipo de proyecto. Para cada tipo de proyecto, Visual Studio establece la configuración del compilador y, en función del tipo, genera código de inicio que se puede modificar después. Los siguientes pasos varían según la versión de Visual Studio que use. Asegúrese de que el selector de versión en la esquina superior izquierda de esta página está establecido en la versión correcta.
 
-### <a name="to-create-a-project"></a>Para crear un proyecto
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-project-in-visual-studio-2019"></a>Para crear un proyecto en Visual Studio 2019
+
+1. En el menú principal, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Crear nuevo proyecto**.
+
+1. En la parte superior del cuadro de diálogo, establezca **Lenguaje** en **C++** , establezca **Plataforma** en **Windows** y establezca **Tipo de proyecto** en **Consola**. 
+
+1. En la lista de plantillas de proyecto, seleccione **Aplicación de consola** y **Siguiente**. En la siguiente página, escriba *Game* como nombre del proyecto.
+
+   Puede aceptar la ubicación predeterminada en la lista desplegable **Ubicación**, escribir otra ubicación o hacer clic en el botón **Examinar** para ir a un directorio donde quiera guardar el proyecto.
+
+   Cuando se crea un proyecto, Visual Studio lo coloca en una solución. De forma predeterminada, la solución tiene el mismo nombre que el proyecto. Puede cambiar el nombre en el cuadro **Nombre de la solución** pero, para este ejemplo, mantenga el nombre predeterminado.
+
+1. Elija el botón **Crear** para crear el proyecto.
+
+   Visual Studio crea la solución y los archivos de proyecto, y abre el editor para el archivo de código fuente Game.cpp que genera.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-project-in-visual-studio-2017"></a>Para crear un proyecto en Visual Studio 2017
 
 1. En la barra de menús, elija **Archivo** > **Nuevo** > **Proyecto**.
 
-1. En el panel de la izquierda del cuadro de diálogo **Nuevo proyecto**, expanda **Instalado** y seleccione **Visual C++**, si todavía no está abierto.
+1. En el panel de la izquierda del cuadro de diálogo **Nuevo proyecto**, expanda **Instalado** y seleccione **Visual C++** , si todavía no está abierto.
 
 1. En la lista de plantillas instaladas en el panel central, seleccione **Aplicación de consola de Windows**.
-
-   > [!NOTE]
-   > En versiones anteriores de Visual Studio, a la plantilla instalada se le denomina **Aplicación de consola Win32**.
 
 1. Escriba un nombre para el proyecto en el cuadro **Nombre**. Para este ejemplo, escriba *Game*.
 
@@ -50,6 +69,30 @@ Para crear un proyecto, primero elija una plantilla del tipo de proyecto. Para c
 1. Seleccione el botón **Aceptar** para crear el proyecto.
 
    Visual Studio crea la solución y los archivos de proyecto, y abre el editor para el archivo de código fuente Game.cpp que genera.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-project-in-visual-studio-2015"></a>Para crear un proyecto en Visual Studio 2015
+
+1. En la barra de menús, elija **Archivo** > **Nuevo** > **Proyecto**.
+
+1. En el panel de la izquierda del cuadro de diálogo **Nuevo proyecto**, expanda **Instalado** y seleccione **Visual C++** , si todavía no está abierto.
+
+1. En la lista de plantillas instaladas, en el panel central, seleccione **Aplicación de consola Win32**.
+
+1. Escriba un nombre para el proyecto en el cuadro **Nombre**. Para este ejemplo, escriba *Game*.
+
+   Puede aceptar la ubicación predeterminada en la lista desplegable **Ubicación**, escribir otra ubicación o hacer clic en el botón **Examinar** para ir a un directorio donde quiera guardar el proyecto.
+
+   Cuando se crea un proyecto, Visual Studio lo coloca en una solución. De forma predeterminada, la solución tiene el mismo nombre que el proyecto. Puede cambiar el nombre en el cuadro **Nombre de la solución** pero, para este ejemplo, mantenga el nombre predeterminado.
+
+1. Seleccione el botón **Aceptar** para crear el proyecto.
+
+   Visual Studio crea la solución y los archivos de proyecto, y abre el editor para el archivo de código fuente Game.cpp que genera.
+
+::: moniker-end
 
 ## <a name="organize-projects-and-files"></a>Organizar los proyectos y archivos
 
@@ -117,7 +160,7 @@ Esta parte del tutorial muestra cómo agregar una clase al proyecto. Al agregar 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
 
     ```cpp
-    #include "pch.h"
+    #include "pch.h" // remove this line in Visual Studio 2019
     #include "Cardgame.h"
     #include <iostream>
 
@@ -155,7 +198,7 @@ Agregue código a la aplicación para probar las funciones nuevas.
     // Game.cpp : Defines the entry point for the console application.
     //
 
-    #include "pch.h"
+    #include "pch.h" // remove this line in Visual Studio 2019
     #include "Cardgame.h"
     #include <iostream>
 
@@ -218,7 +261,7 @@ Enhorabuena, ha compilado correctamente un proyecto de aplicación y la solució
 ## <a name="next-steps"></a>Pasos siguientes
 
 **Anterior:** [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Siguiente:** [Tutorial: Compilar un proyecto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Siguiente:** [Tutorial: Compilar un proyecto (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## <a name="see-also"></a>Vea también
 

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
 ms.openlocfilehash: 9616c5f7e29b4f003d3943ba058d1f1a1d5adb5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287233"
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -66,7 +66,7 @@ wchar_t *_wgetcwd_dbg(
 *buffer*<br/>
 Ubicación de almacenamiento de la ruta de acceso.
 
-*MAXLEN*<br/>
+*maxlen*<br/>
 Longitud máxima de la ruta de acceso en caracteres: **char** para **_getcwd_dbg** y **wchar_t** para **_wgetcwd_dbg**.
 
 *blockType*<br/>

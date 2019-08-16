@@ -7,20 +7,20 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184517"
 ---
 # <a name="arrays-c"></a>Matrices (C++)
 
 Una matriz es una colección de objetos similares. El caso más simple de una matriz es un vector, que se puede declarar mediante la secuencia siguiente:
 
-> *decl-specifier* *identificador* **\[** *expresión-constante* **]**<br/>
-> *decl-specifier* *identificador*  **\[]**<br/>
-> *decl-specifier* *identificador* **\[]\[** *expresión-constante* **]** . . .<br/>
-> *decl-specifier* *identificador* **\[** *expresión-constante* **]** **\[** *expresión-constante* **]** . . .
+> *decl-specifier* *identifier* **\[** *constant-expression* **]**<br/>
+> *decl-specifier* *identifier* **\[]**<br/>
+> *decl-specifier* *identifer* **\[]\[** *constant-expression* **]** . . .<br/>
+> *decl-specifier* *identifier* **\[** *constant-expression* **]** **\[** *constant-expression* **]** . . .
 
 1. El especificador de declaración:
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210073"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501014"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -69,9 +69,9 @@ El valor de *dest*.
 
 ## <a name="remarks"></a>Comentarios
 
-Establece los primeros *recuento* caracteres de *dest* al carácter *c*.
+Establece el primer *número* de caracteres de *dest* en el carácter *c*.
 
-**Nota de seguridad** Asegúrese de que el búfer de destino tenga suficiente espacio para al menos *recuento* caracteres. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+**Nota de seguridad** Asegúrese de que el búfer de destino tenga suficiente espacio para al menos caracteres de recuento. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,6 +1,6 @@
 ---
 title: CMFCMenuButton (clase)
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: d7c23cbda0a5af4dc3fa6b2d9f59497acc9bf5ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777368"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505212"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (clase)
 
@@ -43,36 +45,37 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Construye un objeto `CMFCMenuButton`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Lo llama el marco para traducir los mensajes de ventana antes de enviarlos. (Invalida `CMFCButton::PreTranslateMessage`).|
-|[CMFCMenuButton::SizeToContent](#sizetocontent)|Cambia el tamaño del botón según su tamaño de texto e imagen.|
+|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Lo llama el marco de trabajo para traducir los mensajes de ventana antes de enviarlos. (Invalida `CMFCButton::PreTranslateMessage`).|
+|[CMFCMenuButton::SizeToContent](#sizetocontent)|Cambia el tamaño del botón en función de su tamaño de imagen y texto.|
 
 ### <a name="data-members"></a>Miembros de datos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Especifica si desea mostrar el menú emergente del sistema predeterminada o usar [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
-|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Especifica si el menú emergente aparecerán debajo o a la derecha del botón.|
-|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Especifica si el botón de menú cambia su estado después de que el usuario suelta el botón.|
-|[CMFCMenuButton::m_hMenu](#m_hmenu)|Identificador del menú de Windows asociada.|
-|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Un identificador que indica qué elemento del usuario seleccionado en el menú emergente.|
+|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Especifica si se va a mostrar el menú emergente del sistema predeterminado o si se va a usar [CContextMenuManager:: TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
+|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Especifica si el menú emergente aparecerá debajo o a la derecha del botón.|
+|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Especifica si el botón de menú cambia su estado una vez que el usuario suelta el botón.|
+|[CMFCMenuButton::m_hMenu](#m_hmenu)|Identificador del menú de Windows asociado.|
+|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Identificador que indica qué elemento ha seleccionado el usuario en el menú emergente.|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Permitir el procesamiento predeterminado (en el texto o la imagen del botón).|
 
 ## <a name="remarks"></a>Comentarios
 
-El `CMFCMenuButton` clase se deriva el [CMFCButton (clase)](../../mfc/reference/cmfcbutton-class.md) que, a su vez, deriva el [CButton (clase)](../../mfc/reference/cbutton-class.md). Por lo tanto, puede usar `CMFCMenuButton` en el código de la misma manera que utilizaría `CButton`.
+La `CMFCMenuButton` clase se deriva de la [clase CMFCButton](../../mfc/reference/cmfcbutton-class.md) , que, a su vez, se deriva de la [clase CButton](../../mfc/reference/cbutton-class.md). Por lo tanto, puede `CMFCMenuButton` usar en el código de la misma manera que `CButton`usaría.
 
-Cuando creas un `CMFCMenuButton`, debe pasar un identificador para el menú emergente asociado. A continuación, llame a la función `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` comprueba que el tamaño del botón es suficiente para incluir una flecha que apunta a la ubicación donde la ventana emergente aparecerá: es decir, debajo o a la derecha del botón.
+Al crear un `CMFCMenuButton`, se debe pasar un identificador al menú emergente asociado. A continuación, llame a `CMFCMenuButton::SizeToContent`la función. `CMFCMenuButton::SizeToContent`comprueba que el tamaño del botón es suficiente para incluir una flecha que apunta a la ubicación en la que aparecerá la ventana emergente: es decir, debajo o a la derecha del botón.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo establecer el identificador del menú asociado al botón, cambiar el tamaño del botón según su tamaño de texto e imagen y el menú emergente que se muestra el marco de trabajo. Este fragmento de código forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo establecer el identificador del menú asociado al botón, cambiar el tamaño del botón según su tamaño de imagen y texto, y establecer el menú emergente que muestra el marco de trabajo. Este fragmento de código forma parte del [ejemplo de nuevos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]
@@ -93,11 +96,11 @@ El ejemplo siguiente muestra cómo establecer el identificador del menú asociad
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxmenubutton.h
+**Encabezado:** afxmenubutton. h
 
-##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton
+##  <a name="cmfcmenubutton"></a>Cmfcmenubutton (:: Cmfcmenubutton (
 
-Construye un nuevo [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) objeto.
+Construye un nuevo objeto [cmfcmenubutton (](../../mfc/reference/cmfcmenubutton-class.md) .
 
 ```
 CMFCMenuButton();
@@ -105,7 +108,7 @@ CMFCMenuButton();
 
 ##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu
 
-Una variable de miembro booleano que indica qué menú emergente que muestra el marco de trabajo.
+Una variable de miembro booleano que indica qué menú emergente muestra el marco de trabajo.
 
 ```
 BOOL m_bOSMenu;
@@ -113,11 +116,11 @@ BOOL m_bOSMenu;
 
 ### <a name="remarks"></a>Comentarios
 
-Si `m_bOSMenu` es TRUE, el marco llama a heredadas `TrackPopupMenu` método para este objeto. En caso contrario, el marco llama a [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).
+Si `m_bOSMenu` es true, el marco de trabajo llama `TrackPopupMenu` al método heredado para este objeto. De lo contrario, el marco de trabajo llama a [CContextMenuManager:: TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).
 
 ##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow
 
-Una variable de miembro booleano que indica la ubicación del menú emergente.
+Variable de miembro booleana que indica la ubicación del menú emergente.
 
 ```
 BOOL m_bRightArrow;
@@ -125,11 +128,11 @@ BOOL m_bRightArrow;
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando el usuario presiona el botón de menú, la aplicación muestra un menú emergente. El marco de trabajo mostrará en el menú emergente en el botón o a la derecha del botón. El botón también tiene una pequeña flecha que indica dónde aparecerá el menú emergente. Si `m_bRightArrow` es TRUE, el marco de trabajo muestra el menú emergente a la derecha del botón. En caso contrario, muestra el menú emergente en el botón.
+Cuando el usuario presiona el botón de menú, la aplicación muestra un menú emergente. El marco de trabajo mostrará el menú emergente debajo del botón o a la derecha del botón. El botón también tiene una flecha pequeña que indica dónde aparecerá el menú emergente. Si `m_bRightArrow` es true, el marco de trabajo muestra el menú emergente a la derecha del botón. De lo contrario, muestra el menú emergente en el botón.
 
 ##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed
 
-Una variable de miembro de tipo Boolean que indica si aparece el botón de menú presionado mientras el usuario realiza una selección en el menú emergente.
+Una variable de miembro booleano que indica si el botón de menú aparece presionado mientras el usuario realiza una selección en el menú emergente.
 
 ```
 BOOL m_bStayPressed;
@@ -137,13 +140,13 @@ BOOL m_bStayPressed;
 
 ### <a name="remarks"></a>Comentarios
 
-Si el `m_bStayPressed` miembro es FALSE, el botón de menú no se convierten en presionado cuando el usuario hace clic en el botón. En este caso, el marco de trabajo muestra sólo el menú emergente.
+Si el `m_bStayPressed` miembro es false, el botón de menú no se presiona cuando el usa hace clic en el botón. En este caso, el marco de trabajo muestra solo el menú emergente.
 
-Si el `m_bStayPressed` miembro es TRUE, se convierte en presiona el botón de menú cuando el usuario hace clic en el botón. Se mantiene presionado hasta después de que el usuario cierra el menú emergente, ya sea realizar una selección o Cancelar.
+Si el `m_bStayPressed` miembro es true, el botón de menú se presiona cuando el usuario hace clic en el botón. Permanece presionado hasta que el usuario cierra el menú emergente, ya sea mediante una selección o una cancelación.
 
 ##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu
 
-El identificador del menú adjunto.
+Identificador del menú asociado.
 
 ```
 HMENU m_hMenu;
@@ -163,11 +166,33 @@ int m_nMenuResult;
 
 ### <a name="remarks"></a>Comentarios
 
-El valor de esta variable de miembro es cero si el usuario cancela el menú sin realizar una selección o si se produce un error.
+El valor de esta variable miembro es cero si el usuario cancela el menú sin efectuar una selección o si se produce un error.
+
+##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+
+Permite el procesamiento predeterminado de texto o imágenes en el botón.
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>Comentarios
+
+Establecer m_bDefaultClick en false hace que el botón muestre el menú al hacer clic en cualquier lugar del botón.
+
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+
+Un entero que indica el elemento que el usuario selecciona en el menú emergente.
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>Comentarios
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 
-Lo llama el marco para traducir los mensajes de ventana antes de enviarlos.
+Lo llama el marco de trabajo para traducir los mensajes de ventana antes de enviarlos.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -176,17 +201,17 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parámetros
 
 *pMsg*<br/>
-[in] Apunta a un [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) estructura que contiene el mensaje que se va a procesar.
+de Apunta a una estructura [MSG](/windows/win32/api/winuser/ns-winuser-msg) que contiene el mensaje que se va a procesar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el mensaje ha sido traducido y no se debería enviar; 0 si el mensaje no se ha traducido y debería enviarse.
+Es distinto de cero si el mensaje se ha traducido y no se debe enviar; 0 si el mensaje no se ha traducido y debe enviarse.
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent
 
-Cambia el tamaño del botón según su tamaño de texto y el tamaño de la imagen.
+Cambia el tamaño del botón según su tamaño de texto y tamaño de imagen.
 
 ```
 virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
@@ -195,17 +220,17 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ### <a name="parameters"></a>Parámetros
 
 *bCalcOnly*<br/>
-[in] Un parámetro booleano que indica si este método cambia el tamaño del botón.
+de Un parámetro booleano que indica si este método cambia el tamaño del botón.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que especifica el nuevo tamaño del botón.
+Objeto [CSize](../../atl-mfc-shared/reference/csize-class.md) que especifica el nuevo tamaño del botón.
 
 ### <a name="remarks"></a>Comentarios
 
-Si se llama a esta función y *bCalcOnly* es TRUE, `SizeToContent` calculará solo el nuevo tamaño del botón.
+Si llama a esta función y *bCalcOnly* es true, `SizeToContent` calculará solo el nuevo tamaño del botón.
 
-Se calcula el nuevo tamaño del botón para ajustar el texto del botón, la imagen y la flecha. También agrega el marco de trabajo de márgenes predefinidos de 10 píxeles del borde horizontal y 5 píxeles del borde vertical.
+El nuevo tamaño del botón se calcula para ajustarse al texto del botón, la imagen y la flecha. El marco de trabajo también agrega márgenes predefinidos de 10 píxeles para el borde horizontal y 5 píxeles para el borde vertical.
 
 ## <a name="see-also"></a>Vea también
 

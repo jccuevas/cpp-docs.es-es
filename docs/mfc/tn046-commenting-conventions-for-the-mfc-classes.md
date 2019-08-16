@@ -1,17 +1,15 @@
 ---
 title: 'TN046: Convenciones de los comentarios de las clases MFC'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc
 helpviewer_keywords:
 - TN046
 ms.assetid: 0d6ff3c9-4a5d-44df-b121-be4b0a649947
-ms.openlocfilehash: 34ad1357d16e58a99393a110990083fc6186288f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2849e443854f95ad37a55f2167a30f01724a72c5
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298246"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612142"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: Convenciones de los comentarios de las clases MFC
 

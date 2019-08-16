@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624827"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451588"
 ---
 # <a name="ltregexgt-functions"></a>Funciones &lt;regex&gt;
 
@@ -27,9 +27,9 @@ ms.locfileid: "50624827"
 |[regex_match](#regex_match)|Comprueba si una expresión regular coincide con toda la cadena de destino.|
 |[regex_replace](#regex_replace)|Reemplaza las expresiones regulares que coincidan.|
 |[regex_search](#regex_search)|Busca una coincidencia con la expresión regular.|
-|[swap](#swap)|Intercambia dos `basic_regex` o `match_results` objetos.|
+|[swap](#swap)|Intercambia dos `basic_regex` objetos o `match_results` .|
 
-## <a name="regex_match"></a>  regex_match)
+## <a name="regex_match"></a>  regex_match
 
 Comprueba si una expresión regular coincide con toda la cadena de destino.
 
@@ -84,51 +84,51 @@ bool regex_match(
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
-El tipo de iterador para subcoincidencias. Para casos comunes de `string::const_iterator`, `wstring::const_iterator`, `const char*` o `const wchar_t*`.
+*BidIt*\
+El tipo de iterador para subcoincidencias. Para `string::const_iterator`casos comunes `wstring::const_iterator` ,estede,`const wchar_t*`o. `const char*`
 
-*Alloc*<br/>
+*Alloc*\
 La clase de asignador de resultados de coincidencia.
 
-*Elem*<br/>
-Tipo de los elementos que debe coincidir. Para casos comunes, esto es `string`, `wstring`, `char*` o `wchar_t*`.
+*Elem*\
+Tipo de los elementos que debe coincidir. `string`En los casos comunes `wstring` `wchar_t*`, este es, o.`char*`
 
-*RXtraits*<br/>
+*RXtraits*\
 Clase Traits para los elementos.
 
-*Alloc2*<br/>
+*Alloc2*\
 La clase de asignador de expresión regular.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*IOalloc*<br/>
+*IOalloc*\
 La clase de asignador de cadena.
 
-*flags*<br/>
+*marcas*\
 Marcadores para coincidencias.
 
-*first*<br/>
+*lugar*\
 Principio de la secuencia que debe coincidir.
 
-*Último*<br/>
+*guardado*\
 Final de la secuencia que debe coincidir.
 
-*Match*<br/>
-Los resultados de la coincidencia. Corresponde al tipo Elem: [smatch](../standard-library/regex-typedefs.md#smatch) para `string`, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) para `wstring`, [cmatch](../standard-library/regex-typedefs.md#cmatch) para `char*` o [wcmatch](../standard-library/regex-typedefs.md#wcmatch) para `wchar_t*`.
+*corresponde*\
+Los resultados de la coincidencia. Corresponde a Elem Type: [Smatch](../standard-library/regex-typedefs.md#smatch) para `string` `char*` , [wsmatch](../standard-library/regex-typedefs.md#wsmatch) para `wstring`, [cmatch](../standard-library/regex-typedefs.md#cmatch) para o [wcmatch](../standard-library/regex-typedefs.md#wcmatch) para `wchar_t*`.
 
-*ptr*<br/>
-Puntero al inicio de la secuencia que debe coincidir. Si *ptr* es `char*`, a continuación, usar `cmatch` y `regex`. Si *ptr* es `wchar_t*` , a continuación, usar `wcmatch` y `wregex`.
+*anota*\
+Puntero al inicio de la secuencia que debe coincidir. Si *ptr* es `char*`, use `cmatch` y `regex`. Si *ptr* es `wchar_t*` , use `wcmatch` y `wregex`.
 
-*Re*<br/>
-La expresión regular que debe coincidir. Tipo `regex` para `string` y `char*`, o `wregex` para `wstring` y `wchar_t*`.
+*utilizar*\
+La expresión regular que debe coincidir. Escriba `regex` para `string` y ,o`wregex` para`wchar_t*`y. `char*` `wstring`
 
-*str*<br/>
+*CAD*\
 Cadena que debe coincidir. Corresponde al tipo de *Elem*.
 
 ### <a name="remarks"></a>Comentarios
 
-Cada función de plantilla devuelve true solo si la secuencia de operandos todo *str* coincide exactamente con el argumento de expresión regular *re*. Use [regex_search](../standard-library/regex-functions.md#regex_search) para hacer coincidir una subcadena dentro de una secuencia de destino y `regex_iterator` para encontrar coincidencias múltiples. Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la coincidencia ha tenido lugar y, de ser así, qué han capturado los varios grupos de captura de la expresión regular.
+Cada función de plantilla devuelve true solo si toda la secuencia de operandos de *Str* coincide exactamente con el argumento de expresión regular *re*. Use [regex_search](../standard-library/regex-functions.md#regex_search) para buscar coincidencias con una subcadena dentro `regex_iterator` de una secuencia de destino y encontrar varias coincidencias. Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la coincidencia ha tenido lugar y, de ser así, qué han capturado los varios grupos de captura de la expresión regular.
 
 Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la coincidencia ha tenido lugar y, de ser así, qué han capturado los varios grupos de captura de la expresión regular.
 
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>  regex_replace)
+## <a name="regex_replace"></a>  regex_replace
 
 Reemplaza las expresiones regulares que coincidan.
 
@@ -220,45 +220,45 @@ basic_string<Elem> regex_replace(
 
 ### <a name="parameters"></a>Parámetros
 
-*OutIt*<br/>
+*OutIt*\
 El tipo de iterador para reemplazos.
 
-*BidIt*<br/>
+*BidIt*\
 El tipo de iterador para subcoincidencias.
 
-*RXtraits*<br/>
+*RXtraits*\
 Clase Traits para los elementos.
 
-*Alloc*<br/>
+*Alloc*\
 La clase de asignador de expresión regular.
 
-*Elem*<br/>
+*Elem*\
 Tipo de los elementos que debe coincidir.
 
-*flags*<br/>
+*marcas*\
 Marcadores para coincidencias.
 
-*first*<br/>
+*lugar*\
 Principio de la secuencia que debe coincidir.
 
-*FMT*<br/>
+*FMT*\
 El formato para reemplazos.
 
-*Último*<br/>
+*guardado*\
 Final de la secuencia que debe coincidir.
 
-*out*<br/>
+*out*\
 El tipo de iterador de salida.
 
-*Re*<br/>
+*utilizar*\
 La expresión regular que debe coincidir.
 
-*str*<br/>
+*CAD*\
 Cadena que debe coincidir.
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función construye un [regex_iterator (clase)](../standard-library/regex-iterator-class.md) objeto `iter(first, last, re, flags)` y lo usa para dividir su intervalo de entrada `[first, last)` en una serie de subsecuencias `T0 M0 T1 M1...TN-1 MN-1 TN`, donde `Mn` es la coincidencia enésima detectada por el iterador. Si no se detecta ninguna coincidencia, `T0` es el intervalo de entrada completo y `N` es cero. Si `(flags & format_first_only) != 0` solo se usa la primera coincidencia, `T1` es todo el texto de entrada que sigue a la coincidencia y `N` es 1. Para cada `i` en el intervalo `[0, N)`si `(flags & format_no_copy) == 0` copia el texto en el intervalo `Ti` al iterador *out*. Después, llama a `m.format(out, fmt, flags)`, donde `m` es el objeto `match_results` que ha devuelto el objeto de iterador `iter` para la subsecuencia `Mi`. Por último, si `(flags & format_no_copy) == 0` copia el texto en el intervalo `TN` al iterador *out*. La función devuelve *out*.
+La primera función construye un objeto `iter(first, last, re, flags)` de [clase regex_iterator](../standard-library/regex-iterator-class.md) y lo usa para dividir su intervalo `[first, last)` de entrada `T0 M0 T1 M1...TN-1 MN-1 TN`en una serie de subsecuencias, `Mn` donde es la coincidencia n detectada por el iterador. Si no se detecta ninguna coincidencia, `T0` es el intervalo de entrada completo y `N` es cero. Si `(flags & format_first_only) != 0` solo se usa la primera coincidencia, `T1` es todo el texto de entrada que sigue a la coincidencia y `N` es 1. Para cada `i` `[0, N)`del intervalo, si `(flags & format_no_copy) == 0` copia el texto del intervalo `Ti` en el iterador.  Después, llama a `m.format(out, fmt, flags)`, donde `m` es el objeto `match_results` que ha devuelto el objeto de iterador `iter` para la subsecuencia `Mi`. Por último, `(flags & format_no_copy) == 0` si copia el texto del intervalo `TN` en el iterador de *salida*. La *función devuelve.*
 
 La segunda función construye una variable local `result` de tipo `basic_string<charT>` y llama a `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Devuelve `result`.
 
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>  regex_search)
+## <a name="regex_search"></a>  regex_search
 
 Busca una coincidencia con la expresión regular.
 
@@ -353,51 +353,51 @@ bool regex_search(
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 El tipo de iterador para subcoincidencias.
 
-*Alloc*<br/>
+*Alloc*\
 La clase de asignador de resultados de coincidencia.
 
-*Elem*<br/>
+*Elem*\
 Tipo de los elementos que debe coincidir.
 
-*RXtraits*<br/>
+*RXtraits*\
 Clase Traits para los elementos.
 
-*Alloc2*<br/>
+*Alloc2*\
 La clase de asignador de expresión regular.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*IOalloc*<br/>
+*IOalloc*\
 La clase de asignador de cadena.
 
-*flags*<br/>
+*marcas*\
 Marcadores para coincidencias.
 
-*first*<br/>
+*lugar*\
 Principio de la secuencia que debe coincidir.
 
-*Último*<br/>
+*guardado*\
 Final de la secuencia que debe coincidir.
 
-*Match*<br/>
+*corresponde*\
 Los resultados de la coincidencia.
 
-*ptr*<br/>
+*anota*\
 Puntero al inicio de la secuencia que debe coincidir.
 
-*Re*<br/>
+*utilizar*\
 La expresión regular que debe coincidir.
 
-*str*<br/>
+*CAD*\
 Cadena que debe coincidir.
 
 ### <a name="remarks"></a>Comentarios
 
-Cada función de plantilla devuelve true solo si una búsqueda de su argumento de expresión regular *re* en su operando de la secuencia se realiza correctamente. Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la búsqueda se ha realizado correctamente y, de ser así, que han capturado los diversos grupos de captura de la expresión regular.
+Cada función de plantilla devuelve true solo si una búsqueda de su argumento de expresión regular *re* en su secuencia de operandos se realiza correctamente. Las funciones que toman un objeto `match_results` establecen que sus miembros reflejen si la búsqueda se ha realizado correctamente y, de ser así, que han capturado los diversos grupos de captura de la expresión regular.
 
 ### <a name="example"></a>Ejemplo
 
@@ -457,7 +457,7 @@ search(string, "abc") == true
 
 ## <a name="swap"></a>  swap
 
-Intercambia dos `basic_regex` o `match_results` objetos.
+Intercambia dos `basic_regex` objetos o `match_results` .
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -473,10 +473,10 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+*Elem*\
 Tipo de los elementos que debe coincidir.
 
-*RXtraits*<br/>
+*RXtraits*\
 Clase Traits para los elementos.
 
 ### <a name="remarks"></a>Comentarios
@@ -520,11 +520,11 @@ string == aaa
 
 ## <a name="see-also"></a>Vea también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants (Clase)](../standard-library/regex-constants-class.md)<br/>
-[regex_error (Clase)](../standard-library/regex-error-class.md)<br/>
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)<br/>
-[Operadores de \<regex>](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)<br/>
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Clase regex_constants](../standard-library/regex-constants-class.md)\
+[Clase regex_error](../standard-library/regex-error-class.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores regex >](../standard-library/regex-operators.md)\
+[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Clase regex_traits](../standard-library/regex-traits-class.md)\
+[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210645"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499727"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
 Convierte un carácter multibyte en el carácter ancho correspondiente.
 
@@ -56,7 +56,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Parámetros
 
 *wchar*<br/>
-Dirección de un carácter ancho (tipo **wchar_t**).
+Dirección de un carácter ancho (escriba **wchar_t**).
 
 *mbchar*<br/>
 Dirección de una secuencia de bytes (un carácter multibyte).
@@ -69,11 +69,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **mbchar** no **NULL** y si el objeto que *mbchar* apunta a formularios un carácter multibyte válido, **mbtowc** devuelve la longitud en bytes del carácter multibyte. Si *mbchar* es **NULL** o el objeto que apunta es un carácter nulo de caracteres anchos (L '\0'), la función devuelve 0. Si el objeto que *mbchar* puntos que no forma un carácter multibyte válido en los primeros *recuento* caracteres, devuelve -1.
+Si **mbchar** no es **null** y si el objeto al que apunta *mbchar* forma un carácter multibyte válido, **mbtowc** devuelve la longitud en bytes del carácter multibyte. Si *mbchar* es **null** o el objeto al que apunta es un carácter nulo de caracteres anchos (L ' \ 0 '), la función devuelve 0. Si el objeto al que apunta *mbchar* no forma un carácter multibyte válido en los primeros caracteres de recuento, devuelve-1.
 
 ## <a name="remarks"></a>Comentarios
 
-El **mbtowc** función convierte *recuento* o menos bytes que apunta *mbchar*si *mbchar* no **NULL**, en el carácter ancho correspondiente. **mbtowc** almacena el carácter ancho resultante en *wchar,* si *wchar* no **NULL**. **mbtowc** no examina más de **MB_CUR_MAX** bytes. **mbtowc** usa la configuración regional actual para el comportamiento dependiente de la configuración regional; **_mbtowc_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La función **mbtowc** convierte el *recuento* o menos bytes a los que apunta *mbchar*, si *mbchar* no es **null**, en el carácter ancho correspondiente. **mbtowc** almacena el carácter ancho resultante en *WCHAR,* si *WCHAR* no es **null**. **mbtowc** no examina más de **MB_CUR_MAX** bytes. **mbtowc** usa la configuración regional actual para el comportamiento dependiente de la configuración regional; **_mbtowc_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -147,7 +147,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>Vea también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

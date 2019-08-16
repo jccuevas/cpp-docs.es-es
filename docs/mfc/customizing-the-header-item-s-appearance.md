@@ -1,37 +1,37 @@
 ---
-title: Personalizar el elemento de encabezado&#39;apariencia
+title: Personalizar el aspecto del elemento&#39;de encabezado
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 081260bd5c1cf6335d398a4fd773c9590dbc8030
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268842"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508717"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Personalizar el elemento de encabezado&#39;apariencia
+# <a name="customizing-the-header-item39s-appearance"></a>Personalizar el aspecto del elemento&#39;de encabezado
 
-Estableciendo el *dwStyle* parámetro al crear un control de encabezado ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)), puede definir la apariencia y comportamiento del encabezado de los elementos o del encabezado del propio control.
+Al establecer el parámetro *dwStyle* al crear por primera vez un control de encabezado ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)), puede definir la apariencia y el comportamiento de los elementos de encabezado o del propio control de encabezado.
 
-Este es un muestreo de los estilos que se puede establecer y su finalidad:
+A continuación se muestra un muestreo de los estilos que puede establecer y su finalidad:
 
-- Para convertir un elemento de encabezado de aspecto de un botón de comando, use el **HDS_BUTTONS** estilo.
+- Para que un elemento de encabezado tenga el aspecto de un pulsador, use el estilo **HDS_BUTTONS** .
 
-   Utilice este estilo si desea llevar a cabo acciones en respuesta a los clics del mouse en un elemento de encabezado, como ordenar datos en una columna en particular, como se hace en Microsoft Outlook.
+   Use este estilo si desea realizar acciones en respuesta a los clics del mouse en un elemento de encabezado, como la ordenación de datos por una columna determinada, como se hace en Microsoft Outlook.
 
-- Para dar una apariencia "seguimiento activo" a los elementos de encabezado cuando el cursor del mouse pasa sobre ellas, utilice el **HDS_HOTTRACK** estilo.
+- Para asignar a los elementos de encabezado un aspecto de "seguimiento activo" cuando el cursor del mouse pasa sobre ellos, use el estilo **HDS_HOTTRACK** .
 
-   Seguimiento activo muestra un contorno 3D como pasar el puntero sobre un elemento en un plano en caso contrario, barra.
+   El seguimiento activo muestra un esquema 3D a medida que el puntero pasa sobre un elemento en una barra plana de otro modo.
 
-- Para indicar que se debe ocultar el control de encabezado, utilice la **HDS_HIDDEN** estilo.
+- Para indicar que se debe ocultar el control de encabezado, use el estilo **HDS_HIDDEN** .
 
-   El **HDS_HIDDEN** estilo indica que el control de encabezado está diseñado para usarse como un contenedor de datos y no es un control visual. Este estilo no oculta automáticamente el control, pero, en su lugar, afecta al comportamiento de `CHeaderCtrl::Layout`. El valor devuelto en el *cy* miembro de la `WINDOWPOS` estructura será cero que indica que el control no debería estar visible para el usuario.
+   El estilo **HDS_HIDDEN** indica que el control de encabezado está pensado para usarse como un contenedor de datos y no como un control visual. Este estilo no oculta automáticamente el control, sino que, en su lugar, afecta al `CHeaderCtrl::Layout`comportamiento de. El valor devuelto en el miembro *CY* de `WINDOWPOS` la estructura será cero, lo que indica que el control no debe estar visible para el usuario.
 
-Para obtener más información acerca de estas propiedades, vea [elementos](/windows/desktop/Controls/header-controls) en el SDK de Windows. Para obtener información sobre cómo agregar elementos a un control de encabezado, vea [agregar elementos al Control de encabezado](../mfc/adding-items-to-the-header-control.md).
+Para obtener más información acerca de estas propiedades, vea [elementos](/windows/win32/Controls/header-controls) en el Windows SDK. Para obtener información sobre cómo agregar elementos a un control de encabezado, vea [Agregar elementos al control de encabezado](../mfc/adding-items-to-the-header-control.md).
 
 ## <a name="see-also"></a>Vea también
 

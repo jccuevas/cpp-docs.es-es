@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 815647deb7c11f4d7be5650e0ec2e635338551ad
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543382"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448188"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator
 
-La clase de plantilla ostreambuf_iterator describe un objeto iterador de salida que escribe elementos de caracteres sucesivos en el flujo de salida con la extracción **operator>>**. Los objetos `ostreambuf_iterator`s se diferencian de los de la [clase ostream_iterator](../standard-library/ostream-iterator-class.md) en que tienen caracteres en lugar de un tipo genérico en el tipo de objeto que se inserta en el flujo de salida.
+La clase de plantilla ostreambuf_iterator describe un objeto iterador de salida que escribe elementos de caracteres sucesivos en el flujo de salida con la extracción **operator>>** . Los objetos `ostreambuf_iterator`s se diferencian de los de la [clase ostream_iterator](../standard-library/ostream-iterator-class.md) en que tienen caracteres en lugar de un tipo genérico en el tipo de objeto que se inserta en el flujo de salida.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,10 +35,10 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
-Tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es **char**.
+*CharType*\
+Tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es **Char**.
 
-*Rasgos*<br/>
+*Rasgos*\
 Tipo que representa el tipo de caracteres para ostreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentarios
@@ -47,13 +47,13 @@ La clase ostreambuf_iterator debe satisfacer los requisitos de un iterador de sa
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Construye un objeto `ostreambuf_iterator` que se inicializa para escribir caracteres en el flujo de salida.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo que proporciona el tipo de los caracteres de `ostreambuf_iterator`.|
 |[ostream_type](#ostreambuf_iterator_ostream_type)|Tipo que proporciona el tipo de flujo de `ostream_iterator`.|
@@ -62,15 +62,15 @@ La clase ostreambuf_iterator debe satisfacer los requisitos de un iterador de sa
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[failed](#failed)|Comprueba si hay errores en una inserción en el búfer del flujo de salida.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
-|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x`.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión \* `i`  =  `x`de iterador de salida.|
 |[operator++](#op_add_add)|Operador de incremento no funcional que devuelve un objeto `ostreambuf_iterator` al mismo objeto que señalaba antes de que se llamara a la operación.|
 |[operator=](#op_eq)|El operador inserta un carácter en el búfer del flujo asociado.|
 
@@ -181,7 +181,7 @@ No insertions failed.
 */
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator:: operator\*
+## <a name="op_star"></a>  ostreambuf_iterator::operator\*
 
 Un operador de desreferencia no funcional usado para implementar la expresión de iterador de salida \* *i* = *x*.
 
@@ -286,7 +286,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Char*<br/>
+*_Char*\
 El carácter que se va a insertar en el búfer de secuencia.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -339,17 +339,17 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*strbuf*<br/>
+*strbuf*\
 El objeto streambuf de salida que se ha usado para inicializar el puntero de búfer de flujo de salida.
 
-*Ostr*<br/>
+*Ostr*\
 El objeto de flujo de salida que se ha usado para inicializar el puntero de búfer de flujo de salida.
 
 ### <a name="remarks"></a>Comentarios
 
 El primer constructor inicializa el puntero de búfer de flujo de salida con *strbuf*.
 
-El segundo constructor inicializa el puntero de búfer de flujo de salida con `Ostr`. `rdbuf`. El puntero almacenado no debe ser un puntero nulo.
+El segundo constructor inicializa el puntero de búfer de flujo de salida con `Ostr`. `rdbuf` El puntero almacenado no debe ser un puntero nulo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -410,7 +410,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de `basic_streambuf` \< **CharType**, **rasgos**>, una clase de secuencia para búferes de E/S que se convierte en `streambuf` si está especializada en el tipo de carácter **char**.
+El tipo es un sinónimo de `basic_streambuf` \< **CharType**, **traits**>, una clase de flujo para búferes de e/s que `streambuf` se convierte cuando está especializado en el tipo de carácter **Char**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -468,6 +468,6 @@ by charOutBuf are: OUT.
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

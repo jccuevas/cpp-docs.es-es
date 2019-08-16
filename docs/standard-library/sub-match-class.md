@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580276"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447425"
 ---
 # <a name="submatch-class"></a>sub_match (Clase)
 
@@ -41,7 +41,7 @@ class sub_match
 
 ## <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 El tipo de iterador para subcoincidencias.
 
 ## <a name="remarks"></a>Comentarios
@@ -66,18 +66,18 @@ Una coincidencia de longitud cero puede aparecer cuando un grupo de capturas sol
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[compare](#compare)|Comparar la subcoincidencia con una secuencia.|
 |[length](#length)|Devuelve la longitud de una subcoincidencia.|
-|[coincide con](#matched)|Indica si la coincidencia se realizó correctamente.|
+|[matched](#matched)|Indica si la coincidencia se realizó correctamente.|
 |[str](#str)|Convierte la subcoincidencia a una cadena.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
-|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Convierte la subcoincidencia en una cadena.|
+|[operador basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Convierte la subcoincidencia en una cadena.|
 
 ## <a name="example"></a>Ejemplo
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 Subcoincidencia con la que se va comparar.
 
-*str*<br/>
+*CAD*\
 Cadena con la que se va a comparar.
 
-*ptr*<br/>
+*anota*\
 La secuencia terminada en un valor nulo con la que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Comentarios
 
-El miembro contiene **true** sólo si el grupo de capturas asociado `*this` formaba parte de la coincidencia de expresión regular.
+El miembro contiene **true** solo si el grupo de capturas `*this` asociado a formaba parte de la coincidencia de la expresión regular.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ La definición de tipo es un sinónimo de `iterator_traits<BidIt>::value_type`.
 
 ## <a name="see-also"></a>Vea también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

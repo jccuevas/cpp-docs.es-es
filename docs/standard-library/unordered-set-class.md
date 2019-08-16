@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 739e39dcb5dd79cfaae8875c5166eb7015134430
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534997"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243440"
 ---
 # <a name="unorderedset-class"></a>unordered_set (Clase)
 
@@ -158,16 +158,23 @@ class unordered_set;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*Key*|El tipo de clave.|
-|*hash*|El tipo de objeto de la función hash.|
-|*Pred*|El tipo de objeto de función de comparación de igualdad.|
-|*Alloc*|Clase de asignador.|
+*Clave*\
+El tipo de clave.
+
+*hash*\
+El tipo de objeto de la función hash.
+
+*Pred*\
+El tipo de objeto de función de comparación de igualdad.
+
+*Alloc*\
+Clase de asignador.
 
 ## <a name="members"></a>Miembros
 
-|Definición de tipo|Descripción|
+### <a name="typedefs"></a>Typedefs
+
+|||
 |-|-|
 |[allocator_type](#allocator_type)|El tipo de un asignador para administrar el almacenamiento.|
 |[const_iterator](#const_iterator)|El tipo de un iterador constante para la secuencia controlada.|
@@ -185,10 +192,12 @@ class unordered_set;
 |[size_type](#size_type)|El tipo de una distancia sin signo entre dos elementos.|
 |[value_type](#value_type)|El tipo de un elemento.|
 
-|Función miembro|Descripción|
+### <a name="functions"></a>Funciones
+
+|||
 |-|-|
 |[begin](#begin)|Designa el principio de la secuencia controlada.|
-|[depósito](#bucket)|Obtiene el número de depósito para un valor de clave.|
+|[bucket](#bucket)|Obtiene el número de depósito para un valor de clave.|
 |[bucket_count](#bucket_count)|Obtiene el número de depósitos.|
 |[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|
 |[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|
@@ -210,12 +219,14 @@ class unordered_set;
 |[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|
 |[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|
 |[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|
-|[rehash)](#rehash)|Recompila la tabla hash.|
+|[rehash](#rehash)|Recompila la tabla hash.|
 |[size](#size)|Cuenta el número de elementos.|
 |[swap](#swap)|Intercambia el contenido de dos contenedores.|
 |[unordered_set](#unordered_set)|Construye un objeto contenedor.|
 
-|Operadores|Descripción|
+### <a name="operators"></a>Operadores
+
+|||
 |-|-|
 |[unordered_set::operator=](#op_eq)|Copia una tabla hash.|
 
@@ -228,12 +239,6 @@ El objeto también almacena un factor de carga máxima, que especifica el númer
 El orden real de los elementos de la secuencia controlada depende de la función hash, la función de comparación, el orden de inserción, el factor de carga máxima y el número actual de depósitos. En general no se puede predecir el orden de los elementos de la secuencia controlada. Sin embargo, siempre se puede asegurar que cualquier subconjunto de elementos que tengan una ordenación equivalente son adyacentes en la secuencia controlada.
 
 El objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto asignador almacenado de tipo [unordered_set::allocator_type](#allocator_type). Ese objeto de asignador debe tener la misma interfaz externa que un objeto de clase de plantilla `allocator`. Tenga en cuenta que el objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<unordered_set>
-
-**Espacio de nombres:** std
 
 ## <a name="allocator_type"></a>  unordered_set::allocator_type
 
@@ -273,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>  unordered_set::begin
+## <a name="begin"></a> comenzar
 
 Designa el principio de la secuencia controlada o un depósito.
 
@@ -289,9 +294,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*nbucket*|Número de depósito.|
+*nbucket*\
+Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -353,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a>  unordered_set::bucket
+## <a name="bucket"></a> depósito
 
 Obtiene el número de depósito para un valor de clave.
 
@@ -363,7 +367,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyVal*\
 Valor de clave que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
@@ -408,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>  unordered_set::bucket_count
+## <a name="bucket_count"></a> bucket_count
 
 Obtiene el número de depósitos.
 
@@ -493,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>  unordered_set::bucket_size
+## <a name="bucket_size"></a> bucket_size
 
 Obtiene el tamaño de un depósito.
 
@@ -503,7 +507,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*<br/>
+*nbucket*\
 Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
@@ -548,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>  unordered_set::cbegin
+## <a name="cbegin"></a> cbegin
 
 Devuelve un **const** iterador que direcciona el primer elemento del intervalo.
 
@@ -574,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a>  unordered_set::cend
+## <a name="cend"></a> cend
 
 Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
@@ -602,7 +606,7 @@ auto i2 = Container.cend();
 
 El valor devuelto por `cend` no se debe desreferenciar.
 
-## <a name="clear"></a>  unordered_set::clear
+## <a name="clear"></a> Borrar
 
 Quita todos los elementos.
 
@@ -666,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>  unordered_set::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 El tipo de un iterador constante para la secuencia controlada.
 
@@ -708,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>  unordered_set::const_local_iterator
+## <a name="const_local_iterator"></a> const_local_iterator
 
 El tipo de un iterador de depósito constante para la secuencia controlada.
 
@@ -755,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>  unordered_set::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 El tipo de un puntero constante a un elemento.
 
@@ -800,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>  unordered_set::const_reference
+## <a name="const_reference"></a> const_reference
 
 El tipo de una referencia constante a un elemento.
 
@@ -845,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a>  unordered_set::count
+## <a name="count"></a> recuento
 
 Busca el número de elementos que coinciden con una clave especificada.
 
@@ -855,7 +859,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyVal*\
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -899,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>  unordered_set::difference_type
+## <a name="difference_type"></a> difference_type
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -955,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>  unordered_set::emplace
+## <a name="emplace"></a> emplace
 
 Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento).
 
@@ -968,9 +972,8 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*args*|Argumentos reenviados para construir un elemento que se va a insertar en el unordered_set, a menos que ya contenga un elemento cuyo valor esté ordenado de forma equivalente.|
+*args*\
+Argumentos reenviados para construir un elemento que se va a insertar en el unordered_set, a menos que ya contenga un elemento cuyo valor esté ordenado de forma equivalente.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -986,7 +989,7 @@ Durante la inserción, si se produce una excepción pero no ocurre en la funció
 
 Para obtener un ejemplo de código, vea [set::emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a>  unordered_set::emplace_hint
+## <a name="emplace_hint"></a> emplace_hint
 
 Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento), con una sugerencia de colocación.
 
@@ -999,10 +1002,11 @@ Args&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*args*|Argumentos reenviados para construir un elemento que se va a insertar en el unordered_set a menos que el unordered_set ya contenga ese elemento o, más en general, a menos que ya contenga un elemento cuya clave esté ordenada de manera equivalente.|
-|*where*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
+*args*\
+Argumentos reenviados para construir un elemento que se va a insertar en el unordered_set a menos que el unordered_set ya contenga ese elemento o, más en general, a menos que ya contenga un elemento cuya clave esté ordenada de manera equivalente.
+
+*Donde*\
+Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1018,7 +1022,7 @@ Durante la inserción, si se produce una excepción pero no ocurre en la funció
 
 Para obtener un ejemplo de código, vea [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a>  unordered_set::empty
+## <a name="empty"></a> vacío
 
 Comprueba si no hay ningún elemento presente.
 
@@ -1082,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>  unordered_set::end
+## <a name="end"></a> final
 
 Designa el final de la secuencia controlada.
 
@@ -1098,9 +1102,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*nbucket*|Número de depósito.|
+*nbucket*\
+Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1151,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>  unordered_set::equal_range
+## <a name="equal_range"></a> equal_range
 
 Busca el intervalo que coincide con una clave especificada.
 
@@ -1165,7 +1168,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyVal*\
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1219,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a>  unordered_set::erase
+## <a name="erase"></a> Borrar
 
 Quita un elemento o un intervalo de elementos de un unordered_set de las posiciones especificadas o quita los elementos que coinciden con una clave especificada.
 
@@ -1233,16 +1236,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parámetros
 
-*Where*<br/>
+*Donde*\
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*Primero*\
 Posición del primer elemento que se va a quitar.
 
-*Último*<br/>
+*Último*\
 Posición situada más allá del último elemento que se va a quitar.
 
-*Key*<br/>
+*Clave*\
 Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1255,7 +1258,7 @@ Para la tercera función miembro, devuelve el número de elementos que se han qu
 
 Para obtener un ejemplo de código, vea [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a>  unordered_set::find
+## <a name="find"></a> Buscar
 
 Busca un elemento que coincide con una clave especificada.
 
@@ -1265,7 +1268,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyVal*\
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1314,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>  unordered_set::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 Obtiene el objeto de asignador almacenado.
 
@@ -1352,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>  unordered_set::hash_function
+## <a name="hash"></a> hash_function
 
 Obtiene el objeto de función hash almacenado.
 
@@ -1390,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>  unordered_set::hasher
+## <a name="hasher"></a> hasher
 
 El tipo de la función hash.
 
@@ -1428,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_set::insert
+## <a name="insert"></a> Insertar
 
 Inserta un elemento o un intervalo de elementos en un unordered_set.
 
@@ -1457,15 +1460,26 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*Val*|Valor de un elemento que se va a insertar en el unordered_set a menos que ya contenga un elemento cuya clave se ordena de forma equivalente.|
-|*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto.|
-|*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que unordered_set puede utilizar para construir un elemento de[value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
-|*Primero*|Posición del primer elemento que se va a copiar.|
-|*Último*|Posición situada más allá del último elemento que se va a copiar.|
-|*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|La [initializer_list](../standard-library/initializer-list.md) de la que se van a copiar los elementos.|
+*Val*\
+Valor de un elemento que se va a insertar en el unordered_set a menos que ya contenga un elemento cuya clave se ordena de forma equivalente.
+
+*Donde*\
+Lugar donde se va a iniciar la búsqueda del punto de inserción correcto.
+
+*ValTy*\
+Parámetro de plantilla que especifica el tipo de argumento que unordered_set puede utilizar para construir un elemento de[value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.
+
+*Primero*\
+Posición del primer elemento que se va a copiar.
+
+*Último*\
+Posición situada más allá del último elemento que se va a copiar.
+
+*InputIterator*\
+Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).
+
+*IList*\
+La [initializer_list](../standard-library/initializer-list.md) de la que se van a copiar los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1491,7 +1505,7 @@ Para la inserción de un elemento construido en contexto, es decir, no se realiz
 
 Para obtener un ejemplo de código, vea [set::insert](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a>  unordered_set::iterator
+## <a name="iterator"></a> iterador
 
 Un tipo que proporciona un [iterador hacia delante](../standard-library/forward-iterator-tag-struct.md) constante que puede leer elementos en un unordered_set.
 
@@ -1503,7 +1517,7 @@ typedef implementation-defined iterator;
 
 Vea el ejemplo de [begin](../standard-library/set-class.md#begin) para obtener un ejemplo de cómo declarar y usar un **iterador**.
 
-## <a name="key_eq"></a>  unordered_set::key_eq
+## <a name="key_eq"></a> key_eq
 
 Obtiene el objeto de función de comparación almacenado.
 
@@ -1543,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>  unordered_set::key_equal
+## <a name="key_equal"></a> key_equal
 
 El tipo de la función de comparación.
 
@@ -1583,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>  unordered_set::key_type
+## <a name="key_type"></a> KEY_TYPE
 
 El tipo de una clave de ordenación.
 
@@ -1635,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>  unordered_set::load_factor
+## <a name="load_factor"></a> load_factor
 
 Cuenta los elementos promedio por depósito.
 
@@ -1720,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a>  unordered_set::local_iterator
+## <a name="local_iterator"></a> local_iterator
 
 Tipo de un iterador de depósito.
 
@@ -1767,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>  unordered_set::max_bucket_count
+## <a name="max_bucket_count"></a> max_bucket_count
 
 Obtiene el número máximo de depósitos.
 
@@ -1852,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>  unordered_set::max_load_factor
+## <a name="max_load_factor"></a> max_load_factor
 
 Obtiene o establece los elementos máximos por depósito.
 
@@ -1864,7 +1878,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parámetros
 
-*factor*<br/>
+*factor*\
 El nuevo factor de carga máxima.
 
 ### <a name="remarks"></a>Comentarios
@@ -1944,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>  unordered_set::max_size
+## <a name="max_size"></a> max_size
 
 Obtiene el tamaño máximo de la secuencia controlada.
 
@@ -1979,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a>  unordered_set::operator=
+## <a name="op_eq"></a> operator=
 
 Copia una tabla hash.
 
@@ -1991,9 +2005,8 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*right*|El[unordered_set](../standard-library/unordered-set-class.md) que se copia en el `unordered_set`.|
+*Correcto*\
+El[unordered_set](../standard-library/unordered-set-class.md) que se copia en el `unordered_set`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2036,7 +2049,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  unordered_set::pointer
+## <a name="pointer"></a> puntero
 
 El tipo de un puntero a un elemento.
 
@@ -2082,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a>  unordered_set::reference
+## <a name="reference"></a> Referencia
 
 El tipo de una referencia a un elemento.
 
@@ -2128,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a>  unordered_set::rehash
+## <a name="rehash"></a> rehash)
 
 Recompila la tabla hash.
 
@@ -2138,7 +2151,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parámetros
 
-*nbuckets*<br/>
+*nbuckets*\
 Número solicitado de depósitos.
 
 ### <a name="remarks"></a>Comentarios
@@ -2205,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>  unordered_set::size
+## <a name="size"></a> Tamaño
 
 Cuenta el número de elementos.
 
@@ -2270,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>  unordered_set::size_type
+## <a name="size_type"></a> size_type
 
 El tipo de una distancia sin signo entre dos elementos.
 
@@ -2306,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>  unordered_set::swap
+## <a name="swap"></a> intercambio
 
 Intercambia el contenido de dos contenedores.
 
@@ -2316,7 +2329,7 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*Correcto*\
 El contenedor con el que se intercambia.
 
 ### <a name="remarks"></a>Comentarios
@@ -2375,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a>  unordered_set::unordered_set
+## <a name="unordered_set"></a> unordered_set
 
 Construye un objeto contenedor.
 
@@ -2424,15 +2437,26 @@ unordered_set(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
-|-|-|
-|*InputIterator*|Tipo de iterador.|
-|*Al*|Objeto de asignador que se va a almacenar.|
-|*Comp.*|Objeto de función de comparación que se va a almacenar.|
-|*hash*|Objeto de función hash que se va a almacenar.|
-|*bucket_count*|Número mínimo de depósitos.|
-|*Derecha*|Contenedor que se va a copiar.|
-|*IList*|initializer_list que contiene los elementos que se van a copiar.|
+*InputIterator*\
+Tipo de iterador.
+
+*Al*\
+Objeto de asignador que se va a almacenar.
+
+*Comp.* \
+Objeto de función de comparación que se va a almacenar.
+
+*hash*\
+Objeto de función hash que se va a almacenar.
+
+*bucket_count*\
+Número mínimo de depósitos.
+
+*Correcto*\
+Contenedor que se va a copiar.
+
+*IList*\
+initializer_list que contiene los elementos que se van a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2448,7 +2472,7 @@ El objeto de función de comparación es el argumento *Comp*, si está presente;
 
 El objeto de asignador es el argumento *Al*, si está presente; de lo contrario, es `Alloc()`.
 
-## <a name="value_type"></a>  unordered_set::value_type
+## <a name="value_type"></a> value_type
 
 El tipo de un elemento.
 
@@ -2499,10 +2523,3 @@ int main()
 [c] [b] [a]
 [d] [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Vea también
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
-[Contenedores](../cpp/containers-modern-cpp.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

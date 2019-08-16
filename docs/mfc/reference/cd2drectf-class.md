@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b91cfaec3827a61152c4116b56e817a436606be
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290838"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682402"
 ---
 # <a name="cd2drectf-class"></a>Clase CD2DRectF
 
@@ -31,21 +31,21 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Sobrecargado. Construye un `CD2DRectF` objeto `D2D1_RECT_F` objeto.|
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Sobrecargado. Construye un objeto `CD2DRectF` a partir `D2D1_RECT_F` de un objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CD2DRectF::IsNull](#isnull)|Devuelve un **booleano** valor que indica si una expresión no contiene datos válidos (NULL).|
+|[CD2DRectF::IsNull](#isnull)|Devuelve un valor **booleano** que indica si una expresión no contiene datos válidos (NULL).|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CRect CD2DRectF::operator](#operator_crect)|Convierte `CD2DRectF` a `CRect` objeto.|
+|[CD2DRectF:: Operator CRect](#operator_crect)|`CD2DRectF` Convierte en`CRect` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -55,16 +55,16 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxrendertarget.h
+**Encabezado:** afxrendertarget. h
 
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF
 
-Construye un objeto CD2DRectF del objeto CRect.
+Construye un objeto CD2DRectF a partir del objeto CRect.
 
 ```
 CD2DRectF(const CRect& rect);
 CD2DRectF(const D2D1_RECT_F& rect);
-  CD2DRectF(const D2D1_RECT_F* rect);
+CD2DRectF(const D2D1_RECT_F* rect);
 
 CD2DRectF(
     FLOAT fLeft = 0.,
@@ -82,17 +82,17 @@ rectángulo de origen
 Coordenada izquierda de origen
 
 *fTop*<br/>
-Coordenada superior de origen
+coordenada superior de origen
 
 *fRight*<br/>
-Coordenada derecha de origen
+coordenada derecha de origen
 
 *fBottom*<br/>
-Coordenada inferior de origen
+coordenada inferior de origen
 
 ##  <a name="isnull"></a>  CD2DRectF::IsNull
 
-Devuelve un valor booleano que indica si una expresión no contiene datos válidos (Null).
+Devuelve un valor booleano que indica si una expresión no contiene datos válidos (NULL).
 
 ```
 BOOL IsNull() const;
@@ -100,11 +100,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si son iguales a 0; superior, izquierdo, inferior y valores correctos del rectángulo en caso contrario, FALSE.
+TRUE si los valores superior, izquierdo, inferior y derecho del rectángulo son iguales a 0; en caso contrario, FALSE.
 
-##  <a name="operator_crect"></a>  CRect CD2DRectF::operator
+##  <a name="operator_crect"></a>CD2DRectF:: Operator CRect
 
-Convierte CD2DRectF objeto CRect.
+Convierte CD2DRectF en el objeto CRect.
 
 ```
 operator CRect();
@@ -112,7 +112,7 @@ operator CRect();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor actual del rectángulo de D2D.
+Valor actual del rectángulo D2D.
 
 ## <a name="see-also"></a>Vea también
 

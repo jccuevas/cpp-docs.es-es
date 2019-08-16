@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 8ed3fb5edd861eaecd0bf9a39687a2a63fdfe695
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565498"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975181"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (clase)
 
@@ -102,7 +102,7 @@ Destruye el objeto.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="geterrorcode"></a>get_error_code
+## <a name="get_error_code"></a> get_error_code
 
 Devuelve el código de error que provocó la excepción.
 

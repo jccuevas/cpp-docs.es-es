@@ -1,5 +1,5 @@
 ---
-title: COleBusyDialog (clase)
+title: Clase COleBusyDialog
 ms.date: 11/04/2016
 f1_keywords:
 - COleBusyDialog
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-ms.openlocfilehash: 08e482e6900e96f1d02c34efddc7635bb8e0120e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa3f0d85bcbf34d325125187b22b38c4da01fb43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304670"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504406"
 ---
-# <a name="colebusydialog-class"></a>COleBusyDialog (clase)
+# <a name="colebusydialog-class"></a>Clase COleBusyDialog
 
 Se utiliza en los cuadros de diálogo que indican que el servidor OLE no responde o el servidor está ocupado.
 
@@ -35,33 +35,33 @@ class COleBusyDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleBusyDialog::COleBusyDialog](#colebusydialog)|Construye un objeto `COleBusyDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[COleBusyDialog::DoModal](#domodal)|Muestra el cuadro de diálogo OLE servidor ocupado.|
+|[COleBusyDialog::DoModal](#domodal)|Muestra el cuadro de diálogo servidor ocupado de OLE.|
 |[COleBusyDialog::GetSelectionType](#getselectiontype)|Determina la elección realizada en el cuadro de diálogo.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleBusyDialog::m_bz](#m_bz)|Estructura de tipo OLEUIBUSY que controla el comportamiento del cuadro de diálogo.|
 
 ## <a name="remarks"></a>Comentarios
 
-Crear un objeto de clase `COleBusyDialog` cuando desee llamar a estos cuadros de diálogo. Después de un `COleBusyDialog` se ha construido el objeto, puede usar el [m_bz](#m_bz) estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El `m_bz` estructura es de tipo OLEUIBUSY. Para obtener más información sobre el uso de esta clase de cuadro de diálogo, vea el [DoModal](#domodal) función miembro.
+Cree un objeto de clase `COleBusyDialog` cuando desee llamar a estos cuadros de diálogo. Una vez `COleBusyDialog` construido un objeto, puede usar la estructura [m_bz](#m_bz) para inicializar los valores o los Estados de los controles en el cuadro de diálogo. La `m_bz` estructura es de tipo OLEUIBUSY. Para obtener más información sobre el uso de esta clase de cuadro de diálogo, vea la función miembro [DoModal](#domodal) .
 
 > [!NOTE]
->  Código de contenedor generados por el Asistente para la aplicación usa esta clase.
+>  El código de contenedor generado por el Asistente para aplicaciones utiliza esta clase.
 
-Para obtener más información, consulte el [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) estructura en el SDK de Windows.
+Para obtener más información, vea la estructura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) en el Windows SDK.
 
-Para obtener más información sobre los cuadros de diálogo OLE específicos, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).
+Para obtener más información sobre los cuadros de diálogo específicos de OLE, vea los [cuadros de diálogo de los artículos en OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -81,11 +81,11 @@ Para obtener más información sobre los cuadros de diálogo OLE específicos, v
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxodlgs.h
+**Encabezado:** afxodlgs. h
 
 ##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog
 
-Esta función solo construye un `COleBusyDialog` objeto.
+Esta función solo crea un `COleBusyDialog` objeto.
 
 ```
 explicit COleBusyDialog(
@@ -98,32 +98,32 @@ explicit COleBusyDialog(
 ### <a name="parameters"></a>Parámetros
 
 *htaskBusy*<br/>
-Identificador de la tarea de servidor está ocupada.
+Identificador de la tarea de servidor que está ocupada.
 
 *bNotResponding*<br/>
-Si es TRUE, llame el cuadro de diálogo no responde en lugar del cuadro de diálogo servidor ocupado. En el cuadro de diálogo no responde con la redacción es ligeramente diferente en el cuadro de diálogo servidor ocupado con la redacción y se deshabilita el botón Cancelar.
+Si es TRUE, llame al cuadro de diálogo no responde en lugar de al cuadro de diálogo servidor ocupado. El texto del cuadro de diálogo no responde es ligeramente diferente del que aparece en el cuadro de diálogo servidor ocupado y el botón Cancelar está deshabilitado.
 
 *dwFlags*<br/>
-Indicador de creación. Puede contener cero o más de los siguientes valores que se combinan con el operador OR bit a bit:
+Marca de creación. Puede contener cero o más de los siguientes valores combinados con el operador OR bit a bit:
 
-- BZ_DISABLECANCELBUTTON deshabilitar el botón de cancelación al llamar el cuadro de diálogo.
+- BZ_DISABLECANCELBUTTON deshabilite el botón Cancelar al llamar al cuadro de diálogo.
 
-- BZ_DISABLESWITCHTOBUTTON deshabilitar el botón Cambiar a cuando se llama el cuadro de diálogo.
+- BZ_DISABLESWITCHTOBUTTON deshabilite el botón cambiar a al llamar al cuadro de diálogo.
 
-- BZ_DISABLERETRYBUTTON deshabilita el botón de reintento cuando se llama el cuadro de diálogo.
+- BZ_DISABLERETRYBUTTON deshabilite el botón Reintentar al llamar al cuadro de diálogo.
 
 *pParentWnd*<br/>
-Señala al objeto de ventana principal o propietaria (de tipo `CWnd`) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del objeto de cuadro de diálogo se establece en la ventana principal de la aplicación.
+Apunta al objeto de ventana primario o propietario (de tipo `CWnd`) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del objeto de cuadro de diálogo se establece en la ventana principal de la aplicación.
 
 ### <a name="remarks"></a>Comentarios
 
 Para mostrar el cuadro de diálogo, llame a [DoModal](#domodal).
 
-Para obtener más información, consulte el [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) estructura en el SDK de Windows.
+Para obtener más información, vea la estructura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) en el Windows SDK.
 
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal
 
-Llame a esta función para mostrar el cuadro de diálogo OLE servidor ocupado o no responde el servidor.
+Llame a esta función para mostrar el cuadro de diálogo servidor ocupado de OLE o servidor que no responde.
 
 ```
 virtual INT_PTR DoModal();
@@ -131,19 +131,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Estado de finalización para el cuadro de diálogo. Uno de los siguientes valores:
+Estado de finalización del cuadro de diálogo. Uno de los siguientes valores:
 
 - IDOK si el cuadro de diálogo se mostró correctamente.
 
 - IDCANCEL si el usuario canceló el cuadro de diálogo.
 
-- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) función en el SDK de Windows.
+- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se ha producido. Para obtener una lista de posibles errores, vea la función [OleUIBusy](/windows/win32/api/oledlg/nf-oledlg-oleuibusyw) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
-Si desea inicializar los distintos controles de cuadro de diálogo mediante el establecimiento de los miembros de la [m_bz](#m_bz) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.
+Si desea inicializar los distintos controles de cuadro de diálogo estableciendo los miembros de la estructura [m_bz](#m_bz) , debe hacerlo antes de llamar `DoModal`a, pero después de que se construya el objeto de cuadro de diálogo.
 
-Si `DoModal` devuelve IDOK, se puede llamar a otro miembro de funciones para recuperar la configuración o la información que se ha especificado por el usuario en el cuadro de diálogo.
+Si `DoModal` devuelve IDOK, puede llamar a otras funciones miembro para recuperar la configuración o la información que el usuario ha introducido en el cuadro de diálogo.
 
 ##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType
 
@@ -159,7 +159,7 @@ Tipo de selección realizada.
 
 ### <a name="remarks"></a>Comentarios
 
-Se especifican los valores de tipo de valor devuelto por la `Selection` tipo de enumeración declarado en el `COleBusyDialog` clase.
+Los valores de tipo devuelto se especifican mediante el `Selection` tipo de enumeración declarado en la `COleBusyDialog` clase.
 
 ```
 enum Selection {
@@ -169,17 +169,17 @@ enum Selection {
     };
 ```
 
-Siguen breves descripciones de los valores siguientes:
+A continuación se muestran descripciones breves de estos valores:
 
-- `COleBusyDialog::switchTo` Se presionó el botón Cambiar a.
+- `COleBusyDialog::switchTo`Se presionó el botón cambiar a.
 
-- `COleBusyDialog::retry` Se presionó el botón de reintento.
+- `COleBusyDialog::retry`Se presionó el botón Reintentar.
 
-- `COleBusyDialog::callUnblocked` Llamada a activar el servidor ya está desbloqueado.
+- `COleBusyDialog::callUnblocked`La llamada para activar el servidor está ahora desbloqueada.
 
 ##  <a name="m_bz"></a>  COleBusyDialog::m_bz
 
-Estructura del tipo OLEUIBUSY usado para controlar el comportamiento del cuadro de diálogo servidor ocupado.
+Estructura de tipo OLEUIBUSY que se usa para controlar el comportamiento del cuadro de diálogo servidor ocupado.
 
 ```
 OLEUIBUSY m_bz;
@@ -189,7 +189,7 @@ OLEUIBUSY m_bz;
 
 Los miembros de esta estructura se pueden modificar directamente o a través de funciones miembro.
 
-Para obtener más información, consulte el [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) estructura en el SDK de Windows.
+Para obtener más información, vea la estructura [OLEUIBUSY](/windows/win32/api/oledlg/ns-oledlg-oleuibusyw) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-ms.openlocfilehash: ac402591692720c15ec8a118fea04d9b3c444f06
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 14efffeca11a87f4c3bcaa3241af5cf6784d01e9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810333"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708347"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Clases generadas, Asistente para aplicaciones MFC
 
@@ -42,5 +42,5 @@ En este tema se enumera los nombres de las clases base y los archivos que genera
 ## <a name="see-also"></a>Vea también
 
 [Características avanzadas, Asistente para aplicaciones MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)<br/>
-[Tipos de archivos creados para proyectos de Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Tipos de archivos creados para Visual Studio C++ proyectos](../../build/reference/file-types-created-for-visual-cpp-projects.md)
 

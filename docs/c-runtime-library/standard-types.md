@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d2b209e29b0690ec2003031e160ce9fd1f749b13
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740475"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915318"
 ---
 # <a name="standard-types"></a>Tipos estándar
 
@@ -189,7 +189,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|
 |intmax_t, uintmax_t|long long, unsigned long long|
 
-|Tipo|Descripción|Declarado en|
+|Tipo|DESCRIPCIÓN|Declarado en|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|Almacena valores de hora. Usado por [clock](../c-runtime-library/reference/clock.md).|TIME.H|
 |`_complex` (estructura)|Almacena partes reales e imaginarias de números complejos. Usado por [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|
@@ -198,11 +198,11 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |`_CrtMemState` (estructura)|Proporciona información sobre el estado actual del montón de depuración en tiempo de ejecución de C.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Definición de tipo para una función de devolución de llamada a la que se llamará en [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Los parámetros para esta función son: tipo de informe, mensaje de salida y el valor devuelto de la función de devolución de llamada.|CRTDBG.H|
 |`dev_t`, `_dev_t` corto o entero sin signo|Representa identificadores de dispositivo.|SYS\TYPES.H|
-|`_diskfree_t` (estructura)|Contiene información sobre una unidad de disco. Utilizado por [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H y DIRECT.H|
+|`_diskfree_t` (estructura)|Contiene información sobre una unidad de disco. Utilizado por [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.**|DOS.H y DIRECT.H|
 |Estructuras de `div_t`, `ldiv_t` y `lldiv_t`|Almacena los valores devueltos por [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) y [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivamente.|STDLIB.H|
 |Entero de `errno_t`|Se usa para un tipo de valor devuelto o un parámetro de la función que se ocupa de los códigos de error de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` (estructura)|Almacena información de error para [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
-|`_EXCEPTION_POINTERS`|Contiene un registro de excepciones. Para más información, vea [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers).|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|Contiene un registro de excepciones. Para más información, vea [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
 |`FILE` (estructura)|Almacena información sobre el estado actual del flujo; se usa en todas las operaciones de E/S de flujo.|STDIO.H|
 |Estructuras de `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t` y `__wfinddata64i32_t`|Almacena información de atributos de archivo devuelta por [_findfirst, _wfindfirst y por funciones relacionadas](../c-runtime-library/reference/findfirst-functions.md) y [_findnext, _wfindnext y por funciones relacionadas](../c-runtime-library/reference/findnext-functions.md). Vea [Funciones de búsqueda de nombre de archivo](../c-runtime-library/filename-search-functions.md) para obtener información sobre los miembros de la estructura.|IO.H, WCHAR.H|
 |`_FPIEEE_RECORD` (estructura)|Contiene información sobre la excepción de punto flotante del IEEE; [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) la pasa al controlador de interceptaciones definido por el usuario.|FPIEEE.H|

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 4c8e35c097513176551db16471ed3a8c4ca1e824
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521485"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458464"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution (Clase)
 
@@ -67,7 +67,7 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType*<br/>
+*IntType*\
 El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
@@ -91,7 +91,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
 
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener información detallada sobre la distribución de Poisson, vea el artículo de Wolfram MathWorld sobre la [distribución de Poisson](http://go.microsoft.com/fwlink/p/?linkid=401112).
+Para obtener información detallada sobre la distribución de Poisson, vea el artículo de Wolfram MathWorld sobre la [distribución de Poisson](https://go.microsoft.com/fwlink/p/?linkid=401112).
 
 ## <a name="example"></a>Ejemplo
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*mean*<br/>
+*aritmética*\
 El parámetro de distribución `mean`.
 
-*parm*<br/>
+*PARM*\
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -248,4 +248,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -1,5 +1,5 @@
 ---
-title: CDockablePaneAdapter (clase)
+title: Clase CDockablePaneAdapter
 ms.date: 11/04/2016
 f1_keywords:
 - CDockablePaneAdapter
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 8f184bab564b4867138608b735c67b328e1a21cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 88c125c63f9dbfe272f5d543e996366575fc533b
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278982"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866219"
 ---
-# <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter (clase)
+# <a name="cdockablepaneadapter-class"></a>Clase CDockablePaneAdapter
 
 Proporciona compatibilidad para paneles derivados de `CWnd`.
 
@@ -35,34 +35,36 @@ class CDockablePaneAdapter : public CDockablePane
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Devuelve la ventana ajustada.|
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Invalida [CDockablePane:: Loadstate](cdockablepane-class.md#loadstate).)|
-|[CDockablePaneAdapter::SaveState](#savestate)|(Invalida [CDockablePane:: SaveState](cdockablepane-class.md).)|
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Invalida [CDockablePane:: Loadstate](cdockablepane-class.md#loadstate)).|
+|[CDockablePaneAdapter::SaveState](#savestate)|(Invalida [CDockablePane::](cdockablepane-class.md)SaveState).|
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
 
 ## <a name="remarks"></a>Comentarios
 
-Normalmente, el marco de trabajo crea una instancia de objetos de esta clase cuando se usa el [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) o [cmfcbasetabctrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) métodos.
+Normalmente, el marco de trabajo crea instancias de los objetos de esta clase cuando se usan los métodos [CMFCBaseTabCtrl:: AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) o [CMFCBaseTabCtrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) .
 
-Si desea personalizar la `CDockablePaneAdapter` comportamiento, simplemente derivar una nueva clase y establezca la información de clase en tiempo de ejecución en una ventana con fichas mediante [cmfcbasetabctrl:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+Si desea personalizar el `CDockablePaneAdapter` comportamiento, simplemente derive una nueva clase a partir de ella y establezca la información de clase en tiempo de ejecución en una ventana con pestañas mediante [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
-
-[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[A cbasepane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxDockablePaneAdapter.h
+**Encabezado:** afxDockablePaneAdapter. h
 
 ##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
 
-Devuelve la ventana subyacente para el adaptador de panel acoplable.
+Devuelve la ventana subyacente del adaptador del panel acoplable.
 
 ```
 virtual CWnd* GetWrappedWnd() const;
@@ -70,7 +72,7 @@ virtual CWnd* GetWrappedWnd() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la ventana ajustada.
+Puntero a la ventana ajustada.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -90,13 +92,13 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-[in] El nombre del perfil.
+de Nombre del perfil.
 
 *nIndex*<br/>
-[in] El índice del perfil.
+de Índice del perfil.
 
 *uiID*<br/>
-[in] El identificador del panel.
+de IDENTIFICADOR del panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -116,13 +118,13 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-[in] El nombre del perfil.
+de Nombre del perfil.
 
 *nIndex*<br/>
-[in] El índice de perfil (el valor predeterminado es el identificador de control de la ventana).
+de El índice de perfil (el valor predeterminado es el identificador de control de la ventana).
 
 *uiID*<br/>
-[in] El identificador del panel.
+de IDENTIFICADOR del panel.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -130,7 +132,7 @@ virtual BOOL SaveState(
 
 ##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
 
-Establece la ventana subyacente para el adaptador de panel acoplable.
+Establece la ventana subyacente para el adaptador del panel acoplable.
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -139,7 +141,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-[in] Un puntero a la ventana para ajustar el adaptador de panel.
+de Puntero a la ventana del adaptador de panel que se va a ajustar.
 
 ### <a name="return-value"></a>Valor devuelto
 

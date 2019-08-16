@@ -1,27 +1,37 @@
 ---
 title: Archivos generados por el Asistente para proveedores
-ms.date: 10/18/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: a9a706463326249135a55bc907cb8a664a3ca808
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 0638680482546f56f26b70660ab43bd9848438a3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037096"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707486"
 ---
 # <a name="provider-wizard-generated-files"></a>Archivos generados por el Asistente para proveedores
 
-El **el Asistente para proveedores OLE DB ATL** genera los siguientes archivos. Los temas siguientes utilizan el nombre corto *personalizado*, pero los nombres de archivo exacto dependen de la elección realizada cuando se crea el proveedor.
+::: moniker range="vs-2019"
+
+El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+El **Asistente para proveedores OLE DB ATL** genera los siguientes archivos. Los temas siguientes utilizan el nombre corto *Personalizado*, pero los nombres de archivo exacto dependen de la elección realizada cuando se crea el proveedor.
 
 |Nombre del archivo|Descripción|
 |---------------|-----------------|
-|*Custom*RS.cpp|Contiene la aplicación auxiliar de comando `Execute` método y el mapa de columnas del proveedor.|
-|*Custom*DS.h|Implementa el objeto de origen de datos. Este archivo de encabezado contiene la asignación de propiedad para propiedades del origen de datos.|
-|*Custom*RS.h|Implementa los objetos de comando y conjunto de filas. Este archivo de encabezado contiene la asignación de propiedad para las propiedades del conjunto de filas y el comando.|
-|*Custom*Sess.h|Implementa el objeto de sesión. Este archivo de encabezado contiene la asignación de propiedad para propiedades de la sesión.|
+|*Custom*RS.cpp|Contiene el método `Execute` del asistente de comando y la asignación de columnas del proveedor.|
+|*Custom*DS.h|Implementa el objeto de origen de datos. Este archivo de encabezado contiene la asignación de propiedades para las propiedades del origen de datos.|
+|*Custom*RS.h|Implementa los objetos de comando y conjunto de filas. Este archivo de encabezado contiene la asignación de propiedades para las propiedades del conjunto de filas y comando.|
+|*Custom*Sess.h|Implementa el objeto de sesión. Este archivo de encabezado contiene la asignación de propiedades para las propiedades de sesión.|
 |*Custom*.rgs|Contiene los objetos registrados generados por el **Asistente para proveedores OLE DB**.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,20 +1,18 @@
 ---
 title: Estructuras, estilos, devoluciones de llamada y mapas de mensajes
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.structures
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: e1fa072c5395c9171e0abdd4f3dab3251cd27229
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780202"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611673"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Estructuras, estilos, devoluciones de llamada y mapas de mensajes
 

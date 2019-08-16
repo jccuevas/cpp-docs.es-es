@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4237
 ms.assetid: f2e86c4b-80d8-460e-9429-83c5f3f5d7ca
-ms.openlocfilehash: 04fcb99e1dd1e348716e25affb22b54079d53aa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c68e84daa2ca1aa023123203bb851e92758f9e40
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472688"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447686"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>Advertencia del compilador (nivel 1) C4237
 
 palabra clave 'palabra clave' no se admite, pero reservado para uso futuro
 
-Una palabra clave en la especificación de C++ no está implementada en el compilador de Visual C++, pero la palabra clave no está disponible como un símbolo definido por el usuario.
+Una palabra clave en el C++ especificación no está implementada en Microsoft C++ compilador, pero la palabra clave no está disponible como un símbolo definido por el usuario.
 
 El ejemplo siguiente genera C4237:
 

@@ -7,12 +7,12 @@ f1_keywords:
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-ms.openlocfilehash: bc382bbc408b11cbc18210f3ab944dda39adc8f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba4b202a5c8c6da742ac884bf58a5b8c55373d14
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653393"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454289"
 ---
 # <a name="durationvalues-structure"></a>duration_values (Estructura)
 
@@ -29,15 +29,15 @@ struct duration_values;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[max](#max)|Estático. Especifica el límite superior para un valor de tipo `Rep`.|
 |[min](#min)|Estático. Especifica el límite inferior para un valor de tipo `Rep`.|
-|[cero](#zero)|Estático. Devuelve `Rep(0)`.|
+|[zero](#zero)|Estático. Devuelve `Rep(0)`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<chrono >
+**Encabezado:** \<> crónico
 
 **Espacio de nombres:** std::chrono
 
@@ -87,5 +87,5 @@ Cuando `Rep` es un tipo definido por el usuario, el valor devuelto debe represen
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

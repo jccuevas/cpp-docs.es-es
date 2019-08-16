@@ -1,18 +1,18 @@
 ---
-title: Filtrar Usar la clase combinable para combinar conjuntos
+title: Procedimiento Usar la clase combinable para combinar conjuntos
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
 ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345583"
 ---
-# <a name="how-to-use-combinable-to-combine-sets"></a>Filtrar Usar la clase combinable para combinar conjuntos
+# <a name="how-to-use-combinable-to-combine-sets"></a>Procedimiento Usar la clase combinable para combinar conjuntos
 
 En este tema se muestra cómo usar el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase para calcular el conjunto de números primos.
 

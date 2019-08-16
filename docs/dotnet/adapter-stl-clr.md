@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397684"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -455,7 +455,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::Iterator (STL/CLR)
+## <a name="iterator"></a> collection_adapter::iterator (STL/CLR)
 
 El tipo de un iterador para la secuencia controlada.
 
@@ -500,7 +500,7 @@ int main()
 a b c
 ```
 
-## <a name="key_type"></a> collection_adapter::KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> collection_adapter::key_type (STL/CLR)
 
 El tipo de una clave del diccionario.
 
@@ -600,7 +600,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
+## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
 
 Reemplaza el identificador de la BCL almacenado.
 
@@ -657,7 +657,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::Reference (STL/CLR)
+## <a name="reference"></a> collection_adapter::reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -924,13 +924,13 @@ template<typename Iter>
 
 #### <a name="parameters"></a>Parámetros
 
-*ITER*<br/>
+*Iter*<br/>
 El tipo de los iteradores ajustados.
 
 *first*<br/>
 Primer iterador para ajustar.
 
-*Último*<br/>
+*last*<br/>
 Segundo iterador del ajuste de línea.
 
 ### <a name="remarks"></a>Comentarios
@@ -1008,7 +1008,7 @@ template<typename Iter>
 
 #### <a name="parameters"></a>Parámetros
 
-*ITER*<br/>
+*Iter*<br/>
 El tipo asociado con los iteradores ajustados.
 
 ### <a name="members"></a>Miembros
@@ -1034,7 +1034,7 @@ El tipo asociado con los iteradores ajustados.
 
 El range_adapter almacena un par de iteradores, que a su vez delimitar una secuencia de elementos. El objeto implementa cuatro interfaces BCL que le permiten recorrer en iteración los elementos en orden. Utilice esta clase de plantilla para manipular los intervalos STL/CLR como contenedores BCL.
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
 
 Reemplaza el par iterador almacenado.
 
@@ -1109,7 +1109,7 @@ range_adapter(Iter first, Iter last);
 *first*<br/>
 Primer iterador para ajustar.
 
-*Último*<br/>
+*last*<br/>
 Segundo iterador del ajuste de línea.
 
 *right*<br/>

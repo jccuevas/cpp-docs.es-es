@@ -3,18 +3,14 @@ title: Palabras clave (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
 helpviewer_keywords:
-- Visual C++, keywords
 - keywords [C++]
-- __identifer keyword [C++], naming
-- Microsoft-specific keywords
-- __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: f87c2401bcc964229d3c0b3cf7119a09553cc2f2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 4dca4d034a4d755898e0f6160b231fc5f3734cb4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774768"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222422"
 ---
 # <a name="keywords-c"></a>Palabras clave (C++)
 

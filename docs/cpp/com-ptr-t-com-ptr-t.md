@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
 ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154882"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 
@@ -141,16 +141,16 @@ Puntero a interfaz sin formato.
 *fAddRef*<br/>
 Si es TRUE, `AddRef` se llama para incrementar el recuento de referencias del puntero de interfaz encapsulado.
 
-*CP*<br/>
+*cp*<br/>
 Un **_com_ptr_t** objeto.
 
 *p*<br/>
 Un puntero de interfaz sin formato, cuyo tipo es diferente del tipo de puntero inteligente de este **_com_ptr_t** objeto.
 
 *varSrc*<br/>
-Un objeto `_variant_t`.
+Objeto `_variant_t`.
 
-*CLSID*<br/>
+*clsid*<br/>
 El `CLSID` de una coclase.
 
 *dwClsContext*<br/>

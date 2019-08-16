@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676829"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454393"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine (Clase)
 
@@ -26,13 +26,13 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*Motor de*<br/>
+*Motor*\
 El tipo de motor base.
 
-*P*<br/>
+*M*\
 **Tamaño de bloque**. El número de valores de cada bloque.
 
-*R*<br/>
+*R*\
 **Bloque usado**. El número de valores de cada bloque que se utilizan. El resto se descartan (`P` - `R`). **Condición previa:** `0 < R ≤ P`
 
 ## <a name="members"></a>Miembros
@@ -56,4 +56,4 @@ Esta clase de plantilla describe un adaptador de motor que produce valores desca
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

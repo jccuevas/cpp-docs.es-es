@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
 ms.openlocfilehash: 9cc7dd32f222e68abb45fe8c518d9f378453b372
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384840"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -140,7 +140,7 @@ template<typename Key,
 *Key*<br/>
 El tipo del componente clave de un elemento de la secuencia controlada.
 
-*Asignado*<br/>
+*asignado*<br/>
 El tipo del componente adicional de un elemento de la secuencia controlada.
 
 ## <a name="requirements"></a>Requisitos
@@ -245,7 +245,7 @@ Borrar o quitar un elemento llama al destructor para su valor almacenado. Destru
 
 ## <a name="members"></a>Miembros
 
-## <a name="begin"></a> multimap:: begin (STL/CLR)
+## <a name="begin"></a> multimap::begin (STL/CLR)
 
 Designa el principio de la secuencia controlada.
 
@@ -296,7 +296,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="clear"></a> multimap:: Clear (STL/CLR)
+## <a name="clear"></a> multimap::clear (STL/CLR)
 
 Quita todos los elementos.
 
@@ -354,7 +354,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multimap:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> multimap::const_iterator (STL/CLR)
 
 El tipo de un iterador constante para la secuencia controlada.
 
@@ -396,7 +396,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> multimap:: const_reference (STL/CLR)
+## <a name="const_reference"></a> multimap::const_reference (STL/CLR)
 
 El tipo de una referencia constante a un elemento.
 
@@ -441,7 +441,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> multimap::const_reverse_iterator (STL/CLR)
 
 El tipo de un iterador invertido constante para la secuencia controlada.
 
@@ -483,7 +483,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> multimap:: Count (STL/CLR)
+## <a name="count"></a> multimap::count (STL/CLR)
 
 Busca el número de elementos que coinciden con una clave especificada.
 
@@ -536,7 +536,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multimap:: difference_type (STL/CLR)
+## <a name="difference_type"></a> multimap::difference_type (STL/CLR)
 
 Los tipos de una distancia con signo entre dos elementos.
 
@@ -591,7 +591,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> multimap:: Empty (STL/CLR)
+## <a name="empty"></a> multimap::empty (STL/CLR)
 
 Comprueba si no hay ningún elemento presente.
 
@@ -643,7 +643,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multimap:: end (STL/CLR)
+## <a name="end"></a> multimap::end (STL/CLR)
 
 Designa el final de la secuencia controlada.
 
@@ -696,7 +696,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> multimap:: equal_range (STL/CLR)
+## <a name="equal_range"></a> multimap::equal_range (STL/CLR)
 
 Busca el intervalo que coincide con una clave especificada.
 
@@ -757,7 +757,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> multimap:: Erase (STL/CLR)
+## <a name="erase"></a> multimap::erase (STL/CLR)
 
 Quita los elementos de las posiciones especificadas.
 
@@ -777,7 +777,7 @@ Principio del intervalo que se va a borrar.
 *key*<br/>
 Valor de clave para borrar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a borrar.
 
 *where*<br/>
@@ -850,7 +850,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> multimap:: Find (STL/CLR)
+## <a name="find"></a> multimap::find (STL/CLR)
 
 Busca un elemento que coincide con una clave especificada.
 
@@ -1140,7 +1140,7 @@ int main()
 [a 1]
 ```
 
-## <a name="insert"></a> multimap:: Insert (STL/CLR)
+## <a name="insert"></a> multimap::insert (STL/CLR)
 
 Agrega elementos.
 
@@ -1159,13 +1159,13 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
 *right*<br/>
 Enumeración que se va a insertar.
 
-*Val*<br/>
+*val*<br/>
 Valor de clave se va a insertar.
 
 *where*<br/>
@@ -1258,7 +1258,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> multimap:: Iterator (STL/CLR)
+## <a name="iterator"></a> multimap::iterator (STL/CLR)
 
 El tipo de un iterador para la secuencia controlada.
 
@@ -1300,7 +1300,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> multimap:: key_comp (STL/CLR)
+## <a name="key_comp"></a> multimap::key_comp (STL/CLR)
 
 Copia al delegado de ordenación de dos claves.
 
@@ -1359,7 +1359,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> multimap:: key_compare (STL/CLR)
+## <a name="key_compare"></a> multimap::key_compare (STL/CLR)
 
 Delegado de ordenación para dos claves.
 
@@ -1419,7 +1419,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multimap:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> multimap::key_type (STL/CLR)
 
 El tipo de una clave de ordenación.
 
@@ -1464,7 +1464,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> multimap:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> multimap::lower_bound (STL/CLR)
 
 Busca el principio del intervalo que coincide con una clave especificada.
 
@@ -1538,7 +1538,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Valor de clave para usar.
 
-*asignado*<br/>
+*mapped*<br/>
 Valor asignado a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1572,7 +1572,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> multimap:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> multimap::mapped_type (STL/CLR)
 
 El tipo de un valor asignado asociado a cada clave.
 
@@ -1617,7 +1617,7 @@ int main()
 1 2 3
 ```
 
-## <a name="multimap"></a> multimap:: multimap (STL/CLR)
+## <a name="multimap"></a> multimap::multimap (STL/CLR)
 
 Construye un objeto contenedor.
 
@@ -1643,10 +1643,10 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
-*Pred*<br/>
+*pred*<br/>
 Orden de predicado de la secuencia controlada.
 
 *right*<br/>
@@ -1790,7 +1790,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_as"></a> multimap::operator = (STL/CLR)
+## <a name="op_as"></a> multimap::operator= (STL/CLR)
 
 Reemplaza la secuencia controlada.
 
@@ -1845,7 +1845,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rbegin"></a> multimap:: rbegin (STL/CLR)
+## <a name="rbegin"></a> multimap::rbegin (STL/CLR)
 
 Designa el principio de la secuencia controlada inversa.
 
@@ -1896,7 +1896,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> multimap:: Reference (STL/CLR)
+## <a name="reference"></a> multimap::reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -1941,7 +1941,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rend"></a> multimap:: rend (STL/CLR)
+## <a name="rend"></a> multimap::rend (STL/CLR)
 
 Designa el final de la secuencia controlada inversa.
 
@@ -1994,7 +1994,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> multimap:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> multimap::reverse_iterator (STL/CLR)
 
 El tipo de un iterador invertido para la secuencia controlada.
 
@@ -2036,7 +2036,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> multimap:: Size (STL/CLR)
+## <a name="size"></a> multimap::size (STL/CLR)
 
 Cuenta el número de elementos.
 
@@ -2088,7 +2088,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multimap:: size_type (STL/CLR)
+## <a name="size_type"></a> multimap::size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -2136,7 +2136,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multimap:: swap (STL/CLR)
+## <a name="swap"></a> multimap::swap (STL/CLR)
 
 Intercambia el contenido de dos contenedores.
 
@@ -2254,7 +2254,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> multimap:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> multimap::upper_bound (STL/CLR)
 
 Busca el final del intervalo que coincide con una clave especificada.
 
@@ -2313,7 +2313,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> multimap:: value_comp (STL/CLR)
+## <a name="value_comp"></a> multimap::value_comp (STL/CLR)
 
 Copia al delegado de ordenación de dos valores de elemento.
 
@@ -2408,7 +2408,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> multimap:: value_type (STL/CLR)
+## <a name="value_type"></a> multimap::value_type (STL/CLR)
 
 El tipo de un elemento.
 
@@ -2452,7 +2452,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_neq"></a> operador! = (multimap) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multimap) (STL/CLR)
 
 Lista de comparación de desigualdad.
 
@@ -2523,7 +2523,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operador&lt; (multimap) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (multimap) (STL/CLR)
 
 Lista de menor de comparación.
 
@@ -2594,7 +2594,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operador&lt;= (multimap) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multimap) (STL/CLR)
 
 Lista igual o comparación.
 
@@ -2665,7 +2665,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operador == (multimap) (STL/CLR)
+## <a name="op_eq"></a> operator== (multimap) (STL/CLR)
 
 Comparación de igualdad de lista.
 
@@ -2736,7 +2736,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operador&gt; (multimap) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (multimap) (STL/CLR)
 
 Comparación mayor que la lista.
 
@@ -2807,7 +2807,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operador&gt;= (multimap) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multimap) (STL/CLR)
 
 Comparación igual o mayor de la lista.
 

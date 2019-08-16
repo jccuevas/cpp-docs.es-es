@@ -1,5 +1,5 @@
 ---
-title: CSecurityAttributes (clase)
+title: Clase información
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 66188a2c944379cfae813220937ac1e7e98fb41d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496499"
 ---
-# <a name="csecurityattributes-class"></a>CSecurityAttributes (clase)
+# <a name="csecurityattributes-class"></a>Clase información
 
-Esta clase es un contenedor fino para la estructura de los atributos de seguridad.
+Esta clase es un contenedor fino para la estructura de atributos de seguridad.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,21 +33,21 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|El constructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Llame a este método para establecer los atributos de la `CSecurityAttributes` objeto.|
+|[CSecurityAttributes::Set](#set)|Llame a este método para establecer los atributos del `CSecurityAttributes` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
-El `SECURITY_ATTRIBUTES` estructura contiene un [descriptor de seguridad](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) utilizado para la creación de un objeto y especifica si el identificador recuperado especificando esta estructura es heredable.
+La `SECURITY_ATTRIBUTES` estructura contiene un descriptor de [seguridad](/windows/win32/api/winnt/ns-winnt-security_descriptor) que se usa para la creación de un objeto y especifica si el identificador recuperado mediante la especificación de esta estructura es heredable.
 
-Para obtener una introducción al modelo de control de acceso en Windows, consulte [Control de acceso](/windows/desktop/SecAuthZ/access-control) en el SDK de Windows.
+Para obtener una introducción al modelo de control de acceso de Windows, consulte [Access Control](/windows/win32/SecAuthZ/access-control) en el Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -57,7 +57,7 @@ Para obtener una introducción al modelo de control de acceso en Windows, consul
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlsecurity.h
+**Encabezado:** ATLSecurity. h
 
 ##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
 
@@ -78,7 +78,7 @@ Especifica si se hereda el identificador devuelto cuando se crea un nuevo proces
 
 ##  <a name="set"></a>  CSecurityAttributes::Set
 
-Llame a este método para establecer los atributos de la `CSecurityAttributes` objeto.
+Llame a este método para establecer los atributos del `CSecurityAttributes` objeto.
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -94,12 +94,12 @@ Especifica si se hereda el identificador devuelto cuando se crea un nuevo proces
 
 ### <a name="remarks"></a>Comentarios
 
-Este método se usa el constructor para inicializar el `CSecurityAttributes` objeto.
+El constructor utiliza este método para inicializar el `CSecurityAttributes` objeto.
 
 ## <a name="see-also"></a>Vea también
 
 [Ejemplo de seguridad](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
-[descriptor de seguridad](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)<br/>
+[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
+[descriptor de seguridad](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
+[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

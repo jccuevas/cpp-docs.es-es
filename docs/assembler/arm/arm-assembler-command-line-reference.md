@@ -1,32 +1,32 @@
 ---
-title: Referencia de la línea de comandos de ensamblador de ARM
+title: Referencia de la línea de comandos de ARM
 ms.date: 08/30/2018
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
 ms.openlocfilehash: f49b59a81fbe5f11c0f219d1e1fe83a4ee811c7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162140"
 ---
-# <a name="arm-assembler-command-line-reference"></a>Referencia de la línea de comandos de ensamblador de ARM
+# <a name="arm-assembler-command-line-reference"></a>Referencia de la línea de comandos de ARM
 
 En este artículo proporciona información de línea de comandos sobre el ensamblador de ARM Microsoft *armasm*, que compila el lenguaje de ensamblado ARMv7 Thumb en la implementación de Microsoft de formato de archivo de objeto común (COFF). El vinculador puede vincular código COFF con el código objeto generado por el ensamblador ARM o por el compilador de C, junto con las bibliotecas de objetos creados por el bibliotecario.
 
 ## <a name="syntax"></a>Sintaxis
 
 > **armasm** [*opciones*] *sourcefile* *objectfile*
-> **armasm** [*opciones *] **-o** *objectfile* *sourcefile*
+> **armasm** [*opciones*] **-o** *objectfile* *sourcefile*
 
 ### <a name="parameters"></a>Parámetros
 
 *options*<br/>
 Una combinación de cero o más de las siguientes acciones:
 
-- **-errores** *nombre de archivo*<br/>
+- **-errors** *filename*<br/>
    Redirigir los mensajes de error y advertencia para *filename*.
 
-- **-i** *dir*[**;** <em>dir</em>]<br/>
+- **-i** *dir*[ **;** <em>dir</em>]<br/>
    Agregue los directorios especificados en la ruta de búsqueda.
 
 - **-predefinir** *directiva*<br/>
@@ -37,7 +37,7 @@ Una combinación de cero o más de las siguientes acciones:
 - **-nowarn**<br/>
    Deshabilitar todos los mensajes de advertencia.
 
-- **-omitir** *advertencia*<br/>
+- **-ignore** *warning*<br/>
    Deshabilitar la advertencia especificada. Para los valores posibles, vea la sección acerca de las advertencias.
 
 - **-help**<br/>
@@ -70,7 +70,7 @@ Una combinación de cero o más de las siguientes acciones:
    **cola**: pedir al usuario para enviar los informes en el siguiente inicio de sesión de administrador. Este es el valor predeterminado.<br/>
    **enviar**, enviar automáticamente informes.
 
-*SourceFile*<br/>
+*sourcefile*<br/>
 El nombre del archivo de origen.
 
 *objectfile*<br/>

@@ -1,18 +1,19 @@
 ---
-title: Formato de cadena y E/s (C++ moderno)
-ms.date: 11/04/2016
+title: Formato de cadena y de E/S (C++ moderno)
+description: Opciones de cadena con formato E/S disponibles en el modo modern C++.
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220509"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450500"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formato de cadena y de E/S (C++ moderno)
 
-C++ [iostreams](../standard-library/iostream.md) son capaces de cadena con formato E/S. Por ejemplo, el código siguiente muestra cómo establecer cout para dar formato a un número entero y de salida en formato hexadecimal, en primer lugar, guardando fuera del estado actual y estableciéndolo de nuevo más adelante, porque una vez que el formato de estado se pasa a cout, permanece así hasta que cambie, no solo para la línea de código.
+C++[ \<iostream >](../standard-library/iostream.md) clases, funciones y operadores admiten cadena con formato E/S. Por ejemplo, el código siguiente muestra cómo establecer `cout` para dar formato a un número entero y de salida en formato hexadecimal. En primer lugar, guarda el estado actual para restablecerla posteriormente, porque una vez el estado de formato se pasa a `cout`, permanece así hasta que se puede cambiar. Simplemente no se aplica a la línea de código.
 
 ```cpp
 #include <iostream>
@@ -38,9 +39,13 @@ int main()
 }
 ```
 
-Esto puede ser demasiado complejo en muchos casos. Como alternativa, puede utilizar Boost.Format de las bibliotecas de Boost de C++, aunque no es estándar. Puede descargar cualquier biblioteca de Boost desde el [Boost](http://www.boost.org/) sitio Web.
+Este enfoque es extensible y de seguridad de tipos, pero también es compleja y detallada.
 
-Algunas ventajas de Boost.Format son:
+## <a name="alternative-format-options"></a>Opciones de formato alternativo
+
+Como alternativa, puede usar `Boost.Format` de aumentar el C++ bibliotecas, incluso después de que no sea estándar. Puede descargar cualquier biblioteca de Boost desde el [Boost](https://www.boost.org/) sitio Web.
+
+Algunas ventajas de `Boost.Format` son:
 
 - Seguridad: Seguridad de tipos y produce una excepción para errores, por ejemplo, la especificación de muy pocos o demasiados elementos.
 
@@ -48,7 +53,7 @@ Algunas ventajas de Boost.Format son:
 
 - Conveniente: Posix estándar y cadenas de formato similares.
 
-Aunque Boost.Format está compilado en C++ [iostreams](../standard-library/iostream-programming.md), que son seguros y extensible, no optimizado para el rendimiento. Cuando necesite la optimización del rendimiento, considere la posibilidad de C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) y [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), que son rápidos y fáciles de usar. Sin embargo, no son extensibles ni están seguros frente a vulnerabilidades. (Las versiones seguras existen, pero incurren en una ligera disminución del rendimiento. Para obtener más información, consulte [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) y [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+Aunque `Boost.Format` se basa en C++ [ \<iostream >](../standard-library/iostream-programming.md) instalaciones, que son seguros y extensible, no están optimizados para rendimiento. Cuando necesite la optimización del rendimiento, considere la posibilidad de C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) y [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), que son rápidos y fáciles de usar. Sin embargo, no son extensibles ni están seguros frente a vulnerabilidades. (Las versiones seguras existen, pero incurren en una ligera disminución del rendimiento. Para obtener más información, consulte [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) y [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
 El código siguiente muestra algunas de la mejora de las características de formato.
 

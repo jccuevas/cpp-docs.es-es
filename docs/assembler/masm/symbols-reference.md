@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
 ms.openlocfilehash: e57583ce2b4184120569be3a44d87ffc3f51586c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210221"
 ---
 # <a name="symbols-reference"></a>Referencia de símbolos
 
@@ -23,14 +23,14 @@ ms.locfileid: "51326620"
 
 |||
 |-|-|
-|[\@CPU](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
-|[\@Interfaz](../../assembler/masm/at-interface.md)|[\@Versión](../../assembler/masm/at-version.md)|
+|[\@Cpu](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
+|[\@Interface](../../assembler/masm/at-interface.md)|[\@Versión](../../assembler/masm/at-version.md)|
 
 ## <a name="file-information"></a>Información de archivo
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@Nombre de archivo](../../assembler/masm/at-filename.md)|
+|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@FileName](../../assembler/masm/at-filename.md)|
 |[\@Línea](../../assembler/masm/at-line.md)||
 
 ## <a name="macro-functions"></a>Funciones de macro
@@ -38,7 +38,7 @@ ms.locfileid: "51326620"
 |||
 |-|-|
 |[\@CatStr](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
-|[\@SizeStr](../../assembler/masm/at-sizestr.md)|[\@Substr)](../../assembler/masm/at-substr.md)|
+|[\@SizeStr](../../assembler/masm/at-sizestr.md)|[\@SubStr](../../assembler/masm/at-substr.md)|
 
 ## <a name="miscellaneous"></a>Varios
 
@@ -52,7 +52,7 @@ ms.locfileid: "51326620"
 ||||
 |-|-|-|
 |[\@Código](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@Datos](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
+|[\@data](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
 |[\@¿fardata?](../../assembler/masm/at-fardata-q.md)|[\@Modelo](../../assembler/masm/at-model.md)|[\@Pila](../../assembler/masm/at-stack.md)|
 |[\@WordSize](../../assembler/masm/at-wordsize.md)|||
 

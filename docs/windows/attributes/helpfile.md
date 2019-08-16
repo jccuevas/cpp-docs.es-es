@@ -1,17 +1,17 @@
 ---
-title: HelpFile (atributo de COM de C++)
+title: HelpFile (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039311"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501550"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -26,15 +26,15 @@ Establece el nombre del archivo de ayuda para una biblioteca de tipos.
 ### <a name="parameters"></a>Parámetros
 
 *filename*<br/>
-El nombre del archivo que contiene los temas de ayuda.
+Nombre del archivo que contiene los temas de ayuda.
 
 ## <a name="remarks"></a>Comentarios
 
-El **helpfile** atributo de C++ tiene la misma funcionalidad que el [helpfile](/windows/desktop/Midl/helpfile) atributo MIDL.
+El atributo **HelpFile** C++ tiene la misma funcionalidad que el atributo MIDL de [HelpFile](/windows/win32/Midl/helpfile) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [módulo](module-cpp.md) para obtener un ejemplo de cómo usar **helpfile**.
+Vea el ejemplo de [módulo](module-cpp.md) para obtener un ejemplo de cómo usar **HelpFile**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -42,10 +42,10 @@ Vea el ejemplo de [módulo](module-cpp.md) para obtener un ejemplo de cómo usar
 
 |||
 |-|-|
-|**Se aplica a**|**interfaz**, **typedef**, **clase**, método, **propiedad**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|**interface**, **typedef**, **Class**, Method, **Property**|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

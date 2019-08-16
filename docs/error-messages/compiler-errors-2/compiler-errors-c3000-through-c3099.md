@@ -1,6 +1,6 @@
 ---
-title: Compilador errores C3000 a C3099
-ms.date: 11/17/2017
+title: Errores del compilador de C3000 a C3099
+ms.date: 04/21/2019
 f1_keywords:
 - C3051
 - C3061
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - C3093
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475496"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856922"
 ---
-# <a name="compiler-errors-c3000-through-c3099"></a>Compilador errores C3000 a C3099
+# <a name="compiler-errors-c3000-through-c3099"></a>Errores del compilador de C3000 a C3099
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el compilador.
 
@@ -55,10 +55,10 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 
 |Error|Mensaje|
 |-----------|-------------|
-|C3000 de Error del compilador|Obsoleto.|
+|Error del compilador de C3000|Obsoleto.|
 |[Error del compilador C3001](compiler-error-c3001.md)|'*mensaje*': se esperaba un nombre de la directiva de OpenMP|
 |[Error del compilador C3002](compiler-error-c3002.md)|'*nombre1* *nombre2*': nombres de directiva de OpenMP múltiples|
-|[Error del compilador C3003](compiler-error-c3003.md)|'*directiva*': nombre de la directiva de OpenMP no permitido después de las cláusulas de la directiva|
+|[Error del compilador C3003](compiler-error-c3003.md)|'*directiva*': Nombre de la directiva de OpenMP no permitido después de las cláusulas de la directiva|
 |[Error del compilador C3004](compiler-error-c3004.md)|'*cláusula*': cláusula no válida en OpenMP '*directiva*' directiva|
 |[Error del compilador C3005](compiler-error-c3005.md)|'*mensaje*': símbolo (token) inesperado detectado en OpenMP '*directiva*' directiva|
 |[Error del compilador C3006](compiler-error-c3006.md)|'*cláusula*': cláusula de OpenMP '*directiva*' falta un argumento esperado en la directiva|
@@ -106,7 +106,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3048](compiler-error-c3048.md)|la forma de la expresión que va después de '#pragma omp atomic' no es adecuada|
 |[Error del compilador C3049](compiler-error-c3049.md)|'*argumento*': argumento no válido en la cláusula 'default' de OpenMP|
 |[Error del compilador C3050](compiler-error-c3050.md)|'*clase*': una clase ref no puede heredar de '*identificador*'|
-|C3051 de Error del compilador|Obsoleto.|
+|Error del compilador C3051|Obsoleto.|
 |[Error del compilador C3052](compiler-error-c3052.md)|'*identificador*': variable no aparece en una cláusula de uso compartido de datos bajo una cláusula default (None)|
 |[Error del compilador C3053](compiler-error-c3053.md)|'*identificador*': 'threadprivate' solo es válido para elementos de datos globales o estáticos|
 |[Error del compilador C3054](compiler-error-c3054.md)|'#pragma omp parallel' actualmente es incompatible en una función o clase genérica|
@@ -116,42 +116,47 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3058](compiler-error-c3058.md)|'*identificador*': símbolo no declarado como 'threadprivate' antes de utilizarse en la cláusula 'copyin'|
 |[Error del compilador C3059](compiler-error-c3059.md)|'*identificador*': símbolo 'threadprivate' no se puede usar en el '*cláusula*' cláusula|
 |[Error del compilador C3060](compiler-error-c3060.md)|'*identificador*': no se puede definir una función friend dentro de una clase mediante un nombre completo (solamente se puede declarar)|
-|C3061 de Error del compilador|operador '*operador*': no se permite en la enumeración '*tipo*'con el tipo subyacente'*tipo*'|
+|Error del compilador C3061|operador '*operador*': no se permite en la enumeración '*tipo*'con el tipo subyacente'*tipo*'|
 |[Error del compilador C3062](compiler-error-c3062.md)|'*identificador*': enumerador requiere un valor porque el tipo subyacente es '*tipo*'|
 |[Error del compilador C3063](compiler-error-c3063.md)|operador '*operador*': todos los operandos deben tener el mismo tipo de enumeración|
-|C3064 de Error del compilador|'*identificador*': debe ser un tipo simple o resolverse en uno|
+|Error del compilador C3064|'*identificador*': debe ser un tipo simple o resolverse en uno|
 |[Error del compilador C3065](compiler-error-c3065.md)|no se permite la declaración de propiedad en un ámbito que no es de clase|
 |[Error del compilador C3066](compiler-error-c3066.md)|Hay varias maneras de que un objeto de este tipo se puede llamar con estos argumentos|
-|C3067 de Error del compilador|no se puede usar una lista de inicializadores con el operador integrado]|
+|Error del compilador C3067|no se puede usar una lista de inicializadores con el operador integrado]|
 |[Error del compilador C3068](compiler-error-c3068.md)|'*identificador*': una función 'naked' no puede contener objetos que requerirían desenredo si se ha producido una excepción de C++|
 |[Error del compilador C3069](compiler-error-c3069.md)|operador '*operador*': no se permite para el tipo de enumeración|
 |[Error del compilador C3070](compiler-error-c3070.md)|'*identificador*': propiedad no tiene un método 'set'|
 |[Error del compilador C3071](compiler-error-c3071.md)|operador '*operador*' solo puede aplicarse a una instancia de una clase ref o un tipo de valor|
 |[Error del compilador C3072](compiler-error-c3072.md)|operador '*operador*' no se puede aplicar a una instancia de un uso de clase ref, el operador unario '%' para convertir una instancia de una referencia a un tipo de identificador de clase|
 |[Error del compilador C3073](compiler-error-c3073.md)|'*identificador*': clase ref no tiene un constructor de copias definido por el usuario|
-|C3074 de Error del compilador|no se puede inicializar una matriz con un inicializador entre paréntesis|
+|Error del compilador C3074|no se puede inicializar una matriz con un inicializador entre paréntesis|
 |[Error del compilador C3075](compiler-error-c3075.md)|'*identificador*': no se puede incrustar una instancia de un tipo de referencia, '*tipo*', en un tipo de valor|
 |[Error del compilador C3076](compiler-error-c3076.md)|'*identificador*': no se puede incrustar una instancia de un tipo de referencia, '*tipo*', en un tipo nativo|
 |[Error del compilador C3077](compiler-error-c3077.md)|'*identificador*': un finalizador solamente puede ser un miembro de un tipo de referencia|
-|C3078 de Error del compilador|se debe especificar el tamaño de la matriz en nuevas expresiones|
-|C3079 de Error del compilador|no se puede usar una lista de inicializadores como operando derecho de este operador de asignación|
+|Error del compilador C3078|se debe especificar el tamaño de la matriz en nuevas expresiones|
+|Error del compilador C3079|no se puede usar una lista de inicializadores como operando derecho de este operador de asignación|
 |[Error del compilador C3080](compiler-error-c3080.md)|'*finalizador*': un finalizador no puede tener un especificador de clase de almacenamiento|
-|C3081 de Error del compilador|Obsoleto.|
+|Error del compilador C3081|Obsoleto.|
 |Error del compilador C3082|Obsoleto.|
 |[Error del compilador C3083](compiler-error-c3083.md)|'*identificador*': el símbolo a la izquierda de un '::' debe ser un tipo|
 |[Error del compilador C3084](compiler-error-c3084.md)|'*identificador*': un destructor/finalizador no puede ser '*palabra clave*'|
 |[Error del compilador C3085](compiler-error-c3085.md)|'*identificador*': un constructor no puede ser '*palabra clave*'|
-|C3086 de Error del compilador|no se encuentra 'std:: initializer_list': debe #include \<initializer_list >|
+|Error del compilador C3086|no se encuentra 'std:: initializer_list': debe #include \<initializer_list >|
 |[Error del compilador C3087](compiler-error-c3087.md)|'*identificador*': llamada de '*declaración*' ya inicializa este miembro|
-|C3088 de Error del compilador|'*clase*': constructor de atributo debe tener argumentos formales con nombre|
-|C3089 de Error del compilador|'*identificador*': nombre de parámetro no coincide con el nombre de cualquier miembro de datos|
-|C3090 de Error del compilador|'*clase*': clase de atributo no puede ser una plantilla|
-|C3091 de Error del compilador|'*clase*': clase de atributo no puede tener clases base|
-|C3092 de Error del compilador|'*clase*': miembro de clase de atributo no puede ser un poco campo, 'static' o 'const'|
-|C3093 de Error del compilador|'*tipo*': tipo no permitido para el miembro de clase de atributo '*miembro*'|
+|Error del compilador C3088|'*clase*': constructor de atributo debe tener argumentos formales con nombre|
+|Error del compilador C3089|'*identificador*': nombre de parámetro no coincide con el nombre de cualquier miembro de datos|
+|Error del compilador C3090|'*clase*': clase de atributo no puede ser una plantilla|
+|Error del compilador C3091|'*clase*': clase de atributo no puede tener clases base|
+|Error del compilador C3092|'*clase*': miembro de clase de atributo no puede ser un poco campo, 'static' o 'const'|
+|Error del compilador C3093|'*tipo*': tipo no permitido para el miembro de clase de atributo '*miembro*'|
 |[Error del compilador C3094](compiler-error-c3094.md)|'*atributo*': uso anónimo no permitido|
 |[Error del compilador C3095](compiler-error-c3095.md)|'*atributo*': no se puede repetir el atributo|
 |[Error del compilador C3096](compiler-error-c3096.md)|'*atributo*': atributo se permite en miembros de datos de las clases de atributos|
 |[Error del compilador C3097](compiler-error-c3097.md)|'*atributo*': ámbito del atributo debe ser ' ensamblado:' o ' module:'|
-|C3098 de Error del compilador|'*identificador*': atributo no tiene ningún constructor definido por el usuario|
+|Error del compilador C3098|'*identificador*': atributo no tiene ningún constructor definido por el usuario|
 |[Error del compilador C3099](compiler-error-c3099.md)|'*palabra clave*': use [System:: AttributeUsageAttribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] para atributos administrados o WinRT|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errores del compilador de C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

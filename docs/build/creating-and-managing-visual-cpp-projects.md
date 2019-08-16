@@ -1,79 +1,88 @@
 ---
-title: Proyectos de Visual Studio - C++
+title: 'Proyectos de Visual Studio: C++'
 ms.date: 12/12/2018
-f1_keywords:
-- vcprojects
-- creatingmanagingVC
 helpviewer_keywords:
 - ATL projects, creating
-- Visual C++ projects, creating
+- Visual Studio C++ projects, creating
 - projects [C++], creating
-- Visual C++ projects
+- Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038043"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837046"
 ---
-# <a name="visual-studio-projects---c"></a>Proyectos de Visual Studio - C++
+# <a name="visual-studio-projects---c"></a>Proyectos de Visual Studio: C++
 
-Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilación de MSBuild. MSBuild es el sistema de compilación nativa para Visual Studio y suele ser que el mejor sistema que se usará para las aplicaciones para UWP, así como aplicaciones de escritorio que usan las bibliotecas MFC o ATL, componentes COM y otros programas de Windows específicos de compilación. MSBuild está estrechamente integrado con Visual Studio, pero también puede usar la línea de comandos. 
+Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilación MSBuild. MSBuild es el sistema de compilación nativo para Visual Studio y, generalmente, es el mejor para las aplicaciones para UWP, así como para las aplicaciones de escritorio en las que se usan bibliotecas de MFC o ATL, componentes COM y otros programas específicos de Windows. MSBuild está totalmente integrado con Visual Studio, pero también se puede usar desde la línea de comandos. 
 
 ## <a name="create-a-project"></a>Crear un proyecto
 
-Puede crear proyectos de C++ eligiendo **archivo &#124; New &#124; proyecto**, a continuación, elija Visual C++ en el panel izquierdo. En el panel central, verá una lista de plantillas de proyecto: 
+::: moniker range="vs-2019"
+
+Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y, después, establece el **Lenguaje** en C++. En la lista de resultados, verá una lista de plantillas de proyecto que puede filtrar si establece **Plataforma** o **Tipo de proyecto**, y escribe palabras clave en el cuadro de búsqueda. 
+
+   ![Plantillas de proyecto de Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2019")
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y después Visual C++ en el panel de la izquierda. En el panel central, verá una lista de plantillas de proyecto:
 
    ![Plantillas de proyecto](../overview/media/vs2017-new-project.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2017")
 
-Para obtener más información acerca de todas las plantillas de proyecto predeterminada que se incluyen en Visual Studio, consulte [plantillas de proyecto de C++ en Visual Studio](reference/visual-cpp-project-types.md). Puede crear sus propias plantillas de proyecto. Para obtener más información, vea [Cómo: Crear plantillas de proyecto](/visualstudio/ide/how-to-create-project-templates).
+::: moniker-end
 
-Después de crear un proyecto, aparece en el [el Explorador de soluciones](/visualstudio/ide/solutions-and-projects-in-visual-studio) ventana:
+Para más información sobre las plantillas de proyecto predeterminadas que se incluyen con Visual Studio, vea [Plantillas de proyecto de C++ en Visual Studio](reference/visual-cpp-project-types.md). Puede crear plantillas de proyecto propias. Para obtener más información, vea [Cómo: crear plantillas de proyecto](/visualstudio/ide/how-to-create-project-templates).
+
+Después de crear un proyecto, aparece en la ventana [Explorador de soluciones](/visualstudio/ide/solutions-and-projects-in-visual-studio):
 
    ![Explorador de soluciones](media/mathlibrary-solution-explorer-153.png)
 
-Cuando crea un nuevo proyecto, también se crea un archivo de solución (.sln). Puede agregar proyectos adicionales a la solución con el botón secundario en él en **el Explorador de soluciones**. El archivo de solución se usa para coordinar las dependencias de compilación cuando tiene varios proyectos relacionados, pero no hace mucho más. Todas las opciones del compilador se establecen en el nivel de proyecto.
+Cuando crea un proyecto, también se crea un archivo de solución (.sln). Puede agregar proyectos adicionales a la solución si hace clic con el botón derecho en ella en el **Explorador de soluciones**. El archivo de solución se usa para coordinar las dependencias de compilación cuando tiene varios proyectos relacionados, pero no hace mucho más. Todas las opciones del compilador se establecen en el nivel de proyecto.
 
-## <a name="add-items"></a>Agregar elementos
+## <a name="add-items"></a>Adición de elementos
 
-Agregar archivos de código fuente, iconos o cualquier otro elemento al proyecto con el botón secundario en el proyecto en **el Explorador de soluciones** y eligiendo **Agregar > nuevo** o **Add > Existing**.
+Para agregar archivos de código fuente, iconos o cualquier otro elemento al proyecto, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Agregar > Nuevo** o **Agregar > Elemento existente**.
 
-## <a name="add-third-party-libraries"></a>Agregar bibliotecas de terceros
+## <a name="add-third-party-libraries"></a>Adición de bibliotecas de terceros
 
-Para agregar las bibliotecas de terceros, use el [vcpkg](vcpkg.md) Administrador de paquetes. Ejecute el paso de integración de Visual Studio para configurar las rutas de acceso a esa biblioteca cuando se hace referencia desde cualquier proyecto de Visual Studio. 
+Para agregar bibliotecas de terceros, use el administrador de paquetes [vcpkg](vcpkg.md). Ejecute el paso de integración de Visual Studio para configurar las rutas de acceso a esa biblioteca cuando haga referencia a la misma desde cualquier proyecto de Visual Studio. 
 
-## <a name="set-compiler-options-and-other-build-properties"></a>Establecer las opciones del compilador y otras propiedades de compilación
+## <a name="set-compiler-options-and-other-build-properties"></a>Configuración de opciones del compilador y otras propiedades de compilación
 
-Para configurar las opciones de compilación para un proyecto, haga doble clic en el proyecto en **el Explorador de soluciones** y elija **propiedades**. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](working-with-project-properties.md).
+Para configurar opciones de compilación para un proyecto, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y elija **Propiedades**. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](working-with-project-properties.md).
 
-## <a name="compile-and-run"></a>Compilar y ejecutar
+## <a name="compile-and-run"></a>Compilación y ejecución
 
-Para compilar y ejecutar el nuevo proyecto, presione **F5** o haga clic en el *depurar desplegable* con la flecha verde en la barra de herramientas principal. El *lista desplegable configuración* es donde elegir si desea realizar un *depurar* o *versión* compilación (u otra configuración personalizada).
+Para compilar y ejecutar el proyecto nuevo, presione **F5** o haga clic en el *menú desplegable de depuración* con la flecha de color verde en la barra de herramientas principal. En la *lista desplegable de configuración* puede elegir si quiere realizar una compilación de *Depuración* o *Versión* (u otra configuración personalizada).
 
-Un nuevo proyecto se compila sin errores. Al agregar su propio código, en ocasiones puede introducir un error o desencadenar una advertencia. Un error impide que la compilación se complete; no es una advertencia. Todos los errores y advertencias aparecerá en la ventana de salida y en la lista de errores al compilar el proyecto. 
+Un proyecto nuevo se compila sin errores. Al agregar código propio, en ocasiones se puede introducir un error o desencadenar una advertencia. Un error impide que la compilación se complete; una advertencia no. Todos los errores y advertencias aparecerán en la ventana Salida y en la lista de errores al compilar el proyecto. 
 
-   ![Lista de error y la ventana de salida](../overview/media/vs2017-output-error-list.png)
+   ![Ventana Salida y Lista de errores](../overview/media/vs2017-output-error-list.png)
 
-En la lista de errores, puede presionar **F1** en un error resaltado para ir a su tema de documentación.
+En la Lista de errores, puede presionar **F1** en un error resaltado para ir a su tema en la documentación.
 
 ## <a name="in-this-section"></a>En esta sección
 
 [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](working-with-project-properties.md)<br/>
-Aprenda a utilizar hojas de propiedades y páginas de propiedades para especificar la configuración del proyecto.
+Procedimientos para usar páginas de propiedades y hojas de propiedades para especificar la configuración del proyecto.
 
 [Bibliotecas de referencia y los componentes en tiempo de compilación](adding-references-in-visual-cpp-projects.md)<br/>
-Cómo incluir los componentes COM y .NET en bibliotecas, archivos DLL, en un proyecto.
+Procedimientos para incluir bibliotecas, archivos DLL y componentes COM y .NET en un proyecto.
  
 [Organización de archivos de salida del proyecto](how-to-organize-project-output-files-for-builds.md)<br/>
-Cómo personalizar la ubicación de los archivos ejecutables que se creó en el proceso de compilación.
+Procedimientos para personalizar la ubicación de los archivos ejecutables creados en el proceso de compilación.
 
 [Pasos de compilación personalizada y eventos de compilación](understanding-custom-build-steps-and-build-events.md)<br/>
-Cómo agregar un comando arbitrario al proceso de compilación en los puntos especificados.
+Procedimientos para agregar un comando arbitrario al proceso de compilación en los puntos especificados.
 
 [Creación de un proyecto a partir del código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
-Cómo crear un nuevo proyecto de Visual Studio de una colección de archivos de origen no estricta.
+Procedimientos para crear un proyecto de Visual Studio a partir de una colección flexible de archivos de código fuente.
 
 ## <a name="see-also"></a>Vea también
 

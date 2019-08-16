@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
-ms.translationtype: MT
+ms.openlocfilehash: b0a3a0acd9fe0270416745696079e382c35ec32d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57818367"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220647"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Vincular un ejecutable a un archivo DLL
 
@@ -145,4 +145,4 @@ A diferencia de en este ejemplo, en la mayoría de los casos debe llamar a `Load
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

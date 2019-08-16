@@ -1,21 +1,21 @@
 ---
-title: entrada (atributo de COM de C++)
+title: entry (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 71abf4f183255fa137b43ac9cabd88d15c3fc85d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59036307"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490903"
 ---
 # <a name="entry"></a>entry
 
-Especifica una constante o una función exportada de un módulo mediante la identificación de punto de entrada en el archivo DLL.
+Especifica una función o una constante exportadas en un módulo mediante la identificación del punto de entrada en el archivo DLL.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,16 +25,16 @@ Especifica una constante o una función exportada de un módulo mediante la iden
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*<br/>
-El identificador del punto de entrada.
+*id*<br/>
+IDENTIFICADOR del punto de entrada.
 
 ## <a name="remarks"></a>Comentarios
 
-El **entrada** atributo de C++ tiene la misma funcionalidad que el [entrada](/windows/desktop/Midl/entry) atributo MIDL.
+El atributo de **entrada** C++ tiene la misma funcionalidad que el atributo MIDL de [entrada](/windows/win32/Midl/entry) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [idl_module](idl-module.md) para un ejemplo del uso de **entrada**.
+Vea el ejemplo de [idl_module](idl-module.md) para obtener un ejemplo de uso de **entry**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -42,10 +42,10 @@ Vea el ejemplo de [idl_module](idl-module.md) para un ejemplo del uso de **entra
 
 |||
 |-|-|
-|**Se aplica a**|`idl_module` Atributo|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|`idl_module`atribui|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

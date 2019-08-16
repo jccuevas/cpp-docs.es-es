@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456581"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449478"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Esta clase de plantilla especializada de forma explícita describe un objeto que almacena un par ordenado de objetos, ambos de tipo **long double**, el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.
+Esta clase de plantilla especializada explícitamente describe un objeto que almacena un par ordenado de objetos, ambos de tipo **Long Double**, el primero que representa la parte real de un número complejo y el segundo representa la parte imaginaria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,26 +38,26 @@ complex(
 
 ### <a name="parameters"></a>Parámetros
 
-*_RealVal*<br/>
+*_RealVal*\
 Valor de tipo **long double** de la parte real del número complejo que se está construyendo.
 
-*_ImagVal*<br/>
-El valor de tipo **long double** de la parte imaginaria del número complejo que se está construyendo.
+*_ImagVal*\
+Valor de tipo **Long Double** para la parte imaginaria del número complejo que se está construyendo.
 
-*complexNum*<br/>
-El número complejo de tipo **doble** o de tipo **float** cuyas partes reales e imaginarias se usan para inicializar un número complejo de tipo **long double** que se está construyendo.
+*complexNum*\
+Número complejo de tipo **Double** o de tipo **float** cuyas partes reales e imaginarias se usan para inicializar un número complejo de tipo **Long Double** que se va a construir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un número complejo de tipo **long double**.
+Un número complejo de tipo **Long Double**.
 
 ## <a name="remarks"></a>Comentarios
 
-La especialización explícita de la clase de plantilla `complex` en una clase compleja de tipo **long double** difiere solo en los constructores que define la clase de plantilla. La conversión de **long double** a **float** puede ser implícita, pero la conversión de **doble** a **long double** es necesario para ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
+La especialización explícita de la clase `complex` de plantilla en una clase compleja de tipo **Long Double** solo se diferencia de la clase de plantilla en los constructores que define. Se permite que la conversión de **Long Double** a **float** sea implícita, pero la conversión de **Double** a **Long Double** debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
 
-Para obtener más información sobre la clase de plantilla `complex` y sus miembros, vea [complex (clase)](../standard-library/complex-class.md).
+Para obtener más información sobre la clase `complex` de plantilla y sus miembros, vea [Complex (clase](../standard-library/complex-class.md)).
 
-**Específico de Microsoft**: el **long double** y **doble** tipos tienen la misma representación, pero son tipos distintos. Para obtener más información, consulte [tipos fundamentales](../cpp/fundamental-types-cpp.md).
+**Específico de Microsoft**: Los tipos **Long Double** y **Double** tienen la misma representación, pero son tipos distintos. Para obtener más información, vea [tipos fundamentales](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -123,5 +123,5 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="see-also"></a>Vea también
 
-[complex (Clase)](../standard-library/complex-class.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex (Clase)](../standard-library/complex-class.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

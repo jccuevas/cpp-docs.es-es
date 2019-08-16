@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Actualizar la aplicación Scribble MFC (parte 2)'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: c22a11c54b1957c1d4ac735fe8cb577d9c483d35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: d4655c0a4a8847642b75575e324a291e39bbf42a
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781710"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558162"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 2)
 
@@ -338,4 +338,4 @@ Ha actualizado la aplicación Scribble de MFC. Use este tutorial como guía cuan
 ## <a name="see-also"></a>Vea también
 
 [Tutoriales](../mfc/walkthroughs-mfc.md)<br/>
-[Tutorial: Actualizar la aplicación Scribble MFC (parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[Tutorial: actualizar la aplicación Scribble de MFC (Parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

@@ -1,6 +1,6 @@
 ---
 title: Macros de opciones de compilador
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258481"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221119"
 ---
 # <a name="compiler-options-macros"></a>Macros de opciones de compilador
 
@@ -32,7 +32,7 @@ Estas macros controlan las características específicas del compilador.
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Convierte un símbolo que habilita los errores en los proyectos desde versiones anteriores de ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Define si uno o varios de los objetos utilizan el apartamento de subproceso.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Hace que determinados `CString` constructores explícitos, impidiendo cualquier conversión involuntaria.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Definir esta macro para poder usar estándar compatible con sintaxis de C++, que genera el error del compilador C4867 cuando se usa una sintaxis no estándar para inicializar un puntero a una función miembro.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Definir esta macro para poder usar C++ sintaxis compatible con estándar, que genera el error del compilador C4867 cuando se usa una sintaxis no estándar para inicializar un puntero a una función miembro.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Define si uno o varios de los objetos utilizan el subprocesamiento libre o neutra.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Un símbolo que indica el proyecto tendrá los objetos que están marcados como ambos, libre o neutra. La macro [activa _ATL_FREE_THREADED](#_atl_free_threaded) debe usarse en su lugar.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Un símbolo que impide el uso predeterminado de espacio de nombres como ATL.|
@@ -63,7 +63,7 @@ Antes de Visual C++ .NET 2002, ATL había deshabilitado una gran cantidad de adv
 
 - C4291 'declaration': no coincidente se encuentra; de operador delete no se liberará memoria si la inicialización produce una excepción
 
-- C4268 'identifier': los datos estáticos/globales 'const' inicializados con el constructor de predeterminado generado por compilador rellenan el objeto con ceros
+- C4268 'identifier': los datos estáticos/globales 'const' inicializados con el constructor predeterminado generado por compilador rellenan el objeto con ceros
 
 - Código inalcanzable C4702
 
@@ -113,9 +113,9 @@ Definir esta macro con el fin de forzar el uso de sintaxis compatibles con el es
 
 ### <a name="remarks"></a>Comentarios
 
-Han cambiado las bibliotecas de ATL y MFC para que coincida con la conformidad de C++ estándar mejorada del compilador de Visual C++. Según el estándar ANSI C++, la sintaxis de un puntero a una función miembro de clase debe ser `&CMyClass::MyFunc`.
+Las bibliotecas de ATL y MFC se han cambiado para coincidir con el Microsoft C++ estándar mejorada del compilador C++ cumplimiento. Según el estándar ANSI C++, la sintaxis de un puntero a una función miembro de clase debe ser `&CMyClass::MyFunc`.
 
-Cuando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) no está definido (el caso predeterminado), ATL y MFC deshabilita el error C4867 en mapas de macro (mapas de mensajes en particular) para que pueda continuar el código que se crearon en versiones anteriores crear como antes. Si define **_ATL_ENABLE_PTM_WARNING**, el código debe ser compatible con el estándar de C++.
+Cuando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) no está definido (el caso predeterminado), ATL y MFC deshabilita el error C4867 en mapas de macro (mapas de mensajes en particular) para que pueda continuar el código que se crearon en versiones anteriores crear como antes. Si define **_ATL_ENABLE_PTM_WARNING**, su código debería ser C++ compatible con el estándar.
 
 Sin embargo, el formato no estándar en desuso, por lo que deberá mover código existente a la sintaxis compatible con estándar de C++. Por ejemplo, los elementos siguientes:
 

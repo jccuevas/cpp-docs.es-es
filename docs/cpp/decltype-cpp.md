@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527951"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222456"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Expresión*|Una expresión. Para obtener más información, consulte [expresiones](../cpp/expressions-cpp.md).|
+|*expression*|Una expresión. Para obtener más información, consulte [expresiones](../cpp/expressions-cpp.md).|
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -38,7 +38,7 @@ El tipo de la *expresión* parámetro.
 
 ## <a name="remarks"></a>Comentarios
 
-El **decltype** especificador de tipo se admite en Visual C++ 2010 o versiones posteriores y se puede usar con código nativo o administrado. `decltype(auto)` (C++14) se admite en Visual Studio de 2015 y versiones posteriores.
+El **decltype** especificador de tipo se admite en Visual Studio 2010 o versiones posteriores y se puede usar con código nativo o administrado. `decltype(auto)` (C++14) se admite en Visual Studio de 2015 y versiones posteriores.
 
 El compilador usa las siguientes reglas para determinar el tipo de la *expresión* parámetro.
 
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Ejemplo
 
-**Visual Studio 2017 y versiones posterior:** el compilador analiza argumentos decltype cuando las plantillas se declara en lugar de crear una instancia. Por consiguiente, si se detecta una especialización no dependiente en el argumento decltype, no se aplaza hasta el momento de la creación de instancias, sino que se procesa inmediatamente y los errores resultantes se diagnostican en ese momento.
+**Visual Studio 2017 y versiones posterior:** El compilador analiza argumentos decltype cuando las plantillas se declara en lugar de crear una instancia. Por consiguiente, si se detecta una especialización no dependiente en el argumento decltype, no se aplaza hasta el momento de la creación de instancias, sino que se procesa inmediatamente y los errores resultantes se diagnostican en ese momento.
 
 En el ejemplo siguiente se muestra este tipo de error del compilador que se genera en el punto de declaración:
 
@@ -204,6 +204,6 @@ static_assert(test2, "PASS2");
 
 ## <a name="requirements"></a>Requisitos
 
-Visual C++ 2010 o versiones posteriores.
+Visual Studio 2010 o versiones posteriores.
 
 `decltype(auto)` requiere Visual Studio 2015 o posterior.

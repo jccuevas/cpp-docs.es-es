@@ -21,12 +21,12 @@ f1_keywords:
 - regex/std::wsregex_token_iterator
 - regex/std::wssub_match
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
-ms.openlocfilehash: 33217388ff7e0826efcee413b39adaeba569399a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82067819d144cbbdd2790e92aa6de5a1e7c0386a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578196"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451463"
 ---
 # <a name="ltregexgt-typedefs"></a>Definiciones de tipo de &lt;regex&gt;
 
@@ -97,7 +97,7 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo describe una especialización de clase de plantilla [basic_regex (clase)](../standard-library/basic-regex-class.md) elementos del tipo **char**.
+El tipo describe una especialización de clase de plantilla [basic_regex](../standard-library/basic-regex-class.md) para los elementos de tipo **Char**.
 
 > [!NOTE]
 > Los caracteres ASCII de 8 bits tendrán resultados imprevisibles con `regex`. Los valores fuera del intervalo de 0 a 127 pueden producir un comportamiento indefinido.
@@ -208,7 +208,7 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo describe una especialización de clase de plantilla [basic_regex (clase)](../standard-library/basic-regex-class.md) elementos del tipo **wchar_t**.
+El tipo describe una especialización de clase de plantilla [basic_regex](../standard-library/basic-regex-class.md) para los elementos de tipo **wchar_t**.
 
 ## <a name="wsmatch"></a>  wsmatch (Definición de tipo)
 
@@ -260,11 +260,11 @@ El tipo describe una especialización de clase de plantilla [sub_match (Clase)](
 
 ## <a name="see-also"></a>Vea también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants (Clase)](../standard-library/regex-constants-class.md)<br/>
-[regex_error (Clase)](../standard-library/regex-error-class.md)<br/>
-[Funciones de \<regex>](../standard-library/regex-functions.md)<br/>
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)<br/>
-[Operadores de \<regex>](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Clase regex_constants](../standard-library/regex-constants-class.md)\
+[Clase regex_error](../standard-library/regex-error-class.md)\
+[\<funciones regex >](../standard-library/regex-functions.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operadores regex >](../standard-library/regex-operators.md)\
+[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[regex_traits (Clase)](../standard-library/regex-traits-class.md)

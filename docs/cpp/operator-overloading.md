@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377366"
 ---
 # <a name="operator-overloading"></a>Sobrecarga de operadores
 
@@ -24,7 +24,7 @@ El **operador** palabra clave declara una función especificando qué *símbolo 
 
 ## <a name="syntax"></a>Sintaxis
 
-> *tipo* **operador** *símbolo de operador* **(** *lista de parámetros* **)**
+> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
 
 ## <a name="remarks"></a>Comentarios
 
@@ -34,7 +34,7 @@ El nombre de un operador sobrecargado es **operador** *x*, donde *x* es el opera
 
 ### <a name="redefinable-operators"></a>Operadores redefinibles
 
-|Operador|Nombre|Tipo|
+|Operador|Name|Tipo|
 |--------------|----------|----------|
 |**,**|Coma|Binary|
 |**\!**|NOT lógico|Unario|
@@ -107,7 +107,7 @@ Los operadores que se muestran en la tabla siguiente no se pueden sobrecargar. L
 
 ### <a name="nonredefinable-operators"></a>Operadores no redefinibles
 
-|Operador|nombre|
+|Operador|Name|
 |-|-|
 |**.**|Selección de miembro|
 |**.&#42;**|Selección de puntero a miembro|

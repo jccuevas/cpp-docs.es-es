@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 68ee602c44a8515e1d41f04a4bd0fbb7edc924b7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565719"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452306"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator (Clase)
 
@@ -141,7 +141,7 @@ int main()
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[checked_array_iterator](#checked_array_iterator)|Construye un `checked_array_iterator` predeterminado o un `checked_array_iterator` a partir de un iterador subyacente.|
 
@@ -161,7 +161,7 @@ int main()
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
 |[operator==](#op_eq_eq)|Comprueba dos `checked_array_iterator` para ver si son iguales.|
 |[operator!=](#op_neq)|Comprueba dos `checked_array_iterator` para ver si son distintos.|
@@ -243,13 +243,13 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*anota*\
 Un puntero a la matriz.
 
-*size*<br/>
+*ajusta*\
 Se refiere al tamaño de la matriz.
 
-*index*<br/>
+*ajustar*\
 (Opcional) Un elemento de la matriz para inicializar el iterador.  De manera predeterminada, el iterador se inicializa en el primer elemento de la matriz.
 
 ### <a name="remarks"></a>Comentarios
@@ -318,7 +318,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El `checked_array_iterator` con el que se va a comprobar la igualdad.
 
 ### <a name="remarks"></a>Comentarios
@@ -374,7 +374,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El `checked_array_iterator` con el que se va a comprobar la desigualdad.
 
 ### <a name="remarks"></a>Comentarios
@@ -430,7 +430,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El `checked_array_iterator` con el que se va a comprobar la desigualdad.
 
 ### <a name="remarks"></a>Comentarios
@@ -486,7 +486,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El `checked_array_iterator` con el que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -505,7 +505,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El `checked_array_iterator` con el que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -524,7 +524,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El `checked_array_iterator` con el que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -755,7 +755,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
+*_Off*\
 El desplazamiento en el que se incrementa el iterador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
+*_Off*\
 El desplazamiento que se va a agregar a `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -851,7 +851,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
+*_Off*\
 El desplazamiento en el que se incrementa el iterador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -902,7 +902,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
+*_Off*\
 El desplazamiento que se restará del `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -923,7 +923,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*<br/>
+*_Off*\
 El desplazamiento desde la dirección del `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -993,5 +993,5 @@ Para obtener más información, consulta [Checked Iterators](../standard-library
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

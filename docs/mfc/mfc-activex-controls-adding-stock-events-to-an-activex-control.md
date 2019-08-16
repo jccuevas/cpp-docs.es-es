@@ -43,11 +43,11 @@ helpviewer_keywords:
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
 ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392731"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controles ActiveX MFC: Agregar eventos estándar a un Control ActiveX
 
@@ -63,13 +63,13 @@ La `COleControl` clase proporciona diez eventos estándar, que aparece en la tab
 |-----------|---------------------|--------------|
 |Haga clic|**void FireClick( )**|Se desencadena cuando el control captura el mouse, cualquier **BUTTONUP** se recibe el mensaje (izquierdo, central o derecha) y se suelta el botón sobre el control. El material MouseDown y MouseUp eventos se producen antes de este evento.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_CLICK( )**|
 |DblClick|**void FireDblClick( )**|Similar a Click, pero que desencadena cuando una **BUTTONDBLCLK** recibe el mensaje.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_DBLCLICK( )**|
-|Error|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)**|Se desencadena cuando se produce un error en el control ActiveX fuera del ámbito de un acceso de propiedad o llamada de método.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_ERROREVENT( )**|
+|Error|**void FireError (SCODE** *scode* **, LPCSTR** `lpszDescription` **, UINT** `nHelpID` **= 0)**|Se desencadena cuando se produce un error en el control ActiveX fuera del ámbito de un acceso de propiedad o llamada de método.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_ERROREVENT( )**|
 |KeyDown|**void FireKeyDown (short** `nChar` **, short**`nShiftState`**)**|Se desencadena cuando una `WM_SYSKEYDOWN` o `WM_KEYDOWN` recibe el mensaje.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_KEYDOWN( )**|
 |KeyPress|**void FireKeyPress( short** <strong>\*</strong>  `pnChar`  **)**|Se desencadena cuando una `WM_CHAR` recibe el mensaje.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_KEYPRESS( )**|
 |KeyUp|**void FireKeyDown (short** `nChar` **, short**`nShiftState`**)**|Se desencadena cuando una `WM_SYSKEYUP` o `WM_KEYUP` recibe el mensaje.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_KEYUP( )**|
-|MouseDown|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)**|Se desencadena si cualquier **BUTTONDOWN** (izquierda, centro o derecha) que se recibe. Antes de que este evento se desencadena, se captura el mouse.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_MOUSEDOWN( )**|
-|MouseMove|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)**|Se desencadena cuando se recibe un mensaje WM_MOUSEMOVE.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)**|Se desencadena si cualquier **BUTTONUP** (izquierda, centro o derecha) que se recibe. Antes de este evento se desencadena, se libera la captura del mouse.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_MOUSEUP( )**|
+|MouseDown|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float** *x* **, float** *y*  **)**|Se desencadena si cualquier **BUTTONDOWN** (izquierda, centro o derecha) que se recibe. Antes de que este evento se desencadena, se captura el mouse.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float** *x* **, float**  *y*  **)**|Se desencadena cuando se recibe un mensaje WM_MOUSEMOVE.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**void FireMouseDown (short** `nButton` **, short** `nShiftState` **, float**  *x* **, float** *y*  **)**|Se desencadena si cualquier **BUTTONUP** (izquierda, centro o derecha) que se recibe. Antes de este evento se desencadena, se libera la captura del mouse.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_MOUSEUP( )**|
 |ReadyStateChange|**void FireReadyStateChange( )**|Se desencadena cuando un control realiza la transición al estado listo siguiente debido a la cantidad de datos recibidos.<br /><br /> Entrada de asignación de eventos: **EVENT_STOCK_READYSTATECHANGE( )**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Incorporación de un evento estándar mediante el Asistente para agregar eventos
@@ -107,5 +107,5 @@ Esta línea asocia el evento KeyPress con su identificador de envío estándar y
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX de MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl (clase)](../mfc/reference/colecontrol-class.md)

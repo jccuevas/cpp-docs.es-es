@@ -1,5 +1,5 @@
 ---
-title: CSplitButton (clase)
+title: Clase CSplitButton
 ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414656"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502847"
 ---
-# <a name="csplitbutton-class"></a>CSplitButton (clase)
+# <a name="csplitbutton-class"></a>Clase CSplitButton
 
 La `CSplitButton` clase representa un control de botón de expansión. El control de botón de expansión realiza un comportamiento predeterminado cuando un usuario hace clic en la parte principal del botón y muestra un menú desplegable cuando un usuario hace clic en la flecha de lista desplegable del botón.
 
@@ -35,30 +35,30 @@ class CSplitButton : public CButton
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CSplitButton::CSplitButton](#csplitbutton)|Construye un objeto `CSplitButton`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CSplitButton::Create](#create)|Crea un control de botón de expansión con estilos especificados y lo asocia a la actual `CSplitButton` objeto.|
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Establece el menú desplegable que se muestra cuando un usuario hace clic en la flecha desplegable del control de botón de división actual.|
+|[CSplitButton::Create](#create)|Crea un control de botón de expansión con los estilos especificados y lo adjunta `CSplitButton` al objeto actual.|
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Establece el menú desplegable que se muestra cuando un usuario hace clic en la flecha de lista desplegable del control de botón de expansión actual.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CSplitButton::OnDropDown](#ondropdown)|Controla la notificación BCN_DROPDOWN que el sistema envía cuando un usuario hace clic en la flecha desplegable del control de botón de división actual.|
+|[CSplitButton::OnDropDown](#ondropdown)|Controla la notificación BCN_DROPDOWN que el sistema envía cuando un usuario hace clic en la flecha desplegable del control de botón de expansión actual.|
 
 ## <a name="remarks"></a>Comentarios
 
-El `CSplitButton` clase se deriva el [CButton](../../mfc/reference/cbutton-class.md) clase. El control de botón de expansión es un control de botón cuyo estilo es BS_SPLITBUTTON. Muestra un menú personalizado cuando un usuario hace clic en la flecha de lista desplegable. Para obtener más información, vea los estilos BS_SPLITBUTTON y BS_DEFSPLITBUTTON [estilos de botón](/windows/desktop/Controls/button-styles).
+La `CSplitButton` clase se deriva de la clase [CButton](../../mfc/reference/cbutton-class.md) . El control de botón de expansión es un control de botón cuyo estilo es BS_SPLITBUTTON. Muestra un menú personalizado cuando un usuario hace clic en la flecha de lista desplegable. Para obtener más información, consulte los estilos BS_SPLITBUTTON y BS_DEFSPLITBUTTON en los [estilos de botón](/windows/win32/Controls/button-styles).
 
-La figura siguiente muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha de lista desplegable (2) y se muestra el submenú (3).
+En la ilustración siguiente se muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha desplegable (2) y se muestra el submenú (3).
 
-![Cuadro de diálogo con un botón de división y control de paginación. ](../../mfc/reference/media/splitbutton_pager.png "Cuadro de diálogo con un botón de división y control de paginación.")
+![Cuadro de diálogo con un control de paginación y splitButton.](../../mfc/reference/media/splitbutton_pager.png "Cuadro de diálogo con un control de paginación y splitButton.")
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -76,13 +76,13 @@ La figura siguiente muestra un cuadro de diálogo que contiene un control de pag
 
 **Encabezado:** afxcmn.h
 
-Esta clase se admite en Windows Vista y versiones posteriores.
+Esta clase es compatible con Windows Vista y versiones posteriores.
 
-Requisitos adicionales para esta clase se describen en [crear requisitos de Windows Vista controles comunes](../../mfc/build-requirements-for-windows-vista-common-controls.md).
+Los requisitos adicionales para esta clase se describen en [requisitos de compilación para los controles comunes de Windows Vista](../../mfc/build-requirements-for-windows-vista-common-controls.md).
 
 ##  <a name="create"></a>  CSplitButton::Create
 
-Crea un control de botón de expansión con estilos especificados y lo asocia a la actual `CSplitButton` objeto.
+Crea un control de botón de expansión con los estilos especificados y lo adjunta `CSplitButton` al objeto actual.
 
 ```
 virtual BOOL Create(
@@ -94,12 +94,12 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*dwStyle*|[in] Una combinación bit a bit (OR) de estilos que se va a aplicarse al control. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*rect*|[in] Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene la posición y el tamaño del control.|
-|*pParentWnd*|[in] Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|
-|*nID*|[in] El identificador del control.|
+|*dwStyle*|de Combinación bit a bit (o) de estilos que se va a aplicar al control. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
+|*rect*|de Referencia a una estructura [Rect](/previous-versions/dd162897\(v=vs.85\)) que contiene la posición y el tamaño del control.|
+|*pParentWnd*|de Un puntero no nulo a un objeto [CWnd](../../mfc/reference/cwnd-class.md) que es la ventana primaria del control.|
+|*nID*|de IDENTIFICADOR del control.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -107,7 +107,7 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
 ##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton
 
-Construye un objeto `CSplitButton`. Los parámetros del constructor especifican un submenú que se muestra cuando un usuario hace clic en la flecha desplegable del control de botón de división.
+Construye un objeto `CSplitButton`. Los parámetros del constructor especifican un submenú que se muestra cuando un usuario hace clic en la flecha de lista desplegable del control de botón de expansión.
 
 ```
 CSplitButton();
@@ -120,19 +120,19 @@ CSplitButton(CMenu* pMenu)
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*nMenuId*|[in] El identificador de recurso de la barra de menús.|
-|*nSubMenuId*|[in] El identificador de recurso de un submenú.|
-|*pMenu*|[in] Un puntero a un [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica un submenú. El `CSplitButton` eliminaciones de objetos la `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto queda fuera del ámbito.|
+|*nMenuId*|de IDENTIFICADOR de recurso de la barra de menús.|
+|*nSubMenuId*|de El identificador de recurso de un submenú.|
+|*pMenu*|de Un puntero a un objeto [CMenu](../../mfc/reference/cmenu-class.md) que especifica un submenú. El `CSplitButton` objeto elimina el `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto sale del ámbito.|
 
 ### <a name="remarks"></a>Comentarios
 
-Use la [CSplitButton::Create](#create) método para crear un control de botón de expansión y adjuntarlo a la `CSplitButton` objeto.
+Use el método [CSplitButton:: Create](#create) para crear un control de botón de expansión y adjuntarlo al `CSplitButton` objeto.
 
 ##  <a name="ondropdown"></a>  CSplitButton::OnDropDown
 
-Controla la notificación BCN_DROPDOWN que el sistema envía cuando un usuario hace clic en la flecha desplegable del control de botón de división actual.
+Controla la notificación BCN_DROPDOWN que el sistema envía cuando un usuario hace clic en la flecha desplegable del control de botón de expansión actual.
 
 ```
 afx_msg void OnDropDown(
@@ -142,18 +142,18 @@ afx_msg void OnDropDown(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*pNMHDR*|[in] Puntero a un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estructura que contiene información sobre la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|
-|*pResult*|[out] (No usar; se devuelve ningún valor). Valor devuelto de la [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificación.|
+|*pNMHDR*|de Puntero a una estructura [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) que contiene información sobre la notificación de [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
+|*pResult*|enuncia (No se usa; no se devuelve ningún valor). Valor devuelto de la notificación [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando el usuario hace clic en la flecha de lista desplegable en un control de botón de expansión, el sistema envía una notificación BCN_DROPDOWN mensaje que el `OnDropDown` método controla. Sin embargo, la `CSplitButton` objeto no reenvía la notificación BCN_DROPDOWN al control que contiene el control de botón de expansión. Por lo tanto, el control de contenedor no admite una acción personalizada en respuesta a la notificación.
+Cuando el usuario hace clic en la flecha desplegable de un control de botón de expansión, el sistema envía un mensaje de notificación `OnDropDown` BCN_DROPDOWN, que controla el método. Sin embargo, `CSplitButton` el objeto no reenvía la notificación BCN_DROPDOWN al control que contiene el control de botón de expansión. Por consiguiente, el control contenedor no puede admitir una acción personalizada en respuesta a la notificación.
 
-Para implementar una acción personalizada que admita el control de contenedor, use un [CButton](../../mfc/reference/cbutton-class.md) objeto con un estilo BS_SPLITBUTTON en lugar de un `CSplitButton` objeto. A continuación, implemente un controlador para la notificación BCN_DROPDOWN en el `CButton` objeto. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).
+Para implementar una acción personalizada compatible con el control contenedor, utilice un objeto [CButton](../../mfc/reference/cbutton-class.md) con un estilo de BS_SPLITBUTTON en lugar de un `CSplitButton` objeto. A continuación, implemente un controlador para la notificación `CButton` BCN_DROPDOWN en el objeto. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).
 
-Para implementar una acción personalizada que el botón de expansión propio control admite, utilice [reflexión de mensajes](../../mfc/tn062-message-reflection-for-windows-controls.md). Derive su propia clase de la `CSplitButton` clase y asígnele el nombre, por ejemplo, CMySplitButton. A continuación, agregue el siguiente mapa de mensajes a la aplicación para controlar la notificación BCN_DROPDOWN:
+Para implementar una acción personalizada compatible con el control de botón de expansión, utilice la [reflexión de mensajes](../../mfc/tn062-message-reflection-for-windows-controls.md). Derive su propia clase de la `CSplitButton` clase y asígnele el nombre, por ejemplo, CMySplitButton. Después, agregue el siguiente mapa de mensajes a la aplicación para controlar la notificación BCN_DROPDOWN:
 
 ```
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -164,7 +164,7 @@ END_MESSAGE_MAP()
 
 ##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu
 
-Establece el menú desplegable que se muestra cuando un usuario hace clic en la flecha desplegable del control de botón de división actual.
+Establece el menú desplegable que se muestra cuando un usuario hace clic en la flecha de lista desplegable del control de botón de expansión actual.
 
 ```
 void SetDropDownMenu(
@@ -176,23 +176,23 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*nMenuId*|[in] El identificador de recurso de la barra de menús.|
-|*nSubMenuId*|[in] El identificador de recurso de un submenú.|
-|*pMenu*|[in] Puntero a un [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica un submenú. El `CSplitButton` eliminaciones de objetos la `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto queda fuera del ámbito.|
+|*nMenuId*|de IDENTIFICADOR de recurso de la barra de menús.|
+|*nSubMenuId*|de El identificador de recurso de un submenú.|
+|*pMenu*|de Puntero a un objeto [CMenu](../../mfc/reference/cmenu-class.md) que especifica un submenú. El `CSplitButton` objeto elimina el `CMenu` objeto y su HMENU asociado cuando el `CSplitButton` objeto sale del ámbito.|
 
 ### <a name="remarks"></a>Comentarios
 
-El *nMenuId* parámetro identifica una barra de menús, que es una lista de elementos de la barra de menú horizontal. El *nSubMenuId* parámetro es un número de índice de base cero que identifica un submenú, que es la lista desplegable de elementos de menú asociados con cada elemento de la barra de menú. Por ejemplo, una aplicación típica tiene un menú que contiene los elementos de la barra de menús, "Archivo", "Editar" y "Help". El elemento de barra de menú "Archivo" tiene un submenú que contiene los elementos de menú "Abrir", "Cerrar" y "Exit". Cuando se hace clic en la flecha desplegable del control de botón de expansión, el control muestra el submenú especificado, no en la barra de menús.
+El parámetro *nMenuId* identifica una barra de menús, que es una lista horizontal de elementos de barra de menús. El parámetro *nSubMenuId* es un número de índice de base cero que identifica un submenú, que es la lista desplegable de elementos de menú asociados a cada elemento de la barra de menús. Por ejemplo, una aplicación típica tiene un menú que contiene los elementos de la barra de menús, "File", "Edit" y "Help". El elemento de barra de menú "archivo" tiene un submenú que contiene los elementos de menú, "abrir", "cerrar" y "salir". Cuando se hace clic en la flecha desplegable del control de botón de expansión, el control muestra el submenú especificado, no la barra de menús.
 
-La figura siguiente muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha de lista desplegable (2) y se muestra el submenú (3).
+En la ilustración siguiente se muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha desplegable (2) y se muestra el submenú (3).
 
-![Cuadro de diálogo con un botón de división y control de paginación. ](../../mfc/reference/media/splitbutton_pager.png "Cuadro de diálogo con un botón de división y control de paginación.")
+![Cuadro de diálogo con un control de paginación y splitButton.](../../mfc/reference/media/splitbutton_pager.png "Cuadro de diálogo con un control de paginación y splitButton.")
 
 ### <a name="example"></a>Ejemplo
 
-La primera instrucción en el ejemplo de código siguiente se muestra el [CSplitButton::SetDropDownMenu](#setdropdownmenu) método. Hemos creado el menú con el recurso de Visual Studio editor, que se denomina automáticamente el identificador de la barra de menús, IDR_MENU1. El *nSubMenuId* parámetro, que es cero, se refiere al submenú solo de la barra de menús.
+La primera instrucción del ejemplo de código siguiente muestra el método [CSplitButton:: SetDropDownMenu](#setdropdownmenu) . Hemos creado el menú con el editor de recursos de Visual Studio, que se denomina automáticamente el identificador de la barra de menús, IDR_MENU1. El parámetro *nSubMenuId* , que es cero, hace referencia al único submenú de la barra de menús.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]
 

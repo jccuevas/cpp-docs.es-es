@@ -8,12 +8,12 @@ helpviewer_keywords:
 - module states [C++], regular MFC DLLs dynamically linked to
 - DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-ms.openlocfilehash: 3ab51ca8097bd5ec27e8e7cfd8b8f19d76195664
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: cedce676f5586369446c9856fd33e4d16c237b27
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822150"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220582"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Estados de módulos de un archivo DLL de MFC estándar vinculados dinámicamente a MFC
 
@@ -43,4 +43,4 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

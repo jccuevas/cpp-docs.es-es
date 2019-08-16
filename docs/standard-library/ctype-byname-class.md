@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: d998747045ece765269ddb013b525b8c06fcdf8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517746"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457893"
 ---
 # <a name="ctypebyname-class"></a>ctype_byname (Clase)
 
@@ -50,4 +50,4 @@ Su comportamiento viene determinado por la configuración regional con nombre `_
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

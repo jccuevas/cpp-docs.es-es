@@ -1,21 +1,21 @@
 ---
-title: LCID (atributo de COM de C++)
+title: LCID (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032438"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514539"
 ---
 # <a name="lcid"></a>lcid
 
-Le permite pasar un identificador de configuración regional a una función.
+Permite pasar un identificador de configuración regional a una función.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,7 +25,7 @@ Le permite pasar un identificador de configuración regional a una función.
 
 ## <a name="remarks"></a>Comentarios
 
-El **lcid** atributo de C++ implementa la funcionalidad de la [lcid](/windows/desktop/Midl/lcid) atributo MIDL. Si desea implementar la configuración regional para un bloque de biblioteca, use el **lcid =** `lcid` parámetro para el [módulo](module-cpp.md) atributo.
+El atributo **LCID** C++ implementa la funcionalidad del atributo MIDL de [LCID](/windows/win32/Midl/lcid) . Si desea implementar la configuración regional para un bloque de biblioteca, use el parámetro **LCID =** `lcid` para el atributo de [módulo](module-cpp.md) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -49,9 +49,9 @@ __interface IStatic {
 |||
 |-|-|
 |**Se aplica a**|Parámetro de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

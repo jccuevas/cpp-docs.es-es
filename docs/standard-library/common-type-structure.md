@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::common_type
 ms.assetid: 2b42722c-c3dc-4d62-8613-0271e52b6f00
-ms.openlocfilehash: 4d2f1fe6ebf5b8f35f65fb9b551e6e7d473615a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f2a329894af88dfafc0616655bdf8c2ca91cf0a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435339"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453198"
 ---
 # <a name="commontype-structure"></a>common_type (Estructura)
 
@@ -33,11 +33,11 @@ chrono::time_point<Clock, Duration2>>;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<chrono >
+**Encabezado:** \<> crónico
 
 **Espacio de nombres:** std
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

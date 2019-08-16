@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353851"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -81,7 +81,7 @@ size_t _wcsftime_l(
 *strDest*<br/>
 Cadena de salida
 
-*tamaño máximo*<br/>
+*maxsize*<br/>
 Tamaño de la *strDest* búfer, expresado en caracteres (**char** o **wchar_t**).
 
 *format*<br/>
@@ -120,8 +120,8 @@ El **strftime** funciones admiten estos códigos de formato:
 |||
 |-|-|
 |Código|Cadena de reemplazo|
-|**%a)**|Nombre del día laborable abreviado en la configuración regional|
-|**%A)**|Nombre del día laborable completo en la configuración regional|
+|**%a**|Nombre del día laborable abreviado en la configuración regional|
+|**%A**|Nombre del día laborable completo en la configuración regional|
 |**%b**|Nombre abreviado del mes en la configuración regional|
 |**%B**|Nombre completo del mes en la configuración regional|
 |**%c**|Representación de fecha y hora adecuada para la configuración regional|
@@ -162,9 +162,9 @@ Como en el **printf** función, el **#** marca puede aplicar un prefijo cualquie
 
 |Código de formato|Significado|
 |-----------------|-------------|
-|**% #a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X** , **%#z**, **%#Z**, **%#%**|**#** se omitirá la marca.|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** se omitirá la marca.|
 |**%#c**|Long fecha y hora representación, adecuado para la configuración regional. Por ejemplo: "Martes, 14 de marzo de 1995, 12:41:29".|
-|**%#x**|Representación de fecha larga, adecuada a la configuración regional. Por ejemplo: "Martes, 14 de marzo de 1995".|
+|**%#x**|Representación de fecha larga, adecuada a la configuración regional. Por ejemplo: "Martes, 14 de marzo de 1995."|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Quitar ceros o espacios (si existe).|
 
 La semana ISO 8601 y año basado en semana producidas por **%V**, **%g**, y **%G**, usa una semana que empieza el lunes, donde 1 semana es la semana que contiene 4 de enero, que es el primero semana en los que se incluye al menos cuatro días del año. Si el primer lunes del año es el 2 º, 3 o 4 de mayo, los días anteriores forman parte de la última semana del año anterior. Durante esos días, **%V** se sustituye por 53 y ambos **%g** y **%G** se reemplazan por los dígitos del año anterior.

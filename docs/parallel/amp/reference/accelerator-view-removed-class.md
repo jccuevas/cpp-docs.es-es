@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: 09f534a90f3191025c3ce99d07a462908387c676
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: eddcf44966d197068113c5e7817dad37841261a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564957"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524848"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed (Clase)
 
@@ -81,7 +81,7 @@ Un código de error HRESULT que indica la causa de la eliminación de la `accele
 
 Nueva instancia de la clase `accelerator_view_removed`.
 
-## <a name="getviewremovedreason"></a>get_view_removed_reason
+## <a name="get_view_removed_reason"></a> get_view_removed_reason
 
 Devuelve un código de error HRESULT que indica la causa de la `accelerator_view` eliminación del objeto.
 

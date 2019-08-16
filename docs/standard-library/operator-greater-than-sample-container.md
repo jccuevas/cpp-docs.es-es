@@ -10,17 +10,17 @@ helpviewer_keywords:
 - '> operator, comparing specific objects'
 - operator >
 ms.assetid: 49bd417a-3305-4ffa-9884-39d3904ed87d
-ms.openlocfilehash: 7d6c1135632d57707812a6702d7226eafa49c0c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7da0250dc647d2d519b9c3d105fb942717c7a4c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643786"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449741"
 ---
 # <a name="operatorgt-ltsample-containergt"></a>operator&gt; (&lt;sample container&gt;)
 
 > [!NOTE]
-> Este tema se incluye en la documentación de Visual C++ como un ejemplo no funcional de los contenedores usados en la biblioteca estándar de C++. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema se encuentra en la C++ documentación de Microsoft como un ejemplo no funcional de contenedores usados en C++ la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
 Sobrecarga **operator>** para comparar dos objetos de la clase de plantilla [Container](../standard-library/sample-container-class.md).
 
@@ -39,4 +39,4 @@ Devuelve `right < left`.
 
 ## <a name="see-also"></a>Vea también
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

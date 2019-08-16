@@ -3,11 +3,11 @@ title: Enumeraciones (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
 ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752147"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345816"
 ---
 # <a name="enums-ccx"></a>Enumeraciones (C++/CX)
 

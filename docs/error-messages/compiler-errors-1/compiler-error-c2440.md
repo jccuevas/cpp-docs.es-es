@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59777144"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448029"
 ---
 # <a name="compiler-error-c2440"></a>Error del compilador C2440
 
@@ -194,7 +194,7 @@ El error C2440 también se puede producir debido a cambios en la función de atr
 
 ## <a name="example"></a>Ejemplo
 
-El objeto Visual C++ compilador ya no permite la [const_cast (operador)](../../cpp/const-cast-operator.md) convertir hacia abajo al código fuente que utiliza **/CLR** se compila la programación.
+Microsoft C++ compilador ya no permite la [const_cast (operador)](../../cpp/const-cast-operator.md) convertir hacia abajo al código fuente que utiliza **/CLR** se compila la programación.
 
 Para resolver el error C2440, utilice el operador de conversión correcta. Para obtener más información, consulte [operadores de conversión](../../cpp/casting-operators.md).
 

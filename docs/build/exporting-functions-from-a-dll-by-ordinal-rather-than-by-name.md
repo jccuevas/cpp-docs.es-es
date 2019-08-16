@@ -1,20 +1,18 @@
 ---
 title: Exportar funciones desde un archivo DLL por ordinal en lugar de por nombre
 ms.date: 11/04/2016
-f1_keywords:
-- NONAME
 helpviewer_keywords:
 - exporting functions [C++], ordinal values
 - ordinal exports [C++]
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-ms.openlocfilehash: 26b9a51a440e4e05c39908cb437d82e2e08e30c9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: d91b516253fc160686e2f1f6ae1ca1704f707f75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812075"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221432"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Exportar funciones desde un archivo DLL por ordinal en lugar de por nombre
 

@@ -1,16 +1,16 @@
 ---
 title: 'Tutorial: Creación de un bloque de mensajes personalizado'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: e897163a1d394228ac1d8f566e4b0d761fbeeb42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e7dfc5d78d2281d77b9ce882b302c4d7db776d3b
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272742"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856987"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Tutorial: Creación de un bloque de mensajes personalizado
 

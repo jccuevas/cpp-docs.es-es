@@ -1,13 +1,13 @@
 ---
 title: Eventos (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894450"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 
@@ -15,7 +15,7 @@ Puede declarar el tipo de un Runtime de Windows (que es, publicar) eventos y el 
 
 ## <a name="consuming-events-in-windows-components"></a>Usar eventos en componentes de Windows
 
-Muchos componentes en tiempo de ejecución de Windows exponen eventos. Por ejemplo, un objeto LightSensor desencadena un evento ReadingChanged cuando el sensor notifica un nuevo valor de luminiscencia. Si utilizas un objeto LightSensor en el programa, puedes definir un método al que se llamará cuando se desencadene el evento ReadingChanged. El método puede hacer lo que quiera hacer; el único requisito es que su firma debe coincidir con la firma del delegado que para obtener más información acerca de cómo crear un controlador de eventos de delegado y suscribirse a un evento, vea [delegados](../cppcx/delegates-c-cx.md).
+Muchos componentes en tiempo de ejecución de Windows exponen eventos. Por ejemplo, un objeto LightSensor desencadena un evento ReadingChanged cuando el sensor notifica un nuevo valor de luminiscencia. Si utilizas un objeto LightSensor en el programa, puedes definir un método al que se llamará cuando se desencadene el evento ReadingChanged. El método puede hacer lo que quiera hacer; el único requisito es que su firma debe coincidir con la firma del delegado que se invoca. Para obtener más información acerca de cómo crear un controlador de eventos de delegado y suscribirse a un evento, vea [delegados](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Crear eventos personalizados
 

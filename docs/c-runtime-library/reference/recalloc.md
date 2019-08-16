@@ -24,11 +24,11 @@ helpviewer_keywords:
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
 ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357728"
 ---
 # <a name="recalloc"></a>_recalloc
 
@@ -49,7 +49,7 @@ void *_recalloc(
 *memblock*<br/>
 Puntero al bloque de memoria asignado previamente.
 
-*Número*<br/>
+*number*<br/>
 Número de elementos.
 
 *size*<br/>
@@ -73,7 +73,7 @@ Dado que el bloque nuevo puede estar en una nueva ubicación de memoria, el punt
 
 **_recalloc** establece **errno** a **ENOMEM** si se produce un error en la asignación de memoria o si la cantidad de memoria solicitada supera **_HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**recalloc** llamadas **realloc** con el fin de usar C++ [_set_new_mode](set-new-mode.md) función para establecer el modo de controlador nuevo. El nuevo modo de controlador indica si, en caso de error, **realloc** consiste en llamar a la rutina del nuevo controlador según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **realloc** no llama a la rutina del nuevo controlador en caso de error para asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **_recalloc** no puede asignar memoria, **realloc** llame a la rutina del nuevo controlador de la misma forma en que el **nuevo** operador lo hace cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a
+**recalloc** llamadas **realloc** para poder usar el C++ [_set_new_mode](set-new-mode.md) función para establecer el modo de controlador nuevo. El nuevo modo de controlador indica si, en caso de error, **realloc** consiste en llamar a la rutina del nuevo controlador según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **realloc** no llama a la rutina del nuevo controlador en caso de error para asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **_recalloc** no puede asignar memoria, **realloc** llame a la rutina del nuevo controlador de la misma forma en que el **nuevo** operador lo hace cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a
 
 ```C
 _set_new_mode(1);

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270428"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450363"
 ---
 # <a name="cexception-class"></a>CException (clase)
 
@@ -231,4 +231,4 @@ else
 [CObject (clase)](cobject-class.md)<br/>
 [Gráfico de jerarquías](../hierarchy-chart.md)<br/>
 [Procesamiento de excepciones](exception-processing.md)<br/>
-[¿Cómo lo hago?: Crear mis propias clases de excepción personalizada](http://go.microsoft.com/fwlink/p/?linkid=128045)
+[¿Cómo lo hago?: Crear mis propias clases de excepción personalizada](https://go.microsoft.com/fwlink/p/?linkid=128045)

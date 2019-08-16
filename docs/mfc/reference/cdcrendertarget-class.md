@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
 ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168178"
 ---
 # <a name="cdcrendertarget-class"></a>Clase CDCRenderTarget
 
@@ -63,7 +63,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Un puntero a un objeto ID2D1DCRenderTarget.|
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385198"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -47,7 +47,7 @@ void _tzset( void );
 
 El **_tzset** función usa la configuración actual de la variable de entorno **TZ** para asignar valores a tres variables globales: **_daylight**, **_timezone** , y **_tzname**. Estas variables se usan por el [_ftime](ftime-ftime32-ftime64.md) y [localtime](localtime-localtime32-localtime64.md) funciones para realizar correcciones de hora universal coordinada (UTC) a la hora local y por la [tiempo](time-time32-time64.md) función calcular la hora UTC de la hora del sistema. Use la siguiente sintaxis para establecer el **TZ** variable de entorno:
 
-> **establecer TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
+> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
 
 |Parámetro|Descripción|
 |-|-|

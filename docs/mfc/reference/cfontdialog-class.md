@@ -1,5 +1,5 @@
 ---
-title: CFontDialog (clase)
+title: Clase CFontDialog
 ms.date: 11/04/2016
 f1_keywords:
 - CFontDialog
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b711ca65e552d495e466ea2e46a6779cf43ecbe3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767749"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506467"
 ---
-# <a name="cfontdialog-class"></a>CFontDialog (clase)
+# <a name="cfontdialog-class"></a>Clase CFontDialog
 
 Permite incorporar un cuadro de diálogo de selección de fuente en la aplicación.
 
@@ -55,54 +55,54 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Construye un objeto `CFontDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CFontDialog::DoModal](#domodal)|Muestra el cuadro de diálogo y permite al usuario realizar una selección.|
+|[CFontDialog::DoModal](#domodal)|Muestra el cuadro de diálogo y permite que el usuario realice una selección.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Recupera el formato de caracteres de la fuente seleccionada.|
 |[CFontDialog::GetColor](#getcolor)|Devuelve el color de la fuente seleccionada.|
-|[CFontDialog::GetCurrentFont](#getcurrentfont)|Asigna las características de la fuente seleccionada actualmente a un `LOGFONT` estructura.|
-|[CFontDialog::GetFaceName](#getfacename)|Devuelve el nombre de fuente de la fuente seleccionada.|
-|[CFontDialog::GetSize](#getsize)|Devuelve el tamaño de punto de la fuente seleccionada.|
-|[CFontDialog::GetStyleName](#getstylename)|Devuelve el nombre del estilo de la fuente seleccionada.|
-|[CFontDialog::GetWeight](#getweight)|Devuelve el grosor de la fuente seleccionada.|
-|[CFontDialog::IsBold](#isbold)|Determina si la fuente es negrita.|
-|[CFontDialog::IsItalic](#isitalic)|Determina si la fuente es cursiva.|
-|[CFontDialog::IsStrikeOut](#isstrikeout)|Determina si la fuente se muestra con el tachado.|
+|[CFontDialog::GetCurrentFont](#getcurrentfont)|Asigna las características de la fuente seleccionada actualmente a una `LOGFONT` estructura.|
+|[CFontDialog::GetFaceName](#getfacename)|Devuelve el nombre de la fuente seleccionada.|
+|[CFontDialog::GetSize](#getsize)|Devuelve el tamaño en puntos de la fuente seleccionada.|
+|[CFontDialog::GetStyleName](#getstylename)|Devuelve el nombre de estilo de la fuente seleccionada.|
+|[CFontDialog::GetWeight](#getweight)|Devuelve el peso de la fuente seleccionada.|
+|[CFontDialog::IsBold](#isbold)|Determina si la fuente está en negrita.|
+|[CFontDialog::IsItalic](#isitalic)|Determina si la fuente está en cursiva.|
+|[CFontDialog::IsStrikeOut](#isstrikeout)|Determina si la fuente se muestra con tachado.|
 |[CFontDialog::IsUnderline](#isunderline)|Determina si la fuente está subrayada.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CFontDialog::m_cf](#m_cf)|Una estructura utilizada para personalizar un `CFontDialog` objeto.|
+|[CFontDialog::m_cf](#m_cf)|Estructura utilizada para personalizar un `CFontDialog` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
-Un `CFontDialog` objeto es un cuadro de diálogo con una lista de fuentes que están instalados actualmente en el sistema. El usuario puede seleccionar una fuente concreta en la lista, y esta selección es, a continuación, informar a la aplicación.
+Un `CFontDialog` objeto es un cuadro de diálogo con una lista de fuentes actualmente instaladas en el sistema. El usuario puede seleccionar una fuente determinada de la lista y, a continuación, esta selección se devuelve a la aplicación.
 
-Para construir un `CFontDialog` de objeto, utilice el constructor proporcionado o derivar una nueva subclase y usar su propio constructor personalizado.
+Para construir un `CFontDialog` objeto, use el constructor proporcionado o derive una nueva subclase y use su propio constructor personalizado.
 
-Una vez un `CFontDialog` se ha construido el objeto, puede usar el `m_cf` estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El [m_cf](#m_cf) estructura es de tipo [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta). Para obtener más información sobre esta estructura, consulte el SDK de Windows.
+Una vez `CFontDialog` construido un objeto, puede utilizar la `m_cf` estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. La estructura [m_cf](#m_cf) es de tipo [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw). Para obtener más información sobre esta estructura, vea el Windows SDK.
 
-Después de inicializar los controles del objeto de cuadro de diálogo, llame a la `DoModal` la función miembro para mostrar el cuadro de diálogo y permitir al usuario seleccionar una fuente. `DoModal` Devuelve si el usuario seleccionó el botón Aceptar (IDOK) o Cancelar (IDCANCEL).
+Después de inicializar los controles del objeto de cuadro `DoModal` de diálogo, llame a la función miembro para mostrar el cuadro de diálogo y permitir que el usuario seleccione una fuente. `DoModal`Devuelve si el usuario seleccionó el botón Aceptar (IDOK) o cancelar (IDCANCEL).
 
-Si `DoModal` devuelve IDOK, puede usar uno de `CFontDialog`de las funciones miembro para recuperar la información de entrada por el usuario.
+Si `DoModal` devuelve IDOK, puede usar una de las `CFontDialog`funciones miembro de para recuperar la información introducida por el usuario.
 
-Puede usar el Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) función para determinar si se produjo un error durante la inicialización del cuadro de diálogo y para obtener más información sobre el error. Para obtener más información sobre esta función, consulte el SDK de Windows.
+Puede usar la función [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) de Windows para determinar si se ha producido un error durante la inicialización del cuadro de diálogo y para obtener más información sobre el error. Para obtener más información sobre esta función, vea el Windows SDK.
 
-`CFontDialog` se basa en el COMMDLG. Archivo DLL que se incluye con las versiones 3.1 y posteriores de Windows.
+`CFontDialog`se basa en el COMMDLG. Archivo DLL que se incluye con las versiones 3,1 y posteriores de Windows.
 
-Para personalizar el cuadro de diálogo, derive una clase de `CFontDialog`, proporcione una plantilla de cuadro de diálogo personalizado y agregar un mapa de mensajes para procesar los mensajes de notificación de los controles extendidos. Los mensajes no procesados se deben pasar a la clase base.
+Para personalizar el cuadro de diálogo, derive una clase `CFontDialog`de, proporcione una plantilla de cuadro de diálogo personalizada y agregue un mapa de mensajes para procesar los mensajes de notificación de los controles extendidos. Los mensajes no procesados se deben pasar a la clase base.
 
-Personalización de la función de enlace no es necesario.
+No es necesaria la personalización de la función de enlace.
 
-Para obtener más información sobre el uso de `CFontDialog`, consulte [clases de cuadro de diálogo comunes](../../mfc/common-dialog-classes.md).
+Para obtener más información sobre `CFontDialog`el uso de, vea [clases de cuadro de diálogo comunes](../../mfc/common-dialog-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -120,7 +120,7 @@ Para obtener más información sobre el uso de `CFontDialog`, consulte [clases d
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxdlgs.h
+**Encabezado:** afxdlgs. h
 
 ##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog
 
@@ -143,13 +143,13 @@ CFontDialog(
 ### <a name="parameters"></a>Parámetros
 
 *plfInitial*<br/>
-Un puntero a un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura de datos que le permite establecer algunas de las características de la fuente.
+Puntero a una estructura de datos [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) que permite establecer algunas de las características de la fuente.
 
 *charFormat*<br/>
-Un puntero a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estructura de datos que le permite establecer algunas de las características de la fuente en un amplio control de edición.
+Puntero a una estructura de datos [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) que permite establecer algunas de las características de la fuente en un control Rich Edit.
 
 *dwFlags*<br/>
-Especifica uno o más marcadores CHOOSEFONT. Se pueden combinar uno o más valores preestablecidos mediante el operador bit a bit OR. Si modifica el miembro de estructura de `m_cf.Flag`, procure usar un operador bit a bit OR en los cambios que realice para que el comportamiento predeterminado siga intacto. Para obtener más información sobre cada una de estas marcas, vea la descripción de la [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) estructura en el SDK de Windows.
+Especifica uno o más marcadores CHOOSEFONT. Se pueden combinar uno o más valores preestablecidos mediante el operador bit a bit OR. Si modifica el miembro de estructura de `m_cf.Flag`, procure usar un operador bit a bit OR en los cambios que realice para que el comportamiento predeterminado siga intacto. Para obtener más información sobre cada una de estas marcas, consulte la descripción de la estructura [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) en el Windows SDK.
 
 *pdcPrinter*<br/>
 Puntero a un contexto de dispositivo de impresora. Si se suministra, este parámetro apunta a un contexto de dispositivo de impresora correspondiente a la impresora en la que las fuentes se van a seleccionar.
@@ -170,7 +170,7 @@ Observe que el constructor rellena automáticamente los miembros de la estructur
 
 ##  <a name="domodal"></a>  CFontDialog::DoModal
 
-Llame a esta función para mostrar el cuadro de diálogo de fuentes comunes de Windows y permitir al usuario elegir una fuente.
+Llame a esta función para mostrar el cuadro de diálogo fuente común de Windows y permitir que el usuario elija una fuente.
 
 ```
 virtual INT_PTR DoModal();
@@ -178,19 +178,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor devuelto
 
-IDOK o IDCANCEL. Si se devuelve IDCANCEL, llame a la Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) función para determinar si se produjo un error.
+IDOK o IDCANCEL. Si se devuelve IDCANCEL, llame a la función [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) de Windows para determinar si se ha producido un error.
 
-IDOK e IDCANCEL son las constantes que indican si el usuario seleccionó el botón Aceptar o Cancelar.
+IDOK y IDCANCEL son constantes que indican si el usuario seleccionó el botón Aceptar o cancelar.
 
 ### <a name="remarks"></a>Comentarios
 
-Si desea inicializar los distintos controles de cuadro de diálogo fuente mediante el establecimiento de los miembros de la [m_cf](#m_cf) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.
+Si desea inicializar los distintos controles de cuadro de diálogo de fuente estableciendo los miembros de la estructura [m_cf](#m_cf) , debe hacerlo antes `DoModal`de llamar a, pero después de que se construya el objeto de cuadro de diálogo.
 
-Si `DoModal` devuelve IDOK, se puede llamar a otra funciones miembro para recuperar la configuración o la entrada de información por el usuario en el cuadro de diálogo.
+Si `DoModal` devuelve IDOK, puede llamar a otras funciones miembro para recuperar la información de configuración o la entrada del usuario en el cuadro de diálogo.
 
 ### <a name="example"></a>Ejemplo
 
-  Consulte los ejemplos de [CFontDialog::CFontDialog](#cfontdialog) y [CFontDialog::GetColor](#getcolor).
+  Vea los ejemplos de [CFontDialog:: CFontDialog](#cfontdialog) y [CFontDialog:: GetColor](#getcolor).
 
 ##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat
 
@@ -203,7 +203,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>Parámetros
 
 *cf*<br/>
-Un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estructura que contiene información sobre el formato de caracteres de la fuente seleccionada.
+Estructura [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) que contiene información sobre el formato de caracteres de la fuente seleccionada.
 
 ##  <a name="getcolor"></a>  CFontDialog::GetColor
 
@@ -223,7 +223,7 @@ Color de la fuente seleccionada.
 
 ##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont
 
-Llame a esta función para asignar las características de la fuente seleccionada actualmente a los miembros de un [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura.
+Llame a esta función para asignar las características de la fuente seleccionada actualmente a los miembros de una estructura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
 ```
 void GetCurrentFont(LPLOGFONT lplf);
@@ -232,13 +232,13 @@ void GetCurrentFont(LPLOGFONT lplf);
 ### <a name="parameters"></a>Parámetros
 
 *lplf*<br/>
-Un puntero a un `LOGFONT` estructura.
+Puntero a una `LOGFONT` estructura.
 
 ### <a name="remarks"></a>Comentarios
 
-Otros `CFontDialog` se proporcionan funciones de miembro para tener acceso a características individuales de la fuente actual.
+Se `CFontDialog` proporcionan otras funciones miembro para tener acceso a características individuales de la fuente actual.
 
-Si esta función se llama durante una llamada a [DoModal](#domodal), devuelve la selección actual en el momento (lo que ve el usuario o ha cambiado en el cuadro de diálogo). Si se llama a esta función después de llamar a `DoModal` (solo si `DoModal` devuelve IDOK), devuelve lo que el usuario realmente está seleccionado.
+Si se llama a esta función durante una llamada a [DoModal](#domodal), devuelve la selección actual en el momento (lo que el usuario ve o ha cambiado en el cuadro de diálogo). Si se llama a esta función después de una `DoModal` llamada a ( `DoModal` solo si devuelve IDOK), devuelve lo que el usuario seleccionó realmente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -246,7 +246,7 @@ Si esta función se llama durante una llamada a [DoModal](#domodal), devuelve la
 
 ##  <a name="getfacename"></a>  CFontDialog::GetFaceName
 
-Llame a esta función para recuperar el nombre de fuente de la fuente seleccionada.
+Llame a esta función para recuperar el nombre de la fuente seleccionada.
 
 ```
 CString GetFaceName() const;
@@ -254,7 +254,7 @@ CString GetFaceName() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El nombre de fuente de la fuente seleccionada en el `CFontDialog` cuadro de diálogo.
+Nombre de la fuente seleccionada en el `CFontDialog` cuadro de diálogo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -270,7 +270,7 @@ int GetSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño de fuente, en décimas de un punto.
+Tamaño de la fuente, en décimas de punto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -278,7 +278,7 @@ El tamaño de fuente, en décimas de un punto.
 
 ##  <a name="getstylename"></a>  CFontDialog::GetStyleName
 
-Llame a esta función para recuperar el nombre del estilo de la fuente seleccionada.
+Llame a esta función para recuperar el nombre de estilo de la fuente seleccionada.
 
 ```
 CString GetStyleName() const;
@@ -302,11 +302,11 @@ int GetWeight() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El peso de la fuente seleccionada.
+Peso de la fuente seleccionada.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre el peso de una fuente, consulte [CFont:: CreateFont](../../mfc/reference/cfont-class.md#createfont).
+Para obtener más información sobre el peso de una fuente, vea [Cfont (:: CreateFont](../../mfc/reference/cfont-class.md#createfont).
 
 ### <a name="example"></a>Ejemplo
 
@@ -322,7 +322,7 @@ BOOL IsBold() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la fuente seleccionada tiene la característica de negrita habilitada; en caso contrario, es 0.
+Distinto de cero si la fuente seleccionada tiene habilitada la característica negrita; de lo contrario, es 0.
 
 ### <a name="example"></a>Ejemplo
 
@@ -338,7 +338,7 @@ BOOL IsItalic() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la fuente seleccionada tiene la característica de cursiva habilitada; en caso contrario, es 0.
+Distinto de cero si la fuente seleccionada tiene habilitada la característica cursiva; de lo contrario, es 0.
 
 ### <a name="example"></a>Ejemplo
 
@@ -346,7 +346,7 @@ Distinto de cero si la fuente seleccionada tiene la característica de cursiva h
 
 ##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut
 
-Llame a esta función para determinar si la fuente seleccionada se muestra con el tachado.
+Llame a esta función para determinar si la fuente seleccionada se muestra con tachado.
 
 ```
 BOOL IsStrikeOut() const;
@@ -354,7 +354,7 @@ BOOL IsStrikeOut() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la fuente seleccionada tiene la característica de tachado habilitada; en caso contrario, es 0.
+Distinto de cero si la fuente seleccionada tiene habilitada la característica de tachado; de lo contrario, es 0.
 
 ### <a name="example"></a>Ejemplo
 
@@ -370,7 +370,7 @@ BOOL IsUnderline() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la fuente seleccionada tiene la característica de subrayado habilitada; en caso contrario, es 0.
+Distinto de cero si la fuente seleccionada tiene habilitada la característica de subrayado; de lo contrario, es 0.
 
 ### <a name="example"></a>Ejemplo
 
@@ -378,7 +378,7 @@ Distinto de cero si la fuente seleccionada tiene la característica de subrayado
 
 ##  <a name="m_cf"></a>  CFontDialog::m_cf
 
-Una estructura cuyos miembros almacenan las características del objeto de cuadro de diálogo.
+Estructura cuyos miembros almacenan las características del objeto de cuadro de diálogo.
 
 ```
 CHOOSEFONT m_cf;
@@ -386,7 +386,7 @@ CHOOSEFONT m_cf;
 
 ### <a name="remarks"></a>Comentarios
 
-Después de crear un `CFontDialog` objeto, puede usar `m_cf` modificar varios aspectos del cuadro de diálogo antes de llamar a la `DoModal` función miembro. Para obtener más información sobre esta estructura, vea [CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta) en el SDK de Windows.
+Después de construir un `CFontDialog` objeto, puede utilizar `m_cf` para modificar diversos aspectos del cuadro de diálogo antes de llamar a `DoModal` la función miembro. Para obtener más información sobre esta estructura, vea [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
@@ -394,6 +394,6 @@ Después de crear un `CFontDialog` objeto, puede usar `m_cf` modificar varios as
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog (clase)](../../mfc/reference/ccommondialog-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

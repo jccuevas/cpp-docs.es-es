@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815429"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221793"
 ---
 # <a name="decorated-names"></a>Nombres representativos
 
 Las funciones, los datos y los objetos de los programas C y C++ se representan internamente con sus nombres representativos. Un *nombre representativo* es una cadena codificada creada por el compilador durante la compilación de un objeto, datos o definición de función. Registra las convenciones de llamada, los tipos, los parámetros de función y otra información junto con el nombre. Este decoración de nombres, también conocida como *daños en los nombres*, facilita que el enlazador encuentre las funciones correctas y los objetos al vincular un ejecutable.
 
-Las convenciones de nomenclatura decorada han cambiado en varias versiones de Visual C++ y también pueden ser diferentes en arquitecturas de destino distintas. Para vincular correctamente con los archivos de origen creados con Visual C++, las bibliotecas y los archivos DLL de C++ y C se deben compilar con el mismo conjunto de herramientas del compilador, las mismas marcas y la misma arquitectura de destino.
+Las convenciones de nomenclatura decoradas han cambiado en varias versiones de Visual Studio y también pueden ser diferentes en arquitecturas de destino diferente. Para vincular correctamente con archivos de origen creados mediante Visual Studio, C y C++ archivos DLL y bibliotecas deben haberse compiladas con el mismo conjunto de herramientas del compilador, indicadores y arquitectura de destino. 
+
+> [!NOTE]
+> Bibliotecas compiladas con Visual Studio 2015 pueden utilizarse en las aplicaciones compiladas con Visual Studio 2017 o Visual Studio de 2019.
 
 ##  <a name="Using"></a> Utilizar nombres representativos
 
@@ -25,7 +28,7 @@ Normalmente, no es necesario saber el nombre representativo para escribir códig
 
 Si cambia el nombre de la función, la clase, la convención de llamada, el tipo de valor devuelto o cualquier otro parámetro, también cambia el nombre representativo. En este caso, debe obtener el nuevo nombre representativo y usarlo en lugar del nombre anterior en todos los lugares en los que se haya especificado.
 
-La decoración de nombres también es importante cuando se vincula a código escrito en otros lenguajes de programación o con otros compiladores. Diferentes compiladores usan convenciones de decoración de nombres distintas. Cuando se vincula una aplicación ejecutable con el código escrito en otro idioma, se debe tener especial cuidado para que los nombres importados y exportados y las convenciones de llamada coincidan. El código de lenguaje de ensamblado debe usar nombres representativos de Visual C++ y convenciones de llamada para vincular al código fuente escrito en Visual C++.
+La decoración de nombres también es importante cuando se vincula a código escrito en otros lenguajes de programación o con otros compiladores. Diferentes compiladores usan convenciones de decoración de nombres distintas. Cuando se vincula una aplicación ejecutable con el código escrito en otro idioma, se debe tener especial cuidado para que los nombres importados y exportados y las convenciones de llamada coincidan. Código de lenguaje de ensamblado debe usar los nombres MSVC representativo y las convenciones de llamada para vincular a código fuente escrito en MSVC.
 
 ##  <a name="Format"></a> Nombre de formato de C++ representativo
 

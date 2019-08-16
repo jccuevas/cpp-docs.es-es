@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: b419869785e9b6c2086ec6614363af3a3e12cb50
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518156"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457885"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution (Clase)
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*<br/>
-El tipo de resultado de coma flotante, el valor predeterminado es **doble**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-El motor del generador de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*URNG*\
+Motor del generador de números aleatorios. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que produce valores de un entero especificado por el usuario tipo o tipo **doble** si se proporciona ninguno, distribuido según la distribución exponencial. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución exponencial. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ La función miembro de propiedad `param()` establece o devuelve el paquete de pa
 
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener información detallada sobre la distribución exponencial, vea el artículo de Wolfram MathWorld sobre la [distribución exponencial](http://go.microsoft.com/fwlink/p/?linkid=401098).
+Para obtener información detallada sobre la distribución exponencial, vea el artículo de Wolfram MathWorld sobre la [distribución exponencial](https://go.microsoft.com/fwlink/p/?linkid=401098).
 
 ## <a name="example"></a>Ejemplo
 
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*lambda*<br/>
+*Lambda*\
 El parámetro de distribución `lambda`.
 
-*parm*<br/>
+*PARM*\
 Paquete de parámetros utilizado para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*lambda*<br/>
+*Lambda*\
 El parámetro de distribución `lambda`.
 
-*right*<br/>
+*correcta*\
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
@@ -227,4 +227,4 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
 
 ## <a name="see-also"></a>Vea también
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

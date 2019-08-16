@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59778122"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447837"
 ---
 # <a name="compiler-error-c3104"></a>Error del compilador C3104
 
@@ -21,7 +21,7 @@ Ha especificado un argumento no válido a un atributo.
 
 Consulte [tipos de parámetro de atributo](../../extensions/attribute-parameter-types-cpp-component-extensions.md) para obtener más información.
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: cuando se pasan las matrices administradas a los atributos personalizados, el tipo de la matriz ya no se deduce de la lista de inicialización de agregado. Ahora, el compilador requiere que especifique el tipo de la matriz, así como la lista de inicializadores.
+Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: cuando se pasan las matrices administradas a los atributos personalizados, el tipo de la matriz ya no se deduce de la lista de inicialización de agregado. Ahora, el compilador requiere que especifique el tipo de la matriz, así como la lista de inicializadores.
 
 ## <a name="example"></a>Ejemplo
 

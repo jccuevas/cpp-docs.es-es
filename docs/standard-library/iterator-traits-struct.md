@@ -7,12 +7,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657228"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455583"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits (Struct)
 
@@ -41,13 +41,13 @@ El struct de plantilla define los tipos de miembro:
 
 - `difference_type`: sinónimo de `Iterator::difference_type`.
 
-- `distance_type`: sinónimo de `Iterator::difference_type.`
+- `distance_type`: sinónimo de`Iterator::difference_type.`
 
 - `pointer`: sinónimo de `Iterator::pointer`.
 
 - `reference`: sinónimo de `Iterator::reference`.
 
-Las especializaciones parciales determinan los tipos críticos asociados con un puntero de objeto del tipo **tipo** <strong>\*</strong> o **tipo const**  <strong>\*</strong>.
+Las especializaciones parciales determinan los tipos críticos asociados a un puntero de  <strong>\*</strong> objeto de tipo Type o **const** <strong>\*</strong>.
 
 En esta implementación también se pueden usar varias funciones de plantilla que no usan la especialización parcial:
 
@@ -124,6 +124,6 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

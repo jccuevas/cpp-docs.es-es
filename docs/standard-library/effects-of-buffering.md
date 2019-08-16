@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f28748f1e7a837ad87ef1cfcebc56d3410d0fd2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631444"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458910"
 ---
 # <a name="effects-of-buffering"></a>Efectos del almacenamiento en búfer
 
@@ -39,8 +39,8 @@ Para que el programa funcione lógicamente, el objeto `cout` debe vaciarse de fo
 cout <<"Please wait..." <<flush;
 ```
 
-En este paso se vacía el búfer, lo que garantiza que el mensaje se imprima antes de la espera. También puede usar el `endl` manipulador, que vacía el búfer y da como resultado un retorno de carro/salto de línea, o puede usar el `cin` objeto. Este objeto (junto con los objetos `cerr` o `clog` ) suele estar vinculado al objeto `cout` . Por tanto, cualquier uso de `cin` (o de los objetos `cerr` o `clog` ) vacía el objeto `cout` .
+En este paso se vacía el búfer, lo que garantiza que el mensaje se imprima antes de la espera. También puede usar el `endl` manipulador, que vacía el búfer y genera un retorno de carro y avance de línea, o puede usar el `cin` objeto. Este objeto (junto con los objetos `cerr` o `clog` ) suele estar vinculado al objeto `cout` . Por tanto, cualquier uso de `cin` (o de los objetos `cerr` o `clog` ) vacía el objeto `cout` .
 
 ## <a name="see-also"></a>Vea también
 
-[Flujos de salida](../standard-library/output-streams.md)<br/>
+[Flujos de salida](../standard-library/output-streams.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304540"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508795"
 ---
 # <a name="controls-mfc"></a>Controles (MFC)
 
@@ -49,27 +49,27 @@ En la tabla siguiente se describe brevemente cada uno de los controles comunes d
 
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Controles comunes y clases MFC de Windows
 
-|Control|clase MFC|Descripción|Nuevo en Windows 95|
+|Control|clase MFC|DESCRIPCIÓN|Novedades de Windows 95|
 |-------------|---------------|-----------------|------------------------|
 |[animación](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Muestra cuadros sucesivos de un clip de vídeo AVI|Sí|
-|botón|[CButton](../mfc/reference/cbutton-class.md)|Botones de comando que producen una acción; también se utilizan para las casillas, los botones de radio y los cuadros de grupo|No|
-|cuadro combinado|[CComboBox](../mfc/reference/ccombobox-class.md)|Combinación de un cuadro de edición y un cuadro de lista|No|
+|botón|[CButton](../mfc/reference/cbutton-class.md)|Botones de comando que producen una acción; también se utilizan para las casillas, los botones de radio y los cuadros de grupo|Sin|
+|cuadro combinado|[CComboBox](../mfc/reference/ccombobox-class.md)|Combinación de un cuadro de edición y un cuadro de lista|Sin|
 |[selector de fecha y hora](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Permite elegir un valor de fecha y hora concreto|Sí|
-|cuadro de edición|[CEdit](../mfc/reference/cedit-class.md)|Cuadros para escribir texto|No|
+|cuadro de edición|[CEdit](../mfc/reference/cedit-class.md)|Cuadros para escribir texto|Sin|
 |[cuadro combinado extendido](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|Un control de cuadro combinado con la capacidad de mostrar imágenes|Sí|
 |[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Botón que aparece sobre una columna de texto; controla el ancho del texto mostrado|Sí|
 |[tecla de acceso rápido](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Ventana que permite crear una “tecla de acceso rápido” para realizar una acción rápidamente|Sí|
 |[lista de imágenes](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Colección de imágenes que se utilizan para administrar conjuntos grandes de iconos o de mapas de bits (la lista de imágenes no es realmente un control; admite las listas utilizadas por otros controles)|Sí|
 |[lista](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Ventana que muestra una lista de texto con iconos|Sí|
-|cuadro de lista|[CListBox](../mfc/reference/clistbox-class.md)|Cuadro que contiene una lista de cadenas|No|
+|cuadro de lista|[CListBox](../mfc/reference/clistbox-class.md)|Cuadro que contiene una lista de cadenas|Sin|
 |[calendario mensual](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Control que muestra información de fecha|Sí|
 |[progreso](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Ventana que indica el progreso de una operación prolongada|Sí|
 |[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Barra de herramientas que puede contener ventanas secundarias adicionales en forma de controles|Sí|
 |[rich edit](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Ventana en la que el usuario puede realizar modificación con formato de carácter y de párrafo (vea [Clases relacionadas con los controles rich edit](../mfc/classes-related-to-rich-edit-controls.md))|Sí|
-|barra de desplazamiento|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Barra de desplazamiento utilizada como control dentro de un cuadro de diálogo (no en una ventana)|No|
+|barra de desplazamiento|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Barra de desplazamiento utilizada como control dentro de un cuadro de diálogo (no en una ventana)|Sin|
 |[control deslizante](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Ventana que contiene un control deslizante con marcas de graduación opcionales|Sí|
 |[botón de número](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Par de botones de flecha en los que el usuario puede hacer clic para aumentar o reducir un valor|Sí|
-|texto estático|[CStatic](../mfc/reference/cstatic-class.md)|Texto para etiquetar otros controles|No|
+|texto estático|[CStatic](../mfc/reference/cstatic-class.md)|Texto para etiquetar otros controles|Sin|
 |[barra de estado](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Ventana para mostrar información de estado, similar a la clase MFC `CStatusBar`|Sí|
 |[pestaña](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Análoga a los divisores de un bloc de notas; se usa en "cuadros de diálogo de pestaña" o en hojas de propiedades|Sí|
 |[toolbar](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Ventana con botones que generan comandos, similares a la clase MFC `CToolBar`|Sí|
@@ -102,7 +102,7 @@ En la tabla siguiente se describe brevemente cada uno de los controles comunes d
 
 - [Muestras](../mfc/common-control-sample-list.md)
 
-Para obtener información acerca de los controles comunes de Windows en el SDK de Windows, consulte [controles comunes](/windows/desktop/Controls/common-controls-intro).
+Para obtener información sobre los controles comunes de Windows en el Windows SDK, vea [controles comunes](/windows/win32/Controls/common-controls-intro).
 
 ## <a name="see-also"></a>Vea también
 

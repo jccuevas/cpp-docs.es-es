@@ -14,77 +14,77 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cc34f5ed32ee48d538b67cab080b0a52b2e00ae8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326633"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508879"
 ---
 # <a name="containers-compound-files"></a>Contenedores: Archivos compuestos
 
-En este artículo se explica los componentes y la implementación de archivos compuestos y las ventajas y desventajas de usar archivos compuestos en las aplicaciones OLE.
+En este artículo se explican los componentes y la implementación de archivos compuestos y las ventajas y desventajas del uso de archivos compuestos en las aplicaciones OLE.
 
-Archivos compuestos son una parte integral de OLE. Se utilizan para facilitar la transferencia de datos y almacenamiento de documentos OLE. Archivos compuestos son una implementación del modelo de almacenamiento estructurado activo. Interfaces coherentes existen que admiten la serialización para un almacenamiento, una secuencia o un objeto de archivo. Las clases admiten archivos compuestos en la biblioteca Microsoft Foundation Class `COleStreamFile` y `COleDocument`.
+Los archivos compuestos son una parte integral de OLE. Se usan para facilitar la transferencia de datos y el almacenamiento de documentos OLE. Los archivos compuestos son una implementación del modelo de almacenamiento estructurado activo. Existen interfaces coherentes que admiten la serialización en un almacenamiento, un flujo o un objeto de archivo. Los archivos compuestos se admiten en el biblioteca MFC por `COleStreamFile` las `COleDocument`clases y.
 
 > [!NOTE]
->  Uso de un archivo compuesto no implica que la información procede de un documento compuesto o de un documento OLE. Archivos compuestos son simplemente una de las formas de almacenar documentos compuestos, documentos OLE y otros datos.
+>  El uso de un archivo compuesto no implica que la información proceda de un documento OLE o de un documento compuesto. Los archivos compuestos son solo una de las formas de almacenar documentos compuestos, documentos OLE y otros datos.
 
-##  <a name="_core_components_of_a_compound_file"></a> Componentes de un archivo compuesto
+##  <a name="_core_components_of_a_compound_file"></a>Componentes de un archivo compuesto
 
-La implementación de OLE de archivos compuestos utiliza tres tipos de objetos: objetos de secuencia, los objetos de almacenamiento, y `ILockBytes` objetos. Estos objetos son similares a los componentes de un sistema de archivos estándar de las maneras siguientes:
+La implementación OLE de archivos compuestos utiliza tres tipos de objetos: objetos de secuencia, objetos de `ILockBytes` almacenamiento y objetos. Estos objetos son similares a los componentes de un sistema de archivos estándar de las maneras siguientes:
 
-- Objetos Stream, como los archivos, almacenan de datos de cualquier tipo.
+- Los objetos de secuencia, como los archivos, almacenan datos de cualquier tipo.
 
-- Objetos de almacenamiento, como los directorios, pueden contener otros objetos de almacenamiento y la secuencia.
+- Los objetos de almacenamiento, como los directorios, pueden contener otros objetos de almacenamiento y de secuencia.
 
-- `LockBytes` los objetos representan la interfaz entre los objetos de almacenamiento y el hardware físico. Determinan cómo se escriben los bytes reales a cualquier dispositivo de almacenamiento la `LockBytes` tiene acceso objetos, como una unidad de disco duro o un área de memoria global. Para obtener más información acerca de `LockBytes` objetos y el `ILockBytes` interfaz, vea el *referencia del programador OLE*.
+- `LockBytes`los objetos representan la interfaz entre los objetos de almacenamiento y el hardware físico. Determinan cómo se escriben los bytes reales en cualquier dispositivo `LockBytes` de almacenamiento al que tenga acceso el objeto, como una unidad de disco duro o un área de memoria global. Para obtener más información `LockBytes` sobre los objetos `ILockBytes` y la interfaz, vea la *Referencia del programador de OLE*.
 
-##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Ventajas y desventajas de los archivos compuestos
+##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a>Ventajas y desventajas de los archivos compuestos
 
-Archivos compuestos proporcionan beneficios no están disponibles en los métodos anteriores de almacenamiento de archivos. Son los siguientes:
+Los archivos compuestos proporcionan ventajas que no están disponibles con los métodos anteriores de almacenamiento de archivos. Son los siguientes:
 
-- Acceso a archivo incremental.
+- Acceso incremental de archivos.
 
-- Modos de acceso de archivo.
+- Modos de acceso a archivos.
 
-- Estandarización de estructura de archivos.
+- Normalización de la estructura de archivos.
 
-Los posibles inconvenientes de los archivos compuestos: problemas de rendimiento y tamaño grandes relativas al almacenamiento en discos, debe ser considerada cuando decida si se usan en la aplicación.
+Se deben tener en cuenta las posibles desventajas de los archivos compuestos: problemas de gran tamaño y rendimiento relacionados con el almacenamiento en disquetes, a la hora de decidir si usarlos en la aplicación.
 
-###  <a name="_core_incremental_access_to_files"></a> Acceso incremental a archivos
+###  <a name="_core_incremental_access_to_files"></a>Acceso incremental a archivos
 
-Acceso incremental a archivos es una ventaja de usar archivos compuestos automática. Dado que un archivo compuesto puede verse como un "sistema de archivos dentro de un archivo", los tipos de objetos individuales, como secuencia o de almacenamiento, pueden tener acceso sin necesidad de cargar el archivo completo. Esto puede reducir drásticamente el tiempo que una aplicación necesita acceder a los nuevos objetos para editar el usuario. Actualización incremental, basada en el mismo concepto, ofrece ventajas similares. En lugar de guardar todo el archivo para guardar los cambios realizados en un objeto, OLE guarda sólo el objeto stream o almacenamiento editado por el usuario.
+El acceso incremental a los archivos es una ventaja automática del uso de archivos compuestos. Dado que un archivo compuesto se puede ver como un "sistema de archivos dentro de un archivo", se puede tener acceso a tipos de objetos individuales, como Stream o Storage, sin necesidad de cargar todo el archivo. Esto puede reducir drásticamente el tiempo que una aplicación necesita para tener acceso a los objetos nuevos para que los edite el usuario. La actualización incremental, basada en el mismo concepto, ofrece ventajas similares. En lugar de guardar todo el archivo solo para guardar los cambios realizados en un objeto, OLE guarda solo la secuencia o el objeto de almacenamiento editado por el usuario.
 
-###  <a name="_core_file_access_modes"></a> Modos de acceso de archivo
+###  <a name="_core_file_access_modes"></a>Modos de acceso a archivos
 
-Ser capaz de determinar cuándo se confirman en el disco los cambios efectuados en un archivo compuesto es otra ventaja de usar archivos compuestos. El modo en que se accede a los archivos con transacciones o directa, determina cuando se confirman los cambios.
+La capacidad de determinar cuándo se confirman los cambios en los objetos de un archivo compuesto se confirma en el disco es otra ventaja de usar archivos compuestos. El modo en el que se obtiene acceso a los archivos, ya sea con transacciones o directamente, determina cuándo se confirman los cambios.
 
-- Modo de transacción utiliza una operación de confirmación en dos fases para realizar cambios en objetos en un archivo compuesto, con lo que mantendrá la antigua y las nuevas copias del documento disponible hasta que el usuario decide guardar o deshacer los cambios.
+- El modo de transacción utiliza una operación de confirmación en dos fases para realizar cambios en los objetos de un archivo compuesto, lo que mantiene las copias antiguas y nuevas del documento disponibles hasta que el usuario elige guardar o deshacer los cambios.
 
-- Modo directo incorpora los cambios realizados en el documento cuando se realizan, sin la capacidad de deshacer más adelante.
+- El modo directo incorpora cambios en el documento a medida que se realizan, sin la capacidad de deshacerlos más adelante.
 
-Para obtener más información acerca de los modos de acceso, consulte el *referencia del programador OLE*.
+Para obtener más información sobre los modos de acceso, vea la *Referencia del programador de OLE*.
 
-###  <a name="_core_standardization"></a> Estandarización
+###  <a name="_core_standardization"></a>Normalización
 
-La estructura estandarizada de los archivos compuestos permite que distintas aplicaciones OLE examinar los archivos compuestos, creados por la aplicación OLE sin el conocimiento de la aplicación que se creó el archivo.
+La estructura normalizada de archivos compuestos permite que diferentes aplicaciones OLE examinen los archivos compuestos creados por la aplicación OLE sin conocimiento de la aplicación que realmente creó el archivo.
 
-###  <a name="_core_size_and_performance_considerations"></a> Consideraciones de rendimiento y tamaño
+###  <a name="_core_size_and_performance_considerations"></a>Consideraciones de tamaño y rendimiento
 
-Dada la complejidad de la estructura de almacenamiento de archivo compuesto y la capacidad de guardar los datos de forma incremental, con este formato de archivos tienden a ser mayor que otros archivos de uso no estructurado o almacenamiento de "archivo sin formato". Si la aplicación con frecuencia se carga y guarda los archivos, el uso de archivos compuestos puede provocar mucho más rápidamente que los archivos de aumentar el tamaño del archivo. Dado que los archivos compuestos pueden obtener grandes, el tiempo de acceso para archivos almacenados en y se carga desde los disquetes también puede verse afectado, lo que provocará un acceso más lento a los archivos.
+Debido a la complejidad de la estructura de almacenamiento de archivos compuesto y a la capacidad de guardar los datos de forma incremental, los archivos que usan este formato suelen ser más grandes que otros archivos que usan almacenamiento no estructurado o de archivo sin formato. Si la aplicación carga y guarda archivos con frecuencia, el uso de archivos compuestos puede hacer que el tamaño del archivo aumente mucho más rápidamente que los archivos no compuestos. Dado que los archivos compuestos pueden llegar a ser grandes, el tiempo de acceso para los archivos almacenados y cargados desde disquetes también puede verse afectado, lo que da lugar a un acceso más lento a los archivos.
 
-Otro problema que afecta al rendimiento es la fragmentación de archivo compuesto. El tamaño de un archivo compuesto viene determinada por la diferencia entre los sectores de disco primero y último usa el archivo. Un archivo fragmentado puede contener muchas áreas de espacio libre que no contienen datos, pero se cuentan al calcular el tamaño. Durante la vigencia de un archivo compuesto, estas áreas se crean mediante la inserción o eliminación de objetos de almacenamiento.
+Otro problema que afecta al rendimiento es la fragmentación de archivos compuestos. El tamaño de un archivo compuesto viene determinado por la diferencia entre el primer y el último sector del disco utilizado por el archivo. Un archivo fragmentado puede contener muchas áreas de espacio disponible que no contienen datos, pero se cuentan al calcular el tamaño. Durante la vigencia de un archivo compuesto, estas áreas se crean mediante la inserción o eliminación de objetos de almacenamiento.
 
-##  <a name="_core_using_compound_files_format_for_your_data"></a> Utiliza el formato de archivos compuestos para los datos
+##  <a name="_core_using_compound_files_format_for_your_data"></a>Usar el formato de archivos compuestos para los datos
 
-Después de crear correctamente una aplicación que tiene una clase de documento que se deriva de `COleDocument`, asegúrese de que el constructor del documento principal llama a `EnableCompoundFile`. Cuando el Asistente para aplicaciones crea aplicaciones de contenedor OLE, se inserta esta llamada.
+Después de crear correctamente una aplicación que tiene una clase de documento `COleDocument`derivada de, asegúrese de que el constructor `EnableCompoundFile`del documento principal llama a. Cuando el Asistente para aplicaciones crea aplicaciones de contenedor OLE, se inserta esta llamada.
 
-En el *referencia del programador OLE*, consulte [IStream](/windows/desktop/api/objidl/nn-objidl-istream), [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage), y [ILockBytes](/windows/desktop/api/objidl/nn-objidl-ilockbytes).
+En la *Referencia del programador de OLE*, vea [IStream](/windows/win32/api/objidl/nn-objidl-istream), [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)y [ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes).
 
 ## <a name="see-also"></a>Vea también
 
 [Contenedores](../mfc/containers.md)<br/>
-[Contenedores: Problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md)<br/>
+[Contenedores: problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md)<br/>
 [COleStreamFile (clase)](../mfc/reference/colestreamfile-class.md)<br/>
 [COleDocument (clase)](../mfc/reference/coledocument-class.md)

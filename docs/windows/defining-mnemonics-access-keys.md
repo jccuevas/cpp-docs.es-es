@@ -23,11 +23,11 @@ helpviewer_keywords:
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
 ms.openlocfilehash: c49913597f51ef231073b89d60ad9718b1113f44
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223537"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Procedimiento Definir el Control de acceso y valores (C++)
 
@@ -42,7 +42,7 @@ Incluso los controles que no tienen la **Tabstop** propiedad establecida en **Tr
 > [!NOTE]
 > Si el cuadro de diálogo contiene controles que se superponen, el orden de tabulación se cambia la manera en que se muestran los controles. Controles que se proporcionan más adelante en el orden de tabulación se muestran siempre encima de los controles que se superponen que preceden a ellos en el orden de tabulación.
 
-- Para ver el orden de tabulación para todos los controles, vaya al menú **formato** > **orden de tabulación**, o bien presione **Ctrl** + **d.**.
+- Para ver el orden de tabulación para todos los controles, vaya al menú **formato** > **orden de tabulación**, o bien presione **Ctrl** + **d**.
 
    Un número en la esquina superior izquierda de cada control muestra su lugar en el orden de tabulación.
 

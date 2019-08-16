@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495583"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454192"
 ---
 # <a name="numpunct-class"></a>numpunct (Clase)
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*<br/>
+*CharType*\
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
 ## <a name="remarks"></a>Comentarios
@@ -59,24 +59,24 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[numpunct](#numpunct)|Constructor para los objetos de tipo `numpunct`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[string_type](#string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[decimal_point](#decimal_point)|Devuelve un elemento específico de la configuración regional que se va a usar como separador decimal.|
 |[do_decimal_point](#do_decimal_point)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador decimal.|
-|[do_falsename](#do_falsename)|Una función miembro virtual que se llama para devolver una cadena que se usará como una representación de texto del valor protegida **false**.|
+|[do_falsename](#do_falsename)|Función miembro virtual protegida a la que se llama para devolver una cadena que se va a usar como representación de texto del valor **false**.|
 |[do_grouping](#do_grouping)|Función miembro virtual protegida a la que se llama para devolver una regla específica de la configuración regional con el fin de determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.|
 |[do_thousands_sep](#do_thousands_sep)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador de miles.|
 |[do_truename](#do_truename)|Una función miembro virtual protegida a la que se llama para devolver una cadena que se va a usar como una representación de texto del valor **true**.|
@@ -200,7 +200,7 @@ La función miembro virtual protegida devuelve una regla específica de la confi
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [agrupación](#grouping), donde se llamó la función miembro virtual `grouping`.
+Vea el ejemplo de [agrupación](#grouping), donde llama a `grouping`la función miembro virtual.
 
 ## <a name="do_thousands_sep"></a> numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ Devuelve un elemento específico de la configuración regional que se va a usar 
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida devuelve un elemento específico de la configuración regional de tipo `CharType` a usar como separador de grupos a la izquierda de cualquier separador decimal.
+La función miembro virtual protegida devuelve un elemento específico de la configuración regional del `CharType` tipo que se va a usar como separador de grupo a la izquierda de cualquier separador decimal.
 
 ### <a name="example"></a>Ejemplo
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una cadena que contiene una secuencia de `CharType`para utilizar como una representación de texto del valor **false**.
+Una cadena que contiene una secuencia `CharType`de s que se va a usar como representación de texto del valor **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*<br/>
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Los valores posibles de la *_Refs* parámetro y su importancia son:
+Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
-El constructor inicializa su objeto base con **locale::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
+El constructor inicializa su objeto base con **locale::** [Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a> numpunct::string_type
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Vea también
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Facet (clase)](../standard-library/locale-class.md#facet_class)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet (Clase)](../standard-library/locale-class.md#facet_class)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

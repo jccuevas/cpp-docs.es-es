@@ -1,5 +1,5 @@
 ---
-title: 'Filtrar Detectar la compilación de clr:'
+title: 'Procedimiento Detectar la compilación de clr:'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use of
 ms.assetid: a9310045-4810-4637-a64a-0b31a08791c1
 ms.openlocfilehash: 0b02be1bcd0afc9fd857e689ceafdcab5eaf05d1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387362"
 ---
 # <a name="how-to-detect-clr-compilation"></a>Procedimiento Detectar compilación de /clr
 

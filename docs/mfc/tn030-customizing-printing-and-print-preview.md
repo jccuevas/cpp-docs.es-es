@@ -1,5 +1,5 @@
 ---
-title: 'TN030: Personalizar la impresión y la vista previa de impresión'
+title: 'TN030: Personalizar la impresión y vista previa de impresión'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305689"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Personalizar la impresión y la vista previa de impresión
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Personalizar la impresión y vista previa de impresión
 
 > [!NOTE]
 > La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.
@@ -46,7 +46,7 @@ Vista preliminar, en esencia, intenta activar la presentación en una emulación
 
 ## <a name="customizing-print-preview"></a>Personalizar la vista previa de impresión
 
-Esta nota solo se ocupa uno de los aspectos de la modificación de la vista previa de impresión: adición de interfaz de usuario para el modo de vista previa. Son posibles otras modificaciones, pero estos cambios están fuera del ámbito de esta discusión.
+Esta nota solo se ocupa uno de los aspectos de la modificación de la vista previa de impresión: Adición de interfaz de usuario para el modo de vista previa. Son posibles otras modificaciones, pero estos cambios están fuera del ámbito de esta discusión.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Para agregar la interfaz de usuario para el modo de vista previa
 

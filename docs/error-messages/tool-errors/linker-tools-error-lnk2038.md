@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594316"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446956"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Error de las herramientas del vinculador LNK2038
 
@@ -24,9 +24,9 @@ Este error puede aparecer cuando un archivo objeto del proyecto no está actuali
 
 Visual Studio define los símbolos siguientes para evitar la vinculación de código incompatible, que puede producir errores en tiempo de ejecución u otro comportamiento inesperado.
 
-- `_MSC_VER` Indica los números de versión principal y secundaria del compilador de Visual C++ que se usa para crear una aplicación o biblioteca. El código compilado con una versión del compilador de Visual C++ es incompatible con el código compilado mediante una versión que tiene otros números de versión principal y secundaria. Para obtener más información, consulte `_MSC_VER` en [Predefined Macros](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Indica los números de versión principal y secundaria de Microsoft C++ compilador (MSVC) que se usa para crear una aplicación o biblioteca. Código que se compila con una versión de la MSVC es incompatible con el código que se compila con una versión que tiene números de versión principal y secundario diferentes. Para obtener más información, consulte `_MSC_VER` en [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-   Si va a vincular a una biblioteca que no es compatible con la versión del compilador de Visual C++ que está usando y no se puede adquirir o compilar una versión compatible de la biblioteca, puede usar una versión anterior del compilador para compilar el proyecto: cambiar el <C1/>conjunto de herramientas de plataforma** propiedad del proyecto para el conjunto de herramientas anterior. Para obtener más información, consulte [Cómo: modificar plataforma de destino y el conjunto de herramientas de plataforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Si va a vincular a una biblioteca que no es compatible con la versión de la MSVC que está usando y no se puede adquirir o compilar una versión compatible de la biblioteca, puede usar una versión anterior del compilador para compilar el proyecto: cambiar el  **Conjunto de herramientas de plataforma** propiedad del proyecto para el conjunto de herramientas anterior. Para obtener más información, vea [Cómo: para modificar la plataforma de destino y el conjunto de herramientas de la plataforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Indica el nivel de seguridad y las características que están habilitadas en la biblioteca estándar de C++ de depuración. Estas características pueden cambiar la representación de ciertos objetos de la biblioteca estándar C++ y, por tanto, hacerlos incompatibles con las que utilizan características de seguridad y depuración diferentes. Para obtener más información, vea [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 

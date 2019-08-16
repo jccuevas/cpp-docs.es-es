@@ -1,22 +1,22 @@
 ---
 title: Herramientas de generación MSVC adicionales
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - c.build
 helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: e41a6dcb8de4a8608d065cce5bce2595cd96a84f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 59c9cb4527de878b06cbb6a7b3abe921e9a60107
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808071"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220221"
 ---
 # <a name="additional-msvc-build-tools"></a>Herramientas de generación MSVC adicionales
 
-Visual C++ proporciona las utilidades de línea de comandos siguientes para ver y manipular el resultado de la compilación:
+Visual Studio proporciona las utilidades de línea de comandos siguientes para ver y manipular el resultado de la compilación:
 
 
 - [LIB. EXE](lib-reference.md) se usa para crear y administrar una biblioteca de archivos de objeto de formato de archivo de objeto común (COFF). También puede utilizarse para crear archivos de exportación e importe las bibliotecas a las definiciones de referencia que se exportan.
@@ -37,5 +37,5 @@ Visual C++ proporciona las utilidades de línea de comandos siguientes para ver 
 
 [Referencia de compilación de C/C++](c-cpp-building-reference.md)<br/>
 [Nombres representativos](decorated-names.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

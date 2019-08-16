@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
 ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160083"
 ---
 # <a name="concurrency-namespace"></a>concurrency (Espacio de nombres)
 
@@ -154,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Enumeraciones
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Los estados válidos para un `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Los tipos de eventos a los que se puede realiza un seguimiento utilizando la funcionalidad de seguimiento proporcionada por la Biblioteca de agentes.|

@@ -2,16 +2,16 @@
 title: 'Guía de migración: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751692"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451175"
 ---
 # <a name="porting-guide-com-spy"></a>Guía de migración: COM Spy
 
-Este tema es el segundo de una serie de artículos que demuestra el proceso de actualización de antiguos proyectos de Visual C++ a la versión más reciente de Visual Studio. El código de ejemplo que se muestra en este tema se compiló por última vez con Visual Studio 2005.
+Este tema es el segundo de una serie de artículos que demuestra el proceso de actualización de antiguos proyectos de Visual Studio C++ a la versión más reciente de Visual Studio. El código de ejemplo que se muestra en este tema se compiló por última vez con Visual Studio 2005.
 
 ## <a name="comspy"></a>COMSpy
 
@@ -24,7 +24,7 @@ El archivo del proyecto se convierte fácilmente y genera un informe de migraci�
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Uno de los problemas frecuentes al actualizar proyectos es que quizás sea necesario revisar la configuración del **OutputFile del enlazador** en el cuadro de diálogo de propiedades del proyecto. Para los proyectos anteriores a Visual Studio 2010, OutputFile es un ajuste con el que tiene problemas el asistente de conversión automática si se establece en un valor no estándar. En este caso, las rutas de acceso de los archivos de salida se establecieron en una carpeta no estándar, XP32_DEBUG. Para obtener más información sobre este error, consultamos una [entrada de blog](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) relacionada con la actualización de proyectos de Visual C++ 2010, que fue la actualización en la que se pasó de vcbuild a msbuild, un cambio significativo. Según esta información, el valor predeterminado del ajuste **OutputFile** cuando se crea un nuevo proyecto es `$(OutDir)$(TargetName)$(TargetExt)`, pero este no se establece durante la conversión, ya que no es posible que los proyectos convertidos comprueben que todo sea correcto. Sin embargo, vamos a intentar colocarlo en OutputFile y ver si funciona.  Sí que funciona, de modo que podemos continuar. Si no hay ninguna razón específica para utilizar una carpeta de salida no estándar, se recomienda utilizar la ubicación estándar. En este caso, hemos optado por dejar la ubicación de salida como la no estándar durante el proceso de migración y actualización; `$(OutDir)` se resuelve en la carpeta XP32_DEBUG en la configuración de **Debug** y la carpeta ReleaseU para la configuración de **Release**.
+Uno de los problemas frecuentes al actualizar proyectos es que quizás sea necesario revisar la configuración del **OutputFile del enlazador** en el cuadro de diálogo de propiedades del proyecto. Para los proyectos anteriores a Visual Studio 2010, OutputFile es un ajuste con el que tiene problemas el asistente de conversión automática si se establece en un valor no estándar. En este caso, las rutas de acceso de los archivos de salida se establecieron en una carpeta no estándar, XP32_DEBUG. Para más información sobre este error, consultamos una [entrada de blog](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) relacionada con la actualización de proyectos de Visual Studio 2010, que fue la actualización en la que se pasó de vcbuild a msbuild, un cambio significativo. Según esta información, el valor predeterminado del ajuste **OutputFile** cuando se crea un nuevo proyecto es `$(OutDir)$(TargetName)$(TargetExt)`, pero este no se establece durante la conversión, ya que no es posible que los proyectos convertidos comprueben que todo sea correcto. Sin embargo, vamos a intentar colocarlo en OutputFile y ver si funciona.  Sí que funciona, de modo que podemos continuar. Si no hay ninguna razón específica para utilizar una carpeta de salida no estándar, se recomienda utilizar la ubicación estándar. En este caso, hemos optado por dejar la ubicación de salida como la no estándar durante el proceso de migración y actualización; `$(OutDir)` se resuelve en la carpeta XP32_DEBUG en la configuración de **Debug** y la carpeta ReleaseU para la configuración de **Release**.
 
 ### <a name="step-2-getting-it-to-build"></a>Paso 2. Hacer que compile
 Al compilar el proyecto migrado, se producen varios errores y advertencias.

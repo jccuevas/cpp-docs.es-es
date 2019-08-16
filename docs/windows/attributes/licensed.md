@@ -1,21 +1,21 @@
 ---
-title: con licencia (atributo de COM de C++)
+title: con licenciaC++ (atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035002"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514454"
 ---
 # <a name="licensed"></a>licensed
 
-Indica que el objeto COM al que se aplica tiene licencia y se debe crear instancias mediante `IClassFactory2`.
+Indica que el objeto COM al que se aplica tiene licencia y se debe crear una instancia de `IClassFactory2`mediante.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,7 +25,7 @@ Indica que el objeto COM al que se aplica tiene licencia y se debe crear instanc
 
 ## <a name="remarks"></a>Comentarios
 
-El **licencia** atributo de C++ tiene la misma funcionalidad que el [licencia](/windows/desktop/Midl/licensed) atributo MIDL.
+El atributo con **licencia** C++ tiene la misma funcionalidad que el atributo MIDL con [licencia](/windows/win32/Midl/licensed) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -55,9 +55,9 @@ public:
 |||
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
-|**Reiterativo**|No|
+|**Reiterativo**|Sin|
 |**Atributos requeridos**|`coclass`|
-|**Atributos no válidos**|Ninguna|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

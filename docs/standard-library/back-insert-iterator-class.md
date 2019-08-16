@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557451"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459535"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator (Clase)
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parámetros
 
-*Contenedor*<br/>
+*Contenedor*\
 El tipo de contenedor en cuyo final `back_insert_iterator` va a insertar los elementos.
 
 ## <a name="remarks"></a>Comentarios
@@ -39,24 +39,24 @@ El contenedor debe satisfacer los requisitos para una secuencia de inserción en
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[back_insert_iterator](#back_insert_iterator)|Construye un `back_insert_iterator` que inserta elementos después del último elemento de un contenedor.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[container_type](#container_type)|Tipo que proporciona un contenedor para `back_insert_iterator`.|
 |[reference](#reference)|Tipo que proporciona una referencia para `back_insert_iterator`.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|Descripción|
+|Operador|DESCRIPCIÓN|
 |-|-|
-|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción al final.|
+|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión \* `i`  =  `x` de iterador de salida para una inserción inversa.|
 |[operator++](#op_add_add)|Incrementa el `back_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|
-|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión de iterador de salida \* `i`  =  `x` para una inserción al final.|
+|[operator=](#op_eq)|Operador de asignación usado \* para implementar la expresión `i`  =  `x` de iterador de salida para una inserción inversa.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -74,7 +74,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cont*<br/>
+*_Cont*\
 Contenedor en el que `back_insert_iterator` va a insertar un elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -183,7 +183,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a>  back_insert_iterator:: operator\*
+## <a name="op_star"></a>  back_insert_iterator::operator\*
 
 Operador de desreferencia usado para implementar la expresión de iterador de salida \* *i* = *x*.
 
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*Val*\
 Valor que se va a insertar en el contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,17 +1,17 @@
 ---
-title: retval (atributo de COM de C++)
+title: retval (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035104"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514047"
 ---
 # <a name="retval"></a>retval
 
@@ -25,13 +25,13 @@ Designa el parámetro que recibe el valor devuelto del miembro.
 
 ## <a name="remarks"></a>Comentarios
 
-El **retval** atributo de C++ tiene la misma funcionalidad que el [retval](/windows/desktop/Midl/retval) atributo MIDL.
+El atributo **retval** C++ tiene la misma funcionalidad que el atributo MIDL [retval](/windows/win32/Midl/retval) .
 
-**retval** debe aparecer en el último argumento en la declaración de una función.
+**retval** debe aparecer en el último argumento de una declaración de función.
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **retval**.
+Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de uso de **retval**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -39,8 +39,8 @@ Vea el ejemplo de [enlazable](bindable.md) para un ejemplo de uso de **retval**.
 
 |||
 |-|-|
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
+|**Se aplica a**|Parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
 |**Atributos requeridos**|**out**|
 |**Atributos no válidos**|**in**|
 

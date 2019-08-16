@@ -9,17 +9,17 @@ helpviewer_keywords:
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
 ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548214"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345957"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Mezclar excepciones de C++ y C (estructurado)
 
-Si desea escribir código portable, no se recomienda el uso estructurado de control de excepciones (SEH) en un programa de C++. Sin embargo, que es posible que a veces desee compilar con [/EHa](../build/reference/eh-exception-handling-model.md) y mezclar excepciones estructuradas y código fuente de C++ y necesitará alguna capacidad para controlar ambos tipos de excepciones. Dado que un controlador de excepciones estructurado no tiene ningún concepto de objetos de excepciones con tipo, que no puede controlar las excepciones producidas por código de C++. Sin embargo, C++ **catch** controladores pueden controlar excepciones estructuradas. Sintaxis del control de excepciones de C++ (**intente**, **throw**, **catch**) no está aceptados por el compilador de C, pero la sintaxis de control de excepciones estructurado (**__try**, **__except**, **__finally**) es compatible con el compilador de C++.
+Si desea escribir código portable, no se recomienda el uso estructurado de control de excepciones (SEH) en un programa de C++. Sin embargo, que es posible que a veces desee compilar con [/EHa](../build/reference/eh-exception-handling-model.md) y mezclar excepciones estructuradas y código fuente de C++ y necesitará alguna capacidad para controlar ambos tipos de excepciones. Dado que un controlador de excepciones estructurado no tiene ningún concepto de objetos de excepciones con tipo, que no puede controlar las excepciones producidas por código de C++. Sin embargo, C++ **catch** controladores pueden controlar excepciones estructuradas. C++sintaxis de control de excepciones (**intente**, **throw**, **catch**) no está aceptados por el compilador de C, pero la sintaxis de control de excepciones estructurado (**__try**, **__except**, **__finally**) es compatible con la C++ compilador.
 
-Consulte [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) para obtener información sobre cómo controlar las excepciones estructuradas como excepciones de C++.
+Consulte [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) para obtener información sobre cómo controlar las excepciones estructuradas como C++ excepciones.
 
 Si mezcla estructurado y excepciones de C++, tenga en cuenta estos posibles problemas:
 

@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893307"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499961"
 ---
-# <a name="endthread-endthreadex"></a>_endthread, _endthreadex
+# <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Termina un subproceso; **_endthread** termina un subproceso creado por **_beginthread** y **_endthreadex** termina un subproceso creado por **_beginthreadex**.
+Finaliza un subproceso; _ **endthread** termina un subproceso creado por _ **beginthread** y _ **endthreadex** finaliza un subproceso creado por _ **beginthreadex**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -57,17 +57,17 @@ Código de salida del subproceso.
 
 ## <a name="remarks"></a>Comentarios
 
-Puede llamar a **_endthread** o **_endthreadex** explícitamente para terminar el subproceso; sin embargo, **_endthread** o **_endthreadex** se denomina Cuando el subproceso vuelve de la rutina pasa automáticamente como un parámetro a **_beginthread** o **_beginthreadex**. Si se finaliza un subproceso con una llamada a **endthread** o **_endthreadex** ayuda a garantiza la recuperación correcta de los recursos asignados para el subproceso.
+Puede llamar a _ **endthread** o _ **endthreadex** explícitamente para terminar un subproceso; sin embargo, se llama a _ **endthread** o _ **endthreadex** automáticamente cuando el subproceso vuelve de la rutina pasada como un parámetro a _ **beginthread** o _ **beginthreadex**. La finalización de un subproceso con una llamada a **endthread** o _ **endthreadex** ayuda a garantizar la recuperación correcta de los recursos asignados para el subproceso.
 
 > [!NOTE]
-> En el caso de un archivo ejecutable vinculado a Libcmt.lib, no llame a la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32 porque esto impide que el sistema en tiempo de ejecución reclame los recursos asignados. **_endthread** y **_endthreadex** reclamar recursos de subprocesos asignados y, a continuación, llame a **ExitThread**.
+> En el caso de un archivo ejecutable vinculado a Libcmt.lib, no llame a la API [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32 porque esto impide que el sistema en tiempo de ejecución reclame los recursos asignados. _ **endthread** y _ **endthreadex** reclaman recursos de subprocesos asignados y después llaman a **ExitThread**.
 
-**_endthread** cierra automáticamente el identificador de subproceso. (Este comportamiento difiere de Win32 **ExitThread** API.) Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
+_ **endthread** cierra automáticamente el identificador del subproceso. (Este comportamiento difiere de la API **ExitThread** de Win32). Por lo tanto, cuando use _ **beginthread** y _ **endthread**, no cierre explícitamente el identificador del subproceso llamando a la API [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) de Win32.
 
-Al igual que Win32 **ExitThread** API, **_endthreadex** no cierra el identificador de subproceso. Por lo tanto, cuando usa **_beginthreadex** y **_endthreadex**, debe cerrar el identificador de subproceso mediante una llamada a Win32 **CloseHandle** API.
+Al igual que la API **ExitThread** de Win32, _ **endthreadex** no cierra el identificador del subproceso. Por lo tanto, cuando use _ **beginthreadex** y _ **endthreadex**, debe cerrar el identificador de subproceso llamando a la API **CloseHandle** de Win32.
 
 > [!NOTE]
-> **_endthread** y **_endthreadex** hacer que los destructores de C++ pendientes en el subproceso no se puede llamar.
+> _ **endthread** y _ C++ **endthreadex** provocan que no se llame a los destructores pendientes en el subproceso.
 
 ## <a name="requirements"></a>Requisitos
 

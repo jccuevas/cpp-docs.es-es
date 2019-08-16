@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437393"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453786"
 ---
 # <a name="stack-class"></a>stack (Clase)
 
@@ -40,19 +40,19 @@ class stack
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*<br/>
+*Automáticamente*\
 Tipo de datos de los elementos que se van a almacenar en la pila.
 
-*Contenedor*<br/>
-Tipo del contenedor subyacente que se usa para implementar la pila. El valor predeterminado es la clase `deque`*\<Type>*.
+*Contenedor*\
+Tipo del contenedor subyacente que se usa para implementar la pila. El valor predeterminado es la clase `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Comentarios
 
-Los elementos de la clase `Type` estipulada en la primera plantilla de parámetro de un objeto de pila son sinónimos de [value_type](#value_type) y debe coincidir con el tipo de elemento de la clase de contenedor subyacente `Container` estipulado por la segundo parámetro de plantilla. El `Type` debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
+Los elementos de la `Type` clase estipulados en el primer parámetro de plantilla de un objeto de pila son sinónimos de [value_type](#value_type) y deben coincidir con el tipo de elemento `Container` de la clase contenedora subyacente estipulada por la segunda plantilla. parámetro. `Type` Debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
 
-Incluyen adecuada las clases contenedoras subyacentes de la pila [deque](../standard-library/deque-class.md), [list (clase)](../standard-library/list-class.md), y [vector (clase)](../standard-library/vector-class.md), o cualquier otro contenedor de secuencias que admita las operaciones `back`, `push_back`, y `pop_back`. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
+Entre las clases contenedoras subyacentes adecuadas para la pila se incluyen [deque](../standard-library/deque-class.md), [List Class](../standard-library/list-class.md)y [Vector Class](../standard-library/vector-class.md), o cualquier otro contenedor de `back`secuencias `push_back`que admita `pop_back`las operaciones de, y. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
 
-La pila de objetos son comparables de igualdad si y solo si los elementos de la clase `Type` son comparables igualdad y menor-que comparable si y solo si los elementos de la clase `Type` son menores-que comparable.
+Los objetos de pila son comparables por igualdad si y solo si `Type` los elementos de la clase son comparables de igualdad y son menos que comparables si y solo si los elementos de la clase `Type` son menos comparables.
 
 - La clase de pila es compatible con una estructura de datos LIFO (el último en entrar es el primero en salir). Un buen símil sería una pila de platos. Solo se pueden insertar e inspeccionar elementos (platos) en la parte superior de la pila, que es el último elemento al final del contenedor base, y solo se pueden quitar de ahí. La restricción de acceder únicamente al elemento superior es el motivo por el que se usa la clase stack.
 
@@ -60,23 +60,25 @@ La pila de objetos son comparables de igualdad si y solo si los elementos de la 
 
 - La [clase priority_queue](../standard-library/priority-queue-class.md) ordena sus elementos de tal modo que el elemento más grande siempre esté en la parte superior. Admite la inserción de un elemento y la inspección y eliminación del elemento superior. Un buen símil sería el de personas alineadas y organizadas por edad, altura o cualquier otro criterio.
 
+## <a name="members"></a>Miembros
+
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|||
 |-|-|
 |[stack](#stack)|Construye una `stack` que está vacía o que es una copia de un objeto contenedor base.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|||
 |-|-|
 |[container_type](#container_type)|Tipo que proporciona el contenedor base que debe adaptarse mediante una `stack`.|
 |[size_type](#size_type)|Tipo entero sin signo que puede representar el número de elementos de un `stack`.|
 |[value_type](#value_type)|Tipo que representa el tipo de objeto almacenado como elemento en una `stack`.|
 
-### <a name="member-functions"></a>Funciones miembro
+### <a name="functions"></a>Funciones
 
-|Función miembro|Descripción|
+|||
 |-|-|
 |[empty](#empty)|Comprueba si la `stack` está vacía.|
 |[pop](#pop)|Quita el elemento de la parte superior de la `stack`.|
@@ -84,13 +86,7 @@ La pila de objetos son comparables de igualdad si y solo si los elementos de la 
 |[size](#size)|Devuelve el número de elementos de `stack`.|
 |[top](#top)|Devuelve una referencia a un elemento en la parte superior de la `stack`.|
 
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<stack>
-
-**Espacio de nombres:** std
-
-## <a name="container_type"></a>  stack::container_type
+## <a name="container_type"></a>container_type
 
 Un tipo que proporciona el contenedor base que debe adaptarse.
 
@@ -108,7 +104,7 @@ Para más información sobre `Container`, vea la sección Comentarios del tema [
 
 Vea el ejemplo de [stack::stack](#stack) para obtener un ejemplo de cómo declarar y usar `container_type`.
 
-## <a name="empty"></a>  stack::empty
+## <a name="empty"></a>vacía
 
 Comprueba si una pila está vacía.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  stack::pop
+## <a name="pop"></a>emergente
 
 Quita el elemento de la parte superior de la pila.
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  stack::push
+## <a name="push"></a>enviar
 
 Agrega un elemento a la parte superior de la pila.
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*Val*\
 El elemento agregado a la parte superior de la pila.
 
 ### <a name="remarks"></a>Comentarios
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  stack::size
+## <a name="size"></a>ajusta
 
 Devuelve el número de elementos de la pila.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  stack::size_type
+## <a name="size_type"></a>size_type
 
 Un tipo entero sin signo que puede representar el número de elementos de una pila.
 
@@ -315,7 +311,7 @@ El tipo es un sinónimo de `size_type` del contenedor base adaptado por la pila.
 
 Vea el ejemplo de [size](#size) para obtener un ejemplo de cómo declarar y usar `size_type`.
 
-## <a name="stack"></a>  stack::stack
+## <a name="stack"></a>StackPanel
 
 Construye una pila que está vacía o que es una copia de una clase contenedora base.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El contenedor del que la pila construida va a ser una copia.
 
 ### <a name="example"></a>Ejemplo
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  stack::top
+## <a name="top"></a>Arriba
 
 Devuelve una referencia a un elemento en la parte superior de la pila.
 
@@ -387,7 +383,7 @@ Una referencia al último elemento del contenedor en la parte superior de la pil
 
 La pila no debe estar vacía para aplicar la función miembro. La parte superior de la pila es la posición ocupada por el elemento agregado más recientemente y es el último elemento al final del contenedor.
 
-Si el valor devuelto de `top` se asigna a un `const_reference`, no se puede modificar el objeto de pila. Si el valor devuelto de `top` se asigna a un `reference`, se puede modificar el objeto de pila.
+Si el valor devuelto `top` de se asigna a `const_reference`un, el objeto de pila no se puede modificar. Si el valor devuelto `top` de se asigna a `reference`un, el objeto de pila se puede modificar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  stack::value_type
+## <a name="value_type"></a>value_type
 
 Un tipo que representa el tipo de objeto almacenado como elemento en una pila.
 
@@ -463,5 +459,5 @@ The element at the top of the stack is 69.
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - A1016
 ms.assetid: 440b3750-ba0b-44d8-b82d-d581f62c08b2
-ms.openlocfilehash: 411ed9078ad624071d3b95c4ca8a4e1b6efae1b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 34a5ce97604665921a3cf56829a98b94831a9c2e
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639938"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934079"
 ---
 # <a name="ml-fatal-error-a1016"></a>Error irrecuperable A1016 de ML
 
@@ -20,7 +20,7 @@ ms.locfileid: "50639938"
 
 El controlador MASM, llamado ML.exe, genera un error del sistema.
 
-Anote las circunstancias del error y notifíquelo a Microsoft Corporation. Servicios de soporte técnico está disponible en [ http://support.microsoft.com/ ](http://support.microsoft.com/).
+Anote las circunstancias del error y notifíquelo a Microsoft Corporation. Hay servicios de soporte técnico del producto disponibles en [https://support.microsoft.com/](https://support.microsoft.com/).
 
 ## <a name="see-also"></a>Vea también
 

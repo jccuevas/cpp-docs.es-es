@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781047"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447308"
 ---
 # <a name="friend-assemblies-c"></a>Ensamblados de confianza (C++)
 
@@ -47,7 +47,7 @@ Aunque los tipos en el ámbito de espacio de nombres y el ámbito global pueden 
 
 Se debe conceder explícitamente acceso a todos los tipos en un ensamblado.  Por ejemplo, el ensamblado C no tiene acceso a todos los tipos en el ensamblado A Si el ensamblado C hace referencia al ensamblado B y el ensamblado B tiene acceso a todos los tipos del ensamblado A.
 
-Para obtener información acerca de cómo iniciar sesión, es decir, cómo asignar un nombre seguro para, un ensamblado que se compila mediante el compilador de Visual C++, vea [ensamblados de nombre seguro (firma de ensamblados) (C++ / c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Para obtener información acerca de cómo iniciar sesión, es decir, cómo asignar un nombre seguro para, un ensamblado que se compila mediante Microsoft C++ compilador, vea [ensamblados de nombre seguro (firma de ensamblados) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Como alternativa al uso de la característica de los ensamblados de confianza, puede usar <xref:System.Security.Permissions.StrongNameIdentityPermission> para restringir el acceso a los distintos tipos.
 

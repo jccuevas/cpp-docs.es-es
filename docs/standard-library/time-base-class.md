@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593406"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460036"
 ---
 # <a name="timebase-class"></a>time_base (Clase)
 
-La clase que actúa como clase base para las facetas de la clase plantilla time_get y definir el tipo enumerado `dateorder` y varias constantes de este tipo.
+La clase actúa como una clase base para las caras de la clase de plantilla time_get, que define solo el `dateorder` tipo enumerado y varias constantes de este tipo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,15 +38,15 @@ public:
 
 Cada constante caracteriza otra forma de ordenar los componentes de una fecha. Las constantes son:
 
-- `no_order` se especifica ningún orden determinado.
+- `no_order`no especifica ningún orden concreto.
 
-- `dmy` Especifica el orden día, mes, año, como en 2 de diciembre de 1979.
+- `dmy`especifica el orden del día, el mes y el año, como en el 2 de diciembre de 1979.
 
-- `mdy` Especifica el orden mes, día, año, como se muestra en el 2 de diciembre de 1979.
+- `mdy`especifica el orden mes, día y año, como en el 2 de diciembre de 1979.
 
-- `ymd` Especifica el orden año, mes, día, como en 1979/12/2.
+- `ymd`especifica el orden año, mes y día, como en 1979/12/2.
 
-- `ydm` Especifica el orden año, día, mes, como en 1979:2 Dic.
+- `ydm`especifica el orden año, día y mes, como en 1979: 2 Dec
 
 ## <a name="requirements"></a>Requisitos
 
@@ -56,4 +56,4 @@ Cada constante caracteriza otra forma de ordenar los componentes de una fecha. L
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

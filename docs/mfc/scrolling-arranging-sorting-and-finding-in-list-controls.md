@@ -1,6 +1,6 @@
 ---
 title: Desplazar, organizar, ordenar y buscar en los controles de lista
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - image lists [MFC], sorting
 - image lists [MFC], arranging
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-ms.openlocfilehash: 94ede322536f0ef57a87b4e6d4d448e4dff34814
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 76cff3e5b972c41d395ccec671f95c921005f1b9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277747"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511267"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Desplazar, organizar, ordenar y buscar en los controles de lista
 
-Los controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) son desplazable de forma predeterminada. Para obtener más información, consulte [posición de desplazamiento](/windows/desktop/Controls/using-list-view-controls) en el SDK de Windows y la [desplazamiento](../mfc/reference/clistctrl-class.md#scroll) función miembro.
+De forma predeterminada, los controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) son desplazables. Para obtener más información, vea [posición de desplazamiento](/windows/win32/Controls/using-list-view-controls) en el Windows SDK y la función miembro de [desplazamiento](../mfc/reference/clistctrl-class.md#scroll) .
 
-Puede llamar a `CListCtrl` las funciones miembro para organizar los elementos de lista en el control, ordenar los elementos y buscar elementos concretos. Para obtener más información, consulte [organizar, ordenar y buscar](https://msdn.microsoft.com/library/windows/desktop/bb774736) en el SDK de Windows y la [CListCtrl](../mfc/reference/clistctrl-class.md) miembros [organizar](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , y [FindItem](../mfc/reference/clistctrl-class.md#finditem).
+Puede llamar `CListCtrl` a funciones miembro para organizar elementos de lista en el control, ordenar elementos y buscar elementos concretos. Para obtener más información, vea [usar controles ListView](/windows/win32/Controls/using-list-view-controls) en el Windows SDK y los miembros [CListCtrl](../mfc/reference/clistctrl-class.md) [Arrange](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems)y [FindItem](../mfc/reference/clistctrl-class.md#finditem).
 
 ## <a name="see-also"></a>Vea también
 

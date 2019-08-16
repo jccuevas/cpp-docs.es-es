@@ -1,21 +1,21 @@
 ---
-title: max_is (C++ atributo COM)
+title: max_is (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041314"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514426"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Designa el valor máximo para un índice de matriz válida.
+Designa el valor máximo de un índice de matriz válido.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,11 +26,11 @@ Designa el valor máximo para un índice de matriz válida.
 ### <a name="parameters"></a>Parámetros
 
 *expression*<br/>
-Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
+Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
 ## <a name="remarks"></a>Comentarios
 
-El **max_is** C++ atributo tiene la misma funcionalidad que el [max_is](/windows/desktop/Midl/max-is) atributo MIDL.
+El atributo **max_is** C++ tiene la misma funcionalidad que el atributo MIDL [max_is](/windows/win32/Midl/max-is) .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,16 +38,16 @@ El **max_is** C++ atributo tiene la misma funcionalidad que el [max_is](/windows
 
 |||
 |-|-|
-|**Se aplica a**|Campo de **struct** o **unión**, parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|**size_is**|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
+Vea [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
 
 ## <a name="see-also"></a>Vea también
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
-ms.openlocfilehash: 2313c436a1fd25149fa7ea72f122a6f323b40028
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd65b5006326850522a251cbcf7d655133a1aa8a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575804"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245579"
 ---
 # <a name="nothrowt-structure"></a>nothrow_t (Estructura)
 
@@ -30,13 +30,3 @@ El struct ayuda al compilador a seleccionar la versión correcta del constructor
 ## <a name="example"></a>Ejemplo
 
 Vea [operator new](../standard-library/new-operators.md#op_new) y [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obtener ejemplos de cómo se usa `std::nothrow_t` como un parámetro de función.
-
-## <a name="requirements"></a>Requisitos
-
-**Encabezado:** \<new>
-
-**Espacio de nombres:** std
-
-## <a name="see-also"></a>Vea también
-
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

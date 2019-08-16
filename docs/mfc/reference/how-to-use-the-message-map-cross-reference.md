@@ -1,17 +1,15 @@
 ---
 title: Procedimiento Use la referencia cruzada del mapa de mensajes
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.messages
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-ms.openlocfilehash: 9467dce943da8c5fb447dcd3c83d044218fa183d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 58659dbf4e4bc817381faaef930334a80f664b03
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326106"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612164"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>Procedimiento Use la referencia cruzada del mapa de mensajes
 
@@ -21,7 +19,7 @@ En todos los casos, coloque el prototipo de función en el `CWnd`: encabezado de
 
 Se utilizan los términos siguientes:
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |id|Cualquier Id. de elemento de menú definido por el usuario (mensajes WM_COMMAND) o el Id. de control (mensajes de notificación de ventana secundaria).|
 |"mensaje" y "wNotifyCode"|Identificadores de mensajes de Windows tal como se define en WINDOWS. H.|

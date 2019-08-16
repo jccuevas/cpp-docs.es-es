@@ -1,24 +1,28 @@
 ---
 title: 'Generar archivos de información de examen: Información general'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820636"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220550"
 ---
 # <a name="building-browse-information-files-overview"></a>Generar archivos de información de examen: Información general
 
+
+> [!WARNING]
+> Aunque BSCMAKE todavía se instala con Visual Studio, el IDE ya no lo utiliza. Desde Visual Studio 2008, la información de examen y de símbolos se almacena automáticamente en un archivo .sdf de SQL Server en la carpeta de soluciones.
+
 Para crear información de examen para la exploración de símbolos, el compilador crea un archivo .sbr para cada archivo de código fuente en el proyecto, a continuación, BSCMAKE. EXE concatena los archivos .sbr en un archivo .bsc.
 
-Generación de archivos .sbr y .bsc lleva tiempo, por lo que Visual C++ desactiva estas funciones de forma predeterminada. Si desea examinar la información actual, debe activar las opciones de exploración y compile el proyecto nuevo.
+Generación de archivos .sbr y .bsc lleva tiempo, por lo que Visual Studio desactiva estas funciones de forma predeterminada. Si desea examinar la información actual, debe activar las opciones de exploración y compile el proyecto nuevo.
 
 Use [/FR](fr-fr-create-dot-sbr-file.md) o [/Fr](fr-fr-create-dot-sbr-file.md) para indicar al compilador para crear los archivos. sbr. Para crear archivos .bsc, puede llamar a [BSCMAKE](bscmake-command-line.md) desde la línea de comandos. Uso de BSCMAKE desde la línea de comandos le ofrece control más preciso sobre la manipulación de archivos de información de examen. Consulte [referencia de BSCMAKE](bscmake-reference.md) para obtener más información.
 

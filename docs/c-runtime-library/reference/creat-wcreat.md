@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335313"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -90,11 +90,11 @@ El **_creat** función crea un nuevo archivo o abre y trunca uno existente. **_w
 
 Si el archivo especificado por *filename* no existe, un nuevo archivo se crea con la configuración de permisos especificado y se abre para escritura. Si el archivo ya existe y su configuración de permisos permite escritura, **_creat** trunca el archivo de longitud 0, destruir el contenido anterior y lo abre para escritura. La configuración de permisos, *pmode*, se aplica a solo los archivos recién creados. El nuevo archivo recibe la configuración de permisos especificada cuando se cierra por primera vez. La expresión de entero *pmode* contiene una o ambas constantes del manifiesto **_S_IWRITE** y **_S_IREAD**, que se definen en sys\stat. Cuando ambas constantes se proporcionan, se unen con el bit a bit o un operador ( **&#124;** ). El *pmode* parámetro se establece en uno de los siguientes valores.
 
-|Valor|de esquema JSON|
+|Valor|Definición|
 |-----------|----------------|
 |**_S_IWRITE**|Escritura permitida.|
 |**_S_IREAD**|Lectura permitida.|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Lectura y escritura permitidas.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Lectura y escritura permitidas.|
 
 Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Los modos de **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** , a continuación, son equivalentes. Los archivos abiertos con **_creat** siempre se abren en modo de compatibilidad (consulte [_sopen](sopen-wsopen.md)) con **_SH_DENYNO**.
 

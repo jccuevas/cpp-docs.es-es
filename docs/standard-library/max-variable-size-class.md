@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: a7fde40352a878575ddce8b48b4c97093ae7a960
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8b3c61676f784bf9369c22b5db97d7b251f7ac6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482880"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447282"
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size (Clase)
 
@@ -35,13 +35,13 @@ class max_variable_size
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[max_variable_size](#max_variable_size)|Construye un objeto de tipo `max_variable_size`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[allocated](#allocated)|Aumenta el número de bloques de memoria asignada.|
 |[deallocated](#deallocated)|Reduce el número de bloques de memoria asignada.|
@@ -65,13 +65,13 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro agrega *_Nx* al valor almacenado `_Nallocs`. Esta función miembro se llama después de cada llamada correcta por `cache_freelist::allocate` al operador **nuevo**. El argumento *_Nx* es el número de bloques de memoria del fragmento asignado por el operador **nuevo**.
+Esta función miembro agrega *_Nx* al valor `_Nallocs`almacenado. Se llama a esta función miembro después de cada llamada `cache_freelist::allocate` correcta por al operador **New**. El argumento *_Nx* es el número de bloques de memoria del fragmento asignado por el operador **New**.
 
 ## <a name="deallocated"></a>  max_variable_size::deallocated
 
@@ -83,13 +83,13 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|Descripción|
+|Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*_Nx*|Valor de incremento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro resta *_Nx* del valor almacenado `_Nallocs`. Se llama a esta función miembro después de cada llamada por `cache_freelist::deallocate` al operador **eliminar**. El argumento *_Nx* es el número de bloques de memoria del fragmento desasignado por el operador **eliminar**.
+La función miembro resta *_Nx* del valor `_Nallocs`almacenado. Se llama a esta función miembro después de cada `cache_freelist::deallocate` llamada realizada por al operador **Delete**. El argumento *_Nx* es el número de bloques de memoria del fragmento desasignados por el operador **Delete**.
 
 ## <a name="full"></a>  max_variable_size::full
 
@@ -101,11 +101,11 @@ bool full();
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si `_Nallocs / 16 + 16 <= _Nblocks`.
+**true** si `_Nallocs / 16 + 16 <= _Nblocks`.
 
 ### <a name="remarks"></a>Comentarios
 
-Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve **true**, `deallocate` coloca el bloque de memoria en la lista libre; si devuelve false, `deallocate` llama al operador **eliminar** desasignar el bloque.
+Se llama a esta función miembro mediante `cache_freelist::deallocate`. Si la llamada devuelve **true**, `deallocate` coloca el bloque de memoria en la lista libre; si devuelve false, `deallocate` llama al operador **Delete** para desasignar el bloque.
 
 ## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
 
@@ -145,4 +145,4 @@ Esta función miembro aumenta el valor almacenado `_Nblocks`. Esta función miem
 
 ## <a name="see-also"></a>Vea también
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

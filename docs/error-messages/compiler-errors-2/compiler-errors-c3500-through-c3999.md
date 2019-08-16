@@ -1,6 +1,6 @@
 ---
-title: Errores de compilador C3500 a C3999
-ms.date: 11/17/2017
+title: Errores del compilador de C3500 a C3999
+ms.date: 04/21/2019
 f1_keywords:
 - C3502
 - C3503
@@ -246,14 +246,14 @@ f1_keywords:
 - C3998
 - C3999
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
-ms.openlocfilehash: 02686b8c12643480dc18ad665eb7f17e2b8d1170
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5cb482804dac90a278036d594dc92e7be33e2bf
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857715"
 ---
-# <a name="compiler-errors-c3500-through-c3999"></a>Errores de compilador C3500 a C3999
+# <a name="compiler-errors-c3500-through-c3999"></a>Errores del compilador de C3500 a C3999
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el compilador.
 
@@ -265,34 +265,34 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |-----------|-------------|
 |[Error del compilador C3500](compiler-error-c3500.md)|ProgID no válido '*progid*'|
 |[Error del compilador C3501](compiler-error-c3501.md)|No hay ninguna typelib registrada para el ProgID "*progid*'|
-|C3502 de Error del compilador|no se puede obtener LIBID para ProgID '*progid*'|
-|C3503 de Error del compilador|carácter "0 x*valor*' no se permite en una cadena sin formato literal|
-|C3504 de Error del compilador|no se puede crear un GUID de cadena '*cadena*'|
+|Error del compilador C3502|no se puede obtener LIBID para ProgID '*progid*'|
+|Error del compilador C3503|carácter "0 x*valor*' no se permite en una cadena sin formato literal|
+|Error del compilador C3504|no se puede crear un GUID de cadena '*cadena*'|
 |[Error del compilador C3505](compiler-error-c3505.md)|no se puede cargar la biblioteca de tipos '*biblioteca*'|
 |[Error del compilador C3506](compiler-error-c3506.md)|No hay ninguna typelib registrada para el LIBID '*biblioteca*'|
 |[Error del compilador C3507](compiler-error-c3507.md)|un ProgID puede tener no más de 39 caracteres*progid*'; no puede tener cualquier puntuación a excepción de '.'; ni comenzar por un dígito|
 |[Error del compilador C3508](compiler-error-c3508.md)|'*tipo*': no es un tipo válido de automatización|
 |[Error del compilador C3509](compiler-error-c3509.md)|'*tipo*': no válido del tipo de valor devuelto de automatización; cuando un parámetro se marca como 'retval', el tipo de valor devuelto debe ser 'void', 'HRESULT' o 'SCODE'|
 |[Error del compilador C3510](compiler-error-c3510.md)|no se encuentra la biblioteca de tipos dependiente *biblioteca*|
-|C3511 de Error del compilador|'*identificador*': una llamada a un constructor de delegación será el único inicializador de miembro|
-|C3512 de Error del compilador|la secuencia de caracteres delimitadores para un literal de cadena sin formato tendrán no más de 16 caracteres|
-|C3513 de Error del compilador|'*cadena*': no admite el carácter de delimitador de literal de cadena sin formato|
-|C3514 de Error del compilador|'*carácter*' (*valor*): no admite el carácter de delimitador de literal de cadena sin formato|
-|C3515 de Error del compilador|Si un argumento para una especialización parcial de plantillas de clase es una expansión del paquete será el último argumento|
-|C3516 de Error del compilador|inesperado final de archivo encontrado al procesar la cadena sin formato literal; secuencia de delimitador '*cadena*' no coincidió|
-|C3517 de Error del compilador|'*identificador*' una declaración de alias no puede tener un tipo que contiene 'auto'|
-|Compilador Error C3518|'*identificador*': en un contexto de inicialización de lista directa del tipo para '*tipo*' solo se puede deducir a partir de una expresión de inicializador simple|
+|Error del compilador C3511|'*identificador*': una llamada a un constructor de delegación será el único inicializador de miembro|
+|Error del compilador C3512|la secuencia de caracteres delimitadores para un literal de cadena sin formato tendrán no más de 16 caracteres|
+|Error del compilador C3513|'*cadena*': no admite el carácter de delimitador de literal de cadena sin formato|
+|Error del compilador C3514|'*carácter*' (*valor*): no admite el carácter de delimitador de literal de cadena sin formato|
+|Error del compilador C3515|Si un argumento para una especialización parcial de plantillas de clase es una expansión del paquete será el último argumento|
+|Error del compilador C3516|inesperado final de archivo encontrado al procesar la cadena sin formato literal; secuencia de delimitador '*cadena*' no coincidió|
+|Error del compilador C3517|'*identificador*' una declaración de alias no puede tener un tipo que contiene 'auto'|
+|Error del compilador C3518|'*identificador*': en un contexto de inicialización de lista directa del tipo para '*tipo*' solo se puede deducir a partir de una expresión de inicializador simple|
 |[Error del compilador C3519](compiler-error-c3519.md)|'*parámetro*': parámetro no válido para el atributo embedded_idl|
-|C3520 de Error del compilador|'*identificador*': paquete de parámetros debe expandirse en este contexto|
-|C3521 de Error del compilador|'*identificador*' no es un paquete de parámetros|
-|C3522 de Error del compilador|'*tipo*': no se puede expandir el paquete de parámetros en este contexto|
-|C3523 de Error del compilador|'sizeof...' requiere como argumento un paquete de parámetros sin expandir|
-|C3524 de Error del compilador|'*identificador*': 'sizeof' no puede aplicarse a un paquete de parámetros. ¿Pretendía usar 'sizeof...'?|
-|C3525 de Error del compilador|'*parámetro*': si una plantilla de clase tiene un paquete de parámetros de plantilla debe aparecer al final de la lista de parámetros de plantilla|
-|C3526 de Error del compilador|'...' no se puede aplicar a 'this'|
-|C3527 de Error del compilador|'*identificador*' no es un operando válido para 'sizeof...'. ¿Pretendía usar 'sizeof'?|
-|C3528 de Error del compilador|'*identificador1*': el número de elementos de esta expansión del paquete no coincide con el número de elementos en '*identificador2*'|
-|C3529 de Error del compilador|'*parámetro*': un paquete de parámetros de plantilla no puede tener un argumento predeterminado|
+|Error del compilador C3520|'*identificador*': paquete de parámetros debe expandirse en este contexto|
+|Error del compilador C3521|'*identificador*' no es un paquete de parámetros|
+|Error del compilador C3522|'*tipo*': no se puede expandir el paquete de parámetros en este contexto|
+|Error del compilador C3523|'sizeof...' requiere como argumento un paquete de parámetros sin expandir|
+|Error del compilador C3524|'*identificador*': 'sizeof' no puede aplicarse a un paquete de parámetros. ¿Pretendía usar 'sizeof...'?|
+|Error del compilador C3525|'*parámetro*': si una plantilla de clase tiene un paquete de parámetros de plantilla debe aparecer al final de la lista de parámetros de plantilla|
+|Error del compilador C3526|'...' no se puede aplicar a 'this'|
+|Error del compilador C3527|'*identificador*' no es un operando válido para 'sizeof...'. ¿Pretendía usar 'sizeof'?|
+|Error del compilador C3528|'*identificador1*': el número de elementos de esta expansión del paquete no coincide con el número de elementos en '*identificador2*'|
+|Error del compilador C3529|'*parámetro*': un paquete de parámetros de plantilla no puede tener un argumento predeterminado|
 |[Error del compilador C3530](compiler-error-c3530.md)|'*tipo*' no se puede combinar con ningún otro especificador de tipo|
 |[Error del compilador C3531](compiler-error-c3531.md)|'*identificador*': un símbolo cuyo tipo contiene '*tipo*' debe tener un inicializador|
 |[Error del compilador C3532](compiler-error-c3532.md)|el tipo de elemento de matriz no puede ser un tipo que contiene '*tipo*'|
@@ -305,14 +305,14 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3539](compiler-error-c3539.md)|un argumento de plantilla no puede ser un tipo que contiene '*tipo*'|
 |[Error del compilador C3540](compiler-error-c3540.md)|no se puede aplicar sizeof a un tipo que contiene '*tipo*'|
 |[Error del compilador C3541](compiler-error-c3541.md)|no se puede aplicar typeid a un tipo que contiene '*tipo*'|
-|C3542 de Error del compilador|'*identificador*': una función miembro virtual no debe tener un tipo de valor devuelto que contiene '*tipo*'|
-|C3543 de Error del compilador|'*tipo*': no tiene un paquete de parámetros|
-|C3544 de Error del compilador|'*parámetro*': paquete de parámetros espera un argumento de tipo de plantilla|
-|C3545 de Error del compilador|'*parámetro*': paquete de parámetros espera un argumento de plantilla sin tipo|
-|C3546 de Error del compilador|'...': no hay ningún paquete de parámetros disponible para expandir|
-|C3547 de Error del compilador|parámetro de plantilla '*parámetro*'no se puede usar porque sigue a un paquete de parámetros de plantilla y no se puede deducir de los parámetros de función de'*función*'|
-|C3548 de Error del compilador|'*identificador*': paquete de parámetros no se puede usar en este contexto|
-|C3549 de Error del compilador|'*valor*': un paquete de parámetros de función no puede tener un argumento predeterminado|
+|Error del compilador C3542|'*identificador*': una función miembro virtual no debe tener un tipo de valor devuelto que contiene '*tipo*'|
+|Error del compilador C3543|'*tipo*': no tiene un paquete de parámetros|
+|Error del compilador C3544|'*parámetro*': paquete de parámetros espera un argumento de tipo de plantilla|
+|Error del compilador C3545|'*parámetro*': paquete de parámetros espera un argumento de plantilla sin tipo|
+|Error del compilador C3546|'...': no hay ningún paquete de parámetros disponible para expandir|
+|Error del compilador C3547|parámetro de plantilla '*parámetro*'no se puede usar porque sigue a un paquete de parámetros de plantilla y no se puede deducir de los parámetros de función de'*función*'|
+|Error del compilador C3548|'*identificador*': paquete de parámetros no se puede usar en este contexto|
+|Error del compilador C3549|'*valor*': un paquete de parámetros de función no puede tener un argumento predeterminado|
 |[Error del compilador C3550](compiler-error-c3550.md)|solo se permite 'decltype(auto)' sin formato en este contexto|
 |[Error del compilador C3551](compiler-error-c3551.md)|Si se usa un tipo de valor devuelto final, a continuación, el tipo de valor devuelto inicial será el único especificador de tipo 'auto' (no '*tipo*')|
 |[Error del compilador C3552](compiler-error-c3552.md)|se esperaba decltype 'de (de Auto)'|
@@ -322,69 +322,69 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3556](compiler-error-c3556.md)|'*expresión*': argumento incorrecto para 'decltype'|
 |Error del compilador C3557|Obsoleto.|
 |Error del compilador C3558|Obsoleto.|
-|C3559 de Error del compilador|llamada recursiva a '*función*': la recursividad se detecta al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
-|C3560 de Error del compilador|'*función*': IL no está disponible al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
-|C3561 de Error del compilador|icono de la operación de barrera se encuentra en el flujo de control que no está uniformidad de mosaico al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
-|C3562 de Error del compilador|función intrínseca '*función*' se limita a no tener más de *número* parámetros|
-|C3563 de Error del compilador|Bucle infinito detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
-|C3564 de Error del compilador|leer un valor no inicializado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
-|C3565 de Error del compilador|La cantidad total de memoria tile_static (*número* bytes) supera el límite de *número* bytes al compilar el gráfico de llamadas para Concurrency:: parallel_for_each|
-|C3566 de Error del compilador|bloques con efectos secundarios anidados demasiado al compilar la llamada de gráfico para Concurrency:: parallel_for_each en: '*función*'|
-|C3567 de Error del compilador|división o modificación por cero detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
-|C3568 de Error del compilador|la suma de registros supera el límite de *número* al compilar el gráfico de llamadas para Concurrency:: parallel_for_each. Simplifique el programa|
-|C3569 de Error del compilador|se detectó al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en una condición de carrera: '*función*'|
-|C3570 de Error del compilador|uso no válido de amp ámbito con restricción cuando se compila con/CLR|
-|C3571 de Error del compilador|'*tipo*': argumento de dominio de cálculo no válido; no es un tipo de clase|
-|C3572 de Error del compilador|'*tipo*': argumento de dominio de cálculo no válido; falta el miembro público: 'static const int rank' o el valor de rango no es positivo|
-|C3573 de Error del compilador|No puede superar el número de instancias de concurrency::graphics::sampler pasado a Concurrency:: parallel_for_each *número*|
-|C3574 de Error del compilador|'*tipo*': extensiones de mosaico no válido: debe ser positivo y (1) Z < = *número*; (2) Z*Y*X < = *número*|
-|C3575 de Error del compilador|'*tipo*': argumento de dominio de cálculo no válido; falta el miembro público: ' Concurrency:: index <*número*> _map_index (const Concurrency:: index <*número*> &) Restrict (amp) '|
-|C3576 de Error del compilador|'*tipo*': argumento concurrency::details::_Parallel_for_each #*número* tipo no compatible|
-|C3577 de Error del compilador|argumento de kernel Concurrency:: parallel_for_each no es válida: no se puede resolver la llamada al miembro ' void operator() (*tipo*) Restrict (amp) '|
-|C3578 de Error del compilador|No puede superar el tamaño del objeto de función pasado a Concurrency:: parallel_for_each *número* bytes|
-|C3579 de Error del compilador|No puede superar el número de instancias de solo lectura de Concurrency:: Array y Graphics:: Texture pasado a Concurrency:: parallel_for_each *número*|
-|C3580 de Error del compilador|No puede superar el número de instancias modificables de Concurrency:: Array y Graphics:: Texture pasado a Concurrency:: parallel_for_each *número*|
-|C3581 de Error del compilador|'*tipo*': código con restricción de tipo no admitido en amp|
-|C3582 de Error del compilador|Obsoleto.|
-|C3583 de Error del compilador|'*identificador*': el tamaño de la variable (*número* bytes) es mayor que el tamaño máximo (*número* bytes) admitido en código de la restricción de amp|
-|C3584 de Error del compilador|no se admite el uso de tile_static en '*identificador*'|
-|C3585 de Error del compilador|'*identificador*' con código con restricción de clase de almacenamiento no admitido en amp|
-|C3586 de Error del compilador|'*identificador*': uso de variables globales o estáticas no admitido en el código de la restricción de amp|
-|C3587 de Error del compilador|dynamic_cast no se admite en el código de la restricción de amp|
-|C3588 de Error del compilador|realiza la conversión de '*type1*'para'*type2*' no se admite en código de la restricción de amp|
-|C3589 de Error del compilador|'*cadena*': código con restricción de uso no admitido de literales de cadena de amp|
-|C3590 de Error del compilador|'*token*': 'this' captura o captura por referencia no se admite si la expresión lambda tiene restringida de amp|
-|C3591 de Error del compilador|operador typeid no se admite en el código de la restricción de amp|
-|C3592 de Error del compilador|Ensamblado nativo alineado ('__asm') no se admite en el código de la restricción de amp|
-|C3593 de Error del compilador|'goto' no se admite en el código de la restricción de amp|
-|C3594 de Error del compilador|excepciones (try, catch, throw etc.) no se admite en el código de la restricción de amp|
-|C3595 de Error del compilador|el valor constante está fuera del intervalo admitido en código de la restricción de amp|
-|C3596 de Error del compilador|'*parámetro*' ('*tipo*'): variable capturada por lambda tipo no compatible en el código de la restricción de amp|
-|C3597 de Error del compilador|'*parámetro*': '*identificador*' no se permite que se capturan por valor, si la expresión lambda tiene restringida de amp|
-|C3598 de Error del compilador|instrucción de etiqueta no se admite en el código de la restricción de amp|
-|C3599 de Error del compilador|'*operador*': no se puede realizar aritmética de puntero a bool en código de la restricción de amp|
-|C3600 de Error del compilador|'*función*': uso de icono\_memoria estática detectada al compilar el gráfico de llamadas para el concurrency::parallel sin mosaico\_for_each en: '*función*'|
-|C3601 de Error del compilador|'*tipo*': es el tipo de argumento no válido para la función de diagnóstico amp '*función*'|
-|C3602 de Error del compilador|No admite el flujo de control detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3559|llamada recursiva a '*función*': la recursividad se detecta al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3560|'*función*': IL no está disponible al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3561|icono de la operación de barrera se encuentra en el flujo de control que no está uniformidad de mosaico al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3562|función intrínseca '*función*' se limita a no tener más de *número* parámetros|
+|Error del compilador C3563|Bucle infinito detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3564|leer un valor no inicializado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3565|La cantidad total de memoria tile_static (*número* bytes) supera el límite de *número* bytes al compilar el gráfico de llamadas para Concurrency:: parallel_for_each|
+|Error del compilador C3566|bloques con efectos secundarios anidados demasiado al compilar la llamada de gráfico para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3567|división o modificación por cero detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
+|Error del compilador C3568|la suma de registros supera el límite de *número* al compilar el gráfico de llamadas para Concurrency:: parallel_for_each. Simplifique el programa|
+|Error del compilador C3569|se detectó al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en una condición de carrera: '*función*'|
+|Error del compilador C3570|uso no válido de amp ámbito con restricción cuando se compila con/CLR|
+|Error del compilador C3571|'*tipo*': argumento de dominio de cálculo no válido; no es un tipo de clase|
+|Error del compilador C3572|'*tipo*': argumento de dominio de cálculo no válido; falta el miembro público: 'static const int rank' o el valor de rango no es positivo|
+|Error del compilador C3573|No puede superar el número de instancias de concurrency::graphics::sampler pasado a Concurrency:: parallel_for_each *número*|
+|Error del compilador C3574|'*tipo*': extensiones de mosaico no válido: debe ser positivo y (1) Z < = *número*; (2) Z*Y*X < = *número*|
+|Error del compilador C3575|'*type*': illegal compute domain argument; missing public member: 'concurrency::index<*number*> _map_index(const concurrency::index<*number*>&) restrict(amp)'|
+|Error del compilador C3576|'*tipo*': argumento concurrency::details::_Parallel_for_each #*número* tipo no compatible|
+|Error del compilador C3577|argumento de kernel Concurrency:: parallel_for_each no es válida: no se puede resolver la llamada al miembro ' void operator() (*tipo*) Restrict (amp) '|
+|Error del compilador C3578|No puede superar el tamaño del objeto de función pasado a Concurrency:: parallel_for_each *número* bytes|
+|Error del compilador C3579|No puede superar el número de instancias de solo lectura de Concurrency:: Array y Graphics:: Texture pasado a Concurrency:: parallel_for_each *número*|
+|Error del compilador C3580|No puede superar el número de instancias modificables de Concurrency:: Array y Graphics:: Texture pasado a Concurrency:: parallel_for_each *número*|
+|Error del compilador C3581|'*tipo*': código con restricción de tipo no admitido en amp|
+|Error del compilador C3582|Obsoleto.|
+|Error del compilador C3583|'*identificador*': el tamaño de la variable (*número* bytes) es mayor que el tamaño máximo (*número* bytes) admitido en código de la restricción de amp|
+|Error del compilador C3584|no se admite el uso de tile_static en '*identificador*'|
+|Error del compilador C3585|'*identificador*' con código con restricción de clase de almacenamiento no admitido en amp|
+|Error del compilador C3586|'*identificador*': uso de variables globales o estáticas no admitido en el código de la restricción de amp|
+|Error del compilador C3587|dynamic_cast no se admite en el código de la restricción de amp|
+|Error del compilador C3588|realiza la conversión de '*type1*'para'*type2*' no se admite en código de la restricción de amp|
+|Error del compilador C3589|'*cadena*': código con restricción de uso no admitido de literales de cadena de amp|
+|Error del compilador C3590|'*token*': 'this' captura o captura por referencia no se admite si la expresión lambda tiene restringida de amp|
+|Error del compilador C3591|operador typeid no se admite en el código de la restricción de amp|
+|Error del compilador C3592|Ensamblado nativo alineado ('__asm') no se admite en el código de la restricción de amp|
+|Error del compilador C3593|'goto' no se admite en el código de la restricción de amp|
+|Error del compilador C3594|excepciones (try, catch, throw etc.) no se admite en el código de la restricción de amp|
+|Error del compilador C3595|el valor constante está fuera del intervalo admitido en código de la restricción de amp|
+|Error del compilador C3596|'*parámetro*' ('*tipo*'): variable capturada por lambda tipo no compatible en el código de la restricción de amp|
+|Error del compilador C3597|'*parámetro*': '*identificador*' no se permite que se capturan por valor, si la expresión lambda tiene restringida de amp|
+|Error del compilador C3598|instrucción de etiqueta no se admite en el código de la restricción de amp|
+|Error del compilador C3599|'*operador*': no se puede realizar aritmética de puntero a bool en código de la restricción de amp|
+|Error del compilador C3600|'*función*': uso de icono\_memoria estática detectada al compilar el gráfico de llamadas para el concurrency::parallel sin mosaico\_for_each en: '*función*'|
+|Error del compilador C3601|'*tipo*': es el tipo de argumento no válido para la función de diagnóstico amp '*función*'|
+|Error del compilador C3602|No admite el flujo de control detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*función*'|
 |[Error del compilador C3603](compiler-error-c3603.md)|'*símbolo*': tipo '*tipo*' todavía no se admite|
-|C3604 de Error del compilador|'*identificador*': solo se puede crear un objeto administrado en el montón gc|
-|C3605 de Error del compilador|El número total de muestras (*número* capturan y *número* predefinidas) supera *número* al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: ' *función*'|
-|C3606 de Error del compilador|Obsoleto.|
-|C3607 de Error del compilador|Obsoleto.|
-|C3608 de Error del compilador|Obsoleto.|
+|Error del compilador C3604|'*identificador*': solo se puede crear un objeto administrado en el montón gc|
+|Error del compilador C3605|El número total de muestras (*número* capturan y *número* predefinidas) supera *número* al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: ' *función*'|
+|Error del compilador C3606|Obsoleto.|
+|Error del compilador C3607|Obsoleto.|
+|Error del compilador C3608|Obsoleto.|
 |[Error del compilador C3609](compiler-error-c3609.md)|'*identificador*': una función 'sealed o final' debe ser virtual|
 |[Error del compilador C3610](compiler-error-c3610.md)|'*identificador*': tipo de valor debe ser 'boxing' antes del método '*método*' se puede llamar a|
 |[Error del compilador C3611](compiler-error-c3611.md)|'*identificador*': una función sealed no puede tener un especificador puro|
 |[Error del compilador C3612](compiler-error-c3612.md)|'*identificador*': una clase sellada no puede tener métodos virtuales puros|
-|C3613 de Error del compilador|Falta el tipo de valor devuelto después de '->' ('' se presupone int)|
-|C3614 de Error del compilador|Diferentes valores para el tamaño de paquete dentro de la misma clase. anterior era '*valor*', en el nuevo valor es'*valor*'|
+|Error del compilador C3613|Falta el tipo de valor devuelto después de '->' ('' se presupone int)|
+|Error del compilador C3614|Diferentes valores para el tamaño de paquete dentro de la misma clase. anterior era '*valor*', en el nuevo valor es'*valor*'|
 |[Error del compilador C3615](compiler-error-c3615.md)|la función constexpr '*función*' no se puede dar lugar a una expresión constante|
 |Error del compilador C3616|Obsoleto.|
-|C3617 de Error del compilador|Obsoleto.|
+|Error del compilador C3617|Obsoleto.|
 |[Error del compilador C3618](compiler-error-c3618.md)|'*declaración*': no se puede definir un método marcado como DllImport|
 |[Error del compilador C3619](compiler-error-c3619.md)|no se puede declarar una plantilla dentro de un tipo administrado o WinRT|
-|C3620 de Error del compilador|'*tipo*': no se puede establecer la alineación en tipos de WinRT|
-|C3621 de Error del compilador|'*tipo*': solo el valor de empaquetado predeterminado (*número*) se permite para tipos de WinRT|
+|Error del compilador C3620|'*tipo*': no se puede establecer la alineación en tipos de WinRT|
+|Error del compilador C3621|'*tipo*': solo el valor de empaquetado predeterminado (*número*) se permite para tipos de WinRT|
 |[Error del compilador C3622](compiler-error-c3622.md)|*tipo*': una clase declarada como '*palabra clave*' no pueden crearse instancias|
 |[Error del compilador C3623](compiler-error-c3623.md)|'*identificador*': no se admiten campos de bits en tipos administrados o WinRT|
 |[Error del compilador C3624](compiler-error-c3624.md)|'*tipo*': uso de este tipo requiere una referencia al ensamblado o módulo '*identificador*'|
@@ -392,27 +392,27 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3626](compiler-error-c3626.md)|'*identificador*': '*palabra clave*' palabra clave solo puede usarse en las interfaces COM, funciones miembro y miembros de datos que sean punteros a delegados|
 |[Error del compilador C3627](compiler-error-c3627.md)|Solo un tipo de valor puede aplicarle la conversión boxing|
 |[Error del compilador C3628](compiler-error-c3628.md)|'*clase*': las clases administradas o WinRT solo admiten herencia pública|
-|C3629 de Error del compilador|'*token*': un valor predeterminado de captura solo puede aparecer al principio de una lista de capturas lambda|
+|Error del compilador C3629|'*token*': un valor predeterminado de captura solo puede aparecer al principio de una lista de capturas lambda|
 |[Error del compilador C3630](compiler-error-c3630.md)|Error al procesar el token '*token*'|
 |[Error del compilador C3631](compiler-error-c3631.md)|'*eventos*': no se pueden sobrecargar eventos administrados o WinRT|
 |[Error del compilador C3632](compiler-error-c3632.md)|'*eventos*': estilo no válido de eventos para *construir*|
 |[Error del compilador C3633](compiler-error-c3633.md)|no se puede definir '*identificador*'como administrado de un miembro de'*clase*'|
 |[Error del compilador C3634](compiler-error-c3634.md)|'*miembro*': no se puede definir un método abstracto de una clase administrada o WinRT|
-|C3635 de Error del compilador|'*identificador*': no se puede aplicar a una clase administrada o WinRT (use '*identificador*' en su lugar)|
-|Error C3636 de Error del compilador|'*identificador*': no se puede aplicar a este tipo|
+|Error del compilador C3635|'*identificador*': no se puede aplicar a una clase administrada o WinRT (use '*identificador*' en su lugar)|
+|Error del compilador error C3636|'*identificador*': no se puede aplicar a este tipo|
 |[Error del compilador C3637](compiler-error-c3637.md)|'*función*': una definición de función friend no puede ser una especialización de una plantilla de función/generic|
 |[Error del compilador C3638](compiler-error-c3638.md)|'*operador*': no se puede redefinir la conversión boxing estándar y los operadores de conversión unboxing|
-|C3639 de Error del compilador|Obsoleto.|
+|Error del compilador C3639|Obsoleto.|
 |[Error del compilador C3640](compiler-error-c3640.md)|'*miembro*': se debe definir una función miembro virtual o que se hace referencia de una clase local|
 |[Error del compilador C3641](compiler-error-c3641.md)|'*función*': convención de llamada no válida '*convención*' para la función compilada con/CLR: pure o/CLR: safe|
 |[Error del compilador C3642](compiler-error-c3642.md)|'*función*': no se puede llamar a una función con la convención de llamada desde código nativo __clrcall|
-|C3643 de Error del compilador|Obsoleto.|
+|Error del compilador C3643|Obsoleto.|
 |[Error del compilador C3644](compiler-error-c3644.md)|'*función*': no se puede compilar la función para generar código administrado|
 |[Error del compilador C3645](compiler-error-c3645.md)|'*función*': no se puede utilizar __clrcall en funciones compiladas para código nativo|
 |[Error del compilador C3646](compiler-error-c3646.md)|'*identificador*': especificador de invalidación desconocido|
-|C3647 de Error del compilador|Obsoleto.|
+|Error del compilador C3647|Obsoleto.|
 |[Error del compilador C3648](compiler-error-c3648.md)|Esta sintaxis de invalidación explícita no se admite para tipos administrados|
-|C3649 de Error del compilador|Esta sintaxis de invalidación explícita no se permite con/ZW|
+|Error del compilador C3649|Esta sintaxis de invalidación explícita no se permite con/ZW|
 |[Error del compilador C3650](compiler-error-c3650.md)|'*miembro*': no se puede utilizar como invalidación explícita, debe ser una función miembro virtual de una clase base|
 |[Error del compilador C3651](compiler-error-c3651.md)|'*miembro*': no se puede utilizar como invalidación explícita, debe ser miembro de una clase base|
 |[Error del compilador C3652](compiler-error-c3652.md)|'*miembro*': una función que realiza invalidaciones explícitamente debe ser virtual|
@@ -422,48 +422,48 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3656](compiler-error-c3656.md)|'*palabra clave*': invalidar especificador no se puede repetir|
 |[Error del compilador C3657](compiler-error-c3657.md)|un destructor/finalizador no puede invalidar o ser invalidado explícitamente|
 |Error del compilador C3658|Obsoleto.|
-|C3659 de Error del compilador|'*miembro*': especificador de invalidación '*palabra clave*' no se admite|
-|C3660 de Error del compilador|'*member1*': oculta el miembro heredado '*member2*'|
+|Error del compilador C3659|'*miembro*': especificador de invalidación '*palabra clave*' no se admite|
+|Error del compilador C3660|'*member1*': oculta el miembro heredado '*member2*'|
 |[Error del compilador C3661](compiler-error-c3661.md)|lista de invalidación explícita no encontró ningún método para invalidar|
 |[Error del compilador C3662](compiler-error-c3662.md)|'*miembro*': especificador de invalidación '*palabra clave*' solo se permite en funciones miembro de clases administradas o WinRT|
-|C3663 de Error del compilador|Obsoleto.|
-|C3664 de Error del compilador|'*miembro*': no se puede utilizar como invalidación explícita, debe tener accesibilidad 'public' o 'protected'|
+|Error del compilador C3663|Obsoleto.|
+|Error del compilador C3664|'*miembro*': no se puede utilizar como invalidación explícita, debe tener accesibilidad 'public' o 'protected'|
 |[Error del compilador C3665](compiler-error-c3665.md)|'*miembro*': especificador de invalidación '*palabra clave*' no se permite en un destructor/finalizador|
 |[Error del compilador C3666](compiler-error-c3666.md)|'*constructor*': especificador de invalidación '*palabra clave*' no se permite en un constructor|
-|C3667 de Error del compilador|'*atributo*': atributo no es compatible con la expansión del paquete|
+|Error del compilador C3667|'*atributo*': atributo no es compatible con la expansión del paquete|
 |[Error del compilador C3668](compiler-error-c3668.md)|'*miembro*': el método con el especificador de invalidación 'override' no reemplazó ningún método de clase base|
 |[Error del compilador C3669](compiler-error-c3669.md)|'*miembro*': 'override' no se permite en constructores ni las funciones miembro estáticas en el especificador de invalidación|
 |[Error del compilador C3670](compiler-error-c3670.md)|'*miembro*': no se puede invalidar el método de clase base inaccesible '*miembro*'|
 |[Error del compilador C3671](compiler-error-c3671.md)|'*miembro*': función no invalida '*miembro*'|
 |[Error del compilador C3672](compiler-error-c3672.md)|expresión de pseudodestructor solamente puede usarse como parte de una llamada de función|
 |[Error del compilador C3673](compiler-error-c3673.md)|'*clase*': clase no tiene un constructor de copias|
-|C3674 de Error del compilador|no se pudo encontrar el módulo de biblioteca estándar '*módulo*'|
+|Error del compilador C3674|no se pudo encontrar el módulo de biblioteca estándar '*módulo*'|
 |[Error del compilador C3675](compiler-error-c3675.md)|'*función*': se ha reservado porque '*propiedad*' está definido|
-|C3676 de Error del compilador|'*clase*': clase ref y la clase base tienen atributos no compatibles ' [*atributo*]'|
-|C3677 de Error del compilador|literal de cadena después de 'operator' no puede tener un prefijo de codificación|
-|C3678 de Error del compilador|literal de cadena después de 'operator' debe ser una cadena vacía "" ""'|
-|C3679 de Error del compilador|se esperaba un identificador de sufijo literal después de ' operator "" "'|
-|C3680 de Error del compilador|no se pueden concatenar literales de cadena definido por el usuario con identificadores de sufijo literales que no coinciden|
-|C3681 de Error del compilador|'fallthrough': attribute solo puede aparecer en una instrucción switch envolvente|
-|C3682 de Error del compilador|' operador *identificador*': plantilla de operador de operador literal o literal no se pueden declarar para tener una 'Vinculación C'|
-|C3683 de Error del compilador|no se puede definir el operador literal sin formato y la plantilla de operador literal con el mismo identificador de sufijo literal|
-|C3684 de Error del compilador|' operador *identificador*': declaración del operador literal tiene una lista de parámetros no válidos|
-|C3685 de Error del compilador|' operador *identificador*': plantilla de operador literal no puede tener parámetros de función|
-|C3686 de Error del compilador|' operador *identificador*': plantilla de operador literal debe tener exactamente un parámetro de plantilla que es un paquete de parámetros|
-|C3687 de Error del compilador|' operador *identificador*': plantilla de operador literal debe tener el parámetro de plantilla sin tipo del tipo 'char'|
-|Compilador Error C3688|sufijo literal no válido '*sufijo*'; literal operador o la plantilla de operador literal ' operator *identificador*' no encontrado|
-|C3689 de Error del compilador|' operador *identificador*': plantilla de operador de operador literal y literal debe estar en un ámbito global o de espacio de nombres|
-|C3690 de Error del compilador|se esperaba una cadena literal, pero se encontró una cadena definida por el usuario literal en su lugar|
-|C3691 de Error del compilador|prefijo literal no válido '*prefijo*'|
-|C3692 de Error del compilador|Obsoleto.|
-|C3693 de Error del compilador|Obsoleto.|
-|C3694 de Error del compilador|Obsoleto.|
-|C3695 de Error del compilador|Obsoleto.|
-|C3696 de Error del compilador|'*palabra clave*': no se puede utilizar este calificador en '%'|
+|Error del compilador C3676|'*clase*': clase ref y la clase base tienen atributos no compatibles ' [*atributo*]'|
+|Error del compilador C3677|literal de cadena después de 'operator' no puede tener un prefijo de codificación|
+|Error del compilador C3678|literal de cadena después de 'operator' debe ser una cadena vacía "" ""'|
+|Error del compilador C3679|se esperaba un identificador de sufijo literal después de ' operator "" "'|
+|Error del compilador C3680|no se pueden concatenar literales de cadena definido por el usuario con identificadores de sufijo literales que no coinciden|
+|Error del compilador C3681|'fallthrough': attribute solo puede aparecer en una instrucción switch envolvente|
+|Error del compilador C3682|' operador *identificador*': plantilla de operador de operador literal o literal no se pueden declarar para tener una 'Vinculación C'|
+|Error del compilador C3683|no se puede definir el operador literal sin formato y la plantilla de operador literal con el mismo identificador de sufijo literal|
+|Error del compilador C3684|' operador *identificador*': declaración del operador literal tiene una lista de parámetros no válidos|
+|Error del compilador C3685|' operador *identificador*': plantilla de operador literal no puede tener parámetros de función|
+|Error del compilador C3686|' operador *identificador*': plantilla de operador literal debe tener exactamente un parámetro de plantilla que es un paquete de parámetros|
+|Error del compilador C3687|' operador *identificador*': plantilla de operador literal debe tener el parámetro de plantilla sin tipo del tipo 'char'|
+|Error del compilador C3688|sufijo literal no válido '*sufijo*'; literal operador o la plantilla de operador literal ' operator *identificador*' no encontrado|
+|Error del compilador C3689|' operador *identificador*': plantilla de operador de operador literal y literal debe estar en un ámbito global o de espacio de nombres|
+|Error del compilador C3690|se esperaba una cadena literal, pero se encontró una cadena definida por el usuario literal en su lugar|
+|Error del compilador C3691|prefijo literal no válido '*prefijo*'|
+|Error del compilador C3692|Obsoleto.|
+|Error del compilador C3693|Obsoleto.|
+|Error del compilador C3694|Obsoleto.|
+|Error del compilador C3695|Obsoleto.|
+|Error del compilador C3696|'*palabra clave*': no se puede utilizar este calificador en '%'|
 |[Error del compilador C3697](compiler-error-c3697.md)|'*palabra clave*': no se puede utilizar este calificador en ' ^'|
 |[Error del compilador C3698](compiler-error-c3698.md)|'*tipo*': no se puede usar este tipo como argumento de '*operador*'|
 |[Error del compilador C3699](compiler-error-c3699.md)|'*operador*': no se puede utilizar este direccionamiento indirecto en el tipo '*tipo*'|
-|C3700 de Error del compilador|Obsoleto.|
+|Error del compilador C3700|Obsoleto.|
 |[Error del compilador C3701](compiler-error-c3701.md)|'*función*': origen de eventos no tiene eventos|
 |[Error del compilador C3702](compiler-error-c3702.md)|Se requiere para los eventos COM ATL|
 |[Error del compilador C3703](compiler-error-c3703.md)|'*event_handler*': un método de controlador de eventos debe tener la misma clase de almacenamiento que el origen '*eventos*'|
@@ -479,51 +479,51 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3713](compiler-error-c3713.md)|'*event_handler*': un método de controlador de eventos debe tener los mismos parámetros de función que el origen '*eventos*'|
 |[Error del compilador C3714](compiler-error-c3714.md)|'*event_handler*': un método de controlador de eventos debe tener la misma convención de llamada que el origen '*eventos*'|
 |[Error del compilador C3715](compiler-error-c3715.md)|'*puntero*': debe ser un puntero a '*tipo*'|
-|C3716 de Error del compilador|Obsoleto.|
+|Error del compilador C3716|Obsoleto.|
 |[Error del compilador C3717](compiler-error-c3717.md)|'*miembro*': no se puede definir un método que desencadena eventos|
 |[Error del compilador C3718](compiler-error-c3718.md)|Puede solo llamada ' __*palabra clave*' en el contexto de una función miembro de la clase receptora|
 |[Error del compilador C3719](compiler-error-c3719.md)|'*miembro*': un origen de eventos basado en una interfaz solo puede usarse para eventos COM.|
-|C3720 de Error del compilador|'*tipo*': sólo se puede implementar IDispatch en una interfaz dispinterface o doble|
+|Error del compilador C3720|'*tipo*': sólo se puede implementar IDispatch en una interfaz dispinterface o doble|
 |[Error del compilador C3721](compiler-error-c3721.md)|'*firma*': signatura no compatible para el evento|
 |[Error del compilador C3722](compiler-error-c3722.md)|no se permite un evento genérico|
 |[Error del compilador C3723](compiler-error-c3723.md)|'*función*': no se pudo resolver el evento|
 |[Error del compilador C3724](compiler-error-c3724.md)|debe #include \<windows.h > para usar subprocesamiento múltiple con eventos|
-|C3725 de Error del compilador|Obsoleto.|
-|C3726 de Error del compilador|Obsoleto.|
+|Error del compilador C3725|Obsoleto.|
+|Error del compilador C3726|Obsoleto.|
 |[Error del compilador C3727](compiler-error-c3727.md)|'*eventos*': un evento administrado debe ser una función miembro o un miembro de datos es un puntero a un delegado|
 |[Error del compilador C3728](compiler-error-c3728.md)|'*eventos*': evento no tiene un método raise|
-|C3729 de Error del compilador|Obsoleto.|
+|Error del compilador C3729|Obsoleto.|
 |Error del compilador C3730|Obsoleto.|
 |[Error del compilador C3731](compiler-error-c3731.md)|evento incompatible '*eventos*'y el controlador'*event_handler*'; el origen y el controlador de eventos deben tener el mismo tipo de evento|
 |[Error del compilador C3732](compiler-error-c3732.md)|'*interfaz*': una interfaz personalizada que desencadena eventos COM no puede heredar de IDispatch|
 |[Error del compilador C3733](compiler-error-c3733.md)|'*eventos*': sintaxis incorrecta para especificar un evento COM. ¿ha olvidado '__interface'?|
 |[Error del compilador C3734](compiler-error-c3734.md)|'*clase*': una clase administrada o WinRT no puede ser una coclase|
-|C3735 de Error del compilador|Obsoleto.|
+|Error del compilador C3735|Obsoleto.|
 |[Error del compilador C3736](compiler-error-c3736.md)|'*miembro*': debe ser un método o, en el caso de eventos administrados, opcionalmente, un miembro de datos|
 |[Error del compilador C3737](compiler-error-c3737.md)|'*identificador*': un delegado no puede tener una convención de llamada explícita|
 |[Error del compilador C3738](compiler-error-c3738.md)|'*convención*': debe coincidir con la convención de llamada de la creación de instancias explícita de la plantilla que se va a crear una instancia|
 |[Error del compilador C3739](compiler-error-c3739.md)|'*clase*': sintaxis solo es compatible cuando el ' diseño\_dependientes ' de event_receiver del parámetro es true|
 |[Error del compilador C3740](compiler-error-c3740.md)|'*plantilla*': las plantillas no pueden originar o recibir eventos|
 |[Error del compilador C3741](compiler-error-c3741.md)|'*clase*': debe ser una coclase cuando el "diseño\_dependiente ' de event_receiver del parámetro es true|
-|C3742 de Error del compilador|'*token1*': desequilibradas secuencia de token en el argumento de atributo de '*atributo*', esperado'*token2*'|
+|Error del compilador C3742|'*token1*': desequilibradas secuencia de token en el argumento de atributo de '*atributo*', esperado'*token2*'|
 |[Error del compilador C3743](compiler-error-c3743.md)|Puede solo enlazar/desenlazar una interfaz completa cuando el parámetro 'layout_dependent' de event_receiver es true|
 |[Error del compilador C3744](compiler-error-c3744.md)|__unhook debe tener al menos 3 argumentos para eventos administrados|
 |[Error del compilador C3745](compiler-error-c3745.md)|'*función*': sólo genera un evento puede ser' '|
-|C3746 de Error del compilador|atributo estándar '*identificador*' puede aparecer como máximo una vez en una lista de atributos|
+|Error del compilador C3746|atributo estándar '*identificador*' puede aparecer como máximo una vez en una lista de atributos|
 |[Error del compilador C3747](compiler-error-c3747.md)|Falta el parámetro de plantilla o genérico predeterminado: parámetro *número*|
 |[Error del compilador C3748](compiler-error-c3748.md)|'*interfaz*': las interfaces no administradas no pueden desencadenar eventos|
 |[Error del compilador C3749](compiler-error-c3749.md)|'*atributo*': un atributo personalizado no puede usarse dentro de una función|
-|C3750 de Error del compilador|'*token*': token inesperado en la lista de atributos|
-|C3751 de Error del compilador|'*identificador*': identificador inesperado en la lista de atributos|
+|Error del compilador C3750|'*token*': token inesperado en la lista de atributos|
+|Error del compilador C3751|'*identificador*': identificador inesperado en la lista de atributos|
 |[Error del compilador C3752](compiler-error-c3752.md)|'*atributo*': no se puede clasificar el atributo; '*palabra clave*' no debe usarse en este contexto|
 |[Error del compilador C3753](compiler-error-c3753.md)|no se permiten propiedades genéricas|
 |[Error del compilador C3754](compiler-error-c3754.md)|constructor delegado: función miembro '*miembro*'no puede llamarse en una instancia del tipo'*tipo*'|
 |[Error del compilador C3755](compiler-error-c3755.md)|'*identificador*': no se puede definir un delegado|
-|C3756 de Error del compilador|Obsoleto.|
-|C3757 de Error del compilador|'*tipo*': tipo no permitido para la función 'constexpr'|
-|C3758 de Error del compilador|'*miembro*': función virtual no se pueden declarar 'constexpr'|
-|C3759 de Error del compilador|'*miembro*': función miembro de tipo no literal no se puede declarar 'constexpr'|
-|C3760 de Error del compilador|use la palabra clave __property para declarar la propiedad administrada o WinRT '*clase*'|
+|Error del compilador C3756|Obsoleto.|
+|Error del compilador C3757|'*tipo*': tipo no permitido para la función 'constexpr'|
+|Error del compilador C3758|'*miembro*': función virtual no se pueden declarar 'constexpr'|
+|Error del compilador C3759|'*miembro*': función miembro de tipo no literal no se puede declarar 'constexpr'|
+|Error del compilador C3760|use la palabra clave __property para declarar la propiedad administrada o WinRT '*clase*'|
 |[Error del compilador C3761](compiler-error-c3761.md)|'*función*': 'retval' solo puede aparecer en el último argumento de una función|
 |[Error del compilador C3762](compiler-error-c3762.md)|no se puede procesar el atributo '*atributo*'|
 |[Error del compilador C3763](compiler-error-c3763.md)|'*tipo*': 'retval' y 'out' solo puede aparecer en un tipo de puntero de datos|
@@ -533,47 +533,47 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3767](compiler-error-c3767.md)|'*función*': las funciones de candidato no es accesibles|
 |[Error del compilador C3768](compiler-error-c3768.md)|no se puede adquirir la dirección de una función vararg virtual en código administrado puro|
 |[Error del compilador C3769](compiler-error-c3769.md)|'*identificador*': una clase anidada no puede tener el mismo nombre que la clase inmediatamente envolvente|
-|C3770 de Error del compilador|'*tipo*': no es una clase base válida|
+|Error del compilador C3770|'*tipo*': no es una clase base válida|
 |[Error del compilador C3771](compiler-error-c3771.md)|'*identificador*': no se encuentra la declaración friend en el ámbito de espacio de nombres más próximo|
 |[Error del compilador C3772](compiler-error-c3772.md)|'*identificador*': declaración de plantilla friend no válida|
-|C3773 de Error del compilador|Por favor, use / await modificador del compilador para habilitar las corrutinas|
-|C3774 de Error del compilador|no se puede encontrar '*ámbito*::*identificador*': incluya *encabezado* encabezado|
-|C3775 de Error del compilador|tipo de valor devuelto '*función*'no debe ser'*tipo*'|
-|C3776 de Error del compilador|no se puede devolver una expresión de tipo void en una corrutina con tipo de devolución eventual distinto de void|
-|C3777 de Error del compilador|'*función*': una corrutina no admite una lista de argumentos variables|
-|C3778 de Error del compilador|alloca: no se puede usar en una corrutina|
-|C3779 de Error del compilador|'*función*': una función que devuelve '*tipo*' no se puede usar antes de definirse|
-|C3780 de Error del compilador|'*función*': conversión de una función que devuelve*tipo*' no se puede usar antes de definirse|
-|C3781 de Error del compilador|'*palabra clave*': no puede ser un valor utilizado en una corrutina de tipo '*tipo*'. Cualquier *palabra clave* o *palabra clave* debe estar presente en el elemento promise_type asociado|
-|C3782 de Error del compilador|*tipo*: una promesa de corrutina no puede contener ambas *palabra clave* y *palabra clave*|
-|C3783 de Error del compilador|'*identificador*': no puede ser una corrutina|
-|C3784 de Error del compilador|*palabra clave* expresión no puede aparecer en este contexto|
-|C3785 de Error del compilador|el primer argumento de plantilla para 'std:: integer_sequence' debe ser un tipo entero|
-|C3786 de Error del compilador|el segundo argumento de plantilla para 'std:: make_integer_sequence' debe ser una constante entera mayor o igual a cero.|
-|C3787 de Error del compilador|no se puede deducir el tipo de valor devuelto de esta corrutina|
-|C3788 de Error del compilador|Obsoleto.|
-|C3789 de Error del compilador|Obsoleto.|
-|C3790 de Error del compilador|Obsoleto.|
-|C3791 de Error del compilador|Obsoleto.|
-|C3792 de Error del compilador|Obsoleto.|
-|C3793 de Error del compilador|Obsoleto.|
-|C3794 de Error del compilador|Obsoleto.|
-|C3795 de Error del compilador|Obsoleto.|
-|C3796 de Error del compilador|Obsoleto.|
+|Error del compilador C3773|Por favor, use / await modificador del compilador para habilitar las corrutinas|
+|Error del compilador C3774|no se puede encontrar '*ámbito*::*identificador*': Incluya *encabezado* encabezado|
+|Error del compilador C3775|tipo de valor devuelto '*función*'no debe ser'*tipo*'|
+|Error del compilador C3776|no se puede devolver una expresión de tipo void en una corrutina con tipo de devolución eventual distinto de void|
+|Error del compilador C3777|'*función*': una corrutina no admite una lista de argumentos variables|
+|Error del compilador C3778|alloca: no se puede usar en una corrutina|
+|Error del compilador C3779|'*función*': una función que devuelve '*tipo*' no se puede usar antes de definirse|
+|Error del compilador C3780|'*función*': conversión de una función que devuelve*tipo*' no se puede usar antes de definirse|
+|Error del compilador C3781|'*palabra clave*': no puede ser un valor utilizado en una corrutina de tipo '*tipo*'. Cualquier *palabra clave* o *palabra clave* debe estar presente en el elemento promise_type asociado|
+|Error del compilador C3782|*tipo*: una promesa de corrutina no puede contener ambas *palabra clave* y *palabra clave*|
+|Error del compilador C3783|'*identificador*': no puede ser una corrutina|
+|Error del compilador C3784|*palabra clave* expresión no puede aparecer en este contexto|
+|Error del compilador C3785|el primer argumento de plantilla para 'std:: integer_sequence' debe ser un tipo entero|
+|Error del compilador C3786|el segundo argumento de plantilla para 'std:: make_integer_sequence' debe ser una constante entera mayor o igual a cero.|
+|Error del compilador C3787|no se puede deducir el tipo de valor devuelto de esta corrutina|
+|Error del compilador C3788|Obsoleto.|
+|Error del compilador C3789|Obsoleto.|
+|Error del compilador C3790|Obsoleto.|
+|Error del compilador C3791|Obsoleto.|
+|Error del compilador C3792|Obsoleto.|
+|Error del compilador C3793|Obsoleto.|
+|Error del compilador C3794|Obsoleto.|
+|Error del compilador C3795|Obsoleto.|
+|Error del compilador C3796|Obsoleto.|
 |[Error del compilador C3797](compiler-error-c3797.md)|'*palabra clave*': declaración de evento no puede tener el especificador de invalidación (en su lugar se debe colocar en métodos add, remove o raise)|
 |[Error del compilador C3798](compiler-error-c3798.md)|'*palabra clave*': declaración de propiedad no puede tener el especificador de invalidación (debe colocarse en la propiedad en su lugar los métodos get/set)|
 |[Error del compilador C3799](compiler-error-c3799.md)|la propiedad indizada no puede tener una lista de parámetros vacía|
 |[Error del compilador C3800](compiler-error-c3800.md)|'*declaración*': no se pueden mezclar propiedades y eventos|
-|C3801 de Error del compilador|'*atributo*': atributo no puede tener una cláusula de argumento|
+|Error del compilador C3801|'*atributo*': atributo no puede tener una cláusula de argumento|
 |Error del compilador C3802|Obsoleto.|
 |[Error del compilador C3803](compiler-error-c3803.md)|'*propiedad*': propiedad tiene un tipo que no es compatible con uno de sus descriptores de acceso*descriptor de acceso*'|
 |[Error del compilador C3804](compiler-error-c3804.md)|'*miembro*': los métodos de descriptor de acceso de una propiedad debe ser estáticos o no estáticos|
 |[Error del compilador C3805](compiler-error-c3805.md)|*token*': token inesperado, se esperaba '} 'o','|
-|C3806 de Error del compilador|'*token*': token inesperado, se esperaba una ' {' o un inicializador de miembro|
+|Error del compilador C3806|'*token*': token inesperado, se esperaba una ' {' o un inicializador de miembro|
 |[Error del compilador C3807](compiler-error-c3807.md)|'*tipo*': una clase con el atributo ComImport no puede derivar de '*tipo*', se permite solo la implementación de interfaz|
 |[Error del compilador C3808](compiler-error-c3808.md)|'*tipo*': una clase con el atributo ComImport no puede definir el miembro '*miembro*', solo abstracta o se permiten funciones dllimport|
 |[Error del compilador C3809](compiler-error-c3809.md)|'*tipo*': un tipo administrado o WinRT no puede tener cualquier funciones, clase o interfaz friend|
-|C3810 de Error del compilador|Obsoleto.|
+|Error del compilador C3810|Obsoleto.|
 |Error del compilador C3811|Obsoleto.|
 |[Error del compilador C3812](compiler-error-c3812.md)|'__property' debe ser el primer símbolo (token) en una declaración de propiedad|
 |[Error del compilador C3813](compiler-error-c3813.md)|una declaración de propiedad solo puede aparecer dentro de la definición de un tipo administrado o WinRT|
@@ -590,27 +590,27 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3824](compiler-error-c3824.md)|'*tipo*': este tipo no puede aparecer en este contexto (parámetro de función, tipo de valor devuelto o un miembro estático)|
 |[Error del compilador C3825](compiler-error-c3825.md)|'*tipo*': una clase administrada o WinRT solo puede admitir eventos administrados o WinRT|
 |Error del compilador C3826|Obsoleto.|
-|C3827 de Error del compilador|atributo estándar 'deprecated' puede tener ningún argumento o una cadena literal que describe el motivo|
+|Error del compilador C3827|atributo estándar 'deprecated' puede tener ningún argumento o una cadena literal que describe el motivo|
 |[Error del compilador C3828](compiler-error-c3828.md)|no se puede especificar argumentos de ubicación de un '*palabra clave*'expresión para el tipo'*tipo*'|
-|C3829 de Error del compilador|atributo estándar 'noreturn' sólo puede aplicarse a las funciones|
+|Error del compilador C3829|atributo estándar 'noreturn' sólo puede aplicarse a las funciones|
 |[Error del compilador C3830](compiler-error-c3830.md)|'*type1*': no puede heredar de '*type2*', los tipos de valor solo pueden heredar de clases interface|
 |[Error del compilador C3831](compiler-error-c3831.md)|'*identificador*': '*tipo*' no puede tener un miembro de datos anclado o una función miembro devuelve un puntero anclado|
 |[Error del compilador C3832](compiler-error-c3832.md)|'*typelib*': parece que la biblioteca tipo como si se ha generado para punteros de 32 bits; cambie el calificador 'ptrsize'|
 |[Error del compilador C3833](compiler-error-c3833.md)|'*tipo*': tipo de destino no válido para *identificador*|
 |[Error del compilador C3834](compiler-error-c3834.md)|conversión de tipo explícita a un puntero anclado; Use una variable local anclada en su lugar|
-|C3835 de Error del compilador|Obsoleto.|
+|Error del compilador C3835|Obsoleto.|
 |[Error del compilador C3836](compiler-error-c3836.md)|un constructor estático no puede tener una lista de inicializadores de miembro|
-|C3837 de Error del compilador|no se permiten atributos en este contexto|
+|Error del compilador C3837|no se permiten atributos en este contexto|
 |[Error del compilador C3838](compiler-error-c3838.md)|no puede heredar de '*tipo*'|
 |[Error del compilador C3839](compiler-error-c3839.md)|no se puede cambiar la alineación en un tipo administrado o WinRT|
 |Error del compilador C3840|Obsoleto.|
-|C3841 de Error del compilador|Obsoleto.|
+|Error del compilador C3841|Obsoleto.|
 |[Error del compilador C3842](compiler-error-c3842.md)|'*identificador*': no se admiten calificadores 'const' y 'volatile' en funciones miembro de tipos administrados o WinRT|
-|C3843 de Error del compilador|'*identificador*': no se admiten calificadores de referencia en funciones miembro de tipos administrados o WinRT|
-|Error C3844 de Error del compilador|'*identificador*': no se puede importar un símbolo desde '*origen*': como*identificador*' ya existe en el ámbito actual|
-|C3845 de Error del compilador|Obsoleto.|
+|Error del compilador C3843|'*identificador*': no se admiten calificadores de referencia en funciones miembro de tipos administrados o WinRT|
+|Error del compilador error C3844|'*identificador*': no se puede importar un símbolo desde '*origen*': como*identificador*' ya existe en el ámbito actual|
+|Error del compilador C3845|Obsoleto.|
 |[Error del compilador C3846](compiler-error-c3846.md)|'*identificador*': no se puede importar un símbolo desde '*origen*': como*identificador*'ya se importó desde otro ensamblado'*ensamblado*'|
-|C3847 de Error del compilador|Obsoleto.|
+|Error del compilador C3847|Obsoleto.|
 |[Error del compilador C3848](compiler-error-c3848.md)|expresión de tipo '*tipo*'perdería algunos calificadores const y volatile para poder llamar a'*identificador*'|
 |[Error del compilador C3849](compiler-error-c3849.md)|llamada de estilo de función en una expresión de tipo '*tipo*' perdería los calificadores const y volatile para todos los *número* sobrecargas de operador disponibles|
 |[Error del compilador C3850](compiler-error-c3850.md)|'*token*': un nombre de carácter universal especifica un carácter no válido|
@@ -626,33 +626,33 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3860](compiler-error-c3860.md)|lista de argumentos de plantilla o genérico sigue al nombre de plantilla o genérico de la clase debe enumerar los parámetros en el orden utilizado en la lista de parámetros de plantilla o genérico|
 |[Error del compilador C3861](compiler-error-c3861.md)|'*identificador*': no se encontró el identificador|
 |[Error del compilador C3862](compiler-error-c3862.md)|'*función*': no se puede compilar una función no administrada con/CLR: pure o/CLR: safe|
-|C3863 de Error del compilador|tipo de matriz '*tipo*' no es asignable|
-|C3864 de Error del compilador|Obsoleto.|
+|Error del compilador C3863|tipo de matriz '*tipo*' no es asignable|
+|Error del compilador C3864|Obsoleto.|
 |[Error del compilador C3865](compiler-error-c3865.md)|'*palabra clave*': solo puede usarse en funciones miembro nativas|
 |[Error del compilador C3866](compiler-error-c3866.md)|Falta lista de argumentos de la llamada a un destructor/finalizador|
 |[Error del compilador C3867](compiler-error-c3867.md)|'*función*': sintaxis no estándar; utilice '&' para crear un puntero a miembro|
 |[Error del compilador C3868](compiler-error-c3868.md)|'*tipo*': las restricciones del parámetro genérico '*parámetro*' difieren de las de la declaración|
 |[Error del compilador C3869](compiler-error-c3869.md)|la restricción gcnew no tiene lista de parámetros vacía '()'|
-|C3870 de Error del compilador|'*parámetro*': ' __declspec (*especificador*)' solo se puede aplicar a parámetros de tipo entero|
-|C3871 de Error del compilador|'*parámetro*': '__declspec(guard(overflow))' solo se admite en los primeros 64 parámetros de una función|
+|Error del compilador C3870|'*parámetro*': ' __declspec (*especificador*)' solo se puede aplicar a parámetros de tipo entero|
+|Error del compilador C3871|'*parámetro*': '__declspec(guard(overflow))' solo se admite en los primeros 64 parámetros de una función|
 |[Error del compilador C3872](compiler-error-c3872.md)|' 0 x*valor*': este carácter no se permite en un identificador|
 |[Error del compilador C3873](compiler-error-c3873.md)|' 0 x*valor*': este carácter no se permite como primer carácter de un identificador|
 |[Error del compilador C3874](compiler-error-c3874.md)|tipo de valor devuelto '*identificador*'debe ser'*type1*'en lugar de'*type2*'|
-|C3875 de Error del compilador|llamada de función miembro no estática que falta la lista de argumentos|
-|C3876 de Error del compilador|Obsoleto.|
-|C3877 de Error del compilador|Obsoleto.|
-|C3878 de Error del compilador|Obsoleto.|
-|C3879 de Error del compilador|'*miembro*': no puede ser un miembro de datos initonly|
+|Error del compilador C3875|llamada de función miembro no estática que falta la lista de argumentos|
+|Error del compilador C3876|Obsoleto.|
+|Error del compilador C3877|Obsoleto.|
+|Error del compilador C3878|Obsoleto.|
+|Error del compilador C3879|'*miembro*': no puede ser un miembro de datos initonly|
 |[Error del compilador C3880](compiler-error-c3880.md)|'*miembro*': no puede ser un miembro de datos literal|
-|C3881 de Error del compilador|solo puede heredar un constructor de una base directa|
-|C3882 de Error del compilador|'*clase*': constructor ya se ha heredado de '*clase*'|
+|Error del compilador C3881|solo puede heredar un constructor de una base directa|
+|Error del compilador C3882|'*clase*': constructor ya se ha heredado de '*clase*'|
 |Error del compilador C3883|'*miembro*': debe inicializarse un miembro de datos estático initonly|
-|C3884 de Error del compilador|'*tipo*': no puede ser una matriz de tamaño desconocido inicializado de valor|
-|C3885 de Error del compilador|'*tipo*': no se puede inicializar una matriz de tamaño desconocido con una lista de inicializadores vacía|
+|Error del compilador C3884|'*tipo*': Una matriz de tamaño desconocido no puede ser el valor inicializado|
+|Error del compilador C3885|'*tipo*': No se puede inicializar una matriz de tamaño desconocido con una lista de inicializadores vacía|
 |[Error del compilador C3886](compiler-error-c3886.md)|'*miembro*': debe inicializarse un miembro de datos literal|
 |[Error del compilador C3887](compiler-error-c3887.md)|'*miembro*': el inicializador de un miembro de datos literal debe ser una expresión constante|
 |[Error del compilador C3888](compiler-error-c3888.md)|'*miembro*': no se admite la expresión const asociada con este miembro de datos literal C / c++ / CLI|
-|C3889 de Error del compilador|Obsoleto.|
+|Error del compilador C3889|Obsoleto.|
 |[Error del compilador C3890](compiler-error-c3890.md)|'*miembro*': no puede tomar la dirección de un miembro de datos literal|
 |[Error del compilador C3891](compiler-error-c3891.md)|'*miembro*': un miembro de datos literal no puede usarse como un valor l|
 |[Error del compilador C3892](compiler-error-c3892.md)|'*variable*': no se puede asignar a una variable constante|
@@ -660,7 +660,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3894](compiler-error-c3894.md)|'*miembro*': uso de valor l del miembro de datos estático initonly solamente se permite en el constructor de clase de la clase*clase*'|
 |[Error del compilador C3895](compiler-error-c3895.md)|'*miembro*': *tipo* los miembros de datos no pueden ser 'volatile'|
 |[Error del compilador C3896](compiler-error-c3896.md)|'*miembro*': inicializador inadecuado: este miembro de datos literal solamente se puede inicializar con 'nullptr'|
-|C3897 de Error del compilador|Obsoleto.|
+|Error del compilador C3897|Obsoleto.|
 |[Error del compilador C3898](compiler-error-c3898.md)|'*miembro*': *tipo* los miembros de datos solo pueden ser miembros de tipos administrados|
 |[Error del compilador C3899](compiler-error-c3899.md)|'*miembro*': no se permite el uso de valor l del miembro de datos initonly directamente dentro de una región paralela en la clase*clase*'|
 |[Error del compilador C3900](compiler-error-c3900.md)|'*miembro*': no se permite en el ámbito actual|
@@ -668,9 +668,9 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3902](compiler-error-c3902.md)|'*función*': tipo del último parámetro debe ser '*tipo*'|
 |[Error del compilador C3903](compiler-error-c3903.md)|'*propiedad*': does no ha establecido o get (método)|
 |[Error del compilador C3904](compiler-error-c3904.md)|'*propiedad*': debe especificar *número* parámetros|
-|C3905 de Error del compilador|no se admiten accesos desalineados para el tipo intrínseco '*tipo*'|
-|C3906 de Error del compilador|tipo intrínseco '*tipo*' no es un tipo de valor devuelto o argumento admitido para funciones vararg o sin prototipo|
-|C3907 de Error del compilador|Obsoleto.|
+|Error del compilador C3905|no se admiten accesos desalineados para el tipo intrínseco '*tipo*'|
+|Error del compilador C3906|tipo intrínseco '*tipo*' no es un tipo de valor devuelto o argumento admitido para funciones vararg o sin prototipo|
+|Error del compilador C3907|Obsoleto.|
 |[Error del compilador C3908](compiler-error-c3908.md)|menos restrictivo que el de nivel de acceso '*identificador*'|
 |[Error del compilador C3909](compiler-error-c3909.md)|una declaración de evento administrado o WinRT debe producirse en un tipo administrado o WinRT|
 |[Error del compilador C3910](compiler-error-c3910.md)|'*eventos*': debe definir el miembro '*miembro*'|
@@ -679,86 +679,91 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C3913](compiler-error-c3913.md)|una propiedad predeterminada debe estar indizada|
 |[Error del compilador C3914](compiler-error-c3914.md)|una propiedad predeterminada no puede ser estática|
 |[Error del compilador C3915](compiler-error-c3915.md)|'*identificador*' tiene ningún valor predeterminado indizadas propiedad (indizador de clase)|
-|C3916 de Error del compilador|Obsoleto.|
+|Error del compilador C3916|Obsoleto.|
 |[Error del compilador C3917](compiler-error-c3917.md)|'*token*': obsoleto *construir* estilo de declaración (¿pretendía utilizar ' [' ']' en su lugar?)|
 |[Error del compilador C3918](compiler-error-c3918.md)|requiere el uso de '*identificador*' sea un miembro de datos|
 |[Error del compilador C3919](compiler-error-c3919.md)|'*función*': función debe tener el tipo '*return_type* (*tipo*)'|
 |[Error del compilador C3920](compiler-error-c3920.md)|'*operador*': no se puede definir un incremento y decremento operador CLR o WinRT llamada postfijo operador CLR o WinRT llamará el prefijo correspondiente CLR o WinRT pero (op_Increment/op_Decrement), operador postfijo semántica|
 |Error del compilador C3921|Obsoleto.|
-|C3922 de Error del compilador|Obsoleto.|
+|Error del compilador C3922|Obsoleto.|
 |[Error del compilador C3923](compiler-error-c3923.md)|'*miembro*': clase local, struct o unión definiciones no se permiten en una función miembro de una clase administrada o WinRT|
-|C3924 de Error del compilador|Error en el argumento #*número* de llamada al constructor delegado '*constructor*':|
-|C3925 de Error del compilador|se esperaba un bucle (for, while o do) siguiente '*directiva*' directiva|
-|C3926 de Error del compilador|constante no válida en la directiva 'parallel'|
-|C3927 de Error del compilador|'->': no se permite el tipo de valor devuelto final después de un declarador de función no|
-|C3928 de Error del compilador|'->': no se permite el tipo de valor devuelto final después de un declarador entre paréntesis|
-|C3929 de Error del compilador|Obsoleto.|
-|C3930 de Error del compilador|'*función*': ninguna función sobrecargada tiene especificadores de restricción que son compatibles con el contexto del ambiente '*contexto*'|
-|C3931 de Error del compilador|'*tipo*': no se puede llamar a una función con especificadores de restricción que no son compatibles con el contexto del ambiente|
-|C3932 de Error del compilador|Obsoleto.|
-|C3933 de Error del compilador|'*clase*': los especificadores de restricción del destructor deben cubrir la unión de las restricciones a todos los constructores|
-|C3934 de Error del compilador|una función que se encuentra en cualquier forma de 'main' no puede tener especificadores de restricción distintos de Restrict (CPU)|
-|C3935 de Error del compilador|'*identificador*': nueva definición; especificadores de restricción superpuestos|
-|C3936 de Error del compilador|'*identificador*': especificador de restricción no reconocido|
-|C3937 de Error del compilador|no se permite el especificador de restricción vacío|
-|C3938 de Error del compilador|'*identificador*': no se admiten varios especificadores de restricción en las funciones \042C\042 extern|
-|C3939 de Error del compilador|'*identificador*': puntero a las funciones miembro, punteros de función, no se permiten las referencias a funciones con especificador de restricción "amp"|
-|C3940 de Error del compilador|'*identificador*': identificador no encontrado: posible error de coincidencia entre versiones de la biblioteca y el compilador. Asegúrese de coincidencia vccorlib.h/.lib, vccorlib120.dll y c1xx.dll|
-|C3941 de Error del compilador|'*condición*': requiere ' / clr' opción de línea de comandos|
-|C3942 de Error del compilador|Obsoleto.|
-|C3943 de Error del compilador|Obsoleto.|
-|C3944 de Error del compilador|Obsoleto.|
-|C3945 de Error del compilador|'*tipo*': no se puede producir o detectar un objeto winrt derivado de Platform:: Exception|
-|C3946 de Error del compilador|'*tipo*': typeid no se puede aplicar a este tipo|
-|C3947 de Error del compilador|'*typeid*': typeid no se puede aplicar a una expansión del paquete|
-|C3948 de Error del compilador|'*palabra clave*': una expansión del paquete no puede aparecer en este contexto|
-|C3949 de Error del compilador|una expansión del paquete, '...', no puede aparecer en un declarador abstracto entre paréntesis|
-|C3950 de Error del compilador|Obsoleto.|
-|C3951 de Error del compilador|No se puede usar un puntero a miembro de tipo proyectado de WinRT '*tipo*'. Use un delegado en su lugar.|
-|C3952 de Error del compilador|'*tipo*': WinRT no admite matrices ' in/out'. Use ' const Array<T>^' para 'in' y ' WriteOnlyArray<T>' o ' matriz<T>^ *' para 'out' en las API públicas|
-|C3953 de Error del compilador|No se puede usar la clase administrada*tipo*' en el módulo WinRT.|
-|C3954 de Error del compilador|'*tipo*': una matriz devuelta desde un método publicado en un tipo WinRT debe usar el formato ' matriz<T>^'|
-|C3955 de Error del compilador|'*tipo*': un constructor público no puede contener un parámetro 'out' o ' WriteOnlyArray<T>'|
-|C3956 de Error del compilador|'*tipo*': tipo está marcado como Exclusiveto '*tipo*'y no se puede usar como una base de'*derived_type*'|
-|C3957 de Error del compilador|'*tipo*': no se puede utilizar 'new' en un WinRT tipo; use 'ref new' en su lugar|
-|C3958 de Error del compilador|'*tipo*': no se puede usar 'gcnew' en un WinRT tipo; use 'ref new' en su lugar|
-|C3959 de Error del compilador|'ref new' solo puede usarse para crear un objeto con tipo WinRT|
-|C3960 de Error del compilador|Obsoleto.|
-|C3961 de Error del compilador|no se admite el constructor estático|
-|C3962 de Error del compilador|no se admite la clase genérica|
-|C3963 de Error del compilador|no se admite una matriz multidimensional|
-|C3964 de Error del compilador|no se admite una matriz escalonada|
-|C3965 de Error del compilador|matriz de parámetros no se admite|
-|C3966 de Error del compilador|'*función*': no se admite la función genérica|
-|C3967 de Error del compilador|Error al importar '*identificador*'del módulo'*módulo*'|
-|C3968 de Error del compilador|el token '*token*' no es válido como separador de nombre de módulo; use punto ('. ') en su lugar|
-|C3969 de Error del compilador|nombres de módulos incoherentes: '*module1*'y'*module1*'|
-|C3970 de Error del compilador|'*identificador*': '*palabra clave*' solo se puede aplicar a 'ref class' o 'ref struct' en el ámbito global o de espacio de nombres|
-|C3971 de Error del compilador|'*tipo*': no pueden aparecer definiciones parciales tras definiciones completas|
-|C3972 de Error del compilador|'*tipo*': 'partial' solo se puede aplicar a definiciones o declaraciones de clase|
-|C3973 de Error del compilador|Obsoleto.|
-|C3974 de Error del compilador|Obsoleto.|
-|C3975 de Error del compilador|' clase/estructura *identificador*' se ha declarado previamente o que se define con un modificador diferente|
-|C3976 de Error del compilador|'*identificador1*'debe declararse como 'public' para poder usar'*identificador2*'|
-|C3977 de Error del compilador|Uso requiere una referencia a un ensamblado que define '*identificador*'|
-|C3978 de Error del compilador|'*identificador*': no se permite una propiedad estática como miembro de un tipo de valor o la interfaz de WinRT|
-|C3979 de Error del compilador|'*tipo*': usar el atributo '*atributo*'en lugar de'*valor*'|
-|C3980 de Error del compilador|'*tipo*' no se emiten en metadatos|
-|C3981 de Error del compilador|'*tipo*': un tipo de valor no puede tener los miembros de los datos estáticos*identificador*'|
-|C3982 de Error del compilador|'*tipo*': un tipo de valor no puede tener ningún miembro de datos no públicos*identificador*'|
-|C3983 de Error del compilador|'*tipo*': un tipo de valor no puede tener los miembros de datos no públicos*identificador*'|
-|C3984 de Error del compilador|'*tipo*': un tipo que no son de valor no puede tener ningún miembro de datos públicos*identificador*'|
-|C3985 de Error del compilador|'*identificador*': signatura del miembro público contiene un tipo privado '*miembro*'|
-|C3986 de Error del compilador|'*identificador*': signatura del miembro público contiene el tipo nativo '*miembro*'|
-|C3987 de Error del compilador|'*identificador*': signatura del miembro público contiene el tipo nativo '*tipo*'|
-|C3988 de Error del compilador|'*tipo*': un tipo nativo no puede ser público|
-|C3989 de Error del compilador|'*tipo*': un tipo anidado no puede ser público|
-|C3990 de Error del compilador|'*tipo*': atributo '*atributo*' no puede ser privado o anidado|
-|C3991 de Error del compilador|'*tipo*': no se puede implementar una interfaz no pública o anidada '*interfaz*'|
-|C3992 de Error del compilador|'*identificador*': signatura del miembro público contiene el tipo no válido '*tipo*'|
-|C3993 de Error del compilador|'*tipo*': un tipo de valor debe contener al menos un campo público|
-|C3994 de Error del compilador|'*tipo*': un tipo de valor no puede implementar interfaces ni tener funciones virtuales|
-|C3995 de Error del compilador|'*tipo*': un tipo de valor no puede tener ningún miembro de evento*identificador*'|
+|Error del compilador C3924|Error en el argumento #*número* de llamada al constructor delegado '*constructor*':|
+|Error del compilador C3925|se esperaba un bucle (for, while o do) siguiente '*directiva*' directiva|
+|Error del compilador C3926|constante no válida en la directiva 'parallel'|
+|Error del compilador C3927|'->': no se permite el tipo de valor devuelto final después de un declarador de función no|
+|Error del compilador C3928|'->': no se permite el tipo de valor devuelto final después de un declarador entre paréntesis|
+|Error del compilador C3929|Obsoleto.|
+|Error del compilador C3930|'*función*': ninguna función sobrecargada tiene especificadores de restricción que son compatibles con el contexto del ambiente '*contexto*'|
+|Error del compilador C3931|'*tipo*': no se puede llamar a una función con especificadores de restricción que no son compatibles con el contexto del ambiente|
+|Error del compilador C3932|Obsoleto.|
+|Error del compilador C3933|'*clase*': los especificadores de restricción del destructor deben cubrir la unión de las restricciones a todos los constructores|
+|Error del compilador C3934|una función que se encuentra en cualquier forma de 'main' no puede tener especificadores de restricción distintos de Restrict (CPU)|
+|Error del compilador C3935|'*identificador*': nueva definición; especificadores de restricción superpuestos|
+|Error del compilador C3936|'*identificador*': especificador de restricción no reconocido|
+|Error del compilador C3937|no se permite el especificador de restricción vacío|
+|Error del compilador C3938|'*identificador*': no se admiten varios especificadores de restricción en las funciones \042C\042 extern|
+|Error del compilador C3939|'*identificador*': puntero a las funciones miembro, punteros de función, no se permiten las referencias a funciones con especificador de restricción "amp"|
+|Error del compilador C3940|'*identificador*': identificador no encontrado: posible error de coincidencia entre versiones de la biblioteca y el compilador. Asegúrese de coincidencia vccorlib.h/.lib, vccorlib120.dll y c1xx.dll|
+|Error del compilador C3941|'*condición*': requiere ' / clr' opción de línea de comandos|
+|Error del compilador C3942|Obsoleto.|
+|Error del compilador C3943|Obsoleto.|
+|Error del compilador C3944|Obsoleto.|
+|Error del compilador C3945|'*tipo*': no se puede producir o detectar un objeto winrt derivado de Platform:: Exception|
+|Error del compilador C3946|'*tipo*': typeid no se puede aplicar a este tipo|
+|Error del compilador C3947|'*typeid*': typeid no se puede aplicar a una expansión del paquete|
+|Error del compilador C3948|'*palabra clave*': una expansión del paquete no puede aparecer en este contexto|
+|Error del compilador C3949|una expansión del paquete, '...', no puede aparecer en un declarador abstracto entre paréntesis|
+|Error del compilador C3950|Obsoleto.|
+|Error del compilador C3951|No se puede usar un puntero a miembro de tipo proyectado de WinRT '*tipo*'. Use un delegado en su lugar.|
+|Error del compilador C3952|'*tipo*': WinRT no admite ' in/out' matrices. Use ' const Array<T>^' para 'in' y ' WriteOnlyArray<T>' o ' matriz<T>^ *' para 'out' en las API públicas|
+|Error del compilador C3953|No se puede usar la clase administrada*tipo*' en el módulo WinRT.|
+|Error del compilador C3954|'*tipo*': Una matriz devuelta desde un método publicado en un tipo WinRT debe usar el formato ' matriz<T>^'|
+|Error del compilador C3955|'*tipo*': Un constructor público no puede contener un parámetro 'out' o ' WriteOnlyArray<T>'|
+|Error del compilador C3956|'*tipo*': Tipo está marcado como Exclusiveto '*tipo*'y no se puede usar como una base de'*derived_type*'|
+|Error del compilador C3957|'*tipo*': no se puede utilizar 'new' en un WinRT tipo; use 'ref new' en su lugar|
+|Error del compilador C3958|'*tipo*': no se puede usar 'gcnew' en un WinRT tipo; use 'ref new' en su lugar|
+|Error del compilador C3959|'ref new' solo puede usarse para crear un objeto con tipo WinRT|
+|Error del compilador C3960|Obsoleto.|
+|Error del compilador C3961|no se admite el constructor estático|
+|Error del compilador C3962|no se admite la clase genérica|
+|Error del compilador C3963|no se admite una matriz multidimensional|
+|Error del compilador C3964|no se admite una matriz escalonada|
+|Error del compilador C3965|matriz de parámetros no se admite|
+|Error del compilador C3966|'*función*': no se admite la función genérica|
+|Error del compilador C3967|Error al importar '*identificador*'del módulo'*módulo*'|
+|Error del compilador C3968|el token '*token*' no es válido como separador de nombre de módulo; use punto ('. ') en su lugar|
+|Error del compilador C3969|nombres de módulos incoherentes: '*module1*'y'*module1*'|
+|Error del compilador C3970|'*identificador*': '*palabra clave*' solo se puede aplicar a 'ref class' o 'ref struct' en el ámbito global o de espacio de nombres|
+|Error del compilador C3971|'*tipo*': no pueden aparecer definiciones parciales tras definiciones completas|
+|Error del compilador C3972|'*tipo*': 'partial' solo se puede aplicar a definiciones o declaraciones de clase|
+|Error del compilador C3973|Obsoleto.|
+|Error del compilador C3974|Obsoleto.|
+|Error del compilador C3975|' clase/estructura *identificador*' se ha declarado previamente o que se define con un modificador diferente|
+|Error del compilador C3976|'*identificador1*'debe declararse como 'public' para poder usar'*identificador2*'|
+|Error del compilador C3977|Uso requiere una referencia a un ensamblado que define '*identificador*'|
+|Error del compilador C3978|'*identificador*': no se permite una propiedad estática como miembro de un tipo de valor o la interfaz de WinRT|
+|Error del compilador C3979|'*tipo*': usar el atributo '*atributo*'en lugar de'*valor*'|
+|Error del compilador C3980|'*tipo*' no se emiten en metadatos|
+|Error del compilador C3981|'*tipo*': un tipo de valor no puede tener los miembros de los datos estáticos*identificador*'|
+|Error del compilador C3982|'*tipo*': un tipo de valor no puede tener ningún miembro de datos no públicos*identificador*'|
+|Error del compilador C3983|'*tipo*': un tipo de valor no puede tener los miembros de datos no públicos*identificador*'|
+|Error del compilador C3984|'*tipo*': un tipo que no son de valor no puede tener ningún miembro de datos públicos*identificador*'|
+|Error del compilador C3985|'*identificador*': signatura del miembro público contiene un tipo privado '*miembro*'|
+|Error del compilador C3986|'*identificador*': signatura del miembro público contiene el tipo nativo '*miembro*'|
+|Error del compilador C3987|'*identificador*': signatura del miembro público contiene el tipo nativo '*tipo*'|
+|Error del compilador C3988|'*tipo*': un tipo nativo no puede ser público|
+|Error del compilador C3989|'*tipo*': un tipo anidado no puede ser público|
+|Error del compilador C3990|'*tipo*': atributo '*atributo*' no puede ser privado o anidado|
+|Error del compilador C3991|'*tipo*': no se puede implementar una interfaz no pública o anidada '*interfaz*'|
+|Error del compilador C3992|'*identificador*': signatura del miembro público contiene el tipo no válido '*tipo*'|
+|Error del compilador C3993|'*tipo*': un tipo de valor debe contener al menos un campo público|
+|Error del compilador C3994|'*tipo*': un tipo de valor no puede implementar interfaces ni tener funciones virtuales|
+|Error del compilador C3995|'*tipo*': un tipo de valor no puede tener ningún miembro de evento*identificador*'|
 |Error del compilador C3996|Obsoleto.|
-|C3998 de Error del compilador|' c ++*versión*': C++ versión no compatible; se usará ' c ++*versión*'|
-|C3999 de Error del compilador|ERROR DESCONOCIDO Elija el comando soporte técnico en el menú Ayuda de Visual C++, o abra el archivo de Ayuda de soporte técnico para obtener más información|
+|Error del compilador C3998|' c ++*versión*': C++ versión no compatible; se usará ' c ++*versión*'|
+|Error del compilador C3999|ERROR DESCONOCIDO Elija el comando soporte técnico en el menú Ayuda de Visual C++, o abra el archivo de Ayuda de soporte técnico para obtener más información|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errores del compilador de C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333220"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458426"
 ---
 # <a name="priorityqueue-class"></a>priority_queue (Clase)
 
@@ -40,20 +40,20 @@ class priority_queue
 
 ### <a name="parameters"></a>Parámetros
 
-*Type*<br/>
+*Automáticamente*\
 El tipo de datos de los elementos que se va a almacenar en priority_queue.
 
-*Contenedor*<br/>
+*Contenedor*\
 El tipo del contenedor subyacente que se usa para implementar priority_queue.
 
-*Compare*<br/>
+*Compare*\
 El tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en priority_queue. Este argumento es opcional y el predicado binario `less<typename Container::value_type>` es el valor predeterminado.
 
 ## <a name="remarks"></a>Comentarios
 
-Los elementos de la clase `Type` estipulada en la primera plantilla de parámetro de un objeto de cola son sinónimos de [value_type](#value_type) y debe coincidir con el tipo de elemento de la clase de contenedor subyacente `Container` estipulado por la segundo parámetro de plantilla. El `Type` debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
+Los elementos de la `Type` clase estipulados en el primer parámetro de plantilla de un objeto de cola son sinónimos de [value_type](#value_type) y deben coincidir con el tipo de elemento `Container` de la clase contenedora subyacente estipulada por la segunda plantilla. parámetro. `Type` Debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.
 
-El objeto priority_queue ordena la secuencia que controla mediante una llamada a un objeto de función almacenado de clase `Traits`. En general, se debe poder comparar si los elementos son menores que otros para poder establecer este orden; de este modo, dados dos elementos cualesquiera, se puede determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. En un sentido más técnico, la función de comparación es un predicado binario que induce una ordenación débil estricta en el sentido matemático estándar.
+El priority_queue ordena la secuencia que controla llamando a un objeto de función almacenado de `Traits`clase. En general, se debe poder comparar si los elementos son menores que otros para poder establecer este orden; de este modo, dados dos elementos cualesquiera, se puede determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. En un sentido más técnico, la función de comparación es un predicado binario que induce una ordenación débil estricta en el sentido matemático estándar.
 
 Las clases contenedoras subyacentes adecuadas para priority_queue incluyen [deque (Clase)](../standard-library/deque-class.md) y la clase [vector (Clase)](../standard-library/vector-class.md) predeterminada, o cualquier otro contenedor de secuencias que admita las operaciones `front`, `push_back` y `pop_back`, y un iterador de acceso aleatorio. La clase de contenedor subyacente se encapsula dentro del adaptador de contenedor, que solo expone el conjunto limitado de las funciones miembro de contenedor de secuencias como una interfaz pública.
 
@@ -69,13 +69,13 @@ Existen tres tipos de adaptadores de contenedor que se definen mediante la bibli
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|Descripción|
+|Constructor|DESCRIPCIÓN|
 |-|-|
 |[priority_queue](#priority_queue)|Construye un `priority_queue` que está vacío o que es una copia de un intervalo de un objeto contenedor base o de otro `priority_queue`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[container_type](#container_type)|Tipo que proporciona el contenedor base que debe adaptarse mediante una `priority_queue`.|
 |[size_type](#size_type)|Tipo entero sin signo que puede representar el número de elementos de un `priority_queue`.|
@@ -83,7 +83,7 @@ Existen tres tipos de adaptadores de contenedor que se definen mediante la bibli
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función miembro|DESCRIPCIÓN|
 |-|-|
 |[empty](#empty)|Comprueba si la `priority_queue` está vacía.|
 |[pop](#pop)|Quita el elemento más grande del `priority_queue` desde la posición superior.|
@@ -242,28 +242,28 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 
 ### <a name="parameters"></a>Parámetros
 
-*_comp*<br/>
+*_comp*\
 Función de comparación de tipo **constTraits** usada para ordenar los elementos de priority_queue, que de manera predeterminada es la función de comparación del contenedor base.
 
-*_Cont*<br/>
+*_Cont*\
 El contenedor base del que el objeto priority_queue creado va a ser una copia.
 
-*right*<br/>
+*correcta*\
 El objeto priority_queue del que el conjunto creado va a ser una copia.
 
-*first*<br/>
+*lugar*\
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*Último*<br/>
+*guardado*\
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
-Cada uno de los tres primeros constructores especifica un priority_queue inicial vacío, el segundo también especifica el tipo de función de comparación (`comp`) que se usará para establecer explícitamente el orden de los elementos y el tercero especifica el `container_type`(`_Cont`) que se usará. La palabra clave **explicit** suprime ciertos tipos de conversión automática de tipos.
+Cada uno de los tres primeros constructores especifica un priority_queue inicial vacío, el segundo también especifica el tipo de función de comparación`comp`() que se va a usar para establecer el orden de los elementos y el tercero especifica explícitamente el `container_type`(`_Cont`) que se va a usar. La palabra clave **explicit** suprime ciertos tipos de conversión automática de tipos.
 
-El cuarto constructor especifica una copia de la priority_queue *derecho*.
+El cuarto constructor especifica una copia del *derecho*priority_queue.
 
-Los tres últimos constructores copian el intervalo \[ *primera*, *última*) de algún contenedor y use los valores para inicializar un objeto priority_queue con especificando el tipo de función de comparación de clase `Traits` y `container_type`.
+Los tres últimos constructores copian el \[intervalo *First*, *Last*) de algún contenedor y usan los valores para inicializar un priority_queue con una mayor explícito en la especificación del tipo de función de `Traits` comparación de clase y `container_type`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*Val*\
 El elemento que se ha agregado a la parte superior de priority_queue.
 
 ### <a name="remarks"></a>Comentarios
@@ -492,7 +492,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una referencia al elemento más grande, según lo determinado por la `Traits` (función), el objeto de priority_queue.
+Referencia al elemento más grande, según lo determinado por la `Traits` función, el objeto de priority_queue.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>Vea también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

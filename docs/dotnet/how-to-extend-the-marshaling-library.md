@@ -1,18 +1,18 @@
 ---
-title: Filtrar Extender la biblioteca de serialización
+title: Procedimiento Extender la biblioteca de serialización
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
 ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387310"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>Filtrar Extender la biblioteca de serialización
+# <a name="how-to-extend-the-marshaling-library"></a>Procedimiento Extender la biblioteca de serialización
 
 En este tema se explica cómo extender la biblioteca de serialización para proporcionar más conversiones entre tipos de datos. Los usuarios pueden extender la biblioteca de serialización para cualquier conversión de datos que no se admite actualmente por la biblioteca.
 
@@ -30,7 +30,7 @@ En ambos casos, en primer lugar cree un archivo para nuevas conversiones de cál
 
    - marshal_windows.h para tipos de datos de windows.
 
-   - marshal_cppstd.h para tipos de datos de la biblioteca estándar de C++.
+   - marshal_cppstd.h para C++ tipos de datos de la biblioteca estándar.
 
    - marshal_atl.h para tipos de datos ATL.
 
@@ -59,7 +59,7 @@ namespace msclr {
 
    - marshal_windows.h para tipos de datos de windows.
 
-   - marshal_cppstd.h para tipos de datos de la biblioteca estándar de C++.
+   - marshal_cppstd.h para C++ tipos de datos de la biblioteca estándar.
 
    - marshal_atl.h para tipos de datos ATL.
 

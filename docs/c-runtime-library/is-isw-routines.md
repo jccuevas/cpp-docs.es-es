@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 1550f8f012802e03e9228e67c381915b1b4e1d64
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750825"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376036"
 ---
 # <a name="is-isw-routines"></a>is, isw (Rutinas)
 
@@ -156,7 +156,7 @@ Carácter ancho imprimible incluido el carácter ancho de espacio (L' ').
 Carácter ancho imprimible que no es ni el carácter ancho de espacio (L' ') ni un carácter ancho para el que `iswalnum` sea distinto de cero.
 
 `iswspace`<br/>
-Carácter ancho correspondiente al carácter de espacio en blanco estándar o que pertenece a un conjunto de caracteres anchos que se define en la implementación para los que `iswalnum` es FALSE. Los caracteres de espacio en blanco estándar son: espacio (L' '), avance de página (L'\f'), nueva línea (L'\n'), retorno de carro (L'\r'), tabulación horizontal (L'\t') y tabulación vertical (L'\v').
+Carácter ancho correspondiente al carácter de espacio en blanco estándar o que pertenece a un conjunto de caracteres anchos que se define en la implementación para los que `iswalnum` es FALSE. Los caracteres de espacio en blanco estándar son espacio (L' '), avance de página (L'\f'), nueva línea (L'\n'), retorno de carro (L'\r'), tabulación horizontal (L'\t') y tabulación vertical (L'\v').
 
 `iswupper`<br/>
 Carácter ancho que es una mayúscula o que pertenece a un conjunto de caracteres anchos definido en la implementación para los que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct`, ni `iswspace` sea distinto de cero. `iswupper` devuelve un valor distinto de cero solo para los caracteres anchos que corresponden a mayúsculas.

@@ -1,6 +1,6 @@
 ---
 title: tarea (Clase) (Motor Runtime de simultaneidad)
-ms.date: 11/04/2016
+ms.date: 07/30/2019
 f1_keywords:
 - task
 - PPLTASKS/concurrency::task
@@ -14,55 +14,49 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: e0f876b3c0971e70763f36622fb72a3dea671461
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278548"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682515"
 ---
 # <a name="task-class-concurrency-runtime"></a>tarea (Clase) (Motor Runtime de simultaneidad)
 
-La clase `task` de la biblioteca de patrones de procesamiento paralelo (PPL). Un objeto `task` representa el trabajo que se puede ejecutar de forma asincrónica y de forma simultánea con otras tareas y trabajos paralelos generados por los algoritmos paralelos en el runtime de simultaneidad. Genera un resultado de tipo `_ResultType` al finalizar correctamente. Las tareas de tipo `task<void>` no producen ningún resultado. Es posible esperar y cancelar una tarea de forma independiente al resto de tareas. También pueden combinarse con otras tareas mediante continuaciones ( `then`) y combinación ( `when_all`) y elección ( `when_any`) patrones.
+La clase `task` de la biblioteca de patrones de procesamiento paralelo (PPL). Un `task` objeto representa el trabajo que se puede ejecutar de forma asincrónica y simultánea con otras tareas y trabajos paralelos generados por algoritmos paralelos en el Runtime de simultaneidad. Genera un resultado de tipo `_ResultType` al finalizar correctamente. Las tareas de tipo `task<void>` no producen ningún resultado. Es posible esperar y cancelar una tarea de forma independiente al resto de tareas. También se puede componer con otras tareas mediante continuaciones ( `then`) y patrones de combinación `when_all`() y elección `when_any`(). Cuando se asigna un objeto de tarea a una nueva variable, el comportamiento es el `std::shared_ptr`de; en otras palabras, ambos objetos representan la misma tarea subyacente.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <typename T>
-class task;
-
 template <>
 class task<void>;
 
-template<typename _ReturnType>
+template<typename _ResultType>
 class task;
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-*T*<br/>
-El tipo de objeto de tarea.
-
-*_ReturnType*<br/>
-Tipo de resultado de esta tarea.
+*_ResultType*<br/>
+Tipo del resultado generado por la tarea. 
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`result_type`|El tipo del resultado que un objeto de esta clase produce.|
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[task](#ctor)|Sobrecargado. Construye un objeto `task`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[get](#get)|Sobrecargado. Devuelve el resultado que esta tarea generó. Si la tarea no está en un estado terminal, una llamada a `get` esperará a que finalice la tarea. Este método no devuelve un valor cuando se llama en una tarea con un `result_type` de `void`.|
 |[is_apartment_aware](#is_apartment_aware)|Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows en tiempo de ejecución o si desciende de esta tarea.|
@@ -73,7 +67,7 @@ Tipo de resultado de esta tarea.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Sobrecargado. Determina si dos objetos `task` representan diferentes tareas internas.|
 |[operator=](#operator_eq)|Sobrecargado. Reemplaza el contenido de un objeto `task` con otro.|
@@ -89,16 +83,16 @@ Para obtener más información, consulte [paralelismo de tareas](../../../parall
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** ppltasks.h
+**Encabezado:** ppltasks. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="get"></a> Obtener
+##  <a name="get"></a>Obtener
 
 Devuelve el resultado que esta tarea generó. Si la tarea no está en un estado terminal, una llamada a `get` esperará a que finalice la tarea. Este método no devuelve un valor cuando se llama en una tarea con un `result_type` de `void`.
 
 ```
-_ReturnType get() const;
+_ResultType get() const;
 
 void get() const;
 ```
@@ -109,10 +103,10 @@ Resultado de la tarea.
 
 ### <a name="remarks"></a>Comentarios
 
-Si se cancela la tarea, una llamada a `get` producirá un [task_canceled](task-canceled-class.md) excepción. Si la tarea encontró una excepción diferente o si se propagó una excepción desde una tarea anterior, una llamada a `get` iniciará esta excepción.
+Si se cancela la tarea, una llamada a `get` producirá una excepción [task_canceled](task-canceled-class.md) . Si la tarea encontró una excepción diferente o si se propagó una excepción desde una tarea anterior, una llamada a `get` iniciará esta excepción.
 
 > [!IMPORTANT]
->  En una aplicación plataforma Universal de Windows (UWP), no llame a [concurrency::task::wait](#wait) o `get` ( `wait` llamadas `get`) en el código que se ejecuta en el subproceso de interfaz de usuario. En caso contrario, el runtime produce [Concurrency:: invalid_operation](invalid-operation-class.md) porque estos métodos se bloquea el subproceso actual y puede provocar que la aplicación deje de responder. Sin embargo, puede llamar a la `get` método para recibir el resultado de la tarea anterior en una continuación basada en tareas porque el resultado está disponible inmediatamente.
+>  En una aplicación plataforma universal de Windows (UWP), no llame a [Concurrency:: Task:: wait](#wait) o `get` ( `wait` llamadas `get`) en el código que se ejecuta en el subproceso de la interfaz de usuario. De lo contrario, el Runtime produce [Concurrency:: invalid_operation](invalid-operation-class.md) porque estos métodos bloquean el subproceso actual y pueden provocar que la aplicación deje de responder. Sin embargo, puede llamar `get` al método para recibir el resultado de la tarea antecedente en una continuación basada en tareas porque el resultado está disponible inmediatamente.
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -124,9 +118,9 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si la tarea desencapsula una `IAsyncInfo` interfaz o desciende de dicha tarea, **false** en caso contrario.
+**true** si la tarea desencapsula una `IAsyncInfo` interfaz o desciende de dicha tarea; de lo contrario, **false** .
 
-##  <a name="is_done"></a>  Task::is_done (método) (Runtime de simultaneidad)
+##  <a name="is_done"></a>Task:: is_done (método) (Runtime de simultaneidad)
 
 Determina si se completa la tarea.
 
@@ -136,18 +130,18 @@ bool is_done() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-True si la tarea se ha completado, false en caso contrario.
+True si la tarea se ha completado; de lo contrario, false.
 
 ### <a name="remarks"></a>Comentarios
 
-La función devuelve true si la tarea se completaban o cancelaban (con o sin la excepción de usuario).
+La función devuelve true si la tarea se ha completado o cancelado (con o sin excepción de usuario).
 
-##  <a name="operator_neq"></a> operator!=
+##  <a name="operator_neq"></a>operador! =
 
 Determina si dos objetos `task` representan diferentes tareas internas.
 
 ```
-bool operator!= (const task<_ReturnType>& _Rhs) const;
+bool operator!= (const task<_ResultType>& _Rhs) const;
 
 bool operator!= (const task<void>& _Rhs) const;
 ```
@@ -155,11 +149,11 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="parameters"></a>Parámetros
 
 *_Rhs*<br/>
-La tarea para comparar.
+Tarea que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los objetos que hacen referencia a distintas tareas subyacentes, y **false** en caso contrario.
+**true** si los objetos hacen referencia a distintas tareas subyacentes y **false** en caso contrario.
 
 ##  <a name="operator_eq"></a> operator=
 
@@ -182,12 +176,12 @@ Objeto `task` de origen.
 
 Dado que `task` se comporta como un puntero inteligente, después de una asignación de copia, este objeto `task` representa la misma tarea real que `_Other`.
 
-##  <a name="operator_eq_eq"></a> operador ==
+##  <a name="operator_eq_eq"></a>operador = =
 
 Determina si dos objetos `task` representan la misma tarea interna.
 
 ```
-bool operator== (const task<_ReturnType>& _Rhs) const;
+bool operator== (const task<_ResultType>& _Rhs) const;
 
 bool operator== (const task<void>& _Rhs) const;
 ```
@@ -195,13 +189,13 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="parameters"></a>Parámetros
 
 *_Rhs*<br/>
-La tarea para comparar.
+Tarea que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si los objetos que hacen referencia a la misma tarea subyacente, y **false** en caso contrario.
+**true** si los objetos hacen referencia a la misma tarea subyacente y **false** en caso contrario.
 
-##  <a name="scheduler"></a>  Task::Scheduler (método) (Runtime de simultaneidad)
+##  <a name="scheduler"></a>Task:: Scheduler (método, Runtime de simultaneidad)
 
 Devuelve el programador para esta tarea
 
@@ -211,9 +205,9 @@ scheduler_ptr scheduler() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al programador
+Puntero al programador.
 
-##  <a name="ctor"></a> Tarea
+##  <a name="ctor"></a>Task
 
 Construye un objeto `task`.
 
@@ -241,7 +235,7 @@ task(
 Tipo del parámetro a partir del cual se va a construir la tarea.
 
 *_Param*<br/>
-Parámetro desde el que se va a construir la tarea. Esto podría ser una expresión lambda, un objeto de función, un `task_completion_event<result_type>` objeto o un Windows::Foundation::IAsyncInfo si se usan tareas en la aplicación en tiempo de ejecución de Windows. El objeto de función o expresión lambda debe ser un tipo equivalente a `std::function<X(void)>`, donde X puede ser una variable de tipo `result_type`, `task<result_type>`, o un Windows::Foundation::IAsyncInfo en aplicaciones de Windows en tiempo de ejecución.
+Parámetro desde el que se va a construir la tarea. Puede ser una expresión lambda, un objeto de función, `task_completion_event<result_type>` un objeto o un Windows:: Foundation:: IAsyncInfo si usa tareas en la aplicación Windows Runtime. El objeto de función o expresión lambda debe ser un tipo `std::function<X(void)>`equivalente a, donde X puede ser una variable `result_type`de `task<result_type>`tipo, o una Windows:: Foundation:: IAsyncInfo en Windows Runtime aplicaciones.
 
 *_TaskOptions*<br/>
 Entre las opciones de tareas se incluyen el token de cancelación, el programador, etc.
@@ -251,7 +245,7 @@ Objeto `task` de origen.
 
 ### <a name="remarks"></a>Comentarios
 
-El constructor predeterminado de un objeto `task` solo está presente para permitir que las tareas se usen dentro de los contenedores. No se puede usar una tarea construida de forma predeterminada hasta que no se le asigne una tarea válida. Los métodos como `get`, `wait` o `then` producirá una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción cuando se llama en una tarea construida predeterminada.
+El constructor predeterminado de un objeto `task` solo está presente para permitir que las tareas se usen dentro de los contenedores. No se puede usar una tarea construida de forma predeterminada hasta que no se le asigne una tarea válida. Los métodos como `get`, `wait` o `then` producirán una excepción [invalid_argument](../../../standard-library/invalid-argument-class.md) cuando se llama en una tarea construida predeterminada.
 
 Las tareas que se creen a partir de un objeto `task_completion_event` se completarán (y sus continuaciones se programarán) cuando se establezca el evento de finalización de las tareas.
 
@@ -261,11 +255,11 @@ Las tareas que se crean a partir de la interfaz `Windows::Foundation::IAsyncInfo
 
 El objeto `task` se comporta como un puntero inteligente y se puede pasar con seguridad por valor. Varios subprocesos pueden tener acceso a este objeto sin necesidad de bloqueos.
 
-Las sobrecargas del constructor que toman una interfaz Windows::Foundation::IAsyncInfo o una expresión lambda que devuelve esta interfaz, solo están disponibles para las aplicaciones de Windows Runtime.
+Las sobrecargas del constructor que toman una interfaz Windows:: Foundation:: IAsyncInfo o una expresión lambda que devuelve este tipo de interfaz, solo están disponibles para Windows Runtime aplicaciones.
 
 Para obtener más información, consulte [paralelismo de tareas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-##  <a name="then"></a> A continuación
+##  <a name="then"></a>a
 
 Agrega una tarea de continuación a esta tarea.
 
@@ -273,20 +267,20 @@ Agrega una tarea de continuación a esta tarea.
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     const task_options& _TaskOptions) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     cancellation_token _CancellationToken,
     task_continuation_context _ContinuationContext) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
@@ -317,7 +311,7 @@ Entre las opciones de tareas se incluyen el token de cancelación, el programado
 Token de cancelación que se va a asociar a la tarea de continuación. Las tareas de continuación que se creen sin un token de cancelación heredarán el token de la tarea que le precede.
 
 *_ContinuationContext*<br/>
-Variable que especifica dónde debe ejecutarse la continuación. Esta variable solo es útil cuando se usa en una aplicación para UWP. Para obtener más información, consulte [task_continuation_context](task-continuation-context-class.md)
+Variable que especifica dónde debe ejecutarse la continuación. Esta variable solo es útil cuando se usa en una aplicación de UWP. Para obtener más información, consulte [task_continuation_context](task-continuation-context-class.md)
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -325,11 +319,11 @@ Tarea de continuación creada recientemente. El tipo de resultado de la tarea de
 
 ### <a name="remarks"></a>Comentarios
 
-Las sobrecargas de `then` que toman una expresión lambda o functor que devuelve una interfaz Windows::Foundation::IAsyncInfo, solo están disponibles para las aplicaciones de Windows Runtime.
+Las sobrecargas de `then` que toman una expresión lambda o un functor que devuelve una interfaz Windows:: Foundation:: IAsyncInfo solo están disponibles para las aplicaciones Windows Runtime.
 
-Para obtener más información sobre cómo usar las continuaciones de tareas para crear trabajo asincrónico, vea [paralelismo de tareas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Para obtener más información sobre cómo usar continuaciones de tareas para crear trabajo asincrónico, vea [paralelismo de tareas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-##  <a name="wait"></a> Espere
+##  <a name="wait"></a>currir
 
 Espera que esta tarea alcance un estado terminal. Es posible que `wait` ejecute la tarea alineada, si se cumplen todas las dependencias de tareas, y todavía no se ha detectado para la ejecución de un trabajador en segundo plano.
 
@@ -344,7 +338,7 @@ Un valor de `task_status`, que podría ser `completed` o `canceled`. Si la tarea
 ### <a name="remarks"></a>Comentarios
 
 > [!IMPORTANT]
->  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait` en el código que se ejecuta en el subproceso de interfaz de usuario. De lo contrario, el runtime produce [concurrency::invalid_operation](invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.
+>  En una aplicación plataforma universal de Windows (UWP), no llame a `wait` en el código que se ejecuta en el subproceso de la interfaz de usuario. De lo contrario, el runtime produce [concurrency::invalid_operation](invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.
 
 ## <a name="see-also"></a>Vea también
 

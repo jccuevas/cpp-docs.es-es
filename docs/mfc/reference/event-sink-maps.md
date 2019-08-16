@@ -1,17 +1,15 @@
 ---
 title: Mapas de receptor de eventos
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aeec0acad4531e1ef0933388bbee728193853611
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285586"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612217"
 ---
 # <a name="event-sink-maps"></a>Mapas de receptor de eventos
 

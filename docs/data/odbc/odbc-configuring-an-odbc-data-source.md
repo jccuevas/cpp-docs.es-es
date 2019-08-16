@@ -7,11 +7,11 @@ helpviewer_keywords:
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
 ms.openlocfilehash: 259f0e2afa61096e4529a50ee2ba7de07b293c46
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395786"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: Configurar un origen de datos ODBC
 
@@ -27,4 +27,4 @@ Para obtener información sobre cómo escribir programas de instalación y admin
 ## <a name="see-also"></a>Vea también
 
 [Conceptos básicos de ODBC](../../data/odbc/odbc-basics.md)<br/>
-[ODBC: Llamar directamente a funciones de API de ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+[ODBC: llamar directamente a funciones de la API de ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

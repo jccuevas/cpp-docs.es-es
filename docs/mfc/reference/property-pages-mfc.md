@@ -1,18 +1,16 @@
 ---
 title: Páginas de propiedades (MFC)
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1c4e6c585bf216518e46109e88a2388da03a0496
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269219"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611785"
 ---
 # <a name="property-pages-mfc"></a>Páginas de propiedades (MFC)
 

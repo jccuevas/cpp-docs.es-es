@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538938"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457707"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valores
 
-|`Name`|Descripción|
+|`Name`|DESCRIPCIÓN|
 |------------|-----------------|
 |`none`|Realice el comportamiento predeterminado de la operación.|
 |`skip_existing`|No copie el archivo si ya existe, no informe de un error.|
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|
 
 ## <a name="file_type"></a>  file_type
 
-Enumeración de tipos de archivo. Los valores admitidos son normal, directorio, not_found y desconocido.
+Enumeración de tipos de archivo. Los valores admitidos son regular, Directory, not_found y Unknown.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valores
 
-|Nombre|Valor|Descripción|
+|Nombre|Valor|DESCRIPCIÓN|
 |----------|-----------|-----------------|
 |`not_found`|-1|Representa un archivo que no existe.|
 |`none`|0|Representa un archivo que no tiene ningún atributo de tipo. (No se admite).|
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|Representa un archivo FIFO en sistemas basados en UNIX. (No se admite).|
 |`socket`|7|Representa un socket en sistemas basados en UNIX. (No se admite).|
 |`unknown`|8|Representa un archivo cuyo estado no se puede determinar.|
+
+## <a name="perm_options"></a>perm_options
+
+Incluye los `replace`valores `add` ,`remove`, y `nofollow`.
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 
@@ -155,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

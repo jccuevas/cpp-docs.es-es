@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259508"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448422"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrar de OpenMP al Runtime de simultaneidad
 
 El Runtime de simultaneidad ofrece una variedad de modelos de programación. Estos modelos pueden superponerse o complementar los modelos de otras bibliotecas. Los documentos en esta sección comparar [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) al Runtime de simultaneidad y se proporcionan ejemplos sobre cómo migrar código existente de OpenMP para usar el Runtime de simultaneidad.
 
-El modelo de programación de OpenMP se define con un estándar abierto y tiene enlaces bien definidos con los lenguajes de programación Fortran y C/C++. Las versiones 2.0 y 2.5, que son compatibles con el compilador de Visual C++, OpenMP son adecuadas para los algoritmos paralelos que son iterativos; es decir, realizan la iteración paralela a través de una matriz de datos. OpenMP 3.0 admite tareas que no son iterativas además de las tareas iterativas.
+El modelo de programación de OpenMP se define con un estándar abierto y tiene enlaces bien definidos con los lenguajes de programación Fortran y C/C++. Las versiones 2.0 y 2.5, que son compatibles con Microsoft OpenMP C++ compilador, son adecuada para los algoritmos paralelos que son iterativos; es decir, realizan la iteración paralela a través de una matriz de datos. OpenMP 3.0 admite tareas que no son iterativas además de las tareas iterativas.
 
 OpenMP es más eficaz cuando el grado de paralelismo se determina previamente y coincide con los recursos disponibles en el sistema. El modelo de OpenMP es una coincidencia de métodos especialmente adecuados para informática de alto rendimiento, que se distribuyen los problemas de cálculo muy grandes a través de los recursos de procesamiento de un equipo. En este escenario, el entorno de hardware generalmente es fijo y el desarrollador puede esperar a tener acceso exclusivo a todos los recursos informáticos cuando se ejecuta el algoritmo.
 

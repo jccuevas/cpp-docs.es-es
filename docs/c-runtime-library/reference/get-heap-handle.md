@@ -25,14 +25,14 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e82686c4b33dc11f02f387a97966d3ff5a47085
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480033"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499927"
 ---
-# <a name="getheaphandle"></a>_get_heap_handle
+# <a name="_get_heap_handle"></a>_get_heap_handle
 
 Devuelve el identificador del montón usado por el sistema en tiempo de ejecución de C.
 
@@ -48,7 +48,7 @@ Devuelve el identificador del montón de Win32 usado por el sistema en tiempo de
 
 ## <a name="remarks"></a>Comentarios
 
-Use esta función si quiere llamar a [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) y habilitar el montón de baja fragmentación en el montón de CRT.
+Use esta función si quiere llamar a [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) y habilitar el montón de baja fragmentación en el montón de CRT.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -58,7 +58,7 @@ Use esta función si quiere llamar a [HeapSetInformation](/windows/desktop/api/h
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="sample"></a>Ejemplo
+## <a name="sample"></a>Muestra
 
 ```cpp
 // crt_get_heap_handle.cpp

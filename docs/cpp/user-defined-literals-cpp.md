@@ -3,11 +3,11 @@ title: Literales definidos por el usuario (C++)
 ms.date: 11/04/2016
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
 ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392120"
 ---
 # <a name="user-defined-literals--c"></a>Literales definidos por el usuario (C++)
 

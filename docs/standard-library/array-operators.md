@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: c44789c958b3fc24441b95178acc85ce3ba337fb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524903"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456762"
 ---
 # <a name="ltarraygt-operators"></a>Operadores de &lt;array&gt;
 
-El \<matriz > encabezado incluye estas **matriz** funciones de plantilla de comparación que no es miembro.
+El \<encabezado > de matriz incluye estas funciones de plantilla de comparación que no son miembros de la **matriz** .
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*salido*\
 Contenedor izquierdo que se va a comparar.
 
-*right*<br/>
+*correcta*\
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -111,16 +111,16 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*salido*\
 Contenedor izquierdo que se va a comparar.
 
-*right*<br/>
+*correcta*\
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*salido*\
 Contenedor izquierdo que se va a comparar.
 
-*right*<br/>
+*correcta*\
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -257,16 +257,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*salido*\
 Contenedor izquierdo que se va a comparar.
 
-*right*<br/>
+*correcta*\
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*salido*\
 Contenedor izquierdo que se va a comparar.
 
-*right*<br/>
+*correcta*\
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*salido*\
 Contenedor izquierdo que se va a comparar.
 
-*right*<br/>
+*correcta*\
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>Vea también
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

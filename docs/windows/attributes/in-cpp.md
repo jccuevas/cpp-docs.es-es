@@ -1,21 +1,21 @@
 ---
-title: (atributo de COM de C++)
+title: in (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034542"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514595"
 ---
 # <a name="in-c"></a>in (C++)
 
-Indica que es un parámetro que se pasan desde el procedimiento que realiza la llamada al procedimiento llamado.
+Indica que se va a pasar un parámetro del procedimiento que realiza la llamada al procedimiento llamado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,11 +25,11 @@ Indica que es un parámetro que se pasan desde el procedimiento que realiza la l
 
 ## <a name="remarks"></a>Comentarios
 
-El **en** atributo de C++ tiene la misma funcionalidad que el [en](/windows/desktop/Midl/in) atributo MIDL.
+El atributo **in** C++ tiene la misma funcionalidad que el atributo MIDL [en](/windows/win32/Midl/in) .
 
 ## <a name="example"></a>Ejemplo
 
-Consulte [enlazable](bindable.md) para obtener un ejemplo de cómo usar **en**.
+Vea [enlazable](bindable.md) para obtener un ejemplo de cómo usar **en**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,9 +37,9 @@ Consulte [enlazable](bindable.md) para obtener un ejemplo de cómo usar **en**.
 
 |||
 |-|-|
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
+|**Se aplica a**|Parámetro de interfaz, método de interfaz|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
 |**Atributos no válidos**|**retval**|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
@@ -50,5 +50,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[identificador](id.md)<br/>
+[id](id.md)<br/>
 [out](out-cpp.md)

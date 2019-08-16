@@ -8,18 +8,18 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-ms.openlocfilehash: 4be9074f3e7d7ce4321402d27fc26283a52436e9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97abde8285a3baf307df79fd97d4f9a379c8f58f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267308"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507835"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Procesar los mensajes de notificación del control de pestaña
 
-Como los usuarios, haga clic en fichas o botones, el control de ficha ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) envía mensajes de notificación a su ventana primaria. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario hace clic en una pestaña, puede preestablecer datos de control en la página antes de mostrarlo.
+A medida que los usuarios hacen clic en pestañas o botones, el control de pestaña ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) envía mensajes de notificación a su ventana primaria. Controle estos mensajes si desea hacer algo en respuesta. Por ejemplo, cuando el usuario hace clic en una pestaña, puede que desee preestablecer los datos de control en la página antes de mostrarla.
 
-Procese los mensajes WM_NOTIFY desde el control de ficha en la clase de vista o cuadro de diálogo. Utilice la ventana Propiedades para crear un [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) función de controlador con una instrucción switch en función de qué mensaje de notificación que se está controlando. Para obtener una lista de las notificaciones de un control de ficha puede enviar a su ventana primaria, vea el **notificaciones** sección de [referencia de Control de ficha](/windows/desktop/controls/tab-control-reference) en el SDK de Windows.
+Procese los mensajes WM_NOTIFY del control de pestaña en la vista o la clase de cuadro de diálogo. Utilice la ventana Propiedades para crear una función controladora [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) con una instrucción switch basada en el mensaje de notificación que se está controlando. Para obtener una lista de las notificaciones que un control de pestaña puede enviar a su ventana primaria , consulte la sección notificaciones de [referencia de control](/windows/win32/controls/tab-control-reference) de pestañas en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

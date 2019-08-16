@@ -8,13 +8,13 @@ helpviewer_keywords:
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413897"
 ---
-# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Filtrar Convertir un bucle usar el Runtime de simultaneidad OpenMP paralelo
+# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Procedimiento Convertir un bucle usar el Runtime de simultaneidad OpenMP paralelo
 
 En este ejemplo se muestra cómo convertir un bucle básico que usa el OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) y [para](../../parallel/openmp/reference/for-openmp.md) directivas para usar el Runtime de simultaneidad [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
@@ -41,7 +41,7 @@ Para obtener más información acerca de `parallel_for` y otros algoritmos paral
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo modifica el ejemplo anterior para actuar sobre un [std:: Array](../../standard-library/array-class-stl.md) en lugar del objeto en una matriz nativa. Debido a que las versiones 2.0 y 2.5 de OpenMP se permiten para firmados solo en tipos de índice entero un `parallel_for` construcción, no se puede usar iteradores para tener acceso a los elementos de un contenedor de la biblioteca estándar de C++ en paralelo. La biblioteca de patrones paralelos (PPL) proporciona la [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo, que realiza las tareas, en paralelo, en un contenedor iterativo como los proporcionados por la biblioteca estándar de C++. Usa la misma lógica de creación de particiones que el algoritmo `parallel_for`. El `parallel_for_each` algoritmo es similar a la biblioteca estándar de C++ [std:: for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo, salvo que el `parallel_for_each` algoritmo ejecuta las tareas de forma simultánea.
+En este ejemplo modifica el ejemplo anterior para actuar sobre un [std:: Array](../../standard-library/array-class-stl.md) en lugar del objeto en una matriz nativa. Debido a que las versiones 2.0 y 2.5 de OpenMP se permiten para firmados solo en tipos de índice entero un `parallel_for` construcción, no se puede usar iteradores para tener acceso a los elementos de un contenedor de la biblioteca estándar de C++ en paralelo. La biblioteca de patrones paralelos (PPL) proporciona la [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo, que realiza las tareas, en paralelo, en un contenedor iterativo como los proporcionados por el C++ biblioteca estándar. Usa la misma lógica de creación de particiones que el algoritmo `parallel_for`. El `parallel_for_each` algoritmo es similar a la C++ biblioteca estándar de [std:: for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo, salvo que el `parallel_for_each` algoritmo ejecuta las tareas de forma simultánea.
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 

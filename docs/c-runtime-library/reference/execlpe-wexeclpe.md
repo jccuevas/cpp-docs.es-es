@@ -29,11 +29,11 @@ helpviewer_keywords:
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
 ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339369"
 ---
 # <a name="execlpe-wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -63,7 +63,7 @@ intptr_t _wexeclpe(
 
 ### <a name="parameters"></a>Parámetros
 
-*CmdName*<br/>
+*cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
 *arg0*,... *argn*<br/>
@@ -76,7 +76,7 @@ Matriz de punteros a la configuración del entorno.
 
 Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de -1 indica un error, en cuyo caso el **errno** se establece la variable global.
 
-|**errno** valor|Descripción|
+|**errno** value|Descripción|
 |-------------------|-----------------|
 |**E2BIG**|El espacio necesario para los argumentos y la configuración de entorno supera los 32 kB.|
 |**EACCES**|El archivo especificado tiene un bloqueo o una infracción de uso compartido.|

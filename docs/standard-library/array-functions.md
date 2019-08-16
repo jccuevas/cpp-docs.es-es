@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 719377be2ac130100e3f9e9ea608c5c27be3101f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562310"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456773"
 ---
 # <a name="ltarraygt-functions"></a>Funciones &lt;array&gt;
 
-El \<matriz > encabezado incluye dos funciones no miembro, `get` y `swap`, que operan en **matriz** objetos.
+El \<encabezado > de matriz incluye dos funciones no miembro, `get` y `swap`, que operan en objetos de **matriz** .
 
 |||
 |-|-|
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Index*<br/>
+*Ajustar*\
 El desplazamiento del elemento.
 
-*T*<br/>
+*H*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Número de elementos de la matriz.
 
-*arr*<br/>
+*ARR*\
 La matriz de la que se selecciona.
 
 ### <a name="example"></a>Ejemplo
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Una especialización de plantilla que no es miembro de `std::swap` que intercambia dos **matriz** objetos.
+Una especialización de plantilla no miembro de `std::swap` que intercambia dos objetos de **matriz** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,16 +97,16 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*<br/>
+*Ty*\
 El tipo de un elemento.
 
-*N*<br/>
+*N*\
 Se refiere al tamaño de la matriz.
 
-*left*<br/>
+*salido*\
 Primera matriz que se va a intercambiar.
 
-*right*<br/>
+*correcta*\
 Segunda matriz que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

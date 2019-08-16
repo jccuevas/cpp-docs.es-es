@@ -1,5 +1,5 @@
 ---
-title: COleDropSource (clase)
+title: Clase COleDropSource
 ms.date: 11/04/2016
 f1_keywords:
 - COleDropSource
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 3a1e27ca6c1019eb8716194b3b7711238d015d6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778512"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504000"
 ---
-# <a name="coledropsource-class"></a>COleDropSource (clase)
+# <a name="coledropsource-class"></a>Clase COleDropSource
 
-Permite que los datos que se arrastrarán a un destino de colocación.
+Permite arrastrar datos a un destino de colocación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,27 +35,27 @@ class COleDropSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleDropSource::COleDropSource](#coledropsource)|Construye un objeto `COleDropSource`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleDropSource::GiveFeedback](#givefeedback)|Cambia el cursor durante una operación de arrastrar y colocar.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Controla la captura del mouse durante una operación de arrastrar y colocar.|
-|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Comprueba si la operación de arrastre debería continuar.|
+|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Comprueba si el arrastre debería continuar.|
 
 ## <a name="remarks"></a>Comentarios
 
-El [COleDropTarget](../../mfc/reference/coledroptarget-class.md) clase controla la parte receptora de la operación de arrastrar y colocar. La `COleDropSource` objeto es responsable de determinar cuándo comienza una operación de arrastre, proporcionar comentarios durante la operación de arrastrar y determinar cuándo finaliza la operación de arrastre.
+La clase [COleDropTarget](../../mfc/reference/coledroptarget-class.md) controla la parte de recepción de la operación de arrastrar y colocar. El `COleDropSource` objeto es responsable de determinar cuándo comienza una operación de arrastre, proporcionar comentarios durante la operación de arrastre y determinar cuándo finaliza la operación de arrastre.
 
-Para usar un `COleDropSource` de objetos, simplemente llame al constructor. Esto simplifica el proceso de determinar qué eventos, como un clic del mouse, comenzar una operación de arrastre mediante [COleDataSource:: DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), o [ COleServerItem:: DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) función. Estas funciones se creará un `COleDropSource` objeto automáticamente. Es posible que desee modificar el comportamiento predeterminado de la `COleDropSource` funciones reemplazables. Estas funciones miembro se llamará en el momento adecuado, el marco de trabajo.
+Para usar un `COleDropSource` objeto, simplemente llame al constructor. Esto simplifica el proceso de determinar qué eventos, como un clic del mouse, comienza una operación de arrastre mediante [COleDataSource::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)o [COleServerItem::D función odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) . Estas funciones crearán un `COleDropSource` objeto. Es posible que desee modificar el comportamiento predeterminado de las `COleDropSource` funciones reemplazables. El marco de trabajo llamará a estas funciones miembro en el momento adecuado.
 
-Para obtener más información sobre las operaciones de arrastrar y colocar mediante OLE, vea el artículo [arrastrar y colocar (OLE)](../../mfc/drag-and-drop-ole.md).
+Para obtener más información sobre las operaciones de arrastrar y colocar con OLE, vea el artículo [arrastrar y colocar (OLE)](../../mfc/drag-and-drop-ole.md).
 
-Para obtener más información, consulte [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) en el SDK de Windows.
+Para obtener más información, vea [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) en el Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -67,7 +67,7 @@ Para obtener más información, consulte [IDropSource](/windows/desktop/api/olei
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxole.h
+**Encabezado:** afxole. h
 
 ##  <a name="coledropsource"></a>  COleDropSource::COleDropSource
 
@@ -79,7 +79,7 @@ COleDropSource();
 
 ##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback
 
-Lo llama el marco de trabajo después de llamar a [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) o [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).
+Lo llama el marco de trabajo después de llamar a [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) o [COleDropTarget::D ragenter](../../mfc/reference/coledroptarget-class.md#ondragenter).
 
 ```
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
@@ -88,31 +88,31 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="parameters"></a>Parámetros
 
 *dropEffect*<br/>
-El efecto que le gustaría mostrar al usuario, normalmente, que indica lo que sucedería si se produjera una colocación en este momento con los datos seleccionados. Normalmente, esto es el valor devuelto por la llamada más reciente a [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) o [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Puede ser uno o varios de los siguientes:
+El efecto que le gustaría mostrar al usuario, lo que suele indicar lo que sucedería si se produjera una caída en este punto con los datos seleccionados. Normalmente, este es el valor devuelto por la llamada más reciente a [CView:: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) o [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover). Puede ser uno o varios de los siguientes:
 
-- DROPEFFECT_NONE no se permitiría un descenso.
+- DROPEFFECT_NONE no se permite la eliminación.
 
 - DROPEFFECT_COPY se realizará una operación de copia.
 
 - DROPEFFECT_MOVE se realizará una operación de movimiento.
 
-- ¿Se puede establecer vínculo de un DROPEFFECT_LINK de los datos colocados en los datos originales.
+- DROPEFFECT_LINK se establecería un vínculo entre los datos colocados y los datos originales.
 
-- Operación de desplazamiento DROPEFFECT_SCROLL un arrastre tiene lugar o se está produciendo en el destino.
+- DROPEFFECT_SCROLL una operación de desplazamiento de arrastre está a punto de producirse o se está produciendo en el destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve DRAGDROP_S_USEDEFAULTCURSORS si arrastra está en curso, NOERROR si no lo está.
+Devuelve DRAGDROP_S_USEDEFAULTCURSORS si el arrastre está en curso, si no lo está.
 
 ### <a name="remarks"></a>Comentarios
 
-Reemplace esta función para proporcionar comentarios al usuario sobre lo que sucedería si se produjera una colocación en este momento. La implementación predeterminada usa los cursores predeterminados OLE. Para obtener más información sobre las operaciones de arrastrar y colocar mediante OLE, vea el artículo [arrastrar y colocar (OLE)](../../mfc/drag-and-drop-ole.md).
+Invalide esta función para proporcionar información al usuario sobre lo que sucedería si se produjera una caída en este momento. La implementación predeterminada utiliza los cursores predeterminados de OLE. Para obtener más información sobre las operaciones de arrastrar y colocar con OLE, vea el artículo [arrastrar y colocar (OLE)](../../mfc/drag-and-drop-ole.md).
 
-Para obtener más información, consulte [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback), [DoDragDrop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover), y [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) en el SDK de Windows.
+Para obtener más información, vea [IDropSource:: GiveFeedback](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)y [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) en el Windows SDK.
 
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag
 
-Lo llama el marco de trabajo cuando produce un evento que pudiera iniciar una operación de arrastre, por ejemplo, al presionar el botón primario del mouse.
+Lo llama el marco de trabajo cuando se produce un evento que puede iniciar una operación de arrastre, como presionar el botón primario del mouse.
 
 ```
 virtual BOOL OnBeginDrag(CWnd* pWnd);
@@ -125,15 +125,15 @@ Apunta a la ventana que contiene los datos seleccionados.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la operación de arrastre puede, 0 en caso contrario.
+Es distinto de cero si se permite arrastrar; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Reemplace esta función si desea modificar la forma en que se inicia el proceso de arrastrar. La implementación predeterminada, captura el mouse y permanece en modo de arrastre hasta que el usuario hace clic en el botón izquierdo o derecho del mouse o presiona ESC, momento en el que suelta el mouse.
+Invalide esta función si desea modificar la forma en que se inicia el proceso de arrastre. La implementación predeterminada captura el mouse y permanece en modo de arrastre hasta que el usuario hace clic con el botón primario o secundario del mouse o presiona ESC, momento en el que suelta el mouse.
 
 ##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag
 
-Una vez iniciada la operación de arrastre, esta función se invoca varias veces el marco de trabajo hasta que se cancela o finaliza la operación de arrastre.
+Una vez que se ha iniciado el arrastre, el marco de trabajo llama a esta función repetidamente hasta que la operación de arrastrar se cancela o se completa.
 
 ```
 virtual SCODE QueryContinueDrag(
@@ -144,26 +144,26 @@ virtual SCODE QueryContinueDrag(
 ### <a name="parameters"></a>Parámetros
 
 *bEscapePressed*<br/>
-Indica si se ha presionado la tecla ESC desde la última llamada a `COleDropSource::QueryContinueDrag`.
+Indica si se ha presionado la tecla ESC desde la última llamada `COleDropSource::QueryContinueDrag`a.
 
 *dwKeyState*<br/>
-Contiene el estado de las teclas modificadoras del teclado. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
+Contiene el estado de las teclas modificadoras del teclado. Se trata de una combinación de cualquier número de lo siguiente: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
 
 ### <a name="return-value"></a>Valor devuelto
 
-DRAGDROP_S_CANCEL si la tecla ESC o el botón secundario está presionado o el botón se produce antes de arrastrar se inicia. DRAGDROP_S_DROP si debe producirse una operación de colocar. S_OK en caso contrario.
+DRAGDROP_S_CANCEL si se presiona la tecla ESC o el botón derecho, o el botón primario se genera antes de que se inicie el arrastre. DRAGDROP_S_DROP si se debe realizar una operación de colocar. En caso contrario, S_OK.
 
 ### <a name="remarks"></a>Comentarios
 
-Invalidación de que esta función si desea cambiar el punto en el que arrastrar se cancela o una caída se produce.
+Invalide esta función si desea cambiar el punto en el que se cancela el arrastre o se produce una caída.
 
-La implementación predeterminada inicia la operación de colocar o cancela la operación de arrastre como sigue. Cancela una operación de arrastre cuando se presiona la tecla ESC o el botón secundario del mouse. Inicia una operación de colocar cuando el botón primario del mouse se produce después de que haya iniciado el arrastre. En caso contrario, devuelve S_OK y lleva a cabo ninguna operación adicional.
+La implementación predeterminada inicia la eliminación o cancela el arrastre del modo siguiente. Cancela una operación de arrastre cuando se presiona la tecla ESC o el botón secundario del mouse. Inicia una operación de colocar cuando se produce el botón primario del mouse después de que se haya iniciado el arrastre. De lo contrario, Devuelve S_OK y no realiza ninguna operación adicional.
 
-Dado que esta función se llama con frecuencia, se debe optimizar tanto como sea posible.
+Dado que se llama a esta función con frecuencia, debe optimizarse tanto como sea posible.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[Ejemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo OCLIENT de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

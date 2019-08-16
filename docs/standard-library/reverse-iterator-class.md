@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: e7164e72dfc7bef0213a38e2605dee8195747f17
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565641"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451174"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator (Clase)
 
@@ -38,15 +38,15 @@ class reverse_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-RandomIterator el tipo que representa el iterador para que se adaptará para trabajar en orden inverso.
+RandomIterator tipo que representa el iterador que se va a adaptar para operar en orden inverso.
 
 ## <a name="remarks"></a>Comentarios
 
-Los contenedores existentes en la Biblioteca estándar de C++ también definen los tipos `reverse_iterator` y `const_reverse_iterator`, y tienen las funciones miembro `rbegin` y `rend` que devuelven iteradores inversos. Estos iteradores tienen semántica de sobrescritura. El `reverse_iterator` adaptador complementa esta funcionalidad, ya que ofrece la semántica de inserción y también se puede usar con secuencias.
+Los contenedores existentes en la Biblioteca estándar de C++ también definen los tipos `reverse_iterator` y `const_reverse_iterator`, y tienen las funciones miembro `rbegin` y `rend` que devuelven iteradores inversos. Estos iteradores tienen semántica de sobrescritura. El `reverse_iterator` adaptador complementa esta funcionalidad porque proporciona semántica de inserción y también se puede usar con secuencias.
 
-El `reverse_iterator` que requiere un iterador bidireccional no debe llamar a cualquiera de los miembros funciones `operator+=`, `operator+`, `operator-=`, `operator-`, o `operator[]`, que solo se puede usar con los iteradores de acceso aleatorio.
+`operator-=` `operator+` `operator+=` `operator[]` `operator-`Que requiere un iterador bidireccional no debe llamar a ninguna de las funciones miembro,,, o, que solo se pueden usar con iteradores de acceso aleatorio. `reverse_iterator`
 
-El intervalo de iterador es [*primera*, *última*), donde el corchete en el lado izquierdo indica la inclusión de *primera* y el paréntesis derecho indica la inclusión de elementos hasta pero excluyendo *última* propio. Se incluyen los mismos elementos en la secuencia inversa [ **rev** - *primera*, **rev** - *última*) para ese if *última* es el elemento uno más allá y el final de una secuencia, a continuación, el primer elemento **rev** - *primera* en los puntos de secuencia inversa para \*(*última* - 1). La identidad que relaciona todos los iteradores inversos con sus iteradores subyacentes es:
+El intervalo de un iterador es [*First*, *Last*), donde el corchete de la izquierda indica la inclusión de *First* y el paréntesis de la derecha indica la inclusión de elementos hasta el *último* , pero sin incluirlos. Los mismos elementos se incluyen en la secuencia inversa [ **Rev** - *First*, **Rev** - *Last*] de modo que, si el *último* es el elemento que se encuentra al final de una secuencia, el primer elemento **Rev** en primer *lugar* , en la secuencia inversa \*, apunta a (último-1).  -  La identidad que relaciona todos los iteradores inversos con sus iteradores subyacentes es:
 
 &\*( **reverse_iterator** ( *i* )) == &\*( *i* - 1).
 
@@ -174,7 +174,7 @@ typedef typename iterator_traits<RandomIterator>::difference_type  difference_ty
 
 El tipo de diferencia `reverse_iterator` es el mismo que el tipo de diferencia del iterador.
 
-El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< **RandomIterator**> **::pointer**.
+El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< **RandomIterator**>  **::pointer**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -210,7 +210,7 @@ El valor de los elementos a los que se dirige el reverse_iterator.
 
 ### <a name="remarks"></a>Comentarios
 
-El operador devuelve \*( **actual** - 1).
+El operador devuelve \*( **Current** -1).
 
 ### <a name="example"></a>Ejemplo
 
@@ -265,7 +265,7 @@ reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Off*<br/>
+*Habilitar*\
 El desplazamiento que se agregará al iterador inverso.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -414,7 +414,7 @@ reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 
 ### <a name="parameters"></a>Parámetros
 
-*Off*<br/>
+*Habilitar*\
 El desplazamiento en el que se incrementa el iterador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -487,7 +487,7 @@ reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Off*<br/>
+*Habilitar*\
 El desplazamiento que se restará del reverse_iterator.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -637,7 +637,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 
 ### <a name="parameters"></a>Parámetros
 
-*Off*<br/>
+*Habilitar*\
 El desplazamiento que se restará del `reverse_iterator`.
 
 ### <a name="remarks"></a>Comentarios
@@ -791,7 +791,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Off*<br/>
+*Habilitar*\
 El desplazamiento desde la dirección del `reverse_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -869,7 +869,7 @@ typedef typename iterator_traits<RandomIterator>::pointer pointer;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< *RandomIterator*> **::pointer**.
+El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< *RandomIterator*>  **::pointer**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -941,11 +941,11 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< *RandomIterator*> **::reference**.
+El tipo es un sinónimo del nombre de tipo de rasgo del iterador `iterator_traits`\< *RandomIterator*>  **::reference**.
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [reverse_iterator:: operator&#91; &#93; ](#op_at) o [reverse_iterator:: operator *](#op_star) para obtener ejemplos de cómo declarar y usar `reference`.
+Vea [reverse_iterator:: Operator&#91; ](#op_at) o [reverse_iterator:: Operator *](#op_star) para obtener ejemplos de cómo declarar y usar `reference`.
 
 ## <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator
 
@@ -961,7 +961,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*right*<br/>
+*correcta*\
 El iterador que se va a adaptar a un `reverse_iterator`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1021,6 +1021,6 @@ int main( )
 
 ## <a name="see-also"></a>Vea también
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

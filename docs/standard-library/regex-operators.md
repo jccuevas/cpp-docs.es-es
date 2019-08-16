@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524474"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460133"
 ---
 # <a name="ltregexgt-operators"></a>Operadores de &lt;regex&gt;
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*salido*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*correcta*\
 El objeto derecho que se compara.
 
 ### <a name="remarks"></a>Comentarios
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*salido*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*correcta*\
 El objeto derecho que se compara.
 
 ### <a name="remarks"></a>Comentarios
 
-Cada operador de plantilla convierte sus argumentos a un tipo de cadena y devuelve true solo si el valor convertido de *izquierdo* compara menos que el valor convertido de *derecho*.
+Cada operador de plantilla convierte sus argumentos en un tipo de cadena y devuelve true solo si el valor convertido de *left* se compara menor que el valor convertido de *right*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+*Elem*\
 El tipo de elemento.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*sistema operativo*<br/>
+*operativos*\
 Secuencia de salida.
 
-*right*<br/>
+*correcta*\
 Objeto que se va a insertar.
 
 ### <a name="remarks"></a>Comentarios
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*salido*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*correcta*\
 El objeto derecho que se compara.
 
 ### <a name="remarks"></a>Comentarios
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*salido*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*correcta*\
 El objeto derecho que se compara.
 
 ### <a name="remarks"></a>Comentarios
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*salido*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*correcta*\
 El objeto derecho que se compara.
 
 ### <a name="remarks"></a>Comentarios
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parámetros
 
-*BidIt*<br/>
+*BidIt*\
 Tipo de iterador.
 
-*IOtraits*<br/>
+*IOtraits*\
 La clase de características de cadena.
 
-*Alloc*<br/>
+*Alloc*\
 Clase de asignador.
 
-*left*<br/>
+*salido*\
 El objeto izquierdo que se compara.
 
-*right*<br/>
+*correcta*\
 El objeto derecho que se compara.
 
 ### <a name="remarks"></a>Comentarios
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>Vea también
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants (Clase)](../standard-library/regex-constants-class.md)<br/>
-[regex_error (Clase)](../standard-library/regex-error-class.md)<br/>
-[Funciones de \<regex>](../standard-library/regex-functions.md)<br/>
-[regex_iterator (Clase)](../standard-library/regex-iterator-class.md)<br/>
-[regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits (Clase)](../standard-library/regex-traits-class.md)<br/>
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Clase regex_constants](../standard-library/regex-constants-class.md)\
+[Clase regex_error](../standard-library/regex-error-class.md)\
+[\<funciones regex >](../standard-library/regex-functions.md)\
+[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
+[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Clase regex_traits](../standard-library/regex-traits-class.md)\
+[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)

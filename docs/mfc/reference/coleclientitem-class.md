@@ -1,6 +1,6 @@
 ---
 title: COleClientItem (clase)
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - COleClientItem
 - AFXOLE/COleClientItem
@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 6c370271f1508f79ea20cdf84b38b1f3dc2df023
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773988"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552265"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem (clase)
 
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 Puntero a un [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser NULL.
 
 *ppd*<br/>
-Puntero a un [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser NULL.
+Puntero a un [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 

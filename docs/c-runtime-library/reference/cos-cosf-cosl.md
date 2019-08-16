@@ -32,11 +32,11 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335365"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -66,8 +66,8 @@ El coseno de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se p
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|+ QNAN, IND|ninguna|**_DOMINIO**|
-|+ INF|**NO VÁLIDO**|**_DOMINIO**|
+|± QNAN, IND|ninguna|**_DOMAIN**|
+|+ INF|**INVALID**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentarios
 

@@ -1,16 +1,17 @@
 ---
 title: Actualizar proyectos desde versiones anteriores de Visual C++
-ms.date: 11/04/2016
+description: Cómo actualizar proyectos de Microsoft C++ desde versiones anteriores de Visual Studio.
+ms.date: 05/03/2019
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 25cf8d451c0efb5234fba5e56b6bfe7ceb7c2c08
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034918"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400811"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Actualizar proyectos desde versiones anteriores de Visual C++
 
@@ -41,10 +42,10 @@ Para obtener información sobre cómo actualizar las versiones de Windows de des
 [Problemas de migración de punto flotante](floating-point-migration-issues.md)<br/>
 [Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos](use-native-multi-targeting.md)<br/>
 [Características de Visual C++ en desuso en la versión preliminar de Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
-[Cambios del sistema de compilación](build-system-changes.md)<br/>
+[Cambios del sistema de compilación](build-system-changes.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Novedades de Visual C++ en Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Novedades de Visual C++ en Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Comportamiento no estándar](../cpp/nonstandard-behavior.md)

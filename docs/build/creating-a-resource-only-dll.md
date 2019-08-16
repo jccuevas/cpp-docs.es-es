@@ -5,12 +5,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 7f0bad94cf3f126d27cc29567bd4f6c4a846bf1e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 0d729be60ebec7a37d07fed1d14c4fd5330c7242
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814389"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220839"
 ---
 # <a name="creating-a-resource-only-dll"></a>Crear un archivo DLL de recursos
 
@@ -49,4 +49,4 @@ La aplicación debe llamar a `FreeLibrary` cuando termine con los recursos.
 ## <a name="see-also"></a>Vea también
 
 [Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

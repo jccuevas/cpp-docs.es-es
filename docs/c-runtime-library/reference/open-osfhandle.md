@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9e940844eb5e37755c10999feb294981afc8683a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327868"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821600"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
-Asocia un descriptor de archivo en tiempo de ejecución de C al identificador de archivo del sistema operativo existente.
+Asocia un descriptor de archivo de tiempo de ejecución de C con el identificador de archivo del sistema operativo existente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,22 +54,22 @@ Tipos de operaciones permitidas.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **_open_osfhandle** devuelve un descriptor de archivo de tiempo de ejecución de C. En caso contrario, devuelve -1.
+Si se realiza correctamente, **_open_osfhandle** devuelve un descriptor de archivo en tiempo de ejecución de C. De lo contrario, devuelve -1.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_open_osfhandle** función asigna un descriptor de archivo de tiempo de ejecución de C y lo asocia con el identificador de archivo del sistema operativo especificado por *osfhandle*. Para evitar una advertencia del compilador, convierta el *osfhandle* argumento desde **controlar** a **intptr_t**. El *marcas* argumento es una expresión de entero formada a partir de uno o más constantes del manifiesto definidos en \<fcntl.h >. Cuando se usan dos o más constantes de manifiesto para formar el *marcas* argumento, estas constantes se combinan con el operador OR bit a bit ( **&#124;** ).
+El **_open_osfhandle** función asigna un descriptor de archivo de tiempo de ejecución de C. Asocia este descriptor de archivo especificado por el identificador de archivo de sistema operativo *osfhandle*. Para evitar una advertencia del compilador, convierta el argumento *osfhandle* de **HANDLE** a **intptr_t**. El argumento *flags* es una expresión de entero formada por una o varias de las constantes del manifiesto, definidas en \<fcntl.h>. Puede usar el operador OR bit a bit ( **&#124;** ) para combinar dos o más constantes de manifiesto para formar el *marcas* argumento.
 
-Estas constantes de manifiesto se definen en \<fcntl.h >:
+Estas constantes de manifiesto se definen en \<fcntl.h>:
 
 |||
 |-|-|
 | **\_O\_APPEND** | Coloca un puntero de archivo al final del archivo antes de cada operación de escritura. |
 | **\_O\_RDONLY** | Abre el archivo únicamente para leerlo. |
-| **\_O\_TEXTO** | Abre el archivo en modo de texto (traducido). |
+| **\_O\_TEXT** | Abre el archivo en modo de texto (traducido). |
 | **\_O\_WTEXT** | Abre el archivo en modo Unicode (UTF-16 traducido). |
 
-El **_open_osfhandle** llamada transfiere la propiedad del identificador de archivo de Win32 en el descriptor de archivo. Para cerrar un archivo abierto con **_open_osfhandle**, llame a [ \_cerrar](close.md). También se cierra el identificador de archivo del sistema operativo subyacente mediante una llamada a **_close**, por lo que no es necesario llamar a la función de Win32 **CloseHandle** en el identificador original. Si el descriptor de archivo pertenece a un **archivo &#42;**  secuencia, a continuación, llamar a [fclose](fclose-fcloseall.md) en que **archivo &#42;**  secuencia también tanto el descriptor de archivo cierra y el identificador subyacente. En este caso, no llame a **_close** en el descriptor de archivo.
+Con la llamada **_open_osfhandle**, se transfiere la propiedad del identificador de archivos de Win32 al descriptor del archivo. Para cerrar un archivo abierto mediante **_open_osfhandle**, llame a [\_close](close.md). El identificador de archivos del sistema operativo subyacente también se cierra mediante una llamada a **_close**. No llame a la función de Win32 **CloseHandle** en el identificador original. Si el descriptor de archivo pertenece a un **archivo &#42;**  stream y, a continuación, una llamada a [fclose](fclose-fcloseall.md) cierra el descriptor de archivo y el identificador subyacente. En este caso, no llame a **_close** en el descriptor del archivo o a **CloseHandle** en el identificador original.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,3 +82,4 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 ## <a name="see-also"></a>Vea también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
+[\_get_osfhandle](get-osfhandle.md)

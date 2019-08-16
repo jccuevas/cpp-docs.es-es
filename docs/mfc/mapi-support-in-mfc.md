@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
 ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225533"
 ---
 # <a name="mapi-support-in-mfc"></a>Compatibilidad MAPI en MFC
 
@@ -32,7 +32,7 @@ MAPI se debe leer el archivo para enviar los datos adjuntos. Si la aplicación m
 
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>Para implementar un comando Enviar correo con MFC
 
-1. Utilice el editor de menús de Visual C++ para agregar un elemento de menú cuyo identificador de comando sea ID_FILE_SEND_MAIL.
+1. Uso del objeto Visual C++ editor de menús para agregar un elemento de menú cuyo identificador de comando sea ID_FILE_SEND_MAIL.
 
    Este identificador de comando se proporciona el marco de trabajo de AFXRES. H. El comando se puede agregar a cualquier menú, pero normalmente se agrega a la **archivo** menú.
 

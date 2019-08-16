@@ -1,18 +1,18 @@
 ---
-title: Filtrar Escribir un bucle parallel_for_each
+title: Procedimiento Escribir un bucle parallel_for_each
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
 ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375566"
 ---
-# <a name="how-to-write-a-parallelforeach-loop"></a>Filtrar Escribir un bucle parallel_for_each
+# <a name="how-to-write-a-parallelforeach-loop"></a>Procedimiento Escribir un bucle parallel_for_each
 
 En este ejemplo se muestra cómo usar el [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo para calcular el recuento de números primos en un [std:: Array](../../standard-library/array-class-stl.md) objetos en paralelo.
 

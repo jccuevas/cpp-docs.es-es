@@ -42,25 +42,16 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecba1de1419203d75ba6a97fbd651469a472905
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474287"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244722"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; (Funciones)
 
-||||
-|-|-|-|
-|[abs](#abs)|[arg](#arg)|[conj](#conj)|
-|[cos](#cos)|[cosh](#cosh)|[exp](#exp)|
-|[imag](#imag)|[log](#log)|[log10](#log10)|
-|[norm](#norm)|[polar](#polar)|[pow](#pow)|
-|[real](#real)|[sin](#sin)|[sinh](#sinh)|
-|[sqrt](#sqrt)|[tan](#tan)|[tanh](#tanh)|
-
-## <a name="abs"></a>  abs
+## <a name="abs"></a> ABS
 
 Calcula el módulo de un número complejo.
 
@@ -71,7 +62,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo módulo se va a determinar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -147,7 +138,19 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
-## <a name="arg"></a>  arg
+## <a name="acos"></a> ACOS
+
+```cpp
+template<class T> complex<T> acos(const complex<T>&);
+```
+
+## <a name="acosh"></a> ACOSH
+
+```cpp
+template<class T> complex<T> acosh(const complex<T>&);
+```
+
+## <a name="arg"></a> arg
 
 Extrae el argumento de un número complejo.
 
@@ -158,7 +161,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo argumento se va a determinar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -234,6 +237,30 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
+## <a name="asin"></a> ASIN
+
+```cpp
+template<class T> complex<T> asin(const complex<T>&);
+```
+
+## <a name="asinh"></a> Asinh
+
+```cpp
+template<class T> complex<T> asinh(const complex<T>&);
+```
+
+## <a name="atan"></a> ATAN
+
+```cpp
+template<class T> complex<T> atan(const complex<T>&);
+```
+
+## <a name="atanh"></a> ATANH
+
+```cpp
+template<class T> complex<T> atanh(const complex<T>&);
+```
+
 ## <a name="conj"></a>  conj
 
 Devuelve el conjugado complejo de un número complejo.
@@ -245,7 +272,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo conjugado complejo se va a devolver.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -309,7 +336,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```
 
-## <a name="cos"></a>  cos
+## <a name="cos"></a> cos
 
 Devuelve el coseno de un número complejo.
 
@@ -320,7 +347,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo coseno se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -331,9 +358,9 @@ El número complejo que es el coseno del número complejo de entrada.
 
 Identidades que definen los cosenos complejos:
 
-COS ( *z*) = (1/2)\*(exp ( *iz*) + exp (- *iz*))
+COS (*z*) = (1/2)\*(exp (*iz*) + exp (- *iz*))
 
-cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*) - isin ( *a*) sinh ( *b*)
+COS (*z*) = cos (*un* + *bi*) = cos (*un*) cosh ( *b*)-isin (*un* ) sinh (*b*)
 
 ### <a name="example"></a>Ejemplo
 
@@ -400,7 +427,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)
 ```
 
-## <a name="cosh"></a>  cosh
+## <a name="cosh"></a> COSH
 
 Devuelve el coseno hiperbólico de un número complejo.
 
@@ -411,7 +438,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo coseno hiperbólico se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -422,9 +449,9 @@ El número complejo que es el coseno hiperbólico del número complejo de entrad
 
 Identidades que definen los cosenos hiperbólicos complejos:
 
-cos ( *z*) = (1/2)\*( exp ( *z*) + exp (- *z*) )
+COS (*z*) = (1/2)\*(exp (*z*) + exp (- *z*))
 
-cos ( *z*) = cosh ( *a + bi*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)
+COS (*z*) = cosh (*a + bi*) = cosh (*un*) cos (*b*) + isinh (*un*) Sen (*b*)
 
 ### <a name="example"></a>Ejemplo
 
@@ -491,7 +518,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)
 ```
 
-## <a name="exp"></a>  exp
+## <a name="exp"></a> EXP
 
 Devuelve la función exponencial de un número complejo.
 
@@ -502,7 +529,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo exponencial se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -562,7 +589,7 @@ int main() {
 }
 ```
 
-## <a name="imag"></a>  imag
+## <a name="imag"></a> IMAG
 
 Extrae el componente imaginario de un número complejo.
 
@@ -573,7 +600,7 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuya parte real va a extraerse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -582,7 +609,7 @@ La parte imaginaria del número complejo como una función global.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función de muestra no puede usarse para modificar la parte real del número complejo.  Para cambiar la parte real, el valor del componente debe asignarse a un nuevo número complejo.  
+Esta función de muestra no puede usarse para modificar la parte real del número complejo. Para cambiar la parte real, el valor del componente debe asignarse a un nuevo número complejo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -614,7 +641,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="log"></a>  log
+## <a name="log"></a> registro
 
 Devuelve el logaritmo natural de un número complejo.
 
@@ -625,7 +652,7 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo logaritmo natural se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -684,7 +711,7 @@ int main() {
 }
 ```
 
-## <a name="log10"></a>  log10
+## <a name="log10"></a> LOG10
 
 Devuelve el logaritmo de base 10 de un número complejo.
 
@@ -695,7 +722,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo logaritmo de base 10 se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -754,7 +781,7 @@ int main() {
 }
 ```
 
-## <a name="norm"></a>  norma
+## <a name="norm"></a> NORM
 
 Extrae la norma de un número complejo.
 
@@ -765,7 +792,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuya norma se va a determinar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -774,7 +801,7 @@ La norma de un número complejo.
 
 ### <a name="remarks"></a>Comentarios
 
-La norma de un número complejo *a + bi* es *(a*<sup>2</sup> *+ b*<sup>2</sup>*).* La norma de un número complejo es el cuadrado de su módulo. El módulo de un número complejo es una medida de la longitud del vector que representa el número complejo. El módulo de un número complejo *a + bi* es `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*),* escrito *&#124;a + bi&#124;.*
+La norma de un número complejo *a + bi* es *(a*<sup>2</sup> *+ b*<sup>2</sup> *).* La norma de un número complejo es el cuadrado de su módulo. El módulo de un número complejo es una medida de la longitud del vector que representa el número complejo. El módulo de un número complejo *a + bi* es `sqrt` *(a*<sup>2</sup> *+ b*<sup>2</sup> *),* escrito *&#124;a + bi&#124;.*
 
 ### <a name="example"></a>Ejemplo
 
@@ -837,7 +864,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
 
-## <a name="polar"></a>  polar
+## <a name="polar"></a> polar
 
 Devuelve el número complejo, que corresponde a un módulo y argumento especificados, en formato cartesiano.
 
@@ -848,10 +875,10 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Modulus*<br/>
+*_Modulus*\
 El módulo del número complejo que se va a introducir.
 
-*_Argument*<br/>
+*_Argument*\
 El argumento del número complejo que se va a introducir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -914,7 +941,7 @@ Argument of c2 is recovered from c2 using:
 arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="pow"></a>  pow
+## <a name="pow"></a> Pow
 
 Evalúa el número complejo obtenido al elevar una base que es un número complejo a la potencia de otro número complejo.
 
@@ -934,10 +961,10 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Base*<br/>
+*_Base*\
 El número complejo o un número que es del tipo de parámetro para el número complejo que es la base que se elevará a una potencia mediante la función miembro.
 
-*_Power*<br/>
+*_Power*\
 El número entero o complejo o un número que es del tipo de parámetro para el número complejo que es la potencia a la que se elevará la base mediante la función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1059,7 +1086,13 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
 
-## <a name="real"></a>  real
+## <a name="proj"></a> proj
+
+```cpp
+template<class T> complex<T> proj(const complex<T>&);
+```
+
+## <a name="real"></a> real
 
 Extrae el componente real de un número complejo
 
@@ -1070,16 +1103,16 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuya parte real va a extraerse.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La parte real del número complejo como función global. 
+La parte real del número complejo como función global.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función de muestra no puede usarse para modificar la parte real del número complejo.  Para cambiar la parte real, el valor del componente debe asignarse a un nuevo número complejo.  
+Esta función de muestra no puede usarse para modificar la parte real del número complejo. Para cambiar la parte real, el valor del componente debe asignarse a un nuevo número complejo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1111,7 +1144,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="sin"></a>  sin
+## <a name="sin"></a> seno
 
 Devuelve el seno de un número complejo.
 
@@ -1122,7 +1155,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo seno se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1133,9 +1166,9 @@ El número complejo que es el seno del número complejo de entrada.
 
 Identidades que definen los senos complejos:
 
-seno ( *z*) = (1/2 *i*)\*(exp ( *iz*)-exp (- *iz*))
+seno (*z*) = (1/2 )\*(exp (*iz*)-exp (- *iz*))
 
-sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
+seno (*z*) = seno (*a + bi*) = seno (*un*) cosh (*b*) + icos (*un*) sinh (*b*)
 
 ### <a name="example"></a>Ejemplo
 
@@ -1202,7 +1235,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)
 ```
 
-## <a name="sinh"></a>  sinh
+## <a name="sinh"></a> SINH
 
 Devuelve el seno hiperbólico de un número complejo.
 
@@ -1213,7 +1246,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuyo seno hiperbólico se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1224,9 +1257,9 @@ El número complejo que es el seno hiperbólico del número complejo de entrada.
 
 Identidades que definen los senos hiperbólicos complejos:
 
-SINH ( *z*) = (1/2)\*(exp ( *z*)-exp (- *z*))
+SINH (*z*) = (1/2)\*(exp (*z*)-exp (- *z*))
 
-sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
+SINH (*z*) = sinh (*a + bi*) = sinh (*un*) cos (*b*) + cosh (*un*) Sen (*b*)
 
 ### <a name="example"></a>Ejemplo
 
@@ -1293,7 +1326,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)
 ```
 
-## <a name="sqrt"></a>  sqrt
+## <a name="sqrt"></a> SQRT
 
 Calcula la raíz cuadrada de un número complejo.
 
@@ -1304,7 +1337,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuya raíz cuadrada se va a calcular.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1381,7 +1414,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuya tangente se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1392,7 +1425,7 @@ El número complejo que es la tangente del número complejo de entrada.
 
 Identidades que definen la cotangente compleja:
 
-tan ( *z*) = seno ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))
+tan (*z*) = seno (*z*) / cos (*z*) = (exp (*iz*)-exp (- *iz*)) / *i*(exp (*iz*) + exp (- *iz*))
 
 ### <a name="example"></a>Ejemplo
 
@@ -1459,7 +1492,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)
 ```
 
-## <a name="tanh"></a>  tanh
+## <a name="tanh"></a> TANH
 
 Devuelve la tangente hiperbólica de un número complejo.
 
@@ -1470,7 +1503,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*<br/>
+*complexNum*\
 El número complejo cuya tangente hiperbólica se está determinando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1481,7 +1514,7 @@ El número complejo que es la tangente hiperbólica del número complejo de entr
 
 Identidades que definen la cotangente hiperbólica compleja:
 
-TANH ( *z*) = sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*) + exp (- *z*))
+TANH (*z*) = sinh (*z*) / cosh (*z*) = (exp (*z*)-exp (- *z*)) / (exp (*z*) + exp (- *z*))
 
 ### <a name="example"></a>Ejemplo
 
@@ -1547,7 +1580,3 @@ The complex components tanh (vci), where abs (vci) = 1
 (-0.792403,0.24356)
 (-0.761594,-8.68604e-014)
 ```
-
-## <a name="see-also"></a>Vea también
-
-[\<complex>](../standard-library/complex.md)<br/>

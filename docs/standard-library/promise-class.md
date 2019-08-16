@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 560339dee5b13ddc13ff2f8af8283ea8615d804a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592577"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458360"
 ---
 # <a name="promise-class"></a>promise (Clase)
 
@@ -42,13 +42,13 @@ class promise;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[objeto Promise](#promise)|Construye un objeto `promise`.|
+|[confidencial](#promise)|Construye un objeto `promise`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[get_future](#get_future)|Devuelve un objeto [future](../standard-library/future-class.md) asociado a este compromiso.|
 |[set_exception](#set_exception)|Establece de forma atómica el resultado de este compromiso para indicar una excepción.|
@@ -59,17 +59,17 @@ class promise;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[promise::operator=](#op_eq)|Asignación del estado compartido de este objeto promise.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
-*objeto Promise*<br/>
+*confidencial*
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<futura >
+**Encabezado:** \<> futuro
 
 **Espacio de nombres:** std
 
@@ -97,8 +97,8 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Otros problemas*<br/>
-Un objeto `promise`.
+*Distinta*\
+Objeto `promise`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -106,7 +106,7 @@ Un objeto `promise`.
 
 ### <a name="remarks"></a>Comentarios
 
-Este operador transfiere el estado asincrónico asociado de *otros*. Después de la transferencia, *otros* es *vacía*.
+Este operador transfiere el estado asincrónico asociado de *otro*. Después de la transferencia, el *otro* está *vacío*.
 
 ## <a name="promise"></a> promise::promise (Constructor)
 
@@ -121,19 +121,19 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*<br/>
+*Alabama*\
 Asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).
 
-*Otros problemas*<br/>
-Un objeto `promise`.
+*Distinta*\
+Objeto `promise`.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor crea un *vacía* `promise` objeto.
+El primer constructor crea un objeto *vacío* `promise` .
 
-El segundo constructor crea un valor vacío `promise` objeto y se usa *Al* para asignación de memoria.
+El segundo constructor crea un objeto vacío `promise` y usa *al* para la asignación de memoria.
 
-El tercer constructor crea un `promise` objeto y transfiere el estado asincrónico asociado de *otros*y deja *otros* vacía.
+El tercer constructor crea un `promise` objeto y transfiere el estado asincrónico asociado de *otro*y deja *otro* vacío.
 
 ## <a name="set_exception"></a> promise::set_exception
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parámetros
 
-*EXC*<br/>
+*EXC*\
 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que este método almacena como el resultado de la excepción.
 
 ### <a name="remarks"></a>Comentarios
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parámetros
 
-*EXC*<br/>
+*EXC*\
 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que este método almacena como el resultado de la excepción.
 
 ### <a name="remarks"></a>Comentarios
@@ -190,7 +190,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*Val*\
 Valor que se va a almacenar como resultado.
 
 ### <a name="remarks"></a>Comentarios
@@ -201,11 +201,11 @@ Si ya se ha llamado a [set_exception](#set_exception), [set_exception_at_thread_
 
 Como resultado de este método, se desbloquean todos los subprocesos bloqueados en el estado asincrónico asociado.
 
-El primer método también produce cualquier excepción que se produce cuando *Val* se copia en el estado asincrónico asociado. En esta situación, el estado asincrónico asociado no se establece en ready.
+El primer método también produce cualquier excepción que se produce cuando se copia *Val* en el estado asincrónico asociado. En esta situación, el estado asincrónico asociado no se establece en ready.
 
-El segundo método también produce cualquier excepción que se produce cuando *Val* se mueve en el estado asincrónico asociado. En esta situación, el estado asincrónico asociado no se establece en ready.
+El segundo método también produce cualquier excepción que se produce cuando *Val* se mueve al estado asincrónico asociado. En esta situación, el estado asincrónico asociado no se establece en ready.
 
-Para la especialización parcial `promise<Ty&>`, el valor almacenado en vigor es una referencia a *Val*.
+Para la especialización `promise<Ty&>`parcial, el valor almacenado está en vigor como referencia a *Val*.
 
 Para la especialización `promise<void>`, no existe ningún valor almacenado.
 
@@ -222,7 +222,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*Val*\
 Valor que se va a almacenar como resultado.
 
 ### <a name="remarks"></a>Comentarios
@@ -233,11 +233,11 @@ Si ya se ha llamado a [set_exception](#set_exception), [set_exception_at_thread_
 
 A diferencia de `set_value`, el estado asincrónico asociado no se establece hasta que no se han destruido todos los objetos de subproceso local del subproceso actual. Normalmente, los subprocesos que están bloqueados en el estado asincrónico asociado no se desbloquean hasta que no se sale del subproceso actual.
 
-El primer método también produce cualquier excepción que se produce cuando *Val* se copia en el estado asincrónico asociado.
+El primer método también produce cualquier excepción que se produce cuando se copia *Val* en el estado asincrónico asociado.
 
-El segundo método también produce cualquier excepción que se produce cuando *Val* se mueve en el estado asincrónico asociado.
+El segundo método también produce cualquier excepción que se produce cuando *Val* se mueve al estado asincrónico asociado.
 
-Para la especialización parcial `promise<Ty&>`, el valor almacenado es realmente una referencia a *Val*.
+Para la especialización `promise<Ty&>`parcial, el valor almacenado es realmente una referencia a *Val*.
 
 Para la especialización `promise<void>`, no existe ningún valor almacenado.
 
@@ -251,9 +251,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Otros problemas*<br/>
-Un objeto `promise`.
+*Distinta*\
+Objeto `promise`.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)

@@ -1,5 +1,5 @@
 ---
-title: CMFCColorDialog (clase)
+title: Clase CMFCColorDialog
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCColorDialog
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 9e018c122cded09e5366c3b349525fa7cc004897
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772756"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505339"
 ---
-# <a name="cmfccolordialog-class"></a>CMFCColorDialog (clase)
+# <a name="cmfccolordialog-class"></a>Clase CMFCColorDialog
 
 La `CMFCColorDialog` clase representa un cuadro de diálogo de selección de color.
 
@@ -43,46 +43,46 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Construye un objeto `CMFCColorDialog`.|
 |`CMFCColorDialog::~CMFCColorDialog`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CMFCColorDialog::GetColor](#getcolor)|Devuelve el color seleccionado actual.|
-|[CMFCColorDialog::GetPalette](#getpalette)|Devuelve la paleta de colores.|
-|`CMFCColorDialog::PreTranslateMessage`|Traduce los mensajes de ventana antes de enviarlos a la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funciones de Windows. Para obtener más información y la sintaxis, vea [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CDialogEx::PreTranslateMessage`).|
+|[CMFCColorDialog::GetColor](#getcolor)|Devuelve el color seleccionado actualmente.|
+|[CMFCColorDialog::GetPalette](#getpalette)|Devuelve la paleta del color.|
+|`CMFCColorDialog::PreTranslateMessage`|Traduce los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Para ver la sintaxis y obtener más información, vea [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Invalida `CDialogEx::PreTranslateMessage`).|
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Deriva una paleta de la paleta del sistema.|
-|[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Establece el color seleccionado actual.|
+|[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Establece el color seleccionado actualmente.|
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Establece el color más equivalente a un valor RGB especificado.|
 |[CMFCColorDialog::SetPageOne](#setpageone)|Selecciona un valor RGB para la primera página de propiedades.|
 |[CMFCColorDialog::SetPageTwo](#setpagetwo)|Selecciona un valor RGB para la segunda página de propiedades.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|`m_bIsMyPalette`|TRUE si el cuadro de diálogo de selección de color utiliza su propia paleta de colores, o FALSE si el cuadro de diálogo utiliza una paleta que se especifica en el `CMFCColorDialog` constructor.|
-|`m_bPickerMode`|TRUE cuando el usuario está seleccionando un color en el cuadro de diálogo de selección; en caso contrario, FALSE.|
-|`m_btnColorSelect`|El botón de color seleccionado por el usuario.|
+|`m_bIsMyPalette`|True si el cuadro de diálogo de selección de color utiliza su propia paleta de colores, o false si el cuadro de diálogo usa una paleta `CMFCColorDialog` especificada en el constructor.|
+|`m_bPickerMode`|TRUE mientras el usuario selecciona un color en el cuadro de diálogo de selección; en caso contrario, FALSE.|
+|`m_btnColorSelect`|Botón de color seleccionado por el usuario.|
 |`m_CurrentColor`|El color seleccionado actualmente.|
-|`m_hcurPicker`|El cursor que se utiliza para elegir un color.|
-|`m_NewColor`|Color seleccionado potencial, que se puede activar permanentemente o se puede revertir al color original.|
-|`m_pColourSheetOne`|Un puntero a la primera página de propiedades de la hoja de propiedades de la selección de color.|
-|`m_pColourSheetTwo`|Un puntero a la segunda página de propiedades de la hoja de propiedades de la selección de color.|
-|`m_pPalette`|La paleta lógica actual.|
+|`m_hcurPicker`|Cursor que se usa para seleccionar un color.|
+|`m_NewColor`|El color seleccionado, que se puede seleccionar o revertir permanentemente al color original.|
+|`m_pColourSheetOne`|Puntero a la primera página de propiedades de la hoja de propiedades de selección de color.|
+|`m_pColourSheetTwo`|Puntero a la segunda página de propiedades de la hoja de propiedades de selección de color.|
+|`m_pPalette`|Paleta lógica actual.|
 |`m_pPropSheet`|Un puntero a la hoja de propiedades para el cuadro de diálogo de selección de color.|
-|`m_wndColors`|Un objeto de control de selector de color.|
-|`m_wndStaticPlaceHolder`|Un control estático que es un marcador de posición para la hoja de propiedades de selector de color.|
+|`m_wndColors`|Objeto de control selector de colores.|
+|`m_wndStaticPlaceHolder`|Control estático que es un marcador de posición para la hoja de propiedades del selector de colores.|
 
 ## <a name="remarks"></a>Comentarios
 
-El cuadro de diálogo de selección de color se muestra como una hoja de propiedades con dos páginas. En la primera página, seleccione un color estándar desde la paleta del sistema; en la segunda página, seleccione un color personalizado.
+El cuadro de diálogo Selección de color se muestra como una hoja de propiedades con dos páginas. En la primera página, seleccione un color estándar de la paleta del sistema. en la segunda página, seleccione un color personalizado.
 
-Puede construir un `CMFCColorDialog` en la pila de objetos y, a continuación, llame a `DoModal`, pasando el color inicial como un parámetro a la `CMFCColorDialog` constructor. El cuadro de diálogo de selección de color, a continuación, crea varias [CMFCColorPickerCtrl (clase)](../../mfc/reference/cmfccolorpickerctrl-class.md) objetos para procesar cada paleta de colores.
+Puede construir un `CMFCColorDialog` objeto en la pila y, a continuación `DoModal`, llamar a, pasando el color inicial `CMFCColorDialog` como parámetro al constructor. A continuación, el cuadro de diálogo Selección de colores crea varios objetos de la [clase CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md) para controlar cada paleta de colores.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -100,13 +100,13 @@ Puede construir un `CMFCColorDialog` en la pila de objetos y, a continuación, l
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar un cuadro de diálogo color mediante distintos métodos en el `CMFCColorDialog` clase. El ejemplo muestra cómo establecer el actual y los nuevos colores del cuadro de diálogo y cómo se establecen los componentes rojos, verde y azules de un color seleccionado en las páginas de dos propiedades del cuadro de diálogo color. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar un cuadro de diálogo de color mediante el `CMFCColorDialog` uso de varios métodos en la clase. En el ejemplo se muestra cómo establecer los colores actuales y nuevos del cuadro de diálogo, y cómo establecer los componentes rojo, verde y azul de un color seleccionado en las dos páginas de propiedades del cuadro de diálogo color. Este ejemplo forma parte del [ejemplo de nuevos controles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxcolordialog.h
+**Encabezado:** afxcolordialog. h
 
 ##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog
 
@@ -123,16 +123,16 @@ CMFCColorDialog(
 ### <a name="parameters"></a>Parámetros
 
 *clrInit*<br/>
-[in] La selección de color predeterminado. Si se especifica ningún valor, el valor predeterminado es RGB(0,0,0) (negro).
+de Selección de color predeterminada. Si no se especifica ningún valor, el valor predeterminado es RGB (0,0) (negro).
 
 *dwFlags*<br/>
 [in] Reservado.
 
 *pParentWnd*<br/>
-[in] Un puntero a la ventana de principal o propietaria del cuadro de diálogo.
+de Puntero a la ventana primaria o propietaria del cuadro de diálogo.
 
 *hPal*<br/>
-[in] Identificador de una paleta de colores.
+de Identificador de una paleta de colores.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -140,7 +140,7 @@ CMFCColorDialog(
 
 ##  <a name="getcolor"></a>  CMFCColorDialog::GetColor
 
-Recupera el color que el usuario selecciona en el cuadro de diálogo color.
+Recupera el color que el usuario selecciona en el cuadro de diálogo de color.
 
 ```
 COLORREF GetColor() const;
@@ -148,15 +148,15 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un [COLORREF](/windows/desktop/gdi/colorref) valor que contiene la información de RGB del color seleccionado en el cuadro de diálogo color.
+Valor de [COLORREF](/windows/win32/gdi/colorref) que contiene la información de RGB para el color seleccionado en el cuadro de diálogo de color.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a esta función después de llamar a la `DoModal` método.
+Llame a esta función después de llamar `DoModal` al método.
 
 ##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette
 
-Recupera la paleta de colores que está disponible en el cuadro de diálogo color actual.
+Recupera la paleta de colores que está disponible en el cuadro de diálogo de color actual.
 
 ```
 CPalette* GetPalette() const;
@@ -164,7 +164,7 @@ CPalette* GetPalette() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la `CPalette` objeto que se especificó en el `CMFCColorDialog` constructor.
+Puntero al `CPalette` objeto que se especificó en el `CMFCColorDialog` constructor.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -189,7 +189,7 @@ void SetCurrentColor(COLORREF rgb);
 ### <a name="parameters"></a>Parámetros
 
 *rgb*<br/>
-[in] Un valor de color RGB
+de Un valor de color RGB
 
 ### <a name="remarks"></a>Comentarios
 
@@ -204,13 +204,13 @@ void SetNewColor(COLORREF rgb);
 ### <a name="parameters"></a>Parámetros
 
 *rgb*<br/>
-[in] Un [COLORREF](/windows/desktop/gdi/colorref) que especifica un color RGB.
+de [COLORREF](/windows/win32/gdi/colorref) que especifica un color RGB.
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne
 
-Especifica explícitamente los componentes rojos, verde y azules de un color seleccionado en la primera página de propiedades de un cuadro de diálogo color.
+Especifica explícitamente los componentes rojo, verde y azul de un color seleccionado en la primera página de propiedades de un cuadro de diálogo de color.
 
 ```
 void SetPageOne(
@@ -222,19 +222,19 @@ void SetPageOne(
 ### <a name="parameters"></a>Parámetros
 
 *R*<br/>
-[in] Especifica el componente rojo del valor RGB.
+de Especifica el componente rojo del valor RGB.
 
 *G*<br/>
-[in] Especifica el componente verde del valor RGB.
+de Especifica el componente verde del valor RGB.
 
 *B*<br/>
-[in] Especifica el componente azul del valor RGB.
+de Especifica el componente azul del valor RGB.
 
 ### <a name="remarks"></a>Comentarios
 
 ##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo
 
-Especifica explícitamente los componentes rojos, verde y azules de un color seleccionado en la segunda página de propiedades de un cuadro de diálogo color.
+Especifica explícitamente los componentes rojo, verde y azul de un color seleccionado en la segunda página de propiedades de un cuadro de diálogo de color.
 
 ```
 void SetPageTwo(
@@ -246,13 +246,13 @@ void SetPageTwo(
 ### <a name="parameters"></a>Parámetros
 
 *R*<br/>
-[in] Especifica un componente rojo del valor RGB
+de Especifica un componente rojo del valor RGB.
 
 *G*<br/>
-[in] Especifica un componente verde de un valor RGB
+de Especifica un componente verde de un valor RGB.
 
 *B*<br/>
-[in] Especifica un componente azul de un valor RGB
+de Especifica un componente azul de un valor RGB.
 
 ### <a name="remarks"></a>Comentarios
 

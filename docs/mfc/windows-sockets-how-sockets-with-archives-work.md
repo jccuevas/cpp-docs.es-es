@@ -10,11 +10,11 @@ helpviewer_keywords:
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389452"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Cómo funcionan los Sockets con archivos
 
@@ -46,7 +46,7 @@ Si `CSocket` no se han implementado como un objeto de dos Estados, es posible re
 
 En el modo "compatible con el archivo", un `CSocketFile` objeto proporciona un mejor rendimiento y reduce el riesgo de "interbloqueo". Se produce un interbloqueo cuando se esperan mutuamente los sockets envío y recepción, o esperando un recurso común. Esto puede suceder si el `CArchive` objeto trabajó con el `CSocketFile` el modo en que lo hace con un `CFile` objeto. Con `CFile`, el archivo puede suponer que si recibe menos bytes que los solicitados, se ha alcanzado el final del archivo. Con `CSocketFile`, sin embargo, están de datos basado en mensajes; el búfer puede contener varios mensajes, por lo que recibe menos que el número de bytes solicitado no implica el final del archivo. La aplicación no se bloquea en este caso, como podría ocurrir con `CFile`, y puede continuar leyendo mensajes desde el búfer hasta que el búfer está vacío. El [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) funcionando en `CArchive` es útil para supervisar el estado del búfer del archivo en este caso.
 
-Para obtener más información, consulte [Windows Sockets: Usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)
+Para obtener más información, consulte [Windows Sockets: usar sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Vea también
 

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287405"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -66,7 +66,7 @@ La anterior **_purecall_handler**. Devuelve **nullptr** si se ha producido ning�
 
 ## <a name="remarks"></a>Comentarios
 
-El **_get_purecall_handler** y **_set_purecall_handler** funciones son específicas de Microsoft y se aplican únicamente al código de C++.
+El **_get_purecall_handler** y **_set_purecall_handler** funciones son específicas de Microsoft y solo se aplican a C++ código.
 
 Una llamada a una función virtual pura es un error, porque no tiene ninguna implementación. De forma predeterminada, el compilador genera código que invoca a una función de controlador de errores cuando se llama a una función virtual pura, lo que finaliza el programa. Puede instalar su propia función de controlador de errores para llamadas de función virtual pura, para capturarlas con fines informativos o de depuración. Para usar su propio controlador de errores, cree una función que tiene el **_purecall_handler** firma, a continuación, usar **_set_purecall_handler** para convertirlo en el controlador actual.
 

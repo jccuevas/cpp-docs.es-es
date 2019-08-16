@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305086"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504400"
 ---
 # <a name="cdc-class"></a>CDC (clase)
 
@@ -3220,7 +3220,7 @@ Devuelve el modo de gráficos actual si se ejecuta correctamente. Para obtener u
 
 Devuelve 0 en caso de error.
 
-Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, el diseño de marcas para el contexto de dispositivo actual. Otherwise, GDI_ERROR. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Para obtener una lista de las marcas de diseño, vea [CDC::SetLayout](#setlayout).
+Si se realiza correctamente, el diseño de marcas para el contexto de dispositivo actual. Otherwise, GDI_ERROR. Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Para obtener una lista de las marcas de diseño, vea [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Apunta a una cadena de caracteres que se va a medir. También puede pasar un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *nTabPositions*<br/>
 Especifica el número de posiciones de tabulación en la matriz señalada por *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Apunta a una cadena de caracteres. También puede pasar un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *str*<br/>
 Un `CString` objeto que contiene los caracteres especificados que se va a medir.
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Apunta a una cadena de caracteres. También puede pasar un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *nTabPositions*<br/>
 Especifica el número de posiciones de tabulación en la matriz señalada por *lpnTabStopPositions*.
@@ -4012,7 +4012,7 @@ Devuelve un valor distinto de cero si se ejecuta correctamente.
 
 Devuelve 0 en caso de error.
 
-Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4087,7 +4087,7 @@ Especifica la dirección de la instancia del procedimiento de la función de dev
 Especifica un puntero lejano a los datos que se pasarán a la función de salida. Si *lpfnOutput* es NULL, *lpData* debe ser un puntero largo a la cadena que se generará.
 
 *nCount*<br/>
-Especifica el número de caracteres que se generará. Si este parámetro es 0, `GrayString` calcula la longitud de la cadena (suponiendo que *lpData* es un puntero a la cadena). Si *nCount* es -1 y la función señalada por *lpfnOutput* devuelve 0, la imagen se muestran pero no están atenuados.
+Especifica el número de caracteres que se generará. Si este parámetro es 0, `GrayString` calcula la longitud de la cadena (suponiendo que *lpData* es un puntero a la cadena). Si *nCount* es 1 y la función señalada por *lpfnOutput* devuelve 0, la imagen se muestran pero no están atenuados.
 
 *x*<br/>
 Especifica la coordenada x lógica de la posición inicial del rectángulo que agrega la cadena de texto.
@@ -4459,7 +4459,7 @@ Devuelve un valor distinto de cero si se ejecuta correctamente.
 
 Devuelve 0 en caso de error.
 
-Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -6003,7 +6003,7 @@ Especifica el modo de gráficos. Para obtener una lista de los valores de este p
 
 Devuelve el modo gráfico anterior si se ejecuta correctamente.
 
-Devuelve 0 en caso de error. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Devuelve 0 en caso de error. Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -6032,7 +6032,7 @@ Marcas de control de diseño de contexto de dispositivo y el mapa de bits. Puede
 
 Si se realiza correctamente, el diseño anterior del contexto del dispositivo.
 
-Si no lo consigue, GDI_ERROR. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Si no lo consigue, GDI_ERROR. Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -6657,7 +6657,7 @@ Devuelve un valor distinto de cero si se ejecuta correctamente.
 
 Devuelve 0 en caso de error.
 
-Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -6891,7 +6891,7 @@ Especifica la coordenada y lógica del punto inicial de la cadena.
 Apunta a la cadena de caracteres que se va a dibujar. Puede pasar un puntero a una matriz de caracteres o un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *nTabPositions*<br/>
 Especifica el número de valores de la matriz de posiciones de tabulación.

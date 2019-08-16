@@ -2,12 +2,12 @@
 title: Guía de migración y actualización de Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58898796"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450381"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guía de migración y actualización de Visual C++
 
@@ -53,7 +53,7 @@ Para empezar a actualizar un proyecto o una solución, solo tiene que abrir la s
 
 8. Errores en tiempo de ejecución o resultados inesperados debidos a cambios de comportamiento.
 
-9. Errores debidos a errores que se introdujeron en las herramientas. Si encuentra un problema, informe al equipo de Visual C++ a través de los canales de soporte normales o mediante el [Centro de comentarios de Visual Studio](http://connect.microsoft.com/VisualStudio/Feedback).
+9. Errores debidos a errores que se introdujeron en las herramientas. Si encuentra un problema, informe al equipo de Visual C++ a través de los canales de soporte normales o mediante la página de la [comunidad de desarrolladores de Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
 Además de los cambios que no puede evitar debido a errores del compilador, algunos cambios son opcionales en un proceso de actualización, como:
 
@@ -75,7 +75,7 @@ Por otro lado, quizás ahora tiene nuevos requisitos o puede prever la necesidad
 
 |Title|Descripción|
 |-----------|-----------------|
-|[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Explica cómo utilizar los proyectos creados en versiones anteriores de Visual C++.|
+|[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Se explica cómo utilizar los proyectos creados en versiones anteriores de Visual Studio.|
 |[Novedades del compilador de C++ en Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Cambios en el IDE y las herramientas para la versión actual de Visual Studio|
 |[Mejoras de conformidad de C++ en Visual Studio](../overview/cpp-conformance-improvements.md)|Mejoras de conformidad con los estándares de Visual Studio 2015 a Visual Studio|
 |[Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)|Una lista de todos los cambios en las herramientas de compilación y las bibliotecas de Visual C++ de Visual Studio 2003 a 2015 que podrían precisar de modificaciones en su código.|
@@ -84,8 +84,8 @@ Por otro lado, quizás ahora tiene nuevos requisitos o puede prever la necesidad
 |[Portabilidad y actualizaciones: ejemplos y casos prácticos](porting-and-upgrading-examples-and-case-studies.md)|En esta sección migramos y actualizamos varios ejemplos y aplicaciones y analizamos las experiencias y los resultados. Puede que leer estos ejemplos le dé una idea de lo que conlleva el proceso de migración y actualización. Durante el proceso ofreceremos sugerencias y trucos para llevar a cabo la actualización y mostraremos cómo se corrigieron errores concretos.|
 |[Migrar a la Plataforma universal de Windows](porting-to-the-universal-windows-platform-cpp.md)|Contiene información sobre el traslado de código a Windows 10.|
 |[Introducción a Visual C++ para los usuarios de UNIX](introduction-to-visual-cpp-for-unix-users.md)|Proporciona información a los usuarios de UNIX que no estén familiarizados con Visual C++ y quieran ser más productivos con él.|
-|[Trasladar de UNIX a Win32](porting-from-unix-to-win32.md)|Describe las opciones para migrar aplicaciones de UNIX a Windows.|
+|[Migrar de UNIX a Win32](porting-from-unix-to-win32.md)|Describe las opciones para migrar aplicaciones de UNIX a Windows.|
 
 ## <a name="see-also"></a>Vea también
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[C++ en Visual Studio](../overview/visual-cpp-in-visual-studio.md)
