@@ -1,5 +1,5 @@
 ---
-title: predeterminado (atributo de COM de C++)
+title: default (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148086"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501680"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -33,17 +33,17 @@ Interfaz predeterminada que estará disponible para los entornos de scripting qu
 Si no se especifica ninguna interfaz predeterminada, se usa la primera aparición de una interfaz sin origen como valor predeterminado.
 
 *interface2*<br/>
-(Opcional) La interfaz de origen predeterminada. También debe especificar esta interfaz con el atributo [source](source-cpp.md) .
+Opta La interfaz de origen predeterminada. También debe especificar esta interfaz con el atributo [source](source-cpp.md) .
 
 Si no se especifica ninguna interfaz de origen predeterminada, se usa la primera interfaz de origen como valor predeterminado.
 
 ## <a name="remarks"></a>Comentarios
 
-El atributo C++ **default** tiene la misma funcionalidad que el atributo MIDL [default](/windows/desktop/Midl/default) . El atributo **default** también se usa con el atributo [case](case-cpp.md) .
+El atributo C++ **default** tiene la misma funcionalidad que el atributo MIDL [default](/windows/win32/Midl/default) . El atributo **default** también se usa con el atributo [case](case-cpp.md) .
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente código muestra cómo **predeterminada** se utiliza en la definición de una coclase especificar `ICustomDispatch` como la interfaz de programación predeterminada:
+En el código siguiente se muestra cómo se usa **default** en la definición de una coclase `ICustomDispatch` para especificar como la interfaz de programación predeterminada:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -99,10 +99,10 @@ El atributo [source](source-cpp.md) también tiene un ejemplo de cómo usar **de
 
 |||
 |-|-|
-|**Se aplica a**|**clase**, **struct**, miembro de datos|
-|**Reiterativo**|No|
-|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o **struct**)|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|**clase**, **estructura**, miembro de datos|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|**coclase** (cuando se aplica a la **clase** o **struct**)|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

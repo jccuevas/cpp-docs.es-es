@@ -1,72 +1,72 @@
 ---
-title: Procedimiento Activar y usar un componente de tiempo de ejecución de Windows mediante WRL
+title: Procedimiento Activar y usar un componente de Windows Runtime mediante WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 8c0bed825f76fdf0f2c5cc1fa095e54f08bb8a67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398360"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498401"
 ---
-# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Procedimiento Activar y usar un componente de tiempo de ejecución de Windows mediante WRL
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Procedimiento Activar y usar un componente de Windows Runtime mediante WRL
 
-Este documento muestra cómo usar la biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución para inicializar el tiempo de ejecución de Windows y cómo activar y usar un componente de Windows en tiempo de ejecución.
+En este documento se muestra cómo usar la C++ biblioteca de plantillas de Windows Runtime (WRL) para inicializar el Windows Runtime y cómo activar y usar un componente de Windows Runtime.
 
-Para usar un componente, debe adquirir un puntero de interfaz para el tipo que se implementa mediante el componente. Y dado que la tecnología subyacente del tiempo de ejecución de Windows es el modelo de objetos componentes (COM), debe seguir las reglas COM para mantener una instancia del tipo. Por ejemplo, debe mantener el *el recuento de referencias* que determina cuándo se elimina el tipo de la memoria.
+Para usar un componente, debe adquirir un puntero de interfaz al tipo implementado por el componente. Y dado que la tecnología subyacente del Windows Runtime es el modelo de objetos componentes (COM), debe seguir las reglas COM para mantener una instancia del tipo. Por ejemplo, debe mantener el recuento de *referencias* que determina cuándo se elimina el tipo de la memoria.
 
-Para simplificar el uso de Windows Runtime, biblioteca de plantillas C++ de Windows en tiempo de ejecución proporciona la plantilla de puntero inteligente, [ComPtr\<T >](comptr-class.md), que automáticamente realiza un recuento de referencias. Cuando se declara una variable, especifique `ComPtr<` *nombre de la interfaz* `>` *identificador*. Para obtener acceso a un miembro de interfaz, aplicar el operador de acceso a miembros de flecha (`->`) en el identificador.
-
-> [!IMPORTANT]
-> Cuando se llama a una función de la interfaz, pruebe siempre el valor devuelto HRESULT.
-
-## <a name="activating-and-using-a-windows-runtime-component"></a>Activación y el uso de un componente de tiempo de ejecución de Windows
-
-Los pasos siguientes usan la `Windows::Foundation::IUriRuntimeClass` interfaz para demostrar cómo crear un generador de activación de un componente en tiempo de ejecución de Windows, cree una instancia de ese componente y recuperar un valor de propiedad. También se muestra cómo inicializar el tiempo de ejecución de Windows. A continuación se muestra el ejemplo completo.
+Para simplificar el uso de la Windows Runtime, C++ Windows Runtime biblioteca de plantillas proporciona la plantilla de puntero inteligente, [\<ComPtr T >](comptr-class.md), que realiza automáticamente el recuento de referencias. Al declarar una variable, `ComPtr<`especifique el *identificador* *de nombre* `>` de interfaz. Para tener acceso a un miembro de interfaz, aplique el operador de acceso`->`de miembro de flecha () al identificador.
 
 > [!IMPORTANT]
-> Aunque normalmente se usa la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows (UWP), en este ejemplo se usa una aplicación de consola para ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación para UWP. Para obtener más información sobre los tipos y funciones que puede usar en una aplicación para UWP, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) y [Win32 y COM para aplicaciones UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+> Cuando llame a una función de interfaz, pruebe siempre el valor devuelto HRESULT.
 
-#### <a name="to-activate-and-use-a-windows-runtime-component"></a>Para activar y usar un componente en tiempo de ejecución de Windows
+## <a name="activating-and-using-a-windows-runtime-component"></a>Activar y usar un componente de Windows Runtime
 
-1. Incluir (`#include`) cualquier necesaria en tiempo de ejecución de Windows, biblioteca de plantillas C++ de Windows en tiempo de ejecución o encabezados de la biblioteca estándar de C++.
+En los pasos siguientes se `Windows::Foundation::IUriRuntimeClass` usa la interfaz para mostrar cómo crear un generador de activación para un Windows Runtime componente, crear una instancia de ese componente y recuperar un valor de propiedad. También se muestra cómo inicializar el Windows Runtime. A continuación se muestra el ejemplo completo.
+
+> [!IMPORTANT]
+> Aunque normalmente se usa la biblioteca C++ de plantillas de Windows Runtime en una aplicación plataforma universal de Windows (UWP), en este ejemplo se usa una aplicación de consola para la ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de UWP. Para obtener más información sobre los tipos y las funciones que puede usar en una aplicación de UWP, consulte [funciones de CRT no admitidas en aplicaciones de plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) y [Win32 y com para aplicaciones de UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+
+#### <a name="to-activate-and-use-a-windows-runtime-component"></a>Para activar y usar un componente de Windows Runtime
+
+1. Incluya (`#include`) los Windows runtime necesarios, Windows Runtime C++ biblioteca de plantillas o C++ encabezados de la biblioteca estándar.
 
    [!code-cpp[wrl-consume-component#2](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]
 
    Se recomienda que use la directiva `using namespace` en el archivo .cpp para que el código sea más legible.
 
-2. Inicialice el subproceso en que se ejecuta la aplicación. Cada aplicación debe inicializar su subproceso y el modelo de subprocesos. Este ejemplo se usa el [Microsoft::WRL::Wrappers::RoInitializeWrapper](roinitializewrapper-class.md) de clases para inicializar el tiempo de ejecución de Windows y especifica [RO_INIT_MULTITHREADED](/windows/desktop/api/roapi/ne-roapi-ro_init_type) como el modelo de subprocesos. El `RoInitializeWrapper` clase llamadas `Windows::Foundation::Initialize` en la construcción, y `Windows::Foundation::Uninitialize` cuando se destruye.
+2. Inicializa el subproceso en el que se ejecuta la aplicación. Cada aplicación debe inicializar su modelo de subprocesos y subprocesos. En este ejemplo se usa la clase [Microsoft:: WRL:: wrappers:: RoInitializeWrapper](roinitializewrapper-class.md) para inicializar el Windows Runtime y se especifica [RO_INIT_MULTITHREADED](/windows/win32/api/roapi/ne-roapi-ro_init_type) como modelo de subprocesos. La `RoInitializeWrapper` clase llama `Windows::Foundation::Initialize` a en la construcción `Windows::Foundation::Uninitialize` y cuando se destruye.
 
    [!code-cpp[wrl-consume-component#3](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
-   En la segunda instrucción, el [RoInitializeWrapper::HRESULT](roinitializewrapper-class.md#hresult) operador devuelve el `HRESULT` de la llamada a `Windows::Foundation::Initialize`.
+   En la segunda instrucción, el operador [RoInitializeWrapper:: HRESULT](roinitializewrapper-class.md#hresult) devuelve `HRESULT` de la llamada a `Windows::Foundation::Initialize`.
 
-3. Crear un *generador de activación* para el `ABI::Windows::Foundation::IUriRuntimeClassFactory` interfaz.
+3. Cree un *generador de activación* para `ABI::Windows::Foundation::IUriRuntimeClassFactory` la interfaz.
 
    [!code-cpp[wrl-consume-component#4](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]
 
-   El tiempo de ejecución de Windows usa los nombres completos para identificar los tipos. El `RuntimeClass_Windows_Foundation_Uri` parámetro es una cadena que se proporciona el tiempo de ejecución de Windows y contiene el nombre de clase en tiempo de ejecución.
+   El Windows Runtime usa nombres completos para identificar tipos. El `RuntimeClass_Windows_Foundation_Uri` parámetro es una cadena proporcionada por el Windows Runtime y contiene el nombre de clase en tiempo de ejecución necesario.
 
-4. Inicializar un [Microsoft::WRL::Wrappers::HString](hstring-class.md) variable que representa el identificador URI `"http://www.microsoft.com"`.
+4. Inicialice una variable [Microsoft:: WRL:: wrappers:: HString](hstring-class.md) que represente el `"http://www.microsoft.com"`URI.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 
-   En el tiempo de ejecución de Windows, no asignar memoria para una cadena que se usará el tiempo de ejecución de Windows. En su lugar, el tiempo de ejecución de Windows crea una copia de la cadena en un búfer que mantiene y se utiliza para las operaciones y, a continuación, devuelve un identificador para el búfer que cree.
+   En el Windows Runtime, no se asigna memoria para una cadena que utilizará el Windows Runtime. En su lugar, el Windows Runtime crea una copia de la cadena en un búfer que mantiene y utiliza para las operaciones y, a continuación, devuelve un identificador al búfer que creó.
 
-5. Use la `IUriRuntimeClassFactory::CreateUri` factory method para crear un `ABI::Windows::Foundation::IUriRuntimeClass` objeto.
+5. Utilice la `IUriRuntimeClassFactory::CreateUri` Factory Method para crear un `ABI::Windows::Foundation::IUriRuntimeClass` objeto.
 
    [!code-cpp[wrl-consume-component#7](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_5.cpp)]
 
-6. Llame a la `IUriRuntimeClass::get_Domain` método para recuperar el valor de la `Domain` propiedad.
+6. Llame al `Domain` método para recuperar el valor de la propiedad. `IUriRuntimeClass::get_Domain`
 
    [!code-cpp[wrl-consume-component#8](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_6.cpp)]
 
-7. Imprimir el nombre de dominio en la consola y devolver. Todos los objetos `ComPtr` y RAII salen del ámbito y se liberan automáticamente.
+7. Imprima el nombre de dominio en la consola y devuelva. Todos los objetos `ComPtr` y RAII salen del ámbito y se liberan automáticamente.
 
    [!code-cpp[wrl-consume-component#9](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   El [WindowsGetStringRawBuffer](/windows/desktop/api/winstring/nf-winstring-windowsgetstringrawbuffer) función recupera el formulario de Unicode subyacente de la cadena de URI.
+   La función [WindowsGetStringRawBuffer](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer) recupera el formato Unicode subyacente de la cadena de URI.
 
 Este es el ejemplo completo:
 

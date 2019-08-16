@@ -1,21 +1,21 @@
 ---
-title: origen (atributo de COM de C++)
+title: Source (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407190"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514025"
 ---
 # <a name="source-c"></a>source (C++)
 
-En una clase, especifica las interfaces de origen del objeto COM para puntos de conexión. En una propiedad o método, indica que el miembro devuelve un objeto o una variante de un origen de eventos.
+En una clase, especifica las interfaces de origen del objeto COM para los puntos de conexión. En una propiedad o un método, indica que el miembro devuelve un objeto o una variante que es un origen de eventos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,13 +26,13 @@ En una clase, especifica las interfaces de origen del objeto COM para puntos de 
 ### <a name="parameters"></a>Parámetros
 
 *interfaces*<br/>
-Una o más interfaces que especifique cuando se aplica el origen de atributo a una clase. Este parámetro no se utiliza cuando el origen se aplica a una propiedad o método.
+Una o más interfaces que se especifican al aplicar el atributo de origen a una clase. Este parámetro no se utiliza cuando el origen se aplica a una propiedad o un método.
 
 ## <a name="remarks"></a>Comentarios
 
-El **origen** atributo de C++ tiene la misma funcionalidad que el [origen](/windows/desktop/Midl/source) atributo MIDL.
+El atributo de **origen** C++ tiene la misma funcionalidad que el atributo MIDL de [origen](/windows/win32/Midl/source) .
 
-Puede usar el [predeterminada](default-cpp.md) atributo para especificar la interfaz de origen predeterminada para un objeto.
+Puede usar el atributo [default](default-cpp.md) para especificar la interfaz de origen predeterminada de un objeto.
 
 ## <a name="example"></a>Ejemplo
 
@@ -74,10 +74,10 @@ class NN : public b
 
 |||
 |-|-|
-|**Se aplica a**|**clase**, **struct**, **interfaz**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|`coclass` (cuando se aplica a la clase o struct)|
-|**Atributos no válidos**|Ninguna|
+|**Se aplica a**|**clase**, **estructura**, **interfaz**|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|`coclass`(cuando se aplica a la clase o struct)|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

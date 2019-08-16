@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348736"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509428"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funciones intrínsecas _InterlockedCompareExchangePointer
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Funciones intrínsecas _InterlockedCompareExchangePointer
 
 **Específicos de Microsoft**
 
@@ -83,10 +83,10 @@ long _InterlockedCompareExchangePointer_rel (
 [in, out] Puntero a un puntero al valor de destino. El signo se omite.
 
 *Exchange*<br/>
-[in] Puntero de Exchange. El signo se omite.
+de Puntero de intercambio. El signo se omite.
 
-*Elemento de comparación*<br/>
-[in] Puntero al que se compara con el destino. El signo se omite.
+*Comparand*<br/>
+de Puntero que se va a comparar con el destino. El signo se omite.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -94,7 +94,7 @@ El valor devuelto es el valor inicial del destino.
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
@@ -104,7 +104,7 @@ El valor devuelto es el valor inicial del destino.
 
 `_InterlockedCompareExchangePointer` realiza una comparación atómica de la dirección `Destination` con la dirección `Comparand`. Si la dirección `Destination` es igual a la dirección `Comparand`, la dirección `Exchange` se almacena en la dirección especificada por `Destination`. De lo contrario, no se realiza ninguna operación.
 
-`_InterlockedCompareExchangePointer` proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) función.
+`_InterlockedCompareExchangePointer`proporciona compatibilidad intrínseca del compilador para la función [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) de Win32 Windows SDK.
 
 Para obtener un ejemplo de cómo usar `_InterlockedCompareExchangePointer`, consulte [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 

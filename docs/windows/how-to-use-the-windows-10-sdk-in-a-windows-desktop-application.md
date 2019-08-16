@@ -1,36 +1,36 @@
 ---
-title: Procedimiento Use Windows 10 SDK en una aplicación de escritorio de Windows
+title: Procedimiento Usar el SDK de Windows 10 en una aplicación de escritorio de Windows
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: f3f6897dfa0f180f629a2ca169ff74c5e5588365
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351033"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513821"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedimiento Use Windows 10 SDK en una aplicación de escritorio de Windows
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedimiento Usar el SDK de Windows 10 en una aplicación de escritorio de Windows
 
-Al crear un proyecto de escritorio clásico de Windows en Visual Studio 2017, se configura de forma predeterminada para compilar con la versión del SDK de Windows 10 que se instaló cuando la carga de trabajo de escritorio de C++ se instaló o actualizó por última vez. Esta versión del SDK de Windows es compatible con Windows 7 y versiones posteriores. Consulte [mediante los encabezados de Windows](/windows/desktop/WinProg/using-the-windows-headers) para obtener más información sobre cómo destinar versiones específicas de Windows.
+Cuando se crea un proyecto de escritorio clásico de Windows en Visual Studio 2017, se configura de forma predeterminada para compilar con la versión del SDK de Windows 10 que se C++ instaló al instalar o actualizar por última vez la carga de trabajo de escritorio. Esta versión del Windows SDK es compatible con Windows 7 y versiones posteriores. Vea [usar los encabezados de Windows](/windows/win32/WinProg/using-the-windows-headers) para obtener más información sobre cómo establecer como destino versiones específicas de Windows.
 
-Si desea tener como destino una versión anterior del SDK, puede abrir **proyecto | Propiedades** y elegir entre las demás versiones del SDK disponibles en la lista desplegable de la versión del SDK de Windows.
+Si desea tener como destino una versión anterior del SDK, puede abrir el **proyecto | Propiedades** y elija entre las otras versiones del SDK disponibles en la lista desplegable Windows SDK versión.
 
-Desde Visual Studio 2015 y el SDK de Windows 10, la biblioteca CRT se divide en dos partes, una (ucrtbase) que contiene las funciones que son aceptables para su uso en aplicaciones universales de Windows y que contiene todo lo demás (vcruntime140). Puesto que el SDK de Windows 10 contiene nuevas funciones como, por ejemplo, muchas funciones de C99, tendrá que seguir estos pasos para usar esas funciones. Vea [CRT Library Features](../c-runtime-library/crt-library-features.md).
+A partir de Visual Studio 2015 y el SDK de Windows 10, la biblioteca de CRT se separó en dos partes: una (ucrtbase) que contiene las funciones que son aceptables para su uso en aplicaciones universales de Windows y otra que contiene todo lo demás (vcruntime140). Puesto que el SDK de Windows 10 contiene nuevas funciones como, por ejemplo, muchas funciones de C99, tendrá que seguir estos pasos para usar esas funciones. Vea [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-target-the-windows-10-sdk"></a>Para elegir como destino el SDK de Windows 10
 
-1. Asegúrese de que esté instalado el SDK de Windows 10. El SDK de Windows 10 se instala como parte de la **desarrollo de escritorio con C++** carga de trabajo. Hay disponible una versión independiente en [descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads).
+1. Asegúrese de que esté instalado el SDK de Windows 10. El SDK de Windows 10 se instala como parte del **desarrollo de escritorio C++ con** carga de trabajo. Hay disponible una versión independiente en [descargas y herramientas para Windows 10](https://developer.microsoft.com/windows/downloads).
 
 2. Abra el menú contextual del nodo del proyecto y elija **Redestinar versión de SDK**.
 
-   ![Redestinar versión de SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
+   ![Versión del SDK] de redestinación (../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
    Se mostrará el diálogo **Revisar acciones de solución** .
 
-   ![Revisar acciones de solución](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
+   ![Revisar las acciones] de la solución (../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
 
-3. En el **versión de la plataforma de destino** lista desplegable, elija la versión de destino el SDK de Windows 10. Elija el botón Aceptar para aplicar el cambio.
+3. En la lista desplegable versión de la **plataforma de destino** , elija la versión del SDK de Windows 10 que quiere usar como destino. Elija el botón Aceptar para aplicar el cambio.
 
    Tenga en cuenta que 8.1, en este contexto, hace referencia a la versión del SDK de Windows, que también es compatible con Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 y Windows Vista.
 
@@ -40,15 +40,15 @@ Desde Visual Studio 2015 y el SDK de Windows 10, la biblioteca CRT se divide en 
 
 4. Abra las propiedades del proyecto y, en la sección **Propiedades de configuración, General** , observe los valores de **Versión de plataforma de destino de Windows**. Cambiar el valor aquí tiene el mismo efecto que seguir este procedimiento. Vea [General Property Page (Project)](../build/reference/general-property-page-project.md).
 
-   ![Versión de la plataforma de destino](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
+   ![Versión] de la plataforma de destino (../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   Esta acción cambia los valores de las macros del proyecto que incluyen rutas de acceso a archivos de encabezado y archivos de biblioteca. Para ver qué ha cambiado en el **directorios de Visual C++** sección de la **las propiedades del proyecto** cuadro de diálogo, elija una de las propiedades, como el **directorios de inclusión**, elegir Abra la lista desplegable y elija \<Editar >. Se mostrará el diálogo **Directorios de archivos de inclusión** .
+   Esta acción cambia los valores de las macros del proyecto que incluyen rutas de acceso a archivos de encabezado y archivos de biblioteca. Para ver lo que ha cambiado, en la sección **directorios C++ visuales** del cuadro de diálogo **propiedades del proyecto** , elija una de las propiedades, como los directorios de **inclusión**, elija para abrir la \<lista desplegable y elija Editar >. Se mostrará el diálogo **Directorios de archivos de inclusión** .
 
-   ![Incluir el cuadro de diálogo directorios](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
+   ![Cuadro de diálogo directorios de inclusión](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
-   Elija la **Macros >>** botón y desplácese hacia abajo en la lista de macros hasta las macros del SDK de Windows para ver los nuevos valores.
+   Elija el botón **macros > >** y desplácese hacia abajo en la lista de macros hasta la Windows SDK macros para ver todos los valores nuevos.
 
-   ![Windows SDK Macros](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")
+   ![Macros Windows SDK](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")
 
 5. Repita este procedimiento con los demás proyectos si es necesario y vuelva a compilar la solución.
 
@@ -56,8 +56,8 @@ Desde Visual Studio 2015 y el SDK de Windows 10, la biblioteca CRT se divide en 
 
 1. Abra el menú contextual del nodo del proyecto y elija **Redestinar versión de SDK**.
 
-2. En el **versión de la plataforma de destino** lista desplegable, elija **8.1**.
+2. En la lista desplegable versión de la **plataforma de destino** , elija **8,1**.
 
 ## <a name="see-also"></a>Vea también
 
-[Aplicaciones de escritorio de Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
+[Aplicaciones de escritorio de Windows C++(visual)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

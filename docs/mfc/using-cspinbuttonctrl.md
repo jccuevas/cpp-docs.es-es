@@ -9,25 +9,25 @@ helpviewer_keywords:
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: 6bb663b6ff9b9b039bd774f6e607c7acdb1c4b11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411726"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513466"
 ---
 # <a name="using-cspinbuttonctrl"></a>Usar CSpinButtonCtrl
 
-El *botón de número* control (también conocido como un *arriba-abajo* control) proporciona un par de flechas en las que un usuario puede hacer clic para ajustar un valor. Este valor se conoce como el *posición actual*. La posición permanece dentro del intervalo del botón de número. Cuando el usuario hace clic en la flecha hacia arriba, se mueve la posición en el valor máximo; y cuando el usuario hace clic en la flecha hacia abajo, la posición se mueve hacia el mínimo.
+El control de *botón de número* (también conocido como control *de* flechas) proporciona un par de flechas en las que un usuario puede hacer clic para ajustar un valor. Este valor se conoce como la *posición actual*. La posición permanece dentro del intervalo del botón de número. Cuando el usuario hace clic en la flecha arriba, la posición se desplaza hacia el máximo; y cuando el usuario hace clic en la flecha hacia abajo, la posición se desplaza hacia el mínimo.
 
-El control de botón de número se representa en MFC mediante el [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) clase.
+La clase [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) representa el control de botón de número en MFC.
 
 > [!NOTE]
->  De forma predeterminada, el intervalo para el botón de número tiene el máximo establecido en cero (0) y el mínimo establecido en 100. Dado que el valor máximo es menor que el valor mínimo, al hacer clic en la flecha arriba reduce la posición y al hacer clic en la flecha hacia abajo aumenta la lo. Use [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) para ajustar estos valores.
+>  De forma predeterminada, el intervalo para el botón de número tiene el valor máximo establecido en cero (0) y el mínimo establecido en 100. Dado que el valor máximo es menor que el valor mínimo, al hacer clic en la flecha arriba se reduce la posición y al hacer clic en la flecha hacia abajo se aumenta. Use [CSpinButtonCtrl::](../mfc/reference/cspinbuttonctrl-class.md#setrange) SetRange para ajustar estos valores.
 
-Normalmente, se muestra la posición actual en un control complementario. El control complementario se conoce como el *ventana relacionada*. Para ver una ilustración de un control de botón de número, vea [acerca de los controles de flechas](/windows/desktop/Controls/up-down-controls) en el SDK de Windows.
+Normalmente, la posición actual se muestra en un control complementario. El control complementario se conoce como la *ventana relacionada*. Para ver una ilustración de un control de botón de número, vea acerca de los [controles](/windows/win32/Controls/up-down-controls) de flechas en el Windows SDK.
 
-Para crear un control de número y una ventana relacionada del control de edición, en Visual Studio, en primer lugar arrastre un control de edición en el cuadro de diálogo o ventana y, a continuación, arrastre un control de número. Seleccione el control de flechas y establezca su **Auto Buddy** y **establecer Buddy Integer** propiedades a **True**. Establezca también la **alineación** propiedad; **Derecha alinear** es más habitual. Con esta configuración, el control de edición se establece como la ventana relacionada porque el control de edición precede directamente en el orden de tabulación. El control de edición muestra números enteros y el control de número se incrusta en el lado derecho del control de edición. Si lo desea, puede establecer el intervalo válido del control de flechas con el [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) método. No hay controladores de eventos son necesarios para comunicarse entre el control de número y la ventana relacionada porque intercambian datos directamente. Si usa un control de número para otros propósitos, por ejemplo, para desplazarse a través de una secuencia de windows o los cuadros de diálogo, a continuación, agregue un controlador para el mensaje UDN_DELTAPOS y realizar allí la acción personalizada.
+Para crear un control de número y una ventana relacionada con el control de edición, en Visual Studio, arrastre primero un control de edición al cuadro de diálogo o ventana y, a continuación, arrastre un control de número. Seleccione el control de número y establezca sus propiedades **auto Buddy** y **set Buddy Integer** en **true**. Establezca también la propiedad **alignment** ; La **alineación derecha** es la más habitual. Con esta configuración, el control de edición se establece como la ventana relacionada porque precede directamente al control de edición en el orden de tabulación. El control de edición muestra enteros y el control de número se incrusta en el lado derecho del control de edición. Opcionalmente, puede establecer el intervalo válido del control de número mediante el método [CSpinButtonCtrl::](../mfc/reference/cspinbuttonctrl-class.md#setrange) SetRange. No es necesario que los controladores de eventos se comuniquen entre el control de número y la ventana relacionada porque intercambian datos directamente. Si usa un control de número para algún otro propósito, por ejemplo, para paginar a través de una secuencia de ventanas o cuadros de diálogo, agregue un controlador para el mensaje UDN_DELTAPOS y realice la acción personalizada allí.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 

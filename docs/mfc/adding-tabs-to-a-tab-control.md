@@ -7,26 +7,26 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], adding tabs
 - tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
-ms.openlocfilehash: f769de7bcf3e410cca717c17237d1e49ef8562c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8915b3af083ebe318e8527b2f83099bf61e7e3ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394772"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509296"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Agregar pestañas a un control de pestaña
 
-Después de crear el control de ficha ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), agregar tantas pestañas como sea necesario.
+Después de crear el control de pestaña ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), agregue tantas pestañas como necesite.
 
-### <a name="to-add-a-tab-item"></a>Para agregar un elemento de pestaña
+### <a name="to-add-a-tab-item"></a>Para agregar un elemento de ficha
 
-1. Preparar una [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estructura.
+1. Preparar una estructura [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) .
 
-1. Llame a [CTabCtrl:: InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), pasando la estructura.
+1. Llame a [CTabCtrl:: InsertItem](../mfc/reference/ctabctrl-class.md#insertitem)y pase la estructura.
 
-1. Repita los pasos 1 y 2 para los elementos de una ficha adicional.
+1. Repita los pasos 1 y 2 para los elementos de ficha adicionales.
 
-Para obtener más información, consulte [creación de un Control de ficha](/windows/desktop/Controls/tab-controls) en el SDK de Windows.
+Para obtener más información, vea [crear un control de ficha](/windows/win32/Controls/tab-controls) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

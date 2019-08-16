@@ -7,42 +7,42 @@ helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c788f5ec499f0edf0c44f1ff269af9767af6c08
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320375"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492660"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible con la prevención de ejecución de datos)
 
-Indica que un archivo ejecutable es compatible con la característica Prevención de ejecución de datos de Windows.
+Indica que un ejecutable es compatible con la característica prevención de ejecución de datos de Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/NXCOMPAT**[**:NO**]
+> **/NXCOMPAT**[ **:NO**]
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, **/NXCOMPAT** está activado.
+De forma predeterminada, **/NXCompat** está activado.
 
-**: No** puede usarse para especificar explícitamente un archivo ejecutable como no compatible con la prevención de ejecución de datos.
+**/NXCompat: no** se puede usar para especificar explícitamente un ejecutable como incompatible con la prevención de ejecución de datos.
 
 Para obtener más información sobre la Prevención de ejecución de datos, vea estos artículos:
 
-- [Una descripción detallada de la característica de prevención de ejecución de datos (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
+- [Una descripción detallada de la característica prevención de ejecución de datos (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Prevención de ejecución de datos](/windows/desktop/Memory/data-execution-prevention)
+- [Prevención de ejecución de datos](/windows/win32/Memory/data-execution-prevention)
 
 - [Prevención de ejecución de datos (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Elija la **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
+1. Elija la página de propiedades**línea de comandos** del**vinculador** > de **propiedades** > de configuración.
 
-1. Especifique la opción en el **opciones adicionales** cuadro. Elija **Aceptar** o **aplicar** para aplicar el cambio.
+1. Escriba la opción en el cuadro **opciones adicionales** . Elija **Aceptar** o **aplicar** para aplicar el cambio.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 

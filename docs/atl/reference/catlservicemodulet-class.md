@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915869"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497736"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT (clase)
 
@@ -244,7 +244,7 @@ Cadenas adicionales opcionales que se van a escribir en el registro de eventos.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método escribe detalles en un registro de eventos mediante la función [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Si no hay ningún servicio en ejecución, la cadena se envía a la consola.
+Este método escribe detalles en un registro de eventos mediante la función [ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw). Si no hay ningún servicio en ejecución, la cadena se envía a la consola.
 
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Comentarios
 
-La estructura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contiene información sobre un servicio.
+La estructura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contiene información sobre un servicio.
 
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Comentarios
 
-La estructura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contiene información sobre un servicio.
+La estructura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contiene información sobre un servicio.
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la sección [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) . El valor predeterminado es SW_HIDE.
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la sección [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . El valor predeterminado es SW_HIDE.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Parámetros
 
 *dwState*<br/>
-Nuevo estado. Consulte [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) para ver los valores posibles.
+Nuevo estado. Consulte [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) para ver los valores posibles.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la sección [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la sección [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la sección [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la sección [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valor devuelto
 

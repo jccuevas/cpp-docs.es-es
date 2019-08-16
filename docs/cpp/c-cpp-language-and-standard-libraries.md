@@ -1,28 +1,78 @@
 ---
-title: Lenguaje C/C++ y bibliotecas estándar
-ms.date: 11/04/2016
+title: Referencia deC++ bibliotecas estándar y de lenguaje C/
+ms.date: 08/13/2019
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: d425d142b52b7d7a86e84a1dbbd648673223165a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: c8a954702f8624537b110aa7e303fcb610387f57
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708020"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498769"
 ---
-# <a name="cc-language-and-standard-libraries"></a>Lenguaje C/C++ y bibliotecas estándar
+# <a name="cc-language-and-standard-libraries-reference"></a>Referencia deC++ bibliotecas estándar y de lenguaje C/
 
-Esta sección de la documentación incluye instrucciones y contenido de referencia para la implementación de Microsoft de los estándares ISO para C y C++.
+En esta sección de la documentación se incluye el contenido de referencia para la implementación de Microsoft de C++ los lenguajes y C estándar ISO. La referencia del lenguaje incluye documentación para el preprocesador, las funciones intrínsecas del compilador y los lenguajes de ensamblado admitidos.
+
+También encontrará documentación de la biblioteca en tiempo de ejecución de C C++ , la biblioteca estándar y otras bibliotecas disponibles en el Microsoft c/C++ Compiler (MSVC) aquí.
+
+## <a name="language-reference"></a>Referencia del lenguaje
+
+[Lenguaje C](../c-language/c-language-reference.md)\
+Contenido de referencia para la implementación de Microsoft del lenguaje C.
+
+[C++módulo](../cpp/cpp-language-reference.md)\
+Contenido de referencia para la implementación de Microsoft C++ del lenguaje.
+
+[C/C++ preprocesador](../preprocessor/c-cpp-preprocessor-reference.md)\
+Contenido de referencia para el preprocesador usado por C y C++.
+
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
+Describe las funciones intrínsecas que están disponibles en Microsoft C++ C y para las arquitecturas x86, ARM, ARM64 y x64.
+
+[Ensamblador alineado](../assembler/inline/inline-assembler.md)\
+Explica cómo usar el ensamblador alineado de Visual C/C++ con procesadores x86.
+
+[Referencia del ensamblador de ARM](../assembler/arm/arm-assembler-reference.md)\
+Proporciona material de referencia para el ensamblador de ARM de Microsoft (ARMASM) y las herramientas relacionadas.
+
+[Referencia de Microsoft macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)\
+Proporciona material de referencia para Microsoft macro Assembler (MASM).
+
+## <a name="libraries-reference"></a>Referencia de bibliotecas
+
+### <a name="standard-libraries"></a>Bibliotecas estándar
+
+[Biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)\
+Referencia de la implementación de Microsoft de la biblioteca en tiempo de ejecución de C (CRT), a la que se hace referencia a veces como CRT universal.
+
+[C++biblioteca estándar](../standard-library/cpp-standard-library-reference.md)\
+Referencia de la implementación de Microsoft de la C++ biblioteca estándar.
+
+### <a name="libraries-for-windows-applications"></a>Bibliotecas para aplicaciones de Windows
+
+[MFC/ATL](../mfc/mfc-and-atl.md)\
+Documentación de las bibliotecas de clases de Microsoft Foundation Classes (MFC) y Active Template Library (ATL).
+
+### <a name="additional-libraries"></a>Bibliotecas adicionales
+
+[C++AMP (C++ paralelismo masivo acelerado)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
+Clases que permiten el uso de procesadores de gráficos modernos para la programación de uso general.
+
+[Runtime de simultaneidad](../parallel/concrt/concurrency-runtime.md)\
+Clases que simplifican la escritura de programas que usan el paralelismo de datos o el paralelismo de tareas.
+
+[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)\
+Referencia de la implementación de Microsoft de la API de OpenMP.
+
+[Biblioteca SafeInt](../safeint/safeint-library.md)\
+Biblioteca portable que se puede usar con MSVC, GCC o Clang para ayudar a evitar desbordamientos de enteros.
+
+[Bibliotecas de acceso a datos](../data/data-access-in-cpp.md) Bibliotecas para admitir el acceso a datos mediante ATL o MFC, y servicios heredados como OLE DB y ODBC.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Title|Descripción|
-|-----------|-----------------|
-|[Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Describe procedimientos recomendados y expresiones de programación de C++ modernas.|
-|[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)|Contenido de referencia para los lenguajes C++.|
-|[Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)|Contenido de referencia para la implementación de Microsoft de la biblioteca estándar de C++.|
-|[Referencia del lenguaje C](../c-language/c-language-reference.md)|Contenido de referencia para la implementación de Microsoft del lenguaje C.|
-|[Referencia de la biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)|Contenido de referencia para la implementación de Microsoft del tiempo de ejecución de C (CRT).|
-|[Biblioteca SafeInt](../safeint/safeint-library.md)|Contenido de referencia para una biblioteca portátil de funciones que controlan enteros sin riesgo de desbordamiento.|
-|[C++ en Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Describe las principales características de C++ en Visual Studio y contiene vínculos al resto de la documentación sobre Visual Studio C++.|
-|[Introducción al desarrollo de C++ en Visual Studio](../overview/overview-of-cpp-development.md)|Vínculos a otros artículos que contienen información sobre cómo usar Visual Studio y las herramientas relacionadas para crear, compilar e implementar aplicaciones C++.|
-|[Novedades de Visual C++](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Describe las nuevas características y mejoras de esta versión.|
+[Windows Runtime (WinRT) conC++](/windows/uwp/cpp-and-winrt-apis/index)\
+C++/WinRT es una proyección de lenguaje estándar de C++ 17 totalmente estándar para las API de Windows Runtime (WinRT), implementada como una biblioteca basada en archivos de encabezado.
+
+[Biblioteca C++ de plantillas de Windows Runtime (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
+Una biblioteca de plantillas heredada para el Windows Runtime, C++reemplazada por/WinRT.

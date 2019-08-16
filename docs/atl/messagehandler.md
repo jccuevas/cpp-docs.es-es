@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 1acd56357f9ce234e3c479fd8fa88c1ed8407878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261701"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492321"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
-`MessageHandler` es el nombre de la función identificada por el segundo parámetro de la macro MESSAGE_HANDLER en el mapa de mensajes.
+`MessageHandler`es el nombre de la función identificada por el segundo parámetro de la macro MESSAGE_HANDLER en el mapa de mensajes.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,11 +38,11 @@ Información adicional específica del mensaje.
 Información adicional específica del mensaje.
 
 *bHandled*<br/>
-Los conjuntos de mapa de mensajes *bHandled* en TRUE antes de `MessageHandler` se llama. Si `MessageHandler` no controla totalmente el mensaje, se debe establecer *bHandled* en FALSE para indicar que el mensaje requiere un procesamiento posterior.
+El mapa de mensajes establece *bHandled* en true `MessageHandler` antes de llamar a. Si `MessageHandler` no controla por completo el mensaje, debe establecer *bHandled* en false para indicar que el mensaje necesita más procesamiento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El resultado del procesamiento de mensajes. 0 si es correcto.
+Resultado del procesamiento de mensajes. 0 si se realiza correctamente.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -52,4 +52,4 @@ Para obtener un ejemplo del uso de este controlador de mensajes en un mapa de me
 
 [Implementar una ventana](../atl/implementing-a-window.md)<br/>
 [Mapas de mensajes](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

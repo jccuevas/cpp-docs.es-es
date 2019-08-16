@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7c799f3d44428643bccc2869255ffa4e9d194d70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341078"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493134"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Manifestar bucle)
 
@@ -27,23 +27,23 @@ Especifica el comportamiento de la búsqueda de manifiesto.
 
 ## <a name="remarks"></a>Comentarios
 
-**/ALLOWISOLATION:no** indica los archivos DLL se carga como si no hubiera ningún manifiesto y hace que el vinculador establezca el `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit en el encabezado opcional `DllCharacteristics` campo.
+**/ALLOWISOLATION: no** indica que los archivos DLL se cargan como si no hubiera ningún manifiesto y hace que el `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` enlazador establezca el bit en `DllCharacteristics` el campo del encabezado opcional.
 
-**/ ALLOWISOLATION** hace que el sistema operativo realice cargas y búsquedas de manifiestos.
+**/ALLOWISOLATION** hace que el sistema operativo realice búsquedas y cargas de manifiestos.
 
-**/ ALLOWISOLATION** es el valor predeterminado.
+**/ALLOWISOLATION** es el valor predeterminado.
 
-Cuando se deshabilita el aislamiento de un archivo ejecutable, el cargador de Windows no intentará encontrar un manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tendrá un contexto de activación predeterminado, incluso si hay un manifiesto dentro del ejecutable o en el mismo directorio que el ejecutable con el nombre <em>nombre-ejecutable</em>**. exe.manifest**.
+Cuando el aislamiento está deshabilitado para un archivo ejecutable, el cargador de Windows no intentará encontrar un manifiesto de aplicación para el proceso recién creado. El nuevo proceso no tendrá un contexto de activación predeterminado, aunque haya un manifiesto dentro del ejecutable o colocado en el mismo directorio que el ejecutable con el nombre <em>ejecutable-nombre</em> **. exe. manifest**.
 
-Para obtener más información, consulte [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference).
+Para obtener más información, vea [referencia de archivos de manifiesto](/windows/win32/SbsCs/manifest-files-reference).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **vinculador** > **archivo de manifiesto** página de propiedades.
+1. Seleccione la página de propiedades **configuración** > del**archivo de manifiesto** del**enlazador** > .
 
-1. Modificar el **Permitir aislamiento** propiedad.
+1. Modifique la propiedad **permitir aislamiento** .
 
 ## <a name="see-also"></a>Vea también
 

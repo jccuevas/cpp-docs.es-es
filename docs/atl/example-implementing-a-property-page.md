@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707098"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492380"
 ---
 # <a name="example-implementing-a-property-page"></a>Ejemplo: Implementación de una página de propiedades
 
@@ -49,9 +49,9 @@ Para completar este ejemplo, hará lo siguiente:
 
 En primer lugar, cree un nuevo proyecto ATL para un servidor DLL llamado `ATLPages7`. Ahora utilice el [Asistente para páginas de propiedades ATL](../atl/reference/atl-property-page-wizard.md) para generar una página de propiedades. Asigne a la página de propiedades un **Nombre corto** de **DocProperties** y, a continuación, cambie a la página **Cadenas** para establecer elementos específicos de la página de propiedades como se muestra en la siguiente tabla.
 
-|Elemento|Valor|
+|Elemento|Value|
 |----------|-----------|
-|Title|TextDocument|
+|Título|TextDocument|
 |Cadena de documento|Propiedades VCUE TextDocument|
 |Archivo de ayuda|*\<blank>*|
 
@@ -71,7 +71,7 @@ Ahora que se ha generado su página de propiedades, tendrá que agregar algunos 
 Estos controles se usarán para mostrar el nombre de archivo del documento y su estado de solo lectura.
 
 > [!NOTE]
->  El recurso de diálogo no incluye un marco ni botones de comando, ni tampoco tiene pestañas como tal vez haya imaginado. Un marco de la página de propiedades como el que se creó llamando a [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe) proporciona estas características.
+>  El recurso de diálogo no incluye un marco ni botones de comando, ni tampoco tiene pestañas como tal vez haya imaginado. Un marco de la página de propiedades como el que se creó llamando a [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe) proporciona estas características.
 
 ##  <a name="vcconadding_message_handlers"></a> Adición de controladores de mensajes
 
@@ -135,7 +135,7 @@ Para mostrar esta página, debe crear un objeto auxiliar sencillo. El objeto aux
 
 Utilice el [cuadro de diálogo Agregar clase](../ide/add-class-dialog-box.md) y el [Asistente para objetos simples ATL](../atl/reference/atl-simple-object-wizard.md) para generar una nueva clase y usar `Helper` como su nombre corto. Una vez creada, agregue un método como se muestra en la siguiente tabla.
 
-|Elemento|Valor|
+|Elemento|Value|
 |----------|-----------|
 |Nombre del método|`ShowPage`|
 |Parámetros|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|

@@ -1,5 +1,5 @@
 ---
-title: COleLinksDialog (clase)
+title: Clase COleLinksDialog
 ms.date: 11/04/2016
 f1_keywords:
 - COleLinksDialog
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-ms.openlocfilehash: c5069bc63d61016e6f3c2f983de23901b9f35814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 911108f9a231b752790abfdf86d1b4042d30b149
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224441"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504119"
 ---
-# <a name="colelinksdialog-class"></a>COleLinksDialog (clase)
+# <a name="colelinksdialog-class"></a>Clase COleLinksDialog
 
 Se utiliza en el cuadro de diálogo Editar vínculos de OLE.
 
@@ -33,32 +33,32 @@ class COleLinksDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Construye un objeto `COleLinksDialog`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[COleLinksDialog::DoModal](#domodal)|Muestra el cuadro de diálogo Editar vínculos OLE.|
+|[COleLinksDialog::DoModal](#domodal)|Muestra el cuadro de diálogo Editar vínculos de OLE.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[COleLinksDialog::m_el](#m_el)|Una estructura de tipo OLEUIEDITLINKS que controla el comportamiento del cuadro de diálogo.|
+|[COleLinksDialog::m_el](#m_el)|Estructura de tipo OLEUIEDITLINKS que controla el comportamiento del cuadro de diálogo.|
 
 ## <a name="remarks"></a>Comentarios
 
-Crear un objeto de clase `COleLinksDialog` cuando desee llamar a este cuadro de diálogo. Después de un `COleLinksDialog` se ha construido el objeto, puede usar el [m_el](#m_el) estructura para inicializar los valores o los Estados de los controles en el cuadro de diálogo. El `m_el` estructura es de tipo OLEUIEDITLINKS. Para obtener más información sobre el uso de esta clase de cuadro de diálogo, vea el [DoModal](#domodal) función miembro.
+Cree un objeto de clase `COleLinksDialog` cuando desee llamar a este cuadro de diálogo. Una vez `COleLinksDialog` construido un objeto, puede usar la estructura [m_el](#m_el) para inicializar los valores o los Estados de los controles en el cuadro de diálogo. La `m_el` estructura es de tipo OLEUIEDITLINKS. Para obtener más información sobre el uso de esta clase de cuadro de diálogo, vea la función miembro [DoModal](#domodal) .
 
 > [!NOTE]
->  Código de contenedor generados por el Asistente para la aplicación usa esta clase.
+>  El código de contenedor generado por el Asistente para aplicaciones utiliza esta clase.
 
-Para obtener más información, consulte el [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) estructura en el SDK de Windows.
+Para obtener más información, vea la estructura [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) en el Windows SDK.
 
-Para obtener más información sobre los cuadros de diálogo OLE específicos, vea el artículo [cuadros de diálogo en OLE](../../mfc/dialog-boxes-in-ole.md).
+Para obtener más información sobre los cuadros de diálogo específicos de OLE, vea los [cuadros de diálogo de artículo en OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -78,11 +78,11 @@ Para obtener más información sobre los cuadros de diálogo OLE específicos, v
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxodlgs.h
+**Encabezado:** afxodlgs. h
 
-##  <a name="domodal"></a>  COleLinksDialog::DoModal
+##  <a name="domodal"></a>COleLinksDialog::D oModal
 
-Muestra el cuadro de diálogo Editar vínculos OLE.
+Muestra el cuadro de diálogo Editar vínculos de OLE.
 
 ```
 virtual INT_PTR DoModal();
@@ -90,19 +90,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Estado de finalización para el cuadro de diálogo. Uno de los siguientes valores:
+Estado de finalización del cuadro de diálogo. Uno de los siguientes valores:
 
 - IDOK si el cuadro de diálogo se mostró correctamente.
 
 - IDCANCEL si el usuario canceló el cuadro de diálogo.
 
-- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a la `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se produjo. Para obtener una lista de posibles errores, vea el [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) función en el SDK de Windows.
+- IDABORT si se produjo un error. Si se devuelve IDABORT, llame a `COleDialog::GetLastError` la función miembro para obtener más información sobre el tipo de error que se ha producido. Para obtener una lista de posibles errores, vea la función [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
-Si desea inicializar los distintos controles de cuadro de diálogo mediante el establecimiento de los miembros de la [m_el](#m_el) estructura, debe hacerlo antes de llamar a `DoModal`, pero después de que se construye el objeto de cuadro de diálogo.
+Si desea inicializar los distintos controles de cuadro de diálogo estableciendo los miembros de la estructura [m_el](#m_el) , debe hacerlo antes de llamar `DoModal`a, pero después de que se construya el objeto de cuadro de diálogo.
 
-##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog
+##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog
 
 Construye un objeto `COleLinksDialog`.
 
@@ -117,24 +117,24 @@ COleLinksDialog (
 ### <a name="parameters"></a>Parámetros
 
 *pDoc*<br/>
-Apunta al documento OLE que contiene los vínculos que se va a editar.
+Apunta al documento OLE que contiene los vínculos que se van a editar.
 
 *pView*<br/>
 Apunta a la vista actual en *pDoc*.
 
 *dwFlags*<br/>
-Indicador de creación, que contiene 0 o ELF_SHOWHELP para especificar si el botón de ayuda se mostrará cuando se muestra el cuadro de diálogo.
+Marca de creación, que contiene 0 o ELF_SHOWHELP para especificar si se mostrará el botón ayuda cuando se muestre el cuadro de diálogo.
 
 *pParentWnd*<br/>
-Señala al objeto de ventana principal o propietaria (de tipo `CWnd`) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del cuadro de diálogo se establece en la ventana principal de la aplicación.
+Apunta al objeto de ventana primario o propietario (de tipo `CWnd`) al que pertenece el objeto de cuadro de diálogo. Si es NULL, la ventana primaria del cuadro de diálogo se establece en la ventana principal de la aplicación.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función solo construye un `COleLinksDialog` objeto. Para mostrar el cuadro de diálogo, llame a la [DoModal](#domodal) función.
+Esta función solo crea un `COleLinksDialog` objeto. Para mostrar el cuadro de diálogo, llame a la función [DoModal](#domodal) .
 
-##  <a name="m_el"></a>  COleLinksDialog::m_el
+##  <a name="m_el"></a>COleLinksDialog::m_el
 
-Estructura del tipo OLEUIEDITLINKS usado para controlar el comportamiento del cuadro de diálogo Editar vínculos.
+Estructura de tipo OLEUIEDITLINKS que se usa para controlar el comportamiento del cuadro de diálogo Editar vínculos.
 
 ```
 OLEUIEDITLINKS m_el;
@@ -144,7 +144,7 @@ OLEUIEDITLINKS m_el;
 
 Los miembros de esta estructura se pueden modificar directamente o a través de funciones miembro.
 
-Para obtener más información, consulte el [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) estructura en el SDK de Windows.
+Para obtener más información, vea la estructura [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

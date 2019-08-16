@@ -1,21 +1,21 @@
 ---
-title: transmit_as (C++ atributo COM)
+title: transmit_as (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407177"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513913"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-Indica al compilador para asociar un tipo presentado que manipulan las aplicaciones cliente y servidor, con un tipo transmitido.
+Indica al compilador que asocie un tipo presentado que las aplicaciones cliente y servidor manipulan, con un tipo transmitido.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,15 +26,15 @@ Indica al compilador para asociar un tipo presentado que manipulan las aplicacio
 ### <a name="parameters"></a>Parámetros
 
 *type*<br/>
-Especifica el tipo de datos que se transmite entre el cliente y servidor.
+Especifica el tipo de datos que se transmite entre el cliente y el servidor.
 
 ## <a name="remarks"></a>Comentarios
 
-El **transmit_as** C++ atributo tiene la misma funcionalidad que el [transmit_as](/windows/desktop/Midl/transmit-as) atributo MIDL.
+El atributo **transmit_as** C++ tiene la misma funcionalidad que el atributo MIDL [transmit_as](/windows/win32/Midl/transmit-as) .
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra un uso de la **transmit_as** atributo:
+En el código siguiente se muestra el uso del atributo **transmit_as** :
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -71,9 +71,9 @@ struct _TREE_NODE_TYPE * right;
 |||
 |-|-|
 |**Se aplica a**|**typedef**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

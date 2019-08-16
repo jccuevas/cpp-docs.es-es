@@ -1,5 +1,5 @@
 ---
-title: CComSafeArrayBound (clase)
+title: Clase CComSafeArrayBound
 ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArrayBound
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: bd77c2a788e769c74518d73b45c3c05ff27b3f58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221139"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496906"
 ---
-# <a name="ccomsafearraybound-class"></a>CComSafeArrayBound (clase)
+# <a name="ccomsafearraybound-class"></a>Clase CComSafeArrayBound
 
-Esta clase es un contenedor para un [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estructura.
+Esta clase es un contenedor para una estructura [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-tagsafearraybound) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,11 +46,11 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Establece el `CComSafeArrayBound` a un nuevo valor.|
+|[operador =](#operator_eq)|Establece el `CComSafeArrayBound` en un nuevo valor.|
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase es un contenedor para el `SAFEARRAYBOUND` estructura usa [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Proporciona métodos para consultar y establecer los límites superiores e inferiores de una sola dimensión de un `CComSafeArray` objeto y el número de elementos que contiene. Multidimensional `CComSafeArray` objeto usa una matriz de `CComSafeArrayBound` objetos, uno para cada dimensión. Por lo tanto, cuando se usan métodos como [GetCount](#getcount), tenga en cuenta que este método no devolverá el número total de elementos de una matriz multidimensional.
+Esta clase es un contenedor para la `SAFEARRAYBOUND` estructura utilizada por [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Proporciona métodos para consultar y establecer los límites superior e inferior de una sola dimensión de un `CComSafeArray` objeto y el número de elementos que contiene. Un `CComSafeArray` objeto multidimensional utiliza una matriz de `CComSafeArrayBound` objetos, uno para cada dimensión. Por consiguiente, al utilizar métodos como [getCount](#getcount), tenga en cuenta que este método no devolverá el número total de elementos de una matriz multidimensional.
 
 **Encabezado:** atlsafe.h
 
@@ -72,11 +72,11 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 Número de elementos de la matriz.
 
 *lLowerBound*<br/>
-El límite inferior desde la que se asigna el número de la matriz.
+Límite inferior desde el que se numera la matriz.
 
 ### <a name="remarks"></a>Comentarios
 
-Si la matriz es necesario acceder desde un C++ programa, se recomienda que el límite inferior se define como 0. Puede ser preferible utilizar un valor de límite inferior diferente si la matriz es para su uso con otros lenguajes, como Visual Basic.
+Si se va a tener acceso a la matriz desde C++ un programa, se recomienda definir el límite inferior como 0. Puede ser preferible usar un valor de límite inferior diferente si la matriz se va a usar con otros lenguajes, como Visual Basic.
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 
@@ -92,7 +92,7 @@ Devuelve el número de elementos.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el asociado `CComSafeArray` objeto representa una matriz multidimensional, este método devolverá solo el número total de elementos de la dimensión más a la derecha. Use [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) para obtener el número total de elementos.
+Si el objeto `CComSafeArray` asociado representa una matriz multidimensional, este método solo devolverá el número total de elementos de la dimensión situada más a la derecha. Use [CComSafeArray:: GetCount](../../atl/reference/ccomsafearray-class.md#getcount) para obtener el número total de elementos.
 
 ##  <a name="getlowerbound"></a>  CComSafeArrayBound::GetLowerBound
 
@@ -104,7 +104,7 @@ LONG GetLowerBound() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el límite inferior de la `CComSafeArrayBound` objeto.
+Devuelve el límite inferior del `CComSafeArrayBound` objeto.
 
 ##  <a name="getupperbound"></a>  CComSafeArrayBound::GetUpperBound
 
@@ -116,15 +116,15 @@ LONG GetUpperBound() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el límite superior de la `CComSafeArrayBound` objeto.
+Devuelve el límite superior del `CComSafeArrayBound` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-El límite superior depende del número de elementos y el valor de límite inferior. Por ejemplo, si el límite inferior es 0 y el número de elementos es 10, el límite superior se establecerá automáticamente al 9.
+El límite superior depende del número de elementos y del valor de límite inferior. Por ejemplo, si el límite inferior es 0 y el número de elementos es 10, el límite superior se establecerá automáticamente en 9.
 
-##  <a name="operator_eq"></a>  CComSafeArrayBound::operator =
+##  <a name="operator_eq"></a>CComSafeArrayBound:: Operator =
 
-Establece el `CComSafeArrayBound` a un nuevo valor.
+Establece el `CComSafeArrayBound` en un nuevo valor.
 
 ```
 CComSafeArrayBound& operator= (const CComSafeArrayBound& bound) throw();
@@ -133,7 +133,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*bound*<br/>
+*enlaza*<br/>
 Objeto `CComSafeArrayBound`.
 
 *ulCount*<br/>
@@ -141,11 +141,11 @@ Número de elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la `CComSafeArrayBound` objeto.
+Devuelve un puntero al `CComSafeArrayBound` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-El `CComSafeArrayBound` objeto se puede asignar una existente `CComSafeArrayBound`, o si se suministra el número de elementos, en el que caso el límite inferior se establece en 0 de forma predeterminada.
+El `CComSafeArrayBound` objeto se puede asignar mediante una existente `CComSafeArrayBound`o proporcionando el número de elementos, en cuyo caso el límite inferior se establece en 0 de forma predeterminada.
 
 ##  <a name="setcount"></a>  CComSafeArrayBound::SetCount
 
@@ -162,7 +162,7 @@ Número de elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el número de elementos de la `CComSafeArrayBound` objeto.
+Devuelve el número de elementos `CComSafeArrayBound` del objeto.
 
 ##  <a name="setlowerbound"></a>  CComSafeArrayBound::SetLowerBound
 
@@ -175,18 +175,18 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 ### <a name="parameters"></a>Parámetros
 
 *lLowerBound*<br/>
-El límite inferior.
+Límite inferior.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve el nuevo límite inferior de la `CComSafeArrayBound` objeto.
+Devuelve el nuevo límite inferior del `CComSafeArrayBound` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-Si la matriz es necesario acceder desde un programa de Visual C++, se recomienda que el límite inferior se define como 0. Puede ser preferible utilizar un valor de límite inferior diferente si la matriz es para su uso con otros lenguajes, como Visual Basic.
+Si se va a tener acceso a la matriz desde un C++ programa visual, se recomienda definir el límite inferior como 0. Puede ser preferible usar un valor de límite inferior diferente si la matriz se va a usar con otros lenguajes, como Visual Basic.
 
-El límite superior depende del número de elementos y el valor de límite inferior. Por ejemplo, si el límite inferior es 0 y el número de elementos es 10, el límite superior se establecerá automáticamente al 9.
+El límite superior depende del número de elementos y del valor de límite inferior. Por ejemplo, si el límite inferior es 0 y el número de elementos es 10, el límite superior se establecerá automáticamente en 9.
 
 ## <a name="see-also"></a>Vea también
 
-[Información general de clases](../../atl/atl-class-overview.md)
+[Información general sobre clases](../../atl/atl-class-overview.md)

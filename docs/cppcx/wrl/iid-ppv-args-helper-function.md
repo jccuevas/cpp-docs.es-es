@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398269"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500503"
 ---
-# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper (función)
+# <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper (función)
 
-Comprueba que el tipo del argumento especificado que se deriva de la `IUnknown` interfaz.
+Comprueba que el tipo del argumento especificado deriva de la `IUnknown` interfaz.
 
 > [!IMPORTANT]
-> Esta especialización de plantilla admite la infraestructura WRL y no está pensada para utilizarse directamente desde el código. Use [IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) en su lugar.
+> Esta especialización de plantilla es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código. Use [IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,18 +33,18 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo del argumento *pp*.
+El tipo de argumento *PP*.
 
 *pp*<br/>
-Puntero indirecto doble.
+Puntero doble indirecto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Argumento *pp* convierte en un puntero a una de puntero a **void**.
+Argumento *PP* convertido a un puntero a un puntero a **void**.
 
 ## <a name="remarks"></a>Comentarios
 
-Se genera un error de tiempo de compilación si el parámetro de plantilla *T* no se deriva de `IUnknown`.
+Si el parámetro de plantilla *T* no deriva de, se genera un error en `IUnknown`tiempo de compilación.
 
 ## <a name="requirements"></a>Requisitos
 

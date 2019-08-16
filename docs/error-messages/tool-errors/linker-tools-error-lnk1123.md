@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1123
 helpviewer_keywords:
 - LNK1123
-ms.openlocfilehash: b67a2a4ddad13988967b7cc7d827862a2a6fe933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31fd634291bfb0af17348197ae8a6225ac490c89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255234"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509901"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Error de las herramientas del vinculador LNK1123
 
@@ -25,13 +25,13 @@ Los archivos de entrada deben tener el formato de archivo de objeto común (COFF
 
 - Aplique todos los service packs y actualizaciones para su versión de Visual Studio. Esto es especialmente importante para Visual Studio 2010.
 
-- Intente compilar con la vinculación incremental deshabilitada. En la barra de menús, seleccione **Proyecto**, **Propiedades**. En el **páginas de propiedades** cuadro de diálogo, expanda **propiedades de configuración**, **vinculador**. Cambie el valor de **habilitar vinculación Incremental** a **No**.
+- Intente compilar con la vinculación incremental deshabilitada. En la barra de menús, seleccione **Proyecto**, **Propiedades**. En el cuadro de diálogo **páginas de propiedades** , expanda **propiedades de configuración**, **enlazador**. Cambie el valor de **Habilitar vinculación incremental** a **no**.
 
 - Compruebe que la versión de CVTRES.EXE que se encuentra primero en la variable de entorno PATH coincide con la versión de las herramientas de compilación, o la versión del conjunto de herramientas de la plataforma, utilizada por el proyecto.
 
-- Pruebe a desactivar la opción Incrustar manifiesto. En la barra de menús, seleccione **Proyecto**, **Propiedades**. En el **páginas de propiedades** cuadro de diálogo, expanda **propiedades de configuración**, **herramienta manifiesto**, **de entrada y salida**. Cambie el valor de **incrustar manifiesto** a **No**.
+- Pruebe a desactivar la opción Incrustar manifiesto. En la barra de menús, seleccione **Proyecto**, **Propiedades**. En el cuadro de diálogo **páginas de propiedades** , expanda **propiedades de configuración**, **herramienta manifiesto**, **entrada y salida**. Cambie el valor de **incrustar manifiesto** a **no**.
 
-- Asegúrese de que el tipo de archivo es válido. Por ejemplo, asegúrese de que un objeto OMF es de 32 bits y no de 16 bits. Para obtener más información, consulte [. Archivos obj como entrada del vinculador](../../build/reference/dot-obj-files-as-linker-input.md) y [formato PE](/windows/desktop/Debug/pe-format).
+- Asegúrese de que el tipo de archivo es válido. Por ejemplo, asegúrese de que un objeto OMF es de 32 bits y no de 16 bits. Para obtener más información, vea [. Archivos obj como entrada del vinculador](../../build/reference/dot-obj-files-as-linker-input.md) y [formato PE](/windows/win32/Debug/pe-format).
 
 - Compruebe que el archivo no está dañado. Vuelva a compilar, si es necesario.
 

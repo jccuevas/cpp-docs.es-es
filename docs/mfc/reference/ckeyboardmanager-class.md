@@ -1,5 +1,5 @@
 ---
-title: CKeyboardManager (clase)
+title: Clase CKeyboardManager
 ms.date: 11/04/2016
 f1_keywords:
 - CKeyboardManager
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e4f8f678e76113b5d012242f474ff0ab8b0628dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341506"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505781"
 ---
-# <a name="ckeyboardmanager-class"></a>CKeyboardManager (clase)
+# <a name="ckeyboardmanager-class"></a>Clase CKeyboardManager
 
 Administra las tablas de teclas de método abreviado de la ventana de marco principal y las ventanas de marco secundarias.
 
@@ -53,35 +53,35 @@ class CKeyboardManager : public CObject
 
 |||
 |-|-|
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Construye un objeto `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |||
 |-|-|
-|Name|Descripción|
-|[CKeyboardManager::CleanUp](#cleanup)|Borra las tablas de clave de acceso directo.|
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Recupera la tecla de método abreviado predeterminado para el comando especificado y la ventana.|
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determina si una clave se controla mediante la tabla de aceleradores.|
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indica si un carácter imprimible.|
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indica si los menús Mostrar todas las teclas de método abreviado de un comando o sólo la tecla de método abreviado de forma predeterminada.|
-|[CKeyboardManager::LoadState](#loadstate)|Carga las tablas de clave de acceso directo desde el registro de Windows.|
-|[CKeyboardManager::ResetAll](#resetall)|Vuelve a cargar las tablas de clave de acceso directo desde el recurso de aplicación.|
-|[CKeyboardManager::SaveState](#savestate)|Guarda el acceso directo de las tablas de clave en el registro de Windows.|
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Especifica si el marco de trabajo muestra todas las teclas de método abreviado para todos los comandos o una clave de acceso directo único para cada comando. Este método no afecta a los comandos que tienen solo una tecla de método abreviado.|
+|NOMBRE|DESCRIPCIÓN|
+|[CKeyboardManager::CleanUp](#cleanup)|Borra las tablas de teclas de método abreviado.|
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Recupera la tecla de método abreviado predeterminada para el comando y la ventana especificados.|
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determina si la tabla de aceleradores controla una clave.|
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indica si un carácter se imprime.|
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indica si los menús muestran todas las teclas de método abreviado para un comando o solo la tecla de método abreviado predeterminada.|
+|[CKeyboardManager::LoadState](#loadstate)|Carga las tablas de teclas de método abreviado desde el registro de Windows.|
+|[CKeyboardManager::ResetAll](#resetall)|Vuelve a cargar las tablas de teclas de método abreviado desde el recurso de aplicación.|
+|[CKeyboardManager::SaveState](#savestate)|Guarda las tablas de teclas de método abreviado en el registro de Windows.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Especifica si el marco de trabajo muestra todas las teclas de método abreviado para todos los comandos o una sola tecla de método abreviado para cada comando. Este método no afecta a los comandos que tienen solo una tecla de método abreviado asociada.|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Convierte un carácter en su registro superior.|
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Actualiza una tabla de clave de acceso directo con una nueva tabla de clave de acceso directo.|
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Actualiza una tabla de teclas de método abreviado con una nueva tabla de teclas de método abreviado.|
 
 ## <a name="remarks"></a>Comentarios
 
-Los miembros de esta clase le permiten guardar y cargar las tablas de clave de acceso directo en el registro de Windows, use una plantilla para actualizar las tablas de clave de acceso directo y encontrar la tecla de método abreviado predeterminado para un comando en una ventana de marco. Además, el `CKeyboardManager` objeto le permite controlar cómo se muestran las teclas de método abreviado para el usuario.
+Los miembros de esta clase permiten guardar y cargar tablas de teclas de método abreviado en el registro de Windows, usar una plantilla para actualizar las tablas de clave de corte corto y buscar la tecla de método abreviado predeterminada para un comando en una ventana de marco. Además, el `CKeyboardManager` objeto le permite controlar cómo se muestran las teclas de método abreviado al usuario.
 
-No debería crear un `CKeyboardManager` objeto manualmente. Se creará automáticamente el marco de trabajo de la aplicación. Sin embargo, debe llamar a [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) durante el proceso de inicialización de la aplicación. Para obtener un puntero al administrador de teclado para la aplicación, llame a [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
+No debe crear un `CKeyboardManager` objeto manualmente. El marco de la aplicación lo creará automáticamente. Sin embargo, debe llamar a [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) durante el proceso de inicialización de la aplicación. Para obtener un puntero al administrador de teclado para la aplicación, llame a [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CKeyboardManager` objeto desde un `CWinAppEx` clase y cómo mostrar todas las teclas de método abreviado asociadas con los comandos de menú. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo recuperar un puntero a `CKeyboardManager` un objeto de `CWinAppEx` una clase y cómo mostrar todas las teclas de método abreviado asociadas a comandos de menú. Este fragmento de código forma parte del [ejemplo de páginas personalizadas](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
@@ -93,7 +93,7 @@ En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CKeyboardMan
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxkeyboardmanager.h
+**Encabezado:** afxkeyboardmanager. h
 
 ##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager
 
@@ -105,11 +105,11 @@ CKeyboardManager();
 
 ### <a name="remarks"></a>Comentarios
 
-En la mayoría de los casos, no es necesario crear un `CKeyboardManager` directamente. De forma predeterminada, el marco de trabajo crea uno automáticamente. Para obtener un puntero a la `CKeyboardManager`, llame a [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Si crea uno manualmente, debe inicializar con el método [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
+En la mayoría de los casos, no es necesario crear `CKeyboardManager` un directamente. De forma predeterminada, el marco de trabajo crea uno automáticamente. Para obtener un puntero a `CKeyboardManager`, llame a [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Si crea uno manualmente, debe inicializarlo con el método [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
 
 ##  <a name="cleanup"></a>  CKeyboardManager::CleanUp
 
-Libera el `CKeyboardManager` recursos y borra todas las asignaciones de clave de acceso directo.
+Libera los recursos y borra todas las asignaciones de teclas de método abreviado. `CKeyboardManager`
 
 ```
 static void CleanUp();
@@ -117,13 +117,13 @@ static void CleanUp();
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información acerca de teclas de método abreviado, vea [personalización del teclado y Mouse](../../mfc/keyboard-and-mouse-customization.md).
+Para obtener más información sobre las teclas de método abreviado, vea [Personalización del teclado y del mouse](../../mfc/keyboard-and-mouse-customization.md).
 
-No es necesario llamar a esta función cuando se cierra la aplicación porque el marco de trabajo lo llama automáticamente durante la salida de la aplicación.
+No es necesario llamar a esta función cuando la aplicación se cierra porque el marco de trabajo la llama automáticamente durante la salida de la aplicación.
 
 ##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator
 
-Recupera la tecla de método abreviado predeterminado para el comando especificado y la ventana.
+Recupera la tecla de método abreviado predeterminada para el comando y la ventana especificados.
 
 ```
 static BOOL FindDefaultAccelerator(
@@ -136,28 +136,28 @@ static BOOL FindDefaultAccelerator(
 ### <a name="parameters"></a>Parámetros
 
 *uiCmd*<br/>
-[in] El identificador de comando.
+de IDENTIFICADOR del comando.
 
 *str*<br/>
-[out] Una referencia a un `CString` objeto.
+enuncia Referencia a un `CString` objeto.
 
 *pWndFrame*<br/>
-[in] Un puntero a una ventana de marco.
+de Puntero a una ventana de marco.
 
 *bIsDefaultFrame*<br/>
-[in] Especifica si la ventana de marco es la ventana de marco de forma predeterminada.
+de Especifica si la ventana de marco es la ventana de marco predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si se encuentra el método abreviado; en caso contrario, es 0.
+Distinto de cero si se encuentra el acceso directo; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método busca el comando especificado por *uiCmd* y recupera la tecla de método abreviado de forma predeterminada. A continuación, el método toma la cadena asociada a esta tecla de método abreviado y escribe el valor para el *str* parámetro.
+Este método busca el comando especificado por *uiCmd* y recupera la tecla de método abreviado predeterminada. A continuación, el método toma la cadena asociada a esta tecla de método abreviado y escribe el valor en el parámetro *Str* .
 
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled
 
-Determina si la clave especificada está controlada por la [CKeyboardManager (clase)](../../mfc/reference/ckeyboardmanager-class.md).
+Determina si la [clase CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)controla la clave especificada.
 
 ```
 static BOOL __stdcall IsKeyHandled(
@@ -171,23 +171,23 @@ static BOOL __stdcall IsKeyHandled(
 
 |||
 |-|-|
-|Parámetro|Descripción|
-|*nKey*|[in] Para comprobar la clave.|
-|*fVirt*|[in] Especifica el comportamiento de la tecla de método abreviado. Para obtener una lista de valores posibles, vea [aceleración estructura](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
-|*pWndFrame*|[in] Una ventana de marco. Este método determina si una tecla de método abreviado se trata en este marco.|
-|*bIsDefaultFrame*|[in] Un parámetro booleano que indica si *pWndFrame* es la ventana de marco de forma predeterminada.|
+|Parámetro|DESCRIPCIÓN|
+|*nKey*|de Clave que se va a comprobar.|
+|*fVirt*|de Especifica el comportamiento de la tecla de método abreviado. Para obtener una lista de los valores posibles, consulte la [estructura de aceleración](/windows/win32/api/winuser/ns-winuser-accel).|
+|*pWndFrame*|de Ventana de marco. Este método determina si una tecla de método abreviado se controla en este marco.|
+|*bIsDefaultFrame*|de Un parámetro booleano que indica si *pWndFrame* es la ventana de marco predeterminada.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se controla la tecla de método abreviado. FALSE si no se controla la clave o si *pWndFrame* es NULL.
+TRUE si se controla la tecla de método abreviado. FALSE si la clave no está controlada o si *pWndFrame* es NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-Los parámetros de entrada deben coincidir con la entrada en la tabla de aceleradores tanto para *nKey* y *fVirt* para determinar si una tecla de método abreviado se controla en *pWndFrame*.
+Los parámetros de entrada deben coincidir con la entrada de la tabla de aceleradores para *nKey* y *fVirt* para determinar si una tecla de método abreviado se controla en *pWndFrame*.
 
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable
 
-Indica si un carácter imprimible.
+Indica si un carácter se imprime.
 
 ```
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
@@ -197,20 +197,20 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 |||
 |-|-|
-|Parámetro|Descripción|
-|*nChar*|[in] El carácter que este método comprueba.|
+|Parámetro|DESCRIPCIÓN|
+|*nChar*|de Carácter que este método comprueba.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el carácter es imprimible, cero si no lo está.
+Distinto de cero si el carácter se imprime, cero si no lo es.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método produce un error si una llamada a [GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate) se produce un error.
+Este método produce un error si se produce un error en una llamada a [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) .
 
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
 
-Indica si los menús Mostrar todas las teclas de método abreviado asociadas con los comandos de menú o sólo las teclas de método abreviado de forma predeterminada.
+Indica si los menús muestran todas las teclas de método abreviado asociadas a comandos de menú o solo las teclas de método abreviado predeterminadas.
 
 ```
 static BOOL IsShowAllAccelerators();
@@ -218,15 +218,15 @@ static BOOL IsShowAllAccelerators();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la aplicación enumera todas las teclas de método abreviado para comandos de menú; Si la aplicación muestra solo teclas de método abreviado predeterminado es 0.
+Distinto de cero si la aplicación muestra todas las teclas de método abreviado para los comandos de menú; 0 si la aplicación solo muestra las teclas de método abreviado predeterminadas.
 
 ### <a name="remarks"></a>Comentarios
 
-La aplicación enumera los métodos abreviados para comandos de menú en la barra de menús. Use la función [Showallaccelerators](#showallaccelerators) para controlar si la aplicación enumera todas las teclas de método abreviado o solo las teclas de método abreviado de forma predeterminada.
+La aplicación muestra las teclas de método abreviado para los comandos de menú en la barra de menús. Use la función [CKeyboardManager:: ShowAllAccelerators](#showallaccelerators) para controlar si la aplicación muestra todas las teclas de método abreviado o solo las teclas de método abreviado predeterminadas.
 
 ##  <a name="loadstate"></a>  CKeyboardManager::LoadState
 
-Carga las tablas de clave de acceso directo desde el registro de Windows.
+Carga las tablas de teclas de método abreviado desde el registro de Windows.
 
 ```
 BOOL LoadState(
@@ -237,24 +237,24 @@ BOOL LoadState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-[in] La ruta de acceso del registro donde `CKeyboardManager` se guardan los datos.
+de La ruta de acceso `CKeyboardManager` del registro donde se guardan los datos.
 
 *pDefaultFrame*<br/>
-[in] Un puntero a una ventana de marco que se usará como la ventana de forma predeterminada.
+de Puntero a una ventana de marco que se va a usar como ventana predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el estado se carga correctamente o 0 en caso contrario.
+Es distinto de cero si el estado se cargó correctamente o 0 de lo contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el *lpszProfileName* parámetro es NULL, este método comprueba la ubicación del registro de forma predeterminada para `CKeyboardManager` datos. La ubicación del registro predeterminado especificada por el [CWinAppEx (clase)](../../mfc/reference/cwinappex-class.md). Los datos deben escribirse previamente con el método [CKeyboardManager::SaveState](#savestate).
+Si el parámetro *lpszProfileName* es null, este método comprueba la ubicación del registro predeterminada `CKeyboardManager` para los datos. La ubicación del registro predeterminada se especifica mediante la [clase CWinAppEx](../../mfc/reference/cwinappex-class.md). Los datos se deben escribir previamente con el método [CKeyboardManager::](#savestate)SaveState.
 
-Si no especifica una ventana de forma predeterminada, se usará la ventana de marco principal de la aplicación.
+Si no especifica una ventana predeterminada, se utilizará la ventana de marco principal de la aplicación.
 
 ##  <a name="resetall"></a>  CKeyboardManager::ResetAll
 
-Vuelve a cargar las tablas de clave de acceso directo desde el recurso de aplicación.
+Vuelve a cargar las tablas de teclas de método abreviado desde el recurso de aplicación.
 
 ```
 void ResetAll();
@@ -262,11 +262,11 @@ void ResetAll();
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función borra los métodos abreviados que se almacenan en el `CKeyboardManager` instancia. A continuación, volverá a cargar el estado del Administrador de teclado desde el recurso de aplicación.
+Esta función borra los accesos directos almacenados en la `CKeyboardManager` instancia de. A continuación, volverá a cargar el estado del administrador de teclado desde el recurso de la aplicación.
 
 ##  <a name="savestate"></a>  CKeyboardManager::SaveState
 
-Guarda el acceso directo de las tablas de clave en el registro de Windows.
+Guarda las tablas de teclas de método abreviado en el registro de Windows.
 
 ```
 BOOL SaveState(
@@ -277,24 +277,24 @@ BOOL SaveState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-[in] La ruta de acceso del registro para guardar la `CKeyboardManager` estado.
+de La ruta de acceso del registro `CKeyboardManager` para guardar el estado.
 
 *pDefaultFrame*<br/>
-[in] Un puntero a una ventana de marco que se convierte en la ventana de forma predeterminada.
+de Puntero a una ventana de marco que se convierte en la ventana predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el estado del Administrador de teclado se ha guardado correctamente, o 0 en caso contrario.
+Es distinto de cero si el estado del administrador de teclado se guardó correctamente o 0 en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
 
-Si el *lpszProfileName* parámetro es NULL, este método se escribirá el `CKeyboardManager` estado en la ubicación predeterminada especificada por el [CWinAppEx (clase)](../../mfc/reference/cwinappex-class.md). Si especifica una ubicación, puede cargar los datos más adelante mediante el método [CKeyboardManager::LoadState](#loadstate).
+Si el parámetro *lpszProfileName* es null, este método escribirá el `CKeyboardManager` estado en la ubicación predeterminada especificada por la [clase CWinAppEx](../../mfc/reference/cwinappex-class.md). Si especifica una ubicación, puede cargar los datos más adelante con el método [CKeyboardManager:: Loadstate](#loadstate).
 
-Si no especifica una ventana de forma predeterminada, se usará la ventana de marco principal como la ventana de forma predeterminada.
+Si no especifica una ventana predeterminada, la ventana de marco principal se usará como ventana predeterminada.
 
 ##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
 
-Muestra todas las teclas de método abreviado asociadas con los comandos de menú.
+Muestra todas las teclas de método abreviado asociadas a comandos de menú.
 
 ```
 static void ShowAllAccelerators(
@@ -305,16 +305,16 @@ static void ShowAllAccelerators(
 ### <a name="parameters"></a>Parámetros
 
 *bShowAll*<br/>
-[in] Si es TRUE, se mostrará todas las teclas de método abreviado. Si es FALSE, se mostrará la primera tecla de método abreviado.
+de Si es TRUE, se mostrarán todas las teclas de método abreviado. Si es FALSE, solo se mostrará la primera tecla de método abreviado.
 
 *lpszDelimiter*<br/>
-[in] Una cadena que se va a insertar entre las teclas de método abreviado. Este delimitador no tiene ningún efecto si solo se muestra una tecla de método abreviado.
+de Cadena que se va a insertar entre las teclas de método abreviado. Este delimitador no tiene ningún efecto si solo se muestra una tecla de método abreviado.
 
 ### <a name="remarks"></a>Comentarios
 
-De forma predeterminada, si un comando tiene más de una tecla de método abreviado asociada con él, se mostrará la primera tecla de método abreviado. Esta función permite obtener una lista de todas las teclas de método abreviado asociadas con todos los comandos.
+De forma predeterminada, si un comando tiene más de una tecla de método abreviado asociada, solo se mostrará la primera tecla de método abreviado. Esta función permite enumerar todas las teclas de método abreviado asociadas a todos los comandos.
 
-Las teclas de método abreviado, se mostrará junto al comando en la barra de menús. Si se muestran todas las claves de acceso directo, la cadena proporcionada por *lpszDelimiter* teclas de método abreviado individuales para separar.
+Las teclas de método abreviado se mostrarán junto al comando en la barra de menús. Si se muestran todas las teclas de método abreviado, la cadena proporcionada por *lpszDelimiter* separará las teclas de método abreviado individuales.
 
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper
 
@@ -327,15 +327,15 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="parameters"></a>Parámetros
 
 *nChar*<br/>
-[in] El carácter que se va a convertir.
+de Carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El carácter que es la parte superior del registro del parámetro de entrada.
+Carácter que es el registro superior del parámetro de entrada.
 
 ##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable
 
-Actualiza una tabla de clave de acceso directo con una nueva tabla de clave de acceso directo.
+Actualiza una tabla de teclas de método abreviado con una nueva tabla de teclas de método abreviado.
 
 ```
 BOOL UpdateAccelTable(
@@ -353,27 +353,27 @@ BOOL UpdateAccelTable(
 ### <a name="parameters"></a>Parámetros
 
 *pTemplate*<br/>
-[in] Un puntero a una plantilla de documento.
+de Un puntero a una plantilla de documento.
 
 *lpAccel*<br/>
-[in] Un puntero a la nueva clave de acceso directo.
+de Puntero a la nueva tecla de método abreviado.
 
 *nSize*<br/>
-[in] El tamaño de la nueva tabla de acceso directo.
+de Tamaño de la nueva tabla de acceso directo.
 
 *pDefaultFrame*<br/>
-[in] Un puntero a la ventana de marco de forma predeterminada.
+de Puntero a la ventana de marco predeterminada.
 
 *hAccelNew*<br/>
-[in] Identificador de la nueva tabla de acceso directo.
+de Identificador de la nueva tabla de acceso directo.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el método es correcto; en caso contrario, es 0.
+Distinto de cero si el método es correcto; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Utilice esta función para reemplazar la tabla de acceso directo existente con nuevas teclas de método abreviado para varios objetos de ventana de marco. La función recibe una plantilla de documento como un parámetro para obtener acceso a todos los objetos de ventana de marco conectado a la plantilla de documento determinada.
+Utilice esta función para reemplazar la tabla de acceso directo existente por las nuevas teclas de método abreviado para varios objetos de ventana de marco. La función recibe una plantilla de documento como parámetro para obtener acceso a todos los objetos de la ventana de marco conectados a la plantilla de documento especificada.
 
 ## <a name="see-also"></a>Vea también
 

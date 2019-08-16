@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [MFC], header controls
 - controls [MFC], header
 ms.assetid: 30050732-d53e-4eab-88d7-61aac52914c9
-ms.openlocfilehash: 88ecc7c84f9abd397937587323a306da1ea7b7f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df72489ae11ab1567b0d0b2b06ba3c562ec312a9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240250"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508471"
 ---
 # <a name="header-control-examples"></a>Ejemplos de control de encabezado
 
-Para obtener ejemplos de controles de encabezado, vea el [controles de encabezado](/windows/desktop/Controls/header-controls) en el SDK de Windows.
+Para obtener ejemplos de controles de encabezado, vea los [controles de encabezado](/windows/win32/Controls/header-controls) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 

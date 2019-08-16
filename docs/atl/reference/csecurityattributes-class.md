@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915729"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496499"
 ---
 # <a name="csecurityattributes-class"></a>Clase información
 
@@ -45,9 +45,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="remarks"></a>Comentarios
 
-La `SECURITY_ATTRIBUTES` estructura contiene un descriptor de [seguridad](/windows/desktop/api/winnt/ns-winnt-security_descriptor) que se usa para la creación de un objeto y especifica si el identificador recuperado mediante la especificación de esta estructura es heredable.
+La `SECURITY_ATTRIBUTES` estructura contiene un descriptor de [seguridad](/windows/win32/api/winnt/ns-winnt-security_descriptor) que se usa para la creación de un objeto y especifica si el identificador recuperado mediante la especificación de esta estructura es heredable.
 
-Para obtener una introducción al modelo de control de acceso de Windows, consulte [Access Control](/windows/desktop/SecAuthZ/access-control) en el Windows SDK.
+Para obtener una introducción al modelo de control de acceso de Windows, consulte [Access Control](/windows/win32/SecAuthZ/access-control) en el Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -100,6 +100,6 @@ El constructor utiliza este método para inicializar el `CSecurityAttributes` ob
 
 [Ejemplo de seguridad](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[descriptor de seguridad](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[descriptor de seguridad](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Información general sobre clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)
