@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 6c419081a649fddd65120270decb0cb57ee743fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916205"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505953"
 ---
 # <a name="cimagelist-class"></a>CImageList (clase)
 
@@ -269,7 +269,7 @@ CImageList();
 
 ##  <a name="copy"></a>CImageList:: Copy
 
-Esta función miembro implementa el comportamiento de la función [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy)de Win32, como se describe en el Windows SDK.
+Esta función miembro implementa el comportamiento de la función [ImageList_Copy](/windows/win32/api/commctrl/nf-commctrl-imagelist_copy)de Win32, como se describe en el Windows SDK.
 
 ```
 BOOL Copy(
@@ -634,16 +634,16 @@ Puntero al contexto de dispositivo de destino.
 Ubicación en la que se va a dibujar dentro del contexto de dispositivo especificado.
 
 *sz*<br/>
-Tamaño de la parte de la imagen que se va a dibujar con respecto a la esquina superior izquierda de la imagen. Consulte *DX* y *DY* en [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
+Tamaño de la parte de la imagen que se va a dibujar con respecto a la esquina superior izquierda de la imagen. Consulte *DX* y *DY* en [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
 
 *clrBk*<br/>
-Color de fondo de la imagen. Consulte *rgbBk* en [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
+Color de fondo de la imagen. Consulte *rgbBk* en [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
 
 *clrFg*<br/>
-Color de primer plano de la imagen. Consulte *rgbFg* en [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
+Color de primer plano de la imagen. Consulte *rgbFg* en [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
 
 *nStyle*<br/>
-Marca que especifica el estilo de dibujo. Consulte *fStyle* en [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
+Marca que especifica el estilo de dibujo. Consulte *fStyle* en [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) en el Windows SDK.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -682,7 +682,7 @@ BOOL DrawIndirect(
 ### <a name="parameters"></a>Parámetros
 
 *pimldp*<br/>
-Puntero a una estructura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) que contiene información sobre la operación de dibujo.
+Puntero a una estructura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) que contiene información sobre la operación de dibujo.
 
 *pDC*<br/>
 Un puntero al contexto de dispositivo de destino. Debe eliminar este objeto [CDC](../../mfc/reference/cdc-class.md) cuando haya terminado.
@@ -694,7 +694,7 @@ Un puntero al contexto de dispositivo de destino. Debe eliminar este objeto [CDC
 Estructura de [punto](/previous-versions/dd162805\(v=vs.85\)) que contiene las coordenadas x e y donde se dibujará la imagen.
 
 *sz*<br/>
-Estructura de [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) que indica el tamaño de la imagen que se va a dibujar.
+Estructura de [tamaño](/windows/win32/api/windef/ns-windef-size) que indica el tamaño de la imagen que se va a dibujar.
 
 *ptOrigin*<br/>
 Estructura de [punto](/previous-versions/dd162805\(v=vs.85\)) que contiene las coordenadas x e y que especifican la esquina superior izquierda de la operación de dibujo con respecto a la propia imagen. Los píxeles de la imagen que están a la izquierda de la coordenada x y sobre la coordenada y no se dibujan.
@@ -702,12 +702,12 @@ Estructura de [punto](/previous-versions/dd162805\(v=vs.85\)) que contiene las c
 *fStyle*<br/>
 Marca que especifica el estilo de dibujo y, opcionalmente, la imagen de superposición. Vea la sección Comentarios para obtener información sobre la imagen de superposición. La implementación predeterminada de MFC, ILD_NORMAL, dibuja la imagen con el color de fondo de la lista de imágenes. Si el color de fondo es el valor CLR_NONE, la imagen se dibuja de forma transparente con una máscara.
 
-Otros estilos posibles se describen en el miembro *fStyle* de la estructura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
+Otros estilos posibles se describen en el miembro *fStyle* de la estructura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *dwRop*<br/>
 Valor que especifica un código de operación de trama. Estos códigos definen el modo en que los datos de color del rectángulo de origen se combinarán con los datos de color del rectángulo de destino para lograr el color final. La implementación predeterminada de MFC, SRCCOPY, copia el rectángulo de origen directamente en el rectángulo de destino. Este parámetro se omite si el parámetro *fStyle* no incluye la marca ILD_ROP.
 
-Otros valores posibles se describen en el miembro *dwRop* de la estructura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
+Otros valores posibles se describen en el miembro *dwRop* de la estructura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *rgbBack*<br/>
 El color de fondo de la imagen, de forma predeterminada, CLR_DEFAULT. Este parámetro puede ser un valor RGB definido por la aplicación o uno de los siguientes valores:
@@ -738,7 +738,7 @@ Cuando se usa con ILS_SATURATE, este miembro contiene el valor que se agrega a c
 Cuando se usa con ILS_APLHA, este miembro contiene el valor del canal alfa. Este valor puede estar comprendido entre 0 y 255, donde 0 es completamente transparente y 255 es totalmente opaco.
 
 *crEffect*<br/>
-Valor de [COLORREF](/windows/desktop/gdi/colorref) que se usa para los efectos de resplandor y sombra.
+Valor de [COLORREF](/windows/win32/gdi/colorref) que se usa para los efectos de resplandor y sombra.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -748,7 +748,7 @@ TRUE si la imagen se dibuja correctamente; en caso contrario, FALSE.
 
 Use la primera versión si desea rellenar la estructura de Win32. Use la segunda versión si desea sacar partido de uno o más de los argumentos predeterminados de MFC o evitar administrar la estructura.
 
-Una imagen de superposición es una imagen que se dibuja sobre la imagen principal, especificada en esta función miembro, mediante el parámetro *nImage* . Dibuje una máscara de superposición mediante la función miembro [Draw](#draw) con el índice basado en uno de la máscara de superposición especificada mediante la macro [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) .
+Una imagen de superposición es una imagen que se dibuja sobre la imagen principal, especificada en esta función miembro, mediante el parámetro *nImage* . Dibuje una máscara de superposición mediante la función miembro [Draw](#draw) con el índice basado en uno de la máscara de superposición especificada mediante la macro [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask) .
 
 ### <a name="example"></a>Ejemplo
 
@@ -789,7 +789,7 @@ Identificador del icono si se realiza correctamente; de lo contrario, NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método se basa en el comportamiento de la macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) para crear el icono. Consulte la macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) para obtener más información sobre la creación y limpieza de iconos.
+Este método se basa en el comportamiento de la macro [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) para crear el icono. Consulte la macro [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) para obtener más información sobre la creación y limpieza de iconos.
 
 ### <a name="example"></a>Ejemplo
 
@@ -915,7 +915,7 @@ BOOL GetImageInfo(
 Índice de base cero de la imagen.
 
 *pImageInfo*<br/>
-Puntero a una estructura [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-imageinfo) que recibe información sobre la imagen. La información de esta estructura se puede usar para manipular directamente los mapas de bits de la imagen.
+Puntero a una estructura [IMAGEINFO](/windows/win32/api/commctrl/ns-commctrl-imageinfo) que recibe información sobre la imagen. La información de esta estructura se puede usar para manipular directamente los mapas de bits de la imagen.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1109,7 +1109,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Dado que las funciones de arrastre usan la nueva imagen durante una operación de arrastre, debe usar la función [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) de Windows para ocultar el cursor del mouse `CImageList::SetDragCursorImage`real después de llamar a. De lo contrario, puede parecer que el sistema tiene dos cursores del mouse mientras dure la operación de arrastre.
+Dado que las funciones de arrastre usan la nueva imagen durante una operación de arrastre, debe usar la función [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) de Windows para ocultar el cursor del mouse `CImageList::SetDragCursorImage`real después de llamar a. De lo contrario, puede parecer que el sistema tiene dos cursores del mouse mientras dure la operación de arrastre.
 
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount
 
