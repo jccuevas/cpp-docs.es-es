@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: MT
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375858"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916139"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cont
 
 Cada entrada de mapa de mensajes tiene el siguiente formato:
 
-  **ON_** _NOTIFICATION_ **(** _id_ **,** _memberFxn_ **)**
+  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
 
 donde `id` especifica el identificador de la ventana secundaria del control de edición que envía la `memberFxn` notificación y es el nombre de la función miembro primaria que ha escrito para controlar la notificación.
 
@@ -367,7 +367,7 @@ Un `CEdit` objeto se crea en dos pasos. En primer lugar, `CEdit` llame al constr
 
 Cuando `Create` se ejecuta, Windows envía los mensajes [WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize), [WM_CREATE](/windows/desktop/winmsg/wm-create)y [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) al control de edición.
 
-Estos mensajes se controlan de forma predeterminada mediante las funciones de miembro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), alcrear y [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) en la `CWnd` clase base. [](cwnd-class.md#oncreate) Para extender el control de mensajes predeterminado, derive una clase `CEdit`de, agregue un mapa de mensajes a la nueva clase e invalide las funciones miembro de controlador de mensajes anteriores. Invalide `OnCreate`, por ejemplo, para realizar la inicialización necesaria para la nueva clase.
+Estos mensajes se controlan de forma predeterminada mediante las funciones de miembro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate) y [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) en la clase base `CWnd`. Para extender el control de mensajes predeterminado, derive una clase `CEdit`de, agregue un mapa de mensajes a la nueva clase e invalide las funciones miembro de controlador de mensajes anteriores. Invalide `OnCreate`, por ejemplo, para realizar la inicialización necesaria para la nueva clase.
 
 Aplique los siguientes [estilos de ventana](styles-used-by-mfc.md#window-styles) a un control de edición.
 
@@ -804,7 +804,7 @@ Especifica la longitud (en TCHARs) del texto que el usuario puede escribir. Si e
 
 ### <a name="remarks"></a>Comentarios
 
-Al cambiar el límite de texto, solo se restringe el texto que el usuario puede escribir. No tiene ningún efecto en ningún texto que ya esté en el control de edición, ni afecta a la longitud del texto copiado en el control de [](cwnd-class.md#setwindowtext) edición por parte de `CWnd`la función miembro SetWindowText en. Si una aplicación utiliza la `SetWindowText` función para colocar más texto en un control de edición que se especifica en la llamada `LimitText`a, el usuario puede eliminar cualquier texto del control de edición. Sin embargo, el límite de texto impedirá que el usuario Reemplace el texto existente por un nuevo texto, a menos que la eliminación de la selección actual haga que el texto quede por debajo del límite de texto.
+Al cambiar el límite de texto, solo se restringe el texto que el usuario puede escribir. No tiene ningún efecto en ningún texto que ya esté en el control de edición, ni afecta a la longitud del texto copiado en el control de edición por parte de la función miembro [SetWindowText](cwnd-class.md#setwindowtext) en `CWnd`. Si una aplicación utiliza la `SetWindowText` función para colocar más texto en un control de edición que se especifica en la llamada `LimitText`a, el usuario puede eliminar cualquier texto del control de edición. Sin embargo, el límite de texto impedirá que el usuario Reemplace el texto existente por un nuevo texto, a menos que la eliminación de la selección actual haga que el texto quede por debajo del límite de texto.
 
 > [!NOTE]
 >  En Win32 (Windows NT y Windows 95/98), [SetLimitText](#setlimittext) reemplaza esta función.
@@ -1124,7 +1124,7 @@ Nuevo límite de texto, en caracteres.
 
 El límite de texto es la cantidad máxima de texto, en caracteres, que el control de edición puede aceptar.
 
-Al cambiar el límite de texto, solo se restringe el texto que el usuario puede escribir. No tiene ningún efecto en ningún texto que ya esté en el control de edición, ni afecta a la longitud del texto copiado en el control de [](cwnd-class.md#setwindowtext) edición por parte de `CWnd`la función miembro SetWindowText en. Si una aplicación utiliza la `SetWindowText` función para colocar más texto en un control de edición que se especifica en la llamada `LimitText`a, el usuario puede eliminar cualquier texto del control de edición. Sin embargo, el límite de texto impedirá que el usuario Reemplace el texto existente por un nuevo texto, a menos que la eliminación de la selección actual haga que el texto quede por debajo del límite de texto.
+Al cambiar el límite de texto, solo se restringe el texto que el usuario puede escribir. No tiene ningún efecto en ningún texto que ya esté en el control de edición, ni afecta a la longitud del texto copiado en el control de edición por parte de la función miembro [SetWindowText](cwnd-class.md#setwindowtext) en `CWnd`. Si una aplicación utiliza la `SetWindowText` función para colocar más texto en un control de edición que se especifica en la llamada `LimitText`a, el usuario puede eliminar cualquier texto del control de edición. Sin embargo, el límite de texto impedirá que el usuario Reemplace el texto existente por un nuevo texto, a menos que la eliminación de la selección actual haga que el texto quede por debajo del límite de texto.
 
 Esta función reemplaza [LimitText](#limittext) en Win32.
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*pEditBalloonTip*|de Puntero a una estructura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) que describe el globo de sugerencias.|
+|*pEditBalloonTip*|de Puntero a una estructura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) que describe el globo de sugerencias.|
 |*lpszTitle*|de Puntero a una cadena Unicode que contiene el título del globo de sugerencias.|
 |*lpszText*|de Puntero a una cadena Unicode que contiene el texto de globo de sugerencias.|
-|*ttiIcon*|de Valor **int** que especifica el tipo de icono que se va a asociar al globo de sugerencias. El valor predeterminado es TTI_NONE. Para obtener más información, vea `ttiIcon` el miembro de la estructura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) .|
+|*ttiIcon*|de Valor **int** que especifica el tipo de icono que se va a asociar al globo de sugerencias. El valor predeterminado es TTI_NONE. Para obtener más información, vea `ttiIcon` el miembro de la estructura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Valor devuelto
 
