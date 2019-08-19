@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: f2dfd3421d2154b4894b62b71d7993c483a77c53
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 2ec8c50a317a09e97a212e8cd7b9be1b58272af9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916122"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506570"
 ---
 # <a name="cfilefind-class"></a>Clase CFileFind
 
@@ -212,7 +212,7 @@ Reservado para crear `FindFile` polimórficos con clases derivadas. Debe ser 0.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
+Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -270,7 +270,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si hay más archivos; cero si el archivo encontrado es el último del directorio o si se produjo un error. Para obtener información de error extendida, llame a la función [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32. Si el archivo encontrado es el último archivo en el directorio o si no se encuentran archivos coincidentes, la `GetLastError` función devuelve ERROR_NO_MORE_FILES.
+Distinto de cero si hay más archivos; cero si el archivo encontrado es el último del directorio o si se produjo un error. Para obtener información de error extendida, llame a la función [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32. Si el archivo encontrado es el último archivo en el directorio o si no se encuentran archivos coincidentes, la `GetLastError` función devuelve ERROR_NO_MORE_FILES.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -314,7 +314,7 @@ Debe llamar `FindNextFile` a al menos una vez antes de llamar a cualquiera de la
 
 - [MatchesMask](#matchesmask)
 
-`FindNextFile`ajusta la función [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)de Win32.
+`FindNextFile`ajusta la función [FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)de Win32.
 
 ### <a name="example"></a>Ejemplo
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parámetros
 
 *pTimeStamp*<br/>
-Puntero a una estructura [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se creó el archivo.
+Puntero a una estructura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se creó el archivo.
 
 *refTime*<br/>
 Referencia a un objeto [ctime](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -346,7 +346,7 @@ Distinto de cero si se realiza correctamente; 0 si no se realiza correctamente. 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `GetCreationTime`de llamar a.
 
 > [!NOTE]
->  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para obtener información sobre los formatos de hora. En algunos sistemas de operaciones, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
+>  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para obtener información sobre los formatos de hora. En algunos sistemas de operaciones, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Referencia a un objeto [ctime](../../atl-mfc-shared/reference/ctime-class.md) .
 
 *pTimeStamp*<br/>
-Puntero a una estructura [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se produjo el último acceso al archivo.
+Puntero a una estructura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se produjo el último acceso al archivo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -484,7 +484,7 @@ Distinto de cero si se realiza correctamente; 0 si no se realiza correctamente. 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `GetLastAccessTime`de llamar a.
 
 > [!NOTE]
->  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para obtener información sobre los formatos de hora. En algunos sistemas de operaciones, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
+>  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para obtener información sobre los formatos de hora. En algunos sistemas de operaciones, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parámetros
 
 *pTimeStamp*<br/>
-Puntero a una estructura [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se escribió por última vez en el archivo.
+Puntero a una estructura [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) que contiene la hora a la que se escribió por última vez en el archivo.
 
 *refTime*<br/>
 Referencia a un objeto [ctime](../../atl-mfc-shared/reference/ctime-class.md) .
@@ -516,7 +516,7 @@ Distinto de cero si se realiza correctamente; 0 si no se realiza correctamente. 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `GetLastWriteTime`de llamar a.
 
 > [!NOTE]
->  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) para obtener información sobre los formatos de hora. En algunos sistemas de operaciones, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
+>  No todos los sistemas de archivos usan la misma semántica para implementar la marca de tiempo devuelta por esta función. Esta función puede devolver el mismo valor devuelto por otras funciones de marca de tiempo si el sistema de archivos subyacente o el servidor no admiten el atributo Time. Vea la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) para obtener información sobre los formatos de hora. En algunos sistemas de operaciones, la hora devuelta está en la zona horaria local del equipo donde se encuentra el archivo. Vea la API [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) de Win32 para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -538,7 +538,7 @@ Longitud del archivo encontrado, en bytes.
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `GetLength`de llamar a.
 
-`GetLength`utiliza la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) de Win32 para obtener y devolver el valor del tamaño del archivo, en bytes.
+`GetLength`utiliza la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) de Win32 para obtener y devolver el valor del tamaño del archivo, en bytes.
 
 > [!NOTE]
 >  A partir de MFC 7,0 `GetLength` , admite tipos enteros de 64 bits. El código existente creado con esta versión más reciente de la biblioteca puede producir advertencias de truncamiento.
@@ -583,7 +583,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Las aplicaciones marcan un archivo de almacenamiento, del que se va a realizar una copia de seguridad o que se va a quitar, con FILE_ATTRIBUTE_ARCHIVE, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
+Las aplicaciones marcan un archivo de almacenamiento, del que se va a realizar una copia de seguridad o que se va a quitar, con FILE_ATTRIBUTE_ARCHIVE, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) .
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsArchived`de llamar a.
 
@@ -607,7 +607,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Un archivo comprimido se marca con FILE_ATTRIBUTE_COMPRESSED, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Para un archivo, este atributo indica que todos los datos del archivo están comprimidos. Para un directorio, este atributo indica que la compresión es el valor predeterminado para los archivos y subdirectorios creados recientemente.
+Un archivo comprimido se marca con FILE_ATTRIBUTE_COMPRESSED, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Para un archivo, este atributo indica que todos los datos del archivo están comprimidos. Para un directorio, este atributo indica que la compresión es el valor predeterminado para los archivos y subdirectorios creados recientemente.
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsCompressed`de llamar a.
 
@@ -631,7 +631,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Un archivo que es un directorio se marca con FILE_ATTRIBUTE_DIRECTORY un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) .
+Un archivo que es un directorio se marca con FILE_ATTRIBUTE_DIRECTORY un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) .
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsDirectory`de llamar a.
 
@@ -677,7 +677,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Archivos ocultos, marcados con FILE_ATTRIBUTE_HIDDEN, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Los archivos ocultos no se incluyen en una lista de directorios normales.
+Archivos ocultos, marcados con FILE_ATTRIBUTE_HIDDEN, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Los archivos ocultos no se incluyen en una lista de directorios normales.
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsHidden`de llamar a.
 
@@ -701,7 +701,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Archivos marcados con FILE_ATTRIBUTE_NORMAL, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Un archivo normal no tiene ningún otro conjunto de atributos. Todos los demás atributos de archivo reemplazan a este atributo.
+Archivos marcados con FILE_ATTRIBUTE_NORMAL, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Un archivo normal no tiene ningún otro conjunto de atributos. Todos los demás atributos de archivo reemplazan a este atributo.
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsNormal`de llamar a.
 
@@ -725,7 +725,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Un archivo de solo lectura se marca con FILE_ATTRIBUTE_READONLY, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Las aplicaciones pueden leer estos archivos, pero no pueden escribir en ellos ni eliminarlos.
+Un archivo de solo lectura se marca con FILE_ATTRIBUTE_READONLY, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Las aplicaciones pueden leer estos archivos, pero no pueden escribir en ellos ni eliminarlos.
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsReadOnly`de llamar a.
 
@@ -749,7 +749,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Un archivo del sistema se marca con FILE_ATTRIBUTE_SYSTEM,, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Un archivo del sistema es parte del sistema operativo, o lo utiliza exclusivamente.
+Un archivo del sistema se marca con FILE_ATTRIBUTE_SYSTEM,, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Un archivo del sistema es parte del sistema operativo, o lo utiliza exclusivamente.
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsSystem`de llamar a.
 
@@ -773,7 +773,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Un archivo temporal se marca con FILE_ATTRIBUTE_TEMPORARY, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) . Se usa un archivo temporal para el almacenamiento temporal. Las aplicaciones solo deben escribir en el archivo si es absolutamente necesario. La mayoría de los datos del archivo permanecen en la memoria sin vaciarse en el medio porque el archivo se eliminará pronto.
+Un archivo temporal se marca con FILE_ATTRIBUTE_TEMPORARY, un atributo de archivo identificado en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) . Se usa un archivo temporal para el almacenamiento temporal. Las aplicaciones solo deben escribir en el archivo si es absolutamente necesario. La mayoría de los datos del archivo permanecen en la memoria sin vaciarse en el medio porque el archivo se eliminará pronto.
 
 Debe llamar a [FindNextFile](#findnextfile) al menos una vez antes `IsTemporary`de llamar a.
 
@@ -804,7 +804,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="parameters"></a>Parámetros
 
 *dwMask*<br/>
-Especifica uno o más atributos de archivo, identificados en la estructura [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) , para el archivo encontrado. Para buscar varios atributos, utilice el operador OR bit a&#124;bit (). Cualquier combinación de los siguientes atributos es aceptable:
+Especifica uno o más atributos de archivo, identificados en la estructura [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw) , para el archivo encontrado. Para buscar varios atributos, utilice el operador OR bit a&#124;bit (). Cualquier combinación de los siguientes atributos es aceptable:
 
 - FILE_ATTRIBUTE_ARCHIVE el archivo es un archivo de almacenamiento. Las aplicaciones usan este atributo para marcar los archivos para la copia de seguridad o la eliminación.
 
@@ -824,7 +824,7 @@ Especifica uno o más atributos de archivo, identificados en la estructura [WIN3
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
+Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Para obtener información de error extendida, llame a la función [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)de Win32.
 
 ### <a name="remarks"></a>Comentarios
 
