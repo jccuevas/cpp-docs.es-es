@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747851"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498883"
 ---
 # <a name="vprintf-functions"></a>vprintf (Funciones)
 
@@ -81,7 +81,7 @@ Las versiones de estas funciones con el sufijo **_p** proporcionan la capacidad 
 En el caso de **vsprintf**, `vswprintf`, `_vsnprintf` y `_vsnwprintf`, si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
->  Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer). Si usa las versiones seguras de estas funciones (con los sufijos **_s** o **_p**), una cadena de formato proporcionada por el usuario podría desencadenar una excepción de parámetro no válido si dicha cadena contiene caracteres de formato no válidos.
+>  Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer). Si usa las versiones seguras de estas funciones (con los sufijos **_s** o **_p**), una cadena de formato proporcionada por el usuario podría desencadenar una excepción de parámetro no válido si dicha cadena contiene caracteres de formato no válidos.
 
 ## <a name="see-also"></a>Vea también
 

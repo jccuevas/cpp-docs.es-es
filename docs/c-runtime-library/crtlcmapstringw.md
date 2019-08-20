@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e79ac5d4072595ef1034a0483b9edc8eada916d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468424"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500213"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
 Asigna una cadena de caracteres a otra, para lo que realiza una transformación de dependiente de la configuración regional especificada. Esta función también puede usarse para generar un criterio de ordenación para la cadena de entrada.
 
@@ -72,7 +72,7 @@ Cero indica un error. Para obtener información de errores extendida, realice un
 
 ## <a name="remarks"></a>Comentarios
 
-Si `cchSrc` es mayor que cero y `lpSrcStr` es una cadena terminada en NULL, `__crtLCMapStringW` establece `cchSrc` en la longitud de la cadena. Después, `__crtLCMapStringW` llama a la versión de cadena de caracteres anchos (Unicode) de la función `LCMapString` con los parámetros especificados. Para obtener más información sobre los parámetros y el valor devuelto de esta función, vea la función [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).
+Si `cchSrc` es mayor que cero y `lpSrcStr` es una cadena terminada en NULL, `__crtLCMapStringW` establece `cchSrc` en la longitud de la cadena. Después, `__crtLCMapStringW` llama a la versión de cadena de caracteres anchos (Unicode) de la función `LCMapString` con los parámetros especificados. Para obtener más información sobre los parámetros y el valor devuelto de esta función, vea la función [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 
 ## <a name="requirements"></a>Requisitos
 
