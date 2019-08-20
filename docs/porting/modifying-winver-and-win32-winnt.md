@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a624118bdd192c5ec677be81f0b410d2392e62e9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449074"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511604"
 ---
-# <a name="modifying-winver-and-win32winnt"></a>Modificar WINVER y _WIN32_WINNT
+# <a name="modifying-winver-and-_win32_winnt"></a>Modificar WINVER y _WIN32_WINNT
 
 Visual C++ ya no admite como destino Windows 95, Windows 98, Windows ME, Windows NT o Windows 2000. Si las macros **WINVER** o **_WIN32_WINNT** están asignadas a una de estas versiones de Windows, debe modificar las macros. Al actualizar un proyecto creado con una versión anterior de Visual C++, pueden producirse errores de compilación relacionados con las macros **WINVER** o **_WIN32_WINNT** macros si están asignadas a una versión de Windows que ya no se admite.
 
@@ -53,7 +53,7 @@ Si no ve todas estas versiones de Windows en la copia de SDKDDKVer.h que está r
 
 También puede definir esta macro mediante la opción del compilador `/D`. Para obtener más información, vea [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).
 
-Para obtener más información sobre el significado de estas macros, consulte [Uso de los encabezados de Windows](/windows/desktop/WinProg/using-the-windows-headers).
+Para obtener más información sobre el significado de estas macros, consulte [Uso de los encabezados de Windows](/windows/win32/WinProg/using-the-windows-headers).
 
 ## <a name="see-also"></a>Vea también
 

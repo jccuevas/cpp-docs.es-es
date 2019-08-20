@@ -2,12 +2,12 @@
 title: 'Guía de migración: Scribble de MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448970"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511533"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
 
@@ -65,7 +65,7 @@ Ahora compile la solución. En la ventana de salida, el compilador nos indica qu
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Esto es una advertencia, no un error, y se genera habitualmente al actualizar un proyecto de Visual Studio C++. Esta es la macro que define cuál es la versión más antigua de Windows sobre la que se ejecutará nuestra aplicación. Si omitimos la advertencia, aceptamos el valor predeterminado, _WIN32_WINNT_MAXVER, que significa la versión actual de Windows. Puede ver una tabla con los valores posibles en [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers) (Uso de los encabezados de Windows). Por ejemplo, podemos establecer que se ejecute en cualquier versión de Vista en adelante.
+Esto es una advertencia, no un error, y se genera habitualmente al actualizar un proyecto de Visual Studio C++. Esta es la macro que define cuál es la versión más antigua de Windows sobre la que se ejecutará nuestra aplicación. Si omitimos la advertencia, aceptamos el valor predeterminado, _WIN32_WINNT_MAXVER, que significa la versión actual de Windows. Puede ver una tabla con los valores posibles en [Using the Windows Headers](/windows/win32/WinProg/using-the-windows-headers) (Uso de los encabezados de Windows). Por ejemplo, podemos establecer que se ejecute en cualquier versión de Vista en adelante.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA

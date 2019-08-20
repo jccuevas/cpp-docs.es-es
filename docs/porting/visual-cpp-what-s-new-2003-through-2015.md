@@ -2,12 +2,12 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 6a3db2c9af2bcd9201f696756053cedb0788571a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552209"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510303"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -1349,7 +1349,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Compatibilidad en desuso con código ATL con atributos**  (nivel 1 (`/W1`), activo de manera predeterminada)
 
-   Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.
+   Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](#whats-new-for-c-in-visual-studio-2008), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated
