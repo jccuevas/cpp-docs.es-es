@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821121"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631534"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Advertencias del compilador de C4800 a C5999
 
@@ -266,7 +266,8 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |ADVERTENCIA del compilador (nivel 1) C4973|'*Symbol*': marcado como desusado|
 |ADVERTENCIA del compilador (nivel 1) C4974|'*Symbol*': marcado como desusado|
 |ADVERTENCIA del compilador (nivel 3) C4981|Warbird: la función '*function*' marcada como _ _ forceinline no está insertada porque contiene semántica de excepción|
-|ADVERTENCIA del compilador (nivel 3) C4985|nombre de símbolo ': atributos no presentes en la declaración anterior.|
+|[ADVERTENCIA del compilador C4984](compiler-warning-c4984.md)|' if constexpr ' es una extensión del lenguaje C++ 17|
+|ADVERTENCIA del compilador (nivel 3) C4985|'*symbol_name*': atributos no presentes en la declaración anterior.|
 |[ADVERTENCIA del compilador C4986](compiler-warning-c4986.md)|'*declaration*': la especificación de la excepción no coincide con la declaración anterior|
 |ADVERTENCIA del compilador (nivel 4) C4987|se usó una extensión no estándar: 'throw (...)'|
 |ADVERTENCIA del compilador (nivel 4) C4988|'*variable*': variable declarada fuera del ámbito de clase o función|

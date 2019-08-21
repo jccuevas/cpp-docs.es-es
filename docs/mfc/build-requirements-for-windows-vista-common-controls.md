@@ -1,44 +1,40 @@
 ---
-title: Requisitos de compilación para los controles comunes de Windows Vista
-ms.date: 11/04/2016
+title: Requisitos de compilación para los controles comunes de Windows
+ms.date: 08/19/2019
 helpviewer_keywords:
-- common controls (MFC), build requirements
-- common controls (MFC)
+- Common Controls (MFC), build requirements
+- Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386257"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630856"
 ---
-# <a name="build-requirements-for-windows-vista-common-controls"></a>Requisitos de compilación para los controles comunes de Windows Vista
+# <a name="build-requirements-for-windows-common-controls"></a>Requisitos de compilación para los controles comunes de Windows
 
-La biblioteca Microsoft Foundation Class (MFC) es compatible con la versión 6.1 de controles comunes de Windows. Los controles comunes se incluyen en Windows Vista y la biblioteca se incluye en el SDK de Visual Studio. La biblioteca proporciona nuevos métodos que mejoran las clases existentes y las nuevas clases y métodos que admiten controles comunes de Windows Vista. Cuando se compila la aplicación, debe seguir los requisitos de compilación y la migración que se describen en las secciones siguientes.
+La biblioteca MFC (Microsoft Foundation Class) es compatible con [los controles comunes de Windows](/windows/win32/controls/common-controls-intro). Los controles comunes se incluyen en Windows y la biblioteca se incluye en Visual Studio. La biblioteca MFC proporciona nuevos métodos que mejoran las clases existentes, así como clases y métodos adicionales que admiten controles comunes de Windows. Al compilar la aplicación, debe seguir los requisitos de compilación y migración que se describen en las secciones siguientes.
 
 ## <a name="compilation-requirements"></a>Requisitos de compilación
 
-### <a name="supported-versions"></a>Versiones admitidas
+### <a name="supported-versions"></a>Versiones compatibles
 
-Algunas nuevas clases y métodos admiten sólo Windows Vista y versiones posteriores, mientras que otros métodos también admiten sistemas operativos anteriores. Una nota en la `Requirements` sección del tema de cada método especifica cuándo la mínima necesaria del sistema operativo es Windows Vista.
-
-Incluso si el equipo no ejecuta Windows Vista, puede crear una aplicación MFC que se ejecutará en Windows Vista, si tiene los archivos de encabezado MFC versión 6.1 en el equipo. Sin embargo, controles comunes que están diseñados específicamente para Windows Vista funcionan únicamente en el sistema y son ignorados por los sistemas operativos anteriores.
+MFC es compatible con todas las versiones de los controles comunes. Para obtener información sobre las versiones de controles comunes de Windows, vea [versiones de control comunes](/windows/win32/controls/common-control-versions).
 
 ### <a name="supported-character-sets"></a>Juegos de caracteres compatibles
 
-Los nuevos controles comunes de Windows admiten solo el juego de caracteres Unicode y no el juego de caracteres ANSI. Si compila la aplicación en la línea de comandos, utilice siguientes definen ambos (/ d.) opciones del compilador para especificar Unicode como subyacente de juego de caracteres:
+Los controles comunes de Windows solo admiten el juego de caracteres Unicode, no el juego de caracteres ANSI. Si compila la aplicación en la línea de comandos, use las siguientes opciones del compilador de definición (/D) para especificar Unicode como el juego de caracteres subyacente:
 
 ```
 /D_UNICODE /DUNICODE
 ```
 
-Si compila la aplicación en el entorno de desarrollo integrado (IDE) de Visual Studio, especifique el **juego de caracteres Unicode** opción de la **del juego de caracteres** propiedad en el **General**  nodo de las propiedades del proyecto.
-
-La versión ANSI de varios métodos MFC han quedado en desuso a partir de versión 6.1 de controles comunes de Windows. Para obtener más información, consulte [API de ANSI en desuso](../mfc/deprecated-ansi-apis.md).
+Si compila la aplicación en el entorno de desarrollo integrado (IDE) de Visual Studio, especifique la opción **juego de caracteres Unicode** de la propiedad juego de **caracteres** en el nodo **General** de las propiedades del proyecto.
 
 ## <a name="migration-requirements"></a>Requisitos de migración
 
-Si utiliza el IDE de Visual Studio para crear una nueva aplicación MFC que utiliza la versión 6.1 de controles comunes de Windows, el IDE declara automáticamente un manifiesto apropiado. Sin embargo, si migra una aplicación MFC existente desde una versión anterior de Visual Studio y desea usar los nuevos controles comunes, el IDE no proporciona automáticamente información de manifiesto para actualizar la aplicación. En su lugar, se debe insertar manualmente el siguiente código fuente en su **stdafx.h** archivo:
+Si usa el IDE de Visual Studio para compilar una nueva aplicación MFC que utiliza controles comunes de Windows, el IDE declara automáticamente un manifiesto adecuado. Sin embargo, si migra una aplicación MFC existente desde Visual Studio 2005 o una versión anterior y desea usar los controles comunes, el IDE no proporciona automáticamente información de manifiesto para actualizar la aplicación. En su lugar, debe insertar manualmente el siguiente código fuente en el archivo de encabezado precompilado:
 
 ```
 #ifdef UNICODE

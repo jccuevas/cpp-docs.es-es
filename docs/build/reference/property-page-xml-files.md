@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: f23c252604c5b69423b808b3b9f072889e38c816
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837444"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630739"
 ---
 # <a name="property-page-xml-rule-files"></a>Archivos XML de página de propiedades
 
@@ -119,7 +119,7 @@ En la sección siguiente se describen todos los elementos principales y algunos 
       </ItemDefinitionGroup>
       ```
 
-      Si este valor se estableciera en la página de propiedades de un archivo concreto, como stdafx.cpp, se escribiría bajo el elemento stdafx.cpp del archivo del proyecto, como se muestra a continuación. Observe cómo la condición de configuración se adjunta directamente a los propios metadatos.
+      Si este valor se estableció en la página de propiedades de un archivo específico, como stdafx. cpp, el valor de la propiedad se escribiría en el elemento *stdafx. cpp* del archivo de proyecto, como se muestra a continuación. Observe cómo la condición de configuración se adjunta directamente a los propios metadatos.
 
       ```xml
       <ItemGroup>
