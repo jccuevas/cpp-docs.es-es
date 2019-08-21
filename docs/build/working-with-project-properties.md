@@ -23,7 +23,7 @@ En el IDE, toda la información que se necesita para compilar un proyecto se exp
 
 Al crear un proyecto, el sistema asigna valores a varias propiedades. Los valores predeterminados varían ligeramente según el tipo de proyecto y las opciones que se elijan en el Asistente para aplicaciones. Por ejemplo, un proyecto de ATL tiene propiedades relacionadas con los archivos MIDL, pero estas no están presentes en una aplicación de consola básica. Las propiedades predeterminadas se muestran en el panel General de las páginas de propiedades:
 
-![&#43; &#43; ]Valores predeterminados de proyectos(media/visual-c---project-defaults.png "visuales C++ ") de Visual C
+![&#43; &#43; ](media/visual-c---project-defaults.png "visuales C++ ") de Visual C
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Aplicar propiedades a las configuraciones de compilación y a las plataformas de destino
 
