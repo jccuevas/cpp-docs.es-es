@@ -1,6 +1,6 @@
 ---
 title: CComModule (clase)
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 53138081a6d712f775a2cc8f1e6905c45d95d34d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497114"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630657"
 ---
 # <a name="ccommodule-class"></a>CComModule (clase)
 
@@ -681,7 +681,7 @@ Valor HRESULT estándar.
 
 Similar a [UpdateRegistryFromResourceD](#updateregistryfromresourced) , `UpdateRegistryFromResourceS` excepto que crea un vínculo estático al componente del registro de ATL (registrador).
 
-`UpdateRegistryFromResourceS`se invocará automáticamente cuando se procese el mapa de objetos, siempre que se `#define _ATL_STATIC_REGISTRY` agregue a Stdafx. h.
+`UpdateRegistryFromResourceS`se invocará automáticamente cuando se procese el mapa de objetos, siempre que se `#define _ATL_STATIC_REGISTRY` agregue a *PCH. h* (*stdafx. h* en Visual Studio 2017 y versiones anteriores).
 
 > [!NOTE]
 >  Para sustituir los valores de reemplazo en tiempo de ejecución, no especifique la macro [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) o [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . En su lugar, cree una matriz `_ATL_REGMAP_ENTRIES` de estructuras, donde cada entrada contiene un marcador de posición de variable emparejado con un valor para reemplazar el marcador de posición en tiempo de ejecución. A continuación `UpdateRegistryFromResourceS`, llame a, pasando la matriz para el parámetro *pMapEntries* . Esto agrega todos los valores de reemplazo de `_ATL_REGMAP_ENTRIES` las estructuras al mapa de reemplazo del registrador.

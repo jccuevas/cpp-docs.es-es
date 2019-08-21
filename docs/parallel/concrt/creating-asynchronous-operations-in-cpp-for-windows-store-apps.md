@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: d6a36da79f24d98d162c4ffffff17b4471b2b063
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e3a5b634eb22a6860fe8af5b3b737a8e649e03c2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512249"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631735"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Crear operaciones asincrónicas en C++ para aplicaciones para UWP
 
@@ -70,10 +70,10 @@ El concepto de una *acción* significa que la tarea asincrónica no genera un va
 
 El tipo de valor devuelto `create_async` viene determinado por el tipo de sus argumentos. Por ejemplo, si la función de trabajo no devuelve un valor y no informa sobre el progreso, `create_async` devuelve `IAsyncAction`. Si la función de trabajo no devuelve un valor pero informa sobre el progreso, `create_async` devuelve `IAsyncActionWithProgress`. Para informar sobre el progreso, proporcione un objeto [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) como parámetro para la función de trabajo. La capacidad para informar sobre el progreso permite indicar qué cantidad de trabajo se realizó y qué cantidad todavía permanece sin realizar (por ejemplo, como un porcentaje). Permite también informar sobre los resultados cuando están disponibles.
 
-Cada una de las interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`y `IAsyncActionOperationWithProgress<TProgress, TProgress>` proporcionan un método `Cancel` que permite cancelar la operación asincrónica. La clase `task` funciona con tokens de cancelación. Cuando usa un token de cancelación para cancelar el trabajo, el runtime no inicia el nuevo trabajo suscrito a dicho token. El trabajo que ya está activo puede supervisar su token de cancelación y detenerse cuando puede. Este mecanismo se describe con mayor detalle en el documento [Cancellation in the PPL](cancellation-in-the-ppl.md). Puede conectar la cancelación de tareas con los`Cancel` métodos de Windows Runtime de dos maneras. Primero, puede definir la función de trabajo que pasa a `create_async` para que tome un objeto [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Cuando se llama al método `Cancel` , este token de cancelación se cancela y las reglas habituales de cancelación se aplican al objeto subyacente `task` que admite la llamada `create_async` . Si no se proporciona un objeto `cancellation_token` , el objeto subyacente `task` define uno implícitamente. Después, defina un objeto `cancellation_token` cuando necesite responder de forma cooperativa a la cancelación en su función de trabajo. En el [ejemplo de la sección: Controlar la ejecución en una aplicación Windows Runtime C++ con y](#example-app) XAML muestra un ejemplo de cómo realizar la cancelación en una aplicación plataforma universal de Windows (UWP) C# con y XAML que usa un componente C++ de Windows Runtime personalizado.
+Cada una de las interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`y `IAsyncActionOperationWithProgress<TProgress, TProgress>` proporcionan un método `Cancel` que permite cancelar la operación asincrónica. La clase `task` funciona con tokens de cancelación. Cuando usa un token de cancelación para cancelar el trabajo, el runtime no inicia el nuevo trabajo suscrito a dicho token. El trabajo que ya está activo puede supervisar su token de cancelación y detenerse cuando puede. Este mecanismo se describe con mayor detalle en el documento [Cancellation in the PPL](cancellation-in-the-ppl.md). Puede conectar la cancelación de tareas con los`Cancel` métodos de Windows Runtime de dos maneras. Primero, puede definir la función de trabajo que pasa a `create_async` para que tome un objeto [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Cuando se llama al `task` `create_async` método, este token de cancelación se cancela y las reglas de cancelación normales se aplican al objeto subyacente que admite la llamada. `Cancel` Si no se proporciona un objeto `cancellation_token` , el objeto subyacente `task` define uno implícitamente. Después, defina un objeto `cancellation_token` cuando necesite responder de forma cooperativa a la cancelación en su función de trabajo. En el [ejemplo de la sección: Controlar la ejecución en una aplicación Windows Runtime C++ con y](#example-app) XAML muestra un ejemplo de cómo realizar la cancelación en una aplicación plataforma universal de Windows (UWP) C# con y XAML que usa un componente C++ de Windows Runtime personalizado.
 
 > [!WARNING]
->  En una cadena de continuaciones de tareas, limpie siempre el estado y llame a [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) cuando se cancele el token de cancelación. Si vuelve antes en lugar de llamar a `cancel_current_task`, la operación evoluciona al estado completado en lugar del estado cancelado.
+>  En una cadena de continuaciones de tareas, Limpie siempre el estado y llame a [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) cuando se cancele el token de cancelación. Si vuelve antes en lugar de llamar a `cancel_current_task`, la operación evoluciona al estado completado en lugar del estado cancelado.
 
 En la tabla siguiente se resumen las combinaciones que puede utilizar para definir operaciones asincrónicas en la aplicación.
 
@@ -161,7 +161,7 @@ Actualice el elemento `Grid` en MainPage.xaml para incluir un elemento `Progress
 
 [!code-xml[concrt-windowsstore-commonwords#1](../../parallel/concrt/codesnippet/xaml/creating-asynchronous-operations-in-cpp-for-windows-store-apps_6.xaml)]
 
-Agregue las instrucciones `#include` siguientes a pch.h.
+Agregue las instrucciones `#include` siguientes a *PCH. h*.
 
 [!code-cpp[concrt-windowsstore-commonwords#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_7.h)]
 
