@@ -10,12 +10,12 @@ helpviewer_keywords:
 - methods [C++], adding using wizards
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-ms.openlocfilehash: 23fb05e633713016b1f6289f73a916502736af10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b0c8ddabc4ed08fd217545bad269f0b2e48dd49e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692721"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509542"
 ---
 # <a name="add-a-method"></a>Agregar un método
 
@@ -53,7 +53,7 @@ Use este asistente para agregar un método a una interfaz. Según el tipo de pro
 
   El tipo de datos devuelto por el método. Se recomienda `HRESULT` para todos los tipos de interfaz, ya que proporciona una manera estándar de devolver errores.
 
-  |Tipo de interfaz|Descripción|
+  |Tipo de interfaz|DESCRIPCIÓN|
   |--------------------|-----------------|
   |Interfaz dual|`HRESULT`. No se puede cambiar.|
   |Interfaz personalizada|`HRESULT`. No se puede cambiar.|
@@ -65,11 +65,11 @@ Use este asistente para agregar un método a una interfaz. Según el tipo de pro
 
   Establece el nombre del método.
 
-  |Tipo de interfaz|Descripción|
+  |Tipo de interfaz|DESCRIPCIÓN|
   |--------------------|-----------------|
   |Interfaz dual de ATL, interfaz personalizada e interfaz personalizada local|Proporcione un nombre de método propio.|
   |Interfaz dispinterface de MFC|Proporcione un nombre de método propio o seleccione un nombre de método sugerido de la lista. Si selecciona un nombre de la lista, aparece el valor correcto en el cuadro **Tipo de valor devuelto** y no se puede cambiar.|
-  |Interfaz dispinterface de control ActiveX MFC|Proporcione un método de reserva propio o seleccione [DoClick](../mfc/reference/colecontrol-class.md#doclick) o [Refresh](../mfc/reference/colecontrol-class.md#refresh). Para obtener más información, vea [Controles ActiveX MFC: Agregar métodos estándar](../mfc/mfc-activex-controls-adding-stock-methods.md).|
+  |Interfaz dispinterface de control ActiveX MFC|Proporcione un método de reserva propio o seleccione [DoClick](../mfc/reference/colecontrol-class.md#doclick) o [Refresh](../mfc/reference/colecontrol-class.md#refresh). Para obtener más información, vea [Controles ActiveX MFC: Adición de métodos estándar](../mfc/mfc-activex-controls-adding-stock-methods.md).|
 
 - **Tipo de método**
 
@@ -77,7 +77,7 @@ Use este asistente para agregar un método a una interfaz. Según el tipo de pro
 
   Si selecciona uno de los métodos de la lista **Nombre del método**, seleccione la implementación estándar o una implementación personalizada.
 
-  |Tipo de método|Descripción|
+  |Tipo de método|DESCRIPCIÓN|
   |-----------------|-----------------|
   |**Estándar**|El valor predeterminado. Inserta la implementación estándar del método que seleccione en la lista **Nombre del método**. **Tipo de valor devuelto** no se podrá cambiar si selecciona **Estándar**.|
   |**Custom**|Inserta una implementación de código auxiliar del método que seleccione en la lista **Nombre del método**. Para los tipos de métodos personalizados, puede proporcionar un tipo de valor devuelto propio, o bien puede seleccionar uno en la lista **Tipo de valor devuelto**.|
@@ -86,7 +86,7 @@ Use este asistente para agregar un método a una interfaz. Según el tipo de pro
 
   Disponible únicamente para los métodos personalizados agregados a una interfaz dispinterface de MFC. Establece el nombre que se usa en el mapa de envíos, el archivo de encabezado (.h) y el archivo de implementación (.cpp). De forma predeterminada, este nombre es el mismo que **Nombre del método**. Puede cambiar el nombre del método si está trabajando con una interfaz dispinterface de MFC o si va a agregar un método personalizado a una interfaz dispinterface de control ActiveX MFC.
 
-  |Tipo de interfaz|Descripción|
+  |Tipo de interfaz|DESCRIPCIÓN|
   |--------------------|-----------------|
   |Interfaz dual de ATL, interfaz personalizada e interfaz personalizada local|No está disponible.|
   |Interfaz dispinterface de MFC|De forma predeterminada, se establece en el nombre del método. El nombre interno se puede modificar.|
@@ -96,7 +96,7 @@ Use este asistente para agregar un método a una interfaz. Según el tipo de pro
 
   Establece atributos adicionales para el parámetro especificado en **Nombre del parámetro**.
 
-  |Atributo de parámetro|Descripción|Combinaciones permitidas|
+  |Atributo de parámetro|DESCRIPCIÓN|Combinaciones permitidas|
   |-------------------------|-----------------|--------------------------|
   |**In**|Indica que el parámetro se pasa del procedimiento que realiza la llamada al procedimiento que se llama.|Solo `in`<br /><br /> `in` y `out`|
   |**Out**|Indica que el parámetro de puntero se devuelve desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|Solo `out`<br /><br /> `in` y `out`<br /><br /> `out` y `retval`|
@@ -133,25 +133,25 @@ Use esta página del Asistente para agregar métodos para especificar la configu
 
 - `id`
 
-  Establece el id. numérico que identifica el método. Para obtener más información, vea [id](/windows/desktop/Midl/id) en la *Referencia de MIDL*.
+  Establece el id. numérico que identifica el método. Para obtener más información, vea [id](/windows/win32/Midl/id) en la *Referencia de MIDL*.
 
   Este cuadro no está disponible para las interfaces personalizadas ni para las interfaces dispinterface de MFC.
 
 - `call_as`
 
-  Especifica el nombre de un método remoto al que se puede asignar este método local. Para obtener más información, vea [call_as](/windows/desktop/Midl/call-as) en la *Referencia de MIDL*.
+  Especifica el nombre de un método remoto al que se puede asignar este método local. Para obtener más información, vea [call_as](/windows/win32/Midl/call-as) en la *Referencia de MIDL*.
 
   No está disponible para interfaces dispinterface de MFC.
 
 - `helpcontext`
 
-  Especifica un id. contextual que permite al usuario ver información sobre este método en el archivo de ayuda. Para obtener más información, vea [helpcontext](/windows/desktop/Midl/helpcontext) en la *Referencia de MIDL*.
+  Especifica un id. contextual que permite al usuario ver información sobre este método en el archivo de ayuda. Para obtener más información, vea [helpcontext](/windows/win32/Midl/helpcontext) en la *Referencia de MIDL*.
 
   No está disponible para interfaces dispinterface de MFC.
 
 - `helpstring`
 
-  Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica. De forma predeterminada, se establece en "method *Method name*". Para obtener más información, vea [helpstring](/windows/desktop/Midl/helpstring) en la *Referencia de MIDL*.
+  Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica. De forma predeterminada, se establece en "method *Method name*". Para obtener más información, vea [helpstring](/windows/win32/Midl/helpstring) en la *Referencia de MIDL*.
 
   No está disponible para interfaces dispinterface de MFC.
 
@@ -159,10 +159,10 @@ Use esta página del Asistente para agregar métodos para especificar la configu
 
   No está disponible para interfaces dispinterface de MFC.
 
-  |Atributo|Descripción|
+  |Atributo|DESCRIPCIÓN|
   |---------------|-----------------|
-  |`hidden`|Indica que el método existe, pero que no se debe mostrar en un explorador orientado al usuario. Para obtener más información, vea [hidden](/windows/desktop/Midl/hidden) en la *Referencia de MIDL*.|
-  |`source`|Indica que un miembro del método es un origen de eventos. Para obtener más información, vea [source](/windows/desktop/Midl/source) en la *Referencia de MIDL*.|
-  |`local`|Especifica al compilador de MIDL que el método no es remoto. Para obtener más información, vea [local](/windows/desktop/Midl/local) en la *Referencia de MIDL*.|
-  |`restricted`|Especifica que no se puede llamar al método de manera arbitraria. Para obtener más información, vea [restricted](/windows/desktop/Midl/restricted) en la *Referencia de MIDL*.|
-  |`vararg`|Especifica que el método toma un número variable de argumentos. Para conseguirlo, el último argumento debe ser una matriz segura de tipo `VARIANT` que contenga el resto de los argumentos. Para obtener más información, vea [vararg](/windows/desktop/Midl/vararg) en la *Referencia de MIDL*.|
+  |`hidden`|Indica que el método existe, pero que no se debe mostrar en un explorador orientado al usuario. Para obtener más información, vea [hidden](/windows/win32/Midl/hidden) en la *Referencia de MIDL*.|
+  |`source`|Indica que un miembro del método es un origen de eventos. Para obtener más información, vea [source](/windows/win32/Midl/source) en la *Referencia de MIDL*.|
+  |`local`|Especifica al compilador de MIDL que el método no es remoto. Para obtener más información, vea [local](/windows/win32/Midl/local) en la *Referencia de MIDL*.|
+  |`restricted`|Especifica que no se puede llamar al método de manera arbitraria. Para obtener más información, vea [restricted](/windows/win32/Midl/restricted) en la *Referencia de MIDL*.|
+  |`vararg`|Especifica que el método toma un número variable de argumentos. Para conseguirlo, el último argumento debe ser una matriz segura de tipo `VARIANT` que contenga el resto de los argumentos. Para obtener más información, vea [vararg](/windows/win32/Midl/vararg) en la *Referencia de MIDL*.|
