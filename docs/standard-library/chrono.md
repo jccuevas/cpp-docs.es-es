@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975904"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -76,7 +76,14 @@ A partir de Visual Studio 2015, la implementación `steady_clock` de ha cambiado
 
 Para obtener más información sobre los tipos de relación que se usan en los siguientes typedefs, vea [\<ratio>](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Sinónimo de un `duration` tipo que tiene un período de paso de 1 nanosegundo.`typedef duration<long long, micro> microseconds;`| | | Sinónimo de un `duration` tipo que tiene un período de paso de 1 microsegundo.`typedef duration<long long, milli> milliseconds;`| | | Sinónimo de un `duration` tipo que tiene un período de paso de 1 milisegundo.`typedef duration<long long> seconds;`| | | Sinónimo de un `duration` tipo que tiene un período de paso de 1 segundo.`typedef duration<int, ratio<60> > minutes;`| | | Sinónimo de un `duration` tipo que tiene un período de paso de 1 minuto.`typedef duration<int, ratio<3600> > hours;`| | | Sinónimo de un `duration` tipo que tiene un período de paso de 1 hora. |
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|Sinónimo de un `duration` tipo que tiene un período de paso de 1 nanosegundo.|
+|`typedef duration<long long, micro> microseconds;`|Sinónimo de un `duration` tipo que tiene un período de paso de 1 microsegundo.|
+|`typedef duration<long long, milli> milliseconds;`|Sinónimo de un `duration` tipo que tiene un período de paso de 1 milisegundo.|
+|`typedef duration<long long> seconds;`|Sinónimo de un `duration` tipo que tiene un período de paso de 1 segundo.|
+|`typedef duration<int, ratio<60> > minutes;`|Sinónimo de un `duration` tipo que tiene un período de paso de 1 minuto.|
+|`typedef duration<int, ratio<3600> > hours;`|Sinónimo de un `duration` tipo que tiene un período de paso de 1 hora.|
 
 ### <a name="literals"></a>Literales
 
