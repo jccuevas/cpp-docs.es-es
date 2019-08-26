@@ -22,7 +22,7 @@ Para limitar la complejidad de los cálculos constantes en tiempo de compilació
 ## <a name="syntax"></a>Sintaxis
 
 > **constexpr** *literal de tipo* *identificador* **=** *expresión-constante* **;** 
->  **constexpr** *literal de tipo* *identificador* **{** *expresión constante * **}** **;** 
+>  **constexpr** *literal de tipo* *identificador* **{** *expresión constante* **}** **;** 
 >  **constexpr** *literal de tipo* *identificador* **(** *params* **)** **;** 
 >  **constexpr** *ctor* **(** *params* **)** **;**
 
