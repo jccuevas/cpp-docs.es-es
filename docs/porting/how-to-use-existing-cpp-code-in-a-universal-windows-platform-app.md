@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
+title: 'Procedimientos para: Usar código C++ existente en una aplicación de la Plataforma universal de Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510375"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630435"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedimientos para: Usar código C++ existente en una aplicación de la Plataforma universal de Windows
 
 Quizás la forma más sencilla de conseguir que un programa de escritorio se ejecute en el entorno de Plataforma universal de Windows (UWP) es usar las tecnologías de Puente de dispositivo de escritorio. Entre estas se incluye Desktop App Converter, que empaquetará la aplicación existente como una aplicación para UWP sin necesidad de realizar cambios en el código. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
 
@@ -151,7 +151,7 @@ El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que 
 
    Ahora, el **Explorador de soluciones** identifica el proyecto como un proyecto de Windows universal.
 
-5. Asegúrese de que el nombre de archivo del encabezado precompilado es correcto. En la sección **Encabezados precompilados**, cambie **Archivo de encabezado precompilado** de pch.h a stdafx.h. Si no lo hace, verá el siguiente error.
+5. Asegúrese de que el nombre de archivo del encabezado precompilado es correcto. En la sección **Encabezados precompilados**, cambie **Archivo de encabezado precompilado** de *pch.h* a *stdafx.h*. Si no lo hace, verá el siguiente error.
 
    > Error C2857: no se encontró la instrucción '#include' especificada con la opción de línea de comandos /Ycpch.h en el archivo de origen
 
@@ -165,7 +165,7 @@ El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que 
 
    En **Proyectos** > **Solución**, active la casilla que se encuentra junto al proyecto DLL y seleccione el botón **Aceptar**.
 
-8. Incluya los archivos de encabezado de la biblioteca en el archivo pch.h de la aplicación de UWP.
+8. Incluya los archivos de encabezado de la biblioteca en el archivo *pch.h* de la aplicación de UWP.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ Sin embargo, puede utilizar una biblioteca estática en una Plataforma universal
 
 1. En las propiedades del proyecto UWP, elija **Propiedades de configuración** > **Vinculador** > **Entrada** en el panel izquierdo. En el panel derecho, agregue la ruta de acceso a la biblioteca en la propiedad **Dependencias adicionales**. Por ejemplo, en el caso de una biblioteca del proyecto que coloque su salida en *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, agregue la ruta de acceso relativa `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Agregue una instrucción include para que el archivo de encabezado haga referencia al archivo pch.h (si está presente), o en cualquier archivo .cpp que sea necesario, y comience a agregar el código que utiliza la biblioteca.
+2. Agregue una instrucción include para que el archivo de encabezado haga referencia al archivo *pch.h* (si está presente), o en cualquier archivo .cpp que sea necesario, y comience a agregar el código que utiliza la biblioteca.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Si desea utilizar las API nativas en una biblioteca estática desde una aplicaci
 
 5. Seleccione todos los archivos que va a agregar desde el proyecto original y haga clic en **Aceptar**. Repita este paso con las subcarpetas si es necesario.
 
-6. Es posible que ahora haya algún código duplicado. Si tiene más de un encabezado precompilado (por ejemplo, stdafx.h y pch.h), elija el que desea mantener. Copie cualquier código necesario, como incluir instrucciones, en el encabezado que mantenga. Después, elimine el otro y, en las propiedades del proyecto, en **Encabezados precompilados**, asegúrese de que el nombre del archivo de encabezado es correcto.
+6. Es posible que ahora haya algún código duplicado. Si tiene más de un encabezado precompilado (por ejemplo, *stdafx.h* y *pch.h*), elija el que desea mantener. Copie cualquier código necesario, como incluir instrucciones, en el encabezado que mantenga. Después, elimine el otro y, en las propiedades del proyecto, en **Encabezados precompilados**, asegúrese de que el nombre del archivo de encabezado es correcto.
 
    Si cambia el archivo para utilizarlo como encabezado precompilado, asegúrese de que las opciones de encabezado precompilado son las adecuadas para cada archivo. Seleccione cada archivo .cpp por orden, abra la ventana de propiedades y asegúrese de que todos están configurados en **Usar (/Yu)** , excepto el encabezado precompilado deseado, que debe configurarse en **Crear (/Yc)** .
 
