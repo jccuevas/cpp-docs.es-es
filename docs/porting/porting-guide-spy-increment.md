@@ -2,12 +2,12 @@
 title: 'Guía de migración: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511662"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630446"
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 
@@ -67,7 +67,7 @@ Microsoft ya no ofrece soporte técnico para Windows XP, así que, aunque en Vis
 
 Para deshacerse del error, defina WINVER. Para ello, establezca el valor de **Propiedades del proyecto** en la versión más antigua de Windows que quiera seleccionar como destino actualmente. Vea [aquí](/windows/win32/WinProg/using-the-windows-headers) una tabla de valores para varias versiones de Windows.
 
-El archivo stdafx.h contenía algunas de estas definiciones de macros.
+El archivo *stdafx.h* contenía algunas de estas definiciones de macros.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -502,7 +502,7 @@ El problema se produce porque primero se declaró una variable **extern** y desp
 
 ##  <a name="porting_to_unicode"></a> Paso 11. Migrar de MBCS a Unicode
 
-Tenga en cuenta que, en el mundo de Windows, cuando decimos Unicode, normalmente nos referimos a UTF-16. Otros sistemas operativos, como Linux, usan UTF-8, pero Windows por lo general no lo hace. La versión MBCS de MFC ha quedado en desuso en Visual Studio 2013 y 2015, pero ya no está en desuso en Visual Studio 2017. Si usa Visual Studio 2013 o 2015, antes de dar el paso y realmente migrar código de MBCS a Unicode UTF-16, puede que nos convenga eliminar temporalmente las advertencias que indican que MBCS está en desuso, con el fin de llevar a cabo otro trabajo o posponer la migración hasta un momento más oportuno. El código actual usa MBCS y, para seguir así, es necesario instalar la versión ANSI/MBCS de MFC. La biblioteca MFC de gran tamaño no forma parte de la instalación de **Desarrollo para el escritorio con C++** de Visual Studio, por lo que se debe seleccionar en los componentes opcionales del programa de instalación. Vea [Complemento DLL de MBCS para MFC](../mfc/mfc-mbcs-dll-add-on.md). Una vez que lo haya descargado y reinicie Visual Studio, puede compilar y vincular con la versión MBCS de MFC, pero, para deshacerse de las advertencias sobre MBCS si usa Visual Studio 2013 o 2015, también debe agregar NO_WARN_MBCS_MFC_DEPRECATION a su lista de macros predefinidas en la sección **Preprocesador** de las propiedades del proyecto o al principio del archivo de encabezado stdafx.h u otro archivo de encabezado común.
+Tenga en cuenta que, en el mundo de Windows, cuando decimos Unicode, normalmente nos referimos a UTF-16. Otros sistemas operativos, como Linux, usan UTF-8, pero Windows por lo general no lo hace. La versión MBCS de MFC ha quedado en desuso en Visual Studio 2013 y 2015, pero ya no está en desuso en Visual Studio 2017. Si usa Visual Studio 2013 o 2015, antes de dar el paso y realmente migrar código de MBCS a Unicode UTF-16, puede que nos convenga eliminar temporalmente las advertencias que indican que MBCS está en desuso, con el fin de llevar a cabo otro trabajo o posponer la migración hasta un momento más oportuno. El código actual usa MBCS y, para seguir así, es necesario instalar la versión ANSI/MBCS de MFC. La biblioteca MFC de gran tamaño no forma parte de la instalación de **Desarrollo para el escritorio con C++** de Visual Studio, por lo que se debe seleccionar en los componentes opcionales del programa de instalación. Vea [Complemento DLL de MBCS para MFC](../mfc/mfc-mbcs-dll-add-on.md). Una vez que lo haya descargado y reinicie Visual Studio, puede compilar y vincular con la versión MBCS de MFC, pero, para deshacerse de las advertencias sobre MBCS si usa Visual Studio 2013 o 2015, también debe agregar NO_WARN_MBCS_MFC_DEPRECATION a su lista de macros predefinidas en la sección **Preprocesador** de las propiedades del proyecto o al principio del archivo de encabezado *stdafx.h* u otro archivo de encabezado común.
 
 Ahora obtenemos algunos errores del vinculador.
 

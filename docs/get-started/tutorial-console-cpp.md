@@ -2,16 +2,16 @@
 title: Creación de un proyecto de aplicación de consola de C++
 description: Creación de una aplicación de consola Hola mundo y una aplicación de calculadora en Visual C++
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410757"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631305"
 ---
 # <a name="create-a-c-console-app-project"></a>Creación de un proyecto de aplicación de consola de C++
 
@@ -81,7 +81,7 @@ La plantilla para una nueva aplicación de consola de Windows crea una sencilla 
 
    ![Inicio del proyecto](./media/calc-vs2019-hello-world-console.png "Start the project")
 
-   Se abre una ventana de consola y después se ejecuta la aplicación. Al iniciar una aplicación de consola en Visual Studio, se ejecuta el código y se muestra el mensaje "Presione cualquier tecla para cerrar esta ventana. . . " para ofrecerle la oportunidad de ver la salida. ¡Enhorabuena! Ha creado la primera aplicación de consola "Hola mundo" en Visual Studio.
+   Se abre una ventana de consola y después se ejecuta la aplicación. Al iniciar una aplicación de consola en Visual Studio, se ejecuta el código y se muestra el mensaje "Presione cualquier tecla para cerrar esta ventana. . . " para ofrecerle la oportunidad de ver la salida. Felicidades. Ha creado la primera aplicación de consola "Hola mundo" en Visual Studio.
 
 1. Presione una tecla para cerrar la ventana de la consola y volver a Visual Studio.
 
@@ -377,7 +377,7 @@ Vamos a controlar la división por cero de forma más elegante, para que un usua
 
 ## <a name="the-finished-app"></a>La aplicación finalizada
 
-¡Enhorabuena! Ha completado el código de la aplicación de calculadora y lo ha compilado y depurado en Visual Studio.
+Felicidades. Ha completado el código de la aplicación de calculadora y lo ha compilado y depurado en Visual Studio.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -443,7 +443,7 @@ La plantilla para una nueva aplicación de consola de Windows crea una sencilla 
 
    ![Inicio del proyecto](./media/calculator-hello-world-console.png "Start the project")
 
-   Se abre una ventana de consola y después se ejecuta la aplicación. Al iniciar una aplicación de consola en Visual Studio, ejecuta el código y después imprime "Presione cualquier tecla para continuar . " para ofrecerle la oportunidad de ver la salida. ¡Enhorabuena! Ha creado la primera aplicación de consola "Hola mundo" en Visual Studio.
+   Se abre una ventana de consola y después se ejecuta la aplicación. Al iniciar una aplicación de consola en Visual Studio, ejecuta el código y después imprime "Presione cualquier tecla para continuar . " para ofrecerle la oportunidad de ver la salida. Felicidades. Ha creado la primera aplicación de consola "Hola mundo" en Visual Studio.
 
 1. Presione una tecla para cerrar la ventana de la consola y volver a Visual Studio.
 
@@ -486,7 +486,7 @@ Ahora, el código de esta plantilla se va a convertir en una aplicación de calc
    > Descripción del código:
    >
    > - Las instrucciones `#include` permiten hacer referencia a código que se encuentra en otros archivos. En ocasiones, es posible que vea un nombre de archivo incluido entre corchetes angulares ( **\<\>** ); en otras, está rodeado por comillas ( **" "** ). En general, los corchetes angulares se usan al hacer referencia a la biblioteca C++ Standard, mientras que las comillas se usan para otros archivos.
-   > - La línea `#include "pch.h"` (o en versiones anteriores de Visual Studio, `#include "stdafx.h"`) hace referencia a algo que se conoce como un encabezado precompilado. Los programadores profesionales los suelen usar para mejorar los tiempos de compilación, pero están fuera del ámbito de este tutorial.
+   > - La línea `#include "pch.h"` (o en Visual Studio 2017 y versiones anteriores, `#include "stdafx.h"`) hace referencia a algo que se conoce como un encabezado precompilado. Los programadores profesionales los suelen usar para mejorar los tiempos de compilación, pero están fuera del ámbito de este tutorial.
    > - La línea `using namespace std;` indica al compilador que espere que en este archivo se usen elementos de la biblioteca C++ Standard. Sin esta línea, cada palabra clave de la biblioteca tendría que ir precedida de `std::`, para denotar su ámbito. Por ejemplo, sin esa línea, cada referencia a `cout` se tendría que escribir como `std::cout`. La instrucción `using` se agrega para que el código parezca más limpio.
    > - La palabra clave `cout` se usa para imprimir en la salida estándar de C++. El operador **\<\<** indica al compilador que envíe a la salida estándar todo lo que esté a su derecha.
    > - La palabra clave **endl** es similar a la tecla Entrar; finaliza la línea y mueve el cursor a la siguiente. Un procedimiento recomendado consiste en colocar un elemento `\n` dentro de una cadena (entre "") para hacer lo mismo, ya que `endl` siempre vacía el búfer y puede afectar al rendimiento del programa, pero como esta aplicación es muy pequeña, en su lugar se usa `endl` para mejorar la legibilidad.
@@ -748,7 +748,7 @@ Vamos a controlar la división por cero de forma más elegante, para que un usua
 
 ## <a name="the-finished-app"></a>La aplicación finalizada
 
-¡Enhorabuena! Ha completado el código de la aplicación de calculadora y lo ha compilado y depurado en Visual Studio.
+Felicidades. Ha completado el código de la aplicación de calculadora y lo ha compilado y depurado en Visual Studio.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
