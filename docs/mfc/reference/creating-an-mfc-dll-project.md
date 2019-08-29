@@ -1,6 +1,6 @@
 ---
 title: Crear un proyecto DLL de MFC
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.mfcdll.project
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: cd1d7910d95fa7e412f9843da2cec7ae10a38ef6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 649a47abea23aedb9aa97bb4923e7a800348e27e
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708224"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108476"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Crear un proyecto DLL de MFC
 
@@ -25,22 +25,20 @@ Un archivo DLL de MFC es un archivo binario que actúa como una biblioteca compa
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Para crear un proyecto DLL de MFC mediante el Asistente para archivos DLL de MFC
 
-1. Siga las instrucciones del tema de Ayuda [cree un proyecto de aplicación de consola C++](../../get-started/tutorial-console-cpp.md).
+1. Siga las instrucciones del tema de ayuda [crear una aplicación MFC](creating-an-mfc-application.md) , pero elija **biblioteca de vínculos dinámicos MFC** o **dll de MFC** en la lista de plantillas disponibles.
 
-**Tenga en cuenta** en el **nuevo proyecto** cuadro de diálogo, seleccione el `MFC DLL` icono en el panel Plantillas para abrir el Asistente para archivos DLL de MFC.
-
-1. Defina la configuración de aplicación mediante el [configuración de la aplicación](../../mfc/reference/application-settings-mfc-dll-wizard.md) página de la [Asistente para archivos DLL de MFC](../../mfc/reference/mfc-dll-wizard.md).
+1. Defina la configuración de la aplicación mediante la página Configuración de la [aplicación](../../mfc/reference/application-settings-mfc-dll-wizard.md) del [Asistente para archivos dll de MFC](../../mfc/reference/mfc-dll-wizard.md).
 
     > [!NOTE]
     >  Omita este paso para mantener la configuración predeterminada del asistente.
 
-1. Haga clic en **finalizar** para cerrar el asistente y abrir el proyecto nuevo en **el Explorador de soluciones**.
+1. Haga clic en **Finalizar** para cerrar el asistente y abrir el nuevo proyecto en **Explorador de soluciones**.
 
-Una vez creado el proyecto, puede ver los archivos creados en **el Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para obtener más información acerca de los tipos de archivo, consulte [tipos de archivo creados para Visual Studio C++ proyectos](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Cuando se haya creado el proyecto, podrá ver los archivos creados en el **Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para más información sobre los tipos de archivo, vea [Tipos de archivo creados para proyectos de C++ de Visual Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vea también
 
-[C++tipos de proyecto en Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
+[Tipos de proyectos de C++ en Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propiedades](../../build/reference/property-pages-visual-cpp.md)
 
