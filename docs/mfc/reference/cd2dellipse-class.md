@@ -1,6 +1,6 @@
 ---
 title: Clase CD2DEllipse
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 3abf0736884840be7bdcfcd55cb18a0bc8e69195
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391275"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177213"
 ---
 # <a name="cd2dellipse-class"></a>Clase CD2DEllipse
 
@@ -29,9 +29,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Sobrecargado. Construye un `CD2DEllipse` objeto `D2D1_ELLIPSE` objeto.|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Sobrecargado. Construye un objeto `CD2DEllipse` a partir `D2D1_ELLIPSE` de un objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -41,16 +41,16 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxrendertarget.h
+**Encabezado:** afxrendertarget. h
 
 ##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
 
-Construye un objeto CD2DEllipse del objeto CD2DRectF.
+Construye un objeto CD2DEllipse a partir del objeto CD2DRectF.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
-  CD2DEllipse(const D2D1_ELLIPSE* ellipse);
+CD2DEllipse(const D2D1_ELLIPSE* ellipse);
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,
@@ -66,10 +66,10 @@ rectángulo de origen
 elipse de origen
 
 *ptCenter*<br/>
-El punto central de la elipse.
+Punto central de la elipse.
 
 *sizeRadius*<br/>
-El radio X y el radio Y de la elipse.
+Radio X e y de la elipse.
 
 ## <a name="see-also"></a>Vea también
 

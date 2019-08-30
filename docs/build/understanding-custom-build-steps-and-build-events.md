@@ -1,6 +1,6 @@
 ---
 title: Descripción de los pasos de compilación personalizada y los eventos de compilación
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - builds [C++], events
 - custom build steps [C++], customizing builds
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400453"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177313"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Descripción de los pasos de compilación personalizada y los eventos de compilación
 
@@ -24,7 +24,7 @@ Desde dentro del entorno de desarrollo de Visual C++, hay tres maneras básicas 
 
 - **Pasos de compilación personalizada**
 
-   Un paso de compilación personalizada es una regla de compilación asociada a un proyecto. Un paso de compilación personalizada puede especificar una línea de comandos para su ejecución, cualquier archivo de entrada o salida adicional, y un mensaje para mostrar. Para obtener más información, vea [Cómo: Agregar un paso personalizado de compilación a proyectos de MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
+   Un paso de compilación personalizada es una regla de compilación asociada a un proyecto. Un paso de compilación personalizada puede especificar una línea de comandos para su ejecución, cualquier archivo de entrada o salida adicional, y un mensaje para mostrar. Para obtener más información, consulte [Cómo Agregar un paso personalizado de compilación a proyectos de MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
 - **Herramientas de compilación personalizadas**
 
@@ -38,7 +38,7 @@ Desde dentro del entorno de desarrollo de Visual C++, hay tres maneras básicas 
 
 El formato de salida de un paso de compilación personalizada o de un evento de compilación también puede mejorar la facilidad de uso de la herramienta. Para obtener más información, consulte [Dar formato a la presentación de un paso de compilación personalizada o un evento de compilación](formatting-the-output-of-a-custom-build-step-or-build-event.md).
 
-Los eventos de compilación y los pasos de compilación personalizada se ejecutan en el orden siguiente junto con otros pasos de compilación:
+Para cada proyecto de una solución, los eventos de compilación y los pasos de compilación personalizada se ejecutan en el siguiente orden, junto con otros pasos de compilación:
 
 1. Evento anterior a la compilación
 
