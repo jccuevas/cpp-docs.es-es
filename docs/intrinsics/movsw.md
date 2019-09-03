@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263209"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221725"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
 **Específicos de Microsoft**
 
-Genera una cadena de mover (`rep movsw`) instrucción.
+Genera una instrucción Move String`rep movsw`().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*dest*<br/>
-[out] El destino de la operación.
+*Destino*\
+enuncia Destino de la operación.
 
-*Origen*<br/>
-[in] El origen de la operación.
+*Source*\
+de Origen de la operación.
 
-*Recuento*<br/>
-[in] El número de palabras para copiar.
+*Contabiliza*\
+de Número de palabras que se van a copiar.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __movsw(
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El resultado es que la primera `Count` palabras apunta `Source` se copian en el `Dest` cadena.
+El resultado es que las primeras palabras de recuento apuntadas por *origen* se copian en la cadena de *destino* .
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -86,4 +86,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

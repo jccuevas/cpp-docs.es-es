@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390352"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219950"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Específicos de Microsoft**
 
-Genera una instrucción de cadena de la tienda (`rep stosq`).
+Genera una instrucción de cadena de`rep stosq`almacén ().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*dest*<br/>
-[out] El destino de la operación.
+*Destino*\
+enuncia Destino de la operación.
 
-*Data*<br/>
-[in] Para almacenar los datos.
+*Data*\
+de Datos que se van a almacenar.
 
-*Recuento*<br/>
-[in] La longitud del bloque de palabras cuádruples a escribir.
+*Contabiliza*\
+de Longitud del bloque de palabras cuádruples que se va a escribir.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El resultado es que el quadword `Data` se escribe en un bloque de `Count` palabras cuádruples en el `Dest` cadena.
+El resultado es que los *datos* de quadword se escriben en un bloque de recuento palabras cuádruples en la cadena de *destino* .
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Salida
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 
@@ -86,4 +84,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

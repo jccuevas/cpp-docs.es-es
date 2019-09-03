@@ -1,6 +1,6 @@
 ---
 title: __movsd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263185"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221756"
 ---
-# <a name="movsd"></a>__movsd
+# <a name="__movsd"></a>__movsd
 
 **Específicos de Microsoft**
 
-Genera una cadena de mover (`rep movsd`) instrucción.
+Genera una instrucción Move String`rep movsd`().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __movsd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*dest*<br/>
-[out] El destino de la operación.
+*Destino*\
+enuncia Destino de la operación.
 
-*Origen*<br/>
-[in] El origen de la operación.
+*Source*\
+de Origen de la operación.
 
-*Recuento*<br/>
-[in] El número de palabras dobles para copiar.
+*Contabiliza*\
+de Número de palabras dobles que se van a copiar.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __movsd(
 |---------------|------------------|
 |`__movsd`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El resultado es que la primera `Count` palabras dobles apunta `Source` se copian en el `Dest` cadena.
+El resultado es que el primer palabras dobles de recuento al que apunta *source* se copia en la cadena de *destino* .
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // movsd.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

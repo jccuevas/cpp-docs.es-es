@@ -1,6 +1,6 @@
 ---
 title: __assume
-ms.date: 10/09/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __assume
 - _assume
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264327"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216959"
 ---
-# <a name="assume"></a>__assume
+# <a name="__assume"></a>__assume
 
 **Específicos de Microsoft**
 
@@ -23,15 +23,15 @@ Pasa una sugerencia al optimizador.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 __assume(
    expression
 )
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*expression*<br/>
+*Expresiones*\
 Cualquier expresión que se supone que se evalúa como verdadera.
 
 ## <a name="remarks"></a>Comentarios
@@ -45,21 +45,21 @@ Si la instrucción `__assume` se escribe como una contradicción (es decir, una 
 
 `__assume` no es un auténtico intrínseco. No tiene que declararse como una función y no se puede utilizar en una directiva `#pragma intrinsic`. Aunque no se genera ningún código, el código generado por el optimizador se ve afectado.
 
-Use `__assume` en un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo cuando la aserción no es recuperable. No utilice `__assume` en una aserción que tenga código de recuperación de errores posterior, ya que el compilador podría optimizar el código de control de errores.
+Use `__assume` en una [aserción](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo cuando no se pueda recuperar la aserción. No utilice `__assume` en una aserción que tenga código de recuperación de errores posterior, ya que el compilador podría optimizar el código de control de errores.
 
 La instrucción `__assume(0)` es un caso especial. Utilice `__assume(0)` para indicar una ruta de acceso de código que no está disponible. En el ejemplo siguiente se muestra cómo utilizar `__assume(0)` para indicar que no se puede alcanzar el caso predeterminado de una instrucción switch. Muestra el uso más típico de `__assume(0)`.
 
-Para ofrecer compatibilidad con versiones anteriores, **_assume** es un sinónimo de **__assume** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) es especificado.
+Por compatibilidad con versiones anteriores, **_assume** es un sinónimo de _ _ assume a menos que se especifique la opción del compilador [/za \(Disable Language Extensions](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="requirements"></a>Requisitos
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`__assume`|x86, ARM, x64|
+|`__assume`|x86, ARM, x64, ARM64|
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // compiler_intrinsics__assume.cpp
 #ifdef DEBUG
 # define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__) )
@@ -97,13 +97,13 @@ Como resultado de la instrucción `__assume(0)`, el compilador no genera código
 
 Dado que el compilador genera código basado en `__assume`, dicho código podría no funcionar correctamente si la expresión de la instrucción `__assume` es falsa en tiempo de ejecución. Si no está seguro de que la expresión siempre será verdadera en tiempo de ejecución, puede utilizar la función `assert` para proteger el código
 
-```
+```C
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )
 ```
 
 Desgraciadamente, este uso de `assert` impide que el compilador realice la optimización del caso predeterminado que se ha descrito anteriormente en este documento. Como alternativa, puede utilizar una macro independiente, como se indica a continuación.
 
-```
+```C
 #ifdef DEBUG
 # define NODEFAULT   ASSERT(0)
 #else
@@ -118,5 +118,5 @@ Desgraciadamente, este uso de `assert` impide que el compilador realice la optim
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Palabras clave](../cpp/keywords-cpp.md)

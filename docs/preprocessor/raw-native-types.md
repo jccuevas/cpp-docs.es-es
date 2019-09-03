@@ -1,36 +1,35 @@
 ---
-title: raw_native_types
-ms.date: 11/04/2016
+title: atributo de importación raw_native_types
+ms.date: 08/29/2019
 f1_keywords:
 - raw_native_types
 helpviewer_keywords:
 - raw_native_types attribute
 ms.assetid: 9f38daa8-8dc0-46a5-aff9-f1ff9c1e6f48
-ms.openlocfilehash: 32b77905ef7025334e5101e76864da9a15c50cf6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb08a8e7cb081bd7a470c3c1ecf1492a7a65f833
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180484"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216073"
 ---
-# <a name="rawnativetypes"></a>raw_native_types
-**Específicos de C++**
+# <a name="raw_native_types-import-attribute"></a>atributo de importación raw_native_types
 
-Deshabilita el uso de las clases de soporte de COM en las funciones de contenedor de alto nivel y, en su lugar, fuerza el uso de tipos de datos de bajo nivel.
+**C++Cuestión**
+
+Deshabilita el uso de clases de compatibilidad con COM en las funciones contenedoras de alto nivel y fuerza el uso de tipos de datos de bajo nivel en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-raw_native_types
-```
+> **#import** *biblioteca de tipos* **raw_native_types**
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, los métodos de control de errores de alto nivel utilizan las clases de soporte COM [_bstr_t](../cpp/bstr-t-class.md) y [_variant_t](../cpp/variant-t-class.md) en lugar de la `BSTR` y `VARIANT` punteros de interfaz COM sin formato y tipos de datos. Estas clases encapsulan los detalles de asignación y desasignación del almacenamiento de memoria para estos tipos de datos, y simplifican considerablemente la conversión de tipos y las operaciones de conversión.
+De forma predeterminada, los métodos de control de errores de alto nivel usan las clases de compatibilidad con com [_ bstr_t](../cpp/bstr-t-class.md) y `BSTR` [_ variant_t](../cpp/variant-t-class.md) en lugar de los tipos de datos y `VARIANT` y los punteros de interfaz com sin formato. Estas clases encapsulan los detalles de asignación y desasignación del almacenamiento de memoria para estos tipos de datos, y simplifican considerablemente la conversión de tipos y las operaciones de conversión.
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

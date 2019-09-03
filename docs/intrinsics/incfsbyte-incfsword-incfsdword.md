@@ -1,6 +1,6 @@
 ---
 title: __incfsbyte, __incfsword, __incfsdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __incfsword
 - __incfsbyte_cpp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - __incfsdword intrinsic
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-ms.openlocfilehash: 9e1e2630f8c0a66b681be2aa550f9c9255c92173
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43824829043304f5762d049b5c75a72b57e2102c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349551"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222126"
 ---
-# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
+# <a name="__incfsbyte-__incfsword-__incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 
 **Específicos de Microsoft**
 
-Agregue uno para el valor en una ubicación de memoria especificada por un desplazamiento relativo al principio de la `FS` segmento.
+Agregue uno al valor en una ubicación de memoria especificada por un desplazamiento relativo al principio del `FS` segmento.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __incfsbyte(
    unsigned long Offset
 );
@@ -40,10 +40,10 @@ void __incfsdword(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Offset*<br/>
-[in] El desplazamiento desde el principio del `FS`.
+*Posición*\
+de Desplazamiento desde el principio de `FS`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -53,15 +53,17 @@ void __incfsdword(
 |`__incfsword`|x86|
 |`__incfsdword`|x86|
 
+**Archivo de encabezado** \<INTRIN. h >
+
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intrínsecas solo están disponibles en modo kernel, y las rutinas solo están disponibles como intrínsecos.
+Estos intrínsecos solo están disponibles en modo kernel y las rutinas solo están disponibles como intrínsecos.
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)<br/>
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[\__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)\
+[\__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[\__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

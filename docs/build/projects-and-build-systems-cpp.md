@@ -9,12 +9,13 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.topic: landing-page
+ms.openlocfilehash: b0ca5f28aea30ccf1e66ecd354ab15aae3e2d38a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313174"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216433"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Proyectos deC++ C/y sistemas de compilación en Visual Studio
 
@@ -22,7 +23,7 @@ Puede usar Visual Studio para editar, compilar y compilar cualquier C++ código 
 
 ## <a name="c-compilation"></a>C++previa
 
-Para compilar *un programa* significa compilar el C++ código fuente de uno o más archivos y, a continuación, vincular esos archivos a un archivo ejecutable (. exe), una biblioteca de carga dinámica (. dll) o una biblioteca estática (. lib). 
+Para compilar un programa significa compilar el C++ código fuente de uno o más archivos y, a continuación, vincular esos archivos a un archivo ejecutable (. exe), una biblioteca de carga dinámica (. dll) o una biblioteca estática (. lib). 
 
 La C++ compilación básica implica tres pasos principales:
 

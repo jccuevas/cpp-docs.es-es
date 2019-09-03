@@ -1,6 +1,6 @@
 ---
 title: __readgsbyte, __readgsdword, __readgsqword, __readgsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readgsbyte
 - __readgsdword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396475"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222347"
 ---
-# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
+# <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
 **Específicos de Microsoft**
 
-Leer la memoria desde una ubicación especificada por un desplazamiento relativo al principio del segmento GS.
+Lee la memoria de una ubicación especificada por un desplazamiento con respecto al principio del segmento GS.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned char __readgsbyte(
    unsigned long Offset
 );
@@ -42,14 +42,14 @@ unsigned __int64 __readgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Offset*<br/>
-[in] El desplazamiento desde el principio del `GS` a leer.
+*Posición*\
+de Desplazamiento desde el principio del `GS` que se va a leer.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El contenido de la memoria del byte, word, palabra doble o quadword (tal y como se indica el nombre de la función llamado) en la ubicación `GS:[Offset]`.
+El contenido de la memoria de los bytes, palabras, palabras dobles o quadword (tal y como se indica en el nombre de la función `GS:[Offset]`denominada) en la ubicación.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -60,15 +60,15 @@ El contenido de la memoria del byte, word, palabra doble o quadword (tal y como 
 |`__readgsqword`|x64|
 |`__readgsword`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Estas rutinas solo están disponibles como intrínseco.
+Estas rutinas solo están disponibles como intrínsecos.
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

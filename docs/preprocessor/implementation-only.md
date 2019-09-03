@@ -1,43 +1,42 @@
 ---
-title: implementation_only
-ms.date: 11/04/2016
+title: atributo de importación implementation_only
+ms.date: 08/29/2019
 f1_keywords:
 - implementation_only
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08144b3c815350acfe6a856b36d2d88085d1c04d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383963"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218976"
 ---
-# <a name="implementationonly"></a>implementation_only
-**Específicos de C++**
+# <a name="implementation_only-import-attribute"></a>atributo de importación implementation_only
 
-Suprime la generación de archivos de encabezado .tlh (el archivo de encabezado principal).
+**C++Cuestión**
+
+Suprime la generación del archivo `.tlh` de encabezado principal de la biblioteca de tipos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-implementation_only
-```
+> **#import** *biblioteca de tipos* **implementation_only**
 
 ## <a name="remarks"></a>Comentarios
 
-Este archivo contiene todas las declaraciones utilizadas para exponer el contenido de la biblioteca de tipos. El archivo de encabezado .tli, con las implementaciones de las funciones miembro del contenedor, se genera y se incluye en la compilación.
+Este archivo contiene todas las declaraciones utilizadas para exponer el contenido de la biblioteca de tipos. El `.tli` archivo de encabezado, con las implementaciones de las funciones miembro de contenedor, se generará e incluirá en la compilación.
 
-Cuando se especifica este atributo, el contenido del encabezado .tli está en el mismo espacio de nombres que el utilizado normalmente en el encabezado .tlh. Además, las funciones miembro no se declaran como alineadas.
+Cuando se especifica este atributo, el contenido del `.tli` encabezado está en el mismo espacio de nombres que el que se usa normalmente en el `.tlh` encabezado. Además, las funciones miembro no se declaran como alineadas.
 
-El **implementation_only** atributo está pensado para su uso junto con el [no_implementation](../preprocessor/no-implementation.md) atributo como una manera de mantener las implementaciones fuera del archivo de encabezado precompilado (PCH). Una instrucción `#import` con el atributo `no_implementation` se coloca en la región de origen usada para crear el PCH. Varios archivos de código fuente utilizan el PCH resultante. Un `#import` instrucción con el **implementation_only** , a continuación, se usa el atributo fuera de la región PCH. Debe usar esta instrucción una sola vez en uno de los archivos de código fuente. Esto generará todas las funciones miembro del contenedor necesarias sin necesidad de recompilación adicional para cada archivo de código fuente.
+El atributo **implementation_only** está pensado para su uso junto con el atributo [no_implementation](../preprocessor/no-implementation.md) como una manera de mantener las implementaciones fuera del archivo de encabezado precompilado (PCH). Una instrucción `#import` con el atributo `no_implementation` se coloca en la región de origen usada para crear el PCH. Varios archivos de código fuente utilizan el PCH resultante. Después `#import` , se usa una instrucción con el atributo **implementation_only** fuera de la región PCH. Solo es necesario usar esta instrucción una vez en uno de los archivos de código fuente. Genera todas las funciones miembro de contenedor necesarias sin volver a compilaciones adicionales para cada archivo de código fuente.
 
 > [!NOTE]
-> El **implementation_only** atributo en uno `#import` instrucción debe usarse junto con otra `#import` instrucción de la misma biblioteca de tipos, con el `no_implementation` atributo. De lo contrario, se generarán errores de compilador. Esto es porque las definiciones de clase de contenedor generan por el `#import` instrucción con el `no_implementation` atributo son necesarias para compilar las implementaciones generadas por el **implementation_only** atributo.
+> El atributo **implementation_only** de una `#import` instrucción debe usarse junto con otra `#import` instrucción, de la misma biblioteca de tipos, con el `no_implementation` atributo. De lo contrario, se generan errores del compilador. Esto se debe a que las definiciones de clase `#import` de contenedor generadas por la instrucción con el `no_implementation` atributo son necesarias para compilar las implementaciones generadas por el atributo **implementation_only** .
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

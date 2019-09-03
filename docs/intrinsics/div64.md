@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264119"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216765"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-El `_div64` intrínseco divide un entero de 64 bits con un entero de 32 bits. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_div64` es **específico de Microsoft**.
+`_div64` Intrínseco divide un entero de 64 bits por un entero de 32 bits. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_div64`es **específico de Microsoft**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,27 +29,27 @@ int _div64(
 ### <a name="parameters"></a>Parámetros
 
 *dividend* \
-[in] Entero de 64 bits que se va a dividir.
+de Entero de 64 bits que se va a dividir.
 
 *divisor* \
-[in] Entero de 32 bits que se va a dividir.
+de Entero de 32 bits por el que se va a dividir.
 
 *remainder* \
-[out] Los bits de entero de 32 bits del resto.
+enuncia Los bits enteros de 32 bits del resto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los 32 bits del cociente.
+Los bits 32 del cociente.
 
 ## <a name="remarks"></a>Comentarios
 
-El `_div64` divide intrínseco *dividendo* por *divisor*. Almacena el resto en el entero de 32 bits que señala *resto*y devuelve los 32 bits del cociente.
+Intrínseco `_div64` divide el *dividendo* por el divisor. Almacena el resto en el entero de 32 bits al que apunta el *resto*y devuelve los 32 bits del cociente.
 
 El `_div64` intrínseco está disponible a partir de Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
 |`_div64`|x86, x64|\<immintrin.h>|
 

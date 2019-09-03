@@ -1,19 +1,19 @@
 ---
 title: __umulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umulh
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: 3a42de276b483f98e2eaf9d0c8505d7f1d5b5bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf098657d1bd5b7ef8a4ffc21f487d2ce619a04e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390118"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219664"
 ---
-# <a name="umulh"></a>__umulh
+# <a name="__umulh"></a>__umulh
 
 **Específicos de Microsoft**
 
@@ -21,20 +21,20 @@ Devolver los 64 bits superiores del producto de dos enteros sin signo de 64 bi
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned __int64 __umulh(
    unsigned __int64 a,
    unsigned __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*a*<br/>
-[in] El primer número a multiplicar.
+*un*\
+[in] Primer número que se va a multiplicar.
 
-*b*<br/>
-[in] El segundo número a multiplicar.
+*b*\
+[in] Segundo número que se va a multiplicar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -46,7 +46,7 @@ Los 64 bits superiores del resultado de 128 bits de la multiplicación.
 |---------------|------------------|
 |`__umulh`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -54,7 +54,7 @@ Estas rutinas solo están disponibles como intrínsecos.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // umulh.cpp
 // processor: X64
 #include <cstdio>
@@ -82,4 +82,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

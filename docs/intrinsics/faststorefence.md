@@ -1,6 +1,6 @@
 ---
 title: __faststorefence
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __faststorefence_cpp
 - __faststorefence
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11a20666612fe1bca22f5d46b93e898dae375f6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349009"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222177"
 ---
-# <a name="faststorefence"></a>__faststorefence
+# <a name="__faststorefence"></a>__faststorefence
 
 **Específicos de Microsoft**
 
@@ -23,7 +23,7 @@ Garantiza que cada referencia de memoria anterior, incluidas las referencias de 
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __faststorefence();
 ```
 
@@ -33,11 +33,11 @@ void __faststorefence();
 |---------------|------------------|
 |`__faststorefence`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Genera una secuencia de instrucciones de barrera de memoria completa que garantiza que las operaciones de almacenamiento y de carga emitidas antes que esta función intrínseca sean visibles globalmente antes de que continúe la ejecución. El efecto es comparable a la función intrínseca `_mm_mfence` en todas plataformas x64, pero más rápido.
+Genera una secuencia de instrucciones de barrera de memoria completa que garantiza que las operaciones de carga y almacenamiento emitidas antes de que el intrínseco sea visible globalmente antes de que continúe la ejecución. El efecto es comparable a la función intrínseca `_mm_mfence` en todas plataformas x64, pero más rápido.
 
 En la plataforma AMD64, esta rutina genera una instrucción que actúa como una barrera de almacenamiento más rápida que la instrucción `sfence`. Para código crítico en el tiempo, use esta función intrínseca en lugar de `_mm_sfence` únicamente en plataformas AMD64. En plataformas Intel x64, la instrucción `_mm_sfence` es más rápida.
 
@@ -47,4 +47,4 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: atributo de importación rename_search_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179781"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216621"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>atributo de importación rename_search_namespace
 
-**Específicos de C++**
+**C++Cuestión**
 
-Tiene la misma funcionalidad que el [rename_namespace](../preprocessor/rename-namespace.md) atributo pero se usa en las bibliotecas de tipos que usa el `#import` la directiva con la [auto_search](../preprocessor/auto-search.md) atributo.
+Tiene la misma funcionalidad que el atributo [rename_namespace](../preprocessor/rename-namespace.md) , pero se usa en bibliotecas de tipos donde se usa `#import` la Directiva junto con el atributo [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-rename_search_namespace("NewName")
-```
+> **#import** *biblioteca de tipos* **rename_search_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>Parámetros
 
-*NewName*<br/>
+*NewName*\
 Nuevo nombre del espacio de nombres.
 
 ## <a name="remarks"></a>Comentarios
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)
