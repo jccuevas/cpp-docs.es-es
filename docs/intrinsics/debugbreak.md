@@ -1,6 +1,6 @@
 ---
 title: __debugbreak
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __debugbreak_cpp
 - __debugbreak
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e4cf2c85818a878417c560ddb5a80f8690e60a93
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509501"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217924"
 ---
 # <a name="__debugbreak"></a>__debugbreak
 
@@ -23,7 +23,7 @@ Produce un punto de interrupción en el código, donde se pedirá al usuario que
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __debugbreak();
 ```
 
@@ -38,11 +38,11 @@ void __debugbreak();
 La `__debugbreak` función intrínseca del compilador, similar a [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak), es una forma portable de Win32 de producir un punto de interrupción.
 
 > [!NOTE]
->  Al compilar con **/CLR**, una `__debugbreak` función que contiene se compilará en MSIL. `asm int 3` produce una función que se va a compilar en código nativo. Para obtener más información, vea _ _ [ASM](../assembler/inline/asm.md).
+> Al compilar con **/CLR**, una `__debugbreak` función que contiene se compilará en MSIL. `asm int 3` produce una función que se va a compilar en código nativo. Para obtener más información, vea _ _ [ASM](../assembler/inline/asm.md).
 
 Por ejemplo:
 
-```
+```C
 main() {
    __debugbreak();
 }
@@ -50,7 +50,7 @@ main() {
 
 es similar a:
 
-```
+```C
 main() {
    __asm {
       int 3
@@ -68,5 +68,5 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Palabras clave](../cpp/keywords-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: once
-ms.date: 11/04/2016
+title: once (Pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.once
 - once_CPP
@@ -8,39 +8,38 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-ms.openlocfilehash: 6061fe77960aa64e2dcb39db05897ef0e7fb5f2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 643ad83b672f7b632925383972751a966256eb41
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326346"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220544"
 ---
-# <a name="once"></a>once
-Especifica que el compilador incluirá (abrirá) el archivo una sola vez al compilar un archivo de código fuente.
+# <a name="once-pragma"></a>once (Pragma)
+
+Especifica que el compilador incluye el archivo de encabezado solo una vez, al compilar un archivo de código fuente.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-#pragma once
-```
+> **#pragma una vez**
 
 ## <a name="remarks"></a>Comentarios
 
-El uso de `#pragma once` puede reducir los tiempos de compilación como el compilador no abrirá y leerá el archivo después del primer `#include` del archivo en la unidad de traducción. Esto se conoce como *optimización de inclusión múltiple*. Tiene un efecto similar a la `#include guard` locución, que usa las definiciones de macro de preprocesador para evitar la inclusión múltiple del contenido del archivo. Esto también ayuda a evitar infracciones de la *regla de una definición*: el requisito de que todas las plantillas, tipos, funciones y objetos tengan no más de una definición en el código.
+El uso de `#pragma once` puede reducir los tiempos de compilación, ya que el compilador no abrirá y leerá el `#include` archivo de nuevo después del primer archivo en la unidad de traducción. Se denomina *optimización de inclusión múltiple*. Tiene un efecto similar a la expresión *include Guard* , que utiliza definiciones de macro de preprocesador para evitar la inclusión de varias inclusiones en el contenido del archivo. También ayuda a evitar infracciones de la *regla de una definición*, el requisito de que todas las plantillas, tipos, funciones y objetos no tengan más de una definición en el código.
 
 Por ejemplo:
 
-```
+```cpp
 // header.h
 #pragma once
 // Code placed here is included only once per translation unit
 ```
 
-Se recomienda la directiva `#pragma once` para el nuevo código, ya que no contamina el espacio de nombres global con un símbolo de preprocesador. Requiere escribir menos, es menos confuso y no puede causar colisiones de símbolos (errores generados cuando archivos de encabezado diferentes usan el mismo símbolo de preprocesador como valor de protección. No forma parte del estándar de C++, pero varios compiladores comunes la implementan de forma portátil.
+Se recomienda la directiva `#pragma once` para el nuevo código, ya que no contamina el espacio de nombres global con un símbolo de preprocesador. Requiere menos tipos, es menos molesto y no puede causar colisiones de *símbolos*, los errores que se producen cuando diferentes archivos de encabezado usan el mismo símbolo de preprocesador que el valor de protección. No forma parte del C++ estándar, pero lo implementan varios compiladores comunes.
 
-No existe ninguna ventaja en usar la expresión #include guard y `#pragma once` en el mismo archivo. El compilador reconoce la expresión #include guard e implementa la optimización de inclusión de la misma manera que la directiva `#pragma once` si el código que no es comentario o la directiva de preprocesador viene antes o después de la forma estándar de la expresión:
+No hay ninguna ventaja en el uso de la expresión include Guard y `#pragma once` en el mismo archivo. El compilador reconoce la expresión include Guard e implementa la optimización de inclusión múltiple de la misma manera que `#pragma once` la Directiva si ninguna directiva de preprocesador o código sin comentarios es anterior o posterior a la forma estándar de la expresión:
 
-```
+```cpp
 // header.h
 // Demonstration of the #include guard idiom.
 // Note that the defined symbol can be arbitrary.
@@ -50,10 +49,10 @@ No existe ninguna ventaja en usar la expresión #include guard y `#pragma once` 
 #endif // HEADER_H_
 ```
 
-Se recomienda la `#include guard` modismo cuando el código debe poder migrarse a los compiladores que no implementan la `#pragma once` directiva, para mantener la coherencia con el código existente, o cuando la inclusión múltiple optimización es imposible. Esto puede ocurrir en proyectos complejos cuando los alias de sistema de archivos o las rutas de acceso de inclusión con alias evitan que el compilador identifique archivos de inclusión idénticos mediante la ruta de acceso canónica.
+Se recomienda incluir la expresión de protección cuando el código debe ser portable a los compiladores que `#pragma once` no implementan la Directiva, para mantener la coherencia con el código existente o cuando no se puede realizar la optimización de varios includes. Puede producirse en proyectos complejos cuando los alias del sistema de archivos o las rutas de acceso de inclusión con alias impiden que el compilador identifique archivos de inclusión idénticos mediante una ruta canónica.
 
-Tenga cuidado de no usar `#pragma once` o `#include guard` modismo en archivos de encabezado que están diseñados para incluirse varias veces, con símbolos de preprocesador para controlar sus efectos. Para obtener un ejemplo de este diseño, vea el \<assert.h > archivo de encabezado. También cuidado al administrar incluir rutas de acceso para evitar la creación de varias rutas de acceso a los archivos incluidos, que pueden anular la inclusión múltiple tanto para la optimización `#include guard`s y `#pragma once`.
+Tenga cuidado de no usar `#pragma once` o la expresión include Guard en archivos de encabezado diseñados para incluirse varias veces, que utilizan símbolos de preprocesador para controlar sus efectos. Para obtener un ejemplo de este diseño, vea \<el archivo de encabezado Assert. h >. También debe tener cuidado de administrar las rutas de acceso de inclusión para evitar la creación de varias rutas de acceso a archivos incluidos, lo que puede derrotar `#pragma once`la optimización de inclusión múltiple para las protecciones include y.
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
