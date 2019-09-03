@@ -1,38 +1,37 @@
 ---
-title: raw_interfaces_only
-ms.date: 11/04/2016
+title: atributo de importación raw_interfaces_only
+ms.date: 08/29/2019
 f1_keywords:
 - raw_interfaces_only
 helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
-ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b79aa4dbafa204d84f4d6ed7ec78fdec1b81fa7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179794"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216211"
 ---
-# <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Específicos de C++**
+# <a name="raw_interfaces_only-import-attribute"></a>atributo de importación raw_interfaces_only
 
-Suprime la generación de funciones de contenedor de control de errores y [propiedad](../cpp/property-cpp.md) declaraciones que utilizan esas funciones de contenedor.
+**C++Cuestión**
+
+Suprime la generación de funciones contenedoras de control de errores y declaraciones de [propiedad](../cpp/property-cpp.md) que utilizan esas funciones contenedoras.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-raw_interfaces_only
-```
+> **#import** *biblioteca de tipos* **raw_interfaces_only**
 
 ## <a name="remarks"></a>Comentarios
 
-El **raw_interfaces_only** atributo también hace que el prefijo predeterminado utilizado en la nomenclatura de las funciones que no son propiedad va a quitar. Normalmente, el prefijo es **raw_**. Si se especifica este atributo, los nombres de función pertenecen directamente a la biblioteca de tipos.
+El atributo **raw_interfaces_only** también hace que se quite el prefijo predeterminado usado para asignar nombres a las funciones que no son de propiedad. Normalmente, el prefijo `raw_`es. Si se especifica este atributo, los nombres de función se toman directamente de la biblioteca de tipos.
 
 Este atributo permite exponer solo el contenido de bajo nivel de la biblioteca de tipos.
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

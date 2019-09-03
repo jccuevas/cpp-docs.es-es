@@ -1,41 +1,41 @@
 ---
 title: __readdr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readdr
 helpviewer_keywords:
 - __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-ms.openlocfilehash: 9d265fe75abaa7ad3cfd508613766cc3b600ee14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 646330ca92af08903485fd4583eb2c217fe3e023
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263288"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216675"
 ---
-# <a name="readdr"></a>__readdr
+# <a name="__readdr"></a>__readdr
 
 Lee el valor del registro de depuración especificado.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-unsigned         __readdr(unsigned int DebugRegister);
-unsigned __int64 __readdr(unsigned int DebugRegister);
+```C
+unsigned         __readdr(unsigned int DebugRegister); /* x86 */
+unsigned __int64 __readdr(unsigned int DebugRegister); /* x64 */
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*DebugRegister*<br/>
-[in] Registrar una constante de 0 a 7 que identifica la depuración.
+*DebugRegister*\
+de Constante de 0 a 7 que identifica el registro de depuración.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor del registro de depuración especificado.
+Valor del registro de depuración especificado.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intrínsecas están disponibles solo en modo kernel, y las rutinas sólo están disponibles como intrínsecos.
+Estos intrínsecos solo están disponibles en modo kernel y las rutinas solo están disponibles como intrínsecos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,11 +43,11 @@ Estas funciones intrínsecas están disponibles solo en modo kernel, y las rutin
 |---------------|------------------|
 |`__readdr`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

@@ -2,12 +2,13 @@
 layout: LandingPage
 title: Documentación de desarrollo de Linux con C++
 description: Cree y depure aplicaciones que se ejecutan en Linux.
-ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.topic: landing-page
+ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042732"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216102"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentación de desarrollo de Linux con C++
 

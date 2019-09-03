@@ -1,48 +1,46 @@
 ---
-title: raw_property_prefixes
-ms.date: 10/18/2018
+title: atributo de importación raw_property_prefixes
+ms.date: 08/29/2019
 f1_keywords:
 - raw_property_prefixes
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: 23250b524fdaa2181c8e28229ccec680ffdae715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d91470781e7c5f673fd228c24904322d1db8b3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179807"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216038"
 ---
-# <a name="rawpropertyprefixes"></a>raw_property_prefixes
+# <a name="raw_property_prefixes-import-attribute"></a>atributo de importación raw_property_prefixes
 
-**Específicos de C++**
+**C++Cuestión**
 
 Especifica los prefijos alternativos para tres métodos de propiedad.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *biblioteca de tipos* **raw_property_prefixes (** "*GetPrefix*" **,** "*PutPrefix*" **,** "*PutRefPrefix*" **)**
 
 ### <a name="parameters"></a>Parámetros
 
-*GetPrefix*<br/>
-Prefijo que se usará para el `propget` métodos.
+*GetPrefix*\
+Prefijo que se va `propget` a usar para los métodos.
 
-*PutPrefix*<br/>
-Prefijo que se usará para el `propput` métodos.
+*PutPrefix*\
+Prefijo que se va `propput` a usar para los métodos.
 
-*PutRefPrefix*<br/>
-Prefijo que se usará para el `propputref` métodos.
+*PutRefPrefix*\
+Prefijo que se va `propputref` a usar para los métodos.
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, de bajo nivel `propget`, `propput`, y `propputref` métodos expuestos por funciones miembro denominadas con prefijos de **get_**, **put_**, y **putref_** respectivamente. Estos prefijos son compatibles con los nombres que se usan en los archivos de encabezado generados por MIDL.
+De forma predeterminada, los métodos `propget`, `propput`y `propputref` de bajo nivel se exponen mediante funciones de miembro denominadas `put_`con prefijos de `get_`, y `putref_`, respectivamente. Estos prefijos son compatibles con los nombres que se usan en los archivos de encabezado generados por MIDL.
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

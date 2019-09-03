@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract (Pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409920"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218567"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract (Pragma)
 
-Determina si la contracción de punto flotante tiene lugar. Contracción de punto flotante es una instrucción como FMA (fundidos-multiplicar-sumar) que combina dos operaciones de punto flotante independiente en una sola instrucción. El uso de estas instrucciones puede afectar a precisión de punto flotante, ya que en lugar de después de cada operación de redondeo, el procesador puede redondear solo una vez después de ambas operaciones.
+Determina si tiene lugar la contracción de punto flotante. Una contracción de punto flotante es una instrucción como FMA (fusionado por comas-sumar) que combina dos operaciones de punto flotante independientes en una única instrucción. El uso de estas instrucciones puede afectar a la precisión de punto flotante, porque en lugar de redondear después de cada operación, el procesador puede redondear una sola vez después de ambas operaciones.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **#pragma fp_contract (** { **on** | **off** } **)**
+> **#pragma fp_contract (** { **on** | **OFF** } **)**
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, **fp_contract** es **en**. Esto indica al compilador que use instrucciones de contracción de punto flotante siempre que sea posible. Establecer **fp_contract** a **desactivar** para conservar las instrucciones individuales de punto flotante.
+De forma predeterminada, **fp_contract** está **activado**. Esto indica al compilador que utilice las instrucciones de contratación de punto flotante siempre que sea posible. Establezca **fp_contract** en **OFF** para conservar las instrucciones de punto flotante individuales.
 
-Para obtener más información sobre el comportamiento de punto flotante, vea [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).
+Para obtener más información sobre el comportamiento de punto flotante, consulte [/FP (especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Las directivas pragma de punto flotante incluyen:
 
@@ -37,7 +37,7 @@ Las directivas pragma de punto flotante incluyen:
 
 ## <a name="example"></a>Ejemplo
 
-El código generado a partir de este ejemplo no utiliza una instrucción-fusionada incluso cuando esté disponible en el procesador de destino. Si marque como comentario `#pragma fp_contract (off)`, el código generado puede utilizar una instrucción-fusionada si está disponible.
+El código generado a partir de este ejemplo no usa una instrucción fusionada-Multiply-Add aunque esté disponible en el procesador de destino. Si se marca `#pragma fp_contract (off)`como comentario, el código generado puede utilizar una instrucción fusionada-multiplicate-Add si está disponible.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +77,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

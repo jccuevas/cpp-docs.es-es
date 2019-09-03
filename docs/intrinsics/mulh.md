@@ -1,40 +1,40 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263079"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221682"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Específicos de Microsoft**
 
-Devuelve los 64 bits superiores del producto de dos enteros de 64 bits con signo.
+Devuelve los bits 64 altos del producto de los enteros de 2 64 bits con signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*a*<br/>
-[in] El primer número a multiplicar.
+*un*\
+[in] Primer número que se va a multiplicar.
 
-*b*<br/>
-[in] El segundo número a multiplicar.
+*b*\
+[in] Segundo número que se va a multiplicar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -46,7 +46,7 @@ Los 64 bits superiores del resultado de 128 bits de la multiplicación.
 |---------------|------------------|
 |`__mulh`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -54,7 +54,7 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>
@@ -83,4 +83,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

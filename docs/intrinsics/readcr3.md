@@ -1,19 +1,19 @@
 ---
 title: __readcr3
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr3
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-ms.openlocfilehash: 8b5839d233154b6ddb69d2bbe0b13497c3b66305
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ff46fabc99839d9c0bbd5c72e1b76d25814c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396540"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221263"
 ---
-# <a name="readcr3"></a>__readcr3
+# <a name="__readcr3"></a>__readcr3
 
 **Específicos de Microsoft**
 
@@ -21,7 +21,7 @@ Lee el registro CR3 y devuelve su valor.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned __int64 __readcr3(void);
 ```
 
@@ -35,14 +35,14 @@ El valor del registro CR3.
 |---------------|------------------|
 |`__readcr3`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Este intrínseco solo está disponible en modo kernel, y la rutina solo está disponible como intrínseco.
+El intrínseco solo está disponible en modo kernel y la rutina solo está disponible como intrínseco.
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

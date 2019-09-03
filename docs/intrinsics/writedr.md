@@ -1,40 +1,40 @@
 ---
 title: __writedr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writedr
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: c495e8c80029680512358198ca8fb0ce6e65414d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389871"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219222"
 ---
-# <a name="writedr"></a>__writedr
+# <a name="__writedr"></a>__writedr
 
 Escribe el valor especificado en el registro de depuración especificado.
 
 ## <a name="syntax"></a>Sintaxis
 
+```C
+void __writedr(unsigned DebugRegister, unsigned DebugValue); /* x86 */
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 ```
-void __writedr(unsigned DebugRegister, unsigned DebugValue);
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
-```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*DebugRegister*<br/>
-[in] Registrar un número entre 0 y 7 que identifica la depuración.
+*DebugRegister*\
+de Número del 0 al 7 que identifica el registro de depuración.
 
-*DebugValue*<br/>
-[in] Registre un valor para escribir en la depuración.
+*DebugValue*\
+de Valor que se va a escribir en el registro de depuración.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intrínsecas están disponibles solo en modo kernel, y las rutinas sólo están disponibles como intrínsecos.
+Estos intrínsecos solo están disponibles en modo kernel y las rutinas solo están disponibles como intrínsecos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -42,11 +42,11 @@ Estas funciones intrínsecas están disponibles solo en modo kernel, y las rutin
 |---------------|------------------|
 |`__writedr`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

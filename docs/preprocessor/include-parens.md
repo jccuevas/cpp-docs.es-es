@@ -1,45 +1,43 @@
 ---
-title: include()
-ms.date: 10/18/2018
+title: atributo de importación include ()
+ms.date: 08/29/2019
 f1_keywords:
 - include()
 helpviewer_keywords:
 - include() attribute
 ms.assetid: 86c9dcb2-d9e0-4fd5-97d7-0bb3e23d6ecc
-ms.openlocfilehash: 1208f14a9f6b3724dd5353df57213baa3910d07f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39ab63525b2b83781cbcaf86a61742c5fb767b72
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383742"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218870"
 ---
-# <a name="include"></a>include()
+# <a name="include-import-attribute"></a>atributo de importación include ()
 
-**Específicos de C++**
+**C++Cuestión**
 
 Deshabilita la exclusión automática.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-include("Name1"[,"Name2", ...])
-```
+> **#import** *biblioteca de tipos* **include ("** _nombre1_ **"** [ __, "__ *nombre2* __"__ ...] __)__
 
 ### <a name="parameters"></a>Parámetros
 
-*Name1*<br/>
+*Nombre1*\
 Primer elemento que se incluirá forzosamente.
 
-*Name2*<br/>
+*Nombre2*\
 Segundo elemento que se incluirá forzosamente (si es necesario).
 
 ## <a name="remarks"></a>Comentarios
 
-Las bibliotecas de tipos pueden incluir definiciones de elementos definidos en encabezados de sistema u otras bibliotecas de tipos. `#import` intenta evitar varios errores de definición mediante la exclusión automática de dichos elementos. Si se han excluido elementos, tal y como indica [advertencia del compilador (nivel 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md), y que no deberían tener estado, este atributo se puede usar para deshabilitar la exclusión automática. Este atributo puede tomar cualquier número de argumentos, siendo cada uno el nombre del elemento de la biblioteca de tipos que se incluirá.
+Las bibliotecas de tipos pueden incluir definiciones de elementos definidos en encabezados de sistema u otras bibliotecas de tipos. `#import` intenta evitar varios errores de definición mediante la exclusión automática de dichos elementos. Si algunos elementos no deben excluirse automáticamente, es posible que vea [Advertencia del compilador (nivel 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md). Puede usar este atributo para deshabilitar la exclusión automática. Este atributo puede tomar cualquier número de argumentos, uno por cada nombre de un elemento de biblioteca de tipos que se va a incluir.
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

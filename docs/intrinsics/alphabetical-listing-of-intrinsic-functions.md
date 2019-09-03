@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264320"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220081"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Lista alfabética de funciones intrínsecas
 
-Las secciones siguientes describen las funciones intrínsecas específicas de Microsoft que están disponibles en algunas arquitecturas o en todas ellas. Los fabricantes de procesadores también documentan otros intrínsecos compatibles, ya sea en los archivos de encabezado o en sus sitios web. Consulte la [intrínsecos ARM](../intrinsics/arm-intrinsics.md), [x86 intrínsecos](../intrinsics/x86-intrinsics-list.md), y [x64 intrínsecos](../intrinsics/x64-amd64-intrinsics-list.md) secciones para obtener vínculos a documentación del fabricante. Funciones de biblioteca en tiempo de ejecución (CRT) de C que tienen intrínsecos implementados no se documentan aquí; Estas funciones están documentadas en el [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md).
+Las secciones siguientes describen las funciones intrínsecas específicas de Microsoft que están disponibles en algunas arquitecturas o en todas ellas. Los fabricantes de procesadores también documentan otros intrínsecos compatibles, ya sea en los archivos de encabezado o en sus sitios web. Vea las secciones funciones intrínsecas de [ARM](../intrinsics/arm-intrinsics.md), intrínsecos de [x86](../intrinsics/x86-intrinsics-list.md)y intrínsecos de [x64](../intrinsics/x64-amd64-intrinsics-list.md) para obtener vínculos a la documentación del fabricante. Las funciones de la biblioteca en tiempo de ejecución (CRT) de C que tienen intrínsecos implementados no se documentan aquí. Estas funciones se documentan en la referencia de la [biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -75,11 +75,11 @@ Las secciones siguientes describen las funciones intrínsecas específicas de Mi
 
 [Funciones intrínsecas _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Funciones intrínsecas _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[funciones intrínsecas _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Funciones intrínsecas _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[funciones intrínsecas _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Funciones intrínsecas de _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[Funciones intrínsecas _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
@@ -275,4 +275,4 @@ Las secciones siguientes describen las funciones intrínsecas específicas de Mi
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390261"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219978"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
 **Específicos de Microsoft**
 
-Genera una instrucción de cadena de la tienda (`rep stosd`).
+Genera una instrucción de cadena de`rep stosd`almacén ().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*dest*<br/>
-[out] El destino de la operación.
+*Destino*\
+enuncia Destino de la operación.
 
-*Data*<br/>
-[in] Para almacenar los datos.
+*Data*\
+de Datos que se van a almacenar.
 
-*Recuento*<br/>
-[in] La longitud del bloque de palabras dobles para escribir.
+*Contabiliza*\
+de Longitud del bloque de palabras dobles que se va a escribir.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __stosd(
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El resultado es que la palabra doble `Data` se escribe en un bloque de `Count` palabras dobles en la ubicación de memoria a la que señala a `Dest`.
+El resultado es que los *datos* de palabra se escriben en un bloque de recuento palabras dobles en la ubicación de memoria a la que apunta el *destino*.
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 
@@ -89,4 +89,4 @@ printf_s( "%u %u %u %u",
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)
