@@ -1,5 +1,5 @@
 ---
-title: CMFCToolTipCtrl (clase)
+title: Clase CMFCToolTipCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolTipCtrl
@@ -32,18 +32,18 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5376fd21f84411c86ade564d7c76d073ccb909a6
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388311"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273694"
 ---
-# <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl (clase)
+# <a name="cmfctooltipctrl-class"></a>Clase CMFCToolTipCtrl
 
 Implementación extendida de información sobre herramientas basada en [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Una información sobre herramientas basada en la clase `CMFCToolTipCtrl` puede mostrar un icono, una etiqueta y una descripción. Puede personalizar su apariencia visual mediante un relleno de degradado, colores de texto y bordes personalizados, texto en negrita, esquinas redondeadas o un estilo de globo.
 
-Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
+Para obtener más información, consulte el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\MFC** de la instalación de Visual Studio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -55,13 +55,13 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`CMFCToolTipCtrl::CMFCToolTipCtrl`|Constructor predeterminado.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCToolTipCtrl::GetIconSize](#geticonsize)|Devuelve el tamaño de un icono en una información sobre herramientas.|
 |[CMFCToolTipCtrl::GetParams](#getparams)|Devuelve la configuración de visualización en una información sobre herramientas.|
@@ -79,42 +79,31 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 ## <a name="remarks"></a>Comentarios
 
-Use `CMFCToolTipCtrl`, `CMFCToolTipInfo`, y [CTooltipManager (clase)](../../mfc/reference/ctooltipmanager-class.md) objetos conjuntamente para implementar información sobre herramientas personalizada en su aplicación.
+Use `CMFCToolTipCtrl`los `CMFCToolTipInfo`objetos de la clase, y [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) juntos para implementar información sobre herramientas personalizada en la aplicación.
 
 Por ejemplo, para usar informaciones sobre herramientas con estilo de globo, siga estos pasos:
 
-1. Use la [CWinAppEx (clase)](../../mfc/reference/cwinappex-class.md) método para inicializar el Administrador de información sobre herramientas en la aplicación.
+1. Use el método de [clase CWinAppEx](../../mfc/reference/cwinappex-class.md) para inicializar el administrador de información sobre herramientas en la aplicación.
 
 2. Cree una estructura `CMFCToolTipInfo` para especificar el estilo visual que desee:
 
 ```
 CMFCToolTipInfo params;
-    params.m_bBoldLabel = FALSE;
-    params.m_bDrawDescription = FALSE;
-    params.m_bDrawIcon = FALSE;
-    params.m_bRoundedCorners = TRUE;
-    params.m_bDrawSeparator = FALSE;
-    if (m_bCustomColors)
+params.m_bBoldLabel = FALSE;
+params.m_bDrawDescription = FALSE;
+params.m_bDrawIcon = FALSE;
+params.m_bRoundedCorners = TRUE;
+params.m_bDrawSeparator = FALSE;
+if (m_bCustomColors)
 {
-    params.m_clrFill = RGB (255,
-    255,
-    255);
-
-    params.m_clrFillGradient = RGB (228,
-    228,
-    240);
-
-    params.m_clrText = RGB (61,
-    83,
-    80);
-
-    params.m_clrBorder = RGB (144,
-    149,
-    168);
+    params.m_clrFill = RGB (255, 255, 255);
+    params.m_clrFillGradient = RGB (228, 228, 240);
+    params.m_clrText = RGB (61, 83, 80);
+    params.m_clrBorder = RGB (144, 149, 168);
 
 }
 ```
-3. Use la [ctooltipmanager:: Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) método para establecer el estilo visual de todas las informaciones sobre herramientas en la aplicación mediante el uso de los estilos definidos en el `CMFCToolTipInfo` objeto:
+3. Use el método [CTooltipManager:: SetTooltipParams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) para establecer el estilo visual de toda la información sobre herramientas en la aplicación mediante los estilos definidos en `CMFCToolTipInfo` el objeto:
 
 ```
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
@@ -154,7 +143,7 @@ En el ejemplo siguiente se muestra cómo construir un objeto `CMFCToolTipCtrl`, 
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxtooltipctrl.h
+**Encabezado:** afxtooltipctrl. h
 
 ##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl
 
@@ -164,7 +153,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pParams*<br/>
+de *pParams*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -178,7 +167,7 @@ virtual CSize GetIconSize();
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño del icono, en píxeles.
+Tamaño del icono, en píxeles.
 
 ##  <a name="getparams"></a>  CMFCToolTipCtrl::GetParams
 
@@ -190,7 +179,7 @@ const CMFCToolTipInfo& GetParams() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La configuración de pantalla de información sobre herramientas actual, que se almacena en un [CMFCToolTipInfo (clase)](../../mfc/reference/cmfctooltipinfo-class.md) objeto.
+La configuración de presentación de la información sobre herramientas actual, que se almacena en un objeto de la [clase CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) .
 
 ##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder
 
@@ -206,17 +195,17 @@ virtual void OnDrawBorder(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Puntero a un contexto de dispositivo.
+de Puntero a un contexto de dispositivo.
 
 *rect*<br/>
-[in] El rectángulo delimitador de la información sobre herramientas.
+de Rectángulo delimitador de la información sobre herramientas.
 
 *clrLine*<br/>
-[in] Color del borde.
+de Color del borde.
 
 ### <a name="remarks"></a>Comentarios
 
-Invalide este método en una clase derivada para personalizar la apariencia del borde de información sobre herramientas.
+Invalide este método en una clase derivada para personalizar la apariencia del borde de la información sobre herramientas.
 
 ##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription
 
@@ -229,9 +218,9 @@ virtual CSize OnDrawDescription(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *bCalcOnly*<br/>
+de *pDC* de<br/>
+de *rectángulo*<br/>
+de *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -250,18 +239,18 @@ virtual BOOL OnDrawIcon(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Un puntero a un contexto de dispositivo.
+de Un puntero a un contexto de dispositivo.
 
 *rectImage*<br/>
-[in] Coordenadas del icono.
+de Coordenadas del icono.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se ha dibujado el icono. En caso contrario, FALSE.
+TRUE si se dibujó el icono. En caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Invalide este método en una clase derivada para mostrar un icono personalizado. También debe invalidar [CMFCToolTipCtrl::GetIconSize](#geticonsize) para habilitar la información sobre herramientas calcular correctamente el diseño de texto y la descripción.
+Invalide este método en una clase derivada para mostrar un icono personalizado. También debe invalidar [CMFCToolTipCtrl:: GetIconSize](#geticonsize) para permitir que la información sobre herramientas calcule correctamente el diseño del texto y la descripción.
 
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel
 
@@ -277,13 +266,13 @@ virtual CSize OnDrawLabel(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Un puntero a un contexto de dispositivo.
+de Un puntero a un contexto de dispositivo.
 
 *rect*<br/>
-[in] Rectángulo delimitador del área de etiqueta.
+de Rectángulo delimitador del área de etiqueta.
 
 *bCalcOnly*<br/>
-[in] Si es TRUE, no se dibujará la etiqueta.
+de Si es TRUE, no se dibujará la etiqueta.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -308,20 +297,20 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Un puntero a un contexto de dispositivo.
+de Un puntero a un contexto de dispositivo.
 
 *x1*<br/>
-[in] Coordenada horizontal del extremo izquierdo del separador.
+de Coordenada horizontal del extremo izquierdo del separador.
 
 *x2*<br/>
-[in] Coordenada horizontal del extremo derecho del separador.
+de Coordenada horizontal del extremo derecho del separador.
 
 *Y*<br/>
-[in] Coordenada vertical del separador.
+de Coordenada vertical del separador.
 
 ### <a name="remarks"></a>Comentarios
 
-La implementación predeterminada dibuja una línea desde el punto (x1, y) para el punto (x2, y).
+La implementación predeterminada dibuja una línea desde el punto (x1, y) hasta el punto (x2, y).
 
 Invalide este método en una clase derivada para personalizar la apariencia del separador.
 
@@ -340,20 +329,20 @@ virtual void OnFillBackground(
 ### <a name="parameters"></a>Parámetros
 
 *pDC*<br/>
-[in] Un puntero a un contexto de dispositivo.
+de Un puntero a un contexto de dispositivo.
 
 *rect*<br/>
-[in] Especifica el rectángulo delimitador del área de relleno.
+de Especifica el rectángulo delimitador del área que se va a rellenar.
 
 *clrText*<br/>
-[in] Color de primer plano de la información sobre herramientas.
+de Color de primer plano de la información sobre herramientas.
 
 *clrLine*<br/>
-[in] Color de los bordes y la línea de delimitador entre etiqueta y una descripción.
+de Color de los bordes y la línea delimitadora entre la etiqueta y la descripción.
 
 ### <a name="remarks"></a>Comentarios
 
-La implementación predeterminada rellena el rectángulo especificado por *rect* con el color o el patrón especificado por la llamada más reciente a [CMFCToolTipCtrl::SetParams](#setparams).
+La implementación predeterminada rellena el rectángulo especificado por *Rect* con el color o el patrón especificado por la llamada más reciente a [CMFCToolTipCtrl:: SetParams](#setparams).
 
 Invalide este método en una clase derivada si desea personalizar la apariencia de la información sobre herramientas.
 
@@ -368,11 +357,11 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="parameters"></a>Parámetros
 
 *strDesrciption*<br/>
-[in] Texto de descripción.
+de Texto descriptivo.
 
 ### <a name="remarks"></a>Comentarios
 
-El texto de descripción se muestra en la información sobre herramientas en el separador.
+El texto de la descripción se muestra en la información sobre herramientas bajo el separador.
 
 ##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth
 
@@ -384,8 +373,8 @@ void SetFixedWidth(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nWidthRegular*<br/>
-[in] *nWidthLargeImage*<br/>
+de *nWidthRegular*<br/>
+de *nWidthLargeImage*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -397,7 +386,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pRibbonButton*<br/>
+de *pRibbonButton*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -415,7 +404,7 @@ void SetLocation(CPoint pt);
 
 ##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams
 
-Especifica la apariencia visual de una información sobre herramientas con un [CMFCToolTipInfo (clase)](../../mfc/reference/cmfctooltipinfo-class.md) objeto.
+Especifica la apariencia visual de una información sobre herramientas mediante el uso de un objeto de la [clase CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) .
 
 ```
 void SetParams(CMFCToolTipInfo* pParams);
@@ -424,11 +413,11 @@ void SetParams(CMFCToolTipInfo* pParams);
 ### <a name="parameters"></a>Parámetros
 
 *pParams*<br/>
-[in] Puntero a un [CMFCToolTipInfo (clase)](../../mfc/reference/cmfctooltipinfo-class.md) objeto que contiene los parámetros de visualización.
+de Puntero a un objeto de la [clase CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) que contiene los parámetros de presentación.
 
 ### <a name="remarks"></a>Comentarios
 
-Cada vez que se muestra la información sobre herramientas, que se dibuja mediante el uso de los colores y los estilos visuales que *pParams* especifica. El valor de *pParams* se almacena en el miembro protegido `m_Params`, que se puede acceder mediante una clase derivada que reemplaza [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), o [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)para mantener el aspecto especificado.
+Cada vez que se muestra la información sobre herramientas, se dibuja utilizando los colores y los estilos visuales que especifica *pParams* . El valor de *pParams* se almacena en el miembro `m_Params`protegido, al que se puede tener acceso mediante una clase derivada que invalide [CMFCToolTipCtrl:: OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl:: OnDrawLabel ](#ondrawlabel), [CMFCToolTipCtrl:: OnDrawSeparator](#ondrawseparator)o [CMFCToolTipCtrl:: OnFillBackground](#onfillbackground) para mantener el aspecto especificado.
 
 ## <a name="see-also"></a>Vea también
 
