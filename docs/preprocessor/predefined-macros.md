@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222286"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273820"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -182,9 +182,9 @@ El compilador admite estas macros predefinidas especificadas por los estándares
 
 - **&#95; Stdc &#95; &#95;** Se define como 1 solo cuando se compila como C y si se especifica la opción del compilador [/za](../build/reference/za-ze-disable-language-extensions.md) . De lo contrario, sin definir.
 
-- **&#95;&#95;STDC&#95;se&#95;**  ha hospedado como 1 si la implementación es una *implementación hospedada*, una que admite la biblioteca estándar completa requerida. De lo contrario, se define como 0.
+- **&#95;&#95;STDC&#95;se&#95; ha hospedado** como 1 si la implementación es una *implementación hospedada*, una que admite la biblioteca estándar completa requerida. De lo contrario, se define como 0.
 
-- **&#95;&#95;Los&#95;&#95;**  subprocesos de STDCPP se definen como 1 si y solo si un programa puede tener más de un subproceso C++de ejecución y se compila como. De lo contrario, sin definir.
+- **&#95;&#95;Los&#95;subprocesos&#95; de STDCPP** se definen como 1 si y solo si un programa puede tener más de un subproceso C++de ejecución y se compila como. De lo contrario, sin definir.
 
 - **&#95;Hora de &#95;&#95;** La hora de traducción de la unidad de traducción preprocesada. La hora es un literal de cadena de caracteres con el formato *HH: mm: SS*, igual que la hora devuelta por la función [asctime](../c-runtime-library/reference/asctime-wasctime.md) de CRT. Esta macro siempre está definida.
 
@@ -278,11 +278,11 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95;CPPUNWIND** Definido como 1 si se han establecido una o varias de las opciones [/GX (habilitar control de excepciones)](../build/reference/gx-enable-exception-handling.md), [/CLR (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)o [/EH (modelo de control de excepciones)](../build/reference/eh-exception-handling-model.md) . De lo contrario, sin definir.
 
-- **&#95;** Depuración Se define como 1 cuando se establece la opción del compilador [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/mdd](../build/reference/md-mt-ld-use-run-time-library.md)o [/MTD](../build/reference/md-mt-ld-use-run-time-library.md) . De lo contrario, sin definir.
+- **&#95;Depuración** Se define como 1 cuando se establece la opción del compilador [/LDd](../build/reference/md-mt-ld-use-run-time-library.md), [/mdd](../build/reference/md-mt-ld-use-run-time-library.md)o [/MTD](../build/reference/md-mt-ld-use-run-time-library.md) . De lo contrario, sin definir.
 
 - DLL se define como 1 cuando se establece la opción del compilador [/MD](../build/reference/md-mt-ld-use-run-time-library.md) o [/mdd](../build/reference/md-mt-ld-use-run-time-library.md) (DLL multiproceso).  **&#95;** De lo contrario, sin definir.
 
-- **&#95; FUNCDNAME &#95; &#95;** Se define como un literal de cadena que contiene el [nombre](../build/reference/decorated-names.md) representativo de la función de inclusión. La macro solo se define dentro de una función. **&#95;La &#95;macro&#95; FUNCDNAME** no se expande si usa la opción del compilador [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) o [/p](../build/reference/p-preprocess-to-a-file.md) .
+- **&#95; FUNCDNAME &#95; &#95;** Se define como un literal de cadena que contiene el [nombre representativo](../build/reference/decorated-names.md) de la función de inclusión. La macro solo se define dentro de una función. **&#95;La &#95;macro&#95; FUNCDNAME** no se expande si usa la opción del compilador [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) o [/p](../build/reference/p-preprocess-to-a-file.md) .
 
    En este ejemplo se `__FUNCDNAME__`usan `__FUNCSIG__`las macros, y `__FUNCTION__` para mostrar la información de la función.
 
@@ -397,11 +397,21 @@ MSVC admite estas macros predefinidas adicionales.
    #endif
    ```
 
-   Para obtener más información, [vea C++ versión del](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) compilador C++ visual en el blog del equipo de Microsoft.
+   Para obtener más información, [vea C++ versión del compilador visual](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) en el blog del equipo de Microsoft. C++
 
 - **&#95;MSVC&#95;lang** definido como un literal entero que especifica el C++ lenguaje estándar de destino del compilador. Se establece solo en código compilado como C++. La macro es el valor literal entero 201402L de forma predeterminada o cuando se especifica la opción del compilador [/STD: c++ 14](../build/reference/std-specify-language-standard-version.md) . La macro se establece en 201703L si se especifica la opción del compilador [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md) . Se establece en un valor mayor que no se especifica cuando se especifica la opción [/STD: c + + latest](../build/reference/std-specify-language-standard-version.md) . De lo contrario, la macro no está definida. La  **&#95;macro&#95;MSVC lang** y las opciones de compilador [/STD (especificar la versión estándar del lenguaje)](../build/reference/std-specify-language-standard-version.md) están disponibles a partir de Visual Studio 2015 Update 3.
 
 - **&#95;&#95;Las&#95;comprobaciones en tiempo de&#95;ejecución de MSVC** se definen como 1 cuando se establece una de las opciones del compilador [/RTC](../build/reference/rtc-run-time-error-checks.md) . De lo contrario, sin definir.
+
+- **&#95;MSVC&#95;Traditional** se define como 0 cuando se establece la opción del compilador [/experimental: preprocesador](../build/reference/rtc-run-time-error-checks.md) . Se define como 1 de forma predeterminada, o cuando se establece la opción del compilador [/experimental: preprocesador](../build/reference/rtc-run-time-error-checks.md) , para indicar que el preprocesador tradicional está en uso. La opción del compilador  **&#95;MSVC&#95;tradicional** macro y [/experimental: preprocesador (Habilitar modo de conformidad del preprocesador)](../build/reference/experimental-preprocessor.md) está disponible a partir de la versión 15,8 de Visual Studio 2017.
+
+   ```cpp
+   #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
+   // Logic using the traditional preprocessor
+   #else
+   // Logic using cross-platform compatible preprocessor
+   #endif
+   ```
 
 - **&#95;MT** Se define como 1 cuando se especifican [/MD o/mdd](../build/reference/md-mt-ld-use-run-time-library.md) (DLL multiproceso) o [/MT o/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (multiproceso). De lo contrario, sin definir.
 

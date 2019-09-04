@@ -1,34 +1,52 @@
 ---
 title: Error irrecuperable C1010
-ms.date: 08/19/2019
+ms.date: 09/03/2019
 f1_keywords:
 - C1010
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 35b0f60f7eb3be887598e7ffaf3e3eae74aefcff
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630794"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273557"
 ---
 # <a name="fatal-error-c1010"></a>Error irrecuperable C1010
 
-final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Olvidó agregar ' #include nombre ' al origen?
+> final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Olvidó agregar ' #include *nombre*' al origen?
 
-Un archivo de inclusión especificado con [/Yu](../../build/reference/yu-use-precompiled-header-file.md) no aparece en el archivo de código fuente.  Esta opción está habilitada de forma predeterminada en la C++ mayoría de los tipos de proyecto de Visual Studio y *PCH. h* (*stdafx. h* en Visual Studio 2017 y versiones anteriores) es el archivo de inclusión predeterminado especificado por esta opción.
+## <a name="remarks"></a>Comentarios
+
+Un archivo de inclusión especificado por [/Yu](../../build/reference/yu-use-precompiled-header-file.md) no aparece en el archivo de código fuente. Esta opción está habilitada de forma predeterminada en muchos C++ tipos de proyecto de Visual Studio. El archivo de inclusión predeterminado especificado por esta opción es *PCH. h*o *stdafx. h* en Visual Studio 2017 y versiones anteriores.
 
 En el entorno de Visual Studio, use uno de los métodos siguientes para resolver este error:
 
-- Si no usa encabezados precompilados en el proyecto, establezca la propiedad **crear o usar encabezado** precompilado de archivos de código fuente en **no usar encabezados**precompilados. Para establecer esta opción del compilador, siga estos pasos:
+- Asegúrese de que no ha eliminado, cambiado de nombre o quitado accidentalmente el archivo de encabezado *PCH. h* o el archivo de código fuente *PCH. cpp* del proyecto actual. (En proyectos anteriores, estos archivos se pueden denominar *stdafx. h* y *stdafx. cpp*).
 
-   1. En el panel Explorador de soluciones del proyecto, haga clic con el botón secundario en el nombre del proyecto y, a continuación, haga clic en **propiedades**.
+- Asegúrese de que el archivo de encabezado *PCH. h* o *stdafx. h* se incluye antes que cualquier otra directiva de código o preprocesador en los archivos de código fuente. (En Visual Studio, este archivo de encabezado se especifica mediante la propiedad de proyecto de **archivo de encabezado precompilado** ).
 
-   1. En el panel izquierdo, haga clic en la carpeta **C/C++**  .
+- Puede desactivar el uso de encabezados precompilados. Si desactiva los encabezados precompilados, puede afectar gravemente al rendimiento de la compilación.
 
-   1. Haga clic en el nodo **encabezados** precompilados.
+### <a name="to-turn-off-precompiled-headers"></a>Para desactivar los encabezados precompilados
 
-   1. En el panel derecho, haga clic en **crear o usar encabezado**precompilado y, a continuación, haga clic en **no usar encabezados**precompilados.
+Para desactivar el uso de encabezados precompilados en un proyecto, siga estos pasos:
 
-- Asegúrese de que no ha eliminado accidentalmente, cambiado de nombre o quitado el archivo de encabezado (de forma predeterminada, stdafx. h) del proyecto actual. Este archivo también debe incluirse antes que cualquier otro código de los archivos de código fuente mediante **#include "stdafx. h"** . (Este archivo de encabezado se especifica como **crear/usar PCH a través** de la propiedad de proyecto de archivo)
+1. En la ventana **Explorador de soluciones** , haga clic con el botón secundario en el nombre del proyecto y, a continuación, elija **propiedades** para abrir el cuadro de diálogo **páginas de propiedades** del proyecto.
+
+1. En el menú desplegable **configuración** , seleccione **todas las configuraciones**.
+
+1. Seleccione las **propiedades** > de configuración Página de propiedades encabezados de > **C/C++** **precompilados** .
+
+1. En la lista de propiedades, seleccione la lista desplegable de la propiedad de **encabezado precompilado** y, a continuación, elija **no usar encabezados precompilados**. Elija **Aceptar** para guardar los cambios.
+
+1. En la ventana de **Explorador de soluciones** , haga clic con el botón secundario en el archivo de código fuente *PCH. cpp* del proyecto. (En proyectos anteriores, el archivo puede tener el nombre *stdafx. cpp*). Elija **excluir del proyecto** para quitarlo de la compilación.
+
+1. Use el comando de menú **compilar** > **solución limpia** para cada configuración que cree para eliminar cualquier archivo *Nombre_proyecto. pch* en los directorios de compilación intermedios.
+
+## <a name="see-also"></a>Vea también
+
+[Archivos de encabezado precompilados](../../build/creating-precompiled-header-files.md)\
+[/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md)\
+[/Yu (usar el archivo de encabezado precompilado)](../../build/reference/yu-use-precompiled-header-file.md)
