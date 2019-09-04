@@ -1,6 +1,6 @@
 ---
-title: '#Importar directiva) (C++)'
-ms.date: 03/27/2019
+title: '#import (Directiva) (C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,61 +12,59 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afd05e7380ec3838fe9763be23ccfae338adb4fb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407684"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220267"
 ---
-# <a name="import-directive-c"></a>#import (Directiva) (C++)
+# <a name="import-directive-c"></a>Directiva #import (C++)
 
-**Específicos de C++**
+**C++Cuestión**
 
 Se utiliza para incorporar información de una biblioteca de tipos. El contenido de la biblioteca de tipos se convierte en clases de C++, que describen fundamentalmente las interfaces COM.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-#import "filename" [attributes]
-#import <filename> [attributes]
-```
+> **#import** *atributos*"*filename*" \[] \
+> **#import**> atributos de nombre dearchivo\[] \<
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*<br/>
-Especifica la biblioteca de tipos que se va a importar. *nombre de archivo* puede ser uno de los siguientes:
+*extensión*\
+Especifica la biblioteca de tipos que se va a importar. El *nombre de archivo* puede ser uno de los siguientes tipos:
 
-- El nombre de un archivo que contiene una biblioteca de tipos, como un archivo .olb, .tlb o .dll. La palabra clave, **archivo:**, puede preceder a cada nombre de archivo.
+- El nombre de un archivo que contiene una biblioteca de tipos, como un archivo .olb, .tlb o .dll. La palabra clave `file:`,, puede preceder a cada nombre de archivo.
 
-- El identificador de programa de un control en la biblioteca de tipos. La palabra clave, **progid:**, puede preceder a cada identificador de programa. Por ejemplo:
+- El identificador de programa de un control en la biblioteca de tipos. La palabra clave `progid:`,, puede preceder a cada ProgID. Por ejemplo:
 
     ```cpp
     #import "progid:my.prog.id.1.5"
     ```
 
-   Para obtener más información sobre los ProgID, consulte [especificando el identificador de localización y el número de versión](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
+   Para obtener más información sobre los ProgID, vea [especificar el identificador de localización y el número de versión](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
 
-   Tenga en cuenta que al compilar con un compilador cruzado en un sistema operativo de 64 bits, el compilador podrá leer únicamente el subárbol del Registro de 32 bits. Es posible que desee utilizar el compilador de 64 bits nativo para compilar y registrar una biblioteca de tipos de 64 bits.
+   Cuando se usa un compilador cruzado de 32 bits en un sistema operativo de 64 bits, el compilador solo puede leer el subárbol del registro de 32 bits. Es posible que desee utilizar el compilador de 64 bits nativo para compilar y registrar una biblioteca de tipos de 64 bits.
 
-- El identificador de biblioteca de la biblioteca de tipos. La palabra clave, **libid:**, puede preceder a cada identificador de biblioteca. Por ejemplo:
+- El identificador de biblioteca de la biblioteca de tipos. La palabra clave `libid:`,, puede preceder a cada identificador de biblioteca. Por ejemplo:
 
     ```cpp
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")
     ```
 
-   Si no especifica versión o el lcid, el [reglas](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) que se aplican a **progid:** también se aplican a **libid:**.
+   `version` Si no especifica ni `lcid`, las [reglas](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) aplicadas a `progid:` también se aplican `libid:`a.
 
 - Un archivo ejecutable (.exe).
 
-- Un archivo de biblioteca (.dll) que contiene un recurso de biblioteca de tipos (como .ocx).
+- Un archivo de biblioteca (. dll) que contiene un recurso de biblioteca de tipos (como. ocx).
 
 - Un documento compuesto que contiene una biblioteca de tipos.
 
-- Cualquier otro formato de archivo que pueda entender el **LoadTypeLib** API.
+- Cualquier otro formato de archivo que pueda entender la API **LoadTypeLib** .
 
-*Atributos*<br/>
-Uno o varios [atributos #import](#_predir_the_23import_directive_import_attributes). Separa los atributos con un espacio en blanco o con una coma. Por ejemplo:
+*sus*\
+Uno o más [atributos de #import](#_predir_the_23import_directive_import_attributes). Separa los atributos con un espacio en blanco o con una coma. Por ejemplo:
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
@@ -80,16 +78,16 @@ O bien
 
 ## <a name="remarks"></a>Comentarios
 
-## <a name="_predir_the_23import_directive_searchorderforfilename"></a> Orden de búsqueda de nombre de archivo
+### <a name="_predir_the_23import_directive_searchorderforfilename"></a>Orden de búsqueda de nombre de archivo
 
-*nombre de archivo* va precedido opcionalmente por una especificación de directorio. El nombre de archivo debe designar un archivo existente. La diferencia entre las dos formas de sintaxis es el orden en que el preprocesador busca los archivos de biblioteca de tipos cuando no se especifica completamente la ruta de acceso.
+el *nombre de archivo* está precedido opcionalmente por una especificación de directorio. El nombre de archivo debe designar un archivo existente. La diferencia entre las dos formas de sintaxis es el orden en que el preprocesador busca los archivos de biblioteca de tipos cuando no se especifica completamente la ruta de acceso.
 
-|Forma de sintaxis|Acción|
+|Forma de sintaxis|.|
 |-----------------|------------|
-|Formato con comillas|Indica al preprocesador que busque archivos de biblioteca de tipos primero en el directorio del archivo que contiene el **#import** instrucción y, a continuación, en los directorios de los archivos que incluyen (`#include`) ese archivo. A continuación, el preprocesador busca en las rutas de acceso que se muestran a continuación.|
-|Formato con corchetes angulares|Indica al preprocesador que busque archivos de biblioteca de tipos en las siguientes rutas de acceso:<br /><br /> 1.  El `PATH` lista de la ruta de la variable de entorno<br />2.  El `LIB` lista de la ruta de la variable de entorno<br />3.  La ruta de acceso especificada por el /I (más directorios de inclusión) la opción del compilador, excepto que el compilador busca una biblioteca de tipos que se hace referencia desde otra biblioteca de tipos con el [no_registry](../preprocessor/no-registry.md) atributo.|
+|Formato con comillas|Indica al preprocesador que busque primero los archivos de biblioteca de tipos en el directorio del archivo que contiene la instrucción **#import** y, a continuación, en los directorios de los archivos que`#include`incluyan () ese archivo. A continuación, el preprocesador busca en las rutas de acceso que se muestran a continuación.|
+|Formato con corchetes angulares|Indica al preprocesador que busque archivos de biblioteca de tipos en las siguientes rutas de acceso:<br /><br /> 1.  La `PATH` lista de rutas de la variable de entorno<br />2.  La `LIB` lista de rutas de la variable de entorno<br />3.  La ruta de acceso especificada por la opción del compilador [/i](../build/reference/i-additional-include-directories.md) , salvo que el compilador busca una biblioteca de tipos a la que se hizo referencia desde otra biblioteca de tipos con el atributo [no_registry](../preprocessor/no-registry.md) .|
 
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Especifica el identificador de localización y el número de versión
+### <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Especificar el identificador de localización y el número de versión
 
 Cuando especifica un identificador de programa, también puede especificar el identificador y el número de versión de localización del identificador de programa. Por ejemplo:
 
@@ -97,40 +95,41 @@ Cuando especifica un identificador de programa, también puede especificar el id
 #import "progid:my.prog.id" lcid("0") version("4.0)
 ```
 
-Si no especifica un identificador de localización, se elige un identificador de programa de acuerdo con las reglas siguientes:
+Si no especifica un identificador de localización, se elige un ProgID según las siguientes reglas:
 
-- Si solo hay un identificador de localización, es el que se utiliza.
+- Si solo hay un identificador de localización, se usa uno.
 
 - Si hay más de un identificador de localización, se usa el primero con el número de versión 0, 9 o 409.
 
-- Si hay más de un identificador de localización y ninguno de ellos es 0, 9 o 409, se utiliza el último.
+- Si hay más de un identificador de localización y ninguno de ellos es 0, 9 o 409, se usa el último.
 
 - Si no especifica un número de versión, se utiliza la versión más reciente.
 
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Archivos de encabezado creados con la importación
+###  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Archivos de encabezado creados por la importación
 
-**#import** crea dos archivos de encabezado que reconstruyen el contenido de la biblioteca de tipos en código fuente de C++. El archivo de encabezado principal es similar al generado por el compilador de Lenguaje de definición de interfaz de Microsoft (MIDL), pero con código y datos adicionales generados por el compilador. El [archivo de encabezado principal](#_predir_the_primary_type_library_header_file) tiene el mismo nombre base que la biblioteca de tipos, más una. Extensión TLH. El archivo de encabezado secundario tiene el mismo nombre base que la biblioteca de tipos, con una extensión .TLI. Contiene implementaciones para funciones miembro generadas por el compilador y se incluye (`#include`) en el archivo de encabezado principal.
+**#import** crea dos archivos de encabezado que reconstruyen el contenido de C++ la biblioteca de tipos en el código fuente. El archivo de encabezado principal es similar al generado por el compilador Lenguaje de definición de interfaz de Microsoft (MIDL), pero con código y datos adicionales generados por el compilador. El [archivo de encabezado principal](#_predir_the_primary_type_library_header_file) tiene el mismo nombre base que la biblioteca de tipos, más una. Extensión de TLH. El archivo de encabezado secundario tiene el mismo nombre base que la biblioteca de tipos, con una extensión .TLI. Contiene implementaciones para funciones miembro generadas por el compilador y se incluye (`#include`) en el archivo de encabezado principal.
 
-Si importa una propiedad dispinterface que utilice parámetros byref, #import no generará __declspec ([propiedad](../cpp/property-cpp.md)) instrucción para la función.
+Si se importa una propiedad dispinterface que `byref` usa parámetros, **#import** no genera una instrucción [_ _ declspec (Property)](../cpp/property-cpp.md) para la función.
 
-Ambos archivos de encabezado se colocan en el directorio de resultados especificado por la opción /Fo (asignar nombre al archivo objeto). Después, el compilador los lee y compila como si una directiva `#include` denominase el archivo de encabezado principal.
+Ambos archivos de encabezado se colocan en el directorio de salida especificado por la opción [/FO (nombre del archivo objeto)](../build/reference/fo-object-file-name.md) . Después, el compilador los Lee y compila como si el archivo de encabezado principal fuera nombrado `#include` por una directiva.
 
-Las siguientes optimizaciones del compilador vienen con el **#import** directiva:
+Las siguientes optimizaciones del compilador acompañan a la directiva **#import** :
 
 - El archivo de encabezado, cuando se crea, tiene la misma marca de tiempo que la biblioteca de tipos.
 
-- Cuando **#import** está procesado, el compilador comprueba primero si el encabezado existe y está actualizado. En caso afirmativo, no necesita volver a crearlo.
+- Cuando se procesa **#import** , el compilador comprueba primero si el encabezado existe y está actualizado. En caso afirmativo, no es necesario volver a crearlo.
 
-El **#import** directiva también participa en la recompilación mínima y puede colocarse en un archivo de encabezado precompilado. Consulte [crear archivos de encabezado precompilado](../build/creating-precompiled-header-files.md) para obtener más información.
+La Directiva de **#import** también participa en la recompilación mínima y puede colocarse en un archivo de encabezado precompilado.  Para obtener más información, vea [crear archivos de encabezado](../build/creating-precompiled-header-files.md)precompilados.
 
-###  <a name="_predir_the_primary_type_library_header_file"></a> Archivo de encabezado de biblioteca de tipos principal
+### <a name="_predir_the_primary_type_library_header_file"></a>Archivo de encabezado de la biblioteca de tipos principal
+
 El archivo de encabezado principal de la biblioteca de tipos se compone de siete secciones:
 
-- Encabezado reutilizable: Consta de los comentarios, `#include` instrucción para COMDEF. H (que define algunas macros estándar utilizadas en el encabezado) y otra información diversa del programa de instalación.
+- Encabezado reutilizable: Consta de los comentarios `#include` , la instrucción para COMDEF. H (que define algunas macros estándar utilizadas en el encabezado) y otra información de configuración diversa.
 
-- Las referencias adelantadas y definiciones de tipo: Consta de declaraciones de estructura como `struct IMyInterface` y definiciones de tipo.
+- Referencias adelantadas y definiciones de cadena: Consta de declaraciones de estructura como `struct IMyInterface` y definiciones de tipo.
 
-- Declaraciones de puntero inteligente: La clase de plantilla `_com_ptr_t` es una implementación de puntero inteligente que encapsula punteros de interfaz y elimina la necesidad de llamar a `AddRef`, `Release`, `QueryInterface` funciones. Además, oculta la llamada de `CoCreateInstance` al crear un nuevo objeto COM. En esta sección utiliza la instrucción de macro `_COM_SMARTPTR_TYPEDEF` para establecer definiciones de tipos de interfaces COM que sean especializaciones de plantilla de la [_com_ptr_t](../cpp/com-ptr-t-class.md) clase de plantilla. Por ejemplo, para la interfaz `IMyInterface`, el. Archivo TLH contendrá:
+- Declaraciones de puntero inteligente: La clase `_com_ptr_t` de plantilla es un puntero inteligente. Encapsula los punteros de interfaz y elimina la necesidad de llamar `AddRef`a las funciones, `QueryInterface` `Release`y. También oculta la `CoCreateInstance` llamada al crear un nuevo objeto com. En esta sección se utiliza la `_COM_SMARTPTR_TYPEDEF` instrucción de macro para establecer definiciones de tipo de interfaces com como especializaciones de plantilla de la clase de plantilla [_com_ptr_t](../cpp/com-ptr-t-class.md) . Por ejemplo, para la `IMyInterface`interfaz, el. El archivo TLH contendrá:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -142,27 +141,27 @@ El archivo de encabezado principal de la biblioteca de tipos se compone de siete
     typedef _com_ptr_t<_com_IIID<IMyInterface, __uuidof(IMyInterface)> > IMyInterfacePtr;
     ```
 
-   El tipo `IMyInterfacePtr` se puede utilizar a continuación en lugar del puntero de interfaz sin formato `IMyInterface*`. Por lo tanto, no hay ninguna necesidad de llamar a las diversas `IUnknown` funciones miembro
+   El tipo `IMyInterfacePtr` se puede utilizar a continuación en lugar del puntero de interfaz sin formato `IMyInterface*`. Por consiguiente, no es necesario llamar a las diversas `IUnknown` funciones miembro
 
-- Declaraciones de TypeInfo: Se compone principalmente de las definiciones de clase y otros elementos que exponen los elementos individuales de typeinfo devueltos por `ITypeLib:GetTypeInfo`. En esta sección, cada typeinfo de la biblioteca de tipos se refleja en el encabezado de forma dependiente de la información de `TYPEKIND`.
+- Declaraciones de TypeInfo: Se compone principalmente de definiciones de clase y otros elementos que exponen los elementos `ITypeLib:GetTypeInfo`TypeInfo individuales devueltos por. En esta sección, cada typeinfo de la biblioteca de tipos se refleja en el encabezado de forma dependiente de la información de `TYPEKIND`.
 
-- Definición de GUID de estilo anterior opcional: Contiene las inicializaciones de las constantes GUID con nombre. Estos son los nombres de la forma `CLSID_CoClass` y `IID_Interface`, similares a los generados por el compilador MIDL.
+- Definición de GUID de estilo antiguo opcional: Contiene inicializaciones de las constantes GUID con nombre. Estos nombres tienen el formato `CLSID_CoClass` y `IID_Interface`, de forma similar a los generados por el compilador de MIDL.
 
 - Instrucción `#include` para el encabezado secundario de la biblioteca de tipos.
 
-- Texto reutilizable de pie de página: Actualmente incluye `#pragma pack(pop)`.
+- REUTILIZADOR de pie de página: Incluye `#pragma pack(pop)`actualmente.
 
-Todas las secciones, excepto la sección de código reutilizable encabezado reutilizable y pie de página, se incluyen en un espacio de nombres con el nombre especificado por el `library` instrucción en el archivo IDL original. Puede utilizar los nombres del encabezado de la biblioteca de tipos, ya sea mediante una calificación explícita con el nombre del espacio de nombres o incluyendo la siguiente instrucción:
+Todas las secciones, excepto la sección de encabezado reutilizable y de pie de página reutilizable, se incluyen en `library` un espacio de nombres con el nombre especificado por la instrucción en el archivo IDL original. Puede utilizar los nombres del encabezado de la biblioteca de tipos mediante una calificación explícita con el nombre del espacio de nombres. O bien, puede incluir la siguiente instrucción:
 
 ```cpp
 using namespace MyLib;
 ```
 
-inmediatamente después de la **#import** instrucción en el código fuente.
+inmediatamente después de la instrucción **#import** en el código fuente.
 
-El espacio de nombres se puede suprimir utilizando el [no_namespace](no-namespace.md)) el atributo de la **#import** directiva. Sin embargo, la supresión del espacio de nombres puede dar lugar a conflictos de nombres. El espacio de nombres también se puede cambiar el nombre por el [rename_namespace](rename-namespace.md) atributo.
+El espacio de nombres se puede suprimir mediante el atributo [no_namespace](no-namespace.md)) de la directiva **#import** . Sin embargo, la supresión del espacio de nombres puede dar lugar a conflictos de nombres. También se puede cambiar el nombre del espacio de nombres por el atributo [rename_namespace](rename-namespace.md) .
 
-El compilador proporciona la ruta de acceso completa a cualquier dependencia de la biblioteca de tipos necesaria para la biblioteca de tipos que está actualmente en procesamiento. La ruta de acceso se escribe, en forma de comentarios, en el encabezado de la biblioteca de tipos (.TLH) que el compilador genera para cada biblioteca de tipos procesada.
+El compilador proporciona la ruta de acceso completa a cualquier dependencia de biblioteca de tipos necesaria para la biblioteca de tipos que se está procesando actualmente. La ruta de acceso se escribe, en forma de comentarios, en el encabezado de la biblioteca de tipos (.TLH) que el compilador genera para cada biblioteca de tipos procesada.
 
 Si una biblioteca de tipos contiene referencias a tipos definidos en otras bibliotecas de tipos, el archivo .TLH incluirá comentarios del siguiente tipo:
 
@@ -174,24 +173,24 @@ Si una biblioteca de tipos contiene referencias a tipos definidos en otras bibli
 //
 ```
 
-El nombre de archivo real en el **#import** comentario es la ruta de acceso completa de la biblioteca de tipos de referencia cruzada, tal como está almacenado en el registro. Si detecta errores que se deben a la falta de definiciones de tipo, compruebe los comentarios en el encabezado del archivo .TLH para ver qué bibliotecas de tipos dependientes han de importarse primero. Los errores probables son errores de sintaxis (por ejemplo, C2143, C2146, C2321), C2501 (faltan especificadores decl) o C2433 (“inline” no permitida en la declaración de datos) mientras se compila el archivo .TLI.
+El nombre de archivo real en el comentario **#import** es la ruta de acceso completa de la biblioteca de tipos a la que se hace referencia cruzada, tal como se almacena en el registro. Si se producen errores causados por definiciones de tipos que faltan, compruebe los comentarios en el encabezado de. TLH para ver qué bibliotecas de tipos dependientes se deben importar primero. Los errores probables son errores de sintaxis (por ejemplo, C2143, C2146, C2321), C2501 (faltan especificadores decl) o C2433 (“inline” no permitida en la declaración de datos) mientras se compila el archivo .TLI.
 
-Debe determinar cuál de la dependencia de comentarios no se proporcionan en caso contrario para con encabezados de sistema y, a continuación, proporcionan un **#import** la directiva en algún momento antes de la **#import** la directiva del dependiente biblioteca de tipos para resolver los errores.
+Para resolver los errores de dependencia, Determine cuál de los comentarios de dependencia no se proporciona de otro modo para los encabezados del sistema y, a continuación, proporcione una **#import** Directiva en algún momento antes de la directiva **#import** de la biblioteca de tipos dependientes.
 
-## <a name="_predir_the_23import_directive_import_attributes"></a> atributos #import
+### <a name="_predir_the_23import_directive_import_attributes"></a>atributos de #import
 
-**#import** puede incluir opcionalmente uno o varios atributos. Estos atributos indican al compilador que modifique el contenido de los encabezados de la biblioteca de tipos. Una barra diagonal inversa (**\\**) símbolo puede usarse para incluir líneas adicionales en una sola **#import** instrucción. Por ejemplo:
+**#import** puede incluir opcionalmente uno o más atributos. Estos atributos indican al compilador que modifique el contenido de los encabezados de la biblioteca de tipos. Se puede usar un **\\** símbolo de barra diagonal inversa () para incluir líneas adicionales en una única instrucción **#import** . Por ejemplo:
 
 ```cpp
 #import "test.lib" no_namespace \
    rename("OldName", "NewName")
 ```
 
-Para obtener más información, consulte [atributos #import](../preprocessor/hash-import-attributes-cpp.md).
+Para obtener más información, vea [atributos de #import](../preprocessor/hash-import-attributes-cpp.md).
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas de preprocesador](../preprocessor/preprocessor-directives.md)<br/>
+[Directivas de preprocesador](../preprocessor/preprocessor-directives.md)\
 [Compatibilidad con COM del compilador](../cpp/compiler-com-support.md)

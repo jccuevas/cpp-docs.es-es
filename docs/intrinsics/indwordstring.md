@@ -1,6 +1,6 @@
 ---
 title: __indwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indwordstring
 - __indwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263794"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217839"
 ---
-# <a name="indwordstring"></a>__indwordstring
+# <a name="__indwordstring"></a>__indwordstring
 
 **Específicos de Microsoft**
 
-Lee datos desde el puerto especificado mediante el `rep insd` instrucción.
+Lee datos del puerto especificado mediante la `rep insd` instrucción.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __indwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __indwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Puerto*<br/>
-[in] Para leer desde el puerto.
+*Casilla*\
+de Puerto desde el que se va a leer.
 
-*búfer*<br/>
-[out] Los datos leídos desde el puerto se escriben aquí.
+*Búfer*\
+enuncia Aquí se escriben los datos leídos del puerto.
 
-*Recuento*<br/>
-[in] El número de bytes de datos que se va a leer.
+*Contabiliza*\
+de Número de bytes de datos que se van a leer.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,7 +48,7 @@ void __indwordstring(
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -58,4 +58,4 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)
