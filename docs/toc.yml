@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: Modificación de las propiedades y los destinos sin cambiar el archivo de proyecto
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: "Clang/LLVM en proyectos de Visual\_Studio (MSBuild)"
+          href: build/clang-support-msbuild.md
         - name: Bibliotecas de referencia y los componentes en tiempo de compilación
           href: build/adding-references-in-visual-cpp-projects.md
         - name: Organización de archivos de salida del proyecto
@@ -4729,10 +4731,10 @@
                       href: preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md
                     - name: '#import (Directiva) (C++)'
                       href: preprocessor/hash-import-directive-cpp.md
-                    - name: '#import (Atributos) (C++)'
+                    - name: '#import (atributos) (C++)'
                       expanded: false
                       items:
-                        - name: '#import (Atributos) (C++)'
+                        - name: '#import (atributos) (C++)'
                           href: preprocessor/hash-import-attributes-cpp.md
                         - name: auto_rename
                           href: preprocessor/auto-rename.md
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef (Directiva) (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using (directiva) (C++)'
+                    - name: '#using (directiva) (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: Operadores de preprocesador
                   expanded: false
