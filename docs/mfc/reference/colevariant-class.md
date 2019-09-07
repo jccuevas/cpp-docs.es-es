@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503051"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739789"
 ---
 # <a name="colevariant-class"></a>COleVariant (clase)
 
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Comentarios
 
-Este tipo de datos se utiliza en la automatización OLE. En concreto, la estructura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams) contiene un puntero a una matriz de estructuras variantes. Una `DISPPARAMS` estructura se utiliza para pasar parámetros a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
+Este tipo de datos se utiliza en la automatización OLE. En concreto, la estructura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) contiene un puntero a una matriz de estructuras variantes. Una `DISPPARAMS` estructura se utiliza para pasar parámetros a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
 > [!NOTE]
 > Esta clase se deriva de la `VARIANT` estructura. Esto significa que puede pasar un `COleVariant` en un parámetro que llama a para `VARIANT` un y que los miembros de datos `VARIANT` de la estructura son miembros de `COleVariant`datos accesibles de.
 
 Las dos clases MFC relacionadas [COleCurrency](../../mfc/reference/colecurrency-class.md) y [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) encapsulan los tipos de datos Variant Currency `VT_CY`() y Date `VT_DATE`(). La `COleVariant` clase se utiliza exhaustivamente en las clases DAO; vea estas clases para el uso típico de esta clase, por ejemplo, [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) y [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Para obtener más información, vea las entradas [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)y [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) en el Windows SDK.
+Para obtener más información, vea las entradas [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)y [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) en el Windows SDK.
 
 Para obtener más información sobre `COleVariant` la clase y su uso en la automatización OLE, vea "pasar parámetros en la automatización OLE" en el artículo [automatización](../../mfc/automation.md).
 

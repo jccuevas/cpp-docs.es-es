@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 61a5f83e31b4793ca6467287c99f3b9708659402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505229"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739474"
 ---
 # <a name="cmfcmenubar-class"></a>Clase CMFCMenuBar
 
@@ -800,7 +800,7 @@ TRUE si el método se realizó correctamente; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Use el método [CMFCMenuBar::](#savestate) SaveState para guardar el estado de la barra de menús en el registro. La información guardada incluye los elementos de menú, el estado de acoplamiento y la posición de la barra de menús.
+Use el método [CMFCMenuBar:: SaveState](#savestate) para guardar el estado de la barra de menús en el registro. La información guardada incluye los elementos de menú, el estado de acoplamiento y la posición de la barra de menús.
 
 En la mayoría de los casos, la `LoadState`aplicación no llama a. El marco llama a este método cuando inicializa el área de trabajo.
 
@@ -946,7 +946,7 @@ TRUE si es correcto; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Normalmente, la aplicación no llama a `SaveState`. El marco llama a este método cuando se serializa el área de trabajo. Para obtener más información, vea [CWinAppEx::](../../mfc/reference/cwinappex-class.md#savestate)SaveState.
+Normalmente, la aplicación no llama a `SaveState`. El marco llama a este método cuando se serializa el área de trabajo. Para obtener más información, vea [CWinAppEx:: SaveState](../../mfc/reference/cwinappex-class.md#savestate).
 
 La información guardada incluye los elementos de menú, el estado de acoplamiento y la posición de la barra de menús.
 
@@ -1037,7 +1037,7 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>Parámetros
 
 *lpLogFont*<br/>
-de Puntero a una estructura [LOGFONT](/windows/win32/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) que define la fuente que se va a establecer.
+de Puntero a una estructura [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta) que define la fuente que se va a establecer.
 
 *bHorz*<br/>
 de TRUE si desea que se use el parámetro *lpLogFont* para la fuente vertical, false si desea que se use para la fuente horizontal.

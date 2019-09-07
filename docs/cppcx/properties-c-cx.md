@@ -2,16 +2,16 @@
 title: Propiedades (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375228"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741092"
 ---
 # <a name="properties-ccx"></a>Propiedades (C++/CX)
 
-Los tipos en tiempo de ejecución de Windows exponen los datos públicos como propiedades. El código de cliente tiene acceso a la propiedad como un objeto datamember público. Internamente, la propiedad se implementa como un bloque que contiene un método de descriptor de acceso get, un método de descriptor de acceso set o ambos. Mediante los métodos de descriptor de acceso, puedes realizar acciones adicionales antes o después de recuperar el valor; por ejemplo, puedes desencadenar un evento o realizar comprobaciones de validación.
+Windows Runtime tipos exponen los datos públicos como propiedades. El código de cliente tiene acceso a la propiedad como un objeto datamember público. Internamente, la propiedad se implementa como un bloque que contiene un método de descriptor de acceso get, un método de descriptor de acceso set o ambos. Mediante los métodos de descriptor de acceso, puedes realizar acciones adicionales antes o después de recuperar el valor; por ejemplo, puedes desencadenar un evento o realizar comprobaciones de validación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -38,5 +38,5 @@ Ten en cuenta que no se puede inicializar una propiedad en una lista de miembros
 ## <a name="see-also"></a>Vea también
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)

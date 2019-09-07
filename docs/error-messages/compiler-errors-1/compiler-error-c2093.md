@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C2093
 ms.assetid: 17529a70-9169-46b5-9fc6-57a5ce224e6a
 ms.openlocfilehash: d57b452e63f7bf76051ef6a23c5f8f6ba81aed1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511155"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741154"
 ---
 # <a name="compiler-error-c2093"></a>Error del compilador C2093
 
-'variable1': no se puede inicializar utilizando la dirección de la variable automática 'variable2'
+' variable1 ': no se puede inicializar con la dirección de la variable automática ' variable2 '
 
-Cuando se compila con [/Za](../../build/reference/za-ze-disable-language-extensions.md), el programa ha intentado usar la dirección de una variable automática como inicializador.
+Al compilar con [/za](../../build/reference/za-ze-disable-language-extensions.md), el programa ha intentado usar la dirección de una variable automática como inicializador.
 
-El ejemplo siguiente genera C2093:
+En el ejemplo siguiente se genera C2093:
 
 ```
 // C2093.c

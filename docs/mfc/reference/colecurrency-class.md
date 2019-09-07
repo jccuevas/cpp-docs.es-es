@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: a23bc489fce00d9ba0be6a3aa71468b469bf54c8
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fc7c64ada1100b0fc0a51670de3e8ec04b141b04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177407"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741650"
 ---
 # <a name="colecurrency-class"></a>Clase COleCurrency
 
@@ -128,7 +128,7 @@ Todos estos constructores crean nuevos `COleCurrency` objetos inicializados en e
 
 - COleCurrency () crea un `COleCurrency` objeto inicializado en 0 (cero).
 
-- COleCurrency (`cySrc`) crea un `COleCurrency` objeto a partir de un valor de [moneda](/windows/win32/api/wtypes/ns-wtypes-cy) .
+- COleCurrency (`cySrc`) crea un `COleCurrency` objeto a partir de un valor de [moneda](/windows/win32/api/wtypes/ns-wtypes-cy~r1) .
 
 - COleCurrency (`curSrc`) crea un `COleCurrency` objeto a partir de un `COleCurrency` objeto existente. El nuevo objeto tiene el mismo estado que el objeto de origen.
 
@@ -136,7 +136,7 @@ Todos estos constructores crean nuevos `COleCurrency` objetos inicializados en e
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency a partir de los componentes numéricos especificados. Si el valor absoluto de la parte fraccionaria es mayor que 10.000, se realiza el ajuste adecuado en las unidades. Tenga en cuenta que las unidades y la parte fraccionaria se especifican mediante valores Long con signo.
 
-Para obtener más información, consulte las entradas [Currency](/windows/win32/api/wtypes/ns-wtypes-cy) y [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) en el Windows SDK.
+Para obtener más información, consulte las entradas [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1) y [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
@@ -236,14 +236,14 @@ Para obtener más información sobre las operaciones que pueden establecer el es
 
 ##  <a name="m_cur"></a>  COleCurrency::m_cur
 
-La estructura de [moneda](/windows/win32/api/wtypes/ns-wtypes-cy) subyacente de `COleCurrency` este objeto.
+La estructura de [moneda](/windows/win32/api/wtypes/ns-wtypes-cy~r1) subyacente de `COleCurrency` este objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 > [!CAUTION]
 >  Al cambiar el valor de `CURRENCY` la estructura a la que accede el puntero devuelto por esta función, cambiará `COleCurrency` el valor de este objeto. No cambia el estado de este `COleCurrency` objeto.
 
-Para obtener más información, vea la entrada de [moneda](/windows/win32/api/wtypes/ns-wtypes-cy) en el Windows SDK.
+Para obtener más información, vea la entrada de [moneda](/windows/win32/api/wtypes/ns-wtypes-cy~r1) en el Windows SDK.
 
 ##  <a name="m_status"></a>  COleCurrency::m_status
 
@@ -314,7 +314,7 @@ A continuación se muestra una breve descripción de cada operador:
 
 - **Operator = (** *varSrc* **)** Si la conversión `VARIANT` del valor (o objeto [COleVariant](../../mfc/reference/colevariant-class.md) ) en una moneda ( `VT_CY`) es correcta, el valor convertido se copia en este `COleCurrency` objeto y su estado se establece en válido. Si la conversión no se realiza correctamente, el valor del `COleCurrency` objeto se establece en 0 y su estado en no válido.
 
-Para obtener más información, consulte las entradas [Currency](/windows/win32/api/wtypes/ns-wtypes-cy) y [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) en el Windows SDK.
+Para obtener más información, consulte las entradas [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1) y [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
@@ -553,7 +553,7 @@ Nuevo estado de este `COleCurrency` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-El valor del parámetro status se define `CurrencyStatus` mediante el tipo enumerado, que se define `COleCurrency` en la clase.
+El valor del parámetro *status* se define `CurrencyStatus` mediante el tipo enumerado, que se define `COleCurrency` en la clase.
 
 ```
 enum CurrencyStatus {

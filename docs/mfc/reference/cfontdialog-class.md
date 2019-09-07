@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506467"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741558"
 ---
 # <a name="cfontdialog-class"></a>Clase CFontDialog
 
@@ -146,7 +146,7 @@ CFontDialog(
 Puntero a una estructura de datos [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) que permite establecer algunas de las características de la fuente.
 
 *charFormat*<br/>
-Puntero a una estructura de datos [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) que permite establecer algunas de las características de la fuente en un control Rich Edit.
+Puntero a una estructura de datos [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) que permite establecer algunas de las características de la fuente en un control Rich Edit.
 
 *dwFlags*<br/>
 Especifica uno o más marcadores CHOOSEFONT. Se pueden combinar uno o más valores preestablecidos mediante el operador bit a bit OR. Si modifica el miembro de estructura de `m_cf.Flag`, procure usar un operador bit a bit OR en los cambios que realice para que el comportamiento predeterminado siga intacto. Para obtener más información sobre cada una de estas marcas, consulte la descripción de la estructura [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) en el Windows SDK.
@@ -203,7 +203,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>Parámetros
 
 *cf*<br/>
-Estructura [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) que contiene información sobre el formato de caracteres de la fuente seleccionada.
+Estructura [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) que contiene información sobre el formato de caracteres de la fuente seleccionada.
 
 ##  <a name="getcolor"></a>  CFontDialog::GetColor
 

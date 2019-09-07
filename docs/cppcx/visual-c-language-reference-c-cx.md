@@ -1,15 +1,15 @@
 ---
-title: Referencia del lenguaje Visual C++ (C++/CX)
+title: C++Referencia del lenguaje/CX
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 0b2d344f9889d5669164cd917ba569b5f35d83a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ed8e2374daf862e99517fb113e869504b7c7aabc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498424"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740865"
 ---
-# <a name="visual-c-language-reference-ccx"></a>Referencia del lenguaje Visual C++ (C++/CX)
+# <a name="ccx-language-reference"></a>C++Referencia del lenguaje/CX
 
 C++/CX es un conjunto de extensiones para el C++ lenguaje que permiten la creación de aplicaciones de Windows y Windows Runtime componentes en una expresión que sea lo más cercana posible a C++la moderna. Use C++/CX para escribir aplicaciones y componentes de Windows en código nativo que interactúen C#fácilmente con visual, Visual Basic y JavaScript, y con otros lenguajes que admitan el Windows Runtime. En los casos excepcionales que requieren acceso directo a las interfaces COM sin procesar, o a código no excepcional, puede usar la [biblioteca C++ de plantillas de Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
@@ -38,4 +38,4 @@ Con C++/CX, puede crear:
 |[Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)|Hace referencia a documentación para el espacio de nombres predeterminado, el espacio de nombres Platform, Platform::Collections y los espacios de nombres relacionados.|
 |[Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Enumera las funciones de CRT que no se pueden usar en aplicaciones de Windows Runtime.|
 |[Introducción a las aplicaciones de Windows 10](/windows/uwp/get-started/)|Proporcionan orientación de alto nivel sobre las aplicaciones de Windows 10 y vínculos a más información.|
-|[C++/CX, parte 0 \[de\]n: Una introducción](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX, parte 1 \[de\]n: Una clase simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX, parte 2 \[de\]n: Tipos que desgasten los sombreros](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX, parte 3 \[de\]n: En construcción](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX, parte 4 \[de\]n: Funciones miembro estáticas](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Una serie de C++ blog visual introductorio C++en/CX.|
+|[C++/CX, parte 0 \[de\]n: Una introducción](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/CX, parte 1 \[de\]n: Una clase simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/CX, parte 2 \[de\]n: Tipos que desgasten los sombreros](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/CX, parte 3 \[de\]n: En construcción](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/CX, parte 4 \[de\]n: Funciones miembro estáticas](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Una serie de blog introductorio C++en/CX.|

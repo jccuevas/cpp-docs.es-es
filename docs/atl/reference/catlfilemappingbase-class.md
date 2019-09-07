@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497771"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739548"
 ---
 # <a name="catlfilemappingbase-class"></a>Clase CAtlFileMappingBase
 
@@ -190,7 +190,7 @@ Tamaño de la asignación. Si es 0, el tamaño máximo del objeto de asignación
 El desplazamiento de archivo donde se va a comenzar la asignación. El valor de desplazamiento debe ser un múltiplo de la granularidad de asignación de memoria del sistema.
 
 *dwMappingProtection*<br/>
-La protección deseada para la vista de archivos cuando el archivo está asignado. Consulte *flProtect* en [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) en el Windows SDK.
+La protección deseada para la vista de archivos cuando el archivo está asignado. Consulte *flProtect* en [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) en el Windows SDK.
 
 *dwViewDesiredAccess*<br/>
 Especifica el tipo de acceso a la vista de archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) en el Windows SDK.
@@ -201,7 +201,7 @@ Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Una vez creado un objeto de asignación de archivos, el tamaño del archivo no debe superar el tamaño del objeto de asignación de archivos. en caso contrario, no todo el contenido del archivo estará disponible para el uso compartido. Para obtener más información, consulte [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) y [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) en el Windows SDK.
+Una vez creado un objeto de asignación de archivos, el tamaño del archivo no debe superar el tamaño del objeto de asignación de archivos. en caso contrario, no todo el contenido del archivo estará disponible para el uso compartido. Para obtener más información, consulte [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) y [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
@@ -233,7 +233,7 @@ Nombre del objeto de asignación.
 Apunta a un valor BOOL que se establece en TRUE si el objeto de asignación ya existía.
 
 *lpsa*<br/>
-Puntero a una `SECURITY_ATTRIBUTES` estructura que determina si los procesos secundarios pueden heredar el identificador devuelto. Consulte *lpAttributes* en [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) en el Windows SDK.
+Puntero a una `SECURITY_ATTRIBUTES` estructura que determina si los procesos secundarios pueden heredar el identificador devuelto. Consulte *lpAttributes* en [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) en el Windows SDK.
 
 *dwMappingProtection*<br/>
 La protección deseada para la vista de archivo cuando se asigna el archivo. Vea *flProtect* en `CreateFileMapping` en el Windows SDK.
@@ -247,7 +247,7 @@ Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`MapShareMem`permite que un objeto de asignación de archivos existente, creado por [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), se comparta entre los procesos.
+`MapShareMem`permite que un objeto de asignación de archivos existente, creado por [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), se comparta entre los procesos.
 
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
 

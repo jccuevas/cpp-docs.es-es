@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bbd1f60c3628d5fcd103e220362004ec34ab2c41
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502139"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740992"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 
@@ -1314,7 +1314,7 @@ Especifica si la acción predeterminada que se va a invocar es la del objeto o d
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1346,7 +1346,7 @@ Recibe información que identifica el objeto en el punto especificado por *xLeft
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::accHitTest` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::accHitTest` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1388,7 +1388,7 @@ Especifica si la ubicación que se va a recuperar es la del objeto o de uno de l
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::accLocation` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::accLocation` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1420,7 +1420,7 @@ Recibe información sobre el objeto de interfaz de usuario de destino. Vea *pvar
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::accNavigate` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::accNavigate` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1450,7 +1450,7 @@ Especifica el objeto que se va a seleccionar. Este parámetro puede ser CHILDID_
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::accSelect` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::accSelect` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1944,7 +1944,7 @@ TRUE si el método se realizó correctamente; en caso contrario, FALSE.
 
 Utilice la función [AfxRegisterWndClass (](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) para registrar clases de ventana. Las clases de ventana definidas por el usuario están disponibles en el módulo en el que están registradas.
 
-Se llama al método [CWnd::](#oncreate) alcreate antes `Create` de que el método devuelva y antes de que la ventana se vuelva visible.
+Se llama al método [CWnd:: alcreate](#oncreate) antes `Create` de que el método devuelva y antes de que la ventana se vuelva visible.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2169,7 +2169,7 @@ Para una ventana secundaria, el identificador de la ventana primaria; de lo cont
 En el caso de una ventana secundaria, el identificador de la ventana. de lo contrario, el ID. de un menú para la ventana.
 
 *lpParam*<br/>
-Puntero a los datos de usuario que se pasan al método [CWnd::](#oncreate) alcreate en el campo *lpCreateParams* .
+Puntero a los datos de usuario que se pasan al método [CWnd:: Alcreate](#oncreate) en el campo *lpCreateParams* .
 
 *rect*<br/>
 Tamaño y ubicación de la ventana con respecto a la pantalla o la ventana primaria.
@@ -2197,7 +2197,7 @@ Utilice la función [AfxRegisterWndClass (](../../mfc/reference/application-info
 
 Las dimensiones de las ventanas secundarias son relativas a la esquina superior izquierda del área cliente de la ventana primaria. Las dimensiones de las ventanas de nivel superior son relativas a la esquina superior izquierda de la pantalla.
 
-Se llama al método [CWnd::](#oncreate) alcreate antes `CreateEx` de que el método devuelva y antes de que la ventana se vuelva visible.
+Se llama al método [CWnd:: alcreate](#oncreate) antes `CreateEx` de que el método devuelva y antes de que la ventana se vuelva visible.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2864,12 +2864,12 @@ TRUE si la información sobre herramientas está habilitada; en caso contrario, 
 
 ### <a name="remarks"></a>Comentarios
 
-Invalide [OnToolHitTest](#ontoolhittest) para proporcionar el struct o struct de [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) para la ventana.
+Invalide [OnToolHitTest](#ontoolhittest) para proporcionar el struct o struct de [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) para la ventana.
 
 > [!NOTE]
 > Algunas ventanas, como [CToolBar](../../mfc/reference/ctoolbar-class.md), proporcionan una implementación integrada de [OnToolHitTest](#ontoolhittest).
 
-Vea [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) en el Windows SDK para obtener más información sobre esta estructura.
+Vea [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) en el Windows SDK para obtener más información sobre esta estructura.
 
 Simplemente llamar `EnableToolTips` a no es suficiente para mostrar la información sobre herramientas para los controles secundarios a menos que la `CFrameWnd`ventana primaria se derive de. Esto se debe `CFrameWnd` a que proporciona un controlador predeterminado para la notificación TTN_NEEDTEXT. Si la ventana primaria no se deriva de `CFrameWnd`, es decir, si se trata de un cuadro de diálogo o una vista de formulario, la información sobre herramientas de los controles secundarios no se mostrará correctamente a menos que proporcione un controlador para la notificación de la información sobre herramientas TTN_NEEDTEXT. Vea la [información sobre herramientas](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
@@ -3218,7 +3218,7 @@ Recibe la dirección de la interfaz del `IDispatch` objeto secundario.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3243,7 +3243,7 @@ Recibe el número de elementos secundarios.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3273,7 +3273,7 @@ Dirección de un BSTR que recibe una cadena localizada que describe la acción p
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3303,7 +3303,7 @@ Dirección de un BSTR que recibe una cadena localizada que describe el objeto es
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3328,7 +3328,7 @@ Recibe información sobre el objeto que tiene el foco. Vea *pvarID* en [IAccessi
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::get_accFocus` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::get_accFocus` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3358,7 +3358,7 @@ Dirección de un BSTR que recibe la cadena traducida que contiene la informació
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3392,7 +3392,7 @@ Identifica el tema del archivo de ayuda asociado al objeto especificado. Vea *pi
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::get_accHelpTopic` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::get_accHelpTopic` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3422,7 +3422,7 @@ Dirección de un BSTR que recibe una cadena localizada que identifica el método
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3452,7 +3452,7 @@ Dirección de un BSTR que recibe una cadena que contiene el nombre del objeto es
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3477,7 +3477,7 @@ Recibe la dirección de la interfaz del `IDispatch` objeto primario. La variable
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3507,7 +3507,7 @@ Recibe la información del rol. Vea *pvarRole* en [IAccessible:: get_accRole](/w
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::get_accRole` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::get_accRole` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3532,7 +3532,7 @@ Recibe información sobre qué elementos secundarios se seleccionan. Vea *pvarCh
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::get_accSelection` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::get_accSelection` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3562,7 +3562,7 @@ Recibe información sobre el estado del objeto. Vea *pvarState* en [IAccessible:
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en `IAccessible::get_accState` el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en `IAccessible::get_accState` el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3592,7 +3592,7 @@ Dirección del BSTR que recibe una cadena localizada que contiene el valor actua
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores** devueltos en [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) en el Windows SDK.
+Devuelve S_OK si se realiza correctamente, un código de error COM en caso de error. Vea **valores devueltos** en [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) en el Windows SDK.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -5825,7 +5825,7 @@ Objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) o [estructura Rect
 
 ### <a name="remarks"></a>Comentarios
 
-Para un objeto de nivel `CWnd` superior, los parámetros *x* e y son relativos a la esquina superior izquierda de la pantalla. En el caso `CWnd` de un objeto secundario, son relativos a la esquina superior izquierda del área cliente de la ventana primaria.
+Para un objeto de nivel `CWnd` superior, los parámetros x *e y son* relativos a la esquina superior izquierda de la pantalla. En el caso `CWnd` de un objeto secundario, son relativos a la esquina superior izquierda del área cliente de la ventana primaria.
 
 La `MoveWindow` función envía el mensaje [WM_GETMINMAXINFO](#ongetminmaxinfo) . El control de este `CWnd` mensaje ofrece la oportunidad de modificar los valores predeterminados de las ventanas más grandes y más pequeñas posibles. Si los parámetros de la `MoveWindow` función miembro superan estos valores, los valores mínimo y máximo del controlador WM_GETMINMAXINFO se pueden reemplazar.
 
@@ -5850,7 +5850,7 @@ void NotifyWinEvent(
 Especifica el evento que se ha producido. Este valor debe ser una de las [constantes de evento](/windows/win32/WinAuto/event-constants).
 
 *idObjectType*<br/>
-Identifica el tipo de objeto que generó el evento. Este valor es uno de los identificadores de [objeto](/windows/win32/WinAuto/object-identifiers) predefinidos o un valor de identificador de objeto personalizado.
+Identifica el tipo de objeto que generó el evento. Este valor es uno de los [identificadores de objeto](/windows/win32/WinAuto/object-identifiers) predefinidos o un valor de identificador de objeto personalizado.
 
 *idObject*<br/>
 Identifica si el evento fue generado por un objeto o un elemento secundario del objeto. Si este valor es CHILDID_SELF, el evento lo generó el propio objeto. Si no, este valor es el identificador secundario del elemento que generó el evento.
@@ -7958,7 +7958,7 @@ afx_msg void OnMouseHover(
 |Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*nFlags*|de Combinación bit a bit (o) de marcas que indican las teclas modificadoras que se presionan. Por ejemplo, la marca MK_CONTROL indica que se ha presionado la tecla CTRL.|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda del área cliente.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda del área cliente.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -7996,7 +7996,7 @@ afx_msg void OnMouseHWheel(
 |---------------|-----------------|
 |*nFlags*|de Combinación bit a bit (o) de marcas que indican las teclas modificadoras que se presionan. Por ejemplo, la marca MK_CONTROL indica que se ha presionado la tecla CTRL.<br /><br /> Para obtener una lista de marcas, vea el subtítulo "parámetros de mensaje" en acerca de la [entrada del mouse](/windows/win32/inputdev/about-mouse-input).|
 |*zDelta*|de Indica la distancia a la que gira la rueda, expresada en múltiplos o divisiones de WHEEL_DELTA, que es 120. Un valor positivo indica que la rueda se giró hacia la derecha; un valor negativo indica que la rueda se giró hacia la izquierda.|
-|*pt*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda del área cliente.|
+|*pt*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda del área cliente.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -8422,7 +8422,7 @@ afx_msg void OnNcMouseHover(
 |Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
 |*nHitTest*|de El valor de la prueba de posicionamiento devuelto por la función [CWnd::D efwindowproc](#defwindowproc) como resultado del procesamiento del mensaje [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda de la pantalla.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda de la pantalla.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -8592,7 +8592,7 @@ void OnNcXButtonDblClk(
 |---------------|-----------------|
 |*nHitTest*|de El valor de la prueba de posicionamiento devuelto por la función [CWnd::D efwindowproc](#defwindowproc) como resultado del procesamiento del mensaje [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
 |*nButton*|de Un valor de XBUTTON1 si se hace doble clic en el primer botón de Microsoft IntelliMouse X o XBUTTON2 si se hace doble clic en el segundo botón X.|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda del área cliente.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda del área cliente.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -8618,7 +8618,7 @@ afx_msg void OnNcXButtonDown(
 |---------------|-----------------|
 |*nHitTest*|de El valor de la prueba de posicionamiento devuelto por la función [CWnd::D efwindowproc](#defwindowproc) como resultado del procesamiento del mensaje [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
 |*nButton*|de Un valor de XBUTTON1 si se presiona el primer botón X del mouse o XBUTTON2 si se presiona el segundo botón X.|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda de la pantalla.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda de la pantalla.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -8644,7 +8644,7 @@ afx_msg void OnNcXButtonUp(
 |---------------|-----------------|
 |*nHitTest*|de El valor de la prueba de posicionamiento devuelto por la función [CWnd::D efwindowproc](#defwindowproc) como resultado del procesamiento del mensaje [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) .|
 |*nButton*|de Un valor de XBUTTON1 si se suelta el primer botón X del mouse, o XBUTTON2 si se suelta el segundo botón X.|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda de la pantalla.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda de la pantalla.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 Especifica la coordenada x e y del cursor. Estas coordenadas siempre son relativas a la esquina superior izquierda de la ventana.
 
 *pTI*<br/>
-Puntero a una estructura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) . Los siguientes valores de estructura se establecen de forma predeterminada:
+Puntero a una estructura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) . Los siguientes valores de estructura se establecen de forma predeterminada:
 
 - *identificador HWND*  =  deunaventana`m_hWnd`
 
@@ -9880,7 +9880,7 @@ Si el área con la que está asociada la información sobre herramientas no es `
 
 Invalide `OnToolHitTest` para proporcionar información diferente de la proporcionada por el valor predeterminado.
 
-Vea [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow), en el Windows SDK, para obtener más información sobre la estructura.
+Vea [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa), en el Windows SDK, para obtener más información sobre la estructura.
 
 ##  <a name="ontouchinput"></a>  CWnd::OnTouchInput
 
@@ -10220,7 +10220,7 @@ Apunta a una `WINDOWPOS` estructura de datos que contiene información sobre el 
 
 ### <a name="remarks"></a>Comentarios
 
-Una aplicación puede evitar cambios en la ventana estableciendo o borrando los bits adecuados en el miembro flags de la estructura [windowpos (](/windows/win32/api/winuser/ns-winuser-windowpos) .
+Una aplicación puede evitar cambios en la ventana estableciendo o borrando los bits adecuados en el miembro **Flags** de la estructura [windowpos (](/windows/win32/api/winuser/ns-winuser-windowpos) .
 
 En el caso de una ventana con el estilo [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) o [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) , la implementación predeterminada envía un mensaje [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) a la ventana. Esto se hace para validar el nuevo tamaño y la posición de la ventana y aplicar los estilos de cliente CS_BYTEALIGNCLIENT y CS_BYTEALIGN. Una aplicación puede invalidar esta funcionalidad sin llamar a su clase base.
 
@@ -10306,7 +10306,7 @@ afx_msg void OnXButtonDblClk(
 |---------------|-----------------|
 |*nFlags*|de Combinación bit a bit (o) de marcas que indican las teclas modificadoras que se presionan. Por ejemplo, la marca MK_CONTROL indica que se ha presionado la tecla CTRL.|
 |*nButton*|de Un valor de XBUTTON1 si se hace doble clic en el primer botón de Microsoft IntelliMouse X o XBUTTON2 si se hace doble clic en el segundo botón X.|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda del área cliente.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda del área cliente.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -10344,7 +10344,7 @@ afx_msg void OnXButtonDown(
 |---------------|-----------------|
 |*nFlags*|de Combinación bit a bit (o) de marcas que indican las teclas modificadoras que se presionan. Por ejemplo, la marca MK_CONTROL indica que se ha presionado la tecla CTRL.|
 |*nButton*|de Un valor de XBUTTON1 si se hizo clic en el primer botón de Microsoft IntelliMouse X, o XBUTTON2 si se hizo clic en el segundo botón X.|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda del área cliente.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda del área cliente.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -10382,7 +10382,7 @@ afx_msg void OnXButtonUp(
 |---------------|-----------------|
 |*nFlags*|de Combinación bit a bit (o) de marcas que indican las teclas modificadoras que se presionan. Por ejemplo, la marca MK_CONTROL indica que se ha presionado la tecla CTRL.|
 |*nButton*|de Un valor de XBUTTON1 si se hizo doble clic en el primer botón de Microsoft IntelliMouse X o XBUTTON2 si se hizo doble clic en el segundo botón X.|
-|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e y del cursor en relación con la esquina superior izquierda del área cliente.|
+|*point*|de Objeto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica las coordenadas *x* e *y del* cursor en relación con la esquina superior izquierda del área cliente.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -11865,7 +11865,7 @@ Especifica las opciones de ajuste de tamaño y posición. Este parámetro puede 
 
 - SWP_NOCOPYBITS descarta todo el contenido del área cliente. Si no se especifica esta marca, el contenido válido del área cliente se guarda y se vuelve a copiar en el área cliente después de que se cambie el tamaño o la posición de la ventana.
 
-- SWP_NOMOVE conserva la posición actual (omite los parámetros *x* e y).
+- SWP_NOMOVE conserva la posición actual (omite los parámetros *x* e *y)* .
 
 - SWP_NOOWNERZORDER no cambia la posición de la ventana propietaria en el orden Z.
 

@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 9a8c989988801bc7af993fbc69717ac7cff07dcf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502737"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741189"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (clase)
 
@@ -670,7 +670,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="parameters"></a>Parámetros
 
 *prbht*<br/>
-Puntero a una estructura [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_rb_hittestinfo) . Antes de enviar el mensaje, `pt` el miembro de esta estructura se debe inicializar en el punto que se va a probar, en coordenadas de cliente.
+Puntero a una estructura [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) . Antes de enviar el mensaje, `pt` el miembro de esta estructura se debe inicializar en el punto que se va a probar, en coordenadas de cliente.
 
 ### <a name="return-value"></a>Valor devuelto
 
