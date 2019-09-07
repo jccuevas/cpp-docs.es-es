@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503148"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741543"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (clase)
 
@@ -424,7 +424,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *dwStyle*<br/>
-Especifica el estilo del control de edición. Aplique una combinación de los estilos de ventana que se muestran en la sección **comentarios** que aparece a continuación y edite los [estilos de control](/windows/win32/Controls/edit-control-styles)descritos en el Windows SDK.
+Especifica el estilo del control de edición. Aplique una combinación de los estilos de ventana que se muestran en la sección **comentarios** que aparece a continuación y [edite los estilos de control](/windows/win32/Controls/edit-control-styles)descritos en el Windows SDK.
 
 *rect*<br/>
 Especifica el tamaño y la posición del control de edición. Puede ser un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) .
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Parámetros
 
 *cf*<br/>
-En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) para recibir los atributos de formato de caracteres de la selección actual.
+En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) para recibir los atributos de formato de caracteres de la selección actual.
 
 En la segunda versión, puntero a una estructura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que es una extensión Rich Edit 2,0 de la `CHARFORMAT` estructura para recibir los atributos de formato de caracteres de la selección actual.
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parámetros
 
 *cf*<br/>
-En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) que contiene los nuevos atributos de formato de caracteres predeterminados.
+En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) que contiene los nuevos atributos de formato de caracteres predeterminados.
 
 En la segunda versión, puntero a una estructura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que es una extensión Rich Edit 2,0 de la `CHARFORMAT` estructura, que contiene los atributos de formato de caracteres predeterminados.
 
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parámetros
 
 *cf*<br/>
-En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) que contiene los nuevos atributos de formato de caracteres de la selección actual.
+En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) que contiene los nuevos atributos de formato de caracteres de la selección actual.
 
 En la segunda versión, puntero a una estructura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que es una extensión Rich Edit 2,0 de la `CHARFORMAT` estructura, que contiene los nuevos atributos de formato de caracteres de la selección actual.
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parámetros
 
 *cf*<br/>
-En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) que contiene los nuevos atributos de formato de caracteres de la palabra seleccionada actualmente.
+En la primera versión, puntero a una estructura [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) que contiene los nuevos atributos de formato de caracteres de la palabra seleccionada actualmente.
 
 En la segunda versión, puntero a una estructura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , que es una extensión Rich Edit 2,0 de la `CHARFORMAT` estructura, que contiene los nuevos atributos de formato de caracteres de la palabra seleccionada actualmente.
 

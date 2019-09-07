@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514745"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740659"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedimiento Administrar recursos (C++)
 
@@ -76,7 +76,7 @@ No se puede arrastrar y colocar, copiar, cortar ni pegar entre archivos de recur
 
 Al copiar un recurso, puede cambiar sus propiedades de idioma, condición o ambas.
 
-- El idioma de un recurso especifica el idioma usado por [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) para ayudar a identificar el recurso que está buscando. Los recursos pueden tener diferencias para cada idioma que no están relacionados con el texto, por ejemplo, los aceleradores que solo funcionan en un teclado japonés o un mapa de bits que solo sería adecuado para las compilaciones localizadas en chino.
+- El idioma de un recurso especifica el idioma usado por [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) para ayudar a identificar el recurso que está buscando. Los recursos pueden tener diferencias para cada idioma que no están relacionados con el texto, por ejemplo, los aceleradores que solo funcionan en un teclado japonés o un mapa de bits que solo sería adecuado para las compilaciones localizadas en chino.
 
 - La condición de un recurso es un símbolo definido que identifica una condición en la que esta copia concreta del recurso se va a utilizar.
 
@@ -129,5 +129,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
-[Procedimientos: Crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Cómo: Crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
 [Cómo: Incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>

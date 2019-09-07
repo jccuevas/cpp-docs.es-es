@@ -2,16 +2,16 @@
 title: espacio de nombres predeterminado
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389468"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740514"
 ---
 # <a name="default-namespace"></a>espacio de nombres predeterminado
 
-El `default` establece el ámbito de espacio de nombres de los tipos integrados que son compatibles con C++ / c++ / CX.
+El `default` espacio de nombres abarca los tipos integrados que son compatibles con C++/CX.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,7 +32,7 @@ Todos los tipos integrados heredan los miembros siguientes.
 
 ### <a name="built-in-types"></a>Tipos integrados
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`char16`|Un valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|
 |`float32`|Número de punto flotante de 32 bits conforme a IEEE 754.|
@@ -52,4 +52,4 @@ Todos los tipos integrados heredan los miembros siguientes.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+[Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

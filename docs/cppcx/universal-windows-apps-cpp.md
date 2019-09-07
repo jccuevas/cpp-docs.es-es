@@ -3,12 +3,12 @@ title: Aplicaciones Windows universales (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: landing-page
-ms.openlocfilehash: 6c2bf7e44e3f1cb2c73ccaaed4363e34cbd7f0c9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218368"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741032"
 ---
 # <a name="universal-windows-apps-c"></a>Aplicaciones Windows universales (C++)
 
@@ -24,7 +24,7 @@ Puede usar el convertidor de aplicaciones de puente de escritorio para empaqueta
 
 |||
 |-|-|
-|[Referencia del lenguaje Visual C++ (C++/CX)](visual-c-language-reference-c-cx.md)|Describe el conjunto de extensiones que simplifican C++ el consumo de Windows Runtime API y permiten el control de errores basado en excepciones.|
+|[C++Referencia del lenguaje/CX](visual-c-language-reference-c-cx.md)|Describe el conjunto de extensiones que simplifican C++ el consumo de Windows Runtime API y permiten el control de errores basado en excepciones.|
 |[Compilar aplicaciones y bibliotecas (C++/CX)](building-apps-and-libraries-c-cx.md)|Describe cómo crear bibliotecas DLL y estáticas a las que se puede tener acceso desde una aplicación o componente de C++/CX.|
 |[Tutorial: Crear una aplicación "Hello, World" de UWP C++en/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Un tutorial que presenta los conceptos básicos del desarrollo de aplicaciones para C++UWP en/CX. |
 |[Creación de componentes de C++Windows Runtime en/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Describe cómo crear archivos DLL que pueden consumir otras aplicaciones y componentes de UWP.|

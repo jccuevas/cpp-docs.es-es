@@ -22,11 +22,11 @@ helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514687"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740001"
 ---
 # <a name="btowc"></a>btowc
 
@@ -42,12 +42,12 @@ wint_t btowc(
 
 ### <a name="parameters"></a>Parámetros
 
-*Carácter*<br/>
+*character*<br/>
 Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve la representación de caracteres anchos del carácter si el entero representa un carácter de un solo byte válido en el estado de desplazamiento inicial. Devuelve WEOF si el entero es EOF o no es un carácter de un solo byte válido en el estado de desplazamiento inicial. El resultado de esta función se ve afectado por el actual **LC_TYPE** configuración regional.
+Devuelve la representación de caracteres anchos del carácter si el entero representa un carácter de un solo byte válido en el estado de desplazamiento inicial. Devuelve WEOF si el entero es EOF o no es un carácter de un solo byte válido en el estado de desplazamiento inicial. La salida de esta función se ve afectada por la configuración regional actual de **LC_TYPE** .
 
 ## <a name="requirements"></a>Requisitos
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384990"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740931"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Value (Clases y structs) (C++/CX)
 
-Un *struct de valor* o *clase de valor* es un Windows en tiempo de ejecución compatible ("estructura POD plain old data"). Tiene un tamaño fijo y solo se compone de campos; a diferencia de una clase ref, no tiene propiedades.
+Una *clase* de valor o *struct de valor* es un pod compatible con Windows Runtime ("estructura de datos antigua sin formato"). Tiene un tamaño fijo y solo se compone de campos; a diferencia de una clase ref, no tiene propiedades.
 
 En los ejemplos siguientes se muestra cómo declarar e inicializar structs de valor.
 
@@ -52,7 +52,7 @@ Cuando una variable de un tipo de valor se asigna a otra variable, se copia el v
 
 Una *clase de valor* es exactamente igual que un `value struct` salvo que a sus campos se les debe dar accesibilidad pública de forma explícita. Se declara mediante la palabra clave `value class` .
 
-Un struct de valor o una clase de valor puede contener como campos solo tipos numéricos fundamentales, clases enum, `Platform::String^`, o [ibox \<T > ^](../cppcx/platform-ibox-interface.md) donde T es una clase de enumeración o tipo numérico o clase de valor o struct. Un campo `IBox<T>^` puede tener un valor `nullptr`; esta es la forma que tiene C++ de implementar el concepto de *tipos de valor que aceptan valores NULL*.
+Un struct de valor o una clase de valor solo puede contener como campos tipos numéricos fundamentales `Platform::String^`, clases ENUM, o [Platform \<:: IBox T > ^](../cppcx/platform-ibox-interface.md) donde T es un tipo numérico, una clase de enumeración o una clase de valor o struct. Un campo `IBox<T>^` puede tener un valor `nullptr`; esta es la forma que tiene C++ de implementar el concepto de *tipos de valor que aceptan valores NULL*.
 
 Una clase de valor o struct de valor que contiene un tipo `Platform::String^` o `IBox<T>^` como miembro no se puede convertir en `memcpy`.
 
@@ -90,7 +90,7 @@ También puede usar un símbolo de puntero (*) para pasar un tipo de valor por r
 
 ## <a name="nullable-value-types"></a>Tipos de valor que aceptan valores NULL
 
-Como se mencionó anteriormente, una clase de valor o struct de valor puede tener un campo de tipo [ibox\<T > ^](../cppcx/platform-ibox-interface.md)— por ejemplo, `IBox<int>^`. Este tipo de campo puede tener cualquier valor numérico válido para el tipo `int` , o puede tener un valor `nullptr`. Puedes pasar un campo que acepta valores NULL como argumento a un método cuyo parámetro se declara como opcional, o a cualquier otra estructura en la que no se requiera que un tipo de valor tenga un valor.
+Como se mencionó anteriormente, una clase de valor o un struct de valor puede tener un campo de tipo [Platform:: IBox\<T > ^](../cppcx/platform-ibox-interface.md), por ejemplo,. `IBox<int>^` Este tipo de campo puede tener cualquier valor numérico válido para el tipo `int` , o puede tener un valor `nullptr`. Puedes pasar un campo que acepta valores NULL como argumento a un método cuyo parámetro se declara como opcional, o a cualquier otra estructura en la que no se requiera que un tipo de valor tenga un valor.
 
 En el ejemplo siguiente se muestra cómo inicializar un struct con un campo que acepta valores NULL.
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>Vea también
 
 [Sistema de tipos (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Ref (Clases y structs) (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

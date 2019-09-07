@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623970"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739878"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -68,17 +68,17 @@ Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor absoluto de *z*.
+Valor absoluto de *z*.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cabs** que toman **_Fcomplex** o **_Lcomplex** valores y devuelven **float** o **largo** **doble** valores. En un programa C, **cabs** siempre toma un **_Dcomplex** valor y devuelve un **doble** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de los **Cab** que toman los valores **_Fcomplex** o **_Lcomplex** y devolver valores de tipo **float** o **Long** **Double** . En un programa de C, los **Cab** siempre toman un valor **_Dcomplex** y devuelven un valor **Double** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**Cabs**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
+|**Cab**, **cabsf**, **Cab**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
