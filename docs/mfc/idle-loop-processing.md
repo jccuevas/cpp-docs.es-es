@@ -16,45 +16,45 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 0d0e3fcba9ce447ec359958fc5ed59c6d596dd7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72491c057f3bf7c531bb5515b07f1e9d0acf35d5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219495"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508411"
 ---
 # <a name="idle-loop-processing"></a>Procesamiento de bucles inactivos
 
-Muchas aplicaciones realizan un procesamiento largo "en"segundo plano. A veces, las consideraciones de rendimiento exigir el uso de multithreading para dicho trabajo. Subprocesos implican una sobrecarga adicional de desarrollo, por lo que no se recomiendan para tareas sencillas, como el trabajo en tiempo de inactividad que realiza MFC en el [OnIdle](../mfc/reference/cwinthread-class.md#onidle) función. En este artículo se centra en el procesamiento en inactividad. Para obtener más información sobre multithreading, vea [temas de Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Muchas aplicaciones realizan un procesamiento largo "en segundo plano". A veces, las consideraciones de rendimiento determinan el uso de multithreading para este tipo de trabajo. Los subprocesos implican una sobrecarga de desarrollo adicional, por lo que no se recomiendan para tareas sencillas como el trabajo en tiempo de inactividad que MFC hace en la función [OnIdle](../mfc/reference/cwinthread-class.md#onidle) . Este artículo se centra en el procesamiento inactivo. Para obtener más información acerca del multithreading, vea [temas de multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Algunos tipos de procesamiento en segundo plano ha terminado correctamente durante los intervalos que el usuario en caso contrario, no está interactuando con la aplicación. En una aplicación desarrollada para el sistema operativo Microsoft Windows, una aplicación puede realizar el procesamiento en tiempo de inactividad al dividir un proceso largo en muchos pequeños fragmentos. Después de procesar cada fragmento, la aplicación cede el control de ejecución para Windows usando una [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) bucle.
+Algunos tipos de procesamiento en segundo plano se realizan correctamente durante los intervalos en los que el usuario no está interactuando con la aplicación. En una aplicación desarrollada para el sistema operativo Microsoft Windows, una aplicación puede realizar el procesamiento en tiempo de inactividad dividiendo un proceso largo en muchos fragmentos pequeños. Después de procesar cada fragmento, la aplicación produce un control de ejecución en Windows mediante un bucle [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) .
 
-En este artículo se explica dos formas de procesamiento en inactividad en la aplicación:
+En este artículo se explican dos maneras de realizar el procesamiento inactivo en la aplicación:
 
-- Uso de **PeekMessage** en bucle de mensajes principal de MFC.
+- Usar **PeekMessage** en el bucle de mensajes principal de MFC.
 
-- Insertar otro **PeekMessage** bucle en otro lugar en la aplicación.
+- Incrustar otro bucle **PeekMessage** en otra parte de la aplicación.
 
-##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage en el bucle de mensajes MFC
+##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a>PeekMessage en el bucle de mensajes de MFC
 
-En una aplicación desarrollada con MFC, un bucle principal del mensaje en el `CWinThread` clase contiene un bucle de mensajes que llama a la [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) API Win32. Este bucle también llama a la `OnIdle` función miembro de `CWinThread` entre los mensajes. Una aplicación puede procesar los mensajes en este tiempo de inactividad invalidando el `OnIdle` función.
+En una aplicación desarrollada con MFC, el bucle de mensajes principal de `CWinThread` la clase contiene un bucle de mensajes que llama a la API de Win32 [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) . Este bucle también llama a `OnIdle` la `CWinThread` función miembro entre los mensajes. Una aplicación puede procesar mensajes en este tiempo de inactividad invalidando la `OnIdle` función.
 
 > [!NOTE]
->  `Run`, `OnIdle`, y otras funciones miembro son ahora miembros de clase `CWinThread` en lugar de la clase `CWinApp`. La clase `CWinApp` se deriva de la clase `CWinThread`.
+>  `Run`, `OnIdle`y algunas otras funciones miembro son ahora miembros de la clase `CWinThread` en lugar de la `CWinApp`clase. La clase `CWinApp` se deriva de la clase `CWinThread`.
 
-Para obtener más información sobre el procesamiento en inactividad, consulte [OnIdle](../mfc/reference/cwinthread-class.md#onidle) en el *referencia de MFC*.
+Para obtener más información sobre cómo realizar el procesamiento [inactivo, vea OnIdle](../mfc/reference/cwinthread-class.md#onidle) en la *referencia de MFC*.
 
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage en otra parte de la aplicación
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a>PeekMessage en otra parte de la aplicación
 
-Otro método para llevar a cabo en una aplicación de procesamiento en inactividad implica insertar un bucle de mensajes en una de las funciones. Este bucle de mensajes es muy similar al bucle de mensajes principal de MFC, se encuentra en [CWinThread:: Run](../mfc/reference/cwinthread-class.md#run). Esto significa que un bucle en una aplicación desarrollada con MFC, debe realizar muchas de las mismas funciones que el bucle de mensajes principal. El fragmento de código siguiente muestra cómo escribir un bucle de mensajes que es compatible con MFC:
+Otro método para realizar el procesamiento inactivo en una aplicación implica la incrustación de un bucle de mensajes en una de las funciones. Este bucle de mensajes es muy similar al bucle de mensajes principal de MFC, que se encuentra en [CWinThread:: Run](../mfc/reference/cwinthread-class.md#run). Esto significa que este tipo de bucle en una aplicación desarrollada con MFC debe realizar muchas de las mismas funciones que el bucle de mensajes principal. En el fragmento de código siguiente se muestra cómo escribir un bucle de mensajes compatible con MFC:
 
 [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]
 
-Este código, incrustado en una función, bucles, siempre hay procesamiento en inactividad. Dentro de ese bucle, un bucle anidado llama repetidamente `PeekMessage`. Siempre que esa llamada devuelve un valor distinto de cero, el bucle llama `CWinThread::PumpMessage` para realizar la conversión de mensaje normal y envío. Aunque `PumpMessage` está documentado, puede examinar su código fuente en el archivo ThrdCore.Cpp en el directorio \atlmfc\src\mfc de la instalación de Visual C++.
+Este código, incrustado en una función, se repite siempre que se produzca un procesamiento inactivo. Dentro de ese bucle, un bucle anidado llama `PeekMessage`repetidamente a. Siempre y cuando esa llamada devuelva un valor distinto de cero, el `CWinThread::PumpMessage` bucle llama a para realizar la traducción normal de mensajes y el envío. Aunque `PumpMessage` no esté documentado, puede examinar su código fuente en el archivo ThrdCore. cpp en el directorio \atlmfc\src\mfc de la instalación visual C++ .
 
-Una vez que finaliza el bucle interno, el bucle externo realiza el procesamiento en inactividad con una o varias llamadas a `OnIdle`. La primera llamada es para fines de MFC. Puede realizar llamadas adicionales `OnIdle` para realizar su trabajo en segundo plano.
+Una vez que finaliza el bucle interno, el bucle externo realiza el procesamiento inactivo con una `OnIdle`o más llamadas a. La primera llamada es para los propósitos de MFC. Puede realizar llamadas adicionales a `OnIdle` para realizar su propio trabajo en segundo plano.
 
-Para obtener más información sobre el procesamiento en inactividad, consulte [OnIdle](../mfc/reference/cwinthread-class.md#onidle) en la referencia de la biblioteca MFC.
+Para obtener más información sobre cómo realizar el procesamiento [inactivo, vea OnIdle](../mfc/reference/cwinthread-class.md#onidle) en la referencia de la biblioteca MFC.
 
 ## <a name="see-also"></a>Vea también
 

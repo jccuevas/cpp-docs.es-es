@@ -32,14 +32,14 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0b1dbc72124188d06da48f47e47c11ae6d06e771
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376192"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499939"
 ---
-# <a name="fopen-wfopen"></a>fopen, _wfopen
+# <a name="fopen-_wfopen"></a>fopen, _wfopen
 
 Abre un archivo. Hay disponibles versiones más seguras de estas funciones que realizan una validación de parámetros adicional y devuelven códigos de error; consulte [fopen_s, _wfopen_s](fopen-s-wfopen-s.md).
 
@@ -72,7 +72,7 @@ Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_
 
 ## <a name="remarks"></a>Comentarios
 
-La función **fopen** abre el archivo especificado por *filename*. De forma predeterminada, una cadena de *nombre de archivo* estrecha se interpreta mediante la página de códigos ANSI (CP_ACP). En las aplicaciones de escritorio de Windows, se puede cambiar a la página de códigos del OEM (CP_OEMCP) con la función [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem) . Puede usar la función [AreFileApisANSI](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi) para determinar si *filename* se interpreta mediante ANSI o la página de códigos OEM predeterminada del sistema. **_wfopen** es una versión con caracteres anchos de **fopen**; los argumentos de **_wfopen** son cadenas de caracteres anchos. De lo contrario, **_wfopen** y **fopen** se comportan exactamente igual. Simplemente el uso de **_wfopen** no afecta al Juego de caracteres codificado que se usa en la secuencia de archivos.
+La función **fopen** abre el archivo especificado por *filename*. De forma predeterminada, una cadena de *nombre de archivo* estrecha se interpreta mediante la página de códigos ANSI (CP_ACP). En las aplicaciones de escritorio de Windows, se puede cambiar a la página de códigos del OEM (CP_OEMCP) con la función [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . Puede usar la función [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) para determinar si *filename* se interpreta mediante ANSI o la página de códigos OEM predeterminada del sistema. **_wfopen** es una versión con caracteres anchos de **fopen**; los argumentos de **_wfopen** son cadenas de caracteres anchos. De lo contrario, **_wfopen** y **fopen** se comportan exactamente igual. Simplemente el uso de **_wfopen** no afecta al Juego de caracteres codificado que se usa en la secuencia de archivos.
 
 **fopen** acepta rutas de acceso que son válidas en el sistema de archivos en el momento de la ejecución; **fopen** acepta rutas de acceso UNC y rutas de acceso que requieren unidades de red asignadas siempre y cuando el sistema que ejecuta el código tenga acceso al recurso compartido o a la unidad asignada en el momento de la ejecución. Cuando construya rutas de **fopen**, asegúrese de que las unidades, rutas de acceso o recursos compartidos de red estarán disponibles en el entorno de ejecución. Puede usar barras diagonales (/) o barras diagonales inversas (\\) como separadores de directorio en una ruta de acceso.
 
@@ -84,7 +84,7 @@ Compruebe siempre el valor devuelto para ver si el puntero es NULL antes de real
 
 > **FILE \*fp = fopen("newfile.txt", "rt+, ccs=** _encoding_ **");**
 
-Los valores permitidos de *Encoding* son Unicode, **UTF-8**y **UTF-16LE**.
+Los valores permitidos de *Encoding* son **Unicode**, **UTF-8**y **UTF-16LE**.
 
 Cuando un archivo se abre en modo Unicode, las funciones de entrada traducen los datos leídos del archivo a datos UTF-16 almacenados como tipo **wchar_t**. Las funciones que escriben en un archivo abierto en modo Unicode esperan búferes que contienen datos UTF-16 almacenados como tipo **wchar_t**. Si el archivo está codificado como UTF-8, los datos UTF-16 se traducen a UTF-8 cuando se escriben, y el contenido codificado en UTF-8 del archivo se traduce a UTF-16 cuando se lee. Si se trata de leer o escribir un número impar de bytes en el modo Unicode, se producirá un error de [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Para leer o escribir datos almacenados en el programa como UTF-8, use un modo de archivo binario o de texto en lugar de un modo Unicode. Cualquier traducción de codificación que sea necesaria es su responsabilidad.
 
@@ -124,7 +124,7 @@ El *modo* de cadena de caracteres especifica el tipo de acceso solicitado para e
 | **"w+"** | Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido. |
 | **"a+"** | Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe. |
 
-Cuando un archivo se abre mediante el tipo de acceso **"a"** o el tipo de acceso **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición mediante [fseek](fseek-fseeki64.md) o [](rewind.md)rebobinar, pero siempre se mueve al final del archivo antes de que se realice cualquier operación de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse.
+Cuando un archivo se abre mediante el tipo de acceso **"a"** o el tipo de acceso **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero siempre se mueve al final del archivo antes de que se realice cualquier operación de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse.
 
 El modo **"a"** no quita el marcador EOF antes de que se anexe al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. Antes de que se anexe al archivo, el modo **"a +"** quita el marcador EOF. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El modo **"a +"** es necesario para anexar a un archivo de secuencia que termina con el marcador EOF Ctrl + Z.
 
@@ -156,14 +156,14 @@ Las siguientes opciones se pueden anexar al *modo* para especificar comportamien
 | **R** | Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco. |
 | **T** | Especifica un archivo como temporal. Si es posible, no se vuelca en el disco. |
 | **D** | Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo. |
-| **ccs=** _encoding_ | Especifica el juego de caracteres codificado que se va a usar (uno de **UTF-8**, **UTF-16LE**o Unicode) para este archivo. Deje sin especificar si desea la codificación ANSI. |
+| **ccs=** _encoding_ | Especifica el juego de caracteres codificado que se va a usar (uno de **UTF-8**, **UTF-16LE**o **Unicode**) para este archivo. Deje sin especificar si desea la codificación ANSI. |
 
 Los caracteres válidos para la cadena de *modo* que se usa en **fopen** y **_fdopen** se corresponden con los argumentos *Oflag* que se usan en _ [Open](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
 
 |Caracteres en cadena de *modo*|Valor de *Oflag* equivalente \_para Open\_/sopen|
 |-------------------------------|----------------------------------------------------|
 |**a**|**\_O\_** &#124; &#124; **WRONLY o\_Append(normalmenteoWRONLYocrear)\_**  **\_\_** &#124;  **\_\_**  **\_ O\_anexar**)|
-|**a+**|**\_O\_** &#124; &#124; **RDWR anexar\_(normalmente\_** **o anexaroRDWR)\_ \_** &#124;  **\_\_**  **\_ O\_crear** )|
+|**a+**|**\_O\_** &#124; &#124; **RDWR anexar\_(normalmenteo\_** **anexar o RDWR\_)\_**  **\_\_** &#124;  **\_ O\_crear** )|
 |**r**|**\_O\_RDONLY**|
 |**r+**|**\_O\_RDWR**|
 |**w**|**\_O\_WRONLY** (normalmente  **\_oWRONLY\_** &#124; &#124; o trunc **) \_\_**  **\_\_**|

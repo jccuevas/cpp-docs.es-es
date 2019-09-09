@@ -1,17 +1,17 @@
 ---
-title: control (atributo de COM de C++)
+title: control (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148281"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501775"
 ---
 # <a name="control"></a>control
 
@@ -25,7 +25,7 @@ Especifica que el tipo definido por el usuario es un control.
 
 ## <a name="remarks"></a>Comentarios
 
-El **control** atributo implica la [coclase](coclass.md) atributo. El **control** atributo de C++ tiene la misma funcionalidad que el [control](/windows/desktop/Midl/control) atributo MIDL.
+El atributo de **control** implica el atributo [CoClass](coclass.md) . El atributo **control** C++ tiene la misma funcionalidad que el atributo MIDL del [control](/windows/win32/Midl/control) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -51,9 +51,9 @@ class CTest : public ICustom {};
 |||
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
-|**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Reiterativo**|Sin|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

@@ -38,7 +38,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68449977"
 ---
-# <a name="wm-message-handlers-d---e"></a>Controladores de mensajes de WM_: D - E
+# <a name="wm_-message-handlers-d---e"></a>Controladores de mensajes de WM_: D - E
 
 Las siguientes entradas de mapa de la izquierda corresponden a los prototipos de función de la derecha:
 
@@ -46,7 +46,7 @@ Las siguientes entradas de mapa de la izquierda corresponden a los prototipos de
 |---------------|------------------------|
 |ON_WM_DEADCHAR()|afx_msg void [OnDeadChar](../../mfc/reference/cwnd-class.md#ondeadchar)(UINT, UINT, uint);|
 |ON_WM_DELETEITEM()|afx_msg void [OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)(int, LPDELETEITEMSTRUCT);|
-|ON_WM_DESTROY()|afx_msg void [](../../mfc/reference/cwnd-class.md#ondestroy)aldestruyete ();|
+|ON_WM_DESTROY()|afx_msg void [Aldestruyete](../../mfc/reference/cwnd-class.md#ondestroy)();|
 |ON_WM_DESTROYCLIPBOARD()|afx_msg void [OnDestroyClipboard](../../mfc/reference/cwnd-class.md#ondestroyclipboard)();|
 |ON_WM_DEVICECHANGE()|afx_msg void [OnDeviceChange](../../mfc/reference/cwnd-class.md#ondevicechange)(uint, DWORD);|
 |ON_WM_DEVMODECHANGE()|afx_msg void [OnDevModeChange](../../mfc/reference/cwnd-class.md#ondevmodechange)(LPSTR);|
@@ -57,7 +57,7 @@ Las siguientes entradas de mapa de la izquierda corresponden a los prototipos de
 |ON_WM_DWMCOMPOSITIONCHANGED()|afx_msg void [OnCompositionChanged](../../mfc/reference/cwnd-class.md#oncompositionchanged)();|
 |ON_WM_DWMNCRENDERINGCHANGED()|afx_msg void [OnNcRenderingChanged](../../mfc/reference/cwnd-class.md#onncrenderingchanged)(bool);|
 |ON_WM_DWMWINDOWMAXIMIZEDCHANGE()|afx_msg void [OnWindowMaximizedChanged](../../mfc/reference/cwnd-class.md#onwindowmaximizedchanged)(bool);|
-|ON_WM_ENABLE()|afx_msg void [](../../mfc/reference/cwnd-class.md#onenable)Enable (bool);|
+|ON_WM_ENABLE()|afx_msg void [enable](../../mfc/reference/cwnd-class.md#onenable)(bool);|
 |ON_WM_ENDSESSION()|afx_msg void [OnEndSession](../../mfc/reference/cwnd-class.md#onendsession)(bool);|
 |ON_WM_ENTERIDLE()|afx_msg void [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(uint, CWnd *);|
 |ON_WM_ENTERSIZEMOVE()|afx_msg void [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)();|

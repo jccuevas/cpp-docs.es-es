@@ -63,7 +63,7 @@ Todos los C++ contenedores de la biblioteca estándar tienen un parámetro de pl
 
 Así, por ejemplo, un objeto de asignador puede asignar almacenamiento en un montón privado o en la memoria compartida, o puede optimizar los tamaños de objetos pequeños o grandes. También puede especificar, a través de las definiciones de tipo que proporciona, que el acceso a los elementos tiene que realizarse a través de objetos de descriptor de acceso especiales que administran la memoria compartida, o realizar una recolección automática de elementos no utilizados. Por lo tanto, una clase que asigna almacenamiento con un objeto de asignador debe usar estos tipos para declarar los objetos de puntero y referencia, tal como hacen los contenedores de la biblioteca estándar de C++.
 
-<strong>(Solo C++ 98/03)</strong> Al derivar de la clase allocator, tendrá que proporcionar un [](#rebind) struct de reenlace, `_Other` cuyo typedef haga referencia a la clase recién derivada.
+<strong>(Solo C++ 98/03)</strong> Al derivar de la clase allocator, tendrá que proporcionar un struct de [reenlace](#rebind) , `_Other` cuyo typedef haga referencia a la clase recién derivada.
 
 Por lo tanto, un asignador define los siguientes tipos:
 
@@ -537,7 +537,7 @@ El número de objetos que se van a desasignar del almacenamiento.
 
 #### <a name="remarks"></a>Comentarios
 
-La función miembro libera almacenamiento para la matriz de objetos de recuento de `Type` tipo que comienza en *ptr*, `operator delete(ptr)`llamando a. El puntero *ptr* debe haber sido devuelto anteriormente por una llamada [a](#allocate) allocate para un objeto de asignador que se compare con  **\*esto**, asignando un objeto de matriz del mismo tamaño y tipo. `deallocate` nunca inicia una excepción.
+La función miembro libera almacenamiento para la matriz de objetos de recuento de `Type` tipo que comienza en *ptr*, `operator delete(ptr)`llamando a. El puntero *ptr* debe haber sido devuelto anteriormente por una llamada [a allocate](#allocate) para un objeto de asignador que se compare con  **\*esto**, asignando un objeto de matriz del mismo tamaño y tipo. `deallocate` nunca inicia una excepción.
 
 #### <a name="example"></a>Ejemplo
 
@@ -558,7 +558,7 @@ Puntero que designa la dirección del objeto que se va a destruir.
 
 #### <a name="remarks"></a>Comentarios
 
-La función miembro destruye el objeto designado por *ptr*, llamando al tipo `ptr->` **de destructor:** : **~ Type**.
+La función miembro destruye el objeto designado por *ptr*, llamando `ptr->` **al tipo de destructor:** : **~ Type**.
 
 #### <a name="example"></a>Ejemplo
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154882"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498710"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Específicos de Microsoft**
 
-Construye un **_com_ptr_t** objeto.
+Construye un objeto **_com_ptr_t** .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -139,28 +139,28 @@ explicit _com_ptr_t(
 Puntero a interfaz sin formato.
 
 *fAddRef*<br/>
-Si es TRUE, `AddRef` se llama para incrementar el recuento de referencias del puntero de interfaz encapsulado.
+Si es true `AddRef` , se llama a para incrementar el recuento de referencias del puntero de interfaz encapsulado.
 
 *cp*<br/>
-Un **_com_ptr_t** objeto.
+Objeto **_com_ptr_t** .
 
 *p*<br/>
-Un puntero de interfaz sin formato, cuyo tipo es diferente del tipo de puntero inteligente de este **_com_ptr_t** objeto.
+Puntero de interfaz sin formato, cuyo tipo es diferente del tipo de puntero inteligente de este objeto **_com_ptr_t** .
 
 *varSrc*<br/>
 Objeto `_variant_t`.
 
 *clsid*<br/>
-El `CLSID` de una coclase.
+`CLSID` De una coclase.
 
 *dwClsContext*<br/>
 Contexto para el código ejecutable.
 
 *lpcStr*<br/>
-Una cadena multibyte que contiene un `CLSID` (empezando por "**{**") o un `ProgID`.
+Cadena multibyte que contiene un (a `CLSID` partir de "**{**") o un `ProgID`.
 
 *pOuter*<br/>
-El desconocido externo para [agregación](/windows/desktop/com/aggregation).
+El externo desconocido para la [agregación](/windows/win32/com/aggregation).
 
 ## <a name="see-also"></a>Vea también
 
