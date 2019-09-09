@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 3031b1e5870dd7f59af7adf48a6a77aaccdf53fc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f5c235008b72996424e01ee912ca78ecffab450a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507200"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741574"
 ---
 # <a name="ccolordialog-class"></a>Clase CColorDialog
 
@@ -72,7 +72,7 @@ Un `CColorDialog` objeto es un cuadro de diálogo con una lista de colores defin
 
 Para construir un `CColorDialog` objeto, use el constructor proporcionado o derive una nueva clase y use su propio constructor personalizado.
 
-Una vez que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la estructura [m_cc](#m_cc) para inicializar los valores de los controles del cuadro de diálogo. La estructura *m_cc* es de tipo [las choosecolor](/windows/win32/api/commdlg/ns-commdlg-choosecolorw).
+Una vez que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la estructura [m_cc](#m_cc) para inicializar los valores de los controles del cuadro de diálogo. La estructura *m_cc* es de tipo [las choosecolor](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1).
 
 Después de inicializar los controles del cuadro de diálogo `DoModal` , llame a la función miembro para mostrar el cuadro de diálogo y permitir que el usuario seleccione un color. `DoModal`Devuelve la selección del usuario del botón Aceptar (IDOK) o cancelar (IDCANCEL) del cuadro de diálogo.
 
@@ -126,7 +126,7 @@ CColorDialog(
 Selección de color predeterminada. Si no se especifica ningún valor, el valor predeterminado es RGB (0,0) (negro).
 
 *dwFlags*<br/>
-Un conjunto de marcas que personalizan la función y la apariencia del cuadro de diálogo. Para obtener más información, vea la estructura [las choosecolor.](/windows/win32/api/commdlg/ns-commdlg-choosecolorw) en el Windows SDK.
+Un conjunto de marcas que personalizan la función y la apariencia del cuadro de diálogo. Para obtener más información, vea la estructura [las choosecolor.](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1) en el Windows SDK.
 
 *pParentWnd*<br/>
 Puntero a la ventana primaria o propietaria del cuadro de diálogo.
@@ -199,7 +199,7 @@ Cada uno de los 16 valores RGB de la matriz devuelta se inicializa en RGB (25525
 
 ##  <a name="m_cc"></a>  CColorDialog::m_cc
 
-Estructura de tipo [las choosecolor.](/windows/win32/api/commdlg/ns-commdlg-choosecolorw), cuyos miembros almacenan las características y los valores del cuadro de diálogo.
+Estructura de tipo [las choosecolor.](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1), cuyos miembros almacenan las características y los valores del cuadro de diálogo.
 
 ```
 CHOOSECOLOR m_cc;
