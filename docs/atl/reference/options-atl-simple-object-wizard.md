@@ -6,65 +6,65 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e92f4909907645fc317590fbcc3601887346c642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197309"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495156"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opciones, Asistente para objetos simples ATL
 
-Use esta página del Asistente para objetos simples ATL para el diseño para una mayor eficiencia y soporte técnico de error para el objeto.
+Utilice esta página del Asistente para objetos simples ATL para diseñar una mayor eficiencia y compatibilidad con errores para el objeto.
 
-Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).
+Para obtener más información sobre los proyectos ATL y las clases COM de ATL, vea [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md).
 
 - **Modelo de subprocesos**
 
-   Indica el método de administración de subprocesos. De forma predeterminada, el proyecto usa **apartamento** subprocesamiento.
+   Indica el método para administrar los subprocesos. De forma predeterminada, el proyecto utiliza el subprocesamiento **controlado** .
 
-   Consulte [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.
+   Consulte el artículo sobre [cómo especificar el modelo de subprocesos del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) para obtener más información.
 
-   |Opción|Descripción|
+   |Opción|DESCRIPCIÓN|
    |------------|-----------------|
-   |**Single**|Especifica que el objeto siempre se ejecuta en el subproceso COM principal. Consulte [contenedores uniproceso](/windows/desktop/com/single-threaded-apartments) y [InprocServer32](/windows/desktop/com/inprocserver32) para obtener más información.|
-   |**Apartment**|Especifica que el objeto utiliza el apartamento de subproceso. Apartamento de subproceso equivalente al único. Se asigna a cada objeto de un componente de subprocesamiento controlado un apartamento de subproceso, durante la vida del objeto; Sin embargo, varios subprocesos pueden usarse para varios objetos. Cada contenedor está asociado a un subproceso concreto y tiene un bombeo de mensajes de Windows (valor predeterminado).<br /><br /> Consulte [contenedores uniproceso](/windows/desktop/com/single-threaded-apartments) para obtener más información.|
-   |**Ambos**|Especifica que el objeto puede usar apartamento o subprocesamiento libre, dependiendo del tipo de un subproceso creado.|
-   |**Free**|Especifica que el objeto usa el subprocesamiento libre. Subprocesamiento libre es equivalente a un modelo de apartamento multiproceso. Consulte [apartamentos multiproceso](/windows/desktop/com/multithreaded-apartments) para obtener más información.|
-   |**Neutral**|Especifica que el objeto sigue las directrices para apartamentos multiproceso, pero pueden ejecutar en cualquier tipo de subproceso.|
+   |**Single**|Especifica que el objeto siempre se ejecuta en el subproceso COM principal. Consulte [apartamentos de un solo subproceso](/windows/win32/com/single-threaded-apartments) y [InProcServer32](/windows/win32/com/inprocserver32) para obtener más información.|
+   |**Apartment**|Especifica que el objeto utiliza el subprocesamiento de apartamento. Equivalente al apartamento de un solo subproceso. A cada objeto de un componente de subproceso controlado se le asigna un apartamento para su subproceso, mientras dure el objeto; sin embargo, se pueden utilizar varios subprocesos para varios objetos. Cada apartamento está ligada a un subproceso específico y tiene un bombeo de mensajes de Windows (valor predeterminado).<br /><br /> Consulte [apartamentos de un solo subproceso](/windows/win32/com/single-threaded-apartments) para obtener más información.|
+   |**Ambos**|Especifica que el objeto puede utilizar el subprocesamiento controlado o libre, en función del tipo de un subproceso que se cree.|
+   |**Gratis**|Especifica que el objeto utiliza el subprocesamiento libre. El subprocesamiento libre es equivalente a un modelo de Apartamento multiproceso. Para obtener más información, consulte [apartamentos multiproceso](/windows/win32/com/multithreaded-apartments) .|
+   |**Neutral**|Especifica que el objeto sigue las instrucciones para apartamentos multiproceso, pero puede ejecutarse en cualquier tipo de subproceso.|
 
 - **Agregación**
 
-   Indica si el objeto usa [agregación](/windows/desktop/com/aggregation). El objeto agregado elige qué interfaces se expondrán a los clientes y las interfaces se exponen como si el objeto agregado implementarlos. Los clientes del objeto agregado comunicarse solo con el objeto agregado.
+   Indica si el objeto utiliza la [agregación](/windows/win32/com/aggregation). El objeto agregado elige qué interfaces se exponen a los clientes, y las interfaces se exponen como si el objeto agregado las implementa. Los clientes del objeto agregado solo se comunican con el objeto agregado.
 
-   |Opción|Descripción|
+   |Opción|DESCRIPCIÓN|
    |------------|-----------------|
-   |**Sí**|Especifica que se puede agregar el objeto. El valor predeterminado.|
-   |**No**|Especifica que no se agrega el objeto.|
+   |**Sí**|Especifica que el objeto se puede Agregar. El valor predeterminado.|
+   |**No**|Especifica que el objeto no se agrega.|
    |**Solo**|Especifica que debe agregarse el objeto.|
 
 - **Interface**
 
-   Indica el tipo de interfaz es compatible con el objeto. De forma predeterminada, el objeto admite una interfaz dual.
+   Indica el tipo de interfaz que admite el objeto. De forma predeterminada, el objeto admite una interfaz dual.
 
-   |Opción|Descripción|
+   |Opción|DESCRIPCIÓN|
    |------------|-----------------|
-   |**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable posee funciones de interfaz personalizado y enlace tardío `IDispatch` métodos). Permite que los clientes COM y [controladores de automatización](../../mfc/automation-clients.md) para tener acceso al objeto. El valor predeterminado.|
-   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> - **Compatible con automatización** controladores de automatización permite tener acceso a un objeto que tiene la compatibilidad de interfaz personalizado.|
+   |**Dual**|Especifica que el objeto admite una interfaz dual (su vtable tiene funciones de interfaz personalizadas más métodos de `IDispatch` enlace en tiempo de ejecución). Permite a los clientes COM y a los [controladores de automatización](../../mfc/automation-clients.md) tener acceso al objeto. El valor predeterminado.|
+   |**Personalizada**|Especifica que el objeto admite una interfaz personalizada (su tabla virtual tiene funciones de interfaz personalizadas). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites de procesos.<br /><br /> - **Compatible con Automation** Permite a los controladores de automatización tener acceso a un objeto que tiene la compatibilidad con la interfaz personalizada.|
 
 - **Soporte técnico**
 
    Indica compatibilidad adicional para el objeto.
 
-   |Opción|Descripción|
+   |Opción|DESCRIPCIÓN|
    |------------|-----------------|
-   |**ISupportErrorInfo**|Crea la compatibilidad con la [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfaz para que el objeto puede devolver información de error al cliente.|
-   |**Puntos de conexión**|Permite a los puntos de conexión para el objeto mediante la realización de derivar de la clase del objeto [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
-   |**Contador de referencias de subprocesamiento libre**|Crea un objeto de contador de referencias de subprocesamiento libre para calcular referencias de punteros de interfaz eficazmente entre los subprocesos en el mismo proceso. Disponible para especificar el objeto **ambos** como el modelo de subprocesos.|
-   |**IObjectWithSite** (compatibilidad con objetos de Internet Explorer)|Implementa [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), que proporciona una manera sencilla para admitir la comunicación entre un objeto y su sitio en un contenedor.|
+   |**ISupportErrorInfo**|Crea compatibilidad con la interfaz [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) para que el objeto pueda devolver información de error al cliente.|
+   |**Puntos de conexión**|Habilita los puntos de conexión para el objeto haciendo que la clase del objeto se derive de [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
+   |**Contador de referencias de subprocesamiento libre**|Crea un objeto de cálculo de referencias de subprocesamiento libre para calcular las referencias de los punteros de interfaz de forma eficaz entre los subprocesos del mismo proceso. Disponible para el **objeto que especifica como modelo** de subprocesos.|
+   |**IObjectWithSite** (Compatibilidad con objetos de IE)|Implementa [IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md), que proporciona una manera sencilla de admitir la comunicación entre un objeto y su sitio en un contenedor.|
 
 ## <a name="see-also"></a>Vea también
 
 [Asistente para objetos simples ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Objeto simple ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
-[Problemas de subprocesamiento de servidor en proceso](/windows/desktop/com/in-process-server-threading-issues)
+[Problemas de subprocesos de servidor en proceso](/windows/win32/com/in-process-server-threading-issues)

@@ -6,35 +6,35 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448516"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491052"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM y .NET
 
-Microsoft define un conjunto de atributos de C++ que simplifican la programación COM y el desarrollo de .NET Framework common language runtime. Al incluir atributos en los archivos de origen, el compilador funciona con archivos DLL para insertar código o modificar el código en los archivos objeto generados del proveedor. Estos atributos ayudan a la creación de otros elementos de COM, bibliotecas de tipos, interfaces y .idl (archivos). En el entorno de desarrollo integrado (IDE), se admiten atributos por los asistentes y la ventana Propiedades.
+Microsoft define un conjunto de C++ atributos que simplifican la programación COM y .NET Framework Common Language Runtime desarrollo. Al incluir atributos en los archivos de código fuente, el compilador funciona con archivos dll de proveedor para insertar código o modificar el código de los archivos de objeto generados. Estos atributos ayudan en la creación de archivos. idl, interfaces, bibliotecas de tipos y otros elementos COM. En el entorno de desarrollo integrado (IDE), los atributos se admiten en los asistentes y en el ventana Propiedades.
 
-Aunque atributos eliminan parte del código detallado necesario para escribir objetos COM, que tiene un fondo en [Fundamentos de COM](/windows/desktop/com/the-component-object-model) para optimizar su uso.
+Aunque los atributos eliminan parte de la codificación detallada necesaria para escribir objetos COM, se necesita un fondo en los [conceptos básicos de com](/windows/win32/com/the-component-object-model) para usarlos mejor.
 
 > [!NOTE]
-> Si busca atributos estándares de C++, vea [atributos](../../cpp/attributes.md).
+> Si busca atributos C++ estándar, vea [atributos](../../cpp/attributes.md).
 
 ## <a name="purpose-of-attributes"></a>Objetivo de los atributos
 
-Atributos extensión C++ en direcciones no son actualmente posibles sin romper la estructura clásica del lenguaje. Los atributos permiten a proveedores (DLL independiente) para ampliar la funcionalidad del lenguaje dinámicamente. El objetivo principal de atributos es simplificar la creación de componentes COM, además de aumentar el nivel de productividad del desarrollador de componentes. Los atributos se pueden aplicar a casi cualquier construcción de C++, como clases, miembros de datos o las funciones miembro. Este es un área resaltada de ventajas que ofrece esta nueva tecnología:
+Los atributos C++ se extienden en direcciones que no son posibles actualmente sin interrumpir la estructura clásica del lenguaje. Los atributos permiten a los proveedores (DLL independientes) extender la funcionalidad de lenguaje de forma dinámica. El objetivo principal de los atributos es simplificar la creación de componentes COM, además de aumentar el nivel de productividad del desarrollador de componentes. Los atributos se pueden aplicar a casi C++ cualquier construcción, como clases, miembros de datos o funciones miembro. A continuación se incluye un resaltado de las ventajas que ofrece esta nueva tecnología:
 
-- Expone una convención de llamada simple y familiar.
+- Expone una Convención de llamada sencilla y familiar.
 
-- Usa código insertado que, a diferencia de las macros, se reconoce el depurador.
+- Utiliza el código insertado, que, a diferencia de las macros, es reconocido por el depurador.
 
-- Permite la fácil derivación de clases base sin onerosos detalles de implementación.
+- Permite la derivación sencilla de clases base sin ningún detalle de implementación.
 
-- Reemplaza la gran cantidad de código IDL requerido por un componente COM con unos cuantos atributos concisos.
+- Reemplaza la gran cantidad de código IDL requerido por un componente COM con algunos atributos concisos.
 
-Por ejemplo, para implementar un receptor de eventos simple para una clase genérica de ATL, podría aplicar el [event_receiver](event-receiver.md) atributo en una clase específica como `CMyReceiver`. El `event_receiver` atributo, a continuación, se compila mediante Microsoft C++ compilador, que inserta el código adecuado en el archivo de objeto.
+Por ejemplo, para implementar un receptor de eventos simple para una clase ATL genérica, puede aplicar el atributo [event_receiver](event-receiver.md) a una clase específica como `CMyReceiver`. Después `event_receiver` , el compilador de Microsoft C++ compila el atributo, que inserta el código adecuado en el archivo objeto.
 
 ```cpp
 [event_receiver(com)]
@@ -45,26 +45,26 @@ class CMyReceiver
 }
 ```
 
-A continuación, puede configurar el `CMyReceiver` métodos `handler1` y `handler2` para controlar los eventos (mediante la función intrínseca [__hook](../../cpp/hook.md)) desde un origen de eventos, puede crear mediante [event_source](event-source.md).
+A continuación, puede configurar los `CMyReceiver` métodos `handler1` y `handler2` administrar los eventos (mediante la función intrínseca [_ _ Hook](../../cpp/hook.md)) desde un origen de eventos, que puede crear con [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Mecanismos básicos de los atributos
 
-Hay tres maneras de insertar atributos en el proyecto. En primer lugar, se puede insertarlos manualmente en el código fuente. En segundo lugar, puede insertarlos mediante la cuadrícula de propiedades de un objeto en el proyecto. Por último, puede insertarlos utilizando a los distintos asistentes. Para obtener más información sobre el uso de la **propiedades** ventana y los distintos asistentes, vea [proyectos de Visual Studio - C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
+Hay tres maneras de insertar atributos en el proyecto. En primer lugar, puede insertarlos manualmente en el código fuente. En segundo lugar, puede insertarlos mediante la cuadrícula de propiedades de un objeto del proyecto. Por último, puede insertarlos con los distintos asistentes. Para obtener más información sobre el uso de la ventana **propiedades** y los distintos asistentes, vea [Visual Studio C++Projects- ](../../build/creating-and-managing-visual-cpp-projects.md).
 
-Como antes, cuando se compila el proyecto, el compilador analiza cada archivo de origen de C++, generar un archivo de objeto. Sin embargo, cuando el compilador encuentra un atributo, se puede analizar y comprueba su sintaxis. A continuación, el compilador llama dinámicamente un proveedor de atributos para insertar código o realizar otras modificaciones en tiempo de compilación. La implementación del proveedor es diferente según el tipo de atributo. Por ejemplo, los atributos relacionados con ATL se implementan mediante Atlprov.dll.
+Como antes, cuando se compila el proyecto, el compilador analiza C++ cada archivo de código fuente y genera un archivo objeto. Sin embargo, cuando el compilador encuentra un atributo, se analiza y comprueba sintácticamente. Después, el compilador llama dinámicamente a un proveedor de atributos para insertar código o realizar otras modificaciones en tiempo de compilación. La implementación del proveedor difiere en función del tipo de atributo. Por ejemplo, Atlprov. dll implementa los atributos relacionados con ATL.
 
 En la siguiente ilustración se muestra la relación entre el compilador y el proveedor de atributos.
 
-![Comunicación de atributos del componente](../media/vccompattrcomm.gif "comunicación de atributos de componente")
+![Comunicación de atributos de componentes] (../media/vccompattrcomm.gif "Comunicación de atributos de componentes")
 
 > [!NOTE]
-> Uso de atributos no modifica el contenido del archivo de origen. Es el único momento en que el código generado del atributo está visible durante las sesiones de depuración. Además, para cada archivo de código fuente en el proyecto, puede generar un archivo de texto que muestra los resultados de la sustitución de atributos. Para obtener más información sobre este procedimiento, consulte [/Fx (combinar código insertado)](../../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
+> El uso de atributos no modifica el contenido del archivo de código fuente. La única vez que el código de atributo generado es visible es durante las sesiones de depuración. Además, para cada archivo de código fuente del proyecto, puede generar un archivo de texto que muestre los resultados de la sustitución de atributos. Para obtener más información sobre este procedimiento, vea [/FX (combinar código insertado)](../../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
 
-Al igual que la mayoría de las construcciones de C++, los atributos tienen un conjunto de características que define su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el [coclase](coclass.md) atributo solo puede aplicarse a una clase o estructura existente, en contraposición a la [cpp_quote](cpp-quote.md) atributo, que se puede insertar en cualquier lugar dentro de un C++ archivo de código fuente.
+Como la C++ mayoría de las construcciones, los atributos tienen un conjunto de características que definen su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el atributo [CoClass](coclass.md) solo se puede aplicar a una clase o estructura existente, en lugar del atributo [cpp_quote](cpp-quote.md) , que se puede insertar en cualquier parte dentro C++ de un archivo de código fuente.
 
 ## <a name="building-an-attributed-program"></a>Compilar programas con atributos
 
-Después de colocar Visual C++ atributos en el código fuente, es posible que desee Microsoft C++ compilador para generar un archivo .idl y de biblioteca de tipos para usted. Las siguiente opciones del vinculador ayudan a crear archivos .tlb y .idl:
+Después de colocar los C++ atributos visuales en el código fuente, puede que desee que C++ el compilador de Microsoft genere una biblioteca de tipos y un archivo. idl. Las siguientes opciones del vinculador le ayudan a compilar archivos. tlb y. idl:
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
@@ -74,31 +74,31 @@ Después de colocar Visual C++ atributos en el código fuente, es posible que de
 
 - [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
 
-Algunos proyectos contienen varios archivos .idl independientes. Estos se usan para generar dos o más archivos .tlb y, opcionalmente, enlazarlos con el bloque de recursos. Este escenario no se admite actualmente en Visual C++.
+Algunos proyectos contienen varios archivos. idl independientes. Se usan para generar dos o más archivos. tlb y, opcionalmente, enlazarlos en el bloque de recursos. Este escenario no se admite actualmente en Visual C++.
 
-Además, el vinculador de Visual C++ generarán toda la información de atributos relacionados con el IDL en un único archivo MIDL. No habrá ninguna manera de generar dos bibliotecas de tipos desde un solo proyecto.
+Además, el vinculador C++ visual generará toda la información de atributos relacionados con IDL en un solo archivo MIDL. No habrá forma de generar dos bibliotecas de tipos a partir de un único proyecto.
 
-## <a name="contexts"></a> Contextos de atributo
+## <a name="contexts"></a>Contextos de atributo
 
-Atributos de C++ se pueden describir mediante los cuatro campos básicos: el destino se puede aplicar a (**se aplica a**), si son repetibles o no (**repetible**), el requiere la presencia de otros atributos ( **Atributos requeridos**) y las incompatibilidades con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla que aparece en el tema de referencia de cada atributo. Cada uno de estos campos se describe a continuación.
+C++los atributos se pueden describir con cuatro campos básicos: el destino al que se pueden aplicar (**se aplica a**), si son repetibles o no (**repetibles**), la presencia necesaria de otros atributos (**atributos requeridos**) e incompatibilidades. con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla adjunta en el tema de referencia de cada atributo. A continuación se describe cada uno de estos campos.
 
 ### <a name="applies-to"></a>Se aplica a
 
-Este campo describe los diferentes elementos del lenguaje C++ que son destinos válidos para el atributo especificado. Por ejemplo, si un atributo especifica "class" en la **se aplica a** campo, esto indica que el atributo solo puede aplicarse a una clase de C++ válida. Si el atributo se aplica a una función miembro de una clase, se produciría un error de sintaxis.
+Este campo describe los distintos C++ elementos del lenguaje que son destinos válidos para el atributo especificado. Por ejemplo, si un atributo especifica "class" en el campo **se aplica a** , indica que el atributo solo se puede aplicar a una clase C++ válida. Si el atributo se aplica a una función miembro de una clase, se producirá un error de sintaxis.
 
-Para obtener más información, consulte [atributos por uso](attributes-by-usage.md).
+Para obtener más información, vea [atributos por uso](attributes-by-usage.md).
 
 ### <a name="repeatable"></a>Reiterativo
 
-Este campo indica si el atributo puede aplicarse varias veces en el mismo destino. La mayoría de los atributos no son repetibles.
+Este campo indica si el atributo se puede aplicar varias veces al mismo destino. La mayoría de los atributos no se pueden repetir.
 
 ### <a name="required-attributes"></a>Atributos requeridos
 
-Este campo muestra otros atributos que deben estar presentes (que es, se aplican al mismo destino) para el atributo especificado funcionar correctamente. Es raro que un atributo para que todas las entradas para este campo.
+Este campo muestra otros atributos que deben estar presentes (es decir, que se aplican al mismo destino) para que el atributo especificado funcione correctamente. No es habitual que un atributo tenga entradas para este campo.
 
 ### <a name="invalid-attributes"></a>Atributos no válidos
 
-Este campo muestra otros atributos que no son compatibles con el atributo especificado. Es raro que un atributo para que todas las entradas para este campo.
+Este campo muestra otros atributos que no son compatibles con el atributo especificado. No es habitual que un atributo tenga entradas para este campo.
 
 ## <a name="in-this-section"></a>En esta sección
 

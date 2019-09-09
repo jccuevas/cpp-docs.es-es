@@ -1,5 +1,5 @@
 ---
-title: CCheckListBox (clase)
+title: Clase CCheckListBox
 ms.date: 11/04/2016
 f1_keywords:
 - CCheckListBox
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8c725ea30754a42ce3045f1160b7a09c4481e39
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206736"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507349"
 ---
-# <a name="cchecklistbox-class"></a>CCheckListBox (clase)
+# <a name="cchecklistbox-class"></a>Clase CCheckListBox
 
 Proporciona la funcionalidad de un cuadro de lista de comprobación de Windows.
 
@@ -49,52 +49,52 @@ class CCheckListBox : public CListBox
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CCheckListBox::CCheckListBox](#cchecklistbox)|Construye un objeto `CCheckListBox`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CCheckListBox::Create](#create)|Crea el cuadro de lista de comprobación de Windows y lo adjunta a la `CCheckListBox` objeto.|
-|[CCheckListBox::DrawItem](#drawitem)|Lo llama el marco cuando un aspecto visual de un cuadro de lista dibujado por el propietario cambie.|
+|[CCheckListBox::Create](#create)|Crea el cuadro de lista de comprobación de Windows y lo `CCheckListBox` adjunta al objeto.|
+|[CCheckListBox::DrawItem](#drawitem)|Lo llama el marco de trabajo cuando cambia el aspecto visual de un cuadro de lista dibujado por el propietario.|
 |[CCheckListBox::Enable](#enable)|Habilita o deshabilita un elemento de cuadro de lista de comprobación.|
-|[CCheckListBox::GetCheck](#getcheck)|Obtiene el estado de la casilla de verificación de un elemento.|
-|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Obtiene el estilo del control casillas de verificación.|
+|[CCheckListBox::GetCheck](#getcheck)|Obtiene el estado de la casilla de un elemento.|
+|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Obtiene el estilo de las casillas del control.|
 |[CCheckListBox::IsEnabled](#isenabled)|Determina si un elemento está habilitado.|
-|[CCheckListBox::MeasureItem](#measureitem)|Lo llama el marco de trabajo cuando se crea un cuadro de lista con un estilo de dibujo del propietario.|
-|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Lo llama el marco de trabajo para obtener la posición de la casilla de verificación de un elemento.|
-|[CCheckListBox::SetCheck](#setcheck)|Establece el estado de la casilla de verificación de un elemento.|
-|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Establece el estilo del control casillas de verificación.|
+|[CCheckListBox::MeasureItem](#measureitem)|Lo llama el marco de trabajo cuando se crea un cuadro de lista con un estilo dibujado por el propietario.|
+|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Lo llama el marco de trabajo para obtener la posición de la casilla de un elemento.|
+|[CCheckListBox::SetCheck](#setcheck)|Establece el estado de la casilla de un elemento.|
+|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Establece el estilo de las casillas del control.|
 
 ## <a name="remarks"></a>Comentarios
 
-"Cuadro de lista de comprobación" muestra una lista de elementos, como los nombres de archivo. Cada elemento de la lista tiene una casilla de verificación junto a él que el usuario puede activar o desactivar.
+Un "cuadro de lista de comprobación" muestra una lista de elementos, como los nombres de archivo. Cada elemento de la lista tiene una casilla junto a él que el usuario puede activar o desactivar.
 
-`CCheckListBox` es solo para los controles dibujados por el propietario porque la lista contiene más de las cadenas de texto. En su forma más simple, un cuadro de lista de comprobación contiene cadenas de texto y casillas de verificación, pero no es necesario para que el texto en absoluto. Por ejemplo, podría tener una lista de mapas de bits pequeño con una casilla de verificación junto a cada elemento.
+`CCheckListBox`es solo para los controles dibujados por el propietario, ya que la lista contiene más cadenas de texto. En su forma más simple, un cuadro de lista de comprobación contiene cadenas de texto y casillas, pero no es necesario tener texto. Por ejemplo, podría tener una lista de mapas de bits pequeños con una casilla junto a cada elemento.
 
-Para crear su propio cuadro de lista de comprobación, debe derivar su propia clase de `CCheckListBox`. Al derivar su propia clase, escribir un constructor de la clase derivada, a continuación, llame a `Create`.
+Para crear su propio cuadro de lista de comprobación, debe derivar su `CCheckListBox`propia clase de. Para derivar su propia clase, escriba un constructor para la clase derivada y, `Create`después, llame a.
 
-Si desea controlar los mensajes de notificación de Windows enviados por un cuadro de lista a su elemento primario (normalmente una clase derivada de [CDialog](../../mfc/reference/cdialog-class.md)), agregue una función de miembro de entrada y el controlador de mensajes del mapa de mensajes a la clase primaria para cada mensaje.
+Si desea controlar los mensajes de notificación de Windows enviados por un cuadro de lista a su elemento primario (normalmente una clase derivada de [CDialog](../../mfc/reference/cdialog-class.md)), agregue una entrada de mapa de mensajes y una función miembro de controlador de mensajes a la clase primaria para cada mensaje.
 
-Cada entrada de mapa de mensajes tiene el formato siguiente:
+Cada entrada de mapa de mensajes tiene el siguiente formato:
 
-**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
+**ON\_** _Notification_ **(** _id_, _memberFxn_ **)**
 
-donde `id` especifica el identificador de ventana secundaria del control que envía la notificación y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
+donde `id` especifica el identificador de la ventana secundaria del control que envía la `memberFxn` notificación y es el nombre de la función miembro primaria que ha escrito para controlar la notificación.
 
-Prototipo de función del elemento primario es el siguiente:
+El prototipo de función del elemento primario es el siguiente:
 
 `afx_msg void memberFxn();`
 
-Hay solo una entrada de mapa de mensajes que pertenecen específicamente a `CCheckListBox` (pero Vea también las entradas de mapa de mensajes para [CListBox](../../mfc/reference/clistbox-class.md)):
+Solo hay una entrada de mapa de mensajes que pertenece específicamente a `CCheckListBox` (pero vea también las entradas del mapa de mensajes para [CListBox](../../mfc/reference/clistbox-class.md)):
 
-- ON_CLBN_CHKCHANGE el usuario ha cambiado el estado de la casilla de verificación de un elemento.
+- ON_CLBN_CHKCHANGE el usuario ha cambiado el estado de la casilla de un elemento.
 
-Si el cuadro de lista de comprobación es un cuadro de lista de comprobación predeterminado (una lista de cadenas con las casillas de verificación de tamaño predeterminado a la izquierda de cada uno), puede usar el valor predeterminado [CCheckListBox::DrawItem](#drawitem) para dibujar el cuadro de lista de comprobación. En caso contrario, es necesario reemplazar el [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) función y el [CCheckListBox::DrawItem](#drawitem) y [CCheckListBox::MeasureItem](#measureitem) funciones.
+Si el cuadro de lista de comprobación es un cuadro de lista de comprobación predeterminado (una lista de cadenas con las casillas de tamaño predeterminado a la izquierda de cada), puede usar el valor predeterminado [CCheckListBox::D rawitem](#drawitem) para dibujar el cuadro de lista de comprobación. De lo contrario, debe invalidar la función [CListBox:: CompareItem](../../mfc/reference/clistbox-class.md#compareitem) y las funciones [CCheckListBox::D rawitem](#drawitem) y [CCheckListBox:: MeasureItem](#measureitem) .
 
-Puede crear un cuadro de lista de comprobación de una plantilla de cuadro de diálogo o directamente en el código.
+Puede crear un cuadro de lista de comprobación desde una plantilla de cuadro de diálogo o directamente en el código.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -112,7 +112,7 @@ Puede crear un cuadro de lista de comprobación de una plantilla de cuadro de di
 
 **Encabezado:** afxwin.h
 
-##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox
+##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox
 
 Construye un objeto `CCheckListBox`.
 
@@ -122,7 +122,7 @@ CCheckListBox();
 
 ### <a name="remarks"></a>Comentarios
 
-Construir un `CCheckListBox` objeto en dos pasos. Definir primero una clase derivada de `CCheckListBox`, a continuación, llame a `Create`, que inicializa el cuadro de lista de comprobación de Windows y lo asocia a la `CCheckListBox` objeto.
+Un `CCheckListBox` objeto se crea en dos pasos. En primer lugar, defina una `CCheckListBox`clase derivada de `Create`y, a continuación, llame a, que inicializa el cuadro de lista `CCheckListBox` de comprobación de Windows y lo adjunta al objeto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -130,7 +130,7 @@ Construir un `CCheckListBox` objeto en dos pasos. Definir primero una clase deri
 
 ##  <a name="create"></a>  CCheckListBox::Create
 
-Crea el cuadro de lista de comprobación de Windows y lo adjunta a la `CCheckListBox` objeto.
+Crea el cuadro de lista de comprobación de Windows y lo `CCheckListBox` adjunta al objeto.
 
 ```
 virtual BOOL Create(
@@ -143,16 +143,16 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *dwStyle*<br/>
-Especifica el estilo del cuadro de lista de comprobación. El estilo debe ser LBS_HASSTRINGS y LBS_OWNERDRAWFIXED (todos los elementos de la lista tienen la misma altura) o LBS_OWNERDRAWVARIABLE (elementos de la lista son de diferentes alturas). Este estilo se puede combinar con otras [estilos de cuadro de lista](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) excepto LBS_USETABSTOPS.
+Especifica el estilo del cuadro de lista de comprobación. El estilo debe ser LBS_HASSTRINGS y LBS_OWNERDRAWFIXED (todos los elementos de la lista tienen el mismo alto) o LBS_OWNERDRAWVARIABLE (los elementos de la lista tienen una altura variable). Este estilo se puede combinar con otros [estilos de cuadro de lista](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) excepto LBS_USETABSTOPS.
 
 *rect*<br/>
-Especifica la posición y tamaño del cuadro de lista de comprobación. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.
+Especifica el tamaño y la posición del cuadro de lista de comprobación. Puede ser un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) .
 
 *pParentWnd*<br/>
-Especifica la ventana del elemento primario del cuadro de lista de comprobación (normalmente un `CDialog` objeto). No debe ser NULL.
+Especifica la ventana primaria del cuadro de lista de comprobación `CDialog` (normalmente un objeto). No debe ser NULL.
 
 *nID*<br/>
-Especifica el identificador del control. del cuadro de lista de comprobación
+Especifica el identificador de control del cuadro de lista de comprobación.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -160,19 +160,19 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Construir un `CCheckListBox` objeto en dos pasos. En primer lugar, defina una clase derivada de `CcheckListBox` y, a continuación, llame a `Create`, que inicializa el cuadro de lista de comprobación de Windows y lo asocia a la `CCheckListBox`. Consulte [CCheckListBox::CCheckListBox](#cchecklistbox) para obtener un ejemplo.
+Un `CCheckListBox` objeto se crea en dos pasos. En primer lugar, defina una clase `CcheckListBox` derivada de y `Create`, a continuación, llame a, que inicializa el cuadro de lista de `CCheckListBox`comprobación de Windows y lo asocia a. Vea [CCheckListBox:: CCheckListBox](#cchecklistbox) para obtener un ejemplo.
 
-Cuando `Create` envíos de Windows que se ejecuta el [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), y [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) mensajes para el control de cuadro de lista de comprobación.
+Cuando `Create` se ejecuta, Windows envía los mensajes [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)y [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) al control de cuadro de lista de comprobación.
 
-Estos mensajes se controlan de manera predeterminada el [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), y [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funciones miembro en el `CWnd` clase base. Para extender el control de mensajes de forma predeterminada, agregue un mapa de mensajes para el su clase derivada y las funciones de miembro de reemplazo el anterior controlador de mensajes. Invalidar `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.
+Estos mensajes se controlan de forma predeterminada mediante las funciones miembro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [alcrear](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)y [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) en `CWnd` la clase base. Para extender el control de mensajes predeterminado, agregue un mapa de mensajes a la clase derivada e invalide las funciones miembro de controlador de mensaje anteriores. Invalide `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.
 
-Aplique el siguiente [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) a un control de cuadro de lista de comprobación:
+Aplique los siguientes [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) a un control de cuadro de lista de comprobación:
 
 - WS_CHILD siempre
 
 - WS_VISIBLE normalmente
 
-- WS_DISABLED rara vez
+- WS_DISABLED raramente
 
 - WS_VSCROLL para agregar una barra de desplazamiento vertical
 
@@ -180,11 +180,11 @@ Aplique el siguiente [estilos de ventana](../../mfc/reference/styles-used-by-mfc
 
 - WS_GROUP a controles de grupo
 
-- WS_TABSTOP para permitir a este control de tabulación
+- WS_TABSTOP para permitir la tabulación a este control
 
-##  <a name="drawitem"></a>  CCheckListBox::DrawItem
+##  <a name="drawitem"></a>CCheckListBox::D rawItem
 
-Lo llama el marco cuando un aspecto visual de los cambios del cuadro de lista de comprobación dibujado por el propietario.
+Lo llama el marco de trabajo cuando cambia el aspecto visual de un cuadro de lista de comprobación dibujado por el propietario.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -193,17 +193,17 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpDrawItemStruct*<br/>
-Un puntero largo a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estructura que contiene información sobre el tipo de dibujo necesaria.
+Puntero largo a una estructura [drawitemstruct (](/windows/win32/api/winuser/ns-winuser-drawitemstruct) que contiene información sobre el tipo de dibujo necesario.
 
 ### <a name="remarks"></a>Comentarios
 
-El `itemAction` y `itemState` los miembros de la `DRAWITEMSTRUCT` estructura define la acción de dibujo que se realiza.
+Los `itemAction` miembros `itemState` y de la `DRAWITEMSTRUCT` estructura definen la acción de dibujo que se va a realizar.
 
-De forma predeterminada, esta función dibuja una lista de casilla de verificación de forma predeterminada, que consta de una lista de cadenas con una casilla tamaño predeterminado a la izquierda. El tamaño de la lista de casilla de verificación es el especificado en [crear](#create).
+De forma predeterminada, esta función dibuja una lista de casillas predeterminada, que consta de una lista de cadenas cada una con una casilla de tamaño predeterminado a la izquierda. El tamaño de la lista de casillas es el especificado en [crear](#create).
 
-Reemplace esta función miembro para implementar el dibujo de cuadros de lista de comprobación dibujado por el propietario que no son los predeterminados, como cuadros de lista de comprobación con las listas que no son cadenas, con elementos de alto variable o con las casillas de verificación que no son de la izquierda. La aplicación debe restaurar todos los objetos de interfaz (GDI) de dispositivo de gráficos seleccionados para proporciona el contexto de presentación en *lpDrawItemStruct* antes de la finalización de esta función miembro.
+Invalide esta función miembro para implementar el dibujo de cuadros de lista de comprobación dibujados por el propietario que no son los predeterminados, como los cuadros de lista de comprobación con listas que no son cadenas, con elementos de alto variable o con casillas que no están a la izquierda. La aplicación debe restaurar todos los objetos de la interfaz de dispositivo gráfico (GDI) seleccionados para el contexto de presentación proporcionado en *lpDrawItemStruct* antes de la finalización de esta función miembro.
 
-Si los elementos del cuadro de lista de comprobación no son la misma altura, la lista de comprobación cuadro Estilo (especificado en `Create`) debe ser ** LBS_OWNERVARIABLE así que debe invalidar el [MeasureItem](#measureitem) función.
+Si los elementos del cuadro de lista de comprobación no tienen el mismo alto, el estilo del `Create`cuadro de lista de comprobación (especificado en) debe ser * * LBS_OWNERVARIABLE y debe invalidar la función [MeasureItem](#measureitem) .
 
 ##  <a name="enable"></a>  CCheckListBox::Enable
 
@@ -218,14 +218,14 @@ void Enable(
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-Índice del elemento de cuadro de lista de comprobación para habilitarse.
+Índice del elemento del cuadro de lista de comprobación que se va a habilitar.
 
 *bEnabled*<br/>
 Especifica si el elemento está habilitado o deshabilitado.
 
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck
 
-Recupera el estado de la casilla de verificación especificado.
+Recupera el estado de la casilla especificada.
 
 ```
 int GetCheck(int nIndex);
@@ -234,16 +234,16 @@ int GetCheck(int nIndex);
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-Índice de base cero de la casilla de verificación que se encuentra en el cuadro de lista.
+Índice de base cero de una casilla incluida en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El estado de la casilla de verificación especificado. En la tabla siguiente se enumera los valores posibles.
+Estado de la casilla especificada. En la tabla siguiente se enumeran los valores posibles.
 
-|Valor|Descripción|
+|Value|DESCRIPCIÓN|
 |-----------|-----------------|
 |BST_CHECKED|La casilla está activada.|
-|BST_UNCHECKED|No se comprueba la casilla de verificación.|
+|BST_UNCHECKED|La casilla no está activada.|
 |BST_INDETERMINATE|El estado de la casilla es indeterminado.|
 
 ##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle
@@ -256,11 +256,11 @@ UINT GetCheckStyle();
 
 ### <a name="return-value"></a>Valor devuelto
 
-El estilo del control casillas de verificación.
+Estilo de las casillas del control.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener información sobre los posibles estilos, consulte [SetCheckStyle](#setcheckstyle).
+Para obtener información sobre los posibles estilos, vea [SetCheckStyle](#setcheckstyle).
 
 ##  <a name="isenabled"></a>  CCheckListBox::IsEnabled
 
@@ -277,7 +277,7 @@ BOOL IsEnabled(int nIndex);
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el elemento está habilitado; en caso contrario, es 0.
+Distinto de cero si el elemento está habilitado; de lo contrario, es 0.
 
 ##  <a name="measureitem"></a>  CCheckListBox::MeasureItem
 
@@ -290,15 +290,15 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpMeasureItemStruct*<br/>
-Un puntero largo a un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estructura.
+Puntero largo a una estructura [measureitemstruct (](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
 ### <a name="remarks"></a>Comentarios
 
-De forma predeterminada, esta función miembro no hace nada. Reemplace esta función miembro y rellene el `MEASUREITEMSTRUCT` estructura para informar a Windows de las dimensiones de elementos del cuadro de lista de comprobación. Si el cuadro de lista de comprobación se crea con el [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, el marco llama a esta función miembro para cada elemento en el cuadro de lista. En caso contrario, este miembro se llama solo una vez.
+De forma predeterminada, esta función miembro no hace nada. Invalide esta función miembro y rellene la `MEASUREITEMSTRUCT` estructura para informar a las ventanas de las dimensiones de los elementos de la lista de comprobación. Si se crea el cuadro de lista de comprobación con el estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , el marco de trabajo llama a esta función miembro para cada elemento del cuadro de lista. De lo contrario, se llama a este miembro solo una vez.
 
 ##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition
 
-El marco de trabajo llama a esta función para obtener la posición y tamaño de la casilla de verificación en un elemento.
+El marco de trabajo llama a esta función para obtener la posición y el tamaño de la casilla de un elemento.
 
 ```
 virtual CRect OnGetCheckPosition(
@@ -312,19 +312,19 @@ virtual CRect OnGetCheckPosition(
 La posición y el tamaño del elemento de lista.
 
 *rectCheckBox*<br/>
-La posición predeterminada y el tamaño de un elemento de casilla de verificación.
+Posición y tamaño predeterminados de la casilla de un elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La posición y tamaño de un elemento de casilla de verificación.
+La posición y el tamaño de la casilla de un elemento.
 
 ### <a name="remarks"></a>Comentarios
 
-La implementación predeterminada devuelve solo la posición predeterminada y el tamaño de la casilla de verificación (`rectCheckBox`). De forma predeterminada, una casilla de verificación está alineada en la esquina superior izquierda de un elemento y es el tamaño de la casilla de verificación estándar. Puede haber casos en que desea que las casillas de verificación de la derecha, o desea una casilla de verificación mayor o menor. En estos casos, reemplazar `OnGetCheckPosition` para cambiar la posición de la casilla de verificación y tamaño dentro del elemento.
+La implementación predeterminada solo devuelve la posición y el tamaño predeterminados de la`rectCheckBox`casilla (). De forma predeterminada, una casilla está alineada en la esquina superior izquierda de un elemento y es el tamaño de la casilla estándar. Puede haber casos en los que desee las casillas de verificación a la derecha o que desee una casilla mayor o menor. En estos casos, invalide `OnGetCheckPosition` para cambiar la posición y el tamaño de la casilla dentro del elemento.
 
-##  <a name="setcheck"></a>  CCheckListBox::SetCheck
+##  <a name="setcheck"></a>CCheckListBox::SetCheck
 
-Establece el estado de la casilla de verificación especificado.
+Establece el estado de la casilla especificada.
 
 ```
 void SetCheck(
@@ -335,24 +335,24 @@ void SetCheck(
 ### <a name="parameters"></a>Parámetros
 
 *nIndex*<br/>
-Índice de base cero de la casilla de verificación que se encuentra en el cuadro de lista.
+Índice de base cero de una casilla incluida en el cuadro de lista.
 
 *nCheck*<br/>
-El estado del botón de la casilla de verificación especificada. Consulte la sección Comentarios para los valores posibles.
+Estado del botón de la casilla especificada. Vea la sección Comentarios para ver los posibles valores.
 
 ### <a name="remarks"></a>Comentarios
 
-En la tabla siguiente se enumera los valores posibles para el *nCompruebe* parámetro.
+En la tabla siguiente se enumeran los posibles valores para el parámetro *nCompruebe* .
 
-|Valor|Descripción|
+|Valor|DESCRIPCIÓN|
 |-----------|-----------------|
-|BST_CHECKED|Seleccione la casilla de verificación especificada.|
-|BST_UNCHECKED|Desactive la casilla de verificación especificada.|
-|BST_INDETERMINATE|Establecer el estado de la casilla de verificación especificada en indeterminado.<br /><br /> Este estado solo está disponible si el estilo de la casilla de verificación es BS_AUTO3STATE o BS_3STATE. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
+|BST_CHECKED|Active la casilla especificada.|
+|BST_UNCHECKED|Desactive la casilla especificada.|
+|BST_INDETERMINATE|Establezca el estado de casilla especificado en indeterminado.<br /><br /> Este estado solo está disponible si el estilo de la casilla es BS_AUTO3STATE o BS_3STATE. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
 
 ##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle
 
-Llame a esta función para establecer el estilo de las casillas de verificación en el cuadro de lista de comprobación.
+Llame a esta función para establecer el estilo de las casillas en el cuadro de lista de comprobación.
 
 ```
 void SetCheckStyle(UINT nStyle);
@@ -361,7 +361,7 @@ void SetCheckStyle(UINT nStyle);
 ### <a name="parameters"></a>Parámetros
 
 *nStyle*<br/>
-Determina el estilo de las casillas de verificación en el cuadro de lista de comprobación.
+Determina el estilo de las casillas en el cuadro de lista de comprobación.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -375,11 +375,11 @@ Los estilos válidos son:
 
 - BS_3STATE
 
-Para obtener información acerca de estos estilos, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).
+Para obtener información sobre estos estilos, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo TSTCON de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CListBox (clase)](../../mfc/reference/clistbox-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CListBox (clase)](../../mfc/reference/clistbox-class.md)

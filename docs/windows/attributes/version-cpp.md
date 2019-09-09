@@ -1,5 +1,5 @@
 ---
-title: versión (atributo de COM de C++)
+title: versión (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407164"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514876"
 ---
 # <a name="version-c"></a>version (C++)
 
-Identifica una versión determinada entre varias versiones de una clase.
+Identifica una versión concreta entre varias versiones de una clase.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,15 +27,15 @@ Identifica una versión determinada entre varias versiones de una clase.
 ### <a name="parameters"></a>Parámetros
 
 *version*<br/>
-El número de versión de la `coclass`. Si no se especifica, se colocará en el archivo .idl 1.0.
+Número de versión del `coclass`. Si no se especifica, 1,0 se colocará en el archivo. idl.
 
 ## <a name="remarks"></a>Comentarios
 
-El **versión** atributo de C++ tiene la misma funcionalidad que el [versión](/windows/desktop/Midl/version) atributo MIDL y se pasa a través del archivo .idl generado.
+El atributo **version** C++ tiene la misma funcionalidad que el atributo MIDL de la [versión](/windows/win32/Midl/version) y se pasa a través del archivo. idl generado.
 
 ## <a name="example"></a>Ejemplo
 
-Consulte la [enlazable](bindable.md) ejemplo para un ejemplo de uso de **versión**.
+Vea el ejemplo [enlazable](bindable.md) para obtener un ejemplo de uso de la **versión**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -44,9 +44,9 @@ Consulte la [enlazable](bindable.md) ejemplo para un ejemplo de uso de **versió
 |||
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
-|**Reiterativo**|No|
+|**Reiterativo**|Sin|
 |**Atributos requeridos**|**coclase**|
-|**Atributos no válidos**|Ninguna|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 

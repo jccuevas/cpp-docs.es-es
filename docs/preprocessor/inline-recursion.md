@@ -1,6 +1,6 @@
 ---
-title: inline_recursion
-ms.date: 11/04/2016
+title: inline_recursion (Pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - inline_recursion_CPP
 - vc-pragma.inline_recursion
@@ -8,30 +8,29 @@ helpviewer_keywords:
 - pragmas, inline_recursion
 - inline_recursion pragma
 ms.assetid: cfef5791-63b7-45ac-9574-623747b9b9c9
-ms.openlocfilehash: 80ffabc6ac7c95fd7d9fb4e62bea38c2a04b04f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0169e06e8e47f7b0a7b3f73e809ddc988bcf1e95
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383703"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220953"
 ---
-# <a name="inlinerecursion"></a>inline_recursion
+# <a name="inline_recursion-pragma"></a>inline_recursion (Pragma)
+
 Controla la expansión en línea de llamadas de función directas o mutuamente recursivas.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-#pragma inline_recursion( [{on | off}] )
-```
+> **#pragma inline_recursion (** [{ **on** | **OFF** }] **)**
 
 ## <a name="remarks"></a>Comentarios
 
-Usar esta directiva pragma para controlar funciones marcada como [inline](../cpp/inline-functions-cpp.md) y [__inline](../cpp/inline-functions-cpp.md) o funciones que el compilador expanda automáticamente bajo el `/Ob2` opción. Uso de esta directiva pragma requiere un [/Ob](../build/reference/ob-inline-function-expansion.md) valor de la opción del compilador de 1 o 2. El estado predeterminado de **inline_recursion** está desactivada. Esta pragma tiene efecto en la primera llamada de función después de que se considere la directiva pragma y no afecta a la definición de la función.
+Use esta pragma para controlar las funciones marcadas como [inline](../cpp/inline-functions-cpp.md) [e _ _ inline o](../cpp/inline-functions-cpp.md) funciones que el compilador expande automáticamente bajo la `/Ob2` opción. El uso de esta pragma requiere un valor de la opción del compilador [/OB](../build/reference/ob-inline-function-expansion.md) de 1 o 2. El estado predeterminado de **inline_recursion** es OFF. Esta pragma surte efecto en la primera llamada de función después de que se vea la Directiva pragma y no afecte a la definición de la función.
 
-El **inline_recursion** pragma controla cómo se expanden las funciones recursivas. Si **inline_recursion** está desactivada y, si una función insertada llama a sí misma (directa o indirectamente), la función es solo una vez expandida. Si **inline_recursion** está activado, la función se expande varias veces hasta que alcanza el valor establecido con el [inline_depth](../preprocessor/inline-depth.md) pragma, el valor predeterminado para las funciones recursivas definido por el `inline_depth` pragma o una capacidad de limitar.
+La Directiva pragma **inline_recursion** controla cómo se expanden las funciones recursivas. Si **inline_recursion** está desactivado y una función insertada se llama a sí misma, ya sea directa o indirectamente, la función se expande solo una vez. Si **inline_recursion** es on, la función se expande varias veces hasta que alcanza el valor establecido con la pragma [inline_depth](../preprocessor/inline-depth.md) , el valor predeterminado para las funciones recursivas que define la `inline_depth` pragma o un límite de capacidad.
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[inline_depth](../preprocessor/inline-depth.md)<br/>
+[Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[inline_depth](../preprocessor/inline-depth.md)\
 [/Ob (Expansión de funciones insertadas)](../build/reference/ob-inline-function-expansion.md)

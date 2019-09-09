@@ -17,7 +17,7 @@ Las funciones miembro de flujo de salida tienen tres tipos: las que son equivale
 
 ## <a name="the-open-function-for-output-streams"></a>La función Open para flujos de salida
 
-Para usar un flujo de archivo de[](../standard-library/basic-ofstream-class.md)salida (enstream), debe asociar la secuencia con un archivo de disco específico en el `open` constructor o en la función. Si usa la `open` función, puede volver a usar el mismo objeto de secuencia con una serie de archivos. En cualquier caso, los argumentos que describen el archivo son los mismos.
+Para usar un flujo de archivo de salida ([enstream](../standard-library/basic-ofstream-class.md)), debe asociar la secuencia con un archivo de disco específico en el `open` constructor o en la función. Si usa la `open` función, puede volver a usar el mismo objeto de secuencia con una serie de archivos. En cualquier caso, los argumentos que describen el archivo son los mismos.
 
 Al abrir el archivo asociado a un flujo de salida, normalmente se especifica una `open_mode` marca. Puede combinar estas marcas, que se definen como enumeradores en la clase `ios`, con el operador OR bit a bit ( &#124; ). Vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode) para obtener una lista de los enumeradores.
 

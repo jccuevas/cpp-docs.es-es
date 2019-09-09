@@ -42,7 +42,7 @@ class thread;
 
 ## <a name="remarks"></a>Comentarios
 
-Puede usar un objeto  de subproceso para observar y administrar un subproceso de ejecución dentro de una aplicación. Un objeto thread creado con el constructor predeterminado no está asociado a ningún subproceso de ejecución. Un objeto thread construido mediante un objeto al que se puede llamar crea un nuevo subproceso de ejecución y llama al objeto al que se puede llamar en ese subproceso. Los objetos thread se pueden mover pero no copiar. Por tanto, un subproceso de ejecución solo se puede asociar a un objeto thread.
+Puede usar un objeto de **subproceso** para observar y administrar un subproceso de ejecución dentro de una aplicación. Un objeto thread creado con el constructor predeterminado no está asociado a ningún subproceso de ejecución. Un objeto thread construido mediante un objeto al que se puede llamar crea un nuevo subproceso de ejecución y llama al objeto al que se puede llamar en ese subproceso. Los objetos thread se pueden mover pero no copiar. Por tanto, un subproceso de ejecución solo se puede asociar a un objeto thread.
 
 Cada subproceso de ejecución tiene un identificador único de tipo `thread::id`. La función `this_thread::get_id` devuelve el identificador del subproceso que realiza la llamada. La función miembro `thread::get_id` devuelve el identificador del subproceso administrado por un objeto thread. Para un objeto thread creado con el constructor predeterminado, el método `thread::get_id` devuelve un objeto cuyo valor es el mismo para todos los objetos thread creados con el constructor predeterminado y diferente del valor devuelto por `this_thread::get_id` para cualquier subproceso de ejecución que se pueda unir en el momento de la llamada.
 
@@ -58,25 +58,25 @@ Cada subproceso de ejecución tiene un identificador único de tipo `thread::id`
 
 |NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[thread](#thread)|Construye un objeto  de subproceso.|
+|[thread](#thread)|Construye un objeto de **subproceso** .|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[detach](#detach)|Desasocia el subproceso asociado del  objeto de subproceso.|
+|[detach](#detach)|Desasocia el subproceso asociado del objeto de **subproceso** .|
 |[get_id](#get_id)|Devuelve el identificador único del subproceso asociado.|
 |[hardware_concurrency](#hardware_concurrency)|Estático. Devuelve una estimación del número de contextos de subprocesos de hardware.|
 |[join](#join)|Se bloquea hasta que el subproceso asociado se completa.|
 |[joinable](#joinable)|Especifica si se puede unir el subproceso asociado.|
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador de subproceso.|
-|[swap](#swap)|Intercambia el estado del objeto con un objeto  de subproceso especificado.|
+|[swap](#swap)|Intercambia el estado del objeto con un objeto de **subproceso** especificado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[thread::operator=](#op_eq)|Asocia un subproceso al objeto  de subproceso actual.|
+|[thread::operator=](#op_eq)|Asocia un subproceso al objeto de **subproceso** actual.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -162,7 +162,7 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el subproceso asociado es combinable; en caso contrario, **false**.
+**true** si el subproceso asociado es *combinable*; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -191,7 +191,7 @@ thread& operator=(thread&& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Distinta*\
-Objeto  de subproceso.
+Objeto de **subproceso** .
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -205,7 +205,7 @@ Una vez realizada la asociación, `Other` se establece en un estado construido d
 
 ## <a name="swap"></a>  thread::swap
 
-Intercambia el estado del objeto con el de un objeto  de subproceso especificado.
+Intercambia el estado del objeto con el de un objeto de **subproceso** especificado.
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -214,11 +214,11 @@ void swap(thread& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Distinta*\
-Objeto  de subproceso.
+Objeto de **subproceso** .
 
 ## <a name="thread"></a>  thread::thread (Constructor)
 
-Construye un objeto  de subproceso.
+Construye un objeto de **subproceso** .
 
 ```cpp
 thread() noexcept;
@@ -243,7 +243,7 @@ Objeto de **subproceso** existente.
 
 El primer constructor crea un objeto que no está asociado con un subproceso de ejecución. El valor devuelto por una llamada a `get_id` para el objeto construido es `thread::id()`.
 
-El segundo constructor crea un objeto que está asociado a un nuevo subproceso de ejecución y ejecuta la pseudofunción `INVOKE` que se define en [\<functional>](../standard-library/functional.md). Si no hay suficientes recursos disponibles para iniciar un nuevo subproceso, la función produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error `resource_unavailable_try_again`. Si la llamada a *F* finaliza con una excepción no detectada, [](../standard-library/exception-functions.md#terminate) se llama a Terminate.
+El segundo constructor crea un objeto que está asociado a un nuevo subproceso de ejecución y ejecuta la pseudofunción `INVOKE` que se define en [\<functional>](../standard-library/functional.md). Si no hay suficientes recursos disponibles para iniciar un nuevo subproceso, la función produce un objeto [system_error](../standard-library/system-error-class.md) que tiene un código de error `resource_unavailable_try_again`. Si la llamada a *F* finaliza con una excepción no detectada, se llama a [Terminate](../standard-library/exception-functions.md#terminate) .
 
 El tercer constructor crea un objeto que está asociado con el subproceso que está asociado a `Other`. Después, `Other` se establece en un estado construido de forma predeterminada.
 

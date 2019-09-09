@@ -95,7 +95,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448791"
 ---
-# <a name="hashmap-class"></a>hash_map (Clase)
+# <a name="hash_map-class"></a>hash_map (Clase)
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_map](../standard-library/unordered-map-class.md).
@@ -1351,7 +1351,7 @@ Iterador que se dirige a la primera ubicación de un elemento con una clave espe
 
 `find`Devuelve un iterador que direcciona un elemento de la hash_map cuyo criterio de ordenación es equivalente a la clave de argumento de un predicado binario que induce a una ordenación basada en una relación de comparabilidad menor que.
 
-Si el valor devuelto `find` de se asigna a un [const_iterator](#const_iterator), no se puede modificar el objeto hash_map. Si el valor devuelto `find` de se asigna a [](#iterator)un iterador, el objeto hash_map se puede modificar.
+Si el valor devuelto `find` de se asigna a un [const_iterator](#const_iterator), no se puede modificar el objeto hash_map. Si el valor devuelto `find` de se asigna a un [iterador](#iterator), el objeto hash_map se puede modificar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1739,7 +1739,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 El `iterator` definido por hash_map apunta a elementos que son objetos de [value_type](#value_type), que es de tipo **par\<clave const, escribe >,** cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es la referencia asignada que mantiene el Element.
 
-Para desreferenciar  `Iter` un iterador que apunta a un elemento de un Multimap `->` , use el operador.
+Para desreferenciar un **iterador** `Iter` que apunta a un elemento de un Multimap `->` , use el operador.
 
 Para tener acceso al valor de clave del elemento, use `Iter` -> **first**, que es equivalente a (\* `Iter`). **first**. Para tener acceso al valor de la referencia asignada del elemento, use `Iter` -> **second**, que es equivalente a (\* `Iter`). **second**.
 
