@@ -1,16 +1,16 @@
 ---
 title: /Qspectre
-ms.date: 10/12/2018
+ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 2b784e464f98ae6a1f9285f799d903ae689bf6d5
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: e8d03075a980a9b9c345ce351413e39a3c3444cb
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340996"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808833"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,9 +28,12 @@ La opción **/Qspectre** está desactivada de forma predeterminada.
 
 En su versión inicial, la opción **/Qspectre** solo funcionaba en código optimizado. En Visual Studio 2017 versión 15.7 y posteriores, la opción **/Qspectre** se admite en todos los niveles de optimización.
 
-También hay versiones con mitigación de Spectre de bibliotecas de Microsoft Visual C++. Las bibliotecas de Spectre mitigadas para Visual Studio 2017 y versiones posteriores se pueden descargar en el instalador de Visual Studio. Se encuentran en la pestaña **componentes individuales** en compiladores **, herramientas de compilación y tiempos de ejecución**, y tienen "bibliotecas para Spectre" en el nombre. Hay bibliotecas de tiempo de ejecución estáticas y DLL con mitigación habilitada disponibles para un subconjunto de los runtimes de Visual C++: código de inicio de VC++, vcruntime140, msvcp140, concrt140 y vcamp140. Los archivos dll solo se admiten para la implementación local de la aplicación. No se ha modificado el C++ contenido del paquete redistribuible de las bibliotecas en tiempo de ejecución de Visual 2017 y posteriores.
+También hay versiones con mitigación de Spectre de bibliotecas de Microsoft Visual C++. Las bibliotecas de Spectre mitigadas para Visual Studio 2017 y versiones posteriores se pueden descargar en el instalador de Visual Studio. Se encuentran en la pestaña **componentes individuales** en **compiladores, herramientas de compilación y tiempos de ejecución**, y tienen "bibliotecas para Spectre" en el nombre. Hay bibliotecas de tiempo de ejecución estáticas y DLL con mitigación habilitada disponibles para un subconjunto de los runtimes de Visual C++: código de inicio de VC++, vcruntime140, msvcp140, concrt140 y vcamp140. Los archivos dll solo se admiten para la implementación local de la aplicación. No se ha modificado el C++ contenido del paquete redistribuible de las bibliotecas en tiempo de ejecución de Visual 2017 y posteriores.
 
 También puede instalar bibliotecas mitigadas por Spectre para MFC y ATL. Se encuentran en la pestaña **componentes individuales** en **SDK, bibliotecas y marcos**.
+
+> [!NOTE]
+> No hay ninguna versión de las bibliotecas mitigadas por Spectre para las aplicaciones o componentes de Windows universal (UWP). No es posible la implementación local de aplicaciones de estas bibliotecas.
 
 ### <a name="applicability"></a>Aplicabilidad
 
@@ -64,15 +67,29 @@ Si compila el código mediante **/Qspectre** y estas bibliotecas no están insta
 
 ### <a name="additional-information"></a>Información adicional
 
-Para obtener más información, consulte el [asesoramiento oficial de seguridad de Microsoft ADV180002, guía para mitigar las vulnerabilidades de canal lateral de ejecución especulativa](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). También hay instrucciones de Intel, [Speculative Execution Side Channel Mitigations](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf) (Mitigaciones de canal lateral de ejecución especulativa) y ARM, [Cache Speculation Side-channels](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf) (Almacenamiento en caché de canales de ejecución especulativa). Para obtener información general específica de Windows sobre las mitigaciones de Spectre y Meltdown, consulte [Descripción del impacto en el rendimiento de las mitigaciones de Spectre y Meltdown en los sistemas Windows](https://www.microsoft.com/security/blog/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/). Para obtener información general sobre las vulnerabilidades de Spectre dirigidas por las mitigaciones de MSVC, consulte mitigaciones de [Spectre en MSVC](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc./) en el blog del C++ equipo.
+Para obtener más información, consulte el [asesoramiento oficial de seguridad de Microsoft ADV180002, guía para mitigar las vulnerabilidades de canal lateral de ejecución especulativa](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002). También hay instrucciones de Intel, [Speculative Execution Side Channel Mitigations](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf) (Mitigaciones de canal lateral de ejecución especulativa) y ARM, [Cache Speculation Side-channels](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf) (Almacenamiento en caché de canales de ejecución especulativa). Para obtener información general específica de Windows sobre las mitigaciones de Spectre y Meltdown, consulte [Descripción del impacto en el rendimiento de las mitigaciones de Spectre y Meltdown en los sistemas Windows](https://www.microsoft.com/security/blog/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/). Para obtener información general sobre las vulnerabilidades de Spectre dirigidas por las mitigaciones de MSVC, consulte [mitigaciones de Spectre en MSVC](https://devblogs.microsoft.com/cppblog/spectre-mitigations-in-msvc./) en el blog del C++ equipo.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+::: moniker range="vs-2019"
 
-1. Seleccione la página de propiedades **Propiedades de configuración** > **C /C++**  > **Línea de comandos**.
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+
+1. Seleccione la página de propiedades **propiedades** > de > configuración **C/C++**  **generación de código** .
+
+1. Seleccione un nuevo valor para la propiedad de **mitigación Spectre** . Seleccione **Aceptar** para aplicar el cambio.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+
+1. Seleccione la página de **propiedades propiedades** > de > configuración **CC++ /** **línea de comandos** .
 
 1. Escriba la opción del compilador **/Qspectre** en el cuadro **Opciones adicionales**. Seleccione **Aceptar** para aplicar el cambio.
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
