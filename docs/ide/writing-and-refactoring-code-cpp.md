@@ -3,12 +3,13 @@ title: Editar y refactorizar código de C++ en Visual Studio
 description: Use el editor de código de C++ en Visual Studio para dar formato al código, recorrerlo, entenderlo y refactorizarlo.
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: d4a74608a95df0fdd461f55d26fee97332a66aa8
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.topic: landing-page
+ms.openlocfilehash: 255576bfc4a7eb78a660e5bfb05b0a97a7eb4c34
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741628"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221561"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Editar y refactorizar código de C++ en Visual Studio
 
@@ -182,7 +183,7 @@ Las opciones para habilitar y configurar características de edición específic
 
 Las características experimentales, que se podrían incluir o no en una versión futura de Visual Studio, se encuentran en el cuadro de diálogo [Editor de texto C++ Experimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). En Visual Studio 2017 y versiones posteriores, **IntelliSense predictivo** se puede habilitar en este cuadro de diálogo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Otras referencias
 
 [Lectura y reconocimiento de código C++](read-and-understand-code-cpp.md)</br>
 [Navegación en el código de C++ en Visual Studio](navigate-code-cpp.md)</br>
