@@ -1,18 +1,18 @@
 ---
 title: Crear una aplicación MFC basada en formularios
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108464"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908051"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Crear una aplicación MFC basada en formularios
 
@@ -30,7 +30,7 @@ Cualquier aplicación basada en un cuadro de diálogo es, por definición, una a
 
 La clase base para las aplicaciones basadas en formularios es [CFormView](cformview-class.md). Si la aplicación ofrece compatibilidad con bases de datos, también puede seleccionar cualquier clase que se derive de `CFormView`. Un formulario es cualquier ventana derivada de `CFormView` o de cualquier clase que herede de `CFormView`.
 
-Incluso si usa una clase base como [CView](cview-class.md), puede hacer que las aplicaciones basadas en formularios [agreguen una clase MFC](adding-an-mfc-class.md) derivada `CFormView` de y activando la casilla **generar recursos de DocTemplate** en el [Asistente para clases MFC](document-template-strings-mfc-add-class-wizard.md).
+Incluso si usa una clase base como [CView](cview-class.md), puede hacer que las aplicaciones se basen en formularios mediante la [adición de una clase MFC](adding-an-mfc-class.md) derivada `CFormView`de.
 
 Cuando finalice el asistente, se abrirá el proyecto y, si seleccionó `CFormView` (o una clase que herede de `CFormView`) como clase base o creó una aplicación basada en un cuadro de diálogo, Visual C++ abrirá el editor de cuadros de diálogo. En este momento ya está preparado para diseñar su primer formulario.
 

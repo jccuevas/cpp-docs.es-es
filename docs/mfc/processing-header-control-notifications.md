@@ -8,16 +8,16 @@ helpviewer_keywords:
 - header controls [MFC], processing notifications
 - header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
-ms.openlocfilehash: f60a0c918476702881984f976b220130727cf4b0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bc811763fe3f4717b8baaeb4a23df1ae59bb1979
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507943"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908137"
 ---
 # <a name="processing-header-control-notifications"></a>Procesar notificaciones del control de encabezado
 
-En la vista o la clase de cuadro de diálogo, use la ventana Propiedades para crear una función de controlador de [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) con una instrucción switch para los mensajes de notificación de control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) que desee controlar (consulte [asignación de mensajes a funciones). ](../mfc/reference/mapping-messages-to-functions.md)). Las notificaciones se envían a la ventana primaria cuando el usuario hace clic o hace doble clic en un elemento de encabezado, arrastra un divisor entre los elementos, etc.
+En la vista o la clase de cuadro de diálogo, use el [Asistente para clases](reference/mfc-class-wizard.md) con el fin de crear una función controladora [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) con una instrucción switch para los mensajes de notificación de control de encabezado ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) que desee controlar (consulte [asignación de mensajes a Funciones](../mfc/reference/mapping-messages-to-functions.md)). Las notificaciones se envían a la ventana primaria cuando el usuario hace clic o hace doble clic en un elemento de encabezado, arrastra un divisor entre los elementos, etc.
 
 Los mensajes de notificación asociados a un control de encabezado se enumeran en [referencia de control de encabezado](/windows/win32/controls/header-control-reference) en el Windows SDK.
 

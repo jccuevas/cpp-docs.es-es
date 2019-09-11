@@ -1,6 +1,6 @@
 ---
 title: enrutamiento de comandos
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165159"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907626"
 ---
 # <a name="command-routing"></a>enrutamiento de comandos
 
-Su responsabilidad a la hora de trabajar con comandos se limita a crear conexiones de mapa de mensajes entre los comandos y sus funciones de controlador, una tarea para la cual se usa la ventana Propiedades. También debe escribir la mayoría de los controladores de comando.
+La responsabilidad de trabajar con comandos se limita a realizar conexiones de mapa de mensajes entre los comandos y sus funciones de controlador, una tarea para la que se usa el [Asistente para clases MFC](reference/mfc-class-wizard.md). También debe escribir el código para los controladores de comandos.
 
 Los mensajes de Windows se envían normalmente a la ventana de marco principal, pero los mensajes de comando se enrutan a otros objetos. El marco de trabajo enruta los comandos a través de una secuencia estándar de objetos de destino del comando, uno de los cuales se espera que tenga un controlador para el comando. Cada objeto de comando-destino comprueba el mapa de mensajes para ver si puede controlar el mensaje entrante.
 
@@ -29,7 +29,7 @@ Distintas clases de comando-destino comprueban sus mapas de mensajes en momentos
 
 1. A otros destinos de comando.
 
-Cómo costoso es este mecanismo de enrutamiento en comparación a lo que hace el controlador en respuesta a un comando, el costo de enrutamiento es bajo. Tenga en cuenta que el marco de trabajo genera comandos solo cuando el usuario interactúa con un objeto de la interfaz de usuario.
+¿Cuánto cuesta este mecanismo de enrutamiento en comparación con lo que hace el controlador en respuesta a un comando, el costo de enrutamiento es bajo. Tenga en cuenta que el marco de trabajo genera comandos solo cuando el usuario interactúa con un objeto de la interfaz de usuario.
 
 ### <a name="_core_standard_command_route"></a> Ruta estándar de comando
 

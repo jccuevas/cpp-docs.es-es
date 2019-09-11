@@ -1,6 +1,6 @@
 ---
 title: CCmdUI (clase)
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - CCmdUI
 - AFXWIN/CCmdUI
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206390"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907837"
 ---
 # <a name="ccmdui-class"></a>CCmdUI (clase)
 
-Solo se utiliza dentro un `ON_UPDATE_COMMAND_UI` controlador en un `CCmdTarget`-clase derivada.
+Solo se usa dentro de `ON_UPDATE_COMMAND_UI` un controlador en `CCmdTarget`una clase derivada de.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,45 +47,45 @@ class CCmdUI
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CCmdUI::ContinueRouting](#continuerouting)|Indica al mecanismo de enrutamiento de comandos para enrutar el mensaje actual de la cadena de controladores de continuar.|
-|[CCmdUI::Enable](#enable)|Habilita o deshabilita el elemento de interfaz de usuario para este comando.|
-|[CCmdUI::SetCheck](#setcheck)|Establece el estado de activación del elemento de interfaz de usuario para este comando.|
-|[CCmdUI::SetRadio](#setradio)|Al igual que el `SetCheck` función miembro, pero funciona en grupos de radio.|
-|[CCmdUI::SetText](#settext)|Establece el texto del elemento de interfaz de usuario para este comando.|
+|[CCmdUI::ContinueRouting](#continuerouting)|Indica al mecanismo de enrutamiento de comandos que continúe enrutando el mensaje actual hacia la cadena de controladores.|
+|[CCmdUI::Enable](#enable)|Habilita o deshabilita el elemento de la interfaz de usuario para este comando.|
+|[CCmdUI::SetCheck](#setcheck)|Establece el estado de activación del elemento de la interfaz de usuario para este comando.|
+|[CCmdUI::SetRadio](#setradio)|Como la `SetCheck` función miembro, pero funciona en grupos de radio.|
+|[CCmdUI::SetText](#settext)|Establece el texto del elemento de la interfaz de usuario para este comando.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CCmdUI::m_nID](#m_nid)|El identificador del objeto de interfaz de usuario.|
-|[CCmdUI::m_nIndex](#m_nindex)|El índice del objeto de interfaz de usuario.|
-|[CCmdUI::m_pMenu](#m_pmenu)|Apunta al menú representado por la `CCmdUI` objeto.|
-|[CCmdUI::m_pOther](#m_pother)|Señala al objeto window que envió la notificación.|
-|[CCmdUI::m_pSubMenu](#m_psubmenu)|Señala el submenú contenido representado por la `CCmdUI` objeto.|
+|[CCmdUI::m_nID](#m_nid)|IDENTIFICADOR del objeto de la interfaz de usuario.|
+|[CCmdUI::m_nIndex](#m_nindex)|Índice del objeto de la interfaz de usuario.|
+|[CCmdUI::m_pMenu](#m_pmenu)|Apunta al menú representado por el `CCmdUI` objeto.|
+|[CCmdUI::m_pOther](#m_pother)|Apunta al objeto de ventana que envió la notificación.|
+|[CCmdUI::m_pSubMenu](#m_psubmenu)|Apunta al submenú contenido representado por el `CCmdUI` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
-`CCmdUI` no tiene una clase base.
+`CCmdUI`no tiene una clase base.
 
-Cuando un usuario de la aplicación extrae un menú, cada menú elemento necesita saber si debe mostrarse como habilitado o deshabilitado. El destino de un comando de menú proporciona esta información mediante la implementación de un controlador ON_UPDATE_COMMAND_UI. Para cada uno de los objetos de interfaz de usuario de comandos en la aplicación, utilice la ventana Propiedades para crear un prototipo de función y de entrada de mapa de mensajes para cada controlador.
+Cuando un usuario de la aplicación extrae un menú, cada elemento de menú debe saber si debe mostrarse como habilitado o deshabilitado. El destino de un comando de menú proporciona esta información implementando un controlador ON_UPDATE_COMMAND_UI. Para cada uno de los objetos de interfaz de usuario de comandos de la aplicación, use el [Asistente para clases](mfc-class-wizard.md) o la ventana **propiedades** (en **vista de clases**) para crear una entrada de mapa de mensajes y un prototipo de función para cada controlador.
 
-Cuando se extrae el menú, el marco de trabajo busca y llama a cada controlador ON_UPDATE_COMMAND_UI, llama cada controlador `CCmdUI` funciones miembro como `Enable` y `Check`, y el marco de trabajo, a continuación, muestra correctamente cada elemento de menú.
+Cuando se extrae el menú, el marco de trabajo busca y llama a cada controlador ON_UPDATE_COMMAND_UI, cada `CCmdUI` controlador llama a funciones `Enable` miembro `Check`como y, y el marco de trabajo muestra, en consecuencia, cada elemento de menú.
 
-Un elemento de menú se puede reemplazar por un botón de barra de control u otro objeto de interfaz de usuario de comandos sin cambiar el código dentro de la `ON_UPDATE_COMMAND_UI` controlador.
+Un elemento de menú se puede reemplazar por un botón de barra de control u otro objeto de interfaz de usuario de comandos sin cambiar `ON_UPDATE_COMMAND_UI` el código del controlador.
 
-En la tabla siguiente se resume el efecto `CCmdUI`de las funciones miembro tienen en distintos elementos de interfaz de usuario de comandos.
+En la tabla siguiente se resumen las `CCmdUI`funciones miembro del efecto de los distintos elementos de la interfaz de usuario de comandos.
 
-|Elemento de interfaz de usuario|Habilitar|SetCheck|SetRadio|SetText|
+|Elemento de la interfaz de usuario|Habilitar|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
-|Elemento de menú|Habilita o deshabilita|Activa o desactiva|Comprobaciones mediante un punto|Conjuntos de elementos de texto|
-|Botón de barra de herramientas|Habilita o deshabilita|Se selecciona, se anula la selección, o indeterminado|Igual a `SetCheck`|(No aplicable)|
-|Panel de barra de estado|Hace que sea texto visible o invisible|Borde de emergente o normal de conjuntos|Igual a `SetCheck`|Establece el texto del panel|
-|Botón normal `CDialogBar`|Habilita o deshabilita|Activa o desactiva la casilla de verificación|Igual a `SetCheck`|Establece el texto del botón|
-|En el control normal `CDialogBar`|Habilita o deshabilita|(No aplicable)|(No aplicable)|Establece el texto de la ventana|
+|Elemento de menú|Habilita o deshabilita|Comprueba o desactiva|Comprobaciones con un punto|Establece el texto del elemento|
+|Botón de barra de herramientas|Habilita o deshabilita|Selecciona, anula la selección o indeterminado.|Igual a `SetCheck`|(No aplicable)|
+|Panel de barra de estado|Hace que el texto sea visible o invisible|Establece el borde emergente o normal|Igual a `SetCheck`|Establece el texto del panel|
+|Botón normal en`CDialogBar`|Habilita o deshabilita|Casilla comprobaciones o desactivaciones|Igual a `SetCheck`|Establece el texto del botón|
+|Control normal en`CDialogBar`|Habilita o deshabilita|(No aplicable)|(No aplicable)|Establece el texto de la ventana|
 
-Para obtener más información sobre el uso de esta clase, vea [cómo actualizar objetos de interfaz de usuario](../../mfc/how-to-update-user-interface-objects.md).
+Para obtener más información sobre el uso de esta clase, vea [Cómo actualizar objetos de la interfaz de usuario](../../mfc/how-to-update-user-interface-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -97,7 +97,7 @@ Para obtener más información sobre el uso de esta clase, vea [cómo actualizar
 
 ##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting
 
-Llame a esta función miembro para indicar el mecanismo de enrutamiento de comandos para enrutar el mensaje actual de la cadena de controladores de continuar.
+Llame a esta función miembro para indicar al mecanismo de enrutamiento de comandos que continúe enrutando el mensaje actual hacia la cadena de controladores.
 
 ```
 void ContinueRouting();
@@ -105,11 +105,11 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Comentarios
 
-Se trata de una función miembro avanzado que debe usarse junto con un controlador ON_COMMAND_EX que devuelve FALSE. Para obtener más información, consulte [6 de nota técnica](../../mfc/tn006-message-maps.md).
+Se trata de una función miembro avanzada que se debe usar junto con un controlador ON_COMMAND_EX que devuelve FALSE. Para obtener más información, vea la [Nota técnica 6](../../mfc/tn006-message-maps.md).
 
 ##  <a name="enable"></a>  CCmdUI::Enable
 
-Llame a esta función miembro para habilitar o deshabilitar el elemento de interfaz de usuario para este comando.
+Llame a esta función miembro para habilitar o deshabilitar el elemento de la interfaz de usuario para este comando.
 
 ```
 virtual void Enable(BOOL bOn = TRUE);
@@ -118,7 +118,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ### <a name="parameters"></a>Parámetros
 
 *bOn*<br/>
-TRUE para habilitar el elemento, FALSE para deshabilitarla.
+TRUE para habilitar el elemento y FALSE para deshabilitarlo.
 
 ### <a name="example"></a>Ejemplo
 
@@ -128,7 +128,7 @@ TRUE para habilitar el elemento, FALSE para deshabilitarla.
 
 ##  <a name="m_nid"></a>  CCmdUI::m_nID
 
-El Id. del elemento de menú, botón de barra de herramientas u otro objeto de interfaz de usuario representado por la `CCmdUI` objeto.
+Identificador del elemento de menú, botón de la barra de herramientas u otro objeto de interfaz de usuario `CCmdUI` representado por el objeto.
 
 ```
 UINT m_nID;
@@ -136,7 +136,7 @@ UINT m_nID;
 
 ##  <a name="m_nindex"></a>  CCmdUI::m_nIndex
 
-El índice del elemento de menú, botón de barra de herramientas u otro objeto de interfaz de usuario representado por la `CCmdUI` objeto.
+Índice del elemento de menú, botón de la barra de herramientas u otro objeto de interfaz de usuario `CCmdUI` representado por el objeto.
 
 ```
 UINT m_nIndex;
@@ -144,7 +144,7 @@ UINT m_nIndex;
 
 ##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu
 
-Puntero (de `CMenu` tipo) en el menú representado por la `CCmdUI` objeto.
+Puntero (de `CMenu` tipo) al menú representado por el `CCmdUI` objeto.
 
 ```
 CMenu* m_pMenu;
@@ -156,7 +156,7 @@ Es NULL si el elemento no es un menú.
 
 ##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu
 
-Puntero (de `CMenu` tipo) en el submenú contenido representado por la `CCmdUI` objeto.
+Puntero (de `CMenu` tipo) al submenú contenido representado por el `CCmdUI` objeto.
 
 ```
 CMenu* m_pSubMenu;
@@ -164,11 +164,11 @@ CMenu* m_pSubMenu;
 
 ### <a name="remarks"></a>Comentarios
 
-Es NULL si el elemento no es un menú. Si el submenú es un elemento emergente, *m_nID* contiene el identificador del primer elemento en el menú emergente. Para obtener más información, consulte [21 de nota técnica](../../mfc/tn021-command-and-message-routing.md).
+Es NULL si el elemento no es un menú. Si el submenú es un elemento emergente, *m_nID* contiene el identificador del primer elemento del menú emergente. Para obtener más información, vea la [Nota técnica 21](../../mfc/tn021-command-and-message-routing.md).
 
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther
 
-Puntero (de tipo `CWnd`) para el objeto de ventana, como una barra de estado o la herramienta, que envía la notificación.
+Puntero (de tipo `CWnd`) al objeto de ventana, como una herramienta o barra de estado, que envió la notificación.
 
 ```
 CWnd* m_pOther;
@@ -176,11 +176,11 @@ CWnd* m_pOther;
 
 ### <a name="remarks"></a>Comentarios
 
-Es NULL si el elemento es un menú o que no es `CWnd` objeto.
+NULL si el elemento es un menú o un objeto que `CWnd` no es de.
 
 ##  <a name="setcheck"></a>  CCmdUI::SetCheck
 
-Llame a esta función miembro para establecer el elemento de interfaz de usuario para este comando en el estado de comprobación adecuada.
+Llame a esta función miembro para establecer el elemento de la interfaz de usuario para este comando en el estado de comprobación adecuado.
 
 ```
 virtual void SetCheck(int nCheck = 1);
@@ -189,15 +189,15 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="parameters"></a>Parámetros
 
 *nCheck*<br/>
-Especifica el estado de verificación para establecer. Si se desactiva el 0, Si las comprobaciones de 1, y si es 2, Establece indeterminado.
+Especifica el estado de comprobación que se va a establecer. Si es 0, desactiva; Si es 1, comprueba; y si 2, establece indeterminados.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro funciona para los elementos de menú y los botones de barra de herramientas. El estado indeterminado solo se aplica a los botones de barra de herramientas.
+Esta función miembro funciona para los elementos de menú y los botones de barra de herramientas. El estado indeterminado solo se aplica a los botones de la barra de herramientas.
 
 ##  <a name="setradio"></a>  CCmdUI::SetRadio
 
-Llame a esta función miembro para establecer el elemento de interfaz de usuario para este comando en el estado de comprobación adecuada.
+Llame a esta función miembro para establecer el elemento de la interfaz de usuario para este comando en el estado de comprobación adecuado.
 
 ```
 virtual void SetRadio(BOOL bOn = TRUE);
@@ -210,11 +210,11 @@ TRUE para habilitar el elemento; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro actúa como `SetCheck`, excepto en que funciona en elementos de interfaz de usuario que actúa como parte de un grupo de radio. Desactive los demás elementos en el grupo no es automática, a menos que los propios elementos de mantendrán el comportamiento del grupo de radio.
+Esta función miembro funciona como `SetCheck`, salvo que funciona en elementos de la interfaz de usuario que actúan como parte de un grupo de radio. La desactivación de los demás elementos del grupo no es automática a menos que los propios elementos mantengan el comportamiento del grupo de radio.
 
 ##  <a name="settext"></a>  CCmdUI::SetText
 
-Llame a esta función miembro para establecer el texto del elemento de interfaz de usuario para este comando.
+Llame a esta función miembro para establecer el texto del elemento de la interfaz de usuario para este comando.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -223,7 +223,7 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parámetros
 
 *lpszText*<br/>
-Un puntero a una cadena de texto.
+Puntero a una cadena de texto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -231,6 +231,6 @@ Un puntero a una cadena de texto.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo MDI de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MDI de MFC](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)

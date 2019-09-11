@@ -1,6 +1,6 @@
 ---
-title: 'Servidores: Implementación de Windows de marco en contexto'
-ms.date: 11/04/2016
+title: 'Servidores: Implementación de ventanas de marco en contexto'
+ms.date: 09/09/2019
 helpviewer_keywords:
 - frame windows [MFC], implementing
 - OLE server applications [MFC], frame windows
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc5439003b7c891ac3f4000c9b7820746aec4c8d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307957"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907538"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementación de Windows de marco en contexto
+# <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementación de ventanas de marco en contexto
 
-En este artículo se explica lo que debe hacer para implementar ventanas de marco en contexto en la aplicación de servidor de edición visual si no utiliza al Asistente para aplicaciones para crear la aplicación de servidor. En lugar de seguir el procedimiento descrito en este artículo, podría usar una clase de ventana de marco en contexto existente de una aplicación generada por el asistente o un ejemplo que se proporciona con Visual C++.
+En este artículo se explica lo que debe hacer para implementar ventanas de marco en contexto en la aplicación del servidor de edición visual si no usa el Asistente para aplicaciones para crear la aplicación de servidor. En lugar de seguir el procedimiento descrito en este artículo, puede usar una clase de ventana de marco en contexto existente de una aplicación generada por el Asistente para aplicaciones o de un ejemplo proporcionado con Visual C++.
 
 #### <a name="to-declare-an-in-place-frame-window-class"></a>Para declarar una clase de ventana de marco en contexto
 
-1. Derivar una clase de ventana de marco en contexto desde `COleIPFrameWnd`.
+1. Derive una clase de ventana de marco en contexto de `COleIPFrameWnd`.
 
-   - Utilice la macro DECLARE_DYNCREATE en el archivo de encabezado de clase.
+   - Use la macro DECLARE_DYNCREATE en el archivo de encabezado de clase.
 
-   - Utilice la macro IMPLEMENT_DYNCREATE en el archivo de implementación (.cpp) de la clase. Esto permite que los objetos de esta clase que va a crear el marco de trabajo.
+   - Use la macro IMPLEMENT_DYNCREATE en el archivo de implementación de clase (. cpp). Esto permite que el marco de trabajo cree los objetos de esta clase.
 
-1. Declarar un `COleResizeBar` miembro en la clase de ventana de marco. Esto es necesario si desea admitir el cambio de tamaño en contexto en las aplicaciones de servidor.
+1. Declare `COleResizeBar` un miembro en la clase de ventana de marco. Esto es necesario si desea admitir el cambio de tamaño en contexto en aplicaciones de servidor.
 
-   Declarar un `OnCreate` controlador de mensajes (mediante el **propiedades** ventana) y llamar a `Create` para su `COleResizeBar` miembro, si se ha definido.
+   Declare `OnCreate` un controlador de mensajes (mediante el [Asistente para clases](reference/mfc-class-wizard.md)) `Create` y llame `COleResizeBar` a para su miembro, si lo ha definido.
 
 1. Si tiene una barra de herramientas, declare un `CToolBar` miembro en la clase de ventana de marco.
 
-   Invalidar el `OnCreateControlBars` función miembro para crear una barra de herramientas cuando el servidor está activo en su lugar. Por ejemplo:
+   Invalide la `OnCreateControlBars` función miembro para crear una barra de herramientas cuando el servidor esté activo. Por ejemplo:
 
    [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
    Vea la explicación de este código después del paso 5.
 
-1. Incluir el archivo de encabezado para esta clase de ventana de marco en contexto en el archivo .cpp principal.
+1. Incluya el archivo de encabezado para esta clase de ventana de marco en contexto en el archivo main. cpp.
 
-1. En `InitInstance` para la clase de aplicación, llame a la `SetServerInfo` función del objeto de plantilla de documento para especificar los recursos y la ventana de marco en contexto que se usará en abierto y en el contexto de edición.
+1. En `InitInstance` para la clase de aplicación, llame `SetServerInfo` a la función del objeto de plantilla de documento para especificar los recursos y la ventana de marco en contexto que se utilizará en la edición abierta y en contexto.
 
-Llama la serie de función el **si** instrucción crea la barra de herramientas de los recursos del servidor proporcionado. En este momento, la barra de herramientas es parte de la jerarquía de la ventana del contenedor. Dado que se deriva de esta barra de herramientas `CToolBar`, pasará sus mensajes a su propietario, la ventana de marco de la aplicación de contenedor, a menos que cambie el propietario. Por eso la llamada a `SetOwner` es necesario. Esta llamada cambia la ventana donde se envían los comandos de ventana de marco en contexto del servidor, la causa de los mensajes que se pasarán al servidor. Esto permite que el servidor reaccionar a las operaciones en la barra de herramientas que proporciona.
+La serie de llamadas de función en la instrucción **If** crea la barra de herramientas a partir de los recursos proporcionados por el servidor. En este punto, la barra de herramientas forma parte de la jerarquía de ventanas del contenedor. Dado que esta barra de herramientas `CToolBar`se deriva de, pasará sus mensajes a su propietario, la ventana de marco de la aplicación contenedora, a menos que cambie el propietario. Esa es la razón por la `SetOwner` que es necesaria la llamada a. Esta llamada cambia la ventana donde se envían los comandos a la ventana de marco en contexto del servidor, lo que hace que los mensajes se pasen al servidor. Esto permite que el servidor reaccione a las operaciones en la barra de herramientas que proporciona.
 
-El identificador del mapa de bits de la barra de herramientas debe ser igual que los otros recursos en el contexto definidos en la aplicación de servidor. Consulte [menús y recursos: Adiciones de servidor](../mfc/menus-and-resources-server-additions.md) para obtener más información.
+El identificador del mapa de bits de la barra de herramientas debe ser el mismo que el de los demás recursos en contexto definidos en la aplicación de servidor. Vea [menús y recursos: Adiciones](../mfc/menus-and-resources-server-additions.md) de servidor para obtener más información.
 
-Para obtener más información, consulte [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), y [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) en el *Class Library Reference*.
+Para obtener más información, vea [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md)y [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) en la *referencia*de la biblioteca de clases.
 
 ## <a name="see-also"></a>Vea también
 
