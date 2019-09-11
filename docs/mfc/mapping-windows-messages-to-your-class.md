@@ -1,6 +1,6 @@
 ---
 title: Mapping Windows Messages to Your (Clase)
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], Windows messages
 - message maps [MFC], in dialog class
@@ -9,27 +9,28 @@ helpviewer_keywords:
 - mappings [MFC], messages to dialog class [MFC]
 - message maps [MFC], mapping Windows messages to classes
 - messages to dialog class [MFC], mapping
+- Class Wizard [MFC]
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
-ms.openlocfilehash: 7e15f52e41d4ac91a839629342258128db86e2d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49d1a888b148793f82cf214637956589d6b8ff07
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363861"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907479"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapping Windows Messages to Your (Clase)
 
-Si necesita el cuadro de diálogo para controlar los mensajes de Windows, reemplace las funciones de controlador adecuado. Para ello, utilice la ventana Propiedades para [asignar los mensajes de](../mfc/reference/mapping-messages-to-functions.md) a la clase de cuadro de diálogo. Esto escribe una entrada de mapa de mensajes para cada mensaje y agrega las funciones miembro de controlador de mensajes a la clase. Usar el editor de código fuente de Visual C++ para escribir código en los controladores de mensajes.
+Si necesita que el cuadro de diálogo controle los mensajes de Windows, invalide las funciones de controlador adecuadas. Para ello, elija la pestaña **vista de clases** en **Explorador de soluciones**, haga clic con el botón derecho en la clase que representa el cuadro de diálogo y elija [Asistente para clases](reference/mfc-class-wizard.md). Use el Asistente para [asignar los mensajes](../mfc/reference/mapping-messages-to-functions.md) a la clase de cuadro de diálogo. De este tipo, se escribe una entrada de mapa de mensajes para cada mensaje y se agregan las funciones miembro del controlador de mensajes a la clase. Utilice el editor de código para escribir código en los controladores de mensajes.
 
 También puede invalidar las funciones miembro de [CDialog](../mfc/reference/cdialog-class.md) y sus clases base, especialmente [CWnd](../mfc/reference/cwnd-class.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
-- [Controlar y asignar mensajes](../mfc/message-handling-and-mapping.md)
+- [Control y asignación de mensajes](../mfc/message-handling-and-mapping.md)
 
-- [Se reemplazan con frecuencia funciones miembro](../mfc/commonly-overridden-member-functions.md)
+- [Funciones miembro que se reemplazan normalmente](../mfc/commonly-overridden-member-functions.md)
 
-- [Las funciones miembro se agregan con frecuencia](../mfc/commonly-added-member-functions.md)
+- [Funciones miembro que se agregan normalmente](../mfc/commonly-added-member-functions.md)
 
 ## <a name="see-also"></a>Vea también
 

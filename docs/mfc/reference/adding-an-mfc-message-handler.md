@@ -1,26 +1,26 @@
 ---
 title: Agregar un controlador de mensajes MFC
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.adding.mfc.msghandler
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: 90d7f843c91956b679fe794c68adab12d85122b7
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741741"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907659"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Agregar un controlador de mensajes MFC
 
-También puede [usar la ventana Propiedades para agregar un controlador de mensajes](../../mfc/reference/mapping-messages-to-functions.md) (una función miembro que controla los mensajes de Windows) a una clase y mapa de mensajes de Windows para el controlador de mensajes. También puede agregar [un controlador de eventos para cualquier control de cuadro de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).
+Puede usar el [Asistente para clases](mfc-class-wizard.md) o la ventana **propiedades** de la **vista de clases** para agregar un controlador de mensajes (una función miembro que controla los mensajes de Windows) a una clase y asignar los mensajes de Windows al controlador de mensajes. También puede agregar [un controlador de eventos para cualquier control de cuadro de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md). 
 
-Mediante el uso de la ventana Propiedades para definir funciones de control de mensajes y eventos, puede actualizar automáticamente la tabla de envío de mensajes (o mapa de mensajes) y el archivo de encabezado de clase.
+Mediante el **Asistente para clases** o la ventana **propiedades** (en **vista de clases**) para definir funciones de control de mensajes y eventos, puede actualizar automáticamente la tabla de envío de mensajes (o mapa de mensajes) y el archivo de encabezado de clase.
 
 > [!NOTE]
->  Puede agregar un controlador de mensajes a una clase ATL mediante la ventana Propiedades; Sin embargo, algunos resultados pueden variar. Para obtener más información, vea el tema ATL [agregar un controlador de mensajes ATL](../../atl/adding-an-atl-message-handler.md).
+>  Puede Agregar un controlador de mensajes a una clase ATL mediante el Asistente para clases. sin embargo, algunos resultados pueden variar. Para obtener más información, vea el tema ATL [Agregar un controlador de mensajes ATL](../../atl/adding-an-atl-message-handler.md).
 
 ## <a name="see-also"></a>Vea también
 

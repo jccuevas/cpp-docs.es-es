@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "70220489"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador desactivadas de forma predeterminada
@@ -90,7 +90,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |C4588 (nivel 1)|'*anonymous_structure*': cambio de comportamiento: ya no se llama implícitamente al destructor|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (nivel 4)|'*Identifier*': nombre completo no válido en la declaración de miembro <sup>14,3</sup> <sup>Perm</sup>|
 |C4598 (nivel 1 y nivel 3)|' #include '*encabezado*' ': el *número* de encabezado del encabezado precompilado no coincide con la compilación actual en esa posición <sup>14,3</sup>|
-|C4599 (nivel 3)|'*Option* *path*': el número de argumento de la línea de comandos no coincide con el encabezado precompilado <sup>14,3</sup>|
+|C4599 (nivel 3)|'*Option* *path*': *el número de* argumento de la línea de comandos no coincide con el encabezado precompilado <sup>14,3</sup>|
 |C4605 (nivel 1)|'/D*macro*' especificada en la línea de comandos actual, pero no se especificó cuando se compiló el encabezado precompilado|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (nivel 3)|'*union_member*' ya ha sido inicializado por otro miembro Union en la lista de inicializadores, '*union_member*' <sup>Perm</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (nivel 3)|#pragma ADVERTENCIA: no hay ningún número de advertencia '*número*'|
@@ -102,7 +102,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 | C4643 (nivel 4) | La declaración adelantada '*Identifier*' en el espacio de nombres STD no está C++ permitida por el estándar. <sup>15.8</sup> |
 |C4647 (nivel 3)|cambio de comportamiento: __is_pod (*tipo*) tiene un valor diferente en las versiones anteriores|
 |C4654 (nivel 4)|Se omitirá el código colocado antes de incluir la línea del encabezado precompilado. Agregue código al encabezado precompilado. <sup>14.1</sup>|
-|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (nivel 4)|'*Symbol*' no está definido como una macro de preprocesador y se reemplaza por ' 0 ' para' directives '|
+|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (nivel 4)|'*Symbol*' no está definido como una macro de preprocesador y se reemplaza por ' 0 ' para '*directives*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (nivel 4)|'*Symbol*': no se especificó ningún atributo de parámetro direccional; el valor predeterminado es [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (nivel 3)|'*tipo definido por el usuario*': posible cambio de comportamiento, cambio en la Convención de llamada de devolución UDT|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (nivel 1)|'*función*': la signatura de un miembro no privado contiene un tipo nativo privado de ensamblado '*native_type*'|
@@ -125,7 +125,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) (nivel 4)|el compilador '_File_(*line_number*) ' no puede aplicar el orden de evaluación de izquierda a derecha en la lista de inicialización entre llaves|
 |[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (nivel 1)|conversión de literal de cadena de tipo ancho a 'LPSTR'|
 |[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (nivel 1)|conversión de literal de cadena a 'LPWSTR'|
-|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (nivel 1)|'declarador ': un GUID solo se puede asociar a una clase, interfaz o espacio de nombres|
+|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (nivel 1)|'*declarador*': un GUID solo se puede asociar a una clase, interfaz o espacio de nombres|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (nivel 1)|inicialización de copia no válida; se aplicó implícitamente más de una conversión definida por el usuario|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (nivel 4)|se supone que la biblioteca de tipos se compiló para punteros de (número) bits|
 |[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (nivel 1)|se utilizó reinterpret_cast entre clases relacionadas: '*Class1*' y '*clase2*'|

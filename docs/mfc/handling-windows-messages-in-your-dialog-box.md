@@ -1,23 +1,23 @@
 ---
 title: Controlar mensajes de Windows en un cuadro de diálogo
-ms.date: 11/04/2016
+ms.date: 09/05/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], Windows messages
 - Windows messages [MFC], handling
 - message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
-ms.openlocfilehash: 6c32f9781913a571464f4627e89d0e9a118ad28e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5aff70010f3a84dceb88d22ee5e109cbf37abb5b
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240772"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907704"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Controlar mensajes de Windows en un cuadro de diálogo
 
-Cuadros de diálogo son ventanas, por lo que pueden controlar mensajes de Windows si proporciona las funciones de controlador adecuado. Cuando se crea la clase de cuadro de diálogo con el Asistente para agregar clases, el asistente agrega una asignación de mensaje vacío a la clase. Utilice la ventana Propiedades para asignar los mensajes de Windows o los comandos que desee de la clase para controlar.
+Los cuadros de diálogo son ventanas, por lo que pueden controlar los mensajes de Windows si se proporcionan las funciones de controlador adecuadas. Cuando se crea la clase de cuadro de diálogo con el [Asistente para clases](reference/mfc-class-wizard.md), el asistente agrega un mapa de mensajes vacío a la clase. Use el Asistente para asignar los mensajes o comandos de Windows que desee que administre la clase.
 
-Consulte [asignar mensajes de Windows a la clase de cuadro de diálogo](../mfc/mapping-windows-messages-to-your-class.md) para obtener más información.
+Vea [asignar mensajes de Windows a la clase de cuadro de diálogo](../mfc/mapping-windows-messages-to-your-class.md) para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 

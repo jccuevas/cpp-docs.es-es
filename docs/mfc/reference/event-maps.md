@@ -1,15 +1,15 @@
 ---
 title: Mapas de eventos
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916466"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907894"
 ---
 # <a name="event-maps"></a>Mapas de eventos
 
@@ -21,7 +21,7 @@ El biblioteca MFC ofrece un modelo de programación optimizado para desencadenar
 
 La `EVENT_STOCK_CLICK` macro indica que el control activará un evento de clic en existencias cada vez que detecte un clic del mouse. Para obtener una lista más detallada de otros eventos bursátiles, consulte [el artículo controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md). También hay macros disponibles para indicar eventos personalizados.
 
-Aunque las macros de mapa de eventos son importantes, normalmente no se insertan directamente. Esto se debe a que el ventana Propiedades crea automáticamente entradas de mapa de eventos en los archivos de código fuente cuando se usa para asociar funciones de activación de eventos con eventos. Siempre que desee editar o agregar una entrada de mapa de eventos, puede usar el ventana Propiedades.
+Aunque las macros de mapa de eventos son importantes, normalmente no se insertan directamente. Esto se debe a que la ventana **propiedades** (en **vista de clases**) crea automáticamente entradas de mapa de eventos en los archivos de código fuente cuando se usa para asociar funciones de activación de eventos con eventos. Siempre que desee editar o agregar una entrada de mapa de eventos, puede usar la ventana **propiedades** .
 
 Para admitir mapas de eventos, MFC proporciona las siguientes macros:
 
@@ -173,7 +173,7 @@ Las `VTS_` constantes y sus significados son los siguientes:
 
 ## <a name="event_custom_id"></a>EVENT_CUSTOM_ID
 
-Define una función de activación de eventos para un evento personalizado que pertenece al identificador deenvío especificado por DispId.
+Define una función de activación de eventos para un evento personalizado que pertenece al identificador de envío especificado por *DISPID*.
 
 ```cpp
 EVENT_CUSTOM_ID(
