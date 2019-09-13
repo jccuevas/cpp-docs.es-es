@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: Archivos y secuencias
-                      href: c-runtime-library/files-and-streams.md
-                    - name: Secuencias binarias y de texto
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Secuencias anchas y de bytes
                       href: c-runtime-library/byte-and-wide-streams.md
