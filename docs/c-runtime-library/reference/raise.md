@@ -1,6 +1,6 @@
 ---
 title: raise
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - raise
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 68d1cc653b955e607648e4d30562d2b77e3520e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1354c76207d6cd59249f6c06df88ae23fe69b1e0
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358065"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927416"
 ---
 # <a name="raise"></a>raise
 
 Envía una señal al programa en ejecución.
 
 > [!NOTE]
-> No utilice este método para cerrar una aplicación de Microsoft Store, excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación UWP](/windows/uwp/launch-resume/app-lifecycle).
+> No use este método para cerrar una aplicación Microsoft Store, excepto en escenarios de prueba o depuración. No se permiten las formas de cerrar una aplicación de la tienda mediante programación o la interfaz de usuario de acuerdo con las [directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte el ciclo de vida de las [aplicaciones para UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -58,7 +58,7 @@ Si se ejecuta correctamente, **raise** devuelve 0. De lo contrario, devuelve un 
 
 La función **raise** envía *sig* al programa en ejecución. Si una llamada anterior a **signal** ha instalado una función de control de señales para *sig*, **raise** ejecuta esa función. Si no se ha instalado ninguna función de controlador, se lleva a cabo la acción predeterminada asociada al valor de señal *sig*, como se indica a continuación.
 
-|Señal|Significado|Default|
+|Señal|Significado|Valor predeterminado|
 |------------|-------------|-------------|
 |**SIGABRT**|Terminación anómala|Finaliza el programa de llamada con el código de salida 3|
 |**SIGFPE**|Error de punto flotante|Finaliza el programa de llamada|
@@ -67,7 +67,7 @@ La función **raise** envía *sig* al programa en ejecución. Si una llamada ant
 |**SIGSEGV**|Acceso no válido a almacenamiento|Finaliza el programa de llamada|
 |**SIGTERM**|Solicitud de finalización enviada al programa|Omite la señal|
 
-Si el argumento no es una señal válida según lo especificado anteriormente, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si no controla, la función establece **errno** a **EINVAL** y devuelve un valor distinto de cero.
+Si el argumento no es una señal válida según lo especificado anteriormente, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si no se controla, la función establece **errno** en **EINVAL** y devuelve un valor distinto de cero.
 
 ## <a name="requirements"></a>Requisitos
 

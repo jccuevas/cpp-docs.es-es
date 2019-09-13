@@ -1,18 +1,18 @@
 ---
 title: páginas de propiedades Vinculador
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537588"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927704"
 ---
 # <a name="linker-property-pages"></a>páginas de propiedades Vinculador
 
-Las siguientes propiedades se encuentran en **propiedades** > **del proyecto** > **propiedades** > de configuración**enlazador**. Para obtener más información sobre el enlazador, vea [cl invoca las opciones del](cl-invokes-the-linker.md) enlazador y del [enlazador](linker-options.md).
+Las siguientes propiedades se encuentran**en propiedades** > del **proyecto** > **propiedades** > de configuración**enlazador**. Para obtener más información sobre el enlazador, vea [cl invoca las opciones del](cl-invokes-the-linker.md) enlazador y del [enlazador](linker-options.md).
 
 ## <a name="general-property-page"></a>Página de propiedades general
 
@@ -29,8 +29,8 @@ Imprime mensajes de progreso del vinculador
 - **No establecido** : sin nivel de detalle.
 - **Mostrar todos los mensajes de progreso** : muestra todos los mensajes de progreso. 
 - **En el caso de las bibliotecas buscadas** : muestra mensajes de progreso que indican solamente las bibliotecas buscadas.
-- **Acerca del plegamiento de COMDAT durante** la vinculación optimizada: muestra información acerca del plegamiento de COMDAT durante la vinculación optimizada.
-- **Acerca de los datos quitados durante** la vinculación optimizada: muestra información acerca de las funciones y los datos quitados durante la vinculación optimizada.
+- **Acerca del plegamiento de COMDAT durante la vinculación optimizada** : muestra información acerca del plegamiento de COMDAT durante la vinculación optimizada.
+- **Acerca de los datos quitados durante la vinculación optimizada** : muestra información acerca de las funciones y los datos quitados durante la vinculación optimizada.
 - **Acerca de los módulos incompatibles con SEH** : muestra información acerca de los módulos incompatibles con el control de excepciones seguro.
 - **Acerca de la actividad del vinculador relacionada con el código administrado** : muestra información sobre la actividad del vinculador relacionada con el código administrado.
 
@@ -48,7 +48,7 @@ La opción [/nologo](nologo-suppress-startup-banner-linker.md) impide que se mue
 
 ### <a name="ignore-import-library"></a>Omitir biblioteca de importación
 
-Esta propiedad indica al enlazador que no intente vincular ningún archivo .lib generado en esta compilación a ningún proyecto dependiente. Esto permite al sistema de proyectos controlar los archivos .dll que no producen un archivo .lib cuando se compilan. Si un proyecto depende de otro que genera un archivo DLL, el sistema de proyectos vincula automáticamente el archivo .lib generado por ese proyecto secundario. Esto puede no ser necesario en el caso de proyectos que generan archivos DLL COM o archivos DLL solo de recursos; estos archivos DLL no tienen exportaciones significativas. Si un archivo DLL no tiene exportaciones, el enlazador no genera un archivo .lib. Si no hay ningún archivo de exportación .lib en el disco y el sistema de proyectos indica al enlazador que establezca un vínculo con este archivo DLL (que falta), se produce un error en el vínculo. Use la propiedad **Omitir biblioteca de importación** para resolver este problema. Cuando se establece en **Sí**, el sistema de proyectos ignora la presencia o ausencia de ese archivo .lib y evita que cualquier proyecto que dependa de este se vincule al archivo .lib inexistente.
+Esta propiedad indica al enlazador que no intente vincular ningún archivo .lib generado en esta compilación a ningún proyecto dependiente. Permite que el sistema del proyecto controle los archivos. dll que no generan un archivo. lib al compilarse. Si un proyecto depende de otro que genera un archivo DLL, el sistema de proyectos vincula automáticamente el archivo .lib generado por ese proyecto secundario. Esta propiedad puede ser innecesaria en los proyectos que generan archivos DLL COM o archivos dll solo de recursos, ya que estos archivos dll no tienen ninguna exportación significativa. Si un archivo DLL no tiene exportaciones, el vinculador no genera un archivo. lib. Si no hay ningún archivo Export. lib presente y el sistema del proyecto indica al enlazador que vincule el archivo DLL que falta, se produce un error en el vínculo. Use la propiedad **Omitir biblioteca de importación** para resolver este problema. Cuando se establece en **sí**, el sistema del proyecto omite la presencia o ausencia del archivo. lib y hace que cualquier proyecto que dependa de este proyecto no vincule con el archivo. lib inexistente.
 
 Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
@@ -60,7 +60,7 @@ Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft
 
 ### <a name="per-user-redirection"></a>Redirección por usuario
 
-En Visual Studio, el registro se ha realizado tradicionalmente en HKEY_CLASSES_ROOT (HKCR). Con Windows Vista y sistemas operativos posteriores, para acceder a HKCR se debe ejecutar Visual Studio en modo elevado. Los desarrolladores no siempre desean trabajar en modo elevado, pero aun así deben trabajar con el registro. La redirección por usuario le permite registrar sin tener que trabajar en este modo.
+En Visual Studio, el registro se ha realizado tradicionalmente en HKEY_CLASSES_ROOT (HKCR). Con Windows Vista y sistemas operativos posteriores, para acceder a HKCR se debe ejecutar Visual Studio en modo elevado. Los desarrolladores no siempre quieren ejecutarse en modo con privilegios elevados, pero todavía deben trabajar con el registro. La redirección por usuario le permite registrarse sin tener que ejecutar en modo elevado.
 
 La redirección por usuario fuerza la redirección a HKEY\_CURRENT\_USER (HKCU) de todas las operaciones de escritura en HKCR. Si la redirección por usuario está desactivada, puede producir [Error PRJ0050 al compilar el proyecto](../../error-messages/tool-errors/project-build-error-prj0050.md) cuando el programa intenta escribir en HKCR.
 
@@ -70,13 +70,13 @@ Permite que el usuario invalide la ruta de acceso de la biblioteca del entorno. 
 
 ### <a name="link-library-dependencies"></a>Dependencias de la biblioteca de vínculos
 
-Especifica si se vinculan los archivos .lib generados por los proyectos dependientes. Normalmente, le interesará vincular en los archivos .lib, pero puede que ese no sea el caso de determinados archivos DLL.
+Especifica si se vinculan los archivos .lib generados por los proyectos dependientes. Normalmente, desea vincular en los archivos. lib, pero es posible que no sea el caso de determinados archivos dll.
 
-También puede especificar un archivo .obj si proporciona el nombre de archivo y la ruta de acceso relativa, por ejemplo "..\\..\MyLibProject\MyObjFile.obj". Si el código fuente del archivo .obj incluye un encabezado precompilado, por ejemplo pch.h, el archivo pch.obj se encuentra en la misma carpeta que MyObjFile.obj y también debe agregar pch.ob como una dependencia adicional.
+También puede especificar un archivo .obj si proporciona el nombre de archivo y la ruta de acceso relativa, por ejemplo "..\\..\MyLibProject\MyObjFile.obj". Si el código fuente del archivo. obj #includes un encabezado precompilado (por ejemplo, PCH. h), el archivo PCH. obj se encuentra en la misma carpeta que MyObjFile. obj. También debe agregar PCH. obj como dependencia adicional.
 
 ### <a name="use-library-dependency-inputs"></a>Usar entradas de dependencia de biblioteca
 
-Especifica si se utilizan las entradas a la herramienta bibliotecario en lugar del propio archivo de biblioteca cuando se vinculan los resultados de la biblioteca de las dependencias del proyecto. En un proyecto grande, cuando un proyecto dependiente genera un archivo .lib, se deshabilita la vinculación incremental. Si hay muchos proyectos dependientes que generan archivos .lib, puede llevar bastante tiempo compilar la aplicación. Cuando esta propiedad se establece en **Sí**, el sistema de proyectos vincula en los archivos .obj para los archivos .lib generados por los proyectos dependientes, con lo que se habilita la vinculación incremental.
+Especifica si se deben usar las entradas a la herramienta bibliotecario en lugar del propio archivo de biblioteca cuando se vinculan los resultados de la biblioteca de las dependencias del proyecto. En un proyecto grande, cuando un proyecto dependiente genera un archivo .lib, se deshabilita la vinculación incremental. Si hay muchos proyectos dependientes que generan archivos .lib, puede llevar bastante tiempo compilar la aplicación. Cuando esta propiedad se establece en **sí**, el sistema del proyecto vincula en los archivos. obj para. las bibliotecas generadas por proyectos dependientes, lo que permite la vinculación incremental.
 
 Para obtener información sobre cómo obtener acceso a la página de propiedades **General** del vinculador, vea [ C++ establecer las propiedades del compilador y compilación en Visual Studio](../working-with-project-properties.md).
 
@@ -84,7 +84,7 @@ Para obtener información sobre cómo obtener acceso a la página de propiedades
 
 Especifica si el vinculador debe mostrar un indicador de progreso que muestre qué porcentaje del vínculo ha finalizado. El valor predeterminado es no mostrar esta información de estado. ([/LTCG](ltcg-link-time-code-generation.md): STATUS | LTCG: NOSTATUS)
 
-### <a name="prevent-dll-binding"></a>Impedir el enlace de dll
+### <a name="prevent-dll-binding"></a>Impedir el enlace de DLL
 
 [/ALLOWBIND](allowbind-prevent-dll-binding.md): no establece un bit en el encabezado de un archivo DLL que indica a Bind. exe que la imagen no se puede enlazar. Puede que quiera evitar que una DLL se enlace si se firmó digitalmente (el enlace invalida la firma).
 
@@ -94,12 +94,12 @@ Especifica si el vinculador debe mostrar un indicador de progreso que muestre qu
 
 ### <a name="force-file-output"></a>Forzar salida de archivo
 
-La opción [/Force](force-force-file-output.md) indica al enlazador que cree un archivo. exe o dll incluso si se hace referencia a un símbolo pero no se define o se define de forma múltiple. Puede crear un archivo. exe no válido.
+La opción [/Force](force-force-file-output.md) indica al enlazador que cree un archivo. exe o dll incluso si se hace referencia a un símbolo, pero no se define, o si se ha definido una multiplicación. Puede crear un archivo. exe no válido.
 
 **Posibilidad**
 
 - **Enabled** -/Force sin argumentos implica tanto el múltiplo como el sin resolver.
-- **Solo multiplicar símbolos definidos** : Use/Force: Multiple para crear un archivo de salida independientemente de que Link encuentre más de una definición para un símbolo.
+- **Solo multiplicar símbolos definidos** : Use/Force: Multiple para crear un archivo de salida, incluso si el vínculo encuentra más de una definición para un símbolo.
 - **Solo símbolos no definidos** : Use/Force: unresolved para crear un archivo de salida independientemente de que Link encuentre o no un símbolo no definido. /FORCE: unresolved se omite si el símbolo del punto de entrada no está resuelto.
 
 ### <a name="create-hot-patchable-image"></a>Crear imagen de revisión activa
@@ -129,7 +129,7 @@ La opción [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) indica al enlazador
 
 ### <a name="ignore-specific-default-libraries"></a>Omitir bibliotecas predeterminadas específicas
 
-Especifica uno o más nombres de las bibliotecas predeterminadas que se van a omitir; Separe varias bibliotecas con punto y coma. (/NODEFAULTLIB: [nombre, nombre,...])
+Especifica uno o más nombres de las bibliotecas predeterminadas que se ignorarán. Separe varias bibliotecas con punto y coma. (/NODEFAULTLIB: [nombre, nombre,...])
 
 ### <a name="module-definition-file"></a>Archivo de definición de módulo
 
@@ -200,7 +200,7 @@ Esta opción permite la creación de información de depuración para el archivo
 **Posibilidad**
 
 - **No** : no genera información de depuración.
-- **Generar información** de depuración: cree una base de datos de programa (PDB) completa ideal para la distribución en el servidor de símbolos de Microsoft.
+- **Generar información de depuración** : cree una base de datos de programa (PDB) completa ideal para la distribución en el servidor de símbolos de Microsoft.
 - **Generar información de depuración optimizada para vínculos más rápidos** : genera una base de datos de programa (PDB) ideal para el ciclo de edición-vínculo-depuración. 
 - **Generar información de depuración optimizada para compartir y publicar** : genera una base de datos de programa (PDB) ideal para el ciclo de edición-vínculo-depuración. 
 
@@ -276,11 +276,11 @@ La opción [/tsaware](tsaware-create-terminal-server-aware-application.md) estab
 
 ### <a name="swap-run-from-cd"></a>Ejecutar intercambio desde CD
 
-La opción [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo que copie primero la salida del enlazador a un archivo de intercambio y, a continuación, ejecute la imagen desde allí. Se trata de una característica de Windows NT 4,0 (y versiones posteriores). Cuando se especifica **CD** , el sistema operativo copia la imagen de un disco extraíble en un archivo de paginación y, a continuación, la carga.
+La opción [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo que copie primero la salida del enlazador a un archivo de intercambio y, a continuación, ejecute la imagen desde allí. Esta opción es una característica de Windows NT 4,0 (y versiones posteriores). Cuando se especifica **CD** , el sistema operativo copia la imagen de un disco extraíble en un archivo de paginación y, a continuación, la carga.
 
 ### <a name="swap-run-from-network"></a>Ejecutar intercambio desde red
 
-La opción [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo que copie primero la salida del enlazador a un archivo de intercambio y, a continuación, ejecute la imagen desde allí. Se trata de una característica de Windows NT 4,0 (y versiones posteriores). Si se especifica **net** , el sistema operativo copiará primero la imagen binaria de la red en un archivo de intercambio y la cargará desde allí. Esta opción es útil para ejecutar aplicaciones a través de la red.
+La opción [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo que copie primero la salida del enlazador a un archivo de intercambio y, a continuación, ejecute la imagen desde allí. Esta opción es una característica de Windows NT 4,0 (y versiones posteriores). Si se especifica **net** , el sistema operativo copiará primero la imagen binaria de la red en un archivo de intercambio y la cargará desde allí. Esta opción es útil para ejecutar aplicaciones a través de la red.
 
 ### <a name="driver"></a>Controlador
 
@@ -289,7 +289,7 @@ Use la opción del vinculador [/driver](driver-windows-nt-kernel-mode-driver.md)
 **Posibilidad**
 
 - **No establece** la configuración predeterminada del controlador.
-- Controlador **-controlador**
+- **Controlador-controlador**
 - **Up Only** -/driver: solo hace que el enlazador agregue el bit IMAGE_FILE_UP_SYSTEM_ONLY a las características del encabezado de salida para especificar que se trata de un controlador de uniprocesador (up). El sistema operativo rechazará la carga de un controlador UP en un sistema multiprocesador (MP).
 - **WDM** -/driver: WDM hace que el enlazador establezca el bit IMAGE_DLLCHARACTERISTICS_WDM_DRIVER en el campo DLLCHARACTERISTICS del encabezado opcional.
 
@@ -297,11 +297,11 @@ Use la opción del vinculador [/driver](driver-windows-nt-kernel-mode-driver.md)
 
 ### <a name="references"></a>Referencias
 
-[/OPT](opt-optimizations.md): Ref elimina las funciones o los datos a los que nunca se hace referencia mientras que/opt: Noref mantiene las funciones o los datos a los que nunca se hace referencia. 
+[/OPT](opt-optimizations.md): Ref elimina las funciones o los datos a los que nunca se hace referencia mientras que/opt: Noref mantiene las funciones o los datos a los que nunca se hace referencia.
 
 ### <a name="enable-comdat-folding"></a>Habilitar plegamiento de COMDAT
 
-Use [/OPT](opt-optimizations.md): ICF\[= ITERATIONS] para realizar un plegamiento de COMDAT idéntico. 
+Use [/OPT](opt-optimizations.md): ICF\[= ITERATIONS] para realizar un plegamiento de COMDAT idéntico.
 
 ### <a name="function-order"></a>Orden de función
 
@@ -409,11 +409,11 @@ La opción [/noAssembly](noassembly-create-a-msil-module.md) indica al enlazador
 
 ### <a name="unload-delay-loaded-dll"></a>Descargar el archivo DLL de carga retrasada
 
-El calificador Unload indica a la función auxiliar de carga retrasada que admita la descarga explícita del archivo dll. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
+El calificador **Unload** indica a la función auxiliar de carga retrasada que admita la descarga explícita del archivo dll. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
 
 ### <a name="nobind-delay-loaded-dll"></a>Nobind retrasar carga de archivo DLL
 
-El calificador nobind indica al enlazador que no incluya una IAT enlazable en la imagen final. Con la configuración predeterminada, se crea la IAT enlazable para las DLL de carga retrasada. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+El calificador **nobind** indica al enlazador que no incluya una IAT enlazable en la imagen final. Con la configuración predeterminada, se crea la IAT enlazable para las DLL de carga retrasada. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
 
 ### <a name="import-library"></a>Biblioteca de importación
 
@@ -453,9 +453,9 @@ Especifique explícitamente el atributo Threading para el punto de entrada del p
 
 **Posibilidad**
 
-- **Atributo** de subproceso de MTA: aplica el atributo MTAThreadAttribute al punto de entrada del programa.
+- **Atributo de subproceso de MTA** : aplica el atributo MTAThreadAttribute al punto de entrada del programa.
 - **Atributo de subprocesamiento STA** : aplica el atributo STAThreadAttribute al punto de entrada del programa.
-- **Atributo** de subprocesos predeterminado: igual que si no se especifica [/CLRTHREADATTRIBUTE](clrthreadattribute-set-clr-thread-attribute.md). Permite que Common Language Runtime (CLR) establezca el atributo de subprocesamiento predeterminado.
+- **Atributo de subprocesos predeterminado** : igual que si no se especifica [/CLRTHREADATTRIBUTE](clrthreadattribute-set-clr-thread-attribute.md). Permite que Common Language Runtime (CLR) establezca el atributo de subprocesamiento predeterminado.
 
 ### <a name="clr-image-type"></a>Tipo de imagen de CLR
 
@@ -506,7 +506,7 @@ La opción [/align](align-section-alignment.md) especifica la alineación de cad
 **Posibilidad**
 
 - **Habilitado** : habilita CLRSupportLastError.
-- Deshabilitado: deshabilite CLRSupportLastError.
+- **Deshabilitado** : deshabilite CLRSupportLastError.
 - **Solo dll del sistema** : habilite CLRSupportLastError solo para los archivos DLL del sistema.
 
 ### <a name="image-has-safe-exception-handlers"></a>La imagen tiene controladores de excepciones seguros

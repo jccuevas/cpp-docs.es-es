@@ -1,20 +1,20 @@
 ---
 title: Advertencia del compilador (nivel 1) C4305
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: 3f9116b0e7bdd9ee13c42b48f44da4b090f41ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327475"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926118"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Advertencia del compilador (nivel 1) C4305
 
-> '*contexto*': truncamiento de '*type1*'para'*type2*'
+> '*Context*': truncamiento de '*tipo1*' a '*tipo2*'
 
 ## <a name="remarks"></a>Comentarios
 
@@ -22,7 +22,7 @@ Esta advertencia se emite cuando un valor se convierte en un tipo más pequeño 
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra dos maneras puede aparecer esta advertencia:
+En este ejemplo se muestran dos maneras en que se puede ver esta ADVERTENCIA:
 
 ```cpp
 // C4305.cpp
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Para corregir este problema, inicializar con un valor del tipo correcto, o usar una conversión explícita al tipo correcto. Por ejemplo, use un **float** literal como 2.71828f en lugar de un **doble** (el tipo de valor predeterminado para los literales de punto flotante) para inicializar un **float** variable, o pasar a un constructor que toma un **float** argumento.
+Para corregir este problema, inicialice con un valor del tipo correcto o use una conversión explícita al tipo correcto. Por ejemplo, use un **literal de punto flotante como** 2.71828 f en lugar de un valor **Double** (el tipo predeterminado para los literales de punto flotante) para inicializar una variable **float** o para pasar a un constructor que toma un argumento de **tipo float** .

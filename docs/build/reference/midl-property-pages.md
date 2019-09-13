@@ -1,6 +1,6 @@
 ---
 title: Páginas de propiedades del compilador MIDL
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
 f1_keywords:
@@ -47,16 +47,16 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787073"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927689"
 ---
 # <a name="midl-property-pages"></a>Páginas de propiedades MIDL
 
-Las páginas de propiedades MIDL están disponibles como una propiedad Item en. Archivo IDL en un C++ proyecto que usa com. Úselos para configurar el compilador de [MIDL](/windows/win32/midl/using-the-midl-compiler-2). Para obtener información sobre cómo acceder mediante programación a las opciones de MIDL para los proyectos de C++, vea el objeto <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>. Vea también [Sintaxis general de la línea de comandos de MIDL](/windows/win32/midl/general-midl-command-line-syntax).
+Las páginas de propiedades MIDL están disponibles como una propiedad Item en. Archivo IDL en un C++ proyecto que usa com. Úselos para configurar el [compilador de MIDL](/windows/win32/midl/using-the-midl-compiler-2). Para obtener información sobre cómo acceder mediante programación a las opciones de MIDL para los proyectos de C++, vea el objeto <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>. Vea también [Sintaxis general de la línea de comandos de MIDL](/windows/win32/midl/general-midl-command-line-syntax).
 
 ## <a name="general-property-page"></a>Página de propiedades general
 
@@ -110,9 +110,9 @@ Especifica el tipo de carácter predeterminado del compilador de C que se utiliz
 
 **Posibilidad**
 
-- Firmada
-- Unsigned: sin signo
-- ASCII-ASCII
+- **Firmada**
+- **Unsigned** : sin signo
+- **ASCII-ASCII**
 
 ### <a name="target-environment"></a>Entorno de destino
 
@@ -187,7 +187,7 @@ Generar solo el archivo de código auxiliar de cliente ([/Client](/windows/win32
 
 **Posibilidad**
 
-- Código auxiliar stub
+- Código **auxiliar stub**
 - **Ninguno** : ninguno
 
 ### <a name="generate-server-stub-files"></a>Generar archivos de código auxiliar de servidor
@@ -196,7 +196,7 @@ Generar solo el archivo de código auxiliar de servidor ([/Server](/windows/win3
 
 **Posibilidad**
 
-- Código auxiliar stub
+- Código **auxiliar stub**
 - **Ninguno** : ninguno
 
 ### <a name="client-stub-file"></a>Archivo de código auxiliar de cliente
@@ -233,7 +233,7 @@ Seleccione la opción de comprobación de errores ([/error All | None]).
 **Posibilidad**
 
 - **EnableCustom** -All
-- Todo todo
+- **Todo todo**
 - **Ninguno** : ninguno
 
 ### <a name="check-allocations"></a>Comprobar asignaciones
