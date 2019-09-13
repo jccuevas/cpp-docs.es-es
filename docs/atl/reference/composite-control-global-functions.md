@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496648"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927768"
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de control compuesto
 
@@ -156,18 +156,18 @@ ATLAPI AtlAxCreateControl(
 *lpszName*<br/>
 Puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las siguientes maneras:
 
-- Un ProgID como "MSCAL. Calendario. 7 "
+- Un ProgID como`"MSCAL.Calendar.7"`
 
-- Un CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Un CLSID como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Una dirección URL como "<http://www.microsoft.com>"
+- Una dirección URL como`"<https://www.microsoft.com>"`
 
-- Una referencia a un documento activo como "File://\\\Documents\MyDoc.doc"
+- Referencia a un documento activo como`"file://\\\Documents\MyDoc.doc"`
 
-- Un fragmento de HTML como\<"MSHTML: HTML >\<cuerpo > es una línea de texto\</Body >\</HTML >"
+- Un fragmento de HTML como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
+   > `"MSHTML:"`debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
 
 *hWnd*<br/>
 de Identificador de la ventana a la que se asociará el control.
@@ -208,18 +208,18 @@ ATLAPI AtlAxCreateControlEx(
 *lpszName*<br/>
 Puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las siguientes maneras:
 
-- Un ProgID como "MSCAL. Calendario. 7 "
+- Un ProgID como`"MSCAL.Calendar.7"`
 
-- Un CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Un CLSID como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Una dirección URL como "<http://www.microsoft.com>"
+- Una dirección URL como`"<https://www.microsoft.com>"`
 
-- Una referencia a un documento activo como "File://\\\Documents\MyDoc.doc"
+- Referencia a un documento activo como`"file://\\\Documents\MyDoc.doc"`
 
-- Un fragmento de HTML como\<"MSHTML: HTML >\<cuerpo > es una línea de texto\</Body >\</HTML >"
+- Un fragmento de HTML como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
+   > `"MSHTML:"`debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
 
 *hWnd*<br/>
 de Identificador de la ventana a la que se asociará el control.
@@ -267,18 +267,18 @@ ATLAPI AtlAxCreateControlLic(
 *lpszName*<br/>
 Puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las siguientes maneras:
 
-- Un ProgID como "MSCAL. Calendario. 7 "
+- Un ProgID como`"MSCAL.Calendar.7"`
 
-- Un CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Un CLSID como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Una dirección URL como "<http://www.microsoft.com>"
+- Una dirección URL como`"<https://www.microsoft.com>"`
 
-- Una referencia a un documento activo como "File://\\\Documents\MyDoc.doc"
+- Referencia a un documento activo como`"file://\\\Documents\MyDoc.doc"`
 
-- Un fragmento de HTML como\<"MSHTML: HTML >\<cuerpo > es una línea de texto\</Body >\</HTML >"
+- Un fragmento de HTML como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
+   > `"MSHTML:"`debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
 
 *hWnd*<br/>
 Identificador de la ventana a la que se asociará el control.
@@ -321,18 +321,18 @@ ATLAPI AtlAxCreateControlLicEx(
 *lpszName*<br/>
 Puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las siguientes maneras:
 
-- Un ProgID como "MSCAL. Calendario. 7 "
+- Un ProgID como`"MSCAL.Calendar.7"`
 
-- Un CLSID como "{8E27C92B-1264-101C-8A2F-040224009C02}"
+- Un CLSID como`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Una dirección URL como "<http://www.microsoft.com>"
+- Una dirección URL como`"<https://www.microsoft.com>"`
 
-- Una referencia a un documento activo como "File://\\\Documents\MyDoc.doc"
+- Referencia a un documento activo como`"file://\\\Documents\MyDoc.doc"`
 
-- Un fragmento de HTML como\<"MSHTML: HTML >\<cuerpo > es una línea de texto\</Body >\</HTML >"
+- Un fragmento de HTML como`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
+   > `"MSHTML:"`debe preceder al fragmento HTML para que se designe como una secuencia de MSHTML.
 
 *hWnd*<br/>
 Identificador de la ventana a la que se asociará el control.

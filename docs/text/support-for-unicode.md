@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con Unicode
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 helpviewer_keywords:
 - globalization [C++], character sets
 - portable data types [MFC]
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-ms.openlocfilehash: fea49bff2a4563b8617e19636e27afbae1c55811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c30cb1fbfb1930b5e4b026e58c478f0099e8ecdf
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410556"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929913"
 ---
 # <a name="support-for-unicode"></a>Compatibilidad con Unicode
 
-Unicode es una especificación para admitir todos los juegos de caracteres, los que no se puede representar incluidos en un solo byte (es decir, la mayoría de ellos). Si está programando para un mercado internacional, se recomienda que utilice Unicode o una [juego de caracteres multibyte](../text/support-for-multibyte-character-sets-mbcss.md) (MBCS), o el programa de código para que pueda crear para ambos cambiando un modificador.
+Unicode es una especificación para admitir todos los juegos de caracteres, incluidos aquellos que no se pueden representar en un solo byte.  Si está programando para un mercado internacional, se recomienda usar Unicode o un juego de [caracteres multibyte](../text/support-for-multibyte-character-sets-mbcss.md) (MBCS). O bien, codifique el programa para que pueda compilarlo mediante el cambio de un modificador.
 
-Un carácter ancho es un código de carácter multilingüe de dos bytes. Se pueden representar decenas de miles de caracteres, que incluyen casi todos los caracteres que se utilizan en la informática moderna alrededor del mundo, incluidos los símbolos técnicos y caracteres de publicación especiales, según la especificación Unicode como un todo solo caracteres codifican por mediante UTF-16. Caracteres que no pueden representarse en un solo carácter ancho pueden representarse en un par Unicode mediante la característica de par suplente Unicode. Dado que casi todos los caracteres de uso común está representado en UTF-16 en un carácter ancho de 16 bits único, con caracteres anchos simplifica la programación con juegos de caracteres internacionales. Caracteres anchos codificados con UTF-16LE (para little-endian) son el formato de caracteres nativo para Windows.
+Un carácter ancho es un código de carácter multilingüe de dos bytes. Decenas de miles de caracteres, que incluye casi todos los caracteres que se usan en la informática moderna en todo el mundo, incluidos los símbolos técnicos y los caracteres de publicación especiales, se pueden representar de acuerdo con la especificación Unicode como un carácter ancho único codificado por mediante UTF-16. Los caracteres que no se pueden representar en un solo carácter ancho se pueden representar en un par Unicode mediante la característica de par suplente Unicode. Dado que casi todos los caracteres del uso común se representan en UTF-16 en un solo carácter ancho de 16 bits, el uso de caracteres anchos simplifica la programación con juegos de caracteres internacionales. Los caracteres anchos codificados mediante UTF-16LE (para Little-endian) son el formato de caracteres nativos de Windows.
 
-Una cadena de caracteres anchos se representa como una matriz `wchar_t[]` y apunta a ella un puntero `wchar_t*`. Cualquier carácter ASCII se puede representar como un carácter ancho agregando la letra L al principio del carácter. Por ejemplo, L '\0' es el carácter nulo final de todo (16 bits). De manera similar, cualquier literal de cadena ASCII se puede representar como un literal de cadena de caracteres anchos agregando la letra L al principio del literal ASCII (L"Hola").
+Una cadena de caracteres anchos se representa como una matriz `wchar_t[]` y apunta a ella un puntero `wchar_t*`. Cualquier carácter ASCII se puede representar como un carácter ancho agregando la letra L al principio del carácter. Por ejemplo, L ' \ 0 ' es el carácter NULL ancho de terminación (16 bits). De manera similar, cualquier literal de cadena ASCII se puede representar como un literal de cadena de caracteres anchos agregando la letra L al principio del literal ASCII (L"Hola").
 
-En general, los caracteres anchos ocupan más espacio en la memoria que los caracteres multibyte, pero se procesan más rápido. Además, varias configuraciones regionales se puede representar a la vez en una codificación multibyte, mientras que todos los caracteres se establece en el mundo se representan al mismo tiempo mediante la representación Unicode.
+En general, los caracteres anchos ocupan más espacio en la memoria que los caracteres multibyte, pero se procesan más rápido. Además, solo se puede representar una configuración regional a la vez en una codificación multibyte, mientras que todos los juegos de caracteres del mundo se representan simultáneamente mediante la representación Unicode.
 
 Todo el marco MFC está habilitado para Unicode. MFC habilita Unicode con macros portables, como se muestra en la tabla siguiente.
 
@@ -33,28 +33,28 @@ Todo el marco MFC está habilitado para Unicode. MFC habilita Unicode con macros
 |Tipo de datos no portable|Reemplazado por esta macro|
 |-----------------------------|----------------------------|
 |`char`, `wchar_t`|`_TCHAR`|
-|`char*`, `LPSTR` (Tipo de datos de Win32) `LPWSTR`|`LPTSTR`|
-|`const char*`, `LPCSTR` (Tipo de datos de Win32) `LPCWSTR`|`LPCTSTR`|
+|`char*`, `LPSTR` (Tipo de datos Win32),`LPWSTR`|`LPTSTR`|
+|`const char*`, `LPCSTR` (Tipo de datos Win32),`LPCWSTR`|`LPCTSTR`|
 
-Clase `CString` usa `_TCHAR` como base y proporciona constructores y operadores para realizar conversiones fácilmente. La mayoría de las operaciones de cadena de Unicode se puede escribir con la misma lógica que se usa para administrar el juego de caracteres ANSI de Windows, con la diferencia de que la unidad de operación básica es un carácter de 16 bits en lugar de un byte de 8 bits. A diferencia de cuando se trabaja con juegos de caracteres multibyte, no es necesario (y no se debe) tratar un carácter Unicode como si fueran dos bytes independientes. Sin embargo,, tiene que tratar con la posibilidad de un solo carácter representado por un par suplente de caracteres anchos. En general, no escribir código que supone que la longitud de una cadena es el mismo que el número de caracteres, si estrechos o anchos, que contiene.
+La `CString` clase `_TCHAR` usa como base y proporciona constructores y operadores para realizar conversiones sencillas. La mayoría de las operaciones de cadena de Unicode se puede escribir con la misma lógica que se usa para administrar el juego de caracteres ANSI de Windows, con la diferencia de que la unidad de operación básica es un carácter de 16 bits en lugar de un byte de 8 bits. A diferencia de cuando se trabaja con juegos de caracteres multibyte, no es necesario (y no se debe) tratar un carácter Unicode como si fueran dos bytes independientes. Sin embargo, tiene que tratar con la posibilidad de que un solo carácter esté representado por un par suplente de caracteres anchos. En general, no Escriba código que asuma que la longitud de una cadena es igual que el número de caracteres, ya sean estrechos o anchos, que contiene.
 
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Usar Unicode MFC y soporte técnico de juegos de caracteres Multibyte (MBCS) del conjunto](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)
+- [Usar la compatibilidad con Unicode y el juego de caracteres multibyte (MBCS) de MFC](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)
 
 - [Habilitar Unicode en mi programa](../text/international-enabling.md)
 
 - [Habilitar Unicode y MBCS en mi programa](../text/internationalization-strategies.md)
 
-- [Utilizar Unicode para crear un programa internacionalizado](../text/unicode-programming-summary.md)
+- [Usar Unicode para crear un programa internacionalizado](../text/unicode-programming-summary.md)
 
-- [Descubra las ventajas de Unicode](../text/benefits-of-character-set-portability.md)
+- [Obtener información sobre las ventajas de Unicode](../text/benefits-of-character-set-portability.md)
 
-- [Usar wmain para pasar argumentos de caracteres anchos a mi programa](../text/support-for-using-wmain.md)
+- [Usar wmain para poder pasar argumentos de caracteres anchos a mi programa](../text/support-for-using-wmain.md)
 
 - [Ver un resumen de la programación con Unicode](../text/unicode-programming-summary.md)
 
-- [Obtenga información sobre asignaciones de texto genérico para portabilidad de ancho de byte](../text/generic-text-mappings-in-tchar-h.md)
+- [Más información sobre las asignaciones de texto genérico para la portabilidad de ancho de bytes](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>Vea también
 

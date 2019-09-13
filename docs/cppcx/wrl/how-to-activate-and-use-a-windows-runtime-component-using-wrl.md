@@ -3,18 +3,18 @@ title: Procedimiento Activar y usar un componente de Windows Runtime mediante WR
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498401"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926062"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Procedimiento Activar y usar un componente de Windows Runtime mediante WRL
 
 En este documento se muestra cómo usar la C++ biblioteca de plantillas de Windows Runtime (WRL) para inicializar el Windows Runtime y cómo activar y usar un componente de Windows Runtime.
 
-Para usar un componente, debe adquirir un puntero de interfaz al tipo implementado por el componente. Y dado que la tecnología subyacente del Windows Runtime es el modelo de objetos componentes (COM), debe seguir las reglas COM para mantener una instancia del tipo. Por ejemplo, debe mantener el recuento de *referencias* que determina cuándo se elimina el tipo de la memoria.
+Para usar un componente, debe adquirir un puntero de interfaz al tipo implementado por el componente. Y dado que la tecnología subyacente del Windows Runtime es el modelo de objetos componentes (COM), debe seguir las reglas COM para mantener una instancia del tipo. Por ejemplo, debe mantener el *recuento de referencias* que determina cuándo se elimina el tipo de la memoria.
 
 Para simplificar el uso de la Windows Runtime, C++ Windows Runtime biblioteca de plantillas proporciona la plantilla de puntero inteligente, [\<ComPtr T >](comptr-class.md), que realiza automáticamente el recuento de referencias. Al declarar una variable, `ComPtr<`especifique el *identificador* *de nombre* `>` de interfaz. Para tener acceso a un miembro de interfaz, aplique el operador de acceso`->`de miembro de flecha () al identificador.
 
@@ -48,7 +48,7 @@ En los pasos siguientes se `Windows::Foundation::IUriRuntimeClass` usa la interf
 
    El Windows Runtime usa nombres completos para identificar tipos. El `RuntimeClass_Windows_Foundation_Uri` parámetro es una cadena proporcionada por el Windows Runtime y contiene el nombre de clase en tiempo de ejecución necesario.
 
-4. Inicialice una variable [Microsoft:: WRL:: wrappers:: HString](hstring-class.md) que represente el `"http://www.microsoft.com"`URI.
+4. Inicialice una variable [Microsoft:: WRL:: wrappers:: HString](hstring-class.md) que represente el `"https://www.microsoft.com"`URI.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 

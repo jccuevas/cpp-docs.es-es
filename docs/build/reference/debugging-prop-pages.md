@@ -1,6 +1,6 @@
 ---
 title: C++Depurar páginas de propiedades
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
 f1_keywords:
@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: a63ac181b4ef281d6d78d951a46bba85103ba636
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537801"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927737"
 ---
 # <a name="c-debugging-property-pages"></a>C++Depurar páginas de propiedades
 
-Estas páginas de propiedades se encuentran en **propiedades** >  **de configuración** >  del **proyecto** > **depuración.** Elija el tipo de depurador en el control desplegable. Para obtener más información sobre la C++ depuración [de código, vea Tutorial: Aprenda a depurar C++ código mediante](/visualstudio/debugger/getting-started-with-the-debugger-cpp) Visual Studio y depurar [código nativo](/visualstudio/debugger/debugging-native-code).
+Estas páginas de propiedades se encuentran**en propiedades de** > **configuración** > del **proyecto** > **depuración**. Elija el tipo de depurador en el control desplegable. Para obtener más información sobre la C++ depuración [de código, vea Tutorial: Aprenda a depurar C++ código mediante](/visualstudio/debugger/getting-started-with-the-debugger-cpp) Visual Studio y [depurar código nativo](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Página de propiedades del depurador local de Windows
 
@@ -73,8 +73,8 @@ Especifica el tipo de depurador que se va a usar. Cuando se establece en automá
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
 - Mezclado mixto
-- Auto **-auto** automática
-- Script **-script**
+- **Auto-auto** automática
+- **Script-script**
 - **Solo GPU (C++ amp)** -GPU (C++ amp)
 
 ### <a name="environment"></a>Entorno
@@ -108,7 +108,7 @@ Invalide C++ la selección del acelerador predeterminado del amp. La propiedad n
 
 ## <a name="remote-windows-debugger-property-page"></a>Página de propiedades del Depurador remoto de Windows
 
-Para obtener más información sobre la depuración remota, vea depuración [remota de un proyecto de Visual C++ en Visual Studio](/visualstudio/debugger/remote-debugging-cpp).
+Para obtener más información sobre la depuración remota, vea [depuración remota de un proyecto de Visual C++ en Visual Studio](/visualstudio/debugger/remote-debugging-cpp).
 
 ### <a name="remote-command"></a>Comando remoto
 
@@ -144,8 +144,8 @@ Especifica el tipo de depurador que se va a usar. Cuando se establece en automá
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
 - Mezclado mixto
-- Auto **-auto** automática
-- Script **-script**
+- **Auto-auto** automática
+- **Script-script**
 - **Solo GPU (C++ amp)** -GPU (C++ amp)
 
 ### <a name="environment"></a>Entorno
@@ -204,8 +204,8 @@ Especifica el tipo de depurador que se va a usar. Cuando se establece en automá
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
 - Mezclado mixto
-- Auto **-auto** automática
-- Script **-script**
+- **Auto-auto** automática
+- **Script-script**
 
 ## <a name="web-service-debugger-property-page"></a>Página de propiedades del depurador del servicio Web
 
@@ -222,8 +222,8 @@ Especifica el tipo de depurador que se va a usar. Cuando se establece en automá
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
 - Mezclado mixto
-- Auto **-auto** automática
-- Script **-script**
+- **Auto-auto** automática
+- **Script-script**
 
 ### <a name="sql-debugging"></a>Depuración de SQL
 

@@ -1,6 +1,6 @@
 ---
-title: IRegistrar (interfaz)
-ms.date: 2/1/2017
+title: Interfaz IRegistrar
+ms.date: 02/01/2017
 f1_keywords:
 - IRegistrar
 - ATLIFASE/ATL::IRegistrar
@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
-ms.openlocfilehash: 984d95a1e0adb6835db7ca4bcabcff21f0be7beb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276021"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927757"
 ---
-# <a name="iregistrar-interface"></a>IRegistrar (interfaz)
+# <a name="iregistrar-interface"></a>Interfaz IRegistrar
 
-Esta interfaz se define en atliface.h y se usa internamente por las funciones de miembro CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).
+Esta interfaz se define en atliface. h y las funciones miembro de CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)usan internamente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,26 +34,26 @@ typedef interface IRegistrar IRegistrar;
 
 ## <a name="remarks"></a>Comentarios
 
-Vea el tema [utilizar parámetros reemplazables (el preprocesador del registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obtener más detalles.
+Vea el tema [uso de parámetros reemplazables (el preprocesador del registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obtener más detalles.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registra el recurso. |
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Anula el registro del recurso.|
 |[IRegistrar::FileRegister](#fileregister)|Registra el archivo.|
 |[IRegistrar::FileUnregister](#fileunregister)|Anula el registro del archivo.|
 |[IRegistrar::StringRegister](#stringregister)|Registra la cadena.|
-|[IRegistrar::StringUnregister](#stringunregister)|Anula el registro de la cadena|
+|[IRegistrar::StringUnregister](#stringunregister)|Anula el registro de la cadena.|
 |[IRegistrar::ResourceRegister](#resourceregister)|Registra el recurso.|
 |[IRegistrar::ResourceUnregister](#resourceunregister)|Anula el registro del recurso.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlifase.h
+**Encabezado:** atlifase. h
 
 ##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
 
@@ -97,7 +97,7 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
 
 ##  <a name="stringregister"></a>  IRegistrar::StringRegister
 
-Registra los datos de cadena especificada.
+Registra los datos de cadena especificados.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister(
@@ -106,7 +106,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 
 ##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
 
-Anula el registro de los datos de cadena especificada.
+Anula el registro de los datos de cadena especificados.
 
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister(
@@ -138,6 +138,6 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ## <a name="see-also"></a>Vea también
 
 [Usar parámetros reemplazables (el preprocesador del registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)<br/>
+[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
 [Clases de módulo](../../atl/atl-module-classes.md)<br/>
-[Componente de registro (registrador)](../../atl/atl-registry-component-registrar.md)
+[Componente de registro (Registrador)](../../atl/atl-registry-component-registrar.md)
