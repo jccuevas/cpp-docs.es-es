@@ -1,9 +1,9 @@
 ---
 title: _flushall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _flushall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _flushall
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dce7412ccc19d4870494851d366c059ff01de16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333539"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957140"
 ---
-# <a name="flushall"></a>_flushall
+# <a name="_flushall"></a>_flushall
 
 Vacía todos los flujos y borra todos los búferes.
 
@@ -47,11 +50,11 @@ int _flushall( void );
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, el **_flushall** función escribe en el contenido de todos los búferes asociados con los flujos de salida abiertos los archivos correspondientes. Se borra el contenido actual de todos los búferes asociados a los flujos de entrada abiertos. Normalmente, el sistema operativo mantiene estos búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra un flujo o cuando un programa finaliza con normalidad sin cerrar flujos.
+De forma predeterminada, la función **_flushall** escribe en los archivos adecuados el contenido de todos los búferes asociados a los flujos de salida abiertos. Se borra el contenido actual de todos los búferes asociados a los flujos de entrada abiertos. Normalmente, el sistema operativo mantiene estos búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra un flujo o cuando un programa finaliza con normalidad sin cerrar flujos.
 
-Si una lectura sigue a una llamada a **_flushall**, nuevos datos se leen de los archivos de entrada en los búferes. Todos los flujos permanecen abiertos después de llamar a **_flushall**.
+Si una lectura sigue una llamada a **_flushall**, los nuevos datos se leen de los archivos de entrada en los búferes. Todas las secuencias permanecen abiertas después de la llamada a **_flushall**.
 
-La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escribe directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a Commode.obj. En el archivo ejecutable resultante, las llamadas a **_flushall** escribir el contenido de todos los búferes en el disco. Solo **_flushall** y [fflush](fflush.md) se ven afectadas por Commode.obj.
+La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escribe directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a Commode.obj. En el archivo ejecutable resultante, las llamadas a **_flushall** escriben el contenido de todos los búferes en el disco. Commode. obj solo afecta a **_flushall** y [fflush](fflush.md) .
 
 Para obtener información sobre cómo controlar la característica de confirmación en disco, consulte [E/S de secuencia](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) y [_fdopen](fdopen-wfdopen.md).
 

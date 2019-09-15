@@ -1,10 +1,10 @@
 ---
 title: _popen, _wpopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _popen
 - _wpopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tpopen
 - popen
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499599"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950995"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -86,7 +89,7 @@ La función **_popen** crea una canalización y ejecuta de forma asincrónica un
 |**"t"**|Abrir en modo de texto.|
 
 > [!NOTE]
-> Si se usa en un programa de Windows, la función **_popen** devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y la salida, vea [crear un proceso secundario con entrada y salida](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) redirigidas en el Windows SDK.
+> Si se usa en un programa de Windows, la función **_popen** devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y la salida, vea [crear un proceso secundario con entrada y salida redirigidas](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el Windows SDK.
 
 **_wpopen** es una versión con caracteres anchos de **_popen**; el argumento de *ruta de acceso* a **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan de manera idéntica.
 

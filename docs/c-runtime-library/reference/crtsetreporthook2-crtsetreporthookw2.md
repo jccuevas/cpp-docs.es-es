@@ -1,10 +1,10 @@
 ---
 title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportHookW2
 - CrtSetReportHook2
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335329"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942221"
 ---
-# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
+# <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
 Instala o desinstala una función de generación de informes definida por el cliente enlazándola al proceso de creación de informes de depuración en tiempo de ejecución de C (solo versión de depuración).
 
@@ -54,22 +57,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>Parámetros
 
 *mode*<br/>
-La acción necesaria: **_CRT_RPTHOOK_INSTALL** o **_CRT_RPTHOOK_REMOVE**.
+Acción que se debe realizar: **_CRT_RPTHOOK_INSTALL** o **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Enlace de informe para instalar o quitar en la versión de caracteres estrechos o caracteres anchos de esta función.
+Enlace de informe que se va a instalar o quitar en la versión de caracteres estrechos o de caracteres anchos de esta función.
 
 ## <a name="return-value"></a>Valor devuelto
 
--1 si se produce un error, con **EINVAL** o **ENOMEM** establecido; de lo contrario, devuelve el recuento de referencias de *pfnNewHook* después de la llamada.
+-1 si se produjo un error, con **EINVAL** o **ENOMEM** establecido; de lo contrario, devuelve el recuento de referencias de *pfnNewHook* después de la llamada.
 
 ## <a name="remarks"></a>Comentarios
 
-**_CrtSetReportHook2** y **_CrtSetReportHookW2** le permiten enlazar o desenlazar una función, mientras que [_CrtSetReportHook](crtsetreporthook.md) solo permite enlazar una función.
+**_CrtSetReportHook2** y **_CrtSetReportHookW2** permiten enlazar o desenlazar una función, mientras que [_CrtSetReportHook](crtsetreporthook.md) solo permite enlazar una función.
 
-**_CrtSetReportHook2** o **_CrtSetReportHookW2** debe usarse en lugar de **_CrtSetReportHook** cuando se realiza la llamada al enlace en un archivo DLL y cuando se puede cargar varias DLL y establecer sus propias funciones de enlace. En tales circunstancias, los archivos DLL se pueden descargar en un orden diferente al que se han cargado y la función de enlace puede dejarse apuntando a un archivo DLL descargado. Los resultados de la depuración bloquean el proceso si se han agregado las funciones de enlace con **_CrtSetReportHook**.
+Se debe usar **_CrtSetReportHook2** o **_CrtSetReportHookW2** en lugar de **_CrtSetReportHook** cuando la llamada de enlace se realiza en un archivo dll y cuando se pueden cargar varios archivos dll y establecer sus propias funciones de enlace. En tales circunstancias, los archivos DLL se pueden descargar en un orden diferente al que se han cargado y la función de enlace puede dejarse apuntando a un archivo DLL descargado. Cualquier salida de depuración bloquea el proceso si las funciones de enlace se agregaron con **_CrtSetReportHook**.
 
-Las funciones agregadas con de enlace **_CrtSetReportHook** se llama si no hay ningún enlace de las funciones de agregan con **_CrtSetReportHook2** o **_CrtSetReportHookW2** o si todos enlazar las funciones de agregado con **_CrtSetReportHook2** y **_CrtSetReportHookW2** devolver **FALSE**.
+Se llama a las funciones de enlace agregadas con **_CrtSetReportHook** si no se han agregado funciones de enlace con **_CrtSetReportHook2** o **_CrtSetReportHookW2** , o si todas las funciones de enlace se han agregado con **_CrtSetReportHook2** y **_ CrtSetReportHookW2** devuelve **false**.
 
 Está disponible la versión con caracteres anchos de esta función. Las funciones de enlace de informe toman una cadena cuyo tipo (caracteres anchos o estrechos) debe coincidir con la versión de esta función que se usa. Use el prototipo de función siguiente con los enlaces de informe que se usan con la versión de caracteres anchos de dicha función:
 
@@ -83,10 +86,10 @@ Use el prototipo siguiente con los enlaces de informe de caracteres estrechos:
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Estas funciones validan sus parámetros. Si *modo* o **pfnNewNook** es válido, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
+Estas funciones validan sus parámetros. Si *mode* o **pfnNewNook** no son válidos, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1.
 
 > [!NOTE]
-> Si la aplicación se compila con **/CLR** y la función de creación de informes se llama después de que ha salido de la aplicación principal, el CLR iniciará una excepción si la función de creación de informes llama a las funciones de CRT.
+> Si la aplicación se compila con **/CLR** y se llama a la función de generación de informes después de que la aplicación haya salido de Main, CLR producirá una excepción si la función de creación de informes llama a las funciones de CRT.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -235,7 +238,7 @@ int   main(int argc, char* argv[])
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 _CrtSetReportHook2(_CRT_RPTHOOK_INSTALL, TestHook1) returned 0

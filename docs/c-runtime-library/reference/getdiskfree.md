@@ -1,9 +1,9 @@
 ---
 title: _getdiskfree
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdiskfree
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getdiskfree
 - _getdiskfree
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0feee21ee76d076263ea3750d00fd0142f26b7d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331771"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955099"
 ---
-# <a name="getdiskfree"></a>_getdiskfree
+# <a name="_getdiskfree"></a>_getdiskfree
 
-Información sobre una unidad de disco se utiliza para rellenar un **_diskfree_t** estructura.
+Utiliza información sobre una unidad de disco para rellenar una estructura **_diskfree_t** .
 
 > [!IMPORTANT]
 > Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -55,15 +58,15 @@ unsigned _getdiskfree(
 Unidad de disco de la que desea obtener información.
 
 *driveinfo*<br/>
-Un **_diskfree_t** estructura que se rellenará con información acerca de la unidad.
+Una estructura **_diskfree_t** que se rellenará con información sobre la unidad.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la función es correcta, el valor devuelto es cero. Si la función no es correcta, el valor devuelto es un código de error. El valor **errno** se establece para los errores devueltos por el sistema operativo. Para obtener más información acerca de las condiciones de error que se indican mediante **errno**, consulte [errno (constantes)](../../c-runtime-library/errno-constants.md).
+Si la función es correcta, el valor devuelto es cero. Si la función no es correcta, el valor devuelto es un código de error. El valor **errno** se establece para los errores devueltos por el sistema operativo. Para obtener más información acerca de las condiciones de error que se indican en **errno**, consulte [errno (constantes](../../c-runtime-library/errno-constants.md)).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_diskfree_t** estructura se define en Direct.h.
+La estructura **_diskfree_t** se define en Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -74,7 +77,7 @@ struct _diskfree_t {
 };
 ```
 
-Esta función valida sus parámetros. Si el *driveinfo* puntero es **NULL** o *unidad* especifica una unidad no válida, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** a **EINVAL**. Las unidades válidas oscilan entre 0 y 26. Un *unidad* el valor 0 especifica la unidad actual; por lo tanto, se asignan números a letras del alfabeto inglés de forma tal que 1 indica la unidad A, 3 indica que la unidad C y así sucesivamente.
+Esta función valida sus parámetros. Si el puntero de *DriveInfo* es **null** o la *unidad* especifica una unidad no válida, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **EINVAL** y establece **errno** en **EINVAL**. Las unidades válidas oscilan entre 0 y 26. Un valor de *unidad* de 0 especifica la unidad actual; después, los números se asignan a letras del alfabeto inglés, de modo que 1 indica la unidad A, 3 indica la unidad C, y así sucesivamente.
 
 ## <a name="requirements"></a>Requisitos
 

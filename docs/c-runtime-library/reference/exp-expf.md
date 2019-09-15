@@ -1,11 +1,11 @@
 ---
 title: exp, expf, expl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - expf
 - expl
 - exp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _expl
 - expf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288193"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941634"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,24 +67,24 @@ long double expl(
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Valor del punto flotante a exponentiate la base del logaritmo natural *e* por.
+Valor de punto flotante en el que se va a exponentiate *la base logarítmica* natural.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **exp** funciones devuelven el valor exponencial del parámetro de punto flotante, *x*, si se realiza correctamente. Es decir, el resultado es *e*<sup>*x*</sup>, donde *e* es la base del logaritmo natural. En caso de desbordamiento, la función devuelve INF (infinito) y en caso de subdesbordamiento, **exp** devuelve 0.
+Las funciones **exp** devuelven el valor exponencial del parámetro de punto flotante, *x*, si es correcto. Es decir, el resultado es *e*<sup>*x*</sup>, donde *e* es la base del logaritmo natural. En el desbordamiento, la función devuelve el INF (infinito) y, en el subdesbordamiento, **exp** devuelve 0.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|+ NaN reservado, indeterminado|Ninguna|_DOMAIN|
-|+ Infinito|INVALID|_DOMAIN|
+|± NaN no interactivo, indeterminado|None|_DOMAIN|
+|± Infinito|INVALID|_DOMAIN|
 |x ≥ 7,097827e+002|INEXACTO+DESBORDAMIENTO|OVERFLOW|
 |X ≤ -7,083964e+002|INEXACTO+SUBDESBORDAMIENTO|DESBORDAMIENTO|
 
-El **exp** función tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
+La función **exp** tiene una implementación que usa las extensiones SIMD de transmisión por secuencias 2 (sse2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
 
 ## <a name="remarks"></a>Comentarios
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **exp** que toman un **float** o **long double** argumento. En un programa C, **exp** siempre toma y devuelve un **doble**.
+C++permite las sobrecargas, de modo que puede llamar a las sobrecargas de **exp** que toman un argumento de tipo **float** o **Long Double** . En un programa de C, **exp** siempre toma y devuelve un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 

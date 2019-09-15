@@ -1,10 +1,10 @@
 ---
 title: remove, _wremove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wremove
 - remove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remove
 - _wremove
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ceedcf9d3cc2b26a8d91ca923f81f0ce539b64a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357701"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949431"
 ---
-# <a name="remove-wremove"></a>remove, _wremove
+# <a name="remove-_wremove"></a>remove, _wremove
 
 Elimina un archivo.
 
@@ -59,13 +62,13 @@ Ruta de acceso del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. En caso contrario, devuelve -1 y establece **errno** a **EACCES** indicar que la ruta de acceso especifica un archivo de solo lectura, especifica un directorio o el archivo está abierto, o a **ENOENT** para indicar que no se encontró el nombre de archivo o ruta de acceso.
+Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. De lo contrario, devuelve-1 y establece **errno** en **EACCES** para indicar que la ruta de acceso especifica un archivo de solo lectura, especifica un directorio o el archivo está abierto o en **ENOENT** para indicar que no se encontró el nombre de archivo o la ruta de acceso.
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Comentarios
 
-La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión con caracteres anchos de **_quitar**; el *ruta* argumento **_wremove** es una cadena de caracteres anchos. **_wremove** y **_quitar** se comportan exactamente igual. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
+La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión con caracteres anchos de **_remove**; el argumento de *ruta de acceso* a **_wremove** es una cadena de caracteres anchos. **_wremove** y **_remove** se comportan de manera idéntica. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -103,7 +106,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtremovetxt"></a>Entrada: crt_remove.txt
+### <a name="input-crt_removetxt"></a>Entrada: crt_remove.txt
 
 ```Input
 This file will be deleted.

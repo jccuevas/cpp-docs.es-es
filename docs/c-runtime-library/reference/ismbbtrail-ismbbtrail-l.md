@@ -1,10 +1,10 @@
 ---
 title: _ismbbtrail, _ismbbtrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbtrail
 - _ismbbtrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbtrail
 - ismbbtrail
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: 5c09884f013e878fca516388f1ad933a2a08b35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e445de41b05ac4829bdf108d1c98113cd5240ec0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953973"
 ---
-# <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
+# <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail, _ismbbtrail_l
 
 Determina si un byte es el byte final de un carácter multibyte.
 
@@ -65,7 +68,7 @@ Configuración regional que se va a usar.
 
 ## <a name="remarks"></a>Comentarios
 
-**_ismbbtrail** usa la configuración regional actual para el comportamiento dependiente de la configuración regional. **_ismbbtrail_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbtrail** usa la configuración regional actual para el comportamiento dependiente de la configuración regional. **_ismbbtrail_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

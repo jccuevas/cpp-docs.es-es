@@ -1,14 +1,14 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289210"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937613"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -89,17 +92,17 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **erf** funciones devuelven una función de error de la Gauss *x*. El **erfc** funciones devuelven el Gauss complementaria de función de error de *x*.
+Las funciones **ERF** devuelven la función de error de Gauss de *x*. Las funciones **erfc** devuelven la función de error de Gauss complementaria de *x*.
 
 ## <a name="remarks"></a>Comentarios
 
-El **erf** funciones calculan la función de error de Gauss *x*, que se define como:
+Las funciones **ERF** calculan la función de error de Gauss de *x*, que se define como:
 
-![La función de error de x](media/crt_erf_formula.PNG "la función de error de x")
+![La función de error de x](media/crt_erf_formula.PNG "La función de error de x")
 
-La función de error de Gauss complementaria se define como 1 - ERF. El **erf** funciones devuelven un valor en el intervalo de -1,0 y 1,0. No se devuelve ningún error. El **erfc** funciones devuelven un valor en el intervalo de 0 a 2. Si *x* es demasiado grande para **erfc**, **errno** variable se establece en **ERANGE**.
+La función de error de Gauss complementaria se define como 1-Fun (x). Las funciones **ERF** devuelven un valor en el intervalo de-1,0 a 1,0. No se devuelve ningún error. Las funciones **erfc** devuelven un valor en el intervalo comprendido entre 0 y 2. Si *x* es demasiado grande para **erfc**, la variable **errno** se establece en **ERANGE**.
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **erf** y **erfc** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **erf** y **erfc** siempre toman y devuelven un **doble**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Fun** y **erfc** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **Fun** y **erfc** siempre toman y devuelven un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 

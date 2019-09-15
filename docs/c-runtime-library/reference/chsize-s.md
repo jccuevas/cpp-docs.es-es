@@ -1,9 +1,9 @@
 ---
 title: _chsize_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _chsize_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - chsize_s
 - _chsize_s
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-ms.openlocfilehash: a56efe826d43c80dc2cdee295e58872e7dd3c9ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7250f0b570ae9a4b2478bad09ee7b0044068d972
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348515"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939178"
 ---
-# <a name="chsizes"></a>_chsize_s
+# <a name="_chsize_s"></a>_chsize_s
 
 Cambia el tamaño de un archivo. Se trata de una versión de [_chsize](chsize.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -54,17 +57,17 @@ Nueva longitud del archivo en bytes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_chsize_s** devuelve el valor 0 si el tamaño del archivo se cambió correctamente. Un valor devuelto distinto de cero indica un error: el valor devuelto es **EACCES** si el archivo especificado está bloqueado contra el acceso, **EBADF** si el archivo especificado es de solo lectura o no es válido, el descriptor de **ENOSPC** si no se queda espacio en el dispositivo, o **EINVAL** si el tamaño es menor que cero. **errno** se establece en el mismo valor.
+**_chsize_s** devuelve el valor 0 si el tamaño del archivo se ha cambiado correctamente. Un valor devuelto distinto de cero indica un error: el valor devuelto es **EACCES** si el archivo especificado está bloqueado contra el acceso, **EBADF** si el archivo especificado es de solo lectura o el descriptor no es válido, **ENOSPC** si no queda espacio en el dispositivo o  **EINVAL** si el tamaño es menor que cero. **errno** se establece en el mismo valor.
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_chsize_s** función amplía o trunca el archivo asociado *fd* a la longitud especificada por *tamaño*. El archivo debe estar abierto en un modo que permita escritura. Si el archivo se amplía, se anexan caracteres nulos ("\0"). Si el archivo se trunca, se pierden todos los datos desde el final del archivo abreviado hasta la longitud original del archivo.
+La función **_chsize_s** extiende o trunca el archivo asociado con *FD* a la longitud especificada por *tamaño*. El archivo debe estar abierto en un modo que permita escritura. Si el archivo se amplía, se anexan caracteres nulos ("\0"). Si el archivo se trunca, se pierden todos los datos desde el final del archivo abreviado hasta la longitud original del archivo.
 
-**_chsize_s** toma un entero de 64 bits como el tamaño del archivo y, por lo tanto, puede controlar tamaños de archivo mayores que 4 GB. **_chsize** se limita al tamaño de los archivos de 32 bits.
+**_chsize_s** toma un entero de 64 bits como el tamaño del archivo y, por lo tanto, puede controlar tamaños de archivo superiores a 4 GB. **_chsize** está limitado a los tamaños de archivo de 32 bits.
 
-Esta función valida sus parámetros. Si *fd* no es un descriptor de archivo válido o el tamaño es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Esta función valida sus parámetros. Si *FD* no es un descriptor de archivo válido o el tamaño es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Requisitos
 

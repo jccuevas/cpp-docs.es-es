@@ -1,10 +1,10 @@
 ---
 title: memcmp, wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265627"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951935"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -61,21 +63,21 @@ Primer búfer.
 Segundo búfer.
 
 *count*<br/>
-Número de caracteres que se van a comparar. (Compara los bytes de **memcmp**, caracteres anchos para **wmemcmp**).
+Número de caracteres que se van a comparar. (Compara bytes para **memcmp**, caracteres anchos para **wmemcmp**).
 
 ## <a name="return-value"></a>Valor devuelto
 
 El valor devuelto indica la relación entre los búferes.
 
-|Valor devuelto|Relación de primera *recuento* caracteres de buf1 y buf2|
+|Valor devuelto|Relación de los primeros caracteres de *recuento* de buf1 y buf2|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1* menor *buffer2*|
-|0|*buffer1* idéntico al *buffer2*|
-|> 0|*buffer1* mayor *buffer2*|
+|< 0|*buffer1* menor que *buffer2*|
+|0|*buffer1* idéntico a *buffer2*|
+|> 0|*buffer1* mayor que *buffer2*|
 
 ## <a name="remarks"></a>Comentarios
 
-Compara los primeros *recuento* caracteres de *buffer1* y *buffer2* y devuelve un valor que indica su relación. El signo de un valor devuelto distinto de cero es el signo de la diferencia entre el primer par de valores de los búferes. Los valores se interpretan como **sin signo** **char** para **memcmp**y como **wchar_t** para **wmemcmp**.
+Compara los primeros caracteres de *recuento* de *buffer1* y *buffer2* y devuelve un valor que indica su relación. El signo de un valor devuelto distinto de cero es el signo de la diferencia entre el primer par de valores de los búferes. Los valores se interpretan como **unsigned** **Char** para **memcmp**y como **wchar_t** para **wmemcmp**.
 
 ## <a name="requirements"></a>Requisitos
 

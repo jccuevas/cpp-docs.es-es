@@ -1,10 +1,10 @@
 ---
 title: _cputs, _cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340246"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942633"
 ---
-# <a name="cputs-cputws"></a>_cputs, _cputws
+# <a name="_cputs-_cputws"></a>_cputs, _cputws
 
 Coloca una cadena en la consola.
 
@@ -62,13 +65,13 @@ Cadena de salida
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **_cputs** devuelve 0. Si se produce un error en la función, devuelve un valor distinto de cero.
+Si se realiza correctamente, **_cputs** devuelve 0. Si se produce un error en la función, devuelve un valor distinto de cero.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_cputs** función escribe la cadena terminada en null que apunta *str* directamente en la consola. No se anexa ninguna combinación de retorno de carro y salto de línea (CR-LF) automáticamente a la cadena.
+La función **_cputs** escribe la cadena terminada en null a la que apunta *Str* directamente en la consola. No se anexa ninguna combinación de retorno de carro y salto de línea (CR-LF) automáticamente a la cadena.
 
-Esta función valida su parámetro. Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y se devuelve -1.
+Esta función valida su parámetro. Si *Str* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve-1.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

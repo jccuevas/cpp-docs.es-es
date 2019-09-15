@@ -1,11 +1,11 @@
 ---
 title: time, _time32, _time64
 ms.date: 11/06/2018
-apiname:
+api_name:
 - time
 - _time64
 - _time32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - time
 - _time64
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155594"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946090"
 ---
-# <a name="time-time32-time64"></a>time, _time32, _time64
+# <a name="time-_time32-_time64"></a>time, _time32, _time64
 
 Obtiene la hora del sistema.
 
@@ -59,19 +62,19 @@ Puntero a la ubicación de almacenamiento de tiempo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve la hora de segundos transcurridos desde la medianoche del 1 de enero de 1970, o -1 si se produce un error.
+Devuelve el tiempo en segundos transcurridos desde la medianoche del 1 de enero de 1970, o-1 en caso de error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **tiempo** función devuelve el número de segundos transcurridos desde la medianoche (00: 00:00) del 1 de enero de 1970, hora Universal coordinada (UTC), según el reloj del sistema. El valor devuelto se almacena en la ubicación proporcionada por *destTime*. Este parámetro puede ser **NULL**, en cuyo caso no se almacena el valor devuelto.
+La función **Time** devuelve el número de segundos transcurridos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC), según el reloj del sistema. El valor devuelto se almacena en la ubicación especificada por *destTime*. Este parámetro puede ser **null**, en cuyo caso el valor devuelto no se almacena.
 
-**tiempo** es un contenedor para **_time64** y **time_t** es, de forma predeterminada, equivalente a **__time64_t**. Si necesita forzar el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**. Esto, sin embargo, no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038; no se permite el uso de esta macro en plataformas de 64 bits.
+**Time** es un contenedor para **_time64** y **time_t** es, de forma predeterminada, equivalente a **__time64_t**. Si necesita forzar al compilador a interpretar **time_t** como el antiguo de 32 bits **time_t**, puede definir **_USE_32BIT_TIME_T**. Esto, sin embargo, no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038; no se permite el uso de esta macro en plataformas de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C necesario|Encabezado C++ necesario|
 |-------|------|---------------------|
-|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime > o \<time.h >|
+|**time**, **\_time32**, **\_time64**|\<time.h>|\<> ctime o \<Time. h >|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

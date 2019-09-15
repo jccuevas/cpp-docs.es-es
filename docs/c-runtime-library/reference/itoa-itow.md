@@ -1,7 +1,7 @@
 ---
 title: _itoa, _itow (funciones)
 ms.date: 08/19/2019
-apiname:
+api_name:
 - itoa
 - _itoa
 - ltoa
@@ -15,7 +15,7 @@ apiname:
 - _ultow
 - _i64tow
 - _ui64tow
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -28,7 +28,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _itoa
 - _ltoa
@@ -99,12 +102,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: afe7a190fe6630e3fbcb42d0d782e050952f56fc
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97085ab8a8c720d278374868f9b1c90a91a6da3b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630407"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953571"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -211,7 +214,7 @@ En cuanto a la portabilidad del código fuente, puede que prefiera conservar los
 
 ### <a name="maximum-conversion-count-macros"></a>Macros de recuento de conversión máximo
 
-Para ayudarle a crear búferes seguros para las conversiones, CRT incluye algunas macros útiles. Estos definen el tamaño del búfer necesario para convertir el valor más largo posible de cada tipo entero, incluidos el carácter nulo y el terminador null, para varias bases comunes. Para asegurarse de que el búfer de conversión es lo suficientemente grande como para recibir cualquier conversión enla base especificada por la base, utilice una de estas macros definidas al asignar el búfer. Esto ayuda a evitar errores de saturación del búfer al convertir tipos enteros en cadenas. Estas macros se definen al incluir stdlib. h o WCHAR. h en el origen.
+Para ayudarle a crear búferes seguros para las conversiones, CRT incluye algunas macros útiles. Estos definen el tamaño del búfer necesario para convertir el valor más largo posible de cada tipo entero, incluidos el carácter nulo y el terminador null, para varias bases comunes. Para asegurarse de que el búfer de conversión es lo suficientemente grande como para recibir cualquier conversión en la base *especificada por la base,* utilice una de estas macros definidas al asignar el búfer. Esto ayuda a evitar errores de saturación del búfer al convertir tipos enteros en cadenas. Estas macros se definen al incluir stdlib. h o WCHAR. h en el origen.
 
 Para usar una de estas macros en una función de conversión de cadenas, declare el búfer de conversión del tipo de carácter adecuado y use el valor de la macro para el tipo entero y base como dimensión de búfer. En esta tabla se enumeran las macros adecuadas para cada función de las bases enumeradas:
 

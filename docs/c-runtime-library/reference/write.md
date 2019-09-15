@@ -1,9 +1,9 @@
 ---
 title: _write
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _write
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _write
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 032bf332caee09fbe17d58eeae16ab44b98402d3
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 2c483df8e07b9496a0a22c1a1ebccf2b40d129cb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376298"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944858"
 ---
-# <a name="write"></a>_write
+# <a name="_write"></a>_write
 
 Escribe datos en un archivo.
 
@@ -67,7 +70,7 @@ Cuando el archivo se abre en modo de conversión Unicode (por ejemplo, si se abr
 
 ## <a name="remarks"></a>Comentarios
 
-La función _ **Write** escribe bytes de recuento del *búfer* en el archivo asociado a *FD*. La operación de escritura se inicia en la posición actual del puntero de archivo (si existe) asociado al archivo en cuestión. Si el archivo se abre para anexarlo, la operación comenzará en el final actual del archivo. Después de la operación de escritura, el puntero de archivo aumenta en función del número de bytes escritos.
+La función _ **Write** escribe bytes de *recuento* del *búfer* en el archivo asociado a *FD*. La operación de escritura se inicia en la posición actual del puntero de archivo (si existe) asociado al archivo en cuestión. Si el archivo se abre para anexarlo, la operación comenzará en el final actual del archivo. Después de la operación de escritura, el puntero de archivo aumenta en función del número de bytes escritos.
 
 Cuando se escribe en archivos abiertos en modo de texto, _ **Write** trata un carácter Ctrl + Z como el final lógico del archivo. Al escribir en un dispositivo, _ **Write** trata un carácter Ctrl + Z en el búfer como un terminador de salida.
 

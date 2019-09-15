@@ -1,9 +1,9 @@
 ---
 title: _free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _free_dbg
 - free_dbg
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-ms.openlocfilehash: 5a0024101e4f5a74f1573b271d444b27738db8e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43591ce8710dd25ad33832a5f084ca6e84bba979
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287868"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956804"
 ---
-# <a name="freedbg"></a>_free_dbg
+# <a name="_free_dbg"></a>_free_dbg
 
 Libera un bloque de memoria del montón (solo versión de depuración).
 
@@ -50,15 +53,15 @@ void _free_dbg(
 Puntero al bloque de memoria asignado que se va a liberar.
 
 *blockType*<br/>
-Tipo de bloque de memoria asignado que se liberen: **_CLIENT_BLOCK**, **_NORMAL_BLOCK**, o **_IGNORE_BLOCK**.
+Tipo de bloque de memoria asignado que se va a liberar: _ **client_block**, **_NORMAL_BLOCK**o **_IGNORE_BLOCK**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_free_dbg** función es una versión de depuración de la [libre](free.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_free_dbg** se reduce a una llamada a **libre**. Ambos **libre** y **_free_dbg** liberan un bloque de memoria del montón base, pero **_free_dbg** incluye dos características de depuración: bloquea la posibilidad de mantener liberados en el montón lista vinculada para simular condiciones de memoria baja y un parámetro de tipo de bloque para liberar a tipos de asignación específicos.
+La función **_free_dbg** es una versión de depuración de la función [Free](free.md) . Cuando no se define [_ Debug](../../c-runtime-library/debug.md) , cada llamada a **_free_dbg** se reduce a una llamada a **Free**. **Free** y **_free_dbg** liberan un bloque de memoria en el montón base, pero **_free_dbg** admite dos características de depuración: la posibilidad de mantener los bloques liberados en la lista vinculada del montón para simular condiciones de memoria insuficiente y un parámetro de tipo de bloque en tipos de asignación específicos gratuitos.
 
-**_free_dbg** realiza una comprobación de validez en todos los archivos especificados y las ubicaciones de bloques antes de realizar la operación de liberación. No se espera que la aplicación proporcione esta información. Cuando se libera un bloque de memoria, el administrador del montón de depuración comprueba automáticamente la integridad de los búferes situados a cada lado de la parte del usuario y emite un informe de error en caso de sobrescritura. Si el **_CRTDBG_DELAY_FREE_MEM_DF** campo de bits de la [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca está establecida, el bloque liberado se rellena con el valor 0xDD, recibe el **_FREE_BLOCK** tipo, de bloque y se mantienen en la lista del montón vinculada de bloques de memoria.
+**_free_dbg** realiza una comprobación de validez en todos los archivos especificados y las ubicaciones de bloques antes de realizar la operación de liberación. No se espera que la aplicación proporcione esta información. Cuando se libera un bloque de memoria, el administrador del montón de depuración comprueba automáticamente la integridad de los búferes situados a cada lado de la parte del usuario y emite un informe de error en caso de sobrescritura. Si se establece el campo de bits **_CRTDBG_DELAY_FREE_MEM_DF** de la marca _ [crtdbgflag](../../c-runtime-library/crtdbgflag.md) , el bloque liberado se rellena con el valor 0xDD, se le asigna el tipo de bloque **_FREE_BLOCK** y se mantiene en la lista vinculada de bloques de memoria del montón.
 
-Si se produce un error en que se libere la memoria, **errno** se establece con la información del sistema operativo de la naturaleza del error. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si se produce un error al liberar memoria, **errno** se establece con información del sistema operativo sobre la naturaleza del error. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

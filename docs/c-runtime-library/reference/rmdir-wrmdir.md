@@ -1,10 +1,10 @@
 ---
 title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wrmdir
 - _rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trmdir
 - _trmdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357465"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949217"
 ---
-# <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
+# <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
 Elimina un directorio.
 
@@ -62,7 +65,7 @@ Ruta de acceso del directorio que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de -1 indica un error y **errno** se establece en uno de los siguientes valores:
+Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de-1 indica un error y **errno** se establece en uno de los siguientes valores:
 
 |valor de errno|Condición|
 |-|-|
@@ -74,9 +77,9 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 ## <a name="remarks"></a>Comentarios
 
-El **_rmdir** función elimina el directorio especificado por *dirname*. El directorio debe estar vacío y no debe ser el directorio de trabajo actual ni el directorio raíz.
+La función **_rmdir** elimina el directorio especificado por *dirname*. El directorio debe estar vacío y no debe ser el directorio de trabajo actual ni el directorio raíz.
 
-**_wrmdir** es una versión con caracteres anchos de **_rmdir**; el *dirname* argumento **_wrmdir** es una cadena de caracteres anchos. **_wrmdir** y **_rmdir** se comportan exactamente igual.
+**_wrmdir** es una versión con caracteres anchos de **_rmdir**; el argumento *dirname* para **_wrmdir** es una cadena de caracteres anchos. **_wrmdir** y **_rmdir** se comportan de manera idéntica.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -1,11 +1,11 @@
 ---
 title: isnan, _isnan, _isnanf
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _isnan
 - _isnanf
 - isnan
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isnan
 - isnan
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0cc60fb80f8d5b78ec2947a87fde82a536b413c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157355"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953765"
 ---
-# <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
+# <a name="isnan-_isnan-_isnanf"></a>isnan, _isnan, _isnanf
 
 Comprueba si un determinado valor de punto flotante es un valor NaN (Not a Number).
 
@@ -71,23 +74,23 @@ Valor de punto flotante que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-En C, el **isnan** macro y el **_isnan** y **_isnanf** funciones devuelven un valor distinto de cero si el argumento *x* es un NAN; de lo contrario, Devuelve 0.
+En C, la macro **isNaN** y las funciones **_isnan** y **isnanf** devuelven un valor distinto de cero si el argumento *x* es un Nan; en caso contrario, devuelven 0.
 
-En C++, el **isnan** función de plantilla devuelve **true** si el argumento *x* es un NaN; de lo contrario devuelve **false**.
+En C++, la función de plantilla **isNaN** devuelve **true** si el argumento *x* es un Nan; en caso contrario, devuelve **false**.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que un valor NaN no se compara como igual a cualquier otro valor NaN, debe utilizar una de estas macros o funciones para detectar uno. Un NaN se genera cuando no se puede representar el resultado de una operación de punto flotante en formato de punto flotante de IEEE-754 para el tipo especificado. Para obtener información acerca de cómo se representa un NaN de salida, vea [printf](printf-printf-l-wprintf-wprintf-l.md).
+Dado que un valor NaN no se compara como igual que cualquier otro valor NaN, debe usar una de estas funciones o macros para detectar uno. Se genera un NaN cuando el resultado de una operación de punto flotante no se puede representar en el formato de punto flotante IEEE-754 para el tipo especificado. Para obtener información sobre cómo se representa un NaN para la salida, vea [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-Cuando se compila como C++, el **isnan** macro no está definida y un **isnan** función de plantilla se define en su lugar. Se comporta del mismo modo que la macro, pero devuelve un valor de tipo **bool** en lugar de un entero.
+Cuando se compila C++como, la macro **isNaN** no está definida y en su lugar se define una función de plantilla **isNaN** . Se comporta de la misma forma que la macro, pero devuelve un valor de tipo **bool** en lugar de un entero.
 
-El **_isnan** y **_isnanf** funciones son específicas de Microsoft. El **_isnanf** función sólo está disponible cuando se compila para x64.
+Las funciones **_isnan** y **isnanf** son específicas de Microsoft. La función **isnanf** solo está disponible cuando se compila para x64.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------------|-------------------------------|
-|**isnan**, **_isnanf**|\<math.h>|\<math.h> o \<cmath>|
+|**isNaN**, **isnanf**|\<math.h>|\<math.h> o \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> o \<cfloat>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).

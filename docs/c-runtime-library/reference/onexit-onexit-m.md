@@ -1,10 +1,10 @@
 ---
 title: _onexit, _onexit_m
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _onexit
 - _onexit_m
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _onexit
 - onexit_m
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156050"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951343"
 ---
-# <a name="onexit-onexitm"></a>_onexit, _onexit_m
+# <a name="_onexit-_onexit_m"></a>_onexit, _onexit_m
 
 Registra una rutina que se llama a la hora de salida.
 
@@ -59,15 +62,15 @@ Puntero a una función a la que se va a llamar al salir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_onexit** devuelve un puntero a la función si es correcto o **NULL** si no hay ningún espacio para almacenar el puntero de función.
+**_onexit** devuelve un puntero a la función si se realiza correctamente o **null** si no hay ningún espacio para almacenar el puntero de función.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_onexit** función se pasa la dirección de una función (*función*) que se llamará cuando el programa finaliza con normalidad. Las llamadas sucesivas a **_onexit** crean un registro de las funciones que se ejecutan en orden LIFO (último en-primero en salir). Las funciones que se pasan a **_onexit** no pueden tomar parámetros.
+A la función **_onexit** se le pasa la dirección de una función (*function*) a la que se llamará cuando el programa finalice con normalidad. Las llamadas sucesivas a **_onexit** crean un registro de las funciones que se ejecutan en el orden LIFO (último en salir). Las funciones pasadas a **_onexit** no pueden tomar parámetros.
 
-En el caso cuando **_onexit** se llama desde dentro de un archivo DLL, las rutinas registradas con **_onexit** se ejecutan en un archivo DLL que se descarga después **DllMain** se llama con DLL_PROCESS_DETACH.
+En el caso de que se llame a **_onexit** desde un archivo dll, las rutinas registradas con **_onexit** se ejecutan en la descarga de un archivo dll una vez que se llama a **DllMain** con DLL_PROCESS_DETACH.
 
-**_onexit** es una extensión de Microsoft. Para la portabilidad de ANSI, use [atexit](atexit.md). El **_onexit_m** versión de la función es para uso de modo mixto.
+**_onexit** es una extensión de Microsoft. Para la portabilidad de ANSI, use [atexit](atexit.md). La versión **_onexit_m** de la función es para el uso del modo mixto.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -122,7 +125,7 @@ int fn4()
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 This is executed first.

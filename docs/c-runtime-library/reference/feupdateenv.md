@@ -1,9 +1,9 @@
 ---
 title: feupdateenv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feupdateenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,20 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 6d553d6899f55f5bdfb3ff313e88abfcb56ab4ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334079"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940988"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -43,7 +44,7 @@ int feupdateenv(
 ### <a name="parameters"></a>Parámetros
 
 *penv*<br/>
-Puntero a un **fenv_t** objeto que contiene un entorno de punto flotante como conjunto mediante una llamada a [fegetenv](fegetenv1.md) o [feholdexcept](feholdexcept2.md). También puede especificar el entorno de punto flotante de inicio predeterminado mediante la macro FE_DFL_ENV.
+Puntero a un objeto **fenv_t** que contiene un entorno de punto flotante establecido por una llamada a [fegetenv](fegetenv1.md) o [feholdexcept](feholdexcept2.md). También puede especificar el entorno de punto flotante de inicio predeterminado mediante la macro FE_DFL_ENV.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -51,7 +52,7 @@ Devuelve 0 si todas las acciones se completan correctamente. De lo contrario, de
 
 ## <a name="remarks"></a>Comentarios
 
-El **feupdateenv** función realiza varias acciones. En primer lugar, almacena las marcas de estado de excepción de punto flotante actuales en el almacenamiento automático. A continuación, Establece el entorno actual de punto flotante del valor almacenado en el **fenv_t** objeto señalado por *penv*. Si *penv* no **FE_DFL_ENV** o no apunta a una **fenv_t** objeto, el comportamiento posterior es indefinido. Por último, **feupdateenv** genera las excepciones de punto flotante almacenadas localmente.
+La función **feupdateenv** realiza varias acciones. En primer lugar, almacena las marcas de estado de excepción de punto flotante actuales en el almacenamiento automático. A continuación, establece el entorno de punto flotante actual a partir del valor almacenado en el objeto **fenv_t** al que apunta *penv*. Si *penv* no es **FE_DFL_ENV** o no apunta a un objeto **fenv_t** válido, el comportamiento posterior es indefinido. Por último, **feupdateenv** genera las excepciones de punto flotante almacenadas localmente.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 

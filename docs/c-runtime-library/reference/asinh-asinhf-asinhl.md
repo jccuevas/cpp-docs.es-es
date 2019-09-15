@@ -1,11 +1,11 @@
 ---
 title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinh
 - asinhf
 - asinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asinhf
 - asinhl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341787"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939641"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -58,21 +61,21 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **asinh** funciones devuelven el seno hiperbólico inverso (arcoseno hiperbólico) de *x*. Esta función es válida en el dominio de punto flotante. Si *x* es un NaN reservado, indefinido o infinito, se devuelve el mismo valor.
+Las funciones **Asinh** devuelven el seno hiperbólico inverso (seno hiperbólico de arco) de *x*. Esta función es válida en el dominio de punto flotante. Si *x* es Nan, indefinido o infinito, se devuelve el mismo valor.
 
-|Entrada|Excepción SEH|**_matherr** excepción|
+|Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|ninguna|ninguna|
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando usas C++, puede llamar a sobrecargas de **asinh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **asinh** siempre toma y devuelve **doble**.
+Al C++usar, puede llamar a las sobrecargas de **Asinh** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **Asinh** siempre toma y devuelve **Double**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C necesario|Encabezado C++ necesario|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath > o \<math.h <|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<CMATH > o \<Math. h <|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

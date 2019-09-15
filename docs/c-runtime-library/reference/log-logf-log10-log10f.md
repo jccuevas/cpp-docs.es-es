@@ -1,14 +1,14 @@
 ---
-title: registro, logf, logl, log10, log10f, log10l
+title: log, LOGF (, logl, log10, log10f (, log10l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log10f
 - logf
 - log10
 - log
 - log10l
 - logl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logf
 - logl
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286017"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953225"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>registro, logf, logl, log10, log10f, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, LOGF (, logl, log10, log10f (, log10l
 
 Calcula logaritmos.
 
@@ -76,7 +79,7 @@ Valor cuyo logaritmo hay que calcular.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **registro** funciones devuelven el logaritmo natural (base *e*) de *x* si se realiza correctamente. El **log10** funciones devuelven el logaritmo en base 10. Si *x* es negativo, estas funciones devuelven un indefinido (IND), de forma predeterminada. Si *x* es 0, devuelve infinito (INF).
+Las funciones de **registro** devuelven el logaritmo natural (base *e*) de *x* si se realiza correctamente. Las funciones **log10** devuelven el logaritmo en base 10. Si *x* es negativo, estas funciones devuelven un valor indefinido (Ind), de forma predeterminada. Si *x* es 0, devuelven infinito (INF).
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
@@ -84,11 +87,11 @@ El **registro** funciones devuelven el logaritmo natural (base *e*) de *x* si se
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**Registro** y **log10** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
+**log** y **log10** tienen una implementación que usa las extensiones SIMD de streaming 2 (sse2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
 
 ## <a name="remarks"></a>Comentarios
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **registro** y **log10** que toman y devuelven **float** o **long double** valores. En un programa C, **registro** y **log10** siempre toman y devuelven un **doble**.
+C++permite las sobrecargas, por lo que puede llamar a las sobrecargas de **log** y **log10** que toman y devuelven valores de tipo **float** o **Long Double** . En un programa de C, **log** y **log10** siempre toman y devuelven un valor **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

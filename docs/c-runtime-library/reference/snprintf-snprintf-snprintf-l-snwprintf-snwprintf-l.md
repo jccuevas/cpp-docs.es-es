@@ -1,13 +1,13 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,12 +51,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 8f7ce565467321c8e2ea5c80cae9ef41297ccaed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499517"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948002"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -149,21 +152,21 @@ Para obtener más información, vea [Sintaxis de especificación de formato: Fun
 
 Permita que **Len** sea la longitud de la cadena de datos con formato, sin incluir el carácter null de terminación. Tanto **Len** como *Count* se encuentran en bytes para **snprintf** y **_snprintf**, caracteres anchos para **_snwprintf**.
 
-Para todas las funciones, si el recuento de **Len** < , los caracteres de **longitud** se almacenan en el *búfer*, se anexa un terminador null y se devuelve **Len** .
+Para todas las funciones, si el*recuento*de **Len** < , los caracteres de **longitud** se almacenan en el *búfer*, se anexa un terminador null y se devuelve **Len** .
 
 La función **snprintf** trunca la salida cuando **Len** es mayor o igual que *Count*, mediante la colocación de un terminador null en `buffer[count-1]`. El valor devuelto es **Len**, el número de caracteres que se habrían generado si *Count* fuera suficientemente grande. La función **snprintf** devuelve un valor negativo si se produce un error de codificación.
 
-Para todas las funciones distintas **de snprintf**, si el*número*de **Len** = es, los caracteres de **longitud** se almacenan en el *búfer*, no se anexa ningún terminador null y se devuelve **Len** . Si*Count* **Len** > , los caracteres de recuento se almacenan en el *búfer*, no se anexa ningún terminador null y se devuelve un valor negativo.
+Para todas las funciones distintas **de snprintf**, si el*número*de **Len** = es, los caracteres de **longitud** se almacenan en el *búfer*, no se anexa ningún terminador null y se devuelve **Len** . Si*Count* **Len** > , los caracteres de *recuento* se almacenan en el *búfer*, no se anexa ningún terminador null y se devuelve un valor negativo.
 
 Si *buffer* es un puntero nulo y *Count* es cero, **Len** se devuelve como el recuento de caracteres necesarios para dar formato a la salida, sin incluir el carácter null de terminación. Para realizar una llamada correcta con el mismo *argumento* y parámetros de *configuración regional* , asigne un búfer que contenga al menos una **longitud** de + 1 caracteres.
 
-Si el *búfer* es un puntero nulo y el recuento es distinto de cero, o si el *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
+Si el *búfer* es un puntero nulo y el *recuento* es distinto de cero, o si el *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La función **snprintf** y la familia de funciones **_snprintf** tienen el formato y el *número* de la tienda o menos caracteres en el *búfer*. La función **snprintf** siempre almacena un carácter nulo de terminación y trunca el resultado si es necesario. La familia **_snprintf** de funciones solo anexa un carácter nulo de terminación si la longitud de la cadena con formato es estrictamente menor que los caracteres de recuento. Cada *argumento* (si existe) se convierte y se genera de acuerdo con la especificación de formato correspondiente en el *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el argumento de *formato* de [printf](printf-printf-l-wprintf-wprintf-l.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **snprintf** y la familia de funciones **_snprintf** tienen el formato y el *número* de la tienda o menos caracteres en el *búfer*. La función **snprintf** siempre almacena un carácter nulo de terminación y trunca el resultado si es necesario. La familia **_snprintf** de funciones solo anexa un carácter nulo de terminación si la longitud de la cadena con formato es estrictamente menor que los caracteres de *recuento* . Cada *argumento* (si existe) se convierte y se genera de acuerdo con la especificación de formato correspondiente en el *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el argumento de *formato* de [printf](printf-printf-l-wprintf-wprintf-l.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario. Dado que las funciones **_snprintf** no garantizan la finalización nula, en concreto, cuando el valor devuelto es *Count*, asegúrese de que van seguidos del código que agrega el terminador null. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).

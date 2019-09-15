@@ -1,9 +1,9 @@
 ---
 title: _cwait
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwait
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwait
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f356afc91f794753f12b5b673c609ef03fbaa5ec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4be342ef528959bae22917bc59eef5a953aa4ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499973"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937744"
 ---
 # <a name="_cwait"></a>_cwait
 
@@ -61,7 +64,7 @@ NULL: Las aplicaciones del sistema operativo Windows las omiten; para otras apli
 
 Cuando el proceso especificado se ha completado correctamente, devuelve el identificador del proceso especificado y establece *termstat* en el código de resultado devuelto por el proceso especificado. De lo contrario, devuelve-1 y establece **errno** como se indica a continuación.
 
-|Valor|DESCRIPCIÓN|
+|Value|DESCRIPCIÓN|
 |-----------|-----------------|
 |**ECHILD**|No existe ningún proceso especificado, *procHandle* no es válido o se produjo un error en la llamada a la API [API GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess) o [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) .|
 |**EINVAL**|la *acción* no es válida.|

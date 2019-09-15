@@ -1,10 +1,10 @@
 ---
 title: system, _wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259097"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957674"
 ---
-# <a name="system-wsystem"></a>system, _wsystem
+# <a name="system-_wsystem"></a>system, _wsystem
 
 Ejecuta un comando.
 
@@ -61,7 +64,7 @@ Comando que se va a ejecutar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si *comando* es **NULL** y se encuentra el intérprete de comandos, devuelve un valor distinto de cero. Si no se encuentra el intérprete de comandos, devuelve 0 y establece **errno** a **ENOENT**. Si *comando* no **NULL**, **sistema** devuelve el valor devuelto por el intérprete de comandos. Devuelve el valor 0 únicamente si el intérprete de comandos devuelve el valor 0. Un valor devuelto de - 1 indica un error, y **errno** se establece en uno de los siguientes valores:
+Si el *comando* es **null** y se encuentra el intérprete de comandos, devuelve un valor distinto de cero. Si no se encuentra el intérprete de comandos, devuelve 0 y establece **errno** en **ENOENT**. Si el *comando* no es **null**, el **sistema** devuelve el valor devuelto por el intérprete de comandos. Devuelve el valor 0 únicamente si el intérprete de comandos devuelve el valor 0. Un valor devuelto de-1 indica un error y **errno** se establece en uno de los siguientes valores:
 
 |||
 |-|-|
@@ -74,11 +77,11 @@ Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-d
 
 ## <a name="remarks"></a>Comentarios
 
-El **sistema** función pasadas *comando* al intérprete de comandos, que ejecuta la cadena como un comando del sistema operativo. **sistema** usa el **COMSPEC** y **ruta** variables de entorno para buscar el intérprete de comandos CMD.exe de archivos. Si *comando* es **NULL**, la función simplemente comprueba si existe el intérprete de comandos.
+La función **del sistema** pasa el *comando* al intérprete de comandos, que ejecuta la cadena como un comando del sistema operativo. el **sistema** utiliza las variables de entorno **comspec** y **path** para buscar el archivo de intérprete de comandos cmd. exe. Si el *comando* es **null**, la función comprueba si el intérprete de comandos existe.
 
-Debe vaciar explícitamente, mediante el uso de [fflush](fflush.md) o [_flushall](flushall.md), o cerrar todos los flujos antes de llamar a **sistema**.
+Debe vaciar explícitamente, mediante [fflush](fflush.md) o [_flushall](flushall.md), o bien cerrar cualquier flujo antes de llamar al **sistema**.
 
-**_wsystem** es una versión con caracteres anchos de **sistema**; el *comando* argumento **_wsystem** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+**_wsystem** es una versión de caracteres anchos del **sistema**; el argumento de *comando* para **_wsystem** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -97,7 +100,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo se utiliza **system** para escribir un archivo de texto.
+En este ejemplo se usa **System** para escribir un archivo de texto.
 
 ```C
 // crt_system.c
@@ -110,14 +113,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>Entrada: crt_system.txt
+### <a name="input-crt_systemtxt"></a>Entrada: crt_system.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Line one.

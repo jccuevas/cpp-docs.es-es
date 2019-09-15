@@ -1,11 +1,11 @@
 ---
 title: remquo, remquof, remquol
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remquof
 - remquo
 - remquol
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remquof
 - remquol
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357556"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949370"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -64,13 +67,13 @@ Puntero a un entero para almacenar un valor que tiene el signo y la magnitud apr
 
 ## <a name="return-value"></a>Valor devuelto
 
-**remquo** devuelve el resto de punto flotante *x* / *y*. Si el valor de *y* es 0,0, **remquo** devuelve un valor NaN. Para obtener información sobre la representación de un NaN reservado por la **printf** familia, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo (** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **Remquo (** devuelve un Nan silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf** , vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **remquo** función calcula el resto de punto flotante *f* de *x* / *y* que *x*   =  *i* \* *y* + *f*, donde *i* es un entero , *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+La función **remquo (** calcula el resto de punto flotante *f* de *x* / *y* como *x* = *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **remquo** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **remquo** siempre toma dos **doble** argumentos y devuelve un **doble**.
+C++permite la sobrecarga, de modo que puede llamar a las sobrecargas de **remquo (** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **remquo (** siempre toma dos argumentos **Double** y devuelve un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 

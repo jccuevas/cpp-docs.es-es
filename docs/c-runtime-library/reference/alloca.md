@@ -1,9 +1,9 @@
 ---
 title: _alloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _alloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _alloca
 - alloca
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341605"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943697"
 ---
-# <a name="alloca"></a>_alloca
+# <a name="_alloca"></a>_alloca
 
-Asigna memoria en la pila. Esta función está en desuso porque hay una versión más segura; consulte [_malloca](malloca.md).
+Asigna memoria en la pila. Esta función está en desuso porque hay disponible una versión más segura; vea [_malloca](malloca.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,28 +52,28 @@ Bytes que se van a asignar desde la pila.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **_alloca** rutinarias devuelve un **void** puntero en el espacio asignado, que se garantiza que se alinee correctamente para el almacenamiento de cualquier tipo de objeto. Si *tamaño* es 0, **_alloca** asigna un elemento de longitud cero y devuelve un puntero válido para ese elemento.
+La rutina _ **alloca** devuelve un puntero **void** al espacio asignado, cuya alineación está garantizada para el almacenamiento de cualquier tipo de objeto. Si *el tamaño* es 0, _ **alloca** asigna un elemento de longitud cero y devuelve un puntero válido a ese elemento.
 
 Si no se puede asignar el espacio, se genera una excepción de desbordamiento de pila. La excepción de desbordamiento de pila no es una excepción de C++, sino que es una excepción estructurada. En lugar de usar el control de excepciones de C++, debe usar el [control de excepciones estructuradas](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
 ## <a name="remarks"></a>Comentarios
 
-**_alloca** asigna *tamaño* bytes a partir de la pila del programa. El espacio asignado automáticamente se libera cuando sale la función que realiza la llamada (no cuando la asignación simplemente queda fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por **_alloca** como argumento a [libre](free.md).
+_ **alloca** asigna bytes de *tamaño* de la pila del programa. El espacio asignado se libera automáticamente cuando finaliza la función de llamada (no cuando la asignación pasa simplemente fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por _ **alloca** como argumento a [Free](free.md).
 
-Hay restricciones para llamar explícitamente a **_alloca** en un controlador de excepciones (EH). Rutinas de controlador de eventos que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: Realizan sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función envolvente. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por lo tanto, llamar explícitamente a **_alloca** en cualquiera de lo siguientes escenarios, se produce un error del programa durante la devolución de la rutina de controlador de eventos que realiza la llamada:
+Hay restricciones para llamar explícitamente a _ **alloca** en un controlador de excepciones (EH). Las rutinas EH que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: Realizan sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función de inclusión. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por consiguiente, si se llama explícitamente a _ **alloca** en cualquiera de los siguientes escenarios, se produce un error en el programa durante la devolución a la rutina de llamada EH:
 
-- Expresión de filtro de excepciones SEH de Windows NT: `__except ( _alloca() )`
+- Expresión de filtro de excepciones SEH de Windows NT:`__except ( _alloca() )`
 
-- Controlador de excepciones finales SEH de Windows NT: `__finally { _alloca() }`
+- Controlador de excepciones final de SEH de Windows NT:`__finally { _alloca() }`
 
 - Expresión de la cláusula catch del controlador de excepciones de C++
 
-Sin embargo, **_alloca** pueden llamarse directamente desde dentro de una rutina de controlador de excepciones o desde una devolución de llamada proporcionada por la aplicación que se invoca mediante uno de los escenarios EH enumerados anteriormente.
+Sin embargo, se puede llamar a _ **alloca** directamente desde una rutina EH o desde una devolución de llamada proporcionada por la aplicación que se invoca mediante uno de los escenarios EH enumerados anteriormente.
 
 > [!IMPORTANT]
-> En Windows XP, si **_alloca** se llama dentro de un bloque try/catch, se debe llamar a [_resetstkoflw](resetstkoflw.md) en el bloque catch.
+> En Windows XP, si se llama a _ **alloca** dentro de un bloque try/catch, debe llamar a [_resetstkoflw](resetstkoflw.md) en el bloque catch.
 
-Además de las restricciones anteriores, cuando se usa el[/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) opción, **_alloca** no se puede usar en **__except** bloques. Para obtener más información, consulta [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Además de las restricciones anteriores, cuando se usa la opción[/CLR (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , _ **allocate** no se puede usar en bloques **_ _ Except** . Para obtener más información, consulta [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Requisitos
 

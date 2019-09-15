@@ -1,9 +1,9 @@
 ---
 title: _gcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332308"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956121"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 Convierte un valor de punto flotante en una cadena. Se trata de una versión de [_gcvt](gcvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -77,19 +80,19 @@ Cero si es correcto. Si se produce un error debido a un parámetro no válido (v
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*sizeInBytes*|*value*|*digits*|Volver|Valor de *búfer*|
+|*buffer*|*sizeInBytes*|*value*|*digits*|Volver|Valor en *búfer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|No modificado.|
-|No **NULL** (apunta a la memoria válida)|cero|any|any|**EINVAL**|No modificado.|
-|No **NULL** (apunta a la memoria válida)|any|any|>= *sizeInBytes*|**EINVAL**|No modificado.|
+|Not **null** (apunta a la memoria válida)|cero|any|any|**EINVAL**|No modificado.|
+|Not **null** (apunta a la memoria válida)|any|any|>= *sizeInBytes*|**EINVAL**|No modificado.|
 
 **Problemas de seguridad**
 
-**_gcvt_s** puede generar una infracción de acceso si *búfer* no apunta a la memoria válida y no es **NULL**.
+**_gcvt_s** puede generar una infracción de acceso si el *búfer* no apunta a una memoria válida y no es **null**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_gcvt_s** función convierte un punto flotante *valor* en una cadena de caracteres (que incluye un separador decimal y un posible byte con signo) y almacena la cadena en *búfer* . *búfer* debe ser lo suficientemente grande como para contener el valor convertido más un carácter nulo final, que se anexa automáticamente. Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier flotante como valor de punto. Si un tamaño de búfer *dígitos* + 1 se usa, la función no sobrescribirá el final del búfer, así que asegúrese de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta generar *dígitos* dígitos en formato decimal. Si no es posible, genera *dígitos* dígitos en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
+La función **_gcvt_s** convierte un *valor* de punto flotante en una cadena de caracteres (que incluye un separador decimal y un byte de signo posible) y almacena la cadena en el *búfer*. el *búfer* debe ser lo suficientemente grande como para alojar el valor convertido más un carácter nulo de terminación, que se anexa automáticamente. Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier valor de punto flotante. Si se usa un tamaño de búfer de *dígitos* + 1, la función no sobrescribirá el final del búfer, por lo que debe asegurarse de proporcionar un búfer suficiente para esta operación. **_gcvt_s** intenta producir dígitos de *dígitos* en formato decimal. Si no es posible, genera dígitos de *dígitos* en formato exponencial. Los ceros finales pueden suprimirse en la conversión.
 
 En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset, _mbsnbset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset
 - _mbsnbset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset
 - mbsnbset_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 7783ff6519147331ae3943f053efe1bae01aee7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499787"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952167"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
@@ -82,9 +85,9 @@ Configuración regional que se va a usar.
 
 ## <a name="remarks"></a>Comentarios
 
-Las funciones **_mbsnbset** y **_mbsnbset_l** establecen, como máximo, el primer *número* de bytes de *Str* a *c*. Si el recuento es mayor que la longitud de *Str*, se usa la longitud de *Str* en lugar de *Count*. Si *c* es un carácter multibyte y no se puede establecer totalmente en el último byte especificado por *Count*, el último byte se rellena con un carácter en blanco. **_mbsnbset** y **_mbsnbset_l** no colocan un carácter nulo de terminación al final de *Str*.
+Las funciones **_mbsnbset** y **_mbsnbset_l** establecen, como máximo, el primer *número* de bytes de *Str* a *c*. Si el *recuento* es mayor que la longitud de *Str*, se usa la longitud de *Str* en lugar de *Count*. Si *c* es un carácter multibyte y no se puede establecer totalmente en el último byte especificado por *Count*, el último byte se rellena con un carácter en blanco. **_mbsnbset** y **_mbsnbset_l** no colocan un carácter nulo de terminación al final de *Str*.
 
-**_mbsnbset** y **_mbsnbset_l** son similares a **_mbsnset**, excepto en que se establecen los bytes de recuento en lugar de los caracteres de recuento de *c*.
+**_mbsnbset** y **_mbsnbset_l** son similares a **_mbsnset**, excepto en que se establecen los bytes de *recuento* en lugar de los caracteres de *recuento* de *c*.
 
 Si *Str* es **null** o *Count* es cero, esta función genera una excepción de parámetro no válido, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Además, si *c* no es un carácter multibyte válido, **errno** se establece en **EINVAL** y se usa un espacio en su lugar.
 
@@ -127,7 +130,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Before: This is a test

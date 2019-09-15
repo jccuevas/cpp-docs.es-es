@@ -1,9 +1,9 @@
 ---
 title: _lfind_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind_s
 - _lfind_s
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286432"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953450"
 ---
-# <a name="lfinds"></a>_lfind_s
+# <a name="_lfind_s"></a>_lfind_s
 
 Realiza una búsqueda lineal de la clave especificada. Versión de [_lfind](lfind.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -66,16 +69,16 @@ Número de elementos de la matriz.
 Tamaño de los elementos de la matriz expresados en bytes.
 
 *compare*<br/>
-Puntero a la rutina de comparación. El primer parámetro es el *contexto* puntero. El segundo parámetro es un puntero a la clave de búsqueda. El tercer parámetro es un puntero al elemento de la matriz que se va a comparar con la clave.
+Puntero a la rutina de comparación. El primer parámetro es el puntero de *contexto* . El segundo parámetro es un puntero a la clave de búsqueda. El tercer parámetro es un puntero al elemento de la matriz que se va a comparar con la clave.
 
 *context*<br/>
 Un puntero a un objeto al que se podría obtener acceso en la función de comparación.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se encuentra la clave, **_lfind_s** devuelve un puntero al elemento de la matriz en *base* que coincida con *clave*. Si no se encuentra la clave, **_lfind_s** devuelve **NULL**.
+Si se encuentra la clave, **_lfind_s** devuelve un puntero al elemento de la matriz en la *base* que coincide con la *clave*. Si no se encuentra la clave, **_lfind_s** devuelve **null**.
 
-Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
+Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
@@ -88,9 +91,9 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lfind_s** función realiza una búsqueda lineal del valor *clave* en una matriz de *número* elementos, cada uno de *ancho* bytes. A diferencia de **bsearch_s**, **_lfind_s** no requiere la matriz esté ordenada. El *base* argumento es un puntero a la base de la matriz se va a buscar. El *comparar* argumento es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y, a continuación, devuelve un valor que especifica su relación. **_lfind_s** llamadas la *comparar* rutinarias una o varias veces durante la búsqueda, pasando el *contexto* puntero y punteros a dos elementos de matriz en cada llamada. El *comparar* rutina debe comparar los elementos, a continuación, devolver distinto de cero (lo que significa que los elementos son diferentes) o 0 (es decir, los elementos son idénticos).
+La función **_lfind_s** realiza una búsqueda lineal de la *clave* Value en una matriz de elementos *Number* , cada uno de los bytes de *ancho* . A diferencia de **bsearch_s**, **_lfind_s** no requiere la ordenación de la matriz. El argumento *base* es un puntero a la base de la matriz que se va a buscar. El argumento *Compare* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y, a continuación, devuelve un valor que especifica su relación. **_lfind_s** llama a la rutina de *comparación* una o varias veces durante la búsqueda, pasando el puntero de *contexto* y los punteros a dos elementos de la matriz en cada llamada. La rutina de *comparación* debe comparar los elementos y devolver un valor distinto de cero (lo que significa que los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
 
-**_lfind_s** es similar a **_lfind** excepto por la adición de la *contexto* puntero a los argumentos de la función de comparación y la lista de parámetros de la función. El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es parte de un objeto y el *comparar* función necesita tener acceso a los miembros del objeto. El *comparar* función puede convertir el puntero void en los miembros de tipo y el acceso de objeto adecuado de ese objeto. La adición de la *contexto* parámetro hace que **_lfind_s** más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos disponibles en el *comparar* función.
+**_lfind_s** es similar a **_lfind** , excepto por la adición del puntero de *contexto* a los argumentos de la función de comparación y la lista de parámetros de la función. El puntero de *contexto* puede ser útil si la estructura de datos de búsqueda forma parte de un objeto y la función de *comparación* necesita acceder a los miembros del objeto. La función *Compare* puede convertir el puntero void en el tipo de objeto adecuado y acceder a los miembros de ese objeto. La adición del parámetro de *contexto* hace que **_lfind_s** sea más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos estén disponibles para la función de *comparación* .
 
 ## <a name="requirements"></a>Requisitos
 

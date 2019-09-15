@@ -1,9 +1,9 @@
 ---
 title: _fpieee_flt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpieee_flt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8835a3184300f1c56f1123a09aa48cd34a387c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333253"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957026"
 ---
-# <a name="fpieeeflt"></a>_fpieee_flt
+# <a name="_fpieee_flt"></a>_fpieee_flt
 
 Invoca un controlador de interceptaciones definido por el usuario para las excepciones de punto flotante del IEEE.
 
@@ -59,22 +62,22 @@ Puntero a la rutina del controlador de interceptaciones del IEEE del usuario.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de **_fpieee_flt** es el valor devuelto por *controlador*. Por tanto, la rutina de filtro del IEEE podría usarse en la cláusula de excepción de un mecanismo de control de excepciones estructurado (SEH).
+El valor devuelto de **_fpieee_flt** es el valor devuelto por el *controlador*. Por tanto, la rutina de filtro del IEEE podría usarse en la cláusula de excepción de un mecanismo de control de excepciones estructurado (SEH).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fpieee_flt** función invoca un controlador de interceptaciones definido por el usuario para las excepciones de punto flotante de IEEE y le proporciona toda la información pertinente. Esta rutina actúa como filtro de excepciones en el mecanismo de SEH, que invoca el controlador de excepciones del IEEE propio cuando es necesario.
+La función **_fpieee_flt** invoca un controlador de interceptaciones definido por el usuario para las excepciones de punto flotante de IEEE y le proporciona toda la información pertinente. Esta rutina actúa como filtro de excepciones en el mecanismo de SEH, que invoca el controlador de excepciones del IEEE propio cuando es necesario.
 
-El **_FPIEEE_RECORD** estructura, definida en Fpieee.h, contiene información relativa a una excepción de punto flotante de IEEE. Esta estructura se pasa al controlador de interceptaciones definido por el usuario por **_fpieee_flt**.
+La estructura **_FPIEEE_RECORD** , definida en FPIEEE. h, contiene información relativa a una excepción de punto flotante de IEEE. **_Fpieee_flt**pasa esta estructura al controlador de interceptaciones definido por el usuario.
 
-|campo _FPIEEE_RECORD|Descripción|
+|campo _FPIEEE_RECORD|DESCRIPCIÓN|
 |----------------------------|-----------------|
-|**RoundingMode**<br/>**Precisión**|Estos **sin signo** **int** campos contienen información sobre el entorno de punto flotante en el momento de la excepción.|
-|**Operación**|Esto **sin signo** **int** campo indica el tipo de operación que produjo la interceptación. Si el tipo es una comparación (**_FpCodeCompare**), puede proporcionar una de especial **_FPIEEE_COMPARE_RESULT** valores (como se define en Fpieee.h) en el **Result.Value** campo. El tipo de conversión (**_FpCodeConvert**) indica que la interceptación se produjo durante una operación de conversión de punto flotante. Puede mirar la **Operand1** y **resultado** tipos para determinar el tipo de conversión que se está intentando.|
-|**Operand1**<br/>**Operand2**<br/>**Resultado**|Estos **_FPIEEE_VALUE** estructuras indican los tipos y valores del resultado de la propuesta y operandos. Cada estructura contiene estos campos:<br /><br /> **OperandValid** : marca que indica si el valor de respuesta es válido.<br />**Formato** -tipo de datos del valor correspondiente. El tipo de formato se podría devolver incluso si el valor correspondiente no es válido.<br />**Valor** -valor de datos de resultado o el operando.|
-|**Causa**<br/>**Enable**<br/>**Estado**|**_FPIEEE_EXCEPTION_FLAGS** contiene un campo de bits por cada tipo de excepción de punto flotante. Hay una correspondencia entre estos campos y los argumentos usados para enmascarar las excepciones que se proporcionan en [_controlfp](control87-controlfp-control87-2.md). El significado exacto de cada bit depende de contexto:<br /><br /> **Causa** -cada bit establecido indica la excepción concreta que se generó.<br />**Habilitar** -cada bit establecido indica que la excepción concreta está enmascarada en este momento.<br />**Estado** -cada bit establecido indica que la excepción concreta está pendiente actualmente. Esto incluye las excepciones que no han surgido porque había aplicado una máscara **_controlfp**.|
+|**RoundingMode**<br/>**Precisión**|Estos campos **int** **sin signo** contienen información sobre el entorno de punto flotante en el momento en que se produjo la excepción.|
+|**Sesión**|Este campo **int** **sin signo** indica el tipo de operación que provocó la captura. Si el tipo es una comparación ( **_FpCodeCompare**), puede proporcionar uno de los valores especiales de **_FPIEEE_COMPARE_RESULT** (tal y como se define en FPIEEE. h) en el campo **result. Value** . El tipo de conversión ( **_FpCodeConvert**) indica que la captura se produjo durante una operación de conversión de punto flotante. Puede examinar los tipos **Operand1** y **result** para determinar el tipo de conversión que se está intentando.|
+|**Operand1**<br/>**Operand2**<br/>**Resultado**|Estas estructuras **_FPIEEE_VALUE** indican los tipos y valores del resultado propuesto y los operandos. Cada estructura contiene estos campos:<br /><br /> **OperandValid** : marca que indica si el valor de respuesta es válido.<br />**Formato** : tipo de datos del valor correspondiente. El tipo de formato se podría devolver incluso si el valor correspondiente no es válido.<br />**Valor:** resultado o valor de datos de operando.|
+|**Causa**<br/>**Enable**<br/>**Estado**|**_FPIEEE_EXCEPTION_FLAGS** contiene un campo de bits por cada tipo de excepción de punto flotante. Hay una correspondencia entre estos campos y los argumentos usados para enmascarar las excepciones que se proporcionan en [_controlfp](control87-controlfp-control87-2.md). El significado exacto de cada bit depende de contexto:<br /><br /> **Causa** : cada bit establecido indica la excepción concreta que se ha producido.<br />**Enable** : cada bit establecido indica que la excepción concreta no está enmascarada actualmente.<br />**Estado** : cada bit establecido indica que la excepción determinada está pendiente actualmente. Esto incluye las excepciones que no se han producido porque se han enmascarado mediante _ **controlfp**.|
 
-Las excepciones pendientes que están deshabilitadas se producen cuando se habilitan. Esto puede provocar un comportamiento indefinido cuando se utiliza **_fpieee_flt** como un filtro de excepciones. Llame siempre a [_clearfp](clear87-clearfp.md) antes de habilitar excepciones de punto flotante.
+Las excepciones pendientes que están deshabilitadas se producen cuando se habilitan. Esto puede dar lugar a un comportamiento indefinido al usar **_fpieee_flt** como filtro de excepciones. Llame siempre a [_clearfp](clear87-clearfp.md) antes de habilitar excepciones de punto flotante.
 
 ## <a name="requirements"></a>Requisitos
 

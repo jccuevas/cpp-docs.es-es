@@ -1,12 +1,12 @@
 ---
 title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoll_l
 - _wtoll
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 7933b3e25185b5abdbd10c1b3fd616742bb28f92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341189"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939476"
 ---
-# <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
+# <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Convierte una cadena en un **largo** **largo** entero.
+Convierte una cadena **en un entero largo largo.**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -73,27 +76,27 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el **largo** **largo** valor que se genera al interpretar los caracteres de entrada como un número. El valor devuelto para **Atolón** es 0 si la entrada no se puede convertir en un valor de ese tipo.
+Cada función **devuelve el valor Long** **Long** que se genera al interpretar los caracteres de entrada como un número. El valor devuelto para **Atolón** es 0 si la entrada no se puede convertir en un valor de ese tipo.
 
-Caso de desbordamiento con valores enteros positivos grandes, **Atolón** devuelve **LLONG_MAX**, y de desbordamiento con valores enteros negativos grandes, devuelve **LLONG_MIN**.
+Para el desbordamiento con valores enteros positivos grandes, **Atolón** devuelve **LLONG_MAX**y para el desbordamiento con valores enteros negativos grandes, devuelve **LLONG_MIN**.
 
-En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si el parámetro que se pasa es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
+En todos los casos fuera del intervalo, **errno** se establece en **ERANGE**. Si el parámetro que se pasa es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven 0.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones convierten una cadena de caracteres para un **largo** **largo** valor entero.
+Estas funciones convierten una cadena de caracteres **en un valor entero largo largo.**
 
 La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que finaliza la cadena.
 
-El *str* argumento **Atolón** tiene el formato siguiente:
+El argumento *Str* para **Atolón** tiene el formato siguiente:
 
-> [*whitespace*] [*sign*] [*digits*]
+> [*espacio en blanco*] [*signo*] [*dígitos*]
 
-Un *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *sesión* sea más (+) o menos (-); y *dígitos* son uno o más dígitos.
+Un espacio en *blanco* consta de caracteres de espacio o tabulación, que se omiten; el *signo* es más (+) o menos (-); y los *dígitos* son uno o más dígitos.
 
-**_wtoll** es idéntico al **Atolón** salvo que toma una cadena de caracteres anchos como parámetro.
+**_wtoll** es idéntico a **Atolón** , salvo que toma una cadena de caracteres anchos como parámetro.
 
-Las versiones de estas funciones que tienen el **_l** sufijo son idénticas a las versiones que no lo tienen, salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el sufijo **_L** son idénticas a las versiones que no lo tienen, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -112,7 +115,7 @@ Las versiones de estas funciones que tienen el **_l** sufijo son idénticas a la
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra cómo usar el **Atolón** funciones para convertir números almacenados como cadenas en valores numéricos.
+Este programa muestra cómo usar las funciones de **Atolón** para convertir números almacenados como cadenas en valores numéricos.
 
 ```C
 // crt_atoll.c

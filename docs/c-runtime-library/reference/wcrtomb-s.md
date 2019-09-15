@@ -1,9 +1,9 @@
 ---
 title: wcrtomb_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb_s
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155477"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945844"
 ---
-# <a name="wcrtombs"></a>wcrtomb_s
+# <a name="wcrtomb_s"></a>wcrtomb_s
 
 Convierte un carácter ancho en su representación de carácter multibyte. Versión de [wcrtomb](wcrtomb.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -63,31 +66,31 @@ Devuelve el número de bytes escritos o -1 si se ha producido un error.
 Carácter convertido multibyte resultante.
 
 *sizeOfmbchar*<br/>
-El tamaño de la *mbchar* variable en bytes.
+Tamaño de la variable *mbchar* en bytes.
 
 *wchar*<br/>
 Carácter ancho que se va a convertir.
 
 *mbstate*<br/>
-Un puntero a un **mbstate_t** objeto.
+Un puntero a un objeto **mbstate_t** .
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve cero o un **errno** valor si se produce un error.
+Devuelve cero o un valor **errno** si se produce un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **wcrtomb_s** función convierte un carácter ancho, comenzando en el estado de conversión especificado contenido en *mbstate*, desde el valor contenido en *wchar*, en el dirección representada por *mbchar*. El *pReturnValue* valor será el número de bytes convertidos, pero no más de **MB_CUR_MAX** bytes o -1 si se produjo un error.
+La función **wcrtomb_s** convierte un carácter ancho, comenzando en el estado de conversión especificado incluido en *mbstate*, del valor contenido en *WCHAR*, en la dirección representada por *mbchar*. El valor de *pReturnValue* será el número de bytes convertidos, pero no más de **MB_CUR_MAX** bytes o-1 si se ha producido un error.
 
-Si *mbstate* es null, interno **mbstate_t** se usa el estado de la conversión. Si el carácter incluido en *wchar* no tiene un carácter multibyte correspondiente, el valor de *pReturnValue* será -1 y la función devolverá el **errno** valor de **EILSEQ**.
+Si *mbstate* es null, se usa el estado de conversión **mbstate_t** interno. Si el carácter contenido en *WCHAR* no tiene un carácter multibyte correspondiente, el valor de *pReturnValue* será-1 y la función devolverá el valor **errno** de **EILSEQ**.
 
-El **wcrtomb_s** función difiere de [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** lugar **wcslen**, si una llamada subsiguiente a **wcsrtombs_s** se usaron en lugar de **wcstombs_s**.
+La función **wcrtomb_s** difiere de [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) por su reinicio. El estado de la conversión se almacena en *mbstate* para las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** en lugar de **wcslen**, si se usara una llamada subsiguiente a **wcsrtombs_s** en lugar de **wcstombs_s**.
 
 En C++, el uso de esta función se simplifica con las sobrecargas de plantilla; las sobrecargas pueden deducir automáticamente la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Excepciones
 
-El **wcrtomb_s** función es segura para subprocesos siempre y cuando ninguna función en el subproceso actual llame a **setlocale** mientras se está ejecutando esta función y el *mbstate* es null.
+La función **wcrtomb_s** es segura para subprocesos siempre y cuando ninguna función del subproceso actual llame a **setlocale** mientras se ejecuta esta función y el valor de *mbstate* sea NULL.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,9 +1,9 @@
 ---
 title: _CrtGetAllocHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetAllocHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 769621e92bf5f99f76f71b368a3b9a5cd0f79fd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339915"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942417"
 ---
-# <a name="crtgetallochook"></a>_CrtGetAllocHook
+# <a name="_crtgetallochook"></a>_CrtGetAllocHook
 
 Recupera la función actual de asignación definida por el cliente para enlazar con el proceso de asignación de memoria de depuración en tiempo de ejecución de C (solo versión de depuración).
 
@@ -45,7 +48,7 @@ Devuelve la función definida actualmente de enlace de asignación.
 
 ## <a name="remarks"></a>Comentarios
 
-**_CrtGetAllocHook** recupera la función de enlace de aplicaciones definido por el cliente actual para el proceso de asignación de memoria de biblioteca de C de depuración en tiempo de ejecución.
+**_CrtGetAllocHook** recupera la función actual de enlace de la aplicación definida por el cliente para el proceso de asignación de memoria de la biblioteca de depuración en tiempo de ejecución de C.
 
 Para obtener más información sobre cómo usar otras funciones con capacidad de enlace en tiempo de ejecución y cómo escribir funciones de enlace definidas por el cliente, consulte [Creación de funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).
 

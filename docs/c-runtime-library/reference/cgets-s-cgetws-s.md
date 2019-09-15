@@ -1,10 +1,10 @@
 ---
 title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws_s
 - _cgets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cgets_s
 - cgets_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340590"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939265"
 ---
-# <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
+# <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
 Obtiene una cadena de caracteres de la consola. Estas versiones de [_cgets y _cgetws](../../c-runtime-library/cgets-cgetws.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -86,17 +89,17 @@ El valor devuelto es cero si es correcto; en caso contrario, un código de error
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*numberOfElements*|*pSizeRead*|Volver|Contenido de *búfer*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Volver|Contenido del *búfer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|any|any|**EINVAL**|N/D|
-|No **NULL**|cero|any|**EINVAL**|no modificado|
-|No **NULL**|any|**NULL**|**EINVAL**|cadena de longitud cero|
+|No **null**|cero|any|**EINVAL**|no modificado|
+|No **null**|any|**NULL**|**EINVAL**|cadena de longitud cero|
 
 ## <a name="remarks"></a>Comentarios
 
-**_cgets_s** y **_cgetws_s** leer una cadena de la consola y copie la cadena (con un terminador nulo) en *búfer*. **_cgetws_s** es la versión de caracteres anchos de la función; aparte el tamaño de caracteres, el comportamiento de estas dos funciones es idéntico. El tamaño máximo de la cadena para leer se pasa como el *numberOfElements* parámetro. Este tamaño debe incluir un carácter adicional para el carácter null de terminación. El número real de caracteres que se leen se coloca en *pSizeRead*.
+**_cgets_s** y **_cgetws_s** leen una cadena de la consola y copian la cadena (con un terminador null) en el *búfer*. **_cgetws_s** es la versión de caracteres anchos de la función; Aparte del tamaño de carácter, el comportamiento de estas dos funciones es idéntico. El tamaño máximo de la cadena que se va a leer se pasa como el parámetro *numberOfElements* . Este tamaño debe incluir un carácter adicional para el carácter null de terminación. El número real de caracteres leídos se coloca en *pSizeRead*.
 
-Si se produce un error durante la operación o en la validación de los parámetros, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **EINVAL** se devuelve.
+Si se produce un error durante la operación o en la validación de los parámetros, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve **EINVAL** .
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina la necesidad de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores menos seguras con sus homólogos más seguros y más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

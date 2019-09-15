@@ -1,11 +1,11 @@
 ---
 title: cimag, cimagf, cimagl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cimag
 - cimagf
 - cimagl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cimagf
 - cimagl
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38eef416afb078614ef26ab5d7c8810f46dd9a85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347605"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939163"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -61,17 +64,17 @@ Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La parte imaginaria de *z*.
+Parte imaginaria de *z*.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **cimag** que toman **_Fcomplex** o **_Lcomplex** valores y devuelven **float**o **largo** **doble** valores. En un programa C, **cimag** siempre toma un **_Dcomplex** valor y devuelve un **doble** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Cimag** que toman los valores **_Fcomplex** o **_Lcomplex** y devolver valores de tipo **float** o **Long** **Double** . En un programa de C, **Cimag** siempre toma un valor **_Dcomplex** y devuelve un valor **Double** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**cimag**,               **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+|**Cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

@@ -1,11 +1,11 @@
 ---
 title: fmod, fmodf, fmodl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333357"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957076"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -72,13 +75,13 @@ Valores de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fmod** devuelve el resto de punto flotante *x* / *y*. Si el valor de *y* es 0,0, **fmod** devuelve un valor NaN. Para obtener información acerca de la representación de un NaN reservado por la **printf** familia, vea [printf](printf-printf-l-wprintf-wprintf-l.md).
+**FMOD** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **FMOD** devuelve un Nan silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf** , vea [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **fmod** función calcula el resto de punto flotante *f* de *x* / *y* que *x*  =  *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+La **función FMOD** calcula el resto de punto flotante *f* de *x* / *y* como *x* = *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **fmod** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **fmod** siempre toma dos **doble** argumentos y devuelve un **doble**.
+C++permite la sobrecarga, de modo que puede llamar a las sobrecargas de **FMOD** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **FMOD** siempre toma dos argumentos **Double** y devuelve un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 

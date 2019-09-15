@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942341"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
 Devuelve el tipo o subtipo de bloque asociado a un puntero de bloque especificado del montón de depuración.
 
@@ -52,11 +55,11 @@ Puntero a un bloque válido del montón de depuración.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cuando se pasa un puntero del montón de depuración válido, el **_CrtReportBlockType** función devuelve el tipo de bloque y el subtipo en forma de un **int**. Cuando se le pasa un puntero no válido, la función devuelve -1.
+Cuando se pasa un puntero de montón de depuración válido, la función **_CrtReportBlockType** devuelve el tipo de bloque y el subtipo en forma de **int**. Cuando se le pasa un puntero no válido, la función devuelve -1.
 
 ## <a name="remarks"></a>Comentarios
 
-Para extraer el tipo y subtipo devueltos por **_CrtReportBlockType**, use las macros **_BLOCK_TYPE** y **_BLOCK_SUBTYPE** (ambas definidas en Crtdbg.h) en el valor devuelto.
+Para extraer el tipo y el subtipo devueltos por **_CrtReportBlockType**, use las macros **_BLOCK_TYPE** y **_BLOCK_SUBTYPE** (ambas definidas en CRTDBG. h) en el valor devuelto.
 
 Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 

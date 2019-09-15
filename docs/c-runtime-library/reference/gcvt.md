@@ -1,9 +1,9 @@
 ---
 title: _gcvt
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt
 helpviewer_keywords:
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332258"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956102"
 ---
-# <a name="gcvt"></a>_gcvt
+# <a name="_gcvt"></a>_gcvt
 
 Convierte un valor de punto flotante en una cadena, que almacena en un búfer. Hay disponible una versión más segura de esta función; consulte [_gcvt_s](gcvt-s.md).
 
@@ -66,11 +69,11 @@ Ubicación de almacenamiento para el resultado.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_gcvt** función convierte un punto flotante *valor* en una cadena de caracteres (que incluye un separador decimal y un posible byte con signo) y almacena la cadena en *búfer*. El *búfer* debe ser lo suficientemente grande como para contener el valor convertido más un carácter nulo final, que se anexa automáticamente. Si un tamaño de búfer *dígitos* + 1 se usa, la función sobrescribe el final del búfer. Esto se debe a que la cadena convertida incluye un separador decimal y puede contener información de signo y exponente. No hay ninguna disposición de desbordamiento. **_gcvt** intenta generar *dígitos* dígitos en formato decimal. Si no es posible, genera *dígitos* dígitos en formato exponencial. Los ceros finales podrían suprimirse en la conversión.
+La función **_gcvt** convierte un *valor* de punto flotante en una cadena de caracteres (que incluye un separador decimal y un byte de signo posible) y almacena la cadena en el *búfer*. El *búfer* debe ser lo suficientemente grande como para alojar el valor convertido más un carácter nulo de terminación, que se anexa automáticamente. Si se usa un tamaño de búfer de *dígitos* + 1, la función sobrescribe el final del búfer. Esto se debe a que la cadena convertida incluye un separador decimal y puede contener información de signo y exponente. No hay ninguna disposición de desbordamiento. **_gcvt** intenta producir dígitos de *dígitos* en formato decimal. Si no es posible, genera dígitos de *dígitos* en formato exponencial. Los ceros finales podrían suprimirse en la conversión.
 
-Un *búfer* de longitud **_CVTBUFSIZE** es suficiente para cualquier flotante como valor de punto.
+Un *búfer* de longitud **_CVTBUFSIZE** es suficiente para cualquier valor de punto flotante.
 
-Esta función valida sus parámetros. Si *búfer* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **NULL**.
+Esta función valida sus parámetros. Si *buffer* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **null**.
 
 ## <a name="requirements"></a>Requisitos
 

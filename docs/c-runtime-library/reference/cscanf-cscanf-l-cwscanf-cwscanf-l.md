@@ -1,12 +1,12 @@
 ---
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cscanf_l
 - _cscanf
 - _cwscanf
 - _cwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwscanf
 - cwscanf_l
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938498"
 ---
-# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
+# <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Lee datos con formato de la consola. Hay disponibles versiones más seguras de estas funciones; consulte [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
@@ -95,15 +98,15 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Número de campos que se convirtieron y asignaron correctamente. El valor devuelto no incluye los campos que se leyeron pero no se asignaron. El valor devuelto es **EOF** para un intento de leer al final del archivo. Esto puede tener lugar cuando la entrada de teclado se redirige en el nivel de la línea de comandos del sistema operativo. Un valor devuelto de 0 indica que no se ha asignado ningún campo.
+Número de campos que se convirtieron y asignaron correctamente. El valor devuelto no incluye los campos que se leyeron pero no se asignaron. El valor devuelto es **EOF** para un intento de lectura al final del archivo. Esto puede tener lugar cuando la entrada de teclado se redirige en el nivel de la línea de comandos del sistema operativo. Un valor devuelto de 0 indica que no se ha asignado ningún campo.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_cscanf** función lee los datos directamente desde la consola en las ubicaciones especificadas por *argumento*. La función [_getche](getch-getwch.md) se usa para leer caracteres. Cada parámetro opcional debe ser un puntero a una variable con un tipo que se corresponde con un especificador de tipo en *formato*. El formato controla la interpretación de la entrada campos y tiene la misma forma y función que el *formato* parámetro para el [scanf](scanf-scanf-l-wscanf-wscanf-l.md) función. Mientras **_cscanf** suele repetir el carácter de entrada, no lo hace si fue la última llamada **_ungetch**.
+La función **_cscanf** Lee los datos directamente de la consola de en las ubicaciones especificadas por el *argumento*. La función [_getche](getch-getwch.md) se usa para leer caracteres. Cada parámetro opcional debe ser un puntero a una variable con un tipo que se corresponda con un especificador de tipo en *formato*. El formato controla la interpretación de los campos de entrada y tiene el mismo formato y función que el parámetro de *formato* de la función [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Mientras que **_cscanf** normalmente repite el carácter de entrada, no lo hace si la última llamada era a **_ungetch**.
 
-Esta función valida sus parámetros. Si el formato es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **EOF**.
+Esta función valida sus parámetros. Si Format es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **EOF**.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

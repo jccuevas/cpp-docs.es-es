@@ -1,9 +1,9 @@
 ---
 title: _query_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - query_new_mode
 - _query_new_mode
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358078"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950114"
 ---
-# <a name="querynewmode"></a>_query_new_mode
+# <a name="_query_new_mode"></a>_query_new_mode
 
 Devuelve un entero que indica el nuevo modo de controlador establecido por **_set_new_mode** para **malloc**.
 
@@ -45,11 +48,11 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el actual nuevo modo de controlador, es decir, 0 o 1, para **malloc**. Un valor devuelto de 1 indica que, en caso de error para asignar memoria, **malloc** llama a la rutina del nuevo controlador; un valor devuelto de 0 indica que no.
+Devuelve el nuevo modo de controlador actual, es decir, 0 o 1, para **malloc**. Un valor devuelto de 1 indica que, en caso de error al asignar memoria, **malloc** llama a la nueva rutina del controlador; un valor devuelto de 0 indica que no es así.
 
 ## <a name="remarks"></a>Comentarios
 
-El C++ **_query_new_mode** función devuelve un entero que indica el nuevo modo de controlador establecido por el C++ [_set_new_mode](set-new-mode.md) funcionar para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error para asignar memoria, **malloc** consiste en llamar a la rutina del nuevo controlador según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del nuevo controlador en caso de error. Puede usar **_set_new_mode** para invalidar este comportamiento lo que en caso de error **malloc** llame a la rutina del nuevo controlador de la misma forma en que el **nuevo** operador hace cuando se produce un error asignar memoria. Para obtener más información, vea la descripción de los [operadores new y delete](../../cpp/new-and-delete-operators.md) en la referencia del lenguaje de C++.
+La C++ función **_query_new_mode** devuelve un entero que indica el nuevo modo de controlador establecido por C++ la función [_set_new_mode](set-new-mode.md) para [malloc](malloc.md). El nuevo modo de controlador indica si, en caso de error al asignar memoria, **malloc** es llamar a la rutina del nuevo controlador tal y como se establece en [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del nuevo controlador en caso de error. Puede usar **_set_new_mode** para invalidar este comportamiento de modo que, en caso de error, **malloc** llame a la rutina del nuevo controlador de la misma forma que el operador **New** cuando no se puede asignar memoria. Para obtener más información, vea la descripción de los [operadores new y delete](../../cpp/new-and-delete-operators.md) en la referencia del lenguaje de C++.
 
 ## <a name="requirements"></a>Requisitos
 
