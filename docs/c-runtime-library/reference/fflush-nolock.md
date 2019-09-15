@@ -1,9 +1,9 @@
 ---
 title: _fflush_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fflush_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fflush_nolock
 - _fflush_nolock
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-ms.openlocfilehash: 721098899525df02dc3b3d121cf894f8056fcb98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f31ef5018abd9adbe9b9db00aaa91e3f0f0c01d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334304"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940974"
 ---
-# <a name="fflushnolock"></a>_fflush_nolock
+# <a name="_fflush_nolock"></a>_fflush_nolock
 
 Vacía una secuencia sin bloquear el subproceso.
 
@@ -55,7 +58,7 @@ Consulte [fflush](fflush.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función es una versión que no sea de bloqueo de **fflush**. Es idéntico a **fflush** , salvo que no está protegida contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Esta función es una versión que no es de bloqueo de **fflush**. Es idéntico a **fflush** , salvo que no está protegido frente a interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
 ## <a name="requirements"></a>Requisitos
 

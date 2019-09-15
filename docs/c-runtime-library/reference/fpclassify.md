@@ -1,9 +1,9 @@
 ---
 title: fpclassify
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fpclassify
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - fpclassify
 - math/fpclassify
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287946"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957060"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -60,9 +61,9 @@ Valor de punto flotante que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fpclassify** devuelve un valor entero que indica la clase de punto flotante del argumento *x*. Esta tabla muestran los posibles valores devueltos por **fpclassify**, definido en \<math.h >.
+**fpclassify (** devuelve un valor entero que indica la clase de punto flotante del argumento *x*. En esta tabla se muestran los posibles valoresdevueltos por \<fpclassify (, definidos en Math. h >.
 
-|Valor|Descripción|
+|Valor|DESCRIPCIÓN|
 |-----------|-----------------|
 |**FP_NAN**|NaN reservado, de señalización o indeterminado|
 |**FP_INFINITE**|Infinito positivo o negativo|
@@ -72,7 +73,7 @@ Valor de punto flotante que se va a probar.
 
 ## <a name="remarks"></a>Comentarios
 
-En C, **fpclassify** es una macro; en C++, **fpclassify** es una función sobrecargada con tipos de argumento de **float**, **doble**, o **largo** **doble**. En cualquier caso, el valor devuelto depende del tipo efectivo de la expresión de argumento y no de alguna representación intermedia. Por ejemplo, un normal **doble** o **largo** **doble** valor puede ser infinito, desnormalizado o cero el valor cuando se convierte en un **float**.
+En C, **fpclassify (** es una macro; en C++, **fpclassify (** es una función sobrecargada mediante los tipos de argumento **float**, **Double**o **Long** **Double**. En cualquier caso, el valor devuelto depende del tipo efectivo de la expresión de argumento y no de alguna representación intermedia. Por ejemplo, un valor **Double** o **Long** **Double** normal puede convertirse en un valor infinito, desnormalizado o cero cuando se convierte en un valor **float**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -80,7 +81,7 @@ En C, **fpclassify** es una macro; en C++, **fpclassify** es una función sobrec
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> o \<cmath>|
 
-El **fpclassify** macro y **fpclassify** funciones se ajustan a ISO C99 y C ++ 11 especificaciones. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Las funciones **fpclassify (** y **fpclassify (** se ajustan a las especificaciones ISO C99 y c++ 11. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

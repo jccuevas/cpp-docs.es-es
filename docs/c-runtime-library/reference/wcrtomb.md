@@ -1,9 +1,9 @@
 ---
 title: wcrtomb
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188658"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945222"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -60,7 +63,7 @@ Carácter convertido multibyte resultante.
 Carácter ancho que se va a convertir.
 
 *mbstate*<br/>
-Un puntero a un **mbstate_t** objeto.
+Un puntero a un objeto **mbstate_t** .
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -68,17 +71,17 @@ Devuelve el número de bytes necesarios para representar el carácter multibyte 
 
 ## <a name="remarks"></a>Comentarios
 
-El **wcrtomb** función convierte un carácter ancho, comenzando en el estado de conversión especificado contenido en *mbstate*, desde el valor contenido en *wchar*, en el dirección representada por *mbchar*. El valor devuelto es el número de bytes necesarios para representar el carácter multibyte correspondiente, pero no devolverá más de **MB_CUR_MAX** bytes.
+La función **wcrtomb** convierte un carácter ancho, comenzando en el estado de conversión especificado incluido en *mbstate*, del valor contenido en *WCHAR*, en la dirección representada por *mbchar*. El valor devuelto es el número de bytes necesarios para representar el carácter multibyte correspondiente, pero no devolverá más de **MB_CUR_MAX** bytes.
 
-Si *mbstate* es null, interno **mbstate_t** objeto que contiene el estado de conversión de *mbchar* se utiliza. Si la secuencia de caracteres *wchar* no tiene un multibyte correspondiente representación de caracteres, se devuelve -1 y el **errno** está establecido en **EILSEQ**.
+Si *mbstate* es null, se usa el objeto **mbstate_t** interno que contiene el estado de conversión de *mbchar* . Si la secuencia de caracteres *WCHAR* no tiene una representación de caracteres multibyte correspondiente, se devuelve-1 y **errno** se establece en **EILSEQ**.
 
-El **wcrtomb** función difiere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** lugar **wcsnlen**, si una llamada subsiguiente a **wcsrtombs** se usaron en lugar de **wcstombs**.
+La función **wcrtomb** difiere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por su reinicio. El estado de la conversión se almacena en *mbstate* para las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** en lugar de **wcsnlen**, si se usara una llamada subsiguiente a **wcsrtombs** en lugar de **wcstombs**.
 
 En C++, esta función tiene una sobrecarga de plantilla que invoca a un homólogo más reciente y seguro de esta función. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Excepciones
 
-El **wcrtomb** función es segura para subprocesos siempre y cuando ninguna función en el subproceso actual llame a **setlocale** mientras se está ejecutando esta función y mientras la *mbstate* es null.
+La función **wcrtomb** es segura para subprocesos siempre y cuando ninguna función del subproceso actual llame a **setlocale** mientras se está ejecutando esta función y mientras que el valor de *mbstate* es NULL.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,11 +1,11 @@
 ---
 title: log2, log2f, log2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log2
 - log2l
 - log2f
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,14 +17,17 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285944"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953168"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -61,7 +64,7 @@ El valor del que se determina el logaritmo de base 2.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se ejecuta correctamente, devuelve return log2 *x*.
+Si se ejecuta correctamente, devuelve devolverá LOG2 *x*.
 
 De lo contrario, es posible que devuelva uno de los siguientes valores:
 
@@ -79,7 +82,7 @@ Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Si x es un entero, esta función devuelve esencialmente el índice de base cero de 1 bit más significativo de *x*.
+Si x es un entero, esta función devuelve esencialmente el índice de base cero del valor de 1 bit más significativo de *x*.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,10 @@
 ---
 title: _strtime_s, _wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375332"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946576"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
 Copia la hora actual en un búfer. Se trata de versiones de [_strtime, _wstrtime](strtime-wstrtime.md) que incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -78,22 +81,22 @@ Si se produce una condición de error, se invoca al controlador de parámetros n
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*numberOfElements*|Volver|Contenido de *búfer*|
+|*buffer*|*numberOfElements*|Volver|Contenido del *búfer*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(cualquiera)|**EINVAL**|No modificado|
-|No **NULL** (apunta al búfer válido)|0|**EINVAL**|No modificado|
-|No **NULL** (apunta al búfer válido)|0 < tamaño < 9|**EINVAL**|Cadena vacía|
-|No **NULL** (apunta al búfer válido)|Tamaño > 9|0|Hora actual con el formato especificado en la sección de comentarios|
+|Not **null** (que apunta a un búfer válido)|0|**EINVAL**|No modificado|
+|Not **null** (que apunta a un búfer válido)|0 < tamaño < 9|**EINVAL**|Cadena vacía|
+|Not **null** (que apunta a un búfer válido)|Tamaño > 9|0|Hora actual con el formato especificado en la sección de comentarios|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
-Pasar a un no válido que no sean de**NULL** valor para el búfer, se producirá una infracción de acceso si el *numberOfElements* parámetro es mayor que 9.
+Si se pasa un valor no**null** no válido para el búfer, se producirá una infracción de acceso si el parámetro *numberOfElements* es mayor que 9.
 
-Pasar un valor para *numberOfElements* mayor que el tamaño real del búfer dará como resultado de la saturación del búfer.
+Si se pasa un valor para *numberOfElements* que sea mayor que el tamaño real del búfer, se producirá una saturación del búfer.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones proporcionan versiones más seguras de [_strtime](strtime-wstrtime.md) y [_wstrtime](strtime-wstrtime.md). El **_strtime_s** función copia la hora local actual en el búfer señalado por *timestr*. La hora se formatea como **hh: mm:** donde **hh** son dos dígitos que representa la hora en la notación de 24 horas, **mm** son dos dígitos que representa los minutos transcurridos tras la hora y **ss** son dos dígitos que representan los segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos después de las 6 P.M. El búfer debe tener una longitud mínima de 9 bytes; el segundo parámetro especifica el tamaño real.
+Estas funciones proporcionan versiones más seguras de [_strtime](strtime-wstrtime.md) y [_wstrtime](strtime-wstrtime.md). La función **_strtime_s** copia la hora local actual en el búfer al que apunta *timestr*. La hora tiene el formato **HH: mm: SS** , donde **HH** es dos dígitos que representan la hora en notación de 24 horas, **mm** son dos dígitos que representan los minutos posteriores a la hora y **SS** son dos dígitos que representan segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos después de las 6 P.M. El búfer debe tener una longitud mínima de 9 bytes; el segundo parámetro especifica el tamaño real.
 
 **_wstrtime** es una versión con caracteres anchos de **_strtime**; el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 

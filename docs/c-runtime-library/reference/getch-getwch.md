@@ -1,10 +1,10 @@
 ---
 title: _getch, _getwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getch
 - _getwch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwch
 - _getch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 122892945e8542afa7f9f944f984387db7c5ec8a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331852"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955478"
 ---
-# <a name="getch-getwch"></a>_getch, _getwch
+# <a name="_getch-_getwch"></a>_getch, _getwch
 
 Obtiene un carácter de la consola sin repetición.
 
@@ -56,7 +59,7 @@ Devuelve el carácter leído. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_getch** y **_getwch** funciones leen un solo carácter de la consola sin repetir el carácter. Ninguna de estas funciones se puede usar para leer CTRL+C. Al leer una tecla de función o de dirección, se debe llamar dos veces a cada función: la primera llamada devuelve 0 o 0xE0, y la segunda devuelve el código de tecla real.
+Las funciones **_getch** y **_getwch** leen un solo carácter de la consola sin repetir el carácter. Ninguna de estas funciones se puede usar para leer CTRL+C. Al leer una tecla de función o de dirección, se debe llamar dos veces a cada función: la primera llamada devuelve 0 o 0xE0, y la segunda devuelve el código de tecla real.
 
 Estas funciones bloquean el subproceso de llamada y son, por consiguiente, seguras para subprocesos. Para obtener versiones que no sean de bloqueo, consulte [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 

@@ -1,11 +1,11 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - timespec_get
 - _timespec32_get
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155555"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957628"
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
+# <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
 Establece el intervalo al que apunta el primer argumento en la hora actual del calendario, basándose en la base de tiempo especificada.
 
@@ -71,15 +74,15 @@ Un valor específico de implementación distinta de cero que especifica la base 
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor de *base* si es correcto, en caso contrario, devuelve cero.
+El valor de *base* si es correcto; de lo contrario, devuelve cero.
 
 ## <a name="remarks"></a>Comentarios
 
-El **timespec_get** funciones establecen la hora actual en la estructura que señala el *time_spec* argumento. Todas las versiones de esta estructura tienen dos miembros, **tv_sec** y **tv_nsec**. El **tv_sec** valor se establece en el número entero de segundos y **tv_nsec** en el número integral de nanosegundos, redondeado a la resolución del reloj del sistema, desde el inicio de la época especificada por *base*.
+Las funciones **timespec_get** establecen la hora actual en la estructura a la que apunta el argumento *time_spec* . Todas las versiones de este struct tienen dos miembros, **tv_sec** y **tv_nsec**. El valor **tv_sec** se establece en el número entero de segundos y **tv_nsec** en el número entero de nanosegundos, redondeado a la resolución del reloj del sistema, desde el inicio de la época especificada por *base*.
 
 **Específicos de Microsoft**
 
-Estas funciones solo admiten **TIME_UTC** como el *base* valor. Esto establece la *time_spec* valor con el número de segundos y nanosegundos desde el inicio de la época, medianoche del 1 de enero de 1970, hora Universal coordinada (UTC). En un **struct** **_timespec32**, **tv_sec** es un **__time32_t** valor. En un **struct** **_timespec64**, **tv_sec** es un **__time64_t** valor. En un **struct** **timespec**, **tv_sec** es un **time_t** tipo, que es de 32 o 64 bits de longitud, dependiendo de si el preprocesador se define _USE_32BIT_TIME_T de macro. El **timespec_get** función es una función insertada que llama a **_timespec32_get** si se define _USE_32BIT_TIME_T; en caso contrario, llama a **_timespec64_get**.
+Estas funciones solo admiten **TIME_UTC** como valor *base* . Esto establece el valor de *time_spec* en el número de segundos y nanosegundos desde el inicio de la época, medianoche, el 1 de enero de 1970, hora universal coordinada (UTC). En una **estructura** **_timespec32**, **tv_sec** es un valor de **__time32_t** . En una **estructura** **_timespec64**, **tv_sec** es un valor de **__time64_t** . En una **estructura** **timespec**, **tv_sec** es un tipo **time_t** , que tiene una longitud de 32 bits o 64 bits, en función de si se define la macro de preprocesador _USE_32BIT_TIME_T. La función **timespec_get** es una función insertada que llama a **_timespec32_get** si se define _USE_32BIT_TIME_T; en caso contrario, llama a **_timespec64_get**.
 
 **Fin de Específicos de Microsoft**
 

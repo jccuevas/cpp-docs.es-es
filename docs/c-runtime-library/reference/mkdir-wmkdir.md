@@ -1,10 +1,10 @@
 ---
 title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmkdir
 - _mkdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkdir
 - tmkdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285202"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951720"
 ---
-# <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
+# <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
 Crea un directorio nuevo.
 
@@ -63,19 +66,19 @@ Ruta de acceso de un directorio nuevo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el valor 0 si se ha creado el directorio nuevo. En un error, la función devuelve -1 y conjuntos de **errno** como sigue.
+Cada una de estas funciones devuelve el valor 0 si se ha creado el directorio nuevo. En un error, la función devuelve-1 y establece **errno** de la siguiente manera.
 
-**EEXIST** no se creó el directorio porque *dirname* es el nombre de un archivo existente, directorio o dispositivo.
+**EEXIST** No se creó el directorio porque *dirname* es el nombre de un archivo, directorio o dispositivo existente.
 
-**ENOENT** no se encontró la ruta de acceso.
+**ENOENT** No se encontró la ruta de acceso.
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mkdir** función crea un nuevo directorio con la especificación *dirname.* **_mkdir** puede crear únicamente un directorio nuevo por llamada, por lo que solo el último componente de *dirname* puede denominar un directorio nuevo. **_mkdir** no traduce los delimitadores de ruta de acceso. En Windows NT, la barra diagonal inversa (\\) y la barra diagonal (/) son delimitadores de ruta de acceso válidos para las cadenas de caracteres de las rutinas en tiempo de ejecución.
+La función **_mkdir** crea un nuevo directorio con el *dirname especificado.* **_mkdir** solo puede crear un nuevo directorio por llamada, por lo que solo el último componente de *dirname* puede asignar un nombre a un nuevo directorio. **_mkdir** no traduce los delimitadores de ruta de acceso. En Windows NT, la barra diagonal inversa (\\) y la barra diagonal (/) son delimitadores de ruta de acceso válidos para las cadenas de caracteres de las rutinas en tiempo de ejecución.
 
-**_wmkdir** es una versión con caracteres anchos de **_mkdir**; el *dirname* argumento **_wmkdir** es una cadena de caracteres anchos. **_wmkdir** y **_mkdir** se comportan exactamente igual.
+**_wmkdir** es una versión con caracteres anchos de **_mkdir**; el argumento *dirname* para **_wmkdir** es una cadena de caracteres anchos. **_wmkdir** y **_mkdir** se comportan de manera idéntica.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

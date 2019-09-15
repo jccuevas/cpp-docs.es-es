@@ -1,14 +1,14 @@
 ---
 title: strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +61,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499435"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947355"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -143,10 +146,10 @@ Devuelve un puntero a la cadena de destino. No se reserva ningún valor devuelto
 
 ## <a name="remarks"></a>Comentarios
 
-La función **strncat** anexa, como máximo, los primeros caracteres de recuento de *strSource* a *strDest*. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDest*. Si aparece un carácter nulo en *strSource* antes de que se anexen los caracteres de *recuento* , **strncat** anexa todos los caracteres de *strSource*, hasta el carácter nulo. Si el recuento es mayor que la longitud de *strSource*, se usa la longitud de *strSource* en lugar del recuento. En todos los casos, la cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **strncat** anexa, como máximo, los primeros caracteres de *recuento* de *strSource* a *strDest*. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDest*. Si aparece un carácter nulo en *strSource* antes de que se anexen los caracteres de *recuento* , **strncat** anexa todos los caracteres de *strSource*, hasta el carácter nulo. Si el *recuento* es mayor que la longitud de *strSource*, se usa la longitud de *strSource* en lugar del *recuento*. En todos los casos, la cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
 > [!IMPORTANT]
-> **strncat** no comprueba si hay espacio suficiente en *strDest*; por lo tanto, es una posible causa de saturaciones del búfer. Tenga en cuenta que el recuento limita el número de caracteres anexados. no es un límite en cuanto al tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+> **strncat** no comprueba si hay espacio suficiente en *strDest*; por lo tanto, es una posible causa de saturaciones del búfer. Tenga en cuenta que el *recuento* limita el número de caracteres anexados. no es un límite en cuanto al tamaño de *strDest*. Vea el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 **wcsncat** y **_mbsncat** son versiones de caracteres anchos y multibyte de **strncat**. Los argumentos de cadena y el valor devuelto de **wcsncat** son cadenas de caracteres anchos; los de **_mbsncat** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
@@ -214,7 +217,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 string can hold up to 39 characters

@@ -1,11 +1,11 @@
 ---
 title: floor, floorf, floorl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333591"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957155"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -67,17 +70,17 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **floor** funciones devuelven un valor de punto flotante que representa el entero más grande que sea menor o igual que *x*. No se devuelve ningún error.
+Las funciones de **piso** devuelven un valor de punto flotante que representa el entero más grande que es menor o igual que *x*. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|ninguna|_DOMAIN|
 
-**Floor** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**Floor** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentarios
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **floor** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **floor** siempre toma y devuelve un **doble**.
+C++permite las sobrecargas, de modo que puede llamar a las sobrecargas de **Floor** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **Floor** siempre toma y devuelve un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 

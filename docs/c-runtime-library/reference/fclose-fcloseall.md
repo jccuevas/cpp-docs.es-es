@@ -1,10 +1,10 @@
 ---
 title: fclose, _fcloseall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fclose
 - _fcloseall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose
 - _fcloseall
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 215925fb16f5d51e481ae92cbb45b0270bd5ebd4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334884"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941506"
 ---
-# <a name="fclose-fcloseall"></a>fclose, _fcloseall
+# <a name="fclose-_fcloseall"></a>fclose, _fcloseall
 
-Cierra una secuencia (**fclose**) o cierra todas las secuencias abiertas (**_fcloseall**).
+Cierra una secuencia (**fclose**) o cierra todas las secuencias abiertas ( **_fcloseall**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -52,19 +55,19 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fclose** devuelve 0 si la secuencia está cerrada correctamente. **_fcloseall** devuelve el número total de secuencias cerradas. Ambas funciones devuelven **EOF** para indicar un error.
+**fclose** devuelve 0 si la secuencia se ha cerrado correctamente. **_fcloseall** devuelve el número total de secuencias cerradas. Ambas funciones devuelven **EOF** para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fclose** función cierra *secuencia*. Si *secuencia* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **fclose** establece **errno** a **EINVAL** y devuelve **EOF**. Se recomienda que el *secuencia* puntero siempre se comprueba antes de llamar a esta función.
+La función **fclose** cierra la *secuencia*. Si *Stream* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **fclose** establece **errno** en **EINVAL** y devuelve **EOF**. Se recomienda comprobar siempre el puntero de *secuencia* antes de llamar a esta función.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
-El **_fcloseall** función cierra todas las secuencias abiertas excepto **stdin**, **stdout**, **stderr** (y en MS-DOS, **_stdaux**  y **_stdprn**). También cierra y elimina los archivos temporales creados por **tmpfile**. En ambas funciones, se vacían todos los búferes asociados a la secuencia antes de cerrarla. Los búferes asignados por el sistema se liberan cuando se cierra la secuencia. Los búferes asignados por el usuario con **setbuf** y **setvbuf** no se liberan automáticamente.
+La función **_fcloseall** cierra todas las secuencias abiertas excepto **stdin**, **stdout**, **stderr** (y, en MS-dos, **_stdaux** y **_stdprn**). También cierra y elimina los archivos temporales creados por **tmpfile**. En ambas funciones, se vacían todos los búferes asociados a la secuencia antes de cerrarla. Los búferes asignados por el sistema se liberan cuando se cierra la secuencia. Los búferes asignados por el usuario con **setbuf** y **setvbuf (** no se liberan automáticamente.
 
-**Nota:** Cuando estas funciones se usan para cerrar una secuencia, se cierra el subyacente descriptor de archivo y sistema operativo identificador de archivo (o socket), además de la secuencia. Por lo tanto, si el archivo se ha abierto originalmente como identificador de archivos o descriptor de archivo y se cierra con **fclose**, no llame también a **_close** para cerrar el descriptor de archivo; no llame a la función de Win32  **CloseHandle** para cerrar el identificador de archivo.
+**Nota:** Cuando estas funciones se usan para cerrar una secuencia, el descriptor de archivo subyacente y el identificador de archivo del sistema operativo (o Socket) están cerrados, así como el flujo. Por lo tanto, si el archivo se abrió originalmente como un identificador de archivo o un descriptor de archivo y se cierra con **fclose**, no llame también a **_close** para cerrar el descriptor de archivo; no llame a la función de Win32 **CloseHandle** para cerrar el identificador de archivo.
 
-**fclose** y **_fcloseall** incluyen código como protección frente a interferencias de otros subprocesos. Para la versión que no sea de bloqueo de un **fclose**, consulte **_fclose_nolock**.
+**fclose** y **_fcloseall** incluyen código para proteger frente a interferencias de otros subprocesos. Para obtener una versión que no sea de bloqueo de un **fclose**, consulte **_fclose_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

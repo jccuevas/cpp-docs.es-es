@@ -1,9 +1,9 @@
 ---
 title: _kbhit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _kbhit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _kbhit
 - kbhit
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286484"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953509"
 ---
-# <a name="kbhit"></a>_kbhit
+# <a name="_kbhit"></a>_kbhit
 
 Comprueba si hay acciones del teclado en la consola.
 
@@ -57,7 +60,7 @@ int _kbhit( void );
 
 ## <a name="remarks"></a>Comentarios
 
-El **_kbhit** función comprueba la consola para una pulsación de tecla recientes. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. El programa, a continuación, puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
+La función **_kbhit** comprueba si hay una pulsación de tecla reciente en la consola. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. Después, el programa puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
 
 ## <a name="requirements"></a>Requisitos
 

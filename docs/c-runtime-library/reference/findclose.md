@@ -1,9 +1,9 @@
 ---
 title: _findclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _findclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _findclose
 - findclose
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333760"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957318"
 ---
-# <a name="findclose"></a>_findclose
+# <a name="_findclose"></a>_findclose
 
 Cierra el identificador de búsqueda especificado y libera los recursos asociados.
 
@@ -49,7 +52,7 @@ Identificador de búsqueda devuelto por una llamada anterior a **_findfirst**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **_findclose** devuelve 0. En caso contrario, devuelve -1 y establece **errno** a **ENOENT**, que indica que no más archivos coincidentes se encontró.
+Si se realiza correctamente, **_findclose** devuelve 0. De lo contrario, devuelve-1 y establece **errno** en **ENOENT**, lo que indica que no se encontraron más archivos coincidentes.
 
 ## <a name="requirements"></a>Requisitos
 

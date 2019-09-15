@@ -1,9 +1,9 @@
 ---
 title: feof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - feof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feof
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334403"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941143"
 ---
 # <a name="feof"></a>feof
 
@@ -48,15 +51,15 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **feof** función devuelve un valor distinto de cero si una operación de lectura ha intentado leer más allá del final del archivo; de lo contrario, devuelve 0. Si el puntero del flujo es **NULL**, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **feof** devuelve 0.
+La función **feof** devuelve un valor distinto de cero si una operación de lectura ha intentado leer más allá del final del archivo; devuelve 0 en caso contrario. Si el puntero de secuencia es **null**, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y **feof** devuelve 0.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **feof** rutina (se implementa como una función y como macro) determina si el final de *flujo* se ha pasado. Cuando se pasa el final del archivo, leer las operaciones devuelven un indicador de fin de archivo hasta que la secuencia está cerrada o hasta que [rebobinar](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), o  **clearerr** se denomina en él.
+La rutina **feof** (implementada como una función y como una macro) determina si se ha pasado el final de la *secuencia* . Cuando se pasa el final del archivo, las operaciones de lectura devuelven un indicador de fin de archivo hasta que se cierra la secuencia o hasta que se llama a [rebobinar](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)o **clearerr** .
 
-Por ejemplo, si un archivo contiene 10 bytes y se leen 10 bytes desde el archivo, **feof** devolverá 0 porque, aunque el puntero de archivo es el final del archivo, no se ha intentado leer más allá del final. Sólo después de intentar leer un byte 11 **feof** devuelven un valor distinto de cero.
+Por ejemplo, si un archivo contiene 10 bytes y Lee 10 bytes del archivo, **feof** devolverá 0 porque, aunque el puntero de archivo está al final del archivo, no ha intentado leer más allá del final. Solo después de intentar leer un undécimo byte, **feof** devolverá un valor distinto de cero.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -106,14 +109,14 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfeoftxt"></a>Entrada: crt_feof.txt
+## <a name="input-crt_feoftxt"></a>Entrada: crt_feof.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Number of bytes read = 19

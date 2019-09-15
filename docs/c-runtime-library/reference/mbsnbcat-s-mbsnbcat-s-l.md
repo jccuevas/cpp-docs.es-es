@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat_s, _mbsnbcat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnbcat_s
 - mbsnbcat_s
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3f66f8fc8d4fd659880e8793fdaae635f9f7ba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331530"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952272"
 ---
-# <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
+# <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
 Anexa a una cadena de caracteres multibyte, como máximo, los primeros **n** bytes de otra cadena de caracteres multibyte. Se trata de versiones de [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) que tienen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -83,13 +86,13 @@ errno_t _mbsnbcat_s_l(
 Cadena de destino de caracteres multibyte terminada en NULL.
 
 *sizeInBytes*<br/>
-Tamaño de la *dest* búfer en bytes.
+Tamaño del búfer de *destino* en bytes.
 
 *src*<br/>
 Cadena de origen de caracteres multibyte terminada en NULL.
 
 *count*<br/>
-Número de bytes desde *src* para anexar a *dest*.
+Número de bytes de *src* que se van a anexar al *destino*.
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -100,19 +103,19 @@ Cero si es correcto; en caso contrario, código de error.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|**dest**|*sizeInBytes*|*src*|Valor devuelto|
+|**Dest**|*sizeInBytes*|*src*|Valor devuelto|
 |------------|-------------------|-----------|------------------|
 |**NULL**|any|any|**EINVAL**|
 |Cualquiera|<= 0|any|**EINVAL**|
 |Cualquiera|any|**NULL**|**EINVAL**|
 
-Si se produce alguna de las condiciones de error, la función genera un error de parámetro no válido, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función devuelve **EINVAL** y establece **errno** a **EINVAL**.
+Si se produce alguna de las condiciones de error, la función genera un error de parámetro no válido, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función devuelve **EINVAL** y establece **errno** en **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnbcat_s** función anexa a *dest*, a lo sumo, la primera *recuento* bytes de *src*. Si el byte que precede inmediatamente al carácter nulo en *dest* es un byte inicial, se sobrescribe el byte inicial de *src*. En caso contrario, el byte inicial de *src* sobrescribe el carácter nulo de terminación de *dest*. Si aparece un byte nulo en *src* antes *recuento* bytes se anexan, **_mbsnbcat_s** anexa todos los bytes de *src*, hasta el valor null carácter. Si *recuento* es mayor que la longitud de *src*, la longitud de *src* se utiliza en lugar de *recuento*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **_mbsnbcat_s** anexa a *dest*, como máximo, el primer *número* de bytes de *src*. Si el byte que precede inmediatamente al carácter nulo de *dest* es un byte inicial, lo sobrescribe el byte inicial de *src*. De lo contrario, el byte inicial de *src* sobrescribe el carácter nulo de finalización de *dest*. Si aparece un byte nulo en *src* antes de que se anexen bytes de *recuento* , **_mbsnbcat_s** anexa todos los bytes de *src*, hasta el carácter nulo. Si el *recuento* es mayor que la longitud de *src*, se usa la longitud de *src* en lugar de *Count*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usan la configuración regional actual y las que tienen el **_l** sufijo en su lugar, use el parámetro de configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen el sufijo **_L** usan la configuración regional actual y las que tienen el sufijo **_L** usan en su lugar el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden inferir automáticamente la longitud de búfer, lo que elimina la necesidad de especificar un argumento de tamaño, y pueden usar automáticamente funciones más recientes y seguras para reemplazar las funciones anteriores no seguras. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288141"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941998"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
 Pruebas de fin de archivo (EOF).
 
@@ -52,11 +55,11 @@ Descriptor de archivo que hace referencia al archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_eof** devuelve 1 si la posición actual es el final del archivo, o 0 si no lo está. Un valor devuelto de -1 indica un error; en este caso, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EBADF**, que indica un descriptor de archivo no válido.
+**_eof** devuelve 1 si la posición actual es el final del archivo, o 0 si no lo es. Un valor devuelto de-1 indica un error; en este caso, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EBADF**, lo que indica que el descriptor de archivo no es válido.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_eof** función determina si el final del archivo asociado *fd* se ha alcanzado.
+La función **_eof** determina si se ha alcanzado el final del archivo asociado a *FD* .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -106,13 +109,13 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>Entrada: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>Entrada: crt_eof.txt
 
 ```Input
 This file contains some text.
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Number of bytes read = 29

@@ -1,7 +1,7 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnprintf
 - _vsnprintf_l
 - _vsnwprintf
@@ -12,7 +12,7 @@ apiname:
 - _vsnwprintf;
 - _vsnprintf_l;
 - _vsnwprintf_l;
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf
 - _vsnwprintf
@@ -52,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499074"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945308"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -158,7 +161,7 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-La función **vsnprintf** devuelve el número de caracteres escritos, sin contar el carácter null de terminación. Si el tamaño de búfer especificado por *Count* no es suficientemente grande para contener el resultado especificado por *Format* y *argptr*, el valor devuelto de **vsnprintf** es el número de caracteres que se escribiría, sin contar el valor null. carácter, si el recuento es suficientemente grande. Si el valor devuelto es mayor que *Count* -1, la salida se ha truncado. Un valor devuelto de -1 indica que se produjo un error de codificación.
+La función **vsnprintf** devuelve el número de caracteres escritos, sin contar el carácter null de terminación. Si el tamaño de búfer especificado por *Count* no es suficientemente grande para contener el resultado especificado por *Format* y *argptr*, el valor devuelto de **vsnprintf** es el número de caracteres que se escribiría, sin contar el valor null. carácter, si el *recuento* es suficientemente grande. Si el valor devuelto es mayor que *Count* -1, la salida se ha truncado. Un valor devuelto de -1 indica que se produjo un error de codificación.
 
 Las funciones **_vsnprintf** y **_vsnwprintf** devuelven el número de caracteres escritos si el número de caracteres que se va a escribir es menor o igual que *Count*; Si el número de caracteres que se va a escribir es mayor que *Count*, estas funciones devuelven-1, lo que indica que la salida se ha truncado.
 
@@ -168,7 +171,7 @@ Si *Format* es **null**, o si *buffer* es **null** y *Count* no es igual a cero,
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato a los datos y escribe hasta los caracteres de recuento en la memoria a la que apunta el *búfer*. La función **vsnprintf** siempre escribe un terminador null, incluso si trunca la salida. Al usar **_vsnprintf** y **_vsnwprintf**, el búfer terminará en NULL solo si hay espacio al final (es decir, si el número de caracteres que se va a escribir es menor que *Count*).
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato a los datos y escribe hasta los caracteres de *recuento* en la memoria a la que apunta el *búfer*. La función **vsnprintf** siempre escribe un terminador null, incluso si trunca la salida. Al usar **_vsnprintf** y **_vsnwprintf**, el búfer terminará en NULL solo si hay espacio al final (es decir, si el número de caracteres que se va a escribir es menor que *Count*).
 
 > [!IMPORTANT]
 > Para evitar ciertos tipos de riesgos de seguridad, asegúrese de que el *formato* no sea una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).

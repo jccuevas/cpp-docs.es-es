@@ -1,9 +1,9 @@
 ---
 title: _get_current_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_current_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_current_locale
 - __get_current_locale
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: 87c30ee701d8f7d3a89a0aa61ba18a7f854bc9b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332299"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956090"
 ---
-# <a name="getcurrentlocale"></a>_get_current_locale
+# <a name="_get_current_locale"></a>_get_current_locale
 
 Obtiene un objeto de configuración regional que representa la configuración regional actual.
 
@@ -49,9 +52,9 @@ Objeto de configuración regional que representa la configuración regional actu
 
 ## <a name="remarks"></a>Comentarios
 
-El **_get_current_locale** función obtiene el conjunto actual configuración regional del subproceso y devuelve un objeto de configuración regional que representa esa configuración regional.
+La función **_get_current_locale** obtiene la configuración regional establecida actualmente para el subproceso y devuelve un objeto de configuración regional que representa esa configuración regional.
 
-El nombre anterior de esta función, **__get_current_locale** (con dos caracteres de subrayado iniciales) ha quedado en desuso.
+El nombre anterior de esta función, **__get_current_locale** (con dos subrayados iniciales) ha quedado en desuso.
 
 ## <a name="requirements"></a>Requisitos
 

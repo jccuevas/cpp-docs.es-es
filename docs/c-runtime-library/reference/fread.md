@@ -1,9 +1,9 @@
 ---
 title: fread
 ms.date: 11/28/2018
-apiname:
+api_name:
 - fread
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 7cf4542a656798f7e2431b2f939df1b5d6396144
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376181"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956815"
 ---
 # <a name="fread"></a>fread
 
@@ -70,7 +73,7 @@ Vea [ \_\_doserrno, errno, \_sys errlist y sys\_NERR para obtener más informaci
 
 La función **fread** lee hasta el *número* de elementos de *tamaño* de bytes del *flujo* de entrada y los almacena en el *búfer*. El puntero de archivo asociado al *flujo* (si hay alguno) se incrementa según el número de bytes leídos realmente. Si la secuencia especificada se abre en [modo de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md), las líneas nuevas de estilo Windows se convierten en nuevas líneas de estilo Unix. Es decir, los pares de retorno de carro y avance de línea (CRLF) se reemplazan por caracteres de avance de línea (LF). Este reemplazo no tiene ningún efecto en el puntero de archivo ni en el valor devuelto. Si se produce un error, la posición del puntero de archivo es indeterminada. No se puede determinar el valor de un elemento leído parcialmente.
 
-Cuando se usa en una secuencia en modo de texto, si la cantidad de datos solicitados (es decir, el recuento de *tamaño* \* ) es mayor o igual que el tamaño del búfer de **archivos** \* interno (de forma predeterminada, es 4096 bytes, que  [se pueden configurar mediante setvbuf (](../../c-runtime-library/reference/setvbuf.md)), los datos de la secuencia se copian directamente en el búfer proporcionado por el usuario y la conversión de nueva línea se realiza en ese búfer. Dado que los datos convertidos pueden ser más cortos que los datos de secuencia copiados en el búfer, los datos pasados*RETURN_VALUE* \* *tamaño*del *búfer*\[] (donde *RETURN_VALUE* es el valor devuelto de **fread**) contienen datos no convertidos del archivo. Por esta razón, se recomienda que termine los datos de caracteres en el *búfer*\[*RETURN_VALUE* \* *size*] si el propósito del búfer es actuar como una cadena de estilo C. Consulte [fopen](fopen-wfopen.md) para obtener más información sobre los efectos del modo de texto y el modo binario.
+Cuando se usa en una secuencia en modo de texto, si la cantidad de datos solicitados (es decir, el recuento de *tamaño* \* ) es mayor o igual que el tamaño del búfer de **archivos** \* interno (de forma predeterminada, es 4096 bytes, que [se pueden configurar mediante setvbuf (](../../c-runtime-library/reference/setvbuf.md)), los datos de la secuencia se copian directamente en el búfer proporcionado por el usuario y la conversión de nueva línea se realiza en ese búfer. Dado que los datos convertidos pueden ser más cortos que los datos de secuencia copiados en el búfer, los datos pasados*RETURN_VALUE* \* *tamaño*del *búfer*\[] (donde *RETURN_VALUE* es el valor devuelto de **fread**) contienen datos no convertidos del archivo. Por esta razón, se recomienda que termine los datos de caracteres en el *búfer*\[*RETURN_VALUE* \* *size*] si el propósito del búfer es actuar como una cadena de estilo C. Consulte [fopen](fopen-wfopen.md) para obtener más información sobre los efectos del modo de texto y el modo binario.
 
 Esta función bloquea otros subprocesos. Si necesita una versión que no sea de bloqueo, use **_fread_nolock**.
 

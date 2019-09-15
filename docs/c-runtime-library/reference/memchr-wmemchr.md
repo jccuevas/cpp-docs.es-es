@@ -1,10 +1,10 @@
 ---
 title: memchr, wmemchr
 ms.date: 03/31/2019
-apiname:
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285266"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951943"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -83,13 +86,13 @@ Número de caracteres que se comprobarán.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve un puntero a la primera ubicación de *c* en *búfer*. En caso contrario, devuelve NULL.
+Si se realiza correctamente, devuelve un puntero a la primera ubicación de *c* en el *búfer*. En caso contrario, devuelve NULL.
 
 ## <a name="remarks"></a>Comentarios
 
-`memchr` y `wmemchr` buscar la primera aparición de *c* en la primera *recuento* caracteres de *búfer*. Detiene cuando encuentra *c* o cuando ha comprobado los primeros *recuento* caracteres.
+`memchr`y `wmemchr` busque la primera aparición de *c* en los primeros caracteres de *recuento* del *búfer*. Se detiene cuando encuentra *c* o cuando ha comprobado los primeros caracteres de *recuento* .
 
-En C, estas funciones toman una **const** puntero para el primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a **const** devuelve un puntero a **const**; la versión que toma un puntero a que no sean de**const** devuelve un puntero a que no sean de**const** . La macro \_CRT\_CONST\_correcto\_SOBRECARGAS se define si tanto el **const** y no-**const** versiones de estas funciones están disponibles. Si necesita que no sea**const** comportamiento para ambas sobrecargas de C++ en C++, defina el símbolo \_CONST\_devolver.
+En C, estas funciones toman un puntero **const** para el primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a **const** devuelve un puntero a **const**; la versión que toma un puntero a no**const** devuelve un puntero a no**const**. Las \_sobrecargas\_correctas\_ de la macro CRT const se definen si están disponibles tanto las versiones const como las no const de estas funciones.\_ Si necesita el comportamiento no**const** para ambas C++ sobrecargas C++en, defina el símbolo \_const\_Return.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -135,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 String to be searched:

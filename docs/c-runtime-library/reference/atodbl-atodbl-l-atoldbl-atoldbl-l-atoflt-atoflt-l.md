@@ -1,14 +1,14 @@
 ---
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349282"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943625"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Convierte una cadena en un valor double (**_atodbl**), long double (**_atoldbl**), o float (**_atoflt**).
+Convierte una cadena en un valor Double ( **_atodbl**), Long Double ( **_atoldbl**) o Float ( **_atoflt**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -84,15 +87,15 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. Códigos de error posibles son **_UNDERFLOW** o **_OVERFLOW**, que se definen en el archivo de encabezado \<math.h >.
+Si la operación se realiza correctamente, devuelve 0. Los códigos de error posibles son **_UNDERFLOW** o **_OVERFLOW**, que se definen en el \<archivo de encabezado Math. h >.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones convierten una cadena en un valor de punto flotante. La diferencia entre estas funciones y la **atof** familia de funciones es que estas funciones no generan código de punto flotante y no producen excepciones de hardware. En lugar de ello, las condiciones de error se notifican como códigos de error.
+Estas funciones convierten una cadena en un valor de punto flotante. La diferencia entre estas funciones y la familia de funciones **atof** es que estas funciones no generan código de punto flotante y no producen excepciones de hardware. En lugar de ello, las condiciones de error se notifican como códigos de error.
 
-Si una cadena no tiene una interpretación válida como valor de punto flotante, *valor* se establece en cero y el valor es cero.
+Si una cadena no tiene una interpretación válida como valor de punto flotante, el *valor* se establece en cero y el valor devuelto es cero.
 
-Las versiones de estas funciones que tienen el **_l** sufijo son idénticas las versiones que no tienen el sufijo, salvo que usan el *configuración regional* parámetro que se pasa en lugar del subproceso actual configuración regional.
+Las versiones de estas funciones que tienen el sufijo **_L** son idénticas a las versiones que no tienen el sufijo, salvo que utilizan el parámetro de *configuración regional* que se pasa en lugar de la configuración regional del subproceso actual.
 
 ## <a name="requirements"></a>Requisitos
 

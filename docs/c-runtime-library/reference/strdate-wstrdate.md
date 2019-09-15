@@ -1,10 +1,10 @@
 ---
 title: _strdate, _wstrdate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate
 - _wstrdate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstrdate
 - wstrdate
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353968"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958217"
 ---
-# <a name="strdate-wstrdate"></a>_strdate, _wstrdate
+# <a name="_strdate-_wstrdate"></a>_strdate, _wstrdate
 
 Copia la fecha actual del sistema en un búfer. Hay disponibles versiones más seguras de estas funciones; vea [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md).
 
@@ -76,9 +79,9 @@ Cada una de estas funciones devuelve un puntero a la cadena de caracteres result
 
 Hay disponibles versiones más seguras de estas funciones; vea [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). Se recomienda usar siempre que sea posible las funciones más seguras.
 
-El **_strdate** función copia la fecha actual del sistema en el búfer señalado por *datestr*, con el formato **mm**/**dd** / **yy**, donde **mm** son dos dígitos que representa el mes, **dd** son dos dígitos que representa el día, y **AA**  es los dos últimos dígitos del año. Por ejemplo, la cadena **05/12/99** representa 5 de diciembre de 1999. La longitud del búfer debe ser de 9 bytes como mínimo.
+La función **_strdate** copia la fecha actual del sistema en el búfer señalado por *datestr*, con formato **mm**/**DD**/**AA**, donde **mm** es dos dígitos que representan el mes, **DD** es dos dígitos que representan el día y **YY** son los dos últimos dígitos del año. Por ejemplo, la cadena **12/05/99** representa el 5 de diciembre de 1999. La longitud del búfer debe ser de 9 bytes como mínimo.
 
-Si *datestr* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL**.
+Si *datestr* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 **_wstrdate** es una versión con caracteres anchos de **_strdate**; el argumento y el valor devuelto de **_wstrdate** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 

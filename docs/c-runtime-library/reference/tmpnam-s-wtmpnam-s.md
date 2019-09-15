@@ -1,10 +1,10 @@
 ---
 title: tmpnam_s, _wtmpnam_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpnam_s
 - _wtmpnam_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpnam_s
 - _wtmpnam_s
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 8cdd3feb177ef44c5dad32563d09a0bb8c820b22
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 847df0d2369857d009c39b4dd61adce45094899c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500748"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946040"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -80,7 +83,7 @@ Ambas funciones devuelven 0 si se realizan correctamente o un número de error e
 |-|-|-|-|
 |*str*|*sizeInChars*|**Valor devuelto**|**Contenido de** *Str*|
 |**NULL**|any|**EINVAL**|no modificado|
-|not **null** (apunta a la memoria válida)|demasiado corto|**ERANGE**|no modificado|
+|Not **null** (apunta a la memoria válida)|demasiado corto|**ERANGE**|no modificado|
 
 Si *Str* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
 

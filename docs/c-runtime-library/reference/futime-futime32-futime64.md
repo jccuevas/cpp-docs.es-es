@@ -1,11 +1,11 @@
 ---
 title: _futime, _futime32, _futime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _futime64
 - _futime32
 - _futime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - futime
 - _futime
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: f21e394acdcc7fbf8a91c5450a4c04daa050db21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3de638f08882e2aae4743311730afcd888c43a60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332681"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956233"
 ---
-# <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
+# <a name="_futime-_futime32-_futime64"></a>_futime, _futime32, _futime64
 
 Define la hora de modificación de un archivo abierto.
 
@@ -70,13 +73,13 @@ Puntero a una estructura que contiene la nueva fecha de modificación.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. Si se produce un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EBADF**, que indica un descriptor de archivo no válido, o **EINVAL**, que indica un no válido parámetro.
+Si la operación se realiza correctamente, devuelve 0. Si se produce un error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y **errno** se establece en **EBADF**, lo que indica un descriptor de archivo no válido o **EINVAL**, que indica un parámetro no válido.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_futime** rutina establece la fecha de modificación y la hora de acceso en el archivo abierto asociado *fd*. **_futime** es idéntico al [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), salvo que su argumento es el descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo. El **_utimbuf** estructura contiene campos para la nueva fecha de modificación y la hora de acceso. Ambos campos deben contener valores válidos. **_utimbuf32** y **_utimbuf64** son idénticas a **_utimbuf** excepto para el uso de los tipos en tiempo de 32 bits y 64 bits, respectivamente. **_futime** y **_utimbuf** usan un tipo de tiempo de 64 bits y **_futime** es un comportamiento idéntico a **_futime64**. Si necesita forzar el comportamiento anterior, defina **_USE_32BIT_TIME_T**. Si lo hace esto hace que **_futime** sea un comportamiento idéntico a **_futime32** y hace que el **_utimbuf** estructura que se utiliza el tipo en tiempo de 32 bits, lo que equivale a **__utimbuf32**.
+La rutina **_futime** establece la fecha de modificación y la hora de acceso en el archivo abierto asociado a *FD*. **_futime** es idéntico a [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), salvo que su argumento es el descriptor de archivo de un archivo abierto, en lugar del nombre de un archivo o una ruta de acceso a un archivo. La estructura **_utimbuf** contiene campos para la nueva fecha de modificación y hora de acceso. Ambos campos deben contener valores válidos. **_utimbuf32** y **_utimbuf64** son idénticos a **_utimbuf** , salvo por el uso de los tipos de tiempo de 32 y 64 bits, respectivamente. **_futime** y **_utimbuf** usan un tipo de tiempo de 64 bits y **_futime** es idéntico en comportamiento a **_futime64**. Si necesita forzar el comportamiento anterior, defina **_USE_32BIT_TIME_T**. Esto hace que **_futime** sea idéntico en comportamiento a **_futime32** y hace que la estructura **_utimbuf** use el tipo de tiempo de 32, por lo que es equivalente a **__utimbuf32**.
 
-**_futime64**, que usa el **__utimbuf64** estructura, puede leer y modificar fechas de archivo hasta las 23:59:59, 31 de diciembre de 3000, UTC; mientras que una llamada a **_futime32** se produce un error si la fecha en el archivo es más adelante a las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para estas funciones.
+**_futime64**, que usa la estructura **__utimbuf64** , puede leer y modificar fechas de archivo hasta 23:59:59, 31 de diciembre de 3000, UTC; mientras que una llamada a **_futime32** produce un error si la fecha del archivo es posterior al 23:59:59 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para estas funciones.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -124,7 +127,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfutimecinput"></a>Entrada: crt_futime.c_input
+### <a name="input-crt_futimec_input"></a>Entrada: crt_futime.c_input
 
 ```Input
 Arbitrary file contents.

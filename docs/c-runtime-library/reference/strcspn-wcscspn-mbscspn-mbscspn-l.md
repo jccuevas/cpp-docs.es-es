@@ -1,12 +1,12 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcspn
 - _mbscspn
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353981"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940766"
 ---
-# <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
+# <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
 Devuelve el índice de la primera aparición en una cadena de un carácter que pertenece a un conjunto de caracteres.
 
 > [!IMPORTANT]
-> **_mbschr** y **_mbschr_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbschr** y **_mbschr_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -88,15 +91,15 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Estas funciones devuelven el índice del primer carácter en *str* que se encuentra en *strCharSet*. Si ninguno de los caracteres de *str* en *strCharSet*, a continuación, el valor devuelto es la longitud de *str*.
+Estas funciones devuelven el índice del primer carácter de *Str* que se encuentra en *strCharSet*. Si ninguno de los caracteres de *Str* está en *strCharSet*, el valor devuelto es la longitud de *Str*.
 
 No se reserva ningún valor devuelto para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-**wcscspn** y **_mbscspn** son versiones de caracteres anchos y caracteres multibyte de **strcspn**. Los argumentos de **wcscspn** son caracteres anchos cadenas; los de **_mbscspn** son cadenas de caracteres multibyte.
+**wcscspn** y **_mbscspn** son versiones de caracteres anchos y multibyte de **strcspn**. Los argumentos de **wcscspn** son cadenas de caracteres anchos; los de **_mbscspn** son cadenas de caracteres multibyte.
 
-**_mbscspn** valida sus parámetros. Si bien *str* o *strCharSet* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** a **EINVAL**. **strcspn** y **wcscspn** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
+**_mbscspn** valida sus parámetros. Si *Str* o *strCharSet* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** en **EINVAL**. **strcspn** y **wcscspn** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
 
 El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

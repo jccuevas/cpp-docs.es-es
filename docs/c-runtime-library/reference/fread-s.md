@@ -1,9 +1,9 @@
 ---
 title: fread_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fread_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376142"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956845"
 ---
-# <a name="freads"></a>fread_s
+# <a name="fread_s"></a>fread_s
 
 Lee datos desde una secuencia. Esta versión de [fread](fread.md) incluye mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -62,13 +65,13 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fread_s** devuelve el número de elementos (completos) que se leyeron en el búfer, que puede ser menor que *Count* si se produce un error de lectura o el final del archivo antes de que se alcance el recuento. Utilice la función **feof** o **ferror** para distinguir un error de una condición de final de archivo. Si *size* o *Count* es 0, **fread_s** devuelve 0 y el contenido del búfer no cambia. Si *Stream* o *buffer* es un puntero nulo, **fread_s** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve 0.
+**fread_s** devuelve el número de elementos (completos) que se leyeron en el búfer, que puede ser menor que *Count* si se produce un error de lectura o el final del archivo antes de que se alcance el *recuento* . Utilice la función **feof** o **ferror** para distinguir un error de una condición de final de archivo. Si *size* o *Count* es 0, **fread_s** devuelve 0 y el contenido del búfer no cambia. Si *Stream* o *buffer* es un puntero nulo, **fread_s** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve 0.
 
 Para obtener más información sobre códigos de error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La función **fread_s** lee hasta el *recuento* de elementos de *los bytes* del *flujo* de entrada y los almacena en el *búfer*.  El puntero de archivo asociado a la *secuencia* (si hay alguno) se incrementa según el número de bytes leídos realmente. Si la secuencia especificada se abre en modo de texto, los pares de retorno de carro y avance de línea se reemplazan por caracteres de avance de línea. Este reemplazo no tiene ningún efecto en el puntero de archivo ni en el valor devuelto. Si se produce un error, la posición del puntero de archivo es indeterminada. No se puede determinar el valor de un elemento leído parcialmente.
+La función **fread_s** lee hasta el *recuento* de elementos de los bytes del *flujo* de entrada *y los almacena* en el *búfer*.  El puntero de archivo asociado a la *secuencia* (si hay alguno) se incrementa según el número de bytes leídos realmente. Si la secuencia especificada se abre en modo de texto, los pares de retorno de carro y avance de línea se reemplazan por caracteres de avance de línea. Este reemplazo no tiene ningún efecto en el puntero de archivo ni en el valor devuelto. Si se produce un error, la posición del puntero de archivo es indeterminada. No se puede determinar el valor de un elemento leído parcialmente.
 
 Esta función bloquea otros subprocesos. Si necesita una versión que no sea de bloqueo, use **_fread_nolock**.
 
