@@ -1,10 +1,10 @@
 ---
 title: _chmod, _wchmod
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _chmod
 - _wchmod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chmod
 - _wchmod
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348477"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939199"
 ---
-# <a name="chmod-wchmod"></a>_chmod, _wchmod
+# <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
 Cambia la configuración de permisos de archivo.
 
@@ -57,23 +60,23 @@ Configuración de permisos del archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Estas funciones devuelven 0 si la configuración de permisos se ha modificado correctamente. Un valor devuelto de -1 indica un error. Si no se encontró el archivo especificado, **errno** está establecido en **ENOENT**; si un parámetro no es válido, **errno** está establecido en **EINVAL**.
+Estas funciones devuelven 0 si la configuración de permisos se ha modificado correctamente. Un valor devuelto de-1 indica un error. Si no se encuentra el archivo especificado, **errno** se establece en **ENOENT**; Si un parámetro no es válido, **errno** se establece en **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_chmod** función cambia la configuración de permisos del archivo especificado por *filename*. La configuración de permisos controla el acceso de lectura y escritura al archivo. La expresión de entero *pmode* contiene una o ambas de las siguientes constantes de manifiesto, definidas en sys\stat.
+La función **_chmod** cambia la configuración de permisos del archivo especificado por *filename*. La configuración de permisos controla el acceso de lectura y escritura al archivo. La expresión de entero *PMODE* contiene una o las dos constantes de manifiesto siguientes, definidas en SYS\Stat.h.
 
 | *pmode* | Significado |
 |-|-|
 | **\_S\_IREAD** | Solo se permite la lectura. |
 | **\_S\_IWRITE** | Escritura permitida. (De hecho, se permiten la lectura y escritura). |
-| **\_S\_IREAD** &#124; **\_S\_IWRITE** | Lectura y escritura permitidas. |
+| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | Lectura y escritura permitidas. |
 
-Cuando ambas constantes se proporcionan, se unen con el bit a bit o un operador (**\|**). Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Tenga en cuenta que todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** \| **_S_IWRITE** son equivalentes.
+Cuando se proporcionan ambas constantes, se unen con el operador bit a bit or ( **\|** ). Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Tenga en cuenta que todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** \| **_S_IWRITE** son equivalentes.
 
-**_wchmod** es una versión con caracteres anchos de **_chmod**; el *filename* argumento **_wchmod** es una cadena de caracteres anchos. **_wchmod** y **_chmod** se comportan exactamente igual.
+**_wchmod** es una versión con caracteres anchos de **_chmod**; el argumento *filename* para **_wchmod** es una cadena de caracteres anchos. **_wchmod** y **_chmod** se comportan de manera idéntica.
 
-Esta función valida sus parámetros. Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omitirá. Si *filename* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve -1.
+Esta función valida sus parámetros. Si *PMODE* no es una combinación de una de las constantes del manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omite. Si *filename* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve-1.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -1,9 +1,9 @@
 ---
 title: _realloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _realloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _realloc_dbg
 - realloc_dbg
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-ms.openlocfilehash: 9b30dfd6fbae9a4831ff53e7896aeb995657da03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58d12ed6f4b013996f3f59cba1b146b823adbee6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357751"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949514"
 ---
-# <a name="reallocdbg"></a>_realloc_dbg
+# <a name="_realloc_dbg"></a>_realloc_dbg
 
 Reasigna un bloque de memoria especificado en el montón moviendo o cambiando el tamaño del bloque (solo versión de depuración).
 
@@ -57,27 +60,27 @@ Puntero al bloque de memoria asignado previamente.
 Tamaño solicitado para el bloque reasignado (bytes).
 
 *blockType*<br/>
-Tipo solicitado para el bloque reasignado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
+Tipo solicitado para el bloque reasignado: _ **client_block** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de código fuente que solicitó el **realloc** operación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación **realloc** o **null**.
 
 *linenumber*<br/>
-Número de línea en el archivo de código fuente donde el **realloc** se solicitó la operación o **NULL**.
+Número de línea del archivo de código fuente donde se solicitó la operación **realloc** o **null**.
 
-El *filename* y *linenumber* parámetros solo están disponibles cuando **_realloc_dbg** se ha llamado explícitamente o [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) se ha definido la constante de preprocesador.
+Los parámetros *filename* y *lineNumber* solo están disponibles cuando se ha llamado a **_realloc_dbg** explícitamente o se ha definido la constante de preprocesador _ [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md) .
 
 ## <a name="return-value"></a>Valor devuelto
 
-Se completa correctamente, esta función devuelve un puntero a la parte del usuario del bloque de memoria reasignado, llama a la nueva función de controlador o devuelve **NULL**. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios más abajo. Para obtener más información sobre cómo se usa la nueva función de controlador, vea la función [realloc](realloc.md).
+Si se completa correctamente, esta función devuelve un puntero a la parte del usuario del bloque de memoria reasignado, llama a la nueva función de controlador o devuelve **null**. Para obtener una descripción completa del comportamiento de retorno, vea la sección de comentarios más abajo. Para obtener más información sobre cómo se usa la nueva función de controlador, vea la función [realloc](realloc.md).
 
 ## <a name="remarks"></a>Comentarios
 
-**_realloc_dbg** es una versión de depuración de la [realloc](realloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_realloc_dbg** se reduce a una llamada a **realloc**. Ambos **realloc** y **_realloc_dbg** reasignan un bloque de memoria del montón base, pero **_realloc_dbg** admite varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar un seguimiento de los tipos de asignación concretos, y *filename*/*linenumber* información para determinar el origen de solicitudes de asignación.
+**_realloc_dbg** es una versión de depuración de la función [realloc](realloc.md) . Cuando no se define [_ Debug](../../c-runtime-library/debug.md) , cada llamada a **_realloc_dbg** se reduce a una llamada a **realloc**. **Realloc** y **_realloc_dbg** reasignan un bloque de memoria en el montón base, pero **_realloc_dbg** admite varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque en Realice un seguimiento de los tipos de asignación específicos y la información de *nombre de archivo*/*lineNumber* para determinar el origen de las solicitudes de asignación.
 
-**_realloc_dbg** reasigna el bloque de memoria especificado con un poco más de espacio solicitado *newSize*. *newSize* podría ser mayor o menor que el tamaño del bloque de memoria asignado originalmente. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. La reasignación podría hacer que el bloque de memoria original se ponga en una ubicación distinta del montón y cambiar el tamaño del bloque de memoria. Si se mueve el bloque de memoria, el contenido del bloque original se sobrescribe.
+**_realloc_dbg** reasigna el bloque de memoria especificado con un poco más de espacio que el de la *NewSize*solicitada. *NewSize* puede ser mayor o menor que el tamaño del bloque de memoria asignado originalmente. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. La reasignación podría hacer que el bloque de memoria original se ponga en una ubicación distinta del montón y cambiar el tamaño del bloque de memoria. Si se mueve el bloque de memoria, el contenido del bloque original se sobrescribe.
 
-**_realloc_dbg** establece **errno** a **ENOMEM** si se produce un error en una asignación de memoria o si se supera la cantidad de memoria necesaria (incluida la sobrecarga ya mencionada) **_HEAP_ MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_realloc_dbg** establece **errno** en **ENOMEM** si se produce un error de asignación de memoria o si la cantidad de memoria necesaria (incluida la sobrecarga mencionada anteriormente) supera **_HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

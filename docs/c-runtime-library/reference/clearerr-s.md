@@ -1,9 +1,9 @@
 ---
 title: clearerr_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 03bdc533d3afa265be22ae3567fabe8e78f752a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342940"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939146"
 ---
-# <a name="clearerrs"></a>clearerr_s
+# <a name="clearerr_s"></a>clearerr_s
 
 Restablece el indicador de error de una secuencia. Se trata de una versión de [clearerr](clearerr.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -45,17 +48,17 @@ errno_t clearerr_s(
 ### <a name="parameters"></a>Parámetros
 
 *stream*<br/>
-Puntero a **archivo** estructura
+Puntero a la estructura de **archivo**
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si se realiza correctamente; **EINVAL** si *secuencia* es **NULL**.
+Cero si es correcto; **EINVAL** si *Stream* es **null**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **clearerr_s** función restablece el indicador de error y el indicador de fin de archivo para *secuencia*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama.
+La función **clearerr_s** restablece el indicador de error y el indicador de fin de archivo para el *flujo*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que se llame a **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**o [Rewind](rewind.md) .
 
-Si *secuencia* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+Si *Stream* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -113,7 +116,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Write error: Bad file descriptor

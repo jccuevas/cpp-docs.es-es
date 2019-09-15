@@ -1,10 +1,10 @@
 ---
 title: _fputc_nolock, _fputwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fputwc_nolock
 - _fputc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fputc_nolock
 - fputwc_nolock
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e49191dfd6e4d360a8dd3123d6a84320b4de8a08
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333136"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956949"
 ---
-# <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
+# <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock, _fputwc_nolock
 
 Escribe un carácter en un flujo sin bloquear el subproceso.
 
@@ -71,9 +74,9 @@ Cada una de estas funciones devuelve el carácter escrito. Para obtener informac
 
 ## <a name="remarks"></a>Comentarios
 
-**_fputc_nolock** y **_fputwc_nolock** son idénticas a **fputc** y **fputwc**, respectivamente, salvo que no están protegidas contra las interferencias otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_fputc_nolock** y **_fputwc_nolock** son idénticos a **fputc** y **fputwc**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
-Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_nolock** no admite actualmente la salida en un flujo UNICODE.
+Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_nolock** no admite actualmente la salida en un flujo Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -88,7 +91,7 @@ Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

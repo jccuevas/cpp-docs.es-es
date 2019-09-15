@@ -1,9 +1,9 @@
 ---
 title: fetestexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetestexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: ed75ab0ff13029f6ec10c1aafbcb7f7b23b46fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334170"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941007"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -52,9 +55,9 @@ Si se ejecuta correctamente, devuelve una máscara de bits que contiene una oper
 
 ## <a name="remarks"></a>Comentarios
 
-Use la función fetestexcept para determinar las excepciones que ha generado una operación de punto flotante. Use la *excepts* parámetro para especificar qué marcas de estado de excepción para probar. El **fetestexcept** función usa estas macros de excepción definidas en \<fenv.h > en *excepts* y el valor devuelto:
+Use la función fetestexcept para determinar las excepciones que ha generado una operación de punto flotante. Use el parámetro *excepts* para especificar qué marcas de estado de excepción se van a probar. La función **fetestexcept** usa estas macros de excepción definidas \<en fenv. h > en *excepto* en y el valor devuelto:
 
-|Macro de excepción|Descripción|
+|Macro de excepción|DESCRIPCIÓN|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Se ha producido un error de singularidad o de polo en una operación de punto flotante anterior; se ha creado un valor infinito.|
 |FE_INEXACT|Se ha forzado la función a redondear el resultado almacenado de una operación de punto flotante anterior.|
@@ -63,7 +66,7 @@ Use la función fetestexcept para determinar las excepciones que ha generado una
 |FE_UNDERFLOW|El resultado de una operación de punto flotante anterior era demasiado pequeño para representarlo con completa precisión; se ha creado un valor no normalizado.|
 |FE_ALLEXCEPT|Operación OR bit a bit de todas las excepciones de punto flotante admitidas.|
 
-Especificado *excepts* argumento debe ser 0, una de las macros de excepción de punto flotante admitidas o bit a bit OR de dos o más de las macros. El efecto de cualquier otro *excepts* el valor del argumento es indefinido.
+El argumento *excepts* especificado puede ser 0, una de las macros de excepción de punto flotante admitidas o la operación OR bit a bit de dos o más de las macros. El efecto de cualquier otro valor de argumento, *excepto* , es indefinido.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 

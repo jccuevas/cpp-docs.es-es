@@ -1,11 +1,11 @@
 ---
 title: modf, modff, modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156335"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951541"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -69,11 +72,11 @@ Esta función devuelve la parte fraccionaria con signo de *x*. No se devuelve ni
 
 ## <a name="remarks"></a>Comentarios
 
-El **modf** funciones desglosar el valor de punto flotante *x* en fracciones y partes de enteros, cada uno de los cuales tiene el mismo signo que *x*. La parte fraccionaria con signo de *x* se devuelve. La parte entera se almacena como un valor de punto flotante en *intptr*.
+Las funciones **MODF (** dividen el valor de punto flotante *x* en partes fraccionarias y enteros, cada uno de los cuales tiene el mismo signo que *x*. Se devuelve la parte fraccionaria con signo de *x* . La parte entera se almacena como un valor de punto flotante en *IntPtr*.
 
-**modf** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
+**MODF (** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **modf** que toman y devuelven **float** o **largo** **doble** parámetros. En un programa C, **modf** siempre toma dos valores double y devuelve un valor double.
+C++permite las sobrecargas, de modo que puede llamar a las sobrecargas de **MODF (** que toman y devuelven parámetros **float** o **Long** **Double** . En un programa de C, **MODF (** siempre toma dos valores double y devuelve un valor Double.
 
 ## <a name="requirements"></a>Requisitos
 
