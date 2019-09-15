@@ -1,11 +1,11 @@
 ---
 title: trunc, truncf, truncl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - trunc
 - truncf
 - truncl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trunc
 - truncf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268941"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946005"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -61,7 +64,7 @@ Valor que se va a truncar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve un valor entero de *x*redondeado a cero.
+Si se realiza correctamente, devuelve un valor entero de *x*, redondeado hacia cero.
 
 De lo contrario, es posible que devuelva uno de los siguientes:
 
@@ -69,13 +72,13 @@ De lo contrario, es posible que devuelva uno de los siguientes:
 |-----------|------------|
 |*x* = ±INFINITY|x|
 |*x* =  ±0|x|
-|*x* = NaN|NaN|
+|*x* = Nan|NaN|
 
 Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **trunc** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **trunc** siempre toma y devuelve un **doble**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **trunc** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **trunc** siempre toma y devuelve un **valor Double**.
 
 Dado que los valores de punto flotante más grandes son enteros exactos, esta función no se desborda por sí misma. Pero puede hacer que la función se desborde al devolver un valor en un tipo entero.
 
@@ -85,7 +88,7 @@ También se puede redondear a la baja mediante la conversión implícita de punt
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**trunc**, **truncf**, **truncl**|\<math.h>|\<cmath>|
+|**trunc**, **truncf (** , **truncl**|\<math.h>|\<cmath>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

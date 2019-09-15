@@ -1,9 +1,9 @@
 ---
-title: frexp, frexpf, frexpl
+title: frexp (, frexpf (, frexpl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - frexp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - frexp
 - _frexpl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332980"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956637"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
+# <a name="frexp-frexpf-frexpl"></a>frexp (, frexpf (, frexpl
 
 Obtiene la mantisa y el exponente de un número de punto flotante.
 
@@ -73,13 +76,13 @@ Puntero al exponente de entero almacenado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**frexp** devuelve la mantisa. Si *x* es 0, la función devuelve 0 para la mantisa y el exponente. Si *expptr* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve 0.
+**frexp (** devuelve la mantisa. Si *x* es 0, la función devuelve 0 para la mantisa y el exponente. Si *expptr* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve 0.
 
 ## <a name="remarks"></a>Comentarios
 
-El **frexp** función desglosa el valor de punto flotante (*x*) en una mantisa (*m*) y un exponente (*n*), de modo que absolutos valor de *m* es mayor o igual a 0,5 e inferior a 1,0, y *x* = *m* * 2<sup>*n*</sup>. El exponente de entero *n* se almacena en la ubicación señalada por *expptr*.
+La función **frexp (** divide el valor de punto flotante (*x*) en una mantisa (*m*) y un exponente (*n*), de modo que el valor absoluto de *m* sea mayor o igual que 0,5 y menor que 1,0 y *x*  =  *m* * 2<sup>*n*</sup>. El exponente entero *n* se almacena en la ubicación a la que señala *expptr*.
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **frexp**. En un programa C, **frexp** siempre toma un **doble** y un **int** puntero y devuelve un **doble**.
+C++permite las sobrecargas, de modo que puede llamar a las sobrecargas de **frexp (** . En un programa de C, **frexp (** siempre toma un **valor Double** y un puntero **int** y devuelve un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 

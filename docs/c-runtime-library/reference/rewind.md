@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357569"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949276"
 ---
 # <a name="rewind"></a>rewind
 
@@ -50,15 +53,15 @@ Puntero a la estructura **FILE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **rebobinar** función recoloca el puntero de archivo asociado con *secuencia* al principio del archivo. Una llamada a **rewind** es similar a
+La función **Rewind** cambia la posición del puntero de archivo asociado al *flujo* al principio del archivo. Una llamada a **rewind** es similar a
 
-**fseek (void) (** _secuencia_**, 0 L, SEEK_SET);**
+**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
 
-Sin embargo, a diferencia de [fseek](fseek-fseeki64.md), **rebobinar** borra los indicadores de error de la secuencia, así como el indicador de fin de archivo. Además, a diferencia de [fseek](fseek-fseeki64.md), **rebobinar** no devuelve un valor que indica si el puntero se movió correctamente.
+Sin embargo, a diferencia de [fseek](fseek-fseeki64.md), el **rebobinado** borra los indicadores de error de la secuencia, así como el indicador de fin de archivo. Además, a diferencia de [fseek](fseek-fseeki64.md), el **rebobinado** no devuelve un valor para indicar si el puntero se ha colocado correctamente.
 
-Para borrar el búfer del teclado, use **rebobinar** con el flujo **stdin**, que está asociado con el teclado de manera predeterminada.
+Para borrar el búfer del teclado, use el **rebobinado** con la secuencia **stdin**, que está asociada con el teclado de forma predeterminada.
 
-Si la secuencia es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** está establecido en **EINVAL**.
+Si Stream es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** se establece en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -107,7 +110,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 The values written are: 1 and -37

@@ -1,10 +1,10 @@
 ---
 title: wcstombs, _wcstombs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcstombs
 - _wcstombs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs
 - _wcstombs_l
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: b5ee2a0e5636e9c1d1f3fc204b2b6cbf8b733d45
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e4aa09ec8e6d97762d39e63aa05b0eb0cc159d17
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498980"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945123"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -92,7 +95,7 @@ Si **wcstombs** convierte correctamente la cadena multibyte, devuelve el número
 
 La función **wcstombs** convierte la cadena de caracteres anchos a la que apunta *wcstr* en los caracteres multibyte correspondientes y almacena los resultados en la matriz *mbstr* . El parámetro *Count* indica el número máximo de bytes que se pueden almacenar en la cadena de salida multibyte (es decir, el tamaño de *mbstr*). En general, no se conoce el número de bytes que se necesitarán al convertir una cadena de caracteres anchos. Algunos caracteres anchos necesitarán un solo byte de la cadena de salida; otros necesitarán dos. Si hay dos bytes en la cadena de salida multibyte para cada carácter ancho de la cadena de entrada (incluido el carácter ancho nulo), se garantiza que el resultado cabe.
 
-Si **wcstombs** detecta el carácter nulo de caracteres anchos (L ' \ 0 ') antes o cuando se produce el recuento, lo convierte en un 0 de 8 bits y se detiene. Por lo tanto, la cadena de caracteres multibyte en *mbstr* está terminada en NULL solo si **wcstombs** encuentra un carácter nulo de caracteres anchos durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs** es indefinido.
+Si **wcstombs** detecta el carácter nulo de caracteres anchos (L ' \ 0 ') antes o cuando se produce el *recuento* , lo convierte en un 0 de 8 bits y se detiene. Por lo tanto, la cadena de caracteres multibyte en *mbstr* está terminada en NULL solo si **wcstombs** encuentra un carácter nulo de caracteres anchos durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs** es indefinido.
 
 Si el argumento *mbstr* es **null**, **wcstombs** devuelve el tamaño necesario en bytes de la cadena de destino.
 

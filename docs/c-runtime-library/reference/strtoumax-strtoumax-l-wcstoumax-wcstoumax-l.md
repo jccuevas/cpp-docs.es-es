@@ -1,12 +1,12 @@
 ---
 title: strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstoumax_l
 - _strtoumax_l
 - wcstoumax
 - strtoumax
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstoumax
 - _tcstoumax
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wcstoumax_l function
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
-ms.openlocfilehash: c9c8ca79ed68b23586d9fef979bc8d47b72ca846
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ed09ad51e538f3964fea87fa55e410c79d3a5d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379173"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957690"
 ---
-# <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
+# <a name="strtoumax-_strtoumax_l-wcstoumax-_wcstoumax_l"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 
 Convierte las cadenas en un valor entero del tipo de entero sin signo compatible más grande.
 
@@ -87,19 +90,19 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**strtoumax** devuelve el valor convertido, si existe, o **UINTMAX_MAX** en caso de desbordamiento. **strtoumax** devuelve 0 si no se puede realizar ninguna conversión. **wcstoumax** devuelve valores de manera parecida a **strtoumax**. Para ambas funciones, **errno** está establecido en **ERANGE** si se produce desbordamiento o subdesbordamiento.
+**strtoumax** devuelve el valor convertido, si existe, o **UINTMAX_MAX** en caso de desbordamiento. **strtoumax** devuelve 0 si no se puede realizar ninguna conversión. **wcstoumax** devuelve valores de forma análoga a **strtoumax**. En ambas funciones, **errno** se establece en **ERANGE** si se produce desbordamiento o subdesbordamiento.
 
 Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones convierte la cadena de entrada *strSource* a un **uintmax_t** valor entero.
+Cada una de estas funciones convierte la cadena de entrada *strSource* en un valor entero de **uintmax_t** .
 
-**strtoumax** deja de leer la cadena *strSource* en el primer carácter que no se reconoce como parte de un número. Esto puede ser el carácter nulo final, o puede ser el primer carácter numérico que es mayor o igual a *base*. El **LC_NUMERIC** valor de la categoría de la configuración regional determina el reconocimiento del carácter base en *strSource*. Para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoumax** y **wcstoumax** usan la configuración regional actual. **_strtoumax_l** y **_wcstoumax_l** son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**strtoumax** deja de leer la cadena *strSource* en el primer carácter que no reconoce como parte de un número. Puede tratarse del carácter nulo final o puede ser el primer carácter numérico mayor o igual que *base*. El valor de la categoría **LC_NUMERIC** de la configuración regional determina el reconocimiento del carácter de base en *strSource*. Para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoumax** y **wcstoumax** usan la configuración regional actual; **_strtoumax_l** y **_wcstoumax_l** son idénticos, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación en la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación en la que apunta *endptr*.
+Si *endptr* no es **null**, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontraron dígitos válidos o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación a la que apunta *endptr*.
 
-La versión con caracteres anchos de **strtoumax** es **wcstoumax**; su *strSource* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+La versión con caracteres anchos de **strtoumax** es **wcstoumax**; su argumento *strSource* es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -108,11 +111,11 @@ La versión con caracteres anchos de **strtoumax** es **wcstoumax**; su *strSour
 |**_tcstoumax**|**strtoumax**|**strtoumax**|**wcstoumax**|
 |**_tcstoumax_l**|**strtoumax_l**|**_strtoumax_l**|**_wcstoumax_l**|
 
-**strtoumax** espera *strSource* para que apunte a una cadena de la forma siguiente:
+**strtoumax** espera que *strSource* señale a una cadena con el formato siguiente:
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*espacio en blanco*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [Letras de dígitos] **-**
 
-Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten. *dígitos* son uno o más dígitos decimales. *letras* son una o varias de las letras 'a' a 'z' (o 'A' a 'Z'). El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* está entre 2 y 36, se puede usar como base del número. Si *base* es 0, los caracteres iniciales de la cadena que se apunta a *strSource* se usan para determinar la base. Si el primer carácter es «0» y el segundo carácter no es «x» ni «X», la cadena se interpreta como un entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter examinado es "0", se supone un entero octal y un carácter "8" o "9" detendrían el análisis. **strtoumax** permite un signo más (**+**) o signo menos (**-**) prefijo; uno de los principales signo indica que el valor devuelto es el complemento de dos de los valor absoluto de la cadena convertida.
+Un espacio en *blanco* puede constar de caracteres de espacio y tabulación, que se omiten. los *dígitos* son uno o más dígitos decimales. las *Letras* son una o varias letras de la ' a ' a la ' z ' (o de la ' a ' a la ' z '). El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* se encuentra entre 2 y 36, se utiliza como base del número. Si *base* es 0, los caracteres iniciales de la cadena a la que apunta *strSource* se usan para determinar la base. Si el primer carácter es «0» y el segundo carácter no es «x» ni «X», la cadena se interpreta como un entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter examinado es "0", se supone un entero octal y un carácter "8" o "9" detenería el examen. **strtoumax** permite un prefijo de **+** signo más () o **-** signo menos (); un signo menos inicial indica que el valor devuelto es el complemento de dos del valor absoluto de la cadena convertida.
 
 ## <a name="requirements"></a>Requisitos
 

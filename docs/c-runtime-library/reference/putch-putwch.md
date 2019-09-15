@@ -1,10 +1,10 @@
 ---
 title: _putch, _putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358163"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950044"
 ---
-# <a name="putch-putwch"></a>_putch, _putwch
+# <a name="_putch-_putwch"></a>_putch, _putwch
 
 Escribe un carácter en la consola.
 
@@ -62,13 +65,13 @@ Carácter que se va a generar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve *c*. Si **_putch** produce un error, devuelve **EOF**; si **_putwch** produce un error, devuelve **WEOF**.
+Si la operación se realiza correctamente, devuelve *c*. Si **_putch** produce un error, devuelve **EOF**; Si **_putwch** produce un error, devuelve **WEOF**.
 
 ## <a name="remarks"></a>Comentarios
 
 Estas funciones escriben el carácter *c* directamente, sin almacenamiento en búfer, en la consola. En Windows NT, **_putwch** escribe caracteres Unicode mediante la configuración regional actual de la consola.
 
-Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Para obtener más información, consulte **_putch_nolock**, **_putwch_nolock**.
+Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Para obtener más información, vea **_putch_nolock**, **_putwch_nolock**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

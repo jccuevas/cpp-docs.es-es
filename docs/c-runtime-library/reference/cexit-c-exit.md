@@ -1,10 +1,10 @@
 ---
 title: _cexit, _c_exit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _c_exit
 - _cexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cexit
 - c_exit
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335495"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939251"
 ---
-# <a name="cexit-cexit"></a>_cexit, _c_exit
+# <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
 Realiza operaciones de limpieza y vuelve sin finalizar el proceso.
 
@@ -49,7 +52,7 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Comentarios
 
-El **_cexit** llamadas a funciones, en el último en orden salir (LIFO), las funciones registradas por **atexit** y **_onexit**. A continuación, **_cexit** vacía todos los búferes de E/S y cierra todas las secuencias abiertas antes de devolver. **_c_exit** es el mismo que **_exit** pero devuelve al proceso de llamada sin procesar **atexit** o **_onexit** ni vaciar los búferes de secuencia. El comportamiento de **salir**, **_exit**, **_cexit**, y **_c_exit** se muestra en la tabla siguiente.
+La función **_cexit** llama a, en orden LIFO (último en salir, primero en salir), las funciones registradas por **AtExit** y **_onexit**. Después, **_cexit** vacía todos los búferes de e/s y cierra todas las transmisiones abiertas antes de volver. **_c_exit** es igual que **_exit** , pero vuelve al proceso que realiza la llamada sin procesar **AtExit** ni **_onexit** ni vaciar los búferes de secuencia. En la tabla siguiente se muestra el comportamiento de **Exit**, **_exit**, **_cexit**y **_c_exit** .
 
 |Función|Comportamiento|
 |--------------|--------------|
@@ -58,7 +61,7 @@ El **_cexit** llamadas a funciones, en el último en orden salir (LIFO), las fun
 |**_cexit**|Realiza procedimientos completos de finalización de la biblioteca de C y vuelve al autor de la llamada, pero no finaliza el proceso.|
 |**_c_exit**|Realiza procedimientos rápidos de finalización de la biblioteca de C y vuelve al autor de la llamada, pero no finaliza el proceso.|
 
-Cuando se llama a la **_cexit** o **_c_exit** funciones, los destructores de ningún objeto temporal o automático que exista en el momento de la llamada no se llaman. Un objeto automático es el que se define en una función en la que el objeto no se declara como estático. Un objeto temporal es el que crea el compilador. Para destruir un objeto automático antes de llamar a **_cexit** o **_c_exit**explícitamente llama al destructor del objeto, como se indica a continuación:
+Cuando se llama a las funciones **_cexit** o **_c_exit** , no se llama a los destructores de ningún objeto temporal o automático que exista en el momento de la llamada. Un objeto automático es el que se define en una función en la que el objeto no se declara como estático. Un objeto temporal es el que crea el compilador. Para destruir un objeto automático antes de llamar a **_cexit** o **_c_exit**, llame explícitamente al destructor del objeto, como se indica a continuación:
 
 ```cpp
 myObject.myClass::~myClass( );

@@ -1,14 +1,14 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341722"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939603"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcula el arcotangente de **x** (**atan**, **atanf**, y **atanl**) o el arco tangente de **y** / **x** (**atan2**, **atan2f**, y **atan2l**).
+Calcula el arco tangente de **x** (**atan**, **atanf (** y **atanl**) o el arco tangente de **y**/**x** (**ATAN2**, **atan2f (** y **atan2l**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -76,9 +79,9 @@ Cualquier número.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**ATAN** devuelve el arco tangente de *x* en el intervalo de - π/2 a π/2 radianes. **ATAN2** devuelve el arco tangente de *y*/*x* en el intervalo - π a radianes π. Si *x* es 0, **atan** devuelve 0. Si ambos parámetros de **atan2** son 0, la función devuelve 0. Todos los resultados están en radianes.
+**atan** devuelve el arco tangente de *x* en el intervalo-π/2 a π/2 radianes. **ATAN2** devuelve el arco tangente de *y*/*x* en el intervalo-π a π radianes. Si *x* es 0, **atan** devuelve 0. Si ambos parámetros de **ATAN2** son 0, la función devuelve 0. Todos los resultados están en radianes.
 
-**ATAN2** utiliza los signos de los dos parámetros para determinar el cuadrante del valor devuelto.
+**ATAN2** utiliza los signos de ambos parámetros para determinar el cuadrante del valor devuelto.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
@@ -86,11 +89,11 @@ Cualquier número.
 
 ## <a name="remarks"></a>Comentarios
 
-El **atan** función calcula el arco tangente (función tangente inversa) de *x*. **ATAN2** calcula el arcotangente de *y*/*x* (si *x* es igual a 0, **atan2** devuelve π/2 si *y* es positivo, if - π/2 *y* es negativo o 0 si *y* es 0.)
+La función **atan** calcula el arcotangente (la función tangente inversa) de *x*. **ATAN2** calcula el arco tangente de *y*/*x* (si *x* es igual a 0, **ATAN2** devuelve π/2 Si *y* es positivo,-π/2 Si *y* es negativo, o 0 si *y* es 0).
 
-**ATAN** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**atan** tiene una implementación que usa las extensiones SIMD de streaming 2 (sse2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **atan** y **atan2** que toman **float** o **largo** **dobles**  argumentos. En un programa C, **atan** y **atan2** siempre toman **doble** argumentos y devuelven un **doble**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **atan** y **ATAN2** que toman argumentos de tipo **float** o **Long** **Double** . En un programa de C, **atan** y **ATAN2** siempre toman argumentos **dobles** y devuelven un valor **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

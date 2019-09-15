@@ -1,9 +1,9 @@
 ---
 title: ferror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ferror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ferror
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4efb1b01ac94f1cb2d28bffb1f09b594a0e71479
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334338"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941103"
 ---
 # <a name="ferror"></a>ferror
 
@@ -49,13 +52,13 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si no se ha producido ningún error en *secuencia*, **ferror** devuelve 0. De lo contrario, devuelve un valor distinto de cero. Si la secuencia es **NULL**, **ferror** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve 0.
+Si no se ha producido ningún error en la *secuencia*, **ferror** devuelve 0. De lo contrario, devuelve un valor distinto de cero. Si Stream es **null**, **ferror** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve 0.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **ferror** pruebas de rutina (se implementa como una función y como macro) de lectura o escritura de error en el archivo asociado *secuencia*. Si se ha producido un error, el indicador de error de la secuencia permanece establecido hasta que la secuencia se cierre o rebobine o hasta que **clearerr** se denomina en él.
+La rutina **ferror** (implementada como una función y como una macro) comprueba si hay un error de lectura o escritura en el archivo asociado a la *secuencia*. Si se ha producido un error, el indicador de error del flujo permanece establecido hasta que la secuencia se cierra o se rebobina, o hasta que se llama a **clearerr** en ella.
 
 ## <a name="requirements"></a>Requisitos
 

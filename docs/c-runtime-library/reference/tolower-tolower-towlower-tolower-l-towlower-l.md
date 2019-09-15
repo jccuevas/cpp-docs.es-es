@@ -1,13 +1,13 @@
 ---
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _totlower
 - tolower
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: f7d017235eddb19b08353dceb332a2721e7434aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155526"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957454"
 ---
-# <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+# <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
 Convierte un carácter a minúsculas.
 
@@ -86,13 +89,13 @@ Configuración regional que se va a usar para la traducción específica de conf
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas convierte una copia de *c* a minúsculas si la conversión es posible y devuelve el resultado. No se reserva ningún valor devuelto para indicar un error.
+Cada una de estas rutinas convierte una copia de *c* a minúsculas si la conversión es posible, y devuelve el resultado. No se reserva ningún valor devuelto para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas rutinas convierte una determinada letra mayúscula en una letra minúscula si es posible y pertinente. La conversión del tipo **towlower** es específico de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el **_l** sufijo usar el conjunto actual configuración regional. Las versiones de estas funciones que tienen el **_l** sufijo toman la configuración regional como parámetro y usarlo en lugar de establecida actualmente configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas rutinas convierte una determinada letra mayúscula en una letra minúscula si es posible y pertinente. La conversión de mayúsculas y minúsculas de **towlower** es específica de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el sufijo **_L** usan la configuración regional establecida actualmente. Las versiones de estas funciones que tienen el sufijo **_L** toman la configuración regional como parámetro y la usan en lugar de la configuración regional establecida en ese momento. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En orden para **_tolower** para proporcionar a los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [isupper](isupper-isupper-l-iswupper-iswupper-l.md) debe devolver cero.
+Para que **_tolower** proporcione los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [isupper](isupper-isupper-l-iswupper-iswupper-l.md) deben devolver un valor distinto de cero.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -102,7 +105,7 @@ En orden para **_tolower** para proporcionar a los resultados esperados, [__isas
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** y **_towlower_l** no tienen dependen de la configuración regional y no están diseñados para ser llamado directamente. Se proporcionan para uso interno **_totlower_l**.
+> **_tolower_l** y **_towlower_l** no tienen ninguna dependencia de la configuración regional y no están diseñados para llamarse directamente. Se proporcionan para uso interno de **_totlower_l**.
 
 ## <a name="requirements"></a>Requisitos
 
