@@ -27,7 +27,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457867"
 ---
-# <a name="basicostream-class"></a>basic_ostream (Clase)
+# <a name="basic_ostream-class"></a>basic_ostream (Clase)
 
 Esta clase de plantilla describe un objeto que controla la inserción de elementos y objetos codificados en un búfer de flujo con elementos `Elem`de tipo, también conocidos como [char_type](../standard-library/basic-ios-class.md#char_type), cuyos rasgos de caracteres están determinados por `Tr`la clase, también se conoce como [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
@@ -270,7 +270,7 @@ La función
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-[](../standard-library/ios-base-class.md#getloc)`(` [](../standard-library/basic-filebuf-class.md#open) **\<** convierte en un campo booleano y lo inserta llamando a use_facet < num_put Elem, OutIt > getloc). `_Val` [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Aquí, `OutIt` se define como [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, tr >** . La función devuelve **\*this**.
+convierte `_Val` en un campo booleano y lo inserta llamando a [use_facet](../standard-library/basic-filebuf-class.md#open) **<num_put\<Elem, OutIt>** `(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Aquí, `OutIt` se define como [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, tr >** . La función devuelve **\*this**.
 
 Las funciones
 
@@ -537,7 +537,7 @@ Referencia al objeto basic_ostream.
 
 ### <a name="remarks"></a>Comentarios
 
-La [función de salida sin formato](../standard-library/basic-ostream-class.md) inserta la secuencia de  elementos de recuento que comienzan en *Str*.
+La [función de salida sin formato](../standard-library/basic-ostream-class.md) inserta la secuencia de elementos de *recuento* que comienzan en *Str*.
 
 ### <a name="example"></a>Ejemplo
 

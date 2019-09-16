@@ -93,7 +93,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448695"
 ---
-# <a name="hashmultiset-class"></a>hash_multiset (Clase)
+# <a name="hash_multiset-class"></a>hash_multiset (Clase)
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_multiset](../standard-library/unordered-multiset-class.md).
@@ -138,7 +138,7 @@ En general, la elección del tipo de contenedor se debe tomar según el tipo de 
 
 La clase hash_multiset debe ser el contenedor asociativo preferido cuando la aplicación cumpla las condiciones que asocian los valores a sus claves. Los elementos de una clase hash_multiset pueden ser varios y actuar como sus propias claves de ordenación, por lo que las claves no son únicas. Un modelo para este tipo de estructura es una lista ordenada, por ejemplo, de palabras en las que las palabras pueden aparecer más de una vez. Si no se permitieran varias repeticiones de las palabras, la estructura de contenedor adecuada sería un hash_set. Si se asociaron definiciones únicas como valores a la lista de palabras clave únicas, la estructura adecuada para contener estos datos sería una clase hash_map. Si, por el contrario, las definiciones no son únicas, un hash_multimap sería el contenedor preferido.
 
-El objeto hash_multiset ordena la secuencia que controla mediante una llamada a un objeto traits hash almacenado de tipo [value_compare](#value_compare). Se puede obtener acceso a este objeto almacenado mediante una llamada a la función miembro [key_comp](#key_comp). Este tipo de objeto de función debe comportarse igual que un `hash_compare<Key, less<Key> >`objeto de clase. En concreto, para todos  los valores clave `Key`de tipo, `Trait(Key)` la llamada produce una distribución de valores de `size_t`tipo.
+El objeto hash_multiset ordena la secuencia que controla mediante una llamada a un objeto traits hash almacenado de tipo [value_compare](#value_compare). Se puede obtener acceso a este objeto almacenado mediante una llamada a la función miembro [key_comp](#key_comp). Este tipo de objeto de función debe comportarse igual que un `hash_compare<Key, less<Key> >`objeto de clase. En concreto, para todos los valores clave `Key`de tipo, `Trait(Key)` la llamada produce una distribución de valores de `size_t`tipo.
 
 En general, se debe poder comparar si los elementos son menores que otros para poder establecer este orden; de este modo, dados dos elementos cualesquiera, se puede determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. En un sentido más técnico, la función de comparación es un predicado binario que induce una ordenación débil estricta en el sentido matemático estándar. Un predicado binario *f*( *x*, *y*) es un objeto de función que tiene dos objetos de argumento x e y, y un valor devuelto de True o False. Una ordenación impuesta en un objeto hash_multiset es una ordenación débil estricta si el predicado binario es irreflexivo, antisimétrico y transitivo, y si la equivalencia es transitiva, donde dos objetos x e y se definen como equivalentes cuando tanto *f*( *x*, *y*) como *f*( *y*, *x*) son False. Si la condición más fuerte de igualdad entre las claves reemplaza la de equivalencia, la ordenación se convierte en total (en el sentido de que todos los elementos se ordenan entre sí) y las claves coincidentes serán indiscernibles unas de otras.
 
@@ -2376,7 +2376,7 @@ typedef key_compare value_compare;
 
 Para obtener más información sobre los *rasgos* , vea el tema sobre la [clase hash_multiset](../standard-library/hash-multiset-class.md) .
 
-Tenga en cuenta [](#key_compare) que key_compare `value_compare` y son sinónimos para el parámetro de plantilla *traits*. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
+Tenga en cuenta que [key_compare](#key_compare) y `value_compare` son sinónimos para el parámetro de plantilla *Traits*. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
 
 ### <a name="example"></a>Ejemplo
 

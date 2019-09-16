@@ -1,38 +1,38 @@
 ---
 title: _ReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _ReturnAddress
 helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a830ff1e8a2c9551dec52cf10a3d5cf126bde3b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390456"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218057"
 ---
-# <a name="returnaddress"></a>_ReturnAddress
+# <a name="_returnaddress"></a>_ReturnAddress
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
-El `_ReturnAddress` intrínseco proporciona la dirección de la instrucción en la función de llamada que se va a ejecutar después de que el control vuelve al llamador.
+El `_ReturnAddress` intrínseco proporciona la dirección de la instrucción de la función de llamada que se ejecutará después de que el control vuelva al autor de la llamada.
 
-Cree el siguiente programa y paso a través de él en el depurador. Paso a paso a través del programa, tenga en cuenta la dirección que se devuelve desde `_ReturnAddress`. A continuación, inmediatamente después de volver de la función donde `_ReturnAddress` se ha usado, abra el [Cómo: Utilice la ventana Desensamblado](/visualstudio/debugger/how-to-use-the-disassembly-window) y tenga en cuenta que la dirección de la siguiente instrucción que se ejecutará coincide con la dirección devuelta de `_ReturnAddress`.
+Compile el programa siguiente y recorra el código en el depurador. A medida que recorre el programa, tenga en cuenta la dirección que `_ReturnAddress`se devuelve de. Después, inmediatamente después de volver de la función `_ReturnAddress` en la que se usó [, abra el procedimiento: Utilice la ventana](/visualstudio/debugger/how-to-use-the-disassembly-window) desensamblado y observe que la dirección de la siguiente instrucción que se va a ejecutar coincide con `_ReturnAddress`la dirección devuelta por.
 
-Optimizaciones, como la inclusión entre líneas puede afectar a la dirección de retorno. Por ejemplo, si el programa de ejemplo siguiente se compila con [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` se inserten en la función de llamada, `main`. Por lo tanto, las llamadas a `_ReturnAddress` desde `inline_func` y `main` cada uno, se producirá el mismo valor.
+Las optimizaciones como la inclusión pueden afectar a la dirección de devolución. Por ejemplo, si el programa de ejemplo siguiente se compila con [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` se insertará en la función de llamada, `main`. Por lo tanto, las `_ReturnAddress` llamadas `inline_func` a `main` desde y producirán el mismo valor.
 
-Cuando `_ReturnAddress` se utiliza en un programa compilado con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la función que contiene el `_ReturnAddress` llamada se compilarán como una función nativa. Cuando se compila una función como administrado llama a la función que contiene `_ReturnAddress`, `_ReturnAddress` pueden no comportarse según lo previsto.
+Cuando `_ReturnAddress` se usa en un programa compilado con [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la función que contiene `_ReturnAddress` la llamada se compilará como una función nativa. Cuando una función compilada como llamadas administradas en `_ReturnAddress`la `_ReturnAddress` función que contiene, puede no tener el comportamiento esperado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // compiler_intrinsics__ReturnAddress.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -65,6 +65,6 @@ int main(void)
 
 ## <a name="see-also"></a>Vea también
 
-[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Palabras clave](../cpp/keywords-cpp.md)
