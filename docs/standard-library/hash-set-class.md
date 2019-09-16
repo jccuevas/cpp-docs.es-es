@@ -93,7 +93,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448580"
 ---
-# <a name="hashset-class"></a>hash_set (Clase)
+# <a name="hash_set-class"></a>hash_set (Clase)
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -229,9 +229,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>Comentarios
 
-`allocator_type`es un sinónimo del asignador de parámetros de plantilla.
+`allocator_type`es un sinónimo del *asignador*de parámetros de plantilla.
 
-Para obtener más información sobre allocator, consulte la sección Comentarios del tema [clase hash_set](../standard-library/hash-set-class.md) .
+Para obtener más información sobre *allocator*, consulte la sección Comentarios del tema [clase hash_set](../standard-library/hash-set-class.md) .
 
 ### <a name="example"></a>Ejemplo
 
@@ -1300,9 +1300,9 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El asignador utilizado por hash_set para administrar la memoria, que es el asignador de parámetros de plantilla.
+El asignador utilizado por hash_set para administrar la memoria, que es el *asignador*de parámetros de plantilla.
 
-Para obtener más información sobre allocator, consulte la sección Comentarios del tema [clase hash_set](../standard-library/hash-set-class.md) .
+Para obtener más información sobre *allocator*, consulte la sección Comentarios del tema [clase hash_set](../standard-library/hash-set-class.md) .
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2368,7 +2368,7 @@ typedef key_compare value_compare;
 
 Para obtener más información sobre los *rasgos* , vea el tema sobre la [clase hash_set](../standard-library/hash-set-class.md) .
 
-Tenga en cuenta [](#key_compare) que key_compare `value_compare` y son sinónimos para el parámetro de plantilla *traits*. Ambos tipos se proporcionan para las clases hash_set y hash_multiset, donde son idénticos, para la compatibilidad con las clases hash_map y hash_multimap, donde son distintos.
+Tenga en cuenta que [key_compare](#key_compare) y `value_compare` son sinónimos para el parámetro de plantilla *Traits*. Ambos tipos se proporcionan para las clases hash_set y hash_multiset, donde son idénticos, para la compatibilidad con las clases hash_map y hash_multimap, donde son distintos.
 
 ### <a name="example"></a>Ejemplo
 

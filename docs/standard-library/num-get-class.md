@@ -21,7 +21,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457642"
 ---
-# <a name="numget-class"></a>num_get (clase)
+# <a name="num_get-class"></a>num_get (clase)
 
 Una clase de plantilla que describe un objeto que puede actuar como una faceta de la configuración regional para controlar las conversiones de las secuencias de tipo `CharType` en valores numéricos.
 
@@ -199,7 +199,7 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-coincide con los elementos secuenciales a partir de `[first, last)` la *primera* de la secuencia hasta que reconoce un campo de entrada entero completo y que no esté vacío. Si se realiza correctamente, convierte este campo en su valor equivalente como tipo **Long**y almacena el resultado en *Val*. Devuelve un iterador que designa el primer elemento más allá del campo de entrada numérico. De lo contrario, la función no  almacena nada en `ios_base::failbit` Val `state`y establece en. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de un campo de entrada numérico entero válido. En cualquier caso, si el valor devuelto es igual a `last`, la función establece `ios_base::eofbit` en `state`.
+coincide con los elementos secuenciales a partir de `[first, last)` la *primera* de la secuencia hasta que reconoce un campo de entrada entero completo y que no esté vacío. Si se realiza correctamente, convierte este campo en su valor equivalente como tipo **Long**y almacena el resultado en *Val*. Devuelve un iterador que designa el primer elemento más allá del campo de entrada numérico. De lo contrario, la función no almacena nada en `ios_base::failbit` Val `state`y establece en. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de un campo de entrada numérico entero válido. En cualquier caso, si el valor devuelto es igual a `last`, la función establece `ios_base::eofbit` en `state`.
 
 El campo de entrada de entero se convierte con las mismas reglas usadas por las funciones de examen para buscar coincidencias y convertir una serie de elementos **Char** de un archivo. (Se supone que cada elemento **Char** se asigna a un elemento equivalente de tipo `Elem` mediante una asignación simple, uno a uno). La especificación de conversión de análisis equivalente se determina de la manera siguiente:
 
@@ -256,7 +256,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-se comporta igual que la primera, excepto que reemplaza una especificación de conversión de `ld` por `llu`. Si se realiza correctamente, convierte el campo de entrada numérico en un valor de tipo unsigned **Long Long** y almacena ese valor en *Val*.
+se comporta igual que la primera, excepto que reemplaza una especificación de conversión de `ld` por `llu`. Si se realiza correctamente, convierte el campo de entrada numérico en un valor de tipo **unsigned Long Long** y almacena ese valor en *Val*.
 
 La séptima función miembro virtual protegida:
 
@@ -437,11 +437,11 @@ El iterador después de que el valor se haya leído.
 
 Todas las funciones miembro devuelven [do_get](#do_get)( `first` `last` `_Iosbase`, `_State`, `val`).
 
-La primera función miembro virtual protegida intenta comparar los elementos secuenciales, empezando al principio de la secuencia [ `first`, `last`) hasta que reconoce un campo de entrada numérico entero completo y que no esté vacío. Si se realiza correctamente, convierte este campo en su valor equivalente como de tipo **Long** y almacena el resultado en *Val*. Devuelve un iterador que designa el primer elemento más allá del campo de entrada numérico. De lo contrario, la función no  almacena nada en `ios_base::failbit` Val y establece en _ *State*. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de un campo de entrada numérico entero válido. En cualquier caso, si el valor devuelto es igual a *Last*, la `ios_base::eofbit` función establece en *_State*.
+La primera función miembro virtual protegida intenta comparar los elementos secuenciales, empezando al principio de la secuencia [ `first`, `last`) hasta que reconoce un campo de entrada numérico entero completo y que no esté vacío. Si se realiza correctamente, convierte este campo en su valor equivalente como de tipo **Long** y almacena el resultado en *Val*. Devuelve un iterador que designa el primer elemento más allá del campo de entrada numérico. De lo contrario, la función no almacena nada en `ios_base::failbit` Val y establece en _ *State*. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de un campo de entrada numérico entero válido. En cualquier caso, si el valor devuelto es igual a *Last*, la `ios_base::eofbit` función establece en *_State*.
 
 El campo de entrada de entero se convierte con las mismas reglas usadas por las funciones de examen para buscar coincidencias y convertir una serie de elementos **Char** de un archivo. Se supone que cada elemento **Char** de este tipo se asigna a un elemento `CharType` equivalente de tipo mediante una asignación simple, uno a uno. La especificación de conversión de análisis equivalente se determina de la manera siguiente:
 
-- Si `iosbase`. [Flags](../standard-library/ios-base-class.md#flags) & Oct,`ios_base::basefield`la especificación[](../standard-library/ios-functions.md#oct)de conversión es .`lo` == `ios_base::`
+- Si `iosbase`. [Marca](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), la especificación de conversión es `lo`.
 
 - Si **iosbase. Flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la especificación de `lx`conversión es.
 

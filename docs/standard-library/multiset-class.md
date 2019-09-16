@@ -154,10 +154,10 @@ En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `s
 |Nombre de tipo|DESCRIPCIÓN|
 |-|-|
 |[allocator_type](#allocator_type)|Definición de tipos para la clase `allocator` del objeto `multiset`.|
-|[const_iterator](#const_iterator)|Definición de tipo para un iterador bidireccional que puede  leer un elemento const `multiset`en.|
+|[const_iterator](#const_iterator)|Definición de tipo para un iterador bidireccional que puede leer un elemento const `multiset`en.|
 |[const_pointer](#const_pointer)|Definición de tipo para un puntero a un elemento **const** en `multiset`un.|
 |[const_reference](#const_reference)|Definición de tipo para una referencia a un elemento **const** almacenado en `multiset` un para leer y realizar operaciones **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Definición de tipo para un iterador bidireccional que puede  leer cualquier elemento const `multiset`en.|
+|[const_reverse_iterator](#const_reverse_iterator)|Definición de tipo para un iterador bidireccional que puede leer cualquier elemento const `multiset`en.|
 |[difference_type](#difference_type)|Definición de tipos enteros con signo para el número de elementos de un `multiset` en un intervalo entre los elementos a los que apuntan los iteradores.|
 |[iterator](#iterator)|Definición de tipos para un iterador bidireccional que puede leer o modificar cualquier elemento de un `multiset`.|
 |[key_compare](#key_compare)|Definición de tipos para un objeto de función que puede comparar dos claves para determinar el orden relativo de dos elementos del `multiset`.|
@@ -2239,7 +2239,7 @@ typedef key_compare value_compare;
 
 `value_compare` es un sinónimo del parámetro de plantilla `Compare`.
 
-Tenga en cuenta [](#key_compare) que tanto `value_compare` key_compare como son sinónimos para el `Compare`parámetro de plantilla. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
+Tenga en cuenta que [key_compare](#key_compare) y `value_compare` son sinónimos para el parámetro de plantilla `Compare`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
 
 Para obtener más información sobre `Compare`, vea la sección Comentarios del tema [multiset (Clase)](../standard-library/multiset-class.md).
 
@@ -2259,7 +2259,7 @@ typedef Key value_type;
 
 `value_type` es un sinónimo del parámetro de plantilla `Key`.
 
-Tenga en cuenta [](#key_type) que tanto `value_type` key_type como son sinónimos para el `Key`parámetro de plantilla. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
+Tenga en cuenta que [key_type](#key_type) y `value_type` son sinónimos para el parámetro de plantilla `Key`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map y multimap, donde son distintos.
 
 Para obtener más información sobre `Key`, vea la sección Comentarios del tema.
 

@@ -23,7 +23,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459600"
 ---
-# <a name="basicfstream-class"></a>basic_fstream (Clase)
+# <a name="basic_fstream-class"></a>basic_fstream (Clase)
 
 Describe un objeto que controla la inserción y la extracción de elementos y objetos codificados mediante un búfer de flujo de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`.
 
@@ -138,9 +138,9 @@ La protección de apertura de archivo predeterminada, equivalente al parámetro 
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa la clase base mediante una llamada [](../standard-library/basic-iostream-class.md)a basic_iostream`sb`(), `sb` donde es el objeto almacenado de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **TR**>. También `sb` se inicializa llamando a \< `basic_filebuf` **Elem**, **TR**>.
+El primer constructor inicializa la clase base mediante una llamada a [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), donde `sb` es el objeto almacenado de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>. También `sb` se inicializa llamando a \< `basic_filebuf` **Elem**, **TR**>.
 
-El segundo y el tercer constructor inicializan la clase base al llamar a `basic_iostream`(**sb**). `sb` También se inicializa llamando a `basic_filebuf` \< **Elem**, **TR**> y, a continuación, a **SB.** [Open](../standard-library/basic-filebuf-class.md#open)(_ `_Mode` *filename*,). Si la última función devuelve un puntero nulo, el constructor llama [](../standard-library/basic-ios-class.md#setstate)a setstate`failbit`().
+El segundo y el tercer constructor inicializan la clase base al llamar a `basic_iostream`(**sb**). `sb` También se inicializa llamando a `basic_filebuf` \< **Elem**, **TR**> y, a continuación, a **SB.** [Open](../standard-library/basic-filebuf-class.md#open)(_ `_Mode` *filename*,). Si la última función devuelve un puntero nulo, el constructor llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 El cuarto constructor inicializa el objeto con el contenido de `right`, tratado como una referencia a un valor R.
 
@@ -221,7 +221,7 @@ La protección de apertura de archivo predeterminada, equivalente al parámetro 
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro llama a [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Si esa función devuelve un puntero nulo, la función llama [](../standard-library/basic-ios-class.md#setstate)a setstate `failbit`().
+La función miembro llama a [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Si esa función devuelve un puntero nulo, la función llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 ### <a name="example"></a>Ejemplo
 

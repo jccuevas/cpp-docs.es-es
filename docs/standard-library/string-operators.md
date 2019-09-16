@@ -820,7 +820,7 @@ Después de que la `_Istr`función extraiga. elementos [max_size](../standard-li
 
 - Después de que la función extraiga un elemento *ch* para el que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) es true, en cuyo caso el carácter se vuelve a poner.
 
-Si la función no extrae ningún elemento, [](../standard-library/basic-ios-class.md#setstate)llama a`ios_base::failbit`setstate (). En cualquier caso, llama a **istr**. **ancho**(0) y devuelve \* **this**.
+Si la función no extrae ningún elemento, llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). En cualquier caso, llama a **istr**. **ancho**(0) y devuelve \* **this**.
 
 ### <a name="example"></a>Ejemplo
 

@@ -21,56 +21,56 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ef79fc88604d565a942fdb0ae07d5fc5a2e0ebeb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344203"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509003"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Cambiar los estilos de una ventana creada por MFC
 
-En su versión de la `WinMain` función, MFC registra varias clases de ventana estándar para usted. Dado que normalmente no editar de MFC `WinMain`, que función no permite cambiar los estilos de ventana predeterminados MFC. En este artículo se explica cómo puede cambiar los estilos de esta clase de ventana registrada previamente en una aplicación existente.
+En su versión de la `WinMain` función, MFC registra varias clases de ventana estándar. Dado que normalmente no se editan `WinMain`las MFC, esta función no tiene la oportunidad de cambiar los estilos de ventana predeterminados de MFC. En este artículo se explica cómo puede cambiar los estilos de una clase de ventana previamente registrada en una aplicación existente.
 
-##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> Cambiar estilos en una nueva aplicación MFC
+##  <a name="_core_changing_styles_in_a_new_mfc_application"></a>Cambiar estilos en una nueva aplicación MFC
 
-Si usa Visual C++ 2.0 o posterior, puede cambiar los estilos de ventana predeterminado en el Asistente para la aplicación cuando se crea la aplicación. En la página de características de la interfaz de usuario del Asistente de aplicación, puede cambiar los estilos para la ventana de marco principal y las ventanas secundarias MDI. Para cualquier tipo de ventana, puede especificar su grosor del marco (grueso o fino) y ninguno de los siguientes:
+Si utiliza visual C++ 2,0 o una versión posterior, puede cambiar los estilos de ventana predeterminados en el Asistente para aplicaciones al crear la aplicación. En la página características de la interfaz de usuario del Asistente para aplicaciones, puede cambiar los estilos de la ventana de marco principal y las ventanas secundarias MDI. Para cualquier tipo de ventana, puede especificar el grosor del marco (grueso o fino) y cualquiera de los siguientes:
 
-- Determina si la ventana tiene controles minimizar o maximizar.
+- Indica si la ventana tiene los controles minimizar o maximizar.
 
-- Si la ventana aparece inicialmente minimizada, maximizada, o ninguno.
+- Indica si la ventana aparece inicialmente minimizada, maximizada o ninguna de ellas.
 
-Para las ventanas de marco principal, también puede especificar si la ventana tiene un menú de sistema. Ventanas secundarias MDI, puede especificar si la ventana admite paneles del divisor.
+En el caso de las ventanas de marco principal, también puede especificar si la ventana tiene un menú del sistema. En el caso de las ventanas secundarias MDI, puede especificar si la ventana admite paneles divisores.
 
-##  <a name="_core_changing_styles_in_an_existing_application"></a> Cambiar estilos en una aplicación existente
+##  <a name="_core_changing_styles_in_an_existing_application"></a>Cambiar estilos en una aplicación existente
 
-Si va a cambiar atributos de ventana en una aplicación existente, siga las instrucciones en el resto de este artículo en su lugar.
+Si va a cambiar los atributos de ventana en una aplicación existente, siga las instrucciones del resto de este artículo en su lugar.
 
-Para cambiar los atributos de ventana predeterminado utilizados por una aplicación de marco de trabajo creada con el Asistente para aplicaciones, reemplace la ventana [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) función miembro virtual. `PreCreateWindow` permite que una aplicación tenga acceso el proceso de creación normalmente se administra internamente por la [CDocTemplate](../mfc/reference/cdoctemplate-class.md) clase. Las llamadas de framework `PreCreateWindow` justo antes de crear la ventana. Modificando el [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estructura pasada a `PreCreateWindow`, la aplicación puede modificar los atributos utilizados para crear la ventana. Por ejemplo, para asegurarse de que una ventana no utiliza un título, utilice la siguiente operación bit a bit:
+Para cambiar los atributos de ventana predeterminados usados por una aplicación de marco creada con el Asistente para aplicaciones, invalide la función miembro virtual [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) de la ventana. `PreCreateWindow`permite a una aplicación tener acceso al proceso de creación que normalmente administra internamente la clase [CDocTemplate](../mfc/reference/cdoctemplate-class.md) . El marco de `PreCreateWindow` trabajo llama justo antes de crear la ventana. Al modificar la estructura [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) pasada a `PreCreateWindow`, la aplicación puede cambiar los atributos utilizados para crear la ventana. Por ejemplo, para asegurarse de que una ventana no usa un título, use la siguiente operación bit a bit:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
-El [CTRLBARS](../overview/visual-cpp-samples.md) aplicación de ejemplo demuestra esta técnica para cambiar los atributos de la ventana. Dependiendo de lo que la aplicación cambia en `PreCreateWindow`, puede ser necesario llamar a la implementación de la función de la clase base.
+La aplicación de ejemplo [CTRLBARS](../overview/visual-cpp-samples.md) demuestra esta técnica para cambiar los atributos de la ventana. En función de lo que cambie `PreCreateWindow`la aplicación, puede que sea necesario llamar a la implementación de la clase base de la función.
 
-En la siguiente explicación se trata el caso de SDI y [caso MDI](#_core_the_mdi_case).
+En el siguiente debate se tratan los casos SDI y [MDI](#_core_the_mdi_case).
 
-##  <a name="_core_the_sdi_case"></a> El caso de SDI
+##  <a name="_core_the_sdi_case"></a>El caso SDI
 
-En una aplicación de único documento (SDI) de la interfaz, el estilo de ventana predeterminado en el marco de trabajo es una combinación de la **WS_OVERLAPPEDWINDOW** y **FWS_ADDTOTITLE** estilos. **FWS_ADDTOTITLE** es un estilo específico de MFC que indica el marco de trabajo para agregar el título del documento para el título de la ventana. Para cambiar los atributos de ventana en una aplicación SDI, reemplace el `PreCreateWindow` función en la clase derivada de `CFrameWnd` (que los nombres del Asistente para aplicaciones `CMainFrame`). Por ejemplo:
+En una aplicación de interfaz de un único documento (SDI), el estilo de ventana predeterminado en el marco es una combinación de los estilos **WS_OVERLAPPEDWINDOW** y **FWS_ADDTOTITLE** . **FWS_ADDTOTITLE** es un estilo específico de MFC que indica al marco de trabajo que agregue el título del documento al título de la ventana. Para cambiar los atributos de ventana en una aplicación SDI, invalide la `PreCreateWindow` función en la clase derivada de `CFrameWnd` (que es `CMainFrame`el nombre del Asistente para aplicaciones). Por ejemplo:
 
 [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]
 
-Este código crea una ventana de marco principal sin botones Minimizar y maximizar y sin un borde de tamaño ajustable. Inicialmente, la ventana se centra en la pantalla.
+Este código crea una ventana de marco principal sin los botones minimizar y maximizar y sin un borde ajustable. La ventana se centra inicialmente en la pantalla.
 
-##  <a name="_core_the_mdi_case"></a> El caso MDI
+##  <a name="_core_the_mdi_case"></a>El caso de MDI
 
-Se requiere un poco más trabajo para cambiar el estilo de ventana de una ventana secundaria en una aplicación de múltiples documentos (MDI) de la interfaz. De forma predeterminada, una aplicación MDI creada con el Asistente para la aplicación usa el valor predeterminado [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) clase definida en MFC. Para cambiar el estilo de ventana de una ventana secundaria MDI, debe derivar una nueva clase de `CMDIChildWnd` y reemplace todas las referencias a `CMDIChildWnd` en el proyecto con referencias a la nueva clase. Probablemente, la única referencia a `CMDIChildWnd` en la aplicación se encuentra en la aplicación `InitInstance` función miembro.
+Se requiere un poco más de trabajo para cambiar el estilo de ventana de una ventana secundaria en una aplicación de interfaz de múltiples documentos (MDI). De forma predeterminada, una aplicación MDI creada con el Asistente para aplicaciones utiliza la clase [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) predeterminada definida en MFC. Para cambiar el estilo de ventana de una ventana secundaria MDI, debe derivar una nueva clase `CMDIChildWnd` de y reemplazar todas las `CMDIChildWnd` referencias a en el proyecto con referencias a la nueva clase. Lo más probable es que la única `CMDIChildWnd` referencia a en la aplicación se encuentre en la `InitInstance` función miembro de la aplicación.
 
-El estilo de ventana predeterminado utilizado en una aplicación MDI es una combinación de la **WS_CHILD**, **WS_OVERLAPPEDWINDOW**, y **FWS_ADDTOTITLE** estilos. Para cambiar los atributos de la ventana de las ventanas secundarias de una aplicación MDI, reemplace el [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) función en la clase derivada de `CMDIChildWnd`. Por ejemplo:
+El estilo de ventana predeterminado utilizado en una aplicación MDI es una combinación de los estilos **WS_CHILD**, **WS_OVERLAPPEDWINDOW**y **FWS_ADDTOTITLE** . Para cambiar los atributos de ventana de las ventanas secundarias de una aplicación MDI, invalide la función [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) en la clase derivada de `CMDIChildWnd`. Por ejemplo:
 
 [!code-cpp[NVC_MFCDocView#16](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]
 
-Este código crea el formulario secundario MDI windows sin un botón Maximizar.
+Este código crea ventanas secundarias MDI sin un botón maximizar.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -78,7 +78,7 @@ Este código crea el formulario secundario MDI windows sin un botón Maximizar.
 
 - [Estilos de ventana de marco](../mfc/frame-window-styles-cpp.md)
 
-- [Estilos de ventana](/windows/desktop/winmsg/window-styles)
+- [Estilos de ventana](/windows/win32/winmsg/window-styles)
 
 ## <a name="see-also"></a>Vea también
 

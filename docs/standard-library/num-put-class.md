@@ -21,7 +21,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457699"
 ---
-# <a name="numput-class"></a>num_put (Clase)
+# <a name="num_put-class"></a>num_put (Clase)
 
 Clase de plantilla que describe un objeto que puede actuar como una faceta de la configuración regional para controlar las conversiones de valores numéricos en secuencias de tipo `CharType`.
 
@@ -161,7 +161,7 @@ La primera función miembro virtual protegida genera elementos secuenciales a pa
 
 El campo de salida entero se genera mediante las mismas reglas utilizadas por las funciones de impresión para generar una serie de elementos **Char** en un archivo. Se supone que cada elemento char de este tipo se asigna a un elemento `CharType` equivalente de tipo mediante una asignación simple, uno a uno. Sin embargo `do_put` , cuando una función de impresión rellena un campo con espacios o con el dígito 0, en `fill`su lugar usa. La especificación de conversión de impresión equivalente se determina de la manera siguiente:
 
-- Si **iosbase**. [Flags](../standard-library/ios-base-class.md#flags) & Oct,`ios_base::basefield`la especificación[](../standard-library/ios-functions.md#oct)de conversión es .`lo` == `ios_base::`
+- Si **iosbase**. [Marca](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), la especificación de conversión es `lo`.
 
 - Si **iosbase. Flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), la especificación de `lx`conversión es.
 
@@ -171,7 +171,7 @@ Si **iosbase**. [width](../standard-library/ios-base-class.md#width) es distinto
 
 El relleno solo se produce si el número mínimo de elementos *N* necesarios para especificar el campo de salida es inferior a **iosbase**. [width](../standard-library/ios-base-class.md#width). Dicho relleno consta de una secuencia de copias de *N* - **bytes** de **relleno**. Después, el relleno se produce de la manera siguiente:
 
-- Si **iosbase**. **Flags** & left,`ios_base::adjustfield`se antepone la[](../standard-library/ios-functions.md#left)marca. **-**  == `ios_base::` (El relleno se produce después del texto generado).
+- Si **iosbase**. **flags** & `ios_base::adjustfield` == `ios_base::`[left](../standard-library/ios-functions.md#left), se antepone la marca **-** . (El relleno se produce después del texto generado).
 
 - Si **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), se antepone la marca **0**. (Para un campo de salida numérico, el relleno se produce donde las funciones de impresión rellenan con 0).
 
@@ -215,7 +215,7 @@ se comporta igual que la primera, excepto que produce un campo de salida de punt
 
 - Si **iosbase**. **marcas** & [fijas](../standard-library/ios-functions.md#fixed), la especificación de conversión es`lf`.`ios_base::floatfield` == `ios_base::`
 
-- Si **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), la especificación de conversión es `le`. Si **iosbase**. **Flags** & [](../standard-library/ios-functions.md#uppercase) `e` `E`Uppercase es distinto de cero, se reemplaza por.`ios_base::`
+- Si **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), la especificación de conversión es `le`. Si **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase) es distinto de cero, `e` se reemplaza por `E`.
 
 - De otro modo, la especificación de conversión es **lg**. Si **iosbase**. **Flags** & **ios_base:: Uppercase** es distinto de `g` cero, se `G`ha reemplazado por.
 
