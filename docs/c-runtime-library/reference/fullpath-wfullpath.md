@@ -1,10 +1,10 @@
 ---
 title: _fullpath, _wfullpath
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fullpath
 - _wfullpath
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfullpath
 - fullpath
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30e62716c496ebb1a39b53a420f372a6e743c2c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287647"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956270"
 ---
-# <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
+# <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
 Crea un nombre de ruta de acceso absoluta o completa para el nombre de ruta de acceso relativa especificado.
 
@@ -59,21 +62,21 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parámetros
 
 *absPath*<br/>
-Puntero a un búfer que contiene el nombre de ruta de acceso absoluta o completa, o **NULL**.
+Puntero a un búfer que contiene el nombre de la ruta de acceso absoluta o completa, o **null**.
 
 *relPath*<br/>
 Nombre de ruta de acceso relativa.
 
 *maxLength*<br/>
-Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Es esta longitud en bytes para **_fullpath** pero, en caracteres anchos (**wchar_t**) para **_wfullpath**.
+Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Esta longitud está en bytes para **_fullpath** , pero en caracteres anchos (**wchar_t**) para **_wfullpath**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un puntero a un búfer que contiene el nombre de ruta de acceso absoluta (*absPath*). Si se produce un error (por ejemplo, si el valor pasado en *relPath* incluye una letra de unidad que no es válido o no se encuentra, o si la longitud del nombre de ruta de acceso absoluta creado (*absPath*) es mayor que *maxLength*), la función devuelve **NULL**.
+Cada una de estas funciones devuelve un puntero a un búfer que contiene el nombre de ruta de acceso absoluta (*absPath*). Si se produce un error (por ejemplo, si el valor pasado en *relPath* incluye una letra de unidad que no es válida o no se puede encontrar, o si la longitud del nombre de ruta de acceso absoluta creado (*absPath*) es mayor que *MaxLength*), la función devuelve **Null**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fullpath** expande el nombre de ruta de acceso relativa en *relPath* a su ruta de acceso absoluta o completa y almacena este nombre en *absPath*. Si *absPath* es **NULL**, **malloc** se usa para asignar un búfer de longitud suficiente para contener el nombre de ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de **_makepath**, **_fullpath** puede usarse para obtener el nombre de ruta de acceso absoluta para rutas de acceso relativas (*relPath*) que incluyen ". /"o".. / "en sus nombres.
+La función **_fullpath** expande el nombre de la ruta de acceso relativa en *relPath* a su ruta de acceso completa o absoluta y almacena este nombre en *absPath*. Si *absPath* es **null**, se usa **malloc** para asignar un búfer de longitud suficiente para contener el nombre de la ruta de acceso. Es responsabilidad del autor de llamada liberar este búfer. Un nombre de ruta de acceso relativa especifica una ruta de acceso a otra ubicación desde la ubicación actual (como el directorio de trabajo actual: "."). Un nombre de ruta de acceso absoluta es la expansión de un nombre de ruta de acceso relativa que indica toda la ruta de acceso necesaria para llegar a la ubicación que se quiere desde la raíz del sistema de archivos. A diferencia de **_makepath**, **_fullpath** se puede usar para obtener el nombre de ruta de acceso absoluta para las rutas de acceso relativas (*relPath*) que incluyen "./" o ".. /"en sus nombres.
 
 Por ejemplo, para usar rutinas en tiempo de ejecución de C, la aplicación debe incluir los archivos de encabezado que contienen las declaraciones de las rutinas. Cada archivo de encabezado incluye una instrucción que hace referencia a la ubicación del archivo de forma relativa (desde el directorio de trabajo de la aplicación):
 
@@ -85,11 +88,11 @@ cuando la ruta de acceso absoluta (ubicación real del sistema de archivos) del 
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**_fullpath** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wfullpath** es una versión con caracteres anchos de **_fullpath**; los argumentos de cadena **_wfullpath** son cadenas de caracteres anchos. **_wfullpath** y **_fullpath** se comportan exactamente igual, salvo que **_wfullpath** no controla las cadenas de caracteres multibyte.
+**_fullpath** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wfullpath** es una versión con caracteres anchos de **_fullpath**; los argumentos de cadena de **_wfullpath** son cadenas de caracteres anchos. **_wfullpath** y **_fullpath** se comportan exactamente igual, salvo que **_wfullpath** no controla las cadenas de caracteres multibyte.
 
-Si **_DEBUG** y **_CRTDBG_MAP_ALLOC** se definen, las llamadas a **_fullpath** y **_wfullpath** se reemplazan por llamadas a **_fullpath_dbg** y **_wfullpath_dbg** para permitir que las asignaciones de memoria de depuración. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Si se define **_ Debug y _** **crtdbg_map_alloc** , las llamadas a **_fullpath** y **_wfullpath** se reemplazan por llamadas a **_fullpath_dbg** y **_wfullpath_dbg** para permitir la depuración de asignaciones de memoria. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
-Esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md)si *maxlen* es menor o igual que 0. Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **NULL**.
+Esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), si *Maxlen* es menor o igual que 0. Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **null**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -97,7 +100,7 @@ Esta función invoca al controlador de parámetros no válidos, como se describe
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-Si el *absPath* búfer es **NULL**, **_fullpath** llamadas [malloc](malloc.md) para asignar un búfer y omite la *maxLength*  argumento. Es responsabilidad del autor de la llamada desasignar este búfer (mediante [free](free.md)) según corresponda. Si el *relPath* argumento especifica una unidad de disco, el directorio actual de esta unidad se combina con la ruta de acceso.
+Si el búfer de *absPath* es **null**, **_fullpath** llama a [malloc](malloc.md) para asignar un búfer y omite el argumento *MaxLength* . Es responsabilidad del autor de la llamada desasignar este búfer (mediante [free](free.md)) según corresponda. Si el argumento *relPath* especifica una unidad de disco, el directorio actual de esta unidad se combina con la ruta de acceso.
 
 ## <a name="requirements"></a>Requisitos
 
