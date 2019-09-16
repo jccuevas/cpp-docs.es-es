@@ -35,13 +35,13 @@ de Dirección en la que se almacena el puntero VMCS.
 
 ## <a name="return-value"></a>Valor devuelto
 
-0,1
+0\
 La operación se realizó correctamente.
 
-dimensional
+1\
 Error en la operación con el estado extendido disponible en el `VM-instruction error field` de la VMCS actual.
 
-dos
+2\
 Error en la operación sin estado disponible.
 
 ## <a name="remarks"></a>Comentarios
