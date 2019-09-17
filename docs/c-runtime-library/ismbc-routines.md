@@ -1,7 +1,7 @@
 ---
 title: _ismbc (Rutinas)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -9,21 +9,24 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbc
 helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: dd187be93b5df0160686fe765f65c25e14800b75
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6dc14f269cafa8ccc343c5403ab0e23d319c71c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748689"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940163"
 ---
-# <a name="ismbc-routines"></a>_ismbc (Rutinas)
+# <a name="_ismbc-routines"></a>_ismbc (Rutinas)
 
 Cada rutina de **_ismbc** prueba si un carácter multibyte `c` dado cumple una condición determinada.
 

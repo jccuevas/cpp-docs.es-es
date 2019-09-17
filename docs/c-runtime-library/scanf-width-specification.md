@@ -1,25 +1,28 @@
 ---
 title: scanf (Especificación de ancho)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3b00996f3a17ab9298b1edba5a8e60826e19fdcc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743262"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957345"
 ---
 # <a name="scanf-width-specification"></a>scanf (Especificación de ancho)
 
@@ -79,13 +82,13 @@ Si utiliza una función no segura de la familia `scanf`, omita el parámetro de 
 
 ## <a name="reading-undelimited-strings"></a>Leer cadenas no delimitadas
 
-Para leer cadenas que no son delimitadas por caracteres de espacio en blanco, se puede sustituir un conjunto de caracteres entre corchetes (**[ ]**) por el carácter de tipo **s** (cadena). El conjunto de caracteres entre corchetes se conoce como cadena de control. El campo de entrada correspondiente se lee hasta el primer carácter que no aparece en la cadena de control. Si el primer carácter del conjunto es un símbolo de intercalación (**^**), se invierte el efecto: el campo de entrada se lee hasta el primer carácter que aparece en el resto del conjunto de caracteres.
+Para leer cadenas que no son delimitadas por caracteres de espacio en blanco, se puede sustituir un conjunto de caracteres entre corchetes ( **[ ]** ) por el carácter de tipo **s** (cadena). El conjunto de caracteres entre corchetes se conoce como cadena de control. El campo de entrada correspondiente se lee hasta el primer carácter que no aparece en la cadena de control. Si el primer carácter del conjunto es un símbolo de intercalación ( **^** ), se invierte el efecto: el campo de entrada se lee hasta el primer carácter que aparece en el resto del conjunto de caracteres.
 
-Tenga en cuenta que se interpreta que **%[a-z]** y **%[z-a]** son equivalentes a **%[abcde...z]**. Esta es una extensión común de la función `scanf`, pero tenga en cuenta que el estándar ANSI no la requiere.
+Tenga en cuenta que se interpreta que **%[a-z]** y **%[z-a]** son equivalentes a **%[abcde...z]** . Esta es una extensión común de la función `scanf`, pero tenga en cuenta que el estándar ANSI no la requiere.
 
 ## <a name="reading-unterminated-strings"></a>Leer cadenas sin terminar
 
-Para almacenar una cadena sin almacenar un carácter de terminación nulo ('\0'), use la especificación **%**<em>n</em>**c** donde *n* es un entero decimal. En este caso, el carácter de tipo **c** indica que el argumento es un puntero a una matriz de caracteres. Los siguientes caracteres *n* se leen desde el flujo de entrada en la ubicación especificada y no se anexa ningún carácter nulo ('\0'). Si no se especifica *n*, su valor predeterminado es 1.
+Para almacenar una cadena sin almacenar un carácter de terminación nulo ('\0'), use la especificación **%** <em>n</em>**c** donde *n* es un entero decimal. En este caso, el carácter de tipo **c** indica que el argumento es un puntero a una matriz de caracteres. Los siguientes caracteres *n* se leen desde el flujo de entrada en la ubicación especificada y no se anexa ningún carácter nulo ('\0'). Si no se especifica *n*, su valor predeterminado es 1.
 
 ## <a name="when-scanf-stops-reading-a-field"></a>Si scanf deja de leer un campo
 
