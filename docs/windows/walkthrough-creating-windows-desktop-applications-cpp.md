@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: f33365fffc9a4addb0f22a90b87f8a03fdf2c1a9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513737"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062069"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Tutorial: Crear una aplicación de escritorio de WindowsC++tradicional ()
 
@@ -20,7 +20,7 @@ En este tutorial se muestra cómo crear una aplicación de escritorio de Windows
 La API de Windows (también conocida como la API de Win32, la API del escritorio de Windows y Windows Classic API) es un marco basado en lenguaje C para crear aplicaciones de Windows. Ha estado en existencia desde la década de 1980 y se ha usado para crear aplicaciones de Windows durante décadas. Los marcos de trabajo más avanzados y más fáciles de programar se han creado sobre la API de Windows, como MFC, ATL y .NET Framework. Incluso el código más moderno para UWP y aplicaciones de la tienda C++escritas en/WinRT usa la API de Windows que se encuentra debajo. Para obtener más información acerca de la API de Windows, consulte índice de la [API de Windows](/windows/win32/apiindex/windows-api-list). Hay muchas maneras de crear aplicaciones de Windows, pero el proceso anterior fue el primero.
 
 > [!IMPORTANT]
-> Por motivos de brevedad, algunas instrucciones de código se omiten en el texto. La sección compilar [el código](#build-the-code) al final de este documento muestra el código completo.
+> Por motivos de brevedad, algunas instrucciones de código se omiten en el texto. La sección [compilar el código](#build-the-code) al final de este documento muestra el código completo.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -157,8 +157,8 @@ A continuación, aprenderá a crear el código para una aplicación de escritori
 
    ```cpp
    LRESULT CALLBACK WndProc(
-      _In_ HWND   hwnd,
-      _In_ UINT   uMsg,
+      _In_ HWND   hWnd,
+      _In_ UINT   message,
       _In_ WPARAM wParam,
       _In_ LPARAM lParam
    );
