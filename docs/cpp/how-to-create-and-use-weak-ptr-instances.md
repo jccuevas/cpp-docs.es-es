@@ -1,21 +1,21 @@
 ---
 title: Procedimiento Crear y usar instancias de weak_ptr
 ms.custom: how-to
-ms.date: 07/12/2018
+ms.date: 09/18/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e5d1b13d894a617ca514e26f14fde3f514540d34
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787090"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127174"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>Procedimiento Crear y usar instancias de weak_ptr
 
 A veces, un objeto debe almacenar una manera de tener acceso al objeto `shared_ptr` subyacente de un sin provocar que se incremente el recuento de referencias. Normalmente, esta situación se produce cuando hay referencias cíclicas `shared_ptr` entre instancias.
 
-El mejor diseño es evitar la propiedad compartida de los punteros siempre que sea posible. Sin embargo, si debe tener la propiedad compartida `shared_ptr` de las instancias, evite las referencias cíclicas entre ellas. Cuando las referencias cíclicas son inevitables, o incluso preferibles por alguna razón `weak_ptr` , use para dar a uno o varios propietarios una referencia débil a `shared_ptr`otro. Mediante el uso `weak_ptr`de, puede crear un `shared_ptr` que se una a un conjunto existente de instancias relacionadas, pero solo si el recurso de memoria subyacente todavía es válido. Una `weak_ptr` propiamente dicha no participa en el recuento de referencias y, por lo tanto, no puede impedir que el recuento de referencias pase a cero. Sin embargo, puede utilizar un `weak_ptr` para intentar obtener una nueva copia de con la `shared_ptr` que se inicializó. Si ya se ha eliminado la memoria, se `bad_weak_ptr` produce una excepción. Si la memoria sigue siendo válida, el nuevo puntero compartido incrementa el recuento de referencias y garantiza que la memoria será válida siempre y cuando la `shared_ptr` variable permanezca en el ámbito.
+El mejor diseño es evitar la propiedad compartida de los punteros siempre que sea posible. Sin embargo, si debe tener la propiedad compartida `shared_ptr` de las instancias, evite las referencias cíclicas entre ellas. Cuando las referencias cíclicas son inevitables, o incluso preferibles por alguna razón `weak_ptr` , use para dar a uno o varios propietarios una referencia débil a `shared_ptr`otro. Mediante el uso `weak_ptr`de, puede crear un `shared_ptr` que se una a un conjunto existente de instancias relacionadas, pero solo si el recurso de memoria subyacente todavía es válido. Una `weak_ptr` propiamente dicha no participa en el recuento de referencias y, por lo tanto, no puede impedir que el recuento de referencias pase a cero. Sin embargo, puede utilizar un `weak_ptr` para intentar obtener una nueva copia de con la `shared_ptr` que se inicializó. Si ya se ha eliminado la memoria, el `weak_ptr`operador bool de devuelve `false`. Si la memoria sigue siendo válida, el nuevo puntero compartido incrementa el recuento de referencias y garantiza que la memoria será válida siempre y cuando la `shared_ptr` variable permanezca en el ámbito.
 
 ## <a name="example"></a>Ejemplo
 
