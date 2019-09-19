@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 298d6a512b2863a326bda0670f33fe8f1bda0688
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0b4f24f50c78d9a079e2c7d0c8e3d3c5bfe952c2
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449407"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127211"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
@@ -54,7 +54,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 ## <a name="start-and-termination-functions"></a>Funciones de inicio y finalización
 
-|Función|DESCRIPCIÓN|
+|Función|Descripción|
 |-|-|
 |[_Exit](#_exit)|Finaliza el programa sin usar destructores ni funciones registradas.|
 |[abort](#abort)|Finaliza el programa sin usar destructores.|
@@ -98,7 +98,7 @@ Cero si el registro se realiza correctamente, distinto de cero si se produce un 
 
 #### <a name="remarks"></a>Comentarios
 
-Las `at_quick_exit()` funciones registran la función a la que apunta *FUNC* para que se llame `quick_exit` sin argumentos cuando se llama a. No se especifica si una llamada a `at_quick_exit()` no se produce antes de que todas las llamadas a `quick_exit` se realicen correctamente y que las `at_quick_exit()` funciones no presenten una carrera de datos. El orden de registro puede ser indeterminado `at_quick_exit` si se llamó desde más de un subproceso `at_quick_exit` y, dado que los registros `atexit` son distintos de los registros, es posible que las aplicaciones necesiten llamar a ambas funciones de registro con el mismo argumento. La implementación de debe admitir el registro de al menos 32 funciones.
+Las `at_quick_exit()` funciones registran una función *FUNC*, a la que se llama `quick_exit` sin argumentos cuando se llama a. Una llamada a `at_quick_exit()` no se produce antes de que todas `quick_exit` las llamadas a no se realicen correctamente. Las `at_quick_exit()` funciones no presentan una carrera de datos. El orden de registro puede ser indeterminado `at_quick_exit` si se llamó desde más de un subproceso. Dado `at_quick_exit` que los registros son distintos de `atexit` los registros, es posible que las aplicaciones necesiten llamar a ambas funciones de registro con el mismo argumento. MSVC admite el registro de al menos 32 funciones.
 
 ### <a name="atexit"></a>AtExit
 
@@ -109,7 +109,7 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>Comentarios
 
-Las `atexit()` funciones registran la función a la que apunta *FUNC* para que se llame sin argumentos en la finalización del programa normal. No se especifica si una llamada a `atexit()` no se produce antes de que una llamada a `exit()` se realice correctamente `atexit()` y las funciones no presenten una carrera de datos. La implementación de debe admitir el registro de al menos 32 funciones.
+Las `atexit()` funciones registran la función a la que apunta *FUNC* para que se llame sin argumentos en la finalización del programa normal. Una llamada a `atexit()` que no se produce antes de que `exit()` una llamada a no se realice correctamente. Las `atexit()` funciones no presentan una carrera de datos.
 
 #### <a name="return-value"></a>Valor devuelto
 
@@ -125,11 +125,11 @@ Devuelve cero si el registro se realiza correctamente y es distinto de cero si s
 
 En primer lugar, se destruyen los objetos con duración de almacenamiento de subprocesos y asociados al subproceso actual.
 
-A continuación, se destruyen los objetos con duración de almacenamiento estática y `atexit` se llama a las funciones registradas mediante una llamada a. Los objetos automáticos no se destruyen como `exit()`resultado de una llamada a. Si el control deja una función registrada a `exit` la que llama porque la función no proporciona un controlador para una `std::terminate()` excepción iniciada, se llamará a. Se llama a una función cada vez que se registra. Los objetos con la duración de almacenamiento automática se destruyen en un programa cuya función Main no contiene ningún objeto automático y ejecuta `exit()`la llamada a. El control se puede transferir directamente a esta función principal iniciando una excepción que se detecta en Main.
+A continuación, se destruyen los objetos con duración de almacenamiento estática y `atexit` se llama a las funciones registradas mediante una llamada a. Los objetos automáticos no `exit()` se destruyen cuando se llama a. Si el control deja una función registrada llamada `exit` por porque la función no proporciona un controlador para una excepción iniciada, `std::terminate()` se llama a. Una función se llama una vez para cada vez que se registra. Los objetos con la duración de almacenamiento automática se destruyen en `main` un programa cuya función no contiene ningún objeto automático y ejecuta `exit()`la llamada a. El control se puede transferir directamente a esta `main` función mediante la generación de una excepción que se `main`detecta en.
 
-A continuación, se vacían todas las secuencias de c abiertas (como las correcciones <cstdio>de las firmas de función declaradas en) con datos almacenados en búfer no escritos, se cierran todas las secuencias `tmpfile()` de c abiertas y se quitan todos los archivos creados mediante una llamada.
+A continuación, se vacían todas las secuencias de C abiertas (como las correcciones \<de las firmas de función declaradas en cstdio >) con datos almacenados en búfer no escritos, se cierran todas las secuencias `tmpfile()` de c abiertas y se quitan todos los archivos creados mediante una llamada.
 
-Por último, se devuelve el control al entorno de host. Si status es cero o EXIT_SUCCESS, se devuelve un formulario definido por la implementación de la finalización correcta de status. Si el estado es EXIT_FAILURE, se devuelve un formulario definido por la implementación de la terminación de estado incorrecto. De lo contrario, el estado devuelto es definido por la implementación.
+Por último, se devuelve el control al entorno de host. Cuando *status* es cero o EXIT_SUCCESS, se devuelve un formulario definido por la implementación de la finalización correcta de status. MSVC devuelve un valor de cero. Si *status* es EXIT_FAILURE, MSVC devuelve un valor de 3. De lo contrario, MSVC devuelve el valor del parámetro *status* .
 
 ### <a name="getenv"></a>getenv
 
@@ -145,7 +145,7 @@ char* getenv(const char* name);
 
 #### <a name="remarks"></a>Comentarios
 
-Las funciones registradas por `at_quick_exit` las llamadas a se llaman en el orden inverso a su registro, con la excepción de que se llamará a una función después de las funciones registradas previamente que ya se hayan llamado en el momento en que se registró. Los objetos no se destruirán como resultado de llamar `quick_exit`a. Si el control deja una función registrada a `quick_exit` la que llama porque la función no proporciona un controlador para una `std::terminate()` excepción iniciada, se llamará a. Una función registrada mediante `at_quick_exit` se invoca mediante el subproceso que llama `quick_exit`a, que puede ser un subproceso diferente al que lo registró, por lo que las funciones registradas no deben confiar en la identidad de los objetos con duración de almacenamiento de subprocesos. Después de llamar a las `quick_exit` funciones registradas, debe llamar a. `_Exit(status)` No se vacían los búferes de archivo estándar. La función `quick_exit` es segura para señales cuando las funciones registradas `at_quick_exit` con son.
+Por lo general, las funciones registradas por llamadas a `at_quick_exit` se llaman en el orden inverso a su registro. Este orden no se aplica a las funciones registradas después de que ya se haya llamado a otras funciones registradas. No se destruye ningún objeto `quick_exit` cuando se llama a. Si el control deja una función registrada llamada `quick_exit` por porque la función no proporciona un controlador para una excepción iniciada, `std::terminate()` se llama a. Una función registrada mediante `at_quick_exit` se invoca mediante el subproceso que llama `quick_exit`a, que puede ser un subproceso diferente al que lo registró. Esto significa que las funciones registradas no deben confiar en la identidad de los objetos que tienen una duración de almacenamiento de subprocesos. Después de llamar a las `quick_exit` funciones `_Exit(status)`registradas, llama a. No se vacían los búferes de archivo estándar. La función `quick_exit` es segura para señales cuando las funciones registradas `at_quick_exit` con son.
 
 ### <a name="system"></a>integrado
 
@@ -156,11 +156,20 @@ int system(const char* string);
 ## <a name="memory-allocation-functions"></a>Funciones de asignación de memoria
 
 ```cpp
-void* aligned_alloc(size_t alignment, size_t size);
+// void* aligned_alloc(size_t alignment, size_t size); // Unsupported in MSVC
 void* calloc(size_t nmemb, size_t size);
 void free(void* ptr);
 void* malloc(size_t size);
 void* realloc(void* ptr, size_t size);
+```
+
+### <a name="remarks"></a>Comentarios
+
+Estas funciones tienen la semántica especificada en la biblioteca estándar de C. MSVC no admite la `aligned_alloc` función. C11 especificado `aligned_alloc()` de una manera que es incompatible con la implementación de Microsoft `free()`de, concretamente, `free()` que debe ser capaz de administrar asignaciones muy alineadas.
+
+## <a name="numeric-string-conversions"></a>Conversiones de cadenas numéricas
+
+```cpp
 double atof(const char* nptr);
 int atoi(const char* nptr);
 long int atol(const char* nptr);
@@ -174,11 +183,11 @@ unsigned long int strtoul(const char* nptr, char** endptr, int base);
 unsigned long long int strtoull(const char* nptr, char** endptr, int base);
 ```
 
-#### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Comentarios
 
 Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
 
-##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Funciones de conversión de caracteres y cadenas multibyte/ancho
+## <a name="multibyte--wide-string-and-character-conversion-functions"></a>Funciones de conversión de caracteres y cadenas multibyte/ancho
 
 ```cpp
 int mblen(const char* s, size_t n);
@@ -227,6 +236,15 @@ double abs(double j);
 long double abs(long double j);
 long int labs(long int j);
 long long int llabs(long long int j);
+```
+
+### <a name="remarks"></a>Comentarios
+
+Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
+
+## <a name="integer-division"></a>División de enteros
+
+```cpp
 div_t div(int numer, int denom);
 ldiv_t div(long int numer, long int denom);
 lldiv_t div(long long int numer, long long int denom);
@@ -237,17 +255,6 @@ lldiv_t lldiv(long long int numer, long long int denom);
 ### <a name="remarks"></a>Comentarios
 
 Estas funciones tienen la semántica especificada en la biblioteca estándar de C.
-
-## <a name="functions"></a>Funciones
-
-```cpp
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-c-compare-pred * compar);
-void* bsearch(const void* key, const void* base, size_t nmemb, size_t size,
-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, c-compare-pred * compar);
-void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
-```
 
 ## <a name="see-also"></a>Vea también
 

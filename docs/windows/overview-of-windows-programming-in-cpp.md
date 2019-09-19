@@ -1,13 +1,13 @@
 ---
 title: Información general de la programación para Windows en C++
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514794"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127194"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -17,7 +17,7 @@ En esta sección se describe cómo usar Visual Studio y las bibliotecas contened
 
 ## <a name="command-line-console-applications"></a>Aplicaciones de línea de comandos (consola)
 
-Las aplicaciones de consola de C++ se ejecutan desde la línea de comandos en una ventana de consola y solo pueden mostrar la salida de texto. Para obtener más información, consulte [Aplicaciones de consola](console-applications-in-visual-cpp.md).
+Las aplicaciones de consola de C++ se ejecutan desde la línea de comandos en una ventana de consola y solo pueden mostrar la salida de texto. Para obtener más información, vea [crear C++ un proyecto de aplicación de consola](../get-started/tutorial-console-cpp.md).
 
 ## <a name="native-desktop-client-applications"></a>Aplicaciones cliente de escritorio nativo
 
@@ -96,7 +96,7 @@ Otras plataformas como Xbox y Azure cuentan con sus propios SDK que puede que te
 Visual Studio incluye un depurador eficaz de código nativo, herramientas de análisis estático, herramientas de depuración de gráficos, un editor de código completo, compatibilidad con pruebas unitarias, y muchas otras herramientas y utilidades. Para obtener más información, vea Introducción al desarrollo [con Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)e información [General C++ sobre el desarrollo en Visual Studio](../overview/overview-of-cpp-development.md).
 
 ## <a name="in-this-section"></a>En esta sección
-|Title|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Tutorial: Creación de un programa de C++ estándar](walkthrough-creating-a-standard-cpp-program-cpp.md)| Cree una aplicación de consola de Windows.|
 |[Tutorial: Crear aplicaciones de escritorio de Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Cree una aplicación de escritorio de Windows nativa.|
@@ -110,12 +110,12 @@ Visual Studio incluye un depurador eficaz de código nativo, herramientas de an�
 |[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[Trabajo con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, tablas de cadenas y otros recursos a una aplicación de escritorio.|
 |[Recursos para crear un juego con DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Vínculos a contenido para crear juegos en C++.|
-|[Procedimientos: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
+|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
 |[Implementación de aplicaciones de escritorio nativas](deploying-native-desktop-applications-visual-cpp.md)|Implementar aplicaciones nativas en Windows.|
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Título|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[C++ en Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Tema primario del contenido C++ del desarrollador visual.|
 [Desarrollo de .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Cree contenedores para bibliotecas nativas C++ que permitan la comunicación con aplicaciones y componentes de .net.|
