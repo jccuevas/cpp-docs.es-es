@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907659"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095869"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Agregar un controlador de mensajes MFC
 
-Puede usar el [Asistente para clases](mfc-class-wizard.md) o la ventana **propiedades** de la **vista de clases** para agregar un controlador de mensajes (una función miembro que controla los mensajes de Windows) a una clase y asignar los mensajes de Windows al controlador de mensajes. También puede agregar [un controlador de eventos para cualquier control de cuadro de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md). 
+Puede usar el [Asistente para clases](mfc-class-wizard.md) o la ventana **propiedades** de la **vista de clases** para agregar un controlador de mensajes (una función miembro que controla los mensajes de Windows) a una clase y asignar los mensajes de Windows al controlador de mensajes. También puede agregar [un controlador de eventos para cualquier control de cuadro de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md).
 
 Mediante el **Asistente para clases** o la ventana **propiedades** (en **vista de clases**) para definir funciones de control de mensajes y eventos, puede actualizar automáticamente la tabla de envío de mensajes (o mapa de mensajes) y el archivo de encabezado de clase.
 

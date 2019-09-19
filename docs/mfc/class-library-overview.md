@@ -1,6 +1,6 @@
 ---
 title: Información general de la biblioteca de clases
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - vc.classes.mfc
 helpviewer_keywords:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23097c0bf3399a4dced6640f41c0d46dba101b26
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327319"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095953"
 ---
 # <a name="class-library-overview"></a>Información general de la biblioteca de clases
 
-Esta información general clasifica y describe las clases en la versión 9.0 de Microsoft Foundation clase biblioteca (MFC). Las clases de MFC, tomadas juntas, constituyen un marco de aplicación, el marco de trabajo de una aplicación escrita para la API de Windows. La tarea de programación consiste en rellenar en el código que es específico de la aplicación.
+En esta información general se clasifican y describen las clases de la versión 9,0 de biblioteca MFC (MFC). Las clases de MFC, tomadas juntas, constituyen un marco de trabajo de la aplicación, el marco de una aplicación escrita para la API de Windows. La tarea de programación consiste en rellenar el código específico de la aplicación.
 
-Las clases de biblioteca se muestran aquí en las siguientes categorías:
+Las clases de la biblioteca se presentan aquí en las siguientes categorías:
 
 - [Clase raíz: CObject](../mfc/root-class-cobject.md)
 
@@ -71,7 +71,7 @@ Las clases de biblioteca se muestran aquí en las siguientes categorías:
 
 - [Clases de archivo y de base de datos](../mfc/file-and-database-classes.md)
 
-   - [Clases de E/S de archivos](../mfc/file-i-o-classes.md)
+   - [Clases de e/s de archivos](../mfc/file-i-o-classes.md)
 
    - [Clases de DAO](../mfc/dao-classes.md)
 
@@ -109,13 +109,13 @@ Las clases de biblioteca se muestran aquí en las siguientes categorías:
 
    - [Clases de excepciones](../mfc/exception-classes.md)
 
-La sección [General filosofía de diseño de clase](../mfc/general-class-design-philosophy.md) explica cómo se diseñó la biblioteca MFC.
+La sección de [diseño de clases generales](../mfc/general-class-design-philosophy.md) explica cómo se diseñó la biblioteca MFC.
 
-Para obtener información general de framework, vea [utilizando las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Algunas de las clases enumeradas anteriormente son clases de propósito general que pueden utilizarse fuera el marco de trabajo y proporcionan abstracciones útiles como colecciones, excepciones, archivos y cadenas.
+Para obtener información general sobre el marco de trabajo, vea [usar las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Algunas de las clases enumeradas anteriormente son clases de uso general que se pueden usar fuera del marco de trabajo y proporcionan abstracciones útiles como colecciones, excepciones, archivos y cadenas.
 
-Para ver la herencia de una clase, use la [gráfico de jerarquías de clase](../mfc/hierarchy-chart.md).
+Para ver la herencia de una clase, use el [gráfico de jerarquía de clases](../mfc/hierarchy-chart.md).
 
-Además de las clases enumeradas en esta información general, la biblioteca MFC contiene un número de funciones globales, variables globales y macros. Hay una visión general y una lista detallada de estos en el tema [globales y Macros de MFC](../mfc/reference/mfc-macros-and-globals.md), que sigue la referencia alfabética de las clases MFC.
+Además de las clases enumeradas en esta información general, la biblioteca MFC contiene una serie de funciones globales, variables globales y macros. Encontrará información general y una lista detallada de estos temas en el tema [macros y globales de MFC](../mfc/reference/mfc-macros-and-globals.md), que siguen la referencia alfabética a las clases MFC.
 
 ## <a name="see-also"></a>Vea también
 

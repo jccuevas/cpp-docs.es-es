@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 9b76d481bff6e98b915d71634dbf04a83a432736
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907740"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095917"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Ejemplo: Mostrar un cuadro de diálogo a través de un comando de menú
 
@@ -58,7 +58,7 @@ Los procedimientos usan los siguientes nombres y valores:
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal();  
+   testdlg.DoModal(); 
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Para mostrar un cuadro de diálogo no modal
@@ -107,7 +107,7 @@ Los procedimientos usan los siguientes nombres y valores:
       m_pTestDlg = new CTestDialog(this);
       m_pTestDlg->Create(CTestDialog::IDD, this);
    }
-   m_pTestDlg->ShowWindow(SW_SHOW); 
+   m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
 ## <a name="see-also"></a>Vea también
