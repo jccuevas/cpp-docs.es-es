@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453772"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195830"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -39,12 +39,6 @@ Define la pila de la clase de plantilla y dos plantillas auxiliares.
 |[operator==](../standard-library/stack-operators.md#op_eq_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es igual que el objeto de pila del lado derecho.|
 |[operator>](../standard-library/stack-operators.md#op_gt)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.|
-
-### <a name="functions"></a>Funciones
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>Clases
 
