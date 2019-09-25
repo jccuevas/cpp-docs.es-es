@@ -134,12 +134,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 9f7886a88ebd98d5d7ab1848ea7a788967362ad7
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: d1a4da3d5e721c85879441a53ef4bc00549b587d
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550447"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230484"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Advertencias del compilador de C4400 a C4599
 
@@ -149,11 +149,11 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 
 ## <a name="warning-messages"></a>Mensajes de advertencia
 
-|Advertencia|Message|
+|Advertencia|Mensaje|
 |-------------|-------------|
 |[ADVERTENCIA del compilador (nivel 1) C4600](compiler-warning-level-1-c4600.md)|#pragma '*macro Name*': se esperaba una cadena no vacía válida|
 |[ADVERTENCIA del compilador (nivel 4) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|'*Type*': no se admiten calificadores const/volatile en este tipo|
-|[ADVERTENCIA del compilador (nivel 1) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|'bits ': el miembro es un campo de bits|
+|[ADVERTENCIA del compilador (nivel 1) C4401](../../error-messages/compiler-warnings/compiler-warning-level-1-c4401.md)|'*bits ':* el miembro es un campo de bits|
 |[ADVERTENCIA del compilador (nivel 1) C4402](../../error-messages/compiler-warnings/compiler-warning-level-1-c4402.md)|debe usar el Operador PTR|
 |[ADVERTENCIA del compilador (nivel 1) C4403](../../error-messages/compiler-warnings/compiler-warning-level-1-c4403.md)|Operador PTR no válido|
 |[ADVERTENCIA del compilador (nivel 3) C4404](../../error-messages/compiler-warnings/compiler-warning-level-3-c4404.md)|se omitió el período de la Directiva|
@@ -208,7 +208,7 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |[Advertencia del compilador (nivel 4) C4457](compiler-warning-level-4-c4457.md)|la declaración de '*Identifier*' oculta el parámetro de función|
 |[Advertencia del compilador (nivel 4) C4458](compiler-warning-level-4-c4458.md)|la declaración de '*Identifier*' oculta el miembro de clase|
 |[ADVERTENCIA del compilador (nivel 4) C4459](compiler-warning-level-4-c4459.md)|la declaración de '*Identifier*' oculta la declaración global|
-|[ADVERTENCIA del compilador (nivel 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|El operador&#124;'*operador*' administrado de WinRT tiene un parámetro pasado por referencia. ' Operador&#124;' administrado por 'WinRT ' tiene una semántica diferente a C++ la del operador '*cpp_operator*'. ¿desea pasar por valor?|
+|[ADVERTENCIA del compilador (nivel 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|El operador&#124;'*operador*' administrado de WinRT tiene un parámetro pasado por referencia. ' Operador&#124; *' administrado*por ' WinRT ' tiene una semántica diferente a C++ la del operador '*cpp_operator*'. ¿desea pasar por valor?|
 |[ADVERTENCIA del compilador (nivel 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*className*': esta clase tiene un finalizador '! *finalizador*' pero sin destructor ' ~*Dtor*'|
 |[ADVERTENCIA del compilador (nivel 1, error) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*Type*': no se puede determinar el GUID del tipo. El programa puede dar un error en tiempo de ejecución.|
 |[ADVERTENCIA del compilador (nivel 4) C4463](compiler-warning-level-4-c4463.md)|desbordamiento asignar '*Value*' a un campo de bits que solo puede contener valores de '*MIN_VALUE*' a '*MAX_VALUE*'|
@@ -218,13 +218,13 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |ADVERTENCIA del compilador (nivel 1) C4472,|'*Identifier*' es una enumeración nativa: Agregue un especificador de acceso (privado/público) para declarar una enumeración ' WinRT&#124;Managed '|
 |[ADVERTENCIA del compilador (nivel 1) C4473](c4473.md)|'*function*': no se pasaron suficientes argumentos para la cadena de formato|
 |ADVERTENCIA del compilador (nivel 3) C4474|'*función*': se han pasado demasiados argumentos para la cadena de formato|
-|ADVERTENCIA del compilador (nivel 3) C4475|'*función*': el modificador delongitud ' modificador ' no se puede usar con el carácter de campo de tipo '*character*' en el especificador de formato|
+|ADVERTENCIA del compilador (nivel 3) C4475|'*función*': el modificador de longitud '*modificador*' no se puede usar con el carácter de campo de tipo '*character*' en el especificador de formato|
 |ADVERTENCIA del compilador (nivel 3) C4476|'*función*': carácter de campo de tipo desconocido '*carácter*' en el especificador de formato|
 |[ADVERTENCIA del compilador (nivel 1) C4477](c4477.md)|'*función*': la cadena de formato '*cadena*' requiere un argumento de tipo '*tipo*', pero el *número* de argumento de variádicas tiene el tipo '*tipo*'|
 |ADVERTENCIA del compilador (nivel 1) C4478|'*función*': los marcadores de posición posicionales y no posicional no se pueden combinar en la misma cadena de formato|
-|ADVERTENCIA del compilador (error) C4480|se ha utilizado una extensión no estándar: especificando el tiposubyacente para la enumeración ' enumeración '|
+|ADVERTENCIA del compilador (error) C4480|se ha utilizado una extensión no estándar: especificando el tipo subyacente para la enumeración '*enumeración*'|
 |[ADVERTENCIA del compilador (nivel 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|se ha utilizado una extensión no estándar: especificador de invalidación '*palabra clave*'|
-|ADVERTENCIA del compilador C4482|se ha utilizado una extensión no estándar: enumeración ' enumeración ' utilizada en el nombre completo|
+|ADVERTENCIA del compilador C4482|se ha utilizado una extensión no estándar: enumeración '*enumeración*' utilizada en el nombre completo|
 |ADVERTENCIA del compilador (nivel 1, error) C4483|error de sintaxis: C++ se esperaba la palabra clave|
 |[ADVERTENCIA del compilador (error) C4484](../../error-messages/compiler-warnings/compiler-warning-c4484.md)|'*override_function*': coincide con el método de clase Ref base '*base_class_function*', pero no está marcado como ' virtual ', ' New ' u ' override '; se presupone ' New ' (y no ' virtual ')|
 |[ADVERTENCIA del compilador (error) C4485](../../error-messages/compiler-warnings/compiler-warning-c4485.md)|'*override_function*': coincide con el método de clase Ref base '*base_class_function*', pero no está marcado como ' New ' u ' override '; se presupone ' New ' (y ' virtual ')|
@@ -242,7 +242,7 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |ADVERTENCIA del compilador C4497|se usó la extensión no estándar ' Sealed ': reemplace por ' final '|
 |ADVERTENCIA del compilador C4498|se ha utilizado una extensión no estándar: '*Extension*'|
 |ADVERTENCIA del compilador (nivel 4) C4499|'*función*': una especialización explícita no puede tener una clase de almacenamiento (se omite) "|
-|[ADVERTENCIA del compilador (nivel 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*especificación*de vinculación ' requiere el uso de la palabra clave ' extern ' y debe preceder a todos los demás especificadores|
+|[ADVERTENCIA del compilador (nivel 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*especificación de vinculación*' requiere el uso de la palabra clave ' extern ' y debe preceder a todos los demás especificadores|
 |[ADVERTENCIA del compilador (nivel 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*Identifier*': se superó la longitud del nombre representativo; el nombre se truncó|
 |[ADVERTENCIA del compilador (nivel 4) C4505](../../error-messages/compiler-warnings/compiler-warning-level-4-c4505.md)|'*función*': se ha quitado la función local sin referencia|
 |[ADVERTENCIA del compilador (nivel 1) C4506](../../error-messages/compiler-warnings/compiler-warning-level-1-c4506.md)|no hay ninguna definición para la función insertada '*function*'|
@@ -299,13 +299,13 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |ADVERTENCIA del compilador (nivel 1) C4568|'*función*': ningún miembro coincide con la signatura de la invalidación explícita|
 |ADVERTENCIA del compilador (nivel 3) C4569|'*función*': ningún miembro coincide con la signatura de la invalidación explícita|
 |[ADVERTENCIA del compilador (nivel 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'*Type*': no se ha declarado explícitamente como abstracto pero tiene funciones abstractas|
-|[ADVERTENCIA del compilador (nivel 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Información: la semántica de catch (...) cambió desde Visual C++ 7,1; ya no se detectan excepciones estructuradas (SEH)|
+|[ADVERTENCIA del compilador (nivel 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|información: la semántica de catch (...) cambió desde Visual C++ 7,1; ya no se detectan excepciones estructuradas (SEH)|
 |[ADVERTENCIA del compilador (nivel 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|El atributo [ParamArray] está en desuso en/CLR, use '... ' en lugar|
 |ADVERTENCIA del compilador (nivel 1) C4573|el uso de '*lambda function*' requiere que el compilador Capture ' this ', pero el modo de captura predeterminado actual no lo permite|
 |ADVERTENCIA del compilador (nivel 4) C4574|'*Identifier*' está definido como ' 0 ': ¿pretendía usar ' #if identificador '?|
 |ADVERTENCIA del compilador (nivel 1) C4575|' __vectorcall ' es incompatible con la opción '/CLR ': se convierte a ' _ _ Stdcall '|
 |ADVERTENCIA del compilador (nivel 1, error) C4576|un tipo entre paréntesis seguido de una lista de inicializadores es una sintaxis de conversión de tipos explícita no estándar|
-|ADVERTENCIA del compilador (nivel 1, OFF) C4577|' Except ' se usa sin el modo de control de excepciones especificado; no se garantiza la terminación en la excepción. Especificar/EHsc|
+|[ADVERTENCIA del compilador (nivel 1, OFF) C4577](../../error-messages/compiler-warnings/compiler-warning-level-1-c4577.md)|' Except ' se usa sin el modo de control de excepciones especificado; no se garantiza la terminación en la excepción. Especificar/EHsc|
 |ADVERTENCIA del compilador (nivel 1, error) C4578|' ABS ': conversión de '*tipo1*' a '*tipo2*', posible pérdida de datos (¿quiso llamar a '*function*' o #include \<CMATH >?)|
 |[ADVERTENCIA del compilador (nivel 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] está desusado; especifique en su lugar System::Attribute o Platform::Metadata como clase base|
 |[ADVERTENCIA del compilador (nivel 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportamiento en desuso: ' "*cadena*" ' se ha reemplazado por '*cadena*' para procesar el atributo|
@@ -316,7 +316,7 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |ADVERTENCIA del compilador (nivel 1, error) C4586|'*tipo*': Un tipo público no se puede declarar en un espacio de nombres de nivel superior denominado ' Windows '|
 |ADVERTENCIA del compilador (nivel 1) C4587|'*anonymous_structure*': cambio de comportamiento: ya no se llama implícitamente al constructor|
 |ADVERTENCIA del compilador (nivel 1) C4588|'*anonymous_structure*': cambio de comportamiento: ya no se llama implícitamente al destructor|
-|ADVERTENCIA del compilador (nivel 1) C4591|se superó el límite de profundidad de llamadas de ' constexpr ' (\</constexpr: número de profundidad >)|
+|ADVERTENCIA del compilador (nivel 1) C4591|se superó el límite de profundidad de llamadas de ' constexpr ' (\</constexpr *: número de* profundidad >)|
 |ADVERTENCIA del compilador (nivel 3) C4592|'*función*': error en la evaluación de la llamada ' constexpr '; se llamará a la función en tiempo de ejecución|
 |ADVERTENCIA del compilador (nivel 1) C4593|'*función*': se ha superado el límite de paso de evaluación de llamada ' constexpr ' de '*Limit*'; Use/constexpr: Steps\<Number > para aumentar el límite|
 |ADVERTENCIA del compilador (nivel 3) C4594|'*Type*': no se llamará implícitamente al destructor si se produce una excepción|
