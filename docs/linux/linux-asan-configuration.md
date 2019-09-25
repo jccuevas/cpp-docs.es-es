@@ -2,12 +2,12 @@
 title: Configuración de proyectos de Linux para usar AddressSanitizer
 description: Se describe cómo configurar un proyecto C++ de Linux en Visual Studio para usar AddressSanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: 2415e8971614de35f046b699ce99c3822faf9372
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66824175"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195867"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configuración de proyectos de Linux para usar AddressSanitizer
 
@@ -31,6 +31,9 @@ Cuando ASan detecta un error, detiene la ejecución inmediatamente. Si se ejecut
 La salida de ASan completa (incluido dónde se ha asignado o desasignado la memoria dañada) también se puede ver en el panel Depurar de la ventana de salida.
 
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Habilitar ASan para proyectos de Linux basados en MSBuild
+
+> [!NOTE]
+> A partir de la versión 16.4 de Visual Studio 2019, AddressSanitizer para proyectos de Linux se habilita a través de **Propiedades de configuración** > **C/C++**  > **Habilitar AddressSanitizer**.
 
 Para habilitar ASan para proyectos de Linux basados en MSBuild, haga clic con el botón derecho en el **Explorador de soluciones** y seleccione **Propiedades**. Luego, vaya a **Propiedades de configuración** > **C/C++**  > **Instancias de Sanitizer**. ASan se habilita mediante marcas de compilador y enlazador, y requiere que el proyecto se vuelva a compilar para que funcione.
 
