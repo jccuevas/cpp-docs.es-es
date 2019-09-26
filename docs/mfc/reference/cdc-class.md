@@ -403,10 +403,10 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69507015"
 ---
 # <a name="cdc-class"></a>CDC (clase)
@@ -423,13 +423,13 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CDC::CDC](#cdc)|Construye un objeto `CDC`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CDC::AbortDoc](#abortdoc)|Finaliza el trabajo de impresión actual y borra todo lo que la aplicación ha escrito en el dispositivo desde la última llamada de `StartDoc` la función miembro.|
 |[CDC::AbortPath](#abortpath)|Cierra y descarta cualquier ruta de acceso en el contexto del dispositivo.|
@@ -629,13 +629,13 @@ class CDC : public CObject
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CDC:: Operator HDC](#operator_hdc)|Recupera el identificador del contexto del dispositivo.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CDC::m_hAttribDC](#m_hattribdc)|El contexto de dispositivo de atributo que usa `CDC` este objeto.|
 |[CDC::m_hDC](#m_hdc)|El contexto de dispositivo de salida utilizado por `CDC` este objeto.|
@@ -668,7 +668,7 @@ Hay ocasiones en las que puede necesitar información de métricas de texto de `
 |[GetTextMetrics](#gettextmetrics)|[GetOutputTextMetrics](#getoutputtextmetrics)|
 |[GetCharWidth](#getcharwidth)|[GetOutputCharWidth](#getoutputcharwidth)|
 
-Para obtener más información `CDC`sobre, vea contextos de [dispositivos](../../mfc/device-contexts.md).
+Para obtener más información `CDC`sobre, vea [contextos de dispositivos](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -1683,7 +1683,7 @@ Distinto de cero si la función se completó correctamente; de lo contrario, es 
 
 ### <a name="remarks"></a>Comentarios
 
-La función coloca la esquina superior izquierda del icono en la ubicación especificada por *x* e y. La ubicación está sujeta al modo de asignación actual del contexto del dispositivo.
+La función coloca la esquina superior izquierda del icono en la ubicación especificada por *x* *e y*. La ubicación está sujeta al modo de asignación actual del contexto del dispositivo.
 
 El recurso Icon debe haberse cargado previamente mediante las funciones `CWinApp::LoadIcon`, `CWinApp::LoadStandardIcon`o `CWinApp::LoadOEMIcon`. El `MM_TEXT` modo de asignación debe estar seleccionado antes de usar esta función.
 
@@ -1896,7 +1896,7 @@ Apunta a una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un 
 Objeto [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contiene los caracteres especificados que se van a dibujar.
 
 *nFormat*<br/>
-Especifica el método para dar formato al texto. Puede ser cualquier combinación de los valores descritos para el parámetro *uFormat* en [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) en el Windows SDK. (Combinar mediante el operador bit a bit or):
+Especifica el método para dar formato al texto. Puede ser cualquier combinación de los valores descritos para el parámetro *uFormat* en [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) en el Windows SDK. (Combinar mediante **el operador bit a bit or)** :
 
 > [!NOTE]
 >  Algunas combinaciones de marcas de *uFormat* pueden hacer que se modifique la cadena pasada. El uso de DT_MODIFYSTRING con DT_END_ELLIPSIS o DT_PATH_ELLIPSIS puede hacer que se modifique la cadena, lo que provoca una aserción `CString` en la invalidación. Los valores DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP y DT_NOPREFIX no se pueden usar con el valor DT_TABSTOP.
@@ -2049,11 +2049,11 @@ Para cada objeto de un tipo determinado, se llama a la función de devolución d
 
 Tenga en cuenta que las nuevas características C++ de Microsoft Visual permiten usar una función normal como la función `EnumObjects`que se pasa a. La dirección que se `EnumObjects` pasa a es un puntero a una función exportada con **Export** y con la Convención de llamada Pascal. En las aplicaciones en modo protegido, no es necesario crear esta función con la función MakeProcInstance de Windows o liberar la función después de usarla con la función de Windows FreeProcInstance.
 
-Tampoco tiene que exportar el nombre de la función en una instrucción Exports en el archivo de definición de módulo de la aplicación. En su lugar, puede usar el modificador de función **Export** , como en
+Tampoco tiene que exportar el nombre de la función en una instrucción **Exports** en el archivo de definición de módulo de la aplicación. En su lugar, puede usar el modificador de función **Export** , como en
 
 **exportación de devolución de llamada int** AFunction **(LPSTR**, **LPSTR);**
 
-para hacer que el compilador emita el registro de exportación adecuado para exportar por nombre sin alias. Esto funciona con la mayoría de las necesidades. En algunos casos especiales, como la exportación de una función por ordinal o el suavizado de la exportación, todavía es necesario usar una instrucción Exports en un archivo de definición de módulo.
+para hacer que el compilador emita el registro de exportación adecuado para exportar por nombre sin alias. Esto funciona con la mayoría de las necesidades. En algunos casos especiales, como la exportación de una función por ordinal o el suavizado de la exportación, todavía es necesario usar una instrucción **Exports** en un archivo de definición de módulo.
 
 Para compilar programas de Microsoft Foundation, normalmente usará las opciones del compilador/GA y/GEs. La opción del compilador/GW no se usa con Microsoft Foundation Classes. (Si usa la función `MakeProcInstance`de Windows, tendrá que convertir explícitamente el puntero de función devuelto de FARPROC al tipo necesario en esta API). Las interfaces de registro de devolución de llamada ahora tienen seguridad de tipos (debe pasar un puntero de función que apunte al tipo correcto de función para la devolución de llamada específica).
 
@@ -2256,9 +2256,9 @@ Distinto de cero si la función se realiza correctamente; de lo contrario, 0 si 
 
 Esta función miembro ofrece más flexibilidad que `FloodFill` porque puede especificar un tipo de relleno en *nFillType*.
 
-Si *nFillType* se establece en FLOODFILLBORDER, se supone que el área está completamente enlazada por el color especificado por *crColor*. La función comienza en el punto especificado por *x* e y y rellena todas las direcciones hasta el límite de color.
+Si *nFillType* se establece en FLOODFILLBORDER, se supone que el área está completamente enlazada por el color especificado por *crColor*. La función comienza en el punto especificado por *x* e *y y rellena* todas las direcciones hasta el límite de color.
 
-Si *nFillType* se establece en FLOODFILLSURFACE, la función comienza en el punto especificado por *x* e y y continúa en todas las direcciones, rellenando todas las áreas adyacentes que contengan el color especificado por *crColor*.
+Si *nFillType* se establece en FLOODFILLSURFACE, la función comienza en el punto especificado por *x* e *y y continúa* en todas las direcciones, rellenando todas las áreas adyacentes que contengan el color especificado por *crColor*.
 
 Solo los contextos de dispositivo de memoria y los dispositivos que admiten la `ExtFloodFill`tecnología de visualización de tramas. Para obtener más información, vea la función miembro [GetDeviceCaps](#getdevicecaps) .
 
@@ -2323,7 +2323,7 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 La región rectangular puede ser opaca (rellena con el color de fondo actual) y puede ser una región de recorte.
 
-Si *nOptions* es 0 y *lpRect* es null, la función escribe texto en el contexto del dispositivo sin usar una región rectangular. De forma predeterminada, la función no usa ni actualiza la posición actual. Si una aplicación necesita actualizar la posición `ExtTextOut`actual cuando llama a, la aplicación puede llamar a la `CDC` función miembro [SetTextAlign](#settextalign) con *nFlags* establecida en TA_UPDATECP. Cuando se establece esta marca, Windows omite *x* e y en las llamadas subsiguientes a `ExtTextOut` y usa la posición actual en su lugar. Cuando una aplicación usa TA_UPDATECP para actualizar la posición actual, `ExtTextOut` establece la posición actual al final de la línea anterior de texto o a la posición especificada por el último elemento de la matriz a la que apunta *lpDxWidths*, lo que sea. menor.
+Si *nOptions* es 0 y *lpRect* es null, la función escribe texto en el contexto del dispositivo sin usar una región rectangular. De forma predeterminada, la función no usa ni actualiza la posición actual. Si una aplicación necesita actualizar la posición `ExtTextOut`actual cuando llama a, la aplicación puede llamar a la `CDC` función miembro [SetTextAlign](#settextalign) con *nFlags* establecida en TA_UPDATECP. Cuando se establece esta marca, Windows omite *x* e y en las llamadas subsiguientes a `ExtTextOut` y usa la posición *actual en su* lugar. Cuando una aplicación usa TA_UPDATECP para actualizar la posición actual, `ExtTextOut` establece la posición actual al final de la línea anterior de texto o a la posición especificada por el último elemento de la matriz a la que apunta *lpDxWidths*, lo que sea. menor.
 
 ##  <a name="fillpath"></a>  CDC::FillPath
 
@@ -2482,7 +2482,7 @@ Distinto de cero si la función se realiza correctamente; de lo contrario, se de
 
 ### <a name="remarks"></a>Comentarios
 
-Se supone que el área está limitada según lo especificado por *crColor*. La `FloodFill` función comienza en el punto especificado por *x* e y y continúa en todas las direcciones hasta el límite de color.
+Se supone que el área está limitada según lo especificado por *crColor*. La `FloodFill` función comienza en el punto especificado por *x* e *y y continúa* en todas las direcciones hasta el límite de color.
 
 Solo los contextos de dispositivo de memoria y los dispositivos que admiten la tecnología `FloodFill` de presentación de tramas admiten la función miembro. Para obtener información sobre la capacidad de RC_BITBLT `GetDeviceCaps` , vea la función miembro.
 
@@ -3242,7 +3242,7 @@ Un puntero a un `CBrush` objeto si es correcto; de lo contrario, NULL.
 
 Un pincel de semitono muestra píxeles que son los colores de primer plano y de fondo para crear un patrón de trama. A continuación se incluye un ejemplo de un patrón de trama creado por un pincel de semitonos.
 
-![Detalle de un trazo de lápiz] proexistente (../../mfc/reference/media/vc318s1.gif "Detalle de un trazo de lápiz") proexistente
+![Detalle de un trazo de lápiz proexistente](../../mfc/reference/media/vc318s1.gif "Detalle de un trazo de lápiz proexistente")
 
 ##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
 
@@ -3547,7 +3547,7 @@ El contexto de dispositivo debe contener una ruta de acceso cerrada. Los puntos 
 
 ##  <a name="getpixel"></a>  CDC::GetPixel
 
-Recupera el valor de color RGB del píxel en el punto especificado por *x* e y.
+Recupera el valor de color RGB del píxel en el punto especificado por *x* *e y*.
 
 ```
 COLORREF GetPixel(
@@ -4260,7 +4260,7 @@ Es distinto de cero `CDC` si el objeto es un controlador de dominio de impresora
 
 ##  <a name="lineto"></a>  CDC::LineTo
 
-Dibuja una línea desde la posición actual hasta, pero sin incluir, el punto especificado por *x* e y (o el *punto*).
+Dibuja una línea desde la posición actual hasta, pero sin incluir, el punto especificado por *x* *e y* (o el *punto*).
 
 ```
 BOOL LineTo(
@@ -4467,7 +4467,7 @@ Este método ajusta la función GDI de Windows [ModifyWorldTransform](/windows/w
 
 ##  <a name="moveto"></a>  CDC::MoveTo
 
-Mueve la posición actual al punto especificado por *x* e y (o por *punto*).
+Mueve la posición actual al punto especificado por *x* *e y* (o por *punto*).
 
 ```
 CPoint MoveTo(
@@ -4926,7 +4926,7 @@ Los tipos PT_BEZIERTO siempre se producen en conjuntos de tres. La posición act
 
 - PT_CLOSEFIGURE especifica que la figura se cierra automáticamente después de que se realice el tipo PT_LINETO o PT_BEZIERTO para este punto. Una línea se dibuja desde este punto hasta el PT_MOVETO o `MoveTo` punto más reciente.
 
-   Esta marca se combina con el tipo PT_LINETO para una línea o con el tipo PT_BEZIERTO de punto final para una spline Bzier, mediante el operador OR bit a bit. La posición actual se establece en el punto final de la línea de cierre.
+   Esta marca se combina con el tipo PT_LINETO para una línea o con el tipo PT_BEZIERTO de punto final para una spline Bzier, mediante el operador **OR bit a** bit. La posición actual se establece en el punto final de la línea de cierre.
 
 *nCount*<br/>
 Especifica el número total de puntos de la matriz *lpPoints* , igual que el número de bytes de la matriz *lpTypes* .
@@ -5740,11 +5740,11 @@ Si una aplicación va a permitir que se cancele el trabajo de impresión durante
 
 Tenga en cuenta que las características de C++ Microsoft Visual simplifican la creación de la función `SetAbortProc`de devolución de llamada que se pasa a. La dirección pasada a la `EnumObjects` función miembro es un puntero a una función exportada `__declspec(dllexport)` con y con `__stdcall` la Convención de llamada.
 
-Tampoco tiene que exportar el nombre de la función en una instrucción Exports en el archivo de definición de módulo de la aplicación. En su lugar, puede usar el modificador de función **Export** , como en
+Tampoco tiene que exportar el nombre de la función en una instrucción **Exports** en el archivo de definición de módulo de la aplicación. En su lugar, puede usar el modificador de función **Export** , como en
 
 **exportación de devolución de llamada bool** AFunction ( **HDC**, `int` **);**
 
-para hacer que el compilador emita el registro de exportación adecuado para exportar por nombre sin alias. Esto funciona con la mayoría de las necesidades. En algunos casos especiales, como la exportación de una función por ordinal o el suavizado de la exportación, todavía es necesario usar una instrucción Exports en un archivo de definición de módulo.
+para hacer que el compilador emita el registro de exportación adecuado para exportar por nombre sin alias. Esto funciona con la mayoría de las necesidades. En algunos casos especiales, como la exportación de una función por ordinal o el suavizado de la exportación, todavía es necesario usar una instrucción **Exports** en un archivo de definición de módulo.
 
 Las interfaces de registro de devolución de llamada ahora tienen seguridad de tipos (debe pasar un puntero de función que apunte al tipo correcto de función para la devolución de llamada específica).
 
@@ -6022,7 +6022,7 @@ DWORD SetLayout(DWORD dwLayout);
 *dwLayout*<br/>
 Diseño del contexto de dispositivo y marcas de control de mapa de bits. Puede ser una combinación de los valores siguientes.
 
-|Value|Significado|
+|Valor|Significado|
 |-----------|-------------|
 |LAYOUT_BITMAPORIENTATIONPRESERVED|Deshabilita cualquier reflexión para las llamadas a [CDC:: bitblt](#bitblt) y [CDC:: StretchBlt](#stretchblt).|
 |LAYOUT_RTL|Establece el diseño horizontal predeterminado de derecha a izquierda.|
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 Especifica el modo de ajuste. Puede ser cualquiera de los siguientes valores:
 
-|Valor|DESCRIPCIÓN|
+|Valor|Descripción|
 |-----------|-----------------|
 |BLACKONWHITE|Realiza una operación AND booleana usando los valores de color de los píxeles eliminados y existentes. Si el mapa de bits es un mapa de bits monocromo, este modo conserva los píxeles negros a costa de los píxeles blancos.|
 |COLORONCOLOR|Elimina los píxeles. Este modo elimina todas las líneas de píxeles eliminadas sin intentar conservar su información.|
@@ -6363,7 +6363,7 @@ Especifica las marcas de alineación de texto. Las marcas especifican la relaci�
 
 - TA_CENTER alinea el punto con el centro horizontal del rectángulo delimitador.
 
-- TA_LEFT alinea el punto con el lado izquierdo del rectángulo delimitador. Esta es la configuración predeterminada.
+- TA_LEFT alinea el punto con el lado izquierdo del rectángulo delimitador. Ésta es la configuración predeterminada.
 
 - TA_RIGHT alinea el punto con el lado derecho del rectángulo delimitador.
 
@@ -6373,11 +6373,11 @@ La segunda categoría afecta a la alineación del texto en la dirección y:
 
 - TA_BOTTOM alinea el punto con la parte inferior del rectángulo delimitador.
 
-- TA_TOP alinea el punto con la parte superior del rectángulo delimitador. Esta es la configuración predeterminada.
+- TA_TOP alinea el punto con la parte superior del rectángulo delimitador. Ésta es la configuración predeterminada.
 
 La tercera categoría determina si la posición actual se actualiza cuando se escribe texto:
 
-- TA_NOUPDATECP no actualiza la posición actual después de cada llamada a una función de salida de texto. Esta es la configuración predeterminada.
+- TA_NOUPDATECP no actualiza la posición actual después de cada llamada a una función de salida de texto. Ésta es la configuración predeterminada.
 
 - TA_UPDATECP actualiza la posición x actual después de cada llamada a una función de salida de texto. La nueva posición se encuentra en el lado derecho del rectángulo delimitador del texto. Cuando se establece esta marca, se omiten las coordenadas especificadas `TextOut` en llamadas a la función miembro.
 
@@ -6915,7 +6915,7 @@ El texto se escribe en la fuente seleccionada actualmente. Si *nTabPositions* es
 
 Si *nTabPositions* es 1, las tabulaciones se separan por la distancia especificada por el primer valor de la matriz *lpnTabStopPositions* . Si la matriz *lpnTabStopPositions* contiene más de un valor, se establece una tabulación para cada valor de la matriz, hasta el número especificado por *nTabPositions*. El parámetro *nTabOrigin* permite a una aplicación llamar a `TabbedTextOut` la función varias veces para una sola línea. Si la aplicación llama a la función más de una vez con el *nTabOrigin* establecido en el mismo valor cada vez, la función expande todas las pestañas en relación con la posición especificada por *nTabOrigin*.
 
-De forma predeterminada, la función no usa ni actualiza la posición actual. Si una aplicación necesita actualizar la posición actual cuando llama a la función, la aplicación puede llamar a la función miembro [SetTextAlign](#settextalign) con *NFLAGS* establecida en TA_UPDATECP. Cuando se establece esta marca, Windows omite los parámetros *x* e y en las llamadas subsiguientes a `TabbedTextOut`, usando en su lugar la posición actual.
+De forma predeterminada, la función no usa ni actualiza la posición actual. Si una aplicación necesita actualizar la posición actual cuando llama a la función, la aplicación puede llamar a la función miembro [SetTextAlign](#settextalign) con *NFLAGS* establecida en TA_UPDATECP. Cuando se establece esta marca, Windows omite los parámetros *x* e *y en* las llamadas subsiguientes a `TabbedTextOut`, usando en su lugar la posición actual.
 
 ##  <a name="textout"></a>  CDC::TextOut
 
@@ -6959,7 +6959,7 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 Los orígenes de los caracteres están en la esquina superior izquierda de la celda de caracteres. De forma predeterminada, la función no usa ni actualiza la posición actual.
 
-Si una aplicación necesita actualizar la posición actual cuando llama `TextOut`a, la aplicación puede llamar a la `SetTextAlign` función miembro con *nFlags* establecido en TA_UPDATECP. Cuando se establece esta marca, Windows omite los parámetros *x* e y en las llamadas subsiguientes a `TextOut`, usando en su lugar la posición actual.
+Si una aplicación necesita actualizar la posición actual cuando llama `TextOut`a, la aplicación puede llamar a la `SetTextAlign` función miembro con *nFlags* establecido en TA_UPDATECP. Cuando se establece esta marca, Windows omite los parámetros *x* e *y en* las llamadas subsiguientes a `TextOut`, usando en su lugar la posición actual.
 
 ### <a name="example"></a>Ejemplo
 

@@ -50,10 +50,10 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69496616"
 ---
 # <a name="cpatht-class"></a>Clase CPathT
@@ -79,7 +79,7 @@ Clase de cadena de ATL/MFC que se va a utilizar para la ruta de acceso (vea [CSt
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CPathT::PCXSTR](#pcxstr)|Tipo de cadena de constante.|
 |[CPathT::PXSTR](#pxstr)|Tipo de cadena.|
@@ -87,13 +87,13 @@ Clase de cadena de ATL/MFC que se va a utilizar para la ruta de acceso (vea [CSt
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CPathT::CPathT](#cpatht)|Constructor para la ruta de acceso.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CPathT::AddBackslash](#addbackslash)|Llame a este método para agregar una barra diagonal inversa al final de una cadena con el fin de crear la sintaxis correcta para una ruta de acceso.|
 |[CPathT::AddExtension](#addextension)|Llame a este método para agregar una extensión de archivo a una ruta de acceso.|
@@ -135,7 +135,7 @@ Clase de cadena de ATL/MFC que se va a utilizar para la ruta de acceso (vea [CSt
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CPathT:: Operator const StringType &](#operator_const_stringtype_amp)|Este operador permite que el objeto se trate como una cadena.|
 |[CPathT:: Operator CPathT::P CXSTR](#operator_cpatht__pcxstr)|Este operador permite que el objeto se trate como una cadena.|
@@ -144,7 +144,7 @@ Clase de cadena de ATL/MFC que se va a utilizar para la ruta de acceso (vea [CSt
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CPathT::m_strPath](#m_strpath)|La ruta de acceso.|
 

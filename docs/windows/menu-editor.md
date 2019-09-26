@@ -40,10 +40,10 @@ helpviewer_keywords:
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
 ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514830"
 ---
 # <a name="menu-editor-c"></a>Editor de menúsC++()

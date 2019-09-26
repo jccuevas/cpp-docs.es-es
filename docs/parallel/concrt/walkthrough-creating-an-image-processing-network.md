@@ -6,10 +6,10 @@ helpviewer_keywords:
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512159"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Tutorial: Creación de una red de procesamiento de imágenes
@@ -116,9 +116,9 @@ En los pasos siguientes se muestra cómo crear una función que implementa esta 
 
 En la tabla siguiente se describen los miembros de la red.
 
-|Member|DESCRIPCIÓN|
+|Miembro|Descripción|
 |------------|-----------------|
-|`load_bitmap`|Un objeto Concurrency [::](../../parallel/concrt/reference/transformer-class.md) Transformer que `Bitmap` carga un objeto desde el `map` disco y agrega una entrada al objeto para asociar la imagen con su nombre de archivo original.|
+|`load_bitmap`|Un objeto [Concurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) que `Bitmap` carga un objeto desde el `map` disco y agrega una entrada al objeto para asociar la imagen con su nombre de archivo original.|
 |`loaded_bitmaps`|Un objeto [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) que envía las imágenes cargadas a los filtros de procesamiento de imágenes.|
 |`grayscale`|`transformer` Objeto que convierte las imágenes creadas por Tom a escala de grises. Usa los metadatos de la imagen para determinar su autor.|
 |`colormask`|`transformer` Objeto que quita los componentes de color verde y azul de las imágenes que tienen el rojo como color dominante.|

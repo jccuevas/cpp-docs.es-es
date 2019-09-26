@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "71062069"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Tutorial: Crear una aplicación de escritorio de WindowsC++tradicional ()
@@ -98,7 +98,7 @@ El proyecto se ha creado y el archivo de código fuente se abre en el editor. Pa
 
 1. En el menú **Archivo**, elija **Nuevo** y después **Proyecto**.
 
-1. En el cuadro de diálogo **nuevo proyecto** cuadro de diálogo, en el panel izquierdo, expanda **instalado** > **plantillas** > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
+1. En el cuadro de diálogo **nuevo proyecto**, en el panel izquierdo, expanda **instalado** > **plantillas** > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
 
    En el cuadro **nombre** , escriba un nombre para el proyecto, por ejemplo, *DesktopApp*. Elija **Aceptar**.
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
 ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512140"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Tutorial: Conectar mediante tareas y solicitudes HTTP XML
@@ -39,7 +39,7 @@ Cuando se utiliza la interfaz `IXMLHTTPRequest2` para crear solicitudes web sobr
 
 Los métodos `GetAsync`, `PostAsync` de la clase `HttpRequest` permiten iniciar las operaciones HTTP GET y POST, respectivamente. Estos métodos utilizan la clase `HttpRequestStringCallback` para leer la respuesta del servidor como una cadena. Los métodos `SendAsync` y `ReadAsync` permiten hacer streaming del contenido grande en fragmentos. Estos métodos devuelven [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) para representar la operación. Los métodos `GetAsync` y `PostAsync` generan el valor `task<std::wstring>`, donde la parte `wstring` representa la respuesta del servidor. Los métodos `SendAsync` y de `ReadAsync` generan los valores `task<void>`; estas tareas se completan cuando las operaciones de envío y lectura se completan.
 
-Dado que `IXMLHTTPRequest2` las interfaces actúan de forma asincrónica, en este ejemplo se usa Concurrency [:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) para crear una tarea que se completa después de que el objeto de devolución de llamada finalice o cancele la operación de descarga. La clase `HttpRequest` crea una continuación basada en tareas a partir de esta tarea para establecer el resultado final. La clase `HttpRequest` utiliza una continuación basada en tareas para garantizar que la tarea de continuación se ejecuta aunque la tarea anterior produzca un error o se cancele. Para obtener más información acerca de las continuaciones basadas en tareas, consulte [paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md) .
+Dado que `IXMLHTTPRequest2` las interfaces actúan de forma asincrónica, en este ejemplo se usa [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) para crear una tarea que se completa después de que el objeto de devolución de llamada finalice o cancele la operación de descarga. La clase `HttpRequest` crea una continuación basada en tareas a partir de esta tarea para establecer el resultado final. La clase `HttpRequest` utiliza una continuación basada en tareas para garantizar que la tarea de continuación se ejecuta aunque la tarea anterior produzca un error o se cancele. Para obtener más información acerca de las continuaciones basadas en tareas, consulte [paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md) .
 
 Para admitir la cancelación, las clases `HttpRequest`, `HttpRequestBuffersCallback` y `HttpRequestStringCallback` utilizan tokens de cancelación. Las `HttpRequestBuffersCallback` clases `HttpRequestStringCallback` y usan el método [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) para permitir que el evento de finalización de la tarea responda a la cancelación. Esta devolución de llamada de cancelación anula la descarga. Para obtener más información sobre la cancelación, vea [cancelación](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
@@ -100,7 +100,7 @@ En esta sección se muestra cómo usar `HttpRequest` la clase en una aplicación
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. En las propiedades del proyecto,en vinculador, **entrada**, `shcore.lib` especifique `msxml6.lib`y.
+8. En las propiedades del proyecto, en **vinculador**, **entrada**, `shcore.lib` especifique `msxml6.lib`y.
 
 Esta es la aplicación en ejecución:
 
