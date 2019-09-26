@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
 ms.openlocfilehash: 5e485c22bcc4bf35f61226d84345102052689f89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69504532"
 ---
 # <a name="cnetaddressctrl-class"></a>Clase CNetDirecciónCtrl
@@ -41,13 +41,13 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Construye un objeto `CNetAddressCtrl`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CNetAddressCtrl::Create](#create)|Crea un control de dirección de red con los estilos especificados y lo adjunta `CNetAddressCtrl` al objeto actual.|
 |[CNetAddressCtrl::CreateEx](#createex)|Crea un control de dirección de red con los estilos extendidos especificados y lo `CNetAddressCtrl` adjunta al objeto actual.|
@@ -124,7 +124,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*dwStyle*|de Combinación bit a bit de los estilos que se van a aplicar al control. Para obtener más información, vea [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
 |*rect*|de Referencia a una estructura [Rect](/previous-versions/dd162897\(v=vs.85\)) que contiene la posición y el tamaño del control.|
@@ -150,7 +150,7 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*dwExStyle*|de Combinación bit a bit (o) de estilos extendidos que se va a aplicar al control. Para obtener más información, vea el parámetro *dwExStyle* de la función [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) .|
 |*dwStyle*|de Combinación bit a bit (o) de estilos que se va a aplicar al control. Para obtener más información, vea [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
@@ -231,7 +231,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*dwAddrMask*|de Combinación bit a bit (o) de marcas que especifica los tipos de direcciones que el control de dirección de red puede admitir. Para obtener más información, vea [NET_STRING](/windows/win32/shell/net-string).|
 

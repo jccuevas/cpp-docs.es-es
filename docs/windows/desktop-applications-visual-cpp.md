@@ -2,13 +2,13 @@
 title: Aplicaciones de escritorio ( C++visual)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.topic: landing-page
-ms.openlocfilehash: 1d0e725cce42785357232312d21ce37e18d9c73d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217001"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274724"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio ( C++visual)
 
@@ -45,11 +45,11 @@ Cualquier aplicación de escritorio C++ en puede usar el tiempo de ejecución de
 |[Trabajo con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, tablas de cadenas y otros recursos a una aplicación de escritorio.|
 |[Recursos para crear un juego con DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Vínculos a contenido para crear juegos en C++.|
 |[Tutorial: Crear y usar una biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md)|Cómo crear un archivo binario. lib.|
-|[Procedimientos: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
+|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Título|Descripción|
+|Title|Descripción|
 |-----------|-----------------|
 |[Desarrollo de Windows](/windows/win32/index)|Contiene información sobre la API de Windows y COM. (Algunas API de Windows y archivos DLL de terceros se implementan como objetos COM).|
 |[Hilo Desarrollo C++ de aplicaciones para Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Describe cómo crear una aplicación de escritorio de Windows de cliente que use animaciones de Windows y Direct2D para crear una interfaz de usuario basada en carrusel.  Este tutorial no se ha actualizado desde Windows 7, pero todavía proporciona una introducción exhaustiva a la programación de Win32.|

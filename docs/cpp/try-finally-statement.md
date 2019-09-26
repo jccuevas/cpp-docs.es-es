@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498608"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
@@ -45,7 +45,7 @@ La sintaxis siguiente describe la instrucción **try-finally** :
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;try de la instrucción compuesta  **Finally-Statement\_ \_**  **\_ \_**
+&nbsp;&nbsp;&nbsp;&nbsp;try de *la instrucción compuesta*  **Finally-Statement\_ \_**  **\_ \_**
 
 La instrucción **try-finally** es una extensión de Microsoft para los C++ lenguajes C y que permite a las aplicaciones de destino garantizar la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. La instrucción **try-finally** es especialmente útil para las rutinas que tienen varios lugares en los que se realiza una comprobación de un error que podría provocar la devolución prematura de la rutina.
 
@@ -72,7 +72,7 @@ Por ejemplo, suponga que una serie de llamadas de función vincula la función A
 Orden de terminación-ejecución de controladores
 
 > [!NOTE]
-> El comportamiento de try-finally es diferente de otros lenguajes que admiten eluso de Finally C#, como.  Un único **_ _ try** puede tener, pero no ambos, de **_ _ Finally** y **_ _ Except**.  Si se van a usar ambos conjuntamente, una instrucción try-except externa debe incluir la instrucción try-finally interna.  Las reglas que especifican cuándo se ejecuta cada bloque también son diferentes.
+> El comportamiento de try-finally es diferente de otros lenguajes que admiten el uso de **Finally**, como C#.  Un único **_ _ try** puede tener, pero no ambos, de **_ _ Finally** y **_ _ Except**.  Si se van a usar ambos conjuntamente, una instrucción try-except externa debe incluir la instrucción try-finally interna.  Las reglas que especifican cuándo se ejecuta cada bloque también son diferentes.
 
 Por compatibilidad con versiones anteriores, **_try**, **_finally**y **_leave** son sinónimos para **_ _ try**, **_ _ Finally**y **__leave** a menos que la opción del compilador [/za \(deshabilite extensiones de lenguaje. ](../build/reference/za-ze-disable-language-extensions.md)se especifica.
 
@@ -86,7 +86,7 @@ Una instrucción **goto** también puede saltar fuera de la sección protegida, 
 
 Salir de una instrucción **try-finally** mediante la función [longjmp](../c-runtime-library/reference/longjmp.md) en tiempo de ejecución se considera una finalización anómala. No es válido saltar a una instrucción **_ _ try** , pero es legal salir de una. Se deben ejecutar todas las instrucciones **_ _ Finally** activas entre el punto de salida (terminación normal del bloque **_ _ try** ) y el destino (el bloque **_ _ Except** que controla la excepción). Esto recibe el nombre de desenredado local.
 
-Si un bloque **try** se termina prematuramente por cualquier motivo, incluido un salto fuera del bloque, el sistema ejecuta el bloque Finally asociado como parte del proceso de desenredado de la pila. En tales casos, la función [AbnormalTermination](/windows/win32/Debug/abnormaltermination) devuelve **true** si se llama desde dentro del bloque **Finally** ; de lo contrario, devuelve **false**.
+Si un bloque **try** se termina prematuramente por cualquier motivo, incluido un salto fuera del bloque, el sistema ejecuta el bloque **Finally** asociado como parte del proceso de desenredado de la pila. En tales casos, la función [AbnormalTermination](/windows/win32/Debug/abnormaltermination) devuelve **true** si se llama desde dentro del bloque **Finally** ; de lo contrario, devuelve **false**.
 
 No se llama al controlador de terminación si un proceso se elimina en medio de la ejecución de una instrucción **try-finally** .
 

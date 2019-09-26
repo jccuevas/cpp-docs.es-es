@@ -2,13 +2,13 @@
 title: Guía de migración y actualización de Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.topic: landing-page
-ms.openlocfilehash: eed1f3d6ba66aa77561d610530f820b09cf439df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
-ms.translationtype: HT
+ms.topic: overview
+ms.openlocfilehash: 55bfb9a1ad23a0e4a3efa7f0a9361523c6c9754d
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216375"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274689"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guía de migración y actualización de Visual C++
 
@@ -74,7 +74,7 @@ Por otro lado, quizás ahora tiene nuevos requisitos o puede prever la necesidad
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Se explica cómo utilizar los proyectos creados en versiones anteriores de Visual Studio.|
 |[Novedades del compilador de C++ en Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Cambios en el IDE y las herramientas para la versión actual de Visual Studio|

@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514220"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imágenes para iconosC++()
@@ -71,7 +71,7 @@ Para obtener información sobre el **Editor de imágenes**, consulte [creación 
 
 El menú **imagen** , que solo aparece cuando el **Editor de imágenes** está activo, tiene comandos para editar imágenes, administrar paletas de colores y establecer opciones de la ventana del **Editor de imágenes** . Además, los comandos para usar imágenes de dispositivo están disponibles cuando se trabaja con iconos y cursores.
 
-|Get-Help|DESCRIPCIÓN|
+|Comando|Descripción|
 |---|---|
 |**Invertir colores**|Invierte los colores.|
 |**Voltear horizontalmente**|Voltea la imagen o la selección en sentido horizontal.|
@@ -93,7 +93,7 @@ El menú **imagen** , que solo aparece cuando el **Editor de imágenes** está a
 
 El cuadro de diálogo Configuración de la **cuadrícula** permite especificar la configuración de la cuadrícula para la imagen y mostrar las líneas de cuadrícula sobre la imagen modificada. Las líneas son útiles para editar la imagen, pero no se guardan como parte de la propia imagen.
 
-|Propiedad|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |---|---|
 |**Cuadrícula de píxeles**|Cuando esta opción está activada, muestra una cuadrícula alrededor de cada píxel en el **Editor de imágenes**.<br/><br/>La cuadrícula solo aparece en 4 × y resoluciones superiores.|
 |**Cuadrícula de mosaico**|Cuando está seleccionada, muestra una cuadrícula alrededor de los bloques de píxeles en el **Editor de imágenes**, especificados por los valores de espaciado de la cuadrícula.|
@@ -139,7 +139,7 @@ Abra el cuadro de diálogo **fuente de herramienta de texto** para cambiar la fu
 
 Para obtener acceso a este cuadro de diálogo, seleccione el botón **fuente** en el cuadro de diálogo **herramienta de texto** . Las propiedades disponibles son:
 
-|Propiedad|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |---|---|
 |**Fuente**|Muestra las fuentes disponibles.|
 |**Estilo de fuente**|Muestra los estilos disponibles para la fuente especificada.|
@@ -215,7 +215,7 @@ En todos los paneles del **Editor de imágenes** con un factor de ampliación de
 
 ## <a name="requirements"></a>Requisitos
 
-None
+Ninguna
 
 ## <a name="see-also"></a>Vea también
 

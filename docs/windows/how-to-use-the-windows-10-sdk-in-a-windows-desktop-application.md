@@ -4,10 +4,10 @@ ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69513821"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedimiento Usar el SDK de Windows 10 en una aplicación de escritorio de Windows
@@ -24,7 +24,7 @@ A partir de Visual Studio 2015 y el SDK de Windows 10, la biblioteca de CRT se s
 
 2. Abra el menú contextual del nodo del proyecto y elija **Redestinar versión de SDK**.
 
-   ![Versión del SDK] de redestinación (../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
+   ![Versión del SDK de redestinación](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
    Se mostrará el diálogo **Revisar acciones de solución** .
 

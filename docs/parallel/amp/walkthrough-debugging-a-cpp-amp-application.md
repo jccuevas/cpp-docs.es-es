@@ -8,10 +8,10 @@ helpviewer_keywords:
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
 ms.openlocfilehash: 0c9fb5588cfd44c83d8fe72c7c4aede0fedab672
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631596"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Tutorial: Depuración C++ de una aplicación amp
@@ -76,13 +76,13 @@ Las instrucciones para crear un proyecto varían en función de la versión de V
 
 1. Elija el botón **Siguiente**.
 
-1. Desactive la casilla **encabezado** precompilado y, a continuación, elija el botón **Finalizar** .
+1. Desactive la casilla **encabezado precompilado** y, a continuación, elija el botón **Finalizar** .
 
 1. En **Explorador de soluciones**, elimine *stdafx. h*, *targetver. h*y *stdafx. cpp* del proyecto.
 
 ::: moniker-end
 
-Nueva
+Siguiente:
 
 8. Abra AMPMapReduce. cpp y reemplace su contenido por el código siguiente.
 
@@ -209,7 +209,7 @@ Nueva
 
 11. En el cuadro de diálogo **páginas de propiedades** , en **propiedades de configuración**, elija encabezados de **C/C++**  > precompilados.
 
-12. En la propiedad **encabezado** precompilado, seleccione **no usar encabezados**precompilados y, a continuación, elija el botón **Aceptar** .
+12. En la propiedad **encabezado precompilado** , seleccione **no usar encabezados precompilados**y, a continuación, elija el botón **Aceptar** .
 
 13. En la barra de menús, elija **Compilar** > **Compilar solución**.
 
@@ -221,7 +221,7 @@ En este procedimiento, usará el depurador local de Windows para asegurarse de q
 
 1. En **Explorador de soluciones**, abra el menú contextual de **AMPMapReduce**y, a continuación, elija **propiedades**.
 
-2. En el cuadro de diálogo **páginas de propiedades** , en **propiedades de configuración**, elija depuración. Compruebe que el depurador **local de Windows** está seleccionado en la lista depurador **para iniciar** .
+2. En el cuadro de diálogo **páginas de propiedades** , en **propiedades de configuración**, elija **depuración**. Compruebe que el **depurador local de Windows** está seleccionado en la lista **depurador para iniciar** .
 
 3. Vuelva al **Editor de código**.
 
@@ -244,11 +244,11 @@ En esta sección se muestra cómo depurar el código de GPU, que es el `sum_kern
 
 1. En **Explorador de soluciones**, abra el menú contextual de **AMPMapReduce**y, a continuación, elija **propiedades**.
 
-2. En el cuadro de diálogo **páginas de propiedades** , en **propiedades de configuración**, elija depuración.
+2. En el cuadro de diálogo **páginas de propiedades** , en **propiedades de configuración**, elija **depuración**.
 
 3. En la lista **Depurador para iniciar**, seleccione **Depurador local de Windows**.
 
-4. En la lista **tipo** de depurador, compruebe que está seleccionado **automático** .
+4. En la lista **tipo de depurador** , compruebe que está seleccionado **automático** .
 
     **Auto** es el valor predeterminado. Antes de Windows 10, la **GPU solo** es el valor necesario en lugar de **auto**.
 
@@ -263,41 +263,41 @@ En esta sección se muestra cómo depurar el código de GPU, que es el `sum_kern
 
 ### <a name="to-use-the-gpu-threads-window"></a>Para usar la ventana subprocesos de GPU
 
-1. Para abrir la ventana subprocesos de **GPU** , en la barra de menús, elija depurar > subprocesos de**GPU**de**Windows** > .
+1. Para abrir la ventana **subprocesos de GPU** , en la barra de menús, elija **depurar** > **subprocesos de GPU**de**Windows** > .
 
-   Puede inspeccionar el estado de los subprocesos de GPU en la ventana subprocesos de **GPU** que aparece.
+   Puede inspeccionar el estado de los subprocesos de GPU en la ventana **subprocesos de GPU** que aparece.
 
-2. Acople la ventana subprocesos de **GPU** en la parte inferior de Visual Studio. Elija el botón **expandir el conmutador** de subproceso para mostrar los cuadros de texto de icono y de subproceso. La ventana subprocesos de **GPU** muestra el número total de subprocesos de GPU activos y bloqueados, tal como se muestra en la siguiente ilustración.
+2. Acople la ventana **subprocesos de GPU** en la parte inferior de Visual Studio. Elija el botón **expandir el conmutador de subproceso** para mostrar los cuadros de texto de icono y de subproceso. La ventana **subprocesos de GPU** muestra el número total de subprocesos de GPU activos y bloqueados, tal como se muestra en la siguiente ilustración.
 
    ![Ventana subprocesos de GPU con 4 subprocesos activos](../../parallel/amp/media/campc.png "Ventana subprocesos de GPU con 4 subprocesos activos") <br/>
    Ventana Subprocesos de GPU
 
    Hay 313 mosaicos asignados para este cálculo. Cada mosaico contiene 32 subprocesos. Dado que la depuración de GPU local se produce en un emulador de software, hay cuatro subprocesos de GPU activos. Los cuatro subprocesos ejecutan las instrucciones simultáneamente y después se mueven juntos a la siguiente instrucción.
 
-   En la ventana subprocesos de **GPU** , hay cuatro subprocesos de GPU activos y 28 subprocesos de GPU bloqueados en la instrucción [tile_barrier:: wait](reference/tile-barrier-class.md#wait) definida en la línea 21 (`t_idx.barrier.wait();`). Todos los subprocesos de GPU 32 pertenecen al `tile[0]`primer icono,. Una flecha apunta a la fila que incluye el subproceso actual. Para cambiar a otro subproceso, use uno de los métodos siguientes:
+   En la ventana **subprocesos de GPU** , hay cuatro subprocesos de GPU activos y 28 subprocesos de GPU bloqueados en la instrucción [tile_barrier:: wait](reference/tile-barrier-class.md#wait) definida en la línea 21 (`t_idx.barrier.wait();`). Todos los subprocesos de GPU 32 pertenecen al `tile[0]`primer icono,. Una flecha apunta a la fila que incluye el subproceso actual. Para cambiar a otro subproceso, use uno de los métodos siguientes:
 
-    - En la fila del subproceso al que se va a cambiar en la ventana subprocesos de **GPU** , abra el menú contextual y elija **cambiar a subproceso**. Si la fila representa más de un subproceso, cambiará al primer subproceso según las coordenadas del subproceso.
+    - En la fila del subproceso al que se va a cambiar en la ventana **subprocesos de GPU** , abra el menú contextual y elija **cambiar a subproceso**. Si la fila representa más de un subproceso, cambiará al primer subproceso según las coordenadas del subproceso.
 
-    - Escriba los valores de mosaico y de subproceso del subproceso en los cuadros de texto correspondientes y, a continuación, elija el botón **cambiar** de subproceso.
+    - Escriba los valores de mosaico y de subproceso del subproceso en los cuadros de texto correspondientes y, a continuación, elija el botón **cambiar de subproceso** .
 
    La ventana **pila de llamadas** muestra la pila de llamadas del subproceso de GPU actual.
 
 ### <a name="to-use-the-parallel-stacks-window"></a>Para usar la ventana pilas paralelas
 
-1. Para abrir la ventana **pilas paralelas** , en la barra de menús, > elija depurar**pilas paralelas**de**Windows** > .
+1. Para abrir la ventana **pilas paralelas** , en la barra de menús, elija **depurar** > **pilas paralelas**de**Windows** > .
 
    Puede usar la ventana **pilas paralelas** para inspeccionar simultáneamente los marcos de pila de varios subprocesos de GPU.
 
 2. Acople la ventana **pilas paralelas** en la parte inferior de Visual Studio.
 
-3. Asegúrese de que subprocesos está seleccionado en la lista de la esquina superior izquierda. En la siguiente ilustración, la ventana **pilas paralelas** muestra una vista centrada en la pila de llamadas de los subprocesos de GPU que vio en la ventana subprocesos de **GPU** .
+3. Asegúrese de que **subprocesos** está seleccionado en la lista de la esquina superior izquierda. En la siguiente ilustración, la ventana **pilas paralelas** muestra una vista centrada en la pila de llamadas de los subprocesos de GPU que vio en la ventana **subprocesos de GPU** .
 
    ![Ventana pilas paralelas con 4 subprocesos activos](../../parallel/amp/media/campd.png "Ventana pilas paralelas con 4 subprocesos activos") <br/>
    Ventana Pilas paralelas
 
    32 los subprocesos pasaron de `_kernel_stub` a la instrucción lambda en la `parallel_for_each` llamada de función `sum_kernel_tiled` y, a continuación, a la función, donde se produce la reducción paralela. 28 de los subprocesos 32 han progresado hasta la instrucción [tile_barrier:: wait](reference/tile-barrier-class.md#wait) y siguen bloqueados en la línea 22, mientras que los otros 4 subprocesos permanecen activos en la función de la `sum_kernel_tiled` línea 30.
 
-   Puede inspeccionar las propiedades de un subproceso de GPU que están disponibles en la ventana subprocesos de **GPU** en la información sobre la información enriquecida de la ventana **pilas paralelas** . Para ello, coloque el puntero del mouse en el marco de pila de **sum_kernel_tiled**. En la ilustración siguiente se muestra la información sobre la información.
+   Puede inspeccionar las propiedades de un subproceso de GPU que están disponibles en la ventana **subprocesos de GPU** en la información sobre la información enriquecida de la ventana **pilas paralelas** . Para ello, coloque el puntero del mouse en el marco de pila de **sum_kernel_tiled**. En la ilustración siguiente se muestra la información sobre la información.
 
    Información ![sobre la ventana pilas paralelas] Información (../../parallel/amp/media/campe.png "sobre la ventana pilas paralelas") <br/>
    Información sobre los subprocesos de GPU
@@ -306,7 +306,7 @@ En esta sección se muestra cómo depurar el código de GPU, que es el `sum_kern
 
 ### <a name="to-use-the-parallel-watch-window"></a>Para usar la ventana Inspección paralela
 
-1. Para abrir la **ventana Inspección paralela** , en la barra de menús, > elija depurar**Windows** > **Parallel Watch** > en paralelo inspección**1**.
+1. Para abrir la ventana **inspección paralela** , en la barra de menús, elija **depurar** > **Windows** > **Parallel Watch** > en paralelo inspección**1**.
 
    Puede usar la ventana **inspección paralela** para inspeccionar los valores de una expresión entre varios subprocesos.
 
@@ -333,65 +333,65 @@ En esta sección se muestra cómo depurar el código de GPU, que es el `sum_kern
 
 ## <a name="flagging-gpu-threads"></a>Marcar subprocesos de GPU
 
-Puede marcar subprocesos de GPU específicos marcándolos en la ventana subprocesos de **GPU** , la ventana **inspección paralela** o la información sobre información en la ventana **pilas paralelas** . Si una fila de la ventana subprocesos de GPU contiene más de un subproceso, al marcar esa fila se marcan todos los subprocesos incluidos en la fila.
+Puede marcar subprocesos de GPU específicos marcándolos en la ventana **subprocesos de GPU** , la ventana **inspección paralela** o la información sobre información en la ventana **pilas paralelas** . Si una fila de la ventana subprocesos de GPU contiene más de un subproceso, al marcar esa fila se marcan todos los subprocesos incluidos en la fila.
 
 ### <a name="to-flag-gpu-threads"></a>Para marcar subprocesos de GPU
 
 1. Seleccione el encabezado de columna **[subproceso]** en la ventana **inspección paralela 1** para ordenar por índice de icono y por índice de subproceso.
 
-2. En la barra de menús, > elija depurar**continuar**, que hace que los cuatro subprocesos que estaban activos progresen a la siguiente barrera (definida en la línea 32 de AMPMapReduce. cpp).
+2. En la barra de menús, elija **depurar** > **continuar**, que hace que los cuatro subprocesos que estaban activos progresen a la siguiente barrera (definida en la línea 32 de AMPMapReduce. cpp).
 
 3. Elija el símbolo de marca en el lado izquierdo de la fila que contiene los cuatro subprocesos que ahora están activos.
 
-   En la ilustración siguiente se muestran los cuatro subprocesos marcados activos en la ventana subprocesos de **GPU** .
+   En la ilustración siguiente se muestran los cuatro subprocesos marcados activos en la ventana **subprocesos de GPU** .
 
-   ![Ventana subprocesos de GPU con] subprocesos marcados (../../parallel/amp/media/campg.png "Ventana subprocesos de GPU con") subprocesos marcados <br/>
+   ![Ventana subprocesos de GPU con subprocesos marcados](../../parallel/amp/media/campg.png "Ventana subprocesos de GPU con subprocesos marcados") <br/>
    Subprocesos activos en la ventana Subprocesos de GPU
 
    La ventana **inspección paralela** y la información sobre la información de la ventana **pilas paralelas** indican los subprocesos marcados.
 
-4. Si desea centrarse en los cuatro subprocesos marcados, puede optar por mostrar, en las ventanas subprocesos de **GPU**, **inspección paralela**y **pilas paralelas** , solo los subprocesos marcados.
+4. Si desea centrarse en los cuatro subprocesos marcados, puede optar por mostrar, en las ventanas **subprocesos de GPU**, **inspección paralela**y **pilas paralelas** , solo los subprocesos marcados.
 
-   Elija el botón **Mostrar solo marcado** en cualquiera de las ventanas o en la barra de herramientas **Ubicación** de depuración. En la ilustración siguiente se muestra el botón **Mostrar solo marcado** en la barra de herramientas **Ubicación** de depuración.
+   Elija el botón **Mostrar solo marcado** en cualquiera de las ventanas o en la barra de herramientas **Ubicación de depuración** . En la ilustración siguiente se muestra el botón **Mostrar solo marcado** en la barra de herramientas **Ubicación de depuración** .
 
    ![Barra de herramientas ubicación de depuración con el icono Mostrar solo marcado](../../parallel/amp/media/camph.png "Barra de herramientas ubicación de depuración con el icono Mostrar solo marcado") <br/>
    Botón **Mostrar solo marcas**
 
-   Ahora, las ventanas subprocesos de **GPU**, **inspección paralela**y **pilas paralelas** muestran solo los subprocesos marcados.
+   Ahora, las ventanas **subprocesos de GPU**, **inspección paralela**y **pilas paralelas** muestran solo los subprocesos marcados.
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Inmovilizar y reanudar subprocesos de GPU
 
-Puede inmovilizar (suspender) e reanudar (reanudar) los subprocesos de GPU en la ventana subprocesos de **GPU** o en la ventana **inspección paralela** . Puede inmovilizar y reanudar los subprocesos de CPU de la misma manera; para obtener información, [consulte Cómo: Use la ventana](/visualstudio/debugger/how-to-use-the-threads-window)subprocesos.
+Puede inmovilizar (suspender) e reanudar (reanudar) los subprocesos de GPU en la ventana **subprocesos de GPU** o en la ventana **inspección paralela** . Puede inmovilizar y reanudar los subprocesos de CPU de la misma manera; para obtener información, [consulte Cómo: Use la ventana](/visualstudio/debugger/how-to-use-the-threads-window)subprocesos.
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Para inmovilizar y reanudar subprocesos de GPU
 
 1. Elija el botón **Mostrar solo marcado** para mostrar todos los subprocesos.
 
-2. En la barra de menús, > elija depurar**continuar**.
+2. En la barra de menús, elija **depurar** > **continuar**.
 
-3. Abra el menú contextual de la fila activa y,a continuación, elija inmovilizar.
+3. Abra el menú contextual de la fila activa y, a continuación, elija **inmovilizar**.
 
-   La siguiente ilustración de la ventana subprocesos de **GPU** muestra que los cuatro subprocesos están inmovilizados.
+   La siguiente ilustración de la ventana **subprocesos de GPU** muestra que los cuatro subprocesos están inmovilizados.
 
-   Subprocesos de ![GPU ventanas] con subprocesos inmovilizados Subprocesos de (../../parallel/amp/media/campk.png "GPU ventanas") con subprocesos inmovilizados <br/>
-   Subprocesos inmovilizados en la ventana subprocesos de **GPU**
+   ![Subprocesos de GPU ventanas con subprocesos inmovilizados](../../parallel/amp/media/campk.png "Subprocesos de GPU ventanas con subprocesos inmovilizados") <br/>
+   Subprocesos inmovilizados en la ventana **subprocesos de GPU**
 
    Del mismo modo, la ventana **inspección paralela** muestra que los cuatro subprocesos están inmovilizados.
 
-4. En la barra de menús, > elija depurar**continuar** para permitir que los siguientes cuatro subprocesos de GPU progresan más allá de la barrera de la línea 22 y alcanzar el punto de interrupción en la línea 30. La ventana subprocesos de **GPU** muestra que los cuatro subprocesos previamente inmovilizados permanecen inmovilizados y en estado activo.
+4. En la barra de menús, elija **depurar** > **continuar** para permitir que los siguientes cuatro subprocesos de GPU progresan más allá de la barrera de la línea 22 y alcanzar el punto de interrupción en la línea 30. La ventana **subprocesos de GPU** muestra que los cuatro subprocesos previamente inmovilizados permanecen inmovilizados y en estado activo.
 
-5. En la barra de menús,elija depurar, **continuar**.
+5. En la barra de menús, elija **depurar**, **continuar**.
 
 6. En la ventana **inspección paralela** , también se pueden reanudar los subprocesos individuales o varios de GPU.
 
 ### <a name="to-group-gpu-threads"></a>Para agrupar subprocesos de GPU
 
-1. En el menú contextual de uno de los subprocesos de la ventana subprocesos de **GPU** , elija **Agrupar por**y **Dirección**.
+1. En el menú contextual de uno de los subprocesos de la ventana **subprocesos de GPU** , elija **Agrupar por**y **Dirección**.
 
-   Los subprocesos de la ventana subprocesos de **GPU** se agrupan por dirección. La dirección corresponde a la instrucción del desensamblado donde se encuentra cada grupo de subprocesos. 24 subprocesos se encuentran en la línea 22, donde se ejecuta el [método tile_barrier:: wait](reference/tile-barrier-class.md#wait) . 12 subprocesos se encuentran en la instrucción de la barrera de la línea 32. Se marcan cuatro de estos subprocesos. Ocho subprocesos se encuentran en el punto de interrupción de la línea 30. Cuatro de estos subprocesos están inmovilizados. En la ilustración siguiente se muestran los subprocesos agrupados en la ventana subprocesos de **GPU** .
+   Los subprocesos de la ventana **subprocesos de GPU** se agrupan por dirección. La dirección corresponde a la instrucción del desensamblado donde se encuentra cada grupo de subprocesos. 24 subprocesos se encuentran en la línea 22, donde se ejecuta el [método tile_barrier:: wait](reference/tile-barrier-class.md#wait) . 12 subprocesos se encuentran en la instrucción de la barrera de la línea 32. Se marcan cuatro de estos subprocesos. Ocho subprocesos se encuentran en el punto de interrupción de la línea 30. Cuatro de estos subprocesos están inmovilizados. En la ilustración siguiente se muestran los subprocesos agrupados en la ventana **subprocesos de GPU** .
 
    ![Ventana subprocesos de GPU con subprocesos agrupados por dirección](../../parallel/amp/media/campl.png "Ventana subprocesos de GPU con subprocesos agrupados por dirección") <br/>
-   Subprocesos agrupados en la ventana subprocesos de **GPU**
+   Subprocesos agrupados en la ventana **subprocesos de GPU**
 
 2. También puede realizar la operación **Agrupar por** abriendo el menú contextual de la cuadrícula de datos de la ventana **inspección paralela** , eligiendo **Agrupar por**y, a continuación, eligiendo el elemento de menú que corresponde a cómo desea agrupar los subprocesos.
 
@@ -401,18 +401,18 @@ Todos los subprocesos de un mosaico determinado se ejecutan en la línea que con
 
 ### <a name="to-run-all-threads-to-the-location-marked-by-the-cursor"></a>Para ejecutar todos los subprocesos en la ubicación marcada por el cursor
 
-1. En el menú contextual para los subprocesosinmovilizados, elija reanudar.
+1. En el menú contextual para los subprocesos inmovilizados, elija **reanudar**.
 
 2. En el **Editor de código**, coloque el cursor en la línea 30.
 
 3. En el menú contextual del **Editor de código**, elija **ejecutar el icono actual hasta el cursor**.
 
-   Los 24 subprocesos previamente bloqueados en la barrera de la línea 21 han progresado a la línea 32. Esto se muestra en la ventana subprocesos de **GPU** .
+   Los 24 subprocesos previamente bloqueados en la barrera de la línea 21 han progresado a la línea 32. Esto se muestra en la ventana **subprocesos de GPU** .
 
 ## <a name="see-also"></a>Vea también
 
 [Información general sobre C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Depurar código de GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
-[Procedimientos: usar la ventana Subprocesos de GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
+[Cómo: usar la ventana Subprocesos de GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
 [Cómo: Uso de la ventana Inspección paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Analizar C++ código de amp con el visualizador de simultaneidad](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

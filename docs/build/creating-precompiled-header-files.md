@@ -8,15 +8,15 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69630495"
 ---
 # <a name="precompiled-header-files"></a>Archivos de encabezado precompilados
 
-Al crear un nuevo proyecto en Visual Studio, se agrega al proyecto un *archivo de encabezado* precompilado denominado *PCH. h* . (En Visual Studio 2017 y versiones anteriores, el archivo se llamaba *stdafx. h*). El propósito del archivo es acelerar el proceso de compilación. Los archivos de encabezado estables, por ejemplo, los encabezados de `<vector>`la biblioteca estándar como, deben incluirse aquí. El encabezado precompilado solo se compila cuando se modifica el archivo o los archivos que incluye. Si solo realiza cambios en el código fuente del proyecto, la compilación omitirá la compilación del encabezado precompilado. 
+Al crear un nuevo proyecto en Visual Studio, se agrega al proyecto un *archivo de encabezado precompilado* denominado *PCH. h* . (En Visual Studio 2017 y versiones anteriores, el archivo se llamaba *stdafx. h*). El propósito del archivo es acelerar el proceso de compilación. Los archivos de encabezado estables, por ejemplo, los encabezados de `<vector>`la biblioteca estándar como, deben incluirse aquí. El encabezado precompilado solo se compila cuando se modifica el archivo o los archivos que incluye. Si solo realiza cambios en el código fuente del proyecto, la compilación omitirá la compilación del encabezado precompilado. 
 
 Las opciones del compilador para los encabezados precompilados son [/y](reference/y-precompiled-headers.md). En las páginas de propiedades del proyecto, las opciones se encuentran en **propiedades de configuraciónC++ > encabezados precompilados de C/>** . Puede optar por no utilizar encabezados precompilados, y puede especificar el nombre del archivo de encabezado y el nombre y la ruta de acceso del archivo de salida. 
 
@@ -116,7 +116,7 @@ Cuando se usa un encabezado precompilado creado con/YC o/Yu, el compilador compa
 
 En esta tabla se enumeran las opciones del compilador que pueden desencadenar una advertencia de incoherencia al usar un encabezado precompilado:
 
-|Opción|NOMBRE|Regla|
+|Opción|Name|Regla|
 |------------|----------|----------|
 |/D|Definir constantes y macros|Debe ser el mismo entre la compilación que creó el encabezado precompilado y la compilación actual. No se comprueba el estado de las constantes definidas, pero se pueden producir resultados imprevisibles si los archivos dependen de los valores de las constantes modificadas.|
 |/E o/EP|Copiar la salida del preprocesador a la salida estándar|Los encabezados precompilados no funcionan con la opción/E o/EP.|
@@ -139,7 +139,7 @@ Normalmente, la base de código de un proyecto de software se incluye en C++ var
 
 En la ilustración se usan tres dispositivos en diagramas para mostrar el flujo del proceso de compilación. Los rectángulos con nombre representan cada archivo o macro; las tres macros representan uno o varios archivos. Las áreas sombreadas representan cada acción de compilación o vinculación. Las flechas muestran qué archivos y macros se combinan durante el proceso de compilación o vinculación.
 
-![Estructura de un archivo make que utiliza un archivo de encabezado] precompilado (media/vc30ow1.gif "Estructura de un archivo make que utiliza un archivo de encabezado") precompilado <br/>
+![Estructura de un archivo make que utiliza un archivo de encabezado precompilado](media/vc30ow1.gif "Estructura de un archivo make que utiliza un archivo de encabezado precompilado") <br/>
 Estructura de un archivo MAKE que utiliza un archivo de encabezado precompilado
 
 A partir de la parte superior del diagrama, tanto STABLEHDRS como el límite son macros NMAKE en las que se enumeran los archivos que no es probable que necesiten volver a compilarse. Estos archivos se compilan mediante la cadena de comandos
@@ -219,7 +219,7 @@ NMAKE
 NMAKE DEBUG=0
 ```
 
-Para obtener más información sobre los archivos make, vea [referencia de NMAKE](reference/nmake-reference.md). Vea también [Opciones del](reference/compiler-options.md) compilador de MSVC y las opciones del vinculador de [MSVC](reference/linker-options.md).
+Para obtener más información sobre los archivos make, vea [referencia de NMAKE](reference/nmake-reference.md). Vea también [Opciones del compilador de MSVC](reference/compiler-options.md) y las [Opciones del vinculador de MSVC](reference/linker-options.md).
 
 ## <a name="example-code-for-pch"></a>Código de ejemplo para PCH
 

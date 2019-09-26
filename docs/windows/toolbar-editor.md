@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514691"
 ---
 # <a name="toolbar-editor-c"></a>Editor de barrasC++de herramientas ()
@@ -76,7 +76,7 @@ Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho m
 
 El cuadro de diálogo **nuevo recurso** de la barra de herramientas tiene las siguientes propiedades:
 
-|Propiedad|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |---|---------------|
 |**Ancho del botón**|Proporciona un espacio para que escriba el ancho de los botones de la barra de herramientas que va a convertir de un recurso de mapa de bits a un recurso de la barra de herramientas.|
 |**Alto del botón**|Proporciona un espacio para que escriba el alto de los botones de la barra de herramientas que va a convertir de un recurso de mapa de bits a un recurso de la barra de herramientas.|
@@ -88,7 +88,7 @@ De forma predeterminada, se muestra un botón nuevo o en blanco en el extremo de
 
 Un botón de la barra de herramientas tiene las siguientes propiedades:
 
-|Propiedad|DESCRIPCIÓN|
+|Propiedad.|Descripción|
 |--------------|-----------------|
 |**ID**|Define el identificador del botón. La lista desplegable proporciona nombres de **identificador** comunes.|
 |**Width**|Establece el ancho del botón. se recomienda 16 píxeles.|
@@ -163,7 +163,7 @@ En el panel de vista de la **barra de herramientas** , arrastre el botón que de
 
 - Para insertar o quitar espacio entre los botones de una barra de herramientas, arrástrelos hacia delante o hacia el otro en la barra de herramientas.
 
-|.|Paso|
+|Acción|Paso|
 |------|------|
 |Para insertar un espacio antes de un botón que no está seguido de un espacio|Arrastre el botón hacia la derecha o hacia abajo hasta que se solape con el botón siguiente aproximadamente a la mitad.|
 |Para insertar un espacio antes de un botón seguido de un espacio y mantener el espacio al final|Arrastre el botón hasta que el borde derecho o inferior solo toque el botón siguiente o simplemente se superponga.|

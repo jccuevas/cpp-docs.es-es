@@ -2,13 +2,13 @@
 title: Programación en paralelo en Visual C++
 ms.date: 11/04/2016
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
-ms.topic: landing-page
-ms.openlocfilehash: 435036994a4ad67a911622b9b8ccab6ca972be4f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 3aa6e248f34293f6564f0b98c524f07535dbb20e
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220038"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274770"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Programación en paralelo en Visual C++
 
@@ -16,7 +16,7 @@ Visual C++ proporciona las siguientes tecnologías para ayudarle a crear program
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Título|DESCRIPCIÓN|
+|Title|Descripción|
 |-----------|-----------------|
 |[Paralelización y vectorización automáticas](auto-parallelization-and-auto-vectorization.md)|Optimizaciones del compilador que aceleran el código.|
 |[Runtime de simultaneidad](concrt/concurrency-runtime.md)|Clases que simplifican la escritura de programas que usan el paralelismo de datos o el paralelismo de tareas.|

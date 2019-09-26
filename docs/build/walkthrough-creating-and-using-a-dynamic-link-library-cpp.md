@@ -8,15 +8,15 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: ec524d1f87bcce2b26b02e6d297f42c94b3db36e
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70026030"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Tutorial: Crear y usar una biblioteca personalizada de vínculos dinámicos (C++)
 
-En este tutorial paso a paso se muestra cómo usar el IDE de Visual Studio para crear su propia biblioteca de vínculos dinámicos (DLL) escrita C++ en Microsoft (MSVC). A continuación, se muestra cómo usar el archivo DLL C++ desde otra aplicación. Los archivos DLL (también conocidos como *bibliotecas* compartidas en sistemas operativos basados en UNIX) son uno de los tipos de componentes de Windows más útiles. Puede usarlos como una manera de compartir código y recursos, y reducir el tamaño de las aplicaciones. Los archivos dll pueden incluso facilitar el servicio y la ampliación de las aplicaciones.
+En este tutorial paso a paso se muestra cómo usar el IDE de Visual Studio para crear su propia biblioteca de vínculos dinámicos (DLL) escrita C++ en Microsoft (MSVC). A continuación, se muestra cómo usar el archivo DLL C++ desde otra aplicación. Los archivos DLL (también conocidos como *bibliotecas compartidas* en sistemas operativos basados en UNIX) son uno de los tipos de componentes de Windows más útiles. Puede usarlos como una manera de compartir código y recursos, y reducir el tamaño de las aplicaciones. Los archivos dll pueden incluso facilitar el servicio y la ampliación de las aplicaciones.
 
 En este tutorial, creará un archivo DLL que implementa algunas funciones matemáticas. Después, creará una aplicación de consola que usa las funciones del archivo DLL. También obtendrá una introducción a algunas de las técnicas y convenciones de programación que se usan en los archivos dll de Windows.
 
@@ -336,7 +336,7 @@ Cuando la macro **MATHLIBRARY&#95;EXPORTS** está definida, la macro **MATHLIBRA
 
 ::: moniker-end
 
-Para comprobar que todo funciona, compile la biblioteca de vínculos dinámicos. En la barra de menús, elija **Compilar** > **Compilar solución**. El archivo DLL y la salida del compilador relacionado se colocan en una carpeta denominada depurar directamente debajo de la carpeta de la solución. Si crea una versión de lanzamiento, la salida se coloca en una carpeta denominada *Release*. La salida debe tener un aspecto similar al siguiente:
+Para comprobar que todo funciona, compile la biblioteca de vínculos dinámicos. En la barra de menús, elija **Compilar** > **Compilar solución**. El archivo DLL y la salida del compilador relacionado se colocan en una carpeta denominada *depurar* directamente debajo de la carpeta de la solución. Si crea una versión de lanzamiento, la salida se coloca en una carpeta denominada *Release*. La salida debe tener un aspecto similar al siguiente:
 
 ::: moniker range=">=vs-2019"
 
@@ -529,7 +529,7 @@ Para corregir este problema, puede copiar el archivo de biblioteca directamente 
 
    ![Editar la propiedad Directorios de bibliotecas adicionales](media/mathclient-additional-library-directories-property.png "Edit the Additional Library Directories property")
 
-1. Haga doble clic en el panel superior del cuadro de diálogo **Directorios de bibliotecas adicionales** para habilitar un control de edición. En el control de edición, especifique la ruta de acceso a la ubicación del archivo **MathLibrary.lib**. De forma predeterminada, se encuentra en una carpeta denominada depurar directamente en la carpeta de la solución dll. Si crea una versión de lanzamiento, el archivo se coloca en una carpeta denominada *Release*. Puede usar la `$(IntDir)` macro para que el enlazador pueda encontrar el archivo dll, con independencia del tipo de compilación que cree. Si ha seguido las instrucciones para colocar el proyecto de cliente en una solución independiente del proyecto DLL, la ruta de acceso relativa debe ser similar a la siguiente:
+1. Haga doble clic en el panel superior del cuadro de diálogo **Directorios de bibliotecas adicionales** para habilitar un control de edición. En el control de edición, especifique la ruta de acceso a la ubicación del archivo **MathLibrary.lib**. De forma predeterminada, se encuentra en una carpeta denominada *depurar* directamente en la carpeta de la solución dll. Si crea una versión de lanzamiento, el archivo se coloca en una carpeta denominada *Release*. Puede usar la `$(IntDir)` macro para que el enlazador pueda encontrar el archivo dll, con independencia del tipo de compilación que cree. Si ha seguido las instrucciones para colocar el proyecto de cliente en una solución independiente del proyecto DLL, la ruta de acceso relativa debe ser similar a la siguiente:
 
    `..\..\MathLibrary\$(IntDir)`
 

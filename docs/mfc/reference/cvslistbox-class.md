@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 ms.openlocfilehash: 6a33f5b64c5094bfe2ca2ff259b5cd8654058ed3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69502230"
 ---
 # <a name="cvslistbox-class"></a>Clase CVSListBox
@@ -49,14 +49,14 @@ class CVSListBox : public CVSListBoxBase
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CVSListBox::CVSListBox](#cvslistbox)|Construye un objeto `CVSListBox`.|
 |`CVSListBox::~CVSListBox`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CVSListBox::AddItem](#additem)|Agrega una cadena a un control de lista. (Invalida `CVSListBoxBase::AddItem`).|
 |[CVSListBox::EditItem](#edititem)|Inicia una operación de edición en el texto de un elemento de control de lista. (Invalida `CVSListBoxBase::EditItem`).|
@@ -71,7 +71,7 @@ class CVSListBox : public CVSListBoxBase
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CVSListBox::GetListHwnd](#getlisthwnd)|Devuelve el identificador del control de vista de lista incrustado actual.|
 

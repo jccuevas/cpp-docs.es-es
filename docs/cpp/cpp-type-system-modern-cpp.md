@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498628"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
@@ -63,11 +63,11 @@ En la ilustración siguiente se muestran los tamaños relativos de los tipos int
 
 En la tabla siguiente se muestran los tipos fundamentales que se usan con más frecuencia:
 
-|Type|Tamaño|Comentario|
+|Tipo|Tamaño|Comentario|
 |----------|----------|-------------|
 |int|4 bytes|Opción predeterminada para los valores enteros.|
-|Doble|8 bytes|Opción predeterminada para los valores de punto flotante.|
-|booleano|1 byte|Representa valores que pueden ser true o false.|
+|double|8 bytes|Opción predeterminada para los valores de punto flotante.|
+|bool|1 byte|Representa valores que pueden ser true o false.|
 |char|1 byte|Se utiliza en los caracteres ASCII de cadenas de estilo C antiguas u objetos std::string que nunca tendrán que convertirse a UNICODE.|
 |wchar_t|2 bytes|Representa valores de caracteres “anchos” que se pueden codificar en formato UNICODE (UTF-16 en Windows; puede diferir en otros sistemas operativos). Es el tipo de carácter que se utiliza en las cadenas de tipo `std::wstring`.|
 |unsigned&nbsp;Char|1 byte|C++ no tiene un tipo `byte` integrado.  Utilice un carácter sin signo para representar un valor byte.|
