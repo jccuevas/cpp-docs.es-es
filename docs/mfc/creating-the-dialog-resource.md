@@ -9,30 +9,30 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e6c81a0f4bd6983c2a76baf6148941a4fa21d
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242333"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685641"
 ---
 # <a name="creating-the-dialog-resource"></a>Crear el recurso de cuadro de diálogo
 
-Diseño de la [cuadro de diálogo](../mfc/dialog-boxes.md) y crear el recurso de cuadro de diálogo, usa el [editor de cuadro de diálogo](../windows/dialog-editor.md). En el editor de cuadro de diálogo, hacer lo siguiente:
+Para diseñar el [cuadro de diálogo](../mfc/dialog-boxes.md) y crear el recurso de diálogo, use el [Editor de cuadros de diálogo](../windows/dialog-editor.md). En el editor de cuadros de diálogo, puede:
 
-- Ajustar el tamaño y ubicación que el cuadro de diálogo tendrá cuando aparezca.
+- Ajuste el tamaño y la ubicación que tendrá el cuadro de diálogo cuando aparezca.
 
-- Arrastre los distintos tipos de controles de una paleta de controles y colóquelos donde desee en el cuadro de diálogo.
+- Arrastre varios tipos de controles desde una paleta de controles y colóquelos donde desee en el cuadro de diálogo.
 
-- Colocar los controles con los botones de alineación en la barra de herramientas.
+- Coloque los controles con botones de alineación en la barra de herramientas.
 
-- Probar cuadro de diálogo mediante la simulación de la apariencia y comportamiento que tendrá en el programa. En el modo de prueba, puede manipular los controles del cuadro de diálogo escribiendo texto en cuadros de texto, haga clic en los botones de comando y así sucesivamente.
+- Pruebe el cuadro de diálogo mediante la simulación de la apariencia y el comportamiento que tendrá en el programa. En el modo de prueba, puede manipular los controles del cuadro de diálogo escribiendo texto en cuadros de texto, haciendo clic en pulsadores, etc.
 
-Cuando haya terminado, el recurso de plantilla de cuadro de diálogo se almacena en el archivo de script de recursos de la aplicación. Puede editar más adelante si es necesario. Para obtener una descripción completa de cómo crear y editar recursos de cuadro de diálogo, vea el [editor de cuadro de diálogo](../windows/dialog-editor.md) temas. Esta técnica también se usa para crear los recursos de plantilla de cuadro de diálogo para [CFormView](../mfc/reference/cformview-class.md) y [CRecordView](../mfc/reference/crecordview-class.md) clases.
+Cuando termine, el recurso de plantilla de cuadro de diálogo se almacena en el archivo de script de recursos de la aplicación. Puede editarlo más adelante si es necesario. Para obtener una descripción completa de cómo crear y editar recursos de cuadro de diálogo, vea los temas del [Editor de cuadros de diálogo](../windows/dialog-editor.md) . Esta técnica también se usa para crear los recursos de plantilla de cuadro de diálogo para las clases [CFormView](../mfc/reference/cformview-class.md) y [CRecordView](../mfc/reference/crecordview-class.md) .
 
-Cuando la apariencia del cuadro de diálogo le acomode, cree una clase de cuadro de diálogo y asigne sus mensajes, como se describe en [crear una clase de cuadro de diálogo con los asistentes para código](../mfc/creating-a-dialog-class-with-code-wizards.md).
+Cuando la apariencia del cuadro de diálogo le convenga, cree una clase de diálogo y asigne sus mensajes, como se describe en [crear una clase de diálogo con los asistentes para código](../mfc/creating-a-dialog-class-with-code-wizards.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
-[Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Trabajar con cuadros de diálogo en MFC](../mfc/life-cycle-of-a-dialog-box.md)

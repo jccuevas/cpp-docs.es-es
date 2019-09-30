@@ -8,34 +8,34 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18b4c4d1386716a0a3282b88d6fdf5a701abce08
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262637"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685794"
 ---
 # <a name="dialog-boxes"></a>Cuadros de diálogo
 
-Con frecuencia, las aplicaciones para Windows comunican con el usuario a través de cuadros de diálogo. Clase [CDialog](../mfc/reference/cdialog-class.md) proporciona una interfaz para administrar los cuadros de diálogo, el editor de cuadro de diálogo de Visual C++ facilita la tarea diseñar los cuadros de diálogo y crear sus recursos de plantilla de cuadro de diálogo y asistentes para código simplifican el proceso de inicialización y validación de los controles en un cuadro de diálogo y de recopilación de los valores especificados por el usuario.
+Las aplicaciones para Windows se comunican con frecuencia con el usuario a través de cuadros de diálogo. La clase [CDialog](../mfc/reference/cdialog-class.md) proporciona una interfaz para administrar los cuadros de diálogo C++ . el editor de cuadros de diálogo visual facilita el diseño de cuadros de diálogo y la creación de sus recursos de plantilla de cuadro de diálogo, y los asistentes de código simplifican el proceso de inicialización y validación del los controles de un cuadro de diálogo y de la recopilación de los valores especificados por el usuario.
 
-Cuadros de diálogo contienen controles, incluidos:
+Los cuadros de diálogo contienen controles, entre los que se incluyen:
 
-- Controles comunes de Windows, como edición cuadros, botones de comando, cuadros de lista, cuadros combinados, los controles de árbol, los controles de lista e indicadores de progreso.
+- Controles comunes de Windows, como cuadros de edición, botones de control, cuadros de lista, cuadros combinados, controles de árbol, controles de lista e indicadores de progreso.
 
 - Controles ActiveX.
 
-- Controles dibujados por el propietario: controles que usted es responsable de dibujar en el cuadro de diálogo.
+- Controles dibujados por el propietario: controles que es responsable de dibujar en el cuadro de diálogo.
 
-La mayoría de los cuadros de diálogo son modales, que requieren que el usuario cerrar el cuadro de diálogo antes de usar cualquier otra parte del programa. Pero es posible crear cuadros de diálogo no modal, que permiten a los usuarios trabajar con otras ventanas mientras está abierto el cuadro de diálogo. MFC es compatible con ambos tipos de cuadro de diálogo con la clase `CDialog`. Los controles se organizan y administran mediante un recurso de plantilla de cuadro de diálogo, creado con la [editor de cuadro de diálogo](../windows/dialog-editor.md).
+La mayoría de los cuadros de diálogo son modales, que requieren que el usuario cierre el cuadro de diálogo antes de usar cualquier otra parte del programa. Pero es posible crear cuadros de diálogo no modales, que permiten a los usuarios trabajar con otras ventanas mientras el cuadro de diálogo está abierto. MFC admite ambos tipos de cuadro de diálogo con la clase `CDialog`. Los controles se organizan y se administran mediante un recurso de plantilla de cuadro de diálogo, creado con el [Editor de cuadros de diálogo](../windows/dialog-editor.md).
 
-[Hojas de propiedades](../mfc/property-sheets-mfc.md), también conocido como cuadros de diálogo de pestaña, son cuadros de diálogo que contienen "páginas" de los controles de cuadro de diálogo distintos. Cada página tiene una carpeta de archivos "tab" en la parte superior. Al hacer clic en una ficha, esa página se coloca al principio del cuadro de diálogo.
+Las [hojas de propiedades](../mfc/property-sheets-mfc.md), también conocidas como cuadros de diálogo de pestaña, son cuadros de diálogo que contienen "páginas" de controles de cuadro de diálogo distintos. Cada página tiene una carpeta de archivos "pestaña" en la parte superior. Al hacer clic en una pestaña, la página se coloca en la parte frontal del cuadro de diálogo.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
 - [Ejemplo: mostrar un cuadro de diálogo mediante un comando de menú](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
-- [Componentes de cuadro de diálogo en el marco de trabajo](../mfc/dialog-box-components-in-the-framework.md)
+- [Componentes del cuadro de diálogo en el marco de trabajo](../mfc/dialog-box-components-in-the-framework.md)
 
 - [Cuadros de diálogo modales y no modales](../mfc/modal-and-modeless-dialog-boxes.md)
 
@@ -45,11 +45,11 @@ La mayoría de los cuadros de diálogo son modales, que requieren que el usuario
 
 - [Crear una clase de cuadro de diálogo con los asistentes para código](../mfc/creating-a-dialog-class-with-code-wizards.md)
 
-- [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+- [Trabajar con cuadros de diálogo en MFC](../mfc/life-cycle-of-a-dialog-box.md)
 
-- [Intercambio de datos de cuadro de diálogo (DDX) y la validación (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+- [Intercambio de datos de cuadros de diálogo (DDX) y validación (DDV)](../mfc/dialog-data-exchange-and-validation.md)
 
-- [Acceso de seguridad de tipos a los controles en un cuadro de diálogo](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)
+- [Acceso con seguridad de tipos a los controles de un cuadro de diálogo](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)
 
 - [Asignación de mensajes de Windows a la clase](../mfc/mapping-windows-messages-to-your-class.md)
 
@@ -61,7 +61,7 @@ La mayoría de los cuadros de diálogo son modales, que requieren que el usuario
 
 - [Cuadros de diálogo en OLE](../mfc/dialog-boxes-in-ole.md)
 
-- Crear una aplicación cuya interfaz de usuario es un cuadro de diálogo: vea la [CMNCTRL1](../overview/visual-cpp-samples.md) o [CMNCTRL2](../overview/visual-cpp-samples.md) programas de ejemplo. El Asistente para aplicaciones proporciona esta opción también.
+- Crear una aplicación cuya interfaz de usuario sea un cuadro de diálogo: vea los programas de ejemplo [CMNCTRL1](../overview/visual-cpp-samples.md) o [CMNCTRL2](../overview/visual-cpp-samples.md) . El Asistente para aplicaciones también proporciona esta opción.
 
 - [Muestras](../mfc/dialog-sample-list.md)
 

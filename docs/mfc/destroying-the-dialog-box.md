@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-ms.openlocfilehash: 84ae5b336bb8eeac4f8ab7b6e5b9f00246f9ca15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b407c6e832dde7a5865146e7cc12d1840d3234a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254311"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685853"
 ---
 # <a name="destroying-the-dialog-box"></a>Destruir el cuadro de diálogo
 
-Cuadros de diálogo modales normalmente se crean en el marco de pila y se destruyen cuando finaliza la función que los creó. Se llama al destructor del objeto de cuadro de diálogo cuando el objeto queda fuera del ámbito.
+Los cuadros de diálogo modales se crean normalmente en el marco de pila y se destruyen cuando finaliza la función que los creó. Se llama al destructor del objeto de cuadro de diálogo cuando el objeto sale del ámbito.
 
-Cuadros de diálogo no modal normalmente se crean y que pertenecen a una ventana de vista o el marco primario: ventana de marco principal de la aplicación o una ventana de marco de documento. El valor predeterminado [OnClose](../mfc/reference/cwnd-class.md#onclose) llamadas del controlador [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), que destruye la ventana de cuadro de diálogo. Si el cuadro de diálogo permanece independiente, sin punteros o otra semántica de propiedad especial, se debe reemplazar [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) para destruir el objeto de cuadro de diálogo de C++. También debe reemplazar [OnCancel](../mfc/reference/cdialog-class.md#oncancel) y llamar a `DestroyWindow` desde dentro de él. Si no es así, el propietario del cuadro de diálogo debe destruir el objeto de C++ cuando ya no es necesario.
+Normalmente, los cuadros de diálogo no modales se crean y son propiedad de una vista primaria o una ventana de marco: la ventana de marco principal de la aplicación o una ventana de marco de documento. El controlador [OnClose](../mfc/reference/cwnd-class.md#onclose) predeterminado llama a [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), que destruye la ventana del cuadro de diálogo. Si el cuadro de diálogo es independiente, sin punteros a él u otra semántica de propiedad especial, debe invalidar [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) para destruir el C++ objeto de cuadro de diálogo. También debe invalidar [OnCancel](../mfc/reference/cdialog-class.md#oncancel) y llamar a `DestroyWindow` desde dentro. Si no es así, el propietario del cuadro de diálogo debería C++ destruir el objeto cuando ya no sea necesario.
 
 ## <a name="see-also"></a>Vea también
 
-[Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Trabajar con cuadros de diálogo en MFC](../mfc/life-cycle-of-a-dialog-box.md)
