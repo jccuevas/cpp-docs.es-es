@@ -21,25 +21,25 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-ms.openlocfilehash: b376edc3ee7d8abbca43da6d823e71abad99bc5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 903d76a1e672d05a3c093e528f7153562df8e3e5
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308906"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685566"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Recuperar datos del objeto de cuadro de diálogo
 
-El marco proporciona una manera fácil para inicializar los valores de los controles en un cuadro de diálogo y para recuperar los valores de los controles. El enfoque manual más laborioso consiste en llamar a funciones, como el `SetDlgItemText` y `GetDlgItemText` funciones miembro de clase `CWnd`, que se aplican a las ventanas de control. Con estas funciones, tener acceso a cada control individualmente para establecer u obtener su valor, llamar a funciones como `SetWindowText` y `GetWindowText`. Enfoque de .NET framework automatiza la inicialización y la recuperación.
+El marco de trabajo proporciona una manera sencilla de inicializar los valores de los controles en un cuadro de diálogo y de recuperar los valores de los controles. El enfoque manual más laborioso es llamar a funciones como las funciones miembro `SetDlgItemText` y `GetDlgItemText` de la clase `CWnd`, que se aplican a las ventanas de control. Con estas funciones, se tiene acceso a cada control individualmente para establecer u obtener su valor, llamando a funciones como `SetWindowText` y `GetWindowText`. El enfoque del marco automatiza la inicialización y la recuperación.
 
-Intercambio de datos de cuadro de diálogo (DDX) le permite intercambiar datos entre los controles en el cuadro de diálogo cuadro y las variables miembro en el cuadro de diálogo más fácilmente. Este intercambio funciona en ambas direcciones. Para inicializar los controles en el cuadro de diálogo, puede establecer los valores de los miembros de datos en el cuadro de diálogo y el marco de trabajo transferirá los valores a los controles antes de que aparezca el cuadro de diálogo. A continuación, puede en cualquier momento actualizar a los miembros de datos de cuadro de diálogo con los datos introducidos por el usuario. En ese momento, puede usar los datos haciendo referencia a las variables de miembro de datos.
+Intercambio de datos de cuadros de diálogo (DDX) permite intercambiar datos entre los controles del cuadro de diálogo y las variables de miembro del objeto de cuadro de diálogo más fácilmente. Este intercambio funciona de ambas maneras. Para inicializar los controles en el cuadro de diálogo, puede establecer los valores de los miembros de datos en el objeto de diálogo y el marco de trabajo transferirá los valores a los controles antes de que se muestre el cuadro de diálogo. A continuación, puede actualizar los miembros de datos del cuadro de diálogo con los datos especificados por el usuario en cualquier momento. En ese momento, puede usar los datos haciendo referencia a las variables de miembro de datos.
 
-También puede organizar los valores de los controles de cuadro de diálogo Validar automáticamente con la validación de datos de cuadro de diálogo (DDV).
+También puede organizar los valores de los controles de cuadro de diálogo que se van a validar automáticamente con la validación de datos de cuadro de diálogo (DDV).
 
-DDX y DDV se explican con más detalle en [intercambio de datos de cuadro de diálogo y validación](../mfc/dialog-data-exchange-and-validation.md).
+DDX y DDV se explican con más detalle en [intercambio y validación de datos de cuadro de diálogo](../mfc/dialog-data-exchange-and-validation.md).
 
-Para un cuadro de diálogo modal, puede recuperar los datos que el usuario escribió al `DoModal` devuelve IDOK pero antes que el cuadro de diálogo se destruye el objeto. Para un cuadro de diálogo no modal, puede recuperar datos desde el objeto de cuadro de diálogo en cualquier momento mediante una llamada a `UpdateData` con el argumento **TRUE** y, a continuación, obtener acceso a variables de miembro de clase de cuadro de diálogo. Este tema se describe con más detalle en [intercambio de datos de cuadro de diálogo y validación](../mfc/dialog-data-exchange-and-validation.md).
+En un cuadro de diálogo modal, puede recuperar los datos especificados por el usuario cuando `DoModal` devuelve IDOK, pero antes de que se destruya el objeto de cuadro de diálogo. En el caso de un cuadro de diálogo no modal, puede recuperar datos del objeto de cuadro de diálogo en cualquier momento llamando a `UpdateData` con el argumento **true** y, a continuación, tener acceso a las variables de miembro de clase de cuadro de diálogo. Este tema se describe con más detalle en [intercambio y validación de datos de cuadro de diálogo](../mfc/dialog-data-exchange-and-validation.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+[Trabajar con cuadros de diálogo en MFC](../mfc/life-cycle-of-a-dialog-box.md)

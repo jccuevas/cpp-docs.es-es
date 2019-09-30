@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: d497886b22c7a90ab7cda47e46dc13daf297b192
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314469"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685715"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador desactivadas de forma predeterminada
 
-El compilador admite advertencias que están desactivadas de forma predeterminada, ya que la mayoría de los desarrolladores no las encuentran útiles. En algunos casos, avisan sobre una elección de estilo o sobre expresiones comunes en código antiguo. Otras advertencias son sobre el uso de una extensión de Microsoft para el lenguaje. En otros casos, indican un área en la que los programadores a menudo realizan suposiciones incorrectas, lo que puede provocar un comportamiento inesperado o indefinido. Si está habilitada, algunas de estas advertencias pueden aparecer muchas veces en encabezados de biblioteca. Las bibliotecas en tiempo de ejecución C++ de C y las bibliotecas estándar están diseñadas para no emitir ninguna advertencia solo en el nivel de advertencia [/W4](../build/reference/compiler-option-warning-level.md).
+El compilador admite advertencias que están desactivadas de forma predeterminada, ya que la mayoría de los desarrolladores no las encuentran útiles. En algunos casos, avisan sobre una elección de estilo o sobre expresiones comunes en código antiguo. Otras advertencias son sobre el uso de una extensión de Microsoft para el lenguaje. Algunas advertencias indican un área en la que los programadores a menudo realizan suposiciones incorrectas, lo que puede provocar un comportamiento inesperado o indefinido. Si todas estas advertencias están habilitadas, algunas de ellas pueden aparecer muchas veces en encabezados de biblioteca. Las bibliotecas en tiempo de ejecución C++ de C y las bibliotecas estándar están diseñadas para no emitir ninguna advertencia solo en el nivel de advertencia [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Habilitar advertencias que están desactivadas de forma predeterminada
 
@@ -89,7 +89,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |C4587 (nivel 1)|'*anonymous_structure*': cambio de comportamiento: ya no se llama implícitamente al constructor|
 |C4588 (nivel 1)|'*anonymous_structure*': cambio de comportamiento: ya no se llama implícitamente al destructor|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (nivel 4)|'*Identifier*': nombre completo no válido en la declaración de miembro <sup>14,3</sup> <sup>Perm</sup>|
-|C4598 (nivel 1 y nivel 3)|' #include '*encabezado*' ': el *número* de encabezado del encabezado precompilado no coincide con la compilación actual en esa posición <sup>14,3</sup>|
+|C4598 (nivel 1 y nivel 3)|' #include '*encabezado*' ': el encabezado del número de encabezado *-número* en el encabezado precompilado no coincide con la compilación actual en esa posición <sup>14,3</sup>|
 |C4599 (nivel 3)|'*Option* *path*': *el número de* argumento de la línea de comandos no coincide con el encabezado precompilado <sup>14,3</sup>|
 |C4605 (nivel 1)|'/D*macro*' especificada en la línea de comandos actual, pero no se especificó cuando se compiló el encabezado precompilado|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (nivel 3)|'*union_member*' ya ha sido inicializado por otro miembro Union en la lista de inicializadores, '*union_member*' <sup>Perm</sup>|
@@ -108,7 +108,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (nivel 1)|'*función*': la signatura de un miembro no privado contiene un tipo nativo privado de ensamblado '*native_type*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (nivel 4)|'*función*': la función no está insertada|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (nivel 3)|almacenando el resultado flotante de 32 bits en memoria; posible pérdida de rendimiento|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|el acceso volátil de '*expresión*' está sujeto a la\<configuración&#124;de la > de MS: ISO MS; considere la posibilidad de usar funciones intrínsecas de __iso_volatile_load/Store.|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|el acceso volátil de '*Expression*' está sujeto a la opción/volatile:&#124;\<ISO MS >. considerar el uso de funciones intrínsecas de __iso_volatile_load/Store|
 |C4749 (nivel 4)|compatibilidad condicional: desplazamiento aplicado al tipo de diseño no estándar '*tipo*'|
 |C4767 (nivel 4)|el nombre de sección '*Symbol*' tiene más de 8 caracteres y lo truncará el vinculador|
 |C4768 (nivel 3)|se omiten los atributos _ _ declspec antes de la especificación de vinculación|
@@ -142,15 +142,22 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |C5029 (nivel 4)|se ha utilizado una extensión no estándar: C++ los atributos de alineación de solo se aplican a variables, miembros de datos y tipos de etiqueta|
 |C5031 (nivel 4)|ADVERTENCIA de #pragma (pop): probable falta de coincidencia, se insertó el estado de advertencia insertado en el archivo diferente <sup>14,1</sup>|
 |C5032 (nivel 4)|se detectó #pragma ADVERTENCIA (inserciones) sin la advertencia #pragma correspondiente (pop) <sup>14,1</sup>|
-|C5034|el uso de '*Intrinsic*' intrínseco hace que la *función* de función se compile como código de invitado <sup>15,3</sup>|
-|C5035|el uso de la característica '*Feature*' hace que la *función* de función se compile como código de invitado <sup>15,3</sup>|
+|C5034|el uso de '*Intrinsic*' intrínseco hace que *el nombre de función-* función se compile como código de invitado <sup>15,3</sup>|
+|C5035|el uso de la característica '*Feature*' hace que *el nombre de función-* función se compile como código de invitado <sup>15,3</sup>|
 |C5036 (nivel 1)|conversión del puntero de función varargs al compilar con/Hybrid: x86arm64 '*Type1*' en '*Type2*' <sup>15,3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (nivel 4)|el miembro de datos '*member1*' se inicializará después del miembro de datos '*miembro2*' <sup>15,3</sup>|
 |C5039 (nivel 4)|'*function*': puntero o referencia a una función de inicio que se pasa a la función extern C en-EHC. Se puede producir un comportamiento indefinido si esta función produce una excepción. <sup>15,5</sup>|
 |C5042 (nivel 3)|'*función*': las declaraciones de función en el ámbito de bloque no se pueden especificar como ' C++inline ' en el estándar; quitar el especificador "inline" <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|El compilador insertará la mitigación de Spectre para la carga de memoria si se especifica el modificador/Qspectre <sup>15,7</sup>|
 
-<sup>14,1</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 1.\\ <sup>14,3</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 3.\\ <sup>15,3</sup> esta advertencia está disponible a partir de la versión 15,3 de Visual Studio 2017.\\ <sup>15,5</sup> esta advertencia está disponible a partir de la versión 15,5 de Visual Studio 2017.\\ <sup>15,7</sup> esta advertencia está disponible a partir de la versión 15,7 de Visual Studio 2017.\\ <sup>15,8</sup> esta advertencia está disponible a partir de la versión 15,8 de Visual Studio 2017.\\ <sup>16,0</sup> esta advertencia está disponible a partir de Visual Studio 2019 RTM.\\ <sup>Perm</sup> Esta advertencia está desactivada a menos que se establezca la opción del compilador [/permissive-](../build/reference/permissive-standards-conformance.md)
+<sup>14,1</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 1. <br/>
+<sup>14,3</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 3. <br/>
+<sup>15,3</sup> esta advertencia está disponible a partir de la versión 15,3 de Visual Studio 2017. <br/>
+<sup>15,5</sup> esta advertencia está disponible a partir de la versión 15,5 de Visual Studio 2017. <br/>
+<sup>15,7</sup> esta advertencia está disponible a partir de la versión 15,7 de Visual Studio 2017. <br/>
+<sup>15,8</sup> esta advertencia está disponible a partir de la versión 15,8 de Visual Studio 2017. <br/>
+<sup>16,0</sup> esta advertencia está disponible a partir de Visual Studio 2019 RTM. <br/>
+<sup>Perm</sup> Esta advertencia está desactivada a menos que se establezca la opción del compilador [/permissive-](../build/reference/permissive-standards-conformance.md)
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>ADVERTENCIAS desactivadas de forma predeterminada en versiones anteriores
 
