@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685589"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712702"
 ---
 # <a name="linker-options"></a>Opciones del enlazador
 
@@ -88,7 +88,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Le indica al compilador que la aplicación admite direcciones de más de dos gigabytes.|
 |[/LIBPATH](libpath-additional-libpath.md)|Especifica una ruta de acceso de búsqueda antes de la ruta de biblioteca del entorno.|
 |[/LINKREPRO](linkrepro.md)|Especifica una ruta de acceso para generar artefactos de reproducción de vínculos en.|
-|[/LINKREPROTARGET](linkreprotarget.md)|Genera una reproducción de vínculo solo cuando se produce el destino especificado.|
+|[/LINKREPROTARGET](linkreprotarget.md)|Genera una reproducción de vínculo solo cuando se produce el destino especificado. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Especifica la generación de código en tiempo de vínculo.|
 |[/MACHINE](machine-specify-target-platform.md)|Especifica la plataforma de destino.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Crea un archivo de manifiesto en paralelo y, si quiere, lo inserta en el archivo binario.|
@@ -137,7 +137,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Firma parcialmente un archivo de metadatos de Windows en tiempo de ejecución (.winmd) colocando la clave pública en el archivo winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Trata como errores las advertencias del enlazador.|
 
-Para obtener más información, vea [Compiler-Controlled LINK Options](compiler-controlled-link-options.md).
+<sup>16,1</sup> esta opción está disponible a partir de la versión 16,1 de Visual Studio 2019.
 
 ## <a name="see-also"></a>Vea también
 

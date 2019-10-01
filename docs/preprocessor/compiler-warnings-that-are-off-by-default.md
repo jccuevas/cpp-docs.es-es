@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685715"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712669"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador desactivadas de forma predeterminada
 
@@ -150,13 +150,13 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 |C5042 (nivel 3)|'*función*': las declaraciones de función en el ámbito de bloque no se pueden especificar como ' C++inline ' en el estándar; quitar el especificador "inline" <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|El compilador insertará la mitigación de Spectre para la carga de memoria si se especifica el modificador/Qspectre <sup>15,7</sup>|
 
-<sup>14,1</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 1. <br/>
-<sup>14,3</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 3. <br/>
-<sup>15,3</sup> esta advertencia está disponible a partir de la versión 15,3 de Visual Studio 2017. <br/>
-<sup>15,5</sup> esta advertencia está disponible a partir de la versión 15,5 de Visual Studio 2017. <br/>
-<sup>15,7</sup> esta advertencia está disponible a partir de la versión 15,7 de Visual Studio 2017. <br/>
-<sup>15,8</sup> esta advertencia está disponible a partir de la versión 15,8 de Visual Studio 2017. <br/>
-<sup>16,0</sup> esta advertencia está disponible a partir de Visual Studio 2019 RTM. <br/>
+<sup>14,1</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 1. \
+<sup>14,3</sup> esta advertencia está disponible a partir de Visual Studio 2015 Update 3. \
+<sup>15,3</sup> esta advertencia está disponible a partir de la versión 15,3 de Visual Studio 2017. \
+<sup>15,5</sup> esta advertencia está disponible a partir de la versión 15,5 de Visual Studio 2017. \
+<sup>15,7</sup> esta advertencia está disponible a partir de la versión 15,7 de Visual Studio 2017. \
+<sup>15,8</sup> esta advertencia está disponible a partir de la versión 15,8 de Visual Studio 2017. \
+<sup>16,0</sup> esta advertencia está disponible a partir de Visual Studio 2019 RTM. \
 <sup>Perm</sup> Esta advertencia está desactivada a menos que se establezca la opción del compilador [/permissive-](../build/reference/permissive-standards-conformance.md)
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>ADVERTENCIAS desactivadas de forma predeterminada en versiones anteriores
