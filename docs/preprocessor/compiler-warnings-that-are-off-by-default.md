@@ -157,7 +157,7 @@ Las siguientes advertencias están desactivadas de forma predeterminada en Visua
 <sup>15,7</sup> esta advertencia está disponible a partir de la versión 15,7 de Visual Studio 2017. \
 <sup>15,8</sup> esta advertencia está disponible a partir de la versión 15,8 de Visual Studio 2017. \
 <sup>16,0</sup> esta advertencia está disponible a partir de Visual Studio 2019 RTM. \
-<sup>Perm</sup> Esta advertencia está desactivada a menos que se establezca la opción del compilador [/permissive-](../build/reference/permissive-standards-conformance.md)
+<sup>Perm</sup> Esta advertencia está desactivada a menos que se establezca la opción del compilador [/permissive-](../build/reference/permissive-standards-conformance.md).
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>ADVERTENCIAS desactivadas de forma predeterminada en versiones anteriores
 
