@@ -1,15 +1,16 @@
 ---
 title: Notificación de un problema con el conjunto de herramientas de Microsoft C++
-ms.date: 06/21/2019
+description: Creación de un buen informe de problemas e información de reproducción para el conjunto de herramientas de Microsoft C++.
+ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 13826349836e4c58b7d6a7ce8936186930bc7100
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344386"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685697"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Notificación de un problema con la documentación o el conjunto de herramientas de Microsoft C++
 
@@ -317,9 +318,9 @@ Por último, adjunte los archivos de reproducción preprocesados (*filename*i. y
 
 ### <a name="link-repros"></a>Reproducciones de vínculo
 
-Una *reproducción de vínculo* es el contenido generado por el vinculador de un directorio especificado por la variable de entorno **link\_repro**. Contiene los artefactos de compilación que muestran conjuntamente un problema que se produce durante el tiempo de vínculo, como un bloqueo de back-end que implica la Generación de código en tiempo de vínculo (LTCG) o bien un bloqueo del vinculador. Estos artefactos de compilación son los que se necesitan como entrada de vinculador para que el problema pueda reproducirse. Una reproducción de vínculo se puede crear fácilmente mediante esta variable de entorno. Habilita la capacidad de generación de reproducciones integrada del vinculador.
+Una *reproducción de vínculo* es el contenido generado por el enlazador de un directorio especificado por la variable de entorno **link\_repro** o bien como un argumento de la opción de enlazador [/LINKREPRO](../build/reference/linkrepro.md). Contiene los artefactos de compilación que muestran conjuntamente un problema que se produce durante el tiempo de vínculo, como un bloqueo de back-end que implica la Generación de código en tiempo de vínculo (LTCG) o bien un bloqueo del vinculador. Estos artefactos de compilación son los que se necesitan como entrada del enlazador para que el problema pueda reproducirse. Una reproducción de vínculo se puede crear fácilmente mediante esta variable de entorno. Habilita la capacidad de generación de reproducciones integrada del vinculador.
 
-#### <a name="to-generate-a-link-repro"></a>Para generar una reproducción de vínculo
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>Generar una reproducción de vínculo mediante la variable de entorno link_repro
 
 1. Capture los argumentos de línea de comandos usados para generar su reproducción, tal como se indica en la sección [Para informar sobre el contenido de la línea de comandos](#to-report-the-contents-of-the-command-line).
 
@@ -327,7 +328,7 @@ Una *reproducción de vínculo* es el contenido generado por el vinculador de un
 
 1. En la ventana de la consola del símbolo del sistema para desarrolladores, cámbielo al directorio que contenga su proyecto de reproducción.
 
-1. Escriba **mkdir linkrepro** para crear un directorio para la reproducción de vínculo.
+1. Escriba **mkdir linkrepro** para crear un directorio denominado *linkrepro* para la reproducción de vínculo. Puede usar otro nombre para capturar otra reproducción de vínculo.
 
 1. Escriba el comando **set link\_repro=linkrepro** para establecer la variable de entorno **link\_repro** en el directorio que ha creado. Si la compilación se ejecuta desde un directorio diferente, como suele ser el caso de los proyectos más complejos, es mejor establecer **link\_repro** en la ruta de acceso completa al directorio linkrepro.
 
@@ -339,7 +340,19 @@ Una *reproducción de vínculo* es el contenido generado por el vinculador de un
 
 1. En la ventana de la consola del símbolo del sistema para desarrolladores, escriba el comando **set link\_repro=** para borrar la variable de entorno **link\_repro**.
 
-Por último, comprima todo el directorio de la reproducción de vínculo en un archivo .zip o similar para empaquetar la reproducción y adjúntelo al informe.
+Por último, comprima todo el directorio de la reproducción de vínculo en un archivo .zip o similar para empaquetar la reproducción, y adjúntelo al informe.
+
+La opción del enlazador **/LINKREPRO** tiene el mismo efecto que la variable de entorno **link\_repro**. Puede usar la opción [/LINKREPROTARGET](../build/reference/linkreprotarget.md) para especificar el nombre por el que filtrar la reproducción de vínculo generada. Para usar **/LINKREPROTARGET**, también debe especificar la opción del enlazador **/OUT**.
+
+#### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>Generar una reproducción de vínculo mediante la opción/LINKREPRO
+
+1. Cree un directorio para almacenar la reproducción de vínculo. Nos referiremos a la ruta de acceso completa al directorio que cree como _directory-path_. Use comillas dobles alrededor de la ruta de acceso si incluye espacios.
+
+1. Agregue el comando **/LINKREPRO:** _directory-path_ a la línea de comandos del enlazador. En Visual Studio, abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Seleccione la página de propiedades **Propiedades de configuración** > **Enlazador** > **Línea de comandos**. Después, escriba la opción **/LINKREPRO:** _directory-path_ en el cuadro **Opciones adicionales**. Elija **Aceptar** para guardar los cambios.
+
+1. Compile el proyecto de reproducción y confirme que el problema esperado se haya producido.
+
+Por último, comprima todo el directorio de la reproducción de vínculo _directory-path_ en un archivo .zip o similar para empaquetar la reproducción y adjúntelo al informe.
 
 ### <a name="other-repros"></a>Otras reproducciones
 
