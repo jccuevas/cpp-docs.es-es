@@ -4,12 +4,12 @@ ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816545"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925571"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Proyectos de CMake en Visual Studio
 
@@ -58,12 +58,6 @@ Si necesita pasar argumentos a un archivo ejecutable en tiempo de depuración, p
 
 > [!NOTE]
 > Para otros tipos de proyectos de carpeta abierta, se usan dos archivos JSON adicionales: **CppProperties. JSON** y **Tasks. vs. JSON**. Ninguno de estos es pertinente para los proyectos de CMake.
-
-## <a name="import-an-existing-cache"></a>Importar una caché existente
-
-Cuando se importa un archivo CMakeCache.txt existente, Visual Studio extrae las variables personalizadas de manera automática y crea un archivo **CMakeSettings.json** previamente rellenado basado en ellas. La caché original no se modifica de ninguna manera y se puede seguir usando desde la línea de comandos o con cualquier herramienta o IDE que se usara para generarla. El nuevo archivo **CMakeSettings. JSON** se colocará junto con la raíz archivo CMakeLists. txt del proyecto. Visual Studio genera una caché nueva en función del archivo de configuración. Puede invalidar la generación automática de caché en el cuadro de diálogo **herramientas > opciones > CMake > general** .
-
-No se importa todo el contenido de la caché. Propiedades como el generador y la ubicación de los compiladores se reemplazan con valores predeterminados que se sabe que funcionan de manera correcta con el IDE.
 
 ## <a name="open-an-existing-cache"></a>Abrir una caché existente
 
