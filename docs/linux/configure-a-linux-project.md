@@ -2,12 +2,12 @@
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042634"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960660"
 ---
 # <a name="configure-a-linux-project"></a>Configuración de un proyecto de Linux
 
@@ -93,12 +93,6 @@ Dado que toda la compilación se produce en un equipo remoto (o en WSL), se han 
 ![Eventos de compilación](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> IntelliSense para encabezados en sistemas remotos
-
-::: moniker range="vs-2019"
-
-Esta sección no es válida si el destino es WSL.
-
-::: moniker-end
 
 Cuando se agrega una conexión nueva en **Connection Manager**, Visual Studio detecta automáticamente los directorios de inclusión para el compilador en el sistema remoto. Luego, Visual Studio comprime y copia esos archivos en un directorio en el equipo Windows local. Después de eso, cuando se use esa conexión en un proyecto de Visual Studio o CMake, se usan los encabezados de esos directorios para proporcionar IntelliSense.
 
