@@ -1,16 +1,16 @@
 ---
 title: Mejoras de conformidad de C++
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Microsoft C++ en Visual Studio avanza hacia la plena conformidad con el estándar de lenguaje C++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314479"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998884"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Mejoras de conformidad de C++ en Visual Studio
 
@@ -392,7 +392,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Quitados los operadores de extracción de secuencias para char*
 
-Se han quitado los operadores de extracción de secuencias para puntero a caracteres y se han reemplazado por operadores de extracción para matriz de caracteres (por [P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera que las sobrecargas eliminadas no son seguras. En el modo [/std:c++latest](../build/reference/std-specify-language-standard-version.md), el ejemplo siguiente genera *C2679: binario ">>": no se encontró ningún operador que adopte un operando en la parte derecha del tipo 'char\*(o bien no existe una conversión aceptable)*:
+Se han quitado los operadores de extracción de secuencias para puntero a caracteres y se han reemplazado por operadores de extracción para matriz de caracteres (por [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 considera que las sobrecargas eliminadas no son seguras. En el modo [/std:c++latest](../build/reference/std-specify-language-standard-version.md), el ejemplo siguiente genera *C2679: binario ">>": no se encontró ningún operador que adopte un operando en la parte derecha del tipo 'char\*(o bien no existe una conversión aceptable)*:
 
 ```cpp
    char x[42];
@@ -456,6 +456,10 @@ extern "C" void f(int, int, int, BOOL){}
 ```
 
 Para evitar los errores del ejemplo anterior, use **bool** en lugar de **BOOL** de forma coherente en ambas declaraciones de `f`.
+
+### <a name="standard-library-improvements"></a>Mejoras de la biblioteca estándar
+
+Se han quitado los encabezados no estándar \<stdexcpt.h> y \<typeinfo.h>. En su lugar, el código que los incluye debe incluir los encabezados estándar \<exception> y \<typeinfo>, respectivamente.
 
 ## <a name="update_160"></a> Correcciones de errores y cambios de comportamiento en Visual Studio 2019
 
@@ -722,7 +726,7 @@ Ahora, la función `reserve` de contenedor sin ordenar reserva de verdad para N 
 
 - Antes, algunos valores de tiempo que pasaban a la biblioteca de simultaneidad podían desbordarse, por ejemplo, `condition_variable::wait_for(seconds::max())`. Ahora corregidos, los desbordamientos cambiaban el comportamiento en un ciclo aparentemente aleatorio de 29 días (cuando Win32 subyacente aceptaba uint32_t milisegundos, las API se desbordaban).
 
-- Ahora, el encabezado <ctime> declara correctamente `timespec` y `timespec_get` en el espacio de nombres `std`, además de declararlos también en el espacio de nombres global.
+- Ahora, el encabezado \<ctime> declara correctamente `timespec` y `timespec_get` en el espacio de nombres `std`, además de declararlos también en el espacio de nombres global.
 
 ### <a name="various-fixes-for-containers"></a>Varias correcciones de contenedores
 
