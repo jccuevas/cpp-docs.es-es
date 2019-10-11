@@ -194,7 +194,7 @@ Ahora, este archivo DLL no sirve de mucho. A continuación, creará un archivo d
 
 Este archivo de encabezado declara algunas funciones para generar una secuencia de Fibonacci generalizada, dados dos valores iniciales. Una llamada a `fibonacci_init(1, 1)` genera la secuencia de números de Fibonacci familiar.
 
-Observe las instrucciones de preprocesador en la parte superior del archivo. La nueva plantilla de proyecto para un proyecto dll agrega **exportaciones _projectname_&#95; a las macros de preprocesador definidas. En este ejemplo, Visual Studio define **MATHLIBRARY&#95;EXPORTS** cuando se compila el proyecto de DLL de MathLibrary.
+Observe las instrucciones de preprocesador en la parte superior del archivo. La nueva plantilla de proyecto para un proyecto dll agrega **exportaciones _projectname_&#95;exportación** a las macros de preprocesador definidas. En este ejemplo, Visual Studio define **MATHLIBRARY&#95;EXPORTS** cuando se compila el proyecto de DLL de MathLibrary.
 
 Cuando la macro **MATHLIBRARY&#95;EXPORTS** está definida, la macro **MATHLIBRARY&#95;API** establece el modificador `__declspec(dllexport)` en las declaraciones de función. Este modificador indica al compilador y al vinculador que exporte una función o una variable de la DLL para que las usen otras aplicaciones. Cuando **MATHLIBRARY&#95;EXPORTS** está definido, por ejemplo, cuando se incluye el archivo de encabezado de una aplicación cliente, **MATHLIBRARY&#95;API** aplica el modificador `__declspec(dllimport)` en las declaraciones. Este modificador optimiza la importación de la función o la variable en una aplicación. Para obtener más información, consulte [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 

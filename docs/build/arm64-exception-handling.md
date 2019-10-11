@@ -1,62 +1,62 @@
 ---
-title: Control de excepciones ARM64
+title: Control de excepciones de ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b4f9a5d6f86f8b88ef42525e6a9bb1b4071585ce
+ms.sourcegitcommit: a9f1a1ba078c2b8c66c3d285accad8e57dc4539a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342295"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72037738"
 ---
-# <a name="arm64-exception-handling"></a>Control de excepciones ARM64
+# <a name="arm64-exception-handling"></a>Control de excepciones de ARM64
 
-Windows en ARM64 usa el mismo mecanismo de excepciones generadas por el hardware de asincrónicas y sincrónicas excepciones generadas por el software de control de excepciones estructurado. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones del asistente de lenguaje. Este documento describe el control de excepciones en Windows en ARM64 y las aplicaciones auxiliares de lenguaje utilizadas por el código generado por el ensamblador de ARM Microsoft y el compilador de MSVC.
+Windows en ARM64 usa el mismo mecanismo de control de excepciones estructurado para las excepciones asincrónicas generadas por hardware y las excepciones generadas por software sincrónicas. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones del asistente de lenguaje. En este documento se describe el control de excepciones en Windows en ARM64 y las aplicaciones auxiliares de lenguaje que usa el código generado por el ensamblador de ARM de Microsoft y el compilador de MSVC.
 
-## <a name="goals-and-motivation"></a>Los objetivos y motivación
+## <a name="goals-and-motivation"></a>Metas y motivación
 
-Las convenciones de datos de desenredo de excepciones y esta descripción, están diseñados para:
+Las convenciones de datos de desenredo de excepciones y esta descripción están pensadas para:
 
-1. Proporcione suficiente descripción para permitir el desenredado sin código de sondeo en todos los casos.
+1. Proporcione una descripción suficiente para permitir el desenredo sin sondeos de código en todos los casos.
 
-   - Analizar el código requiere que el código de la paginación. Esto evita que el desenredado en algunas circunstancias donde resulta útil (seguimiento, de muestreo, la depuración).
+   - El análisis del código requiere que el código esté paginado en. Esto evita el desenredo en algunas circunstancias en las que es útil (seguimiento, muestreo y depuración).
 
-   - Analizar el código es complejo; el compilador debe tener cuidado para generar solo instrucciones, que es capaz de descodificar el responsable del desenredado.
+   - Analizar el código es complejo. el compilador debe tener cuidado de generar solo instrucciones que el desenredo sea capaz de descodificar.
 
-   - Si no se describe detalladamente mediante el uso de códigos de desenredado puede desenredar, a continuación, en algunos casos debe revertir a descodificar de la instrucción. Esto aumenta la complejidad general y lo ideal es que podría evitarse.
+   - Si no se puede describir completamente el desenredado mediante el uso de códigos de desenredado, en algunos casos debe revertir a la descodificación de instrucciones. Esto aumenta la complejidad general y, idealmente, se evitaría.
 
-1. Soporte técnico de desenredado en medio del prólogo y epílogo intermedio.
+1. Admitir el desenredado en el prólogo intermedio y el epílogo medio.
 
-   - Desenredo se usa en Windows durante más de control de excepciones, por lo que es fundamental que podremos realizar una lista precisa de desenredo incluso cuando en el medio de una secuencia de código de prólogo o epílogo.
+   - El desenredado se utiliza en Windows para más que el control de excepciones, por lo que es fundamental poder realizar un desenredado preciso incluso en medio de una secuencia de código de prólogo o epílogo.
 
-1. Tardar una cantidad mínima de espacio.
+1. Ocupe una cantidad mínima de espacio.
 
-   - No deben agregar los códigos de desenredado para aumentar significativamente el tamaño del archivo binario.
+   - Los códigos de desenredado no deben agregarse para aumentar significativamente el tamaño binario.
 
-   - Puesto que los códigos de desenredado están probable que se puede bloquear en memoria, una pequeña superficie garantiza una sobrecarga mínima para cada archivo binario cargado.
+   - Dado que es probable que los códigos de desenredado estén bloqueados en memoria, una pequeña superficie garantiza una sobrecarga mínima para cada binario cargado.
 
 ## <a name="assumptions"></a>Suposiciones
 
-Estos son los supuestos realizados en la descripción de control de excepciones:
+Estas son las suposiciones realizadas en la descripción del control de excepciones:
 
-1. Los prólogos y epílogos tienden a reflejarse cualquier otro. Al sacar partido de esta rasgo común, puede reducirse considerablemente el tamaño de los metadatos necesarios para describir el desenredado. Dentro del cuerpo de la función, no importa si las operaciones del prólogo se deshacen o las operaciones del epílogo se realizan de forma directa. Ambas deberían generar idénticos resultados.
+1. Los registros y los trabajos de registro tienden a reflejarse en otro. Al aprovechar este rasgo común, se puede reducir considerablemente el tamaño de los metadatos necesarios para describir el desenredado. En el cuerpo de la función, no importa si se deshacen las operaciones del prólogo o si las operaciones del epílogo se realizan de manera anticipada. Ambas deberían generar idénticos resultados.
 
-1. Las funciones en todo el tienden a ser relativamente pequeñas. Varias optimizaciones para espacio dependen de esto con el fin de lograr el empaquetado más eficaz de datos.
+1. Las funciones tienden a que todo sea relativamente pequeño. Varias optimizaciones del espacio dependen de esto para lograr el empaquetado más eficaz de los datos.
 
-1. No hay ningún código condicional de epílogos.
+1. No hay código condicional en los registros.
 
-1. Registro de puntero de marco dedicado: Si el sp se guarde en otro registro (x29) en el prólogo, que se registran permanece intacta en toda la función, para que el sp original podrá recuperarse en cualquier momento.
+1. Registro de puntero de marco dedicado: Si el SP se guarda en otro registro (X29) en el prólogo, ese registro permanece intacto a lo largo de la función, de modo que el SP original se puede recuperar en cualquier momento.
 
-1. A menos que el sp se guarde en otro registro, toda la manipulación de puntero de pila ocurre estrictamente dentro del prólogo y epílogo.
+1. A menos que el SP se guarde en otro registro, toda la manipulación del puntero de pila se produce estrictamente dentro del prólogo y epílogo.
 
-1. El diseño del marco de pila está organizado como se describe en la sección siguiente.
+1. El diseño del marco de pila se organiza como se describe en la sección siguiente.
 
-## <a name="arm64-stack-frame-layout"></a>Diseño del marco de pila ARM64
+## <a name="arm64-stack-frame-layout"></a>ARM64 diseño del marco de pila
 
-![diseño del marco de pila](media/arm64-exception-handling-stack-frame.png "diseño del marco de pila")
+(media/arm64-exception-handling-stack-frame.png "diseño del marco de pila") de diseño del marco de ![pila]
 
-Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cualquier posición de la variable local area dependiendo de las consideraciones de optimización. El objetivo es maximizar el número de variables locales que se puede tener acceso mediante una única instrucción en función de puntero de marco (x29) o puntero de pila (sp). Sin embargo para `alloca` funciones, debe estar encadenada y x29 debe apuntar a la parte inferior de la pila. Para permitir una mejor cobertura de registro par direccionamiento-modo de, el registro no volátil áreas de almacenamiento se colocan en la parte superior de la pila del área Local. Estos son ejemplos que ilustran varias de las secuencias de prólogo más eficaces. Para mayor claridad mejor emplazamiento en caché, el orden de almacenar los registros guardados y en todos los prólogos canónicos es en orden "creciente de". `#framesz` a continuación representa el tamaño de pila completa (excepto el área de alloca). `#localsz` y `#outsz` indican el tamaño de área local (incluida la operación de Guardar área para el \<x29, lr > par) y el tamaño del parámetro de salida, respectivamente.
+En el caso de las funciones encadenadas con fotogramas, los pares FP y LR se pueden guardar en cualquier posición del área variable local en función de las consideraciones de optimización. El objetivo es maximizar el número de variables locales a las que se puede tener acceso mediante una sola instrucción basada en el puntero de marco (X29) o en el puntero de pila (SP). Sin embargo, para las funciones `alloca`, debe encadenarse y X29 debe apuntar a la parte inferior de la pila. Para permitir una mejor cobertura de modo de asignación de pares de registros, las áreas de guardado de registros no volátiles se colocan en la parte superior de la pila de área local. Estos son algunos ejemplos que ilustran algunas de las secuencias de prólogo más eficaces. Con el fin de mejorar la claridad y la ubicación de la memoria caché, el orden en que se almacenan los registros guardados por el destinatario en todos los registros canónicos está en el orden "en aumento". `#framesz` a continuación representa el tamaño de la pila completa (sin incluir el área alloca). `#localsz` y `#outsz` denotan el tamaño de área local (incluido el área de almacenamiento de los \<x29, LR > par) y el tamaño del parámetro saliente, respectivamente.
 
-1. Encadenar #localsz \<= 512
+1. Encadenado, #localsz \< = 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -70,7 +70,7 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
-1. Encadenar #localsz > 512
+1. Encadenado, #localsz > 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -84,7 +84,7 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
-1. , Las funciones de hoja (lr sin guardar)
+1. Funciones de hoja no encadenadas (LR sin guardar)
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -95,9 +95,9 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Se tiene acceso a todas las variables locales en función de SP. \<x29, lr > señala al fotograma anterior. Para el tamaño del marco \<= 512, el "sub sp,..." puede optimizarse si el área de guardado de los registros se mueve a la parte inferior de la pila. La desventaja de es que no es coherente con otros diseños anteriores, y los registros guardados formen parte del intervalo para los registros el par y el modo de direccionamiento desplazamiento previo y posteriores al indizado.
+   Se tiene acceso a todas las variables locales basándose en SP. \<x29, LR > apunta al fotograma anterior. Para el tamaño de marco \< = 512, el "sub SP,..." se puede optimizar si el área guardada regs se mueve a la parte inferior de la pila. El inconveniente de eso es que no es coherente con otros diseños anteriores y que los regs guardados forman parte del intervalo de pares-regs y del modo de direccionamiento de desplazamiento previo y posterior al índice.
 
-1. Funciones, no de hoja (lr se guarda en el área de Int guardado)
+1. Funciones no encadenadas no hoja (LR se guarda en el área guardada en int)
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -108,7 +108,7 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   O bien, con un número par de los registros de Int, guardados
+   O, con un número par guardado de registros int,
 
     ```asm
         stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -127,11 +127,11 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
-   \* El registro de la asignación del área de almacenamiento no se dobla en el stp porque no se puede representar un stp reg-lr indizada previamente con los códigos de desenredado.
+   \* la asignación del área de guardado del registro no se dobla en el STP porque un STP reg-LR con preíndice no se puede representar con los códigos de desenredado.
 
-   Se tiene acceso a todas las variables locales en función de SP. \<x29 > señala al fotograma anterior.
+   Se tiene acceso a todas las variables locales basándose en SP. \<x29 > apunta al fotograma anterior.
 
-1. Encadenar #framesz \<= 512, #outsz = 0
+1. Encadenado, #framesz \< = 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -140,9 +140,9 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
-   En comparación con el prólogo #1 anterior, la ventaja es que todos los registros guardar instrucciones está listo para ejecutarse justo después de la pila solo una instrucción de asignación. Por lo tanto, no hay ninguna dependencia contra de sp que impide el paralelismo de nivel.
+   En comparación con #1 prólogo anterior, la ventaja es que todas las instrucciones para guardar el registro están listas para ejecutarse justo después de la única instrucción de asignación de la pila. Por lo tanto, no hay ninguna dependencia en SP que impida el paralelismo de nivel de instrucción.
 
-1. Encadenadas, el tamaño de trama > 512 (opcional para las funciones sin alloca)
+1. Encadenado, tamaño de marco > 512 (opcional para funciones sin alloca)
 
     ```asm
         stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
@@ -154,9 +154,9 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   Con fines de optimización, x29 puede colocarse en cualquier posición de área local para proporcionar una mejor cobertura "reg par" y pre/post-la indexed desplazamiento de modo de direccionamiento. Pueden tener acceso a variables locales por debajo de los punteros de marco basado en SP.
+   Para fines de optimización, X29 se puede colocar en cualquier posición en el área local para proporcionar una mejor cobertura para el modo de direccionamiento del desplazamiento anterior y/post-indexed. Se puede tener acceso a las variables locales por debajo de los punteros de marco según el SP.
 
-1. Encadenadas, el tamaño de trama > 4K, con o sin alloca(),
+1. Encadenado, tamaño de marco > 4K, con o sin alloca (),
 
     ```asm
         stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
@@ -179,67 +179,67 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
-## <a name="arm64-exception-handling-information"></a>Información de control de excepciones ARM64
+## <a name="arm64-exception-handling-information"></a>ARM64 información de control de excepciones
 
-### <a name="pdata-records"></a>registros .pdata
+### <a name="pdata-records"></a>registros. pdata
 
-Los registros .pdata son una matriz ordenada de elementos de longitud fija que describen cada función de manipulación de pila en un binario PE. Tenga en cuenta cuidadosamente la frase "manipulación de la pila": las funciones de hoja que no requieren un almacenamiento local y que no es necesario guardar ni restaurar registros no volátiles no requieren un registro .pdata; estos se deben omitir explícitamente para ahorrar espacio. Un desenredo de una de estas funciones simplemente puede obtener la dirección de devolución de LR para subir al llamador.
+Los registros. pdata son una matriz ordenada de elementos de longitud fija que describen cada función de manipulación de pila en un binario de PE. Nota detenidamente la frase "manipulación de pila": las funciones de hoja que no requieren almacenamiento local y que no necesitan guardar o restaurar registros no volátiles no requieren un registro. pdata; se deben omitir explícitamente para ahorrar espacio. Un desenredado de una de estas funciones puede simplemente obtener la dirección de retorno de LR para pasar al llamador.
 
-Cada registro .pdata para ARM64 tiene 8 bytes de longitud. El formato general de los cada lugares registros la RVA de 32 bits de la función de inicio en la primera palabra, seguida de un segundo con la que contiene un puntero a un bloque .xdata de longitud variable, o una palabra empaquetada que describe una secuencia de desenredado de función canónica.
+Cada registro. pdata para ARM64 tiene una longitud de 8 bytes. El formato general de cada registro coloca la RVA de 32 bits de la función Start en la primera palabra, seguida de un segundo con que contiene un puntero a un bloque de longitud variable. xdata o una palabra empaquetada que describe una secuencia de desenredado de funciones canónicas.
 
-![diseño de registro .pdata](media/arm64-exception-handling-pdata-record.png "composición de registro .pdata")
+diseño del ![registro. pdata](media/arm64-exception-handling-pdata-record.png ".")
 
 Los campos son los siguientes:
 
-- **Función iniciar RVA** es la RVA de 32 bits del inicio de la función.
+- La **función de inicio RVA** es la rva de 32 bits del inicio de la función.
 
-- **Marca** es un campo de 2 bits que indica cómo interpretar los 30 bits restantes de la segunda palabra .pdata. Si **marca** es 0, a continuación, el resto de bits forma un **RVA de información de excepción** (con los dos bits inferiores implícitamente en 0). Si **marca** es distinto de cero, a continuación, el resto de bits forma un **datos de desenredado empaquetado** estructura.
+- La **marca** es un campo de 2 bits que indica cómo interpretar los 30 bits restantes de la segunda palabra. pdata. Si la **marca** es 0, los bits restantes forman una **RVA de información de excepción** (con los dos bits inferiores implícitamente 0). Si el **marcador** es distinto de cero, los bits restantes forman una estructura de **datos de desenredo empaquetada** .
 
-- **RVA de información de excepción** es la dirección de la estructura de información de excepción de longitud variable almacenada en la sección .xdata. Estos datos deben tener una alineación de 4 bytes.
+- La **información de excepción RVA** es la dirección de la estructura de información de excepciones de longitud variable, que se almacena en la sección. xdata. Estos datos deben tener una alineación de 4 bytes.
 
-- **Empaqueta los datos de desenredo** es una descripción comprimida de las operaciones necesarias para desenredar desde una función, suponiendo que la forma canónica. En este caso, no se necesita un registro .xdata.
+- Los **datos de desenredado empaquetados** son una descripción comprimida de las operaciones necesarias para desenredar de una función, suponiendo una forma canónica. En este caso, no se necesita un registro .xdata.
 
-### <a name="xdata-records"></a>registros .xdata
+### <a name="xdata-records"></a>registros. xdata
 
-Cuando el formato de desenredado empaquetado no basta para describir el desenredado de una función, se debe crear un registro .xdata de longitud variable. La dirección de este registro se almacena en la segunda palabra del registro .pdata. El formato de .xdata es un conjunto de longitud variable empaquetado de palabras:
+Cuando el formato de desenredado empaquetado no basta para describir el desenredado de una función, se debe crear un registro .xdata de longitud variable. La dirección de este registro se almacena en la segunda palabra del registro .pdata. El formato de. xdata es un conjunto de palabras de longitud variable empaquetada:
 
-![diseño de registro .xdata](media/arm64-exception-handling-xdata-record.png "composición de registro .xdata")
+diseño del ![registro. xdata](media/arm64-exception-handling-xdata-record.png ". diseño del registro XData")
 
 Estos datos se dividen en cuatro secciones:
 
-1. Un encabezado de 1 o 2 palabras que describe el tamaño total de la estructura y proporcionar datos de la función clave. La segunda palabra solo está presente si tanto el **epílogo recuento** y **código palabras** campos se establecen en 0. Estos son los campos de bits en el encabezado:
+1. Un encabezado de 1 o 2 palabras que describe el tamaño total de la estructura y proporciona datos de funciones clave. La segunda palabra solo está presente si los campos **número de epílogo** y **palabras de código** están establecidos en 0. Estos son los campos de bits del encabezado:
 
-   a. **Función longitud** es un campo de 18 bits que indica la longitud total de la función en bytes dividida entre 4. Si una función es mayor que 1 millón, varios registros de pdata y xdata deben utilizarse para describir la función. Consulte la [funciones grandes](#large-functions) sección para obtener más detalles.
+   a. La longitud de la **función** es un campo de 18 bits que indica la longitud total de la función en bytes, dividida entre 4. Si una función es mayor que 1M, se deben usar varios registros pdata y Xdata para describir la función. Vea la sección [funciones grandes](#large-functions) para obtener más detalles.
 
-   b. **Vers** es un campo de 2 bits que describe la versión de los xdata restantes. Cuando se redactó este documento, sólo la versión 0 está definida y, por tanto, no se permiten valores de 1 a 3.
+   b. **Versa** es un campo de 2 bits que describe la versión de XData restante. En el que se redactó este documento, solo se define la versión 0 y, por lo tanto, no se permiten los valores 1-3.
 
-   c. **X** es un campo de 1 bit que indica la presencia (1) o ausencia (0) de datos de excepción.
+   c. **X** es un campo de 1 bit que indica la presencia (1) o la ausencia (0) de los datos de la excepción.
 
-   d. **E** es un campo de bits indica que la información que describe un único epílogo está empaquetado en el encabezado (1) en lugar de requerir ámbito adicional palabras posteriores (0).
+   d. **E** es un campo de bits que indica que la información que describe un solo epílogo se empaqueta en el encabezado (1) en lugar de requerir más palabras de ámbito más adelante (0).
 
-   e. **Recuento de epílogo** es un campo de 5 bits que tiene dos significados posibles, dependiendo del estado de **E** bits:
+   e. El **número de epílogos** es un campo de 5 bits que tiene dos significados, dependiendo del estado de **E** bit:
 
-      1. Si **E** se establece en 0: especifica el recuento del número total de ámbitos de epílogo se describe en la sección 2. Si existen más de 31 ámbitos en la función, el **código palabras** campo debe establecerse en 0 para indicar que se necesita una palabra de extensión.
+      1. Si **E** se establece en 0: especifica el recuento del número total de ámbitos de epílogo descritos en la sección 2. Si existen más de 31 ámbitos en la función, el campo **palabras de código** debe establecerse en 0 para indicar que se requiere una palabra de extensión.
 
-      2. Si **E** está establecido en 1, a continuación, este campo especifica el índice del primer código de desenredado que describe el uno y solo epílogo.
+      2. Si **E** está establecido en 1, este campo especifica el índice del primer código de desenredado que describe el epílogo solo.
 
-   f. **Código palabras** es un campo de 5 bits que especifica el número de palabras de 32 bits necesarios para contener todos los códigos de desenredado en la sección 3. Si se requieren más de 31 palabras (es decir, más de 124 desenredar bytes de código), a continuación, este campo debe establecerse en 0 para indicar que se necesita una palabra de extensión.
+   f. **Palabras de código** es un campo de 5 bits que especifica el número de palabras de 32 bits necesarias para contener todos los códigos de desenredado de la sección 3. Si se requieren más de 31 palabras (es decir, más de 124 bytes de código de desenredado), este campo debe establecerse en 0 para indicar que se necesita una palabra de extensión.
 
-   g. **Cuenta de epílogo extendida** y **extendidos código palabras** son campos de 16 bits y 8 bits, respectivamente, que proporcionan más espacio para codificar un número inusualmente grande de epílogos o un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene estos campos solo está presente si tanto el **epílogo recuento** y **código palabras** campos en la primera palabra del encabezado se establecen en 0.
+   g. El **número de epílogos extendidos** y las **palabras de código extendido** son campos de 16 y 8 bits, respectivamente, que proporcionan más espacio para codificar un número inusualmente grande de registros o un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene estos campos solo está presente si los campos **número de epílogo** y **palabras de código** de la primera palabra del encabezado están establecidos en 0.
 
-1. Después del encabezado y el encabezado extendido opcional que se ha descrito anteriormente, si **epílogo recuento** no es cero, es una lista de información sobre los ámbitos de epílogo, uno empaquetado en una palabra y se almacenan en orden creciente de desplazamiento inicial. Cada ámbito contiene los bits siguientes:
+1. Después del encabezado y del encabezado extendido opcional descrito anteriormente, si el **recuento de epílogo** no es cero, es una lista de información sobre los ámbitos de epílogo, empaquetada una en una palabra y almacenada en orden de desplazamiento inicial de aumento. Cada ámbito contiene los bits siguientes:
 
-   a. **Desplazamiento de inicio del epílogo** es un campo de 18 bits que describe el desplazamiento en bytes dividida entre 4 del epílogo en relación con el inicio de la función
+   a. El **desplazamiento de inicio de epílogo** es un campo de 18 bits que describe el desplazamiento en bytes, dividido entre 4, del epílogo con respecto al inicio de la función.
 
-   b. **Res** es un campo de 4 bits reservado para una futura expansión. Su valor debe ser 0.
+   b. **Res** es un campo de 4 bits que se reserva para una futura expansión. Su valor debe ser 0.
 
-   c. **Índice inicial de epílogo** es de 10 bits (más de 2 bits que **extendidos código palabras**) desenredo de campo que indica el índice de bytes del primer código que describe este epílogo.
+   c. El **Índice de inicio de epílogo** es un campo de 10 bits (2 más bits que las palabras de **código extendido**) que indica el índice de bytes del primer código de desenredado que describe este epílogo.
 
-1. Después de la lista de ámbitos de epílogo viene una matriz de bytes que contiene códigos de desenredado, se describe en detalle en una sección posterior. Esta matriz se rellena al final del límite de palabra completa más cercano. Desenredo códigos se escriben en esta matriz, empezando por la más cercana para el cuerpo de la función, desplazándose hacia los bordes de la función. Los bytes para cada código de desenredado se almacenan en orden big-endian por lo que pueden recuperar directamente, empezando por el byte más significativo en primer lugar, que identifica la operación y la longitud del resto del código.
+1. Una vez que la lista de ámbitos de epílogo incluye una matriz de bytes que contienen códigos de desenredado, se describe detalladamente en una sección posterior. Esta matriz se rellena al final del límite de palabra completa más cercano. Los códigos de desenredado se escriben en esta matriz, empezando por el más cercano al cuerpo de la función, desplazándose hacia los bordes de la función. Los bytes de cada código de desenredado se almacenan en orden big-endian, de modo que se pueden capturar directamente, empezando por el byte más significativo en primer lugar, que identifica la operación y la longitud del resto del código.
 
-1. Por último, después los bytes de código de desenredado, si la **X** bit en el encabezado se establece en 1, incluye la información del controlador de excepción. Esto se compone de una sola **RVA del controlador de excepción** proporcionando la dirección del controlador de excepciones, seguida inmediatamente de una cantidad de longitud variable de datos requeridos por el controlador de excepciones.
+1. Por último, después de los bytes de código de desenredado, si el bit **X** del encabezado se estableció en 1, incluye la información del controlador de excepciones. Se compone de una única **RVA del controlador de excepciones** que proporciona la dirección del propio controlador de excepciones, seguido inmediatamente de una cantidad de datos de longitud variable requerida por el controlador de excepciones.
 
-El registro .xdata anterior está diseñado para que es posible capturar los primeros 8 bytes y desde el calcular el tamaño completo del registro (menos la longitud de los datos de tamaño variable que sigue). El fragmento de código siguiente calcula el tamaño del registro:
+El registro. xdata anterior está diseñado de forma que es posible capturar los primeros 8 bytes y de que calcula el tamaño completo del registro (menos la longitud de los datos de excepción de tamaño variable que se indican a continuación). El siguiente fragmento de código calcula el tamaño del registro:
 
 ```cpp
 ULONG ComputeXdataSize(PULONG *Xdata)
@@ -267,134 +267,135 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Se debe tener en cuenta que aunque el tipo de prólogo y cada epílogo tiene su propio índice en los códigos de desenredado, la tabla se comparte entre ellos y es totalmente posible (y no por completo poco frecuente) que puede todos comparten los mismos códigos (vea el ejemplo 2 en la etiqueta de la sección de ejemplos Ow). Los autores de compiladores deberían optimizar para este caso, en particular porque el índice más grande que se puede especificar es de 255, lo que limita el número total de códigos de desenredado para una función determinada.
+Se debe tener en cuenta que, aunque el prólogo y cada epílogo tienen su propio índice en los códigos de desenredado, la tabla se comparte entre ellos y es completamente posible (y no es totalmente infrecuente) que todos pueden compartir los mismos códigos (vea el ejemplo 2 en la sección de ejemplos Bel permitir). Los escritores de compiladores deben optimizar en este caso, en concreto porque el índice más grande que se puede especificar es 255, lo que limita el número total de códigos de desenredado para una función determinada.
 
 ### <a name="unwind-codes"></a>Códigos de desenredado
 
-La matriz de códigos de desenredado es el grupo de secuencias que describen exactamente cómo deshacer los efectos del prólogo, en el orden en que las operaciones de tienen que deshacerse. Los códigos de desenredado pueden considerarse como un mini conjunto de instrucciones codificado como una cadena de bytes. Cuando haya finalizado la ejecución, la dirección de retorno a la función que realiza la llamada está en el registro de lr, y todos los registros no volátiles se restauran en sus valores en el momento en que se llamó la función.
+La matriz de códigos de desenredado es un grupo de secuencias que describen exactamente cómo deshacer los efectos del prólogo, en el orden en que se deben deshacer las operaciones. Los códigos de desenredado se pueden considerar como un conjunto de instrucciones mini, codificado como una cadena de bytes. Una vez completada la ejecución, la dirección de devolución a la función de llamada se encuentra en el registro de LR y todos los registros no volátiles se restauran a sus valores en el momento en que se llamó a la función.
 
-Si se garantiza que las excepciones solo se producen dentro de un cuerpo de función (y nunca con un prólogo o cualquier epílogo), solo una única secuencia sería necesaria. Sin embargo, el modelo de desenredado en Windows requiere que se pueda desenredar desde un parcialmente ejecutado prólogo o epílogo. Con el fin de satisfacer este requisito, los códigos de desenredado se han cuidadosamente diseñados, que se asignan inequívocamente 1:1 para cada código de operación relevante en el prólogo y epílogo. Esto implica lo siguiente:
+Si se garantiza que las excepciones solo se producen dentro del cuerpo de una función (y nunca con un prólogo o un epílogo), solo sería necesaria una única secuencia. Sin embargo, el modelo de desenredado de Windows requiere que se pueda desenredar dentro de un prólogo o epílogo parcialmente ejecutado. Para dar cabida a este requisito, los códigos de desenredado se han diseñado cuidadosamente de modo que se asignen de forma inequívoca 1:1 a cada código de operación pertinente del prólogo y epílogo. Esto implica lo siguiente:
 
-1. Contando el número de códigos de desenredado, es posible calcular la longitud del prólogo y epílogo.
+1. Al contar el número de códigos de desenredado, es posible calcular la longitud del prólogo y el epílogo.
 
-1. Contando el número de instrucciones tras el inicio de un ámbito de epílogo, es posible omitir el número equivalente de códigos de desenredado y ejecutar el resto de una secuencia para completar parcialmente ejecutado que estaba realizando el epílogo de desenredo.
+1. Al contar el número de instrucciones más allá del inicio de un ámbito de epílogo, es posible omitir el número equivalente de códigos de desenredado y ejecutar el resto de una secuencia para completar el desenredado parcialmente ejecutado que el epílogo estaba realizando.
 
-1. Contando el número de instrucciones antes del final del prólogo, es posible omitir el número equivalente de códigos de desenredado y ejecutar el resto de la secuencia para deshacer solo aquellas partes del prólogo cuya ejecución está completa.
+1. Al contar el número de instrucciones antes del final del prólogo, es posible omitir el número equivalente de códigos de desenredado y ejecutar el resto de la secuencia para deshacer solo las partes del prólogo que hayan finalizado su ejecución.
 
-Los códigos de desenredado están codificados según la tabla siguiente. Todos los códigos de desenredado son un byte único o doble, excepto el que se asigna una pila enorme. Totalmente hay código de desenredado 21. Cada desenredo de código se asigna exactamente una instrucción en el prólogo y epílogo con el fin de permitir el desenredado de parcialmente ejecutados prólogos y epílogos.
+Los códigos de desenredado se codifican según la tabla siguiente. Todos los códigos de desenredado son un byte único o doble, excepto el que asigna una pila grande. Por completo, hay 21 código de desenredado. Cada código de desenredado asigna exactamente una instrucción en el prólogo/epílogo para permitir el desenredado de los registros y epílogos parcialmente ejecutados.
 
-|Código de desenredado|Bits y la interpretación|
+|Código de desenredado|Bits e interpretación|
 |-|-|
-|`alloc_s`|000xxxxx: asignar la pila pequeña con tamaño \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: Guardar \<x19, x20 > par en [sp-#Z * 8]!, desplazamiento previamente indizada > =-248 |
-|`save_fplr`|        01zzzzzz: Guardar \<x29, lr > emparejar en [sp + #Z * 8], desplazamiento \<= 504. |
-|`save_fplr_x`|        10zzzzzz: Guardar \<x29, lr > emparejar en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
-|`alloc_m`|        11000xxx'xxxxxxxx: asignar la pila de gran tamaño con tamaño \< 16 k (2 ^ 11 * 16). |
-|`save_regp`|        110010xx'xxzzzzzz: guardar x(19+#X) par en [sp + #Z * 8], desplazamiento \<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: guardar x(19+#X) par en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
-|`save_reg`|        110100xx'xxzzzzzz: guardar x(19+#X) reg en [sp + #Z * 8], desplazamiento \<= 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz: save reg x(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
-|`save_lrpair`|         x 1101011'xxzzzzzz: guardar par \<x (19 + 2 *#X), lr > en [sp + #Z*8], desplazamiento \<= 504 |
-|`save_fregp`|        x 1101100'xxzzzzzz: guardar d(8+#X) par en [sp + #Z * 8], desplazamiento \<= 504 |
-|`save_fregp_x`|        x 1101101'xxzzzzzz: guardar d(8+#X) par, en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
-|`save_freg`|        x 1101110'xxzzzzzz: guardar d(8+#X) reg en [sp + #Z * 8], desplazamiento \<= 504 |
-|`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
-|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: asignar la pila de gran tamaño con tamaño \< 256 M (2 ^ 24 * 16) |
-|`set_fp`|        11100001: configurar x29: con: mov x29, sp |
-|`add_fp`|        11100010' xxxxxxxx: configurar x29 con: agregar x29, sp, #x * 8 |
-|`nop`|            11100011: no hay desenredado se requiere la operación. |
-|`end`|            11100100: final del código de desenredado. Implica ret en epílogo. |
-|`end_c`|        11100101: final del código de desenredado en el actual ámbito encadenada. |
-|`save_next`|        11100110: guardar siguiente Int no volátil o FP registrar par. |
-|`arithmetic(add)`|    11100111' 000zxxxx: agregar cookie reg(z) a lr (0 = x28, 1 = sp); Agregar lr, lr, reg(z) |
-|`arithmetic(sub)`|    11100111' 001zxxxx: sub reg(z) cookie de lr (0 = x28, 1 = sp); Sub lr, lr, reg(z) |
-|`arithmetic(eor)`|    11100111' 010zxxxx: eor lr con cookie reg(z) (0 = x28, 1 = sp); EOR lr, lr, reg(z) |
-|`arithmetic(rol)`|    11100111' 0110xxxx: rol simulado de lr con cookie reg (x28); xip0 = neg x28; lr ROR, xip0 |
-|`arithmetic(ror)`|    11100111' 100zxxxx: ror lr con cookie reg(z) (0 = x28, 1 = sp); lr ROR, lr, reg(z) |
-| |            11100111: xxxz----: ---- reserved |
-| |              11101xxx: reservado para casos de pila personalizados siguientes solo se genera para las rutinas de asm |
-| |              11101001: Pila personalizada para MSFT_OP_TRAP_FRAME |
-| |              11101010: Pila personalizada para MSFT_OP_MACHINE_FRAME |
-| |              11101011: Pila personalizada para MSFT_OP_CONTEXT |
-| |              1111xxxx: reserved |
+|`alloc_s`|000xxxxx: asigna una pila pequeña con el tamaño \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: Save \<x19, x20 > Pair at [SP-#Z * 8]!, desplazamiento previamente indexado > =-248 |
+|`save_fplr`|        01zzzzzz: Save \<x29, LR > par en [SP + #Z * 8], offset \< = 504. |
+|`save_fplr_x`|        10zzzzzz: Save \<x29, LR > Pair at [SP-(#Z + 1) * 8]!, desplazamiento preindexado > =-512 |
+|`alloc_m`|        11000xxx'xxxxxxxx: asigne una pila grande con el tamaño \< 16k (2 ^ 11 * 16). |
+|`save_regp`|        110010xx'xxzzzzzz: Save x (19 + #X) Pair at [SP + #Z * 8], offset \< = 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: Save Pair x (19 + #X) at [SP-(#Z + 1) * 8]!, desplazamiento previamente indexado > =-512 |
+|`save_reg`|        110100xx'xxzzzzzz: Save reg x (19 + #X) at [SP + #Z * 8], offset \< = 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: Ahorre reg x (19 + #X) en [SP-(#Z + 1) * 8]!, desplazamiento previamente indexado > =-256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: Save Pair \<x (19 + 2 *#X), lr > en [SP + #Z*8], offset \< = 504 |
+|`save_fregp`|        1101100x'xxzzzzzz: Save Pair d (8 + #X) at [SP + #Z * 8], offset \< = 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: Save Pair d (8 + #X), at [SP-(#Z + 1) * 8]!, desplazamiento previamente indexado > =-512 |
+|`save_freg`|        1101110x'xxzzzzzz: Save reg d (8 + #X) en [SP + #Z * 8], offset \< = 504 |
+|`save_freg_x`|        11011110 ' xxxzzzzz: Save reg d (8 + #X) at [SP-(#Z + 1) * 8]!, desplazamiento previamente indexado > =-256 |
+|`alloc_l`|         11100000 ' xxxxxxxx'xxxxxxxx'xxxxxxxx: asignar una pila grande con el tamaño \< 256M (2 ^ 24 * 16) |
+|`set_fp`|        11100001: configurar X29: con: MOV X29, SP |
+|`add_fp`|        11100010 ' xxxxxxxx: configure X29 con: Add X29, SP, #x * 8 |
+|`nop`|            11100011: no se requiere ninguna operación de desenredado. |
+|`end`|            11100100: fin del código de desenredado. Implica RET en Epílogo. |
+|`end_c`|        11100101: fin del código de desenredado en el ámbito actual encadenado. |
+|`save_next`|        11100110: Guarde el siguiente par de registros int o FP no volátiles. |
+|`arithmetic(add)`|    11100111 ' 000zxxxx: Add cookie reg (z) to LR (0 = x28, 1 = SP); Agregar LR, LR, REG (z) |
+|`arithmetic(sub)`|    11100111 ' 001zxxxx: sub cookie reg (z) from LR (0 = x28, 1 = SP); Sub LR, LR, REG (z) |
+|`arithmetic(eor)`|    11100111 ' 010zxxxx: EOR LR con cookie reg (z) (0 = x28, 1 = SP); EOR LR, LR, REG (z) |
+|`arithmetic(rol)`|    11100111 ' 0110xxxx: rol de la simulación de LR con el registro de cookies (x28); xip0 = NEG x28; ROR LR, xip0 |
+|`arithmetic(ror)`|    11100111 ' 100zxxxx: RoR LR con cookie reg (z) (0 = x28, 1 = SP); ROR LR, LR, REG (z) |
+| |            11100111: Xxxz----:----reservado |
+| |              11101xxx: reservado para los casos de pila personalizados que se muestran a continuación solo se genera para las rutinas ASM |
+| |              11101000: Pila personalizada para MSFT_OP_TRAP_FRAME |
+| |              11101001: Pila personalizada para MSFT_OP_MACHINE_FRAME |
+| |              11101010: Pila personalizada para MSFT_OP_CONTEXT |
+| |              11101100: Pila personalizada para MSFT_OP_CLEAR_UNWOUND_TO_CALL |
+| |              1111xxxx: reservado |
 
-En instrucciones con los valores grandes que ocupan múltiples bytes, los bits más significativos se almacenan en primer lugar. Los códigos de desenredado anteriores están diseñados para que simplemente buscando el primer byte del código, es posible conocer el tamaño total en bytes del código de desenredado. Dado que todos los códigos de desenredado se asignan exactamente a una instrucción de prólogo y epílogo, para calcular el tamaño del prólogo o epílogo, todo lo que debe hacerse es guiarlo desde el principio de la secuencia hasta el final, uso de una tabla de búsqueda o un dispositivo similar para determinar cuánto tiempo el cor es el código de operación responde.
+En las instrucciones con valores grandes que abarcan varios bytes, se almacenan primero los bits más significativos. Los códigos de desenredado anteriores están diseñados de forma que, con solo buscar el primer byte del código, es posible conocer el tamaño total en bytes del código de desenredado. Dado que cada código de desenredado se asigna exactamente a una instrucción de prólogo/epílogo, para calcular el tamaño del prólogo o epílogo, todo lo que se debe hacer es recorrer el inicio de la secuencia hasta el final, utilizando una tabla de búsqueda o un dispositivo similar para determinar cuánto tiempo el Cor el código de operación de respuesta es.
 
-Tenga en cuenta que indizados posteriores al direccionamiento de desplazamiento no se permite en el prólogo. Todos los intervalos de desplazamiento (#Z) coincide con la codificación de direccionamiento STP/STR excepto `save_r19r20_x` en qué 248 es suficiente para todas las áreas (10 registros Int + 8 registros FP + 8 registros de entrada) de guardar.
+Tenga en cuenta que no se permite el direccionamiento posterior del desplazamiento indizado en el prólogo. Todos los intervalos de desplazamiento (#Z) coinciden con la codificación del direccionamiento de STP/STR, excepto `save_r19r20_x`, en el que 248 es suficiente para todas las áreas de almacenamiento (10 registros int + 8 registros FP + 8 registros de entrada).
 
-`save_next` debe seguir un proceso de guardar para Int o volatile FP registrar par: `save_regp`, `save_regp_x`, `save_fregp`, `save_fregp_x`, `save_r19r20_x`, u otro `save_next`. Guarda el siguiente par de registro en la próxima franja de 16 bytes en orden "crecimiento". `save-next` Siga un `save_next` que denota el último par de registro de Int hace referencia al primer par de registro FP.
+`save_next` debe seguir a un par de registro volatile de tipo int o FP: `save_regp`, @no__t 2, `save_fregp`, `save_fregp_x`, `save_r19r20_x` u otro `save_next`. Guarda el siguiente par de registros en la siguiente ranura de 16 bytes en el orden "en aumento". `save-next` después de un `save_next` que denota el último par de registro int hace referencia al primer par de registro de FP.
 
-Dado que el tamaño habituales de devolver y saltar las instrucciones son los mismos, no hay ninguna necesidad de un separados `end` código para escenarios de llamada de cola de desenredado.
+Dado que el tamaño de las instrucciones de devolución y salto normales es el mismo, no es necesario un código de desenredado `end` separado para escenarios de llamada de cola.
 
-`end_c` está diseñado para controlar los fragmentos de función no contiguo con fines de optimización. Un `end_c` que indica el final de los códigos de desenredado en el ámbito actual debe ir seguida de la otra serie de código de desenredado finalizada con un número real `end`. Los códigos de desenredado entre `end_c` y `end` representan las operaciones del prólogo en región primaria (prólogo "fantasma").  En la siguiente sección se describen más detalles y ejemplos.
+`end_c` está diseñado para controlar los fragmentos de función no contiguos con fines de optimización. Un `end_c` que indica que el final de los códigos de desenredado en el ámbito actual debe ir seguido de otra serie de código de desenredado finalizada con un @no__t real-1. Los códigos de desenredado entre `end_c` y `end` representan las operaciones de prólogo en la región primaria (prólogo "fantasma").  En la sección siguiente se describen más detalles y ejemplos.
 
-### <a name="packed-unwind-data"></a>Empaquetan datos de desenredo
+### <a name="packed-unwind-data"></a>Datos de desenredo empaquetados
 
-Para desenredar funciones empaquetadas cuyo seguimiento de los prólogos y epílogos la forma canónica se describe a continuación, se pueden usar los datos, eliminando la necesidad de un registro .xdata por completo y reduce considerablemente el costo de proporcionar datos de desenredo. El canónicos prólogos y epílogos están diseñados para satisfacer los requisitos comunes de una función simple que no requiere un controlador de excepciones y que lleva a cabo sus operaciones de instalación y desmontaje de forma estándar.
+En el caso de las funciones cuyos registros y archivos de registro siguen el formato canónico descrito a continuación, se pueden usar datos de desenredado empaquetados, lo que elimina la necesidad de un registro. xdata por completo y reduce significativamente el costo de proporcionar datos de desenredado. Los registros y los errores canónicos están diseñados para satisfacer los requisitos comunes de una función simple que no requiere un controlador de excepciones y que realiza las operaciones de instalación y desmontaje en un orden estándar.
 
-El formato de un registro .pdata con empaquetado desenredar datos este aspecto:
+El formato de un registro. pdata con datos de desenredado empaquetados tiene el siguiente aspecto:
 
-![datos de desenredo de registro .pdata con empaquetado](media/arm64-exception-handling-packed-unwind-data.png "registro .pdata con empaquetado de datos de desenredo")
+![registro. pdata con registro de datos de desenredado](media/arm64-exception-handling-packed-unwind-data.png ". pdata empaquetado con datos de desenredado empaquetados")
 
 Los campos son los siguientes:
 
-- **Función iniciar RVA** es la RVA de 32 bits del inicio de la función.
-- **Marca** es un campo de 2 bits como se describió anteriormente, con los significados siguientes:
-  - 00 = empaquetada desenredar datos no utilizados; Seleccione un registro .xdata bits restantes
-  - 01 = empaquetada utilizados como se describe a continuación con solo prólogo y epílogo al principio y al final del ámbito de datos de desenredo
-  - 10 = empaquetada desenredar datos que se usan como se describe a continuación para código sin prólogo y epílogo; Esto es útil para describir los segmentos separados por función.
-  - 11 = reservados;
-- **Función longitud** es un campo de 11 bits que proporciona la longitud de toda la función en bytes dividida entre 4. Si la función es mayor que 8 KB, un registro .xdata completo debe usarse en su lugar.
-- **Tamaño de la trama** es un campo de 9 bits que indica el número de bytes de la pila asignado a esta función, dividida por 16. Las funciones que asignan mayor de bytes (8k-16) de la pila deben usar un registro .xdata completo. Esto incluye el área de variable local, área de parámetros, el área de Int y FP guardados y y el área de parámetros de inicio de salida, pero sin incluir el área de asignación dinámica.
-- **CR** es una marca de 2 bits que indica si la función incluye funciones extra para configurar una cadena de marcos y un vínculo devuelto:
-  - 00 = función, \<x29, lr > par no se guarda en la pila.
-  - 01 = función, \<lr > se guarda en la pila
-  - 10 = reservados;
-  - 11 = función encadenada, se usa una instrucción de par de almacén o carga en el prólogo y epílogo \<x29, lr >
-- **H** es una marca de 1 bit que indica si la función alberga el parámetro entero registra (x0-x7) almacenándolas del principio de la función. (0 = no alberga registros, 1 = alberga registros).
-- **Regis** es un campo de 4 bits que indica el número de registros INT no volátiles (x19-x28) guardado en la ubicación de la pila canónico.
-- **RegF** es un campo de 3 bits que indica el número de registros FP no volátiles (d8-d15) guardado en la ubicación de la pila canónico. (RegF = 0: no se guarda ningún registro de FP; RegF > 0: RegF + 1 registros FP se guardan). Empaquetado de desenredado datos no se puede usar para la función que guardar el registro de FP solo una.
+- La **función de inicio RVA** es la rva de 32 bits del inicio de la función.
+- La **marca** es un campo de 2 bits como se describió anteriormente, con los significados siguientes:
+  - 00 = no se usan datos de desenredado empaquetados; los bits restantes apuntan a un registro. xdata
+  - 01 = datos de desenredado empaquetados usados como se describe a continuación con un prólogo y un epílogo únicos al principio y al final del ámbito
+  - 10 = datos de desenredado empaquetados usados como se describe a continuación para el código sin prólogo y epílogo; Esto resulta útil para describir segmentos de funciones independientes.
+  - 11 = reservado;
+- La longitud de la **función** es un campo de 11 bits que proporciona la longitud de la función completa en bytes, dividida entre 4. Si la función es mayor que 8 k, se debe usar en su lugar un registro. xdata completo.
+- El **tamaño del marco** es un campo de 9 bits que indica el número de bytes de la pila que se asigna a esta función, dividido por 16. Las funciones que asignan más de (8k-16) bytes de stack deben usar un registro. xdata completo. Esto incluye el área de variables locales, el área de parámetros de salida, el área de int y FP guardados por el destinatario y el área de parámetros de inicio, pero excluye el área de asignación dinámica.
+- **CR** es una marca de 2 bits que indica si la función incluye instrucciones adicionales para configurar una cadena de Marcos y devolver el vínculo:
+  - 00 = función no encadenada, \<x29, el par de > LR no se guarda en la pila.
+  - 01 = función encadenada, @no__t 0lr > se guarda en la pila
+  - 10 = reservado;
+  - 11 = función encadenada, se usa una instrucción de par de carga/almacenamiento en el prólogo/epílogo \<x29, LR >
+- **H** es una marca de 1 bit que indica si la función aloja los registros de parámetros de entero (x0-7) almacenándolos en el inicio de la función. (0 = no se registra, 1 = casas registros).
+- **RegI** es un campo de 4 bits que indica el número de registros int no volátiles (x19-x28) guardados en la ubicación de pila canónica.
+- **RegF** es un campo de 3 bits que indica el número de registros FP no volátiles (D8-D15) guardados en la ubicación de pila canónica. (RegF = 0: no se guarda ningún registro FP; RegF > 0: Se guardan los registros RegF + 1 FP). Los datos de desenredado empaquetados no se pueden usar para una función que solo guarde un registro FP.
 
-Los prólogos canónicos que pertenecen a categorías 1, 2 (sin área de parámetros de salida), 3 y 4 en la sección anterior pueden representarse mediante el formato de desenredado empaquetado.  Los epílogos para las funciones canónicas siguen un formato muy similar, excepción **H** no tiene ningún efecto, el `set_fp` instrucción se omite y se invierte el orden de los pasos, así como instrucciones en cada paso en el epílogo. El algoritmo de empaquetado xdata sigue estos pasos, que se detallan en la tabla siguiente:
+Los proregistros canónicos que se encuentran en las categorías 1, 2 (sin área de parámetros de salida), 3 y 4 en la sección anterior se pueden representar con el formato de desenredado empaquetado.  Los registros de las funciones canónicas siguen una forma muy similar, salvo que **H** no tiene ningún efecto, se omite la instrucción `set_fp` y el orden de los pasos, así como las instrucciones de cada paso, se invierten en Epílogo. El algoritmo para XData empaquetado sigue estos pasos, que se detallan en la tabla siguiente:
 
-Paso 0: Realizar el cálculo previo del tamaño de cada área.
+Paso 0: Realice el cálculo previo del tamaño de cada área.
 
-Paso 1: Guarde los registros guardados y Int.
+Paso 1: Guardar registros guardados por el destinatario.
 
-Paso 2: Este paso es específica de tipo 4 en las primeras secciones. LR se guardó al final del área de Int.
+Paso 2: Este paso es específico para el tipo 4 en las primeras secciones. LR se guarda al final del área int.
 
-Paso 3: Guarde los registros guardados y FP.
+Paso 3: Guardar registros guardados de la llamada de FP.
 
-Paso 4: Guarde los argumentos de entrada en el área de parámetros de inicio.
+Paso 4: Guardar argumentos de entrada en el área de parámetros de inicio.
 
-Paso 5: Asignar la pila restante, incluido un área local, \<x29, lr > par y el área de parámetros de salida. 5a corresponde al tipo canónico 1. 5b y 5c son para el tipo canónico 2. 5D y 5e son ambos tipos 3 y escriba 4.
+Paso 5: Asigne la pila restante, incluidos el área local, \<x29, el par de > LR y el área de parámetros de salida. 5A corresponde al tipo canónico 1. 5B y 5C son para el tipo canónico 2. 5D y 5e son tanto para el tipo 3 como para el tipo 4.
 
-Paso #|Valores de marca|número de instrucciones|Código de operación|Código de desenredado
+Pasar #|Valores de marca|n.º de instrucciones|Código de operación|Código de desenredado
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|Regis / 2 + **regis** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+1|0 < **RegI** < = 10|RegI/2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1)% 2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** = = 11 & &<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+15D|(**CR** = = 00 \| @ NO__T-2 **CR**= = 01) & &<br/>#locsz < = 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** = = 00 \| @ NO__T-2 **CR**= = 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\* Si **CR** == 01 y **regis** es un número impar, paso 2 y última save_rep en el paso 1 se combinan en un save_regp.
+\* si **CR** = = 01 y **RegI** es un número impar, el paso 2 y el último save_rep del paso 1 se combinan en un save_regp.
 
-\*\* Si **regis** == **CR** == 0, y **RegF** ! = 0, el primer stp para el punto flotante no la predecremento.
+\* @ no__t-1 si **RegI** == **CR** = = 0 y **RegF** ! = 0, el primer STP del punto flotante realiza el predecremento.
 
-\*\*\* Ninguna instrucción correspondiente a `mov x29,sp` está presente en el epílogo. Empaquetado de desenredo no se puede usar datos si una función requiere la restauración de sp desde x29.
+\* @ no__t-1 @ no__t-2 ninguna instrucción correspondiente a `mov x29,sp` está presente en el epílogo. No se pueden usar datos de desenredado empaquetados si una función requiere la restauración de SP desde X29.
 
-### <a name="unwinding-partial-prologs-and-epilogs"></a>Epílogos y desenredado de prólogos parciales
+### <a name="unwinding-partial-prologs-and-epilogs"></a>Desenredado de los archivos de registro y de los registros parciales
 
-La situación de desenredado más habitual es uno donde se produjo la excepción o la llamada en el cuerpo de la función fuera del prólogo y todos los epílogos. En esta situación, el desenredo es sencillo: el responsable del desenredado simplemente empieza a ejecutarse los códigos de la matriz de desenredado, empezando en el índice 0 y continuando hasta que se detecte un código de operación de finalización.
+La situación de desenredo más común es aquella en la que se produjo la excepción o la llamada en el cuerpo de la función, fuera del prólogo y de todos los registros. En esta situación, el desenredado es sencillo: el desenredo simplemente comienza a ejecutar los códigos de la matriz de desenredado, empezando en el índice 0 y continuando hasta que se detecta un código de operación final.
 
-Es más difícil de desenredado correctamente en el caso donde se produce una excepción o interrupción mientras se ejecuta un prólogo o epílogo. En estas situaciones, el marco de pila solo parcialmente se construye y el truco consiste en determinar exactamente qué se ha realizado para poder deshacerlo correctamente.
+Es más difícil desenredar correctamente en caso de que se produzca una excepción o una interrupción mientras se ejecuta un prólogo o un epílogo. En estas situaciones, el marco de pila solo se construye parcialmente y el truco es determinar exactamente lo que se ha hecho para deshacerlo correctamente.
 
-Por ejemplo, siga esta secuencia de prólogo y epílogo:
+Por ejemplo, realice esta secuencia de prólogo y epílogo:
 
 ```asm
 0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
@@ -409,37 +410,37 @@ Por ejemplo, siga esta secuencia de prólogo y epílogo:
 0110:    ret    lr                          // end
 ```
 
-Junto a cada código de operación es el código de desenredado pertinente que describe esta operación. Lo primero que tener en cuenta es que la serie de códigos de desenredado del prólogo es una imagen de espejo idéntica de los códigos de desenredado de epílogo (sin contar la instrucción final del epílogo). Esta es una situación común y, por este motivo, el desenredo de códigos para el prólogo siempre se asume que se almacenan en orden inverso del orden de ejecución del prólogo.
+Junto a cada código de operación se encuentra el código de desenredado adecuado que describe esta operación. Lo primero que hay que tener en cuenta es que la serie de códigos de desenredado del prólogo es una imagen reflejada exacta de los códigos de desenredado para el epílogo (sin contar la instrucción final del epílogo). Se trata de una situación común y, por este motivo, siempre se supone que los códigos de desenredado del prólogo se almacenan en orden inverso al orden de ejecución del prólogo.
 
-Por lo tanto, para el prólogo y epílogo, seguimos teniendo un conjunto común de códigos de desenredado:
+Por lo tanto, para el prólogo y el epílogo, se deja un conjunto común de códigos de desenredado:
 
 `set_fp`, `save_regp 0,240`, `save_fregp,0,224`, `save_fplr_x_256`, `end`
 
-Comenzando por el caso de epílogo (mucho más sencillo porque está en orden normal), en el desplazamiento 0 en el epílogo (que comienza en el desplazamiento 0 x 100 en la función), se esperaría ejecutar la secuencia de desenredado completa, tal y como no se ha realizado aún ninguna limpieza. Si nos vemos una instrucción en (en desplazamiento 2 en el epílogo), nos podemos desenredado correctamente omitiendo el primer código de desenredado. Generalizar esta situación, suponiendo una asignación 1:1 entre los códigos de operación y códigos de desenredado, nos podemos indicar que, si nos estamos desenredamos desde n instrucción en el epílogo, nos debemos omitir los primeros códigos de desenredado n y comenzar a ejecutar desde allí.
+A partir del caso de epílogo (más sencillo como está en orden normal), en el desplazamiento 0 dentro del epílogo (que comienza en el desplazamiento 0x100 en la función), se esperaría ejecutar la secuencia de desenredado completa, ya que aún no se ha realizado ninguna limpieza. Si nos encontramos en una instrucción en (en el desplazamiento 2 del epílogo), podemos desenredar correctamente omitiendo el primer código de desenredado. Al generalizar esta situación, suponiendo una asignación 1:1 entre códigos de error y desenredado, podemos indicar que si estamos desenredando de la instrucción n en el epílogo, deberíamos omitir los primeros n códigos de desenredado y comenzar a ejecutar desde allí.
 
-Resulta que una lógica similar funciona para el tipo de prólogo, excepto en orden inverso. Si nos estamos desenreda desde el desplazamiento 0 en el prólogo, querríamos ejecutar nada. Si se desenreda del desplazamiento de 2, que es una instrucción y, después, queremos empezar a ejecutar el código de desenredado una secuencia de desenredado del final (Recuerde que los códigos se almacenan en orden inverso). Y aquí también se puede generalizar que si nos estamos desenredamos desde n instrucción en el prólogo, podremos empezar a ejecutar códigos de desenredado n desde el final de la lista de códigos.
+Resulta que funciona una lógica similar para el prólogo, excepto en orden inverso. Si estamos desenredando del desplazamiento 0 en el prólogo, deberíamos que no ejecute nada. Si desenredamos del desplazamiento 2, que es una instrucción de, deseamos empezar a ejecutar la secuencia de desenredado un código de desenredado desde el final (Recuerde que los códigos se almacenan en orden inverso). Y aquí también podremos generalizar que si estamos desenredando de la instrucción n en el prólogo, debemos empezar a ejecutar n códigos de desenredado desde el final de la lista de códigos.
 
-Ahora, no siempre es el caso de que los códigos de prólogo y epílogo coinciden exactamente. Por este motivo, la matriz de desenredado que deba contener varias secuencias de códigos. Para determinar el desplazamiento de dónde empezar a procesar códigos, utilice la siguiente lógica:
+Ahora no siempre es el caso de que los códigos de prólogo y epílogo coincidan exactamente. Por esta razón, la matriz de desenredado puede necesitar contener varias secuencias de códigos. Para determinar el desplazamiento por el que comienza el procesamiento de códigos, utilice la siguiente lógica:
 
-1. Si desenreda desde el cuerpo de la función, simplemente se empiezan a ejecutar códigos de desenredado en el índice 0 y continúe hasta dar con un código de operación "end".
+1. Si desea desenredar desde dentro del cuerpo de la función, simplemente comience a ejecutar códigos de desenredado en el índice 0 y continúe hasta llegar a un código de operación de "fin".
 
-1. Si desenreda desde un epílogo, utilice el índice de inicio de epílogo específico proporcionado con el ámbito de epílogo como punto de partida. Calcule cuántos bytes del PC en cuestión es desde el inicio del epílogo. A continuación, avance hacia delante a través de los códigos de desenredado, omitiendo los códigos de desenredado hasta que todas las instrucciones ejecutadas ya se tienen en cuenta. A continuación, ejecute empezando en ese momento.
+1. Si el desenredado se encuentra dentro de un epílogo, use el índice de inicio específico del epílogo proporcionado con el ámbito del epílogo como punto de partida. Calcule el número de bytes que el equipo en cuestión proviene del inicio del epílogo. A continuación, avance a través de los códigos de desenredado, omitiendo los códigos de desenredado hasta que se tengan en cuenta todas las instrucciones que ya se han ejecutado. A continuación, ejecute a partir de ese punto.
 
-1. Si desenreda desde el prólogo, utilice el índice 0 como punto de partida. Calcular la longitud del código de prólogo de la secuencia y, a continuación, calcula el número de bytes del PC en cuestión está en el extremo del prólogo. A continuación, avance hacia delante a través de los códigos de desenredado, omitiendo los códigos de desenredado hasta que se tienen en cuenta todas las instrucciones todavía ejecuta para. A continuación, ejecute empezando en ese momento.
+1. Si el desenredado se encuentra dentro del prólogo, use el índice 0 como punto de partida. Calcule la longitud del código de prólogo a partir de la secuencia y, a continuación, calcule el número de bytes del equipo en cuestión desde el final del prólogo. A continuación, avance por los códigos de desenredado, omitiendo los códigos de desenredado hasta que se tengan en cuenta todas las instrucciones no ejecutadas todavía. A continuación, ejecute a partir de ese punto.
 
-Como resultado de estas reglas, los códigos de desenredado del prólogo siempre deben ser el primer elemento de la matriz, y también son los códigos de desenredado en general el caso de desenredado desde dentro del cuerpo. Las secuencias de código específico de epílogo deben seguir inmediatamente después.
+Como resultado de estas reglas, los códigos de desenredado del prólogo deben ser siempre el primero de la matriz, y también son los códigos usados para desenredar en el caso general de desenredado desde dentro del cuerpo. Las secuencias de código específicas de epílogo deben seguir inmediatamente después de.
 
 ### <a name="function-fragments"></a>Fragmentos de función
 
-Para fines de optimización de código y otras razones, puede ser preferible para dividir una función en fragmentos separados (también denominadas regiones). Cuando esto sucede, cada fragmento de la función resultante requiere su propio registro .pdata (y posiblemente XData) registro.
+Para fines de optimización de código y otras razones, puede ser preferible dividir una función en fragmentos separados (también denominados regiones). Cuando esto se hace, cada fragmento de función resultante requiere su propio registro. pdata (y posiblemente. xdata) independiente.
 
-Para separados fragmento secundaria que tiene su propio prólogo, se espera que no se realiza ningún ajuste de pila en el prólogo. Todo espacio requerido por la base de datos secundaria de la pila regiones se deben asignar previamente por su región primaria (o región llamado host). Esto mantiene la manipulación de puntero de pila estrictamente en el prólogo original de la función.
+En el caso del fragmento secundario separado que tiene su propio prólogo, se espera que no se realice ningún ajuste de la pila en su prólogo. Todo el espacio de pila requerido por las regiones secundarias debe estar asignado previamente por su región primaria (o como región del host). Esto mantiene la manipulación del puntero de pila estrictamente en el prólogo original de la función.
 
-Un caso típico de fragmentos de función es "separación de código" con la que el compilador puede mover una región de código fuera de su función de host. Existen tres casos inusuales que podrían ser dan como resultados mediante la separación de código.
+Un caso típico de fragmentos de función es "separación de código" con ese compilador puede desasociar una región de código de su función de host. Hay tres casos inusuales que pueden ser resultado de la separación de código.
 
 #### <a name="example"></a>Ejemplo:
 
-- (la región 1: iniciar)
+- (región 1: Begin)
 
     ```asm
         stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
@@ -448,15 +449,15 @@ Un caso típico de fragmentos de función es "separación de código" con la que
         ...
     ```
 
-- (la región 1: final)
-- (3 de la región: empezar)
+- (región 1: fin)
+- (región 3: Begin)
 
     ```asm
         ...
     ```
 
-- (3 de la región: final)
-- (la región 2: empezar)
+- (región 3: fin)
+- (región 2: Begin)
 
     ```asm
     ...
@@ -466,27 +467,27 @@ Un caso típico de fragmentos de función es "separación de código" con la que
         ret     lr                      // end
     ```
 
-- (la región 2: final)
+- (región 2: fin)
 
-1. Solo prólogo (zona 1: todos los epílogos están en regiones separadas):
+1. Solo prólogo (región 1: todos los registros se encuentran en regiones independientes):
 
-   Solo el prólogo debe describirse. Esto no puede representarse mediante el formato de .pdata compacto. En el caso de .xdata completo, esto puede representarse mediante el establecimiento de epílogo recuento = 0. Vea la región 1 en el ejemplo anterior.
+   Solo debe describirse el prólogo. No se puede representar con el formato compacto. pdata. En el caso de Full. xdata, esto se puede representar estableciendo el número de epílogo = 0. Vea la región 1 en el ejemplo anterior.
 
    Códigos de desenredado: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-1. Solo epílogos (zona 2: prólogo se encuentra en la región de host)
+1. Solo registros (región 2: el prólogo está en la región del host)
 
-   Se supone que el control de tiempo que saltar en esta región, se han ejecutado todos los códigos de prólogo. Desenredo parcial puede producirse en epílogos la misma forma que una función normal. Este tipo de región no puede representarse mediante .pdata compacto. En el registro de xdata completa, puede estar codificado con un "fantasma" prólogo, enmarcado por un `end_c` y `end` par de código de desenredado.  El interlineado `end_c` indica el tamaño del prólogo es cero. Epílogo el índice inicial de los puntos de único epílogo a `set_fp`.
+   Se supone que, al saltar a esta región el control de tiempo, se han ejecutado todos los códigos de prólogo. El desenredo parcial puede producirse en los registros de la misma manera que en una función normal. Este tipo de región no se puede representar mediante Compact. pdata. En el registro XData completo, se puede codificar con un prólogo "fantasma", entre corchetes por un par de código de desenredo `end_c` y `end`.  El @no__t inicial-0 indica que el tamaño del prólogo es cero. El índice de inicio del epílogo de la única señal apunta a `set_fp`.
 
-   Código de región 2 de desenredado: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
+   Código de desenredo para la región 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-1. Sin prólogos ni epílogos (región de 3: los prólogos y epílogos todas están en otros fragmentos):
+1. Ningún registro o EPI(región 3: los proregistros y todos los archivos de registro están en otros fragmentos):
 
-   Formato de .pdata compacto puede aplicarse a través de indicador = 10. Con un registro .xdata completo, el recuento de epílogo = 1. Desenredo código es el mismo que para la región 2 anterior, pero el índice de inicio de epílogo también apunta a `end_c`. No se producirán desenredo parcial en esta región de código.
+   El formato Compact. pdata se puede aplicar a través de la marca de configuración = 10. Con el registro Full. xdata, el número de epílogos es 1. El código de desenredado es el mismo que el de la región 2 anterior, pero el índice de inicio de epílogo también señala a `end_c`. El desenredo parcial nunca se producirá en esta región de código.
 
-Otro caso más complicado de fragmentos de función es "reducir el ajuste" con la que el compilador puede optar por guardar algunos registros guardados por destinatarios hasta que se encuentra fuera del prólogo de función de entrada de retraso.
+Otro caso más complicado de fragmentos de función es "ajuste de reducción" con ese compilador puede optar por retrasar el guardado de algunos registros guardados por el destinatario hasta fuera del prólogo de entrada de función.
 
-- (la región 1: iniciar)
+- (región 1: Begin)
 
     ```asm
         stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
@@ -495,7 +496,7 @@ Otro caso más complicado de fragmentos de función es "reducir el ajuste" con l
         ...
     ```
 
-- (la región 2: empezar)
+- (región 2: Begin)
 
     ```asm
         stp     x21,x22,[sp,#224]       // save_regp 2, 224
@@ -503,7 +504,7 @@ Otro caso más complicado de fragmentos de función es "reducir el ajuste" con l
         ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
-- (la región 2: final)
+- (región 2: fin)
 
     ```asm
         ...
@@ -513,25 +514,25 @@ Otro caso más complicado de fragmentos de función es "reducir el ajuste" con l
         ret     lr                      // end
     ```
 
-- (la región 1: final)
+- (región 1: fin)
 
-En el prólogo de la región 1, el espacio de pila está preasignado. Tenga en cuenta que esa región 2 tendrán el mismo código de desenredado incluso se mueve fuera de su función de host.
+En el prólogo de la región 1, el espacio de pila está preasignado. Tenga en cuenta que la región 2 tendrá el mismo código de desenredado incluso si se sale de su función de host.
 
-1 región: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` con el índice de inicio de epílogo señala a `set_fp` como de costumbre.
+Región 1: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end` con el índice de inicio de epílogo apunta a `set_fp` como de costumbre.
 
-Zona 2: `save_regp 2, 224`, `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`. Índice inicial de epílogo señala para código de desenredado primero `save_regp 2, 224`.
+Región 2: `save_regp 2, 224`, `end_c`, @no__t 2, `save_regp 0,240`, `save_fplr_x_256`, `end`. El índice de inicio de epílogo apunta al primer código de desenredado `save_regp 2, 224`.
 
 ### <a name="large-functions"></a>Funciones grandes
 
-Fragmentos se pueden aprovechar para describir funciones con un tamaño superior al límite de 1 millón impuesto por los campos de bits en el encabezado de xdata. Para describir una función muy grande como esta, simplemente debe dividirse en fragmentos más pequeños de 1 000 000. Cada fragmento se debe ajustar para que no divida un epílogo en varias partes.
+Los fragmentos se pueden aprovechar para describir funciones mayores que el límite de 1M impuesto por los campos de bits del encabezado. xdata. Para describir una función muy grande de este tipo, simplemente debe dividirse en fragmentos inferiores a 1 millón. Cada fragmento debe ajustarse para que no divida un epílogo en varias partes.
 
-Solo el primer fragmento de la función va a contener un prólogo; todos los demás están marcados como si tuviera ningún prólogo. Dependiendo del número de epílogos está presente, cada fragmento puede contener cero o más epílogos. Tenga en cuenta que cada ámbito de epílogo en un fragmento especifica su desplazamiento inicial en relación con el inicio del fragmento, no al inicio de la función.
+Solo el primer fragmento de la función contendrá un prólogo; todos los demás fragmentos se marcan como sin prólogo. En función del número de archivos de registro presentes, cada fragmento puede contener cero o más registros. Tenga en cuenta que cada ámbito de epílogo de un fragmento especifica su desplazamiento inicial en relación al inicio del fragmento, no al inicio de la función.
 
-Si un fragmento no tiene ningún tipo de prólogo y ningún epílogo, todavía requiere su propio registro .pdata (y posiblemente XData) registro, para describir cómo desenredar desde dentro del cuerpo de la función.
+Si un fragmento no tiene ningún prólogo y sin epílogo, todavía requiere su propio registro. pdata (y posiblemente. xdata) para describir cómo desenredar desde dentro del cuerpo de la función.
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="example-1-frame-chained-compact-form"></a>Ejemplo 1: Formato compacto, encadenados de marco
+### <a name="example-1-frame-chained-compact-form"></a>Ejemplo 1: Con cadena y forma compacta
 
 ```asm
 |Foo|     PROC
@@ -549,7 +550,7 @@ Si un fragmento no tiene ningún tipo de prólogo y ningún epílogo, todavía r
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Ejemplo 2: Encadenar de marco, de forma completa con reflejo prólogo y epílogo
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Ejemplo 2: De forma completa y encadenada con un prólogo & epílogo
 
 ```asm
 |Bar|     PROC
@@ -581,9 +582,9 @@ Si un fragmento no tiene ningún tipo de prólogo y ningún epílogo, todavía r
     ;end
 ```
 
-Tenga en cuenta que EpilogStart índice [0] señala a la misma secuencia de código de desenredado del prólogo.
+Tenga en cuenta que el índice de EpilogStart [0] apunta a la misma secuencia de código de desenredado de prólogo.
 
-### <a name="example-3-variadic-unchained-function"></a>Ejemplo 3: Variádica (función)
+### <a name="example-3-variadic-unchained-function"></a>Ejemplo 3: Variádicas función no encadenada
 
 ```asm
 |Delegate| PROC
@@ -622,9 +623,9 @@ Tenga en cuenta que EpilogStart índice [0] señala a la misma secuencia de cód
     ;end
 ```
 
-Nota: Índice EpilogStart [4] apunta a la mitad del código de desenredado del prólogo (parcialmente reutilización desenredo de la matriz).
+Nota: El índice de EpilogStart [4] apunta al centro del código de desenredado del prólogo (reutiliza parcialmente la matriz de desenredado).
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre las convenciones ABI ARM64](arm64-windows-abi-conventions.md)<br/>
+[Información general de las convenciones de ABI de ARM64](arm64-windows-abi-conventions.md)<br/>
 [Control de excepciones de ARM](arm-exception-handling.md)

@@ -1,10 +1,10 @@
 ---
 title: fopen_s, _wfopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen_s
 - fopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen_s
 - _tfopen_s
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: e4ccce3c4a4fe1e327b7830ef03f6ab69f2d7814
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 2a400918a171c0009e40be8a20b814e8ded336ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376221"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957134"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
@@ -98,9 +101,9 @@ Compruebe siempre el valor devuelto para ver si la función se realizó correcta
 
 **fopen_s** admite secuencias de archivo Unicode. Para abrir un archivo Unicode nuevo o existente, pase una marca de *CCS* que especifique la codificación deseada a **fopen_s**:
 
-**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=** _encoding_ **");**
 
-Los valores permitidos de *Encoding* son **Unicode**, **UTF-8**y **UTF-16LE**. Si no se especifica ningún valor para la *codificación*, **fopen_s** usa la codificación ANSI.
+Los valores permitidos de *Encoding* son Unicode, **UTF-8**y **UTF-16LE**. Si no se especifica ningún valor para la *codificación*, **fopen_s** usa la codificación ANSI.
 
 Si el archivo ya existe y está abierto para lectura o para anexar, la marca de orden de bytes (BOM), si está presente en el archivo, determina la codificación. La codificación de BOM tiene prioridad sobre la codificación especificada por la marca *CCS* . La codificación *CCS* solo se usa cuando no hay Bom presente o si el archivo es un archivo nuevo.
 
@@ -119,7 +122,7 @@ En la tabla siguiente se resumen los modos de las distintas marcas de *CCS* que 
 
 En los archivos que se abren para escribir en el modo Unicode se escribe una BOM automáticamente.
 
-Si el *modo* es **"a, CCS =**_Encoding_**"**, **fopen_s** primero intenta abrir el archivo con acceso de lectura y escritura. Si la operación se realiza correctamente, la función lee la BOM para determinar la codificación del archivo; si se produce un error, la función usa la codificación predeterminada del archivo. En cualquier caso, **fopen_s** vuelve a abrir el archivo con acceso de solo escritura. (Esto solo se aplica a **un** modo, no **a +**).
+Si el *modo* es **"a, CCS =** _Encoding_ **"** , **fopen_s** primero intenta abrir el archivo con acceso de lectura y escritura. Si la operación se realiza correctamente, la función lee la BOM para determinar la codificación del archivo; si se produce un error, la función usa la codificación predeterminada del archivo. En cualquier caso, **fopen_s** vuelve a abrir el archivo con acceso de solo escritura. (Esto solo se aplica a **un** modo, no **a +** ).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -138,11 +141,11 @@ El *modo* de cadena de caracteres especifica el tipo de acceso solicitado para e
 | **"w+"** | Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido. |
 | **"a+"** | Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe. |
 
-Cuando un archivo se abre mediante el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero siempre se mueve al final del archivo antes de que se realice cualquier operación de escritura para que los datos existentes no se puedan sobrescribir.
+Cuando un archivo se abre mediante el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición mediante [fseek](fseek-fseeki64.md) o [rewind](rewind.md), pero siempre se mueve al final del archivo antes de que se realice cualquier operación de escritura para que los datos existentes no se puedan sobrescribir.
 
 El modo **"a"** no quita el marcador EOF antes de anexar al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. El modo **"a +"** quita el marcador EOF antes de anexar al archivo. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El modo **"a +"** es necesario para anexar a un archivo de secuencia que se termina con el marcador EOF Ctrl + Z.
 
-Cuando se especifica el tipo de acceso **"r +"**, **"w +"** o **"a +"** , se permiten la lectura y la escritura. (Se dice que el archivo se abierto para “actualizar”). Sin embargo, cuando cambie de lectura a la escritura, la operación de entrada debe encontrar un marcador EOF. Si no hay ningún EOF, debe usar una llamada intermedia a una función de posición del archivo. Las funciones de posición de archivo son **fsetpos**, [fseek](fseek-fseeki64.md)y [Rewind](rewind.md). Cuando cambie de escritura a lectura, debe usar una llamada intermedia a **fflush** o a una función de posicionamiento de archivo.
+Cuando se especifica el tipo de acceso **"r +"** , **"w +"** o **"a +"** , se permiten la lectura y la escritura. (Se dice que el archivo se abierto para “actualizar”). Sin embargo, cuando cambie de lectura a la escritura, la operación de entrada debe encontrar un marcador EOF. Si no hay ningún EOF, debe usar una llamada intermedia a una función de posición del archivo. Las funciones de posición de archivo son **fsetpos**, [fseek](fseek-fseeki64.md)y [Rewind](rewind.md). Cuando cambie de escritura a lectura, debe usar una llamada intermedia a **fflush** o a una función de posicionamiento de archivo.
 
 Además de los valores anteriores, los caracteres siguientes se pueden incluir en el *modo* para especificar el modo de traducción de los caracteres de nueva línea:
 
@@ -151,7 +154,7 @@ Además de los valores anteriores, los caracteres siguientes se pueden incluir e
 | **t** | Abra en modo de texto (traducido). |
 | **b** | Abrir en modo binario (sin traducir); se suprimen las traducciones que implican caracteres de retorno de carro y avance de línea. |
 
-En el modo de texto (traducido), CTRL + Z se interpreta como un carácter de final de archivo en la entrada. En los archivos abiertos para lectura/escritura con **"a +"**, **fopen_s** comprueba si hay un Ctrl + Z al final del archivo y lo quita, si es posible. Esto se hace porque el uso de [fseek](fseek-fseeki64.md) y **ftell** para desplace dentro de un archivo que finaliza con Ctrl + Z puede hacer que [fseek](fseek-fseeki64.md) se comporte de forma incorrecta cerca del final del archivo.
+En el modo de texto (traducido), CTRL + Z se interpreta como un carácter de final de archivo en la entrada. En los archivos abiertos para lectura/escritura con **"a +"** , **fopen_s** comprueba si hay un Ctrl + Z al final del archivo y lo quita, si es posible. Esto se hace porque el uso de [fseek](fseek-fseeki64.md) y **ftell** para desplace dentro de un archivo que finaliza con Ctrl + Z puede hacer que [fseek](fseek-fseeki64.md) se comporte de forma incorrecta cerca del final del archivo.
 
 Además, en modo de texto, las combinaciones de retorno de carro y avance de línea se traducen en fuentes de una sola línea en la entrada y los caracteres de avance de línea se traducen en combinaciones de retorno de carro y avance de línea en la salida. Cuando una función de E/S de flujo Unicode funciona en el modo de texto (valor predeterminado), se asume que el flujo de origen o de destino son una secuencia de caracteres multibyte. Por consiguiente, las funciones de entrada de secuencias Unicode convierten los caracteres multibyte en caracteres anchos (como si se realizara una llamada a la función **mbtowc**). Por la misma razón, las funciones de salida de secuencias Unicode convierten los caracteres anchos en caracteres multibyte (como si se realizara una llamada a la función **wctomb**).
 
@@ -168,7 +171,7 @@ Para obtener más información sobre el uso de los modos de texto y binario en E
 | **R** | Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco. |
 | **T** | Especifica un archivo como temporal. Si es posible, no se vuelca en el disco. |
 | **D** | Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo. |
-| **ccs=**_encoding_ | Especifica el juego de caracteres codificado que se va a usar (uno de **UTF-8**, **UTF-16LE**o **Unicode**) para este archivo. Deje sin especificar si desea la codificación ANSI. |
+| **ccs=** _encoding_ | Especifica el juego de caracteres codificado que se va a usar (uno de **UTF-8**, **UTF-16LE**o Unicode) para este archivo. Deje sin especificar si desea la codificación ANSI. |
 
 Los caracteres válidos para la cadena de *modo* utilizada en **fopen_s** y [_fdopen](fdopen-wfdopen.md) se corresponden con los argumentos de *Oflag* usados en _ [Open](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
 
