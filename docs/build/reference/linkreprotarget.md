@@ -55,6 +55,6 @@ Las opciones **/LINKREPRO** y [/out](out-output-file-name.md) deben establecerse
 
 ## <a name="see-also"></a>Vea también
 
-@No__t de [Referencia del enlazador de MSVC](linking.md)-1
+[Referencia del enlazador de MSVC](linking.md)\
 [MSVC opciones del vinculador](linker-options.md)\
 [/LINKREPRO](linkrepro.md)
