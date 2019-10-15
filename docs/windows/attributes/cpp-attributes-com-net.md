@@ -34,7 +34,7 @@ Los atributos C++ se extienden en direcciones que no son posibles actualmente si
 
 - Reemplaza la gran cantidad de código IDL requerido por un componente COM con algunos atributos concisos.
 
-Por ejemplo, para implementar un receptor de eventos simple para una clase ATL genérica, puede aplicar el atributo [event_receiver](event-receiver.md) a una clase específica como `CMyReceiver`. Después `event_receiver` , el compilador de Microsoft C++ compila el atributo, que inserta el código adecuado en el archivo objeto.
+Por ejemplo, para implementar un receptor de eventos simple para una clase ATL genérica, podría aplicar el atributo [event_receiver](event-receiver.md) a una clase específica como `CMyReceiver`. Después, el compilador de Microsoft C++ compila el atributo `event_receiver`, que inserta el código adecuado en el archivo objeto.
 
 ```cpp
 [event_receiver(com)]
@@ -45,7 +45,7 @@ class CMyReceiver
 }
 ```
 
-A continuación, puede configurar los `CMyReceiver` métodos `handler1` y `handler2` administrar los eventos (mediante la función intrínseca [_ _ Hook](../../cpp/hook.md)) desde un origen de eventos, que puede crear con [event_source](event-source.md).
+Después, puede configurar los métodos `CMyReceiver` `handler1` y `handler2` para controlar los eventos (mediante la función intrínseca [_ _ Hook](../../cpp/hook.md)) desde un origen de eventos, que se puede crear mediante [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Mecanismos básicos de los atributos
 
@@ -55,7 +55,7 @@ Como antes, cuando se compila el proyecto, el compilador analiza C++ cada archiv
 
 En la siguiente ilustración se muestra la relación entre el compilador y el proveedor de atributos.
 
-![Comunicación de atributos de componentes] (../media/vccompattrcomm.gif "Comunicación de atributos de componentes")
+(../media/vccompattrcomm.gif "Comunicación de atributo de componente") de comunicación de atributo de ![componente]
 
 > [!NOTE]
 > El uso de atributos no modifica el contenido del archivo de código fuente. La única vez que el código de atributo generado es visible es durante las sesiones de depuración. Además, para cada archivo de código fuente del proyecto, puede generar un archivo de texto que muestre los resultados de la sustitución de atributos. Para obtener más información sobre este procedimiento, vea [/FX (combinar código insertado)](../../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
