@@ -2,12 +2,12 @@
 title: Referencia de la biblioteca de OpenMP
 ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: c63ae5ba7f04d8ee6bd02418792804373fa71e6b
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682590"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348224"
 ---
 # <a name="openmp-library-reference"></a>Referencia de la biblioteca de OpenMP
 
@@ -15,7 +15,7 @@ Proporciona vínculos a las construcciones usadas en la API de OpenMP.
 
 La implementación C++ visual del estándar de OpenMP incluye las siguientes construcciones.
 
-|Construcción|DESCRIPCIÓN|
+|Construcción|Descripción|
 |---------------|-----------------|
 |[Directivas](openmp-directives.md)|Proporciona vínculos a las directivas usadas en la API de OpenMP.|
 |[Cláusulas](openmp-clauses.md)|Proporciona vínculos a las cláusulas usadas en la API de OpenMP.|
@@ -29,7 +29,7 @@ Las funciones C++ de la biblioteca en tiempo de ejecución de Visual OpenMP est�
 |VCOMP. OBJ|Vínculo multiproceso y dinámico (biblioteca de importación para VCOMP. LIB).|
 |VCOMPD. OBJ|Vínculo multiproceso y dinámico (biblioteca de importación para VCOMPD. LID) (depurar)|
 
-Si se define _ debug en una compilación y `#include omp.h` si está en código fuente, VCOMPD. LIB será la biblioteca predeterminada, de lo contrario, VCOMP. Se usará LIB.
+Si se define _ debug en una compilación y si `#include <omp.h>` está en código fuente, VCOMPD. LIB será la biblioteca predeterminada, de lo contrario, VCOMP. Se usará LIB.
 
 Puede usar [/NODEFAULTLIB (omitir bibliotecas)](../../../build/reference/nodefaultlib-ignore-libraries.md) para quitar el lib predeterminado y vincularlo explícitamente con el lib de su elección.
 
