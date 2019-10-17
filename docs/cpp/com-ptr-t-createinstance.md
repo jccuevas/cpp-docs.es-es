@@ -45,10 +45,10 @@ HRESULT CreateInstance(
 `CLSID` De un objeto.
 
 *clsidString*<br/>
-Cadena Unicode que contiene un (a `CLSID` partir de "**{**") o un `ProgID`.
+Cadena Unicode que contiene un (a `CLSID` partir de " **{** ") o un `ProgID`.
 
 *clsidStringA*<br/>
-Una cadena multibyte, mediante la página de códigos ANSI, que contiene `CLSID` (empezando por "**{** `ProgID`") o.
+Una cadena multibyte, mediante la página de códigos ANSI, que contiene `CLSID` (empezando por " **{** `ProgID`") o.
 
 *dwClsContext*<br/>
 Contexto para el código ejecutable.
@@ -60,11 +60,11 @@ El externo desconocido para la [agregación](../atl/aggregation.md).
 
 Estas funciones de miembro llaman a `CoCreateInstance` para crear un nuevo objeto CM y, a continuación, consultas para el tipo de interfaz de este puntero inteligente. El puntero resultante se encapsula dentro de este objeto `_com_ptr_t`. `Release`se llama a para reducir el recuento de referencias del puntero encapsulado previamente. Esta rutina devuelve HRESULT para indicar si se ha realizado correctamente o no.
 
-- **CreateInstance (***rclsid* **,***dwClsContext***)** Crea una nueva instancia en ejecución de un objeto, `CLSID`dado un.      
+- **CreateInstance (** *rclsid* **,** *dwClsContext* **)** Crea una nueva instancia en ejecución de un objeto, `CLSID`dado un.
 
-- **CreateInstance (***clsidString* **,***dwClsContext***)** Crea una nueva instancia en ejecución de un objeto, dada una cadena Unicode que contiene `CLSID` (a partir de "**{** `ProgID`") o.      
+- **CreateInstance (** *clsidString* **,** *dwClsContext* **)** Crea una nueva instancia en ejecución de un objeto, dada una cadena Unicode que contiene `CLSID` (a partir de " **{** `ProgID`") o.
 
-- **CreateInstance (***clsidStringA* **,***dwClsContext***)** Crea una nueva instancia en ejecución de un objeto a partir de una cadena de caracteres multibyte `CLSID` que contiene (a partir de "**{** `ProgID`") o.       Llama a [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), que supone que la cadena está en la página de códigos ANSI en lugar de en una página de códigos OEM.
+- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** Crea una nueva instancia en ejecución de un objeto a partir de una cadena de caracteres multibyte `CLSID` que contiene (a partir de " **{** `ProgID`") o. Llama a [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), que supone que la cadena está en la página de códigos ANSI en lugar de en una página de códigos OEM.
 
 **FIN de Específicos de Microsoft**
 
