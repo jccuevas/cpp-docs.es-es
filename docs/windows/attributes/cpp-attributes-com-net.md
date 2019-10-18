@@ -55,7 +55,7 @@ Como antes, cuando se compila el proyecto, el compilador analiza C++ cada archiv
 
 En la siguiente ilustración se muestra la relación entre el compilador y el proveedor de atributos.
 
-(../media/vccompattrcomm.gif "Comunicación de atributo de componente") de comunicación de atributo de ![componente]
+![Comunicación de atributo de componente](../media/vccompattrcomm.gif " de comunicación de atributo de componente")
 
 > [!NOTE]
 > El uso de atributos no modifica el contenido del archivo de código fuente. La única vez que el código de atributo generado es visible es durante las sesiones de depuración. Además, para cada archivo de código fuente del proyecto, puede generar un archivo de texto que muestre los resultados de la sustitución de atributos. Para obtener más información sobre este procedimiento, vea [/FX (combinar código insertado)](../../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
