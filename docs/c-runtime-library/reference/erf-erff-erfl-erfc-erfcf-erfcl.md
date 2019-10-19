@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937613"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
@@ -98,7 +98,7 @@ Las funciones **ERF** devuelven la función de error de Gauss de *x*. Las funcio
 
 Las funciones **ERF** calculan la función de error de Gauss de *x*, que se define como:
 
-![La función de error de x](media/crt_erf_formula.PNG "La función de error de x")
+![La función de error de x](media/crt_erf_formula.PNG "Función de error de x")
 
 La función de error de Gauss complementaria se define como 1-Fun (x). Las funciones **ERF** devuelven un valor en el intervalo de-1,0 a 1,0. No se devuelve ningún error. Las funciones **erfc** devuelven un valor en el intervalo comprendido entre 0 y 2. Si *x* es demasiado grande para **erfc**, la variable **errno** se establece en **ERANGE**.
 
@@ -108,9 +108,9 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Fun** 
 
 |Función|Encabezado necesario|
 |--------------|---------------------|
-|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**Fun**, **erff (** , **erfl**, **erfc**, **erfcf (** , **erfcl**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -3,10 +3,10 @@ title: Diseño dinámico
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907547"
 ---
 # <a name="dynamic-layout"></a>Diseño dinámico
@@ -17,13 +17,13 @@ Con MFC en Visual Studio 2015, puede crear cuadros de diálogo que el usuario pu
 
 Cuando el usuario cambia el tamaño de un diálogo, los controles del diálogo pueden cambiar de tamaño o moverse en las direcciones X e Y. El cambio de tamaño o posición de un control cuando el usuario cambia el tamaño de un diálogo se denomina diseño dinámico. Por ejemplo, el siguiente es un diálogo antes de que se cambie su tamaño:
 
-![Cuadro de diálogo antes de cambiar el tamaño.](../mfc/media/mfcdynamiclayout4.png "Cuadro de diálogo antes de cambiar el tamaño.")
+![Cuadro de diálogo antes de cambiar el tamaño.](../mfc/media/mfcdynamiclayout4.png "Diálogo antes de modificar el tamaño.")
 
 Después de que se haya cambiado su tamaño, se incrementa el área del cuadro de lista para que se muestren más elementos y los botones se mueven junto con la esquina inferior derecha:
 
-![Cuadro de diálogo después de cambiar el tamaño.](../mfc/media/mfcdynamiclayout5.png "Cuadro de diálogo después de cambiar el tamaño.")
+![Cuadro de diálogo después de cambiar el tamaño.](../mfc/media/mfcdynamiclayout5.png "Dialogo tras modificar el tamaño.")
 
-Puede controlar el diseño dinámico especificando los detalles de cada control en el editor de recursos en el IDE, o puede hacerlo mediante programación accediendo al `CMFCDynamicLayout` objeto para un control determinado y estableciendo las propiedades.
+Puede controlar el diseño dinámico especificando los detalles de cada control en el editor de recursos en el IDE, o puede hacerlo mediante programación accediendo al objeto `CMFCDynamicLayout` para un control determinado y estableciendo las propiedades.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Configurar las propiedades de diseño dinámico en el editor de recursos
 
@@ -33,7 +33,7 @@ Mediante el editor de recursos puede configurar el comportamiento del diseño di
 
 1. Con un proyecto de MFC abierto, abra el diálogo sobre el que desee trabajar en el editor de diálogos.
 
-   ![Abra el cuadro de diálogo en el editor de recursos.](../mfc/media/mfcdynamiclayout3.png "Abra el cuadro de diálogo en el editor de recursos.")
+   ![Abra el cuadro de diálogo en el editor de recursos.](../mfc/media/mfcdynamiclayout3.png "Abra el diálogo en el editor de recursos.")
 
 1. Seleccione un control y, en la ventana **propiedades** (en **vista de clases**), establezca sus propiedades de diseño dinámico. La sección **diseño dinámico** de la ventana **propiedades** contiene las propiedades **tipo móvil**, **tipo de ajuste de tamaño**y, dependiendo de los valores seleccionados para esas propiedades, propiedades específicas que definen cuánto se mueven los controles o cambiar tamaño. El **tipo de movimiento** determina cómo se mueve un control a medida que cambia el tamaño del cuadro de diálogo; **Tipo de ajuste** de tamaño determina cómo se cambia el tamaño de un control a medida que cambia el tamaño del cuadro de diálogo. El tipo de **movimiento** y el **tipo de ajuste de tamaño** pueden ser **horizontal**, **vertical**, **ambos**o **ninguno** , según las dimensiones que desee cambiar de forma dinámica. Horizontal es la dimensión X, mientras que Vertical es la dirección del eje Y.
 
@@ -55,13 +55,13 @@ El procedimiento anterior es útil para configurar las propiedades del diseño d
 
 1. Busque o cree un lugar en el código de implementación de la clase de su diálogo donde desee especificar el diseño dinámico del diálogo. Por ejemplo, puede que quiera agregar un método `AdjustLayout` en el diálogo y llamarlo desde los lugares donde se deba cambiar el diseño. Podría llamar primero a este método desde el constructor o después de haber realizado cambios en el diálogo.
 
-1. En el cuadro de diálogo, llame a [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un `CWnd` método de la clase. `GetDynamicLayout` devuelve un puntero a un objeto `CMFCDynamicLayout` .
+1. En el cuadro de diálogo, llame a [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un método de la clase `CWnd`. `GetDynamicLayout` devuelve un puntero a un objeto `CMFCDynamicLayout` .
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Para el primer control al que desea agregar el comportamiento dinámico, use los métodos estáticos de la clase de diseño dinámico para crear la estructura [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) que codifica la manera en que se debe ajustar el control. Para ello, primero debe elegir el método estático adecuado: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)o [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Se pasa un porcentaje de los aspectos horizontales o verticales del movimiento. Todos estos métodos estáticos devuelven un objeto MoveSettings recién creado que se puede utilizar para especificar el comportamiento de movimiento de un control.
+1. Para el primer control al que desea agregar el comportamiento dinámico, use los métodos estáticos de la clase de diseño dinámico para crear la estructura [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) que codifica la manera en que se debe ajustar el control. Para ello, primero debe elegir el método estático adecuado: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)o [CMFCDynamicLayout:: MoveHorizontalAndVertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Se pasa un porcentaje de los aspectos horizontales o verticales del movimiento. Todos estos métodos estáticos devuelven un objeto MoveSettings recién creado que se puede utilizar para especificar el comportamiento de movimiento de un control.
 
    Tenga en cuenta que 100 significa que el control se moverá exactamente la misma cantidad que se cambie de tamaño el diálogo, lo que hace que el borde de un control permanezca a una distancia fija del nuevo borde.
 
