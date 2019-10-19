@@ -20,28 +20,28 @@ helpviewer_keywords:
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 ms.openlocfilehash: 9a0199577ea46520c2eadc308812de8a1ce4b514
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "71685806"
 ---
 # <a name="dialog-data-exchange"></a>Intercambio de datos de cuadro de diálogo
 
-Si utiliza el mecanismo DDX, establezca los valores iniciales de las variables miembro del objeto de cuadro de diálogo, normalmente en el controlador `OnInitDialog` o en el constructor del cuadro de diálogo. Inmediatamente antes de que se muestre el cuadro de diálogo, el mecanismo DDX del marco de trabajo transfiere los valores de las variables miembro a los controles del cuadro de diálogo, donde aparecen cuando el propio cuadro de diálogo aparece en respuesta a `DoModal` o `Create`. La implementación predeterminada de `OnInitDialog` en `CDialog` llama a la función miembro @no__t 2 de la clase `CWnd` para inicializar los controles en el cuadro de diálogo.
+Si utiliza el mecanismo DDX, establezca los valores iniciales de las variables miembro del objeto de cuadro de diálogo, normalmente en el controlador de `OnInitDialog` o en el constructor del cuadro de diálogo. Inmediatamente antes de que se muestre el cuadro de diálogo, el mecanismo DDX del marco de trabajo transfiere los valores de las variables miembro a los controles del cuadro de diálogo, donde aparecen cuando el propio cuadro de diálogo aparece en respuesta a `DoModal` o `Create`. La implementación predeterminada de `OnInitDialog` en `CDialog` llama a la función miembro `UpdateData` de la clase `CWnd` para inicializar los controles en el cuadro de diálogo.
 
 El mismo mecanismo transfiere los valores de los controles a las variables miembro cuando el usuario hace clic en el botón Aceptar (o cada vez que se llama a la función miembro `UpdateData` con el argumento **true**). El mecanismo de validación de datos de cuadro de diálogo valida los elementos de datos para los que especificó reglas de validación.
 
 En la ilustración siguiente se muestra el intercambio de datos de cuadro de diálogo.
 
-Intercambio de ![datos de cuadro de diálogo](../mfc/media/vc379d1.gif "cuadro de diálogo") de intercambio de datos <br/>
+![Intercambio de datos de cuadros de diálogo](../mfc/media/vc379d1.gif "Intercambio de datos de cuadro de diálogo") <br/>
 Intercambio de datos de cuadro de diálogo
 
-`UpdateData` funciona en ambas direcciones, tal y como especifica el parámetro **bool** que se le ha pasado. Para llevar a cabo el intercambio, `UpdateData` configura un objeto `CDataExchange` y llama a la invalidación de la clase de cuadro de diálogo de la función miembro `DoDataExchange` de @no__t 2. `DoDataExchange` toma un argumento de tipo `CDataExchange`. El objeto `CDataExchange` pasado a `UpdateData` representa el contexto del intercambio, que define dicha información como la dirección del intercambio.
+`UpdateData` funciona en ambas direcciones, tal y como se especifica en el parámetro **bool** que se le ha pasado. Para llevar a cabo el intercambio, `UpdateData` configura un objeto `CDataExchange` y llama a la invalidación de la clase de cuadro de diálogo de la función miembro `DoDataExchange` de `CDialog`. `DoDataExchange` toma un argumento de tipo `CDataExchange`. El `CDataExchange` objeto pasado a `UpdateData` representa el contexto del intercambio, que define dicha información como la dirección del intercambio.
 
-Cuando el usuario (o un asistente para código) invalide `DoDataExchange`, se especifica una llamada a una función DDX por cada miembro de datos (control). Cada función DDX sabe cómo intercambiar datos en ambas direcciones en función del contexto proporcionado por el argumento `CDataExchange` que se pasa a la `DoDataExchange` por `UpdateData`.
+Cuando el usuario (o un asistente para código) invalide `DoDataExchange`, se especifica una llamada a una función DDX por cada miembro de datos (control). Cada función DDX sabe cómo intercambiar los datos en ambas direcciones en función del contexto proporcionado por el `CDataExchange` argumento que se pasa a su `DoDataExchange` mediante `UpdateData`.
 
-MFC proporciona muchas funciones DDX para diferentes tipos de intercambio. En el ejemplo siguiente se muestra una invalidación `DoDataExchange` en la que se llama a dos funciones DDX y una función DDV:
+MFC proporciona muchas funciones DDX para diferentes tipos de intercambio. En el ejemplo siguiente se muestra una invalidación de `DoDataExchange` en la que se llama a dos funciones DDX y una función DDV:
 
 [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
 

@@ -1,23 +1,23 @@
 ---
 title: Constructores (C++)
-ms.date: 09/05/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062027"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587936"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
 Para personalizar cómo se inicializan los miembros de clase o para invocar funciones cuando se crea un objeto de la clase, defina un *constructor*. Un constructor tiene el mismo nombre que la clase y no devuelve ningún valor. Puede definir tantos constructores sobrecargados como sean necesarios para personalizar la inicialización de varias maneras. Normalmente, los constructores tienen accesibilidad pública para que el código fuera de la definición de clase o de la jerarquía de herencia pueda crear objetos de la clase. Pero también puede declarar un constructor como **Protected** o **Private**.
 
-Opcionalmente, los constructores pueden tomar una lista de miembros init. Se trata de una manera más eficaz de inicializar miembros de clase que asignar valores en el cuerpo del constructor. En el ejemplo siguiente se muestra `Box` una clase con tres constructores sobrecargados. Las dos últimas listas de inicialización de miembros de uso:
+Opcionalmente, los constructores pueden tomar una lista de miembros init. Se trata de una manera más eficaz de inicializar miembros de clase que asignar valores en el cuerpo del constructor. En el ejemplo siguiente se muestra una clase `Box` con tres constructores sobrecargados. Las dos últimas listas de inicialización de miembros de uso:
 
 ```cpp
 class Box {
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>Listas de inicializadores de miembro
 
-Un constructor puede tener opcionalmente una lista de inicializadores de miembro, que inicializa los miembros de clase antes de la ejecución del cuerpo del constructor. (Tenga en cuenta que una lista de inicializadores de miembro no es lo mismo que una *lista de inicializadores* de tipo [STD::\<initializer_list T >](../standard-library/initializer-list-class.md)).
+Un constructor puede tener opcionalmente una lista de inicializadores de miembro, que inicializa los miembros de clase antes de la ejecución del cuerpo del constructor. (Tenga en cuenta que una lista de inicializadores de miembro no es lo mismo que una *lista de inicializadores* de tipo [STD:: initializer_list \<T >](../standard-library/initializer-list-class.md)).
 
 El uso de una lista de inicializadores de miembro es preferible a la asignación de valores en el cuerpo del constructor porque inicializa directamente el miembro. En el ejemplo siguiente se muestra que la lista de inicializadores de miembro consta de todas las expresiones de **identificador (argumento)** detrás del signo de dos puntos:
 
@@ -78,7 +78,7 @@ El uso de una lista de inicializadores de miembro es preferible a la asignación
     {}
 ```
 
-El identificador debe hacer referencia a un miembro de clase. se inicializa con el valor del argumento. El argumento puede ser uno de los parámetros de constructor, una llamada de función o un [> STD\<:: initializer_list T](../standard-library/initializer-list-class.md).
+El identificador debe hacer referencia a un miembro de clase. se inicializa con el valor del argumento. El argumento puede ser uno de los parámetros del constructor, una llamada a una función o un [\<T STD:: initializer_list >](../standard-library/initializer-list-class.md).
 
 los miembros **const** y los miembros de tipo de referencia se deben inicializar en la lista de inicializadores de miembro.
 
@@ -206,13 +206,13 @@ Al intentar copiar el objeto se produce el error *C2280: intentando hacer refere
 
 ## <a name="move_constructors"></a>Constructores de movimiento
 
-Un *constructor de movimiento* es una función miembro especial que mueve la propiedad de los datos de un objeto existente a una nueva variable sin copiar los datos originales. Toma una referencia rvalue como primer parámetro y los parámetros adicionales deben tener valores predeterminados. Los constructores de movimiento pueden aumentar significativamente la eficacia del programa al pasar objetos de gran tamaño. Un constructor de movimiento toma una referencia rvalue como primer parámetro. Cualquier otro parámetro debe tener valores predeterminados.
+Un *constructor de movimiento* es una función miembro especial que mueve la propiedad de los datos de un objeto existente a una nueva variable sin copiar los datos originales. Toma una referencia rvalue como primer parámetro y los parámetros adicionales deben tener valores predeterminados. Los constructores de movimiento pueden aumentar significativamente la eficacia del programa al pasar objetos de gran tamaño.
 
 ```cpp
 Box(Box&& other);
 ```
 
-El compilador elige un constructor de movimiento en determinadas situaciones en las que el objeto se inicializa con otro objeto del mismo tipo que está a punto de ser destruido y ya no necesita recursos de ti. En el ejemplo siguiente se muestra un caso cuando se selecciona un constructor de movimiento mediante la resolución de sobrecarga. El *cuadro* variable devuelto por get_Box () es un *xValue* (valor que va a expirar) que está a punto de salir del ámbito. Para proporcionar motivación a este ejemplo, vamos a dar a Box un vector grande de cadenas que represente su contenido. En lugar de copiar el vector y sus cadenas, el constructor de movimiento "lo robará del valor de expiración" box "para que el vector pertenezca ahora al nuevo objeto. La llamada a `std::move` es todo lo que se necesita `vector` porque las `string` clases y implementan sus propios constructores de movimiento.
+El compilador elige un constructor de movimiento en determinadas situaciones en las que el objeto se inicializa con otro objeto del mismo tipo que está a punto de ser destruido y ya no necesita sus recursos. En el ejemplo siguiente se muestra un caso cuando se selecciona un constructor de movimiento mediante la resolución de sobrecarga. En el constructor que llama a `get_Box()`, el valor devuelto es un *xValue* (valor que expira). No se asigna a ninguna variable y, por lo tanto, está fuera del ámbito. Para proporcionar motivación a este ejemplo, vamos a dar a Box un vector grande de cadenas que represente su contenido. En lugar de copiar el vector y sus cadenas, el constructor de movimiento "lo robará del valor de expiración" box "para que el vector pertenezca ahora al nuevo objeto. La llamada a `std::move` es todo lo necesario, ya que las clases `vector` y `string` implementan sus propios constructores de movimiento.
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ Un constructor se puede declarar como [constexpr](constexpr-cpp.md) si
 
 ## <a name="init_list_constructors"></a>Constructores de la lista de inicializadores
 
-Si un constructor toma [STD::\<initializer_list T\> ](../standard-library/initializer-list-class.md) como su parámetro y cualquier otro parámetro tiene argumentos predeterminados, ese constructor se seleccionará en la resolución de sobrecarga cuando se cree una instancia de la clase mediante Direct inicial. Puede usar initializer_list para inicializar cualquier miembro que pueda aceptarlo. Por ejemplo, supongamos que la clase Box (mostrada `std::vector<string>` anteriormente `m_contents`) tiene un miembro. Puede proporcionar un constructor similar al siguiente:
+Si un constructor toma un [\<T STD:: initializer_list \>](../standard-library/initializer-list-class.md) como parámetro, y cualquier otro parámetro tiene argumentos predeterminados, ese constructor se seleccionará en la resolución de sobrecarga cuando se cree una instancia de la clase mediante Direct inicial. Puede usar initializer_list para inicializar cualquier miembro que pueda aceptarlo. Por ejemplo, supongamos que la clase Box (mostrada anteriormente) tiene un miembro `std::vector<string>` `m_contents`. Puede proporcionar un constructor similar al siguiente:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Un constructor de clase derivada siempre llama a un constructor de clase base, por lo que se pueden usar clases base completamente construidas antes de realizar cualquier trabajo adicional. Se llama a los constructores de clase base en orden de derivación; por `ClassA` ejemplo, si `ClassB`se deriva de `ClassC`, que se deriva `ClassC` de, se llama primero al constructor `ClassB` , después el constructor, después el `ClassA` constructor.
+Un constructor de clase derivada siempre llama a un constructor de clase base, por lo que se pueden usar clases base completamente construidas antes de realizar cualquier trabajo adicional. Se llama a los constructores de clase base en orden de derivación; por ejemplo, si `ClassA` se deriva de `ClassB`, que se deriva de `ClassC`, primero se llama al constructor `ClassC`, después el constructor `ClassB` y, por último, el constructor `ClassA`.
 
 Si una clase base no tiene un constructor predeterminado, debe proporcionar los parámetros de constructor de clase base en el constructor de clase derivada:
 
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 versión 15.7 y posteriores:** La instrucción **using** en el modo **/STD: c++ 17** pone en el ámbito todos los constructores de la clase base, excepto aquellos que tienen una firma idéntica a los constructores de la clase derivada. En general, es mejor usar constructores que heredan cuando la clase derivada no declara ningún constructor o miembro de datos nuevo. Vea también [mejoras en la versión 15,7 de Visual Studio 2017](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 versión 15,7 y versiones posteriores**: la instrucción **using** en el modo **/STD: c++ 17** pone en el ámbito todos los constructores de la clase base, excepto aquellos que tienen una firma idéntica a los constructores de la clase derivada. En general, es mejor usar constructores que heredan cuando la clase derivada no declara ningún constructor o miembro de datos nuevo. Vea también [mejoras en la versión 15,7 de Visual Studio 2017](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
