@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 0879736863a9b8052d19cc86dc5636ba14bcf993
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8f5ef05d1bdeec694cdf22d7e7a163478127dfc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240608"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687768"
 ---
-# <a name="memfunreft-class"></a>mem_fun_ref_t (Clase)
+# <a name="mem_fun_ref_t-class"></a>mem_fun_ref_t (Clase)
 
-Clase de adaptadores que permite un `non_const` función miembro que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia. En desuso en C ++ 11, se ha quitado en C ++ 17.
+Una clase de adaptador que permite llamar a una función miembro `non_const` que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia. En desuso en C++ 11, se ha quitado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,11 +31,11 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Parámetros
 
-*_Pm*\
+@No__t_1 *_Pm*
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*Izquierda*\
-El objeto que la *_Pm* función miembro se llama en.
+\ *izquierda*
+Objeto en el que se llama a la función miembro *_Pm* .
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -43,7 +43,7 @@ Una función unaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva (**izquierdo**. * `_Pm`) ().
+La plantilla de clase almacena una copia de *_Pm*, que debe ser un puntero a una función miembro de la clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` como si devolviera (**left**. * `_Pm`) ().
 
 ## <a name="example"></a>Ejemplo
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449356"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688193"
 ---
-# <a name="ctypebase-class"></a>ctype_base (Clase)
+# <a name="ctype_base-class"></a>ctype_base (Clase)
 
-La clase actúa como clase base para las facetas de la clase de plantilla [ctype](../standard-library/ctype-class.md). Una clase base para la clase ctype que se utiliza para definir los tipos de enumeración usados para clasificar o comprobar caracteres individualmente o dentro de intervalos completos.
+La clase actúa como una clase base para las caras de la plantilla de clase [CType](../standard-library/ctype-class.md). Una clase base para la clase ctype que se utiliza para definir los tipos de enumeración usados para clasificar o comprobar caracteres individualmente o dentro de intervalos completos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -69,7 +69,7 @@ Define una máscara de enumeración. Cada constante de enumeración caracteriza 
 
 - **graph** (función [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Puede caracterizar una combinación de clasificaciones al aplicar la operación OR a estas constantes. En concreto, siempre es true que **alnum** = = ( **dígito** \) **alfa** &#124; y **gráfico** \= \= \( **alnum** &#124; **punct**).
+Puede caracterizar una combinación de clasificaciones al aplicar la operación OR a estas constantes. En concreto, siempre es true que **alnum** = = ( **alfa** &#124; **digit** \) y **Graph** \= \= \( **alnum** &#124; **punct**).
 
 ## <a name="requirements"></a>Requisitos
 

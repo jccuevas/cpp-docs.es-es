@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 27aed1d92b4893e054d7416dc5933ab23b843297
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451827"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686278"
 ---
 # <a name="ltsstreamgt-typedefs"></a>Definiciones de tipo de &lt;sstream&gt;
 
@@ -36,7 +36,7 @@ typedef basic_istringstream<char> istringstream;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_istringstream](../standard-library/basic-istringstream-class.md), especializada en elementos de tipo **Char**.
+El tipo es un sinónimo de la plantilla de clase [basic_istringstream](../standard-library/basic-istringstream-class.md), especializada en elementos de tipo **Char**.
 
 ## <a name="ostringstream"></a>  ostringstream
 
@@ -48,7 +48,7 @@ typedef basic_ostringstream<char> ostringstream;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_ostringstream](../standard-library/basic-ostringstream-class.md), especializada en elementos de tipo **Char**.
+El tipo es un sinónimo de la plantilla de clase [basic_ostringstream](../standard-library/basic-ostringstream-class.md), especializada en elementos de tipo **Char**.
 
 ## <a name="stringbuf"></a>  stringbuf
 
@@ -60,7 +60,7 @@ typedef basic_stringbuf<char> stringbuf;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_stringbuf](../standard-library/basic-stringbuf-class.md), especializada en elementos de tipo **Char**.
+El tipo es un sinónimo de la plantilla de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md), especializada en elementos de tipo **Char**.
 
 ## <a name="stringstream"></a>  stringstream
 
@@ -72,7 +72,7 @@ typedef basic_stringstream<char> stringstream;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_stringstream](../standard-library/basic-stringstream-class.md), especializada en elementos de tipo **Char**.
+El tipo es un sinónimo de la plantilla de clase [basic_stringstream](../standard-library/basic-stringstream-class.md), especializada en elementos de tipo **Char**.
 
 ## <a name="wistringstream"></a>  wistringstream
 
@@ -84,7 +84,7 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_istringstream](../standard-library/basic-istringstream-class.md), especializada en elementos de tipo **wchar_t**.
+El tipo es un sinónimo de la plantilla de clase [basic_istringstream](../standard-library/basic-istringstream-class.md), especializada en elementos de tipo **wchar_t**.
 
 ## <a name="wostringstream"></a>  wostringstream
 
@@ -96,7 +96,7 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_ostringstream](../standard-library/basic-ostringstream-class.md), especializada en elementos de tipo **wchar_t**.
+El tipo es un sinónimo de la plantilla de clase [basic_ostringstream](../standard-library/basic-ostringstream-class.md), especializada en elementos de tipo **wchar_t**.
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
@@ -108,7 +108,7 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_stringbuf](../standard-library/basic-stringbuf-class.md), especializada en elementos de tipo **wchar_t**.
+El tipo es un sinónimo de la plantilla de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md), especializada en elementos de tipo **wchar_t**.
 
 ## <a name="wstringstream"></a>  wstringstream
 
@@ -120,7 +120,7 @@ typedef basic_stringstream<wchar_t> wstringstream;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_stringstream](../standard-library/basic-stringstream-class.md), especializada en elementos de tipo **wchar_t**.
+El tipo es un sinónimo de la plantilla de clase [basic_stringstream](../standard-library/basic-stringstream-class.md), especializada en elementos de tipo **wchar_t**.
 
 ## <a name="see-also"></a>Vea también
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458608"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688286"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Define varias clases de plantilla que describen objetos en función de la clase de plantilla [codecvt](../standard-library/codecvt-class.md). Estos objetos pueden actuar como [aspectos de la configuración regional](../standard-library/locale-class.md#facet_class) que controlan las conversiones entre una secuencia de valores `Elem` de tipo y una secuencia de valores de tipo **Char**.
+Define varias plantillas de clase que describen objetos basados en la plantilla de clase [codecvt](../standard-library/codecvt-class.md). Estos objetos pueden servir como [aspectos de la configuración regional](../standard-library/locale-class.md#facet_class) que controlan las conversiones entre una secuencia de valores de tipo `Elem` y una secuencia de valores de tipo **Char**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,7 +50,7 @@ En el caso de secuencias de bytes (almacenadas en un archivo, se transmiten como
 
 ### <a name="classes"></a>Clases
 
-|Clase|DESCRIPCIÓN|
+|Clase|Descripción|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|Representa una faceta de configuración regional que convierte entre caracteres anchos codificados como UCS-2 o UCS-4 y un flujo de bytes codificados como UTF-8.|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Representa una faceta de configuración regional que convierte entre caracteres anchos codificados como UTF-16 y un flujo de bytes codificados como UTF-8.|

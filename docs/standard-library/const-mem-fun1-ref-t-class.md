@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 59790b5791dc50d217053dc7a13856d436101020
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 76fae1ce29cb4c47870e45e8f946f6ff1fea1885
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244541"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688175"
 ---
-# <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t (Clase)
+# <a name="const_mem_fun1_ref_t-class"></a>const_mem_fun1_ref_t (Clase)
 
-Clase de adaptadores que permite llamar a una función miembro **const** que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de referencia. En desuso en C ++ 11, se ha quitado en C ++ 17.
+Clase de adaptadores que permite llamar a una función miembro **const** que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de referencia. En desuso en C++ 11, se ha quitado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,14 +31,14 @@ template <class Result, class Type, class Arg>
 
 ### <a name="parameters"></a>Parámetros
 
-*P. M.* \
+@No__t_1 *PM*
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*Izquierda*\
-El **const** objeto al que el *Pm* función miembro se llama en.
+\ *izquierda*
+Objeto **const** en el que se llama a la función miembro *PM* .
 
-*Correcto*\
-El argumento que se entrega a *Pm*.
+\ *derecha*
+Argumento que se va a asignar a *PM*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -46,7 +46,7 @@ Una función binaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de *Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva (`left`.\* *P. M.* ) (`right`) **const**.
+La plantilla de clase almacena una copia de *PM*, que debe ser un puntero a una función miembro de la clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` como si devuelve (`left`. \* *PM*) (`right`) **const**.
 
 ## <a name="example"></a>Ejemplo
 

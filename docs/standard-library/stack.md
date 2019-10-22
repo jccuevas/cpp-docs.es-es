@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195830"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686083"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Define la pila de la clase de plantilla y dos plantillas auxiliares.
+Define la pila de plantillas de clase y dos plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -25,7 +25,7 @@ Define la pila de la clase de plantilla y dos plantillas auxiliares.
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<biblioteca de > de pila también `#include <initializer_list>` utiliza la instrucción.
+> La biblioteca de > de \<stack también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
