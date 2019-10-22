@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240429"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687140"
 ---
-# <a name="pointertraits-struct"></a>pointer_traits (Struct)
+# <a name="pointer_traits-struct"></a>pointer_traits (Struct)
 
-Proporciona información que necesita un objeto de clase de plantilla `allocator_traits` para describir un asignador con el tipo de puntero `Ptr`.
+Proporciona información que necesita un objeto de tipo `allocator_traits` para describir un asignador con el tipo de puntero `Ptr`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,7 +50,7 @@ struct Ptr
 
 ## <a name="members"></a>Miembros
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |||
 |-|-|
@@ -58,7 +58,7 @@ struct Ptr
 |`typedef T1 element_type`|El tipo `T1` es `Ptr::element_type` si ese tipo existe, de otro modo, `Ty`. Si `Ptr` es un puntero sin formato, el tipo es `Ty`.|
 |`typedef Ptr pointer`|El tipo es `Ptr`.|
 
-### <a name="structs"></a>Estructuras
+### <a name="structs"></a>Structs
 
 |||
 |-|-|
@@ -66,11 +66,11 @@ struct Ptr
 
 ### <a name="methods"></a>Métodos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Convierte una referencia arbitraria en un objeto de clase `Ptr`.|
 
-### <a name="pointer_to"></a> pointer_to
+### <a name="pointer_to"></a>pointer_to
 
 El método estático que devuelve `Ptr::pointer_to(obj)`, si esa función existe. De otro modo, no es posible convertir una referencia arbitraria en un objeto de clase `Ptr`. Si `Ptr` es un puntero sin formato, este método devuelve `addressof(obj)`.
 

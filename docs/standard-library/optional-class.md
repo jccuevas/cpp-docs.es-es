@@ -13,22 +13,22 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: f664df6493a7ee20361d49531a930aeb810d3d2a
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d9c4bf5356e6ff163ecdf7e1a80bc55453d59003
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957145"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689146"
 ---
 # <a name="optional-class"></a>Clase opcional
 
-La clase `optional<T>` de plantilla describe un objeto que puede contener o no un valor de tipo `T`, conocido como el *valor contenido*.
+La plantilla de clase `optional<T>` describe un objeto que puede contener o no un valor de tipo `T`, conocido como el *valor contenido*.
 
-Cuando una instancia de `optional<T>` contiene un valor, el valor contenido se asigna dentro del almacenamiento `optional` del objeto, en una región adecuadamente alineada para el `T`tipo. Cuando se convierte en `bool`, el resultado es `true` si el objeto contiene un valor; de `false`lo contrario, es. `optional<T>`
+Cuando una instancia de `optional<T>` contiene un valor, el valor contenido se asigna dentro del almacenamiento del objeto `optional`, en una región adecuadamente alineada para el tipo `T`. Cuando un `optional<T>` se convierte en `bool`, el resultado se `true` si el objeto contiene un valor; de lo contrario, es `false`.
 
-El tipo `T` de objeto contenido no debe ser [in_place_t](in-place-t-struct.md) ni [nullopt_t](nullopt-t-structure.md). `T`debe ser *puede destruir*, es decir, su destructor debe reclamar todos los recursos de propiedad y puede que no se produzca ninguna excepción.
+El tipo de objeto contenido `T` no debe ser [in_place_t](in-place-t-struct.md) ni [nullopt_t](nullopt-t-structure.md). `T` debe ser *puede destruir*, es decir, su destructor debe reclamar todos los recursos de propiedad y puede que no se produzca ninguna excepción.
 
-La `optional` clase es nueva en c++ 17.
+La clase `optional` es nueva en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -52,17 +52,17 @@ template<class T> optional(T) -> optional<T>;
 |[optional](#optional) | Construye un objeto de tipo `optional`. |
 |[~ opcional](#optional-destructor) | Destruye un objeto de tipo `optional`. |
 | **Asignación** | |
-| [operator=](#op_eq) | Reemplaza el `optional` con una copia de otro `optional`. |
+| [operator=](#op_eq) | Reemplaza el `optional` por una copia de otro `optional`. |
 | [emplace](#op_eq) | Inicializa el valor contenido con los argumentos especificados. |
 | **Swap** | |
 | [swap](#swap) | Intercambia el valor contenido o el estado vacío con otro `optional`. |
 | **Observadores** | |
-| [has_value](#has_value) | Devuelve un valor `optional` que indica si un objeto contiene un valor. |
-| [value](#value) | Devuelve el valor contenido. |
+| [has_value](#has_value) | Devuelve un valor que indica si un objeto `optional` contiene un valor. |
+| [valor](#value) | Devuelve el valor contenido. |
 | [value_or](#value_or) | Devuelve el valor contenido o una alternativa si no hay ningún valor. |
-| [operator->](#op_as) | Hace referencia al valor contenido de `optional` un objeto. |
-| [operator*](#op_mem) | Hace referencia al valor contenido de `optional` un objeto. |
-| [operator bool](#op_bool) | Devuelve un valor `optional` que indica si un objeto contiene un valor. |
+| [operator->](#op_as) | Hace referencia al valor contenido de un objeto `optional`. |
+| [operator*](#op_mem) | Hace referencia al valor contenido de un objeto `optional`. |
+| [operator bool](#op_bool) | Devuelve un valor que indica si un objeto `optional` contiene un valor. |
 | **Modificadores** | |
 | [reset](#reset) | Restablece el `optional` destruyendo cualquier valor contenido. |
 
@@ -100,33 +100,33 @@ explicit optional(optional<U>&& rhs);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*\
-Del `optional` que se va a copiar o al que se va a copiar el valor contenido.
+\ *RHS*
+La `optional` de la que se va a copiar o al que se va a cambiar la construcción del valor contenido.
 
-*i_list*\
+\ *i_list*
 Lista de inicializadores de la que se va a construir el valor contenido.
 
-*args*\
+\ *args*
 Lista de argumentos de la que se va a construir el valor contenido.
 
 ### <a name="remarks"></a>Comentarios
 
-`constexpr optional() noexcept;`
-`constexpr optional(nullopt_t nullopt) noexcept;`Estos constructores construyen `optional` un que no contiene un valor.
+`constexpr optional() noexcept;` 
+ `constexpr optional(nullopt_t nullopt) noexcept;` estos constructores construyen un `optional` que no contiene un valor.
 
-`constexpr optional(const optional& rhs);`El constructor de copias inicializa el valor contenido desde el valor contenido del argumento. Se define como Deleted a `is_copy_constructible_v<T>` menos que sea true, y es trivial `is_trivially_copy_constructible_v<T>` si es true.
+`constexpr optional(const optional& rhs);` el constructor de copias inicializa el valor contenido del valor contenido del argumento. Se define como **Deleted** a menos que `is_copy_constructible_v<T>` sea true y es trivial si `is_trivially_copy_constructible_v<T>` es true.
 
-`constexpr optional(optional&& rhs) noexcept;`El constructor de movimiento inicializa el valor contenido moviendo desde el valor contenido del argumento. No participa en la resolución de sobrecarga `is_move_constructible_v<T>` a menos que sea true, y es `is_trivially_move_constructible_v<T>` trivial si es true.
+`constexpr optional(optional&& rhs) noexcept;` el constructor de movimiento inicializa el valor contenido moviendo desde el valor contenido del argumento. No participa en la resolución de sobrecarga a menos que `is_move_constructible_v<T>` sea true y es trivial si `is_trivially_move_constructible_v<T>` es true.
 
-`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);`Direct inicializa el valor contenido como si se usaran los `std::forward<Args>(args)`argumentos. Este constructor es `constexpr` si el `T` constructor utilizado es `constexpr`. No participa en la resolución de sobrecarga `is_constructible_v<T, Args...>` a menos que sea true.
+`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);` Direct inicializa el valor contenido como si utilizara los argumentos `std::forward<Args>(args)`. Este constructor se `constexpr` si el constructor de `T` utilizado es `constexpr`. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, Args...>` sea true.
 
-`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);`Direct inicializa el valor contenido como si se usaran los `i_list, std::forward<Args>(args)`argumentos. Este constructor es `constexpr` si el `T` constructor utilizado es `constexpr`. No participa en la resolución de sobrecarga `is_constructible_v<T, initializer_list<U>&, Args&&...>` a menos que sea true.
+`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);` Direct inicializa el valor contenido como si utilizara los argumentos `i_list, std::forward<Args>(args)`. Este constructor se `constexpr` si el constructor de `T` utilizado es `constexpr`. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, initializer_list<U>&, Args&&...>` sea true.
 
-`template <class U = T> explicit constexpr optional(U&& rhs);`Direct inicializa el valor contenido como si se utilizara `std::forward<U>(v)`. Este constructor es `constexpr` si el `T` constructor utilizado es `constexpr`. No participa en la resolución de sobrecarga `is_constructible_v<T, U&&>` a menos que sea `is_same_v<remove_cvref_t<U>, in_place_t>` true `is_same_v<remove_cvref_t<U>, optional>` , y y son false.
+`template <class U = T> explicit constexpr optional(U&& rhs);` Direct inicializa el valor contenido como si utilizara `std::forward<U>(v)`. Este constructor se `constexpr` si el constructor de `T` utilizado es `constexpr`. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, U&&>` sea true y `is_same_v<remove_cvref_t<U>, in_place_t>` y `is_same_v<remove_cvref_t<U>, optional>` sean false.
 
-`template <class U> explicit optional(const optional<U>& rhs);`Si *RHS* contiene un valor, Direct inicializa el valor contenido del valor contenido del argumento. No participa en la resolución de sobrecarga `is_constructible_v<T, const U&>` , a menos que `is_constructible_v<T, optional<U>&>`sea true, y `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>` `is_constructible_v<T, optional<U>&&>`, `is_convertible_v<const optional<U>&, T>` `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<const optional<U>&&, T>` ,, y sean false.
+`template <class U> explicit optional(const optional<U>& rhs);` si *RHS* contiene un valor, Direct inicializa el valor contenido del valor contenido del argumento. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, const U&>` sea true y `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` y `is_convertible_v<const optional<U>&&, T>` sean todos falsos.
 
-`template <class U> explicit optional(optional<U>&& rhs);`Si *RHS* contiene un valor, Direct inicializa el valor contenido como si se utilizara `std::move(*rhs)`. No participa en la resolución de sobrecarga `is_constructible_v<T, U&&>` , a menos que `is_constructible_v<T, optional<U>&>`sea true, y `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>` `is_constructible_v<T, optional<U>&&>`, `is_convertible_v<const optional<U>&, T>` `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<const optional<U>&&, T>` ,, y sean false.
+`template <class U> explicit optional(optional<U>&& rhs);` si *RHS* contiene un valor, Direct inicializa el valor contenido como si se usara `std::move(*rhs)`. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, U&&>` sea true y `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` y `is_convertible_v<const optional<U>&&, T>` sean todos falsos.
 
 ## <a name="optional-destructor"></a>~ (destructor opcional)
 
@@ -138,11 +138,11 @@ Destruye cualquier valor contenido que no sea trivialmente puede destruir, si es
 
 ### <a name="remarks"></a>Comentarios
 
-Si `T` es trivialmente puede destruir `optional<T>` , también se puede destruir de forma trivial.
+Si `T` es trivialmente puede destruir, `optional<T>` también se puede destruir de forma trivial.
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
-Reemplaza el valor contenido de un `optional` con una copia o se mueve de `optional` otro valor contenido.
+Reemplaza el valor contenido de un `optional` por una copia o se mueve de otro `optional` valor contenido.
 
 ```cpp
 optional& operator=(nullopt_t) noexcept;
@@ -167,7 +167,7 @@ T& emplace(initializer_list<U>, Args&&...);
 
 ## <a name="op_as"></a>operador->
 
-Desreferencia el valor contenido de un `optional` objeto.
+Desreferencia el valor contenido de un objeto `optional`.
 
 ```cpp
 constexpr const T* operator->() const;
@@ -176,7 +176,7 @@ constexpr T* operator->();
 
 ## <a name="op_mem"></a>Operator
 
-Desreferencia el valor contenido de un `optional` objeto.
+Desreferencia el valor contenido de un objeto `optional`.
 
 ```cpp
 constexpr const T& operator*() const&;
@@ -187,7 +187,7 @@ constexpr const T&& operator*() const&&;
 
 ## <a name="op_bool"></a>operador bool
 
-Indica si el `optional` objeto tiene un valor contenido.
+Indica si el objeto `optional` tiene un valor contenido.
 
 ```cpp
 constexpr explicit operator bool() const noexcept;
@@ -228,4 +228,4 @@ template <class U>
 
 ## <a name="see-also"></a>Vea también
 
-[\<> opcional](optional.md)
+[\<optional >](optional.md)

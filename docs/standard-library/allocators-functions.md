@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 10cd1d51c2cd6053dcbaa0f5bf1548f80ed01659
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448239"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690050"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; (macros)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68448239"
 
 ## <a name="allocator_decl"></a>  ALLOCATOR_DECL
 
-Da como resultado una clase de plantilla de asignador.
+Produce una plantilla de clase de asignador.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ Da como resultado una clase de plantilla de asignador.
 
 ### <a name="remarks"></a>Comentarios
 
-La macro produce una definición de plantilla `template <class Type> class name {.....}` y una especialización `template <> class name<void> {.....}` que definen una clase de plantilla de asignador que usa el filtro de sincronización `sync` y una memoria caché de tipo `cache`.
+La macro produce una definición de plantilla `template <class Type> class name {.....}` y una especialización `template <> class name<void> {.....}` que, juntos, definen una plantilla de clase de asignador que usa el filtro de sincronización `sync` y una memoria caché de tipo `cache`.
 
 En el caso de los compiladores que pueden compilar reenlaces, la definición de plantilla resultante tiene el siguiente aspecto:
 

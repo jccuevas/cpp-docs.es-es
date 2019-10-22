@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-ms.openlocfilehash: ba6a4152b8d37f5b0186f9d05c6ba850e8c2e54c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1f85367b9ae527c9387d085acc1496bfbbf7cc9e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454018"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688034"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -23,9 +23,9 @@ Define varias clases que admiten operaciones de iostreams en secuencias almacena
 #include <fstream>
 ```
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Tipo `basic_filebuf` especializado en parámetros de plantilla **Char** .|
 |[fstream](../standard-library/fstream-typedefs.md#fstream)|Tipo `basic_fstream` especializado en parámetros de plantilla **Char** .|
@@ -38,12 +38,12 @@ Define varias clases que admiten operaciones de iostreams en secuencias almacena
 
 ### <a name="classes"></a>Clases
 
-|Clase|DESCRIPCIÓN|
+|Clase|Descripción|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|La clase de plantilla describe un búfer de secuencia que controla la transmisión de elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`, a y desde una secuencia de elementos almacenados en un archivo externo.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|La clase de plantilla describe un objeto que controla la inserción y extracción de elementos y objetos codificados mediante un búfer de secuencia de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **TR**>, con elementos `Elem`de tipo, cuyos los rasgos de caracteres están determinados por la `Tr`clase.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **TR**>, con elementos `Elem`de tipo, cuyos rasgos de caracteres vienen determinados por la clase `Tr`.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|La clase de plantilla describe un objeto que controla la inserción de elementos y objetos codificados en un búfer de secuencia de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **TR**>, con elementos `Elem`de tipo, cuyos rasgos de caracteres vienen determinados por la clase `Tr`.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|La plantilla de clase describe un búfer de secuencia que controla la transmisión de elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`, a y desde una secuencia de elementos almacenados en un archivo externo.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|La plantilla de clase describe un objeto que controla la inserción y extracción de elementos y objetos codificados mediante un búfer de secuencia de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, con elementos de tipo `Elem`, cuyo carácter los rasgos vienen determinados por la clase `Tr`.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|La plantilla de clase describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, con elementos de tipo `Elem`, cuyos rasgos de caracteres son viene determinado por la clase `Tr`.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|La plantilla de clase describe un objeto que controla la inserción de elementos y objetos codificados en un búfer de secuencia de clase [basic_filebuf](../standard-library/basic-filebuf-class.md) \<**Elem**, **TR**>, con elementos de tipo `Elem`, cuyos rasgos de caracteres se determinan por la clase `Tr`.|
 
 ## <a name="see-also"></a>Vea también
 

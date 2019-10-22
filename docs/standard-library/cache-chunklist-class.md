@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449661"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688364"
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist (Clase)
+# <a name="cache_chunklist-class"></a>cache_chunklist (Clase)
 
 Define un [asignador de bloques](../standard-library/allocators-header.md) que asigna y desasigna bloques de memoria de un tamaño único.
 
@@ -30,25 +30,25 @@ class cache_chunklist
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
-|*Sz*|El número de elementos de la matriz que se van a asignar.|
+|*SZ*|El número de elementos de la matriz que se van a asignar.|
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla usa el **operador New** para asignar fragmentos de memoria sin formato, bloques de subasignación para asignar almacenamiento para un bloque de memoria cuando sea necesario. almacena los bloques de memoria desasignados en una lista libre independiente para cada fragmento y usa el **operador Delete** para desasignar un fragmento cuando no se usa ninguno de los bloques de memoria.
+Esta plantilla de clase usa el **operador New** para asignar fragmentos de memoria sin formato, bloques de subasignación para asignar almacenamiento para un bloque de memoria cuando sea necesario. almacena los bloques de memoria desasignados en una lista libre independiente para cada fragmento y usa el **operador Delete** para desasignar un fragmento cuando no se usa ninguno de los bloques de memoria.
 
 Cada bloque de memoria contiene *SZ* bytes de memoria utilizable y un puntero al fragmento al que pertenece. Cada fragmento contiene `Nelts` bloques de memoria, tres punteros, un valor int y los datos que el **operador New** y el **operador Delete** requieren.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[cache_chunklist](#cache_chunklist)|Construye un objeto de tipo `cache_chunklist`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[allocate](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
@@ -69,7 +69,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*count*|El número de elementos de la matriz que se van a asignar.|
 
@@ -99,7 +99,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|

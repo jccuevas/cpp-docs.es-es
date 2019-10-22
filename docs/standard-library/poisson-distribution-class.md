@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458464"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689126"
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution (Clase)
+# <a name="poisson_distribution-class"></a>poisson_distribution (Clase)
 
 Genera una distribución de Poisson.
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType*\
-El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+@No__t_1 *IntType*
+El tipo de resultado entero, el valor predeterminado es **int**. Para ver los tipos posibles, vea [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo integral especificado por el usuario con la distribución de Poisson. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo entero especificado por el usuario con una distribución de Poisson. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*aritmética*\
+\ *promedio*
 El parámetro de distribución `mean`.
 
-*PARM*\
+\ *PARM*
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios

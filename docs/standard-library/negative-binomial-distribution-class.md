@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456956"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689252"
 ---
-# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution (Clase)
+# <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution (Clase)
 
 Genera una distribución binomial negativa.
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType*\
-El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+@No__t_1 *IntType*
+El tipo de resultado entero, el valor predeterminado es **int**. Para ver los tipos posibles, vea [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **int** si no se proporciona ninguno, distribuido según la función de probabilidad discreta de distribución binomial negativa. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **int** si no se proporciona ninguno, distribuido según la función de probabilidad discreta de distribución binomial negativa. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Los miembros `k()` de propiedad `p()` y devuelven los valores de los parámetros de distribución almacenados actualmente *k* y *p* , respectivamente.
+Los miembros de propiedad `k()` y `p()` devuelven los valores de parámetro de distribución almacenados actualmente *k* y *p* , respectivamente.
 
 El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*k*\
+*k* \
 El parámetro de distribución `k`.
 
-*m*\
+*p* \
 El parámetro de distribución `p`.
 
-*PARM*\
+\ *PARM*
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -253,19 +253,19 @@ El segundo constructor crea un objeto cuyos parámetros almacenados se inicializ
 
 Almacena los parámetros de la distribución.
 
-struct param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () Const; Double p () Const;
+struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () Const; Double p () Const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parámetros
 
-*k*\
+*k* \
 El parámetro de distribución `k`.
 
-*m*\
+*p* \
 El parámetro de distribución `p`.
 
-*correcta*\
+\ *derecha*
 La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios

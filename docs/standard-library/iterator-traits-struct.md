@@ -7,14 +7,14 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455583"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689449"
 ---
-# <a name="iteratortraits-struct"></a>iterator_traits (Struct)
+# <a name="iterator_traits-struct"></a>iterator_traits (Struct)
 
 Struct del asistente de plantilla usado para especificar todas las definiciones de tipo críticas que debe tener un iterador.
 
@@ -41,13 +41,13 @@ El struct de plantilla define los tipos de miembro:
 
 - `difference_type`: sinónimo de `Iterator::difference_type`.
 
-- `distance_type`: sinónimo de`Iterator::difference_type.`
+- `distance_type`: sinónimo de `Iterator::difference_type.`
 
 - `pointer`: sinónimo de `Iterator::pointer`.
 
 - `reference`: sinónimo de `Iterator::reference`.
 
-Las especializaciones parciales determinan los tipos críticos asociados a un puntero de  <strong>\*</strong> objeto de tipo Type o **const** <strong>\*</strong>.
+Las especializaciones parciales determinan los tipos críticos asociados a un puntero de objeto **de tipo** <strong>\*</strong> o <strong>\*</strong>de tipo **const** .
 
 En esta implementación también se pueden usar varias funciones de plantilla que no usan la especialización parcial:
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-que determinan algunos de estos mismos tipos más indirectamente. Estas funciones se usan como argumentos en una llamada de función. Su única finalidad es proporcionar un parámetro de clase de plantilla útil a la función a la que se llama.
+que determinan algunos de estos mismos tipos más indirectamente. Estas funciones se usan como argumentos en una llamada de función. Su única finalidad es proporcionar un parámetro de plantilla de clase útil a la función llamada.
 
 ## <a name="example"></a>Ejemplo
 

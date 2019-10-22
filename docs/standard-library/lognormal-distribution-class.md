@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453807"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687786"
 ---
-# <a name="lognormaldistribution-class"></a>lognormal_distribution (Clase)
+# <a name="lognormal_distribution-class"></a>lognormal_distribution (Clase)
 
 Genera una distribución log-normal.
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*\
+@No__t_1 *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución de registro normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución de registro normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*f*\
+*m* \
 El parámetro de distribución `m`.
 
-*seg*\
+*s* \
 El parámetro de distribución `s`.
 
-*PARM*\
+\ *PARM*
 La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*f*\
+*m* \
 El parámetro de distribución `m`.
 
-*seg*\
+*s* \
 El parámetro de distribución `s`.
 
-*correcta*\
+\ *derecha*
 La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios

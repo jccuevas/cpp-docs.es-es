@@ -5,20 +5,20 @@ f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957176"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687257"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Define la clase de plantilla de contenedores `optional` y varias plantillas auxiliares.
+Define la plantilla de clase contenedora `optional` y varias plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<> opcional
+**Encabezado:** \<optional >
 
 **Espacio de nombres:** std
 
@@ -36,14 +36,14 @@ Define la clase de plantilla de contenedores `optional` y varias plantillas auxi
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Comprueba si el objeto de la izquierda es mayor o igual que el objeto de la derecha.|
 
 > [!NOTE]
-> Además de las comparaciones relacionales, \<los operadores opcionales de > también admiten la comparación con **nullopt** y. `T`
+> Además de las comparaciones relacionales, \<optional operadores de > también admiten la comparación con **nullopt** y `T`.
 
 ### <a name="functions"></a>Funciones
 
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Hace que un objeto sea opcional.|
-|[swap](../standard-library/optional-functions.md#swap)|Intercambia los valores contenidos de dos `optional` objetos.|
+|[swap](../standard-library/optional-functions.md#swap)|Intercambia los valores contenidos de dos objetos `optional`.|
 
 ### <a name="classes-and-structs"></a>Clases y structs
 

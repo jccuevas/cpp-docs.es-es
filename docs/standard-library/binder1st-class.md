@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243385"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688386"
 ---
 # <a name="binder1st-class"></a>binder1st (Clase)
 
-Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado. En desuso en C ++ 11 en favor de [enlazar](functional-functions.md#bind)y se quitan en C ++ 17.
+Una plantilla de clase que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado. Quedó en desuso en C++ 11 en favor del [enlace](functional-functions.md#bind)y se quitó en c++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*binary_fn*\
+\ *binary_fn*
 El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
-*Izquierda*\
+\ *izquierda*
 El valor al que se enlazará el primer argumento del objeto de función binaria.
 
-*Correcto*\
+\ *derecha*
 El valor del argumento que el objeto binario adaptado compara con el valor fijo del segundo argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria con el valor *izquierdo*.
+El objeto de función unaria resultante de enlazar el primer argumento del objeto de función binaria al valor *izquierdo*.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función binaria *binary_fn* en `op`y una copia de *izquierdo* en `value`. Define su función miembro `operator()` que devuelva `op(value, right)`.
+La plantilla de clase almacena una copia de un objeto de función binaria *binary_fn* en `op` y una copia de *izquierda* en `value`. Define su función miembro `operator()` como si devolviera `op(value, right)`.
 
-Si *binary_fn* es un objeto de tipo `Operation` y `c` es una constante, a continuación, `bind1st(binary_fn, c)` es equivalente a una más cómodo para `binder1st<Operation>(binary_fn, c)`. Para obtener más información, consulte [bind1st](../standard-library/functional-functions.md#bind1st).
+Si *binary_fn* es un objeto de tipo `Operation` y `c` es una constante, `bind1st(binary_fn, c)` es un equivalente más cómodo de `binder1st<Operation>(binary_fn, c)`. Para obtener más información, vea [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Ejemplo
 

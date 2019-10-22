@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449133"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689507"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ Define varios tipos y funciones básicos para el funcionamiento de iostreams. Es
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado**: \<> de iOS
+**Encabezado**: \<ios >
 
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<Biblioteca > de iOS utiliza `#include <iosfwd>` la instrucción.
+> La biblioteca de > de \<ios usa la instrucción `#include <iosfwd>`.
 
 ## <a name="remarks"></a>Comentarios
 
-Un grupo grande de funciones son los manipuladores. Un manipulador declarado en \<ios> modifica los valores almacenados en su objeto de argumento de la clase [ios_base](../standard-library/ios-base-class.md). Otros manipuladores realizan acciones en flujos controlados por objetos de un tipo derivado de esta clase, tales como una especialización de una de las clases de plantilla [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Por ejemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) borra la marca `ios_base::skipws` de formato en el objeto `str`, que puede ser de uno de estos tipos.
+Un grupo grande de funciones son los manipuladores. Un manipulador declarado en \<ios> modifica los valores almacenados en su objeto de argumento de la clase [ios_base](../standard-library/ios-base-class.md). Otros manipuladores realizan acciones en flujos controlados por objetos de un tipo derivado de esta clase, como una especialización de una de las plantillas de clase [basic_istream](../standard-library/basic-istream-class.md) o [basic_ostream](../standard-library/basic-ostream-class.md). Por ejemplo, [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) borra la marca de formato `ios_base::skipws` del objeto `str`, que puede ser de uno de estos tipos.
 
 También puede llamar a un manipulador insertándolo en un flujo de salida o extrayéndolo de un flujo de entrada, gracias a las operaciones especiales de inserción y extracción proporcionadas para las clases derivadas de `ios_base`. Por ejemplo:
 
@@ -41,7 +41,7 @@ llama a [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ## <a name="members"></a>Miembros
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |||
 |-|-|
@@ -95,8 +95,8 @@ llama a [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|La clase de plantilla describe las funciones de almacenamiento y miembro comunes tanto a los flujos de entrada (de la clase de plantilla [basic_istream](../standard-library/basic-istream-class.md)) como a los de salida (de la clase de plantilla [basic_ostream](../standard-library/basic-ostream-class.md)) que dependen de los parámetros de plantilla.|
-|[fpos](../standard-library/fpos-class.md)|La clase de plantilla describe un objeto que puede almacenar toda la información necesaria para restaurar un indicador de posición de archivo arbitraria en cualquier flujo.|
+|[basic_ios](../standard-library/basic-ios-class.md)|La plantilla de clase describe las funciones de almacenamiento y miembro comunes a los flujos de entrada (de la plantilla de clase [basic_istream](../standard-library/basic-istream-class.md)) y a los flujos de salida (de la plantilla de clase [basic_ostream](../standard-library/basic-ostream-class.md)) que dependen de los parámetros de la plantilla.|
+|[fpos](../standard-library/fpos-class.md)|La plantilla de clase describe un objeto que puede almacenar toda la información necesaria para restaurar un indicador de posición de archivo arbitraria en cualquier flujo.|
 |[ios_base](../standard-library/ios-base-class.md)|La clase describe las funciones de almacenamiento y miembro comunes al flujo de entrada y al de salida que no dependen de los parámetros de plantilla.|
 
 ## <a name="see-also"></a>Vea también

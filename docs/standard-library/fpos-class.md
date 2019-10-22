@@ -11,20 +11,20 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cdca7b961d9aedad841692160c8313f8a306dec2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454147"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689675"
 ---
 # <a name="fpos-class"></a>fpos (Clase)
 
-La clase de plantilla describe un objeto que puede almacenar toda la información necesaria para restaurar un indicador de posición de archivo arbitraria en cualquier flujo. Un objeto de clase fpos\< **St**> almacena de forma efectiva objetos de al menos dos miembros:
+La plantilla de clase describe un objeto que puede almacenar toda la información necesaria para restaurar un indicador de posición de archivo arbitraria en cualquier flujo. Un objeto de clase fpos\< **St**> almacena de forma efectiva objetos de al menos dos miembros:
 
 - Un desplazamiento de bytes del tipo [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Un estado de conversión, para su uso por parte de un objeto de la `St`clase basic_filebuf `mbstate_t`, de tipo, normalmente.
+- Un estado de conversión, para su uso por parte de un objeto de clase basic_filebuf, de tipo `St`, normalmente `mbstate_t`.
 
 También puede almacenar una posición de archivo arbitraria, para su uso por un objeto de clase [basic_filebuf](../standard-library/basic-filebuf-class.md), del tipo `fpos_t`. Sin embargo, en un entorno con limitación de tamaño del archivo, puede que `streamoff` y `fpos_t` se usen a veces indistintamente. Para un entorno sin flujos que tengan una codificación dependiente del estado, `mbstate_t` puede en realidad estar sin usar. Por lo tanto, el número de objetos miembro almacenados puede variar.
 
@@ -37,25 +37,25 @@ class fpos
 
 ### <a name="parameters"></a>Parámetros
 
-*Statetype*\
+@No__t_1 *Statetype*
 Información de estado.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[fpos](#fpos)|Crea un objeto que contiene información sobre una posición (desplazamiento) en un flujo.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[seekpos](#seekpos)|Se usa de forma interna solo en la biblioteca estándar de C++. No llame este método desde el código.|
 |[state](#state)|Establece o devuelve el estado de la conversión.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|"??"|Descripción|
 |-|-|
 |[operator!=](#op_neq)|Indicadores de posición de archivo de las pruebas para desigualdad.|
 |[operator+](#op_add)|Incrementa un indicador de posición de archivo.|
@@ -83,13 +83,13 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*\
+@No__t_1 *_Off*
 El desplazamiento en el flujo.
 
-*_State*\
+@No__t_1 *_State*
 El estado inicial del objeto `fpos`.
 
-*_Filepos*\
+@No__t_1 *_Filepos*
 El desplazamiento en el flujo.
 
 ### <a name="remarks"></a>Comentarios
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 El indicador de posición de archivo con el que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*\
+@No__t_1 *_Off*
 El desplazamiento por el que quiere incrementar el indicador de posición de archivo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*\
+@No__t_1 *_Off*
 El desplazamiento por el que quiere incrementar el indicador de posición de archivo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -215,7 +215,7 @@ La posición en el archivo.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro agrega *_Off* al objeto miembro de desplazamiento almacenado y, a continuación, devuelve  **\*this**. Para el posicionamiento dentro de un archivo, el resultado es normalmente válido solo para flujos binarios que no tienen una codificación dependiente del estado.
+La función miembro agrega *_Off* al objeto miembro de desplazamiento almacenado y, a continuación, devuelve **\*this**. Para el posicionamiento dentro de un archivo, el resultado es normalmente válido solo para flujos binarios que no tienen una codificación dependiente del estado.
 
 ### <a name="example"></a>Ejemplo
 
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Posición de archivo.
 
-*_Off*\
+@No__t_1 *_Off*
 Desplazamiento del flujo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Off*\
+@No__t_1 *_Off*
 Desplazamiento del flujo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 El indicador de posición de archivo con el que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parámetros
 
-*_State*\
+@No__t_1 *_State*
 El nuevo estado de conversión.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -365,7 +365,7 @@ El estado de conversión.
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función miembro devuelve el valor almacenado en el `St` objeto de miembro. La segunda función miembro almacena *_State* en el `St` objeto miembro.
+La primera función miembro devuelve el valor almacenado en el objeto de miembro `St`. La segunda función miembro almacena *_State* en el objeto de miembro `St`.
 
 ### <a name="example"></a>Ejemplo
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240660"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689685"
 ---
-# <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; (Operadores)
+# <a name="ltforward_listgt-operators"></a>&lt;forward_list&gt; (Operadores)
 
-## <a name="op_eq_eq"></a> operador ==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto de lista de reenvíos del lado izquierdo del operador es igual que el objeto de lista de reenvíos del lado derecho.
 
@@ -37,17 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `forward_list`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `forward_list`.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función de plantilla sobrecarga `operator==` para comparar dos objetos de clase de plantilla `forward_list`. La función devuelve `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Esta función de plantilla sobrecarga `operator==` para comparar dos objetos de la plantilla de clase `forward_list`. La función devuelve `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto de lista de reenvíos del lado izquierdo del operador no es igual que el objeto de lista de reenvíos del lado derecho.
 
@@ -59,10 +59,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `forward_list`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -85,10 +85,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `forward_list`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -97,9 +97,9 @@ Objeto de tipo `forward_list`.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función de plantilla sobrecarga `operator<` para comparar dos objetos de clase de plantilla `forward_list`. La función devuelve `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Esta función de plantilla sobrecarga `operator<` para comparar dos objetos de la plantilla de clase `forward_list`. La función devuelve `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a> Operador&lt;=
+## <a name="op_lt_eq"></a>operador &lt; =
 
 Comprueba si el objeto de lista de reenvíos del lado izquierdo del operador es menor o igual que el objeto de lista de reenvíos del lado derecho.
 
@@ -111,10 +111,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `forward_list`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -137,10 +137,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `forward_list`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -151,7 +151,7 @@ Objeto de tipo `forward_list`.
 
 Esta función de plantilla devuelve `right < left`.
 
-## <a name="op_gt_eq"></a> Operador&gt;=
+## <a name="op_gt_eq"></a>operador &gt; =
 
 Comprueba si el objeto de lista de reenvíos del lado izquierdo del operador es mayor o igual que el objeto de lista de reenvíos del lado derecho.
 
@@ -163,15 +163,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `forward_list`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `forward_list`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si la lista de reenvíos en el lado izquierdo del operador es mayor o igual a la lista de reenvíos en el lado derecho del operador; en caso contrario **false**.
+**true** si la lista de reenvíos del lado izquierdo del operador es mayor o igual que la lista de reenvíos del lado derecho del operador. en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 

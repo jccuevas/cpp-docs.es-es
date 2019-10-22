@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454192"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689221"
 ---
 # <a name="numpunct-class"></a>numpunct (Clase)
 
-Clase de plantilla que describe un objeto que puede actuar como faceta de la configuración regional para describir las secuencias de tipo `CharType` usadas para representar información sobre el formato y la puntuación de expresiones numéricas y booleanas.
+Una plantilla de clase que describe un objeto que puede actuar como una faceta local para describir las secuencias de tipo `CharType` usar para representar información sobre el formato y la puntuación de expresiones numéricas y booleanas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
 ## <a name="remarks"></a>Comentarios
@@ -59,20 +59,20 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[numpunct](#numpunct)|Constructor para los objetos de tipo `numpunct`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[string_type](#string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[decimal_point](#decimal_point)|Devuelve un elemento específico de la configuración regional que se va a usar como separador decimal.|
 |[do_decimal_point](#do_decimal_point)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador decimal.|
@@ -200,7 +200,7 @@ La función miembro virtual protegida devuelve una regla específica de la confi
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [agrupación](#grouping), donde llama a `grouping`la función miembro virtual.
+Vea el ejemplo de [agrupación](#grouping), donde `grouping` llama a la función miembro virtual.
 
 ## <a name="do_thousands_sep"></a> numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ Devuelve un elemento específico de la configuración regional que se va a usar 
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida devuelve un elemento específico de la configuración regional del `CharType` tipo que se va a usar como separador de grupo a la izquierda de cualquier separador decimal.
+La función miembro virtual protegida devuelve un elemento específico de la configuración regional de tipo `CharType` que se va a usar como separador de grupo a la izquierda de cualquier separador decimal.
 
 ### <a name="example"></a>Ejemplo
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una cadena que contiene una secuencia `CharType`de s que se va a usar como representación de texto del valor **false**.
+Cadena que contiene una secuencia de `CharType`s que se va a usar como representación de texto del valor **false**.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: La duración del objeto debe administrarse manualmente.
+- 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: Estos valores no están definidos.
+- \> 1: estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
-El constructor inicializa su objeto base con **locale::** [Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+El constructor inicializa su objeto base con **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a> numpunct::string_type
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo describe una especialización de clase de plantilla [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de puntuación.
+El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de puntuación.
 
 ## <a name="thousands_sep"></a> numpunct::thousands_sep
 

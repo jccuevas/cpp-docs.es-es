@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ddaf9905e859c062031940d35adfa2a3393dbb5a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460036"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685789"
 ---
-# <a name="timebase-class"></a>time_base (Clase)
+# <a name="time_base-class"></a>time_base (Clase)
 
-La clase actúa como una clase base para las caras de la clase de plantilla time_get, que define solo el `dateorder` tipo enumerado y varias constantes de este tipo.
+La clase actúa como una clase base para las caras de la plantilla de clase time_get, que define simplemente el tipo enumerado `dateorder` y varias constantes de este tipo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,15 +38,15 @@ public:
 
 Cada constante caracteriza otra forma de ordenar los componentes de una fecha. Las constantes son:
 
-- `no_order`no especifica ningún orden concreto.
+- `no_order` no especifica ningún orden concreto.
 
-- `dmy`especifica el orden del día, el mes y el año, como en el 2 de diciembre de 1979.
+- `dmy` especifica el orden del día, el mes y el año, como en el 2 de diciembre de 1979.
 
-- `mdy`especifica el orden mes, día y año, como en el 2 de diciembre de 1979.
+- `mdy` especifica el orden mes, día y año, como en el 2 de diciembre de 1979.
 
-- `ymd`especifica el orden año, mes y día, como en 1979/12/2.
+- `ymd` especifica el orden año, mes y día, como en 1979/12/2.
 
-- `ydm`especifica el orden año, día y mes, como en 1979: 2 Dec
+- `ydm` especifica el orden año, día y mes, como en 1979:2 Dic.
 
 ## <a name="requirements"></a>Requisitos
 

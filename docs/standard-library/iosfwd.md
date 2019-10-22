@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449084"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687865"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-Declara referencias adelantadas a varias clases de plantilla usadas en iostreams. Estas clases de plantilla se definen en otros encabezados estándar. Este encabezado se incluye explícitamente solo cuando se necesita una de sus declaraciones, pero no su definición.
+Declara las referencias adelantadas a varias plantillas de clase usadas en iostreams. Todas estas plantillas de clase se definen en otros encabezados estándar. Este encabezado se incluye explícitamente solo cuando se necesita una de sus declaraciones, pero no su definición.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,7 +23,7 @@ Declara referencias adelantadas a varias clases de plantilla usadas en iostreams
 #include <iosfwd>
 ```
 
-## <a name="typedefs"></a>Typedefs
+## <a name="typedefs"></a>Definiciones de tipo
 
 ```cpp
 typedef T1 streamoff;
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Declaraciones adelantadas y clases de plantilla
+## <a name="forward-declarations-and-class-templates"></a>Declaraciones de avance y plantillas de clase
 
 ```cpp
 template <class _Statetype>
