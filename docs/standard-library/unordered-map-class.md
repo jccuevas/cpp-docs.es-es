@@ -138,16 +138,16 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 8a2e9958bda96ffbfce407c8e9981a0fab14cde1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6b6d907fd0f1f19c829f991a61c9d92e015c6686
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454838"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684446"
 ---
-# <a name="unorderedmap-class"></a>unordered_map (Clase)
+# <a name="unordered_map-class"></a>unordered_map (Clase)
 
-La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos de tipo `std::pair<const Key, Ty>`. La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos. Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente. Cada elemento almacena dos objetos, una clave de ordenación y un valor. La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia (tiempo constante), al menos cuando todos los depósitos tienen una longitud aproximadamente igual. En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia (tiempo lineal). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.
+La plantilla de clase describe un objeto que controla una secuencia de elementos de longitud variable de tipo `std::pair<const Key, Ty>`. La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos. Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente. Cada elemento almacena dos objetos, una clave de ordenación y un valor. La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia (tiempo constante), al menos cuando todos los depósitos tienen una longitud aproximadamente igual. En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia (tiempo lineal). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -162,7 +162,7 @@ class unordered_map;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*Key*|El tipo de clave.|
 |*Ty*|El tipo asignado.|
@@ -172,7 +172,7 @@ class unordered_map;
 
 ## <a name="members"></a>Miembros
 
-|Definición de tipo|DESCRIPCIÓN|
+|Definición de tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|El tipo de un asignador para administrar el almacenamiento.|
 |[const_iterator](#const_iterator)|El tipo de un iterador constante para la secuencia controlada.|
@@ -180,7 +180,7 @@ class unordered_map;
 |[const_pointer](#const_pointer)|El tipo de un puntero constante a un elemento.|
 |[const_reference](#const_reference)|El tipo de una referencia constante a un elemento.|
 |[difference_type](#difference_type)|El tipo de una distancia con signo entre dos elementos.|
-|[hasher](#hasher)|El tipo de la función hash.|
+|[Hasher](#hasher)|El tipo de la función hash.|
 |[iterator](#iterator)|El tipo de un iterador para la secuencia controlada.|
 |[key_equal](#key_equal)|El tipo de la función de comparación.|
 |[key_type](#key_type)|El tipo de una clave de ordenación.|
@@ -191,11 +191,11 @@ class unordered_map;
 |[size_type](#size_type)|El tipo de una distancia sin signo entre dos elementos.|
 |[value_type](#value_type)|El tipo de un elemento.|
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[at](#at)|Busca un elemento con la clave especificada.|
 |[begin](#begin)|Designa el principio de la secuencia controlada.|
-|[bucket](#bucket)|Obtiene el número de depósito para un valor de clave.|
+|[conjuntos](#bucket)|Obtiene el número de depósito para un valor de clave.|
 |[bucket_count](#bucket_count)|Obtiene el número de depósitos.|
 |[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|
 |[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|
@@ -217,25 +217,25 @@ class unordered_map;
 |[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|
 |[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|
 |[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|
-|[rehash](#rehash)|Recompila la tabla hash.|
+|[rehash (](#rehash)|Recompila la tabla hash.|
 |[size](#size)|Cuenta el número de elementos.|
 |[swap](#swap)|Intercambia el contenido de dos contenedores.|
 |[unordered_map](#unordered_map)|Construye un objeto contenedor.|
 
-|Operador|DESCRIPCIÓN|
+|"??"|Descripción|
 |-|-|
 |[unordered_map::operator[]](#op_at)|Busca o inserta un elemento con la clave especificada.|
 |[unordered_map::operator=](#op_eq)|Copia una tabla hash.|
 
 ## <a name="remarks"></a>Comentarios
 
-El objeto ordena la secuencia que controla llamando a dos objetos almacenados, un objeto de función de comparación de tipo [unordered_map::key_equal](#key_equal) y un objeto de función hash de tipo [unordered_map::hasher](#hasher). Se tiene acceso al primer objeto almacenado llamando a la función miembro [unordered_map::key_eq](#key_eq)`()` y se tiene acceso al segundo objeto almacenado llamando a la función miembro [unordered_map::hash_function](#hash)`()` Concretamente, para todos los valores `X` e `Y` de tipo `Key`, la llamada a `key_eq()(X, Y)` solo devuelve true si los dos valores de argumento tienen una ordenación equivalente; la llamada a `hash_function()(keyval)` produce una distribución de valores de tipo `size_t`. A diferencia de la clase de plantilla [unordered_multimap](../standard-library/unordered-multimap-class.md), un objeto de clase de plantilla `unordered_map` garantiza que `key_eq()(X, Y)` es siempre false para cualquiera de los dos elementos de la secuencia controlada. (Las claves son únicas).
+El objeto ordena la secuencia que controla llamando a dos objetos almacenados, un objeto de función de comparación de tipo [unordered_map::key_equal](#key_equal) y un objeto de función hash de tipo [unordered_map::hasher](#hasher). Se tiene acceso al primer objeto almacenado llamando a la función miembro [unordered_map::key_eq](#key_eq)`()` y se tiene acceso al segundo objeto almacenado llamando a la función miembro [unordered_map::hash_function](#hash)`()` Concretamente, para todos los valores `X` e `Y` de tipo `Key`, la llamada a `key_eq()(X, Y)` solo devuelve true si los dos valores de argumento tienen una ordenación equivalente; la llamada a `hash_function()(keyval)` produce una distribución de valores de tipo `size_t`. A diferencia de la [clase unordered_multimap](../standard-library/unordered-multimap-class.md)de la plantilla de clase, un objeto de tipo `unordered_map` garantiza que `key_eq()(X, Y)` sea siempre false para dos elementos cualesquiera de la secuencia controlada. (Las claves son únicas).
 
 El objeto también almacena un factor de carga máxima, que especifica el número promedio deseado máximo de elementos por depósito. Si la inserción de un elemento hace que [unordered_map::load_factor](#load_factor)`()` supere el factor de carga máxima, el contenedor aumenta el número de depósitos y recompila la tabla hash según sea necesario.
 
 El orden real de los elementos de la secuencia controlada depende de la función hash, la función de comparación, el orden de inserción, el factor de carga máxima y el número actual de depósitos. En general no se puede predecir el orden de los elementos de la secuencia controlada. Sin embargo, siempre se puede asegurar que cualquier subconjunto de elementos que tengan una ordenación equivalente son adyacentes en la secuencia controlada.
 
-El objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto asignador almacenado de tipo [unordered_map::allocator_type](#allocator_type). Ese objeto de asignador debe tener la misma interfaz externa que un objeto de clase de plantilla `allocator`. Tenga en cuenta que el objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.
+El objeto asigna y libera almacenamiento para la secuencia que controla a través de un objeto asignador almacenado de tipo [unordered_map::allocator_type](#allocator_type). Dicho objeto de asignador debe tener la misma interfaz externa que un objeto de tipo `allocator`. Tenga en cuenta que el objeto de asignador almacenado no se copia cuando se asigna el objeto contenedor.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -292,7 +292,7 @@ const Ty& at(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*key*|Valor de clave que se va a buscar.|
 
@@ -344,7 +344,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*nbucket*|Número de depósito.|
 
@@ -406,7 +406,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyval*\
+\ *keyval*
 Valor de clave que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
@@ -548,7 +548,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nbucket*\
+\ *nbucket*
 Número de depósito.
 
 ### <a name="remarks"></a>Comentarios
@@ -610,7 +610,7 @@ Un iterador de acceso hacia delante **constante** que apunta al primer elemento 
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
-Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `begin()` y. `cbegin()`
+Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -636,7 +636,7 @@ Un iterador de acceso hacia delante **constante** que apunta justo después del 
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `end()` y. `cend()`
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -907,7 +907,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyval*\
+\ *keyval*
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1022,15 +1022,15 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*args*|Argumentos reenviados para construir un elemento que se va a insertar en el unordered_map, a menos que ya contenga un elemento cuyo valor esté ordenado de forma equivalente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Cuyo componente **bool** devuelve true si se realizó una inserción y false si el ya `unordered_map` contenía un elemento cuya clave tenía un valor equivalente en la ordenación y cuyo componente de iterador devuelve la dirección donde un nuevo elemento `pair` se insertó o donde ya se encontraba el elemento.
+@No__t_0 cuyo componente **bool** devuelve true si se realizó una inserción y false si el `unordered_map` ya contenía un elemento cuya clave tenía un valor equivalente en la ordenación y cuyo componente de iterador devuelve la dirección donde se insertó un nuevo elemento. o donde ya se encontraba el elemento.
 
-Para tener acceso al componente de iterador de un par `pr` devuelto por esta función miembro, utilice `pr.first` y, para desreferenciarlo, utilice `*(pr.first)`. Para tener acceso al componente **bool** de un `pr` par devuelto por esta función miembro `pr.second`, use.
+Para tener acceso al componente de iterador de un par `pr` devuelto por esta función miembro, utilice `pr.first` y, para desreferenciarlo, utilice `*(pr.first)`. Para tener acceso al componente **bool** de un par `pr` devuelto por esta función miembro, utilice `pr.second`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1051,7 +1051,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*args*|Argumentos reenviados para construir un elemento que se va a insertar en el unordered_map a menos que el unordered_map ya contenga ese elemento o, más en general, a menos que ya contenga un elemento cuya clave esté ordenada de manera equivalente.|
 |*where*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
@@ -1152,7 +1152,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*nbucket*|Número de depósito.|
 
@@ -1171,12 +1171,12 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyval*\
+\ *keyval*
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve un par de iteradores `X` que `[X.first, X.second)` delimitan solo los elementos de la secuencia controlada que tienen una ordenación equivalente con *keyval*. Si no hay elementos de este tipo, los dos iteradores son `end()`.
+La función miembro devuelve un par de iteradores `X` tal que `[X.first, X.second)` delimita solo los elementos de la secuencia controlada que tienen una ordenación equivalente con *keyval*. Si no hay elementos de este tipo, los dos iteradores son `end()`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1240,16 +1240,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parámetros
 
-*Mientras*\
+*Dónde* \
 Posición del elemento que se va a quitar.
 
-*Lugar*\
+*Primer* \
 Posición del primer elemento que se va a quitar.
 
-*Guardado*\
+*Última* \
 Posición situada más allá del último elemento que se va a quitar.
 
-*Clave*\
+@No__t_1 *clave*
 Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1272,7 +1272,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyval*\
+\ *keyval*
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1470,12 +1470,12 @@ IList);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*Val*|Valor de un elemento que se va a insertar en el unordered_map a menos que ya contenga un elemento cuya clave se ordena de forma equivalente.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto.|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que unordered_map puede usar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y reenvía de forma perfecta el *Val* como argumento.|
-|*First*|Posición del primer elemento que se va a copiar.|
+|*Lugar*|Posición del primer elemento que se va a copiar.|
 |*Guardado*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
@@ -1492,7 +1492,7 @@ Esta función no invalida ningún iterador, puntero o referencia.
 
 Durante la inserción de un solo elemento, si se produce una excepción pero no se realiza en la función hash del contenedor, no se modifica el estado del contenedor. Si la excepción se produce en la función hash, el resultado es indefinido. Durante la inserción de varios elementos, si se produce una excepción, el contenedor se deja en un estado sin especificar pero válido.
 
-Para tener acceso al componente de iterador de un `pair` `pr` devuelto por la función miembro de un único elemento, utilice `pr.first`; para desreferenciar el iterador dentro del par devuelto, utilice `*pr.first`, especificando un elemento. Para tener acceso al componente **bool** , `pr.second`use. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
+Para tener acceso al componente de iterador de un `pair` `pr` devuelto por la función miembro de un único elemento, utilice `pr.first`; para desreferenciar el iterador dentro del par devuelto, utilice `*pr.first`, especificando un elemento. Para tener acceso al componente **bool** , use `pr.second`. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
 
 El objeto [value_type](../standard-library/map-class.md#value_type) de un contenedor es un typedef que pertenece al contenedor y, para map, `map<K, V>::value_type` es `pair<const K, V>`. El valor de un elemento es un par ordenado en el que el primer componente es igual al valor de clave y el segundo componente es igual al valor de datos del elemento.
 
@@ -1969,7 +1969,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parámetros
 
-*diez*\
+*factor* \
 El nuevo factor de carga máxima.
 
 ### <a name="remarks"></a>Comentarios
@@ -2097,7 +2097,7 @@ Ty& operator[](Key&& keyval);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*Keyval*|Valor de clave que se va a buscar o insertar.|
 
@@ -2109,7 +2109,7 @@ Referencia al valor de datos del elemento insertado.
 
 Si el valor de clave de argumento no se encuentra, se inserta junto con el valor predeterminado del tipo de datos.
 
-`operator[]`se puede usar para insertar elementos en un mapa *m* mediante *m*[*key*] = `DataValue`; donde `DataValue` es el valor de `mapped_type` del elemento con un valor de clave de *key*.
+`operator[]` se puede usar para insertar elementos en un mapa *m* mediante *m*[*key*] = `DataValue`; donde `DataValue` es el valor de la `mapped_type` del elemento con un valor de clave de *key*.
 
 Cuando se emplea `operator[]` para insertar elementos, la referencia devuelta no indica si una inserción cambia un elemento ya existente o crea uno nuevo. Se pueden usar las funciones miembro [find](../standard-library/map-class.md#find) e [insert](../standard-library/map-class.md#insert) para determinar si ya existe un elemento con una clave especificada antes de una inserción.
 
@@ -2170,7 +2170,7 @@ c2["abc"] == 1
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro determina el iterador `where` como el valor devuelto de [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())`. (Inserta un elemento con la clave especificada si no existe tal elemento). A continuación devuelve una referencia a `(*where).second`.
+La función miembro determina el iterador `where` como el valor devuelto de [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())`. (Inserta un elemento con la clave especificada si no existe ese elemento). A continuación, devuelve una referencia a `(*where).second`.
 
 ## <a name="op_eq"></a>  unordered_map::operator=
 
@@ -2184,7 +2184,7 @@ unordered_map& operator=(unordered_map&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*right*|El unordered_map desde el que la función de operador asigna el contenido.|
 
@@ -2335,7 +2335,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parámetros
 
-*nbuckets*\
+\ *nbuckets*
 Número solicitado de depósitos.
 
 ### <a name="remarks"></a>Comentarios
@@ -2516,12 +2516,12 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 El contenedor con el que se intercambia.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro intercambia las secuencias controladas entre `*this` y a la *derecha*. Si [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`, lo hace en tiempo constante, inicia una excepción solo como resultado de copiar el objeto de rasgos almacenado de tipo `Tr` y no invalida referencias, punteros o iteradores que designan elementos en las dos secuencias controladas. De lo contrario, realiza varias asignaciones de elementos y llamadas de constructor proporcionales al número de elementos de ambas secuencias controladas.
+La función miembro intercambia las secuencias controladas entre `*this` y *right*. Si [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`, lo hace en tiempo constante, inicia una excepción solo como resultado de copiar el objeto de rasgos almacenado de tipo `Tr` y no invalida referencias, punteros o iteradores que designan elementos en las dos secuencias controladas. De lo contrario, realiza varias asignaciones de elementos y llamadas de constructor proporcionales al número de elementos de ambas secuencias controladas.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2625,14 +2625,14 @@ unordered_map(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*Alabama*|Objeto de asignador que se va a almacenar.|
 |*COMP*|Objeto de función de comparación que se va a almacenar.|
 |*LM*|Objeto de función hash que se va a almacenar.|
 |*Bucket_count*|Número mínimo de depósitos.|
 |*Derecha*|Contenedor que se va a copiar.|
-|*First*||
+|*Lugar*||
 |*Guardado*||
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|
 
@@ -2642,13 +2642,13 @@ El primer constructor especifica una copia de la secuencia controlada por `right
 
 Todos los constructores también inicializan varios valores almacenados. En el constructor de copias, los valores se obtienen de la *derecha*. De lo contrario:
 
-el número mínimo de depósitos es el argumento *Bucket_count*, si está presente; de lo contrario, es un valor predeterminado descrito aquí como el valor `N0`definido por la implementación.
+el número mínimo de depósitos es el argumento *Bucket_count*, si está presente; de lo contrario, es un valor predeterminado descrito aquí como el valor definido por la implementación `N0`.
 
-el objeto de función hash es el *hash*de argumento, si está presente; en caso contrario `Hash()`, es.
+El objeto de función hash es el *hash*de argumento, si está presente; en caso contrario, se `Hash()`.
 
-El objeto de función de comparación es el argumento *COMP*, si está presente; en caso contrario `Pred()`, es.
+El objeto de función de comparación es el argumento *COMP*, si está presente; en caso contrario, se `Pred()`.
 
-El objeto de asignador es el argumento *al*, si está presente; de lo contrario, `Alloc()`es.
+El objeto de asignador es el argumento *al*, si está presente; de lo contrario, se `Alloc()`.
 
 ### <a name="example"></a>Ejemplo
 
