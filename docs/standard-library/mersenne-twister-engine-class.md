@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 79613c76b3ea6dc15643e83a15d5bd6d90b60c6a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451861"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687702"
 ---
-# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine (Clase)
+# <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine (Clase)
 
 Genera una secuencia de íntegros aleatoria de alta calidad basada en el algoritmo de Mersenne twister.
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*UIntType*\
+@No__t_1 *UIntType*
 El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*CON*\
+*W* \
 **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*\
+*N* \
 **Tamaño de estado**. El número de elementos (valores) en la secuencia de estado.
 
-*F*\
+*M* \
 **Tamaño de cambio**. El número de elementos que omitir durante cada vuelta. **Condición previa:** `0 < M ≤ N`
 
 *R*\
 **Bits de máscara**. **Condición previa:** `R ≤ W`
 
-*UN*\
+*Un* \
 **Máscara XOR**. **Condición previa:** `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*\
+@No__t_4 *U*, *S*, *T*, *L*
 **Parámetros de cambio de atenuación**. Utilizados como valores de cambio durante la codificación (atenuación). Condición previa: `U,S,T,L ≤ W`
 
-*D*, *B*, *C*\
+*D*, *B*, *C* \
 **Parámetros de máscara de bit de atenuación**. Utilizados como valores de máscara de bit durante la codificación (atenuación). Condición previa: `D,B,C ≤ (1u<<W) - 1u`
 
-*FORMATO*\
+@No__t_1 *F*
 **Multiplicador de inicialización**. Utilizado para ayudar a la inicialización de la secuencia. Condición previa: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Miembros
@@ -69,11 +69,11 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla describe un motor de número aleatorio que devuelve valores en el intervalo cerrado [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valor integral grande con `W * (N - 1) + R` bits. Extrae *W* bits a la vez de este valor grande y, cuando ha utilizado todos los bits, desplaza el valor grande cambiando y mezclando los bits para que tenga un nuevo conjunto de bits del que extraer. El estado del motor son los últimos `N` `W`valores de bit que se `operator()` utilizan si se ha llamado al menos *N* veces, `M` de lo contrario, los `W`valores de bit que se `N - M` han usado y los últimos valores de la propagación.
+Esta plantilla de clase describe un motor de número aleatorio que devuelve valores en el intervalo cerrado [`0`, `2`<sup>W</sup>  -  `1`]. Contiene un valor integral grande con `W * (N - 1) + R` bits. Extrae *W* bits a la vez de este valor grande y, cuando ha utilizado todos los bits, desplaza el valor grande cambiando y mezclando los bits para que tenga un nuevo conjunto de bits del que extraer. El estado del motor es el último `N` los valores de `W` bits usados si se ha llamado a `operator()` al menos *N* veces, de lo contrario, los valores de `W` bits de `M` que se han usado y los últimos valores de `N - M` de la inicialización.
 
 El generador refuerza el valor grande que contiene mediante el uso de un registro de desplazamiento de comentarios generalizado con retorcido definido por los valores de desplazamiento *N* y *M*, un valor de torsión *R*y un valor de máscara XOR condicional *a*. Además, los bits del registro de cambio sin procesar se codifican (se atenúan) según una matriz de codificación de bits definida por los valores *U*, *D*, *S*, *B*, *T*, *C*y *L*.
 
-El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `2`<sup>W</sup> - `1`. Los valores del resto de los argumentos de la plantilla deben cumplir los requisitos siguientes: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
+El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `2`<sup>W</sup> - `1`. Los valores de los demás argumentos de plantilla deben cumplir los siguientes requisitos: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
 Aunque puede construir un generador directamente a partir de este motor, se recomienda que use una de estas definiciones de tipos predefinidas:
 

@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245279"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687885"
 ---
 # <a name="ltiosgt-typedefs"></a>Definiciones de tipo &lt;ios&gt;
 
-## <a name="ios"></a> IOS
+## <a name="ios"></a>iOS
 
 Es compatible con la clase ios de la antigua biblioteca iostream.
 
@@ -28,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos del tipo **char** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos de tipo **Char** con rasgos de caracteres predeterminados.
 
-## <a name="streamoff"></a> streamoff
+## <a name="streamoff"></a>streamoff
 
 Admite operaciones internas.
 
@@ -46,7 +46,7 @@ Admite operaciones internas.
 
 El tipo es un entero con signo que describe un objeto que puede almacenar un desplazamiento de bytes implicado en varias operaciones de posicionamiento de flujo. La representación tiene al menos 32 bits de valor. No es necesariamente lo bastante grande como para representar una posición de byte arbitraria en un flujo. El valor `streamoff(-1)` suele indicar un desplazamiento erróneo.
 
-## <a name="streampos"></a> streampos
+## <a name="streampos"></a>streampos
 
 Contiene la posición actual del puntero de búfer o el puntero de archivo.
 
@@ -127,9 +127,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo de la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos del tipo **wchar_t** con rasgos de caracteres predeterminados.
+El tipo es un sinónimo de la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
-## <a name="wstreampos"></a> wstreampos
+## <a name="wstreampos"></a>wstreampos
 
 Contiene la posición actual del puntero de búfer o el puntero de archivo.
 

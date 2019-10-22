@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: b9ffb4aff4d4d5667ab8d626ea13a21da94ca0c1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456462"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690106"
 ---
-# <a name="alignedunion-class"></a>Clase aligned_union
+# <a name="aligned_union-class"></a>Clase aligned_union
 
 Proporciona un tipo POD lo suficientemente grande y convenientemente alineado para almacenar un tipo de unión y el tamaño necesario.
 
@@ -29,7 +29,7 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parámetros
 
-*Terminado*\
+*Len* \
 El valor de alineación para el tipo más grande de la unión.
 
 *Types*\ (Tipos [Referencia de C#])
@@ -37,7 +37,7 @@ Los distintos tipos de la unión subyacente.
 
 ## <a name="remarks"></a>Comentarios
 
-Use la clase de plantilla para obtener la alineación y el tamaño necesarios para almacenar una unión en el almacenamiento sin inicializar. El typedef `type` de miembro nombra un tipo Pod adecuado para el almacenamiento de cualquier tipo enumerado en *tipos*; el tamaño mínimo es *Len*. El miembro `alignment_value` estático de tipo `std::size_t` contiene la alineación más estricta necesaria para todos los tipos enumerados en *tipos*.
+Use la plantilla de clase para obtener la alineación y el tamaño necesarios para almacenar una Unión en almacenamiento no inicializado. La definición de tipo de miembro `type` nombra un tipo POD adecuado para el almacenamiento de cualquier tipo enumerado en *tipos*; el tamaño mínimo es *Len*. El miembro estático `alignment_value` del tipo `std::size_t` contiene la alineación más estricta necesaria para todos los tipos enumerados en *tipos*.
 
 ## <a name="example"></a>Ejemplo
 

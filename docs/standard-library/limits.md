@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3ad740975cfff4f65f9e1c800a709cfaca3367db
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447570"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687818"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
-Define la clase de plantilla `numeric_limits` y dos enumeraciones relativas a las representaciones de punto flotante y el redondeo.
+Define la plantilla de clase `numeric_limits` y dos enumeraciones relativas a las representaciones de punto flotante y el redondeo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -26,7 +26,7 @@ Define la clase de plantilla `numeric_limits` y dos enumeraciones relativas a la
 
 ## <a name="remarks"></a>Comentarios
 
-Las especializaciones explícitas `numeric_limits` de la clase describen muchas propiedades de los tipos fundamentales, incluidos los tipos de carácter, entero y punto flotante y **bool** que se definen en la implementación en lugar de corregirse por las reglas del C++idioma. Las propiedades que se describen en \<limits> incluyen precisión, representaciones de tamaño mínimo y máximo, redondeo y errores de tipo de señalización.
+Las especializaciones explícitas de la clase `numeric_limits` describen muchas propiedades de los tipos fundamentales, incluidos los tipos de carácter, entero y punto flotante y **bool** que se definen como implementaciones, en lugar de corregirse C++ por las reglas del módulo. Las propiedades que se describen en \<limits> incluyen precisión, representaciones de tamaño mínimo y máximo, redondeo y errores de tipo de señalización.
 
 ## <a name="members"></a>Miembros
 
@@ -41,7 +41,7 @@ Las especializaciones explícitas `numeric_limits` de la clase describen muchas 
 
 |||
 |-|-|
-|[Clase numeric_limits](../standard-library/numeric-limits-class.md)|La clase de plantilla describe propiedades aritméticas de tipos numéricos integrados.|
+|[numeric_limits (Clase)](../standard-library/numeric-limits-class.md)|La plantilla de clase describe las propiedades aritméticas de tipos numéricos integrados.|
 
 ## <a name="see-also"></a>Vea también
 

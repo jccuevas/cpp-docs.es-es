@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed90273fe293ae2e08c3c91762c12c42bb368c16
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448336"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688762"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
-Define la clase de plantilla valarray y numerosas funciones y clases de plantilla auxiliares.
+Define la plantilla de clase valarray y numerosas plantillas y funciones de clase auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,11 +24,11 @@ Define la clase de plantilla valarray y numerosas funciones y clases de plantill
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<Biblioteca > de valarray utiliza la instrucción ' #include < initializer_list > '.
+> La biblioteca de > de \<valarray usa la instrucción ' #include < initializer_list > '.
 
 ## <a name="remarks"></a>Comentarios
 
-A estas funciones y clases de plantilla se les permite una latitud inusual con el fin de mejorar el rendimiento. En concreto, cualquier función que `valarray<T1>` devuelva un tipo puede devolver un objeto de algún otro tipo T2. En ese caso, cualquier función que acepte uno o más argumentos de tipo `valarray<T2>` debe tener sobrecargas que acepten combinaciones arbitrarias de esos argumentos, y cada uno de ellos se reemplazaría por un argumento de tipo T2.
+A estas funciones y plantillas de clase se les permite una latitud inusual con el fin de mejorar el rendimiento. En concreto, cualquier función que devuelva el tipo `valarray<T1>` puede devolver un objeto de algún otro tipo T2. En ese caso, cualquier función que acepte uno o más argumentos de tipo `valarray<T2>` debe tener sobrecargas que acepten combinaciones arbitrarias de esos argumentos, cada uno reemplazado por un argumento de tipo T2.
 
 ## <a name="members"></a>Miembros
 
@@ -84,18 +84,18 @@ A estas funciones y clases de plantilla se les permite una latitud inusual con e
 |||
 |-|-|
 |[gslice (Clase)](../standard-library/gslice-class.md)|Clase de utilidad para valarray que se usa para definir segmentos multidimensionales de una valarray.|
-|[gslice_array (Clase)](../standard-library/gslice-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos de segmentos generales proporcionando operaciones entre matrices de subconjuntos definidas por el segmento general de una valarray.|
-|[indirect_array (Clase)](../standard-library/indirect-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays proporcionando operaciones entre matrices de subconjuntos definidas especificando un subconjunto de índices de una valarray principal.|
-|[mask_array (Clase)](../standard-library/mask-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre matrices de subconjuntos.|
+|[gslice_array (Clase)](../standard-library/gslice-array-class.md)|Una plantilla de clase auxiliar interna que admite objetos de segmentos generales proporcionando operaciones entre matrices de subconjuntos definidas por el segmento general de un valarray.|
+|[indirect_array (Clase)](../standard-library/indirect-array-class.md)|Una plantilla de clase auxiliar interna que admite objetos que son subconjuntos de valarrays proporcionando operaciones entre matrices de subconjuntos definidas especificando un subconjunto de índices de una valarray primaria.|
+|[mask_array (Clase)](../standard-library/mask-array-class.md)|Una plantilla de clase auxiliar interna que admite objetos que son subconjuntos de valarrays principales, especificados con una expresión booleana, proporcionando operaciones entre las matrices de subconjuntos.|
 |[slice (Clase)](../standard-library/slice-class.md)|Clase de utilidad para valarray que se usa para definir subconjuntos unidimensionales de tipo vector de una valarray.|
-|[slice_array (Clase)](../standard-library/slice-array-class.md)|Clase de plantilla auxiliar e interna que admite objetos de segmentos proporcionando operaciones entre matrices de subconjuntos definidas por el segmento de una valarray.|
-|[valarray (Clase)](../standard-library/valarray-class.md)|La clase de plantilla describe un objeto que controla una secuencia de elementos de `Type` tipo que se almacenan como una matriz y se diseñan para realizar operaciones matemáticas de alta velocidad, optimizadas para el rendimiento computacional.|
+|[slice_array (Clase)](../standard-library/slice-array-class.md)|Una plantilla de clase auxiliar interna que admite objetos de sector proporcionando operaciones entre matrices de subconjuntos definidas por el segmento de una valarray.|
+|[valarray (Clase)](../standard-library/valarray-class.md)|La plantilla de clase describe un objeto que controla una secuencia de elementos de tipo `Type` que se almacenan como una matriz y se diseñan para realizar operaciones matemáticas de alta velocidad, optimizadas para el rendimiento computacional.|
 
 ### <a name="specializations"></a>Especializaciones
 
 |||
 |-|-|
-|[valarray\<bool> (clase)](../standard-library/valarray-bool-class.md)|Una versión especializada de la clase de plantilla\<valarray**Type**> a elementos de tipo **bool**.|
+|[valarray\<bool> (clase)](../standard-library/valarray-bool-class.md)|Una versión especializada de la plantilla de clase valarray \<**tipo**> a elementos de tipo **bool**.|
 
 ## <a name="see-also"></a>Vea también
 

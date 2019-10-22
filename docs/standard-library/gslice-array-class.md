@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 68ce774128395e941ff80580a02c4ee28a74a4e4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448928"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689596"
 ---
-# <a name="gslicearray-class"></a>gslice_array (Clase)
+# <a name="gslice_array-class"></a>gslice_array (Clase)
 
-Clase de plantilla auxiliar e interna que admite objetos de segmentos generales proporcionando operaciones entre matrices de subconjuntos definidas por el segmento general de una valarray.
+Una plantilla de clase auxiliar interna que admite objetos de segmentos generales proporcionando operaciones entre matrices de subconjuntos definidas por el segmento general de un valarray.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Comentarios
 
-La clase describe un objeto que almacena una referencia a un objeto `va` de la clase [valarray](../standard-library/valarray-class.md) **\<Type >** , junto con un `gs` objeto de la clase [GSlice](../standard-library/gslice-class.md) que describe la secuencia de elementos que se van a seleccionar. `valarray<Type>` objeto.
+La clase describe un objeto que almacena una referencia a un objeto `va` de la clase [valarray](../standard-library/valarray-class.md)  **\<Type >** , junto con un objeto `gs` de la clase [GSlice](../standard-library/gslice-class.md) , que describe la secuencia de elementos que se va a seleccionar en el objeto `valarray<Type>`.
 
-Solo se construye `gslice_array<Type>` un objeto escribiendo una expresión de la forma [va&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase gslice_array se comportarán como las signaturas de `valarray<Type>`función correspondientes definidas para, excepto en que solo la secuencia de elementos seleccionados se ve afectada.
+Solo se crea un objeto `gslice_array<Type>` escribiendo una expresión con el formato [va&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Las funciones miembro de la clase gslice_array se comportarán como las signaturas de función correspondientes definidas para `valarray<Type>`, excepto en que solo la secuencia de elementos seleccionados se ve afectada.
 
-La clase de plantilla se crea indirectamente por determinadas operaciones valarray y no se puede usar directamente en el programa. En su lugar, el operador de subíndice de segmento usa una clase de plantilla auxiliar interna:
+La plantilla de clase se crea indirectamente mediante ciertas operaciones de valarray y no se puede usar directamente en el programa. En su lugar, el operador de subíndice de segmento utiliza una plantilla de clase auxiliar interna:
 
 `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&** ).
 
-Solo se construye `gslice_array<Type>` un objeto escribiendo una expresión con el formato `va[gsl]`, para un segmento `gsl` de valarray `va`. Las funciones miembro de la clase gslice_array se comportarán como las signaturas de `valarray<Type>`función correspondientes definidas para, excepto en que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por gslice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el primer segmento, el número de elementos en cada segmento y la distancia entre los elementos de cada segmento.
+Solo se construye un objeto `gslice_array<Type>` escribiendo una expresión con el formato `va[gsl]`, para un segmento `gsl` de la `va` valarray. Las funciones miembro de la clase gslice_array se comportarán como las signaturas de función correspondientes definidas para `valarray<Type>`, excepto en que solo la secuencia de elementos seleccionados se ve afectada. La secuencia controlada por gslice_array se define mediante los tres parámetros del constructor de segmento, el índice del primer elemento en el primer segmento, el número de elementos en cada segmento y la distancia entre los elementos de cada segmento.
 
 En el ejemplo siguiente:
 

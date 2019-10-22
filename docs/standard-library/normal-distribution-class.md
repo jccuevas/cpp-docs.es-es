@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 39c5321d5bc22e14ace3335e4a925bf7284d1cb0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457662"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689247"
 ---
-# <a name="normaldistribution-class"></a>normal_distribution (Clase)
+# <a name="normal_distribution-class"></a>normal_distribution (Clase)
 
 Genera una distribución normal.
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*\
+@No__t_1 *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución normal. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Las funciones `mean()` de propiedad `stddev()` y devuelven los valores para los parámetros de distribución almacenados *Mean* y *StdDev* , respectivamente.
+Las funciones de propiedad `mean()` y `stddev()` devuelven los valores para los parámetros de distribución almacenados *Mean* y *StdDev* , respectivamente.
 
 El miembro de propiedad `param()` establece o devuelve el paquete de parámetros de distribución almacenado `param_type`.
 
@@ -198,13 +198,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*aritmética*\
+\ *promedio*
 El parámetro de distribución `mean`.
 
-*StdDev*\
+\ *StdDev*
 El parámetro de distribución `stddev`.
 
-*PARM*\
+\ *PARM*
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -233,13 +233,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*aritmética*\
+\ *promedio*
 El parámetro de distribución `mean`.
 
-*StdDev*\
+\ *StdDev*
 El parámetro de distribución `stddev`.
 
-*correcta*\
+\ *derecha*
 La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios
