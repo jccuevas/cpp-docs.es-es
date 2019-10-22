@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447411"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685821"
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine (Clase)
+# <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine (Clase)
 
 Genera una secuencia aleatoria mediante el algoritmo resta por acarreo (Fibonacci retrasado).
 
@@ -36,13 +36,13 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parámetros
 
-*UIntType*\
+@No__t_1 *UIntType*
 El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*CON*\
+*W* \
 **Tamaño de palabra**. Tamaño de cada palabra, en bits, de la secuencia de estado. **Condición previa:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*SEG*\
+*S* \
 **Intervalo corto**. Número de valores íntegros. **Condición previa:** `0 < S < R`
 
 *R*\
@@ -60,18 +60,18 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla `substract_with_carry_engine` es una mejora respecto al [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ninguno de estos motores es tan rápido o tiene unos resultados de mayor calidad que el [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+La plantilla de clase `substract_with_carry_engine` es una mejora respecto al [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ninguno de estos motores es tan rápido o tiene unos resultados de mayor calidad que el [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Este motor produce valores de un tipo entero sin signo especificado por el usuario que usa la relación de periodicidad ( *periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, en la que `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`. De lo contrario `0`, y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un indicador de transporte más valores de *R* . Estos valores se componen  de los últimos valores `operator()` de r devueltos si se ha llamado al `N` menos *r* veces, de lo contrario, `R - N` los valores que se han devuelto y los últimos valores de la inicialización.
+Este motor produce valores de un tipo entero sin signo especificado por el usuario mediante la relación de periodicidad ( *período*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, donde `cy(i)` tiene el valor `1` si `x(i - S) - x(i - R) - cy(i - 1) < 0`, de lo contrario `0` y `M` tiene el valor `2`<sup>W</sup>. El estado del motor es un indicador de transporte más valores de *R* . Estos valores se componen de los últimos valores de *r* devueltos si se ha llamado a `operator()` al menos *R* veces, de lo contrario, los valores `N` que se han devuelto y los últimos valores `R - N` de la inicialización.
 
 El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `M - 1`.
 
 Aunque puede construir un generador directamente a partir de este motor, también puede usar una de estas definiciones de tipos predefinidas:
 
-`ranlux24_base`: Utilizado como base para `ranlux24`.
+`ranlux24_base`: se usa como base para `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Utilizado como base para `ranlux48`.
+`ranlux48_base`: se usa como base para `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Para más detalles sobre el algoritmo de motor de resta con llevadas, vea el artículo de la Wikipedia sobre el [generador de Fibonacci retardado](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).

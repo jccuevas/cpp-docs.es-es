@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ce03510bec05f3e5e770e930759648c9add0387f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450896"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684053"
 ---
-# <a name="wstringconvert-class"></a>wstring_convert (Clase)
+# <a name="wstring_convert-class"></a>wstring_convert (Clase)
 
-La clase de plantilla `wstring_convert` realiza conversiones entre una cadena de caracteres anchos y una cadena de bytes.
+La plantilla de clase `wstring_convert` realiza conversiones entre una cadena de tipo ancho y una cadena de bytes.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,17 +42,17 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parámetros
 
-*Codecvt*\
+@No__t_1 *Codecvt*
 La faceta [locale](../standard-library/locale-class.md) que representa el objeto de conversión.
 
-*Elem*\
+@No__t_1 *Elem*
 Tipo de elemento de carácter ancho.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que controla las conversiones entre objetos de cadena de caracteres anchos de la clase `std::basic_string<Elem>` y objetos de cadena de bytes de la clase `std::basic_string<char>` (también conocida como `std::string`). La clase de plantilla define los tipos `wide_string` y `byte_string` como sinónimos de estos dos tipos. La conversión entre una secuencia de valores `Elem` (almacenada en un objeto `wide_string`) y las secuencias multibyte (almacenadas en un objeto `byte_string`) se realiza con un objeto de clase `Codecvt<Elem, char, std::mbstate_t>`, que cumple los requisitos de la faceta de conversión de código estándar `std::codecvt<Elem, char, std::mbstate_t>`.
+La plantilla de clase describe un objeto que controla las conversiones entre objetos de cadena anchos de clase `std::basic_string<Elem>` y objetos de cadena de bytes de la clase `std::basic_string<char>` (también conocido como `std::string`). La plantilla de clase define los tipos `wide_string` y `byte_string` como sinónimos de estos dos tipos. La conversión entre una secuencia de valores `Elem` (almacenada en un objeto `wide_string`) y las secuencias multibyte (almacenadas en un objeto `byte_string`) se realiza con un objeto de clase `Codecvt<Elem, char, std::mbstate_t>`, que cumple los requisitos de la faceta de conversión de código estándar `std::codecvt<Elem, char, std::mbstate_t>`.
 
-Un objeto de esta clase de plantilla almacena lo siguiente:
+Un objeto de esta plantilla de clase almacena:
 
 - Una cadena de bytes que se mostrará al producirse errores
 
@@ -66,13 +66,13 @@ Un objeto de esta clase de plantilla almacena lo siguiente:
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[wstring_convert](#wstring_convert)|Construye un objeto de tipo `wstring_convert`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[byte_string](#byte_string)|Tipo que representa una cadena de bytes.|
 |[wide_string](#wide_string)|Tipo que representa una cadena de caracteres anchos.|
@@ -81,7 +81,7 @@ Un objeto de esta clase de plantilla almacena lo siguiente:
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[from_bytes](#from_bytes)|Convierte una cadena de bytes en una cadena de caracteres anchos.|
 |[to_bytes](#to_bytes)|Convierte una cadena de caracteres anchos en una cadena de bytes.|
@@ -135,13 +135,13 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*Byte*|La secuencia de bytes de un solo elemento que se van a convertir.|
 |*ptr*|La secuencia de caracteres de estilo C terminada en null que se va a convertir.|
-|*Bstr*|La [byte_string](#byte_string) que se va a convertir.|
-|*first*|El primer carácter de un intervalo de caracteres que se va convertir.|
-|*last*|El último carácter de un intervalo de caracteres que se va convertir.|
+|*Utilicen*|La [byte_string](#byte_string) que se va a convertir.|
+|*lugar*|El primer carácter de un intervalo de caracteres que se va convertir.|
+|*guardado*|El último carácter de un intervalo de caracteres que se va convertir.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -204,13 +204,13 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*Char*|El carácter ancho que se va a convertir.|
 |*Wptr*|La secuencia de estilo C terminada en null que empieza en `wptr` y que se va a convertir.|
 |*Wstr*|La [wide_string](#wide_string) que se va a convertir.|
-|*first*|El primer elemento del intervalo de elementos que se va a convertir.|
-|*last*|El último elemento del intervalo de elementos que se va a convertir.|
+|*lugar*|El primer elemento del intervalo de elementos que se va a convertir.|
+|*guardado*|El último elemento del intervalo de elementos que se va a convertir.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -242,7 +242,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*\*Pcvt*|Objeto de tipo `Codecvt` que va a realizar la conversión.|
 |*_State*|El objeto de tipo [state_type](#state_type) que representa el estado de la conversión.|

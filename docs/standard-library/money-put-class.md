@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aafa6f9498ee315c25e73833baf3c13d99d36743
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460235"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689311"
 ---
-# <a name="moneyput-class"></a>money_put (Clase)
+# <a name="money_put-class"></a>money_put (Clase)
 
-La clase de plantilla describe un objeto que puede actuar como una faceta de la configuración regional para controlar las conversiones de valores monetarios en secuencias de tipo `CharType`.
+La plantilla de clase describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de valores monetarios en secuencias de tipo `CharType`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-*OutputIterator*\
+@No__t_1 *OutputIterator*
 Tipo de iterador en el que las funciones monetary put escriben sus resultados.
 
 ## <a name="remarks"></a>Comentarios
@@ -49,13 +49,13 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[money_put](#money_put)|Constructor para los objetos de tipo `money_put`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[iter_type](#iter_type)|Tipo que describe un iterador de salida.|
@@ -63,7 +63,7 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[do_put](#do_put)|Una función virtual a la que se llama para convertir un número o una cadena en una secuencia de caracteres que representa un valor monetario.|
 |[put](#put)|Convierte un número o una cadena en una secuencia de caracteres que representa un valor monetario.|
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nueva*\
+*siguiente* \
 Un iterador que se dirige al primer elemento de la cadena insertada.
 
-*_Intl*\
+@No__t_1 *_Intl*
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*_Fill*\
+@No__t_1 *_Fill*
 Un carácter que se usa para el espaciado.
 
-*Val*\
+\ *Val*
 Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -191,7 +191,7 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -202,7 +202,7 @@ Los valores posibles para el parámetro *_Refs* y su importancia son:
 
 - 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \>1: estos valores no están definidos.
+- \> 1: estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nueva*\
+*siguiente* \
 Un iterador que se dirige al primer elemento de la cadena insertada.
 
-*_Intl*\
+@No__t_1 *_Intl*
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-*_Iosbase*\
+@No__t_1 *_Iosbase*
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-*_Fill*\
+@No__t_1 *_Fill*
 Un carácter que se usa para el espaciado.
 
-*Val*\
+\ *Val*
 Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -291,7 +291,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo describe una especialización de clase de plantilla [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar secuencias de elementos de la secuencia de origen.
+El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar secuencias de elementos de la secuencia de origen.
 
 ## <a name="see-also"></a>Vea también
 

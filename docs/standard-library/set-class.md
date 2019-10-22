@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 3d24b353d83cf1efc1660755f1cfb66efc01f33a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f1718b1cd362e54f63388b46025804ccc0396851
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243615"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689012"
 ---
 # <a name="set-class"></a>set (Clase)
 
@@ -108,15 +108,15 @@ class set
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+@No__t_1 *clave*
 Tipo de datos de los elementos que se va a almacenar en el conjunto.
 
-*Rasgos*\
+*Rasgos* \
 Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como criterios de ordenación para determinar su orden relativo en el conjunto. Este argumento es opcional y el predicado binario **less** *\<Key>* es el valor predeterminado.
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
-*Asignador*\
+@No__t_1 de *asignador*
 Tipo que representa el objeto asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria del conjunto. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -131,17 +131,17 @@ Un conjunto de la biblioteca estándar de C++ es:
 
 - Único en el sentido de que cada uno de sus elementos debe tener una clave única. Puesto que el conjunto es también un contenedor asociativo simple, sus elementos también son únicos.
 
-Un conjunto también se describe como una clase de plantilla, porque la funcionalidad que proporciona es genérica e independiente del tipo específico de datos contenidos como elementos. En su lugar, el tipo de datos que se usará se especifica como un parámetro en la plantilla de clase junto con la función de comparación y el asignador.
+Un conjunto también se describe como una plantilla de clase porque la funcionalidad que proporciona es genérica e independiente del tipo específico de datos contenido como elementos. En su lugar, el tipo de datos que se usará se especifica como un parámetro en la plantilla de clase junto con la función de comparación y el asignador.
 
 En general, la elección del tipo de contenedor se debe tomar según el tipo de búsqueda y de inserción que necesite la aplicación. Los contenedores asociativos están optimizados para las operaciones de búsqueda, inserción y eliminación. Las funciones miembro que admiten estas operaciones explícitamente las realizan de forma eficiente en un tiempo que es proporcional en promedio al logaritmo del número de elementos del contenedor. La inserción de elementos no invalida ningún iterador y al quitar elementos solo se invalidan los iteradores que habían apuntado específicamente a los elementos quitados.
 
 El conjunto debe ser el contenedor asociativo elegido cuando la aplicación satisfaga las condiciones que asocian los valores a sus claves. Los elementos de un conjunto son únicos y actúan como sus propios criterios de ordenación. Un modelo para este tipo de estructura es una lista ordenada, por ejemplo, de palabras en las que las palabras pueden aparecer solo una vez. Si se permitieran varias repeticiones de las palabras, la estructura de contenedor adecuada sería multiset. Si los valores necesitan estar asociados a una lista de palabras clave únicas, un mapa sería una estructura adecuada para contener estos datos. Si, por el contrario, las claves no son únicas, un multimap sería el contenedor preferido.
 
-El conjunto ordena la secuencia que controla mediante la llamada a un objeto de función almacenado de tipo [key_compare](#key_compare). Este objeto almacenado es una función de comparación a la que se puede tener acceso mediante la llamada a la función miembro [key_comp](#key_comp). En general, los elementos deben ser meramente menos que comparables para establecer este orden de forma que, dados dos elementos cualesquiera, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. En un sentido más técnico, la función de comparación es un predicado binario que induce una ordenación débil estricta en el sentido matemático estándar. Un predicado binario *f*( *x,y*) es un objeto de función que tiene dos objetos de argumento *x* e *y*, y un valor devuelto de **true** o **false**. Una ordenación impuesta en un conjunto es una ordenación débil estricta si el predicado binario es irreflexivo, antisimétrico y transitivo, y si la equivalencia es transitiva, donde dos objetos *x* e *y* se definen como equivalentes cuando tanto *f*( *x,y*) como *f*( *y,x*) son false. Si la condición más fuerte de igualdad entre las claves reemplaza la de equivalencia, la ordenación se convierte en total (en el sentido de que todos los elementos se ordenan entre sí) y las claves coincidentes serán indiscernibles unas de otras.
+El conjunto ordena la secuencia que controla mediante la llamada a un objeto de función almacenado de tipo [key_compare](#key_compare). Este objeto almacenado es una función de comparación a la que se puede tener acceso mediante una llamada a la función miembro [key_comp](#key_comp). En general, los elementos deben ser meramente menos que comparables para establecer este orden de forma que, dados dos elementos cualesquiera, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. En un sentido más técnico, la función de comparación es un predicado binario que induce una ordenación débil estricta en el sentido matemático estándar. Un predicado binario *f*( *x,y*) es un objeto de función que tiene dos objetos de argumento *x* e *y*, y un valor devuelto de **true** o **false**. Una ordenación impuesta en un conjunto es una ordenación débil estricta si el predicado binario es irreflexivo, antisimétrico y transitivo, y si la equivalencia es transitiva, donde dos objetos *x* e *y* se definen como equivalentes cuando tanto *f*( *x,y*) como *f*( *y,x*) son false. Si la condición más fuerte de igualdad entre las claves reemplaza la de equivalencia, la ordenación se convierte en total (en el sentido de que todos los elementos se ordenan entre sí) y las claves coincidentes serán indiscernibles unas de otras.
 
-En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers)
+En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
-El iterador proporcionado por la clase del conjunto es un iterador bidireccional, pero las funciones miembro de la clase [insert](#insert) y [set](#set) tienen versiones que toman como parámetros de plantilla un iterador de entrada más débil, cuyos requisitos de funcionalidad son más mínimos que los garantizados por la clase de iteradores bidireccionales. Los distintos conceptos de iterador forman una familia relacionada por los refinamientos de su funcionalidad. Cada concepto de iterador tiene su propio conjunto de requisitos, y los algoritmos que funcionan con ellos deben limitar sus suposiciones a los requisitos proporcionados por ese tipo de iterador. Se puede suponer que se puede desreferenciar un iterador de entrada para hacer referencia a un objeto y que se puede incrementar hasta el iterador siguiente de la secuencia. Se trata de un conjunto mínimo de funcionalidad, pero es suficiente para poder comunicarse sobre un intervalo de iteradores [ `First`, `Last`) en el contexto de las funciones miembro de la clase.
+El iterador proporcionado por la clase del conjunto es un iterador bidireccional, pero las funciones miembro de la clase [insert](#insert) y [set](#set) tienen versiones que toman como parámetros de plantilla un iterador de entrada más débil, cuyos requisitos de funcionalidad son más mínimos que los garantizados por la clase de iteradores bidireccionales. Los distintos conceptos de iterador forman una familia relacionada por los refinamientos de su funcionalidad. Cada concepto de iterador tiene su propio conjunto de requisitos, y los algoritmos que funcionan con ellos deben limitar sus suposiciones a los requisitos proporcionados por ese tipo de iterador. Se puede suponer que se puede desreferenciar un iterador de entrada para hacer referencia a un objeto y que se puede incrementar hasta el iterador siguiente de la secuencia. Se trata de un conjunto mínimo de función, pero es suficiente para poder comunicarse sobre un intervalo de iteradores [ `First`, `Last`) en el contexto de las funciones miembro de clase.
 
 ### <a name="constructors"></a>Constructores
 
@@ -149,7 +149,7 @@ El iterador proporcionado por la clase del conjunto es un iterador bidireccional
 |-|-|
 |[set](#set)|Construye un conjunto que está vacío o que es una copia de todo o de parte de otro conjunto.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |||
 |-|-|
@@ -205,7 +205,7 @@ El iterador proporcionado por la clase del conjunto es un iterador bidireccional
 |-|-|
 |[operator=](#op_eq)|Reemplaza los elementos de un conjunto con una copia de otro conjunto.|
 
-## <a name="allocator_type"></a> allocator_type
+## <a name="allocator_type"></a>allocator_type
 
 Un tipo que representa la clase de asignador para el objeto de conjunto.
 
@@ -215,9 +215,9 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`allocator_type` es un sinónimo del parámetro de plantilla [asignador](../standard-library/set-class.md).
+`allocator_type` es un sinónimo del [asignador](../standard-library/set-class.md)de parámetros de plantilla.
 
-Devuelve el objeto de función utilizado por un conjunto múltiple para ordenar sus elementos, que es el parámetro de plantilla `Allocator`.
+Devuelve el objeto de función que usa un conjunto múltiple para ordenar sus elementos, que es el parámetro de plantilla `Allocator`.
 
 Para más información sobre `Allocator`, vea la sección Comentarios del tema [set (Clase)](../standard-library/set-class.md).
 
@@ -225,7 +225,7 @@ Para más información sobre `Allocator`, vea la sección Comentarios del tema [
 
 Vea en el ejemplo de [get_allocator](#get_allocator) cómo se usa `allocator_type`.
 
-## <a name="begin"></a> comenzar
+## <a name="begin"></a>inicia
 
 Devuelve un iterador que direcciona el primer elemento del conjunto.
 
@@ -241,7 +241,7 @@ Un iterador bidireccional que se dirige al primer elemento del conjunto o a la u
 
 ### <a name="remarks"></a>Comentarios
 
-Si el valor devuelto de `begin` se asigna a un `const_iterator`, no se puede modificar los elementos del objeto de conjunto. Si el valor devuelto de `begin` se asigna a un `iterator`, se pueden modificar los elementos del objeto de conjunto.
+Si el valor devuelto de `begin` se asigna a un `const_iterator`, no se pueden modificar los elementos del objeto de conjunto. Si el valor devuelto de `begin` se asigna a un `iterator`, se pueden modificar los elementos del objeto de conjunto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -282,9 +282,9 @@ The first element of s1 is 1
 The first element of s1 is now 2
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin (
 
-Devuelve un **const** iterador que direcciona el primer elemento del intervalo.
+Devuelve un iterador **const** que direcciona el primer elemento del intervalo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -292,13 +292,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un **const** iterador de acceso bidireccional que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
+Un iterador **const** de acceso bidireccional que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Comentarios
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
-Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `begin()` y `cbegin()`.
+Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `begin()` y `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -308,9 +308,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
-Devuelve un **const** iterador que direcciona la ubicación situada más allá del último elemento de un intervalo.
+Devuelve un iterador **const** que direcciona la ubicación situada más allá del último elemento de un intervalo.
 
 ```cpp
 const_iterator cend() const;
@@ -318,13 +318,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un **const** iterador de acceso bidireccional que apunta justo después del final del intervalo.
+Un iterador **const** de acceso bidireccional que apunta justo después del final del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
-Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere la posibilidad de `Container` sea modificable (no - **const**) contenedor de cualquier naturaleza que admite `end()` y `cend()`.
+Se puede usar esta función miembro en lugar de la función miembro `end()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, considere `Container` ser un contenedor modificable (no **const**) de cualquier tipo que admita `end()` y `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -336,7 +336,7 @@ auto i2 = Container.cend();
 
 El valor devuelto por `cend` no se debe desreferenciar.
 
-## <a name="clear"></a> Borrar
+## <a name="clear"></a>claridad
 
 Borra todos los elementos de un conjunto.
 
@@ -374,7 +374,7 @@ The size of the set is initially 2.
 The size of the set after clearing is 0.
 ```
 
-## <a name="const_iterator"></a> const_iterator
+## <a name="const_iterator"></a>const_iterator
 
 Un tipo que proporciona un iterador bidireccional que puede leer un elemento **const** del conjunto.
 
@@ -390,7 +390,7 @@ Un tipo `const_iterator` no se puede utilizar para modificar el valor de un elem
 
 Vea en el ejemplo de [begin](#begin) cómo se usa `const_iterator`.
 
-## <a name="const_pointer"></a> const_pointer
+## <a name="const_pointer"></a>const_pointer
 
 Un tipo que proporciona un puntero a un elemento **const** en un conjunto.
 
@@ -404,7 +404,7 @@ Un tipo `const_pointer` no se puede utilizar para modificar el valor de un eleme
 
 En la mayoría de los casos, se debe usar un [const_iterator](#const_iterator) para obtener acceso a los elementos de un objeto de conjunto constante.
 
-## <a name="const_reference"></a> const_reference
+## <a name="const_reference"></a>const_reference
 
 Un tipo que proporciona una referencia a un elemento **const** almacenado en un conjunto para leer operaciones **const** y realizarlas.
 
@@ -445,7 +445,7 @@ int main( )
 The first element in the set is 10.
 ```
 
-## <a name="const_reverse_iterator"></a> const_reverse_iterator
+## <a name="const_reverse_iterator"></a>const_reverse_iterator
 
 Un tipo que proporciona un iterador bidireccional que puede leer cualquier elemento **const** del conjunto.
 
@@ -461,7 +461,7 @@ Un tipo `const_reverse_iterator` no puede modificar el valor de un elemento. Se 
 
 Vea el ejemplo de [rend](#rend) para obtener un ejemplo de cómo declarar y usar `const_reverse_iterator`.
 
-## <a name="count"></a> recuento
+## <a name="count"></a>contabiliza
 
 Devuelve el número de elementos de un conjunto cuya clave coincide con una clave especificada por un parámetro.
 
@@ -471,7 +471,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+\ *clave*
 Clave de los elementos del conjunto que deben coincidir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -482,7 +482,7 @@ Es 1 si el conjunto contiene un elemento cuyo criterio de ordenación coincide c
 
 La función miembro devuelve el número de elementos del intervalo siguiente:
 
-\[ lower_bound(*key*), upper_bound(*key*) ).
+\[ lower_bound (*clave*), upper_bound (*clave*)).
 
 ### <a name="example"></a>Ejemplo
 
@@ -519,7 +519,7 @@ The number of elements in s1 with a sort key of 1 is: 1.
 The number of elements in s1 with a sort key of 2 is: 0.
 ```
 
-## <a name="crbegin"></a> crbegin
+## <a name="crbegin"></a>crbegin
 
 Devuelve un iterador const que direcciona el primer elemento de un set invertido.
 
@@ -565,7 +565,7 @@ int main( )
 The first element in the reversed set is 30.
 ```
 
-## <a name="crend"></a> crend
+## <a name="crend"></a>crend
 
 Devuelve un iterador const que direcciona la ubicación que sigue al último elemento de un set invertido.
 
@@ -609,7 +609,7 @@ int main() {
 }
 ```
 
-## <a name="difference_type"></a> difference_type
+## <a name="difference_type"></a>difference_type
 
 Tipo entero con signo que se puede usar para representar el número de elementos de un conjunto en un intervalo entre elementos a los que apuntan los iteradores.
 
@@ -682,7 +682,7 @@ The number '20' occurs 1 times in set s1.
 The number of elements in the set s1 is: 2.
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a>Emplace
 
 Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento).
 
@@ -695,7 +695,7 @@ emplace(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
 |*args*|Argumentos reenviados para construir un elemento que se va a insertar en el conjunto, a menos que ya contenga un elemento cuyo valor esté ordenado de forma equivalente.|
 
@@ -763,7 +763,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a> emplace_hint
+## <a name="emplace_hint"></a>emplace_hint
 
 Inserta un elemento construido en contexto (no se realiza ninguna operación de copia o de movimiento), con una sugerencia de colocación.
 
@@ -776,11 +776,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Parámetros
 
-*args*\
+\ *args*
 Argumentos reenviados para construir un elemento que se va a insertar en el conjunto a menos que el conjunto ya contenga ese elemento o, más en general, a menos que ya contenga un elemento cuyo valor esté ordenado de manera equivalente.
 
-*Donde*\
-Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)
+*dónde* \
+Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente *a, la*inserción se puede realizar en tiempo constante amortizado en lugar de en tiempo logarítmico).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -838,7 +838,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a> vacío
+## <a name="empty"></a>vacía
 
 Comprueba si un conjunto está vacío.
 
@@ -881,7 +881,7 @@ The set s1 is not empty.
 The set s2 is empty.
 ```
 
-## <a name="end"></a> final
+## <a name="end"></a>extremo
 
 Devuelve el iterador más allá del final.
 
@@ -903,7 +903,7 @@ El valor devuelto por **end** no se debe desreferenciar.
 
 Para obtener un ejemplo de código, vea [set::find](#find).
 
-## <a name="equal_range"></a> equal_range
+## <a name="equal_range"></a>equal_range
 
 Devuelve un par de iteradores, respectivamente, al primer elemento de un conjunto con una clave mayor o igual que una clave especificada y al primer elemento del conjunto con una clave mayor que la clave especificada.
 
@@ -915,7 +915,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+\ *clave*
 La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -982,7 +982,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The set s1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a> Borrar
+## <a name="erase"></a>fondos
 
 Quita un elemento o un intervalo de elementos de un conjunto de las posiciones especificadas o quita los elementos que coinciden con una clave especificada.
 
@@ -1000,16 +1000,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*Donde*\
+*Dónde* \
 Posición del elemento que se va a quitar.
 
-*Primero*\
+*Primer* \
 Posición del primer elemento que se va a quitar.
 
-*Último*\
+*Última* \
 Posición situada más allá del último elemento que se va a quitar.
 
-*Clave*\
+@No__t_1 *clave*
 Valor de clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1096,7 +1096,7 @@ int main()
 }
 ```
 
-## <a name="find"></a> Buscar
+## <a name="find"></a>localización
 
 Devuelve un iterador que hace referencia a la ubicación de un elemento en un conjunto que tiene una clave equivalente a una clave especificada.
 
@@ -1108,7 +1108,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+\ *clave*
 El valor de clave que debe coincidir con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1117,9 +1117,9 @@ Un iterador que hace referencia a la ubicación de un elemento con una clave esp
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve un iterador que hace referencia a un elemento del conjunto cuya clave equivale al argumento *clave* de un predicado binario que induce una ordenación basada en una relación de comparabilidad menor que.
+La función miembro devuelve un iterador que hace referencia a un elemento del conjunto cuya clave es equivalente a la *clave* de argumento de un predicado binario que induce a una ordenación basada en una relación de comparabilidad menor que.
 
-Si el valor devuelto de `find` se asigna a un `const_iterator`, no se puede modificar el objeto de conjunto. Si el valor devuelto de `find` se asigna a un `iterator`, se puede modificar el objeto de conjunto
+Si el valor devuelto de `find` se asigna a un `const_iterator`, el objeto de conjunto no se puede modificar. Si el valor devuelto de `find` se asigna a un `iterator`, el objeto de conjunto se puede modificar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1182,7 +1182,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Devuelve una copia del objeto de asignador usado para construir el conjunto.
 
@@ -1256,7 +1256,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a> Insertar
+## <a name="insert"></a>introducir
 
 Inserta un elemento o un intervalo de elementos en un conjunto.
 
@@ -1296,30 +1296,30 @@ IList);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*\
+@No__t_1 *Val*
 Valor de un elemento que se va a insertar en el conjunto a menos que ya contenga un elemento cuyo valor se ordena de forma equivalente.
 
-*Donde*\
-Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)
+*Dónde* \
+Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente *a, la*inserción se puede realizar en tiempo constante amortizado en lugar de en tiempo logarítmico).
 
-*ValTy*\
-Parámetro de plantilla que especifica el tipo de argumento que el conjunto puede usar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.
+@No__t_1 *ValTy*
+Parámetro de plantilla que especifica el tipo de argumento que el conjunto puede usar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y reenvía de forma perfecta el valor de *Val* como argumento.
 
-*Primero*\
+*Primer* \
 Posición del primer elemento que se va a copiar.
 
-*Último*\
+*Última* \
 Posición situada más allá del último elemento que se va a copiar.
 
-*InputIterator*\
+@No__t_1 *InputIterator*
 Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).
 
-*IList*\
+*IList* \
 El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Las funciones miembro de un único elemento, (1) y (2), devuelven un [par](../standard-library/pair-structure.md) cuyo **bool** componente es true si se realizó una inserción y false si el conjunto ya contenía un elemento de valor equivalente en el ordenación. El componente de iterador del par de valor devuelto apunta al elemento recién insertado si el **bool** componente es true, o al elemento existente si la **bool** componente es false.
+Las funciones miembro de un solo elemento, (1) y (2), devuelven un [par](../standard-library/pair-structure.md) cuyo componente **bool** es true si se realizó una inserción y false si el conjunto ya contenía un elemento de un valor equivalente en la ordenación. El componente de iterador del par de valor devuelto apunta al elemento recién insertado si el componente **bool** es true, o al elemento existente si el componente **bool** es false.
 
 Las funciones miembro un solo elemento con sugerencia, (3) y (4), devuelven un iterador que apunta a la posición donde se insertó el nuevo elemento en el conjunto, o bien, si ya existe un elemento con una clave equivalente, al elemento existente.
 
@@ -1329,9 +1329,9 @@ Esta función no invalida ningún iterador, puntero o referencia.
 
 Durante la inserción de un solo elemento, si se produce una excepción, no se modifica el estado del contenedor. Durante la inserción de varios elementos, si se produce una excepción, el contenedor se deja en un estado sin especificar pero válido.
 
-Para tener acceso al componente de iterador de un `pair` `pr` devuelto por la función miembro de un único elemento, utilice `pr.first`; para desreferenciar el iterador dentro del par devuelto, utilice `*pr.first`, especificando un elemento. Para tener acceso a la **bool** componente, use `pr.second`. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
+Para tener acceso al componente de iterador de un `pair` `pr` devuelto por la función miembro de un único elemento, utilice `pr.first`; para desreferenciar el iterador dentro del par devuelto, utilice `*pr.first`, especificando un elemento. Para tener acceso al componente **bool** , use `pr.second`. Para obtener un ejemplo, vea el código de ejemplo que se muestra más adelante en este artículo.
 
-El [value_type](../standard-library/map-class.md#value_type) de un contenedor es una definición de tipos que pertenece al contenedor y, para set, `set<V>::value_type` es de tipo `const V`.
+El objeto [value_type](../standard-library/map-class.md#value_type) de un contenedor es una definición de tipo que pertenece al contenedor y, para set, `set<V>::value_type` es de tipo `const V`.
 
 La función miembro de intervalo (5) inserta la secuencia de valores de elemento en un conjunto que corresponde a cada elemento direccionado por un iterador en el intervalo `[First, Last)`; por tanto, `Last` no se inserta. La función miembro de contenedor `end()` hace referencia a la posición situada justo después del último elemento del contenedor; por ejemplo, la instrucción `s.insert(v.begin(), v.end());` intenta insertar todos los elementos de `v` en `s`. Solo se insertan los elementos que tienen valores únicos en el intervalo; se omiten los duplicados. Para observar qué elementos se rechazan, utilice las versiones de un solo elemento de `insert`.
 
@@ -1437,7 +1437,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a> iterador
+## <a name="iterator"></a>apunta
 
 Un tipo que proporciona un [iterador bidireccional](../standard-library/bidirectional-iterator-tag-struct.md) constante que puede leer cualquier elemento de un conjunto.
 
@@ -1447,9 +1447,9 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [comenzar](#begin) para obtener un ejemplo de cómo declarar y usar un `iterator`.
+Vea el ejemplo de [Begin](#begin) para obtener un ejemplo de cómo declarar y usar un `iterator`.
 
-## <a name="key_comp"></a> key_comp
+## <a name="key_comp"></a>key_comp
 
 Recupera una copia del objeto de comparación utilizado para ordenar claves de un conjunto.
 
@@ -1467,7 +1467,7 @@ Para más información sobre `Traits`, vea el tema [set (Clase)](../standard-lib
 
 El objeto almacenado define la función miembro:
 
-**BOOL operator()** (**clave const &** `_xVal`, **clave const &** `_yVal`);
+**operador bool ()** (**clave const &** `_xVal`, **clave const &** `_yVal`);
 
 que devuelve **True** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.
 
@@ -1524,7 +1524,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of s2.
 ```
 
-## <a name="key_compare"></a> key_compare
+## <a name="key_compare"></a>key_compare
 
 Tipo que proporciona un objeto de función que puede comparar dos criterios de ordenación para determinar el orden relativo de dos elementos en el conjunto.
 
@@ -1538,13 +1538,13 @@ typedef Traits key_compare;
 
 Para más información sobre `Traits`, vea el tema [set (Clase)](../standard-library/set-class.md).
 
-Tenga en cuenta que ambos `key_compare` y [value_compare](#value_compare) son sinónimos para el parámetro de plantilla `Traits`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
+Tenga en cuenta que tanto `key_compare` como [value_compare](#value_compare) son sinónimos para el parámetro de plantilla `Traits`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [key_comp](#key_comp) para obtener un ejemplo de cómo declarar y usar `key_compare`.
 
-## <a name="key_type"></a> KEY_TYPE
+## <a name="key_type"></a>key_type
 
 Un tipo que describe un objeto almacenado como un elemento de un conjunto en su capacidad como criterio de ordenación.
 
@@ -1558,13 +1558,13 @@ typedef Key key_type;
 
 Para más información sobre `Key`, vea la sección Comentarios del tema [set (Clase)](../standard-library/set-class.md).
 
-Tenga en cuenta que ambos `key_type` y [value_type](#value_type) son sinónimos para el parámetro de plantilla `Key`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
+Tenga en cuenta que tanto `key_type` como [value_type](#value_type) son sinónimos para el parámetro de plantilla `Key`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [value_type](#value_type) para obtener un ejemplo de cómo declarar y usar `key_type`.
 
-## <a name="lower_bound"></a> lower_bound
+## <a name="lower_bound"></a>lower_bound
 
 Devuelve un iterador al primer elemento de un conjunto cuyo valor de clave es igual o mayor que el de una clave especificada.
 
@@ -1576,7 +1576,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+\ *clave*
 La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1632,7 +1632,7 @@ The set s1 doesn't have an element with a key of 40.
 The element of s1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="max_size"></a> max_size
+## <a name="max_size"></a>max_size
 
 Devuelve la longitud máxima del conjunto.
 
@@ -1664,7 +1664,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
 Reemplaza los elementos de este `set` con elementos de otro `set`.
 
@@ -1676,14 +1676,14 @@ set& operator=(set&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Correcto*\
+\ *derecha*
 El `set` que proporciona los nuevos elementos que se asignarán a este `set`.
 
 ### <a name="remarks"></a>Comentarios
 
-La primera versión de `operator=` usa un [referencia lvalue](../cpp/lvalue-reference-declarator-amp.md) para *derecho*, para copiar los elementos de *derecho* a este `set`.
+La primera versión de `operator=` usa una [referencia lvalue](../cpp/lvalue-reference-declarator-amp.md) para *el derecho*, para copiar elementos de *derecha* a este `set`.
 
-La segunda versión usa una [referencia de rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) para right. Mueve los elementos de *derecho* a este `set`.
+La segunda versión usa una [referencia de rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) para right. Mueve los elementos de la *derecha* a esta `set`.
 
 Antes de que se ejecute la función de operador, se descartan todos los elementos en este `set`.
 
@@ -1724,7 +1724,7 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a> puntero
+## <a name="pointer"></a>puntero
 
 Tipo que proporciona un puntero a un elemento de un conjunto.
 
@@ -1738,7 +1738,7 @@ Se puede usar un **puntero** de tipo para modificar el valor de un elemento.
 
 En la mayoría de los casos, se debe usar un [iterador](#iterator) para obtener acceso a los elementos de un objeto de conjunto.
 
-## <a name="rbegin"></a> rbegin
+## <a name="rbegin"></a>rbegin
 
 Devuelve un iterador que direcciona el primer elemento en un conjunto invertido.
 
@@ -1814,7 +1814,7 @@ The reversed set is: 30 20 10
 After the erasure, the first element in the reversed set is 20.
 ```
 
-## <a name="reference"></a> Referencia
+## <a name="reference"></a>referencia
 
 Tipo que proporciona una referencia a un elemento almacenado en un conjunto.
 
@@ -1850,7 +1850,7 @@ int main( )
 The first element in the set is 10.
 ```
 
-## <a name="rend"></a> rend)
+## <a name="rend"></a>Rend
 
 Devuelve un iterador que direcciona la ubicación que sigue al último elemento en un conjunto invertido.
 
@@ -1921,7 +1921,7 @@ int main() {
 }
 ```
 
-## <a name="reverse_iterator"></a> reverse_iterator
+## <a name="reverse_iterator"></a>reverse_iterator
 
 Tipo que proporciona un iterador bidireccional que puede leer o modificar un elemento en un conjunto invertido.
 
@@ -1937,7 +1937,7 @@ Un tipo `reverse_iterator` se usa para procesar una iteración en el conjunto en
 
 Vea el ejemplo de [rbegin](#rbegin) para obtener un ejemplo de cómo declarar y usar `reverse_iterator`.
 
-## <a name="set"></a> Conjunto
+## <a name="set"></a>conjunto
 
 Construye un conjunto que está vacío o que es una copia de todo o de parte de otro conjunto.
 
@@ -1990,22 +1990,22 @@ set(
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*\
-La clase de asignador de almacenamiento que se usará para este objeto de conjunto, cuyo valor predeterminado es `Allocator`.
+*Al* \
+La clase de asignador de almacenamiento que se va a usar para este objeto de conjunto, cuyo valor predeterminado es `Allocator`.
 
-*Comp.* \
+@No__t_1 *COMP*
 Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos del conjunto, que de forma predeterminada es `Compare`.
 
-*Derecho*\
+@No__t_1 *rght*
 Conjunto del que el conjunto construido va a ser una copia.
 
-*Primero*\
+*Primer* \
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*Último*\
+*Última* \
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
-*IList*\
+*IList* \
 initializer_list de la que se van a copiar los elementos.
 
 ### <a name="remarks"></a>Comentarios
@@ -2014,15 +2014,15 @@ Todos los constructores almacenan un tipo de objeto de asignador que administra 
 
 Todos los constructores inicializan sus conjuntos.
 
-Todos los constructores almacenan un objeto de función de tipo `Traits` que se usa para establecer un orden entre las claves del conjunto y que puede devolver más adelante mediante una llamada a [key_comp](#key_comp).
+Todos los constructores almacenan un objeto de función de tipo `Traits` que se usa para establecer un orden entre las claves del conjunto y que se puede devolver más adelante llamando a [key_comp](#key_comp).
 
-Los tres primeros constructores especifican un conjunto inicial vacío, el segundo especifica el tipo de función de comparación (`comp`) que se utilizará para establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (`al`) que se va a utilizar. La palabra clave **explicit** suprime ciertos tipos de conversión automática de tipos.
+Los tres primeros constructores especifican un conjunto inicial vacío, el segundo especifica el tipo de función de comparación (`comp`) que se utilizará para establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (`al`) que se va a utilizar. La palabra clave **explicit** suprime ciertas clases de conversión automática de tipos.
 
 El cuarto constructor especifica una copia del conjunto `right`.
 
 Los tres constructores siguientes utilizan una initializer_list para especificar los elementos.
 
-Los tres constructores siguientes copian el intervalo [ `first`, `last`) de un conjunto especificando el tipo de función de comparación de clase `Traits` y **asignador**.
+Los tres constructores siguientes copian el intervalo [`first`, `last`) de un conjunto con aumento de la explícito en la especificación del tipo de función de comparación de la clase `Traits` y el **asignador**.
 
 El octavo constructor especifica una copia del conjunto moviendo `right`.
 
@@ -2138,7 +2138,7 @@ int main()
 s1 = 10 20 30 40s2 = 10 20s3 = 30s4 = 10 20 30 40s5 = 10 20s6 = 10s7 = 10 20s8 = 1 2 3 4s9 = 5 6 7 8s10 = 10 20 30 40
 ```
 
-## <a name="size"></a> Tamaño
+## <a name="size"></a>ajusta
 
 Devuelve el número de elementos del conjunto.
 
@@ -2179,7 +2179,7 @@ The set length is 1.
 The set length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Tipo entero sin signo que puede representar el número de elementos de un conjunto.
 
@@ -2191,7 +2191,7 @@ typedef typename allocator_type::size_type size_type;
 
 Vea el ejemplo de [size](#size) para obtener un ejemplo de cómo declarar y usar `size_type`
 
-## <a name="swap"></a> intercambio
+## <a name="swap"></a>pasar
 
 Intercambia los elementos de dos conjuntos.
 
@@ -2202,7 +2202,7 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Correcto*\
+\ *derecha*
 El conjunto de argumentos que proporciona los elementos que se van a intercambiar con el conjunto de destino.
 
 ### <a name="remarks"></a>Comentarios
@@ -2259,7 +2259,7 @@ After swapping with s2, list s1 is: 100 200.
 After swapping with s3, list s1 is: 300.
 ```
 
-## <a name="upper_bound"></a> upper_bound
+## <a name="upper_bound"></a>upper_bound
 
 Devuelve un iterador al primer elemento de un conjunto con una clave que es mayor que una clave especificada.
 
@@ -2271,12 +2271,12 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+\ *clave*
 La clave de argumento que se comparará con la clave de ordenación de un elemento del conjunto que se está buscando.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un `iterator` o `const_iterator` que se dirige la ubicación de un elemento en un conjunto que tiene una clave que es mayor que la clave de argumento o que direcciona la ubicación siguiente al último elemento del conjunto si no coinciden con se encuentra para la clave.
+@No__t_0 o `const_iterator` que direcciona la ubicación de un elemento en un conjunto que tiene una clave mayor que la clave de argumento o que se dirige a la ubicación siguiente al último elemento del conjunto si no se encuentra ninguna coincidencia con la clave.
 
 ### <a name="example"></a>Ejemplo
 
@@ -2327,7 +2327,7 @@ The first element of s1 with a key greater than
 that of the initial element of s1 is: 20.
 ```
 
-## <a name="value_comp"></a> value_comp
+## <a name="value_comp"></a>value_comp
 
 Recupera una copia del objeto de comparación utilizado para ordenar valores de elemento de un conjunto.
 
@@ -2345,7 +2345,7 @@ Para más información sobre `Traits`, vea el tema [set (Clase)](../standard-lib
 
 El objeto almacenado define la función miembro:
 
-**BOOL (operador)** (**clave const &** `_xVal`, **clave const &** `_yVal`);
+**operador bool**(**clave const &** `_xVal`, **clave const &** `_yVal`);
 
 que devuelve **True** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.
 
@@ -2402,7 +2402,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of s1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.
 ```
 
-## <a name="value_compare"></a> value_compare)
+## <a name="value_compare"></a>value_compare
 
 Un tipo que proporciona un objeto de función que puede comparar dos valores de elemento para determinar su orden relativo en el conjunto.
 
@@ -2416,13 +2416,13 @@ typedef key_compare value_compare;
 
 Para más información sobre `Traits`, vea el tema [set (Clase)](../standard-library/set-class.md).
 
-Tenga en cuenta que ambos [key_compare](#key_compare) y `value_compare` son sinónimos para el parámetro de plantilla `Traits`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
+Tenga en cuenta que tanto [key_compare](#key_compare) como `value_compare` son sinónimos para el parámetro de plantilla `Traits`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [value_comp](#value_comp) para ver cómo se declara y usa `value_compare`.
+Vea el ejemplo de [value_comp](#value_comp) para obtener un ejemplo de cómo declarar y usar `value_compare`.
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Un tipo que describe un objeto almacenado como un elemento de un conjunto en su capacidad como valor.
 
@@ -2436,7 +2436,7 @@ typedef Key value_type;
 
 Para más información sobre `Key`, vea la sección Comentarios del tema [set (Clase)](../standard-library/set-class.md).
 
-Tenga en cuenta que ambos [key_type](#key_type) y `value_type` son sinónimos para el parámetro de plantilla `Key`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
+Tenga en cuenta que tanto [key_type](#key_type) como `value_type` son sinónimos para el parámetro de plantilla `Key`. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.
 
 ### <a name="example"></a>Ejemplo
 

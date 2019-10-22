@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458598"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689820"
 ---
 # <a name="collate-class"></a>collate (Clase)
 
-Una clase de plantilla que describe un objeto que puede actuar como faceta de configuración regional para controlar la ordenación y agrupación de los caracteres de una cadena, las comparaciones entre ellos y el hash de las cadenas.
+Una plantilla de clase que describe un objeto que puede actuar como una faceta de configuración regional para controlar la ordenación y agrupación de los caracteres de una cadena, las comparaciones entre ellos y el hash de las cadenas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo usado dentro de un programa para codificar caracteres.
 
 ## <a name="remarks"></a>Comentarios
@@ -51,20 +51,20 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[collate](#collate)|El constructor para los objetos de la clase `collate` que actúa como una faceta de configuración regional para controlar las convenciones de ordenación de cadenas.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Un tipo que describe un carácter de tipo `CharType`.|
 |[string_type](#string_type)|Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[compare](#compare)|Compara la igualdad o la desigualdad de dos secuencias de caracteres según las reglas específicas de su faceta.|
 |[do_compare](#do_compare)|Función virtual a la que se llama para comparar la igualdad o la desigualdad de dos secuencias de caracteres según las reglas específicas de su faceta.|
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-*_Locname*\
+@No__t_1 *_Locname*
 El nombre de la configuración regional.
 
 ### <a name="remarks"></a>Comentarios
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: La duración del objeto debe administrarse manualmente.
+- 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: Estos valores no están definidos.
+- \> 1: estos valores no están definidos.
 
-El constructor inicializa su objeto base con **locale::** [Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+El constructor inicializa su objeto base con **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="compare"></a>  collate::compare
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parámetros
 
-*first1*\
+\ *first1*
 Puntero al primer elemento en la primera secuencia que se va a comparar.
 
-*last1*\
+\ *last1*
 Puntero al último elemento en la primera secuencia que se va a comparar.
 
-*first2*\
+\ *first2*
 Puntero al primer elemento en la segunda secuencia que se va a comparar.
 
-*last2*\
+\ *last2*
 Puntero al último elemento en la segunda secuencia que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parámetros
 
-*first1*\
+\ *first1*
 Puntero al primer elemento en la primera secuencia que se va a comparar.
 
-*last1*\
+\ *last1*
 Puntero al último elemento en la primera secuencia que se va a comparar.
 
-*first2*\
+\ *first2*
 Puntero al primer elemento en la segunda secuencia que se va a comparar.
 
-*last2*\
+\ *last2*
 Puntero al último elemento en la segunda secuencia que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -229,7 +229,7 @@ La función miembro devuelve:
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida compara la secuencia en [* first1, Last1) * con la secuencia en *[first2, last2*). Compara los valores aplicando `operator<` entre pares de elementos correspondientes de tipo. `CharType` La primera secuencia compara menos si tiene el menor elemento del par desigual más antiguo en las secuencias o, si no existe ningún par desigual, pero la primera secuencia es más corta.
+La función miembro virtual protegida compara la secuencia en [* first1, Last1) * con la secuencia en *[first2, last2*). Compara los valores aplicando `operator<` entre pares de elementos correspondientes de tipo `CharType`. La primera secuencia compara menos si tiene el menor elemento del par desigual más antiguo en las secuencias o, si no existe ningún par desigual, pero la primera secuencia es más corta.
 
 ### <a name="example"></a>Ejemplo
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar*\
+*primer* \
 Un puntero al primer carácter de la secuencia cuyo valor hash tiene que determinarse.
 
-*guardado*\
+*última* \
 Un puntero al último carácter de la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar*\
+*primer* \
 Un puntero al primer carácter de la secuencia que se va a convertir.
 
-*guardado*\
+*última* \
 Un puntero al último carácter de la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar*\
+*primer* \
 Un puntero al primer carácter de la secuencia cuyo valor hash tiene que determinarse.
 
-*guardado*\
+*última* \
 Un puntero al último carácter de la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo describe una especialización de clase de plantilla [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de la secuencia de origen.
+El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de la secuencia de origen.
 
 ### <a name="example"></a>Ejemplo
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar*\
+*primer* \
 Un puntero al primer carácter de la secuencia que se va a convertir.
 
-*guardado*\
+*última* \
 Un puntero al último carácter de la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto

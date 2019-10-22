@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458999"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685866"
 ---
-# <a name="studenttdistribution-class"></a>student_t_distribution (Clase)
+# <a name="student_t_distribution-class"></a>student_t_distribution (Clase)
 
 Genera una distribución *t* de Student.
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*\
+@No__t_1 *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución *t*de Student. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución *t*de Student. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -78,7 +78,7 @@ La clase de plantilla describe una distribución que genera valores de un tipo d
 
 La función de propiedad `n()` devuelve el valor del parámetro de distribución almacenado `n`.
 
-Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
 Para obtener más detalles sobre el algoritmo de la distribución *t* de Student, vea el artículo de Wolfram MathWorld sobre [Distribución t de Students](http://mathworld.wolfram.com/Studentst-Distribution.html).
 
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 El parámetro de distribución `n`.
 
-*PARM*\
+\ *PARM*
 Paquete de parámetros utilizado para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 El parámetro de distribución `n`.
 
-*correcta*\
+\ *derecha*
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios
