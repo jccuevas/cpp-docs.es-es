@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5263612a26b2bcb606ad712a2a8e0a521ce9437a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244544"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688208"
 ---
-# <a name="constmemfunt-class"></a>const_mem_fun_t (Clase)
+# <a name="const_mem_fun_t-class"></a>const_mem_fun_t (Clase)
 
-Clase de adaptadores que permite llamar a una función miembro const que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia. En desuso en C ++ 11, se ha quitado en C ++ 17.
+Clase de adaptadores que permite llamar a una función miembro const que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia. En desuso en C++ 11, se ha quitado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,11 +30,11 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parámetros
 
-*P. M.* \
+@No__t_1 *PM*
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
-*Pleft*\
-El objeto que la *Pm* función miembro se llama en.
+@No__t_1 *Pleft*
+Objeto en el que se llama a la función miembro *PM* .
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -42,7 +42,7 @@ Una función unaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de *Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` que devuelva (`Pleft` -> \* `Pm`) () **const**.
+La plantilla de clase almacena una copia de *PM*, que debe ser un puntero a una función miembro de la clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` como si devuelve (`Pleft` -> \* `Pm`) () **const**.
 
 ## <a name="example"></a>Ejemplo
 

@@ -45,26 +45,26 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 7dd72550bc8658158b399e88573526269202f8f4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bd5df2917d377e7bc119d1aa85a32c4d5149c305
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450433"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686431"
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex>
+# <a name="ltshared_mutex"></a>&lt;shared_mutex >
 
-El &lt;encabezado shared_mutex > proporciona primitivas de sincronización para la protección de datos compartidos a los que pueden tener acceso varios subprocesos. Además del control de acceso exclusivo proporcionado por las clases mutex, las clases mutex compartidas también permiten la propiedad compartida por varios subprocesos para el acceso no exclusivo. Las exclusiones mutuas compartidas pueden usarse para controlar los recursos que varios subprocesos pueden leer sin causar una condición de carrera, pero se deben escribir exclusivamente por un único subproceso.
+El encabezado &lt;shared_mutex > proporciona primitivas de sincronización para la protección de datos compartidos a los que pueden tener acceso varios subprocesos. Además del control de acceso exclusivo proporcionado por las clases mutex, las clases mutex compartidas también permiten la propiedad compartida por varios subprocesos para el acceso no exclusivo. Las exclusiones mutuas compartidas pueden usarse para controlar los recursos que varios subprocesos pueden leer sin causar una condición de carrera, pero se deben escribir exclusivamente por un único subproceso.
 
-El encabezado &lt;shared_mutex > define las clases `shared_mutex` y `shared_timed_mutex`, la clase `shared_lock`de plantilla y la función `swap` de plantilla para la compatibilidad con la exclusión mutua compartida.
+El encabezado &lt;shared_mutex > define las clases `shared_mutex` y `shared_timed_mutex`, la plantilla de clase `shared_lock` y la función de plantilla `swap` para la compatibilidad con la exclusión mutua compartida.
 
-|Clases|DESCRIPCIÓN|
+|Clases|Descripción|
 |-------------|-----------------|
 |[shared_mutex (Clase)](#class_shared_mutex)|Un tipo de exclusión mutua compartida que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|
 |[shared_timed_mutex (Clase)](#class_shared_timed_mutex)|Un tipo de exclusión mutua compartida temporizada que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|
-|[shared_lock (Clase)](#class_shared_lock)|Una clase de plantilla que contiene una exclusión mutua compartida para admitir operaciones de bloqueo temporizado y que se puede compartir de manera no exclusiva por varios agentes.|
+|[shared_lock (Clase)](#class_shared_lock)|Una plantilla de clase que contiene una exclusión mutua compartida para admitir las operaciones de bloqueo temporizado y el uso compartido no exclusivo por parte de varios agentes.|
 
-|Funciones|DESCRIPCIÓN|
+|Funciones|Descripción|
 |---------------|-----------------|
 |[swap](#function_swap)|Intercambia el contenido de los objetos de exclusión mutua compartida al que hacen referencia los parámetros de función.|
 
@@ -101,10 +101,10 @@ Un tipo de exclusión mutua compartida temporizada admite los métodos adicional
 
 - El método `try_lock_shared_until` intenta obtener la propiedad compartida de la exclusión mutua hasta que haya transcurrido el tiempo absoluto especificado. Si ya ha pasado el tiempo especificado, el método es equivalente a `try_lock_shared`. El método no devuelve antes del tiempo especificado, a menos que se obtenga la propiedad compartida. Su valor devuelto es **true** si el método obtiene la propiedad, pero en caso contrario, es **false**.
 
-La clase de plantilla `shared_lock` extiende el soporte para el bloqueo temporizado y transfiere la propiedad a una exclusión mutua compartida. La propiedad de la exclusión mutua puede obtenerse en el momento de la construcción o después, y se puede transferir a otro objeto `shared_lock`. Los objetos de tipo `shared_lock` se pueden mover pero no copiar.
+La plantilla de clase `shared_lock` amplía la compatibilidad con el bloqueo temporizado y la transferencia de la propiedad a una exclusión mutua compartida. La propiedad de la exclusión mutua puede obtenerse en el momento de la construcción o después, y se puede transferir a otro objeto `shared_lock`. Los objetos de tipo `shared_lock` se pueden mover pero no copiar.
 
 > [!WARNING]
-> A partir de Visual Studio 2015, C++ los tipos de sincronización de la biblioteca estándar se basan en los primitivos de sincronización de Windows y ya no usan ConcRT (excepto cuando la plataforma de destino es Windows XP). Los tipos definidos en &lt;shared_mutex > no deben usarse con ninguna función o tipo de ConcRT.
+> A partir de Visual Studio 2015, C++ los tipos de sincronización de la biblioteca estándar se basan en los primitivos de sincronización de Windows y ya no usan ConcRT (excepto cuando la plataforma de destino es Windows XP). Los tipos definidos en &lt;shared_mutex > no deben usarse con ninguna función o tipo ConcRT.
 
 ## <a name="classes"></a>Clases
 
@@ -169,7 +169,7 @@ public:
 
 ###  <a name="class_shared_lock"></a> shared_lock (Clase)
 
-La clase de plantilla `shared_lock` controla la propiedad compartida de un objeto de exclusión mutua compartida dentro de un ámbito. El parámetro de plantilla debe ser un tipo de exclusión mutua compartida.
+La plantilla de clase `shared_lock` controla la propiedad compartida de un objeto de exclusión mutua compartida dentro de un ámbito. El parámetro de plantilla debe ser un tipo de exclusión mutua compartida.
 
 ```cpp
 class shared_lock {

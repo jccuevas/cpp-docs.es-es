@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459862"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688295"
 ---
-# <a name="codecvtbyname-class"></a>codecvt_byname (Clase)
+# <a name="codecvt_byname-class"></a>codecvt_byname (Clase)
 
-Una clase de plantilla derivada que describe un objeto que puede actuar como faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las conversiones.
+Una plantilla de clase derivada que describe un objeto que puede actuar como una faceta de intercalación de una configuración regional determinada, lo que permite la recuperación de información específica de un área cultural relativa a las conversiones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,10 +43,10 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*\
+@No__t_1 *_Locname*
 Una configuración regional con nombre.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios

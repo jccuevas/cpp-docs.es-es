@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: a8b343fbe5e175828b4b8470da486a6dea9f3455
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 708e16cb4b8a1640f4978b806bc52beed24decd4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457008"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688062"
 ---
-# <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
+# <a name="ltforward_listgt"></a>&lt;forward_list&gt;
 
-Define la forward_list de clases de plantilla de contenedores y varias plantillas auxiliares.
+Define la plantilla de clase de contenedor forward_list y varias plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,7 +24,7 @@ Define la forward_list de clases de plantilla de contenedores y varias plantilla
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<Biblioteca > de forward_list también utiliza `#include <initializer_list>` la instrucción.
+> La biblioteca de > de \<forward_list también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
