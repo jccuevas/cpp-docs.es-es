@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb44a371630a66275f6ef59a0bf66b4cb73a71f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448808"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689555"
 ---
-# <a name="hashcompare-class"></a>hash_compare (Clase)
+# <a name="hash_compare-class"></a>hash_compare (Clase)
 
-La clase de plantilla describe un objeto que se puede usar con cualquiera de los contenedores asociativos hash (hash_map, hash_multimap, hash_set o hash_multiset) como un objeto de parámetro **Traits** predeterminado para ordenar y aplicar algoritmos hash a los elementos que contienen.
+La plantilla de clase describe un objeto que puede usar cualquiera de los contenedores asociativos hash (hash_map, hash_multimap, hash_set o hash_multiset) como objeto de parámetro **traits** predeterminado para ordenar y aplicar un algoritmo hash a los elementos que contienen.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,15 +23,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Comentarios
 
-Cada contenedor asociativo hash almacena un objeto traits hash de tipo `Traits` (un parámetro de plantilla). Puede derivar una clase de una especialización de hash_compare para reemplazar de forma selectiva ciertas funciones y objetos o puede proporcionar su propia versión de esta clase si cumple ciertos requisitos mínimos. En concreto, para un objeto hash_comp de `hash_compare<Key, Traits>`tipo, los contenedores anteriores requieren el siguiente comportamiento:
+Cada contenedor asociativo hash almacena un objeto traits hash de tipo `Traits` (un parámetro de plantilla). Puede derivar una clase de una especialización de hash_compare para reemplazar de forma selectiva ciertas funciones y objetos o puede proporcionar su propia versión de esta clase si cumple ciertos requisitos mínimos. En concreto, para un objeto hash_comp de tipo `hash_compare<Key, Traits>`, los contenedores anteriores requieren el siguiente comportamiento:
 
-- Para todos los `key` valores de `Key`tipo, la llamada a`key`hash_comp () actúa como una función hash, que produce una distribución de valores de `size_t`tipo. La función suministrada por hash_compare devuelve `key`.
+- Para todos los valores `key` de tipo `Key`, la llamada a **hash_comp**(`key`) actúa como una función hash, que produce una distribución de valores de tipo `size_t`. La función suministrada por hash_compare devuelve `key`.
 
-- Para cualquier valor `key1` de tipo `Key` que preceda `key2` a en la secuencia y que tenga el mismo valor hash (valor devuelto por la función hash)`key2`, `key1` **hash_comp**(,) es false. La función debe imponer una ordenación total en los `Key`valores de tipo. La función proporcionada por hash_compare devuelve *COMP*(`key2`, `key1`) `,` donde *COMP* es un objeto almacenado de tipo `Traits` que se puede especificar al construir el objeto hash_comp. En el caso `Traits` del tipo `less<Key>`de parámetro predeterminado, las claves de ordenación nunca disminuyen en el valor.
+- Para cualquier valor `key1` de tipo `Key` que preceda a `key2` en la secuencia y que tenga el mismo valor hash (valor devuelto por la función hash), **hash_comp**(`key2`, `key1`) es false. La función debe imponer una ordenación total en los valores de tipo `Key`. La función proporcionada por hash_compare devuelve *COMP*(`key2`, `key1`) `,` donde *COMP* es un objeto almacenado de tipo `Traits` que se puede especificar al construir el objeto hash_comp. En el caso del tipo de parámetro `Traits` predeterminado `less<Key>`, las claves de ordenación nunca disminuyen en el valor.
 
-- La constante `bucket_size` de tipo entero especifica el número medio de elementos por "bucket" (entrada de tabla hash) que el contenedor debe intentar no superar. Debe ser mayor que cero. El valor proporcionado por hash_compare es 4.
+- La constante de tipo entero `bucket_size` especifica el número medio de elementos por "bucket" (entrada de tabla hash) que el contenedor debe intentar no superar. Debe ser mayor que cero. El valor proporcionado por hash_compare es 4.
 
-- La constante `min_buckets` de tipo entero especifica el número mínimo de depósitos que se deben mantener en la tabla hash. Debe ser una potencia de dos y mayor que cero. El valor proporcionado por hash_compare es 8.
+- La constante de tipo entero `min_buckets` especifica el número mínimo de depósitos que se deben mantener en la tabla hash. Debe ser una potencia de dos y mayor que cero. El valor proporcionado por hash_compare es 8.
 
 ## <a name="example"></a>Ejemplo
 

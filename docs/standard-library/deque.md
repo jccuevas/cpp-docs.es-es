@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a5fea8f4a1bc1612a35db71cc515ba4799e95da6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454481"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689723"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
-Define la clase de plantilla de contenedores deque y varias plantillas auxiliares.
+Define la plantilla de clase de contenedor deque y varias plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado**: \<deque>
 
 > [!NOTE]
-> La \<Biblioteca > de deque también utiliza `#include <initializer_list>` la instrucción.
+> La biblioteca de > de \<deque también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
@@ -47,7 +47,7 @@ Define la clase de plantilla de contenedores deque y varias plantillas auxiliare
 
 |||
 |-|-|
-|[deque (Clase)](../standard-library/deque-class.md)|Clase de plantilla de contenedores de secuencias que organiza elementos de un tipo determinado en una organización lineal y, como los vectores, permite un acceso aleatorio rápido a cualquier elemento y una inserción y eliminación eficaces en la parte trasera del contenedor.|
+|[deque (Clase)](../standard-library/deque-class.md)|Una plantilla de clase de contenedores de secuencias que organiza los elementos de un tipo determinado en una organización lineal y, como los vectores, permite un acceso aleatorio rápido a cualquier elemento y una inserción y eliminación eficaces en la parte posterior del contenedor.|
 
 ## <a name="see-also"></a>Vea también
 

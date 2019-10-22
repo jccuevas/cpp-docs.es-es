@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453931"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688008"
 ---
-# <a name="geometricdistribution-class"></a>geometric_distribution (Clase)
+# <a name="geometric_distribution-class"></a>geometric_distribution (Clase)
 
 Genera una distribución geométrica.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType*\
-El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+@No__t_1 *IntType*
+El tipo de resultado entero, el valor predeterminado es **int**. Para ver los tipos posibles, vea [\<random >](../standard-library/random.md).
 
-*URNG*\
+@No__t_1 *URNG*
 Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo integral especificado por el usuario con la distribución geométrica. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo entero especificado por el usuario con una distribución geométrica. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*m*\
+*p* \
 El parámetro de distribución `p`.
 
-*PARM*\
+\ *PARM*
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*m*\
+*p* \
 El parámetro de distribución `p`.
 
-*correcta*\
+\ *derecha*
 La instancia `param_type` que comparar con esta.
 
 ### <a name="remarks"></a>Comentarios

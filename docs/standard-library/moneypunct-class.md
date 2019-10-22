@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460189"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689294"
 ---
 # <a name="moneypunct-class"></a>moneypunct (Clase)
 
-La clase de plantilla describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo *CharType* que se usan para representar un campo de entrada monetaria o un campo de salida monetario. Si el parámetro de plantilla *Intl* es *true*, se respetan las convenciones internacionales.
+La plantilla de clase describe un objeto que puede actuar como una faceta de configuración regional para describir las secuencias de tipo *CharType* que se usan para representar un campo de entrada monetaria o un campo de salida monetario. Si el parámetro de plantilla *Intl* es *true*, se respetan las convenciones internacionales.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo usado dentro de un programa para codificar caracteres.
 
-*Intl*\
+@No__t_1 *Intl*
 Una marca que especifica si las convenciones internacionales deben respetarse.
 
 ## <a name="remarks"></a>Comentarios
@@ -80,20 +80,20 @@ El objeto estático constante intl almacena el valor del parámetro de plantilla
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[moneypunct](#moneypunct)|Constructor de objetos de tipo `moneypunct`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[string_type](#string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[curr_symbol](#curr_symbol)|Devuelve una secuencia específica de la configuración regional de los elementos que se usan como símbolo de moneda.|
 |[decimal_point](#decimal_point)|Devuelve una secuencia específica de la configuración regional de los elementos que se usan como separador decimal.|
@@ -277,7 +277,7 @@ Una regla específica de la configuración regional para determinar cómo se agr
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [agrupación](#grouping), donde llama a `grouping`la función miembro virtual.
+Vea el ejemplo de [agrupación](#grouping), donde `grouping` llama a la función miembro virtual.
 
 ## <a name="do_neg_format"></a> moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad negativa. Cada uno de los cuatro elementos `pattern::field` de puede tener los valores siguientes:
+La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad negativa. Cada uno de los cuatro elementos de `pattern::field` puede tener los valores siguientes:
 
-- `none`para buscar coincidencias con cero o más espacios o no generar nada.
+- `none` para buscar coincidencias con cero o más espacios o no generar nada.
 
-- `sign`para buscar o generar un signo positivo o negativo.
+- `sign` para hacer coincidir o generar un signo positivo o negativo.
 
-- `space`para buscar coincidencias con cero o más espacios o generar un espacio.
+- `space` para buscar coincidencias con cero o más espacios o generar un espacio.
 
-- `symbol`para hacer coincidir o generar un símbolo de moneda.
+- `symbol` para buscar o generar un símbolo de divisa.
 
-- `value`para hacer coincidir o generar un valor monetario.
+- `value` para hacer coincidir o generar un valor monetario.
 
-Los componentes de un campo de salida monetario se generan y los componentes de un campo de entrada monetaria coinciden en el orden en que estos `pattern::field`elementos aparecen en. Cada uno de los `sign`valores `symbol`, `value`, y `none` , o `space` bien, debe aparecer exactamente una vez. El valor `none` no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si `Intl` es true, el orden es `symbol`, `sign`, `none`y, `value`a continuación,.
+Los componentes de un campo de salida monetario se generan y los componentes de un campo de entrada monetaria coinciden en el orden en que estos elementos aparecen en `pattern::field`. Cada uno de los valores `sign`, `symbol`, `value` y `none` o `space` debe aparecer exactamente una vez. El valor `none` no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si `Intl` es true, el orden es `symbol`, `sign`, `none` y `value`.
 
 La versión de plantilla de `moneypunct`\< **CharType**, **Intl**> devuelve `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -335,7 +335,7 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad positiva. (También determina cómo hacer coincidir los componentes de un campo de entrada monetario). La codificación es la misma que para [do_neg_format](#do_neg_format).
+La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad positiva. (También determina cómo coinciden los componentes de un campo de entrada monetaria). La codificación es la misma que para [do_neg_format](#do_neg_format).
 
 La versión de plantilla de moneypunct\< **CharType**, **Inputlterator**> devuelve `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: La duración del objeto debe administrarse manualmente.
+- 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: Estos valores no están definidos.
+- \> 1: estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
@@ -770,7 +770,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo describe una especialización de clase de plantilla [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de puntuación.
+El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de puntuación.
 
 ## <a name="thousands_sep"></a> moneypunct::thousands_sep
 

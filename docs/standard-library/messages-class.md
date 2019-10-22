@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449939"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687683"
 ---
 # <a name="messages-class"></a>messages (Clase)
 
-La clase de plantilla describe un objeto que puede actuar como una faceta de configuración regional para recuperar mensajes traducidos y adaptados de un catálogo de mensajes internacionalizados para una configuración regional concreta.
+La plantilla de clase describe un objeto que puede actuar como una faceta de configuración regional para recuperar mensajes localizados de un catálogo de mensajes internacionalizados para una configuración regional determinada.
 
 Actualmente, mientras se implementa la clase messages, no hay mensajes.
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
 ## <a name="remarks"></a>Comentarios
@@ -55,20 +55,20 @@ Básicamente esta faceta abre un catálogo de mensajes definidos en la clase bas
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[messages](#messages)|Función constructor de la faceta de mensajes.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo de carácter usado para mostrar mensajes.|
 |[string_type](#string_type)|Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[close](#close)|Cierra el catálogo de mensajes.|
 |[do_close](#do_close)|Una función virtual llamada para perder el catálogo de mensajes.|
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 El catálogo que se va a cerrar.
 
 ### <a name="remarks"></a>Comentarios
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 El catálogo que se va a cerrar.
 
 ### <a name="remarks"></a>Comentarios
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_ Establecer*\
+*_ Establecer* \
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Message*\
+@No__t_1 *_Message*
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault*\
+@No__t_1 *_Dfault*
 La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname*\
+@No__t_1 *_Catname*
 El nombre del catálogo que se va a buscar.
 
-*_Loc*\
+@No__t_1 *_Loc*
 La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catval*\
+@No__t_1 *_Catval*
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_ Establecer*\
+*_ Establecer* \
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Message*\
+@No__t_1 *_Message*
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Dfault*\
+@No__t_1 *_Dfault*
 La cadena que se va a devolver en caso de error.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -254,21 +254,21 @@ protected: messages(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Refs*\
+@No__t_1 *_Refs*
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-*_Locname*\
+@No__t_1 *_Locname*
 El nombre de la configuración regional.
 
 ### <a name="remarks"></a>Comentarios
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
-- 0: La duración del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: La duración del objeto debe administrarse manualmente.
+- 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: Estos valores no están definidos.
+- \> 1: estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Catname*\
+@No__t_1 *_Catname*
 El nombre del catálogo que se va a buscar.
 
-*_Loc*\
+@No__t_1 *_Loc*
 La configuración regional que se está buscando en el catálogo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -310,7 +310,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo describe una especialización de clase de plantilla [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de mensajes.
+El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de mensajes.
 
 ## <a name="see-also"></a>Vea también
 

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b839126b7b5541c3a9dd033fcbbc8221bde7c22
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448126"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689471"
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator (Clase)
+# <a name="istreambuf_iterator-class"></a>istreambuf_iterator (Clase)
 
-La clase de plantilla istreambuf_iterator describe un objeto de iterador de entrada que extrae elementos de carácter de un búfer de flujo de entrada, al que se obtiene acceso mediante un objeto que almacena, de tipo pointer a `basic_streambuf`\< **CharType**, **Traits**>.
+La plantilla de clase istreambuf_iterator describe un objeto de iterador de entrada que extrae elementos de carácter de un búfer de flujo de entrada, al que tiene acceso a través de un objeto que almacena, de tipo puntero a `basic_streambuf` \< **CharType**, **rasgos**> .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parámetros
 
-*CharType*\
+@No__t_1 *CharType*
 Tipo que representa el tipo de caracteres para istreambuf_iterator.
 
-*Rasgos*\
+*Rasgos* \
 Tipo que representa el tipo de caracteres para istreambuf_iterator. Este argumento es opcional y el valor predeterminado es `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentarios
@@ -53,13 +53,13 @@ Después de crear o de incrementar un objeto de clase istreambuf_iterator con un
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[istreambuf_iterator](#istreambuf_iterator)|Construye una clase `istreambuf_iterator` que se inicializa para leer caracteres del flujo de entrada.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que proporciona el tipo de los caracteres de `ostreambuf_iterator`.|
 |[int_type](#int_type)|Tipo que proporciona un tipo entero para `istreambuf_iterator`.|
@@ -69,13 +69,13 @@ Después de crear o de incrementar un objeto de clase istreambuf_iterator con un
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[equal](#equal)|Comprueba si dos iteradores de búfer del flujo de entrada son iguales.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|"??"|Descripción|
 |-|-|
 |[operator*](#op_star)|El operador de desreferenciación devuelve el siguiente carácter del flujo.|
 |[operator++](#op_add_add)|Devuelve el siguiente carácter del flujo de entrada o copia el objeto antes de incrementarlo y devuelve la copia.|
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Iterador con el que se va a comprobar la igualdad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -151,7 +151,7 @@ Iterador con el que se va a comprobar la igualdad.
 
 ### <a name="remarks"></a>Comentarios
 
-Un intervalo se define mediante el `istreambuf_iterator` objeto en la posición actual y el iterador de final de secuencia, pero dado que todos los iteradores de la secuencia que no son de `equal` fin son equivalentes en la función miembro, no es posible definir ningún `istreambuf_iterator`subintervalo mediante s. Los operadores `==` y `!=` tienen la misma semántica.
+El `istreambuf_iterator` define un intervalo en la posición actual y el iterador de final de secuencia, pero como todos los iteradores que no son de fin de secuencia son equivalentes en la función miembro `equal`, no es posible definir ningún subintervalo mediante `istreambuf_iterator`s. Los operadores `==` y `!=` tienen la misma semántica.
 
 ### <a name="example"></a>Ejemplo
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*strbuf*\
+\ *strbuf*
 Búfer de flujo de entrada al que se va a adjuntar `istreambuf_iterator`.
 
-*_Istr*\
+@No__t_1 *_Istr*
 Flujo de entrada al que se va a adjuntar `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa el puntero de búfer de flujo de entrada con *strbuf*. El segundo constructor inicializa el puntero de búfer de flujo de entrada con *_Istr*. `rdbuf`y finalmente intenta extraer y almacenar un objeto de tipo `CharType`.
+El primer constructor inicializa el puntero de búfer de flujo de entrada con *strbuf*. El segundo constructor inicializa el puntero de búfer de flujo de entrada con *_Istr*. `rdbuf` y finalmente intenta extraer y almacenar un objeto de tipo `CharType`.
 
 ### <a name="example"></a>Ejemplo
 

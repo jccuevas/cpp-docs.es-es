@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: c5e45af5d350ba9c3f1e4e240dec2c13366318c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb72c3abbe87bc975dbc3c99ffab9e77635c9df5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457042"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689715"
 ---
-# <a name="fisherfdistribution-class"></a>fisher_f_distribution (Clase)
+# <a name="fisher_f_distribution-class"></a>fisher_f_distribution (Clase)
 
 Genera una distribución F de Fisher.
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*\
+@No__t_1 *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG*\
+@No__t_1 *URNG*
 Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución F de Fisher. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución F de Fisher. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Resultados
 
 Primera ejecución:
 
@@ -248,13 +248,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*f*\
+*m* \
 El parámetro de distribución `m`.
 
 *n*\
 El parámetro de distribución `n`.
 
-*PARM*\
+\ *PARM*
 La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*f*\
+*m* \
 El parámetro de distribución `m`.
 
 *n*\
 El parámetro de distribución `n`.
 
-*correcta*\
+\ *derecha*
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios

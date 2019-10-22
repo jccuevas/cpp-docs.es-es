@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240545"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684437"
 ---
-# <a name="unarynegate-class"></a>unary_negate (Clase)
+# <a name="unary_negate-class"></a>unary_negate (Clase)
 
-Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función unaria especificada. En desuso en C ++ 17 en favor de [not_fn](functional-functions.md#not_fn).
+Una plantilla de clase que proporciona una función miembro que niega el valor devuelto de una función unaria especificada. En desuso en C++ 17 en favor de [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,10 +31,10 @@ class unary_negate
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*\
+@No__t_1 *FUNC*
 La función unaria que se va a negar.
 
-*Izquierda*\
+\ *izquierda*
 El operando de la función unaria que se va a negar.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -43,7 +43,7 @@ La negación de la función unaria.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función unaria  *\_Func*. Define su función miembro `operator()` que devuelva `!_Func(left)`.
+La plantilla de clase almacena una copia de un objeto de función unario *\_Func*. Define su función miembro `operator()` como si devolviera `!_Func(left)`.
 
 El constructor de `unary_negate` no suele usarse directamente. La función del asistente [not1](../standard-library/functional-functions.md#not1) proporciona una manera más sencilla de declarar y usar el predicado de adaptador **unary_negator**.
 

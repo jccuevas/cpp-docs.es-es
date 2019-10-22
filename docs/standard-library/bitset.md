@@ -7,16 +7,16 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449708"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689926"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-Define la clase de plantilla bitset y dos funciones auxiliares de plantilla para representar y manipular secuencias de bits de tamaño fijo.
+Define la plantilla de clase BitSet y dos funciones auxiliares de plantilla para representar y manipular secuencias de bits de tamaño fijo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -40,7 +40,7 @@ Define la clase de plantilla bitset y dos funciones auxiliares de plantilla para
 
 |||
 |-|-|
-|[bitset](../standard-library/bitset-class.md)|La clase de plantilla describe un tipo de objeto que almacena una secuencia que consta de un número fijo de bits que proporcionan una manera compacta de mantener indicadores para un conjunto de elementos o condiciones.|
+|[bitset](../standard-library/bitset-class.md)|La plantilla de clase describe un tipo de objeto que almacena una secuencia que consta de un número fijo de bits que proporcionan una manera compacta de mantener las marcas para un conjunto de elementos o condiciones.|
 
 ## <a name="see-also"></a>Vea también
 

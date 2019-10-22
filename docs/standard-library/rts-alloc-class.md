@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451136"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688982"
 ---
-# <a name="rtsalloc-class"></a>rts_alloc (Clase)
+# <a name="rts_alloc-class"></a>rts_alloc (Clase)
 
-La clase de plantilla rts_alloc describe un [filtro](../standard-library/allocators-header.md) que contiene una matriz de instancias de caché y determina la instancia que se va a usar para la asignación y la desasignación en tiempo de ejecución, y no en tiempo de compilación.
+La plantilla de clase rts_alloc describe un [filtro](../standard-library/allocators-header.md) que contiene una matriz de instancias de caché y determina la instancia que se va a usar para la asignación y desasignación en tiempo de ejecución en lugar de en tiempo de compilación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,17 +32,17 @@ class rts_alloc
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*Caché*|El tipo de instancias de caché contenido en la matriz. Puede ser [cache_chunklist (Clase)](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md)|
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase de plantilla contiene varias instancias del asignador de bloques y determina la instancia que se va a usar para la asignación o desasignación en tiempo de ejecución, y no en tiempo de compilación. Se usa con los compiladores que no se pueden reenlazar mediante compilación.
+Esta plantilla de clase contiene varias instancias del asignador de bloques y determina la instancia que se va a usar para la asignación o desasignación en tiempo de ejecución en lugar de en tiempo de compilación. Se usa con los compiladores que no se pueden reenlazar mediante compilación.
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[allocate](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
@@ -64,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*count*|El número de elementos de la matriz que se van a asignar.|
 
@@ -74,7 +74,7 @@ Un puntero al objeto asignado.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` viene determinado por el recuento de tamaño de bloque solicitado, o bien, si el recuento `operator new(count)`es demasiado grande, devuelve. `cache`, que representa el objeto de caché.
+La función miembro devuelve `caches[_IDX].allocate(count)`, donde el índice `_IDX` está determinado por el *recuento*de tamaño de bloque solicitado, o bien, si el *recuento* es demasiado grande, devuelve `operator new(count)`. `cache`, que representa el objeto de caché.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -86,14 +86,14 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro llama `caches[_IDX].deallocate(ptr, count)`a, donde el `_IDX` índice viene determinado por el recuento de tamaño de bloque solicitado, o bien, si el recuento es demasiado grande, devuelve.  `operator delete(ptr)`
+La función miembro llama a `caches[_IDX].deallocate(ptr, count)`, donde el índice `_IDX` está determinado por el *recuento*de tamaño de bloque solicitado, o bien, si el *recuento* es demasiado grande, devuelve `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -105,7 +105,7 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*_Cache*|El objeto de caché asociado con el filtro.|
 |*_Other*|El objeto de caché para comparar la igualdad.|

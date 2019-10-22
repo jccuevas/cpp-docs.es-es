@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: b597bbe5327eb95c8c2be1016a2a036ed7ef2baa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c0fc15920018104147b6fd7ea39ab04bbc8862ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452294"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688750"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; (Clase)
 
-Una versión especializada de la clase de **plantilla\<valarray Type >** a elementos de tipo **bool**.
+Una versión especializada de la plantilla de clase **valarray \<Type >** a elementos de tipo **bool**.
 
 ## <a name="syntax"></a>Sintaxis
 

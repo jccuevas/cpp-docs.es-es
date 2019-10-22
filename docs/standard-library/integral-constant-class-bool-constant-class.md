@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452048"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689533"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>Clase integral_constant, clase bool_constant
+# <a name="integral_constant-class-bool_constant-class"></a>Clase integral_constant, clase bool_constant
 
 Crea una constante entera a partir de un tipo y un valor.
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parámetros
 
-*H*\
+*T* \
 Tipo de la constante.
 
-*v*\
+*v* \
 Valor de la constante.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla `integral_constant`, si está especializada con un tipo entero *T* y un valor *v* de ese tipo, representa un objeto que contiene una constante de ese tipo entero con el valor especificado. El miembro denominado `type` es un alias para el tipo de especialización de la plantilla generada y el miembro `value` contiene el valor *v* usado para crear la especialización.
+La plantilla de clase `integral_constant`, cuando está especializada con un tipo entero *t* y un valor *v* de ese tipo, representa un objeto que contiene una constante de ese tipo entero con el valor especificado. El miembro denominado `type` es un alias para el tipo de especialización de la plantilla generada y el miembro `value` contiene el valor *v* usado para crear la especialización.
 
-La `bool_constant` clase de plantilla es una especialización parcial explícita `integral_constant` de que usa **bool** como argumento *T* .
+La plantilla de clase `bool_constant` es una especialización parcial explícita de `integral_constant` que usa **bool** como argumento *t* .
 
 ## <a name="example"></a>Ejemplo
 
@@ -81,5 +81,5 @@ integral_constant<bool, false> == false
 ## <a name="see-also"></a>Vea también
 
 [<type_traits>](../standard-library/type-traits.md)\
-[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+\ [false_type](../standard-library/type-traits-typedefs.md#false_type)
 [true_type](../standard-library/type-traits-typedefs.md#true_type)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243792"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689637"
 ---
 # <a name="function-class"></a>function (Clase)
 
@@ -79,15 +79,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty*\
+@No__t_1 *fty*
 Tipo de función que se va a contener.
 
-*AX*\
+@No__t_1 de *AX*
 Función de asignador.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla es un contenedor de llamadas cuya signatura de llamada es `Ret(T1, T2, ..., TN)`. Úselo para incluir una variedad de objetos a los que se puede llamar en un contenedor uniforme.
+La plantilla de clase es un contenedor de llamadas cuya firma de llamada es `Ret(T1, T2, ..., TN)`. Úselo para incluir una variedad de objetos a los que se puede llamar en un contenedor uniforme.
 
 Algunas funciones miembro toman un operando que designa el objeto de destino deseado. Puede especificar ese operando de varias maneras:
 
@@ -111,7 +111,7 @@ Un objeto `function` vacío no contiene ningún objeto al que se puede llamar ni
 |-|-|
 |[function](#function)|Crea un contenedor que está vacío o almacena un objeto al que se puede llamar de tipo arbitrario con una signatura fija.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |||
 |-|-|
@@ -130,11 +130,11 @@ Un objeto `function` vacío no contiene ningún objeto al que se puede llamar ni
 
 |||
 |-|-|
-|[no se especifica el operador](#op_unspecified)|Comprueba si existe un objeto al que se puede llamar almacenado.|
+|[operador no especificado](#op_unspecified)|Comprueba si existe un objeto al que se puede llamar almacenado.|
 |[operator()](#op_call)|Llama a un objeto al que se puede llamar.|
 |[operator=](#op_eq)|Reemplaza el objeto al que se puede llamar almacenado.|
 
-## <a name="assign"></a> Asignar
+## <a name="assign"></a>quitar
 
 Asigna un objeto al que se puede llamar a este objeto de función.
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parámetros
 
-*_Func*\
+@No__t_1 *_Func*
 Un objeto al que se puede llamar.
 
-*_Fnref*\
+@No__t_1 *_Fnref*
 Un contenedor de referencia que contiene un objeto al que se puede llamar.
 
-*AX*\
+@No__t_1 de *AX*
 Un objeto de asignador.
 
 ### <a name="remarks"></a>Comentarios
 
-Las funciones miembro reemplazan al `callable object` mantenido por `*this` por el objeto al que se puede llamar pasado como el `operand`. Ambas asignan almacenamiento con el objeto de asignador *Ax*.
+Las funciones miembro reemplazan al `callable object` mantenido por `*this` por el objeto al que se puede llamar pasado como el `operand`. Ambos asignan almacenamiento con el objeto de asignador *AX*.
 
-## <a name="function"></a> Función
+## <a name="function"></a>funcionalidad
 
 Crea un contenedor que está vacío o almacena un objeto al que se puede llamar de tipo arbitrario con una signatura fija.
 
@@ -190,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parámetros
 
-*Correcto*\
+\ *derecha*
 El objeto de función que se va a copiar.
 
-*FX*\
+@No__t_1 *FX*
 El tipo del objeto al que se puede llamar.
 
-*_Func*\
+@No__t_1 *_Func*
 El objeto al que se puede llamar que se va a encapsular.
 
-*Alloc*\
+@No__t_1 de *asignación*
 El tipo de asignador.
 
-*AX*\
+@No__t_1 de *AX*
 Asignador.
 
-*_Fnref*\
+@No__t_1 *_Fnref*
 La referencia del objeto al que se puede llamar que se va a encapsular.
 
 ### <a name="remarks"></a>Comentarios
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a> no se especifica el operador
+## <a name="op_unspecified"></a>operador no especificado
 
 Comprueba si existe un objeto al que se puede llamar almacenado.
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="op_call"></a>operador ()
 
 Llama a un objeto al que se puede llamar.
 
@@ -337,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parámetros
 
-*TN*\
+@No__t_1 de *TN*
 Tipo del enésimo argumento de llamada.
 
-*tN*\
+\ de *tN*
 El enésimo argumento de llamada.
 
 ### <a name="remarks"></a>Comentarios
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
 Reemplaza el objeto al que se puede llamar almacenado.
 
@@ -390,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parámetros
 
-*NPC*\
+\ *NPC*
 Una constante de puntero nulo.
 
-*Correcto*\
+\ *derecha*
 El objeto de función que se va a copiar.
 
-*fn*\
+*fn* \
 El objeto al que se puede llamar que se va a encapsular.
 
-*fnref*\
+\ *fnref*
 La referencia del objeto al que se puede llamar que se va a encapsular.
 
 ### <a name="remarks"></a>Comentarios
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a>result_type
 
 El tipo de valor devuelto del objeto al que se puede llamar almacenado.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a> intercambio
+## <a name="swap"></a>pasar
 
 Intercambia dos objetos a los que se puede llamar.
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Correcto*\
+\ *derecha*
 El objeto de función con el que intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro intercambia los objetos de destino entre `*this` y *derecho*. Lo hace en tiempo constante y no inicia ninguna excepción.
+La función miembro intercambia los objetos de destino entre `*this` y *right*. Lo hace en tiempo constante y no inicia ninguna excepción.
 
 ### <a name="example"></a>Ejemplo
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a> Destino
+## <a name="target"></a>dirigir
 
 Comprueba si se puede llamar al objeto al que se puede llamar según lo especificado.
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty2*\
+@No__t_1 *Fty2*
 El tipo de objeto de destino al que se puede llamar que se va a comprobar.
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo *Fty2* debe ser invocable para los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret`. Si `target_type() == typeid(Fty2)`, la función de plantilla miembro devuelve la dirección del objeto de destino; de lo contrario, devuelve 0.
+Se debe poder llamar al tipo *Fty2* para los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret`. Si `target_type() == typeid(Fty2)`, la función de plantilla miembro devuelve la dirección del objeto de destino; de lo contrario, devuelve 0.
 
-Un tipo *Fty2* sea accesible para los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret` if, para los valores l `fn, t1, t2, ..., tN` de tipos `Fty2, T1, T2, ..., TN`, respectivamente, `INVOKE(fn, t1, t2, ..., tN)` tiene el formato correcto y, si `Ret`no **void**, se puede convertir a `Ret`.
+Se puede llamar a un tipo *Fty2* para los tipos de argumento `T1, T2, ..., TN` y el tipo de valor devuelto `Ret` si, para lvalues `fn, t1, t2, ..., tN` de tipos `Fty2, T1, T2, ..., TN`, respectivamente, `INVOKE(fn, t1, t2, ..., tN)` tiene el formato correcto y, si `Ret` no es **void**, se puede convertir en `Ret`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a> target_type
+## <a name="target_type"></a>target_type
 
 Obtiene información de tipo en el objeto al que se puede llamar.
 

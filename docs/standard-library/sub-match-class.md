@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447425"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685845"
 ---
-# <a name="submatch-class"></a>sub_match (Clase)
+# <a name="sub_match-class"></a>sub_match (Clase)
 
 Describe a una subcoincidencia.
 
@@ -41,12 +41,12 @@ class sub_match
 
 ## <a name="parameters"></a>Parámetros
 
-*BidIt*\
+@No__t_1 *BidIt*
 El tipo de iterador para subcoincidencias.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que designa una secuencia de caracteres que coinciden con un grupo de capturas en una llamada a [regex_match](../standard-library/regex-functions.md#regex_match) o [regex_search](../standard-library/regex-functions.md#regex_search). Los objetos del tipo [match_results (clase)](../standard-library/match-results-class.md) contienen una matriz de estos objetos, uno para cada grupo de capturas en la expresión regular usada en la búsqueda.
+La plantilla de clase describe un objeto que designa una secuencia de caracteres que coincidía con un grupo de capturas en una llamada a [regex_match](../standard-library/regex-functions.md#regex_match) o a [regex_search](../standard-library/regex-functions.md#regex_search). Los objetos del tipo [match_results (clase)](../standard-library/match-results-class.md) contienen una matriz de estos objetos, uno para cada grupo de capturas en la expresión regular usada en la búsqueda.
 
 Si no hay coincidencia con el grupo de capturas, el miembro de datos `matched` del objeto se considera false y los dos iteradores `first` y `second` (heredados de la base `std::pair`) son iguales. Si hay coincidencia con el grupo de capturas, `matched` es true, el iterador `first` apunta al primer carácter de la secuencia de destino que coincide con el grupo de capturas y el iterador `second` apunta a una posición más allá del último carácter de la secuencia de destino que coincide con el grupo de capturas. Observe que para una coincidencia de longitud cero, el miembro `matched` es true, los dos iteradores son iguales y ambos apuntan a la posición de la coincidencia.
 
@@ -56,7 +56,7 @@ Una coincidencia de longitud cero puede aparecer cuando un grupo de capturas sol
 
 "b(a*)b" coincide con la secuencia "bb" de destino; el objeto `sub_match` correspondiente al grupo de capturas 1 contiene iteradores que apuntan al segundo carácter de la secuencia.
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |Nombre de tipo|Descripción|
 |-|-|
@@ -66,16 +66,16 @@ Una coincidencia de longitud cero puede aparecer cuando un grupo de capturas sol
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[compare](#compare)|Comparar la subcoincidencia con una secuencia.|
 |[length](#length)|Devuelve la longitud de una subcoincidencia.|
-|[matched](#matched)|Indica si la coincidencia se realizó correctamente.|
+|[coincidente](#matched)|Indica si la coincidencia se realizó correctamente.|
 |[str](#str)|Convierte la subcoincidencia a una cadena.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|"??"|Descripción|
 |-|-|
 |[operador basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Convierte la subcoincidencia en una cadena.|
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Subcoincidencia con la que se va comparar.
 
-*CAD*\
+\ *Str*
 Cadena con la que se va a comparar.
 
-*anota*\
+\ *ptr*
 La secuencia terminada en un valor nulo con la que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Comentarios
 
-El miembro contiene **true** solo si el grupo de capturas `*this` asociado a formaba parte de la coincidencia de la expresión regular.
+El miembro contiene **true** solo si el grupo de capturas asociado a `*this` formaba parte de la coincidencia de la expresión regular.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 

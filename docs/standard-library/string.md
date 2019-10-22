@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957132"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685893"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-Define la clase de plantilla de contenedores `basic_string` y diversas plantillas auxiliares.
+Define la plantilla de clase contenedora `basic_string` y diversas plantillas auxiliares.
 
 Para más información sobre `basic_string`, vea [basic_string (Clase)](../standard-library/basic-string-class.md)
 
@@ -32,20 +32,20 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 - Matrices de caracteres terminadas en null, que a menudo se llaman “cadenas de C”.
 
-- Objetos de clase de plantilla, `basic_string`de tipo, que administran todos los argumentos de plantilla similares a **Char**.
+- objetos de plantilla de clase, de tipo `basic_string`, que administran todos los argumentos de plantilla similares a **Char**.
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo `string`char como.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo que describe una especialización de la clase `basic_string` de plantilla con elementos de tipo `wstring`wchar_t como.|
-|[u16string](../standard-library/string-typedefs.md#u16string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char16_t`.|
-|[u32string](../standard-library/string-typedefs.md#u32string)|Tipo que describe una especialización de la clase de plantilla `basic_string` basada en elementos de tipo `char32_t`.|
+|[string](../standard-library/string-typedefs.md#string)|Tipo que describe una especialización de la plantilla de clase `basic_string` con elementos de tipo **Char** como `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo que describe una especialización de la plantilla de clase `basic_string` con elementos de tipo **wchar_t** como `wstring`.|
+|[u16string](../standard-library/string-typedefs.md#u16string)|Tipo que describe una especialización de la plantilla de clase `basic_string` basándose en elementos de tipo `char16_t`.|
+|[u32string](../standard-library/string-typedefs.md#u32string)|Tipo que describe una especialización de la plantilla de clase `basic_string` basándose en elementos de tipo `char32_t`.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|"??"|Descripción|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Concatena dos objetos de cadena.|
 |[operator!=](../standard-library/string-operators.md#op_neq)|Comprueba si el objeto de cadena del lado izquierdo del operador no es igual que el objeto de cadena del lado derecho.|
@@ -75,16 +75,16 @@ El lenguaje C++ y la biblioteca estándar de C++ admiten dos tipos de cadenas:
 
 ### <a name="functions"></a>Funciones
 
-|Función|DESCRIPCIÓN|
+|Función|Descripción|
 |-|-|
 |[Plantilla getline](../standard-library/string-functions.md#getline)|Extraiga las cadenas de la secuencia de entrada línea por línea.|
 
 ### <a name="classes"></a>Clases
 
-|Clase|DESCRIPCIÓN|
+|Clase|Descripción|
 |-|-|
-|[basic_string (Clase)](../standard-library/basic-string-class.md)|Clase de plantilla que describe los objetos que pueden almacenar una secuencia de objetos arbitrarios similares a caracteres.|
-|[char_traits (Struct)](../standard-library/char-traits-struct.md)|Clase de plantilla que describe los atributos asociados a un carácter de tipo CharType|
+|[basic_string (Clase)](../standard-library/basic-string-class.md)|Una plantilla de clase que describe los objetos que pueden almacenar una secuencia de objetos arbitrarios similares a caracteres.|
+|[char_traits (Struct)](../standard-library/char-traits-struct.md)|Una plantilla de clase que describe los atributos asociados a un carácter de tipo CharType|
 
 ### <a name="specializations"></a>Especializaciones
 

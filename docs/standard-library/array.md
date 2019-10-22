@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 4c35d34c9c51c8ebd6885b1a1cd07c28bcb61d1b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456747"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690037"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-Define la **matriz** de clases de plantilla de contenedor y varias plantillas auxiliares.
+Define la **matriz** de plantillas de clase de contenedor y varias plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,7 +24,7 @@ Define la **matriz** de clases de plantilla de contenedor y varias plantillas au
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<biblioteca de > de matriz también `#include <initializer_list>` utiliza la instrucción.
+> La biblioteca de > de \<array también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 

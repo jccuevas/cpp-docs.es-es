@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451553"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689056"
 ---
-# <a name="regextokeniterator-class"></a>regex_token_iterator (Clase)
+# <a name="regex_token_iterator-class"></a>regex_token_iterator (Clase)
 
 Clase de iterador para subcoincidencias.
 
@@ -45,24 +45,24 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parámetros
 
-*BidIt*\
+@No__t_1 *BidIt*
 El tipo de iterador para subcoincidencias.
 
-*Elem*\
+@No__t_1 *Elem*
 Tipo de los elementos que debe coincidir.
 
-*RXtraits*\
+@No__t_1 *RXtraits*
 Clase Traits para los elementos.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto constante de iterador hacia delante. Conceptualmente, contiene un objeto `regex_iterator` que usa para buscar coincidencias de expresiones regulares en una secuencia de caracteres. Extrae objetos del tipo `sub_match<BidIt>` que representan las subcoincidencias identificadas por los valores de índice en el vector almacenado `subs` para cada coincidencia de expresión regular.
+La plantilla de clase describe un objeto de iterador hacia delante constante. Conceptualmente, contiene un objeto `regex_iterator` que usa para buscar coincidencias de expresiones regulares en una secuencia de caracteres. Extrae objetos del tipo `sub_match<BidIt>` que representan las subcoincidencias identificadas por los valores de índice en el vector almacenado `subs` para cada coincidencia de expresión regular.
 
 Un valor de índice de -1 señala la secuencia de caracteres que empieza inmediatamente después del final de la coincidencia de expresión regular anterior (o comienza al principio de la secuencia de caracteres si no había ninguna coincidencia de expresión regular anterior) y que se extiende, aunque sin incluirlo, al primer carácter de la coincidencia de expresión regular actual o hasta el final de la secuencia de caracteres si no hay una coincidencia actual. Cualquier otro valor de índice `idx` señala el contenido del grupo de capturas incluido en `it.match[idx]`.
 
 ### <a name="members"></a>Miembros
 
-|Member|Valor predeterminado|
+|Miembro|Default Value|
 |-|-|
 |`private regex_iterator<BidIt, Elem, RXtraits> it`||
 |`private vector<int> subs`||
@@ -70,11 +70,11 @@ Un valor de índice de -1 señala la secuencia de caracteres que empieza inmedia
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|Construye el iterador.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |Nombre de tipo|Descripción|
 |-|-|
@@ -87,7 +87,7 @@ Un valor de índice de -1 señala la secuencia de caracteres que empieza inmedia
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|"??"|Descripción|
 |-|-|
 |[operator!=](#op_neq)|Compara iteradores para buscar desigualdad.|
 |[operator*](#op_star)|Tiene acceso a la subcoincidencia designada.|
@@ -231,7 +231,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Iterador con el que se compara.
 
 ### <a name="remarks"></a>Comentarios
@@ -276,7 +276,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Iterador con el que se compara.
 
 ### <a name="remarks"></a>Comentarios
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar*\
+*primer* \
 Principio de la secuencia que debe coincidir.
 
-*guardado*\
+*última* \
 Final de la secuencia que debe coincidir.
 
-*utilizar*\
+*\*
 Expresión regular para las coincidencias.
 
-*formato*\
+\ *f*
 Marcadores para coincidencias.
 
 ### <a name="remarks"></a>Comentarios
@@ -391,10 +391,10 @@ El tipo es un sinónimo de `sub_match<BidIt>`, donde `BidIt` es el parámetro de
 ## <a name="see-also"></a>Vea también
 
 [\<regex>](../standard-library/regex.md)\
-[Clase regex_constants](../standard-library/regex-constants-class.md)\
-[Clase regex_error](../standard-library/regex-error-class.md)\
-[\<funciones regex >](../standard-library/regex-functions.md)\
-[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operadores regex >](../standard-library/regex-operators.md)\
-[Clase regex_traits](../standard-library/regex-traits-class.md)\
+\ de la [clase regex_constants](../standard-library/regex-constants-class.md)
+\ de la [clase regex_error](../standard-library/regex-error-class.md)
+[\<regex > funciones](../standard-library/regex-functions.md) \
+\ de la [clase regex_iterator](../standard-library/regex-iterator-class.md)
+[operadores de > de \<regex](../standard-library/regex-operators.md) \
+\ de la [clase regex_traits](../standard-library/regex-traits-class.md)
 [Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)

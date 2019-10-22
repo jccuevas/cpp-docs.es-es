@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449653"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688346"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc (Clase)
+# <a name="cache_suballoc-class"></a>cache_suballoc (Clase)
 
 Define un [asignador de bloques](../standard-library/allocators-header.md) que asigna y desasigna bloques de memoria de un tamaño único.
 
@@ -30,25 +30,25 @@ class cache_suballoc
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
-|*Sz*|El número de elementos de la matriz que se van a asignar.|
+|*SZ*|El número de elementos de la matriz que se van a asignar.|
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla cache_suballoc almacena los bloques de memoria desasignados en una lista libre con una longitud `freelist<sizeof(Type), max_unbounded>`sin enlazar, y subasigna bloques de memoria de un fragmento más grande asignado con el **operador New** cuando la lista libre está vacía.
+La plantilla de clase cache_suballoc almacena los bloques de memoria desasignados en una lista libre con una longitud sin enlazar, utilizando `freelist<sizeof(Type), max_unbounded>` y subasigna bloques de memoria de un fragmento más grande asignado con el **operador New** cuando la lista libre está vacía.
 
 Cada fragmento contiene `Sz * Nelts` bytes de memoria utilizable y los datos que el **operador New** y el **operador Delete** requieren. Nunca se liberarán los fragmentos asignados.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[cache_suballoc](#cache_suballoc)|Construye un objeto de tipo `cache_suballoc`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[allocate](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
@@ -69,7 +69,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*count*|El número de elementos de la matriz que se van a asignar.|
 
@@ -99,7 +99,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
