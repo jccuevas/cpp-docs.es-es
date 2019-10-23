@@ -45,7 +45,7 @@ Las opciones **/LINKREPRO** y [/out](out-output-file-name.md) deben establecerse
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione la página de propiedades**línea de comandos** del vinculador ** >  del** **enlazador** > .
+1. Seleccione la página de propiedades**línea de comandos** del vinculador ** > ** del **enlazador** > .
 
 1. Escriba la opción **/LINKREPROTARGET:** _nombre-archivo_ en el cuadro **opciones adicionales** . Seleccione **Aceptar** para aplicar el cambio.
 

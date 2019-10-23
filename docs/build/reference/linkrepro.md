@@ -41,7 +41,7 @@ Para obtener información sobre cómo limitar la generación de reproducción de
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione la página de propiedades**línea de comandos** del vinculador ** >  del** **enlazador** > .
+1. Seleccione la página de propiedades**línea de comandos** del vinculador ** >  **del**enlazador** > .
 
 1. Escriba la opción **/LINKREPRO:** _Directory-name_ en el cuadro **opciones adicionales** . El valor _de nombre de directorio_ que especifique debe existir. Seleccione **Aceptar** para aplicar el cambio.
 
