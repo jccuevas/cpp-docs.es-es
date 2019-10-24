@@ -1,15 +1,15 @@
 ---
 title: Historial de cambios en Visual C++ 2003-2015
-ms.date: 08/30/2017
+ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 6d994ca3af1386d9c2f94dbf6b9f972ee139613f
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510359"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778527"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
 
@@ -106,7 +106,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
    Al compilar código C++, ahora [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) valida en tiempo de compilación que el argumento que se le haya pasado no sea de tipo de referencia. Los argumentos de tipo de referencia están prohibidos por el estándar de C++.
 
-#### <a name="stdioh-and-conioh"></a>\<stdio.h> y \<conio.h>
+#### <a name="stdio_and_conio"></a>\<stdio. h > y \<conio. h >
 
 - **Las familias de funciones printf y scanf se definen ahora insertadas.**
 
@@ -139,7 +139,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
   - Infinito: 1.#INF
 
-  - NaN simple: 1.#QNAN
+  - NaN simple: 1. #QNAN
 
   - NaN de señalización: 1.#SNAN
 
@@ -305,7 +305,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
 ####  <a name="BK_STL"></a> Biblioteca estándar de C++
 
-Para habilitar nuevas optimizaciones y comprobaciones de depuración, la implementación de Visual Studio de la Biblioteca estándar de C++ interrumpe deliberadamente la compatibilidad binaria de una versión a la siguiente. Por consiguiente, cuando se utiliza la Biblioteca estándar de C++, los archivos de objetos y las bibliotecas estáticas que se han compilado con versiones diferentes no se pueden combinar en un binario (EXE o DLL), y los objetos de la Biblioteca estándar de C++ no se pueden pasar entre los archivos binarios que se han compilado con versiones diferentes. Una combinación de este estilo emite errores del vinculador sobre discordancias _MSC_VER. (_MSC_VER es la macro que contiene la versión principal del compilador, por ejemplo, 1800 para Visual Studio 2013). Esta comprobación no detecta la combinación de archivos DLL, ni otras que impliquen Visual Studio 2008 o versiones anteriores.
+Para habilitar nuevas optimizaciones y comprobaciones de depuración, la implementación de Visual Studio de la Biblioteca estándar de C++ interrumpe deliberadamente la compatibilidad binaria de una versión a la siguiente. Por consiguiente, cuando se utiliza la Biblioteca estándar de C++, los archivos de objetos y las bibliotecas estáticas que se han compilado con versiones diferentes no se pueden combinar en un binario (EXE o DLL), y los objetos de la Biblioteca estándar de C++ no se pueden pasar entre los archivos binarios que se han compilado con versiones diferentes. Una combinación de este estilo emite errores del vinculador sobre discordancias _MSC_VER. (_MSC_VER es la macro que contiene la versión principal del compilador; por ejemplo, 1800 para Visual Studio 2013). Esta comprobación no detecta la combinación de archivos DLL ni detecta combinaciones que impliquen Visual Studio 2008 o una versión anterior.
 
 - **La biblioteca estándar de C++ incluye archivos**
 
@@ -1004,7 +1004,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     //other partial specializations here
     ```
 
-- **Reglas aplicadas para declaraciones adelantadas. (Solo se aplica a C.)**
+- **Reglas aplicadas para las declaraciones adelantadas. (Sólo se aplica a C).**
 
    El código siguiente produce ahora C2065:
 
@@ -1046,7 +1046,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Llamadas ambiguas a funciones sobrecarfadas**
 
-   El código siguiente produce ahora C266: "N::bind": llamada ambigua a una función sobrecargada
+   El código siguiente produce ahora C266: 'N::bind': llamada ambigua a una función sobrecargada
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1189,7 +1189,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **El valor no puede capturar excepciones de MFC porque no se pueden copiar**
 
-   El siguiente código en una aplicación de MFC produce ahora el error C2316: 'D': no se puede detectar porque el destructor y/o el constructor de copias están inaccesibles o se eliminaron
+   El siguiente código en una aplicación de MFC produce ahora el error C2316: 'D': no se puede capturar porque el destructor o el constructor de copia son inaccesibles o se han eliminado.
 
     ```cpp
     struct B {
@@ -1335,7 +1335,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Corregir inicialización de copia no válida en inicialización de miembro no estático (NSDMI)**
 
-   El código siguiente produce ahora el error C2664: 'S1::S1(S1 &&)': el argumento 1 no puede convertirse de 'bool' a 'const S1 &':
+   El código siguiente genera ahora el error C2664: "S1::S1(S1 &&)": no se puede convertir el argumento 1 de "bool" a "const S1 &":
 
     ```cpp
     struct S1 {
@@ -1357,7 +1357,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Acceso a constructores dentro de instrucciones decltype**
 
-   El código siguiente genera ahora el error C2248: 'S::S': no se puede obtener acceso al miembro privado declarado en la clase 'S':
+   El código siguiente genera ahora el error C2248: "S::S": no se puede acceder al miembro privado declarado en la clase "S":
 
     ```cpp
     class S {
@@ -1479,7 +1479,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **No se puede llamar a un ctor base protegido en el cuerpo de ctor derivado.**
 
-   El código siguiente produce ahora el error C2248: 'S1::S1': no se puede obtener acceso al miembro protegido declarado en la clase 'S1'
+   El código siguiente produce ahora el error C2248: "S1::S1": no se puede acceder al miembro protegido declarado en la clase "S1"
 
     ```cpp
     struct S1 {
@@ -2804,7 +2804,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     int y = x;
     ```
 
-   Ahora, este código resuelve `x` en un tipo de `std::initializer_list<int>` y produce un error en la siguiente línea que intenta asignar `x` al tipo **int**. (No hay ninguna conversión predeterminada). Para corregir este código, use **int** para reemplazar **auto**:
+   Ahora, este código resuelve `x` en un tipo de `std::initializer_list<int>` y produce un error en la siguiente línea que intenta asignar `x` al tipo **int**. (No hay ninguna conversión de forma predeterminada). Para corregir este código, use **int** para reemplazar **auto**:
 
     ```cpp
     int x = {0};
@@ -2898,7 +2898,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
     ```
 
-   En versiones anteriores a Visual Studio 2013, este código genera este mensaje: "Advertencia C4370: 'S2': el diseño de clase cambió desde una versión anterior del compilador debido a una mejora del empaquetado".
+   En versiones anteriores a Visual Studio 2013, este código genera este mensaje: "Advertencia C4370: "S2": el diseño de clase cambió desde una versión anterior del compilador debido a una mejora del empaquetado".
 
    El compilador de x86 presenta el mismo problema de disposición en todas las versiones. Por ejemplo, si este código se compila para x86:
 
@@ -2962,7 +2962,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
 ### <a name="mfc-and-atl"></a>MFC y ATL
 
-- **Solo Visual Studio 2013**: la biblioteca MFC MBCS no se incluye en Visual Studio debido a la popularidad de Unicode y a que el uso de MBCS ha disminuido considerablemente. Este cambio también hace que MFC se adapte más al propio Windows SDK, ya que muchos de los nuevos controles y mensajes son solo Unicode. En cambio, si necesita seguir usando la biblioteca MFC MBCS, puede descargarla del Centro de descarga de MSDN en [Multibyte MFC Library para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). El paquete redistribuible de Visual C++ todavía incluye esta biblioteca.  (Nota: El archivo DLL de MBCS se incluye en los componentes de instalación de Visual Studio 2015 y versiones posteriores).
+- **Solo Visual Studio 2013**: la biblioteca MFC MBCS no se incluye en Visual Studio porque Unicode es tan popular y el uso de MBCS se ha rechazado significativamente. Este cambio también hace que MFC se adapte más al propio Windows SDK, ya que muchos de los nuevos controles y mensajes son solo Unicode. En cambio, si necesita seguir usando la biblioteca MFC MBCS, puede descargarla del Centro de descarga de MSDN en [Multibyte MFC Library para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). El paquete redistribuible de Visual C++ todavía incluye esta biblioteca.  Nota: El archivo DLL de MBCS se incluye en los componentes de instalación de Visual Studio 2015 y versiones posteriores.
 
 - Se ha modificado la accesibilidad de la barra de herramientas de MFC.  En lugar de una arquitectura de una capa, ahora hay una arquitectura jerárquica. Puede seguir utilizando el comportamiento antiguo llamando a `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3026,7 +3026,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
 - El compilador puede emitir las advertencias [del compilador (nivel 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) y C4701 donde anteriormente no lo hacía. El compilador aplica comprobaciones más fuertes para el uso de variables locales sin inicializar de tipo de puntero.
 
-- Cuando se especifica la nueva marca de enlazador `/HIGHENTROPYVA`, normalmente, Windows 8 hace que las asignaciones de memoria devuelvan una dirección de 64 bits. (Antes de Windows 8, estas asignaciones devolvían más a menudo direcciones de menos de 2 GB). Este cambio puede exponer errores de truncamiento de puntero en el código existente. De manera predeterminada, este modificador está activado. Para deshabilitar este comportamiento, especifique `/HIGHENTROPYVA:NO`.
+- Cuando se especifica la nueva marca de enlazador `/HIGHENTROPYVA`, normalmente, Windows 8 hace que las asignaciones de memoria devuelvan una dirección de 64 bits. (Antes de Windows 8, tales asignaciones devolvían más a menudo direcciones que eran inferiores a 2 GB). Este cambio puede exponer errores de truncamiento de puntero en el código existente. De manera predeterminada, este modificador está activado. Para deshabilitar este comportamiento, especifique `/HIGHENTROPYVA:NO`.
 
 - El compilador administrado (Visual Basic o C#) también es compatible con `/HIGHENTROPYVA` para las compilaciones administradas.  En cambio, en este caso, el modificador `/HIGHENTROPYVAswitch` está desactivado de manera predeterminada.
 
@@ -3042,11 +3042,11 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - Después de un cambio importante entre los estándares C++98/03 y C++11, el uso de argumentos de plantilla explícitos para llamar a `make_pair()` (como en `make_pair<int, int>(x, y)`), normalmente no se compila en Visual C++ en Visual Studio 2012. La solución consiste en llamar siempre a `make_pair() ` sin argumentos de plantilla explícitos, como en `make_pair(x, y)`. Proporcionar argumentos de plantilla explícitos acaba con el propósito de la función. Si necesita un control preciso sobre el tipo resultante, use `pair` en lugar de `make_pair` (como en `pair<short, short>(int1, int2)`).
 
-- Otro cambio importante entre los estándares C++98/03 y C++11: si A se puede convertir de forma implícita en B y B se puede convertir de forma implícita en C, pero A no se puede convertir de forma implícita en C, en C++98/03 y Visual Studio 2010 se permitía que `pair<A, X>` se convirtiera (de forma implícita o explícita) en `pair<C, X>`. (El otro tipo, X, no es de interés aquí y no es específico del primer tipo del par). El compilador de C++ en Visual Studio 2012 detecta que A no se puede convertir de forma implícita en C, y elimina la conversión de par de la resolución de la sobrecarga. Se trata de un cambio positivo para muchos escenarios. Por ejemplo, si sobrecarga `func(const pair<int, int>&)` y `func(const pair<string, string>&)`, y si llama a `func()` con `pair<const char *, const char *>`, se compilará con este cambio. En cambio, este cambio interrumpe el código que dependía de conversiones de par agresivas. Normalmente, este código se puede solucionar al realizar una parte de la conversión de forma explícita; por ejemplo, al pasar `make_pair(static_cast<B>(a), x)` a una función que espere `pair<C, X>`.
+- Otro cambio importante entre C++ 98/03 y los estándares de C++ 11: cuando se puede convertir implícitamente a B y B es implícitamente convertible a C, pero a no se puede convertir implícitamente a C, C++ 98/03 y Visual Studio 2010 `pair<A, X>` permiten la conversión (implícita o explícitamente) para `pair<C, X>`. (El otro tipo, X, no es de interés aquí y no es específico del primer tipo del par). El C++ compilador de Visual Studio 2012 detecta que no es implícitamente convertible a C y quita la conversión de par de la resolución de sobrecarga. Se trata de un cambio positivo para muchos escenarios. Por ejemplo, si sobrecarga `func(const pair<int, int>&)` y `func(const pair<string, string>&)`, y si llama a `func()` con `pair<const char *, const char *>`, se compilará con este cambio. En cambio, este cambio interrumpe el código que dependía de conversiones de par agresivas. Normalmente, este código se puede solucionar al realizar una parte de la conversión de forma explícita; por ejemplo, al pasar `make_pair(static_cast<B>(a), x)` a una función que espere `pair<C, X>`.
 
 - Visual Studio 2010 simulaba plantillas variádicas, por ejemplo, `make_shared<T>(arg1, arg2, argN)`, hasta un límite de 10 argumentos, al eliminar sobrecargas y especializaciones con maquinaria de preprocesador. En Visual Studio 2012, este límite se reduce a cinco argumentos para mejorar los tiempos de compilación y el consumo de memoria del compilador para la mayoría de los usuarios. En cambio, puede establecer el límite anterior al definir de forma explícita _VARIADIC_MAX como 10, en todo el proyecto.
 
-- En C++11 17.6.4.3.1 [macro.names]/2 se prohíbe la sustitución de macros de palabras clave cuando se incluyen encabezados de la biblioteca estándar de C++. Ahora los encabezados emiten errores del compilador si detectan palabras clave sustituidas por macros. (Al definir _ALLOW_KEYWORD_MACROS, se permite compilar este código, pero se desaconseja encarecidamente este uso). Como excepción, el formato de macro de `new` se permite de forma predeterminada, porque los encabezados se defienden mediante `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`. Al definir _ENFORCE_BAN_OF_MACRO_NEW, se hace exactamente lo que implica su nombre.
+- En C++11 17.6.4.3.1 [macro.names]/2 se prohíbe la sustitución de macros de palabras clave cuando se incluyen encabezados de la biblioteca estándar de C++. Ahora los encabezados emiten errores del compilador si detectan palabras clave sustituidas por macros. (La definición de _ALLOW_KEYWORD_MACROS permite compilar este tipo de código, pero Desaconsejamos el uso). Como excepción, la forma de macro de `new` está permitida de forma predeterminada, porque los encabezados se defienden a sí mismos mediante `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Al definir _ENFORCE_BAN_OF_MACRO_NEW, se hace exactamente lo que implica su nombre.
 
 - Para implementar varias optimizaciones y comprobaciones de depuración, la implementación de la biblioteca estándar de C++ interrumpe deliberadamente la compatibilidad binaria entre versiones de Visual Studio (2005, 2008, 2010, 2012). Cuando se usa la biblioteca estándar de C++, impide que se combinen archivos de objeto y bibliotecas estáticas que se han compilado con otras versiones en un binario (EXE o DLL), además de impedir que se pasen objetos de la biblioteca estándar de C++ entre los archivos binarios que se han compilado con otras versiones. El hecho de combinar archivos de objeto y bibliotecas estáticas (mediante la biblioteca estándar de C++) compilados mediante Visual Studio 2010 con los compilados con el compilador de C++ en Visual Studio 2012 emite errores del enlazador relativos a un error de coincidencia _MSC_VER, donde _MSC_VER es la macro que contiene la versión principal del compilador (1700 para Visual C++ en Visual Studio 2012). Esta comprobación no detecta la combinación de archivos DLL, ni otras que impliquen Visual Studio 2008 o versiones anteriores.
 
@@ -3264,7 +3264,7 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 ### <a name="ide"></a>IDE
 
-- El cuadro de diálogo de finalización de aplicación ya no finaliza una aplicación. En versiones anteriores, cuando la función `abort()` o `terminate()` cierra la versión comercial de una aplicación, la biblioteca en tiempo de ejecución de C mostraba un mensaje de finalización de aplicación en un cuadro de diálogo o ventana de consola. Este mensaje decía, en parte: “Esta aplicación solicitó la finalización del tiempo de ejecución de modo no habitual. Póngase en contacto con el equipo de asistencia técnica de la aplicación para obtener más información”. El mensaje de finalización de aplicación era redundante porque Windows mostraba posteriormente el controlador de finalización actual, que normalmente era el cuadro de diálogo del informe de errores de Windows (Dr. Watson) o el depurador de Visual Studio. A partir de Visual Studio 2010, la biblioteca en tiempo de ejecución de C no muestra el mensaje. Además, el tiempo de ejecución impide que la aplicación finalice antes de iniciar un depurador. Se trata de un cambio importante solo si depende del comportamiento anterior del mensaje de finalización de la aplicación.
+- El cuadro de diálogo de finalización de aplicación ya no finaliza una aplicación. En versiones anteriores, cuando la función `abort()` o `terminate()` cierra la versión comercial de una aplicación, la biblioteca en tiempo de ejecución de C mostraba un mensaje de finalización de aplicación en un cuadro de diálogo o ventana de consola. Este mensaje decía, en parte: “Esta aplicación solicitó la finalización del tiempo de ejecución de modo no habitual. Póngase en contacto con el equipo de asistencia técnica de la aplicación para obtener más información”. El mensaje de finalización de la aplicación era redundante porque Windows mostraba posteriormente el controlador de finalización actual, que normalmente era el cuadro de diálogo Informe de errores de Windows (Dr. Watson) o el depurador de Visual Studio. A partir de Visual Studio 2010, la biblioteca en tiempo de ejecución de C no muestra el mensaje. Además, el tiempo de ejecución impide que la aplicación finalice antes de iniciar un depurador. Se trata de un cambio importante solo si depende del comportamiento anterior del mensaje de finalización de la aplicación.
 
 - Específicamente para Visual Studio 2010, IntelliSense no funciona para código o atributos de C++o la CLI, **Buscar todas las referencias** no funciona para las variables locales y el modelo de código no recupera nombres de tipo de ensamblados importados ni resuelve tipos en sus nombres completos.
 
@@ -3408,15 +3408,15 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - Orden de tabulación de controles en cuadros de diálogo de MFC: el orden de tabulación correcto de varios controles en un cuadro de diálogo de MFC se ve afectado si se inserta un control ActiveX de MFC en el orden de tabulación. Este cambio corrige el problema.
 
-   Por ejemplo, cree una aplicación de cuadro de diálogo de MFC que tenga un control ActiveX y varios controles de edición. Coloque el control ActiveX en el medio de la orden de tabulación de los controles de edición. Inicie la aplicación, haga clic en un control de edición cuyo orden de tabulación esté después del control ActiveX y pulse TAB. Antes de realizar este cambio, el foco pasaba al control de edición siguiendo el control ActiveX en lugar del control de edición siguiente en el orden de tabulación.
+   Por ejemplo, cree una aplicación de cuadro de diálogo de MFC que tenga un control ActiveX y varios controles de edición. Coloque el control ActiveX en el medio de la orden de tabulación de los controles de edición. Inicie la aplicación, haga clic en un control de edición cuyo orden de tabulación esté después del control ActiveX y, después, presione TAB. antes de este cambio, el foco pasó al control de edición después del control ActiveX en lugar del siguiente control de edición en el orden de tabulación.
 
-- Clase `CFileDialog`: las plantillas personalizadas para la clase `CFileDialog` no se pueden migrar a Windows Vista de forma automática. Aún se pueden usar, pero no tendrán la funcionalidad adicional o el aspecto de los cuadros de diálogo de estilo de Windows Vista.
+- `CFileDialog` clase: las plantillas personalizadas para la clase `CFileDialog` no se pueden migrar automáticamente a Windows Vista. Aún se pueden usar, pero no tendrán la funcionalidad adicional o el aspecto de los cuadros de diálogo de estilo de Windows Vista.
 
 - Clase `CWnd` y clase `CFrameWnd`: se ha quitado el método `CWnd::GetMenuBarInfo`.
 
    El método `CFrameWnd::GetMenuBarInfo` ahora es un método no virtual. Para obtener más información, consulte la función **GetMenuBarInfo** en el SDK de Windows.
 
-- Compatibilidad con ISAPI de MFC: MFC ya no admite la compilación de aplicaciones con la Interfaz de programación de aplicaciones para servidores de Internet (ISAPI). Si quiere compilar una aplicación de ISAPI, llame directamente a las extensiones de ISAPI.
+- Compatibilidad con ISAPI de MFC: MFC ya no admite la compilación de aplicaciones con la interfaz de programación de aplicaciones para servidores de Internet (ISAPI). Si quiere compilar una aplicación de ISAPI, llame directamente a las extensiones de ISAPI.
 
 - API de ANSI en desuso: las versiones ANSI de varios métodos de MFC están en desuso. Use las versiones Unicode de esos métodos en sus aplicaciones futuras. Para obtener más información, consulte **Requisitos de compilación para los controles comunes de Windows Vista**.
 
