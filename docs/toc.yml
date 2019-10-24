@@ -1968,7 +1968,7 @@
               href: cppcx/delegates-c-cx.md
             - name: Excepciones
               href: cppcx/exceptions-c-cx.md
-            - name: Eventos
+            - name: Events
               href: cppcx/events-c-cx.md
             - name: Conversión
               href: cppcx/casting-c-cx.md
@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Tipos enteros
                           href: c-language/integer-types.md
-                        - name: Límites de enteros de C++
+                        - name: Límites de enteros de C y C++
                           href: c-language/cpp-integer-limits.md
                     - name: Constantes de caracteres de C
                       expanded: false
