@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243331"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890137"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 
@@ -35,15 +35,15 @@ operator&(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
-*Correcto*\
+\ *derecha*
 El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `AND`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un conjunto de bits cuyos elementos son el resultado de realizar la `AND` operación en los elementos correspondientes de *izquierdo* y *derecho*.
+Una BitSet cuyos elementos son el resultado de realizar la operación de `AND` en los elementos correspondientes de *izquierda* y *derecha*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -73,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> Operador&lt;&lt;
+## <a name="op_lt_lt"></a>operador&lt;&lt;
 
 Inserta una representación de texto de la secuencia de bits en el flujo de salida.
 
@@ -86,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Correcto*\
+\ *derecha*
 Un objeto de tipo **bitset\<N>** que se va a insertar en el flujo de salida como una cadena.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -95,9 +95,9 @@ Representación de texto de la secuencia de bits en `ostr`.
 
 ### <a name="remarks"></a>Comentarios
 
-Las sobrecargas de función de plantilla `operator<<`, lo que permite un conjunto de bits que escribirse sin convertirla primero en una cadena. La función de plantilla ejecuta eficazmente:
+La función de plantilla sobrecarga `operator<<`, lo que permite escribir una BitSet sin convertirla primero en una cadena. La función de plantilla ejecuta eficazmente:
 
-**ostr** << _*derecha*. [to_string](bitset-class.md) <**CharType**, **rasgos**, **asignador**\<**CharType**>>)
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### <a name="example"></a>Ejemplo
 
@@ -130,36 +130,34 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> Operador&gt;&gt;
+## <a name="op_gt_gt"></a>operador&gt;&gt;
 
 Lee una cadena de caracteres de bit en un conjunto de bits.
 
 ```
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Istr*\
+\ *i_str*
 La cadena que se escribe en el flujo de entrada para insertarla en un conjunto de bits.
 
-*Correcto*\
+\ *derecha*
 El conjunto de bits que recibe los bits del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La función de plantilla devuelve la cadena *_Istr*.
+La función de plantilla devuelve la cadena *i_str*.
 
 ### <a name="remarks"></a>Comentarios
 
-Las sobrecargas de función de plantilla `operator>>` para almacenar en el conjunto de bits _ *derecha* el conjunto de bits de valor (`str`), donde `str` es un objeto de tipo [basic_string](basic-string-class.md)  <  **CharType**, **rasgos**, **asignador** \< **CharType**>> **&** extraído *_Istr*.
+La función de plantilla sobrecarga `operator>>` para almacenar en la *parte derecha* el valor `bitset(str)`, donde `str` es un objeto de tipo [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extraído de *i_str*.
 
-La función de plantilla extrae elementos de *_Istr* y los inserta en el conjunto de bits hasta que:
+La función de plantilla extrae los elementos de *i_str* y los inserta en el BitSet hasta que:
 
 - Todos los elementos de bits se han extraído del flujo de entrada y se almacenan en el conjunto de bits.
 
@@ -216,7 +214,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> operador ^
+## <a name="op_xor"></a>operador ^
 
 Efectúa una operación bit a bit `EXCLUSIVE-OR` entre dos conjuntos de bits.
 
@@ -230,15 +228,15 @@ operator^(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
-*Correcto*\
+\ *derecha*
 El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un conjunto de bits cuyos elementos son el resultado de realizar la `EXCLUSIVE-OR` operación en los elementos correspondientes de *izquierdo* y *derecho*.
+Una BitSet cuyos elementos son el resultado de realizar la operación de `EXCLUSIVE-OR` en los elementos correspondientes de *izquierda* y *derecha*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -268,7 +266,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> operador&#124;
+## <a name="op_or"></a>Operator&#124;
 
 Efectúa una operación bit a bit `OR` entre dos conjuntos de bits.
 
@@ -282,15 +280,15 @@ operator|(
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 El primero de los dos conjuntos de bits cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
-*Correcto*\
+\ *derecha*
 El segundo de los dos valarrays cuyos elementos respectivos van a combinarse con la operación bit a bit `OR`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un conjunto de bits cuyos elementos son el resultado de realizar la `OR` operación en los elementos correspondientes de *izquierdo* y *derecho*.
+Una BitSet cuyos elementos son el resultado de realizar la operación de `OR` en los elementos correspondientes de *izquierda* y *derecha*.
 
 ### <a name="example"></a>Ejemplo
 
