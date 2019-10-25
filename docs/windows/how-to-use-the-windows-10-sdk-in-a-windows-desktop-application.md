@@ -40,7 +40,7 @@ A partir de Visual Studio 2015 y el SDK de Windows 10, la biblioteca de CRT se s
 
 4. Abra las propiedades del proyecto y, en la sección **Propiedades de configuración, General** , observe los valores de **Versión de plataforma de destino de Windows**. Cambiar el valor aquí tiene el mismo efecto que seguir este procedimiento. Vea [General Property Page (Project)](../build/reference/general-property-page-project.md).
 
-   ![Versión] de la plataforma de destino (../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
+   ![Versión de la plataforma de destino ](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
    Esta acción cambia los valores de las macros del proyecto que incluyen rutas de acceso a archivos de encabezado y archivos de biblioteca. Para ver lo que ha cambiado, en la sección **directorios C++ visuales** del cuadro de diálogo **propiedades del proyecto** , elija una de las propiedades, como los directorios de **inclusión**, elija para abrir la \<lista desplegable y elija Editar >. Se mostrará el diálogo **Directorios de archivos de inclusión** .
 
