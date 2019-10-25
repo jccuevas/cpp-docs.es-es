@@ -28,7 +28,7 @@ A partir de Visual Studio 2015 y el SDK de Windows 10, la biblioteca de CRT se s
 
    Se mostrará el diálogo **Revisar acciones de solución** .
 
-   ![Revisar las acciones] de la solución (../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
+   ![Revisar las acciones de la solución ](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
 
 3. En la lista desplegable versión de la **plataforma de destino** , elija la versión del SDK de Windows 10 que quiere usar como destino. Elija el botón Aceptar para aplicar el cambio.
 

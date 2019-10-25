@@ -299,7 +299,7 @@ En esta sección se muestra cómo depurar el código de GPU, que es el `sum_kern
 
    Puede inspeccionar las propiedades de un subproceso de GPU que están disponibles en la ventana **subprocesos de GPU** en la información sobre la información enriquecida de la ventana **pilas paralelas** . Para ello, coloque el puntero del mouse en el marco de pila de **sum_kernel_tiled**. En la ilustración siguiente se muestra la información sobre la información.
 
-   Información ![sobre la ventana pilas paralelas] Información (../../parallel/amp/media/campe.png "sobre la ventana pilas paralelas") <br/>
+   ![Información sobre la ventana pilas paralelas](../../parallel/amp/media/campe.png "Información sobre la ventana pilas paralelas") <br/>
    Información sobre los subprocesos de GPU
 
    Para obtener más información acerca de la ventana **pilas paralelas** , vea [usar la ventana pilas paralelas](/visualstudio/debugger/using-the-parallel-stacks-window).

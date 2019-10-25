@@ -64,7 +64,7 @@ La `CNetAddressCtrl` clase se deriva de la clase [CEDIT](../../mfc/reference/ced
 
 En la ilustración siguiente se muestra un cuadro de diálogo que contiene un control de dirección de red. El cuadro de texto (1) para el control de dirección de red contiene una dirección de red no válida. Si la dirección de red no es válida, se muestra el mensaje de recuadro informativo (2).
 
-![Cuadro de diálogo con un control de dirección de red y un] recuadro informativo. (../../mfc/reference/media/cnetaddctrl.png "Cuadro de diálogo con un control de dirección de red y un") recuadro informativo.
+![Cuadro de diálogo con un control de dirección de red y un recuadro informativo.](../../mfc/reference/media/cnetaddctrl.png "Cuadro de diálogo con un control de dirección de red y un recuadro informativo.")
 
 ## <a name="example"></a>Ejemplo
 
