@@ -1,9 +1,9 @@
 ---
 title: _lfind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind
 - _lfind
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286497"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953387"
 ---
-# <a name="lfind"></a>_lfind
+# <a name="_lfind"></a>_lfind
 
 Realiza una búsqueda lineal de la clave especificada. Existe una versión más segura disponible de esta función; vea [_lfind_s](lfind-s.md).
 
@@ -69,13 +72,13 @@ Puntero a la rutina de comparación. El primer parámetro es un puntero a la cla
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se encuentra la clave, **_lfind** devuelve un puntero al elemento de la matriz en *base* que coincida con *clave*. Si no se encuentra la clave, **_lfind** devuelve **NULL**.
+Si se encuentra la clave, **_lfind** devuelve un puntero al elemento de la matriz en la *base* que coincide con la *clave*. Si no se encuentra la clave, **_lfind** devuelve **null**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lfind** función realiza una búsqueda lineal del valor *clave* en una matriz de *número* elementos, cada uno de *ancho* bytes. A diferencia de **bsearch**, **_lfind** no requiere la matriz esté ordenada. El *base* argumento es un puntero a la base de la matriz se va a buscar. El *comparar* argumento es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y, a continuación, devuelve un valor que especifica su relación. **_lfind** llamadas la *comparar* rutinarias una o varias veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. El *comparar* rutina debe comparar los elementos y, a continuación, devolver distinto de cero (es decir, los elementos son diferentes) o 0 (es decir, los elementos son idénticos).
+La función **_lfind** realiza una búsqueda lineal de la *clave* Value en una matriz de elementos *Number* , cada uno de los bytes de *ancho* . A diferencia de **bsearch**, **_lfind** no requiere la ordenación de la matriz. El argumento *base* es un puntero a la base de la matriz que se va a buscar. El argumento *Compare* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y, a continuación, devuelve un valor que especifica su relación. **_lfind** llama a la rutina de *comparación* una o más veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. La rutina de *comparación* debe comparar los elementos y devolver un valor distinto de cero (es decir, los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
 
-Esta función valida sus parámetros. Si *comparar*, *clave* o *número* es **NULL**, o si *base* es **NULL**y *número* es distinto de cero, o si *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
+Esta función valida sus parámetros. Si *comparar*, *la clave* o el *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en el [parámetro. Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**.
 
 ## <a name="requirements"></a>Requisitos
 

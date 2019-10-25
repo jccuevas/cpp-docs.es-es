@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458167"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687062"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-La plantilla `ratio` define las `num` constantes estáticas y `den` tal que `num`  /  `den` = = numerador/denominador y `num` y `den` no tienen ningún factor común. `num` / `den`es el valor representado por la clase de plantilla. Por lo `type` tanto, designa la `ratio<num, den>`creación de instancias.
+La plantilla `ratio` define las constantes estáticas `num` y `den` de modo que `num`  /  `den` = = numerador/denominador y `num` y `den` no tienen ningún factor común. `num`  /  `den` es el valor representado por la plantilla de clase. Por lo tanto, `type` designa el `ratio<num, den>` de creación de instancias.
 
 ### <a name="specializations"></a>Especializaciones
 
@@ -70,7 +70,7 @@ La plantilla `ratio` define las `num` constantes estáticas y `den` tal que `num
 
 Cada especialización toma dos parámetros de plantilla que también deben ser especializaciones de `ratio`. El valor de `type` se determina mediante una operación lógica asociada.
 
-|NOMBRE|Valor de `type`|
+|Name|Valor de `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

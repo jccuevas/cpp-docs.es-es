@@ -1,12 +1,12 @@
 ---
 title: strftime, wcsftime, _strftime_l, _wcsftime_l
 ms.date: 03/22/2018
-apiname:
+api_name:
 - strftime
 - _wcsftime_l
 - _strftime_l
 - wcsftime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsftime
 - strftime
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c20303973d09f48067dc331dba98a08f8f364f8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353851"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958125"
 ---
-# <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
+# <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
 Da formato a una cadena de hora.
 
@@ -82,30 +85,30 @@ size_t _wcsftime_l(
 Cadena de salida
 
 *maxsize*<br/>
-Tamaño de la *strDest* búfer, expresado en caracteres (**char** o **wchar_t**).
+Tamaño del búfer de *strDest* , medido en caracteres (**Char** o **wchar_t**).
 
 *format*<br/>
 Cadena de control de formato.
 
 *timeptr*<br/>
-**TM** estructura de datos.
+**TM** Data Structure.
 
 *locale*<br/>
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**strftime** devuelve el número de caracteres que se colocan en *strDest* y **wcsftime** devuelve el número correspondiente de caracteres anchos.
+**strftime** devuelve el número de caracteres colocados en *strDest* y **wcsftime** devuelve el número correspondiente de caracteres anchos.
 
-Si el número total de caracteres, incluido el carácter nulo final, es más de *maxsize*, ambos **strftime** y **wcsftime** devuelven 0 y el contenido de  *strDest* son indeterminados.
+Si el número total de caracteres, incluido el valor null final, es mayor que *MaxSize*, **strftime** y **wcsftime** devuelven 0 y el contenido de *strDest* es indeterminado.
 
-El número de caracteres en *strDest* es igual al número de caracteres literales de *formato* , así como todos los caracteres que se pueden agregar a *formato* mediante códigos de formato. El carácter nulo final de una cadena no se contabiliza en el valor devuelto.
+El número de caracteres de *strDest* es igual al número de caracteres literales en *formato* , así como a los caracteres que se pueden agregar al *formato* a través de códigos de formato. El carácter nulo final de una cadena no se contabiliza en el valor devuelto.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strftime** y **wcsftime** formato funciones el **tm** hora con el valor en *timeptr* según proporcionado  *formato* argumento y almacenan el resultado en el búfer *strDest*. A lo sumo, *maxsize* caracteres se colocan en la cadena. Para obtener una descripción de los campos de la *timeptr* estructura, vea [asctime](asctime-wasctime.md). **wcsftime** es el equivalente de caracteres anchos de **strftime**; su argumento de puntero de cadena señala a una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+Las funciones **strftime** y **wcsftime** formatean el valor de tiempo de **TM** en *timeptr* según el argumento de *formato* proporcionado y almacenan el resultado en el búfer *strDest*. Como máximo, los caracteres *MaxSize* se colocan en la cadena. Para obtener una descripción de los campos de la estructura *timeptr* , vea [asctime](asctime-wasctime.md). **wcsftime** es el equivalente de caracteres anchos de **strftime**; su argumento de puntero de cadena apunta a una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-Esta función valida sus parámetros. Si *strDest*, *formato*, o *timeptr* es un puntero nulo, o si el **tm** estructura de datos dirigido por *timeptr* no es válido (por ejemplo, si contiene valores fuera del intervalo para la fecha u hora), o si el *formato* cadena contiene un código de formato no válido, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** a **EINVAL**.
+Esta función valida sus parámetros. Si *strDest*, *Format*o *timeptr* es un puntero nulo, o si la estructura de datos de **TM** direccionada por *timeptr* no es válida (por ejemplo, si contiene valores fuera del intervalo para la hora o la fecha) o si la cadena de *formato* contiene un código de formato no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** en **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -113,61 +116,61 @@ Esta función valida sus parámetros. Si *strDest*, *formato*, o *timeptr* es un
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-El *formato* argumento consta de uno o más códigos; como en **printf**, los códigos de formato están precedidos por un signo de porcentaje (**%**). Caracteres que no comienzan por **%** se copian sin cambios a *strDest*. El **LC_TIME** categoría de la configuración regional actual afecta al formato de salida de **strftime**. (Para obtener más información sobre **LC_TIME**, consulte [setlocale](setlocale-wsetlocale.md).) El **strftime** y **wcsftime** funciones usan el conjunto actual configuración regional. El **_strftime_l** y **_wcsftime_l** versiones de estas funciones son idénticas salvo que toman la configuración regional como parámetro y usarlo en lugar de establecida actualmente configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El argumento de *formato* consta de uno o más códigos; como en **printf**, los códigos de formato están precedidos por un signo **%** de porcentaje (). Los caracteres que no comienzan por **%** se copian sin cambios en *strDest*. La categoría **LC_TIME** de la configuración regional actual afecta al formato de salida de **strftime**. (Para obtener más información sobre **LC_TIME**, vea [setlocale](setlocale-wsetlocale.md)). Las funciones **strftime** y **wcsftime** usan la configuración regional establecida actualmente. Las versiones **_strftime_l** y **_wcsftime_l** de estas funciones son idénticas, salvo que toman la configuración regional como parámetro y la usan en lugar de la configuración regional establecida en ese momento. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-El **strftime** funciones admiten estos códigos de formato:
+Las funciones **strftime** admiten estos códigos de formato:
 
 |||
 |-|-|
 |Código|Cadena de reemplazo|
-|**%a**|Nombre del día laborable abreviado en la configuración regional|
-|**%A**|Nombre del día laborable completo en la configuración regional|
+|**%a**|Nombre abreviado del día de la semana en la configuración regional|
+|**%A**|Nombre completo del día de la semana en la configuración regional|
 |**%b**|Nombre abreviado del mes en la configuración regional|
 |**%B**|Nombre completo del mes en la configuración regional|
 |**%c**|Representación de fecha y hora adecuada para la configuración regional|
-|**%C**|El año dividido entre 100 y truncado en un entero, como un número decimal (00−99)|
+|**%C**|El año dividido entre 100 y truncado en un entero, como un número decimal (00 − 99)|
 |**%d**|Día del mes como un número decimal (01-31)|
-|**%D**|Equivalente a **%m/%d/%y**|
-|**%e**|Día del mes como un número decimal (1-31), donde solo dígitos están precedidos por un espacio|
-|**%F**|Equivalente a **%Y %m-%d**|
-|**%g**|Los 2 últimos dígitos del año ISO 8601 basado en semana como un número decimal (00 – 99)|
-|**%G**|Año ISO 8601 basado en semana como un número decimal|
-|**%h**|Nombre abreviado del mes (equivalente a **%b**)|
-|**%H**|Hora en formato de 24 horas (00 - 23)|
-|**%I**|Hora en formato de 12 horas (01-12)|
-|**%j**|Día del año como número decimal (001-366)|
-|**%m**|Mes como un número decimal (01-12)|
-|**%M**|Minuto como número decimal (00 - 59)|
-|**%n**|Un carácter de nueva línea (**\n**)|
-|**%p**|A.m. y la configuración regional. Indicador de reloj de 12 horas|
-|**%r**|Tiempo de reloj de 12 horas de la configuración regional|
-|**%R**|Equivalente a **% H: %M**|
-|**%S**|Segundo como número decimal (00 - 59)|
-|**%t**|Un carácter de tabulación horizontal (**\t**)|
-|**%T**|Equivalente a **% H: % M: %S**, el formato de hora ISO 8601|
-|**%u**|Día de la semana ISO 8601 como un número decimal (1-7; El lunes es 1)|
-|**%U**|Número de semana del año como número decimal (00 – 53), donde el primer domingo es el primer día de la semana 1|
-|**%V**|Número de semana ISO 8601 como un número decimal (00 – 53)|
-|**%w**|Día de la semana como un número decimal (0 - 6; El domingo es 0)|
-|**%W**|Número de semana del año como número decimal (00 – 53), donde el primer lunes es el primer día de la semana 1|
+|**% D**|Equivalente a **% m/% d/% y**|
+|**% e**|Día del mes como un número decimal (1-31), donde los dígitos únicos van precedidos de un espacio|
+|**%F**|Equivalente a **% Y-% m-% d**|
+|**% g**|Los últimos 2 dígitos del año basado en la semana ISO 8601 como un número decimal (00-99)|
+|**%G**|Año basado en la semana ISO 8601 como un número decimal|
+|**%h**|Nombre abreviado de mes (equivalente a **% b**)|
+|**% H**|Hora en formato de 24 horas (00-23)|
+|**% I**|Hora en formato de 12 horas (01-12)|
+|**%j**|Día del año como un número decimal (001-366)|
+|**% m**|Mes como un número decimal (01-12)|
+|**% M**|Minuto como número decimal (00-59)|
+|**% n**|Un carácter de nueva línea ( **\n**)|
+|**% p**|La configuración regional AM PM Indicador de reloj de 12 horas|
+|**% r**|La hora de reloj de 12 horas de la configuración regional|
+|**% R**|Equivalente a **% H:%M**|
+|**%S**|Segundo como un número decimal (00-59)|
+|**% t**|Un carácter de tabulación horizontal ( **\t**)|
+|**% T**|Equivalente a **% H:%M:% S**, formato de hora ISO 8601|
+|**% u**|ISO 8601 día de la semana como número decimal (1-7; El lunes es 1)|
+|**%U**|Número de semana del año como un número decimal (00-53), donde el primer domingo es el primer día de la semana 1|
+|**%V**|ISO 8601 número de semana como un número decimal (00-53)|
+|**% s**|Día de la semana como número decimal (0-6; Sunday es 0)|
+|**% S**|Número de semana del año como un número decimal (00-53), donde el primer lunes es el primer día de la semana 1|
 |**%x**|Representación de fecha para la configuración regional|
-|**%X**|Representación en tiempo de la configuración regional|
-|**%y**|Año sin siglo como número decimal (00 – 99)|
-|**%Y**|Año con siglo como número decimal|
-|**%z**|El desplazamiento de UTC en formato ISO 8601; No hay caracteres si la zona horaria es desconocida|
-|**%Z**|Del ya sea la configuración regional nombre de zona horaria o abreviatura de la zona horaria, dependiendo de la configuración del registro; No hay caracteres si la zona horaria es desconocida|
+|**%X**|Representación de tiempo para la configuración regional|
+|**% y**|Año sin siglo, como número decimal (00-99)|
+|**% Y**|Año con siglo como número decimal|
+|**%z**|El desplazamiento con respecto a la hora UTC en formato ISO 8601; no hay caracteres si se desconoce la zona horaria|
+|**%Z**|El nombre de zona horaria o la abreviatura de zona horaria de la configuración regional, dependiendo de la configuración del registro; no hay caracteres si se desconoce la zona horaria|
 |**%%**|Signo de porcentaje|
 
-Como en el **printf** función, el **#** marca puede aplicar un prefijo cualquier código de formato. En ese caso, el significado del código de formato cambia del siguiente modo.
+Como en la función **printf** , la **#** marca puede prefijar cualquier código de formato. En ese caso, el significado del código de formato cambia del siguiente modo.
 
 |Código de formato|Significado|
 |-----------------|-------------|
-|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** se omitirá la marca.|
-|**%#c**|Long fecha y hora representación, adecuado para la configuración regional. Por ejemplo: "Martes, 14 de marzo de 1995, 12:41:29".|
-|**%#x**|Representación de fecha larga, adecuada a la configuración regional. Por ejemplo: "Martes, 14 de marzo de 1995."|
-|**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Quitar ceros o espacios (si existe).|
+|**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **% #h**, **% #n**, **% #p**, **% #t**, **% #u**, **% #w**, **% #X**, **% #z**, **% #Z**, **%#%**|**#** la marca se omite.|
+|**%#c**|Representación de fecha y hora larga, adecuada para la configuración regional. Por ejemplo:  "Martes, 14 de marzo de 1995, 12:41:29".|
+|**%#x**|Representación de fecha larga, adecuada para la configuración regional. Por ejemplo:  "Martes, 14 de marzo de 1995".|
+|**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **% #j**, **% #m**, **% #M**, **% #r**, **% #R**, **% #S**, **% #T**, **% #U**, **% #V**, **% #W**,  **% #y**, **% #Y**|Quitar los ceros o espacios iniciales (si existen).|
 
-La semana ISO 8601 y año basado en semana producidas por **%V**, **%g**, y **%G**, usa una semana que empieza el lunes, donde 1 semana es la semana que contiene 4 de enero, que es el primero semana en los que se incluye al menos cuatro días del año. Si el primer lunes del año es el 2 º, 3 o 4 de mayo, los días anteriores forman parte de la última semana del año anterior. Durante esos días, **%V** se sustituye por 53 y ambos **%g** y **%G** se reemplazan por los dígitos del año anterior.
+El año basado en la semana ISO 8601 y en la semana generado por **% V**, **% g**y **% g**usa una semana que empieza el lunes, donde semana 1 es la semana que contiene el 4 de enero, que es la primera semana que incluye al menos cuatro días del año. Si el primer lunes del año es el 2º, el tercero o el cuarto, los días anteriores forman parte de la última semana del año anterior. En esos días, **% V** se sustituye por 53 y ambos **% g** y **% g** se sustituyen por los dígitos del año anterior.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -178,7 +181,7 @@ La semana ISO 8601 y año basado en semana producidas por **%V**, **%g**, y **%G
 |**_strftime_l**|\<time.h>|
 |**_wcsftime_l**|\<time.h> o \<wchar.h>|
 
-El **_strftime_l** y **_wcsftime_l** funciones son específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Las funciones **_strftime_l** y **_wcsftime_l** son específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

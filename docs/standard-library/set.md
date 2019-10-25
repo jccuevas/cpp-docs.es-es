@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450521"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686467"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Define las clases de plantilla de contenedor set y multiset, así como sus plantillas auxiliares.
+Define las plantillas de clase contenedoras set y MultiSet, así como sus plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,13 +24,13 @@ Define las clases de plantilla de contenedor set y multiset, así como sus plant
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<biblioteca Set > también utiliza la `#include <initializer_list>` instrucción.
+> La biblioteca de > de \<set también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="operators"></a>Operadores
 
-|Versión set|Versión multiset|DESCRIPCIÓN|
+|Versión set|Versión multiset|Descripción|
 |-|-|-|
 |[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|Comprueba si el objeto set o multiset a la izquierda del operador no es igual que el objeto set o multiset situado a la derecha del operador.|
 |[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Comprueba si el objeto set o multiset a la izquierda del operador es menor que el objeto set o multiset situado a la derecha del operador.|
@@ -41,7 +41,7 @@ Define las clases de plantilla de contenedor set y multiset, así como sus plant
 
 ### <a name="specialized-template-functions"></a>Funciones de plantilla especializadas
 
-|Versión set|Versión multiset|DESCRIPCIÓN|
+|Versión set|Versión multiset|Descripción|
 |-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (conjunto mútiple)](../standard-library/set-functions.md#swap_multiset)|Intercambia los elementos de dos sets o multisets.|
 

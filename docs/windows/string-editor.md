@@ -1,5 +1,5 @@
 ---
-title: Editor de cadenas (C++)
+title: Editor de cadenasC++()
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.string.F1
@@ -32,23 +32,23 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: e596aa475f0fb08609a0772ecc3f8a302e849275
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504807"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514720"
 ---
-# <a name="string-editor-c"></a>Editor de cadenas (C++)
+# <a name="string-editor-c"></a>Editor de cadenasC++()
 
 Una tabla de cadenas es un recurso de Windows que contiene una lista de id., valores y títulos para todas las cadenas de su aplicación. Por ejemplo, los mensajes de la barra de estado se encuentran en la tabla de cadenas.
 
 Al desarrollar una aplicación, puede tener varias tablas de cadenas: una para cada idioma o condición. Sin embargo, un módulo ejecutable solo tiene una tabla de cadenas. Una aplicación en ejecución puede hacer referencia a varias tablas de cadenas si coloca las tablas en varias DLL diferentes.
 
-Las tablas de cadenas facilitan la localización de la aplicación en diferentes idiomas. Si todas las cadenas se encuentran en una tabla de cadenas, puede localizar la aplicación mediante la traducción de las cadenas (y otros recursos) sin cambiar el código fuente. Esta situación es más deseable que buscar y reemplazar las distintas cadenas en archivos de origen manualmente.
+Las tablas de cadenas facilitan la localización de la aplicación en diferentes idiomas. Si todas las cadenas se encuentran en una tabla de cadenas, puede localizar la aplicación mediante la traducción de las cadenas (y otros recursos) sin cambiar el código fuente. Esta situación es más deseable que buscar y reemplazar manualmente las distintas cadenas en archivos de código fuente.
 
 > [!NOTE]
-> Windows no permiten la creación de tablas de una cadena vacía. Si crea una tabla de cadenas sin entradas, se elimina automáticamente al guardar el archivo de recursos.
+> Windows no permite la creación de tablas de cadenas vacías. Si crea una tabla de cadenas sin entradas, se elimina automáticamente al guardar el archivo de recursos.
 
 ## <a name="how-to"></a>Procedimientos
 
@@ -56,113 +56,113 @@ El **Editor de cadenas** le permite:
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Para buscar un recurso de cadena en la tabla de cadenas
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra la tabla de cadenas haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Vaya al menú **editar** > **buscar y reemplazar** y elija **encontrar**.
+1. Vaya a menú **Editar** > **Buscar y reemplazar** y elija **Buscar**.
 
-1. En el **buscar** cuadro, seleccione una cadena de búsqueda anterior en la lista desplegable o escriba el título texto o identificador de recurso de la cadena que desea buscar.
+1. En el cuadro **Buscar** , seleccione una cadena de búsqueda anterior en la lista desplegable o escriba el texto del título o el identificador de recurso de la cadena que desea buscar.
 
-1. Seleccione cualquiera de los **buscar** opciones y seleccione **Buscar siguiente**.
+1. Seleccione cualquiera de las opciones de **búsqueda** y seleccione **Buscar siguiente**.
 
 > [!TIP]
-> Para usar [expresiones regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) al buscar archivos, utilice el **buscar en archivos** comando en el **editar** menú.
+> Para usar [expresiones regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) al buscar archivos, use el comando **Buscar en archivos** del menú **edición** .
 >
-> Escriba una expresión regular para coincidir con un patrón o seleccione el botón a la derecha de la **buscar** cuadro para mostrar una lista de expresiones regulares de búsqueda. Al seleccionar una expresión de esta lista, se usará como el texto de búsqueda en el **buscar** cuadro.
+> Escriba una expresión regular para que coincida con un patrón o seleccione el botón que se encuentra a la derecha del cuadro **Buscar** para mostrar una lista de expresiones de búsqueda normales. Al seleccionar una expresión de esta lista, se sustituye por el texto de búsqueda en el cuadro **Buscar** .
 >
-> Si utiliza expresiones regulares, asegúrese del **usar: Las expresiones regulares** casilla está activada.
+> Si utiliza expresiones regulares, asegúrese de **usar: La casilla** expresiones regulares está activada.
 
 ### <a name="to-add-or-delete-a-string-resource"></a>Para agregar o eliminar un recurso de cadena
 
-Rápidamente puede insertar o eliminar las entradas en la tabla de la cadena mediante la **Editor de cadenas**. Nuevas cadenas se colocan al final de la tabla y reciben el siguiente identificador disponible. Puede editar el **ID**, **valor**, o **título** propiedades en el [ventana propiedades](/visualstudio/ide/reference/properties-window) según sea necesario.
+Puede insertar o eliminar entradas rápidamente en la tabla de cadenas mediante el **Editor de cadenas**. Las nuevas cadenas se colocan al final de la tabla y reciben el siguiente identificador disponible. Puede editar las propiedades **ID**, **Value**o **Caption** en el [ventana Propiedades](/visualstudio/ide/reference/properties-window) según sea necesario.
 
-El **Editor de cadenas** se asegura de que no use un identificador que ya está en uso. Si selecciona un identificador ya en uso, el **Editor de cadenas** le notificaremos y, a continuación, asignar un identificador genérico único, por ejemplo `IDS_STRING58113`.
+El **Editor de cadenas** se asegura de que no se use un identificador que ya esté en uso. Si selecciona un identificador que ya está en uso, el **Editor de cadenas** le notificará y, a continuación, asignará un `IDS_STRING58113`identificador único genérico, por ejemplo.
 
 #### <a name="to-add-a-string-table-entry"></a>Para agregar una entrada de tabla de cadenas
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra la tabla de cadenas haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Haga doble clic en la tabla de cadenas y elija **nueva cadena**.
+1. Haga clic con el botón derecho en la tabla de cadenas y elija **nueva cadena**.
 
-1. En el **Editor de cadenas**, seleccione un **Id. de** desde el **Id. de** lista desplegable o escriba un *ID* directamente en su lugar.
+1. En el **Editor de cadenas**, seleccione **un identificador** de la lista desplegable **ID** o escriba un *identificador* directamente en su lugar.
 
-1. Editar el **valor**, si es necesario.
+1. Edite el **valor**, si es necesario.
 
 1. Escriba una entrada para el **título**.
 
    > [!NOTE]
-   > No se permiten cadenas nulas en las tablas de cadenas de Windows. Si crea una entrada en la tabla de cadenas es una cadena nula, recibirá un mensaje que le pide que **escriba una cadena para esta entrada de tabla**.
+   > No se permiten cadenas nulas en las tablas de cadenas de Windows. Si crea una entrada en la tabla de cadenas que es una cadena nula, recibirá un mensaje que le pedirá que **especifique una cadena para esta entrada de tabla**.
 
-#### <a name="to-delete-a-string-table-entry"></a>Para eliminar una entrada de tabla de cadenas
+#### <a name="to-delete-a-string-table-entry"></a>Para eliminar una entrada de la tabla de cadenas
 
 Seleccione la entrada que desea eliminar y realice una de las siguientes acciones:
 
-- Vaya al menú **editar** > **eliminar**.
+- Vaya a menú **Editar** > **eliminar**.
 
-- Haga clic en la cadena para eliminar y elija **eliminar**.
+- Haga clic con el botón derecho en la cadena que desea eliminar y elija **eliminar**.
 
-- Presione el **eliminar** clave.
+- Presione la tecla **Supr** .
 
-### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Para mover una cadena de archivo de script de un recurso a otro
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Para trasladar una cadena de un archivo de script de recursos a otro
 
-1. [Abra las tablas de cadenas en los dos archivos .rc](../windows/how-to-create-a-resource-script-file.md).
+1. [Abra las tablas de cadenas en ambos archivos. RC](../windows/how-to-create-a-resource-script-file.md).
 
-1. Haga clic en la cadena para mover y elija **cortar**.
+1. Haga clic con el botón secundario en la cadena que desea desplace y elija **cortar**.
 
-1. Coloque el cursor en el destino **Editor de cadenas** ventana.
+1. Coloque el cursor en la ventana del **Editor de cadenas** de destino.
 
-1. En el *.rc* archivo al que desea mover la cadena, haga clic en y elija **pegar**.
+1. En el archivo *. RC* al que desea desplace la cadena, haga clic con el botón secundario y elija **pegar**.
 
 > [!NOTE]
-> Si el **ID** o **valor** de conflictos con una cadena desplazada **ID** o **valor** en el archivo de destino, ya sea que **ID** o **valor** de los cambios de la cadena desplazada.
+> Si el **identificador** o el **valor** de la cadena movida entra en conflicto con un **identificador** o **valor** existente en el archivo de destino, el **identificador** o el **valor** de la cadena movida cambia.
 
 ### <a name="to-change-the-properties-of-a-string-resource"></a>Para cambiar las propiedades de un recurso de cadena
 
-Puede usar la edición en contexto para cambiar la **ID**, **valor**, y **título** propiedades.
+Puede utilizar la edición en contexto para cambiar las propiedades **ID**, **Value**y **Caption** .
 
 > [!NOTE]
->  También puede editar propiedades de una cadena en el [ventana propiedades](/visualstudio/ide/reference/properties-window).
+>  También puede editar las propiedades de una cadena en el [ventana Propiedades](/visualstudio/ide/reference/properties-window).
 
-#### <a name="to-change-a-string-or-its-identifier"></a>Para cambiar una cadena o su identificador.
+#### <a name="to-change-a-string-or-its-identifier"></a>Para cambiar una cadena o su identificador
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra la tabla de cadenas haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Seleccione la cadena que desea editar y haga doble clic en el **ID**, **valor**, o **título** columna, puede realizar:
+1. Seleccione la cadena que desea editar y haga doble clic en la columna **ID.** , **valor**o **título** y, a continuación, puede:
 
-   - Seleccione un **Id. de** desde el **Id. de** lista desplegable o escriba un *ID* directamente en su lugar.
+   - Seleccione un **identificador** de la lista desplegable **ID** o escriba un *identificador* directamente en su lugar.
 
-   - Escriba un número diferente de la **valor** columna.
+   - Escriba un número diferente en la columna **valor** .
 
-   - Escriba las modificaciones en el **título** columna.
+   - Escriba Edits en la columna **Caption** .
 
-#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Para cambiar la propiedad caption de varios recursos de cadena
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Para cambiar la propiedad Caption de varios recursos de cadena
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra la tabla de cadenas haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Seleccione las cadenas que desee cambiar, mantenga presionada la **Ctrl** clave mientras selecciona cada uno de ellos.
+1. Seleccione las cadenas que desea cambiar manteniendo presionada la tecla **Ctrl** mientras selecciona cada una.
 
-1. En el [ventana propiedades](/visualstudio/ide/reference/properties-window), escriba un nuevo valor para la propiedad que desee cambiar.
+1. En la [ventana Propiedades](/visualstudio/ide/reference/properties-window), escriba un nuevo valor para la propiedad que desee cambiar.
 
 1. Presione **ENTRAR**.
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Para agregar formato o caracteres especiales a un recurso de cadena
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
+1. Abra la tabla de cadenas haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Seleccione la cadena que desea modificar.
 
-1. En el [ventana propiedades](/visualstudio/ide/reference/properties-window), agregue cualquiera de las secuencias de escape estándar enumerados a continuación para el texto en el **título** cuadro y presione **ENTRAR**.
+1. En la [ventana Propiedades](/visualstudio/ide/reference/properties-window), agregue cualquiera de las secuencias de escape estándar que se enumeran a continuación al texto del cuadro **título** y presione **entrar**.
 
-   |Para obtener esto...|Escriba lo siguiente...|
+   |Para obtener esto...|Escriba este...|
    |-----------------|---------------|
    | Nueva línea | \\n |
    | Retorno de carro | \\r |
-   | Tab | \\t |
+   | Tab | \\h |
    | Barra diagonal inversa (\\) | \\\\ |
-   | Carácter ASCII | \\ddd (notación octal) |
-   | alerta (campana) | \\a |
+   | Carácter ASCII | \\DDD (notación octal) |
+   | Alerta (campana) | \\un |
 
    > [!NOTE]
-   > El **Editor de cadenas** no es compatible con el conjunto completo de caracteres ASCII con escape. Solo se pueden usarlos mencionados anteriormente.
+   > El **Editor de cadenas** no admite el conjunto completo de caracteres de ASCI con escape. Solo se pueden usar los enumerados anteriormente.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -170,7 +170,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)
-[cadenas](/windows/desktop/menurc/strings)<br/>
-[Acerca de las cadenas](/windows/desktop/menurc/about-strings)<br/>
+[Cadenas](../windows/resource-editors.md)
+[de editores de recursos](/windows/win32/menurc/strings)<br/>
+[Acerca de las cadenas](/windows/win32/menurc/about-strings)<br/>
 [Personalizar los diseños de ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

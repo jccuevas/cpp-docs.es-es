@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505537"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741591"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
 
@@ -1274,7 +1274,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="remarks"></a>Comentarios
 
-Indica si las barras de control de acoplamiento se pueden convertir en ventanas secundarias de MDI. Si esta marca es TRUE, el marco de trabajo controla la conversión automáticamente cuando el usuario selecciona el comando de **documento** con pestañas. La marca está protegida y debe habilitar explícitamente esta opción `m_bCanCovertControlBarToMDIChild` estableciendo en un constructor de una `CMDIFrameWndEx`clase derivada de o invalidando `CanConvertControlBarToMDIChild`.
+Indica si las barras de control de acoplamiento se pueden convertir en ventanas secundarias de MDI. Si esta marca es TRUE, el marco de trabajo controla la conversión automáticamente cuando el usuario selecciona el comando de **documento con pestañas** . La marca está protegida y debe habilitar explícitamente esta opción `m_bCanCovertControlBarToMDIChild` estableciendo en un constructor de una `CMDIFrameWndEx`clase derivada de o invalidando `CanConvertControlBarToMDIChild`.
 
 El valor predeterminado es `FALSE`.
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 de Botón de la barra de herramientas.
 
 *pTI*<br/>
-enuncia Puntero a una estructura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
+enuncia Puntero a una estructura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Valor devuelto
 

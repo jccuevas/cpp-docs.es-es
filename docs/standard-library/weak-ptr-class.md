@@ -28,14 +28,14 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: d4ba30f737bc570a4ee700b3a317b5feebe8a50a
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 2591c4cd124f83085235828d3eb29ab1a90d894a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682409"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684086"
 ---
-# <a name="weakptr-class"></a>weak_ptr (Clase)
+# <a name="weak_ptr-class"></a>weak_ptr (Clase)
 
 Contiene un puntero débilmente vinculado.
 
@@ -47,18 +47,18 @@ template<class T> class weak_ptr;
 
 ### <a name="parameters"></a>Parámetros
 
-*H*\
+*T* \
 Tipo controlado por el puntero débil.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que apunta a un recurso administrado por uno o más objetos [shared_ptr](shared-ptr-class.md) . Los `weak_ptr` objetos que apuntan a un recurso no afectan al recuento de referencias del recurso. Cuando se destruye `shared_ptr` el último objeto que administra ese recurso, el recurso se liberará, aunque `weak_ptr` haya objetos que señalen a ese recurso. Este comportamiento es esencial para evitar ciclos en estructuras de datos.
+La plantilla de clase describe un objeto que apunta a un recurso administrado por uno o más objetos [shared_ptr](shared-ptr-class.md) . Los objetos `weak_ptr` que apuntan a un recurso no afectan al recuento de referencias del recurso. Cuando se destruye el último objeto `shared_ptr` que administra ese recurso, el recurso se liberará, aunque haya `weak_ptr` objetos que apunten a ese recurso. Este comportamiento es esencial para evitar ciclos en estructuras de datos.
 
-Un objeto `weak_ptr` apunta a un recurso si se construyó a partir de un objeto `shared_ptr` que posee ese recurso, si se construyó a partir de un objeto `weak_ptr` que apunta a ese recurso o si se le asignó ese recurso con [operator=](#op_eq). Un `weak_ptr` objeto no proporciona acceso directo al recurso al que apunta. El código que debe usar el recurso lo hace a través de un objeto `shared_ptr` que posee ese recurso, creado mediante una llamada a la función miembro [lock](#lock). Un `weak_ptr` objeto ha expirado cuando el recurso al que apunta se ha liberado porque todos los `shared_ptr` objetos que poseen el recurso se han destruido. Llamar a `lock` en un objeto `weak_ptr` que ha expirado crea un objeto shared_ptr vacío.
+Un objeto `weak_ptr` apunta a un recurso si se construyó a partir de un objeto `shared_ptr` que posee ese recurso, si se construyó a partir de un objeto `weak_ptr` que apunta a ese recurso o si se le asignó ese recurso con [operator=](#op_eq). Un objeto `weak_ptr` no proporciona acceso directo al recurso al que apunta. El código que debe usar el recurso lo hace a través de un objeto `shared_ptr` que posee ese recurso, creado mediante una llamada a la función miembro [lock](#lock). Un objeto `weak_ptr` ha expirado cuando el recurso al que apunta se ha liberado porque todos los objetos `shared_ptr` que poseen el recurso se han destruido. Llamar a `lock` en un objeto `weak_ptr` que ha expirado crea un objeto shared_ptr vacío.
 
 Un objeto weak_ptr vacío no apunta a ningún recurso y no tiene ningún bloque de control. Su función miembro `lock` devuelve un objeto shared_ptr vacío.
 
-Un ciclo se produce cuando dos o más recursos controlados por objetos `shared_ptr` contienen objetos `shared_ptr` que se hacen referencia mutuamente. Por ejemplo, una lista vinculada circular con tres elementos tiene un nodo principal `N0`; ese nodo contiene un objeto `shared_ptr` que posee el siguiente nodo, `N1`; ese nodo contiene un objeto `shared_ptr` que posee el siguiente nodo, `N2`; ese nodo, a su vez, contiene un objeto `shared_ptr` que posee el nodo principal, `N0`, que cierra el ciclo. En esta situación, los recuentos de referencias nunca se vuelven cero y los nodos del ciclo nunca se liberan. Para eliminar el ciclo, el último nodo `N2` debe contener un objeto `weak_ptr` que apunte a `N0` en lugar de un objeto `shared_ptr`. Dado que `weak_ptr` el objeto no `N0` posee, no `N0`afecta al recuento de referencias de, y cuando se destruye la última referencia al nodo principal del programa, también se destruirán los nodos de la lista.
+Un ciclo se produce cuando dos o más recursos controlados por objetos `shared_ptr` contienen objetos `shared_ptr` que se hacen referencia mutuamente. Por ejemplo, una lista vinculada circular con tres elementos tiene un nodo principal `N0`; ese nodo contiene un objeto `shared_ptr` que posee el siguiente nodo, `N1`; ese nodo contiene un objeto `shared_ptr` que posee el siguiente nodo, `N2`; ese nodo, a su vez, contiene un objeto `shared_ptr` que posee el nodo principal, `N0`, que cierra el ciclo. En esta situación, los recuentos de referencias nunca se vuelven cero y los nodos del ciclo nunca se liberan. Para eliminar el ciclo, el último nodo `N2` debe contener un objeto `weak_ptr` que apunte a `N0` en lugar de un objeto `shared_ptr`. Puesto que el objeto de `weak_ptr` no es propietario `N0` no afecta al recuento de referencias de `N0` y cuando se destruye la última referencia al nodo principal del programa, también se destruirán los nodos de la lista.
 
 ## <a name="members"></a>Miembros
 
@@ -76,7 +76,7 @@ Un ciclo se produce cuando dos o más recursos controlados por objetos `shared_p
 |[owner_before](#owner_before)|Devuelve **true** si este `weak_ptr` está ordenado antes (o es menor que) que el puntero proporcionado.|
 |[reset](#reset)|Libera el recurso poseído.|
 |[swap](#swap)|Intercambia dos objetos `weak_ptr`.|
-|[use_count](#use_count)|Cuenta el número `shared_ptr` de objetos.|
+|[use_count](#use_count)|Cuenta el número de objetos de `shared_ptr`.|
 | **Operadores** | |
 |[operator=](#op_eq)|Reemplaza el recurso poseído.|
 
@@ -176,7 +176,7 @@ shared_ptr<T> lock() const noexcept;
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro devuelve un objeto [shared_ptr](shared-ptr-class.md) vacío si `*this` ha expirado; de lo contrario, `shared_ptr<T>` devuelve un objeto que posee el `*this` recurso al que apunta. Devuelve un valor equivalente a la ejecución atómica de `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)`.
+La función miembro devuelve un objeto [shared_ptr](shared-ptr-class.md) vacío si ha caducado `*this`. en caso contrario, devuelve un objeto `shared_ptr<T>` que posee el recurso al que apunta `*this`. Devuelve un valor equivalente a la ejecución atómica de `expired() ? shared_ptr<T>() : shared_ptr<T>(*this)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -215,7 +215,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
 Reemplaza el recurso poseído.
 
@@ -231,15 +231,15 @@ weak_ptr& operator=(const shared_ptr<Other>& ptr) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Distinta*\
+*Otros* \
 Tipo controlado por el puntero compartido o débil del argumento.
 
-*anota*\
+\ *ptr*
 Puntero débil o puntero compartido que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
-Todos los operadores liberan el recurso al que `*this` apunta actualmente y asignan la propiedad del recurso denominado por `*this` *ptr* a. Si se produce un error en un `*this` operador, deja sin modificar. Cada operador tiene un efecto equivalente a `weak_ptr(ptr).swap(*this)`.
+Todos los operadores liberan el recurso al que apunta actualmente `*this` y asignan la propiedad del recurso denominado por *ptr* a `*this`. Si se produce un error en un operador, deja `*this` sin modificar. Cada operador tiene un efecto equivalente a `weak_ptr(ptr).swap(*this)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -287,12 +287,12 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*anota*\
-Una referencia lvalue a `shared_ptr` `weak_ptr`o a.
+\ *ptr*
+Una referencia lvalue a un `shared_ptr` o un `weak_ptr`.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro de plantilla devuelve true `*this` si se ordena antes que *ptr*.
+La función miembro de plantilla devuelve **true** si `*this` se ordena antes que *ptr*.
 
 ## <a name="reset"></a>determinado
 
@@ -304,7 +304,7 @@ void reset() noexcept;
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro libera el recurso al que `*this` apunta y `*this` convierte en un objeto vacío `weak_ptr` .
+La función miembro libera el recurso al que apunta `*this` y convierte `*this` en un objeto `weak_ptr` vacío.
 
 ### <a name="example"></a>Ejemplo
 
@@ -353,12 +353,12 @@ void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*WP*\
+\ *WP*
 El puntero débil que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios
 
-`*this` `*this`Después de ,elrecursoalqueapuntaoriginalmenteseapuntaporWPyelrecursoalqueapuntaoriginalmenteelWPapuntaa.`swap` La función no cambia los recuentos de referencias para los dos recursos y no inicia ninguna excepción. El efecto de la especialización de la plantilla es el `a.swap(b)`equivalente de.
+Después de una `swap`, el recurso al que apuntaba originalmente `*this` apunta a *WP*y el recurso al que apunta originalmente el *wp* apunta por `*this`. La función no cambia los recuentos de referencias para los dos recursos y no inicia ninguna excepción. El efecto de la especialización de la plantilla es el equivalente de `a.swap(b)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -407,7 +407,7 @@ int main()
 
 ## <a name="use_count"></a>use_count
 
-Cuenta el número de `shared_ptr` objetos que poseen el recurso compartido.
+Cuenta el número de objetos de `shared_ptr` que poseen el recurso compartido.
 
 ```cpp
 long use_count() const noexcept;
@@ -468,18 +468,18 @@ weak_ptr(const shared_ptr<Other>& sp) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Distinta*\
-El tipo controlado por el puntero compartido o débil de argumento. Estos constructores no participan en la resolución de sobrecarga a menos que `element_type*` _otros\*_  sea compatible con.
+*Otros* \
+El tipo controlado por el puntero compartido o débil de argumento. Estos constructores no participan en la resolución de sobrecarga a menos que _otros \*_ sean compatibles con `element_type*`.
 
-*WP*\
+\ *WP*
 El puntero débil que se va a copiar.
 
-*dañado*\
+\ *SP*
 El puntero compartido que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
 
-El constructor predeterminado crea un objeto vacío `weak_ptr` . Los constructores que toman un argumento crean un objeto vacío `weak_ptr` si el puntero del argumento está vacío. De lo contrario, construyen un `weak_ptr` objeto que apunta al recurso denominado por el argumento. No se cambia el recuento de referencias del objeto compartido.
+El constructor predeterminado crea un objeto de `weak_ptr` vacío. Los constructores que toman un argumento crean un objeto vacío `weak_ptr` si el puntero del argumento está vacío. De lo contrario, crean un objeto `weak_ptr` que apunta al recurso denominado por el argumento. No se cambia el recuento de referencias del objeto compartido.
 
 ### <a name="example"></a>Ejemplo
 
@@ -524,7 +524,7 @@ Destruye un objeto `weak_ptr`.
 
 ### <a name="remarks"></a>Comentarios
 
-El destructor destruye esto `weak_ptr` pero no tiene ningún efecto en el recuento de referencias del objeto al que apunta su puntero almacenado.
+El destructor destruye este `weak_ptr` pero no tiene ningún efecto en el recuento de referencias del objeto al que apunta su puntero almacenado.
 
 ## <a name="see-also"></a>Vea también
 

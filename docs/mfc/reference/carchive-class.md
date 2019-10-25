@@ -132,7 +132,7 @@ Los operadores sobrecargados de **>>** extracción () e **<<** inserción () son
 
 `CArchive`también admite la programación con las clases de Windows Sockets de MFC [CSocket](../../mfc/reference/csocket-class.md) y [CSocketFile](../../mfc/reference/csocketfile-class.md). La función miembro [IsBufferEmpty](#isbufferempty) admite ese uso.
 
-Para obtener más información `CArchive`sobre, vea los [](../../mfc/serialization-in-mfc.md) artículos sobre serialización y [Windows Sockets: Usar sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Para obtener más información `CArchive`sobre, vea los artículos sobre [serialización](../../mfc/serialization-in-mfc.md) y [Windows Sockets: Usar sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

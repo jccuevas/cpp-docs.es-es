@@ -1,91 +1,91 @@
 ---
 title: Gramática de preprocesador
-ms.date: 09/04/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179885"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222260"
 ---
 # <a name="preprocessor-grammar"></a>Gramática de preprocesador
 
-*control-line*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identificador* *token-string*<sub>participar</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identificador</em>**(** *identificador*<sub>opt</sub> **,** ... **,** *identificador*<sub>opt</sub> **)** *token-string*<sub>participar</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *especificación de ruta* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *especificación de ruta de acceso* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
+*línea de control*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identificador* de *token-cadena* <sub>OPT</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identificador* de **(** &#x2800;identificador&#x200B;<sub>OPT</sub> **,** ... **,** *identificador* de &#x200B; <sub></sub>opt&#x2800; **)** *token: cadena*<sub>opcional</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _ruta de acceso: especificación_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** _ruta de acceso: especificación_ **\<** **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *digit-Sequence* **"** _nombre de archivo_ **"** &#x200B; <sub>OPT</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *identificador* de\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *token-cadena*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-cadena*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**define (** *identificador* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**define** *identificador*<br/>
+*Constant-Expression*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**definido (** &#x2800;*identificador*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**definido** *identificador* de\
 &nbsp;&nbsp;&nbsp;&nbsp;cualquier otra expresión constante
 
-*condicional* :<br/>
+*condicional*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
 
-*parte de si* :<br/>
+*si-parte*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
-*If-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *expresión constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identificador*
+*If-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *expresión constante*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identificador* de\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identificador* de
 
-*elif-partes* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
+*Elif-partes*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*Elif-línea* *texto* de\
 &nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
 
-*elif-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *expresión constante*
+*Elif-línea*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *expresión constante*
 
-*otro-parte* :<br/>
+*else-Part*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
-*otro-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+*else-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*endif-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+*endif-línea*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*secuencia de dígitos* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*digit-Sequence*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*cifra*\
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*dígitos* : uno de<br/>
+*digit*: uno de \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*cadena de token* :<br/>
+*token-cadena*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Cadena de tokens
 
-*token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
+*token*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*palabra clave*\
+&nbsp;&nbsp;&nbsp;&nbsp;*identificador*\
+&nbsp;&nbsp;&nbsp;&nbsp;*constante*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Operator*\
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*nombre de archivo* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Nombre de archivo del sistema operativo válido
+*nombre de archivo*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Nombre de archivo del sistema operativo legal
 
-*especificación de ruta* :<br/>
+*ruta de acceso: especificación*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Ruta de acceso válida
 
-*texto* :<br/>
+*texto*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Cualquier secuencia de texto
 
 > [!NOTE]
-> Los elementos no terminales siguientes se expanden en el [convenciones léxicas](../cpp/lexical-conventions.md) sección de la *referencia del lenguaje C++*: *constante*, *expresión constante* , *identificador*, *palabra clave*, *operador*, y *signo de puntuación*.
+> Los siguientes elementos no terminales se expanden en la sección [convenciones léxicas](../cpp/lexical-conventions.md) de la  *C++ referencia del lenguaje*: *Constant*, *Constant-Expression*, *Identifier*, *Keyword*, *Operator*y  *signo de puntuación*.
 
 ## <a name="see-also"></a>Vea también
 
-[Resumen de la gramática (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Resumen de la gramática (C++C/)](../preprocessor/grammar-summary-c-cpp.md)

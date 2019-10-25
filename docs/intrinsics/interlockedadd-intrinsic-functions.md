@@ -1,6 +1,6 @@
 ---
 title: Funciones intrínsecas _InterlockedAdd
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349522"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217725"
 ---
-# <a name="interlockedadd-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAdd
+# <a name="_interlockedadd-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAdd
 
 **Específicos de Microsoft**
 
-Estas funciones realizan una suma atómica, que se asegura de que la operación completa correctamente cuando más de un subproceso tiene acceso a una variable compartida.
+Estas funciones realizan una adición atómica, lo que garantiza que la operación se completa correctamente cuando más de un subproceso tiene acceso a una variable compartida.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 long _InterlockedAdd(
    long volatile * Addend,
    long Value
@@ -76,13 +76,13 @@ __int64 _InterlockedAdd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Sumando*<br/>
-[in, out] Puntero al entero al que se agregará; reemplaza el resultado de la suma.
+*Addend*\
+[in, out] Puntero al entero que se va a agregar a; reemplazado por el resultado de la suma.
 
-*Valor*<br/>
-[in] Valor que se agrega.
+*Valor*\
+de Valor que se va a agregar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -92,20 +92,20 @@ Ambas funciones devuelven el resultado de la suma.
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`_InterlockedAdd`|ARM|
-|`_InterlockedAdd_acq`|ARM|
-|`_InterlockedAdd_nf`|ARM|
-|`_InterlockedAdd_rel`|ARM|
-|`_InterlockedAdd64`|ARM|
-|`_InterlockedAdd64_acq`|ARM|
-|`_InterlockedAdd64_nf`|ARM|
-|`_InterlockedAdd64_rel`|ARM|
+|`_InterlockedAdd`|ARM, ARM64|
+|`_InterlockedAdd_acq`|ARM, ARM64|
+|`_InterlockedAdd_nf`|ARM, ARM64|
+|`_InterlockedAdd_rel`|ARM, ARM64|
+|`_InterlockedAdd64`|ARM, ARM64|
+|`_InterlockedAdd64_acq`|ARM, ARM64|
+|`_InterlockedAdd64_nf`|ARM, ARM64|
+|`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Las versiones de estas funciones con los sufijos `_acq` o `_rel` realizan una suma entrelazada tras la adquisición o la liberación de semántica. *Semántica de adquisición* significa que el resultado de la operación se hace visible para todos los subprocesos y procesadores antes de cualquier memoria posterior las lecturas y escrituras. La adquisición es útil al entrar en una sección crítica. *Semántica de liberación* significa que toda la memoria, lecturas y escrituras se ven obligado a ser visibles para todos los subprocesos y procesadores antes de que el resultado de la operación se hace visibles propio. La liberación es útil al salir de una sección crítica. Los intrínsecos con un `_nf` sufijo ("sin límite") no actúan como una barrera de memoria.
+Las versiones de estas funciones con los sufijos `_acq` o `_rel` realizan una suma entrelazada tras la adquisición o la liberación de semántica. La *semántica de adquisición* significa que el resultado de la operación se hace visible para todos los subprocesos y procesadores antes de que se produzcan lecturas y escrituras de memoria posteriores. La adquisición es útil al entrar en una sección crítica. La *semántica de versión* significa que todas las lecturas y escrituras de memoria se fuerzan a ser visibles para todos los subprocesos y procesadores antes de que el resultado de la operación se haga visible. La liberación es útil al salir de una sección crítica. Los intrínsecos con un `_nf` sufijo ("sin barrera") no actúan como una barrera de memoria.
 
 Estas rutinas solo están disponibles como intrínsecos.
 
@@ -171,5 +171,5 @@ Return value: ffff00ffffffff
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Conflictos con el compilador de x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

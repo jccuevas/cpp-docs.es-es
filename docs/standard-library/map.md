@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456288"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687775"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-Define la asignación y la asignación múltiple de clases de plantilla de contenedor, así como sus plantillas auxiliares.
+Define las plantillas de clase de contenedor Map y Multimap y sus plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -24,13 +24,13 @@ Define la asignación y la asignación múltiple de clases de plantilla de conte
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<biblioteca de > de mapas también `#include <initializer_list>` utiliza la instrucción.
+> La biblioteca de > de \<map también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="operators"></a>Operadores
 
-|Versión de asignación|Versión de asignación múltiple|DESCRIPCIÓN|
+|Versión de asignación|Versión de asignación múltiple|Descripción|
 |-----------------|----------------------|-----------------|
 |[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|Comprueba si el objeto de asignación o asignación múltiple del lado izquierdo del operador no es igual que el objeto de asignación o asignación múltiple del lado derecho.|
 |[operator< (map)](../standard-library/map-operators.md#op_eq_eq)|[operator< (multimap)](../standard-library/map-operators.md#op_eq_eq)|Comprueba si el objeto de asignación o asignación múltiple del lado izquierdo del operador es menor que el objeto de asignación o asignación múltiple del lado derecho.|
@@ -41,7 +41,7 @@ Define la asignación y la asignación múltiple de clases de plantilla de conte
 
 ### <a name="specialized-template-functions"></a>Funciones de plantilla especializadas
 
-|Versión de asignación|Versión de asignación múltiple|DESCRIPCIÓN|
+|Versión de asignación|Versión de asignación múltiple|Descripción|
 |-----------------|----------------------|-----------------|
 |[swap (mapa)](../standard-library/map-functions.md#swap)|[swap (mapa múltiple)](../standard-library/map-functions.md#swap_multimap)|Intercambia los elementos de dos asignaciones o asignaciones múltiples.|
 
@@ -50,8 +50,8 @@ Define la asignación y la asignación múltiple de clases de plantilla de conte
 |||
 |-|-|
 |[value_compare (Clase)](../standard-library/value-compare-class-map.md)|Proporciona un objeto de función que puede comparar los elementos de una asignación comparando los valores de sus claves para determinar su orden relativo en la asignación.|
-|[Clase map](../standard-library/map-class.md)|Se usa para el almacenamiento y la recuperación de datos de una colección en la que cada uno de los elementos tiene una clave única con la que se ordenan automáticamente los datos.|
-|[Clase multimap](../standard-library/multimap-class.md)|Se usa para el almacenamiento y la recuperación de datos de una colección en la que cada uno de los elementos tiene una clave con la que se ordenan automáticamente los datos y no es necesario que las claves tengan valores únicos.|
+|[map (Clase)](../standard-library/map-class.md)|Se usa para el almacenamiento y la recuperación de datos de una colección en la que cada uno de los elementos tiene una clave única con la que se ordenan automáticamente los datos.|
+|[multimap (Clase)](../standard-library/multimap-class.md)|Se usa para el almacenamiento y la recuperación de datos de una colección en la que cada uno de los elementos tiene una clave con la que se ordenan automáticamente los datos y no es necesario que las claves tengan valores únicos.|
 
 ## <a name="see-also"></a>Vea también
 

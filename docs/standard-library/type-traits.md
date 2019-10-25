@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455045"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684424"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
 Define plantillas para las constantes en tiempo de compilación que proporcionan información sobre las propiedades de sus argumentos de tipo o producen tipos transformados.
 
@@ -26,22 +26,22 @@ Define plantillas para las constantes en tiempo de compilación que proporcionan
 
 ## <a name="remarks"></a>Comentarios
 
-Las clases y plantillas de \<type_traits > se usan para admitir la inferencia, clasificación y transformación de tipos en tiempo de compilación. También se usan para detectar errores relacionados con los tipos y para ayudarle a optimizar el código genérico. Los rasgos de tipos unarios describen una propiedad de un tipo, los rasgos de tipo binario describen una relación entre los tipos y los rasgos de transformación modifican una propiedad de un tipo.
+Las clases y plantillas de \<type_traits > se utilizan para admitir la inferencia, clasificación y transformación de tipos en tiempo de compilación. También se usan para detectar errores relacionados con los tipos y para ayudarle a optimizar el código genérico. Los rasgos de tipos unarios describen una propiedad de un tipo, los rasgos de tipo binario describen una relación entre los tipos y los rasgos de transformación modifican una propiedad de un tipo.
 
-La clase `integral_constant` auxiliar y sus `true_type` especializaciones de plantilla y `false_type` forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *contiene true*, se deriva públicamente, directa o indirectamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *contiene false*, se deriva públicamente, directa o indirectamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La clase auxiliar `integral_constant` y sus especializaciones de plantilla `true_type` y `false_type` forman las clases base de los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *contiene true*, se deriva públicamente, directa o indirectamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *contiene false*, se deriva públicamente, directa o indirectamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificador de tipo* o *rasgo de transformación* es una plantilla que toma uno o más argumentos de plantilla y tiene un miembro `type`, que es un sinónimo del tipo modificado.
 
 ### <a name="alias-templates"></a>Plantillas de alias
 
-Para simplificar las expresiones de tipo rasgos, se `typename some_trait<T>::type` proporcionan plantillas de [alias](../cpp/aliases-and-typedefs-cpp.md) para, donde *some_trait* es el nombre de la clase de plantilla. Por ejemplo, [add_const](../standard-library/add-const-class.md) tiene la plantilla de alias para su tipo `add_const_t` definida así:
+Para simplificar las expresiones de rasgos de tipos, se proporcionan [plantillas de alias](../cpp/aliases-and-typedefs-cpp.md) para `typename some_trait<T>::type`, donde *some_trait* es el nombre de la plantilla de clase. Por ejemplo, [add_const](../standard-library/add-const-class.md) tiene la plantilla de alias para su tipo `add_const_t` definida así:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Estos son los alias proporcionados para los `type` miembros:
+Estos son los alias proporcionados para los miembros de `type`:
 
 ||||
 |-|-|-|

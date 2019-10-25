@@ -1,10 +1,10 @@
 ---
 title: rename, _wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357507"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949303"
 ---
-# <a name="rename-wrename"></a>rename, _wrename
+# <a name="rename-_wrename"></a>rename, _wrename
 
 Cambia el nombre de un archivo o de un directorio.
 
@@ -68,7 +71,7 @@ Puntero al nombre nuevo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se realiza correctamente. Produce un error, la función devuelve un valor distinto de cero y establece **errno** a uno de los siguientes valores:
+Cada una de estas funciones devuelve 0 si se realiza correctamente. En un error, la función devuelve un valor distinto de cero y establece **errno** en uno de los valores siguientes:
 
 |valor de errno|Condición|
 |-|-|
@@ -82,7 +85,7 @@ Para otros valores devueltos posibles, vea [_doserrno, _errno, syserrlist y _sys
 
 La función **rename** cambia el nombre del archivo o directorio especificado por *oldname* por el nombre proporcionado por *newname*. El nombre anterior debe ser la ruta de acceso de un archivo o directorio existente. El nombre nuevo no debe ser el nombre de un archivo o directorio existente. Puede usar **rename** para mover un archivo de un directorio o dispositivo a otro indicando una ruta de acceso diferente en el argumento *newname*. Sin embargo, no puede usar **rename** para mover un directorio. Se puede cambiar el nombre de los directorios, pero estos no se pueden mover.
 
-**_wrename** es una versión con caracteres anchos de **_rename**; los argumentos de **_wrename** son cadenas de caracteres anchos. **_wrename** y **_rename** se comportan exactamente igual.
+**_wrename** es una versión con caracteres anchos de **_rename**; los argumentos de **_wrename** son cadenas de caracteres anchos. **_wrename** y **_rename** se comportan de manera idéntica.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -129,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'

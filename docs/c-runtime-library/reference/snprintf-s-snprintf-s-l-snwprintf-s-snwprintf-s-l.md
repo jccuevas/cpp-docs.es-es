@@ -1,12 +1,12 @@
 ---
 title: _snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snprintf_s
 - _snprintf_s_l
 - _snwprintf_s
 - _snwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snwprintf_s_l
 - _sntprintf_s_l
@@ -47,14 +50,14 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-ms.openlocfilehash: ae298e9143a9ce79efe49c2055299f8d74070999
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b95145a468d382ea63ef4d409c095ec217e42f1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356204"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948018"
 ---
-# <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
+# <a name="_snprintf_s-_snprintf_s_l-_snwprintf_s-_snwprintf_s_l"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
 Escribe datos con formato en una cadena. Se trata de versiones de [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -113,7 +116,7 @@ int _snwprintf_s(
 Ubicación de almacenamiento del resultado.
 
 *sizeOfBuffer*<br/>
-Tamaño de la ubicación de almacenamiento para la salida. Tamaño en **bytes** para **_snprintf_s** o tamaño en **palabras** para **_snwprintf_s**.
+Tamaño de la ubicación de almacenamiento para la salida. Tamaño en **bytes** de **_snprintf_s** o tamaño en **palabras** para **_snwprintf_s**.
 
 *count*<br/>
 Número máximo de caracteres que se pueden almacenar o [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -129,26 +132,26 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_snprintf_s** devuelve el número de caracteres almacenados en *búfer*, sin contar el carácter nulo de terminación. **_snwprintf_s** devuelve el número de caracteres anchos almacenados en *búfer*, sin contar el carácter ancho final null.
+**_snprintf_s** devuelve el número de caracteres almacenados en el *búfer*, sin contar el carácter null de terminación. **_snwprintf_s** devuelve el número de caracteres anchos almacenados en el *búfer*, sin contar el carácter ancho final null.
 
-Si supera el almacenamiento necesario para almacenar los datos y un carácter nulo final *sizeOfBuffer*, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución continúa después del controlador de parámetros no válidos, estas funciones establecen *búfer* en una cadena vacía, establece **errno** a **ERANGE**y devuelven -1.
+Si el almacenamiento necesario para almacenar los datos y un carácter nulo de terminación supera el valor de *sizeOfBuffer*, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución continúa después del controlador de parámetros no válidos, estas funciones establecen *buffer* en una cadena vacía, establecen **errno** en **ERANGE**y devuelven-1.
 
-Si *búfer* o *formato* es un **NULL** puntero, o si *recuento* es menor o igual a cero, se invoca el controlador de parámetros no válidos. Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
+Si *buffer* o *Format* es un puntero **nulo** , o si *Count* es menor o igual que cero, se invoca el controlador de parámetros no válidos. Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_snprintf_s** función formatos y almacenes *recuento* caracteres o menos en *búfer* y anexa un carácter nulo final. Cada argumento (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El formato es coherente con la **printf** familia de funciones; vea [sintaxis de especificación de formato: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **_snprintf_s** da formato y almacena el *número* o menos caracteres en el *búfer* y anexa un carácter nulo de terminación. Cada argumento (si existe) se convierte y se genera de acuerdo con la especificación de formato correspondiente en *Format*. El formato es coherente con la familia de funciones **printf** ; vea [Sintaxis de especificación de formato: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-Si *recuento* es [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **_snprintf_s** escribe la parte de la cadena como cabe en *búfer* , dejando espacio para un terminación null. Si toda la cadena (con valor nulo final) cabe *búfer*, a continuación, **_snprintf_s** devuelve el número de caracteres escritos (sin incluir el carácter nulo final); en caso contrario, **_snprintf_s**  devuelve -1 para indicar que el truncamiento se produjo.
+Si *Count* es [_TRUNCATE](../../c-runtime-library/truncate.md), **_snprintf_s** escribe la gran parte de la cadena que quepa en el *búfer* mientras deja espacio para un carácter nulo de terminación. Si toda la cadena (con el valor nulo final) cabe en el *búfer*, **_snprintf_s** devuelve el número de caracteres escrito (sin incluir el carácter nulo final). de lo contrario, **_snprintf_s** devuelve-1 para indicar que se ha producido un truncamiento.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.
 
-**_snwprintf_s** es una versión con caracteres anchos de **_snprintf_s**; los argumentos de puntero **_snwprintf_s** son cadenas de caracteres anchos. Detección de errores de codificación **_snwprintf_s** puede diferir en **_snprintf_s**. **_snwprintf_s**, como **swprintf_s**, escribe la salida en una cadena en lugar de a un destino de tipo **archivo**.
+**_snwprintf_s** es una versión con caracteres anchos de **_snprintf_s**; los argumentos de puntero a **_snwprintf_s** son cadenas de caracteres anchos. La detección de errores de codificación en **_snwprintf_s** podría diferir de la de **_snprintf_s**. **_snwprintf_s**, al igual que **swprintf_s**, escribe la salida en una cadena en lugar de en un destino de tipo **File**.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

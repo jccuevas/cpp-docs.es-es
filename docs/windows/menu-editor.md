@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514830"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444987"
 ---
 # <a name="menu-editor-c"></a>Editor de menúsC++()
 
@@ -59,7 +59,7 @@ El **Editor de menús** le permite:
 
 ### <a name="to-create-a-standard-menu"></a>Para crear un menú estándar
 
-1. Vaya a la **vista** > de menú**vista de recursos** y haga clic con el botón derecho en el encabezado del **menú** . Elija **Agregar recurso**y **menú**.
+1. Vaya a la **vista**de menú  > **otras ventanas** > **vista de recursos** y haga clic con el botón derecho en el encabezado del **menú** . Elija **Agregar recurso**y **menú**.
 
 1. Seleccione el cuadro **nuevo elemento** (el rectángulo que contiene el *tipo aquí*) en la barra de menús.
 
@@ -104,7 +104,7 @@ Seleccione un nombre de menú existente y presione la tecla **Insertar** o haga 
    > El texto que escriba aparecerá en el **Editor de menús** y en el cuadro **título** de la [ventana Propiedades](/visualstudio/ide/reference/properties-window). Puede editar las propiedades del nuevo menú en uno u otro componente.
 
    > [!TIP]
-   > Puede definir una tecla nemotécnica (tecla de acceso rápido) que permita al usuario seleccionar el comando de menú. Escriba una y comercial`&`() delante de una letra para especificarla como el mnemotécnico. El usuario puede seleccionar el comando de menú escribiendo esa letra.
+   > Puede definir una tecla nemotécnica (tecla de acceso rápido) que permita al usuario seleccionar el comando de menú. Escriba una y comercial (`&`) delante de una letra para especificarla como el mnemotécnico. El usuario puede seleccionar el comando de menú escribiendo esa letra.
 
 1. En la ventana **propiedades** , seleccione las propiedades del comando de menú que se aplican. Para obtener más información, vea [propiedades del comando de menú](../windows/menu-command-properties.md).
 

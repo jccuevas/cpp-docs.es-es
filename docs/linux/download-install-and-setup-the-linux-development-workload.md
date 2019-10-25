@@ -3,12 +3,12 @@ title: Instalación de la carga de trabajo de Linux para C++ en Visual Studio
 description: En este artículo se describe cómo descargar, instalar y configurar la carga de trabajo de Linux para C++ en Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299793"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925418"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Descargar, instalar y configurar la carga de trabajo de Linux
 
@@ -20,17 +20,11 @@ Los proyectos de Linux son compatibles con Visual Studio 2017 y versiones post
 
 ::: moniker range=">=vs-2017"
 
-Puede usar el IDE de Visual Studio en Windows para crear, editar y depurar proyectos de C++ que se ejecutan en un equipo físico Linux, una máquina virtual o el [subsistema Windows para Linux](/windows/wsl/about). 
+Puede usar el IDE de Visual Studio en Windows para crear, editar y depurar proyectos de C++ que se ejecutan en un sistema Linux remoto, una máquina virtual o el [subsistema Windows para Linux](/windows/wsl/about). 
 
-Puede trabajar en la base de código existente que usa CMake o cualquier otro sistema de compilación sin tener que convertirla en un proyecto de Visual Studio. Si la base de código es multiplataforma, puede tener como destino Windows y Linux desde dentro de Visual Studio. Por ejemplo, puede editar y depurar el código y generar perfiles de este en Windows con Visual Studio y, después, rápidamente redestinar el proyecto para que Linux realice más pruebas. Los archivos de encabezado de Linux se copian automáticamente en el equipo local, donde Visual Studio los usa para proporcionar compatibilidad completa con IntelliSense (finalización de instrucciones, Ir a definición, etc.). 
+Puede trabajar en la base de código existente que utiliza CMake sin tener que convertirla en un proyecto de Visual Studio. Si la base de código es multiplataforma, puede tener como destino Windows y Linux desde dentro de Visual Studio. Por ejemplo, puede editar, compilar y depurar el código en Windows con Visual Studio y, después, redestinar rápidamente el proyecto a Linux para compilar y depurar en un entorno Linux. Los archivos de encabezado de Linux se copian automáticamente en el equipo local, donde Visual Studio los usa para proporcionar compatibilidad completa con IntelliSense (finalización de instrucciones, Ir a definición, etc.). 
  
-Para cualquiera de estos escenarios, se requiere la carga de trabajo de **desarrollo de Linux con C++** . 
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-En Visual Studio 2019 se pueden especificar destinos independientes para la compilación y depuración. Cuando el destino es WSL, ya no es necesario agregar una conexión remota o configurar SSH.
+Para cualquiera de estos escenarios, se requiere la carga de trabajo de **desarrollo de Linux con C++**. 
 
 ::: moniker-end
 
@@ -42,11 +36,11 @@ En Visual Studio 2019 se pueden especificar destinos independientes para la comp
 
    ![Cuadro de búsqueda de Windows](media/visual-studio-installer-search.png)
 
-2. Busque el instalador en los resultados de la categoría **Aplicaciones** y haga doble clic en este. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++** .
+2. Busque el instalador en los resultados de la categoría **Aplicaciones** y haga doble clic en este. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++**.
 
    ![Carga de trabajo Visual C++ for Linux Development](media/linuxworkload.png)
 
-1. Si tiene como destino plataformas incrustadas o IoT, vaya al panel **Detalles de la instalación** de la derecha y, debajo de **Desarrollo de Linux con C++** , expanda **Componentes opcionales** y elija los componentes que necesita. La compatibilidad de CMake con Linux está seleccionada de forma predeterminada.
+1. Si el destino es IoT o plataformas incrustadas, vaya al panel **Detalles de instalación** a la derecha. En **Desarrollo de Linux con C++**, expanda **Componentes opcionales** y elija los componentes que necesite. La compatibilidad de CMake con Linux está seleccionada de forma predeterminada.
 
 1. Haga clic en **Modificar** para continuar con la instalación.
 
@@ -60,6 +54,32 @@ En Windows 10, puede instalar y tener como destino su distribución de Linux fav
 
 ::: moniker range="vs-2019"
 
+Los proyectos de Linux en Visual Studio requieren que se instalen las siguientes dependencias en el sistema remoto Linux o WSL: 
+- **Un compilador**: Visual Studio 2019 tiene compatibilidad integrada para GCC y [Clang](https://docs.microsoft.com/en-us/cpp/build/clang-support-cmake?view=vs-2019). 
+- **gdb**: Visual Studio inicia automáticamente gdb en el sistema Linux y usa el front-end del depurador de Visual Studio para proporcionar una experiencia de depuración de plena fidelidad en Linux. 
+- **rsync** y **zip**: la inclusión de rsync y zip permite a Visual Studio extraer archivos de encabezado del sistema Linux al sistema de archivos de Windows para su uso con IntelliSense.
+- **make**
+- **openssh-server** (solo para sistemas Linux remotos): Visual Studio se conecta a los sistemas Linux remotos a través de una conexión SSH segura.
+- **CMake** (solo proyectos de CMake): puede instalar los [archivos binarios CMake vinculados estáticamente para Linux](https://github.com/microsoft/CMake/releases) de Microsoft.
+
+Los comandos siguientes suponen que está usando g++ en lugar de Clang. 
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Los proyectos de Linux en Visual Studio requieren que se instalen las siguientes dependencias en el sistema remoto Linux o WSL: 
+- **gcc**: Visual Studio 2017 tiene compatibilidad integrada para GCC.
+- **gdb**: Visual Studio inicia automáticamente gdb en el sistema Linux y usa el front-end del depurador de Visual Studio para proporcionar una experiencia de depuración de plena fidelidad en Linux. 
+- **rsync** y **zip**: la inclusión de rsync y zip permite a Visual Studio extraer archivos de encabezado del sistema Linux al sistema de archivos de Windows para IntelliSense.
+- **make**
+- **openssh-server**: Visual Studio se conecta a los sistemas Linux remotos a través de una conexión SSH segura.
+- **CMake** (solo proyectos de CMake): puede instalar los [archivos binarios CMake vinculados estáticamente para Linux](https://github.com/microsoft/CMake/releases) de Microsoft.
+
+::: moniker-end
+
+::: moniker range="vs-2019" 
+
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Instalación de Linux: Ubuntu en WSL
 
 Cuando el destino sea WSL, no hay ninguna necesidad de agregar una conexión remota o configurar SSH con el fin de compilar y depurar. **zip** y **rsync** son necesarios para sincronizar automáticamente los encabezados de Linux con Visual Studio para la compatibilidad con IntelliSense. Si las aplicaciones necesarias aún no están instaladas, puede hacerlo como sigue:
@@ -67,18 +87,19 @@ Cuando el destino sea WSL, no hay ninguna necesidad de agregar una conexión rem
 ```bash
 sudo apt-get install g++ gdb make rsync zip
 ```
+
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu en sistemas Linux remotos
 
-El sistema Linux de destino debe tener **openssh-server**, **g++** , **gdb** y **gdbserver** instalados, y ssh daemon debe estar en ejecución. **ZIP** es necesario para realizar la sincronización automática de encabezados remotos con el equipo local para la compatibilidad con IntelliSense. Si estas aplicaciones aún no están instaladas, puede hacerlo como sigue:
+El sistema Linux de destino debe tener **openssh-server**, **g++**, **gdb** y **make** instalados, y el demonio de ssh debe estar en ejecución. **zip** y **rsync** son necesarios para realizar la sincronización automática de encabezados remotos con el equipo local para la compatibilidad con IntelliSense. Si estas aplicaciones aún no están instaladas, puede hacerlo como sigue:
 
 1. En un símbolo del sistema del shell del equipo Linux, ejecute:
 
    ```bash
-   sudo apt-get install openssh-server g++ gdb gdbserver zip
+   sudo apt-get install openssh-server g++ gdb make rsync zip
    ```
 
    Debido al comando sudo, es posible que se le pida la contraseña raíz.  Si es así, escríbala y continúe. Una vez que finalice, estarán instaladas las herramientas y los servicios requeridos.
@@ -88,6 +109,7 @@ El sistema Linux de destino debe tener **openssh-server**, **g++** , **gdb** y *
    ```bash
    sudo service ssh start
    ```
+
    Esto inicia el servicio y lo ejecuta en segundo plano, listo para aceptar conexiones.
 
 ::: moniker-end
@@ -96,10 +118,10 @@ El sistema Linux de destino debe tener **openssh-server**, **g++** , **gdb** y *
 
 ## <a name="fedora-on-wsl"></a>Fedora en WSL
 
-Fedora usa el instalador de paquetes **dnf**. Para descargar **g++** , **gdb**, **rsync** y **zip**, ejecute lo siguiente:
+Fedora usa el instalador de paquetes **dnf**. Para descargar **g++**, **gdb**, **make**, **rsync** y **zip**, ejecute lo siguiente:
 
    ```bash
-   sudo dnf install gcc-g++ gdb rsync zip
+   sudo dnf install gcc-g++ gdb rsync make zip
    ```
 
 **zip** y **rsync** son necesarios para sincronizar automáticamente los encabezados de Linux con Visual Studio para la compatibilidad con IntelliSense.
@@ -110,13 +132,14 @@ Fedora usa el instalador de paquetes **dnf**. Para descargar **g++** , **gdb**, 
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora en sistemas Linux remotos
 
-La máquina de destino en la que se ejecuta Fedora usa el instalador de paquetes **dnf**. Para descargar **openssh-server**, **g++** , **gdb**, **gdbserver** y **zip** y reiniciar el demonio de ssh, siga estas instrucciones:
+La máquina de destino en la que se ejecuta Fedora usa el instalador de paquetes **dnf**. Para descargar **openssh-server**, **g++**, **gdb**, **make**, **rsync** y **zip** y reiniciar el demonio de ssh, siga estas instrucciones:
 
 1. En un símbolo del sistema del shell del equipo Linux, ejecute:
 
    ```bash
-   sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip
+   sudo dnf install openssh-server gcc-g++ gdb make rsync zip
    ```
+
    Debido al comando sudo, es posible que se le pida la contraseña raíz.  Si es así, escríbala y continúe. Una vez que finalice, estarán instaladas las herramientas y los servicios requeridos.
 
 1. Asegúrese de que el servicio ssh se esté ejecutando en el equipo Linux al ejecutar:

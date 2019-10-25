@@ -8,18 +8,18 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152136"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500256"
 ---
 # <a name="thread-local-storage"></a>Almacenamiento local para el subproceso
 
 **Específicos de Microsoft**
 
-El almacenamiento local de subprocesos (TLS) es el mecanismo por el que cada subproceso de un proceso con un subproceso determinado asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener un análisis completo de subprocesos, vea [Procesos y subprocesos](/windows/desktop/ProcThread/processes-and-threads) en Windows SDK.
+El almacenamiento local de subprocesos (TLS) es el mecanismo por el que cada subproceso de un proceso con un subproceso determinado asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener un análisis completo de subprocesos, vea [Procesos y subprocesos](/windows/win32/ProcThread/processes-and-threads) en Windows SDK.
 
 El lenguaje C de Microsoft incluye el atributo extendido de clase de almacenamiento, thread, que se utiliza con la palabra clave __declspec para declarar una variable local para el subproceso. Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:
 

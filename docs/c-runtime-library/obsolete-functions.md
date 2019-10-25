@@ -1,7 +1,7 @@
 ---
 title: Funciones obsoletas
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _beep
 - _sleep
 - _loaddll
@@ -10,7 +10,7 @@ apiname:
 - is_wctype
 - _getsystime
 - _setsystime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -25,7 +25,10 @@ apilocation:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -50,12 +53,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702679"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940135"
 ---
 # <a name="obsolete-functions"></a>Funciones obsoletas
 
@@ -66,14 +69,14 @@ Algunas funciones de biblioteca son obsoletas y tienen equivalentes más recient
 |Función obsoleta|Alternativa|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)o [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
-|`_unloaddll`|[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)o [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
-|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)|
-|`_beep`|[Beep](/windows/desktop/api/utilapiset/nf-utilapiset-beep)|
-|`_sleep`|[Sleep](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
-|`_getsystime`|[GetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
-|`_setsystime`|[SetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
+|`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
+|`_beep`|[Beep](/windows/win32/api/utilapiset/nf-utilapiset-beep)|
+|`_sleep`|[Sleep](/windows/win32/api/synchapi/nf-synchapi-sleep)|
+|`_getsystime`|[GetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
+|`_setsystime`|[SetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
 
 ## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Se ha quitado de CRT en Visual Studio 2015
 
@@ -81,14 +84,14 @@ Algunas funciones de biblioteca son obsoletas y tienen equivalentes más recient
 |-----------------------|-----------------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Ninguna|
-|[_heapadd](../c-runtime-library/heapadd.md)|Ninguna|
-|[_heapset](../c-runtime-library/heapset.md)|Ninguna|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Ninguna|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Ninguna|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Ninguna|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Ninguna|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Ninguna|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|None|
+|[_heapadd](../c-runtime-library/heapadd.md)|None|
+|[_heapset](../c-runtime-library/heapset.md)|None|
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|None|
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|None|
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|None|
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|None|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|None|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Se ha quitado de CRT en versiones anteriores de Visual Studio
 

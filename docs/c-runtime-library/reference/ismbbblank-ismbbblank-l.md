@@ -1,10 +1,10 @@
 ---
 title: _ismbbblank, _ismbbblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbblank_l
 - _ismbbblank
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,16 +16,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21f4c88b00774159f8e6945973641e67718494e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286956"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954245"
 ---
-# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
+# <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
 Determina si el carácter multibyte especificado es un carácter en blanco.
 
@@ -54,7 +57,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbblank** devuelve un valor distinto de cero si *c* representa un carácter de espacio (0 x 20), un carácter de tabulación horizontal (0 x 09) o un carácter específico de configuración regional que se usa para separar las palabras dentro de una línea de texto para qué **isspace** es true; de lo contrario, devuelve 0. **_ismbbblank** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbblank_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** devuelve un valor distinto de cero si *c* representa un carácter de espacio (0x20), un carácter de tabulación horizontal (0x09) o un carácter específico de la configuración regional que se usa para separar las palabras dentro de una línea de texto para la que **isspace** es true; de lo contrario, devuelve 0. **_ismbbblank** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbblank_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -3,12 +3,12 @@ title: Creación y configuración de un proyecto de CMake de Linux en Visual St
 description: Cómo crear, configurar, editar y compilar un proyecto de CMake de Linux en Visual Studio
 ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042673"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383415"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Creación y configuración de un proyecto de CMake en Linux
 
@@ -37,7 +37,7 @@ Para obtener información general sobre la compatibilidad de CMake en Visual St
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-En primer lugar, asegúrese de que tiene instalada la carga de trabajo de **desarrollo de Linux con C++** , incluido el componente de CMake. Vea [Instalación de la carga de trabajo de Linux para C++ en Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+En primer lugar, asegúrese de que tiene instalada la carga de trabajo de **desarrollo de Linux con C++**, incluido el componente de CMake. Vea [Instalación de la carga de trabajo de Linux para C++ en Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
 
 En el sistema Linux, asegúrese de tener instalado lo siguiente: 
 
@@ -112,7 +112,18 @@ Para proporcionar compatibilidad con IntelliSense para los encabezados en sistem
 
 Para depurar el código en el sistema de destino de depuración especificado, establezca un punto de interrupción, seleccione el destino CMake como el elemento de inicio en el menú de barra de herramientas situado junto a la configuración del proyecto y elija **&#x23f5; Iniciar** en la barra de herramientas (o presione F5).
 
-Para personalizar los argumentos de línea de comandos del programa, pulse el botón **Switch Targets** (Cambiar destinos) situado en la parte superior del **Explorador de soluciones** y, a continuación, elija **Vista de destinos**. Haga clic con el botón derecho en el destino y seleccione **Configuración de depuración e inicio**. Esto abre o crea un archivo de configuración launch.vs.json que contiene información sobre el programa. Para especificar argumentos adicionales, agréguelos en la matriz de JSON `args`. Para obtener más información, vea [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (Proyectos Abrir carpeta para C++) y [Configure CMake debugging sessions](../build/configure-cmake-debugging-sessions.md) (Configuración de sesiones de depuración de CMake).
+Para personalizar los argumentos de línea de comandos del programa, pulse el botón **Switch Targets** (Cambiar destinos) situado en la parte superior del **Explorador de soluciones** y, a continuación, elija **Vista de destinos**. Haga clic con el botón derecho en el destino y seleccione **Configuración de depuración e inicio**. Esto abre o crea un archivo de configuración launch.vs.json que contiene información sobre el programa. Para especificar la ubicación de los archivos de origen, agregue una propiedad **sourceFileMap** al archivo, tal como se muestra en este ejemplo:
+
+```json
+"MIMode": "gdb",
+"externalConsole": true,
+"sourceFileMap": {
+"c/Users/USER/source/repos/CMAKEPROJECTNAME": "C:\\Users\\USER\\source\\repos\\CMAKEPROJECTNAME"
+},
+"remoteMachineName": "${debugInfo.remoteMachineName}",
+```
+
+Para especificar argumentos adicionales, agréguelos en la matriz de JSON `args`. Para obtener más información, vea [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (Proyectos Abrir carpeta para C++) y [Configure CMake debugging sessions](../build/configure-cmake-debugging-sessions.md) (Configuración de sesiones de depuración de CMake).
 
 ## <a name="configure_cmake_linux"></a> Configuración de CMake para Linux
 

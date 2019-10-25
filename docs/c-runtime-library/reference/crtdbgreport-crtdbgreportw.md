@@ -1,10 +1,10 @@
 ---
 title: _CrtDbgReport, _CrtDbgReportW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgReport
 - _CrtDbgReportW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtDbgReport
 - CrtDbgReportW
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 986777f755a749e858f7e51b5aa19f10090db13a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499999"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938840"
 ---
 # <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -84,7 +87,7 @@ Argumentos de sustitución opcionales utilizados por el *formato*.
 
 En todos los destinos de informe, _ **crtdbgreport** y **_CrtDbgReportW** devuelven-1 si se produce un error y 0 si no se encuentran errores. En cambio, cuando el destino del informe es una ventana de mensajes de depuración y el usuario hace clic en el botón **Reintentar**, estas funciones devuelven 1. Si el usuario hace clic en el botón **Anular** de la ventana de mensajes de depuración, estas funciones se anulan inmediatamente y no devuelven ningún valor.
 
-Las macros de depuración [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) llaman a _ **crtdbgreport** para generar los informes de depuración. Las versiones con caracteres anchos de estas macros, así como _ [Assert,](assert-asserte-assert-expr-macros.md)_ asserte, [_RPTW](rpt-rptf-rptw-rptfw-macros.md) y [rptfw (](rpt-rptf-rptw-rptfw-macros.md), usan **_CrtDbgReportW** para generar los informes de depuración. Cuando _ **crtdbgreport** o **_CrtDbgReportW** devuelven 1, estas macros inician el depurador, siempre que esté habilitada la depuración Just-in-Time (JIT).
+Las macros de depuración [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) llaman a _ **crtdbgreport** para generar los informes de depuración. Las versiones con caracteres anchos de estas macros, así como _ [Assert, _ ASserte](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) y [rptfw (](rpt-rptf-rptw-rptfw-macros.md), usan **_CrtDbgReportW** para generar los informes de depuración. Cuando _ **crtdbgreport** o **_CrtDbgReportW** devuelven 1, estas macros inician el depurador, siempre que esté habilitada la depuración Just-in-Time (JIT).
 
 ## <a name="remarks"></a>Comentarios
 
@@ -99,7 +102,7 @@ En la tabla siguiente se enumeran las opciones disponibles para el modo de infor
 |Modo de informe|Archivo de informe|_ **Crtdbgreport**, comportamiento de **_CrtDbgReportW**|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|No aplicable|Escribe el mensaje mediante la API [OutputDebugString](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringw) de Windows.|
-|**_CRTDBG_MODE_WNDW**|No aplicable|Llama a la API [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clicen anular, _ **Crtdbgreport** o _ **crtdbgreport** se anula inmediatamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clicen omitir, la ejecución continúa y _ **crtdbgreport** y **_CrtDbgReportW** devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|
+|**_CRTDBG_MODE_WNDW**|No aplicable|Llama a la API [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clic en **anular**, _ **Crtdbgreport** o _ **crtdbgreport** se anula inmediatamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clic en **omitir**, la ejecución continúa y _ **crtdbgreport** y **_CrtDbgReportW** devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Escribe el mensaje en el **identificador**proporcionado por el usuario, usando la API [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) de Windows y no comprueba la validez del identificador de archivo. la aplicación es responsable de abrir el archivo de informe y de pasar un identificador de archivo válido.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Escribe el mensaje en **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Escribe el mensaje en **stdout**.|

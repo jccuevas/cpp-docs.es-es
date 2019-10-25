@@ -1,107 +1,18 @@
 ---
 title: Referencia del esquema de CppProperties.json
-ms.date: 05/16/2019
+ms.date: 08/09/2019
 helpviewer_keywords:
-- CMake in Visual Studio
-ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
-ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
+- CppProperties.json file [C++]
+ms.openlocfilehash: 06029157b4b3826bc9c34a4434ab390f3eaa5a44
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67516361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975944"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Referencia del esquema de CppProperties.json
 
-Los proyectos Abrir carpeta que no usan CMake pueden almacenar valores de configuración del proyecto en un archivo `CppProperties.json`. (Los proyectos de CMake usan un archivo [CMakeSettings.json](customize-cmake-settings.md)). El IDE de Visual Studio usa `CppProperties.json` para IntelliSense y la navegación por el código. Una configuración consta de pares nombre-valor y define rutas de acceso #include, modificadores del compilador y otros parámetros. 
-
-
-## <a name="default-configurations"></a>Configuraciones predeterminadas
-
-Visual Studio proporciona configuraciones predefinidas para depuración y versión x86 y x64. De forma predeterminada, el proyecto tiene una configuración de depuración x86 en `CppProperties.json`. Para agregar una nueva configuración, haga doble clic en el `CppProperties.json` archivo **el Explorador de soluciones** y elija **Agregar configuración**:
-
-![Abra la carpeta - agregar nueva configuración](media/open-folder-add-config.png "Abrir carpeta agregar nueva configuración")
-
-Aquí se muestran las configuraciones predeterminadas:
-
-```json
-{
-  "configurations": [
-    {
-      "inheritEnvironments": [
-        "msvc_x86"
-      ],
-      "name": "x86-Debug",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "_DEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
-      "inheritEnvironments": [
-        "msvc_x86"
-      ],
-      "name": "x86-Release",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "NDEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
-      "inheritEnvironments": [
-        "msvc_x64"
-      ],
-      "name": "x64-Debug",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "_DEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x64"
-    },
-    {
-      "inheritEnvironments": [
-        "msvc_x64"
-      ],
-      "name": "x64-Release",
-      "includePath": [
-        "${env.INCLUDE}",
-        "${workspaceRoot}\\**"
-      ],
-      "defines": [
-        "WIN32",
-        "NDEBUG",
-        "UNICODE",
-        "_UNICODE"
-      ],
-      "intelliSenseMode": "windows-msvc-x64"
-    }
-  ]
-}
-```
-Para las propiedades que tienen un conjunto de valores permitidos, el editor de código mostrará las opciones disponibles cuando empiece a escribir:
-
-![Abrir la carpeta IntelliSense](media/open-folder-intellisense-mode.png "Open Folder IntelliSense")
-
-
+Los proyectos de carpeta abiertos que no usan CMake pueden almacenar los valores de configuración del proyecto de IntelliSense en un archivo *CppProperties. JSON* . (Los proyectos de CMake usan un archivo [CMakeSettings.json](customize-cmake-settings.md)). Una configuración consta de pares nombre-valor y define rutas de acceso #include, modificadores del compilador y otros parámetros. Consulte [Abrir proyectos de carpeta C++ para](open-folder-projects-cpp.md) obtener más información sobre cómo agregar configuraciones en un proyecto de carpeta abierta.
 
 ## <a name="configuration-properties"></a>Propiedades de configuración
 
@@ -109,164 +20,118 @@ Una configuración puede tener cualquiera de las propiedades siguientes:
 
 |||
 |-|-|
-|`name`|Nombre de configuración que aparece en la lista desplegable de configuración de C++.|
-|`includePath`|Lista de carpetas que se deben especificar en la ruta de acceso de inclusión (se asigna a /I para la mayoría de los compiladores).|
+|`inheritEnvironments`| Especifica qué entornos se aplican a esta configuración.|
+|`name`|El nombre de configuración que aparecerá en la C++ lista desplegable configuración|
+|`includePath`|Lista separada por comas de las carpetas que deben especificarse en la ruta de acceso de inclusión (se asigna a/I para la mayoría de los compiladores)|
 |`defines`|Lista de macros que se deben definir (se asigna a /D para la mayoría de los compiladores).|
 |`compilerSwitches`|Uno o varios modificadores adicionales que pueden influir en el comportamiento de IntelliSense.|
 |`forcedInclude`|Encabezado que se va a incluir de forma automática en todas las unidades de compilación (se asigna a /FI para MSVC o -include para clang).|
 |`undefines`|Lista de macros de las que se van a anular las definiciones (se asigna a /U para MSVC).|
-|`intelliSenseMode`|Motor de IntelliSense que se va usar. Puede especificar las variantes específicas de la arquitectura de MSVC gcc y Clang:<br/><br/>- windows-msvc-x86 (valor predeterminado)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Motor de IntelliSense que se va usar. Puede especificar una de las variantes predefinidas específicas de la arquitectura para MSVC, GCC o Clang.|
+|`environments`|Conjuntos de variables definidos por el usuario que se comportan como variables de entorno en un símbolo del sistema y a los que<VARIABLE>se tiene acceso con $ {env.} macro.|
 
-Nota: Los valores `msvc-x86` y `msvc-x64` solo se admiten por motivos de herencia. Use el `windows-msvc-*` variantes en su lugar.
+### <a name="intellisensemode-values"></a>valores de omiten
 
-## <a name="custom-configurations"></a>Configuraciones personalizadas
+El editor de código muestra las opciones disponibles cuando empieza a escribir:
 
+![Abrir la carpeta IntelliSense](media/open-folder-intellisense-mode.png "Open Folder IntelliSense")
 
-Puede personalizar cualquiera de las configuraciones predeterminadas de `CppProperties.json`, o bien crear configuraciones. Todas aparecerán en el menú desplegable de configuración:
+Estos son los valores admitidos:
 
-```json
-{
-  "configurations": [
-    {
-      "name": "Windows",
-      ...
-    },
-    {
-      "name": "with EXTERNAL_CODECS",
-      ...
-    }
-  ]
-}
-```
+- windows-msvc-x86
+- windows-msvc-x64
+- windows-msvc-arm
+- windows-msvc-arm64
+- android-clang-x86
+- android-clang-x64
+- android-clang-arm
+- android-clang-arm64
+- ios-clang-x86
+- ios-clang-x64
+- ios-clang-arm
+- ios-clang-arm64
+- windows-clang-x86
+- windows-clang-x64
+- windows-clang-arm
+- windows-clang-arm64
+- linux-gcc-x86
+- linux-gcc-x64
+- Linux-GCC-ARM
 
-## <a name="system-environment-variables"></a>Variables de entorno del sistema 
+Nota: Los valores `msvc-x86` y `msvc-x64` solo se admiten por motivos de herencia. En su `windows-msvc-*` lugar, use las variantes.
 
- `CppProperties.json` admite la expansión de variables de entorno del sistema para incluir rutas de acceso de inclusión y otros valores de propiedad. La sintaxis es `${env.FOODIR}` para expandir una variable de entorno `%FOODIR%`. También se admiten las siguientes variables definidas por el sistema:
+## <a name="pre-defined-environments"></a>Entornos predefinidos
 
-|Nombre de la variable|Descripción|
+Visual Studio proporciona los siguientes entornos predefinidos para C++ Microsoft que se asignan al símbolo del sistema para desarrolladores correspondiente. Al heredar uno de estos entornos, puede hacer referencia a cualquiera de las variables de entorno mediante la propiedad `env` global con esta sintaxis de macro: $ {env.\< VARIABLE >}.
+
+|Nombre de la variable|DESCRIPCIÓN|
 |-----------|-----------------|
 |vsdev|El entorno de Visual Studio predeterminado.|
 |msvc_x86|Compilar para x86 con herramientas de x86.|
+|msvc_x64|Compilar para AMD64 con herramientas de 64 bits.|
 |msvc_arm|Compilar para ARM con herramientas de x86.|
 |msvc_arm64|Compilar para ARM64 con herramientas de x86.|
 |msvc_x86_x64|Compilar para AMD64 con herramientas de x86.|
-|msvc_x64_x64|Compilar para AMD64 con herramientas de 64 bits.|
 |msvc_arm_x64|Compilar para ARM con herramientas de 64 bits.|
 |msvc_arm64_x64|Compilar para ARM64 con herramientas de 64 bits.|
 
 Cuando se instala la carga de trabajo de Linux, los entornos siguientes están disponibles para seleccionar como destino Linux y WSL de forma remota:
 
-|Nombre de la variable|Descripción|
+|Nombre de la variable|DESCRIPCIÓN|
 |-----------|-----------------|
 |linux_x86|Se destina a Linux x86 de forma remota.|
 |linux_x64|Se destina a Linux x64 de forma remota.|
 |linux_arm|Se destina a Linux ARM de forma remota.|
 
-## <a name="custom-environment-variables"></a>Variables de entorno personalizadas
+## <a name="user_defined_environments"></a>Entornos definidos por el usuario
 
-Se pueden definir variables de entorno personalizadas en `CppProperties.json` de forma global o por cada configuración. En el ejemplo siguiente se muestra cómo declarar y usar las variables de entorno predeterminadas y personalizadas. La propiedad **environments** global declara una variable denominada **INCLUDE** que se puede usar en cualquier configuración:
+Opcionalmente, puede usar la `environments` propiedad para definir conjuntos de variables en *CppProperties. JSON* , ya sea global o por configuración. Estas variables se comportan como variables de entorno en el contexto de un proyecto de carpeta abierta y se puede tener acceso a\< ellas con $ {env. VARIABLE >} sintaxis de *Tasks. vs. JSON* y *Launch. vs. JSON* después de que se hayan definido aquí. Sin embargo, no se establecen necesariamente como variables de entorno reales en cualquier símbolo del sistema que Visual Studio usa internamente.
 
-```json
-{
-  // The "environments" property is an array of key value pairs of the form
-  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
-  "environments": [
-    {
-      "INCLUDE": "${workspaceRoot}\src\includes"
-    }
-  ],
-
-  "configurations": [
-    {
-      "inheritEnvironments": [
-        // Inherit the MSVC 32-bit environment and toolchain.
-        "msvc_x86"
-      ],
-      "name": "x86",
-      "includePath": [
-        // Use the include path defined above.
-        "${env.INCLUDE}"
-      ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
-      "inheritEnvironments": [
-        // Inherit the MSVC 64-bit environment and toolchain.
-        "msvc_x64"
-      ],
-      "name": "x64",
-      "includePath": [
-        // Use the include path defined above.
-        "${env.INCLUDE}"
-      ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x64"
-    }
-  ]
-}
-```
-## <a name="per-configuration-environment-variables"></a>Variables de entorno por configuración
-
-También puede definir un **entornos** propiedad dentro de una configuración. Se aplica solo a esa configuración y reemplaza las variables globales del mismo nombre. En el ejemplo siguiente, la configuración x64 define una variable **INCLUDE** local que invalida el valor global:
+Cuando se usa un entorno, debe especificarse en la `inheritsEnvironments` propiedad incluso si el entorno se define como parte de la misma configuración; la `environment` propiedad especifica el nombre del entorno. En el ejemplo siguiente se muestra una configuración de ejemplo para habilitar IntelliSense para GCC en una instalación de MSYS2. Observe cómo la configuración define y hereda el `mingw_64` entorno, y cómo la `includePath` propiedad puede tener acceso a la `INCLUDE` variable.
 
 ```json
-{
-  "environments": [
+"configurations": [
     {
-      "INCLUDE": "${workspaceRoot}\src\includes"
-    }
-  ],
 
-  "configurations": [
-    {
       "inheritEnvironments": [
-        "msvc_x86"
+        "mingw_64"
       ],
-      "name": "x86",
-      "includePath": [
-        // Use the include path defined in the global environments property.
-        "${env.INCLUDE}"
+      "name": "Mingw64",
+      "includePath ,": [
+        "${env.INCLUDE}",
+        "${workspaceRoot}\\**",
       ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x86"
-    },
-    {
+      "intelliSenseMode": "linux-gcc-x64",
       "environments": [
         {
-          // Append 64-bit specific include path to env.INCLUDE.
-          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\src\includes64"
+          "MINGW64_ROOT": "C:\\msys64\\mingw64",
+          "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
+          "FLAVOR": "x86_64-w64-mingw32",
+          "TOOLSET_VERSION": "9.1.0",
+          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR};",
+          "environment": "mingw_64"
         }
-      ],
-
-      "inheritEnvironments": [
-        "msvc_x64"
-      ],
-      "name": "x64",
-      "includePath": [
-        // Use the include path defined in the local environments property.
-        "${env.INCLUDE}"
-      ],
-      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "windows-msvc-x64"
+      ]
     }
   ]
-}
 ```
 
-Todas las variables de entorno personalizadas y predeterminadas también están disponibles en `tasks.vs.json` y `launch.vs.json`.
+Cuando se define una propiedad Environments dentro de una configuración, reemplaza todas las variables globales del mismo nombre.
 
-#### <a name="build-in-macros"></a>Macros integradas
+## <a name="built-in-macros"></a>Macros integradas
 
-Dentro de `CppProperties.json` tiene acceso a las macros integradas siguientes:
+Tiene acceso a las siguientes macros integradas dentro de *CppProperties. JSON*:
 
 |||
 |-|-|
-|`${workspaceRoot}`| la ruta de acceso completa a la carpeta del área de trabajo.|
-|`${projectRoot}`| la ruta de acceso completa a la carpeta donde se coloca `CppProperties.json`.|
-|`${env.vsInstallDir}`| la ruta de acceso completa a la carpeta donde está instalada la instancia en ejecución de Visual Studio.|
+|`${workspaceRoot}`| La ruta de acceso completa a la carpeta del área de trabajo|
+|`${projectRoot}`| La ruta de acceso completa a la carpeta donde se coloca *CppProperties. JSON*|
+|`${env.vsInstallDir}`| La ruta de acceso completa a la carpeta donde está instalada la instancia en ejecución de Visual Studio|
 
-Por ejemplo, si el proyecto tiene una carpeta de inclusión y también incluye windows.h y otros encabezados comunes desde el SDK de Windows, es posible que desee actualizar su `CppProperties.json` incluye el archivo de configuración con lo siguiente:
+### <a name="example"></a>Ejemplo
+
+Si el proyecto tiene una carpeta include y también incluye *Windows. h* y otros encabezados comunes de la Windows SDK, puede que desee actualizar el archivo de configuración *CppProperties. JSON* con lo siguiente:
 
 ```json
 {
@@ -292,5 +157,11 @@ Por ejemplo, si el proyecto tiene una carpeta de inclusión y también incluye w
 > `%WindowsSdkDir%` y `%VCToolsInstallDir%` no se establecen como variables de entorno globales, por lo que debe asegurarse de iniciar devenv.exe desde un Símbolo del sistema para desarrolladores que defina estas variables. (Escriba "desarrollador" en el menú de inicio de Windows).
 
 ## <a name="troubleshoot-intellisense-errors"></a>Solución de errores de IntelliSense
+
+Si no ve el IntelliSense que espera, puede solucionar el problema en **herramientas** > **Opciones** > **Editor** > de texto > **C/C++** **avanzado** y establecer **Habilitar registro** en **true**. Para empezar, pruebe a establecer el **nivel de registro** en 5 y registre los **filtros** en 8.
+
+![Registros de diagnóstico](media/diagnostic-logging.png)
+
+La salida se canaliza al **ventana de salida** y está visible al elegir **Mostrar salida de: C++ Registro**visual. La salida contiene, entre otras cosas, la lista de rutas de acceso de inclusión reales que IntelliSense está intentando usar. Si las rutas de acceso no coinciden con las de *CppProperties. JSON*, intente cerrar la carpeta y eliminar la subcarpeta *. vs* que contiene los datos de exploración almacenados en caché.
 
 Para solucionar problemas de errores de IntelliSense causados por la ausencia de rutas de acceso de inclusión, abra la **Lista de errores** y filtre los resultados por "Solo IntelliSense" y el código de error E1696 "no se puede abrir el archivo de código fuente...".

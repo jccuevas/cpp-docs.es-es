@@ -108,16 +108,16 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 056b7e47c474c64bf357523e2995ef49d456a9cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e269028ff28b00586fd8d8dcef728f11037dfbc8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449182"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687888"
 ---
-# <a name="iosbase-class"></a>ios_base (Clase)
+# <a name="ios_base-class"></a>ios_base (Clase)
 
-La clase describe las funciones de almacenamiento y miembro comunes al flujo de entrada y al de salida que no dependen de los parámetros de plantilla. (La clase de plantilla [basic_ios](../standard-library/basic-ios-class.md) describe lo que es común y depende de los parámetros de plantilla).
+La clase describe las funciones de almacenamiento y miembro comunes al flujo de entrada y al de salida que no dependen de los parámetros de plantilla. (La plantilla de clase [basic_ios](../standard-library/basic-ios-class.md) describe lo que es común y depende de los parámetros de plantilla).
 
 Un objeto de clase ios_base almacena la información de formato, que consta de:
 
@@ -143,7 +143,7 @@ Un objeto de clase ios_base también almacena información de estado de flujo en
 |-|-|
 |[ios_base](#ios_base)|Construye objetos `ios_base`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |||
 |-|-|
@@ -199,7 +199,7 @@ Un objeto de clase ios_base también almacena información de estado de flujo en
 
 |||
 |-|-|
-|[failure](#failure)|Clase miembro que actúa como la clase base para todas las excepciones producidas por la función miembro [clear](../standard-library/basic-ios-class.md#clear) en la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md).|
+|[failure](#failure)|La clase de miembro actúa como la clase base para todas las excepciones producidas por la función miembro [Clear](../standard-library/basic-ios-class.md#clear) en la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md).|
 |[flags](#flags)|Establece o devuelve la configuración actual de la marca.|
 |[getloc](#getloc)|Devuelve el objeto de configuración regional almacenado.|
 |[imbue](#imbue)|Cambia la configuración regional.|
@@ -243,7 +243,7 @@ El tipo es un tipo enumerado que describe un objeto que puede almacenar el event
 
 - `copyfmt_event`, para identificar una devolución de llamada que se produce cerca del final de una llamada a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), justo antes de que se copie la máscara de la [excepción](../standard-library/ios-base-class.md) .
 
-- `erase_event`, para identificar una devolución de llamada que se produce al principio de una llamada a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), o al principio de una llamada al destructor para  **\*este**.
+- `erase_event`, para identificar una devolución de llamada que se produce al principio de una llamada a [copyfmt](../standard-library/basic-ios-class.md#copyfmt), o al principio de una llamada al destructor para **\*this**.
 
 - `imbue_event`, para identificar una devolución de llamada que se produce al final de una llamada a [imbue](#imbue), justo antes de que la función devuelva.
 
@@ -264,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parámetros
 
-*_E*\
+@No__t_1 *_e*
 [Evento](#event).
 
-*_Base*\
+@No__t_1 *_Base*
 Flujo en el que se ha llamado al evento.
 
-*_ I*\
+_ *I* \
 Número definido por el usuario.
 
 ### <a name="remarks"></a>Comentarios
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Parámetros
 
-*fmtfl*\
+\ *fmtfl*
 Nueva configuración de `fmtflags`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -495,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Loc*\
+@No__t_1 *_Loc*
 Nueva configuración regional.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -504,7 +504,7 @@ Configuración regional anterior.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro almacena *_Loc* en el objeto de configuración regional y, después, notifica el `imbue_event`evento de devolución de llamada y. Devuelve el valor almacenado anterior.
+La función miembro almacena *_Loc* en el objeto de configuración regional y, a continuación, notifica el evento de devolución de llamada y `imbue_event`. Devuelve el valor almacenado anterior.
 
 ### <a name="example"></a>Ejemplo
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>Comentarios
 
-El constructor (protegido) no hace nada. Una llamada posterior a **basic_ios::** [init](../standard-library/basic-ios-class.md#init) debe inicializar el objeto para que se pueda destruir con seguridad. Por lo tanto, el único uso seguro de la clase ios_base es como clase base para la clase de plantilla [basic_ios](../standard-library/basic-ios-class.md).
+El constructor (protegido) no hace nada. Una llamada posterior a **basic_ios::** [init](../standard-library/basic-ios-class.md#init) debe inicializar el objeto para que se pueda destruir con seguridad. Por lo tanto, el único uso seguro de la clase ios_base es una clase base para la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>iostate
 
@@ -560,7 +560,7 @@ El tipo es un tipo de máscara de bits que describe un objeto que puede almacena
 
 - `failbit`, para registrar un error al extraer un campo válido de un flujo.
 
-Además, un valor útil es `goodbit`, donde no se establece ninguno de los bits mencionados previamente (`goodbit` se garantiza que sea cero).
+Además, se `goodbit` un valor útil, donde no se establece ninguno de los bits mencionados previamente (se garantiza que `goodbit` es cero).
 
 ## <a name="iword"></a>iword
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parámetros
 
-*ficheros*\
+\ *IDX*
 Índice del valor que se va a almacenar como `iword`.
 
 ### <a name="remarks"></a>Comentarios
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
 Operador de asignación de objetos ios_base.
 
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `ios_base`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -671,7 +671,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Prec*\
+@No__t_1 *_Prec*
 Número de dígitos significativos que se van a mostrar, o número de dígitos después del separador decimal en notación fija.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -716,7 +716,7 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Idx*\
+@No__t_1 *_Idx*
 Índice del valor que se va a almacenar como `pword`.
 
 ### <a name="remarks"></a>Comentarios
@@ -742,15 +742,15 @@ void register_callback(
 
 ### <a name="parameters"></a>Parámetros
 
-*pfn*\
+\ *pfn*
 Puntero a la función de devolución de llamada.
 
-*ficheros*\
+\ *IDX*
 Número definido por el usuario.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro inserciones el par `{pfn, idx}` en la [pila de devolución de llamada](../standard-library/ios-base-class.md)de la pila de devolución de llamada almacenada. Cuando se detecta un evento de devolución de llamada **EV** , se llama a las funciones, en orden inverso al `(*pfn)(ev, *this, idx)`registro, por la expresión.
+La función miembro inserciones el par `{pfn, idx}` en la [pila de devolución de llamada](../standard-library/ios-base-class.md)de la pila de devolución de llamada almacenada. Cuando se detecta un evento de devolución de llamada **EV** , se llama a las funciones, en orden inverso al registro, por la expresión `(*pfn)(ev, *this, idx)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -904,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Mask*\
+@No__t_1 *_Mask*
 Marcas que se van a activar.
 
-*_Unset*\
+@No__t_1 *_Unset*
 Marcas que se van a desactivar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -916,7 +916,7 @@ Marcas de formato anteriores
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función miembro llama eficazmente a  *\_* [Flags](#flags)(  *\_marcas*de máscara &#124; ) (establecer bits seleccionados) y, a continuación, devuelve las marcas de formato anteriores. La segunda función miembro llama eficazmente a `flags(_Mask & fmtfl, flags & ~_Mask)` (reemplazar los bits seleccionados bajo una máscara) y, a continuación, devuelve las marcas de formato anteriores.
+La primera función miembro llama eficazmente a [Flags](#flags)( *\_Mask* &#124; *\_Flags*) (establecer bits seleccionados) y, a continuación, devuelve las marcas de formato anteriores. La segunda función miembro llama eficazmente a `flags(_Mask & fmtfl, flags & ~_Mask)` (reemplazar los bits seleccionados bajo una máscara) y, a continuación, devuelve las marcas de formato anteriores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -954,8 +954,8 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Sync*\
-Indica si todos los flujos están sincronizados con `stdio`.
+@No__t_1 *_Sync*
+Si todos los flujos están sincronizados con `stdio`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -963,7 +963,7 @@ Configuración anterior para esta función.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro estática almacena una `stdio` marca de sincronización, que inicialmente es **true**. Si **es true**, esta marca garantiza que las operaciones en el mismo archivo se sincronizan correctamente entre las funciones [iostreams](../standard-library/iostreams-conventions.md) y las definidas C++ en la biblioteca estándar. De lo contrario, la sincronización puede estar garantizada o no, pero se puede mejorar el rendimiento. La función almacena *_Sync* en el `stdio` marcador de sincronización y devuelve su valor almacenado anterior. Solo puede llamarlo de forma confiable antes de realizar cualquier operación en los flujos estándar.
+La función miembro estática almacena un `stdio` marca de sincronización, que inicialmente es **true**. Si **es true**, esta marca garantiza que las operaciones en el mismo archivo se sincronizan correctamente entre las funciones [iostreams](../standard-library/iostreams-conventions.md) y las definidas C++ en la biblioteca estándar. De lo contrario, la sincronización puede estar garantizada o no, pero se puede mejorar el rendimiento. La función almacena *_Sync* en la marca de sincronización `stdio` y devuelve su valor almacenado anterior. Solo puede llamarlo de forma confiable antes de realizar cualquier operación en los flujos estándar.
 
 ## <a name="unsetf"></a>unsetf
 
@@ -977,16 +977,16 @@ void unsetf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Mask*\
+@No__t_1 *_Mask*
 Marcas que quiere desactivar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro llama eficazmente a`~` [Flags](#flags)( *_Mask* **& Flags**) (borrar bits seleccionados).
+La función miembro llama eficazmente a [Flags](#flags)(`~` *_Mask* **& Flags**) (borrar bits seleccionados).
 
 ### <a name="example"></a>Ejemplo
 
-Vea [ios_base:: setf](#setf) para obtener un ejemplo de `unsetf`uso de.
+Vea [ios_base:: setf](#setf) para obtener un ejemplo del uso de `unsetf`.
 
 ## <a name="width"></a>Ancho
 
@@ -1001,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Wide*\
+@No__t_1 *_Wide*
 Tamaño deseado del flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto

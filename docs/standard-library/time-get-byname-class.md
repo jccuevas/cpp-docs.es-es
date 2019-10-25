@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9df3831e085f1dea1df45ff9368479fa516b944e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460030"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685765"
 ---
-# <a name="timegetbyname-class"></a>time_get_byname (Clase)
+# <a name="time_get_byname-class"></a>time_get_byname (Clase)
 
-La clase de plantilla derivada describe un objeto que puede actuar como una faceta de configuración regional de tipo `time_get`\<CharType, InputIterator>.
+La plantilla de clase derivada describe un objeto que puede actuar como una faceta de configuración regional de tipo `time_get` \<CharType, InputIterator >.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,10 +40,10 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*\
+@No__t_1 *_Locname*
 Una configuración regional con nombre.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Un recuento de referencias inicial.
 
 ## <a name="requirements"></a>Requisitos

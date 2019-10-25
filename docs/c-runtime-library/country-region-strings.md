@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49eb6bc4473d9e54c06c3bf9290f8c3c96640415
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463471"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500241"
 ---
 # <a name="countryregion-strings"></a>país/región (cadenas)
 
-Las cadenas de país y la región se pueden combinar con una cadena de idioma para crear una especificación de configuración regional para las funciones `setlocale`, `_wsetlocale`, `_create_locale`y `_wcreate_locale` . Para las listas de nombres de país y región son compatibles con varias versiones de sistema operativo Windows, consulte las columnas **Language** (Idioma), **Location** (Ubicación) y **Language tag** (Etiqueta de idioma) de la en la tabla [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Apéndice A: Comportamiento del producto) en [MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Referencia de identificador de configuración regional (LCID) de Windows). Para un ejemplo de código que enumera los nombres de configuración regional disponibles y los valores relacionados, consulte [NLS: Name-based APIs Sample](/windows/desktop/intl/nls--name-based-apis-sample) (NLS: ejemplo de API basadas en nombres).
+Las cadenas de país y la región se pueden combinar con una cadena de idioma para crear una especificación de configuración regional para las funciones `setlocale`, `_wsetlocale`, `_create_locale`y `_wcreate_locale` . Para las listas de nombres de países y regiones que son compatibles con varias versiones del sistema operativo Windows, consulte las columnas **Language** (Idioma), **Location** (Ubicación) y **Language tag** (Etiqueta de idioma) en la tabla del [Apéndice A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Apéndice A: Comportamiento del producto) en [MS-LCID]: Windows Language Code Identifier (LCID) Reference (Referencia del identificador de configuración regional [LCID] de Windows). Para un ejemplo de código que enumera los nombres de configuración regional disponibles y los valores relacionados, consulte [NLS: ejemplo de API basadas en nombres](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Cadenas de país y región compatibles adicionales
 

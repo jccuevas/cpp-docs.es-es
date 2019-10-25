@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372457"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502823"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (clase)
 
@@ -73,53 +73,53 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Construye un objeto `CPropertySheet`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CPropertySheet::AddPage](#addpage)|Agrega una página a la hoja de propiedades.|
 |[CPropertySheet::Construct](#construct)|Construye un objeto `CPropertySheet`.|
 |[CPropertySheet::Create](#create)|Muestra una hoja de propiedades no modal.|
 |[CPropertySheet::DoModal](#domodal)|Muestra una hoja de propiedades modal.|
-|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Indica si la hoja de propiedades usa pestañas apiladas o desplazamiento.|
+|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Indica si la hoja de propiedades utiliza pestañas apiladas o de desplazamiento.|
 |[CPropertySheet::EndDialog](#enddialog)|Finaliza la hoja de propiedades.|
 |[CPropertySheet::GetActiveIndex](#getactiveindex)|Recupera el índice de la página activa de la hoja de propiedades.|
-|[CPropertySheet::GetActivePage](#getactivepage)|Devuelve el objeto de la página activa.|
+|[CPropertySheet::GetActivePage](#getactivepage)|Devuelve el objeto de página activo.|
 |[CPropertySheet::GetPage](#getpage)|Recupera un puntero a la página especificada.|
-|[CPropertySheet::GetPageCount](#getpagecount)|Recupera el número de páginas en la hoja de propiedades.|
+|[CPropertySheet::GetPageCount](#getpagecount)|Recupera el número de páginas de la hoja de propiedades.|
 |[CPropertySheet::GetPageIndex](#getpageindex)|Recupera el índice de la página especificada de la hoja de propiedades.|
 |[CPropertySheet::GetTabControl](#gettabcontrol)|Recupera un puntero a un control de ficha.|
-|[CPropertySheet::MapDialogRect](#mapdialogrect)|Convierte las unidades de cuadro de diálogo de un rectángulo en unidades de la pantalla.|
-|[CPropertySheet::OnInitDialog](#oninitdialog)|Invalidar para aumentar la inicialización de la hoja de propiedades.|
+|[CPropertySheet::MapDialogRect](#mapdialogrect)|Convierte las unidades de cuadro de diálogo de un rectángulo en unidades de pantalla.|
+|[CPropertySheet::OnInitDialog](#oninitdialog)|Invalide para aumentar la inicialización de la hoja de propiedades.|
 |[CPropertySheet::PressButton](#pressbutton)|Simula la elección del botón especificado en una hoja de propiedades.|
 |[CPropertySheet::RemovePage](#removepage)|Quita una página de la hoja de propiedades.|
-|[CPropertySheet::SetActivePage](#setactivepage)|Se establece mediante programación el objeto de la página activa.|
+|[CPropertySheet::SetActivePage](#setactivepage)|Establece mediante programación el objeto de página activo.|
 |[CPropertySheet::SetFinishText](#setfinishtext)|Establece el texto para el botón Finalizar.|
 |[CPropertySheet::SetTitle](#settitle)|Establece el título de la hoja de propiedades.|
-|[CPropertySheet::SetWizardButtons](#setwizardbuttons)|Permite que los botones del asistente.|
-|[CPropertySheet::SetWizardMode](#setwizardmode)|Habilita el modo de asistente.|
+|[CPropertySheet::SetWizardButtons](#setwizardbuttons)|Habilita los botones del asistente.|
+|[CPropertySheet::SetWizardMode](#setwizardmode)|Habilita el modo del asistente.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|El Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) estructura. Proporciona acceso a los parámetros de la hoja de propiedades básicas.|
+|[CPropertySheet::m_psh](#m_psh)|Estructura [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) de Windows. Proporciona acceso a los parámetros básicos de la hoja de propiedades.|
 
 ## <a name="remarks"></a>Comentarios
 
-Consta de una hoja de propiedades de un `CPropertySheet` objeto y uno o más [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objetos. El marco de trabajo muestra una hoja de propiedades como una ventana con un conjunto de índices de pestaña y un área que contiene la página seleccionada actualmente. El usuario navega a una página específica mediante el uso de la pestaña correspondiente.
+Una hoja de propiedades consta de `CPropertySheet` un objeto y uno o varios objetos [CPropertyPage](../../mfc/reference/cpropertypage-class.md) . El marco de trabajo muestra una hoja de propiedades como una ventana con un conjunto de índices de pestaña y un área que contiene la página seleccionada actualmente. El usuario navega a una página específica mediante la ficha adecuada.
 
-`CPropertySheet` proporciona compatibilidad para el modo expandido [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) estructura que se presentó en Windows 98 y 2000 de Windows NT. La estructura contiene marcas adicionales y los miembros que admiten el uso de un mapa de bits de fondo "marca de agua".
+`CPropertySheet`proporciona compatibilidad con la estructura [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) expandida introducida en Windows 98 y windows NT 2000. La estructura contiene marcadores y miembros adicionales que admiten el uso de un mapa de bits de fondo de "marca de agua".
 
-Para mostrar estas nuevas imágenes automáticamente en su objeto de hoja de propiedades, pasar los valores válidos para las imágenes de mapa de bits y paleta en la llamada a [CPropertySheet::Construct](#construct) o [CPropertySheet::CPropertySheet](#cpropertysheet).
+Para mostrar estas nuevas imágenes automáticamente en el objeto de hoja de propiedades, pase los valores válidos para las imágenes de mapa de bits y de paleta en la llamada a [CPropertySheet:: Construct](#construct) o [CPropertySheet:: CPropertySheet](#cpropertysheet).
 
-Aunque `CPropertySheet` no se deriva [CDialog](../../mfc/reference/cdialog-class.md), administrar un `CPropertySheet` objeto es similar a administrar un `CDialog` objeto. Por ejemplo, la creación de una hoja de propiedades requiere la construcción de dos partes: llame al constructor y, a continuación, llame a [DoModal](#domodal) para una hoja de propiedades modal o [crear](#create) para una hoja de propiedades no modal. `CPropertySheet` tiene dos tipos de constructores: [CPropertySheet::Construct](#construct) y [CPropertySheet::CPropertySheet](#cpropertysheet).
+Aunque `CPropertySheet` no se deriva de [CDialog](../../mfc/reference/cdialog-class.md), la administración de un objeto `CPropertySheet` es como la administración de un objeto `CDialog`. Por ejemplo, la creación de una hoja de propiedades requiere la construcción en dos partes: llamar al constructor y, a continuación, llamar a [DoModal](#domodal) para una hoja de propiedades modal o [crear](#create) para una hoja de propiedades no modal. `CPropertySheet`tiene dos tipos de constructores: [CPropertySheet:: Construct](#construct) y [CPropertySheet:: CPropertySheet](#cpropertysheet).
 
-Cuando se construye un `CPropertySheet` objeto, algunas [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) puede provocar una excepción de primera oportunidad para que se produzca. Esto da como resultado desde el sistema intenta cambiar el estilo de la hoja de propiedades antes de crea la hoja. Para evitar esta excepción, asegúrese de establecer los estilos siguientes al crear su `CPropertySheet`:
+Cuando se construye un `CPropertySheet` objeto, algunos [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) pueden hacer que se produzca una excepción de primera oportunidad. Esto se debe a que el sistema intenta cambiar el estilo de la hoja de propiedades antes de crear la hoja. Para evitar esta excepción, asegúrese de establecer los siguientes estilos al crear el `CPropertySheet`:
 
 - DS_3DLOOK
 
@@ -129,7 +129,7 @@ Cuando se construye un `CPropertySheet` objeto, algunas [estilos de ventana](../
 
 - WS_TABSTOP
 
-Los estilos siguientes son opcionales y no provocará la excepción de primera oportunidad:
+Los estilos siguientes son opcionales y no provocarán la primera excepción:
 
 - DS_SHELLFONT
 
@@ -137,15 +137,15 @@ Los estilos siguientes son opcionales y no provocará la excepción de primera o
 
 - WS_CLIPCHILDREN
 
-Cualquier otro `Window Styles` están prohibidos y no se debe habilitar.
+Cualquier otro `Window Styles` está prohibido y no debe habilitarlos.
 
-Intercambiar datos entre un `CPropertySheet` objeto y un objeto externo es similar a intercambiar datos con un `CDialog` objeto. La diferencia más importante es que la configuración de una hoja de propiedades normalmente es variables de miembro de la `CPropertyPage` objetos en lugar de la `CPropertySheet` propio objeto.
+El intercambio de datos entre `CPropertySheet` un objeto y un objeto externo es similar al intercambio de datos con `CDialog` un objeto. La diferencia importante es que los valores de una hoja de propiedades suelen ser variables de miembro `CPropertyPage` de los objetos en lugar `CPropertySheet` del propio objeto.
 
-Puede crear un tipo de ficha del cuadro de diálogo llama a un asistente, que consta de una hoja de propiedades con una secuencia de páginas de propiedades que guían al usuario a través de los pasos necesarios para una operación, como la configuración de un dispositivo o la creación de un boletín. En un cuadro de diálogo de pestaña de tipo asistente las páginas de propiedades no tiene pestañas y solo una página de propiedades es visible a la vez. Además, en lugar de tener **Aceptar** y **aplicar ahora** botones, un cuadro de diálogo de pestaña de tipo asistente tiene una **Atrás** botón, un **siguiente** o  **Finalizar** botón, un **cancelar** botón y un **ayuda** botón.
+Puede crear un tipo de cuadro de diálogo de pestaña denominado asistente, que consta de una hoja de propiedades con una secuencia de páginas de propiedades que guía al usuario a través de los pasos de una operación, como la configuración de un dispositivo o la creación de un boletín. En un cuadro de diálogo de ficha tipo de asistente, las páginas de propiedades no tienen pestañas y solo se puede ver una página de propiedades a la vez. Además, en lugar de tener botones **Aceptar** y **aplicar ahora** , un cuadro de diálogo de la pestaña tipo asistente tiene un botón **atrás** , un botón **siguiente** o **Finalizar** , un botón **Cancelar** y un botón **ayuda** .
 
-Para crear un cuadro de diálogo de tipo asistente, siga los mismos pasos que debe seguir para crear una hoja de propiedades estándar, pero llama a [SetWizardMode](#setwizardmode) antes de llamar a [DoModal](#domodal). Para habilitar los botones del asistente, llame a [SetWizardButtons](#setwizardbuttons), uso de marcas para personalizar sus funciones y apariencia. Para habilitar el **finalizar** botón, llame a [SetFinishText](#setfinishtext) después de que el usuario ha tomado ninguna acción en la última página del asistente.
+Para crear un cuadro de diálogo de tipo asistente, siga los mismos pasos que seguiría para crear una hoja de propiedades estándar, pero llame a [SetWizardMode](#setwizardmode) antes de llamar a [DoModal](#domodal). Para habilitar los botones del asistente, llame a [SetWizardButtons](#setwizardbuttons), usando marcas para personalizar su función y apariencia. Para habilitar el botón **Finalizar** , llame a [SetFinishText](#setfinishtext) después de que el usuario haya realizado la acción en la última página del asistente.
 
-Para obtener más información sobre cómo usar `CPropertySheet` objetos, consulte el artículo [hojas de propiedades y páginas de propiedades](../../mfc/property-sheets-and-property-pages-in-mfc.md).
+Para obtener más información sobre cómo usar `CPropertySheet` objetos, vea el artículo [hojas de propiedades y páginas de propiedades](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -159,11 +159,11 @@ Para obtener más información sobre cómo usar `CPropertySheet` objetos, consul
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxdlgs.h
+**Encabezado:** afxdlgs. h
 
 ##  <a name="addpage"></a>  CPropertySheet::AddPage
 
-Agrega la página proporcionada con la pestaña situada en la hoja de propiedades.
+Agrega la página proporcionada con la ficha situada más a la derecha en la hoja de propiedades.
 
 ```
 void AddPage(CPropertyPage* pPage);
@@ -172,25 +172,25 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parámetros
 
 *pPage*<br/>
-Hace referencia a la página que se agregarán a la hoja de propiedades. No puede ser nulo.
+Apunta a la página que se va a agregar a la hoja de propiedades. No puede ser nulo.
 
 ### <a name="remarks"></a>Comentarios
 
-Agregar páginas a la hoja de propiedades en el orden de izquierda a derecha que desee que aparezcan.
+Agregue páginas a la hoja de propiedades en el orden de izquierda a derecha que desee que aparezcan.
 
-`AddPage` Agrega el [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) de objeto para el `CPropertySheet` objeto de la lista de páginas, pero realmente no crea la ventana de la página. El marco de trabajo pospone la creación de la ventana de la página hasta que el usuario selecciona esa página.
+`AddPage`agrega el objeto [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) a la `CPropertySheet` lista de páginas del objeto, pero no crea realmente la ventana de la página. El marco pospone la creación de la ventana de la página hasta que el usuario seleccione esa página.
 
-Al agregar una página de propiedad mediante `AddPage`, `CPropertySheet` es el elemento primario de la `CPropertyPage`. Para obtener acceso a la hoja de propiedades de la página de propiedades, llamar a [CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent).
+Cuando se agrega una página de propiedades `AddPage`mediante `CPropertySheet` , `CPropertyPage`es el elemento primario de. Para obtener acceso a la hoja de propiedades desde la página de propiedades, llame a [CWnd:: GetParent](../../mfc/reference/cwnd-class.md#getparent).
 
-No es necesario esperar a la creación de la ventana de la hoja de propiedades para llamar a `AddPage`. Normalmente, se llama `AddPage` antes de llamar a [DoModal](#domodal) o [crear](#create).
+No es necesario esperar hasta que se cree la ventana de la hoja de propiedades `AddPage`para llamar a. Normalmente, se llamará `AddPage` a antes de llamar a [DoModal](#domodal) o [Create](#create).
 
-Si se llama a `AddPage` después de mostrar la página de propiedades, la fila de pestañas reflejará la página recién agregada.
+Si llama a `AddPage` después de mostrar la página de propiedades, la fila de pestañas reflejará la página recién agregada.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]
 
-##  <a name="construct"></a>  CPropertySheet::Construct
+##  <a name="construct"></a>CPropertySheet:: Construct
 
 Construye un objeto `CPropertySheet`.
 
@@ -225,37 +225,37 @@ void Construct(
 ### <a name="parameters"></a>Parámetros
 
 *nIDCaption*<br/>
-Id. de la leyenda que se usará para la hoja de propiedades.
+IDENTIFICADOR del título que se va a utilizar para la hoja de propiedades.
 
 *pParentWnd*<br/>
 Puntero a la ventana primaria de la hoja de propiedades. Si es NULL, la ventana primaria será la ventana principal de la aplicación.
 
 *iSelectPage*<br/>
-El índice de la página que será inicialmente en la parte superior. Valor predeterminado es la primera página que se agrega a la hoja.
+Índice de la página que estará inicialmente en la parte superior. El valor predeterminado es la primera página agregada a la hoja.
 
 *pszCaption*<br/>
-Puntero a una cadena que contiene el título que se usará para la hoja de propiedades. No puede ser nulo.
+Puntero a una cadena que contiene el título que se va a utilizar para la hoja de propiedades. No puede ser nulo.
 
 *hbmWatermark*<br/>
-Identificador de mapa de bits de marca de agua de la página de propiedades.
+Identificador del mapa de bits de la marca de agua de la página de propiedades.
 
 *hpalWatermark*<br/>
-Identificador de la paleta del mapa de bits de marca de agua o mapa de bits del encabezado.
+Identificador de la paleta del mapa de bits de marca de agua y/o mapa de bits del encabezado.
 
 *hbmHeader*<br/>
 Identificador del mapa de bits del encabezado de la página de propiedades.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a esta función miembro si uno de los constructores de clase ya no se ha llamado. Por ejemplo, llamar a `Construct` al declarar o asignar matrices de `CPropertySheet` objetos. En el caso de las matrices, debe llamar a `Construct` para cada miembro de la matriz.
+Llame a esta función miembro si aún no se ha llamado a uno de los constructores de clase. Por ejemplo, llame `Construct` a cuando declare o asigne matrices de `CPropertySheet` objetos. En el caso de las matrices, debe llamar `Construct` a para cada miembro de la matriz.
 
-Para mostrar la hoja de propiedades, llame a [DoModal](#domodal) o [crear](#create). La cadena contenida en el primer parámetro se colocarán en la barra de título de la hoja de propiedades.
+Para mostrar la hoja de propiedades, llame a [DoModal](#domodal) o a [Create](#create). La cadena contenida en el primer parámetro se colocará en la barra de título de la hoja de propiedades.
 
-Puede mostrar las imágenes de marca de agua o encabezado automáticamente si usa el tercer o cuarto prototipos de `Construct`, enumeradas anteriormente y pasar los valores válidos para el *hbmWatermark*, *hpalWatermark* , o *hbmHeader* parámetros.
+Puede mostrar la marca de agua o las imágenes de encabezado automáticamente si usa el tercer o cuarto prototipo de `Construct`, enumerados anteriormente, y pasa valores válidos para los parámetros *hbmWatermark*, *hpalWatermark*y *hbmHeader* .
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra en qué circunstancias se llamaría a `Construct`.
+En el ejemplo siguiente se muestra en qué circunstancias se `Construct`llamaría.
 
 [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]
 
@@ -296,39 +296,39 @@ CPropertySheet(
 ### <a name="parameters"></a>Parámetros
 
 *nIDCaption*<br/>
-Id. de la leyenda que se usará para la hoja de propiedades.
+IDENTIFICADOR del título que se va a utilizar para la hoja de propiedades.
 
 *pParentWnd*<br/>
 Apunta a la ventana primaria de la hoja de propiedades. Si es NULL, la ventana primaria será la ventana principal de la aplicación.
 
 *iSelectPage*<br/>
-El índice de la página que será inicialmente en la parte superior. Valor predeterminado es la primera página que se agrega a la hoja.
+Índice de la página que estará inicialmente en la parte superior. El valor predeterminado es la primera página agregada a la hoja.
 
 *pszCaption*<br/>
-Apunta a una cadena que contiene el título que se usará para la hoja de propiedades. No puede ser nulo.
+Apunta a una cadena que contiene el título que se va a utilizar para la hoja de propiedades. No puede ser nulo.
 
 *hbmWatermark*<br/>
-Identificador de mapa de bits en segundo plano de la hoja de propiedades.
+Identificador del mapa de bits de fondo de la hoja de propiedades.
 
 *hpalWatermark*<br/>
-Identificador de la paleta del mapa de bits de marca de agua o mapa de bits del encabezado.
+Identificador de la paleta del mapa de bits de la marca de agua o del encabezado de mapa de bits.
 
 *hbmHeader*<br/>
 Identificador del mapa de bits del encabezado de la página de propiedades.
 
 ### <a name="remarks"></a>Comentarios
 
-Para mostrar la hoja de propiedades, llame a [DoModal](#domodal) o [crear](#create). La cadena contenida en el primer parámetro se colocarán en la barra de título de la hoja de propiedades.
+Para mostrar la hoja de propiedades, llame a [DoModal](#domodal) o a [Create](#create). La cadena contenida en el primer parámetro se colocará en la barra de título de la hoja de propiedades.
 
-Si tiene varios parámetros (por ejemplo, si está utilizando una matriz), use [construir](#construct) en lugar de `CPropertySheet`.
+Si tiene varios parámetros (por ejemplo, si usa una matriz), use la [construcción](#construct) en lugar de `CPropertySheet`.
 
-Puede mostrar las imágenes de marca de agua o encabezado automáticamente si usa el tercer o cuarto prototipos de `CPropertySheet`, anteriormente, y pase los valores válidos el *hbmWatermark*, *hpalWatermark*, y / o *hbmHeader* parámetros.
+Puede mostrar la marca de agua y/o las imágenes de encabezado automáticamente si usa los prototipos tercero `CPropertySheet`o cuarto de, anteriores, y pasa valores válidos para los parámetros *hbmWatermark*, *hpalWatermark*y *hbmHeader* .
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]
 
-##  <a name="create"></a>  CPropertySheet::Create
+##  <a name="create"></a>CPropertySheet:: Create
 
 Muestra una hoja de propiedades no modal.
 
@@ -344,24 +344,24 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 Apunta a la ventana primaria. Si es NULL, el elemento primario es el escritorio.
 
 *dwStyle*<br/>
-Estilos de ventana para la hoja de propiedades. Para obtener una lista completa de los estilos disponibles, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+Estilos de ventana para la hoja de propiedades. Para obtener una lista completa de los estilos disponibles, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *dwExStyle*<br/>
 Estilos de ventana extendidos para la hoja de propiedades. Para obtener una lista completa de los estilos disponibles, consulte [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la hoja de propiedades se ha creado correctamente; en caso contrario, es 0.
+Distinto de cero si la hoja de propiedades se crea correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-La llamada a `Create` puede ser dentro del constructor, o puede llamar después de invoca el constructor.
+La llamada a `Create` puede estar dentro del constructor o se puede llamar después de invocar el constructor.
 
-El estilo predeterminado, expresado pasando -1 como *dwStyle*, es realmente WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE. El valor predeterminado extendido de estilo de ventana, expresada, pase 0 como *dwExStyle*, es realmente WS_EX_DLGMODALFRAME.
+El estilo predeterminado, expresado mediante Pass-1 como *dwStyle*, es realmente WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;&#124;DS_CONTEXTHELP WS_VISIBLE. El estilo de ventana extendido predeterminado, expresado al pasar 0 como *dwExStyle*, realmente es WS_EX_DLGMODALFRAME.
 
-El `Create` función miembro devuelve inmediatamente después de crear la hoja de propiedades. Para destruir la hoja de propiedades, llamar a [CWnd:: DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).
+La `Create` función miembro devuelve inmediatamente después de crear la hoja de propiedades. Para destruir la hoja de propiedades, llame a [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow).
 
-Hojas de propiedades no modal que se muestra con una llamada a `Create` no tiene los botones OK, Cancel, aplicar ahora y ayuda, igual que las hojas de propiedades modal. Por el usuario se deben crear botones deseados.
+Las hojas de propiedades no modales mostradas `Create` con una llamada a no tienen los botones aceptar, cancelar, aplicar ahora y ayuda como las hojas de propiedades modales. El usuario debe crear los botones deseados.
 
 Para mostrar una hoja de propiedades modal, llame a [DoModal](#domodal) en su lugar.
 
@@ -381,20 +381,20 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor devuelto
 
-IDOK o IDCANCEL si la función se realizó correctamente; en caso contrario, 0 o -1. Si se ha establecido la hoja de propiedades como un asistente (consulte [SetWizardMode](#setwizardmode)), `DoModal` devuelve ID_WIZFINISH o IDCANCEL.
+IDOK o IDCANCEL si la función se realizó correctamente; de lo contrario, 0 o-1. Si la hoja de propiedades se ha establecido como un asistente (vea [SetWizardMode](#setwizardmode)) `DoModal` , devuelve ID_WIZFINISH o IDCANCEL.
 
 ### <a name="remarks"></a>Comentarios
 
-El valor devuelto corresponde al identificador del control que se cierra la hoja de propiedades. Después de esta función devuelve, habrá ha destruido el correspondiente a la hoja de propiedades y todas las páginas de windows. Se conservarán los propios objetos. Normalmente, se recuperará los datos desde el [CPropertyPage](../../mfc/reference/cpropertypage-class.md) objetos después `DoModal` devuelve IDOK.
+El valor devuelto corresponde al identificador del control que cerró la hoja de propiedades. Después de que se devuelva esta función, se destruirán las ventanas correspondientes a la hoja de propiedades y todas las páginas. Los propios objetos seguirán existiendo. Normalmente, recuperará los datos de los objetos [CPropertyPage](../../mfc/reference/cpropertypage-class.md) después `DoModal` de que devuelva IDOK.
 
-Para mostrar una hoja de propiedades no modal, llame a [crear](#create) en su lugar.
+Para mostrar una hoja de propiedades no modal, llame a [Create](#create) en su lugar.
 
-Cuando se crea una página de propiedades de su recurso de cuadro de diálogo correspondiente, que puede causar una excepción de primera oportunidad. Esto da como resultado de la página de propiedades, cambiar el estilo del recurso de cuadro de diálogo para el estilo requerido antes de crea la página. Dado que los recursos son normalmente de solo lectura, esto produce una excepción. El sistema controla la excepción y realiza una copia del recurso modificado. Por lo tanto, se pueden omitir las excepciones de primera oportunidad.
+Cuando se crea una página de propiedades a partir de su recurso de cuadro de diálogo correspondiente, puede producirse una excepción de primera oportunidad. Esto se debe a que la página de propiedades cambia el estilo del recurso de cuadro de diálogo al estilo requerido antes de que se cree la página. Dado que los recursos suelen ser de solo lectura, esto produce una excepción. El sistema controla la excepción y realiza una copia del recurso modificado. Por tanto, se puede omitir la primera excepción.
 
 > [!NOTE]
->  Esta excepción debe controlarse mediante el sistema operativo si está compilando con el modelo de control de excepciones asincrónicas. Para obtener más información acerca de los modelos de control de excepciones, vea [/EH (modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md). En este caso, no incluya llamadas a `CPropertySheet::DoModal` con un bloque try-catch de C++ en el que la instrucción catch controla todas las excepciones, por ejemplo, `catch (...)`. Este bloque controlaría la excepción destinada a del sistema operativo y causa un comportamiento impredecible. Sin embargo, puede utilizar C++ control de excepciones con tipos de excepción específico o control de excepciones estructurado donde se pasa la excepción de infracción de acceso al sistema operativo.
+>  El sistema operativo debe controlar esta excepción si está compilando con el modelo de control de excepciones asincrónico. Para obtener más información sobre los modelos de control de excepciones, vea [/EH (modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md). En este caso, no ajuste las llamadas a `CPropertySheet::DoModal` con un C++ bloque try-catch en el que la instrucción Catch controle todas las excepciones `catch (...)`, por ejemplo,. Este bloque controlaría la excepción prevista para el sistema operativo y produciría un comportamiento imprevisible. Sin embargo, puede utilizar C++ de forma segura el control de excepciones con tipos de excepción específicos o el control de excepciones estructurado, donde la excepción de infracción de acceso se pasa a través del sistema operativo.
 
-Para evitar generar esta excepción de primera oportunidad, puede garantizar manualmente que la hoja de propiedades tiene el valor correcto [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles). Deberá establecer los siguientes estilos de una hoja de propiedades:
+Para evitar que se genere esta excepción de primera oportunidad, puede garantizar manualmente que la hoja de propiedades tenga los [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles)correctos. Debe establecer los siguientes estilos para una hoja de propiedades:
 
 - DS_3DLOOK
 
@@ -404,7 +404,7 @@ Para evitar generar esta excepción de primera oportunidad, puede garantizar man
 
 - WS_TABSTOP
 
-Puede usar los siguientes estilos opcionales sin provocar una excepción de primera oportunidad:
+Puede usar los siguientes estilos opcionales sin producir una excepción de primera oportunidad:
 
 - DS_SHELLFONT
 
@@ -412,7 +412,7 @@ Puede usar los siguientes estilos opcionales sin provocar una excepción de prim
 
 - WS_CLIPCHILDREN
 
-Deshabilitar todos los demás estilos de Windows, ya que no son compatibles con las hojas de propiedades. Este Consejo no es aplicable a los estilos extendidos. Establecer estos estilos estándares adecuadamente garantizará que la hoja de propiedades no tiene que modificarse y evitará que se genera la excepción de primera oportunidad.
+Deshabilite todos los demás estilos de Windows porque no son compatibles con las hojas de propiedades. Este Consejo no se aplica a los estilos extendidos. Establecer los estilos estándar de forma adecuada garantizará que la hoja de propiedades no tiene que modificarse y evitará la generación de la primera excepción.
 
 ### <a name="example"></a>Ejemplo
 
@@ -420,7 +420,7 @@ Vea el ejemplo de [CPropertySheet:: AddPage](#addpage).
 
 ##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs
 
-Indica si las filas de pestañas en una hoja de propiedades de la pila.
+Indica si se van a apilar filas de pestañas en una hoja de propiedades.
 
 ```
 void EnableStackedTabs(BOOL bStacked);
@@ -429,19 +429,19 @@ void EnableStackedTabs(BOOL bStacked);
 ### <a name="parameters"></a>Parámetros
 
 *bStacked*<br/>
-Indica si se habilitan apiladas pestañas en la hoja de propiedades. Deshabilitar apiladas filas de etiquetas estableciendo *bStacked* en FALSE.
+Indica si las pestañas apiladas están habilitadas en la hoja de propiedades. Deshabilite las filas apiladas de etiquetas estableciendo *bStacked* en false.
 
 ### <a name="remarks"></a>Comentarios
 
-De forma predeterminada, si una hoja de propiedades tiene varias pestañas que caben en una sola fila en el ancho de la hoja de propiedades, las pestañas se apilarán en varias filas. Para utilizar las pestañas de desplazamiento en lugar de pestañas de apilamiento, llame a `EnableStackedTabs` con *bStacked* establecida en FALSE antes de llamar a [DoModal](#domodal) o [crear](#create).
+De forma predeterminada, si una hoja de propiedades tiene más pestañas de las que caben en una sola fila en el ancho de la hoja de propiedades, las pestañas se apilarán en varias filas. Para usar las pestañas de desplazamiento en lugar de las pestañas `EnableStackedTabs` de apilamiento, llame a con *bStacked* establecido en false antes de llamar a [DoModal](#domodal) o [Create](#create).
 
-Debe llamar a `EnableStackedTabs` cuando crea una hoja de propiedades no modal o modal. Para incorporar este estilo en un `CPropertySheet`-clase derivada, escribe un controlador de mensajes para WM_CREATE. En la versión invalidada de [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), llame a `EnableStackedTabs( FALSE )` antes de llamar a la implementación de la clase base.
+Debe llamar al `EnableStackedTabs` método cuando cree una hoja de propiedades modal o no modal. Para incorporar este estilo en una `CPropertySheet`clase derivada de, escriba un controlador de mensajes para WM_CREATE. En la versión invalidada de [CWnd::](../../mfc/reference/cwnd-class.md#oncreate)alcreate `EnableStackedTabs( FALSE )` , llame a antes de llamar a la implementación de la clase base.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]
 
-##  <a name="enddialog"></a>  CPropertySheet::EndDialog
+##  <a name="enddialog"></a>CPropertySheet:: EndDialog
 
 Finaliza la hoja de propiedades.
 
@@ -452,21 +452,21 @@ void EndDialog(int nEndID);
 ### <a name="parameters"></a>Parámetros
 
 *nEndID*<br/>
-Identificador que se usará como valor devuelto de la hoja de propiedades.
+Identificador que se va a usar como valor devuelto de la hoja de propiedades.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro se llama el marco de trabajo cuando se presiona el correcto, cancelar o botón de cierre. Llamada a esta función miembro si produce un evento que debe cerrar la hoja de propiedades.
+El marco de trabajo llama a esta función miembro cuando se presiona el botón Aceptar, cancelar o cerrar. Llame a esta función miembro si se produce un evento que debería cerrar la hoja de propiedades.
 
 Esta función miembro solo se usa con un cuadro de diálogo modal.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CPropertySheet::PressButton](#pressbutton).
+Vea el ejemplo de [CPropertySheet::P ressbutton](#pressbutton).
 
 ##  <a name="getactiveindex"></a>  CPropertySheet::GetActiveIndex
 
-Obtiene el número de índice de la página activa de la ventana de hoja de propiedades y, a continuación, utiliza el número de índice devuelto como parámetro para `GetPage`.
+Obtiene el número de índice de la página activa de la ventana de la hoja de propiedades y, a continuación, usa `GetPage`el número de índice devuelto como parámetro para.
 
 ```
 int GetActiveIndex() const;
@@ -474,15 +474,15 @@ int GetActiveIndex() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de índice de la página activa.
+Número de índice de la página activa.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CPropertySheet::GetActivePage](#getactivepage).
+Vea el ejemplo de [CPropertySheet:: GetActivePage](#getactivepage).
 
 ##  <a name="getactivepage"></a>  CPropertySheet::GetActivePage
 
-Recupera la página activa de la ventana de hoja de propiedades.
+Recupera la página activa de la ventana de la hoja de propiedades.
 
 ```
 CPropertyPage* GetActivePage() const;
@@ -511,15 +511,15 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="parameters"></a>Parámetros
 
 *nPage*<br/>
-Índice de la página que desee, empezando por 0. Debe ser entre 0 y menor que el número de páginas en la hoja de propiedades, ambos inclusive.
+Índice de la página deseada, empezando por 0. Debe estar entre 0 y uno menos que el número de páginas de la hoja de propiedades, ambos inclusive.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El puntero a la página correspondiente a la *nPage* parámetro.
+El puntero a la página correspondiente al parámetro *nPage* .
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Vea el ejemplo de [CPropertyPage:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
 ##  <a name="getpagecount"></a>  CPropertySheet::GetPageCount
 
@@ -531,11 +531,11 @@ int GetPageCount() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de páginas en la hoja de propiedades.
+Número de páginas de la hoja de propiedades.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Vea el ejemplo de [CPropertyPage:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
 ##  <a name="getpageindex"></a>  CPropertySheet::GetPageIndex
 
@@ -548,7 +548,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parámetros
 
 *pPage*<br/>
-Apunta a la página con el índice que se va a calcular. No puede ser nulo.
+Apunta a la página con el índice que se va a buscar. No puede ser nulo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -556,15 +556,15 @@ El número de índice de una página.
 
 ### <a name="remarks"></a>Comentarios
 
-Por ejemplo, podría usar `GetPageIndex` para obtener el índice de página para poder usar [SetActivePage](#setactivepage) o [GetPage](#getpage).
+Por ejemplo, se usaría `GetPageIndex` para obtener el índice de la página con el fin de usar [SetActivePage](#setactivepage) o [GetPage](#getpage).
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CPropertySheet::GetActivePage](#getactivepage).
+Vea el ejemplo de [CPropertySheet:: GetActivePage](#getactivepage).
 
 ##  <a name="gettabcontrol"></a>  CPropertySheet::GetTabControl
 
-Recupera un puntero a un control de ficha para realizar algo específico para el control de ficha (es decir, para usar cualquiera de las API en [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
+Recupera un puntero a un control de ficha para realizar una acción específica del control de ficha (es decir, para usar cualquiera de las API en [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
 
 ```
 CTabCtrl* GetTabControl() const;
@@ -576,7 +576,7 @@ Un puntero a un control de ficha.
 
 ### <a name="remarks"></a>Comentarios
 
-Por ejemplo, llamar a esta función miembro si desea agregar mapas de bits a cada una de las pestañas durante la inicialización.
+Por ejemplo, llame a esta función miembro si desea agregar mapas de bits a cada una de las pestañas durante la inicialización.
 
 ### <a name="example"></a>Ejemplo
 
@@ -584,13 +584,13 @@ Por ejemplo, llamar a esta función miembro si desea agregar mapas de bits a cad
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-Una estructura cuyos miembros almacenan las características de [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
+Estructura cuyos miembros almacenan las características de [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2).
 
 ### <a name="remarks"></a>Comentarios
 
-Utilice esta estructura para inicializar la apariencia de la hoja de propiedades una vez que se construye pero antes de que se muestre con la [DoModal](#domodal) función miembro. Por ejemplo, establecer el *dwSize* miembro de `m_psh` al tamaño que desee tener la hoja de propiedades.
+Use esta estructura para inicializar la apariencia de la hoja de propiedades después de construirla, pero antes de que se muestre con la función miembro [DoModal](#domodal) . Por ejemplo, establezca el miembro *dwSize* de `m_psh` en el tamaño que desee que tenga la hoja de propiedades.
 
-Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea PROPSHEETHEADER en el SDK de Windows.
+Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea PROPSHEETHEADER en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
@@ -598,7 +598,7 @@ Para obtener más información sobre esta estructura, incluida una lista de sus 
 
 ##  <a name="mapdialogrect"></a>  CPropertySheet::MapDialogRect
 
-Convierte las unidades de cuadro de diálogo de un rectángulo en unidades de la pantalla.
+Convierte las unidades de cuadro de diálogo de un rectángulo en unidades de pantalla.
 
 ```
 void MapDialogRect(LPRECT lpRect) const;
@@ -607,19 +607,19 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo que para se va a convertir.
+Apunta a una estructura [Rect](/previous-versions/dd162897\(v=vs.85\)) o a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que contiene las coordenadas del cuadro de diálogo que se van a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
-Unidades de cuadro de diálogo se indican en términos de la unidad de base de cuadro de diálogo actual derivada del ancho medio y alto de caracteres de la fuente utilizada para el texto del cuadro de diálogo. Una unidad horizontal es una cuarta parte de la unidad de base ancho del cuadro de diálogo y una unidad vertical es una octava parte de la unidad de alto de la base del cuadro de diálogo.
+Las unidades de cuadro de diálogo se indican en términos de la unidad base de cuadro de diálogo actual derivada del ancho y alto promedio de los caracteres de la fuente utilizada para el texto del cuadro de diálogo. Una unidad horizontal es una cuarta parte de la unidad de ancho base del cuadro de diálogo y una unidad vertical es una octava parte de la unidad de alto base del cuadro de diálogo.
 
-El [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) función Windows devuelve información de tamaño de la fuente del sistema, pero puede especificar una fuente distinta para cada hoja de propiedades si usa el estilo DS_SETFONT en el archivo de definición de recursos. El [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) función de Windows, se describe en el SDK de Windows, usa la fuente adecuada para este cuadro de diálogo.
+La función [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) de Windows devuelve información de tamaño para la fuente del sistema, pero puede especificar una fuente diferente para cada hoja de propiedades si usa el estilo DS_SETFONT en el archivo de definición de recursos. La función de Windows [MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) , que se describe en el Windows SDK, usa la fuente adecuada para este cuadro de diálogo.
 
-El `MapDialogRect` función miembro reemplaza las unidades de cuadro de diálogo en *lpRect* con pantalla (píxeles) de las unidades para que el rectángulo se puede usar para crear un cuadro de diálogo o colocar un control dentro de un cuadro.
+La `MapDialogRect` función miembro reemplaza las unidades de cuadro de diálogo de *lpRect* por unidades de pantalla (píxeles) para que el rectángulo pueda usarse para crear un cuadro de diálogo o para colocar un control dentro de un cuadro.
 
 ##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog
 
-Invalidaciones para aumentar la inicialización de la hoja de propiedades.
+Invalida para aumentar la inicialización de la hoja de propiedades.
 
 ```
 virtual BOOL OnInitDialog();
@@ -627,15 +627,15 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Especifica si la aplicación ha establecido el foco de entrada en uno de los controles en la hoja de propiedades. Si `OnInitDialog` devuelve distinto de cero, Windows establece el foco de entrada en el primer control en la hoja de propiedades. La aplicación puede devolver 0 solo si se establece explícitamente el foco de entrada para uno de los controles en la hoja de propiedades.
+Especifica si la aplicación ha establecido el foco de entrada en uno de los controles de la hoja de propiedades. Si `OnInitDialog` devuelve un valor distinto de cero, Windows establece el foco de entrada en el primer control de la hoja de propiedades. La aplicación solo puede devolver 0 si ha establecido explícitamente el foco de entrada en uno de los controles de la hoja de propiedades.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro se llama en respuesta al mensaje WM_INITDIALOG. Este mensaje se envía a la hoja de propiedades durante el [crear](#create) o [DoModal](#domodal) llamadas, que se producen inmediatamente antes de que se muestre la hoja de propiedades.
+Se llama a esta función miembro como respuesta al mensaje WM_INITDIALOG. Este mensaje se envía a la hoja de propiedades durante las llamadas a [Create](#create) o [DoModal](#domodal) , que se producen inmediatamente antes de que se muestre la hoja de propiedades.
 
-Reemplace esta función miembro si tiene que realizar un procesamiento especial cuando se inicializa la hoja de propiedades. En la versión invalidada, llame primero a la clase base `OnInitDialog` pero pasar por alto el valor devuelto. Normalmente devolverá TRUE desde la función miembro reemplazado.
+Invalide esta función miembro si necesita realizar un procesamiento especial cuando se inicializa la hoja de propiedades. En la versión invalidada, llame primero a la `OnInitDialog` clase base pero omita el valor devuelto. Normalmente, devolverá TRUE desde la función miembro invalidada.
 
-No es necesario una entrada de mapa de mensajes para esta función miembro.
+No necesita una entrada de mapa de mensajes para esta función miembro.
 
 ##  <a name="pressbutton"></a>  CPropertySheet::PressButton
 
@@ -648,9 +648,9 @@ void PressButton(int nButton);
 ### <a name="parameters"></a>Parámetros
 
 *nButton*<br/>
-nBotón: Identifica que se pulse el botón. Este parámetro puede ser uno de los siguientes valores:
+Nbotón Identifica el botón que se va a presionar. Este parámetro puede ser uno de los siguientes valores:
 
-- PSBTN_BACK elige el botón Atrás.
+- PSBTN_BACK elige el botón atrás.
 
 - PSBTN_NEXT elige el botón siguiente.
 
@@ -658,17 +658,17 @@ nBotón: Identifica que se pulse el botón. Este parámetro puede ser uno de los
 
 - PSBTN_OK elige el botón Aceptar.
 
-- PSBTN_APPLYNOW elige el botón Aplicar ahora.
+- PSBTN_APPLYNOW elige el botón aplicar ahora.
 
 - PSBTN_CANCEL elige el botón Cancelar.
 
-- PSBTN_HELP elige el botón Ayuda.
+- PSBTN_HELP elige el botón ayuda.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) para obtener más información sobre el mensaje Pressbutton del SDK de Windows.
+Consulte [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) para obtener más información sobre el mensaje de PRESSBUTTON de Windows SDK.
 
-Una llamada a `PressButton` no enviará el [PSN_APPLY](/windows/desktop/Controls/psn-apply) notificación de una página de propiedades para el marco de trabajo. Para enviar esta notificación, llame a [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Una llamada a `PressButton` no enviará la notificación [PSN_APPLY](/windows/win32/Controls/psn-apply) desde una página de propiedades al marco. Para enviar esta notificación, llame a [CPropertyPage:: onok](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Ejemplo
 
@@ -689,11 +689,11 @@ void RemovePage(int nPage);
 Apunta a la página que se va a quitar de la hoja de propiedades. No puede ser nulo.
 
 *nPage*<br/>
-Índice de la página que se va a quitar. Debe ser entre 0 y menor que el número de páginas en la hoja de propiedades, ambos inclusive.
+Índice de la página que se va a quitar. Debe estar entre 0 y uno menos que el número de páginas de la hoja de propiedades, ambos inclusive.
 
 ### <a name="remarks"></a>Comentarios
 
-El [CPropertyPage](../../mfc/reference/cpropertypage-class.md) propio objeto no se destruye hasta que el propietario de la `CPropertySheet` se cierra la ventana.
+El objeto [CPropertyPage](../../mfc/reference/cpropertypage-class.md) en sí no se destruye hasta que se cierra `CPropertySheet` el propietario de la ventana.
 
 ##  <a name="setactivepage"></a>  CPropertySheet::SetActivePage
 
@@ -707,26 +707,26 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Parámetros
 
 *nPage*<br/>
-Índice de la página para establecer. Debe ser entre 0 y menor que el número de páginas en la hoja de propiedades, ambos inclusive.
+Índice de la página que se va a establecer. Debe estar entre 0 y uno menos que el número de páginas de la hoja de propiedades, ambos inclusive.
 
 *pPage*<br/>
-Hace referencia a la página para establecer en la hoja de propiedades. No puede ser NULL.
+Apunta a la página que se va a establecer en la hoja de propiedades. No puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la hoja de propiedades se activa correctamente; en caso contrario, es 0.
+Distinto de cero si la hoja de propiedades se activa correctamente; de lo contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Por ejemplo, utilice `SetActivePage` si una acción del usuario en una sola página provocaría que otra página para convertirse en la página activa.
+Por ejemplo, use `SetActivePage` si la acción de un usuario en una página debe hacer que otra página se convierta en la página activa.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [CPropertySheet::GetActivePage](#getactivepage).
+Vea el ejemplo de [CPropertySheet:: GetActivePage](#getactivepage).
 
 ##  <a name="setfinishtext"></a>  CPropertySheet::SetFinishText
 
-Establece el texto en el botón de comando de finalizar.
+Establece el texto del botón de comando finalizar.
 
 ```
 void SetFinishText(LPCTSTR lpszText);
@@ -735,11 +735,11 @@ void SetFinishText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parámetros
 
 *lpszText*<br/>
-Señala el texto que se mostrará en el botón de comando de finalizar.
+Señala el texto que se va a mostrar en el botón de comando finalizar.
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a `SetFinishText` para mostrar el texto en el botón de comando finalizar y ocultar los botones Atrás y siguiente después de que el usuario complete la acción en la última página del asistente.
+Llame `SetFinishText` a para mostrar el texto del botón de comando finalizar y ocultar los botones siguiente y atrás después de que el usuario complete la acción en la última página del asistente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -747,7 +747,7 @@ Llame a `SetFinishText` para mostrar el texto en el botón de comando finalizar 
 
 ##  <a name="settitle"></a>  CPropertySheet::SetTitle
 
-Especifica el título de la hoja de propiedades (es decir, el texto mostrado en la barra de título de una ventana de marco).
+Especifica el título de la hoja de propiedades (el texto que se muestra en la barra de título de una ventana de marco).
 
 ```
 void SetTitle(
@@ -758,22 +758,22 @@ void SetTitle(
 ### <a name="parameters"></a>Parámetros
 
 *nStyle*<br/>
-Especifica el estilo del título de la hoja de propiedades. El estilo debe especificarse en 0 o como PSH_PROPTITLE. Si se establece el estilo como PSH_PROPTITLE, aparece la palabra "Propiedades" después del texto especificado como el título. Por ejemplo, al llamar a `SetTitle`("Simple", PSH_PROPTITLE) dará como resultado un título de la hoja de propiedades de propiedades simples"."
+Especifica el estilo del título de la hoja de propiedades. El estilo debe especificarse en 0 o como PSH_PROPTITLE. Si el estilo se establece como PSH_PROPTITLE, la palabra "propiedades" aparece después del texto especificado como título. Por ejemplo, llamar `SetTitle`a ("simple", PSH_PROPTITLE) dará como resultado un título de la hoja de propiedades de "propiedades simples".
 
 *lpszText*<br/>
-Señala el texto que se usará como el título en la barra de título de la hoja de propiedades.
+Señala el texto que se va a usar como título en la barra de título de la hoja de propiedades.
 
 ### <a name="remarks"></a>Comentarios
 
-De forma predeterminada, una hoja de propiedades usa el parámetro de la leyenda en el constructor de la hoja de propiedades.
+De forma predeterminada, una hoja de propiedades utiliza el parámetro Caption en el constructor de la hoja de propiedades.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]
 
-##  <a name="setwizardbuttons"></a>  CPropertySheet::SetWizardButtons
+##  <a name="setwizardbuttons"></a>CPropertySheet:: SetWizardButtons
 
-Habilita o deshabilita el botón Atrás, siguiente o finalizar en una hoja de propiedades del asistente.
+Habilita o deshabilita el botón atrás, siguiente o finalizar en una hoja de propiedades del asistente.
 
 ```
 void SetWizardButtons(DWORD dwFlags);
@@ -782,25 +782,25 @@ void SetWizardButtons(DWORD dwFlags);
 ### <a name="parameters"></a>Parámetros
 
 *dwFlags*<br/>
-Un conjunto de marcadores que personalizan la función y la apariencia de los botones del asistente. Este parámetro puede ser una combinación de los siguientes valores:
+Un conjunto de marcas que personalizan la función y la apariencia de los botones del asistente. Este parámetro puede ser una combinación de los siguientes valores:
 
-- Botón Atrás PSWIZB_BACK
+- PSWIZB_BACK botón atrás
 
-- Botón PSWIZB_NEXT siguiente
+- PSWIZB_NEXT botón siguiente
 
-- Botón Finalizar PSWIZB_FINISH
+- PSWIZB_FINISH botón Finalizar
 
-- Botón PSWIZB_DISABLEDFINISH deshabilitado finalizar
+- PSWIZB_DISABLEDFINISH botón Finalizar deshabilitado
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a `SetWizardButtons` solo después de que el cuadro de diálogo está abierto; no se puede llamar a `SetWizardButtons` antes de llamar a [DoModal](#domodal). Normalmente, debe llamar a `SetWizardButtons` desde [notificaciones CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
+Llamar `SetWizardButtons` solo después de que el cuadro de diálogo esté abierto `SetWizardButtons` ; no se puede llamar a antes de llamar a [DoModal](#domodal). Normalmente, debe llamar a `SetWizardButtons` desde [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
 
-Si desea cambiar el texto en el botón Finalizar u ocultar la próxima y Back botones una vez que el usuario se ha completado el asistente, llamada [SetFinishText](#setfinishtext). Tenga en cuenta que se comparte el mismo botón para finalizar y siguiente. Puede mostrar un acabado o un botón siguiente al mismo tiempo, pero no ambos.
+Si desea cambiar el texto del botón Finalizar u ocultar los botones siguiente y atrás una vez que el usuario haya completado el asistente, llame a [SetFinishText](#setfinishtext). Tenga en cuenta que el mismo botón se comparte para finalizar y siguiente. Puede mostrar un botón Finalizar o siguiente al mismo tiempo, pero no ambos.
 
 ### <a name="example"></a>Ejemplo
 
-Un `CPropertySheet` tiene tres páginas de propiedades de asistente: `CStylePage`, `CColorPage`, y `CShapePage`.  El fragmento de código siguiente muestra cómo habilitar y deshabilitar el **Atrás** y **siguiente** botones en la página de propiedades del asistente.
+Un `CPropertySheet` tiene tres páginas de propiedades del `CStylePage`asistente `CColorPage`:, `CShapePage`y.  En el fragmento de código siguiente se muestra cómo habilitar y deshabilitar los botones **atrás** y **siguiente** en la página de propiedades del asistente.
 
 [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]
 
@@ -818,11 +818,11 @@ void SetWizardMode();
 
 ### <a name="remarks"></a>Comentarios
 
-Una característica clave de una página de propiedades del asistente es que el usuario navega junto con o finalizar, realizar una copia y botones en lugar de pestañas para cancelar.
+Una característica clave de una página de propiedades del asistente es que el usuario navega con los botones siguiente, finalizar, atrás y cancelar en lugar de pestañas.
 
-Llame a `SetWizardMode` antes de llamar a [DoModal](#domodal). Después de llamar a `SetWizardMode`, `DoModal` devolverá ID_WIZFINISH (si el usuario cierra con el botón Finalizar) o IDCANCEL.
+Llame `SetWizardMode` a antes de llamar a [DoModal](#domodal). Después de llamar `SetWizardMode`a `DoModal` , devolverá ID_WIZFINISH (si el usuario se cierra con el botón Finalizar) o IDCANCEL.
 
-`SetWizardMode` establece la marca PSH_WIZARD.
+`SetWizardMode`establece la marca PSH_WIZARD.
 
 ### <a name="example"></a>Ejemplo
 
@@ -830,9 +830,9 @@ Llame a `SetWizardMode` antes de llamar a [DoModal](#domodal). Después de llama
 
 ## <a name="see-also"></a>Vea también
 
-[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
-[MFC Sample CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo de MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[Ejemplo SNAPVW de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

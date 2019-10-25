@@ -1,10 +1,10 @@
 ---
 title: _fgetchar, _fgetwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetchar
 - _fgetwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetwchar
 - _fgettchar
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: c74618fa0be5392062d13618ff73e2ef45bf7c2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333961"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940866"
 ---
-# <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
+# <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
 Lee un carácter de **stdin**.
 
@@ -52,13 +55,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**\_fgetchar** devuelve el carácter leído como un **int** o devuelve `EOF` para indicar un error o el final del archivo. **\_fgetwchar** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter leído, o bien devuelve `WEOF` para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de final de archivo.
+fgetchar devuelve el carácter leído como un valor **int** o `EOF` devuelve para indicar un error o el final del archivo.  **\_** fgetwchar devuelve, como [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho que corresponde al carácter leído o devuelve `WEOF` para indicar un error o el final del archivo.  **\_** En ambas funciones, use **feof** o **ferror** para distinguir entre un error y una condición de fin de archivo.
 
 ## <a name="remarks"></a>Comentarios
 
 Estas funciones leen un solo carácter de **stdin**. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
 
-**_fgetchar** es equivalente a `fgetc( stdin )`. También es equivalente a **getchar**, pero implementado solo como una función, en lugar de una función y una macro. **_fgetwchar** es la versión de caracteres anchos de **_fgetchar**.
+**_fgetchar** es equivalente a `fgetc( stdin )`. También es equivalente a **getchar**, pero solo se implementa como una función, en lugar de como una función y una macro. **_fgetwchar** es la versión con caracteres anchos de **_fgetchar**.
 
 Estas funciones no son compatibles con el estándar ANSI.
 
@@ -75,7 +78,7 @@ Estas funciones no son compatibles con el estándar ANSI.
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390391"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217997"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Específicos de Microsoft**
 
-Genera el `lsl` instrucción (límite de segmento de carga).
+Genera la `lsl` instrucción (cargar límite de segmento).
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*a*<br/>
-[in] Una constante que especifica el selector de segmento.
+*un*\
+de Una constante que especifica el selector de segmento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El límite del segmento del selector de segmento especificado por `a`, siempre que el selector es válida y visible en el nivel de permiso actual.
+Límite de segmento del selector de segmento especificado por *un*, si el selector es válido y está visible en el nivel de permiso actual.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,17 +43,17 @@ El límite del segmento del selector de segmento especificado por `a`, siempre q
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Si no se puede recuperar el límite del segmento, se produce un error en esta instrucción. En caso de error, esta instrucción borra la marca ZF y el valor devuelto es indefinido.
+Si no se puede recuperar el límite de segmento, se produce un error en esta instrucción. En caso de error, esta instrucción borra la marca ZF y el valor devuelto es indefinido.
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86
@@ -109,4 +109,4 @@ sl was changed
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456339"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687922"
 ---
-# <a name="indirectarray-class"></a>indirect_array (Clase)
+# <a name="indirect_array-class"></a>indirect_array (Clase)
 
-Clase de plantilla auxiliar e interna que admite objetos que son subconjuntos de valarrays proporcionando operaciones entre matrices de subconjuntos definidas especificando un subconjunto de índices de una valarray principal.
+Una plantilla de clase auxiliar interna que admite objetos que son subconjuntos de valarrays proporcionando operaciones entre matrices de subconjuntos definidas especificando un subconjunto de índices de una valarray primaria.
 
 ## <a name="syntax"></a>Sintaxis
 
 ## <a name="remarks"></a>Comentarios
 
-La clase describe un objeto que almacena una referencia a un objeto `va` de la clase [valarray](../standard-library/valarray-class.md) **\<Type >** , junto con un `xa` objeto de `valarray<size_t>`clase, que describe la secuencia de elementos que se van a seleccionar. `valarray<Type>` objeto.
+La clase describe un objeto que almacena una referencia a un objeto `va` de la clase [valarray](../standard-library/valarray-class.md)  **\<Type >** , junto con un objeto `xa` de la clase `valarray<size_t>`, que describe la secuencia de elementos que se va a seleccionar en el objeto `valarray<Type>`.
 
-Solo se construye `indirect_array<Type>` un objeto escribiendo una expresión con el formato. `va[xa]` Las funciones miembro de la clase indirect_array se comportarán como las signaturas de `valarray<Type>`función correspondientes definidas para, excepto en que solo la secuencia de elementos seleccionados se ve afectada.
+Solo se construye un objeto `indirect_array<Type>` escribiendo una expresión con el formato `va[xa]`. Las funciones miembro de la clase indirect_array se comportarán como las signaturas de función correspondientes definidas para `valarray<Type>`, excepto en que solo la secuencia de elementos seleccionados se ve afectada.
 
-La secuencia consta de **XA.** elementos [size](../standard-library/valarray-class.md#size) , donde Element `I` se convierte en el índice `I` **XA**[ `va`] dentro de.
+La secuencia consta de **XA.** elementos de [tamaño](../standard-library/valarray-class.md#size) , donde el elemento `I` se convierte en el índice **XA**[`I`] dentro de `va`.
 
 ## <a name="example"></a>Ejemplo:
 
@@ -66,7 +66,7 @@ int main( )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```cpp
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).

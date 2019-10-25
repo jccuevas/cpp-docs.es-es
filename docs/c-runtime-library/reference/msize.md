@@ -1,9 +1,9 @@
 ---
 title: _msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - msize
 - _msize
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156296"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951434"
 ---
-# <a name="msize"></a>_msize
+# <a name="_msize"></a>_msize
 
 Devuelve el tamaño de un bloque de memoria asignado en el montón.
 
@@ -54,11 +57,11 @@ Puntero al bloque de memoria.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_msize** función devuelve el tamaño, en bytes, del bloque de memoria asignada por una llamada a **calloc**, **malloc**, o **realloc**.
+La función **_msize** devuelve el tamaño, en bytes, del bloque de memoria asignado por una llamada a **calloc**, **malloc**o **realloc**.
 
-Cuando la aplicación se vincula con una versión de depuración de las bibliotecas de tiempo de ejecución de C, **_msize** se resuelve como [_msize_dbg](msize-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
+Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución de C, **_msize** se resuelve como [_msize_dbg](msize-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Esta función valida su parámetro. Si *memblock* es un puntero nulo, **_msize** invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece **errno** a **EINVAL** y devuelve -1.
+Esta función valida su parámetro. Si *memblock* es un puntero nulo, **_msize** invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece **errno** en **EINVAL** y devuelve-1.
 
 ## <a name="requirements"></a>Requisitos
 

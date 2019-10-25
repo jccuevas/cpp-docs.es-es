@@ -1,6 +1,6 @@
 ---
 title: __writegsbyte, __writegsdword, __writegsqword, __writegsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writegsbyte
 - __writegsqword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b9e812776e9b2bb0820905d088111669096db64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389780"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221201"
 ---
-# <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
+# <a name="__writegsbyte-__writegsdword-__writegsqword-__writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
 **Específicos de Microsoft**
 
-Escribir en una ubicación especificada por un desplazamiento relativo al principio del segmento GS en la memoria.
+Escribe memoria en una ubicación especificada por un desplazamiento relativo al principio del segmento GS.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __writegsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -46,13 +46,13 @@ void __writegsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Offset*<br/>
-[in] El desplazamiento desde el principio de GS para escribir en.
+*Posición*\
+de Desplazamiento desde el principio de GS en el que se va a escribir.
 
-*Data*<br/>
-[in] El valor para escribir.
+*Data*\
+de Valor que se va a escribir.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -63,15 +63,15 @@ void __writegsqword(
 |`__writegsqword`|x64|
 |`__writegsword`|x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Estas rutinas solo están disponibles como intrínseco.
+Estas rutinas solo están disponibles como intrínsecos.
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

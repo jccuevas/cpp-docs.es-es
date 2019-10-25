@@ -1,5 +1,5 @@
 ---
-title: '¿Operador condicional:? :'
+title: 'Operador condicional: &quest;:'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399153"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276809"
 ---
-# <a name="conditional-operator--"></a>¿Operador condicional:? :
+# <a name="conditional-operator-quest-"></a>Operador condicional: &quest;:
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,13 +25,13 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Comentarios
 
-El operador condicional (**?:**) es un operador ternario (toma tres operandos). El operador condicional funciona del modo siguiente:
+El operador condicional ( **?:** ) es un operador ternario (toma tres operandos). El operador condicional funciona del modo siguiente:
 
 - El primer operando se convierte implícitamente en **bool**. Se evalúa y todos los efectos secundarios se completan antes de continuar.
 
-- Si el primer operando se evalúa como **true** (1), que se evalúa el segundo operando.
+- Si el primer operando se evalúa como **true** (1), se evalúa el segundo operando.
 
-- Si el primer operando se evalúa como **false** (0), que se evalúa el tercer operando.
+- Si el primer operando se evalúa como **false** (0), se evalúa el tercer operando.
 
 El resultado del operador condicional es el resultado de cualquier operando que se evalúe, el segundo o el tercero. Solo uno de los dos últimos operandos se evalúa en una expresión condicional.
 
@@ -39,7 +39,7 @@ Las expresiones condicionales tienen asociatividad de derecha a izquierda. El pr
 
 - Si ambos operandos son del mismo tipo, el resultado es de ese tipo.
 
-- Si ambos operandos son de tipos de aritmética o de enumeración, las conversiones aritméticas habituales (cubiertos en [conversiones estándar](standard-conversions.md)) se realizan para convertirlos a un tipo común.
+- Si ambos operandos son de tipos aritméticos o de enumeración, se realizan las conversiones aritméticas habituales (que se describen en [conversiones estándar](standard-conversions.md)) para convertirlos a un tipo común.
 
 - Si ambos operandos son de tipos de puntero o si uno es de un tipo de puntero y el otro es una expresión de constante que se evalúa como 0, las conversiones de puntero se realizan para convertirlos a un tipo común.
 

@@ -1,10 +1,10 @@
 ---
 title: _lseek, _lseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lseeki64
 - _lseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lseeki64
 - _lseek
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285931"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952983"
 ---
-# <a name="lseek-lseeki64"></a>_lseek, _lseeki64
+# <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
 Mueve un puntero de archivo a la ubicación especificada.
 
@@ -68,21 +71,21 @@ Posición inicial.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_lseek** devuelve el desplazamiento, en bytes, de la nueva posición desde el principio del archivo. **_lseeki64** devuelve el desplazamiento en un entero de 64 bits. La función devuelve-1 L para indicar un error. Si se pasa un parámetro no válido (como un descriptor de archivo incorrecto), el valor de *origin* no es válido o la posición especificada por *offset* se encuentra antes del inicio del archivo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EBADF** y devuelven-1 L. En los dispositivos que no pueden realizar búsquedas (como los terminales y las impresoras), el valor devuelto es indefinido.
+**_lseek** devuelve el desplazamiento, en bytes, de la nueva posición desde el principio del archivo. **_lseeki64** devuelve el desplazamiento en un entero de 64 bits. La función devuelve-1L para indicar un error. Si se pasa un parámetro no válido (como un descriptor de archivo incorrecto), el valor de *origin* no es válido o la posición especificada por *offset* se encuentra antes del inicio del archivo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EBADF** y devuelven-1L. En los dispositivos que no pueden realizar búsquedas (como los terminales y las impresoras), el valor devuelto es indefinido.
 
 Para obtener más información sobre estos y otros códigos error, vea [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lseek** función mueve el puntero de archivo asociado *fd* a una nueva ubicación es *desplazamiento* bytes a partir de *origen*. Se produce la siguiente operación en el archivo en la nueva ubicación. El argumento *origin* debe ser una de las siguientes constantes, que se definen en Stdio.h.
+La función **_lseek** mueve el puntero de archivo asociado a *FD* a una nueva ubicación que tiene *desplazamientos* de bytes desde el *origen*. Se produce la siguiente operación en el archivo en la nueva ubicación. El argumento *origin* debe ser una de las siguientes constantes, que se definen en Stdio.h.
 
-|*origen* valor||
+|valor de *origen*||
 |-|-|
 | **SEEK_SET** | Inicio del archivo. |
 | **SEEK_CUR** | Posición actual del puntero de archivo. |
 | **SEEK_END** | Final de archivo. |
 
-Puede usar **_lseek** a colocar el puntero en cualquier lugar en un archivo o más allá del final del archivo.
+Puede usar **_lseek** para cambiar la posición del puntero en cualquier parte de un archivo o más allá del final del archivo.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlseekcinput"></a>Entrada: crt_lseek.c_input
+### <a name="input-crt_lseekc_input"></a>Entrada: crt_lseek.c_input
 
 ```Input
 Line one.
@@ -159,7 +162,7 @@ Line four.
 Line five.
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Position for beginning of file seek = 0

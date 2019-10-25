@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 5e6b49edfedc8e7311e9ecc21ca065ad99c15c62
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 062234b9bc3c538e8cd5fcade002a2892eea259f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504124"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741617"
 ---
 # <a name="coledatasource-class"></a>COleDataSource (clase)
 
@@ -86,7 +86,7 @@ Puede crear directamente orígenes de datos OLE. Como alternativa, las clases [C
 
 Siempre que desee preparar los datos para una transferencia, debe crear un objeto de esta clase y rellenarlo con los datos usando el método más adecuado para los datos. El modo en que se inserta en un origen de datos se ve directamente afectado por si los datos se proporcionan inmediatamente (representación inmediata) o a petición (representación diferida). Para cada formato del portapapeles en el que esté proporcionando datos pasando el formato del portapapeles que se va a usar (y una estructura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) opcional), llame a [DelayRenderData](#delayrenderdata).
 
-Para obtener más información sobre los orígenes de datos y la transferencia de datos, vea el artículo [objetos de datos y orígenes de datos (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Además, en el artículo [sobre](../../mfc/clipboard.md) el portapapeles se describe el mecanismo del portapapeles OLE.
+Para obtener más información sobre los orígenes de datos y la transferencia de datos, vea el artículo [objetos de datos y orígenes de datos (OLE)](../../mfc/data-objects-and-data-sources-ole.md). Además, en el artículo [sobre el portapapeles](../../mfc/clipboard.md) se describe el mecanismo del portapapeles OLE.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -117,7 +117,7 @@ void CacheData(
 Formato del portapapeles en el que se van a ofrecer los datos. Este parámetro puede ser uno de los formatos predefinidos del portapapeles o el valor devuelto por la función [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nativa de Windows.
 
 *lpStgMedium*<br/>
-Apunta a una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) que contiene los datos en el formato especificado.
+Apunta a una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) que contiene los datos en el formato especificado.
 
 *lpFormatEtc*<br/>
 Apunta a una estructura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) que describe el formato en el que se van a ofrecer los datos. Proporcione un valor para este parámetro si desea especificar información de formato adicional más allá del formato del portapapeles especificado por *cfFormat*. Si es null, se usan los valores predeterminados para los demás campos `FORMATETC` de la estructura.
@@ -126,13 +126,13 @@ Apunta a una estructura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatet
 
 Debe proporcionar los datos, ya que esta función lo proporciona mediante la representación inmediata. Los datos se almacenan en caché hasta que sea necesario.
 
-Proporcione los datos mediante una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) . También puede usar la `CacheGlobalData` función miembro si la cantidad de datos que está proporcionando es lo suficientemente pequeña como para transferirse de forma eficaz mediante un hglobal.
+Proporcione los datos mediante una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) . También puede usar la `CacheGlobalData` función miembro si la cantidad de datos que está proporcionando es lo suficientemente pequeña como para transferirse de forma eficaz mediante un hglobal.
 
 Después de la llamada `CacheData` al `ptd` miembro de `lpFormatEtc` y el contenido de *lpStgMedium* es propiedad del objeto de datos, no del llamador.
 
 Para usar la representación diferida, llame a la función miembro [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) . Para obtener más información sobre la representación diferida tal como la controla MFC, [vea el artículo objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Para obtener más información, vea las estructuras [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) en el Windows SDK.
+Para obtener más información, vea las estructuras [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) en el Windows SDK.
 
 Para obtener más información, vea [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) en el Windows SDK.
 
@@ -366,7 +366,7 @@ virtual BOOL OnRenderData(
 Apunta a la estructura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando el formato en el que se solicita información.
 
 *lpStgMedium*<br/>
-Apunta a una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) en la que se van a devolver los datos.
+Apunta a una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) en la que se van a devolver los datos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -380,7 +380,7 @@ Si *lpStgMedium*-> *tymed es* TYMED_NULL, se debeasignaryrellenarsegúnloespecif
 
 Se trata de un reemplazable avanzado. Invalide esta función para proporcionar los datos en el formato y medio solicitados. En función de los datos, puede que desee reemplazar una de las otras versiones de esta función en su lugar. Si los datos son pequeños y tienen un tamaño fijo, `OnRenderGlobalData`invalide. Si los datos están en un archivo o tiene un tamaño variable, invalide `OnRenderFileData`.
 
-Para obtener más información, vea las estructuras [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , el tipo de enumeración [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) y [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) en el Windows SDK.
+Para obtener más información, vea las estructuras [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , el tipo de enumeración [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) y [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) en el Windows SDK.
 
 ##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData
 
@@ -461,7 +461,7 @@ virtual BOOL OnSetData(
 Apunta a la estructura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) especificando el formato en el que se reemplazan los datos.
 
 *lpStgMedium*<br/>
-Apunta a la estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) que contiene los datos que reemplazarán el contenido actual del `COleDataSource` objeto.
+Apunta a la estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) que contiene los datos que reemplazarán el contenido actual del `COleDataSource` objeto.
 
 *bRelease*<br/>
 Indica quién tiene la propiedad del medio de almacenamiento después de completar la llamada de función. El autor de la llamada decide quién es responsable de liberar los recursos asignados en nombre del medio de almacenamiento. Para ello, el autor de la llamada establece *bRelease*. Si *bRelease* es distinto de cero, el origen de datos toma la propiedad, liberando el medio cuando ha terminado de usarlo. Cuando *bRelease* es 0, el llamador conserva la propiedad y el origen de datos puede usar el medio de almacenamiento solo mientras dure la llamada.
@@ -476,7 +476,7 @@ El origen de datos no toma la propiedad de los datos hasta que se hayan obtenido
 
 La implementación predeterminada no hace nada. Invalide esta función para reemplazar los datos en el formato especificado. Se trata de un reemplazable avanzado.
 
-Para obtener más información, vea las estructuras [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) y las funciones [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) y [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) en el Windows SDK.
+Para obtener más información, vea las estructuras [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) y las funciones [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) y [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) en el Windows SDK.
 
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
 

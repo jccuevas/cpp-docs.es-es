@@ -1,9 +1,9 @@
 ---
 title: clearerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: c282a577bb7496f899f18abeac857c08388d12f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340566"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942946"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -49,9 +52,9 @@ Puntero a la estructura **FILE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **clearerr** función restablece el indicador de error y el indicador de fin de archivo para *secuencia*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama.
+La función **clearerr** restablece el indicador de error y el indicador de fin de archivo para el *flujo*. Los indicadores de error no se borran automáticamente; una vez establecido el indicador de error para una secuencia especificada, las operaciones en esa secuencia seguirán devolviendo un valor de error hasta que se llame a **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**o [Rewind](rewind.md) .
 
-Si *secuencia* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve. Para obtener más información sobre **errno** y códigos de error, vea [errno (constantes)](../../c-runtime-library/errno-constants.md).
+Si *Stream* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve. Para obtener más información sobre **errno** y los códigos de error, vea [errno (constantes](../../c-runtime-library/errno-constants.md)).
 
 Hay disponible una versión más segura de esta función; consulte [clearerr_s](clearerr-s.md).
 
@@ -103,7 +106,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Write error: No error

@@ -1,16 +1,16 @@
 ---
 title: Macros variádicas
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: da159ef979ccc38845064debebae55356bc9e9bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179574"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587881"
 ---
 # <a name="variadic-macros"></a>Macros variádicas
 
@@ -18,9 +18,9 @@ Las macros variádicas son macros estilo funciones que contienen un número vari
 
 ## <a name="remarks"></a>Comentarios
 
-Para utilizar macros variádicas, los puntos suspensivos se pueden especificar como el último argumento formal de una definición de macro y el identificador de reemplazo `__VA_ARGS__` puede utilizarse en la definición para insertar los argumentos adicionales.  `__VA_ARGS__` se reemplaza por todos los argumentos que coinciden con los puntos suspensivos, incluidas las comas entre ellos.
+Para usar macros variádicas, los puntos suspensivos se pueden especificar como el argumento formal final en una definición de macro, y el identificador de reemplazo `__VA_ARGS__` se puede usar en la definición para insertar los argumentos adicionales.  `__VA_ARGS__` se reemplaza por todos los argumentos que coinciden con los puntos suspensivos, incluidas las comas entre ellos.
 
-El estándar de C especifica que se debe pasar al menos un argumento a los puntos suspensivos para garantizar que la macro no se resuelva en una expresión con una coma final.  La implementación de Visual C++ suprimirá una coma final si no se pasa ningún argumento a los puntos suspensivos.
+El estándar de C especifica que se debe pasar al menos un argumento a los puntos suspensivos para asegurarse de que la macro no se resuelva en una expresión con una coma final. La implementación tradicional C++ de Microsoft suprime una coma final si no se pasa ningún argumento a los puntos suspensivos. Cuando se establece la opción del compilador `/experimental:preprocessor`, no se suprime la coma final.
 
 ## <a name="example"></a>Ejemplo
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459252"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685996"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;string&gt;
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Cadena de estilo C o un objeto del tipo `basic_string` que se va a concatenar.
 
-*correcta*\
+\ *derecha*
 Cadena de estilo C o un objeto del tipo `basic_string` que se va a concatenar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -115,7 +115,7 @@ Cadena que es la concatenación de las cadenas de entrada.
 
 ### <a name="remarks"></a>Comentarios
 
-Las funciones sobrecargan `operator+` para concatenar dos objetos de clase de plantilla [basic_string (Clase)](../standard-library/basic-string-class.md). Todas devuelven `basic_string< CharType, Traits, Allocator>(Left).append(right)`de forma efectiva. Para obtener más información, vea [Append](../standard-library/basic-string-class.md#append).
+Las funciones de cada sobrecarga `operator+` concatenar dos objetos de la [clase basic_string](../standard-library/basic-string-class.md)de la plantilla de clase. Todos los `basic_string< CharType, Traits, Allocator>(Left).append(right)` devuelven de forma efectiva. Para obtener más información, vea [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Ejemplo
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>  operator!=
 
 Comprueba si el objeto de cadena del lado izquierdo del operador no es igual que el objeto de cadena del lado derecho.
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Comprueba si el objeto de cadena del lado izquierdo del operador es igual que el objeto de cadena del lado derecho.
 
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a>  operator&lt;
 
 Comprueba si el objeto de cadena del lado izquierdo del operador es menor que el objeto de cadena del lado derecho.
 
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Ostr*\
+@No__t_1 *_Ostr*
 El flujo de salida en el que se escribe.
 
-*CAD*\
+\ *Str*
 La cadena que se especifica en el flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -575,9 +575,9 @@ Escribe el valor de la cadena especificada en el flujo de salida *_Ostr*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla sobrecarga **< <** para insertar un objeto *Str* de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) en la secuencia  *\_ostr*. La función devuelve `_Ostr.write( str.c_str, str.size )`de forma efectiva.
+La función de plantilla sobrecarga **< <** para insertar un objeto *Str* de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) en el *\_Ostr*de flujo. La función devuelve `_Ostr.write( str.c_str, str.size )` de forma efectiva.
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a>  operator&gt;
 
 Comprueba si el objeto de cadena del lado izquierdo del operador es mayor que el objeto de cadena del lado derecho.
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -796,10 +796,10 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Istr*\
+@No__t_1 *_Istr*
 El flujo de entrada que se usa para extraer la secuencia.
 
-*correcta*\
+\ *derecha*
 La cadena que se extrae del flujo de entrada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -814,13 +814,13 @@ La función de plantilla sobrecarga **> >** para reemplazar la secuencia control
 
 - Al final del archivo.
 
-- Después de que la `_Istr`función extraiga. elementos de **ancho** , si el valor es distinto de cero.
+- Después de que la función Extraiga `_Istr`. elementos de **ancho** , si el valor es distinto de cero.
 
-Después de que la `_Istr`función extraiga. elementos [max_size](../standard-library/basic-string-class.md#max_size) .
+Después de que la función Extraiga `_Istr`. elementos [max_size](../standard-library/basic-string-class.md#max_size) .
 
 - Después de que la función extraiga un elemento *ch* para el que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) es true, en cuyo caso el carácter se vuelve a poner.
 
-Si la función no extrae ningún elemento, [](../standard-library/basic-ios-class.md#setstate)llama a`ios_base::failbit`setstate (). En cualquier caso, llama a **istr**. **ancho**(0) y devuelve \* **this**.
+Si la función no extrae ningún elemento, llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). En cualquier caso, llama a **istr**. **ancho**(0) y devuelve \* **this**.
 
 ### <a name="example"></a>Ejemplo
 

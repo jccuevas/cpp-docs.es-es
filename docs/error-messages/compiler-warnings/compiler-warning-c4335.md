@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-ms.openlocfilehash: 43c2f5d9092cdbad14e429349bd7d04e236b75e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d44a1ae5354e8d22e41694f4d6df42ad22c3986d
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151856"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127166"
 ---
 # <a name="compiler-warning-c4335"></a>Advertencia del compilador C4335
 
-Formato de archivo Mac detectado: convierta el archivo de origen en formato DOS o UNIX
+Se detectó un formato de archivo Mac: convierta el archivo de origen en formato de DOS o UNIX.
 
-El carácter de terminación de la línea de la primera línea de un archivo de origen es el estilo de Macintosh ('\r') en lugar de UNIX ('\n') o DOS ('\r\n').
+El carácter de finalización de línea de la primera línea de un archivo de código fuente es Macintosh Style (' \r ') en lugar de UNIX (' \n ') o DOS (' \r\n ').
 
-Esta advertencia siempre se emite como un error.  Consulte [advertencia](../../preprocessor/warning.md) pragma para obtener información acerca de cómo deshabilitar esta advertencia.  Además, esta advertencia solo se emite una vez por operación de compilación. Por lo tanto, si hay varios `#include` directivas que especifican los archivos en formato Macintosh, C4335 solo se emitirá una vez.
+Esta advertencia siempre se emite como error.  Consulte pragma [Warning](../../preprocessor/warning.md) para obtener información sobre cómo deshabilitar esta advertencia.  Además, esta advertencia solo se emite una vez por operación de compilación. Por lo tanto, si hay `#include` varias directivas que especifican archivos en formato de Macintosh, C4335 solo se emitirá una vez.
 
-Es una manera de generar archivos en formato Macintosh mediante el **opciones avanzadas para guardar** (en el **archivo** menú) en Visual Studio.
+Una manera de generar archivos en formato Macintosh es usar las **Opciones avanzadas para guardar** (en el menú **archivo** ) de Visual Studio.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4335.
+En el ejemplo siguiente se genera C4335.
 
 ```
 // C4335 expected

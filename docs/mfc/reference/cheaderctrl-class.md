@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 407ba2747ed4d6e56e56fe4ccb2ccb828240a732
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506707"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741526"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (clase)
 
@@ -502,7 +502,7 @@ BOOL GetItem(
 Especifica el índice de base cero del elemento que se va a recuperar.
 
 *pHeaderItem*<br/>
-Puntero a una estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que recibe el nuevo elemento. Esta estructura se utiliza con las `InsertItem` funciones `SetItem` miembro y. Cualquier marca establecida en el `mask` elemento garantiza que los valores de los elementos correspondientes se rellenan correctamente después de la devolución. Si el `mask` elemento se establece en cero, los valores de los otros elementos de la estructura no tienen sentido.
+Puntero a una estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) que recibe el nuevo elemento. Esta estructura se utiliza con las `InsertItem` funciones `SetItem` miembro y. Cualquier marca establecida en el `mask` elemento garantiza que los valores de los elementos correspondientes se rellenan correctamente después de la devolución. Si el `mask` elemento se establece en cero, los valores de los otros elementos de la estructura no tienen sentido.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -542,7 +542,7 @@ BOOL GetItemDropDownRect(
 
 |Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*iItem*|de Índice de base cero de un elemento de encabezado cuyo estilo es HDF_SPLITBUTTON. Para obtener más información, vea `fmt` el miembro de la estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) .|
+|*iItem*|de Índice de base cero de un elemento de encabezado cuyo estilo es HDF_SPLITBUTTON. Para obtener más información, vea `fmt` el miembro de la estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) .|
 |*lpRect*|enuncia Puntero a una estructura [Rect](/previous-versions/dd162897\(v=vs.85\)) para recibir la información del rectángulo delimitador.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -669,7 +669,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |Parámetro|DESCRIPCIÓN|
 |---------------|-----------------|
-|*phdhti*|[in, out] Puntero a una estructura [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-_hd_hittestinfo) que especifica el punto que se va a probar y recibe los resultados de la prueba.|
+|*phdhti*|[in, out] Puntero a una estructura [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) que especifica el punto que se va a probar y recibe los resultados de la prueba.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -707,7 +707,7 @@ int InsertItem(
 Índice de base cero del elemento que se va a insertar. Si el valor es cero, el elemento se inserta al principio del control de encabezado. Si el valor es mayor que el valor máximo, el elemento se inserta al final del control de encabezado.
 
 *phdi*<br/>
-Puntero a una estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que contiene información sobre el elemento que se va a insertar.
+Puntero a una estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) que contiene información sobre el elemento que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -728,7 +728,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>Parámetros
 
 *pHeaderLayout*<br/>
-Puntero a una estructura [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-_hd_layout) , que contiene información que se usa para establecer el tamaño y la posición de un control de encabezado.
+Puntero a una estructura [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) , que contiene información que se usa para establecer el tamaño y la posición de un control de encabezado.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -917,7 +917,7 @@ BOOL SetItem(
 Índice de base cero del elemento que se va a manipular.
 
 *pHeaderItem*<br/>
-Puntero a una estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) que contiene información sobre el nuevo elemento.
+Puntero a una estructura [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) que contiene información sobre el nuevo elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 99269214666c324214422ad989dbbd8bff6fc345
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 22739e5671fb0300011de84d976eff0ce26eaedb
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508814"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907579"
 ---
 # <a name="creating-the-header-control"></a>Crear el control de encabezado
 
@@ -24,7 +24,7 @@ El control de encabezado no está directamente disponible en el editor de cuadro
 
 1. Agregar elementos al control de encabezado.
 
-1. Use el ventana Propiedades para asignar funciones de controlador en la clase de cuadro de diálogo para los mensajes de notificación de control de encabezado que necesita controlar (consulte [asignación de mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).
+1. Use el [Asistente para clases](reference/mfc-class-wizard.md) para asignar funciones de controlador en la clase de cuadro de diálogo para los mensajes de notificación de control de encabezado que necesita controlar (consulte [asignación de mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).
 
 ### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Para colocar un control de encabezado en una vista (no en CListView)
 
@@ -34,7 +34,7 @@ El control de encabezado no está directamente disponible en el editor de cuadro
 
 1. Agregar elementos al control de encabezado.
 
-1. Use el ventana Propiedades para asignar funciones de controlador en la clase de vista para cualquier mensaje de notificación de control de encabezado que deba controlar (consulte [asignación de mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).
+1. Use el [Asistente para clases](reference/mfc-class-wizard.md) para asignar funciones de controlador en la clase de vista para los mensajes de notificación de control de encabezado que necesita controlar (consulte [asignación de mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)).
 
 En cualquier caso, el objeto de control incrustado se crea cuando se crea la vista o el objeto de cuadro de diálogo. A continuación, debe llamar a [CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create) para crear la ventana de control. Para colocar el control, llame a [CHeaderCtrl:: layout](../mfc/reference/cheaderctrl-class.md#layout) para determinar el tamaño inicial y la posición del control, y [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) para establecer la posición deseada. A continuación, agregue los elementos como se describe en [Agregar elementos al control de encabezado](../mfc/adding-items-to-the-header-control.md).
 

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 666ca54f55c5bb0dd4070a4984500dc19dc9d372
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504037"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741606"
 ---
 # <a name="coledocument-class"></a>COleDocument (clase)
 
@@ -177,9 +177,9 @@ Distinto de cero si la función se realizó correctamente; de lo contrario, es 0
 
 Esta función actualiza el dispositivo de destino de impresión para todos los elementos, pero no actualiza la caché de presentación de esos elementos. Para actualizar la memoria caché de presentación de un elemento, llame a [COleClientItem:: UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).
 
-Los argumentos de esta función contienen información que OLE usa para identificar el dispositivo de destino. La estructura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) contiene información que Windows usa para inicializar el cuadro de diálogo de impresión común. Una vez que el usuario cierra el cuadro de diálogo, Windows devuelve información acerca de las selecciones del usuario en esta estructura. El `m_pd` miembro de un objeto [CPrintDialog](../../mfc/reference/cprintdialog-class.md) es una `PRINTDLG` estructura.
+Los argumentos de esta función contienen información que OLE usa para identificar el dispositivo de destino. La estructura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) contiene información que Windows usa para inicializar el cuadro de diálogo de impresión común. Una vez que el usuario cierra el cuadro de diálogo, Windows devuelve información acerca de las selecciones del usuario en esta estructura. El `m_pd` miembro de un objeto [CPrintDialog](../../mfc/reference/cprintdialog-class.md) es una `PRINTDLG` estructura.
 
-Para obtener más información, vea la estructura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) en el Windows SDK.
+Para obtener más información, vea la estructura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) en el Windows SDK.
 
 Para obtener más información, vea la estructura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) en el Windows SDK.
 

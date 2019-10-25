@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505174"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Clase Cmfcpropertygridctrl (
@@ -173,14 +173,14 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Construye un objeto `CMFCPropertyGridCtrl`.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|El marco llama a este método para recuperar el elemento u objeto secundario situado en un punto dado de la pantalla. (Invalida [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest)).|
 |`CMFCPropertyGridCtrl::accLocation`|El marco llama a este método para recuperar la ubicación actual del objeto especificado en la pantalla. (Invalida [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation)).|
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Vuelve a dibujar el control de cuadrícula de propiedades y sus propiedades.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Lo llama el control de cuadrícula de propiedades para ordenar las propiedades.|
@@ -282,7 +282,7 @@ En lugar de representar un valor, un elemento de propiedad puede iniciar un cuad
 
 En la tabla siguiente se enumeran cuatro tipos de propiedades de selección:
 
-|Clase|DESCRIPCIÓN|
+|Clase|Descripción|
 |-----------|-----------------|
 |[CMFCPropertyGridProperty (clase)](../../mfc/reference/cmfcpropertygridproperty-class.md)|Propiedad de uso general que se usa para especificar el valor de cadenas, valores booleanos, fechas, etc.|
 |[CMFCPropertyGridColorProperty (clase)](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Propiedad que se utiliza para seleccionar un valor de color.|
@@ -434,7 +434,7 @@ Puntero a una propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
 
-|Valor devuelto|DESCRIPCIÓN|
+|Valor devuelto|Descripción|
 |------------------|-----------------|
 |< 0|El nombre del parámetro *pProp1* es menor que el nombre del parámetro *pProp2* .|
 |0|El nombre del parámetro *pProp1* es igual al nombre del parámetro *pProp2* .|
@@ -1253,7 +1253,7 @@ virtual void OnChangeSelection(
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*pNewSel*|de Puntero a la propiedad recién seleccionada.|
 |*pOldSel*|de Puntero a la propiedad seleccionada previamente.|
@@ -1625,7 +1625,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*pProp*|de Puntero a una propiedad. Este parámetro no se utiliza.|
 

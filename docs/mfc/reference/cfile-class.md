@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375763"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506581"
 ---
 # <a name="cfile-class"></a>CFile (clase)
 
@@ -213,7 +213,7 @@ En las cinco tablas siguientes se enumeran las posibles opciones del parámetro 
 
 Elija solo una de las siguientes opciones de modo de acceso de archivo. El modo de acceso de archivo predeterminado es `CFile::modeRead`, que es de solo lectura.
 
-|Value|DESCRIPCIÓN|
+|Valor|DESCRIPCIÓN|
 |-----------|-----------------|
 |`CFile::modeRead`|Solicita únicamente acceso de lectura.|
 |`CFile::modeWrite`|Solicita únicamente acceso de escritura.|
@@ -221,7 +221,7 @@ Elija solo una de las siguientes opciones de modo de acceso de archivo. El modo 
 
 Elija solo una de las siguientes opciones de modo de carácter.
 
-|Value|DESCRIPCIÓN|
+|Valor|DESCRIPCIÓN|
 |-----------|-----------------|
 |`CFile::typeBinary`|Establece el modo binario (solo se usa en clases derivadas).|
 |`CFile::typeText`|Establece el modo de texto con procesamiento especial para los pares de retorno de carro y avance de línea (solo se usa en clases derivadas).|
@@ -229,7 +229,7 @@ Elija solo una de las siguientes opciones de modo de carácter.
 
 Elija solo una de las siguientes opciones de modo de uso compartido de archivo. El modo de uso compartido de archivo predeterminado es `CFile::shareExclusive`, que es exclusivo.
 
-|Valor|DESCRIPCIÓN|
+|Value|DESCRIPCIÓN|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|No hay restricciones de uso compartido.|
 |`CFile::shareDenyRead`|Deniega el acceso de lectura al resto.|
@@ -254,7 +254,7 @@ Elija de entre las siguientes opciones de almacenamiento en caché según la des
 
 Elija la siguiente opción de seguridad para impedir que el identificador de archivos se herede. Cualquier proceso secundario nuevo puede usar el identificador de archivos de forma predeterminada.
 
-|Value|DESCRIPCIÓN|
+|Valor|DESCRIPCIÓN|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Impide que los procesos secundarios puedan usar el identificador de archivos.|
 
@@ -382,7 +382,7 @@ Título del archivo subyacente.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método llama a [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) para recuperar el título del archivo. Si se realiza correctamente, el método devuelve la cadena que el sistema usaría para mostrar el nombre de archivo al usuario. De lo contrario, el método llama a [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) para recuperar el nombre de archivo (incluida la extensión de archivo) del archivo subyacente. Esto significa que la extensión de archivo no siempre se incluye en la cadena de título de archivo devuelta. Para obtener más información, consulte [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) y [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) en el Windows SDK.
+Este método llama a [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) para recuperar el título del archivo. Si se realiza correctamente, el método devuelve la cadena que el sistema usaría para mostrar el nombre de archivo al usuario. De lo contrario, el método llama a [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) para recuperar el nombre de archivo (incluida la extensión de archivo) del archivo subyacente. Esto significa que la extensión de archivo no siempre se incluye en la cadena de título de archivo devuelta. Para obtener más información, consulte [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) y [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) en el Windows SDK.
 
 Para devolver la ruta de acceso completa del archivo, incluido el nombre, llame a [GetFilePath](#getfilepath). Para devolver solo el nombre del archivo, llame a [GetFileName](#getfilename).
 
@@ -588,13 +588,13 @@ Puntero al objeto CAtlTransactionManager
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si la operación de apertura se realizó correctamente; de lo contrario, es 0. El  parámetro perror solo es significativo si se devuelve 0.
+Distinto de cero si la operación de apertura se realizó correctamente; de lo contrario, es 0. El parámetro *perror* solo es significativo si se devuelve 0.
 
 ### <a name="remarks"></a>Comentarios
 
 Las dos `Open` funciones son métodos "seguros" para abrir un archivo, donde un error es una condición normal y esperada.
 
-Aunque el `CFile` constructor produce una excepción en una condición de error, `Open` devuelve false para las condiciones de error. `Open`sin embargo, puede inicializar un objeto [CFileException](../../mfc/reference/cfileexception-class.md) para describir el error. Si no se proporciona el  parámetro perror, o si se pasa null para el `CFileException`perror `Open` , devuelve false y no inicia. Si se pasa un puntero a un existente `CFileException`y `Open` se encuentra un error, la función lo llena con información que describe ese error. `Open`no produce una excepción en ningún caso.
+Aunque el `CFile` constructor produce una excepción en una condición de error, `Open` devuelve false para las condiciones de error. `Open`sin embargo, puede inicializar un objeto [CFileException](../../mfc/reference/cfileexception-class.md) para describir el error. Si no se proporciona el parámetro *perror* , o si se pasa null para el `Open` `CFileException` *perror*, devuelve false y no inicia. Si se pasa un puntero a un existente `CFileException`y `Open` se encuentra un error, la función lo llena con información que describe ese error. `Open`no produce una excepción en ningún caso.
 
 En la tabla siguiente se describen los posibles `Open`resultados de.
 
@@ -613,7 +613,7 @@ En la tabla siguiente se describen los posibles `Open`resultados de.
 
 ##  <a name="operator_handle"></a>CFile:: Operator (identificador)
 
-Utilice este operador para pasar un identificador a un `CFile` objeto a funciones como [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) y [GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) que esperan `HANDLE`.
+Utilice este operador para pasar un identificador a un `CFile` objeto a funciones como [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) y [GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) que esperan `HANDLE`.
 
 ```
 operator HANDLE() const;
@@ -731,7 +731,7 @@ La posición del puntero de archivo si el método se realizó correctamente; de 
 
 En la tabla siguiente se enumeran los posibles valores para el parámetro *nde* .
 
-|Valor|DESCRIPCIÓN|
+|Value|DESCRIPCIÓN|
 |-----------|-----------------|
 |`CFile::begin`|Buscar desde el principio del archivo.|
 |`CFile::current`|Busca desde la ubicación actual del puntero de archivo.|
@@ -785,7 +785,7 @@ La longitud del archivo en bytes.
 
 ##  <a name="setfilepath"></a>  CFile::SetFilePath
 
-Llame a esta función para especificar la ruta de acceso del archivo. Por ejemplo, si la ruta de acceso de un archivo no está [](../../mfc/reference/cfile-class.md) disponible cuando se construye un objeto `SetFilePath` CFile, llame a para proporcionarlo.
+Llame a esta función para especificar la ruta de acceso del archivo. Por ejemplo, si la ruta de acceso de un archivo no está disponible cuando se construye un objeto [CFile](../../mfc/reference/cfile-class.md), llame a `SetFilePath` para proporcionarlo.
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);

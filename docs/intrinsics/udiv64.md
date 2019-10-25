@@ -1,20 +1,20 @@
 ---
 title: _udiv64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: 73a29b180eeda49a9a25e9e568d25c7563234fad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6dabbc94260ef578eb1a58a1b289b4a4654decdd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390157"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219683"
 ---
-# <a name="udiv64"></a>_udiv64
+# <a name="_udiv64"></a>_udiv64
 
-El `_udiv64` intrínseco divide un entero de 64 bits sin signo en un entero de 32 bits sin signo. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_udiv64` es **específico de Microsoft**.
+`_udiv64` Intrínseco divide un entero de 64 bits sin signo por un entero de 32 bits sin signo. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_udiv64`es **específico de Microsoft**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,28 +28,28 @@ unsigned int _udiv64(
 
 ### <a name="parameters"></a>Parámetros
 
-*dividend*<br/>
-[in] Entero sin signo de 64 bits se va a dividir.
+*dividend*\
+de Entero de 64 bits sin signo que se va a dividir.
 
-*divisor*<br/>
-[in] Entero sin signo de 32 bits para dividir por.
+*divisor*\
+de Entero de 32 bits sin signo que se va a dividir.
 
-*remainder*<br/>
-[out] El resto entero de 32 bits sin signo.
+*remainder*\
+enuncia Entero de 32 bits sin signo restante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los 32 bits del cociente.
+Los bits 32 del cociente.
 
 ## <a name="remarks"></a>Comentarios
 
-El `_udiv64` divide intrínseco *dividendo* por *divisor*. Almacena el resto en el entero sin signo de 32 bits que señala *resto*y devuelve los 32 bits del cociente.
+Intrínseco `_udiv64` divide el *dividendo* por el divisor. Almacena el resto en el entero de 32 bits sin signo al que apunta el *resto*y devuelve los 32 bits del cociente.
 
 El `_udiv64` intrínseco está disponible a partir de Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|Header|
+|Función intrínseca|Arquitectura|Encabezado|
 |---------------|------------------|------------|
 |`_udiv64`|x86, x64|\<immintrin.h>|
 

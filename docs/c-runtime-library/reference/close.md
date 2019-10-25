@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340019"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942929"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 Cierra un archivo.
 
@@ -49,15 +52,15 @@ Descriptor de archivo que hace referencia al archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_cerrar** devuelve 0 si el archivo se ha cerrado correctamente. Un valor devuelto de -1 indica un error.
+**_close** devuelve 0 si el archivo se ha cerrado correctamente. Un valor devuelto de-1 indica un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_close** función cierra el archivo asociado *fd*.
+La función **_close** cierra el archivo asociado con *FD*.
 
-El descriptor de archivo y el identificador de archivos del sistema operativo subyacente se cierran. Por lo tanto, no es necesario llamar a **CloseHandle** si el archivo se ha abierto originalmente mediante la función de Win32 **CreateFile** y se convierte en un descriptor de archivo mediante **_open_osfhandle**.
+El descriptor de archivo y el identificador de archivos del sistema operativo subyacente se cierran. Por lo tanto, no es necesario llamar a **CloseHandle** si el archivo se abrió originalmente con la función de Win32 **CreateFile** y se convirtió en un descriptor de archivo mediante **_open_osfhandle**.
 
-Esta función valida sus parámetros. Si *fd* es un descriptor de archivo incorrecto, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y **errno** está establecido en **EBADF**.
+Esta función valida sus parámetros. Si *FD* es un descriptor de archivo incorrecto, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven-1 y **errno** se establece en **EBADF**.
 
 ## <a name="requirements"></a>Requisitos
 

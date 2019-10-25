@@ -1,9 +1,10 @@
 ---
 title: calloc
-ms.date: 11/04/2016
-apiname:
+description: La función de biblioteca en tiempo de ejecución de C no asigna memoria inicializada en cero.
+ms.date: 09/27/2019
+api_name:
 - calloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +16,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - calloc
 helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 228ec6d01a6f57ff98a9030f5a6d82e4c57388cd
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347735"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685362"
 ---
 # <a name="calloc"></a>calloc
 
@@ -37,7 +41,7 @@ Asigna una matriz en la memoria con elementos que se inicializan en 0.
 
 ```C
 void *calloc(
-   size_t num,
+   size_t number,
    size_t size
 );
 ```
@@ -52,25 +56,27 @@ Longitud en bytes de cada elemento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**calloc** devuelve un puntero al espacio asignado. Se garantiza que el espacio de almacenamiento al que apunta el valor devuelto esté alineado correctamente para el almacenamiento de todo tipo de objeto. Para obtener un puntero a un tipo distinto **void**, use un conversión de tipo en el valor devuelto.
+**calloc** devuelve un puntero al espacio asignado. Se garantiza que el espacio de almacenamiento al que apunta el valor devuelto esté alineado correctamente para el almacenamiento de todo tipo de objeto. Para obtener un puntero a un tipo distinto de **void**, use una conversión de tipo en el valor devuelto.
 
 ## <a name="remarks"></a>Comentarios
 
-El **calloc** función asigna espacio de almacenamiento para una matriz de *número* elementos, cada uno de longitud *tamaño* bytes. Cada elemento se inicializa en 0.
+La función **calloc** asigna espacio de almacenamiento para una matriz de elementos *numéricos* , cada uno de los cuales tiene un *tamaño* de longitud de bytes. Cada elemento se inicializa en 0.
 
-**calloc** establece **errno** a **ENOMEM** si se produce un error en una asignación de memoria o si la cantidad de memoria solicitada supera **_HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**calloc** establece **errno** en **ENOMEM** si se produce un error en una asignación de memoria o si la cantidad de memoria solicitada supera el valor de **_HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**calloc** llamadas **malloc** para usar el C++ [_set_new_mode](set-new-mode.md) función para establecer el modo de controlador nuevo. El nuevo modo de controlador indica si, en caso de error, **malloc** consiste en llamar a la rutina del nuevo controlador según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del nuevo controlador en caso de error para asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **calloc** no puede asignar memoria, **malloc** llame a la rutina del nuevo controlador de la misma forma en que el **nuevo** operador Cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a
+En la implementación de Microsoft, si el *número* o *el tamaño* es cero, **calloc** devuelve un puntero a un bloque asignado de tamaño distinto de cero. Un intento de leer o escribir a través del puntero devuelto conduce a un comportamiento indefinido.
+
+**calloc** usa la C++ función [_set_new_mode](set-new-mode.md) para establecer el *nuevo modo de controlador*. El nuevo modo de controlador indica si, en caso de error, **calloc** es llamar a la rutina del nuevo controlador tal y como se establece en [_set_new_handler](set-new-handler.md). De forma predeterminada, **calloc** no llama a la rutina del nuevo controlador en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **calloc** no pueda asignar memoria, llame a la rutina del nuevo controlador de la misma forma que el operador **New** cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a
 
 ```C
 _set_new_mode(1);
 ```
 
-temprano en el programa o vincúlelo con NEWMODE.OBJ (consulte [Opciones de vínculo](../../c-runtime-library/link-options.md)).
+temprano en el programa o vincular con *NEWMODE. OBJ* (vea [Opciones de vínculo](../../c-runtime-library/link-options.md)).
 
-Cuando la aplicación se vincula con una versión de depuración de las bibliotecas de tiempo de ejecución de C, **calloc** se resuelve como [_calloc_dbg](calloc-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
+Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución de C, **calloc** se resuelve como [_calloc_dbg](calloc-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no se puede modificar las variables globales y que el puntero devuelto no es un alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
+**calloc** está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no modifica las variables globales y que el puntero devuelto no tiene alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Requisitos
 

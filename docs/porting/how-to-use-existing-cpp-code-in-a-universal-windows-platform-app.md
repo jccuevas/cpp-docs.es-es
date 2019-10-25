@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
+title: 'Procedimientos para: Usar código C++ existente en una aplicación de la Plataforma universal de Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861131"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630435"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedimientos para: Usar código C++ existente en una aplicación de la Plataforma universal de Windows
 
 Quizás la forma más sencilla de conseguir que un programa de escritorio se ejecute en el entorno de Plataforma universal de Windows (UWP) es usar las tecnologías de Puente de dispositivo de escritorio. Entre estas se incluye Desktop App Converter, que empaquetará la aplicación existente como una aplicación para UWP sin necesidad de realizar cambios en el código. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
 
@@ -19,13 +19,13 @@ Las aplicaciones de UWP se ejecutan en un entorno protegido y, como resultado, n
 
 Si el código fuente está disponible para la biblioteca, puede eliminar las llamadas a API prohibidas. Para más información, incluida una lista de las API permitidas o prohibidas, vea [Win32 and COM APIs for UWP apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps) (API de Win32 y COM para aplicaciones de UWP) y [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows). Pueden encontrarse algunas alternativas en [Alternatives to Windows APIs in UWP apps](/uwp/win32-and-com/alternatives-to-windows-apis-uwp) (Alternativas a las API de Windows en aplicaciones de la Plataforma universal de Windows).
 
-Si intenta agregar una referencia de un proyecto universal de Windows a una biblioteca de escritorio clásica, obtendrá un mensaje de error que indica que la biblioteca no es compatible. En el caso de una biblioteca estática, puede incluir un vínculo a la biblioteca agregando la biblioteca (archivo .lib) a la entrada del enlazador, tal como lo haría en una aplicación clásica de Win32. Para las bibliotecas que solo están disponibles en un archivo binario, esta es la única opción. Hay biblioteca estática vinculada al archivo ejecutable de la aplicación, pero se debe empaquetar en la aplicación el archivo DLL de Win32 que utilizará en la aplicación de UWP incluyéndolo en el proyecto y marcándolo como contenido. Para cargar un archivo DLL de Win32 en una aplicación de UWP, también tiene que llamar a [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary) en lugar de `LoadLibrary` o `LoadLibraryEx`.
+Si intenta agregar una referencia de un proyecto universal de Windows a una biblioteca de escritorio clásica, obtendrá un mensaje de error que indica que la biblioteca no es compatible. En el caso de una biblioteca estática, puede incluir un vínculo a la biblioteca agregando la biblioteca (archivo .lib) a la entrada del enlazador, tal como lo haría en una aplicación clásica de Win32. Para las bibliotecas que solo están disponibles en un archivo binario, esta es la única opción. Hay biblioteca estática vinculada al archivo ejecutable de la aplicación, pero se debe empaquetar en la aplicación el archivo DLL de Win32 que utilizará en la aplicación de UWP incluyéndolo en el proyecto y marcándolo como contenido. Para cargar un archivo DLL de Win32 en una aplicación de UWP, también tiene que llamar a [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary) en lugar de `LoadLibrary` o `LoadLibraryEx`.
 
 Si tiene código fuente para el archivo DLL o para una biblioteca estática, puede volver a compilar con `/ZW` como un proyecto UWP. Si lo hace, puede agregar una referencia mediante el **Explorador de soluciones** y usarla en aplicaciones de C++ de UWP. En el caso de un archivo DLL, se vincula con la biblioteca de exportación.
 
 Para exponer la funcionalidad a llamadores en otros lenguajes, puede convertir la biblioteca en un componente de Windows en tiempo de ejecución. Los componentes de Windows Runtime se diferencian de los DLL normales en que incluyen metadatos en forma de archivos .winmd que describen el contenido de la manera en que los consumidores de .NET y JavaScript lo requieren. Para exponer elementos de la API a otros lenguajes, puede agregar construcciones C++/CX, como clases de referencia, y hacerlas públicas o usar la [Biblioteca de plantillas C++ de Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  En Windows 10 y versiones posteriores, puede usar la [biblioteca de C++/WinRT](https://github.com/microsoft/cppwinrt) en lugar de C++/CX.
 
-La descripción anterior no se aplica en el caso de los componentes COM, que deben administrarse de manera diferente. Si tiene un servidor COM en un archivo EXE o DLL, puede usarlo en un proyecto universal de Windows siempre y cuando lo empaquete como un [componente COM sin registro](/windows/desktop/sbscs/creating-registration-free-com-objects), lo agregue al proyecto como un archivo de contenido y cree instancias del mismo mediante [CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Para más información, vea [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (Usar un archivo DLL de COM gratuito en un proyecto de C++ de la Tienda Windows).
+La descripción anterior no se aplica en el caso de los componentes COM, que deben administrarse de manera diferente. Si tiene un servidor COM en un archivo EXE o DLL, puede usarlo en un proyecto universal de Windows siempre y cuando lo empaquete como un [componente COM sin registro](/windows/win32/sbscs/creating-registration-free-com-objects), lo agregue al proyecto como un archivo de contenido y cree instancias del mismo mediante [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Para más información, vea [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (Usar un archivo DLL de COM gratuito en un proyecto de C++ de la Tienda Windows).
 
 Si ya tiene una biblioteca COM y quiere migrarla a la Plataforma universal de Windows, puede convertirla en un componente de Windows Runtime mediante la [Biblioteca de plantillas C++ de Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md). La WRL no admite todas las características de ATL y OLE, por lo que la viabilidad de esta migración dependerá del grado de dependencia del código COM de las características de COM, ATL y OLE que requiera el componente.
 
@@ -151,7 +151,7 @@ El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que 
 
    Ahora, el **Explorador de soluciones** identifica el proyecto como un proyecto de Windows universal.
 
-5. Asegúrese de que el nombre de archivo del encabezado precompilado es correcto. En la sección **Encabezados precompilados**, cambie **Archivo de encabezado precompilado** de pch.h a stdafx.h. Si no lo hace, verá el siguiente error.
+5. Asegúrese de que el nombre de archivo del encabezado precompilado es correcto. En la sección **Encabezados precompilados**, cambie **Archivo de encabezado precompilado** de *pch.h* a *stdafx.h*. Si no lo hace, verá el siguiente error.
 
    > Error C2857: no se encontró la instrucción '#include' especificada con la opción de línea de comandos /Ycpch.h en el archivo de origen
 
@@ -165,7 +165,7 @@ El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que 
 
    En **Proyectos** > **Solución**, active la casilla que se encuentra junto al proyecto DLL y seleccione el botón **Aceptar**.
 
-8. Incluya los archivos de encabezado de la biblioteca en el archivo pch.h de la aplicación de UWP.
+8. Incluya los archivos de encabezado de la biblioteca en el archivo *pch.h* de la aplicación de UWP.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ Sin embargo, puede utilizar una biblioteca estática en una Plataforma universal
 
 1. En las propiedades del proyecto UWP, elija **Propiedades de configuración** > **Vinculador** > **Entrada** en el panel izquierdo. En el panel derecho, agregue la ruta de acceso a la biblioteca en la propiedad **Dependencias adicionales**. Por ejemplo, en el caso de una biblioteca del proyecto que coloque su salida en *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, agregue la ruta de acceso relativa `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Agregue una instrucción include para que el archivo de encabezado haga referencia al archivo pch.h (si está presente), o en cualquier archivo .cpp que sea necesario, y comience a agregar el código que utiliza la biblioteca.
+2. Agregue una instrucción include para que el archivo de encabezado haga referencia al archivo *pch.h* (si está presente), o en cualquier archivo .cpp que sea necesario, y comience a agregar el código que utiliza la biblioteca.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Si desea utilizar las API nativas en una biblioteca estática desde una aplicaci
 
 5. Seleccione todos los archivos que va a agregar desde el proyecto original y haga clic en **Aceptar**. Repita este paso con las subcarpetas si es necesario.
 
-6. Es posible que ahora haya algún código duplicado. Si tiene más de un encabezado precompilado (por ejemplo, stdafx.h y pch.h), elija el que desea mantener. Copie cualquier código necesario, como incluir instrucciones, en el encabezado que mantenga. Después, elimine el otro y, en las propiedades del proyecto, en **Encabezados precompilados**, asegúrese de que el nombre del archivo de encabezado es correcto.
+6. Es posible que ahora haya algún código duplicado. Si tiene más de un encabezado precompilado (por ejemplo, *stdafx.h* y *pch.h*), elija el que desea mantener. Copie cualquier código necesario, como incluir instrucciones, en el encabezado que mantenga. Después, elimine el otro y, en las propiedades del proyecto, en **Encabezados precompilados**, asegúrese de que el nombre del archivo de encabezado es correcto.
 
    Si cambia el archivo para utilizarlo como encabezado precompilado, asegúrese de que las opciones de encabezado precompilado son las adecuadas para cada archivo. Seleccione cada archivo .cpp por orden, abra la ventana de propiedades y asegúrese de que todos están configurados en **Usar (/Yu)** , excepto el encabezado precompilado deseado, que debe configurarse en **Crear (/Yc)** .
 

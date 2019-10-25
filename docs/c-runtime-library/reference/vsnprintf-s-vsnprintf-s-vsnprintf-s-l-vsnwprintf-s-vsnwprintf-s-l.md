@@ -1,13 +1,13 @@
 ---
 title: vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnwprintf_s
 - _vsnwprintf_s_l
 - _vsnprintf_s
 - vsnprintf_s
 - _vsnprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf_s
 - _vsntprintf_s
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 50e38e3177462f17436727cf26d1e7dade9cb882
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c41a09ce35819403b2361dcf5ad53eb93b7a615
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499081"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945287"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -148,7 +151,7 @@ Si *buffer* o *Format* es un puntero **nulo** , o si *Count* es menor o igual qu
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato y escribe hasta los caracteres de recuento de los datos especificados en la memoria a la que apunta el *búfer* y anexa un carácter nulo de terminación.
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato y escribe hasta los caracteres de *recuento* de los datos especificados en la memoria a la que apunta el *búfer* y anexa un carácter nulo de terminación.
 
 Si *Count* es [_TRUNCATE](../../c-runtime-library/truncate.md), estas funciones escriben la gran parte de la cadena que quepa en el *búfer* y deja espacio para un valor null final. Si toda la cadena (con el valor nulo final) cabe en el *búfer*, estas funciones devuelven el número de caracteres escrito (sin incluir el carácter nulo final). de lo contrario, estas funciones devuelven-1 para indicar que se ha producido un truncamiento.
 
@@ -158,7 +161,7 @@ Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que 
 > Asegúrese de que *format* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 > [!NOTE]
-> Para asegurarse de que hay espacio para el valor null final, asegúrese de que el recuento es estrictamente menor que la longitud del búfer o use **_TRUNCATE**.
+> Para asegurarse de que hay espacio para el valor null final, asegúrese de que el *recuento* es estrictamente menor que la longitud del búfer o use **_TRUNCATE**.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_ss
 helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263235"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217347"
 ---
-# <a name="mmstreamss"></a>_mm_stream_ss
+# <a name="_mm_stream_ss"></a>_mm_stream_ss
 
 **Específicos de Microsoft**
 
-Escribe datos de 32 bits en una ubicación de memoria sin contaminar las memorias caché.
+Escribe datos de 32 bits en una ubicación de memoria sin contaminar las cachés.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void _mm_stream_ss(
-   float * Dest,
+   float * Destination,
    __m128 Source
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*dest*<br/>
-[out] Un puntero a la ubicación donde se escriben los datos de origen.
+*Destino*\
+enuncia Puntero a la ubicación donde se escriben los datos de origen.
 
-*Origen*<br/>
-[in] Un número de 128 bits que contiene el `float` valor escribirse en la parte inferior de 32 bits...
+*Source*\
+de Número de 128 bits que contiene el `float` valor que se va a escribir en sus 32 bits inferiores.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -47,13 +47,13 @@ Ninguno.
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función intrínseca genera el `movntss` instrucción. Para determinar la compatibilidad de hardware para esta instrucción, llame a la `__cpuid` intrínseca con `InfoType=0x80000001` y comprobar poco 6 de `CPUInfo[2] (ECX)`. Este bit es 1 cuando se admite la instrucción y 0 en caso contrario.
+El intrínseco genera la `movntss` instrucción. Para determinar la compatibilidad de hardware para esta instrucción, `__cpuid` llame a `InfoType=0x80000001` la función intrínseca con y `CPUInfo[2] (ECX)`Compruebe el bit 6 de. Este bit es 1 cuando se admite la instrucción y 0 en caso contrario.
 
-Si ejecuta el código que utiliza el `_mm_stream_ss` intrínseco en hardware que no es compatible con la `movntss` instrucciones, los resultados son impredecibles.
+Si ejecuta código que usa el `_mm_stream_ss` intrínseco en hardware que no admite la `movntss` instrucción, los resultados son imprevisibles.
 
 ## <a name="example"></a>Ejemplo
 
@@ -89,12 +89,12 @@ f[2] = -3, f[3] = 3
 
 **FIN de Específicos de Microsoft**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.
+Partes con Copyright 2007 de Advanced Micro Devices, Inc. Todos los derechos reservados. Se reproduce con el permiso de Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Vea también
 
-[_mm_stream_sd](../intrinsics/mm-stream-sd.md)<br/>
-[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
-[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
-[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
+[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\
+[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)\
+[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)\
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

@@ -11,7 +11,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68450795"
 ---
-# <a name="container-classreverseiterator"></a>Clase de contenedor::reverse_iterator
+# <a name="container-classreverse_iterator"></a>Clase de contenedor::reverse_iterator
 
 > [!NOTE]
 > Este tema se encuentra en la C++ documentación de Microsoft como un ejemplo no funcional de contenedores usados en C++ la biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
@@ -27,7 +27,7 @@ typedef T7 reverse_iterator;
 
 ## <a name="remarks"></a>Comentarios
 
-Aquí se describe `T7` como sinónimo del tipo sin especificar (normalmente, [](../standard-library/container-class-iterator.md) **>** `reverse_iterator` **\<** iterador).
+Aquí se describe como sinónimo del tipo sin especificar `T7` (normalmente el **\<** [iterador](../standard-library/container-class-iterator.md) **>** `reverse_iterator`).
 
 ## <a name="see-also"></a>Vea también
 

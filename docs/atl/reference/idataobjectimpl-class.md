@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 8e3369edd0731ede0892a405ef3de4e7b4cfdef1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 80b5dfacd5f0c8b0deb8455a59d3f71b73a35ba0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495940"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739567"
 ---
 # <a name="idataobjectimpl-class"></a>Clase IDataObjectImpl
 
@@ -65,7 +65,7 @@ La clase, derivada de `IDataObjectImpl`.
 
 ## <a name="remarks"></a>Comentarios
 
-La interfaz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) proporciona métodos para admitir transferencia de datos uniformes. `IDataObject`utiliza las estructuras de formato estándar [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) y [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) para recuperar y almacenar los datos.
+La interfaz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) proporciona métodos para admitir transferencia de datos uniformes. `IDataObject`utiliza las estructuras de formato estándar [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) y [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) para recuperar y almacenar los datos.
 
 `IDataObject`también administra las conexiones para avisar a los receptores para controlar las notificaciones de cambio de datos. Para que el cliente reciba notificaciones de cambio de datos del objeto de datos, el cliente debe implementar la interfaz [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) en un objeto denominado receptor de notificaciones. Cuando el cliente llama `IDataObject::DAdvise`a, se establece una conexión entre el objeto de datos y el receptor de notificaciones.
 

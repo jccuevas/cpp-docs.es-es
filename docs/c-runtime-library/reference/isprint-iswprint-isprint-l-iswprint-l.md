@@ -1,12 +1,12 @@
 ---
 title: isprint, iswprint, _isprint_l, _iswprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswprint
 - isprint
 - _isprint_l
 - _iswprint_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswprint
 - _istprint
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: aab604076f8a2e2eee0eefe20f08f46ae5388a34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 282b72fcec84f8096ce0d54cd114e756aeafbc85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157203"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953745"
 ---
-# <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
+# <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
 Determina si un entero representa un carácter imprimible.
 
@@ -74,11 +77,11 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un carácter imprimible. **isprint** devuelve un valor distinto de cero si *c* es un carácter imprimible, esto incluye el carácter de espacio (0 x 20 - 0x7E). **iswprint** devuelve un valor distinto de cero si *c* es un carácter ancho imprimible, esto incluye el espacio de carácter ancho. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter imprimible. **isprint** devuelve un valor distinto de cero si *c* es un carácter imprimible; Esto incluye el carácter de espacio (0x20-0x7e). **iswprint** devuelve un valor distinto de cero si *c* es un carácter ancho imprimible, incluido el carácter ancho de espacio. Cada una de estas rutinas devuelve 0 si *c* no cumple la condición de prueba.
 
-El resultado de la condición de prueba para estas funciones depende del **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; las versiones que tienen el **_l** sufijo son idénticas salvo que usan el configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El resultado de la condición de prueba para estas funciones depende del valor de la categoría **LC_CTYPE** de la configuración regional. vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones que no tienen el sufijo **_L** usan la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo **_L** son idénticas, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-El comportamiento de **isprint** y **_isprint_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
+El comportamiento de **isprint** y **_isprint_l** es undefined si *c* no es EOF o en el intervalo de 0 a 0xFF, ambos incluidos. Cuando se usa una biblioteca CRT de depuración y *c* no es uno de estos valores, las funciones generan una aserción.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

@@ -23,7 +23,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455515"
 ---
-# <a name="basicifstream-class"></a>basic_ifstream (Clase)
+# <a name="basic_ifstream-class"></a>basic_ifstream (Clase)
 
 Describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de flujo de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`.
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>Entrada: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>Entrada: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -248,7 +248,7 @@ Protección predeterminada de apertura del archivo, equivalente al parámetro `s
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro llama a [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Si se produce un error en Open [](../standard-library/basic-ios-class.md#setstate), la`failbit`función llama a setstate (), lo que puede producir una excepción ios_base:: Failure.
+La función miembro llama a [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Si se produce un error en Open , la función llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`), lo que puede producir una excepción ios_base::failure.
 
 ### <a name="example"></a>Ejemplo
 

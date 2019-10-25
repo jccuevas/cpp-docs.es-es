@@ -1,10 +1,10 @@
 ---
 title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fputchar
 - _fputwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputtchar
 - _fputwchar
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287935"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956936"
 ---
-# <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
+# <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
 Escribe un carácter en **stdout**.
 
@@ -62,13 +65,13 @@ Carácter que se va a escribir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el carácter escrito. Para **_fputchar**, un valor devuelto de **EOF** indica un error. Para **_fputwchar**, un valor devuelto de **WEOF** indica un error. Si c es **NULL**, estas funciones generan una excepción de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** (o **WEOF**) y establezca **errno** a **EINVAL**.
+Cada una de estas funciones devuelve el carácter escrito. En el caso de **_fputchar**, un valor devuelto de **EOF** indica un error. En el caso de **_fputwchar**, un valor devuelto de **WEOF** indica un error. Si c es **null**, estas funciones generan una excepción de parámetro no válido, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** (o **WEOF**) y establecen **errno** en **EINVAL**.
 
 Para obtener más información sobre estos y otros códigos error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Ambas funciones escribe el carácter único *c* a **stdout** y hace avanzar el indicador según corresponda. **_fputchar** es equivalente a `fputc( stdout )`. También es equivalente a **putchar**, pero implementado solo como una función, en lugar de una función y una macro. A diferencia de **fputc** y **putchar**, estas funciones no son compatibles con el estándar ANSI.
+Ambas funciones escriben el carácter *c* en **stdout** y avanzan el indicador según corresponda. **_fputchar** es equivalente a `fputc( stdout )`. También es equivalente a **putchar**, pero solo se implementa como una función, en lugar de como una función y una macro. A diferencia de **fputc** y **putchar**, estas funciones no son compatibles con el estándar ANSI.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -83,7 +86,7 @@ Ambas funciones escribe el carácter único *c* a **stdout** y hace avanzar el i
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

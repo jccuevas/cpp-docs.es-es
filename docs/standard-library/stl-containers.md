@@ -2,15 +2,15 @@
 title: Contenedores de la biblioteca estándar de C++
 ms.date: 11/04/2016
 helpviewer_keywords:
-- C++ Standard Library, template class containers
+- C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449593"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686105"
 ---
 # <a name="c-standard-library-containers"></a>Contenedores de la biblioteca estándar de C++
 
@@ -155,7 +155,7 @@ Algunas operaciones en los contenedores también podrían requerir un constructo
 
 ## <a name="accessing-container-elements"></a>Elementos contenedores de acceso
 
-El acceso a los elementos de contenedores se realiza mediante iteradores. Para obtener más información, consulta [Iteradores](../standard-library/iterators.md).
+El acceso a los elementos de contenedores se realiza mediante iteradores. Para más información, vea [Iteradores](../standard-library/iterators.md).
 
 > [!NOTE]
 > También se pueden usar [bucles for basados en intervalos](../cpp/range-based-for-statement-cpp.md) para recorrer en iteración colecciones de la biblioteca estándar de C++.
@@ -166,7 +166,7 @@ Todos los contenedores sobrecargan el operador == para comparar dos contenedores
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparar contenedores diferentes (C++14)
 
-En c++ 14 y versiones posteriores, puede comparar contenedores y/o tipos de elementos no distintos mediante una de las `std::equal`sobrecargas `std::is_permutation` de función, `std::mismatch`o que toman dos intervalos completos. Estas sobrecargas le permiten comparar contenedores de distintas longitudes. Estas sobrecargas son mucho menos susceptibles a errores del usuario y están optimizadas para devolver false en tiempo constante cuando se comparan contenedores de longitudes diferentes. Por tanto, se recomienda usar estas sobrecargas a menos que (1) tenga un motivo muy claro para no hacerlo o (2) use un contenedor [std::list](../standard-library/list-class.md), que no se beneficia de las optimizaciones de doble intervalo.
+En C++ 14 y versiones posteriores, puede comparar contenedores y/o tipos de elementos no distintos mediante una de las sobrecargas de las funciones `std::equal`, `std::mismatch` o `std::is_permutation` que toman dos intervalos completos. Estas sobrecargas le permiten comparar contenedores de distintas longitudes. Estas sobrecargas son mucho menos susceptibles a errores del usuario y están optimizadas para devolver false en tiempo constante cuando se comparan contenedores de longitudes diferentes. Por tanto, se recomienda usar estas sobrecargas a menos que (1) tenga un motivo muy claro para no hacerlo o (2) use un contenedor [std::list](../standard-library/list-class.md), que no se beneficia de las optimizaciones de doble intervalo.
 
 ## <a name="see-also"></a>Vea también
 

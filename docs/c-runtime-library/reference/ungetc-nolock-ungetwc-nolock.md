@@ -1,10 +1,10 @@
 ---
 title: _ungetc_nolock, _ungetwc_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetwc_nolock
 - _ungetc_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc_nolock
 - ungetwc_nolock
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4228a573a0277c9bacc8beea81cbff6a70e3fe83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268889"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945924"
 ---
-# <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
+# <a name="_ungetc_nolock-_ungetwc_nolock"></a>_ungetc_nolock, _ungetwc_nolock
 
 Vuelve a insertar un carácter en el flujo.
 
@@ -66,13 +69,13 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y **_ungetc_nolock** devuelve **EOF**; **_ungetwc_nolock** devuelve **WEOF**. Si *secuencia* es **NULL**, **EOF** o **WEOF** se devuelve y **errno** está establecido en  **EINVAL**.
+Si es correcto, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y **_ungetc_nolock** devuelve **EOF**; **_ungetwc_nolock** devuelve **WEOF**. Si *Stream* es **null**, se devuelve **EOF** o **WEOF** y **errno** se establece en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones son sin bloqueo versiones de **ungetc** y **ungetwc**. Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Pueden ser más rápidas, porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Estas funciones son versiones que no son de bloqueo de **ungetc** y **ungetwc**. Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Pueden ser más rápidas, porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

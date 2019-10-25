@@ -1,9 +1,9 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
-apiname:
+ms.date: 09/19/2019
+api_name:
 - _getdrive
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdrive
 - getdrive
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331758"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158765"
 ---
-# <a name="getdrive"></a>_getdrive
+# <a name="_getdrive"></a>_getdrive
 
 Obtiene la unidad de disco actual.
 
@@ -47,7 +50,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve la unidad (predeterminada) actual (1=A, 2=B, etc.). No se devuelve ningún error.
+Devuelve la unidad (predeterminada) actual (1=A, 2=B, etc.). Un valor devuelto de cero significa que la ruta de acceso actual no comienza con un nombre de unidad de letra, como una ruta de acceso UNC. O bien, significa que se ha producido un error en la asignación del búfer interno. Si se produce un error en `errno` una asignación interna, se establece en ENOMEM.
 
 ## <a name="requirements"></a>Requisitos
 

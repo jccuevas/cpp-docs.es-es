@@ -1,9 +1,9 @@
 ---
 title: _aligned_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_malloc
 - alligned_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c89dff7d2159855037fee565f2148a8edb89f07d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a2b35e5344757a1269ccb781a0524383a4f792
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341826"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943871"
 ---
-# <a name="alignedmalloc"></a>_aligned_malloc
+# <a name="_aligned_malloc"></a>_aligned_malloc
 
 Asigna memoria en un límite de alineación especificado.
 
@@ -53,15 +56,15 @@ Valor de la alineación, que debe ser un entero potencia de 2.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un puntero al bloque de memoria que se ha asignado o NULL si la operación produjo un error. El puntero es múltiplo de *alineación*.
+Puntero al bloque de memoria que se asignó o NULL si se produjo un error en la operación. El puntero es un múltiplo de la *alineación*.
 
 ## <a name="remarks"></a>Comentarios
 
 **_aligned_malloc** se basa en [malloc](malloc.md).
 
-**_aligned_malloc** está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no se puede modificar las variables globales y que el puntero devuelto no es un alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
+**_aligned_malloc** está marcado `__declspec(noalias)` como `__declspec(restrict)`y, lo que significa que se garantiza que la función no modifica las variables globales y que el puntero devuelto no tiene alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
 
-Esta función establece `errno` en `ENOMEM` si se produce un error en la asignación de memoria o si el tamaño solicitado es mayor que `_HEAP_MAXREQ`. Para obtener más información sobre `errno`, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc** valida sus parámetros. Si *alineación* no es una potencia de 2 o *tamaño* es cero, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve NULL y establece `errno` a `EINVAL`.
+Esta función establece `errno` en `ENOMEM` si se produce un error en la asignación de memoria o si el tamaño solicitado es mayor que `_HEAP_MAXREQ`. Para obtener más información sobre `errno`, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc** valida sus parámetros. Si la *alineación* no es una potencia de 2 o *el tamaño* es cero, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve NULL y establece `errno` en. `EINVAL`
 
 ## <a name="requirements"></a>Requisitos
 

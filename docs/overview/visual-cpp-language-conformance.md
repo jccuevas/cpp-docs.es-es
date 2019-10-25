@@ -1,16 +1,16 @@
 ---
 title: Tabla de conformidad del lenguaje Microsoft C++
-ms.date: 07/02/2019
+ms.date: 08/12/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552355"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631644"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabla de conformidad del lenguaje Microsoft C++
 
@@ -23,7 +23,7 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 
 ## <a name="compiler-features"></a>Características del compilador
 
-|Área de características| |
+| | |
 |----|---|
 |__Características principales del lenguaje C++03/11__|__Compatible__|
 |&nbsp;&nbsp;Todo lo demás|VS 2015 <sup>[A](#note_A)</sup>|
@@ -83,28 +83,20 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 |&nbsp;&nbsp;[P0145R3 Refinar el orden de evaluación de expresiones](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 Orden de evaluación de los argumentos de función](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Expansiones del paquete en declaraciones using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Omitir atributos no reconocidos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-
-
-|Área de características| |
-|----|---|
-|__Características principales del lenguaje C++17 Core (informes de defectos)__|__Compatible__|
+|__Características principales del lenguaje C++17 (informes de defectos)__|__Compatible__|
 |&nbsp;&nbsp;[P0702R1 Corrección de deducción de argumento de plantilla para constructores initializer-list](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1 Relajación de las reglas de búsqueda de punto de personalización de los enlaces estructurados](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0969R0 Allowing structured bindings to accessible members](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf) (Permitir enlaces estructurados para miembros accesibles)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0588R1 Simplifying implicit lambda capture](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html) (Simplificación de la captura de lambda implícita)|No|
-|&nbsp;&nbsp;[P0962R2 Relaxing the range-for loop customization point finding rules](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html) (Relajación de las reglas de búsqueda de punto de personalización de los bucles range-for)|No|
-|&nbsp;&nbsp;[P0929R2 Comprobación de tipos de clases abstractas](https://wg21.link/P0929R2)|No|
-|&nbsp;&nbsp;[P1009R2 Deducción del tamaño de la matriz en nuevas expresiones](https://wg21.link/P1009R2)|No|
-|&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|No|
-|Área de características| |
-|----|---|
+|&nbsp;&nbsp;[P0588R1 Simplifying implicit lambda capture](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html) (Simplificación de la captura de lambda implícita)|Sin|
+|&nbsp;&nbsp;[P0962R2 Relaxing the range-for loop customization point finding rules](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html) (Relajación de las reglas de búsqueda de punto de personalización de los bucles range-for)|Sin|
+|&nbsp;&nbsp;[P0929R2 Comprobación de tipos de clases abstractas](https://wg21.link/P0929R2)|Sin|
+|&nbsp;&nbsp;[P1009R2 Deducción del tamaño de la matriz en nuevas expresiones](https://wg21.link/P1009R2)|Sin|
+|&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|Sin|
 |__Características principales del lenguaje C++20__|__Compatible__|
 |&nbsp;&nbsp;[P0704R1 Correción de los punteros const lvalue ref-qualified a los miembros](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4 Convertir los literales de cadena char16_t/char32_t en UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Cambio del miembro activo dentro de una unión en constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 noexcept para \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 Operador de comparación tridireccional (spaceship) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1008R1 Prohibición de agregados con constructores declarados por el usuario](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 Inicialización designada](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 Permitir captura lambda \[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 Operador de comparación tridireccional (spaceship) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -112,48 +104,47 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 |&nbsp;&nbsp;[P1008R1 Prohibición de agregados con constructores declarados por el usuario](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 Plantillas de ADL y funciones que no están visibles](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0641R2 Coincidencia de const con el constructor de copia predeterminado](https://wg21.link/P0641R2)|Parcial|
-|&nbsp;&nbsp;[P0306R4 Incorporación de \_\_VA_OPT\_\_ para la omisión de comas y la eliminación de comas](https://wg21.link/P0306R4)|No|
-|&nbsp;&nbsp;[P0315R4 Permitir lambdas en contextos no evaluados](https://wg21.link/P0315R4)|No|
-|&nbsp;&nbsp;[P0409R2 Permitir captura lambda \[=, this\]](https://wg21.link/P0409R2)|No|
-|&nbsp;&nbsp;[P0428R2 Sintaxis de plantilla familiar para expresiones lambda genéricas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|No|
-|&nbsp;&nbsp;[P0479R5 \[\] Atributos](https://wg21.link/P0479R5) \[likely\]\] y \[\[unlikely\]|No|
-|&nbsp;&nbsp;[P0542R5 Contratos](https://wg21.link/P0542R5)|No|
-|&nbsp;&nbsp;[P0614R1 Bucles for basado en intervalo con inicializadores](https://wg21.link/P0614R1)|No|
-|&nbsp;&nbsp;[P0624R2 Lambdas sin estado asignables y construibles predeterminadas](https://wg21.link/P0624R2)|No|
-|&nbsp;&nbsp;[P0634R3 Eliminación de typename](https://wg21.link/P0634R3)|No|
-|&nbsp;&nbsp;[P0683R1 Inicializadores de miembro predeterminado para los campos de bits](https://wg21.link/P0683R1)|No|
-|&nbsp;&nbsp;[P0692R1 Relación de la comprobación de acceso en las especializaciones](https://wg21.link/P0692R1)|No|
-|&nbsp;&nbsp;[P0722R3 Eliminación dimensionada eficaz para clases dimensionadas de variables](https://wg21.link/P0722R3)|No|
-|&nbsp;&nbsp;[P0732R2 Tipos de clases en parámetros de plantilla sin tipo](https://wg21.link/P0732R2)|No|
-|&nbsp;&nbsp;[P0734R0 Conceptos](https://wg21.link/P0734R0)|No|
-|&nbsp;&nbsp;[P0780R2 Permitir la expansión de paquetes en lambda init-capture](https://wg21.link/P0780R2)|No|
-|&nbsp;&nbsp;[P0806R2 Dejar de usar la captura implícita de esto mediante \[=\]](https://wg21.link/P0806R2)|No|
-|&nbsp;&nbsp;[P0840R2 \[\]Atributo](https://wg21.link/P0840R2) \[no_unique_address\]|No|
-|&nbsp;&nbsp;[P0857R0 Corrección de lagunas de funcionalidad en las restricciones](https://wg21.link/P0857R0)|No|
-|&nbsp;&nbsp;[P0892R2 Condicional explícito](https://wg21.link/P0892R2)|No|
-|&nbsp;&nbsp;[P0912R5 Corrutinas](https://wg21.link/P0912R5)|No|
-|&nbsp;&nbsp;[P0960R3 Permitir la inicialización de agregados desde una lista de valores entre paréntesis](https://wg21.link/P0960R3)|No|
-|&nbsp;&nbsp;[P1002R1 Bloques try-catch en funciones constexpr](https://wg21.link/P1002R1)|No|
-|&nbsp;&nbsp;[P1064R0 Permitir las llamadas a funciones virtuales en expresiones constantes](https://wg21.link/P1064R0)|No|
-|&nbsp;&nbsp;[P1073R3 Funciones inmediatas](https://wg21.link/P1073R3)|No|
-|&nbsp;&nbsp;[P1084R2 Los requisitos de tipo de valor devuelto de hoy en día son insuficientes](https://wg21.link/P1084R2)|No|
-|&nbsp;&nbsp;[P1091R3 Extensión de los enlaces estructurados para que se asemejen a las declaraciones de variables](https://wg21.link/P1091R3)|No|
-|&nbsp;&nbsp;[P1094R2 Espacios de nombres insertados anidados](https://wg21.link/P1094R2)|No|
-|&nbsp;&nbsp;[P1103R3 Módulos](https://wg21.link/P1103R3)|No|
-|&nbsp;&nbsp;[P1120R0 Mejoras de coherencia para <=> y otros operadores de comparación](https://wg21.link/P1120R0)|No|
-|&nbsp;&nbsp;[P1139R2 Solucionar problemas de redacción relacionados con la norma ISO 10646](https://wg21.link/P1139R2)|No|
-|&nbsp;&nbsp;[P1141R2 Otro enfoque para las declaraciones restringidas](https://wg21.link/P1141R2)|No|
-|&nbsp;&nbsp;[P1185R2 \<=\> != ==](https://wg21.link/P1185R2)|No|
-|&nbsp;&nbsp;[P1236R1 Los enteros con signo son un complemento a dos](https://wg21.link/P1236R1)|No|
-|&nbsp;&nbsp;[P1289R1 Control de acceso en condiciones contractuales](https://wg21.link/P1289R1)|No|
-|&nbsp;&nbsp;[P1323R2 Condiciones posteriores al contrato y deducción del tipo de valor devuelto](https://wg21.link/P1323R2)|No|
-|&nbsp;&nbsp;[P1327R1 Permitir dynamic_cast y typeid polimórfico en expresiones constantes](https://wg21.link/P1327R1)|No|
-|&nbsp;&nbsp;[P1353R0 Macros de prueba de características faltantes](https://wg21.link/P1353R0)|No|
-|&nbsp;&nbsp;[P1381R1 Captura de referencia de enlaces estructurados](https://wg21.link/P1381R1)|No|
+|&nbsp;&nbsp;[P0306R4 Incorporación de \_\_VA_OPT\_\_ para la omisión de comas y la eliminación de comas](https://wg21.link/P0306R4)|Sin|
+|&nbsp;&nbsp;[P0315R4 Permitir lambdas en contextos no evaluados](https://wg21.link/P0315R4)|Sin|
+|&nbsp;&nbsp;[P0428R2 Sintaxis de plantilla familiar para expresiones lambda genéricas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Sin|
+|&nbsp;&nbsp;[P0479R5 \[\] Atributos](https://wg21.link/P0479R5) \[likely\]\] y \[\[unlikely\]|Sin|
+|&nbsp;&nbsp;[P0542R5 Contratos](https://wg21.link/P0542R5)|Sin|
+|&nbsp;&nbsp;[P0614R1 Bucles for basado en intervalo con inicializadores](https://wg21.link/P0614R1)|Sin|
+|&nbsp;&nbsp;[P0624R2 Lambdas sin estado asignables y construibles predeterminadas](https://wg21.link/P0624R2)|Sin|
+|&nbsp;&nbsp;[P0634R3 Eliminación de typename](https://wg21.link/P0634R3)|Sin|
+|&nbsp;&nbsp;[P0683R1 Inicializadores de miembro predeterminado para los campos de bits](https://wg21.link/P0683R1)|Sin|
+|&nbsp;&nbsp;[P0692R1 Relación de la comprobación de acceso en las especializaciones](https://wg21.link/P0692R1)|Sin|
+|&nbsp;&nbsp;[P0722R3 Eliminación dimensionada eficaz para clases dimensionadas de variables](https://wg21.link/P0722R3)|Sin|
+|&nbsp;&nbsp;[P0732R2 Tipos de clases en parámetros de plantilla sin tipo](https://wg21.link/P0732R2)|Sin|
+|&nbsp;&nbsp;[P0734R0 Conceptos](https://wg21.link/P0734R0)|Sin|
+|&nbsp;&nbsp;[P0780R2 Permitir la expansión de paquetes en lambda init-capture](https://wg21.link/P0780R2)|Sin|
+|&nbsp;&nbsp;[P0806R2 Dejar de usar la captura implícita de esto mediante \[=\]](https://wg21.link/P0806R2)|Sin|
+|&nbsp;&nbsp;[P0840R2 \[\]Atributo](https://wg21.link/P0840R2) \[no_unique_address\]|Sin|
+|&nbsp;&nbsp;[P0857R0 Corrección de lagunas de funcionalidad en las restricciones](https://wg21.link/P0857R0)|Sin|
+|&nbsp;&nbsp;[P0892R2 Condicional explícito](https://wg21.link/P0892R2)|Sin|
+|&nbsp;&nbsp;[P0912R5 Corrutinas](https://wg21.link/P0912R5)|Sin|
+|&nbsp;&nbsp;[P0960R3 Permitir la inicialización de agregados desde una lista de valores entre paréntesis](https://wg21.link/P0960R3)|Sin|
+|&nbsp;&nbsp;[P1002R1 Bloques try-catch en funciones constexpr](https://wg21.link/P1002R1)|Sin|
+|&nbsp;&nbsp;[P1064R0 Permitir las llamadas a funciones virtuales en expresiones constantes](https://wg21.link/P1064R0)|Sin|
+|&nbsp;&nbsp;[P1073R3 Funciones inmediatas](https://wg21.link/P1073R3)|Sin|
+|&nbsp;&nbsp;[P1084R2 Los requisitos de tipo de valor devuelto de hoy en día son insuficientes](https://wg21.link/P1084R2)|Sin|
+|&nbsp;&nbsp;[P1091R3 Extensión de los enlaces estructurados para que se asemejen a las declaraciones de variables](https://wg21.link/P1091R3)|Sin|
+|&nbsp;&nbsp;[P1094R2 Espacios de nombres insertados anidados](https://wg21.link/P1094R2)|Sin|
+|&nbsp;&nbsp;[P1103R3 Módulos](https://wg21.link/P1103R3)|Sin|
+|&nbsp;&nbsp;[P1120R0 Mejoras de coherencia para <=> y otros operadores de comparación](https://wg21.link/P1120R0)|Sin|
+|&nbsp;&nbsp;[P1139R2 Solucionar problemas de redacción relacionados con la norma ISO 10646](https://wg21.link/P1139R2)|Sin|
+|&nbsp;&nbsp;[P1141R2 Otro enfoque para las declaraciones restringidas](https://wg21.link/P1141R2)|Sin|
+|&nbsp;&nbsp;[P1185R2 \<=\> != ==](https://wg21.link/P1185R2)|Sin|
+|&nbsp;&nbsp;[P1236R1 Los enteros con signo son un complemento a dos](https://wg21.link/P1236R1)|Sin|
+|&nbsp;&nbsp;[P1289R1 Control de acceso en condiciones contractuales](https://wg21.link/P1289R1)|Sin|
+|&nbsp;&nbsp;[P1323R2 Condiciones posteriores al contrato y deducción del tipo de valor devuelto](https://wg21.link/P1323R2)|Sin|
+|&nbsp;&nbsp;[P1327R1 Permitir dynamic_cast y typeid polimórfico en expresiones constantes](https://wg21.link/P1327R1)|Sin|
+|&nbsp;&nbsp;[P1353R0 Macros de prueba de características faltantes](https://wg21.link/P1353R0)|Sin|
+|&nbsp;&nbsp;[P1381R1 Captura de referencia de enlaces estructurados](https://wg21.link/P1381R1)|Sin|
 
 ## <a name="standard-library-features"></a>Características de la biblioteca estándar
 
-|Área de características| |
+| | |
 |---|---|
 |__Características de la biblioteca estándar de C++20__|__Compatible__|
 |&nbsp;&nbsp;[P0809R0 Comparing Unordered Containers](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf) (Comparación de contenedores sin ordenar)| VS 2010 <sup>[14](#note_14)</sup>|
@@ -166,60 +157,60 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 |&nbsp;&nbsp;[P0646R1 Tipo de tamaño devuelto list/forward_list remove()/remove_if()/unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|No|
-|&nbsp;&nbsp;[P0020R6 atomic\<float>, atomic\<double>, atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|No|
-|&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 Manipuladores de osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|No|
-|&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|No|
-|&nbsp;&nbsp;[P0202R3 Expresión constante para \<algorithm> y exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|No|
-|&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|No|
-|&nbsp;&nbsp;[P0340R3 underlying_type compatible con SFINAE](https://wg21.link/P0340R3)|No|
-|&nbsp;&nbsp;[P0355R7 Calendarios y zonas horarias de \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|No|
-|&nbsp;&nbsp;[P0356R5 bind_front()](https://wg21.link/P0356R5)|No|
-|&nbsp;&nbsp;[P0357R3 Tipos incompletos compatibles en reference_wrapper](https://wg21.link/P0357R3)|No|
-|&nbsp;&nbsp;[P0415R1 Expresión constante para \<complex> (Again)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|No|
-|&nbsp;&nbsp;[P0439R0 Clase de enumeración memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|No|
-|&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|No|
-|&nbsp;&nbsp;[P0475R1 Omisión de copia garantizada para construcción de tramos](https://wg21.link/P0475R1)|No|
-|&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|No|
-|&nbsp;&nbsp;[P0482R6 char8_t: un tipo para los caracteres y las cadenas UTF-8](https://wg21.link/P0482R6)|No|
-|&nbsp;&nbsp;[P0487R1 Corrección de operador>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|No|
-|&nbsp;&nbsp;[P0528R3 Comparación e intercambio atómicos con bits de relleno](https://wg21.link/P0528R3)|No|
-|&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|No|
-|&nbsp;&nbsp;[P0591R4 Funciones de utilidad para construcciones Uses-Allocator](https://wg21.link/P0591R4)|No|
-|&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] para STL, parte 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|No|
-|&nbsp;&nbsp;[P0608R3 Mejora de la asignación y el constructor de conversión de variantes](https://wg21.link/P0608R3)|No|
-|&nbsp;&nbsp;[P0616R0 Uso de move() en \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|No|
-|&nbsp;&nbsp;[P0619R4 Quitar las características en desuso de C++17 en C++20](https://wg21.link/P0619R4)|No|
-|&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|No|
-|&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|No|
-|&nbsp;&nbsp;[P0674R1 make_shared() para matrices](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|No|
-|&nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>, atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|No|
-|&nbsp;&nbsp;[P0738R2 Limpieza de istream_iterator](https://wg21.link/P0738R2)|No|
-|&nbsp;&nbsp;[P0754R2 \<version>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|No|
-|&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|No|
-|&nbsp;&nbsp;[P0767R1 Poner en desuso is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|No|
-|&nbsp;&nbsp;[P0768R1 Compatibilidad con bibliotecas para el operador de comparación de nave espacial \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|No|
-|&nbsp;&nbsp;[P0771R1 noexcept para el constructor de movimiento de std::function](https://wg21.link/P0771R1)|No|
-|&nbsp;&nbsp;[P0811R3 midpoint(), lerp()](https://wg21.link/P0811R3)|No|
-|&nbsp;&nbsp;[P0879R0 constexpr para funciones de intercambio](https://wg21.link/P0879R0)|No|
-|&nbsp;&nbsp;[P0896R4 \<ranges\>](https://wg21.link/P0896R4)|No|
-|&nbsp;&nbsp;[P0898R3 Conceptos de la biblioteca estándar](https://wg21.link/P0898R3)|No|
-|&nbsp;&nbsp;[P0912R5 Compatibilidad de la biblioteca para corrutinas](https://wg21.link/P0912R5)|No|
-|&nbsp;&nbsp;[P0919R3 Búsqueda heterogénea para contenedores desordenados](https://wg21.link/P0919R3)|No|
-|&nbsp;&nbsp;[P0920R2 Búsqueda de valores hash precalculados](https://wg21.link/P0920R2)|No|
-|&nbsp;&nbsp;[P0935R0 Erradicación de constructores predeterminados explícitos innecesarios](https://wg21.link/P0935R0)|No|
-|&nbsp;&nbsp;[P0966R1 string::reserve() no debe reducirse](https://wg21.link/P0966R1)|No|
-|&nbsp;&nbsp;[P1001R2 execution::unseq](https://wg21.link/P1001R2)|No|
-|&nbsp;&nbsp;[P1006R1 constexpr para pointer_traits<T*>::pointer_to()](https://wg21.link/P1006R1)|No|
-|&nbsp;&nbsp;[P1007R3 assume_aligned()](https://wg21.link/P1007R3)|No|
-|&nbsp;&nbsp;[P1020R1 Creación de puntero inteligente con inicialización predeterminada](https://wg21.link/P1020R1)|No|
-|&nbsp;&nbsp;[P1023R0 constexpr para las comparaciones std::array](https://wg21.link/P1023R0)|No|
-|&nbsp;&nbsp;[P1032R1 Varios elementos constexpr](https://wg21.link/P1032R1)|No|
-|&nbsp;&nbsp;[P1165R1 Propagación coherente de asignadores sin estado en el operador +() basic_string](https://wg21.link/P1165R1)|No|
-|&nbsp;&nbsp;[P1209R0 erase_if(), erase()](https://wg21.link/P1209R0)|No|
-|&nbsp;&nbsp;[P1227R2 std::ssize() con signo y span::size() sin signo](https://wg21.link/P1227R2)|No|
-|&nbsp;&nbsp;[P1285R0 Mejora de los requisitos de integridad de los rasgos de tipo](https://wg21.link/P1285R0)|No|
-|&nbsp;&nbsp;[P1357R1 is_bounded_array, is_unbounded_array](https://wg21.link/P1357R1)|No|
+|&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|Sin|
+|&nbsp;&nbsp;[P0020R6 atomic\<float>, atomic\<double>, atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|Sin|
+|&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 Manipuladores de osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|Sin|
+|&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|Sin|
+|&nbsp;&nbsp;[P0202R3 Expresión constante para \<algorithm> y exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Sin|
+|&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|Sin|
+|&nbsp;&nbsp;[P0340R3 underlying_type compatible con SFINAE](https://wg21.link/P0340R3)|Sin|
+|&nbsp;&nbsp;[P0355R7 Calendarios y zonas horarias de \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Sin|
+|&nbsp;&nbsp;[P0356R5 bind_front()](https://wg21.link/P0356R5)|Sin|
+|&nbsp;&nbsp;[P0357R3 Tipos incompletos compatibles en reference_wrapper](https://wg21.link/P0357R3)|Sin|
+|&nbsp;&nbsp;[P0415R1 Expresión constante para \<complex> (Again)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Sin|
+|&nbsp;&nbsp;[P0439R0 Clase de enumeración memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Sin|
+|&nbsp;&nbsp;[P0463R1 endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Sin|
+|&nbsp;&nbsp;[P0475R1 Omisión de copia garantizada para construcción de tramos](https://wg21.link/P0475R1)|Sin|
+|&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Sin|
+|&nbsp;&nbsp;[P0482R6 char8_t: un tipo para los caracteres y las cadenas UTF-8](https://wg21.link/P0482R6)|Sin|
+|&nbsp;&nbsp;[P0487R1 Corrección de operador>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|Sin|
+|&nbsp;&nbsp;[P0528R3 Comparación e intercambio atómicos con bits de relleno](https://wg21.link/P0528R3)|Sin|
+|&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Sin|
+|&nbsp;&nbsp;[P0591R4 Funciones de utilidad para construcciones Uses-Allocator](https://wg21.link/P0591R4)|Sin|
+|&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] para STL, parte 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|Sin|
+|&nbsp;&nbsp;[P0608R3 Mejora de la asignación y el constructor de conversión de variantes](https://wg21.link/P0608R3)|Sin|
+|&nbsp;&nbsp;[P0616R0 Uso de move() en \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|Sin|
+|&nbsp;&nbsp;[P0619R4 Quitar las características en desuso de C++17 en C++20](https://wg21.link/P0619R4)|Sin|
+|&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Sin|
+|&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|Sin|
+|&nbsp;&nbsp;[P0674R1 make_shared() para matrices](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Sin|
+|&nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>, atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|Sin|
+|&nbsp;&nbsp;[P0738R2 Limpieza de istream_iterator](https://wg21.link/P0738R2)|Sin|
+|&nbsp;&nbsp;[P0754R2 \<version>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|Sin|
+|&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|Sin|
+|&nbsp;&nbsp;[P0767R1 Poner en desuso is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Sin|
+|&nbsp;&nbsp;[P0768R1 Compatibilidad con bibliotecas para el operador de comparación de nave espacial \<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Sin|
+|&nbsp;&nbsp;[P0771R1 noexcept para el constructor de movimiento de std::function](https://wg21.link/P0771R1)|Sin|
+|&nbsp;&nbsp;[P0811R3 midpoint(), lerp()](https://wg21.link/P0811R3)|Sin|
+|&nbsp;&nbsp;[P0879R0 constexpr para funciones de intercambio](https://wg21.link/P0879R0)|Sin|
+|&nbsp;&nbsp;[P0896R4 \<ranges\>](https://wg21.link/P0896R4)|Sin|
+|&nbsp;&nbsp;[P0898R3 Conceptos de la biblioteca estándar](https://wg21.link/P0898R3)|Sin|
+|&nbsp;&nbsp;[P0912R5 Compatibilidad de la biblioteca para corrutinas](https://wg21.link/P0912R5)|Sin|
+|&nbsp;&nbsp;[P0919R3 Búsqueda heterogénea para contenedores desordenados](https://wg21.link/P0919R3)|Sin|
+|&nbsp;&nbsp;[P0920R2 Búsqueda de valores hash precalculados](https://wg21.link/P0920R2)|Sin|
+|&nbsp;&nbsp;[P0935R0 Erradicación de constructores predeterminados explícitos innecesarios](https://wg21.link/P0935R0)|Sin|
+|&nbsp;&nbsp;[P0966R1 string::reserve() no debe reducirse](https://wg21.link/P0966R1)|Sin|
+|&nbsp;&nbsp;[P1001R2 execution::unseq](https://wg21.link/P1001R2)|Sin|
+|&nbsp;&nbsp;[P1006R1 constexpr para pointer_traits<T*>::pointer_to()](https://wg21.link/P1006R1)|Sin|
+|&nbsp;&nbsp;[P1007R3 assume_aligned()](https://wg21.link/P1007R3)|Sin|
+|&nbsp;&nbsp;[P1020R1 Creación de puntero inteligente con inicialización predeterminada](https://wg21.link/P1020R1)|Sin|
+|&nbsp;&nbsp;[P1023R0 constexpr para las comparaciones std::array](https://wg21.link/P1023R0)|Sin|
+|&nbsp;&nbsp;[P1032R1 Varios elementos constexpr](https://wg21.link/P1032R1)|Sin|
+|&nbsp;&nbsp;[P1165R1 Propagación coherente de asignadores sin estado en el operador +() basic_string](https://wg21.link/P1165R1)|Sin|
+|&nbsp;&nbsp;[P1209R0 erase_if(), erase()](https://wg21.link/P1209R0)|Sin|
+|&nbsp;&nbsp;[P1227R2 std::ssize() con signo y span::size() sin signo](https://wg21.link/P1227R2)|Sin|
+|&nbsp;&nbsp;[P1285R0 Mejora de los requisitos de integridad de los rasgos de tipo](https://wg21.link/P1285R0)|Sin|
+|&nbsp;&nbsp;[P1357R1 is_bounded_array, is_unbounded_array](https://wg21.link/P1357R1)|Sin|
 |__Características de la biblioteca estándar de C++17__|__Compatible__|
 |&nbsp;&nbsp;[LWG 2221 Operador de salida con formato para nullptr](https://cplusplus.github.io/LWG/issue2221)|VS 2019 16.1|
 |&nbsp;&nbsp;[N3911 void_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3911.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -297,7 +288,7 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 |&nbsp;&nbsp;[P0517R0 Construir future_error a partir de future_errc](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0517r0.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0521R0 Dejar en desuso shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0558R1 Resolución de incoherencias de clase base con nombre atomic\<T>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0558r1.pdf)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0595R2 std::is_constant_evaluated()](https://wg21.link/P0595R2)|No|
+|&nbsp;&nbsp;[P0595R2 std::is_constant_evaluated()](https://wg21.link/P0595R2)|Sin|
 |&nbsp;&nbsp;[P0602R4 Propagación de la trivialidad de copia y movimiento en variante/opcional](https://wg21.link/P0602R4)|VS 2017 15.3<sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0604R0 Cambio de\_callable/result\_of To invoke\_result, es\_invocable, es\_nothrow\_invocable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0604r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 Variables insertadas para la biblioteca estándar](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -357,7 +348,7 @@ La opción del compilador [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 
 <a name="note_C"></a>__C__ La compatibilidad del compilador con las reglas del preprocesador C99 es incompleta en Visual Studio 2017. Se admiten las macros variádicas, pero se producen muchos errores en el comportamiento del preprocesador. Se va a revisar el preprocesador y esos cambios se incluirán pronto de manera experimental en el modo [/permissive-](../build/reference/permissive-standards-conformance.md).
 
-<a name="note_D"></a>__D__ Compatible con [/std:c++14](../build/reference/std-specify-language-standard-version.md) con una advertencia que se puede suprimir, C4984.
+<a name="note_D"></a>__D__ Compatible con [/std:c++14](../build/reference/std-specify-language-standard-version.md) con una advertencia que se puede suprimir, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
 <a name="note_E"></a>__E__ Esta es una implementación totalmente nueva, incompatible con la versión anterior de `std::experimental`, debido a la compatibilidad con symlink, las correcciones de errores y los cambios en el comportamiento requerido estándar. Actualmente, la inclusión de \<filesystem> proporciona la versión nueva de `std::filesystem` y la versión anterior de `std::experimental::filesystem`, y la inclusión de \<experimental/filesystem> solo proporciona la implementación experimental anterior. La implementación experimental se QUITARÁ en la próxima versión sin ABI de las bibliotecas.
 

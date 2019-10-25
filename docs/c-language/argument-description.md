@@ -8,12 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: 71301bd5eedf2806e97b8d24d95beaf2843427ad
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 88d477c874d62800c47bb03220246cb3f0999724
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148509"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492504"
 ---
 # <a name="argument-description"></a>Descripción de los argumentos
 
@@ -23,7 +23,7 @@ El parámetro `argc` en las funciones **main** y **wmain** es un entero que espe
 
 El parámetro `argv` es una matriz de punteros a cadenas finalizadas en null que representan los argumentos del programa. Cada elemento de la matriz señala a una representación de cadena de un argumento que se pasa a **main** o a **wmain**. (Para obtener información sobre matrices, vea [Declaraciones de matriz](../c-language/array-declarations.md)). El parámetro `argv` se puede declarar como una matriz de punteros a tipo `char` (`char *argv[]`) o como un puntero para punteros a tipo `char` (`char **argv`). En el caso de **wmain**, el parámetro `argv` se puede declarar como una matriz de punteros a tipo `wchar_t` (`wchar_t *argv[]`) o como un puntero para punteros a tipo`wchar_t` (`wchar_t **argv`).
 
-Por convención, `argv`**[0]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso usando [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) y, si utiliza el primero y segundo argumentos (`lpApplicationName` ay `lpCommandLine`), `argv`**[0]** puede no ser el nombre ejecutable; utilice [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) para recuperar el nombre ejecutable.
+Por convención, `argv` **[0]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso usando [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) y, si utiliza el primero y segundo argumentos (`lpApplicationName` ay `lpCommandLine`), `argv` **[0]** puede no ser el nombre ejecutable; utilice [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) para recuperar el nombre ejecutable.
 
 El último puntero (`argv[argc]`) es **NULL**. (Vea [getenv](../c-runtime-library/reference/getenv-wgetenv.md) en la *Referencia de la biblioteca en tiempo de ejecución* si desea un método alternativo para obtener información de variables de entorno).
 

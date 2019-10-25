@@ -1,11 +1,11 @@
 ---
 title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cabs
 - cabsf
 - cabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabs
 - cabsf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623970"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939415"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -68,17 +71,17 @@ Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor absoluto de *z*.
+Valor absoluto de *z*.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cabs** que toman **_Fcomplex** o **_Lcomplex** valores y devuelven **float** o **largo** **doble** valores. En un programa C, **cabs** siempre toma un **_Dcomplex** valor y devuelve un **doble** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de los **Cab** que toman los valores **_Fcomplex** o **_Lcomplex** y devolver valores de tipo **float** o **Long** **Double** . En un programa de C, los **Cab** siempre toman un valor **_Dcomplex** y devuelven un valor **Double** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**Cabs**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
+|**Cab**, **cabsf**, **Cab**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

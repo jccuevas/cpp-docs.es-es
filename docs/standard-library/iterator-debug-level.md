@@ -13,9 +13,9 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68456403"
 ---
-# <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
+# <a name="_iterator_debug_level"></a>_ITERATOR_DEBUG_LEVEL
 
-La macro _ITERATOR_DEBUG_LEVEL controla si [](../standard-library/checked-iterators.md) se habilitan los iteradores comprobados y la [compatibilidad con iteradores](../standard-library/debug-iterator-support.md) de depuración. Esta macro reemplaza y combina la funcionalidad de las macros _SECURE_SCL y _HAS_ITERATOR_DEBUGGING anteriores.
+La macro _ITERATOR_DEBUG_LEVEL controla si se habilitan los [iteradores comprobados](../standard-library/checked-iterators.md) y la [compatibilidad con iteradores de depuración](../standard-library/debug-iterator-support.md) . Esta macro reemplaza y combina la funcionalidad de las macros _SECURE_SCL y _HAS_ITERATOR_DEBUGGING anteriores.
 
 ## <a name="macro-values"></a>Valores de la macro
 
@@ -35,7 +35,7 @@ En el modo de lanzamiento, el compilador genera un error si se especifica _ITERA
 
 ## <a name="remarks"></a>Comentarios
 
-La macro _ITERATOR_DEBUG_LEVEL controla si [](../standard-library/checked-iterators.md) se habilitan los iteradores comprobados y en modo de depuración si está habilitada la [compatibilidad con iteradores](../standard-library/debug-iterator-support.md) de depuración. Si _ITERATOR_DEBUG_LEVEL se define como 1 o 2, los iteradores comprobados garantizan que los límites de los contenedores no se sobrescriban. Si _ITERATOR_DEBUG_LEVEL es 0, los iteradores no se comprueban. Cuando _ITERATOR_DEBUG_LEVEL se define como 1, el uso de iteradores Unsafe produce un error en tiempo de ejecución y el programa finaliza. Cuando _ITERATOR_DEBUG_LEVEL se define como 2, el uso de iteradores Unsafe produce una aserción y un cuadro de diálogo de error en tiempo de ejecución que le permite interrumpir el depurador.
+La macro _ITERATOR_DEBUG_LEVEL controla si se habilitan los [iteradores comprobados](../standard-library/checked-iterators.md) y en modo de depuración si está habilitada la [compatibilidad con iteradores de depuración](../standard-library/debug-iterator-support.md) . Si _ITERATOR_DEBUG_LEVEL se define como 1 o 2, los iteradores comprobados garantizan que los límites de los contenedores no se sobrescriban. Si _ITERATOR_DEBUG_LEVEL es 0, los iteradores no se comprueban. Cuando _ITERATOR_DEBUG_LEVEL se define como 1, el uso de iteradores Unsafe produce un error en tiempo de ejecución y el programa finaliza. Cuando _ITERATOR_DEBUG_LEVEL se define como 2, el uso de iteradores Unsafe produce una aserción y un cuadro de diálogo de error en tiempo de ejecución que le permite interrumpir el depurador.
 
 Dado que la macro _ITERATOR_DEBUG_LEVEL admite una funcionalidad similar a las macros _SECURE_SCL y _HAS_ITERATOR_DEBUGGING, puede que no esté seguro de qué macro y valor de macro usar en una situación determinada. Para evitar confusiones, se recomienda usar solo la macro _ITERATOR_DEBUG_LEVEL. En esta tabla se describe el valor de la macro _ITERATOR_DEBUG_LEVEL equivalente que se usa para los distintos valores de _SECURE_SCL y _HAS_ITERATOR_DEBUGGING en el código existente.
 

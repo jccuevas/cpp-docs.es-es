@@ -2,12 +2,13 @@
 title: Programación web y para la nube en Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3f4786d8b17aed2d7faeddf1e2c32a825fd8d0e5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.topic: overview
+ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498869"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274642"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programación web y para la nube en Visual C++
 

@@ -1,10 +1,10 @@
 ---
 title: _splitpath_s, _wsplitpath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsplitpath_s
 - _splitpath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsplitpath_s
 - splitpath_s
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355034"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958050"
 ---
-# <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
+# <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
 Divide un nombre de ruta de acceso en componentes. Se trata de versiones de [_splitpath, _wsplitpath](splitpath-wsplitpath.md) que incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -91,28 +94,28 @@ errno_t _wsplitpath_s(
 Ruta de acceso completa.
 
 *drive*<br/>
-Letra de unidad, seguida de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
+Letra de unidad, seguida de dos puntos ( **:** ). Puede pasar **null** para este parámetro si no necesita la letra de la unidad.
 
 *driveNumberOfElements*<br/>
-El tamaño de la *unidad* búfer en caracteres de byte único o anchos. Si *unidad* es **NULL**, este valor debe ser 0.
+Tamaño del búfer de la *unidad* en caracteres anchos o de un solo byte. Si la *unidad* es **null**, este valor debe ser 0.
 
 *dir*<br/>
-Ruta de directorio, incluida la barra diagonal final. Barras diagonales ( **/** ), barras diagonales inversas ( **\\** ), o ambos pueden ser utilizados. Puede pasar **NULL** para este parámetro si no necesita la ruta de acceso de directorio.
+Ruta de directorio, incluida la barra diagonal final. Se pueden usar barras **/** diagonales (), barras **\\** diagonales inversas () o ambas. Puede pasar **null** para este parámetro si no necesita la ruta de acceso del directorio.
 
 *dirNumberOfElements*<br/>
-El tamaño de la *dir* búfer en caracteres de byte único o anchos. Si *dir* es **NULL**, este valor debe ser 0.
+Tamaño del búfer de *dir* en caracteres anchos o de un solo byte. Si *dir* es **null**, este valor debe ser 0.
 
 *fname*<br/>
-Nombre de archivo base (sin extensión). Puede pasar **NULL** para este parámetro si no es necesario el nombre de archivo.
+Nombre de archivo base (sin extensión). Puede pasar **null** para este parámetro si no necesita el nombre de archivo.
 
 *nameNumberOfElements*<br/>
-El tamaño de la *fname* búfer en caracteres de byte único o anchos. Si *fname* es **NULL**, este valor debe ser 0.
+Tamaño del búfer *fname* en caracteres anchos o de un solo byte. Si *fname* es **null**, este valor debe ser 0.
 
 *ext*<br/>
-Extensión de nombre de archivo, incluido el punto inicial (**.**). Puede pasar **NULL** para este parámetro si no necesita la extensión de nombre de archivo.
+Extensión de nombre de archivo, incluido el punto inicial ( **.** ). Puede pasar **null** para este parámetro si no necesita la extensión de nombre de archivo.
 
 *extNumberOfElements*<br/>
-El tamaño de *ext* búfer en caracteres de byte único o anchos. Si *ext* es **NULL**, este valor debe ser 0.
+Tamaño del búfer de *ext* en caracteres anchos o de un solo byte. Si *ext* es **null**, este valor debe ser 0.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -122,23 +125,23 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |Condición|Valor devuelto|
 |---------------|------------------|
-|*ruta de acceso* es **NULL**|**EINVAL**|
-|*unidad* es **NULL**, *driveNumberOfElements* es distinto de cero|**EINVAL**|
-|*drive* is non-**NULL**, *driveNumberOfElements* is zero|**EINVAL**|
-|*dir* es **NULL**, *dirNumberOfElements* es distinto de cero|**EINVAL**|
-|*dir* no es**NULL**, *dirNumberOfElements* es cero|**EINVAL**|
-|*fname* es **NULL**, *nameNumberOfElements* es distinto de cero|**EINVAL**|
-|*fname* no es**NULL**, *nameNumberOfElements* es cero|**EINVAL**|
-|*ext* es **NULL**, *extNumberOfElements* es distinto de cero|**EINVAL**|
-|*ext* no es**NULL**, *extNumberOfElements* es cero|**EINVAL**|
+|la *ruta de acceso* es **null**|**EINVAL**|
+|la *unidad* es **null**, *driveNumberOfElements* es distinto de cero|**EINVAL**|
+|la *unidad* no es**null**, *driveNumberOfElements* es cero|**EINVAL**|
+|*dir* es **null**, *dirNumberOfElements* es distinto de cero|**EINVAL**|
+|*dir* no es**null**, *dirNumberOfElements* es cero|**EINVAL**|
+|*fname* es **null**, *nameNumberOfElements* es distinto de cero|**EINVAL**|
+|*fname* no es**null**, *nameNumberOfElements* es cero|**EINVAL**|
+|*ext* es **null**, *extNumberOfElements* es distinto de cero|**EINVAL**|
+|*ext* no es**null**, *extNumberOfElements* es cero.|**EINVAL**|
 
-Si se da alguna de las condiciones anteriores, se invoca al controlador de parámetros no válidos, tal como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
+Si se da alguna de las condiciones anteriores, se invoca al controlador de parámetros no válidos, tal como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
 
-Si alguno de los búferes es demasiado pequeño para contener el resultado, estas funciones borran todos los búferes en cadenas vacías, establecen **errno** a **ERANGE**y devolver **ERANGE**.
+Si alguno de los búferes es demasiado corto para contener el resultado, estas funciones borran todos los búferes de las cadenas vacías, establecen **errno** en **ERANGE**y devuelven **ERANGE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_splitpath_s** función divide una ruta de acceso en los cuatro componentes respectivos. **_splitpath_s** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión con caracteres anchos de **_splitpath_s**; los argumentos de **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_splitpath_s** divide una ruta de acceso en los cuatro componentes. **_splitpath_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión con caracteres anchos de **_splitpath_s**; los argumentos de **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -146,18 +149,18 @@ El **_splitpath_s** función divide una ruta de acceso en los cuatro componentes
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Cada componente de la ruta de acceso completa se almacena en un búfer independiente; las constantes de manifiesto **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, y **_MAX_EXT** (definido en STDLIB. (H) Especifique el tamaño máximo permitido para cada componente de archivo. Los componentes de archivos que son más grandes que las constantes de manifiesto correspondientes provocan daños en el montón.
+Cada componente de la ruta de acceso completa se almacena en un búfer independiente; las constantes de manifiesto **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**y **_MAX_EXT** (definidas en STDLIB. H) especifique el tamaño máximo permitido para cada componente de archivo. Los componentes de archivos que son más grandes que las constantes de manifiesto correspondientes provocan daños en el montón.
 
 En la tabla siguiente se enumeran los valores de las constantes de manifiesto.
 
-|Name|Valor|
+|NOMBRE|Valor|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Si la ruta de acceso completa no contiene ningún componente (por ejemplo, un nombre de archivo), **_splitpath_s** asigna una cadena vacía al búfer correspondiente.
+Si la ruta de acceso completa no contiene un componente (por ejemplo, un nombre de archivo), **_splitpath_s** asigna una cadena vacía al búfer correspondiente.
 
 En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

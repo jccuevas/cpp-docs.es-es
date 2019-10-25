@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: c25fd7e91c59d7bea06325fbb27471d8f90f589d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504244"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741625"
 ---
 # <a name="coledataobject-class"></a>Clase COleDataObject
 
@@ -76,7 +76,7 @@ Estos tipos de transferencias de datos incluyen un origen y un destino. El orige
 
 Esta clase permite determinar si los datos existen en un formato especificado. También puede enumerar los formatos de datos disponibles o comprobar si un formato determinado está disponible y, a continuación, recuperar los datos en el formato preferido. La recuperación de objetos se puede realizar de varias maneras diferentes, como el uso de un objeto [CFile](../../mfc/reference/cfile-class.md), hglobal o `STGMEDIUM` una estructura.
 
-Para obtener más información, vea la estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) en el Windows SDK.
+Para obtener más información, vea la estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) en el Windows SDK.
 
 Para obtener más información sobre el uso de objetos de datos en la aplicación, vea el artículo objetos de datos [y orígenes de datos (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
@@ -189,7 +189,7 @@ BOOL GetData(
 Formato en el que se van a devolver los datos. Este parámetro puede ser uno de los formatos predefinidos del portapapeles o el valor devuelto por la función [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nativa de Windows.
 
 *lpStgMedium*<br/>
-Apunta a una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) que recibirá los datos.
+Apunta a una estructura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) que recibirá los datos.
 
 *lpFormatEtc*<br/>
 Apunta a una estructura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) que describe el formato en el que se van a devolver los datos. Proporcione un valor para este parámetro si desea especificar información de formato adicional más allá del formato del portapapeles especificado por *cfFormat*. Si es null, se usan los valores predeterminados para los demás campos de `FORMATETC` la estructura.
@@ -200,7 +200,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información, vea [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium)y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) en el Windows SDK.
+Para obtener más información, vea [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)y [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) en el Windows SDK.
 
 Para obtener más información, vea [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) en el Windows SDK.
 

@@ -1,11 +1,11 @@
 ---
 title: asin, asinf, asinl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinf
 - asinl
 - asin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asin
 - asinl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347969"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943649"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -60,9 +63,9 @@ Valor cuyo arcoseno se va a calcular.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **asin** función devuelve el arco seno (la función seno inverso) de *x* en el intervalo de - π/2 a π/2 radianes.
+La función **Asin** devuelve el arcoseno (la función sinusoidal inversa) de *x* en el intervalo-π/2 a π/2 radianes.
 
-De forma predeterminada, si *x* es menor que -1 o mayor que 1, **asin** devuelve un valor indefinido.
+De forma predeterminada, si *x* es menor que-1 o mayor que 1, **Asin** devuelve un valor indefinido.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
@@ -72,7 +75,7 @@ De forma predeterminada, si *x* es menor que -1 o mayor que 1, **asin** devuelve
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **asin** con **float** y **largo** **doble** valores. En un programa C, **asin** siempre toma y devuelve un **doble**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Asin** con valores **float** y **Long** **Double** . En un programa de C, **Asin** siempre toma y devuelve un **valor Double**.
 
 ## <a name="requirements"></a>Requisitos
 

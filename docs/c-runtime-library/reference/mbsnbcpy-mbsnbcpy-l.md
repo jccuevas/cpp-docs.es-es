@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy, _mbsnbcpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy
 - _ftcsncpy
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9940146e46990c91a49478a0450d5ff489e51bc5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9b8a5884b646baf582e6bb9868136ffe7c2a24cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499845"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952248"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
@@ -96,7 +99,7 @@ Configuración regional que se va a usar.
 
 ## <a name="remarks"></a>Comentarios
 
-La función **_mbsnbcpy** copia los bytes de recuento de *strSource* a *strDest*. Si el recuento supera el tamaño de *strDest* o las cadenas de origen y de destino se superponen, el comportamiento de **_mbsnbcpy** es indefinido.
+La función **_mbsnbcpy** copia los bytes de *recuento* de *strSource* a *strDest*. Si el *recuento* supera el tamaño de *strDest* o las cadenas de origen y de destino se superponen, el comportamiento de **_mbsnbcpy** es indefinido.
 
 Si *strSource* o *strDest* es un puntero nulo, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **null** y establece **errno** en **EINVAL**.
 

@@ -1,9 +1,9 @@
 ---
 title: _lsearch_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lsearch_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lsearch_s
 - lsearch_s
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c3c0ac41a4805acb558c75fb5ff4cbc0e3aa838
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156962"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953018"
 ---
-# <a name="lsearchs"></a>_lsearch_s
+# <a name="_lsearch_s"></a>_lsearch_s
 
 Realiza una búsqueda lineal de un valor. Versión de [_lsearch](lsearch.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -74,9 +77,9 @@ Un puntero a un objeto al que se podría obtener acceso en la función de compar
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si *clave* se encuentra, **_lsearch_s** devuelve un puntero al elemento de la matriz en *base* que coincida con *clave*. Si *clave* no se encuentra, **_lsearch_s** devuelve un puntero al elemento recién agregado al final de la matriz.
+Si se encuentra la *clave* , **_lsearch_s** devuelve un puntero al elemento de la matriz en la *base* que coincide con la *clave*. Si no se encuentra la *clave* , **_lsearch_s** devuelve un puntero al elemento recién agregado al final de la matriz.
 
-Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, a continuación, **errno** está establecido en **EINVAL** y la función devuelve **NULL**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condiciones de error
 
@@ -89,11 +92,11 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lsearch_s** función realiza una búsqueda lineal del valor *clave* en una matriz de *número* elementos, cada uno de *ancho* bytes. A diferencia de **bsearch_s**, **_lsearch_s** no requiere la matriz esté ordenada. Si *clave* no se encuentra, a continuación, **_lsearch_s** lo agrega al final de la matriz e incrementa *número*.
+La función **_lsearch_s** realiza una búsqueda lineal de la *clave* Value en una matriz de elementos *Number* , cada uno de los bytes de *ancho* . A diferencia de **bsearch_s**, **_lsearch_s** no requiere la ordenación de la matriz. Si no se encuentra la *clave* , **_lsearch_s** la agrega al final de la matriz e incrementa el *número*.
 
-El *comparar* función es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y devuelve un valor que especifica su relación. El *comparar* función también toma el puntero en el contexto como primer argumento. **_lsearch_s** llamadas *comparar* una o varias veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. *comparar* debe comparar los elementos y, a continuación, devolver uno distinto de cero (es decir, los elementos son diferentes) o 0 (es decir, los elementos son idénticos).
+La función de *comparación* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación. La función *Compare* también toma el puntero al contexto como primer argumento. las llamadas a **_lsearch_s** *comparan* una o más veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. *Compare* debe comparar los elementos y, a continuación, devolver un valor distinto de cero (lo que significa que los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
 
-El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es parte de un objeto y el *comparar* función necesita tener acceso a los miembros del objeto. Por ejemplo, el código de la *comparar* función puede convertir el puntero void en los miembros de tipo y el acceso de objeto adecuado de ese objeto. La adición de la *contexto* hace que el puntero **_lsearch_s** más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos disponibles en el *comparar* función.
+El puntero de *contexto* puede ser útil si la estructura de datos de búsqueda forma parte de un objeto y la función de *comparación* necesita acceder a los miembros del objeto. Por ejemplo, el código de la función *Compare* puede convertir el puntero void en el tipo de objeto adecuado y acceder a los miembros de ese objeto. La adición del puntero de *contexto* hace que **_lsearch_s** sea más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos estén disponibles para la función de *comparación* .
 
 ## <a name="requirements"></a>Requisitos
 

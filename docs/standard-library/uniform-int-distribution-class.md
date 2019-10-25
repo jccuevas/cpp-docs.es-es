@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454954"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684510"
 ---
-# <a name="uniformintdistribution-class"></a>uniform_int_distribution (Clase)
+# <a name="uniform_int_distribution-class"></a>uniform_int_distribution (Clase)
 
 Genera una distribución de enteros uniforme (cada valor es igual de probable) en un intervalo de salida que es inclusivo-inclusivo.
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*IntType*\
-El tipo de resultado entero, el valor predeterminado es **int**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+@No__t_1 *IntType*
+El tipo de resultado entero, el valor predeterminado es **int**. Para ver los tipos posibles, vea [\<random >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución inclusiva-inclusiva que produce valores de un tipo entero especificado por el usuario con una distribución, de modo que todos los valores son igual de probables. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución inclusiva-inclusiva que produce valores de un tipo entero especificado por el usuario con una distribución, de modo que cada valor es igual de probable. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*un*\
+*un* \
 Límite inferior para los valores aleatorios (incluido).
 
-*b*\
+*b* \
 Límite superior para los valores aleatorios (incluido).
 
-*PARM*\
+\ *PARM*
 La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
 **Condición previa:** `a ≤ b`
 
-El primer constructor crea un objeto cuyo *valor almacenado contiene* el valor *a* y cuyo valor *b* almacenado contiene el valor *b*.
+El primer constructor *crea un objeto cuyo valor almacenado contiene* el valor *a* y cuyo valor *b* almacenado contiene el valor *b*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*un*\
+*un* \
 Límite inferior para los valores aleatorios (incluido).
 
-*b*\
+*b* \
 Límite superior para los valores aleatorios (incluido).
 
-*correcta*\
+\ *derecha*
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios

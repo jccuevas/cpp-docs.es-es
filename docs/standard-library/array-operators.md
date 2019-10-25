@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456762"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688469"
 ---
 # <a name="ltarraygt-operators"></a>Operadores de &lt;array&gt;
 
-El \<encabezado > de matriz incluye estas funciones de plantilla de comparación que no son miembros de la **matriz** .
+El encabezado \<array > incluye estas funciones de plantilla de comparación que no son miembros de la **matriz** .
 
 ||||
 |-|-|-|
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>  operator!=
 
 Comparación de matriz, no igual.
 
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*\
+@No__t_1 *Ty*
 El tipo de un elemento.
 
-*N*\
+*N* \
 Se refiere al tamaño de la matriz.
 
-*salido*\
+\ *izquierda*
 Contenedor izquierdo que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a>  operator&lt;
 
 Comparación de matriz, menor que.
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*\
+@No__t_1 *Ty*
 El tipo de un elemento.
 
-*N*\
+*N* \
 Se refiere al tamaño de la matriz.
 
-*salido*\
+\ *izquierda*
 Contenedor izquierdo que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla sobrecarga `operator<` para comparar dos objetos de clase de plantilla [clase array](../standard-library/array-class-stl.md). La función devuelve `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+La función de plantilla sobrecarga `operator<` para comparar dos objetos de clase de [matriz](../standard-library/array-class-stl.md)de plantilla de clase. La función devuelve `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*\
+@No__t_1 *Ty*
 El tipo de un elemento.
 
-*N*\
+*N* \
 Se refiere al tamaño de la matriz.
 
-*salido*\
+\ *izquierda*
 Contenedor izquierdo que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Comparación de matriz, igual.
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*\
+@No__t_1 *Ty*
 El tipo de un elemento.
 
-*N*\
+*N* \
 Se refiere al tamaño de la matriz.
 
-*salido*\
+\ *izquierda*
 Contenedor izquierdo que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla sobrecarga `operator==` para comparar dos objetos de clase de plantilla [clase array](../standard-library/array-class-stl.md). La función devuelve `equal(left.begin(), left.end(), right.begin())`.
+La función de plantilla sobrecarga `operator==` para comparar dos objetos de clase de [matriz](../standard-library/array-class-stl.md)de plantilla de clase. La función devuelve `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a>  operator&gt;
 
 Comparación de matriz, mayor que.
 
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*\
+@No__t_1 *Ty*
 El tipo de un elemento.
 
-*N*\
+*N* \
 Se refiere al tamaño de la matriz.
 
-*salido*\
+\ *izquierda*
 Contenedor izquierdo que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ty*\
+@No__t_1 *Ty*
 El tipo de un elemento.
 
-*N*\
+*N* \
 Se refiere al tamaño de la matriz.
 
-*salido*\
+\ *izquierda*
 Contenedor izquierdo que se va a comparar.
 
-*correcta*\
+\ *derecha*
 Contenedor derecho que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios

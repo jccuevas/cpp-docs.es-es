@@ -1,10 +1,10 @@
 ---
 title: _findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfindnext
 - _findnext
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - findnext
 - _wfindnext32i64
@@ -92,16 +95,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 083f0f1d383472c104a1e4fcb6f3139c7a9d9c88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333734"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957244"
 ---
-# <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
+# <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
-Buscar el nombre siguiente, si procede, que coincide con el *filespec* argumento en una llamada anterior a [_findfirst](findfirst-functions.md)y, a continuación, modifique la *fileinfo* contenido de la estructura en consecuencia.
+Busque el siguiente nombre, si lo hay, que coincida con el argumento *filespec* en una llamada anterior a [_findfirst](findfirst-functions.md)y, a continuación, modifique el contenido de la estructura *FileInfo* en consecuencia.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -166,29 +169,29 @@ Búfer de información de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. En caso contrario, devuelve -1 y establece **errno** en un valor que indica la naturaleza del error. En la siguiente tabla se muestran los posibles códigos de error.
+Si la operación se realiza correctamente, devuelve 0. De lo contrario, devuelve-1 y establece **errno** en un valor que indica la naturaleza del error. En la siguiente tabla se muestran los posibles códigos de error.
 
 |valor de errno|Condición|
 |-|-|
-| **EINVAL** | Parámetros no válidos: *fileinfo* era **NULL**. O bien, el sistema operativo ha devuelto un error inesperado. |
+| **EINVAL** | Parámetro no válido: *FileInfo* era **null**. O bien, el sistema operativo ha devuelto un error inesperado. |
 | **ENOENT** | No se han encontrado más archivos coincidentes. |
-| **ENOMEM** | No hay suficiente memoria o ha superado la longitud del nombre de archivo **MAX_PATH**. |
+| **ENOMEM** | Memoria insuficiente o la longitud del nombre de archivo superó **MAX_PATH**. |
 
 Si se pasa un parámetro no válido, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Debe llamar a [_findclose](findclose.md) cuando haya terminado con el **_findfirst** o **_findnext** función (o cualquiera de sus variantes). Así se liberan los recursos que usan estas funciones de la aplicación.
+Debe llamar a [_findclose](findclose.md) después de haber terminado de usar la función **_findfirst** o **_findnext** (o cualquier variante). Así se liberan los recursos que usan estas funciones de la aplicación.
 
-Las variaciones de estas funciones con el **w** prefijo son versiones de caracteres anchos; de lo contrario, son idénticas a las funciones de un solo byte correspondientes.
+Las variaciones de estas funciones con el prefijo **w** son versiones con caracteres anchos; de lo contrario, son idénticas a las funciones de un solo byte correspondientes.
 
-Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y tamaños de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tiempo usa el tipo; el segundo sufijo es **i32** o **i64**, que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits. Para obtener información sobre las versiones que admiten tipos de tiempo y tamaños de archivo de 32 bits y 64 bits, consulte la tabla siguiente. Las variaciones que usan un tipo de tiempo de 64 bits permiten expresar fechas de creación de archivos hasta las 23:59:59 horas del 31 de diciembre de 3000, UTC; mientras que las que usan un tipo de tiempo de 32 bits solo representan fechas hasta las 23:59:59 horas del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
+Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y tamaños de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tipo de tiempo utilizado. el segundo sufijo es **I32** o **i64**, que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits. Para obtener información sobre las versiones que admiten tipos de tiempo y tamaños de archivo de 32 bits y 64 bits, consulte la tabla siguiente. Las variaciones que usan un tipo de tiempo de 64 bits permiten expresar fechas de creación de archivos hasta las 23:59:59 horas del 31 de diciembre de 3000, UTC; mientras que las que usan un tipo de tiempo de 32 bits solo representan fechas hasta las 23:59:59 horas del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 
-A menos que tenga una razón concreta para usar las versiones que especifican explícitamente el tamaño de tiempo, use **_findnext** o **_wfindnext** o bien, si tiene que admitir tamaños de archivo mayores que 3 GB, use **_ findnexti64** o **_wfindnexti64**. Todas estas funciones usan el tipo de tiempo de 64 bits. En versiones anteriores, estas funciones usan un tipo de tiempo de 32 bits. Si se trata de un cambio importante para una aplicación, se podría definir **_USE_32BIT_TIME_T** para obtener el comportamiento anterior. Si **_USE_32BIT_TIME_T** está definido, **_findnext**, **_finnexti64** y sus correspondientes versiones Unicode usan un tiempo de 32 bits.
+A menos que tenga una razón concreta para usar las versiones que especifican el tamaño de tiempo de forma explícita, use **_findnext** o **_wfindnext** o, si necesita admitir tamaños de archivo superiores a 3 GB, use **_findnexti64** o **_wfindnexti64**. Todas estas funciones usan el tipo de tiempo de 64 bits. En versiones anteriores, estas funciones usan un tipo de tiempo de 32 bits. Si se trata de un cambio importante para una aplicación, puede definir **_USE_32BIT_TIME_T** para obtener el comportamiento anterior. Si se define **_USE_32BIT_TIME_T** , **_findnext**, **_finnexti64** y sus correspondientes versiones unicode usan un tiempo de 32 bits.
 
-### <a name="time-type-and-file-length-type-variations-of-findnext"></a>Variaciones de tipo de tiempo y tipo de longitud de archivo de _findnext
+### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>Variaciones de tipo de tiempo y tipo de longitud de archivo de _findnext
 
-|Funciones|**¿_USE_32BIT_TIME_T** definidos?|Tipo de tiempo|Tipo de longitud de archivo|
+|Funciones|¿ **_USE_32BIT_TIME_T** definido?|Tipo de tiempo|Tipo de longitud de archivo|
 |---------------|----------------------------------|---------------|----------------------|
 |**_findnext**, **_wfindnext**|No definida|64 bits|32 bits|
 |**_findnext**, **_wfindnext**|Definido|32 bits|32 bits|

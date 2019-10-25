@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458625"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688269"
 ---
-# <a name="collatebyname-class"></a>collate_byname (Clase)
+# <a name="collate_byname-class"></a>collate_byname (Clase)
 
-Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las convenciones de ordenación de cadenas.
+Una plantilla de clase derivada que describe un objeto que puede actuar como una faceta de intercalación de una configuración regional determinada, lo que permite la recuperación de información específica de un área cultural relativa a las convenciones de ordenación de cadenas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Locname*\
+@No__t_1 *_Locname*
 Una configuración regional con nombre.
 
-*_Refs*\
+@No__t_1 *_Refs*
 Un recuento de referencias inicial.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que puede actuar como una [faceta de configuración regional](../standard-library/locale-class.md#facet_class) de tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Su comportamiento viene determinado por el *_Locname*de configuración regional [con nombre](../standard-library/locale-class.md#name) . Cada constructor inicializa su objeto base con [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+La plantilla de clase describe un objeto que puede actuar como una [faceta de configuración regional](../standard-library/locale-class.md#facet_class) de tipo [collate](../standard-library/collate-class.md#collate) \<CharType >. Su comportamiento viene determinado por el *_Locname*de configuración regional [con nombre](../standard-library/locale-class.md#name) . Cada constructor inicializa su objeto base con [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Requisitos
 

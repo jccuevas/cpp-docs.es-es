@@ -16,10 +16,10 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 ms.openlocfilehash: a1c7bb070a75f4406556817163931f0707706c40
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69508127"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
@@ -46,7 +46,7 @@ Para obtener información reciente sobre cómo optimizar los controles ActiveX, 
 
 Para crear un control ActiveX de MFC, vea [crear un proyecto de control ActiveX](../mfc/reference/mfc-activex-control-wizard.md).
 
-Para más información, consulte:
+Para obtener más información, consulte:
 
 - [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
 
@@ -81,7 +81,7 @@ En la ilustración anterior se muestra también cómo los controles administran 
 
 Un control tiene dos estados básicos: activo e inactivo. Tradicionalmente, se distinguían por el hecho de que el control tuviera o no una ventana. Un control activo tenía una ventana; un control inactivo no la tenía. Con la introducción de la activación sin ventana, esta distinción ya no es universal, pero sigue aplicándose a muchos controles.
 
-Cuando un [control sin ventana](../mfc/providing-windowless-activation.md) se activa, invoca la captura del mouse, el foco de teclado, el desplazamiento y otros servicios de ventana desde su contenedor. También puede [proporcionar interacción con el mouse a controles](../mfc/providing-mouse-interaction-while-inactive.md)inactivos, así como crear controles que [esperan hasta que se activen para crear una ventana](../mfc/turning-off-the-activate-when-visible-option.md).
+Cuando un [control sin ventana](../mfc/providing-windowless-activation.md) se activa, invoca la captura del mouse, el foco de teclado, el desplazamiento y otros servicios de ventana desde su contenedor. También puede [proporcionar interacción con el mouse a controles inactivos](../mfc/providing-mouse-interaction-while-inactive.md), así como crear controles que [esperan hasta que se activen para crear una ventana](../mfc/turning-off-the-activate-when-visible-option.md).
 
 Cuando un control con una ventana se activa, puede interactuar completamente con el contenedor, el usuario y Windows. En la ilustración siguiente se muestran las rutas de comunicación entre el control ActiveX, el contenedor y el sistema operativo.
 
@@ -92,7 +92,7 @@ Procesamiento de mensajes de ventanas en un control ActiveX con ventanas (cuando
 
 La capacidad de serializar los datos, a la que a veces se hace referencia como persistencia, permite que el control escriba el valor de las propiedades en el almacenamiento persistente. Los controles pueden volver a crearse entonces si se lee el estado del objeto en el almacenamiento.
 
-Tenga en cuenta que un control no es responsable de obtener acceso al soporte de almacenamiento. En su lugar, el contenedor del control es responsable de proporcionar al control un medio de almacenamiento para usarlo en el momento adecuado. Para obtener más información sobre la serialización, vea [el artículo controles ActiveX de MFC: Serializando](../mfc/mfc-activex-controls-serializing.md). Para obtener información sobre cómo optimizar la serialización, vea [optimizar la persistencia y](../mfc/optimizing-persistence-and-initialization.md) la inicialización en controles ActiveX: Optimización.
+Tenga en cuenta que un control no es responsable de obtener acceso al soporte de almacenamiento. En su lugar, el contenedor del control es responsable de proporcionar al control un medio de almacenamiento para usarlo en el momento adecuado. Para obtener más información sobre la serialización, vea [el artículo controles ActiveX de MFC: Serializando](../mfc/mfc-activex-controls-serializing.md). Para obtener información sobre cómo optimizar la serialización, vea [optimizar la persistencia y la inicialización](../mfc/optimizing-persistence-and-initialization.md) en controles ActiveX: Optimización.
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a>Instalar herramientas y clases de controles ActiveX
 

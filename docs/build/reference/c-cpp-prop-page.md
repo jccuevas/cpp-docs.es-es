@@ -1,14 +1,14 @@
 ---
 title: Propiedades deC++ C/Project (Visual Studio)
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537565"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927745"
 ---
 # <a name="cc-property-pages"></a>Páginas deC++ propiedades de C/
 
@@ -119,7 +119,7 @@ Seleccione el nivel de expansión de la [función insertada](../../cpp/inline-fu
 
 - **Valor predeterminado**
 - Deshabilitado: deshabilita la expansión alineada, que está activada de forma predeterminada.
-- _ _ Inline solo expande las funciones marcadas como Inline, _ _ Inline, _ _ C++ forceinline o _ _ inline o, en una función miembro, definidas dentro de una declaración de clase.
+- _ _ **Inline solo** expande las funciones marcadas como Inline, _ _ Inline, _ _ C++ forceinline o _ _ inline o, en una función miembro, definidas dentro de una declaración de clase.
 - **Cualquier función apta** -expandes marcada como inline o _ _ inline y cualquier otra función que elija el compilador (la expansión se produce a discreción del compilador, que a menudo se conoce como inserción automática).
 
 ### <a name="enable-intrinsic-functions"></a>Habilitar funciones intrínsecas
@@ -221,9 +221,9 @@ Especifique la biblioteca en tiempo de ejecución para la vinculación. Establec
 **Posibilidad**
 
 - **Multiproceso** : hace que la aplicación use la versión estática multiproceso de la biblioteca en tiempo de ejecución.
-- Depuración multiproceso: define _ Debug y _ MT. Esta opción también hace que el compilador coloque el nombre de la biblioteca LIBCMTD.lib en el archivo .obj, así el vinculador usará LIBCMTD.lib para resolver los símbolos externos.
+- **Depuración multiproceso** : define _ Debug y _ MT. Esta opción también hace que el compilador coloque el nombre de la biblioteca LIBCMTD.lib en el archivo .obj, así el vinculador usará LIBCMTD.lib para resolver los símbolos externos.
 - **Dll multiproceso** : hace que la aplicación use la versión específica de multiproceso y de dll de la biblioteca en tiempo de ejecución. Define _MT y _DLL y hace que el compilador sitúe el nombre de la biblioteca MSVCRT.lib en el archivo .obj.
-- **Dll** de depuración multiproceso: define _ debug, _ MT y _DLL y hace que la aplicación use la versión de depuración multiproceso y específica de dll de la biblioteca en tiempo de ejecución. También hace que el compilador coloque el nombre de la biblioteca MSVCRTD.lib en el archivo .obj.
+- **Dll de depuración multiproceso** : define _ debug, _ MT y _DLL y hace que la aplicación use la versión de depuración multiproceso y específica de dll de la biblioteca en tiempo de ejecución. También hace que el compilador coloque el nombre de la biblioteca MSVCRTD.lib en el archivo .obj.
 
 ### <a name="struct-member-alignment"></a>Alineación de miembros de struct
 
@@ -314,7 +314,7 @@ Suprime o habilita las extensiones de lenguaje. Establece [/za](za-ze-disable-la
 
 Habilita o suprime el modo de cumplimiento. Establece [/permissive-](permissive-standards-conformance.md).
 
-### <a name="treat-wchart-as-built-in-type"></a>Tratar WChar_t como tipo integrado
+### <a name="treat-wchar_t-as-built-in-type"></a>Tratar WChar_t como tipo integrado
 
 Cuando se especifica, el tipo wchar_t se convierte en un tipo nativo que se asigna a __wchar_t de la misma manera que Short se asigna a __int16. [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) está activado de forma predeterminada.
 

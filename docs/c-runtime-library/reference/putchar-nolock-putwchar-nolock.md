@@ -1,10 +1,10 @@
 ---
 title: _putchar_nolock, _putwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putchar_nolock
 - _putwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - putwchar_nolock
 - _puttchar_nolock
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-ms.openlocfilehash: 2a70c2363b5ae35faab9a0167200366b286408b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dba6537c5fb7ec66a812f2c34831b1b908fc3e4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358169"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949951"
 ---
-# <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
+# <a name="_putchar_nolock-_putwchar_nolock"></a>_putchar_nolock, _putwchar_nolock
 
 Escribe un carácter en **stdout** sin bloquear el subproceso.
 
@@ -65,7 +68,7 @@ Vea **putchar, putwchar**.
 
 ## <a name="remarks"></a>Comentarios
 
-**putchar_nolock** y **_putwchar_nolock** son idénticas a las versiones sin el **_nolock** sufijo, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**putchar_nolock** y **_putwchar_nolock** son idénticas a las versiones sin el sufijo **_nolock** , salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -80,7 +83,7 @@ Vea **putchar, putwchar**.
 |**_putchar_nolock**|\<stdio.h>|
 |**_putwchar_nolock**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 This is the line of output

@@ -1,14 +1,14 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499453"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947205"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -173,12 +176,12 @@ Devuelve *strDest*. No se reserva ningún valor devuelto para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-La función **strncpy** copia los caracteres de recuento inicial de *StrSource* en *strDest* y devuelve *strDest*. Si el recuento es menor o igual que la longitud de *strSource*, un carácter nulo no se anexa automáticamente a la cadena copiada. Si el recuento es mayor que la longitud de *strSource*, la cadena de destino se rellena con caracteres nulos hasta el recuento de longitud. El comportamiento de **strncpy** es indefinido si las cadenas de origen y de destino se superponen.
+La **función strncpy** copia los caracteres *de recuento* inicial de *StrSource* en *strDest* y devuelve *strDest*. Si el *recuento* es menor o igual que la longitud de *strSource*, un carácter nulo no se anexa automáticamente a la cadena copiada. Si el *recuento* es mayor que la longitud de *strSource*, la cadena de destino se rellena con caracteres nulos hasta el *recuento*de longitud. El comportamiento de **strncpy** es indefinido si las cadenas de origen y de destino se superponen.
 
 > [!IMPORTANT]
 > **strncpy** no comprueba si hay espacio suficiente en *strDest*; Esto hace que sea una posible causa de saturaciones del búfer. El argumento *Count* limita el número de caracteres copiados; no es un límite en cuanto al tamaño de *strDest*. Consulte el ejemplo siguiente. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
-Si *strDest* o *strSource* es un puntero **nulo** , o si el recuento es menor o igual que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
+Si *strDest* o *strSource* es un puntero **nulo** , o si el *recuento* es menor o igual que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
 **wcsncpy** y **_mbsncpy** son versiones de caracteres anchos y multibyte de **strncpy**. Los argumentos y el valor devuelto de **wcsncpy** y **_mbsncpy** varían en consecuencia. Por lo demás, estas seis funciones se comportan exactamente igual.
 
@@ -262,7 +265,7 @@ int main() {
 }
 ```
 
-Salida
+Resultados
 
 ```Output
 ZZ

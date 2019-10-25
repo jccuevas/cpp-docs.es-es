@@ -2,22 +2,22 @@
 title: Enumeraciones (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3bdcff03872dcfe83f0be5752cec4f567fbc6b72
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345816"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740214"
 ---
 # <a name="enums-ccx"></a>Enumeraciones (C++/CX)
 
-C++ / c++ / CX admite el `public enum class` palabra clave, que es análogo a un estándar de C++ `scoped  enum`. Cuando utilices un enumerador que se declara mediante la palabra clave `public enum class` , debes usar el identificador de enumeración para determinar el ámbito de cada valor de enumerador.
+C++/CX admite la `public enum class` palabra clave, que se análogo a un C++ `scoped  enum`estándar. Cuando utilices un enumerador que se declara mediante la palabra clave `public enum class` , debes usar el identificador de enumeración para determinar el ámbito de cada valor de enumerador.
 
 ### <a name="remarks"></a>Comentarios
 
 Una `public enum class` que no tiene un especificador de acceso, como `public`, se trata como una [enumeración con ámbito](../cpp/enumerations-cpp.md)de C++ estándar.
 
-Un `public enum class` o `public enum struct` declaración puede tener un tipo subyacente de cualquier tipo entero aunque el propio tiempo de ejecución de Windows requiere que el tipo sea int32, o uint32 para una enumeración de marcas. La sintaxis siguiente describe las partes de un objeto `public enum class` o `public enum struct`.
+Una `public enum class` declaración `public enum struct` o puede tener un tipo subyacente de cualquier tipo entero, aunque el propio Windows Runtime requiere que el tipo sea Int32 o UInt32 para una enumeración de marcas. La sintaxis siguiente describe las partes de un objeto `public enum class` o `public enum struct`.
 
 En este ejemplo se muestra cómo definir una clase de enumeración pública:
 
@@ -40,5 +40,5 @@ En el ejemplo siguiente se muestra cómo convertirla a equivalentes numéricos y
 ## <a name="see-also"></a>Vea también
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)

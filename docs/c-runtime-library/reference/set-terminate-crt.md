@@ -1,9 +1,9 @@
 ---
 title: set_terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356451"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948370"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-Instala su propia rutina de finalización para ser llamado por **finalizar**.
+Instala su propia rutina de finalización a la que debe llamar **Terminate**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,24 +50,24 @@ Puntero a una función de finalización que se escribe.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la función anterior registrada por **set_terminate** para que la función anterior se puede restaurar más adelante. Si no se ha establecido ninguna función anterior, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
+Devuelve un puntero a la función anterior registrada por **set_terminate** para que la función anterior se pueda restaurar más adelante. Si no se ha establecido ninguna función anterior, el valor devuelto se puede utilizar para restaurar el comportamiento predeterminado; Este valor puede ser **null**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **set_terminate** función instalaciones *termFunction* como la función llamada por **finalizar**. **set_terminate** se usa con C++ control de excepciones y se puede llamar en cualquier momento en el programa antes de que se produce la excepción. **Finalizar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamar a **set_terminate** con el nombre de la función como su argumento. **Finalizar** llama a la última función especificada como argumento a **set_terminate**. Después de llevar a cabo cualquier tarea de limpieza, de deseada *termFunction* debe salir del programa. Si no existe (si se devuelve a su llamador), [anular](abort.md) se llama.
+La función **set_terminate** instala *termFunction* como la función a la que llama **Terminate**. **set_terminate** se usa con C++ el control de excepciones y se puede llamar en cualquier punto del programa antes de que se produzca la excepción. la instrucción **Terminate** llama a [Abort](abort.md) de forma predeterminada. Puede cambiar este valor predeterminado si escribe su propia función de finalización y llama a **set_terminate** con el nombre de la función como su argumento. **Terminate** llama a la última función especificada como argumento para **set_terminate**. Después de realizar las tareas de limpieza deseadas, *termFunction* debe salir del programa. Si no sale (si vuelve a su llamador), se llama a [Abort](abort.md) .
 
 En un entorno multiproceso, las funciones de finalización se mantienen por separado para cada subproceso. Cada subproceso nuevo debe instalar su propia función de finalización. Por lo tanto, cada subproceso se encarga de su propio control de finalización.
 
-El **terminate_function** tipo está definido en el controlador de eventos. H como un puntero a una función de finalización definida por el usuario, *termFunction* que devuelve **void**. La función personalizada *termFunction* puede tomar ningún argumento y no debe devolver al llamador. Si es así, [anular](abort.md) se llama. No se puede producir una excepción desde *termFunction*.
+El tipo **terminate_function** se define en EH. H como puntero a una función de finalización definida por el usuario, *termFunction* que devuelve **void**. La función personalizada *termFunction* no puede tomar ningún argumento y no debe volver a su llamador. Si es así, se llama a [Abort](abort.md) . Una excepción no se puede iniciar desde dentro de *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> El **set_terminate** función solo funciona fuera del depurador.
+> La función **set_terminate** solo funciona fuera del depurador.
 
-Solo hay un **set_terminate** controlador para todos los dinámicamente exe y DLL vinculados; incluso si se llama a **set_terminate** el controlador puede reemplazarse por otro, o que puede sustituir un controlador establecido por otro Archivo DLL o EXE.
+Hay un único controlador de **set_terminate** para todos los archivos dll o exe vinculados dinámicamente. Aunque llame a **set_terminate** , es posible que el controlador se reemplace por otro, o puede que esté reemplazando un controlador establecido por otro archivo dll o exe.
 
 ## <a name="requirements"></a>Requisitos
 

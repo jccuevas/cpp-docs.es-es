@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449478"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688229"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Esta clase de plantilla especializada explícitamente describe un objeto que almacena un par ordenado de objetos, ambos de tipo **Long Double**, el primero que representa la parte real de un número complejo y el segundo representa la parte imaginaria.
+Esta plantilla de clase especializada explícitamente describe un objeto que almacena un par ordenado de objetos, ambos de tipo **Long Double**, el primero que representa la parte real de un número complejo y el segundo representa la parte imaginaria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,19 +32,19 @@ public:
 complex(
     constexpr complex<long double>& complexNum);
 
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_RealVal*\
+@No__t_1 *_RealVal*
 Valor de tipo **long double** de la parte real del número complejo que se está construyendo.
 
-*_ImagVal*\
+@No__t_1 *_ImagVal*
 Valor de tipo **Long Double** para la parte imaginaria del número complejo que se está construyendo.
 
-*complexNum*\
+\ *complexNum*
 Número complejo de tipo **Double** o de tipo **float** cuyas partes reales e imaginarias se usan para inicializar un número complejo de tipo **Long Double** que se va a construir.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -53,11 +53,11 @@ Un número complejo de tipo **Long Double**.
 
 ## <a name="remarks"></a>Comentarios
 
-La especialización explícita de la clase `complex` de plantilla en una clase compleja de tipo **Long Double** solo se diferencia de la clase de plantilla en los constructores que define. Se permite que la conversión de **Long Double** a **float** sea implícita, pero la conversión de **Double** a **Long Double** debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
+La especialización explícita de la plantilla de clase `complex` a una clase compleja de tipo **Long Double** difiere de la plantilla de clase solo en los constructores que define. Se permite que la conversión de **Long Double** a **float** sea implícita, pero la conversión de **Double** a **Long Double** debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
 
-Para obtener más información sobre la clase `complex` de plantilla y sus miembros, vea [Complex (clase](../standard-library/complex-class.md)).
+Para obtener más información sobre la plantilla de clase `complex` y sus miembros, vea [Complex (clase](../standard-library/complex-class.md)).
 
-**Específico de Microsoft**: Los tipos **Long Double** y **Double** tienen la misma representación, pero son tipos distintos. Para obtener más información, vea [tipos fundamentales](../cpp/fundamental-types-cpp.md).
+**Específico de Microsoft**: los tipos **Long Double** y **Double** tienen la misma representación, pero son tipos distintos. Para obtener más información, vea [tipos fundamentales](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 

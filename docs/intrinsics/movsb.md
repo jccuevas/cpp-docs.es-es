@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263820"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217279"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Específicos de Microsoft**
 
-Genera una cadena de mover (`rep movsb`) instrucción.
+Genera una instrucción Move String`rep movsb`().
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,16 +31,16 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
-*Destino*<br/>
-[out] Un puntero al destino de la copia.
+*Destino*\
+enuncia Puntero al destino de la copia.
 
-*Origen*<br/>
-[in] Un puntero al origen de la copia.
+*Source*\
+de Puntero al origen de la copia.
 
-*Recuento*<br/>
-[in] El número de bytes para copiar.
+*Contabiliza*\
+de Número de bytes que se van a copiar.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,17 +48,17 @@ void __movsb(
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
-El resultado es que la primera `Count` bytes señalada por `Source` se copian en el `Destination` cadena.
+El resultado es que los primeros `Count` bytes `Source` a los que apunta se copian `Destination` en la cadena.
 
 Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -84,4 +84,4 @@ A big black dog. A big black dog.
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

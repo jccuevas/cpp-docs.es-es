@@ -3852,12 +3852,16 @@
           href: compiler-warnings/compiler-warning-level-4-c4571.md
         - name: Advertencia del compilador (nivel 1) C4572
           href: compiler-warnings/compiler-warning-level-1-c4572.md
+        - name: Advertencia del compilador (nivel 1) C4577
+          href: compiler-warnings/compiler-warning-level-1-c4577.md
         - name: Advertencia del compilador (nivel 3) C4580
           href: compiler-warnings/compiler-warning-level-3-c4580.md
         - name: Advertencia del compilador (nivel 1) C4581
           href: compiler-warnings/compiler-warning-level-1-c4581.md
         - name: Advertencia del compilador (nivel 1) C4584
           href: compiler-warnings/compiler-warning-level-1-c4584.md
+        - name: Advertencia del compilador (nivel 4) C4596
+          href: compiler-warnings/c4596.md
     - name: Advertencias del compilador de C4600 a C4799
       expanded: false
       items:
@@ -4226,6 +4230,8 @@
           href: compiler-warnings/compiler-warning-level-1-c4965.md
         - name: Advertencia del compilador C4972
           href: compiler-warnings/compiler-warning-c4972.md
+        - name: Advertencia del compilador C4984
+          href: compiler-warnings/compiler-warning-c4984.md
         - name: Advertencia del compilador (nivel 4) C4985
           href: compiler-warnings/compiler-warning-level-4-c4985.md
         - name: Advertencia del compilador C4986
@@ -4244,6 +4250,8 @@
           href: compiler-warnings/c5045.md
         - name: Advertencia del compilador (nivel 2) C5046
           href: compiler-warnings/c5046.md
+        - name: Advertencia del compilador (nivel 1) C5105
+          href: compiler-warnings/c5105.md
 - name: Advertencias del compilador por versión del compilador
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
 - name: Advertencias del compilador desactivadas de forma predeterminada
@@ -4550,6 +4558,8 @@
       href: tool-errors/linker-tools-error-lnk1318.md
     - name: Error de las herramientas del vinculador LNK1332
       href: tool-errors/linker-tools-error-lnk1332.md
+    - name: Error de las herramientas del vinculador LNK1352
+      href: tool-errors/linker-tools-error-lnk1352.md
     - name: Error de las herramientas del vinculador LNK1561
       href: tool-errors/linker-tools-error-lnk1561.md
     - name: Error de las herramientas del vinculador LNK2001

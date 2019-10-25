@@ -1,12 +1,12 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstof
 - _ttof
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341358"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939571"
 ---
-# <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
+# <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
 Convertir una cadena a un valor double.
 
@@ -86,9 +89,9 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el **doble** valor genera al interpretar los caracteres de entrada como un número. El valor devuelto es 0.0 si la entrada no se puede convertir en un valor de ese tipo.
+Cada función devuelve el valor **Double** generado al interpretar los caracteres de entrada como un número. El valor devuelto es 0.0 si la entrada no se puede convertir en un valor de ese tipo.
 
-En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si el parámetro pasado es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
+En todos los casos fuera del intervalo, **errno** se establece en **ERANGE**. Si el parámetro pasado es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven 0.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -96,15 +99,15 @@ Estas funciones convierten una cadena de caracteres en un valor de punto flotant
 
 La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que termina la cadena.
 
-El *str* argumento **atof** y **_wtof** tiene el formato siguiente:
+El argumento *Str* para **atof** y **_wtof** tiene el formato siguiente:
 
-[*espacio en blanco*] [*sesión*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **E** } [*sesión*]*dígitos*]
+[*espacio en blanco*] [*signo*] [*dígitos*] [ __.__ *dígitos*] [{**e** &#124; **e** } [*signo*]*dígitos*]
 
-Un *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *sesión* sea más (+) o menos (-); y *dígitos* son uno o más dígitos decimales. Si no aparece ningún dígito antes del separador decimal, debe aparecer al menos uno después. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra inicial (**e**, o **E**) y un entero decimal con signo optativo.
+Un espacio en *blanco* consta de caracteres de espacio o tabulación, que se omiten; el *signo* es más (+) o menos (-); y los *dígitos* son uno o más dígitos decimales. Si no aparece ningún dígito antes del separador decimal, debe aparecer al menos uno después. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra de presentación (**e**, o **e**) y un entero decimal con signo opcional.
 
-Las versiones UCRT de estas funciones no admiten la conversión de estilo Fortran (**d.** o **d.**) letras como exponente. Esta extensión no estándar era compatible con versiones anteriores de CRT y puede que sea un cambio decisivo para el código.
+Las versiones de UCRT de estas funciones no admiten la conversión de Letras de exponente de estilo Fortran (**d** o **d**). Esta extensión no estándar era compatible con versiones anteriores de CRT y puede que sea un cambio decisivo para el código.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el *configuración regional* parámetro pasado en lugar de la configuración regional actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de *configuración regional* que se pasa en lugar de la configuración regional actual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -122,7 +125,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra cómo se pueden convertir números almacenados como cadenas en valores numéricos con el **atof** y **_atof_l** funciones.
+Este programa muestra cómo se pueden convertir los números almacenados como cadenas en valores numéricos mediante las funciones **atof** y **_atof_l** .
 
 ```C
 // crt_atof.c

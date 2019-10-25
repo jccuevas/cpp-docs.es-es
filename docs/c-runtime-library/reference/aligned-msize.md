@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize
 - aligned_msize
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 922224dc81858076770a36551df26c89940b3282
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341930"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943912"
 ---
-# <a name="alignedmsize"></a>_aligned_msize
+# <a name="_aligned_msize"></a>_aligned_msize
 
 Devuelve el tamaño de un bloque de memoria asignado en el montón.
 
@@ -61,11 +64,11 @@ Devuelve el tamaño (en bytes) de un entero sin signo.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_aligned_msize** función devuelve el tamaño, en bytes, del bloque de memoria asignada por una llamada a [_aligned_malloc](aligned-malloc.md) o [_aligned_realloc](aligned-realloc.md). El *alineación* y *desplazamiento* valores deben ser igual que los valores pasados a la función que asignó el bloque.
+La función **_aligned_msize** devuelve el tamaño, en bytes, del bloque de memoria asignado por una llamada a [_aligned_malloc](aligned-malloc.md) o [_aligned_realloc](aligned-realloc.md). Los valores de *alineación* y *desplazamiento* deben ser los mismos que los valores pasados a la función que asignó el bloque.
 
-Cuando la aplicación se vincula con una versión de depuración de las bibliotecas de tiempo de ejecución de C, **_aligned_msize** se resuelve como [_aligned_msize_dbg](aligned-msize-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
+Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución de C, **_aligned_msize** se resuelve como [_aligned_msize_dbg](aligned-msize-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Esta función valida su parámetro. Si *memblock* es un puntero nulo o *alineación* no es una potencia de 2, **_msize** invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece **errno** a **EINVAL** y devuelve -1.
+Esta función valida su parámetro. Si *memblock* es un puntero nulo o la *alineación* no es una potencia de 2, **_msize** invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece **errno** en **EINVAL** y devuelve-1.
 
 ## <a name="requirements"></a>Requisitos
 

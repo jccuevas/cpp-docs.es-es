@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: Modificación de las propiedades y los destinos sin cambiar el archivo de proyecto
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: "Clang/LLVM en proyectos de Visual\_Studio (MSBuild)"
+          href: build/clang-support-msbuild.md
         - name: Bibliotecas de referencia y los componentes en tiempo de compilación
           href: build/adding-references-in-visual-cpp-projects.md
         - name: Organización de archivos de salida del proyecto
@@ -86,6 +88,8 @@
           href: build/cppproperties-schema-reference.md
         - name: Referencia de esquema Tasks.vs.json (C++)
           href: build/tasks-vs-json-schema-reference-cpp.md
+        - name: Referencia de esquema Launch.vs.json (C++)
+          href: build/launch-vs-schema-reference-cpp.md
     - name: Proyectos de CMake
       expanded: false
       items:
@@ -405,6 +409,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Archivo de proyecto de ejemplo
                   href: build/reference/project-files.md
+                - name: Estructura de archivo .vcxproj.filters
+                  href: build/reference/vcxproj-filters-files.md
             - name: Páginas de propiedades del proyecto de C++
               expanded: false
               items:
@@ -422,15 +428,15 @@
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Páginas de propiedades de C/C++
                   href: build/reference/c-cpp-prop-page.md
-                - name: Páginas de propiedades Vinculador
+                - name: páginas de propiedades Vinculador
                   href: build/reference/linker-property-pages.md
                 - name: Páginas de propiedades Línea de comandos
                   href: build/reference/command-line-property-pages.md
-                - name: Página de propiedades NMake
+                - name: NMake (página de propiedades)
                   href: build/reference/nmake-property-page.md
-                - name: Herramienta Manifiesto (Páginas de propiedades)
+                - name: páginas de propiedades de la herramienta Manifiesto
                   href: build/reference/manifest-tool-property-pages.md
-                - name: Páginas de propiedades Recursos
+                - name: páginas de propiedades Recursos
                   href: build/reference/resources-property-pages.md
                 - name: Página de propiedades Recursos administrados
                   href: build/reference/managed-resources-property-page.md
@@ -532,6 +538,10 @@
                       href: build/reference/errorreport-report-internal-compiler-errors.md
                     - name: /execution/charset (Establecer el juego de caracteres de ejecución)
                       href: build/reference/execution-charset-set-execution-character-set.md
+                    - name: '/experimental:module'
+                      href: build/reference/experimental-module.md
+                    - name: '/experimental:preprocessor'
+                      href: build/reference/experimental-preprocessor.md
                     - name: /F (Establecer el tamaño de la pila)
                       href: build/reference/f-set-stack-size.md
                     - name: /F (Opciones del archivo de resultados)
@@ -786,6 +796,8 @@
                       href: build/reference/zf.md
                     - name: /Zg (Generar prototipos de función)
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH (Algoritmo hash para la suma de comprobación en la información de depuración)
+                      href: build/reference/zh.md
                     - name: /Zl (Omitir nombres de biblioteca predeterminada)
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm (Especificar el límite de asignación de memoria del encabezado precompilado)
@@ -944,6 +956,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH (Directorios de bibliotecas adicionales)
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO (Nombre del directorio de reproducción de vínculo)
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET (Nombre del archivo de reproducción de vínculo)
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG (Generación de código en tiempo de enlace)
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE (Especificar la plataforma de destino)
@@ -1513,6 +1529,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: Navegación en código C++
           href: ide/navigate-code-cpp.md
+        - name: Establecer las preferencias de codificación de C++
+          href: ide/how-to-set-preferences.md
         - name: Colaboración mediante Live Share para C++
           href: ide/live-share-cpp.md
         - name: Cambiar firma
@@ -1950,7 +1968,7 @@
               href: cppcx/delegates-c-cx.md
             - name: Excepciones
               href: cppcx/exceptions-c-cx.md
-            - name: Eventos
+            - name: Events
               href: cppcx/events-c-cx.md
             - name: Conversión
               href: cppcx/casting-c-cx.md
@@ -2951,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Tipos enteros
                           href: c-language/integer-types.md
-                        - name: Límites de enteros de C++
+                        - name: Límites de enteros de C y C++
                           href: c-language/cpp-integer-limits.md
                     - name: Constantes de caracteres de C
                       expanded: false
@@ -4727,10 +4745,10 @@
                       href: preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md
                     - name: '#import (Directiva) (C++)'
                       href: preprocessor/hash-import-directive-cpp.md
-                    - name: '#import (Atributos) (C++)'
+                    - name: '#import (atributos) (C++)'
                       expanded: false
                       items:
-                        - name: '#import (Atributos) (C++)'
+                        - name: '#import (atributos) (C++)'
                           href: preprocessor/hash-import-attributes-cpp.md
                         - name: auto_rename
                           href: preprocessor/auto-rename.md
@@ -4792,7 +4810,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef (Directiva) (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using (directiva) (C++)'
+                    - name: '#using (directiva) (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: Operadores de preprocesador
                   expanded: false
@@ -4801,7 +4819,7 @@
                       href: preprocessor/preprocessor-operators.md
                     - name: 'Operador de conversión a cadenas (#)'
                       href: preprocessor/stringizing-operator-hash.md
-                    - name: 'Operador de conversión a caracteres (#@)'
+                    - name: 'Operador de generación de caracteres (#@)'
                       href: preprocessor/charizing-operator-hash-at.md
                     - name: 'Operador de pegado de token (##)'
                       href: preprocessor/token-pasting-operator-hash-hash.md
@@ -4832,7 +4850,7 @@
               items:
                 - name: Directivas pragma y la palabra clave __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
-                - name: alloc_text (Pragma)
+                - name: alloc_text (pragma)
                   href: preprocessor/alloc-text.md
                 - name: auto_inline (Pragma)
                   href: preprocessor/auto-inline.md
@@ -6237,7 +6255,7 @@
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: in
+                - name: en
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6387,8 +6405,6 @@
                   expanded: false
                   items:
                     - name: Archivos y secuencias
-                      href: c-runtime-library/files-and-streams.md
-                    - name: Secuencias binarias y de texto
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Secuencias anchas y de bytes
                       href: c-runtime-library/byte-and-wide-streams.md
@@ -8985,7 +9001,7 @@
                       href: standard-library/shared-ptr-class.md
                     - name: unique_ptr (Clase)
                       href: standard-library/unique-ptr-class.md
-                    - name: weak_ptr (Clase)
+                    - name: weak_ptr (clase)
                       href: standard-library/weak-ptr-class.md
                 - name: <memory_resource>
                   expanded: false
@@ -9063,7 +9079,7 @@
                   items:
                     - name: <ostream>
                       href: standard-library/ostream.md
-                    - name: basic_ostream (Clase)
+                    - name: basic_ostream (clase)
                       href: standard-library/basic-ostream-class.md
                     - name: funciones<ostream>
                       href: standard-library/ostream-functions.md
@@ -9624,7 +9640,7 @@
                       href: standard-library/slice-array-class.md
                     - name: valarray (Clase)
                       href: standard-library/valarray-class.md
-                    - name: valarray<bool> (Clase)
+                    - name: valarray<bool> (clase)
                       href: standard-library/valarray-bool-class.md
                 - name: <variant>
                   expanded: false
@@ -9642,7 +9658,7 @@
                   items:
                     - name: <vector>
                       href: standard-library/vector.md
-                    - name: vector (Clase)
+                    - name: vector (clase)
                       href: standard-library/vector-class.md
                     - name: vector<bool> (Clase)
                       expanded: false
@@ -9867,10 +9883,10 @@
               href: standard-library/regular-expressions-cpp.md
             - name: Exploración del sistema de archivos
               href: standard-library/file-system-navigation.md
-        - name: Biblioteca SafeInt
+        - name: SafeInt (biblioteca)
           expanded: false
           items:
-            - name: Biblioteca SafeInt
+            - name: SafeInt (biblioteca)
               href: safeint/safeint-library.md
             - name: SafeInt (Clase)
               href: safeint/safeint-class.md
@@ -10409,7 +10425,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: SchedulerPolicy (Clase)
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: simple_partitioner (Clase)
+                        - name: simple_partitioner (clase)
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: single_assignment (Clase)
                           href: parallel/concrt/reference/single-assignment-class.md

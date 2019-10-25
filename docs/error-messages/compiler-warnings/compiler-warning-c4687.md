@@ -6,28 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83f5c535f9cf252783110838c181c88c8b0096ee
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311337"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631610"
 ---
 # <a name="compiler-warning-c4687"></a>Advertencia del compilador C4687
 
-'class': una clase abstracta sellada no puede implementar una interfaz 'interface'
+> '*Class*': una clase abstracta sellada no puede implementar una interfaz '*interface*'
 
-Normalmente, un tipo sealed abstracto sólo es útil para contener las funciones miembro estáticas.
+## <a name="remarks"></a>Comentarios
 
-Para obtener más información, consulte [abstracta](../../extensions/abstract-cpp-component-extensions.md)y [sealed](../../extensions/sealed-cpp-component-extensions.md).
+Un tipo abstracto sellado normalmente solo es útil para mantener las funciones miembro estáticas.
 
-C4687 se emite como un error de forma predeterminada. Puede suprimir C4687 con la [advertencia](../../preprocessor/warning.md) pragma. Si está seguro de que desea implementar una interfaz en un tipo sealed abstracto, puede suprimir la advertencia C4687.
+Para obtener más información, vea [abstract](../../extensions/abstract-cpp-component-extensions.md) y [Sealed](../../extensions/sealed-cpp-component-extensions.md).
+
+C4687 se emite como un error de forma predeterminada. Puede suprimir C4687 con la pragma [Warning](../../preprocessor/warning.md) . Si está seguro de que desea implementar una interfaz en un tipo abstracto sellado, puede suprimir C4687.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia C4687.
+En el ejemplo siguiente se genera C4687.
 
-```
+```cpp
 // C4687.cpp
 // compile with: /clr /c
 interface class A {};

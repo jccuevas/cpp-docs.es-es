@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453112"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688238"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -35,19 +35,19 @@ constexpr complex(
 
 constexpr complex(
     const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_RealVal*\
+@No__t_1 *_RealVal*
 Valor de tipo **float** de la parte real del número complejo que se está construyendo.
 
-*_ImagVal*\
+@No__t_1 *_ImagVal*
 Valor de tipo **float** de la parte imaginaria del número complejo que se está construyendo.
 
-*complexNum*\
+\ *complexNum*
 Número complejo de tipo **Double** o de tipo **Long Double** cuyas partes reales e imaginarias se usan para inicializar un número complejo de tipo **float** que se está construyendo.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -56,9 +56,9 @@ Número complejo de tipo **float**.
 
 ## <a name="remarks"></a>Comentarios
 
-La especialización explícita de la clase de plantilla compleja en una clase compleja de tipo **float** solo se distingue de la clase de plantilla en los constructores que define. Se permite que la conversión de **float** a **Double** sea implícita, pero la conversión menos segura de **float** a **Long Double** debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
+La especialización explícita de la plantilla de clase compleja en una clase compleja de tipo **float** difiere de la plantilla de clase solo en los constructores que define. Se permite que la conversión de **float** a **Double** sea implícita, pero la conversión menos segura de **float** a **Long Double** debe ser **explícita**. El uso de la conversión **explícita** descarta el inicio con la conversión de tipos mediante sintaxis de asignación.
 
-Para obtener más información sobre la clase de plantilla `complex`, vea [complex (Clase)](../standard-library/complex-class.md). Para obtener una lista de los miembros de la clase de plantilla `complex`, vea .
+Para obtener más información sobre la plantilla de clase `complex`, vea [Complex (clase](../standard-library/complex-class.md)). Para obtener una lista de los miembros de la plantilla de clase `complex`, vea.
 
 ## <a name="example"></a>Ejemplo
 

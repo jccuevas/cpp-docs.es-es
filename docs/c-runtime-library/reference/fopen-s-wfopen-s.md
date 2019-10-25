@@ -1,10 +1,10 @@
 ---
 title: fopen_s, _wfopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen_s
 - fopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen_s
 - _tfopen_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: e4ccce3c4a4fe1e327b7830ef03f6ab69f2d7814
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 2a400918a171c0009e40be8a20b814e8ded336ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376221"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957134"
 ---
-# <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
+# <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
 Abre un archivo. Estas versiones de [fopen, _wfopen](fopen-wfopen.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -138,7 +141,7 @@ El *modo* de cadena de caracteres especifica el tipo de acceso solicitado para e
 | **"w+"** | Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido. |
 | **"a+"** | Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe. |
 
-Cuando un archivo se abre mediante el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición mediante [fseek](fseek-fseeki64.md) o [](rewind.md)rebobinar, pero siempre se mueve al final del archivo antes de que se realice cualquier operación de escritura para que los datos existentes no se puedan sobrescribir.
+Cuando un archivo se abre mediante el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede cambiar de posición mediante [fseek](fseek-fseeki64.md) o [rewind](rewind.md), pero siempre se mueve al final del archivo antes de que se realice cualquier operación de escritura para que los datos existentes no se puedan sobrescribir.
 
 El modo **"a"** no quita el marcador EOF antes de anexar al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. El modo **"a +"** quita el marcador EOF antes de anexar al archivo. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El modo **"a +"** es necesario para anexar a un archivo de secuencia que se termina con el marcador EOF Ctrl + Z.
 

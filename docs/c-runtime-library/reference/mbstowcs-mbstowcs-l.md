@@ -1,10 +1,10 @@
 ---
 title: mbstowcs, _mbstowcs_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbstowcs
 - _mbstowcs_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbstowcs
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: cae1034d0bcb9789f5cb709399d4992de44cae9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3df851b08edfa9dfe5bf9b42b9abfd45a8939606
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499778"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952032"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
@@ -85,11 +88,11 @@ Configuración regional que se va a usar.
 Si **mbstowcs** convierte correctamente la cadena de origen, devuelve el número de caracteres multibyte convertidos. Si el argumento *wcstr* es **null**, la función devuelve el tamaño necesario (en caracteres anchos) de la cadena de destino. Si **mbstowcs** encuentra un carácter multibyte no válido, devuelve-1. Si el valor devuelto es *Count*, la cadena de caracteres anchos no termina en NULL.
 
 > [!IMPORTANT]
-> Asegúrese de que *wcstr* y *mbstr* no se superponen y que el recuento refleja correctamente el número de caracteres multibyte que se van a convertir.
+> Asegúrese de que *wcstr* y *mbstr* no se superponen y que el *recuento* refleja correctamente el número de caracteres multibyte que se van a convertir.
 
 ## <a name="remarks"></a>Comentarios
 
-La función **mbstowcs** convierte hasta un número máximo de caracteres multibyte de recuento a los que apunta *mbstr* a una cadena de caracteres anchos correspondientes que vienen determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por *wcstr*. El resultado es similar a una serie de llamadas a [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** detecta el carácter nulo de un solo byte (' \ 0 ') antes o cuando se produce el recuento, convierte el carácter nulo en un carácter nulo de caracteres anchos (L ' \ 0 ') y se detiene. Por lo tanto, la cadena de caracteres anchos en *wcstr* está terminada en NULL solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento es indefinido.
+La función **mbstowcs** convierte hasta un número máximo de caracteres multibyte de *recuento* a los que apunta *mbstr* a una cadena de caracteres anchos correspondientes que vienen determinados por la configuración regional actual. Almacena la cadena de caracteres anchos resultante en la dirección representada por *wcstr*. El resultado es similar a una serie de llamadas a [mbtowc](mbtowc-mbtowc-l.md). Si **mbstowcs** detecta el carácter nulo de un solo byte (' \ 0 ') antes o cuando se produce el *recuento* , convierte el carácter nulo en un carácter nulo de caracteres anchos (L ' \ 0 ') y se detiene. Por lo tanto, la cadena de caracteres anchos en *wcstr* está terminada en NULL solo si se encuentra un carácter nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento es indefinido.
 
 Si el argumento *wcstr* es **null**, **mbstowcs** devuelve el número de caracteres anchos que resultarían de la conversión, sin incluir un terminador null. La cadena de origen debe terminar en nulo para que se devuelva el valor correcto. Si necesita que la cadena de caracteres anchos resultante termine en nulo, agregue uno al valor devuelto.
 

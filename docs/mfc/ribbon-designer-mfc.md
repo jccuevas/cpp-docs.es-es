@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 1634eee30063a48041d60fc1b7116ca9543c9de2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a39a3a69b43eb06d67fc806e2d4fa9aec323b650
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511460"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "70907825"
 ---
 # <a name="ribbon-designer-mfc"></a>Diseñador de la cinta de opciones (MFC)
 
@@ -77,7 +77,7 @@ En la siguiente ilustración se muestran los distintos componentes del diseñado
 
 - **Superficie del diseñador:** Contiene la representación visual del recurso de la cinta de opciones.
 
-- **Ventana Propiedades:** Muestra los atributos del elemento seleccionado en la superficie del diseñador.
+- **[Asistente para clases](reference/mfc-class-wizard.md):** Muestra los atributos del elemento seleccionado en la superficie del diseñador.
 
 - **Vista de recursos ventana:** Muestra los recursos que incluyen recursos de la cinta de opciones en el proyecto.
 
@@ -91,7 +91,7 @@ Los temas siguientes describen cómo usar las características del diseñador de
 
 - [Cómo: agregar controles de cinta y controladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Procedimientos: cargar un recurso de cinta desde una aplicación MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Cómo: cargar un recurso de cinta desde una aplicación MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Definiciones de elementos de la cinta de opciones
 

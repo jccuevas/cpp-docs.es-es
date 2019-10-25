@@ -1,12 +1,12 @@
 ---
 title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_l
 - _cprintf_l
 - _cwprintf
 - _cprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf
 - cwprintf
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335339"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942664"
 ---
-# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
+# <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
 Da formato e imprime en la consola. Existen versiones más seguras; consulte [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
 
@@ -95,13 +98,13 @@ Número de caracteres que se van a imprimir.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones de formato e imprimir una serie de caracteres y valores directamente en la consola, utilizando el **_putch** función (**_putwch** para **_cwprintf**) para generar caracteres . Cada argumento de *argument_list* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El *formato* argumento usa el [dar formato a la sintaxis de especificación de funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A diferencia de la **fprintf**, **printf**, y **sprintf** funciones, ni **_cprintf** ni **_cwprintf**traduce los caracteres de avance de línea al carro combinaciones de retorno y salto de línea (CR-LF) cuando la salida.
+Estas funciones dan formato e imprimen una serie de caracteres y valores directamente en la consola, usando la función **_putch** ( **_putwch** para **_cwprintf**) con caracteres de salida. Cada argumento de *argument_list* (si existe) se convierte y se genera de acuerdo con la especificación de formato correspondiente en *Format*. El argumento *Format* usa la [Sintaxis de especificación de formato para las funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A diferencia de las funciones **fprintf**, **printf**y **sprintf** , ni **_cprintf** ni **_cwprintf** traducen los caracteres de salto de línea en combinaciones de retorno de carro y avance de línea (CR-LF) cuando se generan.
 
-Una diferencia importante es que **_cwprintf** muestra caracteres Unicode cuando se usan en Windows. A diferencia de **_cprintf**, **_cwprintf** usa la configuración regional actual de consola.
+Una diferencia importante es que **_cwprintf** muestra caracteres Unicode cuando se usa en Windows. A diferencia de **_cprintf**, **_cwprintf** usa la configuración regional actual de la consola.
 
-Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual.
+Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual.
 
-**_cprintf** valida el *formato* parámetro. Si *formato* es un puntero nulo, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
+**_cprintf** valida el parámetro de *formato* . Si *Format* es un puntero nulo, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y establece **errno** en **EINVAL**.
 
 > [!IMPORTANT]
 > Asegúrese de que *format* no es una cadena definida por el usuario.

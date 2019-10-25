@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502711"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741498"
 ---
 # <a name="crgn-class"></a>Clase Crgn (
 
@@ -78,7 +78,7 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Establece un `CRgn` objeto de modo que sea equivalente a la Unión de dos objetos `CRgn` especificados.|
 |[CRgn::CopyRgn](#copyrgn)|Establece un `CRgn` objeto para que sea una copia de un objeto especificado `CRgn` .|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inicializa un `CRgn` objeto con una región elíptica.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializa un `CRgn` objeto con una región elíptica definida por una estructura [Rect](/windows/win32/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializa un `CRgn` objeto con una región elíptica definida por una estructura [Rect](/windows/win32/api/windef/ns-windef-rect) .|
 |[CRgn::CreateFromData](#createfromdata)|Crea una región a partir de los datos de la región y la transformación especificados.|
 |[CRgn::CreateFromPath](#createfrompath)|Crea una región a partir de la ruta de acceso que está seleccionada en el contexto de dispositivo especificado.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicializa un `CRgn` objeto con una región poligonal. El sistema cierra automáticamente el polígono, si es necesario, dibujando una línea desde el último vértice hasta el primero.|
@@ -750,7 +750,7 @@ Para obtener más información sobre el uso de objetos gráficos, vea el artícu
 
 ##  <a name="ptinregion"></a>Crgn (::P tInRegion
 
-Comprueba si el punto proporcionado por *x* e y está en la región almacenada en `CRgn` el objeto.
+Comprueba si el punto proporcionado por *x* e *y* está en la región almacenada en `CRgn` el objeto.
 
 ```
 BOOL PtInRegion(

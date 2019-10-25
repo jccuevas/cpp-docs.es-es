@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: 8eb497e6a4380affd0f13f41c7b55990c562b7d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453654"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689428"
 ---
 # <a name="ltlistgt"></a>&lt;lista&gt;
 
-Define la lista de clases de plantilla de contenedores y varias plantillas auxiliares.
+Define la lista de plantillas de clase de contenedor y varias plantillas auxiliares.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,7 +25,7 @@ Define la lista de clases de plantilla de contenedores y varias plantillas auxil
 ```
 
 > [!NOTE]
-> La \<biblioteca de > de listas también `#include <initializer_list>` utiliza la instrucción.
+> La biblioteca de > de \<list también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
@@ -50,7 +50,7 @@ Define la lista de clases de plantilla de contenedores y varias plantillas auxil
 
 |||
 |-|-|
-|[Clase list](../standard-library/list-class.md)|Una clase de plantilla de contenedores de secuencias que mantienen sus elementos en disposición lineal y permiten realizar inserciones y eliminaciones de manera eficiente en cualquier ubicación de la secuencia.|
+|[list (Clase)](../standard-library/list-class.md)|Una plantilla de clase de contenedores de secuencias que mantienen sus elementos en una organización lineal y permiten inserciones y eliminaciones eficaces en cualquier ubicación dentro de la secuencia.|
 
 ## <a name="see-also"></a>Vea también
 

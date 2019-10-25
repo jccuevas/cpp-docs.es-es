@@ -1,38 +1,37 @@
 ---
-title: no_namespace
-ms.date: 11/04/2016
+title: atributo de importación no_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - no_namespace
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba52aed69cdbb46c135e6de5078d718e93f99c87
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326565"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220732"
 ---
-# <a name="nonamespace"></a>no_namespace
-**Específicos de C++**
+# <a name="no_namespace-import-attribute"></a>atributo de importación no_namespace
 
-Especifica que el compilador no genera el espacio de nombres.
+**C++Cuestión**
+
+Especifica que el compilador no genera un nombre de espacio de nombres.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-no_namespace
-```
+> **#import** *biblioteca de tipos* **no_namespace**
 
 ## <a name="remarks"></a>Comentarios
 
-El contenido de la biblioteca de tipos en el archivo de encabezado `#import` se define normalmente en un espacio de nombres. El espacio de nombres se especifica en el `library` instrucción del archivo IDL original. Si el **no_namespace** atributo se especifica, el compilador no genera este espacio de nombres.
+El contenido de la biblioteca de tipos en el archivo de encabezado `#import` se define normalmente en un espacio de nombres. El nombre del espacio de nombres se `library` especifica en la instrucción del archivo IDL original. Si se especifica el atributo **no_namespace** , el compilador no genera este espacio de nombres.
 
-Si desea usar un nombre de espacio de nombres diferente, a continuación, utilice el [rename_namespace](../preprocessor/rename-namespace.md) atributo en su lugar.
+Si desea utilizar un nombre de espacio de nombres diferente, utilice en su lugar el atributo [rename_namespace](../preprocessor/rename-namespace.md) .
 
-**FIN de específicos de C++**
+**Específico C++ de finalización**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)\
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

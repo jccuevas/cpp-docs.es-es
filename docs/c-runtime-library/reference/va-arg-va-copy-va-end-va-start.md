@@ -1,12 +1,12 @@
 ---
 title: va_arg, va_copy, va_end, va_start
 ms.date: 11/04/2016
-apiname:
+api_name:
 - va_arg
 - va_end
 - va_copy
 - va_start
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - va_arg
 - va_start
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47bd9e3913c6664a52c970dd8a190636683d214e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353578"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957367"
 ---
-# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
+# <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
 Obtiene acceso a listas de argumentos de variable.
 
@@ -80,10 +83,10 @@ Tipo de argumento que se va a recuperar.
 Puntero a la lista de argumentos.
 
 *dest*<br/>
-Puntero a la lista de argumentos que se inicializa en *src*
+Puntero a la lista de argumentos que se van a inicializar a partir de *src*
 
 *src*<br/>
-Puntero a la lista de argumentos que se va a copiar en inicializada *dest*.
+Puntero a la lista de argumentos inicializada que se va a copiar en el *destino*.
 
 *prev_param*<br/>
 Parámetro que precede al primer argumento opcional.
@@ -94,19 +97,19 @@ Parámetro que precede al primer argumento opcional.
 
 ## <a name="remarks"></a>Comentarios
 
-El **va_arg**, **va_copy**, **va_end**, y **va_start** macros proporcionan una manera portable para tener acceso a los argumentos a una función cuando el función toma un número variable de argumentos. Hay dos versiones de las macros: Las macros definidas en STDARG. H se ajusta a ISO C99 estándar; las macros definidas en VARARGS. H están en desuso, pero se conservan por compatibilidad con versiones anteriores con el código escrito antes del estándar ANSI C89.
+Las macros **va_arg**, **va_copy**, **va_end**y **va_start** proporcionan una manera portátil de tener acceso a los argumentos de una función cuando la función toma un número variable de argumentos. Hay dos versiones de las macros: Macros definidas en STDARG. H se ajusta al estándar ISO C99; macros definidas en VARARGS. H están en desuso, pero se conservan por compatibilidad con versiones anteriores con el código escrito antes del estándar C89 de ANSI.
 
 Estas macros suponen que la función toma un número fijo de argumentos necesarios, seguido por un número variable de argumentos opcionales. Los argumentos necesarios se declaran como parámetros ordinarios de la función; se puede obtener acceso a ellos con los nombres de parámetro. El acceso a los argumentos opcionales se obtiene a través de las macros de STDARG.H (o VARARGS.H para el código escrito antes del estándar ANSI C89), que establece un puntero al primer argumento opcional de la lista de argumentos, recupera argumentos de la lista y restablece el puntero cuando se finaliza el procesamiento del argumento.
 
 Las macros estándar de C, definidas en STDARG.H, se utilizan como se indica a continuación:
 
-- **va_start** establece *arg_ptr* al primer argumento opcional en la lista de argumentos que se pasa a la función. El argumento *arg_ptr* debe tener la **va_list** tipo. El argumento *prev_param* es el nombre del parámetro necesario que precede inmediatamente al primer argumento opcional en la lista de argumentos. Si *prev_param* se declara con la clase de almacenamiento de registro, el comportamiento de la macro es indefinido. **va_start** debe usarse antes **va_arg** se usa por primera vez.
+- **va_start** establece *arg_ptr* en el primer argumento opcional de la lista de argumentos que se pasa a la función. El argumento *arg_ptr* debe tener el tipo **va_list** . El argumento *prev_param* es el nombre del parámetro necesario que precede inmediatamente al primer argumento opcional de la lista de argumentos. Si *prev_param* se declara con la clase de almacenamiento Register, el comportamiento de la macro es indefinido. **va_start** debe usarse antes de que **va_arg** se use por primera vez.
 
-- **va_arg** recupera un valor de *tipo* desde la ubicación que viene dado por *arg_ptr*y se incrementa *arg_ptr* para que apunte al argumento siguiente en la lista por según el tamaño de *tipo* para determinar dónde comienza el siguiente argumento. **va_arg** se puede usar cualquier número de veces en la función para recuperar argumentos de la lista.
+- **va_arg** recupera un valor de *tipo* de la ubicación proporcionada por *arg_ptr*e incrementa *arg_ptr* para que apunte al argumento siguiente de la lista usando el tamaño del *tipo* para determinar dónde comienza el siguiente argumento. **va_arg** se puede usar cualquier número de veces en la función para recuperar argumentos de la lista.
 
-- **va_copy** realiza una copia de una lista de argumentos en su estado actual. El *src* parámetro debe estar ya inicializado con **va_start**; pueden haber sido actualizado con **va_arg** llama, pero no debe haberse restablecido con **va_end** . El siguiente argumento que se recupera mediante **va_arg** desde *dest* es el mismo que el siguiente argumento que se recupera de *src*.
+- **va_copy** realiza una copia de una lista de argumentos en su estado actual. El parámetro *src* ya se debe inicializar con **va_start**; puede que se haya actualizado con llamadas **va_arg** , pero no se debe haber restablecido con **va_end**. El siguiente argumento recuperado por **va_arg** de *dest* es el mismo que el siguiente argumento que se recupera de *src*.
 
-- Después de que se han recuperado todos los argumentos, **va_end** restablece el puntero en **NULL**. **va_end** debe invocarse en cada lista de argumentos que se inicializa con **va_start** o **va_copy** antes de la función devuelve.
+- Una vez recuperados todos los argumentos, **va_end** restablece el puntero en **null**. se debe llamar a **va_end** en cada lista de argumentos que se inicializa con **va_start** o **va_copy** antes de que la función devuelva.
 
 > [!NOTE]
 > Las macros de VARARGS.H han dejado de usarse y se conservan solo por compatibilidad con el código escrito antes de la existencia del estándar ANSI C89. En todos los demás casos, se deben usar las macros de STDARGS.H.
@@ -143,7 +146,7 @@ int main()
 }
 ```
 
-Tenga en cuenta que **testit** espera que su segundo parámetro sea una **int** o un **char**<strong>\*</strong>. Los argumentos que se pasan son 0xffffffff (un **sin signo** **int**, no un **int**) y **NULL** (realmente un **int**, no un **char**<strong>\*</strong>). Cuando el programa se compila para código nativo, genera este resultado:
+Observe que **testit** espera que su segundo parámetro sea un **int** o un **carácter**<strong>\*</strong>. Los argumentos que se pasan son 0xFFFFFFFF (un **int** **sin signo** , no un **int**) y **null** (en realidad, un **entero**, no un **carácter**<strong>\*</strong>). Cuando el programa se compila para código nativo, genera este resultado:
 
 ```Output
 -1

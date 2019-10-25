@@ -1,11 +1,11 @@
 ---
 title: gmtime, _gmtime32, _gmtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _gmtime32
 - gmtime
 - _gmtime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - gmtime
 - _gmtime32
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 4f32da5920a0cb892619195207d6501a4b1fd874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca5f424ac7006d2976ea03bbae9f0ad3a96abf6c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157622"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954856"
 ---
-# <a name="gmtime-gmtime32-gmtime64"></a>gmtime, _gmtime32, _gmtime64
+# <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
-Convierte un **time_t** tiempo valor a un **tm** estructura. Hay disponibles versiones más seguras de estas funciones; vea [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md).
+Convierte un valor de hora **time_t** en una estructura **TM** . Hay disponibles versiones más seguras de estas funciones; vea [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -57,31 +60,31 @@ Puntero a la hora almacenada. La hora se representa como los segundos transcurri
 
 ## <a name="return-value"></a>Valor devuelto
 
-Puntero a una estructura de tipo [tm](../../c-runtime-library/standard-types.md). Los campos de la estructura devuelta contienen el valor evaluado de la *sourceTime* argumento en UTC en lugar de en la hora local. Cada uno de los campos de la estructura es de tipo **int**, como sigue:
+Puntero a una estructura de tipo [tm](../../c-runtime-library/standard-types.md). Los campos de la estructura devuelta contienen el valor evaluado del argumento *sourceTime* en UTC en lugar de en la hora local. Cada uno de los campos de la estructura es de tipo **int**, como se indica a continuación:
 
-|Campo|Descripción|
+|Campo|DESCRIPCIÓN|
 |-|-|
-|**tm_sec**|Segundos después del minuto (0 - 59).|
-|**tm_min**|Minutos después de la hora (0 - 59).|
-|**tm_hour**|Horas desde medianoche (0 - 23).|
+|**tm_sec**|Segundos después del minuto (0-59).|
+|**tm_min**|Minutos después de la hora (0-59).|
+|**tm_hour**|Horas desde la medianoche (0-23).|
 |**tm_mday**|Día del mes (1-31).|
-|**tm_mon**|Mes (0 - 11; Enero = 0).|
+|**tm_mon**|Mes (0-11; Enero = 0).|
 |**tm_year**|Año (año actual menos 1900).|
-|**tm_wday**|Día de la semana (0 - 6; El domingo = 0).|
-|**tm_yday**|Día del año (0 - 365; El 1 de enero = 0).|
+|**tm_wday**|Día de la semana (0-6; Sunday = 0).|
+|**tm_yday**|Día del año (0-365; 1 de enero = 0).|
 |**tm_isdst**|Siempre es 0 para **gmtime**.|
 
-Las versiones de 32 bits y 64 bits de **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md), y [localtime](localtime-localtime32-localtime64.md) todos usan un común **tm**  estructura por subproceso para la conversión. Cada llamada a una de estas funciones destruye el resultado de las llamadas anteriores. Si *sourceTime* representa una fecha anterior a la medianoche del 1 de enero de 1970, **gmtime** devuelve **NULL**. No se devuelve ningún error.
+Tanto las versiones de 32 bits como las de 64 bits de **gmtime**, [mktime](mktime-mktime32-mktime64.md), [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)y [localtime](localtime-localtime32-localtime64.md) usan una estructura de **TM** común por subproceso para la conversión. Cada llamada a una de estas funciones destruye el resultado de las llamadas anteriores. Si *sourceTime* representa una fecha anterior a la medianoche del 1 de enero de 1970, **gmtime** devuelve **null**. No se devuelve ningún error.
 
-**_gmtime64**, que usa el **__time64_t** estructura, permite expresar a través de 23:59:59, 31 de diciembre de 3000, UTC, fechas, mientras que **_gmtime32** solo representan fechas hasta las 23:59:59 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para ambas funciones.
+**_gmtime64**, que usa la estructura **__time64_t** , permite expresar fechas hasta 23:59:59, 31 de diciembre de 3000, UTC, mientras que las **_gmtime32** solo representan fechas 23:59:59 hasta el 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para ambas funciones.
 
-**gmtime** es una función insertada que se evalúa como **_gmtime64**, y **time_t** es equivalente a **__time64_t** a menos que **_USE_32BIT_TIME_ T** está definido. Si es necesario que el compilador interprete **time_t** como el antiguo 32-bit **time_t**, puede definir **_USE_32BIT_TIME_T**, pero si lo hace **gmtime** se inserte en **_gmtime32** y **time_t** definirse como **__time32_t**. Esta operación no es recomendable, porque no se permite en plataformas de 64 bits y, en todo caso, la aplicación puede producir un error después del 18 de enero de 2038.
+**gmtime** es una función insertada que se evalúa como **_gmtime64**y **time_t** es equivalente a **__time64_t** a menos que se defina **_USE_32BIT_TIME_T** . Si debe forzar al compilador a interpretar **time_t** como el antiguo **time_t**de 32 bits, puede definir **_USE_32BIT_TIME_T**, pero esto hace que **gmtime** esté insertado en **_gmtime32** y **time_t** para definirse como **_ _ time32_t**. Esta operación no es recomendable, porque no se permite en plataformas de 64 bits y, en todo caso, la aplicación puede producir un error después del 18 de enero de 2038.
 
-Estas funciones validan sus parámetros. Si *sourceTime* es un puntero nulo, o si el *sourceTime* valor es negativo, estas funciones invocan un controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **NULL** y establecer **errno** a **EINVAL**.
+Estas funciones validan sus parámetros. Si *sourceTime* es un puntero nulo, o si el valor de *sourceTime* es negativo, estas funciones invocan un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven **null** y establecen **errno** en **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_gmtime32** función divide la *sourceTime* valor y lo almacena en una estructura asignada estáticamente de tipo **tm**, definido en el tiempo. H. El valor de *sourceTime* normalmente se obtiene de una llamada a la [tiempo](time-time32-time64.md) función.
+La función **_gmtime32** divide el valor de *sourceTime* y lo almacena en una estructura asignada estáticamente de tipo **TM**, definida en el tiempo. C. El valor de *sourceTime* se suele obtener de una llamada a la función [Time](time-time32-time64.md) .
 
 > [!NOTE]
 > En la mayoría de los casos, el entorno de destino intenta determinar si está vigente el horario de verano. La biblioteca en tiempo de ejecución de C usa las reglas de Estados Unidos para implementar el cálculo del horario de verano (DST).
@@ -90,7 +93,7 @@ El **_gmtime32** función divide la *sourceTime* valor y lo almacena en una estr
 
 |Rutina|Encabezado C necesario|Encabezado C++ necesario|
 |-------------|---------------------|-|
-|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<CTime > o \<time.h >|
+|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<> ctime o \<Time. h >|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

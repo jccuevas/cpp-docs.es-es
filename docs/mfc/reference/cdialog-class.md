@@ -1,6 +1,6 @@
 ---
 title: CDialog (clase)
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d9969b7dd41dc7a67e21bb2735b1d716bd988d07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506890"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907606"
 ---
 # <a name="cdialog-class"></a>CDialog (clase)
 
@@ -97,7 +97,7 @@ Los cuadros de diálogo son de dos tipos: modal y no modal. El usuario debe cerr
 
 Un `CDialog` objeto es una combinación de una plantilla de cuadro de `CDialog`diálogo y una clase derivada de. Utilice el editor de cuadros de diálogo para crear la plantilla de cuadro de diálogo y almacenarla en un recurso y, a continuación, use el `CDialog`Asistente para agregar clases para crear una clase derivada de.
 
-Un cuadro de diálogo, como cualquier otra ventana, recibe mensajes de Windows. En un cuadro de diálogo, está especialmente interesado en controlar los mensajes de notificación desde los controles del cuadro de diálogo, ya que así es cómo interactúa el usuario con el cuadro de diálogo. Utilice la ventana Propiedades para seleccionar qué mensajes desea controlar y, en su caso, agregará las entradas de mapa de mensajes y las funciones miembro de controlador de mensajes correspondientes a la clase. Solo necesita escribir código específico de la aplicación en las funciones miembro de controlador.
+Un cuadro de diálogo, como cualquier otra ventana, recibe mensajes de Windows. En un cuadro de diálogo, está especialmente interesado en controlar los mensajes de notificación desde los controles del cuadro de diálogo, ya que así es cómo interactúa el usuario con el cuadro de diálogo. Use el [Asistente para clases](mfc-class-wizard.md) para seleccionar qué mensajes desea controlar y agregar las entradas adecuadas del mapa de mensajes y las funciones miembro del controlador de mensajes a la clase. Solo necesita escribir código específico de la aplicación en las funciones miembro de controlador.
 
 Si lo prefiere, siempre puede escribir manualmente las entradas de mapa de mensajes y las funciones miembro.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 9bbd64b27a760969635d70ae7689d09afed2d729
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 2a5c6ec3a70a85bf81f00b104d0c505677f609ac
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740419"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740052"
 ---
 # <a name="file-handling"></a>Control de archivos
 
@@ -78,11 +78,11 @@ Estas rutinas proporcionan una forma de cambiar la representación del archivo, 
 
 Las siguientes funciones de Win32 también abren archivos y canalizaciones:
 
-- [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
+- [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew)
 
-- [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)
+- [CreatePipe](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe)
 
-- [CreateNamedPipe](/windows/desktop/api/winbase/nf-winbase-createnamedpipea)
+- [CreateNamedPipe](/windows/win32/api/winbase/nf-winbase-createnamedpipea)
 
 ## <a name="see-also"></a>Vea también
 

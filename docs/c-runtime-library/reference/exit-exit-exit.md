@@ -1,10 +1,10 @@
 ---
 title: exit, _Exit, _exit
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - _exit
 - exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - Exit
 - _exit
@@ -30,19 +33,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd988ca6339c00b454d673d3bec6f137753ac83a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339356"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941657"
 ---
-# <a name="exit-exit-exit"></a>exit, _Exit, _exit
+# <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
-Finaliza el proceso de llamada. El **salir** función lo finaliza después de la limpieza; **_exit** y **_Exit** lo finalizan inmediatamente.
+Finaliza el proceso de llamada. La función **Exit** lo finaliza después de la limpieza; **_exit** y **_exit** lo finalizan inmediatamente.
 
 > [!NOTE]
-> No utilice este método para cerrar una aplicación plataforma Universal de Windows (UWP), excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación para UWP](/windows/uwp/launch-resume/app-lifecycle). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](https://developer.microsoft.com/windows/apps).
+> No use este método para cerrar una aplicación Plataforma universal de Windows (UWP), excepto en escenarios de prueba o depuración. No se permiten las formas de cerrar una aplicación de la tienda mediante programación o la interfaz de usuario de acuerdo con las [directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte el ciclo de vida de las [aplicaciones para UWP](/windows/uwp/launch-resume/app-lifecycle). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -65,13 +68,13 @@ Código de estado de salida.
 
 ## <a name="remarks"></a>Comentarios
 
-El **salir**, **_Exit** y **_exit** funciones terminan el proceso de llamada. El **salir** función llama a destructores para objetos de subproceso local, a continuación, llama a, en orden de último en el primero en salir (LIFO), las funciones registradas por **atexit** y **_onexit**y, a continuación, vacía todos los búferes de archivo antes de finalizar el proceso. El **_Exit** y **_exit** funciones finalizan el proceso sin destruir objetos locales de subproceso ni procesar **atexit** o **_onexit**funciones y sin vaciar los búferes de secuencia.
+Las funciones **Exit**, **_Exit** y **_Exit** finalizan el proceso de llamada. La función **Exit** llama a destructores para los objetos locales de subproceso y, a continuación, llama a, en orden LIFO (último en salir), las funciones que se registran en **AtExit** y **_onexit**y, a continuación, vacía todos los búferes de archivo antes de finalizar el Procese. Las funciones **_Exit** y **_Exit** finalizan el proceso sin destruir objetos locales para el subproceso ni procesar funciones **AtExit** o **_onexit** y sin vaciar los búferes de secuencia.
 
-Aunque el **salir**, **_Exit** y **_exit** llamadas no devuelven un valor, el valor en *estado* está disponible para el entorno de host o proceso que realiza la llamada, en espera si la hay, al salir del proceso. Normalmente, el llamador establece el *estado* valor en 0 para indicar una salida normal o a algún otro valor para indicar un error. El *estado* valor está disponible para el comando por lotes del sistema operativo **ERRORLEVEL** y se representa mediante uno de dos constantes: **EXIT_SUCCESS**, que representa un valor de 0, o **EXIT_FAILURE**, que representa un valor de 1.
+Aunque las llamadas de **salida**, **_Exit** y **_Exit** no devuelven un valor, el valor de *status* está disponible para el entorno de host o el proceso de llamada en espera, en caso de que exista uno, una vez finalizado el proceso. Normalmente, el autor de la llamada establece el valor de *Estado* en 0 para indicar una salida normal, o en algún otro valor para indicar un error. El valor de *Estado* está disponible para el comando de proceso por lotes del sistema operativo **ERRORLEVEL** y se representa mediante una de dos constantes: **EXIT_SUCCESS**, que representa un valor de 0, o **EXIT_FAILURE**, que representa un valor de 1.
 
-El **salir**, **_Exit**, **_exit**, **quick_exit**, **_cexit**, y **_c_exit** funciones se comportan como sigue.
+Las funciones **Exit**, **_Exit**, **_Exit**, **quick_exit**, **_cexit**y **_c_exit** se comportan como se indica a continuación.
 
-|Función|Descripción|
+|Función|DESCRIPCIÓN|
 |--------------|-----------------|
 |**exit**|Realiza procedimientos completos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|
 |**_Exit**|Realiza procedimientos mínimos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|
@@ -80,7 +83,7 @@ El **salir**, **_Exit**, **_exit**, **quick_exit**, **_cexit**, y **_c_exit** fu
 |**_cexit**|Realiza procedimientos completos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|
 |**_c_exit**|Realiza procedimientos mínimos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|
 
-Cuando se llama a la **salir**, **_Exit** o **_exit** función, no se llaman a los destructores de ningún objeto temporal o automático que exista en el momento de la llamada. Un objeto automático es un objeto local que no sea estático definido en una función. Un objeto temporal es un objeto creado por el compilador, como un valor devuelto por una llamada de función. Para destruir un objeto automático antes de llamar a **salir**, **_Exit**, o **_exit**explícitamente llame al destructor del objeto, como se muestra aquí:
+Cuando se llama a la función **Exit**, **_Exit** o **_Exit** , no se llama a los destructores de ningún objeto temporal o automático que exista en el momento de la llamada. Un objeto automático es un objeto local no estático definido en una función. Un objeto temporal es un objeto creado por el compilador, como un valor devuelto por una llamada de función. Para destruir un objeto automático antes de llamar a **Exit**, **_Exit**o **_Exit**, llame explícitamente al destructor del objeto, como se muestra aquí:
 
 ```cpp
 void last_fn() {}
@@ -91,7 +94,7 @@ void last_fn() {}
 }
 ```
 
-No use **DLL_PROCESS_ATTACH** para llamar a **salir** desde **DllMain**. Para salir del **DLLMain** de función, devolver **FALSE** desde **DLL_PROCESS_ATTACH**.
+No use **DLL_PROCESS_ATTACH** para llamar a **Exit** desde **DllMain**. Para salir de la función **DllMain** , devuelva **false** desde **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,11 +1,11 @@
 ---
 title: sin, sinf, sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948072"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Calcula el seno del valor de punto flotante.
+Calcula el seno de un valor de punto flotante.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -62,18 +65,18 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **pecado** funciones devuelven el seno de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se produce una pérdida de significado en el resultado.
+Las funciones **sin** devuelven el seno de *x*. Si *x* es mayor o igual que 263, o menor o igual que-263, se produce una pérdida de significado en el resultado.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
 
 Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **pecado** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **pecado** siempre toma y devuelve **doble**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **sin** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **sin** siempre toma y devuelve **Double**.
 
 ## <a name="requirements"></a>Requisitos
 

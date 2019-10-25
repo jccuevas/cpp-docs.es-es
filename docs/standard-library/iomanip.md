@@ -26,7 +26,7 @@ Incluya el `iostreams` encabezado \<estándar iomanip > para definir varios mani
 
 ## <a name="remarks"></a>Comentarios
 
-Cada uno de estos manipuladores devuelve un tipo sin especificar, `T1` llamado `T10`a través de, que sobrecarga `basic_istream`los \<operadores **Elem**, **TR**>`::`[> >](../standard-library/istream-operators.md#op_gt_gt) y [](../standard-library/ostream-operators.md#op_lt_lt) > < Del operador Elem,TR`::`<. `basic_ostream` \<
+Cada uno de estos manipuladores devuelve un tipo sin especificar, llamado `T1` a través de `T10`, que sobrecarga los operadores `basic_istream`\<**Elem**, **Tr**>`::`[>>](../standard-library/istream-operators.md#op_gt_gt) y `basic_ostream`\<**Elem**, **Tr**>`::`[<<](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Manipuladores
 

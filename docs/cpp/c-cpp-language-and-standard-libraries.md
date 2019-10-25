@@ -2,12 +2,13 @@
 title: Referencia deC++ bibliotecas estándar y de lenguaje C/
 ms.date: 08/13/2019
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: c8a954702f8624537b110aa7e303fcb610387f57
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.topic: overview
+ms.openlocfilehash: 15285b2741167e8c873ac0a45514e7d05e259375
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498769"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274712"
 ---
 # <a name="cc-language-and-standard-libraries-reference"></a>Referencia deC++ bibliotecas estándar y de lenguaje C/
 

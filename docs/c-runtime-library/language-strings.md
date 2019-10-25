@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620290"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500071"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Las funciones [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) pueden usar los idiomas compatibles con la API NLS de Windows en sistemas operativos que no usan la página de códigos Unicode. Para una lista de idiomas compatibles con la versión del sistema operativo, consulte [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Apéndice A: Comportamiento del producto) en [MS-LCID]: Windows Language Code Identifier (LCID) Reference. ([MS-LCID]: Referencia de identificador de configuración regional (LCID) de Windows). La cadena de idioma puede ser cualquiera de los valores de las columnas **Language** (Idioma) y **Language tag** (Etiqueta de idioma) de la lista de idiomas admitidos. Para un ejemplo de código que enumera los nombres de configuración regional disponibles y los valores relacionados, consulte [NLS: Name-based APIs Sample](/windows/desktop/intl/nls--name-based-apis-sample) (NLS: ejemplo de API basadas en nombres).
+Las funciones [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) pueden usar los idiomas compatibles con la API NLS de Windows en sistemas operativos que no usan la página de códigos Unicode. Para obtener una lista de idiomas compatibles con la versión del sistema operativo, vea el [Apéndice A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Apéndice A: Comportamiento del producto) en [MS-LCID]: Windows Language Code Identifier (LCID) Reference (Referencia del identificador de configuración regional [LCID] de Windows). La cadena de idioma puede ser cualquiera de los valores de las columnas **Language** (Idioma) y **Language tag** (Etiqueta de idioma) de la lista de idiomas admitidos. Para un ejemplo de código que enumera los nombres de configuración regional disponibles y los valores relacionados, consulte [NLS: ejemplo de API basadas en nombres](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Cadenas de idioma compatibles adicionales
 

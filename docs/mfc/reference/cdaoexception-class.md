@@ -1,6 +1,6 @@
 ---
 title: CDaoException (clase)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoException
 - AFXDAO/CDaoException
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: e5f28b8896fc9e7e5c6a656a64b938cd7af39f42
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 262c9b75771611dc04938fa5d9f58c3f7e5fc2ef
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507060"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096127"
 ---
 # <a name="cdaoexception-class"></a>CDaoException (clase)
 
 Representa una condición de excepción que surge de las clases de base de datos MFC basadas en los objetos (DAO) de acceso a datos.
+DAO 3,6 es la versión final y se considera obsoleta.
 
 ## <a name="syntax"></a>Sintaxis
 

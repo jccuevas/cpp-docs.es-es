@@ -1,7 +1,7 @@
 ---
 title: _spawn, _wspawn (Funciones)
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _spawn
 - _tspawnlp
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748052"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957278"
 ---
-# <a name="spawn-wspawn-functions"></a>_spawn, _wspawn (Funciones)
+# <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn (Funciones)
 
 Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso:
 
@@ -117,13 +120,13 @@ Para pasar argumentos al nuevo proceso, asigne uno o varios punteros a cadenas d
 >  Los espacios insertados en cadenas pueden generar un comportamiento inesperado; por ejemplo, si se pasa a `_spawn` la cadena `"hi there"`, el nuevo proceso obtendrá dos argumentos, `"hi"` y `"there"`. Si se deseaba que el nuevo proceso abriera un archivo denominado “hi there”, el proceso produciría un error. Para evitarlo, escriba la cadena entre comillas: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  No pase datos proporcionados por el usuario a `_spawn` sin comprobar expresamente su contenido. `_spawn` dará lugar a una llamada a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), por lo que debe tener presente que los nombres de ruta de acceso incompletos podrían dar lugar a vulnerabilidades de seguridad.
+>  No pase datos proporcionados por el usuario a `_spawn` sin comprobar expresamente su contenido. `_spawn` dará lugar a una llamada a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), por lo que debe tener presente que los nombres de ruta de acceso incompletos podrían dar lugar a vulnerabilidades de seguridad.
 
 Puede pasar punteros de argumento como argumentos independientes (en `_spawnl`, `_spawnle`, `_spawnlp` y `_spawnlpe`) o como una matriz de punteros (en `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe`). Debe pasar al menos un argumento, `arg0` o `argv`[0], al proceso generado. Por convención, este argumento es el nombre del programa que se escribiría en la línea de comandos. Un valor diferente no genera un error.
 
 Las llamadas a `_spawnl`, `_spawnle`, `_spawnlp` y `_spawnlpe` se suelen usar en aquellos casos en los que el número de argumentos se conoce de antemano. El argumento `arg0` suele ser un puntero a `cmdname`. Los argumentos `arg1` a `argn` son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. Después de `argn`, debe haber un puntero **NULL** para marcar el final de la lista de argumentos.
 
-Las llamadas a `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe` resultan útiles cuando existe un número variable de argumentos para el nuevo proceso. Los punteros a los argumentos se pasan como matriz, `argv`*.* El argumento `argv`[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido; de `argv`[1] a `argv`[`n`] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento `argv`[`n` +1] debe ser un puntero **NULL** para marcar el final de la lista de argumentos.
+Las llamadas a `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe` resultan útiles cuando existe un número variable de argumentos para el nuevo proceso. Los punteros a los argumentos se pasan como matriz, `argv` *.* El argumento `argv`[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido; de `argv`[1] a `argv`[`n`] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento `argv`[`n` +1] debe ser un puntero **NULL** para marcar el final de la lista de argumentos.
 
 ## <a name="environment-of-the-spawned-process"></a>Entorno del proceso generado
 
@@ -139,7 +142,7 @@ Los nuevos procesos creados mediante llamadas a rutinas de `_spawn` no conservan
 
 Si va a llamar a `_spawn` desde un archivo DLL o una aplicación de interfaz gráfica de usuario y quiere redirigir el resultado a una canalización, tiene dos opciones:
 
-- Usar la API de Win32 para crear una canalización, llamar a [AllocConsole](/windows/console/allocconsole), establecer los valores de identificador en la estructura de inicio y llamar a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Usar la API de Win32 para crear una canalización, llamar a [AllocConsole](/windows/console/allocconsole), establecer los valores de identificador en la estructura de inicio y llamar a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw).
 
 - Llamar a [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), lo que creará una canalización e invocará a la aplicación con **cmd.exe /c** (o **command.exe /c**).
 

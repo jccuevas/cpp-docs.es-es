@@ -1,10 +1,10 @@
 ---
 title: _strtime, _wstrtime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime
 - _strtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime
 - _strtime
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223103"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946561"
 ---
-# <a name="strtime-wstrtime"></a>_strtime, _wstrtime
+# <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
 Copia la hora en un búfer. Hay disponibles versiones más seguras de estas funciones; vea [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
 
@@ -74,9 +77,9 @@ Devuelve un puntero a la cadena de caracteres resultante *timestr*.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strtime** función copia la hora local actual en el búfer señalado por *timestr*. La hora se formatea como **hh: mm:** donde **hh** son dos dígitos que representa la hora en la notación de 24 horas, **mm** son dos dígitos que representa los minutos transcurridos tras la hora y **ss** son dos dígitos que representan los segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos después de las 6 P.M. La longitud del búfer debe ser de 9 bytes como mínimo.
+La función **_strtime** copia la hora local actual en el búfer al que apunta *timestr*. La hora tiene el formato **HH: mm: SS** , donde **HH** es dos dígitos que representan la hora en notación de 24 horas, **mm** son dos dígitos que representan los minutos posteriores a la hora y **SS** son dos dígitos que representan segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos después de las 6 P.M. La longitud del búfer debe ser de 9 bytes como mínimo.
 
-**_wstrtime** es una versión con caracteres anchos de **_strtime**; el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual. Si *timestr* es un **NULL** puntero o si *timestr* tiene un formato incorrecto, el no válido se invoca el controlador de parámetros, como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la excepción puede continuar, estas funciones devuelven un **NULL** y establecer **errno** a **EINVAL** si *timestr* era un **NULL** o establecer **errno** a **ERANGE** si *timestr* tiene un formato incorrecto.
+**_wstrtime** es una versión con caracteres anchos de **_strtime**; el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual. Si *timestr* es un puntero **nulo** o si *timestr* tiene un formato incorrecto, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la excepción puede continuar, estas funciones devuelven un **valor null** y **establecen errno** en **EINVAL** si *Timestr* era **null** o estableció **errno** en **ERANGE** si *timestr* tiene un formato incorrecto.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

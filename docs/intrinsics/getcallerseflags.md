@@ -1,34 +1,34 @@
 ---
 title: __getcallerseflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _getcallerseflags
 - _getcallerseflags_cpp
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-ms.openlocfilehash: a2df7087c605882340da16f56dae2e991c5d7dd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6279db10ec38da7482b26e19e31f2d34dd48a07
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264106"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222166"
 ---
-# <a name="getcallerseflags"></a>__getcallerseflags
+# <a name="__getcallerseflags"></a>__getcallerseflags
 
 **Específicos de Microsoft**
 
-Devuelve el valor EFLAGS desde el contexto del llamador.
+Devuelve el valor de EFLAGS del contexto del llamador.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```C
 unsigned int __getcallerseflags(void);
 ```
 
 ## <a name="return-value"></a>Valor devuelto
 
-Valor EFLAGS desde el contexto del llamador.
+Valor EFLAGS del contexto del autor de la llamada.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,7 +36,7 @@ Valor EFLAGS desde el contexto del llamador.
 |---------------|------------------|
 |`__getcallerseflags`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 ## <a name="remarks"></a>Comentarios
 
@@ -44,7 +44,7 @@ Esta rutina solo está disponible como función intrínseca.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // getcallerseflags.cpp
 // processor: x86, x64
 
@@ -82,4 +82,4 @@ EFLAGS 0x206
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)

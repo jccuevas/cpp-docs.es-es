@@ -1,6 +1,6 @@
 ---
 title: Herramienta Manifiesto (Páginas de propiedades)
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
 - VC.Project.VCManifestTool.SuppressStartupBanner
@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492696"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927678"
 ---
 # <a name="manifest-tool-property-pages"></a>Herramienta Manifiesto (Páginas de propiedades)
 
-Use estas páginas para especificar las opciones generales de [MT. exe](/windows/win32/sbscs/mt-exe). Estas páginas se encuentran en propiedades de configuración del **proyecto** >  > **herramienta de manifiesto**de**propiedades** > .
+Use estas páginas para especificar las opciones generales de [MT. exe](/windows/win32/sbscs/mt-exe). Estas páginas se encuentran**en propiedades de** > configuración del **proyecto** > **herramienta de manifiesto**de**propiedades** > .
 
 ## <a name="general-property-page"></a>Página de propiedades general
 

@@ -70,16 +70,16 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: bc9f9bd1157af96ced3c901309f19dcaa5dadab3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246709"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687621"
 ---
-# <a name="numericlimits-class"></a>numeric_limits (clase)
+# <a name="numeric_limits-class"></a>numeric_limits (clase)
 
-La clase de plantilla describe propiedades aritméticas de tipos numéricos integrados.
+La plantilla de clase describe las propiedades aritméticas de tipos numéricos integrados.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -90,12 +90,12 @@ template <class Type>
 
 ### <a name="parameters"></a>Parámetros
 
-*Tipo*\
-Tipo de datos del elemento fundamental cuyas propiedades se están probando, consultando o estableciendo. *Tipo* también pueden declararse **const**, **volátil**, o **const volatile**.
+*Escribir* \
+Tipo de datos del elemento fundamental cuyas propiedades se están probando, consultando o estableciendo. El *tipo* también puede declararse como **const**, **volatile**o **const volatile**.
 
 ## <a name="remarks"></a>Comentarios
 
-El encabezado define especializaciones explícitas para los tipos de **wchar_t**, **bool**, **char**, **firmado char**, **sin signo char**, **corto**, **entero corto sin signo**, **int**, **int sin signo**, **prolongada**, **unsigned long**, **float**, **doble**, **long double**, **long long**, **long long sin signo**, **char16_t**, y **char32_t**. Para estas especializaciones explícitas, el miembro [numeric_limits:: is_specialized](#is_specialized) es **true**, y todos los miembros pertinentes tienen valores significativos. El programa puede proporcionar especializaciones explícitas adicionales. La mayoría de las funciones de miembro de la clase describen o prueban implementaciones posibles de **float**.
+El encabezado define especializaciones explícitas para los tipos **wchar_t**, **bool**, **Char**, **signed char**, **unsigned char**, **Short**, **unsigned short**, **int**, **unsigned int**, **Long**, **unsigned Long**, **float**, **Double**, **Long Double**, Long **Long**, **unsigned Long Long**, **char16_t**y **char32_t**. Para estas especializaciones explícitas, el miembro [numeric_limits:: is_specialized](#is_specialized) es **true**y todos los miembros pertinentes tienen valores significativos. El programa puede proporcionar especializaciones explícitas adicionales. La mayoría de las funciones miembro de la clase describen o prueban posibles implementaciones de **float**.
 
 Para una especialización arbitraria, ningún miembro tiene valores significativos. Un objeto de miembro que no tiene un valor significativo almacena cero (o **false**) y una función miembro que no devuelve un valor significativo devuelve `Type(0)`.
 
@@ -110,7 +110,7 @@ Para una especialización arbitraria, ningún miembro tiene valores significativ
 |[has_denorm](#has_denorm)|Comprueba si un tipo permite valores no normalizados.|
 |[has_denorm_loss](#has_denorm_loss)|Comprueba si se detecta la pérdida de precisión como una pérdida de desnormalización en lugar de como un resultado inexacto.|
 |[has_infinity](#has_infinity)|Comprueba si un tipo tiene una representación de infinito positivo.|
-|[has_quiet_NaN](#has_quiet_nan)|Comprueba si un tipo tiene una representación para un no es un número (NAN), que es no, de señalización.|
+|[has_quiet_NaN](#has_quiet_nan)|Comprueba si un tipo tiene una representación de un valor no numérico (NAN) silencioso, que no es de señalización.|
 |[has_signaling_NaN](#has_signaling_nan)|Comprueba si un tipo tiene una representación para un NaN (no es un número) de señalización.|
 |[infinity](#infinity)|Representación de infinito positivo de un tipo, si está disponible.|
 |[is_bounded](#is_bounded)|Comprueba si el conjunto de valores que un tipo puede representar es finito.|
@@ -119,7 +119,7 @@ Para una especialización arbitraria, ningún miembro tiene valores significativ
 |[is_integer](#is_integer)|Comprueba si un tipo tiene una representación de entero.|
 |[is_modulo](#is_modulo)|Comprueba si un tipo tiene una representación de módulo.|
 |[is_signed](#is_signed)|Comprueba si un tipo tiene una representación con signo.|
-|[is_specialized](#is_specialized)|Comprueba si un tipo tiene una especialización explícita definida en la clase de plantilla `numeric_limits`.|
+|[is_specialized](#is_specialized)|Comprueba si un tipo tiene una especialización explícita definida en la plantilla de clase `numeric_limits`.|
 |[lowest](#lowest)|Devuelve el mayor valor finito negativo.|
 |[max](#max)|Devuelve el valor finito máximo para un tipo.|
 |[max_digits10](#max_digits10)|Devuelve el número de dígitos decimales necesarios para asegurarse de que dos valores distintos del tipo tengan distintas representaciones decimales.|
@@ -136,7 +136,7 @@ Para una especialización arbitraria, ningún miembro tiene valores significativ
 |[tinyness_before](#tinyness_before)|Comprueba si un tipo puede determinar que un valor es demasiado pequeño para representarse como un valor normalizado antes de redondearlo.|
 |[traps](#traps)|Comprueba si la captura que informa sobre excepciones aritméticas está implementada para un tipo.|
 
-### <a name="denorm_min"></a> denorm_min
+### <a name="denorm_min"></a>denorm_min
 
 Devuelve el valor más pequeño distinto de cero desnormalizado.
 
@@ -150,9 +150,9 @@ El valor más pequeño distinto de cero desnormalizado.
 
 #### <a name="remarks"></a>Comentarios
 
-**long double** es el mismo que **doble** para el compilador de C++.
+**Long Double** es igual que **Double** para el C++ compilador.
 
-La función devuelve el valor mínimo para el tipo, que es el mismo como [min](#min) si [has_denorm](#has_denorm) no es igual a `denorm_present`.
+La función devuelve el valor mínimo para el tipo, que es igual que [min](#min) si [has_denorm](#has_denorm) no es igual a `denorm_present`.
 
 #### <a name="example"></a>Ejemplo
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a> dígitos
+### <a name="digits"></a>anual
 
 Devuelve el número de dígitos de base que el tipo puede representar sin pérdida de precisión.
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a> digits10
+### <a name="digits10"></a>digits10
 
 Devuelve el número de dígitos decimales que el tipo puede representar sin pérdida de precisión.
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a> épsilon
+### <a name="epsilon"></a>Epsilon
 
 La función devuelve la diferencia entre 1 y el valor más pequeño mayor que 1, que el tipo de datos puede representar.
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a> has_denorm
+### <a name="has_denorm"></a>has_denorm
 
 Comprueba si un tipo permite valores no normalizados.
 
@@ -349,7 +349,7 @@ Un valor de enumeración de tipo **const**`float_denorm_style`, que indica si el
 
 #### <a name="remarks"></a>Comentarios
 
-El miembro almacena `denorm_present` para un tipo de punto flotante que ha desnormalizado valores eficazmente un número variable de bits de exponente.
+El miembro almacena `denorm_present` para un tipo de punto flotante que tiene valores desnormalizados, de hecho un número variable de bits de exponente.
 
 #### <a name="example"></a>Ejemplo
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a> has_denorm_loss
+### <a name="has_denorm_loss"></a>has_denorm_loss
 
 Comprueba si se detecta la pérdida de precisión como una pérdida de desnormalización en lugar de como un resultado inexacto.
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a> has_infinity
+### <a name="has_infinity"></a>has_infinity
 
 Comprueba si un tipo tiene una representación de infinito positivo.
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a> has_quiet_NaN
+### <a name="has_quiet_nan"></a>has_quiet_NaN
 
 Comprueba si un tipo tiene una representación para un NaN (no es un número) silencioso, que no sea de señalización.
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a> has_signaling_NaN
+### <a name="has_signaling_nan"></a>has_signaling_NaN
 
 Comprueba si un tipo tiene una representación para un NaN (no es un número) de señalización.
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a> infinito
+### <a name="infinity"></a>infinito
 
 La representación de infinito positivo de un tipo, si está disponible.
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a> is_bounded
+### <a name="is_bounded"></a>is_bounded
 
 Comprueba si el conjunto de valores que un tipo puede representar es finito.
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a> is_exact
+### <a name="is_exact"></a>is_exact
 
 Comprueba si los cálculos realizados en un tipo están libres de errores de redondeo.
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a> is_iec559
+### <a name="is_iec559"></a>is_iec559
 
 Comprueba si un tipo se ajusta a los estándares IEC 559.
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a> is_integer
+### <a name="is_integer"></a>is_integer
 
 Comprueba si un tipo tiene una representación de entero.
 
@@ -827,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a> is_modulo
+### <a name="is_modulo"></a>is_modulo
 
 Comprueba si un **tipo** tiene una representación de módulo.
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a> is_signed
+### <a name="is_signed"></a>is_signed
 
 Comprueba si un tipo tiene una representación con signo.
 
@@ -927,9 +927,9 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a> is_specialized
+### <a name="is_specialized"></a>is_specialized
 
-Comprueba si un tipo tiene una especialización explícita definida en la clase de plantilla `numeric_limits`.
+Comprueba si un tipo tiene una especialización explícita definida en la plantilla de clase `numeric_limits`.
 
 ```cpp
 static constexpr bool is_specialized = false;
@@ -937,11 +937,11 @@ static constexpr bool is_specialized = false;
 
 #### <a name="return-value"></a>Valor devuelto
 
-**True** si el tipo tiene una especialización explícita definida en la clase de plantilla; **False** si no es así.
+**true** si el tipo tiene una especialización explícita definida en la plantilla de clase; **false** en caso contrario.
 
 #### <a name="remarks"></a>Comentarios
 
-Todos los tipos escalares distintos a los punteros tienen una especialización explícita definida para la clase de plantilla `numeric_limits`.
+Todos los tipos escalares que no sean punteros tienen una especialización explícita definida para la plantilla de clase `numeric_limits`.
 
 #### <a name="example"></a>Ejemplo
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a> más bajo
+### <a name="lowest"></a>situado
 
 Devuelve el mayor valor finito negativo.
 
@@ -995,9 +995,9 @@ Devuelve el mayor valor finito negativo.
 
 #### <a name="remarks"></a>Comentarios
 
-Devuelve el mayor valor finito negativo para el tipo (que suele ser `min()` para los tipos enteros y `-max()` para tipos de punto flotante). El valor devuelto es significativo si `is_bounded` es **true**.
+Devuelve el mayor valor finito negativo para el tipo (que normalmente se `min()` para los tipos enteros y `-max()` para los tipos de punto flotante). El valor devuelto es significativo si `is_bounded` es **true**.
 
-### <a name="max"></a> max
+### <a name="max"></a>máx.
 
 Devuelve el valor finito máximo para un tipo.
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a> max_digits10
+### <a name="max_digits10"></a>max_digits10
 
 Devuelve el número de dígitos decimales necesarios para asegurarse de que dos valores distintos del tipo tengan distintas representaciones decimales.
 
@@ -1055,7 +1055,7 @@ Devuelve el número de dígitos decimales necesarios para asegurarse de que dos 
 
 El miembro almacena el número de dígitos decimales necesarios para asegurarse de que dos valores distintos del tipo tengan distintas representaciones decimales.
 
-### <a name="max_exponent"></a> max_exponent
+### <a name="max_exponent"></a>max_exponent
 
 Devuelve el exponente integral positivo máximo que el tipo de punto flotante puede representar como valor finito cuando se eleva una base de base a esa potencia.
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a> max_exponent10
+### <a name="max_exponent10"></a>max_exponent10
 
 Devuelve el exponente integral positivo máximo que puede representar el tipo de punto flotante como valor finito cuando se eleva una base de diez a esa potencia.
 
@@ -1147,7 +1147,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308
 ```
 
-### <a name="min"></a> min
+### <a name="min"></a>minuto
 
 Devuelve el valor normalizado mínimo para un tipo.
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a> min_exponent
+### <a name="min_exponent"></a>min_exponent
 
 Devuelve el exponente integral negativo máximo que puede representar el tipo de punto flotante como valor finito cuando se eleva una base de base a esa potencia.
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a> min_exponent10
+### <a name="min_exponent10"></a>min_exponent10
 
 Devuelve el exponente integral negativo máximo que puede representar el tipo de punto flotante como valor finito cuando se eleva una base de diez a esa potencia.
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a> quiet_NaN
+### <a name="quiet_nan"></a>quiet_NaN
 
 Devuelve la representación de un NaN (no es un número) silencioso para el tipo.
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a> base
+### <a name="radix"></a>fijo
 
 Devuelve la base integral, llamada base, usada para la representación de un tipo.
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a> round_error
+### <a name="round_error"></a>round_error
 
 Devuelve el error de redondeo máximo para el tipo.
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a> round_style
+### <a name="round_style"></a>round_style
 
 Devuelve un valor que describe los diversos métodos que una implementación puede elegir para redondear un valor de punto flotante a un valor entero.
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a> signaling_NaN
+### <a name="signaling_nan"></a>signaling_NaN
 
 Devuelve la representación de un NaN (no es un número) de señalización para el tipo.
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a> tinyness_before
+### <a name="tinyness_before"></a>tinyness_before
 
 Comprueba si un tipo puede determinar que un valor es demasiado pequeño para representarse como un valor normalizado antes de redondearlo.
 
@@ -1520,7 +1520,7 @@ static constexpr bool tinyness_before = false;
 
 #### <a name="return-value"></a>Valor devuelto
 
-**True** si el tipo puede detectar valores muy pequeños antes del redondeo; **false** si no es posible.
+**true** si el tipo puede detectar valores pequeños antes de redondear; **false** si no puede.
 
 #### <a name="remarks"></a>Comentarios
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a> capturas
+### <a name="traps"></a>capturas
 
 Comprueba si la captura que informa sobre excepciones aritméticas está implementada para un tipo.
 

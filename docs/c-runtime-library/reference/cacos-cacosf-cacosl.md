@@ -1,11 +1,11 @@
 ---
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348580"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939395"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Recupera el arco coseno de un número complejo, con cortes de bifurcación fuera del intervalo [-1, + 1] en el eje real.
+Recupera el arco coseno de un número complejo, con cortes de bifurcación fuera del intervalo [-1, + 1] a lo largo del eje real.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,11 +64,11 @@ Número complejo que representa un ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El arco coseno de *z*, en radianes. El resultado es ilimitado en el eje imaginario y en la en el intervalo [0, π] en el eje real. Se producirá un error de dominio si *z* está fuera del intervalo [-1, + 1].
+Arcocoseno de *z*, en radianes. El resultado es ilimitado a lo largo del eje imaginario y en el intervalo [0, π] a lo largo del eje real. Se producirá un error de dominio si *z* está fuera del intervalo [-1, + 1].
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **cacos** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cacos** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **cacos** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **cacos** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

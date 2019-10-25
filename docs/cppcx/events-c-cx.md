@@ -2,20 +2,20 @@
 title: Eventos (C++/CX)
 ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894450"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740527"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 
-Puede declarar el tipo de un Runtime de Windows (que es, publicar) eventos y el código de cliente en el mismo componente o de otros componentes pueden suscribirse a esos eventos asociando métodos denominados *controladores de eventos* con el evento. Se pueden asociar varios controladores de eventos a un único evento. Cuando el objeto de publicación genera el evento, hace que se invoquen todos los controladores de eventos. De esta manera, una clase de suscripción puede realizar la acción personalizada apropiada cuando el publicador genera el evento. Un evento tiene un tipo de delegado que especifica la signatura que deben tener todos los controladores de eventos para suscribirse al evento.
+Un tipo de Windows Runtime puede declarar (es decir, publicar) eventos, y el código de cliente del mismo componente o de otros componentes puede suscribirse a esos eventos asociando métodos denominados *controladores de eventos* con el evento. Se pueden asociar varios controladores de eventos a un único evento. Cuando el objeto de publicación genera el evento, hace que se invoquen todos los controladores de eventos. De esta manera, una clase de suscripción puede realizar la acción personalizada apropiada cuando el publicador genera el evento. Un evento tiene un tipo de delegado que especifica la signatura que deben tener todos los controladores de eventos para suscribirse al evento.
 
 ## <a name="consuming-events-in-windows-components"></a>Usar eventos en componentes de Windows
 
-Muchos componentes en tiempo de ejecución de Windows exponen eventos. Por ejemplo, un objeto LightSensor desencadena un evento ReadingChanged cuando el sensor notifica un nuevo valor de luminiscencia. Si utilizas un objeto LightSensor en el programa, puedes definir un método al que se llamará cuando se desencadene el evento ReadingChanged. El método puede hacer lo que quiera hacer; el único requisito es que su firma debe coincidir con la firma del delegado que se invoca. Para obtener más información acerca de cómo crear un controlador de eventos de delegado y suscribirse a un evento, vea [delegados](../cppcx/delegates-c-cx.md).
+Muchos componentes del Windows Runtime exponen eventos. Por ejemplo, un objeto LightSensor desencadena un evento ReadingChanged cuando el sensor notifica un nuevo valor de luminiscencia. Si utilizas un objeto LightSensor en el programa, puedes definir un método al que se llamará cuando se desencadene el evento ReadingChanged. El método puede hacer todo lo que desee hacer; el único requisito es que la firma debe coincidir con la firma del delegado que se invoca. Para obtener más información sobre cómo crear un controlador de eventos de delegado y suscribirse a un evento, vea [delegados](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Crear eventos personalizados
 
@@ -62,5 +62,5 @@ El orden en que el origen de eventos invoca los controladores de eventos en los 
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
 [Delegados](../cppcx/delegates-c-cx.md)<br/>
-[Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Referencia del lenguaje C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)

@@ -1,9 +1,9 @@
 ---
 title: _CrtDoForAllClientObjects
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDoForAllClientObjects
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626df0db1956efd26ee267cb8cacf8ea4a4570c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339724"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942530"
 ---
-# <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
+# <a name="_crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
-Llama a una función proporcionada por la aplicación para todos los **_CLIENT_BLOCK** tipos del montón (solo versión de depuración).
+Llama a una función proporcionada por la aplicación para todos los tipos _ **client_block** del montón (solo versión de depuración).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,20 +49,20 @@ void _CrtDoForAllClientObjects(
 ### <a name="parameters"></a>Parámetros
 
 *pfn*<br/>
-Puntero a la función de devolución de llamada proporcionada por la aplicación. El primer parámetro de esta función señala a los datos. El segundo parámetro es el puntero de contexto que se pasa a la llamada a **_CrtDoForAllClientObjects**.
+Puntero a la función de devolución de llamada proporcionada por la aplicación. El primer parámetro de esta función señala a los datos. El segundo parámetro es el puntero de contexto que se pasa a la llamada a _ **crtdoforallclientobjects**.
 
 *context*<br/>
 Puntero al contexto proporcionado por la aplicación que se va a pasar a la función proporcionada por la aplicación.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtDoForAllClientObjects** función busca en lista vinculada del montón bloques de memoria con el **_CLIENT_BLOCK** tipo y llama a la función proporcionada por la aplicación cuando un bloque de este tipo se encuentra. El bloque encontrado y el *contexto* parámetros se pasan como argumentos a la función proporcionada por la aplicación. Durante la depuración, una aplicación puede realizar un seguimiento de un grupo específico de asignaciones llamar explícitamente a la depuración funciones del montón para asignar memoria y especificando que se asigne a los bloques de la **_CLIENT_BLOCK** tipo de bloque. A continuación, se puede realizar el seguimiento y la notificación de estos bloques por separado durante la detección de pérdidas y la creación de informes sobre el estado de la memoria.
+La función _ **crtdoforallclientobjects** busca en la lista vinculada del montón bloques de memoria con el tipo _ **client_block** y llama a la función proporcionada por la aplicación cuando se encuentra un bloque de este tipo. El bloque encontrado y el parámetro de *contexto* se pasan como argumentos a la función proporcionada por la aplicación. Durante la depuración, una aplicación puede realizar el seguimiento de un grupo específico de asignaciones llamando explícitamente a las funciones del montón de depuración para asignar la memoria y especificando que se asigna a los bloques el tipo de bloque _ **client_block** . A continuación, se puede realizar el seguimiento y la notificación de estos bloques por separado durante la detección de pérdidas y la creación de informes sobre el estado de la memoria.
 
-Si el **_CRTDBG_ALLOC_MEM_DF** campo de bits de la [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca no está activada, **_CrtDoForAllClientObjects** devuelve inmediatamente. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtDoForAllClientObjects** se quitan durante el preprocesamiento.
+Si el campo de bits **_CRTDBG_ALLOC_MEM_DF** de la marca _ [crtdbgflag](../../c-runtime-library/crtdbgflag.md) no está activado, _ **crtdoforallclientobjects** devuelve inmediatamente. Cuando no se define [_ Debug](../../c-runtime-library/debug.md) , las llamadas a _ **crtdoforallclientobjects** se quitan durante el preprocesamiento.
 
-Para obtener más información sobre la **_CLIENT_BLOCK** escribir y ver cómo puede usar otras funciones de depuración, [tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información sobre el tipo _ **client_block** y cómo lo pueden usar otras funciones de depuración, vea [tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Si *pfn* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) está establecido en **EINVAL** y devuelve la función.
+Si *pfn* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se establecen en **EINVAL** y la función devuelve.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -69,7 +72,7 @@ Si *pfn* es **NULL**, se invoca el controlador de parámetros no válidos, como 
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** Versiones de depuración de universales bibliotecas de tiempo de ejecución de C solo.
+**Libre** Solo las versiones de depuración de las bibliotecas en tiempo de ejecución de C universales.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,13 +1,13 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - logb
 - _logb
 - _logbl
 - logbf
 - logbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logb
 - logbl
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285718"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953148"
 ---
-# <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
+# <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
 Extrae el valor de exponente de un argumento de punto flotante.
 
@@ -82,17 +85,17 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**logb** devuelve el valor de exponente imparcial de *x* como un entero con signo, representado como un valor de punto flotante.
+**logb** devuelve el valor de exponente no sesgado de *x* como un entero con signo representado como un valor de punto flotante.
 
 ## <a name="remarks"></a>Comentarios
 
-El **logb** funciones extraen el valor exponencial del argumento de punto flotante *x*, como si *x* se representara con el intervalo infinito. Si el argumento *x* es desnormalizado, se trata como si fuera normalizado.
+Las funciones **logb** extraen el valor exponencial del argumento de punto flotante *x*, como si se representara *x* con intervalo infinito. Si el argumento *x* está desnormalizado, se trata como si estuviera normalizado.
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **logb** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **logb** siempre toma y devuelve un **doble**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **logb** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **logb** siempre toma y devuelve un **valor Double**.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 
 ## <a name="requirements"></a>Requisitos

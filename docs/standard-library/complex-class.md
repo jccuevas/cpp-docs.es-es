@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453173"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688261"
 ---
 # <a name="complex-class"></a>complex (Clase)
 
-La clase de plantilla describe un objeto que almacena dos objetos de `Type`tipo, uno que representa la parte real de un número complejo y otro que representa la parte imaginaria.
+La plantilla de clase describe un objeto que almacena dos objetos de tipo `Type`, uno que representa la parte real de un número complejo y otro que representa la parte imaginaria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>Comentarios
 
-Un objeto de clase `Type`:
+Objeto de la clase `Type`:
 
 - Tiene un constructor público predeterminado, un destructor, un constructor de copias y un operador de asignación, con un comportamiento convencional.
 
@@ -38,9 +38,9 @@ Un objeto de clase `Type`:
 
 - Define, en la medida que sean necesarios, los operadores aritméticos y las funciones matemáticas que se definen para los tipos de punto flotante con un comportamiento convencional.
 
-En concreto, no pueden existir diferencias sutiles entre la construcción de la copia y la construcción predeterminada seguida por una asignación. Ninguna de las operaciones en objetos de clase `Type` puede producir excepciones.
+En concreto, no pueden existir diferencias sutiles entre la construcción de la copia y la construcción predeterminada seguida por una asignación. Ninguna de las operaciones en objetos de la clase `Type` puede producir excepciones.
 
-Las especializaciones explícitas de la clase de plantilla compleja existen para los tres tipos de punto flotante. En esta implementación, un valor de cualquier otro tipo `Type` es una conversión a **Double** para los cálculos reales, con el resultado **Double** asignado al objeto almacenado de tipo `Type`.
+Existen especializaciones explícitas de la plantilla de clase complejas para los tres tipos de punto flotante. En esta implementación, un valor de cualquier otro tipo `Type` se debe convertir en **Double** para los cálculos reales, con el resultado **Double** asignado de vuelta al objeto almacenado de tipo `Type`.
 
 ## <a name="members"></a>Miembros
 
@@ -50,7 +50,7 @@ Las especializaciones explícitas de la clase de plantilla compleja existen para
 |-|-|
 |[complex](#complex)|Construye un número complejo con partes reales e imaginarias especificados o como una copia de otro número complejo.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
 |||
 |-|-|
@@ -91,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parámetros
 
-*_RealVal*\
+@No__t_1 *_RealVal*
 El valor de la parte real que se usa para inicializar el número complejo que se está construyendo.
 
-*_ImagVal*\
+@No__t_1 *_ImagVal*
 El valor de la parte imaginaria que se usa para inicializar el número complejo que se está construyendo.
 
-*complexNum*\
+\ *complexNum*
 Número complejo cuyas partes reales e imaginarias se utilizan para inicializar el número complejo que se está construyendo.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa la parte real almacenada en  *\_RealVal* y la parte imaginaria almacenada en  *\_Imagval*. El segundo constructor inicializa la parte real almacenada en `complexNum.real()` y la parte imaginaria almacenada `complexNum.imag()`en.
+El primer constructor inicializa la parte real almacenada en *\_RealVal* y la parte imaginaria almacenada en *\_Imagval*. El segundo constructor inicializa la parte real almacenada en `complexNum.real()` y la parte imaginaria almacenada en `complexNum.imag()`.
 
 En esta implementación, si un En esta implementación, si un traductor no admite las funciones miembro de plantilla, la plantilla:
 
@@ -171,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Un número complejo cuya valor imaginario va a extraerse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -228,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Un número complejo o un número que es del mismo tipo que el parámetro del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -313,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Un número complejo o un número que es del mismo tipo que el parámetro del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -416,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*\
+\ *complexNum*
 Un número complejo que se va a restar del número complejo de destino.
 
-*_RealPart*\
+@No__t_1 *_RealPart*
 Un número real que se va a restar del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -524,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parámetros
 
-*complexNum*\
+\ *complexNum*
 Un número complejo que se va a restar del número complejo de destino.
 
-*_RealPart*\
+@No__t_1 *_RealPart*
 Un número real que se va a restar del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -613,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
 Asigna un número a un número complejo de destino, donde el número asignado puede ser complejo o del mismo tipo que las partes reales e imaginarias del número complejo al que se está asignando.
 
@@ -626,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Un número complejo o un número que es del mismo tipo que el parámetro del número complejo de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -703,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Un número complejo cuyo valor real es que deben extraerse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-`value_type`es un sinónimo del parámetro de plantilla `Type` compleja de clase.
+`value_type` es un sinónimo del parámetro de plantilla de `Type` complejo de clase.
 
 ### <a name="example"></a>Ejemplo
 

@@ -1,10 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285158"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951792"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
 Mueve un búfer a otro. Se trata de versiones de [memmove, wmemmove](memmove-wmemmove.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -65,7 +68,7 @@ Tamaño del búfer de destino.
 Objeto de origen.
 
 *count*<br/>
-Número de bytes (**memmove_s**) o caracteres (**wmemmove_s**) para copiar.
+Número de bytes (**memmove_s**) o caracteres (**wmemmove_s**) que se van a copiar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -77,13 +80,13 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|any|any|**EINVAL**|no modificado|
 |any|any|**NULL**|**EINVAL**|no modificado|
-|any|< *count*|any|**ERANGE**|no modificado|
+|any|< *contabiliza*|any|**ERANGE**|no modificado|
 
 ## <a name="remarks"></a>Comentarios
 
-Copias *recuento* bytes de caracteres de *src* a *dest*. Si algunas regiones del área de origen y el destino se superponen, **memmove_s** garantiza que se copian los bytes de origen original en la región superpuesta antes de que se sobrescriban.
+Copia los bytes de *número* de caracteres de *src* a *dest*. Si algunas regiones del área de origen y de destino se superponen, **memmove_s** garantiza que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.
 
-Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
+Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -123,7 +126,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 Before: 0123456789

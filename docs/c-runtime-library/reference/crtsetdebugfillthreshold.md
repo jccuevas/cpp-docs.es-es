@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342966"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942294"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
 Recupera o modifica el umbral que controla el comportamiento de llenado de búfer en las funciones de depuración.
 
@@ -49,11 +52,11 @@ Nuevo tamaño de umbral en bytes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor de umbral anterior.
+Valor de umbral anterior.
 
 ## <a name="remarks"></a>Comentarios
 
-Las versiones de depuración de algunas funciones de CRT con seguridad mejorada llenar el búfer pasado a ellas con un carácter especial (0xFE). Esto ayuda a encontrar casos en que se ha pasado el tamaño incorrecto a la función. Lamentablemente, también reduce el rendimiento. Para mejorar el rendimiento, utilice **_CrtSetDebugFillThreshold** para deshabilitar el llenado de búfer para los búferes mayores que el *newThreshold* umbral. Un *newThreshold* valor 0 la deshabilita para todos los búferes.
+Las versiones de depuración de algunas funciones CRT con seguridad mejorada rellenan el búfer que se les pasa con un carácter especial (0xFE). Esto ayuda a encontrar casos en que se ha pasado el tamaño incorrecto a la función. Lamentablemente, también reduce el rendimiento. Para mejorar el rendimiento, use **_CrtSetDebugFillThreshold** para deshabilitar el relleno de búfer para los búferes mayores que el umbral de *newThreshold* . Un valor *newThreshold* de 0 lo deshabilita para todos los búferes.
 
 El umbral predeterminado es **SIZE_T_MAX**.
 
@@ -101,11 +104,11 @@ A continuación se ofrece una lista de las funciones afectadas.
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-Esta función es específico de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Esta función es específica de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
-Versiones de depuración de la [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md) solo.
+Solo las versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Ejemplo
 

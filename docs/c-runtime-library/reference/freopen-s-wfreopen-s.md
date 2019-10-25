@@ -1,10 +1,10 @@
 ---
 title: freopen_s, _wfreopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfreopen_s
 - freopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - freopen_s
 - _tfreopen_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 6efe858713bf8c315536098f1b6dabdbcba01bfa
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 30cd1612045a9f9a69e6ac856a601bac3101467f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376113"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956700"
 ---
-# <a name="freopens-wfreopens"></a>freopen_s, _wfreopen_s
+# <a name="freopen_s-_wfreopen_s"></a>freopen_s, _wfreopen_s
 
 Reasigna un puntero de archivo. Estas versiones de [freopen, _wfreopen](freopen-wfreopen.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -100,7 +103,7 @@ Si alguno de los valores de *pFile*, *path*, *mode*o *Stream* son **null**, o si
 
 Use los tipos **"w"** y **"w +"** con cuidado, ya que pueden destruir archivos existentes.
 
-Cuando un archivo se abre con el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura tienen lugar al final del archivo. Aunque se puede cambiar la posición del puntero de archivo mediante [fseek](fseek-fseeki64.md) o rebobinar, el puntero de archivo siempre se desplaza al final del archivo antes de que se realice cualquier operación de escritura. [](rewind.md) Por consiguiente, los datos existentes no pueden sobrescribirse.
+Cuando un archivo se abre con el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura tienen lugar al final del archivo. Aunque se puede cambiar la posición del puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), el puntero de archivo siempre se desplaza al final del archivo antes de que se realice cualquier operación de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse.
 
 El modo **"a"** no quita el marcador EOF antes de anexar al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. El modo **"a +"** quita el marcador EOF antes de anexar al archivo. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El modo **"a +"** es necesario para anexar a un archivo de secuencia que termina con el marcador EOF Ctrl + Z.
 

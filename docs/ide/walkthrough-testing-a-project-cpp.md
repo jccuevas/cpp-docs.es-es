@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: c170deef8bf76bdd223bde01794f8996dc77922d
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400933"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273696"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Tutorial: Probar un proyecto (C++)
 
@@ -31,7 +31,7 @@ En este tutorial, verá el valor de una variable mientras el programa se ejecuta
 
 1. Seleccione esta línea de código:
 
-   `Cardgame.solitaire(1);`
+   `Cardgame solitaire(1);`
 
 1. Para establecer un punto de interrupción en esa línea, en la barra de menús, seleccione **Depurar** > **Alternar puntos de interrupción**, o bien presione la tecla **F9**. Aparece un círculo de color rojo a la izquierda de la línea; indica que se ha establecido un punto de interrupción. Para quitar un punto de interrupción, puede volver elegir el comando de menú o la tecla **F9**.
 

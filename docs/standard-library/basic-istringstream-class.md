@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 685195b13960c325076f1a38461394ada374d4b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b88411316ae247499100a044a0a2dfb3c53bc84f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452533"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689997"
 ---
-# <a name="basicistringstream-class"></a>basic_istringstream (Clase)
+# <a name="basic_istringstream-class"></a>basic_istringstream (Clase)
 
 Describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de flujo de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
@@ -34,34 +34,34 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc*\
+@No__t_1 de *asignación*
 Clase de asignador.
 
-*Elem*\
+@No__t_1 *Elem*
 Tipo de elemento básico de la cadena.
 
-*Anticipo*\
+*Tr* \
 Rasgos de caracteres especializados en el elemento básico de la cadena.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, `Alloc` **TR**, >, con elementos de tipo *Elem*. cuyos rasgos de caracteres están determinados por la clase *TR*y cuyos elementos están asignados por un asignador de clase *Alloc*. El objeto almacena un objeto de clase basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+La plantilla de clase describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de secuencia de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **TR**`Alloc` >, con elementos de tipo *Elem*, cuyo carácter los rasgos vienen determinados por la clase *TR*y cuyos elementos están asignados por un asignador de clase *Alloc*. El objeto almacena un objeto de clase basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[basic_istringstream](#basic_istringstream)|Construye un objeto de tipo `basic_istringstream`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Definiciones de tipo
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre de tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|El tipo es un sinónimo del parámetro de plantilla `Alloc`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función miembro|Descripción|
 |-|-|
 |[rdbuf](#rdbuf)|Devuelve la dirección del búfer de flujo almacenado de tipo `pointer` a [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|
 |[str](#str)|Establece u obtiene el texto en un búfer de cadena sin cambiar la posición de escritura.|
@@ -69,7 +69,7 @@ La clase de plantilla describe un objeto que controla la extracción de elemento
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|"??"|Descripción|
 |-|-|
 |[operator=](#op_eq)|Asigna los valores a este objeto `basic_istringstream` desde el parámetro de objeto.|
 
@@ -105,18 +105,18 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Mode*\
+@No__t_1 *_Mode*
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*CAD*\
+\ *Str*
 Objeto de tipo `basic_string`.
 
-*correcta*\
+\ *derecha*
 Referencia a un valor R de un objeto `basic_istringstream`.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor inicializa la clase base mediante una llamada [](../standard-library/basic-istream-class.md)a basic_istream`sb`(), `sb` donde es el objeto almacenado de [](../standard-library/basic-stringbuf-class.md)< la clase `Tr`basic_stringbuf `Alloc``Elem`,, > . También inicializa `sb` al llamar a `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>(`_Mode` &#124; `ios_base::in`).
+El primer constructor inicializa la clase base mediante una llamada a [basic_istream](../standard-library/basic-istream-class.md)(`sb`), donde `sb` es el objeto almacenado de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`, `Tr` `Alloc` >. También inicializa `sb` al llamar a `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>(`_Mode` &#124; `ios_base::in`).
 
 El segundo constructor inicializa la clase base al llamar a `basic_istream(sb)`. También inicializa `sb` al llamar a `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>(`str`, `_Mode` &#124; `ios_base::in`).
 
@@ -132,7 +132,7 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Referencia a un valor R a un objeto `basic_istringstream`.
 
 ### <a name="remarks"></a>Comentarios
@@ -141,7 +141,7 @@ El operador miembro reemplaza el contenido del objeto por el contenido de la *de
 
 ## <a name="rdbuf"></a>  basic_istringstream::rdbuf
 
-Devuelve la dirección del búfer de secuencia almacenado de tipo `pointer` a [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **TR** `Alloc`>.
+Devuelve la dirección del búfer de secuencia almacenado de tipo `pointer` a [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **TR**`Alloc` >.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,11 +149,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La dirección del búfer de secuencia almacenado de tipo `pointer` a basic_stringbuf < **Elem**, **TR** `Alloc`>.
+La dirección del búfer de secuencia almacenado de tipo `pointer` a basic_stringbuf < **Elem**, **TR**`Alloc` >.
 
 ### <a name="example"></a>Ejemplo
 
-Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo de uso de `rdbuf`.
+Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo que usa `rdbuf`.
 
 ## <a name="str"></a>  basic_istringstream::str
 
@@ -168,7 +168,7 @@ void str(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Newstr*\
+@No__t_1 *_Newstr*
 La nueva cadena.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -181,7 +181,7 @@ La primera función miembro devuelve [rdbuf](#rdbuf) -> [str](../standard-librar
 
 ### <a name="example"></a>Ejemplo
 
-Vea [basic_stringbuf:: STR](../standard-library/basic-stringbuf-class.md#str) para obtener un ejemplo que `str`usa.
+Vea [basic_stringbuf:: STR](../standard-library/basic-stringbuf-class.md#str) para obtener un ejemplo en el que se usa `str`.
 
 ## <a name="swap"></a>  basic_istringstream::swap
 
@@ -193,7 +193,7 @@ void swap(basic_istringstream& right);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*right*|Referencia `lvalue` a un objeto `basic_istringstream`.|
 

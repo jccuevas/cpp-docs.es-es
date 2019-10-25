@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449856"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688335"
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution (Clase)
+# <a name="cauchy_distribution-class"></a>cauchy_distribution (Clase)
 
 Genera una distribución de Cauchy.
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*\
+@No__t_1 *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-*URNG*\
+@No__t_1 *URNG*
 Motor del generador de números aleatorios uniformes. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución de Cauchy. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o el tipo **Double** si no se proporciona ninguno, distribuido según la distribución de Cauchy. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*un*\
+*un* \
 El parámetro de distribución `a`.
 
-*b*\
+*b* \
 El parámetro de distribución `b`.
 
-*PARM*\
+\ *PARM*
 La estructura `param_type` usada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*un*\
+*un* \
 El parámetro de distribución `a`.
 
-*b*\
+*b* \
 El parámetro de distribución `b`.
 
-*correcta*\
+\ *derecha*
 El objeto `param_type` que se va a comparar con este.
 
 ### <a name="remarks"></a>Comentarios

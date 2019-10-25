@@ -2,24 +2,24 @@
 title: Integración de CLR (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44ef35d1a62706cae37285c06547a8b9b7deb35c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257782"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740291"
 ---
 # <a name="clr-integration-ccx"></a>Integración de CLR (C++/CX)
 
-Algunos tipos de Windows en tiempo de ejecución reciben un tratamiento especial en C / c++ / CX y los idiomas que se basan en common language runtime (CLR). En este artículo se describe la manera en que varios tipos de un lenguaje se asignan a otro lenguaje. Por ejemplo, CLR asigna Windows.Foundation.IVector to System.Collections.IList, Windows.Foundation.IMap to System.Collections.IDictionary, etc. De forma similar, C++ / c++ / CX asigna especialmente tipos como Platform:: Delegate y Platform:: String.
+Algunos tipos de Windows Runtime reciben un tratamiento C++especial en/CX y los lenguajes basados en el Common Language Runtime (CLR). En este artículo se describe la manera en que varios tipos de un lenguaje se asignan a otro lenguaje. Por ejemplo, CLR asigna Windows.Foundation.IVector to System.Collections.IList, Windows.Foundation.IMap to System.Collections.IDictionary, etc. Del mismo C++modo,/CX asigna de forma especial tipos como platform::D Ombre y Platform:: String.
 
-## <a name="mapping-the-windows-runtime-to-ccx"></a>Asignar el tiempo de ejecución de Windows en C++ / c++ / CX
+## <a name="mapping-the-windows-runtime-to-ccx"></a>Asignación del Windows Runtime a C++/CX
 
-Cuando C++ / c++ / CX lee un archivo de metadatos (.winmd) de Windows, el compilador asigna automáticamente espacios de nombres comunes de Windows Runtime y tipos de C / c++ / CX espacios de nombres y tipos. Por ejemplo, el tipo en tiempo de ejecución de Windows numérico `UInt32` se asignan automáticamente a `default::uint32`.
+Cuando C++/CX Lee un archivo de metadatos de Windows (. winmd), el compilador asigna automáticamente los tipos C++y espacios de nombres de Windows Runtime comunes a los espacios de nombres y tipos de/CX. Por ejemplo, el tipo `UInt32` de Windows Runtime numérico se asigna automáticamente a. `default::uint32`
 
-C++ / c++ / CX asigna varios otros tipos en tiempo de ejecución de Windows para el **plataforma** espacio de nombres. Por ejemplo, el **Windows::Foundation** identificador HSTRING, que representa una cadena de texto Unicode de solo lectura, se asigna a C++ / c++ / CX `Platform::String` clase. Cuando una operación de Windows Runtime devuelve un HRESULT de error, se asigna a C++ / c++ / CX `Platform::Exception`.
+C++/CX asigna varios otros tipos de Windows Runtime al espacio de nombres **Platform** . Por ejemplo, el identificador **Windows:: Foundation** HSTRING, que representa una cadena de texto Unicode de solo lectura, se asigna a C++la `Platform::String` clase/CX. Cuando una operación de Windows Runtime devuelve un error HRESULT, se asigna a un C++/CX `Platform::Exception`.
 
-C++ / c++ / CX también asigna determinados tipos en espacios de nombres en tiempo de ejecución de Windows para mejorar la funcionalidad del tipo. Para estos tipos, C / c++ / CX proporciona constructores auxiliares y métodos que son específicas de C++ y no están disponibles en el archivo de .winmd estándar del tipo.
+C++/CX también asigna determinados tipos en Windows Runtime espacios de nombres para mejorar la funcionalidad del tipo. Para estos tipos, C++/CX proporciona constructores y métodos auxiliares que son específicos de C++ y no están disponibles en el archivo. winmd estándar del tipo.
 
 En las listas siguientes se muestran estructuras de valor que admiten nuevos métodos del asistente y constructores. Si ha escrito código anteriormente que usa listas de inicialización de estructuras, cámbielo para usar los constructores recién agregados.
 
@@ -39,7 +39,7 @@ En las listas siguientes se muestran estructuras de valor que admiten nuevos mé
 
 - CornerRadius
 
-- Duración
+- Duration
 
 - GridLength
 
@@ -63,11 +63,11 @@ En las listas siguientes se muestran estructuras de valor que admiten nuevos mé
 
 - Matrix3D
 
-## <a name="mapping-the-clr-to-ccx"></a>Asignación de CLR a C++ / c++ / CX
+## <a name="mapping-the-clr-to-ccx"></a>Asignación de CLR a C++/CX
 
-Cuando los compiladores de C# o Visual C++ leen un archivo .winmd, asignan automáticamente determinados tipos en el archivo de metadatos adecuado C++ / c++ / CX o CLR de tipos. Por ejemplo, en el CLR, el IVector\<T > interfaz se asigna a IList\<T >. Pero en C / c++ / CX, el IVector\<T > interfaz no está asignada a otro tipo.
+Cuando Microsoft C++ o C# los compiladores leen un archivo. winmd, asignan automáticamente determinados tipos del archivo de metadatos a C++los tipos de/CX o CLR adecuados. Por ejemplo, en CLR, la interfaz IVector\<T > está asignada a IList\<T >. Pero en C++/CX, la interfaz\<IVector T > no está asignada a otro tipo.
 
-IReference\<T > en el tiempo de ejecución de Windows se asigna a Nullable\<T > en. NET.
+IReference\<t > en el Windows Runtime se asigna a >\<de t que aceptan valores NULL en .net.
 
 ## <a name="see-also"></a>Vea también
 

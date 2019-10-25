@@ -63,8 +63,6 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -74,7 +72,6 @@ f1_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
 helpviewer_keywords:
@@ -139,8 +136,6 @@ helpviewer_keywords:
 - C5042
 - C5043
 - C5044
-- C5045
-- C5046
 - C5047
 - C5048
 - C5049
@@ -150,15 +145,14 @@ helpviewer_keywords:
 - C5102
 - C5103
 - C5104
-- C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 7e715dcbac9dc59fe09ee1f917c02a23b3c4db14
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821121"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230474"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Advertencias del compilador de C4800 a C5999
 
@@ -168,7 +162,7 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 
 ## <a name="warning-messages"></a>Mensajes de advertencia
 
-|Advertencia|Message|
+|Advertencia|Mensaje|
 |-------------|------------|
 |[ADVERTENCIA del compilador (nivel 4) C4800](compiler-warning-level-3-c4800.md)| Conversión implícita de '*tipo*' a bool. Posible pérdida de información |
 |[ADVERTENCIA del compilador (nivel 1) C4803](compiler-warning-level-1-c4803.md)|'*Method*': el método raise tiene una clase de almacenamiento diferente de la del evento, '*Event*'|
@@ -218,8 +212,8 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |[ADVERTENCIA del compilador (nivel 1) C4910](compiler-warning-level-1-c4910.md)|'\<Identifier >: ' _ _ declspec (dllexport) ' y ' extern ' son incompatibles en una creación de instancias explícita|
 |[ADVERTENCIA del compilador (nivel 1) C4912](compiler-warning-level-1-c4912.md)|'*Attribute*': el atributo tiene un comportamiento indefinido en un UDT anidado|
 |[ADVERTENCIA del compilador (nivel 4) C4913](compiler-warning-level-4-c4913.md)|el operador binario ',' definido por el usuario existe pero ninguna sobrecarga puede convertir todos los operandos; en su lugar, se utilizará el operador binario ',' incorporado|
-|ADVERTENCIA del compilador (nivel 1) C4916|para tener un DISPID, ' Description': se debe introducir mediante una interfaz|
-|[ADVERTENCIA del compilador (nivel 1) C4917](compiler-warning-level-1-c4917.md)|'declarador ': un GUID solo se puede asociar a una clase, interfaz o espacio de nombres|
+|ADVERTENCIA del compilador (nivel 1) C4916|para tener un DISPID, '*Description*': se debe introducir mediante una interfaz|
+|[ADVERTENCIA del compilador (nivel 1) C4917](compiler-warning-level-1-c4917.md)|'*declarador*': un GUID solo se puede asociar a una clase, interfaz o espacio de nombres|
 |[ADVERTENCIA del compilador (nivel 4) C4918](compiler-warning-level-4-c4918.md)|'*carácter*': carácter no válido en la lista de optimización de pragma|
 |[ADVERTENCIA del compilador (nivel 1) C4920](compiler-warning-level-1-c4920.md)|el miembro de enumeración de enumeración member_1 = value_1 ya se ha detectado en Enum Enum as member_2 = value_2|
 |ADVERTENCIA del compilador (nivel 3) C4921|'*Description*': el valor de atributo '*Attribute*' no se debe multiplicar|
@@ -266,7 +260,8 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |ADVERTENCIA del compilador (nivel 1) C4973|'*Symbol*': marcado como desusado|
 |ADVERTENCIA del compilador (nivel 1) C4974|'*Symbol*': marcado como desusado|
 |ADVERTENCIA del compilador (nivel 3) C4981|Warbird: la función '*function*' marcada como _ _ forceinline no está insertada porque contiene semántica de excepción|
-|ADVERTENCIA del compilador (nivel 3) C4985|nombre de símbolo ': atributos no presentes en la declaración anterior.|
+|[ADVERTENCIA del compilador C4984](compiler-warning-c4984.md)|' if constexpr ' es una extensión del lenguaje C++ 17|
+|ADVERTENCIA del compilador (nivel 3) C4985|'*symbol_name*': atributos no presentes en la declaración anterior.|
 |[ADVERTENCIA del compilador C4986](compiler-warning-c4986.md)|'*declaration*': la especificación de la excepción no coincide con la declaración anterior|
 |ADVERTENCIA del compilador (nivel 4) C4987|se usó una extensión no estándar: 'throw (...)'|
 |ADVERTENCIA del compilador (nivel 4) C4988|'*variable*': variable declarada fuera del ámbito de clase o función|
@@ -277,7 +272,7 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |[ADVERTENCIA del compilador (nivel 3) C4995](compiler-warning-level-3-c4995.md)|'*función*': el nombre se marcó como #pragma en desuso|
 |[ADVERTENCIA del compilador (nivel 3) C4996](compiler-warning-level-3-c4996.md)|'*deprecated-declaration*': *el mensaje de desuso* (o "se declaró en desuso")|
 |[ADVERTENCIA del compilador (nivel 1) C4997](compiler-warning-level-1-c4997.md)|'*Class*': la coclase no implementa una interfaz com ni una pseudo-interfaz|
-|ADVERTENCIA del compilador (nivel 1) C4998|ERROR de EXPECTAtiva: expectativa (*valor*)|
+|ADVERTENCIA del compilador (nivel 1) C4998|ERROR de EXPECTAtiva: *expectativa*(*valor*)|
 |[ADVERTENCIA del compilador C4999](compiler-warning-level-1-c4999.md)|ADVERTENCIA desconocida elija el comando soporte técnico en el menú Ayuda C++ visual o abra el archivo de ayuda de soporte técnico para obtener más información.|
 |ADVERTENCIA del compilador C5022|'*Type*': se especificaron varios constructores de movimiento|
 |ADVERTENCIA del compilador C5023|'*Type*': se especificaron varios operadores de asignación de movimiento|
@@ -301,9 +296,9 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 |ADVERTENCIA del compilador (nivel 1) C5041|'*Definition*': la definición fuera de línea para el miembro de datos estático constexpr no es necesaria y está en desuso en c++ 17|
 |ADVERTENCIA del compilador (nivel 3) C5042|'*declaration*': las declaraciones de función en el ámbito de bloque no se pueden especificar como ' C++inline ' en el estándar; quitar el especificador "inline"|
 |ADVERTENCIA del compilador (nivel 2) los errores c5043|'*Specification*': la especificación de la excepción no coincide con la declaración anterior|
-|ADVERTENCIA del compilador (nivel 4) C5044|Un argumento de la opción de la línea de comandos apunta a una ruta de acceso '*path*' que no existe|
-|[ADVERTENCIA del compilador C5045](c5045.md)|El compilador insertará la mitigación de Spectre para la carga de memoria si se especifica el modificador/Qspectre|
-|[ADVERTENCIA del compilador (nivel 2) C5046](c5046.md)|'*función*': Símbolo que implica el tipo con vinculación interna no definida|
+|ADVERTENCIA del compilador (nivel 4) C5044|Un argumento de la opción de la línea de *comandos apunta a* una ruta de acceso '*path*' que no existe|
+| [ADVERTENCIA del compilador C5045](c5045.md) | El compilador insertará la mitigación de Spectre para la carga de memoria si se especifica el modificador/Qspectre |
+| [ADVERTENCIA del compilador (nivel 2) C5046](c5046.md) | '*función*': Símbolo que implica el tipo con vinculación interna no definida |
 | ADVERTENCIA del compilador (nivel 1) C5047 | no se admite el \_uso\_de la no estándar \_if EXISTS con módulos |
 | ADVERTENCIA del compilador (nivel 1) C5048 | El uso de la macro '*nombremacro*' puede dar lugar a resultados no deterministas |
 | ADVERTENCIA del compilador (nivel 1) C5049 | '*cadena*': La incrustación de una ruta de acceso completa puede producir una salida dependiente del equipo |
@@ -313,7 +308,7 @@ En los artículos de esta sección de la documentación se explica un subconjunt
 | ADVERTENCIA del compilador (nivel 1) C5102 | se omitirá la definición de macro de línea de comandos no válida '*Value*' |
 | ADVERTENCIA del compilador (nivel 1) C5103 | pegar '*token1*' y '*token2*' no produce un token de preprocesamiento válido |
 | ADVERTENCIA del compilador (nivel 1) C5104 | se encontró '*string1*#*cadena2*' en la lista de reemplazo de macros; ¿quiso decir '*cadena1*' "#*cadena2*'? |
-| ADVERTENCIA del compilador (nivel 1) C5105 | la expansión de macros que produce ' defined ' tiene un comportamiento indefinido |
+| [ADVERTENCIA del compilador (nivel 1) C5105](c5105.md) | la expansión de macros que produce ' defined ' tiene un comportamiento indefinido |
 | ADVERTENCIA del compilador (nivel 1) C5106 | macro redefinida con distintos nombres de parámetro |
 | ADVERTENCIA del compilador (nivel 1) C5107 | falta el carácter '*carácter*' de terminación |
 

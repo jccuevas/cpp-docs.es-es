@@ -1,12 +1,12 @@
 ---
 title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swprintf_s_l
 - _sprintf_s_l
 - swprintf_s
 - sprintf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - swprintf_s
 - sprintf_s
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 4d4bec339caccf9b0843afada4b56b435243dd11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34b3ddce68563479b26abff34e8fa31f6298558a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354961"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958019"
 ---
-# <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
+# <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
 Escribir datos con formato en una cadena. Se trata de versiones de [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) que incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -116,23 +119,23 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-El número de caracteres escritos, o -1 si se produjo un error. Si *búfer* o *formato* es un puntero nulo, **sprintf_s** y **swprintf_s** devuelven -1 y establezca **errno**a **EINVAL**.
+Número de caracteres escritos, o-1 si se ha producido un error. Si *buffer* o *Format* es un puntero nulo, **sprintf_s** y **swprintf_s** devuelven-1 y establecen **errno** en **EINVAL**.
 
-**sprintf_s** devuelve el número de bytes almacenados en *búfer*, sin contar el carácter nulo de terminación. **swprintf_s** devuelve el número de caracteres anchos almacenados en *búfer*, sin contar el carácter ancho final null.
+**sprintf_s** devuelve el número de bytes almacenados en el *búfer*, sin contar el carácter null de terminación. **swprintf_s** devuelve el número de caracteres anchos almacenados en el *búfer*, sin contar el carácter ancho final null.
 
 ## <a name="remarks"></a>Comentarios
 
-El **sprintf_s** función da formato y almacena una serie de caracteres y valores en *búfer*. Cada *argumento* (si existe) se convierte y sale según la especificación de formato correspondiente de *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md). Un carácter null se anexa después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **sprintf_s** da formato y almacena una serie de caracteres y valores en el *búfer*. Cada *argumento* (si existe) se convierte y se genera de acuerdo con la especificación de formato correspondiente en *Format*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el argumento de *formato* de [printf](printf-printf-l-wprintf-wprintf-l.md). Un carácter null se anexa después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-Una diferencia principal entre **sprintf_s** y [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) es que **sprintf_s** comprueba la cadena de formato de caracteres de formato válidos, mientras que [ sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) solo comprueba si el búfer o cadena de formato son **NULL** punteros. Si hay errores en alguna comprobación, se invoca el controlador de parámetros no válidos, tal y como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
+Una diferencia principal entre **sprintf_s** y [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) es que **sprintf_s** comprueba la cadena de formato en busca de caracteres de formato válidos, mientras que [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) solo comprueba si la cadena de formato o el búfer son punteros **nulos** . Si hay errores en alguna comprobación, se invoca el controlador de parámetros no válidos, tal y como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve-1 y establece **errno** en **EINVAL**.
 
-La principal diferencia entre **sprintf_s** y [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) es que **sprintf_s** toma un parámetro de longitud especifica el tamaño del búfer de salida en caracteres. Si el búfer es demasiado pequeño para el texto con formato, incluido el terminador nulo, entonces el búfer se establece en una cadena vacía colocando un carácter null en *búfer*[0], y se invoca el controlador de parámetros no válidos. A diferencia de **_snprintf**, **sprintf_s** garantiza que el búfer se termina en null a menos que el tamaño del búfer sea cero.
+La otra diferencia principal entre **sprintf_s** y [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) es que **sprintf_s** toma un parámetro de longitud que especifica el tamaño del búfer de salida en caracteres. Si el búfer es demasiado pequeño para el texto con formato, incluido el valor null final, el búfer se establece en una cadena vacía colocando un carácter null en el *búfer*[0] y se invoca el controlador de parámetros no válidos. A diferencia de **_snprintf**, **sprintf_s** garantiza que el búfer terminará en null a menos que el tamaño del búfer sea cero.
 
-**swprintf_s** es una versión con caracteres anchos de **sprintf_s**; los argumentos de puntero **swprintf_s** son cadenas de caracteres anchos. Detección de errores de codificación **swprintf_s** podría diferir en **sprintf_s**. Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+**swprintf_s** es una versión con caracteres anchos de **sprintf_s**; los argumentos de puntero a **swprintf_s** son cadenas de caracteres anchos. La detección de errores de codificación en **swprintf_s** puede diferir de la de **sprintf_s**. Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla. Las sobrecargas pueden realizar una inferencia de longitud de búfer automáticamente (lo que elimina la necesidad de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus equivalentes, seguras y más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Hay versiones de **sprintf_s** que ofrecer un mayor control sobre lo que sucede si el búfer es demasiado pequeño. Para obtener más información, consulta [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Hay versiones de **sprintf_s** que ofrecen un control adicional sobre lo que sucede si el búfer es demasiado pequeño. Para obtener más información, consulta [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

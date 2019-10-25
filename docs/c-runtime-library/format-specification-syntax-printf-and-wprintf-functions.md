@@ -1,6 +1,6 @@
 ---
 title: 'Sintaxis de especificación de formato: Funciones printf y wprintf'
-ms.date: 07/30/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 3ba4f91c86727986762b3431c093ee7304a3a83f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915491"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778392"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
-Las distintas funciones `printf` y `wprintf` toman una cadena de formato y argumentos opcionales y generan una secuencia de caracteres con formato para la salida. La cadena de formato contiene cero o más *directivas*, que son caracteres literales para la salida o *especificaciones de conversión* codificadas que describen cómo dar formato a un argumento en la salida. En este artículo se describe la sintaxis utilizada para codificar las especificaciones de conversión en la cadena de formato. Para obtener una lista de estas funciones, vea [E/S de secuencia](../c-runtime-library/stream-i-o.md).
+Las distintas funciones `printf` y `wprintf` toman una cadena de formato y argumentos opcionales y generan una secuencia de caracteres con formato para la salida. La cadena de formato contiene cero o más *directivas*, que son caracteres literales para la salida o *especificaciones de conversión* codificadas que describen cómo dar formato a un argumento en la salida. En este artículo se describe la sintaxis utilizada para codificar las especificaciones de conversión en la cadena de formato. Para obtener una lista de estas funciones, vea [E/S de secuencia](../c-runtime-library/stream-i-o.md). 
 
 Una especificación de conversión consta de campos opcionales y obligatorios con este formato:
 
@@ -39,13 +39,16 @@ La especificación de conversión básica solo contiene el signo de porcentaje y
 
 <a name="type"></a>
 
+> [!NOTE] 
+> En Visual Studio 2015, la familia de funciones `printf` y `scanf` se declaró como **inline** y se desplazó a los encabezados `<stdio.h>` y `<conio.h>`. Si va a migrar código anterior, es posible que vea *LNK2019* en conexión con estas funciones. Para obtener más información, [consulte C++ el historial de cambios de Visual 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+
 ## <a name="type-conversion-specifier"></a>Especificador de conversión de tipo
 
 El carácter del especificador de conversión *tipo* especifica si el argumento correspondiente debe interpretarse como un carácter, una cadena, un puntero, un entero o un número de punto flotante. El carácter de *tipo* es el único campo de especificación de conversión necesario y aparece después de los campos opcionales.
 
 Los argumentos que siguen a la cadena de formato se interpretan según el carácter de *tipo* correspondiente y el prefijo opcional [tamaño](#size). Las conversiones de tipos de caracteres `char` y `wchar_t` se especifican mediante **c** o **C**, y las cadenas de caracteres de byte único y multibyte o de carácter ancho se especifican mediante **s** o **S**, según la función de formato que se esté usando. Los argumentos de caracteres y cadenas que se especifican mediante el uso de **c** y **s** se interpretan como `char` y `char*` en la familia de funciones `printf`, o como `wchar_t` y `wchar_t*` en la familia de funciones `wprintf`. Los argumentos de caracteres y cadenas que se especifican mediante el uso de **C** y **S** se interpretan como `wchar_t` y `wchar_t*` en la familia de funciones `printf`, o como `char` y `char*` en la familia de funciones `wprintf`. Este comportamiento es específico de Microsoft.
 
-Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `unsigned` se especifican mediante **d**, **i**, **o**, **u**, **x** y **X**. Los tipos de punto flotante como `float`, `double` y `long double`, se especifican mediante **a**, **A**, **e**, **E**, **f**, **F**, **g** y **G**. De forma predeterminada, y a menos que los modifique un prefijo de *tamaño*, los argumentos de entero se convierten en el tipo `int` y los argumentos de punto flotante se convierten en `double`. En sistemas de 64 bits, `int` es un valor de 32 bits; por consiguiente, los enteros de 64 bits se truncan cuando se les aplica formato para la salida, a menos que se use un prefijo para *tamaño* de **ll** o **I64**. Los tipos de puntero que se especifican mediante **p** usan el tamaño de puntero predeterminado para la plataforma.
+Los tipos enteros como `short`, `int`, `long`, `long long` y sus variantes de `unsigned` se especifican mediante **d**, **i**, **o**, **u**, **x**y **x**. Los **tipos de punto**flotante, como 1, 2 y 3, se especifican mediante, a **,** **e**, **e**, **f**, **f**, **g**y **g**. De forma predeterminada, a menos que los modifique un prefijo de *tamaño* , los argumentos de entero se convierten en 3 tipo, y los argumentos de punto flotante se convierten en 4. En sistemas de 64 bits, `int` es un valor de 32 bits; por consiguiente, los enteros de 64 bits se truncan cuando se les aplica formato para la salida, a menos que se use un prefijo para *tamaño* de **ll** o **I64**. Los tipos de puntero que se especifican mediante **p** usan el tamaño de puntero predeterminado para la plataforma.
 
 > [!NOTE]
 > **Específico de Microsoft** El carácter de tipo **Z**, así como el comportamiento de los caracteres de tipo **c**, **C**, **s** y **S** cuando se usan con las funciones `printf` y `wprintf`, son extensiones de Microsoft. El estándar ISO C usa **c** y **s** sistemáticamente para caracteres estrechos y cadenas, y **C** y **S** para caracteres anchos y cadenas, en todas las funciones de formato.
@@ -74,11 +77,11 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**p**|Tipo de puntero|Muestra el argumento como una dirección de dígitos hexadecimales.|
 |**s**|String|Cuando se usa con funciones `printf`, especifica una cadena de caracteres de byte único o multibyte; cuando se usa con funciones `wprintf`, especifica una cadena de carácter ancho. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
 |**S**|String|Cuando se usa con funciones `printf`, especifica una cadena de carácter ancho; cuando se usa con funciones `wprintf`, especifica una cadena de caracteres de byte único o multibyte. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
-|**Z**|Estructura `ANSI_STRING` o `UNICODE_STRING`|Cuando la dirección de una estructura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-string) o [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) se pasa como argumento, muestra la cadena contenida en el búfer al que apunta el campo `Buffer` de la estructura. Use un prefijo del modificador *tamaño* de **w** para especificar un argumento `UNICODE_STRING`, por ejemplo, `%wZ`. El campo `Length` de la estructura debe establecerse en la longitud de la cadena expresada en bytes. El campo `MaximumLength` de la estructura debe establecerse en la longitud del búfer expresada en bytes.<br /><br /> Normalmente, el carácter de tipo **Z** tan solo se usa en funciones de depuración de controladores que utilizan una especificación de formato, como `dbgPrint` y `kdPrint`.|
+|**Z**|Estructura `ANSI_STRING` o `UNICODE_STRING`|Cuando la dirección de una estructura [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) o [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) se pasa como argumento, muestra la cadena contenida en el búfer al que apunta el campo `Buffer` de la estructura. Use un prefijo del modificador *tamaño* de **w** para especificar un argumento `UNICODE_STRING`, por ejemplo, `%wZ`. El campo `Length` de la estructura debe establecerse en la longitud de la cadena expresada en bytes. El campo `MaximumLength` de la estructura debe establecerse en la longitud del búfer expresada en bytes.<br /><br /> Normalmente, el carácter de tipo **Z** tan solo se usa en funciones de depuración de controladores que utilizan una especificación de formato, como `dbgPrint` y `kdPrint`.|
 
 A partir de Visual Studio 2015, si el argumento correspondiente a un especificador de conversión de punto flotante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) es infinito, indefinido o NaN, la salida con formato se ajusta al estándar C99. Esta tabla enumera la salida con formato:
 
-|Valor|Salida|
+|Valor|Resultados|
 |-----------|------------|
 |infinity|`inf`|
 |NaN reservado|`nan`|
@@ -89,7 +92,7 @@ Cualquiera de estos valores puede ir precedido por un signo. Si un carácter esp
 
 Antes de Visual Studio 2015, CRT utilizaba un formato diferente no estándar para la salida de los valores infinito, indefinido y NaN:
 
-|Valor|Salida|
+|Valor|Resultados|
 |-----------|------------|
 |+ infinito|`1.#INF` *dígitos aleatorios*|
 |- infinity|`-1.#INF` *dígitos aleatorios*|
@@ -115,7 +118,7 @@ El primer campo opcional en una especificación de conversión contiene *directi
 
 ### <a name="flag-characters"></a>Caracteres de marca
 
-|Marcar|Significado|Default|
+|Marcar|Significado|Predeterminado|
 |----------|-------------|-------------|
 |**-**|Alinear a la izquierda el resultado dentro del ancho de campo dado.|Alinear a la derecha.|
 |**+**|Usar un signo (+ o -) como prefijo del valor de salida si es de un tipo con signo.|El signo solo aparece para valores con signo negativo (-).|
@@ -157,7 +160,7 @@ El carácter de *tipo* determina la interpretación de *precisión* o la precisi
 
 ### <a name="how-precision-values-affect-type"></a>Cómo afectan los valores de precisión al tipo
 
-|Tipo|Significado|Default|
+|Type|Significado|Predeterminado|
 |----------|-------------|-------------|
 |**a**, **A**|La precisión especifica el número de dígitos que se muestran después del punto.|La precisión predeterminada es 13. Si la precisión es 0, no se imprime ningún punto decimal a menos que se use la marca **#** .|
 |**c**, **C**|La precisión no tiene ningún efecto.|El carácter se imprime.|

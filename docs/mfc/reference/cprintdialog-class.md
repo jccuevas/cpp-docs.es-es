@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ccc673d665d6d5beb92f398b21e6ffd313a58fc9
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502904"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741362"
 ---
 # <a name="cprintdialog-class"></a>Clase CPrintDialog
 
@@ -104,7 +104,7 @@ Puede confiar en el marco de trabajo para administrar muchos aspectos del proces
 
 Si desea que la aplicación controle la impresión sin la implicación del marco de trabajo, puede `CPrintDialog` usar la clase "tal cual" con el constructor proporcionado o puede derivar su propia clase de `CPrintDialog` cuadro de diálogo de y escribir un constructor para satisfacer sus necesidades. En cualquier caso, estos cuadros de diálogo se comportarán como los cuadros de diálogo de MFC estándar `CCommonDialog`, ya que se derivan de la clase.
 
-Para usar un `CPrintDialog` objeto, primero cree el objeto mediante el `CPrintDialog` constructor. Una vez que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la estructura [m_pd](#m_pd) para inicializar los valores de los controles del cuadro de diálogo. La `m_pd` estructura es de tipo [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw). Para obtener más información sobre esta estructura, vea el Windows SDK.
+Para usar un `CPrintDialog` objeto, primero cree el objeto mediante el `CPrintDialog` constructor. Una vez que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la estructura [m_pd](#m_pd) para inicializar los valores de los controles del cuadro de diálogo. La `m_pd` estructura es de tipo [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga). Para obtener más información sobre esta estructura, vea el Windows SDK.
 
 Si no proporciona sus propios `m_pd` identificadores en para los `hDevMode` miembros y `hDevNames` , asegúrese de llamar a la función `GlobalFree` de Windows para estos controladores cuando haya terminado con el cuadro de diálogo. Cuando se usa la implementación de instalación de impresión del `CWinApp::OnFilePrintSetup`marco de trabajo proporcionada por, no es necesario liberar estos identificadores. Los identificadores son mantenidos por `CWinApp` y se liberan en `CWinApp`el destructor de. Solo es necesario liberar estos identificadores cuando se usa `CPrintDialog` independiente.
 
@@ -159,7 +159,7 @@ CPrintDialog(
 Especifica si se muestra el cuadro de diálogo de impresión estándar de Windows o el cuadro de diálogo de configuración de impresión. Establezca este parámetro en TRUE para mostrar el cuadro de diálogo Configuración de impresión estándar de Windows. Establézcalo en FALSE para mostrar el cuadro de diálogo Imprimir de Windows. Si *bPrintSetupOnly* es false, el botón de opción de configuración de impresión sigue mostrándose en el cuadro de diálogo Imprimir.
 
 *dwFlags*<br/>
-Una o varias marcas que puede usar para personalizar la configuración del cuadro de diálogo, combinada mediante el operador bit a bit or. Por ejemplo, la marca PD_ALLPAGES establece el intervalo de impresión predeterminado en todas las páginas del documento. Vea la estructura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) en el Windows SDK para obtener más información acerca de estas marcas.
+Una o varias marcas que puede usar para personalizar la configuración del cuadro de diálogo, combinada mediante el operador bit a bit or. Por ejemplo, la marca PD_ALLPAGES establece el intervalo de impresión predeterminado en todas las páginas del documento. Vea la estructura [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) en el Windows SDK para obtener más información acerca de estas marcas.
 
 *pParentWnd*<br/>
 Puntero a la ventana primaria o propietaria del cuadro de diálogo.
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>Comentarios
 
-Después de construir un `CPrintDialog` objeto, puede utilizar `m_pd` para establecer diversos aspectos del cuadro de diálogo antes de llamar a la función miembro [DoModal](#domodal) . Para obtener más información sobre `m_pd` la estructura, vea [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) en el Windows SDK.
+Después de construir un `CPrintDialog` objeto, puede utilizar `m_pd` para establecer diversos aspectos del cuadro de diálogo antes de llamar a la función miembro [DoModal](#domodal) . Para obtener más información sobre `m_pd` la estructura, vea [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) en el Windows SDK.
 
 Si modifica el miembro `m_pd` de datos directamente, invalidará el comportamiento predeterminado.
 

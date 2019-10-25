@@ -1,14 +1,14 @@
 ---
 title: Biblioteca de plantillas de Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: ee3414968e5d619d640d8cdac981741aecb2316c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500389"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274672"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
 
@@ -43,25 +43,25 @@ A continuación se muestran algunos recursos que pueden ayudarle a trabajar con 
 [Biblioteca de Windows Runtime (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 En este vídeo de Channel 9, obtenga más información sobre cómo C++ Windows Runtime biblioteca de plantillas le ayuda a escribir aplicaciones plataforma universal de Windows (UWP) y cómo crear y consumir componentes Windows Runtime.
 
-[Procedimientos: Activar y usar un componente de Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
+[Cómo: Activar y usar un componente de Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para inicializar el Windows Runtime y activar y utilizar un componente de Windows Runtime.
 
 [Cómo: Completar operaciones asincrónicas](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para iniciar operaciones asincrónicas y realizar el trabajo cuando se completan las operaciones.
 
-[Procedimientos: Controlar eventos](how-to-handle-events-using-wrl.md)<br/>
+[Cómo: Controlar eventos](how-to-handle-events-using-wrl.md)<br/>
 Muestra cómo utilizar la biblioteca de C++ plantillas de Windows Runtime para suscribirse a los eventos de un objeto Windows Runtime y controlarlos.
 
 [Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Obtenga información sobre cómo crear una aplicación para UWP que use [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-[Procedimientos: Crear un componente COM clásico](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+[Cómo: Crear un componente COM clásico](how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Muestra cómo usar la biblioteca de C++ plantillas de Windows Runtime para crear un componente com básico y una forma básica de registrar y utilizar el componente com de una aplicación de escritorio.
 
-[Procedimientos: Crear instancias de componentes WRL directamente](how-to-instantiate-wrl-components-directly.md)<br/>
+[Cómo: Crear instancias de componentes WRL directamente](how-to-instantiate-wrl-components-directly.md)<br/>
 Obtenga información sobre cómo utilizar las funciones [Microsoft::WRL::Make](make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md) para crear instancias de un componente a partir del módulo que lo define.
 
-[Procedimientos: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
+[Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Muestra cómo utilizar componentes personalizados de Windows en tiempo de ejecución desde la WRL mediante la creación de un archivo IDL a partir de los metadatos .winmd.
 
 [Tutorial: Conexión con tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
@@ -147,5 +147,5 @@ Un objeto `WeakRef` normalmente representa un objeto cuya existencia se controla
 |-|-|
 |[API principales por categoría](key-wrl-apis-by-category.md)|Resalta los tipos C++ , funciones y macros principales de la biblioteca de plantillas de Windows Runtime.|
 |[Referencia](wrl-reference.md)|Contiene información de referencia para la C++ biblioteca de plantillas de Windows Runtime.|
-|[Referencia rápida (Windows Runtime y visual C++)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente las C++características de/CX que admiten el Windows Runtime.|
+|[Referencia C++rápida/CX)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente las C++características de/CX que admiten el Windows Runtime.|
 |[Usar componentes de Windows Runtime en VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Muestra cómo usar C++/CX para crear un componente de Windows Runtime básico.|

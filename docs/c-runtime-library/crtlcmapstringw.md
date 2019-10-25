@@ -1,9 +1,9 @@
 ---
 title: __crtLCMapStringW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __crtLCMapStringW
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __crtLCMapStringW
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d9458529e5772f31e3ae5463d3a6ff5a7b726e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468424"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940444"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
 Asigna una cadena de caracteres a otra, para lo que realiza una transformación de dependiente de la configuración regional especificada. Esta función también puede usarse para generar un criterio de ordenación para la cadena de entrada.
 
@@ -72,7 +75,7 @@ Cero indica un error. Para obtener información de errores extendida, realice un
 
 ## <a name="remarks"></a>Comentarios
 
-Si `cchSrc` es mayor que cero y `lpSrcStr` es una cadena terminada en NULL, `__crtLCMapStringW` establece `cchSrc` en la longitud de la cadena. Después, `__crtLCMapStringW` llama a la versión de cadena de caracteres anchos (Unicode) de la función `LCMapString` con los parámetros especificados. Para obtener más información sobre los parámetros y el valor devuelto de esta función, vea la función [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).
+Si `cchSrc` es mayor que cero y `lpSrcStr` es una cadena terminada en NULL, `__crtLCMapStringW` establece `cchSrc` en la longitud de la cadena. Después, `__crtLCMapStringW` llama a la versión de cadena de caracteres anchos (Unicode) de la función `LCMapString` con los parámetros especificados. Para obtener más información sobre los parámetros y el valor devuelto de esta función, vea la función [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 
 ## <a name="requirements"></a>Requisitos
 

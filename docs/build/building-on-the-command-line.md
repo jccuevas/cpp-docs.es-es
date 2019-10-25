@@ -1,8 +1,8 @@
 ---
-title: Utilice Microsoft C++ conjunto de herramientas de la línea de comandos
+title: Usar el conjunto C++ de herramientas de Microsoft desde la línea de comandos
 description: Use la cadena de herramientas del Compilador de Microsoft Visual C++ (MSVC) desde la línea de comandos fuera del IDE de Visual Studio.
 ms.custom: conceptual
-ms.date: 06/06/2019
+ms.date: 10/22/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: b5e9bf266d79ee86cae84535641a52c7c52be391
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821140"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811162"
 ---
-# <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Utilice Microsoft C++ conjunto de herramientas de la línea de comandos
+# <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Usar el conjunto C++ de herramientas de Microsoft desde la línea de comandos
 
-Con las herramientas incluidas en Visual Studio, puede compilar aplicaciones de C y C++ en la línea de comandos. Microsoft C++ compiladoras (MSVC) es también puede descargar como un paquete independiente de la [descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/) página. Forma parte de la **Build Tools para Visual Studio** paquete. Puede elegir descargar sólo las herramientas que necesita para C++ desarrollo.
+Con las herramientas incluidas en Visual Studio, puede compilar aplicaciones de C y C++ en la línea de comandos. El conjunto C++ de herramientas del compilador de Microsoft (MSVC) también se puede descargar como un paquete independiente desde la página de [descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/) . Forma parte del paquete de **herramientas de compilación para Visual Studio** . Puede optar por descargar solo las herramientas que necesita para C++ el desarrollo.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Cómo usar las herramientas de línea de comandos
 
-Al elegir una de las cargas de trabajo de C++ en el Instalador de Visual Studio, instala el *conjunto de herramientas de la plataforma* Visual Studio. Un conjunto de herramientas de plataforma tiene la de C y C++ herramientas para una versión específica de Visual Studio. Las herramientas incluyen el C /C++ compiladores, enlazadores, ensambladores y otras herramientas de compilación y las bibliotecas de búsqueda de coincidencias. Puede usar todas estas herramientas en la línea de comandos. También utilizan internamente por el IDE de Visual Studio. Existen compiladores hospedados x86 y hospedadas en x64 64 independientes y herramientas para crear código para x86, x 64, ARM y ARM64 destinos. Cada conjunto de herramientas para una arquitectura de compilación de destino y de host en particular se almacena en su propio directorio.
+Al elegir una de las cargas de trabajo de C++ en el Instalador de Visual Studio, instala el *conjunto de herramientas de la plataforma* Visual Studio. Un conjunto de herramientas de la plataforma tiene C++ todas las herramientas de C y para una versión específica de Visual Studio. Entre las herramientas se incluyen CC++ /compiladores, vinculadores, ensambladores y otras herramientas de compilación, y bibliotecas coincidentes. Puede usar todas estas herramientas en la línea de comandos. También se usan internamente en el IDE de Visual Studio. Existen compiladores y herramientas independientes hospedados en x86 y en x64 para compilar código para los destinos x86, x64, ARM y ARM64. Cada conjunto de herramientas para una arquitectura de compilación de destino y de host en particular se almacena en su propio directorio.
 
-Para que las herramientas funcionen correctamente, es necesario especificar varias variables específicas del entorno. Estas variables se usan para agregar las herramientas para la ruta de acceso y para establecer incluyen archivo, archivo de biblioteca y ubicaciones de SDK. Para que sea fácil establecer estas variables de entorno, el instalador crea *archivos de comandos* personalizados, o archivos por lotes, durante la instalación. Puede ejecutar uno de estos archivos de comandos para establecer un host específico y arquitectura de la compilación de destino, versión del SDK de Windows y el conjunto de herramientas de plataforma. Para mayor comodidad, el programa de instalación también crea accesos directos en el menú Inicio. Los métodos abreviados de inician windows de símbolo del sistema para desarrolladores mediante el uso de estos archivos de comandos para combinaciones concretas de host y de destino. Estos métodos abreviados Asegúrese de que todas las variables de entorno necesarias son establecido y listo para su uso.
+Para que las herramientas funcionen correctamente, es necesario especificar varias variables específicas del entorno. Estas variables se usan para agregar las herramientas a la ruta de acceso y para establecer el archivo de inclusión, el archivo de biblioteca y las ubicaciones del SDK. Para que sea fácil establecer estas variables de entorno, el instalador crea *archivos de comandos* personalizados, o archivos por lotes, durante la instalación. Puede ejecutar uno de estos archivos de comandos para establecer un host específico y la arquitectura de compilación de destino, la versión de Windows SDK y el conjunto de herramientas de la plataforma. Para mayor comodidad, el instalador también crea accesos directos en el menú Inicio. Los accesos directos inician ventanas del símbolo del sistema de desarrollador mediante estos archivos de comandos para combinaciones específicas de host y destino. Estos métodos abreviados garantizan que todas las variables de entorno necesarias estén establecidas y listas para usarse.
 
-Las variables de entorno necesarias son específicas para la instalación y la arquitectura de compilación que elija. También podría cambiarse las actualizaciones del producto. Por este motivo se recomienda usar un archivo de acceso directo o un comando de símbolo del sistema instalados, en lugar de establecer las variables de entorno usted mismo. Para obtener más información, consulte [establecer las variables de entorno y la ruta de acceso para las compilaciones de línea de comandos](setting-the-path-and-environment-variables-for-command-line-builds.md).
+Las variables de entorno necesarias son específicas de la instalación y de la arquitectura de compilación que elija. También podrían cambiarse mediante actualizaciones o actualizaciones del producto. Esta es la razón por la que se recomienda usar un archivo de comandos o un acceso directo al símbolo del sistema instalado, en lugar de establecer las variables de entorno usted mismo. Para obtener más información, vea [establecer la ruta de acceso y las variables de entorno para las compilaciones de línea de comandos](setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Los conjuntos de herramientas, archivos de comandos y los accesos directos instalados dependen de procesador del equipo y las opciones que seleccionó durante la instalación. Siempre se instalan las herramientas de x86 hospedados y herramientas multiplataforma que compilación código x86 y x64. Si tiene Windows de 64 bits, también se instalan las herramientas hospedadas en x64 64 y herramientas multiplataforma que compilación código x86 y x64. Si elige opcional C++ herramientas de la plataforma Universal de Windows y, a continuación, las herramientas de x86 y x64 que compilación código ARM y ARM64 también se instalan. Puede que otras cargas de trabajo instalen herramientas adicionales.
+Los conjuntos de herramientas, los archivos de comandos y los métodos abreviados instalados dependen del procesador del equipo y de las opciones que haya seleccionado durante la instalación. Las herramientas hospedadas en x86 y las herramientas cruzadas que compilan el código x86 y x64 siempre están instaladas. Si tiene Windows de 64 bits, también se instalan las herramientas hospedadas en x64 y las herramientas cruzadas que compilan el código x86 y x64. Si elige las herramientas de C++ plataforma universal de Windows opcionales, las herramientas de x86 y x64 que compilan el código ARM y ARM64 también se instalan. Puede que otras cargas de trabajo instalen herramientas adicionales.
 
 ## <a name="developer_command_prompt_shortcuts"></a> Accesos directos del símbolo del sistema para desarrolladores
 
@@ -43,58 +43,58 @@ Los accesos directos del símbolo del sistema se instalan en una carpeta especí
 
 ::: moniker range=">= vs-2019"
 
-Los nombres de carpeta y el método abreviado de menú de inicio varían dependiendo de la versión instalada de Visual Studio. Si establece uno, también dependen de la instalación **sobrenombre**. Por ejemplo, suponga que ha instalado Visual Studio de 2019, y se le asignó un sobrenombre de *más reciente*. El acceso directo del símbolo para desarrolladores se denomina **símbolo del sistema para desarrolladores para VS 2019 (más reciente)** , en una carpeta denominada **2019 de Visual Studio**.
+La carpeta del menú Inicio y los nombres de acceso directo varían en función de la versión instalada de Visual Studio. Si establece uno, también dependen del **sobrenombre**de instalación. Por ejemplo, supongamos que ha instalado Visual Studio 2019 y le ha asignado un alias de la *versión más reciente*. El acceso directo del símbolo del sistema para desarrolladores se denomina **símbolo del sistema para desarrolladores para VS 2019 (latest)** , en una carpeta denominada **Visual Studio 2019**.
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Los nombres de carpeta y el método abreviado de menú de inicio varían dependiendo de la versión instalada de Visual Studio. Si establece uno, también dependen de la instalación **sobrenombre**. Por ejemplo, supongamos que ha instalado Visual Studio 2017, y se le asignó un sobrenombre de *más reciente*. El acceso directo del símbolo para desarrolladores se denomina **símbolo del sistema para desarrolladores para VS 2017 (versión más reciente)** , en una carpeta denominada **Visual Studio 2017**.
+La carpeta del menú Inicio y los nombres de acceso directo varían en función de la versión instalada de Visual Studio. Si establece uno, también dependen del **sobrenombre**de instalación. Por ejemplo, supongamos que ha instalado Visual Studio 2017 y le ha asignado un alias de la *versión más reciente*. El acceso directo del símbolo del sistema para desarrolladores se denomina **símbolo del sistema para desarrolladores para VS 2017 (latest)** , en una carpeta denominada **Visual Studio 2017**.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Los nombres de carpeta y el método abreviado de menú de inicio varían dependiendo de la versión instalada de Visual Studio. Por ejemplo, supongamos que ha instalado Visual Studio 2015. El acceso directo del símbolo para desarrolladores se denomina **símbolo del sistema para desarrolladores para VS 2015**.
+La carpeta del menú Inicio y los nombres de acceso directo varían en función de la versión instalada de Visual Studio. Por ejemplo, supongamos que instaló Visual Studio 2015. El acceso directo del símbolo del sistema para desarrolladores se denomina **símbolo del sistema para desarrolladores para VS 2015**.
 
 ::: moniker-end
 
-## <a name="developer_command_prompt"></a> Para abrir una ventana del símbolo del sistema para desarrolladores
+### <a name="developer_command_prompt"></a> Para abrir una ventana del símbolo del sistema para desarrolladores
 
 1. En el escritorio, abra el menú **Inicio** de Windows y desplácese para buscar y abrir la carpeta de la versión de Visual Studio, como por ejemplo, **Visual Studio 2019**.
 
 1. En la carpeta, elija **Símbolo del sistema para desarrolladores** de su versión de Visual Studio. Este acceso directo inicia una ventana del símbolo del sistema para desarrolladores que usa las herramientas nativas x86 de la arquitectura de compilación predeterminada de 32 bits para compilar código nativo x86 de 32 bits. Si prefiere una arquitectura de compilación no predeterminada, elija uno de los símbolos del sistema de herramientas nativas o cruzadas para especificar la arquitectura de host y de destino.
 
-Para conocer una manera incluso más rápida abrir un símbolo del sistema para desarrolladores, escriba *símbolo* en el cuadro de búsqueda en el escritorio. A continuación, elija el resultado deseado.
+Para una manera incluso más rápida de abrir un símbolo del sistema para desarrolladores, escriba *símbolo del sistema para desarrolladores* en el cuadro búsqueda en el escritorio. A continuación, elija el resultado que desee.
 
 ## <a name="developer_command_file_locations"></a> Ubicaciones de archivos de comandos para desarrolladores
 
-Si prefiere configurar el entorno de compilación en una ventana de símbolo del sistema existente, puede usar uno de los archivos de comandos creados por el instalador. Se recomienda que establecer el entorno en una nueva ventana de símbolo del sistema. No recomendamos que cambie los entornos más adelante en la misma ventana de comandos.
+Si prefiere establecer el entorno de compilación en una ventana de símbolo del sistema existente, puede usar uno de los archivos de comandos creados por el instalador. Se recomienda establecer el entorno en una nueva ventana del símbolo del sistema. No se recomienda cambiar más adelante los entornos en la misma ventana de comandos.
 
 ::: moniker range=">= vs-2019"
 
-La ubicación del archivo de comandos depende de la versión de Visual Studio que ha instalado y tomadas durante la instalación. Para Visual Studio 2019, la ubicación de instalación típica en un sistema de 64 bits está en \\archivos de programa (x86)\\Microsoft Visual Studio\\2019\\*edition*. *Edición* puede ser Community, Professional, Enterprise, BuildTools u otro alias proporcionado.
+La ubicación del archivo de comandos depende de la versión de Visual Studio que haya instalado y de las opciones que haya realizado durante la instalación. Para Visual Studio 2019, la ubicación de instalación típica en un sistema de 64 bits está en \\archivos de programa (x86)\\Microsoft Visual Studio\\2019\\*Edition*. La *edición* puede ser Community, Professional, Enterprise, BuildTools u otro alias proporcionado.
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-La ubicación del archivo de comandos depende de la versión de Visual Studio que ha instalado y tomadas durante la instalación. Para Visual Studio 2017, la ubicación de instalación típica en un sistema de 64 bits está en \\archivos de programa (x86)\\Microsoft Visual Studio\\2017\\*edition*. *Edición* puede ser Community, Professional, Enterprise, BuildTools u otro alias proporcionado.
+La ubicación del archivo de comandos depende de la versión de Visual Studio que haya instalado y de las opciones que haya realizado durante la instalación. Para Visual Studio 2017, la ubicación de instalación típica en un sistema de 64 bits está en \\archivos de programa (x86)\\Microsoft Visual Studio\\2017\\*Edition*. La *edición* puede ser Community, Professional, Enterprise, BuildTools u otro alias proporcionado.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-La ubicación del comando archivo depende de la versión de Visual Studio y el directorio de instalación. Visual Studio 2015, la ubicación de instalación típica es en \\archivos de programa (x86)\\14.0 de Microsoft Visual Studio.
+La ubicación del archivo de comandos depende de la versión de Visual Studio y del directorio de instalación. En Visual Studio 2015, la ubicación de instalación típica está en \\archivos de programa (x86)\\Microsoft Visual Studio 14,0.
 
 ::: moniker-end
 
-El archivo de comandos del símbolo del sistema de desarrollador principal, VsDevCmd.bat, se encuentra en el Common7\\subdirectorio Tools. Cuando se especifica ningún parámetro, Establece el entorno para usar las herramientas nativas de x86 para compilar 32-bit x86 código.
+El archivo de comandos principal del símbolo del sistema para desarrolladores, VsDevCmd. bat, se encuentra en el subdirectorio herramientas de Common7\\. Cuando no se especifica ningún parámetro, establece el entorno para usar las herramientas nativas x86 para compilar código x86 de 32 bits.
 
 ::: moniker range=">= vs-2017"
 
-Varios archivos de comandos están disponibles para configurar las arquitecturas de compilación concreta. Los archivos de comandos disponibles dependen de las opciones que se ha instalado y las cargas de trabajo de Visual Studio. En Visual Studio 2017 y Visual Studio de 2019, encontrará en el circuito virtual\\auxiliar\\subdirectorio de compilación.
+Hay más archivos de comandos disponibles para configurar arquitecturas de compilación específicas. Los archivos de comandos disponibles dependen de las cargas de trabajo y las opciones de Visual Studio que haya instalado. En Visual Studio 2017 y Visual Studio 2019, los encontrará en el\\de VC\\subdirectorio Build.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Varios archivos de comandos están disponibles para configurar las arquitecturas de compilación concreta. Los archivos de comandos disponibles dependen de las opciones que se ha instalado y las cargas de trabajo de Visual Studio. En Visual Studio 2015, se encuentra en el VC, VC\\bin o VC\\bin\\*arquitectura* subdirectorios, donde *arquitectura* es uno de nativo o Opciones del compilador cruzado.
+Hay más archivos de comandos disponibles para configurar arquitecturas de compilación específicas. Los archivos de comandos disponibles dependen de las cargas de trabajo y las opciones de Visual Studio que haya instalado. En Visual Studio 2015, se encuentran en los subdirectorios VC, VC\\bin o VC\\bin\\*Architecture* , donde *Architecture* es una de las opciones nativas o entre compiladores.
 
 ::: moniker-end
 
@@ -108,7 +108,7 @@ Estos archivos de comandos establecen los parámetros predeterminados y llaman a
 |**vcvarsamd64_x86.bat**| Usa las herramientas cruzadas nativas x64 de 64 bits para compilar código x86 de 32 bits.|
 |**vcvarsx86_arm.bat**| Usa las herramientas nativas x86 de 32 bits para compilar código ARM.|
 |**vcvarsamd64_arm.bat**| Usa las herramientas cruzadas nativas x64 de 64 bits para compilar código ARM.|
-|**vcvarsall.bat**| Usar parámetros para especificar las arquitecturas de host y de destino, el SDK de Windows y opciones de plataforma. Para obtener una lista de las opciones admitidas, realice una llamada mediante el parámetro **/help**.|
+|**vcvarsall.bat**| Use los parámetros para especificar las arquitecturas de host y de destino, Windows SDK y las opciones de plataforma. Para obtener una lista de las opciones admitidas, realice una llamada mediante el parámetro **/help**.|
 
 > [!CAUTION]
 > El archivo vcvarsall.bat y otros archivos de comandos de Visual Studio pueden variar de un equipo a otro. Si el archivo vcvarsall.bat falta o está dañado, no lo reemplace por un archivo de otro equipo. Vuelva a ejecutar el instalador de Visual Studio para reemplazar el archivo que falta.
@@ -117,16 +117,16 @@ Estos archivos de comandos establecen los parámetros predeterminados y llaman a
 
 ## <a name="use-the-developer-tools-in-an-existing-command-window"></a>Usar las herramientas de desarrollo en una ventana de comandos existente
 
-La manera más sencilla de especificar una arquitectura de compilación determinada en una ventana de comandos existente consiste en usar el archivo vcvarsall.bat. Utilizar vcvarsall.bat para establecer las variables de entorno para configurar la línea de comandos para la compilación nativa de 32 bits o 64 bits. Argumentos le permiten especificar la compilación cruzada para x86, x 64, ARM, ARM64 procesadores o. Puede tener como destino plataformas de Microsoft Store, la plataforma Universal de Windows o el escritorio de Windows. Incluso puede especificar qué SDK de Windows para usar y seleccione la versión de herramientas de plataforma.
+La manera más sencilla de especificar una arquitectura de compilación determinada en una ventana de comandos existente consiste en usar el archivo vcvarsall.bat. Use vcvarsall. bat para establecer las variables de entorno con el fin de configurar la línea de comandos para la compilación nativa de 32 bits o de 64 bits. Los argumentos permiten especificar la compilación cruzada en procesadores x86, x64, ARM o ARM64. Puede tener como destino Microsoft Store, Plataforma universal de Windows o plataformas de escritorio de Windows. Incluso puede especificar qué Windows SDK usar y seleccionar la versión del conjunto de herramientas de la plataforma.
 
-Cuando se utiliza sin argumentos, vcvarsall.bat configura las variables de entorno para usar el compilador nativo x86 actual para los destinos de escritorio de Windows de 32 bits. Puede agregar argumentos para configurar el entorno para usar cualquiera de nativo o entre las herramientas del compilador. vcvarsall.bat muestra un mensaje de error si se especifica una configuración que no está instalada o disponible en el equipo.
+Cuando se usa sin argumentos, vcvarsall. bat configura las variables de entorno para utilizar el compilador actual de x86-nativo para los destinos de escritorio de Windows de 32 bits. Puede Agregar argumentos para configurar el entorno con el fin de usar cualquiera de las herramientas de compilador nativa o cruzada. vcvarsall. bat muestra un mensaje de error si especifica una configuración que no está instalada o disponible en el equipo.
 
 ### <a name="vcvarsall-syntax"></a>Sintaxis de vcvarsall
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver=** _vcversion_]
 
 *architecture*<br/>
-Este argumento opcional especifica la arquitectura de host y de destino que se van a usar. Si *arquitectura* no se especifica, se usa el entorno de compilación predeterminada. Se admiten estos argumentos:
+Este argumento opcional especifica la arquitectura de host y de destino que se van a usar. Si no se especifica la *arquitectura* , se usa el entorno de compilación predeterminado. Se admiten estos argumentos:
 
 |*architecture*|Compilador|Arquitectura del equipo host|Arquitectura de salida de compilación (destino)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
@@ -150,7 +150,7 @@ Especifica, de manera opcional, el conjunto de herramientas del compilador de Vi
 
 ::: moniker range=">= vs-2019"
 
-Use **-vcvars_ver = 14.2 x .yyyyy** para especificar una versión específica del conjunto de herramientas del compilador de Visual Studio de 2019.
+Use **-vcvars_ver = 14.2 x. yyyyy** para especificar una versión específica del conjunto de herramientas del compilador de Visual Studio 2019.
 
 Use **-vcvars_ver = 14.16** para especificar la versión más reciente del conjunto de herramientas del compilador de Visual Studio 2017.
 
@@ -159,18 +159,17 @@ Use **-vcvars_ver = 14.16** para especificar la versión más reciente del conju
 
 Use **-vcvars_ver = 14.16** para especificar la versión más reciente del conjunto de herramientas del compilador de Visual Studio 2017.
 
-Use **-vcvars_ver = 14,1 x .yyyyy** para especificar una versión específica del conjunto de herramientas del compilador de Visual Studio 2017.
+Use **-vcvars_ver = 14,1 x. yyyyy** para especificar una versión específica del conjunto de herramientas del compilador de Visual Studio 2017.
 
 ::: moniker-end
 
 Use **-vcvars_ver = 14.0** para especificar el conjunto de herramientas del compilador de Visual Studio 2015.
 
-<a name="vcvarsall"></a>
-#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>Para configurar el entorno de compilación en una ventana del símbolo del sistema existente
+#### <a name="vcvarsall"></a>Para configurar el entorno de compilación en una ventana de símbolo del sistema existente
 
-1. En el símbolo del sistema, use el comando CD para cambiar al directorio de instalación de Visual Studio. Después, vuelva a usar CD para cambiar al subdirectorio que contiene los archivos de comandos específicos de la configuración. 2019 de Visual Studio y Visual Studio 2017, use el *VC\\auxiliar\\compilar* subdirectorio. Para Visual Studio 2015, use el *VC* subdirectorio.
+1. En el símbolo del sistema, use el comando CD para cambiar al directorio de instalación de Visual Studio. Después, vuelva a usar CD para cambiar al subdirectorio que contiene los archivos de comandos específicos de la configuración. Para Visual Studio 2019 y Visual Studio 2017, use el subdirectorio\\de la *compilación de VC\\auxiliar* . Para Visual Studio 2015, use el subdirectorio *VC* .
 
-1. Escriba el comando para el entorno de desarrollo preferido. Por ejemplo, para compilar código ARM para UWP en una plataforma de 64 bits, con la más reciente Windows SDK y Visual Studio del compilador conjunto de herramientas, puede usar esta línea de comandos:
+1. Escriba el comando para el entorno de desarrollo preferido. Por ejemplo, para compilar código ARM para UWP en una plataforma de 64 bits, con el conjunto de herramientas de compilador de Visual Studio y el Windows SDK más reciente, use esta línea de comandos:
 
    `vcvarsall.bat amd64_arm uwp`
 
@@ -178,41 +177,41 @@ Use **-vcvars_ver = 14.0** para especificar el conjunto de herramientas del comp
 
 ::: moniker range=">= vs-2019"
 
-Abra el cuadro de diálogo de propiedades para un acceso directo del símbolo para desarrolladores ver el destino del comando utilizado. Por ejemplo, el destino del acceso directo **Símbolo del sistema de las herramientas nativas x64 para VS 2019** es algo parecido a esto:
+Abra el cuadro de diálogo de propiedades de un acceso directo del símbolo del sistema para desarrolladores para ver el destino del comando usado. Por ejemplo, el destino del acceso directo **Símbolo del sistema de las herramientas nativas x64 para VS 2019** es algo parecido a esto:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Abra el cuadro de diálogo de propiedades para un acceso directo del símbolo para desarrolladores ver el destino del comando utilizado. Por ejemplo, el destino de la **x64 nativo símbolo de herramientas para VS 2017** acceso directo es algo parecido a:
+Abra el cuadro de diálogo de propiedades de un acceso directo del símbolo del sistema para desarrolladores para ver el destino del comando usado. Por ejemplo, el destino de la **símbolo del sistema de las herramientas nativas x64 para el acceso directo de VS 2017** es similar a:
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Abra el cuadro de diálogo de propiedades para un acceso directo del símbolo para desarrolladores ver el destino del comando utilizado. Por ejemplo, el destino de la **VS2015 x64 símbolo herramientas nativas** acceso directo es algo parecido a:
+Abra el cuadro de diálogo de propiedades de un acceso directo del símbolo del sistema para desarrolladores para ver el destino del comando usado. Por ejemplo, el destino del acceso directo **VS2015 símbolo del sistema de las herramientas nativas x64** es similar a:
 
-`%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"" amd64`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64`
 
 ::: moniker-end
 
-Los archivos por lotes específicos de la arquitectura establecen el parámetro *arquitectura* y llaman a vcvarsall.bat. Puede pasar las mismas opciones para estos archivos por lotes que se pasaría a vcvarsall.bat o, simplemente puede llamar directamente vcvarsall.bat. Para especificar parámetros para su propio acceso directo de comandos, agréguelos al final del comando con comillas dobles. Por ejemplo, este es un acceso directo para compilar código ARM para UWP en una plataforma de 64 bits, con el último SDK de Windows. Para usar un conjunto de herramientas del compilador anterior, especifique el número de versión. Use algo parecido a este destino de comando en el acceso directo:
+Los archivos por lotes específicos de la arquitectura establecen el parámetro *arquitectura* y llaman a vcvarsall.bat. Puede pasar las mismas opciones a estos archivos por lotes que pasaría a vcvarsall. bat o simplemente llamar a vcvarsall. bat directamente. Para especificar parámetros para su propio acceso directo de comandos, agréguelos al final del comando con comillas dobles. Por ejemplo, este es un acceso directo para compilar código ARM para UWP en una plataforma de 64 bits, con la Windows SDK más reciente. Para usar un conjunto de herramientas de compilador anterior, especifique el número de versión. Use algo parecido a este destino de comando en el acceso directo:
 
 ::: moniker range=">= vs-2019"
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.16"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.16`
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.0"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.0`
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-`%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat"" amd64 -vcvars_ver=12.0`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64 -vcvars_ver=12.0`
 
 ::: moniker-end
 
@@ -220,7 +219,7 @@ Ajuste la ruta de acceso para reflejar el directorio de instalación de Visual S
 
 ## <a name="command-line-tools"></a>Herramientas de la línea de comandos
 
-Para crear una C /C++ proyecto en un símbolo del sistema, Visual Studio proporciona estas herramientas de línea de comandos:
+Para compilar unC++ proyecto de C/en un símbolo del sistema, Visual Studio proporciona estas herramientas de línea de comandos:
 
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
 Utilice el compilador (cl.exe) para compilar y vincular archivos de código fuente en aplicaciones, bibliotecas y DLL.
@@ -229,34 +228,34 @@ Utilice el compilador (cl.exe) para compilar y vincular archivos de código fuen
 Utilice el enlazador (link.exe) para vincular bibliotecas y archivos de objeto compilados en aplicaciones y DLL.
 
 [MSBuild](msbuild-visual-cpp.md)<br/>
-Use MSBuild (msbuild.exe) y un archivo de proyecto (.vcxproj) para configurar una compilación e invocar el conjunto de herramientas indirectamente. Equivale a ejecutar el **compilar** proyecto o **compilar solución** comando en el IDE de Visual Studio. Ejecutar MSBuild desde la línea de comandos es un escenario avanzado y normalmente no se recomienda.
+Use MSBuild (msbuild.exe) y un archivo de proyecto (.vcxproj) para configurar una compilación e invocar el conjunto de herramientas indirectamente. Es equivalente a ejecutar el comando **compilar proyecto o** **compilar solución** en el IDE de Visual Studio. Ejecutar MSBuild desde la línea de comandos es un escenario avanzado y no suele ser recomendable.
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-Utilice DEVENV (devenv.exe) combinado con un conmutador de línea de comandos como **/Build** o **/limpiar** para ejecutar determinados comandos de compilación sin mostrar el IDE de Visual Studio. En general, DEVENV es preferible con respecto a MSBuild directamente, porque puede dejar que Visual Studio controlan las complejidades de MSBuild.
+Use DEVENV (devenv. exe) combinado con un modificador de la línea de comandos como **/Build** o **/Clean** para ejecutar determinados comandos de compilación sin mostrar el IDE de Visual Studio. En general, DEVENV es preferible usar MSBuild directamente, ya que puede dejar que Visual Studio controle las complejidades de MSBuild.
 
 [NMAKE](reference/nmake-reference.md)<br/>
 Use NMAKE (nmake.exe) en Windows para compilar proyectos de C++ basados en un archivo Make tradicional.
 
-Cuando se compila en la línea de comandos, el comando F1 no está disponible para obtener ayuda de instantánea. En su lugar, puede usar un motor de búsqueda para obtener información sobre advertencias, errores y mensajes, o puede usar los archivos de ayuda sin conexión. Para usar la búsqueda en [docs.microsoft.com](https://docs.microsoft.com/cpp/), utilice el cuadro de búsqueda en la parte superior de la página.
+Al compilar en la línea de comandos, el comando F1 no está disponible para la ayuda instantánea. En su lugar, puede usar un motor de búsqueda para obtener información sobre advertencias, errores y mensajes, o puede usar los archivos de ayuda sin conexión. Para usar la búsqueda en [docs.Microsoft.com](https://docs.microsoft.com/cpp/), use el cuadro de búsqueda de la parte superior de la página.
 
 ## <a name="in-this-section"></a>En esta sección
 
-Estos artículos muestran cómo compilar aplicaciones en la línea de comandos y describen cómo personalizar el entorno de compilación de línea de comandos. Algunos muestran cómo utilizar conjuntos de herramientas de 64 bits y de destino x86, x 64, ARM, ARM64 plataformas y. También se describe el uso de las herramientas de compilación de línea de comandos MSBuild y NMAKE.
+En estos artículos se muestra cómo compilar aplicaciones en la línea de comandos y se describe cómo personalizar el entorno de compilación de la línea de comandos. Algunos muestran cómo usar los conjuntos de herramientas de 64 bits y las plataformas x86, x64, ARM y ARM64 de destino. También se describe el uso de las herramientas de compilación de línea de comandos MSBuild y NMAKE.
 
-[Tutorial: Compilación de un programa nativo de C++ en la línea de comandos](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
-Proporciona un ejemplo que muestra cómo crear y compilar un C++ programa en la línea de comandos.
+[Tutorial: compilar C++ un programa nativo en la línea de comandos](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+Proporciona un ejemplo que muestra cómo crear y compilar C++ un programa en la línea de comandos.
 
-[Tutorial: Compilar un programa de C en la línea de comandos](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[Tutorial: Compilar un programa escrito en C en la línea de comandos](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 Describe cómo compilar un programa escrito en el lenguaje de programación C.
 
-[Tutorial: Compilación de un programa de C++/CLI en la línea de comandos](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
+[Tutorial: compilar un C++programa/CLI en la línea de comandos](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
 Describe cómo crear y compilar un programa de C++/CLI que utilice .NET Framework.
 
-[Tutorial: Compilación de un programa de C++/CX en la línea de comandos](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
+[Tutorial: compilar un C++programa/CX en la línea de comandos](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
 Describe cómo crear y compilar un programa de C++/CX que utilice Windows en tiempo de ejecución.
 
-[Establecer la ruta de acceso y las variables de entorno para compilar desde la línea de comandos](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
-Cómo establecer variables de entorno para usar un conjunto de herramientas de 32 bits o 64 bits al destino x86, x64, ARM, ARM64 plataformas y.
+[Establecer la ruta de acceso y las variables de entorno para compilaciones de línea de comandos](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
+Cómo establecer variables de entorno para usar un conjunto de herramientas de 32 bits o 64 bits para tener como destino las plataformas x86, x64, ARM y ARM64.
 
 [Referencia de NMAKE](reference/nmake-reference.md)<br/>
 Proporciona vínculos a artículos que describen la Utilidad de mantenimiento de programas de Microsoft (NMAKE.EXE).
@@ -266,16 +265,16 @@ Proporciona vínculos a artículos en los que se explica cómo usar msbuild.exe 
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[/MD, /MT, /LD (Usar la biblioteca en tiempo de ejecución)](reference/md-mt-ld-use-run-time-library.md)<br/>
+[/MD,/MT,/LD (usar la biblioteca en tiempo de ejecución)](reference/md-mt-ld-use-run-time-library.md)<br/>
 Describe cómo utilizar estas opciones del compilador para usar una biblioteca en tiempo de ejecución Debug o Release.
 
-[Opciones del compilador de C/C++](reference/compiler-options.md)<br/>
+[Opciones deC++ C/Compiler](reference/compiler-options.md)<br/>
 Proporciona vínculos a artículos en los que se explican las opciones del compilador de C y C++, y CL.exe.
 
-[Opciones del enlazador MSVC](reference/linker-options.md)<br/>
+[Opciones del vinculador MSVC](reference/linker-options.md)<br/>
 Proporciona vínculos a artículos en los que se explican las opciones del enlazador y LINK.exe.
 
-[Herramientas de compilación de MSVC adicionales](reference/c-cpp-build-tools.md)<br/>
+[Herramientas de generación MSVC adicionales](reference/c-cpp-build-tools.md)<br/>
 Proporciona vínculos a las herramientas de compilación de C/C++ que se incluyen en Visual Studio.
 
 ## <a name="see-also"></a>Vea también

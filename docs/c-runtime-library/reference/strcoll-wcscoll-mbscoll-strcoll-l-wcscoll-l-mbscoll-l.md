@@ -1,14 +1,14 @@
 ---
 title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcscoll
 - _mbscoll
 - _mbscoll_l
 - strcoll
 - _strcoll_l
 - _wcscoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcscoll
 - _mbscoll
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7519b8f41d77ed668bb7da1e8ced18ee13c0a5bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354215"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957887"
 ---
-# <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
+# <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
 Compara cadenas usando la configuración regional actual o una categoría de conversión de estado LC_COLLATE especificada.
 
 > [!IMPORTANT]
-> **_mbscoll** y **_mbscoll_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscoll** y **_mbscoll_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -91,7 +94,7 @@ int _mbscoll_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*string1*, *string2*<br/>
+*cadena1*, *cadena2*<br/>
 Cadenas terminadas en NULL que se van a comparar.
 
 *locale*<br/>
@@ -99,23 +102,23 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor que indica la relación de *string1* a *cadena2*, como se indica a continuación.
+Cada una de estas funciones devuelve un valor que indica la relación entre *string1* y *cadena2*, como se indica a continuación.
 
 |Valor devuelto|Relación de string1 y string2|
 |------------------|----------------------------------------|
-|< 0|*cadena1* menor *cadena2*|
-|0|*cadena1* idéntico al *cadena2*|
-|> 0|*cadena1* mayor *cadena2*|
+|< 0|*cadena1* menor que *cadena2*|
+|0|*cadena1* idéntico a *cadena2*|
+|> 0|*cadena1* mayor que *cadena2*|
 
-Cada una de estas funciones devuelve **_NLSCMPERROR** produce un error. Para usar **_NLSCMPERROR**, incluir una de las cadenas. H o MBSTRING. H. **wcscoll** puede producir un error si *string1* o *cadena2* es **NULL** o contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **wcscoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **wcscoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **wcscoll**.
+Cada una de estas funciones devuelve **_NLSCMPERROR** en un error. Para usar **_NLSCMPERROR**, incluya cualquier cadena. H o MBSTRING. C. se puede producir un error en **wcscoll** si *string1* o *cadena2* es **null** o contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **wcscoll** puede establecer **errno** en **EINVAL**. Para comprobar si hay un error en una llamada a **wcscoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **wcscoll**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de *string1* y *cadena2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
+Cada una de estas funciones realiza una comparación con distinción entre mayúsculas y minúsculas de *cadena1* y *cadena2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
 
-Todas estas funciones validan sus parámetros. Si bien *string1* o *cadena2* es un puntero nulo, o si *recuento* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos , como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
+Todas estas funciones validan sus parámetros. Si *string1* o *cadena2* es un puntero nulo, o si *Count* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecen **errno** en **EINVAL**.
 
-La comparación de las dos cadenas es una operación dependiente de la configuración regional, ya que cada configuración regional tiene distintas reglas para ordenar los caracteres. Las versiones de estas funciones sin el **_l** sufijo usar configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas a la función correspondiente sin el sufijo, salvo que usan la configuración regional que se pasa como un parámetro en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La comparación de las dos cadenas es una operación dependiente de la configuración regional, ya que cada configuración regional tiene distintas reglas para ordenar los caracteres. Las versiones de estas funciones sin el sufijo **_L** usan la configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional; las versiones con el sufijo **_L** son idénticas a la función correspondiente sin el sufijo, salvo que usan la configuración regional que se pasa como parámetro en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

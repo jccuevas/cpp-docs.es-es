@@ -1,10 +1,10 @@
 ---
 title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285339"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952801"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
 Copia bytes entre búferes. Se trata de versiones de [memcpy, wmemcpy](memcpy-wmemcpy.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -77,14 +80,14 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|No modificado|
 |**NULL**|any|any|distinto de cero|**EINVAL**|No modificado|
-|any|any|**NULL**|distinto de cero|**EINVAL**|*dest* se pone a cero|
-|any|< *count*|any|distinto de cero|**ERANGE**|*dest* se pone a cero|
+|any|any|**NULL**|distinto de cero|**EINVAL**|*dest* está en cero|
+|any|< *contabiliza*|any|distinto de cero|**ERANGE**|*dest* está en cero|
 
 ## <a name="remarks"></a>Comentarios
 
-**memcpy_s** copias *recuento* bytes a partir de *src* a *dest*; **wmemcpy_s** copias *recuento* caracteres anchos (dos bytes). Si el origen y destino se superponen, el comportamiento de **memcpy_s** es indefinido. Use **memmove_s** para controlar las áreas superpuestas.
+**memcpy_s** copia el *número* de bytes de *src* a *dest*; **wmemcpy_s** copia el *número* de caracteres anchos (dos bytes). Si el origen y el destino se superponen, el comportamiento de **memcpy_s** es indefinido. Use **memmove_s** para administrar regiones superpuestas.
 
-Estas funciones validan sus parámetros. Si *recuento* es distinto de cero y *dest* o *src* es un puntero nulo, o *destSize* es menor que *recuento*, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** o **ERANGE** y establecer **errno** al valor devuelto.
+Estas funciones validan sus parámetros. Si *Count* es distinto de cero y *dest* o *src* es un puntero nulo, o *destSize* es menor que *Count*, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** o **ERANGE** y establecen **errno** en el valor devuelto.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,6 +1,6 @@
 ---
-title: region, endregion
-ms.date: 10/18/2018
+title: region, endregion (Pragmas)
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179755"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222383"
 ---
-# <a name="region-endregion"></a>region, endregion
+# <a name="region-endregion-pragmas"></a>region, endregion (Pragmas)
 
-`#pragma region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa el [característica de esquematización](/visualstudio/ide/outlining) del Editor de código de Visual Studio.
+`#pragma region`permite especificar un bloque de código que se puede expandir o contraer cuando se usa la [característica](/visualstudio/ide/outlining) de esquematización del Editor de Visual Studio Code.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **#pragma región** *nombre* de\
+> **#pragma endregion** *Comentario* de
 
 ### <a name="parameters"></a>Parámetros
 
-*comment*<br/>
-(Opcional) Un comentario que se mostrará en el editor de código.
+*Comentario*\
+Opta Comentario que se va a mostrar en el editor de código.
 
-*name*<br/>
-(Opcional) El nombre de la región.  Este nombre aparecerá en el editor de código.
+*Name*\
+Opta Nombre de la región. Este nombre se muestra en el editor de código.
 
 ## <a name="remarks"></a>Comentarios
 
-`#pragma endregion` marca el final de un `#pragma region` bloque.
+`#pragma endregion`marca el final de un `#pragma region` bloque.
 
-Un `#region` bloque debe terminarse con `#pragma endregion`.
+Un bloque debe terminar en una `#pragma endregion` Directiva. `#region`
 
 ## <a name="example"></a>Ejemplo
 
@@ -59,4 +57,4 @@ int main() {}
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

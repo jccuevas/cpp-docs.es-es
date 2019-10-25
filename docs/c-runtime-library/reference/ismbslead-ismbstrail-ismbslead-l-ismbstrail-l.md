@@ -1,12 +1,12 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287362"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953776"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
 Realiza pruebas contextuales para los bytes iniciales y finales de cadenas de caracteres multibyte y determina si un determinado puntero de la subcadena apunta a un byte inicial o un byte final.
 
@@ -90,13 +93,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbslead** devuelve -1 si el carácter es un byte inicial y **_ismbstrail** devuelve -1 si el carácter es un byte final. Si las cadenas de entrada son válidas pero no son un byte inicial o byte final, estas funciones devuelven cero. Si algún argumento es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **NULL** y establecer **errno** a **EINVAL**.
+**_ismbslead** devuelve-1 si el carácter es un byte inicial y **_ismbstrail** devuelve-1 si el carácter es un byte final. Si las cadenas de entrada son válidas pero no son un byte inicial o byte final, estas funciones devuelven cero. Si alguno de los argumentos es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **null** y establecen **errno** en **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-**_ismbslead** y **_ismbstrail** son más lentos que el **_ismbblead** y **_ismbbtrail** versiones porque toman en cuenta el contexto de cadena.
+**_ismbslead** y **_ismbstrail** son más lentos que las versiones **_ismbblead** y **_ismbbtrail** porque tienen en cuenta el contexto de cadena.
 
-Las versiones de estas funciones que tienen el **_l** sufijo son idénticas salvo que su comportamiento dependiente de configuración regional usan la configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el sufijo **_L** son idénticas, salvo que para su comportamiento dependiente de la configuración regional usan la configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

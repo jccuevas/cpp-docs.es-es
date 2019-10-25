@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157230"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954806"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
 Libera la memoria del montón no utilizada al sistema operativo.
 
@@ -46,13 +49,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **_heapmin** devuelve 0; en caso contrario, la función devuelve -1 y establece **errno** a **ENOSYS**.
+Si se realiza correctamente, **_heapmin** devuelve 0; de lo contrario, la función devuelve-1 y establece **errno** en **ENOSYS**.
 
 Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_heapmin** función minimiza el montón al liberar memoria del montón no utilizada al sistema operativo. Si el sistema operativo no admite **_heapmin**(por ejemplo, Windows 98), la función devuelve -1 y establece **errno** a **ENOSYS**.
+La función **_heapmin** minimiza el montón liberando memoria del montón no utilizada al sistema operativo. Si el sistema operativo no es compatible con **_heapmin**(por ejemplo, Windows 98), la función devuelve-1 y establece **errno** en **ENOSYS**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,10 @@
 ---
 title: wcstombs_s, _wcstombs_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstombs_s_l
 - wcstombs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-ms.openlocfilehash: 3f30ef1f94803005a1afd99a6f82c46296f5c4f7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 135bcb90e6a82591bf05e56b60575719f4c7d45c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499000"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945025"
 ---
 # <a name="wcstombs_s-_wcstombs_s_l"></a>wcstombs_s, _wcstombs_s_l
 
@@ -131,7 +134,7 @@ Si **wcstombs_s** encuentra un carácter ancho que no se puede convertir en un c
 Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcstombs_s** es indefinido.
 
 > [!IMPORTANT]
-> Asegúrese de que *wcstr* y *mbstr* no se superponen y que el recuento refleja correctamente el número de caracteres anchos que se van a convertir.
+> Asegúrese de que *wcstr* y *mbstr* no se superponen y que el *recuento* refleja correctamente el número de caracteres anchos que se van a convertir.
 
 **wcstombs_s** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_wcstombs_s_l** es idéntico a **wcstombs** , salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

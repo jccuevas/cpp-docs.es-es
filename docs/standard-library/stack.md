@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453772"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686083"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Define la pila de la clase de plantilla y dos plantillas auxiliares.
+Define la pila de plantillas de clase y dos plantillas auxiliares.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -25,7 +25,7 @@ Define la pila de la clase de plantilla y dos plantillas auxiliares.
 **Espacio de nombres:** std
 
 > [!NOTE]
-> La \<biblioteca de > de pila también `#include <initializer_list>` utiliza la instrucción.
+> La biblioteca de > de \<stack también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="members"></a>Miembros
 
@@ -39,12 +39,6 @@ Define la pila de la clase de plantilla y dos plantillas auxiliares.
 |[operator==](../standard-library/stack-operators.md#op_eq_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es igual que el objeto de pila del lado derecho.|
 |[operator>](../standard-library/stack-operators.md#op_gt)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.|
-
-### <a name="functions"></a>Funciones
-
-|||
-|-|-|
-|[swap]()||
 
 ### <a name="classes"></a>Clases
 

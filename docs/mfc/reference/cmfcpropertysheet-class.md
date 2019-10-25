@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: f7c9d2b472a443d8bf556d0b12dfe202ea8607a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505047"
 ---
 # <a name="cmfcpropertysheet-class"></a>Clase CMFCPropertySheet
@@ -61,14 +61,14 @@ class CMFCPropertySheet : public CPropertySheet
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Construye un objeto `CMFCPropertySheet`.|
 |`CMFCPropertySheet::~CMFCPropertySheet`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCPropertySheet::AddPage](#addpage)|Agrega una página a la hoja de propiedades.|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Agrega una nueva página de propiedades al control de árbol.|
@@ -508,7 +508,7 @@ Para mostrar una hoja de propiedades en un estilo distinto del predeterminado, l
 
 En la tabla siguiente se enumeran los valores de enumeración que se pueden especificar en el parámetro *look* .
 
-|Value|DESCRIPCIÓN|
+|Valor|Descripción|
 |-----------|-----------------|
 |`CMFCPropertySheet::PropSheetLook_Tabs`|Predeterminada Muestra una pestaña para cada página de propiedades. Las pestañas se muestran en la parte superior de la hoja de propiedades y se apilan si hay más pestañas de las que caben en una sola fila.|
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|Muestra una lista de botones de navegación, en el estilo de la barra de Microsoft Outlook, en el lado izquierdo de la hoja de propiedades. Cada botón de la lista corresponde a una página de propiedades. El marco de trabajo muestra flechas de desplazamiento si hay más botones de los que caben en el área visible de la lista.|

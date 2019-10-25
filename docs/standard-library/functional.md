@@ -9,16 +9,16 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 2f8ef031731e4213ce8cda326d05f1241cd03625
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 67b2ccf70b4d3045cecd13d9096875f77c4cde9a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447389"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689617"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
-Define C++ las funciones de la biblioteca estándar que ayudan a construir *objetos de función*, también conocidos como inactivos, y sus enlazadores. Un objeto de función es un objeto de un tipo que define `operator()`. Un objeto de función puede ser un puntero a función, pero por lo general el objeto se utiliza para almacenar información adicional a la que se puede tener acceso durante una llamada de función.
+Define C++ las funciones de la biblioteca estándar que ayudan a construir *objetos de función*, también conocidos como *inactivos*, y sus enlazadores. Un objeto de función es un objeto de un tipo que define `operator()`. Un objeto de función puede ser un puntero a función, pero por lo general el objeto se utiliza para almacenar información adicional a la que se puede tener acceso durante una llamada de función.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -28,9 +28,9 @@ Define C++ las funciones de la biblioteca estándar que ayudan a construir *obje
 
 ## <a name="remarks"></a>Comentarios
 
-Los algoritmos requieren dos tipos de objetos de  función: unario y *binario*. Los objetos de función unaria requieren un argumento y los objetos de función binaria requieren dos argumentos. Se pueden pasar un objeto de función y punteros de función como un predicado para un algoritmo, pero los objetos de función también son adaptables y aumentan el ámbito, la flexibilidad y la eficacia de la biblioteca estándar de C++. Por ejemplo, si un valor necesita estar enlazado a una función para que se pueda pasar a un algoritmo, no se puede usar un puntero a función. Los adaptadores de función convierten los punteros a función en objetos de función adaptables que se pueden enlazar a un valor. El encabezado \<functional> también contiene adaptadores de funciones miembro que permiten llamar a funciones miembro como objetos de función adaptables. Las funciones son adaptables si tienen declaraciones de tipo anidadas que especifican sus tipos de argumento y de valor devuelto. Los objetos de función y sus adaptadores permiten que la biblioteca estándar de C++ actualice aplicaciones existentes y ayudan a integrar la biblioteca en el entorno de programación de C++.
+Los algoritmos requieren dos tipos de objetos de función: *unario* y *binario*. Los objetos de función unaria requieren un argumento y los objetos de función binaria requieren dos argumentos. Se pueden pasar un objeto de función y punteros de función como un predicado para un algoritmo, pero los objetos de función también son adaptables y aumentan el ámbito, la flexibilidad y la eficacia de la biblioteca estándar de C++. Por ejemplo, si un valor necesita estar enlazado a una función para que se pueda pasar a un algoritmo, no se puede usar un puntero a función. Los adaptadores de función convierten los punteros a función en objetos de función adaptables que se pueden enlazar a un valor. El encabezado \<functional> también contiene adaptadores de funciones miembro que permiten llamar a funciones miembro como objetos de función adaptables. Las funciones son adaptables si tienen declaraciones de tipo anidadas que especifican sus tipos de argumento y de valor devuelto. Los objetos de función y sus adaptadores permiten que la biblioteca estándar de C++ actualice aplicaciones existentes y ayudan a integrar la biblioteca en el entorno de programación de C++.
 
-La implementación de los objetos de función \<en la > funcional incluye los funcdores de *operador transparentes*. que son especializaciones de los objetos de función estándar y no toman ningún parámetro de plantilla, y realizan el reenvío directo de los argumentos de función y la devolución perfecta del resultado. Estas especializaciones de plantilla no requieren que se especifiquen tipos de argumentos cuando se invocan funciones de operadores aritméticos, de comparación, lógicos y bit a bit. Se pueden sobrecargar operadores aritméticos, de comparación, lógicos o bit a bit para sus propios tipos, o para combinaciones heterogéneas de tipos, y utilizar después las funciones de operador transparentes como argumentos de función. Por ejemplo, si el tipo *MyType* implementa `operator<`, se puede llamar a `sort(my_collection.begin(), my_collection.end(), less<>())` en lugar de especificar de forma explícita el tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
+La implementación de los objetos de función en \<functional > incluye los *funcdores de operador transparentes*. que son especializaciones de los objetos de función estándar y no toman ningún parámetro de plantilla, y realizan el reenvío directo de los argumentos de función y la devolución perfecta del resultado. Estas especializaciones de plantilla no requieren que se especifiquen tipos de argumentos cuando se invocan funciones de operadores aritméticos, de comparación, lógicos y bit a bit. Se pueden sobrecargar operadores aritméticos, de comparación, lógicos o bit a bit para sus propios tipos, o para combinaciones heterogéneas de tipos, y utilizar después las funciones de operador transparentes como argumentos de función. Por ejemplo, si el tipo *MyType* implementa `operator<`, se puede llamar a `sort(my_collection.begin(), my_collection.end(), less<>())` en lugar de especificar de forma explícita el tipo `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.
 
 Se han agregado las siguientes características en C++ 11, C++ 14 y C++ 17:
 
@@ -79,9 +79,9 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Clase que describe una excepción iniciada para indicar que se ha producido un error en una llamada a `operator()` en un objeto [function](../standard-library/function-class.md) porque el objeto estaba vacío.|
-|[binary_negate](../standard-library/binary-negate-class.md)|Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función binaria especificada.<br/> (Desusado en C++ 17). |
-|[binder1st](../standard-library/binder1st-class.md)|Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
-|[binder2nd](../standard-library/binder2nd-class.md)|Clase de plantilla que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
+|[binary_negate](../standard-library/binary-negate-class.md)|Una plantilla de clase que proporciona una función miembro que niega el valor devuelto de una función binaria especificada.<br/> (Desusado en C++ 17). |
+|[binder1st](../standard-library/binder1st-class.md)|Una plantilla de clase que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
+|[binder2nd](../standard-library/binder2nd-class.md)|Una plantilla de clase que proporciona un constructor que convierte un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
 |[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
 |[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Clase de adaptadores que permite llamar a una función miembro const que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
@@ -93,14 +93,14 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |[hash](../standard-library/hash-class.md)|Clase que calcula un código hash para un valor.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Clase que prueba si se genera un tipo concreto llamando a `bind`.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Clase que prueba si un tipo determinado es un marcador de posición.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Una clase de adaptador que permite `non_const` llamar a una función miembro que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Una clase de adaptador que permite `non_const` llamar a una función miembro que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Una clase de adaptador que permite `non_const` llamar a una función miembro que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de referencia.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Una clase de adaptador que permite `non_const` llamar a una función miembro que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de puntero.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Una clase de adaptador que permite llamar a una función miembro `non_const` que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Una clase de adaptador que permite llamar a una función miembro `non_const` que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de puntero.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Una clase de adaptadores que permite llamar a una función miembro `non_const` que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de referencia.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Una clase de adaptadores que permite llamar a una función miembro `non_const` que toma un solo argumento como un objeto de función binaria cuando se inicializa con un argumento de puntero.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Convierte un puntero a función binaria en una función binaria adaptable.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Convierte un puntero a función unaria en una función unaria adaptable.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Clase que contiene una referencia.|
-|[unary_negate](../standard-library/unary-negate-class.md)|Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función unaria especificada.<br/> (Desusado en C++ 17).  |
+|[unary_negate](../standard-library/unary-negate-class.md)|Una plantilla de clase que proporciona una función miembro que niega el valor devuelto de una función unaria especificada.<br/> (Desusado en C++ 17).  |
 
 ### <a name="functions"></a>Funciones
 
@@ -114,7 +114,7 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Devuelve el OR lógico bit a bit (operador &#124;) de los dos parámetros.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Devuelve el XOR lógico bit a bit (operador ^) de los dos parámetros.|
 |[cref](../standard-library/functional-functions.md#cref)|Construye un `reference_wrapper` const a partir de un argumento.|
-|[invoke](../standard-library/functional-functions.md#invoke)||
+|[vocó](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Genera un contenedor de llamadas simple.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funciones de plantilla del asistente utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.<br/> (Desusado en C++ 11, se ha quitado en C++ 17). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Función de plantilla del asistente utilizada para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.|
@@ -125,7 +125,7 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |[ref](../standard-library/functional-functions.md#ref)|Construye un `reference_wrapper` a partir de un argumento.|
 |[swap](../standard-library/functional-functions.md#swap)|Intercambia dos objetos `function`.|
 
-### <a name="structs"></a>Estructuras
+### <a name="structs"></a>Structs
 
 |||
 |-|-|

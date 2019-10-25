@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: fe795e54274e1d32dddb7310446bfa5aea22091a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492476"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739526"
 ---
 # <a name="collection-classes"></a>Clases de colección
 
@@ -32,9 +32,9 @@ Las clases siguientes proporcionan compatibilidad con matrices, listas, asignaci
 
 - [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) Esta clase proporciona métodos, funciones estáticas y definiciones de tipo útiles al crear colecciones de punteros de interfaz COM.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Esta clase es un contenedor para la estructura de [tipo de datos SafeArray](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) .
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Esta clase es un contenedor para la estructura de [tipo de datos SafeArray](/windows/win32/api/oaidl/ns-oaidl-safearray) .
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) Esta clase es un contenedor para una estructura [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-tagsafearraybound) .
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) Esta clase es un contenedor para una estructura [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound) .
 
 - [CComUnkArray](../atl/reference/ccomunkarray-class.md) Esta clase almacena punteros **IUnknown** y está diseñado para usarse como un parámetro para la clase de plantilla [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) .
 

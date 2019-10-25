@@ -1,9 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 11/04/2016
-apiname:
+ms.date: 10/22/2019
+api_name:
 - bsearch_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,23 +16,26 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bsearch_s
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 56c5fa45a9d8f9ac9b22474601934d3994da55e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349256"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811145"
 ---
-# <a name="bsearchs"></a>bsearch_s
+# <a name="bsearch_s"></a>bsearch_s
 
-Realiza una búsqueda binaria de una matriz ordenada. Versión de [bsearch](bsearch.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Realiza una búsqueda binaria de una matriz ordenada. Esta función es una versión de [bsearch](bsearch.md) con mejoras de seguridad, tal y como se describe en [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,35 +52,35 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*key*<br/>
-Objeto que se va a buscar.
+\ *clave*
+Puntero a la clave que se va a buscar.
 
-*base*<br/>
-Puntero a la base de datos de búsqueda.
+*base*\
+Puntero a la base de los datos de búsqueda.
 
-*number*<br/>
+*número*\
 Número de elementos.
 
-*width*<br/>
+*ancho*\
 Ancho de los elementos.
 
-*compare*<br/>
-Función de devolución de llamada que compara dos elementos. El primer argumento es el *contexto* puntero. El segundo argumento es un puntero a la *clave* para la búsqueda. El tercer argumento es un puntero al elemento de matriz que se comparará con *clave*.
+*comparar*\
+Función de devolución de llamada que compara dos elementos. El primer argumento es el puntero de *contexto* . El segundo argumento es un puntero a la *clave* de la búsqueda. El tercer argumento es un puntero al elemento de la matriz que se va a comparar con la *clave*.
 
-*context*<br/>
+\ de *contexto*
 Un puntero a un objeto al que se puede acceder en la función de comparación.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**bsearch_s** devuelve un puntero a una instancia de *clave* en la matriz señalada por *base*. Si *clave* no se encuentra, la función devuelve **NULL**. Si la matriz no está en orden ascendente o contiene registros duplicados con claves idénticas, el resultado es impredecible.
+**bsearch_s** devuelve un puntero a una aparición de *clave* en la matriz a la que apunta la *base*. Si no se encuentra la *clave* , la función devuelve **null**. Si la matriz no está en orden ascendente o contiene registros duplicados con claves idénticas, el resultado es impredecible.
 
-Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si se pasan parámetros no válidos a la función, invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Para obtener más información, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condiciones de error
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*number*|*width*|**errno**|
+|*key*|*base*|*compare*|*números*|*width*|**errno**|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
@@ -85,15 +88,15 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 
 ## <a name="remarks"></a>Comentarios
 
-El **bsearch_s** función realiza una búsqueda binaria de una matriz ordenada de *número* elementos, cada uno de *ancho* bytes de tamaño. El *base* valor es un puntero a la base de la matriz que desea buscar, y *clave* es el valor buscado. El *comparar* parámetro es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada en un elemento de matriz y devuelve uno de los siguientes valores que especifica su relación:
+La función **bsearch_s** realiza una búsqueda binaria de una matriz ordenada de elementos *numéricos* , cada uno de los cuales tiene un tamaño de bytes de *ancho* . El valor *base* es un puntero a la base de la matriz que se va a buscar y *key* es el valor que se busca. El parámetro *Compare* es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada con un elemento de matriz y devuelve uno de los siguientes valores que especifican su relación:
 
-|Valor devuelto por *comparar* rutina|Descripción|
+|Valor devuelto por la rutina de *comparación*|Descripción|
 |-----------------------------------------|-----------------|
 |\< 0|El valor de clave es menor que el elemento de matriz.|
 |0|El valor de clave es igual al elemento de matriz.|
 |> 0|La clave es mayor que el elemento de matriz.|
 
-El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es parte de un objeto, y la función de comparación necesita acceder a los miembros del objeto. El *comparar* función puede convertir el puntero void en los miembros de tipo y el acceso de objeto adecuado de ese objeto. La adición de la *contexto* parámetro hace que **bsearch_s** más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos disponibles en el *comparar* función.
+El puntero de *contexto* puede ser útil si la estructura de datos de búsqueda forma parte de un objeto y la función de comparación necesita acceder a los miembros del objeto. La función de *comparación* puede convertir el puntero void en el tipo de objeto adecuado y acceder a los miembros de ese objeto. La adición del parámetro de *contexto* hace que **bsearch_s** sea más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos estén disponibles para la función de *comparación* .
 
 ## <a name="requirements"></a>Requisitos
 
@@ -101,7 +104,7 @@ El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es 
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> y \<search.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -191,7 +194,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>Vea también
 
-[Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)

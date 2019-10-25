@@ -1,12 +1,12 @@
 ---
 title: abs, labs, llabs, _abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341995"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939928"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
 Calcula el valor absoluto del argumento.
 
@@ -71,22 +74,22 @@ Valor numérico.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **abs**, **labs**, **llabs** y **_abs64** funciones devuelven el valor absoluto del parámetro *n*. No se devuelve ningún error.
+Las funciones **ABS**, **Labs**, **llabs** y **_abs64** devuelven el valor absoluto del parámetro *n*. No se devuelve ningún error.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **abs** que toman y devuelven **largo**, **largo** **largo**,  **float**, **doble**, y **largo** **doble** valores. Estas sobrecargas se definen en el encabezado \<cmath>. En un programa C, **abs** siempre toma y devuelve un **int**.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ABS** que toman y devuelven valores **Long** **, Long** **Long**, **float**, **Double**y **Long** **Double** . Estas sobrecargas se definen en el encabezado \<cmath>. En un programa de C, **ABS** siempre toma y devuelve un valor **int**.
 
-**Específico de Microsoft**: Dado que el intervalo de enteros negativos que se puede representar con cualquier tipo de entero es mayor que el intervalo de enteros positivos que se puede representar con ese tipo, se puede proporcionar un argumento a estas funciones que no se pueden convertir. Si el valor absoluto del argumento no puede representarse mediante el tipo de valor devuelto, el **abs** funciones devuelven el valor del argumento sin modificar. En concreto, `abs(INT_MIN)` devuelve `INT_MIN`, `labs(LONG_MIN)` devuelve `LONG_MIN`, `llabs(LLONG_MIN)` devuelve `LLONG_MIN` y `_abs64(_I64_MIN)` devuelve `_I64_MIN`. Esto significa que el **abs** funciones no se puede usar para garantizar un valor positivo.
+**Específico de Microsoft**: Dado que el intervalo de enteros negativos que se puede representar con cualquier tipo de entero es mayor que el intervalo de enteros positivos que se puede representar con ese tipo, se puede proporcionar un argumento a estas funciones que no se pueden convertir. Si el tipo de valor devuelto no puede representar el valor absoluto del argumento, las funciones **ABS** devuelven el valor del argumento sin modificar. En concreto, `abs(INT_MIN)` devuelve `INT_MIN`, `labs(LONG_MIN)` devuelve `LONG_MIN`, `llabs(LLONG_MIN)` devuelve `LLONG_MIN` y `_abs64(_I64_MIN)` devuelve `_I64_MIN`. Esto significa que las funciones **ABS** no se pueden utilizar para garantizar un valor positivo.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C necesario|Encabezado C++ necesario|
 |-------------|-----------------------|---------------------------|
-|**abs**, **labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
+|**ABS**, **Labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> o \<stdlib.h>|
 
-Para usar las versiones sobrecargadas de **abs** en C++, debe incluir el \<cmath > encabezado.
+Para usar las versiones sobrecargadas de **ABS** en C++, debe incluir el \<encabezado CMATH >.
 
 ## <a name="example"></a>Ejemplo
 

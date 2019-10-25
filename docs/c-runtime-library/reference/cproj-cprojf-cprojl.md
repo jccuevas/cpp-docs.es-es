@@ -1,11 +1,11 @@
 ---
 title: cproj, cprojf, cprojl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cproj
 - cprojf
 - cprojl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cproj
 - cprojf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdeefe10814b887af04d6f4adbb01300785e8b46
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445674"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938951"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
@@ -68,11 +71,11 @@ Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La proyección de *z* en la esfera de Reimann.
+Proyección de *z* en la esfera de Reimann.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cproj** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cproj** siempre toma y devuelve un **_Dcomplex** valor.
+Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **cproj** que toman y devuelven los valores **_Fcomplex** y **_Lcomplex** . En un programa de C, **cproj** siempre toma y devuelve un valor de **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisitos
 

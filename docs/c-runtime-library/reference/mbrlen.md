@@ -1,9 +1,9 @@
 ---
 title: mbrlen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrlen
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: ec9079b9b164e2b609a956ddf3a75cd42923bafc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156777"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952505"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -51,7 +54,7 @@ Puntero al siguiente byte que se va a inspeccionar en una cadena de caracteres m
 El número máximo de bytes a inspeccionar.
 
 *mbstate*<br/>
-Puntero en el estado de desplazamiento actual del byte inicial de *str*.
+Puntero al estado de desplazamiento actual del byte inicial de *Str*.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -59,18 +62,18 @@ Uno de los siguientes valores:
 
 |||
 |-|-|
-0|La siguiente *recuento* o menos bytes completan el carácter multibyte que representa el carácter nulo ancho.
-1 para *recuento*, ambos inclusive|La siguiente *recuento* o menos bytes completan un carácter multibyte válido. El valor devuelto es el número de bytes que completan el carácter multibyte.
-(size_t)(-2)|La siguiente *recuento* bytes contribuyen a un carácter multibyte incompleto pero potencialmente válido y los *recuento* bytes se han procesado.
-(size_t)(-1)|Se produjo un error de codificación. La siguiente *recuento* o menos bytes no contribuyen a un carácter multibyte completo y válido. En este caso, **errno** se establece a EILSEQ y el estado de conversión en *mbstate* no se ha especificado.
+0|El siguiente *recuento* o menos bytes completan el carácter multibyte que representa el carácter nulo ancho.
+1 para *contar*, ambos inclusive|El siguiente *recuento* o menos bytes completan un carácter multibyte válido. El valor devuelto es el número de bytes que completan el carácter multibyte.
+(size_t)(-2)|El siguiente *recuento* de bytes contribuye a un carácter multibyte incompleto pero potencialmente válido, y se han procesado todos los bytes de *recuento* .
+(size_t)(-1)|Se produjo un error de codificación. El siguiente *recuento* o menos bytes no contribuyen a un carácter multibyte completo y válido. En este caso, **errno** se establece en EILSEQ y el estado de la conversión en *mbstate* no se especifica.
 
 ## <a name="remarks"></a>Comentarios
 
-El **mbrlen** función inspecciona a lo sumo *recuento* bytes a partir del byte señalado por *str* para determinar el número de bytes que se necesitan para completar el siguiente carácter multibyte, incluidas las secuencias de desplazamiento. Es equivalente a la llamada `mbrtowc(NULL, str, count, &mbstate)` donde *mbstate* es cualquier un proporcionado por el usuario **mbstate_t** objeto o un objeto interno estático proporcionadas por la biblioteca.
+La función **mbrlen** inspecciona como máximo los bytes de *recuento* a partir del byte señalado por *Str* para determinar el número de bytes necesarios para completar el siguiente carácter multibyte, incluidas las secuencias de desplazamiento. Es equivalente a la llamada `mbrtowc(NULL, str, count, &mbstate)` , donde *mbstate* es un objeto **mbstate_t** proporcionado por el usuario o un objeto interno estático proporcionado por la biblioteca.
 
-El **mbrlen** función guarda y usa el estado de desplazamiento de un carácter multibyte incompleto en el *mbstate* parámetro. Esto proporciona **mbrlen** la capacidad de reinicio en medio de un carácter multibyte si es necesario, examinando a lo sumo *recuento* bytes. Si *mbstate* es un puntero nulo, **mbrlen** usa un elemento estático interno, **mbstate_t** objeto para almacenar el estado de desplazamiento. Dado que la interna **mbstate_t** objeto no es seguro para subprocesos, se recomienda siempre asignar y pasar su propio *mbstate* parámetro.
+La función **mbrlen** guarda y usa el estado de desplazamiento de un carácter multibyte incompleto en el parámetro *mbstate* . Esto da a **mbrlen** la capacidad de reiniciar en medio de un carácter multibyte si es necesario, examinando a lo sumo el *número* de bytes. Si *mbstate* es un puntero nulo, **mbrlen** usa un objeto **mbstate_t** interno estático para almacenar el estado de desplazamiento. Dado que el objeto **mbstate_t** interno no es seguro para subprocesos, se recomienda asignar siempre y pasar su propio parámetro *mbstate* .
 
-El **mbrlen** función difiere de [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) por su capacidad de reinicio. El estado de desplazamiento se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación debe utilizar **wcsrlen** en lugar de **wcslen** si una llamada subsiguiente a **wcsrtombs** se utiliza en lugar de **wcstombs**.
+La función **mbrlen** difiere de [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) por su reinicio. El estado de desplazamiento se almacena en *mbstate* para las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación debe usar **wcsrlen** en lugar de **wcslen** si se utiliza una llamada subsiguiente a **wcsrtombs** en lugar de **wcstombs**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -88,7 +91,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra cómo la interpretación de caracteres multibyte depende de la página de códigos actual y muestra la capacidad de reanudación de **mbrlen**.
+En este ejemplo se muestra cómo la interpretación de caracteres multibyte depende de la página de códigos actual y se muestra la capacidad de reanudación de **mbrlen**.
 
 ```C
 // crt_mbrlen.c

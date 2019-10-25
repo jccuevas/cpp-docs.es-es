@@ -1,36 +1,36 @@
 ---
 title: __readeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readeflags
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: 9913fb4287e673faf79b2c352bb42eda7f590fdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe2365c2837b6c583810bb9fc908fe98486a2d38
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396488"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221225"
 ---
-# <a name="readeflags"></a>__readeflags
+# <a name="__readeflags"></a>__readeflags
 
-Lee que el estado del programa y control (EFLAGS) se registran.
+Lee el registro de estado y control (EFLAGS) del programa.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-unsigned     int __readeflags(void);
-unsigned __int64 __readeflags(void);
+```C
+unsigned     int __readeflags(void); /* x86 */
+unsigned __int64 __readeflags(void); /* x64 */
 ```
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor del registro EFLAGS. El valor devuelto es de 32 bits largo en una plataforma de 32 bits y 64 bits largo en una plataforma de 64 bits.
+El valor del registro EFLAGS. El valor devuelto es de 32 bits de longitud en una plataforma de 32 bits y de 64 bits en una plataforma de 64 bits.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas rutinas sólo están disponibles como intrínsecos.
+Estas rutinas solo están disponibles como intrínsecos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,11 +38,11 @@ Estas rutinas sólo están disponibles como intrínsecos.
 |---------------|------------------|
 |`__readeflags`|x86, x64|
 
-**Archivo de encabezado** \<intrin.h >
+**Archivo de encabezado** \<INTRIN. h >
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [__writeeflags](../intrinsics/writeeflags.md)
