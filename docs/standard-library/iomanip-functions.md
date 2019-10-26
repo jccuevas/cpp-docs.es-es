@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 09bb043c40774b102dee023773349223a2fbb4a9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449226"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890146"
 ---
 # <a name="ltiomanipgt-functions"></a>Funciones de &lt;iomanip&gt;
 
@@ -48,20 +48,20 @@ Extrae un valor monetario de un flujo con el formato deseado y devuelve el valor
 
 ```cpp
 template <class Money>
-T7 get_money(Money& _Amount, bool _Intl);
+T7 get_money(Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Amount*\
+*cantidad*\
 Valor monetario extraído.
 
-*_Intl*\
+\ *use_intl*
 Si **es true**, se usa el formato internacional. El valor predeterminado es **false**.
 
 ### <a name="remarks"></a>Comentarios
 
-El manipulador devuelve un objeto que, cuando se extrae `str`del flujo, se comporta como `formatted input function` una que llama a la `get` función miembro para la faceta `money_get` de configuración `str`regional asociada a, utilizando *_Intl* para indicar el formato internacional. Si es correcto, la llamada almacena en *_Amount* el valor monetario extraído. Después, el manipulador devuelve `str`.
+El manipulador devuelve un objeto que, cuando se extrae de la secuencia `str`, se comporta como un `formatted input function` que llama a la función miembro `get` para la faceta de configuración regional `money_get` asociada a `str`, usando *use_intl* para indicar el formato internacional. . Si es correcto, la llamada almacena en *cantidad* el valor monetario extraído. Después, el manipulador devuelve `str`.
 
 `Money` debe ser de tipo `long double` o una instancia de `basic_string` con los mismos parámetros de elemento y rasgos que `str`.
 
@@ -71,15 +71,15 @@ Extrae un valor de tiempo de un flujo con el formato deseado. Devuelve el valor 
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
+T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Tptr*\
+\ *time_ptr*
 Tiempo en forma de estructura de tiempo.
 
-*_Fmt*\
+\ *time_format*
 Formato que se quiere usar para obtener el valor de tiempo.
 
 ### <a name="remarks"></a>Comentarios
@@ -92,15 +92,15 @@ Inserta un importe monetario con el formato deseado en un flujo.
 
 ```cpp
 template <class Money>
-T8 put_money(const Money& _Amount, bool _Intl);
+T8 put_money(const Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Amount*\
+*cantidad*\
 Importe monetario que se va a insertar en el flujo.
 
-*_Intl*\
+\ *use_intl*
 Establézcalo en **true** si el manipulador debe utilizar el formato internacional; de lo contrario, **false** .
 
 ### <a name="return-value"></a>Valor devuelto
@@ -109,7 +109,7 @@ Devuelve `str`.
 
 ### <a name="remarks"></a>Comentarios
 
-El manipulador devuelve un objeto que, cuando se inserta en el flujo `str`, se comporta como una función de salida con formato que llama a la función miembro `put` para la faceta de configuración regional `money_put` asociada a `str`. Si es correcto, la llamada inserta `amount` un formato adecuado, mediante *` to indicate international format and `_Intl Str. Fill (`, as the fill element. The manipulator then returns `) Str.
+El manipulador devuelve un objeto que, cuando se inserta en el flujo `str`, se comporta como una función de salida con formato que llama a la función miembro `put` para la faceta de configuración regional `money_put` asociada a `str`. Si es correcto, la llamada inserta `amount` con el formato adecuado, utilizando *use_intl* para indicar el formato internacional y el `str.fill()`como el elemento de relleno. Después, el manipulador devuelve `str`.
 
 `Money` debe ser de tipo `long double` o una instancia de `basic_string` con los mismos parámetros de elemento y rasgos que `str`.
 
@@ -119,20 +119,20 @@ Escribe un valor de tiempo de una estructura de tiempo en un flujo con el format
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
+T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Tptr*\
+\ *time_ptr*
 Valor de tiempo que se va a escribir en el flujo, proporcionado en una estructura de tiempo.
 
-*_Fmt*\
+\ *time_format*
 Formato deseado para escribir el valor de tiempo.
 
 ### <a name="remarks"></a>Comentarios
 
-El manipulador devuelve un objeto que, cuando se inserta en el flujo `str`, se comporta como una `formatted output function`. La función de salida llama a la función miembro `put` para la faceta de configuración regional `time_put` asociada a `str`. La función Output usa *_Tptr* para indicar la estructura de tiempo y *_Fmt* para indicar el principio de una cadena de formato terminada en NULL. Si es correcto, la llamada inserta texto literal de la cadena de formato y valores convertidos de la estructura de tiempo. Después, el manipulador devuelve `str`.
+El manipulador devuelve un objeto que, cuando se inserta en el flujo `str`, se comporta como una `formatted output function`. La función de salida llama a la función miembro `put` para la faceta de configuración regional `time_put` asociada a `str`. La función Output usa *time_ptr* para indicar la estructura de tiempo y *time_format* para indicar el principio de una cadena de formato terminada en NULL. Si es correcto, la llamada inserta texto literal de la cadena de formato y valores convertidos de la estructura de tiempo. Después, el manipulador devuelve `str`.
 
 ## <a name="quoted"></a>  quoted
 
@@ -147,13 +147,13 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parámetros
 
-*CAD*\
-Un STD:: String, Char\*, literal de cadena o literal de cadena sin formato, o una versión ancha de cualquiera de estos (por ejemplo, STD:\*: wstring, wchar_t).
+\ *Str*
+Un STD:: String, Char\*, literal de cadena o literal de cadena sin formato, o una versión ancha de cualquiera de estos (por ejemplo, STD:: wstring, wchar_t\*).
 
-*delimitador*\
+*delimitador* \
 Un carácter especificado por el usuario o carácter ancho, que se utilizará como delimitador para el principio y el final de la cadena.
 
-*salida*\
+\ de *escape*
 Un carácter especificado por el usuario o carácter ancho, que se utilizará como carácter de escape para las secuencias de escape dentro de la cadena.
 
 ### <a name="remarks"></a>Comentarios
@@ -306,17 +306,17 @@ Press Enter to exit
 Borra las marcas especificadas.
 
 ```cpp
-T1 resetiosflags(ios_base::fmtflags Mask);
+T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Máscara*\
+\ de *máscara*
 Marcas que se van a borrar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El manipulador devuelve un objeto que, cuando se extrae de la secuencia `str`o se inserta en ella, llama a **Str**. [setf](../standard-library/ios-base-class.md#setf) ( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*) y, después, `str`devuelve.
+El manipulador devuelve un objeto que, cuando se extrae o se inserta en el flujo `str`, llama a `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`y, a continuación, devuelve `str`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -327,25 +327,25 @@ Vea [setw](../standard-library/iomanip-functions.md#setw) para obtener un ejempl
 Establece la base de los enteros.
 
 ```cpp
-T3 setbase(int _Base);
+T3 setbase(int base);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_Base*\
+*base*\
 Base numérica.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El manipulador devuelve un objeto que, cuando se extrae de la secuencia `str`o se inserta en ella, llama a **Str**. `setf`( **Mask**, [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)) y, a continuación `str`, devuelve. Aquí, `mask` se determina de la siguiente manera:
+El manipulador devuelve un objeto que, cuando se extrae o se inserta en el flujo `str`, llama a `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`y, a continuación, devuelve `str`. Aquí, `mask` se determina de la siguiente manera:
 
-- Si _ *base* es 8, entonces `mask` es `ios_base::` [Oct](../standard-library/ios-functions.md#oct).
+- Si *base* es 8, `mask` es `ios_base::`[Oct](../standard-library/ios-functions.md#oct).
 
-- Si _ *Base* es 10, mask es `ios_base::`[dec](../standard-library/ios-functions.md#dec).
+- Si *base* es 10, mask es `ios_base::`[Dec](../standard-library/ios-functions.md#dec).
 
-- Si _ *base* es 16, `mask` es `ios_base::` [hexadecimal](../standard-library/ios-functions.md#hex).
+- Si *base* es 16, `mask` es `ios_base::`[Hex](../standard-library/ios-functions.md#hex).
 
-- Si _ *Base* es cualquier otro valor, mask es `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).
+- Si *base* es cualquier otro valor, mask es `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -362,12 +362,12 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Carácter que se usará para rellenar los espacios en una presentación justificada a la derecha.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El manipulador de plantilla devuelve un objeto que, cuando se extrae de la `str`secuencia o se inserta en ella, llama a **Str**. [relleno](../standard-library/basic-ios-class.md#fill) de (`Ch`) y, a continuación `str`, devuelve. El tipo `Elem` debe ser el mismo que el tipo de elemento de la `str`secuencia.
+El manipulador de plantilla devuelve un objeto que, cuando se extrae o se inserta en el flujo `str`, llama a `str.``(Ch)`de [relleno](../standard-library/basic-ios-class.md#fill) y, a continuación, devuelve `str`. El tipo `Elem` debe ser el mismo que el tipo de elemento de la secuencia `str`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -378,17 +378,17 @@ Vea [setw](../standard-library/iomanip-functions.md#setw) para obtener un ejempl
 Establece las marcas especificadas.
 
 ```cpp
-T2 setiosflags(ios_base::fmtflags Mask);
+T2 setiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Máscara*\
+\ de *máscara*
 Marcas que se van a establecer.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El manipulador devuelve un objeto que, cuando se extrae de la secuencia `str`o se inserta en ella, llama a **Str**. [setf](../standard-library/ios-base-class.md#setf) (_ *Mask*) y, después, `str`devuelve.
+El manipulador devuelve un objeto que, cuando se extrae o se inserta en el flujo `str`, llama a `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`y, a continuación, devuelve `str`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -404,12 +404,12 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>Parámetros
 
-*Prec*\
+\ *PREC*
 Precisión de los valores de punto flotante.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El manipulador devuelve un objeto que, cuando se extrae de la secuencia `str`o se inserta en ella, llama a **Str**. [precisión](../standard-library/ios-base-class.md#precision) (`Prec`) y, a continuación `str`, devuelve.
+El manipulador devuelve un objeto que, cuando se extrae o se inserta en el flujo `str`, llama a `str.`[precisión](../standard-library/ios-base-class.md#precision)`(Prec)`y, a continuación, devuelve `str`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -425,12 +425,12 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parámetros
 
-*Otro*\
+\ *ancho*
 Ancho del campo de presentación.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El manipulador devuelve un objeto que, cuando se extrae de la secuencia `str`o se inserta en ella, llama a **Str**. [ancho](../standard-library/ios-base-class.md#width) de (_ *Wide*) y después devuelve `str`.
+El manipulador devuelve un objeto que, cuando se extrae o se inserta en el flujo `str`, llama a `str.``(Wide)`de [ancho](../standard-library/ios-base-class.md#width) y, a continuación, devuelve `str`.
 
 ### <a name="remarks"></a>Comentarios
 

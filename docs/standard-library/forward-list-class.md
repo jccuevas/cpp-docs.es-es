@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689697"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890202"
 ---
 # <a name="forward_list-class"></a>forward_list (Clase)
 
@@ -103,7 +103,7 @@ class forward_list
 Escriba * \
 Tipo de datos de elemento que se almacenará en forward_list.
 
-@No__t_1 de *asignador*
+\ de *asignador*
 Objeto de asignador almacenado que encapsula detalles sobre la asignación y desasignación de memoria de forward_list. Este parámetro es opcional. El valor predeterminado es allocator<`Type`>.
 
 ## <a name="remarks"></a>Comentarios
@@ -521,10 +521,10 @@ La clase de asignador que se usa con este objeto.
 *Recuento* \
 Número de elementos de la lista construida.
 
-@No__t_1 *Val*
+\ *Val*
 Valor de los elementos de la lista construida.
 
-@No__t_1 *derecha*
+\ *derecha*
 Lista de la que la lista construida va a ser una copia.
 
 *Primer* \
@@ -604,7 +604,7 @@ Principio del intervalo de inserción.
 *Última* \
 Final del intervalo de inserción.
 
-@No__t_1 *Val*
+\ *Val*
 Elemento agregado a la lista de reenvíos.
 
 *IList* \
@@ -678,7 +678,7 @@ El objeto de función de comparación que se usa para ordenar elementos.
 
 ### <a name="remarks"></a>Comentarios
 
-`forward_list::merge` quita los elementos del `right` de `forward_list` y los inserta en este `forward_list`. Ambas secuencias deben estar ordenadas por el mismo predicado, que se describe a continuación. La secuencia combinada también está ordenada por ese objeto de función de comparación.
+`forward_list::merge` quita los elementos del `right`de `forward_list` y los inserta en este `forward_list`. Ambas secuencias deben estar ordenadas por el mismo predicado, que se describe a continuación. La secuencia combinada también está ordenada por ese objeto de función de comparación.
 
 Para los iteradores `Pi` y `Pj` que designan elementos en posiciones `i` y `j`, la primera función miembro impone el orden `!(*Pj < *Pi)` siempre que `i < j`. (Los elementos se ordenan en `ascending` orden). La segunda función miembro impone el orden `! comp(*Pj, *Pi)` cada vez que `i < j`.
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Newsize*
+\ *_Newsize*
 Número de elementos de la lista de reenvíos a la que se le ha cambiado el tamaño.
 
 \ *Val*
@@ -898,7 +898,7 @@ La posición de la forward_list de destino después de la cual se insertan.
 *Source*\
 La forward_list de origen que debe insertarse en la forward_list de destino.
 
-@No__t_1 *ITER*
+\ *ITER*
 El elemento que debe insertarse de la forward_list de origen.
 
 *Primer* \
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El tipo es un sinónimo del parámetro de plantilla _ `Ty`.
+El tipo es un sinónimo del parámetro de plantilla `Type`.

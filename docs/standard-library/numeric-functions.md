@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: 0a9d0ce34b1dcd2dd9252f4b243db85118deabe6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246720"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889963"
 ---
 # <a name="ltnumericgt-functions"></a>Funciones &lt;numeric&gt;
 
-## <a name="accumulate"></a> acumular
+## <a name="accumulate"></a>acumular
 
 Calcula la suma de todos los elementos en un intervalo especificado incluidos algunos valores iniciales mediante el cálculo de sumas parciales sucesivas, o calcula el resultado de los resultados parciales sucesivos obtenidos de manera similar mediante el uso de una operación binaria determinada distinta de la suma.
 
@@ -49,25 +49,25 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*\
+*primer* \
 Un iterador de entrada que direcciona el primer elemento del intervalo que se va a sumar o combinar según una operación binaria especificada.
 
-*Último*\
+*última* \
 Un iterador de entrada que direcciona el último elemento del intervalo que se va a sumar o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
 
-*Val*\
+\ *Val*
 Un valor inicial al que, a su vez, cada elemento se agrega o combina según una operación binaria específica.
 
-*binary_op*\
+\ *binary_op*
 La operación binaria que se va a aplicar en cada elemento del intervalo especificado y el resultado de sus aplicaciones anteriores.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La suma de *val* y todos los elementos del intervalo especificado para la primera función de plantilla, o bien, para la segunda función de plantilla, el resultado de aplicar la operación binaria especificada, en lugar de la operación de suma para ( *PartialResult, \*Iter*), donde *PartialResult* es el resultado de las aplicaciones de la operación anteriores y `Iter` es un iterador que apunta a un elemento del intervalo.
+La suma de *Val* y todos los elementos del intervalo especificado para la primera función de plantilla, o, para la segunda función de plantilla, el resultado de aplicar la operación binaria especificada, en lugar de la operación SUM, a (*PartialResult, \*ITER* ), donde *PartialResult* es el resultado de las aplicaciones anteriores de la operación y `Iter` es un iterador que apunta a un elemento del intervalo.
 
 ### <a name="remarks"></a>Comentarios
 
-El valor inicial garantiza que habrá un resultado bien definido cuando el intervalo está vacío, en cuyo caso *val* se devuelve. La operación binaria no tiene que ser asociativa o conmutativa. El resultado se inicializa en el valor inicial *val* y, a continuación, *resultado*  =  `binary_op` (*resultado*, <strong>\*</strong> `Iter`) se calcula de forma iterativa mediante el rango, donde `Iter` es un iterador que apunta al elemento sucesivo del intervalo. El intervalo debe ser válido y la complejidad es lineal con el tamaño del intervalo. El tipo devuelto del operador binario debe ser convertible a **Type** para garantizar el cierre durante la iteración.
+El valor inicial garantiza que habrá un resultado bien definido cuando el intervalo esté vacío, en cuyo caso se devuelve *Val* . No es necesario que la operación binaria sea asociativa o conmutativa. El resultado se inicializa en el valor inicial *Val* y, a continuación, el *resultado* = `binary_op` (*result*, <strong>\*</strong>`Iter`) se calcula de forma iterativa a través del intervalo, donde `Iter` es un iterador que apunta a sucesivos elemento del intervalo. El intervalo debe ser válido y la complejidad es lineal con el tamaño del intervalo. El tipo devuelto del operador binario debe ser convertible a **Type** para garantizar el cierre durante la iteración.
 
 ### <a name="example"></a>Ejemplo
 
@@ -168,7 +168,7 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a> adjacent_difference
+## <a name="adjacent_difference"></a>adjacent_difference
 
 Calcula las diferencias sucesivas entre cada elemento y su predecesor en un intervalo de entrada, y pone los resultados en un intervalo de destino; o calcula el resultado de un procedimiento generalizado donde la operación de diferencia se reemplaza por otra operación binaria especificada.
 
@@ -205,31 +205,31 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*\
+*primer* \
 Iterador de entrada que direcciona el primer elemento del intervalo de entrada cuyos elementos se van a diferenciar con sus predecesores respectivos o donde se va a actuar sobre el par de valores mediante otra operación binaria especificada.
 
-*Último*\
+*última* \
 Iterador de entrada que direcciona el último elemento del intervalo de entrada cuyos elementos se van a diferenciar con sus predecesores respectivos o donde se va a actuar sobre el par de valores mediante otra operación binaria especificada.
 
-*Resultado*\
+\ de *resultados*
 Iterador de salida que direcciona el primer elemento de un intervalo de destino donde se va a almacenar la serie de diferencias o los resultados de la operación especificada.
 
-*binary_op*\
+\ *binary_op*
 Operación binaria que se va a aplicar en la operación generalizada reemplazando la operación de resta en el procedimiento de diferenciación.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un iterador de salida que direcciona al final del intervalo de destino: `result` + (`last` - `first`).
+Iterador de salida que direcciona el final del intervalo de destino: `result` + (`last` - `first`).
 
 ### <a name="remarks"></a>Comentarios
 
-El iterador de salida _ *resultado* se permite que sea el mismo que el iterador de entrada * primero, * para que `adjacent_difference`s se puedan calcular en su lugar.
+El *resultado* del iterador de salida puede ser el mismo iterador que el iterador de entrada en *primer lugar*, de modo que los valores de `adjacent_difference` se puedan calcular en contexto.
 
-Para una secuencia de valores *un*1, *un*2, *un*3, en un intervalo de entrada, la primera función de plantilla almacena sucesivas `partial_difference`s *un*1 , *un*2 - *un*1, a3 - *un*2, en el intervalo de destino.
+Para una secuencia de valores *a*1, *a*2, *a*3, en un intervalo de entrada, la primera función de plantilla almacena los valores de `partial_difference` sucesivos *a*1, *a*2- *a*1, a3- *a*2, en el intervalo de destino.
 
-Para una secuencia de valores *un*1, *un*2, *un*3, en un intervalo de entrada, la segunda función de plantilla almacena sucesivas `partial_difference`s *un* 1, *un*2 `binary_op` *un*1, *un*3 `binary_op` *un*2, en el intervalo de destino.
+En el caso de una secuencia de valores *a*1, *a*2, *a*3, en un intervalo de entrada, la segunda función de plantilla almacena los valores de `partial_difference` sucesivos *a*1, *a*2 `binary_op` *a*1, *a* *3 `binary_op` 2*, en el destino variedad.
 
-La operación binaria `binary_op` no es necesario ser asociativa o conmutativa, ya que se aplica el orden de las operaciones se especifica.
+No es necesario que la operación binaria `binary_op` sea asociativa o conmutativa, ya que se especifica el orden de las operaciones aplicadas.
 
 ### <a name="example"></a>Ejemplo
 
@@ -292,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="exclusive_scan"></a> exclusive_scan
+## <a name="exclusive_scan"></a>exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T>
@@ -316,14 +316,14 @@ ForwardIterator2 result,
 T init, BinaryOperation binary_op);
 ```
 
-## <a name="gcd"></a> Gcd
+## <a name="gcd"></a>d
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
-## <a name="inclusive_scan"></a> inclusive_scan
+## <a name="inclusive_scan"></a>inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator>
@@ -355,7 +355,7 @@ ForwardIterator2 result,
 BinaryOperation binary_op, T init);
 ```
 
-## <a name="inner_product"></a> inner_product
+## <a name="inner_product"></a>inner_product
 
 Calcula la suma del producto de elementos de dos intervalos y la agrega a un valor inicial especificado, o calcula el resultado de un procedimiento general donde las operaciones binarias de suma y de producto se reemplazan por otras operaciones binarias especificadas.
 
@@ -379,41 +379,41 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parámetros
 
-*first1*\
+\ *first1*
 Un iterador de entrada que direcciona el primer elemento del primer intervalo cuyo producto interno o producto interno generalizado debe calcularse con el segundo intervalo.
 
-*last1*\
+\ *last1*
 Un iterador de entrada que direcciona el último elemento del primer intervalo cuyo producto interno o producto interno generalizado con el segundo intervalo debe calcularse.
 
-*first2*\
+\ *first2*
 Un iterador de entrada que direcciona el primer elemento del segundo intervalo cuyo producto interno o producto interno generalizado con el primer intervalo debe calcularse.
 
-*Val*\
+\ *Val*
 Un valor inicial al que se va a agregar el producto interno o el producto interno generalizado entre los intervalos.
 
-*binary_op1*\
+\ *binary_op1*
 La operación binaria que reemplaza la operación de producto interno de suma que se aplica a los productos de elementos en la generalización del producto interno.
 
-*binary_op2*\
+\ *binary_op2*
 La operación binaria que reemplaza la operación de elementos de producto interno de multiplicar en la generalización del producto interno.
 
 ### <a name="return-value"></a>Valor devuelto
 
 La primera función miembro devuelve la suma de los productos de elementos y la agrega al valor inicial especificado. Por lo que para los intervalos de valores *a*i y *b*i, devuelve:
 
-`val` + (*un*1 \* *b*1) + (*un*2 \* *b*2) +... + (*un*n \* *b*n)
+`val` + (*a*1 \* *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
 
-reemplazando de manera iterativa *val* con `val` + (*un* \* *b*).
+reemplazando de forma iterativa *Val* por `val` + (*a*i \* *b*i).
 
 La segunda función miembro devuelve:
 
-`val` *binary_op1* (*un*1 *binary_op2* *b*1) *binary_op1* (*un*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*un*n *binary_op2* *b*n)
+`val` *binary_op1* (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
-reemplazando de manera iterativa *val* con `val` *binary_op1* (*un* *binary_op2* *b* i).
+reemplazando de forma *iterativa Val* por `val` *binary_op1* (*a*i *binary_op2* *b*i).
 
 ### <a name="remarks"></a>Comentarios
 
-El valor inicial garantiza que habrá un resultado bien definido cuando el intervalo está vacío, en cuyo caso *val* se devuelve. Las operaciones binarias no necesita ser asociativa o conmutativa. El intervalo debe ser válido y la complejidad es lineal con el tamaño del intervalo. El tipo devuelto del operador binario debe ser convertible a **Type** para garantizar el cierre durante la iteración.
+El valor inicial garantiza que habrá un resultado bien definido cuando el intervalo esté vacío, en cuyo caso se devuelve *Val* . No es necesario que las operaciones binarias sean asociativas o conmutativas. El intervalo debe ser válido y la complejidad es lineal con el tamaño del intervalo. El tipo devuelto del operador binario debe ser convertible a **Type** para garantizar el cierre durante la iteración.
 
 ### <a name="example"></a>Ejemplo
 
@@ -505,9 +505,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a> Iota
+## <a name="iota"></a>Iota
 
-Almacena un valor inicial, empezando por el primer elemento y rellenando con incrementos sucesivos de ese valor (` value++`) en cada uno de los elementos en el intervalo `[first,  last)`.
+Almacena un valor inicial, empezando por el primer elemento y rellenando con incrementos sucesivos de ese valor (` value++`) en cada uno de los elementos del intervalo `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -516,14 +516,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*\
+*primer* \
 Un iterador de entrada que direcciona el primer elemento del intervalo que se va a rellenar.
 
-*Último*\
+*última* \
 Un iterador de entrada que direcciona el último elemento del intervalo que se va a rellenar.
 
 *value*\
-El valor inicial para almacenar en el primer elemento y para incrementar sucesivamente los elementos subsiguientes.
+Valor inicial que se va a almacenar en el primer elemento y que se va a incrementar sucesivamente para los elementos posteriores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -567,14 +567,14 @@ int main(void)
 }
 ```
 
-## <a name="lcm"></a> LCM
+## <a name="lcm"></a>LCM
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> lcm(M m, N n);
 ```
 
-## <a name="partial_sum"></a> partial_sum
+## <a name="partial_sum"></a>partial_sum
 
 Calcula una serie de sumas en un intervalo de entrada desde el primer elemento hasta el elemento *i*-ésimo y almacena el resultado de cada una de esas sumas en el elemento *i*-ésimo de un intervalo de destino o calcula el resultado de un procedimiento generalizado donde la operación de suma se reemplaza por otra operación binaria especificada.
 
@@ -595,31 +595,31 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*\
+*primer* \
 Iterador de entrada que direcciona el primer elemento del intervalo que se va a sumar parcialmente o combinar según una operación binaria especificada.
 
-*Último*\
+*última* \
 Iterador de entrada que direcciona el último elemento del intervalo que se va a sumar parcialmente o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
 
-*Resultado*\
+\ de *resultados*
 Iterador de salida que direcciona el primer elemento de un intervalo de destino donde se va a almacenar la serie de sumas parciales o los resultados de la operación especificada.
 
-*binary_op*\
+\ *binary_op*
 Operación binaria que se va a aplicar en la operación generalizada reemplazando la operación de suma en el procedimiento de suma parcial.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un iterador de salida que direcciona al final del intervalo de destino: `result` + (`last` - `first`),
+Iterador de salida que direcciona el final del intervalo de destino: `result` + (`last` - `first`).
 
 ### <a name="remarks"></a>Comentarios
 
-El iterador de salida *resultado* se permite que sea el mismo que el iterador de entrada *primera*, de modo que se puedan calcular sumas parciales en su lugar.
+El *resultado* del iterador de salida puede ser el mismo que *el iterador de entrada, por*lo que se pueden calcular sumas parciales en contexto.
 
-Para una secuencia de valores *un*1, *un*2, *un*3, en un intervalo de entrada, la primera función de plantilla almacena sumas parciales sucesivas en el intervalo de destino, donde la elemento ésimo viene dado por (((*un*1 + *un*2) + *un* (3)*un*).
+En el caso de una secuencia de valores *a*1, *a*2, *a*3, en un intervalo de entrada, la primera función de plantilla almacena sumas parciales sucesivas en el intervalo de destino, donde el elemento *i*-ésimo viene dado por (((*a*1 + *a*2) + *a*3) *a* i).
 
-Para una secuencia de valores *un*1, *un*2, *un*3, en un intervalo de entrada, la segunda función de plantilla almacena sumas parciales sucesivas en el intervalo de destino, donde el elemento i-ésimo es determinado por (((*un*1 `binary_op` *un* (2)`binary_op` *un* (3)*un*).
+Para una secuencia de valores *a*1, *a*2, *a*3, en un intervalo de entrada, la segunda función de plantilla almacena sumas parciales sucesivas en el intervalo de destino, donde el elemento i viene dado por (((*a*1 `binary_op` *a*2 *) `binary_op`* 3) *a*i).
 
-La operación binaria *binary_op* , no es necesario ser asociativa o conmutativa, ya que se aplica el orden de las operaciones se especifica.
+No es necesario que la operación binaria *binary_op* sea asociativa o conmutativa, ya que se ha especificado el orden de las operaciones.
 
 ### <a name="example"></a>Ejemplo
 
@@ -681,7 +681,7 @@ int main( )
 }
 ```
 
-## <a name="reduce"></a> reducir
+## <a name="reduce"></a>reducen
 
 ```cpp
 template<class InputIterator>
@@ -705,7 +705,7 @@ ForwardIterator first, ForwardIterator last, T init,
 BinaryOperation binary_op);
 ```
 
-## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T,
@@ -726,7 +726,7 @@ BinaryOperation binary_op,
 UnaryOperation unary_op);
 ```
 
-## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator,
@@ -761,7 +761,7 @@ UnaryOperation unary_op,
 T init);
 ```
 
-## <a name="transform_reduce"></a> transform_reduce
+## <a name="transform_reduce"></a>transform_reduce
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class T>

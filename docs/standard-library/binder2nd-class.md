@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689937"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890095"
 ---
 # <a name="binder2nd-class"></a>binder2nd (Clase)
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,7 +38,7 @@ class binder2nd
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *FUNC*
+\ *FUNC*
 El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
 \ *derecha*
@@ -53,9 +53,9 @@ El objeto de función unaria resultante de enlazar el segundo argumento del obje
 
 ## <a name="remarks"></a>Comentarios
 
-La plantilla de clase almacena una copia de un objeto de función binaria _ *FUNC* en `op` y una copia de *right* en `value`. Define su función miembro `operator()` como devolver **OP**(`left`, **valor**).
+La plantilla de clase almacena una copia de un objeto de función binario *FUNC* en `op`y una copia de *derecha* en `value`. Define su función miembro `operator()` como si devolviera `op(left, value)`.
 
-Si `Func` es un objeto de tipo `Operation` y c es una constante, [bind2nd (](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) es equivalente al constructor de clase `binder2nd` `binder2nd` \< **operación**> (`Func`, 0) y más conveniente.
+Si *FUNC* es un objeto de tipo `Operation` y c es una constante, [bind2nd (](../standard-library/functional-functions.md#bind2nd)`(func, c)` es equivalente al constructor de clase `binder2nd` `binder2nd<Operation>(func, c)`y más conveniente.
 
 ## <a name="example"></a>Ejemplo
 
