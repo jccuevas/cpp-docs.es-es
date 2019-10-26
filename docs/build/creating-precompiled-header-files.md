@@ -1,22 +1,22 @@
 ---
 title: Archivos de encabezado precompilados
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630495"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920108"
 ---
 # <a name="precompiled-header-files"></a>Archivos de encabezado precompilados
 
-Al crear un nuevo proyecto en Visual Studio, se agrega al proyecto un *archivo de encabezado precompilado* denominado *PCH. h* . (En Visual Studio 2017 y versiones anteriores, el archivo se llamaba *stdafx. h*). El propósito del archivo es acelerar el proceso de compilación. Los archivos de encabezado estables, por ejemplo, los encabezados de `<vector>`la biblioteca estándar como, deben incluirse aquí. El encabezado precompilado solo se compila cuando se modifica el archivo o los archivos que incluye. Si solo realiza cambios en el código fuente del proyecto, la compilación omitirá la compilación del encabezado precompilado. 
+Al crear un nuevo proyecto en Visual Studio, se agrega al proyecto un *archivo de encabezado precompilado* denominado *PCH. h* . (En Visual Studio 2017 y versiones anteriores, el archivo se llamaba *stdafx. h*). El propósito del archivo es acelerar el proceso de compilación. Aquí se deben incluir los archivos de encabezado estables, por ejemplo, los encabezados de la biblioteca estándar, como `<vector>`. El encabezado precompilado solo se compila cuando se modifica el archivo o los archivos que incluye. Si solo realiza cambios en el código fuente del proyecto, la compilación omitirá la compilación del encabezado precompilado. 
 
 Las opciones del compilador para los encabezados precompilados son [/y](reference/y-precompiled-headers.md). En las páginas de propiedades del proyecto, las opciones se encuentran en **propiedades de configuraciónC++ > encabezados precompilados de C/>** . Puede optar por no utilizar encabezados precompilados, y puede especificar el nombre del archivo de encabezado y el nombre y la ruta de acceso del archivo de salida. 
 
@@ -87,7 +87,7 @@ Cuando se especifica la opción usar archivo de encabezado precompilado (/Yu), e
 
 ### <a name="pragma-consistency"></a>Coherencia de pragma
 
-Las pragmas procesadas durante la creación de un archivo PCH normalmente afectan al archivo con el que se usa posteriormente el archivo PCH. Las `comment` pragmas `message` y no afectan al resto de la compilación.
+Las pragmas procesadas durante la creación de un archivo PCH normalmente afectan al archivo con el que se usa posteriormente el archivo PCH. Las pragmas `comment` y `message` no afectan al resto de la compilación.
 
 Estas pragmas solo afectan al código dentro del archivo PCH; no afectan al código que posteriormente usa el archivo PCH:
 
@@ -122,7 +122,7 @@ En esta tabla se enumeran las opciones del compilador que pueden desencadenar un
 |/E o/EP|Copiar la salida del preprocesador a la salida estándar|Los encabezados precompilados no funcionan con la opción/E o/EP.|
 |/Fr o/FR|Generar información del explorador de Microsoft Source|Para que las opciones/fr y/FR sean válidas con la opción/Yu, deben estar también en vigor cuando se creó el encabezado precompilado. Las compilaciones posteriores que usan el encabezado precompilado también generan información del explorador de código fuente. La información del explorador se coloca en un único archivo. SBR y otros archivos hacen referencia a ella de la misma manera que la información de CodeView. No se puede invalidar la ubicación de la información del explorador de código fuente.|
 |/GA,/GD,/GE,/GW o/GW|Opciones del Protocolo de Windows|Debe ser el mismo entre la compilación que creó el encabezado precompilado y la compilación actual. Si estas opciones difieren, se genera un mensaje de advertencia.|
-|/ZI|Generar información de depuración completa|Si esta opción está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación pueden usar esa información de depuración. Si/Zi no está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación y la opción/Zi desencadenan una advertencia. La información de depuración se coloca en el archivo objeto actual y los símbolos locales definidos en el encabezado precompilado no están disponibles para el depurador.|
+|/Zi|Generar información de depuración completa|Si esta opción está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación pueden usar esa información de depuración. Si/Zi no está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación y la opción/Zi desencadenan una advertencia. La información de depuración se coloca en el archivo objeto actual y los símbolos locales definidos en el encabezado precompilado no están disponibles para el depurador.|
 
 > [!NOTE]
 >  La instalación del encabezado precompilado está pensada para usarse C++ solo en archivos de código fuente de C.
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
