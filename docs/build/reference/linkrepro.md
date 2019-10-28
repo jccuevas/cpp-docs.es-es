@@ -53,6 +53,6 @@ Una vez que haya generado la reproducción de vínculos, vuelva a abrir esta pá
 
 ## <a name="see-also"></a>Vea también
 
-@No__t de [Referencia del enlazador de MSVC](linking.md)-1
+[Referencia del enlazador de MSVC](linking.md)\
 [MSVC opciones del vinculador](linker-options.md)\
 [/LINKREPROTARGET](linkreprotarget.md)
