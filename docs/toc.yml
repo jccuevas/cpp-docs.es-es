@@ -1157,34 +1157,7 @@
                     - name: Ejemplo de archivo MAKE
                       href: build/reference/sample-makefile.md
                 - name: Bloques de descripción
-                  expanded: false
-                  items:
-                    - name: Bloques de descripción
-                      href: build/reference/description-blocks.md
-                    - name: Destinos
-                      expanded: false
-                      items:
-                        - name: Destinos
-                          href: build/reference/targets.md
-                        - name: Pseudodestinos
-                          href: build/reference/pseudotargets.md
-                        - name: Destinos múltiples
-                          href: build/reference/multiple-targets.md
-                        - name: Dependencias acumuladas
-                          href: build/reference/cumulative-dependencies.md
-                        - name: Destinos de bloques de descripción múltiples
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: Efectos secundarios de las relaciones de dependencia
-                          href: build/reference/dependency-side-effects.md
-                    - name: Dependientes
-                      expanded: false
-                      items:
-                        - name: Dependientes
-                          href: build/reference/dependents.md
-                        - name: Dependientes inferidos
-                          href: build/reference/inferred-dependents.md
-                        - name: Rutas de búsqueda para dependientes
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Comandos en un archivo MAKE
                   expanded: false
                   items:
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
@@ -10425,7 +10400,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: SchedulerPolicy (Clase)
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: simple_partitioner (clase)
+                        - name: simple_partitioner (Clase)
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: single_assignment (Clase)
                           href: parallel/concrt/reference/single-assignment-class.md
@@ -10447,7 +10422,7 @@
                           href: parallel/concrt/reference/task-canceled-class.md
                         - name: task_completion_event (Clase)
                           href: parallel/concrt/reference/task-completion-event-class.md
-                        - name: task_continuation_context (Clase)
+                        - name: task_continuation_context (clase)
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: task_group (Clase)
                           href: parallel/concrt/reference/task-group-class.md
