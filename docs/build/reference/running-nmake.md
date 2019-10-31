@@ -1,6 +1,6 @@
 ---
 title: Ejecutar NMAKE
-ms.date: 08/11/2019
+ms.date: 10/29/2019
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: bc274190b64d5340aaac5de594931d4a5333a8c0
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
+ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144540"
 ---
 # <a name="running-nmake"></a>Ejecutar NMAKE
 
@@ -25,41 +25,41 @@ ms.locfileid: "68980507"
 
 ## <a name="remarks"></a>Comentarios
 
-NMAKE solo compila los *destinos* especificados o, cuando no se especifica ninguno, el primer destino del archivo make. El primer destino del archivo make puede ser un [pseudodestino](pseudotargets.md) que compila otros destinos. NMAKE usa archivos make especificados con **/f**o si no se especifica **/f** , el archivo make en el directorio actual. Si no se especifica ningún archivo make, usa reglas de inferencia para compilar los *destinos*de la línea de comandos.
+NMAKE solo compila los *destinos* especificados o, cuando no se especifica ninguno, el primer destino del archivo make. El primer destino del archivo make puede ser un [pseudodestino](description-blocks.md#pseudotargets) que compila otros destinos. NMAKE usa archivos make especificados con **/f**o si no se especifica **/f** , el archivo make en el directorio actual. Si no se especifica ningún archivo make, usa reglas de inferencia para compilar los *destinos*de la línea de comandos.
 
-El archivo de texto del *archivo de comandos* (o el archivo de respuesta) contiene la entrada de la línea de comandos. Otras entradas pueden preceder o \@seguir *el archivo de comandos*. Se permite una ruta de acceso. En *el archivo de comandos*, los saltos de línea se tratan como espacios. Incluya las definiciones de macro entre comillas si contienen espacios.
+El archivo de texto del *archivo de comandos* (o el archivo de respuesta) contiene la entrada de la línea de comandos. Otras entradas pueden preceder o seguir \@*archivo de comandos*. Se permite una ruta de acceso. En *el archivo de comandos*, los saltos de línea se tratan como espacios. Incluya las definiciones de macro entre comillas si contienen espacios.
 
 ## <a name="nmake-options"></a>Opciones de NMAKE
 
-En la tabla siguiente se describen las opciones de NMAKE. Las opciones van precedidas de una barra`/`diagonal () o un`-`guión () y no distinguen mayúsculas de minúsculas. Utilice [`!CMDSWITCHES`](makefile-preprocessing-directives.md) para cambiar la configuración de las opciones en un archivo make o en Tools. ini.
+En la tabla siguiente se describen las opciones de NMAKE. Las opciones van precedidas de una barra diagonal (`/`) o un guión (`-`) y no distinguen mayúsculas de minúsculas. Utilice [`!CMDSWITCHES`](makefile-preprocessing-directives.md) para cambiar la configuración de las opciones en un archivo make o en Tools. ini.
 
-| Opción | Propósito |
+| Opción | Finalidad |
 | ------------ | ------------- |
 | **/A** | Fuerza la compilación de todos los destinos evaluados, incluso si no están actualizados en comparación con los dependientes. No fuerza la compilación de destinos no relacionados. |
-| **B** | Fuerza la compilación incluso si las marcas de tiempo son iguales. Recomendado solo para sistemas muy rápidos (resolución de dos segundos o menos). |
+| **B** | Fuerza la compilación incluso si las marcas de tiempo son iguales. Solo se recomienda para los sistemas rápidos (resolución de dos segundos o menos). |
 | **/C** | Suprime la salida predeterminada, incluidos errores o advertencias NMAKE no graves, marcas de tiempo y un mensaje de copyright de NMAKE. Suprime las advertencias emitidas por **/k**. |
 | **/D** | Muestra las marcas de tiempo de cada destino evaluado y dependiente, y un mensaje cuando no existe un destino. Útil con **/p** para depurar un archivo make. Use `!CMDSWITCHES` para establecer o borrar **/d** para parte de un archivo make. |
 | **/E** | Hace que las variables de entorno invaliden las definiciones de macro de archivos make. |
-| **/ERRORREPORT** [ **NINGUNA** &#124; **SOLICITUD** &#124; DE **ENVÍO** DE **COLA** &#124; ] | Si NMAKE. exe produce un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft acerca de estos errores internos.<br /><br /> Para obtener más información, consulte [/errorReport (Informar de errores de compilador interno)](errorreport-report-internal-compiler-errors.md). |
-| **/F** *nombre de archivo* | Especifica el *nombre de archivo* como un archivo make. Los espacios o las pestañas pueden preceder al *nombre de archivo*. Especifique **/f** una vez para cada archivo make. Para proporcionar un archivo make a partir de la entrada estándar,`-`especifique un guión () para el *nombre de archivo*y finalice la entrada del teclado con **F6** o **Ctrl + Z**. |
-| **/G** | Muestra los archivos make incluidos en la `!INCLUDE` Directiva. Para obtener más información, vea directivas de preprocesamiento de [archivos make](makefile-preprocessing-directives.md). |
-| **/HELP**, **/?** | Muestra un breve resumen de la sintaxis de línea de comandos de NMAKE. |
-| **/I** | Omite los códigos de salida de todos los comandos. Para establecer o borrar **/i** para parte de un archivo make, `!CMDSWITCHES`use. Para omitir los códigos de salida de una parte de un archivo make`-`, use un modificador [`.IGNORE`](dot-directives.md)de comando Dash () o. Invalida **/k** si se especifican ambos. |
+| **/errorreport** [ **ninguno** &#124; **-solicitar** &#124; **envío** de **cola** &#124; ] | Si NMAKE. exe produce un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft acerca de estos errores internos.<br /><br /> Para obtener más información, consulte [/errorReport (Informar de errores de compilador interno)](errorreport-report-internal-compiler-errors.md). |
+| **/F** *nombre de archivo* | Especifica el *nombre de archivo* como un archivo make. Los espacios o las pestañas pueden preceder al *nombre de archivo*. Especifique **/f** una vez para cada archivo make. Para proporcionar un archivo make a partir de la entrada estándar, especifique un guión (`-`) para el *nombre de archivo*y finalice la entrada del teclado con **F6** o **Ctrl + Z**. |
+| **/G** | Muestra los archivos make incluidos con la Directiva de `!INCLUDE`. Para obtener más información, vea [directivas de preprocesamiento de archivos make](makefile-preprocessing-directives.md). |
+| **/Help**, **/?** | Muestra un breve resumen de la sintaxis de línea de comandos de NMAKE. |
+| **/I** | Omite los códigos de salida de todos los comandos. Para establecer o borrar **/i** para parte de un archivo make, use `!CMDSWITCHES`. Para omitir los códigos de salida de una parte de un archivo make, use un modificador de comando Dash (`-`) o [`.IGNORE`](dot-directives.md). Invalida **/k** si se especifican ambos. |
 | **/K** | Continúa compilando dependencias no relacionadas, si un comando devuelve un error. También emite una advertencia y devuelve un código de salida de 1. De forma predeterminada, NMAKE se detiene si algún comando devuelve un código de salida distinto de cero. Las advertencias de **/k** se suprimen en **/c**; **/I** invalida **/k** si se especifican ambos. |
-| **/N** | Muestra pero no ejecuta comandos; los comandos de preprocesamiento se ejecutan. No muestra comandos en llamadas NMAKE recursivas. Resulta útil para depurar archivos make y comprobar las marcas de tiempo. Para establecer o borrar **/n** para parte de un archivo make, `!CMDSWITCHES`use. |
+| **/N** | Muestra pero no ejecuta comandos; los comandos de preprocesamiento se ejecutan. No muestra comandos en llamadas NMAKE recursivas. Resulta útil para depurar archivos make y comprobar las marcas de tiempo. Para establecer o borrar **/n** para parte de un archivo make, use `!CMDSWITCHES`. |
 | **/NOLOGO** | Suprime el mensaje de copyright de NMAKE. |
-| **/P** | Muestra información (definiciones de macro, reglas de inferencia, [`.SUFFIXES`](dot-directives.md) destinos, lista) a la salida estándar y, a continuación, ejecuta la compilación. Si no existe ningún archivo make o destino de línea de comandos, solo muestra información. Use with **/d** para depurar un archivo make. |
+| **/P** | Muestra información (definiciones de macro, reglas de inferencia, destinos, lista de [`.SUFFIXES`](dot-directives.md) ) a la salida estándar y, a continuación, ejecuta la compilación. Si no existe ningún archivo make o destino de línea de comandos, solo muestra información. Use with **/d** para depurar un archivo make. |
 | **/Q** | Comprueba las marcas de tiempo de los destinos; no ejecuta la compilación. Devuelve un código de salida cero si todos los destinos están actualizados y un código de salida distinto de cero si algún destino no está actualizado. Los comandos de preprocesamiento se ejecutan. Resulta útil cuando se ejecuta NMAKE desde un archivo por lotes. |
-| **/R** | Borra la `.SUFFIXES` lista y omite las reglas de inferencia y las macros que se definen en el archivo Tools. ini o que están predefinidas. |
-| **/S** | Suprime la presentación de comandos ejecutados. Para suprimir la presentación en parte de un archivo make **\@** , use el modificador de comando o. [`.SILENT`](dot-directives.md) Para establecer o borrar **/s** para parte de un archivo make, `!CMDSWITCHES`use. |
+| **/R** | Borra la lista de `.SUFFIXES` y omite las reglas de inferencia y las macros que se definen en el archivo Tools. ini o que están predefinidas. |
+| **Modificado** | Suprime la presentación de comandos ejecutados. Para suprimir la presentación en parte de un archivo make, use el modificador de comando **\@** o [`.SILENT`](dot-directives.md). Para establecer o borrar **/s** para parte de un archivo make, use `!CMDSWITCHES`. |
 | **/T** | Actualiza las marcas de tiempo de los destinos de la línea de comandos (o el primer destino del archivo make) y ejecuta los comandos de preprocesamiento, pero no ejecuta la compilación. |
 | **/U** | Debe usarse junto con **/n**. Vuelca archivos NMAKE en línea para que se pueda usar la salida **/n** como un archivo por lotes. |
-| **/X** *nombre de archivo* | Envía la salida de error de NMAKE al *nombre de archivo* en lugar de a un error estándar. Los espacios o las pestañas pueden preceder al *nombre de archivo*. Para enviar la salida de errores a la salida estándar, especifique`-`un guión () para el *nombre de archivo*. No afecta a la salida de los comandos al error estándar. |
+| **/X** *nombreDeArchivo* | Envía la salida de error de NMAKE al *nombre de archivo* en lugar de a un error estándar. Los espacios o las pestañas pueden preceder al *nombre de archivo*. Para enviar la salida de errores a la salida estándar, especifique un guión (`-`) para el *nombre de archivo*. No afecta a la salida de los comandos al error estándar. |
 | **/Y** | Deshabilita las reglas de inferencia del modo por lotes. Cuando se selecciona esta opción, todas las reglas de inferencia en modo por lotes se tratan como reglas de inferencia normales. |
 
 ## <a name="toolsini-and-nmake"></a>Tools.ini y NMAKE
 
-NMAKE Lee Tools. ini antes de leer los archivos make, a menos que se utilice **/r** . Busca Tools. ini en primer lugar en el directorio actual y, después, en el directorio especificado por la variable de entorno INIT. La sección para la configuración de NMAKE en el archivo de `[NMAKE]` inicialización comienza con y puede contener cualquier información de archivos make. Especifique un Comentario en una línea independiente empezando por un signo de número`#`().
+NMAKE Lee Tools. ini antes de leer los archivos make, a menos que se utilice **/r** . Busca Tools. ini en primer lugar en el directorio actual y, después, en el directorio especificado por la variable de entorno INIT. La sección para la configuración de NMAKE en el archivo de inicialización comienza con `[NMAKE]` y puede contener cualquier información de archivos make. Especifique un Comentario en una línea independiente empezando por un signo de número (`#`).
 
 ## <a name="exit-codes-from-nmake"></a>Códigos de salida de NMAKE
 
