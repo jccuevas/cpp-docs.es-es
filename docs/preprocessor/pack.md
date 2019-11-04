@@ -21,20 +21,20 @@ Especifica la alineación de empaquetado para los miembros de estructura, Unión
 
 ## <a name="syntax"></a>Sintaxis
 
-> **paquete de #pragma (Mostrar)** \
-> **#pragma Pack (Inserte** [ **,** *identificador* ] [ **,** *n* ] **)** \
-> **paquete de #pragma (pop** [ **,**  | { *identificador* *n* }] **)** \
-> **#pragma Pack (** [ *n* ] **)**
+> **#pragma pack( show )** \
+> **#pragma pack( push** [ **,** *identificador* ] [ **,** *n* ] **)** \
+> **#pragma pack( pop** [ **,**  | { *identificador* *n* }] **)** \
+> **#pragma pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Parámetros
 
-**Feria**\
+**show**\
 Opta Muestra el valor actual de bytes para la alineación de empaquetado. El valor se muestra mediante un mensaje de advertencia.
 
-**enviar**\
+**push**\
 Opta Envía el valor actual de la alineación de empaquetado en la pila interna del compilador y establece el valor actual de la alineación de empaquetado en *n*. Si no se especifica *n* , se inserta el valor actual de la alineación de empaquetado.
 
-**emergente**\
+**pop**\
 Opta Quita el registro de la parte superior de la pila interna del compilador. Si no se especifica *n* con **pop**, el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si se especifica *n* , por ejemplo, `#pragma pack(pop, 16)` *n* se convierte en el nuevo valor de alineación de empaquetado. Si se usa un *identificador*, por ejemplo `#pragma pack(pop, r1)`,, todos los registros de la pila se extraen hasta que se encuentra el registro que tiene el *identificador* . Ese registro se extrae y el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si se usa un *identificador* que no se encuentra en ningún registro de la pila, se omite el **pop** .
 
 *identificador*\
