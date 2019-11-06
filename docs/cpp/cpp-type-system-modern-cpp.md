@@ -66,11 +66,11 @@ En la tabla siguiente se muestran los tipos fundamentales que se usan con más f
 |Type|Tamaño|Comentario|
 |----------|----------|-------------|
 |int|4 bytes|Opción predeterminada para los valores enteros.|
-|doble|8 bytes|Opción predeterminada para los valores de punto flotante.|
+|double|8 bytes|Opción predeterminada para los valores de punto flotante.|
 |bool|1 byte|Representa valores que pueden ser true o false.|
 |char|1 byte|Se utiliza en los caracteres ASCII de cadenas de estilo C antiguas u objetos std::string que nunca tendrán que convertirse a UNICODE.|
 |wchar_t|2 bytes|Representa valores de caracteres “anchos” que se pueden codificar en formato UNICODE (UTF-16 en Windows; puede diferir en otros sistemas operativos). Es el tipo de carácter que se utiliza en las cadenas de tipo `std::wstring`.|
-|&nbsp;char sin signo|1 byte|C++ no tiene un tipo `byte` integrado.  Utilice un carácter sin signo para representar un valor byte.|
+|unsigned&nbsp;char|1 byte|C++ no tiene un tipo `byte` integrado.  Utilice un carácter sin signo para representar un valor byte.|
 |unsigned int|4 bytes|Opción predeterminada para los marcadores de bits.|
 |long long|8 bytes|Representa valores enteros muy grandes.|
 
