@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958160"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625806"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -120,12 +120,12 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |*buffer*|*numberOfElements*|*strErrMsg*|Contenido del *búfer*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|any|any|N/D|
+|**NULL**|any|any|no disponible|
 |any|0|any|no modificado|
 
 ## <a name="remarks"></a>Comentarios
 
-La función **strerror_s** asigna *elementos errnum* a una cadena de mensaje de error y devuelve la cadena en el *búfer*. **_strerror_s** no toma el número de error. utiliza el valor actual de **errno** para determinar el mensaje adecuado. Ni **strerror_s** ni **_strerror_s** imprimen realmente el mensaje: Para ello, debe llamar a una función de salida como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+La función **strerror_s** asigna *elementos errnum* a una cadena de mensaje de error y devuelve la cadena en el *búfer*. **_strerror_s** no toma el número de error. utiliza el valor actual de **errno** para determinar el mensaje adecuado. Ni **strerror_s** ni **_strerror_s** imprimen realmente el mensaje: para ello, debe llamar a una función de salida como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -147,9 +147,9 @@ Estas funciones validan sus parámetros. Si buffer es **null** o el parámetro s
 
 **_strerror_s**, **_wcserror_s**y **__wcserror_s** no forman parte de la definición de ANSI, sino que son extensiones de Microsoft para ella. No las use si desea portabilidad; para la compatibilidad con ANSI, use **strerror_s** en su lugar.
 
-En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -164,7 +164,7 @@ Las versiones de depuración de estas funciones rellenan primero el búfer con 0
 |**strerror_s**, **_strerror_s**|\<string.h>|
 |**_wcserror_s**, **__wcserror_s**|\<string.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

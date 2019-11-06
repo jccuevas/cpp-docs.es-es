@@ -2,12 +2,12 @@
 title: Información general sobre posibles problemas de actualización (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511545"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627239"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Información general sobre posibles problemas de actualización (Visual C++)
 
@@ -33,7 +33,7 @@ C++ no tiene una interfaz binaria de aplicaciones (ABI) estable, pero Visual Stu
 
 Si dispone de un archivo objeto con símbolos externos y vinculación de C++, dicho archivo objeto podría no estar vinculado correctamente a los archivos objeto generados mediante otra versión principal del conjunto de herramientas. Existen muchos resultados posibles: el vínculo puede no funcionar en absoluto (por ejemplo, si se cambia la decoración de nombre); el vínculo puede ser correcto, pero las cosas podrían no funcionar en tiempo de ejecución (por ejemplo, si ha cambiado el diseño de tipo), o, en muchos casos, las cosas funcionan y nada sale mal. Además, tenga en cuenta que, aunque la ABI de C++ no es estable, la ABI de C y el subconjunto de la ABI de C++ requeridos para COM son estables.
 
-Si establece un vínculo con una biblioteca de importación, las versiones posteriores de las bibliotecas redistribuibles de Visual Studio que conserven la compatibilidad con ABI se podrán usar en el entorno de ejecución. Por ejemplo, si la aplicación se compila y vincula con el conjunto de herramientas de Visual Studio 2015 Update 3, podrá utilizar cualquier biblioteca redistribuible de Visual Studio 2017 o Visual Studio 2019, puesto que las bibliotecas de las versiones 2015, 2017 y 2019 conservan la compatibilidad binaria con versiones anteriores. El caso contrario no es aplicable, ya que no puede usar una biblioteca redistribuible para una versión anterior del conjunto de herramientas a la que haya utilizado para compilar el código, incluso en el caso de que ABI sea compatible.
+Si establece un vínculo con una biblioteca de importación, las versiones posteriores de las bibliotecas redistribuibles de Visual Studio que conserven la compatibilidad con ABI se podrán usar en el entorno de ejecución. Por ejemplo, si la aplicación se compila y vincula con el conjunto de herramientas de Visual Studio 2015 Update 3, podrá utilizar cualquier biblioteca redistribuible de Visual Studio 2017 o Visual Studio 2019, puesto que las bibliotecas de las versiones 2015, 2017 y 2019 conservan la compatibilidad binaria con versiones anteriores. Lo contrario no es cierto: no puede usar un redistribuible para una versión anterior del conjunto de herramientas que usó para compilar el código, aunque tenga una ABI compatible.
 
 ### <a name="libraries"></a>Bibliotecas
 
@@ -68,7 +68,7 @@ En general, ahora es un buen momento para organizar correctamente el código del
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
 ```
 
-### <a name="lnk2019-unresolved-external"></a>LNK2019: Externos sin resolver
+### <a name="lnk2019-unresolved-external"></a>LNK2019: externo sin resolver
 
 En el caso de los símbolos sin resolver, es posible que tenga que corregir la configuración del proyecto.
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t es un tipo nativo)
 
-(En Microsoft Visual C++ 6.0 y versiones anteriores, **wchar_t** no se implementaba como tipo integrado, sino que se declaraba en wchar.h como definición de tipo para un entero corto sin signo). El estándar de C++ requiere que **wchar_t** sea un tipo integrado. Si usa la versión de definición de tipo, pueden producirse problemas de portabilidad. Si actualiza desde versiones anteriores de Visual Studio y encuentra un error del compilador C2664 porque el código intenta convertir implícitamente **wchar_t** en un **entero corto sin signo**, es recomendable cambiar el código para corregir el error, en lugar de establecer `/Zc:wchar_t-`. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(En Microsoft Visual C++ 6,0 y versiones anteriores, **wchar_t** no se implementó como un tipo integrado, pero se declaró en WCHAR. h como TypeDef para unsigned short). El C++ estándar requiere que **wchar_t** sea un tipo integrado. Si usa la versión de definición de tipo, pueden producirse problemas de portabilidad. Si actualiza desde versiones anteriores de Visual Studio y encuentra un error del compilador C2664 porque el código intenta convertir implícitamente **wchar_t** en un **entero corto sin signo**, es recomendable cambiar el código para corregir el error, en lugar de establecer `/Zc:wchar_t-`. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Actualizar con las opciones del enlazador /NODEFAULTLIB, /ENTRY y /NOENTRY
 
@@ -150,7 +150,7 @@ El estándar de C++ ahora especifica que las conversiones de valores enteros sin
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>Advertencias para usar funciones de CRT seguras
 
-A lo largo de los años, se han introducido versiones seguras de funciones de tiempo de ejecución de C. Aunque las versiones no seguras antiguas siguen estando disponibles, se recomienda que cambie el código para usar las versiones seguras. El compilador emitirá una advertencia del uso de versiones no seguras. Puede decidir deshabilitar u omitir estas advertencias. Para deshabilitar la advertencia en todos los proyectos de la solución, abra **Ver** > **Administrador de propiedades**, seleccione los proyectos, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, en **Propiedades de configuración** > **C/C++**  > **Avanzadas**, seleccione **Deshabilitar advertencias específicas**. Haga clic en la flecha desplegable y, después, en **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo "C"). Para obtener más información, vea [Migrar para usar las funciones seguras de CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
+A lo largo de los años, se han introducido versiones seguras de funciones de tiempo de ejecución de C. Aunque las versiones no seguras antiguas siguen estando disponibles, se recomienda que cambie el código para usar las versiones seguras. El compilador emitirá una advertencia del uso de versiones no seguras. Puede decidir deshabilitar u omitir estas advertencias. Para deshabilitar la advertencia en todos los proyectos de la solución, abra **Ver** > **Administrador de propiedades**, seleccione los proyectos, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, en **Propiedades de configuración** > **C/C++**  > **Avanzadas**, seleccione **Deshabilitar advertencias específicas**. Haga clic en la flecha desplegable y, después, en **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo "C"). Para obtener más información, vea [migrar para usar la seguridad de CRT](porting-guide-spy-increment.md#porting_to_secure_crt).
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>Errores debidos a cambios en las API de Windows o SDK obsoletos
 
@@ -180,11 +180,11 @@ Además, debe ser consciente de los posibles problemas en tiempo de compilación
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode frente a MBCS/ASCII
 
-Antes de que se estandarizase Unicode, muchos programas usaban el juego de caracteres multibyte (MBCS) para representar los caracteres que no estaban incluidos en el juego de caracteres ASCII. En proyectos de MFC antiguos, MBCS era la configuración predeterminada y, al actualizar el programa, verá advertencias que aconsejan que use Unicode en su lugar. Puede deshabilitar o ignorar la advertencia si decide que la conversión a Unicode es un coste de desarrollo que no merece la pena. Para deshabilitarla en todos los proyectos de la solución, abra **Ver** > **Administrador de propiedades**, seleccione todos los proyectos, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, seleccione **Propiedades de configuración** > **C/C++**  > **Avanzadas**. En la propiedad **Deshabilitar advertencias específicas**, abra la flecha desplegable y elija **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo "C"). Elija **Aceptar** para guardar la propiedad y de nuevo **Aceptar** para guardar los cambios.
+Antes de que se estandarizase Unicode, muchos programas usaban el juego de caracteres multibyte (MBCS) para representar los caracteres que no estaban incluidos en el juego de caracteres ASCII. En proyectos de MFC antiguos, MBCS era la configuración predeterminada y, al actualizar el programa, verá advertencias que aconsejan que use Unicode en su lugar. Puede deshabilitar o ignorar la advertencia si decide que la conversión a Unicode es un coste de desarrollo que no merece la pena. Para deshabilitarla en todos los proyectos de la solución, abra **Ver** > **Administrador de propiedades**, seleccione todos los proyectos, haga clic con el botón derecho en los elementos seleccionados y elija **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, seleccione **Propiedades de configuración** > **C/C++**  > **Avanzadas**. En la propiedad **Deshabilitar advertencias específicas**, abra la flecha desplegable y elija **Editar**. Escriba 4996 en el cuadro de texto. (No incluya el prefijo "C"). Elija **Aceptar** para guardar la propiedad y, después, haga clic en **Aceptar** para guardar los cambios.
 
-Para obtener más información, vea [Migrar de MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Para obtener información general sobre MBCS frente a Unicode, vea [Texto y cadenas en Visual C++](../text/text-and-strings-in-visual-cpp.md) e [Internacionalización](../c-runtime-library/internationalization.md).
+Para obtener más información, vea [Migrar de MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Para obtener información general sobre MBCS frente a Unicode, vea [texto y cadenas en C++ visual](../text/text-and-strings-in-visual-cpp.md) y [internacionalización](../c-runtime-library/internationalization.md) .
 
 ## <a name="see-also"></a>Vea también
 
-[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Mejoras de conformidad de C++ en Visual Studio](../overview/cpp-conformance-improvements.md)

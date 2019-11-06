@@ -1,27 +1,27 @@
 ---
-title: Compilador advertencia (nivel 1) C4183
+title: ADVERTENCIA del compilador (nivel 1) C4183
 ms.date: 11/04/2016
 f1_keywords:
 - C4183
 helpviewer_keywords:
 - C4183
 ms.assetid: dc48312c-4b34-44dd-80ff-eb5f11d5ca47
-ms.openlocfilehash: 0d947a0f6d777a5ed3191d6d232a604028be2003
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be79c664f09f80d8f0c8779babf236dccac90ea8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391626"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626226"
 ---
-# <a name="compiler-warning-level-1-c4183"></a>Compilador advertencia (nivel 1) C4183
+# <a name="compiler-warning-level-1-c4183"></a>ADVERTENCIA del compilador (nivel 1) C4183
 
-'identifier': falta el tipo de valor devuelto; supone que una función miembro devuelve 'int'
+' Identifier ': falta el tipo de valor devuelto; se supone que es una función miembro que devuelve ' int '
 
-La definición en línea de una función miembro en una clase o una estructura no tiene un tipo de valor devuelto. Esta función miembro se supone que tiene un valor predeterminado a tipo de valor devuelto `int`.
+La definición en línea de una función miembro de una clase o una estructura no tiene un tipo de valor devuelto. Se supone que esta función miembro tiene un tipo de valor devuelto predeterminado de `int`.
 
-El ejemplo siguiente genera C4183:
+En el ejemplo siguiente se genera C4183:
 
-```
+```cpp
 // C4183.cpp
 // compile with: /W1 /c
 #pragma warning(disable : 4430)

@@ -1,19 +1,19 @@
 ---
 title: Migrar a la Plataforma universal de Windows (C++)
-ms.date: 11/04/2016
+ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
-ms.translationtype: HT
+ms.openlocfilehash: 9314cb564e792a7d4949d422a3942e9d46a23cb2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278468"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627202"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Migrar a la Plataforma universal de Windows (C++)
 
-En este tema encontrará información sobre cómo migrar código de C++ existente a la plataforma de aplicación de Windows 10, la Plataforma universal de Windows. Por *universal* se entiende que el código puede iniciarse en cualquier dispositivo que ejecute Windows 10, incluidos equipos de escritorio, teléfonos, tabletas y futuros dispositivos que ejecuten Windows 10. Puede crear un solo proyecto y una sola interfaz de usuario basada en XAML que funcione bien en cualquier dispositivo que ejecute Windows 10. Puede usar características de diseño dinámico XAML para que la interfaz de la aplicación se adapte a distintos tamaños de pantalla.
+En este tema encontrará información sobre cómo migrar código de C++ existente a la plataforma de aplicación de Windows 10, la Plataforma universal de Windows. Lo que significa el término *universal* es que el código se puede ejecutar en cualquiera de los dispositivos que ejecutan Windows 10. Puede crear un solo proyecto y una sola interfaz de usuario basada en XAML que funcione bien en cualquier dispositivo que ejecute Windows 10. Puede usar características de diseño dinámico XAML para que la interfaz de la aplicación se adapte a distintos tamaños de pantalla.
 
-La documentación del Centro de desarrollo de Windows contiene una guía para portar aplicaciones de Windows 8.1 a la Plataforma universal de Windows. Consulte [Mover de Windows Runtime 8 a UWP](/windows/uwp/porting/w8x-to-uwp-root). Aunque la guía se centra principalmente en el código de C#, la mayor parte es aplicable a C++. Los procedimientos siguientes contienen información más detallada.
+La documentación del Centro de desarrollo de Windows contiene una guía para portar aplicaciones de Windows 8.1 a la Plataforma universal de Windows. Vea [Portar de Windows Runtime 8 a UWP](/windows/uwp/porting/w8x-to-uwp-root). Aunque la guía se centra principalmente en el código de C#, la mayor parte es aplicable a C++. Los procedimientos siguientes contienen información más detallada. Vea también [pasar de una aplicación de escritorio a UWP](/windows/uwp/porting/desktop-to-uwp-migrate).
 
 Este tema contiene los siguientes procedimientos para portar código a UWP.
 
@@ -21,11 +21,11 @@ Este tema contiene los siguientes procedimientos para portar código a UWP.
 
 - [Portar un componente de Windows 8.1 en tiempo de ejecución a UWP](#BK_81Component)
 
-Si tiene un archivo DLL de Win32 de escritorio clásico, puede llamarlo desde una aplicación UWP si lo desea. Con estos procedimientos puede crear una capa de interfaz de usuario de UWP para una aplicación de C++ de escritorio de Windows clásico o para el código de C++ estándar multiplataforma. Vea [Cómo: Usar código C++ existente en una aplicación para la Plataforma universal de Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Si tiene un archivo DLL de Win32 de escritorio clásico, puede llamarlo desde una aplicación UWP si lo desea. Con estos procedimientos puede crear una capa de interfaz de usuario de UWP para una aplicación de C++ de escritorio de Windows clásico o para el código de C++ estándar multiplataforma. Vea [Cómo: utilizar código C++ existente en una aplicación universal de la plataforma Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md). 
 
 ## <a name="BK_81StoreApp"></a> Portar una aplicación de la Tienda Windows 8.1 a UWP
 
-Si tiene una aplicación de la Tienda Windows 8.1, puede usar este procedimiento para que funcione en UWP y en cualquier dispositivo que ejecute Windows 10.  Es buena idea compilar primero el proyecto con Visual Studio 2017 como un proyecto de Windows 8.1, para eliminar cualquier problema que surja de los cambios en el compilador y las bibliotecas. Una vez hecho esto, hay dos maneras de convertirlo en un proyecto UWP de Windows 10. La manera más fácil (como se explica en el siguiente procedimiento) consiste en crear un proyecto universal de Windows y copiar en él el código existente. Si estaba usando un proyecto universal para Windows 8.1 de escritorio y Windows 8.1 Phone, el proyecto se iniciará con dos diseños diferentes en XAML, pero terminará con un único diseño dinámico ajustado al tamaño de la pantalla.
+Si tiene una aplicación de la Tienda Windows 8.1, puede usar este procedimiento para que funcione en UWP y en cualquier dispositivo que ejecute Windows 10.  Es una buena idea compilar primero el proyecto con Visual Studio 2019 como proyecto Windows 8.1, para eliminar primero los problemas que surjan de los cambios en el compilador y las bibliotecas. Una vez hecho esto, hay dos maneras de convertirlo en un proyecto UWP de Windows 10. La manera más fácil (como se explica en el siguiente procedimiento) consiste en crear un proyecto universal de Windows y copiar en él el código existente. Si estaba usando un proyecto universal para Windows 8.1 de escritorio y Windows 8.1 Phone, el proyecto se iniciará con dos diseños diferentes en XAML, pero terminará con un único diseño dinámico ajustado al tamaño de la pantalla.
 
 ### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>Para portar una aplicación de la Tienda Windows 8.1 a UWP:
 
@@ -33,7 +33,7 @@ Si tiene una aplicación de la Tienda Windows 8.1, puede usar este procedimiento
 
    Debe tener instaladas las **herramientas de Windows 8.1** incluidas en el programa de instalación de Visual Studio. Si no tiene instaladas estas herramientas, inicie el programa de instalación de **Visual Studio** desde la ventana **Programas y características**, elija **Visual Studio 2017** y, en la ventana de configuración, elija **Modificar**. Localice **Herramientas de Windows 8.1**, asegúrese de que la opción está seleccionada y haga clic en **Aceptar**.
 
-1. Abra la ventana **Propiedades del proyecto** y, en **C++** > **General**, establezca el **Conjunto de herramientas de la plataforma** en **v141**, que es para Visual Studio 2017.
+1. Abra la ventana **Propiedades del proyecto** y, en **C++**  > **General**, establezca el **Conjunto de herramientas de la plataforma** en **v141**, que es para Visual Studio 2017.
 
 1. Compile el proyecto como un proyecto de Windows 8.1 y solucione cualquier error de compilación. Los errores en esta fase se deben probablemente a cambios importantes en las herramientas de compilación y las bibliotecas. Vea [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md) para obtener una explicación detallada de los cambios que podrían afectar a su código.
 
@@ -76,7 +76,7 @@ Si tiene un archivo DLL o un componente de tiempo de ejecución de Windows que y
 
 1. En el cuadro de diálogo **Nuevo proyecto** de Visual Studio 2017, busque el nodo **Windows Universal**. Si no ve este nodo, instale primero el [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Elija la plantilla **Windows Runtime Component** , asigne un nombre al componente y elija el botón **Aceptar** . El nombre del componente se usará como nombre del espacio de nombres, por lo que es posible que quiera usar el mismo nombre que el espacio de nombres de sus proyectos antiguos. Para ello, debe crear el proyecto en una carpeta diferente de la antigua. Si elige un nombre distinto, puede actualizar el nombre del espacio de nombres en los archivos de código generado.
 
-1. Cierre el proyectos.
+1. Cierre el proyecto.
 
 1. Copie todos los archivos de código (.cpp, .h, XAML, etc.) del componente de Windows 8.1 en el proyecto recién creado. No copie el archivo Package.appxmanifest.
 

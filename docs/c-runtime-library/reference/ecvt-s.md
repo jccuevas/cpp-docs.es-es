@@ -28,12 +28,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a37508c293ee72934a8580f822878f27031b864b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937726"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624381"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -68,7 +68,7 @@ Relleno con el puntero a la cadena de dígitos, el resultado de la conversión.
 *_SizeInBytes*<br/>
 Tamaño del búfer en bytes.
 
-*_Value*<br/>
+*_ Value*<br/>
 Número que se va a convertir.
 
 *_Count*<br/>
@@ -82,7 +82,7 @@ Signo del número que se convierte.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Cero si es correcta. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener más información, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 En el caso de un parámetro no válido, como se muestra en la siguiente tabla, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EINVAL**.
 
@@ -90,10 +90,10 @@ En el caso de un parámetro no válido, como se muestra en la siguiente tabla, e
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valor devuelto|Valor en *búfer*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULL**|any|any|any|any|any|**EINVAL**|No modificado.|
-|Not **null** (apunta a la memoria válida)|<=0|any|any|any|any|**EINVAL**|No modificado.|
-|any|any|any|any|**NULL**|any|**EINVAL**|No modificado.|
-|any|any|any|any|any|**NULL**|**EINVAL**|No modificado.|
+|**NULL**|any|any|any|any|any|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|<=0|any|any|any|any|**EINVAL**|No se ha modificado.|
+|any|any|any|any|**NULL**|any|**EINVAL**|No se ha modificado.|
+|any|any|any|any|any|**NULL**|**EINVAL**|No se ha modificado.|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
@@ -109,9 +109,9 @@ Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier valor de punt
 
 La diferencia entre **_ecvt_s** y **_fcvt_s** es la interpretación del parámetro *_Count* . **_ecvt_s** interpreta *_Count* como el número total de dígitos en la cadena de salida, mientras que **_fcvt_s** interpreta *_Count* como el número de dígitos después del separador decimal.
 
-En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versión de depuración de esta función rellena primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -119,7 +119,7 @@ La versión de depuración de esta función rellena primero el búfer con 0xFD. 
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

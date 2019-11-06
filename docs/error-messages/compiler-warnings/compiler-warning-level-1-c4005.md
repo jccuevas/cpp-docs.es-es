@@ -1,39 +1,39 @@
 ---
-title: Compilador advertencia (nivel 1) C4005
+title: ADVERTENCIA del compilador (nivel 1) C4005
 ms.date: 11/04/2016
 f1_keywords:
 - C4005
 helpviewer_keywords:
 - C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
-ms.openlocfilehash: 76aab2160bd5f7918771dcf63b7297a869da751e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71b23ec719198d15a99b4fcfd50db8b151e03226
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187344"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627357"
 ---
-# <a name="compiler-warning-level-1-c4005"></a>Compilador advertencia (nivel 1) C4005
+# <a name="compiler-warning-level-1-c4005"></a>ADVERTENCIA del compilador (nivel 1) C4005
 
-'identifier': redefinición de macro
+' Identifier ': nueva definición de macro
 
-El identificador de la macro se define dos veces. El compilador usa la segunda definición de macro.
+El identificador de macro se define dos veces. El compilador usa la segunda definición de macro.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. Definir una macro en la línea de comandos y en el código con un `#define` directiva.
+1. Definir una macro en la línea de comandos y en el código con una directiva de `#define`.
 
-1. Macros importadas desde los archivos de inclusión.
+1. Macros importadas de archivos de inclusión.
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo
 
 1. Quite una de las definiciones.
 
-1. Use un [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) la directiva antes de la segunda definición.
+1. Use una directiva de [#undef](../../preprocessor/hash-undef-directive-c-cpp.md) antes de la segunda definición.
 
-El ejemplo siguiente genera C4005:
+En el ejemplo siguiente se genera C4005:
 
-```
+```cpp
 // C4005.cpp
 // compile with: /W1 /EHsc
 #include <iostream>

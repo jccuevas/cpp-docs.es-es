@@ -35,12 +35,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951596"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624211"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -93,6 +93,8 @@ Si se da alguna de las condiciones de error anteriores, se invoca al controlador
 
 La función **_mktemp_s** crea un nombre de archivo único modificando el argumento *nameTemplate* , por lo que después de la llamada, el puntero *nameTemplate* apunta a una cadena que contiene el nuevo nombre de archivo. **_mktemp_s** controla automáticamente los argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso por el sistema en tiempo de ejecución. **_wmktemp_s** es una versión con caracteres anchos de **_mktemp_s**; el argumento de **_wmktemp_s** es una cadena de caracteres anchos. **_wmktemp_s** y **_mktemp_s** se comportan de manera idéntica, salvo que **_wmktemp_s** no controla las cadenas de caracteres multibyte.
 
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
@@ -103,7 +105,7 @@ El argumento *nameTemplate* tiene el formato **baseXXXXXX**, donde *base* es la 
 
 Cada llamada correcta a **_mktemp_s** modifica *nameTemplate*. En cada llamada subsiguiente del mismo proceso o subproceso con el mismo argumento *nameTemplate* , **_mktemp_s** comprueba si hay nombres de archivo que coincidan con los nombres devueltos por **_mktemp_s** en llamadas anteriores. Si no existe ningún archivo para un nombre dado, **_mktemp_s** devuelve ese nombre. Si existen archivos para todos los nombres devueltos anteriormente, **_mktemp_s** crea un nuevo nombre reemplazando el carácter alfabético que se usa en el nombre devuelto anteriormente por la siguiente letra minúscula disponible, en orden, de la "a" a la "z". Por ejemplo, si *base* es:
 
-> **fn**
+> **FN**
 
 y el valor de cinco dígitos proporcionado por **_mktemp_s** es 12345, el primer nombre devuelto es:
 
@@ -119,7 +121,7 @@ Si FNA12345 no existe, el siguiente nombre devuelto vuelve a ser:
 
 **_mktemp_s** puede crear un máximo de 26 nombres de archivo únicos para una combinación determinada de valores *base* y *nameTemplate* . Por lo tanto, FNZ12345 es el último nombre de archivo único que **_mktemp_s** puede crear para los valores *base* y *nameTemplate* que se usan en este ejemplo.
 
-En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -128,7 +130,7 @@ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

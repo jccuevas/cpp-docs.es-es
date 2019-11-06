@@ -1,29 +1,29 @@
 ---
-title: Compilador advertencia (nivel 1) C4162
+title: ADVERTENCIA del compilador (nivel 1) C4162
 ms.date: 11/04/2016
 f1_keywords:
 - C4162
 helpviewer_keywords:
 - C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-ms.openlocfilehash: 6c6b675fd47cb6e98255515c7cd77c6dd48ea02b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e70898065a40a965b08b090bc59263acd918515
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391821"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624848"
 ---
-# <a name="compiler-warning-level-1-c4162"></a>Compilador advertencia (nivel 1) C4162
+# <a name="compiler-warning-level-1-c4162"></a>ADVERTENCIA del compilador (nivel 1) C4162
 
-'identifier': ninguna función con vinculación C encontró
+' Identifier ': no se encontró ninguna función con vinculación C
 
 Se declara una función con vinculación C, pero no se encuentra.
 
-Para resolver esta advertencia, compile en un archivo .c (invocar el compilador de C).  Si se debe invocar el compilador de C++, coloque a extern "C" antes de la declaración de función.
+Para resolver esta advertencia, compile en un archivo. c (invoque el compilador de C).  Si debe invocar al C++ compilador, coloque extern "C" antes de la declaración de función.
 
-El ejemplo siguiente genera C4162
+En el ejemplo siguiente se genera C4162
 
-```
+```cpp
 // C4162.cpp
 // compile with: /c /W1
 unsigned char _bittest(long* a, long b);
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Posible resolución:
+Posible solución:
 
-```
+```cpp
 // C4162b.cpp
 // compile with: /c
 extern "C"

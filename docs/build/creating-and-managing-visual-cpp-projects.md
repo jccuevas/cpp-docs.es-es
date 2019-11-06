@@ -1,6 +1,6 @@
 ---
 title: 'Proyectos de Visual Studio: C++'
-ms.date: 12/12/2018
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837046"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624478"
 ---
 # <a name="visual-studio-projects---c"></a>Proyectos de Visual Studio: C++
 
-Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilación MSBuild. MSBuild es el sistema de compilación nativo para Visual Studio y, generalmente, es el mejor para las aplicaciones para UWP, así como para las aplicaciones de escritorio en las que se usan bibliotecas de MFC o ATL, componentes COM y otros programas específicos de Windows. MSBuild está totalmente integrado con Visual Studio, pero también se puede usar desde la línea de comandos. 
+Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilación MSBuild. MSBuild es el sistema de compilación nativo para Visual Studio y, por lo general, es el mejor sistema de compilación que se usa para programas específicos de Windows. MSBuild está totalmente integrado con Visual Studio, pero también se puede usar desde la línea de comandos. En el caso de los proyectos multiplataforma, o los proyectos que usan bibliotecas de código abierto, se recomienda usar [proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md) en visual Studio 2017 y versiones posteriores. Para obtener información sobre cómo actualizar proyectos de MSBuild desde versiones anteriores de Visual Studio, vea la [Guía de migración y actualización de C++ Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Crear un proyecto
 
@@ -25,7 +25,7 @@ Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilaci�
 
 Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y, después, establece el **Lenguaje** en C++. En la lista de resultados, verá una lista de plantillas de proyecto que puede filtrar si establece **Plataforma** o **Tipo de proyecto**, y escribe palabras clave en el cuadro de búsqueda. 
 
-   ![Plantillas de proyecto de Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2019")
+   ![Plantillas de proyecto de Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Cuadro de diálogo nuevo proyecto de Visual Studio 2019")
 
 ::: moniker-end
 
@@ -33,7 +33,7 @@ Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto*
 
 Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y después Visual C++ en el panel de la izquierda. En el panel central, verá una lista de plantillas de proyecto:
 
-   ![Plantillas de proyecto](../overview/media/vs2017-new-project.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2017")
+   ![Plantillas de proyecto](../overview/media/vs2017-new-project.png "Cuadro de diálogo nuevo proyecto de Visual Studio 2017")
 
 ::: moniker-end
 
@@ -87,3 +87,4 @@ Procedimientos para crear un proyecto de Visual Studio a partir de una colecció
 ## <a name="see-also"></a>Vea también
 
 [Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)<br>
+[Guía C++ de migración y actualización de Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)

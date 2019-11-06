@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4286
+title: ADVERTENCIA del compilador (nivel 1) C4286
 ms.date: 11/04/2016
 f1_keywords:
 - C4286
 helpviewer_keywords:
 - C4286
 ms.assetid: 93eadd6c-6f36-413b-ba91-c9aa2314685a
-ms.openlocfilehash: be02d330678eaab7f538ed092641f957bdcb01b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed2e6c10e35e53c6a67de9fecfce5da5ae429b93
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207074"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626672"
 ---
-# <a name="compiler-warning-level-1-c4286"></a>Advertencia del compilador (nivel 1) C4286
+# <a name="compiler-warning-level-1-c4286"></a>ADVERTENCIA del compilador (nivel 1) C4286
 
-'type1': ha sido detectada por la clase base ('tipo2') en la línea número
+' tipo1 ': se ha capturado por la clase base (' Type2 ') en el número de línea
 
-El tipo de excepción especificada está controlado por un controlador anterior. El tipo del segundo elemento catch se deriva el tipo de la primera. Excepciones para una clase base detectar las excepciones para una clase derivada.
+Un controlador anterior controla el tipo de excepción especificado. El tipo de la segunda instrucción Catch se deriva del tipo de la primera. Las excepciones de una clase base detectan excepciones para una clase derivada.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 //C4286.cpp
 // compile with: /W1
 #include <eh.h>

@@ -2,12 +2,12 @@
 title: Problemas de migración de punto flotante
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332353"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626980"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migración de punto flotante
 
@@ -31,6 +31,6 @@ En la mayoría de los casos, los cambios de punto flotante en los compiladores y
 
 ## <a name="see-also"></a>Vea también
 
-[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Información general sobre posibles problemas de actualización (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)

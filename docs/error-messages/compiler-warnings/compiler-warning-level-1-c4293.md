@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4293
+title: ADVERTENCIA del compilador (nivel 1) C4293
 ms.date: 11/04/2016
 f1_keywords:
 - C4293
 helpviewer_keywords:
 - C4293
 ms.assetid: babecd96-eb51-41a5-9835-462c7a46dbad
-ms.openlocfilehash: 03520e2018efd611985c0eeca8bb2cac259ff3cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee03d4a15b03ba48a3e9a04d6387d8482973adac
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384223"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626631"
 ---
-# <a name="compiler-warning-level-1-c4293"></a>Advertencia del compilador (nivel 1) C4293
+# <a name="compiler-warning-level-1-c4293"></a>ADVERTENCIA del compilador (nivel 1) C4293
 
-'operator': desplazar un recuento negativo o demasiado grande; comportamiento impredecible
+' operador ': recuento de desplazamiento negativo o demasiado grande; comportamiento no definido
 
-Si un valor de desplazamiento es negativo o demasiado grande, el comportamiento de la imagen resultante es indefinido.
+Si un recuento de desplazamiento es negativo o demasiado grande, el comportamiento de la imagen resultante es indefinido.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4293:
+En el ejemplo siguiente se genera C4293:
 
-```
+```cpp
 // C4293.cpp
 // compile with: /c /W1
 unsigned __int64 combine (unsigned lo, unsigned hi) {

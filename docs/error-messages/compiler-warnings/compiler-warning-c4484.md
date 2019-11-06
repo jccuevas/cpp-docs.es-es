@@ -1,23 +1,23 @@
 ---
-title: Advertencia del compilador C4484
+title: ADVERTENCIA del compilador C4484
 ms.date: 11/04/2016
 f1_keywords:
 - C4484
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363536"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623632"
 ---
-# <a name="compiler-warning-c4484"></a>Advertencia del compilador C4484
+# <a name="compiler-warning-c4484"></a>ADVERTENCIA del compilador C4484
 
-'función_de_reemplazo': coincide con el método de clase ref base 'función_de_clase_base', pero no está marcado como 'virtual', 'new' u 'override'; se supone 'new' (y no 'virtual')
+' override_function ': coincide con el método de clase Ref base ' base_class_function ', pero no está marcado como ' virtual ', ' New ' u ' override '; se presupone ' New ' (y no ' virtual ')
 
-Cuando se compila con **/CLR**, el compilador no invalidará implícitamente una función de la clase base, lo que significa que la función obtendrá una nueva ranura en vtable. Para resolver, especifique explícitamente si una función es una invalidación.
+Cuando se compila con **/CLR**, el compilador no reemplazará implícitamente una función de clase base, lo que significa que la función obtendrá una nueva ranura en la tabla vtable. Para resolverlo, especifique explícitamente si una función es una invalidación.
 
 Para obtener más información, consulte:
 
@@ -27,13 +27,13 @@ Para obtener más información, consulte:
 
 - [new (nueva ranura en vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 siempre se emite como un error. Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir C4484.
+C4484 siempre se emite como un error. Use la pragma [Warning](../../preprocessor/warning.md) para suprimir C4484.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia C4484.
+En el ejemplo siguiente se genera C4484.
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {
