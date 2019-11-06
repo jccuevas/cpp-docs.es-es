@@ -34,7 +34,7 @@ En la tabla siguiente se muestran los tipos numéricos integrados. Los tipos num
 |uint16|Entero de 16 bits sin signo.|unsigned short|De 0 a 65.535|
 |int32|Entero de 32 bits con signo.|int|-2.147.483.648 a 2.147.483.647|
 |uint32|Entero de 32 bits sin signo.|unsigned int|De 0 a 4.294.967.295|
-|int64|Entero de 64 bits con signo.|long long - o - __int64|-9,223,372,036,854, 775,808 9.223.372.036.854.775.807|
+|int64|Entero de 64 bits con signo.|long long - o - __int64|De -9,223,372,036,854, 775,808 a 9,223,372,036,854,775,807|
 |uint64|Entero de 64 bits sin signo.|unsigned __int64 long long - o - sin signo|De 0 a 18.446.744.073.709.551.615|
 |float32|Número de punto flotante de 32 bits conforme a IEEE 754.|float|3,4E +/- 38 (7 dígitos)|
 |float64|Número de punto flotante de 64 bits conforme a IEEE 754.|double|1,7E +/- 308 (15 dígitos)|
