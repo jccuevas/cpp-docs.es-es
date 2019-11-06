@@ -141,6 +141,8 @@
       href: compiler-errors-1/fatal-error-c1046.md
     - name: Error irrecuperable C1047
       href: compiler-errors-1/fatal-error-c1047.md
+    - name: Error irrecuperable C1049
+      href: compiler-errors-1/fatal-error-c1049.md
     - name: Error irrecuperable C1051
       href: compiler-errors-1/fatal-error-c1051.md
     - name: Error irrecuperable C1052
