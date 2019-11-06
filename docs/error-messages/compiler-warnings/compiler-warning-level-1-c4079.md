@@ -1,27 +1,27 @@
 ---
-title: Compilador advertencia (nivel 1) C4079
+title: ADVERTENCIA del compilador (nivel 1) C4079
 ms.date: 11/04/2016
 f1_keywords:
 - C4079
 helpviewer_keywords:
 - C4079
 ms.assetid: 549759f0-e168-47e9-8c9a-de93ac843689
-ms.openlocfilehash: 8f9a9e05ab2a65ad954f9928f7b9fab0e7fee9cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27304f8c31c195097c6adcdae1408ef7ad9698bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207530"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627052"
 ---
-# <a name="compiler-warning-level-1-c4079"></a>Compilador advertencia (nivel 1) C4079
+# <a name="compiler-warning-level-1-c4079"></a>ADVERTENCIA del compilador (nivel 1) C4079
 
 token inesperado 'token'
 
-Se produce un token separador inesperado en una lista de argumentos de pragma. Se omitió el resto de la directiva pragma.
+Se produce un token de separador inesperado en una lista de argumentos de pragma. Se omitió el resto de la Directiva pragma.
 
-El ejemplo siguiente genera C4079:
+En el ejemplo siguiente se genera C4079:
 
-```
+```cpp
 // C4079.cpp
 // compile with: /W1
 #pragma warning(disable : 4081)

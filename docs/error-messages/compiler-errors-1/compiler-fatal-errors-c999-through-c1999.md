@@ -6,7 +6,6 @@ f1_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -31,7 +30,6 @@ helpviewer_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -52,16 +50,16 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857388"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626564"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errores irrecuperables del compilador de C999 a C1999
 
-Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de error generados por el Microsoft C /C++ compilador.
+En los artículos de esta sección de la documentación se explica un subconjunto de los mensajes de error generados por elC++ compilador de Microsoft C/.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -78,7 +76,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error irrecuperable C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|marca '*string*' irreconocible en '*option*'|
 |[Error irrecuperable C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|no se ha especificado un archivo de entrada|
 |[Error irrecuperable C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|límite del compilador: las macros están demasiado anidadas|
-|[Error irrecuperable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Olvidó agregar ' #include \< *archivo*>' para el origen?|
+|[Error irrecuperable C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|final de archivo inesperado al buscar la directiva de encabezado precompilado. ¿Olvidó agregar "#include \<*archivo*>" al origen?|
 |[Error irrecuperable C1012](fatal-error-c1012.md)|Paréntesis '*character*' desemparejado.|
 |[Error irrecuperable C1013](fatal-error-c1013.md)|límite del compilador: hay demasiados paréntesis abiertos|
 |[Error irrecuperable C1014](fatal-error-c1014.md)|hay demasiados archivos de inclusión: nivel = *number*|
@@ -89,7 +87,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error irrecuperable C1020](fatal-error-c1020.md)|#endif inesperada|
 |[Error irrecuperable C1021](fatal-error-c1021.md)|comando de preprocesador '*string*' no válido|
 |[Error irrecuperable C1022](fatal-error-c1022.md)|se esperaba #endif|
-|[Error irrecuperable C1023](fatal-error-c1023.md)|'*file*': error inesperado con pch; recompile pch|
+|[Error irrecuperable error C1023](fatal-error-c1023.md)|'*file*': error inesperado con pch; recompile pch|
 |[Error irrecuperable C1026](../../error-messages/compiler-errors-1/fatal-error-c1026.md)|desbordamiento de la pila del analizador, programa demasiado complejo|
 |[Error irrecuperable C1033](../../error-messages/compiler-errors-1/fatal-error-c1033.md)|no se puede abrir la base de datos de programa '*file*'|
 |Error irrecuperable C1034|*file*: no se ha establecido ninguna ruta de acceso de inclusión|
@@ -102,9 +100,9 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error irrecuperable C1046](../../error-messages/compiler-errors-1/fatal-error-c1046.md)|límite del compilador: *structure* está demasiado anidado|
 |[Error irrecuperable C1047](fatal-error-c1047.md)|El objeto o el archivo de biblioteca '*file*' se creó con un compilador anterior a otros objetos; recompile las bibliotecas y los objetos antiguos|
 |Error irrecuperable C1048|opción '*string*' desconocida en '*option*'|
-|Error irrecuperable C1049|argumento numérico*value*' no válido|
+|[Error irrecuperable C1049](fatal-error-c1049.md)|argumento numérico*value*' no válido|
 |[Error irrecuperable C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|el archivo de base de datos de programa, '*file*', tiene un formato obsoleto; elimínelo y vuelva a compilar|
-|[Error irrecuperable C1052](fatal-error-c1052.md)|archivo de base de datos de programa, '*filename*', fue generado por el vinculador con/debug: Fastlink; compilador no puede actualizar estos archivos PDB; elimínelo o utilice /Fd para especificar otro nombre de archivo PDB|
+|[Error irrecuperable C1052](fatal-error-c1052.md)|el archivo de base de datos de programa, '*filename*', lo generó el enlazador con/debug: Fastlink; el compilador no puede actualizar estos archivos PDB; Elimínelo o use/FD para especificar un nombre de archivo PDB diferente|
 |[Error irrecuperable C1053](fatal-error-c1053.md)|'*function*': la función es demasiado larga|
 |[Error irrecuperable C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|límite del compilador: los inicializadores están demasiado anidados|
 |[Error irrecuperable C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|límite del compilador: no hay claves|
@@ -114,7 +112,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Error irrecuperable C1063|límite del compilador: desbordamiento de la pila del compilador|
 |[Error irrecuperable C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|límite del compilador: desbordamiento de símbolo (token) de búfer interno|
 |[Error irrecuperable C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|límite del compilador: no hay etiquetas|
-|[Error irrecuperable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|límite del compilador: Se superó el límite de 64K de tamaño de un tipo de registro|
+|[Error irrecuperable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|límite del compilador: se ha superado el límite de tamaño de 64 K de un registro de tipo|
 |[Error irrecuperable C1068](fatal-error-c1068.md)|no se puede abrir el archivo '*file*'|
 |Error irrecuperable C1069|no se puede leer la línea de comandos del compilador|
 |[Error irrecuperable C1070](fatal-error-c1070.md)|el par #if/#endif no coincide en el archivo '*file*'|
@@ -124,7 +122,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error irrecuperable C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|el elemento *token* de la izquierda estaba sin asignar al final del archivo|
 |[Error irrecuperable C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|límite del compilador: se ha alcanzado el límite del montón interno; utilice /Zm para especificar un límite más alto|
 |[Error irrecuperable C1077](fatal-error-c1077.md)|límite del compilador: no se pueden tener más de *number* opciones de la línea de comandos|
-|[Error irrecuperable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|límite del compilador: Límite de tamaño de archivo PCH superado|
+|[Error irrecuperable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|límite del compilador: se ha superado el límite de tamaño de archivo de encabezado precompilado|
 |[Error irrecuperable C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|límite del compilador: la opción de la línea de comandos ha superado el límite de *number* caracteres|
 |[Error irrecuperable C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': nombre de archivo demasiado largo|
 |[Error irrecuperable C1082](fatal-error-c1082.md)|no se puede cerrar el archivo *type* : '*file*': *message*|
@@ -155,7 +153,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Error irrecuperable C1111|hay demasiados parámetros template/generic|
 |Error irrecuperable C1112|límite del compilador: `'number`' demasiados argumentos de macro, solo se permite ' *number* '|
 |[Error irrecuperable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|error de #using en '*file*'|
-|Error irrecuperable C1114|'*archivo*': WinRT no admite #using de un ensamblado administrado|
+|Error irrecuperable C1114|'*file*': WinRT no admite la instrucción #using de un ensamblado administrado|
 |[Error irrecuperable C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|error al llamar a GetProcAddress debido a '*function*'|
 |[Error irrecuperable C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|no se pudo llamar a CryptoAPI|
 |[Error irrecuperable C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|la asignación automática supera *size*|
@@ -217,4 +215,4 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 
 ## <a name="see-also"></a>Vea también
 
-[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md)
+[Errores yC++ advertencias de las herramientas de compilación y el compilador de C/](../compiler-errors-1/c-cpp-build-errors.md)
