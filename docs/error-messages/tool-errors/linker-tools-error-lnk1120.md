@@ -1,22 +1,26 @@
 ---
 title: Error de las herramientas del vinculador LNK1120
-ms.date: 05/17/2017
+description: Describe el error del vinculador LNK1120, que informa del número de errores de símbolos externos no resueltos en el vínculo.
+ms.date: 10/31/2019
 f1_keywords:
 - LNK1120
 helpviewer_keywords:
 - LNK1120
 ms.assetid: 56aa7d36-921f-4daf-b44d-cca0d4fb1b51
-ms.openlocfilehash: b11318dcffb665d3b422fffcbd7e6275f35984dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21a1ede07a69cdc065dd897715e243115529600d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255110"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626578"
 ---
 # <a name="linker-tools-error-lnk1120"></a>Error de las herramientas del vinculador LNK1120
 
-> *número* externos sin resolver
+> *número* de externos sin resolver
 
-El error LNK1120 notifica el recuento (*número*) de los errores de símbolo externo sin resolver de esta operación de enlace. La mayoría sin resolver errores de símbolo externo se notifican individualmente por [Error de las herramientas del vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) y [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md), que preceden a este mensaje de error, una vez para cada externo sin resolver error de símbolo.
+El error LNK1120 informa del número de errores de [símbolos externos no resueltos](linker-tools-error-lnk2001.md#what-is-an-unresolved-external-symbol) en el vínculo actual.
 
-Para corregir este error, corrija todos los demás errores externos sin resolver o de otros errores del vinculador que lo preceden en la salida de compilación. No se notifica este error cuando no hay errores externos sin resolver permanecen.
+Cada símbolo externo sin resolver se muestra primero mediante un error [LNK2001](linker-tools-error-lnk2001.md) u [LNK2019](linker-tools-error-lnk2019.md) . El mensaje LNK1120 se incluye en último lugar y muestra el recuento de errores de símbolos sin resolver.
+
+> [!IMPORTANT]
+> **No es necesario corregir este error.** Este error desaparece cuando se corrigen todos los errores del enlazador LNK2001 y LNK2019 antes de hacerlo en la salida de la compilación. Corrija siempre los problemas a partir del primer error indicado. Los errores posteriores pueden estar causados por otros anteriores y desaparecen cuando se corrigen los errores anteriores.

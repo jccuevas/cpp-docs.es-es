@@ -1,16 +1,16 @@
 ---
 title: Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio
-ms.date: 11/04/2016
+ms.date: 10/25/2019
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448940"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627155"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio
 
@@ -44,15 +44,18 @@ Si decide no actualizar, Visual Studio no realiza ningún cambio en los archivos
 
 ## <a name="instructions-for-visual-studio-2008"></a>Instrucciones para Visual Studio 2008
 
-Visual Studio 2008 tenía su propio sistema de compilación dedicado para C++, denominado **VCBuild**. A partir de Visual Studio 2010, los proyectos de Visual Studio C++ se cambiaron para usar **MSBuild**. Esto significa que debe seguir un paso de actualización para compilar los proyectos de Visual Studio 2008 en la versión más reciente de Visual Studio. El proyecto actualizado todavía genera archivos binarios que son totalmente compatibles con los creados mediante el IDE de Visual Studio 2008.
+Visual Studio 2008 tenía su propio sistema de compilación dedicado para C++, denominado **VCBuild**. A partir de Visual Studio 2010, los proyectos de Visual Studio C++ se cambiaron para usar **MSBuild**. Esto significa que, si va a actualizar de forma permanente o con múltiples versiones, debe pasar por un paso de actualización para compilar los proyectos de Visual Studio 2008 en la versión más reciente de Visual Studio. El proyecto actualizado todavía genera archivos binarios que son totalmente compatibles con los creados mediante el IDE de Visual Studio 2008.
 
 En primer lugar, además de la versión actual de Visual Studio, debe instalar Visual Studio 2010 en el mismo equipo que Visual Studio 2008. Solo Visual Studio 2010 instala los scripts de **MSBuild** necesarios para los proyectos de Visual Studio 2008.
 
 A continuación, debe actualizar los proyectos y la solución de Visual Studio 2008 a la versión actual de Visual Studio. Se recomienda crear una copia de seguridad de los proyectos y los archivos de solución antes de la actualización. Para iniciar el proceso de actualización, abra la solución en la versión actual de Visual Studio. Cuando aparezca el mensaje de actualización, revise la información mostrada y luego elija **Aceptar** para iniciar la actualización. Si tiene más de un proyecto en la solución, debe actualizar el asistente para crear nuevos archivos de proyecto .vcxproj en paralelo con los archivos .vcproj existentes. Siempre que además tenga una copia del archivo .sln original, la actualización no tiene ningún impacto en los proyectos existentes de Visual Studio 2008.
 
+> [!NOTE]
+> Los pasos siguientes solo se aplican a escenarios de compatibilidad con múltiples versiones. Si piensa actualizar permanentemente el proyecto a un conjunto de herramientas posterior, el siguiente paso es guardar el proyecto, abrirlo en Visual Studio 2019 y solucionar los problemas de compilación que aparecen allí.
+
 Una vez finalizada la actualización, si el informe de registro tiene errores o advertencias sobre cualquiera de los proyectos, examínelos detenidamente. La conversión de **VCBuild** a **MSBuild** puede causar problemas. Asegúrese de comprender e implementar los elementos de acción que aparecen en el informe. Para más información sobre el informe de registro de actualización y los problemas que pueden surgir al convertir **VCBuild** en **MSBuild**, vea esta entrada de blog [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) (Compatibilidad nativa con múltiples versiones de C++).
 
-Una vez completada la actualización del proyecto y corregidos los problemas que aparezcan en el archivo de registro, la solución ya tiene realmente como destino el conjunto de herramientas más reciente. Como paso final, cambie las propiedades de cada proyecto de la solución para usar el conjunto de herramientas de Visual Studio 2008. Con la solución cargada en la versión actual de Visual Studio, para cada proyecto de la solución, abra el cuadro de diálogo **Páginas de propiedades**: haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y, luego, seleccione **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, cambie el valor de la lista desplegable **Configuración** a **Todas las configuraciones**. En **Propiedades de configuración**, seleccione **General** y después cambie **Conjunto de herramientas de la plataforma** a **Visual Studio 2008 (v90)** .
+Una vez completada la actualización del proyecto y corregidos los problemas que aparezcan en el archivo de registro, la solución ya tiene realmente como destino el conjunto de herramientas más reciente. Como paso final, cambie las propiedades de cada proyecto de la solución para usar el conjunto de herramientas de Visual Studio 2008. Con la solución cargada en la versión actual de Visual Studio, para cada proyecto de la solución, abra el cuadro de diálogo **Páginas de propiedades**: haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y luego seleccione **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, cambie el valor de la lista desplegable **Configuración** a **Todas las configuraciones**. En **Propiedades de configuración**, seleccione **General** y después cambie **Conjunto de herramientas de la plataforma** a **Visual Studio 2008 (v90)** .
 
 Después de este cambio, se usan el compilador y las bibliotecas de Visual Studio 2008 para generar archivos binarios de proyecto al compilar la solución en la versión actual de Visual Studio.
 
@@ -66,5 +69,5 @@ Cuando se instalan estos productos, el menú desplegable de propiedades **Conjun
 
 ## <a name="see-also"></a>Vea también
 
-[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Mejoras de conformidad de C++ en Visual Studio](../overview/cpp-conformance-improvements.md)

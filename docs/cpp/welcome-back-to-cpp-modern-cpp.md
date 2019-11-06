@@ -3,12 +3,12 @@ title: Aquí está otra vez C++ (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f59395001722244cb407ef07ed8a301f08df85b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209533"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624757"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Aquí está otra vez C++ (C++ moderno)
 
@@ -24,19 +24,19 @@ En el moderno C++ se destaca lo siguiente:
 
 - Punteros inteligentes en lugar de punteros sin formato.
 
-- `std::string` y `std::wstring` tipos (vea [ \<cadena >](../standard-library/string.md)) en lugar de raw `char[]` matrices.
+- `std::string` y `std::wstring` tipos (vea [\<cadena >](../standard-library/string.md)) en lugar de matrices `char[]` sin formato.
 
-- [Biblioteca estándar de C++](../standard-library/cpp-standard-library-header-files.md) como contenedores `vector`, `list`, y `map` en lugar de matrices sin formato o contenedores personalizados. Consulte [ \<vector >](../standard-library/vector.md), [ \<lista >](../standard-library/list.md), y [ \<map >](../standard-library/map.md).
+- Contenedores de la biblioteca estándar, como `vector`, `list`y `map` en lugar de matrices sin formato o contenedores personalizados. [ C++ ](../standard-library/cpp-standard-library-header-files.md) Vea [\<vector >](../standard-library/vector.md), [\<list >](../standard-library/list.md)y [\<Map >](../standard-library/map.md).
 
-- Biblioteca estándar de C++ [algoritmos](../standard-library/algorithm.md) en lugar de forma manual los codificados.
+- C++[Algoritmos](../standard-library/algorithm.md) de la biblioteca estándar en lugar de codificarlos manualmente.
 
 - Excepciones, para notificar y controlar errores.
 
-- La comunicación entre subprocesos mediante la biblioteca estándar de C++ bloqueos `std::atomic<>` (consulte [ \<atomic >](../standard-library/atomic.md)) en lugar de otros mecanismos de comunicación entre subprocesos.
+- Comunicación entre subprocesos sin bloqueos C++ mediante la `std::atomic<>` de la biblioteca estándar (vea [\<Atomic >](../standard-library/atomic.md)) en lugar de otros mecanismos de comunicación entre subprocesos.
 
-- Inline [funciones lambda](../cpp/lambda-expressions-in-cpp.md) en lugar de pequeñas funciones implementadas por separado.
+- [Funciones lambda](../cpp/lambda-expressions-in-cpp.md) insertadas en lugar de funciones pequeñas implementadas por separado.
 
-- En función de rangos para que bucles para escribir bucles más eficaces que funcionan con matrices, contenedores de la biblioteca estándar de C++ y Windows Runtime colecciones en el formulario `for ( for-range-declaration : expression )`. Esto forma parte del lenguaje principal. Para obtener más información, consulte [basada en intervalo para la instrucción (C++)](../cpp/range-based-for-statement-cpp.md).
+- Bucles for basados en intervalos para escribir bucles más sólidos que funcionan con matrices, C++ contenedores de la biblioteca estándar y colecciones de Windows Runtime en el formulario `for ( for-range-declaration : expression )`. Esto forma parte del lenguaje principal. Para obtener más información, vea [instrucción for basada en intervaloC++()](../cpp/range-based-for-statement-cpp.md).
 
 El propio lenguaje C++ también ha evolucionado. Compare los fragmentos de código siguientes. Este muestra cómo eran las cosas en C++:
 
@@ -91,45 +91,45 @@ void f()
 }
 ```
 
-En C++ moderno, no tiene que utilizar control de excepciones nuevo/eliminar o explícito porque puede utilizar los punteros inteligentes en su lugar. Cuando se usa el **automática** deducción de tipo y [función lambda](../cpp/lambda-expressions-in-cpp.md), puede escribir código más rápido, endurecer y entender mejor. Y basado en rango **para** bucle es más limpio, más fácil de usar y menos propenso a errores imprevistos que un estilo de C **para** bucle. Puede utilizar código reutilizable con las mínimas líneas de código para escribir la aplicación. También puede hacer que ese código sea seguro para excepciones y seguro para memoria, y que no tenga ninguna asignación/desasignación ni códigos de error que tratar.
+En C++ moderno, no tiene que utilizar control de excepciones nuevo/eliminar o explícito porque puede utilizar los punteros inteligentes en su lugar. Al utilizar la deducción de tipos **automática** y la [función lambda](../cpp/lambda-expressions-in-cpp.md), puede escribir código más rápido, apretarlo y comprenderlo mejor. Y un bucle **for** basado en intervalo es más limpio, más fácil de usar y menos propenso a errores imprevistos que un bucle **for de** estilo C. Puede utilizar código reutilizable con las mínimas líneas de código para escribir la aplicación. También puede hacer que ese código sea seguro para excepciones y seguro para memoria, y que no tenga ninguna asignación/desasignación ni códigos de error que tratar.
 
-C++ moderno incorpora dos clases de polimorfismo: tiempo de compilación, con plantillas y tiempo de ejecución, con herencia y virtualización. Puede mezclar las dos clases de polimorfismo para aumentar el efecto. La plantilla de biblioteca estándar de C++ `shared_ptr` usa métodos virtuales internos para lograr su borrado de tipos aparentemente sin esfuerzo. No obstante, no utilice demasiado la virtualización para el polimorfismo cuando una plantilla sea la mejor opción. Las plantillas pueden ser muy eficaces.
+C++ moderno incorpora dos clases de polimorfismo: tiempo de compilación, con plantillas y tiempo de ejecución, con herencia y virtualización. Puede mezclar las dos clases de polimorfismo para aumentar el efecto. La C++ plantilla de biblioteca estándar `shared_ptr` usa métodos virtuales internos para lograr su eliminación de tipos aparentemente sin esfuerzo. No obstante, no utilice demasiado la virtualización para el polimorfismo cuando una plantilla sea la mejor opción. Las plantillas pueden ser muy eficaces.
 
 Si viene a C++ desde otro lenguaje, especialmente desde un lenguaje administrado en el que la mayoría de los tipos sean tipos de referencia y muy pocos sean tipos de valor, debe saber que las clases de C++ son tipos de valor de forma predeterminada. No obstante, puede especificarlos como tipos de referencia para habilitar comportamiento polimórfico que admita la programación orientada a objetos. Una perspectiva útil: los tipos de valor son más de memoria y control de diseño; los tipos de referencia son más de clases base y funciones virtuales para admitir polimorfismo. De forma predeterminada, los tipos de valor se pueden copiar; cada uno tiene un constructor de copias y un operador de asignación de copia. Cuando se especifica un tipo de referencia, se crea la clase que no se puede copiar (se deshabilita el constructor de copias y el operador de asignación) y se utiliza un destructor virtual, que admite el polimorfismo. Los tipos de valor están también relacionados con el contenido que, cuando se copia, proporciona dos valores independientes que se pueden modificar por separado. No obstante, los tipos de referencia están relacionados con la identidad (el tipo de objeto de que se trata) y, por esta razón, a veces se conocen como tipos polimórficos.
 
 C++ está resurgiendo porque la eficacia vuelve a ser lo más importante. Los lenguajes como Java y C# son buenos cuando la productividad del programador es importante, pero cuando la eficacia y el rendimiento son primordiales aparecen sus limitaciones. Para aumentar la eficacia, especialmente en dispositivos de hardware limitado, no hay nada mejor que el moderno C++.
 
-No solo el lenguaje es moderno, las herramientas de desarrollo también lo son. Visual Studio realiza todas las partes del ciclo de desarrollo sólido y eficaz. Incluye herramientas de ALM (Administración del ciclo de vida de las aplicaciones), mejoras del IDE como IntelliSense, mecanismos de herramientas fáciles de usar como XAML, compilación, depuración y muchas otras herramientas.
+No solo el lenguaje es moderno, las herramientas de desarrollo también lo son. Visual Studio hace que todas las partes del ciclo de desarrollo sean sólidas y eficaces. Incluye herramientas de ALM (Administración del ciclo de vida de las aplicaciones), mejoras del IDE como IntelliSense, mecanismos de herramientas fáciles de usar como XAML, compilación, depuración y muchas otras herramientas.
 
 Los artículos de esta parte de la documentación proporcionan instrucciones y procedimientos recomendados para las características más importantes y técnicas de alto nivel para escribir programas modernos de C++.
 
-- [Sistema de tipos de C++](../cpp/cpp-type-system-modern-cpp.md)
+- [C++Sistema de tipos](../cpp/cpp-type-system-modern-cpp.md)
 
 - [Inicialización uniforme y constructores de delegación](../cpp/uniform-initialization-and-delegating-constructors.md)
 
-- [Duración de objetos y administración de recursos](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
+- [Duración de los objetos y administración de recursos](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
 
 - [Recursos propios de los objetos (RAII)](../cpp/objects-own-resources-raii.md)
 
 - [Punteros inteligentes](../cpp/smart-pointers-modern-cpp.md)
 
-- [Pimpl para encapsulación en tiempo de compilación](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
+- [Pimpl para la encapsulación en tiempo de compilación](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
 
 - [Contenedores](../cpp/containers-modern-cpp.md)
 
 - [Algoritmos](../cpp/algorithms-modern-cpp.md)
 
-- [Cadena y E/S de formato (C++ moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)
+- [Formato de cadena y de e/s C++(moderno)](../cpp/string-and-i-o-formatting-modern-cpp.md)
 
-- [Controlar errores y excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)
+- [Errores y control de excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)
 
 - [Portabilidad en los límites de ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-Para obtener más información, vea el artículo de Stack Overflow [expresiones de C++ que están en desuso en C ++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
+Para obtener más información, vea el artículo [Stack Overflow C++ qué expresiones están desusadas en c++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
 
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Expresiones lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Conformidad del lenguaje Visual C++](../overview/visual-cpp-language-conformance.md)
+[Tabla C++ de conformidad de lenguaje de Microsoft](../overview/visual-cpp-language-conformance.md)

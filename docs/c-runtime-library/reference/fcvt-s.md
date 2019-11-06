@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941354"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623832"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -66,9 +66,9 @@ errno_t _fcvt_s(
 Búfer proporcionado que contendrá el resultado de la conversión.
 
 *sizeInBytes*<br/>
-El tamaño del búfer en bytes.
+Tamaño del búfer en bytes.
 
-*value*<br/>
+*valor*<br/>
 Número que se va a convertir.
 
 *count*<br/>
@@ -82,18 +82,18 @@ Puntero al indicador de signo almacenado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener una lista de estos errores, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Cero si es correcta. Si se produce un error, el valor devuelto es un código de error. Los códigos de error se definen en Errno.h. Para obtener una lista de estos errores, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 En el caso de un parámetro no válido, como se muestra en la siguiente tabla, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **EINVAL**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*buffer*|*sizeInBytes*|valor|número|dec|sign|Volver|Valor en *búfer*|
+|*buffer*|*sizeInBytes*|valor|count|dec|sign|Volver|Valor en *búfer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
-|**NULL**|any|any|any|any|any|**EINVAL**|No modificado.|
-|Not **null** (apunta a la memoria válida)|<=0|any|any|any|any|**EINVAL**|No modificado.|
-|any|any|any|any|**NULL**|any|**EINVAL**|No modificado.|
-|any|any|any|any|any|**NULL**|**EINVAL**|No modificado.|
+|**NULL**|any|any|any|any|any|**EINVAL**|No se ha modificado.|
+|Not **null** (apunta a la memoria válida)|<=0|any|any|any|any|**EINVAL**|No se ha modificado.|
+|any|any|any|any|**NULL**|any|**EINVAL**|No se ha modificado.|
+|any|any|any|any|any|**NULL**|**EINVAL**|No se ha modificado.|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
@@ -109,9 +109,9 @@ Un búfer de longitud **_CVTBUFSIZE** es suficiente para cualquier valor de punt
 
 La diferencia entre **_ecvt_s** y **_fcvt_s** está en la interpretación del parámetro *Count* . **_ecvt_s** interpreta *Count* como el número total de dígitos de la cadena de salida y **_fcvt_s** interpreta *Count* como el número de dígitos después del separador decimal.
 
-En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La versión de depuración de esta función rellena primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -119,9 +119,9 @@ La versión de depuración de esta función rellena primero el búfer con 0xFD. 
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-**Libre** Todas las versiones de las características de la [biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Ejemplo
 

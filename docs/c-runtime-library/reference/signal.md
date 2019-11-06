@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948101"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625851"
 ---
 # <a name="signal"></a>signal
 
@@ -61,7 +61,7 @@ Vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-d
 
 La función **Signal** permite que un proceso elija una de varias maneras de controlar una señal de interrupción desde el sistema operativo. El argumento *SIG* es la interrupción a la que responde la **señal** ; debe ser una de las constantes de manifiesto siguientes, que se definen en la señal. C.
 
-|valor *SIG*|DESCRIPCIÓN|
+|valor *SIG*|Descripción|
 |-----------------|-----------------|
 |**SIGABRT**|Terminación anómala|
 |**SIGFPE**|Error de punto flotante|
@@ -115,7 +115,7 @@ La configuración de la señal no se conserva en los procesos generados que se c
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -127,7 +127,6 @@ En el ejemplo siguiente se muestra cómo usar **Signal** para agregar algún com
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+La salida depende de la versión del tiempo de ejecución que se use, si la aplicación es una consola de o una aplicación de Windows, y en la configuración del registro de Windows. En el caso de una aplicación de consola, es posible que se envíe algo parecido al siguiente mensaje a stderr:
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>Vea también

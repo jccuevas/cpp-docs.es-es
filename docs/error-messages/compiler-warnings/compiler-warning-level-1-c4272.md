@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4272
+title: ADVERTENCIA del compilador (nivel 1) C4272
 ms.date: 11/04/2016
 f1_keywords:
 - C4272
 helpviewer_keywords:
 - C4272
 ms.assetid: 0d6c1de4-2eef-42c4-b861-c221f8b495ef
-ms.openlocfilehash: 26e136aa395729d520f4a71a06b6dc212cf21f8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13c56c2261cd069e7edec63921c198e2bee56c95
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208316"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626700"
 ---
-# <a name="compiler-warning-level-1-c4272"></a>Advertencia del compilador (nivel 1) C4272
+# <a name="compiler-warning-level-1-c4272"></a>ADVERTENCIA del compilador (nivel 1) C4272
 
-'function': está marcado como __declspec (dllimport); debe especificar la convención de llamadas nativa al importar una función.
+' función ': está marcado como _ _ declspec (dllimport); debe especificar la Convención de llamada nativa al importar una función.
 
-Es un error al exportar una función marcada con el [__clrcall](../../cpp/clrcall.md) convención de llamada y el compilador emite esta advertencia si se intenta importar una función marcada `__clrcall`.
+Es un error exportar una función marcada con la Convención de llamada [_ _ clrcall](../../cpp/clrcall.md) y el compilador emite esta advertencia si intenta importar una función marcada como `__clrcall`.
 
-El ejemplo siguiente genera C4272:
+En el ejemplo siguiente se genera C4272:
 
-```
+```cpp
 // C4272.cpp
 // compile with: /c /W1 /clr
 __declspec(dllimport) void __clrcall Test();   // C4272

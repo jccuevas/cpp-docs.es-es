@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7bd85734e71120a214d652048c02c176728474b2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952943"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624355"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -92,16 +92,16 @@ Tamaño del búfer en palabras.
 *sizeInBytes*<br/>
 Tamaño del búfer en bytes.
 
-*drive*<br/>
+*dispositivo*<br/>
 Contiene una letra (A, B, etc.) correspondiente a la unidad deseada y un signo de dos puntos final opcional. **_makepath_s** inserta los dos puntos automáticamente en la ruta de acceso compuesta si falta. Si la *unidad* es **null** o apunta a una cadena vacía, no aparece ninguna letra de unidad en la cadena de *ruta de acceso* compuesta.
 
 *dir*<br/>
-Contiene la ruta de acceso de los directorios, sin incluir el designador de unidad ni el nombre de archivo real. La barra diagonal final es opcional y se puede usar una barra diagonal (/) o una barra diagonal\\inversa (), o ambas, en un solo argumento *dir* . Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **null** o apunta a una cadena vacía, no se insertará ninguna ruta de acceso de directorio en la cadena de *ruta de acceso* compuesta.
+Contiene la ruta de acceso de los directorios, sin incluir el designador de unidad ni el nombre de archivo real. La barra diagonal final es opcional y se puede usar una barra diagonal (/) o una barra diagonal inversa (\\), o ambas, en un solo argumento *dir* . Si no se especifica ninguna barra diagonal (/ o \\), se inserta automáticamente. Si *dir* es **null** o apunta a una cadena vacía, no se insertará ninguna ruta de acceso de directorio en la cadena de *ruta de acceso* compuesta.
 
 *fname*<br/>
 Contiene el nombre de archivo base sin ninguna extensión de nombre de archivo. Si *fname* es **null** o apunta a una cadena vacía, no se inserta ningún nombre de archivo en la cadena de *ruta de acceso* compuesta.
 
-*ext*<br/>
+*total*<br/>
 Contiene la extensión de nombre de archivo real, con o sin punto inicial (.). **_makepath_s** inserta el período automáticamente si no aparece en *ext*. Si *ext* es **null** o apunta a una cadena vacía, no se inserta ninguna extensión en la cadena de *ruta de acceso* compuesta.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -115,7 +115,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |**NULL**|any|**EINVAL**|no modificado|
 |any|<= 0|**EINVAL**|no modificado|
 
-Si se produce alguna de las condiciones de error anteriores, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y las funciones devuelven **EINVAL**. Se permite **null** para los parámetros *Drive*, *fname*y *ext*. Para obtener información sobre el comportamiento que se produce cuando estos parámetros son punteros nulos o cadenas vacías, vea la sección Comentarios.
+Si se produce alguna de las condiciones de error anteriores, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y las funciones devuelven **EINVAL**. Se permite **null** para los parámetros *Drive*, *fname*y *ext*. Para obtener información sobre el comportamiento cuando estos parámetros son punteros nulos o cadenas vacías, vea la sección Comentarios.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -131,9 +131,9 @@ El argumento *path* debe apuntar a un búfer vacío lo suficientemente grande co
 
 Si path es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Además, **errno** se establece en **EINVAL**. Se permiten valores **null** para todos los demás parámetros.
 
-En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,7 +142,7 @@ Las versiones de depuración de estas funciones rellenan primero el búfer con 0
 |**_makepath_s**|\<stdlib.h>|
 |**_wmakepath_s**|\<stdlib.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

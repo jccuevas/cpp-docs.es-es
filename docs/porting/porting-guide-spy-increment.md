@@ -1,13 +1,13 @@
 ---
 title: 'Guía de migración: Spy++'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630446"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627234"
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 
@@ -15,7 +15,7 @@ Este caso práctico de migración está diseñado para que se haga una idea de c
 
 ## <a name="spy"></a>Spy++
 
-Spy++ es una herramienta muy utilizada de diagnóstico de GUI para el escritorio de Windows y que proporciona todo tipo de información sobre los elementos de la interfaz de usuario del escritorio de Windows. Muestra la jerarquía completa de las ventanas y proporciona acceso a los metadatos de cada ventana y control. Esta práctica aplicación lleva muchos años incluyéndose con Visual Studio. Encontramos una versión antigua que se compiló por última vez en Visual C++ 6.0 y la migramos a Visual Studio 2015. La experiencia de Visual Studio 2017 debería ser casi idéntica.
+Spy++ es una herramienta muy utilizada de diagnóstico de GUI para el escritorio de Windows y que proporciona todo tipo de información sobre los elementos de la interfaz de usuario del escritorio de Windows. Muestra la jerarquía completa de las ventanas y proporciona acceso a los metadatos de cada ventana y control. Esta práctica aplicación lleva muchos años incluyéndose con Visual Studio. Encontramos una versión antigua que se compiló por última vez en Visual C++ 6.0 y la migramos a Visual Studio 2015. La experiencia de Visual Studio 2017 o Visual Studio 2019 debe ser casi idéntica.
 
 Consideramos que este es un caso típico de migración de aplicaciones de escritorio de Windows que utilizan MFC y la API Win32, especialmente para proyectos antiguos que no se han actualizado con cada versión de Visual C++ desde Visual C++ 6.0.
 
@@ -25,7 +25,7 @@ El archivo del proyecto, dos antiguos archivos .dsw de Visual C++ 6.0, se convir
 
 Después de actualizar los dos proyectos, nuestra solución tenía el siguiente aspecto:
 
-![Solución Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "The Spy&#43;&#43; Solution")
+![La solución&#43; &#43; Spy](../porting/media/spyxxsolution.PNG "La solución&#43; &#43; Spy")
 
 Tenemos dos proyectos, uno con un gran número de archivos de C++ y otro con un archivo DLL escrito en C.
 
@@ -292,7 +292,7 @@ Después de realizar el cambio, tenemos el siguiente código:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Puesto que hay unas diez instancias de esta función, todas ellas en distintas clases derivadas de CWnd, resulta útil usar **Ir a definición** (teclado: **F12**) e **Ir a declaración** (teclado: **CTRL**+**F12**) cuando el cursor está sobre la función en el editor para buscar dichas instancias e ir hasta ellas desde la ventana de la herramienta **Buscar símbolo**. Por lo general, **Ir a definición** es la más útil de las dos. **Ir a declaración** busca declaraciones que no sean la declaración de clase que define, como las declaraciones de la clase friend o las referencias adelantadas.
+Puesto que hay unas diez instancias de esta función, todas ellas en distintas clases derivadas de CWnd, resulta útil usar **Ir a definición** (teclado: **F12**) e **Ir a declaración** (teclado: **Ctrl**+**F12**) cuando el cursor está sobre la función en el editor para buscar dichas instancias e ir hasta ellas desde la ventana de la herramienta **Buscar símbolo**. Por lo general, **Ir a definición** es la más útil de las dos. **Ir a declaración** busca declaraciones que no sean la declaración de clase que define, como las declaraciones de la clase friend o las referencias adelantadas.
 
 ##  <a name="mfc_changes"></a> Paso 9. Cambios en MFC
 
@@ -466,7 +466,7 @@ class CTreeListBox : public CListBox
   BOOL m_bStdMouse : 1;
 ```
 
-Este código se escribió antes de que el tipo bool integrado se admitiese en Visual C++. En este código BOOL era un **typedef** para **int**. El tipo **int** es un tipo **con signo** y la representación de bits de un **int con signo** consiste en usar el primer bit como bit de signo, por lo que un campo de bits de tipo int podría interpretarse como que representa 0 o -1, que probablemente no era lo que se pretendía.
+Este código se escribió antes de que el tipo bool integrado se admitiese en Visual C++. En este tipo de código, BOOL era una **definición** de **tipo para int**. El tipo **int** es un tipo **con signo** y la representación de bits de un **int con signo** consiste en usar el primer bit como bit de signo, por lo que un campo de bits de tipo int podría interpretarse como que representa 0 o-1, probablemente no lo que se pretendía.
 
 Uno no sería capaz de determinar, examinando el código, por qué se utilizaron campos de bits. ¿Se hizo para lograr que el tamaño del objeto fuese pequeño en todo momento o existe algún lugar donde se utilice el diseño binario del objeto? Los cambiamos por miembros BOOL normales, puesto que no vimos motivo alguno para utilizar un campo de bits. Usar campos de bits para que el tamaño del objeto sea reducido no siempre funciona. Depende de cómo el compilador disponga el tipo.
 
@@ -542,7 +542,7 @@ Colocamos \_T alrededor de la literal de cadena para quitar el error.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-La macro \_T tiene el efecto de hacer que se compile una literal de cadena como **char** o una cadena **wchar_t**, dependiendo de si se establece MBCS o UNICODE. Para reemplazar todas las cadenas por \_T en Visual Studio, abra primero el cuadro **Reemplazo rápido** (teclado: **Ctrl**+**F**) o **Reemplazar en archivos** (teclado: **CTRL**+**Mayús**+**H**) y, después, active la casilla **Usar expresiones regulares**. Escriba `((\".*?\")|('.+?'))` como el texto de búsqueda y `_T($1)` como el texto de reemplazo. Si ya tiene la macro \_T alrededor de algunas cadenas, este procedimiento la agregará de nuevo. Además, podrá encontrarse con casos en los que no quiera \_T, como cuando usa `#include`, por lo que es mejor usar **Reemplazar siguiente** en lugar de **Reemplazar todos**.
+La macro \_T tiene el efecto de hacer que se compile una literal de cadena como **char** o una cadena **wchar_t**, dependiendo de si se establece MBCS o UNICODE. Para reemplazar todas las cadenas por \_T en Visual Studio, abra primero el cuadro **Reemplazo rápido** (teclado: **Ctrl**+**F**) o **Reemplazar en archivos** (teclado: **Ctrl**+**Mayús**+**H**) y, después, elija la casilla **Usar expresiones regulares**. Escriba `((\".*?\")|('.+?'))` como el texto de búsqueda y `_T($1)` como el texto de reemplazo. Si ya tiene la macro \_T alrededor de algunas cadenas, este procedimiento la agregará de nuevo. Además, podrá encontrarse con casos en los que no quiera \_T, como cuando usa `#include`, por lo que es mejor usar **Reemplazar siguiente** en lugar de **Reemplazar todos**.
 
 En realidad, esta función específica, [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw), se define en los encabezados de Windows y en la documentación pertinente se recomienda que no se use, ya que se podría saturar el búfer. No se especifica tamaño para el búfer `szTmp`, así que no hay ninguna manera de que la función compruebe que el búfer sea capaz de retener todos los datos que se vayan a escribir en él. Vea la siguiente sección sobre la migración a las funciones seguras de CRT, en la que corregimos otros problemas similares. Terminamos reemplazándola por [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -673,5 +673,5 @@ Migrar Spy++ desde el código original de Visual C++ 6.0 al compilador más reci
 
 ## <a name="see-also"></a>Vea también
 
-[Portabilidad y actualizaciones: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Caso práctico anterior: COM Spy](../porting/porting-guide-com-spy.md)

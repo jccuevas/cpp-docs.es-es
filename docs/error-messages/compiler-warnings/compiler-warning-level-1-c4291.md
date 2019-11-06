@@ -1,31 +1,31 @@
 ---
-title: Advertencia del compilador (nivel 1) C4291
+title: ADVERTENCIA del compilador (nivel 1) C4291
 ms.date: 11/04/2016
 f1_keywords:
 - C4291
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: e1b787e7149afe93fb50cc1e6ceaecba2e787876
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384262"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626639"
 ---
-# <a name="compiler-warning-level-1-c4291"></a>Advertencia del compilador (nivel 1) C4291
+# <a name="compiler-warning-level-1-c4291"></a>ADVERTENCIA del compilador (nivel 1) C4291
 
-'declaration': no coincidente se encuentra; de operador delete no se liberará memoria si la inicialización produce una excepción
+' DECLARATION ': no se encontró ninguna eliminación de operador coincidente; no se liberará memoria si la inicialización produce una excepción.
 
-Una selección de ubicación [nueva](../../cpp/new-operator-cpp.md) se usa para las que no hay ninguna selección de ubicación [eliminar](../../cpp/delete-operator-cpp.md).
+Se utiliza una ubicación [nueva](../../cpp/new-operator-cpp.md) para la que no hay ninguna [eliminación](../../cpp/delete-operator-cpp.md)de ubicación.
 
-Cuando se asigna memoria para un objeto con el operador **nueva**, se llama al constructor del objeto. Si el constructor produce una excepción, debe desasignarse toda la memoria que se asignó para el objeto. Esto no puede tener lugar a menos que un operador **eliminar** función existe que coincida con el operador **nuevo**.
+Cuando se asigna memoria para un objeto con el operador **New**, se llama al constructor del objeto. Si el constructor produce una excepción, se debe desasignar cualquier memoria asignada para el objeto. Esto no puede tener lugar a menos que exista una función Operator **Delete** que coincida con el operador **New**.
 
-Si usa el operador **nueva** sin argumentos adicionales y compilar con [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md), o/EHa opciones para habilitar el control de excepciones, el compilador generará código para llamar al operador **eliminar** si el constructor produce una excepción.
+Si usa el operador **New** sin ningún argumento adicional y compila con las opciones [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md)o/EHA para habilitar el control de excepciones, el compilador generará código para llamar al operador **Delete** si el constructor produce una excepción.
 
-Si usa el formato de ubicación de la **nuevo** operador (el formulario con argumentos además del tamaño de la asignación) y el constructor del objeto produce una excepción, el compilador seguirá generando código para llamar al operador **eliminar**; pero solo lo hará por tanto, si un formulario de selección de ubicación del operador **eliminar** existe el formato de la ubicación del operador de coincidencia **nuevo** que asignó la memoria. Por ejemplo:
+Si utiliza el formulario de colocación del operador **New** (el formulario con argumentos además del tamaño de la asignación) y el constructor del objeto produce una excepción, el compilador seguirá generando código para llamar al operador **Delete**; pero solo lo hará si existe un formulario de colocación de operador **Delete** que coincida con el formato de ubicación del operador **nuevo** que asignó la memoria. Por ejemplo:
 
-```
+```cpp
 // C4291.cpp
 // compile with: /EHsc /W1
 #include <malloc.h>
@@ -74,7 +74,7 @@ int main(void)
 }
 ```
 
-El ejemplo anterior genera la advertencia C4291 porque no hay ningún formulario de selección de ubicación del operador **eliminar** se ha definido que coincida con el formato de la ubicación del operador **nuevo**. Para resolver el problema, inserte el código siguiente encima **principal**. Tenga en cuenta que todo el operador sobrecargado **eliminar** parámetros de función coinciden con los del operador sobrecargado **nuevo**, salvo el primer parámetro.
+En el ejemplo anterior se genera la advertencia C4291 porque no se ha definido ninguna forma de colocación de operador **Delete** que coincida con el formato de ubicación del operador **New**. Para solucionar el problema, inserte el siguiente código encima de **Main**. Observe que todos los parámetros de la función de **eliminación** de operadores sobrecargados coinciden con los del operador sobrecargado **New**, excepto para el primer parámetro.
 
 ```
 void operator delete(void* pMem, char* pszFilename, int nLine)

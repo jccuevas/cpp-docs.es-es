@@ -1,13 +1,13 @@
 ---
 title: 'Guía de migración: Scribble de MFC'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511533"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627211"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
 
@@ -23,15 +23,15 @@ Antes de actualizar, asegúrese de que tiene instalada la carga de trabajo de es
 
 Después, realice una copia de seguridad de toda la solución y su contenido.
 
-Por último, teníamos que decidir el método de actualización específico que íbamos a usar. Para las soluciones y proyectos más complejos que no se hayan actualizado durante mucho tiempo, debería considerar la posibilidad de actualizar las versiones de Visual Studio de una en una. De ese modo, puede identificar qué versión de Visual Studio fue la que dio lugar a un problema. En un proyecto sencillo vale la pena intentar abrirlo en la versión más reciente de Visual Studio y dejar que el asistente convierta el proyecto. Si esto no funciona, puede probar a realizar las actualizaciones de una en una si tiene acceso a las versiones adecuadas de Visual Studio.
+Por último, abra la solución en la versión más reciente de Visual Studio y permita que el asistente convierta el proyecto. 
 
 Tenga en cuenta que también puede ejecutar devenv en la línea de comandos mediante la opción `/Upgrade`, en lugar de usar el asistente para actualizar los proyectos. Vea [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Eso podría ayudar a automatizar el proceso de actualización para un gran número de proyectos.
 
 ### <a name="step-1-converting-the-project-file"></a>Paso 1. Convertir el archivo del proyecto
 
-Al abrir un archivo de proyecto antiguo en Visual Studio 2017, Visual Studio ofrece la opción de convertir el archivo del proyecto a la versión más reciente, lo cual aceptamos. Se mostró el siguiente cuadro de diálogo:
+Al abrir un archivo de proyecto antiguo en Visual Studio, Visual Studio ofrece la conversión del archivo de proyecto a la versión más reciente, que aceptamos. Se mostró el siguiente cuadro de diálogo:
 
-![Revisar cambios de proyecto y solución](../porting/media/scribbleprojectupgrade.PNG "Review Project and Solution Changes")
+![Revisar cambios de proyecto y solución](../porting/media/scribbleprojectupgrade.PNG "Revisar cambios de proyectos y soluciones")
 
 Se produjo un error por el que se nos informaba de que el destino de Itanium no estaba disponible y no se realizaría la conversión.
 
@@ -43,13 +43,13 @@ En el momento en que se creó el proyecto de Scribble anterior, Itanium era una 
 
 A continuación, Visual Studio mostró un informe de migración de todos los problemas con el antiguo archivo de proyecto.
 
-![Informe de actualización](../porting/media/scribblemigrationreport.PNG "Upgrade Report")
+![Informe de actualización](../porting/media/scribblemigrationreport.PNG "Informe de actualización")
 
 En este caso, todos los problemas eran advertencias y Visual Studio realizó los cambios pertinentes en el archivo del proyecto. La gran diferencia en lo que se refiere al proyecto es que la herramienta de compilación cambió de vcbuild a msbuild. Este cambio se introdujo por primera vez en Visual Studio 2010. Otros de los cambios incluyen una determinada reorganización de la secuencia de elementos en el propio archivo de proyecto. Ninguno de los problemas requirió atención adicional para este proyecto simple.
 
 ### <a name="step-2-getting-it-to-build"></a>Paso 2. Hacer que compile
 
-Antes de compilar, comprobamos el conjunto de herramientas de la plataforma para saber qué versión del compilador está utilizando el sistema del proyecto. En el diálogo de propiedades del proyecto, en **Propiedades de configuración**, en la categoría **General**, examine la propiedad **Conjunto de herramientas de la plataforma**. Contiene la versión de Visual Studio y el número de versión de las herramientas de la plataforma, que en este caso es v141 para la versión de Visual Studio 2017 de las herramientas. Al convertir un proyecto que se compiló originalmente con Visual Studio 2010, 2012, 2013 o 2015, el conjunto de herramientas no se actualiza automáticamente al conjunto de herramientas de Visual Studio 2017.
+Antes de compilar, comprobamos el conjunto de herramientas de la plataforma para saber qué versión del compilador está utilizando el sistema del proyecto. En el diálogo de propiedades del proyecto, en **Propiedades de configuración**, en la categoría **General**, examine la propiedad **Conjunto de herramientas de la plataforma**. Contiene la versión de Visual Studio y el número de versión de las herramientas de la plataforma, que en este caso es v141 para la versión de Visual Studio 2017 de las herramientas. Al convertir un proyecto que se compiló originalmente con Visual Studio 2010, 2012, 2013 o 2015, el conjunto de herramientas no se actualiza automáticamente al conjunto de herramientas más reciente.
 
 Para realizar el cambio a Unicode, abra las propiedades del proyecto y, en **Propiedades de configuración**, elija la sección **General** y busque la propiedad **Juego de caracteres**. Cambie el valor **Utilizar juego de caracteres multibyte** por **Utilizar juego de caracteres Unicode**. El efecto de este cambio es que ahora las macros _UNICODE y UNICODE están definidas y _MBCS no lo está. Puede comprobarlo en el cuadro de diálogo de propiedades en la categoría **C/C++** , en la propiedad **Línea de comandos**.
 
@@ -87,5 +87,5 @@ Scribble era una aplicación de escritorio pequeña y simple de Windows, y no fu
 
 ## <a name="see-also"></a>Vea también
 
-[Portabilidad y actualizaciones: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Ejemplo siguiente: COM Spy](../porting/porting-guide-com-spy.md)

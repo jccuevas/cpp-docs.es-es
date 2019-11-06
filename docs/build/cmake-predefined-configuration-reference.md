@@ -4,22 +4,22 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: a4d92984d9ecff5afb3c5df08df0933ef3be25e6
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042642"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624752"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configuraciones de compilación predefinidas de CMake
 
 ::: moniker range="vs-2015"
 
-Se admiten los proyectos de CMake en Visual Studio 2017 y versiones posteriores.
+Los proyectos de CMake se admiten en Visual Studio 2017 y versiones posteriores.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range=">=vs-2017"
 
 En un proyecto de CMake, las configuraciones de compilación se almacenan en un archivo CMakeSettings.json. Cuando se selecciona **Administrar configuraciones** en la lista desplegable de configuración de compilación en la barra de herramientas principal, aparece un cuadro de diálogo que muestra las configuraciones predeterminadas de CMake disponibles en Visual Studio:
 - Depuración x86
@@ -33,7 +33,7 @@ En un proyecto de CMake, las configuraciones de compilación se almacenan en un 
 - Depuración MinGW
 - Versión MinGW
 
-Al elegir una configuración, se agrega al archivo CMakeSettings.json en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto.
+Al elegir una configuración, se agrega al archivo *CMakeSettings. JSON* en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto. Para obtener información sobre las propiedades de configuración, consulte [referencia de CMakeSettings](cmakesettings-reference.md).
 
 
 ## <a name="linux-predefined-build-configurations"></a>Configuraciones de compilación predefinidas de Linux
@@ -358,25 +358,25 @@ Estas opciones permiten ejecutar comandos en el sistema remoto antes y después 
 En un proyecto de CMake, las configuraciones de compilación se almacenan en un archivo CMakeSettings.json. Cuando se selecciona **Administrar configuraciones** en la lista desplegable de configuración de compilación en la barra de herramientas principal, aparece un cuadro de diálogo que muestra las configuraciones predeterminadas de CMake disponibles en Visual Studio:
 
 - Depuración x86
-- x86 clang depuración
+- depuración de Clang x86
 - Versión x86
-- x86 clang versión
+- Versión Clang x86
 - Depuración x64
-- x64 clang depuración
+- depuración de Clang x64
 - Versión x64
-- x64 clang versión
+- Versión de Clang x64
 - Depuración Linux
 - Versión Linux
-- Clang-Linux-Debug
-- Clang-Linux-Release
+- Linux-Clang-Debug
+- Linux-Clang-versión
 - Caché existente (remoto)
 - Caché existente
 - Depuración MinGW
 - Versión MinGW
-- Depuración WSL
-- Versión WSL
-- Depuración de Clang WSL
-- Versión de Clang WSL
+- Depuración de WSL
+- Versión de WSL
+- Depuración de WSL Clang
+- Versión de WSL Clang
 - Clang
 
 Al elegir una configuración, se agrega al archivo CMakeSettings.json en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto.

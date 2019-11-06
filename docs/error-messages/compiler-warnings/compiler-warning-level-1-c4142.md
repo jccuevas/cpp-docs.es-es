@@ -1,33 +1,33 @@
 ---
-title: Compilador advertencia (nivel 1) C4142
+title: ADVERTENCIA del compilador (nivel 1) C4142
 ms.date: 11/04/2016
 f1_keywords:
 - C4142
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: 762f52c9f051a660cce68d424e02fc45422376e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97b13ad65335df435d071c106f577aefca7e072d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302285"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625008"
 ---
-# <a name="compiler-warning-level-1-c4142"></a>Compilador advertencia (nivel 1) C4142
+# <a name="compiler-warning-level-1-c4142"></a>ADVERTENCIA del compilador (nivel 1) C4142
 
-¡¡¡Redefinición benigno de tipo
+redefinición benigna de tipo
 
-Se vuelve a definir un tipo de forma que no tiene ningún efecto en el código generado.
+Un tipo se redefine de forma que no tiene ningún efecto en el código generado.
 
 Posibles causas del error:
 
 - Una función miembro de una clase derivada tiene un tipo de valor devuelto diferente de la función miembro correspondiente de la clase base.
 
-- Un tipo definido con el `typedef` se vuelve a definir comandos con una sintaxis diferente.
+- Un tipo definido con el comando `typedef` se redefine con una sintaxis diferente.
 
-El ejemplo siguiente genera C4142:
+En el ejemplo siguiente se genera C4142:
 
-```
+```c
 // C4142.c
 // compile with: /W1
 float X2;
