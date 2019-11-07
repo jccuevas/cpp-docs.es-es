@@ -1,21 +1,21 @@
 ---
 title: .SEQ
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .SEQ
 helpviewer_keywords:
 - .SEQ directive
 ms.assetid: 1f8bca31-e29d-4537-b9ca-f8463af75281
-ms.openlocfilehash: 790c7ee8eec300447caef96a8754ffc592422516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19bf9ec671322a091bea53083efb870d5948277b
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178662"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703876"
 ---
-# <a name="seq"></a>.SEQ
+# <a name="seq-32-bit-masm"></a>. SEQ (32 bits MASM)
 
-Ordena los segmentos de forma secuencial (el orden predeterminado).
+Ordena los segmentos secuencialmente (el orden predeterminado). (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
