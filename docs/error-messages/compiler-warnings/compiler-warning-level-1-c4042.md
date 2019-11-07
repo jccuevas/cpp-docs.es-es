@@ -1,35 +1,35 @@
 ---
-title: Compilador advertencia (nivel 1) C4042
+title: ADVERTENCIA del compilador (nivel 1) C4042
 ms.date: 11/04/2016
 f1_keywords:
 - C4042
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 99f4f45aad82aa9898dad4cffb60b8e3311ddc9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db7f0425c3752c20ca8c5d4b6c95845ff64475c5
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152148"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627032"
 ---
-# <a name="compiler-warning-level-1-c4042"></a>Compilador advertencia (nivel 1) C4042
+# <a name="compiler-warning-level-1-c4042"></a>ADVERTENCIA del compilador (nivel 1) C4042
 
-'identifier': tiene la clase de almacenamiento incorrecta
+' Identifier ': tiene una clase de almacenamiento incorrecta
 
-La clase de almacenamiento especificada no se puede usar con este identificador en este contexto. El compilador usa la clase de almacenamiento predeterminada en su lugar:
+La clase de almacenamiento especificada no se puede usar con este identificador en este contexto. En su lugar, el compilador usa la clase de almacenamiento predeterminada:
 
-- `extern`, si *identificador* es una función.
+- `extern`, si el *identificador* es una función.
 
-- **Auto**si *identificador* es un parámetro formal o una variable local.
+- **auto**, si *Identifier* es un parámetro formal o una variable local.
 
-- La clase sin almacenamiento si *identificador* es una variable global.
+- Sin clase de almacenamiento, si el *identificador* es una variable global.
 
-Esta advertencia puede deberse a que se especifica una clase de almacenamiento distinto **registrar** en una declaración de parámetro.
+Esta advertencia puede deberse a la especificación de una clase de almacenamiento distinta de **Register** en una declaración de parámetro.
 
-El ejemplo siguiente genera C4042
+En el ejemplo siguiente se genera C4042
 
-```
+```cpp
 // C4042.cpp
 // compile with: /W1 /LD
 int func2( __declspec( thread ) int tls_i )    // C4042
