@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6983baacd9cc40d916f2e1e6213dde1f92e23ea3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
+ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689954"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842323"
 ---
 # <a name="basic_string-class"></a>basic_string (Clase)
 
@@ -136,13 +136,13 @@ class basic_string;
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *CharType*
-El tipo de datos de un carácter único que se almacenará en la cadena. La C++ biblioteca estándar proporciona especializaciones de esta plantilla de clase, con la [cadena](../standard-library/string-typedefs.md#string) de definiciones de tipo para elementos de tipo **Char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t` y [u32string ](../standard-library/string-typedefs.md#u32string)por `char32_t`.
+\ *CharType*
+El tipo de datos de un carácter único que se almacenará en la cadena. La C++ biblioteca estándar proporciona especializaciones de esta plantilla de clase, con la [cadena](../standard-library/string-typedefs.md#string) de definiciones de tipo para elementos de tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`y [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
 
 *Rasgos* \
-La clase `Traits` describe varias propiedades importantes de los `CharType` elementos de una especialización de basic_string. El valor predeterminado es `char_traits`< `CharType`>.
+La clase `Traits`describe diversas propiedades importantes de los elementos `CharType` de una especialización basic_string. El valor predeterminado es `char_traits`< `CharType`>.
 
-@No__t_1 de *asignador*
+\ de *asignador*
 El tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria de la cadena. El valor predeterminado es **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Constructores
@@ -313,13 +313,13 @@ Cadena de C que se va a anexar.
 \ *Str*
 Cadena cuyos caracteres se van a anexar.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la parte de la cadena de origen que proporciona los caracteres que se va a anexar.
 
 *recuento* \
 Número máximo de caracteres que se van a anexar desde la cadena de origen.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que se va a anexar.
 
 *primer* \
@@ -477,7 +477,7 @@ Número de caracteres que se van a asignar a partir de la cadena de origen.
 \ *Str*
 Cadena de origen cuyos caracteres se van a asignar a la cadena de destino.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que se va a asignar.
 
 *primer* \
@@ -601,7 +601,7 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición del elemento al que se va a hacer referencia.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -614,7 +614,7 @@ El primer elemento de la cadena tiene un índice de cero y los enteros positivos
 
 El [operador&#91; ](#op_at) miembro es más rápido que la función miembro `at` para proporcionar acceso de lectura y escritura a los elementos de una cadena.
 
-El `operator[]` miembro no comprueba si el índice pasado como parámetro es válido, pero la función miembro `at` realiza y, por lo tanto, debe usarse si la validez no es cierta. Índice no válido, que es un índice menor que cero o mayor o igual que el tamaño de la cadena, que se pasa a la función miembro `at` produce una excepción de la [clase out_of_range](../standard-library/out-of-range-class.md) . Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
+El `operator[]` miembro no comprueba si el índice pasado como parámetro es válido, pero la función miembro `at` realiza y, por lo tanto, debe usarse si la validez no es cierta. Índice no válido, que es un índice menor que cero o mayor o igual que el tamaño de la cadena, que se pasa a la función miembro `at` produce una excepción de [clase out_of_range](../standard-library/out-of-range-class.md) . Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
 
 La referencia devuelta puede ser anulada por las reasignaciones de cadena o las modificaciones de las cadenas no **const**.
 
@@ -750,7 +750,7 @@ basic_string(
 \ *ptr*
 Cadena de C cuyos caracteres se van a usar para inicializar el `string` que se crea. Este valor no puede ser un puntero nulo.
 
-@No__t_1 *_Al*
+*_Al*\
 Clase de asignador de almacenamiento para el objeto de cadena que se crea.
 
 *recuento* \
@@ -759,10 +759,10 @@ Número de caracteres que se van a inicializar.
 \ *derecha*
 Cadena que inicializa la cadena que se crea.
 
-@No__t_1 *_Roff*
+*_Roff*\
 Índice de un carácter en una cadena que es el primero que se utilizará para inicializar los valores de caracteres para la cadena que se crea.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que se copia en la cadena que se crea.
 
 *primer* \
@@ -894,7 +894,7 @@ Puntero a la versión de estilo C de la cadena que llama.  El valor de puntero n
 
 ### <a name="remarks"></a>Comentarios
 
-Los objetos de tipo String que pertenecen a la plantilla de clase basic_string \<char > no tienen una terminación nula. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte de la cadena igual que cualquier otro carácter. Hay una conversión automática de **const char**  <strong>\*</strong> en cadenas, pero la clase String no proporciona conversiones automáticas de cadenas de estilo C a objetos de tipo **basic_string \<char >** .
+Los objetos de tipo String que pertenecen a la plantilla de clase basic_string\<char > no tienen por qué terminar con NULL. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte de la cadena igual que cualquier otro carácter. Hay una conversión automática de **const char** <strong>\*</strong> en cadenas, pero la clase String no proporciona conversiones automáticas de cadenas de estilo C a objetos de tipo **basic_string\<char >** .
 
 No se debe modificar la cadena de estilo C devuelta, ya que esto podría anular el puntero a la cadena, ni eliminarla, ya que la cadena tiene una duración limitada y es propiedad de la cadena de clase.
 
@@ -1159,16 +1159,16 @@ int compare(
 \ *Str*
 Cadena que se va a comparar con la cadena de operando.
 
-@No__t_1 *_Pos1*
+*_Pos1*\
 Índice de la cadena de operando en la que comienza la comparación.
 
-@No__t_1 *_Num1*
+*_Num1*\
 Número máximo de caracteres de la cadena de operando que se va a comparar.
 
-@No__t_1 *_Num2*
+*_Num2*\
 Número máximo de caracteres de la cadena de parámetro que se va a comparar.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la cadena de parámetro en la que comienza la comparación.
 
 *recuento* \
@@ -1490,7 +1490,7 @@ Matriz de caracteres de destino en la que van a copiarse los elementos.
 
 _ *Cuente* el número de caracteres que se copiarán, como máximo, de la cadena de origen.
 
-@No__t_1 *_Off*
+*_Off*\
 Posición inicial de la cadena de origen a partir de la que se van a realizar las copias.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1593,12 +1593,12 @@ size_type _Copy_s(
 \ de *destino*
 Matriz de caracteres de destino en la que van a copiarse los elementos.
 
-\ *dest_size*
+*dest_size*\
 Tamaño del *destino*.
 
 _ *Cuente* el número de caracteres que se copiarán, como máximo, de la cadena de origen.
 
-@No__t_1 *_Off*
+*_Off*\
 Posición inicial de la cadena de origen a partir de la que se van a realizar las copias.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1658,23 +1658,26 @@ The copied characters array2 is: World
 
 ## <a name="data"></a>  basic_string::data
 
-Convierte el contenido de una cadena en una matriz de caracteres.
+Convierte el contenido de una cadena en una matriz de caracteres terminada en NULL.
 
 ```cpp
-const value_type *data() const;
+const value_type *data() const noexcept;
+value_type *data() noexcept;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al primer elemento de la matriz que contiene el contenido de la cadena, o bien, en el caso de una matriz vacía, un puntero no nulo que no se puede desreferenciar.
+Puntero al primer elemento de la matriz terminada en null que contiene el contenido de la cadena. En el caso de una cadena vacía, el puntero apunta a un único carácter nulo igual a `value_type()`.
 
 ### <a name="remarks"></a>Comentarios
 
-Los objetos de tipo String que pertenecen a la plantilla de clase basic_string \<char > no tienen una terminación nula. El tipo de valor devuelto para `data` no es una cadena de C válida, porque no se anexa ningún carácter nulo. El carácter nulo '\0' se usa como un carácter especial en una cadena de C para marcar el final de la cadena, pero no tiene ningún significado especial en un objeto de cadena de tipo y puede ser una parte del objeto de cadena igual que cualquier otro carácter.
+El puntero devuelto por `data` puntos en un intervalo válido `[data(), data() + size()]`. Cada elemento del intervalo corresponde a los datos actuales de la cadena. Es decir, para cada desplazamiento válido *n* en el intervalo, `data() + n == addressof(operator[](n))`.
 
-Hay una conversión automática de **const char**  <strong>\*</strong> en cadenas, pero la clase String no proporciona conversiones automáticas de cadenas de estilo C a objetos de tipo **basic_string \<char >** .
+Si modifica el contenido de la cadena devuelta por la sobrecarga **const** de `data`, el comportamiento es indefinido. También obtiene un comportamiento indefinido si el carácter nulo del terminal se cambia a cualquier otro valor. El puntero devuelto se puede invalidar si se pasa una referencia no const a la cadena a una función de biblioteca estándar. También se puede invalidar mediante una llamada a una función miembro no const. Las llamadas a miembros `at`, `back`, `begin`, `end`, `front`, `rbegin`, `rend`y `operator[]` no invalidan el puntero. 
 
-No se debe modificar la cadena devuelta, ya que esto podría anular el puntero a la cadena, ni eliminarla, ya que la cadena tiene una duración limitada y es propiedad de la cadena de clase.
+Antes de C++ 11, `data` no garantizaba que la cadena devuelta finalizaba en NULL. Dado que C++ 11, `data` y `c_str` devuelven una cadena terminada en NULL y, de hecho, son iguales.
+
+La sobrecarga no const es nueva en C++ 17. Para usarlo, especifique la opción del compilador **/STD: c++ 17** o **/STD: c + + latest** .
 
 ### <a name="example"></a>Ejemplo
 
@@ -1916,10 +1919,10 @@ Iterador que dirige a la posición del primer elemento del intervalo que se va a
 *última* \
 Iterador que dirige a la posición situada una posición después del último elemento del intervalo que se va a borrar.
 
-@No__t_1 *_It*
+*_It*\
 Iterador que dirige a la posición del elemento de la cadena que se va a borrar.
 
-@No__t_1 *_Pos*
+*_Pos*\
 Índice del primer carácter de la cadena que se va a quitar.
 
 *recuento* \
@@ -2019,10 +2022,10 @@ size_type find(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que va a buscar la función miembro.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición donde se va a iniciar la búsqueda.
 
 \ *ptr*
@@ -2194,10 +2197,10 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que va a buscar la función miembro.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición donde se va a iniciar la búsqueda.
 
 \ *ptr*
@@ -2382,10 +2385,10 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que va a buscar la función miembro.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición donde se va a iniciar la búsqueda.
 
 \ *ptr*
@@ -2569,10 +2572,10 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que va a buscar la función miembro.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición donde va a terminar la búsqueda.
 
 \ *ptr*
@@ -2758,10 +2761,10 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que va a buscar la función miembro.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición donde va a terminar la búsqueda.
 
 \ *ptr*
@@ -3025,7 +3028,7 @@ void insert(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_P0*
+*_P0*\
 Índice de la posición detrás del punto de inserción de los nuevos caracteres.
 
 \ *ptr*
@@ -3037,13 +3040,13 @@ Número de caracteres que se van a insertar.
 \ *Str*
 Cadena que se va a insertar total o parcialmente en la cadena de destino.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la parte de la cadena de origen que proporciona los caracteres que se va a anexar.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter de los elementos que se van a insertar.
 
-@No__t_1 *_It*
+*_It*\
 Iterador que direcciona la posición detrás de la cual se va a insertar un carácter.
 
 *primer* \
@@ -3307,7 +3310,7 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se va a comprobar el valor devuelto para el valor `npos`, es posible que no funcione a menos que el valor devuelto sea del tipo [size_type](#size_type) y no de **int** o **sin signo**.
+Cuando se va a comprobar el valor devuelto para el valor `npos`, es posible que no funcione a menos que el valor devuelto sea de tipo [size_type](#size_type) y no sea **int** o **sin signo**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -3330,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Carácter que se va a anexar.
 
 \ *ptr*
@@ -3422,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que se va a asignar.
 
 \ *ptr*
@@ -3507,7 +3510,7 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición del elemento al que se va a hacer referencia.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3520,7 +3523,7 @@ El primer elemento de la cadena tiene un índice de cero y los enteros positivos
 
 `operator[]` es más rápido que la función miembro [at](#at) a la hora de proporcionar acceso de lectura y escritura a los elementos de una cadena.
 
-`operator[]` no comprueba si el índice pasado como parámetro es válido, pero la función miembro `at` realiza y, por lo tanto, se debe usar en la validez no es cierto. Un índice no válido (un índice menor que cero o mayor o igual que el tamaño de la cadena) que se pasa a la función miembro `at` produce una excepción de la [clase out_of_range](../standard-library/out-of-range-class.md) . Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
+`operator[]` no comprueba si el índice pasado como parámetro es válido, pero la función miembro `at` realiza y, por lo tanto, se debe usar en la validez no es cierto. Un índice no válido (un índice menor que cero o mayor o igual que el tamaño de la cadena) que se pasa a la función miembro `at` produce una excepción de [clase out_of_range](../standard-library/out-of-range-class.md) . Un índice no válido pasado a `operator[]` tiene como resultado un comportamiento indefinido, pero el índice igual a la longitud de la cadena es un índice válido para cadenas const y el operador devuelve el carácter nulo cuando se ha pasado este índice.
 
 La referencia devuelta puede ser anulada por las reasignaciones de cadena o las modificaciones de las cadenas no **const**.
 
@@ -3624,7 +3627,7 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Carácter que se va a agregar al final de la cadena.
 
 ### <a name="remarks"></a>Comentarios
@@ -3924,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 \ *Str*
 Cadena que va a ser un origen de caracteres para la cadena de operando.
 
-@No__t_1 *_Pos1*
+*_Pos1*\
 Índice de la cadena de operando en la que comienza la sustitución.
 
-@No__t_1 *_Num1*
+*_Num1*\
 Número máximo de caracteres de la cadena de operando que se van a sustituir.
 
-@No__t_1 *_Pos2*
+*_Pos2*\
 Índice de la cadena de parámetro en la que comienza la copia.
 
-@No__t_1 *_Num2*
+*_Num2*\
 Número máximo de caracteres de la cadena de C de parámetro que se van a usar.
 
 \ *ptr*
 Cadena de C que va a ser un origen de caracteres para la cadena de operando.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Carácter que se va a copiar en la cadena de operando.
 
 \ *first0*
@@ -3955,7 +3958,7 @@ Iterador, const_pointer o const_iterator que dirige al primer carácter de la ca
 Iterador, const_pointer o const_iterator que dirige al último carácter de la cadena de parámetro que se va a copiar.
 
 *recuento* \
-El número de veces que se copia *_Ch* en la cadena de operando.
+El número de veces que *_Ch* se copia en la cadena de operando.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4248,7 +4251,7 @@ void resize(
 *recuento* \
 El nuevo tamaño de la cadena.
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor con el que se inicializan los caracteres anexados si se necesitan elementos adicionales.
 
 ### <a name="remarks"></a>Comentarios
@@ -4381,10 +4384,10 @@ size_type rfind(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 Valor de carácter que va a buscar la función miembro.
 
-@No__t_1 *_Off*
+*_Off*\
 Índice de la posición donde se va a iniciar la búsqueda.
 
 \ *ptr*
@@ -4664,7 +4667,7 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Off*
+*_Off*\
 Índice que localiza el elemento en la posición a partir de la que se realiza la copia de la cadena, con un valor predeterminado de 0.
 
 *recuento* \
@@ -4784,7 +4787,7 @@ typedef Traits traits_type;
 
 El tipo es un sinónimo del segundo parámetro de plantilla `Traits`.
 
-Para el tipo `string`, es equivalente a **char_traits \<char >** .
+Para el tipo `string`, es equivalente a **char_traits\<char >** .
 
 ### <a name="example"></a>Ejemplo
 
