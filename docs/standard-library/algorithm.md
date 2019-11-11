@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f72969052ae3ecc0d9fb88382e1560c846e2167c
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456504"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912894"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ Define las funciones de plantilla contenedor de la biblioteca estándar de C++ q
 ```
 
 > [!NOTE]
-> El \<algoritmo > Biblioteca también utiliza la `#include <initializer_list>` instrucción.
+> El algoritmo de \<> Biblioteca también utiliza la instrucción `#include <initializer_list>`.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -36,7 +36,7 @@ Los algoritmos de la biblioteca estándar de C++ procesan los intervalos de iter
 
 Los algoritmos de la biblioteca estándar de C++ extienden las acciones que admiten las operaciones y las funciones miembro de cada contenedor de la biblioteca estándar de C++ y permiten trabajar, por ejemplo, con diferentes tipos de objetos contenedor al mismo tiempo. Se usan dos sufijos para transmitir información sobre el propósito de los algoritmos.
 
-- El sufijo `_if` indica que el algoritmo se usa con objetos de función que operan sobre los valores de los elementos, en lugar de usarse con los valores de los propios elementos. El algoritmo `find_if` busca los elementos cuyos valores satisfacen el criterio especificado por un objeto de función y el algoritmo `find` busca un valor determinado.
+- El sufijo `_if` indica que el algoritmo se usa con objetos de función que operan sobre los valores de los elementos en lugar de en los propios elementos. El algoritmo `find_if` busca los elementos cuyos valores satisfacen el criterio especificado por un objeto de función y el algoritmo `find` busca un valor determinado.
 
 - El sufijo _copy indica que el algoritmo no solo manipula los valores de los elementos, sino que también copia los valores modificados a un intervalo de destino. El algoritmo `reverse` invierte el orden de los elementos dentro de un intervalo y el algoritmo `reverse_copy` también copia el resultado a un intervalo de destino.
 
@@ -52,7 +52,7 @@ Los algoritmos numéricos de la biblioteca estándar de C++ que se proporcionan 
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Devuelve **verdadero** cuando una condición está presente en cada elemento del intervalo especificado.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Devuelve **verdadero** cuando una condición está presente al menos una vez en el intervalo de elementos especificado.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Comprueba si hay un elemento en un intervalo ordenado que sea igual a un valor especificado o equivalente a este del modo especificado por un predicado binario.|
-|[clamp](../standard-library/algorithm-functions.md#clamp)||
+|[Sujet](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia delante.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia atrás.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copiar todos los elementos de un intervalo determinado que prueban **true** para una condición especificada|
