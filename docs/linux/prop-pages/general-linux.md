@@ -2,12 +2,12 @@
 title: Propiedades generales (proyecto de C++ para Linux) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: ce3683f11d80c253195b751b5eed364fbc04b68a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: c17a5e0214e6365d604a80bd4b3891858f0f9186
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821288"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626811"
 ---
 # <a name="general-properties-linux-c"></a>Propiedades generales (C++ para Linux)
 
@@ -19,7 +19,7 @@ La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones p
 
 ::: moniker range=">=vs-2017"
 
-Propiedad. | Descripción | Opciones
+Propiedad. | DESCRIPCIÓN | Opciones
 --- | ---| ---
 Directorio de salida | Especifica una ruta de acceso relativa al directorio de archivos de salida; puede incluir variables de entorno.
 Directorio intermedio | Especifica una ruta de acceso relativa al directorio de archivos intermedios; puede incluir variables de entorno.
@@ -35,4 +35,3 @@ Tipo de configuración | Especifica el tipo de salida que genera esta configurac
 Uso de STL | Especifica la biblioteca estándar de C++ que se usará para esta configuración. | **Standard C++ Library para GNU compartida**<br>**Standard C++ Library para GNU estática (-static)**<br>
 
 ::: moniker-end
-
