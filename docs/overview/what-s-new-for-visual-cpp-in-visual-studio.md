@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552343"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754132"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novedades de C++ en Visual Studio
 
@@ -257,6 +257,10 @@ El compilador admite aproximadamente un 75 % de las características nuevas de C
 
 El conjunto de herramientas del compilador MSVC en Visual Studio versión 15.7 ahora cumple con el estándar de C++. Para obtener más información, vea [Announcing: MSVC Conforms to the C++ Standard](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) (Anuncio: MSVC cumple con el estándar de C++) y [Conformidad del lenguaje Microsoft C++](../visual-cpp-language-conformance.md).
 
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017, versión 15.8
+
+El conmutador de compilador [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) habilita el nuevo preprocesador MSVC experimental que finalmente será compatible con todos los estándares de C y C++ aplicables. Para obtener más información, consulte [Información general del preprocesador experimental MSVC](../preprocessor/preprocessor-experimental-overview.md).
+
 ### <a name="new-compiler-options"></a>Nuevas opciones del compilador
 
 - [/permissive-](../build/reference/permissive-standards-conformance.md): habilita todas las opciones del compilador de cumplimiento de estándares estrictos y deshabilita la mayoría de las extensiones del compilador específicas de Microsoft, pero no `__declspec(dllimport)`, por ejemplo. Esta opción está activada de forma predeterminada en Visual Studio 2017 versión 15.5.  El modo de cumplimiento **/permissive-** incluye compatibilidad para la búsqueda de nombres en dos fases. Para obtener más información, vea [C++ Conformance Improvements in Visual Studio](cpp-conformance-improvements.md) (Mejoras de conformidad de C++ en Visual Studio).
@@ -360,11 +364,11 @@ Para obtener una lista completa de las mejoras de la biblioteca estándar de Vis
 - Se ha agregado \<optional\>, \<variant\>, `shared_ptr::weak_type` y \<cstdalign\>.
 - Se ha habilitado `constexpr` de C++14 en `min(initializer_list)`, `max(initializer_list)`, `minmax(initializer_list)`, `min_element()`, `max_element()` y `minmax_element()`.
 
-Para más información, consulte [Conformidad del lenguaje Visual C++](../visual-cpp-language-conformance.md).
+Para más información, consulte [Tabla de conformidad del lenguaje Microsoft C++](../visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versión 15.3
 
-- Se implementaron varias características adicionales de C++17. Para más información, consulte [Conformidad del lenguaje Visual C++](cpp-conformance-improvements.md#improvements_153).
+- Se implementaron varias características adicionales de C++17. Para más información, consulte [Tabla de conformidad del lenguaje Microsoft C++](cpp-conformance-improvements.md#improvements_153).
 - Se implementó P0602R0 "variante y opcional deben propagar la trivialidad de copia/movimiento".
 - La biblioteca estándar ahora tolera de manera oficial que RTTI dinámico se deshabilite mediante la opción [/GR-](../build/reference/gr-enable-run-time-type-information.md). `dynamic_pointer_cast()` y `rethrow_if_nested()` requieren `dynamic_cast` de forma inherente, de modo que la biblioteca estándar ahora los marca como `=delete` en **/GR-** .
 - Incluso si RTTI dinámico se ha deshabilitado mediante **/GR-** , "RTTI estático" (con el formato de `typeid(SomeType)`) sigue estando disponible y permite potenciar varios componentes de la biblioteca estándar. La biblioteca estándar ahora también admite la deshabilitación de esta característica mediante **/D\_HAS\_STATIC\_RTTI=0**. Esta marca también deshabilita `std::any`, las funciones miembros `target()` y `target_type()` de `std::function` y la función de miembro friend `get_deleter()` de `std::shared_ptr` y `std::weak_ptr`.
@@ -422,7 +426,7 @@ Para más información, consulte [Conformidad del lenguaje Visual C++](../visua
 - `constexpr char_traits`
 - Guías de deducción para la biblioteca estándar
 
-Para más información, consulte [Conformidad del lenguaje Visual C++](../visual-cpp-language-conformance.md).
+Para más información, consulte [Tabla de conformidad del lenguaje Microsoft C++](../visual-cpp-language-conformance.md).
 
 ### <a name="performance-and-throughput-fixes"></a>Correcciones de rendimiento
 
@@ -570,7 +574,7 @@ Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin conv
 
 - Se admite una configuración adicional a través de un archivo CMakeSettings.json que reside en la misma carpeta que el archivo CMakeLists.txt.
 
-  ![Abrir carpeta Cmake](media/cmake-cpp.png "Abrir carpeta CMake")
+  ![Abrir carpeta CMake](media/cmake-cpp.png "Abrir carpeta CMake")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 versión 15.3
 

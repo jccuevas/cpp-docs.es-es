@@ -3,12 +3,12 @@ title: Instalación de la carga de trabajo de Linux para C++ en Visual Studio
 description: En este artículo se describe cómo descargar, instalar y configurar la carga de trabajo de Linux para C++ en Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925418"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912908"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Descargar, instalar y configurar la carga de trabajo de Linux
 
@@ -24,7 +24,7 @@ Puede usar el IDE de Visual Studio en Windows para crear, editar y depurar proy
 
 Puede trabajar en la base de código existente que utiliza CMake sin tener que convertirla en un proyecto de Visual Studio. Si la base de código es multiplataforma, puede tener como destino Windows y Linux desde dentro de Visual Studio. Por ejemplo, puede editar, compilar y depurar el código en Windows con Visual Studio y, después, redestinar rápidamente el proyecto a Linux para compilar y depurar en un entorno Linux. Los archivos de encabezado de Linux se copian automáticamente en el equipo local, donde Visual Studio los usa para proporcionar compatibilidad completa con IntelliSense (finalización de instrucciones, Ir a definición, etc.). 
  
-Para cualquiera de estos escenarios, se requiere la carga de trabajo de **desarrollo de Linux con C++**. 
+Para cualquiera de estos escenarios, se requiere la carga de trabajo de **desarrollo de Linux con C++** . 
 
 ::: moniker-end
 
@@ -36,11 +36,11 @@ Para cualquiera de estos escenarios, se requiere la carga de trabajo de **desarr
 
    ![Cuadro de búsqueda de Windows](media/visual-studio-installer-search.png)
 
-2. Busque el instalador en los resultados de la categoría **Aplicaciones** y haga doble clic en este. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++**.
+2. Busque el instalador en los resultados de la categoría **Aplicaciones** y haga doble clic en este. Cuando se abra el instalador, elija **Modificar** y después haga clic en la pestaña **Cargas de trabajo**. Desplácese hacia abajo hasta **Otros conjuntos de herramientas** y seleccione la carga de trabajo **Desarrollo de Linux con C++** .
 
    ![Carga de trabajo Visual C++ for Linux Development](media/linuxworkload.png)
 
-1. Si el destino es IoT o plataformas incrustadas, vaya al panel **Detalles de instalación** a la derecha. En **Desarrollo de Linux con C++**, expanda **Componentes opcionales** y elija los componentes que necesite. La compatibilidad de CMake con Linux está seleccionada de forma predeterminada.
+1. Si el destino es IoT o plataformas incrustadas, vaya al panel **Detalles de instalación** a la derecha. En **Desarrollo de Linux con C++** , expanda **Componentes opcionales** y elija los componentes que necesite. La compatibilidad de CMake con Linux está seleccionada de forma predeterminada.
 
 1. Haga clic en **Modificar** para continuar con la instalación.
 
@@ -48,7 +48,7 @@ Para cualquiera de estos escenarios, se requiere la carga de trabajo de **desarr
 
 Si no dispone de una máquina Linux, puede crear una máquina virtual Linux en Azure. Para obtener más información, vea [Inicio rápido: Creación de una máquina virtual Linux en Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-En Windows 10, puede instalar y tener como destino su distribución de Linux favorita en el subsistema de Windows para Linux (WSL). Para obtener más información, vea [Windows Subsystem for Linux Installation Guide for Windows 10](/windows/wsl/install-win10) (Guía de instalación del subsistema de Windows para Linux en Windows 10). WSL es un entorno de consola muy conveniente, pero su uso no es aconsejable en aplicaciones gráficas. 
+En Windows 10, puede instalar y tener como destino su distribución de Linux favorita en el subsistema de Windows para Linux (WSL). Para obtener más información, vea [Windows Subsystem for Linux Installation Guide for Windows 10](/windows/wsl/install-win10) (Guía de instalación del subsistema de Windows para Linux en Windows 10). Si no puede obtener acceso a la Tienda Windows, puede [descargar manualmente los paquetes de distribución de WSL](/windows/wsl/install-manual). WSL es un entorno de consola muy conveniente, pero su uso no es aconsejable en aplicaciones gráficas. 
 
 ::: moniker-end
 
@@ -94,7 +94,7 @@ sudo apt-get install g++ gdb make rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu en sistemas Linux remotos
 
-El sistema Linux de destino debe tener **openssh-server**, **g++**, **gdb** y **make** instalados, y el demonio de ssh debe estar en ejecución. **zip** y **rsync** son necesarios para realizar la sincronización automática de encabezados remotos con el equipo local para la compatibilidad con IntelliSense. Si estas aplicaciones aún no están instaladas, puede hacerlo como sigue:
+El sistema Linux de destino debe tener **openssh-server**, **g++** , **gdb** y **make** instalados, y el demonio de ssh debe estar en ejecución. **zip** y **rsync** son necesarios para realizar la sincronización automática de encabezados remotos con el equipo local para la compatibilidad con IntelliSense. Si estas aplicaciones aún no están instaladas, puede hacerlo como sigue:
 
 1. En un símbolo del sistema del shell del equipo Linux, ejecute:
 
@@ -118,7 +118,7 @@ El sistema Linux de destino debe tener **openssh-server**, **g++**, **gdb** y **
 
 ## <a name="fedora-on-wsl"></a>Fedora en WSL
 
-Fedora usa el instalador de paquetes **dnf**. Para descargar **g++**, **gdb**, **make**, **rsync** y **zip**, ejecute lo siguiente:
+Fedora usa el instalador de paquetes **dnf**. Para descargar **g++** , **gdb**, **make**, **rsync** y **zip**, ejecute lo siguiente:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync make zip
@@ -132,7 +132,7 @@ Fedora usa el instalador de paquetes **dnf**. Para descargar **g++**, **gdb**, *
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora en sistemas Linux remotos
 
-La máquina de destino en la que se ejecuta Fedora usa el instalador de paquetes **dnf**. Para descargar **openssh-server**, **g++**, **gdb**, **make**, **rsync** y **zip** y reiniciar el demonio de ssh, siga estas instrucciones:
+La máquina de destino en la que se ejecuta Fedora usa el instalador de paquetes **dnf**. Para descargar **openssh-server**, **g++** , **gdb**, **make**, **rsync** y **zip** y reiniciar el demonio de ssh, siga estas instrucciones:
 
 1. En un símbolo del sistema del shell del equipo Linux, ejecute:
 

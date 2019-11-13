@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4393
+title: ADVERTENCIA del compilador (nivel 1) C4393
 ms.date: 11/04/2016
 f1_keywords:
 - C4393
 helpviewer_keywords:
 - C4393
 ms.assetid: 353a0539-d1ea-4c1b-8849-c9b321ec9842
-ms.openlocfilehash: 4226c8ecd41e890d70fa5741decae605d45b620f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cb9a063a2f6e4660c3f84516527c1417c55e46
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386933"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966148"
 ---
-# <a name="compiler-warning-level-1-c4393"></a>Advertencia del compilador (nivel 1) C4393
+# <a name="compiler-warning-level-1-c4393"></a>ADVERTENCIA del compilador (nivel 1) C4393
 
-'var': const no tiene ningún efecto en el miembro de datos literal; pasa por alto
+' var ': const no tiene ningún efecto en el miembro de datos literal; tendrán
 
-Un [literal](../../extensions/literal-cpp-component-extensions.md) miembro de datos también se especificó como const.  Puesto que un miembro de datos literal implica const, no deberá agregar const a la declaración.
+Un miembro de datos [literal](../../extensions/literal-cpp-component-extensions.md) también se especificó como const.  Dado que un miembro de datos literal implica const, no es necesario agregar const a la declaración.
 
-El ejemplo siguiente genera C4393:
+En el ejemplo siguiente se genera C4393:
 
-```
+```cpp
 // C4393.cpp
 // compile with: /clr /W1 /c
 ref struct Y1 {

@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4378
+title: ADVERTENCIA del compilador (nivel 1) C4378
 ms.date: 11/04/2016
 f1_keywords:
 - C4378
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410413"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966493"
 ---
-# <a name="compiler-warning-level-1-c4378"></a>Advertencia del compilador (nivel 1) C4378
+# <a name="compiler-warning-level-1-c4378"></a>ADVERTENCIA del compilador (nivel 1) C4378
 
-Debe obtener punteros a función para ejecutar a los inicializadores; ModuleHandle:: ResolveMethodHandle
+Debe obtener punteros de función para ejecutar inicializadores. considere System:: ModuleHandle:: ResolveMethodHandle
 
-En **/CLR**, símbolos del inicializador contienen funciones de los tokens, no los punteros de funciones.  Debe convertir los tokens a punteros utilizando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+En **/CLR**, los símbolos de inicializador contienen tokens de función, no punteros de funciones.  Debe convertir los tokens en punteros mediante <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4378.
+En el ejemplo siguiente se genera C4378.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -65,9 +65,9 @@ int main () {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo resolver C4378.
+En el ejemplo siguiente se muestra cómo resolver C4378.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

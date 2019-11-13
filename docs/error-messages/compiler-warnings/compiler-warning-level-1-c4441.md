@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4441
+title: ADVERTENCIA del compilador (nivel 1) C4441
 ms.date: 11/04/2016
 f1_keywords:
 - C4441
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-ms.openlocfilehash: 45d7a6af09677c1e63dab5ffcc55c35d8203b40b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f45288e1e52d157e5c135a45c0801a909fccfbc
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408243"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966023"
 ---
-# <a name="compiler-warning-level-1-c4441"></a>Advertencia del compilador (nivel 1) C4441
+# <a name="compiler-warning-level-1-c4441"></a>ADVERTENCIA del compilador (nivel 1) C4441
 
-convención de llamada de 'cc1' omitida; en su lugar, usó 'cc2'
+se omitió la Convención de llamada de ' CC1 '; se usó ' CC2 ' en su lugar
 
-Las funciones miembro de tipos administrados definidos por el usuario y tipos genéricos de la función global deben usar el [__clrcall](../../cpp/clrcall.md) convención de llamada.  El compilador usa `__clrcall`.
+Las funciones miembro en los tipos administrados definidos por el usuario y los genéricos de funciones globales deben usar la Convención de llamada de [__clrcall](../../cpp/clrcall.md) .  El compilador usó `__clrcall`.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4441.
+En el ejemplo siguiente se genera C4441.
 
-```
+```cpp
 // C4441.cpp
 // compile with: /clr /W1 /c
 generic <class ItemType>
