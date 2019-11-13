@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4964
+title: ADVERTENCIA del compilador (nivel 1) C4964
 ms.date: 11/04/2016
 f1_keywords:
 - C4964
 helpviewer_keywords:
 - C4964
 ms.assetid: b89c9274-8a92-4b7c-aa30-3fbb1b68ac73
-ms.openlocfilehash: 556c6e0963fc41d76cd123373cc4cd85edc66962
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a75a1b7d3738794046ac697113c3c746bb6fcff
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384145"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052248"
 ---
-# <a name="compiler-warning-level-1-c4964"></a>Advertencia del compilador (nivel 1) C4964
+# <a name="compiler-warning-level-1-c4964"></a>ADVERTENCIA del compilador (nivel 1) C4964
 
-Se especificó ninguna opción de optimización; no se recopilará la información de perfil
+No se especificaron opciones de optimización; no se recopilará la información de perfil
 
-[/ GL](../../build/reference/gl-whole-program-optimization.md) y [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) se han especificado, pero no las optimizaciones se han solicitado, por lo que no se generará ningún archivo .pgc y, por lo tanto, no será posibles optimizaciones guiadas por perfil.
+Se especificaron [/GL](../../build/reference/gl-whole-program-optimization.md) y [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) , pero no se solicitaron optimizaciones, por lo que no se generarán archivos. PGC y, por lo tanto, no se podrá realizar ninguna optimización guiada por perfiles.
 
-Si desea que los archivos .pgc que se genere cuando ejecute la aplicación, especifique uno de los [/O](../../build/reference/o-options-optimize-code.md) opciones del compilador.
+Si desea que se generen archivos. PGC al ejecutar la aplicación, especifique una de las opciones del compilador [/o](../../build/reference/o-options-optimize-code.md) .
 
-El ejemplo siguiente genera C4964:
+En el ejemplo siguiente se genera C4964:
 
-```
+```cpp
 // C4964.cpp
 // compile with: /W1 /GL /link /ltcg:pgi
 // C4964 expected

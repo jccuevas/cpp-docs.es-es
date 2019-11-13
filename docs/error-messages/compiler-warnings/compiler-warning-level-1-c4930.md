@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4930
+title: ADVERTENCIA del compilador (nivel 1) C4930
 ms.date: 11/04/2016
 f1_keywords:
 - C4930
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242791"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050281"
 ---
-# <a name="compiler-warning-level-1-c4930"></a>Advertencia del compilador (nivel 1) C4930
+# <a name="compiler-warning-level-1-c4930"></a>ADVERTENCIA del compilador (nivel 1) C4930
 
-'prototipo': no se llama a la función prototipo (era pensada una definición de variable?)
+' prototype ': no se ha llamado a la función prototipo (¿se ha diseñado una definición de variable?)
 
-El compilador detectó un prototipo de función no utilizada. Si el prototipo debía entenderse como una declaración de variable, quite los paréntesis de apertura y cierre.
+El compilador detectó un prototipo de función no utilizado. Si el prototipo se diseñó como una declaración de variable, quite los paréntesis de apertura y cierre.
 
-El ejemplo siguiente genera el error C4930:
+En el ejemplo siguiente se genera C4930:
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-C4930 también puede producirse cuando el compilador no puede distinguir entre una declaración de prototipo de función y una llamada de función.
+C4930 también se puede producir cuando el compilador no puede distinguir entre una declaración de prototipo de función y una llamada de función.
 
-El ejemplo siguiente genera el error C4930:
+En el ejemplo siguiente se genera C4930:
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-En el ejemplo anterior, el resultado de un método que toma ningún argumento se pasa como argumento al constructor de una variable de clase local sin nombre. La llamada se puede eliminar la ambigüedad por la variable local de nombres o un prefijo de la llamada al método con una instancia de objeto junto con el operador de puntero a miembro adecuado.
+En el ejemplo anterior, el resultado de un método que toma cero argumentos se pasa como argumento al constructor de una variable de clase local sin nombre. Se puede eliminar la ambigüedad de la llamada mediante el nombre de la variable local o el prefijo de la llamada al método con una instancia del objeto junto con el operador de puntero a miembro adecuado.

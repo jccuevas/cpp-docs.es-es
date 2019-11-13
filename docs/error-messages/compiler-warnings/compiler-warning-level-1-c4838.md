@@ -1,31 +1,31 @@
 ---
-title: Compilador advertencia (nivel 1) C4838
+title: ADVERTENCIA del compilador (nivel 1) C4838
 ms.date: 11/04/2016
 f1_keywords:
 - C4838
 helpviewer_keywords:
 - C4838
 ms.assetid: fea07924-5feb-4ed4-99b5-1a8c41d28db6
-ms.openlocfilehash: dcb7062c751320a9f9c612b42caf6d018047d8d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 552c7d9e868ae531b1ff2ef20db7adfa813a4fbe
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380843"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051230"
 ---
-# <a name="compiler-warning-level-1-c4838"></a>Compilador advertencia (nivel 1) C4838
+# <a name="compiler-warning-level-1-c4838"></a>ADVERTENCIA del compilador (nivel 1) C4838
 
-conversión de 'type_1' a 'type_2' requiere una conversión de restricción
+la conversión de ' type_1 ' a ' type_2 ' requiere una conversión de restricción
 
-Se encontró una conversión de restricción implícita cuando se usa la inicialización de agregado o lista.
+Se encontró una conversión de restricción implícita al utilizar la inicialización de agregado o de lista.
 
-Conversiones de restricción implícitas en las asignaciones y la inicialización permite que el lenguaje C y C++ sigue palo, aunque inesperado de restricción es una causa de muchos errores de código. Para mejorar la seguridad de código, el estándar de C++ requiere un mensaje de diagnóstico cuando se produce una conversión de restricción en una lista de inicialización. En Visual C++, el diagnóstico es [Error del compilador C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) cuando se usa la sintaxis de inicialización uniforme admitida a partir de Visual Studio 2015. El compilador genera la advertencia C4838 cuando se usa la lista o la sintaxis de inicialización de agregado compatibles con Visual Studio 2013.
+El lenguaje C permite conversiones de restricción implícitas en las asignaciones y la inicialización, y C++ sigue el palo, aunque la restricción inesperada es una causa de muchos errores de código. Para que el código sea más C++ seguro, el estándar requiere un mensaje de diagnóstico cuando se produce una conversión de restricción en una lista de inicialización. En Visual C++, el diagnóstico es el [error del compilador C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) cuando se usa la sintaxis de inicialización uniforme que se admite a partir de Visual Studio 2015. El compilador genera la advertencia C4838 cuando se usa la sintaxis de inicialización de lista o agregado compatible con Visual Studio 2013.
 
-Una conversión de restricción puede ser correcta cuando se sabe que el intervalo posible de los valores convertidos puede caber en el destino. En este caso, sabrá que más de lo que hace el compilador. Si realiza una conversión de restricción intencionadamente, hacer que sus intenciones explícito mediante el uso de una conversión estática. En caso contrario, este mensaje de advertencia casi siempre indica que hay un error en el código. Puede corregirlo asegurándose de que los objetos que se inicializa con tipos que son lo suficientemente grandes como para controlar las entradas.
+Una conversión de restricción puede ser correcta si sabe que el posible intervalo de valores convertidos puede caber en el destino. En este caso, sabe que es más que el compilador. Si realiza una conversión de restricción intencionadamente, haga que sus intenciones sean explícitas mediante una conversión estática. De lo contrario, este mensaje de advertencia casi siempre indica que hay un error en el código. Puede corregirlo asegurándose de que los objetos que inicializa tienen tipos que son lo suficientemente grandes como para controlar las entradas.
 
-El ejemplo siguiente genera C4838 y muestra una forma de corregirlo:
+En el ejemplo siguiente se genera C4838 y se muestra una manera de corregirlo:
 
-```
+```cpp
 // C4838.cpp -- C++ narrowing conversion diagnostics
 // Compile by using: cl /EHsc C4838.cpp
 

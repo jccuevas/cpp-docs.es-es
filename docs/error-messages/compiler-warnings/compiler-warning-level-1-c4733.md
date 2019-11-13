@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4733
+title: ADVERTENCIA del compilador (nivel 1) C4733
 ms.date: 11/04/2016
 f1_keywords:
 - C4733
 helpviewer_keywords:
 - C4733
 ms.assetid: 7ef4f577-772d-4b66-a7bf-8958a6b250bc
-ms.openlocfilehash: 0d0b0b912ef15294f9a4362a79dffd6d7eeabed8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbecdda481748aa77eefdab8d61e50350804e09f
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221120"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051325"
 ---
-# <a name="compiler-warning-level-1-c4733"></a>Advertencia del compilador (nivel 1) C4733
+# <a name="compiler-warning-level-1-c4733"></a>ADVERTENCIA del compilador (nivel 1) C4733
 
-Inline asm que asigna a 'FS: 0': controlador no está registrado como controlador seguro
+Asignación de ASM en línea a ' FS: 0 ': el controlador no está registrado como controlador seguro
 
-Una función que modifique el valor en FS: 0 para agregar un nuevo controlador de excepción puede no funcionar con las excepciones seguras, porque no se puede registrar el controlador como un controlador de excepciones válido (vea [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
+Función que modifica el valor en FS: 0 para agregar un nuevo controlador de excepciones, puede que no funcione con excepciones seguras, ya que el controlador no se puede registrar como un controlador de excepciones válido (vea [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)).
 
-Para resolver esta advertencia, quite la definición FS: 0 o desactivar esta advertencia y usar [. SAFESEH](../../assembler/masm/dot-safeseh.md) para especificar los controladores de excepciones seguros.
+Para resolver esta advertencia, quite el FS: 0 definición o desactive esta advertencia y use [. SAFESEH](../../assembler/masm/dot-safeseh.md) para especificar los controladores de excepciones seguros.
 
-El ejemplo siguiente genera C4733:
+En el ejemplo siguiente se genera C4733:
 
-```
+```cpp
 // C4733.cpp
 // compile with: /W1 /c
 // processor: x86

@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4731
+title: ADVERTENCIA del compilador (nivel 1) C4731
 ms.date: 11/04/2016
 f1_keywords:
 - C4731
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: af091d1d35fff955afcc5af3da48b80416e79f36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2591756dfaa8887affbe4e470f1c98738b6b680
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385438"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052425"
 ---
-# <a name="compiler-warning-level-1-c4731"></a>Advertencia del compilador (nivel 1) C4731
+# <a name="compiler-warning-level-1-c4731"></a>ADVERTENCIA del compilador (nivel 1) C4731
 
-'pointer': 'registro' modificado por código ensamblador en línea de registro de puntero de marco
+' Pointer ': el registro de puntero de marco ' Register ' modificado por el código de ensamblado alineado
 
-Se modificó un registro de puntero de marco. Debe guardar y restaurar el registro en la variable en línea ensamblado bloque o de marco (local o un parámetro, según el registro modificado), o el código no funcionen correctamente.
+Se modificó un registro de puntero de marco. Debe guardar y restaurar el registro en el bloque de ensamblado insertado o en la variable de marco (local o de parámetro, en función del registro modificado) o es posible que el código no funcione correctamente.
 
-El ejemplo siguiente genera C4731:
+En el ejemplo siguiente se genera C4731:
 
-```
+```cpp
 // C4731.cpp
 // compile with: /W1 /LD
 // processor: x86
@@ -39,4 +39,4 @@ void bad(int p) {
 }
 ```
 
-EBP es el puntero de marco (FPO no permitido) y se está modificando. Cuando `p` es posterior al que hace referencia, se hace referencia relativa a `EBP`. Pero `EBP` se ha sobrescrito por el código, por lo que el programa no funcionará correctamente e incluso puede producir un error.
+EBP es el puntero de marco (no se permite el FPO) y se está modificando. Cuando se hace referencia a `p` posteriormente, se hace referencia a él en relación con `EBP`. Pero el código ha sobrescrito `EBP`, por lo que el programa no funcionará correctamente y puede incluso que se produzca un error.

@@ -1,36 +1,36 @@
 ---
-title: Advertencia del compilador (nivel 1) C4667
+title: ADVERTENCIA del compilador (nivel 1) C4667
 ms.date: 11/04/2016
 f1_keywords:
 - C4667
 helpviewer_keywords:
 - C4667
 ms.assetid: 5d2b7fe0-4f0e-4cd6-b432-ca02c3d194ab
-ms.openlocfilehash: 685cdc2577e1207360c793c82808919c39753f49
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ae0d5cdcc1f6cca25f55cd1d7c03cc345c39e5e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344479"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051392"
 ---
-# <a name="compiler-warning-level-1-c4667"></a>Advertencia del compilador (nivel 1) C4667
+# <a name="compiler-warning-level-1-c4667"></a>ADVERTENCIA del compilador (nivel 1) C4667
 
-'function': ninguna plantilla de función definida que coincida con creación de instancias forzada
+' función ': no hay ninguna plantilla de función definida que coincida con la creación de instancias forzada
 
-No se puede crear una instancia de una plantilla de función que no se ha declarado.
+No se puede crear una instancia de una plantilla de función que no se haya declarado.
 
-El siguiente ejemplo C4667:
+En el ejemplo siguiente se producirá C4667:
 
-```
+```cpp
 // C4667a.cpp
 // compile with: /LD /W1
 template
 void max(const int &, const int &); // C4667 expected
 ```
 
-Para evitar esta advertencia, declare primero la plantilla de función:
+Para evitar esta advertencia, primero declare la plantilla de función:
 
-```
+```cpp
 // C4667b.cpp
 // compile with: /LD
 // Declare the function template

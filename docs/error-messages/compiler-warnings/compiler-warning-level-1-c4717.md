@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4717
+title: ADVERTENCIA del compilador (nivel 1) C4717
 ms.date: 11/04/2016
 f1_keywords:
 - C4717
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221146"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051345"
 ---
-# <a name="compiler-warning-level-1-c4717"></a>Advertencia del compilador (nivel 1) C4717
+# <a name="compiler-warning-level-1-c4717"></a>ADVERTENCIA del compilador (nivel 1) C4717
 
-'function': recursiva en todas las rutas de control, función provocará el desbordamiento de pila en tiempo de ejecución
+' función ': recursivo en todas las rutas de acceso de control. la función causará el desbordamiento de la pila en tiempo de ejecución
 
-Cada ruta de acceso a través de una función contiene una llamada a la función. Dado que no hay ninguna manera de salir de la función sin llamar primero a sí mismo de forma recursiva, la función nunca se cerrará.
+Cada ruta de acceso a través de una función contiene una llamada a la función. Dado que no hay ninguna manera de salir de la función sin llamarlo a sí mismo de forma recursiva, la función nunca se cerrará.
 
-El ejemplo siguiente genera C4717:
+En el ejemplo siguiente se genera C4717:
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected

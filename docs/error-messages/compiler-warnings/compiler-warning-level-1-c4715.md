@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4715
+title: ADVERTENCIA del compilador (nivel 1) C4715
 ms.date: 11/04/2016
 f1_keywords:
 - C4715
 helpviewer_keywords:
 - C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-ms.openlocfilehash: f165ea3b54b78e2f8fae995815e309d55101244e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 268a26f5de1bb7f757a8e7cba6d3f5e6ddff882e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406332"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052478"
 ---
-# <a name="compiler-warning-level-1-c4715"></a>Advertencia del compilador (nivel 1) C4715
+# <a name="compiler-warning-level-1-c4715"></a>ADVERTENCIA del compilador (nivel 1) C4715
 
-'function': no todas las rutas de acceso de control devuelven un valor
+' función ': no todas las rutas de acceso de control devuelven un valor
 
-La función especificada puede que no puede devolver un valor.
+La función especificada no puede devolver un valor.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4715a.cpp
 // compile with: /W1 /LD
 int func1( int i )
@@ -31,9 +31,9 @@ int func1( int i )
 }
 ```
 
-Para evitar esta advertencia, modifique el código para que todas las rutas de asignación un valor devuelto a la función:
+Para evitar esta advertencia, modifique el código para que todas las rutas de acceso asignen un valor devuelto a la función:
 
-```
+```cpp
 // C4715b.cpp
 // compile with: /LD
 int func1( int i )
@@ -43,9 +43,9 @@ int func1( int i )
 }
 ```
 
-Es posible que el código puede contener una llamada a una función que nunca devuelve resultados, como se muestra en el ejemplo siguiente:
+Es posible que el código contenga una llamada a una función que no devuelve nunca, como en el ejemplo siguiente:
 
-```
+```cpp
 // C4715c.cpp
 // compile with: /W1 /LD
 void fatal()
@@ -62,4 +62,4 @@ int glue()
 }
 ```
 
-Este código también genera una advertencia, ya que el compilador no sabe que `fatal` no devuelve nunca. Para evitar que este código genera un mensaje de error, declare `fatal` mediante [__declspec (noreturn)](../../cpp/noreturn.md).
+Este código también genera una advertencia, ya que el compilador no sabe que `fatal` nunca devuelve. Para evitar que este código genere un mensaje de error, declare `fatal` mediante [__declspec (noreturn)](../../cpp/noreturn.md).

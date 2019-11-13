@@ -1,19 +1,19 @@
 ---
-title: Advertencia del compilador (nivel 1) C4905
+title: ADVERTENCIA del compilador (nivel 1) C4905
 ms.date: 11/04/2016
 f1_keywords:
 - C4905
 helpviewer_keywords:
 - C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-ms.openlocfilehash: c1d201eb7d3eee322a1aa1e598eeb24928e361a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0086a3b312895d86f2e76bdbbd348f90654ba8e2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380661"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051213"
 ---
-# <a name="compiler-warning-level-1-c4905"></a>Advertencia del compilador (nivel 1) C4905
+# <a name="compiler-warning-level-1-c4905"></a>ADVERTENCIA del compilador (nivel 1) C4905
 
 conversión de literal de cadena de tipo ancho a 'LPSTR'
 
@@ -23,9 +23,9 @@ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias d
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4905.
+En el ejemplo siguiente se genera C4905.
 
-```
+```cpp
 // C4905.cpp
 // compile with: /W1
 #pragma warning(default : 4905)

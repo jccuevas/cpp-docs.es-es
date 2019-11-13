@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 2) C4309
+title: ADVERTENCIA del compilador (nivel 2) C4309
 ms.date: 11/04/2016
 f1_keywords:
 - C4309
 helpviewer_keywords:
 - C4309
 ms.assetid: cb3f41ef-fd8a-4def-baa1-924e751fca68
-ms.openlocfilehash: 41184571dc07213c796c039170966a0c7150bd45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78d7d8130282a67c07046004ee61e802cfd97780
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402481"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052046"
 ---
-# <a name="compiler-warning-level-2-c4309"></a>Advertencia del compilador (nivel 2) C4309
+# <a name="compiler-warning-level-2-c4309"></a>ADVERTENCIA del compilador (nivel 2) C4309
 
-'conversion': truncamiento de valor constante
+' conversión ': truncamiento de valor constante
 
-La conversión de tipo hace que una constante supere el espacio asignado para él. Es posible que deba usar un tipo mayor para la constante.
+La conversión de tipo hace que una constante supere el espacio asignado para ella. Es posible que tenga que usar un tipo mayor para la constante.
 
-El ejemplo siguiente genera C4309:
+En el ejemplo siguiente se genera C4309:
 
-```
+```cpp
 // C4309.cpp
 // compile with: /W2
 int main()
