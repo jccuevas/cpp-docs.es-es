@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4551
+title: ADVERTENCIA del compilador (nivel 1) C4551
 ms.date: 11/04/2016
 f1_keywords:
 - C4551
 helpviewer_keywords:
 - C4551
 ms.assetid: 458b59bd-e2d7-425f-9ba6-268ff200424f
-ms.openlocfilehash: 8a30ad5622d8e889a7f3ec64b73ead7c63f65b48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4e7467efa8308e1044e8b7a166174c173dab166
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397359"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966364"
 ---
-# <a name="compiler-warning-level-1-c4551"></a>Advertencia del compilador (nivel 1) C4551
+# <a name="compiler-warning-level-1-c4551"></a>ADVERTENCIA del compilador (nivel 1) C4551
 
-lista de argumentos de función llamada que faltan
+falta la lista de argumentos de la llamada de función
 
-Una llamada de función debe incluir los paréntesis de apertura y cierre después del nombre de función, incluso si la función no toma ningún parámetro.
+Una llamada de función debe incluir los paréntesis de apertura y cierre después del nombre de la función, incluso si la función no toma ningún parámetro.
 
-El ejemplo siguiente genera C4551:
+En el ejemplo siguiente se genera C4551:
 
-```
+```cpp
 // C4551.cpp
 // compile with: /W1
 void function1() {

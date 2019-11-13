@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4553
+title: ADVERTENCIA del compilador (nivel 1) C4553
 ms.date: 11/04/2016
 f1_keywords:
 - C4553
 helpviewer_keywords:
 - C4553
 ms.assetid: d8aacbe0-3cb5-4367-a6e5-fd7e28f0ff9d
-ms.openlocfilehash: 7a299d4a99818699e9be31e7d15d9e589de05c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2d5e52e565878011b2439792c721eeb57cdd20a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410348"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966326"
 ---
-# <a name="compiler-warning-level-1-c4553"></a>Advertencia del compilador (nivel 1) C4553
+# <a name="compiler-warning-level-1-c4553"></a>ADVERTENCIA del compilador (nivel 1) C4553
 
-'operador': operador no tiene ningún efecto; ¿ha pensado en 'operador'?
+' Operator ': el operador no tiene ningún efecto; ¿deseaba ' operador '?
 
-Si una instrucción de expresión tiene un operador con ningún efecto secundario como la parte superior de la expresión, probablemente es un error.
+Si una instrucción de expresión tiene un operador sin ningún efecto secundario como parte superior de la expresión, es probable que se trate de un error.
 
-El ejemplo siguiente genera C4553:
+En el ejemplo siguiente se genera C4553:
 
-```
+```cpp
 // C4553.cpp
 // compile with: /W1
 int func()
