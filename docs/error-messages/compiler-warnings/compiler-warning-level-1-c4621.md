@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4621
+title: ADVERTENCIA del compilador (nivel 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
 - C4621
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221370"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052590"
 ---
-# <a name="compiler-warning-level-1-c4621"></a>Advertencia del compilador (nivel 1) C4621
+# <a name="compiler-warning-level-1-c4621"></a>ADVERTENCIA del compilador (nivel 1) C4621
 
-ninguna forma postfija de 'operator--' encontrado para el tipo 'type', con formato de prefijo
+no se encontró ninguna forma postfija de ' Operator--' para el tipo ' type ', con el formato de prefijo
 
-Se ha producido ningún operador de decremento de postfijo definido para el tipo especificado. El compilador usa el operador prefijo sobrecargado.
+No hay ningún operador de decremento postfijo definido para el tipo dado. El compilador usa el operador prefijo sobrecargado.
 
-Esta advertencia puede evitarse definiendo un operador `--` postfijo. Crear una versión de dos argumentos de la `--` operador tal como se muestra a continuación:
+Esta advertencia puede evitarse definiendo un operador `--` postfijo. Cree una versión de dos argumentos del operador `--` como se muestra a continuación:
 
-```
+```cpp
 // C4621.cpp
 // compile with: /W1
 class A

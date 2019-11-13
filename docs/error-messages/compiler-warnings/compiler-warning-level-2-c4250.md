@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 2) C4250
+title: ADVERTENCIA del compilador (nivel 2) C4250
 ms.date: 11/04/2016
 f1_keywords:
 - C4250
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: 8baf3c03c87dc70a80b785d7f81cbee4e1d828f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03826f10659cbdf6035cd4dedebecca3e3302e3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349716"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052116"
 ---
-# <a name="compiler-warning-level-2-c4250"></a>Advertencia del compilador (nivel 2) C4250
+# <a name="compiler-warning-level-2-c4250"></a>ADVERTENCIA del compilador (nivel 2) C4250
 
-'class1': hereda 'clase2:: miembro' mediante dominación
+' Class1 ': hereda ' clase2:: Member ' mediante dominación
 
-Dos o más miembros tienen el mismo nombre. En `class2` es heredado, porque es una clase base para las otras clases que contiene este miembro.
+Dos o más miembros tienen el mismo nombre. El de `class2` se hereda porque es una clase base para las demás clases que contenían este miembro.
 
-Para suprimir C4250, utilice el [advertencia](../../preprocessor/warning.md) pragma.
+Para suprimir C4250, use la pragma [Warning](../../preprocessor/warning.md) .
 
-Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre en una clase derivada domina un nombre en una clase base. Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de funciones heredadas dentro del rombo: la instancia vbc::Func() a través de la clase débil y el dominante:: func() a través de la clase dominante. Una llamada incompleta de func() a través de un objeto de clase de rombo siempre llama a la instancia dominate:: func.  Si la clase débil fuera a introducir una instancia de func(), ni podría dominar la definición y la llamada se marcaría como ambigua.
+Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre en una clase derivada domina un nombre en una clase base. Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de FUNC heredadas en el rombo: la instancia de VBC:: FUNC () a través de la clase débil y la dominante:: FUNC () a través de la clase dominante. Una llamada incompleta de FUNC () a través de un objeto de clase de rombo, siempre llama a la instancia de dominate:: FUNC ().  Si la clase débil fuera a introducir una instancia de FUNC (), ninguna definición dominaría y la llamada se marcaría como ambigua.
 
-```
+```cpp
 // C4250.cpp
 // compile with: /c /W2
 #include <stdio.h>
@@ -47,9 +47,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera la advertencia C4250.
+En el ejemplo siguiente se genera C4250.
 
-```
+```cpp
 // C4250_b.cpp
 // compile with: /W2 /EHsc
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-En este ejemplo se muestra una situación más compleja. El ejemplo siguiente genera la advertencia C4250.
+Este ejemplo muestra una situación más compleja. En el ejemplo siguiente se genera C4250.
 
-```
+```cpp
 // C4250_c.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

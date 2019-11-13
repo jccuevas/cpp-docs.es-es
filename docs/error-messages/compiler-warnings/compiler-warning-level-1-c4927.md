@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4927
+title: ADVERTENCIA del compilador (nivel 1) C4927
 ms.date: 11/04/2016
 f1_keywords:
 - C4927
 helpviewer_keywords:
 - C4927
 ms.assetid: 7009e740-a2ef-4130-96ba-482e092f717a
-ms.openlocfilehash: 59a39e4e695fdd161135cd70a74e1f3f6518e361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e56d185f6f87bc6e381ccec9ed8bd50ba3e2245
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393459"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052281"
 ---
-# <a name="compiler-warning-level-1-c4927"></a>Advertencia del compilador (nivel 1) C4927
+# <a name="compiler-warning-level-1-c4927"></a>ADVERTENCIA del compilador (nivel 1) C4927
 
 conversión no válida; se aplicó implícitamente más de una conversión definida por el usuario
 
-Más de una conversión definida por el usuario se aplica implícitamente a un valor único, el compilador no encontró una conversión explícita pero encontró una conversión, que usa.
+Se aplica implícitamente más de una conversión definida por el usuario a un valor único: el compilador no encontró una conversión explícita, pero encontró una conversión, que usaba.
 
-El ejemplo siguiente genera C4927:
+En el ejemplo siguiente se genera C4927:
 
-```
+```cpp
 // C4927.cpp
 // compile with: /W1
 struct B

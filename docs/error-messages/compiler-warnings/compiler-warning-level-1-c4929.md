@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4929
+title: ADVERTENCIA del compilador (nivel 1) C4929
 ms.date: 11/04/2016
 f1_keywords:
 - C4929
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: 07081f2b8e305e20eb1725d3d76a6d77638caa7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8ed1252d61748047077defb4e7e77c85e596107
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393433"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052269"
 ---
-# <a name="compiler-warning-level-1-c4929"></a>Advertencia del compilador (nivel 1) C4929
+# <a name="compiler-warning-level-1-c4929"></a>ADVERTENCIA del compilador (nivel 1) C4929
 
-'archivo': biblioteca de tipos contiene una unión; se omitirá el calificador 'embedded_idl'
+' file ': biblioteca contiene una Unión; omitiendo el calificador ' embedded_idl '
 
-El atributo embedded_idl de [#import](../../preprocessor/hash-import-directive-cpp.md) no se pueden aplicar a la biblioteca de tipos porque una unión está presente en la biblioteca de tipos. Para resolver esta advertencia, no utilice embedded_idl.
+No se pudo aplicar el embedded_idl atributo de [#import](../../preprocessor/hash-import-directive-cpp.md) a la biblioteca de tipos porque hay una Unión en la biblioteca de tipos. Para resolver esta advertencia, no utilice embedded_idl.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente define un componente.
+En el ejemplo siguiente se define un componente.
 
-```
+```cpp
 // C4929a.cpp
 // compile with: /LD /link /TLBOUT:C4929a.tlb
 #include <objbase.h>
@@ -55,9 +55,9 @@ struct C : I {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C4929.
+En el ejemplo siguiente se genera C4929.
 
-```
+```cpp
 // C4929b.cpp
 // compile with: /c /W1
 #import "C4929a.tlb" embedded_idl   // C4929

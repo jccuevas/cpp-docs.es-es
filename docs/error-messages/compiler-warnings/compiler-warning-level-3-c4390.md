@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 3) C4390
+title: ADVERTENCIA del compilador (nivel 3) C4390
 ms.date: 11/04/2016
 f1_keywords:
 - C4390
 helpviewer_keywords:
 - C4390
 ms.assetid: c95c2f1b-9bce-4b1f-a80c-565d4cde0b1e
-ms.openlocfilehash: 4ca00f892adc8fe3ac1bffb59a27ea1744249dea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8402c6a2d0fcbb4704b833ac7ae2b070c7af3a48
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401987"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051587"
 ---
-# <a name="compiler-warning-level-3-c4390"></a>Advertencia del compilador (nivel 3) C4390
+# <a name="compiler-warning-level-3-c4390"></a>ADVERTENCIA del compilador (nivel 3) C4390
 
-';': una se encuentra; de instrucción controlada vacía ¿Esto es la intención?
+'; ': se encontró una instrucción controlada vacía; ¿es esta la intención?
 
 Se encontró un punto y coma después de una instrucción de control que no contiene instrucciones.
 
-Si obtiene C4390 debido a una macro, debe usar el [advertencia](../../preprocessor/warning.md) pragma para deshabilitar C4390 en el módulo que contiene la macro.
+Si obtiene C4390 debido a una macro, debe usar la pragma [Warning](../../preprocessor/warning.md) para deshabilitar C4390 en el módulo que contiene la macro.
 
-El ejemplo siguiente genera C4390:
+En el ejemplo siguiente se genera C4390:
 
-```
+```cpp
 // C4390.cpp
 // compile with: /W3
 int main() {

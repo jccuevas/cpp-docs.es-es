@@ -1,31 +1,31 @@
 ---
-title: Advertencia del compilador (nivel 1) C4965
+title: ADVERTENCIA del compilador (nivel 1) C4965
 ms.date: 11/04/2016
 f1_keywords:
 - C4965
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383866"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052232"
 ---
-# <a name="compiler-warning-level-1-c4965"></a>Advertencia del compilador (nivel 1) C4965
+# <a name="compiler-warning-level-1-c4965"></a>ADVERTENCIA del compilador (nivel 1) C4965
 
-conversión boxing implícita de entero 0; Utilice nullptr o conversión explícita
+cuadro implícito de entero 0; usar nullptr o conversión explícita
 
-Visual C++ incluye la conversión boxing implícita de tipos de valor. Una instrucción que dieron lugar a una asignación de valores null mediante extensiones administradas para C++ ahora se convierte en una asignación a un int con conversión boxing.
+Características C++ visuales conversión boxing implícita de tipos de valor. Una instrucción que dio como resultado una asignación nula con extensiones administradas para C++ ahora se convierte en una asignación a un int con conversión boxing.
 
 Para obtener más información, consulta [Boxing](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4965.
+En el ejemplo siguiente se genera C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

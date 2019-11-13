@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 2) C4356
+title: ADVERTENCIA del compilador (nivel 2) C4356
 ms.date: 11/04/2016
 f1_keywords:
 - C4356
 helpviewer_keywords:
 - C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-ms.openlocfilehash: 218aac1cc98d9b119490a547d63b4b5ee83e53df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f110ee633fed1c3b43ecc06dadcc27fde4f14bde
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402468"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052019"
 ---
-# <a name="compiler-warning-level-2-c4356"></a>Advertencia del compilador (nivel 2) C4356
+# <a name="compiler-warning-level-2-c4356"></a>ADVERTENCIA del compilador (nivel 2) C4356
 
-'member': no se puede inicializar el miembro de datos estático mediante una clase derivada
+' Member ': no se puede inicializar un miembro de datos estático mediante una clase derivada
 
-La inicialización de un miembro de datos estático estaba mal formada. El compilador ha aceptado la inicialización. Para evitar la advertencia, inicialice al miembro a través de la clase base.
+La inicialización de un miembro de datos estático tenía un formato incorrecto. El compilador aceptó la inicialización. Para evitar la advertencia, inicialice el miembro a través de la clase base.
 
-Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.
+Use la pragma [Warning](../../preprocessor/warning.md) para suprimir esta advertencia.
 
-El ejemplo siguiente genera C4356:
+En el ejemplo siguiente se genera C4356:
 
-```
+```cpp
 // C4356.cpp
 // compile with: /W2 /EHsc
 #include <iostream>

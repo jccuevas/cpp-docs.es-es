@@ -1,29 +1,29 @@
 ---
-title: Del compilador (nivel 3) de la advertencia C4018
+title: ADVERTENCIA del compilador (nivel 3) C4018
 ms.date: 11/04/2016
 f1_keywords:
 - C4018
 helpviewer_keywords:
 - C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: 6436f62a06cbe931ca5b42751d60507f21675c5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e136a82f8a0ecb3f5375d3a486dd017df7edb6e0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402377"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051979"
 ---
-# <a name="compiler-warning-level-3-c4018"></a>Del compilador (nivel 3) de la advertencia C4018
+# <a name="compiler-warning-level-3-c4018"></a>ADVERTENCIA del compilador (nivel 3) C4018
 
-'expresión': no coinciden signed/unsigned
+' expresión ': no coinciden signed/unsigned
 
-Comparación de un número con signo y sin signo necesarios al compilador que convierta el valor con signo en tipos sin signo.
+La comparación de un número con signo y sin signo requiere que el compilador convierta el valor con signo a sin signo.
 
-Esta advertencia puede corregirse si se convierte uno de los dos tipos al probar los tipos con signo y sin signo.
+Esta advertencia se puede corregir si se convierte uno de los dos tipos al probar los tipos con y sin signo.
 
-El ejemplo siguiente genera C4018:
+En el ejemplo siguiente se genera C4018:
 
-```
+```cpp
 // C4018.cpp
 // compile with: /W3
 int main() {

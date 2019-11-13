@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 3) C4243
+title: ADVERTENCIA del compilador (nivel 3) C4243
 ms.date: 11/04/2016
 f1_keywords:
 - C4243
 helpviewer_keywords:
 - C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-ms.openlocfilehash: e08a8538c93681c59779f681812a9ba8f7e316a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed5cc87f1bc376526f5129aa157c38a3f034b20b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402208"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051736"
 ---
-# <a name="compiler-warning-level-3-c4243"></a>Advertencia del compilador (nivel 3) C4243
+# <a name="compiler-warning-level-3-c4243"></a>ADVERTENCIA del compilador (nivel 3) C4243
 
-' tipo de conversión ' existe de 'tipo1' a 'tipo2', pero es inaccesible
+la conversión de ' tipo de conversión ' existe de ' tipo1 ' a ' tipo2 ', pero no se puede obtener acceso a ella
 
 Un puntero a una clase derivada se convierte en un puntero a una clase base, pero la clase derivada hereda la clase base con acceso privado o protegido.
 
-El ejemplo siguiente genera C4243:
+En el ejemplo siguiente se genera C4243:
 
-```
+```cpp
 // C4243.cpp
 // compile with: /W3
 // C4243 expected
