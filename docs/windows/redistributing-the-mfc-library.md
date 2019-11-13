@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: faca2e7213ab0ad0c9b1a1a0fd6a7274094853f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b38299bc39ce282769e40e915847b2220ec28ca
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362230"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965605"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuir la biblioteca MFC
 
@@ -19,13 +19,13 @@ Si vincula dinámicamente la aplicación a la biblioteca MFC, deberá redistribu
 > [!NOTE]
 >  Los archivos mfc140.dll Se omitieron del directorio de archivos redistribuibles en Visual Studio 2015 RTM. En su lugar, puede usar las versiones instaladas por Visual Studio 2015 en los directorios Windows\system32 y Windows\syswow64.
 
-Como todos los archivos DLL de MFC usan la versión compartida de la biblioteca en tiempo de ejecución de C (CRT), también tendrá que redistribuir la biblioteca CRT. En la versión de MFC que se incluye con Visual Studio 2015 se usa la biblioteca CRT universal, que se distribuye como parte de Windows 10. Para ejecutar una aplicación MFC compilada con Visual Studio 2015 en versiones anteriores de Windows, debe redistribuir la biblioteca CRT universal. Para obtener información sobre cómo redistribuir la biblioteca CRT universal como un componente del sistema operativo o mediante la implementación local, vea [Introducing the Universal CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/) (Introducción a la biblioteca CRT universal). Para descargar la biblioteca CRT universal para la implementación central en versiones compatibles de Windows, vea [Tiempo de ejecución de C universal de Windows 10](https://www.microsoft.com/en-us/download/details.aspx?id=48234). Las versiones redistribuibles específicas de la arquitectura de ucrtbase.dll para la implementación local se encuentran en Windows SDK. De forma predeterminada, Visual Studio las instala en C:\Archivos de programa (x86)\Windows Kits\10\Redist\ucrt\DLLs\ en un subdirectorio específico de la arquitectura.
+Como todos los archivos DLL de MFC usan la versión compartida de la biblioteca en tiempo de ejecución de C (CRT), también tendrá que redistribuir la biblioteca CRT. En la versión de MFC que se incluye con Visual Studio 2015 se usa la biblioteca CRT universal, que se distribuye como parte de Windows 10. Para ejecutar una aplicación MFC compilada con Visual Studio 2015 en versiones anteriores de Windows, debe redistribuir la biblioteca CRT universal. Para obtener información sobre cómo redistribuir la biblioteca CRT universal como un componente del sistema operativo o mediante la implementación local, vea [Introducing the Universal CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/) (Introducción a la biblioteca CRT universal). Para descargar el CRT universal para la implementación central en versiones compatibles de Windows, consulte [Windows 10 universal C Runtime](https://www.microsoft.com/download/details.aspx?id=48234). Las versiones redistribuibles específicas de la arquitectura de ucrtbase.dll para la implementación local se encuentran en Windows SDK. De forma predeterminada, Visual Studio las instala en C:\Archivos de programa (x86)\Windows Kits\10\Redist\ucrt\DLLs\ en un subdirectorio específico de la arquitectura.
 
 Si la aplicación se compila mediante una versión anterior de la biblioteca MFC, tendrá que redistribuir el archivo DLL de CRT correspondiente desde el directorio de los archivos redistribuibles. Por ejemplo, si la aplicación MFC se compila mediante el conjunto de herramientas de Visual Studio 2013 (vc120), debe redistribuir el archivo msvcr120.dll. También tendrá que redistribuir los archivos mfc`<version>`u.dll o mfc`<version>`.dll que coincidan.
 
 Si vincula estáticamente la aplicación a MFC (es decir, si se especifica **Utilizar MFC en una biblioteca estática** en la pestaña **General** del cuadro de diálogo **Páginas de propiedades**), no es necesario redistribuir un archivo DLL de MFC. Sin embargo, aunque la vinculación estática puede funcionar para probar la implementación interna de las aplicaciones, se recomienda no utilizarla para redistribuir MFC. Para obtener más información sobre las estrategias recomendadas para implementar las bibliotecas de Visual C++, vea [Elegir un método de implementación](choosing-a-deployment-method.md).
 
-Si en la aplicación se usan las clases MFC que implementan el control WebBrowser (por ejemplo, las clases [CHtmlView](../mfc/reference/chtmlview-class.md) o [CHtmlEditView](../mfc/reference/chtmleditview-class.md)), se recomienda instalar también la versión más actual de Microsoft Internet Explorer, de forma que el equipo de destino tenga los archivos de control comunes más recientes. (Como mínimo, se requiere Internet Explorer 4.0). La información sobre cómo instalar los componentes de Internet Explorer se encuentra disponible en "Article 185375: How To Create a Single EXE Install of Internet Explorer" (Artículo 185375: Cómo crear una instalación EXE única de Internet Explorer) en el sitio web de Soporte técnico de Microsoft.
+Si en la aplicación se usan las clases MFC que implementan el control WebBrowser (por ejemplo, las clases [CHtmlView](../mfc/reference/chtmlview-class.md) o [CHtmlEditView](../mfc/reference/chtmleditview-class.md)), se recomienda instalar también la versión más actual de Microsoft Internet Explorer, de forma que el equipo de destino tenga los archivos de control comunes más recientes. (Como mínimo, se requiere Internet Explorer 4,0). Puede encontrar información sobre cómo instalar los componentes de Internet Explorer en el artículo 185375: How to Create a Single EXE install of Internet Explorer en el sitio web de Soporte técnico de Microsoft.
 
 Si en la aplicación se usan las clases de base de datos de MFC (como por ejemplo, [CRecordset](../mfc/reference/crecordset-class.md) y [CRecordView](../mfc/reference/crecordview-class.md)), tendrá que redistribuir ODBC y todos los controladores ODBC que se usen en la aplicación.
 
@@ -41,7 +41,7 @@ Si decide localizar la aplicación instalando una localización DLL de MFC, debe
 
 Los archivos .msm redistribuibles contienen los archivos DLL que se utilizan para la localización. Hay un archivo DLL para cada lenguaje compatible. Durante el proceso de instalación se instalan estos archivos DLL en la carpeta %windir%\system32\ del equipo de destino.
 
-Para obtener más información sobre cómo localizar aplicaciones MFC, vea [TN057: Localización de componentes de MFC](../mfc/tn057-localization-of-mfc-components.md).
+Para obtener más información sobre cómo localizar aplicaciones MFC, vea [TN057: localización de componentes de MFC](../mfc/tn057-localization-of-mfc-components.md).
 
 Puede redistribuir archivos DLL de localización de MFC si implementa el archivo DLL de MFC en la carpeta local de la aplicación. Para obtener más información sobre cómo redistribuir bibliotecas de Visual C++, vea [Redistribuir archivos de Visual C++](redistributing-visual-cpp-files.md).
 

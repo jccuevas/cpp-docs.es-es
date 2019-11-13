@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4391
+title: ADVERTENCIA del compilador (nivel 1) C4391
 ms.date: 11/04/2016
 f1_keywords:
 - C4391
 helpviewer_keywords:
 - C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-ms.openlocfilehash: d9d1cebe08a6a163d76271ab001ec91b7cee82a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60b68906697f76d56ff6c0e13f1b4ec105ef1c25
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386465"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966116"
 ---
-# <a name="compiler-warning-level-1-c4391"></a>Advertencia del compilador (nivel 1) C4391
+# <a name="compiler-warning-level-1-c4391"></a>ADVERTENCIA del compilador (nivel 1) C4391
 
-'firma': tipo de valor devuelto incorrecto para la función intrínseca, se esperaba 'tipo'
+' Signature ': tipo de valor devuelto incorrecto para la función intrínseca; se esperaba ' type '
 
-Una declaración de función para una función intrínseca del compilador tiene el tipo de valor devuelto incorrecto. La imagen resultante no funcionen correctamente.
+Una declaración de función para un intrínseco del compilador tenía un tipo de valor devuelto incorrecto. Es posible que la imagen resultante no se ejecute correctamente.
 
-Para corregir esta advertencia, corrija la declaración o eliminar la declaración y simplemente #include el archivo de encabezado adecuado.
+Para corregir esta advertencia, corrija la declaración o elimine la declaración y simplemente #include el archivo de encabezado adecuado.
 
-El ejemplo siguiente genera C4391:
+En el ejemplo siguiente se genera C4391:
 
-```
+```cpp
 // C4391.cpp
 // compile with: /W1
 // processor: x86

@@ -1,31 +1,31 @@
 ---
-title: Advertencia del compilador (nivel 1) C4490
+title: ADVERTENCIA del compilador (nivel 1) C4490
 ms.date: 11/04/2016
 f1_keywords:
 - C4490
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161100"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966177"
 ---
-# <a name="compiler-warning-level-1-c4490"></a>Advertencia del compilador (nivel 1) C4490
+# <a name="compiler-warning-level-1-c4490"></a>ADVERTENCIA del compilador (nivel 1) C4490
 
-'override': uso incorrecto del especificador de invalidación; 'function' no coincide con un método de clase ref base
+' override ': uso incorrecto del especificador de invalidación; ' function ' no coincide con un método de clase Ref base
 
-Un especificador de invalidación se usó incorrectamente. Por ejemplo, no reemplaza una función de la interfaz, implementarla.
+Se usó incorrectamente un especificador de invalidación. Por ejemplo, no se invalida una función de interfaz, sino que se implementa.
 
-Para obtener más información, consulte [especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md).
+Para obtener más información, vea [especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4490.
+En el ejemplo siguiente se genera C4490.
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 

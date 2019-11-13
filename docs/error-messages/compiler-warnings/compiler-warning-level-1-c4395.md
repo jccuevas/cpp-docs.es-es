@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4395
+title: ADVERTENCIA del compilador (nivel 1) C4395
 ms.date: 11/04/2016
 f1_keywords:
 - C4395
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182410"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964868"
 ---
-# <a name="compiler-warning-level-1-c4395"></a>Advertencia del compilador (nivel 1) C4395
+# <a name="compiler-warning-level-1-c4395"></a>ADVERTENCIA del compilador (nivel 1) C4395
 
-'function': función miembro se invocará en una copia del miembro de datos initonly 'miembro'
+' función ': la función miembro se invocará en una copia del miembro de datos initonly ' miembro '
 
-Se llamó a una función miembro en un [initonly (C++ / c++ / CLI)](../../dotnet/initonly-cpp-cli.md) miembro de datos.  C4395 advierte que el **initonly** miembro de datos no puede modificarse mediante la función.
+Se llamó a una función miembro en un miembro de datos [InitOnly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) .  C4395 advierte que el miembro de datos **InitOnly** no puede ser modificado por la función.
 
-El ejemplo siguiente genera C4395:
+En el ejemplo siguiente se genera C4395:
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

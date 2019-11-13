@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4346
+title: ADVERTENCIA del compilador (nivel 1) C4346
 ms.date: 11/04/2016
 f1_keywords:
 - C4346
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187223"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966558"
 ---
-# <a name="compiler-warning-level-1-c4346"></a>Advertencia del compilador (nivel 1) C4346
+# <a name="compiler-warning-level-1-c4346"></a>ADVERTENCIA del compilador (nivel 1) C4346
 
-'name': nombre dependiente no es un tipo
+' name ': el nombre dependiente no es un tipo
 
-El [typename](../../cpp/typename.md) palabra clave es necesario si un nombre dependiente tiene que tratarse como un tipo. Para el código que funciona igual en todas las versiones de Visual C++, agregue `typename` a la declaración.
+La palabra clave [TypeName](../../cpp/typename.md) es necesaria si un nombre dependiente se va a tratar como un tipo. Para el código que funciona igual en todas las versiones de C++visual, agregue `typename` a la declaración.
 
-El ejemplo siguiente genera C4346:
+En el ejemplo siguiente se genera C4346:
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-Los ejemplos siguientes se muestran otros ejemplos donde el **typename** palabra clave es necesaria:
+En los siguientes ejemplos se muestran otros ejemplos en los que se requiere la palabra clave **TypeName** :
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -53,9 +53,9 @@ struct M : public L<typename T::Type, T::Value>
 };
 ```
 
-Y esto
+y,
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

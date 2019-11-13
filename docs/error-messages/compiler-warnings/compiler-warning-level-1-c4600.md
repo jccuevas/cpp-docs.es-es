@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4600
+title: ADVERTENCIA del compilador (nivel 1) C4600
 ms.date: 11/04/2016
 f1_keywords:
 - C4600
 helpviewer_keywords:
 - C4600
 ms.assetid: f023a2a1-7fc4-463f-a434-dc93fcd3f4e9
-ms.openlocfilehash: fcfefd5b858df653551e7f3061a41d168c8ff3f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6eae37d006b5fcd6bd1c5e2993f1752c0534ee45
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397229"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966226"
 ---
-# <a name="compiler-warning-level-1-c4600"></a>Advertencia del compilador (nivel 1) C4600
+# <a name="compiler-warning-level-1-c4600"></a>ADVERTENCIA del compilador (nivel 1) C4600
 
-\#pragma 'macro name': se esperaba una cadena vacía no válida
+\#pragma ' nombre de macro ': se esperaba una cadena no vacía válida
 
-No se puede especificar una cadena vacía al insertar o extraer un nombre de macro con el [pop_macro](../../preprocessor/pop-macro.md) o [push_macro](../../preprocessor/push-macro.md).
+No se puede especificar una cadena vacía cuando se presiona o se extrae un nombre de macro con el [pop_macro](../../preprocessor/pop-macro.md) o [push_macro](../../preprocessor/push-macro.md).
 
-El ejemplo siguiente genera C4600:
+En el ejemplo siguiente se genera C4600:
 
-```
+```cpp
 // C4600.cpp
 // compile with: /W1
 int main()

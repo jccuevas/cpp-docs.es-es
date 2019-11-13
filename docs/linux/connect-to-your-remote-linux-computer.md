@@ -3,12 +3,12 @@ title: Conexión al sistema Linux de destino en Visual Studio
 description: En este artículo se describe cómo conectarse a una máquina remota Linux o WSL desde un proyecto de Visual Studio C++.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925557"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626772"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conexión al sistema Linux de destino en Visual Studio
 
@@ -79,6 +79,20 @@ Para configurar esta conexión remota:
    Los registros incluyen las conexiones, todos los comandos enviados a la máquina remota (su texto, código de salida y tiempo de ejecución) y toda la salida de Visual Studio al shell. El registro funciona para cualquier proyecto CMake multiplataforma o proyecto Linux basado en MSBuild en Visual Studio.
 
    Puede configurar la salida para que vaya a un archivo o al panel **Registro multiplataforma** en la Ventana de salida. Para proyectos Linux basados en MSBuild, los comandos emitidos a la máquina remota por MSBuild no se enrutan a la **Ventana de salida** porque se emiten fuera de proceso. En su lugar, se registran en un archivo con el prefijo "msbuild_".
+   
+## <a name="tcp-port-forwarding"></a>Reenvío de puertos TCP
+
+La compatibilidad con Linux de Visual Studio depende del reenvío de puertos TCP. **Rsync** y **gdbserver** se verán afectados si el reenvío de puertos TCP está deshabilitado en su sistema remoto. 
+
+Tanto los proyectos de CMake como los de Linux basados en MSBuild usan Rsync para [copiar encabezados de su sistema remoto en Windows, a fin de utilizarlos para IntelliSense](configure-a-linux-project.md#remote_intellisense). Si no puede habilitar el reenvío de puertos TCP, puede deshabilitar la descarga automática de encabezados remotos a través de Herramientas > Opciones > Multiplataforma > Administrador de conexiones > Administrador de IntelliSense de encabezados remotos. Si el sistema remoto al que intenta conectarse no tiene habilitado el reenvío de puertos TCP, verá el siguiente error al comenzar la descarga de encabezados remotos para IntelliSense.
+
+![Error de encabezados](media/port-forwarding-headers-error.png)
+
+La compatibilidad con CMake de Visual Studio también usa Rsync para copiar archivos de origen en el sistema remoto. So no puede habilitar el reenvío de puertos TCP, puede usar sftp como su método de copia de orígenes en remoto. Sftp suele ser más lento que rsync, pero no depende del reenvío de puertos TCP. Puede administrar su método de copia de orígenes en remoto con la propiedad remoteCopySourcesMethod en el [Editor de configuración de CMake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Si el reenvío de puertos TCP está deshabilitado en su sistema remoto, verá un error en la ventana de salida de CMake al invocarse rsync por primera vez.
+
+![Error de Rsync](media/port-forwarding-copy-error.png)
+
+Gdbserver se puede usar para la depuración en dispositivos incrustados. Si no puede habilitar el reenvío de puertos TCP, tendrá que usar gdb para todos los escenarios de depuración remota. Gdb se usa de forma predeterminada al depurar proyectos en un sistema remoto. 
 
    ::: moniker-end
 

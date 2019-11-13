@@ -1,27 +1,27 @@
 ---
-title: Advertencia del compilador (nivel 1) C4358
+title: ADVERTENCIA del compilador (nivel 1) C4358
 ms.date: 11/04/2016
 f1_keywords:
 - C4358
 helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd3109df3ecd32933b5fc217dfc02181f43d97c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408386"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966538"
 ---
-# <a name="compiler-warning-level-1-c4358"></a>Advertencia del compilador (nivel 1) C4358
+# <a name="compiler-warning-level-1-c4358"></a>ADVERTENCIA del compilador (nivel 1) C4358
 
-'operator': devolver el tipo de los delegados combinados no es 'void'; valor devuelto es indefinido
+' Operator ': el tipo de valor devuelto de los delegados combinados no es ' void '; el valor devuelto es indefinido
 
-Se combinaron dos delegados y el valor devuelto no es void. Si se combinan dos delegados con los valores de retorno distinto de void, el compilador no podrá hacer una asignación correcta si se usa el valor devuelto del delegado.
+Se combinaron dos delegados y el valor devuelto no es void. Si se combinan dos delegados con valores devueltos que no son void, el compilador no podrá realizar una asignación adecuada si se utiliza el valor devuelto del delegado.
 
-El ejemplo siguiente genera C4358:
+En el ejemplo siguiente se genera C4358:
 
-```
+```cpp
 // C4358.cpp
 // compile with: /clr /W1
 delegate int D();

@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4606
+title: ADVERTENCIA del compilador (nivel 1) C4606
 ms.date: 11/04/2016
 f1_keywords:
 - C4606
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: e471ca3e478d1166b150e49bf25efa4b9d5803cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36031aa9a831d4669d796d8a40292e2d6ba15a8
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402520"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964974"
 ---
-# <a name="compiler-warning-level-1-c4606"></a>Advertencia del compilador (nivel 1) C4606
+# <a name="compiler-warning-level-1-c4606"></a>ADVERTENCIA del compilador (nivel 1) C4606
 
-\#advertencia pragma: 'advertencia_número'; Advertencias de análisis de código no están asociadas con niveles de advertencia
+\#pragma warning: ' warning_number ' omitido; Las advertencias de análisis de código no están asociadas a los niveles de advertencia
 
-Para las advertencias de análisis de código, solo `error`, `once`, y `default` son compatibles con el [advertencia](../../preprocessor/warning.md) pragma.
+En el caso de las advertencias de análisis de código, solo se admiten `error`, `once`y `default` con la pragma [Warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4606.
+En el ejemplo siguiente se genera C4606.
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606

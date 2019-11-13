@@ -1,29 +1,29 @@
 ---
-title: Advertencia del compilador (nivel 1) C4486
+title: ADVERTENCIA del compilador (nivel 1) C4486
 ms.date: 11/04/2016
 f1_keywords:
 - C4486
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: 402d5eefde6c2dfd5693e53c27edb00d1ac2e56c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c92c23af4aeb6a18c812517cfef9fa00d15dfcb
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404070"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965394"
 ---
-# <a name="compiler-warning-level-1-c4486"></a>Advertencia del compilador (nivel 1) C4486
+# <a name="compiler-warning-level-1-c4486"></a>ADVERTENCIA del compilador (nivel 1) C4486
 
-'function': un método virtual privado de una clase ref o clase value debe marcarse como 'sealed'
+' función ': un método virtual privado de una clase Ref o una clase de valor se debe marcar como ' Sealed '
 
-Puesto que no está accesible o se reemplaza una función miembro virtual privada de una clase o estructura administrada, debe marcarse [sealed](../../extensions/sealed-cpp-component-extensions.md).
+Puesto que no se puede tener acceso a una función miembro virtual privada de una clase o struct administrados, debe marcarse como [Sealed](../../extensions/sealed-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4486.
+En el ejemplo siguiente se genera C4486.
 
-```
+```cpp
 // C4486.cpp
 // compile with: /clr /c /W1
 ref class B {
@@ -35,9 +35,9 @@ private:
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra un uso posible de una función sealed, virtual privada.
+En el ejemplo siguiente se muestra un uso posible de una función virtual Sealed privada.
 
-```
+```cpp
 // C4486_b.cpp
 // compile with: /clr /c
 ref class B {};

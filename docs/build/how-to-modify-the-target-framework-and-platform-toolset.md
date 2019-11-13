@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Modificar la plataforma de destino y el conjunto de herramientas de la plataforma
+title: 'Cómo: Modificar plataforma de destino y el conjunto de herramientas de la plataforma'
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492234"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964900"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedimiento Modificar la plataforma de destino y el conjunto de herramientas de la plataforma
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Cómo: Modificar plataforma de destino y el conjunto de herramientas de la plataforma
 
 Puede editar un archivo de proyecto C++ de Visual Studio para tener como destino distintas C++ versiones del conjunto de herramientas de la plataforma,C++la Windows SDK y el .NET Framework (solo en proyectos/CLI). De forma predeterminada, el sistema de proyectos utiliza la versión de .NET Framework y la versión del conjunto de herramientas que corresponden a la versión de Visual Studio que se utiliza para crear el proyecto. Puede modificar todos estos valores en el archivo. vcxproj para que pueda usar la misma base de código para cada destino de compilación.
 
@@ -30,9 +30,9 @@ Visual Studio también admite la compatibilidad con múltiples C++ versiones par
 
 ## <a name="target-framework-ccli-project-only"></a>Plataforma de destinoC++(solo para el proyecto/CLI)
 
-Cuando se cambia la versión de .Net Framework de destino, también cambia el conjunto de herramientas de la plataforma a una versión que admite la versión de .Net Framework de destino. Por ejemplo, para definir como destino .NET Framework 4.5, debe utilizar un conjunto de herramientas de plataforma compatible, tal como Visual Studio 2015 (v140), Visual Studio 2013 (v120) o Visual Studio 2012 (v110). Puede usar el conjunto de herramientas de la plataforma [Windows 7,1 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=8279) para tener como destino los .NET Framework 2,0, 3,0, 3,5 y 4, y las plataformas x86/x64.
+Cuando se cambia la versión de .Net Framework de destino, también cambia el conjunto de herramientas de la plataforma a una versión que admite la versión de .Net Framework de destino. Por ejemplo, para definir como destino .NET Framework 4.5, debe utilizar un conjunto de herramientas de plataforma compatible, tal como Visual Studio 2015 (v140), Visual Studio 2013 (v120) o Visual Studio 2012 (v110). Puede usar el conjunto de herramientas de la plataforma [Windows 7,1 SDK](https://www.microsoft.com/download/details.aspx?id=8279) para tener como destino los .NET Framework 2,0, 3,0, 3,5 y 4, y las plataformas x86/x64.
 
-Puede extender la plataforma de destino aún más creando un conjunto de herramientas personalizado de la plataforma. Para obtener más información, vea [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) en el blog de Visual C++.
+Puede extender la plataforma de destino aún más creando un conjunto de herramientas personalizado de la plataforma. Para obtener más información, vea [C++ Native Multi-Targeting](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) en el blog de Visual C++.
 
 ### <a name="to-change-the-target-framework"></a>Para cambiar la versión de .NET Framework de destino
 
