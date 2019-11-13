@@ -1,31 +1,31 @@
 ---
-title: Advertencia del compilador (nivel 1) C4407
+title: ADVERTENCIA del compilador (nivel 1) C4407
 ms.date: 11/04/2016
 f1_keywords:
 - C4407
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 2e47e293b650f64d2a6be91a837cc4195e073e8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: cdc25155aced50331851e9581c346155c6f8e45c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447746"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966341"
 ---
-# <a name="compiler-warning-level-1-c4407"></a>Advertencia del compilador (nivel 1) C4407
+# <a name="compiler-warning-level-1-c4407"></a>ADVERTENCIA del compilador (nivel 1) C4407
 
 conversión entre diferentes representaciones de puntero a miembro, el compilador puede generar código incorrecto
 
 Se detectó una conversión incorrecta.
 
-C4407 pueden generarse debido a la del trabajo de conformidad del compilador efectuado en Visual Studio 2005. Puntero a miembro ahora requiere un nombre completo y el operador address-of (&).
+Se puede generar C4407 debido al trabajo de conformidad del compilador realizado en Visual Studio 2005. El puntero a miembro ahora requiere un nombre completo y el operador Address-of (&).
 
-C4407 puede producirse si puede convertir entre un varios herencia puntero a miembro a un herencia simple puntero a miembro. A veces esto puede funcionar, pero a veces no puede porque la representación de puntero a miembro de herencia única no contiene información suficiente. Compilar con la **/VMM** podría ayudar a (para obtener más información, consulte [/VMM, / VMs, /vmv (representación de propósito General)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). También puede intentar volver a organizar las clases base. el compilador detecta una pérdida de información en la conversión porque es una clase base con un desplazamiento distinto de cero de la clase derivada.
+C4407 puede producirse si se realiza la conversión entre un puntero a miembro de herencia múltiple y un puntero a miembro de herencia única. A veces, esto puede funcionar, pero a veces no puede hacerlo porque la representación de un solo puntero a miembro de herencia no contiene información suficiente. Compilar con **/VMM** puede ser de ayuda (para obtener más información, vea [/VMM,/VMS,/vmv (representación de uso general)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)). También puede intentar reorganizar las clases base; el compilador está detectando una pérdida de información en la conversión porque una clase base está en un desplazamiento distinto de cero del derivado.
 
-El ejemplo siguiente genera la advertencia C4407:
+En el ejemplo siguiente se genera C4407:
 
-```
+```cpp
 // C4407.cpp
 // compile with: /W1 /c
 struct C1 {};
