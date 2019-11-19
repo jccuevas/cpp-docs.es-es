@@ -4931,6 +4931,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: Intrínsecos ARM
               href: intrinsics/arm-intrinsics.md
+            - name: Intrínsecos de ARM64
+              href: intrinsics/arm64-intrinsics.md
             - name: Lista de intrínsecos de x86
               href: intrinsics/x86-intrinsics-list.md
             - name: Lista de intrínsecos de x64 (amd64)
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: single_assignment (Clase)
                           href: parallel/concrt/reference/single-assignment-class.md
-                        - name: single_link_registry (Clase)
+                        - name: single_link_registry (clase)
                           href: parallel/concrt/reference/single-link-registry-class.md
-                        - name: source_block (clase)
+                        - name: source_block (Clase)
                           href: parallel/concrt/reference/source-block-class.md
                         - name: source_link_manager (Clase)
                           href: parallel/concrt/reference/source-link-manager-class.md
