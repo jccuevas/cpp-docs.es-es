@@ -153,12 +153,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: eb75273bc8cbe5ccbf62edc82a1e7deccc605757
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 57982e32da75aa7f364c51146e50c3d75b4b7710
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816601"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163339"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -188,7 +188,7 @@ El compilador admite estas macros predefinidas especificadas por los estándares
 
 - **&#95;Archivo de &#95;&#95;** Nombre del archivo de código fuente actual. El archivo se expande a un literal de cadena de caracteres. **&#95; &#95;&#95;** Para asegurarse de que se muestra la ruta de acceso completa al archivo, use [/FC (ruta de acceso completa del archivo de código fuente en diagnósticos)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md). Esta macro siempre está definida.
 
-- **&#95;Línea de &#95;&#95;** Definido como el número de línea entero en el archivo de código fuente actual. El valor de la  **&#95; &#95;macro&#95; line** se puede cambiar mediante una directiva `#line`. Esta macro siempre está definida.
+- **&#95;Línea de &#95;&#95;** Definido como el número de línea entero en el archivo de código fuente actual. El valor de la  **&#95; &#95;macro&#95; line** se puede cambiar mediante una directiva de `#line`. Esta macro siempre está definida.
 
 - **&#95; Stdc &#95; &#95;** Se define como 1 solo cuando se compila como C y si se especifica la opción del compilador [/za](../build/reference/za-ze-disable-language-extensions.md) . De lo contrario, sin definir.
 
@@ -220,7 +220,7 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95;CARÁCTER&#95;sin signo** definido como 1 si el tipo de **carácter** predeterminado es sin signo. Este valor se define cuando se establece la opción del compilador [/j (el tipo de carácter predeterminado es sin signo)](../build/reference/j-default-char-type-is-unsigned.md) . De lo contrario, sin definir.
 
-- **versión de&#95;CLR &#95; &#95;** Se define como un literal entero que representa la versión de Common Language Runtime (CLR) utilizada para compilar la aplicación. El valor se codifica con el formato `Mmmbbbbb`, donde `M` es la versión principal del motor en tiempo de ejecución, @no__t 2 es la versión secundaria del tiempo de ejecución y `bbbbb` es el número de compilación. **&#95;&#95;Se&#95;define CLR ver** si se establece la opción del compilador [/CLR](../build/reference/clr-common-language-runtime-compilation.md) . De lo contrario, sin definir.
+- **versión de&#95;CLR &#95; &#95;** Se define como un literal entero que representa la versión de Common Language Runtime (CLR) utilizada para compilar la aplicación. El valor se codifica con la forma `Mmmbbbbb`, donde `M` es la versión principal del motor en tiempo de ejecución, `mm` es la versión secundaria del tiempo de ejecución y `bbbbb` es el número de compilación. **&#95;&#95;Se&#95;define CLR ver** si se establece la opción del compilador [/CLR](../build/reference/clr-common-language-runtime-compilation.md) . De lo contrario, sin definir.
 
     ```cpp
     // clr_ver.cpp
@@ -235,7 +235,7 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95;Contador de &#95;&#95;** Se expande a un literal entero que comienza en 0. El valor se incrementa en 1 cada vez que se usa en un archivo de código fuente o en encabezados incluidos del archivo de código fuente. Counter recuerda su estado cuando se utilizan encabezados precompilados. **&#95; &#95;&#95;** Esta macro siempre está definida.
 
-  En este ejemplo se usa `__COUNTER__` para asignar identificadores únicos a tres objetos diferentes del mismo tipo. El constructor `exampleClass` toma un entero como parámetro. En `main`, la aplicación declara tres objetos de tipo `exampleClass`, con `__COUNTER__` como parámetro de identificador único:
+  En este ejemplo se usa `__COUNTER__` para asignar identificadores únicos a tres objetos diferentes del mismo tipo. El constructor `exampleClass` toma un entero como parámetro. En `main`, la aplicación declara tres objetos de tipo `exampleClass`, utilizando `__COUNTER__` como parámetro de identificador único:
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -304,11 +304,11 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95; FUNCDNAME &#95; &#95;** Se define como un literal de cadena que contiene el [nombre representativo](../build/reference/decorated-names.md) de la función de inclusión. La macro solo se define dentro de una función. **&#95;La &#95;macro&#95; FUNCDNAME** no se expande si usa la opción del compilador [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) o [/p](../build/reference/p-preprocess-to-a-file.md) .
 
-   En este ejemplo se usan las macros `__FUNCDNAME__`, `__FUNCSIG__` y `__FUNCTION__` para mostrar la información de la función.
+   En este ejemplo se usan las macros `__FUNCDNAME__`, `__FUNCSIG__`y `__FUNCTION__` para mostrar la información de la función.
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95; FUNCSIG &#95; &#95;** Definido como un literal de cadena que contiene la firma de la función de inclusión. La macro solo se define dentro de una función. **&#95;La &#95;macro&#95; FUNCSIG** no se expande si usa la opción del compilador [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) o [/p](../build/reference/p-preprocess-to-a-file.md) . Cuando se compila para un destino de 64 bits, la Convención de llamada es `__cdecl` de forma predeterminada. Para obtener un ejemplo de uso, vea la macro `__FUNCDNAME__`.
+- **&#95; FUNCSIG &#95; &#95;** Definido como un literal de cadena que contiene la firma de la función de inclusión. La macro solo se define dentro de una función. **&#95;La &#95;macro&#95; FUNCSIG** no se expande si usa la opción del compilador [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) o [/p](../build/reference/p-preprocess-to-a-file.md) . Cuando se compila para un destino de 64 bits, la Convención de llamada se `__cdecl` de forma predeterminada. Para obtener un ejemplo de uso, vea la macro `__FUNCDNAME__`.
 
 - **&#95; Función &#95; &#95;** Definido como un literal de cadena que contiene el nombre no representativo de la función de inclusión. La macro solo se define dentro de una función. La macro de  **&#95; &#95;&#95; función** no se expande si usa la opción del compilador [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) o [/p](../build/reference/p-preprocess-to-a-file.md) . Para obtener un ejemplo de uso, vea la macro `__FUNCDNAME__`.
 
@@ -336,7 +336,7 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95;M&#95;ARM&#95;FP** definido como un valor literal entero que indica qué opción del compilador [/Arch](../build/reference/arch-arm.md) se estableció para los destinos de procesador ARM. De lo contrario, sin definir.
 
-  - Un valor en el intervalo 30-39 si no se ha especificado ninguna opción de ARM `/arch`, lo que indica que se ha establecido la arquitectura predeterminada para ARM (`VFPv3`).
+  - Un valor en el intervalo 30-39 si no se especificó ninguna opción de ARM `/arch`, lo que indica que se ha establecido la arquitectura predeterminada para ARM (`VFPv3`).
 
   - Un valor en el intervalo 40-49 si se estableció `/arch:VFPv4`.
 
@@ -364,9 +364,9 @@ MSVC admite estas macros predefinidas adicionales.
 
   - 0 si se estableció la opción del compilador `/arch:IA32`.
 
-  - 1 si se estableció la opción del compilador `/arch:SSE`.
+  - 1 si se ha establecido la opción del compilador `/arch:SSE`.
 
-  - 2 si se ha establecido la opción del compilador `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2` o `/arch:AVX512`. Este valor es el predeterminado si no se especificó una opción del compilador `/arch`. Cuando se especifica `/arch:AVX`, también se define la macro **&#95; &#95;AVX&#95;** . Cuando se especifica `/arch:AVX2`, **&#95; &#95;&#95;** también se definen AVX y **&#95; &#95;AVX2&#95;** . Cuando se especifica `/arch:AVX512`,  **&#95; &#95;AVX&#95;** ,  **&#95; &#95;AVX2&#95;** ,  **&#95; &#95;AVX512BW&#95;** ,  **&#95;&#95;AVX512CD, &#95;**  **&#95;También se definen&#95;AVX512DQ, AVX512F y AVX512VL. &#95;** **&#95; &#95;&#95;** **&#95; &#95;&#95;**
+  - 2 si se estableció la opción del compilador `/arch:SSE2`, `/arch:AVX`, `/arch:AVX2`o `/arch:AVX512`. Este valor es el predeterminado si no se especificó una opción del compilador `/arch`. Cuando se especifica `/arch:AVX`, también se define la macro **&#95; &#95;AVX&#95;** . Cuando se especifica `/arch:AVX2`, **&#95; &#95;&#95;** también se definen AVX y **&#95; &#95;AVX2&#95;** . Cuando se especifica `/arch:AVX512`,  **&#95; &#95;&#95;** se definen también AVX,  **&#95; &#95;AVX2&#95;** ,  **&#95; &#95;AVX512BW&#95;** ,  **&#95; &#95;AVX512CD&#95;** , **&#95;AVX512DQ, &#95; &#95;** **AVX512F &#95;y&#95; AVX512VL. &#95;** **&#95; &#95;&#95;**
 
   - Para obtener más información, consulte [/arch (x86)](../build/reference/arch-x86.md).
 
@@ -382,7 +382,7 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95;MSC&#95;ver** Se define como un literal entero que codifica los elementos de número principal y secundario del número de versión del compilador. El número principal es el primer elemento del número de versión delimitado por puntos y el número secundario es el segundo elemento. Por ejemplo, si el número de versión del compiladorC++ de Microsoft C/es 17.00.51106.1, la  **&#95;macro MSC&#95;ver** se evalúa como 1700. Escriba `cl /?` en la línea de comandos para ver el número de versión del compilador. Esta macro siempre está definida.
 
-   |Versión de Visual Studio|**&#95;MSC&#95;VER**|
+   |Versión de Visual Studio|**&#95;MSC&#95;ver**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7,0)|1300|
@@ -423,7 +423,7 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95;&#95;Las&#95;comprobaciones en tiempo de&#95;ejecución de MSVC** se definen como 1 cuando se establece una de las opciones del compilador [/RTC](../build/reference/rtc-run-time-error-checks.md) . De lo contrario, sin definir.
 
-- **&#95;MSVC&#95;Traditional** se define como 0 cuando se establece la opción del compilador [/experimental: preprocesador](../build/reference/rtc-run-time-error-checks.md) . Se define como 1 de forma predeterminada, o cuando se establece la opción del compilador [/experimental: preprocesador](../build/reference/rtc-run-time-error-checks.md) , para indicar que el preprocesador tradicional está en uso. La opción del compilador  **&#95;MSVC&#95;tradicional** macro y [/experimental: preprocesador (Habilitar modo de conformidad del preprocesador)](../build/reference/experimental-preprocessor.md) está disponible a partir de la versión 15,8 de Visual Studio 2017.
+- **&#95;MSVC&#95;Traditional** se define como 0 cuando se establece la opción del compilador [/experimental: preprocesador](../build/reference/experimental-preprocessor.md) . Se define como 1 de forma predeterminada, o cuando se establece la opción del compilador [/experimental: preprocesador](../build/reference/experimental-preprocessor.md) , para indicar que el preprocesador tradicional está en uso. La opción del compilador  **&#95;MSVC&#95;tradicional** macro y [/experimental: preprocesador (Habilitar modo de conformidad del preprocesador)](../build/reference/experimental-preprocessor.md) está disponible a partir de la versión 15,8 de Visual Studio 2017.
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL

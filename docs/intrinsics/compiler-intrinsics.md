@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 8c101de6d74a4f2d3073bd220a29f2a0328d2959
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 61fc825e333b8d839d15752ce737dfc6d3980809
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216872"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163486"
 ---
 # <a name="compiler-intrinsics"></a>Intrínsecos del controlador
 
@@ -26,15 +26,17 @@ El uso de intrínsecos afecta a la portabilidad del código, ya que los intríns
 
 Algunos intrínsecos, como `__assume` y `__ReadWriteBarrier`, proporcionan información al compilador, lo que afecta al comportamiento del optimizador.
 
-Algunos intrínsecos están disponibles solo como tal, mientras que otros están disponibles en implementaciones de intrínseco y de función. Puede indicarle al compilador que utilice la implementación de intrínseco de dos maneras, en función de si desea habilitar solo funciones específicas o de si desea habilitar todos los intrínsecos. La primera consiste en usar `#pragma intrinsic(`la *función intrínseca-List*`)`-Name. La directiva pragma puede utilizarse para especificar un solo intrínseco o varios intrínsecos separados por comas. La segunda consiste en usar la opción del compilador [/OI (generar funciones intrínsecas)](../build/reference/oi-generate-intrinsic-functions.md) , que hace que todos los intrínsecos de una plataforma determinada estén disponibles. En **/OI**, use `#pragma function(` *intrínseca-function-Name-List* `)` para forzar el uso de una llamada de función en lugar de un intrínseco. Si la documentación de una expresión intrínseca concreta que la rutina solo está disponible como intrínseco, se usa la implementación intrínseca independientemente de si se especifica **/OI** o `#pragma intrinsic` . En todos los casos ,/OI `#pragma intrinsic` o permite, pero no fuerza, que el optimizador use el intrínseco. El optimizador todavía puede llamar a la función.
+Algunos intrínsecos están disponibles solo como tal, mientras que otros están disponibles en implementaciones de intrínseco y de función. Puede indicarle al compilador que utilice la implementación de intrínseco de dos maneras, en función de si desea habilitar solo funciones específicas o de si desea habilitar todos los intrínsecos. La primera manera es usar `#pragma intrinsic(``)`*intrínseco-function-Name-List* . La directiva pragma puede utilizarse para especificar un solo intrínseco o varios intrínsecos separados por comas. La segunda consiste en usar la opción del compilador [/OI (generar funciones intrínsecas)](../build/reference/oi-generate-intrinsic-functions.md) , que hace que todos los intrínsecos de una plataforma determinada estén disponibles. En **/OI**, use `#pragma function(``)` *intrínseco-function-Name-List* para forzar que se use una llamada de función en lugar de un intrínseco. Si la documentación de una expresión intrínseca concreta que la rutina solo está disponible como intrínseco, se usa la implementación intrínseca independientemente de si se especifica **/OI** o `#pragma intrinsic`. En todos los casos, **/OI** o `#pragma intrinsic` permite, pero no fuerza, que el optimizador use el intrínseco. El optimizador todavía puede llamar a la función.
 
 Algunas funciones de biblioteca estándar de C o C++ están disponibles en las implementaciones de intrínseco de algunas arquitecturas. Cuando se llama a una función de CRT, se utiliza la implementación intrínseca si se especifica **/OI** en la línea de comandos.
 
-Hay disponible un archivo \<de encabezado, INTRIN. h >, que declara prototipos para las funciones intrínsecas comunes. Los intrínsecos específicos del fabricante están disponibles en \<los archivos de encabezado immintrin \<. h > y ammintrin. h >. Además, algunos encabezados de Windows declaran funciones que se asignan a un intrínseco del compilador.
+Hay disponible un archivo de encabezado, \<INTRIN. h >, que declara prototipos para las funciones intrínsecas comunes. Los intrínsecos específicos del fabricante están disponibles en los archivos de encabezado \<immintrin. h > y \<ammintrin. > h. Además, algunos encabezados de Windows declaran funciones que se asignan a un intrínseco del compilador.
 
 En las secciones siguientes se enumeran todos los intrínsecos que están disponibles en varias arquitecturas. Para obtener más información acerca de cómo funcionan los intrínsecos en un procesador de destino determinado, consulte la documentación de referencia del fabricante.
 
 - [Intrínsecos ARM](../intrinsics/arm-intrinsics.md)
+
+- [Intrínsecos ARM64](../intrinsics/arm64-intrinsics.md)
 
 - [lista de intrínsecos x86](../intrinsics/x86-intrinsics-list.md)
 

@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
-ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012248"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163468"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Intrínsecos disponibles en todas las arquitecturas
 
@@ -19,7 +19,7 @@ El compiladorC++ de Microsoft c/y la biblioteca en tiempo de ejecución de c uni
 
 Los siguientes intrínsecos están disponibles con las arquitecturas x86, AMD64, ARM y ARM64:
 
-|Función intrínseca|Encabezado|
+|Función intrínseca|Header|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -73,7 +73,7 @@ Los siguientes intrínsecos están disponibles con las arquitecturas x86, AMD64,
 
 Las siguientes funciones de UCRT tienen formas intrínsecas en todas las arquitecturas:
 
-|Función intrínseca|Encabezado|
+|Función intrínseca|Header|
 |---------------|------------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
@@ -104,7 +104,7 @@ Las siguientes funciones de UCRT tienen formas intrínsecas en todas las arquite
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[sol](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
@@ -162,6 +162,7 @@ Las siguientes funciones de UCRT tienen formas intrínsecas en todas las arquite
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos ARM](../intrinsics/arm-intrinsics.md)<br/>
-[Lista de intrínsecos de x86](../intrinsics/x86-intrinsics-list.md)<br/>
-[Lista de intrínsecos de x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[Intrínsecos de ARM](../intrinsics/arm-intrinsics.md)\
+\ [intrínsecos ARM64](../intrinsics/arm64-intrinsics.md)
+\ de la [lista de intrínsecos x86](../intrinsics/x86-intrinsics-list.md)
+[lista de intrínsecos x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
