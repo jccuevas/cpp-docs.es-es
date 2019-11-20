@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707109"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189007"
 ---
 # <a name="hint-files"></a>Archivos de indicaciones
 
@@ -36,8 +36,8 @@ Un archivo de indicaciones contiene indicaciones personalizables por el usuario,
 
 > [!IMPORTANT]
 > Si modifica o agrega un archivo de indicaciones, deberá realizar pasos adicionales para que los cambios surtan efecto:
-> - En las versiones anteriores a la versión 15.6 de Visual Studio 2017: elimine el archivo .sdf o VC.db de la solución para todos los cambios.
-> - En las versiones 15.6 a 15.9 de Visual Studio 2017: cierre y vuelva a abrir la solución tras agregar nuevos archivos de indicaciones.
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>Escenario
 
@@ -92,13 +92,13 @@ A partir de la versión 15.8 de Visual Studio 2017, hay varias características 
 
 - Hay una acción rápida para crear un archivo de indicaciones que incluye la macro resaltada. En el caso de que ya haya un archivo de indicaciones, la acción rápida permite agregar la macro al archivo de indicaciones.
 
-![Macro resaltada.](media/hint-squiggle-and-actions.png "Sugerencia con subrayado ondulado y acciones rápidas")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 Después de ejecutar una acción rápida, el analizador vuelve a analizar los archivos afectados por el archivo de indicaciones.
 
-De forma predeterminada, se resalta la macro de problema como una sugerencia. El resaltado se puede cambiar a un elemento más visible, como un subrayado ondulado de color rojo o verde. Use la opción **Macros de regiones de navegación omitidas** en la sección **Subrayados ondulados de código**, que encontrará en **Herramientas** > **Opciones** > **Editor de texto** > **C/C++** > **Ver**.
+De forma predeterminada, se resalta la macro de problema como una sugerencia. El resaltado se puede cambiar a un elemento más visible, como un subrayado ondulado de color rojo o verde. Use la opción **Macros de regiones de navegación omitidas** en la sección **Subrayados ondulados de código**, que encontrará en **Herramientas** > **Opciones** > **Editor de texto** > **C/C++**  > **Ver**.
 
-![Opción Macros de regiones de navegación omitidas.](media/skipped-regions-squiggle-option.png "Opción Subrayado ondulado de regiones omitidas.")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>Visualizar errores de la base de datos de exploración
 
@@ -166,7 +166,7 @@ En la ilustración se muestran algunos de los directorios físicos de un proyect
 
 ### <a name="hint-file-directories"></a>Directorios de archivos de indicaciones
 
-![Directorios de archivos de indicaciones comunes y específicos del proyecto.](media/hintfile.png "HintFile")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Directorios y contenido del archivo de indicaciones
 
