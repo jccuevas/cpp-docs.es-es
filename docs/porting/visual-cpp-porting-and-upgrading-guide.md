@@ -1,45 +1,45 @@
 ---
-title: Guía C++ de migración y actualización de Microsoft
-description: Actualice el C++ código de Microsoft a la versión más reciente de Visual Studio.
-ms.date: 11/05/2019
+title: Microsoft C++ porting and upgrading guide
+description: Upgrade Microsoft C++ code to the latest version of Visual Studio.
+ms.date: 11/18/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 88b5b31428979d26bbbf810c4c04c99f411dbcbb
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119489"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189338"
 ---
-# <a name="microsoft-c-porting-and-upgrading-guide"></a>Guía C++ de migración y actualización de Microsoft
+# <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++ porting and upgrading guide
 
-En este tema se proporciona una guía para actualizar C++ el código de Microsoft a la versión más reciente de Visual Studio. Si va a actualizar desde un proyecto creado en Visual Studio 2008 o una versión anterior, primero debe usar Visual Studio 2010 para convertir el proyecto al formato MSBuild y luego abrir el proyecto en Visual Studio 2019. En el caso de los proyectos creados en Visual Studio 2010 a 2015, solo tiene que abrir el proyecto en Visual Studio 2019. Para obtener instrucciones completas, vea [actualizar C++ proyectos de versiones anteriores de Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md).
+This article provides a guide for upgrading Microsoft C++ code to the latest version of Visual Studio. For projects created in Visual Studio 2010 through 2015, just open the project in Visual Studio 2019. You can upgrade a Visual Studio 2008 or earlier project in two steps. Use Visual Studio 2010 to convert the project to MSBuild format first. Then open the project in Visual Studio 2019. For complete instructions, see [Upgrading C++ projects from earlier versions of Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md).
 
-Los conjuntos de herramientas de Visual Studio 2015, Visual Studio 2017 y Visual Studio 2019 son compatibles con archivos binarios, lo que permite actualizar a una versión más reciente del compilador sin tener que actualizar las dependencias de la biblioteca. Para obtener más información, consulte [ C++ compatibilidad binaria entre 2015 y 2019](binary-compat-2015-2017.md).
+The toolsets in Visual Studio 2015, Visual Studio 2017, and Visual Studio 2019 are binary-compatible. Now you can upgrade to a more recent version of the compiler without having to upgrade your library dependencies. For more information, see [C++ binary compatibility 2015-2019](binary-compat-2015-2017.md).
 
-Al actualizar proyectos que utilizan bibliotecas de código abierto o que están diseñados para ejecutarse en varias plataformas, se recomienda migrar a un proyecto basado en CMake. Para obtener más información, vea [CMake Projects in Visual Studio](../build/cmake-projects-in-visual-studio.md)
+When upgrading projects that use open-source libraries or are meant to run on multiple platforms, we recommended migrating to a CMake-based project. For more information, see [CMake projects in Visual Studio](../build/cmake-projects-in-visual-studio.md)
 
-## <a name="reasons-to-upgrade-c-code"></a>Razones para actualizar C++ el código
+## <a name="reasons-to-upgrade-c-code"></a>Reasons to upgrade C++ code
 
-Si una aplicación heredada se ejecuta correctamente, en un entorno seguro y no está en desarrollo activo, es posible que no haya muchos incentivos para actualizarla. Sin embargo, si una aplicación requiere un mantenimiento continuo o un nuevo desarrollo de características que incluye mejoras de rendimiento o seguridad, es posible que considere la posibilidad de actualizar el código por cualquiera de los siguientes motivos:
+If a legacy application is running satisfactorily, in a secure environment, and isn't under active development, there might not be much incentive to upgrade it. However, consider an upgrade in these cases: Your application requires ongoing maintenance. Or, you're doing new feature development, or making performance or security improvements. An upgrade brings these benefits:
 
-- El mismo código puede ejecutarse más rápido debido a las optimizaciones del compilador mejoradas.
+- The same code can run faster, because we've improved compiler optimizations.
 
-- Las C++ características modernas y las prácticas de programación eliminan muchas causas comunes de errores y generan código que es mucho más fácil de mantener que los lenguajes de estilo C más antiguos.
+- Modern C++ features and programming practices eliminate many common causes of bugs, and produce code that's far easier to maintain than older C-style idioms.
 
-- Los tiempos de compilación son significativamente más rápidos, debido a las mejoras de rendimiento en el compilador y el vinculador.
+- Build times are faster, because of performance improvements in the compiler and linker.
 
-- Mejor conformidad con los estándares. La opción del compilador [/permissive-](../build/reference/permissive-standards-conformance.md) permite identificar código que anteriormente permitía el compilador de Microsoft C++ , pero que no C++ cumple con el estándar actual.
+- Better standards conformance. The [/permissive-](../build/reference/permissive-standards-conformance.md) compiler option helps you identify code that doesn't conform to the current C++ standard.
 
-- Mejor seguridad en tiempo de ejecución, incluidas características de la [biblioteca en]() tiempo de ejecución de C más seguras y características del compilador, como la comprobación de la [protección](../build/reference/guard-enable-guard-checks.md) y los saneados de direcciones (Visual Studio 2019 versión 16,4).
+- Better run-time security, including more secure [C Runtime library]() features. And, compiler features such as [guard checking](../build/reference/guard-enable-guard-checks.md) and address sanitizers (new in Visual Studio 2019 version 16.4).
 
-## <a name="multitargeting-vs-upgrading"></a>Compatibilidad con múltiples versiones y actualización
+## <a name="multitargeting-vs-upgrading"></a>Multitargeting vs. upgrading
 
-Si la actualización de la base de código a un nuevo conjunto de herramientas no es una opción, todavía puede usar una versión reciente de Visual Studio para compilar y editar proyectos que se compilan con bibliotecas y conjuntos de herramientas más antiguos. En Visual Studio 2019 puede aprovechar las ventajas de las características de como:
+Perhaps upgrading your code base to a new toolset isn't an option for you. You can still use the latest Visual Studio to build and edit projects that use older toolsets and libraries. In Visual Studio 2019, you can take advantage of features such as:
 
-- herramientas de análisis estático moderno, incluidos C++ los comprobadores de directrices principales y Clang, para ayudar a identificar posibles problemas en el código fuente.
+- modern static analysis tools, including the C++ Core Guidelines checkers and Clang-Tidy, to help identify potential problems in your source code.
 
-- el formato automático de acuerdo con la elección de los estilos modernos puede ayudar a que el código heredado sea mucho más legible.
+- automatic formatting according to your choice of modern styles can help make legacy code much more readable.
 
 Para obtener más información, vea [Use native multi-targeting in Visual Studio to build old projects](use-native-multi-targeting.md) (Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos).
 
@@ -47,16 +47,16 @@ Para obtener más información, vea [Use native multi-targeting in Visual Studio
 
 |Title|Descripción|
 |-----------|-----------------|
-|[Actualizar C++ proyectos desde versiones anteriores de Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Cómo actualizar la base de código a Visual Studio 2019 y v142 del compilador.|
-|[Herramientas del IDE para actualizar C++ el código](ide-tools-for-upgrading-code.md)|Características útiles del IDE que ayudan en el proceso de actualización.|
-|[C++Compatibilidad binaria entre 2015 y 2019](binary-compat-2015-2017.md)|Consuma bibliotecas de V140 tal cual desde proyectos de v142.|
-|[Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos](use-native-multi-targeting.md)|Use Visual Studio 2019 con compiladores y bibliotecas más antiguos.|
-|[Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)|Una lista de todos los cambios de las bibliotecas C++ de Microsoft y las herramientas de compilación de Visual Studio 2003 a 2015 que podrían requerir cambios en el código.|
-|[Novedades de Visual C++ de 2003 a 2015](visual-cpp-what-s-new-2003-through-2015.md)|Toda la información sobre novedades de Microsoft C++ de visual Studio 2003 a través de visual Studio 2015.|
-|[Migración y actualización: ejemplos y casos prácticos](porting-and-upgrading-examples-and-case-studies.md)|En esta sección migramos y actualizamos varios ejemplos y aplicaciones y analizamos las experiencias y los resultados. Puede que leer estos ejemplos le dé una idea de lo que conlleva el proceso de migración y actualización. Durante el proceso ofreceremos sugerencias y trucos para llevar a cabo la actualización y mostraremos cómo se corrigieron errores concretos.|
+|[Upgrading C++ projects from earlier versions of Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|How to upgrade your code base to Visual Studio 2019 and v142 of the compiler.|
+|[IDE tools for upgrading C++ code](ide-tools-for-upgrading-code.md)|Useful IDE features that help in the upgrade process.|
+|[C++ binary compatibility 2015-2019](binary-compat-2015-2017.md)|Consume v140 and v141 libraries as-is from v142 projects.|
+|[Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos](use-native-multi-targeting.md)|Use Visual Studio 2019 with older compilers and libraries.|
+|[Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)|A list of all the changes in the Microsoft C++ libraries and build tools from Visual Studio 2003 through 2015 that might require changes in your code.|
+|[Novedades de Visual C++ de 2003 a 2015](visual-cpp-what-s-new-2003-through-2015.md)|All the "what's new" information for Microsoft C++ from Visual Studio 2003 through Visual Studio 2015.|
+|[Migración y actualización: ejemplos y casos prácticos](porting-and-upgrading-examples-and-case-studies.md)|En esta sección migramos y actualizamos varios ejemplos y aplicaciones y analizamos las experiencias y los resultados. These articles give you a sense of what's involved in the porting and upgrading process. Durante el proceso ofreceremos sugerencias y trucos para llevar a cabo la actualización y mostraremos cómo se corrigieron errores concretos.|
 |[Migrar a la Plataforma universal de Windows](porting-to-the-universal-windows-platform-cpp.md)|Contiene información sobre el traslado de código a Windows 10.|
 |[Introducción a Visual C++ para los usuarios de UNIX](introduction-to-visual-cpp-for-unix-users.md)|Proporciona información a los usuarios de UNIX que no estén familiarizados con Visual C++ y quieran ser más productivos con él.|
-|[Ejecución de programas de Linux en Windows](porting-from-unix-to-win32.md)|Describe las opciones para migrar aplicaciones de UNIX a Windows.|
+|[Running Linux programs on Windows](porting-from-unix-to-win32.md)|Describe las opciones para migrar aplicaciones de UNIX a Windows.|
 
 ## <a name="see-also"></a>Vea también
 

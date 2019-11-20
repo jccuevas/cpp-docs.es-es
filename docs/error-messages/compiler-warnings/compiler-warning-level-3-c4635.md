@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: 21873a883b19924ce3ef41511d65f8ae640875f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6fd45dc6c28c0d12eb2b2991f8a087b1841d1a9
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401727"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189146"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>Advertencia del compilador (nivel 3) C4635
 
@@ -21,7 +21,7 @@ El compilador encontró algún problema con las etiquetas XML.  Corrija el probl
 
 El ejemplo siguiente genera la advertencia C4635:
 
-```
+```cpp
 // C4635.cpp
 // compile with: /doc /clr /W3 /c
 /// <summary>
@@ -33,6 +33,6 @@ El ejemplo siguiente genera la advertencia C4635:
 public ref class Test {};
 ```
 
-Tenga en cuenta que la salida de este ejemplo indica: **End etiqueta 'member' no coincide con la etiqueta inicial 'summary'.**
+Observe que la salida de este ejemplo indica: **La etiqueta final 'member' no coincide con la etiqueta inicial 'summary'** .
 
-El problema con este ejemplo es que la etiqueta final \<resumen > está incorrectamente formada y el compilador no lo reconoce como el \<resumen > etiqueta de cierre.  El \<miembro > etiqueta a la que está incrustada en el archivo .xdc por el compilador en cada compilación/doc.  Por lo tanto, el problema es que la etiqueta de cierre \</member >, no coincide con la etiqueta inicial anterior que el compilador ha procesado (\<resumen >.
+The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.

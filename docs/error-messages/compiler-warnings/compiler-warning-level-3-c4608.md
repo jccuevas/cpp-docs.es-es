@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4608
 ms.assetid: 8b8f5f28-8ce9-457e-9d3d-a8c0efce9b6a
-ms.openlocfilehash: 4f1bef80b8cddccc036a5151bb4cc4ac01483a36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3599209043b877a60fbd7796959b8c9b76e1fb86
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401766"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188982"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>Advertencia del compilador (nivel 3) C4608
 
@@ -21,7 +21,7 @@ Se inicializaron dos miembros de la misma unión en una lista de inicialización
 
 El ejemplo siguiente genera C4608:
 
-```
+```cpp
 // C4608.cpp
 // compile with: /W3 /c
 class X {
