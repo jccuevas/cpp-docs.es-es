@@ -8,16 +8,16 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd5ce722c5159041ba8fb0a4a41b942a1bd4614f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312215"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246059"
 ---
 # <a name="unhandled-c-exceptions"></a>Excepciones de C++ no controladas
 
-Si un controlador coincidente (o botón de puntos suspensivos **catch** controlador) no se encuentra para la excepción actual, predefinida `terminate` se llama a la función de tiempo de ejecución. (También puede llamar explícitamente a `terminate` en cualquiera de sus controladores). La acción predeterminada de `terminate` es llamar a `abort`. Si desea que `terminate` llame a otra función del programa antes de salir de la aplicación, llame a la función `set_terminate` con el nombre de la función que se va a llamar como argumento único. Puede llamar a `set_terminate` en cualquier punto del programa. El `terminate` rutina siempre llama a la última función especificada como argumento a `set_terminate`.
+If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. Si desea que `terminate` llame a otra función del programa antes de salir de la aplicación, llame a la función `set_terminate` con el nombre de la función que se va a llamar como argumento único. Puede llamar a `set_terminate` en cualquier punto del programa. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
 
 ## <a name="example"></a>Ejemplo
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Resultados
 
 ```Output
 term_func was called by terminate.
@@ -56,4 +56,4 @@ La función `term_func` debe finalizar el programa o el subproceso actual, ideal
 
 ## <a name="see-also"></a>Vea también
 
-[Control de excepciones de C++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

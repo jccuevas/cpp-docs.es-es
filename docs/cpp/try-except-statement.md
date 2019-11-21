@@ -26,76 +26,76 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: b4dccb58bf63f51e88006b793b8a94bfbe021c73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400550"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245165"
 ---
 # <a name="try-except-statement"></a>try-except (Instrucción)
 
 **Específicos de Microsoft**
 
-El **intente-excepto** instrucción es una extensión de Microsoft C y lenguajes C++ que admite el control estructurado de excepciones.
+The **try-except** statement is a Microsoft extension to the C and C++ languages that supports structured exception handling.
 
 ## <a name="syntax"></a>Sintaxis
 
 > **\_\_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;código protegido<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
 > }<br/>
 > **\_\_except** ( *expression* )<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;código del controlador de excepción<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// exception handler code<br/>
 > }
 
 ## <a name="remarks"></a>Comentarios
 
-El **intente-excepto** instrucción es una extensión de Microsoft C y lenguajes C++ que permite a las aplicaciones de destino obtener controlan cuando se producen los eventos que normalmente finalizan la ejecución del programa. Estos eventos se denominan *excepciones*, y el mecanismo que se ocupa de las excepciones se denomina *control estructurado de excepciones* (SEH).
+The **try-except** statement is a Microsoft extension to the C and C++ languages that enables target applications to gain control when events that normally terminate program execution occur. Such events are called *exceptions*, and the mechanism that deals with exceptions is called *structured exception handling* (SEH).
 
-Para obtener información relacionada, consulte el [instrucción try-finally](../cpp/try-finally-statement.md).
+For related information, see the [try-finally statement](../cpp/try-finally-statement.md).
 
 Las excepciones pueden estar basadas en hardware o software. Aunque las aplicaciones no pueden recuperarse completamente de las excepciones de hardware o software, el control de excepciones estructurado permite mostrar información de error y capturar el estado interno de la aplicación para ayudar a diagnosticar el problema. Esto es especialmente útil en el caso de problemas intermitentes que no se pueden reproducir fácilmente.
 
 > [!NOTE]
-> El control de excepciones estructurado funciona con Win32 para archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo. Para los programas de C++, se recomienda utilizar el mecanismo de control de excepciones de C++ ([try, catch y throw](../cpp/try-throw-and-catch-statements-cpp.md) instrucciones).
+> El control de excepciones estructurado funciona con Win32 para archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
 
-La instrucción compuesta después de la **__try** cláusula es el cuerpo o la sección protegida. La instrucción compuesta después de la **__except** cláusula es el controlador de excepciones. El controlador especifica un conjunto de acciones que se realizarán si se inicia una excepción durante la ejecución del cuerpo de la sección protegida. La ejecución continúa de la siguiente manera:
+The compound statement after the **__try** clause is the body or guarded section. The compound statement after the **__except** clause is the exception handler. El controlador especifica un conjunto de acciones que se realizarán si se inicia una excepción durante la ejecución del cuerpo de la sección protegida. La ejecución continúa de la siguiente manera:
 
 1. Se ejecuta la sección protegida.
 
-1. Si se produce ninguna excepción durante la ejecución de la sección protegida, la ejecución continúa en la instrucción después del **__except** cláusula.
+1. If no exception occurs during execution of the guarded section, execution continues at the statement after the **__except** clause.
 
-1. Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina que llame la sección protegida, la **__except** *expresión* (denominado el *filtro* expresión) se evalúa y el valor determina cómo se controla la excepción. Hay tres valores posibles:
+1. If an exception occurs during execution of the guarded section or in any routine the guarded section calls, the **__except** *expression* (called the *filter* expression) is evaluated and the value determines how the exception is handled. There are three possible values:
 
-   - Se descarta la excepción EXCEPTION_CONTINUE_EXECUTION (-1). La ejecución continúa en el punto donde se ha producido la excepción.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) Exception is dismissed. La ejecución continúa en el punto donde se ha producido la excepción.
 
-   - No se reconoce la excepción exception_continue_search (0). La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
+   - EXCEPTION_CONTINUE_SEARCH (0) Exception is not recognized. La búsqueda de un controlador continúa hacia la parte superior de la pila, primero con las instrucciones **try-except** contenedoras y, después, con los controladores siguientes que tengan mayor prioridad.
 
-   - Exception_execute_handler (1) excepción se reconoce. Transferir el control al controlador de excepciones mediante la ejecución de la **__except** una instrucción compuesta, a continuación, continuar la ejecución después de la **__except** bloque.
+   - EXCEPTION_EXECUTE_HANDLER (1) Exception is recognized. Transfer control to the exception handler by executing the **__except** compound statement, then continue execution after the **__except** block.
 
-Dado que el **__except** expresión se evalúa como una expresión de C, se limita a un solo valor, el operador de expresión condicional u operador de coma. Si se requiere un mayor procesamiento, la expresión puede llamar a una rutina que devuelva uno de los tres valores enumerados anteriormente.
+Because the **__except** expression is evaluated as a C expression, it is limited to a single value, the conditional-expression operator, or the comma operator. Si se requiere un mayor procesamiento, la expresión puede llamar a una rutina que devuelva uno de los tres valores enumerados anteriormente.
 
 Cada aplicación puede tener su propio controlador de excepciones.
 
-No es válido saltar dentro un **__try** instrucción, pero sí fuera. No se llama al controlador de excepción si un proceso se termina en medio de ejecución de un **intente-excepto** instrucción.
+It is not valid to jump into a **__try** statement, but valid to jump out of one. The exception handler is not called if a process is terminated in the middle of executing a **try-except** statement.
 
-Para ofrecer compatibilidad con versiones anteriores, **_try**, **_except**, y **_leave** son sinónimos para **__try**, **__except** , y **__leave** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
+For compatibility with previous versions, **_try**, **_except**, and **_leave** are synonyms for **__try**, **__except**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
 
-### <a name="the-leave-keyword"></a>La palabra clave __leave
+### <a name="the-__leave-keyword"></a>La palabra clave __leave
 
-El **__leave** palabra clave sólo es válida en la sección protegida de un **intente-excepto** instrucción y su efecto es saltar al final de la sección protegida. La ejecución de la primera instrucción continúa después del controlador de excepciones.
+The **__leave** keyword is valid only within the guarded section of a **try-except** statement, and its effect is to jump to the end of the guarded section. La ejecución de la primera instrucción continúa después del controlador de excepciones.
 
-Un **goto** instrucción también puede saltar fuera de la sección protegida, y no afecta al rendimiento como lo hace en un **try-finally** instrucción porque el desenredo de pila no aparece. Sin embargo, se recomienda que utilice el **__leave** palabra clave en lugar de un **goto** instrucción porque es menos probable que sea un error de programación si la sección protegida es grande o compleja.
+A **goto** statement can also jump out of the guarded section, and it does not degrade performance as it does in a **try-finally** statement because stack unwinding does not occur. However, we recommend that you use the **__leave** keyword rather than a **goto** statement because you are less likely to make a programming mistake if the guarded section is large or complex.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Funciones intrínsecas de control de excepciones estructurado
 
-Control de excepciones estructurado proporciona dos funciones intrínsecas que están disponibles para su uso con el **intente-excepto** instrucción: `GetExceptionCode` y `GetExceptionInformation`.
+Structured exception handling provides two intrinsic functions that are available to use with the **try-except** statement: `GetExceptionCode` and `GetExceptionInformation`.
 
-`GetExceptionCode` Devuelve el código (un entero de 32 bits) de la excepción.
+`GetExceptionCode` returns the code (a 32-bit integer) of the exception.
 
-La función intrínseca `GetExceptionInformation` devuelve un puntero a una estructura que contiene información adicional sobre la excepción. A través de este puntero, se puede tener acceso al estado que tenía el equipo en el momento de producirse una excepción de hardware. La estructura es como se detalla a continuación:
+The intrinsic function `GetExceptionInformation` returns a pointer to a structure containing additional information about the exception. A través de este puntero, se puede tener acceso al estado que tenía el equipo en el momento de producirse una excepción de hardware. La estructura es como se detalla a continuación:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -104,13 +104,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-Los tipos de puntero `PEXCEPTION_RECORD` y `PCONTEXT` se definen en el archivo de inclusión \<winnt.h >, y `_EXCEPTION_RECORD` y `_CONTEXT` se definen en el archivo de inclusión \<excpt.h >
+The pointer types `PEXCEPTION_RECORD` and `PCONTEXT` are defined in the include file \<winnt.h>, and `_EXCEPTION_RECORD` and `_CONTEXT` are defined in the include file \<excpt.h>
 
-Puede usar `GetExceptionCode` dentro del controlador de excepciones. Sin embargo, puede usar `GetExceptionInformation` solo dentro de la expresión de filtro de excepción. La información a la que señala está normalmente en la pila y ya no está disponible cuando el control se transfiere al controlador de excepciones.
+You can use `GetExceptionCode` within the exception handler. However, you can use `GetExceptionInformation` only within the exception filter expression. La información a la que señala está normalmente en la pila y ya no está disponible cuando el control se transfiere al controlador de excepciones.
 
-La función intrínseca `AbnormalTermination` está disponible dentro de un controlador de terminación. Devuelve 0 si el cuerpo de la **try-finally** instrucción finaliza secuencialmente. En todos los demás casos, devuelve 1.
+The intrinsic function `AbnormalTermination` is available within a termination handler. It returns 0 if the body of the **try-finally** statement terminates sequentially. En todos los demás casos, devuelve 1.
 
-excpt.h define algunos nombres alternativos para estos intrínsecos:
+excpt.h defines some alternate names for these intrinsics:
 
 `GetExceptionCode` es equivalente a `_exception_code`
 
@@ -168,7 +168,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Resultados
 
 ```Output
 hello
@@ -186,6 +186,6 @@ world
 
 ## <a name="see-also"></a>Vea también
 
-[Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

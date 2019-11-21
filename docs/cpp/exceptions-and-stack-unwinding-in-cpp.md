@@ -1,31 +1,31 @@
 ---
 title: Excepciones y desenredo de pila en C++
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11657206e86dbc81eb62c1e11b49fd87777f11d8
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398893"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246565"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Excepciones y desenredo de pila en C++
 
-En el mecanismo de excepciones de C++, el control se mueve desde la instrucción throw hasta la primera instrucción catch que puede controlar el tipo producido. Cuando se alcanza la instrucción catch, todas las variables automáticas que están en ámbito entre el inicio y la instrucción catch se destruyen en un proceso que se conoce como *desenredo de pila*. En el desenredo de la pila, la ejecución se desarrolla del modo siguiente:
+En el mecanismo de excepciones de C++, el control se mueve desde la instrucción throw hasta la primera instrucción catch que puede controlar el tipo producido. When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. En el desenredo de la pila, la ejecución se desarrolla del modo siguiente:
 
-1. El control alcanza el **intente** instrucción mediante la ejecución secuencial normal. La sección protegida en el **intente** bloque se ejecuta.
+1. Control reaches the **try** statement by normal sequential execution. The guarded section in the **try** block is executed.
 
-1. Si se produce ninguna excepción durante la ejecución de la sección protegida, la **catch** cláusulas que siguen el **intente** bloque no se ejecutan. La ejecución continúa en la instrucción después del último **catch** cláusula que sigue asociado **intente** bloque.
+1. If no exception is thrown during execution of the guarded section, the **catch** clauses that follow the **try** block are not executed. Execution continues at the statement after the last **catch** clause that follows the associated **try** block.
 
-1. Si se produce una excepción durante la ejecución de la sección protegida o en cualquier rutina de la sección protegida llama directa o indirectamente, se crea un objeto de excepción desde el objeto que se crea mediante la **throw** operando. (Esto supone que un constructor de copias puede estar implicado). En este momento, el compilador busca un **catch** cláusula en un contexto de ejecución superior que puede controlar una excepción del tipo que se produce, o para un **catch** controlador que puede controlar cualquier tipo de excepción. El **catch** controladores se examinan por orden de aparición después la **intente** bloque. Si no se encuentra ningún controlador adecuado, la siguiente inclusión dinámica **intente** examinar el bloque. Este proceso continúa hasta que la inclusión extremo **intente** examinar el bloque.
+1. If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the **throw** operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a **catch** clause in a higher execution context that can handle an exception of the type that is thrown, or for a **catch** handler that can handle any type of exception. The **catch** handlers are examined in order of their appearance after the **try** block. If no appropriate handler is found, the next dynamically enclosing **try** block is examined. This process continues until the outermost enclosing **try** block is examined.
 
 1. Si no se ha encontrado todavía un controlador coincidente, o si se produce una excepción durante el proceso de desenredo pero antes de que el controlador obtenga el control, se llama a la función `terminate` predefinida en tiempo de ejecución. Si se produce una excepción después de que se produzca la excepción pero antes de que empiece el desenredo, se llama a `terminate`.
 
-1. Si una coincidencia **catch** se encuentra el controlador y detecta por valor, su parámetro formal se inicializa copiando el objeto de excepción. Si detecta por referencia, el parámetro se inicializa para hacer referencia al objeto de excepción. Una vez inicializado el parámetro formal, comienza el proceso de desenredo de la pila. Esto implica la destrucción de todos los objetos automáticos que estaban construidos totalmente, pero todavía no destruidos: entre el comienzo de la **intente** bloque que está asociado el **catch** controlador y el iniciar el sitio de la excepción. La destrucción se produce en orden inverso al de construcción. El **catch** se ejecuta el controlador y el programa reanuda la ejecución después del último controlador, es decir, en la primera instrucción o construcción que no es un **catch** controlador. Control sólo puede especificar un **catch** controlador a través de una excepción producida, nunca a través de un **goto** instrucción o un **caso** etiquetar en un **cambiar** instrucción.
+1. If a matching **catch** handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. Si detecta por referencia, el parámetro se inicializa para hacer referencia al objeto de excepción. Una vez inicializado el parámetro formal, comienza el proceso de desenredo de la pila. This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the **try** block that is associated with the **catch** handler and the throw site of the exception. La destrucción se produce en orden inverso al de construcción. The **catch** handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a **catch** handler. Control can only enter a **catch** handler through a thrown exception, never through a **goto** statement or a **case** label in a **switch** statement.
 
-## <a name="stack-unwinding-example"></a>Ejemplo de desenredo de la pila
+## <a name="stack-unwinding-example"></a>Stack unwinding example
 
-En el ejemplo siguiente se muestra cómo se desenreda la pila cuando se produce una excepción. La ejecución del subproceso salta de la instrucción throw de `C` a la instrucción catch de `main` y desenreda cada función a lo largo del recorrido. Observe el orden en que se crean los objetos `Dummy` y se destruyen después cuando salen del ámbito. Observe también que ninguna función se completa excepto `main`, que contiene la instrucción catch. La función `A` nunca vuelve de la llamada a `B()` y `B` nunca vuelve de la llamada a `C()`. Si quita los comentarios de la definición del puntero de `Dummy` y la correspondiente instrucción delete, y ejecuta después el programa, observe que el puntero nunca se elimina. Esto muestra lo que puede suceder cuando las funciones no proporcionan una garantía de excepción. Para obtener más información, vea el artículo sobre cómo Diseño de excepciones. Si marca como comentario la instrucción catch, puede observar lo que sucede cuando un programa finaliza debido a una excepción no controlada.
+En el ejemplo siguiente se muestra cómo se desenreda la pila cuando se produce una excepción. La ejecución del subproceso salta de la instrucción throw de `C` a la instrucción catch de `main` y desenreda cada función a lo largo del recorrido. Observe el orden en que se crean los objetos `Dummy` y se destruyen después cuando salen del ámbito. Observe también que ninguna función se completa excepto `main`, que contiene la instrucción catch. La función `A` nunca vuelve de la llamada a `B()` y `B` nunca vuelve de la llamada a `C()`. Si quita los comentarios de la definición del puntero de `Dummy` y la correspondiente instrucción delete, y ejecuta después el programa, observe que el puntero nunca se elimina. Esto muestra lo que puede suceder cuando las funciones no proporcionan una garantía de excepción. Para obtener más información, vea Diseñar para excepciones. Si marca como comentario la instrucción catch, puede observar lo que sucede cuando un programa finaliza debido a una excepción no controlada.
 
 ```cpp
 #include <string>

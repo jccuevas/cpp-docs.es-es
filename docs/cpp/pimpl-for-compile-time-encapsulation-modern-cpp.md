@@ -3,28 +3,28 @@ title: Pimpl para encapsulación en tiempo de compilación (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: 6e114e2802dd4b2e5d1497867e2224be90c4752d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1eb06ad3a52be486f085babf699677951b1ee71
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396111"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245173"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl para encapsulación en tiempo de compilación (C++ moderno)
 
-El *pimpl modismo* es una técnica de C++ moderna para ocultar la implementación, para minimizar el acoplamiento y separar las interfaces. Pimpl es la abreviatura de "puntero a la implementación." Ya puede estar familiarizado con el concepto pero sabe otros nombres como expresión sonrisa Cat o Firewall del compilador.
+The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
 
-## <a name="why-use-pimpl"></a>¿Por qué usar pimpl?
+## <a name="why-use-pimpl"></a>Why use pimpl?
 
-Le mostramos cómo la expresión pimpl puede mejorar el ciclo de vida de desarrollo de software:
+Here's how the pimpl idiom can improve the software development lifecycle:
 
-- Minimización de dependencias de compilación.
+- Minimization of compilation dependencies.
 
-- Separación de la interfaz y la implementación.
+- Separation of interface and implementation.
 
-- Portabilidad de.
+- Portability.
 
-## <a name="pimpl-header"></a>Encabezado Pimpl
+## <a name="pimpl-header"></a>Pimpl header
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-La expresión pimpl evita la recompilación cascadas y diseños de objeto frágil. También es adecuado para los tipos conocidos (de manera transitiva).
+The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
 
-## <a name="pimpl-implementation"></a>Implementación de Pimpl
+## <a name="pimpl-implementation"></a>Pimpl implementation
 
-Definir la `impl` clase en el archivo. cpp.
+Define the `impl` class in the .cpp file.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-Considere la posibilidad de agregar compatibilidad para la especialización de intercambio no producen excepciones.
+Consider whether to add support for non-throwing swap specialization.
 
 ## <a name="see-also"></a>Vea también
 
-[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
