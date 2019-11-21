@@ -1,6 +1,6 @@
 ---
-title: Excepciones (C/C++)
-ms.date: 11/04/2016
+title: DLL loading exception codes (C/C++)
+ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
 - vcppException
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 360acba73278902cc40d10fd975011488742a7a2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f557fe736f45f8c3f5411d076a0be18f1d1b670e
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492929"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74243851"
 ---
 # <a name="exceptions-cc"></a>Excepciones (C/C++)
 
-Se pueden producir dos códigos de excepción cuando se detectan errores:
+Two exception codes can be raised when failures are encountered:
 
-- Para un error de **LoadLibrary**
+- For a **LoadLibrary** failure
 
-- Para un error de **GetProcAddress**
+- For a **GetProcAddress** failure
 
-Esta es la información de la excepción:
+Here is the exception information:
 
 ```
 //
@@ -37,11 +37,11 @@ Esta es la información de la excepción:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-Los códigos de excepción que se inician son los valores estándar de VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) y VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). La excepción pasa un puntero a una estructura **DelayLoadInfo** en el valor LPDWORD que se puede recuperar mediante **GetExceptionInformation** en el campo [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) Structure, ExceptionInformation [0].
+The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
 
-Además, si se establecen bits incorrectos en el campo grAttrs, se produce la excepción ERROR_INVALID_PARAMETER. Esta excepción es, para todas las intenciones y propósitos, fatal.
+Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
 
-Consulte [definiciones de estructura y constante](structure-and-constant-definitions.md) para obtener más información.
+See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
 
 ## <a name="see-also"></a>Vea también
 

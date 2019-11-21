@@ -1,29 +1,29 @@
 ---
-title: Procedimiento La interfaz entre código excepcional y no excepcional
+title: 'How to: Interface between exceptional and non-exceptional code'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fccc40302ab7bd43b3e6b2f87eef488c7813c9be
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183705"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245602"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedimiento La interfaz entre código excepcional y no excepcional
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>How to: Interface between exceptional and non-exceptional code
 
 En este artículo se describe cómo implementar el control de excepciones coherente en un módulo de C++ y cómo traducir esas excepciones a códigos de error, y vicecersa, en los límites de la excepción.
 
-A veces, un módulo de C++ tiene que servir de interfaz con código que no usa las excepciones (código sin excepciones). Esta interfaz se conoce como un *límite de la excepción*. Por ejemplo, quizás desee llamar a la función `CreateFile` de Win32 en el programa de C++. `CreateFile` no produce excepciones; en su lugar establece los códigos de error que pueden recuperarse mediante la función `GetLastError`. Si el programa de C++ no es trivial, probablemente sea preferible tener una directiva coherente de control de errores basada en excepciones. Y probablemente no es conveniente abandonar las excepciones solo porque se interactúa con código sin excepciones; tampoco es conveniente mezclar directivas de error basadas en excepciones y no basadas en excepciones en el módulo de C++.
+A veces, un módulo de C++ tiene que servir de interfaz con código que no usa las excepciones (código sin excepciones). Such an interface is known as an *exception boundary*. Por ejemplo, quizás desee llamar a la función `CreateFile` de Win32 en el programa de C++. `CreateFile` no produce excepciones; en su lugar establece los códigos de error que pueden recuperarse mediante la función `GetLastError`. Si el programa de C++ no es trivial, probablemente sea preferible tener una directiva coherente de control de errores basada en excepciones. Y probablemente no es conveniente abandonar las excepciones solo porque se interactúa con código sin excepciones; tampoco es conveniente mezclar directivas de error basadas en excepciones y no basadas en excepciones en el módulo de C++.
 
-## <a name="calling-non-exceptional-functions-from-c"></a>Llamar a funciones sin excepciones desde C++
+## <a name="calling-non-exceptional-functions-from-c"></a>Calling non-exceptional functions from C++
 
-Cuando se llama a una función sin excepciones desde C++, la idea es ajustar esa función en una función de C++ que detecte cualquier error y posiblemente inicie una excepción. Cuando diseñe una función contenedora, decida primero qué tipo de garantías de excepción va a proporcionar: ningún throw, segura o básica. En segundo lugar, diseñe la función para liberar correctamente todos los recursos, por ejemplo, los identificadores de archivo, si se produce una excepción. Normalmente, esto significa que utiliza punteros inteligentes o administradores de recursos similares para poseer los recursos. Para obtener más información acerca de las consideraciones de diseño, vea [Cómo: Diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md).
+Cuando se llama a una función sin excepciones desde C++, la idea es ajustar esa función en una función de C++ que detecte cualquier error y posiblemente inicie una excepción. Cuando diseñe una función contenedora, decida primero qué tipo de garantías de excepción va a proporcionar: ningún throw, segura o básica. En segundo lugar, diseñe la función para liberar correctamente todos los recursos, por ejemplo, los identificadores de archivo, si se produce una excepción. Normalmente, esto significa que utiliza punteros inteligentes o administradores de recursos similares para poseer los recursos. For more information about design considerations, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra que las funciones de C++ que usan internamente las funciones `CreateFile` y `ReadFile` de Win32 para abrir y leer dos archivos.  La clase `File` es un contenedor RAII (Resource Acquisition Is Initialization) para los identificadores de archivo. El constructor detecta una condición de "archivo no encontrado" y produce una excepción para propagar el error en la pila de llamadas del módulo de C++ (en este ejemplo, la función `main()`). Si se produce una excepción después de que un objeto `File` se haya construido totalmente, el destructor llama automáticamente a `CloseHandle` para liberar el identificador de archivo. (Si lo prefiere, puede utilizar la clase de Active Template Library (ATL) `CHandle` para este mismo propósito o `unique_ptr` junto con un eliminador personalizado). Las funciones que llaman a las API de Win32 y CRT detectan errores y, a continuación, producen excepciones de C++ mediante la función `ThrowLastErrorIf` definida localmente, que a su vez utiliza la clase `Win32Exception`, derivada de la clase `runtime_error`. Todas las funciones de este ejemplo proporcionan una garantía de excepción segura; si se produce una excepción en cualquier momento en estas funciones, no se pierden recursos y no se modifica el estado del programa.
+En el ejemplo siguiente se muestra que las funciones de C++ que usan internamente las funciones `CreateFile` y `ReadFile` de Win32 para abrir y leer dos archivos.  La clase `File` es un contenedor RAII (Resource Acquisition Is Initialization) para los identificadores de archivo. El constructor detecta una condición de "archivo no encontrado" y produce una excepción para propagar el error en la pila de llamadas del módulo de C++ (en este ejemplo, la función `main()`). Si se produce una excepción después de que un objeto `File` se haya construido totalmente, el destructor llama automáticamente a `CloseHandle` para liberar el identificador de archivo. (If you prefer, you can use the Active Template Library (ATL) `CHandle` class for this same purpose, or a `unique_ptr` together with a custom deleter.) The functions that call Win32 and CRT APIs detect errors and then throw C++ exceptions using the locally-defined `ThrowLastErrorIf` function, which in turn uses the `Win32Exception` class, derived from the `runtime_error` class. Todas las funciones de este ejemplo proporcionan una garantía de excepción segura; si se produce una excepción en cualquier momento en estas funciones, no se pierden recursos y no se modifica el estado del programa.
 
 ```cpp
 // compile with: /EHsc
@@ -158,7 +158,7 @@ int main ( int argc, char* argv[] )
 }
 ```
 
-## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Llamar a código con excepciones desde código sin excepciones
+## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Calling exceptional code from non-exceptional code
 
 Los programas de C pueden llamar a las funciones de C++ que se declaran como "extern C". El código escrito en diferentes lenguajes puede utilizar servidores COM de C++. Al implementar funciones públicas preparadas para excepciones en C++ para que las invoque código sin excepciones, la función de C++ no debe permitir que ninguna excepción se propague de nuevo al llamador. Por consiguiente, la función de C++ debe detectar específicamente cada excepción que pueda administrar y, si es necesario, debe convertir la excepción a un código de error que el llamador comprenda. Si no se conocen todas las excepciones posibles, la función de C++ debe tener un bloque `catch(...)` como último controlador. En ese caso, es mejor notificar un error irrecuperable al llamador, porque el programa podría estar en un estado desconocido.
 
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-Cuando se convierte de excepciones a códigos de error, un problema potencial se debe a que los códigos de error no contienen a menudo la riqueza de información que una excepción puede almacenar. Para solucionar este problema, puede proporcionar un **catch** bloque para cada tipo de excepción específico que se podría producir y realiza el registro para registrar los detalles de la excepción antes de que se convierte en un código de error. Este enfoque puede crear una gran cantidad de repetición del código si varias funciones usan el mismo conjunto de **catch** bloques. Es una buena forma de evitar la repetición del código mediante la refactorización de esos bloques en una función de utilidad privada que implementa el **intente** y **catch** bloquea y acepta un objeto de función que se invoca en el **intente** bloque. En cada función pública, pase el código a la función de utilidad como una expresión lambda.
+Cuando se convierte de excepciones a códigos de error, un problema potencial se debe a que los códigos de error no contienen a menudo la riqueza de información que una excepción puede almacenar. To address this, you can provide a **catch** block for each specific exception type that might be thrown, and perform logging to record the details of the exception before it is converted to an error code. This approach can create a lot of code repetition if multiple functions all use the same set of **catch** blocks. A good way to avoid code repetition is by refactoring those blocks into one private utility function that implements the **try** and **catch** blocks and accepts a function object that is invoked in the **try** block. En cada función pública, pase el código a la función de utilidad como una expresión lambda.
 
 ```cpp
 template<typename Func>
@@ -232,9 +232,9 @@ bool DiffFiles3(const string& file1, const string& file2)
 }
 ```
 
-Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../cpp/lambda-expressions-in-cpp.md).
+Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](lambda-expressions-in-cpp.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Controlar errores y excepciones (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Cómo: Diseño para la seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[Cómo: Diseñar para la seguridad de las excepciones](how-to-design-for-exception-safety.md)<br/>

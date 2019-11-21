@@ -8,38 +8,38 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1606a0f5a86996345e12024cf6416afdf6bdc82b
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405969"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246704"
 ---
 # <a name="exceptions-ole-exceptions"></a>Excepciones: Excepciones OLE
 
-Las técnicas y herramientas para controlar las excepciones en OLE son los mismos que para el control de otras excepciones. Para obtener más información sobre control de excepciones, vea el artículo [control de excepciones de C++](../cpp/cpp-exception-handling.md).
+The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Todos los objetos de excepción se derivan de la clase base abstracta `CException`. MFC proporciona dos clases para controlar las excepciones de OLE:
+All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:
 
-- [COleException](../mfc/reference/coleexception-class.md) para controlar excepciones generales OLE.
+- [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) para generar y administrar OLE envían excepciones (automatización).
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.
 
-La diferencia entre estas dos clases es la cantidad de información que proporcionan y dónde se utilizan. `COleException` tiene un miembro de datos públicos que contiene el código de estado OLE para la excepción. `COleDispatchException` proporciona más información, incluidas las siguientes:
+The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:
 
-- Un código de error específico de la aplicación
+- An application-specific error code
 
-- Una descripción del error, como "Disco lleno"
+- An error description, such as "Disk full"
 
-- Un contexto de ayuda que la aplicación puede usar para proporcionar información adicional para el usuario
+- A Help context that your application can use to provide additional information for the user
 
-- El nombre del archivo de Ayuda de la aplicación
+- The name of your application's Help file
 
-- El nombre de la aplicación que generó la excepción
+- The name of the application that generated the exception
 
-`COleDispatchException` proporciona más información para que se puede usar con los productos como Microsoft Visual Basic. La descripción del error puede usarse en un cuadro de mensaje u otra notificación; la información de ayuda puede usarse para ayudar al usuario a responder a las condiciones que produjo la excepción.
+`COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.
 
-Dos funciones globales corresponden a las dos clases de excepción OLE: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) y [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Puede usarlos para producir excepciones generales OLE y excepciones de envío OLE, respectivamente.
+Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.
 
 ## <a name="see-also"></a>Vea también
 
