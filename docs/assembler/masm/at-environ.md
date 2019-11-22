@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Environ symbol'
 ms.assetid: 4b0b7e93-9ebe-413b-8196-1a504eb6d1d0
-ms.openlocfilehash: 2f4d5725d37a74ff0c9c19ad5206478196f28a13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39a5395fa6153deb4172379651ccf8a145543b6e
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166313"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302704"
 ---
-# <a name="environ"></a>@Environ
+# <a name="environ"></a>\@ENVIRON
 
-Valor de variable de entorno *envvar* (función de macros).
+Valor de la variable de entorno *envvar* (función de macro).
 
 ## <a name="syntax"></a>Sintaxis
 
-> @Environ( envvar )
+> **\@ENVIRON (** *envvar* **)**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referencia de símbolos](../../assembler/masm/symbols-reference.md)

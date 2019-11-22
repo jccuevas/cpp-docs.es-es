@@ -9,16 +9,16 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096057"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302984"
 ---
 # <a name="view-classes-architecture"></a>Clases de vistas (Arquitectura)
 
-`CView`y sus clases derivadas son ventanas secundarias que representan el área de cliente de una ventana de marco. Las vistas muestran datos y aceptan entradas para un documento.
+`CView` y sus clases derivadas son ventanas secundarias que representan el área de cliente de una ventana de marco. Las vistas muestran datos y aceptan entradas para un documento.
 
 Una clase de vista se asocia a una clase de documento y una clase de ventana de marco mediante un objeto de plantilla de documento.
 
@@ -26,7 +26,7 @@ Una clase de vista se asocia a una clase de documento y una clase de ventana de 
 La clase base para las vistas específicas de la aplicación de los datos de un documento. Las vistas muestran datos y aceptan la entrada del usuario para editar o seleccionar los datos. Derive las clases de vista de `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Clase base para las vistas con capacidades de desplazamiento. Derive la clase de vista `CScrollView` de para el desplazamiento automático.
+Clase base para las vistas con capacidades de desplazamiento. Derive la clase de vista de `CScrollView` para el desplazamiento automático.
 
 ## <a name="form-and-record-views"></a>Vistas de formulario y de registros
 
@@ -38,7 +38,7 @@ Las vistas de registros se derivan de las vistas de formulario. Además de la pl
 Vista de desplazamiento cuyo diseño se define en una plantilla de cuadro de diálogo. Derive una clase de `CFormView` para implementar una interfaz de usuario basada en una plantilla de cuadro de diálogo.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros de objetos de acceso a datos (DAO). Al igual que todas las vistas `CDaoRecordView` de formulario, se basa en una plantilla de cuadro de diálogo. DAO se utiliza con bases de datos de Access y se admite a través de Office 2013. 3,6 es la versión final y se considera obsoleta.
+Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros de objetos de acceso a datos (DAO). Al igual que todas las vistas de formulario, un `CDaoRecordView` se basa en una plantilla de cuadro de diálogo. DAO se utiliza con bases de datos de Access y se admite a través de Office 2013. DAO 3,6 es la versión final y se considera obsoleta.
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 Admite un control para la exploración web dentro de una aplicación. El control admite HTML dinámico en MFC.
@@ -47,7 +47,7 @@ Admite un control para la exploración web dentro de una aplicación. El control
 Proporciona compatibilidad con MFC OLE DB para las vistas de formulario.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros ODBC (Conectividad abierta de bases de datos). Al igual que todas las vistas `CRecordView` de formulario, se basa en una plantilla de cuadro de diálogo.
+Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros ODBC (Conectividad abierta de bases de datos). Al igual que todas las vistas de formulario, un `CRecordView` se basa en una plantilla de cuadro de diálogo.
 
 ## <a name="control-views"></a>Vistas de control
 

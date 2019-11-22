@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457707"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303501"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Valores
 
-|`Name`|DESCRIPCIÓN|
+|`Name`|Descripción|
 |------------|-----------------|
 |`none`|Realice el comportamiento predeterminado de la operación.|
 |`skip_existing`|No copie el archivo si ya existe, no informe de un error.|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valores
 
-|NOMBRE|DESCRIPCIÓN|
+|NOMBRE|Descripción|
 |----------|-----------------|
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valores
 
-|Nombre|Valor|DESCRIPCIÓN|
+|NOMBRE|Valor|Descripción|
 |----------|-----------|-----------------|
 |`not_found`|-1|Representa un archivo que no existe.|
 |`none`|0|Representa un archivo que no tiene ningún atributo de tipo. (No se admite).|
@@ -122,7 +122,7 @@ enum class file_type {
 
 ## <a name="perm_options"></a>perm_options
 
-Incluye los `replace`valores `add` ,`remove`, y `nofollow`.
+Incluye valores `replace`, `add`, `remove`y `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -130,7 +130,7 @@ enum class perm_options;
 
 ## <a name="perms"></a>  perms
 
-Marcas para los permisos de archivo. Los valores admitidos son básicamente “readonly” y all. Para los archivos de solo lectura, no se establece ningún bit *_write. En caso contrario, se establece el bit `all` (0x0777).
+Marcas para los permisos de archivo. Los valores admitidos son básicamente "readonly" y todos. Para los archivos de solo lectura, no se establece ningún bit *_write. En caso contrario, se establece el bit `all` (0x0777).
 
 ### <a name="syntax"></a>Sintaxis
 

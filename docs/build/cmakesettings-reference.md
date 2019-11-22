@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624425"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303234"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referencia del esquema de CMakeSettings.json
 
@@ -32,7 +32,7 @@ La matriz `configurations` contiene todas las configuraciones de un proyecto CMa
 Un elemento `configuration` tiene las siguientes propiedades:
 
 - `addressSDanitizerEnabled`: si `true` compila el programa con el saneado de direcciones (experimental en Windows). En Linux, compile con-fno-ignore-Frame-Pointer y el nivel de optimización del compilador-os o-OO para obtener los mejores resultados.
-- `addressSanitizerRuntimeFlags`: marcas de tiempo de ejecución pasadas a AddressSanitizer a través de la variable de entorno ASAN_OPTIONS. Formato: indicador1 = valor: dedador = valor2.
+- `addressSanitizerRuntimeFlags`: marcas en tiempo de ejecución pasadas a AddressSanitizer a través de la variable de entorno ASAN_OPTIONS. Formato: indicador1 = valor: dedador = valor2.
 - `buildCommandArgs`: especifica los modificadores de compilación nativos que se pasan a CMake después de --build --. Por ejemplo, pasar -v cuando se usa el generador Ninja obliga a Ninja a dar como resultado líneas de comandos. Vea [Argumentos de la línea de comandos de Ninja](#ninja) para más información sobre los comandos de Ninja.
 - `buildRoot`: especifica el directorio en el que CMake genera los scripts de compilación para el generador elegido.  Se asigna al modificador **-DCMAKE_BINARY_DIR** y especifica dónde se va a crear la caché de CMake. Si la carpeta no existe, se creará. Entre las macros admitidas se incluyen `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`y `${env.VARIABLE}`.
 - `cacheGenerationCommand`: especifica una herramienta de línea de comandos y argumentos, por ejemplo, *gencache. bat Debug* para generar la memoria caché. El comando se ejecuta desde el Shell en el entorno especificado para la configuración cuando el usuario solicita la regeneración explícitamente, o se modifica un archivo archivo CMakeLists. txt o CMakeSettings. JSON.
@@ -73,7 +73,7 @@ Como Ninja está diseñado para velocidades de compilación rápidas en lugar de
 
 Para especificar un generador de Visual Studio en Visual Studio 2017, abra el desde el menú principal eligiendo **CMake | Cambie la configuración de CMake**. Elimine "Ninja" y escriba "V". Esto activa IntelliSense, lo que permite elegir el generador que quiera.
 
-Para especificar un generador de Visual Studio en Visual Studio 2019, haga clic con el botón derecho en el archivo *archivo CMakeLists. txt* en **Explorador de soluciones** y elija **CMake Settings for Project** > **Show Advanced Settings** > **CMake Generador**.
+Para especificar un generador de Visual Studio en Visual Studio 2019, haga clic con el botón derecho en el archivo *archivo CMakeLists. txt* en **Explorador de soluciones** y elija **CMake Settings for Project** > **Show Advanced Settings** > **CMake generator**.
 
 Cuando la configuración activa especifica un generador de Visual Studio, de forma predeterminada se invoca MSBuild.exe con argumentos `-m -v:minimal`. Para personalizar la compilación, en el archivo *CMakeSettings. JSON* , puede especificar argumentos de [línea de comandos de MSBuild](../build/reference/msbuild-visual-cpp-overview.md) adicionales para pasarlos al sistema de compilación a través de la propiedad `buildCommandArgs`:
 
@@ -163,17 +163,17 @@ Tenga en cuenta que si no define el `"type"`, se asumirá el tipo de `"STRING"` 
 
 Un *entorno* encapsula las variables de entorno que se establecen en el proceso que Visual Studio usa para invocar CMake. exe. En el caso de los proyectos de MSVC, las variables son las que se establecen en un [símbolo del sistema para desarrolladores](building-on-the-command-line.md) para una plataforma específica. Por ejemplo, el entorno de `msvc_x64_x64` es igual que ejecutar el **símbolo del sistema para desarrolladores para vs 2017** o **Símbolo del sistema para desarrolladores para vs 2019** con los argumentos **-Arch = AMD64-host_arch = AMD64** . Puede usar la sintaxis de `env.{<variable_name>}` en *CMakeSettings. JSON* para hacer referencia a las variables de entorno individuales, por ejemplo, para construir rutas de acceso a carpetas.  Se proporcionan los siguientes entornos predefinidos:
 
-- linux_arm: destino ARM Linux de forma remota.
-- linux_x64: destino x64 Linux de forma remota.
-- linux_x86: destino x86 Linux de forma remota.
-- msvc_arm: dirige las ventanas de ARM con el compilador de MSVC.
-- msvc_arm_x64: dirige las ventanas de ARM con el compilador de MSVC de 64 bits.
-- msvc_arm64: ARM64 Windows de destino con el compilador MSVC.
-- msvc_arm64_x64: ARM64 Windows de destino con el compilador MSVC de 64 bits.
-- msvc_x64: se dirige a Windows x64 con el compilador de MSVC.
-- msvc_x64_x64: se dirige a Windows x64 con el compilador de MSVC de 64 bits.
-- msvc_x86: se destina a Windows x86 con el compilador de MSVC.
-- msvc_x86_x64: se destina a Windows x86 con el compilador de MSVC de 64 bits.
+- linux_arm: se dirige a ARM Linux de forma remota.
+- linux_x64: de destino x64 Linux de forma remota.
+- linux_x86: tener como destino linux x86 de forma remota.
+- msvc_arm: destinar ventanas de ARM con el compilador MSVC.
+- msvc_arm_x64: destinar ventanas de ARM con el compilador MSVC de 64 bits.
+- msvc_arm64: ARM64 de destino de Windows con el compilador de MSVC.
+- msvc_arm64_x64: ARM64 de destino de Windows con el compilador de MSVC de 64 bits.
+- msvc_x64: destinar Windows x64 con el compilador MSVC.
+- msvc_x64_x64: destinar Windows x64 con el compilador MSVC de 64 bits.
+- msvc_x86: se destina a Windows x86 con el compilador MSVC.
+- msvc_x86_x64: se dirige a Windows x86 con el compilador MSVC de 64 bits.
 
 ### <a name="accessing-environment-variables-from-cmakeliststxt"></a>Acceso a las variables de entorno desde archivo CMakeLists. txt
 
@@ -256,7 +256,7 @@ En el ejemplo siguiente, la configuración de depuración x86 define su propio v
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }

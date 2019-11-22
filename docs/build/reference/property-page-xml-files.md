@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: da9fa72419dc6971e90124b061da48493d7ca017
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630739"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303165"
 ---
 # <a name="property-page-xml-rule-files"></a>Archivos XML de página de propiedades
 
@@ -73,7 +73,7 @@ Si quita todos los datos de cl.xml, terminará con el esquema siguiente:
 
 En la sección siguiente se describen todos los elementos principales y algunos de los metadatos que se les pueden adjuntar.
 
-1. **Rule:**  por lo general, Rule es el nodo raíz del archivo XML, y puede tener muchos atributos:
+1. **Rule:** por lo general es el nodo raíz del archivo XML, y puede tener muchos atributos:
 
     ```xml
     <Rule Name="CL" PageTemplate="tool" SwitchPrefix="/" Order="10"
@@ -85,19 +85,19 @@ En la sección siguiente se describen todos los elementos principales y algunos 
       </Rule.DisplayName>
     ```
 
-   a. **Name:** el atributo Name es un identificador para Rule. Debe ser único entre todos los archivos XML de página de propiedades de un proyecto.
+   a. **Name:** el atributo Name es un identificador para la regla. Debe ser único entre todos los archivos XML de página de propiedades de un proyecto.
 
-   b. **PageTemplate:** la interfaz de usuario usa el valor de este atributo para elegir entre una colección de plantillas de interfaz de usuario. La plantilla "tool" representa las propiedades en un formato de cuadrícula estándar. Otros valores integrados para este atributo son "debugger" y "generic". Vea el nodo Depuración y el nodo General, respectivamente, para ver el formato de la interfaz de usuario resultante de la especificación de estos valores. La interfaz de usuario para la plantilla de página "debugger" usa un cuadro de lista desplegable para cambiar entre las propiedades de otros depuradores, mientras que la plantilla "generic" muestra otras categorías de propiedades en la misma página en lugar de tener varios subnodos de categoría debajo del nodo Regla. Este atributo es solo una sugerencia para la interfaz de usuario; el archivo XML está diseñado para ser independiente de la interfaz de usuario. Es posible que en otra interfaz de usuario este atributo se use para otros fines.
+   b. **PageTemplate:** la interfaz de usuario usa el valor de este atributo para elegir de una colección de plantillas de interfaz de usuario. La plantilla "tool" representa las propiedades en un formato de cuadrícula estándar. Otros valores integrados para este atributo son "debugger" y "generic". Vea el nodo Depuración y el nodo General, respectivamente, para ver el formato de la interfaz de usuario resultante de la especificación de estos valores. La interfaz de usuario para la plantilla de página "debugger" usa un cuadro de lista desplegable para cambiar entre las propiedades de otros depuradores, mientras que la plantilla "generic" muestra otras categorías de propiedades en la misma página en lugar de tener varios subnodos de categoría debajo del nodo Regla. Este atributo es solo una sugerencia para la interfaz de usuario; el archivo XML está diseñado para ser independiente de la interfaz de usuario. Es posible que en otra interfaz de usuario este atributo se use para otros fines.
 
    c. **SwitchPrefix:** es el prefijo que se usa en la línea de comandos para los modificadores. Un valor de "/" genera modificadores similares a /ZI, /nologo, /W3, etc.
 
    d. **Order:** es una sugerencia a un cliente potencial de interfaz de usuario en la ubicación relativa de esta regla en comparación con las demás reglas del sistema.
 
-   e. **xmlns:** es un elemento XAML estándar. Puede ver tres espacios de nombres enumerados. Se corresponden con los espacios de nombres para las clases de deserialización XAML, el esquema XAML y el espacio de nombres del sistema, respectivamente.
+   e. **xmlns:** se trata de un elemento XAML estándar. Puede ver tres espacios de nombres enumerados. Se corresponden con los espacios de nombres para las clases de deserialización XAML, el esquema XAML y el espacio de nombres del sistema, respectivamente.
 
-   f. **DisplayName:** es el nombre que se muestra en la interfaz de usuario de página de propiedades para el nodo Rule. Este valor se localiza. Se ha creado DisplayName como un elemento secundario de Regla en lugar de como un atributo (por ejemplo, Name o SwitchPrefix) debido a los requisitos de la herramienta de localización interna. Desde la perspectiva de XAML, ambos son equivalentes. Por tanto, se puede convertir simplemente en un atributo para reducir el desorden o dejarlo tal cual.
+   f. **DisplayName:** es el nombre que se muestra en la interfaz de usuario de página de propiedades para el nodo Regla. Este valor se localiza. Se ha creado DisplayName como un elemento secundario de Regla en lugar de como un atributo (por ejemplo, Name o SwitchPrefix) debido a los requisitos de la herramienta de localización interna. Desde la perspectiva de XAML, ambos son equivalentes. Por tanto, se puede convertir simplemente en un atributo para reducir el desorden o dejarlo tal cual.
 
-   g. **DataSource:** es una propiedad muy importante que indica al sistema de proyecto la ubicación desde la que se debe leer y escribir el valor de propiedad, y su agrupación (se explica más adelante). Para cl.xml, estos valores son los siguientes:
+   g. **DataSource:** es una propiedad muy importante que indica al sistema de proyecto la ubicación desde la que se debe leer y escribir el valor de propiedad y su agrupación (se explica más adelante). Para cl.xml, estos valores son los siguientes:
 
       ```xml
       <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
@@ -112,7 +112,7 @@ En la sección siguiente se describen todos los elementos principales y algunos 
    - `HasConfigurationCondition="true"` indica al sistema de proyecto que adjunte una condición de configuración al valor para que solo surta efecto para la configuración del proyecto actual (la condición se puede adjuntar al grupo primario o al propio valor). Por ejemplo, abra las páginas de propiedades del nodo de proyecto y establezca el valor de la propiedad **Tratar advertencias como errores** en **Propiedades de configuración > C/C++ > General** en "Sí". En el archivo del proyecto se escribe el valor siguiente. Observe la condición de configuración adjunta al elemento primario ItemDefinitionGroup.
 
       ```xml
-      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
         <ClCompile>
           <TreatWarningAsError>true</TreatWarningAsError>
         </ClCompile>
@@ -124,20 +124,20 @@ En la sección siguiente se describen todos los elementos principales y algunos 
       ```xml
       <ItemGroup>
         <ClCompile Include="stdafx.cpp">
-          <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+          <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
         </ClCompile>
       </ItemGroup>
       ```
 
-   Otro atributo de **DataSource** que no se muestra anteriormente es **PersistedName**. Puede usar este atributo para representar una propiedad en el archivo del proyecto mediante otro nombre. De forma predeterminada, este atributo se establece en el **Nombre** de la propiedad.
+   Otro atributo de **DataSource** que no se muestra anteriormente es **PersistedName**. Puede usar este atributo para representar una propiedad en el archivo del proyecto mediante otro nombre. De forma predeterminada, este atributo se establece en el **nombre**de la propiedad.
 
-   Una propiedad individual puede invalidar el origen de datos de su elemento Regla primario. En ese caso, la ubicación para el valor de esa propiedad será diferente al de otras propiedades de la regla.
+   Una propiedad individual puede invalidar el origen de propiedades de la regla primaria. En ese caso, la ubicación del valor de la propiedad será diferente de otras propiedades de la regla.
 
    h. Hay otros atributos de una regla, como Description y SupportsFileBatching, que no se muestran aquí. Para obtener el conjunto completo de los atributos aplicables a una regla o en cualquier otro elemento, examine la documentación para estos tipos. Como alternativa, puede examinar las propiedades públicas de los tipos en el espacio de nombres `Microsoft.Build.Framework.XamlTypes` del ensamblado `Microsoft.Build.Framework .dll`.
 
    i. **DisplayName**, **PageTemplate** y **Order** son propiedades relacionadas con la interfaz de usuario que están presentes en este modelo de datos que, en otros casos, es independiente de la interfaz de usuario. Con toda probabilidad estas propiedades se usarán en cualquier interfaz de usuario que se use para mostrar las páginas de propiedades. **DisplayName** y **Description** son dos propiedades que están presentes en casi todos los elementos del archivo XML. Y son las dos únicas que se localizan (la localización de estas cadenas se explicará en una publicación posterior).
 
-1. **Categoría**: una regla puede tener varias categorías. El orden en que se muestran las categorías en el archivo XML es una sugerencia para que la interfaz de usuario muestre las categorías en el mismo orden. Por ejemplo, el orden de las categorías en el nodo C/C++ como se vea en la interfaz de usuario (General, Optimización, Preprocesador, ...).  es el mismo que en cl.xml. Una categoría de ejemplo tiene el aspecto siguiente:
+1. **Category:** una regla puede tener varias categorías. El orden en que se muestran las categorías en el archivo XML es una sugerencia para que la interfaz de usuario muestre las categorías en el mismo orden. Por ejemplo, el orden de las categorías en el nodo C/C++ como se vea en la interfaz de usuario (General, Optimización, Preprocesador, ...).  es el mismo que en cl.xml. Una categoría de ejemplo tiene el aspecto siguiente:
 
     ```xml
     <Category Name="Optimization">
@@ -149,7 +149,7 @@ En la sección siguiente se describen todos los elementos principales y algunos 
 
    En el fragmento de código anterior se muestran los atributos **Name** y **DisplayName** que se describieron antes. Una vez más, una propiedad **Category** puede tener otros atributos de los que se usan anteriormente. Puede obtener información sobre ellos si lee la documentación o examina los ensamblados mediante ildasm.exe.
 
-1. **Properties:** es el grueso del archivo XML y contiene la lista de todas las propiedades de esta regla. Cada propiedad puede ser uno de los cinco tipos posibles que se muestran en el esqueleto de XAML anterior. Por supuesto, es posible que en el archivo solo tenga algunos de esos tipos. Una propiedad tiene un número de atributos que permiten que se pueda describir de manera enriquecida. Aquí solo se explicará **StringProperty**. El resto son muy similares.
+1. **Properties:** es el grueso del archivo XML y contiene la lista de todas las propiedades de esta regla. Cada propiedad puede ser uno de los cinco tipos posibles que se muestran en el esqueleto de XAML anterior. Por supuesto, es posible que en el archivo solo tenga algunos de esos tipos. Una propiedad tiene un número de atributos que permiten que se pueda describir de manera enriquecida. Explicaré solo el **StringProperty** aquí. El resto son muy similares.
 
     ```xml
     <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
@@ -164,16 +164,16 @@ En la sección siguiente se describen todos los elementos principales y algunos 
 
    La mayoría de los atributos del fragmento de código se han descrito antes. Los nuevos son Subtype, Category y Switch.
 
-   a. **Subtype** es un atributo que solo está disponible para **StringProperty** y **StringListProperty**; proporciona información contextual. Por ejemplo, el valor de "file" indica que la propiedad representa una ruta de acceso de archivo. Esta información contextual se usa para mejorar la experiencia de edición proporcionando un Explorador de Windows como el editor de la propiedad que permite al usuario elegir el archivo de manera visual.
+   a. **Subtype** es un atributo que solo está disponible para **StringProperty** y **StringListProperty**; proporciona información contextual. Por ejemplo, el valor de "file" indica que la propiedad representa una ruta de acceso de archivo. Esta información contextual se usa para mejorar la experiencia de edición proporcionando un explorador de Windows como el editor de la propiedad que permite al usuario elegir el archivo visualmente.
 
-   b. **Categoría**: declara la categoría a la que pertenece esta propiedad. Intente buscar esta propiedad en la categoría **Archivos de salida** de la interfaz de usuario.
+   b. **Category:** declara la categoría a la que pertenece esta propiedad. Intente buscar esta propiedad en la categoría **Archivos de salida** de la interfaz de usuario.
 
-   c. **Switch:** cuando una regla representa una herramienta, como la herramienta de compilador en este caso, la mayoría de las propiedades de la regla se pasan como modificadores al archivo ejecutable de la herramienta durante el tiempo de compilación. El valor de este atributo indica el literal de modificador que se va a usar. La propiedad anterior especifica que su modificador debe ser **Fo**. Combinada con el atributo **SwitchPrefix** de la regla primaria, esta propiedad se pasa al archivo ejecutable como **/Fo"Debug\"** (visible en la línea de comandos de C/C++ en la interfaz de usuario de la página de propiedades).
+   c. **Switch:** cuando una regla representa una herramienta, como la herramienta de compilador en este caso, la mayoría de las propiedades de la regla se pasan como modificadores al archivo ejecutable de herramienta durante el tiempo de compilación. El valor de este atributo indica el literal de modificador que se va a usar. La propiedad anterior especifica que su modificador debe ser **Fo**. Combinada con el atributo **SwitchPrefix** de la regla primaria, esta propiedad se pasa al archivo ejecutable como **/Fo"Debug\"** (visible en la línea de comandos de C/C++ en la interfaz de usuario de la página de propiedades).
 
    Otros atributos de propiedad incluyen los siguientes:
 
-   d. **Visible:** si por alguna razón no quiere que la propiedad aparezca en las páginas de propiedades (pero que siga estando disponible durante el tiempo de compilación), establezca este atributo en false.
+   d. **Visible:** Si, por alguna razón, no desea que la propiedad se muestre en las páginas de propiedades (pero probablemente esté disponible durante el tiempo de compilación), establezca este atributo en false.
 
-   e. **ReadOnly:** si quiere proporcionar una vista de solo lectura del valor de esta propiedad en las páginas de propiedades, establezca este atributo en true.
+   e. **Solo lectura:** Si desea proporcionar una vista de solo lectura del valor de esta propiedad en las páginas de propiedades, establezca este atributo en true.
 
    f. **IncludeInCommandLine:** es posible que no sea necesario pasar algunas propiedades a una herramienta durante el tiempo de compilación. Si este atributo se establece en false, se impedirá que se pasen.

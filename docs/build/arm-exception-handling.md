@@ -2,12 +2,12 @@
 title: Control de excepciones de ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c55baf453c1879f1e0a857cc746bba7802d69f88
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493366"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303278"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
@@ -15,7 +15,7 @@ Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado 
 
 ## <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
-Windows en ARM usa *códigos* de desenredado para controlar el desenredado de la pila durante el [control de excepciones estructurado](/windows/win32/debug/structured-exception-handling) (SEH). Los códigos de desenredado son una secuencia de bytes almacenada en la sección .xdata de la imagen ejecutable. Describen la operación del código de prólogo y epílogo de la función de forma abstracta, ya que así los efectos del prólogo de una función se pueden deshacer como preparación para desenredar en el marco de pila del llamador.
+Windows en ARM usa *códigos de desenredado* para controlar el desenredado de la pila durante el [control de excepciones estructurado](/windows/win32/debug/structured-exception-handling) (SEH). Los códigos de desenredado son una secuencia de bytes almacenada en la sección .xdata de la imagen ejecutable. Describen el funcionamiento del código de prólogo y epílogo de función de forma abstracta, de modo que los efectos del prólogo de una función se pueden deshacer como preparación para desenredar en el marco de pila del llamador.
 
 La EABI de ARM especifica un modelo de desenredado en excepciones en el que se usan códigos de desenredado, pero esta especificación no basta para el desenredado SEH en Windows, donde se deben controlar casos asincrónicos en los que el procesador se encuentra en medio del prólogo y el epílogo de una función. Además, Windows divide el control de desenredado en desenredado en el nivel de función y desenredado de ámbito específico de lenguaje, algo que está unificado en la EABI de ARM. Por ello, Windows en ARM especifica más detalles para el procedimiento y los datos de desenredado.
 
@@ -25,7 +25,7 @@ Las imágenes ejecutables de Windows en ARM usan el formato portable ejecutable 
 
 En el mecanismo de control de excepciones se dan algunas cosas por hecho en relación con el código que sigue la ABI para Windows en ARM:
 
-- Cuando se produce una excepción dentro del cuerpo de una función, no importa si las operaciones del prólogo se deshacen o si las operaciones del epílogo se llevan a cabo de forma avanzada. Ambas deberían generar idénticos resultados.
+- Cuando se produce una excepción dentro del cuerpo de una función, no importa si se deshacen las operaciones del prólogo o si las operaciones del epílogo se realizan de manera anticipada. Ambas deberían generar idénticos resultados.
 
 - Los prólogos y epílogos tienden a reflejarse entre sí, lo cual puede servir para reducir el tamaño de los metadatos que se necesitan para describir el desenredado.
 
@@ -60,8 +60,8 @@ Cada registro .pdata de ARM tiene 8 bytes de longitud. El formato general de un
 |Desplazamiento de palabra|Bits|Propósito|
 |-----------------|----------|-------------|
 |0|0-31|La *función de inicio RVA* es la rva de 32 bits del inicio de la función. Si la función contiene código Thumb, se debe establecer el bit inferior de esta dirección.|
-|1|0-1|La *marca* es un campo de 2 bits que indica cómo interpretar los 30 bits restantes de la segunda palabra. pdata. Si la *marca* es 0, los bits restantes forman una *RVA de información de excepción* (con los dos bits inferiores implícitamente 0). Si el *marcador* es distinto de cero, los bits restantes forman una estructura de datos de *desenredo empaquetada* .|
-|1|2-31|*Información de excepción RVA* o *datos*de desenredado empaquetados.<br /><br /> La *información de excepción RVA* es la dirección de la estructura de información de excepciones de longitud variable, que se almacena en la sección. xdata. Estos datos deben tener una alineación de 4 bytes.<br /><br /> Los *datos* de desenredado empaquetados son una descripción comprimida de las operaciones necesarias para desenredar de una función, suponiendo una forma canónica. En este caso, no se necesita un registro .xdata.|
+|1|0-1|La *marca* es un campo de 2 bits que indica cómo interpretar los 30 bits restantes de la segunda palabra. pdata. Si la *marca* es 0, los bits restantes forman una *RVA de información de excepción* (con los dos bits inferiores implícitamente 0). Si el *marcador* es distinto de cero, los bits restantes forman una estructura de *datos de desenredo empaquetada* .|
+|1|2-31|*Información de excepción RVA* o *datos de desenredado empaquetados*.<br /><br /> La *información de excepción RVA* es la dirección de la estructura de información de excepciones de longitud variable, que se almacena en la sección. xdata. Estos datos deben tener una alineación de 4 bytes.<br /><br /> Los *datos de desenredado empaquetados* son una descripción comprimida de las operaciones necesarias para desenredar de una función, suponiendo una forma canónica. En este caso, no se necesita un registro .xdata.|
 
 ### <a name="packed-unwind-data"></a>Datos de desenredado empaquetados
 
@@ -164,7 +164,7 @@ Cuando el formato de desenredado empaquetado no basta para describir el desenred
 
 1. Un encabezado de 1 o 2 palabras que indica el tamaño general de la estructura de .xdata y que proporciona datos de función fundamentales. La segunda palabra solo está presente si los campos *epílogo Count* y *code Words* están establecidos en 0. Los campos aparecen detallados en esta tabla:
 
-   |Palabra|Bits|Propósito|
+   |Word|Bits|Propósito|
    |----------|----------|-------------|
    |0|0-17|La longitud de la *función* es un campo de 18 bits que indica la longitud total de la función en bytes, dividida entre 2. Si una función supera los 512 KB, se deberán usar varios registros .pdata y .xdata para describir la función. Para obtener información detallada, vea la sección Funciones grandes en este documento.|
    |0|18-19|*Versa* es un campo de 2 bits que describe la versión de XData restante. Actualmente solo está definida la versión 0; los valores 1-3 están reservados.|
@@ -172,9 +172,9 @@ Cuando el formato de desenredado empaquetado no basta para describir el desenred
    |0|21|*E* es un campo de 1 bit que indica que la información que describe un epílogo único se empaqueta en el encabezado (1) en lugar de requerir más palabras de ámbito más adelante (0).|
    |0|22|*F* es un campo de 1 bit que indica que este registro describe un fragmento de función (1) o una función completa (0). Un fragmento implica que no hay prólogo y que, por lo tanto, todo el procesamiento de prólogo se debe pasar por alto.|
    |0|23-27|*Epílogo Count* es un campo de 5 bits que tiene dos significados, dependiendo del estado del bit *E* :<br /><br /> -Si *E* es 0, este campo es un recuento del número total de ámbitos de excepción descritos en la sección 3. Si existen más de 31 ámbitos en la función, este campo y el campo *palabras de código* deben establecerse en 0 para indicar que se requiere una palabra de extensión.<br />-Si *E* es 1, este campo especifica el índice del primer código de desenredado que describe el único epílogo.|
-   |0|28-31|*Palabras de código* es un campo de 4 bits que especifica el número de palabras de 32 bits necesarias para contener todos los códigos de desenredado en la sección 4. Si se necesitan más de 15 palabras para más de 63 bytes de código de desenredado, este campo y el campo recuento de *epílogo* deben establecerse en 0 para indicar que se requiere una palabra de extensión.|
-   |1|0-15|*Extended epílogo Count* es un campo de 16 bits que proporciona más espacio para codificar un número inusualmente grande de epílogos. La palabra de extensión que contiene este campo solo está presente si los campos recuento de *epílogo* y *palabras de código* de la primera palabra de encabezado están establecidos en 0.|
-   |1|16-23|*Palabras de código extendido* es un campo de 8 bits que proporciona más espacio para codificar un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene este campo solo está presente si los campos recuento de *epílogo* y *palabras de código* de la primera palabra de encabezado están establecidos en 0.|
+   |0|28-31|*Palabras de código* es un campo de 4 bits que especifica el número de palabras de 32 bits necesarias para contener todos los códigos de desenredado en la sección 4. Si se necesitan más de 15 palabras para más de 63 bytes de código de desenredado, este campo y el campo *recuento de epílogo* deben establecerse en 0 para indicar que se requiere una palabra de extensión.|
+   |1|0-15|*Extended epílogo Count* es un campo de 16 bits que proporciona más espacio para codificar un número inusualmente grande de epílogos. La palabra de extensión que contiene este campo solo está presente si los campos *recuento de epílogo* y *palabras de código* de la primera palabra de encabezado están establecidos en 0.|
+   |1|16-23|*Palabras de código extendido* es un campo de 8 bits que proporciona más espacio para codificar un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene este campo solo está presente si los campos *recuento de epílogo* y *palabras de código* de la primera palabra de encabezado están establecidos en 0.|
    |1|24-31|Reservada|
 
 1. Después de los datos de la excepción (si el bit *E* del encabezado se estableció en 0), se muestra una lista de información sobre los ámbitos de epílogo, que están empaquetados de uno en una palabra y se almacenan en orden de desplazamiento inicial creciente. Cada ámbito contiene estos campos:
@@ -267,7 +267,7 @@ Esto muestra el intervalo de valores hexadecimales para cada byte en un *código
 
 Los códigos de desenredado están diseñados de forma que el primer byte del código informa tanto del tamaño total en bytes del código como del tamaño del código de operación correspondiente en la secuencia de instrucciones. Para calcular el tamaño del prólogo o el epílogo, recorra los códigos de desenredado de principio a fin de la secuencia y use una tabla de búsqueda o método similar para averiguar la longitud del código de operación correspondiente.
 
-Los códigos de desenredado 0xFD y 0xFE equivalen al código de fin regular 0xFF, pero cuentan con un código de operación nop (sin operación) extra para el epílogo, sea de 16 o de 32 bits. En el caso de los prólogos, los códigos 0xFD, 0xFE y 0xFF son totalmente equivalentes. Esto tiene en cuenta las finalizaciones de epílogo habituales `bx lr` o `b <tailcall-target>`, que carecen de una instrucción de prólogo equivalente, lo que aumenta las posibilidades de que el prólogo y los epílogos puedan compartir las secuencias de desenredado.
+Los códigos de desenredado 0xFD y 0xFE equivalen al código de fin regular 0xFF, pero cuentan con un código de operación nop (sin operación) extra para el epílogo, sea de 16 o de 32 bits. En el caso de los prólogos, los códigos 0xFD, 0xFE y 0xFF son totalmente equivalentes. Esta cuenta para los finales epílogo comunes `bx lr` o `b <tailcall-target>`, que no tienen una instrucción de prólogo equivalente. lo que aumenta las posibilidades de que el prólogo y los epílogos puedan compartir las secuencias de desenredado.
 
 En muchas ocasiones, debería poder utilizarse el mismo conjunto de códigos de desenredado en el prólogo y en todos los epílogos. Sin embargo, tendríamos que disponer de varias secuencias de código de desenredado con diferente orden y comportamiento para poder controlar el desenredado de los prólogos y epílogos parcialmente ejecutados. Este es el motivo por el que cada epílogo tiene su propio índice en la matriz de desenredado con el que se señala dónde ha de empezar la ejecución.
 
@@ -290,7 +290,7 @@ Supongamos, por ejemplo, la siguiente secuencia de prólogo y epílogo:
 0148:   bx    lr
 ```
 
-Junto a cada código de operación está el código de desenredado pertinente, que describe la operación. La secuencia de códigos de desenredado del prólogo es una imagen reflejada de los códigos de desenredado del epílogo, sin contar la instrucción final. Esto es bastante habitual y constituye el motivo por el cual siempre se da por hecho que los códigos de desenredado del prólogo se almacenan en orden inverso al orden de ejecución del epílogo. Esto nos proporciona un conjunto común de códigos de desenredado:
+Junto a cada código de operación está el código de desenredado pertinente, que describe la operación. La secuencia de códigos de desenredado del prólogo es una imagen reflejada de los códigos de desenredado del epílogo, sin contar la instrucción final. Este caso es común y es el motivo por el que siempre se supone que los códigos de desenredado del prólogo se almacenan en orden inverso al orden de ejecución del prólogo. Esto nos proporciona un conjunto común de códigos de desenredado:
 
 ```asm
 0xc7, 0xdd, 0x04, 0xfd
@@ -298,9 +298,9 @@ Junto a cada código de operación está el código de desenredado pertinente, q
 
 El código 0xFD es un código especial para la finalización de la secuencia que quiere decir que el epílogo es una instrucción de 16 bits más larga que el prólogo. Esto permite que se puedan compartir un mayor número de códigos de desenredado.
 
-En este ejemplo, si tiene lugar una excepción mientras el cuerpo de la función entre el prólogo y el epílogo se está ejecutando, el desenredado se inicia con el epílogo, con un desplazamiento 0 en el código del epílogo. Esto corresponde al desplazamiento 0x140 del ejemplo. El responsable del desenredado ejecuta la secuencia de desenredado completa, porque no se ha efectuado ninguna limpieza. Si, en lugar de esto, la excepción se produjera en una instrucción posterior al inicio del código del epílogo, el responsable del desenredado podrá realizar el desenredado correctamente omitiendo el primer código de desenredado. Dada una asignación de uno a uno entre códigos de tiempo y desenredado, si se desenreda de la instrucción *n* en el epílogo, el desenredo debe omitir los primeros códigos de desenredado.
+En este ejemplo, si tiene lugar una excepción mientras el cuerpo de la función entre el prólogo y el epílogo se está ejecutando, el desenredado se inicia con el epílogo, con un desplazamiento 0 en el código del epílogo. Esto corresponde al desplazamiento 0x140 del ejemplo. El responsable del desenredado ejecuta la secuencia de desenredado completa, porque no se ha efectuado ninguna limpieza. Si, en lugar de esto, la excepción se produjera en una instrucción posterior al inicio del código del epílogo, el responsable del desenredado podrá realizar el desenredado correctamente omitiendo el primer código de desenredado. Con una asignación unívoca entre códigos de operación y códigos de desenredado, si desenredáramos desde la instrucción *n* en el epílogo, el responsable del desenredado debería omitir los primeros *n* códigos de desenredado.
 
-Esta misma lógica es perfectamente válida, pero a la inversa, para el prólogo. Si desenredamos desde el desplazamiento 0 del prólogo, no hay que ejecutar nada. Si desenredamos desde una instrucción, la secuencia de desenredado debería iniciar un código de desenredado del final, ya que los códigos de desenredado del prólogo se almacenan en orden inverso. En el caso general, si se desenreda de la instrucción *n* en el prólogo, el desenredado debe comenzar a ejecutarse en *n* códigos de desenredado desde el final de la lista de códigos.
+Esta misma lógica es perfectamente válida, pero a la inversa, para el prólogo. Si desenredamos desde el desplazamiento 0 del prólogo, no hay que ejecutar nada. Si desenredamos desde una instrucción, la secuencia de desenredado debería iniciar un código de desenredado del final, ya que los códigos de desenredado del prólogo se almacenan en orden inverso. Por lo general, si desenredamos desde la instrucción *n* en el prólogo, el desenredado debería empezar a ejecutarse en *n* códigos de desenredado con respecto al final de la lista de códigos.
 
 Los códigos de desenredado del prólogo y los epílogos no siempre coinciden plenamente. En tal caso, la matriz de códigos de desenredado puede contener varias secuencias de códigos. Emplee la siguiente lógica para averiguar el desplazamiento por el que empezar a procesar códigos:
 
@@ -328,9 +328,9 @@ Suponiendo que el prólogo de la función se encuentra al inicio de la función 
 
 En el primer caso, solo hay que describir el prólogo. Esto se puede hacer en el formato Compact. pdata describiendo el prólogo normalmente y especificando un valor *RET* de 3 para indicar que no hay epílogo. En el formato .xdata completo, esto se lleva a cabo proporcionando los códigos de desenredado del prólogo en el índice 0 (como habitualmente) y especificando 0 como recuento de epílogos.
 
-El segundo caso es, sencillamente, el de una función normal. Si solo hay un epílogo en el fragmento y se encuentra al final de este, se puede usar un registro .pdata compacto. Si no, se deberá utilizar un registro .xdata completo. Recuerde que los desplazamientos especificados como inicio de epílogo lo son con respecto al inicio del fragmento, no al inicio original de la función.
+El segundo caso es, sencillamente, el de una función normal. Si solo hay un epílogo en el fragmento y está al final del fragmento, se puede usar un registro. pdata de Compact. Si no, se deberá utilizar un registro .xdata completo. Recuerde que los desplazamientos especificados como inicio de epílogo lo son con respecto al inicio del fragmento, no al inicio original de la función.
 
-Los casos tercero y cuarto son variantes del primero y el segundo respectivamente, solo que no contienen un prólogo. En estas situaciones, se da por hecho que existe código antes del inicio del epílogo y se considera como parte del cuerpo de la función, lo que normalmente podría desenredarse deshaciendo los efectos del prólogo. Por lo tanto, estos casos deben estar codificados con un seudoprólogo, en el que se explica cómo desenredar desde el cuerpo, si bien tratado como con una longitud 0 al decidir si hay que realizar un desenredo parcial al inicio del fragmento. Otra opción consiste en describir este seudoprólogo mediante los mismos códigos de desenredado que el epílogo, ya que en teoría realizan las mismas operaciones.
+Los casos tercero y cuarto son variantes del primer y segundo caso, respectivamente, salvo que no contienen un prólogo. En estas situaciones, se da por hecho que existe código antes del inicio del epílogo y se considera como parte del cuerpo de la función, lo que normalmente podría desenredarse deshaciendo los efectos del prólogo. Por lo tanto, estos casos deben estar codificados con un seudoprólogo, en el que se explica cómo desenredar desde el cuerpo, si bien tratado como con una longitud 0 al decidir si hay que realizar un desenredo parcial al inicio del fragmento. Otra opción consiste en describir este seudoprólogo mediante los mismos códigos de desenredado que el epílogo, ya que en teoría realizan las mismas operaciones.
 
 En el tercer y cuarto caso, la presencia de un pseudo-prólogo se especifica estableciendo el campo de *marca* del registro Compact. pdata en 2, o estableciendo la marca *F* en el encabezado. xdata en 1. En cualquier caso, se pasa por alto la comprobación de un desenredado de prólogo parcial y todos los desenredados que no sean de epílogo se considerarán como completos.
 
@@ -360,7 +360,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C:
 ```
 
-Por lo general, se espera que las funciones reducidas hasta ajustarse tengan espacio previamente asignado para el almacenamiento de registros extra en el prólogo regular para, luego, guardarlos mediante `str` o `stm` en lugar de `push`. Esto hace que toda la manipulación de puntero de pila tenga lugar en el prólogo original de la función.
+Por lo general, se espera que las funciones reducidas hasta ajustarse tengan espacio previamente asignado para el almacenamiento de registros extra en el prólogo regular para, luego, guardarlos mediante `str` o `stm` en lugar de `push`. Esto mantiene toda la manipulación del puntero de pila en el prólogo original de la función.
 
 La función reducida hasta ajustarse de ejemplo se debe dividir en tres regiones, marcadas como A, B y C en los comentarios. La primera región, A, abarca el inicio de la función y hasta el final de los almacenamientos no volátiles extra. Se debe crear un registro .pdata o .xdata para describir que este fragmento tiene un prólogo y ningún epílogo.
 
@@ -410,7 +410,7 @@ Si, tras omitir los epílogos con una sola instrucción, no hay más epílogos, 
 
 En los siguientes ejemplos, la base de imagen está a 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Ejemplo 1: función de hoja, sin asignaciones locales
+### <a name="example-1-leaf-function-no-locals"></a>Ejemplo 1: función de hoja, sin variables locales
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Ajuste* de la pila = 3 (= 0x0c/4)
 
-### <a name="example-3-nested-variadic-function"></a>Ejemplo 3: función variádica anidada
+### <a name="example-3-nested-variadic-function"></a>Ejemplo 3: función Variádicas anidada
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Código de desenredado 2 = 0xFF: end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Ejemplo 5: función con pila dinámica y epílogo interior
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Ejemplo 5: función con pila dinámica y epílogo interna
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Palabras de código* = 0x01, que indica la palabra de 1 32 bits de códigos de desenredado
 
-- Palabra 1: ámbito de epílogo en el desplazamiento 0xC6 (= 0x18C/2), empezando por el índice de códigos de desenredado en 0x00 y con una condición de 0x0E (siempre)
+- Palabra 1: ámbito de epílogo en el desplazamiento 0xC6 (= 0x18C/2), iniciando el índice de código de desenredado en 0x00 y con una condición de 0x0E (siempre)
 
 - Códigos de desenredado, empezando por la palabra 2: (compartido entre prólogo/epílogo)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - Código de desenredo 3 = 0xFD: end, cuenta como una instrucción de 16 bits para epílogo
 
-### <a name="example-6-function-with-exception-handler"></a>Ejemplo 6: función con controlador de excepciones
+### <a name="example-6-function-with-exception-handler"></a>Ejemplo 6: función con controlador de excepciones
 
 ```asm
 Prologue:
@@ -698,7 +698,7 @@ Epilogue:
 
 - Las palabras 4 en adelante son datos de excepción insertados
 
-### <a name="example-7-funclet"></a>Ejemplo 7: funclet
+### <a name="example-7-funclet"></a>Ejemplo 7: Funclet
 
 ```asm
 Function:

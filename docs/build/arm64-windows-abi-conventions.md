@@ -1,12 +1,12 @@
 ---
 title: Información general sobre las convenciones ABI de ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163222"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303269"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Información general sobre las convenciones ABI de ARM64
 
@@ -65,7 +65,7 @@ Alineación de diseño predeterminada para las variables globales y estáticas:
 | 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| > = 64 | 16 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registros de enteros
 
@@ -74,9 +74,9 @@ La arquitectura AArch64 admite registros enteros de 32:
 | Registro | ¿Volátil? | Rol |
 | - | - | - |
 | x0 | Volátil | Parámetro/registro de borrado 1, registro de resultados |
-| x1-7 | Volátil | Parámetro/registro temporal 2-8 |
+| x1-x7 | Volátil | Parámetro/registro temporal 2-8 |
 | x8-x15 | Volátil | Registros de borrado |
-| x16-X17 | Volátil | Registros temporales de llamada de procedimiento interno |
+| x16-x17 | Volátil | Registros temporales de llamada de procedimiento interno |
 | x18 | No volátil | Registro de plataforma: en modo kernel, apunta a KPCR para el procesador actual; en modo de usuario, apunta a TEB |
 | x19-x28 | No volátil | Registros de borrado |
 | X29/FP | No volátil | Puntero de marco |
@@ -96,9 +96,9 @@ La arquitectura AArch64 también admite registros de punto flotante/SIMD 32, que
 
 | Registro | ¿Volátil? | Rol |
 | - | - | - |
-| V0 | Volátil | Parámetro/registro de borrado 1, registro de resultados |
-| v1-V7 | Volátil | Registros de parámetros/grietas de 2-8 |
-| V8-V15 | No volátil | Registros de borrado (solo los bits 64 bajos son no volátiles) |
+| v0 | Volátil | Parámetro/registro de borrado 1, registro de resultados |
+| v1-v7 | Volátil | Registros de parámetros/grietas de 2-8 |
+| v8-v15 | No volátil | Registros de borrado (solo los bits 64 bajos son no volátiles) |
 | v16-v31 | Volátil | Registros de borrado |
 
 Se puede tener acceso a cada registro como un valor completo de 128 bits (a través de V0-v31 o q0-q31). Se puede tener acceso a él como un valor de 64 bits (a través de d0-D31), como un valor de 32 bits (a través de S0-S31), como un valor de 16 bits (a través de H0-H31) o como un valor de 8 bits (a través de B0-B31). El acceso a menos de 128 bits solo tiene acceso a los bits inferiores del registro completo de 128 bits. Dejan los bits restantes sin tocar a menos que se especifique lo contrario. (AArch64 es diferente de AArch32, donde los registros más pequeños se empaquetaron encima de los registros mayores).
@@ -111,7 +111,7 @@ El registro de control de punto flotante (FPCR) tiene ciertos requisitos en los 
 | 25 | DN | No volátil | Control de modo NaN predeterminado. |
 | 24 | FZ | No volátil | Control de modo de vaciado a cero. |
 | 23-22 | RMode | No volátil | Control de modo de redondeo. |
-| 15, 12-8 | IDE/IXE/etc. | No volátil | La captura de excepciones habilita los bits, siempre debe ser 0. |
+| 15, 12-8 | IDE/IXE/etc | No volátil | La captura de excepciones habilita los bits, siempre debe ser 0. |
 
 ## <a name="system-registers"></a>Registros del sistema
 
