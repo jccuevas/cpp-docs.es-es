@@ -1,6 +1,7 @@
 ---
 title: fenv_access (Pragma)
-ms.date: 08/29/2019
+description: Describe el uso y los efectos de la Directiva pragma fenv_access. La Directiva fenv_access controla el acceso al entorno de punto flotante en tiempo de ejecución.
+ms.date: 11/19/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e03eb404f2805a4f7c96509600c063c1b1acf629
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218596"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305858"
 ---
 # <a name="fenv_access-pragma"></a>fenv_access (Pragma)
 
-Deshabilita (**activado**) o habilita lasoptimizaciones (desactivadas) que podrían cambiar las pruebas de marcas de entorno de punto flotante y los cambios de modo.
+Deshabilita (**activado**) o habilita las optimizaciones (**desactivadas**) que podrían cambiar las pruebas de marcas de entorno de punto flotante y los cambios de modo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,9 +26,17 @@ Deshabilita (**activado**) o habilita lasoptimizaciones (desactivadas) que podr�
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, **fenv_access** es **OFF**. Si el compilador puede suponer que el código no tiene acceso o manipula el entorno de punto flotante, puede realizar muchas optimizaciones del código de punto flotante. Establezca **fenv_access** en **on** para informar al compilador de que el código tiene acceso al entorno de punto flotante para probar marcas de estado, excepciones o establecer marcas de modo de control. El compilador deshabilita estas optimizaciones para que el código pueda tener acceso al entorno de punto flotante de forma coherente.
+De forma predeterminada, **fenv_access** está **desactivado**. El compilador supone que el código no tiene acceso ni manipula el entorno de punto flotante. Si el acceso al entorno no es necesario, el compilador puede hacer más para optimizar el código de punto flotante.
 
-Para obtener más información sobre el comportamiento de punto flotante, consulte [/FP (especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).
+Habilite **fenv_access** si el código comprueba las marcas de estado de punto flotante, las excepciones o los conjuntos de modos de control. El compilador deshabilita las optimizaciones de punto flotante, por lo que el código puede tener acceso al entorno de punto flotante de forma coherente.
+
+La opción de línea de comandos [/FP: STRICT] habilita automáticamente **fenv_access**. Para obtener más información sobre este y otros comportamientos de punto flotante, consulte [/FP (especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).
+
+Existen restricciones en cuanto a cómo se puede utilizar el pragma **fenv_access** en combinación con otros valores de punto flotante:
+
+- No se puede habilitar **fenv_access** a menos que se habilite la semántica precisa. La semántica precisa se puede habilitar mediante el [float_control](float-control.md) pragma o mediante las opciones de compilador [/FP: precise](../build/reference/fp-specify-floating-point-behavior.md) o [/FP: STRICT](../build/reference/fp-specify-floating-point-behavior.md) . El compilador tiene como valor predeterminado **/FP: precise** si no se especifica ninguna otra opción de línea de comandos de punto flotante.
+
+- No se puede usar **float_control** para deshabilitar la semántica precisa cuando se establece **fenv_access (ON)** .
 
 Los tipos de optimizaciones que están sujetos a **fenv_access** son:
 
@@ -75,7 +84,7 @@ int main() {
 out=9.999999776482582e-03
 ```
 
-Si comenta `#pragma fenv_access (on)` el ejemplo anterior, tenga en cuenta que la salida es diferente porque el compilador realiza la evaluación en tiempo de compilación, que no utiliza el modo de control.
+Si comenta `#pragma fenv_access (on)` del ejemplo anterior, el resultado es diferente. Se debe a que el compilador realiza la evaluación en tiempo de compilación, que no utiliza el modo de control.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

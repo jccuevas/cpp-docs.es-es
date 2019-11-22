@@ -8,24 +8,24 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096040"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302973"
 ---
 # <a name="view-classes-windows"></a>Clases de vistas (Windows)
 
-`CView`y sus clases derivadas son ventanas secundarias que representan el área de cliente de una ventana de marco. Las vistas muestran datos y aceptan entradas para un documento.
+`CView` y sus clases derivadas son ventanas secundarias que representan el área de cliente de una ventana de marco. Las vistas muestran datos y aceptan entradas para un documento.
 
 Una clase de vista se asocia a una clase de documento y una clase de ventana de marco mediante un objeto de plantilla de documento.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-La clase base para las vistas específicas de la aplicación de los datos de un documento. Las vistas muestran datos y aceptan la entrada del usuario para editar o seleccionar los datos. Derive la clase o clases de vista `CView`de.
+La clase base para las vistas específicas de la aplicación de los datos de un documento. Las vistas muestran datos y aceptan la entrada del usuario para editar o seleccionar los datos. Derive la clase o clases de vista de `CView`.
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-Clase base para las vistas con capacidades de desplazamiento. Derive la clase de vista `CScrollView` de para el desplazamiento automático.
+Clase base para las vistas con capacidades de desplazamiento. Derive la clase de vista de `CScrollView` para el desplazamiento automático.
 
 ## <a name="form-and-record-views"></a>Vistas de formulario y de registros
 
@@ -37,10 +37,10 @@ Las vistas de registros se derivan de las vistas de formulario. Además de la pl
 Vista de desplazamiento cuyo diseño se define en una plantilla de cuadro de diálogo. Derive una clase de `CFormView` para implementar una interfaz de usuario basada en una plantilla de cuadro de diálogo.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros de objetos de acceso a datos (DAO). Al igual que todas las vistas `CDaoRecordView` de formulario, se basa en una plantilla de cuadro de diálogo. DAO se utiliza con bases de datos de Access y se admite a través de Office 2013. 3,6 es la versión final y se considera obsoleta.
+Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros de objetos de acceso a datos (DAO). Al igual que todas las vistas de formulario, un `CDaoRecordView` se basa en una plantilla de cuadro de diálogo. DAO se utiliza con bases de datos de Access y se admite a través de Office 2013. DAO 3,6 es la versión final y se considera obsoleta.
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros ODBC (Conectividad abierta de bases de datos). Al igual que todas las vistas `CRecordView` de formulario, se basa en una plantilla de cuadro de diálogo.
+Proporciona una vista de formulario conectada directamente a un objeto de conjunto de registros ODBC (Conectividad abierta de bases de datos). Al igual que todas las vistas de formulario, un `CRecordView` se basa en una plantilla de cuadro de diálogo.
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 Una vista de formulario que proporciona la funcionalidad de la plataforma de edición HTML de WebBrowser.
@@ -66,7 +66,7 @@ Una vista que contiene un control de árbol de Windows (vea [CTreeCtrl](../mfc/r
 
 ## <a name="related-classes"></a>Clases relacionadas
 
-`CSplitterWnd`permite tener varias vistas en una sola ventana de marco. `CPrintDialog`y `CPrintInfo` admiten la capacidad de impresión y vista previa de impresión de las vistas. `CRichEditDoc`y `CRichEditCntrItem` se usan con `CRichEditView` para implementar capacidades de contenedor OLE.
+`CSplitterWnd` permite tener varias vistas en una sola ventana de marco. `CPrintDialog` y `CPrintInfo` admiten la capacidad de impresión y vista previa de impresión de las vistas. `CRichEditDoc` y `CRichEditCntrItem` se utilizan con `CRichEditView` para implementar funciones de contenedor OLE.
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 Ventana que el usuario puede dividir en varios paneles. El usuario o el tamaño fijo pueden cambiar el tamaño de estos paneles.
@@ -75,10 +75,10 @@ Ventana que el usuario puede dividir en varios paneles. El usuario o el tamaño 
 Proporciona un cuadro de diálogo estándar para imprimir un archivo.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Estructura que contiene información sobre un trabajo de impresión o de vista previa de impresión. Usado por `CView`la arquitectura de impresión de.
+Estructura que contiene información sobre un trabajo de impresión o de vista previa de impresión. Usado por la arquitectura de impresión de `CView`.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-Mantiene la lista de elementos de cliente OLE que se encuentran `CRichEditView`en.
+Mantiene la lista de elementos de cliente OLE que se encuentran en un `CRichEditView`.
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
 Proporciona acceso del lado cliente a un elemento OLE almacenado en un `CRichEditView`.

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@B symbol'
 ms.assetid: ca17c71a-4a5d-4470-a098-484c781dbfa7
-ms.openlocfilehash: dc3e06283f1dc552a5f0cee6c8a7b608b5c421e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d21f09491a7349585e2a1a33092177940aac163
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166378"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302869"
 ---
-# <a name="b"></a>@B
+# <a name="b"></a>\@B
 
-La ubicación de la anterior [@@:](../../assembler/masm/at-at.md) etiqueta.
+La ubicación del\@anterior [\@:](../../assembler/masm/at-at.md) etiqueta.
 
 ## <a name="syntax"></a>Sintaxis
 
-> @B
+> **\@B**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)<br/>
+[Referencia de símbolos](../../assembler/masm/symbols-reference.md)

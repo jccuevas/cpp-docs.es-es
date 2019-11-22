@@ -7,20 +7,20 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: febd20971fd85275bd7ded0d2216fab0e05adbd1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: cdd3fd9a733df73d36441693d049724878219df5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095604"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303400"
 ---
 # <a name="dao-classes"></a>Clases de DAO
 
-DAO se utiliza con bases de datos de Access y se admite a través de Office 2013. 3,6 es la versión final y se considera obsoleta.
+DAO se utiliza con bases de datos de Access y se admite a través de Office 2013. DAO 3,6 es la versión final y se considera obsoleta.
 
 Estas clases funcionan con las demás clases de marco de trabajo de la aplicación para proporcionar un acceso sencillo a las bases de datos del objeto de acceso a datos (DAO), que usan el mismo motor de base de datos que Microsoft Visual Basic y Microsoft Access. Las clases DAO también pueden tener acceso a una gran variedad de bases de datos para las que están disponibles controladores ODBC (Conectividad abierta de bases de datos).
 
-Los programas que utilizan bases de datos DAO tendrán al menos un `CDaoDatabase` objeto y un `CDaoRecordset` objeto.
+Los programas que utilizan bases de datos DAO tendrán al menos un objeto `CDaoDatabase` y un objeto `CDaoRecordset`.
 
 > [!NOTE]
 >  Los asistentes C++ y el entorno visual ya no admiten DAO (aunque las clases DAO están incluidas y todavía se pueden usar). Microsoft recomienda usar ODBC para los nuevos proyectos de MFC. Solo se debe utilizar DAO en el mantenimiento de las aplicaciones existentes.
@@ -52,7 +52,7 @@ Admite las rutinas de intercambio de campos del registro (DFX) de DAO utilizadas
 ## <a name="related-classes"></a>Clases relacionadas
 
 [CLongBinary](../mfc/reference/clongbinary-class.md)<br/>
-Encapsula un identificador para el almacenamiento de un objeto binario grande (BLOB), como un mapa de bits. `CLongBinary`los objetos se utilizan para administrar objetos de datos de gran tamaño almacenados en tablas de base de datos.
+Encapsula un identificador para el almacenamiento de un objeto binario grande (BLOB), como un mapa de bits. `CLongBinary` objetos se utilizan para administrar objetos de datos de gran tamaño almacenados en tablas de base de datos.
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
 Contenedor de la **moneda**del tipo de automatización OLE, un tipo aritmético de punto fijo, con 15 dígitos delante del separador decimal y 4 dígitos después de.

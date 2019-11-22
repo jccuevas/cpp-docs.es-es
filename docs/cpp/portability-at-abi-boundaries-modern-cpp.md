@@ -1,22 +1,23 @@
 ---
-title: Portabilidad en los límites de ABI (C++ moderno)
-ms.date: 11/04/2016
+title: Portabilidad en los límites de ABI
+description: Acople C++ las interfaces a las convenciones de llamada de C en los límites de la interfaz binaria.
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 379b402354c6f08e003dffb38366d1dce20e0987
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: b3b2b217739ff5900c8ef0329ff3e8909a3fe036
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246387"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303324"
 ---
-# <a name="portability-at-abi-boundaries-modern-c"></a>Portabilidad en los límites de ABI (C++ moderno)
+# <a name="portability-at-abi-boundaries"></a>Portabilidad en los límites de ABI
 
-Use sufficiently portable types and conventions at binary interface boundaries. A “portable type” is a C built-in type or a struct that contains only C built-in types. Class types can only be used when caller and callee agree on layout, calling convention, etc. This is only possible when both are compiled with the same compiler and compiler settings.
+Utilice tipos y convenciones suficientemente portátiles en los límites de la interfaz binaria. Un "tipo portátil" es un tipo integrado de C o un struct que solo contiene tipos integrados de C. Los tipos de clase solo se pueden usar cuando el llamador y el destinatario acuerdan el diseño, la Convención de llamada, etc. Esto solo es posible cuando ambos se compilan con la misma configuración del compilador y del compilador.
 
-## <a name="how-to-flatten-a-class-for-c-portability"></a>How to flatten a class for C portability
+## <a name="how-to-flatten-a-class-for-c-portability"></a>Cómo aplanar una clase para la portabilidad de C
 
-When callers may be compiled with another compiler/language, then “flatten” to an **extern "C"** API with a specific calling convention:
+Cuando los autores de la llamada se pueden compilar con otro lenguaje o compilador, "aplanar" en una API de **"C" externa** con una Convención de llamada específica:
 
 ```cpp
 // class widget {
@@ -34,6 +35,6 @@ extern "C" {        // functions using explicit "this"
 
 ## <a name="see-also"></a>Vea también
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Bienvenido de nuevo aC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

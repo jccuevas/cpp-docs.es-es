@@ -3,20 +3,20 @@ title: Punteros inteligentes (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: a18a5daa45f4f913b6b6dd714956f8592ca0a8d0
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 293dca7cce4cffce83e474ff4f2e7753d18882c2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246351"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303363"
 ---
 # <a name="smart-pointers-modern-c"></a>Punteros inteligentes (C++ moderno)
 
-In modern C++ programming, the Standard Library includes *smart pointers*, which are used to help ensure that programs are free of memory and resource leaks and are exception-safe.
+En la programación del lenguaje C++ actual, la biblioteca estándar incluye *punteros inteligentes*, que se utilizan para asegurarse de que los programas están libres de memoria y de pérdidas de recursos y son seguros ante excepciones.
 
 ## <a name="uses-for-smart-pointers"></a>Usos de los punteros inteligentes
 
-Smart pointers are defined in the `std` namespace in the [\<memory>](../standard-library/memory.md) header file. They are crucial to the [RAII](objects-own-resources-raii.md) or *Resource Acquisition Is Initialization* programming idiom. El objetivo principal de esta expresión es asegurarse de que la adquisición de recursos ocurre al mismo tiempo que se inicializa el objeto, de manera que todos los recursos del objeto se creen y se dispongan en una sola línea de código. En la práctica, el principio básico RAII consiste en proporcionar la propiedad de cualquier recurso asignado por montón (por ejemplo, memoria asignada dinámicamente o identificadores de objetos del sistema) a un objeto asignado a la pila cuyo destructor contiene código para eliminar o liberar el recurso, además de cualquier código asociado de limpieza.
+Los punteros inteligentes se definen en el espacio de nombres `std` del archivo de encabezado [> memory\<](../standard-library/memory.md) . Son cruciales para el [RAII](objects-own-resources-raii.md) o la *adquisición de recursos es* la expresión de programación de inicialización. El objetivo principal de esta expresión es asegurarse de que la adquisición de recursos ocurre al mismo tiempo que se inicializa el objeto, de manera que todos los recursos del objeto se creen y se dispongan en una sola línea de código. En la práctica, el principio básico RAII consiste en proporcionar la propiedad de cualquier recurso asignado por montón (por ejemplo, memoria asignada dinámicamente o identificadores de objetos del sistema) a un objeto asignado a la pila cuyo destructor contiene código para eliminar o liberar el recurso, además de cualquier código asociado de limpieza.
 
 En la mayoría de los casos, cuando se inicializa un puntero o un identificador de recursos sin formato para apuntar a un recurso real, el puntero se pasa inmediatamente a un puntero inteligente. En el lenguaje C++ actual, los punteros sin formato se utilizan únicamente en pequeños bloques de código de ámbito limitado, bucles o funciones del asistente donde el rendimiento es crucial y no hay ninguna posibilidad de confusión sobre la propiedad.
 
@@ -33,58 +33,58 @@ La expresión del puntero inteligente de C++ se asemeja a la creación de objeto
 > [!IMPORTANT]
 >  Cree siempre punteros inteligentes en una línea de código independiente, nunca en una lista de parámetros, para que no se produzca una pérdida de recursos imperceptible debido a algunas reglas de asignación de la lista de parámetros.
 
-The following example shows how a `unique_ptr` smart pointer type from the C++ Standard Library could be used to encapsulate a pointer to a large object.
+En el ejemplo siguiente se muestra cómo se puede usar un tipo C++ de puntero inteligente `unique_ptr` de la biblioteca estándar para encapsular un puntero a un objeto grande.
 
 [!code-cpp[smart_pointers_intro#2](codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]
 
 En el ejemplo se muestran los pasos básicos siguientes para utilizar punteros inteligentes.
 
-1. Declare el puntero inteligente como variable automática (local). (Do not use the **new** or `malloc` expression on the smart pointer itself.)
+1. Declare el puntero inteligente como variable automática (local). (No use la expresión **New** o `malloc` en el propio puntero inteligente).
 
 1. En el parámetro de tipo, especifique el tipo al que apunta el puntero encapsulado.
 
-1. Pass a raw pointer to a **new**-ed object in the smart pointer constructor. (Algunas funciones de utilidad o constructores de puntero inteligente hacen esto por usted.)
+1. Pase un puntero sin formato a un **nuevo**objeto-Ed en el constructor de puntero inteligente. (Algunas funciones de utilidad o constructores de puntero inteligente hacen esto por usted.)
 
 1. Utilice los operadores sobrecargados `->` y `*` para tener acceso al objeto.
 
 1. Deje que el puntero inteligente elimine el objeto.
 
-Los punteros inteligentes están diseñados para ser lo más eficaces posible tanto en términos de memoria como de rendimiento. Por ejemplo, el único miembro de datos de `unique_ptr` es el puntero encapsulado. Esto significa que `unique_ptr` tiene exactamente el mismo tamaño que ese puntero, cuatro u ocho bytes. Accessing the encapsulated pointer by using the smart pointer overloaded * and -> operators is not significantly slower than accessing the raw pointers directly.
+Los punteros inteligentes están diseñados para ser lo más eficaces posible tanto en términos de memoria como de rendimiento. Por ejemplo, el único miembro de datos de `unique_ptr` es el puntero encapsulado. Esto significa que `unique_ptr` tiene exactamente el mismo tamaño que ese puntero, cuatro u ocho bytes. El acceso al puntero encapsulado mediante el puntero inteligente sobrecargado * y los operadores > no es mucho más lento que el acceso directo a los punteros sin formato.
 
-Los punteros inteligentes tienen sus propias funciones miembro, a las que se accede mediante la notación “punto”. For example, some C++ Standard Library smart pointers have a reset member function that releases ownership of the pointer. Esto es útil cuando se quiere liberar la memoria que es propiedad del puntero inteligente antes de que el puntero inteligente salga del ámbito, tal y como se muestra en el ejemplo siguiente.
+Los punteros inteligentes tienen sus propias funciones miembro, a las que se tiene acceso mediante la notación "punto". Por ejemplo, algunos C++ punteros inteligentes de la biblioteca estándar tienen una función miembro de restablecimiento que libera la propiedad del puntero. Esto es útil cuando se quiere liberar la memoria que es propiedad del puntero inteligente antes de que el puntero inteligente salga del ámbito, tal y como se muestra en el ejemplo siguiente.
 
 [!code-cpp[smart_pointers_intro#3](codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]
 
-Los punteros inteligentes suelen proporcionar un mecanismo para acceder directamente al puntero sin formato. C++ Standard Library smart pointers have a `get` member function for this purpose, and `CComPtr` has a public `p` class member. Si proporciona acceso directo al puntero subyacente, puede utilizar el puntero inteligente para administrar la memoria en el propio código y continuar pasando el puntero sin formato en un código que no admita punteros inteligentes.
+Los punteros inteligentes suelen proporcionar un mecanismo para acceder directamente al puntero sin formato. C++Los punteros inteligentes de la biblioteca estándar tienen una función miembro `get` para este propósito y `CComPtr` tiene un miembro de clase `p` público. Si proporciona acceso directo al puntero subyacente, puede utilizar el puntero inteligente para administrar la memoria en el propio código y continuar pasando el puntero sin formato en un código que no admita punteros inteligentes.
 
 [!code-cpp[smart_pointers_intro#4](codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]
 
-## <a name="kinds-of-smart-pointers"></a>Kinds of smart pointers
+## <a name="kinds-of-smart-pointers"></a>Tipos de punteros inteligentes
 
 En la sección siguiente se resumen los distintos tipos de punteros inteligentes disponibles en el entorno de programación de Windows y se describe cuándo utilizarlos.
 
-### <a name="c-standard-library-smart-pointers"></a>C++ Standard Library smart pointers
+### <a name="c-standard-library-smart-pointers"></a>C++Punteros inteligentes de la biblioteca estándar
 
 Utilice estos punteros inteligentes como primera opción para encapsular punteros a los objetos estándar de C++ (POCO).
 
 - `unique_ptr`<br/>
-   Permite exactamente un único propietario del puntero subyacente. Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto `shared_ptr`. Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir. Sustituye a `auto_ptr`, que está desusado. Comparado con `boost::scoped_ptr`, `unique_ptr` is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections. Archivo de encabezado: `<memory>`. For more information, see [How to: Create and Use unique_ptr Instances](how-to-create-and-use-unique-ptr-instances.md) and [unique_ptr Class](../standard-library/unique-ptr-class.md).
+   Permite exactamente un único propietario del puntero subyacente. Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto `shared_ptr`. Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir. Sustituye a `auto_ptr`, que está desusado. Comparado con `boost::scoped_ptr`, `unique_ptr` es pequeño y eficaz; el tamaño es un puntero y admite referencias rvalue para la inserción y recuperación rápidas de C++ las colecciones de biblioteca estándar. Archivo de encabezado: `<memory>`. Para obtener más información, vea [Cómo: crear y usar instancias de unique_ptr](how-to-create-and-use-unique-ptr-instances.md) y [unique_ptr clase](../standard-library/unique-ptr-class.md).
 
 - `shared_ptr`<br/>
-   Puntero inteligente con recuento de referencias. Utilícelo cuando desee asignar un puntero sin formato a varios propietarios, por ejemplo, cuando devuelve una copia de un puntero desde un contenedor pero desea conservar el original. El puntero sin formato no se elimina hasta que todos los propietarios de `shared_ptr` han salido del ámbito o, de lo contrario, han renunciado a la propiedad. El tamaño es dos punteros: uno para el objeto y otro para el bloque de control compartido que contiene el recuento de referencias. Archivo de encabezado: `<memory>`. For more information, see [How to: Create and Use shared_ptr Instances](how-to-create-and-use-shared-ptr-instances.md) and [shared_ptr Class](../standard-library/shared-ptr-class.md).
+   Puntero inteligente con recuento de referencias. Utilícelo cuando desee asignar un puntero sin formato a varios propietarios, por ejemplo, cuando devuelve una copia de un puntero desde un contenedor pero desea conservar el original. El puntero sin formato no se elimina hasta que todos los propietarios de `shared_ptr` han salido del ámbito o, de lo contrario, han renunciado a la propiedad. El tamaño es dos punteros: uno para el objeto y otro para el bloque de control compartido que contiene el recuento de referencias. Archivo de encabezado: `<memory>`. Para obtener más información, vea [Cómo: crear y usar instancias de shared_ptr](how-to-create-and-use-shared-ptr-instances.md) y [shared_ptr clase](../standard-library/shared-ptr-class.md).
 
 - `weak_ptr`<br/>
-    Puntero inteligente de caso especial para usarlo junto con `shared_ptr`. `weak_ptr` proporciona acceso a un objeto que pertenece a una o varias instancias de `shared_ptr`, pero no participa en el recuento de referencias. Utilícelo cuando desee observar un objeto, pero no quiere que permanezca activo. Es necesario en algunos casos para interrumpir las referencias circulares entre instancias de `shared_ptr`. Archivo de encabezado: `<memory>`. For more information, see [How to: Create and Use weak_ptr Instances](how-to-create-and-use-weak-ptr-instances.md) and [weak_ptr Class](../standard-library/weak-ptr-class.md).
+    Puntero inteligente de caso especial para usarlo junto con `shared_ptr`. `weak_ptr` proporciona acceso a un objeto que pertenece a una o varias instancias de `shared_ptr`, pero no participa en el recuento de referencias. Utilícelo cuando desee observar un objeto, pero no quiere que permanezca activo. Es necesario en algunos casos para interrumpir las referencias circulares entre instancias de `shared_ptr`. Archivo de encabezado: `<memory>`. Para obtener más información, vea [Cómo: crear y usar instancias de weak_ptr](how-to-create-and-use-weak-ptr-instances.md) y [weak_ptr clase](../standard-library/weak-ptr-class.md).
 
-### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Smart pointers for COM objects (classic Windows programming)
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>Punteros inteligentes para objetos COM (programación clásica de Windows)
 
 Cuando trabaje con objetos COM, encapsule los punteros de interfaz en un tipo de puntero inteligente adecuado. Active Template Library (ATL) define varios punteros inteligentes para propósitos diferentes. También puede usar el tipo de puntero inteligente `_com_ptr_t`, que el compilador utiliza cuando crea clases contenedoras de archivos .tlb. Es la mejor opción si no desea incluir los archivos de encabezado ATL.
 
 [CComPtr (clase)](../atl/reference/ccomptr-class.md)<br/>
-Utilice esta opción a menos que no puede usar ATL. Realiza el recuento de referencias mediante los métodos `AddRef` y de `Release`. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+Utilice esta opción a menos que no puede usar ATL. Realiza el recuento de referencias mediante los métodos `AddRef` y de `Release`. Para obtener más información, vea [Cómo: crear y usar instancias de CComPtr y CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [CComQIPtr (clase)](../atl/reference/ccomqiptr-class.md)<br/>
-Se parece a `CComPtr`, pero también proporciona la sintaxis simplificada para llamar a `QueryInterface` en objetos COM. For more information, see [How to: Create and Use CComPtr and CComQIPtr Instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
+Se parece a `CComPtr`, pero también proporciona la sintaxis simplificada para llamar a `QueryInterface` en objetos COM. Para obtener más información, vea [Cómo: crear y usar instancias de CComPtr y CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md).
 
 [CComHeapPtr (clase)](../atl/reference/ccomheapptr-class.md)<br/>
 Puntero inteligente a objetos que utilizan `CoTaskMemFree` para liberar memoria.
@@ -95,15 +95,15 @@ Puntero inteligente para las interfaces que se obtienen de la tabla de interfaz 
 [_com_ptr_t (Clase)](com-ptr-t-class.md)<br/>
 Se parece a `CComQIPtr` en funcionalidad, pero no depende de los encabezados ATL.
 
-### <a name="atl-smart-pointers-for-poco-objects"></a>ATL smart pointers for POCO objects
+### <a name="atl-smart-pointers-for-poco-objects"></a>Punteros inteligentes ATL para objetos POCO
 
-In addition to smart pointers for COM objects, ATL also defines smart pointers, and collections of smart pointers, for plain old C++ objects (POCO). In classic Windows programming, these types are useful alternatives to the C++ Standard Library collections, especially when code portability is not required or when you do not want to mix the programming models of the C++ Standard Library and ATL.
+Además de los punteros inteligentes para los objetos COM, ATL también define punteros inteligentes y colecciones de punteros inteligentes, para objetos antiguos C++ sin formato (poco). En la programación clásica de Windows, estos tipos son alternativas útiles C++ a las colecciones de la biblioteca estándar, especialmente cuando no se requiere portabilidad del código o cuando no se desea mezclar los modelos C++ de programación de la biblioteca estándar y ATL.
 
 [CAutoPtr (clase)](../atl/reference/cautoptr-class.md)<br/>
 Puntero inteligente que exige una propiedad única al transferir la propiedad en la copia. Puede compararse con la clase `std::auto_ptr` en desuso.
 
 [CHeapPtr (clase)](../atl/reference/cheapptr-class.md)<br/>
-Smart pointer for objects that are allocated by using the C [malloc](../c-runtime-library/reference/malloc.md) function.
+Puntero inteligente para los objetos asignados mediante la función [malloc](../c-runtime-library/reference/malloc.md) de C.
 
 [CAutoVectorPtr (clase)](../atl/reference/cautovectorptr-class.md)<br/>
 Puntero inteligente para matrices que se asignan mediante `new[]`.

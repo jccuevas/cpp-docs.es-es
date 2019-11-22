@@ -1,27 +1,43 @@
 ---
 title: Macros de comando y macros de opciones
-ms.date: 11/04/2016
+description: Describe las macros NMAKE predefinidas para las herramientas de compilación y sus opciones.
+ms.date: 11/20/2019
 helpviewer_keywords:
 - options macros
 - command macros in NMAKE
 - macros, options macros
 - macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-ms.openlocfilehash: c6dad7b50d265a1460a98747665d48051078163a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- AS
+- AFLAGS
+- CC
+- CFLAGS
+- CPP
+- CPPFLAGS
+- CXX
+- CXXFLAGS
+- RC
+- RFLAGS
+- ias
+- ml
+- ml64
+- cl
+- rc
+ms.openlocfilehash: d5c4477fd97e2a6c48dbac4d0ce83f7fd5f12ad6
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272443"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303171"
 ---
 # <a name="command-macros-and-options-macros"></a>Macros de comando y macros de opciones
 
-Macros de comandos están predefinidas para productos de Microsoft. Macros de opciones representan las opciones para estos productos y no están definidas de forma predeterminada. Ambos se usan en las reglas de inferencia predefinidas y se pueden usar en bloques de descripción o las reglas de inferencia definido por el usuario. Macros de comandos se pueden redefinir para representar la totalidad o parte de una línea de comandos, incluidas las opciones. Macros de opciones generan una cadena nula si ha dejado sin definir.
+Las macros de comandos están predefinidas para productos de Microsoft. Las macros de opciones representan opciones para estos productos y no están definidas de forma predeterminada. Ambos se usan en reglas de inferencia predefinidas y se pueden usar en bloques de descripción o reglas de inferencia definidas por el usuario. Las macros de comandos se pueden redefinir para representar parte o toda la línea de comandos, incluidas las opciones. Las macros de opciones generan una cadena nula si se deja sin definir.
 
-|Producto de Microsoft|Macros de comando|Definido como|Macros de opciones|
+|Producto de Microsoft|Macro de comando|Definido como|Macro Options|
 |-----------------------|-------------------|----------------|-------------------|
-|Macro Assembler|**AS**|ml|**AFLAGS**|
-|Compilador básica|**BC**|bc|**BFLAGS**|
+|Ensamblador de macros|**AS**|ml, ias o ml64|**AFLAGS**|
 |Compilador de C|**CC**|cl|**CFLAGS**|
 |Compilador C++|**CPP**|cl|**CPPFLAGS**|
 |Compilador C++|**CXX**|cl|**CXXFLAGS**|

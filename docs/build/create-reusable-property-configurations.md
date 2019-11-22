@@ -3,16 +3,16 @@ title: Compartir o volver a usar la configuración de proyecto de Visual Studio:
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 9a8f6da3dc754aa9d47d46e26207a02bd1685ea8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313191"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303220"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Uso compartido o reutilización de la configuración del proyecto de Visual Studio
 
-Para crear un grupo personalizado de opciones de configuración que puede compartir con otros usuarios o reutilizar en varios proyectos, use **Administrador de propiedades** para crear una *hoja de propiedades* (archivo. props) para almacenar la configuración de cada tipo de proyecto que desea poder reutilizar o compartir. con otras personas. El uso de hojas de propiedades es mucho menos propenso a errores que otras formas de crear valores "globales". 
+Para crear un grupo personalizado de valores de configuración que puede compartir con otros usuarios o reutilizarlos en varios proyectos, use **Administrador de propiedades** para crear una *hoja de propiedades* (archivo. props) para almacenar la configuración de cada tipo de proyecto que desea poder reutilizar o compartir con otros usuarios. El uso de hojas de propiedades es mucho menos propenso a errores que otras formas de crear valores "globales". 
 
 > [!IMPORTANT]
 > **Los archivos .user y las razones por las que son problemáticos**
@@ -25,7 +25,7 @@ Para mostrar **Administrador de propiedades**, en la barra de menús, elija **Ve
 
 Si tiene un conjunto de propiedades común que usa con frecuencia y que quiera aplicar a varios proyectos, puede usar el **Administrador de propiedades** para capturarlas en un archivo de *hoja de propiedades* reutilizable, que por convención tiene una extensión de nombre de archivo .props. Puede aplicar la hoja (u hojas) a nuevos proyectos para que no tenga que establecer sus propiedades desde cero.
 
-![Menú contextual del Administrador de propiedades](media/sharingnew.png "SharingNew")
+![Administrador de propiedades menú contextual](media/sharingnew.png "SharingNew")
 
 En cada nodo de configuración, podrá ver los nodos para cada hoja de propiedades que se aplica a esa configuración. El sistema agrega hojas de propiedades que establecen valores en función de las opciones que se elijan en el Asistente para aplicaciones al crear el proyecto. Haga clic con el botón derecho en cualquier nodo y seleccione Propiedades para ver las propiedades que se aplican a ese nodo. Todas las hojas de propiedades se importan de manera automática en la hoja de propiedades "maestra" del proyecto (ms.cpp.props) y se evalúan en el orden en que aparecen en el Administrador de propiedades. Se pueden mover para cambiar el orden de evaluación. Las hojas de propiedades que se evalúan después invalidarán los valores de las hojas evaluadas anteriormente. Vea [herencia de propiedades de proyecto](project-property-inheritance.md) para obtener más información sobre el orden de evaluación en el archivo. vcxproj, los archivos. props y. targets, las variables de entorno y la línea de comandos.
 
@@ -35,16 +35,16 @@ Las propiedades en una hoja de propiedades se invalidan si la misma propiedad se
 
 Puede importar una hoja de propiedades con tanta frecuencia como sea necesaria. Varios proyectos de una solución pueden heredar valores de la misma hoja de propiedades y un proyecto puede tener varias hojas. Una hoja de propiedades en sí misma puede heredar la configuración de otra hoja de propiedades.
 
-También puede crear una hoja de propiedades para varias configuraciones. Para ello, cree una hoja de propiedades para cada configuración, abra el menú contextual para una de ellas, seleccione **Agregar hoja de propiedades existente** y, después, agregue las demás hojas. Sin embargo, si utiliza una hoja de propiedades comunes, tenga en cuenta que, cuando se establece una propiedad, obtiene el conjunto de todas las configuraciones a las que se aplica la hoja y el IDE no muestra los proyectos u hojas de propiedades que heredan valores de una hoja de propiedades determinada.
+También puede crear una hoja de propiedades para varias configuraciones. Para ello, cree una hoja de propiedades para cada configuración, abra el menú contextual para una de ellas, seleccione **Agregar hoja de propiedades existente** y, después, agregue las demás hojas. Sin embargo, si utiliza una hoja de propiedades común, tenga en cuenta que al establecer una propiedad, se establece para todas las configuraciones a las que se aplica la hoja y el IDE no muestra los proyectos u otras hojas de propiedades que heredan de una hoja de propiedades determinada.
 
 En soluciones grandes que tendrán muchos proyectos, puede ser útil crear una hoja de propiedades en el nivel de solución. Al agregar un proyecto a la solución, use el **Administrador de propiedades** para agregar esa hoja de propiedades al proyecto. Si se solicita en el nivel de proyecto, puede agregar una nueva hoja de propiedades para establecer valores específicos del proyecto.
 
 > [!IMPORTANT]
-> Los archivos .props no participan de forma predeterminada en el control de código fuente porque no se crean como elemento del proyecto. Puede agregar manualmente el archivo como elemento de la solución si desea incluirlo en el control de código fuente.
+> De forma predeterminada, un archivo. props no participa en el control de código fuente porque no se crea como un elemento de proyecto. Puede agregar manualmente el archivo como elemento de la solución si desea incluirlo en el control de código fuente.
 
 #### <a name="to-create-a-property-sheet"></a>Para crear una hoja de propiedades
 
-1. En la barra de menús, elija **Ver** > **Administrador de propiedades** o **Ver** > **otras ventanas** > **Administrador de propiedades**. Se abrirá el **Administrador de propiedades**.
+1. En la barra de menús, elija **ver** > **Administrador de propiedades** o **ver** > **otras ventanas** > **Administrador de propiedades**. Se abrirá el **Administrador de propiedades**.
 
 2. Para definir el ámbito de la hoja de propiedades, seleccione el elemento al que se aplica. Puede ser una configuración concreta u otra hoja de propiedades. Abra el menú contextual para este elemento y después seleccione **Agregar nueva hoja de propiedades de proyecto**. Especifique un nombre y una ubicación.
 
