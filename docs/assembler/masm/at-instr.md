@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: 20ea0b24892c6d77e4a8f577713c2b5ad970bf41
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4b56c176fcbd9bd48e0d97f049d98c55cf5bedf3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302074"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399030"
 ---
 # <a name="instr"></a>\@InStr
 
-Función de macro que encuentra la primera aparición de *cadena2* en *cadena1*, empezando en la *posición* en *cadena1*. Si no aparece la *posición* , la búsqueda comienza en el inicio de *cadena1*. Devuelve un entero de posición o 0 si no se encuentra *cadena2* .
+Macro function that finds the first occurrence of *string2* in *string1*, beginning at *position* within *string1*. If *position* does not appear, search begins at start of *string1*. Returns a position integer or 0 if *string2* is not found.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **\@instr (** ⟦*posición*⟧ __,__ *string1* __,__ *cadena2* **)**
+> **\@InStr(** ⟦*position*⟧ __,__ *string1* __,__ *string2* **)**
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de símbolos](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: 5e365ee45396d581f0580e078496aeb2ecab165a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75e27948a523cb23c42df6f7691d54c3170c656e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184927"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397505"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 
-Marca un bloque que se repetirá una vez para cada *argumento*, con el actual *argumento* reemplazando *parámetro* en cada repetición.
+Marks a block that will be repeated once for each *argument*, with the current *argument* replacing *parameter* on each repetition.
 
 ## <a name="syntax"></a>Sintaxis
 
-> PARA *parámetro* [[: REQ |: =*predeterminada*]], \< *argumento* [[, *argumento*]]... ><br/>
-> *statements*<br/>
-> ENDM
+> **FOR** *parameter* ⟦ **:REQ** |  __:=__ *default*⟧ **, \<** _argument_ ⟦ __,__ *argument* ...⟧ **>** \
+> *statements*\
+> **ENDM**
 
 ## <a name="remarks"></a>Comentarios
 
-Igual que [IRP](../../assembler/masm/irp.md).
+Same as [IRP](../../assembler/masm/irp.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

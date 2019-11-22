@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ': operator'
 - 'operator :'
 ms.assetid: 37c02c10-d3b0-44c2-bc69-3e8837991920
-ms.openlocfilehash: 8ba0593e9fcb35dc4a0268c2252ea38cac39d73a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 053267ee10d65a4e70fb24e3479d824f8c71d1aa
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201043"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397058"
 ---
 # <a name="operator-"></a>Operador :
 
-Invalida el segmento predeterminado de *expresión* con *segmento*. El *segmento* puede ser un registro de segmento, nombre del grupo, nombre de segmento o expresión de segmento. El *expresión* debe ser una constante.
+Overrides the default segment of *expression* with *segment*. The *segment* can be a segment register, group name, segment name, or segment expression. The *expression* must be a constant.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *segmento* : *expresión*
+> *segment* **:** *expression*
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)
