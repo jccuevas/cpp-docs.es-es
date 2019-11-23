@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703580"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398108"
 ---
-# <a name="model-32-bit-masm"></a>. MODELO (MASM de 32 bits)
+# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
 
-Inicializa el modelo de memoria de programas. (solo para MASM de 32 bits).
+Inicializa el modelo de memoria de programas. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Sintaxis
 
-> .MODEL modelodememoria [[, tipodelenguaje]] [[, opcióndepila]]
+> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
 
 ### <a name="parameters"></a>Parámetros
 
-*modelodememoria*<br/>
+*memory-model*\
 Parámetro necesario que determina el tamaño de los punteros de código y de datos.
 
-*tipodelenguaje*<br/>
+*language-type*\
 Parámetro opcional que establece las convenciones de llamada y nomenclatura para los procedimientos y los símbolos públicos.
 
-*opcióndepila*<br/>
+*stack-option*\
 Parámetro opcional.
 
-No se usa *opcióndepila* si *modelodememoria* es `FLAT`.
+*stack-option* is not used if *memory-model* is **FLAT**.
 
-La especificación de `NEARSTACK` agrupa el segmento de pila en un único segmento físico (`DGROUP`) junto con los datos. Se supone que el registro del segmento de pila (`SS`) contiene la misma dirección que el registro del segmento de datos (`DS`). `FARSTACK` no agrupa la pila con `DGROUP`; por lo que `SS` no es igual a `DS`.
+Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
 
 ## <a name="remarks"></a>Comentarios
 
-.`MODEL` no se usa en [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 En la tabla siguiente se enumeran los valores posibles para cada parámetro cuando tenga como destino plataformas de 16 y 32 bits:
 
 |Parámetro|Valores de 32 bits|Valores de 16 bits (compatibilidad con el desarrollo de 16 bits anterior)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*modelodememoria*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*tipodelenguaje*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*opcióndepila*|No se utiliza|`NEARSTACK`, `FARSTACK`|
+|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
+|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
+|*stack-option*|No se utiliza|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Código
 
@@ -88,4 +88,4 @@ end
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](../../assembler/masm/directives-reference.md)

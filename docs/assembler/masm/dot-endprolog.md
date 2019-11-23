@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDPROLOG directive
 ms.assetid: 61a2474c-9527-46e6-9f9d-bc4b42c10f35
-ms.openlocfilehash: e6450ff0daaf679738cbbfe224002b01fe97b8ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2eb635264590d7323c67d69b56a539907fe2c25
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185334"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398462"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
-Señala el final de las declaraciones del prólogo.
+Signals the end of the prologue declarations.
 
 ## <a name="syntax"></a>Sintaxis
 
-> .ENDPROLOG
+> **.ENDPROLOG**
 
 ## <a name="remarks"></a>Comentarios
 
-Es un error al usar cualquiera de las declaraciones del prólogo fuera de la región entre [PROC](../../assembler/masm/proc.md) marco y. ENDPROLOG.
+It is an error to use any of the prologue declarations outside of the region between [PROC](../../assembler/masm/proc.md) **FRAME** and **.ENDPROLOG**.
 
-Para obtener más información, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](../../assembler/masm/directives-reference.md)

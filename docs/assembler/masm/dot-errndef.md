@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .ERRNDEF directive
 ms.assetid: 9fab57bb-02ad-486f-b46d-bcd23980f00d
-ms.openlocfilehash: 8cbd9be590be2483b5fa43b20ba0df2e7af2cb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f299b6d5966a9fae2002488c3a0f4e83d491e879
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205739"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398317"
 ---
 # <a name="errndef"></a>.ERRNDEF
 
-Genera un error si *nombre* no se ha definido.
+Generates an error if *name* has not been defined.
 
 ## <a name="syntax"></a>Sintaxis
 
-> . Nombre ERRNDEF [[, mensaje]]
+> **.ERRNDEF** *name* ⟦ __,__ *message*⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](../../assembler/masm/directives-reference.md)

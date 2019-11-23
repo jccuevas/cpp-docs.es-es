@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator HIGH
 - HIGH operator
 ms.assetid: 1deea1af-5cba-4477-aab9-21891250cdfc
-ms.openlocfilehash: c7142709216bee6670666fe6baaae7bc449c4a86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b9fb2e9a95617673505547b879e3fb0c5c7d4a9
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200712"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396903"
 ---
 # <a name="operator-high"></a>Operador HIGH
 
-Devuelve el altos 8 bits de 16 bits inferiores de *expresión*. Expresiones MASM son valores de 64 bits.
+Returns the high 8 bits of the low 16 bits of *expression*. MASM expressions are 64-bit values.
 
 ## <a name="syntax"></a>Sintaxis
 
-> Expresión alto
+> **HIGH** *expression*
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .SAVEREG directive
 ms.assetid: 1dbc2ef6-a197-40e7-9e55-fddcae8cef29
-ms.openlocfilehash: cac7aa7f2bdbf6b60831d2beb062f86559ec0358
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 324cf0e70a7ad619e5741c9acc18c24a72f54d13
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178168"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397967"
 ---
 # <a name="savereg"></a>.SAVEREG
 
-Genera una un `UWOP_SAVE_NONVOL` o un `UWOP_SAVE_NONVOL_FAR` desenredo de la entrada de código para el registro especificado (`reg`) y el desplazamiento (`offset`) mediante el desplazamiento actual del prólogo. MASM elegirá la codificación más eficaz.
+Generates either a `UWOP_SAVE_NONVOL` or a `UWOP_SAVE_NONVOL_FAR` unwind code entry for the specified register (*reg*) and offset (*offset*) using the current prologue offset. MASM will choose the most efficient encoding.
 
 ## <a name="syntax"></a>Sintaxis
 
-> . SAVEREG registro, desplazamiento
+> **.SAVEREG** *reg* __,__ *offset*
 
 ## <a name="remarks"></a>Comentarios
 
-. SAVEREG permite a los usuarios ml64.exe especificar cómo se desenreda una función de marco y solo se permite en el prólogo, que se extiende desde el [PROC](../../assembler/masm/proc.md) declaración de marco para el [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva. Estas directivas no generan código; solo generan `.xdata` y `.pdata`. . SAVEREG debe ir precedido de instrucciones que implementan las acciones que no resulte dañada. Es una buena práctica para ajustar las directivas de desenredado y el código que están diseñadas para desenredo en una macro para asegurarse de acuerdo.
+**.SAVEREG**allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SAVEREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-Para obtener más información, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

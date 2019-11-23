@@ -2,29 +2,29 @@
 title: Manuales de programación de los fabricantes de procesadores
 ms.date: 08/30/2018
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: be650b0d19577b0a2191a6bf7d16063e720f3b0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd1cba8378a8b173d36e9cc8975b171cd58d388c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210582"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394833"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Manuales de programación de los fabricantes de procesadores
 
-Este artículo contiene vínculos a sitios Web que pueden contener información de programación sobre los procesadores que no están fabricados, vende o se compatible con Microsoft. Microsoft no posee o controlar los sitios Web o el contenido en ellos.
+This article provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft. Microsoft does not own or control the websites or the content on them.
 
-## <a name="processor-manufacturer-websites"></a>Sitios Web del fabricante de procesador
+## <a name="processor-manufacturer-websites"></a>Processor manufacturer websites
 
-- [Guías para desarrolladores AMD, manuales y documentos ISA](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD Developer Guides, Manuals & ISA Documents](https://developer.amd.com/resources/developer-guides-manuals/)
 
 - [Manuales para desarrolladores de software de las arquitecturas Intel 64 e IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Introducción a las extensiones de Vector avanzadas de Intel](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Introduction to Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Comentarios
 
-Visual Studio ni Microsoft Macro Assembler admite todos los procesadores.
+Neither Visual Studio nor the Microsoft Macro Assembler support all processors.
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
