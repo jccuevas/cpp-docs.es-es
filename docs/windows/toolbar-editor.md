@@ -76,7 +76,7 @@ Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho m
 
 El cuadro de diálogo **nuevo recurso** de la barra de herramientas tiene las siguientes propiedades:
 
-|Propiedad.|Descripción|
+|Propiedad|Descripción|
 |---|---------------|
 |**Ancho del botón**|Proporciona un espacio para que escriba el ancho de los botones de la barra de herramientas que va a convertir de un recurso de mapa de bits a un recurso de la barra de herramientas.|
 |**Alto del botón**|Proporciona un espacio para que escriba el alto de los botones de la barra de herramientas que va a convertir de un recurso de mapa de bits a un recurso de la barra de herramientas.|
@@ -88,9 +88,9 @@ De forma predeterminada, se muestra un botón nuevo o en blanco en el extremo de
 
 Un botón de la barra de herramientas tiene las siguientes propiedades:
 
-|Propiedad.|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
-|**ID**|Define el identificador del botón. La lista desplegable proporciona nombres de **identificador** comunes.|
+|**Id.**|Define el identificador del botón. La lista desplegable proporciona nombres de **identificador** comunes.|
 |**Width**|Establece el ancho del botón. se recomienda 16 píxeles.|
 |**Height**|Establece el alto del botón. El alto de un botón cambia el alto de todos los botones de la barra de herramientas. se recomiendan 15 píxeles.|
 |**Preguntar**|Define el mensaje que se muestra en la barra de estado. Al agregar *\n* y un nombre, se agrega una **información sobre herramientas** a ese botón de la barra de herramientas. Para obtener más información, vea [crear una información sobre herramientas](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
@@ -107,13 +107,13 @@ El **Editor** de la barra de herramientas le permite:
 
 1. En el cuadro de diálogo **Agregar recurso** , seleccione **barra de herramientas** en la lista tipo de **recurso** y, a continuación, elija **nuevo**.
 
-   Si aparece un signo más **+** () junto al tipo de recurso de la **barra de herramientas** , significa que las plantillas de barra de herramientas están disponibles. Seleccione el signo más para expandir la lista de plantillas, seleccione una plantilla y elija **nuevo**.
+   Si aparece un signo más ( **+** ) junto al tipo de recurso de la **barra de herramientas** , significa que las plantillas de barra de herramientas están disponibles. Seleccione el signo más para expandir la lista de plantillas, seleccione una plantilla y elija **nuevo**.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Para convertir mapas de bits en recursos de barra de herramientas
 
 1. Abra un recurso de mapa de bits existente en el [Editor de imágenes](../windows/image-editor-for-icons.md). Si el mapa de bits todavía no está en el archivo *. RC* , haga clic con el botón derecho en el archivo *. RC* y elija **importar**y, a continuación, desplácese hasta el mapa de bits que desee agregar al archivo *. RC* y seleccione **abrir**.
 
-1. Vaya a menú de la**barra de herramientas** **imagen** > del menú.
+1. Vaya a la **imagen** de menú > **Editor de barras de herramientas**.
 
    Aparece el cuadro de diálogo **nuevo recurso** de la barra de herramientas. Puede cambiar el ancho y el alto de las imágenes de icono para que coincidan con el mapa de bits. La imagen de la barra de herramientas se muestra a continuación en el editor de la **barra de herramientas**.
 
@@ -134,7 +134,7 @@ El **Editor** de la barra de herramientas le permite:
 
    - Asigne un identificador al botón en blanco que se encuentra en el extremo derecho de la barra de herramientas. Puede hacerlo editando la propiedad **ID** en la [ventana Propiedades](/visualstudio/ide/reference/properties-window). Por ejemplo, puede que desee asignar al botón de la barra de herramientas el mismo identificador que una opción de menú. En este caso, use el cuadro de lista desplegable para seleccionar el **identificador** de la opción de menú.
 
-   - Seleccione el botón en blanco situado en el extremo derecho de la barra de herramientas en el panel vista de la **barra de herramientas** y comience a dibujar. Se asigna un identificador de comando de botón predeterminado\<(ID_BUTTON n >).
+   - Seleccione el botón en blanco situado en el extremo derecho de la barra de herramientas en el panel vista de la **barra de herramientas** y comience a dibujar. Se asigna un identificador de comando de botón predeterminado (ID_BUTTON\<n >).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para agregar una imagen a una barra de herramientas como un botón
 
@@ -145,11 +145,11 @@ El **Editor** de la barra de herramientas le permite:
    > [!NOTE]
    > Si abre la imagen en Visual Studio, se abrirá en el editor de **imágenes**. También puede abrir la imagen en otros programas de gráficos.
 
-1. Vaya a menú **edición** > **copiar**.
+1. Vaya a menú **editar** > **copiar**.
 
 1. Cambie a la barra de herramientas; para ello, seleccione su pestaña en la parte superior de la ventana de código fuente.
 
-1. Vaya a menú **Editar** > **pegar**.
+1. Vaya a menú **editar** > **pegar**.
 
    La imagen aparecerá en la barra de herramientas como un botón nuevo.
 
@@ -183,19 +183,19 @@ En el panel de vista de la **barra de herramientas** , arrastre el botón que de
 
 1. Seleccione el botón de la barra de herramientas.
 
-1. En la [ventana Propiedades](/visualstudio/ide/reference/properties-window), en el campo **prompt** , agregue una descripción del botón de la barra de estado y, después del mensaje, `\n` agregue y el nombre de la información sobre herramientas.
+1. En la [ventana Propiedades](/visualstudio/ide/reference/properties-window), en el campo **prompt** , agregue una descripción del botón de la barra de estado y, después del mensaje, agregue `\n` y el nombre de la información sobre herramientas.
 
 Por ejemplo, para ver la información sobre herramientas del botón **Imprimir** en **WordPad**:
 
 1. Abra **WordPad**.
 
-1. Mantenga el puntero del mouse sobre el botón **Imprimir** de la barra de `Print` herramientas y observe que la palabra ahora está flotando debajo del puntero del mouse.
+1. Mantenga el puntero del mouse sobre el botón **Imprimir** de la barra de herramientas y observe que la palabra `Print` ahora es flotante debajo del puntero del mouse.
 
-1. Fíjese en la barra de estado en la parte inferior de la ventana de **WordPad** y observe que ahora se `Prints the active document`muestra el texto.
+1. Fíjese en la barra de estado en la parte inferior de la ventana de **WordPad** y observe que ahora se muestra el texto `Prints the active document`.
 
-`Print`es el nombre de la información `Prints the active document` sobre herramientas y es la descripción del botón de la barra de estado.
+`Print` es el nombre de la información sobre herramientas y `Prints the active document` es la descripción del botón de la barra de estado.
 
-Si desea este efecto mediante el editor de la **barra de herramientas**, establezca la `Prints the active document\nPrint`propiedad **prompt** en.
+Si desea este efecto mediante el editor de la **barra de herramientas**, establezca la propiedad **prompt** en `Prints the active document\nPrint`.
 
 ## <a name="requirements"></a>Requisitos
 

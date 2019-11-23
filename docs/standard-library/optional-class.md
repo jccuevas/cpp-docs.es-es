@@ -103,7 +103,7 @@ explicit optional(optional<U>&& rhs);
 \ *RHS*
 La `optional` de la que se va a copiar o al que se va a cambiar la construcción del valor contenido.
 
-\ *i_list*
+*i_list*\
 Lista de inicializadores de la que se va a construir el valor contenido.
 
 \ *args*
@@ -111,8 +111,8 @@ Lista de argumentos de la que se va a construir el valor contenido.
 
 ### <a name="remarks"></a>Comentarios
 
-`constexpr optional() noexcept;` 
- `constexpr optional(nullopt_t nullopt) noexcept;` estos constructores construyen un `optional` que no contiene un valor.
+`constexpr optional() noexcept;`
+`constexpr optional(nullopt_t nullopt) noexcept;` estos constructores construyen un `optional` que no contiene un valor.
 
 `constexpr optional(const optional& rhs);` el constructor de copias inicializa el valor contenido del valor contenido del argumento. Se define como **Deleted** a menos que `is_copy_constructible_v<T>` sea true y es trivial si `is_trivially_copy_constructible_v<T>` es true.
 
@@ -124,9 +124,9 @@ Lista de argumentos de la que se va a construir el valor contenido.
 
 `template <class U = T> explicit constexpr optional(U&& rhs);` Direct inicializa el valor contenido como si utilizara `std::forward<U>(v)`. Este constructor se `constexpr` si el constructor de `T` utilizado es `constexpr`. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, U&&>` sea true y `is_same_v<remove_cvref_t<U>, in_place_t>` y `is_same_v<remove_cvref_t<U>, optional>` sean false.
 
-`template <class U> explicit optional(const optional<U>& rhs);` si *RHS* contiene un valor, Direct inicializa el valor contenido del valor contenido del argumento. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, const U&>` sea true y `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` y `is_convertible_v<const optional<U>&&, T>` sean todos falsos.
+`template <class U> explicit optional(const optional<U>& rhs);` si *RHS* contiene un valor, Direct inicializa el valor contenido del valor contenido del argumento. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, const U&>` sea true y `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`y `is_convertible_v<const optional<U>&&, T>` sean todos falsos.
 
-`template <class U> explicit optional(optional<U>&& rhs);` si *RHS* contiene un valor, Direct inicializa el valor contenido como si se usara `std::move(*rhs)`. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, U&&>` sea true y `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>` y `is_convertible_v<const optional<U>&&, T>` sean todos falsos.
+`template <class U> explicit optional(optional<U>&& rhs);` si *RHS* contiene un valor, Direct inicializa el valor contenido como si se usara `std::move(*rhs)`. No participa en la resolución de sobrecarga a menos que `is_constructible_v<T, U&&>` sea true y `is_constructible_v<T, optional<U>&>`, `is_constructible_v<T, optional<U>&&>`, `is_constructible_v<T, const optional<U>&>`, `is_constructible_v<T, const optional<U>&&>`, `is_convertible_v<optional<U>&, T>`, `is_convertible_v<optional<U>&&, T>`, `is_convertible_v<const optional<U>&, T>`y `is_convertible_v<const optional<U>&&, T>` sean todos falsos.
 
 ## <a name="optional-destructor"></a>~ (destructor opcional)
 
@@ -140,7 +140,7 @@ Destruye cualquier valor contenido que no sea trivialmente puede destruir, si es
 
 Si `T` es trivialmente puede destruir, `optional<T>` también se puede destruir de forma trivial.
 
-## <a name="op_eq"></a>operador =
+## <a name="op_eq"></a> operator=
 
 Reemplaza el valor contenido de un `optional` por una copia o se mueve de otro `optional` valor contenido.
 
@@ -228,4 +228,4 @@ template <class U>
 
 ## <a name="see-also"></a>Vea también
 
-[\<optional >](optional.md)
+[\<opcional >](optional.md)
