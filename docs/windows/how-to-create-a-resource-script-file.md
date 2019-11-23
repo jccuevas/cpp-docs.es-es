@@ -109,15 +109,15 @@ Puede crear un recurso como un nuevo recurso predeterminado, lo que significa qu
 Use la ventana **vista de recursos** para mostrar los archivos de recursos incluidos en los proyectos. Al expandir la carpeta superior, por ejemplo, *Project1. RC*, se muestran los tipos de recursos de ese archivo. Expanda cada tipo de recurso para mostrar los recursos individuales de ese tipo.
 
 > [!TIP]
-> Para abrir la ventana de **vista de recursos** , vaya a la **vista**de menú  > **otras ventanas** > **vista de recursos** o presione **Ctrl**+**Shift**+**E**.
+> Para abrir la ventana de **vista de recursos** , vaya a la **vista** de menú > **otras ventanas** > **vista de recursos** o presione **Ctrl**+**MAYÚS**+**E**.
 
 También puede hacer clic con el botón derecho en la ventana de **vista de recursos** para iniciar un menú contextual de comandos o hacer doble clic en la barra de título para acoplar y desacoplar la ventana. Haga clic con el botón secundario en la barra de título para los comandos que controlan el comportamiento de la ventana. Para obtener más información, consulte [Administración de Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
 La **vista de recursos** Windows incluye el cuadro de diálogo **Agregar recurso** con las siguientes propiedades para agregar recursos a C++ un proyecto de aplicación de escritorio de Windows:
 
-| Propiedad. | Descripción |
+| Propiedad | Descripción |
 |---|---|
-| **Tipo de recurso** | Especifique el tipo de recurso que desea crear.<br/><br/>Puede expandir las categorías de recursos de cursor y de cuadro de diálogo para mostrar recursos adicionales, que se encuentran en *. \Microsoft Visual Studio \<version @ no__t-2\VC\VCResourceTemplates @ no__t-3 < LCID @ no__t-4\mfc.RCT*. Si necesita agregar archivos. RCT, colóquelos aquí o especifique otra [ruta de acceso de inclusión](../windows/how-to-specify-include-directories-for-resources.md). Los recursos que se muestran en el nivel superior del control de árbol son los recursos predeterminados proporcionados por Visual Studio. Los recursos de los archivos. RCT aparecen en el segundo nivel en la categoría adecuada. No hay ningún límite preestablecido para el número de archivos. RCT que se pueden agregar.<br/><br/> |
+| **Tipo de recurso** | Especifique el tipo de recurso que desea crear.<br/><br/>Puede expandir las categorías de recursos de cursor y de cuadro de diálogo para mostrar recursos adicionales, que se encuentran en *. \Microsoft Visual Studio \<versión\>\VC\VCResourceTemplates\\< LCID\>\mfc.RCT*. Si necesita agregar archivos. RCT, colóquelos aquí o especifique otra [ruta de acceso de inclusión](../windows/how-to-specify-include-directories-for-resources.md). Los recursos que se muestran en el nivel superior del control de árbol son los recursos predeterminados proporcionados por Visual Studio. Los recursos de los archivos. RCT aparecen en el segundo nivel en la categoría adecuada. No hay ningún límite preestablecido para el número de archivos. RCT que se pueden agregar.<br/><br/> |
 | **Nuevo** | Cree un recurso basado en el tipo seleccionado en el cuadro **tipo de recurso** y abra el recurso en el editor adecuado.<br/><br/>Por ejemplo, si crea un recurso de cuadro de diálogo, abre el recurso en el [Editor de cuadros de diálogo](../windows/dialog-editor.md). |
 | **Import** | Abra el cuadro de diálogo **importar** para ir al recurso que desea importar en el proyecto actual.<br/><br/>Puede importar un mapa de bits, un icono, un cursor, un código HTML y un sonido (. WAV) o un archivo de recursos personalizado. |
 | **Custom** | Abra el cuadro de diálogo **nuevo recurso personalizado** para crear un recurso personalizado.<br/><br/>También incluye una propiedad de **tipo de recurso** que proporciona un cuadro de texto para que escriba el nombre del tipo de recurso personalizado. Visual C++ pone el nombre automáticamente al salir. Los recursos personalizados solo se editan en el [Editor binario](../windows/binary-editor.md). |
@@ -125,11 +125,11 @@ La **vista de recursos** Windows incluye el cuadro de diálogo **Agregar recurso
 Cuando se crea un nuevo recurso, visual C++ le asigna un nombre único, por ejemplo, `IDD_Dialog1`. Puede personalizar este identificador de recurso editando las propiedades del recurso en el editor de recursos asociado o en el [ventana Propiedades](/visualstudio/ide/reference/properties-window).
 
 > [!NOTE]
-> No especifique un nombre de recurso o un identificador que esté reservado por Visual Studio. Los nombres reservados son `DESIGNINFO`, `HWB` y `TEXTINCLUDE`, y el identificador reservado es `255`.
+> No especifique un nombre de recurso o un identificador que esté reservado por Visual Studio. Los nombres reservados son `DESIGNINFO`, `HWB`y `TEXTINCLUDE`, y el identificador reservado es `255`.
 
 ### <a name="to-create-a-resource"></a>Para crear un recurso
 
-- En **vista de recursos**, seleccione el archivo. RC y, a continuación, use **Editar** > **Agregar recurso** y elija el tipo de recurso que se agregará al proyecto.
+- En **vista de recursos**, seleccione el archivo. RC y, a continuación, use **Editar** > **Agregar recurso** y elija el tipo de recurso que se va a agregar al proyecto.
 
    > [!TIP]
    > También puede hacer clic con el botón secundario en el archivo. RC en **vista de recursos** y elegir **Agregar recurso** en el menú contextual.
@@ -139,9 +139,9 @@ Cuando se crea un nuevo recurso, visual C++ le asigna un nombre único, por ejem
    > [!NOTE]
    > Si aún no tiene un archivo. RC en el proyecto, en este paso se creará uno. A continuación puede repetir este paso para agregar tipos de recurso específicos al nuevo archivo .rc.
 
-- En [vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic con el botón derecho en la clase, seleccione **Agregar** > **Agregar recurso** y elija el tipo de recurso que se va a agregar al proyecto.
+- En [vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic con el botón secundario en la clase, seleccione **Agregar** > **Agregar recurso** y elija el tipo de recurso que se va a agregar al proyecto.
 
-- Use el **proyecto**de menú  > **Agregar recurso**.
+- Use el **proyecto** de menú > **Agregar recurso**.
 
 ## <a name="use-resource-templates"></a>Uso de plantillas de recursos
 
@@ -153,9 +153,9 @@ Después de personalizar una plantilla de recursos, guarde los cambios en la car
 > El editor de recursos proporciona automáticamente un identificador de recurso único. Puede revisar las propiedades del [recurso](../windows/changing-the-properties-of-a-resource.md) según sea necesario.
 
 > [!NOTE]
-> Coloque los archivos de plantilla específicos del idioma en los subdirectorios del directorio principal de la plantilla. Por ejemplo, los archivos de plantilla solo en inglés se incluyen en *. \\ < directorio de plantillas de recursos @ no__t-2\1033*.
+> Coloque los archivos de plantilla específicos del idioma en los subdirectorios del directorio principal de la plantilla. Por ejemplo, los archivos de plantilla solo en inglés van en *..\\< directorio de plantillas de recursos\>\ 1033*.
 >
-> Visual Studio busca nuevos archivos. RCT en *\Archivos de Programa\microsoft Visual Studio \<version @ no__t-2\VC\VCResourceTemplates*, *\Archivos de programa\microsoft Visual Studio \<version > \VC\VCResourceTemplates @ no__t-5 < LCID @ no__t-6* (por ejemplo, un LCID de 1033 para inglés) o cualquier lugar de la [ruta de acceso de inclusión](../windows/how-to-specify-include-directories-for-resources.md). Si prefiere almacenar los archivos. RCT en otra ubicación, debe agregar la ubicación a la ruta de acceso de inclusión.
+> Visual Studio busca nuevos archivos. RCT en la carpeta *\Archivos de Programa\microsoft visual studio \<versión\>\VC\VCResourceTemplates*, *\Archivos de programa\microsoft visual studio \<versión > \VC\VCRESOURCETEMPLATES\\< LCID\>* (por ejemplo, un LCID de 1033 para inglés) o cualquier lugar de la [ruta de acceso de inclusión](../windows/how-to-specify-include-directories-for-resources.md). Si prefiere almacenar los archivos. RCT en otra ubicación, debe agregar la ubicación a la ruta de acceso de inclusión.
 
 ### <a name="to-create-and-use-a-resource-template"></a>Para crear y usar una plantilla de recursos
 
@@ -181,7 +181,7 @@ Después de personalizar una plantilla de recursos, guarde los cambios en la car
 
 ### <a name="to-convert-an-existing-resource-file-to-a-template"></a>Para convertir un archivo de recursos existente en una plantilla
 
-Con el archivo de script de recursos abierto, en el menú, vaya a **archivo** > **guarde \<*nombrearchivo*> como**. Especifique una ubicación y elija **Aceptar**.
+Con el archivo de script de recursos abierto, en el menú, vaya a **archivo** > **Guardar \<*nombre*de archivo > como**. Especifique una ubicación y elija **Aceptar**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -24,11 +24,11 @@ Permite utilizar análisis de código y opciones de control.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/Analyze**[-] [ **: WX-** ] [ **: log** *nombreDeArchivo*] [ **: Quiet**] [ **: stacksize** *número*] [ **: max_paths** *número*] [ **: Only**] [ **: ruleset** *ruleset*] [ **:p Lugin**  *archivo. dll de complementos*]
+> **/Analyze**[-] [ **: WX-** ] [ **: log** *nombreDeArchivo*] [ **: Quiet**] [ **: stacksize** *número*] [ **: max_paths** *número*] [ **: Only**] [ **: ruleset** *ruleset*] [ **:p** *archivo. dll de complemento de*Lugin]
 
 ## <a name="arguments"></a>Argumentos
 
-**/analyze**\
+\ de **/Analyze**
 Activa el análisis en el modo predeterminado. La salida del análisis va a la ventana **resultados** como otros mensajes de error. Use **/Analyze-** para desactivar explícitamente el análisis.
 
 **/Analyze: WX-** \
@@ -37,7 +37,7 @@ Las advertencias de análisis de código no se tratan como errores al compilar m
 **/Analyze: log** *filename*\
 Los resultados detallados del analizador se escriben como XML en el archivo especificado por *filename*.
 
-**/Analyze: @no__t silencioso**-1
+**/Analyze:\ silencioso**
 Desactiva el resultado del analizador en la ventana de **salida** .
 
 **/Analyze: stacksize** *número*\
@@ -54,7 +54,7 @@ Permite especificar los conjuntos de reglas que se van a analizar, incluidos los
 
 Los conjuntos de configuración que se incluyen con Visual Studio se encuentran en *%VSINSTALLDIR%\team Tools\Static Analysis Tools\Rule sets.*
 
-El siguiente conjunto de reglas personalizado de ejemplo indica al motor de reglas que busque C6001 y C26494. Puede colocar este archivo en cualquier lugar siempre que tenga una extensión `.ruleset` y proporcione la ruta de acceso completa en el argumento.
+El siguiente conjunto de reglas personalizado de ejemplo indica al motor de reglas que busque C6001 y C26494. Puede colocar este archivo en cualquier lugar, siempre que tenga una extensión de `.ruleset` y proporcione la ruta de acceso completa en el argumento.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,17 +104,17 @@ Para obtener más información, vea [análisis de código paraC++ c/Overview](/v
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione las **propiedades de configuración** > **análisis de código** >  Página de propiedades**General** .
+1. Seleccione las **propiedades de configuración** > página de propiedades **General** > **análisis de código** .
 
 1. Modifique una o varias de las propiedades de **análisis de código** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
-1. Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
+1. Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador de MSVC](compiler-options.md)\
+\ [Opciones del compilador MSVC](compiler-options.md)
 [Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

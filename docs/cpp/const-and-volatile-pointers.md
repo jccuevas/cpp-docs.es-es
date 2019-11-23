@@ -16,34 +16,34 @@ ms.locfileid: "74246626"
 ---
 # <a name="const-and-volatile-pointers"></a>punteros const y volatile
 
-The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
+Las palabras clave [const](const-cpp.md) y [volatile](volatile-cpp.md) cambian el modo en que se tratan los punteros. La palabra clave **const** especifica que el puntero no se puede modificar después de la inicialización; el puntero está protegido contra la modificación después.
 
-The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
+La palabra clave **volatile** especifica que el valor asociado al nombre que se indica a continuación puede ser modificado por acciones distintas de las de la aplicación de usuario. Por lo tanto, la palabra clave **volatile** es útil para declarar objetos en la memoria compartida a los que pueden tener acceso varios procesos o áreas de datos globales que se usan para la comunicación con rutinas de servicio de interrupción.
 
-When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. Esto reduce considerablemente las posibles optimizaciones. Sin embargo, cuando el estado de un objeto puede cambiar de forma inesperada, es la única forma garantizar un rendimiento predecible del programa.
+Cuando un nombre se declara como **volatile**, el compilador recarga el valor de la memoria cada vez que el programa obtiene acceso a él. Esto reduce considerablemente las posibles optimizaciones. Sin embargo, cuando el estado de un objeto puede cambiar de forma inesperada, es la única forma garantizar un rendimiento predecible del programa.
 
-To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
+Para declarar el objeto al que apunta el puntero como **const** o **volatile**, use una declaración con el formato:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
+Para declarar el valor del puntero, es decir, la dirección real almacenada en el puntero (como **const** o **volatile**), utilice una declaración con el formato:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. Estas asignaciones quitarían la información con la que se declaró el objeto o puntero, infringiendo así la intención de la declaración original. Considere las siguientes declaraciones:
+El C++ lenguaje impide las asignaciones que permitan la modificación de un objeto o puntero declarado como **const**. Estas asignaciones quitarían la información con la que se declaró el objeto o puntero, infringiendo así la intención de la declaración original. Considere las siguientes declaraciones:
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
+Dadas las declaraciones anteriores de dos objetos (`cch`, de tipo **const char**y `ch`, de tipo **Char)** , las siguientes declaraciones o inicializaciones son válidas:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-La declaración de `pch2` declara un puntero a través del cual podría modificarse un objeto constante y, por consiguiente, no se permite. The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
+La declaración de `pch2` declara un puntero a través del cual podría modificarse un objeto constante y, por consiguiente, no se permite. La declaración de `pch3` especifica que el puntero es constante, no el objeto; la declaración no se permite por la misma razón que la declaración de `pch2` no está permitida.
 
 Las ocho asignaciones siguientes muestran la asignación a través de un puntero y cómo se cambia el valor del puntero para las declaraciones anteriores; por ahora, supongamos que la inicialización era correcta para las declaraciones de `pch1` a `pch8`.
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
+Los punteros declarados como **volatile**o como una combinación de **const** y **volatile**obedecen a las mismas reglas.
 
-Pointers to **const** objects are often used in function declarations as follows:
+Los punteros a objetos **const** se suelen usar en declaraciones de función de la manera siguiente:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
+La instrucción anterior declara una función, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), donde dos de los tres argumentos son de tipo Pointer a **Char**. Dado que los argumentos se pasan por referencia y no por valor, la función sería gratuita para modificar `strDestination` y `strSource` si `strSource` no se declararon como **const**. La declaración de `strSource` como **const** garantiza que el llamador que `strSource` no pueda cambiar la función a la que se llama.
 
 > [!NOTE]
-> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
+> Dado que hay una conversión estándar de *typename* <strong>\*</strong> a **const** *TypeName* <strong>\*</strong>, es válido pasar un argumento de tipo `char *` a [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Sin embargo, lo contrario no es cierto. no existe ninguna conversión implícita para quitar el atributo **const** de un objeto o puntero.
 
-A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. El código siguiente muestra las asignaciones correctas e incorrectas:
+Un puntero **const** de un tipo determinado se puede asignar a un puntero del mismo tipo. Sin embargo, un puntero que no es **const** no se puede asignar a un puntero **const** . El código siguiente muestra las asignaciones correctas e incorrectas:
 
 ```cpp
 // const_pointer.cpp
@@ -126,5 +126,5 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Pointers](pointers-cpp.md)
-[Raw pointers](raw-pointers.md)
+[Punteros](pointers-cpp.md)
+[punteros sin formato](raw-pointers.md)

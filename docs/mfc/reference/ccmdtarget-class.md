@@ -99,13 +99,13 @@ class CCmdTarget : public CObject
 
 Un mapa de mensajes enruta comandos o mensajes a las funciones miembro que se escriben para controlarlos. (Un comando es un mensaje de un elemento de menú, un botón de comando o una tecla de aceleración).
 
-Entre las clases de marco de trabajo clave derivadas de `CCmdTarget` se incluyen [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)y [CFrameWnd](../../mfc/reference/cframewnd-class.md). Si desea que una clase nueva controle los mensajes, derive la clase de una de estas @no__t clases derivadas de -0. Rara vez derivará una clase de `CCmdTarget` directamente.
+Las clases de marco de trabajo clave derivadas de `CCmdTarget` incluyen [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)y [CFrameWnd](../../mfc/reference/cframewnd-class.md). Si desea que una clase nueva controle los mensajes, derive la clase de una de estas clases derivadas de `CCmdTarget`. Rara vez derivará una clase de `CCmdTarget` directamente.
 
-Para obtener información general sobre los destinos de comando y el enrutamiento `OnCmdMsg`, vea [destinos](../../mfc/command-targets.md)de comandos, [enrutamiento de comandos](../../mfc/command-routing.md)y mensajes de [asignación](../../mfc/mapping-messages.md).
+Para obtener información general sobre los destinos de comando y `OnCmdMsg` el enrutamiento, vea [destinos](../../mfc/command-targets.md)de comandos, [enrutamiento de comandos](../../mfc/command-routing.md)y mensajes de [asignación](../../mfc/mapping-messages.md).
 
 `CCmdTarget` incluye funciones miembro que controlan la presentación de un cursor de reloj de arena. Muestra el cursor de reloj de arena cuando espera que un comando tome un intervalo de tiempo apreciable para ejecutarse.
 
-Las asignaciones de envío, al igual que los mapas de mensajes, se usan para exponer la funcionalidad de automatización OLE `IDispatch`. Al exponer esta interfaz, otras aplicaciones (como Visual Basic) pueden llamar a la aplicación.
+Las asignaciones de envío, al igual que los mapas de mensajes, se usan para exponer la funcionalidad de `IDispatch` de automatización OLE. Al exponer esta interfaz, otras aplicaciones (como Visual Basic) pueden llamar a la aplicación.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -127,7 +127,7 @@ void BeginWaitCursor();
 
 ### <a name="remarks"></a>Comentarios
 
-El marco de trabajo llama a esta función para mostrar el usuario que está ocupado, como cuando un objeto `CDocument` se carga o se guarda en un archivo.
+El marco de trabajo llama a esta función para mostrar el usuario que está ocupado, como cuando un objeto de `CDocument` se carga o se guarda en un archivo.
 
 Las acciones de `BeginWaitCursor` no siempre son efectivas fuera de un único controlador de mensajes, ya que otras acciones, como el control de `OnSetCursor`, podrían cambiar el cursor.
 
@@ -213,7 +213,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Comentarios
 
-Llame a esta función miembro en el constructor del @no__t objeto derivado de -0 si proporciona información de tipo.
+Llame a esta función miembro en el constructor del objeto derivado de `CCmdTarget`si proporciona información de tipo.
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -246,7 +246,7 @@ Un puntero a un puntero a una interfaz [IEnumOLEVERB](/windows/win32/api/oleidl/
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el objeto admite al menos un verbo OLE (en cuyo caso \* *ppenumOleVerb* apunta a una interfaz de enumerador de @no__t 2); en caso contrario, false.
+TRUE si el objeto admite al menos un verbo OLE (en cuyo caso \* *ppenumOleVerb* apunta a una interfaz de enumerador de `IEnumOLEVERB`); en caso contrario, false.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -263,11 +263,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="parameters"></a>Parámetros
 
 *lpDispatch*<br/>
-Puntero a un objeto `IDispatch`.
+Puntero a un objeto `IDispatch` .
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al objeto `CCmdTarget` asociado a *lpDispatch*. Esta función devuelve NULL si el objeto `IDispatch` no se reconoce como un objeto de Microsoft Foundation Class `IDispatch`.
+Puntero al objeto de `CCmdTarget` asociado a *lpDispatch*. Esta función devuelve NULL si el objeto `IDispatch` no se reconoce como objeto `IDispatch` de Microsoft Foundation Class.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -296,7 +296,7 @@ Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, 
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
-Llame a esta función miembro para recuperar el puntero `IDispatch` de un método de automatización que devuelve un puntero `IDispatch` o toma un puntero `IDispatch` por referencia.
+Llame a esta función miembro para recuperar el puntero `IDispatch` desde un método de automatización que devuelva un puntero `IDispatch` o acepte un puntero `IDispatch` por referencia.
 
 ```
 LPDISPATCH GetIDispatch(BOOL bAddRef);
@@ -403,7 +403,7 @@ Las clases derivadas deben invalidar esta función miembro (si no se reemplaza, 
 
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed
 
-La implementación de MFC de `IDispatch::Invoke` llama a esta función para determinar si se puede invocar un método de automatización determinado (identificado por *DISPID*).
+La implementación de `IDispatch::Invoke` de MFC llama a esta función para determinar si se puede invocar un método de automatización determinado (identificado por *DISPID*).
 
 ```
 virtual BOOL IsInvokeAllowed(DISPID dispid);
@@ -426,7 +426,7 @@ Las clases derivadas pueden invalidar esta función para devolver los valores ad
 
 ##  <a name="isresultexpected"></a>  CCmdTarget::IsResultExpected
 
-Use `IsResultExpected` para determinar si un cliente espera un valor devuelto de su llamada a una función de automatización.
+Utilice `IsResultExpected` para determinar si un cliente espera un valor devuelto de su llamada a una función de automatización.
 
 ```
 BOOL IsResultExpected();
@@ -478,7 +478,7 @@ Distinto de cero si el mensaje está controlado; de lo contrario, es 0.
 
 Esta es la rutina de implementación principal de la arquitectura de comandos de Framework.
 
-En tiempo de ejecución, `OnCmdMsg` envía un comando a otros objetos o controla el propio comando llamando a la clase raíz `CCmdTarget::OnCmdMsg`, que realiza la búsqueda de asignación de mensaje real. Para obtener una descripción completa del enrutamiento de comandos predeterminado, vea [temas sobre el control de mensajes y la asignación](../../mfc/message-handling-and-mapping.md).
+En tiempo de ejecución, `OnCmdMsg` envía un comando a otros objetos o controla el propio comando mediante una llamada a la clase raíz `CCmdTarget::OnCmdMsg`, que realiza la búsqueda de asignación de mensaje real. Para obtener una descripción completa del enrutamiento de comandos predeterminado, vea [temas sobre el control de mensajes y la asignación](../../mfc/message-handling-and-mapping.md).
 
 En raras ocasiones, puede que desee invalidar esta función miembro para extender el enrutamiento de comandos estándar del marco. Consulte la [Nota técnica 21](../../mfc/tn021-command-and-message-routing.md) para obtener información avanzada de la arquitectura de enrutamiento de comandos.
 

@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::Vector (Clase)
+title: Clase Platform::Collections::Vector
 ms.date: 10/01/2019
 ms.topic: reference
 f1_keywords:
@@ -28,7 +28,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/02/2019
 ms.locfileid: "71816576"
 ---
-# <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector (Clase)
+# <a name="platformcollectionsvector-class"></a>Clase Platform::Collections::Vector
 
 Representa una colección secuencial de objetos a los que se puede tener acceso individualmente por un índice. Implementa [Windows:: Foundation:: Collections:: IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) para ayudar con el [enlace de datos](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
@@ -51,15 +51,15 @@ Especifica un predicado binario para probar la igualdad con valores de tipo *T*.
 
 Los tipos permitidos son:
 
-1. enteros
+1. números enteros
 
 1. clase de interfaz ^
 
-1. clase ref pública^
+1. clase ref pública ^
 
-1. value struct
+1. struct de valor
 
-1. clase de enumeración pública
+1. clase Enum pública
 
 La clase **Vector** es la C++ implementación concreta de la interfaz [Windows:: Foundation:: Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) .
 
@@ -91,12 +91,12 @@ Si intenta usar un tipo de **Vector** en un valor devuelto o parámetro público
 |[Vector::SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
 |[Vector::Size](#size)|Devuelve el número de elementos del objeto Vector actual.|
 
-### <a name="events"></a>Events
+### <a name="events"></a>Eventos
 
 |||
 |-|-|
 |Name|Descripción|
-|evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler @ no__t-1t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produce cuando cambia el objeto Vector.|
+|evento [Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produce cuando cambia el objeto Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -106,7 +106,7 @@ Si intenta usar un tipo de **Vector** en un valor devuelto o parámetro público
 
 **Encabezado:** collection.h
 
-**Espacio de nombres**: Platform::Collections
+**Espacio de nombres:** Platform::Collections
 
 ## <a name="append"></a>Vector:: Append (método)
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parámetros
 
-*value*<br/>
+*valor*<br/>
 El elemento que se va a buscar.
 
 *index*<br/>
@@ -367,7 +367,7 @@ Un [STD:: Array](../standard-library/array-class-stl.md) que se usará para inic
 El tipo de una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
 *il*<br/>
-[STD:: initializer_list](../standard-library/initializer-list-class.md) de los objetos de tipo *T* que se usarán para inicializar el vector.
+[STD:: initializer_list](../standard-library/initializer-list-class.md) de objetos de tipo *T* que se usarán para inicializar el vector.
 
 *N*<br/>
 El número de elementos en una colección de objetos que se utiliza para inicializar el objeto Vector actual.
@@ -375,7 +375,7 @@ El número de elementos en una colección de objetos que se utiliza para inicial
 *size*<br/>
 El número de elementos del objeto Vector.
 
-*value*<br/>
+*valor*<br/>
 Un valor que se utiliza para inicializar cada elemento en el objeto Vector actual.
 
 *v*<br/>

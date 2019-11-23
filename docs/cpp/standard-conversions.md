@@ -69,7 +69,7 @@ C++las promociones son "conserven los valores", ya que se garantiza que el valor
 
 Las promociones que poseen la cualidad de conservación de valores y las promociones que conservan el tipo signed/unsigned generan normalmente los mismos resultados. Sin embargo, pueden generar resultados diferentes si el objeto promocionado aparece como:
 
-- Un operando de `/`, `%`, `/=`, `%=`, `<`, `<=`, `>` o `>=`
+- Un operando de `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`o `>=`
 
    Estos operadores dependen del signo para determinar el resultado. Las promociones de conservación de valores y de conservación de la firma producen resultados diferentes cuando se aplican a estos operandos.
 
@@ -101,7 +101,7 @@ int main()
 // Output: 65533
 ```
 
-En el ejemplo anterior, un **Short con signo**, `i`, se define y se inicializa en un número negativo. La expresión `(u = i)` hace que `i` se convierta en un **Short sin signo** antes de la asignación a `u`.
+En el ejemplo anterior, un **signo corto**, `i`, se define y se inicializa en un número negativo. La expresión `(u = i)` hace que `i` se convierta en un **Short sin signo** antes de la asignación que se va a `u`.
 
 ### <a name="unsigned-to-signed"></a>De con signo a sin signo
 
@@ -121,7 +121,7 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-En el ejemplo anterior, `u` es un objeto entero **corto sin signo** que se debe convertir en una cantidad firmada para evaluar la expresión `(i = u)`. Dado que su valor no se puede representar correctamente en un **Short con signo**, los datos se interpretan erróneamente como se muestra.
+En el ejemplo anterior, `u` es un objeto entero **corto sin signo** que se debe convertir en una cantidad firmada para evaluar la `(i = u)`de la expresión. Dado que su valor no se puede representar correctamente en un **Short con signo**, los datos se interpretan erróneamente como se muestra.
 
 ## <a name="floating-point-conversions"></a>Conversiones de punto flotante
 
@@ -194,23 +194,23 @@ Gráfico de herencia para ilustrar la accesibilidad de clase base
 
 En la tabla siguiente se muestra la accesibilidad de la clase base para la situación que se muestra en la ilustración.
 
-|Tipo de función|Derivación|Conversión de<br /><br /> B * a @ no__t-0 legal?|
+|Tipo de función|Derivación|Conversión de<br /><br /> B * a una\* legal?|
 |----------------------|----------------|-------------------------------------------|
 |Función externa (no de ámbito de clase)|Private|No|
 ||Protegido|No|
-||Public|Sí|
+||Público|Sí|
 |Función miembro B (en ámbito B)|Private|Sí|
 ||Protegido|Sí|
-||Public|Sí|
+||Público|Sí|
 |Función miembro C (en ámbito C)|Private|No|
 ||Protegido|Sí|
-||Public|Sí|
+||Público|Sí|
 
 El segundo caso en el que un puntero a una clase se puede convertir a un puntero a una clase base es cuando se utiliza una conversión de tipos explícita. Para obtener más información sobre las conversiones de tipos explícitas, vea [operador de conversión explícita de tipos](explicit-type-conversion-operator-parens.md).
 
 El resultado de esta conversión es un puntero al *subobjeto*, la parte del objeto que describe completamente la clase base.
 
-En el código siguiente se definen dos clases, `A` y `B`, donde `B` se deriva de `A`. (Para obtener más información sobre la herencia, vea [clases derivadas](../cpp/inheritance-cpp.md)). A continuación, define `bObject`, un objeto de tipo `B` y dos punteros (`pA` y `pB`) que apuntan al objeto.
+En el código siguiente se definen dos clases, `A` y `B`, donde `B` se deriva de `A`. (Para obtener más información sobre la herencia, vea [clases derivadas](../cpp/inheritance-cpp.md)). A continuación, define `bObject`, un objeto de tipo `B`y dos punteros (`pA` y `pB`) que apuntan al objeto.
 
 ```cpp
 // C2039 expected
