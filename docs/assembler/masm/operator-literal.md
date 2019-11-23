@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator <>
 - <> operator
 ms.assetid: bc5acf43-df3e-499b-a3ed-1672cfa0d1ed
-ms.openlocfilehash: 97895212964c3b02a20b2cbfbfab8824511ecfb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07d0488c124975424767115fa0d3ce4da0e75efb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176673"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396800"
 ---
 # <a name="operator-ltgt"></a>operador &lt;&gt;
 
-Trata *texto* como un único elemento literal.
+Treats *text* as a single literal element.
 
 ## <a name="syntax"></a>Sintaxis
 
-> \<*text*>
+> __\<__ *text* __>__
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

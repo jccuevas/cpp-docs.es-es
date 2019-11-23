@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 2b91698640e028bf91d822c12b85ded651a04d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed7b9e63bb19dcc16539dbdaaf1f6a7f16566b3c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203069"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397465"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Concede al ensamblado de *ifstatements* si *expression1* es true (distinto de cero) o *elseifstatements* si *expression1* es false (0) y *expression2* es true.
+Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
 
 ## <a name="syntax"></a>Sintaxis
 
-> IF *expression1*<br/>
-> *ifstatements*<br/>
-> [[ELSEIF *expression2*<br/>
-> *elseifstatements*]]<br/>
-> [[ELSE<br/>
-> *elsestatements*]]<br/>
-> ENDIF
+> **IF** *expression1*\
+> *if-statements*\
+> ⟦**ELSEIF** *expression2*\
+> *elseif-statements*⟧\
+> ⟦**ELSE**\
+> *else-statements*⟧\
+> **ENDIF**
 
 ## <a name="remarks"></a>Comentarios
 
-Las siguientes directivas se pueden sustituir por [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, y **ELSEIFNDEF**. Si lo desea, ensambla *elsestatements* si la expresión anterior es false. Tenga en cuenta que las expresiones se evalúan en tiempo de ensamblado.
+The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
