@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 067d1aef41280f4d14fe799e4f4ee26a9f1b9f5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcb66fca7e5b8708171849f885518c15b8355ac4
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401025"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541730"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>Advertencia del compilador (nivel 4) C4239
 
-ha utilizado una extensión no estándar: 'token': conversión de 'type' a 'type'
+se ha utilizado una extensión no estándar: ' token ': conversión de ' tipo ' a ' tipo '
 
-Esta conversión de tipo no se permite en el estándar de C++, pero se permite aquí como una extensión. Esta advertencia siempre va seguida de al menos una línea de explicación que describe la regla del lenguaje que se infringe.
+Esta conversión de tipos no está permitida C++ por el estándar, pero se permite aquí como extensión. Esta advertencia siempre va seguida de al menos una línea de explicación que describe la regla de idioma que se infringe.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4239.
+En el ejemplo siguiente se genera C4239.
 
-```
+```cpp
 // C4239.cpp
 // compile with: /W4 /c
 struct C {
@@ -39,11 +39,11 @@ void func(void) {
 
 ## <a name="example"></a>Ejemplo
 
-No se permite la conversión de un tipo entero a un tipo enum estrictamente.
+La conversión de un tipo entero a un tipo de enumeración no está permitida.
 
-El ejemplo siguiente genera C4239.
+En el ejemplo siguiente se genera C4239.
 
-```
+```cpp
 // C4239b.cpp
 // compile with: /W4 /c
 enum E { value };
