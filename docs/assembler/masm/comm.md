@@ -21,7 +21,7 @@ Crea una variable Communal con los atributos especificados en la *definición*.
 
 > *Definición* de COMM ⟦ __,__ *definición* ... ⟧
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 El enlazador asigna las variables Communal y no se puede inicializar. Esto significa que no puede depender de la ubicación o secuencia de dichas variables.
 

@@ -17,7 +17,7 @@ La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de
 > [!NOTE]
 > WRL se ha sustituido por C++/WinRT, una proyección de lenguaje c++ 17 estándar para api de Windows Runtime. C++/WinRT está disponible en el SDK de Windows 10 de la versión 1803 en adelante. C++/WinRT se implementa completamente en los archivos de encabezado y está diseñado para proporcionar acceso de primera clase a la API moderna de Windows.
 >
-> Con C++/WinRT, puede consumir y crear Windows Runtime API con cualquier compilador de c++ 17 compatible con los estándares. C++ / c++ / WinRT normalmente funciona mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Seguiremos admitiendo C++/CX y WRL, pero recomendamos encarecidamente que las nuevas aplicaciones usen C++/WinRT. Para obtener más información, consulte [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Con C++/WinRT, puede consumir y crear Windows Runtime API con cualquier compilador de c++ 17 compatible con los estándares. C++Normalmente,/WinRT funciona mejor y genera archivos binarios más pequeños que cualquier otra opción de lenguaje para el Windows Runtime. Seguiremos admitiendo C++/CX y WRL, pero recomendamos encarecidamente que las nuevas aplicaciones usen C++/WinRT. Para obtener más información, consulte [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ## <a name="benefits"></a>Ventajas
 
@@ -103,19 +103,19 @@ Windows Runtime C++ biblioteca de plantillas admite la funcionalidad de com que 
 
 - COM+
 
-## <a name="concepts"></a>Conceptos
+## <a name="concepts"></a>Conceptos de
 
 Windows Runtime C++ biblioteca de plantillas proporciona tipos que representan algunos conceptos básicos. En las siguientes secciones se describen estos tipos.
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) es un tipo de *puntero inteligente* que representa la interfaz especificada por el parámetro de plantilla. Utilice `ComPtr` para declarar una variable que pueda tener acceso a los miembros de un objeto que se derive de la interfaz. `ComPtr` mantiene automáticamente un recuento de referencias para el puntero de interfaz subyacente y libera la interfaz cuando el recuento de referencias llega a cero.
+[ComPtr](comptr-class.md) es un tipo de *puntero inteligente* que representa la interfaz especificada por el parámetro de plantilla. Utilice `ComPtr` para declarar una variable que pueda tener acceso a los miembros de un objeto que se derive de la interfaz. `ComPtr` mantiene automáticamente un recuento de referencias para el puntero de la interfaz subyacente y la libera cuando el recuento de referencias llega a cero.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
 [RuntimeClass](runtimeclass-class.md) representa una clase de la que se ha creado una instancia que hereda un conjunto de interfaces especificadas. Un objeto `RuntimeClass` puede proporcionar una combinación de compatibilidad para una o varias interfaces COM Windows Runtime, o una referencia débil a un componente.
 
-### <a name="module"></a>Módulo
+### <a name="module"></a>Module
 
 [Module](module-class.md) representa una colección de objetos relacionados. Un objeto `Module` administra los generadores de clases, que crean objetos, y el registro, que habilita otras aplicaciones para utilizar un objeto.
 
@@ -133,7 +133,7 @@ La función [Callback](callback-function-wrl.md) crea un objeto cuya función mi
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) representa un objeto de cálculo de referencias con subprocesamiento libre. `FtmBase` crea una tabla de interfaz global (GIT) y ayuda a administrar la serialización y los objetos proxy.
+[FtmBase](ftmbase-class.md) representa un objeto de cálculo de referencias con subprocesamiento libre. `FtmBase` crea una tabla de interfaz global (GIT) y ayuda a administrar los objetos proxy y de cálculo de referencias.
 
 ### <a name="weakref"></a>WeakRef
 
