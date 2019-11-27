@@ -1,5 +1,5 @@
 ---
-title: Microsoft Macro Assembler reference
+title: Referencia de Microsoft macro Assembler
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
@@ -14,40 +14,40 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397212"
 ---
-# <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler reference
+# <a name="microsoft-macro-assembler-reference"></a>Referencia de Microsoft macro Assembler
 
 El macroensamblador de Microsoft (MASM) proporciona varias ventajas con respecto al ensamblado en línea. MASM contiene un lenguaje de macros con características como bucles y procesamiento de cadenas aritméticas y de texto. MASM también proporciona mayor control sobre el hardware porque admite los conjuntos de instrucciones de los procesadores 386, 486 y Pentium. Mediante MASM, también se puede reducir la sobrecarga de tiempo y memoria.
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
-[ML and ML64 command-line option](../../assembler/masm/ml-and-ml64-command-line-reference.md)\
+\ [de la opción de línea de comandos ml y ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)
 Describe las opciones de la línea de comandos de ML.exe y ML64.exe.
 
-[ML error messages](../../assembler/masm/ml-error-messages.md)\
+[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)\
 Describe las advertencias y mensajes de error graves y recuperables de ML.exe.
 
-[Directives reference](directives-reference.md)\
+[Referencia de directivas](directives-reference.md)\
 Proporciona vínculos a artículos en los que se explica el uso de las directivas en MASM.
 
-[Symbols Reference](../../assembler/masm/symbols-reference.md)\
+[Referencia de símbolos](../../assembler/masm/symbols-reference.md)\
 Proporciona vínculos a artículos en los que se explica el uso de los símbolos en MASM.
 
-[Operators Reference](../../assembler/masm/operators-reference.md)\
+[Referencia de operadores](../../assembler/masm/operators-reference.md)\
 Proporciona vínculos a artículos en los que se explica el uso de los operadores en MASM.
 
-[Processor Manufacturer Programming Manuals](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
+[Manuales de programación del fabricante del procesador](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
 Proporciona vínculos a sitios web que pueden contener información de programación sobre los procesadores que Microsoft no fabrica, vende o admite.
 
-[MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
+[MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
 Información sobre cómo crear archivos de salida para x64.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[C++ in Visual Studio](../../overview/visual-cpp-in-visual-studio.md)\
+en Visual Studio\ [ C++ ](../../overview/visual-cpp-in-visual-studio.md)
 Proporciona vínculos a diversas áreas de la documentación de Visual Studio y Visual C++.
 
 ## <a name="see-also"></a>Vea también
 
 [Intrínsecos del controlador](../../intrinsics/compiler-intrinsics.md)\
-[x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)\
+\ [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)
 [Intrínsecos x64 (amd64)](../../intrinsics/x64-amd64-intrinsics-list.md)

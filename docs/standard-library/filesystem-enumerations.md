@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valores
 
-|NOMBRE|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valores
 
-|NOMBRE|Valor|Descripción|
+|Name|Valor|Descripción|
 |----------|-----------|-----------------|
 |`not_found`|-1|Representa un archivo que no existe.|
 |`none`|0|Representa un archivo que no tiene ningún atributo de tipo. (No se admite).|

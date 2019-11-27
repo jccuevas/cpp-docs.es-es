@@ -71,12 +71,12 @@ Alineación de diseño predeterminada para las variables globales y estáticas:
 
 La arquitectura AArch64 admite registros enteros de 32:
 
-| Registro | ¿Volátil? | Rol |
+| Registro | ¿Volátil? | Role |
 | - | - | - |
-| x0 | Volátil | Parámetro/registro de borrado 1, registro de resultados |
-| x1-x7 | Volátil | Parámetro/registro temporal 2-8 |
-| x8-x15 | Volátil | Registros de borrado |
-| x16-x17 | Volátil | Registros temporales de llamada de procedimiento interno |
+| x0 | Volatile | Parámetro/registro de borrado 1, registro de resultados |
+| x1-x7 | Volatile | Parámetro/registro temporal 2-8 |
+| x8-x15 | Volatile | Registros de borrado |
+| x16-x17 | Volatile | Registros temporales de llamada de procedimiento interno |
 | x18 | No volátil | Registro de plataforma: en modo kernel, apunta a KPCR para el procesador actual; en modo de usuario, apunta a TEB |
 | x19-x28 | No volátil | Registros de borrado |
 | X29/FP | No volátil | Puntero de marco |
@@ -94,18 +94,18 @@ El puntero de marco (X29) es necesario por compatibilidad con el recorrido de pi
 
 La arquitectura AArch64 también admite registros de punto flotante/SIMD 32, que se resumen a continuación:
 
-| Registro | ¿Volátil? | Rol |
+| Registro | ¿Volátil? | Role |
 | - | - | - |
-| v0 | Volátil | Parámetro/registro de borrado 1, registro de resultados |
-| v1-v7 | Volátil | Registros de parámetros/grietas de 2-8 |
+| v0 | Volatile | Parámetro/registro de borrado 1, registro de resultados |
+| v1-v7 | Volatile | Registros de parámetros/grietas de 2-8 |
 | v8-v15 | No volátil | Registros de borrado (solo los bits 64 bajos son no volátiles) |
-| v16-v31 | Volátil | Registros de borrado |
+| v16-v31 | Volatile | Registros de borrado |
 
 Se puede tener acceso a cada registro como un valor completo de 128 bits (a través de V0-v31 o q0-q31). Se puede tener acceso a él como un valor de 64 bits (a través de d0-D31), como un valor de 32 bits (a través de S0-S31), como un valor de 16 bits (a través de H0-H31) o como un valor de 8 bits (a través de B0-B31). El acceso a menos de 128 bits solo tiene acceso a los bits inferiores del registro completo de 128 bits. Dejan los bits restantes sin tocar a menos que se especifique lo contrario. (AArch64 es diferente de AArch32, donde los registros más pequeños se empaquetaron encima de los registros mayores).
 
 El registro de control de punto flotante (FPCR) tiene ciertos requisitos en los distintos campos de bits que contiene:
 
-| Bits | Significado | ¿Volátil? | Rol |
+| Bits | Significado | ¿Volátil? | Role |
 | - | - | - | - |
 | 26 | AHP | No volátil | Control de media precisión alternativo. |
 | 25 | DN | No volátil | Control de modo NaN predeterminado. |
@@ -117,7 +117,7 @@ El registro de control de punto flotante (FPCR) tiene ciertos requisitos en los 
 
 Al igual que AArch32, la especificación AArch64 proporciona tres registros "ID. de subproceso" controlado por el sistema:
 
-| Registro | Rol |
+| Registro | Role |
 | - | - |
 | TPIDR_EL0 | Reservado. |
 | TPIDRRO_EL0 | Contiene el número de CPU del procesador actual. |

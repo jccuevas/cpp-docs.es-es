@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-ms.openlocfilehash: 7f22386439803de1b59f3236775aa6cec0254eab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d55226a368f81a9506b38fe9271da4332bd1f5b
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400999"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541718"
 ---
 # <a name="compiler-warning-level-4-c4245"></a>Advertencia del compilador (nivel 4) C4245
 
-'conversion': conversión de 'tipo1' a 'tipo2', no coinciden signed/unsigned
+' Conversion ': conversión de ' tipo1 ' a ' tipo2 '; no coincide con signed/unsigned
 
-Se intentó convertir un firmado **const** que tiene un valor negativo a una `unsigned`.
+Ha intentado convertir una **constante** con signo que tiene un valor negativo en un `unsigned`.
 
-El ejemplo siguiente genera C4245:
+En el ejemplo siguiente se genera C4245:
 
-```
+```cpp
 // C4245.cpp
 // compile with: /W4 /c
 const int i = -1;

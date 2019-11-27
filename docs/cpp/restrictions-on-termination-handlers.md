@@ -15,13 +15,13 @@ ms.locfileid: "74246380"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Restricciones de los controladores de finalización
 
-You cannot use a **goto** statement to jump into a **__try** statement block or a **__finally** statement block. En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. (You can, however, jump out of a **__try** statement block.) Also, you cannot nest an exception handler or termination handler inside a **__finally** block.
+No se puede usar una instrucción **goto** para saltar a un bloque de instrucciones **__try** o un bloque de instrucciones **__finally** . En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. (Sin embargo, puede saltar fuera de un bloque de instrucciones **__try** ). Además, no puede anidar un controlador de excepciones ni un controlador de finalización dentro de un bloque **__finally** .
 
-Además, algunos tipos de código permitidos en un controlador de finalización generan resultados cuestionables, por lo que deben utilizarse con precaución, si se utilizan. One is a **goto** statement that jumps out of a **__finally** statement block. Si el bloque se ejecuta como parte de una finalización normal, no sucede nada inusual. Pero si el sistema está desenredando la pila, el desenredado se detiene y la función actual obtiene el control como si no hubiera una finalización anómala.
+Además, algunos tipos de código permitidos en un controlador de finalización generan resultados cuestionables, por lo que deben utilizarse con precaución, si se utilizan. Una es una instrucción **goto** que salta de un bloque de instrucciones **__finally** . Si el bloque se ejecuta como parte de una finalización normal, no sucede nada inusual. Pero si el sistema está desenredando la pila, el desenredado se detiene y la función actual obtiene el control como si no hubiera una finalización anómala.
 
-A **return** statement inside a **__finally** statement block presents roughly the same situation. El control se devuelve al llamador inmediato de la función que contiene el controlador de finalización. Si el sistema estaba desenredando la pila, este proceso se detiene y el programa continúa como si no se hubiera producido una excepción.
+Una instrucción **Return** dentro de un bloque de instrucciones de **__finally** presenta aproximadamente la misma situación. El control se devuelve al llamador inmediato de la función que contiene el controlador de finalización. Si el sistema estaba desenredando la pila, este proceso se detiene y el programa continúa como si no se hubiera producido una excepción.
 
 ## <a name="see-also"></a>Vea también
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Escribir un controlador de finalización](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

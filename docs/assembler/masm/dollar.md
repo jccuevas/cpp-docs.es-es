@@ -15,7 +15,7 @@ ms.locfileid: "74398756"
 ---
 # <a name=""></a>$
 
-The current value of the location counter.
+Valor actual del contador de ubicación.
 
 ## <a name="syntax"></a>Sintaxis
 

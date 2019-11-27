@@ -23,7 +23,7 @@ DAO se utiliza con bases de datos de Access y se admite a través de Office 2013
 |[AfxDaoInit](#afxdaoinit)|Inicializa el motor de base de datos DAO.|
 |[AfxDaoTerm](#afxdaoterm)|Finaliza el motor de base de datos DAO.|
 
-##  <a name="afxdaoinit"></a>  AfxDaoInit
+##  <a name="afxdaoinit"></a>AfxDaoInit
 
 Esta función inicializa el motor de base de datos DAO.
 
@@ -44,7 +44,7 @@ Para obtener información relacionada y un ejemplo de llamada a `AfxDaoInit`, ve
 
   **Encabezado** afxdao. h
 
-##  <a name="afxdaoterm"></a>  AfxDaoTerm
+##  <a name="afxdaoterm"></a>AfxDaoTerm
 
 Esta función finaliza el motor de base de datos DAO.
 

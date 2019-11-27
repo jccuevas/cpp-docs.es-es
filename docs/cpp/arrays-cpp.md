@@ -15,11 +15,11 @@ ms.locfileid: "74188991"
 ---
 # <a name="arrays-c"></a>Matrices (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+Una matriz es una secuencia de objetos del mismo tipo que ocupan un área de memoria contigua. Las matrices de estilo C tradicionales son el origen de muchos errores, pero siguen siendo comunes, especialmente en las bases de código anteriores. En moderno C++, recomendamos encarecidamente el uso de [STD:: Vector](../standard-library/vector-class.md) o [STD:: Array](../standard-library/array-class-stl.md) en lugar de las matrices de estilo C descritas en esta sección. Ambos tipos de biblioteca estándar almacenan sus elementos como un bloque de memoria contiguo, pero proporcionan mucha mayor seguridad de tipos junto con iteradores que se garantiza que señalan a una ubicación válida dentro de la secuencia. Para obtener más información, consulte [contenedores ( C++moderno)](containers-modern-cpp.md).
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>Declaraciones de pila
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+En una C++ declaración de matriz, el tamaño de la matriz se especifica después del nombre de la variable, no después del nombre de tipo, como en otros lenguajes. En el ejemplo siguiente se declara una matriz de 1000 dobles para que se asigne en la pila. El número de elementos se debe proporcionar como un literal entero, o bien como una expresión constante, porque el compilador tiene que saber cuánto espacio de pila se va a asignar; no puede utilizar un valor calculado en tiempo de ejecución. A cada elemento de la matriz se le asigna un valor predeterminado de 0. Si no asigna un valor predeterminado, cada elemento contendrá inicialmente los valores aleatorios que se encuentren en esa ubicación.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+El primer elemento de la matriz es el elemento 0 y el último elemento es el elemento (*n*-1), donde *n* es el número de elementos que puede contener la matriz. El número de elementos de la declaración debe ser de un tipo entero y debe ser mayor que 0. Es responsabilidad suya asegurarse de que el programa no pasa nunca un valor al operador de subíndice que sea mayor que `(size - 1)`.
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+Una matriz de tamaño cero solo es válida cuando la matriz es el último campo de una **estructura** o **Unión** y cuando se habilitan las extensiones de Microsoft (/ZE).
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Las matrices basadas en la pila son más rápidas para asignar y acceder a las matrices basadas en montones, pero el número de elementos no puede ser tan grande que usa demasiada memoria de pila. La cantidad de tiempo depende del programa. Puede usar las herramientas de generación de perfiles para determinar si una matriz es demasiado grande.
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>Declaraciones de montones
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+Si necesita una matriz demasiado grande para asignarla en la pila o cuyo tamaño no se puede conocer en tiempo de compilación, puede asignarla en el montón con una nueva expresión de [\[\]](new-operator-cpp.md) . El operador devuelve un puntero al primer elemento. Puede usar el operador de subíndice con la variable de puntero de la misma forma que con una matriz basada en la pila. También puede usar [aritmética de puntero](../c-language/pointer-arithmetic.md) para pasar el puntero a cualquier elemento arbitrario de la matriz. Es su responsabilidad asegurarse de que:
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- siempre se conserva una copia de la dirección del puntero original para que se pueda eliminar la memoria cuando ya no se necesite la matriz.
+- no incremente ni disminuya la dirección del puntero después de los límites de la matriz.
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+En el ejemplo siguiente se muestra cómo definir una matriz en el montón en tiempo de ejecución y cómo obtener acceso a los elementos de la matriz mediante el operador de subíndice o mediante aritmética de puntero:
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>Inicializar matrices
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+Puede inicializar una matriz en un bucle, un elemento a la vez o en una única instrucción. El contenido de las dos matrices siguientes es idéntico:
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>Pasar matrices a funciones
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+Cuando una matriz se pasa a una función, se pasa como un puntero al primer elemento. Esto es así tanto para las matrices basadas en pilas como para las basadas en montones. El puntero no contiene información de tamaño o tipo adicional. Este comportamiento se denomina *decadencia del puntero*. Al pasar una matriz a una función, siempre debe especificar el número de elementos en un parámetro independiente. Este comportamiento también implica que los elementos de la matriz no se copian cuando la matriz se pasa a una función. Para evitar que la función modifique los elementos, especifique el parámetro como un puntero a los elementos **const** .
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+En el ejemplo siguiente se muestra una función que acepta una matriz y una longitud. El puntero apunta a la matriz original, no a una copia. Dado que el parámetro no es **const**, la función puede modificar los elementos de la matriz.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+Declare la matriz como const para que sea de solo lectura en el bloque de función:
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+También se puede declarar la misma función de estas maneras, sin ningún cambio de comportamiento. La matriz se sigue pasando como un puntero al primer elemento:
 
 ```cpp
 // Unsized array
@@ -162,7 +162,7 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>Matrices multidimensionales
 
 Las matrices construidas a partir de otras matrices son matrices multidimensionales. Estas matrices multidimensionales se especifican colocando en orden varias expresiones constantes entre corchetes. Por ejemplo, considere esta declaración:
 
@@ -170,12 +170,12 @@ Las matrices construidas a partir de otras matrices son matrices multidimensiona
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+Especifica una matriz de tipo **int**, organizada conceptualmente en una matriz bidimensional de cinco filas y siete columnas, como se muestra en la ilustración siguiente:
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
+![Diseño conceptual de una matriz&#45;multidimensional](../cpp/media/vc38rc1.gif "Diseño conceptual de una matriz&#45;multidimensional") <br/>
 Diseño conceptual de una matriz multidimensional
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. Por ejemplo:
+En las declaraciones de matrices multidimensionales que tienen una lista de inicializadores (como se describe en [inicializadores](../cpp/initializers.md)), se puede omitir la expresión constante que especifica los límites de la primera dimensión. Por ejemplo:
 
 ```cpp
 // arrays2.cpp
@@ -191,7 +191,7 @@ double TransportCosts[][cMarkets] = {
 
 La declaración anterior define una matriz de tres filas por cuatro columnas. Las filas representan fábricas y las columnas representan los mercados a los que distribuyen las fábricas. Los valores son los costos de transporte de las fábricas a los mercados. La primera dimensión de la matriz se omite, pero el compilador la completa examinando el inicializador.
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+El uso del operador de direccionamiento indirecto (*) en un tipo de matriz de n dimensiones produce una matriz n-1 dimensional. Si n es 1, el resultado es un valor escalar (o elemento de matriz).
 
 Las matrices de C++ se almacenan por orden de fila principal. El orden de fila principal significa que el último subíndice es el que varía más rápidamente.
 
@@ -283,7 +283,7 @@ int main()
 
 El primer elemento de `aPoint` se construye utilizando el constructor `Point( int, int )`; los dos elementos restantes se crean con el constructor predeterminado.
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). Por ejemplo:
+Las matrices de miembros estáticos (ya sean **const** o not) se pueden inicializar en sus definiciones (fuera de la declaración de clase). Por ejemplo:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,7 +301,7 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>Obtener acceso a elementos de matriz
 
 Se puede obtener acceso a los elementos individuales de una matriz mediante el operador de subíndice de matriz (`[ ]`). Si se utiliza una matriz unidimensional en una expresión que no tiene subíndice, el nombre de la matriz se evalúa como un puntero al primer elemento de la matriz.
 
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. En este ejemplo, la matriz se utiliza con uno, dos y tres subíndices. Aunque es más frecuente especificar todos los subíndices, como en la instrucción `cout`, a veces es útil seleccionar un subconjunto concreto de elementos de la matriz, como se muestra en las instrucciones que hay después de `cout`.
+En el código anterior, `multi` es una matriz tridimensional de tipo **Double**. El puntero `p2multi` apunta a una matriz de tipo **Double** de tamaño tres. En este ejemplo, la matriz se utiliza con uno, dos y tres subíndices. Aunque es más frecuente especificar todos los subíndices, como en la instrucción `cout`, a veces es útil seleccionar un subconjunto concreto de elementos de la matriz, como se muestra en las instrucciones que hay después de `cout`.
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>Sobrecargar el operador de subíndice
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. El comportamiento predeterminado del operador de subíndice, si no está sobrecargado, consiste en combinar el nombre de la matriz y el subíndice usando el método siguiente:
+Al igual que otros operadores, el operador de subíndice (`[]`) puede ser redefinido por el usuario. El comportamiento predeterminado del operador de subíndice, si no está sobrecargado, consiste en combinar el nombre de la matriz y el subíndice usando el método siguiente:
 
 `*((array_name) + (subscript))`
 
-Como en toda suma que implica tipos de puntero, el ajuste de escala se realiza automáticamente para que se produzca el ajuste correspondiente al tamaño del tipo. Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+Como en toda suma que implica tipos de puntero, el ajuste de escala se realiza automáticamente para que se produzca el ajuste correspondiente al tamaño del tipo. Por lo tanto, el valor resultante no es *n* bytes del origen de array-Name; en su lugar, es el elemento *n*de la matriz. Para obtener más información sobre esta conversión, vea [operadores de adición](additive-operators-plus-and.md).
 
 De igual forma, para las matrices multidimensionales, la dirección se deriva usando el método siguiente:
 
@@ -352,14 +352,14 @@ De igual forma, para las matrices multidimensionales, la dirección se deriva us
 
 ## <a name="arrays-in-expressions"></a>Matrices en expresiones
 
-Cuando un identificador de un tipo de matriz aparece en una expresión distinta de `sizeof`, dirección de (`&`) o inicialización de una referencia, se convierte en un puntero al primer elemento de matriz. Por ejemplo:
+Cuando un identificador de un tipo de matriz aparece en una expresión distinta de `sizeof`, Address-of (`&`) o la inicialización de una referencia, se convierte en un puntero al primer elemento de la matriz. Por ejemplo:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-El puntero `psz` apunta al primer elemento de la matriz `szError1`. Arrays, unlike pointers, are not modifiable l-values. Por consiguiente, la siguiente asignación no es válida:
+El puntero `psz` apunta al primer elemento de la matriz `szError1`. Las matrices, a diferencia de los punteros, no son valores l modificables. Por consiguiente, la siguiente asignación no es válida:
 
 ```cpp
 szError1 = psz;
@@ -367,4 +367,4 @@ szError1 = psz;
 
 ## <a name="see-also"></a>Vea también
 
-[std::array](../standard-library/array-class-stl.md)
+[STD:: Array](../standard-library/array-class-stl.md)

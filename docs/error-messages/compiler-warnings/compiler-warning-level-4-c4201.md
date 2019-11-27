@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4201
 ms.assetid: 6156f508-9393-4d77-9e73-1ec3e1c32d0d
-ms.openlocfilehash: c7c10273e06ec35528dbd9d51c02bb844d275638
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f029d7717f99e55a977ad9cb80dacbfa1485086
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401259"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541214"
 ---
 # <a name="compiler-warning-level-4-c4201"></a>Advertencia del compilador (nivel 4) C4201
 
-ha utilizado una extensión no estándar: struct/union sin nombre
+se ha utilizado una extensión no estándar: struct/union sin nombre
 
-En las extensiones de Microsoft (/Ze), puede especificar una estructura sin un declarador como miembros de otra estructura o unión. Estas estructuras generan un error en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+En las extensiones de Microsoft (/ZE), puede especificar una estructura sin declaradores como miembros de otra estructura o Unión. Estas estructuras generan un error con compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // C4201.cpp
 // compile with: /W4
 struct S

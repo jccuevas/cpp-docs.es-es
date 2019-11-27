@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4640
+title: Advertencia del compilador (nivel 3) C4640
 ms.date: 11/04/2016
 f1_keywords:
 - C4640
@@ -13,15 +13,15 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189102"
 ---
-# <a name="compiler-warning-level-3-c4640"></a>Compiler Warning (level 3) C4640
+# <a name="compiler-warning-level-3-c4640"></a>Advertencia del compilador (nivel 3) C4640
 
-'instance' : construction of local static object is not thread-safe
+' instance ': la construcción del objeto estático local no es segura para subprocesos
 
-A static instance of an object is not thread safe.
+Una instancia estática de un objeto no es segura para subprocesos.
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
-The following sample generates C4640:
+En el ejemplo siguiente se genera C4640:
 
 ```cpp
 // C4640.cpp

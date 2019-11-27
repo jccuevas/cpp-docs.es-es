@@ -17,29 +17,29 @@ ms.locfileid: "74245858"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Cómo se evalúan los bloques catch (C++)
 
-C++ permite iniciar excepciones de cualquier tipo, aunque en general se recomienda iniciar tipos derivados de std::exception. A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
+C++ permite iniciar excepciones de cualquier tipo, aunque en general se recomienda iniciar tipos derivados de std::exception. Una C++ excepción puede ser detectada por un controlador **catch** que especifique el mismo tipo que la excepción iniciada, o por un controlador que pueda detectar cualquier tipo de excepción.
 
 Si el tipo de excepción que se inicia es una clase, que también tiene una o varias clases base, se puede detectar mediante los controladores que aceptan las clases base del tipo de la excepción, así como referencias a las bases del tipo de la excepción. Observe que, cuando una referencia detecta una excepción, está enlazada al objeto de excepción real que se ha iniciado; si no, es una copia (igual que un argumento de una función).
 
-When an exception is thrown, it may be caught by the following types of **catch** handlers:
+Cuando se produce una excepción, puede ser detectada por los siguientes tipos de controladores **catch** :
 
 - Un controlador que pueda aceptar cualquier tipo (mediante la sintaxis de puntos suspensivos).
 
-- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
+- Un controlador que acepta el mismo tipo que el objeto de excepción; Dado que es una copia, se omiten los modificadores **const** y **volatile** .
 
 - Un controlador que acepte una referencia al mismo tipo que el objeto de excepción.
 
-- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
+- Un controlador que acepta una referencia a una forma **const** o **volátil** del mismo tipo que el objeto de excepción.
 
-- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
+- Un controlador que acepta una clase base del mismo tipo que el objeto de excepción; Dado que es una copia, se omiten los modificadores **const** y **volatile** . El controlador **catch** de una clase base no debe preceder al controlador **catch** de la clase derivada.
 
 - Un controlador que acepte una referencia a una clase base del mismo tipo que el objeto de excepción.
 
-- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
+- Un controlador que acepta una referencia a una forma **const** o **volátil** de una clase base del mismo tipo que el objeto de excepción.
 
 - Un controlador que acepte un puntero al que pueda convertirse un objeto de puntero iniciado mediante las reglas de conversión de puntero estándar.
 
-The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. Por ejemplo, es un error colocar el controlador para una clase base antes del controlador para una clase derivada. After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. Por ejemplo:
+El orden en que aparecen los controladores **catch** es significativo, ya que los controladores de un bloque **try** determinado se examinan en orden de aparición. Por ejemplo, es un error colocar el controlador para una clase base antes del controlador para una clase derivada. Después de encontrar un controlador **catch** coincidente, no se examinan los controladores subsiguientes. Como resultado, un controlador **catch** de puntos suspensivos debe ser el último controlador del bloque **try** . Por ejemplo:
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-In this example, the ellipsis **catch** handler is the only handler that is examined.
+En este ejemplo, el controlador **catch** de puntos suspensivos es el único controlador que se examina.
 
 ## <a name="see-also"></a>Vea también
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Prácticas C++ recomendadas modernas para excepciones y control de errores](../cpp/errors-and-exception-handling-modern-cpp.md)

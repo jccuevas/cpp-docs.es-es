@@ -36,8 +36,8 @@ Un archivo de indicaciones contiene indicaciones personalizables por el usuario,
 
 > [!IMPORTANT]
 > Si modifica o agrega un archivo de indicaciones, deberá realizar pasos adicionales para que los cambios surtan efecto:
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> - En versiones anteriores a la versión 15,6 de Visual Studio 2017: Elimine el archivo. sdf o el archivo VC. dB de la solución para todos los cambios.
+> - En Visual Studio 2017 versión 15,6 y versiones posteriores: cierre y vuelva a abrir la solución después de agregar nuevos archivos de sugerencia.
 
 ## <a name="scenario"></a>Escenario
 
@@ -92,13 +92,13 @@ A partir de la versión 15.8 de Visual Studio 2017, hay varias características 
 
 - Hay una acción rápida para crear un archivo de indicaciones que incluye la macro resaltada. En el caso de que ya haya un archivo de indicaciones, la acción rápida permite agregar la macro al archivo de indicaciones.
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![Macro resaltada.](media/hint-squiggle-and-actions.png "Sugerencia y acciones rápidas en zigzag")
 
 Después de ejecutar una acción rápida, el analizador vuelve a analizar los archivos afectados por el archivo de indicaciones.
 
 De forma predeterminada, se resalta la macro de problema como una sugerencia. El resaltado se puede cambiar a un elemento más visible, como un subrayado ondulado de color rojo o verde. Use la opción **Macros de regiones de navegación omitidas** en la sección **Subrayados ondulados de código**, que encontrará en **Herramientas** > **Opciones** > **Editor de texto** > **C/C++**  > **Ver**.
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+![Macros en la opción regiones de exploración omitidas.](media/skipped-regions-squiggle-option.png "Se omitió la opción en zigzag de regiones.")
 
 ## <a name="display-browsing-database-errors"></a>Visualizar errores de la base de datos de exploración
 
@@ -166,7 +166,7 @@ En la ilustración se muestran algunos de los directorios físicos de un proyect
 
 ### <a name="hint-file-directories"></a>Directorios de archivos de indicaciones
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![Directorios de archivos&#45;de sugerencia comunes y específicos del proyecto.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Directorios y contenido del archivo de indicaciones
 
@@ -183,7 +183,7 @@ En esta lista se muestran los directorios de este proyecto que contienen archivo
     #define _In_count_(size)
     ```
 
-- Depuración
+- Depurar
 
     ```cpp.hint
     // Debug

@@ -18,19 +18,19 @@ ms.locfileid: "74246645"
 ---
 # <a name="cleaning-up-resources"></a>Limpiar recursos
 
-Durante la ejecución del controlador de terminación, tal vez no sepa qué recursos se han asignado antes de que se llame al controlador de terminación. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Durante la ejecución del controlador de terminación, tal vez no sepa qué recursos se han asignado antes de que se llame al controlador de terminación. Es posible que se haya interrumpido el bloque de instrucciones **__try** antes de que se asignaran todos los recursos, de modo que no se hayan abierto todos los recursos.
 
 Por tanto, como medida de seguridad, debe comprobar qué recursos están realmente abiertos antes de proceder con la limpieza de controladores de terminación. Un procedimiento recomendado es:
 
 1. Inicializar los identificadores en NULL.
 
-1. In the **__try** statement block, allocate resources. Los identificadores se establecen en valores positivos cuando se asigna el recurso.
+1. En el bloque de instrucciones **__try** , asigne recursos. Los identificadores se establecen en valores positivos cuando se asigna el recurso.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. En el bloque de instrucciones **__finally** , libere cada recurso cuyo identificador o variable de marca correspondiente sea distinto de cero o no sea NULL.
 
 ## <a name="example"></a>Ejemplo
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Antes de limpiar un recurso, el código comprueba si el recurso se ha asignado.
+Por ejemplo, en el código siguiente se usa un controlador de terminación para cerrar tres archivos y un bloque de memoria asignados en el bloque de instrucciones **__try** . Antes de limpiar un recurso, el código comprueba si el recurso se ha asignado.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Escribir un controlador de finalización](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

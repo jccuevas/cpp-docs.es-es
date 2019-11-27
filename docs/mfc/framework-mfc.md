@@ -27,7 +27,7 @@ Por ejemplo, Win32 concepto de ventana está encapsulado por la clase MFC `CWnd`
 
 La encapsulación significa que C++ la clase `CWnd`, por ejemplo, contiene una variable miembro de tipo `HWND`y las funciones miembro de la clase encapsulan llamadas a funciones de Win32 que toman un `HWND` como parámetro. Las funciones miembro de clase suelen tener el mismo nombre que la función de Win32 que encapsulan.
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
 [SDI y MDI](../mfc/sdi-and-mdi.md)
 

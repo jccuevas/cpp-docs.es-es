@@ -15,7 +15,7 @@ ms.locfileid: "74398534"
 ---
 # <a name="cref"></a>.CREF
 
-Enables listing of symbols in the symbol portion of the symbol table and browser file.
+Habilita la lista de símbolos de la parte Symbol de la tabla de símbolos y del archivo del explorador.
 
 ## <a name="syntax"></a>Sintaxis
 

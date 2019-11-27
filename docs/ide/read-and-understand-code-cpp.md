@@ -25,11 +25,11 @@ Visual Studio colorea elementos de la sintaxis para distinguir los diferentes ti
 
 Los colores se pueden personalizar; para ello, escriba "Fuentes" en **Inicio rápido** y, después, elija **Fuentes y colores**. En el cuadro de diálogo **Fuentes y colores**, desplácese hasta las opciones de C /C++ y, después, elija una fuente o un color personalizados.
 
-## <a name="outlining"></a>esquematizar
+## <a name="outlining"></a>Esquematización
 
 Haga clic con el botón derecho en un archivo de código fuente y seleccione **Esquematización** para contraer o expandir bloques de código o regiones personalizadas para que sea más fácil examinar únicamente el código que le interesa. Para obtener más información, vea [Esquematización](/visualstudio/ide/outlining).
 
-![Esquematización de C&#43; &#43;](../ide/media/vs2015_cpp_outlining.png "esquematizar")
+![Esquematización de C&#43; &#43;](../ide/media/vs2015_cpp_outlining.png "Esquematización")
 
 Cuando el cursor se coloca delante de una llave ("{" o "}"), el editor resalta su homólogo coincidente.
 
@@ -59,7 +59,7 @@ Mantenga el puntero sobre cualquier variable, función u otro símbolo para obte
 
 ::: moniker range="vs-2019"
 
-![Información rápida en C&#43;&#43;](../ide/media/quick-info-vs2019.png "Información rápida")
+![Información rápida en C&#43;&#43;](../ide/media/quick-info-vs2019.png "información rápida")
 
 La información sobre herramientas **Información rápida** dispone de un vínculo **Buscar en línea**. Vaya a **Herramientas** > **Opciones** > **Editor de texto** > **C++**  > **Vista** para especificar el proveedor de búsqueda. 
 
@@ -71,7 +71,7 @@ Si hay un error en el código, puede mantener el puntero sobre él e **Informaci
 
 ::: moniker range="<=vs-2017"
 
-![Información rápida en C&#43;&#43;](../ide/media/quick-info.png "Información rápida")
+![Información rápida en C&#43;&#43;](../ide/media/quick-info.png "información rápida")
 
 Si hay un error en el código, puede mantener el puntero sobre él e **Información rápida** mostrará el mensaje de error. También puede encontrar el mensaje de error en la ventana **Lista de errores**.
 

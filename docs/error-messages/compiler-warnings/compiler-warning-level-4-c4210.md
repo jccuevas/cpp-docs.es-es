@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4210
 ms.assetid: f8600adf-dfe2-4022-a37a-3d4997641dfd
-ms.openlocfilehash: 3435e18f60568cad390dcb0ef7900658a21ea959
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b27a711187af21dac093bdcc3e3af84502fe153
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401194"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541850"
 ---
 # <a name="compiler-warning-level-4-c4210"></a>Advertencia del compilador (nivel 4) C4210
 
-extensión no estándar utilizada: función recibido ámbito de archivo
+se ha utilizado una extensión no estándar: el ámbito de archivo dado
 
-Con las extensiones de Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), las declaraciones de función tienen ámbito de archivo.
+Con las extensiones de Microsoft ([/ze](../../build/reference/za-ze-disable-language-extensions.md)) predeterminadas, las declaraciones de función tienen ámbito de archivo.
 
-```
+```c
 // C4210.c
 // compile with: /W4 /c
 void func1()
@@ -33,4 +33,4 @@ int main()
 }                //  /Za passes 4 as type int
 ```
 
-Esta extensión puede impedir que el código que se va a otros compiladores.
+Esta extensión puede impedir que el código sea portable a otros compiladores.

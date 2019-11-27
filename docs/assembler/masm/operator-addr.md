@@ -17,11 +17,11 @@ ms.locfileid: "74397118"
 ---
 # <a name="operator-addr"></a>Operador ADDR
 
-See the [INVOKE](../../assembler/masm/invoke.md) directive.
+Vea la directiva [INVOKE](../../assembler/masm/invoke.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
-> **ADDR**
+> **RANGO**
 
 ## <a name="see-also"></a>Vea también
 

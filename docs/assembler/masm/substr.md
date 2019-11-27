@@ -15,12 +15,12 @@ ms.locfileid: "74393508"
 ---
 # <a name="substr"></a>SUBSTR
 
-Returns a substring of *textitem*, starting at *position*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
+Devuelve una subcadena de *textitem*, a partir de la *posición*. *Textitem* puede ser una cadena literal, una constante precedida por un `%`o la cadena devuelta por una función de macro.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *name* **SUBSTR** *textitem* __,__ *position* ⟦ __,__ *length*⟧
+> *nombre* **substr** *textitem* __,__ *posición* ⟦ __,__ *longitud*⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Referencia de directivas](../../assembler/masm/directives-reference.md)

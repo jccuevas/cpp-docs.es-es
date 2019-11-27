@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4202
 ms.assetid: 253293aa-97a3-4878-a2e8-c6cc9e20b1cb
-ms.openlocfilehash: c66e2243ee5eca55105de27c9824ee8ced338500
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d5e7dd45b58f1231c39565bfd74c5895096a8b7
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401272"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541643"
 ---
 # <a name="compiler-warning-level-4-c4202"></a>Advertencia del compilador (nivel 4) C4202
 
-ha utilizado una extensión no estándar: '...': parámetro de prototipos de no es válido de nombre de la lista
+se ha utilizado una extensión no estándar: '... ': el parámetro prototype de la lista de nombres no es válido
 
-Una definición de función de estilo antiguo contiene argumentos de variable. Estas definiciones generan un error en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Una definición de función de estilo antiguo contiene argumentos variables. Estas definiciones generan un error con compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // C4202.c
 // compile with: /W4
 void func( a, b, ...)   // C4202

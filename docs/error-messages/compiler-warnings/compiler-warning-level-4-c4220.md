@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4220
 ms.assetid: aba18868-825f-4763-9af6-3296406a80e4
-ms.openlocfilehash: 177fb01ba4181f72740724d107fe08e6680ed492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781626e20f787bf582605ebd2d4943a7d5f2aa0c
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401116"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541916"
 ---
 # <a name="compiler-warning-level-4-c4220"></a>Advertencia del compilador (nivel 4) C4220
 
 varargs coincide con los parámetros restantes
 
-En las extensiones de Microsoft (/Ze) de forma predeterminada, un puntero a una función coincide con un puntero a una función con argumentos similares pero variables.
+En las extensiones predeterminadas de Microsoft (/ZE), un puntero a una función coincide con un puntero a una función con argumentos similares, pero de variable.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // C4220.c
 // compile with: /W4
 
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Estos punteros no coinciden con la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Estos punteros no coinciden con la compatibilidad con ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)).

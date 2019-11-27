@@ -17,12 +17,12 @@ ms.locfileid: "74396618"
 ---
 # <a name="operator-ne"></a>Operador NE
 
-Returns true (-1) if *expression1* does not equal *expression2*, or returns false (0) if it does.
+Devuelve true (-1) si *expression1* no es igual a *expression2*o devuelve false (0) si lo hace.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *expression1* **NE** *expression2*
+> *expresión1* **ne** *expresión2*
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

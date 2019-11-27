@@ -13,14 +13,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399168"
 ---
-# <a name="cpu"></a>\@Cpu
+# <a name="cpu"></a>CPU \@
 
-A bit mask specifying the processor mode (numeric equate).
+Máscara de bits que especifica el modo de procesador (numérico igual).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **\@Cpu**
+> **CPU \@**
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

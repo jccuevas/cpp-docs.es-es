@@ -19,7 +19,7 @@ Windows en ARM usa *códigos de desenredado* para controlar el desenredado de la
 
 La EABI de ARM especifica un modelo de desenredado en excepciones en el que se usan códigos de desenredado, pero esta especificación no basta para el desenredado SEH en Windows, donde se deben controlar casos asincrónicos en los que el procesador se encuentra en medio del prólogo y el epílogo de una función. Además, Windows divide el control de desenredado en desenredado en el nivel de función y desenredado de ámbito específico de lenguaje, algo que está unificado en la EABI de ARM. Por ello, Windows en ARM especifica más detalles para el procedimiento y los datos de desenredado.
 
-### <a name="assumptions"></a>Suposiciones
+### <a name="assumptions"></a>Supuestos
 
 Las imágenes ejecutables de Windows en ARM usan el formato portable ejecutable (PE). Para obtener más información, vea [especificación de Microsoft PE y COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). La información de control de excepciones se almacena en las secciones .pdata y .xdata de la imagen.
 
@@ -121,22 +121,22 @@ Las instrucciones 2 y 4 se establecen en función de si se necesita una inserc
 
 |C|L|R|PF|Registros de enteros insertados|Registros de VFP insertados|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|r4-r*N*|ninguna|
+|0|0|0|0|R4-r*N*|ninguna|
 |0|0|0|1|r*S*-r*N*|ninguna|
-|0|0|1|0|ninguna|d8-d*E*|
-|0|0|1|1|r*S*-r3|d8-d*E*|
-|0|1|0|0|r4-r*N*, LR|ninguna|
+|0|0|1|0|ninguna|D8-d*E*|
+|0|0|1|1|r*S*-R3|D8-d*E*|
+|0|1|0|0|R4-r*N*, LR|ninguna|
 |0|1|0|1|r*S*-r*N*, LR|ninguna|
-|0|1|1|0|LR|d8-d*E*|
-|0|1|1|1|r*S*-r3, LR|d8-d*E*|
-|1|0|0|0|r4-r*N*, r11|ninguna|
-|1|0|0|1|r*S*-r*N*, r11|ninguna|
-|1|0|1|0|r11|d8-d*E*|
-|1|0|1|1|r*S*-r3, r11|d8-d*E*|
-|1|1|0|0|r4-r*N*, r11, LR|ninguna|
-|1|1|0|1|r*S*-r*N*, r11, LR|ninguna|
-|1|1|1|0|r11, LR|d8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
+|0|1|1|0|LR|D8-d*E*|
+|0|1|1|1|r*S*-R3, LR|D8-d*E*|
+|1|0|0|0|R4-r*N*, R11|ninguna|
+|1|0|0|1|r*S*-r*N*, R11|ninguna|
+|1|0|1|0|r11|D8-d*E*|
+|1|0|1|1|r*S*-R3, R11|D8-d*E*|
+|1|1|0|0|R4-r*N*, R11, LR|ninguna|
+|1|1|0|1|r*S*-r*N*, R11, LR|ninguna|
+|1|1|1|0|r11, LR|D8-d*E*|
+|1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
 
 Los epílogos de las funciones canónicas siguen un formato similar, pero a la inversa y con algunas opciones más. El epílogo puede tener una longitud de hasta 5 instrucciones, y su formato se define estrictamente por el formato del prólogo.
 
@@ -226,7 +226,7 @@ Aunque el prólogo y cada epílogo tiene un índice en los códigos de desenreda
 
 La matriz de códigos de desenredado es un conjunto de secuencias de instrucciones que describen exactamente cómo deshacer los efectos del prólogo en el orden en el que las operaciones deben realizarse. Los códigos de desenredado son un mini conjunto de instrucciones codificado como una cadena de bytes. Cuando la ejecución finaliza, la dirección de devolución a la función que llama se encuentra en el registro de LR, y todos los registros no volátiles se restauran a los valores que tenían establecidos en el momento en que se llamó a la función.
 
-Si existiera la certeza de que solo pueden surgir excepciones dentro de un cuerpo de función (nunca en un prólogo o en un epílogo), únicamente sería necesaria una secuencia de desenredado. Sin embargo, el modelo de desenredado de Windows requiere la posibilidad de desenredar desde un prólogo o epílogo parcialmente ejecutado. A fin de dar cabida a este requisito, los códigos de desenredado se han diseñado meticulosamente de forma que tienen una asignación unívoca y no ambigua para cada código de operación relevante en el prólogo y el epílogo. Esto implica lo siguiente:
+Si existiera la certeza de que solo pueden surgir excepciones dentro de un cuerpo de función (nunca en un prólogo o en un epílogo), únicamente sería necesaria una secuencia de desenredado. Sin embargo, el modelo de desenredado de Windows requiere la posibilidad de desenredar desde un prólogo o epílogo parcialmente ejecutado. A fin de dar cabida a este requisito, los códigos de desenredado se han diseñado meticulosamente de forma que tienen una asignación unívoca y no ambigua para cada código de operación relevante en el prólogo y el epílogo. Esto tiene varias implicaciones:
 
 - Se puede calcular la longitud del prólogo y el epílogo a partir del recuento de códigos de desenredado. Esto es posible aun cuando existan instrucciones de Thumb-2 de longitud variable, ya que hay asignaciones diferentes para los códigos de operación de 16 y 32 bits.
 
@@ -298,9 +298,9 @@ Junto a cada código de operación está el código de desenredado pertinente, q
 
 El código 0xFD es un código especial para la finalización de la secuencia que quiere decir que el epílogo es una instrucción de 16 bits más larga que el prólogo. Esto permite que se puedan compartir un mayor número de códigos de desenredado.
 
-En este ejemplo, si tiene lugar una excepción mientras el cuerpo de la función entre el prólogo y el epílogo se está ejecutando, el desenredado se inicia con el epílogo, con un desplazamiento 0 en el código del epílogo. Esto corresponde al desplazamiento 0x140 del ejemplo. El responsable del desenredado ejecuta la secuencia de desenredado completa, porque no se ha efectuado ninguna limpieza. Si, en lugar de esto, la excepción se produjera en una instrucción posterior al inicio del código del epílogo, el responsable del desenredado podrá realizar el desenredado correctamente omitiendo el primer código de desenredado. Con una asignación unívoca entre códigos de operación y códigos de desenredado, si desenredáramos desde la instrucción *n* en el epílogo, el responsable del desenredado debería omitir los primeros *n* códigos de desenredado.
+En este ejemplo, si tiene lugar una excepción mientras el cuerpo de la función entre el prólogo y el epílogo se está ejecutando, el desenredado se inicia con el epílogo, con un desplazamiento 0 en el código del epílogo. Esto corresponde al desplazamiento 0x140 del ejemplo. El responsable del desenredado ejecuta la secuencia de desenredado completa, porque no se ha efectuado ninguna limpieza. Si, en lugar de esto, la excepción se produjera en una instrucción posterior al inicio del código del epílogo, el responsable del desenredado podrá realizar el desenredado correctamente omitiendo el primer código de desenredado. Dada una asignación de uno a uno entre códigos de tiempo y desenredado, si se desenreda de la instrucción *n* en el epílogo, el desenredo debe omitir *los primeros códigos* de desenredado.
 
-Esta misma lógica es perfectamente válida, pero a la inversa, para el prólogo. Si desenredamos desde el desplazamiento 0 del prólogo, no hay que ejecutar nada. Si desenredamos desde una instrucción, la secuencia de desenredado debería iniciar un código de desenredado del final, ya que los códigos de desenredado del prólogo se almacenan en orden inverso. Por lo general, si desenredamos desde la instrucción *n* en el prólogo, el desenredado debería empezar a ejecutarse en *n* códigos de desenredado con respecto al final de la lista de códigos.
+Esta misma lógica es perfectamente válida, pero a la inversa, para el prólogo. Si desenredamos desde el desplazamiento 0 del prólogo, no hay que ejecutar nada. Si desenredamos desde una instrucción, la secuencia de desenredado debería iniciar un código de desenredado del final, ya que los códigos de desenredado del prólogo se almacenan en orden inverso. En el caso general, si se desenreda de la instrucción *n* en el prólogo, el desenredado debe comenzar a ejecutarse en *n* códigos de desenredado desde el final de la lista de códigos.
 
 Los códigos de desenredado del prólogo y los epílogos no siempre coinciden plenamente. En tal caso, la matriz de códigos de desenredado puede contener varias secuencias de códigos. Emplee la siguiente lógica para averiguar el desplazamiento por el que empezar a procesar códigos:
 

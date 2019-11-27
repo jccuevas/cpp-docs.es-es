@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4641
+title: Advertencia del compilador (nivel 3) C4641
 ms.date: 11/04/2016
 f1_keywords:
 - C4641
@@ -13,17 +13,17 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189423"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>Compiler Warning (level 3) C4641
+# <a name="compiler-warning-level-3-c4641"></a>Advertencia del compilador (nivel 3) C4641
 
 el comentario del documento XML tiene una referencia cruzada ambigua
 
-The compiler was unable to unambiguously resolve a reference. To resolve this warning, specify the parameter information necessary to make the reference unambiguous.
+El compilador no pudo resolver de forma inequívoca una referencia. Para resolver esta advertencia, especifique la información de parámetros necesaria para que la referencia no sea ambigua.
 
 Para obtener más información, consulta [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
-The following sample generates C4641.
+En el ejemplo siguiente se genera C4641.
 
 ```cpp
 // C4641.cpp

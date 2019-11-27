@@ -1,5 +1,5 @@
 ---
-title: Mixing C (structured) and C++ exceptions
+title: Mezclar C (estructuradas) C++ y excepciones
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -15,32 +15,32 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246460"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
+# <a name="mixing-c-structured-and-c-exceptions"></a>Mezclar C (estructuradas) C++ y excepciones
 
-If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
+Si desea escribir código portable, no se recomienda el uso del control de excepciones estructurado (SEH) C++ en un programa. Sin embargo, a veces es posible que desee compilar mediante [/EHA](../build/reference/eh-exception-handling-model.md) y C++ mezclar las excepciones estructuradas y el código fuente, y necesite alguna utilidad para controlar ambos tipos de excepciones. Dado que un controlador de excepciones estructurado no tiene ningún concepto de objetos o excepciones con tipo, no puede controlar C++ las excepciones iniciadas por el código. Sin embargo C++ , los controladores **catch** pueden controlar las excepciones estructuradas. C++el compilador de C no acepta la sintaxis de control de excepciones (**try**, **Throw**, **catch**), pero el compiladoradmite C++ la sintaxis de control de excepciones estructurado ( **__try**, **__except**, __finally).
 
-See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
+Consulte [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) para obtener información sobre cómo controlar las excepciones estructuradas como C++ excepciones.
 
-If you mix structured and C++ exceptions, be aware of these potential issues:
+Si mezcla estructurada y C++ excepciones, tenga en cuenta estos posibles problemas:
 
 - Las excepciones de C++ y las excepciones estructuradas no se pueden mezclar dentro de la misma función.
 
-- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
+- Los controladores de finalización (bloques de **__finally** ) siempre se ejecutan, incluso durante el desenredado después de que se produzca una excepción.
 
-- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
+- C++el control de excepciones puede detectar y conservar la semántica de desenredo en todos los módulos compilados con las opciones del compilador [/EH](../build/reference/eh-exception-handling-model.md) , que habilitan la semántica de desenredo.
 
-- Puede que haya situaciones en las que no se llame a las funciones de destructor para todos los objetos. For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
+- Puede que haya situaciones en las que no se llame a las funciones de destructor para todos los objetos. Por ejemplo, si se produce una excepción estructurada al intentar realizar una llamada a una función a través de un puntero de función no inicializado y esa función toma como objetos de parámetros construidos antes de la llamada, no se llama a los destructores de esos objetos. durante el desenredo de la pila.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
+- [Usar setjmp o longjmp en C++ programas](../cpp/using-setjmp-longjmp.md)
 
-  See more information on the use of `setjmp` and `longjmp` in C++ programs.
+  Vea más información sobre el uso de `setjmp` y `longjmp` en C++ programas.
 
 - [Controlar excepciones estructuradas en C++](../cpp/exception-handling-differences.md)
 
-  See examples of the ways you can use C++ to handle structured exceptions.
+  Vea ejemplos de las formas que puede usar C++ para controlar las excepciones estructuradas.
 
 ## <a name="see-also"></a>Vea también
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Prácticas C++ recomendadas modernas para excepciones y control de errores](../cpp/errors-and-exception-handling-modern-cpp.md)

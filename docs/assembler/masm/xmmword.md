@@ -15,7 +15,7 @@ ms.locfileid: "74392791"
 ---
 # <a name="xmmword"></a>XMMWORD
 
-Used for 128-bit multimedia operands with MMX and SSE (XMM) instructions.
+Se utiliza para los operandos multimedia de 128 bits con instrucciones MMX y SSE (XMM).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,7 +23,7 @@ Used for 128-bit multimedia operands with MMX and SSE (XMM) instructions.
 
 ## <a name="remarks"></a>Comentarios
 
-**XMMWORD** is intended to represent the same type as [__m128](../../cpp/m128.md).
+**XMMWORD** está diseñado para representar el mismo tipo que [__m128](../../cpp/m128.md).
 
 ## <a name="example"></a>Ejemplo
 

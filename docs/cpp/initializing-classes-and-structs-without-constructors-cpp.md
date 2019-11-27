@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: Inicialización de llaves para clases, estructuras y uniones
+description: Usar la inicialización de C++ llaves con cualquier clase, struct o Unión
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,7 +10,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246500"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>Inicialización de llaves
 
 No siempre es necesario definir un constructor para una clase, especialmente si son relativamente sencillas. Los usuarios pueden inicializar objetos de una clase o struct usando la inicialización uniforme, tal y como se muestra en el siguiente ejemplo:
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. Si un tipo tiene un constructor predeterminado, ya esté declarado de forma implícita o de forma explícita, puede utilizar la inicialización de llave predeterminada (con las llaves vacías). Por ejemplo, la siguiente clase puede inicializarse mediante la inicialización de llave predeterminada y la no predeterminada:
+Tenga en cuenta que cuando una clase o estructura no tiene ningún constructor, se proporcionan los elementos de la lista en el orden en que se declaran los miembros en la clase. Si la clase tiene un constructor, proporcione los elementos en el orden de los parámetros. Si un tipo tiene un constructor predeterminado, ya esté declarado de forma implícita o de forma explícita, puede utilizar la inicialización de llave predeterminada (con las llaves vacías). Por ejemplo, la siguiente clase puede inicializarse mediante la inicialización de llave predeterminada y la no predeterminada:
 
 ```cpp
 #include <string>
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+Puede usar la inicialización de llaves en cualquier lugar en el que normalmente realizaría la inicialización; por ejemplo, como un parámetro de función o un valor devuelto, o con la palabra clave **New** :
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,16 +136,16 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>constructores initializer_list
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. Puede construir initializer_list mediante la inicialización de llave:
+La [clase initializer_list](../standard-library/initializer-list-class.md) representa una lista de objetos de un tipo especificado que se pueden usar en un constructor y en otros contextos. Puede construir initializer_list mediante la inicialización de llave:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  Para usar esta clase, debe incluir el [\<initializer_list >](../standard-library/initializer-list.md) encabezado.
 
 `initializer_list` puede copiarse. En este caso, los miembros de la nueva lista son referencias a los miembros de la lista original:
 

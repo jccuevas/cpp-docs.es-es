@@ -79,13 +79,13 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Construye un objeto `CDaoDatabase`. Llame a `Open` para conectar el objeto a una base de datos.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDaoDatabase::CanTransact](#cantransact)|Devuelve un valor distinto de cero si la base de datos admite transacciones.|
 |[CDaoDatabase::CanUpdate](#canupdate)|Devuelve un valor distinto de cero si el objeto `CDaoDatabase` es actualizable (no es de solo lectura).|
@@ -113,7 +113,7 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Puntero al objeto de base de datos DAO subyacente.|
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Un puntero al objeto [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) que contiene la base de datos y define su espacio de transacciones.|

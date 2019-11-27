@@ -13,14 +13,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398954"
 ---
-# <a name="model"></a>\@Model
+# <a name="model"></a>Modelo de \@
 
-1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
+1 para el modelo **diminuto** , 2 para el modelo **pequeño** , 3 para el modelo **compacto** , 4 para el modelo **medio** , 5 para el modelo **grande** , 6 para **el modelo de gran tamaño** y 7 para el modelo **plano** (numérico igual).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **\@Model**
+> **Modelo de \@**
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

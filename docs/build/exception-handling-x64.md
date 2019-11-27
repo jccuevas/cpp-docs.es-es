@@ -64,7 +64,7 @@ La estructura de información de datos de desenredo se utiliza para registrar lo
 
 La estructura de UNWIND_INFO debe estar alineada en DWORD en la memoria. Esto es lo que significa cada campo:
 
-- **Versión**
+- **Version**
 
    Número de versión de los datos de desenredado, actualmente 1.
 

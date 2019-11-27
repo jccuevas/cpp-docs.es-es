@@ -1,7 +1,7 @@
 ---
-title: Pointers (C++)
+title: Punteros (C++)
 ms.date: 11/19/2019
-description: About raw pointers and smart pointers in Microsoft C++.
+description: Acerca de los punteros sin formato y los punteros inteligentes en Microsoft C++.
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
@@ -12,26 +12,26 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246419"
 ---
-# <a name="pointers-c"></a>Pointers (C++)
+# <a name="pointers-c"></a>Punteros (C++)
 
-A pointer is a variable that stores the memory address of an object. Pointers are used extensively in both C and C++ for three main purposes:
+Un puntero es una variable que almacena la dirección de memoria de un objeto. Los punteros se utilizan exhaustivamente en C y C++ para tres propósitos principales:
 
-- to allocate new objects on the heap,
-- to pass functions to other functions
-- to iterate over elements in arrays or other data structures.
+- para asignar nuevos objetos en el montón,
+- para pasar funciones a otras funciones
+- para recorrer en iteración los elementos de matrices u otras estructuras de datos.
 
-In C-style programming, *raw pointers* are used for all these scenarios. However, raw pointers are the source of many serious programming errors. Therefore, their use is strongly discouraged except where they provide a significant performance benefit and there is no ambiguity as to which pointer is the *owning pointer* that is responsible for deleting the object. Modern C++ provides *smart pointers* for allocating objects, *iterators* for traversing data structures, and *lambda expressions* for passing functions. By using these language and library facilities instead of raw pointers, you will make your program safer, easier to debug, and simpler to understand and maintain. See [Smart pointers](smart-pointers-modern-cpp.md), [Iterators](../standard-library/iterators.md), and [Lambda expressions](lambda-expressions-in-cpp.md) for more information.
+En la programación de estilo C, los *punteros sin formato* se utilizan para todos estos escenarios. Sin embargo, los punteros sin formato son el origen de muchos errores de programación graves. Por lo tanto, se desaconseja encarecidamente su uso, excepto cuando proporcionan una ventaja de rendimiento significativa y no hay ninguna ambigüedad en cuanto a qué puntero es el *puntero propietario* que es responsable de eliminar el objeto. Moderno C++ proporciona *punteros inteligentes* para asignar objetos, *iteradores* para atravesar estructuras de datos y *expresiones lambda* para pasar funciones. Mediante el uso de estas funciones de biblioteca y lenguaje en lugar de punteros sin formato, hará que el programa sea más seguro y fácil de depurar, y que sea más fácil de entender y mantener. Vea [punteros inteligentes](smart-pointers-modern-cpp.md), [iteradores](../standard-library/iterators.md)y [expresiones lambda](lambda-expressions-in-cpp.md) para obtener más información.
 
 ## <a name="in-this-section"></a>En esta sección
 
-- [Raw pointers](raw-pointers.md)
-- [Const and volatile pointers](const-and-volatile-pointers.md)
-- [new and delete operators](new-and-delete-operators.md)
-- [Smart pointers](smart-pointers-modern-cpp.md)
-- [How to: Create and use unique_ptr instances](how-to-create-and-use-unique-ptr-instances.md)
-- [How to: Create and use shared_ptr instances](how-to-create-and-use-shared-ptr-instances.md)
-- [How to: Create and use weak_ptr instances](how-to-create-and-use-weak-ptr-instances.md)
-- [How to: Create and use CComPtr and CComQIPtr instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
+- [Punteros sin formato](raw-pointers.md)
+- [Punteros const y volatile](const-and-volatile-pointers.md)
+- [operadores New y DELETE](new-and-delete-operators.md)
+- [Punteros inteligentes](smart-pointers-modern-cpp.md)
+- [Cómo: crear y usar instancias de unique_ptr](how-to-create-and-use-unique-ptr-instances.md)
+- [Cómo: crear y usar instancias de shared_ptr](how-to-create-and-use-shared-ptr-instances.md)
+- [Cómo: crear y usar instancias de weak_ptr](how-to-create-and-use-weak-ptr-instances.md)
+- [Cómo: crear y usar instancias de CComPtr y CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
 ## <a name="see-also"></a>Vea también
 

@@ -75,12 +75,12 @@ El uso de instrucciones de división de entero SDIV y UDIV es totalmente apto, i
 
 El procesador de ARM admite 16 registros de enteros:
 
-|Registro|¿Volátil?|Rol|
+|Registro|¿Volátil?|Role|
 |--------------|---------------|----------|
-|r0|Volátil|Parámetro, resultado, registro residual 1|
-|r1|Volátil|Parámetro, resultado, registro residual 2|
-|r2|Volátil|Parámetro, registro residual 3|
-|r3|Volátil|Parámetro, registro residual 4|
+|r0|Volatile|Parámetro, resultado, registro residual 1|
+|r1|Volatile|Parámetro, resultado, registro residual 2|
+|r2|Volatile|Parámetro, registro residual 3|
+|r3|Volatile|Parámetro, registro residual 4|
 |r4|No volátil||
 |r5|No volátil||
 |r6|No volátil||
@@ -89,7 +89,7 @@ El procesador de ARM admite 16 registros de enteros:
 |r9|No volátil||
 |r10|No volátil||
 |r11|No volátil|Puntero de marco|
-|r12|Volátil|Registro residual de llamada dentro del procedimiento|
+|r12|Volatile|Registro residual de llamada dentro del procedimiento|
 |r13 (SP)|No volátil|Puntero de pila|
 |r14 (LR)|No volátil|Registro de vínculo|
 |r15 (PC)|No volátil|Contador de programas|
@@ -102,24 +102,24 @@ Windows usa r11 para el recorrido rápido del marco de pila. Para más informaci
 
 Windows admite únicamente variantes de ARM que tengan compatibilidad con coprocesadores VFPv3-D32. Esto quiere decir que siempre hay registros de punto flotante en los que poder basarse para pasar parámetros y, asimismo, que el conjunto completo de 32 registros estará siempre disponible para usarse. En esta tabla se resumen los registros de VFP y su uso:
 
-|Sencillos|Dobles|Cuádruples|¿Volátil?|Rol|
+|Sencillos|Dobles|Cuádruples|¿Volátil?|Role|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volátil|Parámetros, resultado, registro residual|
-|s4-s7|d2-d3|q1|Volátil|Parámetros, registro residual|
-|s8-s11|d4-d5|q2|Volátil|Parámetros, registro residual|
-|s12-s15|d6-d7|q3|Volátil|Parámetros, registro residual|
+|s0-s3|d0-d1|q0|Volatile|Parámetros, resultado, registro residual|
+|s4-s7|d2-d3|q1|Volatile|Parámetros, registro residual|
+|s8-s11|d4-d5|q2|Volatile|Parámetros, registro residual|
+|s12-s15|d6-d7|q3|Volatile|Parámetros, registro residual|
 |s16-s19|d8-d9|q4|No volátil||
 |s20-s23|d10-d11|q5|No volátil||
 |s24-s27|d12-d13|q6|No volátil||
 |s28-s31|d14-d15|q7|No volátil||
-||d16-d31|q8-q15|Volátil||
+||d16-d31|q8-q15|Volatile||
 
 En la siguiente tabla se reflejan los campos de bits de estado de punto flotante y registro de control (FPSCR):
 
-|Bits|Significado|¿Volátil?|Rol|
+|Bits|Significado|¿Volátil?|Role|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volátil|Marcas de estado|
-|27|QC|Volátil|Saturación acumulativa|
+|31-28|NZCV|Volatile|Marcas de estado|
+|27|QC|Volatile|Saturación acumulativa|
 |26|AHP|No volátil|Control de media precisión alternativo|
 |25|DN|No volátil|Control de modo de NaN predeterminado|
 |24|FZ|No volátil|Control de modo de volcado a cero|
@@ -127,7 +127,7 @@ En la siguiente tabla se reflejan los campos de bits de estado de punto flotante
 |21-20|Intervalo|No volátil|Intervalo de vector, debe ser siempre 0|
 |18-16|Len|No volátil|Longitud del vector, debe ser siempre 0|
 |15, 12-8|IDE, IXE, etc.|No volátil|Bits de activación de intercepción de excepciones, debe ser siempre 0|
-|7, 4-0|IDC, IXC, etc.|Volátil|Marcas de excepción acumulativa|
+|7, 4-0|IDC, IXC, etc.|Volatile|Marcas de excepción acumulativa|
 
 ## <a name="floating-point-exceptions"></a>Excepciones de punto flotante
 

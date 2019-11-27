@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447772"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541691"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Advertencia del compilador (nivel 4) C4256
 
-'function': constructor de clase con bases virtuales tiene '...'; las llamadas pueden no ser compatibles con versiones anteriores de Visual C++
+' función ': el constructor de la clase con bases virtuales tiene '... '; es posible que las llamadas no sean compatibles con versiones anteriores de VisualC++
 
 Posible incompatibilidad.
 
-Observe el siguiente ejemplo de código. Si la definición del constructor S2:: s2 (int i,...) se ha compilado con una versión de Microsoft C++ compilador antes de la versión 7, pero el ejemplo siguiente se compila con la versión actual, la llamada al constructor para S3 no funcionaría correctamente debido a un cambio de convención de llamada distinguieran mayúsculas y minúsculas. Si ambos se han compilado mediante Visual C++ 6.0, la llamada no funcionaría todo bien, a menos que se pasa ningún parámetro para los puntos suspensivos.
+Considere el ejemplo de código siguiente: Si la definición del constructor S2:: S2 (int i,...) se compiló con una versión del compilador de C++ Microsoft anterior a la versión 7, pero el ejemplo siguiente se compila con la versión actual, la llamada al constructor de S3 no funcionaría correctamente debido a un cambio de Convención de llamada de casos especiales. Si ambos se compilaron con C++ visual 6,0, la llamada no funcionará bien, a menos que no se haya pasado ningún parámetro para los puntos suspensivos.
 
 Para corregir esta advertencia,
 
-1. No use el botón de puntos suspensivos en un constructor.
+1. No utilice puntos suspensivos en un constructor.
 
-1. Asegúrese de que todos los componentes de su proyecto se compilan con la versión actual (incluidas las bibliotecas que pueden definir o hacer referencia a esta clase), a continuación, deshabilita la advertencia usando la [advertencia](../../preprocessor/warning.md) pragma.
+1. Asegúrese de que todos los componentes del proyecto se compilan con la versión actual (incluidas las bibliotecas que puedan definir o que hagan referencia a esta clase) y, a continuación, deshabilite la advertencia mediante la pragma [Warning](../../preprocessor/warning.md) .
 
-El ejemplo siguiente genera C4256:
+En el ejemplo siguiente se genera C4256:
 
-```
+```cpp
 // C4256.cpp
 // compile with: /W4
 // #pragma warning(disable : 4256)
