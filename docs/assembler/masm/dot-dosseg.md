@@ -13,9 +13,9 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398485"
 ---
-# <a name="dosseg-32-bit-masm"></a>.DOSSEG (32-bit MASM)
+# <a name="dosseg-32-bit-masm"></a>. DOSSEG ((MASM de 32 bits)
 
-Orders the segments according to the MS-DOS segment convention: CODE first, then segments not in DGROUP, and then segments in DGROUP. (32-bit MASM only.)
+Ordena los segmentos según la Convención de segmentos de MS-DOS: CODE First y, a continuación, segmentos que no están en DGROUP y, a continuación, Segments en DGROUP. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,7 +23,7 @@ Orders the segments according to the MS-DOS segment convention: CODE first, then
 
 ## <a name="remarks"></a>Comentarios
 
-The segments in DGROUP follow this order: segments not in BSS or STACK, then BSS segments, and finally STACK segments. Primarily used for ensuring CodeView support in MASM stand-alone programs. Same as [DOSSEG](../../assembler/masm/dosseg.md).
+Los segmentos de DGROUP siguen este orden: los segmentos no están en el BSS o la pila, los segmentos de BSS y, por último, los segmentos de pila. Se utiliza principalmente para garantizar la compatibilidad con CodeView en programas independientes de MASM. Igual que [dosseg (](../../assembler/masm/dosseg.md).
 
 ## <a name="see-also"></a>Vea también
 

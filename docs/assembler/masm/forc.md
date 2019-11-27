@@ -15,18 +15,18 @@ ms.locfileid: "74397525"
 ---
 # <a name="forc"></a>FORC
 
-Marks a block that will be repeated once for each character in *string*, with the current character replacing *parameter* on each repetition.
+Marca un bloque que se repetirá una vez por cada carácter de la *cadena*, con el carácter actual reemplazando el *parámetro* en cada repetición.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **FORC** *parameter*, __\<__ *string* __>__ \
-> *statements*\
+> *Parámetro*FORC __\<__ __>__ de cadena\
+> *instrucciones*\
 > **ENDM**
 
 ## <a name="remarks"></a>Comentarios
 
-Same as [IRPC](../../assembler/masm/irpc.md).
+Igual que [IRPC](../../assembler/masm/irpc.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)

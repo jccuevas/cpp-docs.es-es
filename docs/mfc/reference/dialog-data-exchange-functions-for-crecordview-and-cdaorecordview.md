@@ -124,7 +124,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
+*valor*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
+*valor*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de recurso del control de casilla asociado a la propiedad de control.
 
-*value*<br/>
+*valor*<br/>
 Referencia a una variable miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
+*valor*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
+*valor*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR del primer de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes del objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
+*valor*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR del primer de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes del objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
+*valor*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -503,7 +503,7 @@ Un puntero a un objeto [CDataExchange (](cdataexchange-class.md) . El marco de t
 *nIDC*<br/>
 IDENTIFICADOR de recurso del control deslizante.
 
-*value*<br/>
+*valor*<br/>
 Referencia al valor que se va a intercambiar. Este parámetro contiene o se utilizará para establecer la posición de colocación actual del control deslizante.
 
 *pRecordset*<br/>
@@ -649,7 +649,7 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
+*valor*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto. El tipo de datos del valor depende de cuál de las versiones sobrecargadas de `DDX_FieldText` utilice.
 
 *pRecordset*<br/>

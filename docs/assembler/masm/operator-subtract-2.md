@@ -18,14 +18,14 @@ ms.locfileid: "74395481"
 ---
 # <a name="operator--"></a>\- (Operador)
 
-Returns *expression1* minus *expression2*. The second operator reverses the sign of *expression*.
+Devuelve *expression1* menos *expresión2*. El segundo operador invierte el signo de la *expresión*.
 
 ## <a name="syntax"></a>Sintaxis
 
 > *expression1* **-** *expression2*
 >
-> __-__ *expression*
+> __-__ *expresión* )
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

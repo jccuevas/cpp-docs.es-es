@@ -15,12 +15,12 @@ ms.locfileid: "74398913"
 ---
 # <a name="substr"></a>\@SubStr
 
-A macro function that returns a substring starting at *position*.
+Una función de macro que devuelve una subcadena que comienza en la *posición*.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **\@SubStr(** *string* __,__ *position* ⟦ __,__ *length*⟧ **)**
+> **\@SubStr (** *cadena* __,__ *posición* ⟦ __,__ *longitud*⟧ **)**
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

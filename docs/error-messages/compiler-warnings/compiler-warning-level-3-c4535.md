@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4535
+title: Advertencia del compilador (nivel 3) C4535
 ms.date: 11/04/2016
 f1_keywords:
 - C4535
@@ -13,15 +13,15 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189017"
 ---
-# <a name="compiler-warning-level-3-c4535"></a>Compiler Warning (level 3) C4535
+# <a name="compiler-warning-level-3-c4535"></a>Advertencia del compilador (nivel 3) C4535
 
 calling _set_se_translator() requires /EHa
 
-The use of [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) requires the [/EHa](../../build/reference/eh-exception-handling-model.md) compiler option and not **/EHs**.
+El uso de [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) requiere la opción del compilador [/EHA](../../build/reference/eh-exception-handling-model.md) y no **/EHS**.
 
 ## <a name="example"></a>Ejemplo
 
-The following sample generates C4535.
+En el ejemplo siguiente se genera C4535.
 
 ```cpp
 // C4535.cpp

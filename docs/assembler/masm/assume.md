@@ -13,20 +13,20 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399267"
 ---
-# <a name="assume-32-bit-masm"></a>ASSUME (32-bit MASM)
+# <a name="assume-32-bit-masm"></a>Suponer (MASM de 32 bits)
 
-Enables error checking for register values. (32-bit MASM only.)
+Habilita la comprobación de errores para los valores de registro. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **ASSUME**  *segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
-> **ASSUME**  *dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
-> **ASSUME**  *register* __:ERROR__ ⟦ __,__ *register* __:ERROR__...⟧\
-> **ASSUME**  ⟦*register* __:__ ⟧**NOTHING** ⟦ __,__ *register* __:NOTHING__...⟧
+> **Asuma**  *segregister* __:__ *nombre* ⟦ __,__ *segregister* __:__ *nombre*... ⟧\
+> **Supongamos**que se ha*registrado el registro* __:__ *Type* ⟦ __,__ *Register* __:__ *Type*... ⟧\
+> **Supongamos**que se ha*registrado* __: error__ ⟦ __,__ *Register* __: error__... ⟧\
+> **Asuma** ⟦*Register* __:__ ⟧**Nothing** ⟦ __,__ *Register* __: Nothing__... ⟧
 
 ## <a name="remarks"></a>Comentarios
 
-After an **ASSUME** is put into effect, the assembler watches for changes to the values of the given registers. **ERROR** generates an error if the register is used. **NOTHING** removes register error checking. You can combine different kinds of assumptions in one statement.
+Después de **que se aplique** un supuesto, el ensamblador inspecciona los cambios en los valores de los registros especificados. El **error** genera un error si se usa el registro. **Nada** quita la comprobación de errores de registro. Puede combinar diferentes tipos de suposiciones en una instrucción.
 
 ## <a name="see-also"></a>Vea también
 

@@ -20,7 +20,7 @@ ms.locfileid: "74395493"
 ---
 # <a name="operator-"></a>/ (Operador)
 
-Returns *expression1* divided by *expression2*.
+Devuelve *expression1* dividido por *expresión2*.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,4 +28,4 @@ Returns *expression1* divided by *expression2*.
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

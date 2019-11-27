@@ -17,14 +17,14 @@ ms.locfileid: "74396503"
 ---
 # <a name="operator-ptr"></a>Operador PTR
 
-The first operator forces the *expression* to be treated as having the specified *type*. The second operator specifies a pointer to *type*.
+El primer operador fuerza a la *expresión* a tratarse como con el *tipo*especificado. El segundo operador especifica un puntero al *tipo*.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *type* **PTR** *expression*
+> *escribir* *expresión* PTR
 >
-> \[*distance*] **PTR** *type*
+> *tipo* **ptr** de \[*Distance*]
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

@@ -34,13 +34,13 @@ La palabra clave **auto** indica al compilador que utilice la expresión de inic
 
 Se recomienda usar la palabra clave **auto** en la mayoría de las situaciones, a menos que desee realmente una conversión, ya que proporciona estas ventajas:
 
-- **Solidez**: si el tipo de la expresión cambia (esto incluye cuando se cambia un tipo de valor devuelto de función), funciona.
+- **Solidez:** Si se cambia el tipo de la expresión (esto incluye cuando se cambia un tipo de valor devuelto de función), solo funciona.
 
-- **Rendimiento**: se garantiza que no hay ninguna conversión.
+- **Rendimiento:** Se garantiza que no habrá conversión.
 
 - **Facilidad de uso:** No tiene que preocuparse por las dificultades de ortografía y los errores tipográficos.
 
-- **Eficacia**: la codificación puede ser más eficaz.
+- **Eficiencia:** La codificación puede ser más eficaz.
 
 Casos de conversión en los que es posible que no desee usar **auto**:
 
@@ -50,7 +50,7 @@ Casos de conversión en los que es posible que no desee usar **auto**:
 
 Para usar la palabra clave **auto** , úsela en lugar de un tipo para declarar una variable y especifique una expresión de inicialización. Además, puede modificar la palabra clave **auto** mediante especificadores y declaradores como **const**, **volatile**, Pointer (`*`), Reference (`&`) y referencia rvalue (`&&`). El compilador evalúa la expresión de inicialización y emplea esa información para deducir el tipo de la variable.
 
-La expresión de inicialización puede ser una asignación (sintaxis de signo igual), una inicialización directa (sintaxis de estilo de función), una expresión de [operador New](new-operator-cpp.md) o la expresión de inicialización puede ser el parámetro *for-Range-declaration* en una instrucción [for-based for Statement (C++) basada en intervalo](../cpp/range-based-for-statement-cpp.md) . Para obtener más información, vea [Inicializadores](../cpp/initializers.md) y los ejemplos de código más adelante en este documento.
+La expresión de inicialización puede ser una asignación (sintaxis de signo igual), una inicialización directa (sintaxis de estilo de función), una expresión de [operador New](new-operator-cpp.md) o la expresión de inicialización puede ser el parámetro *for-Range-declaration* en una instrucción [for-based for Statement (C++) basada en intervalo](../cpp/range-based-for-statement-cpp.md) . Para obtener más información, vea [inicializadores](../cpp/initializers.md) y los ejemplos de código más adelante en este documento.
 
 La palabra clave **auto** es un marcador de posición para un tipo, pero no es un tipo. Por lo tanto, la palabra clave **auto** no se puede usar en conversiones u operadores como [sizeof](../cpp/sizeof-operator.md) y C++(para/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
@@ -58,7 +58,7 @@ La palabra clave **auto** es un marcador de posición para un tipo, pero no es u
 
 La palabra clave **auto** es una forma sencilla de declarar una variable que tiene un tipo complejo. Por ejemplo, puede utilizar **auto** para declarar una variable en la que la expresión de inicialización implique plantillas, punteros a funciones o punteros a miembros.
 
-También puede utilizar **auto** para declarar e inicializar una variable en una expresión lambda. No puede declarar el tipo de la variable porque solo el compilador conoce el tipo de una expresión lambda. Para más información, vea [Ejemplos de expresiones lambda](../cpp/examples-of-lambda-expressions.md).
+También puede utilizar **auto** para declarar e inicializar una variable en una expresión lambda. No puede declarar el tipo de la variable porque solo el compilador conoce el tipo de una expresión lambda. Para obtener más información, vea [ejemplos de expresiones lambda](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Tipos de valor devuelto finales
 

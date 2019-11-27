@@ -16,7 +16,7 @@ ms.locfileid: "74397164"
 ---
 # <a name="operator-abs"></a>Operador ABS
 
-See the [EXTERNDEF](../../assembler/masm/externdef.md) directive.
+Vea la directiva [EXTERNDEF](../../assembler/masm/externdef.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,4 +24,4 @@ See the [EXTERNDEF](../../assembler/masm/externdef.md) directive.
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

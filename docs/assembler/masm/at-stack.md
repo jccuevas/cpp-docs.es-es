@@ -13,14 +13,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398934"
 ---
-# <a name="stack"></a>\@stack
+# <a name="stack"></a>pila \@
 
-DGROUP for near stacks or STACK for far stacks (text macro).
+DGROUP para pilas cercanas o STACK para pilas lejanas (macro de texto).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **\@stack**
+> **pila \@**
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

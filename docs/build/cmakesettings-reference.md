@@ -43,8 +43,8 @@ Un elemento `configuration` tiene las siguientes propiedades:
 - `codeAnalysisRuleset`: especifica el conjunto de reglas que se usa al ejecutar el análisis de código. Puede ser una ruta de acceso completa o el nombre de un archivo de conjunto de reglas que Visual Studio ha instalado.
 - `configurationType`: especifica la configuración del tipo de compilación del generador seleccionado. Puede ser uno de los siguientes:
 
-  - Depuración
-  - Release
+  - Depurar
+  - Versión
   - MinSizeRel
   - RelWithDebInfo
   
@@ -83,8 +83,8 @@ Cuando la configuración activa especifica un generador de Visual Studio, de for
 
 - `configurationType`: especifica la configuración del tipo de compilación del generador seleccionado. Puede ser uno de los siguientes:
 
-  - Depuración
-  - Release
+  - Depurar
+  - Versión
   - MinSizeRel
   - RelWithDebInfo
  

@@ -75,7 +75,7 @@ Archivos de encabezado de C++ la biblioteca estándar y extensiones, por categor
 |[Administración de memoria](../cpp/smart-pointers-modern-cpp.md)|[\<asignadores >](allocators-header.md), [\<> de memoria](memory.md), [\<New >](new.md), [\<scoped_allocator >](scoped-allocator.md)|
 |Multithreading|[\<atomic >](atomic.md), [\<condition_variable >](condition-variable.md), [\<> futura](future.md), [\<mutex >](mutex.md), [\<shared_mutex >](shared-mutex.md)\<[subproceso >](thread.md)|
 |Otras utilidades|[\<bitset >](bitset.md), [\<crónico >](chrono.md), [\<funcional >](functional.md), [\<](initializer-list.md)initializer_list >, [\<tupla >](tuple.md), [\<](type-traits.md)type_traits >, [\<TypeInfo >](typeinfo.md), [\<typeindex >](typeindex.md),\<[utilidad](utility.md) >|
-|Cadenas y datos de caracteres|[\<regex>](regex.md), [\<string>](string.md), [\<string_view>](string-view.md)
+|Cadenas y datos de caracteres|[\<regex >](regex.md), [\<cadena >](string.md), [\<](string-view.md) string_view >
 
 ::: moniker-end
 

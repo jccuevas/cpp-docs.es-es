@@ -15,11 +15,11 @@ ms.locfileid: "74398305"
 ---
 # <a name="errnz"></a>**.ERRNZ**
 
-Generates an error if *expression* is true (nonzero).
+Genera un error si la *expresión* es true (distinto de cero).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **.ERRNZ** *expression* ⟦ __,__ *message*⟧
+> **. ERRNZ** *Expression* ⟦ __,__ *Message*⟧
 
 ## <a name="see-also"></a>Vea también
 

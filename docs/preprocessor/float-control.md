@@ -1,5 +1,5 @@
 ---
-title: float_control (Pragma)
+title: float_control (pragma)
 description: Describe el uso y los efectos de la Directiva pragma float_control. La Directiva float_control controla el estado de la semántica precisa de punto flotante y la semántica de excepción en tiempo de ejecución.
 ms.date: 11/18/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305507"
 ---
-# <a name="float_control-pragma"></a>float_control (Pragma)
+# <a name="float_control-pragma"></a>float_control (pragma)
 
 Especifica el comportamiento de punto flotante de una función.
 
@@ -37,10 +37,10 @@ Especifica si se debe habilitar (**on**) o deshabilitar (**desactivada**) la sem
 
 **salvo** que solo se puede establecer en **on** cuando **precise** también está establecido en **on**.
 
-**push**\
+\ de **extracción**
 Envía el valor de **float_control** actual a la pila interna del compilador.
 
-**pop**\
+\ **pop**
 Quita el valor **float_control** de la parte superior de la pila interna del compilador y lo convierte en el nuevo valor de **float_control** .
 
 ## <a name="remarks"></a>Comentarios

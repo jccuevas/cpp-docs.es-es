@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: 28d490c341c4d14c2e6c03e13007b5a8be423622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401545"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541261"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>Advertencia del compilador (nivel 3) C4823
 
-'function': utiliza punteros anclados pero desenredo semántica no está habilitada. Considere el uso de /EHa
+' función ': usa punteros anclados pero la semántica de desenredo no está habilitada. Considere la posibilidad de usar/EHa
 
-Para liberar un objeto en el montón administrado apuntado a un puntero anclado declarado en un ámbito de bloque, el compilador simula el comportamiento de los destructores de clases locales, "fingiendo" que el puntero anclado tenga un destructor que anula el puntero. Para habilitar una llamada a un destructor después de producir una excepción, debe habilitar desenredo de objetos, lo que puede hacer mediante el uso de [/EHsc](../../build/reference/eh-exception-handling-model.md).
+Para desanclar un objeto en el montón administrado al que apunta un puntero anclado declarado en un ámbito de bloque, el compilador simula el comportamiento de los destructores de clases locales, "fingiendo" que el puntero anclado tiene un destructor que anula el puntero. Para habilitar una llamada a un destructor después de producir una excepción, debe habilitar el desenredo de objetos, que puede hacer mediante [/EHsc](../../build/reference/eh-exception-handling-model.md).
 
-Manualmente puede Desanclar el objeto y pasar por alto la advertencia.
+También puede desanclar el objeto manualmente y omitir la advertencia.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4823.
+En el ejemplo siguiente se genera C4823.
 
-```
+```cpp
 // C4823.cpp
 // compile with: /clr /W3 /EHa-
 using namespace System;

@@ -22,7 +22,7 @@ CMake es una herramienta de código abierto multiplataforma para definir proceso
 
 El  **C++ componente herramientas de CMake para Windows** usa la característica [Abrir carpeta](open-folder-projects-cpp.md) para consumir archivos de proyecto CMake (como archivo CMakeLists. txt) directamente con fines de IntelliSense y exploración. Se admiten generadores de Ninja y Visual Studio. Si usa un generador de Visual Studio, se genera un archivo de proyecto temporal y se pasa a msbuild.exe, pero nunca se carga para IntelliSense o con fines de exploración. También puede importar una memoria caché de CMake existente.
 
-## <a name="installation"></a>Instalación
+## <a name="installation"></a>Installation
 
 **C++** **Las herramientas de CMake para Windows se instalan de forma predeterminada como parte del desarrollo de escritorio con carga de trabajo y como parte del desarrollo de Linux con C++**  carga de trabajo. **C++** Para obtener más información [, vea proyectos multiplataforma de CMake](../linux/cmake-linux-project.md) .
 
@@ -153,7 +153,7 @@ Si ha instalado CMake desde el instalador de Visual Studio, puede ejecutarlo des
 
 Visual Studio 2017 es compatible con CMake, incluidos los [proyectos de CMake multiplataforma](../linux/cmake-linux-project.md). El componente **Herramientas de Visual C++ para CMake** usa la característica **Abrir carpeta** para habilitar el IDE para el consumo de archivos de proyecto de CMake (por ejemplo, CMakeLists.txt) directamente para los propósitos de IntelliSense y la exploración. Se admiten generadores de Ninja y Visual Studio. Si usa un generador de Visual Studio, se genera un archivo de proyecto temporal y se pasa a msbuild.exe, pero nunca se carga para IntelliSense o con fines de exploración. También puede importar una memoria caché de CMake existente. 
 
-## <a name="installation"></a>Instalación
+## <a name="installation"></a>Installation
 
 **Herramientas de Visual C++ para CMake** se instala de forma predeterminada como parte de la carga de trabajo de **desarrollo para el escritorio con C++** y de la carga de trabajo **desarrollo de Linux con C++** .
 

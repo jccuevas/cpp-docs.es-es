@@ -13,14 +13,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399117"
 ---
-# <a name="environ"></a>\@Environ
+# <a name="environ"></a>\@ENVIRON
 
-Value of environment variable *envvar* (macro function).
+Valor de la variable de entorno *envvar* (función de macro).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **\@Environ(** *envvar* **)**
+> **\@ENVIRON (** *envvar* **)**
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

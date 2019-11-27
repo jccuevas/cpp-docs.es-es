@@ -15,7 +15,7 @@ ms.locfileid: "74397146"
 ---
 # <a name="name-masm"></a>NAME (MASM)
 
-ignorado.
+Se omite.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,4 +23,4 @@ ignorado.
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)
