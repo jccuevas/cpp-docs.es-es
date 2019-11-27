@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 'Temporización del control de excepciones: Resumen'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246328"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>Temporización del control de excepciones: Resumen
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+Un controlador de terminación se ejecuta independientemente de cómo finalice el bloque de instrucciones de **__try** . Las causas incluyen saltar fuera del bloque **__try** , una instrucción `longjmp` que transfiere el control fuera del bloque y desenredar la pila debido al control de excepciones.
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. La versión rápida omite el control de terminación pero es más eficaz. To use this version, include the file \<setjmp.h>. La otra versión admite el control de terminación como se describe en el párrafo anterior. To use this version, include the file \<setjmpex.h>. El aumento del rendimiento de la versión rápida depende de la configuración de hardware.
+>  El compilador de Microsoft C++ admite dos formas de las instrucciones `setjmp` y `longjmp`. La versión rápida omite el control de terminación pero es más eficaz. Para usar esta versión, incluya el archivo \<setjmp. h >. La otra versión admite el control de terminación como se describe en el párrafo anterior. Para usar esta versión, incluya el archivo \<setjmpex. h >. El aumento del rendimiento de la versión rápida depende de la configuración de hardware.
 
 El sistema operativo ejecuta todos los controladores de terminación en el orden adecuado antes de que cualquier otro código pueda ejecutarlos, incluido el cuerpo de un controlador de excepciones.
 
@@ -35,7 +35,7 @@ Cuando la causa de la interrupción es una excepción, el sistema debe ejecutar 
 
 1. Si este filtro pasa el control (devuelve 0), el proceso continúa hasta que se encuentra un filtro que no pase el control.
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. Si este filtro devuelve-1, la ejecución continúa donde se produjo la excepción y no se realiza ninguna terminación.
 
 1. Si el filtro devuelve 1, se producen los eventos siguientes:
 
@@ -49,5 +49,5 @@ Cuando la causa de la interrupción es una excepción, el sistema debe ejecutar 
 
 ## <a name="see-also"></a>Vea también
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Escribir un controlador de finalización](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

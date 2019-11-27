@@ -13,18 +13,18 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398296"
 ---
-# <a name="exit-32-bit-masm"></a>.EXIT (32-bit MASM)
+# <a name="exit-32-bit-masm"></a>. SALIR (MASM de 32 bits)
 
-Generates termination code. (32-bit MASM only.)
+Genera código de terminación. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **.EXIT** ⟦*expression*⟧
+> **. EXIT** ⟦*Expression*⟧
 
 ## <a name="remarks"></a>Comentarios
 
-Returns optional *expression* to shell.
+Devuelve una *expresión* opcional a la shell.
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)

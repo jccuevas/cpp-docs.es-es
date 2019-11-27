@@ -84,10 +84,10 @@ Valor que indica el tamaño máximo, en bytes, de un objeto de campo DAO que con
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 byte|Sí/no (igual que verdadero/falso)|
 |`dbByte`|1|Byte|
-|`dbInteger`|2|Integer|
+|`dbInteger`|2|Entero|
 |`dbLong`|4|Long|
 |`dbCurrency`|8|Moneda ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
-|`dbSingle`|4|Single|
+|`dbSingle`|4|único|
 |`dbDouble`|8|Doble|
 |`dbDate`|8|Fecha y hora ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Texto ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
@@ -159,6 +159,6 @@ La información recuperada por la función miembro `GetFieldInfo` (de la clase q
 ## <a name="see-also"></a>Vea también
 
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
-[CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
-[CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
+[CDaoTableDef:: GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
+[CDaoRecordset:: GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
+[CDaoQueryDef:: GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

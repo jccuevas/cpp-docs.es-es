@@ -15,23 +15,23 @@ ms.locfileid: "74397929"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+Rellena el campo de registro de marco y el desplazamiento en la información de desenredado mediante el registro especificado (*reg*) y el desplazamiento (*desplazamiento*). El desplazamiento debe ser un múltiplo de 16 y menor o igual que 240. Esta Directiva también genera una entrada de código de desenredado de `UWOP_SET_FPREG` para el registro especificado mediante el desplazamiento de prólogo actual.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **.SETFRAME** *reg*, *offset*
+> **. SETFRAME** *reg*, *desplazamiento*
 
 ## <a name="remarks"></a>Comentarios
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. SETFRAME** permite a los usuarios de ml64. exe especificar cómo se desenreda una función de marco y solo se permite dentro del prólogo, que se extiende desde la declaración de fotogramas de [proceso](../../assembler/masm/proc.md) a [. Directiva ENDPROLOG](../../assembler/masm/dot-endprolog.md) . Estas directivas no generan código; solo generan `.xdata` y `.pdata`. **. SETFRAME** debe ir precedida de instrucciones que implementen realmente las acciones que se van a desenredar. Es una buena práctica encapsular las directivas de desenredado y el código que están diseñadas para desenredar en una macro para garantizar el acuerdo.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Para obtener más información, consulte [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Ejemplo
 
 ### <a name="description"></a>Descripción
 
-The following sample shows how to use a frame pointer:
+En el ejemplo siguiente se muestra cómo usar un puntero de marco:
 
 ### <a name="code"></a>Código
 
@@ -64,4 +64,4 @@ END
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)

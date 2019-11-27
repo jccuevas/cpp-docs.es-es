@@ -174,7 +174,7 @@ Puede crear controles de cuadro de diálogo que no tienen interfaz de usuario y 
 
 - Mediante el Asistente para agregar variables miembro, seleccione **variable de control** y, a continuación, seleccione el identificador del control. Escriba un nombre de variable de miembro y seleccione la clase contenedora del control como el **tipo de control**.
 
-     o bien
+     O bien,
 
 - Declare una variable local y una subclase como el elemento de cuadro de diálogo. Inserte código similar al siguiente (`CMyCtrl` es la clase contenedora, IDC_MYCTRL1 es el identificador del control):
 

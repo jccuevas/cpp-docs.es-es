@@ -14,9 +14,9 @@ ms.locfileid: "74245157"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Restricciones en los controladores de excepciones
 
-The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. You can jump out of a **__try** statement block and nest exception handlers as you choose.
+La limitación principal al uso de controladores de excepciones en el código es que no se puede usar una instrucción **goto** para saltar a un bloque de instrucciones **__try** . En su lugar, se debe especificar el bloque de instrucciones a través del flujo de control normal. Puede saltar fuera de un bloque de instrucciones de **__try** y anidar los controladores de excepciones que elija.
 
 ## <a name="see-also"></a>Vea también
 
 [Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
-[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

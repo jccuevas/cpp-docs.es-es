@@ -20,7 +20,7 @@ ms.locfileid: "74245085"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Habilitar el control de excepciones)
 
-Desusado. Enables synchronous exception handling using the assumption that functions declared by using `extern "C"` never throw an exception.
+Opción obsoleta. Habilita el control de excepciones sincrónicas mediante la suposición de que las funciones declaradas mediante `extern "C"` nunca producen una excepción.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,21 +30,21 @@ Desusado. Enables synchronous exception handling using the assumption that funct
 
 ## <a name="remarks"></a>Comentarios
 
-**/GX** is deprecated. Use the equivalent [/EHsc](eh-exception-handling-model.md) option instead. For a list of deprecated compiler options, see the **Deprecated and Removed Compiler Options** section in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
+**/GX** está en desuso. En su lugar, use la opción de [/EHsc](eh-exception-handling-model.md) equivalente. Para obtener una lista de opciones del compilador en desuso, vea la sección Opciones del compilador en **desuso y quitadas** en [las opciones del compilador enumeradas por categoría](compiler-options-listed-by-category.md).
 
-By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile by using the Visual Studio development environment. When using the command line tools, no exception handling is specified. This is the equivalent of **/GX-** .
+De forma predeterminada, **/EHsc**, el equivalente de **/GX**, está en vigor al compilar con el entorno de desarrollo de Visual Studio. Cuando se usan las herramientas de línea de comandos, no se especifica ningún control de excepciones. Es el equivalente de **/GX-** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. In the navigation pane, choose **Configuration Properties**, **C/C++** , **Command Line**.
+1. En el panel de navegación, seleccione **propiedades de configuración**, **CC++/** , línea de **comandos**.
 
 1. Escriba la opción del compilador en el cuadro **Opciones adicionales** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
-- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Vea también
 

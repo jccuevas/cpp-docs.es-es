@@ -15,14 +15,14 @@ ms.locfileid: "74394168"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
 
-Allocates and optionally initializes a signed byte of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
+Asigna y, opcionalmente, Inicializa un byte de almacenamiento con signo para cada *inicializador*. También se puede usar como especificador de tipo en cualquier lugar en el que un tipo sea válido.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *name*  **SBYTE** *initializer* ⟦ __,__ *initializer* ...⟧
+> *Name*  **SBYTE** *initializer* ⟦ __,__ *initializer* ... ⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Referencia de directivas](../../assembler/masm/directives-reference.md)\
 [BYTE](../../assembler/masm/byte-masm.md)\
 [DB](../../assembler/masm/db.md)

@@ -13,26 +13,26 @@ ms.locfileid: "74245628"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
-**C++11:** Specifies whether a function might throw exceptions.
+**C++ 11:** Especifica si una función puede producir excepciones.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *noexcept-expression*: &nbsp;&nbsp;&nbsp;&nbsp;**noexcept** &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**
+> *noexception-Expression*: &nbsp;&nbsp;&nbsp;&nbsp;**noexception** &nbsp;&nbsp;&nbsp;&nbsp;**noexception (** *Constant-Expression* **)**
 
 ### <a name="parameters"></a>Parámetros
 
-*constant-expression*<br/>
-A constant expression of type **bool** that represents whether the set of potential exception types is empty. The unconditional version is equivalent to `noexcept(true)`.
+*expresión constante*<br/>
+Expresión constante de tipo **bool** que representa si el conjunto de posibles tipos de excepción está vacío. La versión incondicional es equivalente a `noexcept(true)`.
 
 ## <a name="remarks"></a>Comentarios
 
-A *noexcept expression* is a kind of *exception specification*, a suffix to a function declaration that represents a set of types that might be matched by an exception handler for any exception that exits a function. Unary conditional operator `noexcept(`*constant_expression*`)` where *constant_expression* yields **true**, and its unconditional synonym **noexcept**, specify that the set of potential exception types that can exit a function is empty. That is, the function never throws an exception and never allows an exception to be propagated outside its scope. The operator `noexcept(`*constant_expression*`)` where *constant_expression* yields **false**, or the absence of an exception specification (other than for a destructor or deallocation function), indicates that the set of potential exceptions that can exit the function is the set of all types.
+Una *expresión noexception* es un tipo de *especificación de excepción*, un sufijo de una declaración de función que representa un conjunto de tipos que puede coincidir con un controlador de excepciones para cualquier excepción que sale de una función. Operador condicional unario `noexcept(`*constant_expression*`)` donde *constant_expression* produce **true**y su sinónimo incondicional **noexception**, especifica que el conjunto de posibles tipos de excepción que pueden salir de una función está vacío. Es decir, la función nunca produce una excepción y nunca permite que se propague una excepción fuera de su ámbito. El operador `noexcept(`*constant_expression*`)` donde *constant_expression* produce **false**o la ausencia de una especificación de excepción (distinta de para un destructor o una función de desasignación) indica que el conjunto de posibles excepciones que pueden salir de la función es el conjunto de todos los tipos.
 
-Mark a function as **noexcept** only if all the functions that it calls, either directly or indirectly, are also **noexcept** or **const**. The compiler does not necessarily check every code path for exceptions that might bubble up to a **noexcept** function. If an exception does exit the outer scope of a function marked `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked immediately, and there is no guarantee that destructors of any in-scope objects will be invoked. Use **noexcept** instead of the dynamic exception specifier `throw()`, which is now deprecated in the standard. We recommended you apply `noexcept` to any function that never allows an exception to propagate up the call stack. When a function is declared **noexcept**, it enables the compiler to generate more efficient code in several different contexts. For more information, see [Exception specifications](exception-specifications-throw-cpp.md).
+Marque una función como **noexception** solo si todas las funciones a las que llama, ya sea directa o indirectamente, también son **noexception** o **const**. El compilador no comprueba necesariamente todas las rutas de acceso de código para las excepciones que podrían propagarse hasta una función **noexception** . Si una excepción sale del ámbito externo de una función marcada `noexcept`, se invoca a [STD:: Terminate](../standard-library/exception-functions.md#terminate) inmediatamente y no hay ninguna garantía de que se invoquen los destructores de los objetos en el ámbito. Utilice **noexception** en lugar del especificador de excepción dinámica `throw()`, que ahora está en desuso en el estándar. Se recomienda aplicar `noexcept` a cualquier función que nunca permita que una excepción se propague hacia arriba en la pila de llamadas. Cuando una función se declara **noexception**, permite que el compilador genere código más eficaz en varios contextos diferentes. Para obtener más información, vea [Especificaciones de excepciones](exception-specifications-throw-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
-A template function that copies its argument might be declared **noexcept** on the condition that the object being copied is a plain old data type (POD). Este tipo de función podría declararse de este modo:
+Una función de plantilla que copia su argumento se podría declarar **noexception, excepto** en la condición de que el objeto que se va a copiar sea un tipo de datos anterior (POD) sin formato. Este tipo de función podría declararse de este modo:
 
 ```cpp
 #include <type_traits>
@@ -46,5 +46,5 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 
 ## <a name="see-also"></a>Vea también
 
-[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
-[Exception Specifications (throw, noexcept)](exception-specifications-throw-cpp.md)
+[Prácticas C++ recomendadas modernas para excepciones y control de errores](errors-and-exception-handling-modern-cpp.md)<br/>
+[Especificaciones de excepciones (Throw, noexception)](exception-specifications-throw-cpp.md)

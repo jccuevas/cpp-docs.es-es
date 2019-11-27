@@ -1,5 +1,5 @@
 ---
-title: fenv_access (Pragma)
+title: fenv_access (pragma)
 description: Describe el uso y los efectos de la Directiva pragma fenv_access. La Directiva fenv_access controla el acceso al entorno de punto flotante en tiempo de ejecución.
 ms.date: 11/19/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305858"
 ---
-# <a name="fenv_access-pragma"></a>fenv_access (Pragma)
+# <a name="fenv_access-pragma"></a>fenv_access (pragma)
 
 Deshabilita (**activado**) o habilita las optimizaciones (**desactivadas**) que podrían cambiar las pruebas de marcas de entorno de punto flotante y los cambios de modo.
 

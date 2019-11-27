@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use CComPtr and CComQIPtr instances'
+title: 'Cómo: crear y usar instancias de CComPtr y CComQIPtr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246542"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Cómo: crear y usar instancias de CComPtr y CComQIPtr
 
 En la programación clásica de Windows, a menudo las bibliotecas se implementan como objetos COM (o más concretamente, como servidores COM). Muchos componentes del sistema operativo Windows se implementan como servidores COM y muchos colaboradores proporcionan bibliotecas en este formato. Para obtener información sobre los conceptos básicos de COM, vea [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
@@ -23,7 +23,7 @@ En el ejemplo siguiente se muestra cómo usar `CComPtr` para crear una instancia
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. El compilador crea especializaciones de `_com_ptr_t` cuando genera clases contenedoras para bibliotecas de tipos.
+`CComPtr` y sus familiares forman parte de la ATL y se definen en \<atlcomcli. h >. `_com_ptr_t` se declara en \<comip. h >. El compilador crea especializaciones de `_com_ptr_t` cuando genera clases contenedoras para bibliotecas de tipos.
 
 ## <a name="example"></a>Ejemplo
 

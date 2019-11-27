@@ -13,13 +13,13 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398596"
 ---
-# <a name="break-32-bit-masm"></a>.BREAK (32-bit MASM)
+# <a name="break-32-bit-masm"></a>. BREAK (MASM de 32 bits)
 
-Generates code to terminate a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
+Genera código para finalizar un [. WHILE](../../assembler/masm/dot-while.md) o [. REPETIR](../../assembler/masm/dot-repeat.md) bloque si la *condición* es verdadera. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **.BREAK** ⟦ **.IF** *condition*⟧
+> **. INTERRUMPA** ⟦ **. IF** *condición*⟧
 
 ## <a name="see-also"></a>Vea también
 

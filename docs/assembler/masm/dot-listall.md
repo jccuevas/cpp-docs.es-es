@@ -15,7 +15,7 @@ ms.locfileid: "74398177"
 ---
 # <a name="listall"></a>.LISTALL
 
-Starts listing of all statements.
+Inicia la lista de todas las instrucciones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,8 +23,8 @@ Starts listing of all statements.
 
 ## <a name="remarks"></a>Comentarios
 
-Equivalent to the combination of [.LIST](../../assembler/masm/dot-list.md), [.LISTIF](../../assembler/masm/dot-listif.md), and [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+Equivalente a la combinación de [. LISTA](../../assembler/masm/dot-list.md), [. LISTIF](../../assembler/masm/dot-listif.md), y [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)

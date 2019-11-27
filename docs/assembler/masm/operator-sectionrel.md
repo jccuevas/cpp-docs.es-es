@@ -17,16 +17,16 @@ ms.locfileid: "74396483"
 ---
 # <a name="operator-sectionrel"></a>Operador SECTIONREL
 
-Returns the section relative offset of expression relative to the section containing the target in the final executable.
+Devuelve la sección de desplazamiento relativo de la expresión relativa a la sección que contiene el destino en el ejecutable final.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **SECTIONREL** *expression*
+> *Expresión* SECTIONREL
 
 ## <a name="remarks"></a>Comentarios
 
-**SECTIONREL** is available only with COFF object emission.
+**SECTIONREL** solo está disponible con la emisión de objetos COFF.
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: '? (MASM)'
+title: '? MASM'
 ms.date: 08/30/2018
 f1_keywords:
 - '?'
@@ -15,7 +15,7 @@ ms.locfileid: "74394653"
 ---
 # <a name=""></a>?
 
-In data declarations, a value that the assembler allocates but does not initialize.
+En declaraciones de datos, valor que el ensamblador asigna pero no inicializa.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,4 +23,4 @@ In data declarations, a value that the assembler allocates but does not initiali
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

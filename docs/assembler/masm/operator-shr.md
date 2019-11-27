@@ -17,12 +17,12 @@ ms.locfileid: "74396159"
 ---
 # <a name="operator-shr"></a>Operador SHR
 
-Returns the result of shifting the bits of *expression* right *count* number of bits.
+Devuelve el resultado de desplazar los bits del número de bits del *recuento* de la *expresión* .
 
 ## <a name="syntax"></a>Sintaxis
 
-> *expression* **SHR** *count*
+> recuento de *expresión* **SHR**
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

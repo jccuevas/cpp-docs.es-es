@@ -17,12 +17,12 @@ ms.locfileid: "74396639"
 ---
 # <a name="operator-mask"></a>Operador MASK
 
-Returns a bit mask in which the bits in *recordfieldname* or *record* are set and all other bits are cleared.
+Devuelve una máscara de bits en la que se establecen los bits de *recordfieldname* o *Record* y se borran todos los demás bits.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **MASK** {*recordfieldname* | *record*}
+> **Máscara** {*recordfieldname* | *registro*}
 
 ## <a name="see-also"></a>Vea también
 
-[Operators reference](operators-reference.md)
+[Referencia de operadores](operators-reference.md)

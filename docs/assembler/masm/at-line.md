@@ -13,14 +13,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398967"
 ---
-# <a name="line"></a>\@Line
+# <a name="line"></a>Línea \@
 
-The source line number in the current file (numeric equate).
+El número de línea de código fuente del archivo actual (numérico igual a).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **\@Line**
+> **Línea \@**
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

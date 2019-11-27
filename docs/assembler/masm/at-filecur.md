@@ -15,7 +15,7 @@ ms.locfileid: "74399048"
 ---
 # <a name="filecur"></a>\@FileCur
 
-The name of the current file (text macro).
+Nombre del archivo actual (macro de texto).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,4 +23,4 @@ The name of the current file (text macro).
 
 ## <a name="see-also"></a>Vea también
 
-[Symbols reference](symbols-reference.md)
+[Referencia de símbolos](symbols-reference.md)

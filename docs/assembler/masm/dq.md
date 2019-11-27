@@ -15,13 +15,13 @@ ms.locfileid: "74397770"
 ---
 # <a name="dq"></a>DQ
 
-Allocates and optionally initializes 8 bytes of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal. **DQ** is a synonym of [QWORD](../../assembler/masm/qword.md).
+Asigna y, opcionalmente, inicializa 8 bytes de almacenamiento para cada *inicializador*. También se puede usar como especificador de tipo en cualquier lugar en el que un tipo sea válido. **DQ** es un sinónimo de [QWord](../../assembler/masm/qword.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-> ⟦*name*⟧ **DQ** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*nombre*⟧ **DQ** *inicializador* ⟦ __,__ *inicializador* ... ⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Referencia de directivas](../../assembler/masm/directives-reference.md)\
 [QWORD](../../assembler/masm/qword.md)

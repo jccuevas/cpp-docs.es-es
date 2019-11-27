@@ -17,7 +17,7 @@ ms.locfileid: "74245950"
 ---
 # <a name="bad_cast-exception"></a>bad_cast (Excepción)
 
-The **bad_cast** exception is thrown by the **dynamic_cast** operator as the result of a failed cast to a reference type.
+El operador **dynamic_cast** produce la excepción **bad_cast** como resultado de una conversión errónea a un tipo de referencia.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,13 +28,13 @@ catch (bad_cast)
 
 ## <a name="remarks"></a>Comentarios
 
-The interface for **bad_cast** is:
+La interfaz para **bad_cast** es:
 
 ```cpp
 class bad_cast : public exception
 ```
 
-The following code contains an example of a failed **dynamic_cast** that throws the **bad_cast** exception.
+El código siguiente contiene un ejemplo de un **dynamic_cast** con errores que produce la excepción **bad_cast** .
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -65,14 +65,14 @@ int main() {
 }
 ```
 
-The exception is thrown because the object being cast (a Shape) isn't derived from the specified cast type (Circle). Para evitar la excepción, agregue estas declaraciones a `main`:
+La excepción se produce porque el objeto que se va a convertir (una forma) no se deriva del tipo de conversión especificado (círculo). Para evitar la excepción, agregue estas declaraciones a `main`:
 
 ```cpp
 Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-Then reverse the sense of the cast in the **try** block as follows:
+A continuación, invierta el sentido de la conversión en el bloque **try** de la siguiente manera:
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -90,15 +90,15 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 |Función|Descripción|
 |-|-|
-|[what](#what)|TBD|
+|[elemento](#what)|Por determinar|
 
 ### <a name="operators"></a>Operadores
 
-|"??"|Descripción|
+|Operador|Descripción|
 |-|-|
-|[operator=](#op_eq)|An assignment operator that assigns one `bad_cast` object to another.|
+|[operator=](#op_eq)|Operador de asignación que asigna un `bad_cast` objeto a otro.|
 
-## <a name="bad_cast"></a> bad_cast
+## <a name="bad_cast"></a>bad_cast
 
 Constructor para los objetos de tipo `bad_cast`.
 
@@ -107,15 +107,15 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
-An assignment operator that assigns one `bad_cast` object to another.
+Operador de asignación que asigna un `bad_cast` objeto a otro.
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a> what
+## <a name="what"></a>elemento
 
 ```cpp
 const char* what() const noexcept override;
@@ -123,6 +123,6 @@ const char* what() const noexcept override;
 
 ## <a name="see-also"></a>Vea también
 
-[dynamic_cast Operator](../cpp/dynamic-cast-operator.md)\
+[Dynamic_cast operador](../cpp/dynamic-cast-operator.md)\
 [Palabras clave](../cpp/keywords-cpp.md)\
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Prácticas C++ recomendadas modernas para excepciones y control de errores](../cpp/errors-and-exception-handling-modern-cpp.md)

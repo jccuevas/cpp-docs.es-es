@@ -15,11 +15,11 @@ ms.locfileid: "74398358"
 ---
 # <a name="erre"></a>.ERRE
 
-Generates an error if *expression* is false (0).
+Genera un error si la *expresión* es false (0).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **.ERRE** *expression* ⟦ __,__ *message*⟧
+> **. Erre** *Expression* ⟦ __,__ *Message*⟧
 
 ## <a name="see-also"></a>Vea también
 

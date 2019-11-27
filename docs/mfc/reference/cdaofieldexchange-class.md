@@ -37,17 +37,17 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|Descripción|
+|Name|Descripción|
 |----------|-----------------|
-|[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Devuelve un valor distinto de cero si la operación actual es adecuada para el tipo de campo que se está actualizando.|
-|[CDaoFieldExchange::SetFieldType](#setfieldtype)|Especifica el tipo de miembro de datos de conjunto de registros (columna o parámetro) representado por todas las llamadas subsiguientes a funciones DFX hasta la siguiente llamada a `SetFieldType`.|
+|[CDaoFieldExchange:: IsValidOperation](#isvalidoperation)|Devuelve un valor distinto de cero si la operación actual es adecuada para el tipo de campo que se está actualizando.|
+|[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Especifica el tipo de miembro de datos de conjunto de registros (columna o parámetro) representado por todas las llamadas subsiguientes a funciones DFX hasta la siguiente llamada a `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|Descripción|
+|Name|Descripción|
 |----------|-----------------|
-|[CDaoFieldExchange::m_nOperation](#m_noperation)|La operación DFX realizada por la llamada actual a la función miembro `DoFieldExchange` del conjunto de registros.|
-|[CDaoFieldExchange::m_prs](#m_prs)|Puntero al conjunto de registros en el que se realizan las operaciones DFX.|
+|[CDaoFieldExchange:: m_nOperation](#m_noperation)|La operación DFX realizada por la llamada actual a la función miembro `DoFieldExchange` del conjunto de registros.|
+|[CDaoFieldExchange:: m_prs](#m_prs)|Puntero al conjunto de registros en el que se realizan las operaciones DFX.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -77,7 +77,7 @@ La función miembro [IsValidOperation](#isvalidoperation) se proporciona para es
 
 **Encabezado:** afxdao. h
 
-##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation
+##  <a name="isvalidoperation"></a>CDaoFieldExchange:: IsValidOperation
 
 Si escribe su propia función DFX, llame a `IsValidOperation` al principio de la función para determinar si la operación actual se puede realizar en un tipo de miembro de datos de campo determinado (un `CDaoFieldExchange::outputColumn` o un `CDaoFieldExchange::param`).
 
@@ -95,7 +95,7 @@ Algunas de las operaciones realizadas por el mecanismo DFX se aplican solo a uno
 
 Para obtener información adicional sobre cómo escribir rutinas DFX personalizadas, vea la [Nota técnica 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).
 
-##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation
+##  <a name="m_noperation"></a>CDaoFieldExchange:: m_nOperation
 
 Identifica la operación que se va a realizar en el objeto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) asociado al objeto de intercambio de campo.
 
@@ -126,13 +126,13 @@ Los valores posibles de `m_nOperation` son:
 |`DumpField`|Vuelca el contenido de un campo (solo depuración).|
 |`MaxDFXOperation`|Se usa para la comprobación de entrada.|
 
-##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs
+##  <a name="m_prs"></a>CDaoFieldExchange:: m_prs
 
 Contiene un puntero al objeto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) asociado al objeto `CDaoFieldExchange`.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType
+##  <a name="setfieldtype"></a>CDaoFieldExchange:: SetFieldType
 
 Llame a `SetFieldType` en la invalidación de `DoFieldExchange` de la clase `CDaoRecordset`.
 

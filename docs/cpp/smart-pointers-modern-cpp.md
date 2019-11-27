@@ -12,7 +12,7 @@ ms.locfileid: "74303363"
 ---
 # <a name="smart-pointers-modern-c"></a>Punteros inteligentes (C++ moderno)
 
-En la programación del lenguaje C++ actual, la biblioteca estándar incluye *punteros inteligentes*, que se utilizan para asegurarse de que los programas están libres de memoria y de pérdidas de recursos y son seguros ante excepciones.
+En la C++ programación moderna, la biblioteca estándar incluye *punteros inteligentes*, que se usan para ayudar a garantizar que los programas están libres de memoria y pérdidas de recursos y son seguros para la excepción.
 
 ## <a name="uses-for-smart-pointers"></a>Usos de los punteros inteligentes
 

@@ -28,15 +28,15 @@ ms.locfileid: "74245140"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instrucciones try, throw y catch (C++)
 
-To implement exception handling in C++, you use **try**, **throw**, and **catch** expressions.
+Para implementar el control de C++excepciones en, se usan expresiones **try**, **Throw**y **catch** .
 
-First, use a **try** block to enclose one or more statements that might throw an exception.
+En primer lugar, use un bloque **try** para incluir una o varias instrucciones que puedan producir una excepción.
 
-A **throw** expression signals that an exceptional condition—often, an error—has occurred in a **try** block. You can use an object of any type as the operand of a **throw** expression. Normalmente, este objeto se emplea para comunicar información sobre el error. In most cases, we recommend that you use the [std::exception](../standard-library/exception-class.md) class or one of the derived classes that are defined in the standard library. Si no es adecuado usar una de ellas, se recomienda derivar su propia clase de excepción de `std::exception`.
+Una expresión **Throw** indica que se ha producido una condición excepcional (a menudo un error) en un bloque **try** . Puede usar un objeto de cualquier tipo como operando de una expresión **Throw** . Normalmente, este objeto se emplea para comunicar información sobre el error. En la mayoría de los casos, se recomienda usar la clase [STD:: Exception](../standard-library/exception-class.md) o una de las clases derivadas definidas en la biblioteca estándar. Si no es adecuado usar una de ellas, se recomienda derivar su propia clase de excepción de `std::exception`.
 
-To handle exceptions that may be thrown, implement one or more **catch** blocks immediately following a **try** block. Each **catch** block specifies the type of exception it can handle.
+Para controlar las excepciones que se pueden producir, implemente uno o más bloques **catch** inmediatamente después de un bloque **try** . Cada bloque **catch** especifica el tipo de excepción que puede controlar.
 
-This example shows a **try** block and its handlers. Suponga que `GetNetworkResource()` adquiere datos a través de una conexión de red y que los dos tipos de excepción son clases definidas por el usuario que derivan de `std::exception`. Notice that the exceptions are caught by **const** reference in the **catch** statement. Se recomienda producir excepciones por valor y detectarlas mediante la referencia const.
+En este ejemplo se muestra un bloque **try** y sus controladores. Suponga que `GetNetworkResource()` adquiere datos a través de una conexión de red y que los dos tipos de excepción son clases definidas por el usuario que derivan de `std::exception`. Observe que las excepciones se detectan mediante la referencia **const** en la instrucción **catch** . Se recomienda producir excepciones por valor y detectarlas mediante la referencia const.
 
 ## <a name="example"></a>Ejemplo
 
@@ -74,9 +74,9 @@ MyData GetNetworkResource()
 
 ## <a name="remarks"></a>Comentarios
 
-The code after the **try** clause is the guarded section of code. The **throw** expression *throws*—that is, raises—an exception. The code block after the **catch** clause is the exception handler. This is the handler that *catches* the exception that's thrown if the types in the **throw** and **catch** expressions are compatible. For a list of rules that govern type-matching in **catch** blocks, see [How Catch Blocks are Evaluated](../cpp/how-catch-blocks-are-evaluated-cpp.md). If the **catch** statement specifies an ellipsis (...) instead of a type, the **catch** block handles every type of exception. When you compile with the [/EHa](../build/reference/eh-exception-handling-model.md) option, these can include C structured exceptions and system-generated or application-generated asynchronous exceptions such as memory protection, divide-by-zero, and floating-point violations. Because **catch** blocks are processed in program order to find a matching type, an ellipsis handler must be the last handler for the associated **try** block. Use `catch(...)` con precaución; no permita que un programa continúe a menos que el bloque catch sepa controlar la excepción específica que se detecta. Normalmente, un bloque `catch(...)` se emplea para registrar errores y realizar limpiezas especiales antes de que se detenga la ejecución de un programa.
+El código después de la cláusula **try** es la sección protegida del código. La expresión Throw *produce*, es decir, produce una excepción. El bloque de código después de la cláusula **catch** es el controlador de excepciones. Este es el controlador que *detecta* la excepción que se produce si los tipos de las expresiones **Throw** y **catch** son compatibles. Para obtener una lista de las reglas que rigen la coincidencia de tipos en los bloques **catch** , consulte [cómo se evalúan los bloques Catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si la instrucción **catch** especifica puntos suspensivos (...) en lugar de un tipo, el bloque **catch** controla todos los tipos de excepciones. Al compilar con la opción [/EHA](../build/reference/eh-exception-handling-model.md) , se pueden incluir excepciones estructuradas de C y excepciones asincrónicas generadas por el sistema o generadas por la aplicación, como la protección de memoria, la división por cero y las infracciones de punto flotante. Dado que los bloques **catch** se procesan en el orden del programa para encontrar un tipo coincidente, un controlador de puntos suspensivos debe ser el último controlador del bloque **try** asociado. Use `catch(...)` con precaución; no permita que un programa continúe a menos que el bloque catch sepa controlar la excepción específica que se detecta. Normalmente, un bloque `catch(...)` se emplea para registrar errores y realizar limpiezas especiales antes de que se detenga la ejecución de un programa.
 
-A **throw** expression that has no operand re-throws the exception currently being handled. Se recomienda usar este formato al volver a iniciar la excepción, ya que esto conserva la información de tipo polimórfico de la excepción original. Such an expression should only be used in a **catch** handler or in a function that's called from a **catch** handler. El objeto de excepción que se vuelve a iniciar es el objeto de excepción original, no una copia.
+Una expresión **Throw** que no tiene ningún operando vuelve a iniciar la excepción que se está controlando actualmente. Se recomienda usar este formato al volver a iniciar la excepción, ya que esto conserva la información de tipo polimórfico de la excepción original. Este tipo de expresión solo se debe usar en un controlador **catch** o en una función a la que se llama desde un controlador **catch** . El objeto de excepción que se vuelve a iniciar es el objeto de excepción original, no una copia.
 
 ```cpp
 try {
@@ -93,7 +93,7 @@ catch(...) {
 
 ## <a name="see-also"></a>Vea también
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Prácticas C++ recomendadas modernas para excepciones y control de errores](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [Excepciones de C++ no controladas](../cpp/unhandled-cpp-exceptions.md)<br/>
 [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

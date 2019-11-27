@@ -15,12 +15,12 @@ ms.locfileid: "74394857"
 ---
 # <a name="real10"></a>REAL10
 
-Allocates and optionally initializes a 10-byte floating-point number for each *initializer*.
+Asigna y, opcionalmente, Inicializa un número de punto flotante de 10 bytes para cada *inicializador*.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *name* **REAL10** *initializer* ⟦ __,__ *initializer* ...⟧
+> *nombre* **REAL10** *inicializador* ⟦ __,__ *inicializador* ... ⟧
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Referencia de directivas](../../assembler/masm/directives-reference.md)

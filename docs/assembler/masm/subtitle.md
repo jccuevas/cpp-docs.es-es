@@ -1,5 +1,5 @@
 ---
-title: SUBTITLE
+title: SUBTÍTULO
 ms.date: 08/30/2018
 f1_keywords:
 - SUBTITLE
@@ -13,14 +13,14 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74393467"
 ---
-# <a name="subtitle"></a>SUBTITLE
+# <a name="subtitle"></a>SUBTÍTULO
 
-Defines the listing subtitle. Same as [SUBTTL](../../assembler/masm/subttl.md).
+Define el subtítulo de la lista. Igual que [SUBTTL](../../assembler/masm/subttl.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **SUBTITLE** *text*
+> *Texto* de **subtítulo**
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)

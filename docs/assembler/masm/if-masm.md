@@ -15,22 +15,22 @@ ms.locfileid: "74397465"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
+Concede el ensamblado de *ifstatements* si *expression1* es true (distinto de cero) o *elseifstatements* si *expression1* es false (0) y *expression2* es true.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **IF** *expression1*\
-> *if-statements*\
-> ⟦**ELSEIF** *expression2*\
-> *elseif-statements*⟧\
+> **Si** *expression1*\
+> *If-statements*\
+> ⟦**ELSEIF** *expresión2*\
+> *elseif-statements*⟧ \
 > ⟦**ELSE**\
-> *else-statements*⟧\
+> *else-statements*⟧ \
 > **ENDIF**
 
 ## <a name="remarks"></a>Comentarios
 
-The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
+Las siguientes directivas se pueden sustituir por [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **elseifdef (** , **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**y **elseifndef (** . Opcionalmente, ensambla las *instrucciones else* si la expresión anterior es falsa. Tenga en cuenta que las expresiones se evalúan en el momento del ensamblado.
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)

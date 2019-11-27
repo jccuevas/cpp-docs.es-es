@@ -15,7 +15,7 @@ ms.locfileid: "74397431"
 ---
 # <a name="ifb"></a>IFB
 
-Grants assembly if *textitem* is blank.
+Concede el ensamblado si *textitem* está en blanco.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,8 +23,8 @@ Grants assembly if *textitem* is blank.
 
 ## <a name="remarks"></a>Comentarios
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Vea [si](../../assembler/masm/if-masm.md) para obtener la sintaxis completa.
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)
