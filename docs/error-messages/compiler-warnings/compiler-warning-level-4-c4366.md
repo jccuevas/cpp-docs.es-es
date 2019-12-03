@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-ms.openlocfilehash: 11fcb0070359201de39ca5f33c83d000e02f0835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18045377210b6c020786ad2ec2e003d0e764e4b5
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391561"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683261"
 ---
 # <a name="compiler-warning-level-4-c4366"></a>Advertencia del compilador (nivel 4) C4366
 
-El resultado del operador 'operador' unario se puede desalinear
+El resultado del operador ' Operator ' unario puede no estar alineado
 
-Si un miembro de estructura podría ser nunca sin alinear debido al empaquetado, el compilador le avisará cuando que se asigna la dirección del miembro a un puntero alineado. De forma predeterminada, todos los punteros están alineados.
+Si un miembro de estructura se pudiera desalinear alguna vez debido al empaquetado, el compilador advertirá cuando la dirección de ese miembro se asigne a un puntero alineado. De forma predeterminada, todos los punteros están alineados.
 
-Para resolver C4366, cambiar la alineación de la estructura o declare el puntero con el [__unaligned](../../cpp/unaligned.md) palabra clave.
+Para resolver C4366, cambie la alineación de la estructura o declare el puntero con la palabra clave [__unaligned](../../cpp/unaligned.md) .
 
-Para obtener más información, vea __unaligned y [pack](../../preprocessor/pack.md).
+Para obtener más información, vea __unaligned y [Pack](../../preprocessor/pack.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4366.
+En el ejemplo siguiente se genera C4366.
 
-```
+```cpp
 // C4366.cpp
 // compile with: /W4 /c
 // processor: IPF x64

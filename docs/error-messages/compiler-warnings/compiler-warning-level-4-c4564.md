@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 1948bdec5367fa7943f5a0de4338fd4ecd6c6581
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5db6bf366c86a716be33539feb0085ac03a9647
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220512"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683157"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>Advertencia del compilador (nivel 4) C4564
 
-el método 'método' de la clase 'class' define el parámetro predeterminado no admitido 'parámetro'
+el método ' Method ' de la clase ' Class ' define el parámetro predeterminado no compatible ' Parameter '
 
-El compilador detectó un método con uno o varios parámetros con valores predeterminados. Se omitirán los valores predeterminados para los parámetros cuando se invoca el método; especificar explícitamente los valores para esos parámetros. Si no especifica valores para esos parámetros explícitamente, el compilador de C++ generará un error.
+El compilador detectó un método con uno o más parámetros con valores predeterminados. Los valores predeterminados de los parámetros se omitirán cuando se invoque el método; especifique explícitamente los valores para esos parámetros. Si no especifica explícitamente los valores para esos parámetros, el C++ compilador generará un error.
 
-Dado el siguiente archivo .dll creado con Visual Basic, que permite que los parámetros predeterminados en argumentos de método:
+Dado el siguiente archivo. dll creado con Visual Basic, que permite parámetros predeterminados en argumentos de método:
 
-```
+```vb
 ' C4564.vb
 ' compile with: vbc /t:library C4564.vb
 Public class TestClass
@@ -31,9 +31,9 @@ Public class TestClass
 End class
 ```
 
-Y el siguiente ejemplo de C++ que utiliza la DLL creada con Visual Basic,
+Y el ejemplo C++ siguiente que usa el archivo. dll creado con Visual Basic,
 
-```
+```cpp
 // C4564.cpp
 // compile with: /clr /W4 /WX
 #using <C4564.dll>

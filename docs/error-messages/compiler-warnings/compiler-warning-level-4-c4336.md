@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c4a25618c1afcf93704b161483bc4c0a6e16a0
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400856"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683320"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>Advertencia del compilador (nivel 4) C4336
 
-Importar biblioteca 'type_lib1' de tipo hace referencia cruzada antes de importar 'type_lib2'
+importar la biblioteca de tipos ' type_lib1 ' a la que se hace referencia cruzada antes de importar ' type_lib2 '
 
-Se hizo referencia a una biblioteca de tipos con el [#import](../../preprocessor/hash-import-directive-cpp.md) directiva. Sin embargo, la biblioteca de tipos contiene una referencia a otra biblioteca de tipos que no se hizo referencia con `#import`. El compilador ha encontrado este otro archivo TLB.
+Se hizo referencia a una biblioteca de tipos con la directiva [#import](../../preprocessor/hash-import-directive-cpp.md) . Sin embargo, la biblioteca de tipos contenía una referencia a otra biblioteca de tipos a la que no se hizo referencia con `#import`. El compilador encontró este archivo. tlb.
 
-Determinado dos bibliotecas de tipos en el disco creado a partir de los dos archivos siguientes (compilados con midl.exe):
+Dadas dos bibliotecas de tipos en el disco creadas a partir de los dos archivos siguientes (compilados con MIDL. exe):
 
 ```
 // c4336a.idl
@@ -50,9 +50,9 @@ library C4336bLib
 };
 ```
 
-El ejemplo siguiente genera C4336:
+En el ejemplo siguiente se genera C4336:
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

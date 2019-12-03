@@ -3,12 +3,12 @@ title: Inicialización de llaves para clases, estructuras y uniones
 description: Usar la inicialización de C++ llaves con cualquier clase, struct o Unión
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: c746c6e4c17e5a55475d70f6dc3d927088af579f
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246500"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683003"
 ---
 # <a name="brace-initialization"></a>Inicialización de llaves
 
@@ -108,7 +108,7 @@ int main()
     class_d d3{ 4.5, "string", 'c' };
 
     class_d d4{ "string", 'c' }; // compiler error
-    class_d d5("string", 'c', 2.0 }; // compiler error
+    class_d d5{ "string", 'c', 2.0 }; // compiler error
 }
 ```
 
