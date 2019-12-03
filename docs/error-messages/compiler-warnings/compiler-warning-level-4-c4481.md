@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4481
 ms.assetid: 7bfd4e0c-b452-4e6c-b7c4-ac5cc93fe4ea
-ms.openlocfilehash: fe96ff50f4081e3c9dbe3c7eb68da156a69c96ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb51d16cc15c244b31d65f7777de66c372bbde33
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400765"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683207"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>Advertencia del compilador (nivel 4) C4481
 
-ha utilizado una extensión no estándar: 'keyword' especificador de invalidación
+se ha utilizado una extensión no estándar: especificador de invalidación ' palabra clave '
 
-Se utilizó una palabra clave que no está en el estándar de C++, por ejemplo, uno de los especificadores de invalidación que también funciona en/CLR.  Para obtener más información, vea
+Se usó una palabra clave que no está en C++ el estándar, por ejemplo, uno de los especificadores de invalidación que también funcionan en/CLR.  Para obtener más información, vea
 
 - [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
@@ -25,9 +25,9 @@ Se utilizó una palabra clave que no está en el estándar de C++, por ejemplo, 
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4481.
+En el ejemplo siguiente se genera C4481.
 
-```
+```cpp
 // C4481.cpp
 // compile with: /W4 /c
 class B {

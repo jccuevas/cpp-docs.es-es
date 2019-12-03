@@ -1,5 +1,5 @@
 ---
-title: warning (Pragma)
+title: warning (pragma)
 ms.date: 08/29/2019
 f1_keywords:
 - warning_CPP
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 9a79f0c4a9eed6b62e42f056f9d1994b44b57297
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216474"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683344"
 ---
-# <a name="warning-pragma"></a>warning (Pragma)
+# <a name="warning-pragma"></a>warning (pragma)
 
 Habilita la modificación selectiva del comportamiento de los mensajes de advertencia del compilador.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **#pragma ADVERTENCIA (** \
-> &nbsp;&nbsp;&nbsp;&nbsp;*Warning-Specifier* **:** *ADVERTENCIA: número-lista*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *Warning-Specifier* **:** *ADVERTENCIA: número-lista* ...] **)** \
-> **ADVERTENCIA #pragma (Inserte** [ **,** *n* ] **)** \
+> **advertencia #pragma (** \
+> &nbsp;&nbsp;&nbsp;&nbsp;*Warning-Specifier* **:** *Warning-Number-List*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *Warning-Specifier* **:** *Warning-Number-List* ...] **)** \
+> **#pragma ADVERTENCIA (Inserte** [ **,** *n* ] **)** \
 > **ADVERTENCIA #pragma (pop)**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Los siguientes parámetros de warning-specifier están disponibles.
 
@@ -37,7 +37,7 @@ Los siguientes parámetros de warning-specifier están disponibles.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Aplica el nivel dado a las advertencias especificadas. También activa una advertencia especificada que está desactivada de forma predeterminada.|
 |*default*|Restablece el comportamiento de advertencia a su valor predeterminado. También activa una advertencia especificada que está desactivada de forma predeterminada. La advertencia se generará en su nivel predeterminado documentado.<br /><br /> Para obtener más información, vea [advertencias del compilador desactivadas de forma predeterminada](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|No emita los mensajes de advertencia especificados.|
+|*activa*|No emita los mensajes de advertencia especificados.|
 |*error*|Notifica las advertencias especificadas como errores.|
 |*once*|Muestra los mensajes especificados solo una vez.|
 |*suprimi*|Inserta el estado actual de la pragma en la pila, deshabilita la advertencia especificada para la línea siguiente y, a continuación, extrae de la pila la advertencia para que se restablezca el estado de pragma.|
@@ -63,7 +63,7 @@ Esta directiva es funcionalmente equivalente al código siguiente:
 
 El compilador agrega 4000 a cualquier número de advertencia que esté entre 0 y 999.
 
-Para los números de advertencia en el intervalo 4700 - 4999, que son los asociados a la generación de código, el estado de la advertencia en vigor cuando el compilador encuentra la llave de apertura de una función estará en vigor para el resto de la función. El uso de la pragma **Warning** en la función para cambiar el estado de un número de advertencia mayor que 4699 solo surte efecto después del final de la función. En el ejemplo siguiente se muestra la ubicación correcta de las pragmas de **ADVERTENCIA** para deshabilitar un mensaje de advertencia de generación de código y, a continuación, restaurarlo.
+Para los números de advertencia en el intervalo 4700-4999, que son los asociados a la generación de código, el estado de la advertencia en vigor cuando el compilador encuentra la definición de función estará en vigor para el resto de la función. El uso de la pragma **Warning** en la función para cambiar el estado de un número de advertencia mayor que 4699 solo surte efecto después del final de la función. En el ejemplo siguiente se muestra la ubicación correcta de las pragmas de **ADVERTENCIA** para deshabilitar un mensaje de advertencia de generación de código y, a continuación, restaurarlo.
 
 ```cpp
 // pragma_warning.cpp
@@ -91,9 +91,9 @@ La pragma **Warning** también admite la sintaxis siguiente, donde *n* represent
 
 `#pragma warning( pop )`
 
-La directiva `warning( push )` pragma almacena el estado de advertencia actual para cada advertencia. La directiva `warning( push, n )` pragma almacena el estado actual de cada advertencia y establece el nivel de advertencia global en *n*.
+La `warning( push )` pragma almacena el estado de advertencia actual para cada advertencia. La instrucción pragma `warning( push, n )` almacena el estado actual de cada advertencia y establece el nivel de advertencia global en *n*.
 
-La instrucción `warning( pop )` pragma extrae el último estado de advertencia insertado en la pila. Se deshacen los cambios realizados en el estado de advertencia entre la *extracción* y el *pop* . Considere este ejemplo:
+Pragma `warning( pop )` extrae el último estado de advertencia insertado en la pila. Se deshacen los cambios realizados en el estado de advertencia entre la *extracción* y el *pop* . Considere este ejemplo:
 
 ```cpp
 #pragma warning( push )
@@ -106,7 +106,7 @@ La instrucción `warning( pop )` pragma extrae el último estado de advertencia 
 
 Al final de este código, *pop* restaura el estado de cada ADVERTENCIA (incluye 4705, 4706 y 4707) a lo que estaba al principio del código.
 
-Al escribir archivos de encabezado, puede usar la función de extracción y de *extracción* para garantizar que los cambios de estado de advertencia realizados por un usuario no impidan que los encabezados se compilen correctamente. Use la *extracción* al principio del encabezado y el *pop* al final. Por ejemplo, si tiene un encabezado que no se compila correctamente en el nivel de ADVERTENCIA 4, el código siguiente cambia el nivel de advertencia a 3 y, a continuación, restaura el nivel de advertencia original al final del encabezado.
+Al escribir archivos de encabezado, puede usar la *función de extracción y de* *extracción* para garantizar que los cambios de estado de advertencia realizados por un usuario no impidan que los encabezados se compilen correctamente. Use la *extracción* al principio del encabezado y el *pop* al final. Por ejemplo, si tiene un encabezado que no se compila correctamente en el nivel de ADVERTENCIA 4, el código siguiente cambia el nivel de advertencia a 3 y, a continuación, restaura el nivel de advertencia original al final del encabezado.
 
 ```cpp
 #pragma warning( push, 3 )
