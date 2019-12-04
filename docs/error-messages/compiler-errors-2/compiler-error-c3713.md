@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328385"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753359"
 ---
 # <a name="compiler-error-c3713"></a>Error del compilador C3713
 
-'method': un método de controlador de eventos debe tener los mismos parámetros de función que el origen 'método'
+' Method ': un método de controlador de eventos debe tener los mismos parámetros de función que el ' Method ' de origen
 
-Define un método de controlador de eventos que no utiliza los mismos parámetros que el método de evento de origen. Para corregir este error, dé al método de controlador de eventos los mismos parámetros que los del método del evento de origen.
+Definió un método de controlador de eventos que no utilizaba los mismos parámetros que el método de evento de origen. Para corregir este error, asigne al método de controlador de eventos los mismos parámetros que los del método de evento de origen.
 
-El ejemplo siguiente genera C3713:
+En el ejemplo siguiente se genera C3713:
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2496
 ms.assetid: 9a25237d-5bbb-4112-98f3-29cd99d3f89f
-ms.openlocfilehash: 258012fdefed877558f122790954d830095d5026
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9236876e636e88f193d32ef2e33a817fa52e1bd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360586"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757012"
 ---
 # <a name="compiler-error-c2496"></a>Error del compilador C2496
 
-'identifier': 'selectany' solo puede aplicarse a los elementos de datos con vinculación externa
+' Identifier ': ' selectany ' solo se puede aplicar a elementos de datos con vinculación externa
 
-El [selectany](../../cpp/selectany.md) atributo puede aplicarse solo a los elementos de datos globales y visibles externamente.
+El atributo [selectany](../../cpp/selectany.md) solo se puede aplicar a elementos de datos globales y visibles externamente.
 
-El ejemplo siguiente genera C2496:
+En el ejemplo siguiente se genera C2496:
 
-```
+```cpp
 // C2496.cpp
 // compile with: /c
 __declspec(selectany) int x1 = 1;

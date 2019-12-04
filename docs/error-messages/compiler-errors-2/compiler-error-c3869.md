@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
-ms.openlocfilehash: 1a3d0d754557bbc811d1017ed1491181333e82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae8931d3b139e0e7e7aa947ffea16700e2f12302
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242973"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736716"
 ---
 # <a name="compiler-error-c3869"></a>Error del compilador C3869
 
-la restricción gcnew no tiene lista de parámetros vacía '()'
+la restricción gcnew no tiene una lista de parámetros vacía ' () '
 
-El `gcnew` restricciones especiales se especificó sin la lista de parámetros vacía. Consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.
+Se especificó la restricción especial `gcnew` sin la lista de parámetros vacía. Consulte [restricciones en los parámetros de tipo genérico (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3869.
+En el ejemplo siguiente se genera C3869.
 
-```
+```cpp
 // C3869.cpp
 // compile with: /c /clr
 using namespace System;

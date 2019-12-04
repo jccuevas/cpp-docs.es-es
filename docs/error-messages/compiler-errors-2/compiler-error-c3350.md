@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3350
 ms.assetid: cfbbc338-92b5-4f34-999e-aa2d2376bc70
-ms.openlocfilehash: a19dbde6409afaae29e9110315c7c68fe9d43d62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39d4b4c1cef0febe8845db3e74799b2d240dbdb3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300549"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736963"
 ---
 # <a name="compiler-error-c3350"></a>Error del compilador C3350
 
@@ -21,7 +21,7 @@ Cuando se crea una instancia de un delegado, debe pasar dos argumentos, una inst
 
 El ejemplo siguiente genera la advertencia C3350:
 
-```
+```cpp
 // C3350.cpp
 // compile with: /clr
 delegate void SumDelegate();

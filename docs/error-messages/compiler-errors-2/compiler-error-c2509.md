@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2509
 ms.assetid: 339c1fcd-ec4a-456c-9f18-a9b24d9921af
-ms.openlocfilehash: 21ca3bdcb156aaa654ae3d5d0c1c467a97129dcc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0322c1d6f80f26b81ac0e93b944a2f3277026ce
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165013"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746817"
 ---
 # <a name="compiler-error-c2509"></a>Error del compilador C2509
 
-'identifier': función miembro no declarada en 'class'
+' Identifier ': función miembro no declarada en ' clase '
 
 La función no se declara en la clase especificada.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2509.
+En el ejemplo siguiente se genera C2509.
 
-```
+```cpp
 // C2509.cpp
 // compile with: /c
 struct A {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
-ms.openlocfilehash: 35df94ccfcd7942f9057cb37ceee349c09b80607
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f1289fb9a4d60f2c75b54fd573c83064f1517282
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345415"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749105"
 ---
 # <a name="compiler-error-c3900"></a>Error del compilador C3900
 
-'member': no se permite en el ámbito actual
+' Member ': no se permite en el ámbito actual
 
-Bloques de propiedad pueden contener declaraciones de función y definiciones de funciones insertadas solo. Ningún miembro que no sean funciones se permite en los bloques de propiedades. No se permiten funciones de definiciones de tipos, operadores o friend. Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
+Los bloques de propiedades solo pueden contener declaraciones de función y definiciones de funciones insertadas. No se permiten miembros que no sean funciones en los bloques de propiedades. No se permite ninguna TypeDef, operador o función Friend. Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
 
-Las definiciones de eventos sólo pueden contener funciones y métodos de acceso.
+Las definiciones de eventos solo pueden contener métodos y funciones de acceso.
 
-El ejemplo siguiente genera C3900:
+En el ejemplo siguiente se genera C3900:
 
-```
+```cpp
 // C3900.cpp
 // compile with: /clr
 ref class X {
@@ -34,9 +34,9 @@ ref class X {
 };
 ```
 
-El ejemplo siguiente genera C3900:
+En el ejemplo siguiente se genera C3900:
 
-```
+```cpp
 // C3900b.cpp
 // compile with: /clr
 using namespace System;

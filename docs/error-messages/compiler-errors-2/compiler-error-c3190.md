@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-ms.openlocfilehash: 1f30026d8f853aedc863bef4ecfa32b0bd3262b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbdd54ad0e87557b62d42c8ef5651122d9ebc205
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382364"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761613"
 ---
 # <a name="compiler-error-c3190"></a>Error del compilador C3190
 
-'instancia' con los argumentos de plantilla proporcionado no es la creación de instancias explícita de ninguna función miembro de 'type'
+' creación de instancias ' con los argumentos de plantilla proporcionados no es la creación de instancias explícita de cualquier función miembro de ' tipo '
 
-El compilador detectó un intento para realizar una creación de instancias de función explícita; Sin embargo, los argumentos de tipo proporcionado no coincide con cualquiera de las funciones posibles.
+El compilador detectó un intento de crear una instancia de función explícita; sin embargo, los argumentos de tipo proporcionados no coinciden con ninguna de las funciones posibles.
 
-El ejemplo siguiente genera C3190:
+En el ejemplo siguiente se genera C3190:
 
-```
+```cpp
 // C3190.cpp
 // compile with: /LD
 template<class T>
