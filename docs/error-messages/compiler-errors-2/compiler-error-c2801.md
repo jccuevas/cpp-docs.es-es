@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
-ms.openlocfilehash: 44f7988f9fedb882972b2823f2fe70d9512d4e87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2ea3677d883fa4843c37a41d733872b23cbba0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408685"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760678"
 ---
 # <a name="compiler-error-c2801"></a>Error del compilador C2801
 
-'operator operator' debe ser un miembro no estático
+' operator Operator ' debe ser un miembro no estático
 
-Únicamente como miembros no estáticos se pueden sobrecargar los operadores siguientes:
+Los operadores siguientes solo se pueden sobrecargar como miembros no estáticos:
 
-- Asignación `=`
+- `=` de asignación
 
-- Acceso a miembros de clase `->`
+- `->` de acceso a miembros de clase
 
-- Subíndices `[]`
+- `[]` de subíndice
 
-- Llamada de función `()`
+- `()` de llamada de función
 
 Posibles causas de C2801:
 
-- Operador sobrecargado no es una clase, estructura o miembro de unión.
+- El operador sobrecargado no es un miembro de clase, estructura o Unión.
 
-- Operador sobrecargado se declara `static`.
+- El operador sobrecargado se declara `static`.
 
-- El ejemplo siguiente genera C2801:
+- En el ejemplo siguiente se genera C2801:
 
-```
+```cpp
 // C2801.cpp
 // compile with: /c
 operator[]();   // C2801 not a member

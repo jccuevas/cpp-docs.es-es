@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2253
 ms.assetid: bd6445ae-b2c1-4669-9657-a8f4acf80b16
-ms.openlocfilehash: 847c37c6ae5edf14205d3d46ca624a572c8d6b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89acfd8a03dc0ee2dc25e14e0b3a63ab25151cc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397567"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758858"
 ---
 # <a name="compiler-error-c2253"></a>Error del compilador C2253
 
-'function': el especificador puro o invalidación abstracto solo se permite en la función virtual
+' function ': el especificador puro o de invalidación Abstract solo se permite en la función virtual
 
-Una función no virtual se especifica como pura `virtual`.
+Una función no virtual se especifica como `virtual`puro.
 
-El ejemplo siguiente genera C2253:
+En el ejemplo siguiente se genera C2253:
 
-```
+```cpp
 // C2253.cpp
 // compile with: /c
 class A {
@@ -31,9 +31,9 @@ public:
 };
 ```
 
-El ejemplo siguiente genera C2253:
+En el ejemplo siguiente se genera C2253:
 
-```
+```cpp
 // C2253_2.cpp
 // compile with: /clr /c
 ref struct A {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1019
 ms.assetid: c4f8968b-bc62-4200-b3ca-69d06c163236
-ms.openlocfilehash: 2d8e63510b762b0de0cda50ab7a03b773dfb949a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f33139393f7f6225edf0c4b3f992b93d35bd6afa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383131"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756921"
 ---
 # <a name="fatal-error-c1019"></a>Error irrecuperable C1019
 
@@ -21,7 +21,7 @@ La directiva `#else` aparece fuera de una construcción `#if`, `#ifdef`o `#ifnde
 
 El ejemplo siguiente genera la advertencia C1019:
 
-```
+```cpp
 // C1019.cpp
 #else   // C1019
 #endif
@@ -29,9 +29,9 @@ El ejemplo siguiente genera la advertencia C1019:
 int main() {}
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C1019b.cpp
 #if 1
 #else

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3063
 ms.assetid: 0ecf6f1f-e4a7-487a-9fd5-79d8ac470001
-ms.openlocfilehash: 9e53d9fe273a392695212df6dbeb679822a39068
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c52a0a4c4255eeed5f49a7e6c1e86a1f64b8ad77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404226"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755660"
 ---
 # <a name="compiler-error-c3063"></a>Error del compilador C3063
 
-el operador 'operator': todos los operandos deben tener el mismo tipo de enumeración
+operador ' operador ': todos los operandos deben tener el mismo tipo de enumeración
 
-Cuando se utilizan operadores sobre los enumeradores, ambos operandos deben ser del tipo de enumeración. Para obtener más información, vea [Cómo: Definir y usar enumeraciones en C++/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+Al usar operadores en los enumeradores, ambos operandos deben ser del tipo de enumeración. Para obtener más información, consulte [Cómo: definir y usar enumeraciones en C++/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3063 y muestra cómo corregirlo:
+En el ejemplo siguiente se genera C3063 y se muestra cómo corregirlo:
 
-```
+```cpp
 // C3063.cpp
 // compile with: /clr
 enum class E { a, b } e, mask;

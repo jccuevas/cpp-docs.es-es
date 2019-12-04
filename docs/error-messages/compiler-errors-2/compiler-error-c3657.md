@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3657
 ms.assetid: 89a28a18-4c17-43a1-bda6-deb52c32d203
-ms.openlocfilehash: f979d5776bea5e8fb6e0255bdcdeaacb284932ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1a72fc3d96a5ef3a591fb61d0b2839fb5c1b05b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410491"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758274"
 ---
 # <a name="compiler-error-c3657"></a>Error del compilador C3657
 
-los destructores no pueden invalidar o ser invalidados explícitamente
+los destructores no se pueden invalidar explícitamente ni se pueden invalidar explícitamente
 
-Los destructores o finalizadores no se puede reemplazar explícitamente. Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Los destructores o finalizadores no se pueden invalidar explícitamente. Para obtener más información, vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3657.
+En el ejemplo siguiente se genera C3657.
 
-```
+```cpp
 // C3657.cpp
 // compile with: /clr
 public ref struct I {

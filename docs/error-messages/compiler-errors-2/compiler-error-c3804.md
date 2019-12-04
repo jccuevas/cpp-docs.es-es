@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccfc723a9d62b794fa657e399bd94549448490
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400089"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755296"
 ---
 # <a name="compiler-error-c3804"></a>Error del compilador C3804
 
-'property_accessor': los métodos de descriptor de acceso de una propiedad debe ser estáticos o no estáticos
+' property_accessor ': los métodos de descriptor de acceso de una propiedad deben ser todos estáticos o no estáticos
 
-Al definir una propiedad no trivial, las funciones de descriptor de acceso pueden ser estáticas o instancia, pero no ambos.
+Al definir una propiedad no trivial, las funciones de descriptor de acceso pueden ser estáticas o de instancia, pero no ambas.
 
 Vea [property](../../extensions/property-cpp-component-extensions.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3804.
+En el ejemplo siguiente se genera C3804.
 
-```
+```cpp
 // C3804.cpp
 // compile with: /c /clr
 ref struct A {

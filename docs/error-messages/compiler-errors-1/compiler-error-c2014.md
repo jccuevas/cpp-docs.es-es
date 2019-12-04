@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - C2014
 ms.assetid: 231d8e9c-48c0-4027-99a3-245d186275ec
-ms.openlocfilehash: 58cf9867a9e36b304ab9da79084bc01dff453892
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7e941970415c933b38f35b6c09247a3c0fd411
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350707"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757402"
 ---
 # <a name="compiler-error-c2014"></a>Error del compilador C2014
 
-comando de preprocesador debe empezar con un primer espacio
+el comando de preprocesador debe iniciarse como primer espacio que no esté en blanco
 
-El `#` inicio de sesión de una directiva de preprocesador debe ser el primer carácter en una línea que no sea espacio en blanco.
+El signo de `#` de una directiva de preprocesador debe ser el primer carácter de una línea que no sea un espacio en blanco.
 
-El ejemplo siguiente genera C2014:
+En el ejemplo siguiente se genera C2014:
 
-```
+```cpp
 // C2014.cpp
 int k; #include <stdio.h>   // C2014
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C2014b.cpp
 // compile with: /c
 int k;

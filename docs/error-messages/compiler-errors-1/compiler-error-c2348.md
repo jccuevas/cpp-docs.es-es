@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bded618c481e59f60c5528510c757dec7226acc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187911"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760002"
 ---
 # <a name="compiler-error-c2348"></a>Error del compilador C2348
 
-'type name': no es un agregado de estilo C, no se puede exportar en IDL incrustado
+' nombre de tipo ': no es un agregado de estilo C, no se puede exportar en Embedded-IDL
 
-Para colocar un `struct` en un archivo IDL con la [exportar](../../windows/export.md) atributo, el `struct` sólo debe contener datos.
+Para colocar una `struct` en un archivo. idl con el atributo [Export](../../windows/export.md) , el `struct` debe contener solo datos.
 
-El ejemplo siguiente genera C2348:
+En el ejemplo siguiente se genera C2348:
 
-```
+```cpp
 // C2348.cpp
 // C2348 error expected
 [ module(name="SimpleMidlTest") ];

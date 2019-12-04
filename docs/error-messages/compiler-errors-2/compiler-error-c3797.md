@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7236cb75aef4250440a1e992415df07fb5b7da3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400141"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757181"
 ---
 # <a name="compiler-error-c3797"></a>Error del compilador C3797
 
-'override': declaración de evento no puede tener el especificador de invalidación (en su lugar se debe colocar en métodos add, remove o raise)
+' override ': la declaración de evento no puede tener un especificador de invalidación (en su lugar, debe colocarse en métodos Add/Remove/raise)
 
-No se puede reemplazar un evento trivial (un evento sin métodos de descriptor de acceso definidos explícitamente) con otro evento trivial. El evento que reemplaza debe definir su comportamiento con las funciones de descriptor de acceso.
+No se puede invalidar un evento trivial (un evento sin métodos de descriptor de acceso definidos explícitamente) con otro evento trivial. El evento de reemplazo debe definir su comportamiento con las funciones de descriptor de acceso.
 
-Para obtener más información, consulte [eventos](../../extensions/event-cpp-component-extensions.md).
+Para obtener más información, vea [Event](../../extensions/event-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3797.
+En el ejemplo siguiente se genera C3797.
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

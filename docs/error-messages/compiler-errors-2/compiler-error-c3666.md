@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3666
 ms.assetid: 459e51dd-cefb-4346-99b3-644f2d8b65b2
-ms.openlocfilehash: edca117da585fee731041d696e05af1baf6d3e5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 990dea32b2928671f426235138698071fe038f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214990"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758156"
 ---
 # <a name="compiler-error-c3666"></a>Error del compilador C3666
 
-'constructor': 'keyword' no se permite en un constructor de especificador de invalidación
+' constructor ': el especificador de invalidación ' palabra clave ' no se permite en un constructor
 
-Se usó un especificador de invalidación en un constructor, y que no se permite. Para obtener más información, consulte [especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md).
+Se usó un especificador de invalidación en un constructor, que no está permitido. Para obtener más información, vea [especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3666.
+En el ejemplo siguiente se genera C3666.
 
-```
+```cpp
 // C3666.cpp
 // compile with: /clr /c
 ref struct R {

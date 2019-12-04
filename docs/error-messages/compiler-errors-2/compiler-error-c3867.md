@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447186"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756856"
 ---
 # <a name="compiler-error-c3867"></a>Error del compilador C3867
 
-'func': Falta lista de argumentos; la llamada a función Utilice ' & func' para crear un puntero a miembro
+' Func ': falta la lista de argumentos de la llamada de función; usar ' & func ' para crear un puntero a un miembro
 
 Ha intentado tomar la dirección de una función miembro sin calificar la función miembro con su nombre de clase y el operador de dirección.
 
-Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: conformidad de puntero a miembro mejorada. El código compilado antes de Visual Studio 2005 generará el error C3867.
+Este error también se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio 2005: cumplimiento de puntero a miembro mejorado. El código que se compiló antes de Visual Studio 2005 generará ahora C3867.
 
 ## <a name="example"></a>Ejemplo
 
@@ -27,7 +27,7 @@ C3867 se puede emitir desde el compilador con una solución sugerida errónea. S
 
 El ejemplo siguiente genera el error C3867 y muestra cómo corregirlo:
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -49,7 +49,7 @@ void Derived::Bar() {
 
 El ejemplo siguiente genera el error C3867 y muestra cómo corregirlo:
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -81,7 +81,7 @@ int main() {
 
 El ejemplo siguiente genera el error C3867 y muestra cómo corregirlo:
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -100,7 +100,7 @@ int main() {
 
 El siguiente ejemplo genera el error C3867:
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -124,7 +124,7 @@ public:
 
 El siguiente ejemplo genera el error C3867:
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

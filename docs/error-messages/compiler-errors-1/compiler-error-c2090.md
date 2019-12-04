@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - C2090
 ms.assetid: e8176e55-382b-453d-aa27-6597f0274afd
-ms.openlocfilehash: d805a4d6e0da0e94288ac36c6680a952b7633b86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c87bc75e984c544646a28a663302acd5733ac25
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347251"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755946"
 ---
 # <a name="compiler-error-c2090"></a>Error del compilador C2090
 
-Devuelve una matriz (función)
+la función devuelve una matriz
 
-Una función no puede devolver una matriz. Devolver un puntero a una matriz en su lugar.
+Una función no puede devolver una matriz. En su lugar, devuelve un puntero a una matriz.
 
-El ejemplo siguiente genera C2090:
+En el ejemplo siguiente se genera C2090:
 
-```
+```cpp
 // C2090.cpp
 int func1(void)[] {}   // C2090
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C2090b.cpp
 // compile with: /c
 int* func2(int * i) {

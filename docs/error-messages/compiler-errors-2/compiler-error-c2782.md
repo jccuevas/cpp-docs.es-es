@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2782
 ms.assetid: 8b685422-294d-4f64-9f3d-c14eaf03a93d
-ms.openlocfilehash: 58fb298ef188c37ebebea6b5c87fe84daeea8aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c779a9789f532a5d623401058b9ea7e268ede17d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257275"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739732"
 ---
 # <a name="compiler-error-c2782"></a>Error del compilador C2782
 
-'declaration': parámetro de plantilla 'identificador' es ambiguo
+' DECLARATION ': el parámetro de plantilla ' Identifier ' es ambiguo
 
-El compilador no puede determinar el tipo de argumento de plantilla.
+El compilador no puede determinar el tipo de un argumento de plantilla.
 
-El ejemplo siguiente genera C2782:
+En el ejemplo siguiente se genera C2782:
 
-```
+```cpp
 // C2782.cpp
 template<typename T>
 void f(T, T) {}
@@ -33,9 +33,9 @@ int main() {
 }
 ```
 
-C2782 también puede producirse al usar genéricos:
+C2782 también puede producirse cuando se usan genéricos:
 
-```
+```cpp
 // C2782b.cpp
 // compile with: /clr
 generic<typename T> void gf(T, T) { }

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
-ms.openlocfilehash: 503f295d62c598e3138b1a001d6b350c0d90ea84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02c649fb906b0c5f09afe25952a8670c1a0e7f3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385451"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749209"
 ---
 # <a name="compiler-error-c3898"></a>Error del compilador C3898
 
-'var': los miembros de datos de tipo solamente pueden ser miembros de tipos administrados
+' var ': los miembros de datos de tipo solo pueden ser miembros de tipos administrados
 
-Un [initonly](../../dotnet/initonly-cpp-cli.md) miembro de datos se ha declarado en una clase nativa.  Un `initonly` miembro de datos solo se puede declarar en una clase CLR.
+Se declaró un miembro de datos [InitOnly](../../dotnet/initonly-cpp-cli.md) en una clase nativa.  Un miembro de datos de `initonly` solo se puede declarar en una clase de CLR.
 
-El ejemplo siguiente genera C3898:
+En el ejemplo siguiente se genera C3898:
 
-```
+```cpp
 // C3898.cpp
 // compile with: /clr
 struct Y1 {
@@ -30,9 +30,9 @@ struct Y1 {
 };
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C3898b.cpp
 // compile with: /clr /c
 ref struct Y1 {

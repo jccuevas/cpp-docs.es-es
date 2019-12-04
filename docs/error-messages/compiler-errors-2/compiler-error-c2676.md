@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1a3eab8d1df7534f2bfbed42db5c1a660942eacc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c25593df27f7c4e742eb109aeb5e94ba6fdba8c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165002"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760366"
 ---
 # <a name="compiler-error-c2676"></a>Error del compilador C2676
 
@@ -21,9 +21,9 @@ Para usar este operador, debe sobrecargarlo para el tipo especificado o definir 
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C2676.
+En el ejemplo siguiente se genera C2676.
 
-```
+```cpp
 // C2676.cpp
 // C2676 expected
 struct C {
@@ -55,11 +55,11 @@ int main() {
 
 También se puede producir el error C2676 si intenta utilizar aritmética de punteros en el puntero `this` de un tipo de referencia.
 
-El puntero `this` es del identificador de tipo de un tipo de referencia. Para obtener más información, consulte [semántica de este puntero](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+El puntero `this` es del identificador de tipo de un tipo de referencia. Para obtener más información, vea [semántica del puntero this](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
-El ejemplo siguiente genera el error C2676.
+En el ejemplo siguiente se genera C2676.
 
-```
+```cpp
 // C2676_a.cpp
 // compile with: /clr
 using namespace System;

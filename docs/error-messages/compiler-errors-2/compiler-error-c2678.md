@@ -1,19 +1,19 @@
 ---
-title: Error del compilador C2678
+title: Error del compilador error c2678
 ms.date: 11/04/2016
 f1_keywords:
 - C2678
 helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-ms.openlocfilehash: 9055210401e14eeb9fdb88266870ac8fe5cbd496
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 390752d5d34685afc8b5fc5401fd75585bb48dd0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395396"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760340"
 ---
-# <a name="compiler-error-c2678"></a>Error del compilador C2678
+# <a name="compiler-error-c2678"></a>Error del compilador error c2678
 
 'operator' binario: no se definió ningún operador que adopte un operando en la parte izquierda de tipo 'type' (o bien no existe una conversión aceptable)
 
@@ -25,7 +25,7 @@ Puede producirse el error C2678 si el operando izquierdo es calificado como cons
 
 El siguiente ejemplo genera el error C2678 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2678a.cpp
 // Compile by using: cl /EHsc /W4 C2678a.cpp
 struct Combo {
@@ -53,7 +53,7 @@ El error C2678 también se puede producir si no se ancla un miembro nativo antes
 
 El siguiente ejemplo genera el error C2678 y muestra cómo corregirlo.
 
-```
+```cpp
 // C2678.cpp
 // compile with: /clr /c
 struct S { int _a; };

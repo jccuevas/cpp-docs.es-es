@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360377"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756063"
 ---
 # <a name="compiler-error-c2660"></a>Error del compilador C2660
 
@@ -27,9 +27,9 @@ Puede producirse el error C2660 si se llama accidentalmente a una función de la
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C2660.
+En el ejemplo siguiente se genera C2660.
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Este error también puede producirse si se intenta llamar directamente al método Dispose de un tipo administrado. Para obtener más información, consulte [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). El ejemplo siguiente genera el error C2660.
+Este error también puede producirse si se intenta llamar directamente al método Dispose de un tipo administrado. Para obtener más información, vea [destructores y finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). En el ejemplo siguiente se genera C2660.
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -65,7 +65,7 @@ int main() {
 
 Se producirá el error C2660 si una clase derivada oculta una función.
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -96,7 +96,7 @@ int main() {
 
 Puede producirse el error C2660 si se invoca una propiedad indizada de forma incorrecta.
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -121,7 +121,7 @@ int main() {
 
 Puede producirse el error C2660 si se invoca una propiedad indizada de forma incorrecta.
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -144,7 +144,7 @@ int main() {
 
 Puede producirse el error C2660 si se define un nuevo operador en una clase de plantilla, pero el nuevo operador crea en dicha clase un objeto cuyo tipo es distinto al del tipo envolvente.
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

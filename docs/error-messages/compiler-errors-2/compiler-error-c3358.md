@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3358
 ms.assetid: 180b93df-e78f-441a-91fb-1594c681f7f0
-ms.openlocfilehash: 8d57bf7447ba0c05585d3c18cfaaf960ddc0f968
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64b966ff674b10fd7df99e5a04a9b16d21d89b96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402624"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759768"
 ---
 # <a name="compiler-error-c3358"></a>Error del compilador C3358
 
@@ -21,7 +21,7 @@ No se encontró el símbolo necesario.
 
 El ejemplo siguiente genera la advertencia C3358:
 
-```
+```cpp
 // C3358.cpp
 #define __ATLEVENT_H__ 1   // remove this line to resolve the error
 #define _ATL_ATTRIBUTES 1

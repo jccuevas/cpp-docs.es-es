@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-ms.openlocfilehash: 9bfdf8b26ab599ef1a28483af7ebc28f0dbc1912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1078bf8a97f6cb7afeaf7046489fe262c0bb0199
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328346"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753333"
 ---
 # <a name="compiler-error-c3714"></a>Error del compilador C3714
 
-'method': un método de controlador de eventos debe tener la misma convención de llamada que el origen 'método'
+' Method ': un método de controlador de eventos debe tener la misma Convención de llamada que el ' método ' de origen
 
-Define un método de controlador de eventos que no utiliza la misma convención de llamada que el método de evento de origen. Para corregir este error, dé al método de controlador de eventos las mismas convenciones de llamada que los del método del evento de origen. Por ejemplo, en el código siguiente, realice las convenciones de llamada de `handler1` y `event1` coinciden ([__cdecl](../../cpp/cdecl.md) o [__stdcall](../../cpp/stdcall.md) u otros). Eliminación de palabras clave de convención de llamada de ambas declaraciones también solucionar el problema y provocar `event1` y `handler1` al valor predeterminado para el [thiscall](../../cpp/thiscall.md) convención de llamada. Consulte [convenciones de llamada](../../cpp/calling-conventions.md) para obtener más información.
+Definió un método de controlador de eventos que no utilizaba la misma Convención de llamada que el método de evento de origen. Para corregir este error, asigne al método de controlador de eventos las mismas convenciones de llamada que las del método de evento de origen. Por ejemplo, en el código siguiente, haga que las convenciones de llamada de `handler1` y `event1` coincidan ([__cdecl](../../cpp/cdecl.md) o [__stdcall](../../cpp/stdcall.md) , etc.). Quitar las palabras clave de Convención de llamada de ambas declaraciones también resolverá el problema y provocará que `event1` y `handler1` tengan como valor predeterminado la Convención de llamada [thiscall](../../cpp/thiscall.md) . Vea [convenciones de llamada](../../cpp/calling-conventions.md) para obtener más información.
 
-El ejemplo siguiente genera C3714:
+En el ejemplo siguiente se genera C3714:
 
-```
+```cpp
 // C3714.cpp
 // compile with: /c
 // processor: x86

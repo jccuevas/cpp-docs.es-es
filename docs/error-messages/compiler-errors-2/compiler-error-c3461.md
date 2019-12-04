@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
-ms.openlocfilehash: a674ce7819c88dd4e26355c0129a6c181da5c276
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1bf4af63bac2aaee1da4bb98f23c3b15e98c671
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222311"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756635"
 ---
 # <a name="compiler-error-c3461"></a>Error del compilador C3461
 
 'type': solamente se puede reenviar un tipo administrado
 
-El reenvío de tipos solo puede realizarse con tipos CLR.  Consulte [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) para obtener más información.
+El reenvío de tipos solo puede realizarse con tipos CLR.  Para obtener más información [, vea clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) .
 
-Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obtener más información, consulte [reenvío deC++tipos (/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 
 En el ejemplo siguiente se crea un componente.
 
-```
+```cpp
 // C3461.cpp
 // compile with: /clr /LD
 public ref class R {};
@@ -35,7 +35,7 @@ public ref class R {};
 
 El ejemplo siguiente genera la advertencia C3461.
 
-```
+```cpp
 // C3461b.cpp
 // compile with: /clr /c
 #using "C3461.dll"

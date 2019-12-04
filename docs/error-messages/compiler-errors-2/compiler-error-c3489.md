@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: d2ba8d919ab71b566950cc227588e071d24016bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381116"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738419"
 ---
 # <a name="compiler-error-c3489"></a>Error del compilador C3489
 
@@ -33,7 +33,7 @@ Cuando se especifica que el modo de captura predeterminado de una expresión lam
 
 En el ejemplo siguiente se genera el error C3489 porque la variable `n` por valor aparece en la cláusula de captura de una expresión lambda cuyo modo predeterminado es por valor:
 
-```
+```cpp
 // C3489a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 En el ejemplo siguiente se muestran cuatro posibles soluciones para C3489:
 
-```
+```cpp
 // C3489b.cpp
 
 int main()

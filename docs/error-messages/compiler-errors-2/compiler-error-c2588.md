@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2588
 ms.assetid: 19a0cabd-ca13-44a5-9be3-ee676abf9bc4
-ms.openlocfilehash: 15f9ba62751d9b3cb17ab56659310292dab41adf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f73e2585606e7e86213607a96ef713345419c1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350457"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755413"
 ---
 # <a name="compiler-error-c2588"></a>Error del compilador C2588
 
-':: ~ identificador ': destructor global no válido
+':: ~ Identifier ': destructor global no válido
 
-El destructor está definido para algo distinto de una clase, estructura o unión. Esto no está permitido.
+El destructor está definido para un elemento que no sea una clase, estructura o Unión. Esto no está permitido.
 
-Este error puede deberse a una falta de clase, estructura o nombre de unión en el lado izquierdo de la resolución de ámbito (`::`) operador.
+Este error puede deberse a que falta un nombre de clase, estructura o unión en el lado izquierdo del operador de resolución de ámbito (`::`).
 
-El ejemplo siguiente genera C2588:
+En el ejemplo siguiente se genera C2588:
 
-```
+```cpp
 // C2588.cpp
 ~F();   // C2588
 ```

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3468
 ms.assetid: cfd320db-2f6e-4e0d-ba02-e79ece87e1e0
-ms.openlocfilehash: e3870fa21e2b4a932937edd49091980406a5ff0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4a507dad1d795e703e8db7f8704aad959c95b6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173189"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757313"
 ---
 # <a name="compiler-error-c3468"></a>Error del compilador C3468
 
@@ -21,13 +21,13 @@ ms.locfileid: "62173189"
 
 Solo se pueden reenviar tipos de un ensamblado.
 
-Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Para obtener más información, consulte [reenvío deC++tipos (/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 
 En el ejemplo siguiente se crea un módulo.
 
-```
+```cpp
 // C3468.cpp
 // compile with: /LN /clr
 public ref class R {};
@@ -37,7 +37,7 @@ public ref class R {};
 
 El ejemplo siguiente genera la advertencia C3468.
 
-```
+```cpp
 // C3468_b.cpp
 // compile with: /clr /c
 #using "C3468.netmodule"

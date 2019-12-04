@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2877
 ms.assetid: 0b54837e-fcae-4d90-9658-623250435e24
-ms.openlocfilehash: 093efbf0c329967983c1808ee46011425745515f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b28a301b757e41e6ba238f361520bc89e0744eba
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390638"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736326"
 ---
 # <a name="compiler-error-c2877"></a>Error del compilador C2877
 
-'símbolo' no es accesible desde 'clase'
+' Symbol ' no es accesible desde ' Class '
 
-Todos los miembros que se deriva de una clase base deben ser accesibles en la clase derivada.
+Todos los miembros derivados de una clase base deben ser accesibles en la clase derivada.
 
-El ejemplo siguiente genera C2877:
+En el ejemplo siguiente se genera C2877:
 
-```
+```cpp
 // C2877.cpp
 // compile with: /c
 class A {

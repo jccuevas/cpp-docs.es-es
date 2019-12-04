@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447701"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760933"
 ---
 # <a name="compiler-error-c2885"></a>Error del compilador C2885
 
-'Class:: identifier': no es una declaración using válida en el ámbito de no clase
+' Class:: Identifier ': no es una declaración Using válida en un ámbito que no es de clase
 
-Ha utilizado un [mediante](../../cpp/using-declaration.md) declaración incorrectamente.
+Usó una declaración [using](../../cpp/using-declaration.md) de forma incorrecta.
 
 ## <a name="example"></a>Ejemplo
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: ya no es válido tener un `using` declaración a un tipo anidado; debe calificar explícitamente cada referencia de tipo anidado, coloque el tipo en una n espacio ombres, o crear una definición de tipo.
+Este error se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio 2005: ya no es válido tener una declaración de `using` a un tipo anidado; debe calificar explícitamente cada referencia que realice al tipo anidado, colocar el tipo en un espacio de nombres o crear una definición de tipos.
 
-El ejemplo siguiente genera C2885.
+En el ejemplo siguiente se genera C2885.
 
-```
+```cpp
 // C2885.cpp
 namespace MyNamespace {
    class X1 {};
@@ -54,11 +54,11 @@ int main () {
 
 ## <a name="example"></a>Ejemplo
 
-Si usas el `using` palabra clave con un miembro de clase, C++ requiere definir ese miembro dentro de otra clase (una clase derivada).
+Si usa la palabra clave `using` con un miembro de clase C++ , requiere que defina ese miembro dentro de otra clase (una clase derivada).
 
-El ejemplo siguiente genera C2885.
+En el ejemplo siguiente se genera C2885.
 
-```
+```cpp
 // C2885_b.cpp
 // compile with: /c
 class A {
