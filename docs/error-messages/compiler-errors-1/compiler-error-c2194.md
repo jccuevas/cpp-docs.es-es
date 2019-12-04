@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2194
 ms.assetid: df6e631c-0062-4844-9088-4cc7a0ff879f
-ms.openlocfilehash: 6059b54c0b30bd11e1c8bc6f3779f4739d344ff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7c1324ea295752a09cf9c87ef37164ab6a06db
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174580"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758546"
 ---
 # <a name="compiler-error-c2194"></a>Error del compilador C2194
 
-'identifier': es un segmento de texto
+' Identifier ': es un segmento de texto
 
-El `data_seg` pragma utiliza un nombre de segmento se utiliza con `code_seg`.
+La pragma `data_seg` usa un nombre de segmento que se usa con `code_seg`.
 
-El ejemplo siguiente genera C2194:
+En el ejemplo siguiente se genera C2194:
 
-```
+```cpp
 // C2194.cpp
 // compile with: /c
 #pragma code_seg("MYCODE")

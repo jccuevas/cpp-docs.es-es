@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2767
 ms.assetid: e8f84178-a160-4d71-a236-07e4fcc11e96
-ms.openlocfilehash: 78b171b634aea66115c4029c696fec042593bb30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 259e8a58abfa2dc5eacaa6c9f6e3d47b852f5c1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258102"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759820"
 ---
 # <a name="compiler-error-c2767"></a>Error del compilador C2767
 
-administrado o falta de coincidencia de dimensión WinRTarray: se esperaban N argumentos - M proporcionado
+no coincide la dimensión administrada o WinRTarray: se esperaban N argumentos-M proporcionados
 
 Una declaración de matriz administrada o de WinRT estaba mal formada. Para obtener más información, vea [Matriz](../../extensions/arrays-cpp-component-extensions.md).
 
 El siguiente ejemplo genera el error C2767 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2767.cpp
 // compile with: /clr
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2309
 ms.assetid: 6303d5b5-72cf-42b8-92ce-b1eb48e80d48
-ms.openlocfilehash: 9d114565b6b119711aaa773d76658cc27838f4a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2567562b5d8a75a40afcb4a94ad453ee65709a00
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303547"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759040"
 ---
 # <a name="compiler-error-c2309"></a>Error del compilador C2309
 
-controlador de tipo catch esperaba una declaración de excepción entre paréntesis
+el controlador catch esperaba una declaración de excepción entre paréntesis
 
 Un controlador catch no tiene ningún tipo entre paréntesis.
 
-El ejemplo siguiente genera C2309:
+En el ejemplo siguiente se genera C2309:
 
-```
+```cpp
 // C2309.cpp
 // compile with: /EHsc
 #include <eh.h>

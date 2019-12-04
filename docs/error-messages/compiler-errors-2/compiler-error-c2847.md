@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2847
 ms.assetid: 9ad9a0e0-8b16-49d9-a5be-f8eda2372aa9
-ms.openlocfilehash: 99c49be746cea6fb80c5e24667bcd97556a0ad04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8b31dc461c1d589151701c6946f6ac1a95c5517
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161048"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738991"
 ---
 # <a name="compiler-error-c2847"></a>Error del compilador C2847
 
 no se puede aplicar sizeof al tipo administrado o WinRT 'class'
 
-El [sizeof](../../cpp/sizeof-operator.md) operador obtiene el valor de un objeto en tiempo de compilación. El tamaño de un tipo de valor, una interfaz o una clase administrada o WinRT es dinámico y no puede conocerse en tiempo de compilación.
+El operador [sizeof](../../cpp/sizeof-operator.md) obtiene el valor de un objeto en tiempo de compilación. El tamaño de un tipo de valor, una interfaz o una clase administrada o WinRT es dinámico y no puede conocerse en tiempo de compilación.
 
 El ejemplo siguiente genera el error C2847:
 
-```
+```cpp
 // C2847.cpp
 // compile with: /clr
 ref class A {};

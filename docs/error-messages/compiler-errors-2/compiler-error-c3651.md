@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3651
 ms.assetid: a03e692e-c219-4654-9827-8415cfa5a22d
-ms.openlocfilehash: 6e773201e3bc9a4edb1ee77f1ddcd555e0ae0c0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9468b1e9193bfa52ed133f6fdfa398e02e40c4ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388688"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756323"
 ---
 # <a name="compiler-error-c3651"></a>Error del compilador C3651
 
-'member': no se puede utilizar como invalidación explícita, debe ser miembro de una clase base
+' Member ': no se puede usar como una invalidación explícita; debe ser miembro de una clase base
 
-Se especificó un reemplazo explícito, pero la función que se está reemplaza estaba en un tipo que no es un tipo base.
+Se especificó una invalidación explícita, pero la función que se va a invalidar estaba en un tipo que no es un tipo base.
 
-Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Para obtener más información, vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3651:
+En el ejemplo siguiente se genera C3651:
 
-```
+```cpp
 // C3651.cpp
 // compile with: /clr /c
 ref class C {

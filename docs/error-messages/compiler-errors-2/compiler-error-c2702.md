@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2702
 ms.assetid: 6def15d4-9a8d-43e7-ae35-42d7cb57c27e
-ms.openlocfilehash: 1353e16d1bfc0999a9efe7a2a3a8d80a50b41f15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03a982ee35f0ac49a12568fc428de333f57f3ffa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367699"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758325"
 ---
 # <a name="compiler-error-c2702"></a>Error del compilador C2702
 
-__except no puede aparecer en el bloque de finalización
+es posible que __except no aparezca en el bloque de terminación
 
-Un controlador de excepciones (`__try`/`__except`) no se pueden anidar dentro de un `__finally` bloque.
+Un controlador de excepciones (`__try`/`__except`) no se puede anidar dentro de un bloque de `__finally`.
 
-El ejemplo siguiente genera C2702:
+En el ejemplo siguiente se genera C2702:
 
-```
+```cpp
 // C2702.cpp
 // processor: x86 IPF
 int Counter;

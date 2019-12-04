@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: ed3cccb77a40ab646c9a6375cf4c182de62aa478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381109"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738432"
 ---
 # <a name="compiler-error-c3488"></a>Error del compilador C3488
 
@@ -33,7 +33,7 @@ Cuando se especifica que el modo de captura predeterminado de una expresión lam
 
 El ejemplo siguiente genera el código C3488 porque una referencia a la variable `n` aparece en la cláusula de captura de una expresión lambda cuya modo predeterminado es por referencia:
 
-```
+```cpp
 // C3488a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 El ejemplo siguiente muestra cuatro las posibles resoluciones a C3488:
 
-```
+```cpp
 // C3488b.cpp
 
 int main()

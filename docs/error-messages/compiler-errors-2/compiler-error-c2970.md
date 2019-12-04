@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
-ms.openlocfilehash: 425d1bf50d56c4455ccd9292b300e744625d34c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af30ccc4a71c51d042d6f7807a648a1eef066a70
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256341"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742670"
 ---
 # <a name="compiler-error-c2970"></a>Error del compilador C2970
 
-'class': parámetro de plantilla 'param': 'arg': no se puede usar una expresión que contenga objetos con vinculación interna como un argumento sin tipo
+' Class ': parámetro de plantilla ' param ': ' arg ': no se puede usar una expresión que implique objetos con vinculación interna como argumento sin tipo
 
-No se puede usar el nombre o dirección de una variable estática como argumento de plantilla. La clase de plantilla espera un valor constante que se puede evaluar en tiempo de compilación.
+No se puede usar el nombre o la dirección de una variable estática como argumento de plantilla. La clase de plantilla espera un valor const que se puede evaluar en tiempo de compilación.
 
-El ejemplo siguiente genera C2970:
+En el ejemplo siguiente se genera C2970:
 
-```
+```cpp
 // C2970.cpp
 // compile with: /c
 static int si;

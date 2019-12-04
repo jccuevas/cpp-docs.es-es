@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
-ms.openlocfilehash: 9f24e6dfeb6544e5a6173fd844e3fe8b9ae8698e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fe64292ce6463b3b628367ef0052208e74b24d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379017"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758884"
 ---
 # <a name="compiler-error-c2252"></a>Error del compilador C2252
 
-no se puede crear explícitamente instancias de plantilla en el ámbito actual
+no se puede crear una instancia explícita de la plantilla en el ámbito actual
 
-El compilador detectó un problema con una instancia explícita de una plantilla.  Por ejemplo, no puede crear instancias explícitamente de una plantilla en una función.
+El compilador detectó un problema con una instancia explícita de una plantilla.  Por ejemplo, no puede crear explícitamente instancias de una plantilla en una función.
 
-El ejemplo siguiente genera C2252:
+En el ejemplo siguiente se genera C2252:
 
-```
+```cpp
 // C2252.cpp
 class A {
 public:

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
-ms.openlocfilehash: a11c88f536e3282e887e32ef437077e61f4424cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc21f0bdcc8e2171dd0c87fc31396e6caab9e6fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400154"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755322"
 ---
 # <a name="compiler-error-c3798"></a>Error del compilador C3798
 
-'especificador': declaración de propiedad no puede tener el especificador de invalidación (debe colocarse en la propiedad en su lugar los métodos get/set)
+' Specifier ': la declaración de propiedad no puede tener un especificador de invalidación (debe colocarse en los métodos Get/Set de la propiedad en su lugar)
 
-Se ha declarado incorrectamente una propiedad. Para obtener más información, consulte
+Se ha declarado incorrectamente una propiedad. Para más información, consulte .
 
 - [propiedad](../../extensions/property-cpp-component-extensions.md)
 
@@ -27,9 +27,9 @@ Se ha declarado incorrectamente una propiedad. Para obtener más información, c
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3798
+En el ejemplo siguiente se genera C3798
 
-```
+```cpp
 // C3798.cpp
 // compile with: /clr /c
 ref struct A {

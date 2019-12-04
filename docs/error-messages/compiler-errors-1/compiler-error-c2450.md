@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2450
 ms.assetid: 929f1c06-8774-468b-be2a-f428757875a2
-ms.openlocfilehash: 3cbab274f8f7cd04d5fb86db69572e0b7fc1c04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d015bd165986467a82f33a2ae0dda08c6f6d248
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208976"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744152"
 ---
 # <a name="compiler-error-c2450"></a>Error del compilador C2450
 
-la expresión switch de tipo 'type' no es válida
+la expresión switch de tipo ' type ' no es válida
 
-El `switch` expresión se evalúa como un tipo no válido. Se debe evaluar como un tipo entero o un tipo de clase con la conversión no ambigua a un tipo entero. Si se evalúa como un tipo definido por el usuario, debe proporcionar un operador de conversión.
+La expresión `switch` se evalúa como un tipo no válido. Debe evaluarse como un tipo entero o un tipo de clase con una conversión no ambigua a un tipo entero. Si se evalúa como un tipo definido por el usuario, debe proporcionar un operador de conversión.
 
-El ejemplo siguiente genera C2450:
+En el ejemplo siguiente se genera C2450:
 
-```
+```cpp
 // C2450.cpp
 class X {
 public:

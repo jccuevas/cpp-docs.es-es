@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165221"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746531"
 ---
 # <a name="compiler-error-c2513"></a>Error del compilador C2513
 
-'type': ninguna variable declarada antes de '='
+' type ': no hay ninguna variable declarada antes de ' = '
 
-El especificador de tipo aparece en la declaración de variable sin un identificador.
+El especificador de tipo aparece en la declaración sin ningún identificador de variable.
 
-El ejemplo siguiente genera C2513:
+En el ejemplo siguiente se genera C2513:
 
-```
+```cpp
 // C2513.cpp
 int main() {
    int = 9;   // C2513
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-Este error también puede generarse como resultado de un trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: inicialización de una definición de tipo ya no se permite. La inicialización de una definición de tipo no está permitida por el estándar y genera ahora un error del compilador.
+Este error también se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: ya no se permite la inicialización de una definición de tipo. El estándar no permite la inicialización de una definición de tipo y ahora genera un error del compilador.
 
-```
+```cpp
 // C2513b.cpp
 // compile with: /c
 typedef struct S {
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-Una alternativa sería eliminar `typedef` definir una variable con la lista de inicializadores agregado, pero esto no se recomienda porque creará una variable con el mismo nombre que el tipo y ocultar el nombre de tipo.
+Una alternativa sería eliminar `typedef` para definir una variable con la lista de inicializadores agregada, pero esto no es recomendable porque creará una variable con el mismo nombre que el tipo y ocultará el nombre de tipo.

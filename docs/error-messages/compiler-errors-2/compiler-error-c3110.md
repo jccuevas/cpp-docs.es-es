@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3110
 ms.assetid: 821dc71f-896e-4b2d-af0e-aa9932934b7b
-ms.openlocfilehash: d067fb958f3bb00ef3e62097225881af9ec91dd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21f1308c8dff0409d927fed5d5817f63015c709f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404148"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746297"
 ---
 # <a name="compiler-error-c3110"></a>Error del compilador C3110
 
-'nombre_de_función': no se pueden sobrecargar un método de interfaz COM
+' function_name ': no se puede sobrecargar un método de interfaz COM
 
-Una interfaz que va precedida por un atributo de interfaz, como:
+Una interfaz precedida por un atributo de interfaz, como:
 
 - [custom](../../windows/custom-cpp.md)
 
@@ -29,7 +29,7 @@ Una interfaz que va precedida por un atributo de interfaz, como:
 
 no se puede sobrecargar. Por ejemplo:
 
-```
+```cpp
 // C3110.cpp
 #include <unknwn.h>
 [ object, uuid= "4F98A180-EF37-11D1-978D-0000F805D73B" ]

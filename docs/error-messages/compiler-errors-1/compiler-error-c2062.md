@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2062
 ms.assetid: 6cc98353-2ddf-43ab-88a2-9cc91cdd6033
-ms.openlocfilehash: dcfac9629a90b82744f87ec105c30301b2102cdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a709a540b24756a7e08f98552c5888a55c3ea601
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408750"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735975"
 ---
 # <a name="compiler-error-c2062"></a>Error del compilador C2062
 
-tipo 'type' inesperado
+tipo ' tipo ' inesperado
 
 El compilador no esperaba un nombre de tipo.
 
-El ejemplo siguiente genera el error C2062:
+En el ejemplo siguiente se genera C2062:
 
-```
+```cpp
 // C2062.cpp
 // compile with: /c
 struct A {  : int l; };   // C2062
 struct B { private: int l; };   // OK
 ```
 
-Error C2062 también puede producirse debido a la manera en que el compilador controla los tipos indefinidos en la lista de parámetros de constructor. Si el compilador encuentra un tipo indefinido (o mal escrito), se supone que el constructor es una expresión y emite el error C2062. Para resolverlo, utilice sólo tipos definidos en una lista de parámetros de constructor.
+C2062 también puede producirse debido a la manera en que el compilador controla los tipos no definidos en la lista de parámetros de un constructor. Si el compilador encuentra un tipo no definido (mal escrito?), se supone que el constructor es una expresión y emite C2062. Para resolverlo, utilice solo tipos definidos en una lista de parámetros de constructor.

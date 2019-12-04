@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-ms.openlocfilehash: 12f50e48fc18fc23d078b6dbc7d21d05efa06d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78f90ee1c44a0d42e529a027b1e7fc90a0da3cdb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381090"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738328"
 ---
 # <a name="compiler-error-c3491"></a>Error del compilador C3491
 
@@ -29,7 +29,7 @@ Una expresión lambda no mutable no puede modificar el valor de una variable cap
 
 El ejemplo siguiente genera el error C3491 porque el cuerpo de una expresión lambda no mutable modifica la variable de captura `m`:
 
-```
+```cpp
 // C3491a.cpp
 
 int main()
@@ -43,7 +43,7 @@ int main()
 
 En el ejemplo siguiente se resuelve el error C3491 mediante la declaración de la expresión lambda con la palabra clave `mutable` :
 
-```
+```cpp
 // C3491b.cpp
 
 int main()

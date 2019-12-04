@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300854"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747779"
 ---
 # <a name="compiler-error-c2327"></a>Error del compilador C2327
 
-'símbolo': no es un nombre de tipo, estático o enumerador
+' Symbol ': no es un nombre de tipo, static o Enumerator
 
-Código dentro de una clase anidada intenta tener acceso a un miembro de la clase envolvente que no es un nombre de tipo, un miembro estático o enumerador.
+El código de una clase anidada intenta tener acceso a un miembro de la clase envolvente que no es un nombre de tipo, un miembro estático o un enumerador.
 
-Cuando se compila con **/CLR**, una causa común de C2327 es una propiedad con el mismo nombre que el tipo de propiedad.
+Al compilar con **/CLR**, una causa común de C2327 es una propiedad con el mismo nombre que el tipo de propiedad.
 
-El ejemplo siguiente genera C2327:
+En el ejemplo siguiente se genera C2327:
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-C2327 también puede producirse si el nombre de un tipo está oculto por el nombre del miembro:
+C2327 también se puede producir si el nombre de un tipo está oculto por el nombre de un miembro:
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-C2327 también puede producirse en esta situación, donde debe especificar completamente el tipo de datos del parámetro:
+C2327 también se puede activar en esta situación, donde es necesario especificar por completo el tipo de datos del parámetro:
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -69,9 +69,9 @@ struct B {
 };
 ```
 
-El ejemplo siguiente genera C2327:
+En el ejemplo siguiente se genera C2327:
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-El ejemplo siguiente muestra C2327 cuando una propiedad tiene el mismo nombre que el tipo de propiedad:
+En el ejemplo siguiente se muestra C2327 cuando una propiedad tiene el mismo nombre que el tipo de propiedad:
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

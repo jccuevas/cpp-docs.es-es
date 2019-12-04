@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: b175b14af55a9a462e040f064cc6e38d13fffb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173995"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743424"
 ---
 # <a name="compiler-error-c3227"></a>Error del compilador C3227
 
-'parámetro': no se puede usar 'keyword' para asignar un tipo genérico
+' parámetro ': no se puede usar ' palabra clave ' para asignar un tipo genérico
 
-Para crear una instancia de un tipo, se requiere un constructor adecuado. Sin embargo, el compilador no es capaz de garantizar que esté disponible un constructor adecuado.
+Para crear una instancia de un tipo, se requiere un constructor adecuado. Sin embargo, el compilador no puede garantizar que un constructor adecuado esté disponible.
 
-Puede usar las plantillas en lugar de los genéricos para resolver este error, o puede usar varios métodos para crear una instancia del tipo.
+Puede usar plantillas en lugar de genéricos para resolver este error, o puede usar uno de varios métodos para crear una instancia del tipo.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3227.
+En el ejemplo siguiente se genera C3227.
 
-```
+```cpp
 // C3227.cpp
 // compile with: /clr /c
 generic<class T> interface class ICreate {

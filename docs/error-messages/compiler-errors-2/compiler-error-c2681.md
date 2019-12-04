@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2681
 ms.assetid: eb42da6d-8d2c-43fd-986b-e73e2b004885
-ms.openlocfilehash: 8b311052d3a3525090d954c0dc8cee20e985b1b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7cf39e89f70f27471fb3a251aac12793f1fb33b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282145"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760301"
 ---
 # <a name="compiler-error-c2681"></a>Error del compilador C2681
 
-'type': tipo de expresión no válida para el nombre
+' type ': tipo de expresión no válido para el nombre
 
-Un operador de conversión intentó convertir de un tipo no válido. Por ejemplo, si usa el [dynamic_cast](../../cpp/dynamic-cast-operator.md) para convertir una expresión en un tipo de puntero, la expresión de origen debe ser un puntero.
+Un operador de conversión intentó convertir de un tipo no válido. Por ejemplo, si usa el operador [dynamic_cast](../../cpp/dynamic-cast-operator.md) para convertir una expresión en un tipo de puntero, la expresión de origen debe ser un puntero.
 
-El ejemplo siguiente genera C2681:
+En el ejemplo siguiente se genera C2681:
 
-```
+```cpp
 // C2681.cpp
 class A { virtual void f(); };
 

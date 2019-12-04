@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2718
 ms.assetid: 78cc71f8-c142-46fc-9aed-970635d74f0c
-ms.openlocfilehash: 00ad8da46364cd4a48ebdfde8b4de960e4e015f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecfb68856e63eaf3f60e93a79bac17c66d1af1fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406917"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760522"
 ---
 # <a name="compiler-error-c2718"></a>Error del compilador C2718
 
-'parámetro': el parámetro real con __declspec(align('#')) no se alineará
+' parámetro ': el parámetro real con __declspec (Align (' # ')) no se alineará
 
-El [alinear](../../cpp/align-cpp.md) `__declspec` modificador no está permitido en parámetros de función.
+No se permite el modificador de `__declspec` [align](../../cpp/align-cpp.md) en parámetros de función.
 
-El ejemplo siguiente genera C2718:
+En el ejemplo siguiente se genera C2718:
 
-```
+```cpp
 // C2718.cpp
 typedef struct __declspec(align(32)) AlignedStruct  {
    int i;

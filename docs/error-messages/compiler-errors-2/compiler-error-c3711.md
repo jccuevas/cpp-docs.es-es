@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-ms.openlocfilehash: 391b78077ea526ebbaf99552b3220f85928a9096
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f2414a51321bf249e3ac049a7048f41b71cb856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328398"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753411"
 ---
 # <a name="compiler-error-c3711"></a>Error del compilador C3711
 
-'method': un método de origen de eventos no administrado debe devolver void o un tipo integral
+' Method ': un método de origen de eventos no administrado debe devolver void o un tipo entero
 
-Define un método en el origen de eventos que no devuelve void o un tipo entero. Para corregir este error, asegúrese del evento y el controlador de eventos tiene un tipo de valor devuelto de `void` o un tipo entero como `int` o `long`.
+Definió un método en el origen del evento que no devolvió void o un tipo entero. Para corregir este error, haga que el evento y el controlador de eventos tengan un tipo de valor devuelto `void` o un tipo entero como `int` o `long`.
 
-El ejemplo siguiente genera C3711:
+En el ejemplo siguiente se genera C3711:
 
-```
+```cpp
 // C3711.cpp
 #include <atlbase.h>
 #include <atlcom.h>

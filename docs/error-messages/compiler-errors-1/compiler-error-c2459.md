@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2459
 ms.assetid: 81e29f4c-5b60-40fb-9557-1cdc630d77e8
-ms.openlocfilehash: d2e8b375fd1219b11b3a543bf3a565ddee00ccf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c49c348968f750c7e5c64ab9ef4f298d3fc74f67
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367959"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743996"
 ---
 # <a name="compiler-error-c2459"></a>Error del compilador C2459
 
-'identifier': se está definiendo; no se puede agregar como miembro anónimo
+' Identifier ': se está definiendo; no se puede agregar como miembro anónimo
 
-Una clase, estructura o unión se ha redefinido en su propio ámbito por un miembro de una unión anónima.
+Un miembro de una Unión anónima redefine una clase, estructura o unión en su propio ámbito.
 
-El ejemplo siguiente genera C2459:
+En el ejemplo siguiente se genera C2459:
 
-```
+```cpp
 // C2459.cpp
 // compile with: /c
 class C {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b26be9890bbbdf6276c61023e6867160528e236
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385581"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751838"
 ---
 # <a name="compiler-error-c3648"></a>Error del compilador C3648
 
 Esta sintaxis de invalidación explícita requiere/CLR: oldSyntax
 
-Cuando se compila para la última sintaxis administrada, el compilador encontró explícito invalidar la sintaxis para las versiones anteriores que ya no se admite.
+Al compilar para la última sintaxis administrada, el compilador encontró sintaxis de invalidación explícita para versiones anteriores que ya no se admiten.
 
-Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Para obtener más información, vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3648:
+En el ejemplo siguiente se genera C3648:
 
-```
+```cpp
 // C3648.cpp
 // compile with: /clr
 public interface struct I {

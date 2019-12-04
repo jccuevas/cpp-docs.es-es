@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2844
 ms.assetid: dcaf4cd2-21b0-4280-ae42-0a706c524d83
-ms.openlocfilehash: 2676a32cee487595a2241359496ae9b0380126b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdfd2200503f80addb120117ce06f5f837d6b9f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329197"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752020"
 ---
 # <a name="compiler-error-c2844"></a>Error del compilador C2844
 
-'member': no puede ser un miembro de interfaz 'interface'
+' Member ': no puede ser un miembro de la interfaz ' interface '
 
-Un [clase interface](../../extensions/interface-class-cpp-component-extensions.md) no puede contener un miembro de datos a menos que también es una propiedad.
+Una [clase de interfaz](../../extensions/interface-class-cpp-component-extensions.md) no puede contener un miembro de datos a menos que sea también una propiedad.
 
-Algo distinto de una propiedad o función miembro no se permite en una interfaz. Además, no se permiten constructores, destructores y operadores.
+No se permite ningún elemento que no sea una función de propiedad o miembro en una interfaz. Además, no se permiten constructores, destructores ni operadores.
 
-El ejemplo siguiente genera C2844:
+En el ejemplo siguiente se genera C2844:
 
-```
+```cpp
 // C2844a.cpp
 // compile with: /clr /c
 public interface class IFace {
