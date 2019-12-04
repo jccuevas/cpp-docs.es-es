@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3141
 ms.assetid: b4fd65c3-50cc-46cd-8de0-6a6d24cb9cda
-ms.openlocfilehash: e19de95b5b2c967d71a4b06aca431df8ffe9dc14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71f5a69bf96098b41bc2eb3945e1360955870657
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374942"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746193"
 ---
 # <a name="compiler-error-c3141"></a>Error del compilador C3141
 
-'nombre de interfaz': las interfaces solo admiten herencia pública
+' interface_name ': las interfaces solo admiten herencia pública
 
-Las interfaces definidas con el [interfaz (o __interface)](../../cpp/interface.md) palabra clave solo admiten herencia pública.
+Las interfaces definidas con la palabra clave [Interface (o __interface)](../../cpp/interface.md) solo admiten herencia pública.
 
-El ejemplo siguiente genera C3141:
+En el ejemplo siguiente se genera C3141:
 
-```
+```cpp
 // C3141.cpp
 __interface IBase {};
 __interface IDerived1 : protected IBase {};  // C3141

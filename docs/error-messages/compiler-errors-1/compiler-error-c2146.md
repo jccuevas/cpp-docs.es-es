@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447274"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755920"
 ---
 # <a name="compiler-error-c2146"></a>Error del compilador C2146
 
-error de sintaxis: falta 'token' delante del identificador 'identificador'
+error de sintaxis: falta ' token ' delante del identificador ' Identifier '
 
-El compilador esperado `token` y encontrar `identifier` en su lugar.  Causas posibles:
+El compilador esperaba `token` y se encontró `identifier` en su lugar.  Posibles causas:
 
-1. Error de ortografía ni de mayúsculas y minúsculas.
+1. Error ortográfico o de capitalización.
 
 1. Falta el especificador de tipo en la declaración del identificador.
 
-Este error puede deberse a un error tipográfico. Error [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) normalmente precede a este error.
+Este error puede deberse a un error tipográfico. El error [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) suele preceder a este error.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2146.
+En el ejemplo siguiente se genera C2146.
 
-```
+```cpp
 // C2146.cpp
 class CDeclaredClass {};
 
@@ -46,11 +46,11 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: faltan `typename` palabra clave.
+Este error también se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: falta la palabra clave `typename`.
 
-El ejemplo siguiente se compila en Visual Studio .NET 2002, pero se producirá un error en Visual Studio .NET 2003:
+En el ejemplo siguiente se compila en Visual Studio .NET 2002, pero se producirá un error en Visual Studio .NET 2003:
 
-```
+```cpp
 // C2146b.cpp
 // compile with: /c
 template <typename T>
@@ -71,13 +71,13 @@ typename X<T>::Y func() { }
 
 ## <a name="example"></a>Ejemplo
 
-También verá este error como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: las especializaciones explícitas ya no buscan parámetros de plantilla desde la plantilla principal.
+También verá este error como resultado del trabajo de conformidad del compilador realizado para Visual Studio .NET 2003: las especializaciones explícitas ya no encuentran parámetros de plantilla de la plantilla principal.
 
-El uso de `T` no se permite en la especialización explícita de la plantilla principal. Para que el código sea válido en el Visual Studio .NET 2003 y Visual Studio. NET, reemplace todas las instancias del parámetro de plantilla en la especialización por el tipo especializado explícitamente.
+No se permite el uso de `T` de la plantilla principal en la especialización explícita. Para que el código sea válido en Visual Studio .NET 2003 y Visual Studio .NET, reemplace todas las instancias del parámetro de plantilla de la especialización por el tipo especializado explícitamente.
 
-En el ejemplo siguiente se compila en Visual Studio. NET, pero se producirá un error en Visual Studio .NET 2003:
+En el ejemplo siguiente se compila en Visual Studio .NET, pero se producirá un error en Visual Studio .NET 2003:
 
-```
+```cpp
 // C2146_c.cpp
 // compile with: /c
 template <class T>

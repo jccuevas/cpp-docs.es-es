@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3019
 ms.assetid: 31a6d9b6-d29f-4499-9ad8-48dd751e87c7
-ms.openlocfilehash: bba90917614cbc8facb182659c288f9823d8ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15b2dbf55b18c50020140eae25a71b18ceb10b10
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386712"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742137"
 ---
 # <a name="compiler-error-c3019"></a>Error del compilador C3019
 
-incremento de la 'instrucción for' de OpenMP tiene un formato incorrecto
+el incremento de la instrucción ' for ' de OpenMP tiene un formato incorrecto
 
-La parte de incremento de OpenMP `for` bucle debe usar la variable de índice tanto a la izquierda y derecha del operador.
+La parte de incremento de un bucle `for` de OpenMP debe utilizar la variable de índice en el lado izquierdo y derecho del operador.
 
-El ejemplo siguiente genera C3019:
+En el ejemplo siguiente se genera C3019:
 
-```
+```cpp
 // C3019.cpp
 // compile with: /openmp
 int main()

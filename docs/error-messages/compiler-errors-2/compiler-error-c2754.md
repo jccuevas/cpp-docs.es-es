@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2754
 ms.assetid: 1cab66c5-da9d-4b81-b7fb-9cdc48ff1ccc
-ms.openlocfilehash: cfe6f8faa1b00faf32ae53e6c25c23532c9f3a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 179cbaf65bf6440a13da6b35c073af981b074c71
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228530"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759573"
 ---
 # <a name="compiler-error-c2754"></a>Error del compilador C2754
 
-'specialization': una especialización parcial no puede tener un parámetro de plantilla sin tipo dependiente
+' especialización ': una especialización parcial no puede tener un parámetro de plantilla dependiente que no sea de tipo
 
-Se intentó especializar parcialmente una clase de plantilla que tiene un parámetro de plantilla sin tipo dependiente. Esto no está permitido.
+Se intentó especializar parcialmente una clase de plantilla que tiene un parámetro de plantilla dependiente sin tipo. Esto no está permitido.
 
-El ejemplo siguiente genera C2754:
+En el ejemplo siguiente se genera C2754:
 
-```
+```cpp
 // C2754.cpp
 // compile with: /c
 

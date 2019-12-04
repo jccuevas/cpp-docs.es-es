@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
-ms.openlocfilehash: d20b8dde9f4134273adcba0f947f685f7ce7d213
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d39f737ba02f3fa9c9d5f61594ddf730db6739a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408529"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760665"
 ---
 # <a name="compiler-error-c2803"></a>Error del compilador C2803
 
-'operator operator' debe tener al menos un parámetro formal de tipo de clase
+' operator Operator ' debe tener al menos un parámetro formal de tipo de clase
 
 El operador sobrecargado no tiene un parámetro de tipo de clase.
 
-Debe pasar al menos un parámetro por referencia (que no usan punteros, pero las referencias) o por valor para poder escribir "un < b" (un y b es de una clase de tipo A).
+Debe pasar al menos un parámetro por referencia (sin usar punteros, pero referencias) o por valor para poder escribir "a < b" (a y b de tipo clase A).
 
-Si ambos parámetros son punteros será una comparación de direcciones de puntero pura y no utiliza la conversión definida por el usuario.
+Si ambos parámetros son punteros, será una comparación pura de las direcciones de puntero y no usará la conversión definida por el usuario.
 
-El ejemplo siguiente genera C2803:
+En el ejemplo siguiente se genera C2803:
 
-```
+```cpp
 // C2803.cpp
 // compile with: /c
 class A{};

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400297"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757987"
 ---
 # <a name="compiler-error-c3706"></a>Error del compilador C3706
 
-'function': debe ser una interfaz COM para desencadenar eventos COM
+' función ': debe ser una interfaz COM para desencadenar eventos COM
 
-La interfaz de eventos que se utiliza para desencadenar eventos COM debe ser una interfaz COM. En esta situación, la interfaz debería definirse con un objeto Visual C++ atributo o importa mediante [#import](../../preprocessor/hash-import-directive-cpp.md) desde una biblioteca de tipos con el atributo embedded_idl de #import.
+La interfaz de eventos que se usa para desencadenar eventos COM debe ser una interfaz COM. En esta situación, la interfaz debe definirse mediante un atributo visual C++ o importarse mediante [#import](../../preprocessor/hash-import-directive-cpp.md) de una biblioteca de tipos con el atributo embedded_idl de #import.
 
-Tenga en cuenta que el `#include` son necesarias para el uso de eventos COM líneas de los archivos de encabezado ATL que se muestra en el ejemplo siguiente. Para corregir este error, asegúrese de `IEvents` (la interfaz de eventos) una interfaz COM aplicando uno de los siguientes atributos a la definición de interfaz: [objeto](../../windows/object-cpp.md), [dual](../../windows/dual.md), o [ dispinterface](../../windows/dispinterface.md).
+Tenga en cuenta que las líneas de `#include` de los archivos de encabezado ATL que se muestran en el ejemplo siguiente son necesarias para el uso de eventos COM. Para corregir este error, cree `IEvents` (la interfaz de eventos) una interfaz COM aplicando uno de los siguientes atributos a la definición de interfaz: [objeto](../../windows/object-cpp.md), [doble](../../windows/dual.md)o [dispinterface](../../windows/dispinterface.md).
 
-Una interfaz es de un archivo de encabezado generado por MIDL, el compilador no reconocerlo como una interfaz COM.
+Si una interfaz es de un archivo de encabezado generado por MIDL, el compilador no lo reconocerá como una interfaz COM.
 
-El ejemplo siguiente genera C3706:
+En el ejemplo siguiente se genera C3706:
 
-```
+```cpp
 // C3706.cpp
 // compile with: /c
 // C3706 expected

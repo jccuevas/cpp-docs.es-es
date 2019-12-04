@@ -1,27 +1,27 @@
 ---
-title: C2781 de Error del compilador
+title: Error del compilador C2781
 ms.date: 11/04/2016
 f1_keywords:
 - C2781
 helpviewer_keywords:
 - C2781
 ms.assetid: f29b9963-f55b-427c-8db6-50f37713df5a
-ms.openlocfilehash: be665d86cf230c364f522fd1ad74cd5a124ac9de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5d3d322118d9e3e229b9302e57dc1075f80b9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382976"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739927"
 ---
-# <a name="compiler-error-c2781"></a>C2781 de Error del compilador
+# <a name="compiler-error-c2781"></a>Error del compilador C2781
 
-'declaration': espera al menos valor1 argumentos - valor2 proporcionados
+' DECLARATION ': se espera al menos el argumento value1-value2 proporcionado
 
-Una plantilla de función con una lista de parámetros variable tiene demasiado pocos argumentos.
+Una plantilla de función con una lista de parámetros de variable no tiene suficientes argumentos.
 
-El ejemplo siguiente genera C2781:
+En el ejemplo siguiente se genera C2781:
 
-```
+```cpp
 // C2781.cpp
 template<typename T>
 void f(T, T, ...){}

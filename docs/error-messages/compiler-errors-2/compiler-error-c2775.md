@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: b0f04a64354f549115c8636cf6130d6e96470016
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257197"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740057"
 ---
 # <a name="compiler-error-c2775"></a>Error del compilador C2775
 
-'identifier': no hay ningún método 'get' está asociado con esta propiedad
+' Identifier ': no hay ningún método ' get ' asociado a esta propiedad
 
-Un miembro de datos declarado con el [propiedad](../../cpp/property-cpp.md) atributo extendido no tiene un `get` especificado de la función, pero una expresión intenta recuperar su valor.
+Un miembro de datos declarado con el atributo extendido [Property](../../cpp/property-cpp.md) no tiene una función `get` especificada, pero una expresión intenta recuperar su valor.
 
-El ejemplo siguiente genera C2775:
+En el ejemplo siguiente se genera C2775:
 
-```
+```cpp
 // C2775.cpp
 struct A {
    __declspec(property(put=PutProp2, get=GetProp2)) int prop2;

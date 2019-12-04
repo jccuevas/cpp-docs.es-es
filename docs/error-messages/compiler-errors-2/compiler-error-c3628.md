@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3628
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
-ms.openlocfilehash: 581aae7e1f979b3dd39caf2ce3d263fdb856c56a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9976cb2425f8f855ffb2903c07de22822c781e20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221690"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755829"
 ---
 # <a name="compiler-error-c3628"></a>Error del compilador C3628
 
-'clase base': administrada o WinRTclasses solo admiten herencia pública
+' clase base ': WinRTclasses administrado o solo admiten herencia pública
 
-Se intentó usar un administrado o WinRT de clase como un [privada](../../cpp/private-cpp.md) o [protegido](../../cpp/protected-cpp.md) clase base. Administrada o WinRT clase solo puede usarse como una clase base con [pública](../../cpp/public-cpp.md) acceso.
+Se intentó usar una clase administrada o WinRT como una clase base [privada](../../cpp/private-cpp.md) o [protegida](../../cpp/protected-cpp.md) . Una clase administrada o WinRT solo se puede usar como clase base con acceso [público](../../cpp/public-cpp.md) .
 
 El ejemplo siguiente genera el error C3628 y muestra cómo corregirlo:
 
-```
+```cpp
 // C3628a.cpp
 // compile with: /clr
 ref class B {

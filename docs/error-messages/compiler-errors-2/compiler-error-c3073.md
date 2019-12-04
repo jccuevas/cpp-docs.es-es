@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
-ms.openlocfilehash: 8a4a2011124056af7064c8241450e1f3613776a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b53e704c14746579a32550726364c062a9ade6f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406709"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756752"
 ---
 # <a name="compiler-error-c3073"></a>Error del compilador C3073
 
-'type': clase ref no tiene un constructor de copias definido por el usuario
+' type ': la clase Ref no tiene un constructor de copias definido por el usuario
 
-En un [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) compilación, el compilador no generará un constructor de copias para un tipo de referencia. En cualquier **/CLR** compilación, debe definir su propio constructor de copias para un tipo de referencia si espera que una instancia del tipo que se va a copiar.
+En una compilación [/CLR (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , el compilador no generará un constructor de copias para un tipo de referencia. En cualquier compilación de **/CLR** , debe definir su propio constructor de copias para un tipo de referencia si espera que se copie una instancia del tipo.
 
-Para obtener más información, consulte [semántica de pila de C++ para tipos de referencia](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Para obtener más información, vea [ C++ semántica de pila para los tipos de referencia](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3073.
+En el ejemplo siguiente se genera C3073.
 
-```
+```cpp
 // C3073.cpp
 // compile with: /clr
 ref class R {

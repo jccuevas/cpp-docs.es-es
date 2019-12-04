@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2448
 ms.assetid: e255df3c-f861-4b4d-a193-8768cef061a5
-ms.openlocfilehash: 915217ffbe848b2814e9960183854e09a80b9ee8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a71fe05e2a046a65b659840f94d104a3c526778
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230301"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744165"
 ---
 # <a name="compiler-error-c2448"></a>Error del compilador C2448
 
-'identifier': inicializador de estilo de función parece ser una definición de función
+' Identifier ': el inicializador de estilo de función parece ser una definición de función
 
-La definición de función no es correcta.
+La definición de función es incorrecta.
 
 Este error puede deberse a una lista formal del lenguaje C de estilo antiguo.
 
-El ejemplo siguiente genera C2448:
+En el ejemplo siguiente se genera C2448:
 
-```
+```cpp
 // C2448.cpp
 void func(c)
    int c;

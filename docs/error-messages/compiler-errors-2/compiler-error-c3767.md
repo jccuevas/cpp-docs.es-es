@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: 61f7479986cccfa3851d85bf8e7bc0e9da3d1cea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 994b235b4775c28126d92c241a7e42dc837d4493
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400206"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757207"
 ---
 # <a name="compiler-error-c3767"></a>Error del compilador C3767
 
@@ -19,13 +19,13 @@ ms.locfileid: "62400206"
 
 Se supone que una función friend definida en una clase no se va a tratar como si estuviera definida y declarada en el ámbito del espacio de nombres global. Sin embargo, se puede encontrar en una búsqueda dependiente de argumentos.
 
-C3767 también puede deberse a un cambio importante: ahora los tipos nativos son privados de forma predeterminada en un **/CLR** compilación; vea [escriba visibilidad](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obtener más información.
+C3767 también puede deberse a un cambio importante: los tipos nativos ahora son privados de forma predeterminada en una compilación **/CLR** . vea [visibilidad de tipos](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3767:
+En el ejemplo siguiente se genera C3767:
 
-```
+```cpp
 // C3767a.cpp
 // compile with: /clr
 using namespace System;
@@ -54,9 +54,9 @@ int main() {
 };
 ```
 
-El ejemplo siguiente genera C3767:
+En el ejemplo siguiente se genera C3767:
 
-```
+```cpp
 // C3767c.cpp
 // compile with: /clr /c
 

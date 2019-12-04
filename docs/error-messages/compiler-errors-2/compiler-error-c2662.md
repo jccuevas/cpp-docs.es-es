@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360357"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760457"
 ---
 # <a name="compiler-error-c2662"></a>Error del compilador C2662
 
-'function': no se puede convertir el puntero 'this' de 'tipo1' a 'tipo2'
+' función ': no se puede convertir el puntero ' this ' de ' tipo1 ' a ' tipo2 '
 
-El compilador no pudo convertir el `this` puntero desde `type1` a `type2`.
+El compilador no pudo convertir el puntero de `this` de `type1` a `type2`.
 
-Este error puede deberse a invocar no`const` función miembro en un `const` objeto.  Soluciones posibles:
+Este error puede deberse a la invocación de una función miembro no`const` en un objeto `const`.  Soluciones posibles:
 
-- Quitar el `const` de la declaración del objeto.
+- Quite la `const` de la declaración del objeto.
 
-- Agregar `const` a la función miembro.
+- Agregue `const` a la función miembro.
 
-El ejemplo siguiente genera C2662:
+En el ejemplo siguiente se genera C2662:
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-Cuando se compila con **/CLR**, no se puede llamar a una función en un `const` o `volatile` calificado tipo administrado. No se puede declarar una función miembro const de una clase administrada, por lo que no se puede llamar a métodos en objetos administrados constantes.
+Al compilar con **/CLR**, no se puede llamar a una función en un `const` o `volatile` tipo administrado calificado. No se puede declarar una función miembro const de una clase administrada, por lo que no se puede llamar a métodos en objetos administrados const.
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -67,9 +67,9 @@ ref struct N {
 };
 ```
 
-El ejemplo siguiente genera C2662:
+En el ejemplo siguiente se genera C2662:
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3277
 ms.assetid: 8ac5f476-e30c-4879-92c6-f03cdbd74045
-ms.openlocfilehash: e49de69354d00babf8c6fa609e92153e88bf64c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30dea992ae2c59ddc932395de40e9b15f30b6a20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382117"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753814"
 ---
 # <a name="compiler-error-c3277"></a>Error del compilador C3277
 
-no se puede definir una enumeración 'enumeración' dentro de 'tipo' administrado
+no se puede definir una enumeración ' ENUM ' no administrada dentro de ' tipo ' administrado
 
-Una enumeración se definió incorrectamente dentro de un tipo administrado.
+Se definió incorrectamente una enumeración dentro de un tipo administrado.
 
-El ejemplo siguiente genera C3277:
+En el ejemplo siguiente se genera C3277:
 
-```
+```cpp
 // C3277a.cpp
 // compile with: /clr
 ref class A

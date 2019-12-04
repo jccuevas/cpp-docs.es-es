@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2597
 ms.assetid: 2e48127d-e3ff-4a40-8156-2863e45b1a38
-ms.openlocfilehash: b7bdd10ebd70eb61746690958532854dd98c6429
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680268948f8642b02768bd4b3092666982e14eb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228595"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759313"
 ---
 # <a name="compiler-error-c2597"></a>Error del compilador C2597
 
 referencia no válida a miembro no estático 'identifier'
 
-Causas posibles:
+Posibles causas:
 
 1. Se especifica un miembro no estático en una función de miembro estático. Para tener acceso al miembro no estático, debe pasar o crear una instancia local de la clase y usar un operador de acceso a miembros (`.` o `->`).
 
@@ -27,7 +27,7 @@ Causas posibles:
 
 1. El ejemplo siguiente genera el error C2597 y muestra cómo corregirlo:
 
-```
+```cpp
 // C2597.cpp
 // compile with: /c
 struct s1 {

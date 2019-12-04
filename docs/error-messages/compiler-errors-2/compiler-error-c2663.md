@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: d74326e49edd980896276e2c6e67526d8d769cb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360299"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756037"
 ---
 # <a name="compiler-error-c2663"></a>Error del compilador C2663
 
-'function': número sobrecargas no tienen ninguna conversión válida para el puntero 'this'
+' función ': las sobrecargas de número no tienen conversiones válidas para el puntero ' this '
 
-No se pudo convertir el compilador `this` a cualquiera de las versiones sobrecargadas de la función miembro.
+El compilador no pudo convertir `this` en ninguna de las versiones sobrecargadas de la función miembro.
 
-Este error puede deberse a invocar no`const` función miembro en un `const` objeto.  Soluciones posibles:
+Este error puede deberse a la invocación de una función miembro no`const` en un objeto `const`.  Soluciones posibles:
 
-1. Quitar el `const` de la declaración del objeto.
+1. Quite la `const` de la declaración del objeto.
 
-1. Agregar `const` a una de las sobrecargas de función miembro.
+1. Agregue `const` a una de las sobrecargas de función miembro.
 
-El ejemplo siguiente genera C2663:
+En el ejemplo siguiente se genera C2663:
 
-```
+```cpp
 // C2663.cpp
 struct C {
    void f() volatile {}

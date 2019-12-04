@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1d0ed5ec717efecb9fbea4a9451836c0471522b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447799"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738718"
 ---
 # <a name="compiler-error-c3203"></a>Error del compilador C3203
 
@@ -19,9 +19,9 @@ ms.locfileid: "65447799"
 
 Se pasó un argumento no válido a una plantilla de clase o genérico. La plantilla de clase o el genérico esperan un tipo como parámetro.
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: una plantilla de clase no especializada no puede usarse como un argumento de plantilla en una lista de clases base. Para evitar el error C3203, agregue explícitamente los parámetros de tipo de plantilla al nombre de clase de plantilla cuando lo use como parámetro de plantilla en una lista de clases base.
+Este error se puede generar como resultado del trabajo de conformidad del compilador realizado para Visual Studio 2005: no se puede usar una plantilla de clase no especializada como argumento de plantilla en una lista de clases base. Para evitar el error C3203, agregue explícitamente los parámetros de tipo de plantilla al nombre de clase de plantilla cuando lo use como parámetro de plantilla en una lista de clases base.
 
-```
+```cpp
 // C3203.cpp
 template< typename T >
 struct X {
@@ -42,7 +42,7 @@ int main() {
 
 En el siguiente ejemplo se genera el error C3203 y se muestra cómo corregirlo:
 
-```
+```cpp
 // C3203_b.cpp
 // compile with: /c
 template <class T>
@@ -67,7 +67,7 @@ typedef C3<S1<int> > MyC12;
 
 El error C3203 también puede producirse al usar genéricos:
 
-```
+```cpp
 // C3203_c.cpp
 // compile with: /clr /c
 generic <class T>

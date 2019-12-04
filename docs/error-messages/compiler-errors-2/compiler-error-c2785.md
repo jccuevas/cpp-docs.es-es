@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2785
 ms.assetid: d8d13360-0d00-4815-8475-b49c7f0dc0f3
-ms.openlocfilehash: fcf2bbb01f2aac668ff52884a6ccfb36c66aa89d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aff2e5c96e3c79fc748d8a95779d6a08647ab03
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395383"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739628"
 ---
 # <a name="compiler-error-c2785"></a>Error del compilador C2785
 
-'declaration1' y 'declaration2' tienen distintos tipos de valor devueltos
+' declaration1 ' y ' declaration2 ' tienen distintos tipos de valor devueltos
 
-El tipo de valor devuelto de especialización de plantilla de función difiere el tipo de valor devuelto de la plantilla de función principal.
+El tipo de valor devuelto de la especialización de la plantilla de función difiere del tipo de valor devuelto de la plantilla de función principal.
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 
-1. Compruebe todas las especializaciones de la plantilla de función para mantener la coherencia.
+1. Compruebe si todas las especializaciones de la plantilla de función son coherentes.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2785:
+En el ejemplo siguiente se genera C2785:
 
-```
+```cpp
 // C2785.cpp
 // compile with: /c
 template<class T> void f(T);

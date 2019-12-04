@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: 5355abc603726eb1bacb7a22fa1095bf2d81c538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266288"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760249"
 ---
 # <a name="compiler-error-c2688"></a>Error del compilador C2688
 
-'C2:: fgrv': con varios valores devueltos de covariante o herencia virtual no es compatible con funciones varargs
+' C2:: fgrv ': las devoluciones covariantes con Multiple o la herencia virtual no se admiten para las funciones varargs
 
-No se admiten los tipos de valor devuelto covariante en Visual C++ cuando una función contiene argumentos de variable.
+Los tipos de valor devueltos covariantes no se admiten en Visual C++ cuando una función contiene argumentos variables.
 
-Para resolver este error, defina las funciones para que no utilizan argumentos de variable o hacer que los valores devueltos el mismo para todas las funciones virtuales.
+Para resolver este error, defina las funciones de modo que no usen argumentos de variable o que los valores devueltos sean los mismos para todas las funciones virtuales.
 
-El ejemplo siguiente genera C2688:
+En el ejemplo siguiente se genera C2688:
 
-```
+```cpp
 // C2688.cpp
 struct G1 {};
 struct G2 {};

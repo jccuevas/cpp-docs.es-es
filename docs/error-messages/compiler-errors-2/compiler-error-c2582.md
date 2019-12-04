@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2582
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
-ms.openlocfilehash: 2becaf3cf955a9ed8dbbc22cbf11728bcc5bec34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102682e64602d06b2ee5449ac5b71852cfa33af3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366737"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748676"
 ---
 # <a name="compiler-error-c2582"></a>Error del compilador C2582
 
-función ' no está disponible en 'type'
+la función ' function ' no está disponible en ' type '
 
 Se intentó asignar a un objeto que no tiene un operador de asignación.
 
-El ejemplo siguiente genera C2582:
+En el ejemplo siguiente se genera C2582:
 
-```
+```cpp
 // C2582.cpp
 // compile with: /clr
 using namespace System;

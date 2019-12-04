@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
-ms.openlocfilehash: f2ed5c49a9f8243fd5c9c302caf2876493c26bc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cd46f7a8a0762fcae2bdec15b9b4be6384adb25
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388948"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758689"
 ---
 # <a name="compiler-error-c2273"></a>Error del compilador C2273
 
-'type': no es válido como lado derecho del operador '->'
+' type ': no es válido como lado derecho del operador '-> '
 
-Aparece un tipo como operando derecho de un `->` operador.
+Un tipo aparece como el operando derecho de un operador de `->`.
 
-Este error puede deberse a intentar obtener acceso a una conversión de tipo definido por el usuario. Use la palabra clave `operator` entre -> y `type`.
+Este error puede deberse a un intento de obtener acceso a una conversión de tipo definido por el usuario. Use la palabra clave `operator` entre-> y `type`.
 
-El ejemplo siguiente genera C2273:
+En el ejemplo siguiente se genera C2273:
 
-```
+```cpp
 // C2273.cpp
 struct MyClass {
    operator int() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
-ms.openlocfilehash: 12ee1c6aa5f414a9cf3084831c956514593102c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226f87ad428e9f005e36823834cedc2b3ee0b8c6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265469"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754828"
 ---
 # <a name="compiler-error-c3855"></a>Error del compilador C3855
 
-'class': parámetro de tipo 'param' no es compatible con la declaración
+' Class ': el parámetro de tipo ' param ' es incompatible con la declaración
 
-El compilador encontró parámetros genéricos con nombres diferentes o plantilla sin tipo. Esto puede ocurrir cuando un parámetro de plantilla especificado en la definición de una especialización de plantilla es incompatible con su declaración.
+El compilador encontró una plantilla sin tipo o parámetros genéricos con nombres diferentes. Esto puede ocurrir cuando un parámetro de plantilla especificado en la definición de una especialización de plantilla es incompatible con su declaración.
 
-El ejemplo siguiente genera C3855:
+En el ejemplo siguiente se genera C3855:
 
-```
+```cpp
 // C3855.cpp
 template <int N>
 struct C {
@@ -32,9 +32,9 @@ template <char N>
 void C<N>::f() {}   // C3855
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C3855b.cpp
 // compile with: /c
 template <int N>
@@ -46,9 +46,9 @@ template <int N>
 void C<N>::f() {}
 ```
 
-C3855 también puede producirse al usar genéricos:
+C3855 también puede producirse cuando se usan genéricos:
 
-```
+```cpp
 // C3855c.cpp
 // compile with: /clr
 generic <class T>
@@ -63,9 +63,9 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855
 ```
 
-Posible resolución:
+Solución posible:
 
-```
+```cpp
 // C3855d.cpp
 // compile with: /clr /c
 generic <class T>

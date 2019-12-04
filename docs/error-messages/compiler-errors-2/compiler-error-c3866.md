@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3866
 ms.assetid: 685870af-2440-4cdf-a6cb-284a5b96ef9d
-ms.openlocfilehash: 98014fec77ce47fa4c484645f401e615f1470e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907e435b31a825021b03946f08f7307c5e1ed708
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302305"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761462"
 ---
 # <a name="compiler-error-c3866"></a>Error del compilador C3866
 
-lista de argumentos de función llamada que faltan
+falta la lista de argumentos de la llamada de función
 
-Dentro de una función miembro no estática, una llamada al destructor o finalizador no tenía una lista de argumentos.
+Dentro de una función miembro no estática, un destructor o una llamada al finalizador no tenía una lista de argumentos.
 
-El ejemplo siguiente genera C3866:
+En el ejemplo siguiente se genera C3866:
 
-```
+```cpp
 // C3866.cpp
 // compile with: /c
 class C {

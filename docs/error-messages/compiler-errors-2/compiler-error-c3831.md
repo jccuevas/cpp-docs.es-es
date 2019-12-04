@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
-ms.openlocfilehash: d9aa703f12fd175d9f7fc00eb76e76097a32e860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61ff2c7f7e99698ffbd521153663b1ab27bd6fde
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390560"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741604"
 ---
 # <a name="compiler-error-c3831"></a>Error del compilador C3831
 
-'member': 'class' no puede tener un miembro de datos anclado o una función miembro devuelve un puntero anclado
+' Member ': ' Class ' no puede tener un miembro de datos anclado o una función miembro que devuelva un puntero anclado
 
 [pin_ptr (C++/CLI)](../../extensions/pin-ptr-cpp-cli.md) se usó incorrectamente.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3831:
+En el ejemplo siguiente se genera C3831:
 
-```
+```cpp
 // C3831a.cpp
 // compile with: /clr
 ref class Y

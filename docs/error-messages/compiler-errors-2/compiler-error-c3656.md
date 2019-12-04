@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
-ms.openlocfilehash: 9709f3105e957012c05111ea818890b6d1df8259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 312fc4311120819fe6621d03e5ab6f7cab13cac9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227062"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758286"
 ---
 # <a name="compiler-error-c3656"></a>Error del compilador C3656
 
-'override': invalidar especificador no se puede repetir
+' override ': no se puede repetir el especificador de invalidación
 
-Una palabra clave de reemplazo explícito solo se puede especificar una vez. Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Una palabra clave de invalidación explícita solo puede especificarse una vez. Para obtener más información, vea [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
-El ejemplo siguiente genera C3656:
+En el ejemplo siguiente se genera C3656:
 
-```
+```cpp
 // C3656.cpp
 // compile with: /clr /c
 public interface struct O {

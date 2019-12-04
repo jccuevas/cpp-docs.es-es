@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2569
 ms.assetid: 092bed1e-f631-436c-9586-7750629f6fac
-ms.openlocfilehash: 1344bd8bde532d2e813ca03e173b995e935c76b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7299fe8daa1fa0fc6e1291bf8c683b33235e8bbf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243767"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755530"
 ---
 # <a name="compiler-error-c2569"></a>Error del compilador C2569
 
-'EnumeraciónOUnión': enum/union no se puede usar como clase base
+' EnumOrUnion ': enum/Union no se pueden usar como clase base
 
-Si tiene que derivar un tipo de la unión o enumeración especificadas, cambie la unión o enumeración a una clase o estructura.
+Si debe derivar un tipo de la Unión o enumeración especificada, cambie la Unión o la enumeración a una clase o estructura.
 
-El ejemplo siguiente genera C2569:
+En el ejemplo siguiente se genera C2569:
 
-```
+```cpp
 // C2569.cpp
 // compile with: /c
 union ubase {};

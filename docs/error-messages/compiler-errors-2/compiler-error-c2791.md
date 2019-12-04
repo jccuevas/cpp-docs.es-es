@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2791
 ms.assetid: 938ad1fb-75d9-4ce2-ad92-83d6249005b5
-ms.openlocfilehash: 66a111ea6fe2ca5acfbc473d19da62d9de67372a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d589094f117135474d1a8788867d2d571bbb5f5d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360169"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739550"
 ---
 # <a name="compiler-error-c2791"></a>Error del compilador C2791
 
-uso no válido de 'super': 'class' no tiene clases base
+uso no válido de ' Super ': ' clase ' no tiene clases base
 
-La palabra clave [super](../../cpp/super.md) se usó en el contexto de una función miembro de una clase que no tiene clases base.
+La palabra clave [Super](../../cpp/super.md) se usó en el contexto de una función miembro de una clase que no tiene ninguna clase base.
 
-El ejemplo siguiente genera C2791:
+En el ejemplo siguiente se genera C2791:
 
-```
+```cpp
 // C2791.cpp
 struct D {
    void mf() {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3397
 ms.assetid: a8536e87-79c4-4ed7-bd96-42704d06391f
-ms.openlocfilehash: c6ca48eb53cf1c6d661a201fa8c4d2539669b9bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e00b5cb63d97e023c092f675dbe07a68d9a2548
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328619"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737535"
 ---
 # <a name="compiler-error-c3397"></a>Error del compilador C3397
 
 No se permite la inicialización de agregado en argumentos predeterminados
 
-Se ha declarado una matriz incorrectamente.  Consulte [matrices](../../extensions/arrays-cpp-component-extensions.md) para obtener más información.
+Se ha declarado una matriz incorrectamente.  Vea [matrices](../../extensions/arrays-cpp-component-extensions.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera la advertencia C3397.
 
-```
+```cpp
 // C3397.cpp
 // compile with: /clr
 // /clr /c

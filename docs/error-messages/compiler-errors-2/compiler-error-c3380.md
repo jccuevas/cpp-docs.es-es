@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3380
 ms.assetid: 86f1f4ec-4ad8-4a1a-9b6c-2d9b6129df6b
-ms.openlocfilehash: 516690f2524d48e7abbf7546592c6346e92c3e2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e26b4b1af8ee3c078f3eae3c0cb6a2677c642c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367452"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761886"
 ---
 # <a name="compiler-error-c3380"></a>Error del compilador C3380
 
@@ -19,11 +19,11 @@ ms.locfileid: "62367452"
 
 Cuando se aplican a una clase o estructura administrada, las palabras clave [public](../../cpp/public-cpp.md) y [private](../../cpp/private-cpp.md) indican si la clase se expondrá a través de los metadatos del ensamblado. Solo `public` o `private` pueden aplicarse a una clase en un programa compilado con [/clr](../../build/reference/clr-common-language-runtime-compilation.md).
 
-El `ref` y `value` palabras clave, cuando se usa con [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), indican que una clase es administrada (vea [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
+Las palabras clave `ref` y `value`, cuando se usan con [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), indican que una clase es administrada (vea [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 El ejemplo siguiente genera la advertencia C3380:
 
-```
+```cpp
 // C3380_2.cpp
 // compile with: /clr
 protected ref class A {   // C3380

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3241
 ms.assetid: 2ca14879-bba0-4a23-b22a-72cfff92d6a4
-ms.openlocfilehash: 6eab22a8627b817b7a31e4bd34aad86d1f274615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a618a9c538558d2aa4b995cbc9071bb8e94a5bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173512"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754585"
 ---
 # <a name="compiler-error-c3241"></a>Error del compilador C3241
 
-'method': este método no se ha introducido 'Interface'
+' Method ': ' interface ' no incluyó este método
 
-Al reemplazar explícitamente una función, la firma de función debe coincidir exactamente con la declaración de la función que se va a reemplazar.
+Cuando se invalida explícitamente una función, la firma de la función debe coincidir exactamente con la declaración de la función que se va a reemplazar.
 
-El ejemplo siguiente genera C3241:
+En el ejemplo siguiente se genera C3241:
 
-```
+```cpp
 // C3241.cpp
 #pragma warning(disable:4199)
 

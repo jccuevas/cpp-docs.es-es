@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2626
 ms.assetid: 4c283ad0-251b-4571-bc18-468b9836746f
-ms.openlocfilehash: 434858991c23345e2a6c174c8f323000d42b9b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 339d48265bdc1f68ea4e18fadfde48fca956dd1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222889"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754750"
 ---
 # <a name="compiler-error-c2626"></a>Error del compilador C2626
 
@@ -21,7 +21,7 @@ Una unión o un struct anónimos necesitan tener acceso público.
 
 El siguiente ejemplo genera el error C2626:
 
-```
+```cpp
 // C2626.cpp
 int main() {
    union {
@@ -35,7 +35,7 @@ int main() {
 
 Para corregir este problema, quite las etiquetas privadas o protegidas:
 
-```
+```cpp
 // C2626b.cpp
 int main() {
    union {

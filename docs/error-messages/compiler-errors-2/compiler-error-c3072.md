@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406735"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756765"
 ---
 # <a name="compiler-error-c3072"></a>Error del compilador C3072
 
-el operador 'operator' no se puede aplicar a una instancia de una clase ref
+el operador ' Operator ' no se puede aplicar a una instancia de una clase Ref
 
-utiliza el operador unario '`operator` ' para convertir una instancia de una clase ref en un tipo de identificador
+usar el operador unario '`operator` ' para convertir una instancia de una clase Ref en un tipo de identificador
 
-Un tipo CLR requiere operadores CLR, no los operadores nativos (o estándares).  Para obtener más información, consulte [operador de referencia de seguimiento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Un tipo CLR requiere operadores CLR, no operadores nativos (o estándar).  Para obtener más información, vea [Track Reference Operator](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3072.
+En el ejemplo siguiente se genera C3072.
 
-```
+```cpp
 // C3072.cpp
 // compile with: /clr
 ref class R {};

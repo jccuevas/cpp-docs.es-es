@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3836
 ms.assetid: 254f851b-7b7d-4c34-a740-fcf72f6a636a
-ms.openlocfilehash: 33860273db07894a9a4d15ba6d578598a18819ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c8a7e761f2ece046d5de5c0e74ee911e5ee550d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208062"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741409"
 ---
 # <a name="compiler-error-c3836"></a>Error del compilador C3836
 
-constructor estático no puede tener una lista de inicializadores de miembro
+no se permite que el constructor estático tenga una lista de inicializadores de miembro
 
-Una clase administrada no puede tener un constructor estático que también tiene una lista de inicialización de miembro. Constructores de clase estática son llamados por common language runtime para la inicialización, inicializar a miembros de datos estáticos de clase.
+Una clase administrada no puede tener un constructor estático que también tenga una lista de inicialización de miembros. El Common Language Runtime llama a los constructores de clase estáticos para realizar la inicialización de la clase, inicializando los miembros de datos estáticos.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3836:
+En el ejemplo siguiente se genera C3836:
 
-```
+```cpp
 // C3836a.cpp
 // compile with: /clr
 ref class M

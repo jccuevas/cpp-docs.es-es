@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
-ms.openlocfilehash: aef9df0718d013378f88c1a34d08d1b1e05e214c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0153ec9d48225d153221f2192761da4023fab96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243776"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746518"
 ---
 # <a name="compiler-error-c2514"></a>Error del compilador C2514
 
-'class': clase no tiene constructores
+' Class ': la clase no tiene constructores
 
-La clase, estructura o unión no tiene ningún constructor con una lista de parámetros que coincida con los parámetros que se usa para crear instancias de ella.
+La clase, estructura o Unión no tiene ningún constructor con una lista de parámetros que coincida con los parámetros que se usan para crear una instancia del mismo.
 
-Una clase debe declararse completamente antes de que se pueden crear instancias.
+Una clase debe declararse por completo antes de que se puedan crear instancias de ella.
 
-El ejemplo siguiente genera C2514:
+En el ejemplo siguiente se genera C2514:
 
-```
+```cpp
 // C2514.cpp
 // compile with: /c
 class f;

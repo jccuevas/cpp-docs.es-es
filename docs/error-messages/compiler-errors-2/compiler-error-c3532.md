@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 7b5d1fe61ae08811186e25547ccc3f33e3b0198e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ef5eb3c2bedd9defbd0b80e6d8c5c8912fcf16d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397398"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761938"
 ---
 # <a name="compiler-error-c3532"></a>Error del compilador C3532
 
-'type': uso incorrecto de 'auto'
+' tipo ': uso incorrecto de ' auto '
 
-No se puede declarar el tipo indicado con el `auto` palabra clave. Por ejemplo, no se puede usar el `auto` palabra clave para declarar una matriz o un método de tipo de valor devuelto.
+El tipo indicado no se puede declarar con la palabra clave `auto`. Por ejemplo, no puede utilizar la palabra clave `auto` para declarar una matriz o un tipo de valor devuelto de método.
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 
-1. Asegúrese de que la expresión de inicialización genera un tipo válido.
+1. Asegúrese de que la expresión de inicialización produce un tipo válido.
 
-1. Asegúrese de que no se ha declarado una matriz o un tipo de valor devuelto del método.
+1. Asegúrese de que no declara una matriz o un tipo de valor devuelto de método.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C3532 porque el `auto` palabra clave no puede declarar un tipo de valor devuelto del método.
+En el ejemplo siguiente se produce C3532 porque la palabra clave `auto` no puede declarar un tipo de valor devuelto de método.
 
-```
+```cpp
 // C3532a.cpp
 // Compile with /Zc:auto
 auto f(){}   // C3532
@@ -37,9 +37,9 @@ auto f(){}   // C3532
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera el error C3532 porque el `auto` palabra clave no puede declarar una matriz.
+En el ejemplo siguiente se produce C3532 porque la palabra clave `auto` no puede declarar una matriz.
 
-```
+```cpp
 // C3532b.cpp
 // Compile with /Zc:auto
 int main()

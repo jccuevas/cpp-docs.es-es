@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182683"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759079"
 ---
 # <a name="compiler-error-c2296"></a>Error del compilador C2296
 
-'operator': operando izquierdo incorrecto
+' operador ': operando izquierdo incorrecto
 
-El operando izquierdo utilizado con `operator` no es válido.
+El operando izquierdo usado con `operator` no es válido.
 
-Por ejemplo, el compilador puede ver una declaración donde se pretendía realizar una llamada de función.
+Por ejemplo, el compilador puede ver una declaración en la que se pretendía una llamada de función.
 
-El ejemplo siguiente genera C2296:
+En el ejemplo siguiente se genera C2296:
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

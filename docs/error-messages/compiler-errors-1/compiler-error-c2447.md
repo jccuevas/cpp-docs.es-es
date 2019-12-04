@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2447
 ms.assetid: d1bd6e9a-ee42-4510-ae5e-6b0378f7b931
-ms.openlocfilehash: 64dca8313af8b640b7b03c1ab27a1a31fa90de09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14fec374927fc798956a249773d9bec814e7a823
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301973"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744191"
 ---
 # <a name="compiler-error-c2447"></a>Error del compilador C2447
 
@@ -21,9 +21,9 @@ El compilador encontró una llave de apertura inesperada en el ámbito global. E
 
 Este error también puede deberse a una lista de argumentos formales del lenguaje C de estilo anterior. Para resolver este problema, refactorice la lista de argumentos para que utilice un estilo moderno; es decir, que vaya entre paréntesis.
 
-El ejemplo siguiente genera C2447:
+En el ejemplo siguiente se genera C2447:
 
-```
+```cpp
 // C2447.cpp
 int c;
 {}       // C2447

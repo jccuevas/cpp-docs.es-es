@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-ms.openlocfilehash: 1bbf9b269075717ae397b7d29ee28c278b1e4ec8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178d1221886dc62edd9785d211e2189fa50962f4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381051"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738302"
 ---
 # <a name="compiler-error-c3493"></a>Error del compilador C3493
 
@@ -29,7 +29,7 @@ La captura de la expresión lambda vacía, `[]`, especifica que la expresión la
 
 El ejemplo siguiente genera el error C3493 porque modifica una variable externa, pero especifica la cláusula de captura vacía:
 
-```
+```cpp
 // C3493a.cpp
 
 int main()
@@ -43,7 +43,7 @@ int main()
 
 El ejemplo siguiente resuelve el error C3493 especificando mediante referencia como el modo de captura predeterminado.
 
-```
+```cpp
 // C3493b.cpp
 
 int main()

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2659
 ms.assetid: b0883600-4d27-4ca7-a931-8ca6bd48654d
-ms.openlocfilehash: 1b44ef825626f60e9ae6c6e8600953959fcd7b3a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 818d4e63278bc07fad9290dc0c7d4685886bdce6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449232"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756076"
 ---
 # <a name="compiler-error-c2659"></a>Error del compilador C2659
 
 'operador' : función sobrecargada como operando izquierdo
 
-Había una función en el operando izquierdo del operador especificado. La causa más común de este error es que el compilador ha analizado el identificador situado a la izquierda del operador como una función, cuando el desarrollador pretendía que fuera una variable. Para obtener más información, consulte Wikipedia artículo [análisis más molestos](https://en.wikipedia.org/wiki/Most_vexing_parse). En este ejemplo se muestra una declaración de función y una definición de variable que pueden confundirse fácilmente:
+Había una función en el operando izquierdo del operador especificado. La causa más común de este error es que el compilador ha analizado el identificador situado a la izquierda del operador como una función, cuando el desarrollador pretendía que fuera una variable. Para obtener más información, consulte el artículo de Wikipedia [más vexing análisis](https://en.wikipedia.org/wiki/Most_vexing_parse). En este ejemplo se muestra una declaración de función y una definición de variable que pueden confundirse fácilmente:
 
-```
+```cpp
 // C2659a.cpp
 // Compile using: cl /W4 /EHsc C2659a.cpp
 #include <string>
@@ -39,7 +39,7 @@ Para resolver este problema, cambie la declaración del identificador para que n
 
 El error C2659 también puede producirse cuando la función tiene un tipo que no se puede usar en el operando izquierdo del operador especificado en la expresión. En este ejemplo se genera el error C2659 cuando el código asigna un puntero de función a una función:
 
-```
+```cpp
 // C2659b.cpp
 // Compile using: cl /W4 /EHsc C2659b.cpp
 int func0(void) { return 42; }

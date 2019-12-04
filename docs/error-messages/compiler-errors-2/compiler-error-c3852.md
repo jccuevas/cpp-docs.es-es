@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380934"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754880"
 ---
 # <a name="compiler-error-c3852"></a>Error del compilador C3852
 
-'miembro' tiene el tipo 'type': inicialización de agregado no pudo inicializar este miembro
+' Member ' tiene el tipo ' type ': la inicialización de agregado no pudo inicializar este miembro
 
-Se intentó asignar una inicialización predeterminada como parte de una inicialización de agregado a un miembro de datos que no puede recibir una inicialización predeterminada de una inicialización de agregado.
+Se intentó asignar una inicialización predeterminada como parte de una inicialización agregada a un miembro de datos que no puede recibir una inicialización predeterminada en una inicialización de agregado.
 
 Los ejemplos siguientes generan C3852:
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

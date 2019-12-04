@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-ms.openlocfilehash: ec6725472d31b0b2ade0cd73da4440036239fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8492f108b57fbc63bd171276b1aa601f96a28b24
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754893"
 ---
 # <a name="compiler-error-c3849"></a>Error del compilador C3849
 
-llamada de estilo de función en una expresión de tipo 'tipo' perdería los calificadores const y volatile para el número de todas las sobrecargas de operador disponibles
+la llamada de estilo de función en una expresión de tipo ' type ' perdería calificadores const y/o volatile para todas las sobrecargas de operador disponibles de número
 
-Una variable con un tipo const y volatile especificado sólo puede llamar a miembro funciones definidas con calificaciones const o volatile igual o superior.
+Una variable con un tipo const-volatile especificado solo puede llamar a funciones de miembro definidas con las mismas o más calificaciones const-volatile.
 
-Para corregir este error, proporcione una función miembro adecuado. No se puede ejecutar una conversión en un objeto const o volatile completo cuando la conversión no provoca la pérdida de calificación. Puede obtener calificadores pero no se pueden perder en una conversión.
+Para corregir este error, proporcione una función miembro adecuada. No se puede ejecutar una conversión en un objeto calificado const o volatile cuando la conversión provoca la pérdida de la calificación. Puede obtener calificadores, pero no puede perder calificadores en una conversión.
 
 Los ejemplos siguientes generan C3849:
 
-```
+```cpp
 // C3849.cpp
 void glbFunc3(int i, char c)
 {

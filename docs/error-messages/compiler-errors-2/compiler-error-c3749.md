@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3749
 ms.assetid: 3d26b468-4757-41b8-b5a2-78022a5295fb
-ms.openlocfilehash: 7535f82a392f3d54b265ada2bd40a8d433838f4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75138bf8b090b7770d5bee918790efc095d76627
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227278"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761847"
 ---
 # <a name="compiler-error-c3749"></a>Error del compilador C3749
 
-'attribute': un atributo personalizado no puede usarse dentro de una función
+' atributo ': no se puede usar un atributo personalizado dentro de una función
 
-Un atributo personalizado no se puede usar dentro de una función. Para obtener más información sobre los atributos personalizados, vea el tema [atributo](../../windows/attributes/attribute.md).
+No se puede usar un atributo personalizado dentro de una función. Para obtener más información sobre los atributos personalizados, vea el tema sobre el [atributo](../../windows/attributes/attribute.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3749:
+En el ejemplo siguiente se genera C3749:
 
-```
+```cpp
 // C3749a.cpp
 // compile with: /clr /c
 using namespace System;

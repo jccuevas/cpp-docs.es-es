@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376034"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749118"
 ---
 # <a name="compiler-error-c3899"></a>Error del compilador C3899
 
-'var': no se permite el uso de valor l del miembro de datos initonly directamente dentro de una región paralela en la clase 'class'
+' var ': no se permite el uso del valor l del miembro de datos initonly directamente dentro de una región paralela de la clase ' clase '
 
-Un [initonly (C++ / c++ / CLI)](../../dotnet/initonly-cpp-cli.md) no se puede inicializar el miembro de datos dentro de la parte de un constructor que se encuentra en un [paralelo](../../parallel/openmp/reference/parallel.md) región.  Esto es porque el compilador realiza una reubicación interna de dicho código, que efectivamente ya no forma parte del constructor.
+No se puede inicializar un miembro de datos [InitOnly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) dentro de la parte de un constructor que se encuentra en una región [paralela](../../parallel/openmp/reference/parallel.md) .  Esto se debe a que el compilador realiza una reubicación interna de ese código, de modo que ya no forma parte del constructor.
 
-Para resolverlo, inicialice al miembro de datos initonly en el constructor, pero fuera de la región paralela.
+Para resolverlo, inicialice el miembro de datos initonly en el constructor, pero fuera de la región paralela.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3899.
+En el ejemplo siguiente se genera C3899.
 
-```
+```cpp
 // C3899.cpp
 // compile with: /clr /openmp
 #include <omp.h>

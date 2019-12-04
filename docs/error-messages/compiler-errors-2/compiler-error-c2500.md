@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
-ms.openlocfilehash: a5753fc99efcdb1064a21981c62faaba84d44189
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152546fce8f3ee63f8b95595bff052f18cd4ebda
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165591"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746973"
 ---
 # <a name="compiler-error-c2500"></a>Error del compilador C2500
 
-'identificador1': 'identificador2' ya es una clase base directa
+' identificador1 ': ' identificador2 ' ya es una clase base directa
 
-Una clase o estructura aparece más de una vez en una lista de clases bases.
+Una clase o estructura aparece más de una vez en una lista de clases base.
 
-Una base directa es una mencionadas en la lista base. Una base indirecta es una clase base de una de las clases en la lista base.
+Una base directa es una mencionada en la lista base. Una base indirecta es una clase base de una de las clases de la lista base.
 
-Una clase no puede especificarse más de una vez como una clase base directa. Una clase puede utilizarse como una clase base indirecta más de una vez.
+No se puede especificar una clase como una clase base directa más de una vez. Una clase se puede utilizar como una clase base indirecta más de una vez.
 
-El ejemplo siguiente genera C2500:
+En el ejemplo siguiente se genera C2500:
 
-```
+```cpp
 // C2500.cpp
 // compile with: /c
 class A {};

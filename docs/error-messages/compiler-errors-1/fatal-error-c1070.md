@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1070
 ms.assetid: 1058269a-5db6-4c23-a97f-b5269eb9188b
-ms.openlocfilehash: 7e156a230ce9550b65d1b8775947fc7294c15377
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848c871049f498efc938ded4de11b4b8b6411976
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166924"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747467"
 ---
 # <a name="fatal-error-c1070"></a>Error irrecuperable C1070
 
@@ -21,7 +21,7 @@ Una directiva `#if`, `#ifdef`, o `#ifndef` no tiene ningún correspondiente `#en
 
 El ejemplo siguiente genera la advertencia C1070:
 
-```
+```cpp
 // C1070.cpp
 #define TEST
 
@@ -32,9 +32,9 @@ El ejemplo siguiente genera la advertencia C1070:
 // C1070
 ```
 
-Posible solución:
+Solución posible:
 
-```
+```cpp
 // C1070b.cpp
 // compile with: /c
 #define TEST

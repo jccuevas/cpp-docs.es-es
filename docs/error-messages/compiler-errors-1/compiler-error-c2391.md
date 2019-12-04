@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2391
 ms.assetid: 63a9c6b9-03cc-4517-885c-bdcd048643b3
-ms.openlocfilehash: 7683ad1580454bd7edb1fc08e5bd110a3e5c36c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd47ffbd9481f69f3799a94a17a53ccdffb2a84
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393628"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745023"
 ---
 # <a name="compiler-error-c2391"></a>Error del compilador C2391
 
-'identifier': 'friend' no se puede usar durante la definición de tipo
+' Identifier ': ' Friend ' no se puede usar durante la definición de tipo
 
-El `friend` declaración incluye una declaración de clase completa. Un `friend` declaración puede especificar una función miembro o un especificador de tipo elaborado, pero no es una declaración de clase completa.
+La declaración de `friend` incluye una declaración de clase completa. Una declaración de `friend` puede especificar una función miembro o un especificador de tipo elaborado, pero no una declaración de clase completa.
 
 El ejemplo siguiente genera la advertencia C2326:
 
-```
+```cpp
 // C2391.cpp
 // compile with: /c
 class D {

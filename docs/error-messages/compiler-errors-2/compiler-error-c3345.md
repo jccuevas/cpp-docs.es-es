@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6962e5c127a92acc5dfdad580c7bc89fa134751
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300601"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753450"
 ---
 # <a name="compiler-error-c3345"></a>Error del compilador C3345
 
@@ -27,7 +27,7 @@ El elemento *identifier* de un módulo contiene uno o más caracteres no aceptad
 
 El ejemplo de código siguiente causa el mensaje de error C3345 porque el parámetro `name` del atributo `module` contiene un espacio en blanco.
 
-```
+```cpp
 // cpp_attr_name_module.cpp
 // compile with: /LD /link /OPT:NOREF
 #include <atlbase.h>
