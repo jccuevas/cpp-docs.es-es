@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv128
 helpviewer_keywords:
 - _udiv128 intrinsic
-ms.openlocfilehash: 0e66bbe978199f47134aa288bdd2bac4eb3e332a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8cc9ca3dbf19a04d07edb1d73df84f2e29a5c3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390170"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857988"
 ---
-# <a name="udiv128"></a>_udiv128
+# <a name="_udiv128"></a>_udiv128
 
-El `_udiv128` intrínseco divide un entero de 128 bits sin signo por un entero de 64 bits sin signo. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_udiv128` es **específico de Microsoft**.
+El intrínseco `_udiv128` divide un entero de 128 bits sin signo por un entero de 64 bits sin signo. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_udiv128` es **específico de Microsoft**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,31 +27,31 @@ unsigned __int64 _udiv128(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-*highDividend* \
-[in] Los 64 bits superiores del dividendo.
+ \ *highDividend*
+de Los bits 64 altos del dividendo.
 
 *lowDividend* \
-[in] Los 64 bits inferiores del dividendo.
+de Los bits 64 bajos del dividendo.
 
-*divisor* \
-[in] Entero de 64 bits que se va a dividir.
+ \ *divisor*
+de Entero de 64 bits por el que se va a dividir.
 
 *remainder* \
-[out] Los bits de entero de 64 bits del resto.
+enuncia Los bits enteros de 64 bits del resto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los 64 bits del cociente.
+Los bits 64 del cociente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Pasar los 64 bits superiores del dividendo 128 bits en *highDividend*y los 64 bits inferiores en *lowDividend*. La función intrínseca divide este valor por *divisor*. Almacena el resto en el entero sin signo de 64 bits que señala *resto*y devuelve los 64 bits del cociente.
+Pase los 64 superiores del dividendo de 128 bits en *highDividend*y los 64 bits inferiores en *lowDividend*. Intrínseco divide este valor por el *divisor*. Almacena el resto en el entero de 64 bits sin signo al que apunta el *resto*y devuelve los 64 bits del cociente.
 
 El `_udiv128` intrínseco está disponible a partir de Visual Studio 2019 RTM.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función intrínseca|Arquitectura|Header|
 |---------------|------------------|------------|

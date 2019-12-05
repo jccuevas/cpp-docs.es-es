@@ -1,38 +1,38 @@
 ---
 title: Error recuperable A2034 de ML
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2034
 helpviewer_keywords:
 - A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-ms.openlocfilehash: cbc4dc59da36df682815b0bf2c644892b2db1e70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578a839b319b10dff7f89d6fafdf556315a4f850
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177869"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856693"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>Error recuperable A2034 de ML
 
-**debe estar en el bloque de segmento**
+**debe estar en bloque de segmento**
 
-Uno de los siguientes se encuentra fuera de un bloque de segmento:
+Uno de los siguientes elementos se encontró fuera de un bloque de segmento:
 
 - Una instrucción
 
 - Una definición de etiqueta
 
-- Un [THIS](../../assembler/masm/operator-this.md) operador
+- A [este](../../assembler/masm/operator-this.md) operador
 
-- Un [ $ ](../../assembler/masm/dollar.md) operador
+- Un operador de [$](../../assembler/masm/dollar.md)
 
 - Una definición de procedimiento
 
-- Un [alinear](../../assembler/masm/align-masm.md) directiva
+- Una directiva [align](../../assembler/masm/align-masm.md)
 
-- Un [ORG](../../assembler/masm/org.md) directiva
+- Una directiva [org](../../assembler/masm/org.md)
 
 ## <a name="see-also"></a>Vea también
 
