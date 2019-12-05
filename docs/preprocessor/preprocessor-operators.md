@@ -5,21 +5,21 @@ helpviewer_keywords:
 - preprocessor operators
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
-ms.openlocfilehash: 1c556e4af5913ba8d0dc7efc9648e0d0004d9d7e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5dd252fb495a05efe6eef45674f9ecd601a298a7
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222254"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857949"
 ---
 # <a name="preprocessor-operators"></a>Operadores de preprocesador
 
-Se utilizan cuatro operadores específicos del preprocesador en el contexto de la `#define` Directiva. Vea la tabla siguiente para obtener un resumen de cada uno de ellos. En las próximas tres secciones se explican los operadores de generación de cadenas, generación de caracteres y pegado de token. Para obtener información sobre `defined` el operador, vea [las directivas #if, #elif, #else y #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
+En el contexto de la Directiva `#define` se usan cuatro operadores específicos del preprocesador. Vea la tabla siguiente para obtener un resumen de cada uno de ellos. En las próximas tres secciones se explican los operadores de generación de cadenas, generación de caracteres y pegado de token. Para obtener información sobre el operador `defined`, vea [las directivas #if, #elif, #else y #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).
 
-|Operador|.|
+|"??"|Acción de|
 |--------------|------------|
 |[Operador de cadena (#)](../preprocessor/stringizing-operator-hash.md)|Hace que el argumento real correspondiente se delimite con comillas dobles|
-|[Operador de carácter (# @)](../preprocessor/charizing-operator-hash-at.md)|Hace que el argumento correspondiente se delimite con comillas simples y se trate como un carácter (Específicos de Microsoft)|
+|[Operador de carácter (# @)](../preprocessor/charizing-operator-hash-at.md)|Hace que el argumento correspondiente se incluya entre comillas simples y se trate como un carácter (específico de Microsoft)|
 |[Operador de pegado de token (# #)](../preprocessor/token-pasting-operator-hash-hash.md)|Permite concatenar tokens utilizados como argumentos reales para formar otros tokens|
 |[operador Defined](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|Simplifica la escritura de expresiones compuestas en determinadas directivas de macro|
 

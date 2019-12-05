@@ -5,16 +5,16 @@ f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 59c5eae66f9e93cb88f9512e405376f2ef5f1ceb
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216765"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858027"
 ---
 # <a name="_div64"></a>_div64
 
-`_div64` Intrínseco divide un entero de 64 bits por un entero de 32 bits. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_div64`es **específico de Microsoft**.
+El intrínseco `_div64` divide un entero de 64 bits por un entero de 32 bits. El valor devuelto contiene el cociente y el intrínseco devuelve el resto a través de un parámetro de puntero. `_div64` es **específico de Microsoft**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,12 +26,12 @@ int _div64(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *dividend* \
 de Entero de 64 bits que se va a dividir.
 
-*divisor* \
+ \ *divisor*
 de Entero de 32 bits por el que se va a dividir.
 
 *remainder* \
@@ -41,15 +41,15 @@ enuncia Los bits enteros de 32 bits del resto.
 
 Los bits 32 del cociente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Intrínseco `_div64` divide el *dividendo* por el divisor. Almacena el resto en el entero de 32 bits al que apunta el *resto*y devuelve los 32 bits del cociente.
+El intrínseco `_div64` divide el *dividendo* por el *divisor*. Almacena el resto en el entero de 32 bits al que apunta el *resto*y devuelve los 32 bits del cociente.
 
 El `_div64` intrínseco está disponible a partir de Visual Studio 2019 RTM.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
-|Función intrínseca|Arquitectura|Encabezado|
+|Función intrínseca|Arquitectura|Header|
 |---------------|------------------|------------|
 |`_div64`|x86, x64|\<immintrin.h>|
 
