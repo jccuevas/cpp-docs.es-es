@@ -1,25 +1,29 @@
 ---
 title: Advertencia del compilador (nivel 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ff545d3de3ef173cdbfd99d7714890e8631ce7a
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391483"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810660"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Advertencia del compilador (nivel 4) C4435
 
-'class1': Diseño de objeto vd2 cambiará debido a la base virtual 'clase2'
+'clase1': La distribución de objetos de /vd2 cambiará debido a la base virtual 'clase2'
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 
-En el valor predeterminado la opción de/vd1 de compilación, la clase derivada no tiene un `vtordisp` campo para la base virtual indicada.  Si/vd2 o `#pragma vtordisp(2)` está activada, un `vtordisp` campo estará presente, cambiar el diseño del objeto.  Esto puede provocar problemas de compatibilidad binaria si interactúan módulos se compilan con diferentes `vtordisp` configuración.
+En la opción de compilación predeterminada de/VD1, la clase derivada no tiene un campo de `vtordisp` para la base virtual indicada.  Si/VD2 o `#pragma vtordisp(2)` está en vigor, se mostrará un campo `vtordisp`, cambiando el diseño del objeto.  Esto puede provocar problemas de compatibilidad binaria si los módulos interactivos se compilan con distintos valores de `vtordisp`.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4435.
+En el ejemplo siguiente se genera C4435.
 
 ```cpp
 // C4435.cpp
