@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457025"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898815"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,7 +29,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> A partir del lanzamiento de Visual Studio 2017, el \<encabezado > del sistema de archivos no C++ era todavía un estándar. C++en Visual Studio 2017 (MSVC v141) implementa el último borrador estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> A partir del lanzamiento de Visual Studio 2017, el encabezado \<filesystem > todavía no era un C++ estándar. C++en Visual Studio 2017 (MSVC v141) implementa el último borrador estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Este encabezado admite sistemas de archivos para una de las dos clases generales de sistemas operativos host: Microsoft Windows y POSIX.
 
@@ -37,13 +37,13 @@ Mientras que la mayoría de las funciones son comunes a ambos sistemas operativo
 
 - Windows admite varios nombres de raíz, como c: o \\\network_name. Un sistema de archivos consta de un bosque de árboles, cada uno con su propio directorio raíz (por ejemplo, c:\ o \\\network_name\\), y cada uno con su propio directorio actual, para completar una ruta de acceso relativa (una que no es una ruta de acceso absoluta).
 
-- Posix admite un único árbol, sin nombre de raíz, el directorio raíz único / y un único directorio actual.
+- POSIX admite un único árbol, sin nombre raíz, el directorio raíz único/y un único directorio actual.
 
 Otra diferencia importante es la representación nativa de rutas de acceso:
 
 - Windows usa una secuencia terminada en null de wchar_t, codificada como UTF-16 (uno o dos elementos para cada carácter).
 
-- Posix usa una secuencia terminada en null de char, codificada como UTF-8 (uno o varios elementos para cada carácter).
+- POSIX usa una secuencia terminada en NULL de Char, codificada como UTF-8 (uno o varios elementos para cada carácter).
 
 - Un objeto de ruta de acceso de clase almacena la ruta de acceso en forma nativa, pero admite la conversión sencilla entre esta forma almacenada y varias formas externas:
 
@@ -63,7 +63,7 @@ Otra diferencia es el detalle con el que cada sistema operativo permite especifi
 
 1. Windows registra si un archivo es de solo lectura o editable, un atributo que no tiene sentido en el caso de los directorios.
 
-1. Posix registra si el propietario, el grupo del propietario o todos los usuarios pueden leer, editar o ejecutar un archivo (examinar si se trata de un directorio), además de algunos otros permisos.
+1. POSIX registra si un archivo se puede leer, escribir o ejecutar (examinar si es un directorio), el propietario, el grupo del propietario o cualquier persona, además de algunos otros permisos.
 
 Un aspecto común a ambos sistemas es la estructura impuesta en una ruta de acceso una vez superado el nombre de raíz. Para la ruta de acceso c:/abc/xyz/def.ext:
 
@@ -89,7 +89,7 @@ Por último, una característica importante de los objetos de ruta de acceso es 
 
 Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Clases
 
@@ -102,7 +102,7 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 |[recursive_directory_iterator (Clase)](../standard-library/recursive-directory-iterator-class.md)|Describe un iterador de entrada que establece una secuencia por los nombres de archivo en un directorio de sistema de archivos. El iterador también puede descender a subdirectorios.|
 |[file_status (Clase)](../standard-library/file-status-class.md)|Ajusta un `file_type`.|
 
-### <a name="structs"></a>Estructuras
+### <a name="structs"></a>Structs
 
 |||
 |-|-|
@@ -120,8 +120,8 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||

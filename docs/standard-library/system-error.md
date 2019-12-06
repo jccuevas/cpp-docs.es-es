@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449759"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898850"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Incluya el encabezado \<system_error > para definir la clase `system_error` de excepción y las plantillas relacionadas para procesar los errores del sistema de bajo nivel.
+Incluya el encabezado \<system_error > para definir la clase de excepción `system_error` y las plantillas relacionadas para procesar los errores del sistema de bajo nivel.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 **Encabezado:** \<system_error>
 
 **Espacio de nombres:** std
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="objects"></a>de la empresa
+### <a name="objects"></a>Objetos
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Incluya el encabezado \<system_error > para definir la clase `system_error` de e
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Proporciona nombres simbólicos para todas las macros de código de error definidas por Posix en `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Proporciona nombres simbólicos para todas las macros de código de error definidas por POSIX en `<errno.h>`.|
 
 ### <a name="classes-and-structs"></a>Clases y structs
 
