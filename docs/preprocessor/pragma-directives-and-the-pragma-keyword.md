@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222298"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858079"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Directivas pragma y la palabra clave __pragma
 
@@ -26,16 +26,16 @@ Las directivas pragma especifican características del compilador específicas d
 
 ## <a name="syntax"></a>Sintaxis
 
-> **#pragma** *token-cadena*\
-> **__pragma (** *token-cadena* **)**
+> **#pragma** *cadena de token*\
+> **__pragma (** *cadena de token* **)**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Cada implementación de C y C++ admite algunas características exclusivas del equipo host o del sistema operativo. Algunos programas, por ejemplo, deben ejercer un control preciso sobre la ubicación de los datos en memoria o controlar la manera en que determinadas funciones reciben parámetros. Las directivas de **#pragma** proporcionan un método para que cada compilador ofrezca características específicas del equipo y del sistema operativo, a la vez que mantiene C++ la compatibilidad total con los lenguajes C y.
 
 Las pragmas son específicas del equipo o del sistema operativo por definición, y normalmente son diferentes para cada compilador. Las pragmas se pueden usar en las directivas condicionales, para proporcionar una nueva funcionalidad de preprocesador o para proporcionar información definida por la implementación al compilador.
 
-*Token-String* es una serie de caracteres que proporciona una instrucción de compilador y argumentos concretos, si los hay. El signo de número **#** () debe ser el primer carácter que no sea un espacio en blanco en la línea que contiene la pragma. Los caracteres de espacio en blanco pueden separar el signo de número y la palabra "pragma". A continuación **#pragma**, escriba cualquier texto que el traductor pueda analizar como tokens de preprocesamiento. El argumento para **#pragma** está sujeto a la expansión de macros.
+*Token-String* es una serie de caracteres que proporciona una instrucción de compilador y argumentos concretos, si los hay. El signo de número ( **#** ) debe ser el primer carácter que no sea un espacio en blanco en la línea que contiene la pragma. Los caracteres de espacio en blanco pueden separar el signo de número y la palabra "pragma". A continuación **#pragma**, escriba cualquier texto que el traductor pueda analizar como tokens de preprocesamiento. El argumento para **#pragma** está sujeto a la expansión de macros.
 
 El compilador emite una advertencia cuando encuentra una pragma que no reconoce y continúa la compilación.
 
@@ -45,7 +45,7 @@ Los compiladores de Microsoft C y C++ reconocen las pragmas siguientes:
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|
-|[component](../preprocessor/component.md)|[ajustar](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
+|[component](../preprocessor/component.md)|[ajuste](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
 |[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
@@ -79,9 +79,7 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>La palabra clave __pragma ()
 
-**Específico de Microsoft**
-
-El compilador también admite la palabra clave **__pragma** , que tiene la misma funcionalidad que la directiva **#pragma** . La diferencia es que la palabra clave **__pragma** se puede usar alineada en una definición de macro. La directiva **#pragma** no se puede usar en una definición de macro, porque el compilador interpreta el carácter de signo de número (' # ') en la Directiva como el [operador de cadena (#)](../preprocessor/stringizing-operator-hash.md).
+El compilador también admite la palabra clave **__pragma** específica de Microsoft, que tiene la misma funcionalidad que la directiva **#pragma** . La diferencia es que la palabra clave **__pragma** se puede usar alineada en una definición de macro. La directiva **#pragma** no se puede usar en una definición de macro, porque el compilador interpreta el carácter de signo de número (' # ') en la Directiva como el [operador de cadena (#)](../preprocessor/stringizing-operator-hash.md).
 
 En el ejemplo de código siguiente se muestra cómo se puede usar la palabra clave **__pragma** en una macro. Este código se ha extraído del encabezado mfcdual.h del ejemplo ACDUAL en "Ejemplos de compatibilidad COM del compilador":
 
@@ -103,10 +101,8 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Finalizar específico de Microsoft**
-
 ## <a name="see-also"></a>Vea también
 
-[Referencia deC++ C/preprocesador](../preprocessor/c-cpp-preprocessor-reference.md)\
-[Pragmas de C](../c-language/c-pragmas.md)\
+[Referencia delC++ preprocesador de C/](../preprocessor/c-cpp-preprocessor-reference.md)\
+\ [pragmas de C](../c-language/c-pragmas.md)
 [Palabras clave](../cpp/keywords-cpp.md)

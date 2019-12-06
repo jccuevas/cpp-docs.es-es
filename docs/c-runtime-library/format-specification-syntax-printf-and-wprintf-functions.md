@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778392"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857871"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
@@ -48,14 +48,14 @@ El carácter del especificador de conversión *tipo* especifica si el argumento 
 
 Los argumentos que siguen a la cadena de formato se interpretan según el carácter de *tipo* correspondiente y el prefijo opcional [tamaño](#size). Las conversiones de tipos de caracteres `char` y `wchar_t` se especifican mediante **c** o **C**, y las cadenas de caracteres de byte único y multibyte o de carácter ancho se especifican mediante **s** o **S**, según la función de formato que se esté usando. Los argumentos de caracteres y cadenas que se especifican mediante el uso de **c** y **s** se interpretan como `char` y `char*` en la familia de funciones `printf`, o como `wchar_t` y `wchar_t*` en la familia de funciones `wprintf`. Los argumentos de caracteres y cadenas que se especifican mediante el uso de **C** y **S** se interpretan como `wchar_t` y `wchar_t*` en la familia de funciones `printf`, o como `char` y `char*` en la familia de funciones `wprintf`. Este comportamiento es específico de Microsoft.
 
-Los tipos enteros como `short`, `int`, `long`, `long long` y sus variantes de `unsigned` se especifican mediante **d**, **i**, **o**, **u**, **x**y **x**. Los **tipos de punto**flotante, como 1, 2 y 3, se especifican mediante, a **,** **e**, **e**, **f**, **f**, **g**y **g**. De forma predeterminada, a menos que los modifique un prefijo de *tamaño* , los argumentos de entero se convierten en 3 tipo, y los argumentos de punto flotante se convierten en 4. En sistemas de 64 bits, `int` es un valor de 32 bits; por consiguiente, los enteros de 64 bits se truncan cuando se les aplica formato para la salida, a menos que se use un prefijo para *tamaño* de **ll** o **I64**. Los tipos de puntero que se especifican mediante **p** usan el tamaño de puntero predeterminado para la plataforma.
+Los tipos enteros como `short`, `int`, `long`, `long long`y sus variantes de `unsigned` se especifican mediante **d**, **i**, **o**, **u**, **x**y **x**. Los **tipos de punto**flotante, como `float`, `double`y `long double`, se especifican mediante, a **,** **e**, **e**, **f**, **f**, **g**y **g**. De forma predeterminada, a menos que los modifique un prefijo de *tamaño* , los argumentos de entero se convierten en `int` tipo, y los argumentos de punto flotante se convierten en `double`. En sistemas de 64 bits, `int` es un valor de 32 bits; por consiguiente, los enteros de 64 bits se truncan cuando se les aplica formato para la salida, a menos que se use un prefijo para *tamaño* de **ll** o **I64**. Los tipos de puntero que se especifican mediante **p** usan el tamaño de puntero predeterminado para la plataforma.
 
 > [!NOTE]
-> **Específico de Microsoft** El carácter de tipo **Z**, así como el comportamiento de los caracteres de tipo **c**, **C**, **s** y **S** cuando se usan con las funciones `printf` y `wprintf`, son extensiones de Microsoft. El estándar ISO C usa **c** y **s** sistemáticamente para caracteres estrechos y cadenas, y **C** y **S** para caracteres anchos y cadenas, en todas las funciones de formato.
+> **Específico de Microsoft:** El carácter de tipo **Z** y el comportamiento de los caracteres de tipo **c**, **c**, **s**y **s** cuando se utilizan con las funciones `printf` y `wprintf`, son extensiones de Microsoft. El estándar ISO C usa **c** y **s** sistemáticamente para caracteres estrechos y cadenas, y **C** y **S** para caracteres anchos y cadenas, en todas las funciones de formato.
 
 ### <a name="type-field-characters"></a>Caracteres del campo de tipo
 
-|Carácter de tipo|Argumento|Formato de salida|
+|Carácter de tipo|Argument|Formato de salida|
 |--------------------|--------------|-------------------|
 |**c**|Carácter|Cuando se usa con funciones `printf`, especifica un carácter de byte único; cuando se usa con funciones `wprintf`, especifica un carácter ancho.|
 |**C**|Carácter|Cuando se usa con funciones `printf`, especifica un carácter ancho; cuando se usa con funciones `wprintf`, especifica un carácter de byte único.|
@@ -81,7 +81,7 @@ Los tipos enteros como `short`, `int`, `long`, `long long` y sus variantes de `u
 
 A partir de Visual Studio 2015, si el argumento correspondiente a un especificador de conversión de punto flotante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) es infinito, indefinido o NaN, la salida con formato se ajusta al estándar C99. Esta tabla enumera la salida con formato:
 
-|Valor|Resultados|
+|{2&gt;Value&lt;2}|Resultados|
 |-----------|------------|
 |infinity|`inf`|
 |NaN reservado|`nan`|
@@ -92,7 +92,7 @@ Cualquiera de estos valores puede ir precedido por un signo. Si un carácter esp
 
 Antes de Visual Studio 2015, CRT utilizaba un formato diferente no estándar para la salida de los valores infinito, indefinido y NaN:
 
-|Valor|Resultados|
+|{2&gt;Value&lt;2}|Resultados|
 |-----------|------------|
 |+ infinito|`1.#INF` *dígitos aleatorios*|
 |- infinity|`-1.#INF` *dígitos aleatorios*|
@@ -160,7 +160,7 @@ El carácter de *tipo* determina la interpretación de *precisión* o la precisi
 
 ### <a name="how-precision-values-affect-type"></a>Cómo afectan los valores de precisión al tipo
 
-|Type|Significado|Predeterminado|
+|Tipo de|Significado|Predeterminado|
 |----------|-------------|-------------|
 |**a**, **A**|La precisión especifica el número de dígitos que se muestran después del punto.|La precisión predeterminada es 13. Si la precisión es 0, no se imprime ningún punto decimal a menos que se use la marca **#** .|
 |**c**, **C**|La precisión no tiene ningún efecto.|El carácter se imprime.|
@@ -204,7 +204,7 @@ En Visual C++, aunque `long double` es un tipo bien diferenciado, tiene la misma
 Un especificador de tipo **hc** o **hC** es sinónimo de **c** en las funciones `printf` y de **C** en las funciones `wprintf`. Un especificador de tipo **lc**, **lC**, **wc** o **wC** es sinónimo de **C** en las funciones `printf` y de **c** en las funciones `wprintf`. Un especificador de tipo **hs** o **hS** es sinónimo de **s** en las funciones `printf` y de **S** en las funciones `wprintf`. Un especificador de tipo **ls**, **lS**, **ws** o **wS** es sinónimo de **S** en las funciones `printf` y de **s** en las funciones `wprintf`.
 
 > [!NOTE]
-> **Específico de Microsoft** Los prefijos del modificador de tamaño de argumento **I** (i mayúsculas), **I32**, **I64** y **w** son extensiones de Microsoft y no son compatibles con ISO C. El prefijo **h**, cuando se usa con datos de tipo `char`, y el prefijo **l** (l minúscula), cuando se usa con datos de tipo `double`, son extensiones de Microsoft.
+> **Específico de Microsoft:** Los prefijos de modificador de tamaño de argumentos **i** (i), **I32**, **I64**y **w** son extensiones de Microsoft y no son compatibles con ISO C. El prefijo **h**, cuando se usa con datos de tipo `char`, y el prefijo **l** (l minúscula), cuando se usa con datos de tipo `double`, son extensiones de Microsoft.
 
 ## <a name="see-also"></a>Vea también
 

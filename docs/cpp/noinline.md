@@ -7,22 +7,22 @@ helpviewer_keywords:
 - noinline __declspec keyword
 - __declspec keyword [C++], noinline
 ms.assetid: f259d55b-dec7-4bde-8cf9-14521e4fdc42
-ms.openlocfilehash: e155726ad1f2f3f6f0501d3aebf7fa14e620d6bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e424846c46dd50852b62008c4f1f38827da849c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377407"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857416"
 ---
 # <a name="noinline"></a>noinline
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
-**__declspec (noinline)** indica al compilador nunca inserte una función miembro determinada (función de una clase).
+**__declspec (noinline)** indica al compilador que nunca inlinee una función miembro determinada (función en una clase).
 
 Puede merecer la pena no alinear una función si es pequeña y no es crítica para el rendimiento del código. Es decir, si la función es pequeña y no se la llamará a menudo, por ejemplo, una función que controla una condición de error.
 
-Tenga en cuenta que si una función está marcada como **noinline**, la función de llamada será más pequeña y por lo tanto, sí misma un candidato para la alineación del compilador.
+Tenga en cuenta que si una función está marcada como **noinline**, la función de llamada será más pequeña y, por tanto, será una candidata para la inserción del compilador.
 
 ```cpp
 class X {

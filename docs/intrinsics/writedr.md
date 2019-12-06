@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 473e7223e9974d0125e772c152ea85ae90b97342
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219222"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858066"
 ---
 # <a name="__writedr"></a>__writedr
+
+**Específicos de Microsoft**
 
 Escribe el valor especificado en el registro de depuración especificado.
 
@@ -24,19 +26,19 @@ void __writedr(unsigned DebugRegister, unsigned DebugValue); /* x86 */
 void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-*DebugRegister*\
+\ *DebugRegister*
 de Número del 0 al 7 que identifica el registro de depuración.
 
-*DebugValue*\
+\ *DebugValue*
 de Valor que se va a escribir en el registro de depuración.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Estos intrínsecos solo están disponibles en modo kernel y las rutinas solo están disponibles como intrínsecos.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
@@ -48,5 +50,5 @@ Estos intrínsecos solo están disponibles en modo kernel y las rutinas solo est
 
 ## <a name="see-also"></a>Vea también
 
-[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
+[Intrínsecos del Compilador](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

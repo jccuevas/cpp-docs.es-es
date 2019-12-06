@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498710"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857598"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Específicos de Microsoft**
 
-Construye un objeto **_com_ptr_t** .
+Construye un objeto de **_com_ptr_t** .
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,13 +133,13 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pInterface*<br/>
 Puntero a interfaz sin formato.
 
 *fAddRef*<br/>
-Si es true `AddRef` , se llama a para incrementar el recuento de referencias del puntero de interfaz encapsulado.
+Si es TRUE, se llama a `AddRef` para incrementar el recuento de referencias del puntero de interfaz encapsulado.
 
 *cp*<br/>
 Objeto **_com_ptr_t** .
@@ -148,19 +148,21 @@ Objeto **_com_ptr_t** .
 Puntero de interfaz sin formato, cuyo tipo es diferente del tipo de puntero inteligente de este objeto **_com_ptr_t** .
 
 *varSrc*<br/>
-Objeto `_variant_t`.
+Un objeto `_variant_t`.
 
 *clsid*<br/>
-`CLSID` De una coclase.
+`CLSID` de una coclase.
 
 *dwClsContext*<br/>
 Contexto para el código ejecutable.
 
 *lpcStr*<br/>
-Cadena multibyte que contiene un (a `CLSID` partir de "**{**") o un `ProgID`.
+Cadena multibyte que contiene un `CLSID` (a partir de " **{** ") o un `ProgID`.
 
 *pOuter*<br/>
 El externo desconocido para la [agregación](/windows/win32/com/aggregation).
+
+**FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 

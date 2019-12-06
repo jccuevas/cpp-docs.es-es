@@ -11,12 +11,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: c1d5fc926b396f1ec44b9e44e79721e2ca4a0908
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83fedd9d3cc6cd7c08ba79d2ed83e9f62d919e29
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244173"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857247"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operadores unarios más y de negación: + y -
 
@@ -29,19 +29,21 @@ ms.locfileid: "62244173"
 
 ## <a name="-operator"></a>+ (operador)
 
-El resultado del operador unario más (**+**) es el valor de su operando. El operando del operador unario más debe ser de tipo aritmético.
+El resultado del operador unario más ( **+** ) es el valor de su operando. El operando del operador unario más debe ser de tipo aritmético.
 
-La promoción de entero se realiza en operandos enteros. El tipo resultante es el tipo al que se promueve el operando. Por lo tanto, la expresión `+ch`, donde `ch` es de tipo **char**, da como resultado de tipo **int**; no se modifica el valor. Consulte [conversiones estándar](standard-conversions.md) para obtener más información sobre cómo se realiza la promoción.
+La promoción de entero se realiza en operandos enteros. El tipo resultante es el tipo al que se promueve el operando. Por lo tanto, la expresión `+ch`, donde `ch` es de tipo **Char**, da como resultado el tipo **int**; el valor no se modifica. Vea [conversiones estándar](standard-conversions.md) para obtener más información sobre cómo se realiza la promoción.
 
 ## <a name="--operator"></a>- (operador)
 
-El operador unario de negación (**-**) genera el negativo de su operando. El operando del operador de negación unario debe ser un tipo aritmético.
+El operador unario de negación ( **-** ) genera el negativo de su operando. El operando del operador de negación unario debe ser un tipo aritmético.
 
-La promoción de entero se realiza en operandos enteros y el tipo resultante es el tipo al que se promueve el operando. Consulte [conversiones estándar](standard-conversions.md) para obtener más información acerca de cómo se realiza la promoción.
+La promoción de entero se realiza en operandos enteros y el tipo resultante es el tipo al que se promueve el operando. Vea [conversiones estándar](standard-conversions.md) para obtener más información sobre cómo se realiza la promoción.
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
 La negación unaria de cantidades sin signo se realiza restando el valor del operando de 2^n, donde n es el número de bits de un objeto del tipo sin signo especificado.
+
+**FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 

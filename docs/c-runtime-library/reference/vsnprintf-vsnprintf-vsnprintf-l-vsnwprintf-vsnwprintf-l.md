@@ -55,16 +55,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945308"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857715"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
-Escribe un resultado con formato mediante un puntero a una lista de argumentos. Hay disponibles versiones más seguras de estas funciones; vea [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
+Escribe un resultado con formato mediante un puntero a una lista de argumentos. Hay versiones más seguras de estas funciones disponibles; vea [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -140,7 +140,7 @@ int _vsnwprintf_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *buffer*<br/>
 Ubicación de almacenamiento del resultado.
@@ -161,7 +161,7 @@ Para más información, vea [Especificaciones de formato](../../c-runtime-librar
 
 ## <a name="return-value"></a>Valor devuelto
 
-La función **vsnprintf** devuelve el número de caracteres escritos, sin contar el carácter null de terminación. Si el tamaño de búfer especificado por *Count* no es suficientemente grande para contener el resultado especificado por *Format* y *argptr*, el valor devuelto de **vsnprintf** es el número de caracteres que se escribiría, sin contar el valor null. carácter, si el *recuento* es suficientemente grande. Si el valor devuelto es mayor que *Count* -1, la salida se ha truncado. Un valor devuelto de -1 indica que se produjo un error de codificación.
+La función **vsnprintf** devuelve el número de caracteres escritos, sin contar el carácter null de terminación. Si el tamaño de búfer especificado por *Count* no es lo suficientemente grande como para contener el resultado especificado por *Format* y *argptr*, el valor devuelto de **vsnprintf** es el número de caracteres que se escribiría, sin contar el carácter nulo, si *Count* fuese lo suficientemente grande. Si el valor devuelto es mayor que *Count* -1, la salida se ha truncado. Un valor devuelto de -1 indica que se produjo un error de codificación.
 
 Las funciones **_vsnprintf** y **_vsnwprintf** devuelven el número de caracteres escritos si el número de caracteres que se va a escribir es menor o igual que *Count*; Si el número de caracteres que se va a escribir es mayor que *Count*, estas funciones devuelven-1, lo que indica que la salida se ha truncado.
 
@@ -169,15 +169,15 @@ El valor devuelto por todas estas funciones no incluye el carácter nulo final, 
 
 Si *Format* es **null**, o si *buffer* es **null** y *Count* no es igual a cero, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato a los datos y escribe hasta los caracteres de *recuento* en la memoria a la que apunta el *búfer*. La función **vsnprintf** siempre escribe un terminador null, incluso si trunca la salida. Al usar **_vsnprintf** y **_vsnwprintf**, el búfer terminará en NULL solo si hay espacio al final (es decir, si el número de caracteres que se va a escribir es menor que *Count*).
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, da formato a los datos y escribe hasta los caracteres de *recuento* en la memoria a la que apunta el *búfer*. La función **vsnprintf** siempre escribe un terminador null, incluso si trunca la salida. Cuando se usa **_vsnprintf** y **_vsnwprintf**, el búfer terminará en NULL solo si hay espacio al final (es decir, si el número de caracteres que se va a escribir es menor que *Count*).
 
 > [!IMPORTANT]
 > Para evitar ciertos tipos de riesgos de seguridad, asegúrese de que el *formato* no sea una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
 
 > [!NOTE]
-> Para asegurarse de que hay espacio para el valor null final al llamar a **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** y **_vsnwprintf_l**, asegúrese de que *Count* sea estrictamente menor que la longitud del búfer e inicialice el búfer en es NULL antes de llamar a la función.
+> Para asegurarse de que hay espacio para el valor null final al llamar a **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** y **_vsnwprintf_l**, asegúrese de que el *recuento* es estrictamente menor que la longitud del búfer e inicialice el búfer a NULL antes de llamar a la función.
 >
 > Dado que **vsnprintf** siempre escribe el valor null final, el parámetro *Count* puede ser igual al tamaño del búfer.
 
@@ -185,7 +185,7 @@ A partir de UCRT en Visual Studio 2015 y Windows 10, **vsnprintf** ya no es idé
 
 Las versiones de estas funciones con el sufijo **_L** son idénticas, salvo que utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -194,14 +194,14 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólog
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> o \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> o \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> o \<cwchar>|
 
-Las funciones **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** y **_vsnwprintf_l** son específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Las funciones **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** y **_vsnwprintf_l** son específicas de Microsoft. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

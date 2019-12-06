@@ -11,22 +11,22 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147757"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857130"
 ---
 # <a name="c-multiplicative-operators"></a>Operadores de multiplicación de C
 
-Los operadores multiplicativos realizan operaciones de multiplicación (<strong>\*</strong>), división (**/**) y resto (**%**).
+Los operadores multiplicativos realizan operaciones de multiplicación (<strong>\*</strong>), división ( **/** ) y resto ( **%** ).
 
 ## <a name="syntax"></a>Sintaxis
 
 *multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
 
-Los operandos del operador de resto (**%**) deben ser enteros. Los operadores de multiplicación (<strong>\*</strong>) y división (**/**) pueden tomar operandos de tipo entero o flotante; los tipos de los operandos pueden ser diferentes.
+Los operandos del operador de resto ( **%** ) deben ser enteros. Los operadores de multiplicación (<strong>\*</strong>) y división ( **/** ) pueden tomar operandos de tipo entero o flotante; los tipos de los operandos pueden ser diferentes.
 
 Los operadores multiplicativos realizan las conversiones aritméticas usuales en los operandos. El tipo del resultado es el tipo de los operandos después de la conversión.
 
@@ -35,19 +35,17 @@ Los operadores multiplicativos realizan las conversiones aritméticas usuales en
 
 A continuación se describen los operadores multiplicativos de C:
 
-|Operador|Descripción|
+|"??"|Descripción|
 |--------------|-----------------|
 |<strong>\*</strong>|El operador de multiplicación hace que se multipliquen sus dos operandos.|
 |**/**|El operador de división hace que el primer operando se divida por el segundo. Si se dividen dos operandos enteros y el resultado no es un entero, se trunca según las reglas siguientes:<br/><br/>- El resultado de la división por 0 es indefinido según el estándar ANSI C. El compilador de C de Microsoft genera un error en tiempo de compilación o en tiempo de ejecución.<br/><br/>- Si ambos operandos son positivos o sin signo, el resultado se trunca hacia 0.<br/><br/>- Si alguno de los operandos es negativo, la implementación define si el resultado de la operación es el entero más grande menor o igual que el cociente algebraico o es el entero más pequeño mayor o igual que el cociente algebraico. (Vea la sección específica de Microsoft más adelante).|
 |**%**|El resultado del operador de resto es el resto cuando el primer operando se divide por el segundo. Cuando la división es inexacta, el resultado viene determinado por las reglas siguientes:<br/><br/>- Si el operando derecho es cero, el resultado es indefinido.<br/><br/>- Si ambos operandos son positivos o sin signo, el resultado es positivo.<br/><br/>- Si algún operando es negativo y el resultado es inexacto, el resultado lo define la implementación. (Vea la sección específica de Microsoft más adelante).|
 
-**Específicos de Microsoft**
+### <a name="microsoft-specific"></a>Específico de Microsoft
 
 En la división donde alguno de los operandos es negativo, la dirección del truncamiento es hacia 0.
 
 Si alguna operación es negativa en la división con el operador de resto, el resultado tiene el mismo signo que el dividendo (el primer operando de la expresión).
-
-**FIN de Específicos de Microsoft**
 
 ## <a name="examples"></a>Ejemplos
 

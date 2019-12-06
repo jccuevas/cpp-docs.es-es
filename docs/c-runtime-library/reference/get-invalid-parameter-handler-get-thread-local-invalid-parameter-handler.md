@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 534590fed77fe06149db892d98ba0e555297ac7c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 572d21696d38c47fe0f67d68af5eb249aeb94319
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955834"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857815"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -51,7 +51,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 Un puntero a la función de controlador de parámetros no válidos establecida actualmente o un puntero nulo si no se ha establecido ninguna.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 La función **_get_invalid_parameter_handler** obtiene el controlador global de parámetros no válidos que se ha establecido actualmente. Devuelve un puntero nulo si no se ha establecido ningún controlador global de parámetros no válidos. Del mismo modo, el **_get_thread_local_invalid_parameter_handler** obtiene el controlador de parámetros no válidos local del subproceso del subproceso en el que se llama o un puntero nulo si no se ha establecido ningún controlador. Para obtener información sobre cómo establecer controladores de parámetros no válidos globales y locales para el subproceso, consulte [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
@@ -69,7 +69,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 Para obtener información sobre el controlador de parámetros no válidos, consulte el prototipo en [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|

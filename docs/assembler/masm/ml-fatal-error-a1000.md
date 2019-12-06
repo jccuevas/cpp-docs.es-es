@@ -1,26 +1,26 @@
 ---
 title: Error irrecuperable A1000 de ML
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1000
 helpviewer_keywords:
 - A1000
 ms.assetid: 4fc77a83-8796-4dcf-9c37-6395d635b817
-ms.openlocfilehash: c1149bb4362995c1f63a268deab276b5887b5614
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b403c75b4e27f8b673b262952c286995ae3f935
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178545"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856935"
 ---
 # <a name="ml-fatal-error-a1000"></a>Error irrecuperable A1000 de ML
 
-**no se puede abrir el archivo: nombre de archivo**
+**no se puede abrir el archivo: nombredearchivo**
 
-El ensamblador no pudo abrir un origen, incluya o archivo de salida.
+El ensamblador no pudo abrir un archivo de origen, de inclusión o de salida.
 
-Uno de los siguientes puede ser una causa:
+Una de las causas puede ser una de las siguientes:
 
 - El archivo no existe.
 
@@ -30,11 +30,11 @@ Uno de los siguientes puede ser una causa:
 
 - Ya existe un archivo de solo lectura con el nombre de archivo de salida.
 
-- La unidad actual está lleno.
+- La unidad actual está llena.
 
 - El directorio actual es la raíz y está lleno.
 
-- El dispositivo no se puede escribir.
+- No se puede escribir en el dispositivo.
 
 - La unidad no está lista.
 

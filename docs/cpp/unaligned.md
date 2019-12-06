@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 8eb1b93aa55601125600b6c69d9bff3d9ca43aa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244121"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857260"
 ---
-# <a name="unaligned"></a>__unaligned
+# <a name="__unaligned"></a>__unaligned
 
-**Específico de Microsoft**. Cuando se declara un puntero con el **__unaligned** modificador, el compilador supone que el puntero direcciona datos que no está alineados. Por lo tanto, adecuado para la plataforma de código se genera para controlar las lecturas sin alinear y escribe a través del puntero.
+**Específico de Microsoft**. Cuando se declara un puntero con el modificador **__unaligned** , el compilador supone que el puntero direcciona datos que no están alineados. Por consiguiente, se genera código adecuado para la plataforma para controlar las lecturas y escrituras sin alinear a través del puntero.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Este modificador describe la alineación de los datos dirigidos por el puntero; se supone que el propio puntero esté alineado.
+Este modificador describe la alineación de los datos direccionados por el puntero; se supone que el propio puntero está alineado.
 
-La necesidad de que el **__unaligned** palabra clave varía según el entorno y la plataforma. Error al marcar adecuadamente los datos puede producir problemas comprendido las penalizaciones de rendimiento y errores de hardware. El **__unaligned** modificador no es válido para el x86 plataforma.
+La necesidad de la palabra clave **__unaligned** varía según la plataforma y el entorno. Si no se marcan correctamente los datos, pueden producirse problemas que van desde penalizaciones de rendimiento a errores de hardware. El modificador **__unaligned** no es válido para la plataforma x86.
 
-Para ofrecer compatibilidad con versiones anteriores, **_unaligned** es un sinónimo de **__unaligned** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se ha especificado.
+Por compatibilidad con versiones anteriores, **_unaligned** es un sinónimo de **__unaligned** a menos que se especifique la opción del compilador [/za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) .
 
 Para obtener más información sobre la alineación, vea:
 

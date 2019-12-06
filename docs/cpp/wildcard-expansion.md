@@ -11,23 +11,23 @@ helpviewer_keywords:
 - command-line wildcards
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
-ms.openlocfilehash: 2d495f94f2e3fb7b88d235edc7b98f8e90775393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fdea297bb45a06a08bde4f63f90eabef6ddb539
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209520"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857182"
 ---
 # <a name="wildcard-expansion"></a>Expansión de caracteres comodín
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
 Puede utilizar caracteres comodín (signo de interrogación (?) y asterisco (*)) para especificar los argumentos de nombre de archivo y ruta de acceso en la línea de comandos.
 
-Argumentos de línea de comandos se controlan mediante una rutina denominada `_setargv` (o `_wsetargv` en el entorno de caracteres anchos), que de forma predeterminada no expande los caracteres comodín en cadenas independientes en el `argv` matriz de cadenas. Para obtener más información acerca de cómo habilitar la expansión de caracteres comodín, consulte [expansión de argumentos comodín](../c-language/expanding-wildcard-arguments.md).
+Los argumentos de línea de comandos se controlan mediante una rutina llamada `_setargv` (o `_wsetargv` en el entorno de caracteres anchos), que, de forma predeterminada, no expande los caracteres comodín en cadenas independientes en la matriz de cadenas de `argv`. Para obtener más información sobre cómo habilitar la expansión de caracteres comodín, consulte [expandir argumentos comodín](../c-language/expanding-wildcard-arguments.md).
 
 **FIN de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 
-[main: inicio de programa](../cpp/main-program-startup.md)
+[main: Inicio de programa](../cpp/main-program-startup.md)

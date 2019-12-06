@@ -1,6 +1,6 @@
 ---
 title: Clase Platform::Collections::Vector
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816576"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857897"
 ---
 # <a name="platformcollectionsvector-class"></a>Clase Platform::Collections::Vector
 
@@ -39,7 +39,7 @@ template <typename T, typename E>
    ref class Vector sealed;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *T*<br/>
 Tipo de los elementos contenidos en el objeto Vector.
@@ -47,7 +47,7 @@ Tipo de los elementos contenidos en el objeto Vector.
 *E*<br/>
 Especifica un predicado binario para probar la igualdad con valores de tipo *T*. El valor predeterminado es `std::equal_to<T>`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Los tipos permitidos son:
 
@@ -65,7 +65,7 @@ La clase **Vector** es la C++ implementación concreta de la interfaz [Windows::
 
 Si intenta usar un tipo de **Vector** en un valor devuelto o parámetro público, se produce el error del compilador C3986. Puedes corregir el error si cambias el tipo del parámetro o del valor devuelto a [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
@@ -84,14 +84,14 @@ Si intenta usar un tipo de **Vector** en un valor devuelto o parámetro público
 |[Vector::GetMany](#getmany)|Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado.|
 |[Vector::GetView](#getview)|Devuelve una vista de solo lectura de una clase Vector; es decir, [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
 |[Vector::IndexOf](#indexof)|Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.|
-|[Vector::InsertAt](#insertat)|Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.|
+|[Vector::InsertAt](#insertat)|Inserta el elemento especificado en el objeto vector actual en el elemento identificado por el índice especificado.|
 |[Vector::ReplaceAll](#replaceall)|Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.|
 |[Vector::RemoveAt](#removeat)|Elimina el elemento identificado por el índice especificado del objeto Vector actual.|
 |[Vector::RemoveAtEnd](#removeatend)|Elimina el elemento al final del objeto Vector actual.|
 |[Vector::SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
 |[Vector::Size](#size)|Devuelve el número de elementos del objeto Vector actual.|
 
-### <a name="events"></a>Eventos
+### <a name="events"></a>Events
 
 |||
 |-|-|
@@ -102,7 +102,7 @@ Si intenta usar un tipo de **Vector** en un valor devuelto o parámetro público
 
 `Vector`
 
-### <a name="requirements"></a>Requisitos
+### <a name="requirements"></a>Requisitos de
 
 **Encabezado:** collection.h
 
@@ -118,7 +118,7 @@ Inserta el elemento especificado a continuación del último elemento en el obje
 virtual void Append(T item);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 El elemento que se va a insertar en el objeto Vector. El tipo de *elemento* se define mediante el TypeName *T* .
@@ -147,7 +147,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 Un iterador que apunta al primer elemento del objeto Vector.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Una manera cómoda de contener el iterador devuelto por First () es asignar el valor devuelto a una variable que se declara con la palabra clave de deducción de tipo **auto** . Por ejemplo: `auto x = myVector->First();`. El iterador conoce la longitud de la colección.
 
@@ -163,7 +163,7 @@ Recupera el elemento del objeto Vector actual identificado por el índice especi
 virtual T GetAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
@@ -184,7 +184,7 @@ virtual unsigned int GetMany(
     Platform::WriteOnlyArray<T>^ dest);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *startIndex*<br/>
 Índice basado en cero del principio de los elementos que se van a recuperar.
@@ -196,7 +196,7 @@ Matriz asignada por el llamador de elementos que comienzan en el elemento especi
 
 Número de elementos recuperados.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Esta función no se ha diseñado para el uso en el código de cliente. Se usa internamente en la [función to_vector](../cppcx/to-vector-function.md) para habilitar la conversión eficaz de Platform:: Vector instancias en instancias de STD:: Vector.
 
@@ -224,7 +224,7 @@ Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, de
 virtual bool IndexOf(T value, unsigned int* index);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *valor*<br/>
 El elemento que se va a buscar.
@@ -238,13 +238,13 @@ El parámetro de *Índice* es 0 si el elemento es el primer elemento del vector 
 
 **true** si se encuentra el elemento especificado; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 IndexOf utiliza std::find_if para buscar el elemento. Por tanto, los tipos de elementos personalizados deben sobrecargar los operadores == y != para habilitar las comparaciones de igualdad que requiere find_if.
 
 ##  <a name="insertat"></a>Vector:: Insertat ((método)
 
-Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.
+Inserta el elemento especificado en el objeto vector actual en el elemento identificado por el índice especificado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -252,13 +252,13 @@ Inserta el elemento especificado en el objeto Vector actual detrás del elemento
 virtual void InsertAt(unsigned int index, T item)
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
 *item*<br/>
-Elemento que se va a insertar en el vector después del elemento especificado por *index*. El tipo de *elemento* se define mediante el TypeName *T* .
+Elemento que se va a insertar en el vector en el elemento especificado por *index*. El tipo de *elemento* se define mediante el TypeName *T* .
 
 ## <a name="removeat"></a>Vector:: RemoveAt (método)
 
@@ -270,7 +270,7 @@ Elimina el elemento identificado por el índice especificado del objeto Vector a
 virtual void RemoveAt(unsigned int index);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
@@ -295,7 +295,7 @@ Elimina los elementos del objeto Vector actual y después inserta los elementos 
 virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *ARR*<br/>
 Matriz de objetos cuyo tipo está definido por el TypeName *T* .
@@ -310,7 +310,7 @@ Asigna el valor especificado al elemento del objeto Vector actual identificado p
 virtual void SetAt(unsigned int index, T item);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
@@ -355,7 +355,7 @@ template <typename InIt> Vector(InIt first, InIt last);
 Vector(std::initializer_list<T> il);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *a*<br/>
 Un [STD:: Array](../standard-library/array-class-stl.md) que se usará para inicializar el vector.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245132"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857273"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -25,12 +25,12 @@ El control de excepciones estructurado (SEH) es una extensión de Microsoft a C 
 ## <a name="grammar"></a>Gramática
 
 *try-except-Statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *instrucción compuesta* **__except** **(** *expresión* **)** *instrucción compuesta*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally-Statement* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try** *instrucción compuesta* **__finally** *instrucción compuesta*
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Con SEH, puede asegurarse de que los recursos como los bloques de memoria y los archivos se liberan correctamente si la ejecución finaliza inesperadamente. También puede controlar problemas específicos (por ejemplo, memoria insuficiente) mediante el uso de código estructurado conciso que no depende de instrucciones **goto** ni de probar los códigos de retorno.
 
@@ -138,9 +138,9 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Para obtener más información, consulta [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md).
+Para obtener más información, consulte [/EH (Modelo de control de excepciones)](../build/reference/eh-exception-handling-model.md).
 
-**FIN de Específicos de Microsoft**
+**FIN de específico de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-ms.openlocfilehash: 14e5ea3a051d81828c5f88ac16df60b6ebb5b559
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aebd4800ad8d653d532708784ef0a5333211d46b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498816"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857663"
 ---
 # <a name="argument-definitions"></a>Definiciones de argumentos
 
@@ -30,17 +30,17 @@ proporcionan una manera cómoda de analizar los argumentos en la línea de coman
 Entero que contiene el recuento de argumentos que siguen en *argv*. El parámetro *argc* siempre es mayor o igual que 1.
 
 *argv*<br/>
-Una matriz de cadenas terminadas en null que representan los argumentos de la línea de comandos especificados por el usuario del programa. Por Convención, `argv[0]` es el comando con el que se invoca el programa, `argv[1]` es el primer argumento de la línea de comandos, etc., `argv[argc]`que es siempre null. Vea [personalizar el procesamiento de línea de comandos](../cpp/customizing-cpp-command-line-processing.md) para obtener información sobre cómo suprimir el procesamiento de línea de comandos.
+Una matriz de cadenas terminadas en null que representan los argumentos de la línea de comandos especificados por el usuario del programa. Por Convención, `argv[0]` es el comando con el que se invoca el programa, `argv[1]` es el primer argumento de la línea de comandos, etc., hasta `argv[argc]`, que es siempre NULL. Vea [personalizar el procesamiento de línea de comandos](../cpp/customizing-cpp-command-line-processing.md) para obtener información sobre cómo suprimir el procesamiento de línea de comandos.
 
 El primer argumento de la línea de comandos siempre es `argv[1]` y el último es `argv[argc - 1]`.
 
 > [!NOTE]
-> Por Convención, `argv[0]` es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso con [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) y, si usa los argumentos primero y segundo (*lpApplicationName* y *lpCommandLine*), `argv[0]` no puede ser el nombre del archivo ejecutable; use [GetModuleFileName ](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)para recuperar el nombre del archivo ejecutable y su ruta de acceso completa.
+> Por Convención, `argv[0]` es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso mediante [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) y, si usa el primer y el segundo argumento (*lpApplicationName* y *lpCommandLine*), es posible que `argv[0]` no sea el nombre del archivo ejecutable; Use [GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) para recuperar el nombre del archivo ejecutable y su ruta de acceso completa.
 
-## <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
 *envp*<br/>
-La matriz *envp* , que es una extensión común en muchos sistemas UNIX, se utiliza en Microsoft C++. Es una matriz de cadenas que representan las variables establecidas en el entorno de usuario. Esta matriz finaliza mediante una entrada NULL. Se puede declarar como una matriz de punteros a **Char** `char *envp[]`() o como un puntero a los punteros a **Char** (`char **envp`). Si el programa utiliza `wmain` en lugar de `main`, utilice el tipo de datos **wchar_t** en lugar de **Char**. El bloque de entorno que `main` se `wmain` pasa a y es una copia "inmovilizada" del entorno actual. Si posteriormente cambia el entorno mediante una llamada a `putenv` o `_wputenv`, el entorno actual (devuelto por `getenv` o `_wgetenv` y la `_environ` variable o `_wenviron` ) cambiará, pero el bloque señalado por envp no cambiará. Consulte [personalizar el procesamiento](../cpp/customizing-cpp-command-line-processing.md) de la línea de comandos para obtener información sobre cómo suprimir el procesamiento del entorno. Este argumento es compatible con ANSI en C, pero no en C++.
+La matriz *envp* , que es una extensión común en muchos sistemas UNIX, se utiliza en Microsoft C++. Es una matriz de cadenas que representan las variables establecidas en el entorno de usuario. Esta matriz termina con una entrada NULL. Se puede declarar como una matriz de punteros a **Char** (`char *envp[]`) o como un puntero a los punteros a **Char** (`char **envp`). Si el programa usa `wmain` en lugar de `main`, utilice el tipo de datos **wchar_t** en lugar de **Char**. El bloque de entorno que se pasa a `main` y `wmain` es una copia "inmovilizada" del entorno actual. Si posteriormente cambia el entorno mediante una llamada a `putenv` o `_wputenv`, el entorno actual (devuelto por `getenv` o `_wgetenv` y la variable `_environ` o `_wenviron`) cambiará, pero el bloque señalado por envp no cambiará. Consulte [personalizar el procesamiento](../cpp/customizing-cpp-command-line-processing.md) de la línea de comandos para obtener información sobre cómo suprimir el procesamiento del entorno. Este argumento es compatible con ANSI en C, pero no en C++.
 
 **FIN de Específicos de Microsoft**
 
@@ -74,4 +74,4 @@ int main( int argc, char *argv[], char *envp[] ) {
 
 ## <a name="see-also"></a>Vea también
 
-[main: inicio de programa](../cpp/main-program-startup.md)
+[main: Inicio de programa](../cpp/main-program-startup.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: bf8c61e467796c7bfaedff6918bfbf598ada528e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 573be497bafbe5372186f31b3ea60d9a5ef7fac1
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944375"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856987"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -51,7 +51,7 @@ int _execute_onexit_table(
     );
 ```
 
-#### <a name="parameters"></a>Parámetros
+#### <a name="parameters"></a>Parameters
 
 *table*<br/>
 [in, out] Puntero a la tabla de funciones onexit.
@@ -63,7 +63,7 @@ int _execute_onexit_table(
 
 Si la operación se realiza correctamente, devuelve 0. De lo contrario, devuelve un valor negativo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Estas funciones corresponden a detalles de implementación de la infraestructura que se usan para admitir el tiempo de ejecución de C y no deben llamarse directamente desde el código. El tiempo de ejecución de C usa una *tabla de funciones onexit* para representar la secuencia de las funciones registradas por llamadas a `atexit`, `at_quick_exit` y `_onexit`. La estructura de datos de la tabla de funciones onexit es un detalle de implementación opaco del tiempo de ejecución de C; puede que el orden y el significado de sus miembros de datos cambien. No deben comprobarse mediante código externo.
 
@@ -73,13 +73,13 @@ La función `_register_onexit_function` anexa una función al final de la tabla 
 
 La función `_execute_onexit_table` ejecuta todas las funciones de la tabla de funciones onexit, borra la tabla y luego vuelve. Después de una llamada a `_execute_onexit_table`, la tabla se encuentra en un estado no válido; debe reinicializarse mediante una llamada a `_initialize_onexit_table` antes de usarla de nuevo.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-Las funciones `_initialize_onexit_table`, `_register_onexit_function` y `_execute_onexit_table` son específicas de Microsoft. Para obtener información sobre la compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md).
+Las funciones `_initialize_onexit_table`, `_register_onexit_function`y `_execute_onexit_table` son específicas de Microsoft. Para obtener información sobre la compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

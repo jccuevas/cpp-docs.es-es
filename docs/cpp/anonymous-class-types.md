@@ -5,16 +5,16 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 9cd27fb40522a07ce4591b654ee8a6dda53b4f28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815cc4a81addc673349a3133b24ed73cfe0207e2
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184479"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857676"
 ---
 # <a name="anonymous-class-types"></a>Tipos de clase anónima
 
-Las clases pueden ser anónimas, es decir, se pueden declarar sin un *identificador*. Esto es útil cuando se reemplaza un nombre de clase con un **typedef** nombre, como en el siguiente ejemplo:
+Las clases pueden ser anónimas, es decir, se pueden declarar sin un *identificador*. Esto resulta útil cuando se reemplaza un nombre de clase por un nombre de **typedef** , como en el siguiente procedimiento:
 
 ```cpp
 typedef struct
@@ -25,7 +25,7 @@ typedef struct
 ```
 
 > [!NOTE]
->  El uso de las clases anónimas que se muestra en el ejemplo anterior es útil para mantener la compatibilidad con el código de C existente. En algún código de C, el uso de **typedef** junto con estructuras anónimas es frecuente.
+>  El uso de las clases anónimas que se muestra en el ejemplo anterior es útil para mantener la compatibilidad con el código de C existente. En algunos código de C, el uso de **typedef** junto con estructuras anónimas es frecuente.
 
 Las clases anónimas también son útiles cuando se desea que una referencia a un miembro de clase aparezca como si no estuviera contenida en una clase independiente, como en el siguiente ejemplo de código:
 
@@ -43,13 +43,13 @@ struct PTValue
 PTValue ptv;
 ```
 
-En el código anterior, `iValue` se puede acceder mediante el operador de selección de miembro de objeto (**.**) como sigue:
+En el código anterior, se puede tener acceso a `iValue` mediante el operador de selección de miembro de objeto ( **.** ) de la siguiente manera:
 
 ```cpp
 int i = ptv.iValue;
 ```
 
-Las clases anónimas están sujetas a determinadas restricciones. (Para obtener más información sobre las uniones anónimas, vea [uniones](../cpp/unions.md).) Las clases anónimas:
+Las clases anónimas están sujetas a determinadas restricciones. (Para obtener más información sobre las uniones anónimas, vea [uniones](../cpp/unions.md)). Clases anónimas:
 
 - No pueden tener un constructor o un destructor.
 
@@ -59,7 +59,7 @@ Las clases anónimas están sujetas a determinadas restricciones. (Para obtener 
 
 ## <a name="anonymous-structs"></a>Structs anónimos
 
-### <a name="microsoft-specific"></a>Específicos de Microsoft
+**Específicos de Microsoft**
 
 Una extensión de Microsoft C permite declarar una variable de estructura dentro de otra estructura sin darle un nombre. Estas estructuras anidadas se denominan estructuras anónimas. C++ no permite estructuras anónimas.
 

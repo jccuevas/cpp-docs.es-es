@@ -45,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953123"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857754"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -100,7 +100,7 @@ long long int llrintl(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *x*<br/>
 el valor que se va a redondear.
@@ -113,21 +113,21 @@ Si es correcto, devuelve el valor entero redondeado de *x*.
 |-----------|------------|
 |*x* está fuera del intervalo del tipo de valor devuelto<br /><br /> *x* = ±∞<br /><br /> *x* = Nan|Genera **FE_INVALID** y devuelve cero (0).|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **lrint** y **llrint** que toman tipos **float** y **Long** **Double** . En un programa de C, **lrint** y **llrint** siempre toman un **valor Double**.
 
 Si *x* no representa el equivalente de punto flotante de un valor entero, estas funciones generan **FE_INEXACT**.
 
-**Específico de Microsoft**: Cuando el resultado está fuera del intervalo del tipo de valor devuelto, o cuando el parámetro es un NaN o infinito, el valor devuelto se define como implementación. El compilador de Microsoft devuelve un valor cero (0).
+**Específico de Microsoft**: cuando el resultado está fuera del intervalo del tipo de valor devuelto, o cuando el parámetro es un Nan o infinito, el valor devuelto se define como implementación. El compilador de Microsoft devuelve un valor cero (0).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 
