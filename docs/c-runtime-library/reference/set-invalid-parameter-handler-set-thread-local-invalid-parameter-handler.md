@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 090eb43289313f12b900e671df61f74e7b464872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2e8dab92c70189533656bac359c794de2ad8002
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948491"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857780"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -52,7 +52,7 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pNew*<br/>
 El puntero de función al nuevo controlador de parámetros no válidos.
@@ -61,9 +61,9 @@ El puntero de función al nuevo controlador de parámetros no válidos.
 
 Puntero al controlador de parámetros no válidos antes de la llamada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Muchas funciones de tiempo de ejecución de C comprueban la validez de los argumentos pasados. Si se pasa un argumento no válido, la función puede establecer el número de error **errno** o devolver un código de error. En estos casos, también se llama al controlador de parámetros no válidos. El tiempo de ejecución de C proporciona un controlador de parámetros no válidos global predeterminado que finaliza el programa y muestra un mensaje de error en tiempo de ejecución. Puede usar **_set_invalid_parameter_handler** para establecer su propia función como el controlador global de parámetros no válidos. El tiempo de ejecución de C también admite un controlador de parámetros no válidos de subproceso local. Si se establece un controlador de parámetros local para el subproceso en un subproceso mediante **_set_thread_local_invalid_parameter_handler**, las funciones de tiempo de ejecución de C a las que se llama desde el subproceso usan ese controlador en lugar del controlador global. Solo se puede especificar una función a la vez como controlador global de argumentos no válidos. Solo se puede especificar una función como controlador de argumentos no válidos de subproceso local por cada subproceso, aunque puede haber diferentes subprocesos que tengan diferentes controladores de subproceso local. De esta manera, puede cambiar el controlador usado en una parte del código sin que afecte al comportamiento de otros subprocesos.
+Muchas funciones de tiempo de ejecución de C comprueban la validez de los argumentos pasados. Si se pasa un argumento no válido, la función puede establecer el número de error **errno** o devolver un código de error. En estos casos, también se llama al controlador de parámetros no válidos. El tiempo de ejecución de C proporciona un controlador de parámetros no válidos global predeterminado que finaliza el programa y muestra un mensaje de error en tiempo de ejecución. Puede usar la **_set_invalid_parameter_handler** para establecer su propia función como el controlador de parámetros no válidos global. El tiempo de ejecución de C también admite un controlador de parámetros no válidos de subproceso local. Si se establece un controlador de parámetros local para el subproceso en un subproceso mediante **_set_thread_local_invalid_parameter_handler**, las funciones de tiempo de ejecución de C a las que se llama desde el subproceso usan ese controlador en lugar del controlador global. Solo se puede especificar una función a la vez como controlador global de argumentos no válidos. Solo se puede especificar una función como controlador de argumentos no válidos de subproceso local por cada subproceso, aunque puede haber diferentes subprocesos que tengan diferentes controladores de subproceso local. De esta manera, puede cambiar el controlador usado en una parte del código sin que afecte al comportamiento de otros subprocesos.
 
 Cuando el tiempo de ejecución llama a la función de parámetro no válido, suele significar que se ha producido un error irrecuperable. La función del controlador de parámetros no válidos que proporcione debe guardar todos los datos que pueda contener y luego debe anularse. No debe devolver el control a la función principal, a menos que esté seguro de que el error es recuperable.
 
@@ -81,7 +81,7 @@ void _invalid_parameter(
 
 El argumento *Expression* es una representación de cadena ancha de la expresión de argumento que provocó el error. El argumento de la *función* es el nombre de la función de CRT que recibió el argumento no válido. El argumento *File* es el nombre del archivo de código fuente CRT que contiene la función. El argumento *line* es el número de línea del archivo. Se reserva el último argumento. Todos los parámetros tienen el valor **null** a menos que se use una versión de depuración de la biblioteca CRT.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|

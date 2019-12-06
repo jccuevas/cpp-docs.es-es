@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: e18db90779ed59a6ca6976f69a5993d94d61c6bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dee75bf5b16b5fe5b619444f7f2736010bb42a84
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955936"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857819"
 ---
 # <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -40,7 +40,7 @@ int _set_FMA3_enable(int flag);
 int _get_FMA3_enable();
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *flag*<br/>
 Establézcalo en 1 para habilitar las implementaciones de FMA3 de las funciones de biblioteca de punto flotante de trascendente Math en plataformas x64, o en 0 para usar las implementaciones que no usan instrucciones FMA3.
@@ -49,13 +49,13 @@ Establézcalo en 1 para habilitar las implementaciones de FMA3 de las funciones 
 
 Un valor distinto de cero si las implementaciones de FMA3 de las funciones de biblioteca de punto flotante de trascendente Math están habilitadas. De lo contrario, es cero.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Utilice la función **_set_FMA3_enable** para habilitar o deshabilitar el uso de instrucciones FMA3 en las funciones de punto flotante de trascendente Math en la biblioteca CRT. El valor devuelto refleja la implementación en uso después del cambio. Si la CPU no admite instrucciones FMA3, esta función no puede habilitarlas en la biblioteca y el valor devuelto es cero. Use **_get_FMA3_enable** para obtener el estado actual de la biblioteca. De forma predeterminada, en las plataformas x64, el código de inicio de CRT detecta si la CPU admite instrucciones FMA3 y habilita o deshabilita las implementaciones de FMA3 en la biblioteca.
 
 Dado que las implementaciones de FMA3 usan algoritmos diferentes, las pequeñas diferencias en el resultado de los cálculos pueden ser observables cuando las implementaciones de FMA3 están habilitadas o deshabilitadas, o entre equipos que no admiten FMA3. Para obtener más información, consulte [problemas de migración de punto flotante](../../porting/floating-point-migration-issues.md).
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Las funciones **_set_FMA3_enable** y **_get_FMA3_enable** solo están disponibles en las versiones x64 de CRT.
 

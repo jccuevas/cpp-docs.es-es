@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941126"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857832"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -41,7 +41,7 @@ int feraiseexcept(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *excepts*<br/>
 Excepciones de punto flotante que se generan.
@@ -50,11 +50,11 @@ Excepciones de punto flotante que se generan.
 
 Si todas las excepciones especificadas se generan correctamente, devuelve 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-La función **feraiseexcept** intenta generar las excepciones de punto flotante especificadas por *excepts*.   La función **feraiseexcept** admite estas macros de excepción, definidas \<en fenv. h >:
+La función **feraiseexcept** intenta generar las excepciones de punto flotante especificadas por *excepts*.   La función **feraiseexcept** admite estas macros de excepción, que se definen en \<fenv. h >:
 
-|Macro de excepción|DESCRIPCIÓN|
+|Macro de excepción|Descripción|
 |---------------------|-----------------|
 |FE_DIVBYZERO|Se ha producido un error de singularidad o de polo en una operación de punto flotante anterior; se ha creado un valor infinito.|
 |FE_INEXACT|Se ha forzado la función a redondear el resultado almacenado de una operación de punto flotante anterior.|
@@ -67,15 +67,15 @@ El argumento *excepts* puede ser cero, uno de los valores de macro de excepción
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 
-**Específico de Microsoft:** Las excepciones especificadas en *excepts* se generan en el orden FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Sin embargo, FE_INEXACT se puede generar cuando se genera FE_OVERFLOW o FE_UNDERFLOW, aunque no se especifique en *excepts*. **Fin de Específicos de Microsoft**
+**Específico de Microsoft:** Las excepciones especificadas en *excepts* se generan en el orden FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW FE_INEXACT. Sin embargo, FE_INEXACT se pueden generar cuando se produce FE_OVERFLOW o FE_UNDERFLOW, aunque no se especifique en *excepts*.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

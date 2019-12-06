@@ -10,29 +10,26 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498784"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857702"
 ---
 # <a name="based-pointers-c"></a>Punteros con base (C++)
 
-**Específicos de Microsoft**
-
-La palabra clave **_ _ based** permite declarar punteros basados en punteros (punteros que son desplazamientos de punteros existentes).
+La palabra clave **__based** permite declarar punteros basados en punteros (punteros que son desplazamientos de punteros existentes). La palabra clave **__based** es específica de Microsoft.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 type __based( base ) declarator
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Los punteros basados en direcciones de puntero son la única forma de la palabra clave **_ _ based** válida en las compilaciones de 32 o 64 bits. Para el compilador de 32 bits de Microsoft C/C++, un puntero basado es un desplazamiento de 32 bits desde una base de puntero de 32 bits. Se aplica una restricción similar a los entornos de 64 bits, donde un puntero basado es un desplazamiento de 64 bits de la base de 64 bits.
+Los punteros basados en direcciones de puntero son la única forma de la palabra clave **__based** válida en las compilaciones de 32 bits o 64 bits. Para el compilador de 32 bits de Microsoft C/C++, un puntero basado es un desplazamiento de 32 bits desde una base de puntero de 32 bits. Se aplica una restricción similar a los entornos de 64 bits, donde un puntero basado es un desplazamiento de 64 bits de la base de 64 bits.
 
 Uno de los usos de los punteros basados en punteros son los identificadores persistentes que contienen punteros. Una lista vinculada formada por punteros basados en un puntero se puede guardar en el disco y recargar en otro lugar de la memoria; los punteros seguirán siendo válidos. Por ejemplo:
 
@@ -53,7 +50,7 @@ Al puntero `vpBuffer` se le asigna la dirección de memoria asignada posteriorme
 
 Cuando se desreferencia un puntero basado, la base se debe especificar explícitamente o se debe conocer implícitamente con la declaración.
 
-Por compatibilidad con versiones anteriores, **_based** es un sinónimo de **_ _ based** a menos que se especifique la opción del compilador [/za \(Disable Language Extensions](../build/reference/za-ze-disable-language-extensions.md) .
+Por compatibilidad con versiones anteriores, **_based** es un sinónimo de **__based** a menos que se especifique la opción del compilador [/za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Ejemplo
 

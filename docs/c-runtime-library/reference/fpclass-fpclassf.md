@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957039"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857845"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -56,7 +56,7 @@ int _fpclassf(
 ); /* x64 only */
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *x*<br/>
 Valor de punto flotante que se va a probar.
@@ -65,7 +65,7 @@ Valor de punto flotante que se va a probar.
 
 Las funciones **_fpclass** y **_fpclassf** devuelven un valor entero que indica la clasificación de punto flotante del argumento *x*. Es posible que la clasificación tenga uno de los valores siguientes, que se definen en \<float.h>.
 
-|Valor|DESCRIPCIÓN|
+|{2&gt;Value&lt;2}|Descripción|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|NaN de señalización|
 |**_FPCLASS_QNAN**|NaN reservado|
@@ -78,11 +78,11 @@ Las funciones **_fpclass** y **_fpclassf** devuelven un valor entero que indica 
 |**_FPCLASS_PN**|Positivo normalizado distinto de cero|
 |**_FPCLASS_PINF**|Infinito positivo (+INF)|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Las funciones **_fpclass** y **_fpclassf** son específicas de Microsoft. Son similares a [fpclassify](fpclassify.md), pero devuelven información más detallada sobre el argumento. La función **_fpclassf** solo está disponible cuando se compila para la plataforma x64.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Función|Encabezado necesario|
 |--------------|---------------------|

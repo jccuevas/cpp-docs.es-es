@@ -2,12 +2,12 @@
 title: Resumen de declaraciones
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 21d6866f8e0b370d8a0d93253a6259302666963a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 88cfc78089e0efd4765a40ab0d9c6dc333deb125
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647205"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857026"
 ---
 # <a name="summary-of-declarations"></a>Resumen de declaraciones
 
@@ -19,10 +19,10 @@ ms.locfileid: "50647205"
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
-*attribute-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\* es específico de Microsoft \*/<br/>
+*Attribute-SEQ* :&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específico de Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*attribute* *attribute-seq*<sub>opt</sub>
 
-*attribute* : one of&nbsp;&nbsp;&nbsp;&nbsp;/\* específico de Microsoft \*/<br/>
+*Attribute* : uno de&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específico de Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*:<br/>
@@ -39,17 +39,17 @@ ms.locfileid: "50647205"
 &nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Específico de Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-Modifier-SEQ* **)**  /\* \*específico de Microsoft /
 
 *type-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Específico de Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Específico de Microsoft \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*específico de Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*específico de Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*específico de Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*específico de Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -68,10 +68,10 @@ ms.locfileid: "50647205"
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)** /\* Declarador de nuevo estilo \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)** /\* Declarador de estilo obsoleto \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  /\* Declarador de nuevo estilo \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  /\* Declarador de estilo obsoleto \*/
 
 *pointer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
@@ -143,14 +143,14 @@ ms.locfileid: "50647205"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
 
 *direct-abstract-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *abstract-declarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
 
 *initializer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *initializer-list* **}** /\* Para la inicialización de agregados \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *initializer-list* **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **}**  /\* Para la inicialización de agregados \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -162,11 +162,11 @@ ms.locfileid: "50647205"
 *typedef-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
-*extended-decl-modifier-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Específico de Microsoft \*/<br/>
+*Extended-decl-Modifier-SEQ*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específico de Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* Específico de Microsoft \*/<br/>
+*Extended-decl-Modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*específico de Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
