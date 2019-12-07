@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683327"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898775"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>ADVERTENCIA del compilador (nivel 3) C4996
 
@@ -23,7 +23,7 @@ El código usa una función, un miembro de clase, una variable o una definición
 
 ## <a name="remarks"></a>Notas
 
-Muchas funciones, funciones miembro, funciones de plantilla y variables globales de las bibliotecas de Visual Studio están *desusadas*. Algunos, como las funciones POSIX, están en desuso porque tienen un nombre preferido diferente. Algunas funciones de la biblioteca en tiempo de ejecución de C están desusadas porque no son seguras y tienen una variante más segura. Otras están desusadas porque están obsoletas. Los mensajes de degradación suelen incluir un reemplazo sugerido para la función o variable global en desuso.
+Muchas funciones, funciones miembro, funciones de plantilla y variables globales de las bibliotecas de Visual Studio están *desusadas*. Algunos, como POSIX y las funciones específicas de Microsoft, están desusados porque ahora tienen un nombre preferido diferente. Algunas funciones de la biblioteca en tiempo de ejecución de C están desusadas porque no son seguras y tienen una variante más segura. Otras están desusadas porque están obsoletas. Los mensajes de degradación suelen incluir un reemplazo sugerido para la función o variable global en desuso.
 
 ## <a name="turn-off-the-warning"></a>Desactivar la advertencia
 
@@ -61,9 +61,9 @@ Estos son algunos de los orígenes comunes de errores y advertencias de C4996:
 
 **El nombre POSIX de este elemento está en desuso. En su lugar, use ISO C y C++ el nombre compatible:** *New-Name*. **Consulte la ayuda en línea para obtener más información.**
 
-Microsoft ha cambiado el nombre de algunas funciones POSIX en CRT para cumplir las reglas de C99 y C++ 03 para los nombres de funciones globales definidos por la implementación. Solo los nombres están en desuso, no las propias funciones. En la mayoría de los casos, se agregó un carácter de subrayado inicial al nombre de la función POSIX para crear un nombre compatible con los estándares. El compilador emite una advertencia de desuso para el nombre de función original y sugiere el nombre preferido.
+Microsoft ha cambiado el nombre de algunas funciones de biblioteca POSIX y específicas de Microsoft en CRT para cumplir las restricciones de C99 y C++ 03 en los nombres reservados y globales definidos por la implementación. *Solo los nombres están en desuso, no las propias funciones*. En la mayoría de los casos, se agregó un carácter de subrayado inicial al nombre de la función para crear un nombre conforme. El compilador emite una advertencia de desuso para el nombre de función original y sugiere el nombre preferido.
 
-Para corregir este problema, normalmente se recomienda cambiar el código para usar los nombres de función sugeridos en su lugar. Sin embargo, los nombres actualizados son específicos de Microsoft. Si necesita usar los nombres de función existentes por motivos de portabilidad, puede desactivar estas advertencias. Las funciones POSIX siguen estando disponibles en la biblioteca bajo sus nombres originales.
+Para corregir este problema, normalmente se recomienda cambiar el código para usar los nombres de función sugeridos en su lugar. Sin embargo, los nombres actualizados son específicos de Microsoft. Si necesita usar los nombres de función existentes por motivos de portabilidad, puede desactivar estas advertencias. Las funciones siguen estando disponibles en la biblioteca bajo sus nombres originales.
 
 Para desactivar las advertencias sobre desuso para estas funciones, defina la macro de preprocesador **\_CRT\_NONSTDC\_no\_advertencias**. Puede definir esta macro en la línea de comandos incluyendo la opción `/D_CRT_NONSTDC_NO_WARNINGS`.
 
