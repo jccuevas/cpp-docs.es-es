@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: Archivos y secuencias
+                      href: c-runtime-library/files-and-streams.md
+                    - name: Secuencias binarias y de texto
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Secuencias anchas y de bytes
                       href: c-runtime-library/byte-and-wide-streams.md
@@ -10418,7 +10420,7 @@
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: task_group (Clase)
                           href: parallel/concrt/reference/task-group-class.md
-                        - name: task_handle (Clase)
+                        - name: task_handle (clase)
                           href: parallel/concrt/reference/task-handle-class.md
                         - name: task_options (Clase) (Runtime de simultaneidad)
                           href: parallel/concrt/reference/task-options-class-concurrency-runtime.md

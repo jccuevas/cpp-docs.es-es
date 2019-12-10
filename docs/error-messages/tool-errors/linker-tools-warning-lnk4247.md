@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: cd4108f8bd06ec7a0b2d2eb9fab13917174b797b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346965"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991157"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>Advertencia de las herramientas del vinculador LNK4247
 
-punto de entrada 'nombre_representativo_de_función' ya tiene un atributo de subproceso; 'atributo' omitido
+el punto de entrada ' decorated_function_name ' ya tiene un atributo Thread; ' atributo ' omitido
 
-Un punto de entrada con [/Entry (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md), tenía un atributo de subprocesamiento, pero [/CLRTHREADATTRIBUTE (Establecer atributo de subproceso de CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) también se especificó con un modelo de subprocesos diferentes.
+Un punto de entrada, especificado con [/entry (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md), tenía un atributo de subprocesos, pero también se especificó [/CLRTHREADATTRIBUTE (establecer el atributo de subproceso de CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) , con un modelo de subprocesos diferente.
 
-El vinculador omitió el valor especificado con/CLRTHREADATTRIBUTE.
+El enlazador omitió el valor especificado con/CLRTHREADATTRIBUTE.
 
-Para resolver esta advertencia:
+Para resolver esta ADVERTENCIA:
 
-- Quitar/CLRTHREADATTRIBUTE de la compilación.
+- Quite/CLRTHREADATTRIBUTE de la compilación.
 
-- Quite el atributo de archivo de código fuente.
+- Quite el atributo del archivo de código fuente.
 
-- Elimine el atributo de origen y/CLRTHREADATTRIBUTE desde la compilación y acepte el modelo de subprocesos de CLR de forma predeterminada.
+- Quite el atributo del origen y/CLRTHREADATTRIBUTE de la compilación y acepte el modelo de subprocesos de CLR predeterminado.
 
-- Cambie el valor pasado a/CLRTHREADATTRIBUTE, que lo está de acuerdo con el atributo de origen.
+- Cambie el valor pasado a/CLRTHREADATTRIBUTE, de modo que acepte el atributo de origen.
 
-- Cambie el atributo de origen, de modo que lo está de acuerdo con el valor pasado a/CLRTHREADATTRIBUTE.
+- Cambiar el atributo en el origen, de modo que acepte el valor pasado a/CLRTHREADATTRIBUTE.
 
-El ejemplo siguiente genera la advertencia LNK4247
+En el ejemplo siguiente se genera LNK4247
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

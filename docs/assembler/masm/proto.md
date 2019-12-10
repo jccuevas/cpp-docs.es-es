@@ -1,17 +1,17 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394754"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987873"
 ---
 # <a name="proto"></a>PROTO
 
@@ -21,15 +21,15 @@ Prototipos de una función o un procedimiento. Puede llamar a la función protot
 
 > *etiqueta* **proto** ⟦*Distance*⟧ ⟦*Language-Type*⟧ ⟦ __,__ ⟦*parámetro*⟧ __:__ *Tag* ... ⟧
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 \ de *etiqueta*
 Nombre de la función prototipo.
 
-\ de *distancia*
+*distancia* (solo para MASM de 32 bits). \
 Opta Se usa en los modelos de memoria de 16 bits para reemplazar el valor predeterminado e indicar llamadas **cercanas** o **lejanas** .
 
-\ *de tipo de idioma*
+*tipo de idioma* (solo MASM de 32 bits). \
 Opta Establece la llamada y la Convención de nomenclatura para los procedimientos y símbolos públicos. Las convenciones admitidas son:
 
 - modelo **plano** de 32 bits: **C**, **Stdcall**
