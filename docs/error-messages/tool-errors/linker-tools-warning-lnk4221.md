@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: fb355b6d004d9488abac89ef44c9ec38c791ffda
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630801"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988043"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Advertencia de las herramientas del vinculador LNK4221
 
@@ -19,12 +19,12 @@ Este archivo objeto no define ningún símbolo público que no se haya definido 
 
 Considere los dos fragmentos de código siguientes.
 
-```
+```cpp
 // a.cpp
 #include <atlbase.h>
 ```
 
-```
+```cpp
 // b.cpp
 #include <atlbase.h>
 int function()
@@ -39,13 +39,13 @@ No se emite ninguna advertencia en el segundo escenario porque el enlazador func
 
 ::: moniker range=">=vs-2019"
 
-Una causa común de este error es cuando dos archivos de código fuente especifican la opción [/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) con el mismo nombre de archivo de encabezado especificado en el campo de **encabezado** precompilado. Una causa común de este problema se centra en *PCH. h* , ya que, de forma predeterminada, *PCH. cpp* incluye PCH. *h* y no agrega ningún símbolo nuevo. Si otro archivo de código fuente incluye *PCH. h* con **/YC** y el archivo. obj asociado se procesa antes que PCH. obj, el vinculador producirá LNK4221.
+Una causa común de este error es cuando dos archivos de código fuente especifican la opción [/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) con el mismo nombre de archivo de encabezado especificado en el campo de **encabezado precompilado** . Una causa común de este problema se centra en *PCH. h* , ya que, de forma predeterminada, *PCH. cpp* incluye PCH. *h* y no agrega ningún símbolo nuevo. Si otro archivo de código fuente incluye *PCH. h* con **/YC** y el archivo. obj asociado se procesa antes que PCH. obj, el vinculador producirá LNK4221.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Una causa común de este error es cuando dos archivos de código fuente especifican la opción [/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) con el mismo nombre de archivo de encabezado especificado en el campo de **encabezado** precompilado. Una causa común de este problema trata con *stdafx. h* , ya que, de forma predeterminada, *stdafx. cpp* incluye *stdafx. h* y no agrega ningún símbolo nuevo. Si otro archivo de código fuente incluye *stdafx. h* con **/YC** y el archivo. obj asociado se procesa antes que stdafx. obj, el vinculador producirá LNK4221.
+Una causa común de este error es cuando dos archivos de código fuente especifican la opción [/YC (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) con el mismo nombre de archivo de encabezado especificado en el campo de **encabezado precompilado** . Una causa común de este problema trata con *stdafx. h* , ya que, de forma predeterminada, *stdafx. cpp* incluye *stdafx. h* y no agrega ningún símbolo nuevo. Si otro archivo de código fuente incluye *stdafx. h* con **/YC** y el archivo. obj asociado se procesa antes que stdafx. obj, el vinculador producirá LNK4221.
 
 ::: moniker-end
 

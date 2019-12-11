@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 0de96306e645ec85562e414a96283923e93a00ad
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787097"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988327"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comunes para comandos y propiedades de MSBuild
 
@@ -112,9 +112,9 @@ Para mostrar todas las macros disponibles actualmente, en el cuadro de diálogo 
 
 ## <a name="list-of-common-macros"></a>Lista de macros comunes
 
-En esta tabla se describe un subconjunto utilizado comúnmente de las macros disponibles; Hay muchas más que no aparecen aquí. Vaya al cuadro de diálogo macros para ver todas las propiedades y sus valores actuales en el proyecto. Para obtener detalles sobre cómo se crean y usan las definiciones de propiedades de MSBuild como macros en los archivos .props, .targets y .vcxproj, vea [Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties).
+En esta tabla se describe un subconjunto utilizado comúnmente de las macros disponibles; Hay muchas más que no aparecen aquí. Vaya al cuadro de diálogo **macros** para ver todas las propiedades y sus valores actuales en el proyecto. Para obtener detalles sobre cómo se crean y usan las definiciones de propiedades de MSBuild como macros en los archivos .props, .targets y .vcxproj, vea [Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties).
 
-|Macro|DESCRIPCIÓN|
+|Macro|Descripción|
 |-----------|-----------------|
 |**$(Configuration)**|El nombre de la configuración del proyecto actual (por ejemplo, "Depuración").|
 |**$(DevEnvDir)**|El directorio de instalación de Visual Studio (definido como unidad + ruta de acceso); incluye la barra diagonal inversa "\\".|
@@ -131,7 +131,7 @@ En esta tabla se describe un subconjunto utilizado comúnmente de las macros dis
 |**$(ProjectFileName)**|El nombre de archivo del proyecto (definido como nombre base + extensión de archivo).|
 |**$(ProjectName)**|El nombre base del proyecto.|
 |**$(ProjectPath)**|El nombre de ruta de acceso absoluta del proyecto (definido como unidad + ruta de acceso + nombre base + extensión de archivo).|
-|**$ (PublishDir)**|La ubicación de salida para el destino de publicación; incluye la barra diagonal inversa final '\\'. Tiene como valor predeterminado la carpeta **$ (outdir) APP\\ . Publish** .|
+|**$ (PublishDir)**|La ubicación de salida para el destino de publicación; incluye la barra diagonal inversa final '\\'. Tiene como valor predeterminado la carpeta **$ (outdir) app. publish\\** .|
 |**$(RemoteMachine)**|Establece en el valor de la propiedad **Remote Machine** en la página de propiedades de depuración. Para obtener más información, vea [Cambiar la configuración del proyecto para una configuración de depuración de C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
 |**$(RootNameSpace)**|El espacio de nombres, si hubiera, que contiene la aplicación.|
 |**$(SolutionDir)**|El directorio de la solución (definido como unidad + ruta de acceso); incluye la barra diagonal inversa "\\". Solo se define cuando se compila una solución en el IDE.|
@@ -146,20 +146,20 @@ En esta tabla se describe un subconjunto utilizado comúnmente de las macros dis
 |**$(TargetPath)**|El nombre de ruta de acceso absoluta del archivo de salida principal de la compilación (definido como unidad + ruta de acceso + nombre base + extensión de archivo).|
 |**$(VCInstallDir)**|El directorio en el que se incluye el contenido de C++ de la instalación de Visual Studio. Esta propiedad contiene la versión del conjunto de herramientas C++ de Microsoft (MSVC) de destino, que podría ser diferente del host de Visual Studio. Por ejemplo, al compilar con `$(PlatformToolset) = v140`, **$ (VCInstallDir)** contiene la ruta de acceso a la instalación de Visual Studio 2015.|
 |**$(VSInstallDir)**|El directorio en el que instaló Visual Studio. Esta propiedad contiene la versión del conjunto de herramientas de Visual Studio de destino, que podría ser diferente a la del host de Visual Studio. Por ejemplo, al compilar con `$(PlatformToolset) = v110`, **$(VSInstallDir)** contiene la ruta de acceso a la instalación de Visual Studio 2012.|
-|**$(WebDeployPath)**|La ruta de acceso relativa desde la raíz de la implementación web donde residen las salidas del proyecto. Devuelve el mismo valor que <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
+|**$(WebDeployPath)**|La ruta de acceso relativa desde la raíz de la implementación web donde residen las salidas del proyecto.|
 |**$(WebDeployRoot)**|La ruta de acceso absoluta a la ubicación de **\<localhost>** . Por ejemplo, c:\inetpub\wwwroot.|
 
 ## <a name="obsolete-macros"></a>Macros obsoletas
 
 El sistema de compilación de C++ se ha cambiado significativamente entre Visual Studio 2008 y Visual Studio 2010. Muchas macros que se usaban en los tipos de proyectos anteriores se han cambiado por otras nuevas. Estas macros ya no se usan o se han reemplazado por una o varias propiedades equivalentes o valores de [macro de metadatos de elemento](/visualstudio/msbuild/itemmetadata-element-msbuild) ( **%(** _nombre_ **)** ). Las macros que se marcan como "migradas" se pueden actualizar mediante la herramienta de migración de proyectos. Si el proyecto que contiene la macro se migra desde Visual Studio 2008 o una versión anterior a Visual Studio 2010, Visual Studio convierte la macro a la macro equivalente actual. En las versiones posteriores de Visual Studio no se pueden convertir proyectos de Visual Studio 2008 y versiones anteriores al nuevo tipo de proyecto. Debe convertir estos proyectos en dos pasos: en primer lugar convertirlos a Visual Studio 2010 y, después, convertir el resultado a la versión más reciente de Visual Studio. Para obtener más información, vea [Información general sobre posibles problemas de actualización](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
 
-|Macro|DESCRIPCIÓN|
+|Macro|Descripción|
 |-----------|-----------------|
-|**$(InputDir)**|(Migrada). El directorio del archivo de entrada (definido como unidad + ruta de acceso); incluye la barra diagonal inversa "\\". Si el proyecto es la entrada, esta macro equivale a **$(ProjectDir)** .|
-|**$(InputExt)**|(Migrada). La extensión de archivo del archivo de entrada. Incluye el "." antes de la extensión de archivo. Si el proyecto es la entrada, esta macro equivale a **$(ProjectExt)** . Para los archivos de código fuente, se trata de **%(Extension)** .|
-|**$(InputFileName)**|(Migrada). El nombre de archivo del archivo de entrada (definido como nombre base + extensión de archivo). Si el proyecto es la entrada, esta macro equivale a **$(ProjectFileName)** . Para los archivos de código fuente, se trata de **%(Identity)** .|
-|**$(InputName)**|(Migrada). El nombre base del archivo de entrada. Si el proyecto es la entrada, esta macro equivale a **$(ProjectName)** . Para los archivos de código fuente, se trata de **%(Filename)** .|
-|**$(InputPath)**|(Migrada). El nombre de ruta de acceso absoluta del archivo de entrada (definido como unidad + ruta de acceso + nombre base + extensión de archivo). Si el proyecto es la entrada, esta macro equivale a **$(ProjectPath)** . Para los archivos de código fuente, se trata de **%(FullPath)** .|
+|**$(InputDir)**|(Migrado). Directorio del archivo de entrada (definido como unidad + ruta de acceso); incluye la barra diagonal inversa final '\\'. Si el proyecto es la entrada, esta macro equivale a **$(ProjectDir)** .|
+|**$(InputExt)**|(Migrado). La extensión de archivo del archivo de entrada. Incluye el "." antes de la extensión de archivo. Si el proyecto es la entrada, esta macro equivale a **$(ProjectExt)** . Para los archivos de código fuente, se trata de **%(Extension)** .|
+|**$(InputFileName)**|(Migrado). Nombre del archivo de entrada (definido como nombre base + extensión de archivo). Si el proyecto es la entrada, esta macro equivale a **$(ProjectFileName)** . Para los archivos de código fuente, se trata de **%(Identity)** .|
+|**$(InputName)**|(Migrado). Nombre base del archivo de entrada. Si el proyecto es la entrada, esta macro equivale a **$(ProjectName)** . Para los archivos de código fuente, se trata de **%(Filename)** .|
+|**$(InputPath)**|(Migrado). Nombre de la ruta de acceso absoluta del archivo de entrada (definido como unidad + ruta de acceso + nombre base + extensión de archivo). Si el proyecto es la entrada, esta macro equivale a **$(ProjectPath)** . Para los archivos de código fuente, se trata de **%(FullPath)** .|
 |**$(ParentName)**|Nombre del elemento que contiene este elemento de proyecto. Se trata del nombre de la carpeta principal o el nombre de proyecto.|
 |**$(SafeInputName)**|El nombre del archivo como un nombre de clase válido, sin extensión de archivo. Esta propiedad no tiene un equivalente exacto.|
 |**$(SafeParentName)**|El nombre del elemento primario inmediato con formato de nombre válido. Por ejemplo, un formulario es el elemento primario de un archivo .resx. Esta propiedad no tiene un equivalente exacto.|
@@ -167,6 +167,6 @@ El sistema de compilación de C++ se ha cambiado significativamente entre Visual
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de Visual Studio:C++](../creating-and-managing-visual-cpp-projects.md)\
-[Guía C++ de migración y actualización visual](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Proyectos de Visual Studio C++ :](../creating-and-managing-visual-cpp-projects.md)\
+[Guía C++ de migración y actualización de Visual](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
 [Información general sobre posibles problemas de actualización](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)
