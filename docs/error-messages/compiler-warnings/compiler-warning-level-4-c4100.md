@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-ms.openlocfilehash: 80794d270b40a8f40d44630da70455c015158423
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: bcd51c66359d0553b7657d85f5b45ee22d4648ff
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541242"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991649"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Advertencia del compilador (nivel 4) C4100
 
-' Identifier ': parámetro formal sin referencia
+'identificador': parámetro formal no referenciado
 
-No se hace referencia al parámetro formal en el cuerpo de la función. Se omite el parámetro sin referencia.
+No se hace referencia al parámetro formal en el cuerpo de la función. Se omite el parámetro no referenciado.
 
-C4100 también se puede emitir cuando el código llama a un destructor en un parámetro de tipo primitivo que, de otro modo, no se hace referencia.  Se trata de una limitación del compilador de Microsoft C++ .
+También puede emitirse C4100 cuando el código llama a un destructor en un parámetro de tipo primitivo no referenciado de otra forma.  Se trata de una limitación del compilador de Microsoft C++ .
 
-En el ejemplo siguiente se genera C4100:
+El código siguiente genera el error C4100:
 
 ```cpp
 // C4100.cpp

@@ -1,5 +1,5 @@
 ---
-title: '&lt;valor > (comentarios de documentación de C++)'
+title: '> de valor &lt;C++ (comentarios de documentación)'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: c0863b41791254992d16d373328ff6c8a5d6f94f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de84d1faca59a6c8e4f82fba3605cbd54a05bd2e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317034"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988595"
 ---
-# <a name="ltvaluegt"></a>&lt;value&gt;
+# <a name="ltvaluegt"></a>&lt;valor&gt;
 
 La etiqueta \<value> permite describir una propiedad y los métodos de descriptor de acceso de propiedad. Tenga en cuenta que cuando agrega una propiedad mediante un asistente de código en el entorno de desarrollo integrado de Visual Studio, agregará una etiqueta [\<summary>](summary-visual-cpp.md) para la propiedad nueva. Después, debe agregar manualmente una etiqueta \<value> para describir el valor que representa esa propiedad.
 
@@ -25,18 +25,18 @@ La etiqueta \<value> permite describir una propiedad y los métodos de descripto
 <value>property-description</value>
 ```
 
-#### <a name="parameters"></a>Parámetros
+#### <a name="parameters"></a>Parameters
 
 *property-description*<br/>
 Una descripción de la propiedad.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Compile con [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.
+Compile con el parámetro [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // xml_value_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_value_tag.dll

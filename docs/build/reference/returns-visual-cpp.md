@@ -1,5 +1,5 @@
 ---
-title: '&lt;Devuelve > (comentarios de documentación de C++)'
+title: '&lt;devuelve > (C++ comentarios de documentación)'
 ms.date: 11/04/2016
 f1_keywords:
 - returns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - returns C++ XML tag
 - <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-ms.openlocfilehash: 72a6ad05f3a78919b652f518d11814c3f95c5fd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1315ec09271c2c97f7bcaf3fb6f9c75f514b5d2d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318685"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988632"
 ---
 # <a name="ltreturnsgt"></a>&lt;returns&gt;
 
@@ -25,18 +25,18 @@ La etiqueta \<returns> debe usarse en el comentario de una declaración de méto
 <returns>description</returns>
 ```
 
-#### <a name="parameters"></a>Parámetros
+#### <a name="parameters"></a>Parameters
 
 *description*<br/>
 Descripción del valor devuelto.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Compile con [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.
+Compile con el parámetro [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // xml_returns_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_returns_tag.dll

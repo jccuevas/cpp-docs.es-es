@@ -1,5 +1,5 @@
 ---
-title: '&lt;ejemplo > (comentarios de documentación de C++)'
+title: '> de ejemplo &lt;C++ (comentarios de documentación)'
 ms.date: 11/04/2016
 f1_keywords:
 - <example>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <example> C++ XML tag
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-ms.openlocfilehash: 69e4ad8315948c9c77e99f6ebece4debbe3831b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384e9b9808a49770887eeda69b1d24fdd3f06027
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272538"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988320"
 ---
 # <a name="ltexamplegt"></a>&lt;example&gt;
 
@@ -25,18 +25,18 @@ La etiqueta \<example> le permite especificar un ejemplo de cómo usar un métod
 <example>description</example>
 ```
 
-#### <a name="parameters"></a>Parámetros
+#### <a name="parameters"></a>Parameters
 
 *description*<br/>
 Una descripción del ejemplo de código.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Compile con [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.
+Compile con el parámetro [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // xml_example_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_example_tag.dll

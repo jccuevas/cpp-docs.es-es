@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: e57470fcd8e7b014084b094c9ca5e39f0a86d85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395227"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989907"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>Advertencia del compilador (nivel 4) C4706
 
-asignación de la expresión condicional
+asignación dentro de la expresión condicional
 
-El valor de prueba en una expresión condicional fue el resultado de una asignación.
+El valor de prueba en una expresión condicional era el resultado de una asignación.
 
-Una asignación tiene un valor (el valor en el lado izquierdo de la asignación) que puede utilizarse correctamente en otra expresión, incluida una expresión de prueba.
+Una asignación tiene un valor (el valor en el lado izquierdo de la asignación) que se puede usar legalmente en otra expresión, incluida una expresión de prueba.
 
-El ejemplo siguiente genera C4706:
+En el ejemplo siguiente se genera C4706:
 
-```
+```cpp
 // C4706a.cpp
 // compile with: /W4
 int main()
@@ -35,9 +35,9 @@ int main()
 }
 ```
 
-La advertencia se produce si se doblan los paréntesis alrededor de la condición de prueba:
+La advertencia se producirá incluso si se duplican los paréntesis en torno a la condición de prueba:
 
-```
+```cpp
 // C4706b.cpp
 // compile with: /W4
 int main()
@@ -49,9 +49,9 @@ int main()
 }
 ```
 
-Si su intención es probar una relación y no desea realizar una asignación, utilice el `==` operador. Por ejemplo, la línea siguiente prueba si un y b son iguales:
+Si su intención es probar una relación y no hacer una asignación, use el operador `==`. Por ejemplo, la línea siguiente comprueba si a y b son iguales:
 
-```
+```cpp
 // C4706c.cpp
 // compile with: /W4
 int main()
@@ -63,9 +63,9 @@ int main()
 }
 ```
 
-Si piensa realizar la prueba del resultado de una asignación de valor, una prueba para asegurarse de que la asignación es distinto de cero o no es null. Por ejemplo, el código siguiente no generará esta advertencia:
+Si tiene previsto convertir el valor de prueba en el resultado de una asignación, realice una prueba para asegurarse de que la asignación es distinta de cero o no es NULL. Por ejemplo, el código siguiente no generará esta ADVERTENCIA:
 
-```
+```cpp
 // C4706d.cpp
 // compile with: /W4
 int main()

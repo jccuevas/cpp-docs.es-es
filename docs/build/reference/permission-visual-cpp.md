@@ -1,5 +1,5 @@
 ---
-title: '&lt;permiso > (comentarios de documentación de C++)'
+title: '&lt;> de permisosC++ (comentarios de documentación)'
 ms.date: 11/04/2016
 f1_keywords:
 - permission
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 764048f7bc579afa6862bdff40968588955dc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f0a59c85e3fa28d24e44953e207151c3afa0f4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319946"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988671"
 ---
 # <a name="ltpermissiongt"></a>&lt;permission&gt;
 
@@ -25,7 +25,7 @@ La etiqueta \<permission> le permite documentar el acceso de un miembro. <xref:S
 <permission cref="member">description</permission>
 ```
 
-#### <a name="parameters"></a>Parámetros
+#### <a name="parameters"></a>Parameters
 
 *member*<br/>
 Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y traduce `member` al nombre de elemento canónico en la salida XML.  Ponga el nombre entre comillas simples o dobles.
@@ -37,15 +37,15 @@ Para obtener información sobre cómo crear una referencia cref a un tipo genér
 *description*<br/>
 Descripción del acceso al miembro.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Compile con [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.
+Compile con el parámetro [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.
 
-El compilador de MSVC intentará resolver referencias cref en un paso a través de los comentarios de documentación.  Por tanto, si usa las reglas de búsqueda de C++, un símbolo que no encuentra el compilador se marcará como no resuelto. Vea [\<seealso>](seealso-visual-cpp.md) para obtener más información.
+El compilador MSVC intentará resolver las referencias CREF en un paso a través de los comentarios de documentación.  Por tanto, si usa las reglas de búsqueda de C++, un símbolo que no encuentra el compilador se marcará como no resuelto. Vea [\<seealso>](seealso-visual-cpp.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // xml_permission_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_permission_tag.dll

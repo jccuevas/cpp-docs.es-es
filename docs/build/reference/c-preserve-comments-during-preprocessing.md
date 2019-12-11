@@ -12,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d0cf8e5f628f3f5301f54d7c853bfc2ab63cb7e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272837"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988356"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conservar los comentarios durante el preprocesamiento)
 
@@ -29,19 +29,19 @@ Conserva los comentarios durante el preprocesamiento
 /C
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Esta opción del compilador requiere la **/E**, **/P**, o **/EP** opción.
+Esta opción del compilador requiere la opción **/e**, **/p**o **/EP** .
 
-El siguiente ejemplo de código mostrará el comentario de código fuente.
+En el ejemplo de código siguiente se mostrará el comentario del código fuente.
 
-```
+```cpp
 // C_compiler_option.cpp
 // compile with: /E /C /c
 int i;   // a variable
 ```
 
-Este ejemplo genera el siguiente resultado.
+Este ejemplo generará el siguiente resultado.
 
 ```
 #line 1 "C_compiler_option.cpp"
@@ -50,13 +50,13 @@ int i;   // a variable
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
-1. Haga clic en el **preprocesador** página de propiedades.
+1. Haga clic en la página de propiedades del **preprocesador** .
 
-1. Modificar el **mantener comentarios** propiedad.
+1. Modifique la propiedad **conservar comentarios** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
