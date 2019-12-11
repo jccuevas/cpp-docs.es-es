@@ -3,12 +3,12 @@ title: Conexión al sistema Linux de destino en Visual Studio
 description: En este artículo se describe cómo conectarse a una máquina remota Linux o al Subsistema de Windows para Linux desde un proyecto de Visual Studio C++.
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966576"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755283"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conexión al sistema Linux de destino en Visual Studio
 
@@ -82,7 +82,7 @@ Para configurar esta conexión remota:
 
 ## <a name="tcp-port-forwarding"></a>Reenvío de puertos TCP
 
-La compatibilidad con Linux de Visual Studio depende del reenvío de puertos TCP. **Rsync** y **gdbserver** se verán afectados si el reenvío de puertos TCP está deshabilitado en su sistema remoto. 
+La compatibilidad con Linux de Visual Studio depende del reenvío de puertos TCP. **Rsync** y **gdbserver** se verán afectados si el reenvío de puertos TCP está deshabilitado en su sistema remoto. Si se ve afectado por esta dependencia, puede votar este [vale de sugerencia](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) en Developer Community.
 
 Tanto los proyectos de CMake como los de Linux basados en MSBuild usan rsync para [copiar encabezados de su sistema remoto en Windows, a fin de utilizarlos para IntelliSense](configure-a-linux-project.md#remote_intellisense). Si no puede habilitar el reenvío de puertos TCP, deshabilite la descarga automática de los encabezados remotos. Para deshabilitarla, vaya a **Herramientas > Opciones > Multiplataforma > Administrador de conexiones > Administrador de IntelliSense de encabezados remotos**. Si el sistema remoto no tiene habilitado el reenvío de puertos TCP, verá el siguiente error al comenzar la descarga de encabezados remotos para IntelliSense:
 

@@ -1,17 +1,17 @@
 ---
 title: Introducción al desarrollo de C++ en Visual Studio
 description: El IDE de Visual Studio admite el desarrollo de C++ en Windows, Linux, Android e iOS con un editor de código, un depurador, marcos de pruebas, analizadores estáticos y otras herramientas de programación.
-ms.date: 03/08/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 54ed590122f1eb914ff039378914a1fd4adc5f10
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182905"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810624"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Introducción al desarrollo de C++ en Visual Studio
 
@@ -29,13 +29,13 @@ Visual Studio proporciona compatibilidad con cualquier sistema de proyectos o he
 
    ::: moniker range="vs-2019"
 
-   ![Nuevas plantillas de proyecto](../build/media/mathclient-project-name-2019.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2019")
+   ![Nuevas plantillas de proyecto](../build/media/mathclient-project-name-2019.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2019")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![Plantillas de proyecto](media/vs2017-new-project.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2017")
+   ![Plantillas de proyecto](media/vs2017-new-project.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2017")
 
    ::: moniker-end
 
@@ -51,13 +51,13 @@ El control de código fuente permite coordinar el trabajo entre varios desarroll
 
 ::: moniker range="vs-2019"
 
-![Team Explorer](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Team Explorer](media/vs2019-team-explorer.png "Team Explorer de Visual Studio 2017")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Team Explorer](media/vs2017-team-explorer.png "Team Explorer de Visual Studio 2017")
 
 ::: moniker-end
 
@@ -71,9 +71,9 @@ Use el administrador de paquetes [vcpkg](../build/vcpkg.md) para obtener e insta
 
 Si el programa tiene una interfaz de usuario, puede usar un diseñador para rellenarla rápidamente con controles como botones, cuadros de lista, etc. Cuando se arrastra un control desde la ventana de cuadro de herramientas y se coloca en la superficie de diseño, Visual Studio genera los recursos y el código necesarios para que todo funcione. Luego se escribe el código para personalizar la apariencia y el comportamiento.
 
-![Diseñador y cuadro de herramientas](media/vs2017-toolbox-designer.png "Diseñador y cuadro de herramientas de Visual Studio 2017")
+![Diseñador y cuadro de herramientas](media/vs2017-toolbox-designer.png "Diseñador y cuadro de herramientas de Visual Studio 2017")
 
-Para obtener más información sobre cómo diseñar una interfaz de usuario para una aplicación para Plataforma universal de Windows, vea [Diseña y codifica aplicaciones para UWP](https://developer.microsoft.com/windows/design).
+Para obtener más información sobre cómo diseñar una interfaz de usuario para una aplicación para Plataforma universal de Windows, consulte [Diseño e interfaz de usuario](https://developer.microsoft.com/windows/design).
 
 Para obtener más información sobre cómo crear una interfaz de usuario para una aplicación de MFC, vea [Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md). Para obtener información sobre los programas de Windows de Win32, vea [Aplicaciones de escritorio de Windows (C++)](../windows/windows-desktop-applications-cpp.md).
 
@@ -81,21 +81,19 @@ Para obtener más información sobre cómo crear una interfaz de usuario para un
 
 Después de crear un proyecto, todos los archivos del proyecto se muestran en la ventana **Explorador de soluciones**. (Una *solución* es un contenedor lógico para uno o más proyectos relacionados). Al hacer clic en un archivo .h o .cpp en el **Explorador de soluciones**, el archivo se abre en el editor de código.
 
-![Explorador de soluciones y editor de código](media/vs2017-solution-explorer-code-editor.png "Explorador de soluciones y editor de código de Visual Studio 2017")
+![Explorador de soluciones y editor de código](media/vs2017-solution-explorer-code-editor.png "Explorador de soluciones y editor de código de Visual Studio 2017")
 
 El editor de código es un procesador de textos especializado para código fuente en C++. Este editor codifica mediante colores las palabras clave, los nombres de los métodos y las variables del lenguaje, así como otros elementos del código para que el código sea más fácil de leer y entender. También proporciona herramientas para refactorizar código, navegar entre los distintos archivos y saber cómo se estructura el código. Para obtener más información, vea [Escribir y refactorizar código](../ide/writing-and-refactoring-code-cpp.md).
 
 ## <a name="add-and-edit-resources"></a>Agregar y editar recursos
 
-El término *recurso* incluye elementos como cuadros de diálogo, iconos, imágenes, cadenas localizables, pantallas de presentación, cadenas de conexión de base de datos o cualquier dato arbitrario que quiera incluir en el archivo ejecutable.
-
-Para obtener más información sobre cómo agregar y editar recursos en proyectos nativos de C++ de escritorio, vea [Trabajar con archivos de recursos](../windows/working-with-resource-files.md).
+Un programa de Windows o DLL por lo general incluye algunos *recursos* como cuadros de diálogo, iconos, imágenes, cadenas localizables, pantallas de presentación, cadenas de conexión de base de datos o cualquier dato arbitrario. Visual Studio incluye herramientas para agregar y editar recursos. Para más información, consulte [Trabajar con archivos de recursos](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Compilación (compilación y vinculación)
 
-Seleccione **Compilar** > **Compilar solución** en la barra de menús, o bien presione la combinación de teclas Ctrl+Mayús+B para compilar y vincular un proyecto. Los errores de compilación y las advertencias se muestran en la Lista de errores (Ctrl+\\, E). La **ventana de salida** (Alt+2) muestra información sobre el proceso de compilación.
+Seleccione **Compilar** > **Compilar solución** en la barra de menús, o bien presione la combinación de teclas **Ctrl+Mayús+B** para compilar y vincular un proyecto. Los errores de compilación y las advertencias se muestran en la lista de errores (**Ctrl+\\, E**). La ventana de **salida** (**Alt+2**) muestra información sobre el proceso de compilación.
 
-![Ventana de salida y Lista de errores](media/vs2017-output-error-list.png "Ventana de salida y Lista de errores de Visual Studio 2017")
+![Ventana de salida y Lista de errores](media/vs2017-output-error-list.png "Ventana de salida y Lista de errores de Visual Studio 2017")
 
 Para más información sobre cómo configurar compilaciones, vea [Trabajar con propiedades de proyecto](../build/working-with-project-properties.md) y [Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md).
 
@@ -103,9 +101,9 @@ También se puede usar el compilador (cl.exe) y muchas otras herramientas indepe
 
 ## <a name="debug"></a>Depuración
 
-Puede iniciar la depuración si presiona **F5**. La ejecución se detiene en cualquier punto de interrupción que se haya establecido. También puede recorrer el código de línea en línea, ver los valores de registros o variables e, incluso, en algunos casos, realizar cambios en el código y continuar la depuración sin volver a compilar. La siguiente ilustración muestra una sesión de depuración en la que se detiene la ejecución en un punto de interrupción. Los valores de los miembros de la estructura de datos son visibles en la **ventana Inspección**.
+Puede iniciar la depuración si presiona **F5**. La ejecución se detiene en cualquier punto de interrupción que se haya establecido (presionando **F9**). También puede recorrer el código de línea en línea (**F10**), ver los valores de registros o variables e, incluso, en algunos casos, realizar cambios en el código y continuar la depuración sin volver a compilar. La siguiente ilustración muestra una sesión de depuración en la que se detiene la ejecución en un punto de interrupción. Los valores de los miembros de la estructura de datos son visibles en la **ventana Inspección**.
 
-![Sesión de depuración](media/vs2017-debug-watch.png "Sesión de depuración de Visual Studio 2017")
+![Sesión de depuración](media/vs2017-debug-watch.png "Sesión de depuración de Visual Studio 2017")
 
 Para obtener más información, vea [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
@@ -113,7 +111,7 @@ Para obtener más información, vea [Depurar en Visual Studio](/visualstudio/deb
 
 Visual Studio incluye el marco de pruebas unitarias de Microsoft para C++, así como compatibilidad con Boost.Test, Google Test y CTest. Ejecute las pruebas desde la ventana **Explorador de pruebas**:
 
-![Explorador de pruebas](media/cpp-test-explorer-passed.png "Explorador de pruebas de Visual Studio 2017")
+![Explorador de pruebas](media/cpp-test-explorer-passed.png "Explorador de pruebas de Visual Studio 2017")
 
 Para obtener más información, vea [Comprobar el código con pruebas unitarias](/visualstudio/test/unit-test-your-code) y [Escribir pruebas unitarias para C/C ++ en Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
@@ -125,7 +123,7 @@ Visual Studio incluye herramientas de análisis de código estático que pueden 
 
 Puede implementar aplicaciones de escritorio tradicionales y aplicaciones de UWP para los clientes a través de Microsoft Store. La implementación de CRT se controla automáticamente en segundo plano. Para obtener más información, vea [Publicar aplicaciones y juegos de Windows](/windows/uwp/publish/).
 
-También puede implementar un escritorio de C++ nativo en otro equipo. Para obtener más información, vea [Implementar aplicaciones de escritorio](../windows/deploying-native-desktop-applications-visual-cpp.md).
+También puede implementar un escritorio nativo C++ en otro equipo. Para obtener más información, vea [Implementar aplicaciones de escritorio](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
 Para obtener más información sobre la implementación de un programa de C++/CLI, vea [Guía de implementación para desarrolladores](/dotnet/framework/deployment/deployment-guide-for-developers).
 
