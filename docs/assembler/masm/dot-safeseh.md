@@ -15,21 +15,21 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397995"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (32 bits MASM)
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+Registra una función como un controlador de excepciones estructurado. (solo para MASM de 32 bits).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **.SAFESEH** *identifier*
+> **.**  *Identificador* de SAFESEH
 
 ## <a name="remarks"></a>Comentarios
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+El *identificador* debe ser el identificador de un procedimiento [PROC](../../assembler/masm/proc.md) o [EXTRN](../../assembler/masm/extrn.md) definido localmente. No se permite una [etiqueta](../../assembler/masm/label-masm.md) . El. La Directiva SAFESEH requiere la opción de línea de comandos [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Para obtener más información acerca de los controladores de excepciones estructurados, vea [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+Por ejemplo, para registrar un controlador de excepciones seguro, cree un nuevo archivo MASM (como se indica a continuación), ensamble con/SAFESEH y agréguelo a los objetos vinculados.
 
 ```asm
 .386
@@ -41,4 +41,4 @@ end
 
 ## <a name="see-also"></a>Vea también
 
-[Directives reference](directives-reference.md)
+[Referencia de directivas](directives-reference.md)
