@@ -1,6 +1,6 @@
 ---
 title: fileno
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - fileno
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - fileno function
 ms.assetid: 8f33e1e0-0dc8-4311-b690-ec6e577a64b5
-ms.openlocfilehash: 684544223b20ea84949707a6ace09b09e7530833
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 798334e4139209be50c665d112f502f60909ed0f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950756"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301176"
 ---
 # <a name="fileno"></a>fileno
 
-Esta función POSIX está en desuso. En su lugar, use la función [_fileno](fileno.md), compatible con ISO C++.
+El nombre de la función POSIX implementada por Microsoft `fileno` es un alias en desuso para la función [_fileno](fileno.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_fileno](fileno.md) . O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
