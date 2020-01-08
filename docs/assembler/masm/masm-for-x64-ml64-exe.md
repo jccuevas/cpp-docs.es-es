@@ -1,17 +1,17 @@
 ---
 title: MASM para x64 (ml64.exe)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - ml64
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5e324414a0d4d7e74bb28d54c1d858ef6fb9793c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397223"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312747"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM para x64 (ml64.exe)
 
@@ -19,7 +19,7 @@ Visual Studio incluye versiones hospedadas de 32 bits y de 64 bits de Microsoft 
 
 Para usar MASM para compilar código para destinos x64 en la línea de comandos, debe usar un símbolo del sistema para desarrolladores de destinos x64, que establece la ruta de acceso necesaria y otras variables de entorno. Para obtener información sobre cómo iniciar un símbolo del sistema para desarrolladores, vea [compilar C/C++ Code en la línea de comandos](../../build/building-on-the-command-line.md).
 
-Para obtener información sobre las opciones de línea de comandos de ml64. exe, consulte [la referencia de línea de comandos de ml y ml64](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Para obtener información sobre las opciones de línea de comandos de ml64. exe, consulte [la referencia de línea de comandos de ml y ml64](ml-and-ml64-command-line-reference.md).
 
 No se admite el ensamblador alineado ni el uso de la palabra clave ASM para destinos x64 o ARM. Para migrar el código x86 que usa el ensamblador en línea a x64 o ARM, puede convertir el código C++en, usar funciones intrínsecas del compilador o crear archivos de código fuente del lenguaje ensamblador. El compilador de Microsoft C++ admite intrínsecos para permitirle usar instrucciones de funciones especiales, por ejemplo, privileged, SCAN/test, entrelazada, etc., de la forma más cercana posible a la plataforma. Para obtener información sobre los intrínsecos disponibles, vea [intrínsecos del compilador](../../intrinsics/compiler-intrinsics.md).
 
@@ -43,21 +43,21 @@ Cree el código del lenguaje de ensamblador en el archivo. asm que ha agregado. 
 
 Puede usar las siguientes directivas específicas de ml64 en el código fuente del lenguaje de ensamblador que tiene como destino x64:
 
-- [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
+- [.ALLOCSTACK](dot-allocstack.md)
 
-- [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)
+- [.ENDPROLOG](dot-endprolog.md)
 
-- [.PUSHFRAME](../../assembler/masm/dot-pushframe.md)
+- [.PUSHFRAME](dot-pushframe.md)
 
-- [.PUSHREG](../../assembler/masm/dot-pushreg.md)
+- [.PUSHREG](dot-pushreg.md)
 
-- [.SAVEREG](../../assembler/masm/dot-savereg.md)
+- [.SAVEREG](dot-savereg.md)
 
-- [.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)
+- [.SAVEXMM128](dot-savexmm128.md)
 
-- [.SETFRAME](../../assembler/masm/dot-setframe.md)
+- [.SETFRAME](dot-setframe.md)
 
-Además, la directiva [proc](../../assembler/masm/proc.md) se ha actualizado para su uso con ml64. exe.
+Además, la directiva [proc](proc.md) se ha actualizado para su uso con ml64. exe.
 
 ## <a name="32-bit-address-mode-address-size-override"></a>Modo de dirección de 32 bits (invalidación de tamaño de dirección)
 
@@ -82,4 +82,4 @@ mov eax, DWORD PTR [ecx*2+r10+0100h]
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Referencia de Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)

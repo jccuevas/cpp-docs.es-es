@@ -1,21 +1,21 @@
 ---
 title: .SALL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .SALL
 helpviewer_keywords:
 - .SALL directive
 ms.assetid: 2791e746-96aa-4ed5-ae69-abd072378f86
-ms.openlocfilehash: a7a72a28240deb222061de74a88f3105d63b24c2
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fb76cbef4a7a1fc6fa6f0d23d3da38ddafa5456b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397977"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318272"
 ---
 # <a name="sall"></a>.SALL
 
-Vea [. NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).
+Vea [. NOLISTMACRO](dot-nolistmacro.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,4 +23,5 @@ Vea [. NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

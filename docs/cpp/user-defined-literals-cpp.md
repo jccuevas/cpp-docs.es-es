@@ -1,29 +1,29 @@
 ---
-title: Literales definidos por el usuario (C++)
-ms.date: 11/04/2016
+title: Literales definidos por el usuarioC++()
+ms.date: 12/10/2019
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392120"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301306"
 ---
-# <a name="user-defined-literals--c"></a>Literales definidos por el usuario (C++)
+# <a name="user-defined-literals"></a>Literales definidos por el usuario
 
-Hay cinco categorías principales de literales: entero, carácter, punto flotante, cadena, booleano y puntero.  A partir de C++ 11, puede definir sus propios literales en función de estas categorías para proporcionar atajos sintácticos para expresiones comunes y aumentar la seguridad de tipos. Por ejemplo, supongamos que tiene una clase Distance. Puede definir un literal para kilómetros y otro para millas, y fomentar que usuario sea explícito sobre las unidades de medida escribiendo simplemente: auto d = 42,0_km o auto d = 42,0_mi. No hay ninguna ventaja ni desventaja de rendimiento con literales definidos por el usuario; se usan principalmente por comodidad o para la deducción de tipos de tiempo de compilación. La biblioteca estándar tiene literales definidos por el usuario para std: String, std:: Complex y unidades de tiempo y la duración de las operaciones en el \<chrono > encabezado:
+Hay cinco categorías principales de literales en C++: entero, carácter, punto flotante, cadena, booleano y puntero.  A partir de C++ 11, puede definir sus propios literales en función de estas categorías para proporcionar atajos sintácticos para expresiones comunes y aumentar la seguridad de tipos. Por ejemplo, supongamos que tiene una clase Distance. Puede definir un literal para kilómetros y otro para millas, y fomentar que usuario sea explícito sobre las unidades de medida escribiendo simplemente: auto d = 42,0_km o auto d = 42,0_mi. No hay ninguna ventaja ni desventaja de rendimiento con literales definidos por el usuario; se usan principalmente por comodidad o para la deducción de tipos de tiempo de compilación. La biblioteca estándar tiene literales definidos por el usuario para STD: String, para STD:: Complex, y para las unidades de las operaciones de tiempo y duración del encabezado \<crónico >:
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
-    std::string str = "hello"s + "World"s;  // Standard Library <string> UDL
-    complex<double> num =
-        (2.0 + 3.01i) * (5.0 + 4.3i);       // Standard Library <complex> UDL
-    auto duration = 15ms + 42h;             // Standard Library <chrono> UDLs
+std::string str = "hello"s + "World"s;  // Standard Library <string> UDL
+complex<double> num =
+   (2.0 + 3.01i) * (5.0 + 4.3i);        // Standard Library <complex> UDL
+auto duration = 15ms + 42h;             // Standard Library <chrono> UDLs
 ```
 
 ## <a name="user-defined-literal-operator-signatures"></a>Firmas de operador literal definido por el usuario
 
-Implementar un literal definido por el usuario mediante la definición de un **operador ""** en el ámbito de espacio de nombres con una de las formas siguientes:
+Para implementar un literal definido por el usuario, defina un **operador ""** en el ámbito del espacio de nombres con uno de los siguientes formatos:
 
 ```cpp
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal
@@ -32,19 +32,19 @@ ReturnType operator "" _c(char);                     // Literal operator for use
 ReturnType operator "" _d(wchar_t);                  // Literal operator for user-defined CHARACTER literal
 ReturnType operator "" _e(char16_t);                 // Literal operator for user-defined CHARACTER literal
 ReturnType operator "" _f(char32_t);                 // Literal operator for user-defined CHARACTER literal
-ReturnType operator "" _g(const     char*, size_t);  // Literal operator for user-defined STRING literal
-ReturnType operator "" _h(const  wchar_t*, size_t);  // Literal operator for user-defined STRING literal
+ReturnType operator "" _g(const char*, size_t);      // Literal operator for user-defined STRING literal
+ReturnType operator "" _h(const wchar_t*, size_t);   // Literal operator for user-defined STRING literal
 ReturnType operator "" _i(const char16_t*, size_t);  // Literal operator for user-defined STRING literal
 ReturnType operator "" _g(const char32_t*, size_t);  // Literal operator for user-defined STRING literal
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-Los nombres de operador del ejemplo anterior son marcadores de posición para cualquier nombre que proporcione; sin embargo, el carácter de subrayado inicial es necesario. (Solo en la biblioteca estándar se permite definir literales sin el carácter de subrayado). En el tipo devuelto es donde se personaliza la conversión u otra operación que el literal realice. Además, cualquiera de estos operadores se puede definir como `constexpr`.
+Los nombres de operador del ejemplo anterior son marcadores de posición para cualquier nombre que proporcione; sin embargo, el carácter de subrayado inicial es necesario. (Solo se permite a la biblioteca estándar definir literales sin el carácter de subrayado). El tipo de valor devuelto es donde se personaliza la conversión u otra operación que el literal realiza. Además, cualquiera de estos operadores se puede definir como `constexpr`.
 
 ## <a name="cooked-literals"></a>Literales elaborados
 
-En el código fuente cualquier literal, definido por el usuario o no, es esencialmente una secuencia de caracteres alfanuméricos, como `101`, `54.7`, `"hello"` o `true`. El compilador interpreta la secuencia como integer, float, const char\* cadena y así sucesivamente. Un valor literal definido por el usuario que acepta como entrada cualquier tipo que el compilador asignado al valor literal se conoce informalmente como un *literal cocido*. Todos los operadores anteriores, excepto `_r` y `_t`, son literales elaborados. Por ejemplo, un literal `42.0_km` se enlazaría a un operador denominado _km que tuviera una firma semejante a _b y el literal `42_km` se enlazaría a un operador con una firma semejante a _a.
+En el código fuente cualquier literal, definido por el usuario o no, es esencialmente una secuencia de caracteres alfanuméricos, como `101`, `54.7`, `"hello"` o `true`. El compilador interpreta la secuencia como un entero, Float, const char\* cadena, etc. Un literal definido por el usuario que acepta como entrada cualquier tipo que el compilador asignado al valor literal se conoce informadamente como un *literal cocido*. Todos los operadores anteriores, excepto `_r` y `_t`, son literales elaborados. Por ejemplo, un literal `42.0_km` se enlazaría a un operador denominado _km que tuviera una firma semejante a _b y el literal `42_km` se enlazaría a un operador con una firma semejante a _a.
 
 En el ejemplo siguiente se muestra cómo los literales definidos por el usuario pueden fomentar que los llamadores sean explícitos sobre los datos proporcionados. Para crear un `Distance`, el usuario debe especificar explícitamente kilómetros o millas mediante el literal definido por el usuario adecuado. Por supuesto, también se puede lograr el mismo resultado de otras maneras, pero los literales definidos por el usuario son menos detallados que las alternativas.
 
@@ -96,7 +96,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-Tenga en cuenta que el número literal debe usar un valor decimal, en caso contrario, el número se interpretaría como un número entero y el tipo no sería compatible con el operador. Tenga en cuenta también que para la entrada de punto flotante, el tipo debe ser **long double**y para los tipos enteros debe ser **long long**.
+Tenga en cuenta que el número literal debe usar un valor decimal, en caso contrario, el número se interpretaría como un número entero y el tipo no sería compatible con el operador. Tenga en cuenta también que para la entrada de punto flotante, el tipo debe ser **Long Double**y para los tipos enteros debe ser **de larga duración.**
 
 ## <a name="raw-literals"></a>Literales sin formato
 
@@ -109,7 +109,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
 
 Puede usar literales sin formato para proporcionar una interpretación personalizada de una secuencia de entrada que sea diferente de lo que realizaría el compilador. Por ejemplo, puede definir un literal que convierta la secuencia `4.75987` en un tipo Decimal personalizado en lugar de un tipo de punto flotante de IEEE 754. Los literales sin formato, como los literales elaborados, pueden usarse también para realizar la validación en tiempo de compilación de las secuencias de entrada.
 
-### <a name="example-limitations-of-raw-literals"></a>Ejemplo: Limitaciones de literales sin formato
+### <a name="example-limitations-of-raw-literals"></a>Ejemplo: limitaciones de los literales sin formato
 
 El operador literal sin formato y la plantilla de operador literal solo funcionan para literales de entero y de punto flotante definidos por el usuario, tal y como se muestra en el ejemplo siguiente:
 

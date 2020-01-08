@@ -1,22 +1,25 @@
 ---
 title: auto (C++)
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303383"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301657"
 ---
 # <a name="auto-c"></a>auto (C++)
 
 Deduce el tipo de una variable declarada a partir de su expresión de inicialización.
+
+> [!NOTE]
+> El C++ estándar define un significado original y otro revisado para esta palabra clave. Antes de Visual Studio 2010, la palabra clave **auto** declara una variable en la clase de almacenamiento *automático* . es decir, una variable que tiene una duración local. A partir de Visual Studio 2010, la palabra clave **auto** declara una variable cuyo tipo se deduce de la expresión de inicialización en su declaración. La opción de compilador [/Zc: auto&#91;&#93; ](../build/reference/zc-auto-deduce-variable-type.md) controla el significado de la palabra clave **auto** .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,7 +31,7 @@ auto declarator initializer;
 [](auto param1, auto param2) {};
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 La palabra clave **auto** indica al compilador que utilice la expresión de inicialización de una variable declarada o un parámetro de expresión lambda para deducir su tipo.
 
@@ -224,7 +227,7 @@ int main()
 [Auto (palabra clave)](../cpp/auto-keyword.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (Deducir tipo de variable)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[sizeof (Operador)](../cpp/sizeof-operator.md)<br/>
+[sizeof (operador)](../cpp/sizeof-operator.md)<br/>
 [typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [Declaraciones y definiciones](declarations-and-definitions-cpp.md)<br/>

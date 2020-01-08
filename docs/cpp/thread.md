@@ -9,52 +9,52 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221965"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301293"
 ---
 # <a name="thread"></a>thread
 
 **Específicos de Microsoft**
 
-El **subproceso** modificador de clase de almacenamiento extendidos se usa para declarar una variable local de subproceso. Para el portable equivalente en C ++ 11 y versiones posterior, utilice el [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de clase de almacenamiento para el código portable. En Windows `thread_local` se implementa con **__declspec (Thread)**.
+El modificador de clase de almacenamiento Extended de **subproceso** se usa para declarar una variable local de subproceso. Para el equivalente portable en C++ 11 y versiones posteriores, use el especificador de clase de almacenamiento [thread_local](../cpp/storage-classes-cpp.md#thread_local) para el código portable. En Windows **thread_local** se implementa con **__declspec (subproceso)** .
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec( thread )** *declarator*
+*declarador* **__declspec (Thread)**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-El almacenamiento local para el subproceso (TLS) es el mecanismo por el que cada subproceso de un proceso con varios subproceso asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener una explicación completa de los subprocesos, vea [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+El almacenamiento local para el subproceso (TLS) es el mecanismo por el que cada subproceso de un proceso con varios subproceso asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener una descripción completa de los subprocesos, vea [multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Deben usar las declaraciones de variables locales del subproceso [sintaxis de atributo extendida](../cpp/declspec.md) y **__declspec** palabra clave with el **subproceso** palabra clave. Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:
+Las declaraciones de variables locales de subproceso deben utilizar la [Sintaxis de atributo extendido](../cpp/declspec.md) y la palabra clave **__declspec** con la palabra clave **Thread** . Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
 ```
 
-Al usar variables locales de subproceso en bibliotecas de carga dinámica, es preciso tener en cuenta los factores que pueden hacer que una variable local de subproceso no se inicialicen correctamente:
+Al usar variables locales de subproceso en bibliotecas cargadas dinámicamente, debe tener en cuenta los factores que pueden hacer que una variable local de subproceso no se inicialice correctamente:
 
-1. Si la variable se inicializa con una llamada de función (incluidos constructores), solo se llamará a esta función para el subproceso que produjo el archivo binario o DLL cargar en el proceso y para esos subprocesos que se inició después de que se cargó el archivo binario o DLL. Las funciones de inicialización no se llama a ningún otro subproceso que ya se estaba ejecutando cuando se cargó la DLL. Inicialización dinámica produce en la llamada de DllMain para DLL_THREAD_ATTACH, pero el archivo DLL nunca obtiene que si el archivo DLL no está en el proceso cuando se inicia el subproceso del mensaje.
+1. Si la variable se inicializa con una llamada de función (incluidos los constructores), solo se llamará a esta función para el subproceso que provocó la carga del archivo binario o DLL en el proceso, y para los subprocesos que se iniciaron después de cargar el archivo binario o DLL. No se llama a las funciones de inicialización para ningún otro subproceso que ya se estaba ejecutando cuando se cargó el archivo DLL. La inicialización dinámica se produce en la llamada DllMain para DLL_THREAD_ATTACH, pero el archivo DLL nunca recibe ese mensaje si la DLL no está en el proceso cuando se inicia el subproceso.
 
-1. Por lo general, las variables locales del subproceso que se inicializan estáticamente con valores constantes se inicializan correctamente en todos los subprocesos. Sin embargo, a partir de diciembre de 2017 hay un problema conocido de conformidad de Microsoft C++ compilador mediante el cual las variables constexpr recepción dinámica en lugar de la inicialización estática.
+1. Las variables locales de subproceso que se inicializan estáticamente con valores constantes normalmente se inicializan correctamente en todos los subprocesos. Sin embargo, a partir del 2017 de diciembre hay un problema de conformidad conocido en el C++ compilador de Microsoft, en el que las variables **constexpr** reciben Dynamic en lugar de una inicialización estática.
 
-   Nota: Estos problemas se esperan que se solucione en futuras actualizaciones del compilador.
+   Nota: se espera que ambos problemas se solucionen en futuras actualizaciones del compilador.
 
-Además, debe seguir estas instrucciones al declarar variables y objetos locales de subproceso:
+Además, debe seguir estas instrucciones al declarar objetos y variables locales para el subproceso:
 
-- Puede aplicar el **subproceso** atributo solo a la clase y las declaraciones de datos y las definiciones; **subproceso** no puede usarse en definiciones o declaraciones de función.
+- Solo puede aplicar el atributo **Thread** a las declaraciones y definiciones de clase y datos; el **subproceso** no se puede usar en declaraciones o definiciones de función.
 
-- Puede especificar el **subproceso** atributo solo en los elementos de datos con duración de almacenamiento estática. Esto incluye los objetos de datos globales (tanto **estático** y **extern**), objetos estáticos locales y miembros de datos estáticos de clases. No se puede declarar objetos de datos automáticos con el **subproceso** atributo.
+- Solo puede especificar el atributo **Thread** en elementos de datos con duración de almacenamiento estática. Esto incluye objetos de datos globales (tanto **estáticos** como **externos**), objetos estáticos locales y miembros de datos estáticos de clases. No se pueden declarar objetos de datos automáticos con el atributo **Thread** .
 
-- Debe usar el **subproceso** atributo para la declaración y la definición de un objeto de subproceso local, si la declaración y definición que se producen en el mismo archivo o archivos independientes.
+- Debe utilizar el atributo **Thread** para la declaración y la definición de un objeto local de subproceso, ya sea que la declaración y la definición se produzcan en el mismo archivo o en archivos independientes.
 
-- No puede usar el **subproceso** atributo como un modificador de tipo.
+- No se puede usar el atributo **Thread** como modificador de tipo.
 
-- Puesto que la declaración de objetos que utilizan el **subproceso** se permite el atributo, estos dos ejemplos son semánticamente equivalentes:
+- Dado que se permite la declaración de objetos que usan el atributo **Thread** , estos dos ejemplos son semánticamente equivalentes:
 
     ```cpp
     // declspec_thread_2.cpp
@@ -71,7 +71,7 @@ Además, debe seguir estas instrucciones al declarar variables y objetos locales
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- El estándar de C permite la inicialización de un objeto o de una variable con una expresión que contenga una referencia a sí misma, pero solo para objetos cuyo tamaño no sea estático. Aunque, generalmente, C++ permite esa inicialización dinámica de objetos con una expresión que contenga una referencia a sí misma, este tipo de inicialización no se permite con objetos locales de un subproceso. Por ejemplo:
+- Estándar C permite la inicialización de un objeto o una variable con una expresión que contenga una referencia a sí misma, pero solo para objetos no estáticos. Aunque C++ normalmente permite la inicialización dinámica de un objeto con una expresión que contenga una referencia a sí misma, este tipo de inicialización no se permite con objetos locales de subproceso. Por ejemplo:
 
    ```cpp
    // declspec_thread_3.cpp
@@ -81,7 +81,7 @@ Además, debe seguir estas instrucciones al declarar variables y objetos locales
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   Tenga en cuenta que un **sizeof** expresión que incluye el objeto que se está inicializando no constituye una referencia a sí misma y se permite en C y C++.
+   Una expresión **sizeof** que incluye el objeto que se va a inicializar no constituye una referencia a sí misma y se permite en C++C y.
 
 **FIN de Específicos de Microsoft**
 

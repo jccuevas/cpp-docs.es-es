@@ -1,17 +1,17 @@
 ---
 title: FORC
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - FORC
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: f354a2ce3413976996f1e0bade1a5a706d4a3c54
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d81c56c3322763030427d68d5b8075c9164f4ae3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397525"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313319"
 ---
 # <a name="forc"></a>FORC
 
@@ -23,10 +23,11 @@ Marca un bloque que se repetirá una vez por cada carácter de la *cadena*, con 
 > *instrucciones*\
 > **ENDM**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-Igual que [IRPC](../../assembler/masm/irpc.md).
+Igual que [IRPC](irpc.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

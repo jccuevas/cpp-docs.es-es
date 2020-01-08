@@ -1,30 +1,30 @@
 ---
 title: Referencia del lenguaje C++
 ms.custom: index-page
-ms.date: 05/06/2019
+ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222479"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301592"
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
 
-Esta referencia explica el C++ lenguaje de programación como se implementa en Microsoft C++ compilador. La organización se basa en [ *The Annotated C++ Reference Manual* ](http://www.stroustrup.com/arm.html) de Margaret Ellis y Bjarne Stroustrup y en los estándares de internacionales de C++ de ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.
+Esta referencia explica el C++ lenguaje de programación tal como se implementa C++ en el compilador de Microsoft. La organización se basa en [*el manual de C++ referencia anotado*](http://www.stroustrup.com/arm.html) de Margaret Ellis y Bjarne Stroustrup, y en el estándar C++ internacional ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.
 
-Para obtener información general de las prácticas de programación de C++ moderno, consulte [Bienvenido a C++](welcome-back-to-cpp-modern-cpp.md).
+Para obtener información general sobre C++ las prácticas de programación modernas, vea [Bienvenido a C++ ](welcome-back-to-cpp-modern-cpp.md).
 
 Consulte las tablas siguientes para encontrar rápidamente una palabra clave o un operador:
 
-- [Palabras clave de C++](../cpp/keywords-cpp.md)
+- [C++Palabra](../cpp/keywords-cpp.md)
 
 - [Operadores de C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-## <a name="in-this-section"></a>En esta sección
+## <a name="in-this-section"></a>Esta sección
 
 [Convenciones léxicas](../cpp/lexical-conventions.md)<br/>
 Elementos léxicos fundamentales de un programa de C++: tokens, comentarios, operadores, palabras clave, signos de puntuación, literales. También, traducción de archivos, prioridad o asociatividad de los operadores.
@@ -32,8 +32,12 @@ Elementos léxicos fundamentales de un programa de C++: tokens, comentarios, ope
 [Conceptos básicos](../cpp/basic-concepts-cpp.md)<br/>
 Ámbito, vinculación, inicio y finalización del programa, clases de almacenamiento y tipos.
 
+[Tipos integrados](fundamental-types-cpp.md) Los tipos fundamentales que se integran en C++ el compilador y sus intervalos de valores.
+
 [Conversiones estándar](../cpp/standard-conversions.md)<br/>
-Conversiones de tipos entre tipos integrados o “fundamentales". También, conversiones aritméticas y conversiones entre tipos de puntero, referencia y puntero a miembro.
+Conversiones de tipos entre los tipos integrados. También, conversiones aritméticas y conversiones entre tipos de puntero, referencia y puntero a miembro.
+
+[Declaraciones y definiciones](declarations-and-definitions-cpp.md) Declarar y definir variables, tipos y funciones.
 
 [Operadores, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 Operadores de C++.
@@ -47,38 +51,38 @@ Una técnica de programación que define implícitamente una clase de objeto de 
 [Instrucciones](../cpp/statements-cpp.md)<br/>
 Instrucciones de expresión, null, compuestas, de selección, de iteración, de salto y de declaración.
 
-[Declaraciones y definiciones](declarations-and-definitions-cpp.md)<br/>
-Especificadores de clase de almacenamiento, las definiciones de función, inicializaciones, enumeraciones, **clase**, **struct**, y **unión** declaraciones, y **(typedef)**  declaraciones. Además, **inline** funciones, **const** palabra clave, los espacios de nombres.
+[Clases y Structs](../cpp/classes-and-structs-cpp.md)<br/>
+Introducción a las clases, estructuras y uniones. También, funciones miembro, funciones miembro especiales, miembros de datos, campos de bits, **este** puntero, clases anidadas.
 
-[Las clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md)<br/>
-Introducción a las clases, estructuras y uniones. Además, las funciones de miembro, las funciones miembro especiales, los miembros de datos, campos de bits, **esto** puntero, clases anidadas.
+[Uniones](unions.md)<br/>
+Tipos definidos por el usuario en los que todos los miembros comparten la misma ubicación de memoria.
 
 [Clases derivadas](../cpp/inheritance-cpp.md)<br/>
-Herencia sencilla y múltiple, **virtual** funciones, clases base múltiples, **abstracta** clases, las reglas de ámbito. Además, el **__super** y **__interface** palabras clave.
+Herencia sencilla y múltiple, funciones **virtuales** , varias clases base, clases **abstractas** , reglas de ámbito. Además, las palabras clave **__super** y **__interface** .
 
-[Control de acceso a miembros](../cpp/member-access-control-cpp.md)<br/>
-Controlar el acceso a los miembros de clase: **pública**, **privada**, y **protegido** palabras clave. Funciones y clases friend.
+[Miembro: Access Control](../cpp/member-access-control-cpp.md)<br/>
+Controlar el acceso a miembros de clase: Palabras clave **públicas**, **privadas**y **protegidas** . Funciones y clases friend.
 
-[La sobrecarga](operator-overloading.md)<br/>
-Operadores sobrecargados, reglas de sobrecarga del operador.
+[Sobrecarga](operator-overloading.md)<br/>
+Operadores sobrecargados, reglas para la sobrecarga de operadores.
 
 [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Control de excepciones de C++, control estructurado de excepciones (SEH), palabras clave usadas para escribir instrucciones de control de excepciones.
 
 [Aserción y mensajes proporcionados por el usuario](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error` Directiva, el **static_assert** palabra clave, el `assert` macro.
+`#error` Directiva, la palabra clave **static_assert** , la macro `assert`.
 
 [Templates](../cpp/templates-cpp.md) (Plantillas [C++])<br/>
-Especificaciones de plantilla, plantillas de función, plantillas de clase, **typename** palabra clave, plantillas y macros, plantillas y punteros inteligentes.
+Especificaciones de plantilla, plantillas de función, plantillas de clase, palabra clave **TypeName** , plantillas frente a macros, plantillas y punteros inteligentes.
 
 [Control de eventos](../cpp/event-handling.md)<br/>
 Declaración de eventos y controladores de eventos.
 
 [Modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
-Modificadores específicos de Microsoft C++. La memoria de direccionamiento, convenciones de llamada, **naked** funciones, atributos extendidos de clase de almacenamiento (**__declspec**), **__w64**.
+Modificadores específicos de Microsoft C++. Direccionamiento de memoria, convenciones de llamada, funciones **naked** , atributos extendidos de clase de almacenamiento ( **__declspec**) **__w64**.
 
 [Ensamblador insertado](../assembler/inline/inline-assembler.md)<br/>
-Mediante el lenguaje ensamblador y C++ en **__asm** bloques.
+Usar el lenguaje de C++ ensamblado y los bloques de **__asm** .
 
 [Compatibilidad con COM del compilador](../cpp/compiler-com-support.md)<br/>
 Una referencia a las clases específicas de Microsoft y funciones globales utilizadas para admitir tipos COM.
@@ -87,15 +91,15 @@ Una referencia a las clases específicas de Microsoft y funciones globales utili
 Extensiones de Microsoft a C++.
 
 [Comportamiento no estándar](../cpp/nonstandard-behavior.md)<br/>
-Información sobre el comportamiento no estándar de Microsoft C++ compilador.
+Información sobre el comportamiento no estándar del compilador de Microsoft C++ .
 
 [Aquí está otra vez C++](welcome-back-to-cpp-modern-cpp.md)<br/>
-Información general sobre procedimientos recomendados para escribir programas seguros, correctos y eficaces de programación moderna de C++.
+Información general de las C++ prácticas de programación modernas para escribir programas seguros, correctos y eficientes.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
 [Extensiones de componentes para plataformas de tiempo de ejecución](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Material sobre el uso de Microsoft de referencia C++ compilador que tienen como destino .NET.
+Material de referencia sobre el uso C++ del compilador de Microsoft para tener como destino .net.
 
 [Referencia de compilación de C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Opciones del compilador, opciones del vinculador y otras herramientas de compilación.
@@ -104,7 +108,7 @@ Opciones del compilador, opciones del vinculador y otras herramientas de compila
 Material de referencia sobre instrucciones pragma, directivas de preprocesador, macros predefinidas y el preprocesador.
 
 [Bibliotecas de Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Páginas de inicio de una lista de vínculos a la referencia de las diversas Microsoft C++ bibliotecas.
+Una lista de vínculos a las páginas de inicio de referencia para las C++ diversas bibliotecas de Microsoft.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,16 +1,16 @@
 ---
 title: Información general de los módulos en C++
-ms.date: 07/23/2019
+ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Los módulos de C++ 20 proporcionan una alternativa moderna a los archivos de encabezado.
-ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 28e1824250ad4fb404c528aa9511745abb001f31
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273679"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301384"
 ---
 # <a name="overview-of-modules-in-c"></a>Información general de los módulos en C++
 
@@ -20,7 +20,7 @@ Los módulos se pueden usar en paralelo con los archivos de encabezado. Un C++ a
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Habilitar módulos en el compilador de Microsoft C++
 
-A partir de la versión 16,2 de Visual Studio 2019, los módulos no se implementan totalmente en el compilador de Microsoft C++ . Puede usar la característica módulos para crear módulos de una sola partición e importar los módulos de la biblioteca estándar que proporciona Microsoft. Para habilitar la compatibilidad con los módulos, compile con [/experimental: module](../build/reference/experimental-module.md) y [/STD: c + + latest](../build/reference/std-specify-language-standard-version.md). En un proyecto de Visual Studio, haga clic con el botón secundario en el nodo del proyecto en **Explorador de soluciones** y elija **propiedades**. Establezca la lista desplegable **configuración** en **todas las configuraciones**y, a continuación, elija **propiedades** > de configuración > **C/C++** **Language** > **enable C++ modules ( experimental)** .
+A partir de la versión 16,2 de Visual Studio 2019, los módulos no se implementan totalmente en el compilador de Microsoft C++ . Puede usar la característica módulos para crear módulos de una sola partición e importar los módulos de la biblioteca estándar que proporciona Microsoft. Para habilitar la compatibilidad con los módulos, compile con [/experimental: module](../build/reference/experimental-module.md) y [/STD: c + + latest](../build/reference/std-specify-language-standard-version.md). En un proyecto de Visual Studio, haga clic con el botón secundario en el nodo del proyecto en **Explorador de soluciones** y elija **propiedades**. Establezca la lista desplegable **configuración** en **todas las configuraciones**y, a continuación, elija **propiedades de configuración** > **lenguaje** **C/C++**  >  > **habilitar C++ módulos (experimental)** .
 
 Un módulo y el código que lo consume deben compilarse con las mismas opciones del compilador.
 
@@ -30,22 +30,22 @@ Aunque no se especifica en el estándar C++ 20, Microsoft permite que la impleme
 
 - STD. Regex proporciona el contenido del encabezado \<regex >
 - STD. FileSystem proporciona el contenido del encabezado \<filesystem >
-- STD. Memory proporciona el contenido de la \<memoria del encabezado >
-- STD. Threading proporciona el contenido de los encabezados \<Atomic >, \<condition_variable >, \<Future > \<, mutex > \<, shared_mutex > y \<Thread >
+- STD. Memory proporciona el contenido del encabezado \<memoria >
+- STD. Threading proporciona el contenido de los encabezados \<> atómicos, \<condition_variable >, \<> futuros, \<mutex >, \<shared_mutex > y \<subproceso >
 - STD. Core proporciona todo lo demás en C++ la biblioteca estándar
 
-Para consumir estos módulos, solo tiene que agregar una instrucción Import en la parte superior del archivo de código fuente. Por ejemplo:
+Para consumir estos módulos, basta con agregar una declaración de importación en la parte superior del archivo de código fuente. Por ejemplo:
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Para consumir el módulo de la biblioteca estándar de Microsoft, debe compilar el programa con las opciones [/EHsc](../build/reference/eh-exception-handling-model.md) y [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
+Para consumir el módulo de la biblioteca estándar de Microsoft, compile el programa con las opciones [/EHsc](../build/reference/eh-exception-handling-model.md) y [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
 
 ## <a name="basic-example"></a>Ejemplo básico
 
-En el ejemplo siguiente se muestra una definición de módulo simple en un archivo de código fuente denominado **foo. IXX**. La extensión **. IXX** es necesaria para los archivos de interfaz de módulo en Visual Studio. En este ejemplo, el archivo de interfaz contiene la definición de función, así como la declaración. Sin embargo, las definiciones también se pueden colocar en uno o varios archivos independientes (como se muestra en un ejemplo posterior). La instrucción **Export Module foo** indica que este archivo es la interfaz principal para un módulo denominado `Foo`. El modificador de exportación `f()` en indica que esta función estará visible cuando `Foo` lo importe otro programa o módulo. Tenga en cuenta que el módulo hace `Bar`referencia a un espacio de nombres.
+En el ejemplo siguiente se muestra una definición de módulo simple en un archivo de código fuente denominado **foo. IXX**. La extensión **. IXX** es necesaria para los archivos de interfaz de módulo en Visual Studio. En este ejemplo, el archivo de interfaz contiene la definición de función, así como la declaración. Sin embargo, las definiciones también se pueden colocar en uno o varios archivos independientes (como se muestra en un ejemplo posterior). La instrucción **Export Module foo** indica que este archivo es la interfaz principal de un módulo denominado `Foo`. El modificador de **exportación** en `f()` indica que esta función estará visible cuando otro programa o módulo importe `Foo`. Tenga en cuenta que el módulo hace referencia a un espacio de nombres `Bar`.
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-El archivo **Program. cpp** usa la instrucción **Import** para tener acceso al nombre que exporta `Foo`. Tenga en cuenta que `Bar` el nombre es visible aquí, pero no todos sus miembros. Tenga en cuenta también que `ANSWER` la macro no está visible.
+El archivo **. cpp** usa la declaración de **importación** para obtener acceso al nombre que se exporta mediante `Foo`. Tenga en cuenta que el nombre `Bar` es visible aquí, pero no todos sus miembros. Tenga en cuenta también que la macro `ANSWER` no es visible.
 
 ```cpp
 
@@ -132,7 +132,7 @@ La unidad de interfaz principal puede importar archivos de implementación de pa
 
 ## <a name="modules-and-header-files"></a>Módulos y archivos de encabezado
 
-Puede incluir los archivos de encabezado en un archivo de origen de módulo `#include` colocando la Directiva antes de la declaración de módulo. Estos archivos se consideran en el fragmento de *módulo global*. Un módulo solo puede ver los nombres en el *fragmento de módulo global* que se encuentran en los encabezados que incluye explícitamente. El fragmento de módulo global solo contiene los símbolos que se usan realmente.
+Puede incluir los archivos de encabezado en un archivo de origen de módulo si coloca la Directiva `#include` antes de la declaración del módulo. Estos archivos se consideran en el fragmento de *módulo global*. Un módulo solo puede ver los nombres en el *fragmento de módulo global* que se encuentran en los encabezados que incluye explícitamente. El fragmento de módulo global solo contiene los símbolos que se usan realmente.
 
 ```cpp
 // MyModuleA.cpp

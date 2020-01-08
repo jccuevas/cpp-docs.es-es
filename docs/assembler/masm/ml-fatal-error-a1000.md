@@ -1,18 +1,18 @@
 ---
 title: Error irrecuperable A1000 de ML
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1000
 helpviewer_keywords:
 - A1000
 ms.assetid: 4fc77a83-8796-4dcf-9c37-6395d635b817
-ms.openlocfilehash: 4b403c75b4e27f8b673b262952c286995ae3f935
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 7ebc00a10d2b664fda66b7d4957689152187dded
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856935"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317141"
 ---
 # <a name="ml-fatal-error-a1000"></a>Error irrecuperable A1000 de ML
 
@@ -40,4 +40,4 @@ Una de las causas puede ser una de las siguientes:
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

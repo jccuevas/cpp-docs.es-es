@@ -1,37 +1,62 @@
 ---
 title: Declaraciones y definiciones (C++)
-ms.date: 11/04/2016
+ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: 1e76f636a6efd652ac629ad2f97f0b09f6171f9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399075"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301553"
 ---
 # <a name="declarations-and-definitions-c"></a>Declaraciones y definiciones (C++)
 
-Las declaraciones introducen nombres en un programa, por ejemplo, los nombres de variables, espacios de nombres, funciones y clases. Las declaraciones también especifican información de tipos y otras características del objeto que se declara. Antes de poder usar un nombre, hay que declararlo; en C++, el punto en el que se declara un nombre determina si es visible para el compilador. Se no se puede hacer referencia a una función o clase que se declara en algún momento posterior en la unidad de compilación; Puede usar *reenviar declaraciones* para superar esta limitación.
+Un C++ programa consta de varias entidades como variables, funciones, tipos y espacios de nombres. Cada una de estas entidades debe *declararse* antes de que se puedan utilizar. Una declaración especifica un nombre único para la entidad, junto con información sobre su tipo y otras características. En C++ el punto en el que se declara un nombre, es el punto en el que se hace visible para el compilador. No se puede hacer referencia a una función o clase declarada en algún punto posterior de la unidad de compilación. Las variables deben declararse lo más cerca posible antes del punto en el que se usan.
 
-Las definiciones de especifican qué código o datos describe el nombre. El compilador necesita la definición a fin de asignar espacio de almacenamiento para el elemento que se declara.
+En el ejemplo siguiente se muestran algunas declaraciones:
 
-## <a name="declarations"></a>Declaraciones
+```cpp
+#include <string>
 
-Una declaración introduce uno o más nombres en un programa. Las declaraciones pueden aparecer varias veces en un programa. Por tanto, las clases, estructuras, tipos enumerados y otros tipos definidos por el usuario se pueden declarar para cada unidad de compilación. La restricción de esta declaración múltiple es que todas las declaraciones deben ser idénticas. Las declaraciones también actúan como definiciones, excepto cuando la declaración:
+void f(); // forward declaration
 
-1. Es un prototipo de función (una declaración de función sin cuerpo de función).
+int main()
+{
+    const double pi = 3.14; //OK
+    int i = f(2); //OK. f is forward-declared
+    std::string str; // OK std::string is declared in <string> header
+    C obj; // error! C not yet declared.
+    j = 0; // error! No type specified.
+    auto k = 0; // OK. type inferred as int by compiler.
+}
 
-1. Contiene el **extern** especificador pero ningún inicializador (objetos y variables) o el cuerpo de la función (funciones). Esto significa que la definición no está necesariamente en la unidad de traducción actual y proporciona al nombre vinculación externa.
+int f(int i)
+{
+    return i + 42;
+}
 
-1. Es de un miembro de datos estático en una declaración de clase.
+namespace N {
+   class C{/*...*/};
+}
+```
 
-   Como los miembros de datos estáticos de clase son variables discretas compartidas por todos los objetos de la clase, se deben definir e inicializar fuera de la declaración de clase. (Para obtener más información sobre las clases y miembros de clase, vea [clases](../cpp/classes-and-structs-cpp.md).)
+En la línea 5, se declara la función `main`. En la línea 7, se declara e *inicializa*una variable **const** denominada `pi`. En la línea 8, se declara un entero `i` y se inicializa con el valor generado por la función `f`. El nombre `f` es visible para el compilador debido a la *declaración adelantada* en la línea 3. 
 
-1. Es una declaración de nombre de clase sin la siguiente definición, como `class T;`.
+En la línea 9, se declara una variable denominada `obj` de tipo `C`. Sin embargo, esta declaración genera un error porque `C` no se declara hasta más tarde en el programa y no se declara hacia delante. Para corregir el error, puede trasladar la *definición* completa de `C` antes de `main`, o bien agregar una declaración de avance para ella. Este comportamiento es diferente de otros lenguajes como C#, en el que las funciones y clases se pueden usar antes de su punto de declaración en un archivo de código fuente. 
 
-1. Es un **typedef** instrucción.
+En la línea 10, se declara una variable denominada `str` de tipo `std::string`. El nombre `std::string` es visible porque se presenta en el archivo de [encabezado](header-files-cpp.md) `string`, que se combina en el archivo de código fuente en la línea 1. `std` es el espacio de nombres en el que se declara la clase `string`.
 
-Estos son algunos ejemplos de declaraciones que también son definiciones:
+En la línea 11, se genera un error porque no se ha declarado el nombre `j`. Una declaración debe proporcionar un tipo, a diferencia de otros lenguajes como javaScript. En la línea 12, se usa la palabra clave `auto`, que indica al compilador que infiera el tipo de `k` basándose en el valor con el que se inicializa. En este caso, el compilador elige `int` para el tipo.  
+
+## <a name="declaration-scope"></a>Ámbito de la declaración
+
+El nombre que se introduce en una declaración es válido dentro del *ámbito* en el que se produce la declaración. En el ejemplo anterior, las variables que se declaran dentro de la función `main` son *variables locales*. Podría declarar otra variable denominada `i` fuera de Main, en el *ámbito global*, y sería una entidad completamente independiente. Sin embargo, dicha duplicación de nombres puede conducir a errores y confusión del programador y debe evitarse. En la línea 21, la clase `C` se declara en el ámbito del espacio de nombres `N`. El uso de espacios de nombres ayuda a evitar *conflictos de nombres*. La C++ mayoría de los nombres de biblioteca estándar se declaran dentro del espacio de nombres `std`. Para obtener más información sobre cómo interactúan las reglas de ámbito con las declaraciones, vea [ámbito](../cpp/scope-visual-cpp.md).
+
+## <a name="definitions"></a>Definiciones
+
+Algunas entidades, incluidas las funciones, las clases, las enumeraciones y las variables constantes, deben definirse además de declararse. Una *definición* proporciona al compilador toda la información que necesita para generar código máquina cuando la entidad se usa más adelante en el programa. En el ejemplo anterior, la línea 3 contiene una declaración para la función `f` pero la *definición* de la función se proporciona en las líneas 15 a 18. En la línea 21, la clase `C` se declara y se define (aunque, tal y como se define, la clase no hace nada). Se debe definir una variable constante, en otras palabras asignadas a un valor, en la misma instrucción en la que se declara. Una declaración de un tipo integrado como `int` es automáticamente una definición, ya que el compilador conoce la cantidad de espacio que se va a asignar.
+
+En el ejemplo siguiente se muestran las declaraciones que también son definiciones:
 
 ```cpp
 // Declare and define int variables i and j.
@@ -45,48 +70,43 @@ enum suits { Spades = 1, Clubs, Hearts, Diamonds };
 class CheckBox : public Control
 {
 public:
-            Boolean IsChecked();
+    Boolean IsChecked();
     virtual int     ChangeState() = 0;
 };
 ```
 
-Algunas declaraciones que no son definiciones son:
+Estas son algunas declaraciones que no son definiciones:
 
 ```cpp
 extern int i;
 char *strchr( const char *Str, const char Target );
 ```
 
-Se considera que un nombre se declara inmediatamente después de su declarador pero antes de su inicializador (opcional). Para obtener más información, consulte [punto de declaración](../cpp/point-of-declaration-in-cpp.md).
+## <a name="typedefs-and-using-statements"></a>Typedefs y instrucciones Using
 
-Las declaraciones se producen en un *ámbito*. El ámbito controla la visibilidad del nombre declarado y la duración del objeto definido, si existe. Para obtener más información acerca de cómo interactúan las reglas de ámbito con declaraciones, vea [ámbito](../cpp/scope-visual-cpp.md).
+En versiones anteriores de C++, la palabra clave [typedef](aliases-and-typedefs-cpp.md) se utiliza para declarar un nuevo nombre que es un *alias* de otro nombre. Por ejemplo, el tipo `std::string` es otro nombre para `std::basic_string<char>`. Debe ser obvio por qué los programadores usan el nombre de la definición de tipo y no el nombre real. En moderno C++, se prefiere la palabra clave [using](aliases-and-typedefs-cpp.md) a TypeDef, pero la idea es la misma: se ha declarado un nuevo nombre para una entidad que ya se ha declarado y definido.
 
-Una declaración de objeto es también una definición a menos que contenga el **extern** especificador de clase de almacenamiento que se describe en [clases de almacenamiento](storage-classes-cpp.md). Una declaración de función es también una definición a menos que sea un prototipo. Un prototipo es un encabezado de función sin un cuerpo de definición de la función. La definición de un objeto provoca la asignación del almacenamiento y las inicializaciones adecuadas para ese objeto.
+## <a name="static-class-members"></a>Miembros de clase estáticos
 
-## <a name="definitions"></a>Definiciones
+Dado que los miembros de datos de clase estática son variables discretas compartidas por todos los objetos de la clase, deben definirse e inicializarse fuera de la definición de clase. (Para obtener más información, vea [clases](../cpp/classes-and-structs-cpp.md)).
 
-Una definición es una especificación única de un objeto o una variable, función, clase o enumerador. Como las definiciones deben ser únicas, un programa solo puede contener una definición para un determinado elemento de programa. Puede haber una correspondencia varios a uno entre las declaraciones y definiciones. Hay dos casos en los que un elemento de programa puede estar declarado y no definido:
+## <a name="extern-declarations"></a>declaraciones extern
 
-1. Se declara una función pero nunca se hace referencia a ella con una llamada de función o una expresión que tome la dirección de la función.
+Un C++ programa podría contener más de una [unidad de compilación](header-files-cpp.md). Para declarar una entidad que se define en una unidad de compilación independiente, utilice la palabra clave [extern](extern-cpp.md) . La información de la declaración es suficiente para el compilador, pero si la definición de la entidad no se encuentra en el paso de vinculación, el enlazador producirá un error.
 
-1. Una clase solo se utiliza de forma que no sea necesario conocer su definición. Sin embargo, la clase debe declararse. En el código siguiente se muestra este caso:
+## <a name="in-this-section"></a>En esta sección
 
-    ```cpp
-    // definitions.cpp
-    class WindowCounter;   // Forward declaration; no definition
-
-    class Window
-    {
-       // Definition of WindowCounter not required
-       static WindowCounter windowCounter;
-    };
-
-    int main()
-    {
-    }
-    ```
+[Clases de almacenamiento](storage-classes-cpp.md)<br/>
+[const](const-cpp.md)<br/>
+[constexpr](constexpr-cpp.md)<br/>
+[extern](extern-cpp.md)<br/>
+[Inicializadores](initializers.md)<br/>
+[Alias y definiciones de tipo](aliases-and-typedefs-cpp.md)<br/>
+[Using (declaración)](using-declaration.md)<br/>
+[volatile](volatile-cpp.md)<br/>
+[decltype](decltype-cpp.md)<br/>
+[Atributos deC++](attributes.md)<br/>
 
 ## <a name="see-also"></a>Vea también
 
 [Conceptos básicos](../cpp/basic-concepts-cpp.md)<br/>
-[Punto de declaración](../cpp/point-of-declaration-in-cpp.md)

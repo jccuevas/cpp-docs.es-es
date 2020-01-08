@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDW directive
 ms.assetid: c288fa8a-2f1b-4a13-aba2-04157e84110e
-ms.openlocfilehash: 00489fb00c4424084625e7603355a8be3a1b1961
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 0dd17005a28741d62a0cc381b9155042f02d08f4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398442"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313813"
 ---
 # <a name="endw-32-bit-masm"></a>. ENDW (MASM de 32 bits)
 
@@ -19,10 +19,11 @@ ms.locfileid: "74398442"
 
 > **.ENDW**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-(solo para MASM de 32 bits). Vea [. WHILE](../../assembler/masm/dot-while.md).
+(solo para MASM de 32 bits). Vea [. WHILE](dot-while.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

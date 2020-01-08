@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944308"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300266"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -47,7 +47,7 @@ int _heapset(
 );
 ```
 
-#### <a name="parameters"></a>Parámetros
+#### <a name="parameters"></a>Parameters
 
 *fill*<br/>
 Carácter de relleno.
@@ -65,23 +65,23 @@ Carácter de relleno.
 
 Además, si se produce un error, `_heapset` establece `errno` en `ENOSYS`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 La función `_heapset` muestra las ubicaciones de memoria libre o los nodos que se han sobrescrito accidentalmente.
 
 `_heapset` comprueba la coherencia mínima en el montón y, después, establece cada byte de las entradas libres del montón al valor `fill` . Este valor conocido muestra las ubicaciones de memoria del montón que contienen nodos libres y las que contienen datos que se escribieron involuntariamente en la memoria liberada. Si el sistema operativo no admite `_heapset`(por ejemplo Windows 98), la función devuelve `_HEAPOK` y establece `errno` en `ENOSYS`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario|Encabezado opcional|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../c-runtime-library/compatibility.md) en la introducción.
+Para obtener más información de compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md) en la Introducción.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // crt_heapset.c
 // This program checks the heap and
 // fills in free entries with the character 'Z'.

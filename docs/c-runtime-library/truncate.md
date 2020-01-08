@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: e5a341f1828bad9f5562c10036779245ac88c79e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743201"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301683"
 ---
-# <a name="truncate"></a>_TRUNCATE
+# <a name="_truncate"></a>_TRUNCATE
 
 Especifica el comportamiento de truncamiento de cadenas.
 
@@ -25,7 +25,7 @@ Especifica el comportamiento de truncamiento de cadenas.
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 `_TRUNCATE` habilita el comportamiento de truncamiento cuando se pasa como el parámetro `count` a estas funciones:
 
@@ -65,7 +65,7 @@ Las siguientes funciones devuelven el número de caracteres copiados si no se pr
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // crt_truncate.c
 #include <stdlib.h>
 #include <errno.h>

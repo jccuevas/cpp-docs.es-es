@@ -1,5 +1,5 @@
 ---
-title: _spawn, _wspawn (Funciones)
+title: Funciones _spawn y _wspawn
 ms.date: 11/04/2016
 api_location:
 - msvcr80.dll
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957278"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301709"
 ---
-# <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn (Funciones)
+# <a name="_spawn-_wspawn-functions"></a>Funciones _spawn y _wspawn
 
 Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso:
 
@@ -75,7 +75,7 @@ Las últimas letras del nombre de función determinan la variación.
 | `p`  | La variable de entorno `PATH` se usa para buscar el archivo que se va a ejecutar.  |
 | `v`  | `argv`, una matriz de punteros a los argumentos de la línea de comandos, se pasa a la función `_spawn`. Este sufijo suele usarse cuando el número de parámetros para el nuevo proceso es variable.  |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso. Controlan automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte en función de la página de códigos multibyte actualmente en uso. Las funciones `_wspawn` son versiones de caracteres anchos de las funciones `_spawn`; no controlan cadenas de caracteres multibyte. De lo contrario, las funciones `_wspawn` se comportan de forma idéntica a sus `_spawn` equivalentes.
 
@@ -130,7 +130,7 @@ Las llamadas a `_spawnv`, `_spawnve`, `_spawnvp` y `_spawnvpe` resultan útiles 
 
 ## <a name="environment-of-the-spawned-process"></a>Entorno del proceso generado
 
-Los archivos que están abiertos cuando se realiza una llamada a `_spawn` permanecen abiertos en el nuevo proceso. En las llamadas a `_spawnl`, `_spawnlp`, `_spawnv` y `_spawnvp`, el nuevo proceso hereda el entorno del proceso de llamada. Puede usar las llamadas a `_spawnle`, `_spawnlpe`, `_spawnve` y `_spawnvpe` para modificar el entorno del nuevo proceso pasando una lista de configuración de entorno con el argumento `envp`. El argumento `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena finalizada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Observe que `value` no está entre comillas). El elemento final de la matriz `envp` debe ser **NULL**. Cuando `envp` es **NULL**, el proceso generado hereda la configuración del entorno del proceso primario.
+Los archivos que están abiertos cuando se realiza una llamada a `_spawn` permanecen abiertos en el nuevo proceso. En las llamadas a `_spawnl`, `_spawnlp`, `_spawnv` y `_spawnvp`, el nuevo proceso hereda el entorno del proceso de llamada. Puede usar las llamadas a `_spawnle`, `_spawnlpe`, `_spawnve` y `_spawnvpe` para modificar el entorno del nuevo proceso pasando una lista de configuración de entorno con el argumento `envp`. El argumento `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena finalizada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Tenga en cuenta que `value` no está entre comillas dobles). El último elemento de la matriz de `envp` debe ser **null**. Cuando `envp` es **NULL**, el proceso generado hereda la configuración del entorno del proceso primario.
 
 Las funciones `_spawn` pueden pasar toda la información sobre los archivos abiertos, incluido el modo de traducción, al nuevo proceso. Esta información se pasa en modo real a través de la entrada `C_FILE_INFO` del entorno. El código de inicio normalmente procesa esta entrada y luego la elimina del entorno. En cambio, si una función `_spawn` genera un proceso que no sea de C, esta entrada permanece en el entorno. Al imprimir el entorno se muestran caracteres gráficos en la cadena de definición de esta entrada porque la información del entorno se pasa en formato binario en modo real. No debe tener ningún otro efecto en las operaciones normales. En modo protegido, la información del entorno se pasa en forma de texto y, por tanto, no contiene ningún carácter gráfico.
 
@@ -148,7 +148,7 @@ Si va a llamar a `_spawn` desde un archivo DLL o una aplicación de interfaz gr�
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // crt_spawn.c
 // This program accepts a number in the range
 // 1-8 from the command line. Based on the number it receives,

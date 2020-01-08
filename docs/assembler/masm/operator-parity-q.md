@@ -1,6 +1,6 @@
 ---
 title: Operador PARITY?
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - PARITY?
 - operator PARITY?
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - PARITY? operator
 - operator PARITY?
 ms.assetid: f8c52def-c4b7-4b81-af96-2b0c2d943f6c
-ms.openlocfilehash: b5abfcf12a22240f5ffe7ef01c0156c0f48845e5
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bf52b83c116d5bf71cf556bd042a6057e890ec55
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396526"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319026"
 ---
 # <a name="operator-parity"></a>Operador PARITY?
 
-Estado de la marca de paridad. Se usa solo dentro de [. Si](../../assembler/masm/dot-if.md)es, [. WHILE](../../assembler/masm/dot-while.md), o [. REPETIR](../../assembler/masm/dot-repeat.md) bloques y evaluarlos en tiempo de ejecución, no en tiempo de ensamblado.
+Estado de la marca de paridad. Se usa solo dentro de [. Si](dot-if.md)es, [. WHILE](dot-while.md), o [. REPETIR](dot-repeat.md) bloques y evaluarlos en tiempo de ejecución, no en tiempo de ensamblado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,4 +25,5 @@ Estado de la marca de paridad. Se usa solo dentro de [. Si](../../assembler/masm
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](operators-reference.md)
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

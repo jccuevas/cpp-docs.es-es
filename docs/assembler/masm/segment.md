@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 569604bfd6ed11039ce5492223b8d5f986ceea7a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988008"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318467"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -25,7 +25,7 @@ Define un segmento de programa denominado *Name* con atributos de segmento
 
 #### <a name="parameters"></a>Parameters
 
-*align*<br/>
+*alinear*\
 El intervalo de direcciones de memoria desde el que se puede seleccionar una dirección inicial para el segmento. El tipo de alineación puede ser cualquiera de los siguientes:
 
 |Alinear tipo|Dirección inicial|
@@ -64,4 +64,5 @@ Por `ALIGN(n)`, *n* puede ser cualquier potencia de 2 de 1 a 8192; no es compati
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)
