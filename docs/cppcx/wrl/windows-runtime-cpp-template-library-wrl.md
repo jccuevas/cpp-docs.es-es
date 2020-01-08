@@ -3,12 +3,12 @@ title: Biblioteca de plantillas de Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541201"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676943"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
 
@@ -17,7 +17,7 @@ La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de
 > [!NOTE]
 > WRL se ha sustituido por C++/WinRT, una proyección de lenguaje c++ 17 estándar para api de Windows Runtime. C++/WinRT está disponible en el SDK de Windows 10 de la versión 1803 en adelante. C++/WinRT se implementa completamente en los archivos de encabezado y está diseñado para proporcionar acceso de primera clase a la API moderna de Windows.
 >
-> Con C++/WinRT, puede consumir y crear Windows Runtime API con cualquier compilador de c++ 17 compatible con los estándares. C++Normalmente,/WinRT funciona mejor y genera archivos binarios más pequeños que cualquier otra opción de lenguaje para el Windows Runtime. Seguiremos admitiendo C++/CX y WRL, pero recomendamos encarecidamente que las nuevas aplicaciones usen C++/WinRT. Para obtener más información, consulte [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Con C++/WinRT, puede consumir y crear Windows Runtime API con cualquier compilador de c++ 17 compatible con los estándares. C++ / c++ / WinRT normalmente funciona mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Seguiremos admitiendo C++/CX y WRL, pero recomendamos encarecidamente que las nuevas aplicaciones usen C++/WinRT. Para obtener más información, consulte [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ## <a name="benefits"></a>Ventajas
 
@@ -147,5 +147,5 @@ Un objeto `WeakRef` normalmente representa un objeto cuya existencia se controla
 |-|-|
 |[API principales por categoría](key-wrl-apis-by-category.md)|Resalta los tipos C++ , funciones y macros principales de la biblioteca de plantillas de Windows Runtime.|
 |[Referencia](wrl-reference.md)|Contiene información de referencia para la C++ biblioteca de plantillas de Windows Runtime.|
-|[Referencia C++rápida/CX)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente las C++características de/CX que admiten el Windows Runtime.|
+|[Referencia rápida (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente las C++características de/CX que admiten el Windows Runtime.|
 |[Usar componentes de Windows Runtime en VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Muestra cómo usar C++/CX para crear un componente de Windows Runtime básico.|
