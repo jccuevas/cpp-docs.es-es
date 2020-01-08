@@ -3,12 +3,12 @@ title: Aquí está otra vez C++ (C++ moderno)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303326"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301748"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Aquí está otra vez C++ (C++ moderno)
 
@@ -47,7 +47,7 @@ Siempre que sea posible, use un puntero inteligente al asignar memoria de montó
 
 ## <a name="stdstring-and-stdstring_view"></a>STD:: String y STD:: string_view
 
-Las cadenas de estilo C son otra fuente principal de errores. Mediante [STD:: String y STD:: wstring](../standard-library/basic-string-class.md) , puede eliminar prácticamente todos los errores asociados a las cadenas de estilo C y beneficiarse de las funciones miembro para buscar, anexar, anteponer, etc. Ambos están muy optimizados para la velocidad. Al pasar una cadena a una función que solo requiere acceso de solo lectura, en (C++ 17) puede usar [STD:: string_view](../standard-library/basic-string-view-class.md) para obtener una ventaja de rendimiento aún mayor.
+Las cadenas de estilo C son otra fuente principal de errores. Mediante [STD:: String y STD:: wstring](../standard-library/basic-string-class.md) , puede eliminar prácticamente todos los errores asociados a las cadenas de estilo C y beneficiarse de las funciones miembro para buscar, anexar, anteponer, etc. Ambos están muy optimizados para la velocidad. Al pasar una cadena a una función que solo requiere acceso de solo lectura, en C++ 17 puede usar [STD:: string_view](../standard-library/basic-string-view-class.md) para obtener una ventaja de rendimiento aún mayor.
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>STD:: Vector y otros contenedores de la biblioteca estándar
 
