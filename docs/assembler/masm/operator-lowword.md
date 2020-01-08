@@ -1,6 +1,6 @@
 ---
 title: Operador LOWWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator LOWWORD
 - LOWWORD
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LOWWORD operator
 - operator LOWWORD
 ms.assetid: ceb45c78-474b-4099-b46e-35eb072294ff
-ms.openlocfilehash: 4a2300f21ae5d19a69885fdb763c9a72df14bdb8
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 45e9149032ded178e2a7edce771a9a43a9fcd741
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396712"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311122"
 ---
 # <a name="operator-lowword"></a>Operador LOWWORD
 
@@ -25,4 +25,5 @@ Devuelve los 16 bits inferiores de la *expresión*. Las expresiones MASM son val
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](operators-reference.md)
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

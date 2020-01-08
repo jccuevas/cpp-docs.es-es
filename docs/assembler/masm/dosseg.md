@@ -1,21 +1,21 @@
 ---
 title: DOSSEG
-ms.date: 11/05/2019
+ms.date: 12/17/2019
 f1_keywords:
 - DOSSEG
 helpviewer_keywords:
 - DOSSEG directive
 ms.assetid: 4312826a-1547-4d48-bfd7-cfaf6d037609
-ms.openlocfilehash: 1f91142f353af97e9bb972620ae6360ac6f1fa42
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3cfeb19b1a77262c01c3049838d7de02ec7b3be6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398747"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314658"
 ---
-# <a name="dosseg-32-bit-masm"></a>DOSSEG ((MASM de 32 bits)
+# <a name="dosseg"></a>DOSSEG
 
-Es idéntico a [. DOSSEG (](../../assembler/masm/dot-dosseg.md), que es la forma preferida. (solo para MASM de 32 bits).
+(solo para MASM de 32 bits). Es idéntico a [. DOSSEG (](dot-dosseg.md), que es la forma preferida.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,4 +23,5 @@ Es idéntico a [. DOSSEG (](../../assembler/masm/dot-dosseg.md), que es la forma
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

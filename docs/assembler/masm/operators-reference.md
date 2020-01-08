@@ -1,16 +1,16 @@
 ---
 title: Referencia de operadores de MASM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395207"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318766"
 ---
 # <a name="masm-operators-reference"></a>Referencia de operadores de MASM
 
@@ -19,7 +19,7 @@ ms.locfileid: "74395207"
 ||||
 |-|-|-|
 |[* (multiplicar)](operator-multiply.md)|[+ (sumar)](operator-add.md)|[-(restar o negar)](operator-subtract-2.md)|
-|[. campo](operator-dot.md)|[/(dividir)](operator-subtract-1.md)|[&#91;&#93;ajustar](operator-brackets.md)|
+|[. campo](operator-dot.md)|[/(dividir)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[MOD (resto)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Flujo de control
@@ -68,7 +68,7 @@ ms.locfileid: "74395207"
 |[EQ (igual)](operator-eq.md)|[GE (mayor o igual que)](operator-ge.md)|[GT (mayor que)](operator-gt.md)|
 |[LE (menor o igual que)](operator-le.md)|[LT (menor que)](operator-lt.md)|[NE (no es igual)](operator-ne.md)|
 
-## <a name="segment"></a>sector
+## <a name="segment"></a>Segmento
 
 |||
 |-|-|
@@ -77,7 +77,7 @@ ms.locfileid: "74395207"
 |[DESPLAZAMIENTO (desplazamiento relativo de segmento)](operator-offset.md)|[SECTIONREL (desplazamiento relativo de la sección)](operator-sectionrel.md)|
 |[SEG (obtener segmento)](operator-seg.md)||
 
-## <a name="type"></a>Tipo
+## <a name="type"></a>Tipo de
 
 ||||
 |-|-|-|
@@ -90,4 +90,5 @@ ms.locfileid: "74395207"
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>
+[Referencia de Microsoft macro assembler](microsoft-macro-assembler-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

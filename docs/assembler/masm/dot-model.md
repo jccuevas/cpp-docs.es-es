@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398108"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317635"
 ---
 # <a name="model-32-bit-masm"></a>. MODELO (MASM de 32 bits)
 
@@ -21,7 +21,7 @@ Inicializa el modelo de memoria de programas. (solo para MASM de 32 bits).
 
 > **.**  *Memoria del modelo: modelo* ⟦ __,__ *tipo de idioma*⟧ ⟦ __,__ *Stack-Option*⟧
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 \ *de modelo de memoria*
 Parámetro necesario que determina el tamaño de los punteros de código y de datos.
@@ -36,9 +36,9 @@ Parámetro opcional.
 
 Al especificar **NEARSTACK** , el segmento de pila se agrupa en un solo segmento físico (**DGROUP**) junto con los datos. Se supone que el registro del segmento de pila (**SS**) contiene la misma dirección que el registro de segmento de datos (**DS**). **FARSTACK** no agrupa la pila con **DGROUP**. por lo tanto, **SS** no es igual a **DS**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-**. El modelo** no se utiliza en [MASM para x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. El modelo** no se utiliza en [MASM para x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 En la tabla siguiente se enumeran los valores posibles para cada parámetro cuando tenga como destino plataformas de 16 y 32 bits:
 
@@ -88,4 +88,5 @@ end
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

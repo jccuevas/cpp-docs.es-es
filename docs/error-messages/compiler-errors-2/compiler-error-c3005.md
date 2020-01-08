@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3005
 ms.assetid: 30bad565-e79f-4c3f-82cb-a74bd0baab8f
-ms.openlocfilehash: 1303fd667c92af6fd8d0476da9468b4c7d090e6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b260879dfafbe40ab13d14f7208f1ffbc90b9826
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350746"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302164"
 ---
 # <a name="compiler-error-c3005"></a>Error del compilador C3005
 
@@ -21,7 +21,7 @@ Hay una directiva de OpenMP con formato incorrecto.
 
 El ejemplo siguiente genera la advertencia C3005:
 
-```
+```c
 // C3005.c
 // compile with: /openmp
 int main()
@@ -32,7 +32,7 @@ int main()
 
 También puede producirse el error C3005 si se coloca una llave de apertura en la misma línea que el pragma.
 
-```
+```c
 // C3005b.c
 // compile with: /openmp
 int main() {

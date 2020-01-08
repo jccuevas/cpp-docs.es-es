@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5953ad6bdf1d9d1b0070ce83dd1d764799b7440a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397995"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317570"
 ---
 # <a name="safeseh-32-bit-masm"></a>. SAFESEH (32 bits MASM)
 
@@ -23,9 +23,9 @@ Registra una función como un controlador de excepciones estructurado. (solo par
 
 > **.**  *Identificador* de SAFESEH
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-El *identificador* debe ser el identificador de un procedimiento [PROC](../../assembler/masm/proc.md) o [EXTRN](../../assembler/masm/extrn.md) definido localmente. No se permite una [etiqueta](../../assembler/masm/label-masm.md) . El. La Directiva SAFESEH requiere la opción de línea de comandos [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
+El *identificador* debe ser el identificador de un procedimiento [PROC](proc.md) o [EXTRN](extrn.md) definido localmente. No se permite una [etiqueta](label-masm.md) . El. La Directiva SAFESEH requiere la opción de línea de comandos [/SAFESEH](ml-and-ml64-command-line-reference.md) ml. exe.
 
 Para obtener más información acerca de los controladores de excepciones estructurados, vea [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
@@ -41,4 +41,5 @@ end
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)
