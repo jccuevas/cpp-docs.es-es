@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2088
 ms.assetid: b93f7094-185b-423d-8bb9-507cd757dbf5
-ms.openlocfilehash: 6d53f2896fc3b964a4d2652b3bfd0dcebb4a7226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f798774a7735a6aceb0bf75b3c6da9ccb1e4a72
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175178"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301982"
 ---
 # <a name="compiler-error-c2088"></a>Error del compilador C2088
 
-'operador': no válido para 'class-key'
+' Operator ': no es válido para ' Class-Key '
 
-El operador no se definió para la estructura o unión. Este error sólo es válido para el código de C.
+No se definió el operador para la estructura o la Unión. Este error solo es válido para código de C.
 
-El ejemplo siguiente genera C2088 tres veces:
+En el ejemplo siguiente se generan C2088 tres veces:
 
-```
+```c
 // C2088.c
 struct S {
    int m_i;

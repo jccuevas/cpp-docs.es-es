@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 650c69be17c9271c343360edbb90f093841a1047
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ec08be4941f81abed55420884b34dc817caf3f13
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398256"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317739"
 ---
 # <a name="fpo-32-bit-masm"></a>. FPO (MASM de 32 bits)
 
@@ -21,7 +21,7 @@ El **.** La Directiva FPO controla la emisión de registros de depuración en la
 
 > **. FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 \ *cdwLocals*
 Número de variables locales, un valor de bit 32 sin signo.
@@ -43,4 +43,5 @@ Indica el tipo de marco.  Consulte [FPO_DATA](/windows/win32/api/winnt/ns-winnt-
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

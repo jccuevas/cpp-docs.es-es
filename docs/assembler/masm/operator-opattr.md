@@ -1,6 +1,6 @@
 ---
 title: Operador OPATTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator OPATTR
 - OPATTR
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OPATTR operator
 - operator OPATTR
 ms.assetid: ebf2e514-249d-44ad-8810-6bcefb3e4cef
-ms.openlocfilehash: 8287c5410beb44046f43eaa5a749506c640d9296
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 0813d4c04574e2cbc2239c255c97c3e15edcffa9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396562"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318337"
 ---
 # <a name="operator-opattr"></a>Operador OPATTR
 
-Devuelve una palabra que define el modo y el ámbito de la *expresión*. El byte bajo es idéntico al byte devuelto por [. Escriba](../../assembler/masm/operator-dot-type.md). El byte alto contiene información adicional.
+Devuelve una palabra que define el modo y el ámbito de la *expresión*. El byte bajo es idéntico al byte devuelto por [. Escriba](operator-dot-type.md). El byte alto contiene información adicional.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,4 +25,5 @@ Devuelve una palabra que define el modo y el ámbito de la *expresión*. El byte
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](operators-reference.md)
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

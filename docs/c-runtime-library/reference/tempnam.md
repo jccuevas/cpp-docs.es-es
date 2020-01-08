@@ -1,6 +1,6 @@
 ---
 title: tempnam
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - tempnam
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - tempnam function
 ms.assetid: 42446733-f131-470f-b4d0-96918becab11
-ms.openlocfilehash: c27ca2b55b9dbeff67ddba31b9b0ffc0384472e2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4c7945b68a0cd8dd99fcf15e7484aad877c401d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946223"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300331"
 ---
 # <a name="tempnam"></a>tempnam
 
-Esta función POSIX está en desuso. En su lugar, use la función [_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) compatible con ISO C++.
+El nombre de la función POSIX implementada por Microsoft `tempnam` es un alias en desuso para la función [_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) . De forma predeterminada, genera una [Advertencia del compilador (nivel 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). El nombre está en desuso porque no sigue las reglas estándar de C para los nombres específicos de la implementación. Sin embargo, todavía se admite la función.
+
+En su lugar, se recomienda usar [_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) . O bien, puede seguir usando el nombre de esta función y deshabilitar la advertencia. Para obtener más información, vea [desactivar la advertencia](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) y [los nombres de las funciones POSIX](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).

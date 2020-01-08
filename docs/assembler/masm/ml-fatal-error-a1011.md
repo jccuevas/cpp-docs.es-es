@@ -1,18 +1,18 @@
 ---
 title: Error irrecuperable A1011 de ML
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1011
 helpviewer_keywords:
 - A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-ms.openlocfilehash: 0d8d3896f7788aa3f51605651ee1b728b0e1d60a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5607d6d56e0b3889332dcf2624d519529819b1c9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856857"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318088"
 ---
 # <a name="ml-fatal-error-a1011"></a>Error irrecuperable A1011 de ML
 
@@ -20,20 +20,20 @@ ms.locfileid: "74856857"
 
 El ensamblador encontró una directiva de alto nivel en la que no se esperaba una. Se encontró una de las siguientes directivas:
 
-- [. ELSE](../../assembler/masm/dot-else.md) sin [. Si](../../assembler/masm/dot-if.md) es
+- [. ELSE](dot-else.md) sin [. Si](dot-if.md) es
 
-- [. ENDIF](../../assembler/masm/dot-endif.md) sin [. Si](../../assembler/masm/dot-if.md) es
+- [. ENDIF](dot-endif.md) sin [. Si](dot-if.md) es
 
-- [. ENDW](../../assembler/masm/dot-endw.md) sin [. WHILE](../../assembler/masm/dot-while.md)
+- [. ENDW](dot-endw.md) sin [. WHILE](dot-while.md)
 
-- [. UNTILCXZ](../../assembler/masm/dot-untilcxz.md) sin [. REPETIR](../../assembler/masm/dot-repeat.md)
+- [. UNTILCXZ](dot-untilcxz.md) sin [. REPETIR](dot-repeat.md)
 
-- [. Continúe](../../assembler/masm/dot-continue.md) sin [. WHILE](../../assembler/masm/dot-while.md) o [. REPETIR](../../assembler/masm/dot-repeat.md)
+- [. Continúe](dot-continue.md) sin [. WHILE](dot-while.md) o [. REPETIR](dot-repeat.md)
 
-- [. INTERRUMPIr](../../assembler/masm/dot-break.md) sin [. WHILE](../../assembler/masm/dot-while.md) o [. REPETIR](../../assembler/masm/dot-repeat.md)
+- [. INTERRUMPIr](dot-break.md) sin [. WHILE](dot-while.md) o [. REPETIR](dot-repeat.md)
 
-- [. ](../../assembler/masm/dot-else.md)De lo contrario `.ELSE`
+- [. ](dot-else.md)De lo contrario `.ELSE`
 
 ## <a name="see-also"></a>Vea también
 
-[Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Mensajes de error de ML](ml-error-messages.md)

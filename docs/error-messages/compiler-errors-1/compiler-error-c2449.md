@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2449
 ms.assetid: 544bf0b6-daa0-40e8-9f21-8e583d472a2d
-ms.openlocfilehash: f674bbec7cee8c00792848ee7e51b1e46299dd58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fd62813fdf3b50c0e329fc423e100d55a36ae12
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302077"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299028"
 ---
 # <a name="compiler-error-c2449"></a>Error del compilador C2449
 
-¿se encontró ' {' en el ámbito de archivo (encabezado de función que faltan)?
+se encontró ' {' en el ámbito de archivo (¿falta el encabezado de función?)
 
-Se produce una llave de apertura en el ámbito de archivo.
+Se produce una llave de apertura en el ámbito del archivo.
 
 Este error puede deberse a un punto y coma entre un encabezado de función y la llave de apertura de la definición de función.
 
-El ejemplo siguiente genera C2499:
+En el ejemplo siguiente se genera C2499:
 
-```
+```c
 // C2449.c
 // compile with: /c
 void __stdcall func(void) {}   // OK

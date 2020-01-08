@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2053
 ms.assetid: 13324c85-13a8-4996-bd42-a31bfe7ff80f
-ms.openlocfilehash: be5517ce77872fe395a52c5b1e0070612e205a3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74e8104ec55e465875846b48186b9abdcb0f2f0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408802"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302073"
 ---
 # <a name="compiler-error-c2053"></a>Error del compilador C2053
 
-'identifier': cadena de caracteres anchos
+' Identifier ': coincidencia de cadena ancha
 
-La cadena de caracteres anchos se asigna a un tipo incompatible.
+La cadena ancha se asigna a un tipo incompatible.
 
-El ejemplo siguiente genera C2053:
+En el ejemplo siguiente se genera C2053:
 
-```
+```c
 // C2053.c
 int main() {
    char array[] = L"Rika";   // C2053

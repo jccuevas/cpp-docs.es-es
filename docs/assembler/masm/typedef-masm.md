@@ -1,26 +1,27 @@
 ---
 title: TYPEDEF (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - typedef
 helpviewer_keywords:
 - TYPEDEF directive
 ms.assetid: 0c659890-c9a5-485a-a680-e4fb3272032c
-ms.openlocfilehash: d35966f8db5e8873b8080976aaaab37937cbe192
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bf14b446629a4704491feff44031ecc01267b027
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393165"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319195"
 ---
-# <a name="typedef-masm"></a>TYPEDEF (MASM)
+# <a name="typedef"></a>TYPEDEF
 
-Define un nuevo tipo denominado *Name*, que es equivalente a *Type*.
+Define un nuevo tipo o **proto** denominado *Name*, que es equivalente a *Type* o *protoDefinition*.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *Name* ( *tipo* **TYPEDEF** )
+> *nombre* **TYPEDEF** *Type* | **proto** *protoDefinition*
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

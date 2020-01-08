@@ -3,12 +3,12 @@ title: Sistema de tipos de C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246598"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301579"
 ---
 # <a name="c-type-system"></a>Sistema de tipos de C++
 
@@ -24,9 +24,7 @@ El concepto de *tipo* es muy importante en C++. Cada variable, argumento de func
 
 ## <a name="specifying-variable-and-function-types"></a>Especificar tipos de variable y función
 
-C++es un lenguaje *fuertemente tipado* y también tiene *tipo estático*; cada objeto tiene un tipo y ese tipo nunca cambia (no debe confundirse con los objetos de datos estáticos).
-**Al declarar una variable** en el código, debe especificar explícitamente su tipo o utilizar la palabra clave **auto** para indicar al compilador que deduzca el tipo del inicializador.
-**Al declarar una función** en el código, debe especificar el tipo de cada argumento y su valor devuelto, o bien **void** si la función no devuelve ningún valor. La excepción se produce cuando se utilizan plantillas de función, que están permitidas en los argumentos de tipos arbitrarios.
+C++es un lenguaje *fuertemente tipado* y también tiene *tipo estático*; cada objeto tiene un tipo y ese tipo nunca cambia (no debe confundirse con los objetos de datos estáticos). Al declarar una variable en el código, debe especificar explícitamente su tipo o utilizar la palabra clave **auto** para indicar al compilador que deduzca el tipo del inicializador. Al declarar una función en el código, debe especificar el tipo de cada argumento y su valor devuelto, o bien **void** si la función no devuelve ningún valor. La excepción se produce cuando se utilizan plantillas de función, que están permitidas en los argumentos de tipos arbitrarios.
 
 Una vez que se declara por primera vez una variable, no se puede cambiar su tipo. Sin embargo, el valor de la variable o el valor devuelto por una función se puede copiar en otra variable de distinto tipo. Estas operaciones se denominan *conversiones de tipo*, que a veces son necesarias, pero también son posibles orígenes de pérdida de datos o incorrectas.
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 A diferencia de algunos lenguajes, C++ no tiene un tipo base universal del que se deriven todos los demás tipos. El lenguaje incluye muchos *tipos fundamentales*, también conocidos como *tipos integrados*. Esto incluye tipos numéricos como **int**, **Double**, **Long**, **bool**, además de los tipos **Char** y **wchar_t** para caracteres ASCII y Unicode, respectivamente. La mayoría de los tipos fundamentales (excepto **bool**, **Double**, **wchar_t** y los tipos relacionados) tienen versiones sin signo, que modifican el intervalo de valores que la variable puede almacenar. Por ejemplo, un **int**, que almacena un entero con signo de 32 bits, puede representar un valor comprendido entre-2.147.483.648 y 2.147.483.647. Un **int sin signo**, que también se almacena como 32 bits, puede almacenar un valor comprendido entre 0 y 4.294.967.295. El número total de valores posibles en cada caso es el mismo; solo cambia el intervalo.
 
-El compilador reconoce los tipos fundamentales y tiene reglas integradas que rigen las operaciones que se pueden realizar en esos tipos y cómo se pueden convertir en otros tipos fundamentales. Para obtener una lista completa de los tipos integrados y sus límites de tamaño y numéricos, vea [tipos fundamentales](../cpp/fundamental-types-cpp.md).
+El compilador reconoce los tipos fundamentales y tiene reglas integradas que rigen las operaciones que se pueden realizar en esos tipos y cómo se pueden convertir en otros tipos fundamentales. Para obtener una lista completa de los tipos integrados y sus límites de tamaño y numéricos, vea [tipos integrados](../cpp/fundamental-types-cpp.md).
 
 En la ilustración siguiente se muestran los tamaños relativos de los tipos integrados:
 
@@ -63,10 +61,10 @@ En la ilustración siguiente se muestran los tamaños relativos de los tipos int
 
 En la tabla siguiente se muestran los tipos fundamentales que se usan con más frecuencia:
 
-|Tipo|Tamaño|Comentario|
+|Tipo de|Tamaño de la|Comentario|
 |----------|----------|-------------|
 |int|4 bytes|Opción predeterminada para los valores enteros.|
-|double|8 bytes|Opción predeterminada para los valores de punto flotante.|
+|doble|8 bytes|Opción predeterminada para los valores de punto flotante.|
 |bool|1 byte|Representa valores que pueden ser true o false.|
 |char|1 byte|Se utiliza en los caracteres ASCII de cadenas de estilo C antiguas u objetos std::string que nunca tendrán que convertirse a UNICODE.|
 |wchar_t|2 bytes|Representa valores de caracteres “anchos” que se pueden codificar en formato UNICODE (UTF-16 en Windows; puede diferir en otros sistemas operativos). Es el tipo de carácter que se utiliza en las cadenas de tipo `std::wstring`.|

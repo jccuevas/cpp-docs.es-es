@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154157"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301527"
 ---
 # <a name="function-call-operator-"></a>Operador de llamada de función: ()
 
-Una expresión de postfijo seguida del operador de llamada de función, **()**, especifica una llamada de función.
+Una expresión de postfijo seguida del operador de llamada de función, **()** , especifica una llamada de función.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,13 +28,13 @@ postfix-expression
 ( [argument-expression-list ] )
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Los argumentos del operador de llamada de función son cero o más expresiones separadas por comas (los argumentos reales de la función).
 
-El *postfix-expression* debe evaluarse como una dirección de función (por ejemplo, un identificador de función o el valor de un puntero a función) y *argument-expression-list* es una lista de expresiones (separadas por comas) cuyos valores (los argumentos) se pasan a la función. El elemento *argument-expression-list* puede estar vacío.
+La *expresión de postfijo* debe evaluarse como una dirección de función (por ejemplo, un identificador de función o el valor de un puntero de función) y *argument-Expression-List* es una lista de expresiones (separadas por comas) cuyos valores (los argumentos) se pasan a la función. El elemento *argument-expression-list* puede estar vacío.
 
-El *postfix-expression* debe ser de uno de estos tipos:
+La *expresión de postfijo* debe ser de uno de estos tipos:
 
 - Una función que devuelve el tipo `T`. Una declaración de ejemplo es
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-El código anterior define una clase denominada `Point`, que contiene los datos privados a objetos que representan *x* y *y* coordenadas. Estos objetos de datos se deben modificar y sus valores se deben recuperar. Este programa es solo uno de varios diseños para esa clase; el uso de las funciones `GetX` y `SetX` o `GetY` y `SetY` es otro diseño posible.
+En el código anterior se define una clase denominada `Point`, que contiene objetos de datos privados que representan las coordenadas *x* *e y.* Estos objetos de datos se deben modificar y sus valores se deben recuperar. Este programa es solo uno de varios diseños para esa clase; el uso de las funciones `GetX` y `SetX` o `GetY` y `SetY` es otro diseño posible.
 
 Las funciones que devuelven tipos de clase, punteros a tipos de clase o referencias a tipos de clase se pueden utilizar como operando izquierdo para operadores de selección de miembros. Por consiguiente, el código siguiente es legal.
 
@@ -174,7 +174,7 @@ int main() {
 }
 ```
 
-Las funciones se pueden llamar de forma recursiva. Para obtener más información acerca de las declaraciones de función, vea [funciones](functions-cpp.md). Material relacionado está en [programa y vinculación](../cpp/program-and-linkage-cpp.md).
+Las funciones se pueden llamar de forma recursiva. Para obtener más información acerca de las declaraciones de función, vea [funciones](functions-cpp.md). El material relacionado está en [unidades de traducción y vinculación](../cpp/program-and-linkage-cpp.md).
 
 ## <a name="see-also"></a>Vea también
 

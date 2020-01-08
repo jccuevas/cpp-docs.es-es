@@ -1,19 +1,19 @@
 ---
 title: INCLUDELIB (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - INCLUDELIB
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: ef8a6e91ca8c5ca77b64b4668bf08087299701e0
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: eff5b546aa10341434f2e34f03b9096d4c7f468a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397332"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317207"
 ---
-# <a name="includelib-masm"></a>INCLUDELIB (MASM)
+# <a name="includelib"></a>INCLUDELIB
 
 Informa al enlazador de que el módulo actual debe vincularse con *nombrebiblioteca*.
 
@@ -21,10 +21,11 @@ Informa al enlazador de que el módulo actual debe vincularse con *nombrebibliot
 
 > **Includelib (** *nombrebiblioteca*
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 El *nombrebiblioteca* debe ir entre corchetes angulares si incluye una barra diagonal inversa, un punto y coma, un símbolo mayor que, un símbolo menor que, una comilla simple o una comilla doble.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940377"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300317"
 ---
 # <a name="filename-search-functions"></a>Funciones de búsqueda de nombre de archivo
 
@@ -37,7 +37,7 @@ Estas funciones buscan y cierran búsquedas de los nombres de archivos especific
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 La función `_findfirst` proporciona información acerca de la primera instancia de un nombre de archivo que coincide con el archivo especificado en el argumento `filespec` . En `filespec` , puede usar cualquier combinación de caracteres comodín que sea compatible con el sistema operativo host.
 
@@ -108,7 +108,7 @@ Las funciones `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`y `_wfindne
 
 ## <a name="example"></a>Ejemplo
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension

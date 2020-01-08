@@ -1,30 +1,43 @@
 ---
-title: Juegos de caracteres
-ms.date: 05/06/2019
+title: Tokens y juegos de caracteres
+ms.date: 12/10/2019
 helpviewer_keywords:
+- Tokens (C++)
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1f6dbe2faa6348d61ec00b411cc35e8ef5ceb57a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222524"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301618"
 ---
-# <a name="character-sets"></a>Juegos de caracteres
+# <a name="tokens-and-character-sets"></a>Tokens y juegos de caracteres
 
-El texto de un programa de C++ se almacena en archivos de código fuente que usan una codificación de caracteres determinada. El estándar de C++ especifica un juego básico de caracteres de código fuente para los archivos de código fuente y un juego básico de caracteres de ejecución para los archivos compilados. Microsoft C++ compilador (MSVC) permite que un conjunto adicional de caracteres específicos de la configuración regional que se utilizará en archivos de código fuente y los archivos compilados.
+El texto de un C++ programa consta de tokens y *espacios en blanco*. Un token es el elemento mínimo de un programa de C++ que es significativo para el compilador. El C++ analizador reconoce estos tipos de tokens:
 
-## <a name="character-sets"></a>Juegos de caracteres
+- [Palabras clave](../cpp/keywords-cpp.md)
+- [Identificadores](../cpp/identifiers-cpp.md)
+- [Literales numéricos, booleanos y de puntero](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+- [Literales de cadena y carácter](../cpp/string-and-character-literals-cpp.md)
+- [Literales definidos por el usuario](../cpp/user-defined-literals-cpp.md)
+- [Operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Signos de puntuación](../cpp/punctuators-cpp.md)
 
-El estándar de C++ especifica un *juego básico de caracteres de código fuente* que se puede usar en los archivos de código fuente. Para representar caracteres ajenos a este conjunto, los caracteres adicionales se pueden especificar mediante el uso de un *nombre de carácter universal*. Cuando se compila, el *juego básico de caracteres de ejecución* y el *juego básico de caracteres anchos de ejecución* representan los caracteres y las cadenas que pueden aparecer en un programa. La implementación de MSVC permite caracteres adicionales en el código fuente y código compilado.
+Los tokens suelen estar separados por un *espacio en blanco*, que puede ser uno o varios:
 
-### <a name="basic-source-character-set"></a>Juego básico de caracteres de código fuente
+- Espacios en blanco
+- Tabulaciones horizontales o verticales
+- Nuevas líneas
+- Fuentes de formularios
+- Comentarios
 
-El *juego básico de caracteres de código fuente* consta de 96 caracteres que pueden usarse en archivos de código fuente. Este conjunto incluye el carácter de espacio, tabulación horizontal, tabulación vertical, avance de página y caracteres de control de nueva línea,además del siguiente conjunto de caracteres gráficos:
+## <a name="basic-source-character-set"></a>Juego básico de caracteres de código fuente
+
+El C++ estándar especifica un *juego básico de caracteres de código fuente* que se puede usar en los archivos de código fuente. Para representar caracteres ajenos a este conjunto, los caracteres adicionales se pueden especificar mediante el uso de un *nombre de carácter universal*. La implementación de MSVC permite caracteres adicionales. El *juego básico de caracteres de código fuente* consta de 96 caracteres que se pueden usar en los archivos de código fuente. Este conjunto incluye el carácter de espacio, tabulación horizontal, tabulación vertical, avance de página y caracteres de control de nueva línea,además del siguiente conjunto de caracteres gráficos:
 
 `a b c d e f g h i j k l m n o p q r s t u v w x y z`
 
@@ -36,7 +49,7 @@ El *juego básico de caracteres de código fuente* consta de 96 caracteres que p
 
 **Específicos de Microsoft**
 
-MSVC incluye el `$` carácter como un miembro del juego de caracteres básico de origen. MSVC también permite un conjunto adicional de caracteres que se utilizará en archivos de origen, según la codificación del archivo. De forma predeterminada, Visual Studio almacena archivos de código fuente mediante la página de códigos predeterminada. Cuando se guardan los archivos de origen mediante el uso de una página de códigos específicas de configuración regional o una página de códigos Unicode, MSVC le permite usar cualquiera de los caracteres de dicha página de códigos en el código fuente, excepto para los códigos de control no permitidos explícitamente en el carácter de código fuente básicos establecido. Por ejemplo, se pueden colocar caracteres de japonés en comentarios, identificadores o literales de cadena, si se guarda el archivo a través de una página de códigos de japonés. MSVC no admite secuencias de caracteres que no se convierten en caracteres multibyte válidos o puntos de código Unicode. Según las opciones del compilador, puede que no todos los caracteres permitidos se muestren en los identificadores. Para obtener más información, vea [Identifiers](../cpp/identifiers-cpp.md).
+MSVC incluye el carácter `$` como miembro del juego básico de caracteres de código fuente. MSVC también permite usar un conjunto de caracteres adicional en los archivos de código fuente, en función de la codificación del archivo. De forma predeterminada, Visual Studio almacena archivos de código fuente mediante la página de códigos predeterminada. Cuando se guardan archivos de código fuente mediante una página de códigos específica de la configuración regional o una página de códigos Unicode, MSVC le permite usar cualquiera de los caracteres de esa página de códigos en el código fuente, excepto los códigos de control no permitidos explícitamente en el juego básico de caracteres de código fuente. Por ejemplo, se pueden colocar caracteres de japonés en comentarios, identificadores o literales de cadena, si se guarda el archivo a través de una página de códigos de japonés. MSVC no permite secuencias de caracteres que no se puedan traducir en caracteres multibyte o puntos de código Unicode válidos. Según las opciones del compilador, puede que no todos los caracteres permitidos se muestren en los identificadores. Para obtener más información, vea [Identifiers](../cpp/identifiers-cpp.md).
 
 **FIN de Específicos de Microsoft**
 
@@ -48,7 +61,7 @@ Los nombres de carácter universal pueden usarse tanto en identificadores como e
 
 **Específicos de Microsoft**
 
-Microsoft C++ compilador trata un carácter en formato de nombre de carácter universal y forma literal indistintamente. Por ejemplo, se puede declarar un identificador con formato de nombre de carácter universal y usarlo en el formato de literal:
+El compilador de Microsoft C++ trata un carácter en forma de nombre de carácter universal y forma literal indistintamente. Por ejemplo, se puede declarar un identificador con formato de nombre de carácter universal y usarlo en el formato de literal:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'
@@ -59,6 +72,6 @@ El formato de caracteres extendidos en el Portapapeles de Windows es específico
 
 **FIN de Específicos de Microsoft**
 
-### <a name="basic-execution-character-set"></a>juego básico de caracteres de ejecución
+### <a name="execution-character-sets"></a>Juegos de caracteres de ejecución
 
-El *juego básico de caracteres de ejecución* y el *juego básico de caracteres anchos de ejecución* constan de todos los caracteres del juego básico de caracteres de código fuente y los caracteres de control que representan los caracteres de alerta, retroceso, retorno de carro y nulo. El *juego de caracteres de ejecución* y el *juego de caracteres anchos de ejecución* son supraconjuntos de los conjuntos básicos. Incluyen los caracteres de código fuente definidos por implementación ajenos al conjunto básico de caracteres de código fuente. El juego de caracteres de ejecución tiene una representación específica de la configuración regional.
+Los *juegos de caracteres de ejecución* representan los caracteres y las cadenas que pueden aparecer en un programa compilado. Estos juegos de caracteres constan de todos los caracteres permitidos en un archivo de código fuente, así como los caracteres de control que representan la alerta, el retroceso, el retorno de carro y el carácter nulo. El juego de caracteres de ejecución tiene una representación específica de la configuración regional.

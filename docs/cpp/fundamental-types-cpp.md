@@ -1,6 +1,6 @@
 ---
-title: Tipos fundamentales (C++)
-ms.date: 11/04/2016
+title: Tipos integrados (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,28 +43,28 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857546"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301501"
 ---
-# <a name="fundamental-types--c"></a>Tipos fundamentales (C++)
+# <a name="built-in-types-c"></a>Tipos integrados (C++)
 
-Los tipos fundamentales de C++ se dividen en tres categorías: entero, punto flotante y void. Los tipos enteros son capaces de controlar números enteros. Los tipos de punto flotante son capaces de especificar valores que pueden tener partes fraccionarias.
+Los tipos integrados (también denominados *tipos fundamentales*) se especifican mediante C++ el estándar de lenguaje y se integran en el compilador. Los tipos integrados no se definen en ningún archivo de encabezado. Los tipos integrados se dividen en tres categorías: entero, punto flotante y void. Los tipos enteros son capaces de controlar números enteros. Los tipos de punto flotante son capaces de especificar valores que pueden tener partes fraccionarias.
 
-El tipo [void](../cpp/void-cpp.md) describe un conjunto de valores vacío. No se puede especificar ninguna variable de tipo **void** : se utiliza principalmente para declarar funciones que no devuelven valores o para declarar punteros genéricos a datos sin tipo o con tipo arbitrario. Cualquier expresión se puede convertir o convertir explícitamente al tipo **void**. Sin embargo, estas expresiones se limitan a los siguientes usos:
+El tipo [void](void-cpp.md) describe un conjunto de valores vacío. No se puede especificar ninguna variable de tipo **void** : se utiliza principalmente para declarar funciones que no devuelven valores o para declarar punteros genéricos a datos sin tipo o con tipo arbitrario. Cualquier expresión se puede convertir o convertir explícitamente al tipo **void**. Sin embargo, estas expresiones se limitan a los siguientes usos:
 
-- Una instrucción de expresión. (Vea [Expresiones](../cpp/expressions-cpp.md)para obtener más información).
+- Una instrucción de expresión. (Para obtener más información, vea [expresiones](expressions-cpp.md)).
 
-- El operando izquierdo del operador de coma. (Vea [Operador de coma](../cpp/comma-operator.md) para obtener más información).
+- El operando izquierdo del operador de coma. (Para obtener más información, vea [operador de coma](comma-operator.md)).
 
-- El segundo o tercer operando del operador condicional (`? :`). (Vea [Expresiones con el operador condicional](../cpp/conditional-operator-q.md) para obtener más información).
+- El segundo o tercer operando del operador condicional (`? :`). (Para obtener más información, vea [expresiones con el operador condicional](conditional-operator-q.md)).
 
-En la tabla siguiente se explican las restricciones en los tamaños de tipo. Estas restricciones son independientes de la implementación de Microsoft.
+En la tabla siguiente se explican las restricciones en los tamaños de tipo en relación entre sí. Estas restricciones se aplican mediante el C++ estándar y son independientes de la implementación de Microsoft. El tamaño absoluto de determinados tipos integrados no se especifica en el estándar.
 
-### <a name="fundamental-types-of-the-c-language"></a>Tipos fundamentales del lenguaje C++
+### <a name="built-in-type-size-restrictions"></a>Restricciones de tamaño de tipo integrado
 
 |Categoría|Tipo de|Contenido|
 |--------------|----------|--------------|
@@ -82,9 +82,9 @@ En la tabla siguiente se explican las restricciones en los tamaños de tipo. Est
 
 **Específicos de Microsoft**
 
-En la tabla siguiente se muestra la cantidad de almacenamiento necesaria para los tipos fundamentales de Microsoft C++.
+En la tabla siguiente se muestra la cantidad de almacenamiento necesaria para los tipos integrados de C++Microsoft. En concreto, tenga en cuenta que la **longitud** es de 4 bytes, incluso en sistemas operativos de 64 bits.
 
-### <a name="sizes-of-fundamental-types"></a>Tamaños de los tipos fundamentales
+### <a name="sizes-of-built-in-types"></a>Tamaños de tipos integrados
 
 |Tipo de|Tamaño de la|
 |----------|----------|
@@ -95,10 +95,10 @@ En la tabla siguiente se muestra la cantidad de almacenamiento necesaria para lo
 
 **FIN de Específicos de Microsoft**
 
-Vea [Intervalos de tipo de datos](../cpp/data-type-ranges.md) para obtener un resumen del intervalo de valores de cada tipo.
+Vea [Intervalos de tipo de datos](data-type-ranges.md) para obtener un resumen del intervalo de valores de cada tipo.
 
-Para obtener más información sobre la conversión de tipos, vea [Conversiones estándar](../cpp/standard-conversions.md).
+Para obtener más información sobre la conversión de tipos, vea [Conversiones estándar](standard-conversions.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Intervalos de tipo de datos](../cpp/data-type-ranges.md)
+[Intervalos de tipo de datos](data-type-ranges.md)

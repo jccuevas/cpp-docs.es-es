@@ -1,14 +1,14 @@
 ---
 title: Archivos de encabezadoC++()
-ms.date: 04/20/2018
+ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980472"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301488"
 ---
 # <a name="header-files-c"></a>Archivos de encabezadoC++()
 
@@ -23,9 +23,12 @@ La declaración indica al compilador si el elemento es un **tipo int**, **Double
 
 Para minimizar la posibilidad de errores, C++ ha adoptado la Convención de usar *archivos de encabezado* para contener declaraciones. Las declaraciones se realizan en un archivo de encabezado y, a continuación, se usa la Directiva #include en todos los archivos. cpp u otro archivo de encabezado que requiera dicha declaración. La Directiva #include inserta una copia del archivo de encabezado directamente en el archivo. cpp antes de la compilación.
 
+> [!NOTE]
+> En Visual Studio 2019, la característica de *módulos* de c++ 20 se presenta como una mejora y un reemplazo eventual de los archivos de encabezado. Para obtener más información, vea [información general sobre C++los módulos de ](modules-cpp.md).
+
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una manera común de declarar una clase y, a continuación, usarla en un archivo de código fuente diferente. Comenzaremos con el archivo de encabezado, `my_class.h`. Contiene una definición de clase, pero tenga en cuenta que la definición está incompleta. no se ha `do_something` definido la función miembro:
+En el ejemplo siguiente se muestra una manera común de declarar una clase y, a continuación, usarla en un archivo de código fuente diferente. Comenzaremos con el archivo de encabezado, `my_class.h`. Contiene una definición de clase, pero tenga en cuenta que la definición está incompleta. no se ha definido la función miembro `do_something`:
 
 ```cpp
 // my_class.h
@@ -40,7 +43,7 @@ namespace N
 }
 ```
 
-A continuación, cree un archivo de implementación (normalmente con una extensión. cpp o similar). Llamaremos al archivo my_class. cpp y proporcionaremos una definición para la declaración de miembro. Agregamos una `#include` Directiva para el archivo "my_class. h" para que la declaración my_class se inserte en este punto en el archivo. cpp y incluimos `<iostream>` la declaración de incorporación de cambios en `std::cout`la declaración de. Tenga en cuenta que las comillas se usan para los archivos de encabezado en el mismo directorio que el archivo de código fuente, y se usan corchetes angulares para los encabezados de la biblioteca estándar. Además, muchos encabezados de la biblioteca estándar no tienen. h ni cualquier otra extensión de archivo.
+A continuación, cree un archivo de implementación (normalmente con una extensión. cpp o similar). Llamaremos al archivo my_class. cpp y proporcionaremos una definición para la declaración de miembro. Agregamos una directiva de `#include` para el archivo "my_class. h" para que la declaración de my_class se inserte en este punto en el archivo. cpp e incluimos `<iostream>` para extraer la declaración de `std::cout`. Tenga en cuenta que las comillas se usan para los archivos de encabezado en el mismo directorio que el archivo de código fuente, y se usan corchetes angulares para los encabezados de la biblioteca estándar. Además, muchos encabezados de la biblioteca estándar no tienen. h ni cualquier otra extensión de archivo.
 
 En el archivo de implementación, se puede usar opcionalmente una instrucción **using** para evitar tener que calificar cada mención de "my_class" o "cout" con "N::" o "STD::".  No incluya instrucciones **using** en los archivos de encabezado.
 
@@ -58,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Ahora podemos usar `my_class` en otro archivo. cpp. #Include el archivo de encabezado para que el compilador Extraiga la declaración. Todo el compilador debe saber que my_class es una clase que tiene una función miembro pública denominada `do_something()`.
+Ahora podemos usar `my_class` en otro archivo. cpp. #Include el archivo de encabezado para que el compilador Extraiga la declaración. Todo el compilador debe saber que my_class es una clase que tiene una función miembro pública llamada `do_something()`.
 
 ```cpp
 // my_program.cpp
@@ -74,11 +77,11 @@ int main()
 }
 ```
 
-Una vez que el compilador termina de compilar cada archivo. cpp en archivos. obj, pasa los archivos. obj al enlazador. Cuando el vinculador combina los archivos objeto, encuentra exactamente una definición de my_class; está en el archivo. obj generado para my_class. cpp y la compilación se realiza correctamente.
+Una vez que el compilador termina de compilar cada archivo. cpp en archivos. obj, pasa los archivos. obj al enlazador. Cuando el vinculador combina los archivos objeto, encuentra exactamente una definición para my_class; está en el archivo. obj generado para my_class. cpp y la compilación se realiza correctamente.
 
 ## <a name="include-guards"></a>Incluir protecciones
 
-Normalmente, los archivos de encabezado tienen una *protección* de `#pragma once` inclusión o una directiva para asegurarse de que no se insertan varias veces en un único archivo. cpp.
+Normalmente, los archivos de encabezado tienen una *protección de inclusión* o una directiva de `#pragma once` para asegurarse de que no se insertan varias veces en un único archivo. cpp.
 
 ```cpp
 // my_class.h

@@ -3,12 +3,12 @@ title: Inicialización de llaves para clases, estructuras y uniones
 description: Usar la inicialización de C++ llaves con cualquier clase, struct o Unión
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: c746c6e4c17e5a55475d70f6dc3d927088af579f
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
+ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683003"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75652629"
 ---
 # <a name="brace-initialization"></a>Inicialización de llaves
 
@@ -136,6 +136,8 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
+En el modo **/STD: c++ 17** , las reglas para la inicialización de llave vacía son ligeramente más restrictivas. Vea [constructores derivados e inicialización de agregados extendidos](constructors-cpp.md#extended_aggregate).
+
 ## <a name="initializer_list-constructors"></a>constructores initializer_list
 
 La [clase initializer_list](../standard-library/initializer-list-class.md) representa una lista de objetos de un tipo especificado que se pueden usar en un constructor y en otros contextos. Puede construir initializer_list mediante la inicialización de llave:
@@ -162,7 +164,7 @@ Las clases contenedoras de la biblioteca estándar y `string`, `wstring` y `rege
 vector<int> v1{ 9, 10, 11 };
 map<int, string> m1{ {1, "a"}, {2, "b"} };
 string s{ 'a', 'b', 'c' };
-regex rgx{'x', 'y', 'z'};
+regex rgx{ 'x', 'y', 'z' };
 ```
 
 

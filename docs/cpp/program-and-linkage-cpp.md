@@ -1,55 +1,58 @@
 ---
-title: Programas y vinculación (C++)
-ms.date: 04/09/2018
+title: Unidades de traducción y vinculación (C++)
+ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: 4f509979a293f194333e610fbdae7be9d32ec121
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301518"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301358"
 ---
-# <a name="program-and-linkage-c"></a>Programa y vinculación (C++)
+# <a name="translation-units-and-linkage"></a>Unidades de traducción y vinculación
 
-En un programa de C++, un *símbolos*, por ejemplo un nombre de variable o función, se puede declarar cualquier número de veces dentro de su ámbito, pero solo puede definirse una vez. Se trata de la regla de una definición (ODR). Un *declaración* presenta (o volver a presenta) un nombre en el programa. Un *definición* introduce un nombre y, en el caso de una variable, explícitamente lo inicializa. Un *definición de función* consta de la firma y el cuerpo de la función.
+En un C++ programa, un *símbolo*, por ejemplo un nombre de variable o función, se puede declarar cualquier número de veces dentro de su ámbito, pero solo se puede definir una vez. Esta regla es la "regla de definición única" (ODR). Una *declaración* introduce (o vuelve a introducir) un nombre en el programa. Una *definición* introduce un nombre. Si el nombre representa una variable, una definición la inicializa explícitamente. Una *definición de función* se compone de la firma más el cuerpo de la función. Una definición de clase consta del nombre de clase seguido de un bloque que enumera todos los miembros de clase. (Los cuerpos de las funciones miembro se pueden definir opcionalmente de forma independiente en otro archivo).
 
-Estas son las declaraciones:
+En el ejemplo siguiente se muestran algunas declaraciones:
 
 ```cpp
 int i;
 int f(int x);
+class C;
 ```
 
-Estas son las definiciones:
+En el ejemplo siguiente se muestran algunas definiciones:
 
 ```cpp
 int i{42};
 int f(int x){ return x * i; }
+class C {
+public:
+   void DoSomething();
+};
 ```
 
-Un programa consta de uno o varios *unidades de traducción*. Una unidad de traducción está formada por un archivo de implementación (.cpp, .cxx, etc.) y todos los encabezados (. h, .hpp, etc.) que incluyen directa o indirectamente. Cada unidad de traducción se compila de forma independiente por el compilador, después de que el vinculador combina las unidades de traducción compilada en un único *programa*. Las infracciones de la regla ODR normalmente aparecen como errores del vinculador cuando el mismo nombre tiene dos definiciones diferentes en diferentes unidades de traducción.
+Un programa consta de una o varias *unidades de traducción*. Una unidad de traducción se compone de un archivo de implementación y de todos los encabezados que incluye directa o indirectamente. Normalmente, los archivos de implementación tienen una extensión de archivo de *CPP* o *CXX*. Los archivos de encabezado suelen tener una extensión de *h* o *HPP*. El compilador compila cada unidad de traducción de forma independiente. Una vez completada la compilación, el vinculador combina las unidades de traducción compiladas en un único *programa*. Las infracciones de la regla ODR suelen aparecer como errores del vinculador. Los errores del enlazador se producen cuando el mismo nombre tiene dos definiciones diferentes en unidades de traducción diferentes.
 
-En general, es la mejor manera de hacer que una variable visible en varios archivos para colocarla en un archivo de encabezado y agregue un #include (directiva) en cada archivo .cpp que requiere la declaración. Agregando *#include guards* todo el contenido del encabezado, asegúrese de que los nombres declara solo se definen una vez.
+En general, la mejor manera de hacer que una variable sea visible en varios archivos es colocarla en un archivo de encabezado. A continuación, agregue una directiva de #include en cada archivo *CPP* que requiera la declaración. Al agregar las *protecciones include* en torno al contenido del encabezado, se asegura de que los nombres que declara se definen solo una vez.
 
-Sin embargo, en algunos casos puede ser necesario declarar una variable global o clase en un archivo. cpp. En esos casos, necesita una manera de saber el compilador y vinculador si el nombre del objeto se aplica únicamente al archivo de uno o a todos los archivos.
+En C++ 20, los [módulos](modules-cpp.md) se presentan como una alternativa mejorada a los archivos de encabezado.
 
-## <a name="linkage-vs-scope"></a>Vinculación frente a ámbito
+En algunos casos, puede ser necesario declarar una variable global o una clase en un archivo *CPP* . En esos casos, necesita una manera de indicar al compilador y vinculador qué tipo de *vinculación* tiene el nombre. El tipo de vinculación especifica si el nombre del objeto se aplica solo al archivo o a todos los archivos. El concepto de vinculación solo se aplica a los nombres globales. El concepto de vinculación no se aplica a los nombres que se declaran dentro de un ámbito. Un ámbito se especifica mediante un conjunto de llaves de inclusión, como en las definiciones de función o de clase.
 
-El concepto de *vinculación* hace referencia a la visibilidad de símbolos globales (por ejemplo, variables, los nombres de tipo y los nombres de función) dentro del programa como un todo a través de unidades de traducción. El concepto de *ámbito* hace referencia a los símbolos que se declaran dentro de un bloque, como un espacio de nombres, clase o el cuerpo de función. Estos símbolos solo son visibles dentro del ámbito en el que se definen; el concepto de vinculación no se aplica a ellos.
+## <a name="external-vs-internal-linkage"></a>Vinculación externa frente a interna
 
-## <a name="external-vs-internal-linkage"></a>Externa frente a la vinculación interna
+Una *función gratuita* es una función que se define en un ámbito global o de espacio de nombres. De forma predeterminada, las variables globales no const y las funciones libres tienen *vinculación externa*. están visibles desde cualquier unidad de traducción del programa. Por lo tanto, ningún otro objeto global puede tener ese nombre. Un símbolo con *vinculación interna* o *sin vinculación* solo es visible dentro de la unidad de traducción en la que se declara. Cuando un nombre tiene vinculación interna, puede existir el mismo nombre en otra unidad de traducción. Las variables declaradas con definiciones de clase o cuerpos de función no tienen vinculación.
 
-Un *función gratis* es una función que se define en global o ámbito de espacio de nombres. Variables globales que no son constantes y funciones libres de forma predeterminada tienen *vinculación externa*; son visibles desde cualquier unidad de traducción en el programa. Por lo tanto, ningún otro objeto global (variable, definición de clase, etc.) puede tener ese nombre. Un símbolo con *vinculación interna* o *sin vinculación* solo es visible en la unidad de traducción en el que se declara. Cuando un nombre tiene vinculación interna, el mismo nombre puede existir en otra unidad de traducción. Las variables declaradas con las definiciones de clase o los cuerpos de funciones no tienen ninguna vinculación.
+Puede forzar que un nombre global tenga vinculación interna si lo declara explícitamente como **estático**. Esto limita su visibilidad a la misma unidad de traducción en la que se declara. En este contexto, **static** significa algo diferente de cuando se aplica a variables locales.
 
-Puede forzar un nombre global para tienen vinculación interna declarando explícitamente como **estático**. Esto limita su visibilidad a la misma unidad de traducción en el que se declara. Tenga en cuenta que en este contexto, **estático** significa algo distinto a cuando se aplica a las variables locales.
-
-Los siguientes objetos tienen vinculación interna de forma predeterminada:
-- objetos const
-- objetos de constexpr
+Los objetos siguientes tienen vinculación interna de forma predeterminada:
+- const (objetos)
+- objetos constexpr
 - typedefs
 - objetos estáticos en el ámbito de espacio de nombres
 
-Para dar una vinculación externa de objeto const, declárelo como **extern** y asignarle un valor:
+Para proporcionar una vinculación externa a un objeto const, declárelo como **extern** y asígnele un valor:
 
 ```cpp
 extern const int value = 42;

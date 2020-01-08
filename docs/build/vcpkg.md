@@ -6,12 +6,12 @@ ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837022"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676956"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS
 
@@ -111,7 +111,7 @@ Ejecute **vcpkg integrate install** para configurar Visual Studio de forma que e
 
 Ahora podrá incluir encabezados fácilmente escribiendo el encabezado o la carpeta, tarea para la que tendrá la ayuda de la función Autocompletar. No será necesario hacer nada más para vincular a bibliotecas o agregar referencias de proyecto. En la siguiente ilustración se muestra cómo Visual Studio busca encabezados azure-storage-cpp. Vcpkg coloca sus encabezados en la subcarpeta **/installed**, con particiones creadas a partir de la plataforma de destino. En el siguiente diagrama se muestra la lista de los archivos incluidos en la subcarpeta **/was** de la biblioteca:
 
-![Integración de vcpkg e IntelliSense](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
+![Integración vcpkg IntelliSense](media/vcpkg-intellisense.png "vcpkg e IntelliSense")
 
 ### <a name="per-project"></a>Por proyecto
 
@@ -182,7 +182,7 @@ El clon de vcpkg se puede modificar según sus criterios. Se pueden crear varios
 
 ## <a name="uninstall-vcpkg"></a>Desinstalación de vcpkg
 
-Basta con eliminar el directorio.
+Basta con eliminar el directorio vcpkg. Al eliminar este directorio, se desinstala la distribución de vcpkg y todas las bibliotecas que vcpkg ha instalado.
 
 ## <a name="send-feedback-about-vcpkg"></a>Envío de comentarios sobre vcpkg
 

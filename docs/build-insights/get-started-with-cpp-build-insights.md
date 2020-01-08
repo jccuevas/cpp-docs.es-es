@@ -1,5 +1,5 @@
 ---
-title: Introducción a la C++ información de compilación
+title: Introducción a C++ Build Insights
 description: Información general de alto nivel sobre cómo usar las herramientas de análisis de rendimiento en tiempo de compilación que forman C++ parte de la información de compilación.
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633229"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298745"
 ---
-# <a name="get-started-with-c-build-insights"></a>Introducción a la C++ información de compilación
+# <a name="get-started-with-c-build-insights"></a>Introducción a C++ Build Insights
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ Actualmente, una versión de WPA C++ que admite Build Insights solo está dispon
 
 ### <a name="to-download-and-install-wpa"></a>Para descargar e instalar WPA
 
-1. Vaya a la [Página de descarga](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)de Windows ADK Insider Preview.
+Nota: se requiere Windows 8 o posterior para instalar el analizador de rendimiento de Windows.
+
+1. Vaya a la [Página de descarga](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)de Windows ADK Insider Preview.
 
 1. Descargue Windows ADK Insider Preview. Es una imagen de disco.
 
@@ -101,8 +103,8 @@ Este es el aspecto de una secuencia de comandos típica de *vcperf. exe* en una 
 
 Inicie WPA y abra el seguimiento que acaba de recopilar. WPA debe reconocerla como C++ seguimiento de Build Insights y las siguientes vistas deben aparecer en el panel del explorador de gráficos de la izquierda:
 
-- Build Explorer
-- Archivos
+- Explorador de compilaciones
+- Files
 - Función
 
 Si no puede ver estas vistas, asegúrese de que WPA esté configurado correctamente, tal y como se describe en el [paso 1](#configuration-steps). Puede ver los datos de compilación arrastrando las vistas a la ventana de análisis vacía a la derecha, como se muestra aquí:

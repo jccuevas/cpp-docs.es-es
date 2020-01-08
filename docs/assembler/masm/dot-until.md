@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .UNTIL directive
 ms.assetid: 491de65d-cfb7-4d17-86b1-be83d3d84083
-ms.openlocfilehash: 0ae9b2995a63c03c6f779540d84c3e409fe28429
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9e592dcb634e0a5f13b4d360745ad30f2884b867
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397860"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317492"
 ---
 # <a name="until-32-bit-masm"></a>. UNTIL (32 bits MASM)
 
-(solo para MASM de 32 bits). Vea [. Repita el procedimiento](../../assembler/masm/dot-repeat.md).
+(solo para MASM de 32 bits). Vea [. Repita el procedimiento](dot-repeat.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,4 +23,5 @@ ms.locfileid: "74397860"
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](directives-reference.md)
+[Referencia de directivas](directives-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)

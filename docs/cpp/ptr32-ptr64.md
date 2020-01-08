@@ -16,14 +16,14 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244468"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301332"
 ---
-# <a name="ptr32-ptr64"></a>__ptr32, __ptr64
+# <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
 **Específicos de Microsoft**
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-En un sistema de 32 bits, un puntero declarado con **__ptr64** se trunca a un puntero de 32 bits. En un sistema de 64 bits, un puntero declarado con **__ptr32** se convierte en un puntero de 64 bits.
+En un sistema de 32 bits, un puntero declarado con **__ptr64** se trunca en un puntero de 32 bits. En un sistema de 64 bits, un puntero declarado con **__ptr32** se convierte en un puntero de 64 bits.
 
 > [!NOTE]
-> No puede usar **__ptr32** o **__ptr64** cuando se compila con **/CLR: pure**. En caso contrario, se generará Error del compilador C2472. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+> No se puede usar **__ptr32** ni **__ptr64** al compilar con **/clr: Pure**. De lo contrario, se generará el error del compilador C2472. Las opciones del compilador **/clr: Pure** y **/clr: Safe** están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
 
-Para ofrecer compatibilidad con versiones anteriores, **_ptr32** y **_ptr64** son sinónimos para **__ptr32** y **__ptr64** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
+Por compatibilidad con versiones anteriores, **_ptr32** y **_ptr64** son sinónimos para **__ptr32** y **__ptr64** a menos que se especifique la opción del compilador [/za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo declarar y asignar punteros con la **__ptr32** y **__ptr64** palabras clave.
+En el ejemplo siguiente se muestra cómo declarar y asignar punteros con las palabras clave **__ptr32** y **__ptr64** .
 
 ```cpp
 #include <cstdlib>
@@ -77,4 +77,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos fundamentales](../cpp/fundamental-types-cpp.md)
+[Tipos integrados](../cpp/fundamental-types-cpp.md)

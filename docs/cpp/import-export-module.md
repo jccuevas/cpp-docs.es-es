@@ -1,6 +1,6 @@
 ---
 title: módulo, importar, exportar
-ms.date: 07/15/2019
+ms.date: 12/12/2019
 f1_keywords:
 - module_cpp
 - import_cpp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Use la instrucción Import para tener acceso a los tipos y funciones definidos en el módulo especificado.
-ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+description: Use declaraciones de importación y exportación para obtener acceso y publicar tipos y funciones definidos en el módulo especificado.
+ms.openlocfilehash: ae28bce8e06840cafa5c92521f6e9a62aa5bfde6
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273626"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301462"
 ---
 # <a name="module-import-export"></a>módulo, importar, exportar
 
-Las palabras clave **Module**, **Import**y **Export** están disponibles en c++ 20 y requieren el modificador de compilador [/experimental: module](../build/reference/experimental-module.md) junto con [/STD: C + + latest](../build/reference/std-specify-language-standard-version.md). Para obtener más información, vea [información general sobre C++los módulos de ](modules-cpp.md).
+Las declaraciones de **módulo**, **importación**y **exportación** están disponibles en c++ 20 y requieren el modificador de compilador [/experimental: module](../build/reference/experimental-module.md) junto con [/STD: C + + latest](../build/reference/std-specify-language-standard-version.md). Para obtener más información, vea [información general sobre C++los módulos de ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
-Use la instrucción **Module** al principio de un archivo de implementación de módulo para especificar que el contenido del archivo pertenece al módulo con nombre. 
+Coloque una declaración de **módulo** al principio de un archivo de implementación de módulo para especificar que el contenido del archivo pertenece al módulo con nombre.
 
 ```cpp
 module ModuleA;
 ```
 
-## <a name="export"></a>exportar
+## <a name="export"></a>export
 
-Use la instrucción **Export Module** para el archivo de interfaz principal del módulo, que debe tener la extensión **. IXX**:
+Use una declaración de **módulo de exportación** para el archivo de interfaz principal del módulo, que debe tener la extensión **. IXX**:
 
 ```cpp
 export module ModuleA;
@@ -66,11 +66,11 @@ void main() {
 }
 ```
 
-Es posible que la palabra clave **Export** no aparezca en un archivo de implementación de módulos. Cuando se aplica el modificador de **exportación** a un nombre de espacio de nombres, se exportan todos los nombres del espacio de nombres.
+Es posible que la palabra clave **Export** no aparezca en un archivo de implementación de módulos. Cuando se aplica la **exportación** a un nombre de espacio de nombres, se exportan todos los nombres del espacio de nombres.
 
 ## <a name="import"></a>importación
 
-Use la instrucción **Import** para que los nombres de un módulo estén visibles en el programa. La instrucción Import debe aparecer después de la instrucción Module y después de cualquier directiva de #include, pero antes de cualquier declaración en el archivo.
+Utilice una declaración de **importación** para que los nombres de un módulo estén visibles en el programa. La declaración de importación debe aparecer después de la declaración de módulo y después de cualquier directiva de #include, pero antes de cualquier declaración en el archivo.
 
 ```cpp
 module ModuleA;
@@ -85,6 +85,45 @@ template <class T>
 class Baz
 {...};
 ```
+
+## <a name="remarks"></a>Notas
+
+Tanto la **importación** como el **módulo** se tratan como palabras clave solo cuando aparecen al principio de una línea lógica:
+
+```cpp
+
+// OK:
+module ;
+module module-name
+import :
+import <
+import "
+import module-name
+export module ;
+export module module-name
+export import :
+export import <
+export import "
+export import module-name
+
+// Error:
+int i; module ;
+```
+
+**Específicos de Microsoft**
+
+En Microsoft C++, los módulos **Import** y **Module** son siempre identificadores y nunca palabras clave cuando se usan como argumentos para una macro.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+#define foo(…) __VA_ARGS__
+foo(
+import // Always an identifier, never a keyword
+)
+```
+
+**Fin de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 

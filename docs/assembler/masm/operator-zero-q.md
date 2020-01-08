@@ -1,6 +1,6 @@
 ---
 title: Operador ZERO?
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator ZERO?
 - ZERO?
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - ZERO? operator
 - operator ZERO?
 ms.assetid: c7629c0b-3254-4f50-9bd6-31be762eb03b
-ms.openlocfilehash: 2a9369420581fc40ca626213d5b76628a90d6b79
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 4da82cb6837a683c259c29591b4bf512e4954c17
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395227"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318779"
 ---
 # <a name="operator-zero"></a>Operador ZERO?
 
-Estado de la marca cero. Se usa solo dentro de [. Si](../../assembler/masm/dot-if.md)es, [. WHILE](../../assembler/masm/dot-while.md), o [. REPETIR](../../assembler/masm/dot-repeat.md) bloques y evaluarlos en tiempo de ejecución, no en tiempo de ensamblado.
+Estado de la marca cero. Se usa solo dentro de [. Si](dot-if.md)es, [. WHILE](dot-while.md), o [. REPETIR](dot-repeat.md) bloques y evaluarlos en tiempo de ejecución, no en tiempo de ensamblado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,4 +25,5 @@ Estado de la marca cero. Se usa solo dentro de [. Si](../../assembler/masm/dot-i
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de operadores](operators-reference.md)
+[Referencia de operadores](operators-reference.md)\
+[Gramática BNF de MASM](masm-bnf-grammar.md)
