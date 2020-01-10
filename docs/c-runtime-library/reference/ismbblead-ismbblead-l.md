@@ -1,6 +1,7 @@
 ---
 title: _ismbblead, _ismbblead_l
-ms.date: 11/04/2016
+description: Describe las funciones _ismbblead y _ismbblead_l de la biblioteca en tiempo de ejecución de Microsoft C (CRT).
+ms.date: 01/08/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954066"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755040"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
@@ -58,23 +59,27 @@ int _ismbblead_l(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-*c*<br/>
+*c*\
 Entero que se va a probar.
 
-*locale*<br/>
+\ de *configuración regional*
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Devuelve un valor distinto de cero si el entero *c* es el primer byte de un carácter multibyte.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Los caracteres multibyte constan de un byte inicial seguido de un byte final. Los bytes iniciales se distinguen por encontrarse en un rango concreto de un juego de caracteres determinado. Por ejemplo, en la página de códigos 932 solo, los bytes iniciales van de 0x81-0x9F y 0xE0-0xFC.
 
 **_ismbblead** usa la configuración regional actual para el comportamiento dependiente de la configuración regional. **_ismbblead_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+Cuando la configuración regional es UTF-8, **_ismbblead** y **_ismbblead_l** siempre devuelven 0 (false), tanto si *c* es un byte inicial como si no.
+
+**_ismbblead** y **_ismbblead_l** son específicos de Microsoft, no forman parte de la biblioteca estándar de C. No se recomienda usarlas donde quiera código portable. Para la compatibilidad estándar de C, use **mbrlen** en su lugar.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -82,7 +87,7 @@ Los caracteres multibyte constan de un byte inicial seguido de un byte final. Lo
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Siempre devuelve false|**_ismbblead**|Siempre devuelve false|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario|Encabezado opcional|
 |-------------|---------------------|---------------------|
@@ -91,9 +96,10 @@ Los caracteres multibyte constan de un byte inicial seguido de un byte final. Lo
 
 \* Para las constantes de manifiesto de las condiciones de prueba.
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)<br/>
+\ de [clasificación de bytes](../../c-runtime-library/byte-classification.md)
+[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)\
+[mbrlen](mbrlen.md)
