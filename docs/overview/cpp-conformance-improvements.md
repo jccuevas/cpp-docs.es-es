@@ -5,12 +5,12 @@ description: Microsoft C++ en Visual Studio avanza hacia la plena conformidad co
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858040"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546437"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Mejoras de conformidad de C++ en Visual Studio
 
@@ -1135,7 +1135,7 @@ En versiones anteriores de Visual Studio, el compilador siempre proporcionaba un
 
 ### <a name="rewording-enable_shared_from_this"></a>Nueva redacción de `enable_shared_from_this`
 
-[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` se agregó en C++11. En la versión estándar de C++17 se actualiza la especificación para controlar mejor determinados casos extremos. [14]
+[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)`enable_shared_from_this` se agregó en C++11. En la versión estándar de C++17 se actualiza la especificación para controlar mejor determinados casos extremos. [14]
 
 ### <a name="splicing-maps-and-sets"></a>Inserción de asignaciones y conjuntos
 
@@ -1241,13 +1241,11 @@ Para obtener más información, vea [Constructores](../cpp/constructors-cpp.md#i
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-Si el constructor de una clase base no es público, pero accesible para una clase derivada, en el modo **/std:c++17** de la versión 15.7 de Visual Studio ya no se pueden usar llaves vacías para inicializar un objeto del tipo derivado.
-
+Si el constructor de una clase base no es público, pero es accesible para una clase derivada, en el modo **/std:c++17** de la versión 15.7 de Visual Studio 2017 ya no se pueden usar llaves vacías para inicializar un objeto del tipo derivado.
 En el ejemplo siguiente se muestra el comportamiento correspondiente de C++14:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 En C ++ 17, `Derived` ahora se considera un tipo de agregado. Eso significa que la inicialización de `Base` mediante el constructor privado predeterminado se produce directamente como parte de la regla de inicialización de agregados extendida. Anteriormente, el constructor privado `Base` se llamaba a través del constructor `Derived` y se realizaba correctamente debido a la declaración friend.
-
 En el ejemplo siguiente se muestra el comportamiento de C++17 en la versión 15.7 de Visual Studio en el modo **/std:c++17**:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
@@ -2179,7 +2171,7 @@ Este código evita el error:
 catch (int (*)[1]) {}
 ```
 
-### <a name="tr1"></a> El espacio de nombres `std::tr1` está en desuso
+### El espacio de nombres <a name="tr1"></a> `std::tr1` esta en desuso
 
 El espacio de nombres `std::tr1` no estándar se ha marcado como en desuso en los modos de C++14 y C++17. En la versión 15.5 de Visual Studio 2017, el código siguiente genera el error C4996:
 

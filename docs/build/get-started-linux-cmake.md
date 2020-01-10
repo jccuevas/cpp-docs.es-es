@@ -1,15 +1,14 @@
 ---
 title: Creación de proyectos multiplataforma de C++ en Visual Studio
 description: Cómo configurar, compilar y depurar C++ un proyecto de cmake de código abierto en Visual Studio que tenga como destino Linux y Windows.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303256"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791768"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: crear C++ proyectos multiplataforma en Visual Studio
 
@@ -44,10 +43,10 @@ En este tutorial aprenderá a:
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Puede ver las opciones para ejecutar el script con `-–help`. Se recomienda usar la opción `–prefix` para especificar la instalación en la ruta de acceso de **/usr/local** , ya que es la ubicación predeterminada donde Visual Studio busca CMake. En el ejemplo siguiente se muestra el script Linux-x86_64. Cámbielo según sea necesario si usa una plataforma de destino diferente.
+  * Puede ver las opciones para ejecutar el script con `-–help`. Se recomienda usar la opción `–prefix` para especificar la instalación en la ruta de acceso de **/usr** , ya que **/usr/bin** es la ubicación predeterminada en la que Visual Studio busca CMake. En el ejemplo siguiente se muestra el script Linux-x86_64. Cámbielo según sea necesario si usa una plataforma de destino diferente.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Git para Windows instalado en el equipo Windows.
