@@ -3,14 +3,12 @@ title: Novedades de C++ en Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754132"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793976"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novedades de C++ en Visual Studio
 
@@ -312,7 +310,7 @@ La opción [/Zc:noexceptTypes-](../build/reference/zc-noexcepttypes.md) se puede
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (versión 15.0)
 
-- Se han realizado mejoras secundaras en los diagnósticos (`basic_string` `_ITERATOR_DEBUG_LEVEL != 0`). Activar una comprobación de IDL en la maquinaria de cadenas ahora indicará la conducta específica que provocó la activación. Por ejemplo, en lugar de recibir el mensaje "string iterator not dereferenceable" (El iterador de cadena no es desreferenciable), verá el mensaje "cannot dereference string iterator because it is out of range (e.g. an end iterator)" (No se puede desreferenciar el iterador de cadena porque está fuera del rango (por ejemplo, un iterador final).
+- Se han realizado mejoras secundaras en los diagnósticos (`basic_string``_ITERATOR_DEBUG_LEVEL != 0`). Activar una comprobación de IDL en la maquinaria de cadenas ahora indicará la conducta específica que provocó la activación. Por ejemplo, en lugar de recibir el mensaje "string iterator not dereferenceable" (El iterador de cadena no es desreferenciable), verá el mensaje "cannot dereference string iterator because it is out of range (e.g. an end iterator)" (No se puede desreferenciar el iterador de cadena porque está fuera del rango (por ejemplo, un iterador final).
 - Se ha corregido el operador de asignación de movimiento `std::promise`, que anteriormente podía provocar que el código se bloqueara permanentemente.
 - Se han corregido errores del compilador con la conversión implícita de `atomic<T*>` a `T*`.
 - `pointer_traits<Ptr>` ahora detecta `Ptr::rebind<U>` correctamente.
