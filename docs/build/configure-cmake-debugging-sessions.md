@@ -4,12 +4,12 @@ description: Describe cómo usar Visual Studio para configurar las opciones del 
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946807"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031328"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurar sesiones de depuración de CMake
 
@@ -73,7 +73,7 @@ Hay muchas propiedades *Launch. vs. JSON* para admitir todos los escenarios de d
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Referencia de Launch. vs. JSON para proyectos remotos de Linux
 
-Las siguientes propiedades son específicas de las **configuraciones de depuración remota**. También puede [enviar comandos directamente a GDB](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) y [Habilitar el registro de MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging). Estas propiedades permiten ver qué comandos se envían a gdb, qué resultados gdb devuelve y cuánto tiempo toma cada comando.
+Las siguientes propiedades son específicas de las **configuraciones de depuración remota**. También puede [ejecutar comandos de gdb personalizados](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) para enviar comandos directamente al depurador subyacente y [Habilitar el registro de MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging) para ver qué comandos se envían a gdb, qué salida gdb devuelve y cuánto tiempo toma cada comando.
 
 - `cwd`: directorio de trabajo actual para buscar dependencias y otros archivos en la máquina remota. Se puede usar la macro `${debugInfo.defaultWorkingDirectory}`. El valor predeterminado es la raíz del área de trabajo remota, a menos que se invalide en *archivo CMakeLists. txt*. Esta propiedad solo se utiliza para las configuraciones remotas; `currentDir` se usa para establecer el directorio actual de la aplicación de inicio para un proyecto local.
 
