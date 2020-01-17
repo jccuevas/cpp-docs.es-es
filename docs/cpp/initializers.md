@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661612"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123973"
 ---
 # <a name="initializers"></a>Inicializadores
 
@@ -81,7 +81,7 @@ La inicialización cero es la configuración de una variable en un valor cero co
 
 - Las variables numéricas se inicializan en 0 (o 0,0, 0,0000000000, etc.).
 
-- Las variables char se inicializan `'\0'`en.
+- Las variables char se inicializan en `'\0'`.
 
 - Los punteros se inicializan en **nullptr**.
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-Para obtener más información sobre la inicialización de objetos estáticos globales, vea [consideraciones de inicio adicionales](../cpp/additional-startup-considerations.md).
+Para obtener más información acerca de la inicialización de objetos estáticos globales, vea [la función Main y los argumentos de la línea de comandos](main-function-command-line-args.md).
 
 ### <a name="value-initialization"></a>Inicialización de un valor
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-Debería ver los siguientes resultados:
+Verá lo siguiente:
 
 ```Output
 agg1: c: 1
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Los miembros de la matriz que se declaran pero no se inicializan explícitamente durante la inicialización de `myArr3` agregado se inicializan en cero, como en el caso anterior.
+> Los miembros de la matriz que se declaran pero no se inicializan explícitamente durante la inicialización de agregado se inicializan en cero, como en `myArr3` anterior.
 
 #### <a name="initializing-unions-and-structs"></a>Inicializar uniones y structs
 
@@ -534,7 +534,7 @@ Al inicializar una variable de tipo de referencia, el compilador usa el gráfico
 ![Gráfico de decisión para la inicialización de tipos de referencia](../cpp/media/vc38s71.gif "Gráfico de decisión para la inicialización de tipos de referencia") <br/>
 Gráfico de decisión para la inicialización de tipos de referencia
 
-Las referencias a tipos volátiles (declarados como *identificador* *TypeName* <strong>&</strong> **variable** ) se pueden inicializar con objetos **volátiles** del mismo tipo o con objetos que no se han declarado como **volátiles** . No se pueden inicializar con objetos **const** de ese tipo. Del mismo modo, las referencias a tipos **const** (declarados como **const** *TypeName* <strong>&</strong> *Identifier*) se pueden inicializar con objetos **const** del mismo tipo (o cualquier elemento que tenga una conversión a ese tipo o con objetos). que no se han declarado como **const**). No se pueden inicializar con objetos volátiles de ese tipo.
+Las referencias a tipos **volátiles** (declarados como *identificador*de tipo <strong>&</strong> **volátil** ) se pueden inicializar con objetos **volátiles** del mismo tipo o con objetos que no se han declarado como **volátiles**. No se pueden inicializar con objetos **const** de ese tipo. De forma similar, las referencias a tipos **const** (declarados como **const** *TypeName* <strong>&</strong> *Identifier*) se pueden inicializar con objetos **const** del mismo tipo (o cualquier elemento que tenga una conversión a ese tipo o con objetos que no se hayan declarado como **const**). No se pueden inicializar con objetos **volátiles** de ese tipo.
 
 Las referencias que no están calificadas con la palabra clave **const** o **volatile** solo se pueden inicializar con objetos declarados como **const** o **volatile**.
 
