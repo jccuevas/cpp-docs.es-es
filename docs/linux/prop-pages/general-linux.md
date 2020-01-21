@@ -1,13 +1,14 @@
 ---
-title: Propiedades generales (proyecto de C++ para Linux) | Microsoft Docs
-ms.date: 06/07/2019
+title: Propiedades generales (proyecto de C++ para Linux)
+description: Describe las propiedades del proyecto de Linux que se pueden establecer en Visual Studio desde la página Propiedades generales.
+ms.date: 01/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: c17a5e0214e6365d604a80bd4b3891858f0f9186
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 6d598e9d52037d709cba87d98ad375455d8c00b0
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626811"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031344"
 ---
 # <a name="general-properties-linux-c"></a>Propiedades generales (C++ para Linux)
 
@@ -19,19 +20,23 @@ La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones p
 
 ::: moniker range=">=vs-2017"
 
-Propiedad. | DESCRIPCIÓN | Opciones
+Propiedad. | Descripción | Opciones
 --- | ---| ---
-Directorio de salida | Especifica una ruta de acceso relativa al directorio de archivos de salida; puede incluir variables de entorno.
-Directorio intermedio | Especifica una ruta de acceso relativa al directorio de archivos intermedios; puede incluir variables de entorno.
-Nombre de destino | Especifica el nombre del archivo que generará el proyecto.
-Extensión de destino | Especifica una extensión de archivo que generará este proyecto. (Ejemplo: .a)
+Directorio de salida | Especifica una ruta de acceso relativa al directorio de archivos de salida. Puede incluir variables de entorno.
+Directorio intermedio | Especifica una ruta de acceso relativa al directorio de archivos intermedios. Puede incluir variables de entorno.
+Nombre de destino | Especifica el nombre de archivo que este proyecto genera.
+Extensión de destino | Especifica la extensión de archivo (por ejemplo, `.a`) que este proyecto genera.
 Extensiones para eliminar al limpiar | Especificación de comodines delimitados por punto y coma para indicar qué archivos del directorio de archivos intermedios se deben eliminar al limpiar o recompilar.
 Archivo de registro de compilación | Especifica el archivo de registro de compilación en el que se escribe cuando está habilitada la opción de registro de compilación.
-Conjunto de herramientas de la plataforma | Especifica el conjunto de herramientas usado para compilar la configuración actual. Si no se establece, se usa el conjunto de herramientas predeterminado.
-Máquina de compilación remota | Máquina o dispositivo de destino que debe usarse para la compilación, implementación y depuración remotas. **Visual Studio 2019 versión 16.1** Se puede especificar otro equipo para la depuración en la página [Depuración](debugging-linux.md).
+Conjunto de herramientas de la plataforma | Especifica el conjunto de herramientas usado para compilar la configuración actual. Si no se establece, se utiliza el conjunto de herramientas predeterminado.
+Máquina de compilación remota | Máquina o dispositivo de destino que debe usarse para la compilación, implementación y depuración remotas. **Visual Studio 2019 versión 16.1** Puede especificar otro equipo para la depuración en la página [Depuración](debugging-linux.md).
 Directorio raíz de la compilación remota | Especifica una ruta de acceso a un directorio de la máquina o el dispositivo remotos.
 Directorio del proyecto de compilación remota | Especifica una ruta de acceso a un directorio de la máquina o el dispositivo remotos para el proyecto.
-Tipo de configuración | Especifica el tipo de salida que genera esta configuración. | **Biblioteca dinámica (.so)** : biblioteca dinámica (.so)<br>**Biblioteca estática (.a)** : biblioteca estática (.a)<br>**Aplicación (.out)** : aplicación (.out)<br>**Archivo Make**: archivo Make<br>
-Uso de STL | Especifica la biblioteca estándar de C++ que se usará para esta configuración. | **Standard C++ Library para GNU compartida**<br>**Standard C++ Library para GNU estática (-static)**<br>
+Directorio de implementación remota | **Visual Studio 2019 versión 16.1** Se especifica la ruta de acceso del directorio en el equipo o dispositivo remoto para implementar el proyecto.
+Directorios incluidos en la copia remota | **Visual Studio 2019 versión 16.5** Una lista de directorios que se copiarán de forma recursiva desde el destino de Linux. Esta propiedad afecta a la copia remota de encabezados para IntelliSense, pero no a la compilación. Se puede usar cuando **IntelliSense usa los valores predeterminados del compilador** está establecido en false. Use **Directorios de inclusión adicionales** en la pestaña General de C/C++ para especificar directorios de inclusión adicionales que se usarán tanto para IntelliSense como para compilación.
+Directorios excluidos de la copia remota | **Visual Studio 2019 versión 16.5** Una lista de directorios que *no* se copiarán desde el destino de Linux. Normalmente, esta propiedad se usa para quitar subdirectorios de los directorios de inclusión.
+IntelliSense usa los valores predeterminados del compilador | **Visual Studio 2019 versión 16.5** Si se va a consultar al compilador al que hace referencia este proyecto sobre su lista predeterminada de ubicaciones de inclusión. Estas ubicaciones se agregan automáticamente a la lista de directorios remotos que se van a copiar. Establezca esta propiedad en false si el compilador no admite parámetros de tipo gcc. Los compiladores gcc y clang admiten consultas para los directorios de inclusión (por ejemplo, `g++ -x c++ -E -v -std=c++11`).
+Tipo de configuración | Especifica el tipo de salida que genera esta configuración. | **Biblioteca dinámica (.so)**<br/>**Biblioteca estática (.a)**<br/>**Aplicación (.out)**<br/>**Archivo Make**
+Uso de STL | Especifica la biblioteca estándar de C++ que se usará para esta configuración. | **Standard C++ Library para GNU compartida**<br/>**Standard C++ Library para GNU estática (-static)**
 
 ::: moniker-end

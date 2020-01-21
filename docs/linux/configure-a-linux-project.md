@@ -2,12 +2,12 @@
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960660"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031370"
 ---
 # <a name="configure-a-linux-project"></a>Configuración de un proyecto de Linux
 
@@ -57,7 +57,7 @@ Para cambiar la configuración correspondiente al equipo Linux remoto, configure
 
    Si tiene instalaciones de WSL en paralelo, aquí puede especificar una ruta de acceso distinta. Para obtener más información sobre cómo administrar varias distribuciones, consulte [Manage and configure Windows Subsystem for Linux](/windows/wsl/wsl-config#set-a-default-distribution) (Administrar y configurar el subsistema de Windows para Linux).
 
-   Puede especificar un destino de depuración diferente en la página **Propiedades de configuración**>**Depuración**.
+   Puede especificar otro destino de depuración en la página **Propiedades de configuración** > **Depuración**.
 
    ::: moniker-end
 
@@ -95,6 +95,9 @@ Dado que toda la compilación se produce en un equipo remoto (o en WSL), se han 
 ## <a name="remote_intellisense"></a> IntelliSense para encabezados en sistemas remotos
 
 Cuando se agrega una conexión nueva en **Connection Manager**, Visual Studio detecta automáticamente los directorios de inclusión para el compilador en el sistema remoto. Luego, Visual Studio comprime y copia esos archivos en un directorio en el equipo Windows local. Después de eso, cuando se use esa conexión en un proyecto de Visual Studio o CMake, se usan los encabezados de esos directorios para proporcionar IntelliSense.
+
+> [!NOTE]
+> En la versión 16.5 de Visual Studio 2019 y versiones posteriores se ha optimizado la copia remota de encabezados. Ahora, los encabezados se copian a petición al abrir un proyecto de Linux o configurar CMake para un destino de Linux. La copia se produce en segundo plano en función de cada proyecto, según los compiladores especificados del proyecto en cuestión. Para obtener más información, vea [Mejoras en la precisión y el rendimiento de IntelliSense en Linux](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
 
 Esta funcionalidad depende de que el equipo Linux tenga instalado zip. Puede instalar zip mediante este comando apt-get:
 
