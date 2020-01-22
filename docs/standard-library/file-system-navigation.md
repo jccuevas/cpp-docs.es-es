@@ -2,18 +2,18 @@
 title: Exploración del sistema de archivos
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405201"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518509"
 ---
 # <a name="file-system-navigation"></a>Exploración del sistema de archivos
 
-El \<filesystem > implementa encabezado el C++ archivo sistema técnica especificación ISO/IEC TS 18822: 2015 (borrador Final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve **false** en Windows.
+El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve **false** en Windows.
 
-## <a name="overview"></a>Información general
+## <a name="overview"></a>Información general del
 
 Use las API \<filesystem> para las siguientes tareas:
 
@@ -27,13 +27,13 @@ Use las API \<filesystem> para las siguientes tareas:
 
 - Copiar y eliminar archivos.
 
-Para obtener más información sobre la E/S de archivo que usa la biblioteca estándar, vea [Programación con iostream](../standard-library/iostream-programming.md).
+Para obtener más información sobre el E/S de archivo que utilice la biblioteca estándar, consulte [Programación con iostream](../standard-library/iostream-programming.md).
 
 ## <a name="paths"></a>Rutas de acceso
 
 ### <a name="constructing-and-composing-paths"></a>Crear y componer rutas de acceso
 
-Desde Windows XP las rutas de acceso de Windows se almacenan de forma nativa en Unicode. La clase [path](../standard-library/path-class.md) realiza de forma automática todas las conversiones de cadena necesarias. Acepta argumentos de matrices de caracteres anchos y estrechos, así como los tipos `std::string` y `std::wstring` con formato UTF8 o UTF16. La clase `path` también normaliza automáticamente los separadores de ruta de acceso. Puede utilizar una sola barra diagonal como separador de directorios en los argumentos del constructor. Esto le permite utilizar las mismas cadenas para almacenar rutas de acceso tanto en entornos Windows como UNIX:
+Desde Windows XP las rutas de acceso de Windows se almacenan de forma nativa en Unicode. La clase [path](../standard-library/path-class.md) realiza automáticamente todas las conversiones de cadena necesarias. Acepta argumentos de matrices de caracteres anchos y estrechos, así como los tipos `std::string` y `std::wstring` con formato UTF8 o UTF16. La clase `path` también normaliza automáticamente los separadores de ruta de acceso. Puede utilizar una sola barra diagonal como separador de directorios en los argumentos del constructor. Esto le permite utilizar las mismas cadenas para almacenar rutas de acceso tanto en entornos Windows como UNIX:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -88,7 +88,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -167,7 +167,7 @@ Un objeto `path` se puede convertir implícitamente a `std::wstring` o `std::str
 using namespace std;
 using namespace std::experimental::filesystem;
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wchar_t* p = L"C:/Users/Public/Documents";
     path filePath(p);

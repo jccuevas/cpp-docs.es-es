@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-ms.openlocfilehash: cbe70de39d2306edd50bb936ac5bbb4ad14af0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b83ad810da06de1f9d640477f73d4393c932054a
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395292"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518392"
 ---
 # <a name="compiler-warning-level-4-c4701"></a>Advertencia del compilador (nivel 4) C4701
 
-variable local potencialmente no inicializada 'nombre' utilizada
+No se ha inicializado la variable local ' name '.
 
-La variable local *nombre* es posible que se han usado sin que se asigna un valor. Esto podría producir resultados imprevisibles.
+Es posible que se haya usado el *nombre* de la variable local sin tener asignado un valor. Esto puede producir resultados imprevisibles.
 
 ## <a name="example"></a>Ejemplo
 
@@ -37,7 +37,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -64,7 +64,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -73,4 +73,4 @@ void main()
 ## <a name="see-also"></a>Vea también
 
 [Advertencia del compilador (nivel 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)<br/>
-[Advertencias, /sdl y mejora de la detección de variables sin inicializar](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
+[ADVERTENCIAS,/SDL y mejorar la detección de variables sin inicializar](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
