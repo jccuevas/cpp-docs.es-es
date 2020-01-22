@@ -10,12 +10,12 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: Use declaraciones de importación y exportación para obtener acceso y publicar tipos y funciones definidos en el módulo especificado.
-ms.openlocfilehash: ae28bce8e06840cafa5c92521f6e9a62aa5bfde6
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7406bf75595bef20775ee1b67c27bd62bff1a932
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301462"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518288"
 ---
 # <a name="module-import-export"></a>módulo, importar, exportar
 
@@ -59,7 +59,7 @@ Los nombres no exportados no son visibles para el código que importa el módulo
 
 import module ModuleA;
 
-void main() {
+int main() {
   Bar::f(); // OK
   Bar::d(); // OK
   Bar::internal_f(); // Ill-formed: error C2065: 'internal_f': undeclared identifier

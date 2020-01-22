@@ -1,15 +1,15 @@
 ---
 title: Opciones del compilador por categoría
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685198"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518418"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opciones del compilador por categoría
 
@@ -23,7 +23,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Crea código rápido.|
 |[/Ob](ob-inline-function-expansion.md)|Controla la expansión en línea.|
 |[/Od](od-disable-debug.md)|Deshabilita la optimización.|
-|[/Og](og-global-optimizations.md)|Desusado. Usa optimizaciones globales.|
+|[/Og](og-global-optimizations.md)|Opción obsoleta. Usa optimizaciones globales.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funciones intrínsecas.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código pequeño.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código rápido.|
@@ -41,12 +41,12 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/fp](fp-specify-floating-point-behavior.md)|Especifica un comportamiento en punto flotante.|
 |[/GA](ga-optimize-for-windows-application.md)|Optimiza el código para aplicaciones Windows.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__cdecl` . (solo x86)|
-|[/Ge](ge-enable-stack-probes.md)|Desusado. Activa las comprobaciones de la pila.|
+|[/Ge](ge-enable-stack-probes.md)|Opción obsoleta. Activa las comprobaciones de la pila.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Habilita la agrupación de cadenas.|
 |[/Gh](gh-enable-penter-hook-function.md)|Llama a la función de enlace `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Llama a la función de enlace `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Habilita la optimización completa del programa.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Desusado. Habilita la recompilación mínima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Opción obsoleta. Habilita la recompilación mínima.|
 |[/GR](gr-enable-run-time-type-information.md)|Habilita la información de tipo en tiempo de ejecución (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__fastcall` . (solo x86)|
 |[/GS](gs-buffer-security-check.md)|Comprueba la seguridad de búfer.|
@@ -55,15 +55,16 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/guard:cf](guard-enable-control-flow-guard.md)|Agrega las comprobaciones de seguridad de protección de flujo de control.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__vectorcall` . (solo x86 y x64)|
 |[/Gw](gw-optimize-global-data.md)|Habilita la optimización global de los datos de todo el programa.|
-|[/GX](gx-enable-exception-handling.md)|Desusado. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
+|[/GX](gx-enable-exception-handling.md)|Opción obsoleta. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
 |[/Gy](gy-enable-function-level-linking.md)|Habilita la vinculación en el nivel de función.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Desusado. Habilita las comprobaciones rápidas. (Igual que [/RTC1](rtc-run-time-error-checks.md))|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Opción obsoleta. Habilita las comprobaciones rápidas. (Igual que [/RTC1](rtc-run-time-error-checks.md))|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__stdcall` . (solo x86)|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Fuerza la escritura de parámetros pasados en registros en sus ubicaciones en la pila a la entrada de la función. Esta opción del compilador solo es para los compiladores x64 (compilación nativa y cruzada).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea una imagen a la que se puede aplicar una revisión reciente.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funciones transcendentales rápidas.|
-|[/QIfist](qifist-suppress-ftol.md)|Desusado. Suprime la llamada de la función del asistente `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero. (solo x86)|
+|[/QIfist](qifist-suppress-ftol.md)|Opción obsoleta. Suprime la llamada de la función del asistente `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero. (solo x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Quita los comandos `fwait` del interior de los bloques `try` .|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Reduce el impacto en el rendimiento de la actualización de microcódigo de erratas de Intel JCC.|
 |[/Qpar](qpar-auto-parallelizer.md)|Habilita la ejecución en paralelo automática de bucles.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Habilita los niveles de informe para la ejecución en paralelo automática.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Utiliza instrucciones de movimiento de enteros para valores de punto flotante y deshabilita ciertas optimizaciones de carga de punto flotante.|
@@ -120,13 +121,13 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Z7](z7-zi-zi-debug-information-format.md)|Genera información de depuración compatible con C 7,0.|
 |[/Za](za-ze-disable-language-extensions.md)|Deshabilita las extensiones de lenguaje de C89.|
 |[/Zc](zc-conformance.md)|Especifica un comportamiento estándar bajo [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje de C89.|
+|[/Ze](za-ze-disable-language-extensions.md)|Opción obsoleta. Habilita las extensiones de lenguaje de C89.|
 |[/Zf](zf.md)|Mejora el tiempo de generación de PDB en compilaciones paralelas.|
 |[/ZH](zh.md)|Especifica MD5, SHA-1 o SHA-256 para las sumas de comprobación en información de depuración.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Incluye la información de depuración en una base de datos de programa compatible con Editar y continuar. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera información de depuración completa.|
 |[/Zl](zl-omit-default-library-name.md)|Quita el nombre de la biblioteca predeterminada del archivo .obj.|
-|[/Zp](zp-struct-member-alignment.md) *n*|Empaqueta los miembros de la estructura.|
+|[/ZP](zp-struct-member-alignment.md) *n*|Empaqueta los miembros de la estructura.|
 |[/Zs](zs-syntax-check-only.md)|Comprueba únicamente la sintaxis.|
 |[/ZW](zw-windows-runtime-compilation.md)|Genera un archivo de salida para ejecutarse en el Windows Runtime.|
 
@@ -157,7 +158,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|Permite proporcionar directamente la información del error interno del compilador (ICE) C++ al equipo de Microsoft.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Muestra la ruta de acceso completa de archivos de código fuente pasados a cl.exe en texto de diagnóstico.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Fuerza que las operaciones de escritura en el archivo de base de datos de programa (PDB) se serialicen mediante MSPDBSRV.EXE.|
-|[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
+|[/H](h-restrict-length-of-external-names.md)|Opción obsoleta. Restringe la longitud de los nombres externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/J](j-default-char-type-is-unsigned.md)|Cambia el tipo `char` predeterminado.|
 |[/JMC](jmc.md)|Admite la C++ depuración solo mi código nativa.|
@@ -170,7 +171,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Especifica que todos los archivos de origen son C.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Especifica un archivo de código fuente de C++.|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Especifica que todos los archivos C++de origen son.|
-|[/V](v-version-number.md)|Desusado. Establece la cadena de versión.|
+|[/V](v-version-number.md)|Opción obsoleta. Establece la cadena de versión.|
 |[/w](compiler-option-warning-level.md)|Deshabilita todas las advertencias.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Establece el nivel de advertencia de salida.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Establece el nivel de advertencia para la advertencia especificada.|
@@ -182,7 +183,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Wv](compiler-option-warning-level.md)|Deshabilita las advertencias introducidas por versiones posteriores del compilador.|
 |[/WX](compiler-option-warning-level.md)|Trata las advertencias como errores.|
 |[/Yc](yc-create-precompiled-header-file.md)|A. Archivo PCH.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Desusado. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Opción obsoleta. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Inserta una referencia de PCH cuando se crea una biblioteca de depuración.|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un archivo de encabezado precompilado durante la compilación.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Omite todas las demás opciones del compilador de encabezado precompilado en la generación actual.|
@@ -209,20 +210,20 @@ Las opciones experimentales solo se pueden admitir en determinadas versiones del
 
 |Opción|Finalidad|
 |------------|-------------|
-|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Desusado. Utilice [/LN (Create MSIL Module)](ln-create-msil-module.md) en su lugar.|
-|[/Fr](fr-fr-create-dot-sbr-file.md)|Desusado. Crea un archivo de información de examen sin variables locales.|
-|[/Ge](ge-enable-stack-probes.md)|Desusado. Activa las comprobaciones de la pila. Esta opción está activada de manera predeterminada.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Desusado. Habilita la recompilación mínima.|
-|[/GX](gx-enable-exception-handling.md)|Desusado. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Desusado. Habilita las comprobaciones rápidas. Use [/RTC1](rtc-run-time-error-checks.md) en su lugar.|
-|[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
-|[/Og](og-global-optimizations.md)|Desusado. Usa optimizaciones globales.|
-|[/QIfist](qifist-suppress-ftol.md)|Desusado. Se usaba para especificar cómo hacer una conversión de un tipo de punto flotante a un tipo entero.|
-|[/V](v-version-number.md)|Desusado. Establece la cadena de versión del archivo .obj.|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidad de 64 bits.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Desusado. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
-|[/Zc:forScope](zc-forscope-force-conformance-in-for-loop-scope.md)|Desusado. Deshabilita la conformidad en el ámbito del bucle.|
-|[/Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje.|
+|[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Opción obsoleta. Utilice [/LN (Create MSIL Module)](ln-create-msil-module.md) en su lugar.|
+|[/Fr](fr-fr-create-dot-sbr-file.md)|Opción obsoleta. Crea un archivo de información de examen sin variables locales.|
+|[/Ge](ge-enable-stack-probes.md)|Opción obsoleta. Activa las comprobaciones de la pila. Esta opción está activada de manera predeterminada.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Opción obsoleta. Habilita la recompilación mínima.|
+|[/GX](gx-enable-exception-handling.md)|Opción obsoleta. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Opción obsoleta. Habilita las comprobaciones rápidas. Use [/RTC1](rtc-run-time-error-checks.md) en su lugar.|
+|[/H](h-restrict-length-of-external-names.md)|Opción obsoleta. Restringe la longitud de los nombres externos (públicos).|
+|[/Og](og-global-optimizations.md)|Opción obsoleta. Usa optimizaciones globales.|
+|[/QIfist](qifist-suppress-ftol.md)|Opción obsoleta. Se usaba para especificar cómo hacer una conversión de un tipo de punto flotante a un tipo entero.|
+|[/V](v-version-number.md)|Opción obsoleta. Establece la cadena de versión del archivo .obj.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleta. Detecta problemas de portabilidad de 64 bits.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Opción obsoleta. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
+|[/Zc:forScope](zc-forscope-force-conformance-in-for-loop-scope.md)|Opción obsoleta. Deshabilita la conformidad en el ámbito del bucle.|
+|[/Ze](za-ze-disable-language-extensions.md)|Opción obsoleta. Habilita las extensiones de lenguaje.|
 |[/Zg](zg-generate-function-prototypes.md)|Se quitó en Visual Studio 2015. Genera prototipos de función.|
 
 ## <a name="see-also"></a>Vea también

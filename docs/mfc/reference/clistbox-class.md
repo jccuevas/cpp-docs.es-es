@@ -1,6 +1,7 @@
 ---
 title: CListBox (clase)
-ms.date: 11/04/2016
+description: Una descripción de la clase CListBox de MFC y sus funciones miembro.
+ms.date: 01/22/2020
 f1_keywords:
 - CListBox
 - AFXWIN/CListBox
@@ -102,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: e47a580e786572b0741700721a9d1ba4ac925fcd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505686"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518431"
 ---
 # <a name="clistbox-class"></a>CListBox (clase)
 
@@ -123,18 +124,18 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Construye un objeto `CListBox`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Name|Descripción|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|Agrega una cadena a un cuadro de lista.|
 |[CListBox::CharToItem](#chartoitem)|Invalide para proporcionar un control de WM_CHAR personalizado para los cuadros de lista dibujados por el propietario que no tienen cadenas.|
 |[CListBox::CompareItem](#compareitem)|Lo llama el marco de trabajo para determinar la posición de un nuevo elemento en un cuadro de lista dibujado por el propietario ordenado.|
-|[CListBox::Create](#create)|Crea el cuadro de lista de Windows y lo adjunta al `CListBox` objeto.|
+|[CListBox::Create](#create)|Crea el cuadro de lista de Windows y lo adjunta al objeto `CListBox`.|
 |[CListBox::DeleteItem](#deleteitem)|Lo llama el marco de trabajo cuando el usuario elimina un elemento de un cuadro de lista dibujado por el propietario.|
 |[CListBox::DeleteString](#deletestring)|Elimina una cadena de un cuadro de lista.|
 |[CListBox::Dir](#dir)|Agrega nombres de archivo, unidades o ambos desde el directorio actual a un cuadro de lista.|
@@ -179,15 +180,15 @@ class CListBox : public CWnd
 |[CListBox::SetTopIndex](#settopindex)|Establece el índice de base cero de la primera cadena visible en un cuadro de lista.|
 |[CListBox::VKeyToItem](#vkeytoitem)|Invalide para proporcionar un control de WM_KEYDOWN personalizado para los cuadros de lista con el conjunto de estilos LBS_WANTKEYBOARDINPUT.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
 Un cuadro de lista muestra una lista de elementos, como nombres de archivo, que el usuario puede ver y seleccionar.
 
 En un cuadro de lista de selección única, el usuario puede seleccionar un solo elemento. En un cuadro de lista de selección múltiple, se puede seleccionar un intervalo de elementos. Cuando el usuario selecciona un elemento, se resalta y el cuadro de lista envía un mensaje de notificación a la ventana primaria.
 
-Puede crear un cuadro de lista desde una plantilla de cuadro de diálogo o directamente en el código. Para crearlo directamente, construya el `CListBox` objeto y, a continuación, llame a la función miembro [Create](#create) para crear el control de cuadro de lista de `CListBox` Windows y adjuntarlo al objeto. Para usar un cuadro de lista en una plantilla de cuadro de diálogo, declare una variable de cuadro de lista en la `DDX_Control` clase de cuadro de diálogo y `DoDataExchange` , a continuación, use en la función de la clase de cuadro de diálogo para conectar la variable de miembro al control. (esto se hace automáticamente al agregar una variable de control a la clase de cuadro de diálogo).
+Puede crear un cuadro de lista desde una plantilla de cuadro de diálogo o directamente en el código. Para crearlo directamente, construya el `CListBox` objeto y, a continuación, llame a la función miembro [Create](#create) para crear el control de cuadro de lista de Windows y adjuntarlo al objeto `CListBox`. Para usar un cuadro de lista en una plantilla de cuadro de diálogo, declare una variable de cuadro de lista en la clase de cuadro de diálogo y, a continuación, use `DDX_Control` en la función `DoDataExchange` de su clase de cuadro de diálogo para conectar la variable miembro al control. (esto se hace automáticamente al agregar una variable de control a la clase de cuadro de diálogo).
 
-La construcción puede ser un proceso de un solo paso en una clase `CListBox`derivada de. Escriba un constructor para la clase derivada y llame `Create` a desde dentro del constructor.
+La construcción puede ser un proceso de un solo paso en una clase derivada de `CListBox`. Escriba un constructor para la clase derivada y llame a `Create` desde dentro del constructor.
 
 Si desea controlar los mensajes de notificación de Windows enviados por un cuadro de lista a su elemento primario (normalmente una clase derivada de [CDialog](../../mfc/reference/cdialog-class.md)), agregue una entrada de mapa de mensajes y una función miembro de controlador de mensajes a la clase primaria para cada mensaje.
 
@@ -195,7 +196,7 @@ Cada entrada de mapa de mensajes tiene el siguiente formato:
 
 `ON_Notification( id, memberFxn )`
 
-donde `id` especifica el identificador de la ventana secundaria del control de cuadro de lista que envía `memberFxn` la notificación y es el nombre de la función miembro primaria que ha escrito para controlar la notificación.
+donde `id` especifica el identificador de la ventana secundaria del control de cuadro de lista que envía la notificación y `memberFxn` es el nombre de la función miembro primaria que ha escrito para controlar la notificación.
 
 El prototipo de función del elemento primario es el siguiente:
 
@@ -209,9 +210,9 @@ A continuación se muestra una lista de posibles entradas de mapa de mensajes y 
 
 - ON_LBN_KILLFOCUS el cuadro de lista está perdiendo el foco de entrada.
 
-- ON_LBN_SELCANCEL la selección de cuadro de lista actual está cancelada. Este mensaje solo se envía cuando un cuadro de lista tiene el estilo LBS_NOTIFY.
+- ON_LBN_SELCANCEL se cancela la selección de cuadro de lista actual. Este mensaje solo se envía cuando un cuadro de lista tiene el estilo LBS_NOTIFY.
 
-- ON_LBN_SELCHANGE la selección en el cuadro de lista ha cambiado. Esta notificación no se envía si la selección ha cambiado por la función miembro [CListBox:: SetCurSel](#setcursel) . Esta notificación se aplica solo a un cuadro de lista que tiene el estilo LBS_NOTIFY. El mensaje de notificación LBN_SELCHANGE se envía para un cuadro de lista de selección múltiple cada vez que el usuario presiona una tecla de dirección, incluso si la selección no cambia.
+- ON_LBN_SELCHANGE la selección en el cuadro de lista ha cambiado. Esta notificación no se envía si la selección ha cambiado por la función miembro [CListBox:: SetCurSel](#setcursel) . Esta notificación se aplica solo a un cuadro de lista que tiene el estilo LBS_NOTIFY. El mensaje de notificación de LBN_SELCHANGE se envía para un cuadro de lista de selección múltiple cada vez que el usuario presiona una tecla de dirección, incluso si la selección no cambia.
 
 - ON_LBN_SETFOCUS el cuadro de lista está recibiendo el foco de entrada.
 
@@ -219,11 +220,11 @@ A continuación se muestra una lista de posibles entradas de mapa de mensajes y 
 
 - ON_WM_VKEYTOITEM un cuadro de lista con el estilo LBS_WANTKEYBOARDINPUT recibe un mensaje WM_KEYDOWN.
 
-Si crea un `CListBox` objeto dentro de un cuadro de diálogo (a través de un recurso de `CListBox` cuadro de diálogo), el objeto se destruye automáticamente cuando el usuario cierra el cuadro de diálogo.
+Si crea un objeto de `CListBox` dentro de un cuadro de diálogo (a través de un recurso de cuadro de diálogo), el objeto de `CListBox` se destruye automáticamente cuando el usuario cierra el cuadro de diálogo.
 
-Si crea un `CListBox` objeto dentro de una ventana, puede que tenga que destruir el `CListBox` objeto. Si crea el `CListBox` objeto en la pila, se destruye automáticamente. Si crea el `CListBox` objeto en el montón mediante la **nueva** función, debe llamar a **Delete** en el objeto para destruirlo cuando el usuario cierre la ventana primaria.
+Si crea un objeto de `CListBox` dentro de una ventana, es posible que deba destruir el objeto `CListBox`. Si crea el objeto de `CListBox` en la pila, se destruye automáticamente. Si crea el objeto de `CListBox` en el montón mediante la **nueva** función, debe llamar a **Delete** en el objeto para destruirlo cuando el usuario cierre la ventana primaria.
 
-Si asigna memoria en el `CListBox` objeto, invalide el `CListBox` destructor para desechar la asignación.
+Si asigna memoria en el objeto `CListBox`, invalide el destructor `CListBox` para eliminar la asignación.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -235,7 +236,7 @@ Si asigna memoria en el `CListBox` objeto, invalide el `CListBox` destructor par
 
 `CListBox`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 **Encabezado:** afxwin.h
 
@@ -247,7 +248,7 @@ Agrega una cadena a un cuadro de lista.
 int AddString(LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *lpszItem*<br/>
 Apunta a la cadena terminada en null que se va a agregar.
@@ -256,9 +257,9 @@ Apunta a la cadena terminada en null que se va a agregar.
 
 Índice de base cero de la cadena en el cuadro de lista. El valor devuelto es LB_ERR si se produce un error; el valor devuelto es LB_ERRSPACE si no hay suficiente espacio disponible para almacenar la nueva cadena.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Si el cuadro de lista no se creó con el estilo [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , la cadena se agrega al final de la lista. De lo contrario, la cadena se inserta en la lista y la lista está ordenada. Si el cuadro de lista se ha creado con el estilo LBS_SORT pero no el estilo [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , el marco de trabajo ordena la lista por una o `CompareItem` varias llamadas a la función miembro.
+Si el cuadro de lista no se creó con el estilo de [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , la cadena se agrega al final de la lista. De lo contrario, la cadena se inserta en la lista y la lista está ordenada. Si el cuadro de lista se ha creado con el estilo LBS_SORT pero no el estilo [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , el marco de trabajo ordena la lista por una o varias llamadas a la función miembro `CompareItem`.
 
 Use [InsertString](#insertstring) para insertar una cadena en una ubicación concreta del cuadro de lista.
 
@@ -276,7 +277,7 @@ virtual int CharToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nKey*<br/>
 Código ANSI del carácter que el usuario ha escrito.
@@ -288,9 +289,9 @@ La posición actual del símbolo de intercalación del cuadro de lista.
 
 Devuelve-1 o-2 para ninguna acción más o un número no negativo para especificar un índice de un elemento de cuadro de lista en el que realizar la acción predeterminada para la pulsación de tecla. La implementación predeterminada devuelve-1.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-El cuadro de lista envía el mensaje WM_CHARTOITEM cuando recibe un mensaje WM_CHAR, pero solo si el cuadro de lista cumple todos estos criterios:
+El cuadro de lista envía el mensaje de WM_CHARTOITEM cuando recibe un mensaje de WM_CHAR, pero solo si el cuadro de lista cumple todos los criterios siguientes:
 
 - Es un cuadro de lista dibujado por el propietario.
 
@@ -316,9 +317,9 @@ Construye un objeto `CListBox`.
 CListBox();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Un `CListBox` objeto se crea en dos pasos. En primer lugar, llame `ClistBox` al constructor y `Create`, a continuación, llame a, que inicializa el cuadro de lista de `CListBox`Windows y lo asocia a.
+Cree un objeto de `CListBox` en dos pasos. En primer lugar, llame al constructor `ClistBox` y, a continuación, llame a `Create`, que inicializa el cuadro de lista de Windows y lo adjunta al `CListBox`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -332,24 +333,24 @@ Lo llama el marco de trabajo para determinar la posición relativa de un nuevo e
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *lpCompareItemStruct*<br/>
-Puntero largo a una `COMPAREITEMSTRUCT` estructura.
+Puntero largo a una estructura de `COMPAREITEMSTRUCT`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Indica la posición relativa de los dos elementos descritos en la estructura [compareitemstruct (](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Puede ser cualquiera de los siguientes valores:
 
-|Valor|Significado|
+|{2&gt;Value&lt;2}|Significado|
 |-----------|-------------|
 |-1|El elemento 1 se ordena antes que el elemento 2.|
 |0|Los elementos 1 y 2 ordenan el mismo.|
 |1|El elemento 1 se ordena después del elemento 2.|
 
-Vea [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) para obtener una descripción de `COMPAREITEMSTRUCT` la estructura.
+Vea [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) para obtener una descripción de la estructura `COMPAREITEMSTRUCT`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 De forma predeterminada, esta función miembro no hace nada. Si crea un cuadro de lista dibujado por el propietario con el estilo LBS_SORT, debe invalidar esta función miembro para ayudar al marco a ordenar los nuevos elementos agregados al cuadro de lista.
 
@@ -359,7 +360,7 @@ De forma predeterminada, esta función miembro no hace nada. Si crea un cuadro d
 
 ##  <a name="create"></a>CListBox:: Create
 
-Crea el cuadro de lista de Windows y lo adjunta al `CListBox` objeto.
+Crea el cuadro de lista de Windows y lo adjunta al objeto `CListBox`.
 
 ```
 virtual BOOL Create(
@@ -369,16 +370,16 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *dwStyle*<br/>
 Especifica el estilo del cuadro de lista. Aplique cualquier combinación de [estilos de cuadro de lista](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) al cuadro.
 
 *rect*<br/>
-Especifica el tamaño y la posición del cuadro de lista. Puede ser un `CRect` objeto o una `RECT` estructura.
+Especifica el tamaño y la posición del cuadro de lista. Puede ser un objeto `CRect` o una estructura `RECT`.
 
 *pParentWnd*<br/>
-Especifica la ventana primaria del cuadro de lista (normalmente `CDialog` un objeto). No debe ser NULL.
+Especifica la ventana primaria del cuadro de lista (normalmente un objeto `CDialog`). No debe ser NULL.
 
 *nID*<br/>
 Especifica el identificador de control del cuadro de lista.
@@ -387,13 +388,13 @@ Especifica el identificador de control del cuadro de lista.
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Un `CListBox` objeto se crea en dos pasos. En primer lugar, llame al constructor y `Create`, a continuación, llame a, que inicializa el cuadro de lista de `CListBox` Windows y lo adjunta al objeto.
+Cree un objeto de `CListBox` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que inicializa el cuadro de lista de Windows y lo adjunta al objeto `CListBox`.
 
-Cuando `Create` se ejecuta, Windows envía los mensajes [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)y [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) al control de cuadro de lista.
+Cuando se ejecuta `Create`, Windows envía los mensajes [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)y [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) al control de cuadro de lista.
 
-Estos mensajes se controlan de forma predeterminada mediante las funciones miembro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [alcrear](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)y [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) en `CWnd` la clase base. Para extender el control de mensajes predeterminado, derive una clase `CListBox`de, agregue un mapa de mensajes a la nueva clase e invalide las funciones miembro de controlador de mensaje anteriores. Invalide `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.
+Estos mensajes se controlan de forma predeterminada mediante las funciones miembro [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [alcrear](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)y [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) en la clase base `CWnd`. Para extender el control de mensajes predeterminado, derive una clase de `CListBox`, agregue un mapa de mensajes a la nueva clase e invalide las funciones miembro de controlador de mensaje anteriores. Invalide `OnCreate`, por ejemplo, para realizar la inicialización necesaria para una nueva clase.
 
 Aplique los siguientes [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) a un control de cuadro de lista.
 
@@ -417,22 +418,22 @@ Aplique los siguientes [estilos de ventana](../../mfc/reference/styles-used-by-m
 
 ##  <a name="deleteitem"></a>  CListBox::DeleteItem
 
-Lo llama el marco de trabajo cuando el usuario elimina un elemento de un objeto dibujado `CListBox` por el propietario o destruye el cuadro de lista.
+Lo llama el marco de trabajo cuando el usuario elimina un elemento de un objeto de `CListBox` dibujado por el propietario o destruye el cuadro de lista.
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *lpDeleteItemStruct*<br/>
 Un puntero largo a una estructura [deleteitemstruct (](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) de Windows que contiene información sobre el elemento eliminado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 La implementación predeterminada de esta función no hace nada. Invalide esta función para volver a dibujar un cuadro de lista dibujado por el propietario según sea necesario.
 
-Vea [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obtener una descripción de `DELETEITEMSTRUCT` la estructura.
+Vea [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) para obtener una descripción de la estructura `DELETEITEMSTRUCT`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -446,7 +447,7 @@ Elimina el elemento en la posición *NINDEX* del cuadro de lista.
 int DeleteString(UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero de la cadena que se va a eliminar.
@@ -455,7 +456,7 @@ Especifica el índice de base cero de la cadena que se va a eliminar.
 
 Recuento de las cadenas restantes de la lista. El valor devuelto es LB_ERR si *NINDEX* especifica un índice mayor que el número de elementos de la lista.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Ahora, todos los elementos que siguen a *NINDEX* bajan una posición. Por ejemplo, si un cuadro de lista contiene dos elementos, al eliminar el primer elemento, el elemento restante quedará ahora en la primera posición. *NINDEX*= 0 para el elemento en la primera posición.
 
@@ -473,12 +474,12 @@ int Dir(
     LPCTSTR lpszWildCard);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *attr*<br/>
-Puede ser cualquier combinación de los valores de **enumeración** descritos en `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)o cualquier combinación de los siguientes valores:
+Puede ser cualquier combinación de los valores de **enumeración** descritos en `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus), o cualquier combinación de los siguientes valores:
 
-|Valor|Significado|
+|{2&gt;Value&lt;2}|Significado|
 |-----------|-------------|
 |0x0000|El archivo se puede leer o escribir en él.|
 |0x0001|El archivo se puede leer pero no escribir en él.|
@@ -508,18 +509,18 @@ Lo llama el marco de trabajo cuando cambia el aspecto visual de un cuadro de lis
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *lpDrawItemStruct*<br/>
 Puntero largo a una estructura [drawitemstruct (](/windows/win32/api/winuser/ns-winuser-drawitemstruct) que contiene información sobre el tipo de dibujo necesario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Los `itemAction` miembros `itemState` y de la `DRAWITEMSTRUCT` estructura definen la acción de dibujo que se va a realizar.
+Los miembros `itemAction` y `itemState` de la estructura `DRAWITEMSTRUCT` definen la acción de dibujo que se va a realizar.
 
-De forma predeterminada, esta función miembro no hace nada. Invalide esta función miembro para implementar el dibujo de un `CListBox` objeto dibujado por el propietario. La aplicación debe restaurar todos los objetos de la interfaz de dispositivo gráfico (GDI) seleccionados para el contexto de presentación proporcionado en *lpDrawItemStruct* antes de que esta función miembro finalice.
+De forma predeterminada, esta función miembro no hace nada. Invalide esta función miembro para implementar el dibujo de un objeto de `CListBox` dibujado por el propietario. La aplicación debe restaurar todos los objetos de la interfaz de dispositivo gráfico (GDI) seleccionados para el contexto de presentación proporcionado en *lpDrawItemStruct* antes de que esta función miembro finalice.
 
-Vea [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obtener una descripción de `DRAWITEMSTRUCT` la estructura.
+Vea [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para obtener una descripción de la estructura `DRAWITEMSTRUCT`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -535,7 +536,7 @@ int FindString(
     LPCTSTR lpszItem) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nStartAfter*<br/>
 Contiene el índice de base cero del elemento antes del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hasta el elemento especificado por *nStartAfter*. Si *nStartAfter* es-1, se busca en el cuadro de lista completo desde el principio.
@@ -547,7 +548,7 @@ Apunta a la cadena terminada en null que contiene el prefijo que se va a buscar.
 
 Índice de base cero del elemento coincidente, o LB_ERR si la búsqueda no se ha realizado correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Utilice la función miembro [SelectString](#selectstring) para buscar y seleccionar una cadena.
 
@@ -565,7 +566,7 @@ int FindStringExact(
     LPCTSTR lpszFind) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndexStart*<br/>
 Especifica el índice de base cero del elemento antes del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hasta el elemento especificado por *nIndexStart*. Si *nIndexStart* es-1, se busca en el cuadro de lista completo desde el principio.
@@ -575,9 +576,9 @@ Apunta a la cadena terminada en null que se va a buscar. Esta cadena puede conte
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice del elemento coincidente, o LB_ERR si la búsqueda no se ha realizado correctamente.
+Índice del elemento coincidente o LB_ERR si la búsqueda no se ha realizado correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Si el cuadro de lista se creó con un estilo dibujado por el propietario pero sin el estilo [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles), la función miembro `FindStringExact` intenta hacer coincidir el valor palabra con el valor de *lpszFind*.
 
@@ -595,9 +596,9 @@ int GetAnchorIndex() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice del elemento de delimitador actual, si es correcto; de lo contrario, LB_ERR.
+Índice del elemento de delimitador actual, si es correcto; de lo contrario LB_ERR.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 En un cuadro de lista de selección múltiple, el elemento delimitador es el primer o el último elemento de un bloque de elementos seleccionados contiguos.
 
@@ -617,7 +618,7 @@ int GetCaretIndex() const;
 
 Índice de base cero del elemento que tiene el rectángulo de foco en un cuadro de lista. Si el cuadro de lista es un cuadro de lista de selección única, el valor devuelto es el índice del elemento seleccionado, si existe.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 El elemento puede estar o no seleccionado.
 
@@ -635,9 +636,9 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de elementos en el cuadro de lista o LB_ERR si se produce un error.
+Número de elementos del cuadro de lista o LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 El recuento devuelto es uno mayor que el valor de índice del último elemento (el índice está basado en cero).
 
@@ -655,11 +656,11 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero del elemento actualmente seleccionado si es un cuadro de lista de selección única. Es LB_ERR si no hay ningún elemento seleccionado actualmente.
+Índice de base cero del elemento actualmente seleccionado si es un cuadro de lista de selección única. Se LB_ERR si no hay ningún elemento seleccionado actualmente.
 
 En un cuadro de lista de selección múltiple, el índice del elemento que tiene el foco.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 No llame a `GetCurSel` para un cuadro de lista de selección múltiple. Use [CListBox:: GetSelItems](#getselitems) en su lugar.
 
@@ -679,7 +680,7 @@ int GetHorizontalExtent() const;
 
 Ancho desplazable del cuadro de lista, en píxeles.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Esto solo es aplicable si el cuadro de lista tiene una barra de desplazamiento horizontal.
 
@@ -695,7 +696,7 @@ Recupera el valor de palabra proporcionado por la aplicación asociado al elemen
 DWORD_PTR GetItemData(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento en el cuadro de lista.
@@ -704,7 +705,7 @@ Especifica el índice de base cero del elemento en el cuadro de lista.
 
 El valor asociado al elemento o LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 El valor de palabra era el parámetro *dwItemData* de una llamada a [SetItemData](#setitemdata) .
 
@@ -720,7 +721,7 @@ Recupera el valor de 32 bits proporcionado por la aplicación asociado al elemen
 void* GetItemDataPtr(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento en el cuadro de lista.
@@ -741,7 +742,7 @@ Determina el alto de los elementos de un cuadro de lista.
 int GetItemHeight(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento en el cuadro de lista. Este parámetro solo se usa si el cuadro de lista tiene el estilo LBS_OWNERDRAWVARIABLE; de lo contrario, debe establecerse en 0.
@@ -764,7 +765,7 @@ int GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento.
@@ -790,11 +791,11 @@ DWORD GetListBoxInfo() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Número de elementos por columna del `CListBox` objeto.
+Número de elementos por columna del objeto de `CListBox`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Esta función miembro emula la funcionalidad del mensaje [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , tal y como se describe en el Windows SDK.
+Esta función miembro emula la funcionalidad del mensaje de [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , como se describe en el Windows SDK.
 
 ##  <a name="getlocale"></a>  CListBox::GetLocale
 
@@ -808,7 +809,7 @@ LCID GetLocale() const;
 
 El valor del identificador de configuración regional (LCID) de las cadenas en el cuadro de lista.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 La configuración regional se usa, por ejemplo, para determinar el criterio de ordenación de las cadenas en un cuadro de lista ordenado.
 
@@ -824,7 +825,7 @@ Recupera el estado de selección de un elemento.
 int GetSel(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento.
@@ -833,7 +834,7 @@ Especifica el índice de base cero del elemento.
 
 Un número positivo si el elemento especificado está seleccionado; de lo contrario, es 0. El valor devuelto es LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Esta función miembro funciona con cuadros de lista de selección única y múltiple.
 
@@ -869,7 +870,7 @@ int GetSelItems(
     LPINT rgIndex) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nMaxItems*<br/>
 Especifica el número máximo de elementos seleccionados cuyos números de elemento se van a colocar en el búfer.
@@ -879,7 +880,7 @@ Especifica un puntero a un búfer lo suficientemente grande como para el número
 
 ### <a name="return-value"></a>Valor devuelto
 
-Número real de elementos colocados en el búfer. Si el cuadro de lista es un cuadro de lista de selección única, el valor `LB_ERR`devuelto es.
+Número real de elementos colocados en el búfer. Si el cuadro de lista es un cuadro de lista de selección única, el valor devuelto es `LB_ERR`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -899,13 +900,13 @@ void GetText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero de la cadena que se va a recuperar.
 
 *lpszBuffer*<br/>
-Apunta al búfer que recibe la cadena. El búfer debe tener espacio suficiente para la cadena y un carácter nulo de terminación. El tamaño de la cadena se puede determinar con anterioridad mediante una llamada `GetTextLen` a la función miembro.
+Apunta al búfer que recibe la cadena. El búfer debe tener espacio suficiente para la cadena y un carácter nulo de terminación. El tamaño de la cadena se puede determinar con anterioridad mediante una llamada a la función miembro `GetTextLen`.
 
 *rString*<br/>
 Referencia a un objeto `CString`.
@@ -914,9 +915,9 @@ Referencia a un objeto `CString`.
 
 La longitud (en bytes) de la cadena, sin incluir el carácter nulo de terminación. Si *NINDEX* no especifica un índice válido, el valor devuelto es LB_ERR.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-La segunda forma de esta función miembro rellena un `CString` objeto con el texto de la cadena.
+La segunda forma de esta función miembro rellena un objeto `CString` con el texto de la cadena.
 
 ### <a name="example"></a>Ejemplo
 
@@ -930,7 +931,7 @@ Obtiene la longitud de una cadena en un elemento de cuadro de lista.
 int GetTextLen(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero de la cadena.
@@ -953,9 +954,9 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Índice de base cero del primer elemento visible de un cuadro de lista si se realiza correctamente, de lo contrario, LB_ERR.
+Índice de base cero del primer elemento visible de un cuadro de lista si se realiza correctamente, de lo contrario LB_ERR.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Inicialmente, el elemento 0 está en la parte superior del cuadro de lista, pero si se desplaza el cuadro de lista, es posible que haya otro elemento en la parte superior.
 
@@ -973,7 +974,7 @@ int InitStorage(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nItems*<br/>
 Especifica el número de elementos que se van a agregar.
@@ -983,15 +984,15 @@ Especifica la cantidad de memoria, en bytes, que se va a asignar para las cadena
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcto, el número máximo de elementos que puede almacenar el cuadro de lista antes de que se necesite una reasignación de memoria, de lo contrario, LB_ERRSPACE, lo que significa que no hay suficiente memoria disponible.
+Si es correcto, el número máximo de elementos que puede almacenar el cuadro de lista antes de que se necesite una reasignación de memoria, de lo contrario LB_ERRSPACE, lo que significa que no hay suficiente memoria disponible.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Llame a esta función antes de agregar un gran número de elementos `CListBox`a un.
+Llame a esta función antes de agregar un gran número de elementos a un `CListBox`.
 
 Esta función ayuda a acelerar la inicialización de cuadros de lista que tienen un gran número de elementos (más de 100). Asigna previamente la cantidad de memoria especificada para que las siguientes funciones de [addString](#addstring), [InsertString](#insertstring)y [dir](#dir) tarden el menor tiempo posible. Puede usar estimaciones para los parámetros. Si sobrestima, se asignará una memoria adicional; Si se subestima, se usa la asignación normal para los elementos que superan la cantidad preasignada.
 
-Solo Windows 95/98: El parámetro *nItems* está limitado a valores de 16 bits. Esto significa que los cuadros de lista no pueden contener más de 32.767 elementos. Aunque el número de elementos está restringido, el tamaño total de los elementos de un cuadro de lista solo está limitado por la memoria disponible.
+Solo Windows 95/98: el parámetro *nItems* está limitado a valores de 16 bits. Esto significa que los cuadros de lista no pueden contener más de 32.767 elementos. Aunque el número de elementos está restringido, el tamaño total de los elementos de un cuadro de lista solo está limitado por la memoria disponible.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1007,7 +1008,7 @@ int InsertString(
     LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero de la posición en la que se va a insertar la cadena. Si este parámetro es-1, la cadena se agrega al final de la lista.
@@ -1019,7 +1020,7 @@ Apunta a la cadena terminada en null que se va a insertar.
 
 Índice de base cero de la posición donde se insertó la cadena. El valor devuelto es LB_ERR si se produce un error; el valor devuelto es LB_ERRSPACE si no hay suficiente espacio disponible para almacenar la nueva cadena.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 A diferencia de la función miembro [AddString](#addstring), `InsertString` no hace que se ordene una lista con el estilo [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).
 
@@ -1037,19 +1038,19 @@ UINT ItemFromPoint(
     BOOL& bOutside) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pt*<br/>
 Punto en el que se va a buscar el elemento más cercano, especificado en relación con la esquina superior izquierda del área cliente del cuadro de lista.
 
 *bOutside*<br/>
-Referencia a una variable BOOL que se establecerá en TRUE si *PT* está fuera del área cliente del elemento de cuadro de lista más próximo, false si *PT* está dentro del área cliente del elemento de cuadro de lista más próximo.
+Referencia a una variable BOOL que se establecerá en TRUE si *PT* está fuera del área cliente del cuadro de lista, false si *PT* está dentro del área cliente del cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Índice del elemento más próximo al punto especificado en *PT*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Puede usar esta función para determinar en qué elemento de cuadro de lista se mueve el cursor del mouse.
 
@@ -1065,18 +1066,18 @@ Lo llama el marco de trabajo cuando se crea un cuadro de lista con un estilo dib
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *lpMeasureItemStruct*<br/>
 Puntero largo a una estructura [measureitemstruct (](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-De forma predeterminada, esta función miembro no hace nada. Invalide esta función miembro y rellene la `MEASUREITEMSTRUCT` estructura para informar a las ventanas de las dimensiones del cuadro de lista. Si el cuadro de lista se crea con el estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , el marco de trabajo llama a esta función miembro para cada elemento del cuadro de lista. De lo contrario, se llama a este miembro solo una vez.
+De forma predeterminada, esta función miembro no hace nada. Invalide esta función miembro y rellene la estructura `MEASUREITEMSTRUCT` para informar a las ventanas de las dimensiones del cuadro de lista. Si el cuadro de lista se crea con el estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , el marco de trabajo llama a esta función miembro para cada elemento del cuadro de lista. De lo contrario, se llama a este miembro solo una vez.
 
-Para obtener más información sobre cómo usar el estilo [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) en un cuadro de lista dibujado por el `SubclassDlgItem` propietario creado con `CWnd`la función miembro de, vea la explicación en la [Nota técnica 14](../../mfc/tn014-custom-controls.md).
+Para obtener más información sobre cómo usar el estilo de [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) en un cuadro de lista dibujado por el propietario creado con la función miembro `SubclassDlgItem` de `CWnd`, vea la explicación en la [Nota técnica 14](../../mfc/tn014-custom-controls.md).
 
-Vea [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para obtener una descripción de `MEASUREITEMSTRUCT` la estructura.
+Vea [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) para obtener una descripción de la estructura `MEASUREITEMSTRUCT`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1104,7 +1105,7 @@ int SelectString(
     LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nStartAfter*<br/>
 Contiene el índice de base cero del elemento antes del primer elemento que se va a buscar. Cuando la búsqueda alcanza la parte inferior del cuadro de lista, continúa desde la parte superior del cuadro de lista hasta el elemento especificado por *nStartAfter*. Si *nStartAfter* es-1, se busca en el cuadro de lista completo desde el principio.
@@ -1116,7 +1117,7 @@ Apunta a la cadena terminada en null que contiene el prefijo que se va a buscar.
 
 Índice del elemento seleccionado si la búsqueda se realizó correctamente. Si la búsqueda no se realizó correctamente, el valor devuelto es LB_ERR y no se cambia la selección actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Si es necesario, el cuadro de lista se desplaza para que el elemento seleccionado se muestre en la vista.
 
@@ -1124,7 +1125,7 @@ Esta función miembro no se puede usar con un cuadro de lista que tenga el estil
 
 Un elemento se selecciona solo si sus caracteres iniciales (desde el punto inicial) coinciden con los caracteres de la cadena especificada por *lpszItem*.
 
-Utilice la `FindString` función miembro para buscar una cadena sin seleccionar el elemento.
+Utilice la función miembro `FindString` para buscar una cadena sin seleccionar el elemento.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1141,7 +1142,7 @@ int SelItemRange(
     int nLastItem);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *bSelect*<br/>
 Especifica cómo establecer la selección. Si *bSelect* es true, la cadena se selecciona y se resalta; Si es FALSE, se quita el resaltado y ya no se selecciona la cadena.
@@ -1156,7 +1157,7 @@ Especifica el índice de base cero del último elemento que se va a establecer.
 
 LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Use esta función miembro solo con cuadros de lista de selección múltiple. Si solo tiene que seleccionar un elemento en un cuadro de lista de selección múltiple, es decir, si *nFirstItem* es igual a *nLastItem* , llame a la función miembro [SetSel](#setsel) en su lugar.
 
@@ -1172,12 +1173,12 @@ Establece el delimitador de un cuadro de lista de selección múltiple para come
 void SetAnchorIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento de cuadro de lista que será el delimitador.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 En un cuadro de lista de selección múltiple, el elemento delimitador es el primer o el último elemento de un bloque de elementos seleccionados contiguos.
 
@@ -1195,7 +1196,7 @@ int SetCaretIndex(
     BOOL bScroll = TRUE);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento que va a recibir el rectángulo de foco en el cuadro de lista.
@@ -1207,7 +1208,7 @@ Si este valor es 0, el elemento se desplaza hasta que esté totalmente visible. 
 
 LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Si el elemento no está visible, se desplaza a la vista.
 
@@ -1223,7 +1224,7 @@ Establece el ancho en píxeles de todas las columnas de un cuadro de lista de va
 void SetColumnWidth(int cxWidth);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *cxWidth*<br/>
 Especifica el ancho en píxeles de todas las columnas.
@@ -1240,7 +1241,7 @@ Selecciona una cadena y la desplaza a la vista, si es necesario.
 int SetCurSel(int nSelect);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nSelect*<br/>
 Especifica el índice de base cero de la cadena que se va a seleccionar. Si *nSeleccione* es-1, el cuadro de lista se establece para que no tenga ninguna selección.
@@ -1249,7 +1250,7 @@ Especifica el índice de base cero de la cadena que se va a seleccionar. Si *nSe
 
 LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Cuando se selecciona la nueva cadena, el cuadro de lista quita el resaltado de la cadena seleccionada anteriormente.
 
@@ -1269,18 +1270,18 @@ Establece el ancho, en píxeles, por el que se puede desplazar un cuadro de list
 void SetHorizontalExtent(int cxExtent);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *cxExtent*<br/>
 Especifica el número de píxeles que se puede desplazar horizontalmente el cuadro de lista.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Si el tamaño del cuadro de lista es menor que este valor, la barra de desplazamiento horizontal desplazará horizontalmente los elementos del cuadro de lista. Si el cuadro de lista es tan grande o mayor que este valor, se oculta la barra de desplazamiento horizontal.
 
 Para responder a una llamada a `SetHorizontalExtent`, el cuadro de lista se debe haber definido con el estilo [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) .
 
-Esta función miembro no es útil para los cuadros de lista de varias columnas. En el caso de los cuadros de lista `SetColumnWidth` de varias columnas, llame a la función miembro.
+Esta función miembro no es útil para los cuadros de lista de varias columnas. En el caso de los cuadros de lista de varias columnas, llame a la función miembro `SetColumnWidth`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1296,7 +1297,7 @@ int SetItemData(
     DWORD_PTR dwItemData);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento.
@@ -1322,7 +1323,7 @@ int SetItemDataPtr(
     void* pData);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento.
@@ -1334,7 +1335,7 @@ Especifica el puntero que se va a asociar al elemento.
 
 LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Este puntero sigue siendo válido mientras dure el cuadro de lista, aunque la posición relativa del elemento en el cuadro de lista puede cambiar a medida que se agregan o quitan elementos. Por lo tanto, el índice del elemento en el cuadro puede cambiar, pero el puntero sigue siendo confiable.
 
@@ -1352,7 +1353,7 @@ int SetItemHeight(
     UINT cyItemHeight);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento en el cuadro de lista. Este parámetro solo se usa si el cuadro de lista tiene el estilo LBS_OWNERDRAWVARIABLE; de lo contrario, debe establecerse en 0.
@@ -1364,7 +1365,7 @@ Especifica el alto, en píxeles, del elemento.
 
 LB_ERR si el índice o el alto no son válidos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Si el cuadro de lista tiene el estilo [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , esta función establece el alto del elemento especificado por *NINDEX*. De lo contrario, esta función establece el alto de todos los elementos del cuadro de lista.
 
@@ -1380,7 +1381,7 @@ Establece el identificador de configuración regional para este cuadro de lista.
 LCID SetLocale(LCID nNewLocale);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nNewLocale*<br/>
 Nuevo valor de identificador de configuración regional (LCID) que se va a establecer para el cuadro de lista.
@@ -1389,9 +1390,9 @@ Nuevo valor de identificador de configuración regional (LCID) que se va a estab
 
 El valor del identificador de configuración regional (LCID) anterior para este cuadro de lista.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Si `SetLocale` no se llama a, la configuración regional predeterminada se obtiene del sistema. Se puede modificar la configuración regional predeterminada del sistema mediante la aplicación regional (o internacional) del panel de control.
+Si no se llama a `SetLocale`, la configuración regional predeterminada se obtiene del sistema. Se puede modificar la configuración regional predeterminada del sistema mediante la aplicación regional (o internacional) del panel de control.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1407,7 +1408,7 @@ int SetSel(
     BOOL bSelect = TRUE);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Contiene el índice de base cero de la cadena que se va a establecer. Si es-1, la selección se agrega o se quita de todas las cadenas, dependiendo del valor de *bSelect*.
@@ -1419,7 +1420,7 @@ Especifica cómo establecer la selección. Si *bSelect* es true, la cadena se se
 
 LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Use esta función miembro solo con cuadros de lista de selección múltiple.
 
@@ -1442,7 +1443,7 @@ BOOL SetTabStops(
     LPINT rgTabStops);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *cxEachStop*<br/>
 Las tabulaciones se establecen en cada unidad de cuadro de diálogo *cxEachStop* . Consulte *rgTabStops* para obtener una descripción de una unidad de cuadro de diálogo.
@@ -1451,19 +1452,19 @@ Las tabulaciones se establecen en cada unidad de cuadro de diálogo *cxEachStop*
 Especifica el número de paradas de tabulación que se van a tener en el cuadro de lista.
 
 *rgTabStops*<br/>
-Apunta al primer miembro de una matriz de enteros que contiene las posiciones de tabulación en las unidades de cuadro de diálogo. Una unidad de cuadro de diálogo es una distancia horizontal o vertical. Una unidad de cuadro de diálogo horizontal es igual a una cuarta parte de la unidad de ancho base del cuadro de diálogo actual y una unidad de cuadro de diálogo vertical es igual a una octava parte de la unidad de alto de cuadro de diálogo actual. Las unidades base de cuadro de diálogo se calculan en función del alto y el ancho de la fuente actual del sistema. La `GetDialogBaseUnits` función de Windows devuelve las unidades base de diálogo actuales en píxeles. Las tabulaciones se deben ordenar en orden ascendente; no se permiten las pestañas atrás.
+Apunta al primer miembro de una matriz de enteros que contiene las posiciones de tabulación en las unidades de cuadro de diálogo. Una unidad de cuadro de diálogo es una distancia horizontal o vertical. Una unidad de cuadro de diálogo horizontal es igual a una cuarta parte de la unidad de ancho base del cuadro de diálogo actual y una unidad de cuadro de diálogo vertical es igual a una octava parte de la unidad de alto de cuadro de diálogo actual. Las unidades base de cuadro de diálogo se calculan en función del alto y el ancho de la fuente actual del sistema. La función `GetDialogBaseUnits` Windows devuelve las unidades base de diálogo actuales en píxeles. Las tabulaciones se deben ordenar en orden ascendente; no se permiten las pestañas atrás.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Distinto de cero si se han establecido todas las pestañas; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Para establecer el tamaño predeterminado de 2 unidades de cuadro de diálogo para las tabulaciones, llame a la versión sin parámetros de esta función miembro. Para establecer las tabulaciones en un tamaño distinto de 2, llame a la versión con el argumento *cxEachStop* .
 
 Para establecer las tabulaciones en una matriz de tamaños, use la versión con los argumentos *rgTabStops* y *nTabStops* . Se establecerá una detención de tabulación para cada valor de *rgTabStops*, hasta el número especificado por *nTabStops*.
 
-Para responder a una llamada a la `SetTabStops` función miembro, el cuadro de lista se debe haber creado con el estilo [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+Para responder a una llamada a la función miembro `SetTabStops`, el cuadro de lista se debe haber creado con el estilo [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Ejemplo
 
@@ -1477,16 +1478,16 @@ Garantiza que un determinado elemento de cuadro de lista está visible.
 int SetTopIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nIndex*<br/>
 Especifica el índice de base cero del elemento de cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto, o LB_ERR si se produce un error.
+Cero si se realiza correctamente o LB_ERR si se produce un error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 El sistema desplaza el cuadro de lista hasta que el elemento especificado por *NINDEX* aparezca en la parte superior del cuadro de lista o hasta que se alcance el intervalo de desplazamiento máximo.
 
@@ -1504,7 +1505,7 @@ virtual int VKeyToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *nKey*<br/>
 Código de tecla virtual de la tecla que el usuario presionó. Para obtener una lista de códigos de tecla virtual estándar, vea Winuser. h
@@ -1516,11 +1517,11 @@ La posición actual del símbolo de intercalación del cuadro de lista.
 
 Devuelve-2 para ninguna acción más,-1 para la acción predeterminada o un número no negativo para especificar un índice de un elemento de cuadro de lista en el que realizar la acción predeterminada para la pulsación de tecla.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-El cuadro de lista envía el mensaje WM_VKEYTOITEM cuando recibe un mensaje WM_KEYDOWN, pero solo si el cuadro de lista cumple los dos elementos siguientes:
+El cuadro de lista envía el mensaje de WM_VKEYTOITEM cuando recibe un mensaje de WM_KEYDOWN, pero solo si el cuadro de lista cumple los dos elementos siguientes:
 
-- Tiene establecido el estilo [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
+- Tiene el conjunto de estilos [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 - Tiene al menos un elemento.
 

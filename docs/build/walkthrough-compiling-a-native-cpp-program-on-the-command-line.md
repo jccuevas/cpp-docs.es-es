@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Compilar un programa nativo de C++ en la línea de comandos'
+title: 'Tutorial: Compilar un programa de C++ nativo en la línea de comandos'
 description: Use el compilador de Microsoft C++ desde un símbolo del sistema.
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051513"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518182"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Tutorial: Compilar un programa nativo de C++ en la línea de comandos
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C++ nativo en la línea de comandos
 
 Visual Studio incluye un compilador C++ de línea de comandos que puede usar para crear todo desde aplicaciones de consola básicas hasta plataforma universal de Windows aplicaciones, aplicaciones de escritorio, controladores de dispositivos y componentes de .net.
 
@@ -78,7 +78,7 @@ Antes de poder compilar un C++ programa de C o en la línea de comandos, debe co
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }

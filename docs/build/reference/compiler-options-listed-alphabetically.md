@@ -1,14 +1,14 @@
 ---
 title: Opciones del compilador por orden alfabético
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685326"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518379"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opciones del compilador por orden alfabético
 
@@ -57,12 +57,12 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/Fx](fx-merge-injected-code.md)|Combina el código insertado con el archivo de código fuente.|
 |[/GA](ga-optimize-for-windows-application.md)|Optimiza el código para la aplicación Windows.|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__cdecl` (solo x86).|
-|[/Ge](ge-enable-stack-probes.md)|Desusado. Activa las comprobaciones de la pila.|
+|[/Ge](ge-enable-stack-probes.md)|Opción obsoleta. Activa las comprobaciones de la pila.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Habilita la agrupación de cadenas.|
 |[/GH](gh-enable-pexit-hook-function.md)|Llama a la función de enlace `_pexit`.|
 |[/Gh](gh-enable-penter-hook-function.md)|Llama a la función de enlace `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Habilita la optimización completa del programa.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Desusado. Habilita la recompilación mínima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Opción obsoleta. Habilita la recompilación mínima.|
 |[/GR](gr-enable-run-time-type-information.md)|Habilita la información de tipo en tiempo de ejecución (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__fastcall` (solo x86).|
 |[/GS](gs-buffer-security-check.md)|Almacena en un búfer la comprobación de seguridad.|
@@ -71,11 +71,11 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/guard:cf](guard-enable-control-flow-guard.md)|Agrega las comprobaciones de seguridad de protección de flujo de control.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__vectorcall` . (solo x86 y x64)|
 |[/Gw](gw-optimize-global-data.md)|Habilita la optimización global de los datos de todo el programa.|
-|[/GX](gx-enable-exception-handling.md)|Desusado. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
+|[/GX](gx-enable-exception-handling.md)|Opción obsoleta. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
 |[/Gy](gy-enable-function-level-linking.md)|Habilita la vinculación en el nivel de función.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Desusado. Igual que [/RTC1](rtc-run-time-error-checks.md).|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Opción obsoleta. Igual que [/RTC1](rtc-run-time-error-checks.md).|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__stdcall` (solo x86).|
-|[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
+|[/H](h-restrict-length-of-external-names.md)|Opción obsoleta. Restringe la longitud de los nombres externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Fuerza la escritura de parámetros pasados en registros en sus ubicaciones en la pila a la entrada de la función. Esta opción del compilador solo es para los compiladores x64 (compilación nativa y cruzada).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea una imagen con revisión activa.|
@@ -97,9 +97,9 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Crea código rápido.|
 |[/Ob](ob-inline-function-expansion.md)|Controla la expansión en línea.|
 |[/Od](od-disable-debug.md)|Deshabilita la optimización.|
-|[/Og](og-global-optimizations.md)|Desusado. Usa optimizaciones globales.|
+|[/Og](og-global-optimizations.md)|Opción obsoleta. Usa optimizaciones globales.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funciones intrínsecas.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita la directiva [`#pragma omp`](../../preprocessor/omp.md) en el código fuente.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita la Directiva de [`#pragma omp`](../../preprocessor/omp.md) en el código fuente.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código pequeño.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código rápido.|
 |[/Ox](ox-full-optimization.md)|Un subconjunto de/O2 que no incluye/GF ni/GY.|
@@ -107,8 +107,9 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/P](p-preprocess-to-a-file.md)|Escribe los resultados del preprocesador en un archivo.|
 |[/permissive-](permissive-standards-conformance.md)|Establezca el modo de cumplimiento normativo.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funciones transcendentales rápidas.|
-|[/QIfist](qifist-suppress-ftol.md)|Desusado. Suprime `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero (solo x86).|
+|[/QIfist](qifist-suppress-ftol.md)|Opción obsoleta. Suprime `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero (solo x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Quita los comandos `fwait` del interior de los bloques `try` .|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Reduce el impacto en el rendimiento de la actualización de microcódigo de erratas de Intel JCC.|
 |[/Qpar (Paralelizador automático)](qpar-auto-parallelizer.md)|Habilita la ejecución en paralelo automática de bucles marcados con la directiva [#pragma loop()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Utiliza instrucciones de movimiento de enteros para valores de punto flotante y deshabilita ciertas optimizaciones de carga de punto flotante.|
 |[/Qspectre](qspectre.md)|Especifica la generación de instrucciones del compilador para mitigar determinadas vulnerabilidades de seguridad de la variante 1 de Spectre.|
@@ -125,7 +126,7 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/U](u-u-undefine-symbols.md)|Quita una macro predefinida.|
 |[/u](u-u-undefine-symbols.md)|Quita todas las macros predefinidas.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Establezca los juegos de caracteres de origen y de ejecución en UTF-8.|
-|[/V](v-version-number.md)|Desusado. Establece la cadena de versión del archivo .obj.|
+|[/V](v-version-number.md)|Opción obsoleta. Establece la cadena de versión del archivo .obj.|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Valide los archivos UTF-8 únicamente para los caracteres compatibles.|
 |[/vd](vd-disable-construction-displacements.md)|Suprime o habilita los miembros ocultos de la clase vtordisp.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa la base más apropiada para los punteros a miembros.|
@@ -142,19 +143,19 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/we](compiler-option-warning-level.md)|Trata la advertencia especificada como un error.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Habilita los diagnósticos de una línea para los mensajes de error y de advertencia cuando se compila código fuente de C++ desde la línea de comandos.|
 |[/wo](compiler-option-warning-level.md)|Muestra la advertencia especificada solo una vez.|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidad de 64 bits.|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleta. Detecta problemas de portabilidad de 64 bits.|
 |[/Wv](compiler-option-warning-level.md)|No muestra ninguna advertencia introducida después de la versión especificada del compilador.|
 |[/WX](compiler-option-warning-level.md)|Trata todas las advertencias como errores.|
 |[/X](x-ignore-standard-include-paths.md)|Omite el directorio de archivos de inclusión estándar.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Omite todas las demás opciones del compilador de encabezado precompilado en la generación actual.|
 |[/Yc](yc-create-precompiled-header-file.md)|Crea un archivo de encabezado precompilado.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Desusado. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Opción obsoleta. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Inserta una referencia de PCH cuando se crea una biblioteca de depuración|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un archivo de encabezado precompilado durante la compilación.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Genera información de depuración compatible con C 7,0.|
 |[/Za](za-ze-disable-language-extensions.md)|Deshabilita las extensiones del lenguaje|
 |[/Zc](zc-conformance.md)|Especifica el comportamiento estándar en [/ze](za-ze-disable-language-extensions.md). [/Za,/ze (deshabilitar extensiones de lenguaje)](za-ze-disable-language-extensions.md)|
-|[/Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje.|
+|[/Ze](za-ze-disable-language-extensions.md)|Opción obsoleta. Habilita las extensiones de lenguaje.|
 |[/Zf](zf.md)|Mejora el tiempo de generación de PDB en compilaciones paralelas.|
 |[/Zg](zg-generate-function-prototypes.md)|Se quitó en Visual Studio 2015. Genera prototipos de función.|
 |[/ZH](zh.md)|Especifica MD5, SHA-1 o SHA-256 para las sumas de comprobación en información de depuración.|

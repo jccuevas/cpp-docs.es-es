@@ -3,16 +3,16 @@ title: Referencia del esquema Launch. vs. JSONC++()
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556648"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518236"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Referencia del esquema Launch. vs. JSONC++()
 
-Use el archivo *Launch. vs. JSON* para configurar los parámetros de depuración. Para crear el archivo. Haga clic con el botón derecho en un archivo ejecutable en **Explorador de soluciones** y elija **configuración de depuración e inicio**. Elija la opción que más se aproxime al proyecto y, a continuación, use las siguientes propiedades para modificar la configuración según sea necesario:
+Use el archivo *Launch. vs. JSON* para configurar los parámetros de depuración. Para crear el archivo. Haga clic con el botón derecho en un archivo ejecutable en **Explorador de soluciones** y elija **configuración de depuración e inicio**. Elija la opción que más se aproxime al proyecto y, a continuación, use las siguientes propiedades para modificar la configuración según sea necesario. Para obtener más información sobre la depuración de proyectos de CMake, vea [configurar las sesiones de depuración de CMake](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Propiedades predeterminadas
 

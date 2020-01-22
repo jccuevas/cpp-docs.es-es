@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08d01132927ca0a5f452703b14d0eb5fae2f58ba
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372158"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518457"
 ---
 # <a name="crendertarget-class"></a>Clase CRenderTarget
 
@@ -138,73 +138,73 @@ class CRenderTarget : public CObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Construye un objeto CRenderTarget.|
-|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Destructor. Se llama cuando se destruye un objeto de destino de representación.|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Destructor. Se le llama cuando se destruye un objeto de destino de representación.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CRenderTarget::Attach](#attach)|Adjunta existente representar la interfaz de destino para el objeto|
+|[CRenderTarget::Attach](#attach)|Adjunta la interfaz de destino de representación existente al objeto|
 |[CRenderTarget::BeginDraw](#begindraw)|Inicia el dibujo en este destino de representación.|
-|[CRenderTarget::Clear](#clear)|Borra el área de dibujo al color especificado.|
-|[CRenderTarget::COLORREF_TO_D2DCOLOR](#colorref_to_d2dcolor)|Convierte los valores de color y alfa GDI en el objeto D2D1_COLOR_F.|
-|[CRenderTarget::CreateCompatibleRenderTarget](#createcompatiblerendertarget)|Crea un nuevo destino de representación de mapa de bits para su uso durante el dibujo fuera de la pantalla intermedio que es compatible con el destino de representación actual.|
-|[CRenderTarget::Destroy](#destroy)|Elimina uno o más recursos|
-|[CRenderTarget::Detach](#detach)|Separa la interfaz de destino de representación del objeto|
+|[CRenderTarget::Clear](#clear)|Borra el área de dibujo con el color especificado.|
+|[CRenderTarget::COLORREF_TO_D2DCOLOR](#colorref_to_d2dcolor)|Convierte los valores alfa y de color GDI en el objeto D2D1_COLOR_F.|
+|[CRenderTarget::CreateCompatibleRenderTarget](#createcompatiblerendertarget)|Crea un nuevo destino de representación de mapa de bits para su uso durante el dibujo intermedio oculto que es compatible con el destino de presentación actual.|
+|[CRenderTarget::Destroy](#destroy)|Elimina uno o más recursos.|
+|[CRenderTarget::Detach](#detach)|Desasocia la interfaz de destino de representación del objeto|
 |[CRenderTarget::DrawBitmap](#drawbitmap)|Dibuja el texto con formato descrito por el objeto IDWriteTextLayout especificado.|
-|[CRenderTarget::DrawEllipse](#drawellipse)|Dibuja el contorno de la elipse especificada utilizando el estilo de trazo especificados.|
-|[CRenderTarget::DrawGeometry](#drawgeometry)|Dibuja el contorno de la geometría especificada utilizando el estilo de trazo especificados.|
+|[CRenderTarget::DrawEllipse](#drawellipse)|Dibuja el contorno de la elipse especificada utilizando el estilo de trazo especificado.|
+|[CRenderTarget::DrawGeometry](#drawgeometry)|Dibuja el contorno de la geometría especificada utilizando el estilo de trazo especificado.|
 |[CRenderTarget::DrawGlyphRun](#drawglyphrun)|Dibuja los glifos especificados.|
-|[CRenderTarget::DrawLine](#drawline)|Dibuja una línea entre los puntos especificados utilizando el estilo de trazo especificados.|
-|[CRenderTarget::DrawRectangle](#drawrectangle)|Dibuja el contorno de un rectángulo que tiene las dimensiones especificadas y el estilo de trazo.|
-|[CRenderTarget::DrawRoundedRectangle](#drawroundedrectangle)|Dibuja el contorno del rectángulo redondeado especificado utilizando el estilo de trazo especificados.|
-|[CRenderTarget::DrawText](#drawtext)|Dibuja el texto especificado con la información de formato proporcionada por un objeto IDWriteTextFormat.|
+|[CRenderTarget::DrawLine](#drawline)|Dibuja una línea entre los puntos especificados utilizando el estilo de trazo especificado.|
+|[CRenderTarget::DrawRectangle](#drawrectangle)|Dibuja el contorno de un rectángulo que tiene las dimensiones y el estilo de trazo especificados.|
+|[CRenderTarget::DrawRoundedRectangle](#drawroundedrectangle)|Dibuja el contorno del rectángulo redondeado especificado utilizando el estilo de trazo especificado.|
+|[CRenderTarget::DrawText](#drawtext)|Dibuja el texto especificado utilizando la información de formato proporcionada por un objeto IDWriteTextFormat.|
 |[CRenderTarget::DrawTextLayout](#drawtextlayout)|Dibuja el texto con formato descrito por el objeto IDWriteTextLayout especificado.|
 |[CRenderTarget::EndDraw](#enddraw)|Finaliza las operaciones de dibujo en el destino de representación e indica el estado de error actual y las etiquetas asociadas.|
 |[CRenderTarget::FillEllipse](#fillellipse)|Pinta el interior de la elipse especificada.|
 |[CRenderTarget::FillGeometry](#fillgeometry)|Pinta el interior de la geometría especificada.|
-|[CRenderTarget::FillMesh](#fillmesh)|Pinta el interior de la malla especificado.|
-|[CRenderTarget::FillOpacityMask](#fillopacitymask)|Se aplica la máscara de opacidad descrita por el mapa de bits especificado en un pincel y utiliza ese pincel para pintar una región de destino de representación.|
+|[CRenderTarget::FillMesh](#fillmesh)|Pinta el interior de la malla especificada.|
+|[CRenderTarget::FillOpacityMask](#fillopacitymask)|Aplica la máscara de opacidad descrita por el mapa de bits especificado a un pincel y usa ese pincel para pintar una región del destino de representación.|
 |[CRenderTarget::FillRectangle](#fillrectangle)|Pinta el interior del rectángulo especificado.|
 |[CRenderTarget::FillRoundedRectangle](#fillroundedrectangle)|Pinta el interior del rectángulo redondeado especificado.|
-|[CRenderTarget::Flush](#flush)|Ejecuta todos los comandos de dibujos pendientes.|
-|[CRenderTarget::GetAntialiasMode](#getantialiasmode)|Recupera el modo actual de suavizado de contorno para las operaciones de dibujo sin texto.|
-|[CRenderTarget::GetDpi](#getdpi)|Devuelve la representación de puntos de destino por pulgada (PPP)|
-|[CRenderTarget::GetMaximumBitmapSize](#getmaximumbitmapsize)|Obtiene el tamaño máximo, en unidades de dependiente del dispositivo (píxeles), de cualquier dimensión de un mapa de bits compatible con el destino de representación|
-|[CRenderTarget::GetPixelFormat](#getpixelformat)|Recupera el modo alfa y formato de píxel del destino de representación|
-|[CRenderTarget::GetPixelSize](#getpixelsize)|Devuelve el tamaño del destino de representación en píxeles del dispositivo|
-|[CRenderTarget::GetRenderTarget](#getrendertarget)|Interfaz ID2D1RenderTarget de devoluciones|
-|[CRenderTarget::GetSize](#getsize)|Devuelve el tamaño del destino de representación en píxeles independientes del dispositivo|
-|[CRenderTarget::GetTags](#gettags)|Obtiene la etiqueta para operaciones de dibujo subsiguientes.|
-|[CRenderTarget::GetTextAntialiasMode](#gettextantialiasmode)|Obtiene el modo actual de suavizado de contorno para texto y de las operaciones de dibujo de glifos.|
-|[CRenderTarget::GetTextRenderingParams](#gettextrenderingparams)|Recupera las opciones de representación de texto actual del destino de representación.|
-|[CRenderTarget::GetTransform](#gettransform)|Se aplica la transformación indicada en el destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujos subsiguientes se producen en el espacio transformado.|
-|[CRenderTarget::IsSupported](#issupported)|Indica si el destino de representación admite las propiedades especificadas|
-|[CRenderTarget::IsValid](#isvalid)|Comprobaciones de validez de los recursos|
-|[CRenderTarget::PopAxisAlignedClip](#popaxisalignedclip)|Quita el último clip alineado por eje en el destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujos subsiguientes.|
-|[CRenderTarget::PopLayer](#poplayer)|Detiene la redirección de las operaciones de dibujo a la capa especificada por el último PushLayer llamar.|
-|[CRenderTarget::PushAxisAlignedClip](#pushaxisalignedclip)|Quita el último clip alineado por eje en el destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujos subsiguientes.|
-|[CRenderTarget::PushLayer](#pushlayer)|Agrega la capa especificada en el destino de representación para que reciba todas las operaciones de dibujos subsiguientes hasta que se llama PopLayer.|
-|[CRenderTarget::RestoreDrawingState](#restoredrawingstate)|Establece el estado de dibujo del destino de representación a la de la ID2D1DrawingStateBlock especificado.|
-|[CRenderTarget::SaveDrawingState](#savedrawingstate)|Guarda el estado actual de dibujo en el ID2D1DrawingStateBlock especificado.|
-|[CRenderTarget::SetAntialiasMode](#setantialiasmode)|Establece el modo de suavizado de contorno del destino de representación. El modo de suavizado de contorno se aplica a todas las operaciones de dibujos subsiguientes, sin incluir texto y las operaciones de dibujo de glifos.|
+|[CRenderTarget::Flush](#flush)|Ejecuta todos los comandos de dibujo pendientes.|
+|[CRenderTarget::GetAntialiasMode](#getantialiasmode)|Recupera el modo de suavizado de contorno actual para las operaciones de dibujo que no son de texto.|
+|[CRenderTarget::GetDpi](#getdpi)|Devuelve los puntos por pulgada del destino de representación (PPP)|
+|[CRenderTarget::GetMaximumBitmapSize](#getmaximumbitmapsize)|Obtiene el tamaño máximo, en unidades dependientes del dispositivo (píxeles), de cualquier dimensión de mapa de bits compatible con el destino de representación.|
+|[CRenderTarget::GetPixelFormat](#getpixelformat)|Recupera el formato de píxel y el modo alfa del destino de representación.|
+|[CRenderTarget::GetPixelSize](#getpixelsize)|Devuelve el tamaño del destino de representación en píxeles del dispositivo.|
+|[CRenderTarget::GetRenderTarget](#getrendertarget)|Devuelve la interfaz ID2D1RenderTarget|
+|[CRenderTarget::GetSize](#getsize)|Devuelve el tamaño del destino de representación en píxeles independientes del dispositivo.|
+|[CRenderTarget::GetTags](#gettags)|Obtiene la etiqueta para las operaciones de dibujo posteriores.|
+|[CRenderTarget::GetTextAntialiasMode](#gettextantialiasmode)|Obtiene el modo de suavizado de contorno actual para las operaciones de dibujo de texto y glifo.|
+|[CRenderTarget::GetTextRenderingParams](#gettextrenderingparams)|Recupera las opciones actuales de representación de texto del destino de representación.|
+|[CRenderTarget::GetTransform](#gettransform)|Aplica la transformación especificada al destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujo posteriores se producen en el espacio transformado.|
+|[CRenderTarget::IsSupported](#issupported)|Indica si el destino de representación admite las propiedades especificadas.|
+|[CRenderTarget::IsValid](#isvalid)|Comprueba la validez de los recursos|
+|[CRenderTarget::PopAxisAlignedClip](#popaxisalignedclip)|Quita el último clip alineado con el eje del destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujo posteriores.|
+|[CRenderTarget::PopLayer](#poplayer)|Detiene la redirección de las operaciones de dibujo a la capa especificada por la última llamada a PushLayer.|
+|[CRenderTarget::PushAxisAlignedClip](#pushaxisalignedclip)|Quita el último clip alineado con el eje del destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujo posteriores.|
+|[CRenderTarget::PushLayer](#pushlayer)|Agrega la capa especificada al destino de representación para que reciba todas las operaciones de dibujo posteriores hasta que se llame a PopLayer.|
+|[CRenderTarget::RestoreDrawingState](#restoredrawingstate)|Establece el estado de dibujo del destino de representación en el del ID2D1DrawingStateBlock especificado.|
+|[CRenderTarget::SaveDrawingState](#savedrawingstate)|Guarda el estado de dibujo actual en el ID2D1DrawingStateBlock especificado.|
+|[CRenderTarget::SetAntialiasMode](#setantialiasmode)|Establece el modo de suavizado de contorno del destino de representación. El modo de suavizado de contorno se aplica a todas las operaciones de dibujo posteriores, excluidas las operaciones de dibujo de texto y glifo.|
 |[CRenderTarget::SetDpi](#setdpi)|Establece los puntos por pulgada (PPP) del destino de representación.|
-|[CRenderTarget::SetTags](#settags)|Especifica una etiqueta para operaciones de dibujo subsiguientes.|
-|[CRenderTarget::SetTextAntialiasMode](#settextantialiasmode)|Especifica el modo de suavizado de contorno que se utilizará para el texto subsiguiente y operaciones de dibujo de glifo.|
-|[CRenderTarget::SetTextRenderingParams](#settextrenderingparams)|Especifica las opciones de representación de texto que se aplicará a todo el texto subsiguiente y las operaciones de dibujo del glifo.|
-|[CRenderTarget::SetTransform](#settransform)|Sobrecargado. Se aplica la transformación indicada en el destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujos subsiguientes se producen en el espacio transformado.|
+|[CRenderTarget::SetTags](#settags)|Especifica una etiqueta para las operaciones de dibujo posteriores.|
+|[CRenderTarget::SetTextAntialiasMode](#settextantialiasmode)|Especifica el modo de suavizado de contorno que se va a utilizar para las operaciones de dibujo de texto y glifos posteriores.|
+|[CRenderTarget::SetTextRenderingParams](#settextrenderingparams)|Especifica las opciones de representación de texto que se aplicarán a todas las operaciones de dibujo de texto y glifos posteriores.|
+|[CRenderTarget::SetTransform](#settransform)|Sobrecargado. Aplica la transformación especificada al destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujo posteriores se producen en el espacio transformado.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CRenderTarget::VerifyResource](#verifyresource)|Comprueba la validez del objeto de CD2DResource; crea el objeto si aún no existe.|
+|[CRenderTarget::VerifyResource](#verifyresource)|Comprueba la validez del objeto CD2DResource; crea el objeto si aún no existe.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Interfaz ID2D1RenderTarget de devoluciones|
+|[CRenderTarget:: Operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Devuelve la interfaz ID2D1RenderTarget|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -212,7 +212,7 @@ class CRenderTarget : public CObject;
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Una lista de punteros a objetos CD2DResource.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Un puntero a un objeto ID2D1RenderTarget.|
-|[CRenderTarget::m_pTextFormatDefault](#m_ptextformatdefault)|Un puntero al objeto CD2DTextFormat que contiene un formato de texto predeterminado.|
+|[CRenderTarget::m_pTextFormatDefault](#m_ptextformatdefault)|Un puntero a un objeto CD2DTextFormat que contiene un formato de texto predeterminado.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -220,13 +220,13 @@ class CRenderTarget : public CObject;
 
 [CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
-**Encabezado:** afxrendertarget.h
+**Encabezado:** afxrendertarget. h
 
 ##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
-Destructor. Se llama cuando se destruye un objeto de destino de representación.
+Destructor. Se le llama cuando se destruye un objeto de destino de representación.
 
 ```
 virtual ~CRenderTarget();
@@ -234,13 +234,13 @@ virtual ~CRenderTarget();
 
 ##  <a name="attach"></a>  CRenderTarget::Attach
 
-Adjunta existente representar la interfaz de destino para el objeto
+Adjunta la interfaz de destino de representación existente al objeto
 
 ```
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pRenderTarget*<br/>
 Interfaz de destino de representación existente. No puede ser NULL
@@ -255,20 +255,20 @@ void BeginDraw();
 
 ##  <a name="clear"></a>  CRenderTarget::Clear
 
-Borra el área de dibujo al color especificado.
+Borra el área de dibujo con el color especificado.
 
 ```
 void Clear(D2D1_COLOR_F color);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *color*<br/>
-El color a la que se borra el área de dibujo.
+Color en el que se borra el área de dibujo.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
 
-Convierte los valores de color y alfa GDI en el objeto D2D1_COLOR_F.
+Convierte los valores alfa y de color GDI en el objeto D2D1_COLOR_F.
 
 ```
 static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
@@ -276,7 +276,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
     int nAlpha = 255);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *color*<br/>
 Valor RGB.
@@ -285,11 +285,11 @@ Valor RGB.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor de D2D1_COLOR_F.
+D2D1_COLOR_F valor.
 
 ##  <a name="createcompatiblerendertarget"></a>  CRenderTarget::CreateCompatibleRenderTarget
 
-Crea un nuevo destino de representación de mapa de bits para su uso durante el dibujo fuera de la pantalla intermedio que es compatible con el destino de representación actual.
+Crea un nuevo destino de representación de mapa de bits para su uso durante el dibujo intermedio oculto que es compatible con el destino de presentación actual.
 
 ```
 BOOL CreateCompatibleRenderTarget(
@@ -300,26 +300,26 @@ BOOL CreateCompatibleRenderTarget(
     D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS options = D2D1_COMPATIBLE_RENDER_TARGET_OPTIONS_NONE);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *bitmapTarget*<br/>
-Cuando este método finaliza, contiene la dirección de un puntero a un nuevo destino de representación del mapa de bits. Este parámetro se pasa sin inicializar.
+Cuando este método finaliza, contiene la dirección de un puntero a un nuevo destino de representación de mapa de bits. Este parámetro se pasa sin inicializar.
 
 *sizeDesired*<br/>
-Destino de representación el tamaño deseado del nuevo destino de representación en los píxeles independientes del dispositivo si debe ser diferente del original, o NULL. Para obtener más información, vea la sección Comentarios.
+Tamaño deseado del nuevo destino de representación en píxeles independientes del dispositivo si debe ser diferente del destino de representación original, o NULL. Para obtener más información, vea la sección Comentarios.
 
 *sizePixelDesired*<br/>
-Destino de representación el tamaño deseado del nuevo destino de representación en píxeles si debe ser diferente del original, o NULL. Para obtener más información, vea la sección Comentarios.
+Tamaño deseado del nuevo destino de representación en píxeles si debe ser diferente del destino de representación original, o NULL. Para obtener más información, vea la sección Comentarios.
 
 *desiredFormat*<br/>
-El formato de píxel que desee y el modo alfa del nuevo destino de representación, o NULL. Si el formato de píxel se establece en DXGI_FORMAT_UNKNOWN o si este parámetro es null, el nuevo destino de representación utiliza el mismo formato de píxel como destino de la presentación original. Si el modo alfa es D2D1_ALPHA_MODE_UNKNOWN o este parámetro es NULL, el modo alfa del nuevo destino de representación predeterminado es D2D1_ALPHA_MODE_PREMULTIPLIED. Para obtener información acerca de los formatos de píxel admitidos, consulte formatos de píxel admitidos y los modos de alfa.
+El formato de píxel deseado y el modo alfa del nuevo destino de representación, o NULL. Si el formato de píxel se establece en DXGI_FORMAT_UNKNOWN o si este parámetro es null, el nuevo destino de representación usa el mismo formato de píxel que el destino de representación original. Si el modo alfa es D2D1_ALPHA_MODE_UNKNOWN o este parámetro es NULL, el modo alfa del nuevo destino de representación tiene como valor predeterminado D2D1_ALPHA_MODE_PREMULTIPLIED. Para obtener información sobre los formatos de píxel admitidos, vea formatos de píxeles compatibles y modos alfa.
 
 *options*<br/>
-Un valor que especifica si el nuevo destino de representación debe ser compatible con GDI.
+Valor que especifica si el nuevo destino de representación debe ser compatible con GDI.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si el método se realiza correctamente, devuelve TRUE. En caso contrario, devuelve FALSE.
+Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.
 
 ##  <a name="crendertarget"></a>  CRenderTarget::CRenderTarget
 
@@ -331,24 +331,24 @@ CRenderTarget();
 
 ##  <a name="destroy"></a>  CRenderTarget::Destroy
 
-Elimina uno o más recursos
+Elimina uno o más recursos.
 
 ```
 BOOL Destroy(BOOL bDeleteResources = TRUE);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *bDeleteResources*<br/>
-Si bDeleteResources es TRUE, se eliminará automáticamente todos los recursos ubicados en m_lstResources.
+Si bDeleteResources es TRUE, todos los recursos ubicados en m_lstResources se destruirán automáticamente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si el método se realiza correctamente, devuelve TRUE. De lo contrario, devuelve FALSE
+Si el método se ejecuta correctamente, devuelve TRUE. De lo contrario, devuelve FALSE.
 
 ##  <a name="detach"></a>  CRenderTarget::Detach
 
-Separa la interfaz de destino de representación del objeto
+Desasocia la interfaz de destino de representación del objeto
 
 ```
 ID2D1RenderTarget* Detach ();
@@ -356,7 +356,7 @@ ID2D1RenderTarget* Detach ();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a desasociado representar la interfaz de destino.
+Puntero a la interfaz de destino de representación separada.
 
 ##  <a name="drawbitmap"></a>  CRenderTarget::DrawBitmap
 
@@ -371,26 +371,26 @@ void DrawBitmap(
     const CD2DRectF* pRectSrc = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pBitmap*<br/>
-El mapa de bits para representar.
+Mapa de bits que se va a representar.
 
 *rectDest*<br/>
-El tamaño y posición, en píxeles independientes del dispositivo en el espacio de coordenadas del destino de representación, del área a la que se dibuja el mapa de bits. Si el rectángulo no está bien ordenado, se dibuja nada, pero el destino de representación no entrar en un estado de error.
+Tamaño y posición, en píxeles independientes del dispositivo en el espacio de coordenadas del destino de representación, del área en la que se dibuja el mapa de bits. Si el rectángulo no está bien ordenado, no se dibuja nada, pero el destino de representación no entra en un estado de error.
 
 *fOpacity*<br/>
-Un valor entre 0, 0F y 1, 0F, ambos inclusive, que especifica un valor de opacidad para aplicar al mapa de bits. Este valor se multiplica por los valores alfa de contenido del mapa de bits.
+Valor entre 0,0 f y 1,0 f, inclusive, que especifica el valor de opacidad que se va a aplicar al mapa de bits; Este valor se multiplica por los valores alfa del contenido del mapa de bits.
 
 *interpolationMode*<br/>
-El modo de interpolación que se utilizará si el mapa de bits se escala o girada por la operación de dibujo.
+El modo de interpolación que se va a usar si la operación de dibujo escala o gira el mapa de bits.
 
 *pRectSrc*<br/>
-El tamaño y posición, en píxeles independientes del dispositivo en el espacio de coordenadas del mapa de bits, del área de mapa de bits para dibujar.
+Tamaño y posición, en píxeles independientes del dispositivo en el espacio de coordenadas del mapa de bits, del área del mapa de bits que se va a dibujar.
 
 ##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse
 
-Dibuja el contorno de la elipse especificada utilizando el estilo de trazo especificados.
+Dibuja el contorno de la elipse especificada utilizando el estilo de trazo especificado.
 
 ```
 void DrawEllipse(
@@ -400,23 +400,23 @@ void DrawEllipse(
     ID2D1StrokeStyle* strokeStyle = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *ellipse*<br/>
-La posición y el radio de la elipse que se va a dibujar, en píxeles independientes del dispositivo.
+Posición y radio de la elipse que se va a dibujar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
-El pincel utilizado para pintar el contorno de la elipse.
+Pincel que se usa para pintar el contorno de la elipse.
 
 *fStrokeWidth*<br/>
-El grosor del trazo de la elipse. El trazo se centra en el esquema de la elipse.
+Grosor del trazo de la elipse. El trazo se centra en el contorno de la elipse.
 
 *strokeStyle*<br/>
-El estilo de trazo para aplicar al esquema de la elipse, o NULL para dibujar un trazo sólido.
+Estilo del trazo que se va a aplicar al contorno de la elipse o NULL para pintar un trazo sólido.
 
 ##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry
 
-Dibuja el contorno de la geometría especificada utilizando el estilo de trazo especificados.
+Dibuja el contorno de la geometría especificada utilizando el estilo de trazo especificado.
 
 ```
 void DrawGeometry(
@@ -426,19 +426,19 @@ void DrawGeometry(
     ID2D1StrokeStyle* strokeStyle = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pGeometry*<br/>
-La geometría que se va a dibujar.
+Geometría que se va a dibujar.
 
 *pBrush*<br/>
-El pincel utilizado para pintar el trazo de la geometría.
+Pincel que se usa para pintar el trazo de la geometría.
 
 *fStrokeWidth*<br/>
-El grosor del trazo de la geometría. El trazo se centra en el esquema de la geometría.
+Grosor del trazo de la geometría. El trazo se centra en el contorno de la geometría.
 
 *strokeStyle*<br/>
-Estilo del trazo que se aplicará en el esquema de la geometría, o NULL para dibujar un trazo sólido.
+Estilo del trazo que se va a aplicar al contorno de la geometría, o NULL para pintar un trazo sólido.
 
 ##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun
 
@@ -452,23 +452,23 @@ void DrawGlyphRun(
     DWRITE_MEASURING_MODE measuringMode = DWRITE_MEASURING_MODE_NATURAL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *ptBaseLineOrigin*<br/>
-El origen, en píxeles independientes del dispositivo, de línea de base de los glifos.
+El origen, en píxeles independientes del dispositivo, de la línea base de los glifos.
 
 *glyphRun*<br/>
-Para representar los glifos.
+Glifos que se van a representar.
 
 *pForegroundBrush*<br/>
-El pincel utilizado para pintar los glifos especificados.
+Pincel que se usa para pintar los glifos especificados.
 
 *measuringMode*<br/>
-Un valor que indica cómo se utilizan métricas de glifo para medir el texto cuando se formatea. El valor predeterminado es DWRITE_MEASURING_MODE_NATURAL.
+Valor que indica cómo se usan las métricas del glifo para medir el texto cuando se le da formato. El valor predeterminado es DWRITE_MEASURING_MODE_NATURAL.
 
 ##  <a name="drawline"></a>  CRenderTarget::DrawLine
 
-Dibuja una línea entre los puntos especificados utilizando el estilo de trazo especificados.
+Dibuja una línea entre los puntos especificados utilizando el estilo de trazo especificado.
 
 ```
 void DrawLine(
@@ -479,26 +479,26 @@ void DrawLine(
     ID2D1StrokeStyle* strokeStyle = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *ptFrom*<br/>
 El punto inicial de la línea, en píxeles independientes del dispositivo.
 
 *ptTo*<br/>
-El punto final de la línea, en píxeles independientes del dispositivo.
+Punto final de la línea, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
-El pincel utilizado para pintar el trazo de la línea.
+Pincel que se usa para pintar el trazo de la línea.
 
 *fStrokeWidth*<br/>
-Un valor mayor o igual que 0,0 f que especifica el ancho del trazo. Si no se especifica este parámetro, el valor predeterminado es 1, 0f. El trazo se centra en la línea.
+Valor mayor o igual que 0,0 f que especifica el ancho del trazo. Si no se especifica este parámetro, el valor predeterminado es 1.0 f. El trazo está centrado en la línea.
 
 *strokeStyle*<br/>
-Estilo del trazo en paint, o NULL para pintar una línea sólida.
+Estilo del trazo que se va a pintar o NULL para pintar una línea sólida.
 
 ##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle
 
-Dibuja el contorno de un rectángulo que tiene las dimensiones especificadas y el estilo de trazo.
+Dibuja el contorno de un rectángulo que tiene las dimensiones y el estilo de trazo especificados.
 
 ```
 void DrawRectangle(
@@ -508,23 +508,23 @@ void DrawRectangle(
     ID2D1StrokeStyle* strokeStyle = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *rectangle*<br/>
-Las dimensiones del rectángulo se va a dibujar, en píxeles independientes del dispositivo
+Dimensiones del rectángulo que se va a dibujar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
-El pincel utilizado para pintar el trazo de un rectángulo
+Pincel que se usa para pintar el trazo del rectángulo.
 
 *fStrokeWidth*<br/>
-Un valor mayor o igual que 0,0 f que especifica el ancho del trazo del rectángulo. El trazo se centra en el esquema del rectángulo.
+Valor mayor o igual que 0,0 f que especifica el ancho del trazo del rectángulo. El trazo se centra en el contorno del rectángulo.
 
 *strokeStyle*<br/>
-Estilo del trazo en paint, o NULL para dibujar un trazo sólido.
+Estilo del trazo que se va a pintar o NULL para pintar un trazo sólido.
 
 ##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle
 
-Dibuja el contorno del rectángulo redondeado especificado utilizando el estilo de trazo especificados.
+Dibuja el contorno del rectángulo redondeado especificado utilizando el estilo de trazo especificado.
 
 ```
 void DrawRoundedRectangle(
@@ -534,23 +534,23 @@ void DrawRoundedRectangle(
     ID2D1StrokeStyle* strokeStyle = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *rectRounded*<br/>
-Las dimensiones del rectángulo redondeado a dibujar, en píxeles independientes del dispositivo.
+Dimensiones del rectángulo redondeado que se va a dibujar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
-El pincel utilizado para dibujar el contorno del rectángulo redondeado.
+Pincel que se usa para pintar el contorno del rectángulo redondeado.
 
 *fStrokeWidth*<br/>
-Ancho del trazo del rectángulo redondeado. El trazo se centra en el esquema del rectángulo redondeado. El valor predeterminado es 1, 0f.
+Ancho del trazo del rectángulo redondeado. El trazo se centra en el contorno del rectángulo redondeado. El valor predeterminado es 1.0 f.
 
 *strokeStyle*<br/>
-El estilo de trazo del rectángulo redondeado, o NULL para dibujar un trazo sólido. El valor predeterminado es NULL.
+Estilo del trazo del rectángulo redondeado, o NULL para pintar un trazo sólido. El valor predeterminado es NULL.
 
 ##  <a name="drawtext"></a>  CRenderTarget::DrawText
 
-Dibuja el texto especificado con la información de formato proporcionada por un objeto IDWriteTextFormat.
+Dibuja el texto especificado utilizando la información de formato proporcionada por un objeto IDWriteTextFormat.
 
 ```
 void DrawText(
@@ -562,25 +562,25 @@ void DrawText(
     DWRITE_MEASURING_MODE measuringMode = DWRITE_MEASURING_MODE_NATURAL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *strText*<br/>
-Un puntero a una matriz de caracteres Unicode se va a dibujar.
+Puntero a una matriz de caracteres Unicode que se va a dibujar.
 
 *rectangle*<br/>
-El tamaño y posición del área en la que se dibuja el texto.
+Tamaño y posición del área en la que se dibuja el texto.
 
 *pForegroundBrush*<br/>
-El pincel utilizado para pintar el texto.
+Pincel utilizado para pintar el texto.
 
 *textFormat*<br/>
-Un objeto que describe el formato de los detalles del texto se va a dibujar, como la fuente, el tamaño de fuente y la dirección del flujo.
+Objeto que describe los detalles de formato del texto que se va a dibujar, como la fuente, el tamaño de fuente y la dirección del flujo.
 
 *options*<br/>
-Un valor que indica si se debe ajustar el texto a los límites de píxeles y si debe recortarse el texto al rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, que indica que el texto se debe ajustar a los límites de píxeles y no debe recortarse al rectángulo de diseño.
+Valor que indica si el texto debe ajustarse a los límites de píxeles y si el texto debe recortarse en el rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, que indica que el texto debe ajustarse a los límites de píxeles y no debe recortarse al rectángulo de diseño.
 
 *measuringMode*<br/>
-Un valor que indica cómo se utilizan métricas de glifo para medir el texto cuando se formatea. El valor predeterminado es DWRITE_MEASURING_MODE_NATURAL.
+Valor que indica cómo se usan las métricas del glifo para medir el texto cuando se le da formato. El valor predeterminado es DWRITE_MEASURING_MODE_NATURAL.
 
 ##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout
 
@@ -594,19 +594,19 @@ void DrawTextLayout(
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *ptOrigin*<br/>
-El punto, que se describe en píxeles independientes del dispositivo, donde se dibuja la esquina superior izquierda del texto descrita por textLayout.
+El punto, descrito en píxeles independientes del dispositivo, en el que se dibuja la esquina superior izquierda del texto descrito por textLayout.
 
 *textLayout*<br/>
-El texto con formato se va a dibujar. Se omiten los efectos de dibujos que no heredan de ID2D1Resource. Si hay efectos de dibujo que heredan de ID2D1Resource que no son pinceles, este método produce un error y el destino de representación se coloca en un estado de error.
+Texto con formato que se va a dibujar. Se omiten los efectos de dibujo que no se heredan de ID2D1Resource. Si hay efectos de dibujo que heredan de ID2D1Resource que no son pinceles, se produce un error en este método y el destino de representación se coloca en un estado de error.
 
 *pBrushForeground*<br/>
-El pincel utilizado para pintar texto textLayout que no tiene todavía un pincel asociado como un efecto de dibujo (especificado por el método IDWriteTextLayout::SetDrawingEffect).
+Pincel que se usa para pintar cualquier texto en textLayout que todavía no tiene un pincel asociado como efecto de dibujo (especificado por el método IDWriteTextLayout:: SetDrawingEffect).
 
 *options*<br/>
-Un valor que indica si se debe ajustar el texto a los límites de píxeles y si debe recortarse el texto al rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, que indica que el texto se debe ajustar a los límites de píxeles y no debe recortarse al rectángulo de diseño.
+Valor que indica si el texto debe ajustarse a los límites de píxeles y si el texto debe recortarse en el rectángulo de diseño. El valor predeterminado es D2D1_DRAW_TEXT_OPTIONS_NONE, que indica que el texto debe ajustarse a los límites de píxeles y no debe recortarse al rectángulo de diseño.
 
 ##  <a name="enddraw"></a>  CRenderTarget::EndDraw
 
@@ -618,7 +618,7 @@ HRESULT EndDraw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si el método se realiza correctamente, devuelve S_OK. En caso contrario, devuelve un código de error HRESULT.
+Si el método se realiza correctamente, devuelve S_OK. De lo contrario, devuelve un código de error HRESULT.
 
 ##  <a name="fillellipse"></a>  CRenderTarget::FillEllipse
 
@@ -630,13 +630,13 @@ void FillEllipse(
     CD2DBrush* pBrush);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *ellipse*<br/>
-La posición y el radio, en píxeles independientes del dispositivo, de la elipse para pintar.
+Posición y radio, en píxeles independientes del dispositivo, de la elipse que se va a pintar.
 
 *pBrush*<br/>
-El pincel utilizado para pintar el interior de la elipse.
+Pincel que se usa para pintar el interior de la elipse.
 
 ##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry
 
@@ -649,20 +649,20 @@ void FillGeometry(
     CD2DBrush* pOpacityBrush = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pGeometry*<br/>
 Geometría que se va a pintar.
 
 *pBrush*<br/>
-El pincel utilizado para dibujar la geometría 's interior.
+Pincel que se usa para pintar el interior de la geometría.
 
 *pOpacityBrush*<br/>
-La máscara de opacidad para aplicar a la geometría; NULL para ninguna máscara de opacidad. Si se especifica una máscara de opacidad (el parámetro opacityBrush), el pincel debe ser un ID2D1BitmapBrush que tiene los modos de funcionamiento x y y ampliar establecidos en D2D1_EXTEND_MODE_CLAMP. Para obtener más información, vea la sección Comentarios.
+Máscara de opacidad que se va a aplicar a la geometría; NULL para la máscara de opacidad. Si se especifica una máscara de opacidad (el parámetro opacityBrush), Brush debe ser un ID2D1BitmapBrush que tenga los modos x-e y Extend establecidos en D2D1_EXTEND_MODE_CLAMP. Para obtener más información, vea la sección Comentarios.
 
-##  <a name="fillmesh"></a>  CRenderTarget::FillMesh
+##  <a name="fillmesh"></a>CRenderTarget::FillMesh
 
-Pinta el interior de la malla especificado.
+Pinta el interior de la malla especificada.
 
 ```
 void FillMesh(
@@ -670,17 +670,17 @@ void FillMesh(
     CD2DBrush* pBrush);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pMesh*<br/>
-Para dibujar la malla.
+Malla que se va a pintar.
 
 *pBrush*<br/>
-El pincel utilizado para dibujar la malla.
+Pincel que se usa para pintar la malla.
 
 ##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask
 
-Se aplica la máscara de opacidad descrita por el mapa de bits especificado en un pincel y utiliza ese pincel para pintar una región de destino de representación.
+Aplica la máscara de opacidad descrita por el mapa de bits especificado a un pincel y usa ese pincel para pintar una región del destino de representación.
 
 ```
 void FillOpacityMask(
@@ -691,22 +691,22 @@ void FillOpacityMask(
     const CD2DRectF& rectSrc);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pOpacityMask*<br/>
-La posición y el radio, en píxeles independientes del dispositivo, de la elipse para pintar.
+Posición y radio, en píxeles independientes del dispositivo, de la elipse que se va a pintar.
 
 *pBrush*<br/>
-El pincel utilizado para pintar la región del destino de representación especificada por destinationRectangle.
+Pincel que se usa para pintar la región del destino de presentación especificado por destinationRectangle.
 
 *content*<br/>
-El tipo de contenido que contiene la máscara de opacidad. El valor se utiliza para determinar el espacio de color en el que se mezcla la máscara de opacidad.
+El tipo de contenido que contiene la máscara de opacidad. El valor se utiliza para determinar el espacio de colores en el que se combina la máscara de opacidad.
 
 *rectDest*<br/>
-La región del destino de representación para pintar, en píxeles independientes del dispositivo.
+Región del destino de representación que se va a pintar, en píxeles independientes del dispositivo.
 
 *rectSrc*<br/>
-La región del mapa de bits que se usará como máscara de opacidad, en píxeles independientes del dispositivo.
+Región del mapa de bits que se va a usar como máscara de opacidad, en píxeles independientes del dispositivo.
 
 ##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle
 
@@ -718,13 +718,13 @@ void FillRectangle(
     CD2DBrush* pBrush);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *rectangle*<br/>
-La dimensión del rectángulo va a pintar, en píxeles independientes del dispositivo.
+La dimensión del rectángulo que se va a pintar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
-El pincel utilizado para dibujar el rectángulo 's interior.
+Pincel que se usa para pintar el interior del rectángulo.
 
 ##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle
 
@@ -736,17 +736,17 @@ void FillRoundedRectangle(
     CD2DBrush* pBrush);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *rectRounded*<br/>
-Las dimensiones del rectángulo redondeado a pintar, en píxeles independientes del dispositivo.
+Dimensiones del rectángulo redondeado que se va a pintar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
-El pincel utilizado para pintar el interior del rectángulo redondeado.
+Pincel que se usa para pintar el interior del rectángulo redondeado.
 
 ##  <a name="flush"></a>  CRenderTarget::Flush
 
-Ejecuta todos los comandos de dibujos pendientes.
+Ejecuta todos los comandos de dibujo pendientes.
 
 ```
 void Flush(
@@ -754,17 +754,17 @@ void Flush(
     D2D1_TAG* tag2 = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *tag1*<br/>
-Contiene la etiqueta para las operaciones que causó errores o 0 si no hubo errores de dibujo. Este parámetro se pasa sin inicializar.
+Contiene la etiqueta para las operaciones de dibujo que provocaron errores o 0 si no hay ningún error. Este parámetro se pasa sin inicializar.
 
 *tag2*<br/>
-Contiene la etiqueta para las operaciones que causó errores o 0 si no hubo errores de dibujo. Este parámetro se pasa sin inicializar.
+Contiene la etiqueta para las operaciones de dibujo que provocaron errores o 0 si no hay ningún error. Este parámetro se pasa sin inicializar.
 
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode
 
-Recupera el modo actual de suavizado de contorno para las operaciones de dibujo sin texto.
+Recupera el modo de suavizado de contorno actual para las operaciones de dibujo que no son de texto.
 
 ```
 D2D1_ANTIALIAS_MODE GetAntialiasMode() const;
@@ -772,11 +772,11 @@ D2D1_ANTIALIAS_MODE GetAntialiasMode() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Modo actual de suavizado de contorno para las operaciones de dibujo no de texto.
+Modo de suavizado de contorno actual para operaciones de dibujo que no son de texto.
 
 ##  <a name="getdpi"></a>  CRenderTarget::GetDpi
 
-Devuelve la representación de puntos de destino por pulgada (PPP)
+Devuelve los puntos por pulgada del destino de representación (PPP)
 
 ```
 CD2DSizeF GetDpi() const;
@@ -784,11 +784,11 @@ CD2DSizeF GetDpi() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntos de destino de representación por pulgada (PPP).
+Puntos por pulgada (PPP) del destino de representación.
 
 ##  <a name="getmaximumbitmapsize"></a>  CRenderTarget::GetMaximumBitmapSize
 
-Obtiene el tamaño máximo, en unidades de dependiente del dispositivo (píxeles), de cualquier dimensión de un mapa de bits compatible con el destino de representación
+Obtiene el tamaño máximo, en unidades dependientes del dispositivo (píxeles), de cualquier dimensión de mapa de bits compatible con el destino de representación.
 
 ```
 UINT32 GetMaximumBitmapSize() const;
@@ -796,11 +796,11 @@ UINT32 GetMaximumBitmapSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño máximo, en píxeles, de cualquier dimensión de un mapa de bits compatible con el destino de representación
+Tamaño máximo, en píxeles, de cualquier dimensión de mapa de bits compatible con el destino de representación.
 
 ##  <a name="getpixelformat"></a>  CRenderTarget::GetPixelFormat
 
-Recupera el modo alfa y formato de píxel del destino de representación
+Recupera el formato de píxel y el modo alfa del destino de representación.
 
 ```
 D2D1_PIXEL_FORMAT GetPixelFormat() const;
@@ -808,11 +808,11 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El modo alfa y formato de píxel del destino de representación
+El formato de píxel y el modo alfa del destino de representación
 
 ##  <a name="getpixelsize"></a>  CRenderTarget::GetPixelSize
 
-Devuelve el tamaño del destino de representación en píxeles del dispositivo
+Devuelve el tamaño del destino de representación en píxeles del dispositivo.
 
 ```
 CD2DSizeU GetPixelSize() const;
@@ -820,11 +820,11 @@ CD2DSizeU GetPixelSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño del destino de representación en píxeles del dispositivo
+Tamaño del destino de representación en píxeles del dispositivo
 
 ##  <a name="getrendertarget"></a>  CRenderTarget::GetRenderTarget
 
-Interfaz ID2D1RenderTarget de devoluciones
+Devuelve la interfaz ID2D1RenderTarget
 
 ```
 ID2D1RenderTarget* GetRenderTarget();
@@ -832,11 +832,11 @@ ID2D1RenderTarget* GetRenderTarget();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a una interfaz ID2D1RenderTarget o NULL si el objeto no se ha inicializado todavía.
+Puntero a una interfaz ID2D1RenderTarget o NULL si el objeto aún no se ha inicializado.
 
 ##  <a name="getsize"></a>  CRenderTarget::GetSize
 
-Devuelve el tamaño del destino de representación en píxeles independientes del dispositivo
+Devuelve el tamaño del destino de representación en píxeles independientes del dispositivo.
 
 ```
 CD2DSizeF GetSize() const;
@@ -844,11 +844,11 @@ CD2DSizeF GetSize() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño actual del destino de representación en píxeles independientes del dispositivo
+Tamaño actual del destino de representación en píxeles independientes del dispositivo.
 
 ##  <a name="gettags"></a>  CRenderTarget::GetTags
 
-Obtiene la etiqueta para operaciones de dibujo subsiguientes.
+Obtiene la etiqueta para las operaciones de dibujo posteriores.
 
 ```
 void GetTags(
@@ -856,17 +856,17 @@ void GetTags(
     D2D1_TAG* tag2 = NULL) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *tag1*<br/>
-Contiene la primera etiqueta para operaciones de dibujo subsiguientes. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.
+Contiene la primera etiqueta para las operaciones de dibujo posteriores. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.
 
 *tag2*<br/>
-Contiene la segunda etiqueta para operaciones de dibujo subsiguientes. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.
+Contiene la segunda etiqueta para las operaciones de dibujo posteriores. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.
 
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode
 
-Obtiene el modo actual de suavizado de contorno para texto y de las operaciones de dibujo de glifos.
+Obtiene el modo de suavizado de contorno actual para las operaciones de dibujo de texto y glifo.
 
 ```
 D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
@@ -874,54 +874,54 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Modo actual de suavizado de contorno para texto y de las operaciones de dibujo de glifos.
+Modo de suavizado de contorno actual para operaciones de dibujo de texto y glifo.
 
 ##  <a name="gettextrenderingparams"></a>  CRenderTarget::GetTextRenderingParams
 
-Recupera las opciones de representación de texto actual del destino de representación.
+Recupera las opciones actuales de representación de texto del destino de representación.
 
 ```
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *textRenderingParams*<br/>
-Cuando este método finaliza, textRenderingParamscontains la dirección de un puntero para el destino de representación actual de la opciones de representación de texto.
+Cuando este método devuelve, textRenderingParamscontains la dirección de un puntero a las opciones actuales de representación de texto del destino de representación.
 
 ##  <a name="gettransform"></a>  CRenderTarget::GetTransform
 
-Se aplica la transformación indicada en el destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujos subsiguientes se producen en el espacio transformado.
+Obtiene la transformación actual del destino de representación.
 
 ```
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *transform*<br/>
-La transformación para aplicar en el destino de representación.
+Cuando devuelve, contiene la transformación actual del destino de representación. Este parámetro se pasa sin inicializar.
 
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported
 
-Indica si el destino de representación admite las propiedades especificadas
+Indica si el destino de representación admite las propiedades especificadas.
 
 ```
 BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *renderTargetProperties*<br/>
-Las propiedades de destino de representación para probar
+Propiedades de destino de presentación que se van a probar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si las propiedades de destino de representación especificados son compatibles con este destino de representación; en caso contrario, FALSE
+TRUE si este destino de representación admite las propiedades de destino de representación especificadas; de lo contrario, FALSE
 
 ##  <a name="isvalid"></a>  CRenderTarget::IsValid
 
-Comprobaciones de validez de los recursos
+Comprueba la validez de los recursos
 
 ```
 BOOL IsValid() const;
@@ -929,7 +929,7 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el recurso es válida; en caso contrario, FALSE.
+TRUE si el recurso es válido; en caso contrario, FALSE.
 
 ##  <a name="m_lstresources"></a>  CRenderTarget::m_lstResources
 
@@ -949,15 +949,15 @@ ID2D1RenderTarget* m_pRenderTarget;
 
 ##  <a name="m_ptextformatdefault"></a>  CRenderTarget::m_pTextFormatDefault
 
-Un puntero al objeto CD2DTextFormat que contiene un formato de texto predeterminado.
+Un puntero a un objeto CD2DTextFormat que contiene un formato de texto predeterminado.
 
 ```
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *
+##  <a name="operator_id2d1rendertarget_star"></a>CRenderTarget:: Operator ID2D1RenderTarget *
 
-Interfaz ID2D1RenderTarget de devoluciones
+Devuelve la interfaz ID2D1RenderTarget
 
 ```
 operator ID2D1RenderTarget*();
@@ -965,11 +965,11 @@ operator ID2D1RenderTarget*();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a una interfaz ID2D1RenderTarget o NULL si el objeto no se ha inicializado todavía.
+Puntero a una interfaz ID2D1RenderTarget o NULL si el objeto aún no se ha inicializado.
 
 ##  <a name="popaxisalignedclip"></a>  CRenderTarget::PopAxisAlignedClip
 
-Quita el último clip alineado por eje en el destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujos subsiguientes.
+Quita el último clip alineado con el eje del destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujo posteriores.
 
 ```
 void PopAxisAlignedClip();
@@ -977,7 +977,7 @@ void PopAxisAlignedClip();
 
 ##  <a name="poplayer"></a>  CRenderTarget::PopLayer
 
-Detiene la redirección de las operaciones de dibujo a la capa especificada por el último PushLayer llamar.
+Detiene la redirección de las operaciones de dibujo a la capa especificada por la última llamada a PushLayer.
 
 ```
 void PopLayer();
@@ -985,7 +985,7 @@ void PopLayer();
 
 ##  <a name="pushaxisalignedclip"></a>  CRenderTarget::PushAxisAlignedClip
 
-Quita el último clip alineado por eje en el destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujos subsiguientes.
+Quita el último clip alineado con el eje del destino de representación. Después de llamar a este método, el clip ya no se aplica a las operaciones de dibujo posteriores.
 
 ```
 void PushAxisAlignedClip(
@@ -993,17 +993,17 @@ void PushAxisAlignedClip(
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *rectClip*<br/>
-El tamaño y posición del área de recorte en píxeles independientes del dispositivo.
+El tamaño y la posición del área de recorte, en píxeles independientes del dispositivo.
 
 *mode*<br/>
-El modo de suavizado de contorno que se utiliza para dibujar los bordes de los rectángulos de clip que tienen límites de subpíxeles y para combinar el clip con el contenido de la escena. La combinación se realiza una vez cuando se llama al método PopAxisAlignedClip y no se aplica a cada primitiva dentro de la capa.
+Modo de suavizado de contorno que se usa para dibujar los bordes de los rectángulos de recorte que tienen límites de subpíxeles y para combinar el clip con el contenido de la escena. La combinación se realiza una vez cuando se llama al método PopAxisAlignedClip y no se aplica a cada primitiva dentro de la capa.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 
-Agrega la capa especificada en el destino de representación para que reciba todas las operaciones de dibujos subsiguientes hasta que se llama PopLayer.
+Agrega la capa especificada al destino de representación para que reciba todas las operaciones de dibujo posteriores hasta que se llame a PopLayer.
 
 ```
 void PushLayer(
@@ -1011,52 +1011,52 @@ void PushLayer(
     CD2DLayer& layer);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *layerParameters*<br/>
-Los límites de contenido, máscara geométrica, opacidad, máscara de opacidad y opciones de suavizado de contorno de la capa.
+Los límites de contenido, la máscara geométrica, la opacidad, la máscara de opacidad y las opciones de suavizado de contorno de la capa.
 
 *layer*<br/>
-La capa que recibe las operaciones de dibujo subsiguientes.
+Capa que recibe las operaciones de dibujo posteriores.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
 
-Establece el estado de dibujo del destino de representación a la de la ID2D1DrawingStateBlock especificado.
+Establece el estado de dibujo del destino de representación en el del ID2D1DrawingStateBlock especificado.
 
 ```
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *drawingStateBlock*<br/>
-El nuevo estado de dibujo del destino de representación.
+Nuevo estado de dibujo del destino de representación.
 
 ##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState
 
-Guarda el estado actual de dibujo en el ID2D1DrawingStateBlock especificado.
+Guarda el estado de dibujo actual en el ID2D1DrawingStateBlock especificado.
 
 ```
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *drawingStateBlock*<br/>
-Cuando este método finaliza, contiene el estado actual de dibujo del destino de representación. Este parámetro debe inicializarse antes de pasarlo al método.
+Cuando este método finaliza, contiene el estado de dibujo actual del destino de representación. Este parámetro debe inicializarse antes de pasarlo al método.
 
 ##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode
 
-Establece el modo de suavizado de contorno del destino de representación. El modo de suavizado de contorno se aplica a todas las operaciones de dibujos subsiguientes, sin incluir texto y las operaciones de dibujo de glifos.
+Establece el modo de suavizado de contorno del destino de representación. El modo de suavizado de contorno se aplica a todas las operaciones de dibujo posteriores, excluidas las operaciones de dibujo de texto y glifo.
 
 ```
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *antialiasMode*<br/>
-El modo de suavizado de contorno para futuras operaciones de dibujos.
+Modo de suavizado de contorno para futuras operaciones de dibujo.
 
 ##  <a name="setdpi"></a>  CRenderTarget::SetDpi
 
@@ -1066,14 +1066,14 @@ Establece los puntos por pulgada (PPP) del destino de representación.
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *sizeDPI*<br/>
-Un valor mayor o igual que cero que especifica el horizontal/verticalDPI del destino de representación.
+Valor mayor o igual que cero que especifica el verticalDPI horizontal del destino de representación.
 
 ##  <a name="settags"></a>  CRenderTarget::SetTags
 
-Especifica una etiqueta para operaciones de dibujo subsiguientes.
+Especifica una etiqueta para las operaciones de dibujo posteriores.
 
 ```
 void SetTags(
@@ -1081,70 +1081,70 @@ void SetTags(
     D2D1_TAG tag2);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *tag1*<br/>
-Una etiqueta para aplicar a las operaciones de dibujo subsiguientes.
+Etiqueta que se va a aplicar a las operaciones de dibujo posteriores.
 
 *tag2*<br/>
-Una etiqueta para aplicar a las operaciones de dibujo subsiguientes.
+Etiqueta que se va a aplicar a las operaciones de dibujo posteriores.
 
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode
 
-Especifica el modo de suavizado de contorno que se utilizará para el texto subsiguiente y operaciones de dibujo de glifo.
+Especifica el modo de suavizado de contorno que se va a utilizar para las operaciones de dibujo de texto y glifos posteriores.
 
 ```
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *textAntialiasMode*<br/>
-El modo de suavizado de contorno que se utilizará para el texto subsiguiente y las operaciones de dibujo de glifos.
+Modo de suavizado de contorno que se va a usar para las operaciones de dibujo de texto y glifos posteriores.
 
 ##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams
 
-Especifica las opciones de representación de texto que se aplicará a todo el texto subsiguiente y las operaciones de dibujo del glifo.
+Especifica las opciones de representación de texto que se aplicarán a todas las operaciones de dibujo de texto y glifos posteriores.
 
 ```
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *textRenderingParams*<br/>
-Las opciones de representación de texto que se aplicará a todo el texto subsiguiente y glifo de dibujo de las operaciones; Es NULL para borrar las opciones de representación de texto actual.
+Opciones de representación de texto que se van a aplicar a todas las operaciones de dibujo de texto y glifos posteriores; NULL para borrar las opciones de representación de texto actuales.
 
 ##  <a name="settransform"></a>  CRenderTarget::SetTransform
 
-Se aplica la transformación indicada en el destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujos subsiguientes se producen en el espacio transformado.
+Aplica la transformación especificada al destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujo posteriores se producen en el espacio transformado.
 
 ```
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *transform*<br/>
-La transformación para aplicar en el destino de representación.
+Transformación que se va a aplicar al destino de representación.
 
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource
 
-Comprueba la validez del objeto de CD2DResource; crea el objeto si aún no existe.
+Comprueba la validez del objeto CD2DResource; crea el objeto si aún no existe.
 
 ```
 BOOL VerifyResource(CD2DResource* pResource);
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *pResource*<br/>
 Puntero al objeto CD2DResource.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es TRUE si es válido; de objeto en caso contrario, FALSE.
+TRUE es un objeto si es válido; en caso contrario, FALSE.
 
 ## <a name="see-also"></a>Vea también
 
