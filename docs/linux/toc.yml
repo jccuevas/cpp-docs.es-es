@@ -3,14 +3,21 @@
 - name: 'Descarga, instalación y configuración de la carga de trabajo de desarrollo de Linux'
   href: download-install-and-setup-the-linux-development-workload.md
 - name: Conexión al equipo remoto Linux
-  href: connect-to-your-remote-linux-computer.md
+  expanded: true
+  items:
+    - name: Conexión al equipo remoto Linux
+      href: connect-to-your-remote-linux-computer.md
+    - name: Configuración del desarrollo de Linux remoto seguro compatible con FIPS
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: Referencia de ConnectionManager
+      href: connectionmanager-reference.md
 - name: Creación de un proyecto de Linux
   href: create-a-new-linux-project.md
 - name: Configuración de un proyecto de Linux
   href: configure-a-linux-project.md
 - name: Creación y configuración de un proyecto de CMake en Linux
   href: cmake-linux-project.md
-- name: Configuración de los proyectos de Linux para usar AddressSanitizer
+- name: Configuración de proyectos de Linux para usar AddressSanitizer
   href: linux-asan-configuration.md
 - name: 'Implementar, ejecutar y depurar el proyecto de Linux'
   href: deploy-run-and-debug-your-linux-project.md
