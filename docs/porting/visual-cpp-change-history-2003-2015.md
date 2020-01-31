@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 6d994ca3af1386d9c2f94dbf6b9f972ee139613f
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778527"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821810"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
 
@@ -44,7 +44,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
 - **Binarios refactorizados**
 
-   La biblioteca CRT se ha refactorizado en dos binarios distintos: un CRT universal (ucrtbase), que contiene la mayor parte de la funcionalidad estándar, y una biblioteca de VC Runtime (vcruntime). La biblioteca vcruntime contiene funciones relacionadas con el compilador, como el control de excepciones y funciones intrínsecas. Si va a usar la configuración predeterminada del proyecto, este cambio no le afecta ya que el vinculador usará de forma automática las nuevas bibliotecas predeterminadas. Si ha establecido en **Sí** la propiedad **Omitir todas las bibliotecas predeterminadas** del **Enlazador** del proyecto, o bien si usa la opción del enlazador `/NODEFAULTLIB` en la línea de comandos, tendrá que actualizar la lista de bibliotecas (en la propiedad **Dependencias adicionales**) para incluir las nuevas bibliotecas refactorizadas. Reemplace la biblioteca CRT anterior (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) por las bibliotecas refactorizadas equivalentes. Para cada una de las dos bibliotecas refactorizadas hay versiones estáticas (.lib) y versiones dinámicas (.dll), así como versiones de lanzamiento (sin sufijo) y versiones de depuración (con el sufijo “d”). Las versiones dinámicas tienen una biblioteca de importación con la que se establece el vínculo. Las dos bibliotecas refactorizadas son CRT universal, concretamente ucrtbase.dll o ucrtbase.lib, ucrtbased.dll o ucrtbased.lib, y la biblioteca de runtime de VC, libvcruntime.lib, vcruntime*versión*.dll, libvcruntimed.lib y vcruntimed*versión*.dll. La *versión* en Visual Studio 2015 y Visual Studio 2017 es 140. Consulte [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).
+   La biblioteca CRT se ha refactorizado en dos binarios distintos: un CRT universal (ucrtbase), que contiene la mayor parte de la funcionalidad estándar, y una biblioteca de VC Runtime (vcruntime). La biblioteca vcruntime contiene funciones relacionadas con el compilador, como el control de excepciones y funciones intrínsecas. Si va a usar la configuración predeterminada del proyecto, este cambio no le afecta ya que el vinculador usará de forma automática las nuevas bibliotecas predeterminadas. Si ha establecido en **Sí** la propiedad **Omitir todas las bibliotecas predeterminadas** del **Enlazador** del proyecto, o bien si usa la opción del enlazador `/NODEFAULTLIB` en la línea de comandos, tendrá que actualizar la lista de bibliotecas (en la propiedad **Dependencias adicionales**) para incluir las nuevas bibliotecas refactorizadas. Reemplace la biblioteca CRT anterior (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) por las bibliotecas refactorizadas equivalentes. Para cada una de las dos bibliotecas refactorizadas hay versiones estáticas (.lib) y versiones dinámicas (.dll), así como versiones de lanzamiento (sin sufijo) y versiones de depuración (con el sufijo “d”). Las versiones dinámicas tienen una biblioteca de importación con la que se establece el vínculo. Las dos bibliotecas refactorizadas son CRT universal, concretamente ucrtbase.dll o ucrtbase.lib, ucrtbased.dll o ucrtbased.lib, y la biblioteca de runtime de VC, libvcruntime.lib, vcruntime*versión*.dll, libvcruntimed.lib y vcruntimed*versión*.dll. La *versión* en Visual Studio 2015 y Visual Studio 2017 es 140. Vea [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
 #### <a name="localeh"></a>\<locale.h>
 
@@ -106,9 +106,9 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
    Al compilar código C++, ahora [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) valida en tiempo de compilación que el argumento que se le haya pasado no sea de tipo de referencia. Los argumentos de tipo de referencia están prohibidos por el estándar de C++.
 
-#### <a name="stdio_and_conio"></a>\<stdio. h > y \<conio. h >
+#### <a name="stdio_and_conio"></a>\<stdio. h > y \<Conio. h >
 
-- **Las familias de funciones printf y scanf se definen ahora insertadas.**
+- **La familia de funciones printf y scanf se define ahora en línea.**
 
    Las definiciones de todas las funciones `printf` y `scanf` se han insertado en \<stdio.h>, \<conio.h> y otros encabezados de CRT. Este cambio importante provoca un error del enlazador (LNK2019, símbolo externo sin resolver) en todos los programas en los que se han declarado estas funciones de forma local sin incluir los encabezados de CRT adecuados. Si es posible, actualice el código para incluir los encabezados de CRT (es decir, agregue `#include <stdio.h>`) y las funciones insertadas. Si prefiere no modificar el código para incluir estos archivos de encabezado, una solución alternativa es agregar una biblioteca adicional a su entrada de enlazador, legacy_stdio_definitions.lib.
 
@@ -235,7 +235,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
 - **Encapsulación FILE**
 
-   En las versiones anteriores, el tipo FILE completo se definía de forma pública en \<stdio.h>, por lo que el código de usuario podía obtener acceso a FILE y modificar sus elementos internos. La biblioteca se ha cambiado para ocultar los detalles de implementación. Como parte de este cambio, FILE tal como se define en \<stdio.h> es ahora un tipo opaco y sus miembros son inaccesibles desde fuera de la propia biblioteca CRT.
+   En versiones anteriores, el tipo de archivo completo se definió públicamente en \<stdio. h >, por lo que era posible que el código de usuario llegara a un archivo y modificara sus elementos internos. La biblioteca se ha cambiado para ocultar los detalles de implementación. Como parte de este cambio, FILE tal como se define en \<stdio.h> es ahora un tipo opaco y sus miembros son inaccesibles desde fuera de la propia biblioteca CRT.
 
 - **_outp e _inp**
 
@@ -643,7 +643,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](https://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa placement new, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
 
-   La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new** `void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función delete es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.
+   La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new**`void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función delete es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.
 
    Supongamos, por ejemplo, que el código define tanto **placement new** como **placement delete**:
 
@@ -652,7 +652,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   El problema se produce debido a la coincidencia de las firmas de función entre un operador **placement delete** definido y el nuevo operador global **delete** con tamaño. Analice si puede usar un tipo que no sea `size_t` para los operadores **placement new** y **delete**. El tipo del **typedef** de `size_t` depende del compilador; es un **typedef** para **int sin signo** en MSVC. Una buena solución consiste en usar un tipo enumerado como este:
+   El problema se produce debido a la coincidencia de las firmas de función entre un operador **placement delete** definido y el nuevo operador global **delete** con tamaño. Analice si puede usar un tipo que no sea `size_t` para los operadores **placement new** y **delete**. El tipo del `size_t` **typedef** depende del compilador; es una **definición** de **tipo para int sin signo** en MSVC. Una buena solución consiste en usar un tipo enumerado como este:
 
     ```cpp
     enum class my_type : size_t {};
@@ -2009,7 +2009,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    En su documentación se ofrecen ejemplos de las otras advertencias restauradas.
 
-- **#include: uso del especificador de principal-directorio '..' en pathname** (solo afecta a `/Wall` `/WX`)
+- **#include: uso del especificador de principal-directorio '.. ' en pathname** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaron el uso del especificador de principal-directorio '..' en el nombre de la ruta de acceso de las directivas `#include`. El código escrito de este modo normalmente está pensado para incluir encabezados que existen fuera del proyecto usando incorrectamente rutas de acceso relativas del proyecto. Este comportamiento antiguo crea un riesgo de que el programa se pueda compilar incluyendo un archivo de origen diferente del que pensaba el programador, o que esas rutas de acceso relativas no son portables a otros entornos de compilación. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4464 de compilador opcional, si se habilita.
 
@@ -2031,7 +2031,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Además, aunque el compilador no ofrece un diagnóstico específico, se recomienda no usar el especificador de directorio principal ".." para especificar los directorios de inclusión del proyecto.
 
-- **optimize() #pragma se extiende más allá del final del archivo de encabezado** (solo afecta a `/Wall` `/WX`)
+- **#pragma Optimize () se extiende más allá del final del archivo de encabezado** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaban cambios en la configuración de la marca de optimización que eluden un archivo de encabezado incluido dentro de una unidad de traducción. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4426 de compilador opcional en la ubicación de `#include`que genera el problema, si se habilita. Esta advertencia solo se emite si el cambio entra en conflicto con las marcas de optimización establecidas por los argumentos de la línea de comandos para el compilador.
 
@@ -2064,7 +2064,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "C4426.h"
     ```
 
-- **Error de coincidencia de #pragma warning(push)** y **#pragma warning(pop)** (solo afecta a `/Wall` `/WX`)
+- **Advertencia #pragma no coincidente (extracción)** y **#pragma ADVERTENCIA (pop)** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaban que los cambios de estado `#pragma warning(push)` se emparejaban con cambios de estado `#pragma warning(pop)` en un archivo de código fuente diferente, lo que rara vez es lo previsto. Este comportamiento antiguo creaba un riesgo de que el programa se compilara con un conjunto de advertencias habilitadas diferentes de lo que el programador había pensado, lo cual puede provocar un comportamiento en tiempo de ejecución incorrecto silencioso. Ahora el compilador detecta el código escrito de esta manera, lo notifica al programador y emite una advertencia del compilador opcional C5031 en la ubicación de `#pragma warning(pop)` coincidente, si se habilita. Esta advertencia incluye una nota que hace referencia a la ubicación de #pragma warning(push) correspondiente.
 
@@ -2120,7 +2120,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Aunque es poco frecuente, a veces el código escrito de este modo es intencionado. El código escrito de este modo es sensible a los cambios en el orden de `#include`. Cuando sea posible, se recomienda que los archivos de código fuente administren el estado de advertencia de forma independiente.
 
-- **#pragma warning(push) sin coincidencia** (solo afecta a `/Wall` `/WX`)
+- **Advertencia #pragma no coincidente (inserciones)** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaron cambios de estado `#pragma warning(push)` sin coincidencia al final de una unidad de traducción. Ahora el compilador detecta el código escrito de esta manera, lo notifica al programador y emite una advertencia del compilador opcional C5032 en la ubicación de `#pragma warning(push)` no coincidente, si se habilita. Esta advertencia solo se emite si no hay ningún error de compilación en la unidad de traducción.
 
@@ -2292,7 +2292,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
     ```
 
-- **Las variables de miembro `volatile` impiden los operadores de asignación y constructores definidos implícitamente**
+- `volatile` **variables miembro impiden constructores y operadores de asignación definidos implícitamente**
 
    Las versiones anteriores del compilador permitían que se generaran automáticamente constructores para copiar o mover predeterminados y operadores de asignación para copiar o mover predeterminados para una clase con variables de miembro **volátiles**. Este comportamiento anterior era incorrecto y no se ajusta al estándar de C++. Ahora, el compilador considera que una clase que tiene variables de miembro **volátiles** tiene operadores de asignación y construcción no triviales, lo que impide que se generen de forma automática implementaciones predeterminadas de estos operadores. Cuando esta clase es miembro de una unión (o una unión anónima dentro de una clase), los constructores para copiar o mover, y los operadores de asignación para copiar o mover de la unión (o la clase que contiene la unión anónima) se definirán de forma implícita como eliminados. Intentar crear o copiar la unión (o la clase que contiene la unión anónima) sin definirlas explícitamente es un error y, en tal caso, el compilador genera el error de compilador C2280 como resultado.
 
@@ -2636,7 +2636,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
     ```
 
-- **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a `/Wall` `/WX`)
+- **Archivos de encabezado precompilado (PCH) y directivas de #include no coincidentes** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador aceptaban directivas `#include` no coincidentes en archivos de código fuente entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo.   Ahora, el compilador emite la advertencia del compilador CC4598 para ayudar a identificar las directivas `#include` no coincidentes cuando se usan archivos PCH.
 
@@ -2680,7 +2680,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "c.h"
     ```
 
-- **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a `/Wall` `/WX`)
+- **Archivos de encabezado precompilado (PCH) y directorios de inclusión no coincidentes** (solo afecta a `/Wall` `/WX`)
 
    En las versiones anteriores del compilador se aceptaban argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) en el compilador entre las compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo. Ahora, el compilador emite la advertencia del compilador CC4599 para ayudar a identificar los argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) cuando se usan archivos PCH.
 
@@ -2928,7 +2928,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discordancias en _ITERATOR_DEBUG_LEVEL, función que se implementó en Visual Studio 2010, y las discordancias de la biblioteca en tiempo de ejecución. Estas discordancias se producen cuando se mezclan las opciones del compilador `/MT` (versión estática), `/MTd` (depuración estática), `/MD` (versión dinámica) y `/MDd` (depuración dinámica).
 
-- Si el código usa las plantillas de alias simuladas de la versión anterior, tiene que cambiarlo. Por ejemplo, en lugar de `allocator_traits<A>::rebind_alloc<U>::other`, tiene que especificar `allocator_traits<A>::rebind_alloc<U>`. Aunque `ratio_add<R1, R2>::type` ya no es necesario y ahora se recomienda `ratio_add<R1, R2>`, el primero seguirá compilándose porque `ratio<N, D>` es necesario para tener una definición de tipos “tipo” para una ratio reducida, que será el mismo tipo si ya se ha reducido.
+- Si el código utiliza las plantillas de alias simuladas de la versión anterior, tiene que cambiarlo. Por ejemplo, en lugar de `allocator_traits<A>::rebind_alloc<U>::other`, tiene que especificar `allocator_traits<A>::rebind_alloc<U>`. Aunque `ratio_add<R1, R2>::type` ya no es necesario y ahora se recomienda `ratio_add<R1, R2>`, el primero seguirá compilándose porque `ratio<N, D>` es necesario para tener una definición de tipos “tipo” para una ratio reducida, que será el mismo tipo si ya se ha reducido.
 
 - Debe utilizar `#include <algorithm>` cuando llame a `std::min()` o `std::max()`.
 
@@ -2988,7 +2988,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
 - Se han quitado las directivas `#ifdef` de los archivos de encabezado de MFC. Se han quitado muchas directivas `#ifdef` de los archivos de encabezado de MFC relacionadas con las versiones de Windows no compatibles (WINVER &lt; 0x0501).
 
-- Se ha quitado ATL DLL (atl120.dll). ATL ahora se proporciona en forma de encabezados y como biblioteca estática (atls.lib).
+- Se ha quitado ATL DLL (atl120.dll). ATL se proporciona ahora en forma de encabezados y como biblioteca estática (atls.lib).
 
 - Se ha quitado atlsd.lib, atlsn.lib y atlsnd.lib. Atls.lib ya no tiene código ni dependencias de juego de caracteres específicos para la depuración y el lanzamiento. Como funciona igual para Unicode y ANSI y para depuración y lanzamiento, solo se necesita una versión de la biblioteca.
 
@@ -3030,7 +3030,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
 - El compilador administrado (Visual Basic o C#) también es compatible con `/HIGHENTROPYVA` para las compilaciones administradas.  En cambio, en este caso, el modificador `/HIGHENTROPYVAswitch` está desactivado de manera predeterminada.
 
-### <a name="ide"></a>IDE
+### <a name="ide"></a>IDE de
 
 - Aunque se recomienda que no cree aplicaciones de Windows Forms en C++/CLI, el mantenimiento de aplicaciones de interfaz de usuario de C++/CLI es compatible. Si tiene que crear una aplicación de Windows Forms o cualquier otra aplicación de interfaz de usuario .NET, use C# o Visual Basic. Use C++/CLI solo con fines de interoperabilidad.
 
@@ -3042,11 +3042,11 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - Después de un cambio importante entre los estándares C++98/03 y C++11, el uso de argumentos de plantilla explícitos para llamar a `make_pair()` (como en `make_pair<int, int>(x, y)`), normalmente no se compila en Visual C++ en Visual Studio 2012. La solución consiste en llamar siempre a `make_pair() ` sin argumentos de plantilla explícitos, como en `make_pair(x, y)`. Proporcionar argumentos de plantilla explícitos acaba con el propósito de la función. Si necesita un control preciso sobre el tipo resultante, use `pair` en lugar de `make_pair` (como en `pair<short, short>(int1, int2)`).
 
-- Otro cambio importante entre C++ 98/03 y los estándares de C++ 11: cuando se puede convertir implícitamente a B y B es implícitamente convertible a C, pero a no se puede convertir implícitamente a C, C++ 98/03 y Visual Studio 2010 `pair<A, X>` permiten la conversión (implícita o explícitamente) para `pair<C, X>`. (El otro tipo, X, no es de interés aquí y no es específico del primer tipo del par). El C++ compilador de Visual Studio 2012 detecta que no es implícitamente convertible a C y quita la conversión de par de la resolución de sobrecarga. Se trata de un cambio positivo para muchos escenarios. Por ejemplo, si sobrecarga `func(const pair<int, int>&)` y `func(const pair<string, string>&)`, y si llama a `func()` con `pair<const char *, const char *>`, se compilará con este cambio. En cambio, este cambio interrumpe el código que dependía de conversiones de par agresivas. Normalmente, este código se puede solucionar al realizar una parte de la conversión de forma explícita; por ejemplo, al pasar `make_pair(static_cast<B>(a), x)` a una función que espere `pair<C, X>`.
+- Otro cambio importante entre C++ 98/03 y los estándares de C++ 11: cuando un se puede convertir implícitamente a B y B es implícitamente convertible a C, pero no es implícitamente convertible a C, C++ 98/03 y Visual Studio 2010 `pair<A, X>` permiten que se conviertan (implícita o explícitamente) en `pair<C, X>`. (El otro tipo, X, no es de interés aquí y no es específico del primer tipo del par). El C++ compilador de Visual Studio 2012 detecta que no es implícitamente convertible a C y quita la conversión de par de la resolución de sobrecarga. Se trata de un cambio positivo para muchos escenarios. Por ejemplo, si sobrecarga `func(const pair<int, int>&)` y `func(const pair<string, string>&)`, y si llama a `func()` con `pair<const char *, const char *>`, se compilará con este cambio. En cambio, este cambio interrumpe el código que dependía de conversiones de par agresivas. Normalmente, este código se puede solucionar al realizar una parte de la conversión de forma explícita; por ejemplo, al pasar `make_pair(static_cast<B>(a), x)` a una función que espere `pair<C, X>`.
 
 - Visual Studio 2010 simulaba plantillas variádicas, por ejemplo, `make_shared<T>(arg1, arg2, argN)`, hasta un límite de 10 argumentos, al eliminar sobrecargas y especializaciones con maquinaria de preprocesador. En Visual Studio 2012, este límite se reduce a cinco argumentos para mejorar los tiempos de compilación y el consumo de memoria del compilador para la mayoría de los usuarios. En cambio, puede establecer el límite anterior al definir de forma explícita _VARIADIC_MAX como 10, en todo el proyecto.
 
-- En C++11 17.6.4.3.1 [macro.names]/2 se prohíbe la sustitución de macros de palabras clave cuando se incluyen encabezados de la biblioteca estándar de C++. Ahora los encabezados emiten errores del compilador si detectan palabras clave sustituidas por macros. (La definición de _ALLOW_KEYWORD_MACROS permite compilar este tipo de código, pero Desaconsejamos el uso). Como excepción, la forma de macro de `new` está permitida de forma predeterminada, porque los encabezados se defienden a sí mismos mediante `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`. Al definir _ENFORCE_BAN_OF_MACRO_NEW, se hace exactamente lo que implica su nombre.
+- En C++11 17.6.4.3.1 [macro.names]/2 se prohíbe la sustitución de macros de palabras clave cuando se incluyen encabezados de la biblioteca estándar de C++. Ahora los encabezados emiten errores del compilador si detectan palabras clave sustituidas por macros. (La definición de _ALLOW_KEYWORD_MACROS permite compilar este tipo de código, pero Desaconsejamos el uso). Como excepción, la forma de macro de `new` está permitida de forma predeterminada, porque los encabezados se defienden a sí mismos mediante `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`. Al definir _ENFORCE_BAN_OF_MACRO_NEW, se hace exactamente lo que implica su nombre.
 
 - Para implementar varias optimizaciones y comprobaciones de depuración, la implementación de la biblioteca estándar de C++ interrumpe deliberadamente la compatibilidad binaria entre versiones de Visual Studio (2005, 2008, 2010, 2012). Cuando se usa la biblioteca estándar de C++, impide que se combinen archivos de objeto y bibliotecas estáticas que se han compilado con otras versiones en un binario (EXE o DLL), además de impedir que se pasen objetos de la biblioteca estándar de C++ entre los archivos binarios que se han compilado con otras versiones. El hecho de combinar archivos de objeto y bibliotecas estáticas (mediante la biblioteca estándar de C++) compilados mediante Visual Studio 2010 con los compilados con el compilador de C++ en Visual Studio 2012 emite errores del enlazador relativos a un error de coincidencia _MSC_VER, donde _MSC_VER es la macro que contiene la versión principal del compilador (1700 para Visual C++ en Visual Studio 2012). Esta comprobación no detecta la combinación de archivos DLL, ni otras que impliquen Visual Studio 2008 o versiones anteriores.
 
@@ -3220,7 +3220,7 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - Se han quitado métodos no usados de `CDockablePane`: `SetCaptionStyle`, `IsDrawCaption`, `IsHideDisabledButtons`, `GetRecentSiblingPaneInfo` y `CanAdjustLayout`.
 
-- Se han quitado las variables de miembro estático de `CDockablePane` `m_bCaptionText` y `m_bHideDisabledButtons`.
+- Se han quitado las variables de miembro estático de `CDockablePane``m_bCaptionText` y `m_bHideDisabledButtons`.
 
 - Agrega una invalidación del método `DeleteString` a `CMFCFontComboBox`.
 
@@ -3262,7 +3262,7 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - En versiones anteriores, Visual C++ admitía la evaluación en tiempo de ejecución de hojas de propiedades. Por ejemplo, una hoja de propiedades primaria podría importar una hoja de propiedades secundaria y el elemento primario podría usar una variable definida en el elemento secundario para definir otras variables. La evaluación en tiempo de ejecución ha habilitado al elemento primario para que use la variable secundaria incluso antes de importar la hoja de propiedades secundarias. En Visual Studio 2010, no se puede usar una variable de hoja de proyecto antes de definirse, porque MSBuild solo admite la evaluación temprana.
 
-### <a name="ide"></a>IDE
+### <a name="ide"></a>IDE de
 
 - El cuadro de diálogo de finalización de aplicación ya no finaliza una aplicación. En versiones anteriores, cuando la función `abort()` o `terminate()` cierra la versión comercial de una aplicación, la biblioteca en tiempo de ejecución de C mostraba un mensaje de finalización de aplicación en un cuadro de diálogo o ventana de consola. Este mensaje decía, en parte: “Esta aplicación solicitó la finalización del tiempo de ejecución de modo no habitual. Póngase en contacto con el equipo de asistencia técnica de la aplicación para obtener más información”. El mensaje de finalización de la aplicación era redundante porque Windows mostraba posteriormente el controlador de finalización actual, que normalmente era el cuadro de diálogo Informe de errores de Windows (Dr. Watson) o el depurador de Visual Studio. A partir de Visual Studio 2010, la biblioteca en tiempo de ejecución de C no muestra el mensaje. Además, el tiempo de ejecución impide que la aplicación finalice antes de iniciar un depurador. Se trata de un cambio importante solo si depende del comportamiento anterior del mensaje de finalización de la aplicación.
 
