@@ -1,6 +1,7 @@
 ---
 title: _popen, _wpopen
-ms.date: 11/04/2016
+description: Una referencia para las funciones de la biblioteca en tiempo de ejecución de Microsoft C (CRT) _popen y _wpopen.
+ms.date: 01/28/2020
 api_name:
 - _popen
 - _wpopen
@@ -36,12 +37,21 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950995"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894325"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -63,25 +73,25 @@ FILE *_wpopen(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
-*command*<br/>
+\ de *comandos*
 Comando que se va a ejecutar.
 
-*mode*<br/>
+\ *modo*
 Modo del flujo devuelto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error es un parámetro no válido, como si el *comando* o el *modo* es un puntero nulo, o el *modo* no es un modo válido, **errno** se establece en **EINVAL**. Vea los modos válidos en la sección de comentarios.
+Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error se debe a un parámetro no válido, **errno** se establece en **EINVAL**. Vea los modos válidos en la sección de comentarios.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-La función **_popen** crea una canalización y ejecuta de forma asincrónica una copia generada del procesador de comandos con el *comando*de cadena especificado. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
+La función **_popen** crea una canalización. A continuación, ejecuta de forma asincrónica una copia generada del procesador de comandos y usa el *comando* como línea de comandos. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
 
-|Modo de acceso|DESCRIPCIÓN|
+|Modo de acceso|Descripción|
 |-|-|
 |**"r"**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
 |**"w"**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
@@ -91,7 +101,7 @@ La función **_popen** crea una canalización y ejecuta de forma asincrónica un
 > [!NOTE]
 > Si se usa en un programa de Windows, la función **_popen** devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y la salida, vea [crear un proceso secundario con entrada y salida redirigidas](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el Windows SDK.
 
-**_wpopen** es una versión con caracteres anchos de **_popen**; el argumento de *ruta de acceso* a **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan de manera idéntica.
+**_wpopen** es una versión con caracteres anchos de **_popen**; el argumento de *ruta de acceso* para **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan de manera idéntica.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -99,14 +109,14 @@ La función **_popen** crea una canalización y ejecuta de forma asincrónica un
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -141,7 +151,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -156,9 +166,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
-
-En este resultado se supone que solo hay un archivo en el directorio actual con la extensión de nombre de archivo .c.
+Esta salida supone que hay un solo archivo en el directorio actual que tiene una extensión de nombre de archivo `.c`.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -175,6 +183,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Vea también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+\ [de control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)
+[_pclose](pclose.md)\
+[_pipe](pipe.md)
