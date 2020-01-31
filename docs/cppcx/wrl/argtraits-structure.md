@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398815"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821719"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -127,48 +127,48 @@ struct ArgTraits<
              (TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *TMemberFunction*<br/>
-Parámetro TypeName para una ArgTraits (estructura) que no coincide con ninguna `Invoke` firma del método.
+Parámetro TypeName para una estructura Argtraits (que no puede coincidir con ninguna firma de método `Invoke`.
 
 *TDelegateInterface*<br/>
-Una interfaz de delegado.
+Interfaz de delegado.
 
 *TArg1*<br/>
-El tipo del primer argumento de la `Invoke` método.
+Tipo del primer argumento del método `Invoke`.
 
 *TArg2*<br/>
-El tipo del segundo argumento de la `Invoke` método.
+Tipo del segundo argumento del método `Invoke`.
 
 *TArg3*<br/>
-El tipo del tercer argumento de la `Invoke` método.
+Tipo del tercer argumento del método `Invoke`.
 
 *TArg4*<br/>
-El tipo del cuarto argumento de la `Invoke` método.
+Tipo del cuarto argumento del método de `Invoke`.
 
 *TArg5*<br/>
-El tipo del quinto argumento de la `Invoke` método.
+Tipo del quinto argumento del método de `Invoke`.
 
 *TArg6*<br/>
-El tipo del sexto argumento de la `Invoke` método.
+Tipo del sexto argumento del método `Invoke`.
 
 *TArg7*<br/>
-El tipo del séptimo argumento de la `Invoke` método.
+Tipo del séptimo argumento del método `Invoke`.
 
 *TArg8*<br/>
-El tipo del octavo argumento de la `Invoke` método.
+Tipo del octavo argumento del método `Invoke`.
 
 *TArg9*<br/>
-El tipo del noveno argumento de la `Invoke` método.
+Tipo del noveno argumento del método `Invoke`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-El `ArgTraits` estructura declara un delegado especificado de interfaz y una función miembro anónimo que tiene un número especificado de parámetros.
+La estructura `ArgTraits` declara una interfaz de delegado especificada y una función miembro anónima que tiene un número especificado de parámetros.
 
 ## <a name="members"></a>Miembros
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
 Name       | Descripción
 ---------- | ----------------------
@@ -186,26 +186,26 @@ Name       | Descripción
 
 Name                     | Descripción
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | Mantiene un recuento del número de parámetros el `Invoke` al método de interfaz de un delegado.
+[ArgTraits::args](#args) | Mantiene el recuento del número de parámetros en el método de `Invoke` de una interfaz de delegado.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
 `ArgTraits`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
-**Encabezado:** event.h
+**Encabezado:** Event. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
 ## <a name="args"></a>ArgTraits::args
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ```cpp
 static const int args = -1;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
-Mantiene un recuento del número de parámetros el `Invoke` al método de interfaz de un delegado. Cuando `args` es igual a -1, no puede haber ninguna coincidencia para el `Invoke` firma del método.
+Mantiene el recuento del número de parámetros en el método de `Invoke` de una interfaz de delegado. Cuando `args` es igual a-1, no puede haber ninguna coincidencia para la firma del método `Invoke`.

@@ -1,47 +1,58 @@
 ---
 title: constexpr (C++)
-ms.date: 08/05/2019
+description: Guía de la C++ palabra clave Language constexpr.
+ms.date: 01/28/2020
 f1_keywords:
 - constexpr_cpp
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
-ms.openlocfilehash: 5c98436f537b34b1c9050e057971938d48792db1
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+no-loc:
+- constexpr
+- const
+- inline
+- goto
+- try
+- if
+- switch
+- for
+- while
+ms.openlocfilehash: 4f34eef3217377ab50a2d80d42b5bea4b054c5be
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821098"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821784"
 ---
-# <a name="constexpr-c"></a>constexpr (C++)
+# <a name="opno-locconstexpr-c"></a>constexpr (C++)
 
-La palabra clave **constexpr** se presentó en c++ 11 y se mejoró en c++ 14. Significa *expresión constante*. Como **const**, se puede aplicar a variables para que se produzca un error del compilador si algún código intenta modificar el valor. A diferencia de **const**, **constexpr** también se puede aplicar a funciones y constructores de clase. **constexpr** indica que el valor, o el valor devuelto, es constante y, si es posible, se calcula en tiempo de compilación.
+La palabra clave **constexpr** se presentó en c++ 11 y se mejoró en c++ 14. Significa *expresión constante*. Como **const** , se puede aplicar a las variables: se genera un error del compilador cuando cualquier código intenta modificar el valor. A diferencia de **const** , **constexpr** se puede aplicar también a funciones y constructores de clase. **constexpr** indica que el valor, o el valor devuelto, es constante y, siempre que sea posible, se calcula en tiempo de compilación.
 
-Se puede usar un valor integral de **constexpr** siempre que se requiera un entero const, como en los argumentos de plantilla y las declaraciones de matriz. Y cuando un valor se puede calcular en tiempo de compilación en lugar de en tiempo de ejecución, puede ayudar a que el programa se ejecute más rápido y use menos memoria.
+Se puede utilizar un valor entero **constexpr** siempre que se requiera un entero const, como en los argumentos de plantilla y en las declaraciones de matriz. Y cuando un valor se calcula en tiempo de compilación en lugar de en tiempo de ejecución, ayuda a que el programa se ejecute más rápido y use menos memoria.
 
 Para limitar la complejidad de los cálculos constantes en tiempo de compilación y sus posibles impactos en el tiempo de compilación, el estándar de C++ 14 requiere que los tipos de expresiones constantes sean [tipos literales](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **constexpr** *literal de tipo* *identificador* **=** *expresión-constante* **;** 
->  **constexpr** *literal de tipo* *identificador* **{** *expresión constante* **}** **;** 
->  **constexpr** *literal de tipo* *identificador* **(** *params* **)** **;** 
->  **constexpr** *ctor* **(** *params* **)** **;**
+> **constexpr** identificador *de tipo literal* **=** *Constant-Expression* **;** \
+> **constexpr** identificador *de tipo literal* **{** *Constant-Expression* **}** **;** \
+> **constexpr** *identificador de tipo literal* **(** *params* **)** **;** \
+> **constexpr** *ctor* **(** *params* **)** **;**
 
-## <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
-*params*<br/>
+*params*\
 Uno o más parámetros, cada uno de los cuales debe ser un tipo literal y debe ser una expresión constante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Una función o variable constexpr debe devolver un [tipo literal](trivial-standard-layout-and-pod-types.md#literal_types).
+Una variable o función **constexpr** debe devolver un [tipo literal](trivial-standard-layout-and-pod-types.md#literal_types).
 
-## <a name="constexpr-variables"></a>Variables constexpr
+## <a name="opno-locconstexpr-variables"></a>Variables constexpr
 
-La principal diferencia entre las variables const y constexpr es que la inicialización de una variable const se puede diferir hasta el tiempo de ejecución. Una variable constexpr debe inicializarse en tiempo de compilación.  Todas las variables constexpr son const.
+La diferencia principal entre las variables **const** y **constexpr** es que la inicialización de una variable **const** se puede diferir hasta el tiempo de ejecución. Una variable **constexpr** debe inicializarse en tiempo de compilación.  Se **constn** todas **constexpr** variables.
 
-- Una variable se puede declarar con **constexpr**, si tiene un tipo literal y se inicializa. Si un constructor realiza la inicialización, el constructor debe declararse como **constexpr**.
+- Una variable se puede declarar con **constexpr** , cuando tiene un tipo literal y se inicializa. Si un constructor realiza la inicialización, el constructor debe declararse como **constexpr** .
 
-- Una referencia puede declararse como constexpr si el objeto al que hace referencia se ha inicializado mediante una expresión constante y todas las conversiones implícitas que se invoquen durante la inicialización son también expresiones constantes.
+- Una referencia puede declararse como **constexpr** cuando se cumplen estas condiciones: el objeto al que se hace referencia se inicializa con una expresión constante y cualquier conversión implícita invocada durante la inicialización también son expresiones constantes.
 
 - Todas las declaraciones de una variable o función **constexpr** deben tener el especificador **constexpr** .
 
@@ -54,35 +65,35 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr_functions"></a>funciones constexpr
+## <a name="constexpr_functions"></a>funciones de constexpr
 
-Una función **constexpr** es aquella cuyo valor devuelto se puede calcular en tiempo de compilación cuando el código utilizado lo requiere. El código de consumo requiere el valor devuelto en tiempo de compilación, por ejemplo, para inicializar una variable **constexpr** o proporcionar un argumento de plantilla sin tipo. Cuando sus argumentos son valores **constexpr** , una función **constexpr** genera una constante en tiempo de compilación. Cuando se llama con argumentos que no son**constexpr** , o cuando su valor no es necesario en tiempo de compilación, genera un valor en tiempo de ejecución como una función normal. (Este comportamiento dual evita tener que escribir las versiones **constexpr** y no**constexpr** de la misma función).
+Una función **constexpr** es aquella cuyo valor devuelto es calculable en tiempo de compilación cuando el código utilizado lo requiere. El código de consumo requiere el valor devuelto en tiempo de compilación para inicializar una variable de **constexpr** , o para proporcionar un argumento de plantilla sin tipo. Cuando sus argumentos son **constexpr** valores, una función **constexpr** genera una constante en tiempo de compilación. Cuando se llama con argumentos que no son de **constexpr** , o cuando su valor no es necesario en tiempo de compilación, genera un valor en tiempo de ejecución como una función normal. (Este comportamiento dual evita tener que escribir **constexpr** y versiones no **constexpr** de la misma función).
 
-Una función o un constructor **constexpr** está implícitamente **alineado**.
+Una **constexpr** función o constructor se **inline** implícitamente.
 
-Las siguientes reglas se aplican a las funciones constexpr:
+Las siguientes reglas se aplican a las funciones de constexpr:
 
 - Una función **constexpr** debe aceptar y devolver solo [tipos literales](trivial-standard-layout-and-pod-types.md#literal_types).
 
 - Una función **constexpr** puede ser recursiva.
 
-- No puede ser [virtual](../cpp/virtual-cpp.md). Un constructor no se puede definir como constexpr si la clase envolvente tiene clases base virtuales.
+- No puede ser [virtual](../cpp/virtual-cpp.md). Un constructor no se puede definir como **constexpr** cuando la clase envolvente tiene cualquier clase base virtual.
 
 - El cuerpo se puede definir como `= default` o `= delete`.
 
-- El cuerpo no puede contener instrucciones **goto** ni bloques try.
+- El cuerpo no puede contener instrucciones **goto** ni bloques de **try** .
 
-- Una especialización explícita de una plantilla no constexpr se puede declarar como **constexpr**:
+- Una especialización explícita de una plantilla que no es de **constexpr** se puede declarar como **constexpr** :
 
-- Una especialización explícita de una plantilla **constexpr** no tiene que ser también **constexpr**:
+- Una especialización explícita de una plantilla de **constexpr** no tiene que ser **constexpr** :
 
-Las siguientes reglas se aplican a las funciones **constexpr** en Visual Studio 2017 y versiones posteriores:
+Las siguientes reglas se aplican a las funciones de **constexpr** en Visual Studio 2017 y versiones posteriores:
 
-- Puede contener instrucciones **If** y **Switch** , así como todas las instrucciones **de**bucle, como for, basada en intervalo para, **While**y **do-while**.
+- Puede contener **if** y **switch** instrucciones, y todas las instrucciones de bucle, incluidas **for** , **for** basadas en intervalos, **while** y **while** .
 
-- Puede contener declaraciones de variables locales, pero la variable debe inicializarse, debe ser un tipo literal y no puede ser estática o de subproceso local. No es necesario que la variable declarada localmente sea const y puede mutar.
+- Puede contener declaraciones de variables locales, pero se debe inicializar la variable. Debe ser un tipo literal y no puede ser **estático** o local de subproceso. No es necesario que la variable declarada localmente sea **const** y puede ser mutada.
 
-- No es necesario que una función miembro no estática constexpr sea implícitamente const.
+- No es necesario que una función miembro no**estática** **constexpr** sea implícitamente **const** .
 
 ```cpp
 constexpr float exp(float x, int n)
@@ -96,13 +107,13 @@ constexpr float exp(float x, int n)
 > [!TIP]
 > En el depurador de Visual Studio, al depurar una compilación de depuración no optimizada, puede saber si una función **constexpr** se está evaluando en tiempo de compilación colocando un punto de interrupción dentro de ella. Si se alcanza el punto de interrupción, significa que se llamó a la función en tiempo de ejecución.  En caso contrario, significa que se llamó a la función en tiempo de compilación.
 
-## <a name="extern-constexpr"></a>externo constexpr
+## <a name="extern-opno-locconstexpr"></a>constexpr extern
 
-La opción del compilador [/Zc: externConstexpr](../build/reference/zc-externconstexpr.md) hace que el compilador aplique una [vinculación externa](../c-language/external-linkage.md) a las variables declaradas mediante **extern constexpr**. En versiones anteriores de Visual Studio, y de forma predeterminada o si se especifica **/Zc: externConstexpr-** , Visual Studio aplica la vinculación interna a las variables **constexpr** incluso si se usa la palabra clave **extern** . La opción **/Zc: externConstexpr** está disponible a partir de la actualización 15,6 de Visual Studio 2017 y está desactivada de forma predeterminada. La opción/permissive-no habilita **/Zc: externConstexpr**.
+La opción del compilador [/Zc: externConstexpr](../build/reference/zc-externconstexpr.md) hace que el compilador aplique una [vinculación externa](../c-language/external-linkage.md) a las variables declaradas mediante **extern constexpr** . En versiones anteriores de Visual Studio, de forma predeterminada o cuando se especifica **/Zc: externConstexpr-** , Visual Studio aplica la vinculación interna a las variables de **constexpr** incluso cuando se usa la palabra clave **extern** . La opción **/Zc: externConstexpr** está disponible a partir de la actualización 15,6 de Visual Studio 2017 y está desactivada de forma predeterminada. La opción [/permissive-](../build/reference/permissive-standards-conformance.md) no habilita **/Zc: externConstexpr**.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestran variables, funciones y un tipo definido por el usuario. En la última instrucción de Main (), la función miembro **Constexpr** GetValue () es una llamada en tiempo de ejecución porque no es necesario que el valor sea conocido en tiempo de compilación.
+En el ejemplo siguiente se muestra **constexpr** variables, funciones y un tipo definido por el usuario. En la última instrucción de `main()`, la función miembro **constexpr** `GetValue()` es una llamada en tiempo de ejecución porque no es necesario que el valor sea conocido en tiempo de compilación.
 
 ```cpp
 // constexpr.cpp
@@ -172,7 +183,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
 Visual Studio 2015 o posterior.
 

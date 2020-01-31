@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223045"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821745"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
-Representa un evento provocado por un componente de agile, que es un componente que se puede acceder desde cualquier subproceso. Hereda de [EventSource](eventsource-class.md) e invalida el `Add` función miembro con un parámetro de tipo adicionales para especificar opciones sobre cómo invocar el evento de agile.
+Representa un evento generado por un componente ágil, que es un componente al que se puede tener acceso desde cualquier subproceso. Hereda de [EventSource](eventsource-class.md) e invalida la función miembro `Add` con un parámetro de tipo adicional para especificar las opciones para invocar el evento Agile.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,17 +30,17 @@ class AgileEventSource :
         TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parámetros
+## <a name="parameters"></a>Parameters
 
 *TDelegateInterface*<br/>
 La interfaz a un delegado que representa un controlador de eventos.
 
 *TEventSourceOptions*<br/>
-Un [InvokeModeOptions](invokemodeoptions-structure.md) cuyo campo invokeMode está establecido en una estructura `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
+Estructura [InvokeModeOptions](invokemodeoptions-structure.md) cuyo campo invokeMode se establece en `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 
-La mayoría de los componentes en tiempo de ejecución de Windows son ágiles componentes. Para obtener más información, consulte [subprocesamiento y serialización (C++ / c++ / CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+La gran mayoría de los componentes del Windows Runtime son componentes ágiles. Para obtener más información, vea [subprocesamiento y serializaciónC++(/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -48,11 +48,11 @@ La mayoría de los componentes en tiempo de ejecución de Windows son ágiles co
 
 `AgileEventSource`
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos de
 
-**Encabezado:** event.h
+**Encabezado:** Event. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
 ## <a name="members"></a>Miembros
 
@@ -60,11 +60,11 @@ La mayoría de los componentes en tiempo de ejecución de Windows son ágiles co
 
 |Name|Descripción|
 |----------|-----------------|
-|[Método AgileEventSource::Add](#add)|Anexa el controlador de eventos agile representado por la interfaz de delegado especificado al conjunto de controladores de eventos actual **AgileEventSource** objeto.|
+|[AgileEventSource:: Add (método)](#add)|Anexa el controlador de eventos ágil que representa la interfaz de delegado especificada al conjunto de controladores de eventos para el objeto **AgileEventSource** actual.|
 
-## <a name="add"></a> Método AgileEventSource::Add
+## <a name="add"></a>AgileEventSource:: Add (método)
 
-Anexa el controlador del evento representado por la interfaz de delegado especificado al conjunto de controladores de eventos actual [EventSource](eventsource-class.md) objeto.
+Anexa el controlador de eventos representado por la interfaz de delegado especificada al conjunto de controladores de eventos para el objeto [EventSource](eventsource-class.md) actual.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -75,13 +75,13 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parameters
 
 *delegateInterface*<br/>
-La interfaz para un objeto delegado, que representa un controlador de eventos.
+La interfaz de un objeto delegado, que representa un controlador de eventos.
 
 *token*<br/>
-Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro para el `Remove()` método para descartar el controlador de eventos.
+Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro para el método `Remove()` para descartar el controlador de eventos.
 
 ### <a name="return-value"></a>Valor devuelto
 

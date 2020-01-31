@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: Crear una aplicación de cinta mediante MFC'
+title: 'Tutorial: Crear una aplicación de cinta usando MFC'
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907394"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821927"
 ---
-# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta mediante MFC
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 
 En este tutorial se muestra cómo utilizar el **Asistente para aplicaciones MFC** para crear una aplicación que tenga una cinta de opciones de forma predeterminada. Después, puede expandir la cinta de opciones si agrega una categoría de cinta de opciones **personalizada** que tenga un panel de la cinta **Favoritos** y, a continuación, agregará algunos comandos usados con frecuencia al panel.
 
@@ -22,7 +22,7 @@ En este tutorial se supone que ha establecido Visual Studio para usar la **confi
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Para crear una aplicación MFC con una cinta de opciones
 
-1. Utilice el **Asistente para aplicaciones MFC** para crear una aplicación MFC que tenga una cinta de opciones. Vea [Tutorial: Usar los nuevos controles](walkthrough-using-the-new-mfc-shell-controls.md) de Shell de MFC para obtener instrucciones sobre cómo abrir el Asistente para su versión de Visual Studio.
+1. Utilice el **Asistente para aplicaciones MFC** para crear una aplicación MFC que tenga una cinta de opciones. Vea [Tutorial: usar los nuevos controles de Shell de MFC](walkthrough-using-the-new-mfc-shell-controls.md) para obtener instrucciones sobre cómo abrir el Asistente para su versión de Visual Studio.
 
 1. Establezca las siguientes opciones en el **Asistente para aplicaciones MFC**:
 
@@ -54,7 +54,7 @@ En este tutorial se supone que ha establecido Visual Studio para usar la **confi
 
     Haga clic con el botón secundario en **Category1** y después haga clic en **propiedades**. En la ventana **propiedades** , cambie **título** a *personalizado*.
 
-    Las propiedades **grandes** imágenes e **imágenes pequeñas** especifican los mapas de bits que se usan como iconos para los elementos de la cinta de opciones de esta categoría. Dado que la creación de mapas de bits personalizados está fuera del ámbito de este tutorial, simplemente reutilice los mapas de bits creados por el asistente. Los mapas de bits pequeños son de 16 por 16 píxeles. En el caso de imágenes pequeñas, utilice los mapas de bits a los `IDB_FILESMALL` que tiene acceso el identificador de recurso. Los mapas de bits grandes son de 32 por 32 píxeles. En el caso de imágenes grandes, utilice los mapas de bits a los `IDB_FILELARGE` que tiene acceso el identificador de recurso.
+    Las propiedades **grandes** imágenes e **imágenes pequeñas** especifican los mapas de bits que se usan como iconos para los elementos de la cinta de opciones de esta categoría. Dado que la creación de mapas de bits personalizados está fuera del ámbito de este tutorial, simplemente reutilice los mapas de bits creados por el asistente. Los mapas de bits pequeños son de 16 por 16 píxeles. En el caso de imágenes pequeñas, utilice los mapas de bits a los que tiene acceso el identificador de recurso de `IDB_FILESMALL`. Los mapas de bits grandes son de 32 por 32 píxeles. En el caso de imágenes grandes, utilice los mapas de bits a los que tiene acceso el identificador de recurso de `IDB_FILELARGE`.
 
     > [!NOTE]
     > En las pantallas HDPI (Gran número de puntos por pulgada), se usan automáticamente las versiones HDPI de las imágenes.
@@ -73,17 +73,17 @@ En este tutorial se supone que ha establecido Visual Studio para usar la **confi
 
     Para crear el botón **Imprimir** , arrastre una herramienta de botón hasta el panel.
 
-    En la ventana **propiedades** , cambie la propiedad **ID** a **ID_FILE_PRINT**, que ya debe estar definida. Cambie **Caption** a *Imprimir*. Cambie el índice de la **imagen** a *4*.
+    En la ventana **propiedades** , cambie la propiedad **ID** por **ID_FILE_PRINT**, que ya debe estar definido. Cambie **Caption** a *Imprimir*. Cambie el índice de la **imagen** a *4*.
 
-    Para crear el botón **impresión rápida** , haga clic en la columna valor de propiedad junto a **elementos de menú**y, a continuación, haga clic en los puntos suspensivos ( **...** ). En el **Editor de elementos**, haga clic en el botón **Agregar** sin etiquetar para crear un elemento de menú. En la ventana **propiedades** , cambie **Caption** a *impresión rápida*, **ID** a *ID_FILE_PRINT_DIRECT*e **Image** a *5*. La propiedad Image especifica el icono de **impresión rápida** en `IDB_FILESMALL` el recurso de mapa de bits.
+    Para crear el botón **impresión rápida** , haga clic en la columna valor de propiedad junto a **elementos de menú**y, a continuación, haga clic en los puntos suspensivos ( **...** ). En el **Editor de elementos**, haga clic en el botón **Agregar** sin etiquetar para crear un elemento de menú. En la ventana **propiedades** , cambie **Caption** a *impresión rápida*, **ID** a *ID_FILE_PRINT_DIRECT*e **Image** a *5*. La propiedad Image especifica el icono de **impresión rápida** en el `IDB_FILESMALL` recurso de mapa de bits.
 
 1. Para comprobar que los botones se agregaron al panel de la cinta, compile la aplicación y ejecútela. Para compilar la aplicación, en el menú **compilar** , haga clic en **compilar solución**. Si la aplicación se compila correctamente, ejecute la aplicación haciendo clic en **iniciar depuración** en el menú **depurar** . Se deben mostrar el botón **Imprimir** y el cuadro combinado en el panel **Favoritos** de la pestaña **personalizada** de la cinta de opciones.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Cómo: personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Procedimiento para personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Cómo: personalizar el botón Aplicación](../mfc/how-to-customize-the-application-button.md)
+[Procedimiento para personalizar el botón Aplicación](../mfc/how-to-customize-the-application-button.md)
 
 Para obtener ejemplos de un extremo a otro, vea [ejemplos (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 
