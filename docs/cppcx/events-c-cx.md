@@ -1,13 +1,14 @@
 ---
 title: Eventos (C++/CX)
-ms.date: 07/15/2019
+description: Cómo usar C++/CX para crear y usar controladores de eventos en el Windows Runtime.
+ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740527"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972196"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 
@@ -27,7 +28,7 @@ En el ejemplo siguiente, se muestra cómo declarar y desencadenar un evento. Obs
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Uso
+### <a name="usage"></a>Usage
 
 En el ejemplo siguiente se muestra cómo utiliza una clase de suscripción el operador `+=` para suscribirse al evento, y se proporciona un controlador de eventos que se invocará cuando se desencadene el evento. Observa que la función que se proporciona coincide con la firma del delegado que se define en el lado del publicador en el espacio de nombres `EventTest` .
 
@@ -48,11 +49,11 @@ En el ejemplo siguiente se muestra cómo agregar métodos add, remove y raise pe
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Quitar un controlador de eventos del suscriptor
 
-Aunque no es muy frecuente, quizás desees quitar un controlador de eventos para un evento al que te suscribiste previamente. Por ejemplo, puedes desear sustituirlo por otro controlador de eventos o eliminar algunos recursos contenidos en él. Para quitar un controlador, debes almacenar el EventRegistrationToken que se devuelve de la operación `+=` . Puedes utilizar el operador `-=` en el token para quitar un controlador de eventos.  Sin embargo, el controlador original se podría seguir invocando incluso después haberse quitado. Por consiguiente, si deseas quitar un controlador de eventos, crea una marca de miembro y determina si se quita el evento y, a continuación, en el controlador de eventos, comprueba la marca y vuelve inmediatamente si se determina. En el ejemplo siguiente se muestra el patrón básico.
+Aunque no es muy frecuente, quizás desees quitar un controlador de eventos para un evento al que te suscribiste previamente. Por ejemplo, puedes desear sustituirlo por otro controlador de eventos o eliminar algunos recursos contenidos en él. Para quitar un controlador, debes almacenar el EventRegistrationToken que se devuelve de la operación `+=` . Puedes utilizar el operador `-=` en el token para quitar un controlador de eventos.  Sin embargo, el controlador original se podría seguir invocando incluso después haberse quitado. Por ejemplo, puede producirse una condición de carrera cuando el origen del evento obtiene una lista de controladores y comienza a invocarlos. Si se quita un controlador de eventos mientras esto sucede, la lista se vuelve obsoleta. Por lo tanto, si tiene intención de quitar un controlador de eventos, cree una marca de miembro. Establézcalo si se quita el evento y, a continuación, en el controlador de eventos, Compruebe la marca y vuelva inmediatamente si se establece. En el ejemplo siguiente se muestra el patrón básico.
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Notas
 
 Varios controladores se pueden asociar al mismo evento. El origen de eventos llama secuencialmente a todos los controladores de eventos del mismo subproceso. Si un receptor de eventos se bloquea dentro del método de controlador de eventos, impide que el origen de eventos invoque otros controladores de eventos para este evento.
 
