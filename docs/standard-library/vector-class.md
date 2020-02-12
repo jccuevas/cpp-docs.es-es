@@ -1,6 +1,7 @@
 ---
-title: vector (Clase)
-ms.date: 01/04/2020
+title: vector (clase)
+description: Referencia de la C++ implementación de la biblioteca estándar de Microsoft de vector de clase.
+ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,14 +87,14 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676969"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126232"
 ---
-# <a name="vector-class"></a>vector (Clase)
+# <a name="vector-class"></a>vector (clase)
 
 La C++ clase Vector de la biblioteca estándar es una plantilla de clase para los contenedores de secuencias. Un vector almacena los elementos de un tipo determinado en una organización lineal y permite el acceso aleatorio rápido a cualquier elemento. Un vector es el contenedor preferido para una secuencia cuando el rendimiento de acceso aleatorio es Premium.
 
@@ -104,7 +105,7 @@ template <class Type, class Allocator = allocator<Type>>
 class vector
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *Escriba*\
 Tipo de datos de elementos que se almacenará en el vector.
@@ -112,7 +113,7 @@ Tipo de datos de elementos que se almacenará en el vector.
 \ de *asignador*
 Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es `allocator<Type>`.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Los vectores permiten inserciones y eliminaciones de tiempo constante al final de la secuencia. Insertar o eliminar elementos en medio de un vector requiere tiempo lineal. El contenedor de la [clase deque](../standard-library/deque-class.md) es más rápido en las inserciones y eliminaciones al principio y al final de una secuencia. El contenedor de [clases de lista](../standard-library/list-class.md) es más rápido en las inserciones y eliminaciones en cualquier ubicación dentro de una secuencia.
 
@@ -122,7 +123,7 @@ El [vector\<bool > clase](../standard-library/vector-bool-class.md) es una espec
 
 [Vector\<bool > clase de referencia](../standard-library/vector-bool-class.md#reference_class) es una clase anidada cuyos objetos pueden proporcionar referencias a elementos (bits únicos) dentro de un vector\<bool > objeto.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Constructores
 
@@ -130,7 +131,7 @@ El [vector\<bool > clase](../standard-library/vector-bool-class.md) es una espec
 |-|-|
 |[vector](#vector)|Construye un vector de un tamaño determinado o con elementos de un valor determinado, o con un `allocator` específico, o como una copia de algún otro vector.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -147,7 +148,7 @@ El [vector\<bool > clase](../standard-library/vector-bool-class.md) es una espec
 |[size_type](#size_type)|Tipo que cuenta el número de elementos de un vector.|
 |[value_type](#value_type)|Tipo que representa el tipo de datos almacenado en un vector.|
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -155,7 +156,7 @@ El [vector\<bool > clase](../standard-library/vector-bool-class.md) es una espec
 |[at](#at)|Devuelve una referencia al elemento en una ubicación especificada del vector.|
 |[back](#back)|Devuelve una referencia al último elemento del vector.|
 |[begin](#begin)|Devuelve un iterador de acceso aleatorio al primer elemento del vector.|
-|[capacity](#capacity)|Devuelve el número de elementos que puede contener el vector sin asignar más espacio de almacenamiento.|
+|[capacidad](#capacity)|Devuelve el número de elementos que puede contener el vector sin asignar más espacio de almacenamiento.|
 |[cbegin](#cbegin)|Devuelve un iterador const de acceso aleatorio al primer elemento del vector.|
 |[cend](#cend)|Devuelve un iterador const de acceso aleatorio que apunta justo después del final del vector.|
 |[crbegin](#crbegin)|Devuelve un iterador constante al primer elemento de un vector invertido.|
@@ -196,7 +197,7 @@ Tipo que representa la clase de asignador para el objeto de vector.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `allocator_type` es un sinónimo del parámetro de plantilla `Allocator`.
 
@@ -216,7 +217,7 @@ template <class InputIterator>
 void assign(InputIterator first, InputIterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *primer*\
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
@@ -233,7 +234,7 @@ Valor del elemento que se va a insertar en el vector.
 *init_list*\
 initializer_list que contiene los elementos que se van a insertar.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 En primer lugar, `assign` borra los elementos existentes en un vector. A continuación, `assign` inserta un intervalo especificado de elementos del vector original en un vector, o inserta copias de un nuevo elemento de valor especificado en un vector.
 
@@ -294,7 +295,7 @@ reference at(size_type position);
 const_reference at(size_type position) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *posición*\
 Subíndice o número de posición del elemento al que se va a hacer referencia en el vector.
@@ -303,7 +304,7 @@ Subíndice o número de posición del elemento al que se va a hacer referencia e
 
 Referencia al elemento indicado en el argumento. Si la *posición* es mayor que el tamaño del vector, `at` produce una excepción.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el valor devuelto de `at` se asigna a un `const_reference`, el objeto de vector no se puede modificar. Si el valor devuelto de `at` se asigna a `reference`, el objeto de vector se puede modificar.
 
@@ -349,7 +350,7 @@ const_reference back() const;
 
 Último elemento del vector. Si el vector está vacío, el valor devuelto no está definido.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el valor devuelto de `back` se asigna a un `const_reference`, el objeto de vector no se puede modificar. Si el valor devuelto de `back` se asigna a `reference`, el objeto de vector se puede modificar.
 
@@ -393,7 +394,7 @@ iterator begin();
 
 Un iterador de acceso aleatorio que se dirige al primer elemento del `vector` o a la ubicación que sigue a un `vector` vacío. Compare siempre el valor devuelto con [vector:: end](#end) para asegurarse de que es válido.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el valor devuelto de `begin` se asigna a un [vector:: const_iterator](#const_iterator), no se puede modificar el objeto `vector`. Si el valor devuelto de `begin` se asigna a un [vector::iterator](#iterator), el objeto `vector` se puede modificar.
 
@@ -454,7 +455,7 @@ size_type capacity() const;
 
 Longitud actual de almacenamiento asignado para el vector.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 La función miembro [resize](#resize) es más eficaz si se asigna memoria suficiente para tenerla en cuenta. Use la función miembro [reserve](#reserve) para especificar la cantidad de memoria asignada.
 
@@ -498,7 +499,7 @@ const_iterator cbegin() const;
 
 Un iterador **const** de acceso aleatorio que apunta al primer elemento del intervalo o la ubicación situada más allá del final de un intervalo vacío (para un intervalo vacío, `cbegin() == cend()`).
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.
 
@@ -524,7 +525,7 @@ const_iterator cend() const;
 
 Un iterador **const** de acceso aleatorio que apunta justo después del final del intervalo.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `cend` se usa para probar si un iterador ha sobrepasado el final de su intervalo.
 
@@ -584,7 +585,7 @@ Un tipo que proporciona un iterador de acceso aleatorio que puede leer un elemen
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 No se puede usar un tipo `const_iterator` para modificar el valor de un elemento.
 
@@ -600,7 +601,7 @@ Un tipo que proporciona un puntero a un elemento **const** en un vector.
 typedef typename Allocator::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 No se puede usar un tipo `const_pointer` para modificar el valor de un elemento.
 
@@ -614,7 +615,7 @@ Un tipo que proporciona una referencia a un elemento **const** almacenado en un 
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 No se puede usar un tipo `const_reference` para modificar el valor de un elemento.
 
@@ -658,7 +659,7 @@ Un tipo que proporciona un iterador de acceso aleatorio que puede leer cualquier
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Un tipo `const_reverse_iterator` no puede modificar el valor de un elemento y se usa para recorrer en iteración el vector en orden inverso.
 
@@ -678,7 +679,7 @@ const_reverse_iterator crbegin() const;
 
 Un iterador inverso constante de acceso aleatorio que se dirige al primer elemento de un [vector](../standard-library/vector-class.md) inverso o al que fue el último elemento del `vector` sin invertir.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Con el valor devuelto de `crbegin`, no se puede modificar el objeto `vector`.
 
@@ -727,7 +728,7 @@ const_reverse_iterator crend() const;
 
 Un iterador inverso constante de acceso aleatorio que se dirige a la ubicación siguiente al último elemento de un [vector](../standard-library/vector-class.md) invertido (la ubicación que había precedido al primer elemento del `vector` sin invertir).
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `crend` se usa con un `vector` invertido igual que [vector::cend](#cend) se usa con un `vector`.
 
@@ -790,7 +791,7 @@ int main()
 {
     using namespace std;
     vector<int> c1;
-    vector<int>::pointer c1 ptr;
+    vector<int>::pointer c1_ptr;
     vector<int>::const_pointer c1_cPtr;
 
     c1.push_back(1);
@@ -805,11 +806,11 @@ int main()
     cout << endl;
 
     cout << "The vector c1 now contains elements:";
-    c1 ptr = c1.data();
-    *c1 ptr = 20;
-    for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
+    c1_ptr = c1.data();
+    *c1_ptr = 20;
+    for (size_t n = c1.size(); 0 < n; --n, c1_ptr++)
     {
-        cout << " " << *c1 ptr;
+        cout << " " << *c1_ptr;
     }
     cout << endl;
 }
@@ -828,7 +829,7 @@ Tipo que proporciona la diferencia entre dos iteradores que hacen referencia a e
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Un `difference_type` también se puede describir como el número de elementos entre dos punteros, dado que un puntero a un elemento contiene su dirección.
 
@@ -888,7 +889,7 @@ iterator emplace(
     Types&&... args);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *posición*\
 La posición del [vector](../standard-library/vector-class.md) donde se inserta el primer elemento.
@@ -900,7 +901,7 @@ Argumentos del constructor. La función deduce qué sobrecarga de constructor in
 
 La función devuelve un iterador que apunta a la posición en la que se insertó el nuevo elemento en el `vector`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Cualquier operación de inserción puede ser costosa; consulte [vector (clase](../standard-library/vector-class.md) ) para obtener una explicación del rendimiento de `vector`.
 
@@ -955,7 +956,7 @@ template <class... Types>
 void emplace_back(Types&&... args);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *args*
 Argumentos del constructor. La función deduce qué sobrecarga de constructor invocar según los argumentos que se proporcionan.
@@ -1028,7 +1029,7 @@ const_iterator end() const;
 
 Iterador más allá del final del vector. Si el vector está vacío, `vector::end() == vector::begin()`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el valor devuelto de `end` se asigna a una variable de tipo `const_iterator`, el objeto de vector no se puede modificar. Si el valor devuelto de `end` se asigna a una variable de tipo `iterator`, el objeto de vector se puede modificar.
 
@@ -1071,7 +1072,7 @@ iterator erase(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *posición*\
 Posición del elemento que se quita del vector.
@@ -1145,7 +1146,7 @@ const_reference front() const;
 
 Referencia al primer elemento en el objeto de vector. Si el vector está vacío, el valor devuelto no está definido.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el valor devuelto de `front` se asigna a un `const_reference`, el objeto de vector no se puede modificar. Si el valor devuelto de `front` se asigna a una **referencia**, el objeto de vector se puede modificar.
 
@@ -1177,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Devuelve una copia del objeto de asignador usado para construir el vector.
 
@@ -1189,7 +1190,7 @@ Allocator get_allocator() const;
 
 Asignador utilizado por el vector.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Los asignadores de la clase vector especifican cómo la clase administra el almacenamiento. Los asignadores predeterminados proporcionados con las clases contenedoras de la biblioteca estándar de C++ son suficientes para la mayoría de las necesidades de programación. Escribir y usar su propia clase de asignador es una característica C++ avanzada.
 
@@ -1241,7 +1242,7 @@ void insert(
     InputIterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *posición*\
 Posición del vector donde se inserta el primer elemento.
@@ -1262,7 +1263,7 @@ Posición del primer elemento más allá del intervalo de elementos que se va a 
 
 Las dos primeras funciones `insert` devuelven un iterador que apunta a la posición del vector en la que se insertó el nuevo elemento.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Como condición previa, el *primero* y el *último* no deben ser iteradores en el vector, o el comportamiento es indefinido. Cualquier operación de inserción puede ser costosa; consulte [vector (clase](../standard-library/vector-class.md) ) para obtener una explicación del rendimiento de `vector`.
 
@@ -1338,7 +1339,7 @@ Tipo que proporciona un iterador de acceso aleatorio que puede leer o modificar 
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Se puede usar un tipo **iterator** para modificar el valor de un elemento.
 
@@ -1346,7 +1347,7 @@ Se puede usar un tipo **iterator** para modificar el valor de un elemento.
 
 Vea el ejemplo de [begin](#begin).
 
-## <a name="max_size"></a> max_size
+## <a name="max_size"></a>max_size
 
 Devuelve la longitud máxima del vector.
 
@@ -1377,7 +1378,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a> operator[]
+## <a name="op_at"></a>operador []
 
 Devuelve una referencia al elemento vector en una posición especificada.
 
@@ -1387,7 +1388,7 @@ reference operator[](size_type position);
 const_reference operator[](size_type position) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *posición*\
 Posición del elemento vector.
@@ -1396,7 +1397,7 @@ Posición del elemento vector.
 
 Si la posición especificada es mayor o igual que el tamaño del contenedor, el resultado es sin definir.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el valor devuelto de `operator[]` se asigna a un `const_reference`, el objeto de vector no se puede modificar. Si el valor devuelto de `operator[]` se asigna a una referencia, el objeto vector se puede modificar.
 
@@ -1423,7 +1424,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operador =
 
 Reemplaza los elementos del vector con una copia de otro vector.
 
@@ -1433,12 +1434,12 @@ vector& operator=(const vector& right);
 vector& operator=(vector&& right);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *derecha*
 El [vector](../standard-library/vector-class.md) que se copia en el `vector`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Después de borrar los elementos existentes en un `vector`, `operator=` copia o mueve el contenido de la *derecha* al `vector`.
 
@@ -1491,9 +1492,9 @@ Tipo que proporciona un puntero a un elemento en un vector.
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
-Se puede usar un tipo **pointer** para modificar el valor de un elemento.
+Se puede usar un **puntero** de tipo para modificar el valor de un elemento.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1533,7 +1534,7 @@ Elimina el elemento situado al final del vector.
 void pop_back();
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Para obtener un ejemplo de código, vea [vector::push_back()](#push_back).
 
@@ -1547,7 +1548,7 @@ void push_back(const T& value);
 void push_back(T&& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *value*\
 El valor que se asignará al elemento que se agrega al final del vector.
@@ -1605,7 +1606,7 @@ const_reverse_iterator rbegin() const;
 
 Un iterador inverso de acceso aleatorio que se dirige al primer elemento de un vector inverso o al que fue el último elemento del vector sin invertir.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el valor devuelto de `rbegin` se asigna a un `const_reverse_iterator`, el objeto de vector no se puede modificar. Si el valor devuelto de `rbegin` se asigna a `reverse_iterator`, el objeto de vector se puede modificar.
 
@@ -1667,7 +1668,7 @@ reverse_iterator rend();
 
 Un iterador inverso constante de acceso aleatorio que se dirige a la ubicación siguiente al último elemento de un vector invertido (la ubicación que había precedido al primer elemento del vector sin invertir).
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `rend` se usa con un vector invertido del mismo modo que [end](#end) se usa con un vector.
 
@@ -1712,7 +1713,7 @@ Reserva una longitud mínima de almacenamiento para un objeto de vector y asigna
 void reserve(size_type count);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *recuento*\
 Longitud mínima de almacenamiento a asignar para el vector.
@@ -1754,7 +1755,7 @@ void resize(size_type new_size);
 void resize(size_type new_size, Type value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *new_size*\
 Nuevo tamaño del vector.
@@ -1762,7 +1763,7 @@ Nuevo tamaño del vector.
 *value*\
 El valor de inicialización de elementos nuevos añadido al vector si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, los nuevos objetos utilizan su constructor predeterminado.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si el tamaño del contenedor es menor que el tamaño solicitado, *NEW_SIZE*, `resize` agrega elementos al vector hasta que alcanza el tamaño solicitado. Cuando el tamaño del contenedor es mayor que el tamaño solicitado, `resize` elimina los elementos más cercanos al final del contenedor hasta que alcanza el tamaño *NEW_SIZE*. No se realiza ninguna acción si el tamaño actual del contenedor es igual que el tamaño solicitado.
 
@@ -1882,7 +1883,7 @@ Tipo que proporciona un iterador de acceso aleatorio que puede leer o modificar 
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El tipo `reverse_iterator` se utiliza para procesar una iteración en el vector en orden inverso.
 
@@ -1996,7 +1997,7 @@ friend void swap(
     vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *derecha*
 Vector que proporciona los elementos que se van a intercambiar. O bien, un vector cuyos elementos se van a intercambiar con los elementos del vector *izquierdo*.
@@ -2051,7 +2052,7 @@ Tipo que representa el tipo de datos almacenado en un vector.
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `value_type` es un sinónimo del parámetro de plantilla `Type`.
 
@@ -2097,7 +2098,7 @@ template <class InputIterator>
 vector(InputIterator first, InputIterator last, const Allocator& allocator);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ de *asignador*
 La clase de asignador que se usa con este objeto. [get_allocator](#get_allocator) devuelve la clase de asignador del objeto.
@@ -2120,7 +2121,7 @@ Posición del primer elemento más allá del intervalo de elementos que se va a 
 *init_list*\
 `initializer_list` que contiene los elementos que se van a copiar.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Todos los constructores almacenan un objeto de asignador (*asignador*) e inicializan el vector.
 
@@ -2233,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

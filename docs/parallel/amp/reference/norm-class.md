@@ -6,41 +6,41 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351568"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126518"
 ---
 # <a name="norm-class"></a>norm (Clase)
 
-Representa un número de la norma. Cada elemento flotante es un número de punto en el intervalo de [-1, 0F, 1, 0F].
+Representa un número de norma. Cada elemento es un número de punto flotante en el intervalo de [-1,0 f, 1.0 f].
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class norm;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[NORM Constructor](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar en 0, 0f.|
+|[norma (constructor)](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar en 0.0 f.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |norm::operator-||
 |norm::operator--||
-|NORM::operator float|Operador de conversión. Convertir el número de la norma en flotante valor de punto.|
+|norma:: Operator Float|Operador de conversión. Convierta el número de norma en un valor de punto flotante.|
 |norm::operator*=||
 |norm::operator/=||
-|norm::operator++||
+|norma:: Operator + +||
 |norm::operator+=||
 |norm::operator=||
 |norm::operator-=||
@@ -51,15 +51,15 @@ class norm;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> NORM
+## <a name="ctor"></a>norma
 
-Constructor predeterminado. Inicializar en 0, 0f.
+Constructor predeterminado. Inicializar en 0.0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -92,11 +92,11 @@ norm(
 ### <a name="parameters"></a>Parámetros
 
 *_V*<br/>
-El valor utilizado para inicializar.
+Valor que se usa para inicializar.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

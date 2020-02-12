@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr (estructura)
+title: Estructura de scheduler_ptr
 ms.date: 11/04/2016
 f1_keywords:
 - scheduler_ptr
@@ -8,43 +8,43 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd044a6255a17882c26183223f71564f98c9f7b2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180738"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142773"
 ---
-# <a name="schedulerptr-structure"></a>scheduler_ptr (estructura)
+# <a name="scheduler_ptr-structure"></a>Estructura de scheduler_ptr
 
-Representa un puntero a un programador. Esta clase existe para permitir la especificación de una duración compartida mediante shared_ptr o simplemente una referencia sin formato mediante un puntero sin formato.
+Representa un puntero a un programador. Esta clase existe para permitir la especificación de una duración compartida mediante shared_ptr o simplemente una referencia sin formato mediante el puntero sin formato.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct scheduler_ptr;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[scheduler_ptr::scheduler_ptr](#ctor)|Sobrecargado. Crea un puntero de programador que va de shared_ptr al programador|
+|[scheduler_ptr:: scheduler_ptr](#ctor)|Sobrecargado. Crea un puntero de programador que va de shared_ptr al programador|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[scheduler_ptr::get](#get)|Devuelve el puntero sin formato al programador|
+|[scheduler_ptr:: get](#get)|Devuelve el puntero sin formato al programador|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[scheduler_ptr::operator bool](#operator_bool)|Prueba si el puntero del programador no es null|
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|Se comporta como un puntero|
+|[scheduler_ptr:: Operator bool](#operator_bool)|Prueba si el puntero del programador no es null|
+|[scheduler_ptr:: Operator-&gt;](#operator_ptr)|Se comporta como un puntero|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -52,55 +52,55 @@ struct scheduler_ptr;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** pplinterface.h
+**Encabezado:** pplinterface. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="get"></a>  scheduler_ptr::Get (método)
+## <a name="get"></a>scheduler_ptr:: get (método)
 
 Devuelve el puntero sin formato al programador.
 
-```
+```cpp
 scheduler_interface* get() const;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
+## <a name="operator_bool"></a>scheduler_ptr:: Operator bool
 
-Comprueba si el puntero del programador es distinto de null.
+Comprueba si el puntero del programador no es NULL.
 
-```
+```cpp
 operator bool() const;
 ```
 
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
+## <a name="operator_ptr"></a>scheduler_ptr:: Operator-&gt;
 
 Se comporta como un puntero.
 
-```
+```cpp
 scheduler_interface* operator->() const;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
+## <a name="ctor"></a>scheduler_ptr:: scheduler_ptr (constructor)
 
-Crea un puntero de programador de shared_ptr al programador.
+Crea un puntero de programador de shared_ptr a Scheduler.
 
-```
+```cpp
 explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*scheduler*<br/>
-El programador para convertir.
+*aquél*<br/>
+Programador que se va a convertir.
 
 *pScheduler*<br/>
-Para convertir el puntero del programador.
+Puntero de programador que se va a convertir.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

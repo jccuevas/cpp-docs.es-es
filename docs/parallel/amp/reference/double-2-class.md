@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 9482c2839c4963d533eb643fa0ef86a5c66636a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73656415d1b8774fe8304d674872524e76ee301d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182337"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126713"
 ---
-# <a name="double2-class"></a>double_2 (Clase)
+# <a name="double_2-class"></a>double_2 (Clase)
 
 Representa un vector corto de 2 dobles.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class double_2;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor double_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de double_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_2::get_x||
 |double_2::get_xy||
@@ -78,7 +78,7 @@ class double_2;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_2::operator-||
 |double_2::operator--||
@@ -91,13 +91,13 @@ class double_2;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_2::size (Constante)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_2::g||
 |double_2::gr||
@@ -114,15 +114,15 @@ class double_2;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_2
+## <a name="ctor"></a>double_2
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 double_2() restrict(amp,
     cpu);
 
@@ -163,23 +163,23 @@ explicit inline double_2(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-##  <a name="double_2__size"></a> Tamaño
+## <a name="double_2__size"></a>ajusta
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

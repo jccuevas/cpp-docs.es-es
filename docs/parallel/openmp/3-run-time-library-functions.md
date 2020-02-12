@@ -2,12 +2,12 @@
 title: 3. Funciones de biblioteca en tiempo de ejecución
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857962"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142954"
 ---
 # <a name="3-run-time-library-functions"></a>3. funciones de la biblioteca en tiempo de ejecución
 
@@ -42,7 +42,7 @@ Las funciones descritas en esta sección afectan y supervisan los subprocesos, l
 
 ### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads función)
 
-La función `omp_set_num_threads` establece el número predeterminado de subprocesos que se van a usar para regiones paralelas posteriores que no especifican una cláusula `num_threads`. El formato es el siguiente:
+La función `omp_set_num_threads` establece el número predeterminado de subprocesos que se van a usar para regiones paralelas posteriores que no especifican una cláusula `num_threads`. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -66,7 +66,7 @@ Para obtener más información, vea [omp_set_dynamic](#317-omp_set_dynamic-funct
 
 ### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads función)
 
-La función `omp_get_num_threads` devuelve el número de subprocesos actualmente en el equipo que ejecuta la región paralela desde la que se llama. El formato es el siguiente:
+La función `omp_get_num_threads` devuelve el número de subprocesos actualmente en el equipo que ejecuta la región paralela desde la que se llama. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -87,7 +87,7 @@ Para obtener más información, vea [omp_set_dynamic](#317-omp_set_dynamic-funct
 
 ### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads función)
 
-La función `omp_get_max_threads` devuelve un entero que se garantiza que sea al menos tan grande como el número de subprocesos que se utilizarían para formar un equipo si una región paralela sin una cláusula `num_threads` se vería en ese punto del código. El formato es el siguiente:
+La función `omp_get_max_threads` devuelve un entero que se garantiza que sea al menos tan grande como el número de subprocesos que se utilizarían para formar un equipo si una región paralela sin una cláusula `num_threads` se vería en ese punto del código. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 Lo siguiente expresa un límite inferior en el valor de `omp_get_max_threads`:
 
-```
+> *threads-Used-for-Next-team* <= `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-Tenga en cuenta que si otra región paralela usa la cláusula `num_threads` para solicitar un número específico de subprocesos, la garantía en el límite inferior del resultado de `omp_get_max_threads` no tiene ninguna.
+Tenga en cuenta que si otra región paralela usa la cláusula `num_threads` para solicitar un número específico de subprocesos, la garantía en el límite inferior del resultado de `omp_get_max_threads` ya no se mantiene.
 
 El valor devuelto de la función `omp_get_max_threads` se puede usar para asignar dinámicamente el almacenamiento suficiente para todos los subprocesos del equipo formado en la siguiente región paralela.
 
@@ -117,7 +113,7 @@ El valor devuelto de la función `omp_get_max_threads` se puede usar para asigna
 
 La función `omp_get_thread_num` devuelve el número de subprocesos, dentro de su equipo, del subproceso que ejecuta la función. El número de subprocesos está comprendido entre 0 y `omp_get_num_threads()`-1, ambos incluidos. El subproceso principal del equipo es el subproceso 0.
 
-El formato es el siguiente:
+El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -132,7 +128,7 @@ Si se llama desde una región serie, `omp_get_thread_num` devuelve 0. Si se llam
 
 ### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs función)
 
-La función `omp_get_num_procs` devuelve el número de procesadores que están disponibles para el programa en el momento en que se llama a la función. El formato es el siguiente:
+La función `omp_get_num_procs` devuelve el número de procesadores que están disponibles para el programa en el momento en que se llama a la función. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -141,7 +137,7 @@ int omp_get_num_procs(void);
 
 ### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel función)
 
-La función `omp_in_parallel` devuelve un valor distinto de cero si se llama dentro de la extensión dinámica de una región paralela que se ejecuta en paralelo; de lo contrario, devuelve 0. El formato es el siguiente:
+La función `omp_in_parallel` devuelve un valor distinto de cero si se llama dentro de la extensión dinámica de una región paralela que se ejecuta en paralelo; de lo contrario, devuelve 0. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -152,7 +148,7 @@ Esta función devuelve un valor distinto de cero cuando se llama desde dentro de
 
 ### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic función)
 
-La función `omp_set_dynamic` habilita o deshabilita el ajuste dinámico del número de subprocesos disponibles para la ejecución de regiones paralelas. El formato es el siguiente:
+La función `omp_set_dynamic` habilita o deshabilita el ajuste dinámico del número de subprocesos disponibles para la ejecución de regiones paralelas. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -171,7 +167,7 @@ El valor predeterminado para el ajuste dinámico de los subprocesos está defini
 
 #### <a name="microsoft-specific"></a>Específico de Microsoft
 
-La compatibilidad actual de `omp_get_dynamic` y `omp_set_dynamic` es la siguiente: 
+La compatibilidad actual de `omp_get_dynamic` y `omp_set_dynamic` es la siguiente:
 
 El parámetro de entrada para `omp_set_dynamic` no afecta a la Directiva de subprocesos y no cambia el número de subprocesos. `omp_get_num_threads` siempre devuelve el número definido por el usuario, si está establecido, o el número de subproceso predeterminado. En la implementación actual de Microsoft, `omp_set_dynamic(0)` desactiva el subprocesamiento dinámico para que el conjunto de subprocesos existente se pueda reutilizar para la siguiente región paralela. `omp_set_dynamic(1)` activa el subprocesamiento dinámico descartando el conjunto de subprocesos existente y creando un nuevo conjunto para la próxima región paralela. El número de subprocesos del nuevo conjunto es el mismo que el conjunto anterior y se basa en el valor devuelto de `omp_get_num_threads`. Por lo tanto, para obtener el mejor rendimiento, utilice `omp_set_dynamic(0)` para reutilizar los subprocesos existentes.
 
@@ -183,7 +179,7 @@ El parámetro de entrada para `omp_set_dynamic` no afecta a la Directiva de subp
 
 ### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic función)
 
-La función `omp_get_dynamic` devuelve un valor distinto de cero si está habilitado el ajuste dinámico de los subprocesos y devuelve 0 en caso contrario. El formato es el siguiente:
+La función `omp_get_dynamic` devuelve un valor distinto de cero si está habilitado el ajuste dinámico de los subprocesos y devuelve 0 en caso contrario. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -198,7 +194,7 @@ Si la implementación no implementa el ajuste dinámico del número de subproces
 
 ### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested función)
 
-La función `omp_set_nested` habilita o deshabilita el paralelismo anidado. El formato es el siguiente:
+La función `omp_set_nested` habilita o deshabilita el paralelismo anidado. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -220,7 +216,7 @@ Cuando el paralelismo anidado está habilitado, el número de subprocesos utiliz
 
 ### <a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested función)
 
-La función `omp_get_nested` devuelve un valor distinto de cero si el paralelismo anidado está habilitado y 0 si está deshabilitado. Para obtener más información sobre el paralelismo anidado, consulte [omp_set_nested](#319-omp_set_nested-function). El formato es el siguiente:
+La función `omp_get_nested` devuelve un valor distinto de cero si el paralelismo anidado está habilitado y 0 si está deshabilitado. Para obtener más información sobre el paralelismo anidado, consulte [omp_set_nested](#319-omp_set_nested-function). El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -253,7 +249,7 @@ Las funciones de bloqueo de OpenMP tienen acceso a la variable de bloqueo de tal
 
 ### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock y omp_init_nest_lock funciones
 
-Estas funciones proporcionan el único medio para inicializar un bloqueo. Cada función inicializa el bloqueo asociado al *bloqueo* de parámetro para su uso en las próximas llamadas. El formato es el siguiente:
+Estas funciones proporcionan el único medio para inicializar un bloqueo. Cada función inicializa el bloqueo asociado al *bloqueo* de parámetro para su uso en las próximas llamadas. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -265,7 +261,7 @@ El estado inicial es desbloqueado (es decir, ningún subproceso posee el bloqueo
 
 ### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 funciones de omp_destroy_lock y omp_destroy_nest_lock
 
-Estas funciones garantizan que no se inicialice el *bloqueo* de la variable de bloqueo que señala. El formato es el siguiente:
+Estas funciones garantizan que no se inicialice el *bloqueo* de la variable de bloqueo que señala. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -277,7 +273,7 @@ No es compatible con la llamada a cualquiera de estas rutinas con una variable d
 
 ### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock y funciones de omp_set_nest_lock
 
-Cada una de estas funciones bloquea el subproceso que ejecuta la función hasta que el bloqueo especificado esté disponible y, a continuación, establece el bloqueo. Un bloqueo simple está disponible si está desbloqueado. Un bloqueo anidable está disponible si está desbloqueado o si ya es propiedad del subproceso que ejecuta la función. El formato es el siguiente:
+Cada una de estas funciones bloquea el subproceso que ejecuta la función hasta que el bloqueo especificado esté disponible y, a continuación, establece el bloqueo. Un bloqueo simple está disponible si está desbloqueado. Un bloqueo anidable está disponible si está desbloqueado o si ya es propiedad del subproceso que ejecuta la función. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -291,7 +287,7 @@ Para un bloqueo anidable, el argumento de la función `omp_set_nest_lock` debe a
 
 ### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>las funciones de omp_unset_lock y omp_unset_nest_lock de 3.2.4
 
-Estas funciones proporcionan el medio para liberar la propiedad de un bloqueo. El formato es el siguiente:
+Estas funciones proporcionan el medio para liberar la propiedad de un bloqueo. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -307,7 +303,7 @@ En el caso de un bloqueo anidable, la función `omp_unset_nest_lock` reduce el r
 
 ### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock y omp_test_nest_lock funciones
 
-Estas funciones intentan establecer un bloqueo pero no bloquean la ejecución del subproceso. El formato es el siguiente:
+Estas funciones intentan establecer un bloqueo pero no bloquean la ejecución del subproceso. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -330,7 +326,7 @@ Las funciones descritas en esta sección admiten un temporizador de reloj portá
 
 ### <a name="331-omp_get_wtime-function"></a>3.3.1 omp_get_wtime función)
 
-La función `omp_get_wtime` devuelve un valor de punto flotante de precisión doble igual al tiempo de reloj de la pared transcurrido en segundos desde algún momento en el pasado.  La "hora real" en el pasado es arbitraria, pero se garantiza que no cambia durante la ejecución del programa de la aplicación. El formato es el siguiente:
+La función `omp_get_wtime` devuelve un valor de punto flotante de precisión doble igual al tiempo de reloj de la pared transcurrido en segundos desde algún momento en el pasado.  La "hora real" en el pasado es arbitraria, pero se garantiza que no cambia durante la ejecución del programa de la aplicación. El formato es como sigue:
 
 ```cpp
 #include <omp.h>
@@ -352,7 +348,7 @@ Los tiempos devueltos son "veces por subproceso", por lo que no es necesario que
 
 ### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick función)
 
-La función `omp_get_wtick` devuelve un valor de punto flotante de precisión doble igual al número de segundos entre los ciclos de reloj sucesivos. El formato es el siguiente:
+La función `omp_get_wtick` devuelve un valor de punto flotante de precisión doble igual al número de segundos entre los ciclos de reloj sucesivos. El formato es como sigue:
 
 ```cpp
 #include <omp.h>

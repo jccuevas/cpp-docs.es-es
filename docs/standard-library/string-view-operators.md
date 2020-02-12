@@ -1,5 +1,5 @@
 ---
-title: '&lt;operadores&gt; string_view'
+title: operadores de&gt; de string_view de &lt;
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: caa6e515428cc0ea767eef20e819753c8f7ff8f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459218"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127743"
 ---
-# <a name="ltstringviewgt-operators"></a>&lt;operadores&gt; string_view
+# <a name="ltstring_viewgt-operators"></a>operadores de&gt; de string_view de &lt;
 
 Utilice estos operadores para comparar dos objetos string_view, o un string_view y algún otro objeto de cadena (por ejemplo, [STD:: String](basic-string-class.md)o **Char\*** ) para el que se proporciona una conversión implícita. 
 
@@ -32,7 +32,7 @@ Utilice estos operadores para comparar dos objetos string_view, o un string_view
 |-|-|-|
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[operator""sv](#op_sv)|
+|[operator==](#op_eq_eq)|[operador "" VP](#op_sv)|
 
 ## <a name="op_neq"></a>operador! =
 
@@ -57,19 +57,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *izquierda*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
-*correcta*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *derecha*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si el objeto en el lado izquierdo del operador no es lexicográficamente igual que el objeto del lado derecho; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Debe existir una conversión implícita de *convertible_string_type* a string_view en el otro lado. 
+Debe existir una conversión implícita de *convertible_string_type* al string_view en el otro lado. 
 
 La comparación se basa en una comparación lexicográfica en pares de las secuencias de caracteres. Si tienen el mismo número de elementos y los elementos son iguales, los dos objetos son iguales. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -96,19 +96,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *izquierda*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
-*correcta*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *derecha*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si el objeto en el lado izquierdo del operador es lexicográficamente igual que el objeto del lado derecho; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Debe existir una conversión implícita de *convertible_string_type* a string_view en el otro lado. 
+Debe existir una conversión implícita de *convertible_string_type* al string_view en el otro lado. 
 
 La comparación se basa en una comparación lexicográfica en pares de las secuencias de caracteres. Si tienen el mismo número de elementos y los elementos son iguales, los dos objetos son iguales.
 
@@ -135,19 +135,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *izquierda*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
-*correcta*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *derecha*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si el objeto en el lado izquierdo del operador es lexicográficamente menor que el objeto del lado derecho; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Debe existir una conversión implícita de *convertible_string_type* a string_view en el otro lado. 
+Debe existir una conversión implícita de *convertible_string_type* al string_view en el otro lado. 
 
 La comparación se basa en una comparación lexicográfica en pares de las secuencias de caracteres. Cuando se encuentra el primer par de caracteres distinto de, se devuelve el resultado de la comparación. Si no se encuentran caracteres desiguales, pero una secuencia es más corta, la secuencia más corta es menor que la más larga. En otras palabras, "cat" es menor que "gatos".
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>Operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto en el lado izquierdo del operador es menor o igual que el objeto del lado derecho.
 
@@ -196,23 +196,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *izquierda*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
-*correcta*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *derecha*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si el objeto en el lado izquierdo del operador es lexicográficamente menor o igual que el objeto del lado derecho; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Vea [operador&lt;](#op_lt).
 
-## <a name="op_lt_lt"></a>Operator&lt;&lt;
+## <a name="op_lt_lt"></a>operador&lt;&lt;
 
-Escribe un string_view en un flujo de salida.
+Escribe una string_view en un flujo de salida.
 
 ```cpp
 template <class CharType, class Traits>
@@ -222,19 +222,19 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ostr*\
+\ *ostr*
 flujo de salida en el que se escribe.
 
-*CAD*\
+\ *Str*
 String_view que se va a escribir en un flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto
 
 flujo de salida en el que se escribe.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice este operador para insertar el contenido de un string_view en un flujo de salida, por ejemplo, mediante [STD:: cout](iostream.md#cout).
+Utilice este operador para insertar el contenido de una string_view en un flujo de salida, por ejemplo, mediante [STD:: cout](iostream.md#cout).
 
 ## <a name="op_gt"></a> operator&gt;
 
@@ -259,21 +259,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *izquierda*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
-*correcta*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *derecha*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el objeto en el lado izquierdo del operador es lexicográficamente mayor que el objeto string_view del lado derecho; en caso contrario, **false**.
+**true** si el objeto en el lado izquierdo del operador es lexicográficamente mayor que el objeto de string_view del lado derecho; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Vea [operador&lt;](#op_lt).
 
-## <a name="op_gt_eq"></a>Operator&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto en el lado izquierdo del operador es mayor o igual que el objeto del lado derecho.
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *izquierda*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
-*correcta*\
-Cualquier tipo de cadena convertible o un objeto `basic_string_view` de tipo que se va a comparar.
+\ *derecha*
+Cualquier tipo de cadena convertible o un objeto de tipo `basic_string_view` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si el objeto en el lado izquierdo del operador es lexicográficamente mayor o igual que el objeto del lado derecho; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Vea [operador&lt;](#op_lt).
 
 ## <a name="op_sv"></a>operador "" VP (string_view literal)
 
-Construye un string_view a partir de un literal de cadena. Requiere un `std::literals::string_view_literals`espacio de nombres. 
+Construye una string_view a partir de un literal de cadena. Requiere `std::literals::string_view_literals`de espacio de nombres. 
 
 ### <a name="example"></a>Ejemplo
 
@@ -327,6 +327,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<string_view>](../standard-library/string-view.md)
+[\<string_view >](../standard-library/string-view.md)

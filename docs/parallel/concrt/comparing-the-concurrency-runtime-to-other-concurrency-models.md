@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512816"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141331"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparar el runtime de simultaneidad con otros modelos de simultaneidad
 
@@ -19,7 +19,7 @@ Si actualmente usa otro modelo de programación, como el grupo de subprocesos de
 
 Puede usar las características y las ventajas de productividad del Runtime de simultaneidad para complementar su aplicación que usa otro modelo de simultaneidad. El Runtime de simultaneidad no puede garantizar el equilibrio de carga si hay varios programadores de tareas que compiten por los mismos recursos informáticos, aunque este efecto es mínimo si las cargas de trabajo no se superponen.
 
-##  <a name="top"></a> Secciones
+## <a name="top"></a> Secciones
 
 - [Comparación de la programación preferente y la programación cooperativa](#models)
 
@@ -27,13 +27,13 @@ Puede usar las características y las ventajas de productividad del Runtime de s
 
 - [Comparación del Runtime de simultaneidad y OpenMP](#openmp)
 
-##  <a name="models"></a> Comparación de la programación preferente y la programación cooperativa
+## <a name="models"></a> Comparación de la programación preferente y la programación cooperativa
 
 Los modelos de programación preferente y cooperativa son dos métodos comunes para que varias tareas compartan recursos informáticos (por ejemplo, procesadores o subprocesos de hardware).
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Programación preferente y cooperativa
 
-La*programación preferente* es un mecanismo round robin basado en la prioridad que proporciona a todas las tareas acceso exclusivo a un recurso informático durante un período determinado y, luego, pasa a otra tarea. La programación preferente es habitual en los sistemas operativos de multitarea, como Windows. La *programación cooperativa* es un mecanismo que proporciona a todas las tareas acceso exclusivo a un recurso informático hasta que la tarea finaliza o hasta que la tarea produce su acceso al recurso. El Runtime de simultaneidad usa la programación cooperativa junto con el programador preferente del sistema operativo. De este modo, consigue el mayor uso posible de los recursos de procesamiento.
+La*programación preferente* es un mecanismo round robin basado en la prioridad que proporciona a todas las tareas acceso exclusivo a un recurso informático durante un período determinado y, luego, pasa a otra tarea. Este tipo de programación es habitual en los sistemas operativos de multitarea, como Windows. La *programación cooperativa* es un mecanismo que proporciona a todas las tareas acceso exclusivo a un recurso informático hasta que la tarea finaliza o hasta que la tarea produce su acceso al recurso. El Runtime de simultaneidad usa la programación cooperativa junto con el programador preferente del sistema operativo. De este modo, consigue el mayor uso posible de los recursos de procesamiento.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Diferencias entre los programadores preferente y cooperativo
 
@@ -51,7 +51,7 @@ La programación cooperativa no resuelve todos los problemas de programación. P
 
 [[Arriba](#top)]
 
-##  <a name="winapi"></a> Comparación del Runtime de simultaneidad y la API de Windows
+## <a name="winapi"></a> Comparación del Runtime de simultaneidad y la API de Windows
 
 La interfaz de programación de aplicaciones de Microsoft Windows, más conocida como la API de Windows (y anteriormente denominada Win32), proporciona un modelo de programación que permite la simultaneidad en las aplicaciones. El Runtime de simultaneidad se basa en la API de Windows para proporcionar unos modelos de programación que no están disponibles en el sistema operativo subyacente.
 
@@ -81,7 +81,7 @@ En Windows 7 y Windows Server 2008 R2, el sistema operativo admite la simultanei
 
 [[Arriba](#top)]
 
-##  <a name="openmp"></a> Comparación del Runtime de simultaneidad y OpenMP
+## <a name="openmp"></a> Comparación del Runtime de simultaneidad y OpenMP
 
 El Runtime de simultaneidad ofrece una variedad de modelos de programación. Estos modelos pueden superponerse o complementar los modelos de otras bibliotecas. En esta sección se compara el Runtime de simultaneidad con [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
@@ -95,7 +95,7 @@ Para obtener más información sobre la comparación del Runtime de simultaneida
 
 [[Arriba](#top)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Información general](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

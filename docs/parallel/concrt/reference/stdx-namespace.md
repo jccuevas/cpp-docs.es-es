@@ -4,33 +4,33 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/stdx
 ms.assetid: 0e25b138-1dfa-4073-a0b6-14bed81c774c
-ms.openlocfilehash: 8058006f0acf96614450ec22b601756dc563df61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: caa4b50b731c37e58c652e6cd63a8edae29dd940
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337484"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142655"
 ---
 # <a name="stdx-namespace"></a>stdx (Espacio de nombres)
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 namespace stdx;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[declval (función)](declval-function.md)||
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** ppltasks.h
+**Encabezado:** ppltasks. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia](reference-concurrency-runtime.md)

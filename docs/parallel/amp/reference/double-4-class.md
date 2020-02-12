@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180328"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139352"
 ---
-# <a name="double4-class"></a>double_4 (Clase)
+# <a name="double_4-class"></a>double_4 (Clase)
 
 Representa un vector corto de cuatro valores de tipo double.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class double_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[Constructor de double_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_4::get_w||
 |double_4::get_wx||
@@ -442,7 +442,7 @@ class double_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_4::operator-||
 |double_4::operator--||
@@ -455,13 +455,13 @@ class double_4;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#double_4__size)||
+|[Size (constante)](#double_4__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |double_4::a||
 |double_4::ab||
@@ -511,7 +511,7 @@ class double_4;
 |double_4::grab||
 |double_4::grb||
 |double_4::grba||
-|double_4::r||
+|double_4:: r||
 |double_4::ra||
 |double_4::rab||
 |double_4::rabg||
@@ -522,7 +522,7 @@ class double_4;
 |double_4::rbag||
 |double_4::rbg||
 |double_4::rbga||
-|double_4::rg||
+|double_4:: RG||
 |double_4::rga||
 |double_4::rgab||
 |double_4::rgb||
@@ -586,8 +586,8 @@ class double_4;
 |double_4::zxwy||
 |double_4::zxy||
 |double_4::zxyw||
-|double_4::zy||
-|double_4::zyw||
+|double_4:: ZY||
+|double_4:: zyw||
 |double_4::zywx||
 |double_4::zyx||
 |double_4::zyxw||
@@ -598,15 +598,15 @@ class double_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline double_4(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-##  <a name="double_4__size"></a> Tamaño
+## <a name="double_4__size"></a>ajusta
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

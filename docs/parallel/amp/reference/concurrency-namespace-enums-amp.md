@@ -5,52 +5,52 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4feb2f98fc288fa79c0f9d81e4ed882027eddf8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180458"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126960"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumeraciones del espacio de nombres de simultaneidad (AMP)
 
 |||
 |-|-|
-|[access_type (enumeración)](#access_type)|[queuing_mode (enumeración)](#queuing_mode)|
+|[Enumeración access_type](#access_type)|[Enumeración queuing_mode](#queuing_mode)|
 
-##  <a name="access_type"></a>  access_type (enumeración)
+## <a name="access_type"></a>Enumeración access_type
 
-Tipo de enumeración se utiliza para denotar los distintos tipos de acceso a datos.
+Tipo de enumeración usado para denotar los distintos tipos de acceso a los datos.
 
-```
+```cpp
 enum access_type;
 ```
 
 ### <a name="values"></a>Valores
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`access_type_auto`|Elija automáticamente el mejor `access_type` para el acelerador.|
-|`access_type_none`|Dedicado. La asignación solo está disponible en el acelerador y no en la CPU.|
-|`access_type_read`|Compartido. La asignación está disponible en el acelerador y es legible en la CPU.|
-|`access_type_read_write`|Compartido. La asignación está disponible en el acelerador y es modificable en la CPU.|
-|`access_type_write`|Compartido. La asignación está disponible en el acelerador y es legible y modificable en la CPU.|
+|`access_type_none`|Dedicó. La asignación solo es accesible en el acelerador y no en la CPU.|
+|`access_type_read`|Recurso. La asignación es accesible en el acelerador y es legible en la CPU.|
+|`access_type_read_write`|Recurso. La asignación es accesible en el acelerador y se puede escribir en la CPU.|
+|`access_type_write`|Recurso. La asignación es accesible en el acelerador y es legible y grabable en la CPU.|
 
-##  <a name="queuing_mode"></a>  queuing_mode (enumeración)
+## <a name="queuing_mode"></a>Enumeración queuing_mode
 
 Especifica los modos de la puesta en cola que se admiten en el acelerador.
 
-```
+```cpp
 enum queuing_mode;
 ```
 
 ### <a name="values"></a>Valores
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|`queuing_mode_immediate`|Por ejemplo, un modo de puesta en cola que especifica que los comandos [parallel_for_each (función) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), se envían al dispositivo acelerador correspondiente en cuanto vuelven al llamador.|
-|`queuing_mode_automatic`|Un modo de puesta en cola que especifica que los comandos se encolan en una cola de comando que corresponde a la [accelerator_view](accelerator-view-class.md) objeto. Los comandos se envían al dispositivo cuando [accelerator_view:: Flush](accelerator-view-class.md#flush) se llama.|
+|`queuing_mode_immediate`|Un modo de puesta en cola que especifica que cualquier comando, por ejemplo [Parallel_for_eachC++ función (amp)](concurrency-namespace-functions-amp.md#parallel_for_each), se envía al dispositivo de acelerador correspondiente en cuanto vuelve al autor de la llamada.|
+|`queuing_mode_automatic`|Modo de puesta en cola que especifica que los comandos se ponen en cola en una cola de comandos que corresponde al objeto de [accelerator_view](accelerator-view-class.md) . Los comandos se envían al dispositivo cuando se llama a [accelerator_view:: Flush](accelerator-view-class.md#flush) .|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

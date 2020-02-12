@@ -1,5 +1,5 @@
 ---
-title: scheduler_resource_allocation_error (Clase)
+title: scheduler_resource_allocation_error (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - scheduler_resource_allocation_error
@@ -9,40 +9,40 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160057"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143337"
 ---
-# <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error (Clase)
+# <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error (clase)
 
 Esta clase describe una excepción que se produce debido a un error al adquirir un recurso crítico en el runtime de simultaneidad.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[scheduler_resource_allocation_error](#ctor)|Sobrecargado. Construye un objeto `scheduler_resource_allocation_error`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[get_error_code](#get_error_code)|Devuelve el código de error que provocó la excepción.|
+|[get_error_code](#get_error_code)|Devuelve el código de error que produjo la excepción.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta excepción se produce normalmente cuando se produce un error en una llamada al sistema operativo desde el Runtime de simultaneidad. El código de error que se devolvería normalmente una llamada al método Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se puede recuperar mediante el `get_error_code` método.
+Normalmente, esta excepción se produce cuando se produce un error en una llamada al sistema operativo desde el Runtime de simultaneidad. El código de error que se devolvería normalmente de una llamada al método de Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se puede recuperar mediante el método `get_error_code`.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -52,27 +52,27 @@ Esta excepción se produce normalmente cuando se produce un error en una llamada
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrt.h
+**Encabezado:** concrt. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
-Devuelve el código de error que provocó la excepción.
+Devuelve el código de error que produjo la excepción.
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-El `HRESULT` valor del error que provocó la excepción.
+Valor `HRESULT` del error que produjo la excepción.
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error
+## <a name="ctor"></a>scheduler_resource_allocation_error
 
 Construye un objeto `scheduler_resource_allocation_error`.
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -87,8 +87,8 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 Mensaje descriptivo del error.
 
 *_Hresult*<br/>
-El `HRESULT` valor del error que provocó la excepción.
+Valor `HRESULT` del error que produjo la excepción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: f1d91e4d203e17242bcf6e784d1ef70a03a9bc33
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69512140"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142059"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Tutorial: Conectar usando tareas y solicitudes HTTP XML
 
 En este ejemplo se muestra cómo usar las interfaces [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) junto con las tareas para enviar solicitudes HTTP GET y post a un servicio web en una aplicación plataforma universal de Windows (UWP). Mediante la combinación de `IXMLHTTPRequest2` junto con las tareas, puede escribir código que se crea con otras tareas. Por ejemplo, puede usar la tarea de descarga como parte de una cadena de tareas. La tarea de descarga también puede responder cuando se cancela el trabajo.
 
 > [!TIP]
->  También puede usar el C++ SDK de REST para realizar solicitudes HTTP desde una aplicación de UWP C++ con una aplicación o desde C++ una aplicación de escritorio. Para obtener más información, consulte [ C++ el tema sobre el SDK de REST (nombre de código "Casablanca")](https://github.com/Microsoft/cpprestsdk).
+> También puede usar el C++ SDK de REST para realizar solicitudes HTTP desde una aplicación de UWP C++ con una aplicación o desde C++ una aplicación de escritorio. Para obtener más información, consulte [ C++ el tema sobre el SDK de REST (nombre de código "Casablanca")](https://github.com/Microsoft/cpprestsdk).
 
 Para obtener más información sobre las tareas, consulte [paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Para obtener más información sobre cómo usar las tareas en una aplicación de UWP, consulte [programación asincrónica C++ en](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) y [creación de C++ operaciones asincrónicas en para aplicaciones para UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
@@ -27,9 +27,9 @@ En este documento se muestra primero cómo crear `HttpRequest` y sus clases auxi
 Para obtener un ejemplo que usa `IXMLHTTPRequest2` pero no usa tareas, consulte [Inicio rápido: conectarse mediante una solicitud HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
->  `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` son las interfaces que se recomienda usar en una aplicación de UWP. También puede adaptar este ejemplo para usarlo en una aplicación de escritorio.
+> `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` son las interfaces que se recomienda usar en una aplicación de UWP. También puede adaptar este ejemplo para usarlo en una aplicación de escritorio.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 La compatibilidad con UWP es opcional en Visual Studio 2017 y versiones posteriores. Para instalarlo, abra el Instalador de Visual Studio desde el menú Inicio de Windows y elija la versión de Visual Studio que está usando. Haga clic en el botón **modificar** y asegúrese de que está seleccionado el icono **desarrollo de UWP** . En **componentes opcionales** , asegúrese de **C++** que esté activada la opción herramientas de UWP. Use v141 para Visual Studio 2017 o v142 para Visual Studio 2019.
 
@@ -43,9 +43,9 @@ Dado que las interfaces de `IXMLHTTPRequest2` actúan de forma asincrónica, en 
 
 Para admitir la cancelación, las clases `HttpRequest`, `HttpRequestBuffersCallback` y `HttpRequestStringCallback` utilizan tokens de cancelación. Las clases `HttpRequestBuffersCallback` y `HttpRequestStringCallback` usan el método [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) para permitir que el evento de finalización de la tarea responda a la cancelación. Esta devolución de llamada de cancelación anula la descarga. Para obtener más información sobre la cancelación, vea [cancelación](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-#### <a name="to-define-the-httprequest-class"></a>Para definir la clase HttpRequest
+### <a name="to-define-the-httprequest-class"></a>Para definir la clase HttpRequest
 
-1. En el menú principal, elija **archivo** > **nuevo** **proyecto**de > . 
+1. En el menú principal, elija **archivo** > **nuevo** **proyecto**de > .
 
 1. Use la C++ plantilla **aplicación vacía (Windows universal)** para crear un proyecto de aplicación XAML en blanco. En este ejemplo, se asigna al proyecto el nombre `UsingIXMLHTTPRequest2`.
 
@@ -67,29 +67,29 @@ Para admitir la cancelación, las clases `HttpRequest`, `HttpRequestBuffersCallb
 
 En esta sección se muestra cómo usar la clase `HttpRequest` en una aplicación de UWP. La aplicación proporciona un cuadro de entrada que define un recurso de dirección URL y los comandos de botón que realizan las operaciones GET y POST, así como un comando de botón que cancela la operación actual.
 
-#### <a name="to-use-the-httprequest-class"></a>Para usar la clase HttpRequest
+### <a name="to-use-the-httprequest-class"></a>Para usar la clase HttpRequest
 
 1. En MainPage. XAML, defina el elemento [StackPanel](/uwp/api/Windows.UI.Xaml.Controls.StackPanel) como se indica a continuación.
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-2. En MainPage.xaml.h, agregue esta directiva `#include`:
+1. En MainPage.xaml.h, agregue esta directiva `#include`:
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-3. En MainPage.xaml.h, agregue a estas variables de miembro `private` a la clase `MainPage`:
+1. En MainPage.xaml.h, agregue a estas variables de miembro `private` a la clase `MainPage`:
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. En MainPage.xaml.h, declare el método `private``ProcessHttpRequest`:
+1. En MainPage.xaml.h, declare el método `private``ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-5. En MainPage.xaml.cpp, agregue estas instrucciones `using`:
+1. En MainPage.xaml.cpp, agregue estas instrucciones `using`:
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-6. En MainPage.xaml.cpp, implemente los métodos `GetButton_Click`, `PostButton_Click` y `CancelButton_Click` de la clase `MainPage`.
+1. En MainPage.xaml.cpp, implemente los métodos `GetButton_Click`, `PostButton_Click` y `CancelButton_Click` de la clase `MainPage`.
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
@@ -100,17 +100,17 @@ En esta sección se muestra cómo usar la clase `HttpRequest` en una aplicación
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. En las propiedades del proyecto, en **vinculador**, **entrada**, especifique `shcore.lib` y `msxml6.lib`.
+1. En las propiedades del proyecto, en **vinculador**, **entrada**, especifique `shcore.lib` y `msxml6.lib`.
 
 Esta es la aplicación en ejecución:
 
-![La aplicación Windows Runtime en ejecución]que(../../parallel/concrt/media/concrt_usingixhr2.png "ejecuta Windows Runtime aplicación")
+![La aplicación Windows Runtime en ejecución](../../parallel/concrt/media/concrt_usingixhr2.png "La aplicación Windows Runtime en ejecución")
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Tutoriales del Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)<br/>

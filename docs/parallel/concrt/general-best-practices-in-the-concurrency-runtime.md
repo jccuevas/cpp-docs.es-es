@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 15bae5ba25da4987b076cf3de67cd8484fe47df8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302229"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141767"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Procedimientos recomendados generales con el Runtime de simultaneidad
 
 En este documento se describen los procedimientos recomendados que se aplican a varias áreas del runtime de simultaneidad.
 
-##  <a name="top"></a> Secciones
+## <a name="top"></a> Secciones
 
 Este documento contiene las siguientes secciones:
 
@@ -33,13 +33,13 @@ Este documento contiene las siguientes secciones:
 
 - [No usar objetos de simultaneidad en segmentos de datos compartidos](#shared-data)
 
-##  <a name="synchronization"></a>Usar construcciones de sincronización cooperativa cuando sea posible
+## <a name="synchronization"></a>Usar construcciones de sincronización cooperativa cuando sea posible
 
 El runtime de simultaneidad proporciona muchas construcciones seguras para simultaneidad que no requieren un objeto de sincronización externo. Por ejemplo, la clase [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) proporciona operaciones de anexado y acceso a elementos con seguridad de simultaneidad. Aquí, la seguridad de simultaneidad significa que los punteros o iteradores siempre son válidos. No es una garantía de la inicialización de elementos o de un orden de cruce determinado. Sin embargo, para los casos en los que se requiere acceso exclusivo a un recurso, el tiempo de ejecución proporciona las clases Concurrency [:: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)y [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) . Estos tipos se comportan de forma cooperativa; por consiguiente, el programador de tareas puede reasignar los recursos de procesamiento a otro contexto mientras la primera tarea espera los datos. Cuando sea posible, use estos tipos de sincronización en lugar de otros mecanismos de sincronización, como los proporcionados por la API de Windows, que no se comportan de manera cooperativa. Para obtener más información sobre estos tipos de sincronización y un ejemplo de código, vea [sincronización de estructuras de datos](../../parallel/concrt/synchronization-data-structures.md) y comparación de estructuras de datos de [sincronización con la API de Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
 [[Arriba](#top)]
 
-##  <a name="yield"></a>Evitar tareas largas que no producen
+## <a name="yield"></a>Evitar tareas largas que no producen
 
 Dado que el programador de tareas se comporta de forma cooperativa, no es ecuánime entre las tareas. Por consiguiente, una tarea puede evitar que se inicien otras tareas. Aunque esto es aceptable en algunos casos, en otros puede producir un interbloqueo o un colapso.
 
@@ -47,7 +47,7 @@ En el siguiente ejemplo se realizan más tareas que el número de recursos de pr
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
-Este ejemplo produce el siguiente resultado:
+En este ejemplo se produce la siguiente salida:
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
@@ -55,7 +55,7 @@ Hay varias maneras de habilitar la cooperación entre las dos tareas. Una consis
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
-Este ejemplo produce el siguiente resultado:
+En este ejemplo se produce la siguiente salida:
 
 ```Output
 1: 250000000
@@ -74,7 +74,7 @@ Hay otras maneras de habilitar la cooperación entre las tareas de ejecución pr
 
 [[Arriba](#top)]
 
-##  <a name="oversubscription"></a>Usar la suscripción excesiva para desplazar las operaciones que bloquean o tienen una latencia alta
+## <a name="oversubscription"></a>Usar la suscripción excesiva para desplazar las operaciones que bloquean o tienen una latencia alta
 
 El Runtime de simultaneidad proporciona primitivas de sincronización, como [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), que permiten que las tareas se bloqueen y se produzcan entre sí de forma cooperativa. Cuando una tarea se bloquea de forma cooperativa o produce resultados, el programador de tareas puede reasignar los recursos de procesamiento a otro contexto mientras la primera tarea espera los datos.
 
@@ -88,7 +88,7 @@ Dado que la función `GetHttpFile` realiza una operación potencialmente latente
 
 [[Arriba](#top)]
 
-##  <a name="memory"></a>Usar funciones de administración de memoria simultáneas siempre que sea posible
+## <a name="memory"></a>Usar funciones de administración de memoria simultáneas siempre que sea posible
 
 Use las funciones de administración de memoria, [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) y [Concurrency:: Free](reference/concurrency-namespace-functions.md#free), cuando tenga tareas específicas que asignan con frecuencia objetos pequeños que tienen una duración relativamente corta. El runtime de simultaneidad contiene una memoria caché independiente para cada subproceso en ejecución. Las funciones `Alloc` y `Free` asignan y liberan memoria de estas memorias caché sin el uso de bloqueos ni barreras de memoria.
 
@@ -96,7 +96,7 @@ Para obtener más información acerca de estas funciones de administración de m
 
 [[Arriba](#top)]
 
-##  <a name="raii"></a>Usar RAII para administrar la duración de los objetos de simultaneidad
+## <a name="raii"></a>Usar RAII para administrar la duración de los objetos de simultaneidad
 
 El runtime de simultaneidad usa el control de excepciones para implementar características como la cancelación. Por consiguiente, escriba el código seguro para excepciones cuando se llama al runtime o a otra biblioteca que llama al runtime.
 
@@ -128,7 +128,7 @@ Para obtener ejemplos adicionales que usan el patrón RAII para administrar la d
 
 [[Arriba](#top)]
 
-##  <a name="global-scope"></a>No crear objetos de simultaneidad en el ámbito global
+## <a name="global-scope"></a>No crear objetos de simultaneidad en el ámbito global
 
 Cuando se crea un objeto de simultaneidad en el ámbito global, pueden surgir problemas en la aplicación, como infracciones de acceso a la memoria o interbloqueo.
 
@@ -142,13 +142,13 @@ Para obtener ejemplos de la forma correcta de crear objetos `Scheduler`, vea [pr
 
 [[Arriba](#top)]
 
-##  <a name="shared-data"></a>No usar objetos de simultaneidad en segmentos de datos compartidos
+## <a name="shared-data"></a>No usar objetos de simultaneidad en segmentos de datos compartidos
 
 El Runtime de simultaneidad no admite el uso de objetos de simultaneidad en una sección de datos compartidos, por ejemplo, una sección de datos creada por la Directiva de`#pragma` de [data_seg](../../preprocessor/data-seg.md) . Un objeto de simultaneidad que se comparte entre los límites del proceso puede colocar el runtime en un estado incoherente o no válido.
 
 [[Arriba](#top)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Procedimientos recomendados del Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

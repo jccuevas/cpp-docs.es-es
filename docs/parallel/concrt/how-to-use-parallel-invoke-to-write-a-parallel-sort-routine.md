@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
+title: 'Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252937"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141928"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Procedimiento Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
+# <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo
 
-Este documento describe cómo usar el [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo para mejorar el rendimiento del algoritmo de ordenación bitónica. Este algoritmo divide de forma recursiva la secuencia de entrada en particiones ordenadas más pequeñas. Se puede ejecutar en paralelo porque cada operación de partición es independiente de las demás operaciones.
+En este documento se describe cómo usar el algoritmo [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) para mejorar el rendimiento del algoritmo de ordenación bitónica. Este algoritmo divide de forma recursiva la secuencia de entrada en particiones ordenadas más pequeñas. Se puede ejecutar en paralelo porque cada operación de partición es independiente de las demás operaciones.
 
-Aunque la ordenación bitónica es un ejemplo de un *ordenación red* que ordena todas las combinaciones de secuencias de entrada, en este ejemplo se ordena secuencias cuyas longitudes son potencia de dos.
+Aunque la ordenación bitónica es un ejemplo de una *red de ordenación* que ordena todas las combinaciones de secuencias de entrada, en este ejemplo se ordenan las secuencias cuyas longitudes son una potencia de dos.
 
 > [!NOTE]
->  En este ejemplo se utiliza una rutina de ordenación paralela para la ilustración. También puede usar los algoritmos de ordenación integrados que proporciona PPL: [Concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [Concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), y [concurrency::parallel_ radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Para obtener más información, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
+> En este ejemplo se utiliza una rutina de ordenación paralela para la ilustración. También puede usar los algoritmos de ordenación integrados que proporciona PPL: [Concurrency::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)y [Concurrency::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Para obtener más información, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="top"></a> Secciones
+## <a name="top"></a> Secciones
 
 En este documentos se describen las tareas siguientes:
 
-- [Realizar a la ordenación bitónica en serie](#serial)
+- [Realizar la ordenación bitónica en serie](#serial)
 
 - [Usar parallel_invoke para realizar la ordenación bitónica en paralelo](#parallel)
 
-##  <a name="serial"></a> Realizar a la ordenación bitónica en serie
+## <a name="serial"></a>Realizar la ordenación bitónica en serie
 
 En el siguiente ejemplo se muestra la versión en serie del algoritmo de ordenación bitónica. La función `bitonic_sort` divide la secuencia en dos particiones, ordena estas particiones en direcciones opuestas y, a continuación, combina los resultados. Esta función se llama a sí misma dos veces de forma recursiva para ordenar cada partición.
 
@@ -40,13 +40,11 @@ En el siguiente ejemplo se muestra la versión en serie del algoritmo de ordenac
 
 [[Arriba](#top)]
 
-##  <a name="parallel"></a> Usar parallel_invoke para realizar la ordenación bitónica en paralelo
+## <a name="parallel"></a>Usar parallel_invoke para realizar la ordenación bitónica en paralelo
 
 En esta sección se describe cómo usar el algoritmo `parallel_invoke` para realizar el algoritmo de ordenación bitónica en paralelo.
 
-### <a name="procedures"></a>Procedimientos
-
-##### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>Para realizar el algoritmo de ordenación bitónica en paralelo
+### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>Para realizar el algoritmo de ordenación bitónica en paralelo
 
 1. Agregue una directiva `#include` para el archivo de encabezado ppl.h.
 
@@ -85,15 +83,15 @@ parallel time: 1248
 
 [[Arriba](#top)]
 
-## <a name="compiling-the-code"></a>Compilar el código
+### <a name="compiling-the-code"></a>Compilar el código
 
 Para compilar el código, cópielo y, a continuación, péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `parallel-bitonic-sort.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc paralelo-bitonic-sort.cpp**
+> **cl. exe/EHsc Parallel-bitonic-Sort. cpp**
 
 ## <a name="robust-programming"></a>Programación sólida
 
-Este ejemplo se usa el `parallel_invoke` algoritmo en lugar de la [Concurrency:: task_group](reference/task-group-class.md) clase porque la duración de cada grupo de tareas no se extiende más allá de una función. Se recomienda usar `parallel_invoke` siempre que se pueda, ya que tiene menos sobrecarga de ejecución que los objetos `task group` y, por tanto, permite escribir código con mejor rendimiento.
+En este ejemplo se usa el algoritmo `parallel_invoke` en lugar de la clase [Concurrency:: task_group](reference/task-group-class.md) porque la duración de cada grupo de tareas no se extiende más allá de una función. Se recomienda usar `parallel_invoke` siempre que se pueda, ya que tiene menos sobrecarga de ejecución que los objetos `task group` y, por tanto, permite escribir código con mejor rendimiento.
 
 Las versiones en paralelo de algunos algoritmos presentan mejor rendimiento cuando existe suficiente trabajo. Por ejemplo, la función `parallel_bitonic_merge` llama a la versión en serie, `bitonic_merge`, si existen 500 elementos o menos en la secuencia. También puede planear la estrategia global de ordenación según la cantidad de trabajo. Por ejemplo, puede ser más eficaz usar la versión en serie del algoritmo de ordenación rápida si la matriz contiene menos de 500 elementos, como se muestra en el ejemplo siguiente:
 
@@ -101,7 +99,7 @@ Las versiones en paralelo de algunos algoritmos presentan mejor rendimiento cuan
 
 Como con cualquier algoritmo paralelo, se recomienda generar un perfil y optimizar el código según corresponda.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
-[parallel_invoke (función)](reference/concurrency-namespace-functions.md#parallel_invoke)
+[parallel_invoke función)](reference/concurrency-namespace-functions.md#parallel_invoke)

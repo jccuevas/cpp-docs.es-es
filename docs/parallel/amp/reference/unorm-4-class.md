@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0164f595ba44999718895f5221250f12bd6b7344
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405409"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142946"
 ---
-# <a name="unorm4-class"></a>unorm_4 (Clase)
+# <a name="unorm_4-class"></a>unorm_4 (Clase)
 
 Representa un vector corto de cuatro números normales sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class unorm_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor unorm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de unorm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |unorm_4::get_w||
 |unorm_4::get_wx||
@@ -442,7 +442,7 @@ class unorm_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |unorm_4::operator-||
 |unorm_4::operator--||
@@ -455,13 +455,13 @@ class unorm_4;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#unorm_4__size)||
+|[Size (constante)](#unorm_4__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |unorm_4::a||
 |unorm_4::ab||
@@ -511,7 +511,7 @@ class unorm_4;
 |unorm_4::grab||
 |unorm_4::grb||
 |unorm_4::grba||
-|unorm_4::r||
+|unorm_4:: r||
 |unorm_4::ra||
 |unorm_4::rab||
 |unorm_4::rabg||
@@ -533,7 +533,7 @@ class unorm_4;
 |unorm_4::wxyz||
 |unorm_4::wxz||
 |unorm_4::wxzy||
-|unorm_4::wy||
+|unorm_4:: WY||
 |unorm_4::wyx||
 |unorm_4::wyxz||
 |unorm_4::wyz||
@@ -545,8 +545,8 @@ class unorm_4;
 |unorm_4::wzyx||
 |unorm_4::x||
 |unorm_4::xw||
-|unorm_4::xwy||
-|unorm_4::xwyz||
+|unorm_4:: xwy||
+|unorm_4:: xwyz||
 |unorm_4::xwz||
 |unorm_4::xwzy||
 |unorm_4::xy||
@@ -556,10 +556,10 @@ class unorm_4;
 |unorm_4::xyzw||
 |unorm_4::xz||
 |unorm_4::xzw||
-|unorm_4::xzwy||
-|unorm_4::xzy||
+|unorm_4:: xzwy||
+|unorm_4:: XZY||
 |unorm_4::xzyw||
-|unorm_4::y||
+|unorm_4:: y||
 |unorm_4::yw||
 |unorm_4::ywx||
 |unorm_4::ywxz||
@@ -586,7 +586,7 @@ class unorm_4;
 |unorm_4::zxwy||
 |unorm_4::zxy||
 |unorm_4::zxyw||
-|unorm_4::zy||
+|unorm_4:: ZY||
 |unorm_4::zyw||
 |unorm_4::zywx||
 |unorm_4::zyx||
@@ -598,15 +598,15 @@ class unorm_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_4
+## <a name="ctor"></a>unorm_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 unorm_4() restrict(amp,
     cpu);
 
@@ -660,29 +660,29 @@ explicit inline unorm_4(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-##  <a name="unorm_4__size"></a> Tamaño
+## <a name="unorm_4__size"></a>ajusta
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

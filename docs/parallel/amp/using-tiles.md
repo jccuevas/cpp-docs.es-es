@@ -2,12 +2,12 @@
 title: Usar mosaicos
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518262"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126271"
 ---
 # <a name="using-tiles"></a>Usar mosaicos
 
@@ -15,7 +15,7 @@ Puede usar la disposición en mosaico para maximizar la aceleración de la aplic
 
 - `tile_static` variables. La principal ventaja de la disposición en mosaico es la ganancia de rendimiento de `tile_static` acceso. El acceso a los datos de `tile_static` memoria puede ser mucho más rápido que el acceso a los datos en el espacio global (objetos`array` o `array_view`). Se crea una instancia de la variable `tile_static` para cada mosaico y todos los subprocesos del mosaico tienen acceso a la variable. En un algoritmo en mosaico típico, los datos se copian en `tile_static` memoria una vez desde la memoria global y, a continuación, se tiene acceso a ellas muchas veces desde la memoria de `tile_static`.
 
-- [tile_barrier:: Wait (método](reference/tile-barrier-class.md#wait)). Una llamada a `tile_barrier::wait` suspende la ejecución del subproceso actual hasta que todos los subprocesos del mismo mosaico lleguen a la llamada a `tile_barrier::wait`. No se puede garantizar el orden en el que se ejecutarán los subprocesos, solo que no se ejecutarán los subprocesos del mosaico más allá de la llamada a `tile_barrier::wait` hasta que todos los subprocesos hayan alcanzado la llamada. Esto significa que, al usar el método `tile_barrier::wait`, puede realizar tareas en mosaico a mosaico en lugar de subproceso por subproceso. Un algoritmo de mosaico típico tiene código para inicializar el `tile_static` memoria para todo el mosaico seguido de una llamada a `tile_barrer::wait`. El código siguiente `tile_barrier::wait` contiene cálculos que requieren acceso a todos los valores de `tile_static`.
+- [tile_barrier:: Wait (método](reference/tile-barrier-class.md#wait)). Una llamada a `tile_barrier::wait` suspende la ejecución del subproceso actual hasta que todos los subprocesos del mismo mosaico lleguen a la llamada a `tile_barrier::wait`. No se puede garantizar el orden en el que se ejecutarán los subprocesos, solo que no se ejecutarán los subprocesos del mosaico más allá de la llamada a `tile_barrier::wait` hasta que todos los subprocesos hayan alcanzado la llamada. Esto significa que, al usar el método `tile_barrier::wait`, puede realizar tareas en mosaico a mosaico en lugar de subproceso por subproceso. Un algoritmo de mosaico típico tiene código para inicializar el `tile_static` memoria para todo el mosaico seguido de una llamada a `tile_barrier::wait`. El código siguiente `tile_barrier::wait` contiene cálculos que requieren acceso a todos los valores de `tile_static`.
 
 - Indexación local y global. Tiene acceso al índice del subproceso en relación con todo el `array_view` o `array` objeto y con el Índice relativo al mosaico. El uso del índice local puede hacer que el código sea más fácil de leer y depurar. Normalmente, se usa la indexación local para tener acceso a las variables `tile_static` e indexación global para tener acceso a las variables `array` y `array_view`.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static (Palabra clave)](../../cpp/tile-static-keyword.md)

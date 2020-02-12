@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405448"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142414"
 ---
-# <a name="uint4-class"></a>uint_4 (Clase)
+# <a name="uint_4-class"></a>uint_4 (Clase)
 
 Representa un vector corto de cuatro enteros sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class uint_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor uint_4](#uint_4__ctor) |Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de uint_4](#uint_4__ctor) |Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -442,7 +442,7 @@ class uint_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
@@ -455,13 +455,13 @@ class uint_4;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#size)||
+|[Size (constante)](#size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -598,17 +598,17 @@ class uint_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,34 +639,34 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-## <a name="size"></a>size
+## <a name="size"></a>tamaño
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

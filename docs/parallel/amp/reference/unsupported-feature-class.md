@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525416"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127717"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature (Clase)
+# <a name="unsupported_feature-class"></a>unsupported_feature (Clase)
 
 La excepción que se produce cuando se usa una función no compatible.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[unsupported_feature (Constructor)](#unsupported_feature)|Crea una nueva instancia de la `unsupported_feature` excepción.|
+|[Constructor de unsupported_feature](#unsupported_feature)|Construye una nueva instancia de la excepción `unsupported_feature`.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  Crea una nueva instancia de la `unsupported_feature` excepción.
+  Construye una nueva instancia de la excepción `unsupported_feature`.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -65,10 +65,10 @@ Objeto `unsupported_feature`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amprt.h
+**Encabezado:** amprt. h
 
-**Espacio de nombres**: simultaneidad
+**Espacio de nombres:** Concurrency
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

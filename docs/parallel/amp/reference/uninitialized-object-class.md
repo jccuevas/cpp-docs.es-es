@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: a977957fcb28a7f4c6c849c954026e2bda4e728c
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975156"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127704"
 ---
-# <a name="uninitializedobject-class"></a>uninitialized_object (clase)
+# <a name="uninitialized_object-class"></a>uninitialized_object (clase)
 
 La excepción que se produce cuando se usa un objeto no inicializado.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[uninitialized_object (Constructor)](#uninitialized_object)|Inicializa una nueva instancia de la clase `uninitialized_object`.|
+|[Constructor de uninitialized_object](#uninitialized_object)|Inicializa una nueva instancia de la clase `uninitialized_object`.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -43,17 +43,17 @@ class uninitialized_object : public runtime_exception;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amprt.h
+**Encabezado:** amprt. h
 
-**Espacio de nombres**: simultaneidad
+**Espacio de nombres:** Concurrency
 
-## <a name="uninitialized_object"></a> uninitialized_object)
+## <a name="uninitialized_object"></a>uninitialized_object
 
-Crea una nueva instancia de la `uninitialized_object` excepción.
+Construye una nueva instancia de la excepción `uninitialized_object`.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 explicit uninitialized_object(
     const char * _Message ) throw();
 
@@ -67,8 +67,8 @@ Descripción del error.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La `uninitialized_object` objeto de excepción.
+Objeto de excepción de `uninitialized_object`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

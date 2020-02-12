@@ -1,5 +1,5 @@
 ---
-title: context_self_unblock (Clase)
+title: context_self_unblock (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - context_self_unblock
@@ -8,28 +8,28 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 900dc68eac4441bd1db3818d3c1f30698b80a6e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883d5630251a6ea13afba1164f221a0da1773c17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296181"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143114"
 ---
-# <a name="contextselfunblock-class"></a>context_self_unblock (Clase)
+# <a name="context_self_unblock-class"></a>context_self_unblock (clase)
 
 Esta clase describe una excepción que se produce cuando se llama al método `Unblock` de un objeto `Context` desde el mismo contexto. Esto indicaría que un contexto especificado ha intentado desbloquearse a sí mismo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class context_self_unblock : public std::exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[context_self_unblock](#ctor)|Sobrecargado. Construye un objeto `context_self_unblock`.|
 
@@ -41,15 +41,15 @@ class context_self_unblock : public std::exception;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrt.h
+**Encabezado:** concrt. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> context_self_unblock
+## <a name="ctor"></a>context_self_unblock
 
 Construye un objeto `context_self_unblock`.
 
-```
+```cpp
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
 context_self_unblock() throw();
@@ -60,6 +60,6 @@ context_self_unblock() throw();
 *_Message*<br/>
 Mensaje descriptivo del error.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

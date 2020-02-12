@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Convertir un bucle OpenMP que usa la cancelación para usar el Runtime de simultaneidad
+title: 'Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: df55a58617b802f24e4caf13784ac080222b93bc
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: f4d4d8d1b2dbf60d0b4674229043c981d874292d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631526"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141822"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Procedimiento Convertir un bucle OpenMP que usa la cancelación para usar el Runtime de simultaneidad
+# <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad
 
 Algunos bucles paralelos no necesitan que se ejecuten todas las iteraciones. Por ejemplo, un algoritmo que busca un valor puede finalizar una vez que se encuentra el valor. OpenMP no proporciona ningún mecanismo para interrumpir un bucle paralelo. Sin embargo, puede usar un valor booleano, o marca, para permitir que una iteración del bucle indique que se ha encontrado la solución. El runtime de simultaneidad proporciona funcionalidad que permite a una tarea cancelar otras tareas que todavía no se han iniciado.
 
@@ -39,15 +39,15 @@ En ambas versiones de este ejemplo, si la matriz contiene más de una copia del 
 
 También puede usar el control de excepciones para cancelar las tareas que usan la biblioteca PPL. Para obtener más información sobre la cancelación, vea [cancelación en la biblioteca PPL](cancellation-in-the-ppl.md).
 
-Para obtener más información `parallel_for_each` sobre y otros algoritmos paralelos, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
+Para obtener más información sobre `parallel_for_each` y otros algoritmos paralelos, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="compiling-the-code"></a>Compilar el código
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `concrt-omp-parallel-any-of.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl. exe/EHsc/OpenMP concrt-OMP-Parallel-any-of. cpp**
+> **cl. exe/EHsc/OpenMP concrt-OMP-Parallel-any-of. cpp**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Migración de OpenMP al Runtime de simultaneidad](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)<br/>

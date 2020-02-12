@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 012a70ae628a896c8202e46a5624f37f58b0781b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351552"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126440"
 ---
-# <a name="shortvector-structure"></a>short_vector (Estructura)
+# <a name="short_vector-structure"></a>short_vector (Estructura)
 
-short_vector () proporciona las definiciones de metaprogramación que son útiles para programar de forma genérica vectores cortos.
+short_vector proporciona definiciones de Metaprogramación que son útiles para programar vectores cortos de forma genérica.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template<
     typename _Scalar_type,
     int _Size
@@ -75,25 +75,25 @@ template<>
 struct short_vector<double, 4>;
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *_Scalar_type*<br/>
 
 *_Size*<br/>
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor short_vector::short_vector](#ctor)||
+|[short_vector:: short_vector (constructor)](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -101,16 +101,16 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a>  Constructor short_vector::short_vector
+## <a name="ctor"></a>short_vector:: short_vector (constructor)
 
-```
+```cpp
 short_vector();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
