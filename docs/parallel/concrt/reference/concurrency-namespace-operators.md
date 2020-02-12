@@ -5,12 +5,12 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 00accee4f28167b94b9193aec6d90f32ed242dbe
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821133"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143248"
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency (Operadores del espacio de nombres)
 
@@ -20,11 +20,11 @@ ms.locfileid: "76821133"
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
 |[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
 
-##  <a name="operator_lor"></a>&#124; &#124; operador Operator
+## <a name="operator_lor"></a>&#124; &#124; operador Operator
 
 Crea una tarea que se completará correctamente cuando una de las tareas proporcionadas como argumentos se complete correctamente.
 
-```
+```cpp
 template<typename ReturnType>
 task<ReturnType> operator||(
     const task<ReturnType>& lhs,
@@ -45,12 +45,12 @@ inline task<void> operator||(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *ReturnType*<br/>
 Tipo de la tarea devuelta.
 
-*lhs*<br/>
+*LHS*<br/>
 Primera tarea que debe combinarse en la tarea resultante.
 
 *rhs*<br/>
@@ -60,15 +60,15 @@ Segunda tarea que se va a combinar en la tarea resultante.
 
 Tarea que se completa correctamente cuando una de las tareas de entrada se ha completado correctamente. Si las tareas de entrada son de tipo `T`, el resultado de esta función será `task<std::vector<T>`. Si las tareas de entrada son del tipo `void`, la tarea de salida también será `task<void>`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si las dos tareas se cancelan o inician excepciones, la tarea devuelta se completará en el estado cancelado y se producirá una de las excepciones, si se encuentra alguna, cuando llame a `get()` o `wait()` en esa tarea.
 
-##  <a name="operator_amp_amp"></a>Operator&amp;operador de &amp;
+## <a name="operator_amp_amp"></a>Operator&amp;operador de &amp;
 
 Crea una tarea que se completará correctamente cuando las dos tareas proporcionadas como argumentos se completen correctamente.
 
-```
+```cpp
 template<typename ReturnType>
 task<std::vector<ReturnType>>  operator&&(
     const task<ReturnType>& lhs,
@@ -94,12 +94,12 @@ inline task<void>  operator&&(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *ReturnType*<br/>
 Tipo de la tarea devuelta.
 
-*lhs*<br/>
+*LHS*<br/>
 Primera tarea que debe combinarse en la tarea resultante.
 
 *rhs*<br/>
@@ -109,22 +109,22 @@ Segunda tarea que se va a combinar en la tarea resultante.
 
 Tarea que se completa correctamente cuando ambas tareas de entrada se completan correctamente. Si las tareas de entrada son de tipo `T`, el resultado de esta función será `task<std::vector<T>>`. Si las tareas de entrada son del tipo `void`, la tarea de salida también será `task<void>`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
-Si una de las tareas se cancela o inicia una excepción, la tarea devuelta finalizará prematuramente con el estado cancelado y se generará una excepción (si se encuentra una) al llamar a `get()` o `wait()` en dicha tarea.
+Si una de las tareas se cancela o produce una excepción, la tarea devuelta finalizará pronto, con el estado cancelado, y la excepción, si se produce, se producirá si llama a `get()` o `wait()` en esa tarea.
 
-##  <a name="operator_eq_eq"></a>Operator = = (operador)
+## <a name="operator_eq_eq"></a>Operator = = (operador)
 
 Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es igual al objeto `concurrent_vector` del lado derecho.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator== (
     const concurrent_vector<T, A1>& _A,
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 El tipo de datos de los elementos almacenados en los vectores simultáneos.
@@ -145,24 +145,24 @@ Objeto de tipo `concurrent_vector`.
 
 **true** si el vector simultáneo en el lado izquierdo del operador es igual que el vector simultáneo del lado derecho del operador. en caso contrario, **false**.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Dos vectores simultáneos son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
 Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.
 
-##  <a name="operator_neq"></a>Operator! = (operador)
+## <a name="operator_neq"></a>Operator! = (operador)
 
 Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador no es igual al objeto `concurrent_vector` del lado derecho.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator!= (
     const concurrent_vector<T, A1>& _A,
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 El tipo de datos de los elementos almacenados en los vectores simultáneos.
@@ -183,24 +183,24 @@ Objeto de tipo `concurrent_vector`.
 
 **true** si los vectores simultáneos no son iguales; **false** si los vectores simultáneos son iguales.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Dos vectores simultáneos son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
 Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.
 
-##  <a name="operator_lt"></a>operador Operator&lt;
+## <a name="operator_lt"></a>operador Operator&lt;
 
 Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es menor que el objeto `concurrent_vector` del lado derecho.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<(
     const concurrent_vector<T, A1>& _A,
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 El tipo de datos de los elementos almacenados en los vectores simultáneos.
@@ -221,24 +221,24 @@ Objeto de tipo `concurrent_vector`.
 
 **true** si el vector simultáneo en el lado izquierdo del operador es menor que el vector simultáneo del lado derecho del operador. en caso contrario, **false**.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El comportamiento de este operador es idéntico al operador equivalente para la clase `vector` en el espacio de nombres `std`.
 
 Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.
 
-##  <a name="operator_lt_eq"></a>Operator&lt;= (operador)
+## <a name="operator_lt_eq"></a>Operator&lt;= (operador)
 
 Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es menor o igual que el objeto `concurrent_vector` del lado derecho.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<= (
     const concurrent_vector<T, A1>& _A,
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 El tipo de datos de los elementos almacenados en los vectores simultáneos.
@@ -259,24 +259,24 @@ Objeto de tipo `concurrent_vector`.
 
 **true** si el vector simultáneo en el lado izquierdo del operador es menor o igual que el vector simultáneo del lado derecho del operador. en caso contrario, **false**.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El comportamiento de este operador es idéntico al operador equivalente para la clase `vector` en el espacio de nombres `std`.
 
 Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.
 
-##  <a name="operator_gt"></a>operador Operator&gt;
+## <a name="operator_gt"></a>operador Operator&gt;
 
 Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es mayor que el objeto `concurrent_vector` del lado derecho.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>(
     const concurrent_vector<T, A1>& _A,
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 El tipo de datos de los elementos almacenados en los vectores simultáneos.
@@ -297,24 +297,24 @@ Objeto de tipo `concurrent_vector`.
 
 **true** si el vector simultáneo en el lado izquierdo del operador es mayor que el vector simultáneo del lado derecho del operador. en caso contrario, **false**.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El comportamiento de este operador es idéntico al operador equivalente para la clase `vector` en el espacio de nombres `std`.
 
 Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.
 
-##  <a name="operator_gt_eq"></a>Operator&gt;= (operador)
+## <a name="operator_gt_eq"></a>Operator&gt;= (operador)
 
 Comprueba si el objeto `concurrent_vector` en el lado izquierdo del operador es mayor o igual que el objeto `concurrent_vector` del lado derecho.
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>= (
     const concurrent_vector<T, A1>& _A,
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 El tipo de datos de los elementos almacenados en los vectores simultáneos.
@@ -335,12 +335,12 @@ Objeto de tipo `concurrent_vector`.
 
 **true** si el vector simultáneo en el lado izquierdo del operador es mayor o igual que el vector simultáneo del lado derecho del operador. en caso contrario, **false**.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El comportamiento de este operador es idéntico al operador equivalente para la clase `vector` en el espacio de nombres `std`.
 
 Este método no es seguro para simultaneidad con respecto a otros métodos que podrían modificar cualquiera de los vectores simultáneos `_A` o `_B`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)
