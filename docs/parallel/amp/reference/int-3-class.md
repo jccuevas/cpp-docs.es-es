@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180250"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127821"
 ---
-# <a name="int3-class"></a>int_3 (Clase)
+# <a name="int_3-class"></a>int_3 (Clase)
 
 Representa un vector corto de tres enteros.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class int_3;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor int_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de int_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_3::get_x||
 |int_3::get_xy||
@@ -146,7 +146,7 @@ class int_3;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_3::operator-||
 |int_3::operator--||
@@ -159,20 +159,20 @@ class int_3;
 |int_3::operator~||
 |int_3::operator++||
 |int_3::operator+=||
-|int_3::operator<\<=||
+|int_3:: Operator <\<=||
 |int_3::operator=||
 |int_3::operator-=||
 |int_3::operator>>=||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#size)||
+|[Size (constante)](#size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |int_3::b||
 |int_3::bg||
@@ -211,17 +211,17 @@ class int_3;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-## <a name="ctor"></a> int_3
+## <a name="ctor"></a>int_3
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-## <a name="syntax"></a>Sintaxis
+### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 int_3() restrict(amp,cpu);
 int_3(
    int _V0,
@@ -254,28 +254,28 @@ explicit inline int_3(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-## <a name="size"></a> Tamaño
+## <a name="size"></a>ajusta
 
-## <a name="syntax"></a>Sintaxis
+### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

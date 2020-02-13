@@ -6,40 +6,40 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405435"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126310"
 ---
 # <a name="unorm-class"></a>unorm (Clase)
 
-Representa un número unorm. Cada elemento flotante es un número de punto en el intervalo de [0, 0F, 1, 0F].
+Representa un número de unorm. Cada elemento es un número de punto flotante en el intervalo de [0.0 f, 1.0 f].
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class unorm;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[unorm (Constructor)](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar en 0, 0f.|
+|[Constructor de unorm](#ctor)|Sobrecargado. Constructor predeterminado. Inicializar en 0.0 f.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |unorm::operator--||
-|unorm::operator float|Operador de conversión. Convertir el número de unorm en flotante valor de punto.|
+|unorm:: Operator Float|Operador de conversión. Convierta el número unorm en un valor de punto flotante.|
 |unorm::operator*=||
 |unorm::operator/=||
-|unorm::operator++||
+|unorm:: Operator + +||
 |unorm::operator+=||
 |unorm::operator=||
 |unorm::operator-=||
@@ -50,15 +50,15 @@ class unorm;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a>unorm
 
-Constructor predeterminado. Inicializar en 0, 0f.
+Constructor predeterminado. Inicializar en 0.0 f.
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -91,11 +91,11 @@ inline explicit unorm(
 ### <a name="parameters"></a>Parámetros
 
 *_V*<br/>
-El valor utilizado para inicializar.
+Valor que se usa para inicializar.
 
 *_Other*<br/>
-El objeto norma usado para inicializar.
+Objeto de norma que se usa para inicializar.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

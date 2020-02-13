@@ -1,22 +1,22 @@
 ---
-title: 'Tutorial: Creación de una aplicación basada en agente'
+title: 'Tutorial: Crear una aplicación basada en agente'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 4a2fabd9ab4f358d40b17e662fb64ab70d01c58e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631660"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142051"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>Tutorial: Creación de una aplicación basada en agente
+# <a name="walkthrough-creating-an-agent-based-application"></a>Tutorial: Crear una aplicación basada en agente
 
 En este tema se describe cómo crear una aplicación basada en agente básica. En este tutorial, puede crear un agente que lee datos de un archivo de texto de forma asincrónica. La aplicación utiliza el algoritmo de suma de comprobación Adler-32 para calcular la suma de comprobación del contenido de ese archivo.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar este tutorial, debe comprender los siguientes temas:
 
@@ -28,7 +28,7 @@ Para completar este tutorial, debe comprender los siguientes temas:
 
 - [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)
 
-##  <a name="top"></a> Secciones
+## <a name="top"></a> Secciones
 
 En este tutorial se muestra cómo realizar las tareas siguientes:
 
@@ -38,7 +38,7 @@ En este tutorial se muestra cómo realizar las tareas siguientes:
 
 - [Usar la clase file_reader en la aplicación](#useagentclass)
 
-##  <a name="createapplication"></a>Creación de la aplicación de consola
+## <a name="createapplication"></a>Creación de la aplicación de consola
 
 En esta sección se muestra cómo crear C++ una aplicación de consola que haga referencia a los archivos de encabezado que utilizará el programa. Los pasos iniciales varían en función de la versión de Visual Studio que se use. Asegúrese de que el selector de versiones esté configurado correctamente en la parte superior izquierda de esta página.
 
@@ -46,7 +46,7 @@ En esta sección se muestra cómo crear C++ una aplicación de consola que haga 
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Para crear una C++ aplicación de consola en Visual Studio 2019
 
-1. En el menú principal, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Crear nuevo proyecto**.
+1. En el menú principal, elija **archivo** > **nuevo** > **proyecto** para abrir el cuadro de diálogo **crear un nuevo proyecto** .
 
 1. En la parte superior del cuadro de diálogo, establezca **Lenguaje** en **C++** , establezca **Plataforma** en **Windows** y establezca **Tipo de proyecto** en **Consola**. 
 
@@ -54,7 +54,7 @@ En esta sección se muestra cómo crear C++ una aplicación de consola que haga 
 
 1. Elija el botón **Crear** para crear el proyecto.
 
-1. Haga clic con el botón secundario en el nodo del proyecto en **Explorador de soluciones**y elija **propiedades**. En **propiedades** > de configuración > **CC++** **/encabezados**precompilados encabezado precompilado, elija crear.  > 
+1. Haga clic con el botón secundario en el nodo del proyecto en **Explorador de soluciones**y elija **propiedades**. En **propiedades de configuración** > los **encabezados precompilados** de **C/C++**  >  > **encabezado precompilado** , elija **crear**.
 
 ::: moniker-end
 
@@ -76,17 +76,17 @@ En esta sección se muestra cómo crear C++ una aplicación de consola que haga 
 
    El archivo de encabezado Agents. h contiene la funcionalidad de la clase [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) .
 
-1. Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela. Para compilar la aplicación, en el menú compilar, haga clic en compilar **solución**. Si la aplicación se compila correctamente, ejecute la aplicación haciendo clic en **iniciar** depuración en el menú Depurar.
+1. Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela. Para compilar la aplicación, en el menú **compilar** , haga clic en **compilar solución**. Si la aplicación se compila correctamente, ejecute la aplicación haciendo clic en **iniciar depuración** en el menú **depurar** .
 
 [[Arriba](#top)]
 
-##  <a name="createagentclass"></a>Crear la clase file_reader
+## <a name="createagentclass"></a>Crear la clase file_reader
 
 En esta sección se muestra cómo crear la clase `file_reader`. El runtime programa cada agente para realizar el trabajo en su propio contexto. Por tanto, puede crear un agente que realice el trabajo de forma sincrónica pero que interactúe con otros componentes de forma asincrónica. La clase `file_reader` lee los datos de un archivo de entrada determinado y los envía desde este archivo a un componente de destino determinado.
 
 #### <a name="to-create-the-file_reader-class"></a>Para crear la clase file_reader
 
-1. Agregue un nuevo archivo de encabezado de C++ al proyecto. Para ello, haga clic con el botón secundario en el nodo **archivos de encabezado** de **Explorador de soluciones**, haga clic en **Agregar**y, a continuación, haga clic en **nuevo elemento**. En el panel **plantillas** , seleccione **archivo de encabezado (. h)** . En el cuadro de diálogo **Agregar nuevo elemento** , `file_reader.h` escriba en el cuadro **nombre** y, a continuación, haga clic en **Agregar**.
+1. Agregue un nuevo archivo de encabezado de C++ al proyecto. Para ello, haga clic con el botón secundario en el nodo **archivos de encabezado** de **Explorador de soluciones**, haga clic en **Agregar**y, a continuación, haga clic en **nuevo elemento**. En el panel **plantillas** , seleccione **archivo de encabezado (. h)** . En el cuadro de diálogo **Agregar nuevo elemento** , escriba `file_reader.h` en el cuadro **nombre** y, a continuación, haga clic en **Agregar**.
 
 1. En file_reader.h, agregue el siguiente código.
 
@@ -100,7 +100,7 @@ En esta sección se muestra cómo crear la clase `file_reader`. El runtime progr
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-   El miembro `_file_name` es el nombre de archivo del que lee el agente. El `_target` miembro es un objeto [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) en el que el agente escribe el contenido del archivo. El miembro `_error` contiene cualquier error que se produce durante la vida del agente.
+   El miembro `_file_name` es el nombre de archivo del que lee el agente. El miembro `_target` es un objeto [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) en el que el agente escribe el contenido del archivo. El miembro `_error` contiene cualquier error que se produce durante la vida del agente.
 
 1. Agregue el código siguiente para los constructores de `file_reader` en la sección `public` de la clase `file_reader`.
 
@@ -114,7 +114,7 @@ En esta sección se muestra cómo crear la clase `file_reader`. El runtime progr
 
    El método `get_error` recupera cualquier error que se produce durante la vida del agente.
 
-1. Implemente el método Concurrency [:: Agent:: Run](reference/agent-class.md#run) en `protected` la sección de la clase.
+1. Implemente el método [Concurrency:: Agent:: Run](reference/agent-class.md#run) en la sección `protected` de la clase.
 
 [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]
 
@@ -128,7 +128,7 @@ En el ejemplo siguiente se muestra el contenido completo de file_reader.h.
 
 [[Arriba](#top)]
 
-##  <a name="useagentclass"></a>Usar la clase file_reader en la aplicación
+## <a name="useagentclass"></a>Usar la clase file_reader en la aplicación
 
 En esta sección se muestra cómo utilizar la clase `file_reader` para leer el contenido de un archivo de texto. También se muestra cómo crear un objeto [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) que recibe los datos de este archivo y calcula su suma de comprobación Adler-32.
 
@@ -142,7 +142,7 @@ En esta sección se muestra cómo utilizar la clase `file_reader` para leer el c
 
 [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]
 
-1. En la `_tmain` función, cree un objeto [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) que señale el final del procesamiento.
+1. En la función `_tmain`, cree un objeto [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) que señale el final del procesamiento.
 
 [!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_11.cpp)]
 
@@ -184,7 +184,7 @@ jumps
 over the lazy dog
 ```
 
-## <a name="sample-output"></a>Resultados del ejemplo
+## <a name="sample-output"></a>Salida de ejemplo
 
 Cuando se utiliza con la entrada de ejemplo, este programa produce el siguiente resultado:
 
@@ -200,12 +200,12 @@ Llame siempre a [Concurrency:: Agent::d un](reference/agent-class.md#done) méto
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener otro ejemplo de una aplicación basada en agente, [consulte Tutorial: Usar join para evitar el](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)interbloqueo.
+Para obtener otro ejemplo de una aplicación basada en agente, vea [Tutorial: usar join para evitar el interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Funciones que pasan mensajes](../../parallel/concrt/message-passing-functions.md)<br/>
 [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[Tutorial: Uso de una combinación para evitar el interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
+[Tutorial: Usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180289"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142181"
 ---
-# <a name="float4-class"></a>float_4 (Clase)
+# <a name="float_4-class"></a>float_4 (Clase)
 
 Representa un vector corto de cuatro valores de coma flotante.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class float_4;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[float_4 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de float_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -442,7 +442,7 @@ class float_4;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
@@ -455,13 +455,13 @@ class float_4;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#float_4__size)||
+|[Size (constante)](#float_4__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_4::a||
 |float_4::ab||
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,29 +649,29 @@ explicit inline float_4(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V2*<br/>
-El valor para inicializar el elemento 2.
+Valor para inicializar el elemento 2.
 
 *_V3*<br/>
-El valor para inicializar el elemento 3.
+Valor para inicializar el elemento 3.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-##  <a name="float_4__size"></a> Tamaño
+## <a name="float_4__size"></a>ajusta
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

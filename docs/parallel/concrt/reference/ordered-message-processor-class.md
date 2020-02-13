@@ -1,5 +1,5 @@
 ---
-title: ordered_message_processor (Clase)
+title: ordered_message_processor (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - ordered_message_processor
@@ -14,59 +14,59 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9ca799f36cac0d843a578eb7cef9c1e9c5cda6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394434"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138783"
 ---
-# <a name="orderedmessageprocessor-class"></a>ordered_message_processor (Clase)
+# <a name="ordered_message_processor-class"></a>ordered_message_processor (clase)
 
 Un `ordered_message_processor` es un `message_processor` que permite a los bloques de mensaje procesar los mensajes en el orden que se recibieron.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template<class T>
 class ordered_message_processor : public message_processor<T>;
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-El tipo de carga de mensajes controlados por el procesador.
+El tipo de carga de los mensajes administrados por el procesador.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`type`|Un alias de tipo para `T`.|
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[ordered_message_processor](#ctor)|Construye un objeto `ordered_message_processor`.|
-|[~ ordered_message_processor (destructor)](#dtor)|Destruye el objeto `ordered_message_processor`.|
+|[~ ordered_message_processor destructor](#dtor)|Destruye el objeto `ordered_message_processor`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[async_send](#async_send)|Pone en cola los mensajes de forma asincrónica y se inicia una tarea de procesamiento, si esto no se ha hecho ya. (Invalida [message_processor:: async_send](message-processor-class.md#async_send).)|
-|[initialize](#initialize)|Inicializa el `ordered_message_processor` objeto con el grupo de programación, el programador y la función de devolución de llamada apropiados.|
+|[async_send](#async_send)|Pone en cola asincrónicamente los mensajes e inicia una tarea de procesamiento, si aún no se ha hecho. (Invalida [message_processor:: async_send](message-processor-class.md#async_send)).|
+|[inicia](#initialize)|Inicializa el objeto `ordered_message_processor` con la función de devolución de llamada, el programador y el grupo de programación adecuados.|
 |[initialize_batched_processing](#initialize_batched_processing)|Inicializar el procesamiento de mensajes por lotes|
-|[sync_send](#sync_send)|Sincrónicamente pone en cola los mensajes e inicia una tarea de procesamiento, si esto no se ha hecho ya. (Invalida [message_processor:: sync_send](message-processor-class.md#sync_send).)|
-|[wait](#wait)|Una espera de vuelta específica del procesador usada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo para finalizar antes de destruir el bloque. (Invalida [message_processor:: wait](message-processor-class.md#wait).)|
+|[sync_send](#sync_send)|Pone en cola los mensajes de forma sincrónica e inicia una tarea de procesamiento, si aún no se ha hecho. (Invalida [message_processor:: sync_send](message-processor-class.md#sync_send)).|
+|[currir](#wait)|Una espera de giro específica del procesador utilizada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo de finalización antes de destruir el bloque. (Invalida [message_processor:: wait](message-processor-class.md#wait)).|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|La función de procesamiento que se llama de forma asincrónica. Quita los mensajes de la cola y empieza a procesarlos. (Invalida [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|
+|[process_incoming_message](#process_incoming_message)|Función de procesamiento a la que se llama de forma asincrónica. Elimina los mensajes de la cola y comienza a procesarlos. (Invalida [message_processor: rocess_incoming_message:p](message-processor-class.md#process_incoming_message)).|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -80,11 +80,11 @@ El tipo de carga de mensajes controlados por el procesador.
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-Pone en cola los mensajes de forma asincrónica y se inicia una tarea de procesamiento, si esto no se ha hecho ya.
+Pone en cola asincrónicamente los mensajes e inicia una tarea de procesamiento, si aún no se ha hecho.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
 ```
 
@@ -93,11 +93,11 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
 *_Msg*<br/>
 Un puntero a un mensaje.
 
-##  <a name="initialize"></a> inicializar
+## <a name="initialize"></a>inicia
 
-Inicializa el `ordered_message_processor` objeto con el grupo de programación, el programador y la función de devolución de llamada apropiados.
+Inicializa el objeto `ordered_message_processor` con la función de devolución de llamada, el programador y el grupo de programación adecuados.
 
-```
+```cpp
 void initialize(
     _Inout_opt_ Scheduler* _PScheduler,
     _Inout_opt_ ScheduleGroup* _PScheduleGroup,
@@ -107,19 +107,19 @@ void initialize(
 ### <a name="parameters"></a>Parámetros
 
 *_PScheduler*<br/>
-Un puntero al programador que se usará para programar las tareas ligeras.
+Puntero al programador que se va a usar para programar tareas ligeras.
 
 *_PScheduleGroup*<br/>
-Un puntero al grupo de programación que se usará para programar las tareas ligeras.
+Un puntero al grupo de programación que se va a usar para programar tareas ligeras.
 
 *_Handler*<br/>
-El functor de controlador que se invoca durante la devolución de llamada.
+Se invocó el functor del controlador durante la devolución de llamada.
 
-##  <a name="initialize_batched_processing"></a> initialize_batched_processing
+## <a name="initialize_batched_processing"></a>initialize_batched_processing
 
 Inicializar el procesamiento de mensajes por lotes
 
-```
+```cpp
 virtual void initialize_batched_processing(
     _Handler_method const& _Processor,
     _Propagator_method const& _Propagator);
@@ -128,48 +128,48 @@ virtual void initialize_batched_processing(
 ### <a name="parameters"></a>Parámetros
 
 *_Processor*<br/>
-El functor de procesador que se invoca durante la devolución de llamada.
+El procesador funcr invocación durante la devolución de llamada.
 
 *_Propagator*<br/>
-El functor propagador invocado durante la devolución de llamada.
+El funcdor del propagador invocó durante la devolución de llamada.
 
-##  <a name="ctor"></a> ordered_message_processor)
+## <a name="ctor"></a>ordered_message_processor
 
 Construye un objeto `ordered_message_processor`.
 
-```
+```cpp
 ordered_message_processor();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esto `ordered_message_processor` no programará controladores sincrónicos o asincrónicos hasta el `initialize` se llama a la función.
+Esta `ordered_message_processor` no programará controladores asincrónicos o sincrónicos hasta que se llame a la función `initialize`.
 
-##  <a name="dtor"></a> ~ordered_message_processor
+## <a name="dtor"></a>~ ordered_message_processor
 
 Destruye el objeto `ordered_message_processor`.
 
-```
+```cpp
 virtual ~ordered_message_processor();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Espera a que todas las operaciones asincrónicas pendientes antes de destruir el procesador.
+Espera todas las operaciones asincrónicas pendientes antes de destruir el procesador.
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-La función de procesamiento que se llama de forma asincrónica. Quita los mensajes de la cola y empieza a procesarlos.
+Función de procesamiento a la que se llama de forma asincrónica. Elimina los mensajes de la cola y comienza a procesarlos.
 
-```
+```cpp
 virtual void process_incoming_message();
 ```
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-Sincrónicamente pone en cola los mensajes e inicia una tarea de procesamiento, si esto no se ha hecho ya.
+Pone en cola los mensajes de forma sincrónica e inicia una tarea de procesamiento, si aún no se ha hecho.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 ```
 
@@ -178,14 +178,14 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 *_Msg*<br/>
 Un puntero a un mensaje.
 
-##  <a name="wait"></a> Espere
+## <a name="wait"></a>currir
 
-Una espera de vuelta específica del procesador usada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo para finalizar antes de destruir el bloque.
+Una espera de giro específica del procesador utilizada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo de finalización antes de destruir el bloque.
 
-```
+```cpp
 virtual void wait();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

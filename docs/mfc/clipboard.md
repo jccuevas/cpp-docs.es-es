@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1db089110904ab88eb9c0c111d9da4e4e6869c82
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508931"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127912"
 ---
 # <a name="clipboard"></a>Portapapeles
 
@@ -21,7 +21,7 @@ Esta familia de artículos explica cómo implementar la compatibilidad del porta
 
 - Implementar comandos del menú edición estándar, como cortar, copiar y pegar.
 
-- Implementar la transferencia de datos uniforme con arrastrar y colocar (OLE).
+- Implementar la transferencia de datos uniforme con arrastrar y colocar de OLE.
 
 El portapapeles es el método estándar de Windows para transferir datos entre un origen y un destino. También puede ser muy útil en operaciones OLE. Con la llegada de OLE, hay dos mecanismos de Portapapeles en Windows. La API del portapapeles de Windows estándar sigue estando disponible, pero se ha complementado con el mecanismo de transferencia de datos OLE. La transferencia de datos uniforme OLE (UDT) admite cortar, copiar y pegar con el portapapeles y arrastrar y colocar.
 
@@ -41,8 +41,8 @@ El portapapeles es un servicio del sistema compartido por la sesión de Windows 
 
 - [El portapapeles de Windows](/windows/win32/dataxchg/clipboard)
 
-- [Implementar arrastrar y colocar (OLE)](../mfc/drag-and-drop-ole.md)
+- [Arrastrar y colocar de OLE](../mfc/drag-and-drop-ole.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)

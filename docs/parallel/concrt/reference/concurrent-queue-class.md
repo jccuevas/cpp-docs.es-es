@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 7f87ead486d635c933ad356f9868c22344601eda
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 4e913af40b2218da5699da2659ec2e9189e32994
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298628"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143203"
 ---
 # <a name="concurrent_queue-class"></a>concurrent_queue (clase)
 
@@ -29,12 +29,12 @@ La clase `concurrent_queue` es una clase de contenedor de secuencias que permite
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 template<typename T, class _Ax>
 class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4;
 ```
 
-#### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *T*<br/>
 Tipo de datos de los elementos que se van a almacenar en la cola.
@@ -42,11 +42,11 @@ Tipo de datos de los elementos que se van a almacenar en la cola.
 *_Ax*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para esta cola simultánea. Este argumento es opcional y el valor predeterminado es `allocator<T>`.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`allocator_type`|Tipo que representa la clase de asignador para la cola simultánea.|
 |`const_iterator`|Tipo que representa un iterador `const` no seguro para subprocesos sobre los elementos de una cola simultánea.|
@@ -59,14 +59,14 @@ Tipo que representa el objeto de asignador almacenado que encapsula los detalles
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|Sobrecargado. Construye una cola simultánea.|
 |[~ concurrent_queue destructor](#dtor)|Destruye la cola simultánea.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[clear](#clear)|Borra la cola simultánea, destruyendo todos los elementos actualmente puestos en cola. Este método no es seguro para la simultaneidad.|
 |[empty](#empty)|Comprueba si la cola simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|
@@ -77,7 +77,7 @@ Tipo que representa el objeto de asignador almacenado que encapsula los detalles
 |[unsafe_end](#unsafe_end)|Sobrecargado. Devuelve un iterador de tipo `iterator` o `const_iterator` al final de la cola simultánea. Este método no es seguro para la simultaneidad.|
 |[unsafe_size](#unsafe_size)|Devuelve el número de elementos de la cola. Este método no es seguro para la simultaneidad.|
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Para obtener más información, consulte [Parallel containers and Objects](../../../parallel/concrt/parallel-containers-and-objects.md).
 
@@ -85,25 +85,25 @@ Para obtener más información, consulte [Parallel containers and Objects](../..
 
 `concurrent_queue`
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 **Encabezado:** concurrent_queue. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="clear"></a>claridad
+## <a name="clear"></a>claridad
 
 Borra la cola simultánea, destruyendo todos los elementos actualmente puestos en cola. Este método no es seguro para la simultaneidad.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a>concurrent_queue
+## <a name="ctor"></a>concurrent_queue
 
 Construye una cola simultánea.
 
-```
+```cpp
 explicit concurrent_queue(
     const allocator_type& _Al = allocator_type());
 
@@ -120,7 +120,7 @@ concurrent_queue(_InputIterator _Begin,
     _InputIterator _End);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *_InputIterator*<br/>
 Tipo del iterador de entrada que especifica un intervalo de valores.
@@ -137,7 +137,7 @@ Posición del primer elemento en el intervalo de elementos que se va a copiar.
 *_End*<br/>
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Todos los constructores almacenan un objeto de asignador `_Al` e inicializan la cola.
 
@@ -149,19 +149,19 @@ El tercer constructor especifica un movimiento del `_OtherQ`simultáneo de la co
 
 El cuarto constructor especifica los valores proporcionados por el intervalo de iterador [`_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~concurrent_queue
+## <a name="dtor"></a>~ concurrent_queue
 
 Destruye la cola simultánea.
 
-```
+```cpp
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a>vacía
+## <a name="empty"></a>vacía
 
 Comprueba si la cola simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -169,15 +169,15 @@ bool empty() const;
 
 **true** si la cola simultánea estaba vacía en el momento en que se buscó; de lo contrario, **false** .
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Aunque este método es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`y `empty`, el valor devuelto puede ser incorrecto en el momento en que lo inspecciona el subproceso que realiza la llamada.
 
-##  <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Devuelve una copia del asignador utilizado para construir la cola simultánea. Este método es seguro para simultaneidad.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -185,34 +185,34 @@ allocator_type get_allocator() const;
 
 Una copia del asignador utilizado para construir la cola simultánea.
 
-##  <a name="push"></a>enviar
+## <a name="push"></a>enviar
 
 Pone en cola un elemento al final de la cola simultánea. Este método es seguro para simultaneidad.
 
-```
+```cpp
 void push(const T& _Src);
 
 void push(T&& _Src);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *_Src*<br/>
 Elemento que se va a agregar a la cola.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `push` es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`y `empty`.
 
-##  <a name="try_pop"></a>try_pop
+## <a name="try_pop"></a>try_pop
 
 Quita de la cola un elemento de la cola si hay alguno disponible. Este método es seguro para simultaneidad.
 
-```
+```cpp
 bool try_pop(T& _Dest);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *_Dest*<br/>
 Referencia a una ubicación en la que se va a almacenar el elemento quitado de la cola.
@@ -221,17 +221,17 @@ Referencia a una ubicación en la que se va a almacenar el elemento quitado de l
 
 **true** si un elemento se quitó correctamente de la cola, **false** en caso contrario.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si un elemento se quitó correctamente de la cola, el parámetro `_Dest` recibe el valor quitado de la cola, el valor original mantenido en la cola se destruye y esta función devuelve **true**. Si no hay ningún elemento para quitar de la cola, esta función devuelve `false` sin bloquearse y el contenido del parámetro `_Dest` no está definido.
 
 `try_pop` es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`y `empty`.
 
-##  <a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
 Devuelve un iterador de tipo `iterator` o `const_iterator` al principio de la cola simultánea. Este método no es seguro para la simultaneidad.
 
-```
+```cpp
 iterator unsafe_begin();
 
 const_iterator unsafe_begin() const;
@@ -241,15 +241,15 @@ const_iterator unsafe_begin() const;
 
 Un iterador de tipo `iterator` o `const_iterator` al principio del objeto de cola simultáneo.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Los iteradores de la clase `concurrent_queue` están pensados principalmente para la depuración, ya que son lentos, y la iteración no es segura para simultaneidad con respecto a otras operaciones de cola.
 
-##  <a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
 Devuelve un iterador de tipo `iterator` o `const_iterator` al final de la cola simultánea. Este método no es seguro para la simultaneidad.
 
-```
+```cpp
 iterator unsafe_end();
 
 const_iterator unsafe_end() const;
@@ -259,15 +259,15 @@ const_iterator unsafe_end() const;
 
 Un iterador de tipo `iterator` o `const_iterator` al final de la cola simultánea.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Los iteradores de la clase `concurrent_queue` están pensados principalmente para la depuración, ya que son lentos, y la iteración no es segura para simultaneidad con respecto a otras operaciones de cola.
 
-##  <a name="unsafe_size"></a>unsafe_size
+## <a name="unsafe_size"></a>unsafe_size
 
 Devuelve el número de elementos de la cola. Este método no es seguro para la simultaneidad.
 
-```
+```cpp
 size_type unsafe_size() const;
 ```
 
@@ -275,10 +275,10 @@ size_type unsafe_size() const;
 
 Tamaño de la cola simultánea.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `unsafe_size` no es seguro para simultaneidad y puede producir resultados incorrectos si se llama a la vez con llamadas a los métodos `push`, `try_pop`y `empty`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: 94a0936c1e5630ae53af9d9386d3c9248061ed71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af5116118c9821f5c1801789bff13f3de8d4026a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180278"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126661"
 ---
-# <a name="float2-class"></a>float_2 (Clase)
+# <a name="float_2-class"></a>float_2 (Clase)
 
 Representa un vector corto de dos números en coma flotante.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class float_2;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[float_2 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de float_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_2::get_x||
 |float_2::get_xy||
@@ -78,7 +78,7 @@ class float_2;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_2::operator-||
 |float_2::operator--||
@@ -91,13 +91,13 @@ class float_2;
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#float_2__size)||
+|[Size (constante)](#float_2__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |float_2::g||
 |float_2::gr||
@@ -114,15 +114,15 @@ class float_2;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_2
+## <a name="ctor"></a>float_2
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 float_2() restrict(amp,
     cpu);
 
@@ -163,23 +163,23 @@ explicit inline float_2(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-##  <a name="float_2__size"></a> Tamaño
+## <a name="float_2__size"></a>ajusta
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

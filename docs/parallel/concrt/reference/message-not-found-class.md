@@ -1,5 +1,5 @@
 ---
-title: message_not_found (Clase)
+title: message_not_found (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - message_not_found
@@ -8,28 +8,28 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: da0a44b90346959756c1ef7c685bef234fe6e46a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394421"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139570"
 ---
-# <a name="messagenotfound-class"></a>message_not_found (Clase)
+# <a name="message_not_found-class"></a>message_not_found (clase)
 
 Esta clase describe una excepción que se produce cuando un bloque de mensajería no puede encontrar un mensaje solicitado.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class message_not_found : public std::exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[message_not_found](#ctor)|Sobrecargado. Construye un objeto `message_not_found`.|
 
@@ -41,15 +41,15 @@ class message_not_found : public std::exception;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrt.h
+**Encabezado:** concrt. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> message_not_found
+## <a name="ctor"></a>message_not_found
 
 Construye un objeto `message_not_found`.
 
-```
+```cpp
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
@@ -60,7 +60,7 @@ message_not_found() throw();
 *_Message*<br/>
 Mensaje descriptivo del error.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md)

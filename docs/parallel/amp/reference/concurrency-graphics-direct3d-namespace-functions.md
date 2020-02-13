@@ -1,30 +1,30 @@
 ---
-title: Funciones del espacio de nombres Concurrency::Graphics::Direct3D
+title: Concurrency::graphics::direct3d (Funciones del espacio de nombres)
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 665732700ee6b85425f332a0eb96a5b75864a74e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405552"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126973"
 ---
-# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Funciones del espacio de nombres Concurrency::Graphics::Direct3D
+# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d (Funciones del espacio de nombres)
 
 ||||
 |-|-|-|
 |[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|
 |[make_texture](#make_texture)|[msad4](#msad4)|
 
-##  <a name="get_sampler"></a>  get_sampler
+## <a name="get_sampler"></a>get_sampler
 
-Obtenga la interfaz de estado de muestra de D3D en el Acelerador proporcionada vista que representa el objeto de muestra especificado.
+Obtiene la interfaz de estado de muestra de D3D en la vista de acelerador proporcionada que representa el objeto de muestra especificado.
 
-```
+```cpp
 IUnknown* get_sampler(
     const Concurrency::accelerator_view& _Av,
     const sampler& _Sampler) restrict(amp);
@@ -33,20 +33,20 @@ IUnknown* get_sampler(
 ### <a name="parameters"></a>Parámetros
 
 *_Av*<br/>
-Una vista del Acelerador D3D en el que el estado de la muestra de D3D consiste en crear.
+Una vista de acelerador D3D en la que se va a crear el estado de muestra D3D.
 
 *_Sampler*<br/>
-Un objeto de muestra para el que se crea la interfaz de estado de muestra de D3D subyacente.
+Objeto de muestra para el que se crea la interfaz de estado de muestra D3D subyacente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El puntero de interfaz IUnknown correspondiente al estado de muestrario de D3D que representa el muestrario especificado.
+Puntero a la interfaz IUnknown correspondiente al estado de muestra D3D que representa la muestra especificada.
 
-##  <a name="get_texture"></a>  get_texture
+## <a name="get_texture"></a>get_texture
 
-Obtiene la interfaz de textura de Direct3D subyacente especificado [textura](texture-class.md) objeto.
+Obtiene la interfaz de textura de Direct3D subyacente al objeto de [textura](texture-class.md) especificado.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -72,40 +72,40 @@ _Ret_ IUnknown *get_texture(
 ### <a name="parameters"></a>Parámetros
 
 *value_type*<br/>
-El tipo de elemento de la textura.
+Tipo de elemento de la textura.
 
 *_Rank*<br/>
-El rango de la textura.
+Rango de la textura.
 
 *_Texture*<br/>
-Una textura o una vista de textura asociado al elemento accelerator_view para el que se devuelve la interfaz de textura de Direct3D subyacente.
+Una vista de textura o textura asociada al accelerator_view para el que se devuelve la interfaz de textura de Direct3D subyacente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El puntero de interfaz IUnknown correspondiente a la textura de Direct3D que subyace a la textura.
+Puntero de interfaz IUnknown que corresponde a la textura de Direct3D que subyace a la textura.
 
-##  <a name="make_sampler"></a>  make_sampler
+## <a name="make_sampler"></a>make_sampler
 
-Cree una muestra de un puntero de interfaz de estado de muestra de D3D.
+Cree una muestra a partir de un puntero de interfaz de estado de muestra D3D.
 
-```
+```cpp
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *_D3D_sampler*<br/>
-Puntero de interfaz IUnknown del estado para crear el ejemplo de muestra D3D.
+Puntero de interfaz IUnknown del estado de muestra D3D del que se va a crear la muestra.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una muestra representa el estado del muestrario de D3D proporcionado.
+Una muestra representa el estado de muestra D3D proporcionado.
 
-##  <a name="make_texture"></a>  make_texture
+## <a name="make_texture"></a>make_texture
 
-Crea un [textura](texture-class.md) objeto mediante el uso de los parámetros especificados.
+Crea un objeto de [textura](texture-class.md) con los parámetros especificados.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -119,29 +119,29 @@ texture<value_type, _Rank> make_texture(
 ### <a name="parameters"></a>Parámetros
 
 *value_type*<br/>
-El tipo de los elementos de la textura.
+Tipo de los elementos de la textura.
 
 *_Rank*<br/>
-El rango de la textura.
+Rango de la textura.
 
 *_Av*<br/>
-Una vista del Acelerador D3D en el que es necesario crear la textura.
+Una vista de acelerador D3D en la que se va a crear la textura.
 
 *_D3D_texture*<br/>
-Puntero de interfaz IUnknown de la textura D3D para crear la textura de.
+Puntero de interfaz IUnknown de la textura D3D de la que se va a crear la textura.
 
 *_View_format*<br/>
-El formato DXGI que se usará para las vistas creadas desde esta textura. Pase DXGI_FORMAT_UNKNOWN (el valor predeterminado) para derivar el formato del formato subyacente de _D3D_texture y la value_type de esta plantilla. El formato proporcionado debe ser compatible con el formato subyacente de _D3D_texture.
+El formato de DXGI que se va a usar para las vistas creadas a partir de esta textura. Pase DXGI_FORMAT_UNKNOWN (valor predeterminado) para derivar el formato del formato subyacente de _D3D_texture y el value_type de esta plantilla. El formato proporcionado debe ser compatible con el formato subyacente de _D3D_texture.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una textura utilizando la textura D3D proporcionada.
+Textura con la textura D3D proporcionada.
 
-##  <a name="msad4"></a>  msad4
+## <a name="msad4"></a>msad4
 
-Compara un valor de referencia de 4 bytes y un valor de origen de 8 bytes y acumula un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de distintas alineaciones de bytes entre el valor de referencia y el valor de origen.
+Compara un valor de referencia de 4 bytes y un valor de origen de 8 bytes y acumula un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de diferentes alineaciones de bytes entre el valor de referencia y el valor de origen.
 
-```
+```cpp
 inline uint4 msad4(
     uint _Reference,
     uint2 _Source,
@@ -151,24 +151,24 @@ inline uint4 msad4(
 ### <a name="parameters"></a>Parámetros
 
 *_Reference*<br/>
-La matriz de referencia de 4 bytes en un valor uint
+Matriz de referencia de 4 bytes en un valor uint
 
 *_Source*<br/>
-La matriz de origen de 8 bytes en un vector de dos valores uint.
+Matriz de origen de 8 bytes en un vector de dos valores uint.
 
 *_Accum*<br/>
-Un vector de 4 valores que se agregarán a la suma enmascarada de diferencias absolutas de las distintas alineaciones de bytes entre el valor de referencia y el valor de origen.
+Vector de 4 valores que se va a agregar a la suma enmascarada de diferencias absolutas de las diferentes alineaciones de bytes entre el valor de referencia y el valor de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de distintas alineaciones de bytes entre el valor de referencia y el valor de origen.
+Devuelve un vector de 4 sumas. Cada suma corresponde a la suma enmascarada de diferencias absolutas de diferentes alineaciones de bytes entre el valor de referencia y el valor de origen.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_graphics.h
+**Encabezado:** amp_graphics. h
 
-**Espacio de nombres**: Concurrency::Graphics::Direct3D
+**Espacio de nombres:** Concurrency:: Graphics::d irect3d
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics::direct3d (espacio de nombres)](concurrency-graphics-direct3d-namespace.md)

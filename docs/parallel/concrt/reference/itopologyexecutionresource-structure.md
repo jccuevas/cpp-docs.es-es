@@ -1,5 +1,5 @@
 ---
-title: ITopologyExecutionResource (Estructura)
+title: ITopologyExecutionResource (estructura)
 ms.date: 11/04/2016
 f1_keywords:
 - ITopologyExecutionResource
@@ -9,35 +9,35 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 4bfb614d5ffd6a399fae33d38a50cee62f17c208
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339501"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140066"
 ---
-# <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource (Estructura)
+# <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource (estructura)
 
 Una interfaz a un recurso de ejecución definido por el Administrador de recursos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct ITopologyExecutionResource;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[ITopologyExecutionResource::GetId](#getid)|Devuelve el Administrador de recursos del identificador único para este recurso de ejecución.|
-|[ITopologyExecutionResource::GetNext](#getnext)|Devuelve una interfaz para el siguiente recurso de ejecución en el orden de enumeración.|
+|[Itopologyexecutionresource (:: GetId](#getid)|Devuelve el identificador único del Administrador de recursos para este recurso de ejecución.|
+|[Itopologyexecutionresource (:: GetNext](#getnext)|Devuelve una interfaz al siguiente recurso de ejecución en el orden de la enumeración.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta interfaz se utiliza normalmente para recorrer observado por el Administrador de recursos de la topología del sistema.
+Esta interfaz se utiliza normalmente para recorrer la topología del sistema como se observa en el Administrador de recursos.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -45,34 +45,34 @@ Esta interfaz se utiliza normalmente para recorrer observado por el Administrado
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrtrm.h
+**Encabezado:** concrtrm. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="getid"></a>  Itopologyexecutionresource (método)
+## <a name="getid"></a>Itopologyexecutionresource (:: GetId (método)
 
-Devuelve el Administrador de recursos del identificador único para este recurso de ejecución.
+Devuelve el identificador único del Administrador de recursos para este recurso de ejecución.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-El Administrador de recursos del identificador único para este recurso de ejecución.
+Identificador único del Administrador de recursos para este recurso de ejecución.
 
-##  <a name="getnext"></a>  Itopologyexecutionresource (método)
+## <a name="getnext"></a>Itopologyexecutionresource (:: GetNext (método)
 
-Devuelve una interfaz para el siguiente recurso de ejecución en el orden de enumeración.
+Devuelve una interfaz al siguiente recurso de ejecución en el orden de la enumeración.
 
-```
+```cpp
 virtual ITopologyExecutionResource *GetNext() const = 0;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-Interfaz para el siguiente recurso de ejecución en el orden de enumeración. Si no hay ningún nodo más en orden de enumeración del nodo al que pertenece este recurso de ejecución, este método devolverá el valor `NULL`.
+Una interfaz al siguiente recurso de ejecución en orden de enumeración. Si no hay más nodos en el orden de enumeración del nodo al que pertenece este recurso de ejecución, este método devolverá el valor `NULL`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

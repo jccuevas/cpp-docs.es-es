@@ -1,5 +1,5 @@
 ---
-title: IVirtualProcessorRoot (Estructura)
+title: IVirtualProcessorRoot (estructura)
 ms.date: 11/04/2016
 f1_keywords:
 - IVirtualProcessorRoot
@@ -11,39 +11,39 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 25ede76a81a77d489d0f2316bd3ae4cb7f84d704
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60757b0edea6b60d080c2175d4df4830ffec0cc3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344045"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139892"
 ---
-# <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot (Estructura)
+# <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot (estructura)
 
 Una abstracción para un subproceso de hardware en el que un proxy del subproceso puede ejecutarse.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 struct IVirtualProcessorRoot : public IExecutionResource;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[IVirtualProcessorRoot::Activate](#activate)|Hace que el proxy del subproceso asociado con la interfaz de contexto de ejecución `pContext` para empezar a ejecutar en esta raíz del procesador virtual.|
-|[IVirtualProcessorRoot::Deactivate](#deactivate)|Hace que al proxy del subproceso está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso reanudará la ejecución en una llamada a la `Activate` método.|
-|[IVirtualProcessorRoot::EnsureAllTasksVisible](#ensurealltasksvisible)|Hace que los datos almacenados en la jerarquía de memoria de procesadores individuales que son visibles para todos los procesadores en el sistema. Se asegura de que se ha ejecutado una barrera de memoria total en todos los procesadores antes de que el método devuelve.|
-|[IVirtualProcessorRoot::GetId](#getid)|Devuelve un identificador único para la raíz del procesador virtual.|
+|[IVirtualProcessorRoot:: Activate](#activate)|Hace que el proxy del subproceso asociado a la interfaz de contexto de ejecución `pContext` empiece a ejecutarse en esta raíz del procesador virtual.|
+|[IVirtualProcessorRoot::D eactivate](#deactivate)|Hace que el proxy del subproceso que se está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso se reanudará la ejecución en una llamada al método `Activate`.|
+|[IVirtualProcessorRoot:: EnsureAllTasksVisible (](#ensurealltasksvisible)|Hace que los datos almacenados en la jerarquía de memoria de procesadores individuales estén visibles para todos los procesadores del sistema. Garantiza que se ha ejecutado una barrera de memoria completa en todos los procesadores antes de que se devuelva el método.|
+|[IVirtualProcessorRoot:: GetId](#getid)|Devuelve un identificador único para la raíz del procesador virtual.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cada raíz del procesador virtual tiene un recurso de ejecución asociados. El `IVirtualProcessorRoot` interfaz hereda de la [IExecutionResource](iexecutionresource-structure.md) interfaz. Varias raíces de procesador virtual pueden coincidir con el mismo subproceso de hardware subyacente.
+Cada raíz del procesador virtual tiene un recurso de ejecución asociado. La interfaz `IVirtualProcessorRoot` hereda de la interfaz [IExecutionResource](iexecutionresource-structure.md) . Varias raíces de procesador virtual pueden corresponder al mismo subproceso de hardware subyacente.
 
-El Administrador de recursos concede raíces de procesador virtual a los programadores en respuesta a las solicitudes de recursos. Un programador puede utilizar una raíz del procesador virtual para realizar el trabajo activando un contexto de ejecución.
+El Administrador de recursos concede las raíces del procesador virtual a los programadores en respuesta a las solicitudes de recursos. Un programador puede utilizar una raíz del procesador virtual para realizar el trabajo mediante su activación con un contexto de ejecución.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -53,105 +53,105 @@ El Administrador de recursos concede raíces de procesador virtual a los program
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrtrm.h
+**Encabezado:** concrtrm. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="activate"></a>  IVirtualProcessorRoot:: Activate (método)
+## <a name="activate"></a>IVirtualProcessorRoot:: Activate (método)
 
-Hace que el proxy del subproceso asociado con la interfaz de contexto de ejecución `pContext` para empezar a ejecutar en esta raíz del procesador virtual.
+Hace que el proxy del subproceso asociado a la interfaz de contexto de ejecución `pContext` empiece a ejecutarse en esta raíz del procesador virtual.
 
-```
+```cpp
 virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pContext*<br/>
-Interfaz para el contexto de ejecución que se enviará en esta raíz del procesador virtual.
+Una interfaz al contexto de ejecución que se enviará en esta raíz del procesador virtual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El Administrador de recursos proporcionará a un proxy del subproceso si uno no está asociado con la interfaz de contexto de ejecución `pContext`
+El Administrador de recursos proporcionará un proxy de subproceso si uno no está asociado a la interfaz de contexto de ejecución `pContext`
 
-El `Activate` método puede utilizarse para empezar a ejecutar el trabajo en una nueva raíz del procesador virtual devuelta por el Administrador de recursos o para reanudar el proxy del subproceso en una raíz del procesador virtual que se ha desactivado o que va a desactivar. Consulte [IVirtualProcessorRoot:: Deactivate](#deactivate) para obtener más información sobre la desactivación. Cuando está reanudando una raíz del procesador virtual desactivada, el parámetro `pContext` debe ser el mismo que el parámetro que se utiliza para desactivar la raíz del procesador virtual.
+El método `Activate` se puede usar para iniciar la ejecución del trabajo en una nueva raíz del procesador virtual devuelta por el Administrador de recursos, o para reanudar el proxy del subproceso en una raíz del procesador virtual que ha desactivado o está a punto de desactivarse. Vea [IVirtualProcessorRoot::D eactivate](#deactivate) para obtener más información sobre la desactivación. Al reanudar una raíz del procesador virtual desactivada, el parámetro `pContext` debe ser el mismo que el parámetro usado para desactivar la raíz del procesador virtual.
 
-Una vez que se ha activado una raíz del procesador virtual por primera vez, los pares subsiguientes de las llamadas a `Deactivate` y `Activate` pueden competir entre sí. Esto significa que es aceptable para el Administrador de recursos para recibir una llamada a `Activate` antes de recibir el `Deactivate` llamada estaba destinado.
+Una vez que se ha activado por primera vez una raíz del procesador virtual, los pares subsiguientes de llamadas a `Deactivate` y `Activate` pueden anticiparse entre sí. Esto significa que es aceptable que el Administrador de recursos reciba una llamada a `Activate` antes de recibir la llamada de `Deactivate` para la que se diseñó.
 
-Al activar una raíz del procesador virtual, indicar al administrador de recursos que esta raíz del procesador virtual está actualmente ocupada con el trabajo. Si el programador no puede encontrar ningún trabajo para ejecutar en esta raíz, se espera para invocar el `Deactivate` método que informa el Administrador de recursos que la raíz del procesador virtual se encuentra inactiva. El Administrador de recursos usa estos datos para el sistema de equilibrio de carga.
+Al activar una raíz del procesador virtual, señala al Administrador de recursos que esta raíz del procesador virtual está actualmente ocupada con el trabajo. Si el programador no encuentra ningún trabajo para ejecutar en esta raíz, se espera que invoque al método `Deactivate` que informe de la Administrador de recursos que la raíz del procesador virtual está inactiva. El Administrador de recursos usa estos datos para equilibrar la carga del sistema.
 
 `invalid_argument` se produce si el argumento `pContext` tiene el valor `NULL`.
 
-`invalid_operation` se produce si el argumento `pContext` no representa el contexto de ejecución que se ha enviado recientemente por esta raíz del procesador virtual.
+`invalid_operation` se produce si el argumento `pContext` no representa el contexto de ejecución que ha enviado más recientemente esta raíz del procesador virtual.
 
-La acción de activar una raíz del procesador virtual aumenta el nivel de suscripción del subproceso de hardware subyacente en uno. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
+El hecho de activar una raíz del procesador virtual aumenta el nivel de suscripción del subproceso de hardware subyacente en uno. Para obtener más información sobre los niveles de suscripción, vea [IExecutionResource:: currentsubscriptionlevel (](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="deactivate"></a>  IVirtualProcessorRoot:: Deactivate (método)
+## <a name="deactivate"></a>IVirtualProcessorRoot::D método eactivate
 
-Hace que al proxy del subproceso está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso reanudará la ejecución en una llamada a la `Activate` método.
+Hace que el proxy del subproceso que se está ejecutando actualmente en esta raíz del procesador virtual deje de enviar el contexto de ejecución. El proxy del subproceso se reanudará la ejecución en una llamada al método `Activate`.
 
-```
+```cpp
 virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pContext*<br/>
-El contexto que actualmente está siendo enviado por esta raíz.
+Contexto que esta raíz está enviando actualmente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor booleano. Un valor de **true** indica que el proxy del subproceso se devuelve desde el `Deactivate` método en respuesta a una llamada a la `Activate` método. Un valor de `false` indica que el proxy del subproceso devuelto del método en respuesta a un evento de notificación en el Administrador de recursos. En un programador de subprocesos (UMS) de modo de usuario programable, esto indica que los elementos han aparecido en la lista de finalización del programador y el programador es necesario para controlarlos.
+Un valor booleano. Un valor de **true** indica que el proxy del subproceso devuelto desde el método `Deactivate` como respuesta a una llamada al método `Activate`. Un valor de `false` indica que el proxy del subproceso devolvió el método en respuesta a un evento de notificación en el Administrador de recursos. En un programador de subprocesos programables en modo usuario (UMS), esto indica que los elementos han aparecido en la lista de finalización del programador y que el programador debe administrarlos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Utilice este método para detener temporalmente la ejecución de una raíz del procesador virtual cuando no se encuentra ningún trabajo en el programador. Una llamada a la `Deactivate` método debe originarse desde la `Dispatch` método del contexto de ejecución que la raíz del procesador virtual se activó por última vez con. En otras palabras, el proxy del subproceso invocar el `Deactivate` método debe ser el único que se está ejecutando actualmente en la raíz del procesador virtual. Una llamada al método en una raíz del procesador virtual, no se está ejecutando en podría provocar un comportamiento indefinido.
+Use este método para detener temporalmente la ejecución de una raíz del procesador virtual cuando no encuentre ningún trabajo en el programador. Una llamada al método `Deactivate` debe originarse en el `Dispatch` método del contexto de ejecución en el que se activó por última vez la raíz del procesador virtual. En otras palabras, el proxy del subproceso que invoca el método `Deactivate` debe ser el que se está ejecutando actualmente en la raíz del procesador virtual. Si se llama al método en una raíz del procesador virtual que no se está ejecutando, se podría producir un comportamiento indefinido.
 
-Una raíz del procesador virtual desactivada puede reactivarse con una llamada a la `Activate` método con el mismo argumento se pasó a la `Deactivate` método. El programador es responsable de garantizar que las llamadas a la `Activate` y `Deactivate` métodos están emparejados, pero no son necesarios para poder recibir en un orden específico. El Administrador de recursos es capaz de recibir una llamada a la `Activate` método antes de recibir una llamada a la `Deactivate` método estaba destinado.
+Una raíz del procesador virtual desactivada puede reactivarán con una llamada al método `Activate`, con el mismo argumento que se pasó al método `Deactivate`. El programador es responsable de garantizar que las llamadas a los métodos `Activate` y `Deactivate` están emparejadas, pero no es necesario que se reciban en un orden específico. El Administrador de recursos puede controlar la recepción de una llamada al método de `Activate` antes de recibir una llamada al método `Deactivate` para el que se diseñó.
 
-Si una raíz del procesador virtual despierta y el valor devuelto desde el `Deactivate` método es el valor **false**, el programador debe consultar la lista de finalización UMS a través de la `IUMSCompletionList::GetUnblockNotifications` método, act de esa información y, a continuación, vuelve a llamar a la `Deactivate` nuevo al método. Esto se debe repetir hasta que el `Deactivate` método devuelve el valor `true`.
+Si se activa una raíz del procesador virtual y el valor devuelto por el método `Deactivate` es el valor **false**, Scheduler debe consultar la lista de finalización de UMS a través del método `IUMSCompletionList::GetUnblockNotifications`, actuar sobre esa información y, a continuación, llamar de nuevo al método `Deactivate`. Debe repetirse hasta ese momento, ya que el método `Deactivate` devuelve el valor `true`.
 
 `invalid_argument` se produce si el argumento `pContext` tiene el valor NULL.
 
-`invalid_operation` se produce si nunca se ha activado la raíz del procesador virtual, o el argumento `pContext` no representa el contexto de ejecución que se ha enviado recientemente por esta raíz del procesador virtual.
+se produce `invalid_operation` si la raíz del procesador virtual no se ha activado nunca, o si el argumento `pContext` no representa el contexto de ejecución que la raíz del procesador virtual envió más recientemente.
 
-El acto de desactivación de una raíz del procesador virtual disminuye el nivel de suscripción del subproceso de hardware subyacente en uno. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
+La acción de desactivar una raíz del procesador virtual reduce el nivel de suscripción del subproceso de hardware subyacente en uno. Para obtener más información sobre los niveles de suscripción, vea [IExecutionResource:: currentsubscriptionlevel (](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-##  <a name="ensurealltasksvisible"></a>  EnsureAllTasksVisible (método)
+## <a name="ensurealltasksvisible"></a>IVirtualProcessorRoot:: EnsureAllTasksVisible ((método)
 
-Hace que los datos almacenados en la jerarquía de memoria de procesadores individuales que son visibles para todos los procesadores en el sistema. Se asegura de que se ha ejecutado una barrera de memoria total en todos los procesadores antes de que el método devuelve.
+Hace que los datos almacenados en la jerarquía de memoria de procesadores individuales estén visibles para todos los procesadores del sistema. Garantiza que se ha ejecutado una barrera de memoria completa en todos los procesadores antes de que se devuelva el método.
 
-```
+```cpp
 virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pContext*<br/>
-El contexto que actualmente está siendo enviado por esta raíz del procesador virtual.
+Contexto que la raíz del procesador virtual está enviando en este momento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Puede encontrar útil este método cuando desee sincronizar la desactivación de una raíz del procesador virtual con la adición de nuevo trabajo en el programador. Por motivos de rendimiento, puede decidir agregar elementos de trabajo a su programador sin ejecutar una barrera de memoria, lo que significa que los elementos de trabajo agregados por un subproceso que se ejecuta en un procesador no son inmediatamente visibles para todos los demás procesadores. Mediante este método junto con el `Deactivate` raíces de método, puede asegurarse de que el programador desactivar todo su procesador virtual mientras los elementos de trabajo existen en colecciones de su programador.
+Este método puede resultar útil si desea sincronizar la desactivación de una raíz del procesador virtual con la adición de nuevo trabajo en el programador. Por motivos de rendimiento, puede decidir agregar elementos de trabajo al programador sin ejecutar una barrera de memoria, lo que significa que los elementos de trabajo agregados por un subproceso que se ejecuta en un procesador no son visibles inmediatamente para todos los demás procesadores. Al usar este método junto con el método `Deactivate` puede asegurarse de que el programador no desactive todas las raíces del procesador virtual mientras existan elementos de trabajo en las colecciones del programador.
 
-Una llamada a la `EnsureAllTasksVisibleThe` método debe originarse desde la `Dispatch` método del contexto de ejecución que la raíz del procesador virtual se activó por última vez con. En otras palabras, el proxy del subproceso invocar el `EnsureAllTasksVisible` método debe ser el único que se está ejecutando actualmente en la raíz del procesador virtual. Una llamada al método en una raíz del procesador virtual, no se está ejecutando en podría provocar un comportamiento indefinido.
+Una llamada al método `EnsureAllTasksVisibleThe` debe originarse en el `Dispatch` método del contexto de ejecución en el que se activó por última vez la raíz del procesador virtual. En otras palabras, el proxy del subproceso que invoca el método `EnsureAllTasksVisible` debe ser el que se está ejecutando actualmente en la raíz del procesador virtual. Si se llama al método en una raíz del procesador virtual que no se está ejecutando, se podría producir un comportamiento indefinido.
 
 `invalid_argument` se produce si el argumento `pContext` tiene el valor `NULL`.
 
-`invalid_operation` se produce si nunca se ha activado la raíz del procesador virtual, o el argumento `pContext` no representa el contexto de ejecución que se ha enviado recientemente por esta raíz del procesador virtual.
+se produce `invalid_operation` si la raíz del procesador virtual no se ha activado nunca, o si el argumento `pContext` no representa el contexto de ejecución que la raíz del procesador virtual envió más recientemente.
 
-##  <a name="getid"></a>  IVirtualProcessorRoot:: GetId (método)
+## <a name="getid"></a>IVirtualProcessorRoot:: GetId (método)
 
 Devuelve un identificador único para la raíz del procesador virtual.
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un identificador entero.
+Identificador entero.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

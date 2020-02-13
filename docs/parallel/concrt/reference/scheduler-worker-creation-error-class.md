@@ -1,5 +1,5 @@
 ---
-title: scheduler_worker_creation_error (Clase)
+title: scheduler_worker_creation_error (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - scheduler_worker_creation_error
@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337367"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142764"
 ---
-# <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error (Clase)
+# <a name="scheduler_worker_creation_error-class"></a>scheduler_worker_creation_error (clase)
 
 Esta clase describe una excepción producida debido a un error al crear un contexto de ejecución del trabajo en el runtime de simultaneidad.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[scheduler_worker_creation_error](#ctor)|Sobrecargado. Construye un objeto `scheduler_worker_creation_error`.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta excepción se produce normalmente cuando se produce un error en una llamada al sistema operativo para crear contextos de ejecución desde dentro del Runtime de simultaneidad. Contextos de ejecución son subprocesos que ejecutan tareas en el Runtime de simultaneidad. El código de error que se devolvería normalmente una llamada al método Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se puede recuperar mediante el método de clase base `get_error_code`.
+Normalmente, esta excepción se produce cuando se produce un error en una llamada al sistema operativo para crear contextos de ejecución desde el Runtime de simultaneidad. Los contextos de ejecución son subprocesos que ejecutan tareas en el Runtime de simultaneidad. El código de error que se devolvería normalmente de una llamada al método de Win32 `GetLastError` se convierte en un valor de tipo `HRESULT` y se puede recuperar mediante el método de la clase base `get_error_code`.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -47,15 +47,15 @@ Esta excepción se produce normalmente cuando se produce un error en una llamada
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** concrt.h
+**Encabezado:** concrt. h
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a>scheduler_worker_creation_error
 
 Construye un objeto `scheduler_worker_creation_error`.
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -70,8 +70,8 @@ explicit _CRTIMP scheduler_worker_creation_error(
 Mensaje descriptivo del error.
 
 *_Hresult*<br/>
-El `HRESULT` valor del error que provocó la excepción.
+Valor `HRESULT` del error que produjo la excepción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)

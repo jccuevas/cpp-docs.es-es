@@ -9,36 +9,36 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: eddcf44966d197068113c5e7817dad37841261a3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 9a3f6f349fc3103893639fe209dcf23a07ffec56
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524848"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127129"
 ---
-# <a name="acceleratorviewremoved-class"></a>accelerator_view_removed (Clase)
+# <a name="accelerator_view_removed-class"></a>accelerator_view_removed (Clase)
 
-La excepción que se produce cuando una llamada de DirectX subyacente produce un error porque el mecanismo de detección y recuperación de tiempo de espera de Windows.
+Excepción que se produce cuando se produce un error en una llamada de DirectX subyacente debido al mecanismo de detección y recuperación de tiempo de espera de Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class accelerator_view_removed : public runtime_exception;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[accelerator_view_removed (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `accelerator_view_removed`.|
+|[Constructor de accelerator_view_removed](#ctor)|Inicializa una nueva instancia de la clase `accelerator_view_removed`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[get_view_removed_reason](#get_view_removed_reason)|Devuelve un código de error HRESULT que indica la causa de la `accelerator_view` eliminación del objeto.|
+|[get_view_removed_reason](#get_view_removed_reason)|Devuelve un código de error HRESULT que indica la causa de la eliminación del objeto `accelerator_view`.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -50,17 +50,17 @@ class accelerator_view_removed : public runtime_exception;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amprt.h
+**Encabezado:** amprt. h
 
-**Espacio de nombres**: simultaneidad
+**Espacio de nombres:** Concurrency
 
-## <a name="ctor"></a> accelerator_view_removed)
+## <a name="ctor"></a>accelerator_view_removed
 
-Inicializa una nueva instancia de la [accelerator_view_removed ()](accelerator-view-removed-class.md) clase.
+Inicializa una nueva instancia de la clase [accelerator_view_removed](accelerator-view-removed-class.md) .
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 explicit accelerator_view_removed(
     const char * message,
     HRESULT view_removed_reason ) throw();
@@ -75,22 +75,22 @@ explicit accelerator_view_removed(
 Descripción del error.
 
 *view_removed_reason*<br/>
-Un código de error HRESULT que indica la causa de la eliminación de la `accelerator_view` objeto.
+Un código de error HRESULT que indica la causa de la eliminación del objeto `accelerator_view`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Nueva instancia de la clase `accelerator_view_removed`.
 
-## <a name="get_view_removed_reason"></a> get_view_removed_reason
+## <a name="get_view_removed_reason"></a>get_view_removed_reason
 
-Devuelve un código de error HRESULT que indica la causa de la `accelerator_view` eliminación del objeto.
+Devuelve un código de error HRESULT que indica la causa de la eliminación del objeto `accelerator_view`.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT get_view_removed_reason() const throw();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,26 +1,26 @@
 ---
-title: Procedimiento Usar Alloc y Free para mejorar el rendimiento de memoria
+title: 'Cómo: Usar Alloc y Free para mejorar el rendimiento de la memoria'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: f55bf360ac2b4c7162c1ed2b917ac6ce8c7cd11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8438e833262d42c6083f48f759501c573a35c772
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410024"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142784"
 ---
-# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Procedimiento Usar Alloc y Free para mejorar el rendimiento de memoria
+# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>Cómo: Usar Alloc y Free para mejorar el rendimiento de la memoria
 
-Este documento muestra cómo usar el [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) y [Concurrency:: Free](reference/concurrency-namespace-functions.md#free) funciones para mejorar el rendimiento de memoria. Se compara el tiempo necesario para invertir los elementos de una matriz en paralelo para tres tipos diferentes, cada uno de los cuales especifica los operadores `new` y `delete`.
+En este documento se muestra cómo usar las funciones [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) y [Concurrency:: Free](reference/concurrency-namespace-functions.md#free) para mejorar el rendimiento de la memoria. Se compara el tiempo necesario para invertir los elementos de una matriz en paralelo para tres tipos diferentes, cada uno de los cuales especifica los operadores `new` y `delete`.
 
 Las funciones `Alloc` y `Free` son muy útiles cuando varios subprocesos llaman frecuentemente a `Alloc` y `Free`. El runtime contiene una memoria caché independiente para cada subproceso; por consiguiente, el runtime administra la memoria sin el uso de bloqueos ni barreras de memoria.
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestran tres tipos que especifican los operadores `new` y `delete`. El `new_delete` clase utiliza global `new` y `delete` operadores, el `malloc_free` clase usa el tiempo de ejecución de C [malloc](../../c-runtime-library/reference/malloc.md) y [libre](../../c-runtime-library/reference/free.md) funciones y el `Alloc_Free` clase usa el Runtime de simultaneidad `Alloc` y `Free` funciones.
+En el siguiente ejemplo se muestran tres tipos que especifican los operadores `new` y `delete`. La clase `new_delete` usa los operadores globales `new` y `delete`, la clase `malloc_free` usa las funciones [malloc](../../c-runtime-library/reference/malloc.md) y [Free](../../c-runtime-library/reference/free.md) en tiempo de ejecución de C, y la clase `Alloc_Free` usa las funciones Runtime de simultaneidad `Alloc` y `Free`.
 
 [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]
 
@@ -56,9 +56,9 @@ En este ejemplo, el tipo que usa las funciones `Alloc` y `Free` proporciona el m
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `allocators.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc allocators.cpp**
+> **cl. exe/EHsc allocadores. cpp**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Funciones de administración de memoria](../../parallel/concrt/memory-management-functions.md)<br/>
 [Alloc (función)](reference/concurrency-namespace-functions.md#alloc)<br/>

@@ -1,20 +1,20 @@
 ---
-title: hash&lt;string_view&gt; especialización
+title: '&lt;hash string_view especialización&gt;'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346963"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126180"
 ---
-# <a name="hashltstringviewgt-specialization"></a>hash&lt;string_view&gt; especialización
+# <a name="hashltstring_viewgt-specialization"></a>&lt;hash string_view especialización&gt;
 
-Una especialización de plantilla que genera un valor hash, dado una string_view.
+Especialización de plantilla que genera un valor hash dado un string_view.
 
 ```cpp
 template <class CharType, class Traits>
@@ -27,9 +27,9 @@ struct hash<basic_string_view<CharType, Traits>>
         noexcept;
 };
 ```
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El hash de un string_view igual que el hash del objeto de cadena subyacente.
+El hash de un string_view es igual al valor hash del objeto de cadena subyacente.
 
 ### <a name="example"></a>Ejemplo
 

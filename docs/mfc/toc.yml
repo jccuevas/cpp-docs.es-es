@@ -323,7 +323,7 @@
           items:
             - name: automatización
               href: automation.md
-            - name: Clientes de automatización
+            - name: clientes de Automation
               expanded: false
               items:
                 - name: Clientes de automatización
@@ -333,7 +333,7 @@
             - name: Servidores de automatización
               expanded: false
               items:
-                - name: Servidores de automatización
+                - name: servidores de Automation
                   href: automation-servers.md
                 - name: 'Servidores de automatización: Problemas de duración de objetos'
                   href: automation-servers-object-lifetime-issues.md
@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 'Objetos de datos y orígenes de datos: Manipulación'
               href: data-objects-and-data-sources-manipulation.md
-        - name: Arrastrar y colocar (OLE)
-          expanded: false
-          items:
-            - name: Arrastrar y colocar (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'Arrastrar y colocar: Implementación de un origen de colocación'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'Arrastrar y colocar: Implementación de un destino de colocación'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'Arrastrar y colocar: Personalización'
-              href: drag-and-drop-customizing.md
+        - name: Funciones OLE de arrastrar y colocar
+          href: drag-and-drop-ole.md
         - name: Menús y recursos (OLE)
           expanded: false
           items:
@@ -523,7 +514,7 @@
             - name: Controles ActiveX de MFC
               expanded: false
               items:
-                - name: Controles ActiveX de MFC
+                - name: controles ActiveX en MFC
                   href: mfc-activex-controls.md
                 - name: 'Controles ActiveX de MFC: Optimización'
                   expanded: false
@@ -546,7 +537,7 @@
                       href: optimizing-control-drawing.md
                 - name: 'Controles ActiveX de MFC: Dibujo de un control ActiveX'
                   href: mfc-activex-controls-painting-an-activex-control.md
-                - name: 'Controles ActiveX de MFC: Eventos'
+                - name: 'Controles ActiveX de MFC: Events'
                   href: mfc-activex-controls-events.md
                 - name: 'Controles ActiveX de MFC: Adición de eventos estándar a un control ActiveX'
                   href: mfc-activex-controls-adding-stock-events-to-an-activex-control.md
@@ -1666,7 +1657,7 @@
     - name: Clases de OLE
       expanded: false
       items:
-        - name: Clases de OLE
+        - name: clases OLE
           href: ole-classes.md
         - name: Clases de contenedor OLE
           href: ole-container-classes.md
@@ -1711,7 +1702,7 @@
     - name: Clases de MFC
       expanded: false
       items:
-        - name: Clases de MFC
+        - name: clases MFC
           href: reference/mfc-classes.md
         - name: CAccelerateDecelerateTransition (clase)
           href: reference/cacceleratedeceleratetransition-class.md

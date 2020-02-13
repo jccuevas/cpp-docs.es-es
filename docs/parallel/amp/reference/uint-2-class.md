@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405539"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126215"
 ---
-# <a name="uint2-class"></a>uint_2 (Clase)
+# <a name="uint_2-class"></a>uint_2 (Clase)
 
 Representa un vector corto de dos enteros sin signo.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class uint_2;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[Constructor uint_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+|[Constructor de uint_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_2::get_x||
 |uint_2::get_xy||
@@ -78,7 +78,7 @@ class uint_2;
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_2::operator--||
 |uint_2::operator%=||
@@ -90,20 +90,20 @@ class uint_2;
 |uint_2::operator~||
 |uint_2::operator++||
 |uint_2::operator+=||
-|uint_2::operator<\<=||
+|uint_2:: Operator <\<=||
 |uint_2::operator=||
 |uint_2::operator-=||
 |uint_2::operator>>=||
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[cambio de tamaño constante](#uint_2__size)||
+|[Size (constante)](#uint_2__size)||
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |uint_2::g||
 |uint_2::gr||
@@ -120,15 +120,15 @@ class uint_2;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_short_vectors.h
+**Encabezado:** amp_short_vectors. h
 
-**Espacio de nombres**: Concurrency:: Graphics
+**Espacio de nombres:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> uint_2
+## <a name="ctor"></a>uint_2
 
 El constructor predeterminado, inicializa todos los elementos con 0.
 
-```
+```cpp
 uint_2() restrict(amp,
     cpu);
 
@@ -169,23 +169,23 @@ explicit inline uint_2(
 ### <a name="parameters"></a>Parámetros
 
 *_V0*<br/>
-El valor para inicializar el elemento 0.
+Valor para inicializar el elemento 0.
 
 *_V1*<br/>
-El valor para inicializar el elemento 1.
+Valor para inicializar el elemento 1.
 
 *_V*<br/>
-El valor de inicialización.
+Valor de inicialización.
 
 *_Other*<br/>
-El objeto usado para inicializar.
+Objeto usado para inicializar.
 
-##  <a name="uint_2__size"></a> Tamaño
+## <a name="uint_2__size"></a>ajusta
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
