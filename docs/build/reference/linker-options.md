@@ -1,7 +1,7 @@
 ---
 title: Opciones del vinculador MSVC
 description: Una lista de las opciones admitidas por el vinculador de Microsoft LINK.
-ms.date: 09/24/2019
+ms.date: 02/09/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712702"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257551"
 ---
 # <a name="linker-options"></a>Opciones del enlazador
 
@@ -23,7 +23,7 @@ LINK.exe vincula bibliotecas y archivos de objeto de formato de archivo de objet
 
 En la tabla siguiente se muestran las opciones de LINK.exe. Para más información sobre LINK, consulte:
 
-- [Opciones de LINK controladas por el compilador](compiler-controlled-link-options.md)
+- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
 
 - [Archivos de entrada de LINK](link-input-files.md)
 
@@ -31,13 +31,13 @@ En la tabla siguiente se muestran las opciones de LINK.exe. Para más informaci�
 
 - [Palabras reservadas](reserved-words.md)
 
-En la línea de comandos, las opciones del vinculador no distinguen mayúsculas de minúsculas; por ejemplo,/base y/BASE significan lo mismo. Para obtener más información sobre cómo especificar cada opción en la línea de comandos o en Visual Studio, vea la documentación de esa opción.
+En la línea de comandos, las opciones del vinculador no distinguen mayúsculas de minúsculas; por ejemplo, `/base` y `/BASE` significan lo mismo. Para obtener más información sobre cómo especificar cada opción en la línea de comandos o en Visual Studio, vea la documentación de esa opción.
 
 Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especificar algunas opciones del enlazador.
 
 ## <a name="linker-options-listed-alphabetically"></a>Opciones del vinculador por orden alfabético
 
-|Opción|Finalidad|
+|Opción|Propósito|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|Especifica un archivo de respuesta.|
 |[/ALIGN](align-section-alignment.md)|Especifica la alineación de cada sección.|
@@ -64,21 +64,21 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/DEPENDENTLOADFLAG](dependentloadflag.md)|Establece marcas predeterminadas en cargas de DLL dependientes.|
 |[/DLL](dll-build-a-dll.md)|Compila una DLL.|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|Crea un controlador modo kernel.|
-|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Especifica si se generará una imagen ejecutable que se pueda reorganizar aleatoriamente en el momento de la carga con la característica de selección aleatoria del diseño del espacio de direcciones (ASLR).|
+|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Especifica si se debe generar una imagen ejecutable que se rebase en tiempo de carga mediante la característica de selección aleatoria del diseño del espacio de direcciones (ASLR).|
 |[/ENTRY](entry-entry-point-symbol.md)|Establece la dirección inicial.|
-|[/errorReport](errorreport-report-internal-linker-errors.md)|Informa a Microsoft de los errores internos del enlazador.|
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| En desuso. Los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/EXPORT](export-exports-a-function.md)|Exporta una función.|
 |[/FILEALIGN](filealign.md)|Alinea las secciones en el archivo de salida en múltiplos de un valor especificado.|
 |[/FIXED](fixed-fixed-base-address.md)|Crea un programa que solo se puede cargar en su dirección base preferida.|
 |[/FORCE](force-force-file-output.md)|Fuerza la finalización de un vínculo aunque haya símbolos o símbolos sin resolver definidos más de una vez.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Crea una imagen que se puede revisar en caliente.|
-|[/GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Estas dos opciones especifican la generación de un archivo .pgd mediante el enlazador para admitir la optimización guiada por perfiles (PGO). /GENPROFILE y /FASTGENPROFILE usan parámetros predeterminados diferentes.|
+|[/GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Ambas opciones especifican la generación de un *`.pgd`* archivo por el enlazador para admitir la optimización guiada por perfiles (PGO). /GENPROFILE y /FASTGENPROFILE usan parámetros predeterminados diferentes.|
 |[/GUARD](guard-enable-guard-checks.md)|Activa la Protección de flujo de control.|
 |[/HEAP](heap-set-heap-size.md)|Establece el tamaño del montón en bytes.|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Especifica la compatibilidad con la selección aleatoria del diseño del espacio de direcciones (ASLR) de 64 bits de alta entropía.|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Especifica el nombre del archivo .idl y otros archivos de salida MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Especifica el nombre del archivo de *`.idl`* y otros archivos de salida de MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Suprime la salida de las advertencias del enlazador especificado.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Impide el procesamiento de información de atributos en un archivo .idl.|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Impide el procesamiento de información de atributos en un archivo *`.idl`* .|
 |[/IMPLIB](implib-name-import-library.md)|Invalida el nombre de la biblioteca de importación predeterminada.|
 |[/INCLUDE](include-force-symbol-references.md)|Fuerza referencias de símbolo.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Controla la vinculación incremental.|
@@ -92,7 +92,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/LTCG](ltcg-link-time-code-generation.md)|Especifica la generación de código en tiempo de vínculo.|
 |[/MACHINE](machine-specify-target-platform.md)|Especifica la plataforma de destino.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Crea un archivo de manifiesto en paralelo y, si quiere, lo inserta en el archivo binario.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Especifica una sección de > \<dependentAssembly en el archivo de manifiesto.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Especifica un \<la sección de > dependentAssembly en el archivo de manifiesto.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Cambia el nombre predeterminado del archivo de manifiesto.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Especifica un archivo de entrada de manifiesto para que el enlazador lo procese y lo inserte en el archivo binario. Puede usar esta opción varias veces para especificar más de un archivo de entrada de manifiesto.|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Especifica si la información de Control de cuentas de usuario (UAC) debe incrustarse en el manifiesto del programa.|
@@ -100,7 +100,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|Incluye en el archivo de asignaciones la información especificada.|
 |[/MERGE](merge-combine-sections.md)|Combina secciones.|
 |[/MIDL](midl-specify-midl-command-line-options.md)|Especifica opciones de la línea de comandos MIDL.|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|Agrega visualizadores del depurador de un archivo Natvis al archivo PDB.|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|Agrega visualizadores del depurador desde un archivo Natvis a la base de datos de programa (PDB).|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|Suprime la creación de un ensamblado de .NET Framework.|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|Ignora todas las bibliotecas predeterminadas (o las bibliotecas que se especifiquen) cuando se resuelven las referencias externas.|
 |[/NOENTRY](noentry-no-entry-point.md)|Crea una DLL solo de recursos.|
@@ -109,22 +109,22 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/OPT](opt-optimizations.md)|Controla las optimizaciones de LINK.|
 |[/ORDER](order-put-functions-in-order.md)|Coloca COMDAT en la imagen en un orden predeterminado.|
 |[/OUT](out-output-file-name.md)|Especifica el nombre del archivo de salida.|
-|[/PDB](pdb-use-program-database.md)|Crea un archivo de base de datos de programa (PDB).|
+|[/PDB](pdb-use-program-database.md)|Crea un archivo PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Utiliza una ubicación alternativa para guardar un archivo PDB.|
-|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Crea un archivo de base de datos de programa (PDB) sin símbolos privados.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Especifica un archivo .pgd para las Optimizaciones guiadas por perfiles.|
+|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Crea un archivo PDB que no tiene símbolos privados.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Especifica un archivo de *`.pgd`* para las optimizaciones guiadas por perfiles.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Obsoleto** Crea una compilación instrumentada instrumentada segura para subprocesos.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Produce un archivo de salida que se puede usar con el generador de perfiles de Herramientas de rendimiento.|
-|[/RELEASE](release-set-the-checksum.md)|Establece la suma de comprobación en el encabezado del .exe.|
+|[/RELEASE](release-set-the-checksum.md)|Establece la suma de comprobación en el encabezado de *`.exe`* .|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Especifica que la imagen contendrá una tabla de controladores de excepciones seguros.|
 |[/SECTION](section-specify-section-attributes.md)|Invalida los atributos de una sección.|
 |[/SOURCELINK](sourcelink.md)|Especifica un archivo SourceLink que se va a agregar al PDB.|
 |[/STACK](stack-stack-allocations.md)|Establece el tamaño de la pila en bytes.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Asocia un programa de código auxiliar MS-DOS a un programa Win32.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Le indica al sistema operativo cómo ejecutar el archivo .exe.|
-|[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Le indica al sistema operativo que copie la salida del enlazador a un archivo de intercambio antes de que se ejecute.|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Indica al sistema operativo cómo ejecutar el archivo de *`.exe`* .|
+|[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Indica al sistema operativo que copie la salida del enlazador a un archivo de intercambio antes de que se ejecute.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Especifica el identificador de recurso de la biblioteca de tipos generados por el enlazador.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Especifica el nombre del archivo .tlb y otros archivos de salida MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Especifica el nombre del archivo de *`.tlb`* y otros archivos de salida de MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Crea una aplicación diseñada específicamente para ejecutarse en Terminal Server.|
 |[/USEPROFILE](useprofile.md)|Usa datos de entrenamiento de optimización guiada por perfiles para crear una imagen optimizada.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Imprime los mensajes de progreso del enlazador.|
@@ -139,7 +139,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 
 <sup>16,1</sup> esta opción está disponible a partir de la versión 16,1 de Visual Studio 2019.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de compilación de C/C++](c-cpp-building-reference.md)\
 [Referencia del enlazador MSVC](linking.md)

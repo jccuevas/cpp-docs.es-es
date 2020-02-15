@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (dumpbin.exe)
-ms.date: 11/04/2016
+description: Referencia de la opción de línea de comandos/ERRORREPORT de la utilidad Microsoft DUMPBIN.
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 helpviewer_keywords:
@@ -8,25 +9,26 @@ helpviewer_keywords:
 - ERRORREPORT dumpbin option
 - /ERRORREPORT dumpbin option
 ms.assetid: 51178c43-4f95-4fda-8f97-50a257d1c948
-ms.openlocfilehash: 02c8ee07264c21669c3adad2cf9bd8f57a13fc99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 665b4b1e7c01de4a1fcd848a9e6b36ddbf2944c9
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293009"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257681"
 ---
 # <a name="errorreport-dumpbinexe"></a>/ERRORREPORT (dumpbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> La opción/ERRORREPORT está en desuso. A partir de Windows Vista, los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-## <a name="remarks"></a>Comentarios
+## <a name="syntax"></a>Sintaxis
 
-Si se produce un error en dumpbin.exe en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft sobre estos errores internos.
+> **/Errorreport**\[**NONE** \| **prompt** \| **Queue** \| **send** ]
 
-Para obtener más información acerca de **/errorreport**, consulte [/errorReport (informar de errores de compilador interno)](errorreport-report-internal-compiler-errors.md).
+## <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+La configuración del servicio Informe de errores de Windows invalida los argumentos **/errorreport** . DUMPBIN envía automáticamente informes de errores internos a Microsoft, si los informes se habilitan mediante Informe de errores de Windows. No se envía ningún informe si está deshabilitado por Informe de errores de Windows.
+
+## <a name="see-also"></a>Consulte también
 
 [Opciones de DUMPBIN](dumpbin-options.md)

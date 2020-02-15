@@ -1,50 +1,51 @@
 ---
 title: Opciones de EDITBIN
-ms.date: 11/04/2016
+description: Guía de referencia de las opciones de la línea de comandos de la utilidad Microsoft EDITBIN.
+ms.date: 02/09/2020
 f1_keywords:
 - editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271858"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257707"
 ---
 # <a name="editbin-options"></a>Opciones de EDITBIN
 
-Puede utilizar EDITBIN para modificar archivos de objetos, archivos ejecutables y bibliotecas de vínculos dinámicos (DLL). Opciones especifican los cambios que realiza EDITBIN.
+Puede usar EDITBIN para modificar archivos objeto, archivos ejecutables y bibliotecas de vínculos dinámicos (dll). Las opciones especifican los cambios que realiza EDITBIN.
 
-Una opción consta de un especificador de opción, que es un guión (-) o una barra diagonal (/), seguido del nombre de la opción. Los nombres de opción no pueden abreviarse. Algunas opciones toman argumentos que se especifican precedidos de dos puntos (:). No se permiten espacios ni tabulaciones dentro de una especificación de opción. Use uno o más espacios o tabulaciones para separar especificaciones de opción en la línea de comandos. Los nombres de opción y sus argumentos de la palabra clave o argumentos de nombre de archivo no distinguen mayúsculas de minúsculas. Por ejemplo, - bind y/BIND significan lo mismo.
+Una opción consta de un especificador de opción, que puede ser un guión (`-`) o una barra diagonal (`/`), seguido del nombre de la opción. Los nombres de opciones no se pueden abreviar. Algunas opciones toman los argumentos que se especifican después de dos puntos (`:`). No se permiten espacios ni tabulaciones dentro de una especificación de opción. Use uno o más espacios o tabulaciones para separar especificaciones de opción en la línea de comandos. Los nombres de opciones y sus argumentos de palabra clave o de nombre de archivo no distinguen mayúsculas de minúsculas. Por ejemplo, `-bind` y `/BIND` significan lo mismo.
 
 EDITBIN tiene las siguientes opciones:
 
-|Opción|Finalidad|
+|Opción|Propósito|
 |------------|-------------|
 |[/ALLOWBIND](allowbind.md)|Especifica si se puede enlazar un archivo DLL.|
-|[/ALLOWISOLATION](allowisolation.md)|Especifica el archivo DLL o el comportamiento de búsqueda de manifiesto del archivo ejecutable.|
-|[/APPCONTAINER](appcontainer.md)|Especifica si la aplicación debe ejecutarse dentro de un AppContainer, por ejemplo, una aplicación para UWP.|
-|[/BIND](bind.md)|Establece las direcciones de los puntos de entrada en los objetos especificados para acelerar el tiempo de carga.|
-|[/DYNAMICBASE](dynamicbase.md)|Especifica si el archivo DLL o una imagen ejecutable puede reubicarse aleatoriamente durante la carga mediante el uso de la selección aleatoria de diseño de espacio de direcciones (ASLR).|
-|[/ERRORREPORT](errorreport-editbin-exe.md)|Informes de errores internos a Microsoft.|
+|[/ALLOWISOLATION](allowisolation.md)|Especifica el comportamiento de búsqueda del manifiesto del archivo ejecutable o DLL.|
+|[/APPCONTAINER](appcontainer.md)|Especifica si la aplicación se debe ejecutar dentro de un AppContainer, por ejemplo, una aplicación de UWP.|
+|[/BIND](bind.md)|Establece las direcciones de los puntos de entrada de los objetos especificados para acelerar el tiempo de carga.|
+|[/DYNAMICBASE](dynamicbase.md)|Especifica si el archivo DLL o la imagen ejecutable se pueden reorganizar aleatoriamente en tiempo de carga mediante la selección aleatoria del diseño del espacio de direcciones (ASLR).|
+|[/ERRORREPORT](errorreport-editbin-exe.md)| En desuso. Los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/HEAP](heap.md)|Establece el tamaño del montón de la imagen ejecutable en bytes.|
-|[/HIGHENTROPYVA](highentropyva.md)|Especifica si el archivo DLL o una imagen ejecutable es compatible con alta entropía (64 bits) dirección espacio selección aleatoria del diseño (ASLR).|
-|[/INTEGRITYCHECK](integritycheck.md)|Especifica si se comprueba la firma digital en tiempo de carga.|
-|[/LARGEADDRESSAWARE](largeaddressaware.md)|Especifica si el objeto admite las direcciones que están más de dos gigabytes.|
-|[/NOLOGO](nologo-editbin.md)|Suprime la pancarta de inicio EDITBIN.|
+|[/HIGHENTROPYVA](highentropyva.md)|Especifica si el archivo DLL o la imagen ejecutable admite la selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía (64 bits).|
+|[/INTEGRITYCHECK](integritycheck.md)|Especifica si se debe comprobar la firma digital en el momento de la carga.|
+|[/LARGEADDRESSAWARE](largeaddressaware.md)|Especifica si el objeto admite direcciones de más de dos gigabytes.|
+|[/NOLOGO](nologo-editbin.md)|Suprime la pancarta de inicio de EDITBIN.|
 |[/NXCOMPAT](nxcompat.md)|Especifica si la imagen ejecutable es compatible con la prevención de ejecución de datos de Windows.|
-|[/REBASE](rebase.md)|Establece las direcciones base para los objetos especificados.|
+|[/REBASE](rebase.md)|Establece las direcciones base de los objetos especificados.|
 |[/RELEASE](release.md)|Establece la suma de comprobación en el encabezado.|
 |[/SECTION](section-editbin.md)|Invalida los atributos de una sección.|
-|[/STACK](stack.md)|Establece el tamaño de pila de la imagen ejecutable en bytes.|
+|[/STACK](stack.md)|Establece el tamaño de la pila de la imagen ejecutable en bytes.|
 |[/SUBSYSTEM](subsystem.md)|Especifica el entorno de ejecución.|
-|[/SWAPRUN](swaprun.md)|Especifica que la imagen ejecutable debe copiar en el archivo de intercambio y, a continuación, ejecute desde allí.|
-|[/TSAWARE](tsaware.md)|Especifica que la aplicación está diseñada para ejecutarse en un entorno multiusuario.|
+|[/SWAPRUN](swaprun.md)|Especifica que la imagen ejecutable se copia en el archivo de intercambio y, a continuación, se ejecuta desde allí.|
+|[/TSAWARE](tsaware.md)|Especifica que la aplicación está diseñada para ejecutarse en un entorno de varios usuarios.|
 |[/VERSION](version.md)|Establece el número de versión en el encabezado.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Herramientas de generación MSVC adicionales](c-cpp-build-tools.md)<br/>
+\ [adicionales de herramientas de compilación de MSVC](c-cpp-build-tools.md)
 [Referencia de EDITBIN](editbin-reference.md)

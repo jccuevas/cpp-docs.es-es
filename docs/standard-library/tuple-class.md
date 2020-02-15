@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688866"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257109"
 ---
 # <a name="tuple-class"></a>tupla (Clase)
 
@@ -20,7 +20,7 @@ Ajusta una secuencia de elementos de longitud fija.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -41,10 +41,10 @@ class tuple {
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 de *TN*
+\ de *TN*
 Tipo del enésimo elemento de la tupla.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La plantilla de clase describe un objeto que almacena N objetos de tipos `T1`, `T2`,..., `TN`, respectivamente, donde `0 <= N <= Nmax`. La extensión de una instancia de tupla `tuple<T1, T2, ..., TN>` es el número `N` de sus argumentos de plantilla. El índice del argumento de plantilla `Ti` y del valor almacenado correspondiente de ese tipo es `i - 1`. Por lo tanto, aunque se numeran los tipos de 1 a N en esta documentación, los valores de índice correspondientes van de 0 a N-1.
 
@@ -137,13 +137,13 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parámetros
 
-*UN* \
+*UN*\
 Tipo del enésimo elemento copiado de la tupla.
 
 \ *derecha*
 Tupla de la que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los dos primeros operadores miembro asignan los elementos de la *derecha* a los elementos correspondientes de `*this`. El tercer operador miembro asigna `right.first` al elemento en el índice 0 de `*this` y `right.second` al elemento en el índice 1. Los tres operadores miembro devuelven `*this`.
 
@@ -215,7 +215,7 @@ Tupla cuyos elementos se van a intercambiar con los del *derecho*de la tupla.
 \ *derecha*
 Tupla cuyos elementos se van a intercambiar con los de la tupla *izquierda*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función ejecuta `left.swap(right)`.
 
@@ -246,13 +246,13 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parámetros
 
-*UN* \
+*UN*\
 Tipo del enésimo elemento copiado de la tupla.
 
 \ *derecha*
 Tupla de la que se va a copiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer constructor crea un objeto cuyos elementos se han construido de forma predeterminada.
 

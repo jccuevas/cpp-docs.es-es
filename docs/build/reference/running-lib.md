@@ -1,7 +1,7 @@
 ---
 title: Ejecutar LIB
 description: Describe las opciones de línea de comandos que puede usar con lib. exe.
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0d65c8d8b3b0cd28c7cccda25bfd9512321172f9
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685550"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257564"
 ---
 # <a name="running-lib"></a>Ejecutar LIB
 
@@ -40,15 +40,15 @@ Se pueden utilizar varias opciones de línea de comandos para controlar LIB.
 
 ## <a name="lib-command-line"></a>Línea de comandos de LIB
 
-Para ejecutar LIB, escriba el comando `lib` seguido de las opciones y los nombres de archivo de la tarea que está utilizando LIB para realizar. LIB también acepta la entrada de la línea de comandos en los archivos de comandos, que se describen en la sección siguiente. LIB no utiliza una variable de entorno.
+Para ejecutar LIB, escriba el comando `lib`, seguido de las opciones y los nombres de archivo de la tarea para la que está usando LIB. LIB también acepta la entrada de la línea de comandos en los archivos de comandos, que se describen en la sección siguiente. LIB no utiliza una variable de entorno.
 
 ## <a name="lib-command-files"></a>Archivos de comandos LIB
 
 Puede pasar argumentos de línea de comandos a LIB en un archivo de comandos con la siguiente sintaxis:
 
-> <em>Archivo de comandos</em> **lib \@**
+> <em>Archivo de comandos de</em> **\@lib**
 
-El archivo *de comandos de* archivo es un archivo de texto. No se permiten espacios ni tabulaciones entre el signo de arroba ( **\@** ) y el nombre de archivo. El nombre del *archivo de comandos* no tiene ninguna extensión predeterminada; debe especificar el nombre de archivo completo, incluida cualquier extensión. No se pueden usar caracteres comodín. Puede especificar una ruta de acceso absoluta o relativa con el nombre de archivo.
+El archivo *de comandos de* archivo es un archivo de texto. No se permiten espacios ni tabulaciones entre el signo de arroba ( **\@** ) y el nombre de archivo. El nombre del *archivo de comandos* no tiene ninguna extensión predeterminada. Especifique el nombre de archivo completo, incluida cualquier extensión. No se pueden usar caracteres comodín. Puede especificar una ruta de acceso absoluta o relativa con el nombre de archivo.
 
 En el archivo de comandos, los argumentos pueden estar separados por espacios o tabulaciones, como pueden hacerlo en la línea de comandos. Los argumentos también se pueden separar por caracteres de nueva línea. Use un punto y coma ( **;** ) para marcar un comentario. LIB omite todo el texto del punto y coma hasta el final de la línea.
 
@@ -60,22 +60,20 @@ Una opción consta de un especificador de opción, que puede ser un guión ( **-
 
 Las siguientes opciones se aplican a todos los modos de LIB:
 
-> **/ERRORREPORT** \[**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
+> **/Errorreport** \[**None** &#124; **prompt** &#124; **Queue** &#124; **send**]
 
-Si lib. exe genera un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft acerca de estos errores internos.
-
-Para obtener más información acerca de **/errorreport**, vea [/errorreport (informar de errores internos del compilador)](errorreport-report-internal-compiler-errors.md).
+La opción/ERRORREPORT está en desuso. A partir de Windows Vista, los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
 > **/LINKREPRO:** _ruta de acceso de directorio_ \
 > **/LINKREPROTARGET:** _nombre de archivo_
 
-Para ayudar a que Microsoft diagnostique los bloqueos de lib. exe y los errores internos, puede usar la opción [/LINKREPRO](linkrepro.md) . Genera una *reproducción de vínculo*, un conjunto de artefactos de compilación que permiten a Microsoft reproducir un problema que se produce durante las operaciones de la biblioteca. La opción [/LINKREPROTARGET](linkreprotarget.md) se puede usar con la opción **/LINKREPRO** . Solo genera artefactos de reproducción de vínculos cuando lib. exe genera el archivo especificado. Para obtener más información, vea [Cómo notificar un problema con el C++ conjunto de herramientas de Microsoft](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Para ayudar a que Microsoft diagnostique los bloqueos de lib. exe y los errores internos, puede usar la opción [/LINKREPRO](linkrepro.md) . Esta opción genera una *reproducción de vínculo*, un conjunto de artefactos de compilación que permiten a Microsoft reproducir un problema que se produce durante las operaciones de la biblioteca. La opción [/LINKREPROTARGET](linkreprotarget.md) se puede usar con la opción **/LINKREPRO** . Solo genera artefactos de reproducción de vínculos cuando lib. exe genera el archivo especificado. Para obtener más información, vea [Cómo notificar un problema con el C++ conjunto de herramientas de Microsoft](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 > **/LTCG**
 
-"LTCG" representa *la generación de código en tiempo de vínculo*. Esta característica requiere la cooperación entre el compilador ([cl. exe](compiler-options.md)), lib y el vinculador ([vínculo](linker-options.md)) para optimizar el código más allá de lo que puede hacer cualquier componente.
+"LTCG" representa *la generación de código en tiempo de vínculo*. Esta característica requiere la cooperación entre el compilador ([cl. exe](compiler-options.md)), lib y el vinculador ([Link](linker-options.md)). Juntos pueden optimizar el código más allá de lo que cualquier componente puede hacer por sí solo.
 
-Para LIB, la opción **/LTCG** especifica que las entradas de cl. exe incluyen archivos objeto generados mediante la opción del compilador [/GL](gl-whole-program-optimization.md) . Si LIB encuentra entradas y no se especifica **/LTCG** , se reiniciará con/LTCG habilitado después de mostrar un mensaje informativo. En otras palabras, no es necesario establecer explícitamente esta opción, pero acelera el rendimiento de la compilación para hacerlo porque LIB no tiene que reiniciarse.
+La opción **/LTCG** de lib especifica que las entradas de cl. exe incluyen archivos objeto generados mediante la opción del compilador [/GL](gl-whole-program-optimization.md) . Si LIB encuentra tales entradas y no se especifica **/LTCG** , se reinicia con/LTCG habilitado después de mostrar un mensaje informativo. En otras palabras, no es necesario establecer esta opción explícitamente, pero acelera el rendimiento de la compilación. Esto se debe a que LIB no tiene que reiniciarse.
 
 En el proceso de compilación, la salida de LIB se envía al vínculo. LINK tiene su propia opción **/LTCG** independiente. Se usa para realizar varias optimizaciones, incluida la optimización de programas completos y la instrumentación de optimización guiada por perfiles (PGO). Para obtener más información acerca de la opción de vínculo, vea [/LTCG](ltcg-link-time-code-generation.md).
 
@@ -91,12 +89,12 @@ Suprime la presentación del mensaje de copyright y el número de versión de LI
 
 Muestra detalles sobre el progreso de la sesión, incluidos los nombres de los archivos. obj que se van a agregar. La información se envía a la salida estándar y puede redirigirse a un archivo.
 
-> **/WX**[ **:NO**]
+> **/WX**[ **: no**]
 
 Trata las advertencias como errores. Para obtener más información, consulte [/WX (Tratar advertencias del enlazador como errores)](wx-treat-linker-warnings-as-errors.md).
 
 Otras opciones solo se aplican a los modos específicos de LIB. Estas opciones se describen en las secciones que describen cada modo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de LIB](lib-reference.md)

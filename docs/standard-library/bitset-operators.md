@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890137"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257993"
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 
@@ -77,7 +77,7 @@ bitset 3: 0001
 
 Inserta una representación de texto de la secuencia de bits en el flujo de salida.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -93,7 +93,7 @@ Un objeto de tipo **bitset\<N>** que se va a insertar en el flujo de salida como
 
 Representación de texto de la secuencia de bits en `ostr`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla sobrecarga `operator<<`, lo que permite escribir una BitSet sin convertirla primero en una cadena. La función de plantilla ejecuta eficazmente:
 
@@ -134,7 +134,7 @@ int main( )
 
 Lee una cadena de caracteres de bit en un conjunto de bits.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -143,7 +143,7 @@ basic_istream<CharType, Traits>& operator>> (
 
 ### <a name="parameters"></a>Parámetros
 
-\ *i_str*
+*i_str*\
 La cadena que se escribe en el flujo de entrada para insertarla en un conjunto de bits.
 
 \ *derecha*
@@ -153,7 +153,7 @@ El conjunto de bits que recibe los bits del flujo de entrada.
 
 La función de plantilla devuelve la cadena *i_str*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla sobrecarga `operator>>` para almacenar en la *parte derecha* el valor `bitset(str)`, donde `str` es un objeto de tipo [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extraído de *i_str*.
 

@@ -1,19 +1,20 @@
 ---
 title: Opciones del compilador por categoría
-ms.date: 01/08/2020
+description: Lista de referencias por categoría de las opciones deC++ la línea de comandos de Microsoft C/Compiler.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034589"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257720"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opciones del compilador por categoría
 
-Este artículo contiene una lista por categorías de las opciones del compilador. Para acceder a una lista alfabética, vea [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
+Este artículo contiene una lista por categorías de las opciones del compilador. Para obtener una lista alfabética, vea [Opciones del compilador ordenadas alfabéticamente](compiler-options-listed-alphabetically.md).
 
 ## <a name="optimization"></a>Optimization
 
@@ -70,7 +71,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Utiliza instrucciones de movimiento de enteros para valores de punto flotante y deshabilita ciertas optimizaciones de carga de punto flotante.|
 |[/Qspectre](qspectre.md)|Habilitar mitigaciones para CVE 2017-5753, para una clase de ataques Spectre.|
 |[/Qspectre-load](qspectre-load.md)|Generar instrucciones de serialización para cada instrucción de carga.|
-|[/Qspectre-load-cf](qspectre-load-cf.md)|Generar instrucciones de serialización para cada instrucción de flujo de control que carga la memoria.|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|Generar instrucciones de serialización para cada instrucción de flujo de control que carga memoria.|
 |[/Qvec-Report](qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|
 |[/RTC](rtc-run-time-error-checks.md)|Habilita la comprobación de errores en tiempo de ejecución.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Selecciona cómo se interpreta la palabra clave volatile.|
@@ -88,7 +89,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Fm](fm-name-mapfile.md)|Crea un archivo de asignaciones.|
 |[/Fo](fo-object-file-name.md)|Crea un archivo de objeto.|
 |[/Fp](fp-name-dot-pch-file.md)|Especifica el nombre de un archivo de encabezado precompilado.|
-|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nombre archivos generados. SBR del explorador.|
+|[/FR,/fr](fr-fr-create-dot-sbr-file.md)|Nombre generado *`.sbr`* archivos del explorador.|
 
 ## <a name="preprocessor"></a>Preprocesador
 
@@ -112,7 +113,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 |Opción|Propósito|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Controle la evaluación de constexpr en tiempo de compilación.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Controle la evaluación de **constexpr** en tiempo de compilación.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) en el código fuente.|
 |[/vd](vd-disable-construction-displacements.md)|Suprime o habilita los miembros de la clase `vtordisp` ocultos.|
 |[/vmb](vmb-vmg-representation-method.md)|Usa la base más apropiada para los punteros a miembros.|
@@ -128,7 +129,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/ZH](zh.md)|Especifica MD5, SHA-1 o SHA-256 para las sumas de comprobación en información de depuración.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Incluye la información de depuración en una base de datos de programa compatible con Editar y continuar. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera información de depuración completa.|
-|[/Zl](zl-omit-default-library-name.md)|Quita el nombre de la biblioteca predeterminada del archivo .obj.|
+|[/Zl](zl-omit-default-library-name.md)|Quita el nombre de biblioteca predeterminado del archivo *`.obj`* .|
 |[/ZP](zp-struct-member-alignment.md) *n*|Empaqueta los miembros de la estructura.|
 |[/Zs](zs-syntax-check-only.md)|Comprueba únicamente la sintaxis.|
 |[/ZW](zw-windows-runtime-compilation.md)|Genera un archivo de salida para ejecutarse en el Windows Runtime.|
@@ -142,10 +143,10 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/LDd](md-mt-ld-use-run-time-library.md)|Crea una biblioteca de vínculos dinámicos para depuración.|
 |[/link](link-pass-options-to-linker.md)|Pasa la opción especificada a LINK.|
 |[/LN](ln-create-msil-module.md)|Crea un módulo MSIL.|
-|[/MD](md-mt-ld-use-run-time-library.md)|Compila para crear una DLL multiproceso mediante MSVCRT.lib.|
-|[/MDd](md-mt-ld-use-run-time-library.md)|Compila para crear una DLL multiproceso para depuración mediante MSVCRTD.lib.|
-|[/MT](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso mediante LIBCMT.lib.|
-|[/MTd](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso para depuración mediante LIBCMTD.lib.|
+|[/MD](md-mt-ld-use-run-time-library.md)|Compila para crear una DLL Multiproceso mediante *msvcrt. lib*.|
+|[/MDd](md-mt-ld-use-run-time-library.md)|Compila para crear una DLL Multiproceso de depuración mediante *msvcrtd. lib*.|
+|[/MT](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso, mediante *libcmt. lib*.|
+|[/MTd](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso de depuración mediante *LIBCMTD. lib*.|
 
 ## <a name="miscellaneous"></a>Varios
 
@@ -156,10 +157,10 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/analyze](analyze-code-analysis.md)|Permite el análisis de código|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Aumenta el número de secciones direccionables en un archivo .obj.|
 |[/c](c-compile-without-linking.md)|Compila sin vincular.|
-|[/cgthreads](cgthreads-code-generation-threads.md)|Especifica el número de subprocesos de cl.exe que se deben usar para la optimización y la generación de código.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Permite proporcionar directamente la información del error interno del compilador (ICE) C++ al equipo de Microsoft.|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Muestra la ruta de acceso completa de archivos de código fuente pasados a cl.exe en texto de diagnóstico.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Fuerza que las operaciones de escritura en el archivo de base de datos de programa (PDB) se serialicen mediante MSPDBSRV.EXE.|
+|[/cgthreads](cgthreads-code-generation-threads.md)|Especifica el número de subprocesos de *cl. exe* que se van a usar para la optimización y la generación de código.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| En desuso. Los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Muestra la ruta de acceso completa de los archivos de código fuente pasados a *cl. exe* en texto de diagnóstico.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Fuerza la serialización de las escrituras en el archivo PDB a través de *MSPDBSRV. EXE*.|
 |[/H](h-restrict-length-of-external-names.md)|En desuso. Restringe la longitud de los nombres externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/J](j-default-char-type-is-unsigned.md)|Cambia el tipo `char` predeterminado.|
@@ -184,7 +185,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/wo](compiler-option-warning-level.md)|Muestra la advertencia especificada solo una vez.|
 |[/Wv](compiler-option-warning-level.md)|Deshabilita las advertencias introducidas por versiones posteriores del compilador.|
 |[/WX](compiler-option-warning-level.md)|Trata las advertencias como errores.|
-|[/Yc](yc-create-precompiled-header-file.md)|A. Archivo PCH.|
+|[/Yc](yc-create-precompiled-header-file.md)|Cree *`.PCH`* archivo.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|En desuso. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Inserta una referencia de PCH cuando se crea una biblioteca de depuración.|
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un archivo de encabezado precompilado durante la compilación.|
@@ -201,7 +202,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="experimental-options"></a>Opciones experimentales
 
-Las opciones experimentales solo se pueden admitir en determinadas versiones del compilador y pueden comportarse de forma diferente en distintas versiones del compilador. A menudo, la documentación mejor, o solo, para las opciones experimentales se encuentra en el [blog del equipo de Microsoft C++ ](https://devblogs.microsoft.com/cppblog/).
+Las opciones experimentales solo se pueden admitir en determinadas versiones del compilador. También pueden comportarse de forma diferente en diferentes versiones de compilador. A menudo, la documentación mejor, o solo, para las opciones experimentales se encuentra en el [blog del equipo de Microsoft C++ ](https://devblogs.microsoft.com/cppblog/).
 
 |Opción|Propósito|
 |------------|-------------|
@@ -213,6 +214,7 @@ Las opciones experimentales solo se pueden admitir en determinadas versiones del
 |Opción|Propósito|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|En desuso. Utilice [/LN (Create MSIL Module)](ln-create-msil-module.md) en su lugar.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| En desuso. Los informes de errores se controlan mediante la configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/Fr](fr-fr-create-dot-sbr-file.md)|En desuso. Crea un archivo de información de examen sin variables locales.|
 |[/Ge](ge-enable-stack-probes.md)|En desuso. Activa las comprobaciones de la pila. Está activada de forma predeterminada.|
 |[/Gm](gm-enable-minimal-rebuild.md)|En desuso. Habilita la recompilación mínima.|
@@ -221,7 +223,7 @@ Las opciones experimentales solo se pueden admitir en determinadas versiones del
 |[/H](h-restrict-length-of-external-names.md)|En desuso. Restringe la longitud de los nombres externos (públicos).|
 |[/Og](og-global-optimizations.md)|En desuso. Usa optimizaciones globales.|
 |[/QIfist](qifist-suppress-ftol.md)|En desuso. Se usaba para especificar cómo hacer una conversión de un tipo de punto flotante a un tipo entero.|
-|[/V](v-version-number.md)|En desuso. Establece la cadena de versión del archivo .obj.|
+|[/V](v-version-number.md)|En desuso. Establece la cadena de versión del archivo de *`.obj`* .|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidad de 64 bits.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|En desuso. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|
 |[/Zc:forScope](zc-forscope-force-conformance-in-for-loop-scope.md)|En desuso. Deshabilita la conformidad en el ámbito del bucle.|
@@ -230,6 +232,6 @@ Las opciones experimentales solo se pueden admitir en determinadas versiones del
 
 ## <a name="see-also"></a>Consulte también
 
-[Referencia de compilación de C/C++](c-cpp-building-reference.md)<br/>
-[Opciones del compilador de MSVC](compiler-options.md)<br/>
-[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[C/C++ Building Reference](c-cpp-building-reference.md)\
+\ [Opciones del compilador MSVC](compiler-options.md)
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
