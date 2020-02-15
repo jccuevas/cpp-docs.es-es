@@ -1,6 +1,7 @@
 ---
 title: Ejecutar NMAKE
-ms.date: 10/29/2019
+description: Guía de referencia de las opciones de la línea de comandos de Microsoft NMAKE.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144540"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257601"
 ---
 # <a name="running-nmake"></a>Ejecutar NMAKE
 
@@ -23,7 +24,7 @@ ms.locfileid: "73144540"
 
 > **NMake** [*opción* ...] [*macros* ...] [*destinos* ...] [ **\@** _archivo de comandos_ ...]
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 NMAKE solo compila los *destinos* especificados o, cuando no se especifica ninguno, el primer destino del archivo make. El primer destino del archivo make puede ser un [pseudodestino](description-blocks.md#pseudotargets) que compila otros destinos. NMAKE usa archivos make especificados con **/f**o si no se especifica **/f** , el archivo make en el directorio actual. Si no se especifica ningún archivo make, usa reglas de inferencia para compilar los *destinos*de la línea de comandos.
 
@@ -33,14 +34,14 @@ El archivo de texto del *archivo de comandos* (o el archivo de respuesta) contie
 
 En la tabla siguiente se describen las opciones de NMAKE. Las opciones van precedidas de una barra diagonal (`/`) o un guión (`-`) y no distinguen mayúsculas de minúsculas. Utilice [`!CMDSWITCHES`](makefile-preprocessing-directives.md) para cambiar la configuración de las opciones en un archivo make o en Tools. ini.
 
-| Opción | Finalidad |
+| Opción | Propósito |
 | ------------ | ------------- |
 | **/A** | Fuerza la compilación de todos los destinos evaluados, incluso si no están actualizados en comparación con los dependientes. No fuerza la compilación de destinos no relacionados. |
 | **B** | Fuerza la compilación incluso si las marcas de tiempo son iguales. Solo se recomienda para los sistemas rápidos (resolución de dos segundos o menos). |
 | **/C** | Suprime la salida predeterminada, incluidos errores o advertencias NMAKE no graves, marcas de tiempo y un mensaje de copyright de NMAKE. Suprime las advertencias emitidas por **/k**. |
 | **/D** | Muestra las marcas de tiempo de cada destino evaluado y dependiente, y un mensaje cuando no existe un destino. Útil con **/p** para depurar un archivo make. Use `!CMDSWITCHES` para establecer o borrar **/d** para parte de un archivo make. |
 | **/E** | Hace que las variables de entorno invaliden las definiciones de macro de archivos make. |
-| **/errorreport** [ **ninguno** &#124; **-solicitar** &#124; **envío** de **cola** &#124; ] | Si NMAKE. exe produce un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft acerca de estos errores internos.<br /><br /> Para obtener más información, consulte [/errorReport (Informar de errores de compilador interno)](errorreport-report-internal-compiler-errors.md). |
+| **/errorreport** [ **ninguno** &#124; **-solicitar** &#124; **envío** de **cola** &#124; ] | En desuso. La configuración de [Informe de errores de Windows (WER)](/windows/win32/wer/windows-error-reporting) controla los informes. |
 | **/F** *nombre de archivo* | Especifica el *nombre de archivo* como un archivo make. Los espacios o las pestañas pueden preceder al *nombre de archivo*. Especifique **/f** una vez para cada archivo make. Para proporcionar un archivo make a partir de la entrada estándar, especifique un guión (`-`) para el *nombre de archivo*y finalice la entrada del teclado con **F6** o **Ctrl + Z**. |
 | **/G** | Muestra los archivos make incluidos con la Directiva de `!INCLUDE`. Para obtener más información, vea [directivas de preprocesamiento de archivos make](makefile-preprocessing-directives.md). |
 | **/Help**, **/?** | Muestra un breve resumen de la sintaxis de línea de comandos de NMAKE. |
@@ -73,6 +74,6 @@ NMAKE devuelve los siguientes códigos de salida:
 | 4 | Error del sistema: memoria insuficiente |
 | 255 | El destino no está actualizado (solo se emite cuando se usa **/q** ) |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de NMAKE](nmake-reference.md)

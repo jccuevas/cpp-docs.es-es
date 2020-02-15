@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference method
 ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
-ms.openlocfilehash: ccd944e433e332ddd75f8a26e8db919c26d6e35b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9a28b37f8fa175d5768b215f5eca5183d31708b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453316"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257876"
 ---
 # <a name="container-classreference"></a>Clase de contenedor::reference
 
@@ -20,15 +20,14 @@ Describe un objeto que puede actuar como una referencia a un elemento de la secu
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-
+```cpp
 typedef T2 reference;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Aquí se describe como sinónimo del tipo `T2` sin especificar (normalmente `Alloc::reference`). Un objeto de tipo `reference` se puede convertir en un objeto de tipo [const_reference](../standard-library/container-class-const-reference.md).
+Aquí se describe como sinónimo del tipo sin especificar `T2` (normalmente `Alloc::reference`). Un objeto de tipo `reference` se puede convertir en un objeto de tipo [const_reference](../standard-library/container-class-const-reference.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clase contenedora de ejemplo](../standard-library/sample-container-class.md)
+[Sample Container (Clase)](../standard-library/sample-container-class.md)

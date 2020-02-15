@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449040"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257811"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -32,9 +32,9 @@ Declara los objetos que controlan la lectura y escritura en los flujos estándar
 ```
 
 > [!NOTE]
-> La \<biblioteca de > iostream utiliza `#include <ios>`las `#include <streambuf>`instrucciones `#include <istream>`,, `#include <ostream>` y.
+> La biblioteca \<iostream > utiliza las instrucciones `#include <ios>`, `#include <streambuf>`, `#include <istream>`y `#include <ostream>`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los objetos se dividen en dos grupos:
 
@@ -44,7 +44,7 @@ Los objetos se dividen en dos grupos:
 
 Una vez que realiza ciertas operaciones en un flujo, como la entrada estándar, no puede realizar operaciones de una orientación diferente en la misma secuencia. Por lo tanto, un programa no puede funcionar indistintamente en [CIN](#cin) y [wcin](#wcin), por ejemplo.
 
-Todos los objetos que se declaran en este encabezado comparten una propiedad peculiar; puede suponer que se construyen antes que cualquier objeto estático que defina, \<en una unidad de traducción que incluye iostream >. Igualmente, puede suponer que estos objetos no se destruyen antes que los destructores de los objetos estáticos que defina. (Sin embargo, los flujos de salida se vacían durante la finalización del programa). Por lo tanto, puede leer o escribir sin ningún riesgo en los flujos estándar antes de iniciar el programa y después de la finalización del programa.
+Todos los objetos declarados en este encabezado comparten una propiedad peculiar; puede suponer que se construyen antes que cualquier objeto estático que defina, en una unidad de traducción que incluya \<iostream >. Igualmente, puede suponer que estos objetos no se destruyen antes que los destructores de los objetos estáticos que defina. (Sin embargo, los flujos de salida se vacían durante la finalización del programa). Por lo tanto, puede leer de forma segura o escribir en las transmisiones estándar antes de iniciar el programa y después de la finalización del programa.
 
 Sin embargo, esta garantía no es universal. Un constructor estático puede llamar a una función en otra unidad de traducción. La función llamada no puede suponer que se han construido los objetos declarados en este encabezado, dado el orden indeterminado en el que las unidades de traducción participan en la construcción estática. Para usar esos objetos en este contexto, primero debe construir un objeto de clase [ios_base::Init](../standard-library/ios-base-class.md#init).
 
@@ -73,9 +73,9 @@ extern ostream cerr;
 
 Objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El objeto controla las inserciones no almacenadas en búfer en la salida de error estándar como un flujo de bytes. Una vez que se construye el objeto, la expresión `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) es distinta de cero, y `cerr.tie() == &cout`.
+El objeto controla las inserciones no almacenadas en búfer en la salida de error estándar como un flujo de bytes. Una vez que se construye el objeto, la expresión `cerr.`[marcas](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) es distinto de cero y `cerr.tie() == &cout`.
 
 #### <a name="example"></a>Ejemplo
 
@@ -119,7 +119,7 @@ extern istream cin;
 
 Objeto [istream](../standard-library/istream-typedefs.md#istream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El objeto controla las extracciones de la entrada estándar como un flujo de bytes. Una vez que se construye el objeto, la llamada `cin.`[tie](../standard-library/basic-ios-class.md#tie) devuelve `&`[cout](#cout).
 
@@ -170,7 +170,7 @@ extern ostream clog;
 
 Objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El objeto controla las inserciones almacenadas en búfer en la salida de error estándar como un flujo de bytes.
 
@@ -190,7 +190,7 @@ extern ostream cout;
 
 Objeto [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El objeto controla las inserciones en la salida estándar como un flujo de bytes.
 
@@ -210,9 +210,9 @@ extern wostream wcerr;
 
 Objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El objeto controla las inserciones no almacenadas en búfer en la salida de error estándar como un flujo amplio. Una vez que se construye el objeto, la expresión `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) es distinta de cero.
+El objeto controla las inserciones no almacenadas en búfer en la salida de error estándar como un flujo amplio. Una vez que se construye el objeto, la expresión `wcerr.`[marcas](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) es distinto de cero.
 
 #### <a name="example"></a>Ejemplo
 
@@ -230,7 +230,7 @@ extern wistream wcin;
 
 Objeto [wistream](../standard-library/istream-typedefs.md#wistream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El objeto controla las extracciones de la entrada estándar como un flujo ancho. Una vez que se construye el objeto, la llamada `wcin.`[tie](../standard-library/basic-ios-class.md#tie) devuelve `&`[wcout](#wcout).
 
@@ -250,7 +250,7 @@ extern wostream wclog;
 
 Objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El objeto controla las inserciones almacenadas en búfer en la salida de error estándar como un flujo ancho.
 
@@ -270,7 +270,7 @@ extern wostream wcout;
 
 Objeto [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El objeto controla las inserciones en la salida estándar como secuencia amplia.
 
@@ -280,7 +280,7 @@ Vea [cerr](#cerr) para obtener un ejemplo que usa `wcout`.
 
 Las instancias `CString` de una instrucción `wcout` deben convertirse a `const wchar_t*`, como se muestra en el siguiente ejemplo.
 
-```
+```cpp
 CString cs("meow");
 
 wcout <<(const wchar_t*) cs <<endl;
@@ -288,7 +288,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 Para obtener más información, vea [Operaciones básicas de CString](../atl-mfc-shared/basic-cstring-operations.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

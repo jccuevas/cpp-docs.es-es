@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reverse_iterator method
 ms.assetid: 1d190c41-56b1-462e-b564-793b2a883c26
-ms.openlocfilehash: ab5aeacdf9f7499876a53d3e0bedf7589ff1eb0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1f65713050ec6c8c9675ce95b9affb7c7af533ec
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450795"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257863"
 ---
 # <a name="container-classreverse_iterator"></a>Clase de contenedor::reverse_iterator
 
@@ -20,15 +20,14 @@ Describe un objeto que puede actuar como un iterador inverso de la secuencia con
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-
+```cpp
 typedef T7 reverse_iterator;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Aquí se describe como sinónimo del tipo sin especificar `T7` (normalmente el **\<** [iterador](../standard-library/container-class-iterator.md) **>** `reverse_iterator`).
+Aquí se describe como sinónimo del tipo sin especificar `T7` (normalmente `reverse_iterator` **\<** [iterator](../standard-library/container-class-iterator.md) **>** ).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clase contenedora de ejemplo](../standard-library/sample-container-class.md)
+[Sample Container (Clase)](../standard-library/sample-container-class.md)
