@@ -2,12 +2,12 @@
 title: Lectura y reconocimiento de código C++ en Visual Studio
 description: Use el editor de código de C++ en Visual Studio para dar formato al código y entenderlo.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303115"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416128"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Lectura y reconocimiento de código C++ en Visual Studio
 
@@ -19,9 +19,9 @@ Visual Studio colorea elementos de la sintaxis para distinguir los diferentes ti
 
 ![Coloración del código](../ide/media/code-outline-colorization.png "C++coloración")
 
- El código sin usar (por ejemplo, el código de una instrucción #if 0) presenta un color más atenuado.
+El código sin usar (por ejemplo, el código de una instrucción #if 0) presenta un color más atenuado.
 
- ![Código inactivo](../ide/media/inactive-code-cpp.png "C++Código inactivo")
+![Código inactivo](../ide/media/inactive-code-cpp.png "C++Código inactivo")
 
 Los colores se pueden personalizar; para ello, escriba "Fuentes" en **Inicio rápido** y, después, elija **Fuentes y colores**. En el cuadro de diálogo **Fuentes y colores**, desplácese hasta las opciones de C /C++ y, después, elija una fuente o un color personalizados.
 
@@ -35,7 +35,7 @@ Cuando el cursor se coloca delante de una llave ("{" o "}"), el editor resalta s
 
 Hay más opciones de esquematización en **Editar** > **Esquematización**, en el menú principal.
 
-## <a name="line-numbers"></a>números de línea
+## <a name="line-numbers"></a>Números de línea
 
 Puede agregar números de línea al proyecto yendo a **herramientas** > **Opciones** > editor de **texto** > **todos los lenguajes** > **General** o buscando "número de línea" con **Inicio rápido (Ctrl + Q)** . Se pueden establecer números de línea para todos los lenguajes o para lenguajes concretos, incluido C++.
 
@@ -59,7 +59,7 @@ Mantenga el puntero sobre cualquier variable, función u otro símbolo para obte
 
 ::: moniker range="vs-2019"
 
-![Información rápida en C&#43;&#43;](../ide/media/quick-info-vs2019.png "información rápida")
+![Información rápida en C&#43;&#43;](../ide/media/quick-info-vs2019.png "Información rápida")
 
 La información sobre herramientas **Información rápida** dispone de un vínculo **Buscar en línea**. Vaya a **Herramientas** > **Opciones** > **Editor de texto** > **C++**  > **Vista** para especificar el proveedor de búsqueda. 
 
@@ -71,7 +71,7 @@ Si hay un error en el código, puede mantener el puntero sobre él e **Informaci
 
 ::: moniker range="<=vs-2017"
 
-![Información rápida en C&#43;&#43;](../ide/media/quick-info.png "información rápida")
+![Información rápida en C&#43;&#43;](../ide/media/quick-info.png "Información rápida")
 
 Si hay un error en el código, puede mantener el puntero sobre él e **Información rápida** mostrará el mensaje de error. También puede encontrar el mensaje de error en la ventana **Lista de errores**.
 
@@ -83,13 +83,13 @@ Cuando se llama a una función, **Información de parámetros** muestra los tipo
 
 ![Información de parámetros en C&#43;&#43;](../ide/media/parameter-info.png "Información de parámetros")
 
-## <a name="peek-definition"></a>Ver la definición
+## <a name="peek-definition"></a>Definición de Peek
 
 Mantenga el puntero sobre una declaración de variable o función, haga clic con el botón derecho y, después, seleccione **Ver la definición** para ver una vista insertada de su definición correspondiente sin tener que abandonar la ubicación actual. Para obtener más información, vea [Ver la definición (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
 
 ![Definición&#43; &#43; de C PEEK](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
-##  <a name="f1-help"></a>F1 Ayuda
+##  <a name="f1-help"></a>Ayuda F1
 
 Coloque el cursor encima o justo después de cualquier tipo, palabra clave o función, y presione **F1** para ir directamente al tema de referencia pertinente en docs.microsoft.com. **F1** también funciona en elementos de la lista de errores y en muchos cuadros de diálogo.
 
@@ -111,7 +111,7 @@ Haga clic con el botón derecho en cualquier llamada a función y vea una lista 
 
 ![Jerarquía&#43; &#43; de llamadas de C](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Escribir y refactorizar código (C++)](writing-and-refactoring-code-cpp.md)</br>
 [Navegación en el código de C++ en Visual Studio](navigate-code-cpp.md)</br>

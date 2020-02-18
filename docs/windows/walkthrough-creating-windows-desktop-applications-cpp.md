@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cebc748f207cb1283add4b494b422a13bdc17f8c
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627477"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416144"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Tutorial: crear una aplicación de escritorio de WindowsC++tradicional ()
 
 En este tutorial se muestra cómo crear una aplicación de escritorio de Windows tradicional en Visual Studio. La aplicación de ejemplo que creará usa la API de Windows para mostrar "Hello, escritorio de Windows" en una ventana. Puede utilizar el código que va a desarrollar en este tutorial como modelo para crear otras aplicaciones de escritorio de Windows.
 
-La API de Windows (también conocida como la API de Win32, la API del escritorio de Windows y Windows Classic API) es un marco basado en lenguaje C para crear aplicaciones de Windows. Ha estado existiendo desde el ochenta y se ha usado para crear aplicaciones de Windows durante décadas. Los marcos de trabajo más avanzados y más fáciles de programar se han creado sobre la API de Windows. Por ejemplo, MFC, ATL, .NET Framework. Incluso el código Windows Runtime más moderno para UWP y las aplicaciones de la C++tienda escritas en/WinRT usa la API de Windows que se encuentra debajo. Para obtener más información acerca de la API de Windows, consulte índice de la [API de Windows](/windows/win32/apiindex/windows-api-list). Hay muchas maneras de crear aplicaciones de Windows, pero el proceso anterior fue el primero.
+La API de Windows (también conocida como la API de Win32, la API del escritorio de Windows y Windows Classic API) es un marco basado en lenguaje C para crear aplicaciones de Windows. Ha estado en existencia desde la década de 1980 y se ha usado para crear aplicaciones de Windows durante décadas. Los marcos de trabajo más avanzados y más fáciles de programar se han creado sobre la API de Windows. Por ejemplo, MFC, ATL, .NET Framework. Incluso el código Windows Runtime más moderno para UWP y las aplicaciones de la C++tienda escritas en/WinRT usa la API de Windows que se encuentra debajo. Para obtener más información acerca de la API de Windows, consulte índice de la [API de Windows](/windows/win32/apiindex/windows-api-list). Hay muchas maneras de crear aplicaciones de Windows, pero el proceso anterior fue el primero.
 
 > [!IMPORTANT]
 > Por motivos de brevedad, algunas instrucciones de código se omiten en el texto. La sección [compilar el código](#build-the-code) al final de este documento muestra el código completo.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Un equipo que ejecuta Microsoft Windows 7 o versiones posteriores. Recomendamos Windows 10 para obtener la mejor experiencia de desarrollo.
 
@@ -43,7 +43,7 @@ Siga estos pasos para crear su primer proyecto de escritorio de Windows. A medid
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Para crear un proyecto de escritorio de Windows en Visual Studio 2019
 
-1. En el menú principal, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Crear nuevo proyecto**.
+1. En el menú principal, elija **archivo** > **nuevo** > **proyecto** para abrir el cuadro de diálogo **crear un nuevo proyecto** .
 
 1. En la parte superior del cuadro de diálogo , establezca **C++** Language en, establezca **plataforma** en **Windows**y establezca **tipo de proyecto** en **escritorio**.
 
@@ -97,7 +97,7 @@ El proyecto se ha creado y el archivo de código fuente se abre en el editor. Pa
 
 1. En el menú **Archivo**, elija **Nuevo** y después **Proyecto**.
 
-1. En el cuadro de diálogo **nuevo proyecto** , en el panel izquierdo, expanda **instalado**  > **plantillas**  > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
+1. En el cuadro de diálogo **nuevo proyecto** , en el panel izquierdo, expanda **instalado** > **plantillas** > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
 
    En el cuadro **nombre** , escriba un nombre para el proyecto, por ejemplo, *DesktopApp*. Elija **Aceptar**.
 
@@ -141,9 +141,9 @@ A continuación, aprenderá a crear el código para una aplicación de escritori
    Para obtener información sobre los parámetros y el valor devuelto de esta función, vea [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > ¿Cuáles son todas esas palabras extra, como `CALLBACK`, o `HINSTANCE`o `_In_`? La API tradicional de Windows usa las definiciones de tipos y las macros de preprocesador para abstraer algunos de los detalles de los tipos y el código específico de la plataforma, como convenciones de llamada, declaraciones **_ _ declspec** y pragmas del compilador. En Visual Studio, puede usar la característica de [información rápida](/visualstudio/ide/using-intellisense#quick-info) de IntelliSense para ver lo que definen estas definiciones de tipo y macros. Mantenga el mouse sobre la palabra de interés o selecciónela y presione **ctrl** +**K**, **Ctrl** +**I** para obtener una pequeña ventana emergente que contiene la definición. Para obtener más información, vea [Usar IntelliSense](/visualstudio/ide/using-intellisense). Los parámetros y los tipos devueltos a menudo usan *anotaciones sal* para ayudarle a detectar errores de programación. Para obtener más información, consulte [uso de anotaciones sal para reducir defectosC++ de código C/](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > ¿Cuáles son todas esas palabras extra, como `CALLBACK`, o `HINSTANCE`o `_In_`? La API tradicional de Windows usa definiciones de tipos y macros de preprocesador para abstraer algunos de los detalles de los tipos y el código específico de la plataforma, como convenciones de llamada, declaraciones de **__declspec** y pragmas del compilador. En Visual Studio, puede usar la característica de [información rápida](/visualstudio/ide/using-intellisense#quick-info) de IntelliSense para ver lo que definen estas definiciones de tipo y macros. Mantenga el mouse sobre la palabra de interés o selecciónela y presione **ctrl**+**K**, **Ctrl**+**I** para obtener una pequeña ventana emergente que contiene la definición. Para obtener más información, vea [Using IntelliSense](/visualstudio/ide/using-intellisense). Los parámetros y los tipos devueltos a menudo usan *anotaciones sal* para ayudarle a detectar errores de programación. Para obtener más información, consulte [uso de anotaciones sal para reducir defectosC++ de código C/](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Los programas de escritorio de Windows requieren el > &lt;windows. h. &lt;> TCHAR. h define la macro `TCHAR`, que se resuelve en última instancia en **wchar_t** si el símbolo Unicode está definido en el proyecto; en caso contrario, se resuelve como **Char**.  Si siempre compila con Unicode habilitado, no necesita TCHAR y solo puede usar **wchar_t** directamente.
+1. Los programas de escritorio de Windows requieren &lt;Windows. h >. &lt;> TCHAR. h define la macro `TCHAR`, que se resuelve en última instancia en **wchar_t** si el símbolo Unicode está definido en el proyecto; en caso contrario, se resuelve como **Char**.  Si siempre compila con Unicode habilitado, no necesita TCHAR y solo puede usar **wchar_t** directamente.
 
    ```cpp
    #include <windows.h>
@@ -361,7 +361,7 @@ A continuación, aprenderá a crear el código para una aplicación de escritori
 
 1. Para habilitar la función `WndProc` a fin de controlar los mensajes que recibe la aplicación, implemente una instrucción switch.
 
-   Un mensaje importante para controlar es el mensaje [WM_PAINT](/windows/win32/gdi/wm-paint) . La aplicación recibe el mensaje de `WM_PAINT` cuando se debe actualizar la parte de su ventana mostrada. El evento puede producirse cuando un usuario mueve una ventana delante de la ventana y, a continuación, la mueve de nuevo. La aplicación no sabe cuándo se producen estos eventos. Solo Windows sabe, por lo que notifica a la aplicación un mensaje de `WM_PAINT`. Cuando se muestra la ventana por primera vez, se debe actualizar todo.
+   Un mensaje importante para controlar es el mensaje de [WM_PAINT](/windows/win32/gdi/wm-paint) . La aplicación recibe el mensaje de `WM_PAINT` cuando se debe actualizar la parte de su ventana mostrada. El evento puede producirse cuando un usuario mueve una ventana delante de la ventana y, a continuación, la mueve de nuevo. La aplicación no sabe cuándo se producen estos eventos. Solo Windows sabe, por lo que notifica a la aplicación un mensaje de `WM_PAINT`. Cuando se muestra la ventana por primera vez, se debe actualizar todo.
 
    Para controlar un mensaje `WM_PAINT` , primero llame a [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint), controle toda la lógica para mostrar el texto, los botones y otros controles de la ventana y luego llame a [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). Para la aplicación, la lógica entre la llamada inicial y la llamada final consiste en Mostrar la cadena "Hello, escritorio de Windows!" en la ventana. En el siguiente código, observe que la función [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) se usa para mostrar la cadena.
 
@@ -584,12 +584,12 @@ Como se prometió, este es el código completo de la aplicación de trabajo.
 
    ![Compilar el proyecto DesktopApp](../build/media/desktop-app-project-build-150.gif "Compilar el proyecto DesktopApp")
 
-1. Presione **F5**para ejecutar la aplicación. Una ventana que contiene el texto "Hello, escritorio de Windows!" debe aparecer en la esquina superior izquierda de la pantalla.
+1. Presione **F5** para ejecutar la aplicación. Una ventana que contiene el texto "Hello, escritorio de Windows!" debe aparecer en la esquina superior izquierda de la pantalla.
 
    ![Ejecutar el proyecto DesktopApp](../build/media/desktop-app-project-run-157.PNG "Ejecutar el proyecto DesktopApp")
 
-¡Enhorabuena! Ha completado este tutorial y ha creado una aplicación de escritorio de Windows tradicional.
+Felicidades. Ha completado este tutorial y ha creado una aplicación de escritorio de Windows tradicional.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450587"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416207"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Usar _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Usar _ITERATOR_DEBUG_LEVEL
 
 Puede usar la macro de preprocesador [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) para desactivar la característica de depuración de iteradores en una compilación de depuración. Este programa no valida, pero aún desencadena un comportamiento indefinido.
 
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Destructores para iteradores de depuración
 
-Los iteradores de depuración tienen destructores no triviales. Si un destructor no se ejecuta pero se libera la memoria del objeto, pueden producirse infracciones de acceso y datos dañados. Considere este ejemplo:
+Los iteradores de depuración tienen destructores no triviales. Si un destructor no se ejecuta pero se libera la memoria del objeto, pueden producirse infracciones de acceso y datos dañados. En este ejemplo:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()
@@ -173,6 +173,6 @@ struct derived : base {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683344"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416188"
 ---
 # <a name="warning-pragma"></a>warning (pragma)
 
@@ -29,15 +29,15 @@ Habilita la modificación selectiva del comportamiento de los mensajes de advert
 > **#pragma ADVERTENCIA (Inserte** [ **,** *n* ] **)** \
 > **ADVERTENCIA #pragma (pop)**
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Los siguientes parámetros de warning-specifier están disponibles.
 
 |warning-specifier|Significado|
 |------------------------|-------------|
 |*1, 2, 3, 4*|Aplica el nivel dado a las advertencias especificadas. También activa una advertencia especificada que está desactivada de forma predeterminada.|
-|*default*|Restablece el comportamiento de advertencia a su valor predeterminado. También activa una advertencia especificada que está desactivada de forma predeterminada. La advertencia se generará en su nivel predeterminado documentado.<br /><br /> Para obtener más información, vea [advertencias del compilador desactivadas de forma predeterminada](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*activa*|No emita los mensajes de advertencia especificados.|
+|*valor predeterminado*|Restablece el comportamiento de advertencia a su valor predeterminado. También activa una advertencia especificada que está desactivada de forma predeterminada. La advertencia se generará en su nivel predeterminado documentado.<br /><br /> Para obtener más información, vea [advertencias del compilador desactivadas de forma predeterminada](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
+|*disable*|No emita los mensajes de advertencia especificados.|
 |*error*|Notifica las advertencias especificadas como errores.|
 |*once*|Muestra los mensajes especificados solo una vez.|
 |*suprimi*|Inserta el estado actual de la pragma en la pila, deshabilita la advertencia especificada para la línea siguiente y, a continuación, extrae de la pila la advertencia para que se restablezca el estado de pragma.|
@@ -54,10 +54,10 @@ Esta directiva es funcionalmente equivalente al código siguiente:
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 
@@ -93,7 +93,7 @@ La pragma **Warning** también admite la sintaxis siguiente, donde *n* represent
 
 La `warning( push )` pragma almacena el estado de advertencia actual para cada advertencia. La instrucción pragma `warning( push, n )` almacena el estado actual de cada advertencia y establece el nivel de advertencia global en *n*.
 
-Pragma `warning( pop )` extrae el último estado de advertencia insertado en la pila. Se deshacen los cambios realizados en el estado de advertencia entre la *extracción* y el *pop* . Considere este ejemplo:
+Pragma `warning( pop )` extrae el último estado de advertencia insertado en la pila. Se deshacen los cambios realizados en el estado de advertencia entre la *extracción* y el *pop* . En este ejemplo:
 
 ```cpp
 #pragma warning( push )
@@ -116,6 +116,6 @@ Al escribir archivos de encabezado, puede usar la *función de extracción y de*
 
 Para obtener más información sobre las opciones del compilador que ayudan a suprimir advertencias, vea [/fi](../build/reference/fi-name-forced-include-file.md) y [/w](../build/reference/compiler-option-warning-level.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

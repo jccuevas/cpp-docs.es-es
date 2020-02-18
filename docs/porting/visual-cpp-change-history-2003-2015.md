@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821810"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415702"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
 
@@ -22,7 +22,7 @@ Para obtener información sobre la versión más reciente de Visual Studio, vea 
 
 Al actualizar a una nueva versión de Visual Studio, se pueden producir errores de compilación o en tiempo de ejecución en código previamente compilado que se ejecutaba correctamente. Los cambios en la nueva versión que producen tales problemas se conocen como *cambios importantes*y normalmente son necesarios debido a las modificaciones en el estándar del lenguaje C++, las firmas de función o la disposición de los objetos en la memoria.
 
-Para evitar errores en tiempo de ejecución que son difíciles de detectar y diagnosticar, se recomienda que no vincule nunca de forma estática a binarios compilados con otra versión del compilador. Además, cuando actualice un proyecto EXE o DLL, asegúrese de actualizar las bibliotecas a las que está vinculado. No pase tipos CRT (Runtime de C) o de la biblioteca estándar de C++ entre archivos binarios, incluidos los archivos DLL, compilados con otras versiones del compilador. Para obtener más información, consulte [Errores potenciales que pasan los objetos de CRT entre los límites de DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Para evitar errores en tiempo de ejecución que son difíciles de detectar y diagnosticar, se recomienda que no vincule nunca de forma estática a binarios compilados con otra versión del compilador. Además, cuando actualice un proyecto EXE o DLL, asegúrese de actualizar las bibliotecas a las que está vinculado. No pase tipos CRT (Runtime de C) o de la biblioteca estándar de C++ entre archivos binarios, incluidos los archivos DLL, compilados con otras versiones del compilador. Para obtener más información, vea [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
 Se recomienda que nunca escriba código que dependa de una disposición determinada de un objeto que no sea una interfaz COM o un objeto POD. Si escribe código de esta manera, debe asegurarse de que funciona después de la actualización. Para obtener más información, consulte [Portabilidad en los límites de ABI (C++ moderno)](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
@@ -108,7 +108,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
 #### <a name="stdio_and_conio"></a>\<stdio. h > y \<Conio. h >
 
-- **La familia de funciones printf y scanf se define ahora en línea.**
+- **Las familias de funciones printf y scanf se definen ahora insertadas.**
 
    Las definiciones de todas las funciones `printf` y `scanf` se han insertado en \<stdio.h>, \<conio.h> y otros encabezados de CRT. Este cambio importante provoca un error del enlazador (LNK2019, símbolo externo sin resolver) en todos los programas en los que se han declarado estas funciones de forma local sin incluir los encabezados de CRT adecuados. Si es posible, actualice el código para incluir los encabezados de CRT (es decir, agregue `#include <stdio.h>`) y las funciones insertadas. Si prefiere no modificar el código para incluir estos archivos de encabezado, una solución alternativa es agregar una biblioteca adicional a su entrada de enlazador, legacy_stdio_definitions.lib.
 
@@ -257,7 +257,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
 - **smallheap**
 
-   La opción de vínculo `smallheap` se ha quitado. Consulte [Opciones de vínculo](../c-runtime-library/link-options.md).
+   La opción de vínculo `smallheap` se ha quitado. Vea [Link Options](../c-runtime-library/link-options.md).
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -287,13 +287,13 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
 - **asctime**
 
-   En versiones anteriores, la función [asctime](../c-runtime-library/reference/asctime-wasctime.md) rellenaba los días de un dígito con un cero inicial, por ejemplo: `Fri Jun 06 08:00:00 2014`. La especificación requiere que estos días se rellenen con un espacio, como en `Fri Jun  6 08:00:00 2014`. Este problema se ha corregido.
+   En versiones anteriores, la función [asctime](../c-runtime-library/reference/asctime-wasctime.md) rellenaba los días de un dígito con un cero inicial, por ejemplo: `Fri Jun 06 08:00:00 2014`. La especificación requiere que estos días se rellenen con un espacio, como en `Fri Jun  6 08:00:00 2014`. Ahora se ha corregido.
 
 - **strftime y wcsftime**
 
    Ahora, las funciones `strftime` y `wcsftime` admiten los especificadores de formato %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u y %V. Además, los modificadores E y O se analizan, pero se ignoran.
 
-   El especificador de formato %c se especifica como la producción de una “representación de fecha y hora adecuada” para la configuración regional actual. En la configuración regional de C, esta representación debe ser la misma que `%a %b %e %T %Y`, la misma forma que genera `asctime`. En las versiones anteriores, el especificador de formato %c aplicaba un formato incorrecto a las horas mediante una representación `MM/DD/YY HH:MM:SS`. Este problema se ha corregido.
+   El especificador de formato %c se especifica como la producción de una “representación de fecha y hora adecuada” para la configuración regional actual. En la configuración regional de C, esta representación debe ser la misma que `%a %b %e %T %Y`, la misma forma que genera `asctime`. En las versiones anteriores, el especificador de formato %c aplicaba un formato incorrecto a las horas mediante una representación `MM/DD/YY HH:MM:SS`. Ahora se ha corregido.
 
 - **timespec y TIME_UTC**
 
@@ -359,7 +359,7 @@ Para habilitar nuevas optimizaciones y comprobaciones de depuración, la impleme
 
    Se han quitado los nombres anteriores de rasgos de tipos (type traits) de una versión anterior del proyecto de estándar de C++. Se cambiaron en C++11 y se han actualizado a los valores de C++11 en Visual Studio 2015. En la tabla siguiente se muestran los nombres anteriores y los nuevos.
 
-   |Nombre anterior|Nuevo nombre|
+   |Nombre anterior|Nombre nuevo|
    |--------------|--------------|
    |add_reference|add_lvalue_reference|
    |has_default_constructor|is_default_constructible|
@@ -383,7 +383,7 @@ Para habilitar nuevas optimizaciones y comprobaciones de depuración, la impleme
 
 - **Directivas launch::any y launch::sync**
 
-   Las directivas `launch::any` y `launch::sync` no estándar se han quitado. En su lugar, utilice `launch:async | launch:deferred` para `launch::any`. Para `launch::sync`, use `launch::deferred`. Consulte [Launch (enumeración)](../standard-library/future-enums.md#launch).
+   Las directivas `launch::any` y `launch::sync` no estándar se han quitado. En su lugar, utilice `launch::any` para `launch:async | launch:deferred`. Para `launch::sync`, utilice `launch::deferred`. Consulte [Launch (enumeración)](../standard-library/future-enums.md#launch).
 
 ####  <a name="BK_MFC"></a> MFC y ATL
 
@@ -643,7 +643,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](https://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa placement new, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
 
-   La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new**`void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función delete es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.
+   La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new** `void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función delete es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de placement new busca una función de eliminación correspondiente y encuentra una función de desasignación habitual, el programa tiene un formato incorrecto.
 
    Supongamos, por ejemplo, que el código define tanto **placement new** como **placement delete**:
 
@@ -1739,7 +1739,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
     ```
 
-   \- o -
+   \- O bien
 
     ```cpp
     class base;  // as above
@@ -2883,7 +2883,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
     ```
 
-   Para buscar ubicaciones en el código que en una versión anterior se habrían intentado optimizar, use un compilador de esa versión junto con la opción del compilador `/W3` y active la advertencia 4370. Por ejemplo:
+   Para buscar lugares en el código que una versión anterior habría intentado optimizar, use un compilador de esa versión junto con la opción del compilador `/W3` y active la advertencia C4370. Por ejemplo:
 
     ```cpp
     #pragma warning(default:4370)
@@ -2928,7 +2928,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discordancias en _ITERATOR_DEBUG_LEVEL, función que se implementó en Visual Studio 2010, y las discordancias de la biblioteca en tiempo de ejecución. Estas discordancias se producen cuando se mezclan las opciones del compilador `/MT` (versión estática), `/MTd` (depuración estática), `/MD` (versión dinámica) y `/MDd` (depuración dinámica).
 
-- Si el código utiliza las plantillas de alias simuladas de la versión anterior, tiene que cambiarlo. Por ejemplo, en lugar de `allocator_traits<A>::rebind_alloc<U>::other`, tiene que especificar `allocator_traits<A>::rebind_alloc<U>`. Aunque `ratio_add<R1, R2>::type` ya no es necesario y ahora se recomienda `ratio_add<R1, R2>`, el primero seguirá compilándose porque `ratio<N, D>` es necesario para tener una definición de tipos “tipo” para una ratio reducida, que será el mismo tipo si ya se ha reducido.
+- Si el código usa las plantillas de alias simuladas de la versión anterior, tiene que cambiarlo. Por ejemplo, en lugar de `allocator_traits<A>::rebind_alloc<U>::other`, tiene que especificar `allocator_traits<A>::rebind_alloc<U>`. Aunque `ratio_add<R1, R2>::type` ya no es necesario y ahora se recomienda `ratio_add<R1, R2>`, el primero seguirá compilándose porque `ratio<N, D>` es necesario para tener una definición de tipos “tipo” para una ratio reducida, que será el mismo tipo si ya se ha reducido.
 
 - Debe utilizar `#include <algorithm>` cuando llame a `std::min()` o `std::max()`.
 
@@ -2952,7 +2952,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
    Un efecto secundario de este cambio es que ya no funciona el caso de identidad (common_type\<T> no siempre devuelve un tipo T). Este comportamiento se ajusta a la resolución propuesta, pero interrumpe cualquier código que dependiera del comportamiento anterior.
 
-   Si necesita un tipo de rasgo de identidad, no use el elemento `std::identity` no estándar que se define en \<type_traits> porque no funcionará para \<void>. En su lugar, implemente un rasgo de tipo de identidad propio que se ajuste a sus necesidades. Por ejemplo:
+   Si necesita un tipo de rasgo de identidad, no use el elemento `std::identity` no estándar que se define en \<type_traits> porque no funcionará para \<void>. En su lugar, implemente un rasgo de tipo de identidad propio que se ajuste a sus necesidades. Este es un ejemplo:
 
     ```cpp
     template < typename T> struct Identity {
@@ -2988,7 +2988,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
 - Se han quitado las directivas `#ifdef` de los archivos de encabezado de MFC. Se han quitado muchas directivas `#ifdef` de los archivos de encabezado de MFC relacionadas con las versiones de Windows no compatibles (WINVER &lt; 0x0501).
 
-- Se ha quitado ATL DLL (atl120.dll). ATL se proporciona ahora en forma de encabezados y como biblioteca estática (atls.lib).
+- Se ha quitado ATL DLL (atl120.dll). ATL ahora se proporciona en forma de encabezados y como biblioteca estática (atls.lib).
 
 - Se ha quitado atlsd.lib, atlsn.lib y atlsnd.lib. Atls.lib ya no tiene código ni dependencias de juego de caracteres específicos para la depuración y el lanzamiento. Como funciona igual para Unicode y ANSI y para depuración y lanzamiento, solo se necesita una versión de la biblioteca.
 
@@ -3030,7 +3030,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
 - El compilador administrado (Visual Basic o C#) también es compatible con `/HIGHENTROPYVA` para las compilaciones administradas.  En cambio, en este caso, el modificador `/HIGHENTROPYVAswitch` está desactivado de manera predeterminada.
 
-### <a name="ide"></a>IDE de
+### <a name="ide"></a>IDE
 
 - Aunque se recomienda que no cree aplicaciones de Windows Forms en C++/CLI, el mantenimiento de aplicaciones de interfaz de usuario de C++/CLI es compatible. Si tiene que crear una aplicación de Windows Forms o cualquier otra aplicación de interfaz de usuario .NET, use C# o Visual Basic. Use C++/CLI solo con fines de interoperabilidad.
 
@@ -3262,7 +3262,7 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - En versiones anteriores, Visual C++ admitía la evaluación en tiempo de ejecución de hojas de propiedades. Por ejemplo, una hoja de propiedades primaria podría importar una hoja de propiedades secundaria y el elemento primario podría usar una variable definida en el elemento secundario para definir otras variables. La evaluación en tiempo de ejecución ha habilitado al elemento primario para que use la variable secundaria incluso antes de importar la hoja de propiedades secundarias. En Visual Studio 2010, no se puede usar una variable de hoja de proyecto antes de definirse, porque MSBuild solo admite la evaluación temprana.
 
-### <a name="ide"></a>IDE de
+### <a name="ide"></a>IDE
 
 - El cuadro de diálogo de finalización de aplicación ya no finaliza una aplicación. En versiones anteriores, cuando la función `abort()` o `terminate()` cierra la versión comercial de una aplicación, la biblioteca en tiempo de ejecución de C mostraba un mensaje de finalización de aplicación en un cuadro de diálogo o ventana de consola. Este mensaje decía, en parte: “Esta aplicación solicitó la finalización del tiempo de ejecución de modo no habitual. Póngase en contacto con el equipo de asistencia técnica de la aplicación para obtener más información”. El mensaje de finalización de la aplicación era redundante porque Windows mostraba posteriormente el controlador de finalización actual, que normalmente era el cuadro de diálogo Informe de errores de Windows (Dr. Watson) o el depurador de Visual Studio. A partir de Visual Studio 2010, la biblioteca en tiempo de ejecución de C no muestra el mensaje. Además, el tiempo de ejecución impide que la aplicación finalice antes de iniciar un depurador. Se trata de un cambio importante solo si depende del comportamiento anterior del mensaje de finalización de la aplicación.
 
@@ -3440,7 +3440,7 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - `swprintf` ha cambiado para cumplir con el estándar; ahora requiere un parámetro de tamaño. La forma de `swprintf` sin un parámetro de tamaño está desusada.
 
-- Se ha quitado `_set_security_error_handler`. Quite todas las llamadas a esa función; el controlador predeterminado es una forma mucho más segura de tratar los errores de seguridad.
+- `_set_security_error_handler` se ha quitado. Quite todas las llamadas a esa función; el controlador predeterminado es una forma mucho más segura de tratar los errores de seguridad.
 
 - `time_t` ahora es un valor de 64 bits (a menos que se defina _USE_32BIT_TIME_T).
 
@@ -3522,6 +3522,6 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - Ahora, el compilador genera código inalcanzable (C4702).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Novedades de Visual C++ en Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
