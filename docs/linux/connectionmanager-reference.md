@@ -5,12 +5,12 @@ f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2b01bfbcd81984e7ddf32cd5ab0485fff17b3d2b
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520472"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258038"
 ---
 # <a name="connectionmanager-reference"></a>Referencia de ConnectionManager
 
@@ -22,7 +22,7 @@ ConnectionManager.exe está disponible en Visual Studio 2019, versión 16.5 y 
 
 ::: moniker range="vs-2019"
 
-ConnectionManager.exe es una utilidad de línea de comandos para administrar conexiones de desarrollo remotas fuera de Visual Studio. Resulta útil para tareas como el aprovisionamiento de una nueva máquina de desarrollo. O bien, úsela para configurar Visual Studio para la integración continua. Puede usarla en una ventana Símbolo del sistema para desarrolladores. Para obtener más información sobre la ventana Símbolo del sistema para desarrolladores, consulte [Uso del conjunto de herramientas de Microsoft C++ desde la línea de comandos](..\build\building-on-the-command-line.md).
+ConnectionManager.exe es una utilidad de línea de comandos para administrar conexiones de desarrollo remotas fuera de Visual Studio. Resulta útil para tareas como el aprovisionamiento de una nueva máquina de desarrollo. O bien, úsela para configurar Visual Studio para la integración continua. Puede usarla en una ventana Símbolo del sistema para desarrolladores. Para obtener más información sobre la ventana Símbolo del sistema para desarrolladores, consulte [Uso del conjunto de herramientas de Microsoft C++ desde la línea de comandos](../build/building-on-the-command-line.md).
 
 ConnectionManager.exe está disponible en Visual Studio 2019, versión 16.5 y posteriores. Formar parte de la carga de trabajo **Desarrollo de Linux con C++** del Instalador de Visual Studio. También se instala automáticamente cuando se elige el componente **Administrador de conexiones de** en el instalador. Se instala en *%VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe*.
 

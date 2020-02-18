@@ -3,12 +3,12 @@ title: Creación y configuración de un proyecto de CMake de Linux en Visual St
 description: Cómo crear, configurar, editar y compilar un proyecto de CMake de Linux en Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625959"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416087"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Creación y configuración de un proyecto de CMake en Linux
 
@@ -175,7 +175,7 @@ En el ejemplo siguiente se muestra la configuración predeterminada para Linux-D
 
 ::: moniker range="vs-2019"
 
- La configuración Linux-Debug predeterminada en Visual Studio 2019 versión 16.1 y posterior es como se muestra aquí:
+La configuración Linux-Debug predeterminada en Visual Studio 2019 versión 16.1 y posterior es como se muestra aquí:
 
 ```json
 {
