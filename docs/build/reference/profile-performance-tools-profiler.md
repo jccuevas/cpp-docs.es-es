@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 678816ce455d2a982ff8218becd805a0b2cdd896
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320206"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416031"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Generador de perfiles de Herramientas de rendimiento)
 
@@ -24,43 +24,43 @@ Produce un archivo de salida que se puede usar con el generador de perfiles de H
 /PROFILE
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-/ PERFIL implica las siguientes opciones del vinculador:
+/PROFILE implica las siguientes opciones del vinculador:
 
-- [/OPT:REF](opt-optimizations.md)
+- [/OPT: REF](opt-optimizations.md)
 
-- / OPT: NOICF
+- /OPT: NOICF
 
-- [/INCREMENTAL:NO](incremental-link-incrementally.md)
+- [/INCREMENTAL: NO](incremental-link-incrementally.md)
 
-- [/FIXED:NO](fixed-fixed-base-address.md)
+- [/FIXED: NO](fixed-fixed-base-address.md)
 
-Y perfil hace que el vinculador generar una sección de reubicación en la imagen del programa.  Una sección de reubicación permite que el generador de perfiles transformar la imagen del programa para obtener datos de perfil.
+/PROFILE hace que el vinculador genere una sección de reubicación en la imagen del programa.  Una sección de reubicación permite que el generador de perfiles transforme la imagen de programa para obtener datos de perfil.
 
-**/ PERFIL** solo está disponible solo en las versiones Enterprise (desarrollo en equipo).  Para obtener más información sobre PREfast, vea [análisis de código para C/C ++ Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+**/Profile** solo está disponible en las versiones Enterprise (Team Development).  Para obtener más información sobre las PREfast, vea [análisis de códigoC++ para C/Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
-1. Expanda el **vinculador** nodo.
+1. Expanda el nodo **Enlazador**.
 
-1. Seleccione el **avanzadas** página de propiedades.
+1. Seleccione la página de propiedades **Avanzadas**.
 
-1. Modificar el **perfil** propiedad.
+1. Modifique la propiedad de **perfil** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
 1. Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
-### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Para establecer esta opción del vinculador en el proyecto de CMake de Visual Studio
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Para establecer esta opción del vinculador en el proyecto CMake de Visual Studio
 
-**CMake** proyecto no tiene un **páginas de propiedades**, las opciones del vinculador pueden establecerse, modifique el archivo CMakeLists.txt.
+El proyecto **CMake** no tiene **páginas de propiedades**, las opciones del enlazador se pueden establecer Modifing archivo CMakeLists. txt.
 
-1. Abra el archivo CMakeLists.txt en el directorio raíz del proyecto.
+1. Abra archivo CMakeLists. txt en el directorio raíz del proyecto.
 
 1. Agregue el código siguiente. Para obtener más información, consulte [referencias de CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
 
@@ -70,7 +70,7 @@ Y perfil hace que el vinculador generar una sección de reubicación en la image
 SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del enlazador MSVC](linking.md)<br/>
 [Opciones del enlazador MSVC](linker-options.md)

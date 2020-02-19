@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: f537fdea2703805c7ab1c57ba0d4429f6b683ae4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: c0cebe1cbd160bdec257a960f90039c1af3bfee2
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444890"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416048"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (Análisis de código)
 
@@ -41,7 +41,7 @@ Los resultados detallados del analizador se escriben como XML en el archivo espe
 Desactiva el resultado del analizador en la ventana de **salida** .
 
 **/Analyze: stacksize** *número*\
-El parámetro *Number* que se usa con esta opción especifica el tamaño, en bytes, del marco de pila para el que se genera la advertencia [C6262](/visualstudio/code-quality/c6262) . El espacio antes del *número* es opcional. Si no se especifica este parámetro, el tamaño del marco de pila es de 16 KB de forma predeterminada.
+El parámetro *Number* que se usa con esta opción especifica el tamaño, en bytes, del marco de pila para el que se genera la advertencia [C6262](/cpp/code-quality/c6262) . El espacio antes del *número* es opcional. Si no se especifica este parámetro, el tamaño del marco de pila es de 16 KB de forma predeterminada.
 
 **/Analyze: max_paths** *número*\
 El parámetro *Number* que se usa con esta opción especifica el número máximo de rutas de acceso de código que se van a analizar. Si no se especifica este parámetro, el número es 256 de forma predeterminada. Los valores mayores causan una comprobación más exhaustiva, pero el análisis puede tardar más tiempo.
@@ -71,14 +71,14 @@ Habilita el complemento de PREfast especificado como parte de las ejecuciones de
 
 ::: moniker range="<=vs-2017"
 
-LocalEspC. dll es el complemento que implementa comprobaciones de análisis de código relacionadas con la simultaneidad en el intervalo de advertencias de C261XX. Por ejemplo, [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+LocalEspC. dll es el complemento que implementa comprobaciones de análisis de código relacionadas con la simultaneidad en el intervalo de advertencias de C261XX. Por ejemplo, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
 
 Para ejecutar LocalEspC. dll, use esta opción del compilador: **/Analyze: plugin LocalEspC. dll**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck. dll implementa comprobaciones de análisis de código relacionadas con la simultaneidad en el intervalo de advertencias de C261XX. Por ejemplo, [C26100](/visualstudio/code-quality/c26100), [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167).
+ConcurrencyCheck. dll implementa comprobaciones de análisis de código relacionadas con la simultaneidad en el intervalo de advertencias de C261XX. Por ejemplo, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
 
 Para ejecutar ConcurrencyCheck. dll, primero ejecute este comando desde un símbolo del sistema para desarrolladores:
 
@@ -98,13 +98,13 @@ set Esp.Extensions=CppCoreCheck.dll
 
 A continuación, use esta opción del compilador: **/Analyze: plugin EspXEngine. dll**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Para obtener más información, vea [análisis de código paraC++ c/Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) y [análisis de códigoC++ para c/Warnings](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings).
+Para obtener más información, vea [análisis de código paraC++ c/Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview) y [análisis de códigoC++ para c/Warnings](/cpp/code-quality/code-analysis-for-c-cpp-warnings).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione las **propiedades de configuración** > página de propiedades **General** > **análisis de código** .
 
@@ -114,7 +114,7 @@ Para obtener más información, vea [análisis de código paraC++ c/Overview](/v
 
 1. Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 \ [Opciones del compilador MSVC](compiler-options.md)
 [Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

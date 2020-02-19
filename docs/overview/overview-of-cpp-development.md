@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810624"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415708"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Introducción al desarrollo de C++ en Visual Studio
 
@@ -47,7 +47,7 @@ Visual Studio proporciona compatibilidad con cualquier sistema de proyectos o he
 
 ## <a name="add-to-source-control"></a>Agregar al control de código fuente
 
-El control de código fuente permite coordinar el trabajo entre varios desarrolladores, aislar el trabajo en curso del código en producción y realizar copias de seguridad del código fuente. Visual Studio es compatible con Git y [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) a través de su ventana **Team Explorer**. 
+El control de código fuente permite coordinar el trabajo entre varios desarrolladores, aislar el trabajo en curso del código en producción y realizar copias de seguridad del código fuente. Visual Studio es compatible con Git y [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) a través de su ventana **Team Explorer**.
 
 ::: moniker range="vs-2019"
 
@@ -117,7 +117,7 @@ Para obtener más información, vea [Comprobar el código con pruebas unitarias]
 
 ## <a name="analyze"></a>Analizar
 
-Visual Studio incluye herramientas de análisis de código estático que pueden detectar posibles problemas en el código fuente. Estas herramientas incluyen una implementación de los comprobadores de reglas de [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Para obtener más información, vea [Análisis de código para obtener información general de C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Visual Studio incluye herramientas de análisis de código estático que pueden detectar posibles problemas en el código fuente. Estas herramientas incluyen una implementación de los comprobadores de reglas de [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Para obtener más información, vea [Análisis de código para obtener información general de C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="deploy-completed-applications"></a>Implementar aplicaciones completadas
 

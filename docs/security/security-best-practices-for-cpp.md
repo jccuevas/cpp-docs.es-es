@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988077"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416164"
 ---
 # <a name="security-best-practices-for-c"></a>Procedimientos recomendados para la seguridad en C++
 
@@ -35,14 +35,14 @@ Indica al vinculador que incluya en la imagen de salida una tabla que contenga l
 [/NXCompat](../build/reference/nxcompat.md), [/NXCompat (compatible con la prevención de ejecución de datos)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) estas opciones del compilador y del vinculador habilitan la compatibilidad de prevención de ejecución de datos (DEP). DEP protege la CPU frente a la ejecución de páginas que no son de códigos.
 
 [/analyze (Análisis de código)](../build/reference/analyze-code-analysis.md)<br/>
-Esta opción del compilador activa el análisis de código que informa de posibles problemas de seguridad como saturaciones del búfer, memoria no inicializada, desreferenciación del puntero null y pérdidas de memoria. Esta opción está desactivada de forma predeterminada. Para obtener más información, vea [análisis de código paraC++ C/Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Esta opción del compilador activa el análisis de código que informa de posibles problemas de seguridad como saturaciones del búfer, memoria no inicializada, desreferenciación del puntero null y pérdidas de memoria. Esta opción está desactivada de forma predeterminada. Para obtener más información, vea [análisis de código paraC++ C/Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 [/DYNAMICBASE (Usar selección aleatoria del diseño del espacio de direcciones)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Esta opción del vinculador permite compilar una imagen ejecutable que se puede cargar en diferentes ubicaciones de la memoria al comienzo de la ejecución. Esta opción también hace que la ubicación de la pila en la memoria sea menos predecible.
 
 ## <a name="security-enhanced-crt"></a>CRT con seguridad mejorada
 
-La Biblioteca en tiempo de ejecución de C (CRT) se ha ampliado para incluir versiones seguras de funciones que presentan riesgos de seguridad; por ejemplo, la función de copia de cadena `strcpy` no comprobada. Puesto que las versiones anteriores no seguras de estas funciones están desusadas, producen advertencias en tiempo de compilación. Se recomienda usar las versiones seguras de estas funciones CRT en lugar de suprimir las advertencias de compilación. Para obtener más información, consulta [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+La Biblioteca en tiempo de ejecución de C (CRT) se ha ampliado para incluir versiones seguras de funciones que presentan riesgos de seguridad; por ejemplo, la función de copia de cadena `strcpy` no comprobada. Puesto que las versiones anteriores no seguras de estas funciones están desusadas, producen advertencias en tiempo de compilación. Se recomienda usar las versiones seguras de estas funciones CRT en lugar de suprimir las advertencias de compilación. Para obtener más información, consulte [Características de seguridad de CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="safeint-library"></a>Biblioteca SafeInt
 
@@ -52,7 +52,7 @@ La clase `SafeInt` protege ante el desbordamiento de enteros y los ataques de di
 
 Cada función `SafeInt` protege una operación matemática ante un error explotable. Se pueden utilizar dos clases diferentes de parámetros sin convertirlos a mismo tipo. Para proteger varias operaciones matemáticas, utilice la clase `SafeInt`.
 
-## <a name="checked-iterators"></a>Iteradores comprobados
+## <a name="checked-iterators"></a>Checked Iterators
 
 Un iterador comprobado aplica límites de contenedor. De forma predeterminada, cuando un iterador comprobado está fuera de los límites, genera una excepción y finaliza la ejecución de programas. Un iterador comprobado proporciona otros niveles de respuesta que dependen de los valores que se asignan a las definiciones del preprocesador, como **\_SECURE\_SCL\_inicia** y **\_iterador\_nivel de\_de depuración**. Por ejemplo, en **\_iterador\_DEpurar\_nivel = 2**, un iterador comprobado proporciona comprobaciones de corrección completas en modo de depuración, que están disponibles mediante aserciones. Para obtener más información, vea iteradores [comprobados](../standard-library/checked-iterators.md) e [iterador\_\_depurar\_nivel](../standard-library/iterator-debug-level.md).
 
@@ -68,7 +68,7 @@ Análisis de código para código administrado, también conocido como FxCop, co
 
 - Rendimiento
 
-- de seguridad
+- Seguridad
 
 ## <a name="windows-application-verifier"></a>Comprobador de aplicaciones para Windows
 
@@ -92,7 +92,7 @@ El uso de cuentas de usuario de Windows que pertenecen al grupo Administradores 
 
 Para obtener información sobre cómo facilite y mitigar las vulnerabilidades de hardware de canal lateral de C++ ejecución especulativa en el software, consulte [ C++ la guía del desarrollador para los canales del lado de ejecución especulativa](developer-guidance-speculative-execution.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 <xref:System.Security> <br/>
 [Seguridad](/dotnet/standard/security/index)<br/>

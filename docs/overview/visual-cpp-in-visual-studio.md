@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793798"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416099"
 ---
 # <a name="c-in-visual-studio"></a>C++ en Visual Studio
 
@@ -82,7 +82,7 @@ Cómo se usan las características de productividad en el editor de C++ para re
 [Depuración de código nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Use el depurador de Visual Studio con proyectos de C++.
 
-[Información general del análisis de código de C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Información general del análisis de código de C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Use anotaciones de SAL o comprobadores de C++ Core Guidelines para realizar un análisis estático.
 
 [Escribir pruebas unitarias para C/C++ en Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>

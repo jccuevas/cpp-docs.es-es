@@ -3,12 +3,12 @@ title: Novedades de C++ en Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793976"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415725"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Novedades de C++ en Visual Studio
 
@@ -647,7 +647,7 @@ El conjunto de herramientas Clang/C2 que se incluye con Visual Studio 2017 ahora
 
 ## <a name="c-code-analysis"></a>Análisis de código de C++
 
-Ahora se distribuyen con Visual Studio los comprobadores principales de C++ para aplicar las [directrices principales de C++](https://github.com/isocpp/CppCoreGuidelines). Simplemente habilite los comprobadores en la página **Extensiones de análisis de código** en las páginas de propiedades del proyecto y las extensiones se incluirán al ejecutar análisis de código. Para más información, consulte [Usar los comprobadores de directrices principales de C++](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+Ahora se distribuyen con Visual Studio los comprobadores principales de C++ para aplicar las [directrices principales de C++](https://github.com/isocpp/CppCoreGuidelines). Simplemente habilite los comprobadores en la página **Extensiones de análisis de código** en las páginas de propiedades del proyecto y las extensiones se incluirán al ejecutar análisis de código. Para más información, consulte [Usar los comprobadores de directrices principales de C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ![CppCoreCheck](media/CppCoreCheck.png "Página de propiedades de CppCoreCheck")
 
@@ -668,7 +668,7 @@ Ahora se distribuyen con Visual Studio los comprobadores principales de C++ para
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 versión 15.7
 
 - Se ha agregado compatibilidad con [/analyze:ruleset](../build/reference/analyze-code-analysis.md), que permite especificar las reglas de análisis de código que se van a ejecutar.
-- Se ha agregado compatibilidad para reglas de C++ Core Guidelines adicionales.  Para más información, consulte [Usar los comprobadores de directrices principales de C++](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+- Se ha agregado compatibilidad para reglas de C++ Core Guidelines adicionales.  Para más información, consulte [Usar los comprobadores de directrices principales de C++](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ## <a name="unit-testing"></a>Pruebas unitarias
 
