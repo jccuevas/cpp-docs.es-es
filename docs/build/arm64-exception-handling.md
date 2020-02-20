@@ -2,12 +2,12 @@
 title: Control de excepciones de ARM64
 description: Describe las convenciones y los datos de control de excepciones que usa Windows en ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276836"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504480"
 ---
 # <a name="arm64-exception-handling"></a>Control de excepciones de ARM64
 
@@ -23,7 +23,7 @@ Las convenciones de datos de desenredo de excepciones y esta descripción están
 
    - Analizar el código es complejo. el compilador debe tener cuidado de generar solo instrucciones que el desenredador pueda descodificar.
 
-   - Si no se puede describir completamente el desenredado mediante el uso de códigos de desenredado, en algunos casos debe revertir a la descodificación de instrucciones. Esto aumenta la complejidad general y, idealmente, se evitaría.
+   - Si no se puede describir completamente el desenredado mediante el uso de códigos de desenredado, en algunos casos debe revertir a la descodificación de instrucciones. Esto aumenta la complejidad general y, idealmente, debería evitarse.
 
 1. Admitir el desenredado en el prólogo intermedio y el epílogo medio.
 
@@ -35,11 +35,11 @@ Las convenciones de datos de desenredo de excepciones y esta descripción están
 
    - Dado que es probable que los códigos de desenredado estén bloqueados en memoria, una pequeña superficie garantiza una sobrecarga mínima para cada binario cargado.
 
-## <a name="assumptions"></a>Suposiciones
+## <a name="assumptions"></a>Supuestos
 
 Estas suposiciones se realizan en la descripción del control de excepciones:
 
-1. Los registros y los trabajos de registro tienden a reflejarse en otro. Al aprovechar este rasgo común, se puede reducir considerablemente el tamaño de los metadatos necesarios para describir el desenredado. En el cuerpo de la función, no importa si se deshacen las operaciones del prólogo o si las operaciones del epílogo se realizan de manera anticipada. Ambas deberían generar idénticos resultados.
+1. Los registros y los epilogs tienden a reflejarse entre sí. Al aprovechar este rasgo común, se puede reducir considerablemente el tamaño de los metadatos necesarios para describir el desenredado. En el cuerpo de la función, no importa si se deshacen las operaciones del prólogo o si las operaciones del epílogo se realizan de manera anticipada. Ambas deberían generar idénticos resultados.
 
 1. Las funciones tienden a que todo sea relativamente pequeño. Varias optimizaciones del espacio dependen de este hecho para lograr el empaquetado más eficaz de los datos.
 
@@ -53,7 +53,7 @@ Estas suposiciones se realizan en la descripción del control de excepciones:
 
 ## <a name="arm64-stack-frame-layout"></a>ARM64 diseño del marco de pila
 
-(media/arm64-exception-handling-stack-frame.png "diseño del marco de pila") de diseño del marco de ![pila]
+![diseño del marco de pila](media/arm64-exception-handling-stack-frame.png "diseño de marco de pila")
 
 En el caso de las funciones encadenadas con fotogramas, el par FP y LR se puede guardar en cualquier posición del área variable local, en función de las consideraciones de optimización. El objetivo es maximizar el número de variables locales a las que se puede tener acceso mediante una sola instrucción basada en el puntero de marco (X29) o en el puntero de pila (SP). Sin embargo, para las funciones de `alloca`, se debe encadenar y X29 debe apuntar a la parte inferior de la pila. Para permitir una mejor cobertura de modo de asignación de pares de registros, las áreas de guardado de registros no volátiles se colocan en la parte superior de la pila de área local. Estos son algunos ejemplos que ilustran algunas de las secuencias de prólogo más eficaces. Con el fin de mejorar la claridad y la ubicación de la memoria caché, el orden en que se almacenan los registros guardados por el destinatario en todos los registros canónicos está en el orden "en aumento". `#framesz` a continuación representa el tamaño de la pila completa (excepto el área alloca). `#localsz` y `#outsz` denotan el tamaño de área local (incluido el área de almacenamiento de los \<X29, LR > par) y el tamaño del parámetro saliente, respectivamente.
 
@@ -188,7 +188,7 @@ Los registros. pdata son una matriz ordenada de elementos de longitud fija que d
 
 Cada registro. pdata para ARM64 tiene una longitud de 8 bytes. El formato general de cada registro coloca la RVA de 32 bits de la función Start en la primera palabra, seguida de una segunda palabra que contiene un puntero a un bloque de longitud variable. xdata o una palabra empaquetada que describe una secuencia de desenredado de funciones canónicas.
 
-diseño del ![registro. pdata](media/arm64-exception-handling-pdata-record.png ".")
+![diseño del registro. pdata](media/arm64-exception-handling-pdata-record.png "diseño del registro. pdata")
 
 Los campos son los siguientes:
 
@@ -204,7 +204,7 @@ Los campos son los siguientes:
 
 Cuando el formato de desenredado empaquetado no basta para describir el desenredado de una función, se debe crear un registro .xdata de longitud variable. La dirección de este registro se almacena en la segunda palabra del registro .pdata. El formato de. xdata es un conjunto de palabras de longitud variable empaquetada:
 
-diseño del ![registro. xdata](media/arm64-exception-handling-xdata-record.png ". diseño del registro XData")
+![diseño del registro. xdata](media/arm64-exception-handling-xdata-record.png "diseño del registro. xdata")
 
 Estos datos se dividen en cuatro secciones:
 
@@ -336,7 +336,7 @@ En el caso de las funciones cuyos registros y archivos de registro siguen el for
 
 El formato de un registro. pdata con datos de desenredado empaquetados tiene el siguiente aspecto:
 
-![registro. pdata con registro de datos de desenredado](media/arm64-exception-handling-packed-unwind-data.png ". pdata empaquetado con datos de desenredado empaquetados")
+![registro. pdata con datos de desenredado empaquetados](media/arm64-exception-handling-packed-unwind-data.png "registro. pdata con datos de desenredado empaquetados")
 
 Los campos son los siguientes:
 
@@ -377,7 +377,7 @@ Pasar #|Valores de marca|n.º de instrucciones|Código de operación|Código de 
 1|0 < **RegI** < = 10|RegI/2 + **RegI** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
 3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
 5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
 5b|**CR** = = 11 & &<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
 5c|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
@@ -628,7 +628,7 @@ El índice de inicio de epílogo [0] apunta a la misma secuencia de código de d
 
 El índice de inicio del epílogo [4] apunta al centro del código de desenredado del prólogo (reutiliza parcialmente la matriz de desenredado).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general de las convenciones de ABI de ARM64](arm64-windows-abi-conventions.md)<br/>
 [Control de excepciones de ARM](arm-exception-handling.md)

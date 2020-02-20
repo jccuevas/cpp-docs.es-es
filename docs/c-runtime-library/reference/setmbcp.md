@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3408f04eb60a33a84c628c989ebc9c4c4a261df
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948213"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473879"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -55,7 +55,7 @@ Nueva configuración de la página de códigos para las rutinas multibyte indepe
 
 Devuelve 0 si la página de códigos se establece correctamente. Si se proporciona un valor de página de códigos no válido para *CodePage*, devuelve-1 y la configuración de la página de códigos no cambia. Establece **errno** en **EINVAL** si se produce un error de asignación de memoria.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_setmbcp** especifica una nueva página de códigos multibyte. De forma predeterminada, el sistema en tiempo de ejecución establece automáticamente la página de códigos multibyte en la página de códigos ANSI predeterminada del sistema. La configuración de la página de códigos multibyte afecta a todas las rutinas multibyte que no dependen de la configuración regional. Sin embargo, es posible indicar a **_setmbcp** que use la página de códigos definida para la configuración regional actual (vea la siguiente lista de constantes de manifiesto y resultados de comportamiento asociados). Para obtener una lista de las rutinas multibyte que dependen de la página de códigos de configuración regional, y no de la página de códigos multibyte, vea [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md).
 
@@ -79,7 +79,9 @@ El argumento *CodePage* se puede establecer en cualquiera de los siguientes valo
 
 - **_MB_CP_SBCS** Use la página de códigos de un solo byte. Cuando la página de códigos está establecida en **_MB_CP_SBCS**, una rutina como [_ismbblead](ismbblead-ismbblead-l.md) siempre devuelve false.
 
-- Cualquier otro valor válido de página de códigos, independientemente de si el valor es una página de códigos de ANSI, OEM o una página de códigos compatible con otros sistemas operativos (excepto UTF-7 y UTF-8, que no son compatibles).
+- **_MB_CP_UTF8** Usar UTF-8.  Cuando la página de códigos está establecida en **_MB_CP_UTF8**, una rutina como [_ismbblead](ismbblead-ismbblead-l.md) siempre devuelve false.
+
+- Cualquier otro valor de página de códigos válido, independientemente de si el valor es ANSI, OEM u otra página de códigos compatible con el sistema operativo (excepto UTF-7, que no se admite).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -87,9 +89,9 @@ El argumento *CodePage* se puede establecer en cualquiera de los siguientes valo
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

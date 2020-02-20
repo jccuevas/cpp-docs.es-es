@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894351"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473860"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
 
@@ -61,7 +61,7 @@ wchar_t *_wsetlocale(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *categoría*
 Categoría afectada por la configuración regional.
@@ -87,7 +87,7 @@ en-US
 
 Puede copiar la cadena devuelta por **setlocale** para restaurar la parte de la información de configuración regional del programa. El almacenamiento local de subprocesos o globales se utiliza para la cadena devuelta por **setlocale**. Las llamadas posteriores a **setlocale** sobrescriben la cadena, lo que invalida los punteros de cadena devueltos por llamadas anteriores.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Use la función **setlocale** para establecer, cambiar o consultar toda o parte de la información de configuración regional del programa actual especificada por la *configuración regional* y la *categoría*. *configuración regional* hace referencia a la localidad (país o región e idioma) para la que puede personalizar determinados aspectos del programa. Entre las categorías dependientes de la configuración regional se encuentran el formato de fechas y el formato de presentación de valores de moneda. Si establece la *configuración regional* en la cadena predeterminada para un idioma que tiene varios formatos admitidos en el equipo, debe comprobar el valor devuelto de **setlocale** para ver qué idioma está en vigor. Por ejemplo, si establece la *configuración regional* en "Chino", el valor devuelto puede ser "chino simplificado" o "chino tradicional".
 
@@ -118,7 +118,7 @@ Durante el inicio del programa, se ejecuta el equivalente de la instrucción sig
 
 `setlocale( LC_ALL, "C" );`
 
-El argumento de *configuración regional* puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y un código de país o región, una página de códigos, una cadena de idioma, un código de país o región y una página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles contiene todos los admitidos por la API NLS de Windows, excepto las páginas de códigos que requieren más de dos bytes por carácter, como UTF-7 y UTF-8. Si proporciona un valor de página de códigos de UTF-7 o UTF-8, **setlocale** producirá un error y devolverá **null**. El conjunto de nombres de configuración regional que admite **setlocale** se describe en [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). El conjunto de cadenas de idioma y de país o región que admite **setlocale** se enumeran en cadenas de [idioma](../../c-runtime-library/language-strings.md) y [cadenas de país o región](../../c-runtime-library/country-region-strings.md). Se recomienda emplear el formato del nombre de la configuración regional para mejorar el rendimiento y simplificar el mantenimiento de las cadenas de configuración regional insertadas en código o serializadas en el almacenamiento. Es menos probable que una actualización del sistema operativo cambie las cadenas de nombre de configuración regional que el formato de nombre de idioma y de país o región.
+El argumento de *configuración regional* puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y un código de país o región, una página de códigos, una cadena de idioma, un código de país o región y una página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles incluye todos los admitidos por la NLS API de Windows. El conjunto de nombres de configuración regional que admite **setlocale** se describe en [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). El conjunto de cadenas de idioma y de país o región que admite **setlocale** se enumeran en cadenas de [idioma](../../c-runtime-library/language-strings.md) y [cadenas de país o región](../../c-runtime-library/country-region-strings.md). Se recomienda emplear el formato del nombre de la configuración regional para mejorar el rendimiento y simplificar el mantenimiento de las cadenas de configuración regional insertadas en código o serializadas en el almacenamiento. Es menos probable que una actualización del sistema operativo cambie las cadenas de nombre de configuración regional que el formato de nombre de idioma y de país o región.
 
 Un puntero NULL que se pasa como argumento de *configuración regional* indica a **setlocale** que consulte en lugar de establecer el entorno internacional. Si el argumento de *configuración regional* es un puntero nulo, la configuración regional actual del programa no cambia. En su lugar, **setlocale** devuelve un puntero a la cadena asociada a la *categoría* de la configuración regional actual del subproceso. Si el argumento de *categoría* es **LC_ALL**, la función devuelve una cadena que indica la configuración actual de cada categoría, separadas por punto y coma. Por ejemplo, la secuencia de llamadas
 
@@ -200,14 +200,14 @@ Para obtener más información, vea la directiva pragma [setlocale](../../prepro
 
 La función [_configthreadlocale](configthreadlocale.md) se utiliza para controlar si **setlocale** afecta a la configuración regional de todos los subprocesos de un programa o solo a la configuración regional del subproceso que realiza la llamada.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> o \<wchar.h>|
 
-Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -313,7 +313,7 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
@@ -325,7 +325,7 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md)\
+[strcoll (Funciones)](../../c-runtime-library/strcoll-functions.md)\
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)\
