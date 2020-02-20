@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305468"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473843"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -461,7 +461,7 @@ MSVC admite estas macros predefinidas adicionales.
    |Visual Studio .NET 2002 (7,0)|1300|
    |Visual Studio .NET 2003 (7,1)|1310|
    |Visual Studio 2005 (8,0)|1400|
-   |Visual Studio 2008 (9,0)|1500|
+   |Visual Studio 2008 (9,0)|1\.500|
    |Visual Studio 2010 (10,0)|1600|
    |Visual Studio 2012 (11,0)|1700|
    |Visual Studio 2013 (12,0)|1800|
@@ -472,11 +472,14 @@ MSVC admite estas macros predefinidas adicionales.
    |Visual Studio 2017, versión 15.6|1913|
    |Visual Studio 2017 versión 15.7|1914|
    |Visual Studio 2017, versión 15.8|1915|
-   |Visual Studio 2017 versión 15,9|1916|
+   |Visual Studio 2017, versión 15.9|1916|
    |Visual Studio 2019 RTW (16,0)|1920|
    |Visual Studio 2019, versión 16.1|1921|
    |Visual Studio 2019, versión 16.2|1922|
    |Visual Studio 2019 versión 16,3|1923|
+   |Visual Studio 2019 versión 16,4|1924|
+   |Visual Studio 2019 versión 16,5|1925|
+   |Visual Studio 2019 versión 16,6|1926|
 
    Para probar las versiones del compilador o las actualizaciones en una versión determinada de Visual Studio o después, utilice el operador `>=`. Puede utilizarlo en una directiva condicional para comparar `_MSC_VER` con esa versión conocida. Si tiene varias versiones mutuamente excluyentes para compararlas, ordene las comparaciones en orden descendente de número de versión. Por ejemplo, este código comprueba los compiladores publicados en Visual Studio 2017 y versiones posteriores. A continuación, comprueba los compiladores publicados en o después de Visual Studio 2015. Después, comprueba todos los compiladores publicados antes de Visual Studio 2015:
 
@@ -541,7 +544,7 @@ No hay macros de preprocesador que identifiquen la versión de la biblioteca ATL
 
 - `_MFC_VER` define en \<afxver_. h > como un literal entero que codifica el número de versión de MFC.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Macros (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [Operadores de preprocesador](../preprocessor/preprocessor-operators.md)<br/>
