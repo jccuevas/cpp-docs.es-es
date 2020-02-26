@@ -2589,7 +2589,7 @@ struct D : B<T*> {
 };
 ```
 
-La versión 15.7 de Visual Studio 2017, en modo **/std:c++17**, requiere la palabra clave **typename** en la instrucción **using** de D. Sin **typename**, el compilador producirá la advertencia C4346: 'B<T>::type': dependent name is not a type* (el nombre dependiente no es un tipo) y el error C2061: *syntax error: identifier 'type'* (error de sintaxis: identificador "type"):
+La versión 15.7 de Visual Studio 2017, en modo **/std:c++17**, requiere la palabra clave **typename** en la instrucción **using** de D. Sin **typename**, el compilador producirá la advertencia C4346: *'B<T\*>::type': dependent name is not a type* (el nombre dependiente no es un tipo) y el error C2061: *syntax error: identifier 'type'* (error de sintaxis: identificador "type"):
 
 ```cpp
 template<typename T>
