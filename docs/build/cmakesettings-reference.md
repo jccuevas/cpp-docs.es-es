@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518210"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600033"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referencia del esquema de CMakeSettings.json
 
@@ -31,7 +31,7 @@ La matriz `configurations` contiene todas las configuraciones de un proyecto CMa
 
 Un elemento `configuration` tiene las siguientes propiedades:
 
-- `addressSDanitizerEnabled`: si `true` compila el programa con el saneado de direcciones (experimental en Windows). En Linux, compile con-fno-ignore-Frame-Pointer y el nivel de optimización del compilador-os o-OO para obtener los mejores resultados.
+- `addressSanitizerEnabled`: si `true` compila el programa con el saneado de direcciones (experimental en Windows). En Linux, compile con-fno-ignore-Frame-Pointer y el nivel de optimización del compilador-os o-OO para obtener los mejores resultados.
 - `addressSanitizerRuntimeFlags`: marcas en tiempo de ejecución pasadas a AddressSanitizer a través de la variable de entorno ASAN_OPTIONS. Formato: indicador1 = valor: dedador = valor2.
 - `buildCommandArgs`: especifica los modificadores de compilación nativos que se pasan a CMake después de --build --. Por ejemplo, pasar -v cuando se usa el generador Ninja obliga a Ninja a dar como resultado líneas de comandos. Vea [Argumentos de la línea de comandos de Ninja](#ninja) para más información sobre los comandos de Ninja.
 - `buildRoot`: especifica el directorio en el que CMake genera los scripts de compilación para el generador elegido.  Asigna al modificador **-DCMAKE_BINARY_DIR** y especifica dónde se creará *CMakeCache. txt* . Si la carpeta no existe, se creará. Entre las macros admitidas se incluyen `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}` y `${env.VARIABLE}`.
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opción|Descripción|
+|Opción|Description|
 |--------------|------------|
 | --version  | Se imprime la versión de Ninja ("1.7.1").|
 |   -C DIR   | Se cambia a DIR antes de realizar cualquier otra acción.|
