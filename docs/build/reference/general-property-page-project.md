@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299770"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166763"
 ---
 # <a name="general-property-page-project"></a>Página de propiedades General (Proyecto)
 
 ::: moniker range=">=vs-2019"
 
-Este tema se aplica a los proyectos de Visual Studio para Windows. Para los proyectos de Linux, consulte referencia de la [Página de propiedades de Linux C++ ](../../linux/prop-pages-linux.md). Para los proyectos de CMake, consulte [proyectos de CMake en Visual Studio](../cmake-projects-in-visual-studio.md).
+Este tema se aplica a los proyectos de Visual Studio para Windows. Para los proyectos de Linux, consulte referencia de la [Página de propiedades de Linux C++ ](../../linux/prop-pages-linux.md). Para los proyectos de CMake, consulte [proyectos de CMake en Visual Studio](../cmake-projects-in-visual-studio.md). Para los proyectos de Android, consulte [propiedades generales del C++proyecto (Android)](/cpp/cross-platform/general-android-prop-page). Para los proyectos de archivos make de Android, consulte [propiedades C++ generales del proyecto (archivo make de Android)](/cpp/cross-platform/general-makefile-android-prop-page)
 
 Al hacer clic con el botón secundario en un nodo de proyecto en Explorador de soluciones y seleccionar **propiedades**, la página de propiedades **General** en el nodo **propiedades de configuración** del panel izquierdo muestra estas propiedades:
 
@@ -88,11 +88,11 @@ Al hacer clic con el botón secundario en un nodo de proyecto en Explorador de s
 
    Para establecer Windows 7 o Windows Vista como destino, use el valor **8.1**, ya que Windows SDK 8.1 es compatible con estas plataformas. Además, debe definir el valor adecuado para **_WIN32_WINNT** en targetver.h. Para Windows 7, es 0x0601. Vea [Modificar WINVER y _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Puede instalar el conjunto de herramientas de la plataforma Windows XP incluido en Visual Studio para usar la versión actual de las bibliotecas para compilar proyectos de Windows XP y Windows 2003. Para obtener más información sobre cómo conseguir y usar este conjunto de herramientas de la plataforma, vea [Configurar programas para Windows XP](../configuring-programs-for-windows-xp.md). Para obtener información adicional sobre cómo cambiar el conjunto de herramientas de la plataforma, consulte el artículo relativo al [procedimiento para modificar la plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Puede instalar el conjunto de herramientas de la plataforma Windows XP incluido en Visual Studio para usar la versión actual de las bibliotecas para compilar proyectos de Windows XP y Windows 2003. Para obtener más información sobre cómo conseguir y usar este conjunto de herramientas de la plataforma, vea [Configurar programas para Windows XP](../configuring-programs-for-windows-xp.md). Para más información sobre cómo cambiar el conjunto de herramientas de la plataforma, vea [Cómo: Modificar versión de .NET Framework de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Conjunto de herramientas de la plataforma**
 
-   Permite al proyecto elegir como destino una versión diferente de las bibliotecas y el compilador de Visual C++. Los proyectos C++ de Visual Studio pueden tener como destino el conjunto de herramientas predeterminado instalado por Visual Studio, o uno de los conjuntos de herramientas instalados por varias versiones anteriores de Visual Studio, incluidos los conjuntos de herramientas que crean ejecutables que se pueden ejecutar en Windows XP. Para obtener información sobre cómo cambiar el conjunto de [herramientas de la plataforma, consulte Cómo: para modificar la plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permite al proyecto elegir como destino una versión diferente de las bibliotecas y el compilador de Visual C++. Los proyectos C++ de Visual Studio pueden tener como destino el conjunto de herramientas predeterminado instalado por Visual Studio, o uno de los conjuntos de herramientas instalados por varias versiones anteriores de Visual Studio, incluidos los conjuntos de herramientas que crean ejecutables que se pueden ejecutar en Windows XP. Para obtener información sobre cómo cambiar el conjunto de herramientas de la plataforma, vea [Cómo: Modificar plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **C++Estándar de lenguaje**
 
@@ -126,7 +126,7 @@ En Visual Studio 2015 y Visual Studio 2017, al hacer clic con el botón secundar
 
    Para establecer Windows 7 o Windows Vista como destino, use el valor **8.1**, ya que Windows SDK 8.1 es compatible con estas plataformas. Además, debe definir el valor adecuado para **_WIN32_WINNT** en targetver.h. Para Windows 7, es 0x0601. Vea [Modificar WINVER y _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Puede instalar el conjunto de herramientas de la plataforma Windows XP incluido en Visual Studio para usar la versión actual de las bibliotecas para compilar proyectos de Windows XP y Windows 2003. Para obtener más información sobre cómo conseguir y usar este conjunto de herramientas de la plataforma, vea [Configurar programas para Windows XP](../configuring-programs-for-windows-xp.md). Para obtener información adicional sobre cómo cambiar el conjunto de herramientas de la plataforma, consulte el artículo relativo al [procedimiento para modificar la plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Puede instalar el conjunto de herramientas de la plataforma Windows XP incluido en Visual Studio para usar la versión actual de las bibliotecas para compilar proyectos de Windows XP y Windows 2003. Para obtener más información sobre cómo conseguir y usar este conjunto de herramientas de la plataforma, vea [Configurar programas para Windows XP](../configuring-programs-for-windows-xp.md). Para más información sobre cómo cambiar el conjunto de herramientas de la plataforma, vea [Cómo: Modificar versión de .NET Framework de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Directorio de salida**
 
@@ -162,14 +162,14 @@ En Visual Studio 2015 y Visual Studio 2017, al hacer clic con el botón secundar
 
 - **Conjunto de herramientas de la plataforma**
 
-   Permite al proyecto elegir como destino una versión diferente de las bibliotecas y el compilador de Visual C++. Los proyectos C++ de Visual Studio pueden tener como destino el conjunto de herramientas predeterminado instalado por Visual Studio, o uno de los conjuntos de herramientas instalados por varias versiones anteriores de Visual Studio, incluidos los conjuntos de herramientas que crean ejecutables que se pueden ejecutar en Windows XP. Para obtener información sobre cómo cambiar el conjunto de [herramientas de la plataforma, consulte Cómo: para modificar la plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permite al proyecto elegir como destino una versión diferente de las bibliotecas y el compilador de Visual C++. Los proyectos C++ de Visual Studio pueden tener como destino el conjunto de herramientas predeterminado instalado por Visual Studio, o uno de los conjuntos de herramientas instalados por varias versiones anteriores de Visual Studio, incluidos los conjuntos de herramientas que crean ejecutables que se pueden ejecutar en Windows XP. Para obtener información sobre cómo cambiar el conjunto de herramientas de la plataforma, vea [Cómo: Modificar plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Habilitar compilación incremental administrada**
 
    Para los proyectos administrados, esto permite la detección de visibilidad externa al generar los ensamblados. Si un cambio en un proyecto administrado no es visible para otros proyectos, los proyectos dependientes no se recompilan. Esto puede mejorar considerablemente los tiempos de compilación de las soluciones que incluyen proyectos administrados.
 
 ## <a name="project-defaults"></a>Valores predeterminados del proyecto
- 
+
 Las propiedades de la sección Valores predeterminados del proyecto representan propiedades predeterminadas que puede modificar. La definición de estas propiedades se puede encontrar en los archivos .props del *Directorio de instalación*\VC\VCProjectDefaults.
 
 - **Tipo de configuración**
@@ -230,6 +230,6 @@ Las propiedades de la sección Valores predeterminados del proyecto representan 
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++referencia de la página de propiedades del proyecto](property-pages-visual-cpp.md)
