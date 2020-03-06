@@ -1,0 +1,75 @@
+---
+title: Clase FrontEndFile
+description: Referencia C++ de la clase FRONTENDFILE del SDK de Build Insights.
+ms.date: 02/12/2020
+helpviewer_keywords:
+- C++ Build Insights
+- C++ Build Insights SDK
+- FrontEndFile
+- throughput analysis
+- build time analysis
+- vcperf.exe
+ms.openlocfilehash: 094b1326765e0e8edb00534ecb3d94c46702d4ec
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78334797"
+---
+# <a name="frontendfile-class"></a>Clase FrontEndFile
+
+::: moniker range="<=vs-2015"
+
+El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+
+::: moniker-end
+::: moniker range=">=vs-2017"
+
+La clase `FrontEndFile` se usa con las funciones [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)y [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Úselo para que coincida con un evento de [FRONT_END_FILE](../event-table.md#front-end-file) .
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+class FrontEndFile : public Activity
+{
+public:
+    FrontEndFile(const RawEvent& event);
+
+    const char* Path() const;
+};
+```
+
+## <a name="members"></a>Miembros
+
+Junto con los miembros heredados de su clase base de [actividad](activity.md) , la clase `FrontEndFile` contiene los siguientes miembros:
+
+### <a name="constructors"></a>Constructores
+
+[FrontEndFile](#front-end-file)
+
+### <a name="functions"></a>Funciones
+
+[Path](#path)
+
+## <a name="front-end-file"></a>FrontEndFile
+
+```cpp
+FrontEndFile(const RawEvent& event);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*event*\
+Un evento de [FRONT_END_FILE](../event-table.md#front-end-file) .
+
+## <a name="path"></a> Path
+
+```cpp
+const char* Path() const;
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+La ruta de acceso absoluta al archivo, codificada en UTF-8.
+
+::: moniker-end
