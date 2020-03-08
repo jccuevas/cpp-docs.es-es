@@ -6,19 +6,19 @@ f1_keywords:
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448593"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883853"
 ---
-# <a name="lthashsetgt-functions"></a>Funciones de &lt;hash_set&gt;
+# <a name="lthash_setgt-functions"></a>Funciones de &lt;hash_set&gt;
 
 |||
 |-|-|
 |[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
 > [!NOTE]
 > Esta API está obsoleta. La alternativa es la [clase unordered_set](../standard-library/unordered-set-class.md).
@@ -33,19 +33,19 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
-Hash_set que proporciona los elementos que se van a intercambiar o el hash_set cuyos elementos se van a intercambiar con los de la hash_set *izquierda*.
+\ *derecha*
+Hash_set que proporciona los elementos que se van a intercambiar o la hash_set cuyos elementos se van a intercambiar con los de la hash_set *izquierda*.
 
-*salido*\
-Hash_set cuyos elementos se van a intercambiar con los del *derecho*hash_set.
+\ *izquierda*
+Hash_set cuyos elementos se van a intercambiar con los de la hash_set *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La `swap` función de plantilla es un algoritmo especializado en la clase contenedora hash_set para ejecutar la `left.`función miembro`right` [swap](../standard-library/hash-set-class.md#swap)(). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+La función de plantilla `swap` es un algoritmo especializado en la clase contenedor hash_set para ejecutar la función miembro `left.`[swap](../standard-library/hash-set-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
 **template \<class T> void swap(T&, T&),**
 
-de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada en cada contenedor es mucho más rápida dado que puede funcionar con la representación interna de la clase contenedora.
+de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
 
 ### <a name="example"></a>Ejemplo
 
@@ -64,24 +64,24 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
-Hash_multiset que proporciona los elementos que se van a intercambiar o el hash_multiset cuyos elementos se van a intercambiar con los de la hash_multiset *izquierda*.
+\ *derecha*
+Hash_multiset que proporciona los elementos que se van a intercambiar o la hash_multiset cuyos elementos se van a intercambiar con los de la hash_multiset *izquierda*.
 
-*salido*\
-Hash_multiset cuyos elementos se van a intercambiar con los del *derecho*hash_multiset.
+\ *izquierda*
+Hash_multiset cuyos elementos se van a intercambiar con los de la hash_multiset *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La `swap` función de plantilla es un algoritmo especializado en la clase contenedora hash_multiset para ejecutar la `left.`función miembro`right` [swap](../standard-library/hash-multiset-class.md#swap)(). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
+La función de plantilla `swap` es un algoritmo especializado en la clase contenedor hash_multiset para ejecutar la función miembro `left.`[swap](../standard-library/hash-multiset-class.md#swap)(`right`). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, entonces el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla
 
 **template \<class T> void swap(T&, T&),**
 
-de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada en cada contenedor es mucho más rápida dado que puede funcionar con la representación interna de la clase contenedora.
+de la clase de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de código de la clase miembro [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) para obtener un ejemplo del uso de la versión de plantilla de `swap`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [<hash_set>](../standard-library/hash-set.md)
