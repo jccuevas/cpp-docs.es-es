@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497334"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864971"
 ---
 # <a name="ccomcompositecontrol-class"></a>Clase CComCompositeControl
 
@@ -42,47 +42,47 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 *T*<br/>
 La clase, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), así como de cualquier otra interfaz que desee admitir para el control compuesto.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|El constructor.|
-|[CComCompositeControl::~CComCompositeControl](#dtor)|Destructor.|
+|[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o desaconsejar todos los controles hospedados por el control compuesto.|
 |[CComCompositeControl::CalcExtent](#calcextent)|Llame a este método para calcular el tamaño en unidades de HIMETRIC del recurso de cuadro de diálogo que se usa para hospedar el control compuesto.|
-|[CComCompositeControl::Create](#create)|Se llama a este método para crear la ventana de control para el control compuesto.|
+|[CComCompositeControl:: Create](#create)|Se llama a este método para crear la ventana de control para el control compuesto.|
 |[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Llame a este método para crear la ventana de control e informar a cualquier control hospedado.|
 |[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Llame a este método para establecer el color de fondo del control compuesto utilizando el color de fondo del contenedor.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Pincel de fondo.|
-|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Identificador de la ventana que tiene actualmente el foco.|
+|[CComCompositeControl:: m_hbrBackground](#m_hbrbackground)|Pincel del fondo.|
+|[CComCompositeControl:: m_hWndFocus](#m_hwndfocus)|Identificador de la ventana que tiene actualmente el foco.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las clases derivadas `CComCompositeControl` de la clase heredan la funcionalidad de un control compuesto ActiveX. Los controles ActiveX que `CComCompositeControl` se derivan de se hospedan en un cuadro de diálogo estándar. Estos tipos de controles se denominan controles compuestos porque pueden hospedar otros controles (controles nativos de Windows y controles ActiveX).
+Las clases derivadas de la clase `CComCompositeControl` heredan la funcionalidad de un control compuesto ActiveX. Los controles ActiveX derivados de `CComCompositeControl` se hospedan en un cuadro de diálogo estándar. Estos tipos de controles se denominan controles compuestos porque pueden hospedar otros controles (controles nativos de Windows y controles ActiveX).
 
-`CComCompositeControl`identifica el recurso de cuadro de diálogo que se va a usar para crear el control compuesto buscando un miembro de datos enumerado en la clase secundaria. El elemento IDD de esta clase secundaria se establece en el identificador de recurso del recurso de cuadro de diálogo que se usará como ventana del control. A continuación se incluye un ejemplo del miembro de datos que la clase derivada `CComCompositeControl` de debe contener para identificar el recurso de cuadro de diálogo que se va a utilizar para la ventana del control:
+`CComCompositeControl` identifica el recurso de cuadro de diálogo que se va a utilizar para crear el control compuesto buscando un miembro de datos enumerado en la clase secundaria. El elemento IDD de esta clase secundaria se establece en el identificador de recurso del recurso de cuadro de diálogo que se usará como ventana del control. A continuación se incluye un ejemplo del miembro de datos que la clase derivada de `CComCompositeControl` debe contener para identificar el recurso de cuadro de diálogo que se va a utilizar para la ventana del control:
 
 [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]
 
 > [!NOTE]
 >  Los controles compuestos siempre son controles con ventanas, aunque pueden contener controles sin ventanas.
 
-Un control implementado por `CComCompositeControl`una clase derivada de tiene un comportamiento de tabulación predeterminado integrado. Cuando el control recibe el foco mediante la pestaña en una aplicación contenedora, al presionar sucesivamente la tecla TAB, el foco se recorre a través de todos los controles contenidos del control compuesto y, a continuación, del control compuesto y en el siguiente elemento del orden de tabulación del contenedor. El orden de tabulación de los controles hospedados viene determinado por el recurso de cuadro de diálogo y determina el orden en el que se producirá la tabulación.
+Un control implementado por una clase derivada de `CComCompositeControl`tiene un comportamiento de tabulación predeterminado integrado. Cuando el control recibe el foco mediante la pestaña en una aplicación contenedora, al presionar sucesivamente la tecla TAB, el foco se recorre a través de todos los controles contenidos del control compuesto y, a continuación, del control compuesto y en el siguiente elemento del orden de tabulación del contenedor. El orden de tabulación de los controles hospedados viene determinado por el recurso de cuadro de diálogo y determina el orden en el que se producirá la tabulación.
 
 > [!NOTE]
->  Para que los aceleradores funcionen correctamente con `CComCompositeControl`, es necesario cargar una tabla de aceleradores a medida que se crea el control, pasar de nuevo el identificador y el número de aceleradores a [IOleControlImpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)y, por último, destruir la tabla Cuando se libera el control.
+>  Para que los aceleradores funcionen correctamente con una `CComCompositeControl`, es necesario cargar una tabla de aceleradores a medida que se crea el control, pasar de nuevo el identificador y el número de aceleradores a [IOleControlImpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)y, por último, destruir la tabla cuando se libera el control.
 
 ## <a name="example"></a>Ejemplo
 
@@ -102,7 +102,7 @@ Un control implementado por `CComCompositeControl`una clase derivada de tiene un
 
 **Encabezado:** atlctl. h
 
-##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap
+##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap
 
 Llame a este método para notificar o desaconsejar todos los controles hospedados por el control compuesto.
 
@@ -121,16 +121,16 @@ True si se van a notificar todos los controles; en caso contrario, false.
 |-|-|
 |S_OK  |Todos los controles de la asignación del receptor de eventos se conectaron o desconectaron correctamente del origen de eventos.|
 |E_FAIL  |No todos los controles del mapa del receptor de eventos se pueden conectar o desconectar correctamente del origen de eventos.|
-|E_POINTER  |Este error suele indicar un problema con una entrada en la asignación del receptor de eventos del control o un problema con un argumento de plantilla `IDispEventImpl` utilizado `IDispEventSimpleImpl` en una clase base o.|
-|CONNECT_E_ADVISELIMIT  |El punto de conexión ya ha alcanzado su límite de conexiones y no puede aceptar más.|
+|E_POINTER  |Este error suele indicar un problema con una entrada en la asignación del receptor de eventos del control o un problema con un argumento de plantilla utilizado en una clase base `IDispEventImpl` o `IDispEventSimpleImpl`.|
+|CONNECT_E_ADVISELIMIT  |El punto de conexión ha alcanzado su límite de conexión y no puede aceptar más.|
 |CONNECT_E_CANNOTCONNECT  |El receptor no admite la interfaz requerida por este punto de conexión.|
-|CONNECT_E_NOCONNECTION  |El valor de cookie no representa una conexión válida. Este error suele indicar un problema con una entrada en la asignación del receptor de eventos del control o un problema con un argumento de plantilla `IDispEventImpl` utilizado `IDispEventSimpleImpl` en una clase base o.|
+|CONNECT_E_NOCONNECTION  |El valor de cookie no representa una conexión válida. Este error suele indicar un problema con una entrada en la asignación del receptor de eventos del control o un problema con un argumento de plantilla utilizado en una clase base `IDispEventImpl` o `IDispEventSimpleImpl`.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La implementación base de este método busca en las entradas de la asignación del receptor de eventos. A continuación, se aconseja o se desaconsejan los puntos de conexión a los objetos COM descritos por las entradas del receptor del mapa del receptor de eventos. Este método de miembro también se basa en el hecho de que la clase derivada hereda de una instancia `IDispEventImpl` de por cada control de la asignación de receptor que se va a notificar o a que no se recomienda.
+La implementación base de este método busca en las entradas de la asignación del receptor de eventos. A continuación, se aconseja o se desaconsejan los puntos de conexión a los objetos COM descritos por las entradas del receptor del mapa del receptor de eventos. Este método de miembro también se basa en el hecho de que la clase derivada hereda de una instancia de `IDispEventImpl` para cada control del mapa de receptor que se va a notificar o a que no se recomienda.
 
-##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent
+##  <a name="calcextent"></a>CComCompositeControl::CalcExtent
 
 Llame a este método para calcular el tamaño en unidades de HIMETRIC del recurso de cuadro de diálogo que se usa para hospedar el control compuesto.
 
@@ -141,17 +141,17 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="parameters"></a>Parámetros
 
 *size*<br/>
-Referencia a una `SIZE` estructura que se va a rellenar con este método.
+Referencia a una estructura de `SIZE` que se va a rellenar con este método.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si el control está hospedado en un cuadro de diálogo; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tamaño se devuelve en el parámetro *size* .
 
-##  <a name="create"></a>  CComCompositeControl::Create
+##  <a name="create"></a>CComCompositeControl:: Create
 
 Se llama a este método para crear la ventana de control para el control compuesto.
 
@@ -177,11 +177,11 @@ Datos que se van a pasar al control durante la creación del control. Los datos 
 
 Identificador del cuadro de diálogo de control compuesto recién creado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Normalmente, se llama a este método durante la activación en contexto del control.
 
-##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl
+##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl
 
 El constructor.
 
@@ -189,11 +189,11 @@ El constructor.
 CComCompositeControl();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Inicializa los miembros de datos [CComCompositeControl:: m_hbrBackground](#m_hbrbackground) y [CComCompositeControl:: m_hWndFocus](#m_hwndfocus) en NULL.
 
-##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
+##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl
 
 Destructor.
 
@@ -201,11 +201,11 @@ Destructor.
 ~CComCompositeControl();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Elimina el objeto de fondo, si existe.
 
-##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow
+##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow
 
 Llame a este método para crear la ventana de control e informar a los controles hospedados.
 
@@ -227,19 +227,19 @@ Rectángulo de posición del control compuesto en coordenadas de cliente relativ
 
 Devuelve un identificador para el cuadro de diálogo de control compuesto recién creado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método llama a [CComCompositeControl:: Create](#create) y [CComCompositeControl:: AdviseSinkMap](#advisesinkmap).
 
-##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground
+##  <a name="m_hbrbackground"></a>CComCompositeControl:: m_hbrBackground
 
-Pincel de fondo.
+Pincel del fondo.
 
 ```
 HBRUSH m_hbrBackground;
 ```
 
-##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus
+##  <a name="m_hwndfocus"></a>CComCompositeControl:: m_hWndFocus
 
 Identificador de la ventana que tiene actualmente el foco.
 
@@ -247,7 +247,7 @@ Identificador de la ventana que tiene actualmente el foco.
 HWND m_hWndFocus;
 ```
 
-##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient
+##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient
 
 Llame a este método para establecer el color de fondo del control compuesto utilizando el color de fondo del contenedor.
 
@@ -259,7 +259,7 @@ HRESULT SetBackgroundColorFromAmbient();
 
 Devuelve S_OK si se ejecuta correctamente o un error HRESULT en caso de error.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CComControl (clase)](../../atl/reference/ccomcontrol-class.md)<br/>
 [Fundamentos de controles compuestos](../../atl/atl-composite-control-fundamentals.md)<br/>

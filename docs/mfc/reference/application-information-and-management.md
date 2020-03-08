@@ -6,11 +6,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: c372f43bc5184349e70f29b6c0ae6a490f2102ed
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821875"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854597"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 
@@ -52,7 +52,7 @@ El biblioteca MFC proporciona las siguientes funciones globales para ayudarle a 
 |[AfxUserToolsManager](#afxusertoolsmanager)|Puntero al administrador de [herramientas de usuario](cusertoolsmanager-class.md)global.|
 |[AfxWinInit](#afxwininit)|Lo llama la función de `WinMain` proporcionada por MFC, como parte de la inicialización de [CWinApp](../../mfc/reference/cwinapp-class.md) de una aplicación basada en GUI, para inicializar MFC. Se debe llamar directamente a para las aplicaciones de consola que utilizan MFC.|
 
-## <a name="afxbeginthread"></a>  AfxBeginThread
+## <a name="afxbeginthread"></a>AfxBeginThread
 
 Llame a esta función para crear un nuevo subproceso.
 
@@ -73,7 +73,7 @@ CWinThread* AfxBeginThread(
     LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *pfnThreadProc*
 Apunta a la función de control del subproceso de trabajo. El puntero no puede ser NULL. Esta función debe declararse de la siguiente manera:
@@ -106,7 +106,7 @@ Apunta a una estructura de [SECURITY_ATTRIBUTES](/previous-versions/windows/desk
 
 Puntero al objeto de subproceso recién creado o NULL si se produce un error.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 La primera forma de `AfxBeginThread` crea un subproceso de trabajo. En el segundo formulario se crea un subproceso que puede actuar como un subproceso de la interfaz de usuario o como un subproceso de trabajo.
 
@@ -120,7 +120,7 @@ Para obtener más información sobre `AfxBeginThread`, vea los artículos [multi
 
 Vea el ejemplo de [CSocket:: Attach](../../mfc/reference/csocket-class.md#attach).
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
@@ -134,11 +134,11 @@ Puntero al administrador global del [menú contextual](ccontextmenumanager-class
 CContextMenuManager* afxContextMenuManager;
 ```
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxcontextmenumanager. h
 
-## <a name="afxendthread"></a>  AfxEndThread
+## <a name="afxendthread"></a>AfxEndThread
 
 Llame a esta función para finalizar el subproceso que se está ejecutando actualmente.
 
@@ -148,7 +148,7 @@ void AFXAPI AfxEndThread(
     BOOL bDelete  = TRUE);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *nExitCode*
 Especifica el código de salida del subproceso.
@@ -156,13 +156,13 @@ Especifica el código de salida del subproceso.
 *beliminar*\
 Elimina el objeto de subproceso de la memoria.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Se debe llamar a desde dentro del subproceso para que se termine.
 
 Para obtener más información sobre `AfxEndThread`, vea el artículo [multithreading: finalizar](../../parallel/multithreading-terminating-threads.md)subprocesos.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
@@ -176,7 +176,7 @@ Use `AfxFindResourceHandle` para recorrer la cadena de recursos y buscar un recu
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *lpszName*
 Puntero a una cadena que contiene el identificador de recurso.
@@ -187,7 +187,7 @@ Puntero al tipo de recurso. Para obtener una lista de tipos de recursos, vea [Fi
 
 Identificador del módulo que contiene el recurso.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `AfxFindResourceHandle` encuentra el recurso específico y devuelve un identificador para el módulo que contiene el recurso. El recurso puede estar en cualquier archivo DLL de extensión de MFC que esté cargado. `AfxFindResourceHandle` le indica cuál tiene el recurso.
 
@@ -203,11 +203,11 @@ Los módulos se buscan en este orden:
 
 1. Módulos del sistema.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxwin.h
 
-## <a name="afxfreelibrary"></a>  AfxFreeLibrary
+## <a name="afxfreelibrary"></a>AfxFreeLibrary
 
 Tanto `AfxFreeLibrary` como `AfxLoadLibrary` mantienen un recuento de referencias para cada módulo de biblioteca cargado.
 
@@ -215,7 +215,7 @@ Tanto `AfxFreeLibrary` como `AfxLoadLibrary` mantienen un recuento de referencia
 BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *hInstLib*
 Identificador del módulo de biblioteca cargado. [AfxLoadLibrary](#afxloadlibrary) devuelve este identificador.
@@ -224,7 +224,7 @@ Identificador del módulo de biblioteca cargado. [AfxLoadLibrary](#afxloadlibrar
 
 TRUE si la función se ejecuta correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `AfxFreeLibrary` disminuye el recuento de referencias del módulo cargado de la biblioteca de vínculos dinámicos (DLL). Cuando el recuento de referencias llega a cero, el módulo se desasigna del espacio de direcciones del proceso de llamada y el identificador ya no es válido. Este recuento de referencias se incrementa cada vez que se llama a `AfxLoadLibrary`.
 
@@ -238,11 +238,11 @@ Asegúrese de usar `AfxFreeLibrary` y `AfxLoadLibrary` (en lugar de las funcione
 
 Vea el ejemplo de [AfxLoadLibrary](#afxloadlibrary).
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** afxdll_. h
 
-## <a name="afxgetapp"></a>  AfxGetApp
+## <a name="afxgetapp"></a>AfxGetApp
 
 El puntero devuelto por esta función se puede usar para tener acceso a información de la aplicación, como el código principal de envío de mensajes o la ventana de nivel superior.
 
@@ -254,7 +254,7 @@ CWinApp* AFXAPI AfxGetApp();
 
 Puntero al objeto de `CWinApp` único para la aplicación.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si este método devuelve NULL, puede indicar que la ventana principal de la aplicación aún no se ha inicializado completamente. También podría indicar un problema.
 
@@ -262,11 +262,11 @@ Si este método devuelve NULL, puede indicar que la ventana principal de la apli
 
 [!code-cpp[NVC_MFCWindowing#126](../../mfc/reference/codesnippet/cpp/application-information-and-management_1.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxgetappname"></a>  AfxGetAppName
+## <a name="afxgetappname"></a>AfxGetAppName
 
 La cadena devuelta se puede utilizar para los mensajes de diagnóstico o como raíz de los nombres de cadena temporales.
 
@@ -282,11 +282,11 @@ Una cadena terminada en null que contiene el nombre de la aplicación.
 
 [!code-cpp[NVC_MFCWindowing#127](../../mfc/reference/codesnippet/cpp/application-information-and-management_2.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxgetinstancehandle"></a>  AfxGetInstanceHandle
+## <a name="afxgetinstancehandle"></a>AfxGetInstanceHandle
 
 Esta función permite recuperar el identificador de instancia de la aplicación actual.
 
@@ -298,7 +298,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
 HINSTANCE para la instancia actual de la aplicación. Si se llama desde dentro de un archivo DLL vinculado con la versión de USRDLL de MFC, se devuelve un HINSTANCE al archivo DLL.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `AfxGetInstanceHandle` siempre devuelve el HINSTANCE del archivo ejecutable (. EXE) a menos que se llame desde dentro de un archivo DLL vinculado con la versión de USRDLL de MFC. En este caso, devuelve un HINSTANCE al archivo DLL.
 
@@ -306,11 +306,11 @@ HINSTANCE para la instancia actual de la aplicación. Si se llama desde dentro d
 
 [!code-cpp[NVC_MFCWindowing#128](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxgetmainwnd"></a>  AfxGetMainWnd
+## <a name="afxgetmainwnd"></a>AfxGetMainWnd
 
 Si la aplicación es un servidor OLE, llame a esta función para recuperar un puntero a la ventana principal activa de la aplicación. Utilice este resultado en lugar de hacer referencia directamente al miembro [m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd) del objeto de aplicación.
 
@@ -326,7 +326,7 @@ Si no hay ningún objeto activo en contexto dentro de un contenedor o la aplicac
 
 Si se llama a `AfxGetMainWnd` desde el subproceso principal de la aplicación, devuelve la ventana principal de la aplicación según las reglas anteriores. Si se llama a la función desde un subproceso secundario de la aplicación, la función devuelve la ventana principal asociada al subproceso que realizó la llamada.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si la aplicación no es un servidor OLE, llamar a esta función es equivalente a hacer referencia directamente al miembro *m_pMainWnd* del objeto de aplicación.
 
@@ -334,11 +334,11 @@ Si la aplicación no es un servidor OLE, llamar a esta función es equivalente a
 
 [!code-cpp[NVC_MFCWindowing#129](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxgetperuserregistration"></a>  AfxGetPerUserRegistration
+## <a name="afxgetperuserregistration"></a>AfxGetPerUserRegistration
 
 Utilice esta función para determinar si la aplicación redirige el acceso del registro al nodo **HKEY_CURRENT_USER** (**HKCU**).
 
@@ -350,17 +350,17 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 
 TRUE indica que la información del registro se dirige al nodo HKCU. FALSE indica que la aplicación escribe información del registro en el nodo predeterminado. El nodo predeterminado es **HKEY_CLASSES_ROOT** (**HKCR**).
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si habilita la redirección del registro, el marco de trabajo redirige el acceso desde **HKCR** a **HKEY_CURRENT_USER \software\classes**. La redirección solo afecta a los marcos de trabajo MFC y ATL.
 
 Para cambiar si la aplicación redirige el acceso al registro, use [AfxSetPerUserRegistration](#afxsetperuserregistration).
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** afxstat_. h
 
-## <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle
+## <a name="afxgetresourcehandle"></a>AfxGetResourceHandle
 
 Use el identificador de HINSTANCE devuelto por esta función para tener acceso directamente a los recursos de la aplicación, por ejemplo, en las llamadas a la función de Windows `FindResource`.
 
@@ -376,11 +376,11 @@ Identificador de HINSTANCE donde se cargan los recursos predeterminados de la ap
 
 [!code-cpp[NVC_MFCWindowing#130](../../mfc/reference/codesnippet/cpp/application-information-and-management_5.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxgetthread"></a>  AfxGetThread
+## <a name="afxgetthread"></a>AfxGetThread
 
 Llame a esta función para obtener un puntero al objeto [CWinThread](../../mfc/reference/cwinthread-class.md) que representa el subproceso que se está ejecutando actualmente.
 
@@ -392,7 +392,7 @@ CWinThread* AfxGetThread();
 
 Puntero al subproceso que se está ejecutando actualmente; de lo contrario, NULL.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Se debe llamar a desde dentro del subproceso.
 
@@ -403,11 +403,11 @@ Se debe llamar a desde dentro del subproceso.
 
 [!code-cpp[NVC_MFCWindowing#132](../../mfc/reference/codesnippet/cpp/application-information-and-management_6.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxinitrichedit"></a>  AfxInitRichEdit
+## <a name="afxinitrichedit"></a>AfxInitRichEdit
 
 Llame a esta función para inicializar el control Rich Edit (versión 1,0) para la aplicación.
 
@@ -415,7 +415,7 @@ Llame a esta función para inicializar el control Rich Edit (versión 1,0) para 
 BOOL AFXAPI AfxInitRichEdit();
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Esta función se proporciona por compatibilidad con versiones anteriores. Las nuevas aplicaciones deben usar [AfxInitRichEdit2](#afxinitrichedit2).
 
@@ -425,11 +425,11 @@ Para actualizar los controles Rich Edit de las C++ aplicaciones visuales existen
 
 Esta función también inicializa la biblioteca de controles comunes, si la biblioteca aún no se ha inicializado para el proceso. Si utiliza el control Rich Edit directamente desde la aplicación MFC, llame a esta función para asegurarse de que MFC ha inicializado correctamente el tiempo de ejecución del control Rich Edit. Si llama al método `Create` de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md)o [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), normalmente no es necesario llamar a esta función, pero en algunos casos podría ser necesario.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxinitrichedit2"></a>  AfxInitRichEdit2
+## <a name="afxinitrichedit2"></a>AfxInitRichEdit2
 
 Llame a esta función para inicializar el control Rich Edit (versión 2,0 y posteriores) de la aplicación.
 
@@ -437,15 +437,15 @@ Llame a esta función para inicializar el control Rich Edit (versión 2,0 y post
 BOOL AFXAPI AfxInitRichEdit2();
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Llame a esta función para cargar RICHED20. DLL e inicialice la versión 2,0 del control Rich Edit. Si llama al método `Create` de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md)o [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), normalmente no es necesario llamar a esta función, pero en algunos casos podría ser necesario.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxisextendedframeclass"></a>  AfxIsExtendedFrameClass
+## <a name="afxisextendedframeclass"></a>AfxIsExtendedFrameClass
 
 Determina si la ventana dada es un objeto de marco extendido.
 
@@ -455,7 +455,7 @@ Determina si la ventana dada es un objeto de marco extendido.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *PWND*
 de Un puntero a un objeto que se deriva de `CWnd`.
@@ -464,7 +464,7 @@ de Un puntero a un objeto que se deriva de `CWnd`.
 
 TRUE si la ventana proporcionada es un objeto de marco extendido; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Este método devuelve TRUE si *PWND* deriva de una de las clases siguientes:
 
@@ -480,7 +480,7 @@ Este método devuelve TRUE si *PWND* deriva de una de las clases siguientes:
 
 Este método es útil cuando tiene que validar que un parámetro de función o método es una ventana de marco extendido.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxpriv.h
 
@@ -494,7 +494,7 @@ Determina si la ventana dada es un objeto de barra de herramientas.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *PWND*
 de Un puntero a un objeto que se deriva de `CWnd`.
@@ -503,11 +503,11 @@ de Un puntero a un objeto que se deriva de `CWnd`.
 
 TRUE si la ventana proporcionada es un objeto de barra de herramientas; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Este método devuelve `TRUE` si *PWND* deriva de `CMFCToolBar`. Este método es útil cuando tiene que validar que un parámetro de función o de método es un objeto de `CMFCToolBar`.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxpriv.h
 
@@ -521,11 +521,11 @@ Puntero al administrador de [teclado](ckeyboardmanager-class.md)global.
 CKeyboardManager* afxKeyboardManager;
 ```
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxkeyboardmanager. h
 
-## <a name="afxloadlibrary"></a>  AfxLoadLibrary
+## <a name="afxloadlibrary"></a>AfxLoadLibrary
 
 Use `AfxLoadLibrary` para asignar un módulo DLL.
 
@@ -533,7 +533,7 @@ Use `AfxLoadLibrary` para asignar un módulo DLL.
 HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *lpszModuleName*
 Apunta a una cadena terminada en null que contiene el nombre del módulo (ya sea un. DLL o. Archivo EXE). El nombre especificado es el nombre de archivo del módulo.
@@ -546,7 +546,7 @@ Si no se especifica una ruta de acceso y se omite la extensión de nombre de arc
 
 Si la función se ejecuta correctamente, el valor devuelto es un identificador del módulo. En caso de error, el valor devuelto es NULL.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Devuelve un identificador que se puede usar en [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) para obtener la dirección de una función dll. también se puede usar `AfxLoadLibrary` para asignar otros módulos ejecutables.
 
@@ -562,7 +562,7 @@ El uso de `AfxLoadLibrary` en una aplicación requiere que se vincule dinámicam
 [!code-cpp[NVC_MFC_DLLUser#2](../../mfc/reference/codesnippet/cpp/application-information-and-management_8.cpp)]
 [!code-cpp[NVC_MFC_DLLUser#3](../../mfc/reference/codesnippet/cpp/application-information-and-management_9.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** afxdll_. h
 
@@ -574,7 +574,7 @@ Use `AfxLoadLibraryEx` para asignar un módulo DLL.
 HINSTANCE AFXAPI AfxLoadLibraryEx(LPCTSTR lpFileName, HANDLE hFile, DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *lpFileName*
 Apunta a una cadena terminada en null que contiene el nombre del módulo (ya sea un. DLL o. Archivo EXE). El nombre especificado es el nombre de archivo del módulo.
@@ -584,7 +584,7 @@ Si la cadena especifica una ruta de acceso pero el archivo no existe en el direc
 Si no se especifica una ruta de acceso y se omite la extensión de nombre de archivo, la extensión predeterminada. Se anexa el archivo DLL. Sin embargo, la cadena de nombre de archivo puede incluir un carácter de punto final (.) para indicar que el nombre del módulo no tiene ninguna extensión. Cuando no se especifica ninguna ruta de acceso, la función usa el [orden de búsqueda de las aplicaciones de escritorio](/windows/win32/dlls/dynamic-link-library-search-order#search-order-for-desktop-applications).
 
 \ *hFile*
-Este parámetro está reservado para uso futuro. Debe ser NULL.
+Este parámetro se reserva para uso futuro. Debe ser NULL.
 
 *dwFlags*\
 Acción que se realizará al cargar el módulo. Si no se especifican marcas, el comportamiento de esta función es idéntico al de la función `AfxLoadLibrary`. Los valores posibles de este parámetro se describen en la documentación de [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) .
@@ -593,7 +593,7 @@ Acción que se realizará al cargar el módulo. Si no se especifican marcas, el 
 
 Si la función se ejecuta correctamente, el valor devuelto es un identificador del módulo. En caso de error, el valor devuelto es NULL.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 `AfxLoadLibraryEx` devuelve un identificador que se puede usar en [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) para obtener la dirección de una función dll. también se puede usar `AfxLoadLibraryEx` para asignar otros módulos ejecutables.
 
@@ -603,7 +603,7 @@ Asegúrese de usar `AfxLoadLibraryEx` y `AfxFreeLibrary` (en lugar de las funcio
 
 El uso de `AfxLoadLibraryEx` en una aplicación requiere que se vincule dinámicamente a la versión de DLL de MFC. El archivo de encabezado de `AfxLoadLibraryEx`, Afxdll_. h, solo se incluye si MFC está vinculado a la aplicación como un archivo DLL. Este requisito es así por diseño, ya que tiene que vincular a la versión de DLL de MFC para usar o crear archivos dll de extensión de MFC.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** afxdll_. h
 
@@ -617,11 +617,11 @@ Puntero al [Administrador de menús de recorte](cmenutearoffmanager-class.md)glo
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxmenutearoffmanager. h
 
-## <a name="afxmousemanager"></a>  AfxMouseManager
+## <a name="afxmousemanager"></a>AfxMouseManager
 
 Puntero al administrador global [del mouse](cmousemanager-class.md).
 
@@ -631,11 +631,11 @@ Puntero al administrador global [del mouse](cmousemanager-class.md).
 CMouseManager* afxMouseManager;
 ```
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxmousemanager. h
 
-## <a name="afxregisterclass"></a>  AfxRegisterClass
+## <a name="afxregisterclass"></a>AfxRegisterClass
 
 Utilice esta función para registrar clases de ventana en un archivo DLL que utiliza MFC.
 
@@ -643,7 +643,7 @@ Utilice esta función para registrar clases de ventana en un archivo DLL que uti
 BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *lpWndClass*
 Puntero a una estructura [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) que contiene información sobre la clase de ventana que se va a registrar. Para obtener más información sobre esta estructura, vea el Windows SDK.
@@ -652,7 +652,7 @@ Puntero a una estructura [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndcla
 
 TRUE si la clase se registra correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Si utiliza esta función, se anulará automáticamente el registro de la clase cuando se descargue el archivo DLL.
 
@@ -662,7 +662,7 @@ En las compilaciones que no son de DLL, el identificador de `AfxRegisterClass` s
 
 [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
@@ -678,7 +678,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
     HICON hIcon = 0);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *nClassStyle*
 Especifica el estilo de clase de Windows o la combinación de estilos, creados mediante el operador bit **&#124;** a bit or (), para la clase de ventana. Para obtener una lista de estilos de clase, consulte la estructura [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) en el Windows SDK. Si es NULL, los valores predeterminados se establecen de la siguiente manera:
@@ -707,7 +707,7 @@ Una cadena terminada en null que contiene el nombre de clase. Puede pasar este n
 > [!NOTE]
 > El valor devuelto es un puntero a un búfer estático. Para guardar esta cadena, asígnela a una variable de `CString`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El biblioteca MFC registra automáticamente varias clases de ventana estándar. Llame a esta función si desea registrar sus propias clases de ventana.
 
@@ -721,11 +721,11 @@ Consulte la nota técnica [TN001: registro](../../mfc/tn001-window-class-registr
 
 [!code-cpp[NVC_MFCWindowing#134](../../mfc/reference/codesnippet/cpp/application-information-and-management_11.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="afxsetperuserregistration"></a>  AfxSetPerUserRegistration
+## <a name="afxsetperuserregistration"></a>AfxSetPerUserRegistration
 
 Establece si la aplicación redirige el acceso del registro al nodo **HKEY_CURRENT_USER** (**HKCU**).
 
@@ -733,12 +733,12 @@ Establece si la aplicación redirige el acceso del registro al nodo **HKEY_CURRE
 void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *bEnable*
 de TRUE indica que la información del registro se dirige al nodo HKCU. FALSE indica que la aplicación escribe información del registro en el nodo predeterminado. El nodo predeterminado es **HKEY_CLASSES_ROOT** (**HKCR**).
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Antes de Windows Vista, las aplicaciones que tienen acceso al registro solían usar el nodo **HKEY_CLASSES_ROOT** . Sin embargo, con Windows Vista o sistemas operativos posteriores, debe ejecutar una aplicación en modo elevado para escribir en HKCR.
 
@@ -748,11 +748,11 @@ Si habilita la redirección del registro, el marco de trabajo redirige el acceso
 
 La implementación predeterminada tiene acceso al registro en HKCR.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** afxstat_. h
 
-## <a name="afxsetresourcehandle"></a>  AfxSetResourceHandle
+## <a name="afxsetresourcehandle"></a>AfxSetResourceHandle
 
 Use esta función para establecer el identificador de HINSTANCE que determina dónde se cargan los recursos predeterminados de la aplicación.
 
@@ -760,7 +760,7 @@ Use esta función para establecer el identificador de HINSTANCE que determina d�
 void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *hInstResource*
 Identificador de instancia o módulo de un. Archivo EXE o DLL del que se cargan los recursos de la aplicación.
@@ -769,7 +769,7 @@ Identificador de instancia o módulo de un. Archivo EXE o DLL del que se cargan 
 
 [!code-cpp[NVC_MFCWindowing#135](../../mfc/reference/codesnippet/cpp/application-information-and-management_12.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
@@ -783,11 +783,11 @@ Puntero al administrador de [Shell](cshellmanager-class.md)global.
 CShellManager* afxShellManager;
 ```
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxshellmanager. h
 
-## <a name="afxsocketinit"></a>  AfxSocketInit
+## <a name="afxsocketinit"></a>AfxSocketInit
 
 Llame a esta función en la invalidación de `CWinApp::InitInstance` para inicializar Windows Sockets.
 
@@ -795,7 +795,7 @@ Llame a esta función en la invalidación de `CWinApp::InitInstance` para inicia
 BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *lpwsaData*
 Puntero a una estructura [wsadata (](/windows/win32/api/winsock2/ns-winsock2-wsadata) . Si *lpwsaData* no es igual a NULL, la dirección de la estructura de `WSADATA` se rellena con la llamada a `WSAStartup`. Esta función también garantiza que se llama a `WSACleanup` antes de que finalice la aplicación.
@@ -804,15 +804,15 @@ Puntero a una estructura [wsadata (](/windows/win32/api/winsock2/ns-winsock2-wsa
 
 Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Al utilizar sockets de MFC en subprocesos secundarios en una aplicación MFC vinculada estáticamente, debe llamar a `AfxSocketInit` en cada subproceso que use Sockets para inicializar las bibliotecas de Sockets. De forma predeterminada, solo se llama a `AfxSocketInit` en el subproceso principal.
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AfxSock. h
 
-## <a name="afxusertoolsmanager"></a>  AfxUserToolsManager
+## <a name="afxusertoolsmanager"></a>AfxUserToolsManager
 
 Puntero al administrador de [herramientas de usuario](cusertoolsmanager-class.md)global.
 
@@ -822,11 +822,11 @@ Puntero al administrador de [herramientas de usuario](cusertoolsmanager-class.md
 CUserToolsManager* afxUserToolsManager;
 ```
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxusertoolsmanager. h
 
-## <a name="afxwininit"></a>  AfxWinInit
+## <a name="afxwininit"></a>AfxWinInit
 
 La función `WinMain` proporcionada por MFC, como parte de la inicialización de [CWinApp](../../mfc/reference/cwinapp-class.md) de una aplicación basada en GUI, llama a esta función para inicializar MFC.
 
@@ -838,7 +838,7 @@ BOOL AFXAPI AfxWinInit(
     int nCmdShow);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *hInstance*\
 Identificador del módulo que se está ejecutando actualmente.
@@ -852,7 +852,7 @@ Apunta a una cadena terminada en null que especifica la línea de comandos para 
 \ *nCmdShow*
 Especifica cómo se mostraría la ventana principal de una aplicación GUI.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 En el caso de una aplicación de consola, que no utiliza la función de `WinMain` proporcionada por MFC, debe llamar directamente a `AfxWinInit` para inicializar MFC.
 
@@ -865,11 +865,11 @@ Si llama a `AfxWinInit` usted mismo, debe declarar una instancia de una clase `C
 
 [!code-cpp[NVC_MFC_AfxWinInit#1](../../mfc/reference/codesnippet/cpp/application-information-and-management_13.cpp)]
 
-### <a name="requirements"></a>Requisitos de
+### <a name="requirements"></a>Requisitos
 
   **Encabezado** AFXWIN. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Macros y\ globales](mfc-macros-and-globals.md)
 [CWinApp (clase](cwinapp-class.md) )\

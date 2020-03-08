@@ -9,35 +9,35 @@ helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
 ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278273"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864411"
 ---
 # <a name="connection-point-global-functions"></a>Funciones globales de punto de conexión
 
-Estas funciones proporcionan compatibilidad para puntos de conexión y mapas de receptor.
+Estas funciones proporcionan compatibilidad con los puntos de conexión y las asignaciones de receptor.
 
 > [!IMPORTANT]
->  Las funciones enumeradas en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Las funciones enumeradas en la tabla siguiente no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 |||
 |-|-|
 |[AtlAdvise](#atladvise)|Crea una conexión entre el punto de conexión de un objeto y el receptor de un cliente.|
-|[AtlUnadvise](#atlunadvise)|Finaliza la conexión establecida mediante `AtlAdvise`.|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Aconseja o no notifica las entradas de un mapa de receptores de eventos.|
+|[AtlUnadvise](#atlunadvise)|Finaliza la conexión establecida a través de `AtlAdvise`.|
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Aconseja o desaconseja entradas en una asignación de receptor de eventos.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
-##  <a name="atladvise"></a>  AtlAdvise
+##  <a name="atladvise"></a>AtlAdvise
 
 Crea una conexión entre el punto de conexión de un objeto y el receptor de un cliente.
 
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ```
 HRESULT    AtlAdvise(
@@ -50,35 +50,35 @@ HRESULT    AtlAdvise(
 ### <a name="parameters"></a>Parámetros
 
 *pUnkCP*<br/>
-[in] Un puntero a la `IUnknown` del objeto desea conectar con el cliente.
+de Puntero al `IUnknown` del objeto con el que el cliente desea conectarse.
 
 *pUnk*<br/>
-[in] Un puntero para el cliente `IUnknown`.
+de Puntero a la `IUnknown`del cliente.
 
-*iid*<br/>
-[in] El GUID del punto de conexión. Normalmente, esto es igual que la interfaz de salida administrada por el punto de conexión.
+*suscripto*<br/>
+de GUID del punto de conexión. Normalmente, es igual que la interfaz de salida administrada por el punto de conexión.
 
-*pdw*<br/>
-[out] Un puntero a la cookie que identifica la conexión.
+*estudio*<br/>
+enuncia Puntero a la cookie que identifica de forma única la conexión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor HRESULT estándar.
+Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El receptor implementa la interfaz de salida admitida por el punto de conexión. El cliente usa la *pdw* cookie para quitar la conexión pasándolo a [AtlUnadvise](#atlunadvise).
+El receptor implementa la interfaz de salida compatible con el punto de conexión. El cliente usa la cookie de *PDW* para quitar la conexión pasándola a [AtlUnadvise](#atlunadvise).
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]
 
-##  <a name="atlunadvise"></a>  AtlUnadvise
+##  <a name="atlunadvise"></a>AtlUnadvise
 
-Finaliza la conexión establecida mediante [AtlAdvise](#atladvise).
+Finaliza la conexión establecida a través de [AtlAdvise](#atladvise).
 
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ```
 HRESULT    AtlUnadvise(
@@ -90,28 +90,28 @@ HRESULT    AtlUnadvise(
 ### <a name="parameters"></a>Parámetros
 
 *pUnkCP*<br/>
-[in] Un puntero a la `IUnknown` del objeto que el cliente está conectado con.
+de Puntero al `IUnknown` del objeto con el que está conectado el cliente.
 
-*iid*<br/>
-[in] El GUID del punto de conexión. Normalmente, esto es igual que la interfaz de salida administrada por el punto de conexión.
+*suscripto*<br/>
+de GUID del punto de conexión. Normalmente, es igual que la interfaz de salida administrada por el punto de conexión.
 
 *dw*<br/>
-[in] La cookie que identifica la conexión.
+de Cookie que identifica de forma única la conexión.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor HRESULT estándar.
+Valor HRESULT estándar.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]
 
-##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap
+##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap
 
 Llame a esta función para notificar o no notificar todas las entradas del mapa de eventos del receptor del objeto.
 
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -119,21 +119,21 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Parámetros
 
-*pT*<br/>
-[in] Un puntero al objeto que contiene el mapa de receptores.
+*Ptos*<br/>
+de Puntero al objeto que contiene la asignación de receptor.
 
 *bAdvise*<br/>
-[in] Es TRUE si todas las entradas de receptor se informamos; FALSE si se deben notificar todas las entradas de receptor.
+de TRUE si se van a notificar todas las entradas de receptor; FALSE si se van a desaconsejar todas las entradas del receptor.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor HRESULT estándar.
+Valor HRESULT estándar.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Funciones](../../atl/reference/atl-functions.md)<br/>
 [Macros de punto de conexión](../../atl/reference/connection-point-macros.md)

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458435"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876181"
 ---
 # <a name="ltthreadgt-operators"></a>Operadores de &lt;thread&gt;
 
@@ -45,17 +45,17 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto `thread::id` izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
@@ -71,17 +71,17 @@ bool operator> (
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto `thread::id` izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `Right < Left`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
@@ -97,21 +97,21 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto `thread::id` izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> operator&lt;
 
 Determina si un objeto `thread::id` es menor que otro objeto.
 
@@ -123,17 +123,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto `thread::id` izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la *izquierda* precede a la *derecha* en el orden total; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador define una ordenación total en todos los objetos `thread::id`. Estos objetos pueden usarse como claves en contenedores asociativos.
 
@@ -151,17 +151,17 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto `thread::id` izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
@@ -177,17 +177,17 @@ bool operator== (
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto `thread::id` izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto `thread::id` derecho.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los dos objetos representan el mismo subproceso de ejecución o si ningún objeto representa un subproceso de ejecución; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ostr*\
+\ *ostr*
 Un objeto [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Sesión*\
-Objeto `thread::id`.
+*Identificador*\
+Objeto `thread::id` .
 
 ### <a name="return-value"></a>Valor devuelto
 
 *Ostr*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función inserta el *identificador* en *ostr*.
 
 Si dos objetos `thread::id` son iguales, las representaciones de texto insertadas de dichos objetos son iguales.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<thread>](../standard-library/thread.md)

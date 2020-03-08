@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689820"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866165"
 ---
 # <a name="collate-class"></a>collate (Clase)
 
@@ -42,10 +42,10 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo usado dentro de un programa para codificar caracteres.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en `id`. En algunos lenguajes, los caracteres se agrupan y se tratan como un carácter individual y, en otros, los caracteres individuales se tratan como si fueran dos caracteres. Los servicios de intercalación que proporciona la clase collate ofrecen una manera de ordenar estos casos.
 
@@ -55,16 +55,16 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 |-|-|
 |[collate](#collate)|El constructor para los objetos de la clase `collate` que actúa como una faceta de configuración regional para controlar las convenciones de ordenación de cadenas.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Un tipo que describe un carácter de tipo `CharType`.|
 |[string_type](#string_type)|Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[compare](#compare)|Compara la igualdad o la desigualdad de dos secuencias de caracteres según las reglas específicas de su faceta.|
 |[do_compare](#do_compare)|Función virtual a la que se llama para comparar la igualdad o la desigualdad de dos secuencias de caracteres según las reglas específicas de su faceta.|
@@ -75,7 +75,7 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<locale>
+**Encabezado:** \<configuración regional >
 
 **Espacio de nombres:** std
 
@@ -87,7 +87,7 @@ Un tipo que describe un carácter de tipo `CharType`.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
@@ -108,13 +108,13 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-@No__t_1 *_Locname*
+*_Locname*\
 El nombre de la configuración regional.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
@@ -161,7 +161,7 @@ La función miembro devuelve:
 
 - 0 si las secuencias son equivalentes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera secuencia compara menos si tiene el menor elemento del par desigual más antiguo en las secuencias o si no existe ningún par desigual, pero la primera secuencia es más corta.
 
@@ -227,7 +227,7 @@ La función miembro devuelve:
 
 - 0 si las secuencias son equivalentes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro virtual protegida compara la secuencia en [* first1, Last1) * con la secuencia en *[first2, last2*). Compara los valores aplicando `operator<` entre pares de elementos correspondientes de tipo `CharType`. La primera secuencia compara menos si tiene el menor elemento del par desigual más antiguo en las secuencias o, si no existe ningún par desigual, pero la primera secuencia es más corta.
 
@@ -245,17 +245,17 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*primer*\
 Un puntero al primer carácter de la secuencia cuyo valor hash tiene que determinarse.
 
-*última* \
+*última*\
 Un puntero al último carácter de la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un valor hash de tipo **long** para la secuencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un valor hash puede ser útil, por ejemplo, para distribuir secuencias de forma pseudoaleatoria entre una matriz de listas.
 
@@ -273,19 +273,19 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*primer*\
 Un puntero al primer carácter de la secuencia que se va a convertir.
 
-*última* \
+*última*\
 Un puntero al último carácter de la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una cadena que es la secuencia de caracteres transformada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función de miembro virtual protegida devuelve un objeto de clase [string_type](#string_type) cuya secuencia controlada es una copia de la secuencia [ `first`, `last`). Si una clase derivada de collate\< **CharType**> reemplaza a [do_compare](#do_compare), también debe reemplazar a `do_transform` para que coincida. Cuando se pasan a `collate::compare`, dos cadenas transformadas deben producir el mismo resultado que se obtendría al pasar las cadenas sin transformar para comparar en la clase derivada.
+La función de miembro virtual protegida devuelve un objeto de clase [string_type](#string_type) cuya secuencia controlada es una copia de la secuencia [ `first`, `last`). Si una clase derivada de COLLATE\< **CharType**> invalida [do_compare](#do_compare), también debe invalidar `do_transform` para que coincida. Cuando se pasan a `collate::compare`, dos cadenas transformadas deben producir el mismo resultado que se obtendría al pasar las cadenas sin transformar para comparar en la clase derivada.
 
 ### <a name="example"></a>Ejemplo
 
@@ -301,17 +301,17 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*primer*\
 Un puntero al primer carácter de la secuencia cuyo valor hash tiene que determinarse.
 
-*última* \
+*última*\
 Un puntero al último carácter de la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un valor hash de tipo **long** para la secuencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_hash](#do_hash)( `first`, `last`).
 
@@ -353,7 +353,7 @@ Un tipo que describe una cadena de tipo `basic_string` que contiene caracteres d
 typedef basic_string<CharType> string_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de la secuencia de origen.
 
@@ -371,17 +371,17 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*primer*\
 Un puntero al primer carácter de la secuencia que se va a convertir.
 
-*última* \
+*última*\
 Un puntero al último carácter de la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una cadena que contiene la secuencia de caracteres transformada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_transform](#do_transform)(`first`, `last`).
 
@@ -427,7 +427,7 @@ int main( )
 -1-11
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<locale>](../standard-library/locale.md)\
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
