@@ -12,11 +12,11 @@ helpviewer_keywords:
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
 ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821387"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856831"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Vincular un ejecutable a un archivo DLL
 
@@ -36,7 +36,7 @@ El uso de la vinculación implícita o la vinculación explícita es una decisi�
 
 ### <a name="implicit-linking"></a>Vinculación implícita
 
-La vinculación implícita se produce cuando el código de una aplicación llama a una función exportada de un archivo DLL. Cuando se compila o ensambla el código fuente para el archivo ejecutable de llamada, la llamada a la función del archivo DLL genera una referencia de función externa en el código objeto. Para resolver esta referencia externa, la aplicación debe vincularse a la biblioteca de importación (archivo .LIB) proporcionada por el autor del archivo DLL.
+La vinculación implícita se produce cuando el código de una aplicación llama a una función de DLL exportada. Cuando se compila o ensambla el código fuente para el archivo ejecutable de llamada, la llamada a la función del archivo DLL genera una referencia de función externa en el código objeto. Para resolver esta referencia externa, la aplicación debe vincularse a la biblioteca de importación (archivo .LIB) proporcionada por el autor del archivo DLL.
 
 La biblioteca de importación sólo contiene código para cargar el archivo DLL e implementar llamadas a las funciones del archivo DLL. Cuando se encuentra una función externa en una biblioteca de importación, se notifica al vinculador que el código de la función está en un archivo DLL. Para resolver referencias externas a archivos DLL, el vinculador simplemente agregará información al archivo ejecutable para indicar al sistema dónde se encuentra el código del archivo DLL cuando se inicie el proceso.
 
@@ -143,6 +143,6 @@ A diferencia de este ejemplo, en la mayoría de los casos se debe llamar a `Load
 
 - [Orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/win32/Dlls/dynamic-link-library-search-order)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Creación de archivos DLL de C/C++ en Visual Studio](dlls-in-visual-cpp.md)
