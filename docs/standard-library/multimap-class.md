@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: a4b066bf1620f8aaca1b0fc581348c73d5255591
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687649"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874013"
 ---
 # <a name="multimap-class"></a>multimap (Clase)
 
@@ -109,18 +109,18 @@ class multimap;
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *clave*
+\ *clave*
 Tipo de datos de clave que se almacenará en la clase multimap.
 
-*Escribir* \
+*Escriba*\
 Tipo de datos de elemento que se almacenará en la clase multimap.
 
-*Rasgos* \
+*Rasgos*\
 Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en la clase multimap. El predicado binario `less<Key>` es el valor predeterminado.
 
-En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14).
+En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
-@No__t_1 de *asignador*
+\ de *asignador*
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentarios
@@ -147,7 +147,7 @@ La clase multimap debe ser el contenedor asociativo preferido cuando la aplicaci
 
 El mapa múltiple ordena la secuencia que controla llamando a un objeto de función almacenado de tipo [key_compare](#key_compare). Este objeto almacenado es una función de comparación a la que se puede tener acceso mediante una llamada a la función miembro [key_comp](#key_comp). En general, se debe poder comparar si los elementos son menores que otros para poder establecer este orden; de este modo, dados dos elementos cualesquiera, se puede determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes. En un sentido más técnico, la función de comparación es un predicado binario que induce una ordenación débil estricta en el sentido matemático estándar. Un predicado binario `f(x,y)` es un objeto de función que tiene dos objetos de argumento `x` e `y` y un valor devuelto de true o false. Una ordenación impuesta en un conjunto es una ordenación débil estricta si el predicado binario es irreflexivo, antisimétrico y transitivo, y si la equivalencia es transitiva, donde dos objetos `x` e `y` se definen como equivalentes cuando `f(x,y)` y `f(y,x)` son falsos. Si la condición más fuerte de igualdad entre las claves reemplaza la de equivalencia, la ordenación se convierte en total (en el sentido de que todos los elementos se ordenan entre sí) y las claves coincidentes serán indiscernibles unas de otras.
 
-En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
+En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers)
 
 ## <a name="members"></a>Miembros
 
@@ -157,9 +157,9 @@ En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `s
 |-|-|
 |[multimap](#multimap)|Construye un `multimap` que está vacío o que es una copia de todo o de parte de otro `multimap`.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo que representa la clase `allocator` para el objeto `multimap`.|
 |[const_iterator](#const_iterator)|Un tipo que proporciona un iterador bidireccional que puede leer un elemento **const** en el `multimap`.|
@@ -179,7 +179,7 @@ En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `s
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[begin](#begin)|Devuelve un iterador que direcciona el primer elemento del `multimap`.|
 |[cbegin](#cbegin)|Devuelve un iterador constante que direcciona el primer elemento del `multimap`.|
@@ -209,13 +209,13 @@ En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `s
 
 ### <a name="operators"></a>Operadores
 
-|"??"|Descripción|
+|Operador|Descripción|
 |-|-|
 |[operator=](#op_eq)|Reemplaza los elementos de un `multimap` con una copia de otro `multimap`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<map>
+**Encabezado:** \<> de asignación
 
 **Espacio de nombres:** std
 
@@ -581,7 +581,7 @@ Un iterador constante bidireccional inverso que se dirige al primer elemento de 
 
 Con el valor devuelto de `crbegin`, el objeto `multimap` no se puede modificar.
 
-`crbegin` puede usarse para iterar un objeto `multimap` hacia atrás.
+`crbegin` puede usarse para iterar `multimap` hacia atrás.
 
 ### <a name="example"></a>Ejemplo
 
@@ -676,7 +676,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Comentarios
 
-El `difference_type` es el tipo devuelto al restar o incrementar los iteradores del contenedor. El `difference_type` se usa normalmente para representar el número de elementos del intervalo [*First*, *Last*) entre los iteradores `first` y `last`, incluye el elemento al que apunta `first` y el intervalo de elementos hasta, pero sin incluir , el elemento al que apunta `last`.
+El `difference_type` es el tipo devuelto al restar o incrementar los iteradores del contenedor. El `difference_type` se usa normalmente para representar el número de elementos del intervalo [*First*, *Last*) entre los iteradores `first` y `last`, incluye el elemento al que apunta `first` y el intervalo de elementos hasta el elemento al que apunta `last`, pero sin incluirlo.
 
 Tenga en cuenta que, aunque `difference_type` está disponible para todos los iteradores que cumplen los requisitos de un iterador de entrada, incluida la clase de iteradores bidireccionales admitida por los contenedores reversibles como set, solo los iteradores de acceso aleatorio proporcionados por un contenedor de acceso aleatorio, como vector, admiten la resta entre iteradores.
 
@@ -990,16 +990,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*Dónde* \
+*Dónde*\
 Posición del elemento que se va a quitar.
 
-*Primer* \
+*Primer*\
 Posición del primer elemento que se va a quitar.
 
-*Última* \
+*Última*\
 Posición situada más allá del último elemento que se va a quitar.
 
-@No__t_1 *clave*
+\ *clave*
 Clave de los elementos que se van a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1216,8 +1216,8 @@ IList);
 |*Val*|Valor de un elemento que se va a insertar en la asignación múltiple.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente *a, la*inserción se puede realizar en tiempo constante amortizado en lugar de en tiempo logarítmico).|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que la asignación puede utilizar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y reenvía de forma perfecta el *Val* como argumento.|
-|*Lugar*|Posición del primer elemento que se va a copiar.|
-|*Guardado*|Posición situada más allá del último elemento que se va a copiar.|
+|*Primero*|Posición del primer elemento que se va a copiar.|
+|*Último*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
 
@@ -1655,9 +1655,9 @@ multimap(
 |-|-|
 |*Alabama*|Clase de asignador de almacenamiento que se utilizará para este objeto multimap, que de forma predeterminada es Allocator.|
 |*COMP*|Función de comparación de tipo `constTraits` que se utiliza para ordenar los elementos del mapa, que de forma predeterminada es `Traits`.|
-|*Derecha*|Asignación de la que el conjunto construido va a ser una copia.|
-|*Lugar*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|*Guardado*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*Right*|Asignación de la que el conjunto construido va a ser una copia.|
+|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list de la que se van a copiar los elementos.|
 
 ### <a name="remarks"></a>Comentarios
@@ -1668,7 +1668,7 @@ Todos los constructores inicializan su multimap.
 
 Todos los constructores almacenan un objeto de función de tipo `Traits` que se usa para establecer un orden entre las claves del mapa múltiple y que se puede devolver más adelante llamando a [key_comp](#key_comp).
 
-Los tres primeros constructores especifican un Multimap inicial vacío, el segundo especifica el tipo de función de comparación (*COMP*) que se va a usar para establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (*al*) que se va a usa. La palabra clave **Explicit** suprime ciertas clases de conversión automática de tipos.
+Los tres primeros constructores especifican un Multimap inicial vacío, el segundo especifica el tipo de función de comparación (*COMP*) que se va a usar para establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (*al*) que se va a usar. La palabra clave **Explicit** suprime ciertas clases de conversión automática de tipos.
 
 El cuarto constructor especifica una copia del *derecho*Multimap.
 
@@ -2318,7 +2318,7 @@ Devuelve el objeto de función de comparación que usa un mapa múltiple para or
 
 ### <a name="remarks"></a>Comentarios
 
-En el caso de Multimap *m*, si dos elementos *E1*(*K1*, *D1*) e *E2*(*K2*, *D2*) son objetos de tipo `value_type`, donde *K1* y *K2* son sus claves de tipo 0 y *D1* y *D2* son sus datos de tipo 3, 4 es equivalente a 5.
+En el caso de Multimap *m*, si dos elementos *E1*(*K1*, *D1*) e *E2*(*K2*, *D2*) son objetos de tipo `value_type`, donde *K1* y *K2* son sus claves de tipo `key_type` y *D1* y *D2* son sus datos de tipo `mapped_type`, `m.value_comp(e1, e2)` es equivalente a `m.key_comp(k1, k2)`.
 
 ### <a name="example"></a>Ejemplo
 
