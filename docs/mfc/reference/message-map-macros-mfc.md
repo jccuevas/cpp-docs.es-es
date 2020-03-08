@@ -29,11 +29,11 @@ helpviewer_keywords:
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 ms.openlocfilehash: b88b745e3b70cf030f77f247ab03cd69d910109f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502082"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855645"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensajes (MFC)
 
@@ -58,8 +58,8 @@ Para admitir mapas de mensajes, MFC proporciona las siguientes macros:
 |[ON_MESSAGE](#on_message)|Indica qué función controlará un mensaje definido por el usuario.|
 |[ON_OLECMD](#on_olecmd)|Indica qué función controlará un comando de menú de un DocObject o de su contenedor.|
 |[ON_REGISTERED_MESSAGE](#on_registered_message)|Indica qué función controlará un mensaje definido por el usuario registrado.|
-|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Indica qué función controlará un mensaje definido por el usuario registrado cuando tenga una `CWinThread` clase.|
-|[ON_THREAD_MESSAGE](#on_thread_message)|Indica qué función controlará un mensaje definido por el usuario cuando tenga una `CWinThread` clase.|
+|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Indica qué función controlará un mensaje definido por el usuario registrado cuando tenga una clase `CWinThread`.|
+|[ON_THREAD_MESSAGE](#on_thread_message)|Indica qué función controlará un mensaje definido por el usuario cuando tenga una clase `CWinThread`.|
 |[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Indica qué función controlará un mensaje de comando de actualización de interfaz de usuario especificado.|
 
 ### <a name="message-map-range-macros"></a>Macros de intervalo de mapa de mensajes
@@ -90,9 +90,9 @@ Especifica el nombre de la clase cuyo mapa de mensajes es.
 *baseClass*<br/>
 Especifica el nombre de la clase base de la *clase*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-En el archivo de implementación (. cpp) que define las funciones miembro de la clase, inicie el mapa de mensajes con la macro BEGIN_MESSAGE_MAP, agregue las entradas de macro para cada una de las funciones del controlador de mensajes y complete el mapa de mensajes con END_MESSAGE_MAP macro.
+En el archivo de implementación (. cpp) que define las funciones miembro de la clase, inicie el mapa de mensajes con la macro BEGIN_MESSAGE_MAP, agregue las entradas de macro para cada una de las funciones del controlador de mensajes y complete el mapa de mensajes con el END_MESSAGE_MAP macro.
 
 Para obtener más información acerca de los mapas de mensajes, consulte [mapas de mensajes](message-maps-mfc.md) .
 
@@ -129,21 +129,21 @@ Nombre del parámetro de plantilla especificado para la clase.
 *baseClass*<br/>
 Especifica el nombre de la clase base de la *clase*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta macro es similar a la macro [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) ; sin embargo, esta macro está pensada para las clases que contienen un único argumento de plantilla.
 
 En la sección implementación de método de la clase, inicie el mapa de mensajes con la macro BEGIN_TEMPLATE_MESSAGE_MAP; a continuación, agregue entradas de macros para cada uno de los métodos de controlador de mensajes tal como lo haría para un mapa de mensajes estándar. Como con la macro BEGIN_MESSAGE_MAP, complete el mapa de mensajes de plantilla con la macro [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) .
 
-Para obtener más información sobre [la implementación de mapas de mensajes para clases de plantilla, consulte Cómo: Cree un mapa de mensajes para una clase](../how-to-create-a-message-map-for-a-template-class.md)de plantilla.
+Para obtener más información sobre la implementación de mapas de mensajes para clases de plantilla, consulte [Cómo: crear un mapa de mensajes para una clase de plantilla](../how-to-create-a-message-map-for-a-template-class.md).
 
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxwin.h
 
-## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
 
-Declara que la clase define un mapa de mensajes. Cada `CCmdTarget`clase derivada de en el programa debe proporcionar un mapa de mensajes para controlar los mensajes.
+Declara que la clase define un mapa de mensajes. Cada clase derivada de `CCmdTarget`del programa debe proporcionar un mapa de mensajes para controlar los mensajes.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -151,14 +151,14 @@ Declara que la clase define un mapa de mensajes. Cada `CCmdTarget`clase derivada
 DECLARE_MESSAGE_MAP( )
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Use la macro DECLARE_MESSAGE_MAP al final de la declaración de clase. A continuación, en el archivo. cpp que define las funciones miembro de la clase, use la macro BEGIN_MESSAGE_MAP, entradas de macro para cada una de las funciones de controlador de mensajes y la macro END_MESSAGE_MAP.
+Use la macro DECLARE_MESSAGE_MAP al final de la declaración de clase. A continuación, en el archivo. cpp que define las funciones miembro de la clase, utilice la macro BEGIN_MESSAGE_MAP, las entradas de macro para cada una de las funciones de controlador de mensajes y la macro END_MESSAGE_MAP.
 
 > [!NOTE]
 >  Si declara cualquier miembro después de DECLARE_MESSAGE_MAP, debe especificar un nuevo tipo de acceso (**público**, **privado**o **protegido**) para ellos.
 
-Para obtener más información sobre los mapas de mensajes y la macro DECLARE_MESSAGE_MAP, consulte los [temas sobre control y asignación de mensajes](../../mfc/message-handling-and-mapping.md).
+Para obtener más información sobre los mapas de mensajes y la macro DECLARE_MESSAGE_MAP, vea [temas sobre el control de mensajes y la asignación](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -184,9 +184,9 @@ Finaliza la definición del mapa de mensajes.
 END_MESSAGE_MAP( )
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información sobre los mapas de mensajes y la macro END_MESSAGE_MAP, consulte los [temas sobre control y asignación de mensajes](../../mfc/message-handling-and-mapping.md).
+Para obtener más información sobre los mapas de mensajes y la macro END_MESSAGE_MAP, vea [temas sobre el control de mensajes y la asignación](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -210,11 +210,11 @@ Identificador del comando.
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asigna el comando.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Indica qué función controlará un mensaje de comando desde un objeto de interfaz de usuario de comandos como un elemento de menú o un botón de la barra de herramientas.
 
-Cuando un objeto de destino de comando recibe un mensaje WM_COMMAND de Windows con el identificador especificado, ON_COMMAND llamará a `memberFxn` la función miembro para controlar el mensaje.
+Cuando un objeto de destino de comando recibe un mensaje de WM_COMMAND de Windows con el identificador especificado, ON_COMMAND llamará a la función miembro `memberFxn` para administrar el mensaje.
 
 Use ON_COMMAND para asignar un solo comando a una función miembro. Use [ON_COMMAND_RANGE](#on_command_range) para asignar un intervalo de identificadores de comando a una función miembro. Solo una entrada de mapa de mensajes puede coincidir con un identificador de comando determinado. Es decir, no se puede asignar un comando a más de un controlador. Para obtener más información y ejemplos, vea temas sobre el [control de mensajes y la asignación](../../mfc/message-handling-and-mapping.md).
 
@@ -248,11 +248,11 @@ Identificador del comando.
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asigna el comando.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Hay disponible una forma extendida de controladores de mensajes de comandos para usos avanzados. La macro ON_COMMAND_EX se usa para estos controladores de mensajes y proporciona un superconjunto de la funcionalidad [ON_COMMAND](message-map-macros-mfc.md#on_command) . Las funciones miembro del controlador de comandos extendidos toman un único parámetro, un valor UINT que contiene el identificador del comando y devuelven un valor BOOLEANO. El valor devuelto debe ser TRUE para indicar que se ha controlado el comando; de lo contrario, el enrutamiento continuará a otros objetos de destino de comando.
+Hay disponible una forma extendida de controladores de mensajes de comandos para usos avanzados. La macro ON_COMMAND_EX se usa para estos controladores de mensajes y proporciona un superconjunto de la funcionalidad de [ON_COMMAND](message-map-macros-mfc.md#on_command) . Las funciones miembro del controlador de comandos extendidos toman un único parámetro, un valor UINT que contiene el identificador del comando y devuelven un valor BOOLEANO. El valor devuelto debe ser TRUE para indicar que se ha controlado el comando; de lo contrario, el enrutamiento continuará a otros objetos de destino de comando.
 
-Para obtener más información, consulte nota técnica [TN006: Mapas de mensajes] tm006-Message-maps.md).
+Para obtener más información, consulte nota técnica [TN006: Message Maps] tm006-Message-maps.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -279,11 +279,11 @@ Identificador del comando.
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asigna el comando.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los mensajes de notificación de control son los enviados desde un control a su ventana primaria.
 
-Debería haber exactamente una instrucción de macro ON_CONTROL en el mapa de mensajes para cada mensaje de notificación de control que se debe asignar a una función de controlador de mensajes.
+Debería haber exactamente una ON_CONTROL instrucción de macro en el mapa de mensajes para cada mensaje de notificación de control que se debe asignar a una función de controlador de mensajes.
 
 Para obtener más información y ejemplos, vea temas sobre el [control de mensajes y la asignación](../../mfc/message-handling-and-mapping.md).
 
@@ -304,18 +304,18 @@ ON_MESSAGE( message, memberFxn )
 ### <a name="parameters"></a>Parámetros
 
 *message*<br/>
-El id. del mensaje.
+Identificador del mensaje.
 
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asigna el mensaje.
 
 El tipo de la función debe ser `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Los mensajes definidos por el usuario son mensajes que no son mensajes WM_MESSAGE estándar de Windows. Al seleccionar un ID. de mensaje, debe usar valores en el intervalo de WM_USER (0x0400) a 0x7FFF o WM_APP (0x8000) a 0xBFFF. Para obtener más información sobre los identificadores de mensaje, vea [WM_APP](/windows/win32/winmsg/wm-app).
+Los mensajes definidos por el usuario son mensajes que no son mensajes estándar de Windows WM_MESSAGE. Al seleccionar un ID. de mensaje, debe usar valores en el intervalo de WM_USER (0x0400) a 0x7FFF o WM_APP (0x8000) a 0xBFFF. Para obtener más información sobre los identificadores de mensaje, vea [WM_APP](/windows/win32/winmsg/wm-app).
 
-Debería haber exactamente una instrucción de macro ON_MESSAGE en el mapa de mensajes para todos los mensajes definidos por el usuario que se deben asignar a una función de controlador de mensajes.
+Debería haber exactamente una ON_MESSAGE instrucción de macro en el mapa de mensajes para todos los mensajes definidos por el usuario que se deben asignar a una función de controlador de mensajes.
 
 > [!NOTE]
 >  Además de los mensajes definidos por el usuario, ON_MESSAGE controla los mensajes de Windows menos comunes. Para obtener más información, vea [mapas de mensajes](../../mfc/tn006-message-maps.md).
@@ -351,7 +351,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 ## <a name="on_olecmd"></a>ON_OLECMD
 
-Enruta los comandos a través de la `IOleCommandTarget`interfaz de envío de comandos.
+Enruta los comandos a través de la interfaz de envío de comandos `IOleCommandTarget`.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -370,105 +370,105 @@ Identificador del comando OLE.
 *commandId*<br/>
 IDENTIFICADOR de menú, identificador de barra de herramientas, identificador de botón u otro identificador del recurso u objeto que emite el comando.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`IOleCommandTarget`permite que un contenedor reciba comandos que se originan en la interfaz de usuario de un DocObject y permite que el contenedor envíe los mismos comandos (como New, Open, SaveAs e Print en el menú Archivo, y copiar, pegar, deshacer, etc. en el menú Edición) a un DocObject.
+`IOleCommandTarget` permite que un contenedor reciba comandos que se originan en la interfaz de usuario de un DocObject y permite que el contenedor envíe los mismos comandos (como New, Open, SaveAs e Print en el menú Archivo, y copiar, pegar, deshacer y así sucesivamente en el menú Edición) a un objeto DocObject.
 
-`IOleCommandTarget`es más sencillo que la automatización de `IDispatch`OLE. `IOleCommandTarget`se basa completamente en un conjunto estándar de comandos que raramente tienen argumentos y no hay información de tipo implicada (la seguridad de tipos se reduce también para los argumentos de comando). Si necesita enviar comandos con argumentos, use [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).
+`IOleCommandTarget` es más sencillo que la `IDispatch`de la automatización OLE. `IOleCommandTarget` se basa completamente en un conjunto estándar de comandos que raramente tienen argumentos y no hay información de tipo implicada (la seguridad de tipos se reduce también para los argumentos de comando). Si necesita enviar comandos con argumentos, use [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).
 
-MFC `IOleCommandTarget` ha implementado los comandos de menú estándar en las siguientes macros:
+MFC ha implementado los comandos de menú estándar `IOleCommandTarget` en las siguientes macros:
 
-**ON_OLECMD_CLEARSELECTION( )**
+**ON_OLECMD_CLEARSELECTION ()**
 
 Envía el comando Editar borrado. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY( )**
+**ON_OLECMD_COPY ()**
 
 Envía el comando Editar copia. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT( )**
+**ON_OLECMD_CUT ()**
 
 Envía el comando Editar cortar. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW( )**
+**ON_OLECMD_NEW ()**
 
 Envía el nuevo comando de archivo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**ON_OLECMD_OPEN( )**
+**ON_OLECMD_OPEN ()**
 
 Envía el comando Abrir archivo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP( )**
+**ON_OLECMD_PAGESETUP ()**
 
 Envía el comando de configuración de la página de archivos. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE( )**
+**ON_OLECMD_PASTE ()**
 
 Envía el comando Editar y pegar. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL( )**
+**ON_OLECMD_PASTESPECIAL ()**
 
 Envía el comando Editar pegado especial. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT( )**
+**ON_OLECMD_PRINT ()**
 
 Envía el comando de impresión de archivo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW( )**
+**ON_OLECMD_PRINTPREVIEW ()**
 
 Envía el comando de vista previa de impresión de archivo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO( )**
+**ON_OLECMD_REDO ()**
 
 Envía el comando Editar Redo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE( )**
+**ON_OLECMD_SAVE ()**
 
 Envía el comando Guardar archivo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS( )**
+**ON_OLECMD_SAVE_AS ()**
 
 Envía el comando Guardar como archivo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS( )**
+**ON_OLECMD_SAVE_COPY_AS ()**
 
 Envía el comando Guardar copia como. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL( )**
+**ON_OLECMD_SELECTALL ()**
 
 Envía el comando de edición seleccionar todo. Implementado como:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO( )**
+**ON_OLECMD_UNDO ()**
 
 Envía el comando Editar deshacer. Implementado como:
 
@@ -496,7 +496,7 @@ La variable de ID. de mensaje de ventana registrada.
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asigna el mensaje.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta macro indica qué función controlará el mensaje registrado.
 
@@ -534,7 +534,7 @@ La variable de ID. de mensaje de ventana registrada.
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes CWinThread a la que se asigna el mensaje.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 RegisterWindowMessage se usa para definir un nuevo mensaje de ventana que se garantiza que es único en todo el sistema. Se debe utilizar ON_REGISTERED_THREAD_MESSAGE en lugar de ON_REGISTERED_MESSAGE cuando se tiene una clase CWinThread.
 
@@ -555,20 +555,20 @@ ON_THREAD_MESSAGE( message, memberFxn )
 ### <a name="parameters"></a>Parámetros
 
 *message*<br/>
-El id. del mensaje.
+Identificador del mensaje.
 
 *memberFxn*<br/>
-Nombre de la `CWinThread`función de controlador de mensajes a la que se asigna el mensaje.
+Nombre de la función de controlador de mensajes `CWinThread`a la que se asigna el mensaje.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se debe utilizar ON_THREAD_MESSAGE en lugar de ON_MESSAGE cuando se tiene una `CWinThread` clase. Los mensajes definidos por el usuario son mensajes que no son mensajes WM_MESSAGE estándar de Windows. Debería haber exactamente una instrucción de macro ON_THREAD_MESSAGE en el mapa de mensajes para todos los mensajes definidos por el usuario que se deben asignar a una función de controlador de mensajes.
+Se debe usar ON_THREAD_MESSAGE en lugar de ON_MESSAGE cuando se tiene una clase `CWinThread`. Los mensajes definidos por el usuario son mensajes que no son mensajes estándar de Windows WM_MESSAGE. Debería haber exactamente una ON_THREAD_MESSAGE instrucción de macro en el mapa de mensajes para todos los mensajes definidos por el usuario que se deben asignar a una función de controlador de mensajes.
 
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxole. h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
+## <a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI
 
 Esta macro indica qué función controlará un mensaje de comando de actualización de la interfaz de usuario.
 
@@ -580,15 +580,15 @@ ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 
 ### <a name="parameters"></a>Parámetros
 
-*messageId*<br/>
-El id. del mensaje.
+*Identificador*<br/>
+Identificador del mensaje.
 
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asigna el mensaje.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Debe haber exactamente una instrucción de macro ON_UPDATE_COMMAND_UI en el mapa de mensajes para cada comando de actualización de la interfaz de usuario que se debe asignar a una función de controlador de mensajes.
+Debería haber exactamente una ON_UPDATE_COMMAND_UI instrucción de macro en el mapa de mensajes para cada comando de actualización de la interfaz de usuario que se debe asignar a una función de controlador de mensajes.
 
 Para obtener más información y ejemplos, vea temas sobre el [control de mensajes y la asignación](../../mfc/message-handling-and-mapping.md).
 
@@ -608,16 +608,16 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parámetros
 
-*id1*<br/>
+*ID1*<br/>
 IDENTIFICADOR de comando al principio de un intervalo de identificadores de comando contiguos.
 
-*id2*<br/>
+*ID2*<br/>
 IDENTIFICADOR de comando al final de un intervalo de identificadores de comando contiguos.
 
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asignan los comandos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El intervalo de identificadores comienza con *ID1* y termina con *ID2*.
 
@@ -651,7 +651,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **Encabezado:** afxmsg_. h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
+## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE
 
 Asigna un intervalo contiguo de identificadores de comando a una única función de controlador de mensajes de actualización.
 
@@ -663,16 +663,16 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parámetros
 
-*id1*<br/>
+*ID1*<br/>
 IDENTIFICADOR de comando al principio de un intervalo de identificadores de comando contiguos.
 
-*id2*<br/>
+*ID2*<br/>
 IDENTIFICADOR de comando al final de un intervalo de identificadores de comando contiguos.
 
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes de actualización a la que se asignan los comandos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Actualizar controladores de mensajes actualice el estado de los elementos de menú y los botones de la barra de herramientas asociados al comando. El intervalo de identificadores comienza con *ID1* y termina con *ID2*.
 
@@ -682,7 +682,7 @@ No hay compatibilidad automática con los intervalos de mapa de mensajes, por lo
 
 **Encabezado:** afxmsg_. h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE
+## <a name="on_control_range"></a>ON_CONTROL_RANGE
 
 Utilice esta macro para asignar un intervalo contiguo de identificadores de control a una única función de controlador de mensajes para un mensaje de notificación de Windows especificado, como BN_CLICKED.
 
@@ -697,16 +697,16 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 *wNotifyCode*<br/>
 Código de notificación al que responde el controlador.
 
-*id1*<br/>
+*ID1*<br/>
 IDENTIFICADOR de comando al principio de un intervalo de identificadores de control contiguos.
 
-*id2*<br/>
+*ID2*<br/>
 IDENTIFICADOR de comando al final de un intervalo de identificadores de control contiguos.
 
 *memberFxn*<br/>
 Nombre de la función de controlador de mensajes a la que se asignan los controles.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El intervalo de identificadores comienza con *ID1* y termina con *ID2*. Se llama al controlador para la notificación especificada procedente de cualquiera de los controles asignados.
 
@@ -718,12 +718,12 @@ Para obtener más información sobre la implementación de funciones de controla
 
 **Encabezado:** afxmsg_. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
 [TN006: Mapas de mensajes](../tn006-message-maps.md)<br/>
 [COleCmdUI (clase)](colecmdui-class.md)<br/>
-[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)<br/>
+[COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)<br/>
 [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)<br/>
 [Controladores definidos por el usuario](user-defined-handlers.md)<br/>
 [CCmdUI (clase)](ccmdui-class.md)
