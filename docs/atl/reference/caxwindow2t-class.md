@@ -13,18 +13,18 @@ helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260033"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864763"
 ---
 # <a name="caxwindow2t-class"></a>Clase CAxWindow2T
 
-Esta clase proporciona métodos para manipular una ventana que hospeda un control ActiveX y también tiene compatibilidad para hospedar controles ActiveX con licencia.
+Esta clase proporciona métodos para manipular una ventana que hospeda un control ActiveX y también admite el hospedaje de controles ActiveX con licencia.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,43 +37,43 @@ template <class TBase = CWindow>
 #### <a name="parameters"></a>Parámetros
 
 *TBase*<br/>
-La clase de la cual `CAxWindowT` se deriva.
+Clase de la que se deriva `CAxWindowT`.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CAxWindow2T::CAxWindow2T](#caxwindow2t)|Construye un objeto `CAxWindow2T`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CAxWindow2T::Create](#create)|Crea una ventana host.|
+|[CAxWindow2T:: Create](#create)|Crea una ventana de host.|
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada.|
 |[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|Crea un control ActiveX con licencia, lo inicializa, lo hospeda en la ventana especificada y recupera un puntero de interfaz (o punteros) del control.|
 |[CAxWindow2T::GetWndClassName](#getwndclassname)|Método estático que recupera el nombre de la clase de ventana.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CAxWindow2T::operator =](#operator_eq)|Asigna un HWND para existente `CAxWindow2T` objeto.|
+|[CAxWindow2T:: Operator =](#operator_eq)|Asigna un HWND a un objeto de `CAxWindow2T` existente.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CAxWindow2T` Proporciona métodos para manipular una ventana que hospeda un control ActiveX. `CAxWindow2T` También tiene compatibilidad para hospedar controles ActiveX con licencia. El proceso de hospedaje proporcionado por " **AtlAxWinLic80**", que es ajustado por `CAxWindow2T`.
+`CAxWindow2T` proporciona métodos para manipular una ventana que hospeda un control ActiveX. `CAxWindow2T` también admite el hospedaje de controles ActiveX con licencia. El hospedaje lo proporciona " **AtlAxWinLic80**", que se ajusta mediante `CAxWindow2T`.
 
-Clase `CAxWindow2` se implementa como una especialización de la `CAxWindow2T` clase. Esta especialización se declara como:
+La clase `CAxWindow2` se implementa como una especialización de la clase `CAxWindow2T`. Esta especialización se declara como:
 
 `typedef CAxWindow2T <CWindow> CAxWindow2;`
 
 > [!NOTE]
-> `CAxWindowT` los miembros se documentan en [CAxWindow](../../atl/reference/caxwindow-class.md).
+> `CAxWindowT` miembros están documentados en [CAxWindow](../../atl/reference/caxwindow-class.md).
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa los miembros de esta clase.
+Vea [hospedar controles ActiveX mediante](../../atl/hosting-activex-controls-using-atl-axhost.md) la clase AXHOST de ATL para obtener un ejemplo que utiliza los miembros de esta clase.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -85,9 +85,9 @@ Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlwin.h
+**Encabezado:** atlwin. h
 
-##  <a name="caxwindow2t"></a>  CAxWindow2T::CAxWindow2T
+##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T
 
 Construye un objeto `CAxWindow2T`.
 
@@ -100,9 +100,9 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 *hWnd*<br/>
 Identificador de una ventana existente.
 
-##  <a name="create"></a>  CAxWindow2T::Create
+##  <a name="create"></a>CAxWindow2T:: Create
 
-Crea una ventana host.
+Crea una ventana de host.
 
 ```
 HWND Create(
@@ -115,19 +115,19 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`CAxWindow2T::Create` las llamadas [CWindow:: Create](../../atl/reference/cwindow-class.md#create) con el LPCTSTR *lpstrWndClass* parámetro establecido en la clase de ventana que proporciona hospedaje de controles (`AtlAxWinLic80`).
+`CAxWindow2T::Create` llama a [CWindow:: Create](../../atl/reference/cwindow-class.md#create) con el parámetro LPCTSTR *lpstrWndClass* establecido en la clase de ventana que proporciona el hospedaje de controles (`AtlAxWinLic80`).
 
 Consulte `CWindow::Create` para obtener una descripción de los parámetros y el valor devuelto.
 
-**Tenga en cuenta** si se utiliza 0 como valor para el *MenuOrID* parámetro, se debe especificar como 0U (usar el valor predeterminado) para evitar un error del compilador.
+**Nota:** Si se usa 0 como valor del parámetro *MenuOrID* , debe especificarse como 0U (el valor predeterminado) para evitar un error del compilador.
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CAxWindow2T::Create`.
+Vea [hospedar controles ActiveX mediante la AxHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CAxWindow2T::Create`.
 
-##  <a name="createcontrollic"></a>  CAxWindow2T::CreateControlLic
+##  <a name="createcontrollic"></a>CAxWindow2T::CreateControlLic
 
 Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada.
 
@@ -148,17 +148,17 @@ HRESULT CreateControlLic(
 ### <a name="parameters"></a>Parámetros
 
 *bstrLicKey*<br/>
-La clave de licencia para el control; Es NULL si la creación de un control sin licencia.
+Clave de licencia para el control; ES NULL si se crea un control sin licencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [CAxWindow::CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) para obtener una descripción de los parámetros restantes y el valor devuelto.
+Vea [CAxWindow:: CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) para obtener una descripción de los parámetros restantes y el valor devuelto.
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CAxWindow2T::CreateControlLic`.
+Vea [hospedar controles ActiveX mediante la AxHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CAxWindow2T::CreateControlLic`.
 
-##  <a name="createcontrollicex"></a>  CAxWindow2T::CreateControlLicEx
+##  <a name="createcontrollicex"></a>CAxWindow2T::CreateControlLicEx
 
 Crea un control ActiveX con licencia, lo inicializa, lo hospeda en la ventana especificada y recupera un puntero de interfaz (o punteros) del control.
 
@@ -185,17 +185,17 @@ HRESULT CreateControlLicEx(
 ### <a name="parameters"></a>Parámetros
 
 *bstrLicKey*<br/>
-La clave de licencia para el control; Es NULL si la creación de un control sin licencia.
+Clave de licencia para el control; ES NULL si se crea un control sin licencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [CAxWindow::CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) para obtener una descripción de los parámetros restantes y el valor devuelto.
+Vea [CAxWindow:: CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) para obtener una descripción de los parámetros restantes y el valor devuelto.
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CAxWindow2T::CreateControlLicEx`.
+Vea [hospedar controles ActiveX mediante la AxHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CAxWindow2T::CreateControlLicEx`.
 
-##  <a name="getwndclassname"></a>  CAxWindow2T::GetWndClassName
+##  <a name="getwndclassname"></a>CAxWindow2T::GetWndClassName
 
 Recupera el nombre de la clase de ventana.
 
@@ -205,11 +205,11 @@ static LPCTSTR GetWndClassName();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a una cadena que contiene el nombre de la clase de ventana (`AtlAxWinLic80`) que puede hospedar controles ActiveX con licencia y sin licencia.
+Puntero a una cadena que contiene el nombre de la clase de ventana (`AtlAxWinLic80`) que puede hospedar controles ActiveX con licencia y sin licencia.
 
-##  <a name="operator_eq"></a>  CAxWindow2T::operator =
+##  <a name="operator_eq"></a>CAxWindow2T:: Operator =
 
-Asigna un HWND para existente `CAxWindow2T` objeto.
+Asigna un HWND a un objeto de `CAxWindow2T` existente.
 
 ```
 CAxWindow2T<TBase>& operator= (HWND hWnd);
@@ -220,7 +220,7 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 *hWnd*<br/>
 Identificador de una ventana existente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../../atl/atl-class-overview.md)<br/>
-[Preguntas más frecuentes sobre la contención de controles](../../atl/atl-control-containment-faq.md)
+[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
+[Preguntas más frecuentes sobre contención de controles](../../atl/atl-control-containment-faq.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501995"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856383"
 ---
 # <a name="registering-ole-controls"></a>Registrar controles OLE
 
@@ -28,9 +28,9 @@ Las funciones siguientes permiten agregar y quitar la clase, las páginas de pro
 |[AfxOleUnregisterClass](#afxoleunregisterclass)|Quita una clase de control o una clase de página de propiedades de la base de datos de registro.|
 |[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Quita la biblioteca de tipos del control de la base de datos de registro.|
 
-`AfxOleRegisterTypeLib`Normalmente, se llama a en la implementación de un `DllRegisterServer`archivo dll de control de. De forma `AfxOleUnregisterTypeLib` similar, es `DllUnregisterServer`llamado por. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass` `UpdateRegistry` y `AfxOleUnregisterClass` suelen llamarse mediante la función miembro de la página de propiedades o el generador de clases de un control.
+normalmente se llama a `AfxOleRegisterTypeLib` en la implementación de `DllRegisterServer`de un archivo DLL de control. De forma similar, `DllUnregisterServer`llama a `AfxOleUnregisterTypeLib`. la función miembro `UpdateRegistry` de una página de propiedades o generador de clases de un control suele llamar a `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`y `AfxOleUnregisterClass`.
 
-##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass
+##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
 
 Registra la clase de control con la base de datos de registro de Windows.
 
@@ -53,7 +53,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *hInstance*<br/>
 Identificador de instancia del módulo asociado a la clase de control.
 
-*clsid*<br/>
+*CLSID*<br/>
 IDENTIFICADOR de clase único del control.
 
 *pszProgID*<br/>
@@ -68,13 +68,13 @@ IDENTIFICADOR de recurso del mapa de bits utilizado para representar el control 
 *nRegFlags*<br/>
 Contiene una o varias de las marcas siguientes:
 
-- `afxRegInsertable`Permite que el control aparezca en el cuadro de diálogo Insertar objeto para los objetos OLE.
+- `afxRegInsertable` permite que el control aparezca en el cuadro de diálogo Insertar objeto para los objetos OLE.
 
-- `afxRegApartmentThreading`Establece el modelo de subprocesos del registro en ThreadingModel = Apartment.
+- `afxRegApartmentThreading` establece el modelo de subprocesos del registro en ThreadingModel = Apartment.
 
-- `afxRegFreeThreading`Establece el modelo de subprocesos del registro en ThreadingModel = Free.
+- `afxRegFreeThreading` establece el modelo de subprocesos del registro en ThreadingModel = Free.
 
-   Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` establecer ThreadingModel = both. Consulte [InProcServer32](/windows/win32/com/inprocserver32) en el Windows SDK para obtener más información sobre el registro del modelo de subprocesos.
+   Puede combinar las dos marcas `afxRegApartmentThreading` y `afxRegFreeThreading` para establecer ThreadingModel = both. Consulte [InProcServer32](/windows/win32/com/inprocserver32) en el Windows SDK para obtener más información sobre el registro del modelo de subprocesos.
 
 > [!NOTE]
 >  En las versiones de MFC anteriores a MFC 4,2, el parámetro **int** *nRegFlags* era un parámetro bool, *bInsertable*, que permitía o no que se insertara el control desde el cuadro de diálogo Insertar objeto.
@@ -133,15 +133,15 @@ Número de versión secundaria de la clase de control.
 
 Distinto de cero si la clase de control se registró; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esto permite que los contenedores que reconocen el control OLE utilicen el control. `AfxOleRegisterControlClass`actualiza el registro con el nombre y la ubicación del control en el sistema y también establece el modelo de subprocesos que el control admite en el registro. Para obtener más información, vea la [Nota técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "subprocesamiento de modelo Apartamento en controles OLE" y [acerca de los procesos y](/windows/win32/ProcThread/about-processes-and-threads) subprocesos en el Windows SDK.
+Esto permite que los contenedores que reconocen el control OLE utilicen el control. `AfxOleRegisterControlClass` actualiza el registro con el nombre y la ubicación del control en el sistema y también establece el modelo de subprocesos que el control admite en el registro. Para obtener más información, vea la [Nota técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "subprocesamiento de modelo Apartamento en controles OLE" y [acerca de los procesos y subprocesos](/windows/win32/ProcThread/about-processes-and-threads) en el Windows SDK.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
-En el ejemplo anterior se `AfxOleRegisterControlClass` muestra cómo se llama a con la marca para insertar y la marca del modelo de Apartamento ORed conjuntamente para crear el sexto parámetro:
+En el ejemplo anterior se muestra cómo se llama a `AfxOleRegisterControlClass` con la marca para insertarse y la marca del modelo de Apartamento ORed conjuntamente para crear el sexto parámetro:
 
 [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]
 
@@ -151,7 +151,7 @@ El control se mostrará en el cuadro de diálogo Insertar objeto para contenedor
 
   **Encabezado** afxctl. h
 
-##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass
+##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass
 
 Registra la clase de página de propiedades con la base de datos de registro de Windows.
 
@@ -168,7 +168,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *hInstance*<br/>
 Identificador de instancia del módulo asociado a la clase de página de propiedades.
 
-*clsid*<br/>
+*CLSID*<br/>
 IDENTIFICADOR de clase único de la página de propiedades.
 
 *idTypeName*<br/>
@@ -177,24 +177,24 @@ IDENTIFICADOR de recurso de la cadena que contiene un nombre legible por el usua
 *nRegFlags*<br/>
 Puede contener la marca:
 
-- `afxRegApartmentThreading`Establece el modelo de subprocesos del registro en ThreadingModel = Apartment.
+- `afxRegApartmentThreading` establece el modelo de subprocesos del registro en ThreadingModel = Apartment.
 
 > [!NOTE]
->  En las versiones de MFC anteriores a MFC 4,2, el parámetro **int** *nRegFlags* no estaba disponible. Tenga en cuenta también `afxRegInsertable` que la marca no es una opción válida para las páginas de propiedades y producirá una aserción en MFC si está establecida.
+>  En las versiones de MFC anteriores a MFC 4,2, el parámetro **int** *nRegFlags* no estaba disponible. Tenga en cuenta también que la marca `afxRegInsertable` no es una opción válida para las páginas de propiedades y producirá una ASERCIÓN en MFC si está establecida.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Distinto de cero si la clase de control se registró; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esto permite que los contenedores que reconocen el control OLE usen la página de propiedades. `AfxOleRegisterPropertyPageClass`actualiza el registro con el nombre de la página de propiedades y su ubicación en el sistema y también establece el modelo de subprocesos que el control admite en el registro. Para obtener más información, vea la [Nota técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "subprocesamiento de modelo Apartamento en controles OLE" y [acerca de los procesos y](/windows/win32/ProcThread/about-processes-and-threads) subprocesos en el Windows SDK.
+Esto permite que los contenedores que reconocen el control OLE usen la página de propiedades. `AfxOleRegisterPropertyPageClass` actualiza el registro con el nombre de la página de propiedades y su ubicación en el sistema y también establece el modelo de subprocesos que el control admite en el registro. Para obtener más información, vea la [Nota técnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "subprocesamiento de modelo Apartamento en controles OLE" y [acerca de los procesos y subprocesos](/windows/win32/ProcThread/about-processes-and-threads) en el Windows SDK.
 
 ### <a name="requirements"></a>Requisitos
 
   **Encabezado** afxctl. h
 
-##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib
+##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib
 
 Registra la biblioteca de tipos en la base de datos de registro de Windows y permite que otros contenedores que reconocen el control OLE utilicen la biblioteca de tipos.
 
@@ -224,7 +224,7 @@ Nombre del directorio donde se puede encontrar el archivo de ayuda de la bibliot
 
 Distinto de cero si la biblioteca de tipos se registró; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función actualiza el registro con el nombre de la biblioteca de tipos y su ubicación en el sistema.
 
@@ -238,7 +238,7 @@ Esta función actualiza el registro con el nombre de la biblioteca de tipos y su
 
   **Encabezado** afxdisp. h
 
-##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass
+##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass
 
 Quita la entrada de clase de control o de página de propiedades de la base de datos de registro de Windows.
 
@@ -262,7 +262,7 @@ Distinto de cero si se anula correctamente el registro de la clase de página de
 
   **Encabezado** afxctl. h
 
-##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib
+##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib
 
 Llame a esta función para quitar la entrada de la biblioteca de tipos de la base de datos de registro de Windows.
 
@@ -287,6 +287,6 @@ Distinto de cero si se ha anulado correctamente el registro de la biblioteca de 
 
   **Encabezado** afxdisp. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Macros y variables globales](../../mfc/reference/mfc-macros-and-globals.md)

@@ -13,8 +13,8 @@ ms.openlocfilehash: 572cbdaba346ddb77b665b5677b978c83a80aa3d
 ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335217"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857098"
 ---
 # <a name="event_data-structure"></a>Estructura de EVENT_DATA
 
@@ -56,7 +56,7 @@ typedef struct EVENT_DATA_TAG
 } EVENT_DATA;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 |  |  |
 |--|--|
@@ -77,7 +77,7 @@ typedef struct EVENT_DATA_TAG
 | `EventName` | Cadena ANSI que contiene el nombre de la entidad identificada por `EventId`. |
 | `EventWideName` | Cadena de tipo ancho que contiene el nombre de la entidad identificada por `EventId`. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Muchos campos de `EVENT_DATA` contienen recuentos de pasos. C++Build Insights usa el contador de rendimiento de la ventana como un origen de TICs. Se debe usar un recuento de pasos con el campo `TickFrequency` para convertirlo en una unidad de tiempo adecuada, como segundos. Vea el ejemplo siguiente para realizar esta conversión. `EVENT_DATA` no contiene un campo para el recuento de pasos normal de una actividad. Para obtener este valor, reste `StartTimestamp` de `StopTimestamp`. `EVENT_DATA` es una estructura que está pensada para que la usen los usuarios de la API de C. En C++ el caso de los usuarios de la API, las clases como [eventos](../cpp-event-data-types/event.md) realizan conversiones de tiempo automáticamente.
 

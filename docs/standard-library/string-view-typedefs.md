@@ -1,5 +1,5 @@
 ---
-title: '&lt;definiciones&gt; de string_view'
+title: '&lt;string_view&gt; typedefs'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/std::string_view
@@ -7,13 +7,13 @@ f1_keywords:
 - xstring/std::u32string_view
 - xstring/std::wstring_view
 ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459184"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865852"
 ---
-# <a name="ltstringviewgt-typedefs"></a>&lt;definiciones&gt; de string_view
+# <a name="ltstring_viewgt-typedefs"></a>&lt;string_view&gt; typedefs
 
 ||||
 |-|-|-|
@@ -28,7 +28,7 @@ Tipo que describe una especialización de la plantilla de clase [basic_string_vi
 typedef basic_string_view<char, char_traits<char>> string_view;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las declaraciones siguientes son equivalentes:
 
@@ -48,7 +48,7 @@ Tipo que describe una especialización de la plantilla de clase [basic_string_vi
 typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -60,19 +60,19 @@ Tipo que describe una especialización de la plantilla de clase [basic_string_vi
 typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="wstring_view"></a>  wstring_view
+## <a name="wstring_view"></a>wstring_view
 
-Un tipo que describe una especialización de la plantilla de clase [basic_string_view](../standard-library/basic-string-view-class.md) con elementos de tipo **wchar_t**.
+Tipo que describe una especialización de la plantilla de clase [basic_string_view](../standard-library/basic-string-view-class.md) con elementos de tipo **wchar_t**.
 
 ```cpp
 typedef basic_string_view<wchar_t, char_traits<wchar_t>> wstring_view;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las declaraciones siguientes son equivalentes:
 
@@ -85,8 +85,8 @@ basic_string_view<wchar_t> wstr(L"Hello");
 Para obtener una lista de los constructores de cadena, vea [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> El tamaño de **wchar_t** es de dos bytes en Windows, pero no es necesariamente el caso de todas las plataformas. Si necesita un tipo de carácter ancho string_view con un ancho que se garantiza que sigue siendo el mismo en todas las plataformas, use [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) o [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
+> El tamaño de **wchar_t** es de dos bytes en Windows, pero no es necesariamente el caso de todas las plataformas. Si necesita un tipo de carácter ancho string_view con un ancho que se garantiza que siga siendo el mismo en todas las plataformas, utilice [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) o [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<string_view>](../standard-library/string-view.md)
+[\<string_view >](../standard-library/string-view.md)

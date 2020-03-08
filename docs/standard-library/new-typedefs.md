@@ -5,23 +5,23 @@ f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 ms.openlocfilehash: 80123bc35422984ef92bdba6da45052d3461b1d7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245159"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854953"
 ---
 # <a name="ltnewgt-typedefs"></a>Definiciones de tipo &lt;new&gt;
 
-## <a name="hardware_constructive_interference_size"></a> hardware_constructive_interference_size
+## <a name="hardware_constructive_interference_size"></a>hardware_constructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este número es el máximo recomendado de tamaño de memoria contigua ocupada por dos objetos con localidad temporal accediendo a subprocesos simultáneos. Deberá ser al menos `alignof(max_align_t)`.
+Este número es el tamaño recomendado máximo de la memoria contigua ocupada por dos objetos a los que se tiene acceso con una ubicación temporal mediante subprocesos simultáneos. Debe ser al menos `alignof(max_align_t)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -40,15 +40,15 @@ struct kennel {
 static_assert(sizeof(together) <= hardware_constructive_interference_size);
 ```
 
-## <a name="hardware_destructive_interference_size"></a> hardware_destructive_interference_size
+## <a name="hardware_destructive_interference_size"></a>hardware_destructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este número es el desplazamiento mínimo recomendado entre dos objetos tenga acceso simultáneo a evitar la degradación del rendimiento adicional debido a la contención introducido por la implementación. Deberá ser al menos `alignof(max_align_t)`.
+Este número es el desplazamiento mínimo recomendado entre dos objetos de acceso simultáneo para evitar una degradación del rendimiento adicional debido a la contención introducida por la implementación. Debe ser al menos `alignof(max_align_t)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -59,7 +59,7 @@ struct keep_apart {
 };
 ```
 
-## <a name="new_handler"></a> new_handler
+## <a name="new_handler"></a>new_handler
 
 El tipo que apunta a una función que se puede usar como un controlador nuevo.
 
@@ -67,9 +67,9 @@ El tipo que apunta a una función que se puede usar como un controlador nuevo.
 typedef void (*new_handler)();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llama a este tipo de función de controlador **new (operador)** o `operator new[]` cuando no pueden satisfacer una solicitud de almacenamiento adicional.
+El **operador New** o `operator new[]` llama a este tipo de función de controlador cuando no pueden satisfacer una solicitud de almacenamiento adicional.
 
 ### <a name="example"></a>Ejemplo
 

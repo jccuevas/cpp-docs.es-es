@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689221"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856631"
 ---
 # <a name="numpunct-class"></a>numpunct (Clase)
 
@@ -50,10 +50,10 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**
 
@@ -63,16 +63,16 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 |-|-|
 |[numpunct](#numpunct)|Constructor para los objetos de tipo `numpunct`.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[string_type](#string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[decimal_point](#decimal_point)|Devuelve un elemento específico de la configuración regional que se va a usar como separador decimal.|
 |[do_decimal_point](#do_decimal_point)|Función miembro virtual protegida a la que se llama para devolver un elemento específico de la configuración regional que se va a usar como separador decimal.|
@@ -87,7 +87,7 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<locale>
+**Encabezado:** \<configuración regional >
 
 **Espacio de nombres:** std
 
@@ -99,7 +99,7 @@ Tipo que se usa para describir un carácter empleado por una configuración regi
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla **CharType**.
 
@@ -115,7 +115,7 @@ CharType decimal_point() const;
 
 Un elemento específico de la configuración regional que se va a usar como separador decimal.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_decimal_point](#do_decimal_point).
 
@@ -174,7 +174,7 @@ virtual string_type do_falsename() const;
 
 Una cadena que contiene una secuencia que se va a usar como una representación de texto del valor **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve la cadena "false" para representar el valor **false** en todas las configuraciones regionales.
 
@@ -194,13 +194,13 @@ virtual string do_grouping() const;
 
 Una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal. La codificación es la misma que para **lconv::grouping**.
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [agrupación](#grouping), donde `grouping` llama a la función miembro virtual.
+Vea el ejemplo de [agrupación](#grouping), donde `grouping`llama a la función miembro virtual.
 
 ## <a name="do_thousands_sep"></a> numpunct::do_thousands_sep
 
@@ -214,7 +214,7 @@ virtual CharType do_thousands_sep() const;
 
 Devuelve un elemento específico de la configuración regional que se va a usar como separador de miles.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro virtual protegida devuelve un elemento específico de la configuración regional de tipo `CharType` que se va a usar como separador de grupo a la izquierda de cualquier separador decimal.
 
@@ -230,7 +230,7 @@ Una función miembro virtual protegida a la que se llama para devolver una caden
 virtual string_type do_truename() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una cadena que se va a usar como una representación de texto del valor **true**.
 
@@ -252,7 +252,7 @@ string_type falsename() const;
 
 Cadena que contiene una secuencia de `CharType`s que se va a usar como representación de texto del valor **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve la cadena "false" para representar el valor **false** en todas las configuraciones regionales.
 
@@ -301,7 +301,7 @@ string grouping() const;
 
 Una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_grouping](#do_grouping).
 
@@ -345,10 +345,10 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
@@ -370,7 +370,7 @@ Un tipo que describe una cadena que contiene caracteres de tipo **CharType**.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de puntuación.
 
@@ -386,7 +386,7 @@ CharType thousands_sep() const;
 
 Un elemento específico de la configuración regional que se va a usar como separador de miles.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_thousands_sep](#do_thousands_sep).
 
@@ -429,7 +429,7 @@ string_type falsename() const;
 
 Una cadena que se va a usar como una representación de texto del valor **true**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_truename](#do_truename).
 
@@ -466,7 +466,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<locale>](../standard-library/locale.md)\
 [facet (Clase)](../standard-library/locale-class.md#facet_class)\

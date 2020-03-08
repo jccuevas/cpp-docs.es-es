@@ -6,15 +6,15 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377903"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875963"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; (operadores)
 
-Éstas son las funciones de operador de plantilla global definidas en &lt;asignadores&gt;. Para las funciones de operador de miembro de clase, consulte la documentación de la clase.
+Estas son las funciones de operador de plantilla global definidas en &lt;asignadores&gt;. Para las funciones de operador de miembro de clase, vea la documentación de la clase.
 
 |||
 |-|-|
@@ -42,7 +42,7 @@ bool operator!=(
 
 **True** si los objetos de asignador no son iguales y **False** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador de la plantilla devuelve `!(left == right)`.
 
@@ -68,10 +68,10 @@ bool operator==(
 
 **True** si los objetos de asignador son iguales y **False** si no lo son.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este operador de la plantilla devuelve `left.equals(right)`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<allocators>](../standard-library/allocators-header.md)

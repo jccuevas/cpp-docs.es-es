@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (vector)
 - std::operator== (vector)
 ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240997"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876066"
 ---
 # <a name="ltvectorgt-operators"></a>Operadores de &lt;vector&gt;
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto en el lado izquierdo del operador no es igual al objeto del lado derecho.
 
@@ -35,17 +35,17 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los vectores no son iguales, **false** si los vectores son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Dos vectores son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -86,10 +86,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a> Operador&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto en el lado izquierdo del operador es menor o igual que el objeto del lado derecho.
 
@@ -137,10 +137,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a> operador ==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto en el lado izquierdo del operador es igual al objeto del lado derecho.
 
@@ -188,17 +188,17 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Es **true** si el vector del lado izquierdo del operador es igual que el vector del lado derecho del operador. De lo contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Dos vectores son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -239,10 +239,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a> Operador&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto en el lado izquierdo del operador es mayor o igual que el objeto del lado derecho.
 
@@ -291,10 +291,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `vector`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `vector`.
 
 ### <a name="return-value"></a>Valor devuelto

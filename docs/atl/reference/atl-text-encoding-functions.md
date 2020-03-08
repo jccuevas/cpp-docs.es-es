@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375898"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865046"
 ---
 # <a name="atl-text-encoding-functions"></a>Funciones de codificación de texto ATL
 
@@ -66,7 +66,7 @@ Estas funciones admiten la codificación y descodificación de texto.
 
 **Encabezado:** atlenc. h
 
-## <a name="atlgethexvalue"></a> AtlGetHexValue
+## <a name="atlgethexvalue"></a>AtlGetHexValue
 
 Llame a esta función para obtener el valor numérico de un dígito hexadecimal.
 
@@ -76,14 +76,14 @@ inline char AtlGetHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*chIn*<br/>
+*Emulsiona*<br/>
 El carácter hexadecimal ' 0 '-' 9 ', ' contener-'F ' o ' contener-'F '.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Valor numérico del carácter de entrada interpretado como un dígito hexadecimal. Por ejemplo, una entrada de ' 0 ' devuelve un valor de 0 y una entrada de ' A ' devuelve un valor de 10. Si el carácter de entrada no es un dígito hexadecimal, esta función devuelve-1.
 
-## <a name="atlgetversion"></a> AtlGetVersion
+## <a name="atlgetversion"></a>AtlGetVersion
 
 Llame a esta función para obtener la versión de la biblioteca ATL que está utilizando.
 
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parámetros
 
-*pReserved*<br/>
+*Van*<br/>
 Puntero reservado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -140,7 +140,7 @@ Puntero a una variable que contiene la longitud en bytes de *pbDest*. Si la func
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en bytes de un búfer que puede contener datos descodificados de una cadena con codificación hexadecimal de la longitud especificada.
 
@@ -187,11 +187,11 @@ Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada byte de los datos de origen se codifica como dos caracteres hexadecimales.
 
-## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.
 
@@ -208,7 +208,7 @@ El número de bytes de datos que se van a codificar.
 
 Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
-## <a name="atlhexvalue"></a> AtlHexValue
+## <a name="atlhexvalue"></a>AtlHexValue
 
 Llame a esta función para obtener el valor numérico de un dígito hexadecimal.
 
@@ -218,14 +218,14 @@ inline short AtlHexValue(char chIn) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*chIn*<br/>
+*Emulsiona*<br/>
 El carácter hexadecimal ' 0 '-' 9 ', ' contener-'F ' o ' contener-'F '.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Valor numérico del carácter de entrada interpretado como un dígito hexadecimal. Por ejemplo, una entrada de ' 0 ' devuelve un valor de 0 y una entrada de ' A ' devuelve un valor de 10. Si el carácter de entrada no es un dígito hexadecimal, esta función devuelve-1.
 
-## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
 
 Llame a esta función para convertir una cadena Unicode en UTF-8.
 
@@ -255,7 +255,7 @@ La longitud en bytes del búfer.
 
 Devuelve el número de caracteres de la cadena convertida.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para determinar el tamaño del búfer necesario para la cadena convertida, llame a esta función pasando 0 para *szDest* y *nDest*.
 
@@ -293,7 +293,7 @@ Juego de caracteres que se va a usar para la conversión.
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación "B" se describe en RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
@@ -317,7 +317,7 @@ Longitud en caracteres del juego de caracteres que se va a usar para la conversi
 
 Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación "B" se describe en RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
@@ -349,20 +349,20 @@ Búfer asignado por el llamador para recibir la cadena convertida.
 Longitud en caracteres del búfer asignado por el llamador.
 
 *dwFlags*<br/>
-Marcas de ATL_ESC que describen cómo se va a realizar la conversión.
+ATL_ESC marcadores que describen cómo se va a realizar la conversión.
 
-- Comportamiento predeterminado de ATL_ESC_FLAG_NONE. No se convierten las comillas y los apóstrofos.
-- Las comillas y los apóstrofos de ATL_ESC_FLAG_ATTR se `&quot;` convierten en y, `&apos;` respectivamente.
+- ATL_ESC_FLAG_NONE comportamiento predeterminado. No se convierten las comillas y los apóstrofos.
+- ATL_ESC_FLAG_ATTR las marcas de Comillas y los apóstrofos se convierten en `&quot;` y `&apos;` respectivamente.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Longitud en caracteres de la cadena convertida.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 En la tabla se muestran las posibles conversiones realizadas por esta función:
 
-|source|Destino|
+|Source|Destination|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -400,7 +400,7 @@ inline int IsExtendedChar(char ch) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*Cam*<br/>
 Carácter que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -445,11 +445,11 @@ Un puntero a una variable que en la devolución contiene el número de caractere
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación "Q" se describe en RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
-## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
+## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en caracteres de un búfer que puede contener una cadena codificada a partir de los datos con el tamaño especificado.
 
@@ -469,7 +469,7 @@ Longitud en caracteres del juego de caracteres que se va a usar para la conversi
 
 Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación "Q" se describe en RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
@@ -501,17 +501,17 @@ enuncia Búfer asignado por el llamador para recibir los datos descodificados.
 enuncia Puntero a una variable que contiene la longitud en bytes de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de bytes escritos en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en bytes del búfer.
 
 *dwFlags*<br/>
-de Marcas de ATLSMTP_QPENCODE que describen cómo se va a realizar la conversión.
+de ATLSMTP_QPENCODE marcadores que describen cómo se va a realizar la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
-## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
 
 Llame a esta función para obtener el tamaño en bytes de un búfer que puede contener datos descodificados de una cadena con codificación entrecomillada imprimible de la longitud especificada.
 
@@ -528,7 +528,7 @@ Número de caracteres de la cadena codificada.
 
 Número de bytes necesarios para un búfer que puede contener una cadena descodificada de caracteres *nSrcLen* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
@@ -560,11 +560,11 @@ Búfer asignado por el llamador para recibir los datos codificados.
 Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de caracteres que se escriben en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en caracteres del búfer.
 
 *dwFlags*<br/>
-Marcas de ATLSMTP_QPENCODE que describen cómo se va a realizar la conversión.
+ATLSMTP_QPENCODE marcadores que describen cómo se va a realizar la conversión.
 
 - ATLSMTP_QPENCODE_DOT si un punto aparece al principio de una línea, se agrega al resultado y se codifica.
 
-- ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` se anexa a la cadena codificada.
+- ATLSMTP_QPENCODE_TRAILING_SOFT anexa `=\r\n` a la cadena codificada.
 
 El esquema de codificación entrecomillado imprimible se describe en [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
@@ -572,7 +572,7 @@ El esquema de codificación entrecomillado imprimible se describe en [RFC 2045](
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
@@ -593,7 +593,7 @@ El número de bytes de datos que se van a codificar.
 
 Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El esquema de codificación entrecomillado imprimible se describe en RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
@@ -627,7 +627,7 @@ Puntero a una variable que contiene la longitud en bytes de *pbDest*. Si la func
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
@@ -648,7 +648,7 @@ Número de caracteres de la cadena codificada.
 
 Número de bytes necesarios para un búfer que puede contener una cadena descodificada de caracteres *nSrcLen* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
@@ -681,22 +681,22 @@ Búfer asignado por el llamador para recibir los datos codificados.
 Puntero a una variable que contiene la longitud en caracteres de *szDest*. Si la función se ejecuta correctamente, la variable recibe el número de caracteres que se escriben en el búfer. Si se produce un error en la función, la variable recibe la longitud necesaria en caracteres del búfer.
 
 *lpszFile*<br/>
-El archivo que se va a agregar al encabezado cuando ATLSMTP_UUENCODE_HEADER se especifica en *dwFlags*.
+Archivo que se va a agregar al encabezado cuando se especifica ATLSMTP_UUENCODE_HEADER en *dwFlags*.
 
 *dwFlags*<br/>
 Marcas que controlan el comportamiento de esta función.
 
 - ATLSMTP_UUENCODE_HEADE el encabezado se codificará.
 
-- ATLSMTP_UUENCODE_END el extremo se codificará.
+- ATLSMTP_UUENCODE_END se codificará el extremo.
 
-- Se realizará el ATLSMTP_UUENCODE_DOT de los datos.
+- ATLSMTP_UUENCODE_DOT se realizará el material de datos.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
@@ -717,11 +717,11 @@ El número de bytes de datos que se van a codificar.
 
 Número de caracteres necesarios para un búfer que puede contener datos codificados de *nSrcLen* bytes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta implementación de uuencoding sigue la especificación POSIX P versión 1003.2 b/D11.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conceptos](../active-template-library-atl-concepts.md)<br/>
 [Componentes de escritorio COM de ATL](../atl-com-desktop-components.md)

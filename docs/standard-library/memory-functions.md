@@ -78,11 +78,11 @@ helpviewer_keywords:
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
 ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687724"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856688"
 ---
 # <a name="ltmemorygt-functions"></a>Funciones &lt;memory&gt;
 
@@ -113,7 +113,7 @@ Objeto o función para el que se va a obtener la dirección real.
 
 La dirección real del objeto o la función a la que hace referencia el *valor*, incluso si existe una `operator&()` sobrecargada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="align"></a>alinea
 
@@ -133,13 +133,13 @@ void* align(
 \ de *alineación*
 Límite de alineación que se va a intentar.
 
-*tamaño* \
+*size*\
 Tamaño en bytes del almacenamiento alineado.
 
 \ *ptr*
 Dirección inicial del bloque de almacenamiento contiguo disponible que se va a usar. Este parámetro también es un parámetro de salida y se establece para que contenga la nueva dirección de inicio si la alineación se realiza correctamente. Si `align()` no se realiza correctamente, este parámetro no se modifica.
 
-*espacio* \
+*espacio*\
 Espacio total disponible para `align()` que se va a usar para crear el almacenamiento alineado. Este parámetro también es un parámetro de salida, y contiene espacio ajustado que queda en el búfer de almacenamiento después de restar el almacenamiento alineado y cualquier sobrecarga asociada.
 
 Si `align()` no se realiza correctamente, este parámetro no se modifica.
@@ -148,7 +148,7 @@ Si `align()` no se realiza correctamente, este parámetro no se modifica.
 
 Un puntero NULL si el búfer alineado solicitado no cabría en el espacio disponible; de lo contrario, el nuevo valor de *ptr*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los parámetros *ptr* y *Space* modificados permiten llamar a `align()` de forma repetida en el mismo búfer, posiblemente con valores diferentes para la *alineación* y *el tamaño*. En el fragmento de código siguiente se muestra un uso de `align()`.
 
@@ -177,7 +177,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 
 ## <a name="allocate_shared"></a>allocate_shared
 
-Crea un [shared_ptr](shared-ptr-class.md) a objetos asignados y construidos para un tipo determinado mediante un asignador especificado. Devuelve `shared_ptr`.
+Crea una [shared_ptr](shared-ptr-class.md) a objetos asignados y construidos para un tipo determinado mediante un asignador especificado. Devuelve `shared_ptr`.
 
 ```cpp
 template <class T, class Allocator, class... Args>
@@ -194,7 +194,7 @@ Asignador usado para crear objetos.
 \ *args*
 Cero o más argumentos que se convierten en los objetos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función crea el objeto `shared_ptr<T>`, un puntero a `T(args...)` como asignado y construido por *Alloc*.
 
@@ -307,7 +307,7 @@ void atomic_store_explicit(
 
 ## <a name="const_pointer_cast"></a>const_pointer_cast
 
-Const convertido en [shared_ptr](shared-ptr-class.md).
+Constante convertida en [shared_ptr](shared-ptr-class.md).
 
 ```cpp
 template <class T, class Other>
@@ -321,16 +321,16 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="parameters"></a>Parámetros
 
-*T* \
+*T*\
 Tipo controlado por el puntero compartido devuelto.
 
-*Otros* \
+*Otros*\
 Tipo controlado por el puntero compartido de argumento.
 
 \ *SP*
 Puntero compartido de argumento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve un objeto de `shared_ptr` vacío si `const_cast<T*>(sp.get())` devuelve un puntero nulo. en caso contrario, devuelve un objeto `shared_ptr<T>` que posee el recurso que posee *SP*. La expresión `const_cast<T*>(sp.get())` debe ser válida.
 
@@ -374,10 +374,10 @@ void declare_no_pointers(
 \ *ptr*
 Dirección del primer carácter que ya no contiene punteros rastreables.
 
-*tamaño* \
+*size*\
 Tamaño del bloque que se inicia en *ptr* y que no contiene punteros rastreables.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función informa a cualquier recolector de elementos no utilizados de que las direcciones del intervalo `[ ptr, ptr + size)` ya no contienen punteros rastreables. (Los punteros al almacenamiento asignado no se deben desreferenciar a menos que se pueda tener acceso a ellos).
 
@@ -395,7 +395,7 @@ void declare_reachable(
 \ *ptr*
 Un puntero para un área de almacenamiento válida, asignada, accesible.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si *ptr* no es null, la función informa a cualquier recolector de elementos no utilizados de que *ptr* es ahora accesible, es decir, apunta a un almacenamiento asignado válido.
 
@@ -420,10 +420,10 @@ struct default_delete
 \ *ptr*
 Puntero al objeto que se va a eliminar.
 
-*Otros* \
+*Otros*\
 Tipo de los elementos de la matriz que se va a borrar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La plantilla de clase describe un eliminador que elimina objetos escalares asignados con el **operador New**, adecuado para su uso con la plantilla de clase `unique_ptr`. También tiene la especialización explícita `default_delete<T[]>`.
 
@@ -486,16 +486,16 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="parameters"></a>Parámetros
 
-*T* \
+*T*\
 Tipo controlado por el puntero compartido devuelto.
 
-*Otros* \
+*Otros*\
 Tipo controlado por el puntero compartido de argumento.
 
 \ *SP*
 Puntero compartido de argumento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve un objeto de `shared_ptr` vacío si `dynamic_cast<T*>(sp.get())` devuelve un puntero nulo. en caso contrario, devuelve un objeto `shared_ptr<T>` que posee el recurso que posee *SP*. La expresión `dynamic_cast<T*>(sp.get())` debe ser válida.
 
@@ -547,16 +547,16 @@ Deleter* get_deleter(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *eliminador*
+\ *eliminador*
 Tipo del eliminador.
 
-*T* \
+*T*\
 Tipo controlado por el puntero compartido.
 
 \ *SP*
 El puntero compartido.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve un puntero al eliminador de tipo *eliminador* que pertenece al `shared_ptr` objeto *SP*. Si *SP* no tiene ningún eliminador o si su eliminador no es de tipo *eliminar*, la función devuelve 0.
 
@@ -612,7 +612,7 @@ Devuelve el tipo de seguridad del puntero asumido por cualquier recolector de el
 pointer_safety get_pointer_safety() noexcept;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función devuelve el tipo de seguridad del puntero asumido por cualquier recolector de elementos no utilizados automática.
 
@@ -628,14 +628,14 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 
 ### <a name="parameters"></a>Parámetros
 
-*recuento* \
+*recuento*\
 El número máximo de elementos solicitados para los que va a asignarse la memoria.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un `pair` cuyo primer componente es un puntero a la memoria que se ha asignado, y cuyo segundo componente proporciona el tamaño del búfer, que indica el número máximo de elementos que puede almacenar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función realiza una solicitud para la memoria y puede que no se realice correctamente. Si no se asigna ningún búfer, entonces la función devuelve un par, con el segundo componente igual a cero y el primer componente igual al puntero nulo.
 
@@ -689,7 +689,7 @@ shared_ptr<T> make_shared(
 \ *args*
 Cero o más argumentos de constructor. La función deduce qué sobrecarga de constructor invocar según los argumentos que se proporcionan.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use `make_shared` como una manera más eficaz y sencilla de crear un objeto y un `shared_ptr` para administrar el acceso compartido al objeto al mismo tiempo. Semánticamente, estas dos instrucciones son equivalentes:
 
@@ -700,7 +700,7 @@ auto msp = std::make_shared<Example>(argument);
 
 Sin embargo, la primera instrucción hace dos asignaciones y, si en la asignación de `shared_ptr` se produce un error después de que la asignación del objeto `Example` se haya realizado correctamente, el objeto `Example` sin nombre se pierde. La instrucción que usa `make_shared` es más sencilla porque hay solo una llamada a función implicada. Es más eficaz porque la biblioteca puede realizar una única asignación para tanto el objeto como el puntero inteligente. Esta función es más rápida y genera menos fragmentación de la memoria, y no hay ninguna posibilidad de que se produzca una excepción en una asignación, pero no en la otra. El rendimiento mejora por el mejor emplazamiento del código que hace referencia al objeto y que actualiza los recuentos de referencia en el puntero inteligente.
 
-Considere la posibilidad de usar [make_unique](memory-functions.md#make_unique) si no necesita acceso compartido al objeto. Use [allocate_shared](memory-functions.md#allocate_shared) si necesita especificar un asignador personalizado para el objeto. No se puede usar `make_shared` si el objeto requiere un eliminador personalizado, porque no hay ninguna manera de pasar el eliminador como argumento.
+Considere la posibilidad de utilizar [make_unique](memory-functions.md#make_unique) si no necesita acceso compartido al objeto. Use [allocate_shared](memory-functions.md#allocate_shared) si necesita especificar un asignador personalizado para el objeto. No se puede usar `make_shared` si el objeto requiere un eliminador personalizado, porque no hay ninguna manera de pasar el eliminador como argumento.
 
 En el ejemplo siguiente se muestra cómo crear punteros compartidos a un tipo invocando determinadas sobrecargas de constructor.
 
@@ -791,24 +791,24 @@ template <class T, class... Args>
 
 ### <a name="parameters"></a>Parámetros
 
-*T* \
+*T*\
 Tipo del objeto al que apuntará el `unique_ptr`.
 
-@No__t_1 *args*
+\ *args*
 Tipos de los argumentos de constructor especificados por *args*.
 
 \ *args*
 Argumentos que se van a pasar al constructor del objeto de tipo *T*.
 
-*elementos* \
+*elementos*\
 Matriz de elementos de tipo *T*.
 
-*tamaño* \
+*size*\
 Número de elementos para los que se va a asignar espacio en la nueva matriz.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera sobrecarga se utiliza para los objetos únicos. La segunda sobrecarga se invoca para las matrices. La tercera sobrecarga impide especificar un tamaño de matriz en el argumento de tipo (make_unique \<T [N] >); Esta construcción no es compatible con el estándar actual. Cuando se utiliza `make_unique` para crear un `unique_ptr` para una matriz, se deben inicializar los elementos de la matriz por separado. En lugar de usar esta sobrecarga, quizás una mejor opción es usar [STD:: Vector](vector-class.md).
+La primera sobrecarga se utiliza para los objetos únicos. La segunda sobrecarga se invoca para las matrices. La tercera sobrecarga impide especificar un tamaño de matriz en el argumento de tipo (make_unique\<T [N] >); Esta construcción no es compatible con el estándar actual. Cuando se utiliza `make_unique` para crear un `unique_ptr` para una matriz, se deben inicializar los elementos de la matriz por separado. En lugar de usar esta sobrecarga, quizás una mejor opción es usar [STD:: Vector](vector-class.md).
 
 Puesto que `make_unique` se implementa con cuidado para la seguridad de las excepciones, se recomienda utilizar `make_unique` en lugar de llamar directamente a los constructores de `unique_ptr`.
 
@@ -891,7 +891,7 @@ Un puntero compartido o no seguro.
 \ *derecha*
 Un puntero compartido o no seguro.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las plantillas de clase definen todos sus operadores de miembro como si devolvieran `left.owner_before(right)`.
 
@@ -914,9 +914,9 @@ shared_ptr<T> reinterpret_pointer_cast(
 \ *ptr*
 Referencia a un `shared_ptr<U>`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si *ptr* está vacío, el nuevo `shared_ptr` también está vacío; en caso contrario, comparte la propiedad con *ptr*. El nuevo puntero compartido es el resultado de evaluar `reinterpret_cast<Y*>(ptr.get())`, donde se `typename std::shared_ptr<T>::element_type` `Y`. El comportamiento es indefinido si `reinterpret_cast<T*>((U*)nullptr)` no tiene el formato correcto.
+Si *ptr* está vacío, el nuevo `shared_ptr` también está vacío; en caso contrario, comparte la propiedad con *ptr*. El nuevo puntero compartido es el resultado de evaluar `reinterpret_cast<Y*>(ptr.get())`, donde se `typename std::shared_ptr<T>::element_type``Y`. El comportamiento es indefinido si `reinterpret_cast<T*>((U*)nullptr)` no tiene el formato correcto.
 
 La función de plantilla que toma una referencia lvalue es nueva en C++ 17. La función de plantilla que toma una referencia rvalue es nueva en C++ 20.
 
@@ -935,7 +935,7 @@ void return_temporary_buffer(
 \ de *búfer*
 Un puntero a la memoria que se va a desasignar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use esta función solo para la memoria que sea temporal.
 
@@ -993,16 +993,16 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="parameters"></a>Parámetros
 
-*T* \
+*T*\
 Tipo controlado por el puntero compartido devuelto.
 
-*Otros* \
+*Otros*\
 Tipo controlado por el puntero compartido de argumento.
 
 \ *SP*
 Puntero compartido de argumento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve un objeto `shared_ptr` vacío si *SP* es un objeto `shared_ptr` vacío; en caso contrario, devuelve un objeto `shared_ptr<T>` que posee el recurso que posee *SP*. La expresión `static_cast<T*>(sp.get())` debe ser válida.
 
@@ -1043,7 +1043,7 @@ sp1->value == 3
 
 ## <a name="swap"></a>pasar
 
-Intercambie dos objetos [shared_ptr](shared-ptr-class.md), [unique_ptr](unique-ptr-class.md)o [weak_ptr](weak-ptr-class.md) .
+Intercambie dos [shared_ptr](shared-ptr-class.md), [unique_ptr](unique-ptr-class.md)o [weak_ptr](weak-ptr-class.md) objetos.
 
 ```cpp
 template <class T>
@@ -1065,10 +1065,10 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*T* \
+*T*\
 Tipo controlado por el puntero de argumento.
 
-@No__t_1 *eliminador*
+\ *eliminador*
 Eliminador del tipo de puntero único.
 
 \ *izquierda*
@@ -1077,7 +1077,7 @@ Puntero izquierdo.
 \ *derecha*
 Puntero a la derecha.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las funciones de plantilla llaman a `left.swap(right)`.
 
@@ -1141,10 +1141,10 @@ void undeclare_no_pointers(
 \ *ptr*
 Puntero a la dirección de memoria marcada previamente mediante [declare_no_pointers](#declare_no_pointers).
 
-*tamaño* \
+*size*\
 El número de bytes en el intervalo de memoria. Este valor debe ser igual al número usado en la llamada `declare_no_pointers`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función informa a cualquier recolector de elementos no utilizados que el intervalo de direcciones `[ptr, ptr + size)` puede contener ahora punteros rastreables.
 
@@ -1163,7 +1163,7 @@ T *undeclare_reachable(
 \ *ptr*
 Puntero a la dirección de memoria marcada previamente mediante [declare_reachable](#declare_reachable).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si *ptr* no es **nullptr**, la función informa a cualquier recolector de elementos no utilizados de que *ptr* ya no es accesible. Devuelve un puntero derivado de forma segura que se compara con igual a *ptr*.
 
@@ -1191,10 +1191,10 @@ ForwardIterator uninitialized_copy(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador de entrada que direcciona el primer elemento del intervalo de origen.
 
-*última* \
+*última*\
 Iterador de entrada que direcciona el último elemento del intervalo de origen.
 
 \ de *destino*
@@ -1204,7 +1204,7 @@ Iterador hacia delante que direcciona el primer elemento del intervalo de destin
 
 Iterador hacia delante que dirige a la primera posición más allá del intervalo de destino, a menos que el intervalo de origen esté vacío.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este algoritmo permite desacoplar la asignación de memoria de la construcción de objetos.
 
@@ -1311,10 +1311,10 @@ ForwardIterator uninitialized_copy_n(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador de entrada que hace referencia al objeto que se va a copiar.
 
-*recuento* \
+*recuento*\
 Tipo entero con signo o sin signo que especifica el número de veces que se va a copiar el objeto.
 
 \ de *destino*
@@ -1324,7 +1324,7 @@ Iterador hacia delante que hace referencia a dónde van las nuevas copias.
 
 Iterador hacia delante que direcciona la primera posición más allá del destino. Si el intervalo de origen estaba vacío, el iterador se dirige *primero*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta eficazmente el código siguiente:
 
@@ -1361,13 +1361,13 @@ void uninitialized_default_construct(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador que direcciona el primer elemento del intervalo que se va a construir.
 
-*última* \
+*última*\
 Iterador que se dirige a una posición después del último elemento del intervalo que se va a construir.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La versión sin una directiva de ejecución es realmente la misma que:
 
@@ -1385,7 +1385,7 @@ Estas funciones son nuevas en C++ 17.
 
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
-Default crea un número especificado de objetos del `value_type` del iterador, comenzando en la ubicación especificada.
+Default crea un número especificado de objetos del `value_type`del iterador, comenzando en la ubicación especificada.
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1405,17 +1405,17 @@ ForwardIterator uninitialized_default_construct_n(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador que direcciona el primer elemento del intervalo de destino que se va a construir.
 
-*recuento* \
+*recuento*\
 Recuento de elementos del intervalo de destino que se va a construir.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Iterador hacia delante que dirige a la primera posición más allá del intervalo de destino, a menos que el intervalo de origen esté vacío.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La versión sin una directiva de ejecución es realmente la misma que:
 
@@ -1456,16 +1456,16 @@ void uninitialized_fill(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a inicializar.
 
-*última* \
+*última*\
 Iterador hacia delante que direcciona el último elemento del intervalo de destino que se va a inicializar.
 
 *value*\
 Valor que se usará para inicializar el intervalo de destino.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este algoritmo permite desacoplar la asignación de memoria de la construcción de objetos.
 
@@ -1544,16 +1544,16 @@ ForwardIterator uninitialized_fill_n(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a inicializar.
 
-*recuento* \
+*recuento*\
 Número de elementos que se van a inicializar.
 
 *value*\
 Valor que se va a usar para inicializar el intervalo de destino.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este algoritmo permite desacoplar la asignación de memoria de la construcción de objetos.
 
@@ -1626,16 +1626,16 @@ ForwardIterator uninitialized_move(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador de entrada que direcciona el primer elemento del intervalo de origen que se va a trasladar.
 
-*última* \
+*última*\
 Iterador de entrada que se dirige a una posición después del último elemento del intervalo de origen que se va a trasladar.
 
 \ de *destino*
 Inicio del intervalo de destino.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La versión sin una directiva de ejecución es realmente la misma que:
 
@@ -1676,16 +1676,16 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador de entrada que direcciona el primer elemento del intervalo de origen que se va a trasladar.
 
-*recuento* \
+*recuento*\
 Recuento de elementos del intervalo de origen que se van a trasladar.
 
 \ de *destino*
 Inicio del intervalo de destino.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La versión sin una directiva de ejecución es realmente la misma que:
 
@@ -1724,13 +1724,13 @@ void uninitialized_value_construct(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador que direcciona el primer elemento de la construcción de intervalo a valor.
 
-*última* \
+*última*\
 Iterador que se dirige a una posición después del último elemento de la construcción de intervalo a valor.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La versión sin una directiva de ejecución es realmente la misma que:
 
@@ -1770,13 +1770,13 @@ ForwardIterator uninitialized_value_construct_n(
 \ de *Directiva*
 Directiva de ejecución que se va a usar.
 
-*primer* \
+*primer*\
 Iterador que direcciona el primer elemento del intervalo de destino que se va a construir.
 
-*recuento* \
+*recuento*\
 Recuento de elementos del intervalo de destino que se va a construir.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La versión sin una directiva de ejecución es realmente la misma que:
 
@@ -1804,6 +1804,6 @@ template <class T, class Alloc>
 inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<memory>](memory.md)
