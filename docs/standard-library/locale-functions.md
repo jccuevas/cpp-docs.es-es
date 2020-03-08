@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::toupper [C++]
 - std::use_facet [C++]
 ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453562"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856628"
 ---
 # <a name="ltlocalegt-functions"></a>Funciones de &lt;locale&gt;
 
@@ -62,7 +62,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Loc*\
+\ *Loc*
 Configuración regional en la que se va a comprobar la presencia de una faceta.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -105,10 +105,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento alfanumérico que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento alfanumérico que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -172,10 +172,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento alfabético que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -184,7 +184,7 @@ Configuración regional que contiene el elemento alfabético que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Alpha**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -237,10 +237,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -249,7 +249,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Ctrl**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -302,10 +302,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -314,7 +314,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -367,10 +367,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -379,7 +379,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Graph**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -432,10 +432,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -444,7 +444,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Lower**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -497,10 +497,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -509,7 +509,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Print**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -561,10 +561,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -573,7 +573,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -626,10 +626,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -638,7 +638,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Space**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -691,10 +691,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -703,7 +703,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Upper**, `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -756,10 +756,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 Elemento que se va a probar.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -768,7 +768,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
 
 Los dígitos hexadecimales usan la base 16 para representar números, con los números del 0 al 9 y las letras de la A a la F sin distinción entre mayúsculas y minúsculas para representar los números decimales del 0 al 15.
 
@@ -823,10 +823,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 El carácter que se va a convertir en minúscula.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -835,7 +835,7 @@ Carácter convertido en minúscula.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -872,10 +872,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*Cam*\
+\ de *CH*
 El carácter que se va a convertir en mayúscula.
 
-*Loc*\
+\ *Loc*
 Configuración regional que contiene el carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -884,7 +884,7 @@ Carácter convertido en mayúscula.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
+La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
 
 ### <a name="example"></a>Ejemplo
 
@@ -921,7 +921,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Loc*\
+\ *Loc*
 Configuración regional const que contiene el tipo de faceta al que se hace referencia.
 
 ### <a name="return-value"></a>Valor devuelto
