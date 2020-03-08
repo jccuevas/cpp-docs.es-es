@@ -11,13 +11,13 @@ helpviewer_keywords:
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
 ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447663"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874061"
 ---
-# <a name="insertiterator-class"></a>insert_iterator (Clase)
+# <a name="insert_iterator-class"></a>insert_iterator (Clase)
 
 Describe un adaptador de iterador que satisface los requisitos de un iterador de salida. Inserta, en lugar de sobrescribir, elementos en una secuencia y proporciona así la semántica que es diferente de la semántica que sobrescribe proporcionada por los iteradores de la secuencia de C++ y los contenedores asociativos. La clase `insert_iterator` se hace plantilla en el tipo de contenedor que se adapta.
 
@@ -30,29 +30,29 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Parámetros
 
-*Contenedor*\
+\ de *contenedor*
 Tipo de contenedor en el que un `insert_iterator` debe insertar los elementos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El contenedor de tipo `Container` debe cumplir los requisitos de un contenedor de tamaño variable y tener una función miembro INSERT de dos argumentos donde los parámetros son de tipo `Container::iterator` y `Container::value_type` y que devuelven `Container::iterator`un tipo. Los contenedores asociativos ordenados y de secuencia de la biblioteca estándar de C++ cumplen estos requisitos y pueden adaptarse para su uso con `insert_iterator`. En los contenedores asociativos, el argumento de posición se trata como una sugerencia, algo que tiene potencial para mejorar o degradar el rendimiento, según la calidad de la sugerencia. Un `insert_iterator` debe inicializarse siempre con su contenedor.
+El contenedor de tipo `Container` debe cumplir los requisitos de un contenedor de tamaño variable y tener una función miembro INSERT de dos argumentos donde los parámetros sean de tipo `Container::iterator` y `Container::value_type` y que devuelva un tipo `Container::iterator`. Los contenedores asociativos ordenados y de secuencia de la biblioteca estándar de C++ cumplen estos requisitos y pueden adaptarse para su uso con `insert_iterator`. En los contenedores asociativos, el argumento de posición se trata como una sugerencia, algo que tiene potencial para mejorar o degradar el rendimiento, según la calidad de la sugerencia. Un `insert_iterator` debe inicializarse siempre con su contenedor.
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[insert_iterator](#insert_iterator)|Construye `insert_iterator` que inserta un elemento en una posición especificada de un contenedor.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre del tipo|Descripción|
 |-|-|
 |[container_type](#container_type)|Tipo que representa el contenedor en el que se va a crear una inserción general.|
 |[reference](#reference)|Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.|
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|Operator|Descripción|
 |-|-|
 |[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión del iterador de salida * `i` = `x` para una inserción general.|
 |[operator++](#op_add_add)|Incrementa el `insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|
@@ -72,7 +72,7 @@ Tipo que representa el contenedor en el que se va a crear una inserción general
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla *Container*.
 
@@ -122,7 +122,7 @@ Contenedor en el que `insert_iterator` va a insertar elementos.
 *_It*\
 Posición de la inserción.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Todos los contenedores tienen la función miembro insert a la que llama `insert_iterator`. En el caso de los contenedores asociativos, el parámetro de posición es simplemente una sugerencia. La función inserter ofrece una manera cómoda de insertar valores.
 
@@ -184,9 +184,9 @@ insert_iterator<Container>& operator*();
 
 La función miembro devuelve el valor del elemento al que se dirige.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si `Iter` es un iterador que direcciona un elemento de una secuencia  **\*** , el**valor** ITER = reemplaza ese elemento con el valor y no cambia el número total de elementos de la secuencia.
+Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si `Iter` es un iterador que direcciona un elemento de una secuencia, **\*Iter** = **valor** reemplaza a ese elemento con Value y no cambia el número total de elementos de la secuencia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -246,7 +246,7 @@ insert_iterator<Container> operator++(int);
 
 `insert_iterator` que dirige a la siguiente ubicación en la que se puede almacenar un valor.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Ambos operadores de incremento previo e incremento posterior devuelven el mismo resultado.
 
@@ -310,14 +310,14 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*\
+\ *Val*
 Valor que se va a asignar al contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Referencia al elemento insertado en el contenedor.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer operador miembro evalúa
 
@@ -387,7 +387,7 @@ Tipo que proporciona una referencia a un elemento de una secuencia controlada po
 typedef typename Container::reference reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe una referencia a un elemento de la secuencia controlada por el contenedor asociado.
 
@@ -427,7 +427,7 @@ The first element in the list L is: 10.
 */
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<iterator>](../standard-library/iterator.md)\
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

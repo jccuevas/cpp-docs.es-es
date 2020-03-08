@@ -6,13 +6,13 @@ f1_keywords:
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452029"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883854"
 ---
-# <a name="lthashsetgt-operators"></a>Operadores de &lt;hash_set&gt;
+# <a name="lthash_setgt-operators"></a>Operadores de &lt;hash_set&gt;
 
 ||||
 |-|-|-|
@@ -32,21 +32,21 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `hash_set`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `hash_set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los objetos hash_set no son iguales; **false** si los objetos hash_set son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos hash_set se basa en una comparación en pares de sus elementos. Dos objetos hash_set son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
-Los miembros de los archivos de encabezado [< hash_map >](../standard-library/hash-map.md) y [< hash_set >](../standard-library/hash-set.md) se encuentran en el [espacio de nombres stdext](../standard-library/stdext-namespace.md).
+Los miembros de los [< hash_map >](../standard-library/hash-map.md) y [< hash_set](../standard-library/hash-set.md) archivos de encabezado > se encuentran en el [espacio de nombres stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -100,17 +100,17 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `hash_set`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `hash_set`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el objeto hash_set del lado izquierdo del operador es igual que el objeto hash_set del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos hash_set se basa en una comparación en pares de sus elementos. Dos objetos hash_set son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -166,17 +166,17 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `hash_multiset`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si los objetos hash_multiset no son iguales; **False** si los objetos hash_multiset son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos hash_multiset se basa en una comparación en pares de sus elementos. Dos objetos hash_multiset son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -232,17 +232,17 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `hash_multiset`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el objeto hash_multiset del lado izquierdo del operador es igual que el objeto hash_multiset del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos hash_multiset se basa en una comparación en pares de sus elementos. Dos objetos hash_multiset son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -285,6 +285,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [<hash_set>](../standard-library/hash-set.md)

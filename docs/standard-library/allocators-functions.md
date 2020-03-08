@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690050"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875928"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; (macros)
 
@@ -36,7 +36,7 @@ Produce una plantilla de clase de asignador.
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La macro produce una definición de plantilla `template <class Type> class name {.....}` y una especialización `template <> class name<void> {.....}` que, juntos, definen una plantilla de clase de asignador que usa el filtro de sincronización `sync` y una memoria caché de tipo `cache`.
 
@@ -76,7 +76,7 @@ Produce `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="cache_freelist"></a>  CACHE_FREELIST
 
@@ -86,7 +86,7 @@ Produce `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
@@ -96,7 +96,7 @@ Produce `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ## <a name="sync_default"></a>  SYNC_DEFAULT
 
@@ -106,10 +106,10 @@ Da como resultado un filtro de sincronización.
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si un compilador admite la compilación de aplicaciones de un único subproceso y de varios, en el caso de las aplicaciones de un único subproceso la macro produce `stdext::allocators::sync_none`; en todos los demás casos, produce `stdext::allocators::sync_shared`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<allocators>](../standard-library/allocators-header.md)

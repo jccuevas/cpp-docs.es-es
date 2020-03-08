@@ -10,11 +10,11 @@ f1_keywords:
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687885"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856407"
 ---
 # <a name="ltiosgt-typedefs"></a>Definiciones de tipo &lt;ios&gt;
 
@@ -26,7 +26,7 @@ Es compatible con la clase ios de la antigua biblioteca iostream.
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos de tipo **Char** con rasgos de caracteres predeterminados.
 
@@ -42,7 +42,7 @@ Admite operaciones internas.
 #endif
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un entero con signo que describe un objeto que puede almacenar un desplazamiento de bytes implicado en varias operaciones de posicionamiento de flujo. La representación tiene al menos 32 bits de valor. No es necesariamente lo bastante grande como para representar una posición de byte arbitraria en un flujo. El valor `streamoff(-1)` suele indicar un desplazamiento erróneo.
 
@@ -54,7 +54,7 @@ Contiene la posición actual del puntero de búfer o el puntero de archivo.
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Tipo sinónimo de [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 
@@ -93,7 +93,7 @@ Denota el tamaño del flujo.
 #endif
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un entero con signo que describe un objeto que puede almacenar un recuento del número de elementos implicados en varias operaciones de flujo. La representación tiene al menos 16 bits. No es necesariamente lo bastante grande como para representar una posición de byte arbitraria en un flujo.
 
@@ -125,7 +125,7 @@ Es compatible con la clase wios de la antigua biblioteca iostream.
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
@@ -137,7 +137,7 @@ Contiene la posición actual del puntero de búfer o el puntero de archivo.
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Tipo sinónimo de [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 

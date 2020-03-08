@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876154"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants (Espacio de nombres)
+# <a name="regex_constants-namespace"></a>regex_constants (Espacio de nombres)
 
 Espacio de nombres para las marcas de expresiones regulares.
 
@@ -103,7 +103,7 @@ namespace regex_constants {
 }
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El espacio de nombres `regex_constants` encapsula varios tipos de marca y sus valores de marca asociados.
 
@@ -115,7 +115,7 @@ El espacio de nombres `regex_constants` encapsula varios tipos de marca y sus va
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<regex>
+**Encabezado:** \<regex >
 
 **Espacio de nombres:** std
 
@@ -144,7 +144,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo enumerado que describe un objeto que puede contener marcadores de error. Los diferentes valores de marca son:
 
@@ -204,7 +204,7 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo de máscara de bits que describe las opciones que se van a usar al buscar coincidencias entre una secuencia de texto y una expresión regular, así como las marcas de formato que se usarán al reemplazar texto. Las opciones pueden combinarse con `|`.
 
@@ -260,7 +260,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo de máscara de bits que describe los especificadores de idioma y los modificadores de sintaxis que se usarán al compilar una expresión regular. Las opciones pueden combinarse con `|`. Debe usarse un especificador de idioma a la vez.
 
@@ -288,13 +288,13 @@ Los modificadores de sintaxis son los siguientes:
 
 `collate`: genera coincidencias dependientes de la configuración regional
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<regex>](../standard-library/regex.md)\
-[Clase regex_error](../standard-library/regex-error-class.md)\
-[\<funciones regex >](../standard-library/regex-functions.md)\
-[Clase regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<operadores regex >](../standard-library/regex-operators.md)\
-[Clase regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Clase regex_traits](../standard-library/regex-traits-class.md)\
-[Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)
+[Regex_error clase](../standard-library/regex-error-class.md)\
+[\<las funciones > regex](../standard-library/regex-functions.md)\
+[Regex_iterator clase](../standard-library/regex-iterator-class.md)\
+[\<operadores > regex](../standard-library/regex-operators.md)\
+[Regex_token_iterator clase](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits clase](../standard-library/regex-traits-class.md)\
+[Definiciones de tipos \<regex>](../standard-library/regex-typedefs.md)

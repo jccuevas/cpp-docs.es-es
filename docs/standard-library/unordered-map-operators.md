@@ -6,13 +6,13 @@ f1_keywords:
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454777"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874008"
 ---
-# <a name="ltunorderedmapgt-operators"></a>Operadores de &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-operators"></a>Operadores de &lt;unordered_map&gt;
 
 |||||
 |-|-|-|-|
@@ -28,17 +28,17 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `unordered_map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los unordered_maps no son iguales; **false** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_map no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_map son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -92,17 +92,17 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `unordered_map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `unordered_map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los unordered_maps son iguales; **false** si no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_map no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_map son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -138,7 +138,7 @@ int main( )
 }
 ```
 
-**Resultado:**
+**Salida:**
 
 `um1 == um2: false`
 
@@ -156,17 +156,17 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `unordered_multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los unordered_multimaps no son iguales; **false** si son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_multimap no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_multimap son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. De lo contrario, no son iguales.
 
@@ -221,17 +221,17 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `unordered_multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `unordered_multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los unordered_multimaps son iguales; **false** si no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos unordered_multimap no se ve afectada por el orden arbitrario en el que almacenan sus elementos. Dos unordered_multimap son iguales si tienen el mismo número de elementos y los elementos de un contenedor son una permutación de los elementos del otro contenedor. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -276,6 +276,6 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [<unordered_map>](../standard-library/unordered-map.md)

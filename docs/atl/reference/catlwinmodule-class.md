@@ -1,5 +1,5 @@
 ---
-title: CAtlWinModule (clase)
+title: Clase CAtlWinModule
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlWinModule
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246829"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857356"
 ---
-# <a name="catlwinmodule-class"></a>CAtlWinModule (clase)
+# <a name="catlwinmodule-class"></a>Clase CAtlWinModule
 
-Esta clase proporciona compatibilidad para los componentes de ventana ATL.
+Esta clase proporciona compatibilidad con los componentes de ventanas de ATL.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,25 +30,25 @@ Esta clase proporciona compatibilidad para los componentes de ventana ATL.
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|El constructor.|
-|[CAtlWinModule::~CAtlWinModule](#dtor)|Destructor.|
+|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Agrega un objeto de datos.|
 |[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Devuelve un puntero al objeto de datos del módulo de ventana.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase proporciona compatibilidad para todas las clases ATL que requieren características de la ventana.
+Esta clase proporciona compatibilidad con todas las clases ATL que requieren características de ventanas.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -58,11 +58,11 @@ Esta clase proporciona compatibilidad para todas las clases ATL que requieren ca
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h
+**Encabezado:** ATLBase. h
 
-##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData
+##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
 
-Este método inicializa y agrega un `_AtlCreateWndData` estructura.
+Este método inicializa y agrega una estructura de `_AtlCreateWndData`.
 
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -71,16 +71,16 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="parameters"></a>Parámetros
 
 *pData*<br/>
-Puntero a la `_AtlCreateWndData` estructura se inicialicen y agregado al módulo actual.
+Puntero a la estructura de `_AtlCreateWndData` que se va a inicializar y agregar al módulo actual.
 
 *pObject*<br/>
-Puntero a un objeto **esto** puntero.
+Puntero al puntero **this** de un objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método llama a [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que inicializa un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estructura. Esta estructura se almacenará el **esto** puntero, utilizado para obtener la instancia de clase en los procedimientos de ventana.
+Este método llama a [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) , que Inicializa una estructura [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Esta estructura almacenará el puntero **this** , que se usa para obtener la instancia de clase en los procedimientos de ventana.
 
-##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule
+##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
 El constructor.
 
@@ -88,11 +88,11 @@ El constructor.
 CAtlWinModule();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se produce un error de inicialización, una **EXCEPTION_NONCONTINUABLE** se produce la excepción.
+Si se produce un error de inicialización, se produce una excepción **EXCEPTION_NONCONTINUABLE** .
 
-##  <a name="dtor"></a>  CAtlWinModule::~CAtlWinModule
+##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule
 
 Destructor.
 
@@ -100,13 +100,13 @@ Destructor.
 ~CAtlWinModule();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Libera todos los recursos asignados.
 
-##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData
+##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
 
-Este método devuelve un puntero a un `_AtlCreateWndData` estructura.
+Este método devuelve un puntero a una estructura de `_AtlCreateWndData`.
 
 ```
 void* ExtractCreateWndData();
@@ -114,10 +114,10 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la `_AtlCreateWndData` estructura agregado previamente con [CAtlWinModule::AddCreateWndData](#addcreatewnddata), o NULL si no hay ningún objeto está disponible.
+Devuelve un puntero a la estructura de `_AtlCreateWndData` previamente agregada con [CAtlWinModule:: AddCreateWndData](#addcreatewnddata)o null si no hay ningún objeto disponible.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
-[Información general de clases](../../atl/atl-class-overview.md)<br/>
+[Información general sobre clases](../../atl/atl-class-overview.md)<br/>
 [Clases de módulo](../../atl/atl-module-classes.md)

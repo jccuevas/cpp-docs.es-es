@@ -6,11 +6,11 @@ f1_keywords:
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458759"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874848"
 ---
 # <a name="ltistreamgt-functions"></a>Funciones &lt;istream&gt;
 
@@ -18,7 +18,7 @@ ms.locfileid: "68458759"
 |-|-|
 |[swap](#istream_swap)|[ws](#ws)|
 
-## <a name="istream_swap"></a>  swap
+## <a name="istream_swap"></a> swap
 
 Intercambia los elementos de dos objetos stream.
 
@@ -36,10 +36,10 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Flujo.
 
-*correcta*\
+\ *derecha*
 Flujo.
 
 ## <a name="ws"></a>  ws
@@ -57,11 +57,11 @@ Flujo.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La secuencia.
+Flujo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El manipulador extrae y descarta todos los elementos `ch` para los que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) sea true.
+El manipulador extrae y descarta cualquier elemento `ch` para el que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **es**( **ctype**\< **Elem**>:: **Space**, **CH**) es true.
 
 La función llama a [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) si encuentra el final del archivo al extraer elementos. Devuelve *_Istr*.
 
@@ -69,6 +69,6 @@ La función llama a [setstate](../standard-library/basic-ios-class.md#setstate)(
 
 Vea [operator>>](../standard-library/istream-operators.md#op_gt_gt) para obtener un ejemplo que usa `ws`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<istream>](../standard-library/istream.md)

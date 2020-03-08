@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898843"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856558"
 ---
 # <a name="locale-class"></a>locale (Clase)
 
@@ -38,7 +38,7 @@ La clase que describe un objeto de configuración regional que encapsula la info
 class locale;
 ```
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Una faceta es un puntero a un objeto de una clase derivada de la clase [facet](#facet_class) que tiene un objeto público con el formato:
 
@@ -144,9 +144,9 @@ Las reglas de formato numérico para las inserciones posteriores a `cout` son la
 |-|-|
 |[locale](#locale)|Crea una configuración regional, una copia de una configuración regional o una copia de la configuración regional donde una faceta o una categoría se ha reemplazado por una faceta o una categoría de otra configuración regional.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[category](#category)|Tipo entero que proporciona valores de máscara de bits para denotar familias de facetas estándar.|
 
@@ -161,12 +161,12 @@ Las reglas de formato numérico para las inserciones posteriores a `cout` son la
 
 |||
 |-|-|
-|[classic](#classic)|La función miembro static devuelve un objeto de configuración regional que representa la configuración regional clásica de C.|
+|[clásico](#classic)|La función miembro static devuelve un objeto de configuración regional que representa la configuración regional clásica de C.|
 |[global](#global)|Restablece la configuración regional predeterminada del programa.|
 
 ### <a name="operators"></a>Operadores
 
-|"??"|Descripción|
+|Operator|Descripción|
 |-|-|
 |[operator=](#op_eq)|Asigna una configuración regional.|
 |[operator!=](#op_neq)|Comprueba si dos configuraciones regionales son distintas.|
@@ -180,9 +180,9 @@ Las reglas de formato numérico para las inserciones posteriores a `cout` son la
 |[facet](#facet_class)|Clase que actúa como clase base para todas las facetas de configuración regional.|
 |[`id`](#id_class)|La clase miembro proporciona un identificador único de faceta que se usa como índice para buscar facetas en una configuración regional.|
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<locale>
+**Encabezado:** \<configuración regional >
 
 **Espacio de nombres:** std
 
@@ -202,7 +202,7 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de un tipo **int** que puede representar un grupo de elementos distintos de un tipo de máscara de máscara local a la configuración regional de clase o se puede usar para representar cualquiera de las categorías de configuración regional de C correspondientes. Los elementos son:
 
@@ -238,7 +238,7 @@ static const locale& classic();
 
 Referencia a la configuración regional de C.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 La configuración regional de C clásica es la configuración regional ASCII en Inglés de EE. UU. en la biblioteca estándar de C. Es la configuración regional que se usa implícitamente en programas que no están internacionalizados.
 
@@ -290,7 +290,7 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *source_locale*\
 Configuración regional que contiene la faceta que se va a insertar en la configuración regional de destino.
@@ -344,7 +344,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 No se puede copiar o asignar un objeto de clase `facet`. Puede crear y destruir objetos derivados de la clase `locale::facet`, pero no los objetos de la clase base correcta. Normalmente, se crea un objeto `_Myfac` derivado de `facet` al construir un `locale`, como en `locale loc(locale::classic(), new _Myfac);`
 
@@ -358,7 +358,7 @@ Restablece la configuración regional predeterminada del programa. Esta llamada 
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *new_default_locale*\
 Configuración regional que el programa usará como configuración regional predeterminada.
@@ -367,7 +367,7 @@ Configuración regional que el programa usará como configuración regional pred
 
 Configuración regional anterior al restablecimiento de la configuración regional predeterminada.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Al inicio del programa, la configuración regional global es igual que la configuración regional clásica. La función `global()` llama a `setlocale( LC_ALL, loc.name. c_str())` para establecer una configuración regional coincidente en la biblioteca estándar de C++.
 
@@ -412,7 +412,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 La clase de miembro describe el objeto de miembro estático requerido por cada faceta de configuración regional única. No se puede copiar o asignar un objeto de clase `id`.
 
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *locale_name*\
 Nombre de una configuración regional.
@@ -452,7 +452,7 @@ Categoría que se va a sustituir en la configuración regional construida.
 *new_facet*\
 Faceta que se va a sustituir en la configuración regional construida.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El primer constructor inicializa el objeto para que coincida con la configuración regional global. Los constructores segundo y tercero inicializan todas las categorías de configuración regional para tener un comportamiento coherente con el nombre de configuración regional *locale_name*. Los constructores restantes copian *from_locale*, con las excepciones indicadas:
 
@@ -567,7 +567,7 @@ Comprueba si dos configuraciones regionales son distintas.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *derecha*
 Una de las configuraciones regionales cuya desigualdad se va a comprobar.
@@ -576,7 +576,7 @@ Una de las configuraciones regionales cuya desigualdad se va a comprobar.
 
 Valor booleano que es **true** si las configuraciones regionales no son copias de la misma configuración regional. Es **false** si las configuraciones regionales son copias de la misma configuración regional.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Dos configuraciones regionales son iguales si son la misma configuración regional, si una es una copia de la otra, o si tienen nombres idénticos.
 
@@ -631,7 +631,7 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *izquierda*
 Cadena izquierda.
@@ -649,7 +649,7 @@ La función miembro devuelve:
 
 - 0 si las secuencias son equivalentes.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 La función miembro ejecuta eficazmente:
 
@@ -700,7 +700,7 @@ Comprueba si dos configuraciones regionales son iguales.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *derecha*
 Una de las configuraciones regionales cuya igualdad se va a comprobar.
@@ -709,7 +709,7 @@ Una de las configuraciones regionales cuya igualdad se va a comprobar.
 
 Valor booleano que es **true** si las configuraciones regionales son copias de la misma configuración regional. Es **false** si las configuraciones regionales no son copias de la misma configuración regional.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Dos configuraciones regionales son iguales si son la misma configuración regional, si una es una copia de la otra, o si tienen nombres idénticos.
 
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<locale>](../standard-library/locale.md)\
 [Páginas de códigos](../c-runtime-library/code-pages.md)\

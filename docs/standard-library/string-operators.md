@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685996"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890907"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;string&gt;
 
@@ -113,9 +113,9 @@ Cadena de estilo C o un objeto del tipo `basic_string` que se va a concatenar.
 
 Cadena que es la concatenación de las cadenas de entrada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Las funciones de cada sobrecarga `operator+` concatenar dos objetos de la [clase basic_string](../standard-library/basic-string-class.md)de la plantilla de clase. Todos los `basic_string< CharType, Traits, Allocator>(Left).append(right)` devuelven de forma efectiva. Para obtener más información, vea [Append](../standard-library/basic-string-class.md#append).
+Las funciones de cada sobrecarga `operator+` para concatenar dos objetos de clase de plantilla [basic_string](../standard-library/basic-string-class.md)clase. Todos los `basic_string< CharType, Traits, Allocator>(Left).append(right)`devuelven de forma efectiva. Para obtener más información, vea [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Ejemplo
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Comprueba si el objeto de cadena del lado izquierdo del operador no es igual que el objeto de cadena del lado derecho.
 
@@ -202,7 +202,7 @@ Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 **true** si el objeto de cadena del lado izquierdo del operador no es lexicográficamente igual que el objeto de cadena del lado derecho. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de cadena se basa en una comparación lexicográfica en pares de sus elementos. Dos cadenas son iguales si tienen el mismo número de caracteres y sus valores de carácter respectivos son los mismos. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>  operator==
 
 Comprueba si el objeto de cadena del lado izquierdo del operador es igual que el objeto de cadena del lado derecho.
 
@@ -293,7 +293,7 @@ Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 **true** si el objeto de cadena del lado izquierdo del operador es lexicográficamente igual que el objeto de cadena del lado derecho. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de cadena se basa en una comparación lexicográfica en pares de sus elementos. Dos cadenas son iguales si tienen el mismo número de caracteres y sus valores de carácter respectivos son los mismos. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> operator&lt;
 
 Comprueba si el objeto de cadena del lado izquierdo del operador es menor que el objeto de cadena del lado derecho.
 
@@ -384,7 +384,7 @@ Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 **true** si el objeto de cadena del lado izquierdo del operador es lexicográficamente menor que el objeto de cadena del lado derecho. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una comparación lexicográfica entre cadenas las compara carácter por carácter hasta que:
 
@@ -480,7 +480,7 @@ Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 **true** si el objeto de cadena del lado izquierdo del operador es lexicográficamente menor o igual que el objeto de cadena del lado derecho. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una comparación lexicográfica entre cadenas las compara carácter por carácter hasta que:
 
@@ -563,7 +563,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ostr*
+*_Ostr*\
 El flujo de salida en el que se escribe.
 
 \ *Str*
@@ -573,11 +573,11 @@ La cadena que se especifica en el flujo de salida.
 
 Escribe el valor de la cadena especificada en el flujo de salida *_Ostr*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función de plantilla sobrecarga **< <** para insertar un objeto *Str* de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) en el *\_Ostr*de flujo. La función devuelve `_Ostr.write( str.c_str, str.size )` de forma efectiva.
+La función de plantilla sobrecarga **< <** para insertar un objeto *Str* de la plantilla de clase [Basic_string](../standard-library/basic-string-class.md) en el flujo *\_ostr*. La función devuelve `_Ostr.write( str.c_str, str.size )`de forma efectiva.
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> operator&gt;
 
 Comprueba si el objeto de cadena del lado izquierdo del operador es mayor que el objeto de cadena del lado derecho.
 
@@ -610,7 +610,7 @@ Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 **true** si el objeto de cadena del lado izquierdo del operador es lexicográficamente mayor que el objeto de cadena del lado derecho. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una comparación lexicográfica entre cadenas las compara carácter por carácter hasta que:
 
@@ -713,7 +713,7 @@ Una cadena de estilo C o un objeto del tipo `basic_string` que se va a comparar.
 
 **true** si el objeto de cadena del lado izquierdo del operador es lexicográficamente mayor o igual que el objeto de cadena del lado derecho. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una comparación lexicográfica entre cadenas las compara carácter por carácter hasta que:
 
@@ -796,7 +796,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Istr*
+*_Istr*\
 El flujo de entrada que se usa para extraer la secuencia.
 
 \ *derecha*
@@ -806,21 +806,21 @@ La cadena que se extrae del flujo de entrada.
 
 Lee el valor de la cadena especificada de *_Istr* y lo devuelve a la *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador omite los espacios en blanco iniciales a menos que la marca `skipws` esté establecida. Lee todos los caracteres siguientes hasta que el siguiente carácter es un espacio en blanco o se alcanza el final del archivo.
 
 La función de plantilla sobrecarga **> >** para reemplazar la secuencia controlada por *right* con una secuencia de elementos extraídos de la secuencia *_Istr*. La extracción se detiene:
 
-- Al final del archivo.
+- Al final de archivo.
 
 - Después de que la función Extraiga `_Istr`. elementos de **ancho** , si el valor es distinto de cero.
 
-Después de que la función Extraiga `_Istr`. elementos [max_size](../standard-library/basic-string-class.md#max_size) .
+Después de que la función Extraiga `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elementos.
 
-- Después de que la función extraiga un elemento *ch* para el que [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) es true, en cuyo caso el carácter se vuelve a poner.
+- Después de que la función extraiga un elemento *CH* para el que [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType**\< **CharType**> > (`getloc`). **es**( **ctype**\< **CharType**>:: **Space**, *CH*) es true, en cuyo caso se vuelve a colocar el carácter.
 
-Si la función no extrae ningún elemento, llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). En cualquier caso, llama a **istr**. **ancho**(0) y devuelve \* **this**.
+Si la función no extrae ningún elemento, llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). En cualquier caso, llama a **istr**. **width**(0) y devuelve \* **este**.
 
 ### <a name="example"></a>Ejemplo
 
@@ -841,6 +841,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<string>](../standard-library/string.md)

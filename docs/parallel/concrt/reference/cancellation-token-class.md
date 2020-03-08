@@ -1,5 +1,5 @@
 ---
-title: cancellation_token Class (clase)
+title: cancellation_token (Clase)
 ms.date: 11/04/2016
 f1_keywords:
 - cancellation_token
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
 ms.openlocfilehash: 34743ce48510eec9d8f7862e5ed951a722932962
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142260"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876079"
 ---
-# <a name="cancellation_token-class"></a>cancellation_token Class (clase)
+# <a name="cancellation_token-class"></a>cancellation_token (Clase)
 
 La clase `cancellation_token` representa la capacidad para determinar si se ha solicitado la cancelación de alguna operación. Se puede asociar un determinado símbolo con un objeto `task_group`, `structured_task_group` o `task` para proporcionar una cancelación implícita. Este token también puede sondearse para la cancelación o puede hacer que se registre una devolución únicamente si se cancela el objeto `cancellation_token_source` asociado.
 

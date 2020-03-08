@@ -10,21 +10,21 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524795"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856805"
 ---
 # <a name="mfc-library-versions"></a>Versiones de la biblioteca MFC
 
-La biblioteca MFC está disponible en las versiones compatibles con ANSI byte único y del juego de caracteres multibyte (MBCS) código, así como las versiones que admiten Unicode (codificada como UTF-16LE, el juego de caracteres nativo de Windows). Cada versión MFC está disponible como una biblioteca estática o como un archivo DLL compartido. También hay una versión más pequeña de biblioteca estática de MFC que sale de los controles MFC para cuadros de diálogo, para las aplicaciones que son muy sensibles al tamaño y no necesitan esos controles. Las bibliotecas MFC están disponibles en ambas versiones de depuración y versión para las arquitecturas compatibles que incluyen x86, x64 y procesadores ARM. Puede crear ambas aplicaciones (archivos .exe) y archivos DLL con cualquier versión de las bibliotecas MFC. Hay también un conjunto de bibliotecas MFC compiladas para interactuar con código administrado. Archivos DLL MFC compartidos incluyen un número de versión para indicar la compatibilidad binaria de la biblioteca.
+La biblioteca MFC está disponible en las versiones que admiten código ANSI de un solo byte y de juego de caracteres multibyte (MBCS), así como las versiones compatibles con Unicode (codificado como UTF-16LE, el juego de caracteres nativo de Windows). Cada versión de MFC está disponible como biblioteca estática o como DLL compartida. También hay una versión más pequeña de la biblioteca estática de MFC que deja los controles MFC para los cuadros de diálogo, para las aplicaciones que son muy sensibles al tamaño y no necesitan esos controles. Las bibliotecas MFC están disponibles en las versiones de depuración y lanzamiento para las arquitecturas admitidas que incluyen procesadores x86, x64 y ARM. Puede crear aplicaciones (archivos. exe) y dll con cualquier versión de las bibliotecas MFC. También hay un conjunto de bibliotecas MFC compiladas para interactuar con código administrado. Los archivos dll compartidos de MFC incluyen un número de versión para indicar la compatibilidad binaria de la biblioteca.
 
-## <a name="automatic-linking-of-mfc-library-versions"></a>Vinculación automática de versiones de la biblioteca MFC
+## <a name="automatic-linking-of-mfc-library-versions"></a>Vinculación automática de las versiones de la biblioteca MFC
 
-Los archivos de encabezado MFC determinan automáticamente la versión correcta de la biblioteca MFC para crear un vínculo, según los valores definidos en el entorno de compilación. Los archivos de encabezado MFC agregan directivas de compilador que indican al vinculador para vincular en una versión específica de la biblioteca MFC.
+Los archivos de encabezado de MFC determinan automáticamente la versión correcta de la biblioteca MFC que se va a vincular, en función de los valores definidos en el entorno de compilación. Los archivos de encabezado de MFC agregan directivas de compilador que indican al enlazador que se vincule en una versión específica de la biblioteca MFC.
 
-Por ejemplo, el AFX. Archivo de encabezado H indica al vinculador vincule la estática completo, limitada static o shared versión DLL de MFC; Versión ANSI/MBCS o Unicode. y la versión comercial o de depuración, dependiendo de la configuración de compilación:
+Por ejemplo, AFX. El archivo de encabezado H indica al enlazador que vincule en la versión completa de MFC estática, estática limitada o compartida de MFC; ANSI/MBCS o versión Unicode; y la versión de depuración o comercial, en función de la configuración de compilación:
 
 ```cpp
 #ifndef _AFXDLL
@@ -71,31 +71,31 @@ Por ejemplo, el AFX. Archivo de encabezado H indica al vinculador vincule la est
 #endif
 ```
 
-Archivos de encabezado MFC también incluyen directivas para vincular todas las bibliotecas requeridas, incluidas las bibliotecas MFC, bibliotecas de Win32, las bibliotecas OLE, las bibliotecas OLE creadas a partir de ejemplos, las bibliotecas ODBC y así sucesivamente.
+Los archivos de encabezado de MFC también incluyen directivas para vincular en todas las bibliotecas requeridas, incluidas las bibliotecas MFC, las bibliotecas Win32, las bibliotecas OLE, las bibliotecas OLE creadas a partir de ejemplos, bibliotecas ODBC, etc.
 
 ## <a name="ansi-mbcs-and-unicode"></a>ANSI, MBCS y Unicode
 
-Las versiones de la biblioteca de ANSI/MBCS de MFC admiten ambos conjuntos de caracteres de byte único, como ASCII y juegos de caracteres multibyte como Shift-JIS. Las versiones de la biblioteca de Unicode de MFC admiten Unicode en su forma codificada de UTF-16LE caracteres anchos. Use las versiones de la biblioteca de ANSI/MBCS de MFC para la compatibilidad con Unicode había codificado con UTF-8.
+Las versiones de la biblioteca ANSI/MBCS de MFC admiten juegos de caracteres de un solo byte, como ASCII, y juegos de caracteres multibyte como Shift-JIS. Las versiones de la biblioteca Unicode de MFC admiten Unicode en su forma codificada de caracteres anchos UTF-16LE. Use las versiones de la biblioteca ANSI/MBCS de MFC para la compatibilidad con Unicode con codificación UTF-8.
 
-Para establecer la configuración del proyecto para usar un solo byte, multibyte o carácter de toda la cadena y carácter de compatibilidad con Unicode en el IDE, utilice el **las propiedades del proyecto** cuadro de diálogo. En el **propiedades de configuración** > **General** , establezca el **del juego de caracteres** propiedad **no establecido** para usar un juego de caracteres de byte único. Establezca la propiedad en **utilizar juego de caracteres multibyte** para usar un juego de caracteres multibyte, o a **utilizar juego de caracteres Unicode** va a utilizar Unicode codificada como UTF-16.
+Use el cuadro de diálogo **propiedades del proyecto** para establecer la configuración del proyecto para que use la compatibilidad de caracteres y cadenas Unicode de un solo byte, multibyte o caracteres anchos en el IDE. En la **página Propiedades de configuración** > **General** , establezca la propiedad **juego de caracteres** en **no establecido** en usar un juego de caracteres de un solo byte. Establezca la propiedad en usar juego de caracteres de **varios bytes** para usar un juego de caracteres multibyte, o para usar el juego de caracteres **Unicode** para usar la codificación Unicode como UTF-16.
 
-Los proyectos MFC utilizan el símbolo de preprocesador \_UNICODE para indicar la compatibilidad de Unicode de caracteres anchos de UTF-16, y \_compatibilidad con MBCS para indicar MBCS. Estas opciones son mutuamente excluyentes en un proyecto.
+Los proyectos MFC usan el símbolo de preprocesador \_Unicode para indicar la compatibilidad con Unicode de caracteres anchos UTF-16 y \_MBCS para indicar la compatibilidad con MBCS. Estas opciones se excluyen mutuamente en un proyecto.
 
-## <a name="mfc-static-library-naming-conventions"></a>Convenciones de nomenclatura de biblioteca estática de MFC
+## <a name="mfc-static-library-naming-conventions"></a>Convenciones de nomenclatura de la biblioteca estática MFC
 
-Bibliotecas estáticas de MFC utilizan las siguientes convenciones de nomenclatura. Los nombres de biblioteca tienen el formato
+Las bibliotecas estáticas para MFC utilizan las siguientes convenciones de nomenclatura. Los nombres de biblioteca tienen el formato
 
-> <em>u</em>AFX<em>cd</em>.LIB
+> <em>u</em> <em>CD</em>AFX. OBJ
 
-donde las letras en cursiva en minúsculas son marcadores de posición para los especificadores, cuyo significado se muestra en la tabla siguiente:
+donde las letras que se muestran en cursiva en cursiva son marcadores de posición para los especificadores cuyos significados se muestran en la tabla siguiente:
 
-|Especificador|Los valores y significados|
+|Especificador|Valores y significados|
 |---------------|-------------------------|
-|*u*|ANSI/MBCS (N) o Unicode (U); Omitir para la versión sin controles MFC en los cuadros de diálogo|
-|*c*|Versión con controles MFC en los cuadros de diálogo (CW) o sin (NMCD)|
-|*d*|Depuración o lanzamiento: D. = Debug; omitir el especificador de versión|
+|*u*|ANSI/MBCS (N) o Unicode (U); omitir para la versión sin controles MFC en cuadros de diálogo|
+|*c*|Versión con controles MFC en cuadros de diálogo (CW) o sin (NMCD)|
+|*d*|Debug o Release: D = Debug; omitir el especificador para la versión|
 
-Todas las bibliotecas que se muestran en la tabla siguiente se incluyen creado previamente en el directorio \atlmfc\lib para las arquitecturas de compilación admitidos.
+Todas las bibliotecas enumeradas en la tabla siguiente se incluyen prediseñadas en el directorio \atlmfc\lib para las arquitecturas de compilación compatibles.
 
 |Biblioteca|Descripción|
 |-------------|-----------------|
@@ -103,42 +103,42 @@ Todas las bibliotecas que se muestran en la tabla siguiente se incluyen creado p
 |NAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC, versión de depuración|
 |UAFXCW.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de lanzamiento|
 |UAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de depuración|
-|AFXNMCD.LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de lanzamiento|
-|AFXNMCDD.LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de depuración|
+|AFXNMCD.LIB|Biblioteca de vínculos estáticos de MFC sin controles de cuadro de diálogo de MFC, versión de lanzamiento|
+|AFXNMCDD.LIB|Biblioteca de vínculos estáticos de MFC sin controles de cuadro de diálogo de MFC, versión de depuración|
 
-Los archivos de depurador que tienen el mismo nombre base y una extensión .pdb también están disponibles para cada una de las bibliotecas estáticas.
+Los archivos del depurador que tienen el mismo nombre base y una extensión. pdb también están disponibles para cada una de las bibliotecas estáticas.
 
-## <a name="mfc-shared-dll-naming-conventions"></a>Convenciones de nomenclatura de DLL compartidas de MFC
+## <a name="mfc-shared-dll-naming-conventions"></a>Convenciones de nomenclatura de archivos DLL compartidos de MFC
 
-La MFC archivos DLL compartidos también siga una convención de nomenclatura estructurada. Esto facilita la sabe qué archivo DLL o la biblioteca que se debe utilizar con qué propósito.
+Los archivos dll compartidos de MFC también siguen una Convención de nomenclatura estructurada. Esto hace más fácil saber qué DLL o biblioteca debe utilizar para cada propósito.
 
-Los archivos DLL de MFC tienen *versión* números que indican la compatibilidad binaria. Utilizar archivos DLL de MFC que tienen la misma versión que las otras bibliotecas y conjunto de herramientas del compilador para garantizar la compatibilidad dentro de un proyecto.
+Los archivos dll de MFC tienen números de *versión* que indican compatibilidad binaria. Use archivos dll de MFC que tengan la misma versión que las demás bibliotecas y conjunto de herramientas del compilador para garantizar la compatibilidad dentro de un proyecto.
 
-|Archivo DLL|Descripción|
+|DLL|Descripción|
 |---------|-----------------|
-|MFC*versión*. ARCHIVO DLL|Versión de DLL de MFC, ANSI o versión MBCS|
-|MFC*versión*U.DLL|DLL de MFC, versión de lanzamiento de Unicode|
-|MFC*versión*D.DLL|Versión de DLL de MFC, ANSI o MBCS de depuración|
-|MFC*version*UD.DLL|DLL de MFC, versión de depuración de Unicode|
-|MFCM*versión*. ARCHIVO DLL|DLL de MFC con controles de Windows Forms, versión de MBCS o ANSI|
-|MFCM*versión*U.DLL|DLL de MFC con controles de formularios de Windows, versión de lanzamiento de Unicode|
-|MFCM*versión*D.DLL|DLL de MFC con controles de Windows Forms, versión ANSI o MBCS de depuración|
-|MFCM*versión*UD. ARCHIVO DLL|DLL de MFC con controles de formularios de Windows, versión de depuración de Unicode|
+|*Versión*de MFC. DLL|DLL de MFC, versión de lanzamiento ANSI o MBCS|
+|*Versión*de MFC U. dll|Archivo DLL de MFC, versión de lanzamiento Unicode|
+|*Versión*D. dll de MFC|DLL de MFC, versión de depuración ANSI o MBCS|
+|*Versión*de MFC Ud. DLL|DLL de MFC, versión de depuración Unicode|
+|*Versión*de MFCM. DLL|DLL de MFC con controles de Windows Forms, versión de lanzamiento ANSI o MBCS|
+|MFCM*versión*U. dll|DLL de MFC con controles de Windows Forms, versión de lanzamiento Unicode|
+|MFCM*versión*D. dll|DLL de MFC con controles de Windows Forms, versión de depuración ANSI o MBCS|
+|MFCM*versión*Ud. DLL|DLL de MFC con controles de Windows Forms, versión de depuración Unicode|
 
-Las bibliotecas de importación necesarias para crear aplicaciones o archivos DLL que usan estos archivos DLL compartidos de extensión MFC tienen el mismo nombre base que el archivo DLL, pero tienen una extensión de nombre de archivo .lib. Al usar los archivos DLL compartidos, una pequeña biblioteca estática todavía debe vincularse con el código; Esta biblioteca se denomina MFCS*versión*.lib {U} {D}.
+Las bibliotecas de importación necesarias para compilar aplicaciones o archivos dll de extensión de MFC que usen estos archivos dll compartidos tienen el mismo nombre base que el archivo DLL, pero tienen la extensión de nombre de archivo. lib. Al usar los archivos dll compartidos, una pequeña biblioteca estática debe estar vinculada a su código. Esta biblioteca se denomina MFCS*versión*{U} {D}. lib.
 
-Si se vincula dinámicamente a la versión compartida del archivo DLL de MFC, ya sea desde una aplicación o desde un archivo DLL de extensión MFC, debe incluir la búsqueda de coincidencias MFC*versión*. Archivo DLL o MFC*versión*U.DLL al implementar el producto.
+Si está vinculando dinámicamente a la versión de DLL compartida de MFC, tanto si se trata de una aplicación como de un archivo DLL de extensión de MFC, debe incluir la*versión*de MFC correspondiente. DLL o la*versión*de MFC u. dll al implementar el producto.
 
-Para obtener una lista de Visual C++ archivos DLL que se puede distribuir con sus aplicaciones, consulte [código distribuible para Microsoft Visual Studio 2017 y Microsoft Visual Studio 2017 SDK (incluye utilidades y archivos BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) o [ Código distribuible para Visual Studio de 2019](/visualstudio/releases/2019/redistribution).
+Para obtener una lista de C++ archivos dll de visual que se pueden distribuir con las aplicaciones, vea [código distribuible para Microsoft Visual Studio 2017 y Microsoft Visual Studio 2017 SDK (incluye utilidades y archivos BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) o [código distribuible para Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
-Para obtener más información sobre la compatibilidad con MBCS y Unicode en MFC, vea [juego de caracteres Multibyte (MBCS) compatibilidad con Unicode y](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
+Para obtener más información sobre la compatibilidad con MBCS y Unicode en MFC, vea [compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
 ## <a name="dynamic-link-library-support"></a>Compatibilidad con la biblioteca de vínculos dinámicos
 
-Puede usar cualquier static o shared dinámicas bibliotecas MFC para crear archivos DLL que se pueden utilizar los archivos ejecutables MFC y no basados en MFC. Se denominan "archivos DLL estándar" o "archivos DLL estándar MFC" distinguirlos de extensión de MFC archivos DLL que solo se pueden usan las aplicaciones MFC y MFC DLL. Un archivo DLL compilado mediante el uso de las bibliotecas estáticas de MFC a veces se denomina un USRDLL en referencias anteriores, porque los proyectos de DLL de MFC definen el símbolo de preprocesador  **\_USRDLL**. Un archivo DLL que MFC utiliza archivos DLL compartidos a veces se denominaba AFXDLL en referencias anteriores, debido a que define el símbolo de preprocesador  **\_AFXDLL**.
+Puede usar las bibliotecas MFC estáticas o compartidas de MFC para crear archivos DLL que se pueden usar tanto en archivos ejecutables de MFC como no basados en MFC. Se denominan "archivos DLL estándar" o "archivos dll de MFC normales" para distinguirlos de los archivos dll de extensión de MFC que solo pueden usar las aplicaciones MFC y los archivos dll de MFC. Un archivo DLL compilado con las bibliotecas estáticas de MFC a veces se denomina USRDLL en referencias anteriores, ya que los proyectos de archivos DLL de MFC definen el símbolo del preprocesador **\_USRDLL**. Un archivo DLL que usa los archivos dll compartidos de MFC a veces se denomina AFXDLL en referencias anteriores, ya que define el símbolo del preprocesador **\_AFXDLL**.
 
-Cuando se crea el proyecto DLL al vincular con las bibliotecas estáticas de MFC, se puede implementar el archivo DLL sin MFC archivos DLL compartidos. Cuando el proyecto DLL está vinculado a las bibliotecas de importación MFC*versión*. LIB o MFC*versión*U.LIB, debe implementar la coincidencia de MFC compartido DLL MFC*versión*. Archivo DLL o MFC*versión*U.DLL junto con el archivo DLL. Para obtener más información, consulte [dll](../build/dlls-in-visual-cpp.md).
+Al crear el proyecto DLL vinculando a las bibliotecas estáticas de MFC, el archivo DLL se puede implementar sin los archivos dll compartidos de MFC. Cuando el proyecto DLL se vincula a la*versión*de MFC de las bibliotecas de importación. LIB o la*versión*de MFC u. lib, debe implementar la*versión*MFC del archivo dll compartida MFC correspondiente. DLL o la*versión*de MFC u. dll junto con el archivo dll. Para obtener más información, vea [archivos dll](../build/dlls-in-visual-cpp.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Temas generales de MFC](../mfc/general-mfc-topics.md)

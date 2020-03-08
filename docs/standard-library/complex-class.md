@@ -1,5 +1,5 @@
 ---
-title: clase compleja
+title: complex (Clase)
 ms.date: 03/27/2019
 f1_keywords:
 - complex/std::complex::value_type
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257980"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876209"
 ---
-# <a name="complex-class"></a>clase compleja
+# <a name="complex-class"></a>complex (Clase)
 
 La plantilla de clase describe un objeto que almacena dos objetos de tipo `Type`, uno que representa la parte real de un número complejo y otro que representa la parte imaginaria.
 

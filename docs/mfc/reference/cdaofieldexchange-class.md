@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303883"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872480"
 ---
 # <a name="cdaofieldexchange-class"></a>Clase CDaoFieldExchange
 
@@ -33,23 +33,23 @@ DAO es compatible con Office 2013. DAO 3,6 es la versión final y se considera o
 class CDaoFieldExchange
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDaoFieldExchange:: IsValidOperation](#isvalidoperation)|Devuelve un valor distinto de cero si la operación actual es adecuada para el tipo de campo que se está actualizando.|
 |[CDaoFieldExchange:: SetFieldType](#setfieldtype)|Especifica el tipo de miembro de datos de conjunto de registros (columna o parámetro) representado por todas las llamadas subsiguientes a funciones DFX hasta la siguiente llamada a `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDaoFieldExchange:: m_nOperation](#m_noperation)|La operación DFX realizada por la llamada actual a la función miembro `DoFieldExchange` del conjunto de registros.|
 |[CDaoFieldExchange:: m_prs](#m_prs)|Puntero al conjunto de registros en el que se realizan las operaciones DFX.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 `CDaoFieldExchange` no tiene una clase base.
 
@@ -89,7 +89,7 @@ BOOL IsValidOperation();
 
 Distinto de cero si la operación actual es adecuada para el tipo de campo que se está actualizando.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Algunas de las operaciones realizadas por el mecanismo DFX se aplican solo a uno de los tipos de campo posibles. Siga el modelo de las funciones DFX existentes.
 
@@ -99,7 +99,7 @@ Para obtener información adicional sobre cómo escribir rutinas DFX personaliza
 
 Identifica la operación que se va a realizar en el objeto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) asociado al objeto de intercambio de campo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El objeto `CDaoFieldExchange` proporciona el contexto para varias operaciones DFX diferentes en el conjunto de registros.
 
@@ -130,7 +130,7 @@ Los valores posibles de `m_nOperation` son:
 
 Contiene un puntero al objeto [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) asociado al objeto `CDaoFieldExchange`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 ##  <a name="setfieldtype"></a>CDaoFieldExchange:: SetFieldType
 
@@ -149,7 +149,7 @@ Un valor de la **enumeración FieldType**, declarado en `CDaoFieldExchange`, que
 
 - `CDaoFieldExchange::param`
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Normalmente, ClassWizard escribe esta llamada. Si escribe su propia función y está usando el Asistente para escribir la función de `DoFieldExchange`, agregue llamadas a su propia función fuera del mapa de campos. Si no usa el asistente, no habrá ninguna asignación de campo. La llamada precede a las llamadas a funciones DFX, una para cada miembro de datos de campo de la clase e identifica el tipo de campo como `CDaoFieldExchange::outputColumn`.
 
@@ -157,7 +157,7 @@ Si Parametriza la clase de conjunto de registros, debe agregar llamadas DFX para
 
 En general, cada grupo de llamadas a funciones DFX asociadas a miembros de datos de campo o a miembros de datos de parámetro debe ir precedido de una llamada a `SetFieldType`. El parámetro *nFieldType* de cada llamada `SetFieldType` identifica el tipo de los miembros de datos representados por las llamadas a funciones DFX que siguen a la llamada a `SetFieldType`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CDaoRecordset (clase)](../../mfc/reference/cdaorecordset-class.md)
