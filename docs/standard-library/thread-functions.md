@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458502"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876182"
 ---
 # <a name="ltthreadgt-functions"></a>Funciones de &lt;thread&gt;
 
@@ -55,7 +55,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 Un objeto [duration](../standard-library/duration-class.md) que especifica un intervalo de tiempo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función bloquea el subproceso de llamada durante al menos el tiempo especificado por *Rel_time*. Esta función no produce ninguna excepción.
 
@@ -75,13 +75,13 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 Representa un punto en el tiempo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función no produce ninguna excepción.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
-Intercambia los Estados de dos objetos  de subproceso.
+Intercambia los Estados de dos objetos de **subproceso** .
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,13 +89,13 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto de **subproceso** izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto de **subproceso** correcto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función llama a `Left.swap(Right)`.
 
@@ -107,6 +107,6 @@ Indica al sistema operativo que ejecute otros subprocesos, incluso si el subproc
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<thread>](../standard-library/thread.md)
