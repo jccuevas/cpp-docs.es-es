@@ -10,22 +10,22 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688469"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875901"
 ---
 # <a name="ltarraygt-operators"></a>Operadores de &lt;array&gt;
 
-El encabezado \<array > incluye estas funciones de plantilla de comparación que no son miembros de la **matriz** .
+El encabezado \<> de matriz incluye estas funciones de plantilla de comparación que no son miembros de la **matriz** .
 
 ||||
 |-|-|-|
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 Comparación de matriz, no igual.
 
@@ -38,10 +38,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *Ty*
+\ *Ty*
 El tipo de un elemento.
 
-*N* \
+*N*\
 Se refiere al tamaño de la matriz.
 
 \ *izquierda*
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> operator&lt;
 
 Comparación de matriz, menor que.
 
@@ -111,10 +111,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *Ty*
+\ *Ty*
 El tipo de un elemento.
 
-*N* \
+*N*\
 Se refiere al tamaño de la matriz.
 
 \ *izquierda*
@@ -184,10 +184,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *Ty*
+\ *Ty*
 El tipo de un elemento.
 
-*N* \
+*N*\
 Se refiere al tamaño de la matriz.
 
 \ *izquierda*
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>  operator==
 
 Comparación de matriz, igual.
 
@@ -257,10 +257,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *Ty*
+\ *Ty*
 El tipo de un elemento.
 
-*N* \
+*N*\
 Se refiere al tamaño de la matriz.
 
 \ *izquierda*
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> operator&gt;
 
 Comparación de matriz, mayor que.
 
@@ -330,10 +330,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *Ty*
+\ *Ty*
 El tipo de un elemento.
 
-*N* \
+*N*\
 Se refiere al tamaño de la matriz.
 
 \ *izquierda*
@@ -403,10 +403,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *Ty*
+\ *Ty*
 El tipo de un elemento.
 
-*N* \
+*N*\
 Se refiere al tamaño de la matriz.
 
 \ *izquierda*
