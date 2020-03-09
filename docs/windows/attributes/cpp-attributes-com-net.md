@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491052"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856447"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM y .NET
 
@@ -34,7 +34,7 @@ Los atributos C++ se extienden en direcciones que no son posibles actualmente si
 
 - Reemplaza la gran cantidad de código IDL requerido por un componente COM con algunos atributos concisos.
 
-Por ejemplo, para implementar un receptor de eventos simple para una clase ATL genérica, podría aplicar el atributo [event_receiver](event-receiver.md) a una clase específica como `CMyReceiver`. Después, el compilador de Microsoft C++ compila el atributo `event_receiver`, que inserta el código adecuado en el archivo objeto.
+Por ejemplo, para implementar un receptor de eventos simple para una clase ATL genérica, puede aplicar el atributo [event_receiver](event-receiver.md) a una clase específica como `CMyReceiver`. A continuación, el compilador de Microsoft C++ compila el atributo `event_receiver`, que inserta el código adecuado en el archivo objeto.
 
 ```cpp
 [event_receiver(com)]
@@ -45,7 +45,7 @@ class CMyReceiver
 }
 ```
 
-Después, puede configurar los métodos `CMyReceiver` `handler1` y `handler2` para controlar los eventos (mediante la función intrínseca [_ _ Hook](../../cpp/hook.md)) desde un origen de eventos, que se puede crear mediante [event_source](event-source.md).
+Después, puede configurar los métodos de `CMyReceiver` `handler1` y `handler2` para controlar los eventos (mediante la función intrínseca [__hook](../../cpp/hook.md)) desde un origen de eventos, que puede crear con [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Mecanismos básicos de los atributos
 
@@ -55,12 +55,12 @@ Como antes, cuando se compila el proyecto, el compilador analiza C++ cada archiv
 
 En la siguiente ilustración se muestra la relación entre el compilador y el proveedor de atributos.
 
-![Comunicación de atributo de componente](../media/vccompattrcomm.gif " de comunicación de atributo de componente")
+![Comunicación de atributos de componentes](../media/vccompattrcomm.gif "Comunicación de atributos de componentes")
 
 > [!NOTE]
 > El uso de atributos no modifica el contenido del archivo de código fuente. La única vez que el código de atributo generado es visible es durante las sesiones de depuración. Además, para cada archivo de código fuente del proyecto, puede generar un archivo de texto que muestre los resultados de la sustitución de atributos. Para obtener más información sobre este procedimiento, vea [/FX (combinar código insertado)](../../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
 
-Como la C++ mayoría de las construcciones, los atributos tienen un conjunto de características que definen su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el atributo [CoClass](coclass.md) solo se puede aplicar a una clase o estructura existente, en lugar del atributo [cpp_quote](cpp-quote.md) , que se puede insertar en cualquier parte dentro C++ de un archivo de código fuente.
+Como la C++ mayoría de las construcciones, los atributos tienen un conjunto de características que definen su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el atributo [CoClass](coclass.md) solo se puede aplicar a una clase o estructura existente, en lugar de al atributo [cpp_quote](cpp-quote.md) , que se puede insertar en cualquier parte C++ dentro de un archivo de código fuente.
 
 ## <a name="building-an-attributed-program"></a>Compilar programas con atributos
 
@@ -80,7 +80,7 @@ Además, el vinculador C++ visual generará toda la información de atributos re
 
 ## <a name="contexts"></a>Contextos de atributo
 
-C++los atributos se pueden describir con cuatro campos básicos: el destino al que se pueden aplicar (**se aplica a**), si son repetibles o no (**repetibles**), la presencia necesaria de otros atributos (**atributos requeridos**) e incompatibilidades. con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla adjunta en el tema de referencia de cada atributo. A continuación se describe cada uno de estos campos.
+C++los atributos se pueden describir mediante cuatro campos básicos: el destino al que se pueden aplicar (**se aplica a**), si son repetibles o no (**repetibles**), la presencia necesaria de otros atributos (**atributos requeridos**) e incompatibilidades con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla adjunta en el tema de referencia de cada atributo. A continuación se describe cada uno de estos campos.
 
 ### <a name="applies-to"></a>Se aplica a
 
@@ -92,7 +92,7 @@ Para obtener más información, vea [atributos por uso](attributes-by-usage.md).
 
 Este campo indica si el atributo se puede aplicar varias veces al mismo destino. La mayoría de los atributos no se pueden repetir.
 
-### <a name="required-attributes"></a>Atributos requeridos
+### <a name="required-attributes"></a>Atributos necesarios
 
 Este campo muestra otros atributos que deben estar presentes (es decir, que se aplican al mismo destino) para que el atributo especificado funcione correctamente. No es habitual que un atributo tenga entradas para este campo.
 
