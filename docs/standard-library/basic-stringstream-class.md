@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
 ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688409"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866290"
 ---
 # <a name="basic_stringstream-class"></a>basic_stringstream (Clase)
 
@@ -32,18 +32,18 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 de *asignación*
+\ de *asignación*
 Clase de asignador.
 
-@No__t_1 *Elem*
+\ *Elem*
 Tipo de elemento básico de la cadena.
 
-*Tr* \
+*Tr*\
 Rasgos de caracteres especializados en el elemento básico de la cadena.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe un objeto que controla la inserción y extracción de elementos y objetos codificados mediante un búfer de secuencia de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **TR**`Alloc` >, con elementos de tipo `Elem`, cuyo los rasgos de caracteres están determinados por la clase `Tr` y cuyos elementos están asignados por un asignador de clase `Alloc`. El objeto almacena un objeto de clase basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+La plantilla de clase describe un objeto que controla la inserción y extracción de elementos y objetos codificados mediante un búfer de secuencia de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **TR**`Alloc`>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`y cuyos elementos están asignados por un asignador de clase `Alloc`. El objeto almacena un objeto de clase basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Constructores
 
@@ -51,22 +51,22 @@ La plantilla de clase describe un objeto que controla la inserción y extracció
 |-|-|
 |[basic_stringstream](#basic_stringstream)|Construye un objeto de tipo `basic_stringstream`.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[allocator_type](#allocator_type)|El tipo es un sinónimo del parámetro de plantilla `Alloc`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[rdbuf](#rdbuf)|Devuelve la dirección del búfer de flujo almacenado de tipo `pointer` a [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|
 |[str](#str)|Establece u obtiene el texto en un búfer de cadena sin cambiar la posición de escritura.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<sstream>
+**Encabezado:** \<sstream >
 
 **Espacio de nombres:** std
 
@@ -90,17 +90,17 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Mode*
+*_Mode*\
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 \ *Str*
 Objeto de tipo `basic_string`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El primer constructor inicializa la clase base mediante una llamada a [basic_iostream](../standard-library/basic-iostream-class.md)( **SB**), donde `sb` es el objeto almacenado de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **TR**`Alloc` >. También inicializa `sb` llamando a basic_stringbuf < **Elem**, **TR**`Alloc` > (`_Mode`).
+El primer constructor inicializa la clase base mediante una llamada a [basic_iostream](../standard-library/basic-iostream-class.md)( **SB**), donde `sb` es el objeto almacenado de la clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **TR**`Alloc`>. También inicializa `sb` llamando a basic_stringbuf < **Elem**, **TR**`Alloc`> (`_Mode`).
 
-El segundo constructor inicializa la clase base al llamar a basic_iostream( **sb**). También inicializa `sb` llamando a basic_stringbuf < **Elem**, **TR**`Alloc` > (_ *Str*, `_Mode`).
+El segundo constructor inicializa la clase base al llamar a basic_iostream( **sb**). También inicializa `sb` llamando a basic_stringbuf < **Elem**, **TR**`Alloc`> (_ *Str*, `_Mode`).
 
 ## <a name="rdbuf"></a>  basic_stringstream::rdbuf
 
@@ -112,11 +112,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-La dirección del búfer de secuencia almacenado de tipo `pointer` a basic_stringbuf < **Elem**, **TR**`Alloc` >.
+La dirección del búfer de secuencia almacenado de tipo `pointer` a basic_stringbuf < **Elem**, **TR**`Alloc`>.
 
 ### <a name="example"></a>Ejemplo
 
-Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo que usa `rdbuf`.
+Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo de uso de `rdbuf`.
 
 ## <a name="str"></a>  basic_stringstream::str
 
@@ -131,22 +131,22 @@ void str(
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Newstr*
+*_Newstr*\
 La nueva cadena.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve un objeto de clase [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, cuya secuencia controlada es una copia de la secuencia controlada por **\*this**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera función miembro devuelve [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). La segunda función miembro llama a `rdbuf` -> **str**(`_Newstr`).
 
 ### <a name="example"></a>Ejemplo
 
-Vea [basic_stringbuf:: STR](../standard-library/basic-stringbuf-class.md#str) para obtener un ejemplo en el que se usa `str`.
+Vea [basic_stringbuf:: STR](../standard-library/basic-stringbuf-class.md#str) para obtener un ejemplo que usa `str`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programación con iostream](../standard-library/iostream-programming.md)\

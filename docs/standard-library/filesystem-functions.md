@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898711"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875835"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; (Funciones)
 
@@ -150,11 +150,11 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 Todas las funciones posiblemente copian o vinculan uno o varios archivos *de* a *a a* bajo el control de *OPC*, que se toma como `copy_options::none` para las sobrecargas sin el parámetro *OPC* . *OPC* debe contener al menos uno de los siguientes:
 
-- `skip_existing`, `overwrite_existing`o `update_existing`
+- `skip_existing`, `overwrite_existing` o `update_existing`
 
 - `copy_symlinks` o `skip_symlinks`
 
-- `directories_only`, `create_symlinks`o `create_hard_links`
+- `directories_only`, `create_symlinks` o `create_hard_links`
 
 Las funciones determinan primero los valores de file_status `f` para *desde* y `t` para *a*:
 
@@ -184,7 +184,7 @@ De lo contrario, si `is_regular_file(f)`, entonces:
 
 - De lo contrario, si `is_directory(f)`, `copy_file(from, to` / `from.filename(), opts)`.
 
-- En caso contrario, `copy_file(from, to, opts)`.
+- En caso contrario, es `copy_file(from, to, opts)`.
 
 De lo contrario, si `is_directory(f) && (opts & copy_options::recursive || !opts)`, entonces:
 
@@ -549,7 +549,7 @@ void swap(path& left, path& right) noexcept;
 
 La función intercambia el contenido de *izquierda* y *derecha*.
 
-## <a name="symlink_status"></a> symlink_status
+## <a name="symlink_status"></a>symlink_status
 
 ```cpp
 file_status symlink_status(const path& pval);
