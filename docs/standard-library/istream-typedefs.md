@@ -8,11 +8,11 @@ f1_keywords:
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
 ms.openlocfilehash: 9a25e4aa9ee42ea36d1bb8d6b196b36ff5c97758
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689479"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856600"
 ---
 # <a name="ltistreamgt-typedefs"></a>Definiciones de tipo &lt;istream&gt;
 
@@ -29,7 +29,7 @@ Tipo `basic_iostream` especializado en **Char**.
 typedef basic_iostream<char, char_traits<char>> iostream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_iostream](../standard-library/basic-iostream-class.md), especializada en elementos de tipo **Char** con rasgos de caracteres predeterminados.
 
@@ -41,7 +41,7 @@ Tipo `basic_istream` especializado en **Char**.
 typedef basic_istream<char, char_traits<char>> istream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_istream](../standard-library/basic-istream-class.md), especializada en elementos de tipo **Char** con rasgos de caracteres predeterminados.
 
@@ -53,7 +53,7 @@ Tipo `basic_iostream` especializado en **wchar_t**.
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_iostream](../standard-library/basic-iostream-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
@@ -65,10 +65,10 @@ Tipo `basic_istream` especializado en **wchar_t**.
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_istream](../standard-library/basic-istream-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<istream>](../standard-library/istream.md)

@@ -1,20 +1,20 @@
 ---
-title: '&lt;lista&gt; funciones | Microsoft Docs'
+title: '&lt;lista de&gt; funciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - list/std::swap
 ms.openlocfilehash: 04f00a9274018432cd03917ae5485f2d395649e4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269027"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874447"
 ---
-# <a name="ltlistgt-functions"></a>&lt;lista&gt; funciones
+# <a name="ltlistgt-functions"></a>&lt;lista de&gt; funciones
 
-## <a name="swap"></a> intercambio
+## <a name="swap"></a>pasar
 
 Intercambia los elementos de dos listas.
 
@@ -25,12 +25,12 @@ template <class T, class Allocator>
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `list`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `list`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta `left.swap(right)`.
