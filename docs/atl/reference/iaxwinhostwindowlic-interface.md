@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindowLic (interfaz)
+title: Interfaz IAxWinHostWindowLic
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindowLic
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
 ms.openlocfilehash: aca3970d13db53ffa04fe9582bbe9b8db78e820d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275995"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864858"
 ---
-# <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic (interfaz)
+# <a name="iaxwinhostwindowlic-interface"></a>Interfaz IAxWinHostWindowLic
 
-Esta interfaz proporciona métodos para manipular un control con licencia y su objeto de host.
+Esta interfaz proporciona métodos para manipular un control con licencia y su objeto host.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,20 +26,20 @@ Esta interfaz proporciona métodos para manipular un control con licencia y su o
 interface IAxWinHostWindowLic : IAxWinHostWindow
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
 |[CreateControlLic](#createcontrollic)|Crea un control con licencia y lo adjunta al objeto host.|
-|[CreateControlLicEx](#createcontrollicex)|Crea un control con licencia, se adjunta al objeto host y, opcionalmente, configura un controlador de eventos.|
+|[CreateControlLicEx](#createcontrollicex)|Crea un control con licencia, lo adjunta al objeto host y, opcionalmente, configura un controlador de eventos.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`IAxWinHostWindowLic` hereda de [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) y agrega los métodos que admiten la creación de controles con licencia.
+`IAxWinHostWindowLic` hereda de [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) y agrega métodos que admiten la creación de controles con licencia.
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa los miembros de esta interfaz.
+Vea [hospedar controles ActiveX mediante la AxHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que utiliza los miembros de esta interfaz.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,9 +48,9 @@ La definición de esta interfaz está disponible como IDL o C++, como se muestra
 |Tipo de definición|Archivo|
 |---------------------|----------|
 |IDL|ATLIFace.idl|
-|C++|ATLIFace.h (que también se incluye en ATLBase.h)|
+|C++|ATLIFace. h (también se incluye en ATLBase. h)|
 
-##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic
+##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic
 
 Crea un control con licencia, lo inicializa y lo hospeda en la ventana identificada por `hWnd`.
 
@@ -65,21 +65,21 @@ STDMETHOD(CreateControlLic)(
 ### <a name="parameters"></a>Parámetros
 
 *bstrLic*<br/>
-[in] BSTR que contiene la clave de licencia para el control.
+de BSTR que contiene la clave de licencia para el control.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) para obtener una descripción de los parámetros restantes y el valor devuelto.
+Vea [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) para obtener una descripción de los parámetros restantes y el valor devuelto.
 
-Llamar a este método equivale a llamar a [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)
+Llamar a este método equivale a llamar a [IAxWinHostWindowLic:: CreateControlLicEx](#createcontrollicex)
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `IAxWinHostWindowLic::CreateControlLic`.
+Vea [hospedar controles ActiveX mediante la AxHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `IAxWinHostWindowLic::CreateControlLic`.
 
-##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx
+##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx
 
-Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada, de forma similar a [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).
+Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada, de forma similar a [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -95,12 +95,12 @@ STDMETHOD(CreateControlLicEx)(
 ### <a name="parameters"></a>Parámetros
 
 *bstrLic*<br/>
-[in] BSTR que contiene la clave de licencia para el control.
+de BSTR que contiene la clave de licencia para el control.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) para obtener una descripción de los parámetros restantes y el valor devuelto.
+Vea [IAxWinHostWindow:: CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) para obtener una descripción de los parámetros restantes y el valor devuelto.
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `IAxWinHostWindowLic::CreateControlLicEx`.
+Vea [hospedar controles ActiveX mediante la AxHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `IAxWinHostWindowLic::CreateControlLicEx`.

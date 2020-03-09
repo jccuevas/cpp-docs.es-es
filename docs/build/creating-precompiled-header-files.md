@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920108"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884097"
 ---
 # <a name="precompiled-header-files"></a>Archivos de encabezado precompilados
 
@@ -116,13 +116,13 @@ Cuando se usa un encabezado precompilado creado con/YC o/Yu, el compilador compa
 
 En esta tabla se enumeran las opciones del compilador que pueden desencadenar una advertencia de incoherencia al usar un encabezado precompilado:
 
-|Opción|Name|Regla|
+|Opción|Nombre|Regla|
 |------------|----------|----------|
 |/D|Definir constantes y macros|Debe ser el mismo entre la compilación que creó el encabezado precompilado y la compilación actual. No se comprueba el estado de las constantes definidas, pero se pueden producir resultados imprevisibles si los archivos dependen de los valores de las constantes modificadas.|
 |/E o/EP|Copiar la salida del preprocesador a la salida estándar|Los encabezados precompilados no funcionan con la opción/E o/EP.|
 |/Fr o/FR|Generar información del explorador de Microsoft Source|Para que las opciones/fr y/FR sean válidas con la opción/Yu, deben estar también en vigor cuando se creó el encabezado precompilado. Las compilaciones posteriores que usan el encabezado precompilado también generan información del explorador de código fuente. La información del explorador se coloca en un único archivo. SBR y otros archivos hacen referencia a ella de la misma manera que la información de CodeView. No se puede invalidar la ubicación de la información del explorador de código fuente.|
 |/GA,/GD,/GE,/GW o/GW|Opciones del Protocolo de Windows|Debe ser el mismo entre la compilación que creó el encabezado precompilado y la compilación actual. Si estas opciones difieren, se genera un mensaje de advertencia.|
-|/Zi|Generar información de depuración completa|Si esta opción está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación pueden usar esa información de depuración. Si/Zi no está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación y la opción/Zi desencadenan una advertencia. La información de depuración se coloca en el archivo objeto actual y los símbolos locales definidos en el encabezado precompilado no están disponibles para el depurador.|
+|/ZI|Generar información de depuración completa|Si esta opción está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación pueden usar esa información de depuración. Si/Zi no está en vigor cuando se crea el encabezado precompilado, las compilaciones posteriores que usan la precompilación y la opción/Zi desencadenan una advertencia. La información de depuración se coloca en el archivo objeto actual y los símbolos locales definidos en el encabezado precompilado no están disponibles para el depurador.|
 
 > [!NOTE]
 >  La instalación del encabezado precompilado está pensada para usarse C++ solo en archivos de código fuente de C.
@@ -306,7 +306,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de compilación de C/C++](reference/c-cpp-building-reference.md)<br/>
 [Opciones del compilador de MSVC](reference/compiler-options.md)
