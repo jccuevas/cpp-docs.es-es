@@ -1,28 +1,28 @@
 ---
-title: '&lt;nuevo&gt; operadores y enumeraciones'
+title: '&lt;nuevos operadores de&gt; y enumeraciones'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243679"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854955"
 ---
-# <a name="ltnewgt-operators-and-enums"></a>&lt;nuevo&gt; operadores y enumeraciones
+# <a name="ltnewgt-operators-and-enums"></a>&lt;nuevos operadores de&gt; y enumeraciones
 
-## <a name="op_align_val_t"></a> enumeración align_val_t
+## <a name="op_align_val_t"></a>align_val_t enum
 
 ```cpp
 enum class align_val_t : size_t {};
 ```
 
-## <a name="op_delete"></a> operador delete
+## <a name="op_delete"></a>operador Delete
 
-La función llamada por una expresión delete para anular la asignación de almacenamiento para objetos individuales.
+Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para un individuo de objetos.
 
 ```cpp
 void operator delete(void* ptr) throw();
@@ -32,24 +32,24 @@ void operator delete(void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR*\
+\ *ptr*
 El puntero cuyo valor se va a representar como no válido mediante la eliminación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función se llama mediante una expresión delete para representar el valor de *ptr* no válido. El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de *ptr* que es null o que se devolvió mediante una llamada anterior a [new (operador)](../standard-library/new-operators.md#op_new)(**size_t**).
+La primera función se llama mediante una expresión delete para representar el valor de *ptr* no válido. El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de *ptr* que es null o que se ha devuelto por una llamada anterior a [operator New](../standard-library/new-operators.md#op_new)(**size_t**).
 
-El comportamiento predeterminado para un valor null de *ptr* es no hacer nada. Cualquier otro valor de *ptr* debe ser un valor devuelto anteriormente por una llamada como se describió anteriormente. El comportamiento predeterminado para dicho valor no NULL de *ptr* consiste en recuperar el almacenamiento asignado por la llamada anterior. No se especifica bajo qué condiciones parte o todo el almacenamiento recuperado se asigna mediante una llamada subsiguiente a `operator new`(**size_t**), o a cualquiera de `calloc`( **size_t**), `malloc`( **size_t**), o `realloc`( **void**<strong>\*</strong>, **size_t**).
+El comportamiento predeterminado de un valor null de *ptr* es no hacer nada. Cualquier otro valor de *ptr* debe ser un valor devuelto anteriormente por una llamada como se ha descrito anteriormente. El comportamiento predeterminado de este tipo de valor no NULL de *ptr* es recuperar el almacenamiento asignado por la llamada anterior. No se especifica en qué condiciones parte o todo el almacenamiento recuperado se asigna mediante una llamada subsiguiente a `operator new`(**size_t**) o a cualquiera de `calloc`( **size_t**), `malloc`( **size_t**) o `realloc`( **void** <strong>\*</strong>, **size_t**).
 
 La segunda función se llama mediante una expresión delete de colocación correspondiente a una expresión new del formulario **new**( **std::size_t**). No hace nada.
 
-La tercera función se llama mediante una expresión delete de colocación correspondiente a una expresión new del formulario **new**( **std::size_t**, **conststd::nothrow_t&** ). El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de `ptr` que es NULL o que se ha devuelto mediante una llamada previa a `operator new`( **size_t**). El comportamiento predeterminado consiste en evaluar **eliminar**(`ptr`).
+La tercera función se llama mediante una expresión delete de colocación correspondiente a una expresión new del formulario **new**( **std::size_t**, **conststd::nothrow_t&** ). El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de `ptr` que es NULL o que se ha devuelto mediante una llamada previa a `operator new`( **size_t**). El comportamiento predeterminado es evaluar **Delete**(`ptr`).
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [new (operador)](../standard-library/new-operators.md#op_new) para obtener un ejemplo que usan **operador delete**.
+Vea [Operator New](../standard-library/new-operators.md#op_new) para obtener un ejemplo que usa el **operador Delete**.
 
-## <a name="op_delete_arr"></a> operator delete]
+## <a name="op_delete_arr"></a>operador delete []
 
 Función a la que llama una expresión delete para cancelar la asignación de almacenamiento para una matriz de objetos.
 
@@ -61,22 +61,22 @@ void operator delete[](void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR*\
+\ *ptr*
 El puntero cuyo valor se va a representar como no válido mediante la eliminación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función se llama mediante un `delete[]` expresión para representar el valor de *ptr* no válido. La función se puede reemplazar porque el programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de *ptr* que es null o que se devolvió mediante una llamada anterior a [new (operador)&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**). El comportamiento predeterminado para un valor null de *ptr* es no hacer nada. Cualquier otro valor de *ptr* debe ser un valor devuelto anteriormente por una llamada como se describió anteriormente. El comportamiento predeterminado para este tipo en un valor distinto de null de *ptr* consiste en recuperar el almacenamiento asignado por la llamada anterior. No se especifica bajo qué condiciones parte o todo el almacenamiento recuperado se asigna mediante una llamada subsiguiente a [new (operador)](../standard-library/new-operators.md#op_new)(**size_t**), o a cualquiera de `calloc`(**size_t**), `malloc`(**size_t**), o `realloc`( **void**<strong>\*</strong>, **size_t**) .
+La primera función se llama mediante una expresión `delete[]` para presentar el valor de *ptr* no válido. La función se puede reemplazar porque el programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de *ptr* que es null o que se ha devuelto por una llamada anterior a [Operator&#91;New](../standard-library/new-operators.md#op_new_arr)(**size_t**). El comportamiento predeterminado de un valor null de *ptr* es no hacer nada. Cualquier otro valor de *ptr* debe ser un valor devuelto anteriormente por una llamada como se ha descrito anteriormente. El comportamiento predeterminado de este tipo de valor no NULL de *ptr* es recuperar el almacenamiento asignado por la llamada anterior. No se especifica en qué condiciones parte o todo el almacenamiento recuperado se asigna mediante una llamada subsiguiente a [Operator New](../standard-library/new-operators.md#op_new)(**size_t**), o a cualquiera de `calloc`(**size_t**), `malloc`(**size_t**) o `realloc`( **void** <strong>\*</strong>, **size_t**).
 
-La segunda función llama a una selección de ubicación `delete[]` expresión correspondiente a un `new[]` expresión de formato `new[]`(**std:: size_t**). No hace nada.
+La segunda función se llama mediante una colocación `delete[]` expresión correspondiente a una expresión de `new[]` con el formato `new[]`(**STD:: size_t**). No hace nada.
 
-La tercera función se llama mediante una expresión delete de colocación correspondiente a una expresión `new[]` del formulario `new[]`( **std::size_t**, **const std::nothrow_t&** ). El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de *ptr* que es null o que se devolvió mediante una llamada anterior al operador `new[]`(**size_t**). El comportamiento predeterminado es evaluar `delete[]`( `ptr`).
+La tercera función se llama mediante una expresión delete de colocación correspondiente a una expresión `new[]` del formulario `new[]`( **std::size_t**, **const std::nothrow_t&** ). El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es aceptar un valor de *ptr* que es null o que se ha devuelto por una llamada anterior al operador `new[]`(**size_t**). El comportamiento predeterminado es evaluar `delete[]`( `ptr`).
 
 ### <a name="example"></a>Ejemplo
 
 Vea [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) para obtener ejemplos del uso de `operator delete[]`.
 
-## <a name="op_new"></a> new (operador)
+## <a name="op_new"></a>operador New
 
 La función a la que llama una expresión new para asignar el almacenamiento a objetos individuales.
 
@@ -91,14 +91,14 @@ void* operator new(std::size_t count, void* ptr) throw();
 *recuento*\
 El número de bytes de almacenamiento que se va a asignar.
 
-*PTR*\
+\ *ptr*
 El puntero que se va a devolver.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un puntero a la dirección de bytes más baja del almacenamiento recién asignado. O *ptr*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera función se llama mediante una expresión new para asignar `count` bytes de almacenamiento correctamente alineados para representar cualquier objeto de ese tamaño. El programa puede definir una función alternativa con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++ y así es reemplazable.
 
@@ -110,23 +110,23 @@ El comportamiento necesario de un controlador nuevo es realizar una de las sigui
 
 - Hacer que más almacenamiento esté disponible para su asignación y, después, devolverlo.
 
-- Llamar a **anular** o **salir**(`int`).
+- Llame a **Abort** o **Exit**(`int`).
 
 - Producir un objeto de tipo **bad_alloc.**
 
 El comportamiento predeterminado de un [controlador nuevo](../standard-library/new-typedefs.md#new_handler) es producir un objeto de tipo `bad_alloc`. Un puntero NULL designa el controlador nuevo predeterminado.
 
-El orden y la contigüidad del almacenamiento asignado mediante llamadas sucesivas a `operator new`(**size_t**) se especifica, como son los valores iniciales almacenados allí.
+El orden y la contigüidad del almacenamiento asignado mediante llamadas sucesivas a `operator new`(**size_t**) no se especifican, al igual que los valores iniciales almacenados allí.
 
 La segunda función se llama mediante una expresión new de colocación para asignar `count` bytes de almacenamiento correctamente alineados para representar cualquier objeto de ese tamaño. El programa puede definir una función alternativa con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++ y así es reemplazable.
 
-El comportamiento predeterminado es devolver `operator new`(`count`) si esa función se realiza correctamente. De lo contrario, devuelve un puntero NULL.
+El comportamiento predeterminado es devolver `operator new`(`count`) si esa función se ejecuta correctamente. De lo contrario, devuelve un puntero NULL.
 
 La tercera función se llama mediante una expresión **new** de colocación, o el formulario **new** (*args*) T. Aquí, *args* consta de un puntero de objeto único. Esto puede ser útil para crear un objeto en una dirección conocida. La función devuelve *ptr*.
 
-Para liberar almacenamiento asignado por **new (operador)** , llame a [operador delete](../standard-library/new-operators.md#op_delete).
+Para liberar el almacenamiento asignado por el **operador New**, llame al [operador Delete](../standard-library/new-operators.md#op_delete).
 
-Para obtener información sobre iniciar o un comportamiento no producen excepciones de nuevo, consulte [el nuevo y eliminar operadores](../cpp/new-and-delete-operators.md).
+Para obtener información sobre cómo iniciar o no producir el comportamiento de New, vea [los operadores New y DELETE](../cpp/new-and-delete-operators.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -171,7 +171,7 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a> operador new]
+## <a name="op_new_arr"></a>operador nuevo []
 
 La función de asignación a la que llama una expresión new para asignar el almacenamiento para una matriz de objetos.
 
@@ -186,16 +186,16 @@ void* operator new[](std::size_t count, void* ptr) throw();
 *recuento*\
 El número de bytes de almacenamiento que se va a asignar para el objeto de matriz.
 
-*PTR*\
+\ *ptr*
 El puntero que se va a devolver.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un puntero a la dirección de bytes más baja del almacenamiento recién asignado. O *ptr*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función se llama mediante una expresión `new[]` para asignar `count` bytes de almacenamiento correctamente alineados para representar cualquier objeto de matriz de ese tamaño o de un tamaño menor. El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es el mismo que para [new (operador)](../standard-library/new-operators.md#op_new)(**size_t**). El comportamiento predeterminado es devolver `operator new`( `count`).
+La primera función se llama mediante una expresión `new[]` para asignar `count` bytes de almacenamiento correctamente alineados para representar cualquier objeto de matriz de ese tamaño o de un tamaño menor. El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento necesario es el mismo que el [operador New](../standard-library/new-operators.md#op_new)(**size_t**). El comportamiento predeterminado es devolver `operator new`( `count`).
 
 La segunda función se llama mediante una expresión `new[]` de colocación para asignar `count` bytes de almacenamiento correctamente alineados para representar cualquier objeto de matriz de ese tamaño. El programa puede definir una función con esta firma de función que reemplaza la versión predeterminada definida por la Biblioteca estándar de C++. El comportamiento predeterminado es devolver **operatornew**(`count`) si esa función se realiza correctamente. De lo contrario, devuelve un puntero NULL.
 

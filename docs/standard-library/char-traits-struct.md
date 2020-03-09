@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689898"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856408"
 ---
 # <a name="char_traits-struct"></a>char_traits (Struct)
 
@@ -47,16 +47,16 @@ struct char_traits;
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo de datos del elemento.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La estructura de plantilla describe varios rasgos de caracteres para el tipo `CharType`. La plantilla de clase [basic_string](../standard-library/basic-string-class.md) , así como varias plantillas de clase iostream, incluido [basic_ios](../standard-library/basic-ios-class.md), usan esta información para manipular elementos de tipo `CharType`. Un tipo de elemento de este tipo no debe requerir ni una construcción ni una destrucción explícita. Debe proporcionar un constructor predeterminado, un constructor de copias y un operador de asignación, con la semántica esperada. Una copia bit a bit debe tener el mismo efecto que una asignación. Ninguna de las funciones miembro de la estructura char_traits puede iniciar excepciones.
+La estructura de plantilla describe varios rasgos de caracteres para el tipo `CharType`. La plantilla de clase [basic_string](../standard-library/basic-string-class.md) , así como varias plantillas de clase iostream, incluidas [basic_ios](../standard-library/basic-ios-class.md), usan esta información para manipular elementos de tipo `CharType`. Un tipo de elemento de este tipo no debe requerir ni una construcción ni una destrucción explícita. Debe proporcionar un constructor predeterminado, un constructor de copias y un operador de asignación, con la semántica esperada. Una copia bit a bit debe tener el mismo efecto que una asignación. Ninguna de las funciones miembro de la estructura char_traits puede iniciar excepciones.
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Un tipo de carácter.|
 |[int_type](#int_type)|Tipo entero que puede representar un carácter de tipo `char_type` o un carácter de final de archivo (EOF).|
@@ -66,11 +66,11 @@ La estructura de plantilla describe varios rasgos de caracteres para el tipo `Ch
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[assign](#assign)|Asigna un valor de carácter a otro.|
 |[compare](#compare)|Compara un número especificado de caracteres de dos cadenas.|
-|[copy](#copy)|Copia un número especificado de caracteres de una cadena a otra. Desusado. En su lugar, use [char_traits::_Copy_s](#copy_s).|
+|[copy](#copy)|Copia un número especificado de caracteres de una cadena a otra. En desuso. En su lugar, use [char_traits::_Copy_s](#copy_s).|
 |[_Copy_s](#copy_s)|Copia un número especificado de caracteres de una cadena a otra.|
 |[eof](#eof)|Devuelve el carácter de final de archivo (EOF).|
 |[eq](#eq)|Comprueba si dos caracteres `char_type` son iguales.|
@@ -78,7 +78,7 @@ La estructura de plantilla describe varios rasgos de caracteres para el tipo `Ch
 |[find](#find)|Busca la primera aparición de un carácter especificado en un intervalo de caracteres.|
 |[length](#length)|Devuelve la longitud de una cadena.|
 |[lt](#lt)|Comprueba si un carácter es menor que otro.|
-|[move](#move)|Copia un número especificado de caracteres de una secuencia en otra secuencia que puede que esté superpuesta. Desusado. En su lugar, use [char_traits::_Move_s](#move_s).|
+|[move](#move)|Copia un número especificado de caracteres de una secuencia en otra secuencia que puede que esté superpuesta. En desuso. En su lugar, use [char_traits::_Move_s](#move_s).|
 |[_Move_s](#move_s)|Copia un número especificado de caracteres de una secuencia en otra secuencia que puede que esté superpuesta.|
 |[not_eof](#not_eof)|Comprueba si un carácter es el carácter de final de archivo (EOF).|
 |[to_char_type](#to_char_type)|Convierte un carácter `int_type` en el carácter `char_type` correspondiente y devuelve el resultado.|
@@ -86,7 +86,7 @@ La estructura de plantilla describe varios rasgos de caracteres para el tipo `Ch
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<string>
+**Encabezado:** \<cadena >
 
 **Espacio de nombres:** std
 
@@ -107,18 +107,18 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* el carácter cuyo valor se va a asignar.
 
-@No__t_1 *_CharTo*
+*_CharTo*\
 El elemento al que se asignará el valor de carácter.
 
 \ *strTo*
 La matriz de cadenas o caracteres a cuyos elementos iniciales se les asignarán valores de caracteres.
 
-@No__t_1 *_Num*
+*_Num*\
 El número de elementos a los que se van a asignar valores.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La segunda función miembro devuelve un puntero a la cadena a cuyos primeros elementos *_Num* se les han asignado valores de *_CharFrom*.
+La segunda función miembro devuelve un puntero a la cadena a cuya primera *_Num* elementos se les han asignado valores de *_CharFrom*.
 
 ### <a name="example"></a>Ejemplo
 
@@ -169,7 +169,7 @@ Un tipo de carácter.
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `CharType`.
 
@@ -192,17 +192,17 @@ static int compare(const char_type* str1,
 \ *Str1*
 La primera de dos cadenas que se van a comparar entre sí.
 
-*str2* \
+*str2*\
 La segunda de dos cadenas que se van a comparar entre sí.
 
-@No__t_1 *_Num*
+*_Num*\
 El número de elementos en las cadenas que se van a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un valor negativo si la primera cadena es menor que la segunda cadena, 0 si las dos cadenas son iguales, o un valor positivo si la primera cadena es mayor que la segunda cadena.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre las cadenas se realiza elemento por elemento, se comprueba primero la igualdad y después, si un par de elementos de la secuencia no son iguales, se comprueba cuál es menor.
 
@@ -255,20 +255,20 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_To*
+*_To*\
 El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-@No__t_1 *_From*
+*_From*\
 El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
-@No__t_1 *_Num*
+*_Num*\
 Número de elementos que se van a copiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 El primer elemento copiado en la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las secuencias de caracteres de origen y destino no deben superponerse.
 
@@ -320,20 +320,20 @@ static char_type *_Copy_s(
 \ de *destino*
 La matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-\ *dest_size*
+*dest_size*\
 Tamaño del *destino*. Si `char_type` es **Char**, este tamaño se encuentra en bytes. Si `char_type` es **wchar_t**, este tamaño está en palabras.
 
-@No__t_1 *_From*
+*_From*\
 Matriz de cadenas o caracteres de origen que se va a copiar.
 
-*recuento* \
+*recuento*\
 Número de elementos que se van a copiar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 La matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las secuencias de caracteres de origen y destino no deben superponerse.
 
@@ -380,7 +380,7 @@ static int_type eof();
 
 El carácter EOF.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Valor que representa el final del archivo (como EOF o WEOF).
 
@@ -429,10 +429,10 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch1*
+*_Ch1*\
 El primero de dos caracteres que se comprobará si son iguales.
 
-@No__t_1 *_Ch2*
+*_Ch2*\
 El segundo de dos caracteres que se comprobará si son iguales.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -489,10 +489,10 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch1*
+*_Ch1*\
 El primero de los dos caracteres cuya igualdad se va a comprobar como `int_type`s.
 
-@No__t_1 *_Ch2*
+*_Ch2*\
 El segundos de los dos caracteres que se comprobará si son iguales como `int_type`s.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -579,10 +579,10 @@ static const char_type* find(const char_type* str,
 \ *Str*
 El primer carácter de la cadena que se buscará.
 
-@No__t_1 *_Num*
+*_Num*\
 El número de posiciones, contando desde el principio, del intervalo que se buscará.
 
-@No__t_1 *_Ch*
+*_Ch*\
 El carácter que se va a buscar en el intervalo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -639,7 +639,7 @@ Tipo entero que puede representar un carácter de tipo `char_type` o un carácte
 typedef long int_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Debe ser posible convertir un valor de tipo `CharType` en `int_type` a `CharType` sin modificar el valor original.
 
@@ -700,10 +700,10 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch1*
+*_Ch1*\
 El primero de dos caracteres que se comprobará si son menores.
 
-@No__t_1 *_Ch2*
+*_Ch2*\
 El segundo de dos caracteres que se comprobará si son menores.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -763,20 +763,20 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_To*
+*_To*\
 El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-@No__t_1 *_From*
+*_From*\
 El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
-@No__t_1 *_Num*
+*_Num*\
 El número de elementos que se copiarán de la cadena de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El primer elemento *_To* copiado en la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
+El primer elemento *_To* copia en la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El origen y destino se pueden superponer.
 
@@ -843,20 +843,20 @@ static char_type *_Move_s(
 \ de *destino*
 El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-\ *dest_size*
-Tamaño del *destino*. Si `char_type` es **Char**, este se encuentra en bytes. Si `char_type` es **wchar_t**, se trata de palabras.
+*dest_size*\
+Tamaño del *destino*. Si `char_type` es **Char**, este se encuentra en bytes. Si `char_type` se **wchar_t**, se trata de palabras.
 
-@No__t_1 *_From*
+*_From*\
 El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
-*recuento* \
+*recuento*\
 El número de elementos que se copiarán de la cadena de origen.
 
 ### <a name="return-value"></a>Valor devuelto
 
 El primer elemento *dest* copiado en la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El origen y destino se pueden superponer.
 
@@ -916,12 +916,12 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 El carácter representado como un `int_type` que se va a probar si es o no es el carácter EOF.
 
 ### <a name="return-value"></a>Valor devuelto
 
-@No__t_0 representación del carácter probado, si el `int_type` del carácter no es igual que el del carácter EOF.
+`int_type` representación del carácter probado, si el `int_type` del carácter no es igual que el del carácter EOF.
 
 Si el valor `int_type` del carácter es igual al valor `int_type` del EOF, entonces **False**.
 
@@ -986,7 +986,7 @@ Tipo entero que puede representar desplazamientos entre posiciones de una secuen
 typedef streamoff off_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un entero con signo que describe un objeto que puede almacenar un desplazamiento de bytes implicado en varias operaciones de posicionamiento de flujo. Normalmente, es un sinónimo de [streamoff](../standard-library/ios-typedefs.md#streamoff), pero tiene esencialmente las mismas propiedades que ese tipo.
 
@@ -998,7 +998,7 @@ Tipo entero que puede representar posiciones de una secuencia.
 typedef streampos pos_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede almacenar toda la información necesaria para restaurar un indicador de posición de archivo arbitraria en un flujo. Normalmente, es un sinónimo de [streampos](../standard-library/ios-typedefs.md#streampos), pero, en cualquier caso, tiene esencialmente las mismas propiedades que ese tipo.
 
@@ -1010,7 +1010,7 @@ Tipo que representa el estado de conversión de caracteres multibyte de una secu
 typedef implementation-defined state_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un objeto que puede representar un estado de conversión. Normalmente, es un sinónimo de `mbstate_t` pero, en cualquier caso, tiene esencialmente las mismas propiedades que ese tipo.
 
@@ -1024,7 +1024,7 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 El carácter `int_type` que se representará como un `char_type`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1033,7 +1033,7 @@ El carácter `char_type` correspondiente al carácter `int_type`.
 
 Un valor de *_Ch* que no se puede representar como tal produce un resultado no especificado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las operaciones de conversión [to_int_type](#to_int_type) y `to_char_type` son inversas entre sí, por lo que:
 
@@ -1130,14 +1130,14 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Ch*
+*_Ch*\
 El carácter `char_type` que se representará como un `int_type`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 El carácter `int_type` correspondiente al carácter `char_type`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las operaciones de conversión `to_int_type` y [to_char_type](#to_char_type) son inversas entre sí, por lo que:
 
@@ -1223,6 +1223,6 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496938"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864923"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Clase CFirePropNotifyEvent
 
@@ -31,20 +31,20 @@ Esta clase proporciona métodos para notificar al receptor del contenedor con re
 class CFirePropNotifyEvent
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Estático Notifica al receptor del contenedor que una propiedad de control ha cambiado.|
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Estático Notifica al receptor del contenedor que una propiedad de control está a punto de cambiar.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CFirePropNotifyEvent`tiene dos métodos que notifican al receptor del contenedor que una propiedad de control ha cambiado o está a punto de cambiar.
+`CFirePropNotifyEvent` tiene dos métodos que notifican al receptor del contenedor que una propiedad de control ha cambiado o está a punto de cambiar.
 
-Si la clase que implementa el control se deriva `IPropertyNotifySink`de, `CFirePropNotifyEvent` los métodos se invocan cuando se `FireOnRequestEdit` llama `FireOnChanged`a o. Si la clase de control no se deriva `IPropertyNotifySink`de, las llamadas a estas funciones devuelven S_OK.
+Si la clase que implementa el control se deriva de `IPropertyNotifySink`, se invocan los métodos de `CFirePropNotifyEvent` cuando se llama a `FireOnRequestEdit` o `FireOnChanged`. Si la clase de control no se deriva de `IPropertyNotifySink`, las llamadas a estas funciones devuelven S_OK.
 
 Para obtener más información sobre la creación de controles, vea el [tutorial de ATL](../../atl/active-template-library-atl-tutorial.md).
 
@@ -52,7 +52,7 @@ Para obtener más información sobre la creación de controles, vea el [tutorial
 
 **Encabezado:** atlctl. h
 
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged
 
 Notifica a todas las interfaces de [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) conectadas (en cada punto de conexión del objeto) que la propiedad de objeto especificada ha cambiado.
 
@@ -72,11 +72,11 @@ de Identificador de la propiedad que ha cambiado.
 
 Uno de los valores HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La llamada a esta función es segura aunque el control no admita puntos de conexión.
 
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit
 
 Notifica a todas las interfaces de [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) conectadas (en cada punto de conexión del objeto) que está a punto de cambiar la propiedad de objeto especificada.
 
@@ -96,10 +96,10 @@ de Identificador de la propiedad que se va a cambiar.
 
 Uno de los valores HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La llamada a esta función es segura aunque el control no admita puntos de conexión.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general sobre clases](../../atl/atl-class-overview.md)

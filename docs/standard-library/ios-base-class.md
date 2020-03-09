@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890127"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856575"
 ---
 # <a name="ios_base-class"></a>ios_base (Clase)
 
@@ -133,9 +133,9 @@ Un objeto de clase ios_base almacena la información de formato, que consta de:
 
 - Dos matrices extensibles, con elementos de tipo **Long** y **void** Pointer.
 
-Un objeto de la clase ios_base también almacena información de estado de la secuencia, en un objeto de tipo [`iostate`](#iostate)y una pila de devolución de llamada.
+Un objeto de clase ios_base también almacena información de estado de la secuencia, en un objeto de tipo [`iostate`](#iostate)y una pila de devolución de llamada.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Constructores
 
@@ -143,7 +143,7 @@ Un objeto de la clase ios_base también almacena información de estado de la se
 |-|-|
 |[ios_base](#ios_base)|Construye objetos `ios_base`.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -176,7 +176,7 @@ Un objeto de la clase ios_base también almacena información de estado de la se
 |[end](#seekdir)|Especifica la búsqueda en relación con el final de una secuencia.|
 |[eofbit](#iostate)|Registra el final de archivo al extraer de una secuencia.|
 |[failbit](#iostate)|Registra un error al extraer un campo válido de una secuencia.|
-|[fixed](#fmtflags)|Especifica la inserción de valores de punto flotante en formato de punto fijo (sin campo de exponente).|
+|[fijo](#fmtflags)|Especifica la inserción de valores de punto flotante en formato de punto fijo (sin campo de exponente).|
 |[floatfield](#fmtflags)|Máscara de bits que se define como `fixed` &#124; `scientific`.|
 |[goodbit](#iostate)|Se borran todos los bits de estado.|
 |[hex](#fmtflags)|Especifica la inserción o extracción de valores enteros en formato hexadecimal.|
@@ -195,7 +195,7 @@ Un objeto de la clase ios_base también almacena información de estado de la se
 |[unitbuf](#fmtflags)|Hace que la salida se vacíe después de cada inserción.|
 |[uppercase](#fmtflags)|Especifica la inserción de los equivalentes en mayúsculas de letras en minúsculas en ciertas inserciones.|
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -205,7 +205,7 @@ Un objeto de la clase ios_base también almacena información de estado de la se
 |[imbue](#imbue)|Cambia la configuración regional.|
 |[Init](#init)|Crea los objetos de `iostream` estándar cuando se construyen.|
 |[iword](#iword)|Asigna un valor que se va a almacenar como `iword`.|
-|[precision](#precision)|Especifica el número de dígitos que se debe mostrar en un número de punto flotante.|
+|[precisión](#precision)|Especifica el número de dígitos que se debe mostrar en un número de punto flotante.|
 |[pword](#pword)|Asigna un valor que se va a almacenar como `pword`.|
 |[register_callback](#register_callback)|Especifica una función de devolución de llamada.|
 |[setf](#setf)|Establece las marcas especificadas.|
@@ -222,7 +222,7 @@ Un objeto de la clase ios_base también almacena información de estado de la se
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<ios>
+**Encabezado:** \<> de iOS
 
 **Espacio de nombres:** std
 
@@ -237,7 +237,7 @@ enum event {
     copyfmt_event};
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo enumerado que describe un objeto que puede almacenar el evento de devolución de llamada usado como argumento para una función registrada con [register_callback](#register_callback). Los diferentes valores de evento son:
 
@@ -264,16 +264,16 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_e*
+*_E*\
 [Evento](#event).
 
-\ *_Base*
+*_Base*\
 Flujo en el que se ha llamado al evento.
 
-_ *I*\
+*_I*\
 Número definido por el usuario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe un puntero a una función que se puede registrar con [register_callback](#register_callback). Este tipo de función no debe producir una excepción.
 
@@ -300,7 +300,7 @@ namespace std {
 }
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El valor devuelto por `what()` es una copia de `_Message`, posiblemente aumentada con una prueba basada en `_Code`. Si no se especifica `_Code`, el valor predeterminado es `make_error_code(io_errc::stream)`.
 
@@ -351,7 +351,7 @@ Nueva configuración de `fmtflags`.
 
 Configuración anterior o actual de `fmtflags`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Vea [ios_base:: fmtflags](#fmtflags) para obtener una lista de marcas.
 
@@ -409,7 +409,7 @@ public:
 };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Es compatible con los manipuladores de [ios](../standard-library/ios.md).
 
@@ -495,16 +495,16 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_Loc*
+*_Loc*\
 Nueva configuración regional.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Configuración regional anterior.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro almacena *_Loc* en el objeto de configuración regional y, a continuación, notifica el evento de devolución de llamada y `imbue_event`. Devuelve el valor almacenado anterior.
+La función miembro almacena *_Loc* en el objeto de configuración regional y, a continuación, notifica el evento de devolución de llamada y el `imbue_event`. Devuelve el valor almacenado anterior.
 
 ### <a name="example"></a>Ejemplo
 
@@ -518,7 +518,7 @@ Crea los objetos de `iostream` estándar cuando se construyen.
 class Init { };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La clase anidada describe un objeto cuya construcción garantiza que los objetos de `iostream` estándar se construyan correctamente, incluso antes de la ejecución de un constructor para un objeto estático arbitrario.
 
@@ -530,9 +530,9 @@ Crea objetos ios_base.
 ios_base();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El constructor (protegido) no hace nada. Una llamada posterior a `basic_ios::`[init](../standard-library/basic-ios-class.md#init) debe inicializar el objeto antes de que se pueda destruir con seguridad. Por lo tanto, el único uso seguro de la clase ios_base es una clase base para la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md).
+El constructor (protegido) no hace nada. Una llamada posterior a `basic_ios::`[init](../standard-library/basic-ios-class.md#init) debe inicializar el objeto antes de que se pueda destruir con seguridad. Por lo tanto, el único uso seguro de la clase ios_base es como una clase base para la plantilla de clase [basic_ios](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>iostate
 
@@ -550,7 +550,7 @@ public:
 };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo de máscara de bits que describe un objeto que puede almacenar información sobre el estado del flujo. Los distintos valores de marca (elementos) son:
 
@@ -560,7 +560,7 @@ El tipo es un tipo de máscara de bits que describe un objeto que puede almacena
 
 - `failbit`, para registrar un error al extraer un campo válido de un flujo.
 
-Además, se `goodbit` un valor útil, donde no se establece ninguno de los bits mencionados previamente (se garantiza que `goodbit` es cero).
+Además, se `goodbit`un valor útil, donde no se establece ninguno de los bits mencionados previamente (se garantiza que`goodbit` es cero).
 
 ## <a name="iword"></a>iword
 
@@ -575,7 +575,7 @@ long& iword(int idx);
 \ *IDX*
 Índice del valor que se va a almacenar como `iword`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve una referencia al elemento *IDX* de la matriz extensible con elementos de tipo **Long**. Todos los elementos están presentes de forma eficaz y almacenan inicialmente el valor cero. La referencia devuelta no es válida después de la siguiente llamada a `iword` para el objeto, después de que el objeto se haya modificado mediante una llamada a `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)o después de que se destruya el objeto.
 
@@ -603,7 +603,7 @@ public:
 };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es una `bitmask type` que describe un objeto que puede almacenar el modo de apertura de varios objetos `iostream`. Los distintos valores de marca (elementos) son:
 
@@ -654,7 +654,7 @@ Objeto de tipo `ios_base`.
 
 Objeto al que se va a asignar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador copia la información de formato almacenada y crea una nueva copia de las matrices extensibles. Después, devuelve **\*this**. Tenga en cuenta que la pila de devolución de llamada no se copia.
 
@@ -671,14 +671,14 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_Prec*
+*_Prec*\
 Número de dígitos significativos que se van a mostrar, o número de dígitos después del separador decimal en notación fija.
 
 ### <a name="return-value"></a>Valor devuelto
 
 La primera función miembro devuelve la [precisión de visualización](../standard-library/ios-base-class.md) almacenada. La segunda función miembro almacena *_Prec* en la precisión de la pantalla y devuelve su valor almacenado anterior.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los números de punto flotante se muestran en notación fija con [fixed](../standard-library/ios-functions.md#fixed).
 
@@ -719,7 +719,7 @@ void *& pword(int index);
 *índice*\
 Índice del valor que se va a almacenar como `pword`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve una referencia al *Índice* de elemento de la matriz extensible con elementos de tipo **void** Pointer. Todos los elementos están presentes de forma eficaz y almacenan inicialmente el puntero null. La referencia devuelta no es válida después de la siguiente llamada a `pword` para el objeto, después de que el objeto se haya modificado mediante una llamada a `basic_ios::`[copyfmt](../standard-library/basic-ios-class.md#copyfmt)o después de que se destruya el objeto.
 
@@ -748,7 +748,7 @@ Puntero a la función de devolución de llamada.
 \ *IDX*
 Número definido por el usuario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro inserciones el par `{pfn, idx}` en la [pila de devolución de llamada](../standard-library/ios-base-class.md)de la pila de devolución de llamada almacenada. Cuando se detecta un evento de devolución de llamada **EV** , se llama a las funciones, en orden inverso al registro, por la expresión `(*pfn)(ev, *this, idx)`.
 
@@ -856,7 +856,7 @@ namespace std {
 }
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un tipo enumerado que describe un objeto que puede almacenar el modo de búsqueda utilizado como argumento para las funciones miembro de varias clases `iostream`. Los diferentes valores de marca son:
 
@@ -904,17 +904,17 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_Mask*
+*_Mask*\
 Marcas que se van a activar.
 
-\ *_Unset*
+*_Unset*\
 Marcas que se van a desactivar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Marcas de formato anteriores
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera función miembro llama eficazmente a [flags](#flags)`(_Mask | _Flags)` (establecer bits seleccionados) y, a continuación, devuelve las marcas de formato anteriores. La segunda función miembro llama eficazmente a `flags(_Mask & fmtfl, flags & ~_Mask)` (reemplazar los bits seleccionados bajo una máscara) y, a continuación, devuelve las marcas de formato anteriores.
 
@@ -954,14 +954,14 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_Sync*
+*_Sync*\
 Si todos los flujos están sincronizados con `stdio`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Configuración anterior para esta función.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro estática almacena un `stdio` marca de sincronización, que inicialmente es **true**. Si **es true**, esta marca garantiza que las operaciones en el mismo archivo se sincronizan correctamente entre las funciones de [`iostreams`](../standard-library/iostreams-conventions.md) y las C++ definidas en la biblioteca estándar. De lo contrario, la sincronización puede estar garantizada o no, pero se puede mejorar el rendimiento. La función almacena *_Sync* en la marca de sincronización `stdio` y devuelve su valor almacenado anterior. Solo puede llamarlo de forma confiable antes de realizar cualquier operación en los flujos estándar.
 
@@ -977,12 +977,12 @@ void unsetf(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_Mask*
+*_Mask*\
 Marcas que quiere desactivar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro llama eficazmente a [Flags](#flags)(`~` *_Mask* **& Flags**) (borrar bits seleccionados).
+La función miembro llama eficazmente a [Flags](#flags)(`~` *_Mask* **marcas de &** ) (borrar bits seleccionados).
 
 ### <a name="example"></a>Ejemplo
 
@@ -1001,14 +1001,14 @@ streamsize width(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_Wide*
+*_Wide*\
 Tamaño deseado del flujo de salida.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Valor de ancho actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera función miembro devuelve el ancho del campo almacenado. La segunda función miembro almacena *_Wide* en el ancho de campo y devuelve su valor almacenado anterior.
 
@@ -1045,7 +1045,7 @@ static int xalloc( );
 
 La función miembro static devuelve un valor estático almacenado, que se incrementa en cada llamada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Puede usar el valor devuelto como argumento de índice único al llamar a las funciones miembro [`iword`](#iword) o [`pword`](#pword).
 
@@ -1079,7 +1079,7 @@ int main( )
 testing
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programación con iostream](../standard-library/iostream-programming.md)\
