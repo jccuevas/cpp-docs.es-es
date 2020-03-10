@@ -2,12 +2,12 @@
 title: Propiedades del depurador (C++ para Linux) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: d76e398d648db7c5cf65e4ca2bb1665aef4359ad
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 8a57e983a32e1ef1eca2bf2452df2cd39d453467
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821402"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883712"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Propiedades de depuración de C++ (C++ para Linux)
 
@@ -21,7 +21,7 @@ La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones p
 
 Propiedad. | Descripción | Opciones
 --- | ---| ---
-Equipo de depuración remoto | **Visual Studio 2019 versión 16.1**: Especifica el equipo donde se va a depurar el programa. Puede ser diferente del equipo de compilación remoto especificado en la página [General](general-linux.md).
+Equipo de depuración remoto | **Visual Studio 2019 versión 16.1**: Especifica el equipo donde se va a depurar el programa. Puede ser diferente del equipo de compilación remoto especificado en la página [General](general-linux.md). Puede agregar o editar una conexión a una máquina de destino con **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones**.
 Comando anterior al inicio | Comando que se ejecuta en el shell antes de que el depurador se inicie, y que se puede usar para modificar el entorno de depuración.
 Programa | Ruta de acceso completa en el equipo remoto al programa que se va a depurar. Si se deja en blanco o sin modificar, el valor predeterminado es la salida del proyecto actual.
 Argumentos de programa | Argumentos de la línea de comandos que deben pasarse al programa que se va a depurar.

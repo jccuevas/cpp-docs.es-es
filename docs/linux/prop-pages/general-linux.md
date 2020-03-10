@@ -3,12 +3,12 @@ title: Propiedades generales (proyecto de C++ para Linux)
 description: Describe las propiedades del proyecto de Linux que se pueden establecer en Visual Studio desde la página Propiedades generales.
 ms.date: 01/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: 6d598e9d52037d709cba87d98ad375455d8c00b0
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: d6a69d9fd3091c885ebd708cbc4598533d2922b4
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031344"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883985"
 ---
 # <a name="general-properties-linux-c"></a>Propiedades generales (C++ para Linux)
 
@@ -29,7 +29,7 @@ Extensión de destino | Especifica la extensión de archivo (por ejemplo, `.a`) 
 Extensiones para eliminar al limpiar | Especificación de comodines delimitados por punto y coma para indicar qué archivos del directorio de archivos intermedios se deben eliminar al limpiar o recompilar.
 Archivo de registro de compilación | Especifica el archivo de registro de compilación en el que se escribe cuando está habilitada la opción de registro de compilación.
 Conjunto de herramientas de la plataforma | Especifica el conjunto de herramientas usado para compilar la configuración actual. Si no se establece, se utiliza el conjunto de herramientas predeterminado.
-Máquina de compilación remota | Máquina o dispositivo de destino que debe usarse para la compilación, implementación y depuración remotas. **Visual Studio 2019 versión 16.1** Puede especificar otro equipo para la depuración en la página [Depuración](debugging-linux.md).
+Máquina de compilación remota | Muestra la máquina o dispositivo de destino que debe usarse para la compilación, implementación y depuración remotas. Puede agregar o editar una conexión a una máquina de destino con **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones**. **Visual Studio 2019 versión 16.1** Puede especificar otro equipo para la depuración en la página [Depuración](debugging-linux.md).
 Directorio raíz de la compilación remota | Especifica una ruta de acceso a un directorio de la máquina o el dispositivo remotos.
 Directorio del proyecto de compilación remota | Especifica una ruta de acceso a un directorio de la máquina o el dispositivo remotos para el proyecto.
 Directorio de implementación remota | **Visual Studio 2019 versión 16.1** Se especifica la ruta de acceso del directorio en el equipo o dispositivo remoto para implementar el proyecto.
