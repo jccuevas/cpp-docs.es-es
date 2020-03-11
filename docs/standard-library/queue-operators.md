@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (queue)
 - std::operator== (queue)
 ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240288"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854892"
 ---
 # <a name="ltqueuegt-operators"></a>Operadores &lt;queue&gt;
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto queue en el lado izquierdo del operador no es igual al objeto queue del lado derecho.
 
@@ -35,17 +35,17 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si las colas no son iguales; **False** si lo son.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. Dos colas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -102,17 +102,17 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es menor y no igual que la cola del lado derecho del operador. Si no es así, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos queue se basa en una comparación del primer par de elementos diferentes.
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a> Operador&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto queue en el lado izquierdo del operador es inferior a o igual que el objeto queue del lado derecho.
 
@@ -165,17 +165,17 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es estrictamente menor que la cola del lado derecho del operador. En caso contrario, es **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. La relación de menor o igual entre dos objetos queue se basa en una comparación del primer par de elementos diferentes.
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a> operador ==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto queue en el lado izquierdo del operador es igual al objeto queue del lado derecho.
 
@@ -230,17 +230,17 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si las colas no son iguales; **False** si lo son.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. Dos colas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -296,17 +296,17 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es estrictamente menor que la cola del lado derecho del operador. En caso contrario, es **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos queue se basa en una comparación del primer par de elementos diferentes.
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a> Operador&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto queue en el lado izquierdo del operador es mayor que o igual al objeto queue del lado derecho.
 
@@ -362,17 +362,17 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `queue`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `queue`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la cola del lado izquierdo del operador es estrictamente menor que la cola del lado derecho del operador. En caso contrario, es **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos queue se basa en una comparación en pares de sus elementos. Dos colas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 

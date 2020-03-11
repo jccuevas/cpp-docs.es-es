@@ -11,11 +11,11 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301319"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856912"
 ---
 # <a name="storage-classes"></a>Clases de almacenamiento
 
@@ -195,7 +195,7 @@ Aspectos que se deben tener en cuenta sobre el especificador **thread_local** :
 
 En Windows, **thread_local** es funcionalmente equivalente a [__declspec (Thread)](../cpp/thread.md) , salvo que **__declspec (Thread)** se puede aplicar a una definición de tipo y es válido en código de C. Siempre que sea posible, utilice **thread_local** porque forma parte del C++ estándar y, por lo tanto, es más portátil.
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>el
 
 **Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): la palabra clave **Register** ya no es una clase de almacenamiento admitida. La palabra clave todavía está reservada en el estándar para su uso futuro.
 
@@ -286,6 +286,6 @@ Hay varios puntos que se deben tener en cuenta sobre el programa:
 
 - Por último, las variables locales estáticas como `I3` conservan sus valores mientras dura el programa, pero se destruyen cuando el programa finaliza.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Declaraciones y definiciones](../cpp/declarations-and-definitions-cpp.md)

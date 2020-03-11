@@ -12,11 +12,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303501"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875836"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 
@@ -24,7 +24,7 @@ En este tema, se documentan las enumeraciones del encabezado del sistema de arch
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<experimental/filesystem>
+**Encabezado:** \<experimental/filesystem >
 
 **Espacio de nombres:** std::experimental::filesystem
 
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valores
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`none`|Comportamiento predeterminado: omitir vínculos simbólicos a directorios. Permiso denegado es un error.|
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valores
 
-|Name|Valor|Descripción|
+|Nombre|Value|Descripción|
 |----------|-----------|-----------------|
 |`not_found`|-1|Representa un archivo que no existe.|
 |`none`|0|Representa un archivo que no tiene ningún atributo de tipo. (No se admite).|
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

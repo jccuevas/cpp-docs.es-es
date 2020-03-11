@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689294"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884011"
 ---
 # <a name="moneypunct-class"></a>moneypunct (Clase)
 
@@ -66,13 +66,13 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *CharType*
+\ *CharType*
 Tipo usado dentro de un programa para codificar caracteres.
 
-@No__t_1 *Intl*
+\ *Intl*
 Una marca que especifica si las convenciones internacionales deben respetarse.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**
 
@@ -84,16 +84,16 @@ El objeto estático constante intl almacena el valor del parámetro de plantilla
 |-|-|
 |[moneypunct](#moneypunct)|Constructor de objetos de tipo `moneypunct`.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[string_type](#string_type)|Tipo que describe una cadena que contiene caracteres de tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[curr_symbol](#curr_symbol)|Devuelve una secuencia específica de la configuración regional de los elementos que se usan como símbolo de moneda.|
 |[decimal_point](#decimal_point)|Devuelve una secuencia específica de la configuración regional de los elementos que se usan como separador decimal.|
@@ -116,7 +116,7 @@ El objeto estático constante intl almacena el valor del parámetro de plantilla
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<locale>
+**Encabezado:** \<configuración regional >
 
 **Espacio de nombres:** std
 
@@ -128,7 +128,7 @@ Tipo que se usa para describir un carácter empleado por una configuración regi
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla **CharType**.
 
@@ -144,7 +144,7 @@ string_type curr_symbol() const;
 
 Una cadena que contiene el símbolo de moneda.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_curr_symbol](#do_curr_symbol).
 
@@ -181,7 +181,7 @@ CharType decimal_point() const;
 
 Una secuencia específica de la configuración regional de los elementos que se usan como un símbolo de separador decimal.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_decimal_point](#do_decimal_point).
 
@@ -277,7 +277,7 @@ Una regla específica de la configuración regional para determinar cómo se agr
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [agrupación](#grouping), donde `grouping` llama a la función miembro virtual.
+Vea el ejemplo de [agrupación](#grouping), donde `grouping`llama a la función miembro virtual.
 
 ## <a name="do_neg_format"></a> moneypunct::do_neg_format
 
@@ -301,9 +301,9 @@ La función miembro virtual protegida devuelve una regla específica de la confi
 
 - `value` para hacer coincidir o generar un valor monetario.
 
-Los componentes de un campo de salida monetario se generan y los componentes de un campo de entrada monetaria coinciden en el orden en que estos elementos aparecen en `pattern::field`. Cada uno de los valores `sign`, `symbol`, `value` y `none` o `space` debe aparecer exactamente una vez. El valor `none` no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si `Intl` es true, el orden es `symbol`, `sign`, `none` y `value`.
+Los componentes de un campo de salida monetario se generan y los componentes de un campo de entrada monetaria coinciden en el orden en que estos elementos aparecen en `pattern::field`. Cada uno de los valores `sign`, `symbol`, `value`y `none` o `space` debe aparecer exactamente una vez. El valor `none` no debe aparecer en primer lugar. El espacio de valor **must** no debe aparecer en primer ni en último lugar. Si `Intl` es true, el orden es `symbol`, `sign`, `none`y `value`.
 
-La versión de plantilla de `moneypunct`\< **CharType**, **Intl**> devuelve `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+La versión de plantilla de `moneypunct`\< **CharType**, **Intl**> devuelve **`{`money_base:: Symbol**, **money_base:: sign**, **money_base:: Value**, **money_base:: None**`}`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -337,7 +337,7 @@ virtual pattern do_pos_format() const;
 
 La función miembro virtual protegida devuelve una regla específica de la configuración regional para determinar cómo generar un campo de salida monetario para una cantidad positiva. (También determina cómo coinciden los componentes de un campo de entrada monetaria). La codificación es la misma que para [do_neg_format](#do_neg_format).
 
-La versión de plantilla de moneypunct\< **CharType**, **Inputlterator**> devuelve `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+La versión de plantilla de moneypunct\< **CharType**, **Inputlterator**> devuelve **`{`money_base:: Symbol**, **money_base:: sign**, **money_base:: Value**, **money_base:: None**`}`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -387,7 +387,7 @@ int frac_digits() const;
 
 Un recuento específico de la configuración regional de la cantidad de dígitos que se muestran a la derecha del separador decimal.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_frac_digits](#do_frac_digits).
 
@@ -456,7 +456,7 @@ string grouping() const;
 
 Una regla específica de la configuración regional para determinar cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_grouping](#do_grouping).
 
@@ -523,10 +523,10 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
@@ -552,7 +552,7 @@ pattern neg_format() const;
 
 Una regla específica de la configuración regional para dar formato a resultados con cantidades negativas.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_neg_format](#do_neg_format).
 
@@ -600,7 +600,7 @@ string_type negative_sign() const;
 
 Devuelve una secuencia específica de la configuración regional de los elementos que se usan como símbolo de signo negativo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_negative_sign](#do_negative_sign).
 
@@ -662,7 +662,7 @@ pattern pos_format() const;
 
 Una regla específica de la configuración regional para dar formato a resultados con cantidades positivas.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_pos_format](#do_pos_format).
 
@@ -710,7 +710,7 @@ string_type positive_sign() const;
 
 Una secuencia específica de la configuración regional de los elementos que se usan como símbolo de signo positivo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_positive_sign](#do_positive_sign).
 
@@ -768,7 +768,7 @@ Un tipo que describe una cadena que contiene caracteres de tipo **CharType**.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md) cuyos objetos pueden almacenar copias de las secuencias de puntuación.
 
@@ -784,7 +784,7 @@ CharType thousands_sep() const;
 
 Una secuencia específica de la configuración regional de los elementos que se usan como separador de miles.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [do_thousands_sep](#do_thousands_sep).
 
@@ -833,7 +833,7 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<locale>](../standard-library/locale.md)\
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

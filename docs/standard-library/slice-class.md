@@ -13,17 +13,17 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450357"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937454"
 ---
 # <a name="slice-class"></a>slice (Clase)
 
 Una clase de utilidad para valarray que se usa para definir subconjuntos unidimensionales de una valarray principal. Si una valarray se considera como una matriz bidimensional con todos los elementos de una matriz, el segmento extrae un vector en una dimensión de la matriz bidimensional.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La clase almacena los parámetros que caracterizan a un objeto de tipo [slice_array](../standard-library/slice-array-class.md). El subconjunto de una valarray se crea indirectamente cuando un objeto de clase slice aparece como argumento para un objeto de clase [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Los valores almacenados que especifican el subconjunto seleccionado de la valarray primaria incluyen:
 
@@ -39,13 +39,13 @@ Las operaciones en valarrays solo se garantizan si los subconjuntos de origen y 
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[slice](#slice)|Define un subconjunto de un `valarray` que consta de un número de elementos equidistantes y que comienzan en un elemento especificado.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función de miembro|Descripción|
 |-|-|
 |[size](#size)|Busca el número de elementos de un segmento de una `valarray`.|
 |[start](#start)|Busca el índice inicial de un segmento de una `valarray`.|
@@ -53,7 +53,7 @@ Las operaciones en valarrays solo se garantizan si los subconjuntos de origen y 
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<valarray>
+**Encabezado:** \<valarray >
 
 **Espacio de nombres:** std
 
@@ -142,14 +142,14 @@ El índice de valarray del primer elemento del subconjunto.
 *_Len*\
 El número de elementos del subconjunto.
 
-*STRI*\
+\ *STRIDE*
 La distancia entre los elementos del subconjunto.
 
 ### <a name="return-value"></a>Valor devuelto
 
 El constructor predeterminado almacena ceros para el índice de inicio, la longitud total y el intervalo. El segundo constructor almacena *_StartIndex* para el índice de inicio, *_Len* para la longitud total y *STRIDE* para el intervalo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El intervalo puede ser negativo.
 
@@ -310,6 +310,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

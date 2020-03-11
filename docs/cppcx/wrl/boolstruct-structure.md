@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
 ms.openlocfilehash: cdec425e317585abbd9730447e2c4fbb19b8250a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398776"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865720"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,17 +26,17 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 struct BoolStruct;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El `BoolStruct` estructura define si un `ComPtr` administra la duración del objeto de una interfaz. `BoolStruct` se usa internamente el [BoolType()](comptr-class.md#operator-microsoft-wrl-details-booltype) operador.
+La estructura `BoolStruct` define si un `ComPtr` está administrando la duración del objeto de una interfaz. el operador [booltype (()](comptr-class.md#operator-microsoft-wrl-details-booltype) utiliza internamente `BoolStruct`.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-Name                          | Descripción
+Nombre                          | Descripción
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------
-[BoolStruct::Member](#member) | Especifica que un [ComPtr](comptr-class.md) es o no, es administrar la vigencia del objeto de una interfaz.
+[Boolstruct (:: Member](#member) | Especifica que un [ComPtr](comptr-class.md) es, o no, la administración de la duración del objeto de una interfaz.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -44,18 +44,18 @@ Name                          | Descripción
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** internal.h
+**Encabezado:** Internal. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="member"></a>BoolStruct::Member
+## <a name="member"></a>Boolstruct (:: Member
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ```cpp
 int Member;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Especifica que un [ComPtr](comptr-class.md) es o no, es administrar la vigencia del objeto de una interfaz.
+Especifica que un [ComPtr](comptr-class.md) es, o no, la administración de la duración del objeto de una interfaz.

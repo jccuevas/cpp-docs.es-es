@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890067"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856549"
 ---
 # <a name="ltiosgt-functions"></a>Funciones de &lt;ios&gt;
 
@@ -82,7 +82,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, las variables de tipo **bool** se muestran como 1 o 0.
 
@@ -134,7 +134,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, las variables de entero se muestran en base 10.
 
@@ -180,12 +180,12 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *_Iosbase*
-Un objeto `ios_base`.
+*_Iosbase*\
+Objeto `ios_base`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El manipulador llama eficazmente a `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`y luego devuelve *iosbase*.
+El manipulador llama eficazmente `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`y, a continuación, devuelve *iosbase*.
 
 ## <a name="fixed"></a>resuelto
 
@@ -204,7 +204,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `fixed` es la notación de presentación predeterminada para los números de punto flotante. [scientific](../standard-library/ios-functions.md#scientific) hace que los números de punto flotante se muestren con notación científica.
 
@@ -252,7 +252,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, las variables de entero se muestran en notación de base 10. [dec](../standard-library/ios-functions.md#dec) y [oct](../standard-library/ios-functions.md#oct) también cambian la forma en que aparecen las variables de entero.
 
@@ -293,7 +293,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 [showpos](../standard-library/ios-functions.md#showpos) hace que se muestre el signo de los números positivos.
 
@@ -351,7 +351,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El manipulador llama eficazmente `str.``(ios_base::left, ios_base::adjustfield)`[setf](../standard-library/ios-base-class.md#setf) y, a continuación, devuelve *Str*.
 
@@ -406,7 +406,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, `noboolalpha` está en vigor.
 
@@ -435,9 +435,9 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La opción `noshowbase` está activada de manera predeterminada. Use [showbase](../standard-library/ios-functions.md#showbase) para indicar la base notacional de los números.
+`noshowbase` está activado. Use [showbase](../standard-library/ios-functions.md#showbase) para indicar la base notacional de los números.
 
 El manipulador llama eficazmente `str.``(ios_base::showbase)`[unsetf](../standard-library/ios-base-class.md#unsetf) y, a continuación, devuelve *Str*.
 
@@ -462,7 +462,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `noshowpoint` está activado de forma predeterminada; use [showpoint](../standard-library/ios-functions.md#showpoint) y [precision](../standard-library/ios-base-class.md#precision) para mostrar ceros después del punto decimal.
 
@@ -509,9 +509,9 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La opción `noshowpos` está activada de manera predeterminada.
+`noshowpos` está activado.
 
 El manipulador llama eficazmente `str.``(ios_base::showps)`[unsetf](../standard-library/ios-base-class.md#unsetf) y, a continuación, devuelve *Str*.
 
@@ -536,7 +536,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, [skipws](../standard-library/ios-functions.md#skipws) está en vigor. Cuando se lee un espacio en el flujo de entrada, señala el final del búfer.
 
@@ -578,7 +578,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) hace que el búfer se procese cuando no está vacío.
 
@@ -601,7 +601,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El manipulador llama eficazmente `str.``(ios_base::uppercase)`[unsetf](../standard-library/ios-base-class.md#unsetf) y, a continuación, devuelve *Str*.
 
@@ -626,7 +626,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, las variables de entero se muestran en notación de base 10. [dec](../standard-library/ios-functions.md#dec) y [hex](../standard-library/ios-functions.md#hex) también cambian la forma en que aparecen las variables de entero.
 
@@ -653,7 +653,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 [left](../standard-library/ios-functions.md#left) también modifica la justificación del texto.
 
@@ -710,7 +710,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, la notación [fixed](../standard-library/ios-functions.md#fixed) está en vigor para los números de punto flotante.
 
@@ -755,7 +755,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La base notacional de un número puede cambiarse por [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct) o [hex](../standard-library/ios-functions.md#hex).
 
@@ -809,7 +809,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, [noshowpoint](../standard-library/ios-functions.md#noshowpoint) está en vigor.
 
@@ -836,7 +836,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 [noshowpos](../standard-library/ios-functions.md#noshowpos) es el valor predeterminado.
 
@@ -881,7 +881,7 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, `skipws` está en vigor. [noskipws](../standard-library/ios-functions.md#noskipws) hace que se lean los espacios del flujo de entrada.
 
@@ -933,13 +933,13 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Tenga en cuenta que `endl` también vacía el búfer.
 
 [nounitbuf](../standard-library/ios-functions.md#nounitbuf) está en vigor de forma predeterminada.
 
-El manipulador llama eficazmente `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`y, a continuación, devuelve *Str*.
+El manipulador llama eficazmente a `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`y, a continuación, devuelve *Str*.
 
 ## <a name="uppercase"></a>  uppercase
 
@@ -958,11 +958,11 @@ Referencia a un objeto de tipo [ios_base](../standard-library/ios-base-class.md)
 
 Referencia al objeto del que se deriva *Str* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, [nouppercase](../standard-library/ios-functions.md#nouppercase) está en vigor.
 
-El manipulador llama eficazmente `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Uppercase](../standard-library/ios-base-class.md#fmtflags)`)`y, a continuación, devuelve *Str*.
+El manipulador llama eficazmente a `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Uppercase](../standard-library/ios-base-class.md#fmtflags)`)`y, a continuación, devuelve *Str*.
 
 ### <a name="example"></a>Ejemplo
 

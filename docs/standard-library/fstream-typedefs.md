@@ -12,11 +12,11 @@ f1_keywords:
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
 ms.openlocfilehash: 3f4104b28f5becfdbf62ede16faa81e855fcac8c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689650"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876118"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; (Typedefs)
 
@@ -34,7 +34,7 @@ Tipo `basic_filebuf` especializado en parámetros de plantilla **Char** .
 typedef basic_filebuf<char, char_traits<char>> filebuf;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_filebuf](../standard-library/basic-filebuf-class.md), especializada en elementos de tipo **Char** con rasgos de caracteres predeterminados.
 
@@ -46,7 +46,7 @@ Tipo `basic_fstream` especializado en parámetros de plantilla **Char** .
 typedef basic_fstream<char, char_traits<char>> fstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_fstream](../standard-library/basic-fstream-class.md), especializada en elementos de tipo **Char** con rasgos de caracteres predeterminados.
 
@@ -54,13 +54,13 @@ El tipo es un sinónimo de la plantilla de clase [basic_fstream](../standard-lib
 
 Define una secuencia que se utilizará para leer datos de caracteres de byte único en serie desde un archivo. `ifstream` es una definición de tipo que especializa la plantilla de clase `basic_ifstream` para **Char**.
 
-También hay `wifstream`, una definición de tipo que especializa `basic_ifstream` para leer caracteres de doble ancho de **wchar_t** . Para obtener más información, vea [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+También hay `wifstream`, un typedef que especializa `basic_ifstream` leer **wchar_t** caracteres de doble ancho. Para obtener más información, vea [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_ifstream](../standard-library/basic-ifstream-class.md), especializada en elementos de tipo char con rasgos de caracteres predeterminados. Un ejemplo es
 
@@ -84,58 +84,58 @@ Tipo `basic_ofstream` especializado en parámetros de plantilla **Char** .
 typedef basic_ofstream<char, char_traits<char>> ofstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada en elementos de tipo **Char** con rasgos de caracteres predeterminados.
 
 ## <a name="wfstream"></a>  wfstream
 
-Tipo `basic_fstream` especializado en parámetros de plantilla **wchar_t** .
+Tipo `basic_fstream` especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_fstream](../standard-library/basic-fstream-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
 ## <a name="wifstream"></a>  wifstream
 
-Tipo `basic_ifstream` especializado en parámetros de plantilla **wchar_t** .
+Tipo `basic_ifstream` especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_ifstream](../standard-library/basic-ifstream-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
 ## <a name="wofstream"></a>  wofstream
 
-Tipo `basic_ofstream` especializado en parámetros de plantilla **wchar_t** .
+Tipo `basic_ofstream` especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_ofstream](../standard-library/basic-ofstream-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
 ## <a name="wfilebuf"></a>  wfilebuf
 
-Tipo `basic_filebuf` especializado en parámetros de plantilla **wchar_t** .
+Tipo `basic_filebuf` especializado en **wchar_t** parámetros de plantilla.
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo de la plantilla de clase [basic_filebuf](../standard-library/basic-filebuf-class.md), especializada en elementos de tipo **wchar_t** con rasgos de caracteres predeterminados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<fstream>](../standard-library/fstream.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857871"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865511"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
@@ -55,16 +55,16 @@ Los tipos enteros como `short`, `int`, `long`, `long long`y sus variantes de `un
 
 ### <a name="type-field-characters"></a>Caracteres del campo de tipo
 
-|Carácter de tipo|Argument|Formato de salida|
+|Carácter de tipo|Argumento|Formato de salida|
 |--------------------|--------------|-------------------|
 |**c**|Carácter|Cuando se usa con funciones `printf`, especifica un carácter de byte único; cuando se usa con funciones `wprintf`, especifica un carácter ancho.|
 |**C**|Carácter|Cuando se usa con funciones `printf`, especifica un carácter ancho; cuando se usa con funciones `wprintf`, especifica un carácter de byte único.|
-|**d**|Integer|Entero decimal con signo.|
-|**i**|Integer|Entero decimal con signo.|
-|**o**|Integer|Entero octal sin signo.|
-|**u**|Integer|Entero decimal sin signo.|
-|**x**|Integer|Entero hexadecimal sin signo; usa “abcdef”.|
-|**X**|Integer|Entero hexadecimal sin signo; usa “ABCDEF”.|
+|**d**|Entero|Entero decimal con signo.|
+|**i**|Entero|Entero decimal con signo.|
+|**o**|Entero|Entero octal sin signo.|
+|**u**|Entero|Entero decimal sin signo.|
+|**x**|Entero|Entero hexadecimal sin signo; usa “abcdef”.|
+|**X**|Entero|Entero hexadecimal sin signo; usa “ABCDEF”.|
 |**e**|Punto flotante|Valor con signo que tiene el formato [-]*d.dddd*__e±__*dd*\[*d*], donde *d* es un dígito decimal, *dddd* es uno o varios dígitos decimales en función de la precisión especificada, o seis de manera predeterminada, y *dd*\[*d*] es dos o tres dígitos decimales en función del [formato de salida](../c-runtime-library/set-output-format.md) y el tamaño del exponente.|
 |**E**|Punto flotante|Es idéntico al formato de **e** salvo que el exponente se introduce mediante **E** en lugar de **e**.|
 |**f**|Punto flotante|Valor con signo que tiene el formato [-]*dddd* __.__ *dddd*, donde *dddd* es uno o varios dígitos decimales. El número de dígitos que hay delante del separador decimal depende de la magnitud del número y el número de dígitos que hay detrás del separador decimal depende de la precisión solicitada, seis de forma predeterminada.|
@@ -81,7 +81,7 @@ Los tipos enteros como `short`, `int`, `long`, `long long`y sus variantes de `un
 
 A partir de Visual Studio 2015, si el argumento correspondiente a un especificador de conversión de punto flotante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) es infinito, indefinido o NaN, la salida con formato se ajusta al estándar C99. Esta tabla enumera la salida con formato:
 
-|{2&gt;Value&lt;2}|Resultados|
+|Value|Output|
 |-----------|------------|
 |infinity|`inf`|
 |NaN reservado|`nan`|
@@ -92,7 +92,7 @@ Cualquiera de estos valores puede ir precedido por un signo. Si un carácter esp
 
 Antes de Visual Studio 2015, CRT utilizaba un formato diferente no estándar para la salida de los valores infinito, indefinido y NaN:
 
-|{2&gt;Value&lt;2}|Resultados|
+|Value|Output|
 |-----------|------------|
 |+ infinito|`1.#INF` *dígitos aleatorios*|
 |- infinity|`-1.#INF` *dígitos aleatorios*|
@@ -118,7 +118,7 @@ El primer campo opcional en una especificación de conversión contiene *directi
 
 ### <a name="flag-characters"></a>Caracteres de marca
 
-|Marcar|Significado|Predeterminado|
+|Marca|Significado|Valor predeterminado|
 |----------|-------------|-------------|
 |**-**|Alinear a la izquierda el resultado dentro del ancho de campo dado.|Alinear a la derecha.|
 |**+**|Usar un signo (+ o -) como prefijo del valor de salida si es de un tipo con signo.|El signo solo aparece para valores con signo negativo (-).|
@@ -160,7 +160,7 @@ El carácter de *tipo* determina la interpretación de *precisión* o la precisi
 
 ### <a name="how-precision-values-affect-type"></a>Cómo afectan los valores de precisión al tipo
 
-|Tipo de|Significado|Predeterminado|
+|Tipo|Significado|Valor predeterminado|
 |----------|-------------|-------------|
 |**a**, **A**|La precisión especifica el número de dígitos que se muestran después del punto.|La precisión predeterminada es 13. Si la precisión es 0, no se imprime ningún punto decimal a menos que se use la marca **#** .|
 |**c**, **C**|La precisión no tiene ningún efecto.|El carácter se imprime.|
@@ -206,8 +206,8 @@ Un especificador de tipo **hc** o **hC** es sinónimo de **c** en las funciones 
 > [!NOTE]
 > **Específico de Microsoft:** Los prefijos de modificador de tamaño de argumentos **i** (i), **I32**, **I64**y **w** son extensiones de Microsoft y no son compatibles con ISO C. El prefijo **h**, cuando se usa con datos de tipo `char`, y el prefijo **l** (l minúscula), cuando se usa con datos de tipo `double`, son extensiones de Microsoft.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
-[printf_p (parámetros de posición)](../c-runtime-library/printf-p-positional-parameters.md)
+[printf_p (Parámetros de posición)](../c-runtime-library/printf-p-positional-parameters.md)

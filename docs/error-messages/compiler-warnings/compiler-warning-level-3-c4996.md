@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898775"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865232"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>ADVERTENCIA del compilador (nivel 3) C4996
 
@@ -21,7 +21,7 @@ El código usa una función, un miembro de clase, una variable o una definición
 > [!IMPORTANT]
 > Esta advertencia siempre es un mensaje deliberado del autor del archivo de encabezado que declara el símbolo. No utilice el símbolo en desuso sin conocer las consecuencias.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Muchas funciones, funciones miembro, funciones de plantilla y variables globales de las bibliotecas de Visual Studio están *desusadas*. Algunos, como POSIX y las funciones específicas de Microsoft, están desusados porque ahora tienen un nombre preferido diferente. Algunas funciones de la biblioteca en tiempo de ejecución de C están desusadas porque no son seguras y tienen una variante más segura. Otras están desusadas porque están obsoletas. Los mensajes de degradación suelen incluir un reemplazo sugerido para la función o variable global en desuso.
 

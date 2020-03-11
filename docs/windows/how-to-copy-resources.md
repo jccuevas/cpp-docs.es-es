@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Administrar recursos (C++)
+title: 'Cómo: administrar recursos (C++)'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740659"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890933"
 ---
-# <a name="how-to-manage-resources-c"></a>Procedimiento Administrar recursos (C++)
+# <a name="how-to-manage-resources-c"></a>Cómo: administrar recursos (C++)
 
 ## <a name="copy-and-edit-resources"></a>Copiar y editar recursos
 
@@ -46,7 +46,7 @@ Puede copiar recursos de un archivo a otro sin cambiarlos o cambiar el idioma o 
 Puede copiar fácilmente los recursos de un recurso o archivo ejecutable existente en el archivo de recursos actual. Para copiar recursos, abra los dos archivos que contienen recursos al mismo tiempo y arrastre los elementos de un archivo a otro o copie y pegue los dos archivos. Este método funciona para archivos de script de recursos (. RC) y archivos de plantilla de recursos (. RCT), así como archivos ejecutables (. exe).
 
 > [!NOTE]
-> Visual C++ incluye archivos de recursos de ejemplo que puede usar en su propia aplicación. Para obtener más información, [consulte CLIPART: Recursos](https://github.com/Microsoft/VCSamples)comunes.
+> Visual C++ incluye archivos de recursos de ejemplo que puede usar en su propia aplicación. Para obtener más información, consulte [CLIPART: Common Resources](https://github.com/Microsoft/VCSamples).
 
 No se puede arrastrar y colocar, copiar, cortar ni pegar entre archivos de recursos en el proyecto (**vista de recursos**) y los archivos. RC independientes se abren en ventanas de documento. Podría hacer esto en versiones anteriores del producto. Use el método de arrastrar y colocar entre los archivos. RC que están abiertos fuera del proyecto.
 
@@ -126,8 +126,8 @@ Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de h
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
-[Cómo: Crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Cómo: Incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Cómo: crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Procedimiento para incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>

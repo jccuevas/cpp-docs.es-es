@@ -21,11 +21,11 @@ helpviewer_keywords:
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303451"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866599"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funciones de intercambio de datos de cuadro de diálogo para CRecordView y CDaoRecordView
 
@@ -76,13 +76,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*index*<br/>
+*índice*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se mueven datos del conjunto de registros al control, esta función establece la selección en el control basándose en el valor especificado en *index*. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, MFC establece el valor del índice en 0. En una transferencia desde el control al conjunto de registros, si el control está vacío o si no hay ningún elemento seleccionado, el campo de conjunto de registros se establece en 0.
 
@@ -124,13 +124,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valor*<br/>
+*value*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se mueven datos del conjunto de registros al control, esta función establece la selección actual del cuadro combinado en la primera fila que comienza con los caracteres de la cadena especificada en *valor*. En una transferencia del conjunto de registros al control, si el campo de conjunto de registros es null, se quita cualquier selección del cuadro combinado y el control de edición del cuadro combinado se establece en Empty. En una transferencia desde el control al conjunto de registros, si el control está vacío, el campo de conjunto de registros se establece en NULL si el campo lo permite.
 
@@ -172,13 +172,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valor*<br/>
+*value*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se mueven datos del conjunto de registros al control, esta función establece la selección actual del cuadro combinado en la primera fila que coincide exactamente con la cadena especificada en *valor*. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es NULL, se quita cualquier selección del cuadro combinado y el cuadro de edición del cuadro combinado se establece en vacío. En una transferencia desde el control al conjunto de registros, si el control está vacío, el campo de conjunto de registros se establece en NULL.
 
@@ -220,13 +220,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de recurso del control de casilla asociado a la propiedad de control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se llama a `DDX_FieldCheck`, el *valor* se establece en el estado actual del control de casilla, o el estado del control se establece en *valor*, dependiendo de la dirección de la transferencia.
 
@@ -262,13 +262,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*index*<br/>
+*índice*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se mueven datos del conjunto de registros al control, esta función establece la selección en el control basándose en el valor especificado en *index*. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, MFC establece el valor del índice en 0. En una transferencia desde el control al conjunto de registros, si el control está vacío, el campo de conjunto de registros se establece en 0.
 
@@ -310,13 +310,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valor*<br/>
+*value*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 En la dirección inversa, esta función establece la selección actual del cuadro de lista en la primera fila que comienza con los caracteres de la cadena especificada por *valor*. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, se quita cualquier selección del cuadro de lista. En una transferencia desde el control al conjunto de registros, si el control está vacío, el campo de conjunto de registros se establece en NULL.
 
@@ -358,13 +358,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valor*<br/>
+*value*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 En la dirección inversa, esta función establece la selección actual del cuadro de lista en la primera fila que coincide exactamente con la cadena especificada en *valor*. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, se quita cualquier selección del cuadro de lista. En una transferencia desde el control al conjunto de registros, si el control está vacío, el campo de conjunto de registros se establece en NULL.
 
@@ -406,13 +406,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR del primer de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes del objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valor*<br/>
+*value*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Al transferir desde el campo de conjunto de registros a la vista, esta función activa el botón de radio *nth* (basado en cero) y desactiva los demás botones. En la dirección inversa, esta función establece el campo de conjunto de registros en el número ordinal del botón de radio que se encuentra actualmente en (activada). En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, no se selecciona ningún botón. En una transferencia desde el control al conjunto de registros, si no hay ningún control seleccionado, el campo de conjunto de registros se establece en NULL si el campo lo permite.
 
@@ -454,13 +454,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR del primer de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes del objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valor*<br/>
+*value*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se mueven datos del conjunto de registros al control, esta función establece la posición de desplazamiento del control de barra de desplazamiento en el valor especificado en *valor*. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, el control de barra de desplazamiento se establece en 0. En una transferencia desde el control al conjunto de registros, si el control está vacío, el valor del campo de conjunto de registros es 0.
 
@@ -503,13 +503,13 @@ Un puntero a un objeto [CDataExchange (](cdataexchange-class.md) . El marco de t
 *nIDC*<br/>
 IDENTIFICADOR de recurso del control deslizante.
 
-*valor*<br/>
+*value*<br/>
 Referencia al valor que se va a intercambiar. Este parámetro contiene o se utilizará para establecer la posición de colocación actual del control deslizante.
 
 *pRecordset*<br/>
 Puntero al `CRecordset` asociado o `CDaoRecordset` objeto con el que se intercambian los datos.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se mueven datos del conjunto de registros al control deslizante, esta función establece la posición del control deslizante en el valor especificado en *valor*. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, la posición del control deslizante se establece en 0. En una transferencia del control al conjunto de registros, si el control está vacío, el valor del campo de conjunto de registros es 0.
 
@@ -649,13 +649,13 @@ Un puntero a un objeto [CDataExchange (](../../mfc/reference/cdataexchange-class
 *nIDC*<br/>
 IDENTIFICADOR de un control en el objeto [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valor*<br/>
+*value*<br/>
 Referencia a un miembro de datos de campo en el `CRecordset` asociado o `CDaoRecordset` objeto. El tipo de datos del valor depende de cuál de las versiones sobrecargadas de `DDX_FieldText` utilice.
 
 *pRecordset*<br/>
 Puntero al objeto [CRecordset](../../mfc/reference/crecordset-class.md) o [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) con el que se intercambian los datos. Este puntero permite a `DDX_FieldText` detectar y establecer valores NULL.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 En el caso de los objetos [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md), `DDX_FieldText` también administra la transferencia de los valores [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) y [COleCurrency](../../mfc/reference/colecurrency-class.md). Un control de cuadro de edición vacío indica un valor nulo. En una transferencia del conjunto de registros al control, si el campo del conjunto de registros es null, el cuadro de edición se establece en Empty. En una transferencia desde el control al conjunto de registros, si el control está vacío, el campo de conjunto de registros se establece en NULL.
 
@@ -673,6 +673,6 @@ La siguiente función de `DoDataExchange` para un [CRecordView](../../mfc/refere
 
   **Encabezado** afxdao. h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Macros y variables globales](mfc-macros-and-globals.md)

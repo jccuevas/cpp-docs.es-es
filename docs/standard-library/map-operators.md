@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956955"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883971"
 ---
 # <a name="ltmapgt-operators"></a>Operadores de &lt;map&gt;
 
@@ -37,17 +37,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si los mapas no son iguales; **False** si los mapas son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. Dos mapas listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -102,17 +102,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa del lado izquierdo del operador es estrictamente menor que el mapa del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a>Operator&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto de mapa del lado izquierdo del operador es menor o igual que el objeto de mapa del lado derecho.
 
@@ -167,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -235,17 +235,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa del lado izquierdo del operador es igual que el mapa del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. Dos mapas listas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -300,17 +300,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa del lado izquierdo del operador es mayor que el mapa del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -364,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `map`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `map`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -432,17 +432,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si los mapas múltiples no son iguales; **False** si los mapas múltiples son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. Dos mapas múltiples son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -497,17 +497,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa múltiple del lado izquierdo del operador es estrictamente menor que el mapa múltiple del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -562,10 +562,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -630,17 +630,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **rue** si el mapa múltiple del lado izquierdo del operador es igual que el mapa múltiple del lado derecho del operador. En caso contrario, **alse**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. Dos mapas múltiples son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -695,17 +695,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el mapa múltiple del lado izquierdo del operador es mayor que el mapa múltiple del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de mapa múltiple se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos se basa en una comparación del primer par de elementos diferentes.
 
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a>Operator&gt;=
+## <a name="op_gt_eq_multimap"></a>operador&gt;=
 
 Comprueba si el objeto de mapa múltiple del lado izquierdo del operador es mayor o igual que el objeto de mapa múltiple del lado derecho.
 
@@ -760,10 +760,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*salido*\
+\ *izquierda*
 Objeto de tipo `multimap`.
 
-*correcta*\
+\ *derecha*
 Objeto de tipo `multimap`.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866040"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856675"
 ---
 # <a name="namespaces-c"></a>Espacios de nombres (C++)
 
-Un espacio de nombres es una región declarativa que proporciona un ámbito a los identificadores (nombres de tipos, funciones, variables, etc.) de su interior. Los espacios de nombres se utilizan para organizar el código en grupos lógicos y para evitar conflictos de nombres que pueden producirse, especialmente cuando la base de código incluye varias bibliotecas. Todos los identificadores del ámbito del espacio de nombres son visibles entre sí sin calificación. Los identificadores que están fuera del espacio de nombres pueden tener acceso a los miembros mediante el nombre completo de cada `std::vector<std::string> vec;`identificador, por ejemplo, o bien mediante una [declaración Using](../cpp/using-declaration.md) para un`using std::string`identificador único () o una [directiva using](../cpp/namespaces-cpp.md#using_directives) para todos los identificadores del espacio de nombres`using namespace std;`(). El código de los archivos de encabezado debe utilizar siempre el nombre completo del espacio de nombres.
+Un espacio de nombres es una región declarativa que proporciona un ámbito a los identificadores (nombres de tipos, funciones, variables, etc.) de su interior. Los espacios de nombres se utilizan para organizar el código en grupos lógicos y para evitar conflictos de nombres que pueden producirse, especialmente cuando la base de código incluye varias bibliotecas. Todos los identificadores del ámbito del espacio de nombres son visibles entre sí sin calificación. Los identificadores que se encuentran fuera del espacio de nombres pueden tener acceso a los miembros mediante el nombre completo de cada identificador, por ejemplo `std::vector<std::string> vec;`, o bien mediante una [declaración Using](../cpp/using-declaration.md) para un identificador único (`using std::string`) o una [directiva using](../cpp/namespaces-cpp.md#using_directives) para todos los identificadores del espacio de nombres (`using namespace std;`). El código de los archivos de encabezado debe utilizar siempre el nombre completo del espacio de nombres.
 
 En el ejemplo siguiente se muestra una declaración de espacio de nombres y tres formas de que el código que está fuera del espacio de nombres obtenga acceso a sus miembros.
 
@@ -98,7 +98,7 @@ int ContosoDataServer::Bar(){return 0;}
 
 Se puede declarar un espacio de nombres en varios bloques de un solo archivo y en varios archivos. El compilador une las partes durante el preprocesamiento y el espacio de nombres resultante contiene todos los miembros declarados en todas las partes. Un ejemplo de esto es el espacio de nombres std, que se declara en cada uno de los archivos de encabezado de la biblioteca estándar.
 
-Los miembros de un espacio de nombres con nombre se pueden definir fuera del espacio de nombres en el que se declaran mediante la calificación explícita del nombre que se está definiendo. Sin embargo, la definición debe aparecer después del punto de la declaración de un espacio de nombres que incluye el espacio de nombres de la declaración. Por ejemplo:
+Los miembros de un espacio de nombres con nombre pueden definirse fuera del espacio de nombres en el que se declaran por calificación explícita del nombre que se define. Sin embargo, la definición debe aparecer después del punto de la declaración de un espacio de nombres que incluye el espacio de nombres de la declaración. Por ejemplo:
 
 ```cpp
 // defining_namespace_members.cpp
@@ -123,7 +123,7 @@ Si un identificador no se declara en un espacio de nombres explícito, forma par
 
 ## <a name="the-std-namespace"></a>El espacio de nombres std
 
-Todos C++ los tipos y funciones de la biblioteca estándar se `std` declaran en el espacio de `std`nombres o espacios de nombres anidados dentro de.
+Todos C++ los tipos y funciones de la biblioteca estándar se declaran en el espacio de nombres `std` o espacios de nombres anidados dentro de `std`.
 
 ## <a name="nested-namespaces"></a>Espacios de nombres anidados
 
@@ -264,6 +264,6 @@ namespace
 
 Esto se denomina espacio de nombres sin nombre o anónimo y es útil cuando se desea que las declaraciones de variables no sean visibles para el código de otros archivos (es decir, se les proporciona una vinculación interna) sin tener que crear un espacio de nombres con nombre. Todo el código del mismo archivo puede ver los identificadores en un espacio de nombres sin nombre, pero los identificadores, junto con el espacio de nombres, no son visibles fuera de ese archivo, o más concretamente fuera de la unidad de traducción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Declaraciones y definiciones](declarations-and-definitions-cpp.md)
