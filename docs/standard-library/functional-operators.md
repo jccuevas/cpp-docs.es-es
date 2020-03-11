@@ -8,15 +8,15 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243770"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876353"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; (Operadores)
 
-## <a name="op_eq_eq"></a> operador ==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto al que se puede llamar está vacío.
 
@@ -30,16 +30,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty*\
+\ *fty*
 Tipo de función que se va a contener.
 
-*F*\
+\ *f*
 Objeto de función
 
-*NPC*\
+\ *NPC*
 Un puntero nulo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los dos operadores toman un argumento que es una referencia a un objeto `function` y un argumento que es una constante de puntero nulo. Ambos devuelven true únicamente si el objeto `function` está vacío.
 
@@ -75,7 +75,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto al que se puede llamar no está vacío.
 
@@ -89,16 +89,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty*\
+\ *fty*
 Tipo de función que se va a contener.
 
-*F*\
+\ *f*
 Objeto de función
 
-*NPC*\
+\ *NPC*
 Un puntero nulo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los dos operadores toman un argumento que es una referencia a un objeto `function` y un argumento que es una constante de puntero nulo. Ambos devuelven True solo si el objeto `function` no está vacío.
 

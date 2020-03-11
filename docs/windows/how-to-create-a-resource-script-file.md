@@ -37,11 +37,11 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444965"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866126"
 ---
 # <a name="how-to-create-resources-c"></a>Cómo: crear recursos (C++)
 
@@ -119,8 +119,8 @@ La **vista de recursos** Windows incluye el cuadro de diálogo **Agregar recurso
 |---|---|
 | **Tipo de recurso** | Especifique el tipo de recurso que desea crear.<br/><br/>Puede expandir las categorías de recursos de cursor y de cuadro de diálogo para mostrar recursos adicionales, que se encuentran en *. \Microsoft Visual Studio \<versión\>\VC\VCResourceTemplates\\< LCID\>\mfc.RCT*. Si necesita agregar archivos. RCT, colóquelos aquí o especifique otra [ruta de acceso de inclusión](../windows/how-to-specify-include-directories-for-resources.md). Los recursos que se muestran en el nivel superior del control de árbol son los recursos predeterminados proporcionados por Visual Studio. Los recursos de los archivos. RCT aparecen en el segundo nivel en la categoría adecuada. No hay ningún límite preestablecido para el número de archivos. RCT que se pueden agregar.<br/><br/> |
 | **Nuevo** | Cree un recurso basado en el tipo seleccionado en el cuadro **tipo de recurso** y abra el recurso en el editor adecuado.<br/><br/>Por ejemplo, si crea un recurso de cuadro de diálogo, abre el recurso en el [Editor de cuadros de diálogo](../windows/dialog-editor.md). |
-| **Import** | Abra el cuadro de diálogo **importar** para ir al recurso que desea importar en el proyecto actual.<br/><br/>Puede importar un mapa de bits, un icono, un cursor, un código HTML y un sonido (. WAV) o un archivo de recursos personalizado. |
-| **Custom** | Abra el cuadro de diálogo **nuevo recurso personalizado** para crear un recurso personalizado.<br/><br/>También incluye una propiedad de **tipo de recurso** que proporciona un cuadro de texto para que escriba el nombre del tipo de recurso personalizado. Visual C++ pone el nombre automáticamente al salir. Los recursos personalizados solo se editan en el [Editor binario](../windows/binary-editor.md). |
+| **Importar** | Abra el cuadro de diálogo **importar** para ir al recurso que desea importar en el proyecto actual.<br/><br/>Puede importar un mapa de bits, un icono, un cursor, un código HTML y un sonido (. WAV) o un archivo de recursos personalizado. |
+| **Personalizada** | Abra el cuadro de diálogo **nuevo recurso personalizado** para crear un recurso personalizado.<br/><br/>También incluye una propiedad de **tipo de recurso** que proporciona un cuadro de texto para que escriba el nombre del tipo de recurso personalizado. Visual C++ pone el nombre automáticamente al salir. Los recursos personalizados solo se editan en el [Editor binario](../windows/binary-editor.md). |
 
 Cuando se crea un nuevo recurso, visual C++ le asigna un nombre único, por ejemplo, `IDD_Dialog1`. Puede personalizar este identificador de recurso editando las propiedades del recurso en el editor de recursos asociado o en el [ventana Propiedades](/visualstudio/ide/reference/properties-window).
 
@@ -187,7 +187,7 @@ Con el archivo de script de recursos abierto, en el menú, vaya a **archivo** > 
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Cómo: administrar recursos](../windows/how-to-copy-resources.md)<br/>

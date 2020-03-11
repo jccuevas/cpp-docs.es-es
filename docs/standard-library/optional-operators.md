@@ -1,5 +1,5 @@
 ---
-title: '&lt;opcional&gt; operadores'
+title: '&lt;operadores de&gt; opcionales'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
 ms.openlocfilehash: c5d0de435180054b186400384fc0583df5b03246
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268927"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854083"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;opcional&gt; operadores
+# <a name="ltoptionalgt-operators"></a>&lt;operadores de&gt; opcionales
 
-## <a name="op_eq_eq"></a> operador ==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto `optional` en el lado izquierdo del operador es igual al objeto `optional` del lado derecho.
 
@@ -39,13 +39,13 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *izquierda*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-*Correcto*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *derecha*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto `optional` en el lado izquierdo del operador no es igual al objeto `optional` del lado derecho.
 
@@ -59,13 +59,13 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *izquierda*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-*Correcto*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *derecha*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función de plantilla devuelve `!(left == right)`.
 
@@ -83,11 +83,11 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *izquierda*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-*Correcto*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *derecha*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -107,17 +107,17 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *izquierda*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-*Correcto*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *derecha*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la lista del lado izquierdo del operador es menor o igual que la lista del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función de plantilla devuelve `!(right < left)`.
 
@@ -135,21 +135,21 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *izquierda*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-*Correcto*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *derecha*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si la lista del lado izquierdo del operador es mayor que la lista del lado derecho del operador. En caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función de plantilla devuelve `right < left`.
 
-## <a name="op_gt_eq"></a> Operador&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto `optional` en el lado izquierdo del operador es mayor o igual que el objeto `optional` del lado derecho.
 
@@ -163,16 +163,16 @@ template <class T, class U> constexpr bool operator>=(const U&, const optional<T
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *izquierda*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
-*Correcto*\
-Un objeto de tipo `optional`, `nullopt_t`, o `T`.
+\ *derecha*
+Objeto de tipo `optional`, `nullopt_t`o `T`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si el `optional` del lado izquierdo del operador es mayor o igual que el `optional` del lado derecho del operador. De lo contrario es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve `!(left < right)`.

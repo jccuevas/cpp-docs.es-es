@@ -7,11 +7,11 @@ ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
 ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459794"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866162"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; (Enumeraciones)
 
@@ -27,7 +27,7 @@ enum codecvt_mode {
 };
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La enumeración define tres constantes que proporcionan información de configuración a las facetas de configuración regional declaradas en [\<codecvt>](../standard-library/codecvt.md). Los diferentes valores son:
 
@@ -39,6 +39,6 @@ La enumeración define tres constantes que proporcionan información de configur
 
 Estas constantes pueden usar OR en combinaciones arbitrarias.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<codecvt>](../standard-library/codecvt.md)

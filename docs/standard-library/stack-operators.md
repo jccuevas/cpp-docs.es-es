@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (stack)
 - std::operator== (stack)
 ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243650"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865904"
 ---
 # <a name="ltstackgt-operators"></a>Operadores de &lt;stack&gt;
 
-## <a name="op_neq"></a> operador! =
+## <a name="op_neq"></a>operador! =
 
 Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.
 
@@ -35,17 +35,17 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si las pilas no son iguales, o bien **false** si las pilas son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. Dos pilas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -100,17 +100,17 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es menor que y no igual que la pila del lado derecho del operador. Si no es así, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de menor que entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a> Operador&lt;=
+## <a name="op_lt_eq"></a>operador&lt;=
 
 Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.
 
@@ -184,17 +184,17 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es menor o igual que la pila del lado derecho del operador. Si no es así, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de menor o igual entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a> operador ==
+## <a name="op_eq_eq"></a>operador = =
 
 Comprueba si el objeto de pila del lado izquierdo del operador es igual al objeto de pila del lado derecho.
 
@@ -251,17 +251,17 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si las pilas son iguales, o bien **false** si las pilas no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. Dos pilas son iguales si tienen el mismo número de elementos y sus elementos respectivos tienen los mismos valores. Si no se cumplen estas condiciones, significa que son distintas.
 
@@ -316,17 +316,17 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es mayor que y no igual que la pila del lado derecho del operador. Si no es así, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de mayor que entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a> Operador&gt;=
+## <a name="op_gt_eq"></a>operador&gt;=
 
 Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.
 
@@ -385,17 +385,17 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parámetros
 
-*Izquierda*\
+\ *izquierda*
 Objeto de tipo `stack`.
 
-*Correcto*\
+\ *derecha*
 Objeto de tipo `stack`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si la pila del lado izquierdo del operador es estrictamente menor que la pila del lado derecho del operador. En caso contrario, es **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La comparación entre los objetos de pila se basa en una comparación en pares de sus elementos. La relación de mayor o igual entre dos objetos de pila se basa en una comparación del primer par de elementos diferentes.
 

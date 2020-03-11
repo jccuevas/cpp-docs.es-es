@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497853"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864451"
 ---
 # <a name="category-macros"></a>Macros de categoría
 
@@ -29,7 +29,7 @@ Estas macros definen las asignaciones de categorías.
 
 **Encabezado:** atlcom. h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
 Marca el principio del mapa de categorías.
 
@@ -42,13 +42,13 @@ BEGIN_CATEGORY_MAP(theClass)
 *Clase*<br/>
 de Nombre de la clase que contiene la asignación de categorías.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El mapa de categorías se usa para especificar qué categorías de componentes implementará la clase COM y qué categorías requiere de su contenedor.
 
-Agregue una entrada [IMPLEMENTED_CATEGORY](#implemented_category) a la asignación para cada categoría implementada por la clase com. Agregue una entrada [REQUIRED_CATEGORY](#required_category) a la asignación para cada categoría que la clase requiera que implementen sus clientes. Marque el final del mapa con la macro [END_CATEGORY_MAP](#end_category_map) .
+Agregue una entrada [IMPLEMENTED_CATEGORY](#implemented_category) a la asignación para cada categoría implementada por la clase com. Agregue una entrada [REQUIRED_CATEGORY](#required_category) a la asignación para cada categoría que la clase requiera que implementen sus clientes. Marca el final del mapa con la macro [END_CATEGORY_MAP](#end_category_map) .
 
-Las categorías de componentes enumeradas en el mapa se registrarán automáticamente cuando el módulo se registre si la clase tiene un [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)asociado.
+Las categorías de componentes enumeradas en el mapa se registrarán automáticamente cuando el módulo se registre si la clase tiene una [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)asociados.
 
 > [!NOTE]
 >  ATL utiliza el administrador de categorías de componentes estándar para registrar categorías de componentes. Si el administrador no está presente en el sistema cuando se registra el módulo, el registro se realiza correctamente, pero las categorías de componentes no se registrarán para esa clase.
@@ -59,7 +59,7 @@ Para obtener más información sobre las categorías de componentes, vea [¿Qué
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
 Marca el final del mapa de categorías.
 
@@ -73,7 +73,7 @@ Vea el ejemplo de [BEGIN_CATEGORY_MAP](#begin_category_map).
 
 ##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Agregue una macro IMPLEMENTED_CATEGORY al [mapa de categorías](#begin_category_map) del componente para especificar que se debe registrar como la implementación de la categoría identificada por el parámetro *CATID* .
+Agregue una macro IMPLEMENTED_CATEGORY a la asignación de [categorías](#begin_category_map) del componente para especificar que se debe registrar como la implementación de la categoría identificada por el parámetro *CATID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -82,9 +82,9 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>Parámetros
 
 *catID*<br/>
-de Una constante CATId o variable que contiene el identificador único global (GUID) para la categoría implementada. Se tomará la dirección de CATID y se agregará a la asignación. Vea la tabla siguiente para obtener una selección de categorías de acciones.
+de Una constante CATId o variable que contiene el identificador único global (GUID) para la categoría implementada. Se tomará la dirección de *CATID* y se agregará a la asignación. Vea la tabla siguiente para obtener una selección de categorías de acciones.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las categorías de componentes enumeradas en el mapa se registrarán automáticamente cuando el módulo se registre si la clase tiene una macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) asociada.
 
@@ -94,7 +94,7 @@ Para obtener más información sobre las categorías de componentes, vea [¿Qué
 
 ### <a name="a-selection-of-stock-categories"></a>Selección de categorías de acciones
 
-|DESCRIPCIÓN|Símbolo|GUID del registro|
+|Descripción|Símbolo|GUID del registro|
 |-----------------|------------|-------------------|
 |Safe para scripting|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Safe para la inicialización|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -110,7 +110,7 @@ Para obtener más información sobre las categorías de componentes, vea [¿Qué
 
 ##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-Agregue una macro REQUIRED_CATEGORY al [mapa de categorías](#begin_category_map) del componente para especificar que se debe registrar como un requisito de la categoría identificada por el parámetro CATID.
+Agregue una macro REQUIRED_CATEGORY a la asignación de [categorías](#begin_category_map) del componente para especificar que se debe registrar como un requisito de la categoría identificada por el parámetro *CATID* .
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -119,9 +119,9 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>Parámetros
 
 *catID*<br/>
-de Una constante CATId o variable que contiene el identificador único global (GUID) para la categoría requerida. Se tomará la dirección de CATID y se agregará a la asignación. Vea la tabla siguiente para obtener una selección de categorías de acciones.
+de Una constante CATId o variable que contiene el identificador único global (GUID) para la categoría requerida. Se tomará la dirección de *CATID* y se agregará a la asignación. Vea la tabla siguiente para obtener una selección de categorías de acciones.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las categorías de componentes enumeradas en el mapa se registrarán automáticamente cuando el módulo se registre si la clase tiene una macro [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) o [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) asociada.
 
@@ -131,7 +131,7 @@ Para obtener más información sobre las categorías de componentes, incluida un
 
 ### <a name="a-selection-of-stock-categories"></a>Selección de categorías de acciones
 
-|DESCRIPCIÓN|Símbolo|GUID del registro|
+|Descripción|Símbolo|GUID del registro|
 |-----------------|------------|-------------------|
 |Safe para scripting|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Safe para la inicialización|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -145,6 +145,6 @@ Para obtener más información sobre las categorías de componentes, incluida un
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Macros](../../atl/reference/atl-macros.md)

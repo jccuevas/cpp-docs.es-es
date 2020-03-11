@@ -13,25 +13,25 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448896"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866261"
 ---
 # <a name="gslice-class"></a>gslice (Clase)
 
 Clase de utilidad para valarray que se usa para definir subconjuntos multidimensionales de una valarray. Si una valarray se considera como una matriz multidimensional con todos los elementos de una matriz, el segmento extrae un vector de la matriz multidimensional.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La clase almacena los parámetros que caracterizan a un objeto de tipo [gslice_array](../standard-library/gslice-array-class.md). El subconjunto de una valarray se crea indirectamente cuando un objeto de clase gslice aparece como argumento de un objeto de clase [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Los valores almacenados que especifican el subconjunto seleccionado de la valarray primaria incluyen:
 
 - Un índice de inicio.
 
-- Vector de longitud de la `valarray<size_t>`clase.
+- Vector de longitud de la clase `valarray<size_t>`.
 
-- Un vector de intervalo de `valarray<size_t>`clase.
+- Un vector de paso de `valarray<size_t>`de clase.
 
 Los dos vectores deben tener la misma longitud.
 
@@ -41,13 +41,13 @@ Las operaciones en valarrays solo se garantizan si los subconjuntos de origen y 
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
 |[gslice](#gslice)|Define un subconjunto de un `valarray` que consta de varios segmentos de la `valarray` que todas comienzan a partir de un elemento especificado.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función de miembro|Descripción|
 |-|-|
 |[size](#size)|Busca los valores de la matriz especificando el número de elementos en un segmento general de un `valarray`.|
 |[start](#start)|Busca el índice inicial de un segmento general de un `valarray`.|
@@ -55,7 +55,7 @@ Las operaciones en valarrays solo se garantizan si los subconjuntos de origen y 
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<valarray>
+**Encabezado:** \<valarray >
 
 **Espacio de nombres:** std
 
@@ -87,7 +87,7 @@ Una matriz que especifica el intervalo de cada segmento.
 
 El constructor predeterminado almacena cero para el índice de inicio y vectores de longitud cero para los vectores de longitud e intervalo. El segundo constructor almacena *_StartIndex* para el índice de inicio, *_LenArray* para la matriz de longitud y *_IncArray* para la matriz de STRIDE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **gslice** define un subconjunto de una valarray que consta de varios segmentos de la valarray que empiezan en el mismo elemento especificado. La capacidad de usar matrices para definir varios segmentos es la única diferencia entre `gslice` y [slice::slice](../standard-library/slice-class.md#slice). El primer segmento tiene un primer elemento con un índice de *_StartIndex*, un número de elementos especificado por el primer elemento de *_LenArray*y un intervalo proporcionado por el primer elemento de *_IncArray*. El siguiente conjunto de segmentos ortogonales tiene primeros elementos proporcionados por el primer segmento. El segundo elemento de *_LenArray* especifica el número de elementos. El intervalo lo proporciona el segundo elemento de *_IncArray*. Una tercera dimensión de segmentos podría tomar los elementos de la matriz bidimensional como los elementos de inicio y continuar de forma análoga
 
@@ -150,7 +150,7 @@ valarray<size_t> size() const;
 
 Valarray que especifica el número de elementos de cada segmento de un segmento general de una valarray.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve las longitudes almacenadas de los segmentos.
 
@@ -347,6 +347,6 @@ The strides of vaResult are:
 vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

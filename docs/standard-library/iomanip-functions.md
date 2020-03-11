@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518470"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856589"
 ---
 # <a name="ltiomanipgt-functions"></a>Funciones de &lt;iomanip&gt;
 
@@ -51,7 +51,7 @@ template <class Money>
 T7 get_money(Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *cantidad*\
 Valor monetario extraído.
@@ -59,7 +59,7 @@ Valor monetario extraído.
 *use_intl*\
 Si **es true**, se usa el formato internacional. El valor predeterminado es **false**.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El manipulador devuelve un objeto que, cuando se extrae de la secuencia `str`, se comporta como un `formatted input function` que llama a la función miembro `get` para la faceta de configuración regional `money_get` asociada a `str`, utilizando *use_intl* para indicar el formato internacional. Si es correcto, la llamada almacena en *cantidad* el valor monetario extraído. Después, el manipulador devuelve `str`.
 
@@ -74,7 +74,7 @@ template <class Elem>
 T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *time_ptr*\
 Tiempo en forma de estructura de tiempo.
@@ -82,7 +82,7 @@ Tiempo en forma de estructura de tiempo.
 *time_format*\
 Formato que se quiere usar para obtener el valor de tiempo.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El manipulador devuelve un objeto que, cuando se extrae del flujo `str`, se comporta como una `formatted input function` que llama a la función miembro `get` para la faceta de configuración regional `time_get` asociada a `str`, con `tptr` para indicar la estructura de tiempo y `fmt` para indicar el comienzo de una cadena de formato terminada en null. Si es correcto, la llamada almacena en la estructura de tiempo los valores asociados a todos los campos de tiempo extraídos. Después, el manipulador devuelve `str`.
 
@@ -95,7 +95,7 @@ template <class Money>
 T8 put_money(const Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *cantidad*\
 Importe monetario que se va a insertar en el flujo.
@@ -107,7 +107,7 @@ Establézcalo en **true** si el manipulador debe utilizar el formato internacion
 
 Devuelve `str`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El manipulador devuelve un objeto que, cuando se inserta en el flujo `str`, se comporta como una función de salida con formato que llama a la función miembro `put` para la faceta de configuración regional `money_put` asociada a `str`. Si es correcto, la llamada inserta `amount` con el formato adecuado, utilizando *use_intl* para indicar el formato internacional y `str.fill()`, como elemento de relleno. Después, el manipulador devuelve `str`.
 
@@ -122,7 +122,7 @@ template <class Elem>
 T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *time_ptr*\
 Valor de tiempo que se va a escribir en el flujo, proporcionado en una estructura de tiempo.
@@ -130,7 +130,7 @@ Valor de tiempo que se va a escribir en el flujo, proporcionado en una estructur
 *time_format*\
 Formato deseado para escribir el valor de tiempo.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 El manipulador devuelve un objeto que, cuando se inserta en el flujo `str`, se comporta como una `formatted output function`. La función de salida llama a la función miembro `put` para la faceta de configuración regional `time_put` asociada a `str`. La función Output usa *time_ptr* para indicar la estructura de tiempo y *time_format* para indicar el principio de una cadena de formato terminada en NULL. Si es correcto, la llamada inserta texto literal de la cadena de formato y valores convertidos de la estructura de tiempo. Después, el manipulador devuelve `str`.
 
@@ -145,7 +145,7 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *Str*
 Un STD:: String, Char\*, literal de cadena o literal de cadena sin formato, o una versión ancha de cualquiera de estos (por ejemplo, STD:: wstring, wchar_t\*).
@@ -156,7 +156,7 @@ Un carácter especificado por el usuario o carácter ancho, que se utilizará co
 \ de *escape*
 Un carácter especificado por el usuario o carácter ancho, que se utilizará como carácter de escape para las secuencias de escape dentro de la cadena.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Vea [Usar operadores de inserción y controlar el formato](../standard-library/using-insertion-operators-and-controlling-format.md).
 
@@ -309,7 +309,7 @@ Borra las marcas especificadas.
 T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ de *máscara*
 Marcas que se van a borrar.
@@ -330,7 +330,7 @@ Establece la base de los enteros.
 T3 setbase(int base);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *base*\
 Base numérica.
@@ -360,7 +360,7 @@ template <class Elem>
 T4 setfill(Elem Ch);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ de *CH*
 Carácter que se usará para rellenar los espacios en una presentación justificada a la derecha.
@@ -381,7 +381,7 @@ Establece las marcas especificadas.
 T2 setiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ de *máscara*
 Marcas que se van a establecer.
@@ -402,7 +402,7 @@ Establece la precisión de los valores de punto flotante.
 T5 setprecision(streamsize Prec);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 \ *PREC*
 Precisión de los valores de punto flotante.
@@ -423,7 +423,7 @@ Especifica el ancho del campo de presentación para el siguiente elemento del fl
 T6 setw(streamsize Wide);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *Ancho*\
 Ancho del campo de presentación.
@@ -432,7 +432,7 @@ Ancho del campo de presentación.
 
 El manipulador devuelve un objeto que, cuando se extrae o se inserta en el flujo `str`, llama a `str.``(Wide)`de [ancho](../standard-library/ios-base-class.md#width) y, a continuación, devuelve `str`.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 setw establece el ancho solo para el siguiente elemento del flujo y se debe insertar delante de cada elemento cuyo ancho se desea especificar.
 
@@ -651,6 +651,6 @@ l4 = 4096
 l5 = 65536
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<iomanip>](../standard-library/iomanip.md)

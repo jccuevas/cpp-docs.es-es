@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447326"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865184"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; (Funciones)
 
@@ -44,10 +44,10 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parámetros
 
-*directivas*\
+\ de *Directiva*
 Valor [launch](../standard-library/future-enums.md#launch).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Definiciones de las abreviaturas:
 
@@ -63,9 +63,9 @@ La segunda función devuelve un objeto `future<Ty>` cuyo *estado asincrónico as
 
 A menos que `decay<Fn>::type` sea un tipo distinto de launch, la segunda función no participa en la resolución de sobrecarga.
 
-El C++ estándar indica que, si la Directiva se inicia:: Async, la función crea un nuevo subproceso. Sin embargo, la implementación de Microsoft no se ajusta actualmente. Obtiene los subprocesos de Windows ThreadPool, que en algunos casos puede proporcionar un subproceso reciclado en lugar de uno nuevo. Esto significa que la `launch::async` Directiva se implementa realmente como `launch::async|launch::deferred`.  Otra implicación de la implementación basada en ThreadPool es que no hay ninguna garantía de que las variables locales del subproceso se destruyan cuando se complete el subproceso. Si el subproceso se recicla y se proporciona a una nueva `async`llamada a, las variables anteriores seguirán existiendo. Por lo tanto, se recomienda no usar variables locales de subproceso `async`con.
+El C++ estándar indica que, si la Directiva se inicia:: Async, la función crea un nuevo subproceso. Sin embargo, la implementación de Microsoft no se ajusta actualmente. Obtiene los subprocesos de Windows ThreadPool, que en algunos casos puede proporcionar un subproceso reciclado en lugar de uno nuevo. Esto significa que la Directiva de `launch::async` se implementa realmente como `launch::async|launch::deferred`.  Otra implicación de la implementación basada en ThreadPool es que no hay ninguna garantía de que las variables locales del subproceso se destruyan cuando se complete el subproceso. Si el subproceso se recicla y se proporciona a una nueva llamada a `async`, las variables antiguas seguirán existiendo. Por lo tanto, se recomienda no usar variables locales de subproceso con `async`.
 
-Si  la directiva `launch::deferred`es, la función marca su estado asincrónico asociado como que contiene una *función aplazada* y devuelve. La primera llamada a cualquier función no cronometrada que espera hasta que el estado asincrónico asociado esté listo llama a la función aplazada evaluando `INVOKE(dfn, dargs..., Ty)`.
+Si la *Directiva* se `launch::deferred`, la función marca su estado asincrónico asociado como que contiene una *función aplazada* y devuelve. La primera llamada a cualquier función no cronometrada que espera hasta que el estado asincrónico asociado esté listo llama a la función aplazada evaluando `INVOKE(dfn, dargs..., Ty)`.
 
 En todos los casos, el estado asincrónico asociado del objeto `future` no se establece en *listo* hasta que la evaluación de `INVOKE(dfn, dargs..., Ty)` no se completa, ya sea iniciando una excepción o volviendo normalmente. El resultado del estado asincrónico asociado es una excepción si se produjo alguna, o cualquier valor devuelto por la evaluación.
 
@@ -116,7 +116,7 @@ Valor [future_errc](../standard-library/future-enums.md#future_errc) que identif
 
 `error_condition(static_cast<int>(Errno), future_category());`
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> swap
 
 Intercambia el *estado asincrónico asociado* de un objeto `promise` con el de otro.
 
@@ -130,12 +130,12 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Objeto `promise` izquierdo.
 
-*Correcta*\
+\ *derecha*
 Objeto `promise` derecho.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<future>](../standard-library/future.md)

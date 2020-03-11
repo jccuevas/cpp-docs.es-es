@@ -9,13 +9,13 @@ ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454820"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874009"
 ---
-# <a name="ltunorderedmapgt-functions"></a>Funciones de &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-functions"></a>Funciones de &lt;unordered_map&gt;
 
 |||
 |-|-|
@@ -34,28 +34,28 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+\ *clave*
 El tipo de clave.
 
-*Ty*\
+\ *Ty*
 El tipo asignado.
 
-*LM*\
+\ *hash*
 El tipo de objeto de la función hash.
 
-*Pronostica*\
+*Pred*\
 El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*\
+\ de *asignación*
 Clase de asignador.
 
-*salido*\
+\ *izquierda*
 El primer contenedor que se va a cambiar.
 
-*correcta*\
+\ *derecha*
 El segundo contenedor que se va a cambiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.
 
@@ -127,28 +127,28 @@ void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Clave*\
+\ *clave*
 El tipo de clave.
 
-*Ty*\
+\ *Ty*
 El tipo asignado.
 
-*LM*\
+\ *hash*
 El tipo de objeto de la función hash.
 
-*Pronostica*\
+*Pred*\
 El tipo de objeto de función de comparación de igualdad.
 
-*Alloc*\
+\ de *asignación*
 Clase de asignador.
 
-*salido*\
+\ *izquierda*
 El primer contenedor que se va a cambiar.
 
-*correcta*\
+\ *derecha*
 El segundo contenedor que se va a cambiar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla ejecuta `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
 
@@ -207,6 +207,6 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [<unordered_map>](../standard-library/unordered-map.md)

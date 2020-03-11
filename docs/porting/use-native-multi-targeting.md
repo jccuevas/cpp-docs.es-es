@@ -6,11 +6,11 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
 ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627155"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875876"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio
 
@@ -67,7 +67,7 @@ Para las descargas disponibles actualmente, vea [descargar software de Visual St
 
 Cuando se instalan estos productos, el menú desplegable de propiedades **Conjunto de herramientas de la plataforma**, situado en el cuadro de diálogo **Páginas de propiedades**, se actualiza automáticamente para mostrar los conjuntos de herramientas que hay disponibles. Ya puede usar la versión más reciente de Visual Studio para compilar proyectos para las versiones más antiguas del conjunto de herramientas sin convertirlas ni actualizarlas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Mejoras de conformidad de C++ en Visual Studio](../overview/cpp-conformance-improvements.md)

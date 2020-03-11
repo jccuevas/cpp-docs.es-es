@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452503"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865877"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream (Clase)
 
@@ -36,15 +36,15 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*\
+\ *Elem*
 Elemento básico del búfer del archivo.
 
-*Anticipo*\
+*Tr*\
 Rasgos del elemento básico del búfer del archivo (normalmente `char_traits`< `Elem`>).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cuando la especialización **wchar_t** de `basic_ofstream` escribe en el archivo, si el archivo se abre en modo de texto, escribirá una secuencia MBCS. La representación interna usará un búfer de caracteres `wchar_t`.
+Cuando el **wchar_t** especialización de `basic_ofstream` escribe en el archivo, si el archivo se abre en modo de texto, escribirá una secuencia MBCS. La representación interna usará un búfer de caracteres `wchar_t`.
 
 El objeto almacena un objeto de clase `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -72,13 +72,13 @@ int main(int argc, char **argv)
 
 ### <a name="constructors"></a>Constructores
 
-|Constructor|DESCRIPCIÓN|
+|Constructor|Descripción|
 |-|-|
-|[basic_ofstream](#basic_ofstream)|Crea un objeto del tipo `basic_ofstream`.|
+|[basic_ofstream](#basic_ofstream)|Crea un objeto de tipo `basic_ofstream`.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función de miembro|Descripción|
 |-|-|
 |[close](#close)|Cierra un archivo.|
 |[is_open](#is_open)|Determina si un archivo está abierto.|
@@ -88,19 +88,19 @@ int main(int argc, char **argv)
 
 ### <a name="operators"></a>Operadores
 
-|Operador|DESCRIPCIÓN|
+|Operator|Descripción|
 |-|-|
 |[operator=](#op_eq)|Asigna el contenido de este objeto de secuencia. Se trata de una asignación de movimiento que implica un `rvalue reference` que no deja ninguna copia atrás.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<fstream>
+**Encabezado:** \<FStream >
 
 **Espacio de nombres:** std
 
 ## <a name="basic_ofstream"></a>  basic_ofstream::basic_ofstream
 
-Crea un objeto del tipo `basic_ofstream`.
+Crea un objeto de tipo `basic_ofstream`.
 
 ```cpp
 basic_ofstream();
@@ -130,14 +130,14 @@ Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-cl
 *_Prot*\
 Protección predeterminada de apertura del archivo, equivalente al parámetro `shflag` de [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-*correcta*\
+\ *derecha*
 Referencia a un valor R al objeto `basic_ofstream` que se usa para inicializar este objeto `basic_ofstream`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El primer constructor inicializa la clase base mediante una llamada a [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), donde `sb` es el objeto almacenado de la clase [ basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. También inicializa `sb` al llamar a `basic_filebuf`< `Elem`, `Tr`>.
+El primer constructor inicializa la clase base mediante una llamada a [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), donde `sb` es el objeto almacenado de la clase [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem``Tr`>. También inicializa `sb` al llamar a `basic_filebuf`< `Elem`, `Tr`>.
 
-El segundo y el tercer constructor inicializan la clase base al llamar a `basic_ostream`(**sb**). `sb` También se inicializa `basic_filebuf` llamando< a ,`Tr`>y, a continuación, `sb`. `Elem` [open](../standard-library/basic-filebuf-class.md#open)(`_Filename`, `_Mode` &#124; `ios_base::out`). Si la última función devuelve un puntero nulo, el constructor llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+El segundo y el tercer constructor inicializan la clase base al llamar a `basic_ostream`(**sb**). También inicializa `sb` llamando a `basic_filebuf`< `Elem`, `Tr`> y `sb`. [open](../standard-library/basic-filebuf-class.md#open)(`_Filename`, `_Mode` &#124; `ios_base::out`). Si la última función devuelve un puntero nulo, el constructor llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 El cuarto constructor es una función de copia. Inicializa el objeto con el contenido de la *derecha*, tratado como una referencia rvalue.
 
@@ -171,9 +171,9 @@ Cierra un archivo.
 void close();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro llama a [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [Close](../standard-library/basic-filebuf-class.md#close).
+La función miembro llama a [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).
 
 ### <a name="example"></a>Ejemplo
 
@@ -191,7 +191,7 @@ bool is_open() const;
 
 **True** si el archivo está abierto, **False** en caso contrario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro devuelve [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
@@ -252,13 +252,13 @@ Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-cl
 *_Prot*\
 Protección predeterminada de apertura del archivo, equivalente al parámetro `shflag` de [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La función miembro llama a [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Si esa función devuelve un puntero nulo, la función llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+La función miembro llama a [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *filename*, &#124; `_Mode` `ios_base::out`). Si esa función devuelve un puntero nulo, la función llama a [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 ### <a name="example"></a>Ejemplo
 
-Vea [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) para obtener un ejemplo que `open`usa.
+Vea [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) para obtener un ejemplo que usa `open`.
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -270,14 +270,14 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Referencia a un valor R a un objeto `basic_ofstream`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve `*this`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El operador miembro reemplaza el contenido del objeto utilizando el contenido de la *derecha*, tratado como una referencia rvalue.
 
@@ -295,7 +295,7 @@ Devuelve la dirección del búfer de secuencia almacenado.
 
 ### <a name="example"></a>Ejemplo
 
-Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo que usa `rdbuf`.
+Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo de uso de `rdbuf`.
 
 ## <a name="swap"></a>  basic_ofstream::swap
 
@@ -307,14 +307,14 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*correcta*\
+\ *derecha*
 Referencia `lvalue` a otro objeto `basic_ofstream`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro intercambia el contenido de este objeto por el contenido de la *derecha*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [basic_ostream (Clase)](../standard-library/basic-ostream-class.md)\
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398646"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865826"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (clase)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,32 +34,32 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-Un [ComPtr\<T >](comptr-class.md) tipo o un tipo derivado de éste, no simplemente la interfaz representada por el `ComPtr`.
+Un tipo de [> ComPtr\<t](comptr-class.md) o un tipo derivado de él, no solo la interfaz representada por el `ComPtr`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Representa la clase base para el [ComPtrRef](comptrref-class.md) clase.
+Representa la clase base para la clase [ComPtrRef](comptrref-class.md) .
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-Name            | Descripción
+Nombre            | Descripción
 --------------- | -------------------------------------------------
-`InterfaceType` | Un sinónimo del tipo de parámetro de plantilla *T*.
+`InterfaceType` | Sinónimo del tipo de parámetro de plantilla *T*.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-Name                                                                       | Descripción
+Nombre                                                                       | Descripción
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
-[Comptrrefbase:: operator IInspectable **](#operator-iinspectable-star-star) | Convierte la actual [ptr_](#ptr) miembro de datos a un puntero-a-a-puntero-to del `IInspectable` interfaz.
-[ComPtrRefBase::operator IUnknown**](#operator-iunknown-star-star)         | Convierte la actual [ptr_](#ptr) miembro de datos a un puntero-a-a-puntero-to del `IUnknown` interfaz.
+[ComPtrRefBase:: Operator IInspectable * *](#operator-iinspectable-star-star) | Convierte el miembro de datos [ptr_](#ptr) actual en un puntero a puntero a la interfaz `IInspectable`.
+[ComPtrRefBase:: Operator IUnknown * *](#operator-iunknown-star-star)         | Convierte el miembro de datos [ptr_](#ptr) actual en un puntero a puntero a la interfaz `IUnknown`.
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-Name                        | Descripción
+Nombre                        | Descripción
 --------------------------- | ----------------------------------------------------------------
-[ComPtrRefBase::ptr_](#ptr) | Puntero al tipo especificado por el parámetro de plantilla actual.
+[ComPtrRefBase::p tr_](#ptr) | Puntero al tipo especificado por el parámetro de plantilla actual.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -69,46 +69,46 @@ Name                        | Descripción
 
 **Encabezado:** client.h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="operator-iinspectable-star-star"></a>Comptrrefbase:: operator IInspectable\* \* operador
+## <a name="operator-iinspectable-star-star"></a>ComPtrRefBase:: Operator IInspectable\*operador de \*
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ```cpp
 operator IInspectable**() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Convierte la actual [ptr_](#ptr) miembro de datos a un puntero-a-a-puntero-to del `IInspectable` interfaz.
+Convierte el miembro de datos [ptr_](#ptr) actual en un puntero a puntero a la interfaz `IInspectable`.
 
-Se genera un error si el actual `ComPtrRefBase` no se deriva de `IInspectable`.
+Se emite un error si el `ComPtrRefBase` actual no se deriva de `IInspectable`.
 
-En esta difusión está disponible solo si `__WRL_CLASSIC_COM__` está definido.
+Esta conversión solo está disponible si se define `__WRL_CLASSIC_COM__`.
 
-## <a name="operator-iunknown-star-star"></a>Comptrrefbase:: operator IUnknown ** (operador)
+## <a name="operator-iunknown-star-star"></a>ComPtrRefBase:: Operator IUnknown * * (operador)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ```cpp
 operator IUnknown**() const;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Convierte la actual [ptr_](#ptr) miembro de datos a un puntero-a-a-puntero-to del `IUnknown` interfaz.
+Convierte el miembro de datos [ptr_](#ptr) actual en un puntero a puntero a la interfaz `IUnknown`.
 
-Se genera un error si el actual `ComPtrRefBase` no se deriva de `IUnknown`.
+Se emite un error si el `ComPtrRefBase` actual no se deriva de `IUnknown`.
 
-## <a name="ptr"></a>ComPtrRefBase::ptr_
+## <a name="ptr"></a>ComPtrRefBase::p tr_
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ```cpp
 T* ptr_;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Puntero al tipo especificado por el parámetro de plantilla actual. `ptr_` es el miembro de datos protegidos.
+Puntero al tipo especificado por el parámetro de plantilla actual. `ptr_` es el miembro de datos protegido.

@@ -3,11 +3,11 @@ title: 'Guía de migración: Spy++'
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627234"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890946"
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 
@@ -671,7 +671,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 Migrar Spy++ desde el código original de Visual C++ 6.0 al compilador más reciente requirió unas 20 horas de programación repartidas aproximadamente a lo largo de una semana. Hemos actualizado directamente a través de ocho versiones del producto de Visual Studio 6.0 a Visual Studio 2015. Actualmente, este es el enfoque recomendado para todas las actualizaciones en proyectos grandes y pequeños.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Caso práctico anterior: COM Spy](../porting/porting-guide-com-spy.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062053"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875739"
 ---
 # <a name="unions"></a>Uniones
 
@@ -34,10 +34,10 @@ union [name]  { member-list };
 *name*<br/>
 Nombre del tipo dado a la unión.
 
-*member-list*<br/>
+*lista de miembros*<br/>
 Miembros que puede contener la unión. Vea la sección Comentarios.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 ## <a name="declaring-a-union"></a>Declarar una unión
 
@@ -654,7 +654,7 @@ Además de las restricciones de las uniones con nombre, las uniones anónimas es
 
 - No pueden tener funciones miembro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases y structs](../cpp/classes-and-structs-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>

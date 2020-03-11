@@ -1,5 +1,5 @@
 ---
-title: Macros de mapa de propiedades
+title: Macros de asignación de propiedades
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -12,32 +12,32 @@ helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197273"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857189"
 ---
-# <a name="property-map-macros"></a>Macros de mapa de propiedades
+# <a name="property-map-macros"></a>Macros de asignación de propiedades
 
-Estas macros definen asignaciones de propiedad y entradas.
+Estas macros definen asignaciones y entradas de propiedades.
 
 |||
 |-|-|
-|[BEGIN_PROP_MAP](#begin_prop_map)|Marca el principio de la asignación de propiedades ATL.|
+|[BEGIN_PROP_MAP](#begin_prop_map)|Marca el principio del mapa de propiedades de ATL.|
 |[PROP_DATA_ENTRY](#prop_data_entry)|Indica la extensión o dimensiones de un control ActiveX.|
-|[PROP_ENTRY_TYPE](#prop_entry_type)|Escribe una descripción, la propiedad DISPID y la propiedad página de propiedades CLSID en la asignación de propiedad.|
-|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Escribe una descripción de propiedad, propiedad DISPID, CLSID, de página de propiedades y `IDispatch` IID en la asignación de propiedad.|
-|[PROP_PAGE](#prop_page)|Escribe una CLSID de la página de propiedades en la asignación de propiedad.|
+|[PROP_ENTRY_TYPE](#prop_entry_type)|Especifica una descripción de propiedad, un DISPID de propiedad y un CLSID de página de propiedades en el mapa de propiedades.|
+|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Escribe una descripción de propiedad, un DISPID de propiedad, una página de propiedades CLSID y `IDispatch` IID en la asignación de propiedad.|
+|[PROP_PAGE](#prop_page)|Especifica el CLSID de una página de propiedades en la asignación de propiedades.|
 |[END_PROP_MAP](#end_prop_map)|Marca el final de la asignación de propiedades ATL.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlcom.h
+**Encabezado:** atlcom. h
 
-##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP
+##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP
 
-Marca el principio de la asignación de propiedad del objeto.
+Marca el principio del mapa de propiedades del objeto.
 
 ```
 BEGIN_PROP_MAP(theClass)
@@ -45,22 +45,22 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>Parámetros
 
-*theClass*<br/>
-[in] Especifica la clase que contiene la asignación de propiedad.
+*Clase*<br/>
+de Especifica la clase que contiene la asignación de propiedades.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La asignación de propiedad almacena las descripciones de propiedad, propiedad DISPID, CLSID, de página de propiedades y `IDispatch` IID. Las clases [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), y [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)usar la asignación de propiedad para recuperar y establecer esta información.
+La asignación de propiedades almacena las descripciones de propiedades, los DISPID de propiedad, los CLSID de las páginas de propiedades y `IDispatch` IID. Las clases [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)y [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) usan la asignación de propiedad para recuperar y establecer esta información.
 
-Cuando se crea un objeto con el Asistente para proyectos ATL, el asistente creará un mapa de propiedades vacía especificando BEGIN_PROP_MAP seguido [END_PROP_MAP](#end_prop_map).
+Al crear un objeto con el Asistente para proyectos ATL, el asistente creará una asignación de propiedades vacía especificando BEGIN_PROP_MAP seguido de [END_PROP_MAP](#end_prop_map).
 
-No guardar BEGIN_PROP_MAP out de la extensión (es decir, las dimensiones) de un mapa de propiedades, porque un objeto mediante una asignación de propiedad no puede tener una interfaz de usuario, por lo que no tendría ninguna extensión. Si el objeto es un control ActiveX con una interfaz de usuario, tiene una extensión. En este caso, debe especificar [PROP_DATA_ENTRY](#prop_data_entry) en la asignación de propiedad para proporcionar la medida.
+BEGIN_PROP_MAP no guarda la extensión (es decir, las dimensiones) de una asignación de propiedad, porque un objeto que usa una asignación de propiedad no puede tener una interfaz de usuario, por lo que no tendría ninguna extensión. Si el objeto es un control ActiveX con una interfaz de usuario, tiene una extensión. En este caso, debe especificar [PROP_DATA_ENTRY](#prop_data_entry) en el mapa de propiedades para proporcionar la extensión.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]
 
-##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY
+##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY
 
 Indica la extensión o dimensiones de un control ActiveX.
 
@@ -71,31 +71,31 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 ### <a name="parameters"></a>Parámetros
 
 *szDesc*<br/>
-[in] Descripción de propiedad.
+de La descripción de la propiedad.
 
 *member*<br/>
-[in] El miembro de datos que contiene la extensión; Por ejemplo, `m_sizeExtent`.
+de Miembro de datos que contiene la extensión; por ejemplo, `m_sizeExtent`.
 
 *vt*<br/>
-[in] Especifica el tipo de variante de la propiedad.
+de Especifica el tipo VARIANT de la propiedad.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esta macro hace que el miembro de datos especificado que se deben conservar.
+Esta macro hace que el miembro de datos especificado se conserve.
 
-Cuando se crea un control ActiveX, el asistente inserta esta macro después de la macro de asignación de propiedad [BEGIN_PROP_MAP](#begin_prop_map) y antes de la macro de asignación de propiedad [END_PROP_MAP](#end_prop_map).
+Cuando se crea un control ActiveX, el asistente inserta esta macro después de la macro de asignación de propiedades [BEGIN_PROP_MAP](#begin_prop_map) y antes de que [END_PROP_MAP](#end_prop_map)la macro de asignación de propiedades.
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, la extensión del objeto (`m_sizeExtent`) es que se hace persistente.
+En el ejemplo siguiente, se conserva la extensión del objeto (`m_sizeExtent`).
 
 [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]
 
 [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]
 
-##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE
+##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE
 
-Use esta macro para escribir una descripción, la propiedad DISPID y la propiedad página de propiedades CLSID en mapa de propiedades del objeto.
+Utilice esta macro para escribir una descripción de propiedad, un DISPID de propiedad y un CLSID de página de propiedades en el mapa de propiedades del objeto.
 
 ```
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
@@ -104,30 +104,30 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="parameters"></a>Parámetros
 
 *szDesc*<br/>
-[in] Descripción de propiedad.
+de La descripción de la propiedad.
 
-*dispid*<br/>
-[in] DISPID de la propiedad.
+*DISPID*<br/>
+de El DISPID de la propiedad.
 
-*clsid*<br/>
-[in] El CLSID de la página de propiedades asociado. Utilice el valor especial CLSID_NULL para una propiedad que no tiene una página de propiedades asociado.
+*CLSID*<br/>
+de CLSID de la página de propiedades asociada. Use el valor especial CLSID_NULL para una propiedad que no tenga una página de propiedades asociada.
 
 *vt*<br/>
-[in] El tipo de propiedad.
+de Tipo de la propiedad.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La macro PROP_ENTRY era inseguro y en desuso. Se ha reemplazado con PROP_ENTRY_TYPE.
+La macro PROP_ENTRY era insegura y quedó en desuso. Se ha reemplazado por PROP_ENTRY_TYPE.
 
-El [BEGIN_PROP_MAP](#begin_prop_map) macro marca el principio de la asignación de propiedad; la [END_PROP_MAP](#end_prop_map) macro marca el final.
+La macro [BEGIN_PROP_MAP](#begin_prop_map) marca el principio del mapa de propiedades; la macro [END_PROP_MAP](#end_prop_map) marca el final.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [BEGIN_PROP_MAP](#begin_prop_map).
 
-##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX
+##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX
 
-Similar a [PROP_ENTRY_TYPE](#prop_entry_type), pero le permite especificar un IID determinado si el objeto es compatible con varias interfaces duales.
+Similar a [PROP_ENTRY_TYPE](#prop_entry_type), pero permite especificar un IID determinado si el objeto admite varias interfaces duales.
 
 ```
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
@@ -136,35 +136,35 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 ### <a name="parameters"></a>Parámetros
 
 *szDesc*<br/>
-[in] Descripción de propiedad.
+de La descripción de la propiedad.
 
-*dispid*<br/>
-[in] DISPID de la propiedad.
+*DISPID*<br/>
+de El DISPID de la propiedad.
 
-*clsid*<br/>
-[in] El CLSID de la página de propiedades asociado. Utilice el valor especial CLSID_NULL para una propiedad que no tiene una página de propiedades asociado.
+*CLSID*<br/>
+de CLSID de la página de propiedades asociada. Use el valor especial CLSID_NULL para una propiedad que no tenga una página de propiedades asociada.
 
 *iidDispatch*<br/>
-[in] IID de la definición de la propiedad de interfaz dual.
+de IID de la interfaz dual que define la propiedad.
 
 *vt*<br/>
-[in] El tipo de propiedad.
+de Tipo de la propiedad.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La macro PROP_ENTRY_EX era inseguro y en desuso. Se ha reemplazado con PROP_ENTRY_TYPE_EX.
+La macro PROP_ENTRY_EX era insegura y quedó en desuso. Se ha reemplazado por PROP_ENTRY_TYPE_EX.
 
-El [BEGIN_PROP_MAP](#begin_prop_map) macro marca el principio de la asignación de propiedad; la [END_PROP_MAP](#end_prop_map) macro marca el final.
+La macro [BEGIN_PROP_MAP](#begin_prop_map) marca el principio del mapa de propiedades; la macro [END_PROP_MAP](#end_prop_map) marca el final.
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se agrupan las entradas de `IMyDual1` seguido de una entrada para `IMyDual2`. La agrupación por interfaz dual mejorará el rendimiento.
+En el ejemplo siguiente se agrupan entradas para `IMyDual1` seguido de una entrada para `IMyDual2`. La agrupación por interfaz dual mejorará el rendimiento.
 
 [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]
 
-##  <a name="prop_page"></a>  PROP_PAGE
+##  <a name="prop_page"></a>PROP_PAGE
 
-Use esta macro para formalizar una CLSID de la página de propiedades de asignación de propiedad del objeto.
+Utilice esta macro para especificar un CLSID de página de propiedades en el mapa de propiedades del objeto.
 
 ```
 PROP_PAGE(clsid)
@@ -172,38 +172,38 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Parámetros
 
-*clsid*<br/>
-[in] El CLSID de una página de propiedades.
+*CLSID*<br/>
+de CLSID de una página de propiedades.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Es similar a PROP_PAGE [PROP_ENTRY_TYPE](#prop_entry_type), pero no requiere una descripción de la propiedad o el DISPID.
+PROP_PAGE es similar a [PROP_ENTRY_TYPE](#prop_entry_type), pero no requiere una descripción de propiedad o un DispId.
 
 > [!NOTE]
->  Si ya ha introducido un CLSID con PROP_ENTRY_TYPE o [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), no es necesario realizar una entrada adicional con PROP_PAGE.
+>  Si ya ha especificado un CLSID con PROP_ENTRY_TYPE o [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), no es necesario que realice una entrada adicional con PROP_PAGE.
 
-El [BEGIN_PROP_MAP](#begin_prop_map) macro marca el principio de la asignación de propiedad; la [END_PROP_MAP](#end_prop_map) macro marca el final.
+La macro [BEGIN_PROP_MAP](#begin_prop_map) marca el principio del mapa de propiedades; la macro [END_PROP_MAP](#end_prop_map) marca el final.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]
 
-##  <a name="end_prop_map"></a>  END_PROP_MAP
+##  <a name="end_prop_map"></a>END_PROP_MAP
 
-Marca el final de la asignación de propiedad del objeto.
+Marca el final del mapa de propiedades del objeto.
 
 ```
 END_PROP_MAP()
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando se crea un objeto con el Asistente para proyectos ATL, el asistente creará un mapa de propiedades vacía especificando [BEGIN_PROP_MAP](#begin_prop_map) seguido END_PROP_MAP.
+Al crear un objeto con el Asistente para proyectos ATL, el asistente creará una asignación de propiedades vacía especificando [BEGIN_PROP_MAP](#begin_prop_map) seguido de END_PROP_MAP.
 
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [BEGIN_PROP_MAP](#begin_prop_map).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Macros](../../atl/reference/atl-macros.md)
