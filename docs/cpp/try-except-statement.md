@@ -4,16 +4,12 @@ ms.date: 10/09/2018
 f1_keywords:
 - _abnormal_termination_cpp
 - _exception_code_cpp
-- EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
 - _except
-- EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
 - _exception_info_cpp
-- EXCEPTION_EXECUTE_HANDLER
-- _abnormal_termination
 helpviewer_keywords:
 - __try keyword [C++]
 - EXCEPTION_CONTINUE_EXECUTION macro
@@ -26,12 +22,12 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 7d3a92aa8c6d1f77a1795eabde0ae1e575bb5770
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245165"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444132"
 ---
 # <a name="try-except-statement"></a>try-except (Instrucción)
 
@@ -50,7 +46,7 @@ La instrucción **try-except** es una extensión de Microsoft para los C++ lengu
 > &nbsp;&nbsp;&nbsp;&nbsp;//código del controlador de excepciones<br/>
 > }
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La instrucción **try-except** es una extensión de Microsoft para los C++ lenguajes C y que permite a las aplicaciones de destino obtener el control cuando se producen eventos que normalmente finalizan la ejecución del programa. Estos eventos se denominan *excepciones*y el mecanismo que se encarga de las excepciones se denomina *control de excepciones estructurado* (SEH).
 
@@ -95,7 +91,7 @@ El control de excepciones estructurado proporciona dos funciones intrínsecas qu
 
 `GetExceptionCode` devuelve el código (un entero de 32 bits) de la excepción.
 
-La función intrínseca `GetExceptionInformation` devuelve un puntero a una estructura que contiene información adicional sobre la excepción. A través de este puntero, se puede tener acceso al estado que tenía el equipo en el momento de producirse una excepción de hardware. La estructura es la siguiente:
+La función intrínseca `GetExceptionInformation` devuelve un puntero a una estructura que contiene información adicional sobre la excepción. A través de este puntero, se puede tener acceso al estado que tenía el equipo en el momento de producirse una excepción de hardware. La estructura es como sigue:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -168,7 +164,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Salida
+### <a name="output"></a>Output
 
 ```Output
 hello
@@ -184,7 +180,7 @@ world
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>

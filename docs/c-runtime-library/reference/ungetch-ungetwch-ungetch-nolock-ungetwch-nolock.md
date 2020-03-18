@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945905"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443748"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -85,11 +84,11 @@ Carácter que se va a devolver.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Ambas funciones devuelven el carácter *c* si se realiza correctamente. Si hay un error, **_ungetch** devuelve un valor de **EOF** y **_ungetwch** devuelve **WEOF**.
+Ambas funciones devuelven el carácter *c* si se realiza correctamente. Si se produce un error, **_ungetch** devuelve un valor **EOF** y **_ungetwch** devuelve **WEOF**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estas funciones envían el carácter *c* a la consola, lo que hace que *c* sea el siguiente carácter leído por **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** y **_ungetwch** generan un error si se llaman más de una vez antes de la siguiente lectura. El argumento de *c* no puede ser **EOF** (o **WEOF**).
+Estas funciones envían el carácter *c* a la consola, lo que hace que *c* sea el siguiente carácter leído por **_getch** o **_getche** (o **_getwch** o **_getwche**). **_ungetch** y **_ungetwch** producen un error si se llaman más de una vez antes de la siguiente lectura. El argumento de *c* no puede ser **EOF** (o **WEOF**).
 
 Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Pueden ser más rápidas, porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
@@ -107,7 +106,7 @@ Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no est�
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -151,7 +150,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

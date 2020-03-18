@@ -1,20 +1,18 @@
 ---
 title: Control de errores (CRT)
 ms.date: 11/04/2016
-f1_keywords:
-- c.errors
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d38aaf76a4901b12290782957db90049d815d278
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551224"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443324"
 ---
 # <a name="error-handling-crt"></a>Control de errores (CRT)
 
@@ -22,7 +20,7 @@ Utilice estas rutinas para controlar los errores de programa.
 
 ## <a name="error-handling-routines"></a>Rutinas de control de errores
 
-|Rutina|Usar|
+|Rutina|Uso|
 |-------------|---------|
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) (Macro)|Comprueba los errores lógicos de programación. Disponible en las versiones de lanzamiento y depuración de la biblioteca en tiempo de ejecución.|
 |[_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) (Macros)|Similar a **assert**, pero disponible únicamente en las versiones de depuración de la biblioteca en tiempo de ejecución.|
@@ -34,6 +32,6 @@ Utilice estas rutinas para controlar los errores de programa.
 |[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modifica **__error_mode** para determinar una ubicación no predeterminada en donde el tiempo de ejecución de C escribe un mensaje de error si hay un error que podría finalizar el programa.|
 |[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Establece el controlador de una llamada de función virtual pura.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)

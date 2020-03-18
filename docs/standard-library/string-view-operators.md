@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425062"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446758"
 ---
 # <a name="ltstring_viewgt-operators"></a>operadores de&gt; de string_view de &lt;
 
@@ -116,6 +116,7 @@ La comparación se basa en una comparación lexicográfica en pares de las secue
 ## <a name="op_lt"></a> operator&lt;
 
 Comprueba si el objeto en el lado izquierdo del operador es menor que el objeto de la derecha sidestring_view
+
 ```cpp
 template <class CharType, class Traits>
 bool operator<(

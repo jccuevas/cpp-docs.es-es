@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455240"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446199"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution (Clase)
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution (Clase)
 
 Genera una distribución constante a trozos que tiene intervalos de diversos anchos con probabilidad uniforme en cada intervalo.
 
@@ -80,10 +80,10 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*RealType*\
+\ *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta distribución de muestreo tiene intervalos de diversos anchos con probabilidad uniforme en cada intervalo. Para obtener más información sobre otras distribuciones de muestreo, vea [piecewise_linear_distribution (Clase)](../standard-library/piecewise-linear-distribution-class.md) y [discrete_distribution](../standard-library/discrete-distribution-class.md).
 
@@ -106,7 +106,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -214,7 +214,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<random>
+**Encabezado:** \<> aleatorio
 
 **Espacio de nombres:** std
 
@@ -248,38 +248,39 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*primera*\
+*primer*\
 Un iterador de entrada del primer elemento del intervalo de distribución.
 
 *última*\
 Un iterador de entrada del último elemento del intervalo de distribución.
 
-*firstW*\
+\ *firstW*
 Un iterador de entrada del primer elemento del intervalo de pesos.
 
 *intervalos*\
 [initializer_list](../cpp/initializers.md) con los intervalos de la distribución.
 
-*contabiliza*\
+*recuento*\
 Número de elementos del intervalo de distribución.
 
 *xmin*\
 Valor mínimo del intervalo de distribución.
 
-*Xmax*\
+*xmax*\
 Valor máximo del intervalo de distribución. Debe ser mayor que *xmin*.
 
-*weightfunc*\
+\ *weightfunc*
 Objeto que representa la función de probabilidad de la distribución. Tanto el parámetro como el valor devuelto deben poder convertirse en **Double**.
 
-*PARM*\
+\ *PARM*
 La estructura de parámetros utilizada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor predeterminado establece los parámetros almacenados, como que hay un intervalo, 0 a 1, con una densidad de probabilidad de 1.
 
 El constructor del intervalo de iterador
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 construye un objeto de distribución con intervalos de iteradores sobre la secuencia [ `firstI`, `lastI`) y una secuencia de peso coincidente que empiece en `firstW`.
 
 El constructor de lista de inicializador
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 construye un objeto de distribución con intervalos de los *intervalos* de la lista de inicializadores y pesos generados a partir de la función *weightfunc*.
 
 El constructor definido como
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-construye un objeto de distribución con  intervalos de recuento distribuidos uniformemente en `xmin,xmax`[], asignando los pesos de cada intervalo según la función *weightfunc*y *weightfunc* debe aceptar un parámetro y tener un valor devuelto valor, que se pueden convertir en `double`. **Condición previa:** `xmin < xmax`
+construye un objeto de distribución con intervalos de *recuento* distribuidos uniformemente sobre [`xmin,xmax`], asignando los pesos de cada intervalo según la función *weightfunc*, y *weightfunc* debe aceptar un parámetro y tener un valor devuelto, y ambos se pueden convertir a `double`. **Condición previa:** `xmin < xmax`
 
 El constructor definido como
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
@@ -338,13 +342,13 @@ struct param_type {
 
 Vea los parámetros del constructor para [piecewise_constant_distribution](#piecewise_constant_distribution).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **Condición previa:** `xmin < xmax`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

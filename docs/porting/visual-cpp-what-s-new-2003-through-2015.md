@@ -2,12 +2,12 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6a3db2c9af2bcd9201f696756053cedb0788571a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 1e5454e749d93a817caa9ca13553e203f96e038b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510303"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446496"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -22,7 +22,7 @@ En Visual Studio 2015 y versiones posteriores, las mejoras continuas en la confo
 
 Afortunadamente, estas diferencias tienen poco o ningún efecto en la mayoría del código fuente y cuando se necesitan código fuente u otros cambios para resolver estas diferencias, las correcciones suelen ser pequeñas y sencillas. Hemos incluido muchos ejemplos de código fuente previamente aceptable que es posible que deba cambiarse *(antes)* y las revisiones para corregirlos *(después)* .
 
-Aunque estas diferencias pueden afectar a su código fuente u otros artefactos de compilación, no afectan a la compatibilidad binaria entre actualizaciones de versiones de Visual C++. Un tipo de cambio más drástico, el *cambio importante*, puede afectar a la compatibilidad binaria, pero este tipo de alteraciones de compatibilidad binaria solo se producen entre las versiones principales de Visual C++. por ejemplo, entre Visual C++ 2013 y Visual C++ 2015. Para obtener información sobre los cambios importantes que se produjeron entre Visual C++ 2013 y Visual C++ 2015, vea [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md).
+Aunque estas diferencias pueden afectar a su código fuente u otros artefactos de compilación, no afectan a la compatibilidad binaria entre actualizaciones de versiones de Visual C++. Un tipo de cambio más drástico, el *cambio importante*, puede afectar a la compatibilidad binaria, pero este tipo de alteraciones de compatibilidad binaria solo se producen entre las versiones principales de Visual C++. Por ejemplo, entre Visual C++ 2013 y Visual C++ 2015. Para obtener información sobre los cambios importantes que se produjeron entre Visual C++ 2013 y Visual C++ 2015, vea [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md).
 
 - [Mejoras de conformidad en Visual Studio 2015](#VS_RTM)
 
@@ -255,7 +255,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](https://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa **placement new**, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
 
-   La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new**  `void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función **delete** es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de **placement new** busca una función **delete** correspondiente y encuentra una función de desasignación habitual, el programa tendrá un formato incorrecto.
+   La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new** `void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función **delete** es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de **placement new** busca una función **delete** correspondiente y encuentra una función de desasignación habitual, el programa tendrá un formato incorrecto.
 
    Supongamos, por ejemplo, que el código define tanto **placement new** como **placement delete**:
 
@@ -264,17 +264,17 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     void operator delete(void*, std::size_t) noexcept;
    ```
 
-   El problema se produce debido a la coincidencia de las firmas de función entre un operador **placement delete** definido y el nuevo operador global **delete** con tamaño. Analice si puede usar un tipo que no sea `size_t` para los operadores **placement new** y **delete**.  Tenga en cuenta que **typedef** de `size_t` depende del compilador; es un **typedef** para **int sin signo** en Visual C++. Una buena solución es que use un tipo enumerado como el siguiente:
+   El problema se produce debido a la coincidencia de las firmas de función entre un operador **placement delete** definido y el nuevo operador global **delete** con tamaño. Analice si puede usar un tipo que no sea `size_t` para los operadores **placement new** y **delete**.  Tenga en cuenta que el tipo del `size_t` **typedef** depende del compilador; es una **definición** de **tipo para int sin signo** en Visual C++. Una buena solución es que use un tipo enumerado como el siguiente:
 
    ```cpp
     enum class my_type : size_t {};
    ```
 
-   A continuación, cambie la definición de **placement new** y **delete** para usar este tipo como el segundo argumento en lugar de `size_t`. También es necesario que actualice las llamadas a **placement new** para pasar el nuevo tipo (por ejemplo, con `static_cast<my_type>` para convertir a partir del valor entero) y que actualice la definición de **new** y **delete** para realizar la conversión al tipo entero. No es necesario usar **enum** para esto; un tipo de clase con un miembro `size_t` también funcionaría.
+   A continuación, cambie la definición de **placement new** y **delete** para usar este tipo como el segundo argumento en lugar de `size_t`. También necesitará actualizar las llamadas a **Placement New** para pasar el nuevo tipo (por ejemplo, mediante el uso de `static_cast<my_type>` para convertir el valor entero) y actualizar la definición de **New** y **Delete** para realizar la conversión al tipo entero. No es necesario utilizar una **enumeración** para esto; un tipo de clase con un miembro de `size_t` también funcionaría.
 
    Una solución alternativa es que pueda eliminar por completo **placement new**. Si el código usa **placement new** para implementar un bloque de memoria donde el argumento placement sea el tamaño del objeto que se va a asignar o eliminar, entonces podría usarse la característica de desasignación con tamaño para reemplazar su propio código de bloque de memoria personalizado, y así deshacerse de las funciones placement y usar simplemente su propio operador **delete** de dos argumentos en lugar de las funciones placement.
 
-   Si no quiere actualizar su código de forma inmediata, puede recuperar el comportamiento anterior mediante la opción de compilador `/Zc:sizedDealloc-`. Si usa esta opción, las funciones **delete** de dos argumentos no existen y no se provocará un conflicto con el operador **placement delete**.
+   Si no quiere actualizar su código de forma inmediata, puede recuperar el comportamiento anterior mediante la opción de compilador `/Zc:sizedDealloc-`. Si utiliza esta opción, las funciones **Delete** de dos argumentos no existen y no se producirá un conflicto con el operador **Placement Delete** .
 
 - **Miembros de datos de uniones**
 
@@ -514,7 +514,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Clases base virtuales privadas y herencia indirecta**
 
-   Las versiones anteriores del compilador permitían que una clase derivada llamase a funciones de miembro de sus clases base `private virtual` *derivadas indirectamente*. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2280 como resultado.
+   Las versiones anteriores del compilador permitían que una clase derivada llamara a funciones de miembro de sus clases base `private virtual` *derivadas indirectamente* . Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2280 como resultado.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -821,7 +821,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    En su documentación se ofrecen ejemplos de las otras advertencias restauradas.
 
-- **#include: uso del especificador de principal-directorio '..' en pathname** (solo afecta a `/Wall` `/WX`)
+- **#include: uso del especificador de principal-directorio '.. ' en pathname** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaron el uso del especificador de principal-directorio '..' en el nombre de la ruta de acceso de las directivas  `#include` . El código escrito de este modo normalmente está pensado para incluir encabezados que existen fuera del proyecto usando incorrectamente rutas de acceso relativas del proyecto. Este comportamiento antiguo crea un riesgo de que el programa se pueda compilar incluyendo un archivo de origen diferente del que pensaba el programador, o que esas rutas de acceso relativas no son portables a otros entornos de compilación. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4464 de compilador opcional, si se habilita.
 
@@ -843,7 +843,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Además, aunque el compilador no ofrece un diagnóstico específico, se recomienda no usar el especificador de directorio principal “..” para especificar los directorios de inclusión del proyecto.
 
-- **optimize() #pragma se extiende más allá del final del archivo de encabezado** (solo afecta a `/Wall` `/WX`)
+- **#pragma Optimize () se extiende más allá del final del archivo de encabezado** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaban cambios en la configuración de la marca de optimización que eluden un archivo de encabezado incluido dentro de una unidad de traducción. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4426 de compilador opcional en la ubicación de `#include`que genera el problema, si se habilita. Esta advertencia solo se emite si el cambio entra en conflicto con las marcas de optimización establecidas por los argumentos de la línea de comandos para el compilador.
 
@@ -876,7 +876,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "C4426.h"
    ```
 
-- **Error de coincidencia de #pragma warning(push)** y **#pragma warning(pop)** (solo afecta a `/Wall` `/WX`)
+- **Advertencia #pragma no coincidente (extracción)** y **#pragma ADVERTENCIA (pop)** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaban que los cambios de estado `#pragma warning(push)` se emparejaban con cambios de estado `#pragma warning(pop)` en un archivo de código fuente diferente, lo que rara vez es lo previsto. Este comportamiento antiguo creaba un riesgo de que el programa se compilara con un conjunto de advertencias habilitadas diferentes de lo que el programador había pensado, lo cual puede provocar un comportamiento en tiempo de ejecución incorrecto silencioso. Ahora el compilador detecta el código escrito de esta manera, lo notifica al programador y emite una advertencia del compilador opcional C5031 en la ubicación de `#pragma warning(pop)` coincidente, si se habilita. Esta advertencia incluye una nota que hace referencia a la ubicación de `#pragma warning(push)` correspondiente.
 
@@ -932,7 +932,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Aunque es poco frecuente, a veces el código escrito de este modo es intencionado. El código escrito de este modo es sensible a los cambios en el orden de `#include`. Cuando sea posible, se recomienda que los archivos de código fuente administren el estado de advertencia de forma independiente.
 
-- **#pragma warning(push) sin coincidencia** (solo afecta a `/Wall` `/WX`)
+- **Advertencia #pragma no coincidente (inserciones)** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador no detectaron cambios de estado `#pragma warning(push)` sin coincidencia al final de una unidad de traducción. Ahora el compilador detecta el código escrito de esta manera, lo notifica al programador y emite una advertencia del compilador opcional C5032 en la ubicación de `#pragma warning(push)` no coincidente, si se habilita. Esta advertencia solo se emite si no hay ningún error de compilación en la unidad de traducción.
 
@@ -1104,7 +1104,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
    ```
 
-- Las variables de miembro `volatile`  **evitaban de forma implícita los constructores y operadores de asignación definidos** Las versiones anteriores del compilador permitían a las clases que tenían variables de miembro **volatile** que generaran automáticamente constructores para copiar o mover y operadores de asignación para copiar o mover predeterminados. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. Ahora, el compilador considera que una clase que tiene variables de miembro volátiles tiene operadores de asignación y construcción no triviales, lo que impide que se generen implementaciones predeterminadas de estos operadores automáticamente. Cuando esta clase es miembro de una unión (o una unión anónima dentro de una clase), los constructores para copiar o mover y los operadores de asignación de copiar o mover de la unión (o la clase que contiene la unión anónima) se definirán implícitamente como eliminados. Intentar crear o copiar la unión (o la clase que contiene la unión anónima) sin definirlas explícitamente es un error y, en tal caso, el compilador genera el error de compilador C2280 como resultado.
+- `volatile` **variables miembro impiden constructores y operadores de asignación definidos implícitamente** las versiones anteriores del compilador permitían que una clase que tiene variables de miembro **volátiles** tenga constructores de copia/movimiento predeterminados y operadores de asignación de copia/movimiento predeterminados generados automáticamente. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. Ahora, el compilador considera que una clase que tiene variables de miembro volátiles tiene operadores de asignación y construcción no triviales, lo que impide que se generen implementaciones predeterminadas de estos operadores automáticamente. Cuando esta clase es miembro de una unión (o una unión anónima dentro de una clase), los constructores para copiar o mover y los operadores de asignación de copiar o mover de la unión (o la clase que contiene la unión anónima) se definirán implícitamente como eliminados. Intentar crear o copiar la unión (o la clase que contiene la unión anónima) sin definirlas explícitamente es un error y, en tal caso, el compilador genera el error de compilador C2280 como resultado.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1444,7 +1444,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
    ```
 
-- **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a `/Wall` `/WX`)
+- **Archivos de encabezado precompilado (PCH) y directivas de #include no coincidentes** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador aceptaban directivas `#include` no coincidentes en archivos de código fuente entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo. Ahora, el compilador emite la advertencia del compilador CC4598 para ayudar a identificar las directivas `#include` no coincidentes cuando se usan archivos PCH.
 
@@ -1488,7 +1488,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "c.h"
    ```
 
-- **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a `/Wall` `/WX`)
+- **Archivos de encabezado precompilado (PCH) y directorios de inclusión no coincidentes** (solo afecta a `/Wall` `/WX`)
 
    Las versiones anteriores del compilador aceptaban argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) en el compilador entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo.   Ahora, el compilador emite la advertencia del compilador CC4599 para ayudar a identificar los argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) cuando se usan archivos PCH.
 
@@ -1550,12 +1550,12 @@ Todos los contenedores admiten los requisitos específicos del elemento C++11.
 Compatibilidad con estas características de C++14:
 
 - "Objetos functor de operador transparentes" less<>, greater<>, plus<>, multiplies<>, etc.
-- make_unique<T>(args...) y make_unique<T[]>(n)
+- make_unique\<T > (args...) y make_unique < T [] > (n)
 - funciones no miembro cbegin()/cend(), rbegin()/rend() y crbegin()/crend().
 - \<atomic> ha recibido numerosas mejoras de rendimiento.
 - \<type_traits> ha recibido correcciones importantes de estabilización y código.
 
-### <a name="breaking-changes"></a>Cambios importantes
+### <a name="breaking-changes"></a>Últimos cambios
 
 Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en el código existente para que se ajuste a C++11 y se compile correctamente en Visual C++ en Visual Studio 2013.
 
@@ -1582,7 +1582,7 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 
 - **Compatibilidad con tipos a los que se aplica la conversión boxing en estructuras de valores.**
 
-   Ahora puede definir tipos de valores utilizando campos que pueden ser null; por ejemplo, `IBox<int>^` en lugar de **int**. Esto significa que los campos pueden tener un valor o ser iguales a **nullptr**.
+   Ahora puede definir tipos de valor mediante campos que pueden ser null; por ejemplo, `IBox<int>^` en lugar de **int**. Esto significa que los campos pueden tener un valor o ser iguales a **nullptr**.
 
 - **Información de excepción más completa.**
 
@@ -1605,7 +1605,7 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 
 ### <a name="diagnostics-enhancements"></a>Mejoras de diagnósticos
 
-- Mejoras del depurador. Compatibilidad con la depuración asincrónica y la depuración Solo mi código.
+- Mejoras del depurador. Compatibilidad con la depuración asincrónica y depuración Solo mi código.
 - Categorías de análisis de código. Ahora puede ver el resultado por categorías desde el analizador de código, lo que le ayudará a detectar y corregir los defectos del código.
 - Diagnóstico XAML. Ahora puede diagnosticar problemas relacionados con la capacidad de respuesta de la interfaz de usuario y el uso de la batería en XAML.
 - Mejoras de depuración de gráficos y GPU.
@@ -1618,7 +1618,7 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 
 - Compatibilidad de la canalización de contenido de la imagen con el formato premultiplicado alfa DDS.
 - El editor de imágenes usa el formato alfa premultiplicado para la representación y, por tanto, impide que los artefactos se representen como halos oscuros.
-- Editores de imágenes y modelos. Ahora se admite la creación de filtros definidos por el usuario en el Diseñador de sombras del Editor de imágenes y el Editor de modelos.
+- Editores de imágenes y modelos. La creación de filtros definidos por el usuario ahora se admite en el Diseñador de sombras del Editor de imágenes y el Editor de modelos.
 
 ### <a name="ide-and-productivity"></a>IDE y productividad
 
@@ -1636,7 +1636,7 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 
 - Agrega un punto y coma a los tipos de clases.
 - Completa los paréntesis de los literales de cadena sin formato.
-- Rellena los comentarios de varias líneas (/\* \*/)
+- Completa los comentarios de varias líneas (/\* \*/)
 
 **Buscar todas las referencias** ahora resuelve automáticamente y filtra las referencias en segundo plano después de mostrar la lista de coincidencias textuales.
 
@@ -1836,7 +1836,7 @@ Un trígrafo se compone de dos signos de interrogación consecutivos (??) seguid
 
 **Reconocimiento de valores altos de PPP.** De forma predeterminada, las aplicaciones MFC ahora son compatibles con valores altos de PPP. Si una aplicación es compatible con valores altos de PPP (muchos puntos por pulgada), el sistema operativo puede escalar ventanas, texto y otros elementos de la interfaz de usuario a la resolución de pantalla actual. Esto significa que es más probable que una imagen escalada se distribuya correctamente y no se muestre recortada o pixelada.
 
-**Administrador de reinicio.** El administrador de reinicio guarda documentos automáticamente y reinicia la aplicación si se ha cerrado o se reinicia de forma inesperada. Por ejemplo, puede usar el administrador de reinicio para iniciar la aplicación después de que se cierre por una actualización automática. Para obtener más información sobre cómo configurar la aplicación para usar el Administrador de reinicio, vea **Procedimiento: Agregar compatibilidad con el Administrador de reinicio**.
+**Administrador de reinicio.** El administrador de reinicio guarda documentos automáticamente y reinicia la aplicación si se ha cerrado o se reinicia de forma inesperada. Por ejemplo, puede usar el administrador de reinicio para iniciar la aplicación después de que se cierre por una actualización automática. Para más información sobre cómo configurar la aplicación para usar el administrador de reinicio, vea **Cómo: Agregar compatibilidad con el Administrador de reinicio**.
 
 **CTaskDialog.** La clase `CTaskDialog` se puede usar en lugar del cuadro de mensaje `AfxMessageBox` estándar. La clase `CTaskDialog` muestra y reúne más información que el cuadro de mensaje estándar.
 
@@ -1940,7 +1940,7 @@ La adición del tipo de datos YMMWORD es compatible con los operandos multimedia
 
 ### <a name="linker-changes"></a>Cambios del enlazador
 
-- El enlazador (link.exe) de Visual C++ ahora inserta la información de Control de cuentas de usuario en archivos de manifiesto para archivos ejecutables. Esta característica está habilitada de manera predeterminada. Para más información sobre cómo deshabilitar esta característica o cómo modificar el comportamiento predeterminado, vea `/MANIFESTUAC` (Insertar información de UAC en el manifiesto).
+- El enlazador (link.exe) de Visual C++ ahora inserta la información de Control de cuentas de usuario en archivos de manifiesto para archivos ejecutables. Esta característica está habilitada de forma predeterminada. Para más información sobre cómo deshabilitar esta característica o cómo modificar el comportamiento predeterminado, vea `/MANIFESTUAC` (Insertar información de UAC en el manifiesto).
 - El enlazador ahora tiene la opción `/DYNAMICBASE` para habilitar la característica de selección aleatoria del diseño del espacio de direcciones de Windows Vista. Esta opción modifica el encabezado de un archivo ejecutable para indicar si la aplicación debería fusionarse aleatoriamente mediante cambio de base en tiempo de carga.
 
 ## <a name="whats-new-for-c-in-visual-studio-2005"></a>Novedades de C++ en Visual Studio 2005
@@ -1999,7 +1999,7 @@ El compilador tiene cambios importantes en esta versión.
 - Se ha agregado la opción del compilador `/G` (optimizar para procesador, opciones).
 - Se ha agregado la opción del compilador `/G` (optimizar para procesador, opciones).
 - Se han quitado las opciones del compilador `/G3`, `/G4`, `/G5`, `/G6`, `/G7` y `/GB`. El compilador ahora usa un "modo de fusión" que intenta crear el mejor archivo de salida para todas las arquitecturas.
-- Se ha quitado `/Gf`. Use `/GF` (eliminar cadenas duplicadas) en su lugar.
+- `/Gf` se ha quitado. Use `/GF` (eliminar cadenas duplicadas) en su lugar.
 - `/GL` (optimización de todo el programa) ahora es compatible con `/CLRHEADER`.
 - `/GR` está ahora activado de manera predeterminada.
 - `/GS` (comprobación de seguridad del búfer) ahora proporciona protección de seguridad para parámetros de puntero vulnerables. `/GS` está ahora activado de manera predeterminada. Ahora, `/GS` también funciona en funciones compiladas en MSIL con `/clr` (compilación de Common Language Runtime).
@@ -2018,8 +2018,8 @@ El compilador tiene cambios importantes en esta versión.
 
 ### <a name="profile-guided-optimizations"></a>Optimizaciones guiadas por perfiles
 
-- Se ha quitado `/QI0f`.
-- Se ha quitado `/QIfdiv`.
+- `/QI0f` se ha quitado.
+- `/QIfdiv` se ha quitado.
 - Se ha agregado la opción del compilador `/QIPF_B` (error en la ejecución de instrucciones paso a paso de CPU en B).
 - Se ha agregado la opción del compilador `/QIPF_C` (error en la ejecución de instrucciones paso a paso de CPU en C).
 - Se ha agregado la opción del compilador `/QIPF_fr32` (no usar los 96 registros de punto flotante superiores).
@@ -2197,7 +2197,7 @@ El compilador tiene cambios importantes en esta versión.
 
 - Información sobre cómo ejecutar una aplicación de Extensiones administradas para C++ generada con el compilador de la versión actual en una versión anterior del entorno de ejecución.
 - Preguntas más frecuentes sobre las Extensiones administradas para C++.
-- Se ha agregado un tutorial en el que se muestra cómo portar una aplicación nativa existente para utilizar las Extensiones administradas para C++: Tutorial: Portabilidad de una aplicación C++ nativa existente para interoperar con componentes de .NET Framework.
+- Se ha agregado un tutorial que muestra cómo trasladar una aplicación nativa existente para usar las Extensiones administradas para C++: Walkthrough: Porting an Existing Native C++ Application to Interoperate with .NET Framework Components (Tutorial: Trasladar una aplicación de C++ nativa existente para que interactúe con componentes de .NET Framework).
 - Ahora puede crear un delegado en un método de un tipo de valor.
 - La conformidad del compilador con el estándar de C++ se ha mejorado significativamente para Visual C++ .NET 2003.
 - Se ha agregado la opción del compilador `/arch`.
@@ -2233,6 +2233,6 @@ Se han agregado los siguientes modificadores del enlazador:
 
 Se ha agregado la directiva .SAFESEH y la opción `/safeseh` de ml.exe.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Guía de migración y actualización de Visual C++](visual-cpp-porting-and-upgrading-guide.md)

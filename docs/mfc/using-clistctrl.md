@@ -1,17 +1,15 @@
 ---
 title: Usar CListCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CListCtrl
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ada26f43849bec2ad4cb63a6084c10805e27fcb0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512903"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441981"
 ---
 # <a name="using-clistctrl"></a>Usar CListCtrl
 
@@ -22,7 +20,7 @@ En algunas vistas, los usuarios pueden arrastrar iconos a diferentes posiciones 
 Para obtener información relacionada, vea acerca de los [controles de vista de lista](/windows/win32/Controls/list-view-controls-overview) en el Windows SDK.
 
 > [!NOTE]
->  El Windows SDK hace referencia a los controles de lista como "controles de vista de lista". Este uso de "vista" no hace referencia a las clases de vistas de `CListView`MFC, en particular. Para obtener más información, vea [control de lista y vista de lista](../mfc/list-control-and-list-view.md).
+>  El Windows SDK hace referencia a los controles de lista como "controles de vista de lista". Este uso de "vista" no hace referencia a las clases de vistas de MFC, especialmente `CListView`. Para obtener más información, vea [control de lista y vista de lista](../mfc/list-control-and-list-view.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -52,6 +50,6 @@ Para obtener información relacionada, vea acerca de los [controles de vista de 
 
 - [Destrucción del control de lista](../mfc/destroying-the-list-control.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)

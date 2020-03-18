@@ -1,8 +1,6 @@
 ---
-title: 'CWinApp: La clase Application'
+title: 'CWinApp: The Application (Clase)'
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application class [MFC]
 - CWinApp class [MFC], CWinThread
@@ -14,30 +12,30 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8518e21a9fa6bcf5ac640cff25b17c5028046b06
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241567"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447024"
 ---
-# <a name="cwinapp-the-application-class"></a>CWinApp: La clase Application
+# <a name="cwinapp-the-application-class"></a>CWinApp: The Application (Clase)
 
-La clase principal de la aplicación de MFC encapsula la inicialización, la ejecución y la terminación de una aplicación para el sistema operativo de Windows. Una aplicación basada en el marco de trabajo debe tener uno y solo un objeto de una clase derivada de [CWinApp](../mfc/reference/cwinapp-class.md). Este objeto se construye antes de que windows se crean.
+La clase de aplicación principal de MFC encapsula la inicialización, ejecución y finalización de una aplicación para el sistema operativo Windows. Una aplicación compilada en el marco de trabajo debe tener solo un objeto de una clase derivada de [CWinApp](../mfc/reference/cwinapp-class.md). Este objeto se crea antes de crear Windows.
 
-`CWinApp` se deriva de `CWinThread`, que representa el subproceso principal de ejecución de la aplicación, que puede tener uno o varios subprocesos. En versiones recientes de MFC, la `InitInstance`, **ejecutar**, `ExitInstance`, y `OnIdle` funciones miembro son realmente en la clase `CWinThread`. Estas funciones se tratan aquí como si fueran `CWinApp` miembros en su lugar, porque la discusión refiere al papel del objeto como objeto de aplicación en lugar de como subproceso principal.
-
-> [!NOTE]
->  La clase de aplicación constituye el subproceso principal de la aplicación de ejecución. Usar funciones de la API de Win32, también puede crear subprocesos secundarios de ejecución. Estos subprocesos pueden usar la biblioteca MFC. Para obtener más información, consulte [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
-
-Al igual que cualquier programa para el sistema operativo de Windows, la aplicación de marco de trabajo tiene un `WinMain` función. En una aplicación de marco de trabajo, sin embargo, no se escriben `WinMain`. Proporcionado por la biblioteca de clases y se llama cuando se inicia la aplicación. `WinMain` lleva a cabo los servicios estándar, como registrar clases de ventana. A continuación, llama a funciones miembro del objeto de aplicación para inicializar y ejecutar la aplicación. (Se puede personalizar `WinMain` invalidando el `CWinApp` funciones miembro que `WinMain` llamadas.)
-
-Para inicializar la aplicación, `WinMain` llama a su objeto de aplicación `InitApplication` y `InitInstance` funciones miembro. Para ejecutar el bucle de mensajes de la aplicación, `WinMain` llamadas la **ejecutar** función miembro. Al finalizar, `WinMain` llama al objeto de aplicación `ExitInstance` función miembro.
+`CWinApp` se deriva de `CWinThread`, que representa el subproceso principal de ejecución de la aplicación, que puede tener uno o más subprocesos. En las versiones recientes de MFC, las funciones miembro `InitInstance`, **Run**, `ExitInstance`y `OnIdle` están realmente en `CWinThread`de clase. Estas funciones se tratan aquí como si fueran `CWinApp` miembros en su lugar, porque la discusión se refiere al rol del objeto como objeto de aplicación en lugar de como subproceso principal.
 
 > [!NOTE]
->  Nombres que aparecen en **negrita** en esta documentación indicar elementos proporcionados por la biblioteca Microsoft Foundation Class y Visual C++. Nombres que aparecen en `monospaced` tipo indica los elementos que se crean o invalidar.
+>  La clase de aplicación constituye el subproceso de ejecución principal de la aplicación. Con las funciones de la API Win32, también puede crear subprocesos secundarios de ejecución. Estos subprocesos pueden utilizar la biblioteca MFC. Para obtener más información, vea [multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-## <a name="see-also"></a>Vea también
+Al igual que cualquier programa del sistema operativo Windows, la aplicación de marco tiene una función `WinMain`. Sin embargo, en una aplicación de marco de trabajo, no se escribe `WinMain`. Lo proporciona la biblioteca de clases y se llama cuando se inicia la aplicación. `WinMain` realiza servicios estándar como el registro de clases de ventana. A continuación, llama a las funciones miembro del objeto de aplicación para inicializar y ejecutar la aplicación. (Puede personalizar `WinMain` invalidando las funciones miembro de `CWinApp` que `WinMain` llamadas).
+
+Para inicializar la aplicación, `WinMain` llama a las funciones miembro `InitApplication` y `InitInstance` del objeto de la aplicación. Para ejecutar el bucle de mensajes de la aplicación, `WinMain` llama a la función miembro **Run** . Al finalizar, `WinMain` llama a la función miembro de `ExitInstance` del objeto de la aplicación.
+
+> [!NOTE]
+>  Los nombres que se muestran en **negrita** en esta documentación indican los elementos proporcionados C++por el biblioteca MFC y el elemento visual. Los nombres que se muestran en `monospaced` tipo indican los elementos que se crean o invalidan.
+
+## <a name="see-also"></a>Consulte también
 
 [Temas generales de MFC](../mfc/general-mfc-topics.md)<br/>
 [CWinApp y el Asistente para aplicaciones MFC](../mfc/cwinapp-and-the-mfc-application-wizard.md)<br/>

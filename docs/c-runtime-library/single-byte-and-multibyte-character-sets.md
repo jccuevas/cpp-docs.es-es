@@ -1,20 +1,18 @@
 ---
 title: Juegos de caracteres de un solo byte y de varios bytes
 ms.date: 11/04/2016
-f1_keywords:
-- c.character.multibyte
 helpviewer_keywords:
 - SBCS (single byte character set)
 - MBCS [C++], about MBCS
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-ms.openlocfilehash: 1e2d3f26891257101b4a9511f4e0b10f03113309
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a6a0f3aaaa463297b7c51b035acc7b2f4a40b6cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745331"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444652"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Juegos de caracteres de un solo byte y de varios bytes
 
@@ -25,7 +23,7 @@ El juego de caracteres ASCII define los caracteres que están en el intervalo de
 
 Un juego de caracteres de varios bytes puede constar de caracteres de un byte y de dos bytes. Por lo tanto, una cadena de caracteres de varios bytes puede contener una mezcla de caracteres de un solo byte y de doble byte. Un carácter multibyte de dos bytes tiene un byte inicial y un byte final. En un juego de caracteres multibyte específico, los bytes iniciales quedan dentro de un intervalo determinado, al igual que los bytes finales. Si estos intervalos se superponen, puede que sea necesario evaluar el contexto concreto para determinar si un byte específico funciona como byte inicial o como byte final.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Internacionalización](../c-runtime-library/internationalization.md)<br/>
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

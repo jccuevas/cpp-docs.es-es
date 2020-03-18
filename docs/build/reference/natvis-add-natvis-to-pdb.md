@@ -1,50 +1,49 @@
 ---
-title: / NATVIS (agregar Natvis a PDB)
+title: /NATVIS (Agregar Natvis a PDB)
 ms.date: 08/10/2017
 f1_keywords:
 - /natvis
-- VC.Project.VCLinkerTool.ImportLIbrary
 helpviewer_keywords:
 - NATVIS linker option
 - /NATVIS linker option
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16e320a2f8f946912fef6a354f27f6514a67e29
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320622"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439279"
 ---
-# <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (agregar Natvis a PDB)
+# <a name="natvis-add-natvis-to-pdb"></a>/NATVIS (Agregar Natvis a PDB)
 
-> /NATVIS:*filename*
+> /NATVIS:*nombre de archivo*
 
 ## <a name="parameters"></a>Parámetros
 
 *filename*<br/>
-Un archivo Natvis para agregar al archivo PDB. Las visualizaciones del depurador incrusta en el archivo .natvis en el archivo PDB.
+Archivo Natvis que se va a agregar al archivo PDB. Inserta las visualizaciones del depurador en el archivo Natvis en la PDB.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La opción /NATVIS incrusta las visualizaciones del depurador definidas en el archivo Natvis *filename* en el archivo PDB generado por el vínculo. Esto permite al depurador mostrar las visualizaciones independientemente de que el archivo .natvis. Puede usar varias opciones /NATVIS para insertar más de un archivo Natvis en el archivo PDB generado.
+La opción/NATVIS incrusta las visualizaciones del depurador definidas en el *nombre* de archivo del archivo NATVIS en el archivo PDB generado por Link. Esto permite al depurador mostrar las visualizaciones independientemente del archivo. natvis. Puede usar varias opciones de/NATVIS para insertar más de un archivo Natvis en el archivo PDB generado.
 
-LINK omite /NATVIS cuando un archivo PDB no se crea mediante el uso de un [/DEBUG](debug-generate-debug-info.md) opción. Para obtener información sobre la creación y uso de los archivos .natvis, consulte [crear vistas personalizadas de los objetos nativos en el depurador de Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
+LINK omite/NATVIS cuando no se crea un archivo PDB mediante una opción [/Debug](debug-generate-debug-info.md) . Para obtener información sobre la creación y el uso de archivos. natvis, vea [crear vistas personalizadas de objetos nativos en el depurador de Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione el **línea de comandos** página de propiedades de la **vinculador** carpeta.
+1. Seleccione la página de propiedades **línea de comandos** en la carpeta **vinculador** .
 
-1. Agregue la opción de /NATVIS el **opciones adicionales** cuadro de texto.
+1. Agregue la opción/NATVIS al cuadro de texto **opciones adicionales** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
-- Esta opción no tiene un equivalente mediante programación.
+- Esta opción no tiene un equivalente de programación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del enlazador MSVC](linking.md)<br/>
 [Opciones del enlazador MSVC](linker-options.md)

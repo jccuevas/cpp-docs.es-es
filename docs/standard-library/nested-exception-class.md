@@ -1,19 +1,19 @@
 ---
-title: Clase nested_exception
+title: nested_exception (clase)
 ms.date: 11/04/2016
 f1_keywords:
-- exception/std::bad_exception
+- exception/std::nested_exception
 helpviewer_keywords:
-- bad_exception class
+- nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460176"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441620"
 ---
-# <a name="nestedexception-class"></a>Clase nested_exception
+# <a name="nested_exception-class"></a>nested_exception (clase)
 
 La clase describe una excepción para su uso con herencia múltiple. Captura la excepción administrada actualmente y la almacena para su uso posterior.
 
@@ -28,7 +28,7 @@ class nested_exception {
 };
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operadores
 
@@ -36,14 +36,14 @@ class nested_exception {
 |-|-|
 |[operator=](#op_as)||
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
 |[rethrow_nested](#rethrow_nested)|Produce la excepción almacenada.|
 |[nested_ptr](#nested_ptr)|Devuelve la excepción almacenada.|
 
-### <a name="op_as"></a> operator=
+### <a name="op_as"></a>operador =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
@@ -57,7 +57,7 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Valor devuelto
 
-Excepción almacenada capturada por `nested_exception` este objeto.
+Excepción almacenada capturada por este objeto `nested_exception`.
 
 ### <a name="rethrow_nested"></a>rethrow_nested
 
@@ -65,17 +65,17 @@ Excepción almacenada capturada por `nested_exception` este objeto.
 [[noreturn]] void rethrow_nested() const;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Si `nested_ptr()` devuelve un puntero nulo, la función llama `std::terminate()`a. De lo contrario, produce la excepción almacenada capturada por `*this`.
+Si `nested_ptr()` devuelve un puntero nulo, la función llama a `std::terminate()`. De lo contrario, produce la excepción almacenada capturada por `*this`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<exception>
+**Encabezado:** \<excepción >
 
 **Espacio de nombres:** std
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Exception (clase)](../standard-library/exception-class.md)\
+\ de [clase de excepción](../standard-library/exception-class.md)
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
