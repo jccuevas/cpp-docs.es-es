@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500548"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444295"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (Clase)
 
@@ -26,7 +26,7 @@ Representa los errores COM que se producen durante la ejecución de una aplicaci
 public ref class COMException : Exception,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 La clase COMException hereda de la clase Object y las interfaces IException, IPrintable e IEquatable.
 
@@ -34,7 +34,7 @@ COMException también tiene los siguientes tipos de miembros.
 
 **Constructores**
 
-|Member|DESCRIPCIÓN|
+|Member|Descripción|
 |------------|-----------------|
 |[COMException](#ctor)|Inicializa una nueva instancia de la clase COMException.|
 
@@ -46,30 +46,30 @@ La clase COMException hereda los métodos Equals(), Finalize(), GetHashCode(), G
 
 La clase COMException tiene las propiedades siguientes.
 
-|Member|DESCRIPCIÓN|
+|Member|Descripción|
 |------------|-----------------|
 |[Excepción:: HResult](#hresult)|HRESULT correspondiente a la excepción.|
-|[Exception::Message](#message)|Mensaje que describe la excepción.|
+|[Exception:: Message](#message)|Mensaje que describe la excepción.|
 
 ## <a name="derived-exceptions"></a>Excepciones derivadas
 
 Las excepciones predefinidas siguientes se derivan de COMException. Difieren de COMException únicamente en su nombre, el nombre de su constructor y el valor HRESULT subyacente.
 
-|NOMBRE|HRESULT subyacente|DESCRIPCIÓN|
+|Nombre|HRESULT subyacente|Descripción|
 |----------|------------------------|-----------------|
-|COMException|*hresult definido por el usuario*|Se produce cuando se devuelve un HRESULT no reconocido de una llamada al método COM.|
+|COMException|*hresult definido por el usuario*|Se produce cuando se devuelve un HRESULT no reconocido desde una llamada al método COM.|
 |AccessDeniedException|E_ACCESSDENIED|Se produce cuando se deniega el acceso a un recurso o a una característica.|
 |ChangedStateException|E_CHANGED_STATE|Se produce cuando los métodos de un iterador de colección o de una vista de colección se invocan después de que la colección principal haya cambiado, invalidando los resultados del método.|
-|ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Se produce cuando una clase COM no se ha registrado.|
-|DisconnectedException|RPC_E_DISCONNECTED|Se produce cuando un objeto se desconecta de sus clientes.|
-|FailureException|E_FAIL|Se produce cuando una operación no es correcta.|
+|ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Se produce cuando no se ha registrado una clase COM.|
+|DisconnectedException|RPC_E_DISCONNECTED|Se produce cuando se desconecta un objeto de sus clientes.|
+|FailureException|E_FAIL|Se produce cuando ocurre un error en una operación.|
 |InvalidArgumentException|E_INVALIDARG|Se produce cuando uno de los argumentos proporcionados a un método no es válido.|
-|InvalidCastException|E_NOINTERFACE|Se produce cuando un tipo no puede convertirse a otro tipo.|
-|NotImplementedException|E_NOTIMPL|Se produce si un método de interfaz no se ha implementado en una clase.|
+|InvalidCastException|E_NOINTERFACE|Se produce cuando no se puede convertir un tipo a otro tipo.|
+|NotImplementedException|E_NOTIMPL|Se produce si no se ha implementado un método de interfaz en una clase.|
 |NullReferenceException|E_POINTER|Se produce cuando se intenta desreferenciar una referencia de un objeto null.|
 |OperationCanceledException|E_ABORT|Se produce cuando se anula una operación.|
-|OutOfBoundsException|E_BOUNDS|Se produce cuando una operación intenta tener acceso a datos que están fuera del intervalo válido.|
-|OutOfMemoryException|E_OUTOFMEMORY|Se produce cuando la memoria es insuficiente para completar la operación.|
+|OutOfBoundsException|E_BOUNDS|Se produce cuando una operación intenta acceder a los datos fuera del intervalo válido.|
+|OutOfMemoryException|E_OUTOFMEMORY|Se produce cuando no hay suficiente memoria para completar la operación.|
 
 ### <a name="requirements"></a>Requisitos
 
@@ -77,7 +77,7 @@ Las excepciones predefinidas siguientes se derivan de COMException. Difieren de 
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres**: Plataforma
+**Espacio de nombres:** Plataforma
 
 **Metadatos:** platform.winmd
 
@@ -93,7 +93,7 @@ COMException( int hresult )
 
 ### <a name="parameters"></a>Parámetros
 
-*hresult*<br/>
+*valor*<br/>
 Valor HRESULT de error representado por la excepción.
 
 ## <a name="hresult"></a>COMException:: HResult (propiedad)
@@ -107,11 +107,11 @@ public:
     property int HResult { int get();}
 ```
 
-## <a name="property-value"></a>Valor de propiedad
+## <a name="property-value"></a>Valor de la propiedad
 
 Valor HRESULT que especifica el error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información sobre cómo interpretar el valor HRESULT, vea [estructura de los códigos de error com](/windows/win32/com/structure-of-com-error-codes).
 
@@ -125,10 +125,10 @@ Mensaje que describe la excepción.
 public:property String^ Message {    String^ get();}
 ```
 
-### <a name="property-value"></a>Valor de propiedad
+### <a name="property-value"></a>Valor de la propiedad
 
 Descripción de la excepción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

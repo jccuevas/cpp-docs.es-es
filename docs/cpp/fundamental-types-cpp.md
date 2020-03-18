@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301501"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445316"
 ---
 # <a name="built-in-types-c"></a>Tipos integrados (C++)
 
@@ -66,7 +69,7 @@ En la tabla siguiente se explican las restricciones en los tamaños de tipo en r
 
 ### <a name="built-in-type-size-restrictions"></a>Restricciones de tamaño de tipo integrado
 
-|Categoría|Tipo de|Contenido|
+|Category|Tipo|Contenido|
 |--------------|----------|--------------|
 |Entero|**char**|Tipo **Char** es un tipo entero que normalmente contiene miembros del juego de caracteres de ejecución básico; de forma predeterminada, es ASCII en C++Microsoft.<br /><br /> El C++ compilador trata las variables de tipo **Char**, **signed char**y **unsigned char** como si tuvieran tipos diferentes. Las variables de tipo **Char** se promueven a **int** como si fueran de tipo **signed char** de forma predeterminada, a menos que se use la opción de compilación/j. En este caso, se tratan como tipo **unsigned char** y se promueven a **int** sin la extensión de signo.|
 ||**bool**|El tipo **bool** es un tipo entero que puede tener uno de los dos valores **true** o **false**. Su tamaño no está especificado.|
@@ -86,7 +89,7 @@ En la tabla siguiente se muestra la cantidad de almacenamiento necesaria para lo
 
 ### <a name="sizes-of-built-in-types"></a>Tamaños de tipos integrados
 
-|Tipo de|Tamaño de la|
+|Tipo|Size|
 |----------|----------|
 |**bool**, **Char**, **unsigned char**, **signed char**, **__int8**|1 byte|
 |**__int16**, **Short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bytes|
@@ -99,6 +102,6 @@ Vea [Intervalos de tipo de datos](data-type-ranges.md) para obtener un resumen d
 
 Para obtener más información sobre la conversión de tipos, vea [Conversiones estándar](standard-conversions.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Intervalos de tipo de datos](data-type-ranges.md)

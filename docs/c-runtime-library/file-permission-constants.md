@@ -1,9 +1,6 @@
 ---
 title: Constantes de permiso de archivo
 ms.date: 11/04/2016
-f1_keywords:
-- _S_IWRITE
-- _S_IREAD
 helpviewer_keywords:
 - S_IWRITE constant
 - constants [C++], file attributes
@@ -12,12 +9,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 9f6126b867e29ca37468c6ff383224a483639c78
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742707"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443282"
 ---
 # <a name="file-permission-constants"></a>Constantes de permiso de archivo
 
@@ -27,7 +24,7 @@ ms.locfileid: "57742707"
 #include <sys/stat.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Una de estas constantes es necesaria cuando `_O_CREAT` (`_open`, `_sopen`) se especifica.
 
@@ -47,7 +44,7 @@ Cuando se usa como el argumento `pmode` para `_umask`, la constante de manifiest
 |`_S_IWRITE`|Lectura no permitida (el archivo es de solo escritura)|
 |`_S_IREAD` &#124; `_S_IWRITE`|Lectura y escritura no permitidas|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

@@ -39,11 +39,11 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865891"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426490"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage (clase)
 
@@ -55,17 +55,17 @@ Se utiliza para mostrar las propiedades de un control personalizado en una inter
 class AFX_NOVTABLE COlePropertyPage : public CDialog
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[COlePropertyPage:: COlePropertyPage](#colepropertypage)|Construye un objeto `COlePropertyPage`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[COlePropertyPage:: GetControlStatus](#getcontrolstatus)|Indica si el usuario ha modificado el valor del control.|
 |[COlePropertyPage:: GetObjectArray](#getobjectarray)|Devuelve la matriz de objetos que está editando la página de propiedades.|
@@ -83,7 +83,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |[COlePropertyPage:: SetModifiedFlag](#setmodifiedflag)|Establece una marca que indica si el usuario ha modificado la página de propiedades.|
 |[COlePropertyPage:: SetPageName](#setpagename)|Establece el nombre de la página de propiedades (título).|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Por ejemplo, una página de propiedades puede incluir un control de edición que permite al usuario ver y modificar la propiedad de leyenda del control.
 
@@ -125,7 +125,7 @@ IDENTIFICADOR de recurso de la plantilla de cuadro de diálogo.
 *idCaption*<br/>
 IDENTIFICADOR de recurso del título de la página de propiedades.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se implementa una subclase de `COlePropertyPage`, el constructor de la subclase debe utilizar el constructor `COlePropertyPage` para identificar el recurso de plantilla de cuadro de diálogo en el que se basa la página de propiedades y el recurso de cadena que contiene su título.
 
@@ -163,7 +163,7 @@ Puntero a un entero largo sin signo que recibirá el número de objetos que se v
 
 Puntero a una matriz de punteros de `IDispatch`, que se utilizan para tener acceso a las propiedades de cada control en la página de propiedades. El autor de la llamada no debe liberar estos punteros de interfaz.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cada objeto de página de propiedades mantiene una matriz de punteros a las interfaces `IDispatch` de los objetos que se están editando en la página. Esta función establece su argumento *pnObjects* en el número de elementos de la matriz y devuelve un puntero al primer elemento de la matriz.
 
@@ -179,7 +179,7 @@ LPPROPERTYPAGESITE GetPageSite();
 
 Puntero a la interfaz de `IPropertyPageSite` de la página de propiedades.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los controles y contenedores cooperan para que los usuarios puedan examinar y editar las propiedades del control. El control proporciona páginas de propiedades, cada una de las cuales es un objeto OLE que permite al usuario editar un conjunto de propiedades relacionado. El contenedor proporciona un marco de propiedades que muestra las páginas de propiedades. En cada página, el marco de propiedades proporciona un sitio de página, que admite la interfaz `IPropertyPageSite`.
 
@@ -196,7 +196,7 @@ void IgnoreApply(UINT nID);
 *nID*<br/>
 IDENTIFICADOR del control que se va a omitir.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El botón aplicar de la página de propiedades solo está habilitado cuando se han cambiado los valores de los controles de la página de propiedades. Utilice esta función para especificar controles que no hacen que se habilite el botón aplicar cuando cambian sus valores.
 
@@ -229,7 +229,7 @@ IDENTIFICADOR de envío de la propiedad que se está editando.
 
 La implementación predeterminada devuelve FALSE. Las invalidaciones de esta función deben devolver TRUE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Puede invalidarlo para establecer el foco en el control adecuado en la página. La implementación predeterminada no hace nada y devuelve FALSE.
 
@@ -250,7 +250,7 @@ Directorio que contiene el archivo de ayuda de la página de propiedades.
 
 La implementación predeterminada devuelve FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Reemplácelo si la página de propiedades debe realizar cualquier acción especial cuando el usuario tenga acceso a la ayuda. La implementación predeterminada no realiza ninguna acción y devuelve FALSE, lo que indica al marco de trabajo que llame a WinHelp.
 
@@ -266,7 +266,7 @@ virtual BOOL OnInitDialog();
 
 La implementación predeterminada devuelve FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Reemplácelo si se requiere una acción especial cuando se inicializa el cuadro de diálogo. La implementación predeterminada llama a `CDialog::OnInitDialog` y devuelve FALSE.
 
@@ -278,7 +278,7 @@ Lo llama el marco de trabajo cuando se elige otro control OLE, con nuevas propie
 virtual void OnObjectsChanged();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Al ver las propiedades de un control OLE en el entorno del desarrollador, se usa un cuadro de diálogo no modal para mostrar sus páginas de propiedades. Si se selecciona otro control, se debe mostrar un conjunto diferente de páginas de propiedades para el nuevo conjunto de propiedades. El marco de trabajo llama a esta función para notificar el cambio a la página de propiedades.
 
@@ -292,7 +292,7 @@ El marco de trabajo llama a esta función cuando el marco de propiedades proporc
 virtual void OnSetPageSite();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La implementación predeterminada carga el título de la página e intenta determinar el tamaño de la página desde el recurso de cuadro de diálogo. Invalide esta función si la página de propiedades requiere alguna acción adicional; la invalidación debe llamar a la implementación de la clase base.
 
@@ -318,7 +318,7 @@ Especifica si se ha modificado un campo de la página de propiedades. Establézc
 
 TRUE si se estableció el control especificado; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el estado de un control de página de propiedades se ha modificado cuando se cierra la página de propiedades o se elige el botón aplicar, la propiedad del control se actualizará con el valor adecuado.
 
@@ -383,7 +383,7 @@ void SetPageName(LPCTSTR lpszPageName);
 *lpszPageName*<br/>
 Puntero a una cadena que contiene el nombre de la página de propiedades.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplo de MFC CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo TESTHELP de MFC](../../overview/visual-cpp-samples.md)<br/>

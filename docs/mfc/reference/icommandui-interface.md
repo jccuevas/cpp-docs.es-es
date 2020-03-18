@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426664"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445696"
 ---
 # <a name="icommandui-interface"></a>Interfaz ICommandUI
 
@@ -60,6 +60,7 @@ Para obtener más información sobre cómo se administran los comandos de la int
 ## <a name="check"></a>ICommandUI:: check
 
 Establece el elemento de la interfaz de usuario para este comando en el estado de comprobación adecuado.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ Esta propiedad establece el elemento de la interfaz de usuario para este comando
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 Indica al mecanismo de enrutamiento de comandos que continúe enrutando el mensaje actual hacia la cadena de controladores.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ Se trata de una función miembro avanzada que se debe usar junto con un controla
 ## <a name="enabled"></a>ICommandUI:: Enabled
 
 Habilita o deshabilita el elemento de la interfaz de usuario para este comando.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ Esta propiedad habilita o deshabilita el elemento de la interfaz de usuario para
 ## <a name="id"></a>ICommandUI:: ID
 
 Obtiene el identificador del objeto de interfaz de usuario representado por el objeto ICommandUI.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ Esta propiedad obtiene el identificador (un identificador) del elemento de menú
 ## <a name="index"></a>ICommandUI:: index
 
 Obtiene el índice del objeto de la interfaz de usuario representado por el objeto ICommandUI.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ Esta propiedad obtiene el índice (un identificador) del elemento de menú, el b
 ## <a name="radio"></a>ICommandUI:: Radio
 
 Establece el elemento de la interfaz de usuario para este comando en el estado de comprobación adecuado.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ Esta propiedad establece el elemento de la interfaz de usuario para este comando
 ## <a name="text"></a>ICommandUI:: Text
 
 Establece el texto del elemento de la interfaz de usuario para este comando.
+
 ```
 property String^ Text;
 ```

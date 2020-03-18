@@ -3,11 +3,11 @@ title: Configuración de un proyecto de C++ para Linux en Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865689"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79429179"
 ---
 # <a name="configure-a-linux-project"></a>Configuración de un proyecto de Linux
 

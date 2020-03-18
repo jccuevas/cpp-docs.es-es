@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946257"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443676"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -57,7 +56,7 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Parámetros
 
-*handle*<br/>
+*asa*<br/>
 Descriptor de archivo que hace referencia a un archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -68,7 +67,7 @@ Un valor devuelto de-1L indica un error. Si el *identificador* es un descriptor 
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_tell** obtiene la posición actual del puntero de archivo (si existe) asociado al argumento de *identificador* . La posición se expresa como el número de bytes desde el principio del archivo. En el caso de la función **_telli64** , este valor se expresa como un entero de 64 bits.
 
@@ -120,13 +119,13 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Output
 
 ```Output
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

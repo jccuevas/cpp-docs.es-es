@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141802"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445110"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Crear operaciones asincrónicas en C++ para aplicaciones para UWP
 
@@ -31,7 +31,7 @@ El uso de la programación asincrónica es un componente clave en el modelo de a
 
 - El comportamiento de la función `create_async` depende del tipo de valor devuelto de la función de trabajo a la que se pasa. Una función de trabajo que devuelve una tarea ( `task<T>` o `task<void>`) se ejecuta de manera sincrónica en el contexto que llamó a `create_async`. Una función de trabajo que devuelve `T` o `void` se ejecuta en un contexto arbitrario.
 
-- Puede utilizar el método [concurrency::task::then](reference/task-class.md#then) para crear una cadena de tareas que se ejecutan una tras otra. En una aplicación de UWP, el contexto predeterminado para las continuaciones de una tarea depende de cómo se construya esa tarea. Si la tarea se creó pasando una acción asincrónica al constructor de tarea, o pasando una expresión lambda que devuelve una acción asincrónica, el contexto predeterminado para todas las continuaciones de esa tarea es el contexto actual. Si la tarea no se creó a partir de una acción asincrónica, de forma predeterminada un contexto arbitrario se utiliza para las continuaciones de la tarea. Puede reemplazar el contexto predeterminado con la clase [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) .
+- Puede utilizar el método [concurrency::task::then](reference/task-class.md#then) para crear una cadena de tareas que se ejecutan una tras otra. En una aplicación de UWP, el contexto predeterminado para las continuaciones de una tarea depende de cómo se construya esa tarea. Si la tarea se creó pasando una acción asincrónica al constructor de tarea, o pasando una expresión lambda que devuelve una acción asincrónica, el contexto predeterminado para todas las continuaciones de esa tarea es el contexto actual. Si la tarea no se construye a partir de una acción asincrónica, se usa de forma predeterminada un contexto arbitrario para las continuaciones de la tarea. Puede reemplazar el contexto predeterminado con la clase [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) .
 
 ## <a name="in-this-document"></a>En este documento
 
@@ -90,7 +90,7 @@ En el ejemplo siguiente se muestran las distintas maneras de crear un objeto `IA
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a> Ejemplo: crear un componente de Windows Runtime de C++ y usarlo desde C#
+## <a name="example-component"></a>Ejemplo: crear un C++ componente de Windows Runtime y usarlo desde C\#
 
 Considere una aplicación que usa XAML y C# para definir la interfaz de usuario C++ y un componente de Windows Runtime para realizar operaciones de proceso intensivo. En este ejemplo, el componente de C++ calcula que los números de un intervalo dado son primos. Para ilustrar las diferencias entre las cuatro Windows Runtime interfaces de tarea asincrónica, inicie, en Visual Studio, creando una **solución en blanco** y asignándole un nombre `Primes`. Luego, agregue a la solución un proyecto **Componente de Windows Runtime** y asígnele el nombre `PrimesLibrary`. Agregue el código siguiente al archivo de encabezado de C++ generado (este ejemplo cambia el nombre de Class1.h a Primes.h). Cada método `public` define una de las cuatro interfaces asincrónicas. Los métodos que devuelven un valor devuelven un objeto [Windows:: Foundation:: Collections:: IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) . Los métodos que informan sobre el progreso proporcionan valores `double` que definen el porcentaje del trabajo total completado.
 

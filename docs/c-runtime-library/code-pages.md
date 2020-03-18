@@ -1,8 +1,6 @@
 ---
 title: Páginas de códigos
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 13b31b7d7750158caf498d92db67fd3e61856c5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738572"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443501"
 ---
 # <a name="code-pages"></a>Páginas de códigos
 
@@ -35,13 +33,13 @@ La biblioteca en tiempo de ejecución de Microsoft usa los siguientes tipos de p
 
    también establece la configuración regional a la página de códigos ANSI predeterminada del sistema.
 
-- Página de códigos de configuración regional. El comportamiento de un número de rutinas en tiempo de ejecución depende de la configuración regional actual, que incluye la página de códigos de esta. (Para obtener más información, vea [Locale-Dependent Routines](../c-runtime-library/locale.md) [Rutinas dependientes de la configuración regional]). De manera predeterminada, todas las rutinas dependientes de la configuración regional en la biblioteca en tiempo de ejecución de Microsoft usan la página de códigos que corresponde a la configuración regional "C". En tiempo de ejecución, puede cambiar o consultar la página de códigos de la configuración regional en uso con una llamada a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+- Página de códigos de configuración regional. El comportamiento de un número de rutinas en tiempo de ejecución depende de la configuración regional actual, que incluye la página de códigos de esta. (Para obtener más información, vea [rutinas dependientes de la configuración regional](../c-runtime-library/locale.md)). De forma predeterminada, todas las rutinas dependientes de la configuración regional de la biblioteca en tiempo de ejecución de Microsoft usan la página de códigos que corresponde a la configuración regional "C". En tiempo de ejecución, puede cambiar o consultar la página de códigos de la configuración regional en uso con una llamada a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
 - Página de códigos multibyte. El comportamiento de la mayoría de las rutinas de caracteres multibyte en la biblioteca en tiempo de ejecución depende de la configuración de la página de códigos multibyte actual. De manera predeterminada, estas rutinas usan la página de códigos ANSI predeterminada del sistema. En tiempo de ejecución, puede cambiar o consultar la página de códigos multibyte con [_getmbcp](../c-runtime-library/reference/getmbcp.md) y [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivamente.
 
 - La configuración regional "C" se define mediante ANSI para que coincida con la configuración regional en la que se han ejecutado tradicionalmente los programas de C. La página de códigos para la configuración regional "C" (página de códigos "C") corresponde al juego de caracteres ASCII. Por ejemplo, en la configuración regional "C", **islower** devuelve true solo para los valores de 0x61 a 0x7A. En otra configuración regional, **islower** puede devolver true para estos así como para otros valores, como se define mediante esa configuración regional.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Internacionalización](../c-runtime-library/internationalization.md)<br/>
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,8 +1,6 @@
 ---
 title: Filosofía general de diseño de clases
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - designing classes [MFC]
 - MFC, Windows API
@@ -10,43 +8,43 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-ms.openlocfilehash: 4dfa11c73703f5f2d3d17f8278610d32178af679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a173802e3fa43615c05da4ce747592f851228f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219624"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441190"
 ---
 # <a name="general-class-design-philosophy"></a>Filosofía general de diseño de clases
 
-Microsoft Windows se diseñaron mucho antes de que se hizo popular el lenguaje C++. Dado que miles de aplicaciones utilizan la interfaz de programación de aplicaciones (API) de Windows del lenguaje C, esa interfaz se mantendrá en el futuro inmediato. Cualquier interfaz de Windows de C++, por tanto, debe compilarse sobre la API del lenguaje C procedimientos. Esto garantiza que las aplicaciones de C++ podrán coexistir con aplicaciones de C.
+Microsoft Windows se diseñó durante mucho tiempo C++ antes de que el lenguaje se convirtiera en popular. Dado que miles de aplicaciones usan la interfaz de programación de aplicaciones (API) de Windows en lenguaje C, esa interfaz se mantendrá para el futuro previsible. Por C++ lo tanto, cualquier interfaz de Windows se debe crear sobre la API del lenguaje C de procedimientos. Esto garantiza que C++ las aplicaciones puedan coexistir con aplicaciones de C.
 
-La biblioteca Microsoft Foundation Class es una interfaz orientada a objetos para Windows que cumpla los objetivos de diseño siguientes:
+El biblioteca MFC es una interfaz orientada a objetos a Windows que cumple los siguientes objetivos de diseño:
 
-- Reducción significativa en el esfuerzo necesario para escribir una aplicación para Windows.
+- Reducción significativa en el esfuerzo de escribir una aplicación para Windows.
 
-- Velocidad de ejecución es comparable a la de la API del lenguaje C.
+- Velocidad de ejecución comparable a la de la API del lenguaje C.
 
-- Sobrecarga de tamaño mínimo de código.
+- Sobrecarga mínima de tamaño de código.
 
-- Capacidad de llamar directamente a cualquier función de C de Windows.
+- Capacidad de llamar directamente a cualquier función de Windows C.
 
-- Conversión más fácil de las aplicaciones existentes de C a C++.
+- Conversión más sencilla de aplicaciones de C C++existentes en.
 
-- Capacidad de aprovechar de la base de la experiencia de programación de Windows de lenguaje C existente.
+- Capacidad de aprovecharse de la base existente de la experiencia de programación de Windows en lenguaje C.
 
-- Simplificar su uso de la API de Windows con C++ que con C.
+- Uso más sencillo de la API de C++ Windows con que con C.
 
-- Más fácil de utilizar pero eficaz abstracciones de complicadas funciones como controles ActiveX, compatibilidad con la base de datos, impresión, las barras de herramientas y barras de estado.
+- Más fáciles de usar, pero eficaces abstracciones de características complicadas, como controles ActiveX, compatibilidad con bases de datos, impresión, barras de herramientas y barras de estado.
 
-- API de Windows es True para C++ que utiliza características del lenguaje C++ de forma eficaz.
+- Verdadera API de Windows C++ para que utiliza C++ de forma eficaz las características del lenguaje.
 
 Para obtener más información sobre el diseño de la biblioteca MFC, vea:
 
-- [El marco de aplicación](../mfc/application-framework.md)
+- [Marco de trabajo de la aplicación](../mfc/application-framework.md)
 
 - [Relación con la API del lenguaje C](../mfc/relationship-to-the-c-language-api.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../mfc/class-library-overview.md)
+[Información general sobre clases](../mfc/class-library-overview.md)

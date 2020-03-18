@@ -1,19 +1,16 @@
 ---
-title: Alineación
+title: Alignment
 description: Cómo se especifica la alineación de datos C++en moderno.
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301670"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443669"
 ---
-# <a name="alignment"></a>Alineación
+# <a name="alignment"></a>Alignment
 
 Una de las características de bajo nivel de C++ es la capacidad para especificar la alineación precisa de los objetos en la memoria para sacar el máximo partido de una arquitectura de hardware específica. De forma predeterminada, el compilador alinea los miembros de clase y struct en su valor de tamaño: `bool` y `char` en límites de 1 byte, `short` en límites de 2 bytes, `int`, `long`y `float` en límites de 4 bytes, y `long long`, `double`y `long double` en límites de 8 bytes. 
 
@@ -126,6 +123,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Alineación de la estructura de datos](https://en.wikipedia.org/wiki/Data_structure_alignment)

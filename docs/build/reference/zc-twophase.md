@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856961"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438644"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (Deshabilitar la búsqueda de nombres en dos fases)
 
@@ -23,9 +22,9 @@ La opción **/Zc: twoPhase-** , en **/permissive-** , indica al compilador que u
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/Zc:twoPhase-**
+> **/ZC: twoPhase-**
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Visual Studio 2017 versión 15,3 y versiones posteriores: en [/permissive-](permissive-standards-conformance.md), el compilador usa la búsqueda de nombres en dos fases para la resolución de nombres de plantilla. Si también especifica **/Zc: twoPhase-** , el compilador vuelve a su anterior plantilla de clase no conforme y a la resolución de nombres y comportamiento de sustitución. Cuando no se especifica **/permissive-** , el comportamiento no conforme es el valor predeterminado.
 
@@ -99,7 +98,7 @@ Cuando se compila en modo de cumplimiento en **/permissive-** , este programa im
 
 La búsqueda en dos fases consta de dos partes: la búsqueda de nombres no dependientes durante la definición de la plantilla y la búsqueda de nombres dependientes durante la creación de instancias de la plantilla. En **/Zc: twoPhase-** , el compilador no realiza la búsqueda dependiente de argumentos por separado de la búsqueda no completa. Es decir, no realiza búsquedas en dos fases, por lo que los resultados de la resolución de sobrecarga pueden ser diferentes.
 
-A continuación se muestra otro ejemplo:
+Este es otro ejemplo:
 
 ```cpp
 // zctwophase1.cpp
@@ -199,6 +198,6 @@ Para obtener más información sobre los problemas de cumplimiento, vea [ C++ me
 
 1. Modifique la propiedad **opciones adicionales** para incluir **/Zc: twoPhase-** y, a continuación, elija **Aceptar**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [/Zc (Ajuste)](zc-conformance.md)

@@ -1,18 +1,16 @@
 ---
 title: Usar CTabCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CTabCtrl
 helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: af61b33d592589f557afe13a319696a0f0f5f456
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510785"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442250"
 ---
 # <a name="using-ctabctrl"></a>Usar CTabCtrl
 
@@ -36,6 +34,6 @@ Para obtener más información sobre los controles de ficha, vea [controles de f
 
 - [Procesamiento de los mensajes de notificación del control de pestaña](../mfc/processing-tab-control-notification-messages.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)

@@ -3,12 +3,12 @@ title: Referencia de CppProperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422845"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442553"
 ---
 # <a name="cpppropertiesjson-reference"></a>Referencia de CppProperties. JSON
 
@@ -28,7 +28,7 @@ Una configuración puede tener cualquiera de las propiedades siguientes:
 |`forcedInclude`|Encabezado que se va a incluir de forma automática en todas las unidades de compilación (se asigna a /FI para MSVC o -include para clang).|
 |`undefines`|Lista de macros de las que se van a anular las definiciones (se asigna a /U para MSVC).|
 |`intelliSenseMode`|Motor de IntelliSense que se va usar. Puede especificar una de las variantes predefinidas específicas de la arquitectura para MSVC, GCC o Clang.|
-|`environments`|Conjuntos de variables definidos por el usuario que se comportan como variables de entorno en un símbolo del sistema y a los que se tiene acceso con $ {env.<VARIABLE>} macro.|
+|`environments`|Conjuntos de variables definidos por el usuario que se comportan como variables de entorno en un símbolo del sistema y a los que se tiene acceso con la VARIABLE $ {env.\<VARIABLE >}.|
 
 ### <a name="intellisensemode-values"></a>valores de omiten
 

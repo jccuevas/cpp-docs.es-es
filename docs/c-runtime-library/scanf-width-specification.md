@@ -1,28 +1,15 @@
 ---
 title: scanf (Especificación de ancho)
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811120"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444711"
 ---
 # <a name="scanf-width-specification"></a>scanf (Especificación de ancho)
 
@@ -106,7 +93,7 @@ La función `scanf` examina cada campo de entrada, carácter a carácter. Puede 
 
 Por algún motivo, cuando la función `scanf` deja de leer un campo de entrada, se considera que el siguiente campo de entrada comienza en el primer carácter no leído. El carácter conflictivo, si existe, se considera no leído. Es el primer carácter del siguiente campo de entrada o el primer carácter de las operaciones de lectura posteriores en el flujo de entrada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

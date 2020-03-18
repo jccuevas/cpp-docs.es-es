@@ -1,28 +1,26 @@
 ---
 title: Usar CProgressCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CProgressCtrl
 helpviewer_keywords:
 - progress controls [MFC]
 - CProgressCtrl class [MFC], using
 - progress controls [MFC], CProgressCtrl
 - progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
-ms.openlocfilehash: eb332d0c6eb55dddcd20d6d4f07fe6f666c015ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a575a766650a77b0908f0fa3016139239b23dc56
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411754"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441895"
 ---
 # <a name="using-cprogressctrl"></a>Usar CProgressCtrl
 
-Puede usar el control de progreso para indicar el progreso de una operación larga. Es un rectángulo que se rellena gradualmente con el color de resaltado del sistema como la operación progresa.
+Puede utilizar el control de progreso para indicar el progreso de una operación larga. Es un rectángulo que se rellena gradualmente con el color de resaltado del sistema a medida que la operación progresa.
 
 El control de progreso se representa en MFC mediante la clase [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
 
-Cuando se crea inicialmente el control de progreso, especifique su tamaño y posición, la ventana primaria (normalmente un cuadro de diálogo) e identificador. Mediante el uso de la *dwStyle* parámetro, también puede especificar varios estilos de ventana para el control y estilos para su relleno.
+Al crear inicialmente el control de progreso, se especifica el tamaño y la posición, la ventana primaria (normalmente un cuadro de diálogo) y el identificador. Mediante el parámetro *dwStyle* , también puede especificar varios estilos de ventana para el control y los estilos de cómo se rellena.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -32,6 +30,6 @@ Cuando se crea inicialmente el control de progreso, especifique su tamaño y pos
 
 - [Manipulación del control de progreso](../mfc/manipulating-the-progress-control.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)

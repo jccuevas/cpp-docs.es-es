@@ -9,11 +9,8 @@ f1_keywords:
 - vc.editors.bitmap
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
-- vc.editors.bitmap
 - vc.editors.icon
 - vc.editors.texttool
-- vc.editors.bitmap
-- vc.editors.icon
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
@@ -42,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514220"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443766"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imágenes para iconosC++()
 
@@ -71,7 +68,7 @@ Para obtener información sobre el **Editor de imágenes**, consulte [creación 
 
 El menú **imagen** , que solo aparece cuando el **Editor de imágenes** está activo, tiene comandos para editar imágenes, administrar paletas de colores y establecer opciones de la ventana del **Editor de imágenes** . Además, los comandos para usar imágenes de dispositivo están disponibles cuando se trabaja con iconos y cursores.
 
-|Comando|Descripción|
+|Get-Help|Descripción|
 |---|---|
 |**Invertir colores**|Invierte los colores.|
 |**Voltear horizontalmente**|Voltea la imagen o la selección en sentido horizontal.|
@@ -86,14 +83,14 @@ El menú **imagen** , que solo aparece cuando el **Editor de imágenes** está a
 |**Dibujar opaco**|Cuando se selecciona, hace que la selección actual sea opaca.<br/><br/>Cuando está desactivada, hace que la selección actual sea transparente.|
 |**Editor de barras de herramientas**|Abre el [cuadro de diálogo nuevo recurso](../windows/new-toolbar-resource-dialog-box.md)de la barra de herramientas.|
 |**Configuración de la cuadrícula**|Abre el cuadro de diálogo Configuración de la **cuadrícula** en el que puede especificar cuadrículas para la imagen.|
-|**Nuevo tipo de imagen**|Abre el [cuadro \<de diálogo nuevo dispositivo > tipo de imagen](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Un recurso de icono único puede contener varias imágenes de diferentes tamaños y Windows puede usar el tamaño de icono adecuado en función de cómo se vaya a mostrar. Un nuevo tipo de dispositivo no modifica el tamaño del icono, sino que crea una nueva imagen dentro del icono. Solo se aplica a los iconos y cursores.|
-|**Icono actual/tipo de imagen de cursor**|Abre un submenú que muestra las nueve primeras imágenes de cursor o icono disponibles. El último comando del submenú, **más**, abre el [cuadro de \<diálogo Abrir imagen > dispositivo](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Nuevo tipo de imagen**|Abre el [cuadro de diálogo nuevo \<dispositivo > tipo de imagen](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Un recurso de icono único puede contener varias imágenes de diferentes tamaños y Windows puede usar el tamaño de icono adecuado en función de cómo se vaya a mostrar. Un nuevo tipo de dispositivo no modifica el tamaño del icono, sino que crea una nueva imagen dentro del icono. Solo se aplica a los iconos y cursores.|
+|**Icono actual/tipo de imagen de cursor**|Abre un submenú que muestra las nueve primeras imágenes de cursor o icono disponibles. El último comando del submenú, **más**, abre el [cuadro de diálogo abrir \<dispositivo > imagen](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Eliminar tipo de imagen**|Elimina la imagen de dispositivo seleccionada.|
 |**Herramientas**|Inicia un submenú que contiene todas las herramientas disponibles en la barra de herramientas del **Editor de imágenes** .|
 
 El cuadro de diálogo Configuración de la **cuadrícula** permite especificar la configuración de la cuadrícula para la imagen y mostrar las líneas de cuadrícula sobre la imagen modificada. Las líneas son útiles para editar la imagen, pero no se guardan como parte de la propia imagen.
 
-|Propiedad.|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Cuadrícula de píxeles**|Cuando esta opción está activada, muestra una cuadrícula alrededor de cada píxel en el **Editor de imágenes**.<br/><br/>La cuadrícula solo aparece en 4 × y resoluciones superiores.|
 |**Cuadrícula de mosaico**|Cuando está seleccionada, muestra una cuadrícula alrededor de los bloques de píxeles en el **Editor de imágenes**, especificados por los valores de espaciado de la cuadrícula.|
@@ -104,7 +101,7 @@ El cuadro de diálogo Configuración de la **cuadrícula** permite especificar l
 
 La barra de herramientas del **Editor de imágenes** contiene herramientas para dibujar, pintar, escribir texto, borrar y manipular vistas. También contiene un selector de opciones, con el que puede seleccionar opciones para usar cada herramienta. Por ejemplo, puede elegir entre varios anchos de pincel, factores de ampliación y estilos de línea.
 
-Todas las herramientas disponibles en la barra de herramientas del **Editor de imágenes** también están disponibles en las**herramientas**de **imagen** > de menú. Para usar la barra de herramientas del **Editor de imágenes** y el selector de **Opciones** , seleccione la herramienta o la opción que desee.
+Todas las herramientas disponibles en la barra de herramientas del **Editor de imágenes** también están disponibles en la **imagen** de menú > **herramientas**. Para usar la barra de herramientas del **Editor de imágenes** y el selector de **Opciones** , seleccione la herramienta o la opción que desee.
 
 ![Barra de herramientas del editor de imágenes](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Barra de herramientas del **Editor de imágenes**
@@ -114,7 +111,7 @@ Barra de herramientas del **Editor de imágenes**
 
 Dado que muchas de las herramientas de dibujo están disponibles desde el [teclado](../windows/accelerator-keys-image-editor-for-icons.md), a veces resulta útil ocultar la barra de herramientas del **Editor de imágenes** .
 
-- Para mostrar u ocultar la barra de herramientas del **Editor de imágenes** , vaya a la **vista** > de menú**barra de herramientas** y elija editor de **imágenes**.
+- Para mostrar u ocultar la barra de herramientas del **Editor de imágenes** , vaya a la **vista** de menú > **barras de herramientas** y elija editor de **imágenes**.
 
 > [!NOTE]
 > Los elementos de esta barra de herramientas no estarán disponibles cuando un archivo de imagen del proyecto o la solución actual no esté abierto en el **Editor de imágenes**.
@@ -130,7 +127,7 @@ Selector de **Opciones** de la barra de herramientas del **Editor de imágenes**
 
 Utilice el cuadro de diálogo **herramienta de texto** para agregar texto a un recurso de cursor, mapa de bits o icono.
 
-Para obtener acceso a este cuadro de diálogo, abra el **Editor de imágenes** y vaya a menú**herramientas**de **imagen** > y, a continuación, seleccione el comando de la **herramienta texto** .
+Para obtener acceso a este cuadro de diálogo, abra el **Editor de imágenes** y vaya a la **imagen** de menú > **herramientas**y, a continuación, seleccione el comando de la **herramienta texto** .
 
 > [!TIP]
 > Puede hacer clic con el botón secundario en el cuadro de diálogo **herramienta de texto** para tener acceso a un menú contextual predeterminado que contiene una lista de comandos de Windows estándar.
@@ -139,11 +136,11 @@ Abra el cuadro de diálogo **fuente de herramienta de texto** para cambiar la fu
 
 Para obtener acceso a este cuadro de diálogo, seleccione el botón **fuente** en el cuadro de diálogo **herramienta de texto** . Las propiedades disponibles son:
 
-|Propiedad.|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Fuente**|Muestra las fuentes disponibles.|
 |**Estilo de fuente**|Muestra los estilos disponibles para la fuente especificada.|
-|**Size**|Muestra los tamaños de punto disponibles para la fuente especificada.|
+|**Tamaño**|Muestra los tamaños de punto disponibles para la fuente especificada.|
 |**Ejemplo**|Muestra un ejemplo de cómo aparecerá el texto con la configuración de fuente especificada.|
 |**Script**|Muestra los scripts de idioma disponibles para la fuente especificada.<br/><br/>Al seleccionar un script de idioma diferente, el juego de caracteres de ese idioma está disponible para la creación de documentos multilingües.|
 
@@ -151,11 +148,11 @@ Para obtener acceso a este cuadro de diálogo, seleccione el botón **fuente** e
 
 Este es un ejemplo de cómo agregar texto a un icono en una aplicación de Windows y manipular la fuente del texto.
 
-1. Cree una C++ aplicación Windows Forms. Para obtener más detalles, vea [Cómo: Cree Windows Forms aplicaciones](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). De forma predeterminada, se agrega un archivo *app. ico* al proyecto.
+1. Cree una C++ aplicación Windows Forms. Para obtener más información, consulte [Cómo: crear aplicaciones Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). De forma predeterminada, se agrega un archivo *app. ico* al proyecto.
 
 1. En **Explorador de soluciones**, haga doble clic en el archivo *app. ico*. Se abrirá el **Editor de imágenes** .
 
-1. Vaya a menú**herramientas** de **imagen** > y seleccione **herramienta de texto**.
+1. Vaya a menú **imagen** > **herramientas** y seleccione **herramienta de texto**.
 
 1. En el cuadro de diálogo **herramienta** de texto *C++* , escriba en el área de texto vacía. Este texto aparecerá en un cuadro de tamaño variable situado en la esquina superior izquierda de *app. ico* en el **Editor de imágenes**.
 
@@ -200,7 +197,7 @@ De forma predeterminada, el **Editor de imágenes** muestra la vista en el panel
 
 1. Seleccione el panel del **Editor de imágenes** cuyo factor de ampliación desea cambiar.
 
-1. En la barra de herramientas del **Editor de imágenes** , seleccione la flecha situada a la derecha de la herramienta **aumentar** y seleccione el factor de ampliación en el submenú: **1x**, **2x**, **6X**u **8X**.
+1. En la barra de herramientas del **Editor de imágenes** , seleccione la flecha situada a la derecha de la herramienta **aumentar** y seleccione el factor de ampliación en el submenú: **1x**, **2x**, **6X**o **8X**.
 
    > [!NOTE]
    > Para seleccionar un factor de ampliación distinto de los enumerados en la herramienta **aumentar** , use las teclas de aceleración.
@@ -209,15 +206,15 @@ De forma predeterminada, el **Editor de imágenes** muestra la vista en el panel
 
 En todos los paneles del **Editor de imágenes** con un factor de ampliación de 4 o superior, puede mostrar una cuadrícula que delimita los píxeles individuales de la imagen.
 
-1. Vaya a menú **Image** > **Grid Settings**.
+1. Vaya a la **imagen** de menú > configuración de la **cuadrícula**.
 
 1. Active la casilla **cuadrícula de píxeles** para mostrar la cuadrícula o desactive la casilla para ocultar la cuadrícula.
 
 ## <a name="requirements"></a>Requisitos
 
-Ninguna
+None
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Iconos](/windows/win32/menurc/icons)

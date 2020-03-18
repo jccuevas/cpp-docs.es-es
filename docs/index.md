@@ -3,13 +3,15 @@ layout: HubPage
 title: Documentación de Visual C++
 description: Obtenga información sobre cómo usar C++ para desarrollar aplicaciones, servicios y herramientas para sus plataformas y dispositivos.
 ms.topic: hub-page
-ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: f8d9b683e8030cbbafa9b3da57b4f7fd738ed3ac
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793805"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446106"
 ---
+<!-- markdownlint-disable MD033 -->
+
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
@@ -60,7 +62,7 @@ ms.locfileid: "75793805"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Novedades de C++ en Visual Studio</h3>
+                                    <h3>Novedades de C++ en Visual Studio</h3>
                                 </div>
                             </div>
                         </div>

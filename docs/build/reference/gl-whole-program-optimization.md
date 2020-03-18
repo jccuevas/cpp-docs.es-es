@@ -3,19 +3,18 @@ title: /GL (Optimización de todo el programa)
 ms.date: 11/04/2016
 f1_keywords:
 - /gl
-- VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 helpviewer_keywords:
 - /GL compiler option [C++]
 - whole program optimizations and C++ compiler
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 875865a32dcb80cb8a6d8fa53646260f3d9413a5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292138"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439657"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Optimización de todo el programa)
 
@@ -27,43 +26,43 @@ Habilita la optimización completa del programa.
 /GL[-]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Optimización de todo el programa permite que el compilador realice optimizaciones con información de todos los módulos en el programa. Sin la optimización de todo el programa, las optimizaciones se realizan en una por cada módulo (compilando).
+La optimización de todo el programa permite que el compilador realice optimizaciones con información sobre todos los módulos del programa. Sin la optimización de todo el programa, las optimizaciones se realizan en cada módulo (compilación).
 
-Optimización de todo el programa está desactivada de forma predeterminada y debe habilitarse explícitamente. Sin embargo, también es posible deshabilitar explícitamente con **/GL-**.
+La optimización de todo el programa está desactivada de forma predeterminada y debe habilitarse explícitamente. Sin embargo, también es posible deshabilitarlo explícitamente con **/GL-** .
 
 Con información sobre todos los módulos, el compilador puede:
 
-- Optimizar el uso de registros a través de límites de la función.
+- Optimice el uso de registros a través de los límites de función.
 
-- Hacer mejor su trabajo de seguimiento de las modificaciones de datos globales, lo que permite una reducción en el número de cargas y almacenes.
+- Realice un mejor trabajo de seguimiento de las modificaciones en los datos globales, lo que permite una reducción en el número de cargas y almacenes.
 
-- Hacer mejor su trabajo de seguimiento desreferenciar el posible conjunto de elementos modificados por un puntero, lo que reduce el número de cargas y almacenes.
+- Realice un mejor trabajo de seguimiento del conjunto de elementos posible modificado por una desreferenciación de puntero, lo que reduce el número de cargas y almacenes.
 
-- Inserte una función en un módulo, incluso cuando la función está definida en otro módulo.
+- Inserta una función en un módulo incluso cuando la función está definida en otro módulo.
 
-archivos .obj generados con **/GL** no estará disponible para las utilidades del vinculador como [EDITBIN](editbin-reference.md) y [DUMPBIN](dumpbin-reference.md).
+los archivos. obj generados con **/GL** no estarán disponibles para estas utilidades del enlazador como [EDITBIN](editbin-reference.md) y [dumpbin](dumpbin-reference.md).
 
-Si compila un programa con **/GL** y [/c](c-compile-without-linking.md), debe usar la opción de vinculador/LTCG para crear el archivo de salida.
+Si compila el programa con **/GL** y [/c](c-compile-without-linking.md), debe usar la opción del vinculador/LTCG para crear el archivo de salida.
 
-[/ Zi](z7-zi-zi-debug-information-format.md) no se puede usar con   **/GL**
+[/Zi](z7-zi-zi-debug-information-format.md) no se puede usar con **/GL**
 
-El formato de archivos generados con **/GL** en la versión actual puede no ser legible con versiones posteriores de Visual C++. No debe enviar un archivo .lib compuesto por archivos .obj que se hayan generado con **/GL** a menos que esté dispuesto a distribuir copias del archivo .lib para todas las versiones de Visual C++ esperan a los usuarios usar ahora y en el futuro.
+El formato de los archivos generados con **/GL** en la versión actual puede no ser legible en versiones posteriores C++de visual. No debe enviar un archivo. lib compuesto por archivos. obj que se generaron con **/GL** a menos que esté dispuesto a enviar copias del archivo. lib para todas las versiones de Visual C++ que espera que los usuarios usen, ahora y en el futuro.
 
-archivos .obj generados con **/GL** y archivos de encabezado precompilados no deben usarse para crear un archivo .lib, a menos que se vinculará el archivo .lib en el mismo equipo que generó el **/GL** archivo .obj. Información del archivo de encabezado precompilado del archivo .obj se necesitará en tiempo de vinculación.
+los archivos. obj generados con los archivos de encabezado **/GL** y precompilado no deben usarse para compilar un archivo. lib a menos que el archivo. lib se vincule en el mismo equipo que generó el archivo **/GL** . obj. La información del archivo de encabezado precompilado del archivo. obj será necesaria en el momento de la vinculación.
 
-Para obtener más información sobre las optimizaciones disponibles con y las limitaciones de la optimización de todo el programa, consulte [/LTCG](ltcg-link-time-code-generation.md).  **/ GL** también facilita la optimización guiada disponible perfiles; vea/LTCG.  Cuando se compila para guiada por perfiles optimizaciones y si desea que la función de ordenación de las optimizaciones guiadas por perfiles, debe compilar con [/Gy](gy-enable-function-level-linking.md) o una opción del compilador que implique /Gy.
+Para obtener más información sobre las optimizaciones disponibles con y las limitaciones de la optimización de todo el programa, vea [/LTCG](ltcg-link-time-code-generation.md).  **/GL** también hace que la optimización guiada por perfiles esté disponible; Consulte/LTCG.  Al compilar para las optimizaciones guiadas por perfiles y si desea el orden de funciones de las optimizaciones guiadas por perfiles, debe compilar con [/GY](gy-enable-function-level-linking.md) o una opción del compilador que implique/GY.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Consulte [/LTCG (generación de código de tiempo de vínculo)](ltcg-link-time-code-generation.md) para obtener información sobre cómo especificar **/GL** en el entorno de desarrollo.
+1. Vea [/LTCG (generación de código en tiempo de vínculo)](ltcg-link-time-code-generation.md) para obtener información sobre cómo especificar **/GL** en el entorno de desarrollo.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
 1. Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones del compilador de MSVC](compiler-options.md)<br/>
 [Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

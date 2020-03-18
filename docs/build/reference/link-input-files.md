@@ -1,8 +1,6 @@
 ---
 title: Archivos de entrada de LINK
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,45 +12,45 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291514"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439343"
 ---
 # <a name="link-input-files"></a>Archivos de entrada de LINK
 
-Proporcione al enlazador con archivos que contienen objetos, importar y bibliotecas estándar, los recursos, las definiciones de módulo y entradas de comandos. VÍNCULO no usa extensiones de archivo para realizar suposiciones sobre el contenido de un archivo. En su lugar, el vínculo examina cada archivo de entrada para determinar qué tipo de archivo es.
+Proporcione al enlazador archivos que contengan objetos, bibliotecas de importación y estándar, recursos, definiciones de módulo y entradas de comandos. LINK no utiliza las extensiones de archivo para hacer suposiciones sobre el contenido de un archivo. En su lugar, LINK examina cada archivo de entrada para determinar qué tipo de archivo es.
 
-Archivos de objeto en la línea de comandos se procesan en el orden en que aparecen en la línea de comandos. Las bibliotecas se buscan en orden de la línea de comandos, con la advertencia siguiente: Los símbolos que están sin resolver al reunir en un archivo de objeto de una biblioteca se buscan en esa biblioteca en primer lugar y, a continuación, en las siguientes bibliotecas desde la línea de comandos y [DEFAULTLIB (especificar la biblioteca predeterminada)](defaultlib-specify-default-library.md) directivas y, a continuación, a las bibliotecas al principio de la línea de comandos.
+Los archivos objeto de la línea de comandos se procesan en el orden en que aparecen en la línea de comandos. Las bibliotecas se buscan también en el orden de la línea de comandos, con la siguiente salvedad: los símbolos que no se resuelven al traer un archivo objeto de una biblioteca se buscan primero en esa biblioteca, después en las siguientes bibliotecas desde la línea de comandos y las directivas [/DEFAULTLIB (especificar biblioteca predeterminada)](defaultlib-specify-default-library.md) y, a continuación, a las bibliotecas que se encuentran al principio de la línea de comandos.
 
 > [!NOTE]
->  VÍNCULO ya no acepta un punto y coma (o cualquier otro carácter) como el inicio de un comentario en los archivos de respuesta y los archivos de pedido. Punto y coma se reconoce solo como el inicio de los comentarios en los archivos de definición de módulo (.def).
+>  LINK ya no acepta un punto y coma (o cualquier otro carácter) como inicio de un Comentario en archivos de respuesta y archivos de orden. Los signos de punto y coma solo se reconocen como el inicio de los comentarios en los archivos de definición de módulo (. def).
 
-VÍNCULO utiliza los siguientes tipos de archivos de entrada:
+LINK usa los siguientes tipos de archivos de entrada:
 
-- [archivos .obj](dot-obj-files-as-linker-input.md)
+- [. obj (archivos)](dot-obj-files-as-linker-input.md)
 
-- [.netmodule files](netmodule-files-as-linker-input.md)
+- [. netmodule (archivos)](netmodule-files-as-linker-input.md)
 
-- [archivos .lib](dot-lib-files-as-linker-input.md)
+- [. lib (archivos)](dot-lib-files-as-linker-input.md)
 
-- [archivos .exp](dot-exp-files-as-linker-input.md)
+- [. exp (archivos)](dot-exp-files-as-linker-input.md)
 
-- [archivos .def](dot-def-files-as-linker-input.md)
+- [. def (archivos)](dot-def-files-as-linker-input.md)
 
-- [.pdb files](dot-pdb-files-as-linker-input.md)
+- [. pdb (archivos)](dot-pdb-files-as-linker-input.md)
 
-- [archivos .res](dot-res-files-as-linker-input.md)
+- [. res (archivos)](dot-res-files-as-linker-input.md)
 
-- [archivos .exe](dot-exe-files-as-linker-input.md)
+- [archivos. exe](dot-exe-files-as-linker-input.md)
 
-- [archivos .txt](dot-txt-files-as-linker-input.md)
+- [. txt (archivos)](dot-txt-files-as-linker-input.md)
 
-- [.ilk (archivos)](dot-ilk-files-as-linker-input.md)
+- [. İlk (archivos)](dot-ilk-files-as-linker-input.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del enlazador MSVC](linking.md)<br/>
 [Opciones del enlazador MSVC](linker-options.md)
