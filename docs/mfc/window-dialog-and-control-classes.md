@@ -1,25 +1,23 @@
 ---
 title: Clases de ventana, cuadro de diálogo y control
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
-ms.openlocfilehash: 3fc7d800cee7e3bf64f64028b2499935eb42a044
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e761c063e6c6e27943f9816d88b4d78718d3d18
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167626"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446298"
 ---
 # <a name="window-dialog-and-control-classes"></a>Clases de ventana, cuadro de diálogo y control
 
-Clase `CWnd` y sus clases derivadas encapsulan un `HWND`, un identificador de una ventana de Windows. `CWnd` puede utilizarse por sí sola o como base para derivar nuevas clases. Las clases derivadas proporcionadas por la biblioteca de clases representan distintos tipos de windows.
+La clase `CWnd` y sus clases derivadas encapsulan un `HWND`, un identificador para una ventana de Windows. `CWnd` puede usarse por sí solo o como base para derivar nuevas clases. Las clases derivadas suministradas por la biblioteca de clases representan distintos tipos de ventanas.
 
 [CWnd](../mfc/reference/cwnd-class.md)<br/>
-La clase base para todas las ventanas. Puede usar una de las clases derivadas de `CWnd` o derivar sus propias clases directamente de él.
+La clase base para todas las ventanas. Puede usar una de las clases derivadas de `CWnd` o derivar sus propias clases directamente de ella.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../mfc/class-library-overview.md)
+[Información general sobre clases](../mfc/class-library-overview.md)

@@ -1,27 +1,25 @@
 ---
 title: Usar CReBarCtrl
 ms.date: 11/19/2018
-f1_keywords:
-- CReBarCtrl
 helpviewer_keywords:
 - child windows [MFC], rebar controls
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 5e0a2e9d9eedd99bb2fca39f328c49d27fe7b6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2578ddbb626da4959c81cf37a38082315ec8c6a0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411905"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441963"
 ---
 # <a name="using-crebarctrl"></a>Usar CReBarCtrl
 
-Un control rebar actúa como un contenedor para ventanas secundarias. Estas ventanas secundarias, a menudo otros controles, se asignan a una banda de control rebar. Un control rebar puede contener una o más bandas con cada banda puede tener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria. Sin embargo, las bandas no pueden contener más de una ventana secundaria.
+Un control rebar actúa como contenedor de las ventanas secundarias. Estas ventanas secundarias, a menudo otros controles, se asignan a una banda de control rebar. Un control rebar puede contener una o varias bandas, cada una de las cuales tiene cualquier combinación de una barra de agarre, un mapa de bits, una etiqueta de texto y una ventana secundaria. Sin embargo, las bandas no pueden contener más de una ventana secundaria.
 
-La siguiente ilustración muestra un control rebar con dos bandas. Uno contiene una barra de controles, una etiqueta de texto ("Address") y una ventana de elemento secundario de cuadro combinado. La otra banda contiene una barra de controles, una etiqueta de texto y una barra de herramientas plana (implementada con una ventana secundaria).
+En la ilustración siguiente se muestra un control rebar que tiene dos bandas. Una contiene una barra de agarre, una etiqueta de texto ("address") y una ventana secundaria de cuadro combinado. La otra banda contiene una barra de agarre, una etiqueta de texto y una barra de herramientas plana (implementada con una ventana secundaria).
 
-![Control rebar con dos bandas](../mfc/media/vc4ruz1.gif "control Rebar con dos bandas")
+![Control rebar que tiene dos bandas](../mfc/media/vc4ruz1.gif "Control Rebar con dos bandas")
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -37,6 +35,6 @@ La siguiente ilustración muestra un control rebar con dos bandas. Uno contiene 
 
 - [Procesamiento de mensajes de notificación en un control Rebar](../mfc/processing-notification-messages-in-a-rebar-control.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)

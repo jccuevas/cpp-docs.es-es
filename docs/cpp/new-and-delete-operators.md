@@ -1,19 +1,16 @@
 ---
 title: Operadores new y delete
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246445"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445447"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
@@ -23,7 +20,7 @@ La **nueva** función de la C++ biblioteca estándar admite el comportamiento es
 
 Para obtener una lista de los archivos de biblioteca que componen la biblioteca en C++ tiempo de ejecución de C y la biblioteca estándar, vea características de la [biblioteca CRT](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"></a> Operador New
+##  <a id="new_operator"> </a> Operador New
 
 Cuando se encuentra una instrucción como la siguiente en un programa, se convierte en una llamada al operador de función **New**:
 
@@ -39,7 +36,7 @@ Los dos ámbitos de las funciones **New de operador** se describen en la tabla s
 
 ### <a name="scope-for-operator-new-functions"></a>Ámbito de las funciones New de operador
 
-|Operador|Ámbito|
+|Operator|Ámbito|
 |--------------|-----------|
 |**:: Operator New**|Global|
 |*Class-Name* **:: Operator New**|Clase|
@@ -124,7 +121,7 @@ int main() {
 
 Hay otra manera de controlar las solicitudes de asignación de memoria con error. Escriba una rutina de recuperación personalizada para controlar este tipo de error y, a continuación, registre la función mediante una llamada a la función de tiempo de ejecución [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) .
 
-##  <a id="delete_operator"></a> El operador Delete
+##  <a id="delete_operator"> </a> El operador Delete
 
 La memoria que se asigna dinámicamente mediante el operador **New** se puede liberar mediante el operador **Delete** . El operador Delete llama a la función **operator delete** , que libera la memoria de nuevo en el Grupo disponible. El uso del operador **Delete** también hace que se llame al destructor de clase (si hay alguno).
 

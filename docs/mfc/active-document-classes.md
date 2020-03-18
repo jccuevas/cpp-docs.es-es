@@ -1,31 +1,29 @@
 ---
 title: Clases de documento activo
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.document
 helpviewer_keywords:
 - Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
-ms.openlocfilehash: c4087d8e223e08842d5b402bdf063a908d1e22bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c74b1287243c18bf8d7f26325e726b09463700f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394993"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445812"
 ---
 # <a name="active-document-classes"></a>Clases de documento activo
 
-Documentos activos se pueden mostrar en la ventana del cliente completo de un explorador Web, como Internet Explorer 5.5, o en un contenedor activo, como el cuaderno de Office de Microsoft, que es compatible con documentos activos.
+Los documentos activos se pueden mostrar en toda la ventana del cliente de un explorador Web, como Internet Explorer 5,5, o en un contenedor activo, como el Microsoft Office enlazador, que admite documentos activos.
 
 [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
-Asigna las interfaces de documento activo, inicializa y se activa un objeto de documento activo.
+Asigna las interfaces del documento activo e inicializa y activa un objeto de documento activo.
 
 [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
-Verbos de servidor implementa OLE específicamente para servidores de documentos activos.
+Implementa verbos de servidor OLE específicamente para servidores de documentos activos.
 
 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
 Implementa la contención del documento activo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Información general de clases](../mfc/class-library-overview.md)
+[Información general sobre clases](../mfc/class-library-overview.md)

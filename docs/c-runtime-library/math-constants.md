@@ -2,7 +2,7 @@
 title: Constantes matemáticas
 ms.date: 11/04/2016
 f1_keywords:
-- c.constants
+- c.constants.math
 helpviewer_keywords:
 - M_PI constant
 - M_PI_2 constant
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 156e4df4bcd4be457f2d14e7e5f5531d93d642be
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744154"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438270"
 ---
 # <a name="math-constants"></a>Constantes matemáticas
 
@@ -41,13 +41,13 @@ ms.locfileid: "57744154"
 #include <math.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los símbolos siguientes se definen para los valores de sus expresiones indicadas:
 
-|Símbolo|Expresión|Valor|
+|Símbolo|Expression|Value|
 |------------|----------------|-----------|
-|M_E|h|2.71828182845904523536|
+|M_E|e|2.71828182845904523536|
 |M_LOG2E|log2(e)|1.44269504088896340736|
 |M_LOG10E|log10(e)|0.434294481903251827651|
 |M_LN2|ln(2)|0.693147180559945309417|
@@ -65,6 +65,6 @@ Las constantes matemáticas no están definidas en C o C++ estándar. Para poder
 
 El archivo ATLComTime.h incluye math.h cuando se compila el proyecto en modo de versión. Si usa una o varias de las constantes matemáticas en un proyecto que también incluye ATLComTime.h, debe definir `_USE_MATH_DEFINES` antes de incluir ATLComTime.h.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Constantes globales](../c-runtime-library/global-constants.md)

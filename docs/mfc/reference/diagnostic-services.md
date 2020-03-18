@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426754"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446217"
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
 
@@ -109,6 +109,7 @@ Este ejemplo de código produciría una advertencia del compilador si no se defi
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -635,7 +636,8 @@ Para usar esta función correctamente:
 - El archivo IMAGEHLP. DLL debe estar en su ruta de acceso. Si no tiene este archivo DLL, la función mostrará un mensaje de error. Vea la [biblioteca de ayuda de imágenes](/windows/win32/Debug/image-help-library) para obtener información sobre el conjunto de funciones proporcionado por IMAGEHLP.
 
 - Los módulos que tienen marcos en la pila deben incluir información de depuración. Si no contienen información de depuración, la función seguirá generando un seguimiento de la pila, pero el seguimiento será menos detallado.
-  ### <a name="requirements"></a>Requisitos
+
+### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afx.h
 

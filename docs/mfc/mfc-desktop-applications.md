@@ -3,22 +3,21 @@ title: Aplicaciones de escritorio de MFC
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
-- mfc
 helpviewer_keywords:
 - libraries, MFC
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607536"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447710"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicaciones de escritorio de MFC
 
-La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office. Para obtener documentación sobre la propia plataforma Windows, consulte la [documentación de Windows](/windows/index). Para obtener información sobre cómo compilar aplicaciones de Windows en sin MFC, vea compilar aplicaciones de Windows de C++ [escritorio mediante la API de Win32](/windows/win32/index).
+La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office. Para obtener documentación sobre la propia plataforma Windows, consulte la [documentación de Windows](/windows/index). Para obtener información sobre cómo compilar aplicaciones de Windows en sin MFC, vea C++ [compilar aplicaciones de Windows de escritorio mediante la API de Win32](/windows/win32/index).
 
 La referencia de MFC incluye las clases, las funciones globales, las variables globales y las macros que constituyen la biblioteca MFC (Microsoft Foundation Class).
 
@@ -88,6 +87,6 @@ Proporciona vínculos a las diversas bibliotecas suministradas con Visual C++, i
 [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Proporciona vínculos sobre cómo utilizar el depurador de Visual Studio para corregir errores lógicos en sus aplicaciones o procedimientos almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [MFC y ATL](mfc-and-atl.md)

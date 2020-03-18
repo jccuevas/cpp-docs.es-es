@@ -3,30 +3,29 @@ title: pragma en desuso
 ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
-- deprecated_CPP
 helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5694c5175ff23952c601884243b428a842278b7d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222407"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446469"
 ---
 # <a name="deprecated-pragma"></a>pragma en desuso
 
-La pragma desusada permite indicar que una función, tipo o cualquier otro identificador ya no se admite en una versión futura o que ya no debe usarse.
+La pragma **desusada** permite indicar que una función, tipo o cualquier otro identificador ya no se admite en una versión futura o que ya no debe usarse.
 
 > [!NOTE]
-> Para obtener información sobre el atributo `[[deprecated]]` de c++ 14 e instrucciones sobre Cuándo usar ese atributo en lugar del modificador `__declspec(deprecated)` de Microsoft o el pragma en **desuso** , vea [atributos en C++ ](../cpp/attributes.md).
+> Para obtener información sobre el atributo de `[[deprecated]]` de C++ 14, así como instrucciones sobre Cuándo usar ese atributo en lugar del modificador de `__declspec(deprecated)` de Microsoft o el pragma en **desuso** , vea [atributos en C++ ](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Sintaxis
 
 > **#pragma en desuso (** *identificador1* [ **,** *identificador2* ...] **)**
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cuando el compilador encuentra un identificador especificado por una pragma **desusada** , emite la advertencia del compilador [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
 
@@ -34,7 +33,7 @@ Puede desusar nombres de macro. Coloque el nombre de la macro entre comillas; de
 
 Dado que la Directiva pragma en **desuso** funciona en todos los identificadores coincidentes y no tiene en cuenta las signaturas, no es la mejor opción para dejar en desuso versiones específicas de funciones sobrecargadas. Cualquier nombre de función coincidente que se incluye en el ámbito desencadena la advertencia.
 
-Se recomienda usar el atributo de c++ `[[deprecated]]` 14, siempre que sea posible, en lugar de la Directiva pragma desusada. El modificador de declaración [_ _ declspec (deprecated)](../cpp/deprecated-cpp.md) específico de Microsoft también es una opción mejor en muchos casos que la pragma desusada. El `[[deprecated]]` atributo y `__declspec(deprecated)` el modificador permiten especificar el estado en desuso para determinados formatos de funciones sobrecargadas. La advertencia de diagnóstico solo aparece en referencias a la función sobrecargada específica a la que se aplica el atributo o modificador.
+Se recomienda usar el atributo de `[[deprecated]]` de C++ 14, siempre que sea posible, en lugar de la Directiva pragma **desusada** . El modificador de declaración __declspec específico de Microsoft [(en desuso)](../cpp/deprecated-cpp.md) también es una opción mejor en muchos casos que la pragma **desusada** . El atributo `[[deprecated]]` y el modificador `__declspec(deprecated)` permiten especificar el estado en desuso para determinados formatos de funciones sobrecargadas. La advertencia de diagnóstico solo aparece en referencias a la función sobrecargada específica a la que se aplica el atributo o modificador.
 
 ## <a name="example"></a>Ejemplo
 
@@ -73,6 +72,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
