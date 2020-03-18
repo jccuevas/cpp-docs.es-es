@@ -2,19 +2,19 @@
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /section
+- /section_editbin
 helpviewer_keywords:
 - -SECTION editbin option
 - SECTION editbin option
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318607"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438916"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -22,30 +22,30 @@ ms.locfileid: "62318607"
 /SECTION:name[=newname][,attributes][alignment]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta opción cambia los atributos de una sección reemplazando los atributos que se establecieron cuando se compiló o vinculó el archivo de objeto de la sección.
+Esta opción cambia los atributos de una sección, invalidando los atributos que se establecieron al compilar o vincular el archivo objeto de la sección.
 
-Después de los dos puntos ( **:** ), especifique el *nombre* de la sección. Para cambiar el nombre de sección, siga *nombre* con un signo igual (=) y un *newname* para la sección.
+Después del signo de dos puntos ( **:** ), especifique el *nombre* de la sección. Para cambiar el nombre de la sección, siga el *nombre* con un signo igual (=) y un *NewName* en la sección.
 
-Para establecer o cambiar la sección `attributes`, especificar una coma (**,**) seguido de uno o más caracteres de los atributos. Para invalidar un atributo, preceden su carácter con un signo de exclamación (!). Los caracteres siguientes especifican atributos de memoria:
+Para establecer o cambiar el `attributes`de la sección, especifique una coma ( **,** ) seguida de uno o varios caracteres de atributo. Para negar un atributo, anteponga un signo de exclamación (!) a su carácter. Los siguientes caracteres especifican atributos de memoria:
 
-|Atributo|Parámetro|
+|Atributo|Configuración|
 |---------------|-------------|
-|c|code|
-|d|Puede descartar|
-|h|ejecutable|
+|c|código|
+|d|descartable|
+|e|ejecutable|
 |i|datos inicializados|
-|k|memoria virtual almacenado en caché|
-|m|Quitar vínculo|
+|k|memoria virtual almacenada en caché|
+|m|quitar vínculo|
 |o|información de vínculo|
 |p|memoria virtual paginada|
 |r|leer|
-|s|shared|
-|u|datos sin inicializar|
-|s|escribir|
+|s|compartido|
+|u|datos no inicializados|
+|w|escritura|
 
-Para controlar *alineación*, especifique el carácter **A** seguido de uno de los caracteres siguientes para establecer el tamaño de alineación en bytes, como se indica a continuación:
+Para controlar la *alineación*, especifique el carácter **a** seguido de uno de los siguientes caracteres para establecer el tamaño de la alineación en bytes, como se indica a continuación:
 
 |Carácter|Tamaño de alineación en bytes|
 |---------------|-----------------------------|
@@ -54,12 +54,12 @@ Para controlar *alineación*, especifique el carácter **A** seguido de uno de l
 |4|4|
 |8|8|
 |p|16|
-|m|32|
+|t|32|
 |s|64|
 |x|sin alineación|
 
-Especifique el `attributes` y *alineación* caracteres como una cadena con ningún espacio en blanco. Los caracteres no distinguen mayúsculas de minúsculas.
+Especifique los caracteres de *alineación* y `attributes` como una cadena sin espacios en blanco. Los caracteres no distinguen mayúsculas de minúsculas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones de EDITBIN](editbin-options.md)

@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876039"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425356"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits (Clase)
 
@@ -93,7 +93,7 @@ template <class Type>
 *Escriba*\
 Tipo de datos del elemento fundamental cuyas propiedades se están probando, consultando o estableciendo. El *tipo* también puede declararse como **const**, **volatile**o **const volatile**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El encabezado define especializaciones explícitas para los **tipos wchar_t**, **bool**, **Char**, **signed char**, **unsigned char**, **Short**, **unsigned short**, **int**, **unsigned int**, **Long**, **unsigned Long**, **float**, **Double**, **Long Double**, **Long Long**, **unsigned Long Long**, **char16_t**y **char32_t**. Para estas especializaciones explícitas, el miembro [numeric_limits:: is_specialized](#is_specialized) es **true**y todos los miembros pertinentes tienen valores significativos. El programa puede proporcionar especializaciones explícitas adicionales. La mayoría de las funciones miembro de la clase describen o prueban posibles implementaciones de **float**.
 
@@ -148,7 +148,7 @@ static constexpr Type denorm_min() throw();
 
 El valor más pequeño distinto de cero desnormalizado.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 **Long Double** es igual que **Double** para el C++ compilador.
 
@@ -207,7 +207,7 @@ static constexpr int digits = 0;
 
 El número de dígitos de base que el tipo puede representar sin pérdida de precisión.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El miembro almacena el número de dígitos de base que el tipo puede representar sin cambiar, que es el número de bits además de cualquier bit de signo para un tipo entero predefinido, o el número de dígitos de mantisa para un tipo de punto flotante predefinido.
 
@@ -295,7 +295,7 @@ static constexpr Type epsilon() throw();
 
 La diferencia entre 1 y el valor más pequeño mayor que 1, que el tipo de datos puede representar.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor es FLT_EPSILON para el tipo **float**. `epsilon` para un tipo es el número *N* de punto flotante positivo más pequeño de manera que *N* + `epsilon` + *N* se pueda representar.
 
@@ -347,7 +347,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 Un valor de enumeración de tipo **const**`float_denorm_style`, que indica si el tipo permite valores desnormalizados.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El miembro almacena `denorm_present` para un tipo de punto flotante que tiene valores desnormalizados, de hecho un número variable de bits de exponente.
 
@@ -393,7 +393,7 @@ static constexpr bool has_denorm_loss = false;
 
 **True** si se detecta la pérdida de precisión como una pérdida de desnormalización; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El miembro almacena True para un tipo que determina si un valor ha perdido precisión porque se entrega como un resultado desnormalizado (demasiado pequeño para representarse como un valor normalizado) o porque no es exacto (no es igual que un resultado no sujeto a las limitaciones de intervalo de exponente y precisión), una opción con representaciones de punto flotante IEC 559 que puede afectar a algunos resultados.
 
@@ -439,7 +439,7 @@ static constexpr bool has_infinity = false;
 
 **True** si el tipo tiene una representación de infinito positivo; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El miembro devuelve **True** si [is_iec559](#is_iec559) es **True**.
 
@@ -485,7 +485,7 @@ static constexpr bool has_quiet_NaN = false;
 
 **True** si el **tipo** tiene una representación para un NaN silencioso; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Un NaN silencioso es una codificación, para no es un número, que no indica su presencia en una expresión. El valor devuelto es **True** si [is_iec559](#is_iec559) es True.
 
@@ -531,7 +531,7 @@ static constexpr bool has_signaling_NaN = false;
 
 **True** si el tipo tiene una representación para un NAN de señalización; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Un NaN de señalización es una codificación, para no es un número, que indica su presencia en una expresión. El valor devuelto es **True** si [is_iec559](#is_iec559) es True.
 
@@ -577,7 +577,7 @@ static constexpr Type infinity() throw();
 
 La representación de infinito positivo de un tipo, si está disponible.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor devuelto solo es significativo si [has_infinity](#has_infinity) es **True**.
 
@@ -631,7 +631,7 @@ static constexpr bool is_bounded = false;
 
 **True** si el tipo tiene un conjunto limitado de valores representables; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Todos los tipos predefinidos tienen un conjunto limitado de valores representables y devuelven **True**.
 
@@ -685,7 +685,7 @@ static constexpr bool is_exact = false;
 
 **True** si los cálculos están libres de errores de redondeo; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Todos los tipos de enteros predefinidos tienen representaciones exactas para sus valores y devuelven **False**. Un punto fijo o una representación racional también se considera exacta, pero una representación de punto flotante no lo es.
 
@@ -739,7 +739,7 @@ static constexpr bool is_iec559 = false;
 
 **True** si el tipo se ajusta a los estándares IEC 559; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 IEC 559 es un estándar internacional para representar valores de punto flotante y también se conoce como IEEE 754 en EE. UU.
 
@@ -789,7 +789,7 @@ static constexpr bool is_integer = false;
 
 **True** si el tipo tiene una representación de entero; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Todos los tipos de entero predefinidos tienen una representación de entero.
 
@@ -839,7 +839,7 @@ static constexpr bool is_modulo = false;
 
 **True** si el tipo tiene una representación de módulo; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Una representación de módulo es una representación donde todos los resultados son valores de módulo reducidos. Todos los tipos de entero sin signo predefinidos tienen una representación de módulo.
 
@@ -889,7 +889,7 @@ static constexpr bool is_signed = false;
 
 **True** si el tipo tiene una representación con signo; **False** si no es así.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El miembro almacena True para un tipo que tiene una representación con signo, que es el caso de todos los tipos de entero con signo y de punto flotante predefinidos.
 
@@ -939,7 +939,7 @@ static constexpr bool is_specialized = false;
 
 **true** si el tipo tiene una especialización explícita definida en la plantilla de clase; **false** en caso contrario.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Todos los tipos escalares que no sean punteros tienen una especialización explícita definida para la plantilla de clase `numeric_limits`.
 
@@ -993,7 +993,7 @@ static constexpr Type lowest() throw();
 
 Devuelve el mayor valor finito negativo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Devuelve el mayor valor finito negativo para el tipo (que normalmente se `min()` para los tipos enteros y `-max()` para los tipos de punto flotante). El valor devuelto es significativo si `is_bounded` es **true**.
 
@@ -1009,7 +1009,7 @@ static constexpr Type max() throw();
 
 El valor finito máximo para un tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor finito máximo es INT_MAX para el tipo **int** y FLT_MAX para el tipo **float**. El valor devuelto es significativo si [is_bounded](#is_bounded) es **True**.
 
@@ -1051,7 +1051,7 @@ static constexpr int max_digits10 = 0;
 
 Devuelve el número de dígitos decimales necesarios para asegurarse de que dos valores distintos del tipo tengan distintas representaciones decimales.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El miembro almacena el número de dígitos decimales necesarios para asegurarse de que dos valores distintos del tipo tengan distintas representaciones decimales.
 
@@ -1067,7 +1067,7 @@ static constexpr int max_exponent = 0;
 
 El máximo exponente basado en la base integral que se representa mediante el tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor devuelto de la función miembro es significativo solo para los tipos de punto flotante. El `max_exponent` es el valor FLT_MAX_EXP para el tipo **float**.
 
@@ -1113,7 +1113,7 @@ static constexpr int max_exponent10 = 0;
 
 El máximo exponente de base 10 integral que se representa mediante el tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor devuelto de la función miembro es significativo solo para los tipos de punto flotante. El `max_exponent` es el valor FLT_MAX_10 para el tipo **float**.
 
@@ -1159,7 +1159,7 @@ static constexpr Type min() throw();
 
 El valor normalizado mínimo para el tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor normalizado mínimo es INT_MIN para el tipo **int** y FLT_MIN para el tipo **float**. El valor devuelto es significativo si [is_bounded](#is_bounded) es **true** o si [is_signed](#is_signed) es **false**.
 
@@ -1209,7 +1209,7 @@ static constexpr int min_exponent = 0;
 
 El mínimo exponente basado en la base integral que se representa mediante el tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 La función miembro es significativa solo para los tipos de punto flotante. El `min_exponent` es el valor FLT_MIN_EXP para el tipo **float**.
 
@@ -1255,7 +1255,7 @@ static constexpr int min_exponent10 = 0;
 
 El mínimo exponente de base 10 integral que se representa mediante el tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 La función miembro es significativa solo para los tipos de punto flotante. El `min_exponent10` es el valor FLT_MIN_10_EXP para el tipo **float**.
 
@@ -1301,7 +1301,7 @@ static constexpr Type quiet_NaN() throw();
 
 La representación de un NaN silencioso para el tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor devuelto solo es significativo si [has_quiet_NaN](#has_quiet_nan) es **True**.
 
@@ -1347,7 +1347,7 @@ static constexpr int radix = 0;
 
 La base integral para la representación del tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 La base es 2 para los tipos enteros predefinidos, y la base a la que se eleva el exponente, o FLT_RADIX, para los tipos de punto flotante predefinidos.
 
@@ -1435,7 +1435,7 @@ static constexpr float_round_style round_style = round_toward_zero;
 
 Un valor de la enumeración `float_round_style` que describe el estilo de redondeo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El miembro almacena un valor que describe los diversos métodos que una implementación puede elegir para redondear un valor de punto flotante a un valor entero.
 
@@ -1482,7 +1482,7 @@ static constexpr Type signaling_NaN() throw();
 
 La representación de un NaN de señalización para el tipo.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El valor devuelto solo es significativo si [has_signaling_NaN](#has_signaling_nan) es **True**.
 
@@ -1522,7 +1522,7 @@ static constexpr bool tinyness_before = false;
 
 **true** si el tipo puede detectar valores pequeños antes de redondear; **false** si no puede.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Los tipos que pueden detectar valores tinyness se han incluido como una opción con las representaciones de punto flotante IEC 559 y su implementación puede afectar a algunos resultados.
 

@@ -1,9 +1,6 @@
 ---
 title: Macros comunes para comandos y propiedades de MSBuild
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988327"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440170"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comunes para comandos y propiedades de MSBuild
 
@@ -125,7 +122,7 @@ En esta tabla se describe un subconjunto utilizado comúnmente de las macros dis
 |**$(IntDir)**|Ruta de acceso al directorio especificado para los archivos intermedios. Si se trata de una ruta de acceso relativa, los archivos intermedios van a esta ruta de acceso anexados al directorio del proyecto. Esta ruta de acceso debe tener una barra diagonal final. Se resuelve en el valor de la propiedad del **directorio intermedio** . No use **$ (outdir)** para definir esta propiedad.|
 |**$(OutDir)**|Ruta de acceso al directorio del archivo de salida. Si se trata de una ruta de acceso relativa, los archivos de salida van a esta ruta de acceso anexados al directorio del proyecto. Esta ruta de acceso debe tener una barra diagonal final. Se resuelve en el valor de la propiedad **Directorio de salida** . No use **$ (IntDir)** para definir esta propiedad.|
 |**$(Platform)**|El nombre de la plataforma del proyecto actual, por ejemplo, "Win32".|
-|**$(PlatformShortName)**|Nombre corto de la arquitectura actual, por ejemplo, "x86" o "x64".|
+|**$ (Nombrecortodeplataforma)**|Nombre corto de la arquitectura actual, por ejemplo, "x86" o "x64".|
 |**$(ProjectDir)**|El directorio del proyecto (definido como unidad + ruta de acceso); incluye la barra diagonal inversa "\\".|
 |**$(ProjectExt)**|La extensión de archivo del proyecto. Incluye el "." antes de la extensión de archivo.|
 |**$(ProjectFileName)**|El nombre de archivo del proyecto (definido como nombre base + extensión de archivo).|
@@ -165,7 +162,7 @@ El sistema de compilación de C++ se ha cambiado significativamente entre Visual
 |**$(SafeParentName)**|El nombre del elemento primario inmediato con formato de nombre válido. Por ejemplo, un formulario es el elemento primario de un archivo .resx. Esta propiedad no tiene un equivalente exacto.|
 |**$(SafeRootNamespace)**|El espacio de nombres en el que los asistentes para proyectos agregarán el código. Este espacio de nombres solo contendrá caracteres que se permitirían en un identificador de C++ válido. Esta propiedad no tiene un equivalente exacto.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Proyectos de Visual Studio C++ :](../creating-and-managing-visual-cpp-projects.md)\
 [Guía C++ de migración y actualización de Visual](../../porting/visual-cpp-porting-and-upgrading-guide.md)\

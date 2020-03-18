@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: 669bdb18e378c4dc39bdc6d51ca1ebe7f93fa839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78870617"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424576"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 
@@ -91,17 +91,17 @@ Proporciona la funcionalidad de los controles de botón de Windows.
 class CButton : public CWnd
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CButton:: CButton](#cbutton)|Construye un objeto `CButton`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CButton:: Create](#create)|Crea el control botón de Windows y lo adjunta al objeto `CButton`.|
 |[CButton::D rawItem](#drawitem)|Invalide para dibujar un objeto de `CButton` dibujado por el propietario.|
@@ -137,7 +137,7 @@ class CButton : public CWnd
 |[CButton:: SetState](#setstate)|Establece el estado de resaltado de un control de botón.|
 |[CButton:: SetTextMargin](#settextmargin)|Establece el margen del texto del control de botón.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Un control de botón es una pequeña ventana secundaria rectangular en la que se puede hacer clic y desactivarla. Los botones se pueden usar solos o en grupos y se pueden etiquetar o mostrar sin texto. Un botón suele cambiar de apariencia cuando el usuario hace clic en él.
 
@@ -232,7 +232,7 @@ Especifica el identificador del control de botón.
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cree un objeto de `CButton` en dos pasos. En primer lugar, llame al constructor y, a continuación, llame a `Create`, que crea el control de botón de Windows y lo adjunta al objeto `CButton`.
 
@@ -267,7 +267,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Puntero largo a una estructura [drawitemstruct (](/windows/win32/api/winuser/ns-winuser-drawitemstruct) . La estructura contiene información sobre el elemento que se va a dibujar y el tipo de dibujo necesario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un botón dibujado por el propietario tiene el conjunto de estilos BS_OWNERDRAW. Invalide esta función miembro para implementar el dibujo de un objeto de `CButton` dibujado por el propietario. La aplicación debe restaurar todos los objetos de la interfaz de dispositivo gráfico (GDI) seleccionados para el contexto de presentación proporcionado en *lpDrawItemStruct* antes de que finalice la función miembro.
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 El valor devuelto de un control de botón creado con el estilo BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o BS_3STATE es uno de los valores siguientes:
 
-|Valor|Significado|
+|Value|Significado|
 |-----------|-------------|
 |BST_UNCHECKED|El estado del botón es desactivado.|
 |BST_CHECKED|El estado del botón está activado.|
@@ -382,7 +382,7 @@ Puntero al tamaño actual del botón.
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro emula la funcionalidad del mensaje de BCM_GETIDEALSIZE, como se describe en la sección [botones](/windows/win32/controls/buttons) del Windows SDK.
 
@@ -403,7 +403,7 @@ Puntero a la lista de imágenes del objeto `CButton`.
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro emula la funcionalidad del mensaje de BCM_GETIMAGELIST, como se describe en la sección [botones](/windows/win32/controls/buttons) del Windows SDK.
 
@@ -430,11 +430,11 @@ BOOL GetNote(
 
 En la primera sobrecarga, objeto [CString](../../atl-mfc-shared/using-cstring.md) que contiene el texto de la nota asociado al control de vínculo de comando actual.
 
-O bien,
+O bien
 
 En la segunda sobrecarga, es TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_COMMANDLINK o BS_DEFCOMMANDLINK.
 
@@ -452,7 +452,7 @@ UINT GetNoteLength() const;
 
 Longitud del texto de la nota, en caracteres Unicode de 16 bits, para el control de vínculo de comando actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_COMMANDLINK o BS_DEFCOMMANDLINK.
 
@@ -470,7 +470,7 @@ TCHAR GetSplitGlyph() const;
 
 Carácter de glifo asociado al control de botón de expansión actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un glifo es la representación física de un carácter en una fuente determinada. Por ejemplo, un control de botón de expansión podría estar decorado con el glifo del carácter de marca de verificación Unicode (U + 2713).
 
@@ -490,7 +490,7 @@ CImageList* GetSplitImageList() const;
 
 Un puntero a un objeto [CImageList](../../mfc/reference/cimagelist-class.md) .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -514,7 +514,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -538,7 +538,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -558,7 +558,7 @@ UINT GetSplitStyle() const;
 
 Combinación bit a bit de estilos de botón de expansión. Para obtener más información, vea el `uSplitStyle` miembro de la estructura [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 Campo de bits que contiene la combinación de valores que indican el estado actual de un control de botón. En la tabla siguiente se enumeran los valores posibles.
 
-|Estado del botón|Valor|Descripción|
+|Estado del botón|Value|Descripción|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Estado inicial.|
 |BST_CHECKED|0x0001|El control de botón está activado.|
@@ -586,7 +586,7 @@ Campo de bits que contiene la combinación de valores que indican el estado actu
 |BST_PUSHED|0x0004|Se presiona el control de botón.|
 |BST_FOCUS|0x0008|El control de botón tiene el foco.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un control de botón con el estilo de botón BS_3STATE o BS_AUTO3STATE crea una casilla que tiene un tercer estado denominado estado indeterminado. El estado indeterminado indica que la casilla no está activada ni desactivada.
 
@@ -611,11 +611,11 @@ Puntero al margen del texto del objeto de `CButton`.
 
 Devuelve el margen del texto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro emula la funcionalidad del mensaje de BCM_GETTEXTMARGIN, como se describe en la sección [botones](/windows/win32/controls/buttons) del Windows SDK.
 
@@ -636,7 +636,7 @@ Identificador de un mapa de bits.
 
 Identificador de un mapa de bits asociado previamente al botón.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El mapa de bits se colocará automáticamente en la superficie del botón, centrada de forma predeterminada. Si el mapa de bits es demasiado grande para el botón, se recortará en cualquier lado. Puede elegir otras opciones de alineación, entre las que se incluyen las siguientes:
 
@@ -678,7 +678,7 @@ Especifica el [estilo del botón](../../mfc/reference/styles-used-by-mfc.md#butt
 *bRedraw*<br/>
 Especifica si se debe volver a dibujar el botón. Un valor distinto de cero vuelve A dibujar el botón. Un valor 0 no vuelve A dibujar el botón. De forma predeterminada, se vuelve a dibujar el botón.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Utilice la función miembro `GetButtonStyle` para recuperar el estilo del botón. La palabra de orden inferior del estilo de botón completo es el estilo específico del botón.
 
@@ -699,13 +699,13 @@ void SetCheck(int nCheck);
 *nCompruebe*<br/>
 Especifica el estado de comprobación. Este parámetro puede ser uno de los siguientes:
 
-|Valor|Significado|
+|Value|Significado|
 |-----------|-------------|
 |BST_UNCHECKED|Establezca el estado del botón en desactivado.|
 |BST_CHECKED|Establezca el estado del botón en activado.|
 |BST_INDETERMINATE|Establezca el estado de botón en indeterminado. Este valor solo se puede usar si el botón tiene el estilo BS_3STATE o BS_AUTO3STATE.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro no tiene ningún efecto en un pulsador.
 
@@ -730,7 +730,7 @@ Identificador de un cursor.
 
 Identificador de un cursor asociado previamente al botón.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El cursor se colocará automáticamente en la superficie del botón, centrada de forma predeterminada. Si el cursor es demasiado grande para el botón, se recortará en cualquier lado. Puede elegir otras opciones de alineación, entre las que se incluyen las siguientes:
 
@@ -770,7 +770,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un control de botón de expansión tiene un estilo de BS_SPLITBUTTON o BS_DEFSPLITBUTTON y consta de un botón y una flecha desplegable a su derecha. Para obtener más información, consulte [estilos de botón](/windows/win32/Controls/button-styles). Normalmente, el estado desplegable se establece cuando el usuario hace clic en la flecha de lista desplegable. Use este método para establecer mediante programación el estado de la lista desplegable del control. La flecha desplegable se dibuja sombreada para indicar el estado.
 
@@ -806,7 +806,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si un control de botón o vínculo de comando requiere permisos de seguridad elevados para realizar una acción, establezca el control en `elevation required` estado. Posteriormente, Windows muestra el icono de escudo de control de cuentas de usuario (UAC) en el control. Para obtener más información, vea "control de cuentas de usuario" en [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
@@ -829,7 +829,7 @@ Identificador de un icono.
 
 Identificador de un icono asociado previamente al botón.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El icono se colocará automáticamente en la superficie del botón, centrada de forma predeterminada. Si el icono es demasiado grande para el botón, se recortará en cualquier lado. Puede elegir otras opciones de alineación, entre las que se incluyen las siguientes:
 
@@ -868,7 +868,7 @@ Puntero a la nueva lista de imágenes.
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro emula la funcionalidad del mensaje de BCM_SETIMAGELIST, como se describe en la sección [botones](/windows/win32/controls/buttons) del Windows SDK.
 
@@ -890,7 +890,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_COMMANDLINK o BS_DEFCOMMANDLINK.
 
@@ -926,7 +926,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles que tengan el estilo de botón BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -952,7 +952,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -976,7 +976,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -1012,7 +1012,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -1050,7 +1050,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use este método solo con controles cuyo estilo de botón sea BS_SPLITBUTTON o BS_DEFSPLITBUTTON.
 
@@ -1083,7 +1083,7 @@ void SetState(BOOL bHighlight);
 *bHighlight*<br/>
 Especifica si el botón se va a resaltar. Un valor distinto de cero resalta el botón; un valor 0 quita cualquier resaltado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El resaltado afecta al exterior de un control de botón. No tiene ningún efecto en el estado de activación de un botón de radio o casilla.
 
@@ -1110,11 +1110,11 @@ Puntero al nuevo margen del texto.
 
 Devuelve TRUE si es correcto, FALSE en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro emula la funcionalidad del mensaje de BCM_SETTEXTMARGIN, como se describe en la sección [botones](/windows/win32/controls/buttons) del Windows SDK.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

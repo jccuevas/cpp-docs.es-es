@@ -1,5 +1,5 @@
 ---
-title: Interfaz IView
+title: IView (interfaz)
 ms.date: 11/04/2016
 f1_keywords:
 - IView
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
 ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321954"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426256"
 ---
-# <a name="iview-interface"></a>Interfaz IView
+# <a name="iview-interface"></a>IView (interfaz)
 
-Implementa varios métodos que [CWinFormsView](../../mfc/reference/cwinformsview-class.md) usa para enviar notificaciones de la vista a un control administrado.
+Implementa varios métodos que [CWinFormsView](../../mfc/reference/cwinformsview-class.md) usa para enviar notificaciones de vista a un control administrado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,59 +29,59 @@ Implementa varios métodos que [CWinFormsView](../../mfc/reference/cwinformsview
 interface class IView
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[IView::OnActivateView](#onactivateview)|Se llama por MFC cuando se activa o desactiva una vista.|
-|[IView::OnInitialUpdate](#oninitialupdate)|Lo llama el marco de trabajo después de la vista se adjunta al documento en primer lugar, pero antes de la vista se muestra inicialmente.|
-|[IView::OnUpdate](#onupdate)|Se llama por MFC después de que se ha modificado el documento de la vista; Esta función permite que la vista que actualice su presentación para reflejar las modificaciones.|
+|[IView:: OnActivateView](#onactivateview)|Lo llama MFC cuando una vista está activada o desactivada.|
+|[IView:: OnInitialUpdate](#oninitialupdate)|Lo llama el marco de trabajo después de adjuntar la vista por primera vez al documento, pero antes de que se muestre inicialmente la vista.|
+|[IView:: actualización](#onupdate)|Llamado por MFC después de modificar el documento de la vista; Esta función permite que la vista actualice su presentación para reflejar las modificaciones.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`IView` implementa varios métodos que `CWinFormsView` usa para enviar notificaciones de vista comunes para un control administrado hospedado. Estos son [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) y [OnActivateView](#onactivateview).
+`IView` implementa varios métodos que `CWinFormsView` utiliza para reenviar las notificaciones de vista comunes a un control administrado hospedado. Son [OnInitialUpdate](#oninitialupdate), [ALUpdate](#onupdate) y [OnActivateView](#onactivateview).
 
-`IView` es similar a [CView](../../mfc/reference/cview-class.md), pero solo se usa con las vistas administradas y los controles.
+`IView` es similar a [CView](../../mfc/reference/cview-class.md), pero solo se usa con vistas y controles administrados.
 
-Para obtener más información sobre el uso de Windows Forms, consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Para obtener más información sobre el uso de Windows Forms, vea [utilizar un control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ## <a name="requirements"></a>Requisitos
 
-Encabezado: afxwinforms.h (definido en el ensamblado atlmfc\lib\mfcmifc80.dll)
+Encabezado: afxwinforms. h (definido en el ensamblado atlmfc\lib\mfcmifc80.dll)
 
-## <a name="onactivateview"></a> IView::OnActivateView
+## <a name="onactivateview"></a>IView:: OnActivateView
 
-Se llama por MFC cuando se activa o desactiva una vista.
+Lo llama MFC cuando una vista está activada o desactivada.
 ```
 void OnActivateView(bool activate);
 ```
 
 ## <a name="parameters"></a>Parámetros
 
-*activate*<br/>
+*activar*<br/>
 Indica si la vista se está activando o desactivando.
 
-## <a name="oninitialupdate"></a> IView::OnInitialUpdate
+## <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 
-Lo llama el marco de trabajo después de la vista se adjunta al documento en primer lugar, pero antes de la vista se muestra inicialmente.
+Lo llama el marco de trabajo después de adjuntar la vista por primera vez al documento, pero antes de que se muestre inicialmente la vista.
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a> IView::OnUpdate
+## <a name="onupdate"></a>IView:: actualización
 
-Llamado por MFC cuando se ha modificado el documento de la vista.
+Lo llama MFC después de modificar el documento de la vista.
 ```
 void OnUpdate();
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta función permite que la vista que actualice su presentación para reflejar las modificaciones.
+Esta función permite que la vista actualice su presentación para reflejar las modificaciones.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CWinFormsView (clase)](../../mfc/reference/cwinformsview-class.md)<br/>
 [CView (clase)](../../mfc/reference/cview-class.md)

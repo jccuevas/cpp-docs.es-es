@@ -4,15 +4,14 @@ ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
-- event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821745"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441270"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
@@ -30,7 +29,7 @@ class AgileEventSource :
         TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parámetros
 
 *TDelegateInterface*<br/>
 La interfaz a un delegado que representa un controlador de eventos.
@@ -38,7 +37,7 @@ La interfaz a un delegado que representa un controlador de eventos.
 *TEventSourceOptions*<br/>
 Estructura [InvokeModeOptions](invokemodeoptions-structure.md) cuyo campo invokeMode se establece en `InvokeMode::StopOnFirstError` o `InvokeMode::FireAll`.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La gran mayoría de los componentes del Windows Runtime son componentes ágiles. Para obtener más información, vea [subprocesamiento y serializaciónC++(/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
@@ -48,17 +47,17 @@ La gran mayoría de los componentes del Windows Runtime son componentes ágiles.
 
 `AgileEventSource`
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 **Encabezado:** Event. h
 
 **Espacio de nombres:** Microsoft::WRL
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[AgileEventSource:: Add (método)](#add)|Anexa el controlador de eventos ágil que representa la interfaz de delegado especificada al conjunto de controladores de eventos para el objeto **AgileEventSource** actual.|
 
@@ -75,7 +74,7 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *delegateInterface*<br/>
 La interfaz de un objeto delegado, que representa un controlador de eventos.
@@ -87,6 +86,6 @@ Cuando se completa esta operación, un identificador que representa el evento. U
 
 S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

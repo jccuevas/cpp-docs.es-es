@@ -10,11 +10,11 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661639"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423775"
 ---
 # <a name="if-else-statement-c"></a>if-else (Instrucción) (C++)
 
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a>instrucción If con un inicializador
 
-**Visual Studio 2017 versión 15,3 y versiones posteriores** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): Una instrucción **If** también puede contener una expresión que declara e inicializa una variable con nombre. Utilice este formulario de la instrucción If-cuando la variable solo sea necesaria dentro del ámbito del bloque if.
+**Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): una instrucción **If** también puede contener una expresión que declara e inicializa una variable con nombre. Utilice este formulario de la instrucción If-cuando la variable solo sea necesaria dentro del ámbito del bloque if.
 
 ## <a name="example"></a>Ejemplo
 
@@ -161,11 +161,11 @@ int main()
 
 En todas las formas de la instrucción **If** , se evalúa la *expresión*, que puede tener cualquier valor excepto una estructura, incluidos todos los efectos secundarios. El control pasa de la instrucción **If** a la siguiente instrucción del programa a menos que una de las *instrucciones*contenga [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md).
 
-La cláusula **else** de una `if...else` instrucción está asociada a la instrucción **If** anterior más cercana en el mismo ámbito que no tiene una instrucción **else** correspondiente.
+La cláusula **else** de una instrucción `if...else` está asociada a la instrucción **If** anterior más cercana en el mismo ámbito que no tiene una instrucción **else** correspondiente.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">if (instrucciones) de constexpr
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> si las instrucciones constexpr
 
-**Visual Studio 2017 versión 15,3 y versiones posteriores** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): En las plantillas de función, puede usar una instrucción **If constexpr** para tomar decisiones de bifurcación en tiempo de compilación sin tener que recurrir a varias sobrecargas de función. Por ejemplo, puede escribir una función única que controle el desempaquetado de parámetros (no se necesita ninguna sobrecarga de parámetros cero):
+**Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): en las plantillas de función, puede usar una instrucción **If constexpr** para tomar decisiones de bifurcación en tiempo de compilación sin tener que recurrir a varias sobrecargas de función. Por ejemplo, puede escribir una función única que controle el desempaquetado de parámetros (no se necesita ninguna sobrecarga de parámetros cero):
 
 ```cpp
 template <class T, class... Rest>
@@ -186,7 +186,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Instrucciones de selección](../cpp/selection-statements-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>

@@ -1,18 +1,18 @@
 ---
-title: Clase sequenced_policy
+title: sequenced_policy (clase)
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269197"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444918"
 ---
-# <a name="sequencedpolicy-class"></a>Clase sequenced_policy
+# <a name="sequenced_policy-class"></a>sequenced_policy (clase)
 
-Se utiliza como un tipo único para eliminar la ambigüedad de sobrecarga del algoritmo en paralelo y requieren que no se puede paralelizar la ejecución de un algoritmo paralelo.
+Se usa como un tipo único para eliminar la ambigüedad de la sobrecarga del algoritmo paralelo y requerir que la ejecución de un algoritmo paralelo no se ejecute en paralelo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -20,6 +20,6 @@ Se utiliza como un tipo único para eliminar la ambigüedad de sobrecarga del al
 class execution::sequenced_policy;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Durante la ejecución de un algoritmo paralelo con la `execution::sequenced_policy` directiva, si sale de la invocación de una función de acceso de elemento a través de una excepción no detectada, `terminate()` se denominará.
+Durante la ejecución de un algoritmo paralelo con la Directiva de `execution::sequenced_policy`, si la invocación de una función de acceso de elemento sale a través de una excepción no detectada, se llamará a `terminate()`.

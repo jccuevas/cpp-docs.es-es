@@ -1,8 +1,7 @@
 ---
-title: Cómo Agregar, editar o eliminar controles (C++)
+title: 'Cómo: agregar, editar o eliminar controles (C++)'
 ms.date: 02/15/2019
 f1_keywords:
-- vc.editors.dialog.dialog
 - vc.controls.activex
 - vc.editors.dialog.insertActiveXControls
 helpviewer_keywords:
@@ -43,14 +42,14 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b940e94faf710de8ae5bc604b47dc35a1bc290a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a42a64f93d334c0b5c63b0eca1567e6964d0a3ae
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491165"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447219"
 ---
-# <a name="how-to-add-edit-or-delete-controls-c"></a>Cómo Agregar, editar o eliminar controles (C++)
+# <a name="how-to-add-edit-or-delete-controls-c"></a>Cómo: agregar, editar o eliminar controles (C++)
 
 Con el **Editor de cuadros de diálogo**, puede Agregar, cambiar el tamaño, modificar y eliminar controles en los cuadros de diálogo. También puede editar las propiedades de un control, como su identificador, o si es visible inicialmente en tiempo de ejecución.
 
@@ -59,7 +58,7 @@ La pestaña **Editor de cuadros de diálogo** aparece en la [ventana cuadro de h
 > [!TIP]
 > Al usar el **Editor de cuadros de diálogo**, en muchos casos, puede seleccionar el botón secundario del mouse para mostrar un menú contextual de comandos de uso frecuente.
 
-## <a name="add-controls"></a>Agregar controles
+## <a name="add-controls"></a>para agregar controles
 
 ### <a name="to-add-a-control"></a>Para agregar un control
 
@@ -92,14 +91,14 @@ La pestaña **Editor de cuadros de diálogo** aparece en la [ventana cuadro de h
    > [!NOTE]
    > Puede anclar cualquiera de las cuatro esquinas del control que está dibujando. Este procedimiento usa la esquina superior izquierda como ejemplo.
 
-1. Suelte el botón del mouse. El control se liquida en el cuadro de diálogo con el tamaño que se haya especificado.
+1. Suelte el botón del mouse (ratón). El control se liquida en el cuadro de diálogo con el tamaño que se haya especificado.
 
 > [!TIP]
 > Puede cambiar el tamaño del control después de colocarlo en el cuadro de diálogo moviendo los controladores de tamaño del borde del control. Para obtener más información, vea [ajustar el tamaño de los controles individuales](../windows/sizing-individual-controls.md).
 
 ### <a name="to-add-a-custom-control"></a>Para agregar un control personalizado
 
-Puede Agregar controles personalizados al cuadro de diálogo. Seleccione el icono de **control personalizado** en el cuadro de **herramientas** y arrástrelo hasta el cuadro de diálogo. Para agregar un `Syslink` control, agregue un control personalizado y, a continuación, cambie la propiedad de `Syslink` **clase** del control a. Esta acción hará que las propiedades se actualicen y muestren las propiedades del `Syslink` control. Para obtener información sobre la clase contenedora de MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Puede Agregar controles personalizados al cuadro de diálogo. Seleccione el icono de **control personalizado** en el cuadro de **herramientas** y arrástrelo hasta el cuadro de diálogo. Para agregar un control de `Syslink`, agregue un control personalizado y, a continuación, cambie la propiedad de **clase** del control a `Syslink`. Esta acción hará que las propiedades se actualicen y muestren las propiedades del control `Syslink`. Para obtener información sobre la clase contenedora de MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Controles de edición
 
@@ -119,7 +118,7 @@ Puede Agregar controles personalizados al cuadro de diálogo. Seleccione el icon
 
 1. Asegúrese de que el control tiene el foco en el **Editor de cuadros de diálogo**.
 
-1. Vaya a menú **Editar** > **Deshacer**. Si el foco no está en el control , el comando Deshacer no estará disponible.
+1. Vaya a menú **editar** > **Deshacer**. Si el foco no está en el control, el comando **Deshacer** no estará disponible.
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Para definir una variable miembro para un control de cuadro de diálogo (que no sea un botón)
 
@@ -143,9 +142,9 @@ También puede usar la pestaña **variables miembro** del Asistente para [clases
 
 ## <a name="delete-controls"></a>Eliminar controles
 
-En el cuadro de diálogo, seleccione el control y, a continuación, presione la tecla suprimir o vaya a menú **Editar** > **eliminar**.
+En el cuadro de diálogo, seleccione el control y, a continuación, presione la tecla **suprimir** o vaya a **edición** de menú > **eliminar**.
 
-## <a name="other-issues"></a>Otros problemas
+## <a name="other-issues"></a>Otras incidencias
 
 ### <a name="troubleshooting"></a>Solución de problemas
 
@@ -170,7 +169,7 @@ Actualmente, el **Editor de cuadros de diálogo** no agrega automáticamente có
 ||||
 |-|-|-|
 |Control deslizante|Control de árbol|Date Time Picker|
-|Control de número|Control de pestaña|Calendario mensual|
+|Control de número|Control de pestaña|Month Calendar|
 |Control de progreso|Animation (control)|IP Address Control|
 |Tecla de acceso rápido|Rich Edit (control)|Cuadro combinado extendido|
 |Control de lista|Control Rich Edit 2,0|Control personalizado|
@@ -190,10 +189,10 @@ Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo. Pa
 
 El cuadro de diálogo **Insertar control ActiveX** permite insertar controles ActiveX en el cuadro de diálogo mientras se usa el [Editor de cuadros de diálogo](../windows/dialog-editor.md). Este cuadro de diálogo contiene las siguientes propiedades:
 
-|Propiedad|DESCRIPCIÓN|
+|Propiedad|Descripción|
 |---|---|
 |**Control ActiveX**|Muestra una lista de controles ActiveX.<br/><br/>Al insertar un control desde este cuadro de diálogo, no se genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para crear una, consulte [Agregar una clase](../ide/adding-a-class-visual-cpp.md).<br/><br/>Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.|
-|**Ruta de acceso**|Muestra el archivo en el que se encuentra el control ActiveX.|
+|**Path**|Muestra el archivo en el que se encuentra el control ActiveX.|
 
 > [!CAUTION]
 > Puede que no sea legal distribuir todos los controles ActiveX en el sistema. Consulte el contrato de licencia para el software que instaló los controles o póngase en contacto con la compañía del software.
@@ -217,7 +216,7 @@ El cuadro de diálogo **Insertar control ActiveX** permite insertar controles Ac
 
 Los controles ActiveX suministrados por proveedores independientes pueden estar equipados con sus propias propiedades y características. Estas propiedades se muestran en la ventana **propiedades** . Las páginas de propiedades creadas por los escritores del control ActiveX se muestran en el cuadro de diálogo **páginas de propiedades** . (Para ver la **Página de propiedades** de un control ActiveX específico, seleccione el botón **Página de propiedades** en el [ventana Propiedades](/visualstudio/ide/reference/properties-window)).
 
-- Seleccione el control **ActiveX** y vaya a la**Página de propiedades** de la **vista** > de menú para ver las propiedades. Realice los cambios necesarios en la página de propiedades.
+- Seleccione el control **ActiveX** y vaya a la **vista** de menú > **Página de propiedades** para ver las propiedades. Realice los cambios necesarios en la página de propiedades.
 
    En la página de propiedades de un control ActiveX se muestran varias pestañas, en función de las hojas de propiedades que se incluyen como parte del control ActiveX.
 
@@ -228,11 +227,11 @@ Los controles ActiveX suministrados por proveedores independientes pueden estar 
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Administrar controles del cuadro de diálogo](controls-in-dialog-boxes.md)<br/>
-[Cómo: Controles de diseño](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Procedimientos: Definición del control de acceso y los valores](defining-mnemonics-access-keys.md)
+[Cómo: diseñar controles](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Cómo: definir el acceso y los valores de control](defining-mnemonics-access-keys.md)
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

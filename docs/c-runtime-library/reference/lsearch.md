@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _lsearch
-- lsearch
 helpviewer_keywords:
 - _lsearch function
 - values, searching for
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 92973536df478f4176970929c5f4dd48352bed13
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954075"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438146"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -62,7 +61,7 @@ Objeto que se va a buscar.
 *base*<br/>
 Puntero a la base de la matriz en la que se va a buscar.
 
-*number*<br/>
+*número*<br/>
 Número de elementos.
 
 *width*<br/>
@@ -75,13 +74,13 @@ Puntero a la rutina de comparación. El primer parámetro es un puntero a la cla
 
 Si se encuentra la clave, **_lsearch** devuelve un puntero al elemento de la matriz en la *base* que coincide con la *clave*. Si no se encuentra la clave, **_lsearch** devuelve un puntero al elemento recién agregado al final de la matriz.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_lsearch** realiza una búsqueda lineal de la *clave* Value en una matriz de elementos *Number* , cada uno de los bytes de *ancho* . A diferencia de **bsearch**, **_lsearch** no requiere la ordenación de la matriz. Si no se encuentra la *clave* , **_lsearch** la agrega al final de la matriz e incrementa el *número*.
 
 El argumento *Compare* es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación. **_lsearch** llama a la rutina de *comparación* una o más veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. *Compare* debe comparar los elementos y devolver un valor distinto de cero (lo que significa que los elementos son diferentes) o 0 (lo que significa que los elementos son idénticos).
 
-Esta función valida sus parámetros. Si *comparar*, *la clave* o el *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en el [parámetro. Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**.
+Esta función valida sus parámetros. Si *comparar*, la *clave* o el *número* es **null**, o si la *base* es **null** y el *número* es distinto de cero, o si el *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,7 +88,7 @@ Esta función valida sus parámetros. Si *comparar*, *la clave* o el *número* e
 |-------------|---------------------|
 |**_lsearch**|\<search.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -133,7 +132,7 @@ wordlist before _lsearch: hello thanks bye
 wordlist after _lsearch: hello thanks bye extra
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>

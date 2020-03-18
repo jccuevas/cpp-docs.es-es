@@ -2,19 +2,17 @@
 title: Compatibilidad
 description: Describe la compatibilidad de la biblioteca en tiempo de ejecución de C de Microsoft universal (UCRT) con la biblioteca estándar de C, POSIX, CRT seguro y aplicaciones de la tienda.
 ms.date: 12/06/2019
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988729"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443486"
 ---
 # <a name="compatibility"></a>Compatibilidad
 
@@ -24,13 +22,13 @@ Las funciones concretas de la implementación de Microsoft de Visual C++ se encu
 
 El estándar de C++ reserva los nombres que comienzan con un carácter de subrayado en el espacio de nombres global para la implementación. Las funciones POSIX y las funciones de la biblioteca en tiempo de ejecución específicas de Microsoft están en el espacio de nombres global, pero no forman parte de la biblioteca estándar en tiempo de ejecución de C. Este es el motivo por el que las implementaciones preferidas de Microsoft de estas funciones tienen un carácter de subrayado inicial. Para la portabilidad, la UCRT también admite los nombres predeterminados, pero el compilador de Microsoft C++ emite una advertencia de desuso cuando se compila código que los usa. Solo los nombres predeterminados están en desuso, no las propias funciones. Para suprimir la advertencia, defina `_CRT_NONSTDC_NO_WARNINGS` antes de incluir encabezados en el código que utiliza los nombres POSIX originales.
 
-Algunas funciones de la biblioteca de C estándar tienen un historial de uso no seguro, debido a mal uso de parámetros y búferes sin comprobar. Estas funciones son a menudo el origen de los problemas de seguridad en el código. Microsoft creó un conjunto de versiones más seguras de estas funciones que comprueban el uso de los parámetros. Invocan el controlador de parámetros no válidos cuando se detecta un problema en tiempo de ejecución.  De forma predeterminada, el compilador de Microsoft C++ emite una advertencia de desuso cuando se utiliza una función que tiene una variante más segura disponible. Al compilar el código C++como, puede definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1 para eliminar la mayoría de las advertencias. Esta macro permite que las sobrecargas de plantilla llamen a las variantes más seguras a la vez que mantienen el código fuente portátil. Para suprimir la advertencia, defina `_CRT_SECURE_NO_WARNINGS` antes de incluir encabezados en el código que utiliza estas funciones. Para obtener más información, consulta [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
+Algunas funciones de la biblioteca de C estándar tienen un historial de uso no seguro, debido a mal uso de parámetros y búferes sin comprobar. Estas funciones son a menudo el origen de los problemas de seguridad en el código. Microsoft creó un conjunto de versiones más seguras de estas funciones que comprueban el uso de los parámetros. Invocan el controlador de parámetros no válidos cuando se detecta un problema en tiempo de ejecución.  De forma predeterminada, el compilador de Microsoft C++ emite una advertencia de desuso cuando se utiliza una función que tiene una variante más segura disponible. Al compilar el código C++como, puede definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1 para eliminar la mayoría de las advertencias. Esta macro permite que las sobrecargas de plantilla llamen a las variantes más seguras a la vez que mantienen el código fuente portátil. Para suprimir la advertencia, defina `_CRT_SECURE_NO_WARNINGS` antes de incluir encabezados en el código que utiliza estas funciones. Para obtener más información, consulte [Características de seguridad de CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 A menos que se indique lo contrario en la documentación de funciones concretas, la UCRT es compatible con la API de Windows.  Ciertas funciones no se admiten en aplicaciones de la tienda Windows o Plataforma universal de Windows ([UWP](/uwp)). Estas funciones se muestran en [funciones de CRT no admitidas en plataforma universal de Windows aplicaciones](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[Aplicaciones de UWP, Windows Runtime y runtime de C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Describe cuándo las rutinas de UCRT no son compatibles con aplicaciones universales de Windows o aplicaciones Microsoft Store.|
 |[Conformidad con ANSI C](../c-runtime-library/ansi-c-compliance.md)|Describe la nomenclatura conforme a los estándares en la UCRT.|

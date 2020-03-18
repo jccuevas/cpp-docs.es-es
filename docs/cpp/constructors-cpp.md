@@ -7,11 +7,11 @@ helpviewer_keywords:
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
 ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546398"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423799"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
@@ -698,6 +698,6 @@ int main(){
 - [Constructores de movimiento y operadores de asignación de movimiento](move-constructors-and-move-assignment-operators-cpp.md)
 - [Delegar constructores](delegating-constructors.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Clases y Structs](classes-and-structs-cpp.md)
+[Clases y estructuras](classes-and-structs-cpp.md)

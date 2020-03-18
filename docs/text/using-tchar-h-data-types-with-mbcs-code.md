@@ -1,8 +1,6 @@
 ---
 title: Utilizar tipos de datos de TCHAR.H con código _MBCS
 ms.date: 11/04/2016
-f1_keywords:
-- TCHAR
 helpviewer_keywords:
 - mapping generic-text
 - generic-text data types [C++]
@@ -11,30 +9,30 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 0e26aefd8b9099a2ca5e76ce9e2b7d1def2f9854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78e5d89e1e87d081e762fab1298eb990b914324c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410504"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446593"
 ---
-# <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizar tipos de datos de TCHAR.H con código _MBCS
+# <a name="using-tcharh-data-types-with-_mbcs-code"></a>Utilizar tipos de datos de TCHAR.H con código _MBCS
 
-Cuando la constante de manifiesto `_MBCS` está definido, se asigna una rutina de texto genérico determinada a uno de los siguientes tipos de rutinas:
+Cuando se define la constante de manifiesto `_MBCS`, se asigna una rutina de texto genérico determinada a uno de los siguientes tipos de rutinas:
 
 - Una rutina de SBCS que controla cadenas, caracteres y bytes multibyte de forma adecuada. En este caso, se espera que los argumentos de cadena sean del tipo `char*`. Por ejemplo, `_tprintf` se asigna a `printf`; los argumentos de cadena para `printf` son de tipo `char*`. Si usa el tipo de datos de texto genérico `_TCHAR` para la cadena de tipos, los tipos de parámetros formales y reales para `printf` coinciden porque `_TCHAR*` se asigna a `char*`.
 
-- Una rutina específica de MBCS. En este caso, se espera que los argumentos de cadena sean del tipo `unsigned char*`. Por ejemplo, `_tcsrev` se asigna a `_mbsrev`, que espera y devuelve una cadena de tipo `unsigned char*`. Si usas el `_TCHAR` tipo de datos de texto genérico para los tipos de cadena, hay un conflicto de tipos porque `_TCHAR` asigna al tipo `char`.
+- Una rutina específica de MBCS. En este caso, se espera que los argumentos de cadena sean del tipo `unsigned char*`. Por ejemplo, `_tcsrev` se asigna a `_mbsrev`, que espera y devuelve una cadena de tipo `unsigned char*`. Si usa el tipo de datos de texto genérico `_TCHAR` para los tipos de cadena, hay un posible conflicto de tipos porque `_TCHAR` se asigna al tipo `char`.
 
 A continuación se presentan tres soluciones para evitar este conflicto de tipos, así como las advertencias del compilador de C o errores del compilador de C++ que se generarían:
 
-- Usa el comportamiento predeterminado. Tchar.h proporciona prototipos de rutinas de texto genérico para rutinas en las bibliotecas en tiempo de ejecución, como en el ejemplo siguiente.
+- Usa el comportamiento predeterminado. TCHAR. h proporciona prototipos de rutina de texto genérico para las rutinas de las bibliotecas en tiempo de ejecución, como en el ejemplo siguiente.
 
     ```cpp
     char * _tcsrev(char *);
     ```
 
-   En el caso predeterminado, el prototipo de `_tcsrev` se asigna a `_mbsrev` a través de un código thunk en Libc.lib. Esto cambia los tipos de la `_mbsrev` parámetros de entrada y salida devuelven el valor de `_TCHAR*` (es decir, `char *`) a `unsigned char *`. Este método garantiza la coincidencia de tipos cuando usa `_TCHAR`, pero es relativamente lento debido a la sobrecarga de la llamada de función.
+   En el caso predeterminado, el prototipo de `_tcsrev` se asigna a `_mbsrev` a través de un código thunk en libc. lib. Esto cambia los tipos de `_mbsrev` parámetros entrantes y el valor devuelto saliente de `_TCHAR*` (es decir, `char *`) a `unsigned char *`. Este método garantiza la coincidencia de tipos cuando se usa `_TCHAR`, pero es relativamente lento debido a la sobrecarga de la llamada de función.
 
 - Use la inserción de funciones mediante la incorporación de la siguiente instrucción del preprocesador en el código.
 
@@ -42,7 +40,7 @@ A continuación se presentan tres soluciones para evitar este conflicto de tipos
     #define _USE_INLINING
     ```
 
-   Este método provoca que un código thunk de función insertada, proporcionado en tchar.h, para asignar la rutina de texto genérico directamente a la rutina de MBCS adecuada. El siguiente fragmento de código de tchar.h proporciona un ejemplo de cómo hacerlo.
+   Este método produce un código thunk de función insertada, proporcionado en TCHAR. h, para asignar la rutina de texto genérico directamente a la rutina de MBCS adecuada. El siguiente fragmento de código de TCHAR. h proporciona un ejemplo de cómo hacerlo.
 
     ```cpp
     __inline char *_tcsrev(char *_s1)
@@ -51,20 +49,20 @@ A continuación se presentan tres soluciones para evitar este conflicto de tipos
 
    Si puede usar la inserción, es la mejor solución, ya que garantiza la coincidencia de tipos y no incurrir en ningún costo por tiempo adicional.
 
-- Utilice la asignación directa mediante la incorporación de la siguiente instrucción del preprocesador en el código.
+- Use la asignación directa mediante la incorporación de la siguiente instrucción de preprocesador en el código.
 
     ```cpp
     #define _MB_MAP_DIRECT
     ```
 
-   Este enfoque proporciona una alternativa rápida si no desea usar el comportamiento predeterminado o si no se puede usar la inserción. Hace que la rutina de texto genérico para una macro asignarse directamente a la versión MBCS de la rutina, como se muestra en el siguiente ejemplo de tchar.h.
+   Este enfoque proporciona una alternativa rápida si no desea usar el comportamiento predeterminado o si no se puede usar la inserción. Hace que la rutina de texto genérico se asigne a una macro directamente a la versión MBCS de la rutina, como en el ejemplo siguiente de TCHAR. h.
 
     ```cpp
     #define _tcschr _mbschr
     ```
 
-   Al adoptar este enfoque, debe tener cuidado para garantizar el uso de tipos de datos apropiados para argumentos de cadena y valores devueltos de cadena. Puede usar la conversión de tipos para garantizar la coincidencia correcta de tipos o puede usar el tipo de datos de texto genérico `_TXCHAR`. `_TXCHAR` asigna al tipo **char** en código SBCS pero se asigna al tipo **unsigned char** en código MBCS. Para obtener más información acerca de las macros de texto genérico, vea [asignaciones de texto genérico](../c-runtime-library/generic-text-mappings.md) en el *referencia de la biblioteca de tiempo de ejecución*.
+   Al adoptar este enfoque, debe asegurarse de usar los tipos de datos adecuados para los argumentos de cadena y los valores devueltos de cadena. Puede usar la conversión de tipos para garantizar la coincidencia correcta de tipos o puede usar el tipo de datos de texto genérico `_TXCHAR`. `_TXCHAR` se asigna al tipo **Char** en el código SBCS pero se asigna al tipo **Char sin signo** en el código MBCS. Para obtener más información sobre las macros de texto genérico, vea [asignaciones de texto genérico](../c-runtime-library/generic-text-mappings.md) en la referencia de la *biblioteca en tiempo de ejecución*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md)

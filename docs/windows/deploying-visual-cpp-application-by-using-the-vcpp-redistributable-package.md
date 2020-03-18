@@ -4,18 +4,18 @@ ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: a235fa12138fd00a0f6d722cad7776980ad3d292
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 1e09debc53e5b1b3e1eeaa6a63924b04fd2b7ca5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877286"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443891"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Tutorial: Implementar una aplicación de Visual C++ mediante el paquete redistribuible de Visual C++
 
 En este artículo paso a paso se describe cómo usar el paquete redistribuible de Visual C++ para implementar una aplicación de Visual C++.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar este tutorial, debe tener estos componentes:
 
@@ -25,7 +25,7 @@ Para completar este tutorial, debe tener estos componentes:
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Para usar el paquete redistribuible de Visual C++ para implementar una aplicación
 
-1.  Cree y compile una aplicación MFC mediante los pasos del [Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1.  Cree y compile una aplicación MFC siguiendo los pasos de [Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Cree un archivo, denomínelo setup.bat y agréguele los comandos siguientes. Cambie `MyMFCApplication` por el nombre del proyecto.
 
@@ -54,7 +54,7 @@ Para completar este tutorial, debe tener estos componentes:
 
       - La aplicación MFC (archivo .exe).
 
-      - vcredist_x86.exe. Este archivo se encuentra en \Archivos de programa (x86)\Microsoft Visual Studio \<versión>\SDK\Bootstrapper\Packages\. También puede descargar este archivo desde [Microsoft](https://www.microsoft.com/download/confirmation.aspx?id=5555).
+      - vcredist_x86.exe. En Visual Studio 2015, este archivo se encuentra en *% VCINSTALLDIR% Redist\\1033\\* . En Visual Studio 2017 y Visual Studio 2019, este archivo se encuentra en *% VCToolsRedistDir%* . También puede [descargar el archivo redistribuible compatible más reciente de Microsoft](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
 
       - El archivo setup.bat que creó en el paso anterior.
 
@@ -83,8 +83,8 @@ Para completar este tutorial, debe tener estos componentes:
       El archivo de instalación autoextraíble instala la aplicación MFC que se encuentra en la carpeta que especificó en el paso 2. La aplicación se ejecuta correctamente porque el instalador del paquete redistribuible de Visual C++ se incluye en el archivo de instalación autoextraíble.
 
       > [!IMPORTANT]
-      > Para determinar qué versión del tiempo de ejecución está instalada, el programa de instalación comprueba la clave del Registro \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<versión>\VC\Runtimes\\<platform>. Si la versión instalada actualmente es más reciente que la que el programa de instalación está intentando instalar, el programa de instalación devuelve un valor correcto sin instalar la versión anterior y deja una entrada adicional en la página de programas instalados del Panel de Control.
+      > Para determinar qué versión del motor en tiempo de ejecución está instalada, el instalador comprueba la clave del registro \\HKLM\\SOFTWARE\\Microsoft\\VisualStudio\\_versión_\\en tiempo de ejecución de VC\\\\_plataforma_\\versión. Si la versión instalada actualmente es más reciente que la que el programa de instalación está intentando instalar, el programa de instalación devuelve un valor correcto sin instalar la versión anterior y deja una entrada adicional en la página de programas instalados del Panel de Control.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplos de implementación](deployment-examples.md)<br/>

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - build time analysis
 - vcperf.exe
 ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857064"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422899"
 ---
 # <a name="irelogger-class"></a>Clase IRelogger
 
@@ -52,17 +52,17 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El valor devuelto predeterminado para todas las funciones que no se reemplazan es `AnalysisControl::CONTINUE`. Para obtener más información, vea [AnalysisControl](analysis-control-enum-class.md).
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="destructor"></a>Destructor
 
 [~ IRelogger](#irelogger-destructor)
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
 \ [OnBeginRelogging](#on-begin-relogging)
 \ [OnBeginReloggingPass](#on-begin-relogging-pass)

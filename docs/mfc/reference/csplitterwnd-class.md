@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426802"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447438"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (clase)
 
@@ -522,17 +522,17 @@ Puntero a la vista desde la que se origina el mensaje de desplazamiento.
 *nScrollCode*<br/>
 Código de barra de desplazamiento que indica la solicitud de desplazamiento del usuario. Este parámetro se compone de dos partes: un byte de orden inferior, que determina el tipo de desplazamiento que se produce horizontalmente y un byte de orden superior, que determina el tipo de desplazamiento que se produce verticalmente:
 
-    - SB_BOTTOM se desplaza hasta la parte inferior.
+- SB_BOTTOM se desplaza hasta la parte inferior.
 
-    - SB_LINEDOWN desplaza una línea hacia abajo.
+- SB_LINEDOWN desplaza una línea hacia abajo.
 
-    - SB_LINEUP desplaza una línea hacia arriba.
+- SB_LINEUP desplaza una línea hacia arriba.
 
-    - SB_PAGEDOWN desplaza una página hacia abajo.
+- SB_PAGEDOWN desplaza una página hacia abajo.
 
-    - SB_PAGEUP desplaza una página hacia arriba.
+- SB_PAGEUP desplaza una página hacia arriba.
 
-    - SB_TOP se desplaza hasta la parte superior.
+- SB_TOP se desplaza hasta la parte superior.
 
 *bDoScroll*<br/>
 Determina si se produce la acción de desplazamiento especificada. Si *bDoScroll* es true (es decir, si existe una ventana secundaria y las ventanas divididas tienen un intervalo de desplazamiento), la acción de desplazamiento especificada puede tener lugar. Si *bDoScroll* es false (es decir, si no existe ninguna ventana secundaria o las vistas divididas no tienen intervalo de desplazamiento), no se produce el desplazamiento.
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 Uno o varios de los siguientes marcadores de estilo de Windows, si es correcto:
 
-    - WS_HSCROLL si el divisor administra actualmente barras de desplazamiento horizontales compartidas.
+- WS_HSCROLL si el divisor administra actualmente barras de desplazamiento horizontales compartidas.
 
-    - WS_VSCROLL si el divisor administra actualmente barras de desplazamiento vertical compartidas.
+- WS_VSCROLL si el divisor administra actualmente barras de desplazamiento vertical compartidas.
 
 Si es cero, la ventana divisora no administra actualmente ninguna barra de desplazamiento compartida.
 
@@ -810,13 +810,13 @@ Puntero al contexto del dispositivo en el que se va a dibujar. Si *pDC* es null,
 *nType*<br/>
 Un valor de la `enum ESplitType`, que puede ser uno de los siguientes:
 
-    - `splitBox` el cuadro de arrastre del divisor.
+- `splitBox` el cuadro de arrastre del divisor.
 
-    - `splitBar` la barra que aparece entre las dos ventanas divididas.
+- `splitBar` la barra que aparece entre las dos ventanas divididas.
 
-    - `splitIntersection` la intersección de las ventanas divididas. No se llamará a este elemento cuando se ejecute en Windows 95/98.
+- `splitIntersection` la intersección de las ventanas divididas. No se llamará a este elemento cuando se ejecute en Windows 95/98.
 
-    - `splitBorder` los bordes de la ventana dividida.
+- `splitBorder` los bordes de la ventana dividida.
 
 *Rect*<br/>
 Referencia a un objeto [CRect](../../atl-mfc-shared/reference/crect-class.md) que especifica el tamaño y la forma de las ventanas divididas.

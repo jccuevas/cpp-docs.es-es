@@ -5,18 +5,17 @@ f1_keywords:
 - std::value_compare
 - std.value_compare
 - map/std::value_compare
-- value_compare
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-ms.openlocfilehash: d098e947aec1ea543f29c168a632d1f4c9412e82
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1f872edce6f0114be7c90a8108ba248fd793a989
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448323"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447584"
 ---
-# <a name="valuecompare-class-ltmapgt"></a>value_compare (Clase) (&lt;asignación&gt;)
+# <a name="value_compare-class-ltmapgt"></a>value_compare (Clase) (&lt;asignación&gt;)
 
 Proporciona un objeto de función que puede comparar los elementos de una asignación comparando los valores de sus claves para determinar su orden relativo en la asignación.
 
@@ -33,9 +32,9 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El criterio de comparación proporcionado `value_compare` por `value_types` entre todos los elementos contenidos en una asignación se induce de una comparación entre las claves de los elementos respectivos mediante la construcción de la clase auxiliar. El operador de función miembro utiliza el `comp` objeto de `key_compare` tipo almacenado en el objeto de función `value_compare` proporcionado por para comparar los componentes de clave de ordenación de dos elementos.
+El criterio de comparación proporcionado por `value_compare` entre `value_types` de elementos completos contenidos en una asignación se induce de una comparación entre las claves de los elementos respectivos mediante la construcción de la clase auxiliar. El operador de función miembro utiliza el `comp` de objeto de tipo `key_compare` almacenado en el objeto de función proporcionado por `value_compare` para comparar los componentes de clave de ordenación de dos elementos.
 
 Para conjuntos y conjuntos múltiples, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, `value_compare` es equivalente a `key_compare`. No lo es para asignaciones y asignaciones múltiples, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.
 
@@ -45,11 +44,11 @@ Vea el ejemplo de [value_comp](../standard-library/map-class.md#value_comp) para
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<map>
+**Encabezado:** \<> de asignación
 
 **Espacio de nombres:** std
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [binary_function (Struct)](../standard-library/binary-function-struct.md)\
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

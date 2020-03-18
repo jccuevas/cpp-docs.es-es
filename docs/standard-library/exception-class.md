@@ -2,16 +2,16 @@
 title: Clase exception
 ms.date: 11/04/2016
 f1_keywords:
-- exception
+- exception/std::exception
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 90906469e923d29dd886930bd36944e4292bd9cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5bef8190889ae00298760ea395fb524f557c2be2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246065"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446832"
 ---
 # <a name="exception-class"></a>Clase exception
 
@@ -32,11 +32,11 @@ class exception {
 };
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En concreto, esta clase base es la raíz de las clases de excepción estándar definidas en [\<stdexcept>](../standard-library/stdexcept.md). El constructor predeterminado no especifica el valor de cadena de C devuelto por `what`, pero lo pueden definir los constructores de ciertas clases derivadas como una cadena de C definida por la implementación. Ninguna de las funciones miembro produce excepciones.
 
-El **int** parámetro le permite especificar que no se debe asignar ninguna memoria. El valor de la **int** se omite.
+El parámetro **int** le permite especificar que no se debe asignar memoria. Se omite el valor de **int** .
 
 > [!NOTE]
 > Los constructores `exception(const char* const &message)` y `exception(const char* const &message, int)` son extensiones de Microsoft para la biblioteca estándar de C++.

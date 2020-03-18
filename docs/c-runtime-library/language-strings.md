@@ -1,21 +1,19 @@
 ---
 title: Language Strings
 ms.date: 11/04/2016
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500071"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438251"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Las funciones [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) pueden usar los idiomas compatibles con la API NLS de Windows en sistemas operativos que no usan la página de códigos Unicode. Para obtener una lista de idiomas compatibles con la versión del sistema operativo, vea el [Apéndice A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Apéndice A: Comportamiento del producto) en [MS-LCID]: Windows Language Code Identifier (LCID) Reference (Referencia del identificador de configuración regional [LCID] de Windows). La cadena de idioma puede ser cualquiera de los valores de las columnas **Language** (Idioma) y **Language tag** (Etiqueta de idioma) de la lista de idiomas admitidos. Para un ejemplo de código que enumera los nombres de configuración regional disponibles y los valores relacionados, consulte [NLS: ejemplo de API basadas en nombres](/windows/win32/intl/nls--name-based-apis-sample).
+Las funciones [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) pueden usar los idiomas compatibles con la API NLS de Windows en sistemas operativos que no usan la página de códigos Unicode. Para una lista de idiomas compatibles con la versión del sistema operativo, consulte [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Apéndice A: Comportamiento del producto) en [MS-LCID]: Windows Language Code Identifier (LCID) Reference. ([MS-LCID]: Referencia de identificador de configuración regional (LCID) de Windows). La cadena de idioma puede ser cualquiera de los valores de las columnas **Language** (Idioma) y **Language tag** (Etiqueta de idioma) de la lista de idiomas admitidos. Para un ejemplo de código que enumera los nombres de configuración regional disponibles y los valores relacionados, consulte [NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample) (NLS: ejemplo de API basadas en nombres).
 
 ## <a name="additional-supported-language-strings"></a>Cadenas de idioma compatibles adicionales
 
@@ -23,9 +21,9 @@ La implementación de la biblioteca en tiempo de ejecución de Microsoft C tambi
 
 |Cadena de idioma|Nombre de configuración regional equivalente|
 |---------------------|----------------------------|
-|estadounidense|en-US|
-|inglés de Estados Unidos|en-US|
-|inglés-Estados Unidos|en-US|
+|americano|es-ES|
+|inglés de Estados Unidos|es-ES|
+|inglés-Estados Unidos|es-ES|
 |australiano|en-AU|
 |belga|nl-BE|
 |canadiense|en-CA|
@@ -37,7 +35,7 @@ La implementación de la biblioteca en tiempo de ejecución de Microsoft C tambi
 |chino (Singapur)|zh-sg|
 |chino tradicional|zh-TW|
 |neerlandés (Bélgica)|nl-BE|
-|Estados Unidos-inglés|en-US|
+|Estados Unidos-inglés|es-ES|
 |inglés australiano|en-AU|
 |inglés (Belice)|en-BZ|
 |inglés (Canadá)|en-CA|
@@ -48,8 +46,8 @@ La implementación de la biblioteca en tiempo de ejecución de Microsoft C tambi
 |inglés (Sudáfrica)|en-ZA|
 |inglés (Trinidad y Tobago)|en-TT|
 |inglés (Reino Unido)|en-GB|
-|inglés (Estados Unidos)|en-US|
-|inglés (USA)|en-US|
+|inglés (Estados Unidos)|es-ES|
+|inglés (USA)|es-ES|
 |francés (Bélgica)|fr-BE|
 |francés (Canadá)|fr-CA|
 |francés (Luxemburgo)|fr-LU|
@@ -60,7 +58,7 @@ La implementación de la biblioteca en tiempo de ejecución de Microsoft C tambi
 |alemán (Suiza)|de-CH|
 |irlandés-inglés|en-IE|
 |italiano (Suiza)|it-CH|
-|noruego|No|
+|noruego|no|
 |noruego (Bokmal)|nb-NO|
 |noruego (Nynorsk)|nn-NO|
 |portugués (Brasil)|pt-BR|
@@ -86,10 +84,10 @@ La implementación de la biblioteca en tiempo de ejecución de Microsoft C tambi
 |sueco (Finlandia)|sv-FI|
 |suizo|de-CH|
 |uk|en-GB|
-|us|en-US|
-|usa|en-US|
+|americana|es-ES|
+|usa|es-ES|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Nombres de configuración regional, idiomas y cadenas de país/región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Country/Region Strings](../c-runtime-library/country-region-strings.md)<br/>

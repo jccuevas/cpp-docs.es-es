@@ -1,22 +1,20 @@
 ---
-title: Administración del tiempo
+title: Administración de hora
 ms.date: 11/04/2016
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - dates, run-time library members
 - time, time management
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 24859a0b35274881b03b960807904ed38b19e354
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446784"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444590"
 ---
-# <a name="time-management"></a>Administración del tiempo
+# <a name="time-management"></a>Administración de hora
 
 Use estas funciones para obtener la hora actual y convertirla, ajustarla y almacenarla según sea necesario. La hora actual es la hora del sistema.
 
@@ -24,7 +22,7 @@ Las rutinas **_ftime** y **localtime** usan la variable de entorno **TZ**. Si no
 
 ### <a name="time-routines"></a>Rutinas de tiempo
 
-|Función|Usar|
+|Función|Uso|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Convertir la hora de tipo **struct tm** a cadena de caracteres. Las versiones de estas funciones con el sufijo **_s** son más seguras.|
 |[clock](../c-runtime-library/reference/clock.md)|Devolver el tiempo de reloj transcurrido en el proceso.|
@@ -47,8 +45,8 @@ Las rutinas **_ftime** y **localtime** usan la variable de entorno **TZ**. Si no
 > En todas las versiones de Microsoft C/C++, excepto Microsoft C/C++ versión 7.0, y en todas las versiones de Visual C++, la función de hora devuelve la hora actual como el número de segundos transcurridos desde la medianoche del 1.° de enero de 1970. En Microsoft C/C++ versión 7.0, el valor **time** devolvió la hora actual como el número de segundos transcurridos desde la medianoche del 31 de diciembre de 1899.
 
 > [!NOTE]
-> En versiones de Visual C++ y Microsoft C/C++ anteriores a Visual Studio 2005, el valor **time_t** fue **long** **int** (32 bits) y, por lo tanto, no se pudo usar para fechas después de las 3:14:07 del 19 de enero de 2038, hora UTC. El valor**time_t** ahora es equivalente a **__time64_t** de manera predeterminada, pero si se define **_USE_32BIT_TIME_T**, se cambia **time_t** a **__time32_t** y fuerza a muchas funciones de hora a llamar a las versiones que usan el valor **time_t** de 32 bits. Para obtener más información, consulte [Tipos estándar](../c-runtime-library/standard-types.md) y comentarios en la documentación sobre las funciones individuales de hora.
+> En las versiones de C++ visual y Microsoft CC++ /anteriores a visual Studio 2005, **time_t** era un **entero** **largo** (32 bits) y, por lo tanto, no se podía usar para las fechas 3:14:07 anteriores al 19 de enero de 2038, UTC. El valor**time_t** ahora es equivalente a **__time64_t** de manera predeterminada, pero si se define **_USE_32BIT_TIME_T**, se cambia **time_t** a **__time32_t** y fuerza a muchas funciones de hora a llamar a las versiones que usan el valor **time_t** de 32 bits. Para obtener más información, consulte [Tipos estándar](../c-runtime-library/standard-types.md) y comentarios en la documentación sobre las funciones individuales de hora.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

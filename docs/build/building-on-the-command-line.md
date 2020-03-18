@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051491"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422905"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Usar el conjunto C++ de herramientas de Microsoft desde la línea de comandos
 
@@ -221,7 +221,7 @@ Los archivos por lotes específicos de la arquitectura establecen el parámetro 
 
 Ajuste la ruta de acceso para reflejar el directorio de instalación de Visual Studio. El archivo vcvarsall.bat tiene información adicional sobre los números de versión específicos.
 
-## <a name="command-line-tools"></a>Herramientas de la línea de comandos
+## <a name="command-line-tools"></a>Herramientas de línea de comandos
 
 Para compilar unC++ proyecto de C/en un símbolo del sistema, Visual Studio proporciona estas herramientas de línea de comandos:
 
@@ -281,6 +281,6 @@ Proporciona vínculos a artículos en los que se explican las opciones del enlaz
 [Herramientas de generación MSVC adicionales](reference/c-cpp-build-tools.md)<br/>
 Proporciona vínculos a las herramientas de compilación de C/C++ que se incluyen en Visual Studio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)
