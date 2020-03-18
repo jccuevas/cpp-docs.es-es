@@ -1,31 +1,28 @@
 ---
-title: CTreeCtrl vs. CTreeView
+title: CTreeCtrl frente a CTreeView
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
-- CTreeView
 helpviewer_keywords:
 - tree view controls
 - CTreeCtrl class [MFC], vs. CTreeView class [MFC]
 - CTreeView class [MFC], vs. CTreeCtrl class [MFC]
 - tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
-ms.openlocfilehash: 29349e169e5ad8475001235d9b355da52156d683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c78dfa9920c913fdbedb009c5a6f275a3e3e273
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241974"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445230"
 ---
-# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs. CTreeView
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl frente a CTreeView
 
-MFC proporciona dos clases que encapsulan los controles de árbol: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) y [CTreeView](../mfc/reference/ctreeview-class.md). Cada clase es útil en situaciones diferentes.
+MFC proporciona dos clases que encapsulan controles de árbol: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) y [CTreeView](../mfc/reference/ctreeview-class.md). Cada clase es útil en situaciones diferentes.
 
-Use `CTreeCtrl` cuando necesite un control de ventana secundaria plana; por ejemplo, en un cuadro de diálogo. Especialmente querría usar `CTreeCtrl` si habrá otros controles secundarios en la ventana, como se muestra en un cuadro de diálogo típico.
+Utilice `CTreeCtrl` cuando necesite un control de ventana secundaria sin formato; por ejemplo, en un cuadro de diálogo. Lo más conveniente es usar `CTreeCtrl` si hay otros controles secundarios en la ventana, como en un cuadro de diálogo típico.
 
-Use `CTreeView` si desea que el control de árbol para que actúe como una ventana de vista en la arquitectura documento/vista, así como un control de árbol. Un `CTreeView` ocupará toda el área cliente de una ventana de marco o ventana divisora. Se cambiará de tamaño automáticamente cuando se cambia el tamaño de su ventana primaria, y puede procesar mensajes de comandos de menús, teclas de aceleración y barras de herramientas. Puesto que un control de árbol contiene los datos necesarios para mostrar el árbol, el objeto de documento correspondiente no tiene que ser complicado, incluso podría usar [CDocument](../mfc/reference/cdocument-class.md) como el tipo de documento en la plantilla de documento.
+Utilice `CTreeView` cuando desee que el control de árbol actúe como una ventana de vista en la arquitectura de documento/vista, así como un control de árbol. Un `CTreeView` ocupará todo el área de cliente de una ventana de marco o una ventana divisora. Se cambiará automáticamente de tamaño cuando se cambie el tamaño de la ventana primaria y podrá procesar los mensajes de comandos de los menús, las teclas de aceleración y las barras de herramientas. Dado que un control de árbol contiene los datos necesarios para mostrar el árbol, el objeto de documento correspondiente no tiene que ser complicado. incluso podría usar [CDocument](../mfc/reference/cdocument-class.md) como el tipo de documento en la plantilla de documento.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)

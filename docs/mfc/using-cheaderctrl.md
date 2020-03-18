@@ -1,27 +1,25 @@
 ---
 title: Usar CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386413"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444001"
 ---
 # <a name="using-cheaderctrl"></a>Usar CHeaderCtrl
 
-Usar un control de encabezado, representado por la clase [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), para mostrar los encabezados de columna para obtener una lista de columnas. Por ejemplo, un control de encabezado sería útil para implementar controles de columna en una hoja de cálculo.
+Use un control de encabezado, representado por la clase [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), para mostrar los encabezados de columna de una lista de columnas. Por ejemplo, un control de encabezado sería útil para implementar controles de columna en una hoja de cálculo.
 
-Normalmente, el control de encabezado se divide en partes, denominadas "elementos de encabezado," si tuviera un título para la columna asociada de texto o números. Dependiendo de los estilos definidos, puede proporcionar un número de formas para que los usuarios manipular los elementos de encabezado.
+Normalmente, el control de encabezado se divide en partes, denominadas "elementos de encabezado", donde cada uno de ellos tiene un título para la columna de texto o números asociada. Dependiendo de los estilos que establezca, puede proporcionar una serie de formas directas para que los usuarios manipulen los elementos de encabezado.
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) proporciona un control de encabezado incrustado y [CListView](../mfc/reference/clistview-class.md) encapsula `CListCtrl` en una clase MFC. En general, considerar usar `CHeaderCtrl` a las listas de etiqueta que se va a dibujar usted mismo.
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) proporciona un control de encabezado incrustado y [CListView](../mfc/reference/clistview-class.md) encapsula `CListCtrl` en una clase MFC. En general, piense en usar `CHeaderCtrl` para etiquetar las listas que desea dibujar usted mismo.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -49,6 +47,6 @@ Normalmente, el control de encabezado se divide en partes, denominadas "elemento
 
 - [Procesamiento de notificaciones del control de encabezado](../mfc/processing-header-control-notifications.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controles](../mfc/controls-mfc.md)

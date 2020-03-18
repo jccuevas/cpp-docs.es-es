@@ -1,8 +1,6 @@
 ---
 title: 'Menús y recursos: Adiciones de servidor'
 ms.date: 11/04/2016
-f1_keywords:
-- IDP_OLE_INIT_FAILED
 helpviewer_keywords:
 - OLE visual editing servers [MFC]
 - accelerator tables [MFC], server applications
@@ -17,60 +15,60 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1dfd059572c433e8fd7ccaf6e5c48e880f59cad
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225432"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445186"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menús y recursos: Adiciones de servidor
 
-En este artículo se explica los cambios que deben realizarse en los menús y otros recursos en una aplicación de servidor (componente) de edición visual. Una aplicación de servidor requiere muchas adiciones a la estructura de menús y otros recursos, porque se puede iniciar en uno de tres modos: independiente, incrustado, o en su lugar. Como se describe en el [menús y recursos (OLE)](../mfc/menus-and-resources-ole.md) del artículo, hay un máximo de cuatro conjuntos de menús. Los cuatro se usan para una aplicación de servidor completo MDI, mientras que sólo se utilizan tres para un miniservidor. El Asistente para aplicaciones creará el diseño de menú necesarios para el tipo de servidor que desee. Alguna personalización puede ser necesario.
+En este artículo se explican los cambios que se deben realizar en los menús y otros recursos de una aplicación de servidor de edición visual (componente). Una aplicación de servidor requiere muchas adiciones a la estructura de menú y a otros recursos, ya que se puede iniciar en uno de estos tres modos: independiente, incrustado o implementado. Tal y como se describe en el artículo de [menús y recursos (OLE)](../mfc/menus-and-resources-ole.md) , hay un máximo de cuatro conjuntos de menús. Los cuatro se usan para una aplicación de servidor completo MDI, mientras que solo se usan tres para un miniservidor. El Asistente para aplicaciones creará el diseño de menú necesario para el tipo de servidor que desee. Puede que sea necesario realizar alguna personalización.
 
-Si no usa al Asistente para aplicaciones, puede mirar HIERSVR. RC, el script de recursos para la aplicación de ejemplo MFC [HIERSVR](../overview/visual-cpp-samples.md), para ver cómo se implementan estos cambios.
+Si no usa el Asistente para aplicaciones, puede que desee consultar HIERSVR. RC, el script de recursos para la aplicación de ejemplo de MFC [HIERSVR](../overview/visual-cpp-samples.md), para ver cómo se implementan estos cambios.
 
-Los temas tratados en este artículo incluyen:
+Los temas que se tratan en este artículo son:
 
-- [Adiciones de menú del servidor](#_core_server_menu_additions)
+- [Adiciones del menú servidor](#_core_server_menu_additions)
 
-- [Agregar tablas de aceleradores](#_core_server_application_accelerator_table_additions)
+- [Adiciones de tabla de aceleradores](#_core_server_application_accelerator_table_additions)
 
-- [Agregar tablas de cadenas](../mfc/menus-and-resources-container-additions.md)
+- [Adiciones de tabla de cadenas](../mfc/menus-and-resources-container-additions.md)
 
 - [Adiciones de miniservidor](#_core_mini.2d.server_additions)
 
-##  <a name="_core_server_menu_additions"></a> Adiciones de menú del servidor
+##  <a name="_core_server_menu_additions"></a>Adiciones del menú servidor
 
-Las aplicaciones de servidor (componente) deben tener los recursos de menú agregados para admitir la edición visual OLE. No es necesario que los menús que se utilizan cuando la aplicación se ejecuta en modo independiente se puede cambiar, pero debe agregar dos nuevos recursos de menú antes de compilar la aplicación: uno para admitir la activación en contexto y para admitir el servidor que esté completamente abierta. Las aplicaciones completo y miniservidor usan los recursos de menú.
+Las aplicaciones de servidor (componente) deben tener recursos de menú agregados para admitir la edición visual OLE. No es necesario cambiar los menús que se usan cuando la aplicación se ejecuta en modo independiente, pero debe agregar dos nuevos recursos de menú antes de compilar la aplicación: uno para admitir la activación en contexto y otro para admitir que el servidor esté totalmente abierto. Ambos recursos de menú se usan en aplicaciones completas y de miniservidor.
 
-- Para admitir la activación en contexto, debe crear un recurso de menú que es muy similar para el recurso de menú que se utiliza cuando se ejecuta en modo independiente. La diferencia en este menú es que faltan los elementos de archivo y ventana (y otros elementos de menú que se encargan de la aplicación y no los datos). La aplicación contenedora proporcionará estos elementos de menú. Para obtener más información sobre y un ejemplo de esta técnica de combinación de menús, vea el artículo [menús y recursos: Combinación de menús](../mfc/menus-and-resources-menu-merging.md).
+- Para admitir la activación en contexto, debe crear un recurso de menú que sea muy similar al recurso de menú que se usa cuando se ejecuta en modo independiente. La diferencia en este menú es que faltan los elementos de archivo y ventana (y los demás elementos de menú que se ocupan de la aplicación, y no los datos). La aplicación contenedora proporcionará estos elementos de menú. Para obtener más información sobre y un ejemplo de, esta técnica de combinación de menús, vea el artículo [menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md).
 
-- Para admitir la activación totalmente abierta, debe crear un recurso de menú casi idéntico para el recurso de menú que se utiliza cuando se ejecuta en modo independiente. La única modificación a este recurso de menú es que algunos elementos se modifican para reflejar el hecho de que el servidor está funcionando en un elemento incrustado en un documento compuesto.
+- Para admitir la activación totalmente abierta, debe crear un recurso de menú prácticamente idéntico al recurso de menú que se usa cuando se ejecuta en modo independiente. La única modificación de este recurso de menú es que algunos elementos se han modificado para reflejar el hecho de que el servidor está funcionando en un elemento incrustado en un documento compuesto.
 
-Además de los cambios mostrados en este artículo, el archivo de recursos debe incluir AFXOLESV. RC, que es necesario para la implementación de la biblioteca Microsoft Foundation Class. Este archivo se encuentra en el subdirectorio MFC\Include.
+Además de los cambios que se muestran en este artículo, el archivo de recursos debe incluir AFXOLESV. RC, que es necesario para la implementación de biblioteca MFC. Este archivo se encuentra en el subdirectorio MFC\Include
 
-##  <a name="_core_server_application_accelerator_table_additions"></a> Acelerador de la tabla incorporaciones de aplicaciones de servidor
+##  <a name="_core_server_application_accelerator_table_additions"></a>Adiciones de tabla del acelerador de aplicaciones de servidor
 
-Se deben agregar dos nuevos recursos de tabla de aceleradores a aplicaciones de servidor; se corresponden directamente con los nuevos recursos de menú que se ha descrito anteriormente. Cuando se activa la aplicación de servidor en su lugar, se usa la primera tabla de aceleradores. Consta de todas las entradas de tabla de aceleradores de la vista, excepto las que están asociadas a la ventana y el archivo de menús.
+Se deben agregar dos nuevos recursos de tabla de aceleradores a las aplicaciones de servidor; se corresponden directamente con los nuevos recursos de menú descritos anteriormente. La primera tabla de aceleradores se utiliza cuando la aplicación de servidor se activa en su lugar. Consta de todas las entradas de la tabla de aceleradores de la vista, excepto las vinculadas a los menús archivo y ventana.
 
-La segunda tabla es casi una copia exacta de la tabla de aceleradores de la vista. Las diferencias en paralelo los cambios realizados en el menú completamente abierto mencionado en [adiciones de menú del servidor](#_core_server_menu_additions).
+La segunda tabla es casi una copia exacta de la tabla de aceleradores de la vista. Cualquier diferencia de cambios en paralelo realizados en el menú totalmente abierto mencionado en [adiciones del menú servidor](#_core_server_menu_additions).
 
-Para obtener un ejemplo de estos cambios de la tabla de aceleradores, compare las tablas de aceleradores IDR_HIERSVRTYPE_SRVR_IP y IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME en el archivo HIERSVR. Archivo RC incluido en el ejemplo OLE de MFC [HIERSVR](../overview/visual-cpp-samples.md). Faltan los aceleradores de archivo y la ventana de la tabla local y son copias exactas de ellas en la tabla insertada.
+Para obtener un ejemplo de estos cambios en la tabla de aceleradores, compare las tablas de acelerador IDR_HIERSVRTYPE_SRVR_IP y IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME en HIERSVR. Archivo RC incluido en el ejemplo de OLE de MFC [HIERSVR](../overview/visual-cpp-samples.md). Los aceleradores de archivos y ventanas no se encuentran en la tabla en contexto y las copias exactas de ellos se encuentran en la tabla incrustada.
 
-##  <a name="_core_string_table_additions_for_server_applications"></a> Agregar tablas de cadenas para las aplicaciones de servidor
+##  <a name="_core_string_table_additions_for_server_applications"></a>Adiciones de tabla de cadenas para aplicaciones de servidor
 
-Adición de la tabla de solo una cadena es necesaria en una aplicación de servidor: una cadena para indicar el error de inicialización OLE. Por ejemplo, aquí es la entrada de tabla de cadenas que genera el Asistente para aplicaciones:
+Solo es necesaria una adición de tabla de cadenas en una aplicación de servidor, una cadena para indicar que se produjo un error en la inicialización de OLE. Por ejemplo, esta es la entrada de tabla de cadena que genera el Asistente para aplicaciones:
 
-|ID|String|
+|id|String|
 |--------|------------|
-|IDP_OLE_INIT_FAILED|Error de inicialización OLE. Asegúrese de que las bibliotecas OLE son la versión correcta.|
+|IDP_OLE_INIT_FAILED|Error de inicialización de OLE. Asegúrese de que la versión de las bibliotecas OLE es la correcta.|
 
-##  <a name="_core_mini.2d.server_additions"></a> Adiciones de miniservidor
+##  <a name="_core_mini.2d.server_additions"></a>Adiciones de miniservidor
 
-Se aplican las mismas adiciones miniservidores como los mencionados anteriormente para servidores completos. Dado un miniservidor no se puede ejecutar en modo independiente, el menú principal es mucho menor. El menú principal creado por el Asistente de aplicación sólo tiene un menú archivo, que contiene solo los elementos de salida y aproximadamente. Menús en contexto e incrustados y aceleradores para miniservidores son los mismos que los servidores completos.
+Se aplican las mismas adiciones para miniservers que las mencionadas anteriormente para servidores completos. Dado que un miniservidor no se puede ejecutar en modo independiente, su menú principal es mucho menor. El menú principal creado por el Asistente para aplicaciones solo tiene un menú Archivo, que contiene solo los elementos Exit y about. Los menús y aceleradores integrados y en contexto para miniservers son los mismos que para los servidores completos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md)
+[Menús y recursos: Combinación de menús](../mfc/menus-and-resources-menu-merging.md)

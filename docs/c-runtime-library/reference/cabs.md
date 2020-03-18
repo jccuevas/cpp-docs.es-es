@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943413"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443053"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -59,9 +55,9 @@ Número complejo.
 
 **_cabs** devuelve el valor absoluto de su argumento si se realiza correctamente. En el desbordamiento, **_cabs** devuelve **HUGE_VAL** y establece **errno** en **ERANGE**. Puede cambiar el control de errores con [_matherr](matherr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_cabs** calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** produce un valor equivalente al de la expresión `sqrt( z.x * z.x + z.y * z.y )`.
+La función **_cabs** calcula el valor absoluto de un número complejo, que debe ser una estructura de tipo [_complex](../../c-runtime-library/standard-types.md). La estructura *z* se compone de un componente real *x* y un componente imaginario *y*. Una llamada a **_cabs** genera un valor equivalente al del `sqrt( z.x * z.x + z.y * z.y )`de expresión.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -69,7 +65,7 @@ La función **_cabs** calcula el valor absoluto de un número complejo, que debe
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -96,7 +92,7 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

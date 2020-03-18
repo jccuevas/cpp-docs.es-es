@@ -1,17 +1,15 @@
 ---
 title: INCLUDE (MASM)
 ms.date: 12/17/2019
-f1_keywords:
-- include
 helpviewer_keywords:
 - INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-ms.openlocfilehash: 41d2af2c047b6c90e2971d4b8611141d9a9ef57f
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 86c47ba2878158cd78b58cb128a5b2147f9dda3d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313072"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440760"
 ---
 # <a name="include"></a>INCLUDE
 
@@ -21,11 +19,11 @@ Inserta código fuente del archivo de código fuente proporcionado por *filename
 
 > **Incluir** *nombre de archivo*
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El *nombre de archivo* debe ir entre corchetes angulares si incluye una barra diagonal inversa, un punto y coma, un símbolo mayor que, un símbolo menor que, una comilla simple o comillas dobles.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de directivas](directives-reference.md)\
 [Gramática BNF de MASM](masm-bnf-grammar.md)

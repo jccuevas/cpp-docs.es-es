@@ -1,19 +1,17 @@
 ---
 title: E/S de secuencia
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bf81d1969fcbcfd255f3d4f9878bd3aab421703
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746258"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444621"
 ---
 # <a name="stream-io"></a>E/S de secuencia
 
@@ -21,7 +19,7 @@ Estas funciones procesan datos de diferentes tamaños y formatos, desde caracter
 
 ## <a name="stream-io-routines"></a>Rutinas de E/S de secuencia
 
-|Rutina|Usar|
+|Rutina|Uso|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Indicador de borrar error para la secuencia|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Cerrar secuencia|
@@ -95,7 +93,7 @@ Si el programa no cierra explícitamente una secuencia, la secuencia se cierra a
 
 La entrada puede seguir directamente a la salida solo con una llamada intermedia a **fflush** o a una función de posicionamiento de archivo (**fseek**, **fsetpos** o **rewind**). La salida puede seguir a la entrada sin una llamada intermedia a una función de posicionamiento de archivo si la operación de entrada encuentra el final del archivo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Entrada y salida](../c-runtime-library/input-and-output.md)<br/>
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

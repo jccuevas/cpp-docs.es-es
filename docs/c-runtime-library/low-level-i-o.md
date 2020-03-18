@@ -1,8 +1,6 @@
 ---
 title: E/S de bajo nivel
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - I/O [CRT], low-level
 - I/O [CRT], functions
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: 7812656bdcb3f58866f91009b6ad3de9fd67cebe
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740142"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443108"
 ---
 # <a name="low-level-io"></a>E/S de bajo nivel
 
@@ -23,7 +21,7 @@ Estas funciones invocan el sistema operativo directamente para la operación cuy
 
 Las rutinas de bajo nivel pueden acceder a los flujos estándar abiertos al iniciar el programa mediante los descriptores de archivo predefinidos siguientes.
 
-|Secuencia|Descriptor del archivo|
+|STREAM|Descriptor del archivo|
 |------------|---------------------|
 |**stdin**|0|
 |**stdout**|1|
@@ -33,7 +31,7 @@ Las rutinas de E/S de bajo nivel establecen la variable global [errno](../c-runt
 
 ## <a name="low-level-io-functions"></a>Funciones de E/S de bajo nivel
 
-|Función|Usar|
+|Función|Uso|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|Cerrar archivo|
 |[_commit](../c-runtime-library/reference/commit.md)|Vaciar el archivo en el disco|
@@ -51,7 +49,7 @@ Las rutinas de E/S de bajo nivel establecen la variable global [errno](../c-runt
 
 **_dup** y **_dup2** se suelen usar para asociar los descriptores de archivo predefinidos con distintos archivos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Entrada y salida](../c-runtime-library/input-and-output.md)<br/>
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>

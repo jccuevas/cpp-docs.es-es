@@ -1,24 +1,22 @@
 ---
 title: Importar datos mediante __declspec(dllimport)
 ms.date: 11/04/2016
-f1_keywords:
-- dllimport
 helpviewer_keywords:
 - importing data [C++]
 - dllimport attribute [C++], data imports
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: 74ad93e640a4e961f7670077227bb5c35a42c20f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c9dce798572a91bcb9721f022393abb669970131
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342104"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440449"
 ---
-# <a name="importing-data-using-declspecdllimport"></a>Importar datos mediante __declspec(dllimport)
+# <a name="importing-data-using-__declspecdllimport"></a>Importar datos mediante __declspec(dllimport)
 
-En el caso de los datos mediante **__declspec (dllimport)** es un elemento de la comodidad que quita una capa de direccionamiento indirecto. Al importar datos desde un archivo DLL, todavía tiene que pasar por la tabla de importar direcciones. Antes de **__declspec (dllimport)**, esto significaba que tenía que acordarse de realizar un nivel extra de direccionamiento indirecto al acceder a los datos exportados desde el archivo DLL:
+En el caso de los datos, el uso de **__declspec (dllimport)** es un elemento útil que quita una capa de direccionamiento indirecto. Al importar datos desde un archivo DLL, todavía tiene que pasar por la tabla de direcciones de importación. Antes de **__declspec (dllimport)** , esto significaba que había que recordar realizar un nivel de direccionamiento indirecto adicional al acceder a los datos exportados desde el archivo dll:
 
 ```
 // project.h
@@ -30,7 +28,7 @@ En el caso de los datos mediante **__declspec (dllimport)** es un elemento de la
 #endif
 ```
 
-A continuación, se exportan los datos de su. Archivo DEF:
+A continuación, exportará los datos de su. Archivo DEF:
 
 ```
 // project.def
@@ -39,7 +37,7 @@ EXPORTS
    ulDataInDll   CONSTANT
 ```
 
-y obtener acceso a él fuera del archivo DLL:
+y tener acceso a ella fuera del archivo DLL:
 
 ```
 if (*ulDataInDll == 0L)
@@ -48,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Al marcar los datos como **__declspec (dllimport)**, el compilador genera automáticamente el código de direccionamiento indirecto para usted. Ya no tiene que preocuparse por los pasos anteriores. Como se indicó anteriormente, no use **__declspec (dllimport)** declaración sobre los datos al generar el archivo DLL. Las funciones dentro de la DLL no usan la tabla de importar direcciones para tener acceso al objeto de datos; por lo tanto, no tendrá el nivel de direccionamiento indirecto adicional.
+Al marcar los datos como **__declspec (dllimport)** , el compilador genera automáticamente el código de direccionamiento indirecto. Ya no tiene que preocuparse de los pasos anteriores. Como se indicó anteriormente, no utilice la declaración **__declspec (dllimport)** en los datos al compilar el archivo dll. Las funciones del archivo DLL no utilizan la tabla de direcciones de importación para tener acceso al objeto de datos; por lo tanto, no tendrá el nivel de direccionamiento indirecto adicional.
 
 Para exportar los datos automáticamente desde el archivo DLL, utilice esta declaración:
 
@@ -56,6 +54,6 @@ Para exportar los datos automáticamente desde el archivo DLL, utilice esta decl
 __declspec(dllexport) ULONG ulDataInDLL;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Importación a una aplicación](importing-into-an-application.md)

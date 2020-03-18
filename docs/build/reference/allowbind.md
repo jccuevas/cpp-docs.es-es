@@ -2,18 +2,18 @@
 title: /ALLOWBIND
 ms.date: 11/04/2016
 f1_keywords:
-- /allowbind
+- /allowbind_bind
 helpviewer_keywords:
 - ALLOWBIND editbin option
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f5b662223914cbb4970188595afb52cc2500cd4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273201"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440388"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
@@ -24,14 +24,14 @@ Especifica si se puede enlazar un archivo DLL.
 /ALLOWBIND[:NO]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **/ALLOWBIND** opción establece un bit en el encabezado de un archivo DLL que se indica a Bind.exe que la imagen se puede enlazar. Enlace puede permitir que una imagen que se cargará más rápido cuando el cargador no tiene que reasignar y realizar la corrección de la dirección para cada DLL que se hace referencia. Quizás no desee que un archivo DLL se enlace si lo ha firmado digitalmente, el enlace invalida la firma. Enlace no tiene ningún efecto si la selección aleatoria de diseño de espacio de direcciones (ASLR) está habilitada para la imagen mediante el uso de **/DYNAMICBASE** en las versiones de Windows compatibles con ASLR.
+La opción **/ALLOWBIND** establece un bit en el encabezado de un archivo DLL que indica a Bind. exe que la imagen se puede enlazar. El enlace puede permitir que una imagen se cargue más rápido cuando el cargador no tiene que volver a basar y realizar la corrección de direcciones para cada DLL a la que se hace referencia. Es posible que no desee que un archivo DLL esté enlazado si se ha firmado digitalmente: el enlace invalida la firma. El enlace no tiene ningún efecto si la selección aleatoria del diseño del espacio de direcciones (ASLR) está habilitada para la imagen mediante **/dynamicbase** en las versiones de Windows compatibles con ASLR.
 
-Use **/ALLOWBIND: no** para impedir que el archivo DLL de enlace Bind.exe.
+Use **/ALLOWBIND: no** para evitar que BIND. exe enlace el archivo dll.
 
-Para obtener más información, consulte el [/ALLOWBIND](allowbind-prevent-dll-binding.md) opción del vinculador.
+Para obtener más información, vea la opción [/ALLOWBIND](allowbind-prevent-dll-binding.md) del enlazador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones de EDITBIN](editbin-options.md)

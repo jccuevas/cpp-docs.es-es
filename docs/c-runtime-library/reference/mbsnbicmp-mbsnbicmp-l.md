@@ -21,15 +21,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -43,12 +37,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952188"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442840"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -79,7 +73,7 @@ Número de bytes que se van a comparar.
 
 El valor devuelto indica la relación entre las subcadenas.
 
-|Valor devuelto|DESCRIPCIÓN|
+|Valor devuelto|Descripción|
 |------------------|-----------------|
 |< 0|la subcadena de *cadena1* es menor que *cadena2* subcadena.|
 |0|la subcadena *cadena1* es idéntica a la subcadena *cadena2* .|
@@ -87,11 +81,11 @@ El valor devuelto indica la relación entre las subcadenas.
 
 En un error, **_mbsnbicmp** devuelve **_NLSCMPERROR**, que se define en String. h y mbstring. h.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_mbsnbicmp** realiza una comparación ordinal de, como máximo, los primeros bytes de *número* de *cadena1* y *cadena2*. La comparación se realiza mediante la conversión de cada carácter a minúsculas. [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) es una versión de **_mbsnbicmp**que distingue mayúsculas de minúsculas. La comparación finaliza si se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* . Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* , la cadena más corta es menor.
+La función **_mbsnbicmp** realiza una comparación ordinal de como máximo los primeros bytes de *número* de *cadena1* y *cadena2*. La comparación se realiza mediante la conversión de cada carácter a minúsculas. [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) es una versión de **_mbsnbicmp**que distingue mayúsculas de minúsculas. La comparación finaliza si se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* . Si las cadenas son iguales cuando se alcanza un carácter nulo de terminación en una cadena antes de que se comparen los caracteres de *recuento* , la cadena más corta es menor.
 
-**_mbsnbicmp** es similar a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), salvo que compara las cadenas hasta el *número* de bytes en lugar de por caracteres.
+**_mbsnbicmp** es similar a [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), salvo que compara las cadenas hasta *contar* bytes en lugar de caracteres.
 
 Dos cadenas que contienen caracteres situados entre la 'Z' y la 'a' en la tabla ASCII ('[', '\\', ']', '^', '_' y '\`') se comparan de forma distinta. Por ejemplo, las dos cadenas "ABCDe" y "ABCD ^" se comparan de una manera si la comparación es minúscula ("ABCDE" > "ABCD ^") y la otra ("ABCDe" < "ABCD ^") si está en mayúsculas.
 
@@ -112,13 +106,13 @@ Si *string1* o *cadena2* es un puntero nulo, **_mbsnbicmp** invoca el controlado
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

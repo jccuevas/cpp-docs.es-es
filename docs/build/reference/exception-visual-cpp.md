@@ -1,19 +1,16 @@
 ---
 title: '&lt;> de excepcionesC++ (comentarios de documentación)'
 ms.date: 11/04/2016
-f1_keywords:
-- exception
-- <exception>
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d56e0ce7c892cfd9fd909b5268043d77929bd43c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988293"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439861"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -25,7 +22,7 @@ La etiqueta \<exception> le permite especificar qué excepciones se pueden produ
 <exception cref="member">description</exception>
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Parámetros
 
 *member*<br/>
 Una referencia a una excepción que está disponible desde el entorno de compilación actual. Mediante reglas de búsqueda de nombres, el compilador comprueba si la excepción dada existe y traduce `member` al nombre de elemento canónico en la salida XML.  El compilador emite una advertencia si no encuentra `member`.
@@ -37,9 +34,9 @@ Para obtener información sobre cómo crear una referencia cref a un tipo genér
 *description*<br/>
 Una descripción.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Compile con el parámetro [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.
+Compile con [/doc](doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.
 
 El compilador MSVC intentará resolver las referencias CREF en un paso a través de los comentarios de documentación.  Por tanto, si usa las reglas de búsqueda de C++, un símbolo que no encuentra el compilador se marcará como no resuelto. Vea [\<seealso>](seealso-visual-cpp.md) para obtener más información.
 
@@ -67,6 +64,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Documentación de XML](xml-documentation-visual-cpp.md)

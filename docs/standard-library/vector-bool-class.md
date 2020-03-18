@@ -3,11 +3,7 @@ title: vector&lt;bool&gt; (Clase)
 ms.date: 11/04/2016
 f1_keywords:
 - vector<bool>
-- vector/std::vector::const_pointer
-- vector/std::vector::const_reference
-- vector/std::vector::pointer
 - vector/std::vector::flip
-- vector/std::vector::swap
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -15,16 +11,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4043b46bf2f93b362de029577fe9ac3c11dbcaa2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452270"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443923"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; (Clase)
 
-La `vector<bool>` clase es una especialización parcial de [Vector](../standard-library/vector-class.md) para los elementos de tipo **bool**. Tiene un asignador para el tipo subyacente que usa la especialización, que proporciona optimización de espacio mediante el almacenamiento de un valor **booleano** por bit.
+La clase `vector<bool>` es una especialización parcial de [Vector](../standard-library/vector-class.md) para los elementos de tipo **bool**. Tiene un asignador para el tipo subyacente que usa la especialización, que proporciona optimización de espacio mediante el almacenamiento de un valor **booleano** por bit.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,7 +29,7 @@ template <class Allocator = allocator<bool>>
 class vector<bool, Allocator>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta especialización de la plantilla de clase se comporta como vector, salvo por las diferencias que se explican en este artículo.
 
@@ -41,7 +37,7 @@ Las operaciones que se ocupan del tipo **bool** se corresponden con los valores 
 
 ### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|DESCRIPCIÓN|
+|Nombre del tipo|Descripción|
 |-|-|
 |[const_pointer](#const_pointer)|Una definición de tipo a un `const_iterator` que puede servir como puntero constante para un elemento booleano de `vector<bool>`.|
 |[const_reference](#const_reference)|Definición de tipo para **bool**. Después de la inicialización, no respeta actualizaciones al valor original.|
@@ -49,7 +45,7 @@ Las operaciones que se ocupan del tipo **bool** se corresponden con los valores 
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función de miembro|Descripción|
 |-|-|
 |[flip](#flip)|Invierte todos los bits de `vector<bool>`.|
 |[swap](#swap)|Intercambia los elementos de dos `vector<bool>`.|
@@ -86,7 +82,7 @@ Tipo que describe un objeto que puede actuar como referencia constante a un elem
 typedef bool const_reference;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para más información y ejemplos de código, vea [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq).
 
@@ -140,9 +136,9 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |-|-|
-|*Abre*|Posición del elemento `vector<bool>`.|
+|*Pos*|Posición del elemento `vector<bool>`.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -150,13 +146,13 @@ Un objeto [vector\<bool>::reference](#reference_class) o [vector\<bool>::const_r
 
 Si la posición especificada es mayor o igual que el tamaño del contenedor, el resultado es sin definir.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si compila con _ITERATOR_DEBUG_LEVEL establecido, se produce un error en tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Para obtener más información, consulta [Checked Iterators](../standard-library/checked-iterators.md).
+Si compila con _ITERATOR_DEBUG_LEVEL conjunto, se produce un error en tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Para más información, vea [Iteradores activados](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Ejemplo
 
-En este ejemplo de código se muestra el uso correcto de `vector<bool>::operator[]` y dos errores habituales de codificación, que están comentados. Estos errores se producen porque no se puede tomar la dirección del objeto `vector<bool>::reference` que devuelve `vector<bool>::operator[]`.
+En este ejemplo de código se muestra el uso correcto de `vector<bool>::operator[]` y dos errores de codificación comunes, que están comentados. Estos errores causan errores porque no se puede tomar la dirección del objeto de `vector<bool>::reference` que devuelve `vector<bool>::operator[]`.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -197,7 +193,7 @@ typedef iterator pointer;
 
 La clase `vector<bool>::reference` es una clase de proxy proporcionada por [vector\<bool> (Clase)](../standard-library/vector-bool-class.md) para simular `bool&`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Se requiere una referencia simulada porque C++ no permite de forma nativa referencias directas a bits. `vector<bool>` solo utiliza un bit por elemento, al que se puede hacer referencia mediante esta clase proxy. Sin embargo, la simulación de referencia no se completa porque algunas asignaciones no son válidas. Por ejemplo, dado que no se puede tomar la dirección del objeto `vector<bool>::reference`, el siguiente código, que usa [vector\<bool>::operator&#91;&#93;](#op_at), no es correcto:
 
@@ -267,7 +263,7 @@ operator bool() const;
 
 El valor booleano del elemento del objeto vector\<bool>.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 Este operador no puede modificar el objeto `vector<bool>`.
 
@@ -282,10 +278,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Correcta*\
+\ *derecha*
 Referencia del elemento cuyo valor se asigna al bit.
 
-*Val*\
+\ *Val*
 Valor booleano que se asigna al bit.
 
 #### <a name="example"></a>Ejemplo
@@ -371,17 +367,17 @@ static void swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*Salido*\
+\ *izquierda*
 Elemento que se va a intercambiar con el elemento de la *derecha* .
 
-*Correcta*\
+\ *derecha*
 Elemento que se va a intercambiar con el elemento de la *izquierda* .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta sobrecarga admite los requisitos de proxy especial de `vector<bool>`. [vector](../standard-library/vector-class.md)::swap tiene la misma funcionalidad que la sobrecarga de un solo argumento de `vector<bool>::swap()`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

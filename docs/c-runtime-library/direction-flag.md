@@ -1,17 +1,15 @@
 ---
 title: Marca de dirección
 ms.date: 11/04/2016
-f1_keywords:
-- c.flags
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: ead32fa7f09e9dd98130855ecd87ba3b3d454ef5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 04e096c6a62f806f4c214745a8401b1730eda3a6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740159"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443379"
 ---
 # <a name="direction-flag"></a>Marca de dirección
 
@@ -21,6 +19,6 @@ Las rutinas de tiempo de ejecución de C suponen que la marca de dirección est�
 
 Las funciones de la biblioteca en tiempo de ejecución de C, como las rutinas de manipulación de cadenas y de manipulación de búfer, esperan que la marca de dirección se desactive.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md)

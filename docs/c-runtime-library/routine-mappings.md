@@ -1,19 +1,17 @@
 ---
 title: Asignaciones de rutinas
 ms.date: 11/04/2016
-f1_keywords:
-- c.mappings
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 60a05b8102df1ecb9bb6f66eda15ff10cb12b32a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746896"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444858"
 ---
 # <a name="routine-mappings"></a>Asignaciones de rutinas
 
@@ -262,7 +260,7 @@ Para obtener más información, consulte [Asignaciones de texto genérico en TCH
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asignaciones de texto genérico](../c-runtime-library/generic-text-mappings.md)<br/>
 [Asignaciones de tipos de datos](../c-runtime-library/data-type-mappings.md)<br/>
