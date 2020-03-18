@@ -1,5 +1,5 @@
 ---
-title: critical_section (Clase)
+title: critical_section (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - critical_section
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
 ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867177"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424252"
 ---
-# <a name="critical_section-class"></a>critical_section (Clase)
+# <a name="critical_section-class"></a>critical_section (clase)
 
 Una exclusión mutua no reentrante que es explícitamente consciente del runtime de simultaneidad.
 
@@ -33,7 +33,7 @@ class critical_section;
 
 ## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
