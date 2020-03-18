@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
 ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864896"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423463"
 ---
 # <a name="catlarray-class"></a>CAtlArray (clase)
 
@@ -60,7 +60,7 @@ Código que se usa para copiar o quitar elementos.
 |[Add (Agregar)](#add)|Llame a este método para agregar un elemento al objeto de matriz.|
 |[Append](#append)|Llame a este método para agregar el contenido de una matriz al final de otro.|
 |[AssertValid](#assertvalid)|Llame a este método para confirmar que el objeto de matriz es válido.|
-|[CAtlArray](#catlarray)|Constructor.|
+|[CAtlArray](#catlarray)|El constructor.|
 |[~ CAtlArray](#dtor)|Destructor.|
 |[Copy](#copy)|Llame a este método para copiar los elementos de una matriz en otra.|
 |[FreeExtra](#freeextra)|Llame a este método para quitar todos los elementos vacíos de la matriz.|
@@ -176,7 +176,7 @@ Si el objeto de matriz no es válido, ATLASSERT producirá una aserción. Este m
 
 ##  <a name="catlarray"></a>CAtlArray:: CAtlArray
 
-Constructor.
+El constructor.
 
 ```
 CAtlArray() throw();

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::toupper [C++]
 - std::use_facet [C++]
 ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856628"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425572"
 ---
 # <a name="ltlocalegt-functions"></a>Funciones de &lt;locale&gt;
 
@@ -69,7 +69,7 @@ Configuración regional en la que se va a comprobar la presencia de una faceta.
 
 **True** si la configuración regional tiene la faceta que se busca; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla es útil para comprobar si se enumeran facetas no obligatorias en una configuración regional antes de llamar a `use_facet` para evitar la excepción que se produciría si no estuvieran presentes.
 
@@ -182,7 +182,7 @@ Configuración regional que contiene el elemento alfabético que se va a probar.
 
 **True** si el elemento probado es alfabético; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Alpha**, `Ch`).
 
@@ -247,7 +247,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **True** si el elemento probado es un carácter de control; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Ctrl**, `Ch`).
 
@@ -312,7 +312,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **True** si el elemento probado es un carácter numérico; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
 
@@ -377,7 +377,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **True** si el elemento probado es un carácter alfanumérico o de puntuación; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Graph**, `Ch`).
 
@@ -442,7 +442,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **true** si el elemento probado es un carácter en minúscula; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Lower**, `Ch`).
 
@@ -507,7 +507,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **True** si el elemento probado es un carácter imprimible; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Print**, `Ch`).
 
@@ -571,7 +571,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **True** si el elemento probado es un carácter de puntuación; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
 
@@ -636,7 +636,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **True** si el elemento probado es un carácter de espacio en blanco; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Space**, `Ch`).
 
@@ -701,7 +701,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **true** si el elemento probado es un carácter en mayúscula; en caso contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Upper**, `Ch`).
 
@@ -766,7 +766,7 @@ Configuración regional que contiene el elemento que se va a probar.
 
 **True** si el elemento probado es un carácter que se usa para representar un número hexadecimal; en caso contrario, **False**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [es](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
 
@@ -833,7 +833,7 @@ Configuración regional que contiene el carácter que se va a convertir.
 
 Carácter convertido en minúscula.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
 
@@ -882,7 +882,7 @@ Configuración regional que contiene el carácter que se va a convertir.
 
 Carácter convertido en mayúscula.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función de plantilla devuelve [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
 
@@ -928,7 +928,7 @@ Configuración regional const que contiene el tipo de faceta al que se hace refe
 
 Referencia a la faceta de la clase `Facet` contenida en la configuración regional del argumento.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La referencia a la faceta devuelta por la función de plantilla es válida mientras exista una copia de la configuración regional que la contiene. Si ese objeto de faceta de la clase `Facet` no aparece en la configuración regional del argumento, la función produce una excepción `bad_cast`.
 
@@ -971,6 +971,6 @@ The character 'a' in locale loc1 is alphabetic.
 The character '!' in locale loc2 is not alphabetic.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<locale>](../standard-library/locale.md)

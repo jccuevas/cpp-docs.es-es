@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854877"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427684"
 ---
 # <a name="ltutilitygt-functions"></a>Funciones de &lt;utility&gt;
 
@@ -57,7 +57,7 @@ El objeto que va a recibir el valor de new_val.
 *new_val*\
 El objeto cuyo valor se ha copiado o movido a val.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para los tipos complejos, `exchange` evita copiar el valor anterior cuando está disponible un constructor de movimiento, evita copiar el valor nuevo si es un objeto temporal o si se mueve, y acepta cualquier tipo como el valor nuevo, utilizando cualquier operador de asignación y conversión disponible. La función de Exchange es diferente de [STD:: swap](../standard-library/algorithm-functions.md#swap) , ya que el argumento izquierdo no se mueve ni se copia en el argumento derecho.
 
@@ -119,7 +119,7 @@ Argumento que se va a convertir.
 
 Devuelve una referencia rvalue a *arg* si el valor pasado en *arg* era originalmente un valor r o una referencia a un valor r; de lo contrario, devuelve *arg* sin modificar su tipo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Debe especificar un argumento de plantilla explícito para llamar a `forward`.
 
@@ -198,7 +198,7 @@ El tipo del segundo elemento par.
 \ de *PR*
 Par del que se selecciona.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Las funciones de plantilla devuelven una referencia a un elemento de su argumento `pair` .
 
@@ -293,7 +293,7 @@ Valor que inicializa el segundo elemento de `pair`.
 
 El objeto de par construido: `pair`<`T`,`U`> (`Val1`, `Val2`).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 `make_pair` convierte el objeto de tipo [reference_wrapper (Clase)](../standard-library/reference-wrapper-class.md) en tipos de referencia y convierte las matrices y las funciones que decaen en punteros.
 
@@ -334,7 +334,7 @@ Argumento que se va a convertir. Aunque el tipo de *arg* parece estar especifica
 
 `Arg` como referencia rvalue, independientemente de si su tipo es un tipo de referencia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El *tipo* de argumento de plantilla no está pensado para especificarse explícitamente, sino para deducirse a partir del tipo del valor pasado en *arg*. El tipo de *tipo* se ajusta más en función de las reglas de contracción de referencias.
 
@@ -369,7 +369,7 @@ Un objeto de tipo o de tipo `pair`.
 \ *derecha*
 Un objeto de tipo o de tipo `pair`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una ventaja de `swap` es que el compilador determina automáticamente los tipos de objetos que se están almacenando y no es necesario especificarlos explícitamente. No utilice argumentos de plantilla explícitos como `swap<int, int>(1, 2)` al usar `swap` porque es detallado y agrega problemas de referencia de valor r complejos que podrían provocar un error de compilación.
 
@@ -388,6 +388,6 @@ to_chars_result to_chars(char* first, char* last, double value, chars_format fmt
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Convierte el valor en una cadena de caracteres rellenando el intervalo `[first, last)`, donde `[first, last)` debe ser un intervalo válido.

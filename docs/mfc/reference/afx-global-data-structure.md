@@ -56,11 +56,11 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869921"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426058"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA (estructura)
 
@@ -72,18 +72,18 @@ La estructura `AFX_GLOBAL_DATA` contiene los campos y métodos que se utilizan p
 struct AFX_GLOBAL_DATA
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Crea una estructura `AFX_GLOBAL_DATA` .|
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: CleanUp](#cleanup)|Libera los recursos asignados por el marco, como pinceles, fuentes y archivos DLL.|
 |[AFX_GLOBAL_DATA::D 2D1MakeRotateMatrix](#d2d1makerotatematrix)|Crea una transformación de giro que gire según el ángulo especificado alrededor de un punto especificado.|
@@ -117,7 +117,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: EnableAccessibilitySupport](#enableaccessibilitysupport)|Habilita o deshabilita la compatibilidad con Microsoft Active Accessibility. Active Accessibility proporciona métodos de confianza para exponer información sobre los elementos de la interfaz de usuario.|
 |[AFX_GLOBAL_DATA:: IsAccessibilitySupport](#isaccessibilitysupport)|Indica si la compatibilidad con Microsoft Active Accessibility está habilitada.|
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="data-members"></a>Miembros de datos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Indica si el sistema operativo actual admite la combinación alfa.|
 |[AFX_GLOBAL_DATA:: bIsWindows7](#biswindows7)|Indica si la aplicación se está ejecutando en el sistema operativo Windows 7 o posterior.|
@@ -142,7 +142,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA:: m_nDragFrameThicknessDock](#m_ndragframethicknessdock)|Especifica el grosor del marco de arrastrar que se usa para comunicar el estado acoplado.|
 |[AFX_GLOBAL_DATA:: m_nDragFrameThicknessFloat](#m_ndragframethicknessfloat)|Especifica el grosor del marco de arrastrar que se usa para comunicar el estado flotante.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La mayoría de los datos de la estructura `AFX_GLOBAL_DATA` se inicializan cuando se inicia la aplicación.
 
@@ -162,7 +162,7 @@ Indica si el sistema operativo admite la combinación alfa.
 BOOL  bIsOSAlphaBlendingSupport;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 TRUE indica que se admite la combinación alfa; en caso contrario, FALSE.
 
@@ -271,7 +271,7 @@ de Combinación bit a bit (o) de marcas que especifican cómo se dibuja el texto
 Si el parámetro *hTheme* es `NULL` o si los temas no se admiten y habilitan, el parámetro *NFormat* del método [CDC::D rawtext](../../mfc/reference/cdc-class.md#drawtext) describe las marcas válidas. Si se admiten los temas, el parámetro *dwFlags* del método [DrawThemeTextEx](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex) describe las marcas válidas.
 
 *nGlowSize*<br/>
-de Tamaño de un efecto de resplandor que se dibuja en el fondo antes de dibujar el texto especificado. El valor predeterminado es 0.
+de Tamaño de un efecto de resplandor que se dibuja en el fondo antes de dibujar el texto especificado. El valor predeterminado es 0.
 
 *clrText*<br/>
 de Color en el que se dibuja el texto especificado. El valor predeterminado es el color predeterminado.
@@ -280,7 +280,7 @@ de Color en el que se dibuja el texto especificado. El valor predeterminado es e
 
 TRUE si se usa un tema para dibujar el texto especificado; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un tema define el estilo visual de una aplicación. No se usa un tema para dibujar el texto si el parámetro *hTheme* es null, o si no se admite el método [DrawThemeTextEx](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex) , o si la composición [Administrador de ventanas de escritorio](/windows/win32/dwm/dwm-overview) (DWM) está deshabilitada.
 
@@ -297,7 +297,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 *bEnable*<br/>
 de TRUE para habilitar la compatibilidad con accesibilidad; FALSE para deshabilitar la compatibilidad con accesibilidad. El valor predeterminado es TRUE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Active Accessibility es una tecnología basada en COM que mejora la forma en que los programas y el sistema operativo Windows funcionan conjuntamente con los productos de tecnología de asistencia. Proporciona métodos confiables para exponer información sobre los elementos de la interfaz de usuario. Sin embargo, ahora está disponible un modelo de accesibilidad más reciente denominado Microsoft UI Automation. Para obtener una comparación de las dos tecnologías, vea automatización de la [interfaz de usuario y Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
 
@@ -327,13 +327,13 @@ de Nombre de un par de etiquetas XML de apertura y cierre.
 enuncia Cuando este método finaliza, el parámetro *strTag* contiene el texto que se encuentra entre las etiquetas XML de apertura y cierre que se denominan mediante el parámetro *lpszTag* . Los espacios en blanco iniciales o finales se recortan del resultado.
 
 *bIsCharsList*<br/>
-de TRUE para convertir los símbolos de los caracteres de escape del parámetro *strTag* en caracteres de escape reales; FALSE no para realizar la conversión. El valor predeterminado es FALSE. Para obtener más información, vea Comentarios.
+de TRUE para convertir los símbolos de los caracteres de escape del parámetro *strTag* en caracteres de escape reales; FALSE no para realizar la conversión. El valor predeterminado es FALSE. Para obtener más información, vea la sección Comentarios.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un par de etiquetas XML consta de etiquetas de apertura y cierre con nombre que indican el principio y el final de una ejecución de texto en el búfer especificado. El parámetro *strBuffer* especifica el búfer y el parámetro *lpszTag* especifica el nombre de las etiquetas XML.
 
@@ -364,9 +364,9 @@ de Valor que especifica un elemento de la interfaz de usuario cuyo color se recu
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor de color RGB del elemento de la interfaz de usuario especificado. Para obtener más información, vea Comentarios.
+Valor de color RGB del elemento de la interfaz de usuario especificado. Para obtener más información, vea la sección Comentarios.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el parámetro *nColor* está fuera del intervalo, el valor devuelto es cero. Dado que cero también es un valor RGB válido, no se puede utilizar este método para determinar si el sistema operativo actual admite un color del sistema. En su lugar, use el método [GetSysColorBrush](/windows/win32/api/winuser/nf-winuser-getsyscolorbrush) , que devuelve NULL si no se admite el color.
 
@@ -486,7 +486,7 @@ BOOL Is32BitIcons() const;
 
 TRUE si se admiten los iconos predefinidos de 32 bits; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método devuelve TRUE si el marco admite iconos integrados de 32 bits y si el sistema operativo admite 16 bits por píxel o más, y si las imágenes no se muestran en contraste alto.
 
@@ -502,7 +502,7 @@ BOOL IsAccessibilitySupport() const;
 
 TRUE si está habilitada la compatibilidad con accesibilidad; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Microsoft Active Accessibility era la solución anterior para permitir el acceso a las aplicaciones. La automatización de la interfaz de usuario de Microsoft es el nuevo modelo de accesibilidad para Microsoft Windows y está diseñado para satisfacer las necesidades de los productos de tecnología de asistencia y las herramientas de pruebas automatizadas.
 
@@ -543,7 +543,7 @@ BOOL IsHighContrastMode() const;
 
 TRUE si las imágenes se muestran actualmente en el modo de contraste alto en blanco o negro; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 En el modo de contraste alto de color negro, los bordes orientados a la luz son blancos y el fondo es negro. En el modo de contraste alto blanco, los bordes orientados a la luz son negros y el fondo es blanco.
 
@@ -559,7 +559,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 
 TRUE si se admiten las ventanas superpuestas; en caso contrario, FALSE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si se admiten ventanas superpuestas, los marcadores de *acoplamiento inteligente* usan ventanas superpuestas.
 
@@ -571,7 +571,7 @@ Indica si el marco usa iconos de colores de 32 bits predefinidos o iconos de una
 BOOL  m_bUseBuiltIn32BitIcons;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 TRUE especifica que el marco usa iconos de color de 32 bits; FALSE especifica iconos de resolución inferior. El constructor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicializa este miembro como TRUE.
 
@@ -585,7 +585,7 @@ Indica si se usa una fuente del sistema para los menús, las barras de herramien
 BOOL m_bUseSystemFont;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 TRUE especifica que se debe usar una fuente del sistema. en caso contrario, FALSE. El constructor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicializa este miembro en FALSE.
 
@@ -631,7 +631,7 @@ Especifica el desplazamiento de la barra de herramientas ocultar automáticament
 int  m_nAutoHideToolBarMargin;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicializa este miembro en 4 píxeles.
 
@@ -643,7 +643,7 @@ Especifica la separación entre las barras de herramientas Ocultar automáticame
 int   m_nAutoHideToolBarSpacing;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicializa este miembro en 14 píxeles.
 
@@ -655,7 +655,7 @@ Especifica el grosor del marco de arrastre que se usa para indicar el estado aco
 int  m_nDragFrameThicknessDock;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicializa este miembro en 3 píxeles.
 
@@ -667,7 +667,7 @@ Especifica el grosor del marco de arrastre que se usa para indicar el estado flo
 int  m_nDragFrameThicknessFloat;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El constructor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicializa este miembro en 4 píxeles.
 
@@ -679,7 +679,7 @@ Detecta el estado actual de las características del escritorio para la animaci�
 void OnSettingChange();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método establece las variables de marco de trabajo en el estado de ciertos atributos del escritorio del usuario. Este método detecta el estado actual de las características de animación de menús, atenuación de menús y ocultación automática de la barra de tareas.
 
@@ -700,7 +700,7 @@ de Nombre de la clase de ventana que se va a registrar.
 
 Nombre completo de la clase registrada si este método se ejecuta correctamente; de lo contrario, una [excepción de recurso](exception-processing.md#afxthrowresourceexception).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El valor devuelto es una lista delimitada por signos de dos puntos de la cadena de parámetro *lpszClassNamePrefix* y las representaciones de texto hexadecimal de los identificadores de la instancia de aplicación actual. cursor de la aplicación, que es el cursor de flecha cuyo identificador es IDC_ARROW; y el pincel del fondo. Para obtener más información sobre el registro de clases de ventana de MFC, vea [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).
 
@@ -716,7 +716,7 @@ BOOL Resume();
 
 TRUE si este método se ejecuta correctamente; en caso contrario, FALSE. En el modo de depuración, este método valida si este método no se realiza correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Se llama a este método cuando el marco de trabajo recibe el mensaje de [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) .
 
@@ -772,7 +772,7 @@ de TRUE para especificar que el texto se ejecuta horizontalmente; FALSE para esp
 
 TRUE si este método se ejecuta correctamente; en caso contrario, FALSE. En el modo de depuración, este método valida si este método no se realiza correctamente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método crea una fuente normal horizontal, una fuente subrayada y una fuente en negrita que se utiliza en los elementos de menú predeterminados. Este método crea opcionalmente una fuente vertical normal. Para obtener más información sobre las fuentes lógicas, vea [Cfont (:: CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).
 
@@ -784,7 +784,7 @@ Reinicializa las fuentes lógicas utilizadas por el marco.
 void UpdateFonts();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información acerca de las fuentes lógicas, consulte `CFont::CreateFontIndirect`.
 
@@ -894,7 +894,7 @@ enuncia Cuando esta función devuelve un, contiene el puntero de interfaz solici
 
 Devuelve S_OK si se realiza correctamente; un valor de error en caso contrario.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../hierarchy-chart.md)<br/>
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](structures-styles-callbacks-and-message-maps.md)<br/>

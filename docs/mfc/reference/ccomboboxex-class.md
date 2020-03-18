@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865553"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425992"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (clase)
 
@@ -53,17 +53,17 @@ Extiende el control de cuadro combinado proporcionando compatibilidad con las li
 class CComboBoxEx : public CComboBox
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComboBoxEx:: CComboBoxEx](#ccomboboxex)|Construye un objeto `CComboBoxEx`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComboBoxEx:: Create](#create)|Crea el cuadro combinado y lo adjunta al objeto `CComboBoxEx`.|
 |[CComboBoxEx:: CreateEx](#createex)|Crea un cuadro combinado con los estilos extendidos de Windows especificados y lo adjunta a un objeto `ComboBoxEx`.|
@@ -80,7 +80,7 @@ class CComboBoxEx : public CComboBox
 |[CComboBoxEx:: SetItem](#setitem)|Establece los atributos de un elemento en un control de `ComboBoxEx`.|
 |[CComboBoxEx:: SetWindowTheme](#setwindowtheme)|Establece el estilo visual del control de cuadro combinado extendido.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Al usar `CComboBoxEx` para crear controles de cuadro combinado, ya no es necesario implementar su propio código de dibujo de imagen. En su lugar, use `CComboBoxEx` para tener acceso a las imágenes de una lista de imágenes.
 
@@ -162,7 +162,7 @@ Especifica el identificador de control del cuadro combinado.
 
 Distinto de cero si el objeto se creó correctamente; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cree un objeto de `CComboBoxEx` en dos pasos:
 
@@ -222,7 +222,7 @@ IDENTIFICADOR de la ventana de elemento secundario del control.
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Utilice `CreateEx` en lugar de `Create` para aplicar los estilos extendidos de Windows, especificados por el **WS_EX_** de prefacio de estilo extendido de Windows.
 
@@ -245,7 +245,7 @@ int DeleteItem(int iIndex);
 
 Número de elementos que quedan en el control. Si *iIndex* no es válido, la función devuelve CB_ERR.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro implementa la funcionalidad de la [CBEM_DELETEITEM](/windows/win32/Controls/cbem-deleteitem)de mensajes, tal y como se describe en el Windows SDK. Cuando llame a DeleteItem, se enviará un mensaje de [WM_NOTIFY](/windows/win32/controls/wm-notify) con CBEN_DELETEITEM notificación a la ventana primaria.
 
@@ -261,7 +261,7 @@ CComboBox* GetComboBoxCtrl();
 
 Puntero a un objeto `CComboBox` .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El control `CComboBoxEx` consta de una ventana primaria, que encapsula un `CComboBox`.
 
@@ -279,7 +279,7 @@ CEdit* GetEditCtrl();
 
 Un puntero a un objeto [CEDIT](../../mfc/reference/cedit-class.md) .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un control `CComboBoxEx` usa un cuadro de edición cuando se crea con el estilo CBS_DROPDOWN.
 
@@ -297,7 +297,7 @@ DWORD GetExtendedStyle() const;
 
 Valor DWORD que contiene los estilos extendidos que se usan para el control de cuadro combinado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Vea [ComboBoxEx control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) en el Windows SDK para obtener más información acerca de estos estilos.
 
@@ -313,7 +313,7 @@ CImageList* GetImageList() const;
 
 Un puntero a un objeto [CImageList](../../mfc/reference/cimagelist-class.md) . Si se produce un error, esta función miembro devuelve NULL.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El `CImageList` objeto al que apunta el valor devuelto es un objeto temporal y se destruye durante el siguiente tiempo de procesamiento inactivo.
 
@@ -334,7 +334,7 @@ Puntero a una estructura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctr
 
 Distinto de cero si la operación se realizó correctamente; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro implementa la funcionalidad de la [CBEM_GETITEM](/windows/win32/Controls/cbem-getitem)de mensajes, tal y como se describe en el Windows SDK.
 
@@ -350,7 +350,7 @@ BOOL HasEditChanged();
 
 Distinto de cero si el usuario ha escrito en el cuadro de edición del control; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro implementa la funcionalidad de la [CBEM_HASEDITCHANGED](/windows/win32/Controls/cbem-haseditchanged)de mensajes, tal y como se describe en el Windows SDK.
 
@@ -371,7 +371,7 @@ Puntero a una estructura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctr
 
 Índice en el que se insertó el nuevo elemento si se realiza correctamente; de lo contrario,-1.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Cuando se llama a `InsertItem`, se enviará un mensaje de [WM_NOTIFY](/windows/win32/controls/wm-notify) con [CBEN_INSERTITEM](/windows/win32/Controls/cben-insertitem) notificación a la ventana primaria.
 
@@ -397,7 +397,7 @@ Valor DWORD que contiene los estilos extendidos del control de cuadro combinado 
 
 Valor DWORD que contiene los estilos extendidos utilizados previamente para el control.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Vea [ComboBoxEx control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) en el Windows SDK para obtener más información acerca de estos estilos.
 
@@ -420,7 +420,7 @@ Puntero a un objeto `CImageList` que contiene las imágenes que se van a utiliza
 
 Un puntero a un objeto [CImageList](../../mfc/reference/cimagelist-class.md) que contiene las imágenes utilizadas previamente por el control `CComboBoxEx`. ES NULL si no se ha establecido previamente ninguna lista de imágenes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro implementa la funcionalidad de la [CBEM_SETIMAGELIST](/windows/win32/Controls/cbem-setimagelist)de mensajes, tal y como se describe en el Windows SDK. Si cambia el alto del control de edición predeterminado, llame a la función de Win32 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) para cambiar el tamaño del control después de llamar a `SetImageList`, o no se mostrará correctamente.
 
@@ -443,7 +443,7 @@ Puntero a una estructura [COMBOBOXEXITEM](/windows/win32/api/commctrl/ns-commctr
 
 Distinto de cero si la operación se realizó correctamente; de lo contrario, es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro implementa la funcionalidad de la [CBEM_SETITEM](/windows/win32/Controls/cbem-setitem)de mensajes, tal y como se describe en el Windows SDK.
 
@@ -464,11 +464,11 @@ Puntero a una cadena Unicode que contiene el estilo visual del cuadro combinado 
 
 No se utiliza el valor devuelto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro emula la funcionalidad del mensaje de [CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme) , como se describe en el Windows SDK.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplo MFCIE de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)<br/>

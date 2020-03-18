@@ -25,11 +25,11 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854916"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424828"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; (Funciones)
 
@@ -45,7 +45,7 @@ exception_ptr current_exception();
 
 Objeto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que apunta a la excepción actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Llame a la función `current_exception` en un bloque catch. Si una excepción está en vuelo y el bloque catch puede detectarla, la función `current_exception` devuelve un objeto `exception_ptr` que hace referencia a la excepción. De lo contrario, la función devuelve un objeto `exception_ptr` NULL.
 
@@ -73,7 +73,7 @@ Clase con la excepción que se va a copiar. Normalmente, se especifica un objeto
 
 Objeto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que apunta a una copia de la excepción actual para *Except*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Llamar a la función `make_exception_ptr` equivale a iniciar una excepción de C++, detectarla en un bloque catch y llamar después a la función [current_exception](../standard-library/exception-functions.md#current_exception) para devolver un objeto `exception_ptr` que hace referencia a la excepción. La implementación de Microsoft de la función `make_exception_ptr` es más eficaz que producir y detectar después una excepción.
 
@@ -92,7 +92,7 @@ void rethrow_exception(exception_ptr P);
 *P*\
 Excepción detectada que se va a volver a iniciar. Si *P* es un [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)nulo, la función produce [STD:: bad_exception](../standard-library/bad-exception-class.md).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Después de almacenar una excepción detectada en un objeto `exception_ptr`, el subproceso principal puede procesar el objeto. En el subproceso principal, llame a la función `rethrow_exception` junto con el objeto `exception_ptr` como argumento. La función `rethrow_exception` extrae la excepción del objeto `exception_ptr` y después produce la excepción en el contexto del subproceso principal.
 
@@ -121,7 +121,7 @@ Función a la que se va a llamar en la finalización.
 
 Dirección de la función anterior al a que se solía llamar en la finalización.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función establece un nuevo [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) como la función * *fnew*. Por lo tanto, *fnew* no debe ser un puntero nulo. La función devuelve la dirección del controlador de finalización anterior.
 
@@ -168,7 +168,7 @@ template <class E>
     void rethrow_if_nested(const E& e);
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si no es un tipo de clase polimórfica, o si `nested_exception` es inaccesible o ambiguo, no hay ningún efecto. De lo contrario, realiza una conversión dinámica.
 
@@ -189,7 +189,7 @@ Función a la que se llamará cuando se encuentre una excepción inesperada.
 
 Dirección del `unexpected_handler` anterior.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 *fnew* no debe ser un puntero nulo.
 
@@ -228,7 +228,7 @@ Llama a un controlador de finalización.
 void terminate();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función llama a un controlador de finalización, una función de tipo **void**. Si el programa llama directamente a `terminate`, el controlador de finalización es el último que se establece mediante una llamada a [set_terminate](../standard-library/exception-functions.md#set_terminate). Si se llama a `terminate` por algún otro motivo durante la evaluación de una expresión Throw, el controlador de finalización es el que está en vigor inmediatamente después de evaluar la expresión Throw.
 
@@ -245,7 +245,7 @@ template <class T> [[noreturn]]
     void throw_with_nested(T&& t);
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Produce una excepción con excepciones anidadas.
 
@@ -322,7 +322,7 @@ Llama al controlador inesperado.
 void unexpected();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El estándar de C++ requiere que se llame a `unexpected` cuando una función inicie una excepción que no está en su lista de excepciones. La implementación actual no lo admite. El ejemplo llama a `unexpected` directamente, que llama al controlador inesperado.
 

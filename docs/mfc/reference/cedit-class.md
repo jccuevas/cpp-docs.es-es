@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876366"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425884"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cont
 
 Cada entrada de mapa de mensajes tiene el siguiente formato:
 
-  _Notificación_de ON_ **(** _ID._ **,** _memberFxn_ **)**
+  **ON_** _Notificación_de ON_ **(** _ID._ **,** _memberFxn_ **)**
 
 donde `id` especifica el identificador de la ventana secundaria del control de edición que envía la notificación y `memberFxn` es el nombre de la función miembro primaria que ha escrito para controlar la notificación.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600033"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422863"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Referencia del esquema de CMakeSettings.json
 
@@ -25,7 +25,7 @@ El archivo **CMakeSettings. JSON** contiene información que Visual Studio usa p
 
 Puede Agregar o quitar configuraciones en el IDE y editarlas directamente en el archivo JSON o usar el editor de **configuración de CMake** (Visual Studio 2019 y versiones posteriores). Puede cambiar fácilmente entre las configuraciones en el IDE para generar los distintos archivos del proyecto. Consulte [personalizar la configuración de compilación de CMake en Visual Studio](customize-cmake-settings.md) para obtener más información.
 
-## <a name="configurations"></a>Configuraciones
+## <a name="configurations"></a>Configurations
 
 La matriz `configurations` contiene todas las configuraciones de un proyecto CMake. Consulte [referencia de configuración predefinida de CMake](cmake-predefined-configuration-reference.md) para obtener más información sobre las configuraciones predefinidas. Puede agregar cualquier número de configuraciones predefinidas o personalizadas al archivo. 
 
@@ -43,7 +43,7 @@ Un elemento `configuration` tiene las siguientes propiedades:
 - `codeAnalysisRuleset`: especifica el conjunto de reglas que se usa al ejecutar el análisis de código. Puede ser una ruta de acceso completa o el nombre de un archivo de conjunto de reglas que Visual Studio ha instalado.
 - `configurationType`: especifica la configuración del tipo de compilación del generador seleccionado. Puede ser uno de los siguientes:
 
-  - Depuración
+  - Depurar
   - Release
   - MinSizeRel
   - RelWithDebInfo
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Opción|Description|
+|Opción|Descripción|
 |--------------|------------|
 | --version  | Se imprime la versión de Ninja ("1.7.1").|
 |   -C DIR   | Se cambia a DIR antes de realizar cualquier otra acción.|

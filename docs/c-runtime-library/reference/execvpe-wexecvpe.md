@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941739"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443012"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -75,7 +74,7 @@ Matriz de punteros a la configuración del entorno.
 
 Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de-1 indica un error, en cuyo caso se establece la variable global **errno** .
 
-|valor **errno**|DESCRIPCIÓN|
+|valor **errno**|Descripción|
 |-------------------|-----------------|
 |**E2BIG**|El espacio necesario para los argumentos y la configuración de entorno supera los 32 KB.|
 |**EACCES**|El archivo especificado tiene un bloqueo o una infracción de uso compartido.|
@@ -84,13 +83,13 @@ Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. 
 |**ENOEXEC**|El archivo especificado no es ejecutable o tiene un formato de archivo ejecutable no válido.|
 |**ENOMEM**|No hay memoria suficiente para ejecutar el nuevo proceso; la memoria disponible se ha dañado o existe un bloque no válido que indica que el proceso de llamada no se asignó correctamente.|
 
-Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información sobre estos y otros códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno. Estas funciones usan la variable de entorno **path** para buscar el archivo que se va a ejecutar.
 
-Las funciones **_execvpe** validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, un puntero a una matriz vacía o un puntero a una matriz que contiene una cadena vacía como primer argumento, estas funciones invocan el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1. No se inicia ningún proceso.
+Las funciones **_execvpe** validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, un puntero a una matriz vacía o un puntero a una matriz que contiene una cadena vacía como primer argumento, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1. No se inicia ningún proceso.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -99,13 +98,13 @@ Las funciones **_execvpe** validan sus parámetros. Si *cmdname* es un puntero n
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> o \<wchar.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Consulte el ejemplo de [Funciones _exec y _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, _wexec (funciones)](../../c-runtime-library/exec-wexec-functions.md)<br/>
@@ -113,5 +112,5 @@ Consulte el ejemplo de [Funciones _exec y _wexec](../../c-runtime-library/exec-w
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn (funciones)](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

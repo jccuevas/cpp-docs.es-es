@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953509"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438092"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -58,9 +57,9 @@ int _kbhit( void );
 
 **_kbhit** devuelve un valor distinto de cero si se ha presionado una tecla. De lo contrario, devuelve 0.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_kbhit** comprueba si hay una pulsación de tecla reciente en la consola. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. Después, el programa puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
+La función **_kbhit** comprueba si la consola tiene una pulsación de tecla reciente. Si la función devuelve un valor distinto de cero, hay una pulsación de tecla esperando en el búfer. A continuación, el programa puede llamar a **_getch** o **_getche** para obtener la pulsación de tecla.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -68,7 +67,7 @@ La función **_kbhit** comprueba si hay una pulsación de tecla reciente en la c
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -99,13 +98,13 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
