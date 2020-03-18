@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883633"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425962"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar (clase)
 
@@ -27,21 +27,21 @@ Proporciona la funcionalidad de un cuadro de diálogo no modal de Windows en una
 class CDialogBar : public CControlBar
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDialogBar:: CDialogBar](#cdialogbar)|Construye un objeto `CDialogBar`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CDialogBar:: Create](#create)|Crea una barra de cuadro de diálogo de Windows y la adjunta al objeto `CDialogBar`.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Una barra de cuadro de diálogo es similar a un cuadro de diálogo en que contiene los controles estándar de Windows con los que el usuario puede hacer tabulaciones. Otra similitud es que se crea una plantilla de cuadro de diálogo para representar la barra de cuadro de diálogo.
 
@@ -133,7 +133,7 @@ El identificador de recurso de la plantilla de cuadro de diálogo del objeto de 
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si especifica el estilo de alineación CBRS_TOP o CBRS_BOTTOM, el ancho de la barra de diálogo es el de la ventana de marco y su alto es el del recurso especificado por *nIDTemplate*. Si especifica el estilo de alineación CBRS_LEFT o CBRS_RIGHT, el alto de la barra de cuadro de diálogo es el de la ventana de marco y su ancho es el del recurso especificado por *nIDTemplate*.
 
@@ -141,7 +141,7 @@ Si especifica el estilo de alineación CBRS_TOP o CBRS_BOTTOM, el ancho de la ba
 
 [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Ejemplo de MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>

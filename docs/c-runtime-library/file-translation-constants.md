@@ -1,8 +1,6 @@
 ---
 title: Constantes de traducción de archivo
 ms.date: 11/04/2016
-f1_keywords:
-- c.constants.file
 helpviewer_keywords:
 - translation constants
 - file translation [C++], constants
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 363d95e744ccdb45cf06b8303ae4b60c9ecd58c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375917"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443265"
 ---
 # <a name="file-translation-constants"></a>Constantes de traducción de archivo
 
@@ -26,7 +24,7 @@ ms.locfileid: "68375917"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Estas constantes especifican el modo de traducción ( **"b"** o **"t"** ). El modo se incluye en la cadena que especifica el tipo de acceso ( **"r"** , **"w"** , **"a"** , **"r+"** , **"w+"** , **"a+"** ).
 
@@ -45,7 +43,7 @@ Los modos de traducción son los siguientes:
 
 Si no se especifica **t** o **b** en *mode*, el modo de traducción está definido por la variable de modo predeterminado [_fmode](../c-runtime-library/fmode.md). Para más información sobre el uso de los modos de texto y binario, vea [E/S de archivo en modo texto y en modo binario](../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
