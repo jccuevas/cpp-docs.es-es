@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856365"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425368"
 ---
 # <a name="ltnumericgt-functions"></a>Funciones &lt;numeric&gt;
 
@@ -516,7 +516,7 @@ reemplazando de forma iterativa *init* por *init* + (*a*i \* *b*i).
 
 La segunda función miembro devuelve:
 
-*binary_op1* init (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
+*init* *binary_op1* init (*a*1 *binary_op2* *b*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *b*n)
 
 reemplazando de forma iterativa *init* por *init* *binary_op1* (*a*i *binary_op2* *b*i).
 

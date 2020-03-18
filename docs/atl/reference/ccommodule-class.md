@@ -32,11 +32,11 @@ helpviewer_keywords:
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863258"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423313"
 ---
 # <a name="ccommodule-class"></a>CComModule (clase)
 
@@ -51,11 +51,11 @@ A partir de ATL 7,0, `CComModule` está en desuso: vea [clases de módulo ATL](.
 class CComModule : public _ATL_MODULE
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComModule:: Getclassobject (](#getclassobject)|Crea un objeto de un CLSID especificado. Solo para archivos dll.|
 |[CComModule:: GetModuleInstance](#getmoduleinstance)|Devuelve `m_hInst`.|
@@ -76,7 +76,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CComModule:: m_csObjMap](#m_csobjmap)|Garantiza el acceso sincronizado a la información del mapa de objetos.|
 |[CComModule:: m_csTypeInfoHolder](#m_cstypeinfoholder)|Garantiza el acceso sincronizado a la información de la biblioteca de tipos.|
@@ -86,7 +86,7 @@ class CComModule : public _ATL_MODULE
 |[CComModule:: m_hInstTypeLib](#m_hinsttypelib)|De forma predeterminada, contiene el identificador de la instancia de módulo.|
 |[CComModule:: m_pObjMap](#m_pobjmap)|Apunta a la asignación de objetos mantenida por la instancia del módulo.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!NOTE]
 >  Esta clase está en desuso y los asistentes de generación de código ATL usan las clases derivadas [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) y [CAtlModule](../../atl/reference/catlmodule-class.md) . Vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más información. La información siguiente es para su uso con las aplicaciones creadas con versiones anteriores de ATL. `CComModule` sigue siendo parte de ATL para la funcionalidad de versiones anteriores.
@@ -147,7 +147,7 @@ enuncia Puntero al puntero de interfaz identificado por *riid*. Si el objeto no 
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Crea un objeto del CLSID especificado y recupera un puntero de interfaz a este objeto.
 
@@ -165,7 +165,7 @@ HINSTANCE GetModuleInstance() throw();
 
 HINSTANCE que identifica este módulo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Devuelve el miembro de datos [m_hInst](#m_hinst) .
 
@@ -181,7 +181,7 @@ HINSTANCE GetResourceInstance() throw();
 
 HINSTANCE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Devuelve el miembro de datos [m_hInstResource](#m_hinstresource) .
 
@@ -197,7 +197,7 @@ HINSTANCE GetTypeLibInstance() const throw();
 
 HINSTANCE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Devuelve el miembro de datos [m_hInstTypeLib](#m_hinsttypelib) .
 
@@ -227,7 +227,7 @@ de Puntero al LIBId de la biblioteca de tipos asociada al proyecto.
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Inicializa todos los miembros de datos.
 
@@ -239,7 +239,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 CRITICAL_SECTION m_csObjMap;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Garantiza el acceso sincronizado al mapa de objetos.
 
@@ -251,7 +251,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 CRITICAL_SECTION m_csTypeInfoHolder;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Garantiza el acceso sincronizado a la biblioteca de tipos.
 
@@ -263,7 +263,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 CRITICAL_SECTION m_csWindowCreate;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Garantiza el acceso sincronizado a la información de la clase de ventana y a los datos estáticos que se usan durante la creación de la ventana.
 
@@ -275,7 +275,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 HINSTANCE m_hInst;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Contiene el identificador de la instancia del módulo.
 
@@ -289,7 +289,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 HINSTANCE m_hInstResource;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, contiene el identificador de la instancia de módulo.
 
@@ -305,7 +305,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 HINSTANCE m_hInstTypeLib;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 De forma predeterminada, contiene el identificador de la instancia de módulo.
 
@@ -321,7 +321,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 _ATL_OBJMAP_ENTRY* m_pObjMap;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Apunta a la asignación de objetos mantenida por la instancia del módulo.
 
@@ -359,7 +359,7 @@ de Especifica el modelo de subprocesos que se va a especificar en el registro. L
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Escribe el registro de clase estándar de un objeto en el registro del sistema.
 
@@ -385,7 +385,7 @@ de Determina los tipos de conexión para el objeto de clase. Los valores posible
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Registra un objeto de clase EXE con OLE para que otras aplicaciones puedan conectarse a él. Este método solo está disponible para los archivos exe.
 
@@ -411,7 +411,7 @@ de Apunta al CLSID del objeto que se va a registrar. Si es NULL (valor predeterm
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Dependiendo del parámetro *pCLSID* , actualiza el registro del sistema para un objeto de una sola clase o para todos los objetos del mapa de objetos.
 
@@ -439,7 +439,7 @@ de Cadena con el formato `"\\N"`, donde `N` es el índice entero del recurso TYP
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Agrega información sobre una biblioteca de tipos al registro del sistema.
 
@@ -457,7 +457,7 @@ HRESULT RevokeClassObjects() throw();
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Quita el objeto de clase. Este método solo está disponible para los archivos exe.
 
@@ -469,7 +469,7 @@ A partir de ATL 7,0, `CComModule` está obsoleto: vea [clases de módulo ATL](..
 void Term() throw();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Libera todos los miembros de datos.
 
@@ -499,7 +499,7 @@ de ProgID independiente de la versión asociado al objeto.
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Quita el registro de clase estándar de un objeto del registro del sistema.
 
@@ -526,7 +526,7 @@ Apunta al CLSID del objeto del que se va a anular el registro. Si es NULL (valor
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Dependiendo del parámetro *pCLSID* , anula el registro de un objeto de una sola clase o de todos los objetos del mapa de objetos.
 
@@ -583,7 +583,7 @@ Indica si se debe registrar el objeto.
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si *bRegister* es true, este método escribe el registro de clase estándar del objeto en el registro del sistema.
 
@@ -627,7 +627,7 @@ de Un puntero a la asignación de reemplazo que almacena los valores asociados a
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Ejecuta el script contenido en el recurso especificado por *lpszRes* o *nResID*.
 
@@ -677,7 +677,7 @@ de Un puntero a la asignación de reemplazo que almacena los valores asociados a
 
 Valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Similar a [UpdateRegistryFromResourceD](#updateregistryfromresourced) , excepto `UpdateRegistryFromResourceS` crea un vínculo estático al componente del registro de ATL (registrador).
 
@@ -688,6 +688,6 @@ Similar a [UpdateRegistryFromResourceD](#updateregistryfromresourced) , excepto 
 
 Para obtener más información sobre los parámetros reemplazables y los scripts, vea el artículo [el componente de registro de ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general sobre clases](../../atl/atl-class-overview.md)

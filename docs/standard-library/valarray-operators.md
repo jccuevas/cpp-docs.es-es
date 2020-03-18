@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
 ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875623"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427588"
 ---
 # <a name="ltvalarraygt-operators"></a>Operadores de &lt;valarray&gt;
 
@@ -79,7 +79,7 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 - **false** si los elementos correspondientes son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer operador de plantilla devuelve un objeto de clase [valarray\<bool >](../standard-library/valarray-bool-class.md), cada uno de cuyos elementos `I` se `left[I] != right[I]`.
 
@@ -257,7 +257,7 @@ La segunda de las dos valarray cuyos elementos respectivos van a combinarse con 
 
 Una valarray cuyos elementos son la combinación por elemento de la operación AND bit a bit de *izquierda* y *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una operación bit a bit solo puede usarse para manipular bits en tipos de datos **Char** e **int** y variantes, y no en **float**, **Double**, **longdouble**, **void**, **bool** u otros tipos de datos más complejos.
 
@@ -348,7 +348,7 @@ La segunda de las dos valarray cuyos elementos respectivos van a combinarse con 
 
 Una valarray cuyos elementos son de tipo bool y son la combinación por elemento de la operación lógica `AND` de *izquierda* y *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La `ANDoperator&&` lógica se aplica a un nivel de elemento, contando todos los valores distintos de cero como true y el resultado es una valarray de valores booleanos. La versión bit a bit de `AND`, [operator &,](#op_amp), por el contrario, puede dar lugar a un valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
 
@@ -441,7 +441,7 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 - **false** si el elemento o valor *izquierdo* no es mayor que el elemento o valor *correcto* correspondiente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el número de elementos de dos valarray no es igual, el resultado es indefinido.
 
@@ -534,7 +534,7 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 - **false** si el elemento o el valor *izquierdo* es menor que el elemento o valor *correcto* correspondiente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el número de elementos de dos valarray no es igual, el resultado es indefinido.
 
@@ -623,7 +623,7 @@ El valor que indica la cantidad de desplazamiento a la derecha o la valarray cuy
 
 Una valarray cuyos elementos se han desplazado a la derecha la cantidad especificada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los números con signo conservan sus signos.
 
@@ -716,7 +716,7 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 - **false** si el elemento o el valor *izquierdo* no es menor que el elemento o valor *correcto* correspondiente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el número de elementos de dos valarray no es igual, el resultado es indefinido.
 
@@ -809,7 +809,7 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 - **false** si el elemento o el valor *izquierdo* es mayor que el elemento o valor *correcto* correspondiente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el número de elementos de dos valarray no es igual, el resultado es indefinido.
 
@@ -898,7 +898,7 @@ El valor que indica la cantidad de desplazamiento a la izquierda o la valarray c
 
 Una valarray cuyos elementos se han desplazado a la izquierda la cantidad especificada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los números con signo conservan sus signos.
 
@@ -1157,7 +1157,7 @@ Un valor o valarray que actúa como sustraendo que se va a restar de otros valor
 
 Una valarray cuyos elementos son la diferencia por elemento de *izquierda* y *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La terminología aritmética usada para describir una resta:
 
@@ -1248,7 +1248,7 @@ Un valor o valarray que actúa como el divisor y que divide otro valor o valarra
 
 Una valarray cuyos elementos son el cociente de elemento de la *izquierda* dividido por la *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La terminología aritmética usada para describir una división:
 
@@ -1343,7 +1343,7 @@ Una valarray de valores booleanos, en la que cada uno es:
 
 - **false** si los elementos correspondientes no son iguales.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El primer operador de plantilla devuelve un objeto de clase [valarray\<bool >](../standard-library/valarray-bool-class.md), cada uno de cuyos elementos `I` se `left[I] == right[I]`. El segundo operador de plantilla almacena en el elemento `I` `left[I] == right`. El tercer operador de plantilla almacena en el elemento `I` `left == right[I]`.
 
@@ -1432,7 +1432,7 @@ La segunda de las dos valarray cuyos elementos respectivos van a combinarse con 
 
 Una valarray cuyos elementos son la combinación por elemento de la operación **XOR** bit a bit de *izquierda* y *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una operación bit a bit solo puede usarse para manipular bits en tipos de datos **Char** e **int** y variantes, y no en tipos de datos **float**, **Double**, **Long Double**, **void**, **bool** u otros, más complejos.
 
@@ -1527,7 +1527,7 @@ La segunda de las dos valarray cuyos elementos respectivos van a combinarse con 
 
 Una valarray cuyos elementos son la combinación por elemento de la operación de `OR` bit a bit de *izquierda* y *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una operación bit a bit solo puede usarse para manipular bits en tipos de datos **Char** e **int** y variantes, y no en **float**, **Double**, **longdouble**, **void**, **bool** u otros tipos de datos más complejos.
 
@@ -1622,7 +1622,7 @@ La segunda de las dos valarray cuyos elementos respectivos van a combinarse con 
 
 Una valarray cuyos elementos son de tipo **bool** y son la combinación en elementos de la operación OR lógica de *izquierda* y *derecha*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El `operator||` de `OR` lógico se aplica en un nivel de elemento, contando todos los valores distintos de cero como **true**y el resultado es una valarray de valores booleanos. La versión bit a bit de `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.
 
