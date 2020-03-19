@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274738"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509456"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Proyectos deC++ C/y sistemas de compilación en Visual Studio
 
@@ -23,7 +23,7 @@ Puede usar Visual Studio para editar, compilar y compilar cualquier C++ código 
 
 ## <a name="c-compilation"></a>C++previa
 
-Para compilar *un programa* significa compilar el C++ código fuente de uno o más archivos y, a continuación, vincular esos archivos a un archivo ejecutable (. exe), una biblioteca de carga dinámica (. dll) o una biblioteca estática (. lib). 
+Para *compilar un programa* significa compilar el C++ código fuente de uno o más archivos y, a continuación, vincular esos archivos a un archivo ejecutable (. exe), una biblioteca de carga dinámica (. dll) o una biblioteca estática (. lib). 
 
 La C++ compilación básica implica tres pasos principales:
 
@@ -40,15 +40,16 @@ Puede compilar programas simples invocando el compilador MSVC (cl. exe) directam
 ```cmd
 cl /EHsc hello.cpp
 ```
-Tenga en cuenta que aquí el compilador (cl. exe) C++ invoca automáticamente el preprocesador y el enlazador para generar el archivo de salida final.  Para obtener más información, vea compilar [en la línea de comandos](building-on-the-command-line.md).
+
+Tenga en cuenta que aquí el compilador (cl. exe) C++ invoca automáticamente el preprocesador y el enlazador para generar el archivo de salida final.  Para obtener más información, vea [compilar en la línea de comandos](building-on-the-command-line.md).
 
 ## <a name="build-systems-and-projects"></a>Sistemas de compilación y proyectos
 
-La mayoría de los programas del mundo real usan algún tipo de *sistema de compilación* para administrar las complejidades de la compilación de varios archivos de código fuente para varias configuraciones (por ejemplo, depurar frente a versión), varias plataformas (x86, x64, ARM, etc.), pasos de compilación personalizados e incluso varios ejecutables que se deben compilar en un orden determinado. La configuración se realiza en un archivo de configuración de compilación, y el sistema de compilación acepta ese archivo como entrada antes de invocar al compilador. El conjunto de archivos de código fuente y los archivos de configuración de compilación necesarios para compilar un archivo ejecutable se denomina *proyecto*. 
+La mayoría de los programas del mundo real usan algún tipo de *sistema de compilación* para administrar las complejidades de la compilación de varios archivos de código fuente para varias configuraciones (por ejemplo, depurar frente a lanzamiento), varias plataformas (x86, x64, ARM, etc.), pasos de compilación personalizados e incluso varios ejecutables que se deben compilar en un orden determinado. La configuración se realiza en un archivo de configuración de compilación, y el sistema de compilación acepta ese archivo como entrada antes de invocar al compilador. El conjunto de archivos de código fuente y los archivos de configuración de compilación necesarios para compilar un archivo ejecutable se denomina *proyecto*. 
 
 En la lista siguiente se muestran varias opciones para los proyectos C++de Visual Studio:
 
-- Cree un proyecto de Visual Studio mediante el IDE de Visual Studio y configúrelo mediante páginas de propiedades. Los proyectos de Visual Studio generan programas que se ejecutan en Windows. Para obtener información general, consulte compilar [y generar](/visualstudio/ide/compiling-and-building-in-visual-studio) en la documentación de Visual Studio.
+- Cree un proyecto de Visual Studio mediante el IDE de Visual Studio y configúrelo mediante páginas de propiedades. Los proyectos de Visual Studio generan programas que se ejecutan en Windows. Para obtener información general, consulte [compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio) en la documentación de Visual Studio.
 
 - Abra una carpeta que contenga un archivo archivo CMakeLists. txt. La compatibilidad con CMake se integra en Visual Studio. Puede usar el IDE para editar, probar y depurar sin modificar los archivos CMake de ninguna manera. Esto le permite trabajar en el mismo proyecto de CMake que otros usuarios que pueden estar usando editores diferentes. CMake es el método recomendado para el desarrollo multiplataforma. Para obtener más información, vea [proyectos de CMake](cmake-projects-in-visual-studio.md).
  
@@ -77,7 +78,7 @@ Describe cómo usar el compilador deC++ C/y las herramientas de compilación dir
 
 [Compilar archivos dll en Visual Studio](dlls-in-visual-cpp.md) Cómo crear, depurar e implementar CC++ /dll (bibliotecas compartidas) en Visual Studio.
 
-[Tutorial: Crear y usar una biblioteca](walkthrough-creating-and-using-a-static-library-cpp.md) estática cómo crear un archivo binario. lib.
+[Tutorial: crear y usar una biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md) Cómo crear un archivo binario. lib.
 
 [CompilarC++ aplicaciones de C/aisladas y ensamblados en paralelo](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Describe el modelo de implementación para aplicaciones de escritorio de Windows, en función de la idea de aplicaciones aisladas y ensamblados en paralelo.
 

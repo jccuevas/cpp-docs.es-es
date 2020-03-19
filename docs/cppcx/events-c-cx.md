@@ -3,12 +3,12 @@ title: Eventos (C++/CX)
 description: Cómo usar C++/CX para crear y usar controladores de eventos en el Windows Runtime.
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972196"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509380"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 
@@ -28,7 +28,7 @@ En el ejemplo siguiente, se muestra cómo declarar y desencadenar un evento. Obs
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Usage
+### <a name="usage"></a>Uso
 
 En el ejemplo siguiente se muestra cómo utiliza una clase de suscripción el operador `+=` para suscribirse al evento, y se proporciona un controlador de eventos que se invocará cuando se desencadene el evento. Observa que la función que se proporciona coincide con la firma del delegado que se define en el lado del publicador en el espacio de nombres `EventTest` .
 
@@ -53,13 +53,13 @@ Aunque no es muy frecuente, quizás desees quitar un controlador de eventos para
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
 
 Varios controladores se pueden asociar al mismo evento. El origen de eventos llama secuencialmente a todos los controladores de eventos del mismo subproceso. Si un receptor de eventos se bloquea dentro del método de controlador de eventos, impide que el origen de eventos invoque otros controladores de eventos para este evento.
 
 El orden en que el origen de eventos invoca los controladores de eventos en los receptores de eventos no se garantiza y puede variar de una llamada a otra.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
 [Delegados](../cppcx/delegates-c-cx.md)<br/>

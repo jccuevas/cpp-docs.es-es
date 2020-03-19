@@ -38,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 71ebc02dc56b45e8790bfac7b7d4bac80d5f7729
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a3765da94560eb84a1d441a6b25c42822fc857bb
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500496"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509476"
 ---
 # <a name="hstring-class"></a>HString (Clase)
 
@@ -55,42 +55,42 @@ Una clase auxiliar para administrar la duración de un [HSTRING](/windows/win32/
 class HString;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El Windows Runtime proporciona acceso a las cadenas a través de los identificadores de [HSTRING](/windows/win32/WinRT/hstring) . La `HString` clase proporciona funciones y operadores útiles para simplificar el uso de identificadores de HSTRING. Esta clase puede controlar la duración del HSTRING que posee a través de un patrón RAII.
+El Windows Runtime proporciona acceso a las cadenas a través de los identificadores de [HSTRING](/windows/win32/WinRT/hstring) . La clase `HString` proporciona funciones y operadores útiles para simplificar el uso de identificadores de HSTRING. Esta clase puede controlar la duración del HSTRING que posee a través de un patrón RAII.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-NOMBRE                                | DESCRIPCIÓN
+Nombre                                | Descripción
 ----------------------------------- | -----------------------------------------------------
-[HString::HString](#hstring)        | Inicializa una nueva instancia de la clase `HString`.
-[HString::~HString](#tilde-hstring) | Destruye la instancia actual de la `HString` clase.
+[HString:: HString](#hstring)        | Inicializa una nueva instancia de la clase `HString`.
+[HString:: ~ HString](#tilde-hstring) | Destruye la instancia actual de la clase `HString`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-NOMBRE                                     | DESCRIPCIÓN
+Nombre                                     | Descripción
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[HString::Attach](#attach)               | Asocia el objeto `HString` especificado al objeto actual `HString` .
-[HString::CopyTo](#copyto)               | Copia el objeto `HString` actual en un objeto HSTRING.
-[HString::Detach](#detach)               | Desasocia el objeto especificado `HString` de su valor subyacente.
-[HString::Get](#get)                     | Recupera el valor del identificador HSTRING subyacente.
-[HString::GetAddressOf](#getaddressof)   | Recupera un puntero al identificador HSTRING subyacente.
-[HString::GetRawBuffer](#getrawbuffer)   | Recupera un puntero a los datos de cadena subyacentes.
-[HString::IsValid](#isvalid)             | Indica si el objeto `HString` actual es válido.
-[HString::MakeReference](#makereference) | Crea un `HStringReference` objeto a partir de un parámetro de cadena especificado.
-[HString::Release](#release)             | Elimina el valor de cadena subyacente y inicializa el objeto `HString` actual a un valor vacío.
-[HString::Set](#set)                     | Establece el valor del objeto actual `HString` en la cadena de caracteres anchos o `HString` el parámetro especificados.
+[HString:: Attach](#attach)               | Asocia el objeto `HString` especificado al objeto `HString` actual.
+[HString:: CopyTo](#copyto)               | Copia el objeto de `HString` actual en un objeto HSTRING.
+[HString::D Etach](#detach)               | Desasocia el objeto `HString` especificado de su valor subyacente.
+[HString:: get](#get)                     | Recupera el valor del identificador HSTRING subyacente.
+[HString:: Getaddressof (](#getaddressof)   | Recupera un puntero al identificador HSTRING subyacente.
+[HString:: GetRawBuffer](#getrawbuffer)   | Recupera un puntero a los datos de cadena subyacentes.
+[HString:: IsValid](#isvalid)             | Indica si el objeto de `HString` actual es válido.
+[HString:: Makereference (](#makereference) | Crea un objeto `HStringReference` a partir de un parámetro de cadena especificado.
+[HString:: Release](#release)             | Elimina el valor de cadena subyacente y inicializa el objeto de `HString` actual a un valor vacío.
+[HString:: set](#set)                     | Establece el valor del objeto `HString` actual en la cadena de caracteres anchos o en el parámetro `HString` especificados.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-NOMBRE                                         | DESCRIPCIÓN
+Nombre                                         | Descripción
 -------------------------------------------- | ----------------------------------------------------------------------------
-[HString::operator=](#operator-assign)       | Mueve el valor de otro `HString` objeto al objeto actual `HString` .
-[HString::operator==](#operator-equality)    | Indica si los dos parámetros son iguales.
-[HString::operator!=](#operator-inequality)  | Indica si los dos parámetros no son iguales.
-[HString::operator&lt;](#operator-less-than) | Indica si el primer parámetro es menor que el segundo parámetro.
+[HString:: Operator =](#operator-assign)       | Mueve el valor de otro objeto `HString` al objeto `HString` actual.
+[HString:: Operator = =](#operator-equality)    | Indica si los dos parámetros son iguales.
+[HString:: Operator! =](#operator-inequality)  | Indica si los dos parámetros no son iguales.
+[HString:: Operator&lt;](#operator-less-than) | Indica si el primer parámetro es menor que el segundo parámetro.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -100,19 +100,19 @@ NOMBRE                                         | DESCRIPCIÓN
 
 **Encabezado:** corewrappers. h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers
+**Espacio de nombres:** Microsoft:: WRL:: wrappers
 
-## <a name="tilde-hstring"></a>HString::~HString
+## <a name="hstringhstring"></a><a name="tilde-hstring"></a>HString:: ~ HString
 
-Destruye la instancia actual de la `HString` clase.
+Destruye la instancia actual de la clase `HString`.
 
 ```cpp
 ~HString() throw()
 ```
 
-## <a name="attach"></a>HString:: Attach
+## <a name="hstringattach"></a><a name="attach"></a>HString:: Attach
 
-Asocia el objeto `HString` especificado al objeto actual `HString` .
+Asocia el objeto `HString` especificado al objeto `HString` actual.
 
 ```cpp
 void Attach(
@@ -125,9 +125,9 @@ void Attach(
 *hstr*<br/>
 Objeto `HString` existente.
 
-## <a name="copyto"></a>HString::CopyTo
+## <a name="hstringcopyto"></a><a name="copyto"></a>HString:: CopyTo
 
-Copia el objeto `HString` actual en un objeto HSTRING.
+Copia el objeto de `HString` actual en un objeto HSTRING.
 
 ```cpp
 HRESULT CopyTo(
@@ -140,13 +140,13 @@ HRESULT CopyTo(
 *str*<br/>
 HSTRING que recibe la copia.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Este método llama a la función [WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
 
-## <a name="detach"></a>HString::Detach
+## <a name="hstringdetach"></a><a name="detach"></a>HString::D Etach
 
-Desasocia el objeto especificado `HString` de su valor subyacente.
+Desasocia el objeto `HString` especificado de su valor subyacente.
 
 ```cpp
 HSTRING Detach() throw()
@@ -154,9 +154,9 @@ HSTRING Detach() throw()
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor subyacente `HString` antes de que se inicie la operación de desasociación.
+Valor de `HString` subyacente antes de que se inicie la operación de desasociación.
 
-## <a name="get"></a>HString::Get
+## <a name="hstringget"></a><a name="get"></a>HString:: get
 
 Recupera el valor del identificador HSTRING subyacente.
 
@@ -168,7 +168,7 @@ HSTRING Get() const throw()
 
 Valor del identificador HSTRING subyacente.
 
-## <a name="getaddressof"></a>HString::GetAddressOf
+## <a name="hstringgetaddressof"></a><a name="getaddressof"></a>HString:: Getaddressof (
 
 Recupera un puntero al identificador HSTRING subyacente.
 
@@ -180,17 +180,18 @@ HSTRING* GetAddressOf() throw()
 
 Puntero al identificador de HSTRING subyacente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Después de esta operación, se destruye el valor de cadena del identificador HSTRING subyacente.
 
-## <a name="getrawbuffer"></a>HString::GetRawBuffer
+## <a name="hstringgetrawbuffer"></a><a name="getrawbuffer"></a>HString:: GetRawBuffer
 
 Recupera un puntero a los datos de cadena subyacentes.
 
 ```cpp
 const wchar_t* GetRawBuffer(unsigned int* length) const;
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *longitud* Puntero a una variable **int** que recibe la longitud de los datos.
@@ -200,7 +201,7 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 Un puntero **const** a los datos de cadena subyacentes.
 
 
-## <a name="hstring"></a>HString::HString
+## <a name="hstringhstring"></a><a name="hstring"></a>HString:: HString
 
 Inicializa una nueva instancia de la clase `HString`.
 
@@ -217,15 +218,15 @@ Identificador de HSTRING.
 *other*<br/>
 Objeto `HString` existente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El primer constructor inicializa un nuevo `HString` objeto que está vacío.
+El primer constructor inicializa un nuevo objeto `HString` que está vacío.
 
-El segundo constructor inicializa un nuevo `HString` objeto con el valor del *otro* parámetro existente y, a continuación, destruye el *otro* parámetro.
+El segundo constructor inicializa un nuevo objeto `HString` en el valor del *otro* parámetro existente y, a continuación, destruye el *otro* parámetro.
 
-## <a name="isvalid"></a>HString::IsValid
+## <a name="hstringisvalid"></a><a name="isvalid"></a>HString:: IsValid
 
-Indica si el objeto `HString` actual está vacío o no.
+Indica si el objeto de `HString` actual está vacío o no.
 
 ```cpp
 bool IsValid() const throw()
@@ -233,11 +234,11 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>Parámetros
 
-**true** si el objeto `HString` actual no está vacío; en caso contrario, **false**.
+**true** si el objeto de `HString` actual no está vacío; en caso contrario, **false**.
 
-## <a name="makereference"></a>HString::MakeReference
+## <a name="hstringmakereference"></a><a name="makereference"></a>HString:: Makereference (
 
-Crea un `HStringReference` objeto a partir de un parámetro de cadena especificado.
+Crea un objeto `HStringReference` a partir de un parámetro de cadena especificado.
 
 ```cpp
 template<unsigned int sizeDest>
@@ -252,8 +253,8 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>Parámetros
 
-*sizeDest*<br/>
-Parámetro de plantilla que especifica el tamaño del búfer de `HStringReference` destino.
+*Tamaño más*<br/>
+Parámetro de plantilla que especifica el tamaño del búfer de `HStringReference` de destino.
 
 *str*<br/>
 Referencia a una cadena de caracteres anchos.
@@ -263,11 +264,11 @@ Longitud máxima del búfer de parámetros *Str* que se va a usar en esta operac
 
 ### <a name="return-value"></a>Valor devuelto
 
-Objeto cuyo valor es el mismo que el parámetro Str especificado. `HStringReference`
+Un objeto `HStringReference` cuyo valor es el mismo que el parámetro *Str* especificado.
 
-## <a name="operator-assign"></a>HString:: Operator = (operador)
+## <a name="hstringoperator-operator"></a><a name="operator-assign"></a>HString:: Operator = (operador)
 
-Mueve el valor de otro `HString` objeto al objeto actual `HString` .
+Mueve el valor de otro objeto `HString` al objeto `HString` actual.
 
 ```cpp
 HString& operator=(HString&& other) throw()
@@ -278,11 +279,11 @@ HString& operator=(HString&& other) throw()
 *other*<br/>
 Objeto `HString` existente.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El valor del *otro* objeto existente se copia en el objeto actual `HString` y, a continuación, se destruye el *otro* objeto.
+El valor del *otro* objeto existente se copia en el objeto `HString` actual y, a continuación, se destruye el *otro* objeto.
 
-## <a name="operator-equality"></a>HString:: Operator = = (operador)
+## <a name="hstringoperator-operator"></a><a name="operator-equality"></a>HString:: Operator = = (operador)
 
 Indica si los dos parámetros son iguales.
 
@@ -310,17 +311,17 @@ inline bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*lhs*<br/>
-Primer parámetro que se va a comparar. *LHS* puede ser un `HString` objeto `HStringReference` o o un identificador HSTRING.
+*LHS*<br/>
+Primer parámetro que se va a comparar. *LHS* puede ser un objeto `HString` o `HStringReference`, o un identificador HSTRING.
 
 *rhs*<br/>
-Segundo parámetro que se va a comparar. *RHS* puede ser un `HString` objeto `HStringReference` o o un identificador HSTRING.
+Segundo parámetro que se va a comparar. *RHS* puede ser un objeto `HString` o `HStringReference`, o un identificador HSTRING.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los parámetros *LHS* y *RHS* son iguales; en caso contrario, **false**.
 
-## <a name="operator-inequality"></a>HString:: Operator! = (operador)
+## <a name="hstringoperator-operator"></a><a name="operator-inequality"></a>HString:: Operator! = (operador)
 
 Indica si los dos parámetros no son iguales.
 
@@ -343,17 +344,17 @@ inline bool operator!=( const HString& lhs,
 
 ### <a name="parameters"></a>Parámetros
 
-*lhs*<br/>
-Primer parámetro que se va a comparar. *LHS* puede ser un `HString` objeto `HStringReference` o o un identificador HSTRING.
+*LHS*<br/>
+Primer parámetro que se va a comparar. *LHS* puede ser un objeto `HString` o `HStringReference`, o un identificador HSTRING.
 
 *rhs*<br/>
-Segundo parámetro que se va a comparar. *RHS* puede ser un `HString` objeto `HStringReference` o o un identificador HSTRING.
+Segundo parámetro que se va a comparar. *RHS* puede ser un objeto `HString` o `HStringReference`, o un identificador HSTRING.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si los parámetros *LHS* y *RHS* no son iguales; en caso contrario, **false**.
 
-## <a name="operator-less-than"></a>HString:: Operator&lt; (operador)
+## <a name="hstringoperatorlt-operator"></a><a name="operator-less-than"></a>Operador HString:: Operator&lt;
 
 Indica si el primer parámetro es menor que el segundo parámetro.
 
@@ -365,27 +366,27 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*lhs*<br/>
-Primer parámetro que se va a comparar. *LHS* puede ser una referencia a `HString`.
+*LHS*<br/>
+Primer parámetro que se va a comparar. *LHS* puede ser una referencia a una `HString`.
 
 *rhs*<br/>
-Segundo parámetro que se va a comparar. *RHS* puede ser una referencia a `HString`.
+Segundo parámetro que se va a comparar. *RHS* puede ser una referencia a un `HString`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **true** si el parámetro *LHS* es menor que el parámetro *RHS* ; en caso contrario, **false**.
 
-## <a name="release"></a>HString:: Release
+## <a name="hstringrelease"></a><a name="release"></a>HString:: Release
 
-Elimina el valor de cadena subyacente y inicializa el objeto `HString` actual a un valor vacío.
+Elimina el valor de cadena subyacente y inicializa el objeto de `HString` actual a un valor vacío.
 
 ```cpp
 void Release() throw()
 ```
 
-## <a name="set"></a>HString::Set
+## <a name="hstringset"></a><a name="set"></a>HString:: set
 
-Establece el valor del objeto actual `HString` en la cadena de caracteres anchos o `HString` el parámetro especificados.
+Establece el valor del objeto `HString` actual en la cadena de caracteres anchos o en el parámetro `HString` especificados.
 
 ```cpp
 HRESULT Set(
@@ -405,7 +406,7 @@ HRESULT Set(
 Una cadena de caracteres anchos.
 
 *len*<br/>
-La longitud máxima del parámetro *Str* que se asigna al objeto actual `HString` .
+La longitud máxima del parámetro *Str* asignada al objeto `HString` actual.
 
 *hstr*<br/>
 Objeto `HString` existente.
