@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516590"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544661"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI y C++/CX)
 
@@ -55,7 +55,7 @@ El valor devuelto del método de descriptor de acceso del evento.  Para que sea 
 *parameters*<br/>
 (opcional) Parámetros para el método `raise`, que coincide con la firma del parámetro *delegate*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un evento es una asociación entre un delegado (delegate) y una función miembro (controlador de eventos) que responde a la activación del evento y permite a los clientes de cualquier clase registrar los métodos que cumplen con la firma y devuelven el tipo de delegado subyacente.
 
@@ -73,9 +73,9 @@ Puede utilizar **operators+=** y **operator-=** para agregar y quitar un control
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información, consulte [Eventos (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Para obtener más información, consulte [Eventos (C++/CX)](../cppcx/events-c-cx.md).
 
 Si desea agregar y, a continuación, quitar un controlador de eventos, debe guardar la estructura EventRegistrationToken devuelta por la operación de adición. A continuación, en la operación de eliminación, debe utilizar la estructura guardada EventRegistrationToken para identificar el controlador de eventos que se va a eliminar.
 
@@ -119,7 +119,7 @@ El valor devuelto del método de descriptor de acceso del evento.  Para que sea 
 *parameters*<br/>
 (opcional) Parámetros para el método `raise`, que coincide con la firma del parámetro *delegate*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un evento es una asociación entre un delegado (delegate) y una función miembro (controlador de eventos) que responde a la activación del evento y permite a los clientes de cualquier clase registrar los métodos que cumplen con la firma y devuelven el tipo de delegado subyacente.
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-En el ejemplo de código siguiente se muestra la lógica usada para generar el método `raise` de un evento trivial: Si el evento tiene uno o varios suscriptores, al llamar al método `raise` de forma implícita o explícita se llamará al delegado. Si el tipo de valor devuelto del delegado no es **void** y si no hay ningún suscriptor de eventos, el método `raise` devolverá el valor predeterminado para el tipo delegado. Si no hay ningún suscriptor de eventos, llamar al método `raise` simplemente devuelve y no se genera ninguna excepción. Si el tipo de valor devuelto del delegado no es **void**, se devolverá el tipo delegado.
+El ejemplo de código siguiente demuestra la lógica utilizada para generar el método `raise` de un evento trivial: si el evento tiene uno o varios suscriptores, llamar al método `raise` llama implícita o explícitamente al delegado (delegate). Si el tipo de valor devuelto del delegado no es **void** y si no hay ningún suscriptor de eventos, el método `raise` devolverá el valor predeterminado para el tipo delegado. Si no hay ningún suscriptor de eventos, llamar al método `raise` simplemente devuelve y no se genera ninguna excepción. Si el tipo de valor devuelto del delegado no es **void**, se devolverá el tipo delegado.
 
 ```cpp
 // trivial_events.cpp
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

@@ -1,6 +1,6 @@
 ---
 title: Información general de la serialización en C++
-ms.date: 06/28/2018
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -10,39 +10,39 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384743"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "79544439"
 ---
-# <a name="overview-of-marshaling-in-c"></a>Información general de la serialización en C++
+# <a name="overview-of-marshaling-in-ccli"></a>Información general sobre el cálculo C++de referencias en/CLI
 
-En modo mixto, deben serializar los datos entre los tipos nativos y los administrados. Visual Studio 2008 introdujo la *biblioteca de serialización* para ayudar a calcular y convertir los datos de una manera sencilla.  La biblioteca de serialización consta de un conjunto de funciones y una `marshal_context` clases que realizan el cálculo de referencias para los tipos comunes. La biblioteca está definida en estos encabezados en el **incluyen/msclr** directorio para su edición de Visual Studio:
+En modo mixto, deben serializar los datos entre los tipos nativos y los administrados. La *biblioteca de cálculo de referencias* le ayuda a calcular las referencias y convertir los datos de una manera sencilla.  La biblioteca de serialización se compone de un conjunto de funciones y una `marshal_context` clase que realiza el cálculo de referencias para tipos comunes. La biblioteca se define en estos encabezados en el directorio **include/msclr** de la edición de Visual Studio:
 
-|Header|Descripción|
+|Encabezado|Descripción|
 |---------------|-----------------|
-|serializar.h|`marshal_context` clase y las funciones de cálculo de referencias sin contexto|
-|serializar_atl.h| Funciones de serialización de tipos ATL|
-|serializar_cppstd.h|Funciones de serialización de tipos estándares de C++|
-|marshal_windows.h|Funciones de serialización de tipos de Windows|
+|serializar.h|clases de `marshal_context` y funciones de serialización sin contexto|
+|serializar_atl.h| Funciones para calcular las referencias de tipos ATL|
+|serializar_cppstd.h|Funciones para calcular las referencias C++ de tipos estándar|
+|marshal_windows.h|Funciones para calcular las referencias de tipos de Windows|
 
-La ruta de acceso predeterminada para **msclr** carpeta es algo parecido a esto dependiendo de qué edición tiene y el número de compilación:
+La ruta de acceso predeterminada de la carpeta **msclr** es similar a la de la edición que tiene y el número de compilación:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
-Puede usar la biblioteca de serialización con o sin un [marshal_context Class](../dotnet/marshal-context-class.md). Algunas conversiones requieren un contexto. Otras conversiones se pueden implementar mediante el [marshal_as](../dotnet/marshal-as.md) función. En la tabla siguiente se enumeran las conversiones actuales compatibles y se indica si requieren un contexto y el archivo de serializar que se debe incluir:
+Puede usar la biblioteca de cálculo de referencias con o sin una [clase marshal_context](../dotnet/marshal-context-class.md). Algunas conversiones requieren un contexto. Se pueden implementar otras conversiones mediante la función [marshal_as](../dotnet/marshal-as.md) . En la tabla siguiente se enumeran las conversiones actuales compatibles y se indica si requieren un contexto y el archivo de serializar que se debe incluir:
 
 |De tipo|A tipo|Método serializar|Incluir archivo|
 |---------------|-------------|--------------------|------------------|
 |System::String^|const char \*|serializar_context|serializar.h|
 |const char \*|System::String^|serializar_as|serializar.h|
-|Char \*|System::String^|serializar_as|serializar.h|
-|System::String^|const wchar_t\*|serializar_context|serializar.h|
-|const wchar_t \*|System::String^|serializar_as|serializar.h|
+|char \*|System::String^|serializar_as|serializar.h|
+|System::String^|wchar_t const\*|serializar_context|serializar.h|
+|wchar_t const \*|System::String^|serializar_as|serializar.h|
 |wchar_t \*|System::String^|serializar_as|serializar.h|
 |System::IntPtr|HANDLE|serializar_as|marshal_windows.h|
 |HANDLE|System::IntPtr|serializar_as|marshal_windows.h|
@@ -54,8 +54,8 @@ Puede usar la biblioteca de serialización con o sin un [marshal_context Class](
 |std::string|System::String^|serializar_as|serializar_cppstd.h|
 |System::String^|std::wstring|serializar_as|serializar_cppstd.h|
 |std::wstring|System::String^|serializar_as|serializar_cppstd.h|
-|System::String^|CStringT\<char>|serializar_as|serializar_atl.h|
-|CStringT\<char>|System::String^|serializar_as|serializar_atl.h|
+|System::String^|CStringT\<> Char|serializar_as|serializar_atl.h|
+|CStringT\<> Char|System::String^|serializar_as|serializar_atl.h|
 |System::String^|CStringT<wchar_t>|serializar_as|serializar_atl.h|
 |CStringT<wchar_t>|System::String^|serializar_as|serializar_atl.h|
 |System::String^|CComBSTR|serializar_as|serializar_atl.h|
@@ -70,11 +70,9 @@ Este ejemplo muestra cómo incluir el directorio msclr en una declaración de en
 
 `#include "msclr\marshal_cppstd.h"`
 
-La biblioteca de cálculo de referencias es extensible para que pueda agregar sus propios tipos de serialización. Para obtener más información sobre cómo extender la biblioteca de serialización, vea [Cómo: Extender la biblioteca de serialización](../dotnet/how-to-extend-the-marshaling-library.md).
+La biblioteca de cálculo de referencias es extensible para que pueda agregar sus propios tipos de serialización. Para obtener más información sobre cómo extender la biblioteca de cálculo de referencias, vea [Cómo: extender la biblioteca de serialización](../dotnet/how-to-extend-the-marshaling-library.md).
 
-En versiones anteriores, se podían serializar los datos mediante el uso de [de invocación de plataforma](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Para obtener más información acerca de `PInvoke`, consulte [llamar a funciones nativas desde código administrado](../dotnet/calling-native-functions-from-managed-code.md).
-
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md)<br/>
 [Cómo: Extender la biblioteca de serialización](../dotnet/how-to-extend-the-marshaling-library.md)

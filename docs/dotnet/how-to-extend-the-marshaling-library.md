@@ -1,42 +1,42 @@
 ---
-title: Procedimiento Extender la biblioteca de serialización
+title: 'Cómo: Extender la biblioteca de cálculo de referencias'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387310"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545274"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>Procedimiento Extender la biblioteca de serialización
+# <a name="how-to-extend-the-marshaling-library"></a>Cómo: Extender la biblioteca de cálculo de referencias
 
-En este tema se explica cómo extender la biblioteca de serialización para proporcionar más conversiones entre tipos de datos. Los usuarios pueden extender la biblioteca de serialización para cualquier conversión de datos que no se admite actualmente por la biblioteca.
+En este tema se explica cómo extender la biblioteca de serialización para proporcionar más conversiones entre los tipos de datos. Los usuarios pueden extender la biblioteca de serialización para las conversiones de datos que no admite actualmente la biblioteca.
 
-Puede extender la biblioteca de cálculo de referencias en uno de dos maneras: con o sin un [marshal_context Class](../dotnet/marshal-context-class.md). Revise el [Overview of Marshaling en C++](../dotnet/overview-of-marshaling-in-cpp.md) tema para determinar si una nueva conversión requiere un contexto.
+Puede extender la biblioteca de serialización de una de las dos maneras siguientes: con o sin una [clase marshal_context](../dotnet/marshal-context-class.md). Revise la [información general sobre el cálculo C++ de referencias en](../dotnet/overview-of-marshaling-in-cpp.md) el tema para determinar si una nueva conversión requiere un contexto.
 
-En ambos casos, en primer lugar cree un archivo para nuevas conversiones de cálculo de referencias. Hacerlo para mantener la integridad del cálculo de referencias de archivos de la biblioteca estándar. Si desea trasladar un proyecto a otro equipo o a otro programador, debe copiar el archivo nuevo cálculo de referencias junto con el resto del proyecto. De esta manera, el usuario que recibe el proyecto tendrá la garantía de recibir las nuevas conversiones y no tendrá que modificar los archivos de biblioteca.
+En ambos casos, primero se crea un archivo para las nuevas conversiones de cálculo de referencias. Lo hace para conservar la integridad de los archivos de la biblioteca de serialización estándar. Si desea trasladar un proyecto a otro equipo o a otro programador, debe copiar el nuevo archivo de serialización junto con el resto del proyecto. De esta manera, se garantizará que el usuario que recibe el proyecto recibirá las conversiones nuevas y no tendrá que modificar ningún archivo de biblioteca.
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Para extender la biblioteca de cálculo de referencias con una conversión que no requiere un contexto
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Para extender la biblioteca de serialización con una conversión que no requiere un contexto
 
-1. Cree un archivo para almacenar las nuevas funciones de cálculo de referencias;.
+1. Cree un archivo para almacenar las nuevas funciones de cálculo de referencias, por ejemplo, Marshal. h.
 
-1. Incluir uno o varios de los archivos de biblioteca de cálculo de referencias:
+1. Incluya uno o más de los archivos de biblioteca de serialización:
 
-   - Marshal.h para los tipos base.
+   - Marshal. h para tipos base.
 
-   - marshal_windows.h para tipos de datos de windows.
+   - marshal_windows. h para tipos de datos de Windows.
 
-   - marshal_cppstd.h para C++ tipos de datos de la biblioteca estándar.
+   - marshal_cppstd. h para C++ tipos de datos de la biblioteca estándar.
 
-   - marshal_atl.h para tipos de datos ATL.
+   - marshal_atl. h para tipos de datos de ATL.
 
-1. Use el código al final de estos pasos para escribir la función de conversión. En este código, que es el tipo para convertir en, FROM es el tipo para convertir de, y `from` es el parámetro que se va a convertir.
+1. Utilice el código al final de estos pasos para escribir la función de conversión. En este código, para es el tipo al que se va a convertir, de es el tipo del que se va a convertir y `from` es el parámetro que se va a convertir.
 
-1. Reemplace el comentario sobre la lógica de conversión con el código para convertir el `from` parámetro en un objeto de para escribir y devolver el objeto convertido.
+1. Reemplace el comentario sobre la lógica de conversión por código para convertir el parámetro `from` en un objeto de para escribir y devolver el objeto convertido.
 
 ```
 namespace msclr {
@@ -49,29 +49,29 @@ namespace msclr {
 }
 ```
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Para extender la biblioteca con una conversión que requiere un contexto de serialización
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Para extender la biblioteca de serialización con una conversión que requiere un contexto
 
-1. Crear un archivo para almacenar las nuevas funciones de cálculo de referencias
+1. Cree un archivo para almacenar las nuevas funciones de cálculo de referencias, por ejemplo, Marshal. h
 
-1. Incluir uno o varios de los archivos de biblioteca de cálculo de referencias:
+1. Incluya uno o más de los archivos de biblioteca de serialización:
 
-   - Marshal.h para los tipos base.
+   - Marshal. h para tipos base.
 
-   - marshal_windows.h para tipos de datos de windows.
+   - marshal_windows. h para tipos de datos de Windows.
 
-   - marshal_cppstd.h para C++ tipos de datos de la biblioteca estándar.
+   - marshal_cppstd. h para C++ tipos de datos de la biblioteca estándar.
 
-   - marshal_atl.h para tipos de datos ATL.
+   - marshal_atl. h para tipos de datos de ATL.
 
-1. Use el código al final de estos pasos para escribir la función de conversión. En este código, que es el tipo para convertir en, FROM es el tipo de conversión, `toObject` es un puntero en el que se va a almacenar el resultado, y `fromObject` es el parámetro que se va a convertir.
+1. Utilice el código al final de estos pasos para escribir la función de conversión. En este código, para es el tipo al que se va a convertir, de es el tipo del que se va a convertir, `toObject` es un puntero en el que se va a almacenar el resultado y `fromObject` es el parámetro que se va a convertir.
 
-1. Reemplace el comentario sobre la inicialización con código para inicializar el `toPtr` al valor vacío adecuado. Por ejemplo, si es un puntero, establézcalo en `NULL`.
+1. Reemplace el comentario sobre la inicialización con código para inicializar el `toPtr` en el valor vacío adecuado. Por ejemplo, si es un puntero, establézcalo en `NULL`.
 
-1. Reemplace el comentario sobre la lógica de conversión con el código para convertir el `from` parámetro en un objeto de *TO* tipo. Este objeto convertido se almacenará en `toPtr`.
+1. Reemplace el comentario sobre la lógica de conversión por código para convertir el parámetro `from` en un objeto de *a* tipo. Este objeto convertido se almacenará en `toPtr`.
 
-1. Reemplace el comentario sobre la configuración de `toObject` con el código para establecer `toObject` en el objeto convertido.
+1. Reemplace el comentario sobre el establecimiento de `toObject` por el código para establecer `toObject` en el objeto convertido.
 
-1. Reemplace el comentario sobre la liberación de recursos nativos con código para liberar memoria asignada por `toPtr`. Si `toPtr` memoria asignada mediante el uso de `new`, utilice `delete` para liberar la memoria.
+1. Reemplace el comentario sobre la limpieza de recursos nativos con código para liberar cualquier memoria asignada por `toPtr`. Si `toPtr` memoria asignada mediante `new`, utilice `delete` para liberar memoria.
 
 ```
 namespace msclr {
@@ -104,9 +104,9 @@ namespace msclr {
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente amplía con una conversión que no requiere un contexto de la biblioteca de serialización. En este ejemplo, el código convierte la información del empleado de un tipo de datos nativo a un tipo de datos administrados.
+En el ejemplo siguiente se extiende la biblioteca de serialización con una conversión que no requiere un contexto. En este ejemplo, el código convierte la información de empleado de un tipo de datos nativo a un tipo de datos administrado.
 
-```
+```cpp
 // MyMarshalNoContext.cpp
 // compile with: /clr
 #include <msclr/marshal.h>
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-En el ejemplo anterior, el `marshal_as` función devuelve un identificador para los datos convertidos. Esto se hace para evitar la creación de una copia adicional de los datos. Devolver directamente la variable habría un costo de rendimiento innecesaria asociados con él.
+En el ejemplo anterior, la función `marshal_as` devuelve un identificador a los datos convertidos. Esto se hizo para evitar la creación de una copia adicional de los datos. La devolución directa de la variable tendría un costo de rendimiento innecesario asociado.
 
 ```Output
 Managed name: Jeff Smith
@@ -166,9 +166,9 @@ Managed zip code: 98111
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se convierte la información del empleado de un tipo de datos administrado a un tipo de datos nativos. Esta conversión requiere un contexto de cálculo de referencias.
+En el siguiente ejemplo se convierte la información de empleado de un tipo de datos administrado a un tipo de datos nativo. Esta conversión requiere un contexto de serialización.
 
-```
+```cpp
 // MyMarshalContext.cpp
 // compile with: /clr
 #include <stdlib.h>
@@ -266,6 +266,6 @@ Native address: 123 Main Street
 Native zip code: 98111
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general de la serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md)

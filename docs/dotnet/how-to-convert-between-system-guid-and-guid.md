@@ -1,5 +1,5 @@
 ---
-title: 'Procedimiento Conversión entre System:: GUID y _GUID'
+title: 'Cómo: Realizar la conversión entre System::Guid y _GUID'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-ms.openlocfilehash: e74a95eea1018916dcdef6b133ef1f0ab0533f96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0150053157d2694788cd50bf64097805a8eda88
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379069"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545064"
 ---
-# <a name="how-to-convert-between-systemguid-and-guid"></a>Procedimiento Conversión entre System:: GUID y _GUID
+# <a name="how-to-convert-between-systemguid-and-_guid"></a>Cómo: Realizar la conversión entre System::Guid y _GUID
 
-Ejemplo de código siguiente muestra cómo convertir entre una <xref:System.Guid> y un `_GUID`.
+En el ejemplo de código siguiente se muestra cómo convertir entre un <xref:System.Guid> y un `_GUID`.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // convert_guids.cpp
 // compile with: /clr
 #include <windows.h>
@@ -65,6 +65,6 @@ int main() {
 11111111-2222-3333-4455-555555555555
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

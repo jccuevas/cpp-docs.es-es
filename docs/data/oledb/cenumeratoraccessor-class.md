@@ -14,14 +14,12 @@ f1_keywords:
 - CEnumeratorAccessor.m_nType
 - CEnumeratorAccessor::m_nType
 - ATL.CEnumeratorAccessor.m_nType
-- m_nType
 - ATL::CEnumeratorAccessor::m_szDescription
 - CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szDescription
 - ATL.CEnumeratorAccessor.m_szDescription
 - CEnumeratorAccessor::m_szName
 - ATL.CEnumeratorAccessor.m_szName
-- m_szName
 - ATL::CEnumeratorAccessor::m_szName
 - CEnumeratorAccessor.m_szName
 - CEnumeratorAccessor::m_szParseName
@@ -37,16 +35,16 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: e609b346bb4a0c2469c24e20540c646fa869ae26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d85f630a01ab7e2a07035a8a304a56be91eca8a9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230737"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545634"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor (Clase)
 
-Utilizado por [CEnumerator](../../data/oledb/cenumerator-class.md) para tener acceso a los datos desde el conjunto de filas del enumerador.
+Usado por [CEnumerator](../../data/oledb/cenumerator-class.md) para tener acceso a los datos del conjunto de filas del enumerador.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -58,25 +56,25 @@ class CEnumeratorAccessor
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="data-members"></a>Miembros de datos
 
 |||
 |-|-|
-|[m_bIsParent](#bisparent)|Una variable que indica si el enumerador es un enumerador primario, si la fila es un enumerador.|
-|[m_nType](#ntype)|Una variable que indica si la fila describe un origen de datos o un enumerador.|
+|[m_bIsParent](#bisparent)|Variable que indica si el enumerador es un enumerador primario, si la fila es un enumerador.|
+|[m_nType](#ntype)|Variable que indica si la fila describe un origen de datos o un enumerador.|
 |[m_szDescription](#szdescription)|La descripción del origen de datos o enumerador.|
-|[m_szName](#szname)|El nombre del origen de datos o enumerador.|
-|[m_szParseName](#szparsename)|Cadena que se pasan al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obtener un moniker para el origen de datos o enumerador.|
+|[m_szName](#szname)|Nombre del origen de datos o enumerador.|
+|[m_szParseName](#szparsename)|Cadena que se va a pasar a [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) para obtener un moniker para el origen de datos o el enumerador.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Este conjunto de filas se compone de los orígenes de datos y enumeradores visibles desde el enumerador actual.
+Este conjunto de filas consta de los orígenes de datos y los enumeradores visibles en el enumerador actual.
 
-## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
 
-Una variable que indica si el enumerador es un enumerador primario, si la fila es un enumerador.
+Variable que indica si el enumerador es un enumerador primario, si la fila es un enumerador.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -84,13 +82,13 @@ Una variable que indica si el enumerador es un enumerador primario, si la fila e
 VARIANT_BOOL m_bIsParent;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Vea [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en la *Referencia del programador de OLE DB* para obtener más información.
 
-## <a name="ntype"></a> CEnumeratorAccessor::m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor:: m_nType
 
-Una variable que indica si la fila describe un origen de datos o un enumerador.
+Variable que indica si la fila describe un origen de datos o un enumerador.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -98,11 +96,11 @@ Una variable que indica si la fila describe un origen de datos o un enumerador.
 USHORT m_nType;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Vea [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en la *Referencia del programador de OLE DB* para obtener más información.
 
-## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
 
 La descripción del origen de datos o enumerador.
 
@@ -112,13 +110,13 @@ La descripción del origen de datos o enumerador.
 WCHAR m_szDescription[129];
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Vea [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en la *Referencia del programador de OLE DB* para obtener más información.
 
-## <a name="szname"></a> CEnumeratorAccessor::m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor:: m_szName
 
-El nombre del origen de datos o enumerador.
+Nombre del origen de datos o enumerador.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -126,13 +124,13 @@ El nombre del origen de datos o enumerador.
 WCHAR m_szName[129];
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Vea [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en la *Referencia del programador de OLE DB* para obtener más información.
 
-## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
 
-Cadena que se pasan al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obtener un moniker para el origen de datos o enumerador.
+Cadena que se va a pasar a [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) para obtener un moniker para el origen de datos o el enumerador.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -140,11 +138,11 @@ Cadena que se pasan al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl
 WCHAR m_szParseName[129];
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Vea [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en la *Referencia del programador de OLE DB* para obtener más información.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

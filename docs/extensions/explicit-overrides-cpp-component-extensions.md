@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516680"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "79545436"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Invalidaciones explícitas (C++/CLI y C++/CX)
 
@@ -39,9 +39,9 @@ Lista delimitada por comas de uno o varios nombres de función que se van a inva
 *overriding-function-definition*<br/>
 Instrucciones de cuerpo de función que definen la función de invalidación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Use invalidaciones explícitas para crear un alias para una firma del método o proporcionar diferentes implementaciones para métodos con la misma firma.
+Use invalidaciones explícitas para crear un alias para una firma de método o para proporcionar implementaciones diferentes para los métodos con la misma firma.
 
 Para obtener información sobre cómo modificar el comportamiento de los tipos y los miembros de tipo heredados, consulte [Override Specifiers](override-specifiers-cpp-component-extensions.md) (Especificadores de invalidación).
 
@@ -53,7 +53,7 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener información sobre las invalidaciones explícitas en código nativo o compilado con `/clr:oldSyntax`, consulte el artículo sobre [las invalidaciones explícitas](../cpp/explicit-overrides-cpp.md).
 
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

@@ -2,18 +2,15 @@
 title: property (C++/CLI y C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516510"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545760"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI y C++/CX)
 
@@ -65,7 +62,7 @@ property type default[index_list] {
 El tipo de datos del valor de propiedad y, por consiguiente, la propiedad en sí.
 
 *property_name*<br/>
-Nombre de la propiedad.
+El nombre de la propiedad.
 
 *access-modifier*<br/>
 Un calificador de acceso. Los calificadores válidos son **static** y **virtual**.
@@ -86,7 +83,7 @@ El cuerpo del método de propiedad del descriptor de acceso set o get. *property
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-Para obtener más información, consulte [Propiedades (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Para obtener más información, consulte [Propiedades (C++/CX)](../cppcx/properties-c-cx.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -125,7 +122,7 @@ Parámetros del método raise; debe coincidir con la firma del delegado.
 *index_list*<br/>
 Una lista delimitada por comas de uno o más índices especificados entre corchetes (el operador de subíndice, ([])). Para cada índice, especifique un tipo y, de forma opcional, un identificador que pueden utilizarse en el cuerpo del método de propiedad.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 En el primer ejemplo de sintaxis se muestra una *propiedad simple*, que declara implícitamente un método `set` y `get`. El compilador crea automáticamente un campo privado para almacenar el valor de la propiedad.
 
@@ -213,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

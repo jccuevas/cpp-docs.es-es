@@ -8,7 +8,6 @@ f1_keywords:
 - CBulkRowset
 - ATL.CBulkRowset<TAccessor>
 - CBulkRowset::AddRefRows
-- AddRefRows
 - CBulkRowset.AddRefRows
 - ATL.CBulkRowset<TAccessor>.AddRefRows
 - ATL::CBulkRowset::AddRefRows
@@ -22,7 +21,6 @@ f1_keywords:
 - ATL.CBulkRowset.CBulkRowset
 - ATL::CBulkRowset<TAccessor>::CBulkRowset
 - CBulkRowset<TAccessor>::CBulkRowset
-- CBulkRowset
 - ATL.CBulkRowset.MoveFirst
 - CBulkRowset<TAccessor>.MoveFirst
 - ATL.CBulkRowset<TAccessor>.MoveFirst
@@ -39,7 +37,6 @@ f1_keywords:
 - ATL::CBulkRowset::MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveLast
 - CBulkRowset<TAccessor>::MoveLast
-- MoveLast
 - ATL.CBulkRowset<TAccessor>.MoveNext
 - ATL::CBulkRowset::MoveNext
 - CBulkRowset::MoveNext
@@ -49,7 +46,6 @@ f1_keywords:
 - CBulkRowset<TAccessor>.MoveNext
 - CBulkRowset<TAccessor>::MoveNext
 - CBulkRowset::MovePrev
-- MovePrev
 - CBulkRowset<TAccessor>::MovePrev
 - ATL::CBulkRowset<TAccessor>::MovePrev
 - CBulkRowset<TAccessor>.MovePrev
@@ -59,20 +55,17 @@ f1_keywords:
 - ATL.CBulkRowset<TAccessor>.MovePrev
 - CBulkRowset<TAccessor>::MoveToBookmark
 - CBulkRowset.MoveToBookmark
-- MoveToBookmark
 - ATL.CBulkRowset.MoveToBookmark
 - CBulkRowset::MoveToBookmark
 - ATL::CBulkRowset<TAccessor>::MoveToBookmark
 - ATL::CBulkRowset::MoveToBookmark
 - CBulkRowset.MoveToRatio
 - ATL::CBulkRowset::MoveToRatio
-- MoveToRatio
 - CBulkRowset::MoveToRatio
 - ATL.CBulkRowset<TAccessor>.MoveToRatio
 - ATL::CBulkRowset<TAccessor>::MoveToRatio
 - ATL.CBulkRowset.MoveToRatio
 - CBulkRowset<TAccessor>::MoveToRatio
-- ReleaseRows
 - ATL.CBulkRowset<TAccessor>.ReleaseRows
 - ATL::CBulkRowset<TAccessor>::ReleaseRows
 - ATL.CBulkRowset.ReleaseRows
@@ -102,16 +95,16 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176474"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545802"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset (Clase)
 
-Recupera y manipula filas que se va a trabajar con datos de forma masiva mediante la recuperación de varios identificadores de fila con una sola llamada.
+Captura y manipula las filas para trabajar en los datos de forma masiva mediante la recuperación de varios identificadores de fila con una sola llamada.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -129,7 +122,7 @@ Una clase de descriptor de acceso.
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
@@ -137,24 +130,24 @@ Una clase de descriptor de acceso.
 |-|-|
 |[AddRefRows](#addrefrows)|Incrementa el recuento de referencias.|
 |[CBulkRowset](#cbulkrowset)|Constructor.|
-|[MoveFirst](#movefirst)|Recupera la primera fila de datos, realice una captura de forma masiva de nuevo si es necesario.|
-|[MoveLast](#movelast)|Se mueve a la última fila.|
+|[MoveFirst](#movefirst)|Recupera la primera fila de datos y realiza una nueva recuperación en bloque si es necesario.|
+|[MoveLast](#movelast)|Se desplaza a la última fila.|
 |[MoveNext](#movenext)|Recupera la siguiente fila de datos.|
-|[MovePrev](#moveprev)|Se desplaza a la fila anterior.|
-|[MoveToBookmark](#movetobookmark)|Recupera la fila en un desplazamiento especificado o la fila marcada con un marcador de marcador.|
-|[MoveToRatio](#movetoratio)|Captura las filas a partir de una posición en el conjunto de filas fraccionaria.|
-|[ReleaseRows](#releaserows)|Establece la fila actual (`m_nCurrentRow`) a cero y libera todas las filas.|
-|[SetRows](#setrows)|Establece el número de identificadores de fila para ser recuperado por una llamada.|
+|[Plaza](#moveprev)|Se desplaza a la fila anterior.|
+|[MoveToBookmark](#movetobookmark)|Captura la fila marcada por un marcador o la fila en un desplazamiento especificado de ese marcador.|
+|[MoveToRatio](#movetoratio)|Captura las filas a partir de una posición fraccionaria en el conjunto de filas.|
+|[ReleaseRows](#releaserows)|Establece la fila actual (`m_nCurrentRow`) en cero y libera todas las filas.|
+|[SetRows](#setrows)|Establece el número de identificadores de fila que se van a recuperar en una llamada.|
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra el uso de la `CBulkRowset` clase.
+En el ejemplo siguiente se muestra el uso de la clase `CBulkRowset`.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a> CBulkRowset::AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset:: AddRefRows
 
-Las llamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) para incrementar el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.
+Llama a [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) para incrementar el recuento de referencias para todas las filas recuperadas actualmente del conjunto de filas bulk.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -164,11 +157,11 @@ HRESULT AddRefRows() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
 
-Crea un nuevo `CBulkRowset` de objetos y el recuento de filas de forma predeterminada se establece en 10.
+Crea un nuevo objeto `CBulkRowset` y establece el recuento de filas predeterminado en 10.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -176,7 +169,7 @@ Crea un nuevo `CBulkRowset` de objetos y el recuento de filas de forma predeterm
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a> CBulkRowset::MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset:: MoveFirst
 
 Recupera la primera fila de datos.
 
@@ -188,11 +181,11 @@ HRESULT MoveFirst() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-## <a name="movelast"></a> CBulkRowset::MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset:: MoveLast
 
-Se mueve a la última fila.
+Se desplaza a la última fila.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -202,9 +195,9 @@ HRESULT MoveLast() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-## <a name="movenext"></a> CBulkRowset::MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset:: MoveNext
 
 Recupera la siguiente fila de datos.
 
@@ -216,9 +209,9 @@ HRESULT MoveNext() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar. Cuando se alcanza el final del conjunto de filas, devuelve DB_S_ENDOFROWSET.
+HRESULT estándar. Cuando se alcanza el final del conjunto de filas, devuelve DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a> CBulkRowset::MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset:: MovePrev
 
 Se desplaza a la fila anterior.
 
@@ -230,11 +223,11 @@ HRESULT MovePrev() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
 
-Recopila la fila marcada por fila en un desplazamiento especificado o un marcador (*lSkip*) desde ese marcador.
+Captura la fila marcada por un marcador o la fila en un desplazamiento especificado (*lSkip*) de ese marcador.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -245,19 +238,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parámetros
 
-*bookmark*<br/>
-[in] Un marcador de marcar la ubicación desde la que desea capturar datos.
+*Marcador*<br/>
+de Marcador que marca la ubicación desde la que se van a capturar los datos.
 
 *lSkip*<br/>
-[in] El recuento de número de filas desde el marcador para la fila de destino. Si *lSkip* es cero, la primera fila es la fila marcada. Si *lSkip* es 1, la primera fila es la fila después de la fila marcada. Si *lSkip* es -1, la primera fila es la fila antes de la fila marcada.
+de Número de filas del marcador a la fila de destino. Si *lSkip* es cero, la primera fila capturada es la fila marcada. Si *lSkip* es 1, la primera fila capturada es la fila que se encuentra después de la fila marcada. Si *lSkip* es-1, la primera fila capturada es la fila anterior a la fila marcada.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset:: MoveToRatio
 
-Captura las filas a partir de una posición en el conjunto de filas fraccionaria.
+Captura las filas a partir de una posición fraccionaria en el conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -269,26 +262,26 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 #### <a name="parameters"></a>Parámetros
 
 *nNumerator*<br/>
-[in] El numerador usa para determinar la posición desde la que se va a capturar datos fraccionaria.
+de El numerador utilizado para determinar la posición decimal desde la que se van a capturar los datos.
 
 *nDenominator*<br/>
-[in] El denominador que se usa para determinar la posición desde la que se va a capturar datos fraccionaria.
+de El denominador que se usa para determinar la posición fraccionaria desde la que se van a capturar los datos.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`MoveToRatio` captura las filas más o menos según la siguiente fórmula:
+`MoveToRatio` captura las filas aproximadamente según la fórmula siguiente:
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) en el *referencia del programador de OLE DB*.
+donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. La precisión de esta fórmula depende del proveedor concreto. Para obtener más información, vea [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="releaserows"></a> CBulkRowset::ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset:: ReleaseRows
 
-Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.
+Llama a [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para reducir el recuento de referencias para todas las filas recuperadas actualmente del conjunto de filas bulk.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -298,9 +291,9 @@ HRESULT ReleaseRows() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-## <a name="setrows"></a> CBulkRowset::SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset:: SetRows
 
 Establece el número de identificadores de fila recuperados por cada llamada.
 
@@ -313,13 +306,13 @@ void SetRows(DBROWCOUNT nRows) throw();
 #### <a name="parameters"></a>Parámetros
 
 *nRows*<br/>
-[in] El nuevo tamaño del conjunto de filas (número de filas).
+de Nuevo tamaño del conjunto de filas (número de filas).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si se llama a esta función, debe ser antes de abre el conjunto de filas.
+Si llama a esta función, debe ser antes de que se abra el conjunto de filas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

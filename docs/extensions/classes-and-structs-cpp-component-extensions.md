@@ -1,21 +1,24 @@
 ---
 title: ref class y ref struct (C++/CLI y C++/CX)
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788784"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544667"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class y ref struct  (C++/CLI y C++/CX)
 
@@ -54,7 +57,7 @@ Nombre de la clase o struct.
 
 Para más información, consulte las descripciones específicas del lenguaje de este parámetro en las secciones Windows Runtime y Common Language Runtime.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La accesibilidad del miembro predeterminado de un objeto declarado con **ref class** o **value class** es **private**. Y la accesibilidad del miembro predeterminado de un objeto declarado con **ref struct** o **value struct** es **public**.
 
@@ -70,7 +73,7 @@ Para obtener más información sobre clases y structs, vea
 
 - [Clases, estructuras y uniones](../cpp/classes-and-structs-cpp.md)
 
-- [Destructores y finalizadores en Procedimiento: Definición y uso de clases y structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destructores y finalizadores en cómo: definir y utilizar clases y Structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Operadores definidos por el usuario (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -82,9 +85,9 @@ Para obtener más información sobre clases y structs, vea
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Consulte [Ref (Clases y structs)](../cppcx/ref-classes-and-structs-c-cx.md) y [Value (Clases y structs)](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
+Consulte [Ref (Clases y structs)](../cppcx/ref-classes-and-structs-c-cx.md) y [Value (Clases y structs)](../cppcx/value-classes-and-structs-c-cx.md).
 
 ### <a name="parameters"></a>Parámetros
 
@@ -101,7 +104,7 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 En la tabla siguiente se enumeran las diferencias con la sintaxis mostrada en la sección **Todos los runtimes** que es específica de C++/CLI.
 
@@ -118,6 +121,6 @@ Las palabras clave **value class** y **value struct** indican al compilador que 
 
 Opción del compilador: `/clr`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

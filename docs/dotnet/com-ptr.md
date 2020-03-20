@@ -3,20 +3,20 @@ title: com::ptr
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-- ptr
+- msclr/com/com::ptr
 helpviewer_keywords:
 - com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-ms.openlocfilehash: 74e168fe916b930e499a82ca3fcf5c7d0d669719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 993511142b72bd769fe8582b2650e5d020bd6ce2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209209"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545862"
 ---
 # <a name="comptr"></a>com::ptr
 
-Un contenedor para un objeto COM que se puede usar como un miembro de una clase CLR. El contenedor también automatiza la administración de la duración del objeto COM, liberando referencias de propiedad en el objeto cuando se llama a su destructor. Análoga a [clase CComPtr](../atl/reference/ccomptr-class.md).
+Contenedor de un objeto COM que se puede utilizar como miembro de una clase de CLR. El contenedor también automatiza la administración de la duración del objeto COM, liberando las referencias de propiedad en el objeto cuando se llama a su destructor. Análogo a la [Clase CComPtr](../atl/reference/ccomptr-class.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,10 +24,10 @@ Un contenedor para un objeto COM que se puede usar como un miembro de una clase 
 #include <msclr\com\ptr.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-[Clase com:: PTR](../dotnet/com-ptr-class.md) se define en el \<msclr\com\ptr.h > archivo.
+[com::p TR (clase](../dotnet/com-ptr-class.md) ) se define en el archivo de > de \<msclr\com\ptr.h.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md)

@@ -11,7 +11,6 @@ f1_keywords:
 - ATL.CDBPropIDSet.AddPropertyID
 - ATL::CDBPropIDSet::AddPropertyID
 - ATL::CDBPropIDSet::CDBPropIDSet
-- CDBPropIDSet
 - CDBPropIDSet.CDBPropIDSet
 - CDBPropIDSet::CDBPropIDSet
 - ATL.CDBPropIDSet.CDBPropIDSet
@@ -21,7 +20,6 @@ f1_keywords:
 - CDBPropIDSet::operator=
 - CDBPropIDSet.SetGUID
 - ATL::CDBPropIDSet::SetGUID
-- SetGUID
 - ATL.CDBPropIDSet.SetGUID
 - CDBPropIDSet::SetGUID
 helpviewer_keywords:
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209326"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546126"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet (Clase)
 
-Hereda el `DBPROPIDSET` estructurar y agrega un constructor que inicializa los campos de clave, así como la [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) obtener acceso a método.
+Hereda de la estructura `DBPROPIDSET` y agrega un constructor que inicializa los campos clave, así como el método de acceso [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,29 +52,29 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[AddPropertyID](#addpropertyid)|Agrega una propiedad para el conjunto de Id. de propiedad.|
+|[AddPropertyID](#addpropertyid)|Agrega una propiedad al conjunto de IDENTIFICADOres de propiedad.|
 |[CDBPropIDSet](#cdbpropidset)|Constructor.|
-|[SetGUID](#setguid)|Establece el GUID del identificador de propiedad de conjunto.|
+|[SetGUID](#setguid)|Establece el GUID del conjunto de IDENTIFICADOres de propiedad.|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operator =](#op_equal)|Asigna el contenido de Id. de propiedad de un juego a otro.|
+|[operador =](#op_equal)|Asigna el contenido de un identificador de propiedad establecido en otro.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Uso de los consumidores de OLE DB `DBPROPIDSET` estructuras para pasar una matriz de identificadores de propiedad para el que el consumidor desea obtener información de la propiedad. Las propiedades identificadas en un único [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura pertenecen a una propiedad establecida.
+OLE DB consumidores usan estructuras `DBPROPIDSET` para pasar una matriz de identificadores de propiedad para los que el consumidor desea obtener información de propiedades. Las propiedades identificadas en una única estructura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) pertenecen a un conjunto de propiedades.
 
-## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a>CDBPropIDSet:: AddPropertyID
 
-Agrega un identificador de propiedad para el conjunto de Id. de propiedad.
+Agrega un identificador de propiedad al conjunto de IDENTIFICADOres de propiedad.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -86,12 +84,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 #### <a name="parameters"></a>Parámetros
 
-*propid*<br/>
-[in] Establece el identificador de propiedad que se agregarán al identificador de propiedad.
+*PROPID*<br/>
+de IDENTIFICADOR de propiedad que se va a agregar al conjunto de IDENTIFICADOres de propiedad.
 
-## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
+## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a>CDBPropIDSet:: CDBPropIDSet
 
-El constructor. Inicializa el `rgProperties`, `cProperties`y (opcionalmente) `guidPropertySet` campos de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura.
+El constructor. Inicializa el `rgProperties`, `cProperties`y, opcionalmente, `guidPropertySet` campos de la estructura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -106,14 +104,14 @@ CDBPropIDSet();
 #### <a name="parameters"></a>Parámetros
 
 *guid*<br/>
-[in] Un GUID que se usa para inicializar el `guidPropertySet` campo.
+de GUID que se usa para inicializar el campo de `guidPropertySet`.
 
 *propidset*<br/>
-[in] Otro `CDBPropIDSet` objeto para la construcción de copia.
+de Otro objeto `CDBPropIDSet` para la construcción de copia.
 
-## <a name="setguid"></a> CDBPropIDSet::SetGUID
+## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a>CDBPropIDSet:: SetGUID
 
-Establece el campo GUID de la `DBPROPIDSET` estructura.
+Establece el campo GUID en la estructura de `DBPROPIDSET`.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -124,15 +122,15 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parámetros
 
 *guid*<br/>
-[in] Un GUID que se usa para establecer el `guidPropertySet` campo de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura.
+de GUID que se usa para establecer el `guidPropertySet` campo de la estructura [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este campo se puede establecer el [constructor](../../data/oledb/cdbpropidset-cdbpropidset.md) también. Si utiliza el constructor predeterminado para esta clase, llame a esta función.
+Este campo también se puede establecer mediante el [constructor](../../data/oledb/cdbpropidset-cdbpropidset.md) . Llame a esta función si usa el constructor predeterminado para esta clase.
 
-## <a name="op_equal"></a> CDBPropIDSet::operator =
+## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a>CDBPropIDSet:: Operator =
 
-Asigna el contenido de Id. de una propiedad establecida en otro conjunto de propiedades de identificador.
+Asigna el contenido de un identificador de propiedad establecido en otro conjunto de propiedades de identificador.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -140,7 +138,7 @@ Asigna el contenido de Id. de una propiedad establecida en otro conjunto de prop
 CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,25 +1,25 @@
 ---
-title: Procedimiento Definir un Constructor estático de interfaz (C++ / c++ / CLI)
+title: 'Cómo: Definir un constructor estático de interfaz (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562605a579ac372e4a69953853a6e32668357565
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378987"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544974"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Procedimiento Definir un Constructor estático de interfaz (C++ / c++ / CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Cómo: Definir un constructor estático de interfaz (C++/CLI)
 
-Una interfaz puede tener un constructor estático, que se puede usar para inicializar a los miembros de datos estáticos.  Un constructor estático se llamará a lo sumo una vez y se llamará antes de la primera vez que se tiene acceso a un miembro estático de interfaz.
+Una interfaz puede tener un constructor estático, que se puede utilizar para inicializar miembros de datos estáticos.  Se llamará a un constructor estático como máximo una vez y se llamará antes de la primera vez que se tenga acceso a un miembro de interfaz estático.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // mcppv2_interface_class2.cpp
 // compile with: /clr
 using namespace System;
@@ -54,6 +54,6 @@ in MyInterface static constructor
 99
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [clase de interfaz](../extensions/interface-class-cpp-component-extensions.md)

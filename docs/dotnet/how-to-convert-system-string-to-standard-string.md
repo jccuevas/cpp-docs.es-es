@@ -1,25 +1,25 @@
 ---
-title: 'Procedimiento Convertir System:: String en cadenas estándar'
+title: 'Cómo: Convertir System::String en cadenas estándar'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: 3ea3c56af2fefaf7c65055135e8549fb153c9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd73b8fed98918135b66af1b6351977426cd26e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379121"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545304"
 ---
-# <a name="how-to-convert-systemstring-to-standard-string"></a>Procedimiento Convertir System:: String en cadenas estándar
+# <a name="how-to-convert-systemstring-to-standard-string"></a>Cómo: Convertir System::String en cadenas estándar
 
 Puede convertir <xref:System.String> en `std::string` o `std::wstring`, sin utilizar `PtrToStringChars` en Vcclr.h.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // convert_system_string.cpp
 // compile with: /clr
 #include <string>
@@ -63,6 +63,6 @@ abcd
 efgh
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

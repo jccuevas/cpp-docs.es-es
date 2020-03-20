@@ -1,7 +1,7 @@
 ---
 title: Extensiones de componentes de .NET y UWP
 ms.date: 10/12/2018
-ms.topic: reference
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516720"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "79544764"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensiones de componentes de .NET y UWP
 
@@ -43,18 +43,18 @@ En la tabla siguiente se enumeran las palabras clave en la extensión del lengua
 |**value class**<br /><br /> **value struct**|No|Declara una clase de valor.|[Clases y structs](classes-and-structs-cpp-component-extensions.md)|
 |**clase de interfaz**<br /><br /> **interface struct**|No|Declara una interfaz.|[clase de interfaz](interface-class-cpp-component-extensions.md)|
 |**enum class**<br /><br /> **enum struct**|No|Declara una enumeración.|[enum class](enum-class-cpp-component-extensions.md)|
-|**propiedad**|Sí|Declara una propiedad.|[propiedad](property-cpp-component-extensions.md)|
+|**property**|Sí|Declara una propiedad.|[property](property-cpp-component-extensions.md)|
 |**delegate**|Sí|Declara un delegado.|[delegate (C++/CLI y C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|Sí|Declara un evento.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Especificadores de invalidación
 
-Puede usar las palabras clave siguientes para calificar el comportamiento de invalidación de la derivación. Aunque la palabra clave **new** no es una extensión de C++, se muestra aquí porque se puede usar en un contexto adicional. Algunos especificadores también son válidos para la programación nativa. Para obtener más información, vea [Cómo: Declarar especificadores de invalidación en compilaciones nativas (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Puede usar las palabras clave siguientes para calificar el comportamiento de invalidación de la derivación. Aunque la palabra clave **new** no es una extensión de C++, se muestra aquí porque se puede usar en un contexto adicional. Algunos especificadores también son válidos para la programación nativa. Para obtener más información, vea [Cómo: declarar especificadores de invalidación en compilaciones nativas (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Palabra clave|Contextual|Propósito|Referencia|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Sí|Indica que las funciones o las clases son abstractas.|[abstract](abstract-cpp-component-extensions.md)|
-|**new**|No|Indica que una función no es una invalidación de una versión de la clase base.|[new (nueva ranura en vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**nuevo**|No|Indica que una función no es una invalidación de una versión de la clase base.|[new (nueva ranura en vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|Sí|Indica que un método debe ser una invalidación de una versión de la clase base.|[override](override-cpp-component-extensions.md)|
 |**sealed**|Sí|Evita que las clases se usen como clases base.|[sealed](sealed-cpp-component-extensions.md)|
 
@@ -97,7 +97,7 @@ Las construcciones de lenguaje siguientes se implementan como plantillas, en lug
 
 Los declaradores de tipo siguientes indican al runtime que debe administrar automáticamente la duración y eliminación de los objetos asignados.
 
-|Operador|Propósito|Referencia|
+|Operator|Propósito|Referencia|
 |--------------|-------------|---------------|
 |`^`|Declara un identificador a un objeto; es decir, un puntero a un objeto Windows Runtime o CLR que se elimina automáticamente cuando ya no se usa.|[Identificador a un operador de objeto (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Declara una referencia de seguimiento; es decir, una referencia a un objeto Windows Runtime o CLR que se elimina automáticamente cuando ya no se usa.|[Operador de referencia de seguimiento](tracking-reference-operator-cpp-component-extensions.md)|
@@ -111,7 +111,7 @@ En esta sección se muestran construcciones de programación adicionales y temas
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows Runtime y CLR) Habilita el uso de palabras clave como identificadores.|
 |[Listas de argumentos de variables (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime y CLR) Permite que una función tome un número variable de argumentos.|
 |[Equivalentes de .NET Framework para tipos nativos de C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Enumera los tipos CLR que se usan en lugar de los tipos enteros de C++.|
-|[appdomain](../cpp/appdomain.md) **__declspec** (modificador)|Modificador **__declspec** que requiere la existencia de variables static y globales por appdomain.|
+|[appdomain](../cpp/appdomain.md) **__declspec** modificador de AppDomain|Modificador **__declspec** que requiere la existencia de variables static y globales por appdomain.|
 |[Conversiones de estilo C con /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Describe cómo se interpretan las conversiones de tipo C.|
 |Convención de llamada [__clrcall](../cpp/clrcall.md)|Indica la convención de llamada conforme a CLR.|
 |`__cplusplus_cli`|[Macros predefinidas](../preprocessor/predefined-macros.md)|
@@ -122,7 +122,7 @@ En esta sección se muestran construcciones de programación adicionales y temas
 |[Conversión boxing](boxing-cpp-component-extensions.md)|Muestra las condiciones en las que a los tipos de valores se les aplica la conversión boxing.|
 |[Compatibilidad de compilador para type traits](compiler-support-for-type-traits-cpp-component-extensions.md)|Explica cómo detectar características de tipos en tiempo de compilación.|
 |Pragmas [managed, unmanaged](../preprocessor/managed-unmanaged.md)|Muestra cómo las funciones administradas y no administradas pueden coexistir en el mismo módulo.|
-|[process](../cpp/process.md) **__declspec** (modificador)|Modificador **__declspec** que requiere la existencia de variables static y globales por proceso.|
+|modificador **__declspec** de [proceso](../cpp/process.md)|Modificador **__declspec** que requiere la existencia de variables static y globales por proceso.|
 |[Reflexión (C++-CLI)](../dotnet/reflection-cpp-cli.md)|Muestra la versión de CLR de la información de tipo en tiempo de ejecución.|
 |[String](string-cpp-component-extensions.md)|Describe la conversión del compilador de literales de cadena a <xref:System.String>.|
 |[Reenvío de tipos (C++/CLI)](type-forwarding-cpp-cli.md)|Habilita el movimiento de un tipo en un ensamblado de envío a otro ensamblado de modo que no es necesario volver a compilar el código de cliente.|
@@ -130,7 +130,7 @@ En esta sección se muestran construcciones de programación adicionales y temas
 |[#using (directiva)](../preprocessor/hash-using-directive-cpp.md)|Importa ensamblados externos.|
 |[Documentación de XML](../build/reference/xml-documentation-visual-cpp.md)|Explica la documentación de código basada en XML mediante el uso de [/doc (procesar comentarios de documentación) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [Interoperabilidad nativa y de .NET](../dotnet/native-and-dotnet-interoperability.md)

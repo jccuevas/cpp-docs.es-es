@@ -9,15 +9,12 @@ f1_keywords:
 - CAccessorRowset::Bind
 - CAccessorRowset::CAccessorRowset
 - CAccessorRowset.CAccessorRowset
-- CAccessorRowset
 - ATL.CAccessorRowset.CAccessorRowset
 - ATL::CAccessorRowset::CAccessorRowset
 - CAccessorRowset.Close
 - CAccessorRowset::Close
 - CAccessorRowset::FreeRecordMemory
 - CAccessorRowset.FreeRecordMemory
-- FreeRecordMemory
-- GetColumnInfo
 - CAccessorRowset.GetColumnInfo
 - CAccessorRowset::GetColumnInfo
 helpviewer_keywords:
@@ -30,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283841"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546024"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset (Clase)
 
@@ -61,25 +58,25 @@ Una clase de conjunto de filas.
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[Bind](#bind)|Crea los enlaces (se usa cuando `bBind` se especifica como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset](#caccessorrowset)|Constructor.|
-|[Cerrar](#close)|Cierra el conjunto de filas y los descriptores de acceso.|
-|[FreeRecordMemory](#freerecordmemory)|Libera las columnas en el registro actual que necesitan ser liberados.|
-|[GetColumnInfo](#getcolumninfo)|Implements [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+|[Bind](#bind)|Crea enlaces (se usa cuando se especifica `bBind` como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[Caccessorrowset (](#caccessorrowset)|Constructor.|
+|[Close](#close)|Cierra el conjunto de filas y los descriptores de acceso.|
+|[FreeRecordMemory](#freerecordmemory)|Libera todas las columnas del registro actual que se deben liberar.|
+|[GetColumnInfo](#getcolumninfo)|Implementa [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Clase `TAccessor` administra el descriptor de acceso. Clase *TRowset* administra el conjunto de filas.
+La clase `TAccessor` administra el descriptor de acceso. La clase *TRowset* administra el conjunto de filas.
 
-## <a name="bind"></a> CAccessorRowset::Bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: Bind
 
-Crea los enlaces si especifica `bBind` como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Crea los enlaces si se especifica `bBind` como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -89,9 +86,9 @@ HRESULT Bind();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
 
 Inicializa el objeto `CAccessorRowset`.
 
@@ -101,9 +98,9 @@ Inicializa el objeto `CAccessorRowset`.
 CAccessorRowset();
 ```
 
-## <a name="close"></a> CAccessorRowset::Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset:: Close
 
-Libera los descriptores de acceso activos y el conjunto de filas.
+Libera todos los descriptores de acceso activos y el conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -111,13 +108,13 @@ Libera los descriptores de acceso activos y el conjunto de filas.
 void Close();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Libera la memoria asociada.
+Libera cualquier memoria asociada.
 
-## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset:: FreeRecordMemory
 
-Libera las columnas en el registro actual que necesitan ser liberados.
+Libera todas las columnas del registro actual que se deben liberar.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -125,9 +122,9 @@ Libera las columnas en el registro actual que necesitan ser liberados.
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
 
-Obtiene información de columna del conjunto de filas abierto.
+Obtiene la información de columna del conjunto de filas abierto.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -142,19 +139,19 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador OLE DB*.
+Vea [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en la *Referencia del programador de OLE DB*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar.
+HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El usuario debe liberar el búfer de cadena y la información de la columna devuelta. Use la segunda versión de este método cuando se usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) y necesita reemplazar los enlaces.
+El usuario debe liberar la información de columna y el búfer de cadena devueltos. Use la segunda versión de este método cuando use [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) y necesite invalidar los enlaces.
 
-Para obtener más información, consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador de OLE DB*.
+Para obtener más información, vea [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en la *Referencia del programador de OLE DB*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

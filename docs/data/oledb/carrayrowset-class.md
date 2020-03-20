@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,16 +42,16 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176166"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545616"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset (Clase)
 
-Tiene acceso a los elementos de un conjunto de filas mediante la sintaxis de la matriz.
+Obtiene acceso a los elementos de un conjunto de filas mediante la sintaxis de la matriz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -66,13 +65,13 @@ class CArrayRowset :
 ### <a name="parameters"></a>Parámetros
 
 *TAccessor*<br/>
-El tipo de clase de descriptor de acceso que desea que las filas que se va a usar.
+Tipo de clase de descriptor de acceso que se desea que utilice el conjunto de filas.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
@@ -85,15 +84,15 @@ El tipo de clase de descriptor de acceso que desea que las filas que se va a usa
 
 |||
 |-|-|
-|[operador&#91;&#93;](#operator)|Tiene acceso a un elemento del conjunto de filas.|
+|[Operator&#91;&#93;](#operator)|Obtiene acceso a un elemento del conjunto de filas.|
 
 ### <a name="data-members"></a>Miembros de datos
 
 |||
 |-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|El número de filas ya leídas.|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Número de filas ya leídas.|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
 
 Crea un nuevo objeto `CArrayRowset`.
 
@@ -105,12 +104,12 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>Parámetros
 
-*nMax*<br/>
-[in] Número máximo de filas del conjunto de filas.
+*Nmáx.*<br/>
+de Número máximo de filas del conjunto de filas.
 
-## <a name="snapshot"></a> CArrayRowset::Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: Snapshot
 
-Lee el conjunto de filas completo en memoria, la creación de una imagen o instantánea de él.
+Lee el conjunto de filas completo en la memoria, creando una imagen o una instantánea del mismo.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -118,9 +117,9 @@ Lee el conjunto de filas completo en memoria, la creación de una imagen o insta
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset:: Operator
 
-Proporciona la sintaxis de matriz para obtener acceso a una fila del conjunto de filas.
+Proporciona una sintaxis similar a la de la matriz para tener acceso a una fila del conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -131,20 +130,20 @@ TAccessor & operator[](int nrow);
 #### <a name="parameters"></a>Parámetros
 
 *TAccessor*<br/>
-Un parámetro de plantilla que especifica el tipo de descriptor de acceso almacenada en el conjunto de filas.
+Parámetro de plantilla que especifica el tipo de descriptor de acceso almacenado en el conjunto de filas.
 
 *nRow*<br/>
-[in] Número de la fila (elemento de matriz) que desea tener acceso.
+de Número de la fila (elemento de matriz) a la que se desea obtener acceso.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El contenido de la fila solicitada.
+Contenido de la fila solicitada.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si *funciones nRow* supera el número de filas del conjunto de filas, se produce una excepción.
+Si *nRow* supera el número de filas del conjunto de filas, se produce una excepción.
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
 
 Contiene el número de filas del conjunto de filas que ya se han leído.
 
@@ -154,7 +153,7 @@ Contiene el número de filas del conjunto de filas que ya se han leído.
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

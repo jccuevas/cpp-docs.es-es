@@ -1,53 +1,53 @@
 ---
 title: Convertir proyectos de modo mixto a lenguaje intermedio puro
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - intermediate language, mixed-mode applications
 - mixed-mode applications
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448045"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544739"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertir proyectos de modo mixto a lenguaje intermedio puro
 
-Vinculan todos los proyectos de Visual C++ CLR a las bibliotecas de tiempo de ejecución de C de forma predeterminada. Por lo tanto, estos proyectos se clasifican como aplicaciones en modo mixto, porque combinan código nativo con código que tenga como destino common language runtime (código administrado). Cuando se compilan, se compilan en lenguaje intermedio (IL), también conocido como lenguaje intermedio de Microsoft (MSIL).
+Todos los C++ proyectos de Visual CLR se vinculan de forma predeterminada a las bibliotecas en tiempo de ejecución de C. Por consiguiente, estos proyectos se clasifican como aplicaciones de modo mixto, ya que combinan código nativo con código destinado al Common Language Runtime (código administrado). Cuando se compilan, se compilan en lenguaje intermedio (IL), también conocido como lenguaje intermedio de Microsoft (MSIL).
 
 > [!IMPORTANT]
-> En desuso de Visual Studio 2015 y Visual Studio 2017 ya no admite la creación de **/CLR: pure** o **/CLR: safe** código para aplicaciones de CLR. Si necesita ensamblados puros o seguros, se recomienda que convertir la aplicación en C#.
+> Visual Studio 2015 en desuso y Visual Studio 2017 ya no admite la creación de código **/clr: Pure** o **/clr: Safe** para aplicaciones CLR. Si requiere ensamblados puros o seguros, se recomienda traducir la aplicación a C#.
 
-Si está utilizando una versión anterior de Microsoft C++ conjunto de herramientas del compilador que admita **/CLR: pure** o **/CLR: safe**, puede usar este procedimiento para convertir el código a MSIL puro:
+Si usa una versión anterior del conjunto de herramientas del C++ compilador de Microsoft que admite **/clr: Pure** o **/clr: Safe**, puede usar este procedimiento para convertir el código en MSIL puro:
 
-### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Para convertir la aplicación de modo mixto a lenguaje intermedio puro
+### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Para convertir la aplicación en modo mixto en lenguaje intermedio puro
 
-1. Quitar vínculos a la [bibliotecas en tiempo de ejecución de C](../c-runtime-library/crt-library-features.md) (CRT):
+1. Quitar vínculos a las [bibliotecas en tiempo de ejecución de C](../c-runtime-library/crt-library-features.md) (CRT):
 
-   1. En el archivo .cpp que define el punto de entrada de la aplicación, cambiar el punto de entrada a `Main()`. Uso de `Main()` indica que el proyecto no se vincula a CRT.
+   1. En el archivo. cpp que define el punto de entrada de la aplicación, cambie el punto de entrada a `Main()`. El uso de `Main()` indica que el proyecto no se vincula a CRT.
 
-   2. En el Explorador de soluciones, haga clic en el proyecto y seleccione **propiedades** en el menú contextual para abrir las páginas de propiedades para la aplicación.
+   2. En Explorador de soluciones, haga clic con el botón secundario en el proyecto y seleccione **propiedades** en el menú contextual para abrir las páginas de propiedades de la aplicación.
 
-   3. En el **avanzadas** página de propiedades de proyecto para el **vinculador**, seleccione el **punto de entrada** y, a continuación, escriba **Main** en este campo.
+   3. En la página de propiedades proyecto **avanzado** del **enlazador**, seleccione el **punto de entrada** y, a continuación, escriba **Main** en este campo.
 
-   4. Para aplicaciones de consola, en el **sistema** página de propiedades de proyecto para el **vinculador**, seleccione el **subsistema** campo y cambiar esta opción para **consola (/ SUBSYSTEM:Console)**.
+   4. En el caso de las aplicaciones de consola, en la página de propiedades proyecto **del sistema** del **enlazador**, seleccione el campo **subsistema** y cámbielo a **consola (/Subsystem: Console)** .
 
       > [!NOTE]
-      > No es necesario establecer esta propiedad para las aplicaciones de Windows Forms porque el **subsistema** campo se establece en **Windows (/ SUBSYSTEM: WINDOWS)** de forma predeterminada.
+      > No es necesario establecer esta propiedad para Windows Forms aplicaciones porque el campo **subsistema** está establecido en **Windows (/Subsystem: Windows)** de forma predeterminada.
 
-   5. En stdafx.h, convierta en comentario todas las `#include` instrucciones. Por ejemplo, en las aplicaciones de consola:
+   5. En *stdafx. h*, comente todas las instrucciones de `#include`. Por ejemplo, en las aplicaciones de consola:
 
       ```cpp
       // #include <iostream>
       // #include <tchar.h>
       ```
 
-       -o bien-
+       O bien
 
-       Por ejemplo, en las aplicaciones de Windows Forms:
+       Por ejemplo, en Windows Forms aplicaciones:
 
       ```cpp
       // #include <stdlib.h>
@@ -56,13 +56,13 @@ Si está utilizando una versión anterior de Microsoft C++ conjunto de herramien
       // #include <tchar.h>
       ```
 
-   6. Para las aplicaciones de Windows Forms, en Form1.cpp, marque como comentario el `#include` instrucción que hace referencia a windows.h. Por ejemplo:
+   6. En el caso de las aplicaciones Windows Forms, en Form1. cpp, comente la instrucción `#include` que hace referencia a Windows. h. Por ejemplo:
 
       ```cpp
       // #include <windows.h>
       ```
 
-2. En stdafx.h, agregue el código siguiente:
+2. Agregue el código siguiente a *stdafx. h*:
 
    ```cpp
    #ifndef __FLTUSED__
@@ -73,7 +73,7 @@ Si está utilizando una versión anterior de Microsoft C++ conjunto de herramien
 
 3. Quitar todos los tipos no administrados:
 
-   Según sea necesario, reemplace los tipos no administrados por referencias a las estructuras de la [sistema](/dotnet/api/system) espacio de nombres. Tipos administrados más comunes se enumeran en la tabla siguiente:
+   Siempre que sea necesario, reemplace los tipos no administrados por referencias a estructuras del espacio de nombres [System](/dotnet/api/system) . En la tabla siguiente se enumeran los tipos administrados comunes:
 
    |Estructura|Descripción|
    |---------------|-----------------|
@@ -82,17 +82,17 @@ Si está utilizando una versión anterior de Microsoft C++ conjunto de herramien
    |[Char](/dotnet/api/system.char)|Representa un carácter Unicode.|
    |[DateTime](/dotnet/api/system.datetime)|Representa un instante de tiempo, normalmente expresado en forma de fecha y hora del día.|
    |[Decimal](/dotnet/api/system.decimal)|Representa un número decimal.|
-   |[Double](/dotnet/api/system.double)|Representa un número de punto flotante de precisión doble.|
-   |[Guid](/dotnet/api/system.guid)|Representa un identificador único global (GUID).|
+   |[Doble](/dotnet/api/system.double)|Representa un número de punto flotante de doble precisión.|
+   |[GUID](/dotnet/api/system.guid)|Representa un identificador único global (GUID).|
    |[Int16](/dotnet/api/system.int16)|Representa un entero de 16 bits con signo.|
    |[Int32](/dotnet/api/system.int32)|Representa un entero de 32 bits con signo.|
    |[Int64](/dotnet/api/system.int64)|Representa un entero de 64 bits con signo.|
    |[IntPtr](/dotnet/api/system.intptr)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
-   |[SByte](/dotnet/api/system.byte)|Representa un entero con signo de 8 bits.|
-   |[Single](/dotnet/api/system.single)|Representa un número de punto flotante de precisión sencilla.|
+   |[SByte](/dotnet/api/system.byte)|Representa un entero de 8 bits con signo.|
+   |[Único](/dotnet/api/system.single)|Representa un número de punto flotante de precisión simple.|
    |[TimeSpan](/dotnet/api/system.timespan)|Representa un intervalo de tiempo.|
    |[UInt16](/dotnet/api/system.uint16)|Representa un entero de 16 bits sin signo.|
    |[UInt32](/dotnet/api/system.uint32)|Representa un entero de 32 bits sin signo.|
    |[UInt64](/dotnet/api/system.uint64)|Representa un entero de 64 bits sin signo.|
    |[UIntPtr](/dotnet/api/system.uintptr)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|
-   |[Void](/dotnet/api/system.void)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|
+   |[Hueco](/dotnet/api/system.void)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|
