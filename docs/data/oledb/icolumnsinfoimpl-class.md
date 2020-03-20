@@ -7,7 +7,6 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
-- GetColumnInfo
 - ATL::IColumnsInfoImpl::GetColumnInfo
 - ATL.IColumnsInfoImpl.GetColumnInfo
 - ATL::IColumnsInfoImpl<T>::GetColumnInfo
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb7714762de8ccf810a8fdd04ee33ae24e9d431
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409153"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545988"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl (Clase)
 
-Proporciona una implementación de la [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) interfaz.
+Proporciona una implementación de la interfaz [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -50,28 +49,28 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-La clase derivada de `IColumnsInfoImpl`.
+La clase, derivada de `IColumnsInfoImpl`.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[GetColumnInfo](#getcolumninfo)|Devuelve los metadatos de columna necesarios para la mayoría de los consumidores.|
-|[MapColumnIDs](#mapcolumnids)|Devuelve una matriz de ordinales de las columnas en un conjunto de filas que se identifican mediante los identificadores de columna especificado.|
+|[GetColumnInfo](#getcolumninfo)|Devuelve los metadatos de columna que necesitan la mayoría de los consumidores.|
+|[MapColumnIDs](#mapcolumnids)|Devuelve una matriz de ordinales de las columnas de un conjunto de filas identificadas mediante los identificadores de columna especificados.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una interfaz obligatoria en los conjuntos de filas y los comandos. Para modificar el comportamiento de su proveedor `IColumnsInfo` implementación, deberá modificar la asignación de columna del proveedor.
+Una interfaz obligatoria en conjuntos de filas y comandos. Para modificar el comportamiento de la implementación de `IColumnsInfo` del proveedor, debe modificar el mapa de columnas del proveedor.
 
-## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>Icolumnsinfoimpl (:: GetColumnInfo
 
-Devuelve los metadatos de columna necesarios para la mayoría de los consumidores.
+Devuelve los metadatos de columna que necesitan la mayoría de los consumidores.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -83,11 +82,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador OLE DB*.
+Vea [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en la *Referencia del programador de OLE DB*.
 
-## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>Icolumnsinfoimpl (:: MapColumnIDs
 
-Devuelve una matriz de ordinales de las columnas en un conjunto de filas que se identifican mediante los identificadores de columna especificado.
+Devuelve una matriz de ordinales de las columnas de un conjunto de filas identificadas mediante los identificadores de columna especificados.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -99,9 +98,9 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IColumnsInfo:: MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

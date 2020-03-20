@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516640"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544643"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++/CLI y C++/CX)
+# <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI y C++/CX)
 
 La operación **safe_cast**, si es correcta, devuelve la expresión especificada como el tipo especificado; en caso contrario, produce una `InvalidCastException`.
 
@@ -32,7 +32,7 @@ La operación **safe_cast**, si es correcta, devuelve la expresión especificada
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-**safe_cast** permite cambiar el tipo de una expresión especificada. En situaciones donde se espera claramente una variable o parámetro convertible a un tipo determinado, puede usar **safe_cast** sin un bloque **try-catch** para detectar errores de programación durante el desarrollo. Para obtener más información, consulte [Convertir (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+**safe_cast** permite cambiar el tipo de una expresión especificada. En situaciones donde se espera claramente una variable o parámetro convertible a un tipo determinado, puede usar **safe_cast** sin un bloque **try-catch** para detectar errores de programación durante el desarrollo. Para obtener más información, consulte [Convertir (C++/CX)](../cppcx/casting-c-cx.md).
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -48,9 +48,9 @@ Tipo al que se va a convertir *expression*. Identificador de un tipo de valor o 
 *expression*<br/>
 Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**safe_cast** genera una `InvalidCastException` si no puede convertir *expression* al tipo especificado por *type-id*. Para detectar la `InvalidCastException`, especifique la opción del compilador [/EH (Modelo de control de excepciones)](../build/reference/eh-exception-handling-model.md) y use una instrucción **try/catch**.
+**safe_cast** produce `InvalidCastException` si no puede convertir la *expresión* al tipo especificado por el *identificador de tipo*. Para detectar `InvalidCastException`, especifique la opción del compilador [/EH (modelo de control de excepciones)](../build/reference/eh-exception-handling-model.md) y use una instrucción **try/catch** .
 
 ### <a name="requirements"></a>Requisitos
 
@@ -108,7 +108,7 @@ Identificador de un tipo de valor o referencia, un tipo de valor o una referenci
 *expression*<br/>
 Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La expresión `safe_cast<`*type-id*`>(`*expression*`)` convierte el operando *expression* a un objeto de tipo *type-id*.
 
@@ -120,11 +120,11 @@ Para obtener más información sobre las conversiones, consulte [Operadores de c
 
 **safe_cast** no aplica un **const_cast** (desechar **const**).
 
-**safe_cast** se encuentra en el espacio de nombres cli.  Consulte [Platform, default, and cli Namespaces](platform-default-and-cli-namespaces-cpp-component-extensions.md) (Espacios de nombres de plataforma, predeterminado y cli) para obtener más información.
+**safe_cast** se encuentra en el espacio de nombres cli.  Para más información, consulte [Espacios de nombres de plataforma, predeterminado y CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
 Para obtener más información sobre **safe_cast**, consulte:
 
-- [C-Style Casts with /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md) [Conversiones de estilo C con /clr (C++/CLI)]
+- [Conversiones de estilo C con /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
 
 - [Cómo: Usar safe_cast en C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
@@ -164,6 +164,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

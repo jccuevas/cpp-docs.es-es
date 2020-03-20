@@ -21,7 +21,6 @@ f1_keywords:
 - ATL.CDBPropSet.SetGUID
 - CDBPropSet.SetGUID
 - ATL::CDBPropSet::SetGUID
-- SetGUID
 - CDBPropSet::SetGUID
 helpviewer_keywords:
 - CDBPropSet class
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325031"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546120"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet (Clase)
 
-Hereda el `DBPROPSET` estructurar y agrega un constructor que inicializa los campos de clave, así como la `AddProperty` obtener acceso a método.
+Hereda de la estructura `DBPROPSET` y agrega un constructor que inicializa los campos clave, así como el método de acceso `AddProperty`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,29 +53,29 @@ class CDBPropSet : public tagDBPROPSET
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[AddProperty](#addproperty)|Agrega una propiedad para el conjunto de propiedades.|
+|[AddProperty](#addproperty)|Agrega una propiedad al conjunto de propiedades.|
 |[CDBPropSet](#cdbpropset)|Constructor.|
-|[SetGUID](#setguid)|Establece el `guidPropertySet` campo de la `DBPROPSET` estructura.|
+|[SetGUID](#setguid)|Establece el campo de `guidPropertySet` de la estructura de `DBPROPSET`.|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operator =](#op_equal)|Asigna el contenido de una propiedad establecida en otro.|
+|[operador =](#op_equal)|Asigna el contenido de un conjunto de propiedades a otro.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Uso de consumidores y proveedores OLE DB `DBPROPSET` estructuras para pasar matrices de `DBPROP` estructuras. Cada `DBPROP` estructura representa una propiedad única que se puede establecer.
+OLE DB proveedores y consumidores usan estructuras de `DBPROPSET` para pasar matrices de estructuras `DBPROP`. Cada estructura de `DBPROP` representa una propiedad única que se puede establecer.
 
-## <a name="addproperty"></a> CDBPropSet::AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
 
-Agrega una propiedad para el conjunto de propiedades.
+Agrega una propiedad al conjunto de propiedades.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -98,36 +97,36 @@ bool AddProperty(DWORD dwPropertyID,
 #### <a name="parameters"></a>Parámetros
 
 *dwPropertyID*<br/>
-[in] El identificador de la propiedad que se va a agregar. Utilizado para inicializar el `dwPropertyID` de la `DBPROP` estructura agregado al conjunto de propiedades.
+de IDENTIFICADOR de la propiedad que se va a agregar. Se utiliza para inicializar el `dwPropertyID` de la estructura de `DBPROP` agregada al conjunto de propiedades.
 
 *var*<br/>
-[in] Una variante que se usa para inicializar el valor de propiedad para el `DBPROP` estructura agregado al conjunto de propiedades.
+de Variant que se usa para inicializar el valor de propiedad de la estructura de `DBPROP` agregada al conjunto de propiedades.
 
 *szValue*<br/>
-[in] Una cadena utilizada para inicializar el valor de propiedad para el `DBPROP` estructura agregado al conjunto de propiedades.
+de Cadena que se usa para inicializar el valor de propiedad de la estructura `DBPROP` agregada al conjunto de propiedades.
 
 *bValue*<br/>
-[in] Un `BYTE` o valor booleano utilizado para inicializar el valor de propiedad para el `DBPROP` estructura agregado al conjunto de propiedades.
+de `BYTE` o valor booleano que se usa para inicializar el valor de propiedad de la estructura de `DBPROP` agregada al conjunto de propiedades.
 
-*nValue*<br/>
-[in] Un valor entero utilizado para inicializar el valor de propiedad para el `DBPROP` estructura agregado al conjunto de propiedades.
+*Nvalor*<br/>
+de Valor entero que se usa para inicializar el valor de propiedad de la estructura de `DBPROP` agregada al conjunto de propiedades.
 
 *fltValue*<br/>
-[in] Un valor de punto flotante que se usa para inicializar el valor de propiedad para el `DBPROP` estructura agregado al conjunto de propiedades.
+de Un valor de punto flotante que se usa para inicializar el valor de propiedad de la estructura de `DBPROP` agregada al conjunto de propiedades.
 
 *dblValue*<br/>
-[in] Un valor de punto flotante de precisión doble utilizado para inicializar el valor de propiedad para el `DBPROP` estructura agregado al conjunto de propiedades.
+de Un valor de punto flotante de precisión doble que se usa para inicializar el valor de propiedad de la estructura de `DBPROP` agregada al conjunto de propiedades.
 
 *cyValue*<br/>
-[in] Un valor de divisa CY utilizado para inicializar el valor de propiedad para el `DBPROP` estructura agregado al conjunto de propiedades.
+de Valor de moneda CY que se usa para inicializar el valor de propiedad de la estructura de `DBPROP` agregada al conjunto de propiedades.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si la propiedad se agregó correctamente. En caso contrario, **false**.
+**true** si la propiedad se agregó correctamente. De lo contrario, se devuelve el valor **False**.
 
-## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
-El constructor. Inicializa el `rgProperties`, `cProperties`, y `guidPropertySet` campos de la [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estructura.
+El constructor. Inicializa los campos `rgProperties`, `cProperties`y `guidPropertySet` de la estructura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -142,14 +141,14 @@ CDBPropSet();
 #### <a name="parameters"></a>Parámetros
 
 *guid*<br/>
-[in] Un GUID que se usa para inicializar el `guidPropertySet` campo.
+de GUID que se usa para inicializar el campo de `guidPropertySet`.
 
 *propset*<br/>
-[in] Otro `CDBPropSet` objeto para la construcción de copia.
+de Otro objeto `CDBPropSet` para la construcción de copia.
 
-## <a name="setguid"></a> CDBPropSet::SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGUID
 
-Establece el `guidPropertySet` campo el `DBPROPSET` estructura.
+Establece el campo de `guidPropertySet` en la estructura de `DBPROPSET`.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -160,15 +159,15 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parámetros
 
 *guid*<br/>
-[in] Un GUID que se usa para establecer el `guidPropertySet` campo de la [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estructura.
+de GUID que se usa para establecer el `guidPropertySet` campo de la estructura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este campo se puede establecer el [constructor](../../data/oledb/cdbpropset-cdbpropset.md) también.
+Este campo también se puede establecer mediante el [constructor](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a> CDBPropSet::operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: Operator =
 
-Asigna el contenido de una propiedad establecida en otro conjunto de propiedades.
+Asigna el contenido de un conjunto de propiedades a otro conjunto de propiedades.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -176,10 +175,10 @@ Asigna el contenido de una propiedad establecida en otro conjunto de propiedades
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet (Clase)](../../data/oledb/cdbpropidset-class.md)<br/>
-[Estructura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+Estructura [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
 [estructura DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525116"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544703"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Crear un consumidor sin utilizar un asistente
 
@@ -17,7 +17,7 @@ En el siguiente ejemplo se da por supuesto que va a agregar compatibilidad del c
 
 Agregar compatibilidad del consumidor OLE DB sin usar el **Asistente para consumidores OLE DB ATL**:
 
-- En el archivo pch.h, agregue las siguientes instrucciones `#include`:
+- En el archivo *PCH. h* , Anexe las siguientes instrucciones de `#include`:
 
     ```cpp
     #include <atlbase.h>
@@ -76,6 +76,6 @@ Mediante programación, un consumidor normalmente realiza la siguiente secuencia
     CoUninitialize();
     ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Crear un consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

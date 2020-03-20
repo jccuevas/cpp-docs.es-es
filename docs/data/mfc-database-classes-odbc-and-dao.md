@@ -5,30 +5,30 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b57d71ae2dc4e81f10855dc4075713170af952e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182878"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544499"
 ---
 # <a name="mfc-database-classes"></a>Clases de base de datos MFC
 
 > [!NOTE]
->  Microsoft recomienda el uso de ODBC a través de Microsoft ODBC Driver 13 (o posterior) para SQL Server para los proyectos nuevos. Ya no se admite DAO.
+>  Microsoft recomienda el uso de ODBC a través de Microsoft ODBC driver 13 (o posterior) para SQL Server para proyectos nuevos. Ya no se admite DAO.
 
 Para obtener más información, vea los temas siguientes:
 
-- [Mapa de ruta de tecnologías de acceso a datos](https://msdn.microsoft.com/library/ms810810.aspx)
+- [Historial de controladores para Microsoft SQL Server](/sql/connect/connect-history)
 
-- [ODBC Driver 13.1 para SQL Server lanzó](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 para SQL Server se debe usar para crear nuevas aplicaciones o mejorar aplicaciones existentes que necesitan aprovechar las nuevas características de SQL Server 2016.
+- [Versión 13,1 del controlador ODBC para SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC driver 13 for SQL Server debe usarse para crear nuevas aplicaciones o mejorar las aplicaciones existentes que necesitan aprovechar las nuevas características de SQL Server 2016.
 
 - [ODBC y MFC](../data/odbc/odbc-and-mfc.md)
 
-- [Uso de clases de base de datos con documentos y vistas](../data/mfc-using-database-classes-with-documents-and-views.md)
+- [Usar clases de base de datos con documentos y vistas](../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [Uso de clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md)
+- [Usar clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Acceso a los datos de programación (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[Programación del acceso a datos (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

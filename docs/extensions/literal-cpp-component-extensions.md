@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515680"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545460"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI y C++/CX)
 
@@ -21,13 +21,13 @@ Una variable (miembro de datos) marcada como **literal** en una compilación **/
 
 ## <a name="all-platforms"></a>Todas las plataformas
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 (No hay notas para esta característica de lenguaje que se apliquen a todos los runtimes).
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 (No hay notas para esta característica de lenguaje que solo se apliquen a Windows Runtime).
 
@@ -37,7 +37,7 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Un miembro de datos marcado como **literal** debe inicializarse al declararse y el valor debe ser una constante entera, una enumeración o un tipo de cadena. La conversión del tipo de la expresión de inicialización al tipo del miembro de datos estático const no debe requerir una conversión definida por el usuario.
 
@@ -92,7 +92,7 @@ Tenga en cuenta la diferencia en los metadatos para `sc` y `lit`: la directiva `
 
 En el siguiente ejemplo, creado en C#, se hace referencia a los metadatos creados en el ejemplo anterior y se muestra el efecto de las variables **literal** y **static const**:
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -125,6 +125,6 @@ class B {
 
 Opción del compilador: `/clr`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

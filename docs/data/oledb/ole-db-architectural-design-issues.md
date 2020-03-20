@@ -4,17 +4,17 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525317"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544553"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Cuestiones de diseño de arquitectura OLE DB
 
 > [!NOTE]
-> El Asistente para consumidores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente. Para obtener más información, consulte [Crear un consumidor sin utilizar un asistente](creating-a-consumer-without-using-a-wizard.md).
+> El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente. Para obtener más información, consulte [Crear un consumidor sin utilizar un asistente](creating-a-consumer-without-using-a-wizard.md).
 
 Antes de iniciar la aplicación OLE DB, tenga en cuenta lo siguiente:
 
@@ -36,11 +36,11 @@ Por ejemplo, si desea actualizar los datos de un conjunto de filas, pero se olvi
 
 Dadas las posibles combinaciones de tecnologías (por ejemplo, usar componentes ADO con componentes OLE DB y migrar código ODBC a OLE DB), abarcar todas las situaciones queda fuera del ámbito de la documentación de Visual C++. Sin embargo, existen muchos artículos que abarcan varios escenarios en los siguientes sitios web de Microsoft:
 
-- [Ayuda y Soporte Técnico de Microsoft](https://support.microsoft.com/)
+- [Ayuda y soporte técnico de Microsoft](https://support.microsoft.com/)
 
-- [Introducción a artículos técnicos de Microsoft Data Access](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Introducción a artículos técnicos de Microsoft Data Access](/previous-versions/ms810811(v=msdn.10))
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Programación de OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Información general sobre la programación de OLE DB](../../data/oledb/ole-db-programming-overview.md)

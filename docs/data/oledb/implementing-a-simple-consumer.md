@@ -1,21 +1,21 @@
 ---
 title: Implementar un consumidor sencillo
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707531"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544709"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementar un consumidor sencillo
 
 ::: moniker range="vs-2019"
 
-El Asistente para consumidores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente. Para obtener más información, consulte [Crear un consumidor sin utilizar un asistente](creating-a-consumer-without-using-a-wizard.md).
+El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente. Para obtener más información, consulte [Crear un consumidor sin utilizar un asistente](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
@@ -33,7 +33,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el **Asisten
 > [!NOTE]
 > Para crear una aplicación de consumidor con el fin de probar `MyProv` (se describe el mismo proveedor en [Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)), debe incluir compatibilidad con marcadores como se describe en [Agregar compatibilidad con marcadores al consumidor](#bookmark).
 
-## <a name="retrieve" ></a> Recuperación de datos con el consumidor
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> Recuperación de datos con el consumidor
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Modificar la aplicación de consola para usar el consumidor OLE DB
 
@@ -42,7 +42,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el **Asisten
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -64,7 +64,7 @@ Los temas siguientes muestran cómo editar los archivos creados por el **Asisten
     }
     ```
 
-## <a name="bookmark" ></a> Agregar compatibilidad con marcadores al consumido
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> Agregar compatibilidad con marcadores al consumido
 
 Un marcador es una columna que identifica de forma única las filas de la tabla. Normalmente es la columna de clave, pero no siempre; es específico del proveedor. En esta sección se muestra cómo agregar compatibilidad con marcadores. Para ello, deberá realizar los pasos siguientes en la clase de registro de usuario:
 
@@ -205,6 +205,6 @@ Para obtener más información sobre los marcadores, vea [Utilizar marcadores](.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

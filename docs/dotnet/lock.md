@@ -1,23 +1,23 @@
 ---
-title: bloquear
+title: lock
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-- lock
+- msclr/lock
 helpviewer_keywords:
 - lock
 - synchronization
 ms.assetid: 48c90da6-d6fb-4710-9c7c-2b9c9344bda1
-ms.openlocfilehash: 5776baa222cacd9ab4a2824261425fdc077c4fc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6d7dc28fc840a99fe0f3f05f92252e996b37944
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153390"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545856"
 ---
-# <a name="lock"></a>bloquear
+# <a name="lock"></a>lock
 
-Define la `lock` clase que automatiza la sincronización del acceso a un objeto.
+Define la clase `lock` que automatiza la sincronización del acceso a un objeto.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,7 +25,7 @@ Define la `lock` clase que automatiza la sincronización del acceso a un objeto.
 #include <msclr\lock.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En este archivo de encabezado:
 
@@ -33,6 +33,6 @@ En este archivo de encabezado:
 
 [lock_when (Enumeración)](../dotnet/lock-when-enum.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md)

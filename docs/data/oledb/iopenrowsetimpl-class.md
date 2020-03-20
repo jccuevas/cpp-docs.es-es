@@ -5,7 +5,6 @@ f1_keywords:
 - IOpenRowsetImpl
 - IOpenRowsetImpl.CreateRowset
 - IOpenRowsetImpl::CreateRowset
-- CreateRowset
 - OpenRowset
 - IOpenRowsetImpl::OpenRowset
 - IOpenRowsetImpl.OpenRowset
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 6f0dfb90b0ea79e115f459968558e48ae9827e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fce9d2ffe63798738be1658a5328e907395a54
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390781"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545910"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl (Clase)
 
-Proporciona la implementación de la `IOpenRowset` interfaz.
+Proporciona la implementación para la interfaz `IOpenRowset`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,28 +34,28 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="parameters"></a>Parámetros
 
 *SessionClass*<br/>
-La clase derivada de `IOpenRowsetImpl`.
+La clase, derivada de `IOpenRowsetImpl`.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[CreateRowset](#createrowset)|Crea un objeto de conjunto de filas. No llama directamente al usuario.|
-|[OpenRowset](#openrowset)|Se abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice. (No en ATLDB. H)|
+|[CreateRowset](#createrowset)|Crea un objeto de conjunto de filas. No lo llama directamente el usuario.|
+|[OpenRowset](#openrowset)|Abre y devuelve un conjunto de filas que incluye todas las filas de una sola tabla base o índice. (No en ATLDB. C|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) interfaz es obligatoria para un objeto de sesión. Se abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice.
+La interfaz [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) es obligatoria para un objeto de sesión. Se abre y devuelve un conjunto de filas que incluye todas las filas de una sola tabla base o índice.
 
-## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
+## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a>Iopenrowsetimpl (:: CreateRowset
 
-Crea un objeto de conjunto de filas. No llama directamente al usuario. Consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador OLE DB.*
+Crea un objeto de conjunto de filas. No lo llama directamente el usuario. Vea [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) en la *Referencia del programador de OLE DB.*
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -75,16 +74,16 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>Parámetros
 
 *RowsetClass*<br/>
-Un miembro de clase de plantilla que representa la clase de conjunto de filas del usuario. Normalmente, generado por el asistente.
+Un miembro de clase de plantilla que representa la clase de conjunto de filas del usuario. Normalmente generado por el asistente.
 
 *pRowsetObj*<br/>
-[out] Un puntero a un objeto de conjunto de filas. Normalmente no se usa este parámetro, pero puede usarse si tiene que realizar más trabajo en el conjunto de filas antes de pasarlo a un objeto COM. La duración de *pRowsetObj* está limitado por *ppRowset*.
+enuncia Un puntero a un objeto de conjunto de filas. Normalmente, este parámetro no se usa, pero se puede usar si debe realizar más trabajo en el conjunto de filas antes de pasarlo a un objeto COM. La duración de *pRowsetObj* está limitada por *ppRowset*.
 
-Para otros parámetros, vea [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador de OLE DB.*
+Para otros parámetros, vea [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) en la *Referencia del programador de OLE DB.*
 
-## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
+## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a>Iopenrowsetimpl (:: OpenRowset
 
-Se abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice.
+Abre y devuelve un conjunto de filas que incluye todas las filas de una sola tabla base o índice.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -100,13 +99,13 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este método no se encuentra en ATLDB. H. Se crea mediante el Asistente para objetos ATL cuando se crea un proveedor.
+Este método no se encuentra en ATLDB. C. Lo crea el Asistente para objetos ATL al crear un proveedor.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,13 +1,6 @@
 ---
 title: Simplificar el acceso a datos con atributos de base de datos
 ms.date: 10/19/2018
-f1_keywords:
-- vc-attr.db_param
-- vc-attr.db_column
-- vc-attr.db_accessor
-- vc-attr.db_command
-- vc-attr.db_table
-- vc-attr.db_source
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -18,54 +11,55 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: 83519ffff7dd1f1b5f8a635f094932a1f9728193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d22f8a25bc7bb58f72346a15edb51f062c44e1b4
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404473"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79546180"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Simplificar el acceso a datos con atributos de base de datos
 
-En este tema se muestra el uso de atributos de la base de datos para simplificar las operaciones de base de datos.
+En este tema se muestra el uso de atributos de base de datos para simplificar las operaciones de base de datos.
 
-Es la forma básica para tener acceso a información desde una base de datos crear una clase de comando (o tabla) y una clase de registro de usuario para una tabla determinada en la base de datos. Los atributos de base de datos simplifican algunas de las declaraciones de plantilla que previamente tenía que hacer.
+La manera básica de obtener acceso a la información de una base de datos consiste en crear una clase de comando (o tabla) y una clase de registro de usuario para una tabla determinada de la base de datos. Los atributos de base de datos simplifican algunas de las declaraciones de plantilla que tenía anteriormente.
 
-Para demostrar el uso de atributos de la base de datos, las secciones siguientes muestran dos tabla equivalente y las declaraciones de clase de registro de usuario: el primero usa los atributos y la segunda usa plantillas OLE DB. Este código de declaración se suele colocar en un archivo de encabezado denominado para el objeto de tabla o un comando, por ejemplo, Authors.h.
+Para demostrar el uso de los atributos de base de datos, en las secciones siguientes se muestran dos declaraciones de clase de registro de usuario y tabla equivalentes: la primera usa los atributos y la segunda utiliza OLE DB plantillas. Este código de declaración suele colocarse en un archivo de encabezado denominado para la tabla o el objeto de comando, por ejemplo, authors. h.
 
-Comparando los dos archivos, puede ver cómo mucho más sencillo es utilizar los atributos. Entre las diferencias son:
+Al comparar los dos archivos, puede ver la cantidad más sencilla de usar atributos. Entre las diferencias se encuentran:
 
-- Uso de atributos, solo tiene que declarar una clase: `CAuthors`, mientras que con las plantillas de tener que declarar dos: `CAuthorsNoAttrAccessor` y `CAuthorsNoAttr`.
+- Mediante el uso de atributos, solo tiene que declarar una clase: `CAuthors`, mientras que con las plantillas tiene que declarar dos: `CAuthorsNoAttrAccessor` y `CAuthorsNoAttr`.
 
-- El `db_source` llamada en la versión con atributos es equivalente a la `OpenDataSource()` llamar a en la declaración de plantilla.
+- La llamada a `db_source` en la versión con atributos es equivalente a la llamada `OpenDataSource()` en la declaración de la plantilla.
 
-- El `db_table` llamada en la versión con atributos es equivalente a la siguiente declaración de plantilla:
+- La llamada a `db_table` en la versión con atributos es equivalente a la siguiente declaración de plantilla:
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- El `db_column` llamadas de la versión con atributos son equivalentes a la asignación de columna (consulte `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) en la declaración de plantilla.
+- Las llamadas `db_column` en la versión con atributos son equivalentes al mapa de columnas (vea `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) en la declaración de plantilla.
 
-Los atributos insertan una declaración de clase de registro de usuario para usted. La clase de registro de usuario es igual a `CAuthorsNoAttrAccessor` en la declaración de plantilla. Si la clase de tabla es `CAuthors`, la clase de registro de usuario insertado se denomina `CAuthorsAccessor`, y solo se puede ver su declaración en el código insertado. Para obtener más información, vea "Clases de registro de usuario con atributos" en [registros de usuario](../../data/oledb/user-records.md).
+Los atributos insertan una declaración de clase de registro de usuario. La clase de registro de usuario es igual a `CAuthorsNoAttrAccessor` en la declaración de plantilla. Si la clase de tabla es `CAuthors`, la clase de registro de usuario insertada se denomina `CAuthorsAccessor`y solo puede ver su declaración en el código insertado. Para obtener más información, vea "clases de registro de usuario insertadas por atributos" en [registros de usuario](../../data/oledb/user-records.md).
 
-En los atributos y el código de plantilla, debe establecer las propiedades del conjunto de filas mediante `CDBPropSet::AddProperty`.
+En el código con atributos y con plantilla, debe establecer las propiedades del conjunto de filas mediante `CDBPropSet::AddProperty`.
 
-Para obtener información acerca de los atributos tratados en este tema, consulte [atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md).
+Para obtener información sobre los atributos descritos en este tema, vea [OLE DB atributos del consumidor](../../windows/ole-db-consumer-attributes.md).
 
 > [!NOTE]
-> La siguiente `include` instrucciones son necesarias para compilar los ejemplos siguientes:
+> Se requieren las siguientes instrucciones `include` para compilar los ejemplos siguientes:
+
 > ```cpp
 > #include <atlbase.h>
 > #include <atlplus.h>
 > #include <atldbcli.h>
 > ```
 
-## <a name="table-and-accessor-declaration-using-attributes"></a>Tabla y la declaración del descriptor de acceso mediante atributos
+## <a name="table-and-accessor-declaration-using-attributes"></a>Declaración de tabla y descriptor de acceso con atributos
 
-El código siguiente llama `db_source` y `db_table` en la clase de tabla. `db_source` Especifica el origen de datos y la conexión que se usará. `db_table` Inserta el código de plantilla apropiado para declarar una clase de tabla. `db_column` Especifica el mapa de columnas e insertar la declaración del descriptor de acceso. Puede usar atributos de consumidor OLE DB en cualquier proyecto que admita ATL.
+En el código siguiente se llama a `db_source` y `db_table` en la clase Table. `db_source` especifica el origen de datos y la conexión que se va a utilizar. `db_table` inserta el código de plantilla adecuado para declarar una clase de tabla. `db_column` especifique el mapa de columnas e inserte la declaración del descriptor de acceso. Puede utilizar OLE DB atributos de consumidor en cualquier proyecto que admita ATL.
 
-Aquí es la declaración de tabla y el descriptor de acceso mediante atributos:
+A continuación se muestra la declaración de tabla y descriptor de acceso con atributos:
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -100,9 +94,9 @@ public:
 };
 ```
 
-## <a name="table-and-accessor-declaration-using-templates"></a>Tabla y la declaración del descriptor de acceso mediante plantillas
+## <a name="table-and-accessor-declaration-using-templates"></a>Declaración de tabla y descriptor de acceso mediante plantillas
 
-Aquí es la declaración de tabla y el descriptor de acceso mediante plantillas.
+Esta es la declaración de tabla y descriptor de acceso mediante plantillas.
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -206,6 +200,6 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)

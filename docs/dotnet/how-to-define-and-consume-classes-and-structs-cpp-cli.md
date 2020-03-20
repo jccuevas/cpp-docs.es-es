@@ -6,17 +6,17 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856371"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79545544"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Cómo: Definir y utilizar clases y structs (C++/CLI)
 
 En este artículo se muestra cómo definir y usar tipos de referencia definidos por el usuario y C++tipos de valor en/CLI.
 
-##  <a name="BKMK_Contents"></a> Contents
+##  <a name="contents"></a><a name="BKMK_Contents"></a> Contents
 
 [Creación de instancias de objeto](#BKMK_Object_instantiation)
 
@@ -38,7 +38,7 @@ En este artículo se muestra cómo definir y usar tipos de referencia definidos 
 
 [Destructores y finalizadores](#BKMK_Destructors_and_finalizers)
 
-##  <a name="BKMK_Object_instantiation"></a>Creación de instancias de objeto
+##  <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a>Creación de instancias de objeto
 
 Solo se pueden crear instancias de los tipos de referencia (Ref) en el montón administrado, no en la pila o en el montón nativo. Se pueden crear instancias de tipos de valor en la pila o en el montón administrado.
 
@@ -93,7 +93,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Implicitly_abstract_classes"></a>Clases abstractas implícitamente
+##  <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a>Clases abstractas implícitamente
 
 No se puede crear una instancia de una *clase abstracta implícitamente* . Una clase es implícitamente abstracta si el tipo base de la clase es una interfaz y la clase no implementa todas las funciones miembro de la interfaz.
 
@@ -121,7 +121,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Type_visibility"></a>Visibilidad de tipos
+##  <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a>Visibilidad de tipos
 
 Puede controlar la visibilidad de los tipos de Common Language Runtime (CLR) de modo que, si se hace referencia a un ensamblado, los tipos del ensamblado puedan ser visibles o no visibles fuera del ensamblado.
 
@@ -218,7 +218,7 @@ int main() {
 in Public_Class
 ```
 
-##  <a name="BKMK_Member_visibility"></a>Visibilidad de miembros
+##  <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a>Visibilidad de miembros
 
 Puede hacer que el acceso a un miembro de una clase pública dentro del mismo ensamblado sea diferente del acceso a él desde fuera del ensamblado mediante pares de los especificadores de acceso `public`, `protected` y `private`.
 
@@ -228,7 +228,7 @@ En esta tabla se resume el efecto de los distintos especificadores de acceso:
 |---------------|------------|
 |público|El miembro es accesible dentro y fuera del ensamblado.  Vea [Public](../cpp/public-cpp.md) para obtener más información.|
 |privado|El miembro no es accesible, ni dentro ni fuera del ensamblado.  Para obtener más información, vea [privado](../cpp/private-cpp.md) .|
-|protected|El miembro es accesible dentro y fuera del ensamblado, pero solo para los tipos derivados.  Consulte [Protected](../cpp/protected-cpp.md) para obtener más información.|
+|protegido|El miembro es accesible dentro y fuera del ensamblado, pero solo para los tipos derivados.  Consulte [Protected](../cpp/protected-cpp.md) para obtener más información.|
 |interno|El miembro es público dentro del ensamblado, pero es privado fuera del ensamblado.  `internal` es una palabra clave contextual.  Para obtener más información, consulte [Context-Sensitive Keywords](../extensions/context-sensitive-keywords-cpp-component-extensions.md) (Palabras clave contextuales).|
 |público protegido o protegido público|El miembro es público dentro del ensamblado, pero está protegido fuera del ensamblado.|
 |privado protegido o privado protegido|El miembro está protegido dentro del ensamblado, pero es privado fuera del ensamblado.|
@@ -406,7 +406,7 @@ exiting function of derived class
 =======================
 ```
 
-##  <a name="BKMK_Public_and_private_native_classes"></a>Clases nativas públicas y privadas
+##  <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a>Clases nativas públicas y privadas
 
 Un tipo nativo puede hacer referencia a un tipo administrado.  Por ejemplo, una función de un tipo administrado puede tomar un parámetro cuyo tipo sea un struct nativo.  Si el tipo administrado y la función son públicos en un ensamblado, el tipo nativo también debe ser público.
 
@@ -445,7 +445,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Static_constructors"></a> Constructores estáticos
+##  <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a> Constructores estáticos
 
 Un tipo CLR, por ejemplo, una clase o struct, puede tener un constructor estático que se puede utilizar para inicializar los miembros de datos estáticos.  A un constructor estático se le llama a lo sumo una vez y solo antes de tener acceso a un miembro estático del tipo por primera vez.
 
@@ -491,7 +491,7 @@ in static constructor
 11
 ```
 
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>Semántica del puntero this
+##  <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a>Semántica del puntero this
 
 Cuando se usa Visual C++ para definir tipos, el puntero `this` en un tipo de referencia es de tipo “identificador”. El puntero `this` en un tipo de valor es de tipo “puntero interior”.
 
@@ -546,7 +546,7 @@ int main() {
 10.89
 ```
 
-##  <a name="BKMK_Hide_by_signature_functions"></a>Funciones de ocultación por signatura
+##  <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a>Funciones de ocultación por signatura
 
 En C++ estándar, una función de una clase base se oculta con una función que tiene el mismo nombre en una clase derivada, incluso si la función de la clase derivada no tiene el mismo número o el mismo tipo de parámetros. Esto se conoce como semántica *oculta por nombre* . En un tipo de referencia, una función de una clase base solo se puede ocultar con una función de una clase derivada si el nombre y la lista de parámetros son iguales. Esto se conoce como semántica *de ocultación por signatura* .
 
@@ -654,7 +654,7 @@ Derived::Test4
 97
 ```
 
-##  <a name="BKMK_Copy_constructors"></a>Constructores de copias
+##  <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a>Constructores de copias
 
 El estándar de C++ indica que se debe llamar a un constructor de copias cuando se mueve un objeto, de forma que un objeto se crea y se destruye en la misma dirección.
 
@@ -719,7 +719,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378
 ```
 
-##  <a name="BKMK_Destructors_and_finalizers"></a>Destructores y finalizadores
+##  <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a>Destructores y finalizadores
 
 Los destructores de un tipo de referencia realizan una limpieza determinista de recursos. Los finalizadores limpian los recursos no administrados y puede llamarlos de forma determinista el destructor o de forma no determinista el recolector de elementos no utilizados. Para obtener información sobre los destructores de C++Standard, consulte [destructores](../cpp/destructors-cpp.md).
 
