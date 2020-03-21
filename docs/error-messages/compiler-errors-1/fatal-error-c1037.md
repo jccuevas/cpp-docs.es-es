@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1037
 ms.assetid: 79103bca-ccfb-42e7-aef9-9b90c15b162f
-ms.openlocfilehash: 1c061ede5a2818678bd6181f7cc7325d0d5200d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 782ccec01faad34ba79553626db06cf87ba0740c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243853"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075037"
 ---
 # <a name="fatal-error-c1037"></a>Error irrecuperable C1037
 
@@ -28,4 +28,3 @@ El archivo objeto especificado por [/Fo](../../build/reference/fo-object-file-na
 1. Otro proceso está usando el archivo.
 
 1. Un archivo de solo lectura tiene el mismo nombre.
-

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525264"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079001"
 ---
 # <a name="user-record"></a>Registro de usuario
 
-> [!NOTE] 
-> El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
+> [!NOTE]
+> El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
 
 El registro de usuario proporciona la estructura de código y los datos que representan la columna de datos de un conjunto de filas. Puede crearse un registro de usuario en tiempo de compilación o de ejecución. Cuando se crea un proveedor mediante el **Asistente para proveedores OLE DB ATL**, este crea un registro de usuario predeterminado que tiene este aspecto (suponiendo que ha especificado un nombre de proveedor [nombre corto] de *miProveedor*):
 
@@ -43,7 +43,7 @@ Las plantillas de proveedor OLE DB controlen todos los detalles de OLE DB en las
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 Esto equivale a lo siguiente:
@@ -69,6 +69,6 @@ Cuando se crea un registro de usuario en tiempo de ejecución, `GetColumnInfo` u
 
 Para obtener un ejemplo más detallado de cómo invalidar `GetColumnInfo` en un registro de usuario, consulte [Determinar dinámicamente las columnas que se devuelven al consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

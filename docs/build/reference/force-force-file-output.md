@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299718"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079628"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Forzar resultados de archivo)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68299718"
 /FORCE:[MULTIPLE|UNRESOLVED]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La opción/FORCE indica al enlazador que cree un archivo. exe o DLL válido incluso si se hace referencia a un símbolo pero no se define o se define de forma múltiple.
 
@@ -41,7 +41,7 @@ Si un módulo se compila con **/CLR**, **/Force** no creará una imagen.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y elija **propiedades**. 
+1. Haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y elija **propiedades**.
 
 1. Haga clic en la carpeta **Enlazador**.
 
@@ -55,7 +55,7 @@ Para más información, vea [Establecimiento del compilador de C++ y de propieda
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del enlazador MSVC](linking.md)<br/>
 [Opciones del enlazador MSVC](linker-options.md)

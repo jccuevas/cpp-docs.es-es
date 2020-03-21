@@ -1,21 +1,21 @@
 ---
-title: 'Conjunto de registros: declarar una clase para una tabla (ODBC)'
+title: 'Conjunto de registros: Declarar una clase para una tabla (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: b6e7f4456b5ff29cec854d1b4818fda965e04b96
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707953"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076989"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Conjunto de registros: declarar una clase para una tabla (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Conjunto de registros: Declarar una clase para una tabla (ODBC)
 
-> [!NOTE] 
-> El Asistente para consumidores ODBC MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor manualmente.
+> [!NOTE]
+> El Asistente para consumidores ODBC de MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor de forma manual.
 
 Este tema es aplicable a las clases ODBC de MFC.
 
@@ -27,9 +27,9 @@ También puede usar los conjuntos de registros para:
 
 - Contener los resultados de una consulta predefinida.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: crear y cerrar conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[Conjunto de registros: declarar una clase para una consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Conjunto de registros: realizar una combinación (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Conjunto de registros: Crear y cerrar conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Conjunto de registros: Declarar una clase para una consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Conjunto de registros: Realizar una combinación (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

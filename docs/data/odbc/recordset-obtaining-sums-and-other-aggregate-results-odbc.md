@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: obtener cálculos SUM y otros resultados agregados (ODBC)'
+title: 'Conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707845"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075905"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: obtener cálculos SUM y otros resultados agregados (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)
 
-> [!NOTE] 
-> El Asistente para consumidores ODBC MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor manualmente.
+> [!NOTE]
+> El Asistente para consumidores ODBC de MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor de forma manual.
 
 Este tema es aplicable a las clases ODBC de MFC.
 
@@ -36,7 +36,7 @@ En este tema se explica cómo obtener resultados agregados mediante las siguient
 
 - **COUNT** cuenta el número de registros de una columna de cualquier tipo de datos.
 
-Puede usar estas funciones SQL para obtener información estadística sobre los registros de un origen de datos, en lugar de extraer los registros de este. El conjunto de registros que se crea suele constar de un solo registro (si todas las columnas son agregados) que contiene un valor. Puede haber más de un registro si ha usado una cláusula **GROUP BY**. Este valor es el resultado del cálculo o la extracción que realiza la función SQL.
+Puede usar estas funciones SQL para obtener información estadística sobre los registros de un origen de datos, en lugar de extraer los registros de este. El conjunto de registros que se crea suele constar de un solo registro (si todas las columnas son agregados) que contiene un valor. (Puede haber más de un registro si utilizó una cláusula **Group by** ). Este valor es el resultado del cálculo o extracción realizado por la función SQL.
 
 > [!TIP]
 >  Para agregar una cláusula **GROUP BY** de SQL (y posiblemente una cláusula **HAVING**) a la instrucción SQL, debe anexarla al final de `m_strFilter`. Por ejemplo:
@@ -56,7 +56,7 @@ Puede limitar el número de registros que usa para obtener resultados agregados 
 
 - **MAX** y **MIN** devuelven el mismo tipo de datos que el de las columnas que calculan.
 
-     Por ejemplo, el Asistente para **agregar clase** crea `long` `m_lSales` para alojar una columna Sales, pero esto se debe reemplazar por un miembro de datos `double m_dblSumSales` para alojar el resultado agregado. Vea el ejemplo siguiente.
+     Por ejemplo, el Asistente para **Agregar clases** crea `long` `m_lSales` para alojar una columna de ventas, pero debe reemplazarlo por un miembro de datos de `double m_dblSumSales` para acomodar el resultado agregado. Consulte el ejemplo siguiente.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Para obtener un resultado agregado para un conjunto de registros
 
@@ -68,7 +68,7 @@ Puede limitar el número de registros que usa para obtener resultados agregados 
     RFX_Long(pFX, "Sales", m_lSales);
     ```
 
-     Por:
+     por:
 
     ```
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
@@ -85,13 +85,13 @@ Si usa una clase [CRecordView](../../mfc/reference/crecordview-class.md) para ve
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-A:
+Por:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: cómo los conjuntos de registros seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Conjunto de registros: Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
