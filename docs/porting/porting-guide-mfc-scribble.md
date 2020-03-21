@@ -2,12 +2,12 @@
 title: 'Guía de migración: Scribble de MFC'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627211"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076964"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
 
@@ -23,7 +23,7 @@ Antes de actualizar, asegúrese de que tiene instalada la carga de trabajo de es
 
 Después, realice una copia de seguridad de toda la solución y su contenido.
 
-Por último, abra la solución en la versión más reciente de Visual Studio y permita que el asistente convierta el proyecto. 
+Por último, abra la solución en la versión más reciente de Visual Studio y permita que el asistente convierta el proyecto.
 
 Tenga en cuenta que también puede ejecutar devenv en la línea de comandos mediante la opción `/Upgrade`, en lugar de usar el asistente para actualizar los proyectos. Vea [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Eso podría ayudar a automatizar el proceso de actualización para un gran número de proyectos.
 
@@ -47,7 +47,7 @@ A continuación, Visual Studio mostró un informe de migración de todos los pro
 
 En este caso, todos los problemas eran advertencias y Visual Studio realizó los cambios pertinentes en el archivo del proyecto. La gran diferencia en lo que se refiere al proyecto es que la herramienta de compilación cambió de vcbuild a msbuild. Este cambio se introdujo por primera vez en Visual Studio 2010. Otros de los cambios incluyen una determinada reorganización de la secuencia de elementos en el propio archivo de proyecto. Ninguno de los problemas requirió atención adicional para este proyecto simple.
 
-### <a name="step-2-getting-it-to-build"></a>Paso 2. Hacer que compile
+### <a name="step-2-getting-it-to-build"></a>Paso 2. Hacer que compile
 
 Antes de compilar, comprobamos el conjunto de herramientas de la plataforma para saber qué versión del compilador está utilizando el sistema del proyecto. En el diálogo de propiedades del proyecto, en **Propiedades de configuración**, en la categoría **General**, examine la propiedad **Conjunto de herramientas de la plataforma**. Contiene la versión de Visual Studio y el número de versión de las herramientas de la plataforma, que en este caso es v141 para la versión de Visual Studio 2017 de las herramientas. Al convertir un proyecto que se compiló originalmente con Visual Studio 2010, 2012, 2013 o 2015, el conjunto de herramientas no se actualiza automáticamente al conjunto de herramientas más reciente.
 
@@ -73,7 +73,7 @@ Esto es una advertencia, no un error, y se genera habitualmente al actualizar un
 
 Si el código utiliza partes de la API de Windows que no están disponibles en la versión de Windows que especifica con esta macro, debería mostrarse como un error del compilador. En el caso del código de Scribble, no hay ningún error.
 
-### <a name="step-3-testing-and-debugging"></a>Paso 3. Pruebas y depuración
+### <a name="step-3-testing-and-debugging"></a>Paso 3. Prueba y depuración
 
 No hay ningún conjunto de pruebas, por lo que simplemente iniciamos la aplicación y probamos sus funciones manualmente mediante la interfaz de usuario. No se observó ningún problema.
 
@@ -85,7 +85,7 @@ Ahora que ha migrado a Visual Studio 2017, puede que quiera realizar algunos cam
 
 Scribble era una aplicación de escritorio pequeña y simple de Windows, y no fue difícil de convertir. Muchas aplicaciones pequeñas y sencillas son fáciles de convertir a la nueva versión.  Sin embargo, será necesario más tiempo para actualizar aplicaciones más complejas, con muchas más líneas de código, antiguo código heredado que podría no estar a la altura de los estándares de ingeniería modernos, varios proyectos y bibliotecas, o pasos de compilación personalizados, así como para actualizar aplicaciones con compilaciones complejas automatizadas mediante script. Vaya al [siguiente ejemplo](../porting/porting-guide-com-spy.md), una aplicación ATL/COM llamada COM Spy.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Ejemplo siguiente: COM Spy](../porting/porting-guide-com-spy.md)

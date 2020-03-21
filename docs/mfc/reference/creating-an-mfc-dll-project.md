@@ -9,19 +9,19 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 649a47abea23aedb9aa97bb4923e7a800348e27e
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 6a1718e1f347be46b2f228479d3dbd30027b3160
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108476"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077438"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Crear un proyecto DLL de MFC
 
 Un archivo DLL de MFC es un archivo binario que actúa como una biblioteca compartida de funciones que pueden utilizar simultáneamente varias aplicaciones. La forma más fácil de crear un proyecto DLL de MFC es utilizar el Asistente para archivos DLL de MFC.
 
 > [!NOTE]
->  Las características del IDE pueden depender de la edición o configuración activa, y ser diferentes de las que se describen en la Ayuda. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+>  Las características del IDE pueden depender de la edición o configuración activa, y ser diferentes de las que se describen en la Ayuda. Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Para crear un proyecto DLL de MFC mediante el Asistente para archivos DLL de MFC
 
@@ -36,9 +36,8 @@ Un archivo DLL de MFC es un archivo binario que actúa como una biblioteca compa
 
 Cuando se haya creado el proyecto, podrá ver los archivos creados en el **Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para más información sobre los tipos de archivo, vea [Tipos de archivo creados para proyectos de C++ de Visual Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tipos de proyectos de C++ en Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propiedades](../../build/reference/property-pages-visual-cpp.md)
-

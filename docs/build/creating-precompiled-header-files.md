@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422851"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078585"
 ---
 # <a name="precompiled-header-files"></a>Archivos de encabezado precompilados
 
-Al crear un nuevo proyecto en Visual Studio, se agrega al proyecto un *archivo de encabezado precompilado* denominado *PCH. h* . (En Visual Studio 2017 y versiones anteriores, el archivo se llamaba *stdafx. h*). El propósito del archivo es acelerar el proceso de compilación. Aquí se deben incluir los archivos de encabezado estables, por ejemplo, los encabezados de la biblioteca estándar, como `<vector>`. El encabezado precompilado solo se compila cuando se modifica el archivo o los archivos que incluye. Si solo realiza cambios en el código fuente del proyecto, la compilación omitirá la compilación del encabezado precompilado. 
+Al crear un nuevo proyecto en Visual Studio, se agrega al proyecto un *archivo de encabezado precompilado* denominado *PCH. h* . (En Visual Studio 2017 y versiones anteriores, el archivo se llamaba *stdafx. h*). El propósito del archivo es acelerar el proceso de compilación. Aquí se deben incluir los archivos de encabezado estables, por ejemplo, los encabezados de la biblioteca estándar, como `<vector>`. El encabezado precompilado solo se compila cuando se modifica el archivo o los archivos que incluye. Si solo realiza cambios en el código fuente del proyecto, la compilación omitirá la compilación del encabezado precompilado.
 
-Las opciones del compilador para los encabezados precompilados son [/y](reference/y-precompiled-headers.md). En las páginas de propiedades del proyecto, las opciones se encuentran en **propiedades de configuraciónC++ > encabezados precompilados de C/>** . Puede optar por no utilizar encabezados precompilados, y puede especificar el nombre del archivo de encabezado y el nombre y la ruta de acceso del archivo de salida. 
+Las opciones del compilador para los encabezados precompilados son [/y](reference/y-precompiled-headers.md). En las páginas de propiedades del proyecto, las opciones se encuentran en **propiedades de configuraciónC++ > encabezados precompilados de C/>** . Puede optar por no utilizar encabezados precompilados, y puede especificar el nombre del archivo de encabezado y el nombre y la ruta de acceso del archivo de salida.
 
 ## <a name="custom-precompiled-code"></a>Código precompilado personalizado
 

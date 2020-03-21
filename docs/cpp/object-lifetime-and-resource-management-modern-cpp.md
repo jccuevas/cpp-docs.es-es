@@ -4,12 +4,12 @@ description: Siga el principio de RAII en moderno C++ para evitar pérdidas de r
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303373"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078029"
 ---
 # <a name="object-lifetime-and-resource-management-raii"></a>Duración de objetos y administración de recursos (RAII)
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 En el ejemplo siguiente, `w` posee un recurso de memoria y, por tanto, debe tener código en su destructor para eliminar la memoria.
- 
+
 ```cpp
 class widget
 {
@@ -89,7 +89,7 @@ Mediante el uso de punteros inteligentes para la asignación de memoria, puede e
 
 El diseño de C++ garantiza que los objetos se destruyen cuando salen del ámbito. Es decir, se destruyen cuando se cierran los bloques, en orden inverso a la construcción. Cuando se destruye un objeto, sus bases y miembros se destruyen en un orden determinado. Los objetos declarados fuera de cualquier bloque, en el ámbito global, pueden provocar problemas. Puede ser difícil de depurar si el constructor de un objeto global produce una excepción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Bienvenido de nuevo aC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>

@@ -2,20 +2,20 @@
 title: 'Tutorial: Multiplicación de matrices'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518496"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075715"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Tutorial: Multiplicación de matrices
 
 Este tutorial muestra, paso a paso, cómo utilizar C++ AMP para acelerar la ejecución de la multiplicación de matrices. Se presentan dos algoritmos, uno sin mosaico y otro con mosaico.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Antes de empezar:
+Antes de comenzar:
 
 - Lea [ C++ la información general de amp](../../parallel/amp/cpp-amp-overview.md).
 
@@ -33,7 +33,7 @@ Las instrucciones para crear un nuevo proyecto varían en función de la versió
 
 1. En la barra de menús, elija **archivo** > **nuevo** > **proyecto** para abrir el cuadro de diálogo **crear un nuevo proyecto** .
 
-1. En la parte superior del cuadro de diálogo, establezca **Lenguaje** en **C++** , establezca **Plataforma** en **Windows** y establezca **Tipo de proyecto** en **Consola**. 
+1. En la parte superior del cuadro de diálogo, establezca **Lenguaje** en **C++** , establezca **Plataforma** en **Windows** y establezca **Tipo de proyecto** en **Consola**.
 
 1. En la lista filtrada de tipos de proyecto, elija **proyecto vacío** y, a continuación, elija **siguiente**. En la página siguiente, escriba *MatrixMultiply* en el cuadro **nombre** para especificar un nombre para el proyecto y especifique la ubicación del proyecto si lo desea.
 
@@ -320,7 +320,7 @@ Para implementar este algoritmo, el código:
 
 1. Presione la barra **espaciadora** para salir de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Tutorial: Depurar una aplicación de C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

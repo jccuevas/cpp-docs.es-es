@@ -9,22 +9,22 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 103a1ce5568c6137994056e574ce8eec04511d8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182917"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079739"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-El asistente crea una clase que tiene una fila de datos. en este caso, se llama `CCustomWindowsFile`. El siguiente código para `CCustomWindowsFile` es asistente que se genera y muestra todos los archivos en un directorio mediante la `WIN32_FIND_DATA` estructura. `CCustomWindowsFile` hereda el `WIN32_FIND_DATA` estructura:
+El asistente crea una clase que tiene una fila de datos; en este caso, se denomina `CCustomWindowsFile`. El código siguiente para `CCustomWindowsFile` es el asistente generado y enumera todos los archivos de un directorio mediante la estructura `WIN32_FIND_DATA`. `CCustomWindowsFile` hereda de la estructura de `WIN32_FIND_DATA`:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
 // CustomRS.H
 
-class CCustomWindowsFile: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
@@ -38,9 +38,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` se llama a la [clase de registro de usuario](../../data/oledb/user-record.md) porque también tiene un mapa que describe las columnas de conjunto de filas del proveedor. El mapa de columnas del proveedor contiene una entrada para cada campo del conjunto de filas mediante las macros PROVIDER_COLUMN_ENTRY. Las macros de especifican el nombre de columna ordinal y el desplazamiento a una entrada de la estructura. Las entradas de la columna de proveedor en el código anterior contienen desplazamientos a la `WIN32_FIND_DATA` estructura. Cuando el consumidor llama a `IRowset::GetData`, se transfieren los datos en un búfer contiguo. En lugar de realizar realizar aritmética de puntero, el mapa permite especificar a un miembro de datos.
+`CCustomWindowsFile` se denomina [clase de registro de usuario](../../data/oledb/user-record.md) porque también tiene un mapa que describe las columnas del conjunto de filas del proveedor. El mapa de columnas de proveedor contiene una entrada para cada campo del conjunto de filas mediante las macros PROVIDER_COLUMN_ENTRY. Las macros especifican el nombre de columna, el ordinal y el desplazamiento para una entrada de estructura. Las entradas de columna del proveedor en el código anterior contienen desplazamientos en la estructura de `WIN32_FIND_DATA`. Cuando el consumidor llama a `IRowset::GetData`, los datos se transfieren en un búfer contiguo. En lugar de realizar operaciones aritméticas de puntero, el mapa permite especificar un miembro de datos.
 
-El `CCustomRowset` clase también contiene el `Execute` método. `Execute` es lo que realmente lee los datos en el origen nativo. El código siguiente muestra el asistente generó `Execute` método. La función usa Win32 `FindFirstFile` y `FindNextFile` API para recuperar información acerca de los archivos en el directorio y colocarlos en las instancias de la `CCustomWindowsFile` clase.
+La clase `CCustomRowset` también contiene el método `Execute`. `Execute` es lo que realmente Lee los datos de desde el origen nativo. En el código siguiente se muestra el método de `Execute` generado por el asistente. La función utiliza las API de `FindFirstFile` y `FindNextFile` de Win32 para recuperar información acerca de los archivos del directorio y colocarlos en instancias de la clase `CCustomWindowsFile`.
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -73,10 +73,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-El directorio de búsqueda se muestra mediante `m_strCommandText`; este archivo contiene el texto representado por la `ICommandText` interfaz en el objeto de comando. Si no se especifica ningún directorio, utiliza el directorio actual.
+El directorio que se va a buscar se muestra en `m_strCommandText`; contiene el texto representado por la interfaz `ICommandText` en el objeto de comando. Si no se especifica ningún directorio, utiliza el directorio actual.
 
-El método crea una entrada para cada archivo (correspondiente a una fila) y lo coloca en el `m_rgRowData` miembro de datos. El `CRowsetImpl` clase define la `m_rgRowData` miembro de datos. Los datos de esta matriz se muestran toda la tabla y se utilizan a lo largo de las plantillas.
+El método crea una entrada para cada archivo (correspondiente a una fila) y la coloca en el miembro de datos `m_rgRowData`. La clase `CRowsetImpl` define el miembro de datos `m_rgRowData`. Los datos de esta matriz se muestran en toda la tabla y se utilizan en las plantillas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)<br/>

@@ -2,12 +2,12 @@
 title: Bibliotecas estáticas (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302938"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077977"
 ---
 # <a name="static-libraries-ccx"></a>Bibliotecas estáticas (C++/CX)
 
@@ -15,16 +15,15 @@ Una biblioteca estática que se usa en una aplicación Plataforma universal de W
 
 ## <a name="creating-static-libraries"></a>Crear bibliotecas estáticas
 
-
 Las instrucciones para crear un nuevo proyecto varían en función de la versión de Visual Studio que tenga instalada. Asegúrese de que tiene el selector de versión en la parte superior izquierda establecido en la versión correcta.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Para crear una biblioteca estática de UWP en Visual Studio 2019
 
-1. En la barra de menús, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Crear nuevo proyecto**.
+1. En la barra de menús, elija **archivo** > **nuevo** > **proyecto** para abrir el cuadro de diálogo **crear un nuevo proyecto** .
 
-1. En la parte superior del cuadro de diálogo , establezca **C++** Language en, establezca **plataforma** en **Windows**y establezca **tipo de proyecto** en **UWP**. 
+1. En la parte superior del cuadro de diálogo **Language** , establezca **C++** Language en, establezca **plataforma** en **Windows**y establezca **tipo de proyecto** en **UWP**.
 
 1. En la lista filtrada de tipos de proyecto, elija **biblioteca estática (universal Windows C++-/CX)** y, a continuación, elija **siguiente**. En la página siguiente, asigne un nombre al proyecto y especifique la ubicación del proyecto si lo desea.
 
@@ -52,6 +51,6 @@ Si utilizas una biblioteca estática que crea clases `ref` públicas, clases de 
 
 Puede omitir la advertencia sin ningún problema solo si la biblioteca estática no está generando Windows Runtime componentes consumidos fuera de la propia biblioteca. Si la biblioteca no utiliza un componente que define, el vinculador puede optimizar correctamente la implementación aunque los metadatos públicos contengan la información de tipo. Esto significa que los componentes públicos de una biblioteca estática se compilarán pero no se activarán en tiempo de ejecución. Por esta razón, todos los componentes de Windows Runtime que están destinados a ser consumidos por otros componentes o aplicaciones deben implementarse en una biblioteca de vínculos dinámicos (DLL).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Subprocesamiento y serialización](../cppcx/threading-and-marshaling-c-cx.md)

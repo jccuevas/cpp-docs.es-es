@@ -4,12 +4,12 @@ ms.date: 07/31/2019
 helpviewer_keywords:
 - Linux [C++], porting to Win32
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 6b59d7685aaada3ba44c03da2e5c27c75c8a473a
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
-ms.translationtype: HT
+ms.openlocfilehash: 1c1807cee07db479a91f45e21434b3ba13be2ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682384"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076902"
 ---
 # <a name="running-linux-programs-on-windows"></a>Ejecución de programas de Linux en Windows
 
@@ -20,4 +20,3 @@ Para ejecutar un programa de Linux en Windows, tiene estas opciones:
 - Compile el programa mediante gcc o clang en los entornos [MinGW](http://MinGW.org/) o [MinGW-w64](https://MinGW-w64.org/doku.php), que proporcionan una capa de traducción de las llamadas del sistema de Linux al de Windows.
 - Compile y ejecute el programa mediante gcc o clang en el entorno [Cygwin](https://www.cygwin.com/), que proporciona un entorno de Linux más completo en Windows en comparación con MinGW o MinGW-w64.
 - Porte manualmente el código desde Linux y realice la compilación para Windows con Microsoft C++ (MSVC). Esto implica refactorizar código independiente de la plataforma en bibliotecas independientes y volver a escribir el código específico de Linux para usar código específico de Windows (por ejemplo, Win32 o API de DirectX). En el caso de las aplicaciones que requieren gráficos de alto rendimiento, esta es probablemente la mejor opción.
-

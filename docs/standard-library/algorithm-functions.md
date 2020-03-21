@@ -200,16 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b9f1e5c4c5600fa07d2f9c5222bf57fb43446955
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427372"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076827"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
 
-## <a name="adjacent_find"></a>adjacent_find
+## <a name="adjacent_find"></a><a name="adjacent_find"></a>adjacent_find
 
 Busca dos elementos adyacentes que son iguales o cumplen una condición especificada.
 
@@ -327,7 +327,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a>all_of
+## <a name="all_of"></a><a name="all_of"></a>all_of
 
 Devuelve **verdadero** cuando una condición está presente en cada elemento del intervalo especificado.
 
@@ -403,7 +403,7 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a>any_of
+## <a name="any_of"></a><a name="any_of"></a>any_of
 
 Devuelve **verdadero** cuando una condición está presente al menos una vez en el intervalo de elementos especificado.
 
@@ -480,7 +480,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a>binary_search
+## <a name="binary_search"></a><a name="binary_search"></a>binary_search
 
 Comprueba si hay un elemento en un intervalo ordenado que sea igual a un valor especificado o equivalente a este del modo especificado por un predicado binario.
 
@@ -619,7 +619,7 @@ Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
 There is an element with a value equivalent to -3 under mod_lesser.
 ```
 
-## <a name="clamp"></a>Sujet
+## <a name="clamp"></a><a name="clamp"></a>Sujet
 
 Compara un valor con un límite superior e inferior, y devuelve una referencia al valor si está entre los límites, o una referencia al límite superior o inferior si el valor está por encima o por debajo de ellos, respectivamente.
 
@@ -660,7 +660,7 @@ Devuelve una referencia a *Lower* si `value < lower`, o una referencia a *Upper*
 
 El comportamiento es indefinido si *Upper* es *menor que el menor.*
 
-## <a name="copy"></a>copiar
+## <a name="copy"></a><a name="copy"></a>copiar
 
 Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia delante.
 
@@ -763,7 +763,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a>copy_backward
+## <a name="copy_backward"></a><a name="copy_backward"></a>copy_backward
 
 Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia atrás.
 
@@ -860,7 +860,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 ```
 
-## <a name="copy_if"></a>copy_if
+## <a name="copy_if"></a><a name="copy_if"></a>copy_if
 
 En un intervalo de elementos, copia los elementos que son **true** para la condición especificada.
 
@@ -939,7 +939,7 @@ int main()
 
     // is_even checks if the element is even.
     auto is_even = [](int const elem) { return !(elem % 2); };
-    // use copy_if to select only even elements from li 
+    // use copy_if to select only even elements from li
     // and copy them to le, starting from le's begin position
     auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
     le.resize(std::distance(le.begin(), ec));  // shrink le to new size
@@ -965,7 +965,7 @@ Even numbers are le = ( 46 88 72 60 40 84 )
 Odd numbers are lo = ( 59 79 71 5 )
 ```
 
-## <a name="copy_n"></a>copy_n
+## <a name="copy_n"></a><a name="copy_n"></a>copy_n
 
 Copia un número especificado de elementos.
 
@@ -1035,7 +1035,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a>contabiliza
+## <a name="count"></a><a name="count"></a>contabiliza
 
 Devuelve el número de elementos de un intervalo cuyos valores coinciden con un valor especificado.
 
@@ -1116,7 +1116,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>count_if
+## <a name="count_if"></a><a name="count_if"></a>count_if
 
 Devuelve el número de elementos de un intervalo cuyos valores satisfacen una condición especificada.
 
@@ -1201,7 +1201,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a>sea
+## <a name="equal"></a><a name="equal"></a>sea
 
 Compara dos intervalos elemento a elemento para ver si son iguales o equivalentes según lo especificado por un predicado binario.
 
@@ -1336,7 +1336,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a>equal_range
 
 En un intervalo ordenado, busca el subintervalo en el que todos los elementos son equivalentes a un valor determinado.
 
@@ -1502,7 +1502,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a>relleno
+## <a name="fill"></a><a name="fill"></a>relleno
 
 Asigna el mismo valor nuevo a cada elemento de un intervalo especificado.
 
@@ -1580,7 +1580,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a>fill_n
+## <a name="fill_n"></a><a name="fill_n"></a>fill_n
 
 Asigna un nuevo valor a un número especificado de elementos de un intervalo a partir de un elemento determinado.
 
@@ -1669,7 +1669,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>localización
+## <a name="find"></a><a name="find"></a>localización
 
 Busca la posición de la primera aparición de un elemento en un intervalo que tiene un valor especificado.
 
@@ -1712,7 +1712,7 @@ El `operator==` que se usa para determinar la coincidencia entre un elemento y e
 
 Para obtener un ejemplo de código con `find()`, vea [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="find_end"></a>find_end
+## <a name="find_end"></a><a name="find_end"></a>find_end
 
 Busca en un intervalo la última subsecuencia que es idéntica a una secuencia especificada o que es equivalente según lo especificado por un predicado binario.
 
@@ -1876,7 +1876,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a>find_first_of
+## <a name="find_first_of"></a><a name="find_first_of"></a>find_first_of
 
 Busca la primera aparición de cualquiera de varios valores dentro de un intervalo de destino o la primera aparición de cualquiera de varios elementos que son equivalentes según lo especificado por un predicado binario en un conjunto especificado de los elementos.
 
@@ -2043,7 +2043,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a>find_if
+## <a name="find_if"></a><a name="find_if"></a>find_if
 
 Busca la posición de la primera aparición de un elemento en un intervalo que cumple una condición especificada.
 
@@ -2165,7 +2165,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a>find_if_not
+## <a name="find_if_not"></a><a name="find_if_not"></a>find_if_not
 
 Devuelve el primer elemento del intervalo indicado que no satisface una condición.
 
@@ -2204,7 +2204,7 @@ Esta función de plantilla es una generalización del algoritmo [find](../standa
 
 Para obtener un ejemplo de código que se adapta fácilmente a `find_if_not()`, vea [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="for_each"></a>for_each
+## <a name="for_each"></a><a name="for_each"></a>for_each
 
 Aplica un objeto de función especificado a cada elemento en un orden hacia delante dentro de un intervalo y devuelve el objeto de función.
 
@@ -2359,7 +2359,7 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="for_each_n"></a>for_each_n
+## <a name="for_each_n"></a><a name="for_each_n"></a>for_each_n
 
 ```cpp
 template<class InputIterator, class Size, class Function>
@@ -2376,7 +2376,7 @@ ForwardIterator for_each_n(
     Function f);
 ```
 
-## <a name="generate"></a>crear
+## <a name="generate"></a><a name="generate"></a>crear
 
 Asigna los valores generados por un objeto de función a cada elemento de un intervalo.
 
@@ -2456,7 +2456,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a>generate_n
+## <a name="generate_n"></a><a name="generate_n"></a>generate_n
 
 Asigna los valores generados por un objeto de función a un número especificado de elementos de un intervalo y vuelve a la posición situada una más allá del último valor asignado.
 
@@ -2542,7 +2542,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a>presenta
+## <a name="includes"></a><a name="includes"></a>presenta
 
 Prueba si un intervalo ordenado contiene todos los elementos incluidos en un segundo intervalo ordenado, donde el criterio de ordenación o equivalencia entre los elementos se pueden especificar mediante un predicado binario.
 
@@ -2767,7 +2767,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a>inplace_merge
+## <a name="inplace_merge"></a><a name="inplace_merge"></a>inplace_merge
 
 Combina los elementos de dos intervalos ordenados consecutivos en un único intervalo ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -2937,7 +2937,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a>is_heap
+## <a name="is_heap"></a><a name="is_heap"></a>is_heap
 
 Devuelve **true** si los elementos del intervalo especificado forman un montón.
 
@@ -2993,7 +2993,7 @@ La segunda función de plantilla devuelve
 
 `is_heap_until(first, last, pred) == last`.
 
-## <a name="is_heap_until"></a>is_heap_until
+## <a name="is_heap_until"></a><a name="is_heap_until"></a>is_heap_until
 
 Devuelve un iterador situado en el primer elemento del intervalo [`first`, `last`) que no cumple la condición de ordenación del montón, o *End* si el intervalo forma un montón.
 
@@ -3047,7 +3047,7 @@ La primera función de plantilla devuelve el último iterador `next` en `[first,
 
 La segunda función de plantilla se comporta igual que la primera, salvo que usa el predicado *Pred* en lugar de `std::less<>` como condición de ordenación del montón.
 
-## <a name="is_partitioned"></a>is_partitioned
+## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
 Devuelve **true** si todos los elementos del intervalo especificado que prueban **true** para una condición van antes que los elementos que prueban **false**.
 
@@ -3088,7 +3088,7 @@ Devuelve **true** cuando todos los elementos del intervalo especificado que prue
 
 La función de plantilla devuelve **true** solo si todos los elementos de `[first, last)` se particionan mediante *Pred*; es decir, todos los elementos `X` en `[first, last)` para los que se produce `pred (X)` true antes de que todos los elementos `Y` para los que `pred (Y)` es **false**.
 
-## <a name="is_permutation"></a>is_permutation
+## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
 Devuelve true si ambos intervalos contienen los mismos elementos, independientemente de si los elementos están en el mismo orden. Use las sobrecargas de dos intervalos en código C ++ 14 porque las sobrecargas que toman un único iterador para el segundo intervalo no detectan las diferencias si el segundo intervalo es más largo que el primero y esto provoca un comportamiento indefinido si el segundo intervalo es más corto que el primero.
 
@@ -3208,7 +3208,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a>is_sorted
+## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
 
 Devuelve **true** si los elementos del intervalo especificado están ordenados.
 
@@ -3258,7 +3258,7 @@ La primera función de plantilla devuelve [is_sorted_until](#is_sorted_until)`( 
 
 La segunda función de plantilla devuelve `is_sorted_until( first, last , pred ) == last`. La función de predicado *Pred* realiza la comparación de orden.
 
-## <a name="is_sorted_until"></a>is_sorted_until
+## <a name="is_sorted_until"></a><a name="is_sorted_until"></a>is_sorted_until
 
 Devuelve un `ForwardIterator` que se establece en el último elemento que está en el criterio de ordenación de un intervalo especificado.
 
@@ -3314,7 +3314,7 @@ La primera función de plantilla devuelve el último iterador `next` en `[first,
 
 La segunda función de plantilla se comporta igual, salvo que sustituye `operator<(X, Y)` por `pred(X, Y)`.
 
-## <a name="iter_swap"></a>iter_swap
+## <a name="iter_swap"></a><a name="iter_swap"></a>iter_swap
 
 Intercambia dos valores a los que se hace referencia mediante un par de iteradores especificados.
 
@@ -3470,7 +3470,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a>lexicographical_compare
+## <a name="lexicographical_compare"></a><a name="lexicographical_compare"></a>lexicographical_compare
 
 Compara dos secuencias elemento a elemento para determinar cuál es menor de los dos.
 
@@ -3637,7 +3637,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
 
 Busca la posición del primer elemento en un intervalo ordenado que tiene un valor mayor o equivalente a un valor especificado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -3776,7 +3776,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a>make_heap
+## <a name="make_heap"></a><a name="make_heap"></a>make_heap
 
 Convierte elementos de un intervalo especificado en un montón en el que el primer elemento es el mayor y para el que se puede especificar un criterio de ordenación con un predicado binario.
 
@@ -3858,7 +3858,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a>máx.
+## <a name="max"></a><a name="max"></a>máx.
 
 Compara dos objetos y devuelve el mayor de los dos, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -4071,7 +4071,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a>max_element
+## <a name="max_element"></a><a name="max_element"></a>max_element
 
 Busca la primera aparición del elemento mayor en un intervalo especificado donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -4225,7 +4225,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a>sin
+## <a name="merge"></a><a name="merge"></a>sin
 
 Combina todos los elementos de dos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -4420,7 +4420,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a>minuto
+## <a name="min"></a><a name="min"></a>minuto
 
 Compara dos objetos y devuelve el menor de los dos, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -4635,7 +4635,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a>min_element
+## <a name="min_element"></a><a name="min_element"></a>min_element
 
 Busca la primera aparición del menor elemento en un intervalo especificado donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -4799,7 +4799,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a>minmax_element
+## <a name="minmax_element"></a><a name="minmax_element"></a>minmax_element
 
 Realiza el trabajo efectuado por `min_element` y `max_element` en una llamada.
 
@@ -4859,7 +4859,7 @@ La segunda función de plantilla se comporta igual, salvo que sustituye `operato
 
 Si la secuencia no está vacía, la función realiza como máximo `3 * (last - first - 1) / 2` comparaciones.
 
-## <a name="minmax"></a>MinMax
+## <a name="minmax"></a><a name="minmax"></a>MinMax
 
 Compara dos parámetros de entrada y los devuelve como un par, de menor a mayor.
 
@@ -4909,7 +4909,7 @@ Las funciones de plantilla restantes se comportan de la misma manera, salvo que 
 
 La función realiza exactamente una comparación.
 
-## <a name="mismatch"></a>versiones
+## <a name="mismatch"></a><a name="mismatch"></a>versiones
 
 Compara dos intervalos elemento a elemento y localiza la primera posición en la que se produce una diferencia.
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a>&lt;alg&gt; Move
+## <a name="ltalggt-move"></a><a name="alg_move"></a>&lt;alg&gt; Move
 
 Mueve los elementos asociados a un intervalo especificado.
 
@@ -5151,7 +5151,7 @@ Iterador de salida que contendrá los elementos movidos.
 
 La función de plantilla evalúa `*(dest + N) = move(*(first + N))` una vez por cada `N` en el intervalo `[0, last - first)`, para aumentar de forma estricta los valores de `N` empezando por el valor más bajo. Después, devuelve `dest + N`. Si `dest` y *primero* designan regiones de almacenamiento, *dest* no debe estar en el intervalo `[first, last)`.
 
-## <a name="move_backward"></a>move_backward
+## <a name="move_backward"></a><a name="move_backward"></a>move_backward
 
 Mover los elementos de un iterador a otro. El movimiento comienza con el último elemento de un intervalo especificado y termina con el primer elemento de ese intervalo.
 
@@ -5180,7 +5180,7 @@ La función de plantilla evalúa `*(destEnd - N - 1) = move(*(last - N - 1))` un
 
 `move` y `move_backward` son funcionalmente equivalentes a utilizar `copy` y `copy_backward` con un iterador de movimiento.
 
-## <a name="next_permutation"></a>next_permutation
+## <a name="next_permutation"></a><a name="next_permutation"></a>next_permutation
 
 Reorganiza los elementos de un intervalo de modo que la ordenación original se reemplaza con la mayor permutación lexicográficamente siguiente si existe, donde el sentido de siguiente se puede especificar con un predicado binario.
 
@@ -5359,7 +5359,7 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a>nth_element
+## <a name="nth_element"></a><a name="nth_element"></a>nth_element
 
 Divide un intervalo de elementos, situando correctamente el *enésimo* elemento de la secuencia en el intervalo de modo que todos los elementos que hay delante sean menores o iguales que él y todos los elementos que lo siguen en la secuencia sean mayores o iguales que él.
 
@@ -5486,7 +5486,7 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a>none_of
+## <a name="none_of"></a><a name="none_of"></a>none_of
 
 Devuelve **verdadero** cuando una condición nunca está presente entre los elementos del intervalo especificado.
 
@@ -5527,7 +5527,7 @@ Devuelve **true** si la condición no se detecta al menos una vez en el interval
 
 La función de plantilla devuelve **true** solo si, para algunos `N` del intervalo `[0, last - first)`, el predicado `pred(*(first + N))` siempre es **false**.
 
-## <a name="partial_sort"></a>partial_sort
+## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
 Organiza un número especificado de los elementos menores de un intervalo en un orden no descendente, o de acuerdo con un criterio de ordenación especificado por un predicado binario.
 
@@ -5658,7 +5658,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>partial_sort_copy
+## <a name="partial_sort_copy"></a><a name="partial_sort_copy"></a>partial_sort_copy
 
 Copia los elementos de un intervalo de origen a un intervalo de destino donde los elementos de origen están ordenados por menor que u otro predicado binario especificado.
 
@@ -5802,7 +5802,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a>divide
+## <a name="partition"></a><a name="partition"></a>divide
 
 Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los elementos que satisfacen un predicado unario preceden a los que no lo satisfacen.
 
@@ -5888,7 +5888,7 @@ int main()
 }
 ```
 
-## <a name="partition_copy"></a>partition_copy
+## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
 
 Copia los elementos para los que una condición es **verdadera** para un destino y cuya condición es **falsa** en otro. Los elementos deben proceder de un intervalo especificado.
 
@@ -5935,7 +5935,7 @@ Condición que se va a comprobar. La proporciona y la define un objeto de funci�
 
 La función de plantilla copia cada elemento `X` en `[first,last)` a `*dest1++` si `pred(X)` es true, o `*dest2++` en caso contrario. Devuelve `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
-## <a name="partition_point"></a>partition_point
+## <a name="partition_point"></a><a name="partition_point"></a>partition_point
 
 Devuelve el primer elemento del intervalo especificado que no satisface la condición. Los elementos se ordenan de forma que aquellos que satisfacen la condición están antes que los que no lo hacen.
 
@@ -5966,7 +5966,7 @@ Devuelve un `ForwardIterator` que hace referencia al primer elemento que no cump
 
 La función de plantilla busca el primer iterador `it` en `[first, last)` para el que `pred(*it)` es **false**. La secuencia se debe ordenar por *Pred*.
 
-## <a name="pop_heap"></a>pop_heap
+## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
 Quita el elemento mayor del principio de un montón hasta la penúltima posición del intervalo y después forma un nuevo montón con los elementos restantes.
 
@@ -6075,7 +6075,7 @@ int main()
 }
 ```
 
-## <a name="prev_permutation"></a>prev_permutation
+## <a name="prev_permutation"></a><a name="prev_permutation"></a>prev_permutation
 
 Reorganiza los elementos de un intervalo de modo que la ordenación original se sustituya por la mayor permutación lexicográficamente anterior, si existe, donde el sentido de anterior se puede especificar con un predicado binario.
 
@@ -6250,7 +6250,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a>push_heap
+## <a name="push_heap"></a><a name="push_heap"></a>push_heap
 
 Agrega un elemento que está al final de un intervalo a un montón existente que se compone de los elementos anteriores del intervalo.
 
@@ -6363,11 +6363,11 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a>random_shuffle
+## <a name="random_shuffle"></a><a name="random_shuffle"></a>random_shuffle
 
 La función STD:: random_shuffle () está en desuso y se reemplaza por [STD:: orden aleatorio](../standard-library/algorithm-functions.md#shuffle). Para obtener un ejemplo de código y más información, vea [\<> aleatorio](../standard-library/random.md) y la Stack Overflow post, [¿por qué los métodos std:: random_shuffle están en desuso en c++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
-## <a name="remove"></a>retirar
+## <a name="remove"></a><a name="remove"></a>retirar
 
 Elimina un valor especificado de un intervalo determinado sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo libre del valor especificado.
 
@@ -6463,7 +6463,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy"></a>remove_copy
+## <a name="remove_copy"></a><a name="remove_copy"></a>remove_copy
 
 Copia elementos de un intervalo de origen a un intervalo de destino, excepto que los elementos de un valor especificado no se copian, sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo de destino.
 
@@ -6561,7 +6561,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy_if"></a>remove_copy_if
+## <a name="remove_copy_if"></a><a name="remove_copy_if"></a>remove_copy_if
 
 Copia elementos de un intervalo de origen a un intervalo de destino, excepto los elementos que cumplen un predicado. Los elementos se copian sin alterar el orden de los elementos restantes. Devuelve el final de un nuevo intervalo de destino.
 
@@ -6668,7 +6668,7 @@ int main()
 }
 ```
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 Elimina los elementos que cumplen un predicado de un intervalo determinado sin alterar el orden de los elementos restantes y devolver el final de un nuevo intervalo libre del valor especificado.
 
@@ -6769,7 +6769,7 @@ int main()
 }
 ```
 
-## <a name="replace"></a>Reemplace
+## <a name="replace"></a><a name="replace"></a>Reemplace
 
 Examina cada elemento de un intervalo y lo reemplaza si coincide con un valor especificado.
 
@@ -6856,7 +6856,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy"></a>replace_copy
+## <a name="replace_copy"></a><a name="replace_copy"></a>replace_copy
 
 Examina cada elemento de un intervalo de origen y lo reemplaza si coincide con un valor especificado y copia el resultado a un nuevo intervalo de destino.
 
@@ -6971,7 +6971,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy_if"></a>replace_copy_if
+## <a name="replace_copy_if"></a><a name="replace_copy_if"></a>replace_copy_if
 
 Examina cada elemento de un intervalo de origen y lo reemplaza si satisface un predicado especificado y copia el resultado a un nuevo intervalo de destino.
 
@@ -7094,7 +7094,7 @@ int main()
 }
 ```
 
-## <a name="replace_if"></a>replace_if
+## <a name="replace_if"></a><a name="replace_if"></a>replace_if
 
 Examina cada elemento de un intervalo y lo reemplaza si satisface un predicado especificado.
 
@@ -7190,7 +7190,7 @@ int main()
 }
 ```
 
-## <a name="reverse"></a>viceversa
+## <a name="reverse"></a><a name="reverse"></a>viceversa
 
 Invierte el orden de los elementos dentro de un intervalo.
 
@@ -7265,7 +7265,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a>reverse_copy
+## <a name="reverse_copy"></a><a name="reverse_copy"></a>reverse_copy
 
 Invierte el orden de los elementos dentro de un intervalo de origen mientras los copia a un intervalo de destino
 
@@ -7347,7 +7347,7 @@ int main()
 }
 ```
 
-## <a name="rotate"></a>rota
+## <a name="rotate"></a><a name="rotate"></a>rota
 
 Intercambia los elementos de dos intervalos adyacentes.
 
@@ -7461,7 +7461,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a>rotate_copy
+## <a name="rotate_copy"></a><a name="rotate_copy"></a>rotate_copy
 
 Intercambia los elementos de dos intervalos adyacentes dentro de un intervalo de origen y copia el resultado a un intervalo de destino.
 
@@ -7569,7 +7569,7 @@ int main()
 }
 ```
 
-## <a name="sample"></a>AdventureWorks
+## <a name="sample"></a><a name="sample"></a>AdventureWorks
 
 ```cpp
 template<class PopulationIterator, class SampleIterator, class Distance, class UniformRandomBitGenerator>
@@ -7581,7 +7581,7 @@ SampleIterator sample(
     UniformRandomBitGenerator&& g);
 ```
 
-## <a name="search"></a>buscan
+## <a name="search"></a><a name="search"></a>buscan
 
 Busca la primera aparición de una secuencia dentro de un intervalo de destino cuyos elementos son iguales que los de una secuencia determinada de elementos o cuyos elementos son equivalentes según lo especificado por un predicado binario a los elementos de la secuencia especificada.
 
@@ -7759,7 +7759,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a>search_n
+## <a name="search_n"></a><a name="search_n"></a>search_n
 
 Busca la primera subsecuencia de un intervalo en la que un número especificado de elementos tienen un valor determinado o una relación con ese valor según lo especificado por un predicado binario.
 
@@ -7912,7 +7912,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a>set_difference
+## <a name="set_difference"></a><a name="set_difference"></a>set_difference
 
 Agrupa todos los elementos que pertenecen a un intervalo de origen ordenado, pero no a un segundo intervalo de origen ordenado, en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -8114,7 +8114,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a>set_intersection
+## <a name="set_intersection"></a><a name="set_intersection"></a>set_intersection
 
 Agrupa todos los elementos que pertenecen a ambos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -8312,7 +8312,7 @@ int main()
 }
 ```
 
-## <a name="set_symmetric_difference"></a>set_symmetric_difference
+## <a name="set_symmetric_difference"></a><a name="set_symmetric_difference"></a>set_symmetric_difference
 
 Agrupa todos los elementos que pertenecen a uno, pero no a ambos, de los intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -8514,7 +8514,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>set_union
+## <a name="set_union"></a><a name="set_union"></a>set_union
 
 Agrupa todos los elementos que pertenecen al menos a uno de los dos intervalos de origen ordenados en un único intervalo de destino ordenado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 
@@ -8716,7 +8716,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>aleatoria
+## <a name="shuffle"></a><a name="shuffle"></a>aleatoria
 
 Ordena (reorganiza) elementos para un intervalo determinado utilizando un generador de números aleatorio.
 
@@ -8743,7 +8743,7 @@ El generador de números aleatorios que la función `shuffle()` utilizará para 
 
 Para obtener más información y un ejemplo de código que emplea `shuffle()`, vea [\<random>](../standard-library/random.md).
 
-## <a name="sort"></a>clasificación
+## <a name="sort"></a><a name="sort"></a>clasificación
 
 Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario.
 
@@ -8863,7 +8863,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a>sort_heap
+## <a name="sort_heap"></a><a name="sort_heap"></a>sort_heap
 
 Convierte un montón en un intervalo ordenado.
 
@@ -8963,7 +8963,7 @@ int main()
 }
 ```
 
-## <a name="stable_partition"></a>stable_partition
+## <a name="stable_partition"></a><a name="stable_partition"></a>stable_partition
 
 Clasifica los elementos de un intervalo en dos conjuntos disjuntos, donde los elementos que satisfacen un predicado unario preceden a los que no lo satisfacen, conservando el orden relativo de los elementos equivalentes.
 
@@ -9053,7 +9053,7 @@ int main()
 }
 ```
 
-## <a name="stable_sort"></a>stable_sort
+## <a name="stable_sort"></a><a name="stable_sort"></a>stable_sort
 
 Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario y conserva el orden relativo de los elementos equivalentes.
 
@@ -9172,7 +9172,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>pasar
+## <a name="swap"></a><a name="swap"></a>pasar
 
 El primer reemplazo intercambia los valores de dos objetos. El segundo reemplazo intercambia los valores entre dos matrices de objetos.
 
@@ -9255,7 +9255,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a>swap_ranges
+## <a name="swap_ranges"></a><a name="swap_ranges"></a>swap_ranges
 
 Intercambia los elementos de un intervalo con los elementos de otro intervalo del mismo tamaño.
 
@@ -9359,7 +9359,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a>transformación
+## <a name="transform"></a><a name="transform"></a>transformación
 
 Aplica un objeto de función especificado a cada elemento de un intervalo de origen o a un par de elementos de dos intervalos de origen y copia los valores devueltos del objeto de función a un intervalo de destino.
 
@@ -9515,7 +9515,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a>espeficarse
+## <a name="unique"></a><a name="unique"></a>espeficarse
 
 Quita los elementos duplicados adyacentes entre sí en un intervalo especificado.
 
@@ -9664,7 +9664,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a>unique_copy
+## <a name="unique_copy"></a><a name="unique_copy"></a>unique_copy
 
 Copia los elementos de un intervalo de origen a un intervalo de destino salvo los elementos duplicados que son adyacentes entre sí.
 
@@ -9801,7 +9801,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
 
 Busca la posición del primer elemento de un intervalo ordenado que tiene un valor mayor que un valor especificado, donde el criterio de ordenación se puede especificar mediante un predicado binario.
 

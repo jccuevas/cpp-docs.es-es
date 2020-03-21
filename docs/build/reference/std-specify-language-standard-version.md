@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 4583bef3ef3033b6ba493ccac1c4fc5360c70e35
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 52aa99cf5bdf7ddcf83a8423b946a03d2ca95d2d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624890"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079267"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (Especificar la versión estándar del lenguaje)
 
@@ -21,21 +21,21 @@ Habilite características admitidas del lenguaje C++ desde la versión especific
 
 > /std:\[c++14\|c++17\|c++latest]
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La opción **/std** está disponible en Visual Studio 2017 y versiones posteriores. Se usa para controlar características estándar del lenguaje de programación ISO C++ específicas de la versión habilitadas durante la compilación del código. Esta opción permite deshabilitar la compatibilidad con ciertas características nuevas de biblioteca y del lenguaje que pueden interrumpir el código existente que se ajusta a una versión determinada del estándar del lenguaje. De forma predeterminada se especifica **/std:c++14**, que deshabilita características de la biblioteca estándar y del lenguaje de versiones posteriores del estándar del lenguaje C++. Use **/std:c++17** para habilitar características y comportamientos específicos del estándar C++17. Para habilitar de forma explícita el compilador implementado actualmente y las características de la biblioteca estándar propuestas para el siguiente borrador del estándar, use **/std:c++latest**. Todas las características de C++ 20 requieren **/STD: C + + latest**; una vez completada la implementación, se habilitará una nueva opción **/STD: c++ 20** .
 
 La opción **/std:c++14** predeterminada habilita el conjunto de características de C++14 que implementa el compilador MSVC. Esta opción deshabilita la compatibilidad del compilador y la biblioteca estándar con las características que se han cambiado o agregado en las versiones más recientes del estándar del lenguaje, a excepción de algunas características de C++17 ya implementadas en versiones anteriores del compilador MSVC. Para evitar cambios importantes para los usuarios que ya han tomado dependencias de las características disponibles a partir de Visual Studio 2015 Update 2, estas características permanecerán habilitadas cuando se especifica la opción **/std:c++14**:
 
-- [Reglas para auto con listas de inicialización entre llaves](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
+- [Reglas para auto con listas de inicialización entre llaves](https://wg21.link/n3922)
 
-- [typename en parámetros de plantilla de la plantilla](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
+- [typename en parámetros de plantilla de la plantilla](https://wg21.link/n4051)
 
-- [Eliminación de trígrafos](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)
+- [Eliminación de trígrafos](https://wg21.link/n4086)
 
-- [Atributos de espacios de nombres y enumeradores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
+- [Atributos de espacios de nombres y enumeradores](https://wg21.link/n4266)
 
-- [Literales de caracteres de u8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
+- [Literales de caracteres de u8](https://wg21.link/n4267)
 
 Para obtener información adicional sobre qué características de C++ 14 y C++ 17 están habilitadas cuando se especifica **/STD: c++ 14** , vea las notas en la [tabla de conformidad de lenguaje de Microsoft C++ ](../../overview/visual-cpp-language-conformance.md).
 
@@ -44,7 +44,7 @@ La opción **/std:c++17** habilita el conjunto completo de características de C
 La opción **/std:c++latest** habilita las características de la biblioteca y el lenguaje posteriores a C++17 implementadas actualmente en el compilador y las bibliotecas. Pueden ser características del borrador de trabajo de C++20 y actualizaciones de defectos del estándar C++ que no están incluidas en C++17, así como propuestas experimentales del borrador del estándar. Para obtener una lista de las características admitidos de la biblioteca y el lenguaje, vea [Novedades de Visual C++](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). La opción **/std:c++latest** no habilita las características protegidas por el modificador **/experimental**, pero es posible que deba habilitarlas.
 
 > [!IMPORTANT]
-> Las características del compilador y la biblioteca habilitadas por **/std:c++latest** representan características que pueden aparecer en un futuro estándar C++, así como características aprobadas de C++20. Las características que no se han aprobado están sujetas a cambios importantes o a eliminación sin previo aviso, y se proporcionan como estén. 
+> Las características del compilador y la biblioteca habilitadas por **/std:c++latest** representan características que pueden aparecer en un futuro estándar C++, así como características aprobadas de C++20. Las características que no se han aprobado están sujetas a cambios importantes o a eliminación sin previo aviso, y se proporcionan como estén.
 
 La opción **/std** vigente durante una compilación de C++ se puede detectar mediante la macro de preprocesador [\_MSVC\_LANG](../../preprocessor/predefined-macros.md). Para más información, vea [Macros de preprocesador](../../preprocessor/predefined-macros.md).
 
@@ -61,7 +61,7 @@ Las opciones **/std:c++14** y **/std:c++latest** están disponibles a partir de 
 
 1. En **Estándar de lenguaje C++** , elija el estándar del lenguaje que se va a admitir en el control desplegable y, después, seleccione **Aceptar** o **Aplicar** para guardar los cambios.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones del compilador de MSVC](compiler-options.md)<br/>
 [Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

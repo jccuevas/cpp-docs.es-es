@@ -4,12 +4,12 @@ description: Descripción de BNF de MASM para x64.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322827"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075467"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Gramática de BNF de Microsoft macro Assembler
 
@@ -35,7 +35,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;+ | -
 
 \ *aExpr*
-&nbsp;&nbsp;&nbsp;&nbsp;*término* | *aExpr* && 
+&nbsp;&nbsp;&nbsp;&nbsp;*término* | *aExpr* && *term*
 
 \ *altId*
 &nbsp;&nbsp;&nbsp;*id* &nbsp;
@@ -121,7 +121,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;; *texto* ;;
 
 \ *commentDir*
-&nbsp;&nbsp;&nbsp;&nbsp; *delimitador* de comentario\
+&nbsp;&nbsp;&nbsp;&nbsp;**COMMENT** *delimitador* de comentario\
 &nbsp;&nbsp;&nbsp;&nbsp;*texto*\
 &nbsp;&nbsp;&nbsp;&nbsp;*texto* del *delimitador* de *texto* ;;
 
@@ -218,7 +218,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;*generalDir* | *segmentDef*
 
 \ *directiveList*
-&nbsp;&nbsp;&nbsp;&nbsp;*directiva* | *directiveList*
+&nbsp;&nbsp;&nbsp;&nbsp;*directiva* | *directiveList* *directive*
 
 \ de *distancia*
 &nbsp;&nbsp;&nbsp;&nbsp;*nearfar* | **NEAR16** | **NEAR32** | **FAR16** | **FAR32**
@@ -269,12 +269,12 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 \ *E11*
 &nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
 &nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *expr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ID.* de ancho\
-&nbsp;&nbsp;&nbsp;&nbsp;*identificador* de **máscara** | 
+&nbsp;&nbsp;&nbsp;&nbsp;| **WIDTH** *ID.* de ancho\
+&nbsp;&nbsp;&nbsp;&nbsp;*identificador* de **máscara** | \
 &nbsp;&nbsp;&nbsp;&nbsp;| **tamaño** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **sizeof** *sizeArg*\
 &nbsp;&nbsp;&nbsp;&nbsp;*identificador* de **longitud** | \
-&nbsp;&nbsp;&nbsp;&nbsp;|  *identificador* de longitud\
+&nbsp;&nbsp;&nbsp;&nbsp;| **LENGTHOF** *identificador* de longitud\
 &nbsp;&nbsp;&nbsp;&nbsp;| *recordConst*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *cadena*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *constante*\
@@ -417,7 +417,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;**St** *expr*
 
 \ *frameExpr*
-&nbsp;&nbsp;&nbsp;&nbsp; *ID.* de seg\
+&nbsp;&nbsp;&nbsp;&nbsp;**SEG** *ID.* de seg\
 &nbsp;&nbsp;&nbsp;&nbsp;| **DGROUP** : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister* : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;*id* | 
@@ -537,7 +537,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;*id* &nbsp;: | *ID.* :: | @@:
 
 \ *labelDir*
-&nbsp;&nbsp;&nbsp;&nbsp; **etiqueta** ID *qualifiedType* ;;
+&nbsp;&nbsp;&nbsp;&nbsp;*id* **etiqueta** ID *qualifiedType* ;;
 
 \ *langType*
 &nbsp;&nbsp;&nbsp;&nbsp;**C** | **Pascal** | **FORTRAN** | **Basic** | **syscall** | **Stdcall**
@@ -560,10 +560,10 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;|  **.**  | LISTMACRO **.\ XALL**
 
 \ *localDef*
-&nbsp;&nbsp;&nbsp;&nbsp; *idList* local;;
+&nbsp;&nbsp;&nbsp;&nbsp;**LOCAL** *idList* local;;
 
 \ *localDir*
-&nbsp;&nbsp;&nbsp;&nbsp; *listadeparámetros* local;;
+&nbsp;&nbsp;&nbsp;&nbsp;**LOCAL** *listadeparámetros* local;;
 
 \ *localDirList*
 &nbsp;&nbsp;&nbsp;&nbsp;*localDir* | *localDirList* *localDir*
@@ -590,7 +590,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;*identificador* de | ( *macroArgList* )
 
 \ *macroDir*
-&nbsp;&nbsp;&nbsp;&nbsp; **macro** ID ⟦ *macroParmList* ⟧;; \
+&nbsp;&nbsp;&nbsp;&nbsp;*id* **macro** ID ⟦ *macroParmList* ⟧;; \
 &nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
@@ -650,7 +650,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;**todos los** | **ninguno** | **NOTPUBLIC**
 
 \ *memOption*
-&nbsp;&nbsp;&nbsp;&nbsp;**diminuto** | **pequeña** | **mediana** | **compacto** | **grande** |  grande | **plano**
+&nbsp;&nbsp;&nbsp;&nbsp;**diminuto** | **pequeña** | **mediana** | **compacto** | **grande** | **HUGE** grande | **plano**
 
 \ *mnemotécnico*
 &nbsp;&nbsp;&nbsp;&nbsp;nombre de la instrucción.
@@ -763,7 +763,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;*expr* *BinaryOp* *expr* | *flagName* | *expr*
 
 \ *procDir*
-&nbsp;&nbsp;&nbsp;&nbsp; **procedimiento** procId\
+&nbsp;&nbsp;&nbsp;&nbsp;*procId* **procedimiento** procId\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *pOptions* ⟧ ⟦ < *macroArgList* > ⟧ \
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *usesRegs* ⟧ ⟦ *procParmList* ⟧
 
@@ -803,10 +803,10 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* **proto** *protoSpec*
 
 \ *pubDef*
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧ *id*
 
 \ *publicDir*
-&nbsp;&nbsp;&nbsp;&nbsp; *pubList* público;;
+&nbsp;&nbsp;&nbsp;&nbsp;**PUBLIC** *pubList* público;;
 
 \ *pubList*
 &nbsp;&nbsp;&nbsp;&nbsp;*pubDef* | *pubList* , ⟦;; ⟧ *pubDef*
@@ -856,7 +856,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;*specialRegister* | *gpRegister* | *byteRegister* | *qwordRegister* |  *fpuRegister* | *SIMDRegister* | *segmentRegister*
 
 \ *regList*
-&nbsp;&nbsp;&nbsp;&nbsp;*registrar* | *regList*
+&nbsp;&nbsp;&nbsp;&nbsp;*registrar* | *regList* *register*
 
 \ *relOp*
 &nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | GE
@@ -872,7 +872,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;*initValue* | *scalarInstList* , ⟦;; ⟧ *initValue*
 
 \ *segAlign*
-&nbsp;&nbsp;&nbsp;&nbsp;**BYTE** | **WORD** | **DWORD** |  **Página** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**BYTE** | **WORD** | **DWORD** | **PARA** **Página** | 
 
 \ *segAttrib*
 &nbsp;&nbsp;&nbsp;&nbsp;**pila** de | **públicas** |  | de **memoria** **común** | **en** *constExpr* | **privado**
@@ -1000,7 +1000,7 @@ La gramática BNF permite definiciones recursivas. Por ejemplo, la gramática us
 &nbsp;&nbsp;&nbsp;&nbsp;*simpleExpr* |! *simpleExpr*
 
 *text*\
-&nbsp;&nbsp;&nbsp;&nbsp;*textLiteral* | carácter de *texto* |! *texto* de carácter | *carácter* |! *carácter*
+&nbsp;&nbsp;&nbsp;&nbsp;*textLiteral* | carácter de *texto* |! *character* *texto* de carácter | *carácter* |! *carácter*
 
 \ *textDir*
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* *textMacroDir* ;;
@@ -1071,4 +1071,3 @@ calificador de **definición** de tipo &nbsp;&nbsp;&nbsp;&nbsp;*typeId*
 
 \ *xmmRegister*
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

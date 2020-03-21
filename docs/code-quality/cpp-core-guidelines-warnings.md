@@ -3,12 +3,12 @@ title: C++Advertencias de Core Guidelines
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
-ms.openlocfilehash: f499374c84973be09e2f02e6d2f2e6d9a6548363
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 544c737470a6578e65e82bb3c8cf1824ec93895f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467230"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079960"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>Usar los comprobadores de C++ Core Guidelines
 
@@ -16,7 +16,7 @@ Las C++ instrucciones básicas son un conjunto portátil de directrices, reglas 
 
 ## <a name="the-c-core-guidelines-project"></a>Proyecto C++ de directrices básicas
 
-Creado por Bjarne Stroustrup y otros, las C++ directrices principales son una guía para el uso C++ moderno y seguro de forma segura. Las instrucciones resaltan la seguridad de tipos estáticos y la seguridad de los recursos. Identifican maneras de eliminar o minimizar las partes más propensas a errores del lenguaje y sugieren cómo hacer que el código sea más sencillo y más eficaz de forma confiable. Estas instrucciones las mantiene la base estándar C++ . Para obtener más información, consulte la documentación, C++ [ C++ las directrices principales](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)y el acceso a los archivos de proyecto de documentación de directrices básicas en [GitHub](https://github.com/isocpp/CppCoreGuidelines).
+Creado por Bjarne Stroustrup y otros, las C++ directrices principales son una guía para el uso C++ moderno y seguro de forma segura. Las instrucciones resaltan la seguridad de tipos estáticos y la seguridad de los recursos. Identifican maneras de eliminar o minimizar las partes más propensas a errores del lenguaje y sugieren cómo hacer que el código sea más sencillo y más eficaz de forma confiable. Estas instrucciones las mantiene la base estándar C++ . Para obtener más información, consulte la documentación, C++ [ C++ las directrices principales](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)y el acceso a los archivos de proyecto de documentación de directrices básicas en [GitHub](https://github.com/isocpp/CppCoreGuidelines).
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Habilitar las C++ directrices de la comprobación básica en el análisis de código
 
@@ -219,7 +219,7 @@ Tendrá que establecer algunas variables de entorno y usar las opciones de líne
 
 ## <a name="use-the-guideline-support-library"></a>Usar la biblioteca de compatibilidad de directrices
 
-La biblioteca de compatibilidad de instrucciones está diseñada para ayudarle a seguir las directrices básicas. GSL incluye definiciones que permiten reemplazar construcciones propensas a errores por alternativas más seguras. Por ejemplo, puede reemplazar un par `T*, length` de parámetros con el tipo `span<T>`. GSL está disponible en [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). La biblioteca es de código abierto, por lo que puede ver los orígenes, hacer comentarios o contribuir. El proyecto se puede encontrar en [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
+La biblioteca de compatibilidad de instrucciones está diseñada para ayudarle a seguir las directrices básicas. GSL incluye definiciones que permiten reemplazar construcciones propensas a errores por alternativas más seguras. Por ejemplo, puede reemplazar un par `T*, length` de parámetros con el tipo `span<T>`. GSL está disponible en [https://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). La biblioteca es de código abierto, por lo que puede ver los orígenes, hacer comentarios o contribuir. El proyecto se puede encontrar en [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
 ## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>Usar las C++ directrices de comprobación básica en proyectos de Visual Studio 2015
 

@@ -2,16 +2,16 @@
 title: Información general de la programación para Windows en C++
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
-ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
+ms.openlocfilehash: cd95332721f51ed2d17c3205cba5f1456a1037b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127194"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075485"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
-Hay varias categorías amplias de aplicaciones Windows que se pueden crear con C++. Cada uno tiene su propio modelo de programación y conjunto de bibliotecas específicas de Windows, C++ pero la biblioteca estándar y las C++ bibliotecas de terceros se pueden usar en cualquiera de ellas. 
+Hay varias categorías amplias de aplicaciones Windows que se pueden crear con C++. Cada uno tiene su propio modelo de programación y conjunto de bibliotecas específicas de Windows, C++ pero la biblioteca estándar y las C++ bibliotecas de terceros se pueden usar en cualquiera de ellas.
 
 En esta sección se describe cómo usar Visual Studio y las bibliotecas contenedoras de MFC y ATL para crear programas de Windows. Para obtener documentación sobre la propia plataforma Windows, consulte la [documentación de Windows](/windows/index).
 
@@ -21,9 +21,9 @@ Las aplicaciones de consola de C++ se ejecutan desde la línea de comandos en un
 
 ## <a name="native-desktop-client-applications"></a>Aplicaciones cliente de escritorio nativo
 
-Una *aplicación cliente de escritorio nativo* es una aplicación C++ de c o con ventanas que usa las API nativas de [Windows c originales o las API del modelo de objetos componentes (com)](/windows/win32/apiindex/windows-api-list) para tener acceso al sistema operativo. Esas API se escriben principalmente en C. Hay más de una manera de crear una aplicación de escritorio nativo: Puede programar mediante las API de Win32 directamente, mediante un bucle de mensajes de estilo C que procesa los eventos del sistema operativo. O bien, puede programar con *Microsoft Foundation Classes* (MFC), una biblioteca ligeramente orientada C++ a objetos que contiene Win32. Ninguno de los enfoques se considera "moderno" en comparación con el Plataforma universal de Windows (UWP), pero ambos siguen siendo totalmente compatibles y tienen millones de líneas de código que se ejecutan en el mundo de hoy en día. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabaje explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 se puede compilar como un binario de 32 bits (x86) o 64 bits (x64). En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.
+Una *aplicación cliente de escritorio nativo* es una aplicación C++ de c o con ventanas que usa las API nativas de [Windows c originales o las API del modelo de objetos componentes (com)](/windows/win32/apiindex/windows-api-list) para tener acceso al sistema operativo. Esas API se escriben principalmente en C. Hay más de una manera de crear una aplicación de escritorio nativa: puede programar mediante las API de Win32 directamente, mediante un bucle de mensajes de estilo C que procesa los eventos del sistema operativo. O bien, puede programar con *Microsoft Foundation Classes* (MFC), una biblioteca ligeramente orientada C++ a objetos que contiene Win32. Ninguno de los enfoques se considera "moderno" en comparación con el Plataforma universal de Windows (UWP), pero ambos siguen siendo totalmente compatibles y tienen millones de líneas de código que se ejecutan en el mundo de hoy en día. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabaje explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 se puede compilar como un binario de 32 bits (x86) o 64 bits (x64). En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.
 
-Para empezar a trabajar con la C++ programación tradicional de Windows, consulte Introducción [a C++Win32 y ](/windows/win32/LearnWin32/learn-to-program-for-windows). Una vez que conozca el funcionamiento de Win32, será más fácil obtener información sobre [las aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md). Para ver un ejemplo de una C++ aplicación de escritorio tradicional que usa gráficos sofisticados, consulte [hilo: Desarrollo C++ de aplicaciones para](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Para empezar a trabajar con la C++ programación tradicional de Windows, consulte Introducción [a C++Win32 y ](/windows/win32/LearnWin32/learn-to-program-for-windows). Una vez que conozca el funcionamiento de Win32, será más fácil obtener información sobre [las aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md). Para ver un ejemplo de una C++ aplicación de escritorio tradicional que usa gráficos sofisticados, consulte [hilo: Developing C++ Applications for Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>C++o .NET?
 
@@ -39,7 +39,7 @@ También es posible combinar la eficacia y la eficacia de con C++ la programaci�
 
 ## <a name="com-components"></a>Componentes COM
 
-El [Modelo de objetos componentes (COM)](/windows/win32/com/the-component-object-model) es una especificación que permite que los programas escritos en lenguajes diferentes se comuniquen entre sí. Muchos componentes de Windows se implementan como objetos COM y siguen las reglas COM estándar para la creación de objetos, la detección de interfaces y la destrucción de objetos.  El uso de objetos C++ com desde aplicaciones de escritorio es relativamente sencillo, pero escribir su propio objeto com es más avanzado. En [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) se proporcionan macros y funciones auxiliares que simplifican el desarrollo de COM. Para obtener más información, vea [componentes de escritorio com de ATL](../atl/atl-com-desktop-components.md).
+El [modelo de objetos componentes (com)](/windows/win32/com/the-component-object-model) es una especificación que permite a los programas escritos en lenguajes diferentes comunicarse entre sí. Muchos componentes de Windows se implementan como objetos COM y siguen las reglas COM estándar para la creación de objetos, la detección de interfaces y la destrucción de objetos.  El uso de objetos C++ com desde aplicaciones de escritorio es relativamente sencillo, pero escribir su propio objeto com es más avanzado. El [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) proporciona macros y funciones auxiliares que simplifican el desarrollo com. Para obtener más información, vea [componentes de escritorio com de ATL](../atl/atl-com-desktop-components.md).
 
 ## <a name="universal-windows-platform-apps"></a>Aplicaciones de la Plataforma universal de Windows
 
@@ -77,13 +77,13 @@ El [Administrador de paquetes de Vcpkg](../build/vcpkg.md) le permite instalar d
 
 Las bibliotecas de Microsoft incluyen:
 
-- Microsoft Foundation Classes (MFC): Marco de trabajo orientado a objetos para crear programas tradicionales de Windows, especialmente aplicaciones empresariales, que tienen interfaces de usuario enriquecidas que incluyen botones, cuadros de lista, vistas de árbol y otros controles. Para obtener más información, consulta [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
+- Microsoft Foundation Classes (MFC): un marco de trabajo orientado a objetos para crear programas tradicionales de Windows, especialmente aplicaciones empresariales, que tienen interfaces de usuario complejas con botones, cuadros de lista, vistas de árbol y otros controles. Para obtener más información, consulta [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
 
-- Active Template Library (ATL): Biblioteca auxiliar eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
+- Active Template Library (ATL): una biblioteca del asistente eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
 
-- C++AMP (C++ paralelismo masivo acelerado): Una biblioteca que habilita el trabajo de cálculo general de alto rendimiento en la GPU. Para obtener más información, consulta [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
+- C++ AMP (C++ Accelerated Massive Parallelism): una biblioteca que habilita el trabajo de proceso general de alto rendimiento en la GPU. Para obtener más información, consulta [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 
-- Runtime de simultaneidad: Biblioteca que simplifica el trabajo de programación paralela y asincrónica para dispositivos de varios núcleos y núcleos. Para obtener más información, consulta [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+- Runtime de simultaneidad: una biblioteca que simplifica el trabajo de programación paralela y asincrónica para dispositivos de varios núcleos. Para obtener más información, consulte [Runtime de simultaneidad](../parallel/concrt/concurrency-runtime.md).
 
 En muchos escenarios de programación para Windows también se requiere Windows SDK, que incluye los archivos de encabezado que permiten el acceso a componentes del sistema operativo Windows. De forma predeterminada, Visual Studio instala el Windows SDK como un componente de la C++ carga de trabajo de escritorio, que permite el desarrollo de aplicaciones universales de Windows. Para desarrollar aplicaciones para UWP, necesita la versión de Windows 10 de la Windows SDK. Para obtener más información, consulte el [SDK de Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obtener más información sobre los SDK de Windows para versiones anteriores de Windows, consulte el [archivo Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
@@ -91,14 +91,14 @@ En muchos escenarios de programación para Windows también se requiere Windows 
 
 Otras plataformas como Xbox y Azure cuentan con sus propios SDK que puede que tenga que instalar. Para obtener más información, vea el Centro para desarrolladores de DirectX y el Centro para desarrolladores de Azure.
 
-## <a name="development-tools"></a>Herramientas del programador
+## <a name="development-tools"></a>Herramientas de desarrollo
 
 Visual Studio incluye un depurador eficaz de código nativo, herramientas de análisis estático, herramientas de depuración de gráficos, un editor de código completo, compatibilidad con pruebas unitarias, y muchas otras herramientas y utilidades. Para obtener más información, vea Introducción al desarrollo [con Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)e información [General C++ sobre el desarrollo en Visual Studio](../overview/overview-of-cpp-development.md).
 
 ## <a name="in-this-section"></a>En esta sección
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
-|[Tutorial: Creación de un programa de C++ estándar](walkthrough-creating-a-standard-cpp-program-cpp.md)| Cree una aplicación de consola de Windows.|
+|[Tutorial: crear un programa C++ estándar](walkthrough-creating-a-standard-cpp-program-cpp.md)| Cree una aplicación de consola de Windows.|
 |[Tutorial: Crear aplicaciones de escritorio de Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Cree una aplicación de escritorio de Windows nativa.|
 |[Asistente para escritorio de Windows](windows-desktop-wizard.md)|Use el Asistente para crear nuevos proyectos de Windows.|
 |[Biblioteca de plantillas activas (ATL)](../atl/atl-com-desktop-components.md)|Utilice la biblioteca ATL para crear componentes COM en C++.|
@@ -107,15 +107,15 @@ Visual Studio incluye un depurador eficaz de código nativo, herramientas de an�
 |[Acceso a datos](../data/data-access-in-cpp.md)| OLE DB y ODBC|
 |[Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)|Varios tipos de cadena en Windows.|
 |[Recursos para crear un juego mediante DirectX](resources-for-creating-a-game-using-directx.md)
-|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[Procedimiento para usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[Trabajo con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, tablas de cadenas y otros recursos a una aplicación de escritorio.|
 |[Recursos para crear un juego con DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Vínculos a contenido para crear juegos en C++.|
-|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
+|[Procedimiento para usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
 |[Implementación de aplicaciones de escritorio nativas](deploying-native-desktop-applications-visual-cpp.md)|Implementar aplicaciones nativas en Windows.|
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Title|Descripción|
+|Título|Descripción|
 |-----------|-----------------|
 |[C++ en Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Tema primario del contenido C++ del desarrollador visual.|
 [Desarrollo de .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Cree contenedores para bibliotecas nativas C++ que permitan la comunicación con aplicaciones y componentes de .net.|

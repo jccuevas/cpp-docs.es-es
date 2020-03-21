@@ -1,5 +1,5 @@
 ---
-title: Herramienta Manifiesto (Páginas de propiedades)
+title: Páginas de propiedades de la herramienta Manifiesto
 ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927678"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079497"
 ---
-# <a name="manifest-tool-property-pages"></a>Herramienta Manifiesto (Páginas de propiedades)
+# <a name="manifest-tool-property-pages"></a>Páginas de propiedades de la herramienta Manifiesto
 
-Use estas páginas para especificar las opciones generales de [MT. exe](/windows/win32/sbscs/mt-exe). Estas páginas se encuentran**en propiedades de** > configuración del **proyecto** > **herramienta de manifiesto**de**propiedades** > .
+Use estas páginas para especificar las opciones generales de [MT. exe](/windows/win32/sbscs/mt-exe). Estas páginas se encuentran en **Project** > **propiedades** > **propiedades de configuración** > **manifest Tool**.
 
 ## <a name="general-property-page"></a>Página de propiedades general
 
@@ -49,9 +49,9 @@ Use estas páginas para especificar las opciones generales de [MT. exe](/windows
 
 Usa la opción /identity para especificar una cadena de identidad, que incluye los atributos para el [Elemento \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una cadena de identidad comienza con el valor para el atributo `name`, seguido por pares *atributo* = *valor*. Los atributos de una cadena de identidad se delimitan mediante una coma.
 
-Esta es una cadena de identidad de ejemplo:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Esta es una cadena de identidad de ejemplo: `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Página de propiedades entrada y salida     
+## <a name="input-and-output-property-page"></a>Página de propiedades entrada y salida
 
 ###  <a name="additional-manifest-files"></a>Archivos de manifiesto adicionales
 
@@ -97,7 +97,7 @@ Se usa con-managedassembly. -la categoría hace que se generen las etiquetas de 
 
 Especifica si la aplicación es compatible con PPP. De forma predeterminada, el valor es **Sí** para proyectos MFC y **No** en caso contrario, porque solo los proyectos MFC cuentan con reconocimiento de PPP integrado. Puede reemplazar la configuración por **Sí** si agrega código para controlar otros valores de PPP. Es posible que la aplicación se vea borrosa o pequeña si se establece como compatible con PPP cuando no lo es.
 
-**Posibilidad**
+**Opciones**
 
 - **None**
 - **Reconocimiento de PPP alto**
@@ -105,7 +105,7 @@ Especifica si la aplicación es compatible con PPP. De forma predeterminada, el 
 
 ## <a name="isolated-com-property-page"></a>Página de propiedades COM aislada
 
-Para obtener más información acerca de com aislado, vea [aplicaciones aisladas](/windows/win32/SbsCs/isolated-applications) y [cómo: Cree aplicaciones aisladas para consumir componentes](../how-to-build-isolated-applications-to-consume-com-components.md)com.
+Para obtener más información acerca de COM aislado, vea [aplicaciones aisladas](/windows/win32/SbsCs/isolated-applications) y [Cómo: compilar aplicaciones aisladas para consumir componentes com](../how-to-build-isolated-applications-to-consume-com-components.md).
 
 ###  <a name="type-library-file"></a>Archivo de biblioteca de tipos
 
@@ -137,7 +137,6 @@ Especifica la ruta de acceso de búsqueda que se debe usar al actualizar los has
 
 Opciones adicionales
 
-
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++referencia de la página de propiedades del proyecto](property-pages-visual-cpp.md)

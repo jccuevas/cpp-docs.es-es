@@ -5,16 +5,16 @@ ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301592"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079923"
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
 
-Esta referencia explica el C++ lenguaje de programación tal como se implementa C++ en el compilador de Microsoft. La organización se basa en [*el manual de C++ referencia anotado*](http://www.stroustrup.com/arm.html) de Margaret Ellis y Bjarne Stroustrup, y en el estándar C++ internacional ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.
+Esta referencia explica el C++ lenguaje de programación tal como se implementa C++ en el compilador de Microsoft. La organización se basa en *el manual de C++ referencia anotado* de Margaret Ellis y Bjarne Stroustrup, y en el estándar C++ internacional ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.
 
 Para obtener información general sobre C++ las prácticas de programación modernas, vea [Bienvenido a C++ ](welcome-back-to-cpp-modern-cpp.md).
 
@@ -24,7 +24,7 @@ Consulte las tablas siguientes para encontrar rápidamente una palabra clave o u
 
 - [Operadores de C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-## <a name="in-this-section"></a>Esta sección
+## <a name="in-this-section"></a>En esta sección
 
 [Convenciones léxicas](../cpp/lexical-conventions.md)<br/>
 Elementos léxicos fundamentales de un programa de C++: tokens, comentarios, operadores, palabras clave, signos de puntuación, literales. También, traducción de archivos, prioridad o asociatividad de los operadores.
@@ -51,7 +51,7 @@ Una técnica de programación que define implícitamente una clase de objeto de 
 [Instrucciones](../cpp/statements-cpp.md)<br/>
 Instrucciones de expresión, null, compuestas, de selección, de iteración, de salto y de declaración.
 
-[Clases y Structs](../cpp/classes-and-structs-cpp.md)<br/>
+[Clases y estructuras](../cpp/classes-and-structs-cpp.md)<br/>
 Introducción a las clases, estructuras y uniones. También, funciones miembro, funciones miembro especiales, miembros de datos, campos de bits, **este** puntero, clases anidadas.
 
 [Uniones](unions.md)<br/>
@@ -110,6 +110,6 @@ Material de referencia sobre instrucciones pragma, directivas de preprocesador, 
 [Bibliotecas de Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Una lista de vínculos a las páginas de inicio de referencia para las C++ diversas bibliotecas de Microsoft.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del lenguaje C](../c-language/c-language-reference.md)

@@ -5,12 +5,12 @@ description: Use filtros archivos en proyectos de C++ Visual Studio para definir
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686927"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078274"
 ---
 # <a name="vcxprojfilters-files"></a>Archivos vcxproj. filters
 
@@ -26,7 +26,7 @@ Visual Studio crea este archivo automáticamente. En el caso de las aplicaciones
 
 En el ejemplo siguiente se muestra el archivo de filtros del ejemplo que se muestra anteriormente. Tiene una jerarquía plana; en otras palabras, no hay carpetas lógicas anidadas. El nodo `UniqueIdentifier` es opcional. Permite que las interfaces de automatización de Visual Studio encuentren el filtro. `Extensions` también es opcional. Cuando se agrega un nuevo archivo a un proyecto, se agrega al filtro de nivel superior con una extensión de archivo coincidente. Para agregar un archivo a un filtro concreto, haga clic con el botón derecho en el filtro y elija **Agregar nuevo elemento**.
 
-La `ItemGroup` que contiene los nodos de `ClInclude` se crea cuando se inicia el proyecto por primera vez. Si va a generar sus propios archivos vcxproj, asegúrese de que todos los elementos de proyecto también tienen una entrada en el archivo de filtros. Los valores de un nodo de `ClInclude` invalidan el filtrado predeterminado en función de las extensiones de archivo. Al usar Visual Studio para agregar un nuevo elemento al proyecto, el IDE agregará una entrada de archivo individual en el archivo de filtros. El filtro no se reasigna automáticamente si cambia la extensión del archivo. 
+La `ItemGroup` que contiene los nodos de `ClInclude` se crea cuando se inicia el proyecto por primera vez. Si va a generar sus propios archivos vcxproj, asegúrese de que todos los elementos de proyecto también tienen una entrada en el archivo de filtros. Los valores de un nodo de `ClInclude` invalidan el filtrado predeterminado en función de las extensiones de archivo. Al usar Visual Studio para agregar un nuevo elemento al proyecto, el IDE agregará una entrada de archivo individual en el archivo de filtros. El filtro no se reasigna automáticamente si cambia la extensión del archivo.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ Para crear carpetas lógicas anidadas, declare todos los nodos en los filtros `I
     </Filter>
   </ItemGroup>
 ```
-

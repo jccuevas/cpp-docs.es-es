@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515560"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076817"
 ---
 # <a name="safeint-class"></a>SafeInt (Clase)
 
 Amplía las primitivas de enteros para ayudar a evitar el desbordamiento de enteros y permite comparar diferentes tipos de enteros.
 
-> [!NOTE] 
+> [!NOTE]
 > La versión más reciente de esta biblioteca se encuentra en [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Sintaxis
@@ -45,17 +45,17 @@ class SafeInt;
 | *i*        |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
 | *bits*     |  [in] Un parámetro de entrada que representa el valor en el lado derecho del operador en varias funciones independientes. |
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-| nombre                          |  Descripción |
+| Nombre                          |  Descripción |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Constructor predeterminado. |
 
 ### <a name="assignment-operators"></a>Operadores de asignación
 
-| nombre  |  Sintaxis |
+| Nombre  |  Sintaxis |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>Operadores de conversión
 
-| nombre              |  Sintaxis |
+| Nombre              |  Sintaxis |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>Operadores de comparación
 
-| nombre  |  Sintaxis |
+| Nombre  |  Sintaxis |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>Operadores aritméticos
 
-| nombre  |  Sintaxis |
+| Nombre  |  Sintaxis |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>Operadores lógicos
 
-| nombre     |  Sintaxis |
+| Nombre     |  Sintaxis |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -162,7 +162,7 @@ class SafeInt;
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La clase `SafeInt` protege frente al desbordamiento de enteros en las operaciones matemáticas. Por ejemplo, suponga que se agregan dos enteros de 8 bits: uno tiene un valor de 200 y el segundo de 100. La operación matemática correcta sería 200 + 100 = 300. Sin embargo, debido al límite de enteros de 8 bits, se perderá el bit superior y el compilador devolverá como resultado 44 (300-2<sup>8</sup>). Cualquier operación que dependa de esta ecuación matemática generará un comportamiento inesperado.
 
@@ -229,7 +229,7 @@ Hay dos opciones para personalizar la directiva de errores. La primera opción e
 
 **Espacio de nombres:** msl::utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
 
 Construye un objeto `SafeInt`.
 
@@ -268,7 +268,7 @@ SafeInt (
 
 U: el tipo de datos almacenados en `SafeInt`. Puede ser un tipo entero, de carácter o booleano. Si es un tipo entero, puede tener o no signo y estar formado por entre 8 y 64 bits.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El parámetro de entrada para el constructor, *i* o *u*, debe ser un tipo entero, de carácter o booleano. Si es otro tipo de parámetro, la clase `SafeInt` llama a [static_assert](../cpp/static-assert.md) para indicar un parámetro de entrada no válido.
 

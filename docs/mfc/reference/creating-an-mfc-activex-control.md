@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: d35b788910b0c73a3b6da85faf119958ffbccea0
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 5e0a81d6a01632bcfadccd241f3a485e6d332627
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108438"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077461"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Crear un control ActiveX MFC
 
@@ -38,8 +38,7 @@ Una vez creado el proyecto, puede ver los archivos creados en **Explorador de so
 
 Una vez creado el proyecto, puede usar los asistentes para código para agregar [funciones](../../ide/add-member-function-wizard.md), [variables](../../ide/add-member-variable-wizard.md), [eventos](../../ide/add-event-wizard.md), [propiedades](../../ide/names-add-property-wizard.md)y [métodos](../../ide/add-method-wizard.md). Para obtener más información sobre cómo personalizar el control ActiveX, vea [controles ActiveX MFC](../../mfc/mfc-activex-controls.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propiedades](../../build/reference/property-pages-visual-cpp.md)
-

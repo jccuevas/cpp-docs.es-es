@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Crear aplicaciones de consola CLR (C++ / c++ / CLI)
+title: 'Cómo: Crear aplicaciones de consola CLR (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 610efc8b0780422fc89e3bf9708ba488fe7d1f47
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387485"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080051"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Procedimiento Crear aplicaciones de consola CLR (C++ / c++ / CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Cómo: Crear aplicaciones de consola CLR (C++/CLI)
 
 Puede utilizar la plantilla Aplicación de consola para crear un proyecto de aplicación de consola que ya tiene referencias y archivos esenciales del proyecto.
 
@@ -22,7 +22,7 @@ Cuando se utiliza la plantilla Aplicación de consola para crear un proyecto, ag
 
 - Hace referencia a estos espacios de nombres de .NET Framework:
 
-   - <xref:System.AppDomainManager>: Contiene clases fundamentales y clases base que definen valores usados normalmente y los tipos de datos de referencia, eventos y controladores de eventos, interfaces, atributos y excepciones de procesamiento.
+   - <xref:System.AppDomainManager>: contiene clases fundamentales y clases base que definen valores y tipos de datos de referencia, eventos y controladores de eventos, interfaces, atributos y excepciones de procesamiento comúnmente utilizados.
 
    - mscorlib: el archivo DLL de ensamblado que admite el desarrollo de .NET Framework.
 
@@ -30,7 +30,7 @@ Cuando se utiliza la plantilla Aplicación de consola para crear un proyecto, ag
 
    - Consola (archivo .cpp): archivo de código fuente principal y punto de entrada a la aplicación que acaba de crear. Identifica el archivo .dll y el espacio de nombres del proyecto. Incluya su propio código en este archivo.
 
-   - AssemblyInfo.cpp: contiene atributos, archivos, recursos, tipos, información de versiones, información de firma, etc. que se pueden usar para modificar los metadatos de ensamblado del proyecto. Para obtener más información, consulte [contenido de un ensamblado](/dotnet/framework/app-domains/assembly-contents).
+   - AssemblyInfo.cpp: contiene atributos, archivos, recursos, tipos, información de versiones, información de firma, etc. que se pueden usar para modificar los metadatos de ensamblado del proyecto. Para obtener más información, vea [contenido del ensamblado](/dotnet/framework/app-domains/assembly-contents).
 
    - Stdafx.cpp: se utiliza para compilar un archivo de encabezado precompilado denominado Win32.pch y un archivo de tipos precompilado denominado StdAfx.obj.
 
@@ -60,7 +60,6 @@ Cuando se utiliza la plantilla Aplicación de consola para crear un proyecto, ag
 
 1. Elija el botón **Aceptar** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Proyectos de CLR](../build/reference/files-created-for-clr-projects.md)
-

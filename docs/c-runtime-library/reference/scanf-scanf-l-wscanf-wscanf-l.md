@@ -43,18 +43,18 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778317"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079209"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Lee datos con formato del flujo de entrada estándar. Hay disponibles versiones más seguras de estas funciones; vea [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > En Visual Studio 2015, la familia de funciones `printf` y `scanf` se declaró como **inline** y se desplazó a los encabezados `<stdio.h>` y `<conio.h>`. Si va a migrar código anterior, es posible que vea *LNK2019* en conexión con estas funciones. Para obtener más información, [consulte C++ el historial de cambios de Visual 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Sintaxis
@@ -97,9 +97,9 @@ Devuelve el número de campos que se han convertido y asignado correctamente; el
 
 Si *Format* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** y establecen **errno** en **EINVAL**.
 
-Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **scanf** Lee los datos del flujo de entrada estándar **stdin** y escribe los datos en la ubicación proporcionada por el *argumento*. Cada *argumento* debe ser un puntero a una variable de un tipo que se corresponda con un especificador de tipo en *formato*. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
@@ -126,7 +126,7 @@ Para obtener más información, vea [Campos de especificación de formato: funci
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -166,7 +166,7 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>

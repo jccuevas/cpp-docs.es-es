@@ -4,12 +4,12 @@ ms.date: 08/14/2018
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 955a445fbc29fca479a64684b4b60909234a0b38
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: b9eea6dc466db202ee388a2bfb2e59632e210b7f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467094"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076178"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Usar los comprobadores de C++ Core Guidelines
 
@@ -17,7 +17,7 @@ Las C++ instrucciones básicas son un conjunto portátil de directrices, reglas 
 
 ## <a name="the-c-core-guidelines-project"></a>Proyecto C++ de directrices básicas
 
-Creado por Bjarne Stroustrup y otros, las C++ directrices principales son una guía para el uso C++ moderno y seguro de forma segura. Las instrucciones resaltan la seguridad de tipos estáticos y la seguridad de los recursos. Identifican maneras de eliminar o minimizar las partes más propensas a errores del lenguaje y sugieren cómo hacer que el código sea más sencillo y más eficaz de forma confiable. Estas instrucciones las mantiene la base estándar C++ . Para obtener más información, consulte la documentación, C++ [ C++ las directrices principales](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)y el acceso a los archivos de proyecto de documentación de directrices básicas en [GitHub](https://github.com/isocpp/CppCoreGuidelines).
+Creado por Bjarne Stroustrup y otros, las C++ directrices principales son una guía para el uso C++ moderno y seguro de forma segura. Las instrucciones resaltan la seguridad de tipos estáticos y la seguridad de los recursos. Identifican maneras de eliminar o minimizar las partes más propensas a errores del lenguaje y sugieren cómo hacer que el código sea más sencillo y más eficaz de forma confiable. Estas instrucciones las mantiene la base estándar C++ . Para obtener más información, consulte la documentación, C++ [ C++ las directrices principales](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)y el acceso a los archivos de proyecto de documentación de directrices básicas en [GitHub](https://github.com/isocpp/CppCoreGuidelines).
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Habilitar las C++ directrices de la comprobación básica en el análisis de código
 

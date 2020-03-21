@@ -2,18 +2,18 @@
 title: Exploración del sistema de archivos
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518509"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076542"
 ---
 # <a name="file-system-navigation"></a>Exploración del sistema de archivos
 
-El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve **false** en Windows.
+El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve **false** en Windows.
 
-## <a name="overview"></a>Información general del
+## <a name="overview"></a>Información general
 
 Use las API \<filesystem> para las siguientes tareas:
 
@@ -41,7 +41,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Para concatenar dos rutas de acceso, puede usar los operadores sobrecargados `/` y `/=` , que son análogos a los operadores `+` y `+=` en `std::string` y `std::wstring`. El objeto `path` facilitará de forma oportuna los separadores si usted no lo hace.
+Para concatenar dos rutas de acceso, puede usar los operadores sobrecargados `/` y `/=` , que son análogos a los operadores `+` y `+=` en `std::string` y `std::wstring`. Si no lo hace, el objeto `path` proporcionará los separadores de forma cómoda.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!

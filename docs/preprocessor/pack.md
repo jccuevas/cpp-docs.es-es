@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965259"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079978"
 ---
 # <a name="pack-pragma"></a>pack (pragma)
 
@@ -35,7 +35,7 @@ Opta Muestra el valor actual de bytes para la alineación de empaquetado. El val
 Opta Envía el valor actual de la alineación de empaquetado en la pila interna del compilador y establece el valor actual de la alineación de empaquetado en *n*. Si no se especifica *n* , se inserta el valor actual de la alineación de empaquetado.
 
 \ **pop**
-Opta Quita el registro de la parte superior de la pila interna del compilador. Si no se especifica *n* con **pop**, el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si se especifica *n* , por ejemplo, `#pragma pack(pop, 16)`, *n* se convierte en el nuevo valor de alineación de empaquetado. Si usa un *identificador*, por ejemplo, `#pragma pack(pop, r1)`, todos los registros de la pila se extraen hasta que se encuentra el registro que tiene el *identificador* . Ese registro se extrae y el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si se usa un *identificador* que no se encuentra en ningún registro de la pila, se omite el **pop** . 
+Opta Quita el registro de la parte superior de la pila interna del compilador. Si no se especifica *n* con **pop**, el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si se especifica *n* , por ejemplo, `#pragma pack(pop, 16)`, *n* se convierte en el nuevo valor de alineación de empaquetado. Si usa un *identificador*, por ejemplo, `#pragma pack(pop, r1)`, todos los registros de la pila se extraen hasta que se encuentra el registro que tiene el *identificador* . Ese registro se extrae y el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si se usa un *identificador* que no se encuentra en ningún registro de la pila, se omite el **pop** .
 
 La instrucción `#pragma pack (pop, r1, 2)` es equivalente a `#pragma pack (pop, r1)` seguido de `#pragma pack(2)`.
 
@@ -45,7 +45,7 @@ Opta Cuando se usa con la **extracción**, asigna un nombre al registro en la pi
 *n*\
 Opta Especifica el valor, en bytes, que se va a usar para el empaquetado. Si la opción del compilador [/ZP](../build/reference/zp-struct-member-alignment.md) no está establecida para el módulo, el valor predeterminado de *n* es 8. Los valores válidos son 1, 2, 4, 8 y 16. La alineación de un miembro se encuentra en un límite que es un múltiplo de *n*o un múltiplo del tamaño del miembro, lo que sea menor.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para *empaquetar* una clase, coloque sus miembros directamente entre sí en la memoria. Puede significar que algunos o todos los miembros se pueden alinear en un límite menor que la alineación predeterminada de la arquitectura de destino. **Pack** proporciona el control en el nivel de declaración de datos. Difiere de la opción del compilador [/ZP](../build/reference/zp-struct-member-alignment.md), que solo proporciona control de nivel de módulo. **Pack** surte efecto en la primera declaración de **estructura**, **Unión**o **clase** después de que se vea la Directiva pragma. **Pack** no tiene ningún efecto en las definiciones. El **paquete** de llamada sin argumentos establece *n* en el valor establecido en la opción del compilador `/Zp`. Si la opción del compilador no está establecida, el valor predeterminado es 8.
 
@@ -120,6 +120,6 @@ En el ejemplo siguiente se muestra cómo usar la sintaxis de las operaciones de 
 #pragma pack(show)   // C4810
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Directivas pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

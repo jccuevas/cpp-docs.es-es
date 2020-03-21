@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441708"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076507"
 ---
 # &lt;filesystem&gt;
 
@@ -32,7 +32,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> En el lanzamiento de Visual Studio 2017, el encabezado \<filesystem> no era todavía un C++ estándar. C++en Visual Studio 2017 RTW implementa el último borrador estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf). Visual Studio 2017 versión 15,7 y versiones posteriores admiten el nuevo \<de C++ 17 filesystem> estándar.
+> En el lanzamiento de Visual Studio 2017, el encabezado \<filesystem> no era todavía un C++ estándar. C++en Visual Studio 2017 RTW implementa el último borrador estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). Visual Studio 2017 versión 15,7 y versiones posteriores admiten el nuevo \<de C++ 17 filesystem> estándar.
 > Se trata de una implementación completamente nueva, incompatible con la versión de `std::experimental` anterior. Lo hizo necesario la compatibilidad con symlink, las correcciones de errores y los cambios en el comportamiento estándar requerido. Actualmente, incluido \<filesystem> proporciona el nuevo `std::filesystem` y el `std::experimental::filesystem`anterior. La inclusión de \<experimental/filesystem> solo proporciona la implementación de experimental anterior. La implementación de experimental se quitará en la próxima versión de lanzamiento de las bibliotecas.
 
 Este encabezado admite sistemas de archivos para una de las dos clases generales de sistemas operativos host: Microsoft Windows y POSIX.

@@ -3,12 +3,12 @@ title: Convención de llamadas x64
 description: Detalles de la Convención de llamada predeterminada de ABI de x64.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422707"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078082"
 ---
 # <a name="x64-calling-convention"></a>Convención de llamadas x64
 
@@ -147,7 +147,7 @@ Los registros RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 y las partes superiores de
 Los registros RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 y XMM6-15 se consideran no volátiles y se deben guardar y restaurar mediante una función que los use.
 
 ## <a name="function-pointers"></a>Punteros de función
- 
+
 Los punteros de función son simplemente punteros a la etiqueta de la función respectiva. No hay requisitos de tabla de contenido (TOC) para los punteros de función.
 
 ## <a name="floating-point-support-for-older-code"></a>Compatibilidad de punto flotante con código anterior

@@ -4,19 +4,18 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0d3bd03fb352f2466f0ae48ec0ca99cf66fbb416
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707748"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079720"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Clases generadas por el Asistente para consumidores
 
-
 ::: moniker range="vs-2019"
 
-El Asistente para consumidores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente.
+El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente.
 
 ::: moniker-end
 
@@ -189,6 +188,6 @@ Para obtener información acerca de cómo ver código insertado, vea [Depurar c�
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Crear un consumidor OLE DB mediante un asistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

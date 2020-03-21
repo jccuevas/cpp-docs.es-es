@@ -2,12 +2,12 @@
 title: Navegación en el código de C++ en Visual Studio
 description: Use diversas herramientas de Visual Studio para navegar por el código base de C++.
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446611"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079077"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Navegación en el código de C++ en Visual Studio
 
@@ -31,7 +31,7 @@ Para ir a la definición de un símbolo de código, haga clic con el botón dere
 
 ## <a name="go-to"></a>Ir a
 
-**Ir a** hace referencia a un conjunto de características de navegación donde cada una proporciona un determinado tipo de resultado según los filtros que se especifiquen. 
+**Ir a** hace referencia a un conjunto de características de navegación donde cada una proporciona un determinado tipo de resultado según los filtros que se especifiquen.
 
 Puede abrir la opción **Ir a** con **Ctrl+,** . Esta acción crea un cuadro de búsqueda en el documento que está editando.
 
@@ -82,7 +82,7 @@ La **búsqueda** se puede acotar a una selección, al documento actual, a todos 
 
 ![Búsqueda&#43; &#43; de C](../ide/media/find-cpp.png "Buscar")
 
-**Buscar en archivos** es una versión más eficaz de **Buscar** que muestra los resultados en la ventana **Resultados de la búsqueda**. Puede buscar dependencias de código externas, filtrar por tipos de archivos y mucho más. 
+**Buscar en archivos** es una versión más eficaz de **Buscar** que muestra los resultados en la ventana **Resultados de la búsqueda**. Puede buscar dependencias de código externas, filtrar por tipos de archivos y mucho más.
 
 ![&#43; &#43;](../ide/media/find-in-files-cpp.png "Buscar en archivos")
 

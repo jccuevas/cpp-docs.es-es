@@ -3,24 +3,24 @@ title: Personalización de la configuración de compilación de CMake en Visual 
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: ecd2964e035cbf3d48a737164b0067720e9b6b9a
-ms.sourcegitcommit: 0df462d79ad617296095c3012badc2fe669bab2f
+ms.openlocfilehash: f93997e498502e0e326edfc2b023af9808f86357
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887039"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078647"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalización de la configuración de compilación de CMake
 
 ::: moniker range="vs-2019"
 
-En Visual Studio 2019 y versiones posteriores, puede agregar configuraciones y personalizar sus opciones mediante el **Editor de configuración de CMake**. El editor está diseñado para ser una alternativa más sencilla para editar manualmente el archivo *CMakeSettings. JSON* , pero si prefiere editar el archivo directamente, puede hacer clic en el vínculo **Editar JSON** en la esquina superior derecha del editor. 
+En Visual Studio 2019 y versiones posteriores, puede agregar configuraciones y personalizar sus opciones mediante el **Editor de configuración de CMake**. El editor está diseñado para ser una alternativa más sencilla para editar manualmente el archivo *CMakeSettings. JSON* , pero si prefiere editar el archivo directamente, puede hacer clic en el vínculo **Editar JSON** en la esquina superior derecha del editor.
 
 Para abrir el editor, haga clic en el menú desplegable **Configuración** de la barra de herramientas y seleccione **Administrar configuraciones**.
 
 ![Lista desplegable de configuraciones de CMake](media/vs2019-cmake-manage-configurations.png)
 
-Ahora puede ver el **Editor de configuración** con las configuraciones instaladas en la parte izquierda. 
+Ahora puede ver el **Editor de configuración** con las configuraciones instaladas en la parte izquierda.
 
 ![Editor de configuración de CMake](media/cmake-settings-editor.png)
 
@@ -36,7 +36,6 @@ Las opciones siguientes están disponibles en el encabezado **General**:
 
 Se corresponde al valor **name**. Este nombre aparece en la C++ lista desplegable configuración. Puede usar la macro `${name}` para crear otros valores de propiedad, como rutas de acceso.
 
-
 ### <a name="configuration-type"></a>Tipo de configuración
 
 Se corresponde al valor **configurationType**. Define el tipo de configuración de compilación para el generador seleccionado. Los valores admitidos actualmente son "Debug", "MinSizeRel", "Release" y "RelWithDebInfo". Se asigna a [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html).
@@ -47,13 +46,13 @@ Se corresponde al valor **inheritedEnvironments**. Define el entorno del compila
 
 ### <a name="cmake-toolchain-file"></a>Archivo de cadena de herramientas de CMake
 
-Ruta de acceso al [archivo de cadena](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html)de herramientas de CMake. Esta ruta de acceso se pasa a CMake como "- \<DCMAKE_TOOLCHAIN_FILE = FilePath >". Los archivos de cadena de herramientas especifican las ubicaciones de los compiladores y las utilidades de cadena de herramientas y otra información relacionada con el compilador y la plataforma De forma predeterminada, Visual Studio usa el [archivo de cadena](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) de herramientas vcpkg si no se especifica esta configuración. 
+Ruta de acceso al [archivo de cadena](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html)de herramientas de CMake. Esta ruta de acceso se pasa a CMake como "-DCMAKE_TOOLCHAIN_FILE = \<FilePath >". Los archivos de cadena de herramientas especifican las ubicaciones de los compiladores y las utilidades de cadena de herramientas y otra información relacionada con el compilador y la plataforma De forma predeterminada, Visual Studio usa el [archivo de cadena](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) de herramientas vcpkg si no se especifica esta configuración.
 
 ### <a name="build-root"></a>Raíz de la compilación
 
-Se corresponde a **buildRoot**. Asigna a [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)y especifica dónde se debe crear la memoria caché de CMake. Si no existe, se crea la carpeta especificada.
+Se corresponde a **buildRoot**. Asigna a [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)y especifica dónde se creará la caché de CMake. Si no existe, se crea la carpeta especificada.
 
-## <a name="command-arguments"></a>Argumentos de comandos
+## <a name="command-arguments"></a>Los argumentos de comandos
 
 Las opciones siguientes están disponibles en el encabezado **Argumentos de comandos**:
 
@@ -63,8 +62,7 @@ Se corresponde a **cmakeCommandArgs**. Especifica las [Opciones de línea de com
 
 ### <a name="build-command-arguments"></a>Argumentos de comandos de compilación
 
-Corresponde a **buildCommandArgs**. Especifica los modificadores adicionales que se van a pasar al sistema de compilación subyacente. Por ejemplo, si `-v` se pasa al usar el generador de Ninja, se fuerza a Ninja a generar las líneas de comandos.
-
+Corresponde a **buildCommandArgs**. Especifica los modificadores adicionales que se van a pasar al sistema de compilación subyacente. Por ejemplo, si se pasa `-v` cuando se usa el generador de Ninja, se fuerza a Ninja a generar líneas de comandos.
 
 ### <a name="ctest-command-arguments"></a>Argumentos de comandos de CTest
 
@@ -76,13 +74,13 @@ Para las configuraciones como Linux en las que se usan compilaciones remotas, ta
 
 ### <a name="rsync-command-arguments"></a>Argumentos de comandos de rsync
 
-Opciones de línea de comandos adicionales que se pasan a la [sincronización de directorios](https://download.samba.org/pub/rsync/rsync.html), una herramienta de copia de archivos rápida y flexible. 
+Opciones de línea de comandos adicionales que se pasan a la [sincronización de directorios](https://download.samba.org/pub/rsync/rsync.html), una herramienta de copia de archivos rápida y flexible.
 
 ## <a name="cmake-variables-and-cache"></a>Caché y variables de CMake
 
-Esta configuración le permite establecer las variables de CMake y guardarlas en *CMakeSettings. JSON*. Se pasan a CMake en tiempo de compilación e invalidan los valores que se encuentran en el archivo *archivo CMakeLists. txt* . Puede usar esta sección de la misma manera que usaría CMakeGUI para ver una lista de todas las variables de CMake disponibles para editar. Haga clic en el botón **Guardar y generar caché** para ver una lista de todas las variables de CMake disponibles para editar, incluidas las variables avanzadas (según CMakeGUI). Puede filtrar la lista por nombre de variable. 
+Esta configuración le permite establecer las variables de CMake y guardarlas en *CMakeSettings. JSON*. Se pasan a CMake en tiempo de compilación e invalidan los valores que se encuentran en el archivo *archivo CMakeLists. txt* . Puede usar esta sección de la misma manera que usaría CMakeGUI para ver una lista de todas las variables de CMake disponibles para editar. Haga clic en el botón **Guardar y generar caché** para ver una lista de todas las variables de CMake disponibles para editar, incluidas las variables avanzadas (según CMakeGUI). Puede filtrar la lista por nombre de variable.
 
-Corresponde a **las variables**. Contiene un par nombre-valor de las variables cmake que se pasan como  *_el_=_valor_ de nombre* **-D** a CMake. Si las instrucciones de compilación del proyecto CMake especifican la adición de variables directamente al archivo de caché CMake, se recomienda agregarlas aquí en su lugar.
+Corresponde a **las variables**. Contiene un par nombre-valor de variables CMake pasadas como **nombre-D** *_name_=_valor_* a CMake. Si las instrucciones de compilación del proyecto CMake especifican la adición de variables directamente al archivo de caché CMake, se recomienda agregarlas aquí en su lugar.
 
 ## <a name="advanced-settings"></a>Configuración avanzada
 
@@ -110,7 +108,7 @@ Modo IntelliSense utilizado por el motor de IntelliSense. Si no se selecciona ni
 
 ### <a name="install-directory"></a>Directorio de instalación
 
-Directorio en el que CMake instala los destinos. Se asigna a [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html). 
+Directorio en el que CMake instala los destinos. Se asigna a [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html).
 
 ### <a name="cmake-executable"></a>Ejecutable de CMake
 
@@ -124,15 +122,15 @@ Directorio del equipo remoto que contiene el archivo *archivo CMakeLists. txt* r
 
 ### <a name="remote-install-root"></a>Raíz de instalación remota
 
-El directorio del equipo remoto en el que CMake instala los destinos. Se asigna a [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html). 
+El directorio del equipo remoto en el que CMake instala los destinos. Se asigna a [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html).
 
 ### <a name="remote-copy-sources"></a>Copiar orígenes en remoto
 
-Especifica si se van a copiar los archivos de código fuente en el equipo remoto y le permite especificar si se va a usar la sincronización de directorios o SFTP. 
+Especifica si se van a copiar los archivos de código fuente en el equipo remoto y le permite especificar si se va a usar la sincronización de directorios o SFTP.
 
 ## <a name="directly-edit-cmakesettingsjson"></a>Modificación directa del archivo CMakeSettings.json
 
-También puede editar *CMakeSettings. JSON* directamente para crear configuraciones personalizadas. El **Editor de configuración** tiene un botón **Editar JSON** en la esquina superior derecha que abre el archivo para la edición. 
+También puede editar *CMakeSettings. JSON* directamente para crear configuraciones personalizadas. El **Editor de configuración** tiene un botón **Editar JSON** en la esquina superior derecha que abre el archivo para la edición.
 
 En el ejemplo siguiente se muestra un ejemplo de configuración, que se puede usar como punto de partida:
 
@@ -152,7 +150,7 @@ En el ejemplo siguiente se muestra un ejemplo de configuración, que se puede us
 
 JSON IntelliSense le ayuda a editar el archivo *CMakeSettings. JSON* :
 
-   ![IntelliSense de JSON para CMake](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
+   ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
 El editor de JSON también le informa cuando elige una configuración incompatible.
 
@@ -170,13 +168,13 @@ Puede elegir una de las opciones de la lista de configuraciones predefinidas:
 
    ![Configuraciones predefinidas de CMake](media/cmake-configurations.png)
 
-La primera vez que se selecciona una configuración, Visual Studio crea un archivo *CMakeSettings. JSON* en la carpeta raíz del proyecto. Este archivo se usa para volver a crear el archivo de caché de CMake, por ejemplo después de una operación **Limpiar**. 
+La primera vez que se selecciona una configuración, Visual Studio crea un archivo *CMakeSettings. JSON* en la carpeta raíz del proyecto. Este archivo se usa para volver a crear el archivo de caché de CMake, por ejemplo después de una operación **Limpiar**.
 
-Para agregar una configuración adicional, haga clic con el botón derecho en *CMakeSettings. JSON* y elija **Agregar configuración**. 
+Para agregar una configuración adicional, haga clic con el botón derecho en *CMakeSettings. JSON* y elija **Agregar configuración**.
 
-   ![Agregar configuración de CMake](media/cmake-add-configuration.png "CMake Add Configuration")
+   ![CMake Agregar configuración](media/cmake-add-configuration.png "CMake Agregar configuración")
 
-También puede editar el archivo mediante el **Editor de configuración de CMake**. Haga clic con el botón derecho en *CMakeSettings. JSON* en **Explorador de soluciones** y elija **Editar configuración de CMake**. También puede seleccionar **Administrar configuraciones** en la lista desplegable de configuraciones en la parte superior de la ventana del editor. 
+También puede editar el archivo mediante el **Editor de configuración de CMake**. Haga clic con el botón derecho en *CMakeSettings. JSON* en **Explorador de soluciones** y elija **Editar configuración de CMake**. También puede seleccionar **Administrar configuraciones** en la lista desplegable de configuraciones en la parte superior de la ventana del editor.
 
 También puede editar *CMakeSettings. JSON* directamente para crear configuraciones personalizadas. En el ejemplo siguiente se muestra un ejemplo de configuración, que se puede usar como punto de partida:
 
@@ -196,13 +194,13 @@ También puede editar *CMakeSettings. JSON* directamente para crear configuracio
 
 JSON IntelliSense le ayuda a editar el archivo *CMakeSettings. JSON* :
 
-   ![IntelliSense de JSON para CMake](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
+   ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
 Para más información sobre cada una de las propiedades del archivo, vea [Referencia del esquema de CMakeSettings.json](cmakesettings-reference.md).
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/>

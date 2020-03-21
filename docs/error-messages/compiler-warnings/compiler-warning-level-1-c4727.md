@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 0c00ac552e525fd57f6f09b0be5655958cfce3cc
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630829"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075141"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Advertencia del compilador (nivel 1) C4727
 
-"PCH denominado pch_file con la misma marca de tiempo encontrada en obj_file_1 y obj_file_2.  Utilizando el primer PCH.
+"PCH con nombre pch_file con la misma marca de tiempo encontrada en obj_file_1 y obj_file_2.  Utilizando el primer PCH.
 
 > [!NOTE]
 > En Visual Studio 2017 y versiones anteriores, el encabezado precompilado se denomina *stdafx. h* de forma predeterminada, y en Visual Studio 2019 y versiones posteriores, se llama de forma predeterminada a *PCH. h* .
@@ -50,8 +50,7 @@ En su lugar, realizaría lo siguiente:
 
 ::: moniker-end
 
-
-Para obtener más información, consulte
+Para obtener más información, vea
 
 - [/Yc (Crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md)
 

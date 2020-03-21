@@ -5,12 +5,12 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97224380a591f4fa3fe23d25a898c112702f5a5c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630769"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078299"
 ---
 # <a name="project-files"></a>Archivos de proyecto
 
@@ -20,19 +20,18 @@ Un C++ archivo de proyecto en Visual Studio es un archivo basado en XML que tien
 
 ::: moniker range=">=vs-2019"
 
-El siguiente archivo. vcxproj de ejemplo se generó mediante la elección del **Asistente para escritorio de Windows** en el cuadro de diálogo **nuevo proyecto** . Para procesar un proyecto de archivo, use la herramienta msbuild.exe en la línea de comandos, o bien el comando **Compilar** en el IDE. (Este ejemplo no se puede procesar porque no se proporcionan los archivos de código y de encabezado necesarios). Para obtener más información sobre los elementos XML en un archivo de proyecto, vea [Referencia de esquemas de archivo del proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+El siguiente archivo. vcxproj de ejemplo se generó mediante la elección del **Asistente para escritorio de Windows** en el cuadro de diálogo **nuevo proyecto** . Para procesar un proyecto de archivo, use la herramienta msbuild.exe en la línea de comandos, o bien el comando **Compilar** en el IDE. (Este ejemplo no se puede procesar porque no se proporcionan los archivos de encabezado y de origen necesarios). Para obtener más información sobre los elementos XML de un archivo de proyecto, vea [referencia de esquema de archivo de proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-El siguiente archivo .vcxproj de ejemplo se creó mediante la especificación de una **Aplicación de consola Win32** en el cuadro de diálogo **Nuevo proyecto**. Para procesar un proyecto de archivo, use la herramienta msbuild.exe en la línea de comandos, o bien el comando **Compilar** en el IDE. (Este ejemplo no se puede procesar porque no se proporcionan los archivos de código y de encabezado necesarios). Para obtener más información sobre los elementos XML en un archivo de proyecto, vea [Referencia de esquemas de archivo del proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+El siguiente archivo .vcxproj de ejemplo se creó mediante la especificación de una **Aplicación de consola Win32** en el cuadro de diálogo **Nuevo proyecto**. Para procesar un proyecto de archivo, use la herramienta msbuild.exe en la línea de comandos, o bien el comando **Compilar** en el IDE. (Este ejemplo no se puede procesar porque no se proporcionan los archivos de encabezado y de origen necesarios). Para obtener más información sobre los elementos XML de un archivo de proyecto, vea [referencia de esquema de archivo de proyecto](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 
-
 >[!NOTE]
-> En el caso de los proyectos de Visual Studio 2017 `pch.h` y `stdafx.h` versiones anteriores `stdafx.cpp`, cambie a y `pch.cpp` a.
+> En el caso de los proyectos de Visual Studio 2017 y versiones anteriores, cambie `pch.h` a `stdafx.h` y `pch.cpp` a `stdafx.cpp`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -132,7 +131,7 @@ El siguiente archivo .vcxproj de ejemplo se creó mediante la especificación de
 </Project>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Proyectos de Visual Studio: C++](../creating-and-managing-visual-cpp-projects.md)<br>
 [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md)

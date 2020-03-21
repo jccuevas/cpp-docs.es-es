@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: afc366728e62029ffbd3993e2fdd740e3aaf3369
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439885"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075081"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Informar de los errores del compilador)
 
@@ -29,7 +29,6 @@ ms.locfileid: "79439885"
 Se produce un error interno del compilador (ICE) cuando el compilador no puede procesar un archivo de código fuente. Cuando se produce un ICE, el compilador no genera un archivo de salida ni ningún diagnóstico útil que pueda usar para corregir el código.
 
 La configuración del servicio Informe de errores de Windows invalida los argumentos **/errorreport** . El compilador envía automáticamente informes de errores internos a Microsoft, si los informes se habilitan mediante Informe de errores de Windows. No se envía ningún informe si está deshabilitado por Informe de errores de Windows.
-
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 

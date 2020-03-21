@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095917"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078840"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Ejemplo: Mostrar un cuadro de diálogo a través de un comando de menú
 
@@ -44,7 +44,7 @@ Los procedimientos usan los siguientes nombres y valores:
 
 1. Agregue una clase para el cuadro de diálogo. Vea [Agregar una clase](../ide/adding-a-class-visual-cpp.md) para obtener más información.
 
-1. En **vista de clases**, seleccione la clase de documento (CDisplayDialogDoc). En la ventana **Propiedades** , haga clic en el botón **Eventos** . Haga doble clic en el identificador del comando de menú (ID_VIEW_TEST). A continuación, haga clic en la flecha abajo y seleccione  **\<agregar > OnViewTest**.
+1. En **vista de clases**, seleccione la clase de documento (CDisplayDialogDoc). En la ventana **Propiedades**, haga clic en el botón **Eventos**. Haga doble clic en el identificador del comando de menú (ID_VIEW_TEST). A continuación, haga clic en la flecha abajo y seleccione **\<agregar > OnViewTest**.
 
    Si ha agregado el comando de menú al gran sistema (mainframe) de una aplicación MDI, en su lugar, seleccione la clase de aplicación (CDisplayDialogApp).
 
@@ -58,7 +58,7 @@ Los procedimientos usan los siguientes nombres y valores:
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal(); 
+   testdlg.DoModal();
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Para mostrar un cuadro de diálogo no modal
@@ -110,7 +110,7 @@ Los procedimientos usan los siguientes nombres y valores:
    m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
 [Cuadros de diálogo modales y no modales](../mfc/modal-and-modeless-dialog-boxes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624478"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078693"
 ---
 # <a name="visual-studio-projects---c"></a>Proyectos de Visual Studio: C++
 
@@ -23,9 +23,9 @@ Un *proyecto de Visual Studio* es un proyecto basado en el sistema de compilaci�
 
 ::: moniker range="vs-2019"
 
-Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y, después, establece el **Lenguaje** en C++. En la lista de resultados, verá una lista de plantillas de proyecto que puede filtrar si establece **Plataforma** o **Tipo de proyecto**, y escribe palabras clave en el cuadro de búsqueda. 
+Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y, después, establece el **Lenguaje** en C++. En la lista de resultados, verá una lista de plantillas de proyecto que puede filtrar si establece **Plataforma** o **Tipo de proyecto**, y escribe palabras clave en el cuadro de búsqueda.
 
-   ![Plantillas de proyecto de Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Cuadro de diálogo nuevo proyecto de Visual Studio 2019")
+   ![Plantillas de proyecto de Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2019")
 
 ::: moniker-end
 
@@ -33,7 +33,7 @@ Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto*
 
 Puede crear proyectos de C++ si selecciona **Archivo** > **Nuevo** > **Proyecto** y después Visual C++ en el panel de la izquierda. En el panel central, verá una lista de plantillas de proyecto:
 
-   ![Plantillas de proyecto](../overview/media/vs2017-new-project.png "Cuadro de diálogo nuevo proyecto de Visual Studio 2017")
+   ![Plantillas de proyecto](../overview/media/vs2017-new-project.png "Cuadro de diálogo Nuevo proyecto de Visual Studio 2017")
 
 ::: moniker-end
 
@@ -45,13 +45,13 @@ Después de crear un proyecto, aparece en la ventana [Explorador de soluciones](
 
 Cuando crea un proyecto, también se crea un archivo de solución (.sln). Puede agregar proyectos adicionales a la solución si hace clic con el botón derecho en ella en el **Explorador de soluciones**. El archivo de solución se usa para coordinar las dependencias de compilación cuando tiene varios proyectos relacionados, pero no hace mucho más. Todas las opciones del compilador se establecen en el nivel de proyecto.
 
-## <a name="add-items"></a>Adición de elementos
+## <a name="add-items"></a>Agregar elementos
 
 Para agregar archivos de código fuente, iconos o cualquier otro elemento al proyecto, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Agregar > Nuevo** o **Agregar > Elemento existente**.
 
 ## <a name="add-third-party-libraries"></a>Adición de bibliotecas de terceros
 
-Para agregar bibliotecas de terceros, use el administrador de paquetes [vcpkg](vcpkg.md). Ejecute el paso de integración de Visual Studio para configurar las rutas de acceso a esa biblioteca cuando haga referencia a la misma desde cualquier proyecto de Visual Studio. 
+Para agregar bibliotecas de terceros, use el administrador de paquetes [vcpkg](vcpkg.md). Ejecute el paso de integración de Visual Studio para configurar las rutas de acceso a esa biblioteca cuando haga referencia a la misma desde cualquier proyecto de Visual Studio.
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Configuración de opciones del compilador y otras propiedades de compilación
 
@@ -61,7 +61,7 @@ Para configurar opciones de compilación para un proyecto, haga clic con el bot�
 
 Para compilar y ejecutar el proyecto nuevo, presione **F5** o haga clic en el *menú desplegable de depuración* con la flecha de color verde en la barra de herramientas principal. En la *lista desplegable de configuración* puede elegir si quiere realizar una compilación de *Depuración* o *Versión* (u otra configuración personalizada).
 
-Un proyecto nuevo se compila sin errores. Al agregar código propio, en ocasiones se puede introducir un error o desencadenar una advertencia. Un error impide que la compilación se complete; una advertencia no. Todos los errores y advertencias aparecerán en la ventana Salida y en la lista de errores al compilar el proyecto. 
+Un proyecto nuevo se compila sin errores. Al agregar código propio, en ocasiones se puede introducir un error o desencadenar una advertencia. Un error impide que la compilación se complete; una advertencia no. Todos los errores y advertencias aparecerán en la ventana Salida y en la lista de errores al compilar el proyecto.
 
    ![Ventana Salida y Lista de errores](../overview/media/vs2017-output-error-list.png)
 
@@ -74,7 +74,7 @@ Procedimientos para usar páginas de propiedades y hojas de propiedades para esp
 
 [Bibliotecas de referencia y los componentes en tiempo de compilación](adding-references-in-visual-cpp-projects.md)<br/>
 Procedimientos para incluir bibliotecas, archivos DLL y componentes COM y .NET en un proyecto.
- 
+
 [Organización de archivos de salida del proyecto](how-to-organize-project-output-files-for-builds.md)<br/>
 Procedimientos para personalizar la ubicación de los archivos ejecutables creados en el proceso de compilación.
 
@@ -84,7 +84,7 @@ Procedimientos para agregar un comando arbitrario al proceso de compilación en 
 [Creación de un proyecto a partir del código existente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 Procedimientos para crear un proyecto de Visual Studio a partir de una colección flexible de archivos de código fuente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)<br>
 [Guía C++ de migración y actualización de Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)

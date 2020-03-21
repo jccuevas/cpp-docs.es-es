@@ -3,17 +3,17 @@ title: Agregar una página de propiedades (Tutorial de ATL, Parte 6)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 2c487d1446f5d1050868f2066359e9639f474ba3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524685"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078768"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Agregar una página de propiedades (Tutorial de ATL, Parte 6)
 
-> [!NOTE] 
-> El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
+> [!NOTE]
+> El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
 
 Las páginas de propiedades se implementan como objetos COM independientes, lo que permite compartirlas si es necesario. En este paso, realizará las tareas siguientes para agregar una página de propiedades al control:
 
@@ -121,7 +121,7 @@ A continuación, modificará el controlador.
 
 Se llamará a `OnEnChangeSides` cuando se envía un mensaje `WM_COMMAND` con la notificación `EN_CHANGE` para el control `IDC_SIDES`. `OnEnChangeSides` a continuación llama a `SetDirty` y pasa TRUE para indicar que la página de propiedades ahora está modificada y el botón **Aplicar** debe estar habilitado.
 
-## <a name="adding-the-property-page-to-the-control"></a>Agregar la página de propiedades al control
+## <a name="adding-the-property-page-to-the-control"></a>Agregar la página de propiedades al Control
 
 La plantilla de página de propiedades ATL y el asistente no agregan la página de propiedades al control automáticamente, ya que podría haber varios controles en el proyecto. Deberá agregar una entrada a la asignación de propiedades del control.
 
@@ -149,6 +149,6 @@ A continuación, colocará el control en una página web.
 
 [Volver al paso 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Avanzar al paso 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)

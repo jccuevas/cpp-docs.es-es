@@ -2,15 +2,14 @@
 title: Adición de un componente COM+ 1.0 ATL
 ms.date: 05/09/2019
 ms.assetid: c6c95e64-9ee4-4a6e-8804-5930202ce1b9
-ms.openlocfilehash: 6b8ffd71dd7e743bcbb7ff6ccac333dfd235156f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 843563e324e5e01af3c38896f268efc06c9a6222
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706958"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075323"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Adición de un componente COM+ 1.0 ATL
-
 
 ::: moniker range="vs-2019"
 
@@ -30,11 +29,9 @@ Este asistente agrega un objeto al proyecto que admite servicios COM+ 1.0, inclu
 
 1. En el cuadro de diálogo [Agregar clase](../../ide/add-class-dialog-box.md), en el panel **Plantillas**, haga clic en **Componente COM+ 1.0 ATL** y después en **Abrir** para mostrar el [Asistente para componentes COM+ 1.0 ATL](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Agregar un método](../../ide/adding-a-method-visual-cpp.md)
 
 ::: moniker-end
-
-

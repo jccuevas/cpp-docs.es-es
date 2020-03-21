@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 9b2d1f3bf1a229a0590553369e37bc07f35ada33
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 381fa347a4ca2872ef0697d76a1e788c97e8a014
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627142"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075438"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: crear un programa C++ estándar (C++)
 
@@ -22,7 +22,7 @@ Puede escribir su propio C++ programa o usar uno de los programas de ejemplo. El
 > [!NOTE]
 > Si se requiere compatibilidad con una versión específica C++ del estándar del lenguaje (es decir, c++ 14 o c++ 17), use la opción del compilador `/std:c++14` o `/std:c++17`. (Visual Studio 2017 y versiones posteriores).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar este tutorial, debe comprender los conceptos básicos del lenguaje C++.
 
@@ -34,9 +34,9 @@ Los siguientes pasos varían según la versión de Visual Studio que use. Asegú
 
 ### <a name="to-create-a-c-project-in-visual-studio-2019"></a>Para crear un C++ proyecto en Visual Studio 2019
 
-1. En el menú principal, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Crear nuevo proyecto**.
+1. En el menú principal, elija **archivo** > **nuevo** > **proyecto** para abrir el cuadro de diálogo **crear un nuevo proyecto** .
 
-1. En la parte superior del cuadro de diálogo, establezca **Lenguaje** en **C++** , establezca **Plataforma** en **Windows** y establezca **Tipo de proyecto** en **Consola**. 
+1. En la parte superior del cuadro de diálogo, establezca **Lenguaje** en **C++** , establezca **Plataforma** en **Windows** y establezca **Tipo de proyecto** en **Consola**.
 
 1. En la lista de plantillas de proyecto, seleccione **Aplicación de consola** y **Siguiente**. En la página siguiente, escriba un nombre para el proyecto y especifique la ubicación del proyecto si lo desea.
 
@@ -72,11 +72,11 @@ Los siguientes pasos varían según la versión de Visual Studio que use. Asegú
 
 1. Haga clic en **Aceptar** para crear el proyecto.
 
-1. Complete el **Asistente para aplicaciones Win32**. 
+1. Complete el **Asistente para aplicaciones Win32**.
 
-1. Haga clic en **siguiente**, asegúrese de que la opción **aplicación de consola** está seleccionada y desactive la casilla **encabezados precompilados** . 
+1. Haga clic en **siguiente**, asegúrese de que la opción **aplicación de consola** está seleccionada y desactive la casilla **encabezados precompilados** .
 
-1. Haga clic en **Finalizar**.
+1. Haga clic en **Finalizar**
 
 ::: moniker-end
 
@@ -96,7 +96,7 @@ Los siguientes pasos varían según la versión de Visual Studio que use. Asegú
 
 1. Guarde el archivo.
 
-1. En el menú **Compilar** , haga clic en **Compilar solución**.
+1. En el menú **Compilar**, haga clic en **Compilar solución**.
 
    La ventana de **salida** muestra información sobre el progreso de la compilación, por ejemplo, la ubicación del registro de compilación y un mensaje que indica el estado de la compilación.
 
@@ -109,7 +109,7 @@ Los siguientes pasos varían según la versión de Visual Studio que use. Asegú
 **Anterior:** [aplicaciones de consola en C++ visual](../windows/console-applications-in-visual-cpp.md)<br/>
 **Siguiente:** [Tutorial: compilar C++ un programa nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

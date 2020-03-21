@@ -1,5 +1,5 @@
 ---
-title: clases is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
+title: is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r clases
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456230"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076453"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>clases is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
+# <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r clases
 
-Estas plantillas determinan si un tipo se puede invocar con los tipos de argumento especificados. `is_invocable_r`y `is_nothrow_invocable_r` también determinan si el resultado de la invocación se puede convertir en un tipo específico. `is_nothrow_invocable`y `is_nothrow_invocable_r` también determinan si se sabe que la invocación no inicia excepciones. Agregado en C++ 17.
+Estas plantillas determinan si un tipo se puede invocar con los tipos de argumento especificados. `is_invocable_r` y `is_nothrow_invocable_r` también determinan si el resultado de la invocación se puede convertir en un tipo específico. `is_nothrow_invocable` y `is_nothrow_invocable_r` también determinan si se sabe que la invocación no inicia excepciones. Agregado en C++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parámetros
 
-*Llamadas*\
+\ *invocable*
 El tipo que se puede llamar para la consulta.
 
-*Args*\
+\ *args*
 Los tipos de argumento que se van a consultar.
 
-*Convertirse*\
+\ *convertible*
 El tipo al que se *puede llamar* se debe poder convertir a.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El `is_invocable` predicado de tipo es true si se *puede* invocar el tipo al que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado.
+El predicado de tipo `is_invocable` contiene true si se puede invocar el tipo al que se *puede llamar mediante* los *argumentos arguments* en un contexto no evaluado.
 
-El `is_invocable_r` predicado de tipo es true si se *puede* invocar el tipo al que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado para generar un tipo de resultado convertible en convertible.
+El predicado de tipo `is_invocable_r` es true si se puede invocar el tipo al que se *puede llamar mediante* los *argumentos arguments* en un contexto no evaluado para generar un tipo de resultado convertible en *convertible*.
 
-El `is_nothrow_invocable` predicado de tipo es true si se puede invocar *el tipo al* que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado, y se sabe que dicha llamada no produce una excepción.
+El predicado de tipo `is_nothrow_invocable` es true si se puede invocar el tipo al que se *puede llamar mediante* los *argumentos arguments* en un contexto no evaluado, y se sabe que dicha llamada no produce una excepción.
 
-El `is_nothrow_invocable_r` predicado de tipo es true si se *puede* invocar el tipo al que se puede llamar mediante los *argumentos arguments* en un contexto no evaluado para generar un tipo de resultado que se pueda convertir en convertible y que se sepa que dicha llamada no se inicia. excepción.
+El predicado de tipo `is_nothrow_invocable_r` es true si se puede invocar el tipo al que se *puede llamar mediante* los *argumentos arguments* en un contexto no evaluado para generar un tipo de resultado que se pueda convertir en *convertible*y que se sepa que dicha llamada no produce una excepción.
 
-Cada uno de los tipos convertibles, *Invocables*y los tipos en el paquete de parámetros *args* debe ser un tipo completo, una matriz de enlace desconocido o un **vacío**posiblemente calificado con la VC. De lo contrario, el comportamiento del predicado es undefined.
+Cada uno de los tipos *convertibles*, *Invocables*y los tipos en el paquete de parámetros *args* debe ser un tipo completo, una matriz de enlace desconocido o un **vacío**posiblemente calificado con la VC. De lo contrario, el comportamiento del predicado es undefined.
 
 ## <a name="example"></a>Ejemplo
 
@@ -103,7 +103,7 @@ int main()
 {
     static_assert( std::is_invocable<decltype(test1), short>::value );
 
-    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value ); 
+    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value );
     static_assert( std::is_invocable_r<long(*)(), decltype(test1), int>::value ); // fails
 
     static_assert( std::is_nothrow_invocable<decltype(test1), int>::value );
@@ -116,11 +116,11 @@ int main()
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<type_traits>
+**Encabezado:** \<type_traits >
 
 **Espacio de nombres:** std
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)

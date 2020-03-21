@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927689"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076129"
 ---
 # <a name="midl-property-pages"></a>Páginas de propiedades MIDL
 
@@ -62,15 +62,15 @@ Las páginas de propiedades MIDL están disponibles como una propiedad Item en. 
 
 ### <a name="preprocessor-definitions"></a>Definiciones de preprocesador
 
-Especifica una o más definiciones, incluidas las macros MIDL ([/D](/windows/win32/midl/-d))\[macros\]).
+Especifica una o más definiciones, incluidas las macros MIDL ([/d](/windows/win32/midl/-d))\[macros\]).
 
 ### <a name="additional-include-directories"></a>Directorios de inclusión adicionales
 
-Especifica uno o más directorios que se van a agregar a la ruta de\]acceso de inclusión ([/i](/windows/win32/midl/-i)\[path).
+Especifica uno o más directorios que se van a agregar a la ruta de acceso de inclusión ([/i](/windows/win32/midl/-i)\[ruta de acceso\]).
 
 ### <a name="additional-metadata-directories"></a>Directorios de metadatos adicionales
 
-Especifique el directorio que contiene el archivo Windows.Foundation.WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[path\]).
+Especifique el directorio que contiene el archivo Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[ruta de acceso\]).
 
 ### <a name="enable-windows-runtime"></a>Habilitar Windows Runtime
 
@@ -88,7 +88,7 @@ Fuerza la compatibilidad con MkTypLib. exe versión 2,03 ([/mktyplib203](/window
 
 Selecciona la rigurosidad de los errores de código MIDL ([/w](/windows/win32/midl/-w)).
 
-**Posibilidad**
+**Opciones**
 
 - **1**
 - **1**
@@ -108,7 +108,7 @@ Suprimir la presentación de la pancarta de inicio y el mensaje de información 
 
 Especifica el tipo de carácter predeterminado del compilador de C que se utilizará para compilar el código generado. ([/Char](/windows/win32/midl/-char) firmado | unsigned | ascii7).
 
-**Posibilidad**
+**Opciones**
 
 - **Firmada**
 - **Unsigned** : sin signo
@@ -118,7 +118,7 @@ Especifica el tipo de carácter predeterminado del compilador de C que se utiliz
 
 Especifica el entorno de destino ([/env](/windows/win32/midl/-env) ARM32 | Win32 | ia64 | x64).
 
-**Posibilidad**
+**Opciones**
 
 - **No establecido** : Win32
 - **Microsoft Windows 32-bit** -Win32
@@ -139,7 +139,7 @@ Suprimir mensajes de advertencia del compilador ([/no_warn](/windows/win32/midl/
 
 Permite los atributos ACF seleccionados en el archivo IDL ([/app_config](/windows/win32/midl/-app-config)).
 
-### <a name="locale-id"></a>IDENTIFICADOR de configuración regional
+### <a name="locale-id"></a>Id. de configuración regional
 
 Especifica el LCID para los archivos de entrada, los nombres de archivo y las rutas de acceso de directorio ([/LCID](/windows/win32/midl/-lcid) decimal).
 
@@ -185,7 +185,7 @@ Especifica el nombre del archivo de biblioteca de tipos ([/tlb](/windows/win32/m
 
 Generar solo el archivo de código auxiliar de cliente ([/Client](/windows/win32/midl/-client) [stub | None]).
 
-**Posibilidad**
+**Opciones**
 
 - Código **auxiliar stub**
 - **Ninguno** : ninguno
@@ -194,7 +194,7 @@ Generar solo el archivo de código auxiliar de cliente ([/Client](/windows/win32
 
 Generar solo el archivo de código auxiliar de servidor ([/Server](/windows/win32/midl/-server) [stub | None]).
 
-**Posibilidad**
+**Opciones**
 
 - Código **auxiliar stub**
 - **Ninguno** : ninguno
@@ -211,7 +211,7 @@ Especifique el archivo de código auxiliar del servidor ([/sstub](/windows/win32
 
 Especifica el formato de archivo de la biblioteca de tipos ([/oldtlb |/newtlb]).
 
-**Posibilidad**
+**Opciones**
 
 - **NewFormat** -nuevo formato
 - **OldFormat** : formato antiguo
@@ -220,7 +220,7 @@ Especifica el formato de archivo de la biblioteca de tipos ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Opciones de preprocesamiento de C
 
-Especifica los modificadores que se van a pasar al preprocesador del compilador de C (modificadores[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
+Especifica los modificadores que se van a pasar al preprocesador del compilador de C ([/cpp_opt](/windows/win32/midl/-cpp-opt) modificadores).
 
 ### <a name="undefine-preprocessor-definitions"></a>Anular definiciones del preprocesador
 
@@ -230,7 +230,7 @@ Especifica una o más anulaciones de definición, incluidas las macros MIDL ([/u
 
 Seleccione la opción de comprobación de errores ([/error All | None]).
 
-**Posibilidad**
+**Opciones**
 
 - **EnableCustom** -All
 - **Todo todo**
@@ -262,13 +262,13 @@ Anteponga el espacio de nombres ' ABI ' a todos los tipos.  ([/ns_prefix](/windo
 
 ### <a name="validate-parameters"></a>Validar parámetros
 
-Generar información adicional para validar los parámetros ([/Robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Generar información adicional para validar los parámetros ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Alineación de miembros de struct
 
 Especifica el nivel de empaquetado de las estructuras en el sistema de destino (/ZpN).
 
-**Posibilidad**
+**Opciones**
 
 - **No establecido** : no establecido
 - **1 byte** : Zp1
@@ -283,6 +283,3 @@ Redirige la salida de la pantalla a un archivo ([/o](/windows/win32/midl/-o) Fil
 ### <a name="minimum-target-system"></a>Sistema de destino mínimo
 
 Establezca el sistema de destino mínimo (cadena[/target](/windows/win32/midl/-target) ).
-
-
-

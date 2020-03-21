@@ -2,12 +2,12 @@
 title: Declaraciones y definiciones (C++)
 ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7aa9e07a471ed5a32ecc8f13690f1a1bf08b655f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301553"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077216"
 ---
 # <a name="declarations-and-definitions-c"></a>Declaraciones y definiciones (C++)
 
@@ -40,9 +40,9 @@ namespace N {
 }
 ```
 
-En la línea 5, se declara la función `main`. En la línea 7, se declara e *inicializa*una variable **const** denominada `pi`. En la línea 8, se declara un entero `i` y se inicializa con el valor generado por la función `f`. El nombre `f` es visible para el compilador debido a la *declaración adelantada* en la línea 3. 
+En la línea 5, se declara la función `main`. En la línea 7, se declara e *inicializa*una variable **const** denominada `pi`. En la línea 8, se declara un entero `i` y se inicializa con el valor generado por la función `f`. El nombre `f` es visible para el compilador debido a la *declaración adelantada* en la línea 3.
 
-En la línea 9, se declara una variable denominada `obj` de tipo `C`. Sin embargo, esta declaración genera un error porque `C` no se declara hasta más tarde en el programa y no se declara hacia delante. Para corregir el error, puede trasladar la *definición* completa de `C` antes de `main`, o bien agregar una declaración de avance para ella. Este comportamiento es diferente de otros lenguajes como C#, en el que las funciones y clases se pueden usar antes de su punto de declaración en un archivo de código fuente. 
+En la línea 9, se declara una variable denominada `obj` de tipo `C`. Sin embargo, esta declaración genera un error porque `C` no se declara hasta más tarde en el programa y no se declara hacia delante. Para corregir el error, puede trasladar la *definición* completa de `C` antes de `main`, o bien agregar una declaración de avance para ella. Este comportamiento es diferente de otros lenguajes como C#, en el que las funciones y clases se pueden usar antes de su punto de declaración en un archivo de código fuente.
 
 En la línea 10, se declara una variable denominada `str` de tipo `std::string`. El nombre `std::string` es visible porque se presenta en el archivo de [encabezado](header-files-cpp.md) `string`, que se combina en el archivo de código fuente en la línea 1. `std` es el espacio de nombres en el que se declara la clase `string`.
 
@@ -107,6 +107,6 @@ Un C++ programa podría contener más de una [unidad de compilación](header-fil
 [decltype](decltype-cpp.md)<br/>
 [Atributos deC++](attributes.md)<br/>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conceptos básicos](../cpp/basic-concepts-cpp.md)<br/>

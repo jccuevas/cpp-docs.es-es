@@ -2,12 +2,12 @@
 title: Lectura y reconocimiento de código C++ en Visual Studio
 description: Use el editor de código de C++ en Visual Studio para dar formato al código y entenderlo.
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416128"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079044"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Lectura y reconocimiento de código C++ en Visual Studio
 
@@ -59,9 +59,9 @@ Mantenga el puntero sobre cualquier variable, función u otro símbolo para obte
 
 ::: moniker range="vs-2019"
 
-![Información rápida en C&#43;&#43;](../ide/media/quick-info-vs2019.png "Información rápida")
+![Información rápida en C&#43;&#43;](../ide/media/quick-info-vs2019.png "información rápida")
 
-La información sobre herramientas **Información rápida** dispone de un vínculo **Buscar en línea**. Vaya a **Herramientas** > **Opciones** > **Editor de texto** > **C++**  > **Vista** para especificar el proveedor de búsqueda. 
+La información sobre herramientas **Información rápida** dispone de un vínculo **Buscar en línea**. Vaya a **Herramientas** > **Opciones** > **Editor de texto** > **C++**  > **Vista** para especificar el proveedor de búsqueda.
 
 Si hay un error en el código, puede mantener el puntero sobre él e **Información rápida** mostrará el mensaje de error. También puede encontrar el mensaje de error en la ventana Lista de errores.
 
@@ -71,7 +71,7 @@ Si hay un error en el código, puede mantener el puntero sobre él e **Informaci
 
 ::: moniker range="<=vs-2017"
 
-![Información rápida en C&#43;&#43;](../ide/media/quick-info.png "Información rápida")
+![Información rápida en C&#43;&#43;](../ide/media/quick-info.png "información rápida")
 
 Si hay un error en el código, puede mantener el puntero sobre él e **Información rápida** mostrará el mensaje de error. También puede encontrar el mensaje de error en la ventana **Lista de errores**.
 
