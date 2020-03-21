@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051525"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078251"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Tutorial: compilar un programa de C en la línea de comandos
 
@@ -21,7 +21,7 @@ Visual C++ incluye un compilador de C que puede usar para crear todo desde progr
 
 En este tutorial se muestra cómo crear un programa de C de estilo "Hello, World" básico mediante un editor de texto y, a continuación, compilarlo en la línea de comandos. Si prefiere trabajar con C++ en la línea de comandos, vea [Tutorial: compilar un C++ programa nativo en la línea de comandos](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si desea probar el IDE de Visual Studio en lugar de usar la línea de comandos, vea [Tutorial: trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [usar el IDE de Visual Studio para C++ el desarrollo de escritorio](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Para completar este tutorial, debe haber instalado Visual Studio y los componentes visuales C++ opcionales, o las herramientas de compilación para Visual Studio.
 
@@ -63,9 +63,8 @@ Si está ejecutando una versión diferente de Windows, busque en el menú Inicio
 Si ha instalado Microsoft Visual C++ Build Tools 2015 en Windows 10, abra el menú **Inicio** y, a continuación, desplácese hacia abajo y abra la carpeta **Visual C++ build tools** . Elija **Visual C++ 2015 símbolo del sistema de las herramientas nativas x86** para abrir la ventana del símbolo del sistema.
 
 Si está ejecutando una versión diferente de Windows, busque en el menú Inicio o en la página de inicio una carpeta de Visual Studio Tools que contenga un acceso directo del símbolo del sistema para desarrolladores. También puede usar la función de búsqueda de Windows para buscar "símbolo del sistema para desarrolladores" y elegir uno que coincida con la versión instalada de Visual Studio. Use el acceso directo para abrir la ventana del símbolo del sistema.
-   
-::: moniker-end
 
+::: moniker-end
 
 A continuación, compruebe que el C++ símbolo del sistema para desarrolladores de Visual está configurado correctamente. En la ventana del símbolo del sistema, escriba `cl` y compruebe que la salida es similar a la siguiente:
 
@@ -183,7 +182,7 @@ Los lenguajes C++ C y son similares, pero no los mismos. El compiladorC++ de Mic
 
 MSVC es compatible con el estándar ISO C99, pero no es totalmente compatible. En la mayoría de los casos, el código C portátil se compilará y se ejecutará según lo previsto. Visual C++ no es compatible con la mayoría de los cambios en ISO C11. Ciertas funciones de biblioteca y nombres de función POSIX están en desuso en MSVC. Se admiten las funciones, pero los nombres preferidos han cambiado. Para obtener más información, vea [características de seguridad en CRT](../c-runtime-library/security-features-in-the-crt.md) y [Advertencia del compilador (nivel 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tutorial: Crear un programa de C++ estándar (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Referencia del lenguaje C](../c-language/c-language-reference.md)<br/>

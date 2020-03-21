@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: bef825f546573b878c415c385e1a2a2286e08db4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 52a966bb321226058afbf4667a4192e4e814f0a1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444905"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075856"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Advertencia del compilador (nivel 4) C4127
 
 > la expresión condicional es constante
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La expresión de control de una instrucción **If** o un bucle **While** se evalúa como una constante. Debido a su uso común de idiomático, a partir de Visual Studio 2015 Update 3, las constantes triviales como 1 o **true** no desencadenan la advertencia, a menos que sean el resultado de una operación en una expresión.
 
@@ -45,7 +45,6 @@ int main() {
 ```
 
 Esta advertencia también se puede generar cuando se usa una constante de tiempo de compilación en una expresión condicional:
-
 
 ```cpp
 #include <string>

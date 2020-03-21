@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626609"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076939"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild frente a MSBuild: cambios del sistema de compilación en Visual Studio 2010
 
@@ -63,7 +63,7 @@ Cuando se usa **Explorador de soluciones** para agregar un archivo a un proyecto
 
 ## <a name="vc-directories-settings"></a>Configuración de directorios de VC + +
 
-La configuración de directorios de Visual C++ se especifican en la [página de propiedades de los directorios de Visual C++](../ide/vcpp-directories-property-page.md). En Visual Studio 2008 y versiones anteriores, la configuración de los directorios se aplica por usuario y la lista de directorios excluidos se especifica en el archivo *SYSINCL. dat* . 
+La configuración de directorios de Visual C++ se especifican en la [página de propiedades de los directorios de Visual C++](../ide/vcpp-directories-property-page.md). En Visual Studio 2008 y versiones anteriores, la configuración de los directorios se aplica por usuario y la lista de directorios excluidos se especifica en el archivo *SYSINCL. dat* .
 
 No puede cambiar la configuración de los directorios de Visual C++ ejecutando [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) en la línea de comandos. Tampoco puede cambiarla si abre el menú **Herramientas**, hace clic en **Configuraciones de importación y exportación** y selecciona la opción **Restablecer todas las configuraciones**.
 
@@ -73,6 +73,6 @@ Para migrar la configuración de los directorios de VC + + de un archivo *. vsse
 2. Seleccione **importar la configuración de entorno seleccionada**
 3. Siga las instrucciones del asistente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [MSBuild on the Command Line - C++](../build/msbuild-visual-cpp.md) (MSBuild en la línea de comandos - C++)

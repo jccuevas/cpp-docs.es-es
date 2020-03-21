@@ -1,23 +1,23 @@
 ---
-title: Resumen de la gramática del preprocesador (C++C/)
+title: Resumen de la gramática del preprocesador (C/C++)
 description: Define y describe la sintaxis de gramáticaC++ del preprocesador de Microsoft C/Compiler (MSVC).
 ms.date: 08/29/2019
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 99e7e8218a80e28d67767392cadfb5c4918a3bfe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302190"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076872"
 ---
-# <a name="preprocessor-grammar-summary-cc"></a>Resumen de la gramática del preprocesador (C++C/)
+# <a name="preprocessor-grammar-summary-cc"></a>Resumen de la gramática del preprocesador (C/C++)
 
 En este artículo se describe la gramática formal de C C++ y el preprocesador. Trata la sintaxis de las directivas y los operadores de preprocesamiento. Para obtener más información, vea directivas de [preprocesador](../preprocessor/preprocessor.md) y [pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-## <a name="definitions"></a>Definiciones del Resumen de la gramática
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>Definiciones del Resumen de la gramática
 
 Los elementos terminales son puntos de conexión en una definición de sintaxis. No hay ninguna otra posible resolución. Los elementos terminales incluyen el conjunto de palabras reservadas e identificadores definidos por el usuario.
 
@@ -29,11 +29,11 @@ Un componente opcional se indica mediante el subíndice <sub>opt</sub>. Por ejem
 
 **{** *expresión*<sub>OPT</sub> **}**
 
-## <a name="conventions"></a>Convenciones de documento
+## <a name="document-conventions"></a><a name="conventions"></a>Convenciones de documento
 
 Las convenciones utilizan distintos atributos de fuente de diferentes componentes de la sintaxis. Los símbolos y fuentes son los siguientes:
 
-| Attribute | Descripción |
+| Atributo | Descripción |
 |---------------|-----------------|
 | *elemento no terminal* | La cursiva indica elementos no terminales. |
 | **#include** | Los elementos terminales en negrita son símbolos y palabras literales reservadas que deben especificarse tal como aparecen. Los caracteres en este contexto siempre distinguen entre mayúsculas y minúsculas. |
@@ -48,15 +48,15 @@ En los bloques de sintaxis de código, estos símbolos del tipo de letra predete
 |---|---|
 | \[ ] | Los corchetes rodean un elemento opcional. |
 | {\|} | Las llaves rodean elementos alternativos, separados por barras verticales. |
-| ... | Indica que el patrón de elemento anterior se puede repetir. |
+| … | Indica que el patrón de elemento anterior se puede repetir. |
 
 En los bloques de sintaxis de código, las comas (`,`), los puntos (`.`), los puntos y coma (`;`), los dos puntos (`:`), los paréntesis (`( )`), las comillas dobles (`"`) y las comillas simples (`'`) son literales.
 
-## <a name="grammar"></a>Gramática del preprocesador
+## <a name="preprocessor-grammar"></a><a name="grammar"></a>Gramática del preprocesador
 
 *línea de control*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *token de identificador-cadena*<sub>OPT</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; *identificador* de #define **(** *identificador*<sub>OPT</sub> **,** ... **,** *Identifier*<sub>OPT</sub> **)** *token-String*<sub>OPT</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifier* *token de identificador-cadena*<sub>OPT</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identificador* de #define **(** *identificador*<sub>OPT</sub> **,** ... **,** *Identifier*<sub>OPT</sub> **)** *token-String*<sub>OPT</sub>\
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _rutaDeAcceso-Spec_ **"** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** _rutaDeAcceso-Spec_ **>** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#line** *secuencia* **"** _filename_ **"** <sub>OPT</sub>\
@@ -66,29 +66,29 @@ En los bloques de sintaxis de código, las comas (`,`), los puntos (`.`), los pu
 
 *Constant-Expression*: \
 &nbsp;&nbsp;&nbsp;&nbsp;**definido (** *identificador* **)** \
-&nbsp;&nbsp;&nbsp;&nbsp; *identificador* definido\
+&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identificador* definido\
 &nbsp;&nbsp;&nbsp;&nbsp;cualquier otra expresión constante
 
 *condicional*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
+&nbsp;&nbsp;&nbsp;&nbsp;*si-parte* *Elif-* Parts<sub>OPC</sub> *else-Part*<sub>OPC</sub> *endif-line*
 
 *si-parte*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+&nbsp;&nbsp;&nbsp;&nbsp;*texto* *If-line*
 
 *If-line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#if** *expresión constante*\
 &nbsp;&nbsp; **&nbsp;&nbsp;** *identificador* #ifdef\
-&nbsp;&nbsp;&nbsp;&nbsp; *identificador* de #ifndef
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identificador* de #ifndef
 
 *Elif-partes*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*texto* *de línea Elif*\
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
+&nbsp;&nbsp;&nbsp;&nbsp;*texto* *de la línea* Elif de *partes Elif*
 
 *Elif-línea*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#elif** *expresión constante*
 
 *else-Part*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+&nbsp;&nbsp;&nbsp;&nbsp;*texto* *de la línea adicional*
 
 *else-line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#else**
@@ -125,7 +125,6 @@ En los bloques de sintaxis de código, las comas (`,`), los puntos (`.`), los pu
 > [!NOTE]
 > Los siguientes elementos no terminales se expanden en la sección [convenciones léxicas](../cpp/lexical-conventions.md) de la  *C++ referencia del lenguaje*: *constante*, *constante-expresión*, *identificador*, *palabra clave*, *operador*y *signo de puntuación*.
 
-
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia deC++ C/preprocesador](../preprocessor/c-cpp-preprocessor-reference.md)

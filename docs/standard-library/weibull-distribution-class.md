@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688511"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075527"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution (Clase)
 
@@ -70,10 +70,10 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *RealType*
+\ *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La plantilla de clase describe una distribución que genera valores de un tipo de punto flotante especificado por el usuario o un tipo **Double** si no se proporciona ninguno, distribuido según la distribución de Weibull. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
@@ -92,9 +92,9 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener más detalles sobre la distribución de Weibull, vea el artículo de Wolfram MathWorld sobre la [distribución de Weibull](http://mathworld.wolfram.com/WeibullDistribution.html).
+Para obtener más detalles sobre la distribución de Weibull, vea el artículo de Wolfram MathWorld sobre la [distribución de Weibull](https://mathworld.wolfram.com/WeibullDistribution.html).
 
 ## <a name="example"></a>Ejemplo
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Resultados
+## <a name="output"></a>Output
 
 Primera ejecución:
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<random>
+**Encabezado:** \<> aleatorio
 
 **Espacio de nombres:** std
 
-## <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -222,16 +222,16 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*un* \
+*un*\
 El parámetro de distribución `a`.
 
-*b* \
+*b*\
 El parámetro de distribución `b`.
 
 \ *PARM*
 La estructura `param_type` usada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **Condición previa:** `0.0 < a` y `0.0 < b`
 
@@ -239,7 +239,7 @@ El primer constructor crea un objeto cuyo valor `a` almacenado contiene el valor
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
 
 Almacena los parámetros de la distribución.
 
@@ -257,21 +257,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parámetros
 
-*un* \
+*un*\
 El parámetro de distribución `a`.
 
-*b* \
+*b*\
 El parámetro de distribución `b`.
 
 \ *derecha*
 El objeto `param_type` que se va a comparar con este.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **Condición previa:** `0.0 < a` y `0.0 < b`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<random>](../standard-library/random.md)

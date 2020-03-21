@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189007"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075204"
 ---
 # <a name="hint-files"></a>Archivos de indicaciones
 
@@ -104,7 +104,7 @@ De forma predeterminada, se resalta la macro de problema como una sugerencia. El
 
 El comando de menú **Proyecto** > **Visualizar errores de la base de datos de exploración** permite visualizar todas las regiones que no se pudieron analizar en la **Lista de errores**. Este comando está pensado para simplificar la creación del archivo de indicaciones inicial. Pero el analizador no puede determinar si la causa del error es una macro problemática, por lo que debe evaluar cada error. Ejecute el comando **Visualizar errores de la base de datos de exploración** y navegue a cada error para cargar el archivo afectado en el editor. Una vez cargado el archivo, se resaltarán las macros que formen parte de la región. Puede invocar las acciones rápidas para agregarlas a un archivo de indicaciones. Después de actualizar el archivo de indicaciones, la lista de errores se actualizará automáticamente. Si quiere modificar el archivo de indicaciones manualmente, también puede usar el comando **Volver a analizar la solución** para desencadenar una actualización.
 
-## <a name="architecture"></a>Arquitectura
+## <a name="architecture"></a>Architecture
 
 Los archivos de indicaciones están relacionados con los directorios físicos, no con los directorios lógicos que se muestran en el **Explorador de soluciones**. No es necesario agregar un archivo de indicaciones al proyecto para que surta efecto. El sistema de análisis solo usa los archivos de indicaciones cuando analiza los archivos de código fuente.
 
@@ -150,12 +150,12 @@ Las sugerencias usan esta sintaxis:
 
 |Sintaxis|Significado|
 |------------|-------------|
-|`#define` *nombre_de_la_indicación* *cadena_de_reemplazo*<br /><br /> `#define` *nombre_de_la_indicación* `(` *parámetro*, ...`)`*cadena_de_reemplazo*|Una directiva de preprocesador que define una indicación nueva o vuelve a definir una indicación existente. Después de la directiva, el preprocesador reemplaza cada aparición de *nombre_de_la_indicación* en el código fuente con *cadena_de_reemplazo*.<br /><br /> El segundo formato de sintaxis define una indicación similar a una función. Si en el código fuente aparece una indicación de tipo de función, en primer lugar el preprocesador reemplaza cada aparición de *parámetro* en *cadena_de_reemplazo* con el argumento correspondiente en el código fuente y, después, reemplaza *nombre_de_la_indicación* con *cadena_de_reemplazo*.|
+|`#define` *Hint-Name* *-cadena de reemplazo*<br /><br /> `#define` *Hint-name* `(` *parámetro*,...`)` *-cadena de reemplazo*|Una directiva de preprocesador que define una indicación nueva o vuelve a definir una indicación existente. Después de la directiva, el preprocesador reemplaza cada aparición de *nombre_de_la_indicación* en el código fuente con *cadena_de_reemplazo*.<br /><br /> El segundo formato de sintaxis define una indicación similar a una función. Si en el código fuente aparece una indicación de tipo de función, en primer lugar el preprocesador reemplaza cada aparición de *parámetro* en *cadena_de_reemplazo* con el argumento correspondiente en el código fuente y, después, reemplaza *nombre_de_la_indicación* con *cadena_de_reemplazo*.|
 |`@<`|Una *cadena_de_reemplazo* específica del archivo de indicaciones que indica el inicio de un conjunto de elementos de mapa.|
 |`@=`|Una *cadena_de_reemplazo* específica del archivo de indicaciones que indica un elemento de mapa intermedio. Un mapa puede tener varios elementos de mapa.|
 |`@>`|Una *cadena_de_reemplazo* específica del archivo de indicaciones que indica el final de un conjunto de elementos de mapa.|
-|`#undef` *nombre_de_la_indicación*|La directiva de preprocesador que elimina una indicación existente. El nombre de la indicación lo proporciona el identificador de *nombre_de_la_indicación*.|
-|`//` *comentario*|Comentario en una sola línea.|
+|`#undef` *Hint-Name*|La directiva de preprocesador que elimina una indicación existente. El nombre de la indicación lo proporciona el identificador de *nombre_de_la_indicación*.|
+|`//` *Comentario*|Comentario en una sola línea.|
 |`/*` *comentario* `*/`|Un comentario multilínea.|
 
 ## <a name="example"></a>Ejemplo
@@ -242,10 +242,9 @@ Estas notas se aplican a la lista anterior:
 
 - La indicación `#undef` del directorio `A2` quitó las indicaciones para `OBRACE` y `CBRACE` del archivo de indicaciones del directorio `Debug`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tipos de archivos creados para proyectos de C++ de Visual Studio](file-types-created-for-visual-cpp-projects.md)<br>
 [#define (directiva) (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef (directiva) (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Anotaciones SAL](../../c-runtime-library/sal-annotations.md)<br>
-

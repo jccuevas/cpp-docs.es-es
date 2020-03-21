@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422713"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078060"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
-Las distintas funciones `printf` y `wprintf` toman una cadena de formato y argumentos opcionales y generan una secuencia de caracteres con formato para la salida. La cadena de formato contiene cero o más *directivas*, que son caracteres literales para la salida o *especificaciones de conversión* codificadas que describen cómo dar formato a un argumento en la salida. En este artículo se describe la sintaxis utilizada para codificar las especificaciones de conversión en la cadena de formato. Para obtener una lista de estas funciones, vea [E/S de secuencia](../c-runtime-library/stream-i-o.md). 
+Las distintas funciones `printf` y `wprintf` toman una cadena de formato y argumentos opcionales y generan una secuencia de caracteres con formato para la salida. La cadena de formato contiene cero o más *directivas*, que son caracteres literales para la salida o *especificaciones de conversión* codificadas que describen cómo dar formato a un argumento en la salida. En este artículo se describe la sintaxis utilizada para codificar las especificaciones de conversión en la cadena de formato. Para obtener una lista de estas funciones, vea [E/S de secuencia](../c-runtime-library/stream-i-o.md).
 
 Una especificación de conversión consta de campos opcionales y obligatorios con este formato:
 
@@ -39,7 +39,7 @@ La especificación de conversión básica solo contiene el signo de porcentaje y
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > En Visual Studio 2015, la familia de funciones `printf` y `scanf` se declaró como **inline** y se desplazó a los encabezados `<stdio.h>` y `<conio.h>`. Si va a migrar código anterior, es posible que vea *LNK2019* en conexión con estas funciones. Para obtener más información, [consulte C++ el historial de cambios de Visual 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="type-conversion-specifier"></a>Especificador de conversión de tipo

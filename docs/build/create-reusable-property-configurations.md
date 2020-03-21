@@ -3,16 +3,16 @@ title: Compartir o volver a usar la configuración de proyecto de Visual Studio:
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303220"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078704"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Uso compartido o reutilización de la configuración del proyecto de Visual Studio
 
-Para crear un grupo personalizado de valores de configuración que puede compartir con otros usuarios o reutilizarlos en varios proyectos, use **Administrador de propiedades** para crear una *hoja de propiedades* (archivo. props) para almacenar la configuración de cada tipo de proyecto que desea poder reutilizar o compartir con otros usuarios. El uso de hojas de propiedades es mucho menos propenso a errores que otras formas de crear valores "globales". 
+Para crear un grupo personalizado de valores de configuración que puede compartir con otros usuarios o reutilizarlos en varios proyectos, use **Administrador de propiedades** para crear una *hoja de propiedades* (archivo. props) para almacenar la configuración de cada tipo de proyecto que desea poder reutilizar o compartir con otros usuarios. El uso de hojas de propiedades es mucho menos propenso a errores que otras formas de crear valores "globales".
 
 > [!IMPORTANT]
 > **Los archivos .user y las razones por las que son problemáticos**

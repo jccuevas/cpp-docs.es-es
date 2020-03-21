@@ -4,12 +4,12 @@ description: Use el editor de código de C++ en Visual Studio para dar formato a
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438157"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077848"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Editar y refactorizar código de C++ en Visual Studio
 
@@ -70,15 +70,15 @@ Un botón aparece solo si es relevante en la sesión actual de IntelliSense. Nor
 
 ## <a name="template-intellisense"></a>IntelliSense para plantilla
 
-Cuando el símbolo de intercalación está dentro de una definición de plantilla, aparece una **barra de plantillas** que le permite proporcionar argumentos de plantilla de ejemplo para IntelliSense. 
+Cuando el símbolo de intercalación está dentro de una definición de plantilla, aparece una **barra de plantillas** que le permite proporcionar argumentos de plantilla de ejemplo para IntelliSense.
 
 ![Plantilla&#43; &#43; de C IntelliSense Mostrar instancias existentes](../ide/media/template-intellisense-cpp-1.png "Plantillas IntelliSense Mostrar instancias existentes")
 
-Haga clic en el icono de **> de\<t** para expandir o contraer la **barra de plantillas**. Haga clic en el icono de lápiz o haga doble clic en la **barra de plantillas** para abrir la ventana **Editar**. 
+Haga clic en el icono de **> de\<t** para expandir o contraer la **barra de plantillas**. Haga clic en el icono de lápiz o haga doble clic en la **barra de plantillas** para abrir la ventana **Editar**.
 
 ![IntelliSense&#43; &#43; de plantilla de C](../ide/media/template-intellisense-cpp-3.png "IntelliSense para plantilla")
 
-Las modificaciones que se realizan en la ventana se aplican directamente al código fuente, así se ve su efecto en tiempo real. 
+Las modificaciones que se realizan en la ventana se aplican directamente al código fuente, así se ve su efecto en tiempo real.
 
 La barra de plantillas puede rellenar automáticamente los candidatos en función de las creaciones de instancias que haya en el código. Haga clic en **Agregar todas las creaciones de instancias existentes** para ver una lista de todos los argumentos concretos que se han usado para crear instancias de la plantilla a lo largo del código base.
 
@@ -94,13 +94,13 @@ La información de la **barra de plantillas** se considera como específica del 
 
 Si el editor detecta problemas con el código, agregará subrayados ondulados de color debajo del problema. Un subrayado ondulado de color rojo señala código que no se va a compilar. El subrayado ondulado de color verde señala otros tipos de problemas, que pueden llegar a ser graves. Puede abrir la ventana **Lista de errores** para obtener más información sobre los problemas.
 
-En algunos tipos de errores, así como en patrones de programación comunes, el editor ofrecerá una **corrección rápida** en forma de bombilla, que aparece cuando se mantiene el puntero sobre el subrayado ondulado. Haga clic en la flecha abajo para ver las sugerencias. 
+En algunos tipos de errores, así como en patrones de programación comunes, el editor ofrecerá una **corrección rápida** en forma de bombilla, que aparece cuando se mantiene el puntero sobre el subrayado ondulado. Haga clic en la flecha abajo para ver las sugerencias.
 
 En el siguiente ejemplo, hay un elemento `vector` declarado, pero no se encontró ninguna definición, por lo que el editor sugiere incluir el archivo de encabezado necesario:
 
 ![Corrección&#43; &#43; rápida de C](../ide/media/quick-fix-for-header-cpp.png "C++Corrección rápida")
 
-El editor también ofrece soluciones rápidas en algunas oportunidades de refactorización. Por ejemplo, si declara una clase en un archivo de encabezado, Visual Studio propondrá crear una definición para ella en un archivo .cpp aparte. 
+El editor también ofrece soluciones rápidas en algunas oportunidades de refactorización. Por ejemplo, si declara una clase en un archivo de encabezado, Visual Studio propondrá crear una definición para ella en un archivo .cpp aparte.
 
 ![Corrección&#43; &#43; rápida de C](../ide/media/quick-fix.png "C++Corrección rápida")
 

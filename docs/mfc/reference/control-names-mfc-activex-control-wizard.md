@@ -6,85 +6,84 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: 17c1b30811fa1d9c3f3bc04a46553c617eff966b
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: eff7b537e7fe5c19d10cce8766557a3d1ff49342
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708141"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077504"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Nombres del control, Asistente para controles ActiveX MFC
 
-Especifique los nombres de la clase de control y la clase de página de propiedades, los nombres de tipo y escriba los identificadores para el control. Con la excepción de **nombre corto**, todos los demás campos se pueden editar de forma independiente. Si cambia el texto para **nombre corto**, el cambio se refleja en los nombres de todos los demás campos en esta página. Este comportamiento de nomenclatura está diseñado para que todos los nombres fácilmente identificables por usted a medida que desarrolla el control.
+Especifique los nombres de la clase de control y la clase de página de propiedades, los nombres de tipo y los identificadores de tipo para el control. Con la excepción de **nombre corto**, todos los demás campos se pueden editar de manera independiente. Si cambia el texto de **nombre corto**, el cambio se refleja en los nombres de todos los demás campos de esta página. Este comportamiento de nomenclatura se ha diseñado para facilitarle la identificación de todos los nombres a medida que desarrolla su control.
 
 - **Nombre corto**
 
-   Proporcione un nombre abreviado para el control. De forma predeterminada, este nombre se basa en el nombre del proyecto proporcionado en el **nuevo proyecto** cuadro de diálogo. El nombre que proporcione determina los nombres de clase, los nombres de tipo y los identificadores de tipo, a menos que cambie esos campos individualmente.
+   Proporcione un nombre abreviado para el control. De forma predeterminada, este nombre se basa en el nombre del proyecto que proporcionó en el cuadro de diálogo **nuevo proyecto** . El nombre que proporcione determina los nombres de clase, los nombres de tipo y los identificadores de tipo, a menos que cambie los campos de forma individual.
 
-- **Nombre de la clase de control**
+- **Nombre de clase de control**
 
-   De forma predeterminada, el nombre de la clase control se basa en el nombre corto, con `C` como prefijo y `Ctrl` como sufijo. Por ejemplo, si el control Value de corto nombre es `Price`, es el nombre de clase de control `CPriceCtrl`.
+   De forma predeterminada, el nombre de la clase de control se basa en el nombre corto, con `C` como prefijo y `Ctrl` como sufijo. Por ejemplo, si el nombre corto del control es `Price`, el nombre de la clase de control es `CPriceCtrl`.
 
-- **Archivo .h del control**
+- **Control. h (archivo)**
 
-   De forma predeterminada, el nombre del archivo de encabezado se basa en el nombre corto, con `Ctrl` como sufijo y `.h` como la extensión de archivo. Por ejemplo, si el control Value de corto nombre es `Price`, el nombre de archivo de encabezado es `PriceCtrl.h`. El nombre de este campo debe coincidir con el nombre de clase del control.
+   De forma predeterminada, el nombre del archivo de encabezado se basa en el nombre corto, con `Ctrl` como sufijo y `.h` como la extensión de archivo. Por ejemplo, si el nombre corto del control es `Price`, el nombre del archivo de encabezado es `PriceCtrl.h`. El nombre de este campo debe coincidir con el nombre de clase del control.
 
-- **Archivo .cpp del control**
+- **Archivo. cpp de control**
 
-   De forma predeterminada, el nombre del archivo de encabezado se basa en el nombre corto, con `Ctrl` como sufijo y `.cpp` como la extensión de archivo. Por ejemplo, si el control Value de corto nombre es `Price`, el nombre de archivo de encabezado es `PriceCtrl.cpp`. El nombre de este campo debe coincidir con el nombre del encabezado.
+   De forma predeterminada, el nombre del archivo de encabezado se basa en el nombre corto, con `Ctrl` como sufijo y `.cpp` como la extensión de archivo. Por ejemplo, si el nombre corto del control es `Price`, el nombre del archivo de encabezado es `PriceCtrl.cpp`. El nombre de este campo debe coincidir con el nombre del encabezado.
 
-- **Nombre de tipo de control**
+- **Nombre del tipo de control**
 
-   De forma predeterminada, el nombre del tipo de control se basa en el nombre corto, seguido de `Control`. Por ejemplo, si el control Value de corto nombre es `Price`, el nombre de tipo de clase de control es `Price Control`. Si cambia el valor de este campo, asegúrese de que el nombre indica una herencia.
+   De forma predeterminada, el nombre del tipo de control se basa en el nombre corto seguido de `Control`. Por ejemplo, si el nombre corto del control es `Price`, el nombre del tipo de clase de control es `Price Control`. Si cambia el valor en este campo, asegúrese de que el nombre indica una herencia.
 
-- **Id. de tipo de control**
+- **IDENTIFICADOR de tipo de control**
 
-   Establece el identificador de tipo de control de la clase de control. El control escribe esta cadena en el registro cuando se agrega a un proyecto. Aplicaciones de contenedor utilizan esta cadena para crear una instancia del control.
+   Establece el identificador de tipo de control de la clase de control. El control escribe esta cadena en el registro cuando se agrega a un proyecto. Las aplicaciones contenedoras usan esta cadena para crear una instancia del control.
 
-   De forma predeterminada, el identificador de tipo de control se basa en el nombre del proyecto, que especificó en el **nuevo proyecto** cuadro de diálogo y el nombre corto. Este nombre debe coincidir con el nombre de tipo.
+   De forma predeterminada, el identificador del tipo de control se basa en el nombre del proyecto, que se indicó en el cuadro de diálogo **nuevo proyecto** y el nombre corto. Este nombre debe coincidir con el nombre de tipo.
 
-   De forma predeterminada, el identificador de tipo de control aparece como sigue:
+   De forma predeterminada, el identificador de tipo de control aparece de la siguiente manera:
 
-   *ProjectName.ShortName*Ctrl.1
+   *NombreDeProyecto. nombre_corto* Ctrl. 1
 
-   Si cambia el nombre corto en este cuadro de diálogo, el identificador de tipo de control aparece como sigue:
+   Si cambia el nombre corto en este cuadro de diálogo, el ID. de tipo de control aparece de la manera siguiente:
 
-   *ProjectName.NewShortName*Ctrl.1
+   *Projectname. NewShortName* Ctrl. 1
 
-- **Nombre de la clase de página de propiedades**
+- **PropPage (nombre de clase)**
 
-   De forma predeterminada, el nombre de la clase de página de propiedades se basa en el nombre corto, con `C` como prefijo y `PropPage` como sufijo. Por ejemplo, si el control Value de corto nombre es `Price`, es el nombre de clase de página de propiedades `CPricePropPage`. Este nombre debe coincidir con el nombre de clase de control, anexado `PropPage`.
+   De forma predeterminada, el nombre de la clase de página de propiedades se basa en el nombre corto, con `C` como prefijo y `PropPage` como sufijo. Por ejemplo, si el nombre corto del control es `Price`, el nombre de clase de la página de propiedades es `CPricePropPage`. Este nombre debe coincidir con el nombre de clase del control, anexado con `PropPage`.
 
-- **Archivo .h de página de propiedades**
+- **Archivo PropPage. h**
 
-   De forma predeterminada, el nombre del archivo de encabezado de página de propiedad se basa en el nombre corto, con como un `PropPage` como sufijo y `.h` como la extensión de archivo. Por ejemplo, si el control Value de corto nombre es `Price`, es el nombre de archivo de encabezado de página de propiedades `PricePropPage.h`. Este nombre debe coincidir con el nombre de clase.
+   De forma predeterminada, el nombre del archivo de encabezado de página de propiedades se basa en el nombre corto, con como `PropPage` como sufijo y `.h` como extensión de archivo. Por ejemplo, si el nombre corto del control es `Price`, el nombre del archivo de encabezado de la página de propiedades es `PricePropPage.h`. Este nombre debe coincidir con el nombre de clase.
 
-- **Archivo .cpp de página de propiedades**
+- **Archivo PropPage. cpp**
 
-   De forma predeterminada, el nombre del archivo de implementación de la página de propiedad se basa en el nombre corto, con como un `PropPage` como sufijo y `.cpp` como la extensión de archivo. Por ejemplo, si el control Value de corto nombre es `Price`, es el nombre de archivo de encabezado de página de propiedades `PricePropPage.cpp`. Este nombre debe coincidir con el nombre de archivo de encabezado.
+   De forma predeterminada, el nombre del archivo de implementación de la página de propiedades se basa en el nombre corto, con como `PropPage` como sufijo y `.cpp` como extensión de archivo. Por ejemplo, si el nombre corto del control es `Price`, el nombre del archivo de encabezado de la página de propiedades es `PricePropPage.cpp`. Este nombre debe coincidir con el nombre del archivo de encabezado.
 
-- **Nombre del tipo de página de propiedades**
+- **Nombre del tipo PropPage**
 
-   De forma predeterminada, el nombre de tipo de página de propiedades se basa en el nombre corto, seguido de `Property Page`. Por ejemplo, si el control Value de corto nombre es `Price`, es el nombre del tipo de página de propiedades `Price Property Page`. Si cambia el valor de este campo, asegúrese de que el nombre indica la clase del control.
+   De forma predeterminada, el nombre del tipo de página de propiedades se basa en el nombre corto seguido de `Property Page`. Por ejemplo, si el nombre corto del control es `Price`, el nombre del tipo de página de propiedades es `Price Property Page`. Si cambia el valor en este campo, asegúrese de que el nombre indica la clase del control.
 
-- **Id. de tipo de página de propiedades**
+- **IDENTIFICADOR de tipo PropPage**
 
-   Establece el identificador de la clase de página de propiedades. El control escribe esta cadena en el registro cuando se aplica a un proyecto. Una aplicación contenedora usa esta cadena para crear una instancia de la página de propiedades del control.
+   Establece el identificador de la clase de página de propiedades. El control escribe esta cadena en el registro cuando se aplica a un proyecto. Una aplicación contenedora utiliza esta cadena para crear una instancia de la página de propiedades del control.
 
-   De forma predeterminada, el identificador de tipo de página de propiedades se basa en el nombre del proyecto, que especificó en el **nuevo proyecto** cuadro de diálogo y el nombre corto. Este nombre debe coincidir con el nombre de tipo.
+   De forma predeterminada, el identificador de tipo de la página de propiedades se basa en el nombre del proyecto, que se indicó en el cuadro de diálogo **nuevo proyecto** y el nombre corto. Este nombre debe coincidir con el nombre de tipo.
 
-   De forma predeterminada, el identificador de tipo de página de propiedades aparece como sigue:
+   De forma predeterminada, el identificador de tipo de la página de propiedades aparece de la siguiente manera:
 
-   *ProjectName.ShortName*PropPage.1
+   *NombreDeProyecto. nombre_corto* PropPage 1
 
-   Si cambia el nombre corto en este cuadro de diálogo, el identificador de tipo de página de propiedades aparece como sigue:
+   Si cambia el nombre corto en este cuadro de diálogo, el ID. de tipo de página de propiedades aparece de la siguiente manera:
 
-   *ProjectName.NewShortName*PropPage.1
+   *Projectname. NewShortName* PropPage 1
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asistente para controles ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Configuración de la aplicación, Asistente para controles ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Configuración del control, Asistente para controles ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
-[Tipos de archivos creados para Visual Studio C++ proyectos](../../build/reference/file-types-created-for-visual-cpp-projects.md)
-
+[Tipos de archivos creados para proyectos de C++ de Visual Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md)

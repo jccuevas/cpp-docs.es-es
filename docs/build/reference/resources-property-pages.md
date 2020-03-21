@@ -14,16 +14,16 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 4f3688da4feb11f673e11372e5df086dc8c7e21a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177346"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078294"
 ---
 # <a name="resources-property-page"></a>Página de propiedades recursos
 
-En el caso de los programas de escritorio de Windows nativos, la compilación invoca al compilador de [recursos (RC. exe)](/windows/win32/menurc/resource-compiler) para agregar imágenes, tablas de cadenas y archivos *. res* al archivo binario. Las propiedades expuestas en esta página de propiedades se pasan al compilador de C++ recursos, no al compilador o al enlazador. Para obtener más información sobre las propiedades que se enumeran aquí y cómo se asignan a las opciones de línea de comandos de RC, consulte [uso de RC (la línea de comandos de RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Para obtener información sobre cómo obtener acceso a las páginas de propiedades de **recursos** , vea [ C++ establecer las propiedades del compilador y compilación en Visual Studio](../working-with-project-properties.md). Para acceder a estas propiedades mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+En el caso de los programas de escritorio de Windows nativos, la compilación invoca al [compilador de recursos (RC. exe)](/windows/win32/menurc/resource-compiler) para agregar imágenes, tablas de cadenas y archivos *. res* al archivo binario. Las propiedades expuestas en esta página de propiedades se pasan al compilador de C++ recursos, no al compilador o al enlazador. Para obtener más información sobre las propiedades que se enumeran aquí y cómo se asignan a las opciones de línea de comandos de RC, consulte [uso de RC (la línea de comandos de RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Para obtener información sobre cómo obtener acceso a las páginas de propiedades de **recursos** , vea [ C++ establecer las propiedades del compilador y compilación en Visual Studio](../working-with-project-properties.md). Para acceder a estas propiedades mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
 
 Las propiedades de los recursos C++de .net en las aplicaciones/CLI se exponen en la [Página de propiedades recursos administrados](managed-resources-property-page.md).
 
@@ -35,7 +35,7 @@ Especifica una o más definiciones para el compilador de recursos. (/d [macro])
 
 Anula la definición de un símbolo. /u
 
-## <a name="culture"></a>culture
+## <a name="culture"></a>Referencia cultural
 
 Muestra la referencia cultural (por ejemplo, Inglés de EE. UU. o italiano) utilizada en los recursos. (/l [número])
 
@@ -59,10 +59,10 @@ Suprimir la presentación de la pancarta de inicio y el mensaje de información 
 
 Especifica el nombre del archivo de recursos (/fo [archivo])
 
-## <a name="null-terminate-strings"></a>Cadenas de finalización nulas 
+## <a name="null-terminate-strings"></a>Cadenas de finalización nulas
 
 Anexe null a todas las cadenas de las tablas de cadenas. /n
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++referencia de la página de propiedades del proyecto](property-pages-visual-cpp.md)

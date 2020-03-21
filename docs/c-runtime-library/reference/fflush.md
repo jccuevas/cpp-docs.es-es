@@ -26,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940947"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077339"
 ---
 # <a name="fflush"></a>fflush
 
@@ -55,9 +55,9 @@ Puntero a la estructura **FILE**.
 **fflush** devuelve 0 si el búfer se ha vaciado correctamente. También se devuelve el valor 0 en los casos en que la secuencia especificada no tiene ningún búfer o solo se abre para lectura. Un valor devuelto de **EOF** indica un error.
 
 > [!NOTE]
-> Si **fflush** devuelve **EOF**, es posible que se hayan perdido datos debido a un error de escritura. Al configurar un controlador de errores crítico, es más seguro desactivar el almacenamiento en búfer con la función **setvbuf (** o usar rutinas de e/s de bajo nivel como _ **Open**, **_close**y _ **Write** en lugar de las funciones de e/s de secuencias.
+> Si **fflush** devuelve **EOF**, es posible que se hayan perdido datos debido a un error de escritura. Al configurar un controlador de errores crítico, es más seguro desactivar el almacenamiento en búfer con la función **setvbuf (** o usar rutinas de e/s de bajo nivel, como **_open**, **_close**y **_write** en lugar de las funciones de e/s de secuencias.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **fflush** vacía el *flujo*de la secuencia. Si la secuencia se ha abierto en modo de escritura, o se ha abierto en modo de actualización y la última operación ha sido una operación de escritura, el contenido del búfer de la secuencia se escribe en el archivo o dispositivo subyacentes y el búfer se descarta. Si la secuencia se abrió en modo de lectura, o si la secuencia no tiene ningún búfer, la llamada a **fflush** no tiene ningún efecto y se conserva cualquier búfer. Una llamada a **fflush** niega el efecto de cualquier llamada anterior a **ungetc** para la secuencia. La secuencia sigue abierta después de la llamada.
 
@@ -67,7 +67,7 @@ Normalmente, el sistema operativo mantiene los búferes y determina el momento �
 
 Para obtener información sobre cómo controlar la característica de confirmación en disco, consulte [E/S de secuencia](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) y [_fdopen](fdopen-wfdopen.md).
 
-Esta función bloquea el subproceso de llamada y por lo tanto es segura para subprocesos. Para una versión que no sea de bloqueo, vea **_fflush_nolock**.
+Esta función bloquea el subproceso de llamada y por lo tanto es segura para subprocesos. Para obtener una versión que no sea de bloqueo, consulte **_fflush_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +75,7 @@ Esta función bloquea el subproceso de llamada y por lo tanto es segura para sub
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -103,10 +103,10 @@ int main(void)
 
         // Write data to a file immediately instead of buffering.
         fflush(my_file);
-    
+
         if (my_number == 5)
         {
-            // Without using fflush, no data was written to the file 
+            // Without using fflush, no data was written to the file
             // prior to the crash, so the data is lost.
             *crash_the_program = 5;
         }
@@ -127,7 +127,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

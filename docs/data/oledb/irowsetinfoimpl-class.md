@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 7389ba689fb1f371b5fbf73045dcdc78cd465d88
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 691871bfc4a9e63167611a3228807fb12e32d1cb
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545844"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077868"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl (Clase)
 
@@ -41,7 +41,7 @@ Proporciona una implementación para la interfaz [IRowsetInfo](/previous-version
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE IRowsetInfoImpl :
-   public IRowsetInfo, 
+   public IRowsetInfo,
    public CUtlProps<PropClass>
 ```
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685866"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076381"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution (Clase)
 
@@ -64,10 +64,10 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *RealType*
+\ *RealType*
 El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La plantilla de clase describe una distribución que genera valores de un tipo de entero especificado por el usuario o de tipo **Double** si no se proporciona ninguno, distribuido según la distribución *t*de Student. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
@@ -78,9 +78,9 @@ La plantilla de clase describe una distribución que genera valores de un tipo d
 
 La función de propiedad `n()` devuelve el valor del parámetro de distribución almacenado `n`.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener más detalles sobre el algoritmo de la distribución *t* de Student, vea el artículo de Wolfram MathWorld sobre [Distribución t de Students](http://mathworld.wolfram.com/Studentst-Distribution.html).
+Para obtener más detalles sobre el algoritmo de la distribución *t* de Student, vea el artículo de Wolfram MathWorld sobre [Distribución t de Students](https://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## <a name="example"></a>Ejemplo
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<random>
+**Encabezado:** \<> aleatorio
 
 **Espacio de nombres:** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 Construye la distribución.
 
@@ -180,7 +180,7 @@ El parámetro de distribución `n`.
 \ *PARM*
 Paquete de parámetros utilizado para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **Condición previa:** `0.0 < n`
 
@@ -188,7 +188,7 @@ El primer constructor crea un objeto cuyo valor `n` almacenado contiene el valor
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 Almacena todos los parámetros de la distribución.
 
@@ -211,12 +211,12 @@ El parámetro de distribución `n`.
 \ *derecha*
 El objeto `param_type` que se va a comparar con este.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **Condición previa:** `0.0 < n`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<random>](../standard-library/random.md)

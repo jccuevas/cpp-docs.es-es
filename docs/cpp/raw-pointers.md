@@ -4,12 +4,12 @@ description: Cómo usar punteros sin formato enC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250689"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077142"
 ---
 # <a name="raw-pointers-c"></a>Punteros sin formatoC++()
 
@@ -45,7 +45,7 @@ Un puntero (si no se declara como **const**) puede aumentarse o reducirse para q
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 Se pueden realizar ciertas operaciones aritméticas en punteros no const para que señalen a una nueva ubicación de memoria. Un puntero se puede incrementar y disminuir mediante los operadores **++** , **+=** , **-=** y **--** . Esta técnica se puede utilizar en matrices y es especialmente útil en búferes de datos sin tipo. Un **\*nulo** incrementa en función del tamaño de un **carácter** (1 byte). Un puntero con tipo se incrementa según el tamaño del tipo al que señala.
 
-En el ejemplo siguiente se muestra cómo se puede usar la aritmética de puntero para tener acceso a píxeles individuales en un mapa de bits de Windows. Observe el uso de **New** y **Delete**, y el operador de desreferencia. 
+En el ejemplo siguiente se muestra cómo se puede usar la aritmética de puntero para tener acceso a píxeles individuales en un mapa de bits de Windows. Observe el uso de **New** y **Delete**, y el operador de desreferencia.
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>void * punteros
 
-Un puntero a **void** simplemente apunta a una ubicación de memoria sin procesar. A veces es necesario usar punteros **void\*** , por ejemplo, al pasar entre C++ funciones de código y de C. 
+Un puntero a **void** simplemente apunta a una ubicación de memoria sin procesar. A veces es necesario usar punteros **void\*** , por ejemplo, al pasar entre C++ funciones de código y de C.
 
 Cuando un puntero con tipo se convierte en un puntero void, no se cambia el contenido de la ubicación de memoria, pero se pierde la información de tipo, por lo que no se pueden realizar operaciones de incremento o decremento. Una ubicación de memoria se puede convertir, por ejemplo, de MyClass * a void * y de nuevo a MyClass *. Estas operaciones son intrínsecamente propensas a errores y requieren una gran atención para evitar errores. Moderno C++ desaconseja el uso de punteros void a menos que sea absolutamente necesario.
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>Punteros a funciones
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Punteros a funciones
 
 En la programación de estilo C, los punteros de función se utilizan principalmente para pasar funciones a otras funciones. En este escenario, el autor de la llamada puede personalizar el comportamiento de una función sin modificarla. En moderno C++, las [expresiones lambda](lambda-expressions-in-cpp.md) proporcionan la misma capacidad con mayor seguridad de tipos y otras ventajas.
 
@@ -342,7 +342,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Punteros inteligentes](smart-pointers-modern-cpp.md)
 [operador de direccionamiento indirecto: *](indirection-operator-star.md)<br/>

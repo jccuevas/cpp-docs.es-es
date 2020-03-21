@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 39708e8cfff7f61c3a3f763f87e1a3da36f0d4b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857689"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077256"
 ---
 # <a name="allocator"></a>asignador
 
@@ -22,10 +22,10 @@ El especificador de declaración de **asignador** se puede aplicar a funciones d
 ## <a name="syntax"></a>Sintaxis
 
 ```
-   __declspec(allocator) 
+   __declspec(allocator)
 ```
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El generador de perfiles de memoria nativa en Visual Studio funciona mediante la recopilación de datos de eventos ETW de asignación emitidos por durante el tiempo de ejecución. Los asignadores de CRT y Windows SDK se han anotado en el nivel de origen para que se pueden capturar los datos de asignación. Si escribe sus propios asignadores, las funciones que devuelven un puntero a la memoria de montón recién asignada se pueden decorar con `__declspec(allocator)`, tal como se puede observar en este ejemplo para myMalloc:
 

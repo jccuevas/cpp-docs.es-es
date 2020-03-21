@@ -6,15 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707001"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076210"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opciones, Asistente para páginas de propiedades ATL
-
 
 ::: moniker range="vs-2019"
 
@@ -34,7 +33,7 @@ Use esta página del asistente para definir el modelo de subprocesos y el nivel 
 
    |Opción|Descripción|
    |------------|-----------------|
-   |**Single**|La página de propiedades se ejecuta solo en el subproceso COM principal.|
+   |**Único**|La página de propiedades se ejecuta solo en el subproceso COM principal.|
    |**Apartment**|La página de propiedades se puede crear en cualquier apartamento de un único subproceso. El valor predeterminado.|
 
 - **Agregación**
@@ -49,7 +48,7 @@ Use esta página del asistente para definir el modelo de subprocesos y el nivel 
 
 ::: moniker-end
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asistente para páginas de propiedades ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Cadenas, Asistente para páginas de propiedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)

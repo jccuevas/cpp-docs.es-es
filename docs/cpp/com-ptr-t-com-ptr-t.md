@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2c6a52f4b515761f260f86fba8ffe38138eecd55
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857598"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079952"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -67,15 +67,15 @@ _com_ptr_t(
 // this smart pointer's interface type. If QueryInterface fails with
 // an E_NOINTERFACE error, a NULL smart pointer is constructed.
 explicit _com_ptr_t(
-   const CLSID& clsid, 
-   IUnknown* pOuter = NULL, 
+   const CLSID& clsid,
+   IUnknown* pOuter = NULL,
    DWORD dwClsContext = CLSCTX_ALL
 );
 
 // Calls CoCreateClass with provided CLSID retrieved from string.
 explicit _com_ptr_t(
-   LPCWSTR str, 
-   IUnknown* pOuter = NULL, 
+   LPCWSTR str,
+   IUnknown* pOuter = NULL,
    DWORD dwClsContext = CLSCTX_ALL
 );
 
@@ -92,19 +92,19 @@ explicit _com_ptr_t(
 );
 
 // Saves the interface.
-template<> 
+template<>
 _com_ptr_t(
    Interface* pInterface
 ) throw();
 
 // Make sure correct ctor is called
-template<> 
+template<>
 _com_ptr_t(
    LPSTR str
 );
 
 // Make sure correct ctor is called
-template<> 
+template<>
 _com_ptr_t(
    LPWSTR str
 );
@@ -114,7 +114,7 @@ _com_ptr_t(
 // find an interface pointer of this smart pointer's type. If
 // QueryInterface fails with an E_NOINTERFACE error, a NULL smart
 // pointer is constructed.
-template<typename _OtherIID> 
+template<typename _OtherIID>
 _com_ptr_t(
    const _com_ptr_t<_OtherIID>& p
 );
@@ -127,13 +127,13 @@ _com_ptr_t(
 
 // Disable conversion using _com_ptr_t* specialization of
 // template<typename _InterfaceType> _com_ptr_t(_InterfaceType* p)
-template<> 
+template<>
 explicit _com_ptr_t(
    _com_ptr_t* p
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *pInterface*<br/>
 Puntero a interfaz sin formato.
@@ -148,9 +148,9 @@ Objeto **_com_ptr_t** .
 Puntero de interfaz sin formato, cuyo tipo es diferente del tipo de puntero inteligente de este objeto **_com_ptr_t** .
 
 *varSrc*<br/>
-Un objeto `_variant_t`.
+Objeto `_variant_t` .
 
-*clsid*<br/>
+*CLSID*<br/>
 `CLSID` de una coclase.
 
 *dwClsContext*<br/>
@@ -164,6 +164,6 @@ El externo desconocido para la [agregación](/windows/win32/com/aggregation).
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

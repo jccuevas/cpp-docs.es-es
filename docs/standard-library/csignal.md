@@ -6,17 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fcad9c1b5ec20a7a10afc40884ece8ae8abec184
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452328"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076674"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Incluye el encabezado \<de la biblioteca estándar de C Signal. h > y agrega los nombres `std` asociados al espacio de nombres. Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.
-
+Incluye el encabezado de la biblioteca estándar de C \<Signal. h > y agrega los nombres asociados al espacio de nombres `std`. Incluir este encabezado también garantiza que los nombres declarados mediante vinculación externa en el encabezado de la biblioteca estándar de C se declaran en el espacio de nombres `std`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -44,14 +43,14 @@ namespace std {
 #define SIGTERM
 ```
 
-## <a name="functions"></a>Funciones
+## <a name="functions"></a>Functions
 
 ```cpp
 signal-handler* signal(int sig, signal-handler* func);
 int raise(int sig);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
 [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)\
