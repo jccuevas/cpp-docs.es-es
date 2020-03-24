@@ -2,12 +2,12 @@
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79429179"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077726"
 ---
 # <a name="configure-a-linux-project"></a>Configuración de un proyecto de Linux
 
@@ -17,9 +17,9 @@ La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones p
 
 ::: moniker-end
 
-En este tema se describe cómo configurar un proyecto C++ de Linux según se explica en [Creación de un proyecto de C++ para Linux en Visual Studio](create-a-new-linux-project.md). Para obtener información sobre los proyectos de Linux de CMake, consulte [Configuración de un proyecto de CMake de Linux](cmake-linux-project.md). 
+En este tema se describe cómo configurar un proyecto C++ de Linux según se explica en [Creación de un proyecto de C++ para Linux en Visual Studio](create-a-new-linux-project.md). Para obtener información sobre los proyectos de Linux de CMake, consulte [Configuración de un proyecto de CMake de Linux](cmake-linux-project.md).
 
-Puede configurar un proyecto de Linux que tenga como destino un equipo físico de Linux, una máquina virtual o el [subsistema Windows para Linux](/windows/wsl/about) (WSL). 
+Puede configurar un proyecto de Linux que tenga como destino un equipo físico de Linux, una máquina virtual o el [subsistema Windows para Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Dado que toda la compilación se produce en un equipo remoto (o en WSL), se han 
 
 ![Eventos de compilación](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense para encabezados en sistemas remotos
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> IntelliSense para encabezados en sistemas remotos
 
 Cuando se agrega una conexión nueva en **Connection Manager**, Visual Studio detecta automáticamente los directorios de inclusión para el compilador en el sistema remoto. Luego, Visual Studio comprime y copia esos archivos en un directorio en el equipo Windows local. Después de eso, cuando se use esa conexión en un proyecto de Visual Studio o CMake, se usan los encabezados de esos directorios para proporcionar IntelliSense.
 
