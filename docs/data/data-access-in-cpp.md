@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: e9222f16ef6356c2d89401690bda7e6d27f8aba6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150958"
 ---
 # <a name="data-access-in-visual-c"></a>Acceso a datos en Visual C++
 
@@ -43,18 +43,18 @@ Conexión a Azure SQL Database desde aplicaciones de C o C++.
 [Controlador ODBC de SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
 El controlador ODBC más reciente proporciona un acceso a datos sólido a aplicaciones basadas en Microsoft SQL Server y Microsoft Azure SQL Database para C/C++. Proporciona compatibilidad con características, incluidas Always Encrypted, Azure Active Directory y Grupos de disponibilidad Always On. También está disponible para MacOS y Linux.
 
-[Controlador OLE DB de SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+[Controlador OLE DB para SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
 El controlador de OLE DB más reciente es una interfaz de programación de aplicaciones (API) independiente de acceso a datos que admite Microsoft SQL Server y Microsoft Azure SQL Database.
 
 [Centro para desarrolladores de C y C++ de Microsoft Azure](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure facilita la compilación de aplicaciones en C++ con más flexibilidad, escalabilidad y confiabilidad, usando las herramientas que prefiera.
 
-[Cómo usar el almacenamiento de blobs de C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
-Azure Blob Storage es un servicio que almacena datos no estructurados en la nube como objetos o blobs. El almacenamiento de blobs puede almacenar cualquier tipo de texto o datos binarios, como un documento, un archivo multimedia o un instalador de aplicación. El Almacenamiento de blobs también se conoce como "almacenamiento de objetos".
+[Cómo usar Blob Storage de C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+Almacenamiento de blobs de Azure es un servicio que almacena datos no estructurados en la nube como objetos o blobs. El Almacenamiento de blobs puede almacenar cualquier tipo de datos binarios o texto, como un documento, un archivo multimedia o un instalador de aplicación. El Almacenamiento de blobs a veces se conoce como "almacenamiento de objetos".
 
 [Referencia del programador de ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-La interfaz ODBC está diseñada para su uso con el lenguaje de programación C. El uso de la interfaz ODBC abarca tres áreas: instrucciones SQL, llamadas a funciones ODBC y programación de C.
+La interfaz ODBC está diseñada para su uso con el lenguaje de programación C. El uso de la interfaz ODBC abarca tres áreas: instrucciones SQL, llamadas a funciones de ODBC y programación de C.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++ en Visual Studio](../overview/visual-cpp-in-visual-studio.md)
