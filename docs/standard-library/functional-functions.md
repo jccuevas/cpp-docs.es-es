@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150685"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; (Funciones)
 
@@ -51,7 +51,7 @@ Estas funciones están en desuso en C++ 17:
 |-|-|
 |[not1](#not1)|[not2](#not2)|
 
-## <a name="bind"></a>volver
+## <a name="bind"></a><a name="bind"></a>volver
 
 Enlaza argumentos a un objeto al que se puede llamar.
 
@@ -81,7 +81,7 @@ El enésimo argumento de llamada.
 
 Los tipos `FT, T1, T2, ..., TN` deben ser construcciones de copia y `INVOKE(fn, t1, ..., tN)` debe ser una expresión válida para algunos valores `w1, w2, ..., wN`.
 
-La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` se determinan como se especifica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.
+La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` se determinan como se especifica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.
 
 La segunda función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo anidado `result_type` que es un sinónimo de `RTy`. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, RTy)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` están determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada y con un tipo de valor devuelto especificado.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st
 
 Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria. Enlaza el primer argumento de la función binaria a un valor especificado. En desuso en C++ 11, se ha quitado en C++ 17.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd (
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd (
 
 Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria. Enlaza el segundo argumento de la función binaria a un valor especificado. En desuso en C++ 11, se ha quitado en C++ 17.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 Objeto de función predefinido que realiza una operación AND bit a bit (binario `operator&`) sobre sus argumentos.
 
@@ -381,7 +381,7 @@ Resultado de `Left & Right`. La plantilla especializada realiza el reenvío dire
 
 El functor de `bit_and` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator&` binario.
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 Objeto de función predefinido que realiza una operación de complemento bit a bit (NOT) (unario `operator~`) sobre su argumento. Agregado en C++ 14.
 
@@ -417,7 +417,7 @@ Resultado de `~ Right`. La plantilla especializada realiza el reenvío directo d
 
 El functor de `bit_not` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator~` binario.
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 Objeto de función predefinido que realiza una operación OR bit a bit (`operator|`) sobre sus argumentos.
 
@@ -458,7 +458,7 @@ Resultado de `Left | Right`. La plantilla especializada realiza el reenvío dire
 
 El functor de `bit_or` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator|`.
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 Objeto de función predefinido que realiza una operación XOR bit a bit (`operator^`binaria) sobre sus argumentos.
 
@@ -499,7 +499,7 @@ Resultado de `Left ^ Right`. La plantilla especializada realiza el reenvío dire
 
 El functor de `bit_xor` está limitado a tipos enteros para los tipos de datos básicos, o a tipos definidos por el usuario que implementan el `operator^` binario.
 
-## <a name="cref"></a>CREF
+## <a name="cref"></a><a name="cref"></a>CREF
 
 Construye un `reference_wrapper` const a partir de un argumento.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>vocó
+## <a name="invoke"></a><a name="invoke"></a>vocó
 
 Invoca cualquier objeto al que se puede llamar con los argumentos especificados. Agregado en C++ 17.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 Genera un contenedor de llamadas simple.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 Funciones de plantilla del asistente utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero. En desuso en C++ 11 para [mem_fn](#mem_fn) y [BIND](#bind)y se han quitado en c++ 17.
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 Las funciones de plantilla del asistente usadas para crear adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia. En desuso en C++ 11, se ha quitado en C++ 17.
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a>not1
 
 Devuelve el complemento de un predicado unario. En desuso para [not_fn](#not_fn) en c++ 17.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a>not2
 
 Devuelve el complemento de un predicado binario. En desuso para [not_fn](#not_fn) en c++ 17.
 
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 La plantilla de función `not_fn` toma un objeto al que se puede llamar y devuelve un objeto al que se puede llamar. Cuando el objeto devuelto al que se puede llamar se invoca posteriormente con algunos argumentos, los pasa al objeto original al que se puede llamar y se niega lógicamente el resultado. Conserva el comportamiento de categoría de valor y calificación const del objeto encapsulado al que se puede llamar. `not_fn` es nuevo en C++ 17 y reemplaza el `std::not1`, `std::not2`, `std::unary_negate`y `std::binary_negate`en desuso.
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 Funciones de plantilla del asistente usadas para convertir punteros de funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables. En desuso en C++ 11, se ha quitado en C++ 17.
 
@@ -1210,7 +1210,7 @@ Un puntero de función es un objeto de función. Se puede pasar a cualquier algo
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>CLI
+## <a name="ref"></a><a name="ref"></a>CLI
 
 Construye un `reference_wrapper` a partir de un argumento.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>pasar
+## <a name="swap"></a><a name="swap"></a>pasar
 
 Intercambia dos objetos `function`.
 
