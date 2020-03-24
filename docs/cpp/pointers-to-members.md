@@ -8,29 +8,26 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3238cd801763c72e96ccd93eee9640e672a5fbf5
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857351"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150799"
 ---
 # <a name="pointers-to-members"></a>Punteros a miembros
 
 Las declaraciones de punteros a miembros son casos especiales de declaraciones de puntero.  Se declaran mediante la siguiente secuencia:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [ms-modifier]qualified-name ::* [cv-qualifiers] identifier
-[= & qualified-name :: member-name];
-```
+> *Storage-Class-Specifier*<sub>OPC</sub> *CV-calificadores*<sub>OPT</sub> *Type-specifier* *MS-Modifier*<sub>OPT</sub> *Qualified-Name* **`::*`** *CV-calificadores*<sub>OPC</sub> *Identifier* *PM-initializer*<sub>OPT</sub> **`;`**
 
 1. El especificador de declaración:
 
    - Un especificador de clase de almacenamiento opcional.
 
-   - Especificadores **const** y/o **volatile** opcionales.
+   - Especificadores **const** y **volatile** opcionales.
 
-   - El especificador de tipo: el nombre de un tipo.  Este es el tipo del miembro al que se señala, no la clase.
+   - El especificador de tipo: el nombre de un tipo. Es el tipo del miembro al que se apunta, no la clase.
 
 1. El declarador:
 
@@ -38,29 +35,29 @@ Las declaraciones de punteros a miembros son casos especiales de declaraciones d
 
    - El nombre completo de la clase que contiene los miembros a los que se señala.
 
-   - Operador __::__ .
+   - El operador __`::`__ .
 
-   - El operador __\*__ .
+   - El operador __`*`__ .
 
-   - Especificadores **const** y/o **volatile** opcionales.
+   - Especificadores **const** y **volatile** opcionales.
 
    - El identificador que denomina el puntero a miembro.
 
-1. Un inicializador opcional:
+1. Un inicializador de puntero a miembro opcional:
 
-   - El operador **=** .
+   - El operador **`=`** .
 
-   - El operador **&** .
+   - El operador **`&`** .
 
    - Nombre completo de la clase.
 
-   - Operador __::__ .
+   - El operador __`::`__ .
 
-   - El nombre de un miembro no estático de la clase del tipo adecuado.
+   - Nombre de un miembro no estático de la clase del tipo adecuado.
 
-Como siempre, se permiten varios declaradores (y cualesquiera inicializadores asociados) en una sola declaración.
+Como siempre, se permiten varios declaradores (y cualesquiera inicializadores asociados) en una sola declaración. Un puntero a miembro no puede apuntar a un miembro estático de la clase, a un miembro de un tipo de referencia o a un **`void`** .
 
-Un puntero a un miembro de una clase se diferencia de un puntero normal porque tiene información del tipo de miembro y de la clase a la que pertenece el miembro. Un puntero normal identifica (tiene la dirección de) un solo objeto en memoria. Un puntero a un miembro de una clase identifica ese miembro en cualquier instancia de la clase. En el ejemplo siguiente se declara una clase, `Window`, y algunos punteros a los datos de miembros.
+Un puntero a un miembro de una clase difiere de un puntero normal: tiene la información de tipo para el tipo del miembro y para la clase a la que pertenece el miembro. Un puntero normal identifica (tiene la dirección de) un solo objeto en memoria. Un puntero a un miembro de una clase identifica ese miembro en cualquier instancia de la clase. En el ejemplo siguiente se declara una clase, `Window`, y algunos punteros a los datos de miembros.
 
 ```cpp
 // pointers_to_members1.cpp
@@ -82,7 +79,7 @@ int main()
 }
 ```
 
-En el ejemplo anterior, `pwCaption` es un puntero a cualquier miembro de la clase `Window` que tenga el tipo `char*`. El tipo de `pwCaption` es `char * Window::* `. El siguiente fragmento de código declara punteros a las funciones miembro `SetCaption` y `GetCaption`.
+En el ejemplo anterior, `pwCaption` es un puntero a cualquier miembro de la clase `Window` que es de tipo `char*`. El tipo de `pwCaption` es `char * Window::* `. El siguiente fragmento de código declara punteros a las funciones miembro `SetCaption` y `GetCaption`.
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,9 +101,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-La diferencia entre **.** <strong>\*</strong> y **->** operadores de <strong>\*</strong> (los operadores de puntero a miembro) es que **.** <strong>\*</strong> operador selecciona los miembros a partir de una referencia de objeto o objeto, mientras que el operador **->** <strong>\*</strong> selecciona los miembros a través de un puntero. (Para obtener más información sobre estos operadores, vea [expresiones con operadores de puntero a miembro](../cpp/pointer-to-member-operators-dot-star-and-star.md)).
+La diferencia entre los operadores **`.*`** y **`->*`** (los operadores de puntero a miembro) es que el operador **`.*`** selecciona miembros a partir de una referencia a objeto o objeto, mientras que el operador **`->*`** selecciona miembros a través de un puntero. Para obtener más información sobre estos operadores, vea [expresiones con operadores de puntero a miembro](../cpp/pointer-to-member-operators-dot-star-and-star.md).
 
-El resultado de los operadores de puntero a miembro es el tipo del miembro, en este caso `char *`.
+El resultado de los operadores de puntero a miembro es el tipo del miembro. En este caso, es `char *`.
 
 El fragmento de código siguiente invoca las funciones miembro `GetCaption` y `SetCaption` mediante punteros a miembros:
 
@@ -127,11 +124,11 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>Restricciones de los punteros a miembros
 
-La dirección de un miembro estático no es un puntero a un miembro. Es un puntero regular a la única instancia del miembro estático. Dado que solo existe una instancia de un miembro estático para todos los objetos de una clase determinada, se pueden usar los operadores normales de dirección ( **&** ) y desreferencia (<strong>\*</strong>).
+La dirección de un miembro estático no es un puntero a un miembro. Es un puntero normal a la instancia del miembro estático. Solo existe una instancia de un miembro estático para todos los objetos de una clase determinada. Esto significa que puede usar los operadores normales de dirección ( **&** ) y desreferencia (<strong>\*</strong>).
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>Punteros a funciones virtuales y de miembro
 
-La llamada a una función virtual a través de una función de puntero a miembro funciona como si se hubiera llamado directamente a la función; la función correcta se busca en la tabla v y se invoca.
+La invocación de una función virtual a través de una función de puntero a miembro funciona como si se hubiera llamado directamente a la función. La función correcta se busca en la tabla v y se invoca.
 
 La clave para trabajar con funciones virtuales es, como siempre, invocarlas a través de un puntero a una clase base. (Para obtener más información sobre las funciones virtuales, vea [funciones virtuales](../cpp/virtual-functions.md)).
 

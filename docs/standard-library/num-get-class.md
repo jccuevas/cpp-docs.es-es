@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150621"
 ---
 # <a name="num_get-class"></a>num_get (clase)
 
@@ -40,7 +40,7 @@ Tipo usado dentro de un programa para codificar los caracteres de una configurac
 \ *InputIterator*
 El tipo de iterador del que las funciones get numéricas leen su entrada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**
 
@@ -50,27 +50,27 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 |-|-|
 |[num_get](#num_get)|Constructor para los objetos de tipo `num_get` que se usan para extraer valores numéricos de secuencias.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[iter_type](#iter_type)|Tipo que describe un iterador de entrada.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[do_get](#do_get)|Función virtual a la que se llama para extraer un valor numérico o un valor booleano de una secuencia de caracteres.|
 |[get](#get)|Extrae un valor numérico o un valor booleano de una secuencia de caracteres.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<locale>
+**Encabezado:** \<configuración regional >
 
 **Espacio de nombres:** std
 
-## <a name="char_type"></a> num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a> num_get::char_type
 
 Tipo que se usa para describir un carácter empleado por una configuración regional.
 
@@ -78,11 +78,11 @@ Tipo que se usa para describir un carácter empleado por una configuración regi
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla **CharType**.
 
-## <a name="do_get"></a> num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a> num_get::do_get
 
 Función virtual a la que se llama para extraer un valor numérico o un valor booleano de una secuencia de caracteres.
 
@@ -167,10 +167,10 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*primer*\
 El principio del intervalo de caracteres del que se va a leer el número.
 
-*última* \
+*última*\
 El final del intervalo de caracteres del que se va a leer el número.
 
 \ *iosbase*
@@ -186,7 +186,7 @@ Valor que se leyó.
 
 El iterador después de que el valor se haya leído.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La primera función miembro virtual protegida,
 
@@ -211,11 +211,11 @@ Si `iosbase.flags() & ios_base::basefield == 0`, la especificación de conversi�
 
 De otro modo, la especificación de conversión es `ld`.
 
-El formato de un campo de entrada entero está determinado por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class)`fac` devuelto por la llamada [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. De manera específica:
+El formato de un campo de entrada entero está determinado por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class)`fac` devuelto por la llamada [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. Concretamente:
 
-`fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` determina cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.
+`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` determina cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.
 
-`fac.`[numpunct::`()` THOUSANDS_SEP](../standard-library/numpunct-class.md#thousands_sep) determina la secuencia que separa grupos de dígitos a la izquierda de cualquier separador decimal.
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` determina la secuencia que separa grupos de dígitos a la izquierda de cualquier separador decimal.
 
 Si no se produce ninguna instancia de `fac.thousands_sep()` en el campo de entrada numérico, no se impone ninguna restricción de agrupación. De otro modo, se aplica cualquier restricción de agrupación impuesta por `fac.grouping()` y los separadores se quitan antes de que se produzca la conversión de análisis.
 
@@ -329,7 +329,7 @@ Un campo de entrada booleano adopta una de dos formas. Si `iosbase.flags() & ios
 
 Vea el ejemplo de [get](#get), donde `do_get` llama a la función miembro virtual.
 
-## <a name="get"></a> num_get::get
+## <a name="num_getget"></a><a name="get"></a> num_get::get
 
 Extrae un valor numérico o un valor booleano de una secuencia de caracteres.
 
@@ -414,10 +414,10 @@ iter_type get(
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*primer*\
 El principio del intervalo de caracteres del que se va a leer el número.
 
-*última* \
+*última*\
 El final del intervalo de caracteres del que se va a leer el número.
 
 \ *iosbase*
@@ -433,7 +433,7 @@ Valor que se leyó.
 
 El iterador después de que el valor se haya leído.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Todas las funciones miembro devuelven [do_get](#do_get)`( first, last, iosbase, state, val)`.
 
@@ -441,7 +441,7 @@ La primera función miembro virtual protegida intenta comparar los elementos sec
 
 El campo de entrada de entero se convierte con las mismas reglas usadas por las funciones de examen para buscar coincidencias y convertir una serie de elementos **Char** de un archivo. Se supone que cada elemento **Char** de este tipo se asigna a un elemento equivalente de tipo `CharType` mediante una asignación simple, uno a uno. La especificación de conversión de análisis equivalente se determina de la manera siguiente:
 
-- Si `iosbase.`[marcas](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), la especificación de conversión se `lo`.
+- Si `iosbase.`[marcas](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), la especificación de conversión se `lo`.
 
 - Si `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), la especificación de conversión es `lx`.
 
@@ -449,7 +449,7 @@ El campo de entrada de entero se convierte con las mismas reglas usadas por las 
 
 - De otro modo, la especificación de conversión es `ld`.
 
-El formato de un campo de entrada entero está determinado por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class) `fac` devuelto por la llamada a [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. De manera específica:
+El formato de un campo de entrada entero está determinado por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class) `fac` devuelto por la llamada [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Concretamente:
 
 - `fac.`[agrupación](../standard-library/numpunct-class.md#grouping) determina cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a> num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a> num_get::iter_type
 
 Tipo que describe un iterador de entrada.
 
@@ -559,11 +559,11 @@ Tipo que describe un iterador de entrada.
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `InputIterator`.
 
-## <a name="num_get"></a> num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a> num_get::num_get
 
 Constructor para los objetos de tipo `num_get` que se usan para extraer valores numéricos de secuencias.
 
@@ -576,7 +576,7 @@ explicit num_get(size_t refs = 0);
 \ *Refs*
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los valores posibles para el parámetro *Refs* y su importancia son:
 
@@ -590,7 +590,7 @@ No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
 El constructor inicializa su objeto base con `locale::``(refs)`de [facetas](../standard-library/locale-class.md#facet_class) .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [\<locale>](../standard-library/locale.md)\
 [facet (Clase)](../standard-library/locale-class.md#facet_class)\
