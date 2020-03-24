@@ -4,18 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400641"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079247"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Herramientas y características de C++ en las ediciones de Visual Studio
 
-
 ::: moniker range=">=vs-2019"
-
 
 Las siguientes características de C++ están disponibles en Visual Studio 2019. A menos que se indique lo contrario, todas las características estarán disponibles en todas las ediciones: Visual Studio Community, Visual Studio Professional y Visual Studio Enterprise. Algunas características requieren determinadas cargas de trabajo o componentes opcionales, que se pueden instalar con el Instalador de Visual Studio.
 
@@ -35,7 +33,7 @@ Las siguientes características de C++ están disponibles en Visual Studio 2019.
 - Clang/LLVM
   - En Windows, Clang/LLVM 7.0 para x86 o x64 (solo compatibilidad con CMake). Otras versiones de Clang podrían funcionar, pero no se admiten oficialmente.
   - En Linux, cualquier instalación de Clang/LLVM compatible con la distribución.
- 
+
 ## <a name="c-workloads"></a>Cargas de trabajo de C++
 
 Visual Studio incluye las siguientes cargas de trabajo para el desarrollo de C++. Puede instalar una o todas ellas, así como otras cargas de trabajo, como el desarrollo de escritorio. NET, desarrollo de Python, desarrollo de Azure, desarrollo de extensiones de Visual Studio, etc.
@@ -136,7 +134,6 @@ Componentes opcionales:
 - Herramientas de desarrollo de iOS en C++
 - IncrediBuild: Aceleración de compilación
 
-
 ## <a name="individual-components"></a>Componentes individuales
 
 Puede instalar estos componentes con independencia de cualquier carga de trabajo.
@@ -198,11 +195,11 @@ Plataforma universal de Windows (C++/CX):
 - Aplicación vacía
 - Aplicación XAML y DirectX 11
 - Aplicación de DirectX 11
-- Aplicación de DirectX 12 
-- Aplicación de pruebas unitarias 
-- Archivo DLL 
-- Componente de Windows en tiempo de ejecución 
-- Biblioteca estática 
+- Aplicación de DirectX 12
+- Aplicación de pruebas unitarias
+- Archivo DLL
+- Componente de Windows en tiempo de ejecución
+- Biblioteca estática
 - Proyecto de paquete de aplicación de Windows
 
 Linux:

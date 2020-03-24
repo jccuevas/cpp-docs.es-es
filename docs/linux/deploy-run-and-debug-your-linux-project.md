@@ -3,12 +3,12 @@ title: Implementación, ejecución y depuración de un proyecto en C++ de Linux 
 description: En este artículo se describe cómo compilar, ejecutar y depurar código en el destino remoto desde un proyecto C++ de Linux en Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042767"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077838"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implementar, ejecutar y depurar el proyecto de Linux
 
@@ -35,7 +35,7 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 ## <a name="debug-your-linux-project"></a>Depurar el proyecto de Linux
 
 1. Seleccione el modo de depuración en la página de propiedades **Depuración**.
-   
+
    ::: moniker range="vs-2019"
 
    GDB se usa para depurar aplicaciones que se ejecutan en Linux. Al depurar en un sistema remoto (no WSL), GDB se puede ejecutar en dos modos diferentes, que pueden seleccionarse desde la opción **Modo de depuración** de la página de propiedades **Depuración** del proyecto:
@@ -51,7 +51,6 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
    ![Opciones de GDB](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - En modo **gdbserver**, GDB se ejecuta localmente, con lo que se conecta a gdbserver, en el sistema remoto.  Tenga en cuenta que este es el único modo que admite la ventana Consola Linux.
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> Especificación de distintas máquinas para compilar y depurar
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> Especificación de distintas máquinas para compilar y depurar
 
 En Visual Studio 2019, versión 16.1, puede separar la máquina de compilación remota de la máquina de depuración remota para proyectos de Linux basados en MSBuild y CMake cuyo destino sea una máquina Linux remota. Por ejemplo, ahora puede realizar compilaciones cruzadas en x64 y llevar a cabo implementaciones en un dispositivo ARM cuando se destinen a escenarios de IoT.
 
@@ -139,7 +138,7 @@ De forma predeterminada, la máquina de depuración remota es la misma que la m�
 
 ![Máquina de depuración remota Linux](media/linux-remote-debug-machine.png)
 
-El menú desplegable **Equipo de depuración remoto** se rellena con todas las conexiones remotas establecidas. Para agregar una nueva conexión remota, vaya a **Herramientas** > **Opciones** > **Multiplataforma**  >  **Administrador de conexiones** o busque "Administrador de conexiones" en **Inicio rápido**. También puede especificar un nuevo directorio de implementación remota en las páginas de propiedades del proyecto (**Propiedades de configuración** > **General** > **Directorio de implementación remota**).
+El menú desplegable **Equipo de depuración remoto** se rellena con todas las conexiones remotas establecidas. Para agregar una nueva conexión remota, vaya a **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones** o busque "Administrador de conexiones" en **Inicio rápido**. También puede especificar un nuevo directorio de implementación remota en las páginas de propiedades del proyecto (**Propiedades de configuración** > **General** > **Directorio de implementación remota**).
 
 De forma predeterminada, solo los archivos necesarios para depurar el proceso se implementarán en la máquina de depuración remota. Puede usar el **Explorador de soluciones** para configurar qué archivos de origen se implementarán en la máquina de depuración remota. Al hacer clic en un archivo de origen, verá una vista previa de las propiedades directamente debajo del Explorador de soluciones.
 
@@ -172,7 +171,7 @@ Para los proyectos de CMake que tienen como destino una máquina remota Linux, p
 
 ![Máquina de depuración remota CMake](media/cmake-remote-debug-machine.png)
 
-IntelliSense le sugerirá una lista de todas las conexiones remotas establecidas. Puede agregar una nueva conexión remota accediendo a **Herramientas** > **Opciones** > **Multiplataforma**  >  **Administrador de conexiones** o busque "Administrador de conexiones" en **Inicio rápido**.
+IntelliSense le sugerirá una lista de todas las conexiones remotas establecidas. Puede agregar una nueva conexión remota accediendo a **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones** o busque "Administrador de conexiones" en **Inicio rápido**.
 
 Si desea un control completo sobre la implementación, puede anexar los siguientes bloques de código en el archivo launch.vs.json. Reemplace los valores del marcador de posición con los reales:
 
@@ -191,6 +190,7 @@ Si desea un control completo sobre la implementación, puede anexar los siguient
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>Pasos siguientes
