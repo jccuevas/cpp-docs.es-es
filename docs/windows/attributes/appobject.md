@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490935"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168517"
 ---
 # <a name="appobject"></a>appobject
 
@@ -23,7 +23,7 @@ Identifica la coclase como un objeto de aplicación, que está asociado a una ap
 [appobject]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **appobject** C++ tiene la misma funcionalidad que el atributo MIDL [appobject](/windows/win32/Midl/appobject) .
 
@@ -53,13 +53,13 @@ class A : public ICustom {
 |||
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|`coclass`|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>

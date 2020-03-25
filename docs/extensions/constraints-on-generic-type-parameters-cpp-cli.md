@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 6eefb6a7d888a031f6ff7f88d08da4d67a4dc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172483"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restricciones de parámetros de tipo genérico (C++/CLI)
 
@@ -41,9 +41,9 @@ También puede especificar **gcnew()** para indicar que el argumento de tipo deb
 
 También puede especificar un parámetro genérico como restricción. El argumento de tipo proporcionado para el tipo que se va a restringir debe ser o derivarse del tipo de la restricción. Esto se conoce como restricción de tipo "naked".
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La cláusula de restricción consta de **where** seguido de un tipo de parámetro, dos puntos (**:**) y la restricción, que especifica la naturaleza de la restricción sobre el tipo de parámetro. **where** es una palabra clave contextual; para más información, consulte [Palabras clave contextuales](context-sensitive-keywords-cpp-component-extensions.md). Separe varias cláusulas **where** con un espacio.
+La cláusula de restricción consta de **where** seguido de un tipo de parámetro, dos puntos ( **:** ) y la restricción, que especifica la naturaleza de la restricción sobre el tipo de parámetro. **where** es una palabra clave contextual; para más información, consulte [Palabras clave contextuales](context-sensitive-keywords-cpp-component-extensions.md). Separe varias cláusulas **where** con un espacio.
 
 Se aplican restricciones a parámetros de tipo para imponer limitaciones sobre los tipos que se pueden usar como argumentos con un tipo o método genérico.
 
@@ -198,6 +198,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Genéricos](generics-cpp-component-extensions.md)

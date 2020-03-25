@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - BK1516
 ms.assetid: 7f4a8391-f857-4ee8-8e26-34868ca84e29
-ms.openlocfilehash: 07c59d6f70d4e5ab3ecaecda2791293f89479b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4edfbdbb070add0c77faefeb77c8db627c260c98
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197554"
 ---
 # <a name="bscmake-error-bk1516"></a>Error de BSCMAKE BK1516
 
-archivo_bsc dañado; no se puede actualizar incrementalmente
+bscfile dañado; no se puede actualizar incrementalmente
 
-El archivo .bsc está dañado, posiblemente debido a un error del sistema durante la compilación. Elimine el archivo .bsc, volver a generar todos los archivos .sbr y luego volver a generar el archivo .bsc.
+El archivo. BSC estaba dañado, posiblemente debido a un error del sistema durante la compilación. Elimine el archivo. BSC, vuelva a generar todos los archivos. SBR y, a continuación, vuelva a generar el archivo. BSC.

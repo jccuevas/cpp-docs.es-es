@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1264
 ms.assetid: 23b1aad7-d382-42c1-bae8-db68575c57a8
-ms.openlocfilehash: ca17b6946b9e988507af2786825223e042356d0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00041e677ac7b69df9981551ee3b6cc18f9eb33d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160593"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183766"
 ---
 # <a name="linker-tools-error-lnk1264"></a>Error de las herramientas del vinculador LNK1264
 
-/ LTCG: PGINSTRUMENT especificado pero no generación de código necesarios; Error de instrumentación
+Se especificó/LTCG: PGINSTRUMENT pero no se requiere generación de código; error de instrumentación
 
-**/ LTCG: PGINSTRUMENT** se ha especificado, pero se encontraron archivos no .obj que se compilaron con [/GL](../../build/reference/gl-whole-program-optimization.md). Instrumentación no puede tener lugar y en el vínculo de error. Debe haber al menos un archivo .obj en la línea de comandos que se compila con **/GL** para que puedan realizarse la instrumentación.
+Se especificó **/LTCG: PGINSTRUMENT** pero no se encontraron archivos. obj compilados con [/GL](../../build/reference/gl-whole-program-optimization.md). No se puede llevar a cabo la instrumentación y se produjo un error en el vínculo. Debe haber al menos un archivo. obj en la línea de comandos que se compila con **/GL** para que se pueda producir la instrumentación.
 
-Optimización guiada por perfiles (PGO) sólo está disponible en los compiladores de 64 bits.
+La optimización guiada por perfiles (PGO) solo está disponible en los compiladores de 64 bits.

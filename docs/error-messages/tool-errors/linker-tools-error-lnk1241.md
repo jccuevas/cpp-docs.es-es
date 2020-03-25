@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1241
 ms.assetid: 7b8b52eb-0231-4521-b52a-2bce8d3e8956
-ms.openlocfilehash: 87f73680d7ed40b9b2db9f40f9140976d552ab6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e2b955787166c94be4ca35e1c58df5becd243f2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183818"
 ---
 # <a name="linker-tools-error-lnk1241"></a>Error de las herramientas del vinculador LNK1241
 
-archivo de recursos ' resource' ya se especificó
+el archivo de recursos ' archivo de recursos ' ya se especificó
 
-Este error se genera si ejecuta **cvtres** manualmente desde la línea de comandos y si, a continuación, pase el archivo .obj resultante del archivo al vinculador además a otros archivos. res.
+Este error se genera si se ejecuta **CVTRES** manualmente desde la línea de comandos y, a continuación, se pasa el archivo. obj resultante al vinculador además de otros archivos. res.
 
-Para especificar varios archivos. res, pase todo al vinculador como archivos, no desde los archivos .obj crean por **cvtres**.
+Para especificar varios archivos. res, páselo al enlazador como archivos. res, no desde los archivos. obj creados por **CVTRES**.

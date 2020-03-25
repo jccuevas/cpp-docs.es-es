@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 4109a59f093740c9e0865cef6a31f3b09127c747
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 31975d39d67697573af7f9142326660acc4f7226
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912803"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201050"
 ---
 # <a name="compiler-error-c3392"></a>Error del compilador C3392
 
 'arg_tipo': argumento de tipo no válido para el parámetro genérico 'parámetro' del 'tipo_genérico' genérico, debe tener un constructor sin parámetros público.
 
-Se crearon instancias de un tipo genérico incorrectamente. Compruebe la definición de tipo. Para obtener más información, vea [genéricos](../../extensions/generics-cpp-component-extensions.md).
+Se crearon incorrectamente instancias de un tipo genérico. Compruebe la definición de tipo. Para obtener más información, vea [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente C# se usa para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos C++en/CLI. Para obtener más información, vea [Constraints on Type Parameters](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters) (Restricciones de tipos de parámetros [Guía de programación de C#]).
+En el ejemplo siguiente C# se usa para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos C++en/CLI. Para obtener más información, vea [Restricciones de tipos de parámetros](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```csharp
 // C3392.cs

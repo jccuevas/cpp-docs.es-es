@@ -6,12 +6,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516000"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171897"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>Atributos definidos por el usuario (C++/CLI y C++/CX)
 
@@ -31,7 +31,7 @@ La información y sintaxis presentada en este tema está pensada para sustituir 
 
 Puede definir un atributo personalizado definiendo un tipo, haciendo de <xref:System.Attribute> una clase base del tipo y, de forma opcional, aplicando el atributo <xref:System.AttributeUsageAttribute>.
 
-Para obtener más información, consulte:
+Para más información, consulte:
 
 - [Destinos de atributo](attribute-targets-cpp-component-extensions.md)
 
@@ -192,6 +192,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

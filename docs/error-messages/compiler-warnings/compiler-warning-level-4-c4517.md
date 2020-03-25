@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4517
 ms.assetid: 87cc12b8-7331-4f3a-a863-d6a75d9599c3
-ms.openlocfilehash: 1441571a2546ae5851a952fae18a37d54c3c5cf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f366e143b4bade2a8be359db1a88eaaa9a15533
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198411"
 ---
 # <a name="compiler-warning-level-4-c4517"></a>Advertencia del compilador (nivel 4) C4517
 
-las declaraciones de acceso están desusadas; declaraciones using de miembros son una alternativa mejor
+las declaraciones de acceso están desusadas; las declaraciones Using de miembro proporcionan una mejor alternativa
 
-El Comité de ANSI C++ ha declarado las declaraciones de acceso (cambiar el acceso de un miembro en una clase derivada sin la [mediante](../../cpp/using-declaration.md) palabra clave) a estar obsoletas. Las declaraciones de acceso no pueden admitir futuras versiones de C++.
+El Comité C++ ANSI ha declarado declaraciones de acceso (cambiando el acceso de un miembro en una clase derivada sin la palabra clave [using](../../cpp/using-declaration.md) ) para que estén obsoletas. Es posible que las declaraciones de acceso no se admitan C++en versiones futuras de.

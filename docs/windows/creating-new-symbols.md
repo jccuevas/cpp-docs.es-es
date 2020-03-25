@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Creación de símbolos (C++)
+title: 'Cómo: crear símbolos (C++)'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.creating
@@ -19,66 +19,66 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: d03246d2c701961c824b55fb0cbb781ee3f65028
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 1c69e8878885acd80c285691fb0861a476af03ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344199"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160520"
 ---
-# <a name="how-to-create-symbols-c"></a>Procedimiento Creación de símbolos (C++)
+# <a name="how-to-create-symbols-c"></a>Cómo: crear símbolos (C++)
 
-Si está empezando un proyecto nuevo, le resultará conveniente asignar los nombres de símbolo que necesita antes de crear los recursos a los que podrán asignadas.
+Al comenzar un proyecto nuevo, puede que le resulte conveniente asignar los nombres de símbolo que necesita antes de crear los recursos a los que se asignarán.
 
 > [!NOTE]
-> Si el proyecto no contuviera un archivo .rc, vea [Cómo: Crear recursos](../windows/how-to-create-a-resource-script-file.md).
+> Si el proyecto aún no contiene un archivo. rc, consulte [Cómo: crear recursos](../windows/how-to-create-a-resource-script-file.md).
 
-El **símbolos de recursos** cuadro de diálogo le permite agregar símbolos de recursos nuevos, cambiar los símbolos que se muestran o saltar a la ubicación en el código fuente en un símbolo está en uso.
+El cuadro de diálogo **símbolos de recursos** permite agregar nuevos símbolos de recursos, cambiar los símbolos que se muestran o saltar a la ubicación del código fuente donde se usa un símbolo.
 
 El cuadro de diálogo contiene las siguientes propiedades:
 
 |Propiedad|Descripción|
 |--------------------------|------------------------------------------|
-|**Name**|Muestra el nombre del símbolo.<br/><br/>Para obtener más información, consulte [restricciones de nombre de símbolo](../windows/symbol-name-restrictions.md).|
-|**Valor**|Muestra el valor numérico del símbolo.<br/><br/>Para obtener más información, consulte [restricciones de valor de símbolo](../windows/symbol-value-restrictions.md).|
-|**En uso**|Si se selecciona, especifica si el símbolo se usa en uno o varios recursos.<br/><br/>Los recursos se muestran en el **usando** cuadro.|
-|**Mostrar símbolos de solo lectura**|Si se selecciona, muestra los recursos de solo lectura.<br/><br/>De forma predeterminada, el **símbolos de recursos** cuadro de diálogo muestra únicamente los recursos modificables en el archivo de script de recursos, pero con esta opción seleccionada, los recursos modificables aparecen en negrita y los recursos de solo lectura aparecen en texto sin formato.|
-|**Utilizado por**|Muestra el o los recursos que usan el símbolo seleccionado en la lista de símbolos.<br/><br/>Para abrir el editor para un recurso determinado, seleccione el recurso en el **usando** y elija **Ver uso**.|
-|**Nuevo**|Se abre el **nuevo símbolo** cuadro de diálogo que le permite definir el nombre y, si es necesario, un valor para un nuevo identificador de recurso simbólico.|
-|**Cambio**|Se abre el **cambiar símbolo** cuadro de diálogo que le permite cambiar el nombre o valor de un símbolo.<br/><br/>Si el símbolo es para un control o un recurso en uso, solo se puede cambiar desde el editor de recursos correspondiente. Para obtener más información, consulte [administrar símbolos](../windows/changing-unassigned-symbols.md).|
+|**Nombre**|Muestra el nombre del símbolo.<br/><br/>Para obtener más información, vea [restricciones de nombre de símbolo](../windows/symbol-name-restrictions.md).|
+|**Valor**|Muestra el valor numérico del símbolo.<br/><br/>Para obtener más información, vea [restricciones de valores de símbolo](../windows/symbol-value-restrictions.md).|
+|**En uso**|Si se selecciona, especifica si el símbolo se usa en uno o varios recursos.<br/><br/>El recurso o los recursos se muestran en el cuadro **usado por** .|
+|**Mostrar símbolos de solo lectura**|Si se selecciona, muestra los recursos de solo lectura.<br/><br/>De forma predeterminada, el cuadro de diálogo **símbolo de recurso** muestra solo los recursos modificables en el archivo de script de recursos, pero con esta opción seleccionada, los recursos modificables aparecen en negrita y los recursos de solo lectura aparecen en texto sin formato.|
+|**Usado por**|Muestra el o los recursos que usan el símbolo seleccionado en la lista de símbolos.<br/><br/>Para ir al editor de un recurso determinado, seleccione el recurso en el cuadro **usado por** y elija **ver uso**.|
+|**Nuevo**|Abre el cuadro de diálogo **nuevo símbolo** , que permite definir el nombre y, si es necesario, un valor para un nuevo identificador de recurso simbólico.|
+|**Cambio**|Abre el cuadro de diálogo **cambiar símbolo** , que permite cambiar el nombre o el valor de un símbolo.<br/><br/>Si el símbolo es para un control o un recurso en uso, solo se puede cambiar desde el editor de recursos correspondiente. Para obtener más información, vea [administrar símbolos](../windows/changing-unassigned-symbols.md).|
 |**Ver uso**|Abre el recurso que contiene el símbolo en el editor de recursos correspondiente.|
 
-## <a name="create-symbols"></a>Creación de símbolos
+## <a name="create-symbols"></a>Crear símbolos
 
 ### <a name="to-create-a-new-symbol"></a>Para crear un nuevo símbolo
 
-1. En el **símbolos de recursos** diálogo cuadro, elija **New**.
+1. En el cuadro de diálogo **símbolos de recursos** , elija **nuevo**.
 
-1. En el **nombre** , escriba un nombre de símbolo.
+1. En el cuadro **nombre** , escriba un nombre de símbolo.
 
-1. Acepte el valor de símbolo asignado o escriba un nuevo valor en el **valor** cuadro.
+1. Acepte el valor de símbolo asignado o escriba un nuevo valor en el cuadro **valor** .
 
 1. Seleccione **Aceptar** para agregar el nuevo símbolo a la lista de símbolos.
 
 > [!NOTE]
-> Si escribe un nombre de símbolo que ya existe, aparecerá un cuadro de mensaje que indica que ya está definido un símbolo con ese nombre. No se puede definir dos o más símbolos con el mismo nombre, pero puede definir símbolos diferentes con el mismo valor numérico.
+> Si escribe un nombre de símbolo que ya existe, aparecerá un cuadro de mensaje que indica que ya está definido un símbolo con ese nombre. No se pueden definir dos o más símbolos con el mismo nombre, pero se pueden definir símbolos diferentes con el mismo valor numérico.
 
 ## <a name="to-view-resource-symbols"></a>Para ver símbolos de recursos
 
-En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), haga clic en su *.rc* de archivo y seleccione **símbolos de recursos** para ver una tabla de símbolos de recursos en el **símbolos de recursos**cuadro de diálogo.
+En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), haga clic con el botón secundario en el archivo *. RC* y seleccione **símbolos de recursos** para ver una tabla de símbolos de recursos en el cuadro de diálogo **símbolos de recursos** .
 
 > [!NOTE]
-> Para ver los símbolos predefinidos, consulte el **mostrar símbolos de solo lectura** casilla de verificación.
+> Para ver los símbolos predefinidos, active la casilla **Mostrar símbolos de solo lectura** .
 
 ### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>Para abrir el editor de recursos para un símbolo determinado
 
-Cuando esté navegando símbolos en el **símbolos de recursos**, es posible que desee obtener más información sobre cómo se utiliza un símbolo concreto. El **Ver uso** botón proporciona una forma rápida de obtener esta información.
+Cuando examine símbolos en los **símbolos de recursos**, puede que desee obtener más información sobre cómo se usa un símbolo determinado. El botón **ver uso** proporciona una forma rápida de obtener esta información.
 
-1. En el **símbolos de recursos** cuadro de diálogo en el **nombre** , seleccione un símbolo.
+1. En el cuadro de diálogo **símbolos de recursos** , en el cuadro **nombre** , seleccione un símbolo.
 
-1. En el **usado por** , seleccione el tipo de recurso que le interese.
+1. En el cuadro **usado por** , seleccione el tipo de recurso que le interese.
 
-1. Seleccione el **Ver uso** botón.
+1. Seleccione el botón **ver uso** .
 
    El recurso se abrirá en la ventana del editor correspondiente.
 
@@ -86,8 +86,8 @@ Cuando esté navegando símbolos en el **símbolos de recursos**, es posible que
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Cómo: Administrar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Cómo: administrar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)<br/>

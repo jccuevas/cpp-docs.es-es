@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170194"
 ---
 # <a name="__max"></a>__max
 
@@ -52,11 +52,11 @@ Valores de cualquier tipo numérico que se va a comparar.
 
 **__max** devuelve el mayor de sus argumentos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La macro **__max** compara dos valores y devuelve el valor de mayor. Los argumentos pueden ser de cualquier tipo de datos numérico, con o sin signo. Los argumentos y el valor devuelto deben ser del mismo tipo de datos.
 
-La macro evalúa dos veces el argumento devuelto. Esto puede dar lugar a resultados inesperados si el argumento es una expresión que altera su valor cuando se evalúa, como `*p++`.
+La macro evalúa dos veces el argumento devuelto. Esto puede dar lugar a resultados inesperados si el argumento es una expresión que modifica su valor cuando se evalúa, como `*p++`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -68,7 +68,7 @@ La macro evalúa dos veces el argumento devuelto. Esto puede dar lugar a resulta
 
 Para obtener más información, vea el ejemplo de [__min](min.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

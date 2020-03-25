@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0040
 ms.assetid: 6549ac62-c87b-4edf-b541-32221abe97ec
-ms.openlocfilehash: e21f6f758fc6f5af9a3101aca71cf53585dd737e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7329e9f440f95c2d3570071bc5d3fc06ed7185d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192307"
 ---
 # <a name="project-build-error-prj0040"></a>Error PRJ0040 al compilar el proyecto
 
-Error interno en la compilación. No puede continuar. Recargue el proyecto e inténtelo de nuevo.
+Error interno en la compilación. No se puede continuar. Vuelva a cargar el proyecto e inténtelo de nuevo.
 
 El sistema del proyecto no pudo procesar el proyecto.
 
-Pruebe a recargar el proyecto.
+Intente volver a cargar el proyecto.

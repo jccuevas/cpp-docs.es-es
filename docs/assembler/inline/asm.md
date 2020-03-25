@@ -9,14 +9,14 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445906"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169636"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
 **Específicos de Microsoft**
 
@@ -27,15 +27,15 @@ La palabra clave `__asm` invoca el ensamblador alineado y puede aparecer siempre
 
 ## <a name="grammar"></a>Gramática
 
-*asm-block*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *lista de instrucciones de ensamblado* **}** **;** <sub>participar</sub>
+*bloque ASM*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *instrucción de ensamblado* **;** <sub>OPT</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *Assembly-Instruction-List* **}** **;** <sub>OPT</sub>
 
-*assembly-instruction-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción de ensamblado* **;** *lista de instrucciones de ensamblado* **;** <sub>participar</sub>
+*Assembly-Instruction-List*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrucción de ensamblado* **;** <sub>OPT</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *-instruction* **;** *Assembly-Instruction-List* **;** <sub>OPT</sub>
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Si se utiliza sin llaves, la palabra clave `__asm` indica que el resto de la línea es una instrucción de lenguaje de ensamblado. Si se utiliza con llaves, indica que cada línea entre las llaves es una instrucción de lenguaje de ensamblado. Por compatibilidad con versiones anteriores, `_asm` es un sinónimo de `__asm`.
 
@@ -47,11 +47,11 @@ Antes de Visual Studio 2005, la instrucción
 __asm int 3
 ```
 
-no se ha provocado el código nativo que se genere cuando se compila con **/CLR**; el compilador traducía la instrucción a una instrucción de salto CLR.
+no hizo que se generara código nativo cuando se compiló con **/CLR**; el compilador ha traducido la instrucción a una instrucción de interrupción de CLR.
 
-`__asm int 3` ahora da lugar a la generación de código nativo para la función. Si desea que una función para provocar un punto de interrupción en el código y si desea que dicha función compile para MSIL, utilice [__debugbreak](../../intrinsics/debugbreak.md).
+`__asm int 3` ahora da lugar a la generación de código nativo para la función. Si desea que una función cause un punto de interrupción en el código y desea que esa función se compile en MSIL, use [__debugbreak](../../intrinsics/debugbreak.md).
 
-Para ofrecer compatibilidad con versiones anteriores, **_asm** es un sinónimo de **__asm** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../../build/reference/za-ze-disable-language-extensions.md) se especifica.
+Por compatibilidad con versiones anteriores, **_asm** es un sinónimo de **__asm** a menos que se especifique la opción del compilador [/za \(deshabilitar extensiones de lenguaje)](../../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -85,7 +85,7 @@ A diferencia de las llaves en C y C++, las llaves que incluyen un bloque `__asm`
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Palabras clave](../../cpp/keywords-cpp.md)<br/>
 [Ensamblador insertado](../../assembler/inline/inline-assembler.md)<br/>

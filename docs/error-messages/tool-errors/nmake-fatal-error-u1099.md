@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - U1099
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
-ms.openlocfilehash: 395f25d8d27bc5e9b6132c87390c8c3bc19b6cc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c963180059a48d9aa0b09103df1ed54f82b8a2f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298248"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193399"
 ---
 # <a name="nmake-fatal-error-u1099"></a>Error grave de NMAKE U1099
 
 desbordamiento de pila
 
-El archivo MAKE que se está procesando es demasiado complejo para la asignación de pila actual de NMAKE. NMAKE tiene una asignación de 0 x 3000 (12 KB).
+El archivo make que se está procesando era demasiado complejo para la asignación de pila actual en NMAKE. NMAKE tiene una asignación de 0x3000 (12K).
 
-Para aumentar la asignación de la pila de NMAKE, ejecute el [editbin /stack](../../build/reference/stack.md) utilidad con una opción de pila superior:
+Para aumentar la asignación de la pila de NMAKE, ejecute la utilidad [EDITBIN/Stack](../../build/reference/stack.md) con una opción de pila mayor:
 
-**EDITBIN /STACK:reserve NMAKE. EXE**
+**EDITBIN/STACK: Reserve NMAKE. EJECUTABLE**
 
-donde *reservar* es un número mayor que la asignación de pila actual de NMAKE.
+donde *Reserve* es un número mayor que la asignación de pila actual en NMAKE.

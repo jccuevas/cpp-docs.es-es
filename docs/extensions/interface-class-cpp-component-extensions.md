@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515710"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172170"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>Clase interface  (C++/CLI y C++/CX)
 
@@ -43,7 +43,7 @@ La accesibilidad de *base_interface*.  La única accesibilidad permitida para un
 *base_interface*<br/>
 (Opcional) Una interfaz base para la interfaz *name*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 **interface struct** es equivalente a **interface class**.
 
@@ -53,7 +53,7 @@ Una interfaz define cómo se puede implementar una clase. Una interfaz no es una
 
 Una clase o un struct que se deriven de una interfaz deben implementar todos los miembros de la interfaz. Al implementar la interfaz *name*, también debe implementar las interfaces de la lista `base_interface`.
 
-Para obtener más información, consulte:
+Para más información, consulte:
 
 - [Constructor estático de interfaz](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -67,7 +67,7 @@ En el entorno de desarrollo, puede obtener ayuda (F1) sobre estas palabras clave
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 (No hay notas para esta característica de lenguaje que solo se apliquen a Windows Runtime).
 
@@ -77,7 +77,7 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 (No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime).
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

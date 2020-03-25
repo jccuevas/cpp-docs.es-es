@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4549
+title: Advertencia del compilador (nivel 1) C4549
 ms.date: 11/04/2016
 f1_keywords:
 - C4549
 helpviewer_keywords:
 - C4549
 ms.assetid: 81a07676-625b-4f58-9b0c-3ee22830b04a
-ms.openlocfilehash: 728c3040f383632f2b4990c2f1d44e500a040138
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: da252efa624b65ca87dd60fe1cdb9b0c5e33ccbb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966394"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186210"
 ---
-# <a name="compiler-warning-level-1-c4549"></a>ADVERTENCIA del compilador (nivel 1) C4549
+# <a name="compiler-warning-level-1-c4549"></a>Advertencia del compilador (nivel 1) C4549
 
 ' Operator ': el operador antes de la coma no tiene ningún efecto; ¿deseaba ' operador '?
 

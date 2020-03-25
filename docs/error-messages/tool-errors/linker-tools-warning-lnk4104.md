@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-ms.openlocfilehash: 3d89b27c32b33b917abb7fc140eebf5924142423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604dccf01b3dffc0060546bebf19d64c16ebf965
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298547"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193971"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Advertencia de las herramientas del vinculador LNK4104
 
-la exportación del símbolo 'symbol' debería ser PRIVATE
+la exportación del símbolo ' Symbol ' debe ser privada
 
 El `symbol` puede ser uno de los siguientes:
 
@@ -49,4 +49,4 @@ El `symbol` puede ser uno de los siguientes:
 
 - `RasCustomEntryDlg`
 
-Esta advertencia se genera cuando se va a compilar una biblioteca de importación para un archivo DLL y exportar una de las funciones anteriores sin especificar como privada en el archivo de definición de módulo. En general, estas funciones se exportan para su uso sólo por OLE. Y los coloca en la biblioteca de importación pueden provocar un comportamiento poco habitual cuando un programa vinculado a la biblioteca incorrectamente realiza llamadas a ellos. Para obtener más información sobre la palabra clave privada, consulte [exportaciones](../../build/reference/exports.md).
+Esta advertencia se emite cuando se crea una biblioteca de importación para un archivo DLL y se exporta una de las funciones anteriores sin especificarla como privada en el archivo de definición de módulo. En general, estas funciones se exportan solo para su uso por parte de OLE. Colocarlos en la biblioteca de importación puede producir un comportamiento inusual cuando un programa vinculado a la biblioteca realiza llamadas a ellos de forma incorrecta. Para obtener más información sobre la palabra clave PRIVAte, vea [Exports](../../build/reference/exports.md).

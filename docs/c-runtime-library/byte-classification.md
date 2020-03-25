@@ -8,12 +8,12 @@ helpviewer_keywords:
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-ms.openlocfilehash: 9c00d0c0165bdae15ba5fc413d00a99bf4601b21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 7272170bd3a1e765e728451afc245947111ee947
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171572"
 ---
 # <a name="byte-classification"></a>Clasificación de bytes
 
@@ -48,6 +48,6 @@ Las constantes predefinidas de la siguiente tabla se definen en \<ctype.h>.
 
 La macro **MB_LEN_MAX**, definida en \<limits.h>, se expande a la longitud máxima en bytes que puede tener cualquier carácter multibyte. **MB_CUR_MAX**, definida en \<stdlib.h>, se expande a la longitud máxima en bytes de cualquier carácter multibyte en la configuración regional actual.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1009
 ms.assetid: c11aceaf-3527-4509-867d-e7b22254e276
-ms.openlocfilehash: 77fe8e69d5357e61ab6863e4557ed9a0ed714080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e54037144763c6c1a0d8563fac3714d68887403e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172796"
 ---
 # <a name="resource-compiler-fatal-error-rw1009"></a>Error irrecuperable del compilador de recursos RW1009
 
-Error al crear el nombre del recurso
+Error al crear el nombre de recurso
 
-No se pudo crear el archivo. Asegúrese de que no se está creando en una unidad de solo lectura. Utilice /V para averiguar si se está creando el archivo.
+No se pudo crear el archivo. res especificado. Asegúrese de que no se está creando en una unidad de solo lectura. Utilice/V para averiguar si se está creando el archivo.

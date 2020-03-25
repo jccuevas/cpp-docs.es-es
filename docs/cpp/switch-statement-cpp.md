@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 6b09c0eac939f7ca6a12b68ce5deb3fb83ad27c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160819"
 ---
 # <a name="switch-statement-c"></a>switch (Instrucción) (C++)
 
@@ -29,23 +29,23 @@ Permite la selección entre varias secciones de código, dependiendo del valor d
    [default  : statement]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El *expresión* debe ser de tipo entero o de un tipo de clase para el que hay una conversión no ambigua a un tipo entero. Promoción de entero se realiza como se describe en [conversiones estándar](standard-conversions.md).
+La *expresión* debe ser de un tipo entero o de un tipo de clase para el que haya una conversión no ambigua a un tipo entero. La promoción de entero se realiza como se describe en [conversiones estándar](standard-conversions.md).
 
-El **cambiar** cuerpo de instrucción consiste en una serie de **caso** etiquetas y opcional **predeterminada** etiqueta. No hay dos expresiones constantes en **caso** instrucciones pueden evaluar en el mismo valor. El **predeterminada** etiqueta puede aparecer solo una vez. Las instrucciones con etiquetas no son requisitos sintácticos, pero la **cambiar** instrucción tiene sentida sin ellas.   La instrucción predeterminada no necesita estar al final; puede aparecer en cualquier parte del cuerpo de la instrucción switch. Una etiqueta case o default solo puede aparecer en una instrucción switch.
+El cuerpo de la instrucción **Switch** se compone de una serie de etiquetas **Case** y una etiqueta **default** opcional. Dos expresiones constantes en las instrucciones **Case** no pueden evaluarse en el mismo valor. La etiqueta **predeterminada** solo puede aparecer una vez. Las instrucciones etiquetadas no son requisitos sintácticos, pero la instrucción **Switch** no tiene sentido sin ellas.   La instrucción predeterminada no necesita estar al final; puede aparecer en cualquier parte del cuerpo de la instrucción switch. Una etiqueta case o default solo puede aparecer en una instrucción switch.
 
-El *expresión-constante* en cada **caso** etiqueta se convierte al tipo de *expresión* y se compara con *expresión* para igualdad. Control pasa a la instrucción cuya **caso** *expresión-constante* coincide con el valor de *expresión*. El comportamiento resultante se muestra en la siguiente tabla.
+*Constant-Expression* en cada etiqueta **de caso** se convierte al tipo de *Expression* y se compara con la *expresión* para determinar si son iguales. El control pasa a la instrucción cuya *expresión constante* **Case** coincide con el valor de *Expression*. El comportamiento resultante se muestra en la siguiente tabla.
 
 ### <a name="switch-statement-behavior"></a>Comportamiento de la instrucción switch
 
 |Condición|Acción|
 |---------------|------------|
 |El valor convertido coincide con el de la expresión de control promovida.|El control se transfiere a la instrucción que sigue a esa etiqueta.|
-|Ninguna de las constantes coincide con las constantes en el **caso** etiquetas; una **predeterminada** etiqueta está presente.|El control se transfiere a la **predeterminada** etiqueta.|
-|Ninguna de las constantes coincide con las constantes en el **caso** etiquetas; **predeterminada** etiqueta no está presente.|El control se transfiere a la instrucción después de la **cambiar** instrucción.|
+|Ninguna de las constantes coincide con las constantes en las etiquetas **Case** ; existe una etiqueta **predeterminada** .|El control se transfiere a la etiqueta **predeterminada** .|
+|Ninguna de las constantes coincide con las constantes en las etiquetas **Case** ; la etiqueta **predeterminada** no está presente.|El control se transfiere a la instrucción después de la instrucción **Switch** .|
 
-Si se encuentra una expresión coincidente, control no se interrumpa por posteriores **caso** o **predeterminada** etiquetas. El [salto](../cpp/break-statement-cpp.md) instrucción se utiliza para detener la ejecución y transferir el control a la instrucción después de la **cambiar** instrucción. Sin un **salto** instrucción, todas las instrucciones de la coincidente **caso** etiqueta al final de la **cambiar**, incluido el **predeterminada**, es ejecuta. Por ejemplo:
+Si se encuentra una expresión coincidente, el control no se obstaculiza en las siguientes etiquetas **Case** o **default** . La instrucción [break](../cpp/break-statement-cpp.md) se utiliza para detener la ejecución y transferir el control a la instrucción después de la instrucción **Switch** . Sin una instrucción **break** , se ejecuta cada instrucción de la etiqueta **Case** coincidente al final del **modificador**, incluido el **valor predeterminado**. Por ejemplo:
 
 ```cpp
 // switch_statement1.cpp
@@ -76,9 +76,9 @@ int main() {
 }
 ```
 
-En el ejemplo anterior, se incrementa `capa` si `c` es una `A` mayúscula. El **salto** instrucción después `capa++` finaliza la ejecución de la **cambiar** cuerpo de instrucción y el control pasa a la **mientras** bucle. Sin el **salto** instrucción, ejecución sería "pasen" a la siguiente instrucción con etiqueta, por lo que `lettera` y `nota` también se incrementarían. Se sirve un propósito similar por la **salto** instrucción para `case 'a'`. Si `c` es minúscula `a`, `lettera` se incrementa y el **salto** instrucción termina el **cambiar** cuerpo de instrucción. Si `c` no es un `a` o `A`, **predeterminada** se ejecuta la instrucción.
+En el ejemplo anterior, se incrementa `capa` si `c` es una `A` mayúscula. La instrucción **break** después de `capa++` finaliza la ejecución del cuerpo de la instrucción **Switch** y el control pasa al bucle **While** . Sin la instrucción **break** , la ejecución pasaría a la siguiente instrucción etiquetada, de modo que también se incrementaría `lettera` y `nota`. Una finalidad similar se sirve de la instrucción **break** para `case 'a'`. Si `c` es una `a`en minúsculas, se incrementa `lettera` y la instrucción **break** finaliza el cuerpo de la instrucción **Switch** . Si `c` no es un `a` o `A`, se ejecuta la instrucción **predeterminada** .
 
-**Visual Studio 2017 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) el `[[fallthrough]]` atributo se especifica en el estándar C ++ 17. Se puede usar en un **cambiar** instrucción como una sugerencia al compilador (o a cualquiera que lea el código) está pensado ese comportamiento. Microsoft C++ compilador actualmente no advierte sobre el comportamiento de fallthrough, por lo que este atributo no tiene ningún efecto en el comportamiento del compilador. Tenga en cuenta que el atributo se aplica a una instrucción vacía en la instrucción con etiqueta; en otras palabras, el punto y coma es necesario.
+**Visual Studio 2017 y versiones posteriores:** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)) el atributo `[[fallthrough]]` se especifica en el estándar c++ 17. Se puede usar en una instrucción **Switch** como una sugerencia para el compilador (o para cualquier persona que lea el código) que está previsto el comportamiento de paso a través. Actualmente, C++ el compilador de Microsoft no advierte del comportamiento de fallthrough, por lo que este atributo no tiene ningún efecto en el comportamiento del compilador. Tenga en cuenta que el atributo se aplica a una instrucción vacía dentro de la instrucción etiquetada; en otras palabras, es necesario el punto y coma.
 
 ```cpp
 int main()
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)):  Una instrucción switch puede introducir e inicializar una variable cuyo ámbito está limitado al bloque de la instrucción switch:
+**Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): una instrucción switch puede introducir e inicializar una variable cuyo ámbito está limitado al bloque de la instrucción switch:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +119,7 @@ int main()
     };
 ```
 
-Un bloque interno de un **cambiar** instrucción puede contener definiciones con inicializaciones siempre son accesibles, es decir, no las omitan todas las rutas de ejecución posibles. Los nombres proporcionados mediante estas declaraciones tienen ámbito local. Por ejemplo:
+Un bloque interno de una instrucción **Switch** puede contener definiciones con inicializaciones siempre y cuando se pueda tener acceso a ellas, es decir, no se omiten en todas las rutas de acceso de ejecución posibles. Los nombres proporcionados mediante estas declaraciones tienen ámbito local. Por ejemplo:
 
 ```cpp
 // switch_statement2.cpp
@@ -154,17 +154,17 @@ int main(int argc, char *argv[])
 }
 ```
 
-Un **cambiar** se puede anidar la instrucción. En tales casos, **caso** o **predeterminada** asociación etiquetas con la más cercana **cambiar** instrucción que contenga.
+Una instrucción **Switch** puede estar anidada. En tales casos, las etiquetas **Case** o **default** se asocian con la instrucción **Switch** más cercana que las incluye.
 
 **Específicos de Microsoft**
 
-Microsoft C no limita el número de valores case en una **cambiar** instrucción. El número solo está limitado por la memoria disponible. ANSI C requiere al menos 257 etiquetas case se permitan en una **cambiar** instrucción.
+Microsoft C no limita el número de valores Case en una instrucción **Switch** . El número solo está limitado por la memoria disponible. ANSI C requiere que se permitan, al menos, 257 etiquetas Case en una instrucción **Switch** .
 
-El valor predeterminado para Microsoft C es que las extensiones de Microsoft estén habilitadas. Use la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador para deshabilitar estas extensiones.
+El valor predeterminado para Microsoft C es que las extensiones de Microsoft estén habilitadas. Use la opción del compilador [/za](../build/reference/za-ze-disable-language-extensions.md) para deshabilitar estas extensiones.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Instrucciones de selección](../cpp/selection-statements-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

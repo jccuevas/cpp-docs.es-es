@@ -8,27 +8,27 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282821"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209802"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Superar las pruebas de conformidad de OLE DB
 
-Para que los proveedores más coherente, el SDK de Data Access proporciona un conjunto de pruebas de conformidad de OLE DB. Las pruebas comprueban todos los aspectos de su proveedor de y proporcionan seguridad razonable de que el proveedor funciona como se esperaba. Puede encontrar las pruebas de conformidad de OLE DB en el SDK de Microsoft Data Access. En esta sección se centra en lo que debe hacer para pasar las pruebas de conformidad. Para obtener información acerca de cómo ejecutar las pruebas de conformidad de OLE DB, consulte el SDK.
+Para que los proveedores sean más coherentes, el SDK de acceso a datos proporciona un conjunto de pruebas de conformidad OLE DB. Las pruebas comprueban todos los aspectos de su proveedor y proporcionan una garantía razonable de que el proveedor funciona según lo previsto. Puede encontrar las pruebas de conformidad de OLE DB en el SDK de Microsoft Data Access. Esta sección se centra en lo que debe hacer para pasar las pruebas de conformidad. Para obtener información sobre cómo ejecutar las pruebas de conformidad de OLE DB, vea el SDK de.
 
-## <a name="running-the-conformance-tests"></a>Ejecuta las pruebas de conformidad
+## <a name="running-the-conformance-tests"></a>Ejecutar las pruebas de conformidad
 
-En Visual C++ 6.0, las plantillas de proveedor OLE DB agregan un número de funciones de enlace para que pueda comprobar los valores y propiedades. La mayoría de estas funciones se agregaron en respuesta a las pruebas de conformidad.
+En Visual C++ 6,0, las plantillas de proveedor de OLE DB agregaron varias funciones de enlace para que pueda comprobar los valores y las propiedades. La mayoría de estas funciones se agregaron en respuesta a las pruebas de conformidad.
 
 > [!NOTE]
-> Deberá agregar varias funciones de validación de su proveedor para pasar las pruebas de conformidad de OLE DB.
+> Debe agregar varias funciones de validación para que el proveedor pase las pruebas de conformidad OLE DB.
 
-Este proveedor requiere dos rutinas de validación. La primera rutina, `CRowsetImpl::ValidateCommandID`, forma parte de la clase de conjunto de filas. Se llama durante la creación del conjunto de filas mediante las plantillas de proveedor. El ejemplo utiliza esta rutina para indicar a los consumidores que no es compatible con los índices. Es la primera llamada `CRowsetImpl::ValidateCommandID` (tenga en cuenta que el proveedor utiliza la `_RowsetBaseClass` typedef agregada en el mapa de interfaz para `CCustomRowset` en [proveedor de compatibilidad con los marcadores](../../data/oledb/provider-support-for-bookmarks.md), por lo que no tiene que escribir esa larga línea de plantilla argumentos). A continuación, devolver DB_E_NOINDEX si el parámetro de índice no es NULL (indica que el consumidor desea utilizar un índice en). Para obtener más información acerca de los identificadores de comando, vea la especificación de OLE DB y busque `IOpenRowset::OpenRowset`.
+Este proveedor requiere dos rutinas de validación. La primera rutina, `CRowsetImpl::ValidateCommandID`, forma parte de la clase de conjunto de filas. Se llama durante la creación del conjunto de filas por parte de las plantillas de proveedor. En el ejemplo se utiliza esta rutina para indicar a los consumidores que no admiten índices. La primera llamada es `CRowsetImpl::ValidateCommandID` (tenga en cuenta que el proveedor usa el `_RowsetBaseClass` typedef agregado en el mapa de interfaz para `CCustomRowset` en la [compatibilidad del proveedor](../../data/oledb/provider-support-for-bookmarks.md)con los marcadores, por lo que no tiene que escribir esa línea larga de argumentos de plantilla). A continuación, devuelva DB_E_NOINDEX si el parámetro de índice no es NULL (esto indica que el consumidor quiere usar un índice en EE. UU.). Para obtener más información acerca de los identificadores de comando, consulte la especificación de OLE DB y busque `IOpenRowset::OpenRowset`.
 
-El código siguiente es el `ValidateCommandID` rutina de validación:
+El código siguiente es la rutina de validación `ValidateCommandID`:
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,12 +48,12 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-La llamada de plantillas de proveedor la `OnPropertyChanged` método cada vez que alguien cambie una propiedad del grupo DBPROPSET_ROWSET. Si desea controlar las propiedades de otros grupos, agrega al objeto adecuado (es decir, las comprobaciones de DBPROPSET_SESSION ir en la `CCustomSession` clase).
+Las plantillas de proveedor llaman al método `OnPropertyChanged` cada vez que alguien cambia una propiedad en el grupo de DBPROPSET_ROWSET. Si desea controlar las propiedades de otros grupos, agréguelos al objeto adecuado (es decir, DBPROPSET_SESSION comprobaciones van en la clase `CCustomSession`).
 
-El código comprueba primero si la propiedad está vinculada a otra. Si la propiedad se está encadenando, Establece la propiedad DBPROP_BOOKMARKS en `True`. Apéndice C de la especificación de OLE DB contiene información acerca de las propiedades. Esta información también indica si la propiedad está encadenada a otra.
+El código comprueba primero para ver si la propiedad está vinculada a otra. Si la propiedad se está encadenando, establece la propiedad DBPROP_BOOKMARKS en `True`. El Apéndice C de la especificación de OLE DB contiene información sobre las propiedades. Esta información también indica si la propiedad está encadenada a otra.
 
-También puede agregar el `IsValidValue` rutinarias en el código. La llamada plantillas `IsValidValue` al intentar establecer una propiedad. Debe reemplazar este método si necesita un procesamiento adicional cuando se establece un valor de propiedad. Puede tener uno de estos métodos para cada conjunto de propiedades.
+Es posible que también desee agregar la rutina `IsValidValue` al código. Las plantillas llaman a `IsValidValue` cuando se intenta establecer una propiedad. Invalide este método si necesita un procesamiento adicional al establecer un valor de propiedad. Puede tener uno de estos métodos para cada conjunto de propiedades.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Técnicas avanzadas para proveedores](../../data/oledb/advanced-provider-techniques.md)

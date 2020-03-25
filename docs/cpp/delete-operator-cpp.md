@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 3b00bf78d286ba530dee85240236a2a9ea171113
-ms.sourcegitcommit: a146b169664c001406a0cccc7fbda1b8d7be5078
+ms.openlocfilehash: 2ffb307aa3eb6bb8d253129a550c95342ad497bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024641"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189473"
 ---
 # <a name="delete-operator-c"></a>delete (Operador) (C++)
 
@@ -21,10 +21,10 @@ Desasigna un bloque de memoria.
 
 ## <a name="syntax"></a>Sintaxis
 
-> [`::`] `delete` *Cast: expresión*\
-> [`::`] `delete []` *Cast: expresión*
+> [`::`] `delete` *Cast-expression*\
+> [`::`] `delete []` *Cast-Expression*
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El argumento *Cast-Expression* debe ser un puntero a un bloque de memoria previamente asignado para un objeto creado con el [operador New](../cpp/new-operator-cpp.md). El operador **Delete** tiene un resultado de tipo **void** y, por lo tanto, no devuelve un valor. Por ejemplo:
 
@@ -36,7 +36,7 @@ delete MyDialog;
 
 El uso de **Delete** en un puntero a un objeto no asignado con **New** proporciona resultados imprevisibles. Sin embargo, puede usar **Delete** en un puntero con el valor 0. Esta disposición significa que, cuando **New** devuelve 0 en caso de error, es inofensivo eliminar el resultado de una operación **New** con errores. Para obtener más información, vea [los operadores New y DELETE](../cpp/new-and-delete-operators.md).
 
-Los operadores **New** y **Delete** también se pueden usar para los tipos integrados, incluidas las matrices. Si `pointer` hace referencia a una matriz, coloque corchetes`[]`vacíos `pointer`() antes de:
+Los operadores **New** y **Delete** también se pueden usar para los tipos integrados, incluidas las matrices. Si `pointer` hace referencia a una matriz, coloque corchetes vacíos (`[]`) antes `pointer`:
 
 ```cpp
 int* set = new int[100];
@@ -80,7 +80,7 @@ int main()
 }
 ```
 
-Los dos casos siguientes producen resultados sin definir: usar la forma de matriz de Delete`delete []`() en un objeto y usar la forma de no matriz de DELETE en una matriz.
+Los dos casos siguientes producen resultados sin definir: usar la forma de matriz de Delete (`delete []`) en un objeto y usar la forma de no matriz de DELETE en una matriz.
 
 ## <a name="example"></a>Ejemplo
 
@@ -90,9 +90,9 @@ Para obtener ejemplos del uso de **Delete**, vea [New (operador](../cpp/new-oper
 
 El operador Delete invoca la función de **operador Delete**.
 
-Para los objetos que no son de tipo de clase ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)o [Union](../cpp/unions.md)), se invoca el operador Delete global. Para los objetos de tipo de clase, el nombre de la función de desasignación se resuelve en el ámbito global si la expresión de eliminación comienza con el`::`operador unario de resolución de ámbito (). Si no, el operador delete invoca el destructor de un objeto antes de la desasignación de memoria (si el puntero no es nulo). El operador delete puede definirse clase por clase; si no existe esta definición para una clase determinada, se invoca el operador delete global. Si la expresión de eliminación se utiliza para desasignar un objeto de clase cuyo de tipo estático tenga un destructor virtual, la función de desasignación se resuelve mediante el destructor virtual del tipo dinámico del objeto.
+Para los objetos que no son de tipo de clase ([Class](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)o [Union](../cpp/unions.md)), se invoca el operador Delete global. Para los objetos de tipo de clase, el nombre de la función de desasignación se resuelve en el ámbito global si la expresión de eliminación comienza con el operador unario de resolución de ámbito (`::`). Si no, el operador delete invoca el destructor de un objeto antes de la desasignación de memoria (si el puntero no es nulo). El operador delete puede definirse clase por clase; si no existe esta definición para una clase determinada, se invoca el operador delete global. Si la expresión de eliminación se utiliza para desasignar un objeto de clase cuyo de tipo estático tenga un destructor virtual, la función de desasignación se resuelve mediante el destructor virtual del tipo dinámico del objeto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)\
 [Palabras clave](../cpp/keywords-cpp.md)\

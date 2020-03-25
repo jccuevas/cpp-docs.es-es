@@ -8,34 +8,34 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: fd528e7abb713e4b3eb2bd5388a29958a1bb006c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9240a227cdc4004d1e6e2b7ac26946ca233b71ec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212633"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: Realizar llamadas directas a SQL (ODBC)
 
 En este tema se explica:
 
-- Cuándo usar SQL directo llama.
+- Cuándo usar llamadas directas a SQL.
 
-- [Cómo hacer que SQL directo llama al origen de datos](#_core_making_direct_sql_function_calls).
+- [Cómo realizar llamadas directas a SQL al origen de datos](#_core_making_direct_sql_function_calls).
 
 > [!NOTE]
->  Esta información se aplica a las clases ODBC de MFC. Si está trabajando con las clases DAO de MFC, vea el tema "Comparación de Microsoft Jet base de datos de motor de SQL y ANSI SQL" en la Ayuda de DAO.
+>  Esta información es aplicable a las clases ODBC de MFC. Si está trabajando con las clases DAO de MFC, vea el tema "comparación de Microsoft Jet Motor de base de datos SQL y ANSI SQL" en la ayuda de DAO.
 
-##  <a name="_core_when_to_call_sql_directly"></a> Cuándo se debe llamar directamente a SQL
+##  <a name="when-to-call-sql-directly"></a><a name="_core_when_to_call_sql_directly"></a>Cuándo llamar directamente a SQL
 
-Para crear nuevas tablas, quitar (eliminar) tablas, modificar las tablas existentes, crear índices y realizar otras funciones SQL que cambien el [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md) esquema, debe emitir una instrucción SQL directamente al origen de datos con la base de datos Lenguaje de definición (DDL). Cuando se utiliza un Asistente para crear un conjunto de registros para una tabla (en tiempo de diseño), puede elegir qué columnas de la tabla que se va a representar en el conjunto de registros. No se permite para las columnas que usted u otro usuario del origen de datos agregue a la tabla más adelante, después de que el programa se ha compilado. Las clases de base de datos no admiten DDL directamente, pero todavía puede escribir código para enlazar una columna nueva para el conjunto de registros de forma dinámica, en tiempo de ejecución. Para obtener información acerca de cómo realizar este enlace, vea [conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Para crear nuevas tablas, quitar (eliminar) tablas, modificar tablas existentes, crear índices y realizar otras funciones SQL que cambian el esquema de [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md) , debe emitir una instrucción SQL directamente al origen de datos mediante el lenguaje de definición de base de datos (DDL). Al utilizar un asistente para crear un conjunto de registros para una tabla (en tiempo de diseño), puede elegir las columnas de la tabla que se representarán en el conjunto de registros. Esto no permite que las columnas que usted u otro usuario del origen de datos agreguen a la tabla más adelante, una vez compilado el programa. Las clases de base de datos no admiten DDL directamente, pero todavía puede escribir código para enlazar dinámicamente una nueva columna al conjunto de registros en tiempo de ejecución. Para obtener información sobre cómo realizar este enlace, vea [conjunto de registros: enlazar dinámicamente columnas de datos (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Puede usar la instancia de DBMS para modificar el esquema u otra herramienta que le permite realizar funciones DDL. También puede utilizar llamadas a funciones ODBC para enviar instrucciones SQL, como llamar a una consulta predefinida (procedimiento almacenado) que no devuelve ningún registro.
+Puede usar el propio DBMS para modificar el esquema u otra herramienta que le permita realizar funciones DDL. También puede utilizar las llamadas a funciones ODBC para enviar instrucciones SQL, como llamar a una consulta predefinida (procedimiento almacenado) que no devuelve registros.
 
-##  <a name="_core_making_direct_sql_function_calls"></a> Realizar llamadas de función SQL directas
+##  <a name="making-direct-sql-function-calls"></a><a name="_core_making_direct_sql_function_calls"></a>Realizar llamadas directas a funciones SQL
 
-Puede ejecutar directamente una llamada a SQL con un [CDatabase (clase)](../../mfc/reference/cdatabase-class.md) objeto. Configure la cadena de instrucción SQL (normalmente en un `CString`) y lo pasa a la [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) función miembro de su `CDatabase` objeto. Si utiliza llamadas a funciones ODBC para enviar una instrucción SQL que devuelve los registros con normalidad, se omiten los registros.
+Puede ejecutar directamente una llamada SQL mediante un objeto de [clase CDatabase](../../mfc/reference/cdatabase-class.md) . Configure la cadena de instrucción SQL (normalmente en una `CString`) y pásela a la función miembro [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) del objeto `CDatabase`. Si usa llamadas a funciones ODBC para enviar una instrucción SQL que normalmente devuelve registros, se omiten los registros.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [SQL](../../data/odbc/sql.md)

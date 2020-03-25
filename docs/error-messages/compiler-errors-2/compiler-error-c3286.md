@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381365"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201401"
 ---
 # <a name="compiler-error-c3286"></a>Error del compilador C3286
 
 > '*especificador*': una variable de iteración no puede tener especificadores de clase de almacenamiento
 
-No se puede especificar una clase de almacenamiento en una variable de iteración. Para obtener más información, consulte [clases de almacenamiento (C++)](../../cpp/storage-classes-cpp.md) y [para cada uno, en](../../dotnet/for-each-in.md).
+No se puede especificar una clase de almacenamiento en una variable de iteración. Para obtener más información, vea [clases deC++almacenamiento ()](../../cpp/storage-classes-cpp.md) y [para cada una de ellas en](../../dotnet/for-each-in.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C3286 y también muestra el uso correcto.
+En el ejemplo siguiente se genera C3286 y también se muestra el uso correcto.
 
 ```cpp
 // C3286.cpp

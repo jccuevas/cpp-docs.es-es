@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - D9035
 ms.assetid: 6254f933-e37a-45ba-b860-1a870d1bc8e8
-ms.openlocfilehash: 9c0a159dcf193b4ad016069bafd86c557e9e1281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 778830892bca1cbf3520599eb6e918e56bdf17ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213775"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196643"
 ---
 # <a name="command-line-warning-d9035"></a>Advertencia de la línea de comandos D9035
 
-> opción '*opción*' está desusado y se quitará en una versión futura
+> la opción '*opción*' está en desuso y se quitará en una versión futura
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Ha especificado una opción del compilador que se quitará en una versión futura del compilador. Si no hay un reemplazo sugerido para *opción*, esta advertencia va seguida de advertencia [D9036](../../error-messages/tool-errors/command-line-warning-d9036.md).
+Especificó una opción del compilador que se quitará en una versión futura del compilador. Si hay una *opción*de sustitución sugerida, esta advertencia va seguida de la advertencia [comandos d9036](../../error-messages/tool-errors/command-line-warning-d9036.md).
 
-La opción especificada sigue funcionando, pero debe actualizar la configuración de compilación ahora. Como resultado, el proyecto es más probable que seguirán compilándose al actualizar el compilador.
+La opción especificada sigue funcionando, pero ahora debe actualizar la configuración de compilación. Como resultado, es más probable que el proyecto continúe compilando al actualizar el compilador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Opciones del compilador en desuso y quitadas](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
 [Advertencia de la línea de comandos D9036](command-line-warning-d9036.md)

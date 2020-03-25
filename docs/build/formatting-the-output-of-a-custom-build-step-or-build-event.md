@@ -9,12 +9,12 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195373"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169830"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Dar formato a la presentación de un paso de compilación personalizada o un evento de compilación
 
@@ -30,9 +30,9 @@ Si el resultado de un paso de compilación personalizada o un evento de compilac
 
 El formato de la salida debe ser el siguiente:
 
-> {<em>filename</em>**(**<em>line#</em> \[**,** <em>column#</em>]**)** &#124; *toolname*} **:** \[ <em>any text</em> ] {**error** &#124; **warning**} <em>code+number</em>**:**<em>localizable string</em> \[ <em>any text</em> ]
+> {<em>filename</em> **(** <em>line #</em> \[ **,** <em>Column #</em>] **)** &#124; *toolName*} **:** \[ <em>cualquier texto</em> ] {**error** &#124; **ADVERTENCIA**de error} <em>código + número</em> **:** <em>cadena localizable</em> \[ <em>cualquier texto</em> ]
 
-Dónde:
+Donde:
 
 - {*a* &#124; *b*} es la elección de *a* o *b*.
 
@@ -46,6 +46,6 @@ Por ejemplo:
 >
 > LINK: error irrecuperable LNK1104: no se puede abrir el archivo "*una_biblioteca.lib*"
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Descripción de los pasos de compilación personalizada y los eventos de compilación](understanding-custom-build-steps-and-build-events.md)

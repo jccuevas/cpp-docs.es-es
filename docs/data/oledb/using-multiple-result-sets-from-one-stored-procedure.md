@@ -5,27 +5,27 @@ helpviewer_keywords:
 - stored procedures, returning result sets
 - multiple result sets
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
-ms.openlocfilehash: 69e5c956d897e217501cbac9b9b93db868731221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6163eb8bf18edfc3d205f1d012de0c64c5570693
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403053"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209292"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Utilizar varios conjuntos de resultados de un procedimiento almacenado
 
-Mayoría de los procedimientos almacenados devuelven varios conjuntos de resultados. Estos procedimientos almacenados suelen incluyen una o varias instrucciones select. El consumidor debe tener en cuenta esta inclusión para controlar todos los conjuntos de resultados.
+La mayoría de los procedimientos almacenados devuelven varios conjuntos de resultados. Este procedimiento almacenado normalmente incluye una o varias instrucciones SELECT. El consumidor debe considerar esta inclusión para controlar todos los conjuntos de resultados.
 
-## <a name="to-handle-multiple-result-sets"></a>Para controlar varios resultados establece
+## <a name="to-handle-multiple-result-sets"></a>Para controlar varios conjuntos de resultados
 
-1. Crear un `CCommand` clase con `CMultipleResults` como un argumento de plantilla y el descriptor de acceso de su elección, normalmente un descriptor de acceso dinámico o manual. Si usa otro tipo de descriptor de acceso, es posible que no pueda determinar las columnas de salida para cada conjunto de filas.
+1. Cree una clase de `CCommand` con `CMultipleResults` como un argumento de plantilla y con el descriptor de acceso de su elección, normalmente un descriptor de acceso dinámico o manual. Si usa otro tipo de descriptor de acceso, es posible que no pueda determinar las columnas de salida para cada conjunto de filas.
 
-1. Ejecute el procedimiento almacenado como de costumbre y enlazar las columnas (vea [¿cómo puedo recuperar datos?](../../data/oledb/fetching-data.md)).
+1. Ejecute el procedimiento almacenado como de costumbre y enlace las columnas (vea [¿cómo se capturan los datos?](../../data/oledb/fetching-data.md)).
 
-1. Usar los datos.
+1. Use los datos.
 
-1. Llame a `GetNextResult` en el `CCommand` clase. Si hay otro conjunto de filas de resultados, `GetNextResult` devuelve S_OK y debe volver a enlazar las columnas si usas un descriptor de acceso manual. Si `GetNextResult` devuelve un error, hay conjuntos de no hay más resultados disponibles.
+1. Llame a `GetNextResult` en la clase `CCommand`. Si hay otro conjunto de filas de resultados disponible, `GetNextResult` Devuelve S_OK y debe volver a enlazar las columnas si usa un descriptor de acceso manual. Si `GetNextResult` devuelve un error, no hay más conjuntos de resultados disponibles.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)

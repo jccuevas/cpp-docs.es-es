@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4945
+title: Advertencia del compilador (nivel 1) C4945
 ms.date: 11/04/2016
 f1_keywords:
 - C4945
 helpviewer_keywords:
 - C4945
 ms.assetid: 6d2079ea-dc59-4611-bc68-9a22c06f7587
-ms.openlocfilehash: 6a20effcebe1a36fa1356fffefa3a23a0056a0f0
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 15a78877dbe70a7f95674092984546219e6a1c78
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199130"
 ---
-# <a name="compiler-warning-level-1-c4945"></a>ADVERTENCIA del compilador (nivel 1) C4945
+# <a name="compiler-warning-level-1-c4945"></a>Advertencia del compilador (nivel 1) C4945
 
 ' Symbol ': no se puede importar el símbolo desde ' assembly2 ': ya se ha importado ' Symbol ' desde otro ensamblado ' Assembly1 '
 

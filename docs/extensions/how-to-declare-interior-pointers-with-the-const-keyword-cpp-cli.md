@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Declarar punteros internos con la palabra clave const (C++/CLI)
+title: 'Cómo: Declarar punteros internos con la palabra clave const (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: 62daa255749747e3c4b9b24e29d38c0cb6f50d0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 9515abb6fed2ffd2c818fc14eae321bfcc856ce5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515780"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172314"
 ---
-# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Procedimiento Declarar punteros internos con la palabra clave const (C++/CLI)
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Cómo: Declarar punteros internos con la palabra clave const (C++/CLI)
 
 En el ejemplo siguiente se muestra cómo usar **const** en la declaración de un puntero interior.
 
@@ -78,6 +78,6 @@ int main() {
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - relational function templates
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
-ms.openlocfilehash: 1c47627baa270c3b5eb58127590aefc6d06c9df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db5091ca8fd29235ea1a0f70410a05ffcb9d7a65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188186"
 ---
 # <a name="relational-function-templates"></a>Plantillas de funciones relacionales
 
@@ -82,12 +82,12 @@ Puntero a interfaz sin formato.
 *p*<br/>
 Un puntero inteligente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Estas plantillas de función permiten realizar la comparación con un puntero inteligente a la derecha del operador de comparación. No son funciones miembro de `_com_ptr_t`.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_com_ptr_t (Clase)](../cpp/com-ptr-t-class.md)

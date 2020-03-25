@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4007
 ms.assetid: 61ec0417-6961-43c1-ade8-f9d6e93289e9
-ms.openlocfilehash: 796bfd4258c7ad7190cb2e55555549d40f34f258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3663cb4b94d077719c64a67b500e4901e81c98aa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193178"
 ---
 # <a name="nmake-warning-u4007"></a>Advertencia de NMAKE U4007
 
-nombre de archivo 'filename' es demasiado largo. se trunca a 8.3
+el nombre de archivo ' nombredearchivo ' es demasiado largo; truncar a 8,3
 
-El nombre base del archivo especificado tiene más de ocho caracteres o la extensión tiene más de tres caracteres. NMAKE trunca el nombre a una base de ocho caracteres y una extensión de tres caracteres.
+El nombre base del archivo especificado tiene más de ocho caracteres o la extensión tiene más de tres caracteres. NMAKE truncó el nombre a una base de ocho caracteres y una extensión de tres caracteres.
 
-Si los nombres de archivo largos son compatibles con el sistema de archivos, enciérrela entre comillas dobles (**"**).
+Si el sistema de archivos admite nombres de archivo largos, incluya el nombre entre comillas dobles ( **"** ).

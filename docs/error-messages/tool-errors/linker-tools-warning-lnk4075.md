@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4a385b9559e2f54e81bda76e6dd13505e978a74
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186910"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183493"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Advertencia de las herramientas del vinculador LNK4075
 
-omitiendo la opción "1" debido a la especificación "option2"
+se omite "Opción1" debido a la especificación "opción2"
 
-La segunda opción reemplaza la primera.
+La segunda opción invalida la primera.
 
-Se especifican las opciones del vinculador mutuamente excluyentes.  Examine las opciones del vinculador.  Donde se especifican las opciones del vinculador depende de cómo va a compilar el proyecto.
+Se están especificando las opciones del vinculador mutuamente excluyentes.  Examine las opciones del vinculador.  La ubicación en la que se especifiquen las opciones del vinculador depende de cómo esté compilando el proyecto.
 
-- Si va a compilar en el entorno de desarrollo, busque en las páginas de propiedades del enlazador para el proyecto y ver donde se especifican ambas opciones del vinculador.  Consulte [establecer compilador y las propiedades de compilación](../../build/working-with-project-properties.md) para obtener más información.
+- Si va a compilar en el entorno de desarrollo, busque en las páginas de propiedades del enlazador del proyecto y compruebe dónde se especifican ambas opciones del enlazador.  Vea [establecer las propiedades del compilador y compilación](../../build/working-with-project-properties.md) para obtener más información.
 
-- Si compila en la línea de comandos, examine las opciones del enlazador especificadas no existe.
+- Si compila en la línea de comandos, examine las opciones del enlazador especificadas allí.
 
-- Si compila con los scripts de compilación, examine las secuencias de comandos para ver dónde se especifican estas opciones del vinculador.
+- Si compila con scripts de compilación, examine los scripts para ver dónde se especifican estas opciones del vinculador.
 
-Cuando encuentre donde se especifican las opciones del vinculador mutuamente excluyentes, quite una de las opciones del vinculador.
+Cuando encuentre dónde se especifican las opciones del vinculador mutuamente excluyentes, quite una de las opciones del enlazador.
 
 Algunos ejemplos específicos:
 
-- Si vincula un módulo que se compiló con **/Zi**, lo que implica una opción del vinculador interno llama/EDITANDCONTINUE y un módulo que se compiló con/OPT: REF, / OPT: ICF o/incremental: no, lo que no implica ningún/EDITANDCONTINUE, podrá obtener LNK4075.  Consulte [/Z7, / Zi, /ZI (formato de la información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md) para obtener más información.
+- Si vincula un módulo que se compiló con **/Zi**, lo que implica una opción de vinculador interna denominada/EDITANDCONTINUE y un módulo que se compiló con/OPT: Ref,/opt: ICF o/incremental: no, lo que implica que no hay/EDITANDCONTINUE, obtendrá LNK4075.  Vea [/Z7,/Zi,/Zi (formato de la información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md) para obtener más información.

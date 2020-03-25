@@ -11,12 +11,12 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-ms.openlocfilehash: f0b994075a8d59ce5d0955f10bf8c61d357d2db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a243281e0d984a42cd4b4d9f249d867812d8bca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209473"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187315"
 ---
 # <a name="writing-a-termination-handler"></a>Escribir un controlador de finalización
 
@@ -28,12 +28,12 @@ Los controladores de terminación utilizan la instrucción try-finally.
 
 - [La instrucción try-finally](../cpp/try-finally-statement.md)
 
-- [Limpiar recursos](../cpp/cleaning-up-resources.md)
+- [Limpieza de recursos](../cpp/cleaning-up-resources.md)
 
-- [Cronología de las acciones de control de excepciones](../cpp/timing-of-exception-handling-a-summary.md)
+- [Temporización de acciones en el control de excepciones](../cpp/timing-of-exception-handling-a-summary.md)
 
-- [Restricciones en los controladores de terminación](../cpp/restrictions-on-termination-handlers.md)
+- [Restricciones en los controladores de finalización](../cpp/restrictions-on-termination-handlers.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de excepciones estructurado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

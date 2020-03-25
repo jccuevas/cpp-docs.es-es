@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Visual Studio C++ projects, CLR programming
 - .NET applications, C++
 ms.assetid: 59ae9020-5f26-4ad0-bbdd-97c2e2023a20
-ms.openlocfilehash: e41544adb040175fc8e53ab0e6bc4f8275891580
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 45295a3395f19d32dbf29948e1cbd15cd844adb4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169011"
 ---
 # <a name="files-created-for-clr-projects"></a>Archivos creados para proyectos de CLR
 
 Cuando se usan las plantillas de Visual C++ para crear proyectos, se crean varios archivos, en función de la plantilla que se use. En la tabla siguiente se enumeran todos los archivos que se crean mediante plantillas de proyecto para los proyectos de .NET Framework.
 
-|Nombre del archivo|Descripción del archivo|
+|Nombre de archivo|Descripción de archivo|
 |---------------|----------------------|
 |AssemblyInfo.cpp|Archivo que contiene información (es decir, atributos, archivos, recursos, tipos, información sobre versiones, información de firma, etc.) para modificar los metadatos de ensamblado del proyecto. Para obtener más información, vea [Contenido de los ensamblados](/dotnet/framework/app-domains/assembly-contents).|
 |*Nombre_proyecto*.asmx|Un archivo de texto que hace referencia a clases administradas que encapsulan la funcionalidad del servicio Web XML.|

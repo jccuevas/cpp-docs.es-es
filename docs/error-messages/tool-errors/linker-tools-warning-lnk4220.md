@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4220
 ms.assetid: ba0cddfc-9c56-4a09-8207-f7b840a24b4d
-ms.openlocfilehash: d21be7e32eb133f031545d8186ad638461570693
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed572f0bb18e4b5a515f1512bd1001f7f21d8c93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410192"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183077"
 ---
 # <a name="linker-tools-warning-lnk4220"></a>Advertencia de las herramientas del vinculador LNK4220
 
-válido 'opción del vinculador' valor 'valor'; supone el valor predeterminado
+' valor ' de la opción ' del vinculador ' no válido; se supone el valor predeterminado
 
-Se especificó un valor fuera de intervalo con el [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) opción. El valor predeterminado de **/TLBID** es 1.
+Se especificó un valor fuera del intervalo con la opción [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) . El valor predeterminado para **/TLBID** es 1.

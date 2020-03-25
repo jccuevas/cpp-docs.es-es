@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169376"
 ---
 # <a name="inline-assembler"></a>Ensamblador insertado
 
@@ -24,7 +24,7 @@ El lenguaje de ensamblado sirve para muchos propósitos, como mejorar la velocid
 > [!NOTE]
 >  Los programas con código ensamblador alineado no son totalmente portables a otras plataformas de hardware. Si está diseñando para la portabilidad, evite utilizar el ensamblador alineado.
 
-No se admite el ensamblado alineado en la ARM y x64 procesadores.  En los temas siguientes se explica cómo usar el ensamblador alineado de Visual C/C++ con procesadores x86:
+El ensamblado alineado no se admite en los procesadores ARM y x64.  En los temas siguientes se explica cómo usar el ensamblador alineado de Visual C/C++ con procesadores x86:
 
 - [Información general del ensamblador insertado](../../assembler/inline/inline-assembler-overview.md)
 
@@ -50,7 +50,7 @@ No se admite el ensamblado alineado en la ARM y x64 procesadores.  En los temas 
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Intrínsecos del compilador y lenguaje ensamblador](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
 [Referencia del lenguaje C++](../../cpp/cpp-language-reference.md)<br/>

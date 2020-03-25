@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516390"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172365"
 ---
 # <a name="generic-classes-ccli"></a>Clases genéricas (C++/CLI)
 
@@ -33,25 +33,25 @@ class-body
 } [declarators] [;]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En la sintaxis anterior, se utilizan los términos siguientes:
 
-*Atributos*<br/>
+*attributes*<br/>
 (Opcional) Información declarativa adicional. Para más información sobre atributos y clases de atributos, consulte Atributos.
 
 *class-key*<br/>
 **class** o **typename**
 
-*type-parameter-identifier(s)*, lista separada por comas de identificadores que especifican los nombres de los parámetros de tipo.
+*type-parameter-identifier(s)* , lista separada por comas de identificadores que especifican los nombres de los parámetros de tipo.
 
 *constraint-clauses*<br/>
 Lista (no separada por comas) de cláusulas **where** que especifican las restricciones de los parámetros de tipo. Adopta la forma:
 
-> **where** *type-parameter-identifier* **:** *constraint-list*  **...**
+> **donde** *type-parameter-Identifier* **:** *Constraint-List*  **...**
 
 *constraint-list*<br/>
-*class-or-interface*[`,` *...*]
+*clase o interfaz*[`,` *...* ]
 
 *accessibility-modifiers*<br/>
 Modificadores de accesibilidad de la clase genérica. En Windows Runtime, el único modificador permitido es **private**. En Common Language Runtime, los modificadores permitidos son **private** y **public**.
@@ -710,6 +710,6 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Genéricos](generics-cpp-component-extensions.md)

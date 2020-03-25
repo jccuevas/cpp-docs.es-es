@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1100
 ms.assetid: c71910a7-c581-4d9c-a38c-d2d557d56289
-ms.openlocfilehash: a1474acab4ca4929fb4db4b7b78d7a96637a0745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5c62c1465bbb6463afbac2bc9ad5f4290473471
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298287"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193269"
 ---
 # <a name="nmake-fatal-error-u1100"></a>Error grave de NMAKE U1100
 
-la macro 'nombredemacro' no es válida en el contexto de la regla por lotes 'regla'
+la macro ' nombremacro ' no es válida en el contexto de la regla de Batch ' rule '
 
-NMAKE genera este error cuando el bloque de comandos de una regla de modo por lotes directa o indirectamente hace referencia a una macro de archivo especial que no es de $<.
+NMAKE genera este error cuando el bloque de comandos de una regla de modo por lotes hace referencia directa o indirectamente a una macro de archivo especial que no es $ <.
 
-$< solo se permite la macro para las reglas de modo por lotes.
+$ < es la única macro permitida para las reglas de modo por lotes.

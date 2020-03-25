@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ec9e516157f2b6ea2a64875f30d2b03412c6eb46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214570"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -23,7 +23,7 @@ Indica que la propiedad admite la notificación `OnRequestEdit`.
 [requestedit]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **requestedit** C++ tiene la misma funcionalidad que el atributo MIDL [requestedit](/windows/win32/Midl/requestedit) .
 
@@ -38,13 +38,13 @@ Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de uso de **reques
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

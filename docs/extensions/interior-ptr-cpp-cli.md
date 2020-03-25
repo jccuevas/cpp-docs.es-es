@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515700"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172157"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
 Un *puntero interior* declara un puntero al interior de un tipo de referencia, pero no al propio objeto. Un puntero interior puede apuntar a un manipulador de referencia, un tipo de valor, un manipulador de tipo al que se aplica la conversión boxing, el miembro de un tipo administrado o a un elemento de una matriz administrada.
 
@@ -56,7 +56,7 @@ El nombre de la variable **interior_ptr**.
 *initializer*<br/>
 Un miembro de un tipo de referencia, elemento de una matriz administrada o cualquier otro objeto que se pueda asignar a un puntero nativo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Un puntero nativo no puede hacer el seguimiento de un elemento dado que su ubicación cambia en el montón administrado, lo que da lugar a que el recolector de elementos no utilizados mueva instancias de un objeto. Para que un puntero haga referencia correctamente a la instancia, el puntero se debe actualizar en tiempo de ejecución al objeto recién posicionado.
 
@@ -74,13 +74,13 @@ Para información sobre cómo declarar un puntero interior que apunta a un objet
 
 Para más información sobre los punteros interiores, consulte:
 
-- [Cómo: Declarar y usar punteros internos y matrices administradas (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [Procedimiento para declarar y usar punteros internos y matrices administradas (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
-- [Cómo: Declarar tipos de valor con la palabra clave interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
+- [Procedimiento para declarar tipos de valor con la palabra clave interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
-- [Cómo: Sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
+- [Procedimiento para sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
-- [Cómo: Declarar punteros internos con la palabra clave const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
+- [Procedimiento para declarar punteros internos con la palabra clave const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
 ### <a name="requirements"></a>Requisitos
 
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

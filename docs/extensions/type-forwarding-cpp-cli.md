@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171936"
 ---
 # <a name="type-forwarding-ccli"></a>Reenvío de tipos (C++/CLI)
 
@@ -33,13 +33,13 @@ En el ejemplo de código siguiente se muestra cómo utilizar el reenvío de tipo
 
 ### <a name="parameters"></a>Parámetros
 
-*new*<br/>
+*nuevo*<br/>
 Ensamblado al que mueve la definición de tipo.
 
 *type*<br/>
 Tipo cuya definición mueve a otro ensamblado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una vez que se envía un componente (ensamblado) y que las aplicaciones cliente lo usan, puede utilizar el reenvío de tipos para mover un tipo de un componente (ensamblado) a otro y enviar el componente actualizado (y cualquier ensamblado adicional necesario). Además, las aplicaciones cliente seguirán funcionando sin recompilarse.
 

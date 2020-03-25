@@ -1,5 +1,5 @@
 ---
-title: Operadores de puntero a miembro:. * y -&gt;*
+title: Operadores de puntero a miembro:. * y-&gt;*
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 60dad0e3134662957ee21396d330af795e80918e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188342"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Operadores de puntero a miembro:. * y -&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Operadores de puntero a miembro:. * y-&gt;*
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,9 +27,9 @@ expression .* expression
 expression ->* expression
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Los operadores de puntero a miembro. * y ->\*, devolver el valor de un miembro de clase específica para el objeto especificado en el lado izquierdo de la expresión.  El lado derecho debe especificar un miembro de la clase.  En el siguiente ejemplo se muestra cómo usar estos operadores.
+Los operadores de puntero a miembro,. * y->\*, devuelven el valor de un miembro de clase concreto para el objeto especificado en el lado izquierdo de la expresión.  El lado derecho debe especificar un miembro de la clase.  En el siguiente ejemplo se muestra cómo usar estos operadores.
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Output
 
 ```Output
 m_func1
@@ -82,11 +82,11 @@ En el ejemplo anterior, se utiliza un puntero a un miembro, `pmfn`, para invocar
 
 El operador binario .* combina su primer operando, que debe ser un objeto de tipo de clase, con su segundo operando, que debe ser un tipo de puntero a miembro.
 
-El operador binario -> * combina su primer operando, que debe ser un puntero a un objeto de tipo de clase, con su segundo operando, que debe ser un tipo de puntero a miembro.
+El operador binario-> * combina su primer operando, que debe ser un puntero a un objeto de tipo de clase, con su segundo operando, que debe ser un tipo de puntero a miembro.
 
 En una expresión que contenga el operador .*, el primer operando debe ser del tipo de clase de, y ser accesible para, el puntero a miembro especificado en el segundo operando, o bien de un tipo accesible derivado inequívocamente de y accesible para esa clase.
 
-En una expresión que contiene el-> * (operador), el primer operando debe ser del tipo "puntero al tipo de clase" del tipo especificado en el segundo operando, o debe ser de un tipo derivado inequívocamente de esa clase.
+En una expresión que contiene el operador-> *, el primer operando debe ser del tipo "puntero al tipo de clase" del tipo especificado en el segundo operando, o bien debe ser de un tipo derivado de esa clase de forma no ambigua.
 
 ## <a name="example"></a>Ejemplo
 
@@ -128,11 +128,11 @@ int main() {
 }
 ```
 
-El resultado de la. * o ->\* operadores de puntero a miembro es un objeto o función del tipo especificado en la declaración del puntero a miembro. Por lo tanto, en el ejemplo anterior, el resultado de la expresión `ADerived.*pmfnFunc1()` es un puntero a una función que devuelve void. El resultado es un valor L si el segundo operando es un valor L.
+El resultado de los operadores. * o->\* puntero a miembro es un objeto o una función del tipo especificado en la declaración del puntero a miembro. Por lo tanto, en el ejemplo anterior, el resultado de la expresión `ADerived.*pmfnFunc1()` es un puntero a una función que devuelve void. El resultado es un valor L si el segundo operando es un valor L.
 
 > [!NOTE]
 >  Si el resultado de uno de los operadores de puntero a miembro es una función, el resultado se puede utilizar como operando al operador de llamada a función.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

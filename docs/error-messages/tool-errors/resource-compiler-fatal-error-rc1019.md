@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1019
 ms.assetid: 432fff44-04a9-4e13-91c6-870df6f0b4e4
-ms.openlocfilehash: b9f83d9bcacce2e76a0e9deeeddfe21863688552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa97c216b3a522c798f549ffd7a34e4d9d48633e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297559"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173067"
 ---
 # <a name="resource-compiler-fatal-error-rc1019"></a>Error irrecuperable del compilador de recursos RC1019
 
-inesperado ' #else '
+' #else ' inesperado
 
-El `#else` directiva no estaba dentro de un `#if`, **#ifdef**, o **#ifndef** construir.
+La Directiva `#else` no aparecía dentro de una construcción `#if`, **#ifdef**o **#ifndef** .
 
-Asegúrese de que hay un `#if`, **#ifdef**, o **#ifndef** en vigor antes de esta instrucción.
+Asegúrese de que hay una instrucción `#if`, **#ifdef**o **#ifndef** en vigor antes de esta instrucción.

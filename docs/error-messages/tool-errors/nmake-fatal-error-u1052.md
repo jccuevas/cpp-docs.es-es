@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-ms.openlocfilehash: 58b4a7f8a87658db72048902230e6b4ec3e2eb18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34e047bf02c51cf226b29bf291aa8fe0e08f5ee4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395058"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193555"
 ---
 # <a name="nmake-fatal-error-u1052"></a>Error grave de NMAKE U1052
 
-> archivo '*filename*' no encontrado
+> no se encontró el archivo '*nombreDeArchivo*'
 
-NMAKE no encontró el archivo especificado con uno de los siguientes:
+NMAKE no encontró el archivo especificado con uno de los siguientes elementos:
 
-- **/F** opción
+- **/F** (opción)
 
-- **! INCLUIR** preprocesamiento de directiva
+- **! INCLUIR** Directiva de preprocesamiento
 
-- Arroba (**\@**) especificador para un archivo de respuesta
+- Especificador de arroba ( **\@** ) para un archivo de respuesta
 
-Compruebe que el archivo existe y el nombre de archivo está escrito correctamente.
+Compruebe que el archivo existe y que el nombre de archivo está escrito correctamente.

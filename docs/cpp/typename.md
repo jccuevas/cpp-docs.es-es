@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166261"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160689"
 ---
 # <a name="typename"></a>typename
 
-En las definiciones de plantilla, proporciona una sugerencia al compilador que un identificador desconocido es un tipo. En las listas de parámetros de plantilla, se utiliza para especificar un parámetro de tipo.
+En las definiciones de plantilla, proporciona una sugerencia al compilador de que un identificador desconocido es un tipo. En las listas de parámetros de plantilla, se usa para especificar un parámetro de tipo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,11 +23,11 @@ En las definiciones de plantilla, proporciona una sugerencia al compilador que u
 typename identifier;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta palabra clave debe usarse si un nombre de una definición de plantilla es un nombre completo que depende de un argumento de plantilla; es opcional si el nombre completo no es dependiente. Para obtener más información, consulte [plantillas y resolución de nombres](../cpp/templates-and-name-resolution.md).
+Esta palabra clave debe usarse si un nombre de una definición de plantilla es un nombre completo que depende de un argumento de plantilla; es opcional si el nombre completo no es dependiente. Para obtener más información, vea [plantillas y resolución de nombres](../cpp/templates-and-name-resolution.md).
 
-**TypeName** se puede usar cualquier tipo en cualquier parte de una definición o declaración de plantilla. No se permite en la lista de clases base, salvo como argumento de plantilla de una clase base de plantilla.
+**TypeName** puede ser utilizado por cualquier tipo en cualquier parte de una declaración o definición de plantilla. No se permite en la lista de clases base, salvo como argumento de plantilla de una clase base de plantilla.
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-El **typename** también se puede usar la palabra clave en lugar de **clase** en listas de parámetros de plantilla. Por ejemplo, las instrucciones siguientes son semánticamente equivalentes:
+La palabra clave **TypeName** también puede usarse en lugar de la **clase** en las listas de parámetros de plantilla. Por ejemplo, las siguientes instrucciones son semánticamente equivalentes:
 
 ```cpp
 template<class T1, class T2>...
@@ -59,7 +59,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Templates](../cpp/templates-cpp.md) (Plantillas [C++])<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

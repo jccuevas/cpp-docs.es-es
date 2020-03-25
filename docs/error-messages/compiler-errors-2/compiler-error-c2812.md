@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2812
 ms.assetid: 22aadb8c-7232-489d-a3ad-60662dda30a8
-ms.openlocfilehash: 88b071f38cf41db9c929d25ffd526b3f2b7ca468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cec92982646c64e6c5b669df328e4836d4f44df8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382962"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202110"
 ---
 # <a name="compiler-error-c2812"></a>Error del compilador C2812
 
-> \#no se admite la importación con/CLR: pure y/CLR: safe
+> \#Import no se admite con/CLR: Pure y/CLR: Safe
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+Las opciones del compilador **/clr: Pure** y **/clr: Safe** están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
 
-[directiva #import](../../preprocessor/hash-import-directive-cpp.md) no es compatible con **/CLR: pure** y **/CLR: safe** porque `#import` requiere el uso de bibliotecas de compatibilidad de compilador nativo.
+[la directiva #import](../../preprocessor/hash-import-directive-cpp.md) no se admite con **/clr: Pure** y **/clr: Safe** porque `#import` requiere el uso de bibliotecas nativas de compatibilidad del compilador.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C2812.
+En el ejemplo siguiente se genera C2812.
 
 ```cpp
 // C2812.cpp

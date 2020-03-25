@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 89609de3fc5584a960480bff83566f5e38c8be1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477537"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171403"
 ---
 # <a name="path-field-limits"></a>Límites del campo de ruta de acceso
 
@@ -35,7 +35,7 @@ ms.locfileid: "50477537"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Estas constantes definen la longitud máxima de la ruta de acceso y de los campos individuales dentro de dicha ruta.
 
@@ -50,6 +50,6 @@ Estas constantes definen la longitud máxima de la ruta de acceso y de los campo
 > [!NOTE]
 > C Runtime admite longitudes de ruta de acceso de hasta 32 768 caracteres, pero depende del sistema operativo, específicamente del sistema de archivos, que se admitan o no estas rutas de acceso más largas. La suma de los campos no puede exceder `_MAX_PATH` a efectos de compatibilidad total con versiones anteriores de los sistemas de archivos FAT32. El sistema de archivos NTFS de Windows es compatible con las rutas de acceso de hasta 32768 caracteres de longitud, pero únicamente cuando se usan las API Unicode. Al usar nombres de ruta de acceso largos, agregue el prefijo \\\\?\ a la ruta de acceso y use las versiones Unicode de las funciones de C Runtime.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Constantes globales](../c-runtime-library/global-constants.md)

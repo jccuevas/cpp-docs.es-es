@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170389"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -68,7 +68,7 @@ Atributo de lectura y escritura.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve 0 si el archivo tiene el modo especificado. La función devuelve-1 si el archivo con nombre no existe o no tiene el modo especificado; en este caso, `errno` se establece tal y como se muestra en la tabla siguiente.
+Cada función devuelve 0 si el archivo tiene el modo especificado. La función devuelve-1 si el archivo con nombre no existe o no tiene el modo especificado; en este caso, se establece `errno` como se muestra en la tabla siguiente.
 
 |||
 |-|-|
@@ -76,9 +76,9 @@ Cada función devuelve 0 si el archivo tiene el modo especificado. La función d
 `ENOENT`|No se encuentra el nombre o la ruta de acceso del archivo.
 `EINVAL`|Parámetro no válido.
 
-Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información sobre estos y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Cuando se usa con archivos, la función **_access** determina si existe el archivo o directorio especificado y tiene los atributos especificados por el valor de *mode*. Cuando se usa con directorios, **_access** solo determina si existe el directorio especificado; en Windows 2000 y sistemas operativos posteriores, todos los directorios tienen acceso de lectura y escritura.
 
@@ -86,12 +86,12 @@ Cuando se usa con archivos, la función **_access** determina si existe el archi
 |------------------|---------------------|
 |00|Solo existencia|
 |02|Solo escritura|
-|04|De sólo lectura|
-|06|Operaciones de lectura y escritura|
+|04|Solo lectura|
+|06|Leer y escribir|
 
 Esta función solo comprueba si el archivo y directorio son de solo lectura o no; no comprueba la configuración de seguridad del sistema de archivos. Para eso necesita un token de acceso. Para obtener más información sobre la seguridad del sistema de archivos, consulte [Tokens de acceso](/windows/win32/SecAuthZ/access-tokens). Existe una clase ATL que proporciona esta funcionalidad; consulte [Clase CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**_waccess** es una versión con caracteres anchos de **_access**; el argumento de *ruta de acceso* a **_waccess** es una cadena de caracteres anchos. **_waccess** y **_access** se comportan de manera idéntica.
+**_waccess** es una versión con caracteres anchos de **_access**; el argumento de *ruta de acceso* para **_waccess** es una cadena de caracteres anchos. **_waccess** y **_access** se comportan de manera idéntica.
 
 Esta función valida sus parámetros. Si *path* es null o el *modo* no especifica un modo válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve -1.
 
@@ -142,7 +142,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>

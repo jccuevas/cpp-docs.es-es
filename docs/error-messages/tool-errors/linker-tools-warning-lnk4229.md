@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4229
 ms.assetid: 00e70d09-efd8-4e4e-8d48-6ba282c32ec1
-ms.openlocfilehash: 1dc1bf4ef80138bb0828290d5d86bb51aafe5e59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6845e0a2d2c07355e3ce689e28e77a24ca30a1c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352808"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182960"
 ---
 # <a name="linker-tools-warning-lnk4229"></a>Advertencia de las herramientas del vinculador LNK4229
 
-/ Directiva de la directiva no válido que se encuentra; pasa por alto
+se encontró una directiva no válida/Directive; tendrán
 
-Una directiva que se pasa a través de la [comentario](../../preprocessor/comment-c-cpp.md) pragma no era válida. El vinculador omite `/directive`.
+Una directiva que se pasa a través de la pragma [comment](../../preprocessor/comment-c-cpp.md) no era válida. El enlazador omite `/directive`.

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160832"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
 **Específicos de Microsoft**
 
@@ -25,15 +25,15 @@ Permite establecer explícitamente que se está llamando a una implementación d
 __super::member_function();
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Todos los métodos accesibles de la clase base se consideran durante la fase de la resolución de sobrecarga y la función que proporciona la mejor coincidencia es la que se llama.
 
 **__super** solo puede aparecer dentro del cuerpo de una función miembro.
 
-**__super** no se puede usar con el uso de una declaración. Consulte [mediante declaración](../cpp/using-declaration.md) para obtener más información.
+**__super** no se puede usar con una declaración using. Vea [usar declaración](../cpp/using-declaration.md) para obtener más información.
 
-Con la introducción de [atributos](../windows/attributes/attributes-alphabetical-reference.md) que insertan código, el código podría contener una o más clases bases cuyos nombres no puede conocer, pero que contienen métodos que desea llamar.
+Con la introducción de [atributos](../windows/attributes/attributes-alphabetical-reference.md) que insertan código, es posible que el código contenga una o varias clases base cuyos nombres no sepa pero que contengan métodos a los que desea llamar.
 
 ## <a name="example"></a>Ejemplo
 
@@ -60,6 +60,6 @@ struct D : B1, B2 {
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Palabras clave](../cpp/keywords-cpp.md)

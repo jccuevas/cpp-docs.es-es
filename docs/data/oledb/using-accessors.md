@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, accessors
 - rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-ms.openlocfilehash: 4eaedfca0c93aca89cbfd985c1de0f57306e470c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e35318fd1b5a245eaed982674d69484e34f9dac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389143"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209344"
 ---
 # <a name="using-accessors"></a>Utilizar descriptores de acceso
 
-Los siguientes temas explican cómo determinar qué tipo de descriptor de acceso es más adecuado para los datos de aplicación y, a continuación, cómo usar los diferentes tipos de descriptores de acceso disponibles:
+En los temas siguientes se explica cómo determinar qué tipo de descriptor de acceso es el más adecuado para la aplicación de datos y cómo usar los diferentes tipos de descriptores de acceso disponibles:
 
-- [Determinar qué descriptor de acceso que se usarán](../../data/oledb/determining-which-type-of-accessor-to-use.md)
+- [Determinar el descriptor de acceso que se va a usar](../../data/oledb/determining-which-type-of-accessor-to-use.md)
 
 - [Usar varios descriptores de acceso en un conjunto de filas](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
 
@@ -27,6 +27,6 @@ Los siguientes temas explican cómo determinar qué tipo de descriptor de acceso
 
 - [Obtener acceso a datos XML](../../data/oledb/accessing-xml-data.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

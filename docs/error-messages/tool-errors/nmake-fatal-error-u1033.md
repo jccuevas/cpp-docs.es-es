@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 3b1df28e3cd7b27a9e7a130d9d71c1af68db9aec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324368"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173392"
 ---
 # <a name="nmake-fatal-error-u1033"></a>Error grave de NMAKE U1033
 
-error de sintaxis: 'cadena' inesperado
+error de sintaxis: ' cadena ' inesperada
 
-La cadena no es parte de la sintaxis válida para un archivo MAKE.
+La cadena no forma parte de la sintaxis válida para un archivo make.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. Si establece el cierre de corchetes angulares (**<<**) para un archivo en línea no están al principio de una línea, se produce el error siguiente:
+1. Si el conjunto de corchetes angulares ( **<<** ) de un archivo insertado no se encuentra al principio de una línea, se produce el siguiente error:
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. Si una definición de macro en el archivo MAKE contiene un signo igual (**=**) sin nombre a una anterior o si el nombre que se define es una macro que se expande a nada, se produce el error siguiente:
+1. Si una definición de macro en el archivo make contenía un signo igual ( **=** ) sin un nombre anterior o si el nombre que se está definiendo es una macro que se expande a nada, se produce el siguiente error:
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. Si el punto y coma (**;**) en una línea de comentario en las herramientas. INI no está al principio de la línea, se produce el error siguiente:
+1. Si el punto y coma ( **;** ) en una línea de comentario en herramientas. INI no se encuentra al principio de la línea, se produce el siguiente error:
 
     ```
     syntax error : ';' unexpected
     ```
 
-1. Si el archivo MAKE se ha dado formato mediante un procesador de textos, puede producirse el error siguiente:
+1. Si un procesador de textos ha dado formato al archivo make, puede producirse el siguiente error:
 
     ```
     syntax error : ':' unexpected

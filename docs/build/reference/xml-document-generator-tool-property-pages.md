@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: c99677d7fc53ae3343e15e54997fe0101322fbcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316163"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171637"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Herramienta Generador de documentos XML (Páginas de propiedades)
 
@@ -34,12 +34,12 @@ La página de propiedades de la herramienta Generador de documentos XML expone l
 
 - **Archivo de documento de salida**
 
-   El nombre y la ubicación de directorio del archivo de salida .xml. Consulte [macros comunes para propiedades y comandos de compilación](common-macros-for-build-commands-and-properties.md) para obtener información sobre el uso de macros para especificar ubicaciones de directorio.
+   El nombre y la ubicación de directorio del archivo de salida .xml. Vea [macros comunes para comandos de compilación y propiedades](common-macros-for-build-commands-and-properties.md) para obtener información sobre el uso de macros para especificar ubicaciones de directorio.
 
 - **Dependencias de la biblioteca de documentos**
 
    Si el proyecto tiene una dependencia de un proyecto .lib en la solución, los archivos .xdc del proyecto .lib se pueden procesar en los archivos .xml para el proyecto actual.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Referencia de página de propiedades de proyecto de C++](property-pages-visual-cpp.md)
+[C++referencia de la página de propiedades del proyecto](property-pages-visual-cpp.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: 83fedd9d3cc6cd7c08ba79d2ed83e9f62d919e29
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e640d18dc3755385188e166c57ad5e912ac24fb4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857247"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160598"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Operadores unarios más y de negación: + y -
 
@@ -45,7 +45,7 @@ La negación unaria de cantidades sin signo se realiza restando el valor del ope
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)<br/>
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

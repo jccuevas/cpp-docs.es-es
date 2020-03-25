@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166859"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169063"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Escribir funciones con ensamblado alineado
 
@@ -42,7 +42,7 @@ _TEXT   ENDS
         END
 ```
 
-Puesto que se escribió para un ensamblador independiente, la función requiere un archivo de código fuente independiente y pasos de ensamblado y vinculación. Los argumentos de función de C y C++ se pasan normalmente en la pila, por lo que esta versión de la función `power2` obtiene acceso a sus argumentos por sus posiciones en la pila. (Tenga en cuenta que el **modelo** directiva, disponible en MASM y otros ensambladores, también le permite tener acceso a argumentos de la pila y las variables locales de la pila por nombre.)
+Puesto que se escribió para un ensamblador independiente, la función requiere un archivo de código fuente independiente y pasos de ensamblado y vinculación. Los argumentos de función de C y C++ se pasan normalmente en la pila, por lo que esta versión de la función `power2` obtiene acceso a sus argumentos por sus posiciones en la pila. (Tenga en cuenta que la directiva **Model** , disponible en MASM y otros ensambladores, también permite tener acceso a los argumentos de pila y a las variables de pila locales por nombre).
 
 ## <a name="example"></a>Ejemplo
 
@@ -76,10 +76,10 @@ int power2( int num, int power )
 
 La versión alineada de la función `power2` hace referencia a sus argumentos por nombre y aparece en el mismo archivo de código fuente que el resto del programa. Esta versión también requiere menos instrucciones de ensamblado.
 
-Dado que la versión alineada de `power2` no ejecuta la instrucción de C++ `return`, provoca una advertencia inofensiva si se compila en el nivel de advertencia 2 o más alto. La función devuelve un valor, pero el compilador no lo percibe en ausencia de una instrucción `return`. Puede usar [advertencia #pragma](../../preprocessor/warning.md) para deshabilitar la generación de esta advertencia.
+Dado que la versión alineada de `power2` no ejecuta la instrucción de C++ `return`, provoca una advertencia inofensiva si se compila en el nivel de advertencia 2 o más alto. La función devuelve un valor, pero el compilador no lo percibe en ausencia de una instrucción `return`. Puede usar [#pragma ADVERTENCIA](../../preprocessor/warning.md) para deshabilitar la generación de esta advertencia.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de C o C++ en bloques __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

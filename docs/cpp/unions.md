@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187965"
 ---
 # <a name="unions"></a>Uniones
 
@@ -636,7 +636,7 @@ La unión `NumericType` se organiza en memoria (conceptualmente), como se muestr
 ![Almacenamiento de datos en una Unión de tipo numérico](../cpp/media/vc38ul1.png "Almacenamiento de datos en una Unión Unión") <br/>
 Almacenamiento de datos en unión de tipo numérico
 
-## <a name="anonymous_unions"></a>Uniones anónimas
+## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>Uniones anónimas
 
 Las uniones anónimas son uniones que se declaran sin un *nombre de clase* o *declarator-List*.
 

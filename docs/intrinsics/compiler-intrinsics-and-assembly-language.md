@@ -2,12 +2,12 @@
 title: Intrínsecos del compilador y del lenguaje ensamblador
 ms.date: 09/02/2019
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 1beeb0dedb153e4cd2b0a26bfc94ef7d0f9201c2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 36feb6971a8f5e4affd4f71b6afc1d508b2802f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217942"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171689"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrínsecos del compilador y lenguaje ensamblador
 
@@ -15,7 +15,7 @@ Esta sección de la documentación contiene información sobre las funciones int
 
 ## <a name="related-articles"></a>Artículos relacionados
 
-|Título|DESCRIPCIÓN|
+|Título|Descripción|
 |-----------|-----------------|
 |[Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)|Describe las funciones intrínsecas disponibles en Microsoft C y C++ para las arquitecturas x86, ARM y x64.|
 |[Ensamblador alineado](../assembler/inline/inline-assembler.md)|Explica cómo usar el ensamblador alineado de Visual C/C++ con procesadores x86.|

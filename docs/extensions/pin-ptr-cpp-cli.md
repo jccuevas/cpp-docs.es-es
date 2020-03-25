@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516500"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172040"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 Declara un *puntero anclado*, que se usa solo con Common Language Runtime.
 
@@ -53,7 +53,7 @@ El nombre de la variable **pin_ptr**.
 *initializer*<br/>
 Un miembro de un tipo de referencia, elemento de una matriz administrada o cualquier otro objeto que se pueda asignar a un puntero nativo.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Una variable **pin_ptr** constituye un supraconjunto de la funcionalidad de un puntero nativo. Por lo tanto, todo lo que se puede asignar a un puntero nativo también se puede asignar a una variable **pin_ptr**. Se permite que un puntero interior realice el mismo conjunto de operaciones que los punteros nativos, incluida la comparación y la aritmética de punteros.
 
@@ -89,7 +89,7 @@ Los punteros anclados no se pueden usar como:
 
 Para más información sobre los punteros interiores, consulte [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md).
 
-Para más información sobre los punteros anclados, consulte [Procedimiento: Anclar puntero y matrices](how-to-pin-pointers-and-arrays.md) y [Procedimiento: Declarar punteros anclados y tipos de valor](how-to-declare-pinning-pointers-and-value-types.md).
+Para obtener más información sobre cómo anclar punteros, vea [Cómo: anclar punteros y matrices](how-to-pin-pointers-and-arrays.md) y [Cómo: declarar punteros anclados y tipos de valor](how-to-declare-pinning-pointers-and-value-types.md).
 
 ### <a name="requirements"></a>Requisitos
 

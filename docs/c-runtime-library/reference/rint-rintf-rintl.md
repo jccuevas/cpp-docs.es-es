@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949260"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170896"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -61,14 +61,14 @@ Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **rimir** devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores de la mitad se redondean de acuerdo con la configuración actual del modo de redondeo de punto flotante, igual que las funciones de **nearbyint (** . A diferencia de las funciones **nearbyint (** , las funciones **rimir** pueden generar la excepción de punto flotante **FE_INEXACT** si el resultado difiere en el valor del argumento. No se devuelve ningún error.
+Las funciones **rimir** devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores de la mitad se redondean de acuerdo con la configuración actual del modo de redondeo de punto flotante, igual que las funciones de **nearbyint (** . A diferencia de las funciones **nearbyint (** , las funciones **rimir** pueden generar la **FE_INEXACT** excepción de punto flotante si el resultado difiere en el valor del argumento. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|**_matherr** Excepcional|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|ninguna|ninguna|
-|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguna|
+|± ∞, QNAN, IND|None|None|
+|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|None|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **rimir** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **rimir** siempre toma y devuelve un **valor Double**.
 
@@ -76,9 +76,9 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **rimir*
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -116,7 +116,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

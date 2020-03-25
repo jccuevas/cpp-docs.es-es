@@ -1,17 +1,17 @@
 ---
-title: Etiquetas recomendadas para comentarios de documentación (comentarios de documentación de C++)
+title: Etiquetas recomendadas para comentarios deC++ documentación (comentarios de documentación)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e0937b79012f65ba136e18ac81f014be23688f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168868"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Etiquetas recomendadas para los comentarios de documentación
 
-El compilador de MSVC procesará los comentarios de documentación en el código y crea un archivo .xdc para cada operación de compilación y xdcmake.exe procesará los archivos .xdc en un archivo .xml. El procesamiento del archivo .xml para crear documentación es un detalle que se debe implementar en el sitio.
+El compilador MSVC procesará los comentarios de documentación en el código y creará un archivo. xdc para cada operación de compilación y xdcmake. exe procesará los archivos. xdc en un archivo. Xml. El procesamiento del archivo .xml para crear documentación es un detalle que se debe implementar en el sitio.
 
 Las etiquetas se procesan en construcciones como los tipos y miembros de tipo.
 
@@ -29,12 +29,12 @@ El compilador procesará cualquier etiqueta que sea un XML válido. Las etiqueta
 |[\<para>](para-visual-cpp.md)|[\<param>](param-visual-cpp.md)1|[\<paramref>](paramref-visual-cpp.md)1|
 |[\<permission>](permission-visual-cpp.md)1|[\<remarks>](remarks-visual-cpp.md)|[\<returns>](returns-visual-cpp.md)|
 |[\<see>](see-visual-cpp.md)1|[\<seealso>](seealso-visual-cpp.md)1|[\<summary>](summary-visual-cpp.md)|
-|[\<value>](value-visual-cpp.md)|||
+|[\<valor>](value-visual-cpp.md)|||
 
 1. El compilador comprueba la sintaxis.
 
-En la versión actual, no se admite el compilador de MSVC `<paramref>`, una etiqueta que sea compatible con otros compiladores de Visual Studio. Visual C++ puede admitir `<paramref>` en una versión futura.
+En la versión actual, el compilador MSVC no admite `<paramref>`, una etiqueta que es compatible con otros compiladores de Visual Studio. Visual C++ puede admitir `<paramref>` en una versión futura.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Documentación de XML](xml-documentation-visual-cpp.md)

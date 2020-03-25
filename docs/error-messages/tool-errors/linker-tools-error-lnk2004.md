@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194842"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Error de las herramientas del vinculador LNK2004
 
-desbordamiento de corrección relativo de GP en 'destino'; la sección corta 'sección' es demasiado grande o fuera del intervalo.
+desbordamiento de corrección relativo de GP en ' destino '; la sección corta ' Section ' es demasiado grande o está fuera del intervalo.
 
 La sección era demasiado grande.
 
-Para resolver este error, reduzca el tamaño de la sección corta, ya sea explícitamente poner datos en las secciones largas mediante #pragma sección (".sectionname", lectura, escritura, long) y el uso de `__declspec(allocate(".sectionname"))` en declaraciones y definiciones de datos.  Por ejemplo,
+Para resolver este error, reduzca el tamaño de la sección corta, bien colocando explícitamente los datos en las secciones largas a través de #pragma sección (". sectionName", lectura, escritura, larga) y el uso de `__declspec(allocate(".sectionname"))` en definiciones y declaraciones de datos.  Por ejemplo,
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-También puede mover los datos agrupados lógicamente en su propia estructura que será una colección de datos mayor que 8 bytes, que el compilador asignará en una sección de datos de tipo long.  Por ejemplo,
+También puede trasladar los datos agrupados lógicamente a su propia estructura que será una colección de datos de más de 8 bytes, que el compilador asignará en una sección de datos largos.  Por ejemplo,
 
 ```
 // from this...
