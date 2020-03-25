@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214934"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM y .NET
 
@@ -78,7 +78,7 @@ Algunos proyectos contienen varios archivos. idl independientes. Se usan para ge
 
 Además, el vinculador C++ visual generará toda la información de atributos relacionados con IDL en un solo archivo MIDL. No habrá forma de generar dos bibliotecas de tipos a partir de un único proyecto.
 
-## <a name="contexts"></a>Contextos de atributo
+## <a name="attribute-contexts"></a><a name="contexts"></a>Contextos de atributo
 
 C++los atributos se pueden describir mediante cuatro campos básicos: el destino al que se pueden aplicar (**se aplica a**), si son repetibles o no (**repetibles**), la presencia necesaria de otros atributos (**atributos requeridos**) e incompatibilidades con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla adjunta en el tema de referencia de cada atributo. A continuación se describe cada uno de estos campos.
 
@@ -92,7 +92,7 @@ Para obtener más información, vea [atributos por uso](attributes-by-usage.md).
 
 Este campo indica si el atributo se puede aplicar varias veces al mismo destino. La mayoría de los atributos no se pueden repetir.
 
-### <a name="required-attributes"></a>Atributos necesarios
+### <a name="required-attributes"></a>Atributos requeridos
 
 Este campo muestra otros atributos que deben estar presentes (es decir, que se aplican al mismo destino) para que el atributo especificado funcione correctamente. No es habitual que un atributo tenga entradas para este campo.
 
