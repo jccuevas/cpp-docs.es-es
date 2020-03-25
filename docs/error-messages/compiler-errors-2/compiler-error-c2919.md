@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
-ms.openlocfilehash: ab11226c8cc4629a265dd182d5f882f6b3be7e5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 624b3ab47ccb1c934b612ec8648b5eee0d233690
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160863"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176980"
 ---
 # <a name="compiler-error-c2919"></a>Error del compilador C2919
 
-'type': No se puede usar operadores en la superficie publicada de un tipo WinRT
+'type': no se pueden usar operadores en la superficie publicada de un tipo WinRT
 
 El sistema de tipos de Windows en tiempo de ejecución no admite las funciones miembro de operadores en la superficie publicada de un tipo. Esto es porque no todos los lenguajes pueden usar las funciones miembro de operadores. Puede crear funciones miembro de operadores privadas o internas que se pueden llamar desde el código de C++ en la misma clase o unidad de compilación.
 

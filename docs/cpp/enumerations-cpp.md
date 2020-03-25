@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423763"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180191"
 ---
 # <a name="enumerations-c"></a>Enumeraciones [C++]
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 Observe que la línea `hand = account_num;` aún produce el error que se produce con enumeraciones sin ámbito, como se muestra anteriormente. Esto se permite con una conversión explícita. Sin embargo, con las enumeraciones con ámbito, la conversión que se ha intentado en la siguiente instrucción, `account_num = Suit::Hearts;`, ya no se permite sin una conversión explícita.
 
-## <a name="no_enumerators"></a>Enumeraciones sin enumeradores
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enumeraciones sin enumeradores
 
 **Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): al definir una enumeración (normal o con ámbito) con un tipo subyacente explícito y sin enumeradores, puede aplicar un nuevo tipo entero que no tiene ninguna conversión implícita a ningún otro tipo. Al usar este tipo en lugar de su tipo subyacente integrado, puede eliminar la posibilidad de que se produzcan errores sutiles causados por conversiones implícitas involuntarias.
 

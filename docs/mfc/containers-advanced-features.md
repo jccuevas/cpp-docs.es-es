@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 88acba8d6e2541b3c9f7707b4dd9c03b13067dda
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a68cc85062f9ca711c453ef98f69a7c5ea114d94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214362"
 ---
 # <a name="containers-advanced-features"></a>Contenedores: Características avanzadas
 
@@ -27,7 +27,7 @@ En este artículo se describen los pasos necesarios para incorporar característ
 
 - [Vínculo OLE a un objeto incrustado](#_core_links_to_embedded_objects)
 
-##  <a name="_core_creating_a_container_server_application"></a>Creación de una aplicación de contenedor/servidor
+##  <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Creación de una aplicación de contenedor/servidor
 
 Una aplicación de contenedor/servidor es una aplicación que actúa como un contenedor y un servidor. Microsoft Word para Windows es un ejemplo de esto. Puede incrustar documentos de Word para Windows en otras aplicaciones y también puede incrustar elementos en documentos de Word para Windows. El proceso para modificar la aplicación contenedora para que sea un contenedor y un servidor completo (no se puede crear una aplicación de contenedor/miniservidor) es similar al proceso para crear un servidor completo.
 
@@ -41,11 +41,11 @@ En el artículo [servidores: implementar un servidor](../mfc/servers-implementin
 
    Por ejemplo, el [OCLIENT](../overview/visual-cpp-samples.md) de ejemplo OLE de MFC ha incrustado un elemento creado por la aplicación de contenedor/servidor. Abra la aplicación OCLIENT y edite en contexto el elemento creado por la aplicación de contenedor/servidor. Mientras edita el elemento de la aplicación, decide que desea incrustar un elemento creado por el ejemplo de OLE de MFC [HIERSVR](../overview/visual-cpp-samples.md). Para ello, no puede usar la activación en contexto. Debe abrir por completo HIERSVR para activar este elemento. Dado que la biblioteca MFC no admite esta característica OLE, invalidar `COleClientItem::CanActivate` permite comprobar esta situación y evitar un posible error en tiempo de ejecución en la aplicación.
 
-Si va a crear una nueva aplicación y desea que funcione como una aplicación contenedor/servidor, elija esa opción en el cuadro de diálogo Opciones OLE del Asistente para aplicaciones y esta compatibilidad se creará automáticamente. Para obtener más información, vea el artículo [información general: crear un contenedor de controles ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obtener información acerca de los ejemplos de MFC, vea ejemplos de MFC.
+Si va a crear una nueva aplicación y desea que funcione como una aplicación contenedor/servidor, elija esa opción en el cuadro de diálogo Opciones OLE del Asistente para aplicaciones y esta compatibilidad se creará automáticamente. Para obtener más información, vea el artículo [información general: crear un contenedor de controles ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obtener información acerca de los ejemplos de MFC, vea [ejemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
 Tenga en cuenta que no puede insertar una aplicación MDI en sí misma. Una aplicación que es un contenedor o servidor no se puede insertar en sí misma a menos que sea una aplicación SDI.
 
-##  <a name="_core_links_to_embedded_objects"></a>Vínculos a objetos incrustados
+##  <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Vínculos a objetos incrustados
 
 La característica vínculos a objetos incrustados permite al usuario crear un documento con un vínculo OLE a un objeto incrustado dentro de la aplicación contenedora. Por ejemplo, cree un documento en un procesador de textos que contenga una hoja de cálculo incrustada. Si la aplicación admite vínculos a objetos incrustados, podría pegar un vínculo a la hoja de cálculo incluida en el documento del procesador de textos. Esta característica permite a la aplicación usar la información contenida en la hoja de cálculo sin saber dónde la obtuvo originalmente el procesador de textos.
 

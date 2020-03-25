@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: d9544e3002cfa489e9700b83367b15b164e9b513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172599"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Conversiones de estilo C con /clr (C++/CLI)
 
@@ -30,7 +30,7 @@ Al usarse con tipos CLR, el compilador intenta asignar una conversión de estilo
 
 Si ninguna de las conversiones indicadas anteriormente es válida y el tipo de la expresión y de destino son tipos de referencia CLR, la conversión de estilo C se asigna a una comprobación en tiempo de ejecución (instrucción MSIL castclass). De lo contrario, una conversión de estilo C se considera no válida y el compilador emite un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 No se recomienda una conversión de estilo C. Al compilar con [/clr (Compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), use [safe_cast](safe-cast-cpp-component-extensions.md).
 
@@ -160,6 +160,6 @@ int main() {
 
 Opción del compilador: `/clr`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

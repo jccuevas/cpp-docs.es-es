@@ -2,12 +2,12 @@
 title: Información general sobre posibles problemas de actualización (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef088f4881dfbd9967f90a009e4a8e397a70b134
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627239"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214986"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Información general sobre posibles problemas de actualización (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t es un tipo nativo)
 
-(En Microsoft Visual C++ 6,0 y versiones anteriores, **wchar_t** no se implementó como un tipo integrado, pero se declaró en WCHAR. h como TypeDef para unsigned short). El C++ estándar requiere que **wchar_t** sea un tipo integrado. Si usa la versión de definición de tipo, pueden producirse problemas de portabilidad. Si actualiza desde versiones anteriores de Visual Studio y encuentra un error del compilador C2664 porque el código intenta convertir implícitamente **wchar_t** en un **entero corto sin signo**, es recomendable cambiar el código para corregir el error, en lugar de establecer `/Zc:wchar_t-`. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(En Microsoft Visual C++ 6,0 y versiones anteriores, **wchar_t** no se implementó como un tipo integrado, pero se declaraba en WCHAR. h como TypeDef para unsigned short). El C++ estándar requiere que **wchar_t** sea un tipo integrado. Si usa la versión de definición de tipo, pueden producirse problemas de portabilidad. Si actualiza desde versiones anteriores de Visual Studio y encuentra un error del compilador C2664 porque el código intenta convertir implícitamente **wchar_t** en un **entero corto sin signo**, es recomendable cambiar el código para corregir el error, en lugar de establecer `/Zc:wchar_t-`. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Actualizar con las opciones del enlazador /NODEFAULTLIB, /ENTRY y /NOENTRY
 
@@ -101,7 +101,7 @@ En la siguiente tabla se muestran las bibliotecas cuyo contenido ha cambiado a p
 |||
 |-|-|
 |Si usaba:|Debe usar estas bibliotecas:|
-|LIBCMT.lib|libcmt.lib, libucrt.lib, libvcruntime.lib|
+|libcmt.lib|libcmt.lib, libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib, libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib, ucrt.lib, vcruntime.lib|
 |msvcrtd.lib|msvcrtd.lib, ucrtd.lib, vcruntimed.lib|
@@ -184,7 +184,7 @@ Antes de que se estandarizase Unicode, muchos programas usaban el juego de carac
 
 Para obtener más información, vea [Migrar de MBCS a Unicode](porting-guide-spy-increment.md#porting_to_unicode). Para obtener información general sobre MBCS frente a Unicode, vea [texto y cadenas en C++ visual](../text/text-and-strings-in-visual-cpp.md) y [internacionalización](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Actualizar proyectos desde versiones anteriores de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Mejoras de conformidad de C++ en Visual Studio](../overview/cpp-conformance-improvements.md)

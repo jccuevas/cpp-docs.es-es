@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: a6b1823fe93c45abd8dabbd22116924e0a64f19a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3dfdb45bdf8a508eca9d29e90b3f7c05e7b147d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154222"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179919"
 ---
 # <a name="for-statement-c"></a>for (Instrucción) (C++)
 
-Ejecuta una instrucción repetidamente hasta que la condición es false. Para obtener información sobre la basada en intervalo para la instrucción, consulte [basada en intervalo para la instrucción (C++)](../cpp/range-based-for-statement-cpp.md).
+Ejecuta una instrucción repetidamente hasta que la condición es false. Para obtener información sobre la instrucción for basada en intervalo, vea [instrucción for basada en intervaloC++()](../cpp/range-based-for-statement-cpp.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -22,21 +22,21 @@ for ( init-expression ; cond-expression ; loop-expression )
     statement;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Use la **para** instrucción para construir bucles que deben ejecutarse un número especificado de veces.
+Use la instrucción **for** para construir bucles que deben ejecutar un número especificado de veces.
 
-El **para** instrucción consta de tres partes opcionales, como se muestra en la tabla siguiente.
+La instrucción **for** consta de tres partes opcionales, tal como se muestra en la tabla siguiente.
 
 ### <a name="for-loop-elements"></a>para los elementos de bucle
 
 |Nombre de la sintaxis|Cuándo se ejecuta|Descripción|
 |-----------------|-------------------|-----------------|
-|`init-expression`|Antes de cualquier otro elemento de la **para** instrucción `init-expression` se ejecuta solo una vez. El control pasa entonces a `cond-expression`.|Se suele utilizar para inicializar índices de bucle. Puede contener expresiones o declaraciones.|
+|`init-expression`|Antes de cualquier otro elemento de la instrucción **for** , `init-expression` se ejecuta solo una vez. El control pasa entonces a `cond-expression`.|Se suele utilizar para inicializar índices de bucle. Puede contener expresiones o declaraciones.|
 |`cond-expression`|Antes de la ejecución de cada iteración de `statement`, incluida la primera iteración. `statement` solo se ejecuta si `cond-expression` se evalúa como true (distinto de cero).|Expresión que se evalúa como un tipo entero o un tipo de clase que tiene una conversión no ambigua a un tipo entero. Se utiliza normalmente para comprobar los criterios de finalización del bucle.|
 |`loop-expression`|Al final de cada iteración de `statement`. Después de ejecutarse `loop-expression`, se evalúa `cond-expression`.|Se utiliza normalmente para incrementar índices de bucle.|
 
-Los ejemplos siguientes muestran distintas formas de usar el **para** instrucción.
+En los siguientes ejemplos se muestran distintas formas de usar la instrucción **for** .
 
 ```cpp
 #include <iostream>
@@ -98,11 +98,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-Un **para** bucle finaliza cuando un [salto](../cpp/break-statement-cpp.md), [devolver](../cpp/return-statement-cpp.md), o [goto](../cpp/goto-statement-cpp.md) (en una instrucción con etiqueta fuera del **para**bucle) dentro de `statement` se ejecuta. Un [continuar](../cpp/continue-statement-cpp.md) instrucción en un **para** bucle finaliza solo la iteración actual.
+Un bucle **for** finaliza cuando se ejecuta [break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md) (en una instrucción con etiqueta fuera del bucle **for** ) dentro de `statement`. Una instrucción [continue](../cpp/continue-statement-cpp.md) en un bucle **for** finaliza solo la iteración actual.
 
-Si `cond-expression` es se omite, se considera true y el **para** bucle no finaliza sin una **salto**, **devolver**, o **goto** dentro de `statement`.
+Si se omite `cond-expression`, se considera true y el bucle **for** no finalizará sin una instrucción **break**, **Return**o **goto** dentro de `statement`.
 
-Aunque los tres campos de la **para** instrucción normalmente se usan para la inicialización, comprobar la finalización y el incremento, no se limitan a estos usos. Por ejemplo, el código siguiente imprime los números de 0 a 4. En este caso, `statement` es la instrucción NULL:
+Aunque los tres campos de la instrucción **for** se utilizan normalmente para la inicialización, las pruebas de terminación y el incremento, no se restringen a estos usos. Por ejemplo, el código siguiente imprime los números de 0 a 4. En este caso, `statement` es la instrucción NULL:
 
 ```cpp
 #include <iostream>
@@ -119,7 +119,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>Bucles for y el estándar de C++
 
-El estándar de C++ indica que una variable declarada en un **para** bucle saldrá del ámbito después de la **para** termina un bucle. Por ejemplo:
+El C++ estándar indica que una variable declarada en un bucle **for** debe salir del ámbito después de que finalice el bucle **for** . Por ejemplo:
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -128,11 +128,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-De forma predeterminada, en [/Ze](../build/reference/za-ze-disable-language-extensions.md), una variable declarada en un **para** bucle permanece dentro del ámbito hasta que el **para** finaliza el ámbito de inclusión del bucle.
+De forma predeterminada, en [/ze](../build/reference/za-ze-disable-language-extensions.md), una variable declarada en un bucle **for** permanece en el ámbito hasta que finaliza el ámbito de inclusión del bucle **for** .
 
-[/ Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) habilita el comportamiento estándar de las variables declaradas en bucles for sin necesidad de especificar `/Za`.
+[/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) permite el comportamiento estándar de las variables declaradas en bucles for sin necesidad de especificar `/Za`.
 
-También es posible usar las diferencias de ámbito el **para** bucle para declarar variables en `/Ze` como sigue:
+También es posible usar las diferencias de ámbito del bucle **for** para volver a declarar variables en `/Ze` como se indica a continuación:
 
 ```cpp
 // for_statement5.cpp
@@ -144,9 +144,9 @@ int main(){
 }
 ```
 
-Esto imita mejor el comportamiento estándar de una variable declarada en un **para** bucle, lo que requiere que las variables declaradas en un **para** bucle salga del ámbito después de realiza el bucle. Cuando se declara una variable en un **para** bucle, el compilador la promueve internamente a una variable local en el **para** de inclusión del bucle ámbito incluso si ya hay una variable local con el mismo nombre.
+Esto simula de forma más estrecha el comportamiento estándar de una variable declarada en un bucle **for** , que requiere que las variables declaradas en un bucle **for** salgan del ámbito una vez terminado el bucle. Cuando una variable se declara en un bucle **for** , el compilador la promueve internamente a una variable local en el ámbito de inclusión del bucle **for** , incluso si ya existe una variable local con el mismo nombre.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Instrucciones de iteración](../cpp/iteration-statements-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>

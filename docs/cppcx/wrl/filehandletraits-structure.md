@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - FileHandleTraits structure
 ms.assetid: e1107c42-2cd6-4253-9c16-8ecb35f05cd9
-ms.openlocfilehash: 09b8eb1a45efee4f8d0aaf4dc27774de91ffcff4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c20bad1b67719a9fcfb8ea9fa1dfede1feb42ddf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398438"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213998"
 ---
 # <a name="filehandletraits-structure"></a>FileHandleTraits (estructura)
 
@@ -24,7 +24,7 @@ Define las características de un identificador de archivo.
 struct FileHandleTraits : HANDLETraits;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -34,10 +34,10 @@ struct FileHandleTraits : HANDLETraits;
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** corewrappers.h
+**Encabezado:** corewrappers. h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers::HandleTraits
+**Espacio de nombres:** Microsoft:: WRL:: wrappers:: Handletraits (
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Wrappers::HandleTraits (espacio de nombres)](microsoft-wrl-wrappers-handletraits-namespace.md)

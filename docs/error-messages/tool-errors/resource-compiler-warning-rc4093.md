@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC4093
 ms.assetid: 3c61b4a4-b418-465b-a4fd-cb1ff0adb8dd
-ms.openlocfilehash: 23bf436e6e8338f89bc576564181c84715028332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29d24f1e380f5c531e170e5dc23cf5c77eefb874
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182297"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>Advertencia del compilador de recursos RC4093
 
-sin escape de nueva línea en constante de caracteres en el código inactivo
+nueva línea sin escape en la constante de caracteres en código inactivo
 
-La expresión constante de un `#if`, `#elif`, **#ifdef**, o **#ifndef** directiva de preprocesador evaluada como cero, lo que el código que sigue inactiva. Dentro del código inactivo, un carácter de nueva línea aparece dentro de un conjunto de comillas simples o dobles.
+La expresión constante de una `#if`, `#elif`, **#ifdef**o **#ifndef** Directiva de preprocesador se evalúa como cero, lo que permite que el código siguiente esté inactivo. Dentro de ese código inactivo, aparece un carácter de nueva línea dentro de un conjunto de comillas simples o dobles.
 
-Se considera que todo el texto hasta la siguiente marca de comillas doble dentro de una constante de caracteres.
+Todo el texto hasta la siguiente comilla doble se consideró dentro de una constante de caracteres.

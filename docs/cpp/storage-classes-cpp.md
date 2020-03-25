@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447321"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178553"
 ---
 # <a name="storage-classes"></a>Clases de almacenamiento
 
@@ -30,7 +30,7 @@ Una *clase de almacenamiento* en el contexto C++ de las declaraciones de variabl
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>estático
+## <a name="static"></a><a name="static"></a>estático
 
 La palabra clave **static** se puede usar para declarar variables y funciones en el ámbito global, el ámbito de espacio de nombres y el ámbito de clase. También se pueden declarar variables estáticas en el ámbito local.
 
@@ -155,11 +155,11 @@ var == value
 
 A partir de C ++ 11, se garantiza que la inicialización de la variable local estática sea segura para subprocesos. Esta característica se denomina a veces *estáticas mágicas*. Sin embargo, en una aplicación con subprocesamiento múltiple todas las asignaciones posteriores deben estar sincronizadas. La característica de inicialización estática segura para subprocesos se puede deshabilitar mediante la marca [/Zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) para evitar la realización de una dependencia en CRT.
 
-## <a name="extern"></a>externas
+## <a name="extern"></a><a name="extern"></a>externas
 
 Los objetos y las variables declarados como **extern** declaran un objeto que se define en otra unidad de traducción o en un ámbito de inclusión como una vinculación externa. Para obtener más información, consulte las [unidades de traducción y la vinculación](program-and-linkage-cpp.md)de [extern](extern-cpp.md) .
 
-## <a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
 
 Una variable declarada con el especificador **thread_local** solo es accesible en el subproceso en el que se crea. La variable se crea cuando se crea el subproceso y se destruye cuando se destruye el subproceso. Cada subproceso tiene su propia copia de la variable. En Windows, **thread_local** es funcionalmente equivalente al atributo de [__declspec (subproceso)](../cpp/thread.md) específico de Microsoft.
 
@@ -194,7 +194,7 @@ Aspectos que se deben tener en cuenta sobre el especificador **thread_local** :
 
 En Windows, **thread_local** es funcionalmente equivalente a [__declspec (Thread)](../cpp/thread.md) , salvo que **__declspec (Thread)** se puede aplicar a una definición de tipo y es válido en código de C. Siempre que sea posible, utilice **thread_local** porque forma parte del C++ estándar y, por lo tanto, es más portátil.
 
-##  <a name="register"></a>el
+##  <a name="register"></a><a name="register"></a>el
 
 **Visual Studio 2017 versión 15,3 y posterior** (disponible con [/STD: c++ 17](../build/reference/std-specify-language-standard-version.md)): la palabra clave **Register** ya no es una clase de almacenamiento admitida. La palabra clave todavía está reservada en el estándar para su uso futuro.
 

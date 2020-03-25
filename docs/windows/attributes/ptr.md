@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166424"
 ---
 # <a name="ptr"></a>ptr
 
@@ -23,7 +23,7 @@ Designa un puntero como un puntero completo.
 [ptr]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **ptr** C++ tiene la misma funcionalidad que el atributo MIDL de [ptr](/windows/win32/Midl/ptr) .
 
@@ -38,13 +38,13 @@ Vea el ejemplo de [DefaultValue](defaultvalue.md) para obtener un ejemplo de uso
 |||
 |-|-|
 |**Se aplica a**|Parámetro de interfaz, método de interfaz, **typedef**|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>

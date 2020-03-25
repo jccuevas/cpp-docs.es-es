@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409166"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210787"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl (Clase)
 
-Proporciona una implementación para el [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) interfaz.
+Proporciona una implementación para la interfaz [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,27 +37,27 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 LA CLASE, DERIVADA DE
 
 *SessionClass*<br/>
-El objeto de sesión.
+Objeto de sesión.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldb.h
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="interface-methods"></a>Métodos de interfaz
 
 |||
 |-|-|
-|[CreateSession](#createsession)|Crea una nueva sesión desde el objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada.|
+|[CreateSession](#createsession)|Crea una nueva sesión a partir del objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una interfaz obligatoria en los objetos de origen de datos.
+Interfaz obligatoria en los objetos de origen de datos.
 
-## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>Idbcreatesessionimpl (:: CreateSession
 
-Crea una nueva sesión desde el objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada.
+Crea una nueva sesión a partir del objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -69,9 +69,9 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IDBCreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) en el *referencia del programador OLE DB*.
+Vea [IDBCreateSession:: createSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

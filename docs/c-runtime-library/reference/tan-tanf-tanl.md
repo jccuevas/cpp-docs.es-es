@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168712"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -70,10 +70,10 @@ Las funciones **tan** devuelven la tangente de *x*. Si *x* es mayor o igual que 
 
 |Entrada|Excepción SEH|**Matherr** Excepcional|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|ninguna|_DOMAIN|
-|± INF|**INVALID**|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
+|± INF|**No válido**|_DOMAIN|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **tan** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **tan** siempre toma y devuelve **Double**.
 
@@ -81,9 +81,9 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **tan** 
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> o \<math.h>|
+|**tan**, **TANF (** , **tanl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -109,7 +109,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

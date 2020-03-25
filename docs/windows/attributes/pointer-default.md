@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514256"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166541"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -28,7 +28,7 @@ Especifica el atributo de puntero predeterminado para todos los punteros, except
 *value*<br/>
 Valor que describe el tipo de puntero: **ptr**, **ref**o **único**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **pointer_default** C++ tiene la misma funcionalidad que el atributo MIDL [pointer_default](/windows/win32/Midl/pointer-default) .
 
@@ -43,13 +43,13 @@ Vea el ejemplo de [DefaultValue](defaultvalue.md) para obtener un ejemplo de uso
 |||
 |-|-|
 |**Se aplica a**|**interface**|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)

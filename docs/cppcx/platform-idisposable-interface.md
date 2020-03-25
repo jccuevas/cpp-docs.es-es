@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-ms.openlocfilehash: f114959321c0ed3879a089b944a5ff1b19843118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0024edbad0bb3311a0497be67fc8bcfc954602e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257834"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214245"
 ---
 # <a name="platformidisposable-interface"></a>Interfaz Platform::IDisposable
 
@@ -26,11 +26,11 @@ public interface class IDisposable
 
 ## <a name="attributes"></a>Atributos
 
-**GuidAttribute**("de0cbaea-8065-4a45-b196-c9d443f9bab3")
+**GuidAttribute**("de0cbaea-8065-4a45-B196-c9d443f9bab3")
 
 **VersionAttribute**(NTDDI_WIN8)
 
-### <a name="members"></a>Miembros
+### <a name="members"></a>Members
 
 La interfaz IDisposable hereda de la interfaz IUnknown. IDisposable también tiene los siguientes tipos de miembros:
 
@@ -40,7 +40,7 @@ La interfaz IDisposable tiene los métodos siguientes.
 
 |Método|Descripción|
 |------------|-----------------|
-|Desechar|Se utiliza para liberar recursos no administrados.|
+|Dispose|Se utiliza para liberar recursos no administrados.|
 
 ### <a name="requirements"></a>Requisitos
 
@@ -48,4 +48,4 @@ La interfaz IDisposable tiene los métodos siguientes.
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres**: Plataforma
+**Espacio de nombres:** Plataforma

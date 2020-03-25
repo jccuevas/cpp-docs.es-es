@@ -6,12 +6,12 @@ helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 410fe9ecc48b92c68132f7b1b8057c2549c8afcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515750"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181907"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>Especificadores de invalidación (C++/CLI y C++/CX)
 
@@ -19,7 +19,7 @@ Los *especificadores de invalidación* modifican la forma en que se comportan lo
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Para obtener más información acerca de los especificadores de invalidación, vea:
 
@@ -53,6 +53,6 @@ Opción del compilador: `/ZW`
 
 Opción del compilador: `/clr`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

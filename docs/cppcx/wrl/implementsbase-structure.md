@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398247"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213894"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,11 +24,11 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 struct ImplementsBase;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Utilizado para validar los tipos de parámetro de plantilla en [Implements (estructura)](implements-structure.md).
+Se usa para validar los tipos de parámetro de plantilla en la [estructura de implementaciones](implements-structure.md).
 
-El **ImplementsBase** estructura está vacía por diseño.
+La estructura **implementsbase (** está vacía por diseño.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -36,10 +36,10 @@ El **ImplementsBase** estructura está vacía por diseño.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** implements.h
+**Encabezado:** implementa. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

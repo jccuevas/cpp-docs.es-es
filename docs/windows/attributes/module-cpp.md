@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: daa0ae4aea5ff2a1a3312efcf3c39f43b541abf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514912"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166697"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -28,22 +28,22 @@ Define el bloque de biblioteca en el archivo .idl.
 *type*<br/>
 Opta Puede ser uno de los siguientes:
 
-- `dll`Agrega funciones y clases que permiten que la DLL resultante funcione como servidor COM en proceso. Este es el valor predeterminado.
+- `dll` agrega funciones y clases que permiten que la DLL resultante funcione como servidor COM en proceso. Este es el valor predeterminado.
 
-- `exe`Agrega funciones y clases que permiten que el ejecutable resultante funcione como servidor COM fuera de proceso.
+- `exe` agrega funciones y clases que permiten que el ejecutable resultante funcione como servidor COM fuera de proceso.
 
-- `service`Agrega funciones y clases que permiten que el ejecutable resultante funcione como un servicio NT.
+- `service` agrega funciones y clases que permiten que el ejecutable resultante funcione como un servicio NT.
 
-- `unspecified`Deshabilita la inserción de código ATL relacionado con el atributo de módulo: la inserción de la clase de módulo ATL, la instancia global _AtlModule y las funciones de punto de entrada. No deshabilita la inserción de código ATL como consecuencia de otros atributos del proyecto.
+- `unspecified` deshabilita la inserción de código ATL relacionado con el atributo de módulo: la inserción de la clase de módulo ATL, el _AtlModule de instancia global y las funciones de punto de entrada. No deshabilita la inserción de código ATL como consecuencia de otros atributos del proyecto.
 
 *name*<br/>
 Opta Nombre del bloque de biblioteca.
 
 *version*<br/>
-Opta El número de versión que desea asignar al bloque de biblioteca. El valor predeterminado es 1,0.
+Opta El número de versión que desea asignar al bloque de biblioteca. El valor predeterminado es 1.0.
 
 *uuid*<br/>
-Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Es posible que necesite recuperar el *UUID* del bloque de biblioteca, lo que puede hacer con el identificador _ _ **uuidof (** *nombrebiblioteca* **)** .
+Identificador único para la biblioteca. Si omite este parámetro, se generará automáticamente un identificador para la biblioteca. Es posible que necesite recuperar el *UUID* del bloque de biblioteca, lo que puede hacer mediante el identificador **__uuidof (** *nombrebiblioteca* **)** .
 
 *lcid*<br/>
 Parámetro de localización. Consulte [lcid](/windows/win32/Midl/lcid) para obtener más información.
@@ -85,7 +85,7 @@ Identificador de recurso de cadena del archivo .rgs usado para registrar el iden
 > [!NOTE]
 > Tanto el archivo .rgs como la cadena que contiene el nombre del servicio deben contener el mismo valor numérico.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 A menos que especifique el parámetro *restricted* en [emitidl](emitidl.md), se requiere **module** en todos los programas que usen atributos de C++.
 
@@ -93,7 +93,7 @@ Se creará un bloque de biblioteca si, además del atributo **module** , el cód
 
 Se permite un bloque de biblioteca en un archivo .idl. Si en el código fuente hay varias entradas de módulo, se combinarán con los valores de parámetro más recientes que se implementen.
 
-Si este atributo se usa en un proyecto que usa ATL, el comportamiento del atributo cambiará. Además del comportamiento anterior, el atributo también inserta un objeto global (llamado `_AtlModule`) del tipo correcto y el código de soporte adicional. Si el atributo es independiente, inserta una clase derivada del tipo de módulo correcto. Si el atributo se aplica a una clase, agrega una clase base del tipo de módulo correcto. El tipo correcto viene determinado por el valor del parámetro de *tipo* :
+Si este atributo se usa en un proyecto que usa ATL, el comportamiento del atributo cambiará. Además del comportamiento anterior, el atributo también inserta un objeto global (denominado `_AtlModule`) del tipo correcto y el código de soporte adicional. Si el atributo es independiente, inserta una clase derivada del tipo de módulo correcto. Si el atributo se aplica a una clase, agrega una clase base del tipo de módulo correcto. El tipo correcto viene determinado por el valor del parámetro de *tipo* :
 
 - `type` = **dll**
 
@@ -153,13 +153,13 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |||
 |-|-|
 |**Se aplica a**|En cualquier lugar|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>

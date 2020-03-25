@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ca3469128cf3d412138d5d39a1587cbc20150699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398633"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214076"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory (función)
 
@@ -31,31 +31,31 @@ template<typename Factory>
 ### <a name="parameters"></a>Parámetros
 
 *flags*<br/>
-Una combinación de uno o varios [RuntimeClassType](runtimeclasstype-enumeration.md) valores de enumeración.
+Combinación de uno o más valores de enumeración [runtimeclasstype (](runtimeclasstype-enumeration.md) .
 
 *entry*<br/>
-Puntero a un [CreatorMap](creatormap-structure.md) que contiene información de inicialización y el registro sobre el parámetro *riid*.
+Puntero a un [CreatorMap](creatormap-structure.md) que contiene información de inicialización y registro sobre el parámetro *riid*.
 
 *riid*<br/>
 Referencia a un identificador de interfaz.
 
 *ppFactory*<br/>
-Si esta operación completa correctamente, un puntero a un generador de activación.
+Si esta operación se completa correctamente, un puntero a un generador de activación.
 
 ## <a name="return-value"></a>Valor devuelto
 
 S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Se genera un error de aserción si el parámetro de plantilla *Factory* no se deriva de la interfaz `IActivationFactory`.
+Se emite un error de aserción si el *generador* de parámetros de plantilla no se deriva de la interfaz `IActivationFactory`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** module.h
+**Encabezado:** Module. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Wrappers::Details (espacio de nombres)](microsoft-wrl-wrappers-details-namespace.md)

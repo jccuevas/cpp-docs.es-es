@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392029"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213777"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL (Espacio de nombres)
 
-Define los tipos fundamentales que componen la biblioteca de plantillas C++ de Windows en tiempo de ejecución.
+Define los tipos fundamentales que componen la C++ biblioteca de plantillas de Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,24 +31,24 @@ Define los tipos fundamentales que componen la biblioteca de plantillas C++ de W
 namespace Microsoft::WRL;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt | InhibitWeakReference>`|
 
 ### <a name="classes"></a>Clases
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[ActivationFactory (clase)](activationfactory-class.md)|Habilita una o más clases que activa Windows en tiempo de ejecución.|
 |[AsyncBase (clase)](asyncbase-class.md)|Implementa la máquina de estados asincrónica de Windows Runtime.|
 |[ClassFactory (clase)](classfactory-class.md)|Implementa la funcionalidad básica de la interfaz `IClassFactory`.|
 |[ComPtr (clase)](comptr-class.md)|Crea un tipo de *puntero inteligente* que representa la interfaz especificada por el parámetro de plantilla. ComPtr mantiene automáticamente un recuento de referencias para el puntero de la interfaz subyacente y la libera cuando el recuento de referencias llega a cero.|
 |[DeferrableEventArgs (clase)](deferrableeventargs-class.md)|Clase de plantilla usada para los tipos de argumento de evento de los aplazamientos.|
-|[EventSource (clase)](eventsource-class.md)|Representa un evento. Las funciones miembro `EventSource` agregan, quitan e invocan controladores de eventos.|
+|[clase EventSource](eventsource-class.md)|Representa un evento. Las funciones miembro `EventSource` agregan, quitan e invocan controladores de eventos.|
 |[FtmBase (clase)](ftmbase-class.md)|Representa un objeto de cálculo de referencias con subprocesamiento libre.|
 |[Module (clase)](module-class.md)|Representa una colección de objetos relacionados.|
 |[RuntimeClass (clase)](runtimeclass-class.md)|Representa una clase con instancias que hereda el número especificado de interfaces y proporciona la compatibilidad especificada con Windows Runtime, COM clásico y referencia débil.|
@@ -58,38 +58,38 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>Estructuras
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[ChainInterfaces (estructura)](chaininterfaces-structure.md)|Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.|
-|[CloakedIid (estructura)](cloakediid-structure.md)|Indica a la `RuntimeClass`, `Implements` y `ChainInterfaces` plantillas que la interfaz especificada no es accesible en la lista IID.|
+|[CloakedIid (estructura)](cloakediid-structure.md)|Indica al `RuntimeClass`, `Implements` y `ChainInterfaces` plantillas a las que no se puede tener acceso a la interfaz especificada en la lista de IID.|
 |[Implements (estructura)](implements-structure.md)|Implementa `QueryInterface` y `GetIid` para las interfaces especificadas.|
 |[MixIn (estructura)](mixin-structure.md)|Garantiza que una clase en tiempo de ejecución deriva de interfaces de Windows en tiempo de ejecución, si las hubiera, y luego de interfaces de COM clásico.|
 |[RuntimeClassFlags (estructura)](runtimeclassflags-structure.md)|Contiene el tipo de una instancia de un [RuntimeClass](runtimeclass-class.md).|
 
 ### <a name="enumerations"></a>Enumeraciones
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[AsyncResultType (enumeración)](asyncresulttype-enumeration.md)|Especifica el tipo de resultado devuelto por la `GetResults()` método.|
+|[AsyncResultType (enumeración)](asyncresulttype-enumeration.md)|Especifica el tipo de resultado devuelto por el método `GetResults()`.|
 |[ModuleType (enumeración)](moduletype-enumeration.md)|Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.|
-|[RuntimeClassType (enumeración)](runtimeclasstype-enumeration.md)|Especifica el tipo de [RuntimeClass](runtimeclass-class.md) instancia que se admite.|
+|[RuntimeClassType (enumeración)](runtimeclasstype-enumeration.md)|Especifica el tipo de instancia de [RuntimeClass](runtimeclass-class.md) que se admite.|
 
-### <a name="functions"></a>Funciones
+### <a name="functions"></a>Functions
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[AsWeak (función)](asweak-function.md)|Recupera una referencia débil a una instancia especificada.|
 |[Callback (función) (WRL)](callback-function-wrl.md)|Crea un objeto cuya función de miembro es un método de devolución de llamada.|
 |[CreateActivationFactory (función)](createactivationfactory-function.md)|Crea un generador que produce instancias de la clase especificada que puede activar Windows en tiempo de ejecución.|
 |[CreateClassFactory (función)](createclassfactory-function.md)|Crea un generador que produce instancias de la clase especificada.|
-|[Make (función)](make-function.md)|Inicializa la clase en tiempo de ejecución de Windows especificada.|
+|[Make (función)](make-function.md)|Inicializa la clase de Windows Runtime especificada.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h
+**Encabezado:** Async. h, Client. h, corewrappers. h, Event. h, FTM. h, implementa. h, Internal. h, Module. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Wrappers (espacio de nombres)](microsoft-wrl-wrappers-namespace.md)

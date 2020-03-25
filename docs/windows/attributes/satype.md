@@ -1,21 +1,21 @@
 ---
-title: satype (atributo de COM de C++)
+title: rgname (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407307"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166281"
 ---
 # <a name="satype"></a>satype
 
-Especifica el tipo de datos de la `SAFEARRAY` estructura.
+Especifica el tipo de datos de la estructura de `SAFEARRAY`.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,7 +26,7 @@ Especifica el tipo de datos de la `SAFEARRAY` estructura.
 ### <a name="parameters"></a>Parámetros
 
 *data_type*<br/>
-Tipo de datos de la `SAFEARRAY` estructura de datos que se pasa como parámetro a un método de interfaz.
+El tipo de datos para la estructura de datos de `SAFEARRAY` que se pasa como un parámetro a un método de interfaz.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -34,17 +34,17 @@ Tipo de datos de la `SAFEARRAY` estructura de datos que se pasa como parámetro 
 
 |||
 |-|-|
-|**Se aplica a**|Parámetro de interfaz, el método de interfaz|
+|**Se aplica a**|Parámetro de interfaz, método de interfaz|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **satype** atributo de C++ especifica el tipo de datos de la `SAFEARRAY`.
+El atributo **rgname** C++ especifica el tipo de datos del `SAFEARRAY`.
 
 > [!NOTE]
-> Un nivel de direccionamiento indirecto se quita de la `SAFEARRAY` puntero en el archivo .idl generado de forma se declara en el archivo .cpp.
+> Un nivel de direccionamiento indirecto se quita del puntero `SAFEARRAY` del archivo. idl generado de la forma en que se declara en el archivo. cpp.
 
 ## <a name="example"></a>Ejemplo
 
@@ -59,9 +59,9 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
-[identificador](id.md)
+[id](id.md)

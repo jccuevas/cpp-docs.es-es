@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: f12bf4aafc87e44a6e2fb15ba79de4a9744bea58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eadd1e3a287feecd36b00b231b42c31218352c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398789"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214154"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal (enumeración)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,11 +24,11 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 enum AsyncStatusInternal;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Especifica una asignación entre enumeraciones internas para el estado de las operaciones asincrónicas y la `Windows::Foundation::AsyncStatus` enumeración.
+Especifica una asignación entre las enumeraciones internas para el estado de las operaciones asincrónicas y la enumeración `Windows::Foundation::AsyncStatus`.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 `_Created`<br/>
 Equivalente a `::Windows::Foundation::AsyncStatus::Created`.
@@ -47,10 +47,10 @@ Equivalente a `::Windows::Foundation::AsyncStatus::Error`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** async.h
+**Encabezado:** Async. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

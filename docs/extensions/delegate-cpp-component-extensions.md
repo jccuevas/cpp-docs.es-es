@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172443"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate  (C++/CLI and C++/CX)
 
@@ -23,9 +23,9 @@ Declara un tipo que representa un puntero de función.
 
 Windows Runtime y Common Language Runtime admiten delegados.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**delegate** es una palabra clave contextual. Para más información, consulte [Palabras clave contextuales](context-sensitive-keywords-cpp-component-extensions.md).
+**delegate** es una palabra clave contextual. Para obtener más información, consulte [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md) (Palabras clave contextuales).
 
 Para detectar en tiempo de compilación si un tipo es un delegado, use el rasgo de tipo `__is_delegate()`. Para más información, consulte [Compatibilidad del compilador con rasgos de tipo](compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -47,7 +47,7 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parámetros
 
-*access*<br/>
+*acceso*<br/>
 (opcional) La accesibilidad del delegado, que puede ser **public** (valor predeterminado) o **private**. El prototipo de función también se puede calificar con las palabras clave **const** o **volatile**.
 
 *return-type*<br/>
@@ -59,7 +59,7 @@ El nombre del tipo de delegado declarado.
 *parameters*<br/>
 (Opcional) Los tipos e identificadores del prototipo de función.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Use *delegate-type-identifier* para declarar un evento con el mismo prototipo que el delegado. Para información, consulte [Delegados (C++/CX)](../cppcx/delegates-c-cx.md).
 
@@ -81,7 +81,7 @@ function_declaration
 
 ### <a name="parameters"></a>Parámetros
 
-*access*<br/>
+*acceso*<br/>
 (opcional) La accesibilidad del delegado fuera del ensamblado puede ser pública o privada.  El valor predeterminado es privada.  Dentro de una clase, un delegado puede tener cualquier accesibilidad.
 
 *function_declaration*<br/>
@@ -89,7 +89,7 @@ La signatura de la función que se puede enlazar al delegado. El tipo de valor d
 
 Para definir un delegado sin enlazar, el primer parámetro de *function_declaration* deben tener el tipo del puntero **this** del objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los delegados son multidifusión: el "puntero de función" se puede enlazar a uno o más métodos dentro de una clase administrada. La palabra clave **delegate** define un tipo de delegado de multidifusión con una signatura de método específica.
 
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

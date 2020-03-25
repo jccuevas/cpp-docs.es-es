@@ -1,24 +1,24 @@
 ---
-title: Procedimiento Declaración de tipos de valor con la palabra clave interior_ptr (C++/CLI)
+title: 'Cómo: Declarar tipos de valor con la palabra clave interior_ptr (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172287"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Procedimiento Declaración de tipos de valor con la palabra clave interior_ptr (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Cómo: Declarar tipos de valor con la palabra clave interior_ptr (C++/CLI)
 
 Una palabra clave **interior_ptr** puede utilizarse con un tipo de valor.
 
 > [!IMPORTANT]
-> Esta característica del lenguaje es compatible con la opción de compilador `/clr`, pero no con la opción de compilador `/ZW`.
+> De las opciones del compilador, esta característica del lenguaje es compatible con `/clr`, pero no con `/ZW`.
 
 ## <a name="example"></a>Ejemplo
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304142"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214291"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass (Macros)
 
-Rellena una memoria caché interna que contiene una fábrica que puede crear una instancia de la clase especificada.
+Rellena una memoria caché interna que contiene un generador que puede crear una instancia de la clase especificada.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -44,24 +44,24 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>Parámetros
 
 *className*<br/>
-Nombre de la clase para crear.
+Nombre de la clase que se va a crear.
 
-*factory*<br/>
-Generador que se va a crear una instancia de la clase especificada.
+*Factory*<br/>
+Generador que creará una instancia de la clase especificada.
 
 *serverName*<br/>
-Un nombre que especifica un subconjunto de fábricas del módulo.
+Nombre que especifica un subconjunto de generadores del módulo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-No utilice estas macros con COM clásico a menos que use el `#undef` directiva para asegurarse de que el `__WRL_WINRT_STRICT__` se quita la definición de macro.
+No use estas macros con COM clásico a menos que utilice la Directiva `#undef` para asegurarse de que se quita la definición de macro `__WRL_WINRT_STRICT__`.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** module.h
+**Encabezado:** Module. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Module (clase)](module-class.md)

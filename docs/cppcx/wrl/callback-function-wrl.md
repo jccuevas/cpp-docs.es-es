@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821693"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214141"
 ---
 # <a name="callback-function-wrl"></a>Callback (función) (WRL)
 
@@ -189,7 +189,7 @@ ComPtr<TDelegateInterface> Callback(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *TDelegateInterface*<br/>
 Un parámetro de plantilla que especifica la interfaz del delegado al que se llamará cuando se produzca un evento.
@@ -227,29 +227,29 @@ Parámetro de plantilla que especifica el tipo del octavo argumento del método 
 *TArg9*<br/>
 Un parámetro de plantilla que especifica el tipo del noveno argumento del método de devolución de llamada.
 
-*callback*<br/>
+*regreso*<br/>
 Un objeto que representa el objeto de devolución de llamada y su función miembro.
 
 *object*<br/>
 El objeto a cuya función miembro se llama cuando se produce un evento.
 
-*forma*<br/>
+*method*<br/>
 La función miembro a la que se llamará cuando se produzca un evento.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Un objeto cuya función miembro es el método de devolución de llamada especificado.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La base de un objeto delegado debe ser `IUnknown`, no `IInspectable`.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 **Encabezado:** Event. h
 
 **Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

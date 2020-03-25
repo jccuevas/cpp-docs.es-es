@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador C4355
+title: Advertencia del compilador C4355
 ms.date: 11/04/2016
 f1_keywords:
 - C4355
 helpviewer_keywords:
 - C4355
 ms.assetid: b819ecab-8a07-42d7-8fa4-1180d51626c0
-ms.openlocfilehash: f1f5e5be2606a03ec5e9ecd0c571f94c25f82494
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ddc0d1968ae373ff1e81c98a513e6f84fdb885e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623746"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165332"
 ---
-# <a name="compiler-warning-c4355"></a>ADVERTENCIA del compilador C4355
+# <a name="compiler-warning-c4355"></a>Advertencia del compilador C4355
 
 'this': utilizado en la lista de inicializadores de miembro base
 

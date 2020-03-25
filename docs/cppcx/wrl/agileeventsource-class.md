@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441270"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214193"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
@@ -61,7 +61,7 @@ La gran mayoría de los componentes del Windows Runtime son componentes ágiles.
 |----------|-----------------|
 |[AgileEventSource:: Add (método)](#add)|Anexa el controlador de eventos ágil que representa la interfaz de delegado especificada al conjunto de controladores de eventos para el objeto **AgileEventSource** actual.|
 
-## <a name="add"></a>AgileEventSource:: Add (método)
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource:: Add (método)
 
 Anexa el controlador de eventos representado por la interfaz de delegado especificada al conjunto de controladores de eventos para el objeto [EventSource](eventsource-class.md) actual.
 
