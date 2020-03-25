@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1083
 ms.assetid: b09bc34d-35d5-4676-b000-fd7d434400d9
-ms.openlocfilehash: 304c70e7fe9a7eca4ee56beab2c62494233da55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e005142e40e1e7e2fc4a75ffd45e0d3aa4a164ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366880"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193373"
 ---
 # <a name="nmake-fatal-error-u1083"></a>Error grave de NMAKE U1083
 
-la macro de destino 'target' se expande a nada
+la macro de destino ' target ' se expande a nada
 
-El destino especificado es una invocación de una macro que no se ha definido o tiene un valor null. NMAKE no puede procesar un destino nulo.
+El destino dado es una invocación de una macro que no se ha definido o tiene un valor null. NMAKE no puede procesar un destino nulo.

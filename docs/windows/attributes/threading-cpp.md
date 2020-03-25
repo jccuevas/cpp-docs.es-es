@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513933"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214505"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,25 +28,25 @@ Especifica el modelo de subprocesos para un objeto COM.
 *model*<br/>
 Opta Uno de los siguientes modelos de subprocesos:
 
-- `apartment`(subprocesamiento controlado)
+- `apartment` (subprocesamiento controlado)
 
-- `neutral`(.NET Framework componentes sin interfaz de usuario)
+- `neutral` (componentes de .NET Framework sin interfaz de usuario)
 
-- `single`(subprocesamiento simple)
+- `single` (subprocesamiento simple)
 
-- `free`(subprocesamiento libre)
+- `free` (subprocesamiento libre)
 
-- `both`(subprocesamiento controlado y libre)
+- `both` (subprocesamiento controlado y libre)
 
 El valor predeterminado es `apartment`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El C++ atributo Threading no aparece en el archivo. idl generado, pero se utilizará en la implementación del objeto com.
+El **threading** C++ atributo Threading no aparece en el archivo. idl generado, pero se utilizará en la implementación del objeto com.
 
-En los proyectos ATL, si el atributo [CoClass](coclass.md) también está presente, el modelo de subprocesos especificado por *Model* se pasa como parámetro de plantilla a la clase [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , `coclass` insertado por el atributo.
+En los proyectos ATL, si el atributo [CoClass](coclass.md) también está presente, el modelo de subprocesos especificado por *Model* se pasa como parámetro de plantilla a la clase [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , insertado por el atributo `coclass`.
 
-El atributo **Threading** también protege el acceso a [event_source](event-source.md).
+El atributo **Threading** también protege el acceso a un [event_source](event-source.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -59,13 +59,13 @@ Vea el ejemplo con [licencia](licensed.md) para obtener un ejemplo de uso de **s
 |||
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
-|**Reiterativo**|Sin|
-|**Atributos requeridos**|**coclase**|
+|**Reiterativo**|No|
+|**Atributos requeridos**|**coclass**|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos COM](com-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

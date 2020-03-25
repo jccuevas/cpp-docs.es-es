@@ -9,22 +9,22 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-ms.openlocfilehash: c44e34023ecdeb994ea3a60ea3b699cd5b1488a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3507a5ee7dcfb8bf4f4eee12ef9264c16ad904c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213114"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Requisitos del controlador ODBC para conjuntos de registros dinámicos
 
-En las clases de base de datos ODBC de MFC, conjuntos de registros dinámicos son conjuntos de registros con propiedades dinámicas; permanecen sincronizados con el origen de datos de determinadas maneras. Conjuntos de registros dinámicos MFC (pero no sólo hacia delante) necesita un controlador ODBC compatible con la API de nivel 2. Si el controlador para su [origen de datos](../../data/odbc/data-source-odbc.md) se ajusta a la API de nivel 1 se establece, se pueden seguir utilizando tanto instantáneas actualizables y de solo lectura y conjuntos de registros solo hacia delante, pero no los dynasets. Sin embargo, un controlador de nivel 1 puede admitir conjuntos de registros dinámicos si admite obtención extendida y los cursores dinámicos.
+En las clases de base de datos ODBC de MFC, los dynasets son conjuntos de registros con propiedades dinámicas; permanecen sincronizados con el origen de datos de ciertas maneras. Los dynasets de MFC (pero no los conjuntos de registros solo hacia delante) requieren un controlador ODBC con la conformidad de la API de nivel 2. Si el controlador del [origen de datos](../../data/odbc/data-source-odbc.md) se ajusta al conjunto de API de nivel 1, todavía puede usar instantáneas actualizables y de solo lectura y conjuntos de registros solo hacia delante, pero no dynasets. Sin embargo, un controlador de nivel 1 puede admitir dynasets si admite la captura extendida y los cursores controlados por conjunto de claves.
 
-En la terminología ODBC, conjuntos de registros dinámicos y las instantáneas se denominan cursores. Un cursor es un mecanismo utilizado para realizar el seguimiento de su posición en un conjunto de registros. Para obtener más información sobre los requisitos del controlador para conjuntos de registros dinámicos, vea [Dynaset](../../data/odbc/dynaset.md). Para obtener más información acerca de los cursores, vea el [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK en la documentación de MSDN.
+En la terminología de ODBC, los conjuntos de registros dinámicos y las instantáneas se denominan cursores. Un cursor es un mecanismo que se usa para realizar un seguimiento de su posición en un conjunto de registros. Para obtener más información sobre los requisitos de controladores para dynasets, vea [Dynaset](../../data/odbc/dynaset.md). Para obtener más información sobre los cursores, vea el SDK de [Conectividad abierta de bases de datos (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) en la documentación de MSDN.
 
 > [!NOTE]
->  Para conjuntos de registros actualizables, el controlador ODBC debe admitir instrucciones de actualización por posición o el `::SQLSetPos` función de la API de ODBC. Si se admiten ambas, MFC utiliza `::SQLSetPos` para mejorar la eficacia. Como alternativa, las instantáneas, puede usar la biblioteca de cursores, que proporciona la compatibilidad necesaria para las instantáneas actualizables (cursores estáticos y las instrucciones update posicionadas).
+>  En el caso de los conjuntos de registros actualizables, el controlador ODBC debe admitir instrucciones Update posicionadas o la función de la API de ODBC `::SQLSetPos`. Si se admiten ambos, MFC utiliza `::SQLSetPos` para mayor eficacia. Como alternativa, en el caso de las instantáneas, puede usar la biblioteca de cursores, que proporciona la compatibilidad necesaria para las instantáneas actualizables (cursores estáticos y instrucciones Update posicionadas).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conceptos básicos de ODBC](../../data/odbc/odbc-basics.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 4c0544df55fc71ace697d7e0a53ba303706e1378
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201128"
 ---
 # <a name="compiler-error-c3390"></a>Error del compilador C3390
 
 'type_arg': argumento de tipo no válido para el parámetro genérico 'param' de 'generic_type' genérico; debe ser un tipo de referencia
 
-Se crearon instancias de un tipo genérico incorrectamente.  Compruebe la definición de tipo.  Para obtener más información, consulte [Genéricos](../../extensions/generics-cpp-component-extensions.md).
+Se crearon incorrectamente instancias de un tipo genérico.  Compruebe la definición de tipo.  Para más información, vea [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
-En el primer ejemplo C# se usa para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos C++en/CLR. Para obtener más información, vea [Constraints on Type Parameters](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters) (Restricciones de tipos de parámetros [Guía de programación de C#]).
+En el primer ejemplo C# se usa para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos C++en/CLR. Para obtener más información, vea [Restricciones de tipos de parámetros](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```csharp
 // C3390.cs

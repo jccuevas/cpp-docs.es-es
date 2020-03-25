@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: bba57d495553e9622fcece9d036fc4f6eff3fa04
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301605"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170610"
 ---
 # <a name="c-bit-fields"></a>Campos de bits de C
 
@@ -21,7 +21,7 @@ Las clases y estructuras pueden contener miembros que ocupan menos almacenamient
 
 *declarator* **:** *Constant-Expression*
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El *declarador* (opcional) es el nombre por el que se tiene acceso al miembro en el programa. Debe ser de tipo entero (incluidos los tipos enumerados). *Constant-Expression* especifica el número de bits que el miembro ocupa en la estructura. Se pueden utilizar campos de bits anónimos (es decir, miembros de campos de bits sin identificador) para rellenar.
 
@@ -85,6 +85,6 @@ En la lista siguiente se detallan operaciones erróneas en campos de bits:
 
 - Inicializar una referencia no**const** con un campo de bits.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases y structs](../cpp/classes-and-structs-cpp.md)

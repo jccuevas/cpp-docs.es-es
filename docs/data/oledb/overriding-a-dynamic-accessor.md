@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282941"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209851"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Invalidar un descriptor de acceso dinámico
 
-Cuando se usa un descriptor de acceso dinámico, como `CDynamicAccessor`, el comando `Open` método crea un descriptor de acceso automáticamente, según la información de columna del conjunto de filas abierto. Puede reemplazar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.
+Cuando se usa un descriptor de acceso dinámico como `CDynamicAccessor`, el método de `Open` de comandos crea un descriptor de acceso automáticamente, en función de la información de columna del conjunto de filas abierto. Puede invalidar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.
 
-Para reemplazar el descriptor de acceso dinámico, pase **false** como el último parámetro para el `CCommand::Open` método. Esto evita que `Open` pueda crear automáticamente un descriptor de acceso. A continuación, puede llamar a `GetColumnInfo` y llamar a `AddBindEntry` para cada columna que desea enlazar. El código siguiente muestra cómo hacerlo:
+Para reemplazar el descriptor de acceso dinámico, pase **false** como último parámetro al método `CCommand::Open`. Esto impide que `Open` cree un descriptor de acceso automáticamente. A continuación, puede llamar a `GetColumnInfo` y llamar a `AddBindEntry` por cada columna que desee enlazar. En el código siguiente se muestra cómo hacerlo:
 
 ```cpp
 USES_CONVERSION;
@@ -69,6 +69,6 @@ while (product.MoveNext() == S_OK)
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

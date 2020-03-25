@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160437"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194868"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Error de las herramientas del vinculador LNK1313
 
 > módulo ijw/native detectado; no se puede vincular con módulos puros
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La versión actual de Visual C++ no admite la vinculación de archivos .obj administrados/nativos nativo o mixto con archivos .obj compilados con **/CLR: pure**.
+La versión actual de Visual C++ no admite la vinculación de archivos. obj nativos o administrados mixtos o nativos con archivos. obj compilados con **/clr: Pure**.
 
-El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+La opción del compilador **/clr: Pure** ha quedado en desuso en visual Studio 2015 y no se admite en visual Studio 2017.
 
 ## <a name="example"></a>Ejemplo
 

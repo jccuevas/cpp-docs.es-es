@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198138"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Advertencia del compilador (nivel 4) C4754
 
@@ -19,7 +19,7 @@ Las reglas de conversión para las operaciones aritméticas de una comparación 
 
 Se emite la advertencia C4754 porque el resultado de la comparación es siempre el mismo. Esto indica que una de las bifurcaciones de la condición nunca se ejecuta, probablemente porque la expresión de entero asociada es incorrecta. Este defecto de código aparece en las comprobaciones incorrectas de desbordamiento con enteros en la arquitectura de 64 bits.
 
-Las reglas de conversión de enteros son complejas y hay muchos problemas sutiles. Como alternativa a corregir cada advertencia C4754, puede actualizar el código para usar el [Biblioteca SafeInt](../../safeint/safeint-library.md).
+Las reglas de conversión de enteros son complejas y hay muchos problemas sutiles. Como alternativa a corregir cada advertencia de C4754, puede actualizar el código para usar la [biblioteca SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -96,7 +96,7 @@ En este caso, el código corregido se parecería al siguiente:
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**Tenga en cuenta** el número de línea que se hace referencia en las advertencias del compilador es la última línea de una instrucción. En un mensaje de advertencia sobre una instrucción condicional compleja que ocupa varias líneas, la línea que tiene el defecto de código puede estar varias líneas antes de la línea que se notifica. Por ejemplo:
+**Nota:** El número de línea al que se hace referencia en advertencias del compilador es la última línea de una instrucción. En un mensaje de advertencia sobre una instrucción condicional compleja que ocupa varias líneas, la línea que tiene el defecto de código puede estar varias líneas antes de la línea que se notifica. Por ejemplo:
 
 ```cpp
 unsigned long a;

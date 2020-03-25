@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4374
+title: Advertencia del compilador (nivel 1) C4374
 ms.date: 11/04/2016
 f1_keywords:
 - C4374
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 31a43467020e3d90a2f02c667f7cdb6177b4d833
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: a0dbfbe931ec30c0bde2e82718e0817dcfa243b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966441"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187043"
 ---
-# <a name="compiler-warning-level-1-c4374"></a>ADVERTENCIA del compilador (nivel 1) C4374
+# <a name="compiler-warning-level-1-c4374"></a>Advertencia del compilador (nivel 1) C4374
 
 ' function1 ': el método no virtual ' función2 ' no implementará el método de interfaz
 

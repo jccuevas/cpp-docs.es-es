@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171299"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -72,10 +72,10 @@ De forma predeterminada, si *x* es menor que-1 o mayor que 1, **ACOS** devuelve 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ACOS** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **ACOS** siempre toma y devuelve un **valor Double**.
 
@@ -83,7 +83,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ACOS**
 
 |Rutina|Encabezado necesario|Encabezados opcionales|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Ejemplo
 
@@ -135,7 +135,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

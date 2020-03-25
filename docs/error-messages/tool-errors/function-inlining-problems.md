@@ -9,20 +9,20 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184247"
 ---
 # <a name="function-inlining-problems"></a>Problemas en la inclusión de funciones en línea
 
-Si usas la inclusión de funciones, debe:
+Si usa la inclusión de funciones, debe:
 
-- Tiene las funciones en línea implementadas en el archivo de encabezado incluido.
+- Tenga las funciones insertadas implementadas en el archivo de encabezado que incluya.
 
-- Tiene inserción activada (ON) en el archivo de encabezado.
+- Tenga activada la inserción en el archivo de encabezado.
 
 ```cpp
 // LNK2019_function_inline.cpp
@@ -54,11 +54,11 @@ int main() {
 }
 ```
 
-Si usas el `#pragma inline_depth` del compilador de la directiva, asegúrese de tener un valor de 2 o superior establecido. Un valor de cero, se desactivará inclusión entre líneas. Además, asegúrese de que usa el **/Ob1** o **/Ob2** opciones del compilador.
+Si usa la Directiva de compilador de `#pragma inline_depth`, asegúrese de que tiene un valor de 2 o superior establecido. Si el valor es cero, se desactivará la inserción. Asegúrese también de que está usando las opciones del compilador **/ob1** o **/OB2** .
 
-Mezcla de opciones de compilación en línea y no en línea en módulos diferentes, a veces puede causar problemas. Si se crea una biblioteca de C++ con la inclusión de funciones activado ([/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md)) pero el archivo de encabezado correspondiente que describe las funciones tiene desactivada (ninguna opción), obtendrá el error LNK2001. Las funciones no se insertan en el código del archivo de encabezado, pero puesto que no están en el archivo de biblioteca no hay ninguna dirección para resolver la referencia.
+En ocasiones, la combinación de opciones de compilación inline y no alineadas en módulos diferentes puede causar problemas. Si una C++ biblioteca se crea con la inserción de funciones activada ([/ob1](../../build/reference/ob-inline-function-expansion.md) o [/OB2](../../build/reference/ob-inline-function-expansion.md)), pero el archivo de encabezado correspondiente que describe las funciones tiene la inserción desactivada (ninguna opción), obtendrá el error LNK2001. Las funciones no se insertan en el código del archivo de encabezado, pero como no están en el archivo de biblioteca, no hay ninguna dirección para resolver la referencia.
 
-De forma similar, un proyecto que usa la inserción de funciones aún define las funciones en un archivo .cpp en lugar de en el encabezado de archivo también obtendrán LNK2019. El archivo de encabezado se incluye en todas partes lo considera apropiado, pero solo las funciones insertadas cuando el archivo .cpp pasa por el compilador; por lo tanto, el vinculador ve las funciones como externos sin resolver cuando se usa en otros módulos.
+Del mismo modo, un proyecto que usa la inclusión de funciones que define las funciones en un archivo. cpp, en lugar de en el archivo de encabezado, también obtendrá LNK2019. El archivo de encabezado se incluye en cualquier lugar que se considere adecuado, pero las funciones solo se insertan cuando el archivo. cpp pasa a través del compilador; por lo tanto, el vinculador ve las funciones como externas sin resolver cuando se usa en otros módulos.
 
 ```cpp
 // LNK2019_FIP.h
@@ -67,7 +67,7 @@ struct testclass {
 };
 ```
 
-Y entonces
+y, a continuación,
 
 ```cpp
 // LNK2019_FIP.cpp
@@ -76,7 +76,7 @@ Y entonces
 inline void testclass::PublicStatMemFunc1(void) {}
 ```
 
-Y entonces
+y, a continuación,
 
 ```cpp
 // LNK2019_FIP_2.cpp
@@ -91,6 +91,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

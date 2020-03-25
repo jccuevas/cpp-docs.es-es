@@ -19,12 +19,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 03f7f6f5a1a2842ad7fb0ba2715fada130277e70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187991"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instrucciones try, throw y catch (C++)
 
@@ -72,9 +72,9 @@ MyData GetNetworkResource()
 }
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El código después de la cláusula **try** es la sección protegida del código. La expresión Throw *produce*, es decir, produce una excepción. El bloque de código después de la cláusula **catch** es el controlador de excepciones. Este es el controlador que *detecta* la excepción que se produce si los tipos de las expresiones **Throw** y **catch** son compatibles. Para obtener una lista de las reglas que rigen la coincidencia de tipos en los bloques **catch** , consulte [cómo se evalúan los bloques Catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si la instrucción **catch** especifica puntos suspensivos (...) en lugar de un tipo, el bloque **catch** controla todos los tipos de excepciones. Al compilar con la opción [/EHA](../build/reference/eh-exception-handling-model.md) , se pueden incluir excepciones estructuradas de C y excepciones asincrónicas generadas por el sistema o generadas por la aplicación, como la protección de memoria, la división por cero y las infracciones de punto flotante. Dado que los bloques **catch** se procesan en el orden del programa para encontrar un tipo coincidente, un controlador de puntos suspensivos debe ser el último controlador del bloque **try** asociado. Use `catch(...)` con precaución; no permita que un programa continúe a menos que el bloque catch sepa controlar la excepción específica que se detecta. Normalmente, un bloque `catch(...)` se emplea para registrar errores y realizar limpiezas especiales antes de que se detenga la ejecución de un programa.
+El código después de la cláusula **try** es la sección protegida del código. La **throw** expresión Throw *produce*, es decir, produce una excepción. El bloque de código después de la cláusula **catch** es el controlador de excepciones. Este es el controlador que *detecta* la excepción que se produce si los tipos de las expresiones **Throw** y **catch** son compatibles. Para obtener una lista de las reglas que rigen la coincidencia de tipos en los bloques **catch** , consulte [cómo se evalúan los bloques Catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si la instrucción **catch** especifica puntos suspensivos (...) en lugar de un tipo, el bloque **catch** controla todos los tipos de excepciones. Al compilar con la opción [/EHA](../build/reference/eh-exception-handling-model.md) , se pueden incluir excepciones estructuradas de C y excepciones asincrónicas generadas por el sistema o generadas por la aplicación, como la protección de memoria, la división por cero y las infracciones de punto flotante. Dado que los bloques **catch** se procesan en el orden del programa para encontrar un tipo coincidente, un controlador de puntos suspensivos debe ser el último controlador del bloque **try** asociado. Use `catch(...)` con precaución; no permita que un programa continúe a menos que el bloque catch sepa controlar la excepción específica que se detecta. Normalmente, un bloque `catch(...)` se emplea para registrar errores y realizar limpiezas especiales antes de que se detenga la ejecución de un programa.
 
 Una expresión **Throw** que no tiene ningún operando vuelve a iniciar la excepción que se está controlando actualmente. Se recomienda usar este formato al volver a iniciar la excepción, ya que esto conserva la información de tipo polimórfico de la excepción original. Este tipo de expresión solo se debe usar en un controlador **catch** o en una función a la que se llama desde un controlador **catch** . El objeto de excepción que se vuelve a iniciar es el objeto de excepción original, no una copia.
 
@@ -91,7 +91,7 @@ catch(...) {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Prácticas C++ recomendadas modernas para excepciones y control de errores](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
