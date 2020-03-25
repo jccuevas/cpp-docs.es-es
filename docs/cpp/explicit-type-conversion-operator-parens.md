@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-ms.openlocfilehash: 9dc9440db9ea1ff7285ff9b682f6be9900c2a1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 079a3390df56ba55bd4d71a320faa249266abb54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189018"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operador de conversión explícita de tipos: ()
 
@@ -25,15 +25,15 @@ C++ permite la conversión de tipos explícita mediante una sintaxis similar a l
 simple-type-name ( expression-list )
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Un *simple-type-name* seguido por un *expression-list* incluida entre paréntesis crea un objeto del tipo especificado usando las expresiones especificadas. En el ejemplo siguiente se muestra una conversión de tipo explícita al tipo int:
+Un *simple-type-name* seguido de una *expresión-List* entre paréntesis crea un objeto del tipo especificado mediante las expresiones especificadas. En el ejemplo siguiente se muestra una conversión de tipo explícita al tipo int:
 
 ```cpp
 int i = int( d );
 ```
 
-El ejemplo siguiente se muestra un `Point` clase.
+En el ejemplo siguiente se muestra una clase `Point`.
 
 ## <a name="example"></a>Ejemplo
 
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Salida
+## <a name="output"></a>Output
 
 ```Output
 x = 20, y = 10
@@ -116,16 +116,16 @@ struct Point
 Point pt = Point( 3, 10 );
 ```
 
-El ejemplo anterior, que utiliza la conversión de estilo de función, muestra cómo convertir dos valores (uno para *x* y otro para *y*) para el tipo definido por el usuario `Point`.
+En el ejemplo anterior, que utiliza la conversión de estilo de función, se muestra cómo convertir dos valores (uno para *x* y otro para *y*) en el tipo definido por el usuario `Point`.
 
 > [!CAUTION]
 >  Utilice las conversiones de tipos explícitas con cuidado, ya que invalidan la comprobación de tipos integrada del compilador de C++.
 
-El [cast](../cpp/cast-operator-parens.md) notación debe usarse para las conversiones a tipos que no tienen un *simple-type-name* (puntero o referencia de tipos, por ejemplo). Conversión a tipos que se puede expresar con una *simple-type-name* pueden escribirse en cualquiera de las formas.
+La notación de [conversión](../cpp/cast-operator-parens.md) se debe usar para las conversiones a tipos que no tienen un *nombre de tipo simple* (por ejemplo, un puntero o un tipo de referencia). La conversión a tipos que se pueden expresar con un *simple-type-name* se puede escribir en cualquier forma.
 
 La definición de tipos en las conversiones "cast" no es válida.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones postfijas](../cpp/postfix-expressions.md)<br/>
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

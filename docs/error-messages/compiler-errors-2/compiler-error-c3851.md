@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3851
 ms.assetid: da30c21c-33aa-4439-8fb3-2f5021ea4985
-ms.openlocfilehash: 52c4f3a393ffaf2b61a65c8e2e0dcc8efac08288
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97d9ef1eeeffa0e5a63d2c8ae2428a3fad0ff238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380947"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165592"
 ---
 # <a name="compiler-error-c3851"></a>Error del compilador C3851
 
-> '*char*': un nombre de carácter universal no puede designar un carácter en el juego de caracteres básico
+> '*Char*': un nombre de carácter universal no puede designar un carácter en el juego de caracteres básico
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-En código compilado como C++, no se puede usar un nombre de carácter universal que representa un carácter del juego básico de caracteres de código fuente fuera un literal de cadena o carácter. Para obtener más información, vea [Character Sets](../../cpp/character-sets.md). En el código compilado como C, no se puede usar un nombre de carácter universal para los caracteres en el intervalo 0 x 20-0x7f, inclusive, excepto 0 x 24 ('$'), 0 x 40 ('\@'), o 0 x 60 ('\`').
+En código compilado como C++, no se puede usar un nombre de carácter universal que representa un carácter del juego básico de caracteres de código fuente fuera un literal de cadena o carácter. Para obtener más información, vea [Character Sets](../../cpp/character-sets.md). En el código compilado como C, no se puede usar un nombre de carácter universal para los caracteres del intervalo 0x20-0x7F, inclusive, excepto 0x24 (' $ '), 0x40 ('\@') o 0x60 ('\`').
 
 ## <a name="example"></a>Ejemplo
 

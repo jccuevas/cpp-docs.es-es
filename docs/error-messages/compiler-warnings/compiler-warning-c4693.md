@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c3db18b400ce94bff3c643d6728a6613061039
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311328"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165137"
 ---
 # <a name="compiler-warning-c4693"></a>Advertencia del compilador C4693
 
 > 'class': una clase abstracta sealed no puede tener miembros de instancia 'Test'
 
-Si un tipo se marca [sealed](../../extensions/sealed-cpp-component-extensions.md) y [abstracta](../../extensions/abstract-cpp-component-extensions.md), sólo puede tener miembros estáticos.
+Si un tipo se marca como [sellado](../../extensions/sealed-cpp-component-extensions.md) y [abstracto](../../extensions/abstract-cpp-component-extensions.md), solo puede tener miembros estáticos.
 
-Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, use [advertencia #pragma](../../preprocessor/warning.md).
+Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, use [#pragma ADVERTENCIA](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Ejemplo
 

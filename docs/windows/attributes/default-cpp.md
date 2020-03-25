@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167191"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -32,18 +32,18 @@ Interfaz predeterminada que estará disponible para los entornos de scripting qu
 
 Si no se especifica ninguna interfaz predeterminada, se usa la primera aparición de una interfaz sin origen como valor predeterminado.
 
-*interface2*<br/>
+*interfaz2*<br/>
 Opta La interfaz de origen predeterminada. También debe especificar esta interfaz con el atributo [source](source-cpp.md) .
 
 Si no se especifica ninguna interfaz de origen predeterminada, se usa la primera interfaz de origen como valor predeterminado.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo C++ **default** tiene la misma funcionalidad que el atributo MIDL [default](/windows/win32/Midl/default) . El atributo **default** también se usa con el atributo [case](case-cpp.md) .
 
 ## <a name="example"></a>Ejemplo
 
-En el código siguiente se muestra cómo se usa **default** en la definición de una coclase `ICustomDispatch` para especificar como la interfaz de programación predeterminada:
+En el código siguiente se muestra cómo se usa **default** en la definición de una coclase para especificar `ICustomDispatch` como la interfaz de programación predeterminada:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -100,14 +100,14 @@ El atributo [source](source-cpp.md) también tiene un ejemplo de cómo usar **de
 |||
 |-|-|
 |**Se aplica a**|**clase**, **estructura**, miembro de datos|
-|**Reiterativo**|Sin|
-|**Atributos requeridos**|**coclase** (cuando se aplica a la **clase** o **struct**)|
+|**Reiterativo**|No|
+|**Atributos requeridos**|**coclase** (cuando se aplica a una **clase** o **struct**)|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[coclase](coclass.md)
+[coclass](coclass.md)

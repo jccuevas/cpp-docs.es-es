@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514062"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166372"
 ---
 # <a name="restricted"></a>restricted
 
@@ -30,7 +30,7 @@ Especifica que no se puede llamar a un miembro de un módulo, interfaz o dispint
 *interfaces*<br/>
 Una o más interfaces a las que no se puede llamar arbitrariamente en un objeto COM. Este parámetro solo es válido cuando se aplica a una clase.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **Restricted** C++ tiene la misma funcionalidad que el atributo MIDL [restringido](/windows/win32/Midl/restricted) .
 
@@ -68,13 +68,13 @@ class c : public a, public b
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz, **interfaz**, **clase**, **estructura**|
-|**Reiterativo**|Sin |
-|**Atributos requeridos**|**coclase** (cuando se aplica a la **clase** o **struct**)|
+|**Reiterativo**|No|
+|**Atributos requeridos**|**coclase** (cuando se aplica a una **clase** o **struct**)|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>

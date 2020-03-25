@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - M6201
 ms.assetid: 4041c331-d9aa-4dd4-b565-7dbe0218538c
-ms.openlocfilehash: 6d3f107de7e45653374036ecafaa864cb3eff5b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b1cd0d3fcd86a2174b19da41176dd97f547a295
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393251"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193711"
 ---
 # <a name="math-error-m6201"></a>Error matemático M6201
 
-'function': error de _dominio
+' función ': error de _DOMAIN
 
-Un argumento a la función especificada no era fuera del dominio de los valores de entrada válidos para esa función.
+Un argumento de la función especificada estaba fuera del dominio de valores de entrada válidos para esa función.
 
 ## <a name="example"></a>Ejemplo
 
@@ -26,4 +26,4 @@ result = sqrt(-1.0)   // C statement
 result = SQRT(-1.0)   !  FORTRAN statement
 ```
 
-Este error invoca el `_matherr` función con el nombre de función, sus argumentos y el tipo de error. Puede volver a escribir el `_matherr` función para personalizar el tratamiento de determinados errores de tiempo de ejecución matemático de punto flotante.
+Este error llama a la función `_matherr` con el nombre de la función, sus argumentos y el tipo de error. Puede volver a escribir la función `_matherr` para personalizar el control de determinados errores matemáticos de punto flotante en tiempo de ejecución.

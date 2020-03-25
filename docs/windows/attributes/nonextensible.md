@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514397"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214705"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Especifica que la `IDispatch` implementación solo incluye las propiedades y los métodos enumerados en la descripción de la interfaz y no se puede extender con miembros adicionales en tiempo de ejecución.
+Especifica que la implementación de `IDispatch` solo incluye las propiedades y los métodos enumerados en la descripción de la interfaz y no se puede extender con miembros adicionales en tiempo de ejecución.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,7 +23,7 @@ Especifica que la `IDispatch` implementación solo incluye las propiedades y los
 [nonextensible]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **nonextensible (** C++ tiene la misma funcionalidad que el atributo MIDL [nonextensible (](/windows/win32/Midl/nonextensible) .
 
@@ -55,13 +55,13 @@ __interface IFireTabCtrl
 |||
 |-|-|
 |**Se aplica a**|**interface**|
-|**Reiterativo**|Sin|
-|**Atributos requeridos**|`dual`y `oleautomation`, o`dispinterface`|
+|**Reiterativo**|No|
+|**Atributos requeridos**|`dual` y `oleautomation`, o `dispinterface`|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)

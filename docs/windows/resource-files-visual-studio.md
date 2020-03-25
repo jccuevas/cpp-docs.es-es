@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167880"
 ---
 # <a name="resource-files-c"></a>Archivos de recursos (C++)
 
@@ -50,7 +50,7 @@ El término *archivo de recursos* puede hacer referencia a varios tipos de archi
 
 Los recursos que se encuentran en otros tipos de archivo, como. exe,. dll y. res, se conocen como *recursos*.
 
-Puede trabajar con *recursos* y *archivos de recursos* desde dentro del proyecto. También puede trabajar con aquellos que no forman parte del proyecto actual o que se crearon fuera del entorno de desarrollo de Visual Studio. Por ejemplo, se puede:
+Puede trabajar con *recursos* y *archivos de recursos* desde dentro del proyecto. También puede trabajar con aquellos que no forman parte del proyecto actual o que se crearon fuera del entorno de desarrollo de Visual Studio. Por ejemplo, puede:
 
 - Trabajar con archivos de recursos anidados e incluidos condicionalmente.
 
@@ -70,7 +70,7 @@ Para obtener más información sobre los recursos, vea cómo [crear recursos](..
 
 Se pueden abrir los siguientes tipos de archivos para editar los recursos que contienen:
 
-| Nombre del archivo | Descripción |
+| Nombre de archivo | Descripción |
 |---|---|
 | .rc | Archivos de script de recursos |
 | .rct | Archivos de plantilla de recursos |
@@ -82,7 +82,7 @@ Se pueden abrir los siguientes tipos de archivos para editar los recursos que co
 
 Al editar recursos, el entorno de Visual Studio funciona con y afecta a los siguientes archivos:
 
-| Nombre del archivo | Descripción |
+| Nombre de archivo | Descripción |
 |---|---|
 | Resource.h | Archivo de encabezado generado por el entorno de desarrollo que contiene definiciones de símbolos.<br/><br/>Incluir este archivo en el control de código fuente. |
 | Filename.aps | Versión binaria del archivo de script de recursos actual usado para la carga rápida.<br /><br /> Los editores de recursos no leen directamente los archivos. RC o Resource. h. El compilador de recursos los compila en archivos. APS utilizados por los editores de recursos. Este archivo es un paso de compilación y solamente almacena datos simbólicos.<br/><br/>Al igual que con un proceso de compilación normal, la información que no es simbólica, como los comentarios, se descarta durante el proceso de compilación.<br/><br/>Siempre que el archivo. APS no esté sincronizado con el archivo. rc, se volverá a generar el archivo. rc. Por ejemplo, al **Guardar**, el editor de recursos sobrescribe el archivo. RC y el archivo resource. h. Cualquier cambio en los propios recursos permanece incorporado en el archivo. rc, pero los comentarios siempre se perderán una vez que se sobrescriba el archivo. rc. Para obtener información sobre cómo conservar los comentarios, vea [incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>Normalmente, no se debe incluir el archivo. APS en el control de código fuente. |
@@ -108,7 +108,7 @@ En C++ los proyectos de escritorio, los recursos de manifiesto son archivos XML 
 </dependency>
 ```
 
-En el caso de una aplicación de Windows XP o Windows Vista, el recurso de manifiesto debe especificar la versión más reciente de los controles comunes de Windows que va a usar la aplicación. En el ejemplo anterior se `6.0.0.0`usa la versión, que es compatible con el [control Syslink](/windows/win32/Controls/syslink-overview).
+En el caso de una aplicación de Windows XP o Windows Vista, el recurso de manifiesto debe especificar la versión más reciente de los controles comunes de Windows que va a usar la aplicación. En el ejemplo anterior se usa la versión `6.0.0.0`, que es compatible con el [control Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > Solo puede tener un recurso de manifiesto por módulo.
@@ -129,7 +129,7 @@ Para ver la información de versión y tipo contenida en un recurso del manifies
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>

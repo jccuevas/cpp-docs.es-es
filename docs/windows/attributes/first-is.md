@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501555"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167022"
 ---
 # <a name="first_is"></a>first_is
 
@@ -28,7 +28,7 @@ Especifica el índice del primer elemento de la matriz que se va a transmitir.
 *expression*<br/>
 Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **first_is** C++ tiene la misma funcionalidad que el atributo MIDL [first_is](/windows/win32/Midl/first-is) .
 
@@ -63,13 +63,13 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |||
 |-|-|
 |**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

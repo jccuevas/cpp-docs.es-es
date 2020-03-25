@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4618
+title: Advertencia del compilador (nivel 1) C4618
 ms.date: 11/04/2016
 f1_keywords:
 - C4618
 helpviewer_keywords:
 - C4618
 ms.assetid: 6ff10d0a-6d5b-4373-8196-1d57bb6b1611
-ms.openlocfilehash: fa9fc7d4a86ee686a9cd5d8d21412bd3346bcd80
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 5e6c945932699119f97bca2d3d118a03665f6f9f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052566"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185885"
 ---
-# <a name="compiler-warning-level-1-c4618"></a>ADVERTENCIA del compilador (nivel 1) C4618
+# <a name="compiler-warning-level-1-c4618"></a>Advertencia del compilador (nivel 1) C4618
 
 los parámetros de pragma incluyen una cadena vacía; pragma omitida
 

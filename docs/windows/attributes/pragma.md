@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 56b1aa4bf445095b86a1ea6792bfc78f45266e9a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514277"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166489"
 ---
 # <a name="pragma"></a>pragma
 
@@ -28,7 +28,7 @@ Emite la cadena especificada en el archivo. idl generado sin el uso de Comillas.
 *pragma_statement*<br/>
 Pragma que se desea incluir en el archivo. idl generado.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **pragma** C++ tiene la misma funcionalidad que el atributo MIDL de [pragma](/windows/win32/Midl/pragma) .
 
@@ -55,13 +55,13 @@ __interface A
 |||
 |-|-|
 |**Se aplica a**|En cualquier lugar|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

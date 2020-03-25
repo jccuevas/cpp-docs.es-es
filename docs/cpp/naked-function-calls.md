@@ -11,12 +11,12 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-ms.openlocfilehash: 242fe83807c6608a09492d0f1f817e3b6e50e530
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 14bc64314cf64e7d13c076c314419e3d636432d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177942"
 ---
 # <a name="naked-function-calls"></a>Llamadas de función naked
 
@@ -34,6 +34,6 @@ Las funciones declaradas con el atributo **naked** se emiten sin código de pró
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Convenciones de llamada](../cpp/calling-conventions.md)

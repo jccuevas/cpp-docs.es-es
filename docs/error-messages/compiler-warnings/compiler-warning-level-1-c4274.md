@@ -1,32 +1,32 @@
 ---
-title: Compilador advertencia (nivel 1) C4274
+title: ADVERTENCIA del compilador (nivel 1) C4274
 ms.date: 11/04/2016
 f1_keywords:
 - C4274
 helpviewer_keywords:
 - C4274
 ms.assetid: 5a948680-7ed1-469f-978d-ae99d154e161
-ms.openlocfilehash: f73fa8e09baab127e7755ebe3def69c2fb585744
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f2350f275f883e7bf18aa1621d08b34132e8dfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207212"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175851"
 ---
-# <a name="compiler-warning-level-1-c4274"></a>Compilador advertencia (nivel 1) C4274
+# <a name="compiler-warning-level-1-c4274"></a>ADVERTENCIA del compilador (nivel 1) C4274
 
-\#Ident omitida; Consulte la documentación de #pragma comment (exestr, 'string')
+se omitió \#identidad; Consulte la documentación de #pragma comment (exestr, ' String ')
 
-El `#ident` directiva, que inserta una cadena especificada por el usuario en el objeto o archivo ejecutable, está en desuso. Por lo tanto, el compilador omite la directiva.
+La Directiva `#ident`, que inserta una cadena especificada por el usuario en el objeto o el archivo ejecutable, está en desuso. Por consiguiente, el compilador omite la Directiva.
 
 > [!CAUTION]
->  C4274 advertencia le informa de que se va a usar el [#pragma comment (exestr, 'string')](../../preprocessor/comment-c-cpp.md) directiva. Sin embargo, este Consejo está en desuso y se revisarán en una versión futura del compilador. Si usas el `#pragma` la directiva, la herramienta del vinculador (LINK.exe) omite el registro de comentario producido por la directiva y emite la advertencia [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). En lugar de la `#ident` la directiva, se recomienda usar una cadena de recurso de la versión de archivo en la aplicación.
+>  Warning C4274 le aconseja usar la directiva [#pragma comment (exestr, ' String ')](../../preprocessor/comment-c-cpp.md) . Sin embargo, este Consejo está en desuso y se revisará en una versión futura del compilador. Si usa la Directiva `#pragma`, la herramienta vinculador (LINK. exe) omite el registro de comentario generado por la Directiva y emite la advertencia [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). En lugar de la Directiva `#ident`, se recomienda usar una cadena de recurso de versión de archivo en la aplicación.
 
 ## <a name="to-correct-this-error"></a>Para corregir este error
 
-- Quitar el `#ident "` *cadena* `"` directiva.
+- Quite la `#ident "`*cadena*`"` Directiva.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [comment (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
 [Advertencia de las herramientas del vinculador LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>

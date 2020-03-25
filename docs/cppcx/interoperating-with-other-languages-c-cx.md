@@ -2,12 +2,12 @@
 title: Interoperar con otros lenguajes (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-ms.openlocfilehash: bfd4509a55b969aa6a120a8d2c75cddc87d715e2
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6ce36e188fb1d3f338aae219a1cc6a87a7e11617
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740477"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214310"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interoperar con otros lenguajes (C++/CX)
 
@@ -17,7 +17,7 @@ En esta parte de la documentación se describe cómo C++usar/CX para crear Windo
 
 - [Integración de JavaScript](../cppcx/javascript-integration-c-cx.md)
 
-- [Integración de CLR](../cppcx/clr-integration-c-cx.md)
+- [Integración CLR](../cppcx/clr-integration-c-cx.md)
 
 - [Integración de WRL](../cppcx/wrl-integration-c-cx.md)
 

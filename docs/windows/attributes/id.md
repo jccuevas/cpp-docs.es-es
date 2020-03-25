@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168062"
 ---
 # <a name="id"></a>id
 
-Especifica un parámetro de DISPID para una función miembro (ya sea una propiedad o un método, en una interfaz o dispinterface).
+Especifica un parámetro de *DISPID* para una función miembro (ya sea una propiedad o un método, en una interfaz o dispinterface).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,10 +25,10 @@ Especifica un parámetro de DISPID para una función miembro (ya sea una propied
 
 ### <a name="parameters"></a>Parámetros
 
-*dispid*<br/>
+*DISPID*<br/>
 IDENTIFICADOR de envío del método de interfaz.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **ID** C++ tiene la misma funcionalidad que el atributo MIDL [ID](/windows/win32/Midl/id) .
 
@@ -43,13 +43,13 @@ Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de cómo usar **ID
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

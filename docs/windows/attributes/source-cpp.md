@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166229"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -28,7 +28,7 @@ En una clase, especifica las interfaces de origen del objeto COM para los puntos
 *interfaces*<br/>
 Una o más interfaces que se especifican al aplicar el atributo de origen a una clase. Este parámetro no se utiliza cuando el origen se aplica a una propiedad o un método.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo de **origen** C++ tiene la misma funcionalidad que el atributo MIDL de [origen](/windows/win32/Midl/source) .
 
@@ -75,15 +75,15 @@ class NN : public b
 |||
 |-|-|
 |**Se aplica a**|**clase**, **estructura**, **interfaz**|
-|**Reiterativo**|Sin|
-|**Atributos requeridos**|`coclass`(cuando se aplica a la clase o struct)|
+|**Reiterativo**|No|
+|**Atributos requeridos**|`coclass` (cuando se aplica a la clase o struct)|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
-[coclase](coclass.md)
+[coclass](coclass.md)

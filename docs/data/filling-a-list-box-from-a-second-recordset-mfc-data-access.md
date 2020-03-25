@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213413"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Llenar un cuadro de lista con datos de otro conjunto de registros (acceso a datos MFC)
 
@@ -28,13 +28,13 @@ El modelo de este tema consta de un conjunto de registros principal que llena lo
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Cómo rellenar un cuadro combinado o un cuadro de lista con datos de otro conjunto de registros
 
-1. Crear el objeto de conjunto de registros ([CRecordset](../mfc/reference/crecordset-class.md).
+1. Cree el objeto de conjunto de registros ([CRecordset](../mfc/reference/crecordset-class.md).
 
-1. Obtener un puntero a la [CComboBox](../mfc/reference/ccombobox-class.md) objeto para el control de cuadro combinado.
+1. Obtenga un puntero al objeto [CComboBox](../mfc/reference/ccombobox-class.md) para el control de cuadro combinado.
 
 1. Vacíe el cuadro combinado de cualquier contenido anterior.
 
-1. Desplazarse por todos los registros del conjunto de registros, una llamada a [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadena del registro actual que desea agregar al cuadro combinado.
+1. Desplácese por todos los registros del conjunto de registros, llamando a [CComboBox:: addString](../mfc/reference/ccombobox-class.md#addstring) para cada cadena del registro actual que desee agregar al cuadro combinado.
 
 1. Inicialice la selección en el cuadro combinado.
 
@@ -68,7 +68,7 @@ Esta función utiliza otro conjunto de registros, `m_courseSet`, que contiene un
 
 Esta función obtiene `m_courseSet` del documento y lo abre. Después, vacía `m_ctlCourseList` y se desplaza a través de `m_courseSet`. Para cada registro, la función llama a la función miembro `AddString` del cuadro combinado para agregar el valor del identificador de curso desde el registro. Por último, el código establece la selección del cuadro combinado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Vistas de registros (acceso a datos MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Lista de controladores ODBC](../data/odbc/odbc-driver-list.md)

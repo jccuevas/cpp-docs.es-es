@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 72d1f5a5720466bf7abf08aaad4acdbab05c408f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490993"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167165"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -23,7 +23,7 @@ Indica la única propiedad enlazable que mejor representa el objeto.
 [defaultbind]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **defaultbind** C++ tiene la misma funcionalidad que el atributo MIDL [defaultbind](/windows/win32/Midl/defaultbind) .
 
@@ -38,13 +38,13 @@ Vea el ejemplo de [Bindable](bindable.md) para ver un ejemplo de cómo usar **de
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

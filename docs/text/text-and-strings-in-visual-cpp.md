@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80b7139996fddc82b206828d4a036922fa1446d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411804"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167607"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texto y cadenas en Visual C++
 
@@ -43,13 +43,13 @@ Describe la compatibilidad de Visual C++ con la programación mediante Unicode y
 [Compatibilidad con Unicode](../text/support-for-unicode.md)<br/>
 Describe Unicode, que es una especificación para admitir todos los juegos de caracteres, incluidos los juegos de caracteres que no pueden representarse en un solo byte.
 
-[Compatibilidad con juegos de caracteres Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
+[Compatibilidad con juegos de caracteres multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Describe MBCS, que es una alternativa a Unicode para la compatibilidad con juegos de caracteres, como el japonés y el chino, que no pueden representarse en un solo byte.
 
 [Asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Proporciona las asignaciones de texto genérico específicas de Microsoft para muchos tipos de datos, rutinas y demás objetos.
 
-[Cómo: Convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md)<br/>
+[Procedimiento para convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md)<br/>
 Muestra cómo se convierten distintos tipos de cadenas de Visual C++ en otras cadenas.
 
 ## <a name="related-sections"></a>Secciones relacionadas
@@ -57,7 +57,7 @@ Muestra cómo se convierten distintos tipos de cadenas de Visual C++ en otras ca
 [Internacionalización](../c-runtime-library/internationalization.md)<br/>
 Describe la compatibilidad internacional en la biblioteca en tiempo de ejecución de C.
 
-[Ejemplos de programación internacional](https://github.com/Microsoft/VCSamples)<br/>
+[Ejemplos internacionales](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International)<br/>
 Proporciona vínculos a ejemplos en los que se muestra la internacionalización en Visual C++.
 
 [Cadenas de idioma de país o región](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>

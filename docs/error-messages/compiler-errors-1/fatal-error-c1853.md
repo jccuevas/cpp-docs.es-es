@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-ms.openlocfilehash: ec2d6bf6bac46cca8bdc2e3b8fe7cc6b7799d78a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 056db975fecef4e101dbbba7e2084236489498c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202870"
 ---
 # <a name="fatal-error-c1853"></a>Error irrecuperable C1853
 
-> '*filename*"archivo de encabezado precompilado es de una versión anterior del compilador, o el encabezado precompilado es de C++ y que está utilizando desde C (o viceversa)
+> el archivo de encabezado precompilado '*filename*' es de una versión anterior del compilador, o bien C++ el encabezado precompilado es y lo está utilizando desde C (o viceversa).
 
 Causas posibles:
 
 - El encabezado precompilado se compiló con una versión anterior del compilador. Intente volver a compilar el encabezado con el compilador actual.
 
-- El encabezado precompilado es de C++ y usas desde Try C. recompilar el encabezado para su uso con C especificando uno de los [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opciones del compilador o el cambio del sufijo del archivo de origen a la "c". Para obtener más información, consulte [dos opciones para precompilar código](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code).
+- El encabezado precompilado C++ es y lo está utilizando desde c. intente volver a compilar el encabezado para usarlo con c especificando una de las opciones del compilador [/TC](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) o cambiando el sufijo del archivo de código fuente a "C". Para obtener más información, vea [dos opciones para precompilar el código](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code).

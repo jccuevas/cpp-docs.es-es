@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451313b5bd1eb5011f1175de5c3bcfe6fb054299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214921"
 ---
 # <a name="cpp_quote"></a>cpp_quote
 
@@ -25,10 +25,10 @@ Emite la cadena especificada, sin los caracteres de Comillas, en el archivo. idl
 
 ### <a name="parameters"></a>Parámetros
 
-*statement*<br/>
+*instrucción*<br/>
 Una instrucción de C.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **cpp_quote** C++ es útil si desea colocar una directiva de preprocesador en un archivo. idl.
 
@@ -38,7 +38,7 @@ El atributo **cpp_quote** tiene la misma funcionalidad que el atributo MIDL [cpp
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [dual](dual.md) para obtener un ejemplo de cómo usar **cpp_quote**.
+Vea el ejemplo de [dual](dual.md) para obtener un ejemplo de uso de **cpp_quote**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -47,13 +47,13 @@ Vea el ejemplo de [dual](dual.md) para obtener un ejemplo de cómo usar **cpp_qu
 |||
 |-|-|
 |**Se aplica a**|En cualquier lugar|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)

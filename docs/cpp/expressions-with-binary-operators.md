@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188992"
 ---
 # <a name="expressions-with-binary-operators"></a>Expresiones con operadores binarios
 
@@ -25,7 +25,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
 
    - Módulo (%)
 
-- [Operadores aditivos](../cpp/additive-operators-plus-and.md)
+- [Operadores de adición](../cpp/additive-operators-plus-and.md)
 
    - Suma (+)
 
@@ -33,9 +33,9 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
 
 - [Operadores de desplazamiento](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Desplazamiento a la derecha (>>)
+   - Desplazamiento a la derecha (> >)
 
-   - Desplazamiento a la izquierda (<<)
+   - Desplazamiento a la izquierda (< <)
 
 - [Operadores relacionales y de igualdad](../cpp/relational-operators-equal-and-equal.md)
 
@@ -43,25 +43,25 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
 
    - Mayor que (>)
 
-   - Menor o igual a (\<=)
+   - Menor o igual que (\<=)
 
-   - Mayor o igual que (> =)
+   - Mayor o igual que (>=)
 
    - Igual a (==)
 
-   - No igual a (!=)
+   - Distinto de (!=)
 
 - Operadores bit a bit
 
-   - [AND bit a bit (&)](../cpp/bitwise-and-operator-amp.md)
+   - [And bit a bit (&)](../cpp/bitwise-and-operator-amp.md)
 
-   - [Bit a bit OR exclusivo (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+   - [Or exclusivo bit a bit (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [Bit a bit OR inclusivo (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+   - [Or inclusivo bit&#124;a bit ()](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Operadores lógicos
 
-   - [Operador lógico AND (& &)](../cpp/logical-and-operator-amp-amp.md)
+   - [AND lógico (& &)](../cpp/logical-and-operator-amp-amp.md)
 
    - [OR lógico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
@@ -71,7 +71,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
 
    - Asignación y suma (+=)
 
-   - Asignación de resta (-)
+   - Asignación de resta (-=)
 
    - Asignación y multiplicación (*=)
 
@@ -81,16 +81,16 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
 
    - Asignación de desplazamiento a la izquierda (<\<=)
 
-   - Asignación de desplazamiento a la derecha (>> =)
+   - Asignación de desplazamiento a la derecha (> > =)
 
-   - Asignación de AND bit a bit (& =)
+   - Asignación and bit a bit (& =)
 
    - Asignación y OR exclusivo bit a bit (^=)
 
-   - Bit a bit asignación OR inclusivo (&#124;=)
+   - Asignación or inclusivo bit&#124;a bit (=)
 
 - [Operador de coma](../cpp/comma-operator.md) (,)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tipos de expresiones](../cpp/types-of-expressions.md)

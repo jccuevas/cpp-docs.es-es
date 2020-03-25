@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4037
 ms.assetid: 9ba02fd3-b04f-4679-bab9-26fa82cf09bb
-ms.openlocfilehash: 9a8121617e622fc12efe5bd26aac23faf2530f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fae7d0f19f96998d2e1a1739bc3e596bbd9ea9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410309"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194205"
 ---
 # <a name="linker-tools-warning-lnk4037"></a>Advertencia de las herramientas del vinculador LNK4037
 
->'*símbolo*' no existe; se ha omitido
+>'*Symbol*' no existe; tendrán
 
-El nombre representativo *símbolo* no se pudo ordenar mediante el uso de la [/Order](../../build/reference/order-put-functions-in-order.md) opción porque no se encontró en el programa. Compruebe la especificación de *símbolo* en el archivo de respuesta de pedido. Para obtener más información, consulte el [/ORDER (colocar funciones en orden)](../../build/reference/order-put-functions-in-order.md) opción del vinculador.
+No se pudo ordenar el *símbolo* de nombre representativo mediante la opción [/Order](../../build/reference/order-put-functions-in-order.md) porque no se encontró en el programa. Compruebe la especificación del *símbolo* en el archivo de respuesta de pedido. Para obtener más información, vea la opción del enlazador [/Order (Put Functions en orden)](../../build/reference/order-put-functions-in-order.md) .
 
 > [!NOTE]
-> VÍNCULO no puede ordenar las funciones estáticas porque los nombres de función estático no son nombres de símbolos públicos. Cuando **/Order** se especifica, se genera esta advertencia del vinculador para cada símbolo en el archivo de respuesta de pedido que sea estático o no se encuentra.
+> LINK no puede ordenar funciones estáticas porque los nombres de funciones estáticas no son nombres de símbolos públicos. Cuando se especifica **/Order** , se genera esta advertencia del vinculador para cada símbolo del archivo de respuesta de pedido que sea estático o no se encuentre.

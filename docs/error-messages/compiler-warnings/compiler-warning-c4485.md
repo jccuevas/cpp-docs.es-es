@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador C4485
+title: Advertencia del compilador C4485
 ms.date: 11/04/2016
 f1_keywords:
 - C4485
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c92f805eb2960336ed34f5da93b6c13f46bf15ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623620"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165150"
 ---
-# <a name="compiler-warning-c4485"></a>ADVERTENCIA del compilador C4485
+# <a name="compiler-warning-c4485"></a>Advertencia del compilador C4485
 
 ' override_function ': coincide con el método de clase Ref base ' base_class_function ', pero no está marcado como ' New ' u ' override '; se presupone ' New ' (y ' virtual ')
 

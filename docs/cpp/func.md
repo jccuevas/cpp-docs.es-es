@@ -4,16 +4,16 @@ ms.date: 10/19/2017
 f1_keywords:
 - __func__
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e94caffe120c325478d8b4f24c1915a516d69f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154300"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179827"
 ---
-# <a name="func"></a>__func__
+# <a name="__func__"></a>__func__
 
-**(C ++ 11)**  El identificador predefinido &#95; &#95;func&#95; &#95; se definió implícitamente como una cadena que contiene el nombre no completo y sin adornar de la función envolvente. &#95;&#95;Func&#95; &#95; está asignada por el estándar de C++ y no es una extensión de Microsoft.
+**(C++ 11)** El identificador &#95; &#95;predefinido FUNC&#95; &#95; se define implícitamente como una cadena que contiene el nombre no completo y sin adornar de la función de inclusión. &#95;&#95;FUNC&#95; &#95; se asigna mediante el C++ estándar y no es una extensión de Microsoft.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve terminada en null const char matriz de caracteres que contiene el nombre de función.
+Devuelve una matriz const char terminada en NULL de caracteres que contiene el nombre de la función.
 
 ## <a name="example"></a>Ejemplo
 

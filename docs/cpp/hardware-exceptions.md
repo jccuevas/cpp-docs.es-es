@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 8adfd59eab0960ab14b2becb8d9864c77196c909
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188681"
 ---
 # <a name="hardware-exceptions"></a>Excepciones de hardware
 
@@ -40,7 +40,7 @@ Las excepciones de hardware reconocidas por Windows se resumen en la tabla sigui
 
 Depuradores, el sistema operativo u otro código de bajo nivel se ocuparán de administrar muchas de las excepciones que se indican en la tabla anterior. El código no debería administrar errores que no sean de enteros y punto flotante. Por lo tanto, lo normal sería usar el filtro de control de excepciones para omitir las excepciones (que se evalúen como 0). En caso contrario, es posible que los mecanismos de nivel inferior no respondan correctamente. Sin embargo, puede tomar las precauciones adecuadas contra el posible efecto de estos errores de bajo nivel escribiendo [controladores de terminación](../cpp/writing-a-termination-handler.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

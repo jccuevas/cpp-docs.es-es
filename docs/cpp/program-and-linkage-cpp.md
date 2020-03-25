@@ -2,12 +2,12 @@
 title: Unidades de traducción y vinculación (C++)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e4e86dc15280bc7aa079f552014975b7ddc68e51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188329"
 ---
 # <a name="translation-units-and-linkage"></a>Unidades de traducción y vinculación
 
@@ -60,6 +60,6 @@ extern const int value = 42;
 
 Consulte [extern](extern-cpp.md) para obtener más información.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conceptos básicos](../cpp/basic-concepts-cpp.md)

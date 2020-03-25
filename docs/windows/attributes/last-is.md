@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514509"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214817"
 ---
 # <a name="last_is"></a>last_is
 
@@ -28,13 +28,13 @@ Especifica el índice del último elemento de la matriz que se va a transmitir.
 *expression*<br/>
 Una o más expresiones del lenguaje C. Se permiten ranuras de argumentos vacías.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **last_is** C++ tiene la misma funcionalidad que el atributo MIDL [last_is](/windows/win32/Midl/last-is) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
+Consulte [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,13 +43,13 @@ Vea [first_is](first-is.md) para obtener un ejemplo de cómo especificar una sec
 |||
 |-|-|
 |**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

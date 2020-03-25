@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Definir constructores de movimiento y mover los operadores de asignación (C++)
+title: 'Cómo: definir constructores de movimiento y operadores de asignación deC++movimiento ()'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345022"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179372"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructores de movimiento y operadores de asignación de movimiento (C++)
 
-Este tema describe cómo escribir un *constructor de movimiento* y un operador de asignación de movimiento para una clase de C++. Un constructor de movimiento permite a los recursos que pertenecen a un objeto de valor r para pasarlos a un valor l sin copiar. Para obtener más información acerca de la semántica de movimiento, consulte [declarador de referencia Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+En este tema se describe cómo escribir un *constructor de movimiento* y un operador de asignación C++ de movimiento para una clase. Un constructor de movimiento permite que los recursos que pertenecen a un objeto rvalue se muevan a un valor l sin copiar. Para obtener más información sobre la semántica de movimiento, vea [declarador de referencia de valor r: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 Este tema se basa en la siguiente clase de C++, `MemoryBlock`, que administra un búfer de memoria.
 
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo la semántica de transferencia de recursos puede mejorar el rendimiento de las aplicaciones. El ejemplo agrega dos elementos a un objeto vectorial y después inserta un nuevo elemento entre los dos existentes. La `vector` clase usa la semántica para realizar la operación de inserción eficazmente moviendo los elementos del vector en lugar de copiarlos de transferencia.
+El ejemplo siguiente muestra cómo la semántica de transferencia de recursos puede mejorar el rendimiento de las aplicaciones. El ejemplo agrega dos elementos a un objeto vectorial y después inserta un nuevo elemento entre los dos existentes. La clase `vector` usa la semántica de movimiento para realizar la operación de inserción eficazmente moviendo los elementos del vector en lugar de copiarlos.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -241,7 +241,7 @@ int main()
 }
 ```
 
-Este ejemplo produce el siguiente resultado:
+En este ejemplo se produce la siguiente salida:
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-El [std:: Move](../standard-library/utility-functions.md#move) función conserva la propiedad rvalue del *otros* parámetro.
+La función [STD:: Move](../standard-library/utility-functions.md#move) conserva la propiedad rvalue del *otro* parámetro.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[STD:: Move](../standard-library/utility-functions.md#move)

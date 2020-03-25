@@ -1,21 +1,21 @@
 ---
-title: includelib (atributo de COM de C++)
+title: includelib ((C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.includelib
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4022a3f1f2d4ccaabe65c24065be8e1c846d604d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214855"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
-Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.
+Hace que un archivo. idl o. h se incluya en el archivo. idl generado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,16 +25,16 @@ Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.
 
 ### <a name="parameters"></a>Parámetros
 
-*name.idl*<br/>
-El nombre del archivo .idl que desee incluir como parte del archivo .idl generado.
+*nombre. idl*<br/>
+Nombre del archivo. idl que desea incluir como parte del archivo. idl generado.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El **includelib** atributo de C++ hace que un archivo IDL o .h para incluirse en el archivo .idl generado después de la `importlib` instrucción.
+El atributo **includelib (** C++ hace que un archivo. idl o. h se incluya en el archivo. idl generado, después de la instrucción `importlib`.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente se muestra en un archivo. cpp:
+El siguiente código se muestra en un archivo. cpp:
 
 ```cpp
 // cpp_attr_ref_includelib.cpp
@@ -51,12 +51,12 @@ El código siguiente se muestra en un archivo. cpp:
 |-|-|
 |**Se aplica a**|En cualquier lugar|
 |**Reiterativo**|Sí|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

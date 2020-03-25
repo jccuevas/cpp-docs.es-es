@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4584
+title: Advertencia del compilador (nivel 1) C4584
 ms.date: 11/04/2016
 f1_keywords:
 - C4584
 helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
-ms.openlocfilehash: 831789f5295fcf91e83de3bd0bba12c8429e9fa3
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: fa736e8dbab775fcd6cdffc467aee1312004fa60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966236"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162158"
 ---
-# <a name="compiler-warning-level-1-c4584"></a>ADVERTENCIA del compilador (nivel 1) C4584
+# <a name="compiler-warning-level-1-c4584"></a>Advertencia del compilador (nivel 1) C4584
 
 ' Class1 ': la clase base ' clase2 ' ya es una clase base de ' class3 '
 

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 9372fa884d75e10c1a0f2ec92d6cca9caa65808e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240379"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167620"
 ---
-# <a name="rawstorageiterator-class"></a>raw_storage_iterator (Clase)
+# <a name="raw_storage_iterator-class"></a>raw_storage_iterator (Clase)
 
 Una clase de adaptador que se proporciona para permitir que los algoritmos almacenen sus resultados en memoria sin inicializar.
 
@@ -30,19 +30,19 @@ template <class OutputIterator, class Type>
 
 ### <a name="parameters"></a>Parámetros
 
-*OutputIterator*\
+\ *OutputIterator*
 Especifica el iterador de salida para el objeto que se almacena.
 
-*Tipo*\
+*Escriba*\
 Tipo de objeto al que se va a asignar almacenamiento.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase describe un iterador de salida que construye objetos del tipo `Type` en la secuencia que genera. Un objeto de clase `raw_storage_iterator` \< **ForwardIterator**, **tipo**> accede al almacenamiento a través de un objeto de iterador hacia delante, de clase `ForwardIterator`, especifique cuándo se Construya el objeto. Para un objeto first de la clase `ForwardIterator`, la expresión  **& \*primera** debe designar el almacenamiento no construido para el siguiente objeto (de tipo `Type`) en la secuencia generada.
+La clase describe un iterador de salida que construye objetos de tipo `Type` en la secuencia que genera. Un objeto de la clase `raw_storage_iterator`\< **ForwardIterator**, **Type**> tiene acceso al almacenamiento a través de un objeto de iterador hacia delante, de la clase `ForwardIterator`, que se especifica al construir el objeto. Para un objeto primero de la clase `ForwardIterator`, la expresión **&\*primero** debe designar el almacenamiento no construido para el siguiente objeto (de tipo `Type`) en la secuencia generada.
 
 Esta clase de adaptador se usa cuando es necesario separar la asignación de memoria y la construcción de objetos. `raw_storage_iterator` puede usarse para copiar objetos en el almacenamiento no inicializado, como la memoria asignada mediante la función `malloc`.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>Constructores
 
@@ -61,11 +61,11 @@ Esta clase de adaptador se usa cuando es necesario separar la asignación de mem
 
 |||
 |-|-|
-|[operator*](#op_star)|Un operador de desreferencia usado para implementar la expresión de iterador de salida \* `ii`  =  `x`.|
-|[operator=](#op_eq)|Un operador de asignación usado para implementar la expresión de iterador de almacenamiento sin formato \* `i`  =  `x` para almacenar en memoria.|
+|[operator*](#op_star)|Un operador de desreferencia usado para implementar la expresión de iterador de salida \* `ii` = `x`.|
+|[operator=](#op_eq)|Operador de asignación que se usa para implementar la expresión de iterador de almacenamiento sin formato \* `i` = `x` para almacenar en memoria.|
 |[operator++](#op_add_add)|Operadores de preincremento y prostincremento para los iteradores de almacenamiento sin formato.|
 
-### <a name="element_type"></a> ELEMENT_TYPE
+### <a name="element_type"></a><a name="element_type"></a>element_type
 
 Proporciona un tipo que describe un elemento para almacenar un iterador de almacenamiento sin formato.
 
@@ -73,11 +73,11 @@ Proporciona un tipo que describe un elemento para almacenar un iterador de almac
 typedef Type element_type;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El tipo es un sinónimo para el parámetro de plantilla de clase raw_storage_iterator `Type`.
+El tipo es un sinónimo del parámetro de plantilla de clase raw_storage_iterator `Type`.
 
-### <a name="iter_type"></a> iter_type
+### <a name="iter_type"></a><a name="iter_type"></a>iter_type
 
 Proporciona un tipo que describe un iterador que subyace a un iterador de almacenamiento sin formato.
 
@@ -85,11 +85,11 @@ Proporciona un tipo que describe un iterador que subyace a un iterador de almace
 typedef ForwardIterator iter_type;
 ```
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla `ForwardIterator`.
 
-### <a name="op_star"></a> operator\*
+### <a name="operator"></a><a name="op_star"></a> operator\*
 
 Un operador de desreferencia usado para implementar la expresión de iterador de almacenamiento sin formato \* *ii* = *x*.
 
@@ -101,9 +101,9 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 
 Una referencia al iterador de almacenamiento sin formato
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Los requisitos para un `ForwardIterator` que están sin formato iterador de almacenamiento debe satisfacer solo requieren que la expresión \* *ii* = *t* sea válida y no indique nada sobre la **operador** o `operator=` por sí solos. Los operadores de miembro en esta implementación devuelve  **\*esto**, de modo que [operador =](#op_eq)(**constType**&) puede realizar el almacenamiento actual en una expresión, como \* *ptr* = `val`.
+Los requisitos para un `ForwardIterator` son que el iterador de almacenamiento sin procesar debe cumplir solo la expresión \* *ii* = *t* sea válida y que no indique nada sobre el **operador** o el `operator=` por su cuenta. Los operadores miembro de esta implementación devuelven **\*este**, de modo que [Operator =](#op_eq)(**constType**&) puede realizar el almacenamiento real en una expresión, como \* *ptr* = `val`.
 
 #### <a name="example"></a>Ejemplo
 
@@ -157,9 +157,9 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="op_eq"></a> operator=
+### <a name="operator"></a><a name="op_eq"></a>operador =
 
-Operador de asignación usado para implementar la expresión del iterador de almacenamiento sin formato \* *i* = *x* para almacenar en memoria.
+Operador de asignación usado para implementar la expresión de iterador de almacenamiento sin formato \* *i* = *x* para almacenar en memoria.
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator=(
@@ -168,18 +168,18 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 #### <a name="parameters"></a>Parámetros
 
-*Val*\
-El valor del objeto del tipo `Type` va a insertar en la memoria.
+\ *Val*
+Valor del objeto de tipo `Type` que se va a insertar en la memoria.
 
 #### <a name="return-value"></a>Valor devuelto
 
 El operador inserta `val` en la memoria y, después, devuelve una referencia al iterador de almacenamiento sin formato.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-Los requisitos para un `ForwardIterator` estado que el iterador de almacenamiento sin formato debe satisfacer solo requieren que la expresión \* *ii* = *t* sea válida y no indique nada sobre el **operador** o `operator=` por sí solos. Estos operadores miembro devuelven **\*this**.
+Los requisitos para un estado `ForwardIterator` que el iterador de almacenamiento sin procesar debe cumplir solo requiere que la expresión \* *ii* = *t* sea válida y que no indique nada sobre el **operador** o el `operator=` por su cuenta. Estos operadores miembro devuelven **\*this**.
 
-El operador de asignación construye el siguiente objeto en la secuencia de salida con el valor del iterador almacenado en primer lugar, mediante la evaluación de la ubicación de la nueva expresión **new** ( ( `void` \*)&\* **first**) **Type**( `val`).
+El operador de asignación construye el siguiente objeto en la secuencia de salida utilizando primero el valor de iterador almacenado, mediante la evaluación de la ubicación de la **nueva expresión New** ((`void` \*) &\* **First**) **Type**(`val`).
 
 #### <a name="example"></a>Ejemplo
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="op_add_add"></a> operator ++
+### <a name="operator"></a><a name="op_add_add"></a>operador + +
 
 Operadores de preincremento y prostincremento para los iteradores de almacenamiento sin formato.
 
@@ -245,9 +245,9 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
 
 Un iterador de almacenamiento sin formato o una referencia a un iterador de almacenamiento sin formato.
 
-#### <a name="remarks"></a>Comentarios
+#### <a name="remarks"></a>Observaciones
 
-El primer operador, intenta extraer y almacenar un objeto de tipo `CharType` del flujo de entrada asociado. El segundo operador realiza una copia del objeto, lo incrementa y, después, devuelve la copia.
+Finalmente, el primer operador intenta extraer y almacenar un objeto de tipo `CharType` del flujo de entrada asociado. El segundo operador realiza una copia del objeto, lo incrementa y, después, devuelve la copia.
 
 El primer operador preincrement incrementa el objeto de iterador de salida almacenado y, después, devuelve **\*this**.
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a> raw_storage_iterator)
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
 
 Crea un iterador de almacenamiento sin formato con un iterador de salida subyacente especificado.
 
@@ -298,7 +298,7 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 #### <a name="parameters"></a>Parámetros
 
-*Primero*\
+*primer*\
 El iterador de reenvío que va a subyacer al objeto `raw_storage_iterator` que se está construyendo.
 
 #### <a name="example"></a>Ejemplo

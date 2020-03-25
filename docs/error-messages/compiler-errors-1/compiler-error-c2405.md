@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2405
 ms.assetid: 14f6726d-e04b-4cce-8a85-4553fc38fcf7
-ms.openlocfilehash: 97145fb5955bc1589741473ed366cff853e9b5de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e3e51eeea2f7655904a22a672c68bf529c8543
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282731"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205795"
 ---
 # <a name="compiler-error-c2405"></a>Error del compilador C2405
 
-ilegal referencia adelantada corta con desplazamiento
+referencia adelantada corta no válida con desplazamiento
 
-Las referencias adelantadas cortas deben hacer referencia a una etiqueta solamente. No se puede usar un desplazamiento adicional.
+Las referencias directas cortas solo deben hacer referencia a una etiqueta. No se puede usar un desplazamiento adicional.

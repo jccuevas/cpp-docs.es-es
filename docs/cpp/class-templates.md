@@ -6,18 +6,18 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188400"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180919"
 ---
 # <a name="class-templates"></a>Plantillas de clase
 
-En este tema se describe las reglas que son específicas de las plantillas de clase de C++.
+En este tema se describen las reglas que C++ son específicas de las plantillas de clase.
 
-## <a name="member-functions-of-class-templates"></a>Funciones miembro de las plantillas de clase
+## <a name="member-functions-of-class-templates"></a>Funciones miembro de plantillas de clase
 
 Las funciones miembro se pueden definir dentro o fuera de una plantilla de clase. Se definen como plantillas de función si se definen fuera de la plantilla de clase.
 
@@ -77,7 +77,7 @@ int main()
 
 ## <a name="nested-class-templates"></a>Plantillas de clase anidadas
 
-Las plantillas se pueden definir dentro de clases o plantillas de clase, en cuyo caso se conocen como plantillas de miembro. Las plantillas de miembro que son clases se conocen como plantillas de clase anidadas. Las plantillas de miembro son funciones se tratan en [plantillas de función miembro](../cpp/member-function-templates.md).
+Las plantillas se pueden definir dentro de clases o plantillas de clase, en cuyo caso se conocen como plantillas de miembro. Las plantillas de miembro que son clases se conocen como plantillas de clase anidadas. Las plantillas de miembro que son funciones se explican en [plantillas de función miembro](../cpp/member-function-templates.md).
 
 Las plantillas de clase anidada se declaran como plantillas de clase dentro del ámbito de la clase externa. Pueden definirse dentro o fuera de la clase envolvente.
 
@@ -193,7 +193,7 @@ X<T>::Y<U>::~Y()
 
 No se permite que las clases locales tengan plantillas de miembro.
 
-## <a name="template-friends"></a>Friends de plantilla
+## <a name="template-friends"></a>Plantillas Friend
 
 Las plantillas de clase pueden tener [amigos](friend-cpp.md). Una clase o plantilla de clase y una función o plantilla de función pueden ser elementos friend de una clase de plantilla. Los elementos friend también pueden ser especializaciones de una plantilla de clase o de función, pero no especializaciones parciales.
 
@@ -438,6 +438,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Templates](../cpp/templates-cpp.md) (Plantillas [C++])

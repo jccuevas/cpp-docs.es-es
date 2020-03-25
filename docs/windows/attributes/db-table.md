@@ -1,21 +1,21 @@
 ---
-title: db_table (C++ atributo COM)
+title: db_table (C++ atributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148125"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167256"
 ---
-# <a name="dbtable"></a>db_table
+# <a name="db_table"></a>db_table
 
-Se abre una tabla de OLE DB.
+Abre una tabla de OLE DB.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -23,29 +23,29 @@ Se abre una tabla de OLE DB.
 [ db_table(db_table, name, source_name, hresult) ]
 ```
 
-#### <a name="parameters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 *db_table*<br/>
-Cadena que especifica el nombre de una tabla de base de datos (por ejemplo, "productos").
+Cadena que especifica el nombre de una tabla de base de datos (por ejemplo, "Products").
 
 *name*<br/>
-(Opcional) El nombre del identificador que se utiliza para trabajar con la tabla. Debe especificar este parámetro si desea devolver más de una fila de resultados. **db_table** genera una variable con los valores especificados *nombre* que puede utilizarse para recorrer el conjunto de filas o ejecutar varias consultas de acción.
+Opta Nombre del identificador que se utiliza para trabajar con la tabla. Debe especificar este parámetro si desea devolver más de una fila de resultados. **db_table** genera una variable con el *nombre* especificado que se puede utilizar para recorrer el conjunto de filas o para ejecutar varias consultas de acción.
 
 *source_name*<br/>
-(Opcional) El `CSession` variable o instancia de una clase que tiene el `db_source` atributo aplicado a él en el que se ejecuta el comando. Consulte [db_source](db-source.md).
+Opta `CSession` variable o instancia de una clase que tiene el atributo `db_source` aplicado en el que se ejecuta el comando. Consulte [db_source](db-source.md).
 
-*hresult*<br/>
-(Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
+*valor*<br/>
+Opta Identifica la variable que recibirá el HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**db_table** crea un [CTable](../../data/oledb/ctable-class.md) objeto, que es utilizado por un consumidor OLE DB para abrir una tabla. Puede usar este atributo solo en el nivel de clase; no se puede usar en línea. Usar `db_column` para enlazar las columnas de tabla a las variables; use `db_param` delimitar (establece el tipo de parámetro de modo que en) de parámetros.
+**db_table** crea un objeto [CTable](../../data/oledb/ctable-class.md) , que utiliza un consumidor OLE DB para abrir una tabla. Este atributo solo se puede utilizar en el nivel de clase. no se puede usar en línea. Utilice `db_column` para enlazar columnas de tabla a variables. Use `db_param` para delimitar (establecer el tipo de parámetro, etc.) de los parámetros.
 
-Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *NombreClase*descriptor de acceso, donde *NombreClase* es el nombre que asignó el clase y el compilador también creará una clase denominada *NombreClase*, que se deriva de \_ *NombreClase*descriptor de acceso.  En Vista de clases verá ambas clases.
+Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_descriptor de acceso *NombreClase descriptoracceso*, donde *NombreClase descriptoracceso* es el nombre que asignó a la clase, y el compilador también creará una clase denominada *NombreClase descriptoracceso*, que se deriva de \_descriptor de acceso *NombreClase descriptoracceso*.  En Vista de clases verá ambas clases.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente abre la tabla de productos para su uso por `CProducts`.
+En el ejemplo siguiente se abre la tabla Products para su uso por `CProducts`.
 
 ```cpp
 // db_table.cpp
@@ -60,7 +60,7 @@ class CProducts {
 };
 ```
 
-Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](https://github.com/Microsoft/VCSamples) y [MultiRead](https://github.com/Microsoft/VCSamples).
+Para obtener un ejemplo de este atributo utilizado en una aplicación, vea [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,11 +70,11 @@ Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejem
 |-|-|
 |**Se aplica a**|**clase**, **struct**|
 |**Reiterativo**|No|
-|**Atributos requeridos**|Ninguna|
-|**Atributos no válidos**|Ninguna|
+|**Atributos requeridos**|None|
+|**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)

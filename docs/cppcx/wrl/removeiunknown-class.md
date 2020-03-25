@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-ms.openlocfilehash: 3b54f6a3072d82d40db4ac698503f0939e745472
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfcdefbb8d7cd12d2ebf99710f595fdd2fc16f76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231436"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213621"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown (Clase)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,21 +29,21 @@ class RemoveIUnknown : public T;
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-Una clase.
+Clase.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Convierte un tipo que es equivalente a un `IUnknown`-tipo de función, pero tiene no virtuales `QueryInterface`, `AddRef`, y `Release` funciones miembro.
+Crea un tipo que es equivalente a un tipo basado en `IUnknown`, pero tiene funciones miembro `QueryInterface`, `AddRef`y `Release` no virtuales.
 
-De forma predeterminada, los métodos COM proporcionan virtual `QueryInterface`, `AddRef`, y `Release` métodos. Sin embargo, `ComPtr` no requieren la sobrecarga de métodos virtuales. `RemoveIUnknown` elimina esa sobrecarga proporcionando privado y no virtuales `QueryInterface`, `AddRef`, y `Release` métodos.
+De forma predeterminada, los métodos COM proporcionan métodos virtuales `QueryInterface`, `AddRef`y `Release`. Sin embargo, `ComPtr` no requiere la sobrecarga de los métodos virtuales. `RemoveIUnknown` elimina esa sobrecarga proporcionando métodos de `QueryInterface`, `AddRef`y `Release` privados y no virtuales.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|`ReturnType`|Un sinónimo para un tipo que es equivalente al parámetro de plantilla *T* pero tiene no virtuales `IUnknown` miembros.|
+|`ReturnType`|Sinónimo de un tipo que es equivalente al parámetro de plantilla *T* , pero que tiene miembros `IUnknown` no virtuales.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -55,8 +55,8 @@ De forma predeterminada, los métodos COM proporcionan virtual `QueryInterface`,
 
 **Encabezado:** client.h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

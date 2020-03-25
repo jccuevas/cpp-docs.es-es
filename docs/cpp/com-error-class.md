@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0c33791fbe6011a3eddc6e535a3a4ed838e5e06c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498744"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180815"
 ---
 # <a name="_com_error-class"></a>_com_error (Clase)
 
@@ -23,13 +23,13 @@ Un objeto **_com_error** representa una condición de excepción detectada por l
 
 |||
 |-|-|
-|[_com_error](../cpp/com-error-com-error.md)|Construye un objeto **_com_error** .|
+|[_com_error](../cpp/com-error-com-error.md)|Construye un objeto de **_com_error** .|
 
 ### <a name="operators"></a>Operadores
 
 |||
 |-|-|
-|[operador =](../cpp/com-error-operator-equal.md)|Asigna un objeto **_com_error** existente a otro.|
+|[operador =](../cpp/com-error-operator-equal.md)|Asigna un objeto de **_com_error** existente a otro.|
 
 ### <a name="extractor-functions"></a>Funciones de extractor
 
@@ -59,8 +59,8 @@ Un objeto **_com_error** representa una condición de excepción detectada por l
 
 |||
 |-|-|
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Asigna HRESULT de 32 bits a 16 bits `wCode`.|
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Asigna de 16 bits `wCode` a HRESULT de 32 bits.|
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Asigna HRESULT de 32 bits a `wCode`de 16 bits.|
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Asigna `wCode` de 16 bits al HRESULT de 32 bits.|
 
 **FIN de Específicos de Microsoft**
 
@@ -68,9 +68,9 @@ Un objeto **_com_error** representa una condición de excepción detectada por l
 
 **Encabezado:** \<comdef. h >
 
-`Lib:`omsuppw. lib o comsuppwd. lib (vea [/Zc: wchar_t (Wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)
+`Lib:` omsuppw. lib o comsuppwd. lib (vea [/Zc: wchar_t (Wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases de compatibilidad con COM del compilador](../cpp/compiler-com-support-classes.md)<br/>
 [IErrorInfo (interfaz)](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

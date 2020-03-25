@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: efaaacc46f63ac1a702ab2110d35fe80727ead1d
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b13007211857d84e4f3b33c80ed6b5beaf6f0bcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857520"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178242"
 ---
 # <a name="inline-functions-c"></a>Funciones insertadas (C++)
 
@@ -94,7 +94,7 @@ La opción de optimización del compilador [/OB](../build/reference/ob-inline-fu
 
 [/LTCG](../build/reference/ltcg-link-time-code-generation.md) realiza la inserción entre módulos independientemente de si se solicitó en el código fuente.
 
-### <a name="example-1"></a>Ejemplo 1
+### <a name="example-1"></a>Ejemplo 1
 
 ```cpp
 // inline_keyword1.cpp
@@ -108,7 +108,7 @@ inline int max( int a , int b ) {
 
 Las funciones miembro de una clase se pueden declarar en línea, ya sea mediante la palabra clave **inline** o colocando la definición de función dentro de la definición de clase.
 
-### <a name="example-2"></a>Ejemplo 2
+### <a name="example-2"></a>Ejemplo 2
 
 ```cpp
 // inline_keyword2.cpp
@@ -207,7 +207,7 @@ Suponiendo que la manipulación de coordenadas es una operación relativamente c
 
 - Restauración del marco de pila antiguo
 
-- Volver
+- Valor devuelto
 
 ## <a name="inline-functions-vs-macros"></a>Funciones insertadas frente a macros
 
@@ -265,7 +265,7 @@ Sample Input: a
 Sample Output: A
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [noinline](../cpp/noinline.md)<br/>
 [auto_inline](../preprocessor/auto-inline.md)
