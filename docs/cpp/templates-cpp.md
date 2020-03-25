@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 36ada3cc3b933e99e9b29b3b58463f6bc526fc7d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: 5f8322d850084ca53e946dcff1b67dc81b493fe3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160780"
 ---
 # <a name="templates-c"></a>Plantillas (C++)
 
@@ -57,7 +57,7 @@ int minimum(const int& lhs, const int& rhs)
 
 Las reglas para el modo en que el compilador realiza la deducción de tipos en las plantillas de función se basan en las reglas de las funciones ordinarias. Para obtener más información, consulte la [resolución de sobrecarga de llamadas de plantilla de función](../cpp/overload-resolution-of-function-template-calls.md).
 
-## <a id="type_parameters"></a>Parámetros de tipo
+## <a name="type-parameters"></a><a id="type_parameters"></a>Parámetros de tipo
 
 En la plantilla `minimum` anterior, tenga en cuenta que el parámetro de tipo *t* no se califica de ningún modo hasta que se use en los parámetros de llamada de función, donde se agregan los calificadores const y Reference.
 
@@ -131,7 +131,7 @@ public:
 };
 ```
 
-Observe la sintaxis de la declaración de plantilla. El valor `size_t` se pasa como argumento de plantilla en tiempo de compilación y debe ser **const** o una expresión **constexpr** . Se usa del siguiente modo:
+Observe la sintaxis de la declaración de plantilla. El valor `size_t` se pasa como argumento de plantilla en tiempo de compilación y debe ser **const** o una expresión **constexpr** . Se utiliza de la siguiente manera:
 
 ```cpp
 MyArray<MyClass*, 10> arr;
@@ -151,7 +151,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a id="template_parameters"></a>Plantillas como parámetros de plantilla
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>Plantillas como parámetros de plantilla
 
 Una plantilla puede ser un parámetro de plantilla. En este ejemplo, MyClass2 tiene dos parámetros de plantilla: un parámetro TypeName *T* y un parámetro de plantilla *ARR*:
 

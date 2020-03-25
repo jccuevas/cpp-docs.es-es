@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1007
 ms.assetid: 64fd78a6-5b27-4aa8-92ea-f1c55e6e5edd
-ms.openlocfilehash: 6984c0b573ae43275dc58d41b711cb88d96ec545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 810eab6edec231918023451b4518ab439ab55b2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173431"
 ---
 # <a name="nmake-fatal-error-u1007"></a>Error grave de NMAKE U1007
 
-no se admiten en nombre de comillas dobles
+no se permiten comillas dobles en el nombre
 
-El nombre de destino especificado o nombre de archivo contiene una comilla doble (**"**).
+El nombre de destino o el nombre de archivo especificados contenían comillas dobles ( **"** ).
 
-Las comillas dobles puede encerrar un nombre de archivo, pero no pueden estar dentro de él.
+Las comillas dobles pueden encerrar un nombre de archivo, pero no pueden incluirse en él.

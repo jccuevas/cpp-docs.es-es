@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171325"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -75,11 +75,11 @@ Cada función devuelve 0 si el archivo tiene el modo especificado. La función d
 `ENOENT`|No se encuentra el nombre o la ruta de acceso del archivo.
 `EINVAL`|Parámetro no válido.
 
-Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Cuando se usa con archivos, la función **_access_s** determina si el archivo especificado existe y se puede obtener acceso a él tal y como se especifica en el valor del *modo*. Cuando se usa con directorios, **_access_s** solo determina si existe el directorio especificado. En Windows 2000 y sistemas operativos posteriores, todos los directorios tienen acceso de lectura y escritura.
+Cuando se usa con archivos, la función **_access_s** determina si el archivo especificado existe y se puede obtener acceso a él según se especifica en el valor del *modo*. Cuando se usa con directorios, **_access_s** solo determina si existe el directorio especificado. En Windows 2000 y sistemas operativos posteriores, todos los directorios tienen acceso de lectura y escritura.
 
 |valor del modo|Comprueba el archivo para|
 |----------------|---------------------|
@@ -88,9 +88,9 @@ Cuando se usa con archivos, la función **_access_s** determina si el archivo es
 |04|Permiso de lectura.|
 |06|Permisos de lectura y escritura.|
 
-Los permisos para leer o escribir en el archivo no bastan para garantizar la posibilidad de abrir un archivo. Por ejemplo, si un archivo está bloqueado por otro proceso, puede que no sea accesible aunque **_access_s** devuelva 0.
+Los permisos para leer o escribir en el archivo no bastan para garantizar la posibilidad de abrir un archivo. Por ejemplo, si un archivo está bloqueado por otro proceso, es posible que no se pueda obtener acceso a él aunque **_access_s** devuelva 0.
 
-**_waccess_s** es una versión con caracteres anchos de **_access_s**, donde el argumento de *ruta de acceso* a **_waccess_s** es una cadena de caracteres anchos. De lo contrario, **_waccess_s** y **_access_s** se comportan exactamente igual.
+**_waccess_s** es una versión de caracteres anchos de **_access_s**, donde el argumento de *ruta de acceso* que se va a **_waccess_s** es una cadena de caracteres anchos. De lo contrario, **_waccess_s** y **_access_s** se comportan exactamente igual.
 
 Estas funciones validan sus parámetros. Si *path* es null o el *modo* no especifica un modo válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.
 
@@ -151,7 +151,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Controles de cuadro de diálogo (C++) | Microsoft Docs
+title: Controles de cuadro deC++diálogo () | Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,33 +13,33 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 568754bc514ae017293805fab1b25849d5ffe5f8
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c79021387de2c8bc8f7f106a93797b7efb07d6df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400883"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160416"
 ---
-# <a name="dialog-box-controls-c"></a>Controles de cuadro de diálogo (C++)
+# <a name="dialog-box-controls-c"></a>Controles de cuadro deC++diálogo ()
 
-Puede agregar controles a un cuadro de diálogo mediante la **Editor de cuadro de diálogo** pestaña en el [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) que le permite elegir el control que desee y arrástrelo hasta el cuadro de diálogo. De forma predeterminada, el **cuadro de herramientas** ventana está establecida en la opción Ocultar automáticamente. Aparece como una pestaña en el margen izquierdo de la solución cuando el **Editor de cuadro de diálogo** está abierto. Sin embargo, puede anclar el **cuadro de herramientas** ventana a su posición seleccionando el **Ocultar automáticamente** botón en la esquina superior derecha de la ventana. Para obtener más información sobre cómo controlar el comportamiento de esta ventana, consulte [administración de ventanas](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+Puede Agregar controles a un cuadro de diálogo mediante la pestaña **Editor de cuadros de diálogo** de la [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) , que le permite elegir el control que desee y arrastrarlo hasta el cuadro de diálogo. De forma predeterminada, la ventana **cuadro de herramientas** está establecida en ocultar automáticamente. Aparece como una pestaña en el margen izquierdo de la solución cuando el **Editor de cuadros de diálogo** está abierto. Sin embargo, puede anclar la ventana **cuadro de herramientas** en posición seleccionando el botón **Ocultar automáticamente** en la esquina superior derecha de la ventana. Para obtener más información sobre cómo controlar el comportamiento de esta ventana, vea [Administración de ventanas](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
-La manera más rápida de agregar controles a un cuadro de diálogo, volver a colocar los controles existentes o mover los controles de cuadro de diálogo de uno a otro, es usar el método de arrastrar y colocar. La posición del control se muestra en una línea de puntos hasta que se coloca en el cuadro de diálogo. Al agregar un control a un cuadro de diálogo con el método de arrastrar y colocar, el control tiene un alto estándar adecuado para ese tipo de control.
+La manera más rápida de agregar controles a un cuadro de diálogo, cambiar la posición de los controles existentes o mover controles de un cuadro de diálogo a otro es usar el método de arrastrar y colocar. La posición del control se describe en una línea de puntos hasta que se coloca en el cuadro de diálogo. Cuando se agrega un control a un cuadro de diálogo con el método de arrastrar y colocar, el control recibe un alto estándar adecuado para ese tipo de control.
 
-Al agregar un control a un cuadro de diálogo o cambia la posición, su ubicación final puede verse determinado por las guías o los márgenes, o si tiene activada la cuadrícula de diseño.
+Cuando se agrega un control a un cuadro de diálogo o se vuelve a colocar, su ubicación final se puede determinar mediante guías o márgenes, o si la cuadrícula de diseño está activada.
 
-Una vez haya agregado un control al cuadro de diálogo, puede cambiar las propiedades como su título en el [ventana propiedades](/visualstudio/ide/reference/properties-window). También puede seleccionar varios controles y cambiar sus propiedades a la vez.
+Una vez que haya agregado un control al cuadro de diálogo, puede cambiar las propiedades, como su título, en la [ventana Propiedades](/visualstudio/ide/reference/properties-window). También puede seleccionar varios controles y cambiar sus propiedades todos a la vez.
 
-Para obtener más información sobre la **Editor de cuadro de diálogo**, vea cómo [agregar, modificar o eliminar controles](adding-editing-or-deleting-controls.md), [controles de diseño](../windows/arrangement-of-controls-on-dialog-boxes.md), y [definir Control de acceso y valores](../windows/defining-mnemonics-access-keys.md).
+Para obtener más información sobre **el editor de cuadros de diálogo**, vea cómo [Agregar, editar o eliminar controles](adding-editing-or-deleting-controls.md), [diseñar controles](../windows/arrangement-of-controls-on-dialog-boxes.md)y [definir el acceso a controles y los valores](../windows/defining-mnemonics-access-keys.md).
 
-Para obtener más información sobre los controles y cuadros de diálogo, vea [clases de Control](../mfc/control-classes.md), [clases de cuadro de diálogo](../mfc/dialog-box-classes.md), y [estilos de barra de desplazamiento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
+Para obtener más información sobre los controles y cuadros de diálogo, vea [clases de control](../mfc/control-classes.md), clases de [cuadro de diálogo](../mfc/dialog-box-classes.md)y [estilos de barra de desplazamiento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
-Los controles estándares disponibles en el **cuadro de herramientas** no tiene valor predeterminado de los eventos son:
+Los controles estándar disponibles en el **cuadro de herramientas** con eventos predeterminados son:
 
 |Nombre del control|Evento predeterminado|
 |---|---|
-|[Control de botón](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Control de casilla de verificación](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Button (control)](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[Control de casilla](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Control de cuadro combinado](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
 |[Control de edición](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |Cuadro de grupo|(no aplicable)|
@@ -47,51 +47,51 @@ Los controles estándares disponibles en el **cuadro de herramientas** no tiene 
 |[Control de botón de radio](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Control de texto estático](../mfc/reference/cstatic-class.md)|(no aplicable)|
 |[Control de imagen](../mfc/reference/cpictureholder-class.md)|(no aplicable)|
-|[Control Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
+|[Control Rich Edit 2,0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
 |[Control de barra de desplazamiento](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
-> Para obtener más información sobre el uso de la **RichEdit 1.0** control con MFC, vea [con el Control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) y [ejemplos de Control de edición enriquecida](../mfc/rich-edit-control-examples.md).
+> Para obtener más información sobre el uso del control **richedit 1,0** con MFC, vea [usar el control RICHEDIT 1,0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) y [ejemplos de controles Rich Edit](../mfc/rich-edit-control-examples.md).
 
-El [controles comunes de Windows](../mfc/controls-mfc.md) disponibles en el **cuadro de herramientas** para proporcionar una mayor funcionalidad son:
+Los [controles comunes de Windows](../mfc/controls-mfc.md) disponibles en el **cuadro de herramientas** para proporcionar una mayor funcionalidad son:
 
 |Nombre del control|Evento predeterminado|
 |---|---|
 |[Control deslizante](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[Control de número](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[Control de progreso](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Hot Key (control)](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[Control de tecla de acceso rápido](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
 |[Control de lista](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
 |[Control de árbol](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
 |[Control de pestaña](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Control de animación](../mfc/using-an-animation-control.md)|ACN_START|
-|[Control de selector de hora de fecha](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Control de calendario mensual](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Control de dirección IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
+|[Animation (control)](../mfc/using-an-animation-control.md)|ACN_START|
+|[Control selector de fecha y hora](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
+|[Month Calendar (control)](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[Control de direcciones IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
 |[Control de cuadro combinado extendido](../mfc/creating-an-extended-combo-box-control.md)||
 |Custom (control)|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>Controles personalizados
 
-El **Editor de cuadro de diálogo** le permite usar existente personalizados o controles de usuario en una plantilla de cuadro de diálogo.
+El **Editor de cuadros de diálogo** permite usar controles personalizados o de usuario existentes en una plantilla de cuadro de diálogo.
 
 > [!NOTE]
-> Controles personalizados en este sentido no son debe confundirse con los controles ActiveX. Controles ActiveX se denominan controles personalizados OLE. Además, no confunda estos controles con los controles dibujados por el propietario de Windows.
+> En este sentido, los controles personalizados no se deben confundir con los controles ActiveX. Los controles ActiveX a veces se denominaban controles personalizados OLE. Además, no confunda estos controles con los controles dibujados por el propietario en Windows.
 
-Esta funcionalidad está diseñada para permitir el uso de controles distintos de los proporcionados por Windows. En tiempo de ejecución, el control está asociado con una clase de ventana (no es el mismo que una clase de C++). Una manera más común para realizar la misma tarea consiste en instalar cualquier control, como un control estático, en el cuadro de diálogo. A continuación, en tiempo de ejecución, en el [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funcione, quita el control y reemplazarlo con su propio control personalizado.
+Esta funcionalidad está pensada para permitirle usar controles distintos de los proporcionados por Windows. En tiempo de ejecución, el control está asociado a una clase de ventana (no es igual C++ que una clase). Una manera más común de realizar la misma tarea es instalar cualquier control, como un control estático, en el cuadro de diálogo. A continuación, en tiempo de ejecución, en la función [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) , quite ese control y reemplácelo por su propio control personalizado.
 
 > [!NOTE]
-> Esta es una técnica anterior. Hoy en día se recomienda en la mayoría de los casos a escribir un control ActiveX o una subclase de un control común de Windows.
+> Se trata de una técnica antigua. En la actualidad, en la mayoría de los casos se recomienda escribir un control ActiveX o una subclase de un control común de Windows.
 
-Para estos controles personalizados, estará limitado a:
+Para estos controles personalizados, está limitado a:
 
-- Configuración de la ubicación en el cuadro de diálogo.
+- Establecer la ubicación en el cuadro de diálogo.
 
-- Escriba un título.
+- Escribir un título.
 
-- Identifica el nombre de la clase del control Windows dado que el código de aplicación debe registrar el control con este nombre.
+- Identificar el nombre de la clase de Windows del control, ya que el código de la aplicación debe registrar el control por este nombre.
 
-- Escriba un valor hexadecimal de 32 bits que establece el estilo del control.
+- Escribir un valor hexadecimal de 32 bits que establezca el estilo del control.
 
 - Establecer el estilo extendido.
 
@@ -99,7 +99,7 @@ Para estos controles personalizados, estará limitado a:
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Editor de cuadros de diálogo](../windows/dialog-editor.md)
 

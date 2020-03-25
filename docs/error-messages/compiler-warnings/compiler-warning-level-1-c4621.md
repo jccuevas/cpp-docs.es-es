@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4621
+title: Advertencia del compilador (nivel 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
 - C4621
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: 9dd4defe18a94f65e265d02f6c26c715667cd696
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: a48934fd097f9039988db32511ca87cbd66b22d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052590"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199761"
 ---
-# <a name="compiler-warning-level-1-c4621"></a>ADVERTENCIA del compilador (nivel 1) C4621
+# <a name="compiler-warning-level-1-c4621"></a>Advertencia del compilador (nivel 1) C4621
 
 no se encontró ninguna forma postfija de ' Operator--' para el tipo ' type ', con el formato de prefijo
 

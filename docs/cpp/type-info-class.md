@@ -7,18 +7,18 @@ helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-ms.openlocfilehash: b0cddd2c5cc09e77e8733ca88177c3b2223fc8ce
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7a016fe8fee4e5765e6172184bfa9c90eecbc687
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160676"
 ---
-# <a name="typeinfo-class"></a>type_info (Clase)
+# <a name="type_info-class"></a>type_info (Clase)
 
-El **type_info** clase describe la información de tipo generada dentro del programa por el compilador. Los objetos de esta clase almacenan de forma eficaz un puntero a un nombre para el tipo. El **type_info** clase también almacena un valor codificado adecuado para comparar dos tipos de igualdad u orden de intercalación. Las reglas de codificación y la secuencia de intercalación para tipos no se especifican y pueden diferir entre programas.
+En la clase **type_info** se describe la información de tipo generada en el programa por el compilador. Los objetos de esta clase almacenan de forma eficaz un puntero a un nombre para el tipo. La clase **type_info** también almacena un valor codificado adecuado para comparar dos tipos de igualdad o de ordenación. Las reglas de codificación y la secuencia de intercalación para tipos no se especifican y pueden diferir entre programas.
 
-El `<typeinfo>` archivo de encabezado debe incluirse para utilizar el **type_info** clase. La interfaz para el **type_info** clase es:
+Se debe incluir el archivo de encabezado `<typeinfo>` para poder utilizar la clase **type_info** . La interfaz para la clase **type_info** es:
 
 ```cpp
 class type_info {
@@ -36,20 +36,20 @@ public:
 };
 ```
 
-No se puede crear instancias de objetos de la **type_info** clase directamente, porque la clase tiene solo un constructor de copias privado. La única manera de construir un (temporal) **type_info** objeto consiste en usar el [typeid](../cpp/typeid-operator.md) operador. Puesto que el operador de asignación también es privado, no puede copiar ni asignar objetos de clase **type_info**.
+No se pueden crear instancias de objetos de la clase **type_info** directamente, porque la clase solo tiene un constructor de copias privado. La única manera de construir un objeto de **type_info** (temporal) es usar el operador [typeid](../cpp/typeid-operator.md) . Dado que el operador de asignación también es privado, no puede copiar o asignar objetos de la clase **type_info**.
 
-`type_info::hash_code` define una función hash adecuada para asignar valores de tipo **typeinfo** a una distribución de valores de índice.
+`type_info::hash_code` define una función hash adecuada para asignar valores de tipo **TypeInfo** a una distribución de valores de índice.
 
-Los operadores `==` y `!=` puede usarse para comparar la igualdad y desigualdad con otros **type_info** objetos, respectivamente.
+Los operadores `==` y `!=` se pueden utilizar para comparar la igualdad y la desigualdad con otros objetos **type_info** , respectivamente.
 
-No hay ningún vínculo entre el orden de intercalación de tipos y las relaciones de herencia. Use el `type_info::before` para determinar la secuencia de intercalación de tipos de función miembro. No hay ninguna garantía de que `type_info::before` producirá el mismo resultado en programas diferentes o incluso ejecuciones diferentes del mismo programa. De esta manera, `type_info::before` es similar a la dirección del `(&)` operador.
+No hay ningún vínculo entre el orden de intercalación de tipos y las relaciones de herencia. Utilice la función miembro `type_info::before` para determinar la secuencia de intercalación de los tipos. No hay ninguna garantía de que `type_info::before` producirá el mismo resultado en programas distintos o incluso en diferentes ejecuciones del mismo programa. De esta manera, `type_info::before` es similar al operador Address-of `(&)`.
 
-El `type_info::name` función miembro devuelve un `const char*` en una cadena terminada en null que representa el nombre del tipo de lenguaje natural. La memoria a la que se señala se almacena en caché y nunca debe desasignarse directamente.
+La función miembro `type_info::name` devuelve un `const char*` a una cadena terminada en null que representa el nombre legible del tipo. La memoria a la que se señala se almacena en caché y nunca debe desasignarse directamente.
 
-El `type_info::raw_name` función miembro devuelve un `const char*` en una cadena terminada en null que representa el nombre representativo del tipo de objeto. El nombre se almacena realmente en forma representativa para ahorrar espacio. Por lo tanto, esta función es más rápida que `type_info::name` porque no es necesario quitar el nombre de la decoración. La cadena devuelta por la `type_info::raw_name` función es útil en operaciones de comparación, pero no es legible. Si tiene una cadena legible, use el `type_info::name` funcione en su lugar.
+La función miembro `type_info::raw_name` devuelve un `const char*` a una cadena terminada en null que representa el nombre representativo del tipo de objeto. El nombre se almacena realmente en forma representativa para ahorrar espacio. Por consiguiente, esta función es más rápida que la `type_info::name` porque no es necesario quitar el nombre del nombre. La cadena devuelta por la función `type_info::raw_name` es útil en las operaciones de comparación pero no es legible. Si necesita una cadena inteligible para el usuario, utilice en su lugar la función `type_info::name`.
 
-Información de tipo se genera para sólo si de las clases polimórficas el [/GR (habilitar información de tipo en tiempo de ejecución)](../build/reference/gr-enable-run-time-type-information.md) se especificó la opción del compilador.
+La información de tipo se genera para las clases polimórficas solo si se especifica la opción del compilador [/gr (habilitar información de tipo en tiempo de ejecución)](../build/reference/gr-enable-run-time-type-information.md) .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información de tipos en tiempo de ejecución](../cpp/run-time-type-information.md)

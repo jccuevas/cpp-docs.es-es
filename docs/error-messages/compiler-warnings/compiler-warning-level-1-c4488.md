@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4488
+title: Advertencia del compilador (nivel 1) C4488
 ms.date: 11/04/2016
 f1_keywords:
 - C4488
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: c3d176d034e679f3cca145ccb2fc77cc7fa64f3d
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: b83845f0ed0efeee6485780c7e4f828e40473e9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965572"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186704"
 ---
-# <a name="compiler-warning-level-1-c4488"></a>ADVERTENCIA del compilador (nivel 1) C4488
+# <a name="compiler-warning-level-1-c4488"></a>Advertencia del compilador (nivel 1) C4488
 
 ' function ': requiere la palabra clave ' keyword ' para implementar el método de interfaz ' interface_method '
 

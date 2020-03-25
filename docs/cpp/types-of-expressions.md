@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++], types
 ms.assetid: 1e7540b0-8fdb-49ab-b3e1-6ec439ff473a
-ms.openlocfilehash: f67f7c2ce8872f3a88549259a82d9869f32b6f56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 587715cd1fd38bf6481ba833b1532f5e492d4803
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160663"
 ---
 # <a name="types-of-expressions"></a>Tipos de expresiones
 
@@ -34,8 +34,8 @@ Las expresiones de C++ se dividen en varias categorías:
 
 - [Conversión](../cpp/casting.md). En las expresiones se pueden usar conversiones con seguridad de tipos.
 
-- [Información de tipo de tiempo de ejecución](../cpp/run-time-type-information.md). Determine el tipo de un objeto durante la ejecución del programa.
+- [Información de tipo en tiempo de ejecución](../cpp/run-time-type-information.md). Determine el tipo de un objeto durante la ejecución del programa.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones](../cpp/expressions-cpp.md)

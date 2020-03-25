@@ -6,12 +6,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 41ad348b7109451f519c44f685cea0a271f71925
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161015"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 
@@ -59,11 +59,11 @@ Los objetos de un tipo entero se pueden convertir en otro tipo entero más ampli
 
 - Objetos, literales y constantes de tipo **Char** y **Short int**
 
-- Tipos de enumeración
+- Tipos de enumeraciones
 
 - campos de bits **int**
 
-- Enumeradores
+- Enumerators
 
 C++las promociones son "conserven los valores", ya que se garantiza que el valor después de la promoción sea el mismo que el valor antes de la promoción. En las promociones de preservación de valores, los objetos de tipos enteros más cortos (como campos de bits u objetos de tipo **Char**) se promueven al tipo **int** si **int** pueden representar el intervalo completo del tipo original. Si **int** no puede representar el intervalo completo de valores, el objeto se promueve al tipo **int sin signo**.  Aunque esta estrategia es la misma que la utilizada por el estándar C, las conversiones de preservación de valores no conservan el "signo" del objeto.
 
@@ -189,20 +189,20 @@ El primer caso es cuando la clase base especificada es accesible y la conversió
 
 Si una clase base es accesible depende del tipo de herencia utilizada en la derivación. Considere la herencia que se muestra en la siguiente ilustración.
 
-![Gráfico de herencia que&#45;muestra]el gráfico de herencia de accesibilidad de clase base(../cpp/media/vc38xa1.gif "que muestra la accesibilidad de la clase base&#45;") <br/>
+![Gráfico de herencia que&#45;muestra la accesibilidad de la clase base](../cpp/media/vc38xa1.gif "Gráfico de herencia que&#45;muestra la accesibilidad de la clase base") <br/>
 Gráfico de herencia para ilustrar la accesibilidad de clase base
 
 En la tabla siguiente se muestra la accesibilidad de la clase base para la situación que se muestra en la ilustración.
 
 |Tipo de función|Derivación|Conversión de<br /><br /> B * a una\* legal?|
 |----------------------|----------------|-------------------------------------------|
-|Función externa (no de ámbito de clase)|Private|No|
+|Función externa (no de ámbito de clase)|Privada|No|
 ||Protegido|No|
 ||Público|Sí|
-|Función miembro B (en ámbito B)|Private|Sí|
+|Función miembro B (en ámbito B)|Privada|Sí|
 ||Protegido|Sí|
 ||Público|Sí|
-|Función miembro C (en ámbito C)|Private|No|
+|Función miembro C (en ámbito C)|Privada|No|
 ||Protegido|Sí|
 ||Público|Sí|
 
@@ -327,6 +327,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [C++Referencia del lenguaje](../cpp/cpp-language-reference.md)

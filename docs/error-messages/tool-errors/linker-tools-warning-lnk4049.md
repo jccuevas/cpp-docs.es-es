@@ -6,44 +6,44 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8e4416eafd47f584de4ab1c83aa7303cab0440a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410244"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194140"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Advertencia de las herramientas del vinculador LNK4049
 
-> símbolo '*símbolo*'definido en'*nombreDeArchivo.obj*' se importa
+> se importó el símbolo '*Symbol*' definido en '*filename. obj*'
 
-[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) se especificó para *símbolo* , aunque el símbolo está definido en el archivo objeto *nombreDeArchivo.obj* en la misma imagen. Quitar el `__declspec(dllimport)` modificador para resolver esta advertencia.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) se especificó para *Symbol* , aunque el símbolo se haya definido en el archivo de objeto *filename. obj* en la misma imagen. Quite el modificador `__declspec(dllimport)` para resolver esta advertencia.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta advertencia se genera el vinculador al definir un símbolo en el archivo de un objeto y hacer referencia a él mediante el uso de la `__declspec(dllimport)` modificador de declaración en otro.
+El enlazador genera esta advertencia cuando se define un símbolo en un archivo objeto y se hace referencia a él mediante el modificador de la declaración de `__declspec(dllimport)` en otro.
 
-Advertencia LNK4049 es una versión más general de [advertencia de las herramientas del vinculador LNK4217](linker-tools-warning-lnk4217.md). El vinculador genera la advertencia LNK4049 cuando no se puede determinar qué archivo de objeto o función al que hace referencia al símbolo importado.
+Warning LNK4049 es una versión más general de la [Advertencia de las herramientas del vinculador LNK4217](linker-tools-warning-lnk4217.md). El enlazador genera LNK4049 de advertencia cuando no puede determinar qué función o archivo objeto hacía referencia al símbolo importado.
 
-Los casos más comunes donde LNK4049 se genera en lugar de LNK4217 son:
+Los casos comunes en los que se genera LNK4049 en lugar de LNK4217 son:
 
-- Cuando se usa el [incremental](../../build/reference/incremental-link-incrementally.md) opción.
+- Cuando se usa la opción [/incremental](../../build/reference/incremental-link-incrementally.md) .
 
-- Cuando se usa el [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) opción.
+- Cuando se usa la opción [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) .
 
 Para resolver LNK4049, pruebe uno de los procedimientos siguientes:
 
-- Quitar el `__declspec(dllimport)` modificador de la declaración del símbolo que desencadenó LNK4049 hacia delante. Puede buscar símbolos dentro de una imagen binaria mediante el **DUMPBIN** utilidad. El **DUMPBIN /SYMBOLS** modificador muestra la tabla de símbolos COFF de la imagen. Para obtener más información sobre la **DUMPBIN** utilidad, vea [referencia de DUMPBIN](../../build/reference/dumpbin-reference.md).
+- Quite el modificador `__declspec(dllimport)` de la declaración adelantada del símbolo que desencadenó LNK4049. Puede buscar símbolos en una imagen binaria mediante la utilidad **dumpbin** . El conmutador **dumpbin/Symbols** muestra la tabla de símbolos COFF de la imagen. Para obtener más información sobre la utilidad **dumpbin** , vea [referencia de DUMPBIN](../../build/reference/dumpbin-reference.md).
 
-- Deshabilitar temporalmente la optimización de todo el programa y vinculación incremental. Cuando vuelve a compilar, la aplicación genera la advertencia LNK4217, que incluye el nombre de la función que hace referencia a símbolo importado. Quitar el `__declspec(dllimport)` modificador declaración desde el símbolo importado y volver a habilitar vinculación incremental o la optimización de todo el programa según sea necesario.
+- Deshabilite temporalmente la vinculación incremental y la optimización de todo el programa. Cuando se vuelve a compilar, la aplicación genera LNK4217 de advertencia, que incluye el nombre de la función que hace referencia al símbolo importado. Quite el modificador de declaración `__declspec(dllimport)` del símbolo importado y vuelva a habilitar la vinculación incremental o la optimización de todo el programa según sea necesario.
 
-Aunque el código generado final se comporta correctamente, el código generado para llamar a la función importada es menos eficaz que llamar directamente a la función. Esta advertencia no aparece cuando se compila con la [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opción.
+Aunque el código generado final se comporta correctamente, el código generado para llamar a la función importada es menos eficaz que llamar directamente a la función. Esta advertencia no aparece cuando se compila con la opción [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) .
 
-Para obtener más información en Importar y exportar las declaraciones de datos, vea [dllexport, dllimport](../../cpp/dllexport-dllimport.md).
+Para obtener más información sobre las declaraciones de datos de importación y exportación, vea [dllexport, DllImport](../../cpp/dllexport-dllimport.md).
 
 ## <a name="example"></a>Ejemplo
 
-Vincular los dos módulos siguientes, se generará LNK4049. El primer módulo genera un archivo de objeto que contiene una única función exportada.
+La vinculación de los dos módulos siguientes generará LNK4049. El primer módulo genera un archivo objeto que contiene una función exportada única.
 
 ```cpp
 // LNK4049a.cpp
@@ -55,7 +55,7 @@ __declspec(dllexport) int func()
 }
 ```
 
-El segundo módulo genera un archivo de objeto que contiene una declaración adelantada a la función exportada en el primer módulo, junto con una llamada a esta función dentro de la `main` función. Vincular este módulo con el primer módulo generará LNK4049. Quitar el `__declspec(dllimport)` modificador de la declaración para resolver la advertencia.
+El segundo módulo genera un archivo objeto que contiene una declaración adelantada a la función exportada en el primer módulo, junto con una llamada a esta función dentro de la función `main`. Al vincular este módulo con el primer módulo, se generará LNK4049. Quite el modificador `__declspec(dllimport)` de la declaración para resolver la advertencia.
 
 ```cpp
 // LNK4049b.cpp
@@ -72,8 +72,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Herramientas del vinculador LNK4217 de advertencia](linker-tools-warning-lnk4217.md) \
-[Advertencia LNK4286 de las herramientas del vinculador](linker-tools-warning-lnk4286.md) \
+[Advertencia de las herramientas del vinculador LNK4217](linker-tools-warning-lnk4217.md) \
+[Advertencia de las herramientas del vinculador LNK4286](linker-tools-warning-lnk4286.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

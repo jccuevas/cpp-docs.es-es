@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0062
 - CGopherFile class, operations
 ms.assetid: 8e4165c4-7753-4f45-90e9-4542cbb9fc7a
-ms.openlocfilehash: 7f18ac438dd6411dbc86c8ac4c380c8ad2b59079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9efb3347b6afecad79dd063bc3c897704416479c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299470"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184494"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>Error del evaluador de expresiones CXX0062
 
-llamadas de constructor no compatibles
+no se admiten llamadas de constructor
 
-Una expresión realiza una llamada a un constructor. Las expresiones no se pueden realizar llamadas explícitas a los constructores o realizar conversiones que requieren una llamada a un constructor.
+Una expresión realizó una llamada a un constructor. Las expresiones no pueden realizar llamadas explícitas a constructores ni realizar conversiones que requieren una llamada a un constructor.
 
 Este error es idéntico a CAN0062.

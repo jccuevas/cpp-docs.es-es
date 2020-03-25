@@ -5,18 +5,18 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d005f37af0c406c45ef2da52fce2b578c6e864a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271780"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169037"
 ---
 # <a name="errlook-reference"></a>Referencia de ERRLOOK
 
-La utilidad ERRLOOK, que está disponible en el menú Herramientas como **Error Lookup**, recupera un mensaje de error del sistema o un mensaje de error de módulo según el valor especificado. ERRLOOK obtiene el texto del mensaje de error automáticamente si arrastra y coloca un valor decimal o hexadecimal desde el depurador de Visual Studio hasta la **valor** control de edición. También puede especificar un valor en la escribiéndolo en el **valor** control de edición o pegándolo desde el Portapapeles y haga clic en **buscar**.
+La utilidad ERRLOOK, que está disponible en el menú herramientas como **búsqueda de errores**, recupera un mensaje de error del sistema o un mensaje de error de módulo basado en el valor especificado. ERRLOOK recupera automáticamente el texto del mensaje de error si arrastra y coloca un valor hexadecimal o decimal desde el depurador de Visual Studio en el control de edición de **valor** . También puede especificar un valor escribiéndolo en el control de edición de **valor** o pegándolos desde el portapapeles y haciendo clic en **Buscar**.
 
-Las teclas aceleradoras para copiar (CTRL+C), Cortar (CTRL+X) y pegar (CTRL+V) funcionan tanto para el **valor** y **mensaje de Error** controles de edición si primero se resalta el texto.
+Las teclas de aceleración para copiar (CTRL + C), cortar (CTRL + X) y pegar (CTRL + V) funcionan para los controles de edición de **valor** y **mensaje de error** si primero se resalta el texto.
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -34,5 +34,5 @@ Describe el botón Buscar de ERRLOOK.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Herramientas de generación MSVC adicionales](c-cpp-build-tools.md)<br/>
+[Herramientas de compilación de MSVC adicionales](c-cpp-build-tools.md)<br/>
 Proporciona vínculos a temas que explican las herramientas de compilación de C/C++ que se suministran con Visual C++.

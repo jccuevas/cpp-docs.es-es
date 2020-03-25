@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1240
 ms.assetid: 7d0e065d-1015-4df0-8370-79c3cf045e1c
-ms.openlocfilehash: 58d4a75f35da5ea9c842921ab60532a970db9ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02452146c1f9fc6b23cf3483711ff440ecc7d014
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183909"
 ---
 # <a name="linker-tools-error-lnk1240"></a>Error de las herramientas del vinculador LNK1240
 
-no se pudo compilar contenido IDL
+no se pudo compilar el contenido IDL
 
-El vinculador generó MIDL para compilar IDL incrustado, pero hubo un problema. Compruebe los errores especificados por MIDL.
+El enlazador generó MIDL para compilar IDL incrustado pero se produjo un problema. Compruebe los errores especificados por MIDL.

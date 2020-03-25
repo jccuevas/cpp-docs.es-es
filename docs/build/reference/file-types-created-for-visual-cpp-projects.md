@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 27e15f8dec693c6b7e70f3e03f274dcbc4f04677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492872"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169024"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de archivo creados para proyectos C++ de Visual Studio
 
@@ -47,43 +47,43 @@ Los proyectos suelen producen un archivo EXE o DLL. Los proyectos pueden ser dep
 
 En la tabla siguiente se muestran los archivos comunes en un proyecto de Visual Studio y se identifican con su extensión de archivo.
 
-|Extensión de archivo|Type|Contenido|
+|Extensión de archivo|Tipo|Contenido|
 |--------------------|----------|--------------|
-|.asmx|Origen|Archivo de implementación.|
-|.asp|source|Archivo de página Active Server.|
-|.atp|Proyecto|Archivo de proyecto de plantilla de aplicación.|
-|.bmp, .dib, .gif, .jpg, .jpe, .png|Recurso|Archivos de imagen general.|
+|.asmx|Source|Archivo de implementación.|
+|.asp|Source|Archivo de página Active Server.|
+|.atp|proyecto|Archivo de proyecto de plantilla de aplicación.|
+|.bmp, .dib, .gif, .jpg, .jpe, .png|Resource|Archivos de imagen general.|
 |.bsc|Compilación|Archivo de código del explorador.|
-|. cpp,. c|source|Archivos de código fuente principal de la aplicación.|
-|.cur|Recurso|Archivo de gráficos de mapa de bits de cursor.|
-|.dbp|Proyecto|Archivo de proyecto de base de datos.|
-|.disco|source|Archivo de documento de detección dinámica. Controla la detección de servicios web XML.|
-|.exe, .dll|Proyecto|Archivos de biblioteca de vínculos dinámicos o ejecutable.|
-|.h|source|Archivo de inclusión de encabezado.|
-|.htm, .html, .xsp, .asp, .htc, .hta, .xml|Recurso|Archivos web comunes.|
-|.HxC|Proyecto|Archivo de proyecto de ayuda.|
-|.ico|Recurso|Archivo de gráficos de mapa de bits de icono.|
+|. cpp,. c|Source|Archivos de código fuente principal de la aplicación.|
+|.cur|Resource|Archivo de gráficos de mapa de bits de cursor.|
+|.dbp|proyecto|Archivo de proyecto de base de datos.|
+|.disco|Source|Archivo de documento de detección dinámica. Controla la detección de servicios web XML.|
+|.exe, .dll|proyecto|Archivos de biblioteca de vínculos dinámicos o ejecutable.|
+|.h|Source|Archivo de inclusión de encabezado.|
+|.htm, .html, .xsp, .asp, .htc, .hta, .xml|Resource|Archivos web comunes.|
+|.HxC|proyecto|Archivo de proyecto de ayuda.|
+|.ico|Resource|Archivo de gráficos de mapa de bits de icono.|
 |.idb|Compilación|El archivo de estado que contiene información de dependencia entre los archivos de código fuente y las definiciones de clase. Lo puede usar el compilador durante la compilación incremental. Use la opción [/Fd](fd-program-database-file-name.md) del compilador para especificar el nombre del archivo .idb.|
 |.idl|Compilación|Archivo de lenguaje de definición de interfaz. Para obtener más información, vea [Interface Definition (IDL) File](/windows/win32/Rpc/the-interface-definition-language-idl-file) (Archivo de definición de interfaz [IDL]) en Windows SDK.|
 |.ilk|Vinculación|Archivo de vinculación incremental. Para obtener más información, vea [/incremental](incremental-link-incrementally.md).|
 |.map|Vinculación|Archivo de texto que contiene información de enlazador. Use la opción [/Fm](fm-name-mapfile.md) del compilador para asignar un nombre al archivo de asignación. Para obtener más información, consulte [/map](map-generate-mapfile.md).|
-|.mfcribbon-ms|Recurso|Un archivo de recursos que contiene el código XML que define los botones, los controles y los atributos de MFC en la cinta de opciones. Para obtener más información, consulta [Ribbon Designer](../../mfc/ribbon-designer-mfc.md).|
+|.mfcribbon-ms|Resource|Un archivo de recursos que contiene el código XML que define los botones, los controles y los atributos de MFC en la cinta de opciones. Para obtener más información, consulta [Ribbon Designer](../../mfc/ribbon-designer-mfc.md).|
 |.obj, .o||Archivos de objeto, compilados pero no vinculados.|
-|.pch|Depuración|Archivo de encabezado precompilado.|
-|.rc, .rc2|Recurso|[Archivos de script de recursos](../../windows/working-with-resource-files.md) para generar recursos.|
+|.pch|Depurar|Archivo de encabezado precompilado.|
+|.rc, .rc2|Resource|[Archivos de script de recursos](../../windows/working-with-resource-files.md) para generar recursos.|
 |.sbr|Compilación|Archivo intermedio de explorador de código fuente. Archivo de entrada para [BSCMAKE](bscmake-options.md).|
 |.sln|Solución|Archivo de [solución](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
 |.suo|Solución|Archivo de opciones de solución.|
-|.txt|Recurso|Archivo de texto, normalmente el archivo "Léame".|
-|.vap|Proyecto|Archivo de proyecto de Visual Studio Analyzer.|
+|.txt|Resource|Archivo de texto, normalmente el archivo "Léame".|
+|.vap|proyecto|Archivo de proyecto de Visual Studio Analyzer.|
 |.vbg|Solución|Archivo de grupo de proyectos compatible.|
-|.vbp, .vip, .vbproj|Proyecto|Archivo de proyecto de Visual Basic.|
-|.vcxitems|Proyecto|Proyecto de elementos compartidos para compartir archivos de código entre varios proyectos de C++. Para obtener más información, vea [archivos de proyecto y de solución](project-and-solution-files.md).|
-|.vcxproj|Proyecto|Archivo de proyecto de Visual Studio. Para obtener más información, vea [archivos de proyecto y de solución](project-and-solution-files.md).|
-|.vcxproj.filters|Proyecto|Se usa cuando se usa Explorador de soluciones para agregar un archivo a un proyecto. El archivo de filtros define dónde se agrega el archivo en la vista de árbol Explorador de soluciones, en función de su extensión de nombre de archivo.|
-|.vdproj|Proyecto|Archivo de proyecto de implementación de Visual Studio.|
-|.vmx|Proyecto|Archivo de proyecto de macros.|
-|.vup|Proyecto|Archivo de proyecto de utilidad.|
+|.vbp, .vip, .vbproj|proyecto|Archivo de proyecto de Visual Basic.|
+|.vcxitems|proyecto|Proyecto de elementos compartidos para compartir archivos de código entre varios proyectos de C++. Para obtener más información, vea [archivos de proyecto y de solución](project-and-solution-files.md).|
+|.vcxproj|proyecto|Archivo de proyecto de Visual Studio. Para obtener más información, vea [archivos de proyecto y de solución](project-and-solution-files.md).|
+|.vcxproj.filters|proyecto|Se usa cuando se usa Explorador de soluciones para agregar un archivo a un proyecto. El archivo de filtros define dónde se agrega el archivo en la vista de árbol Explorador de soluciones, en función de su extensión de nombre de archivo.|
+|.vdproj|proyecto|Archivo de proyecto de implementación de Visual Studio.|
+|.vmx|proyecto|Archivo de proyecto de macros.|
+|.vup|proyecto|Archivo de proyecto de utilidad.|
 
 Para obtener información sobre otros archivos asociados a Visual Studio, consulte [Tipos y extensiones de archivo en Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
@@ -91,7 +91,7 @@ Los archivos de proyecto se organizan en carpetas en el Explorador de soluciones
 
 Al agregar un elemento a un proyecto, se agrega el elemento a todas las configuraciones de ese proyecto. El elemento se agrega tanto si se compila como si no. Por ejemplo, si tiene un proyecto denominado MyProject, cuando agrega un elemento, este se agrega a las configuraciones de depuración y de lanzamiento del proyecto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Crear y administrar proyectos de C++ Visual Studio](../creating-and-managing-visual-cpp-projects.md)<br>
 [Tipos de C++ proyecto de Visual Studio](visual-cpp-project-types.md)<br>

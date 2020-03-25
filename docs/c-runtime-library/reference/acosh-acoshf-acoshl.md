@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944075"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170363"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,12 +66,12 @@ Valor de punto flotante.
 
 Las funciones **Acosh** devuelven el coseno hiperbólico inverso (coseno hiperbólico de arco) de *x*. Estas funciones son válidas en el dominio *x* ≥ 1. Si *x* es menor que 1, `errno` se establece en `EDOM` y el resultado es un Nan silencioso. Si *x* es Nan, indefinido o infinito, se devuelve el mismo valor.
 
-|Entrada|Excepción SEH|Excepción de`_matherr`|
+|Entrada|Excepción SEH|Excepción de `_matherr`|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|ninguna|ninguna|
-|*x* < 1|ninguna|ninguna|
+|± QNAN, IND, INF|None|None|
+|*x* < 1|None|None|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Al C++usar, puede llamar a las sobrecargas de **Acosh** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **Acosh** siempre toma y devuelve **Double**.
 
@@ -79,9 +79,9 @@ Al C++usar, puede llamar a las sobrecargas de **Acosh** que toman y devuelven va
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**Acosh**, **acoshf (** , **acoshl**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -111,7 +111,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>

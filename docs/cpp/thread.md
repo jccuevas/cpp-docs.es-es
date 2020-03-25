@@ -1,5 +1,5 @@
 ---
-title: thread
+title: subproceso
 ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 30972b5668d3eab9ec2118f3d90d7ced1e087275
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301293"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160702"
 ---
-# <a name="thread"></a>thread
+# <a name="thread"></a>subproceso
 
 **Específicos de Microsoft**
 
@@ -26,7 +26,7 @@ El modificador de clase de almacenamiento Extended de **subproceso** se usa para
 
 *declarador* **__declspec (Thread)**
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El almacenamiento local para el subproceso (TLS) es el mecanismo por el que cada subproceso de un proceso con varios subproceso asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener una descripción completa de los subprocesos, vea [multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
@@ -85,7 +85,7 @@ Además, debe seguir estas instrucciones al declarar objetos y variables locales
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>

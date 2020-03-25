@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515670"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172079"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Introducción a los genéricos en C++/CLI
 
@@ -130,6 +130,6 @@ Una instancia predeterminada del parámetro de tipo puede crearse mediante el op
 
 donde `T` es un parámetro de tipo en una definición de clase o método genéricos, inicializa la variable a su valor predeterminado. Si `T` es una clase de referencia, será un puntero nulo; si `T` es una clase de valor, el objeto se inicializa en cero. Esto se conoce como *inicializador predeterminado*.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Genéricos](generics-cpp-component-extensions.md)

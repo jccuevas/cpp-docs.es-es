@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927737"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169713"
 ---
 # <a name="c-debugging-property-pages"></a>C++Depurar páginas de propiedades
 
-Estas páginas de propiedades se encuentran**en propiedades de** > **configuración** > del **proyecto** > **depuración**. Elija el tipo de depurador en el control desplegable. Para obtener más información sobre la C++ depuración [de código, vea Tutorial: Aprenda a depurar C++ código mediante](/visualstudio/debugger/getting-started-with-the-debugger-cpp) Visual Studio y [depurar código nativo](/visualstudio/debugger/debugging-native-code).
+Estas páginas de propiedades se encuentran en **Project** > **propiedades** > **propiedades de configuración** > **depuración**. Elija el tipo de depurador en el control desplegable. Para obtener más información sobre la C++ depuración de código, vea [tutorial C++ : aprender a depurar código mediante Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp) y [depurar código nativo](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Página de propiedades del depurador local de Windows
 
@@ -66,13 +66,13 @@ Especifica si el depurador debe intentar asociarse a un proceso existente cuando
 
 ### <a name="debugger-type"></a>Tipo de depurador
 
-Especifica el tipo de depurador que se va a usar. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
+Especifica el tipo de depurador que se usará. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
 
-**Posibilidad**
+**Opciones**
 
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
-- Mezclado mixto
+- **Mixed** Mezclado mixto
 - **Auto-auto** automática
 - **Script-script**
 - **Solo GPU (C++ amp)** -GPU (C++ amp)
@@ -89,7 +89,7 @@ Tipo de acelerador de depuración que se va a usar para depurar el código de GP
 
 Establece la frecuencia con la que se interrumpe el depurador de GPU.
 
-**Posibilidad**
+**Opciones**
 
 - **Interrumpir una vez por** deformación: interrumpir una vez por alabeo
 - **Interrumpir para cada subproceso (como el comportamiento de la CPU)** -interrumpir para cada subproceso (como el comportamiento de la CPU)
@@ -130,20 +130,20 @@ Especifica un nombre de servidor remoto.
 
 Especifica el tipo de conexión.
 
-**Posibilidad**
+**Opciones**
 
 - **Remoto con autenticación de Windows** : remoto con [autenticación de Windows](/windows-server/security/windows-authentication/windows-authentication-overview).
 - **Remoto sin autenticación** : remoto sin autenticación.
 
 ### <a name="debugger-type"></a>Tipo de depurador
 
-Especifica el tipo de depurador que se va a usar. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
+Especifica el tipo de depurador que se usará. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
 
-**Posibilidad**
+**Opciones**
 
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
-- Mezclado mixto
+- **Mixed** Mezclado mixto
 - **Auto-auto** automática
 - **Script-script**
 - **Solo GPU (C++ amp)** -GPU (C++ amp)
@@ -160,7 +160,7 @@ Tipo de acelerador de depuración que se va a usar para depurar el código de GP
 
 Establece la frecuencia con la que se interrumpe el depurador de GPU.
 
-**Posibilidad**
+**Opciones**
 
 - **Interrumpir una vez por** deformación: interrumpir una vez por alabeo
 - **Interrumpir para cada subproceso (como el comportamiento de la CPU)** -interrumpir para cada subproceso (como el comportamiento de la CPU)
@@ -197,13 +197,13 @@ Especifica la dirección URL del proyecto.
 
 ### <a name="debugger-type"></a>Tipo de depurador
 
-Especifica el tipo de depurador que se va a usar. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
+Especifica el tipo de depurador que se usará. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
 
-**Posibilidad**
+**Opciones**
 
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
-- Mezclado mixto
+- **Mixed** Mezclado mixto
 - **Auto-auto** automática
 - **Script-script**
 
@@ -215,13 +215,13 @@ Especifica la dirección URL del proyecto.
 
 ### <a name="debugger-type"></a>Tipo de depurador
 
-Especifica el tipo de depurador que se va a usar. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
+Especifica el tipo de depurador que se usará. Cuando se establece en automático, el tipo de depurador se seleccionará en función del contenido del archivo exe.
 
-**Posibilidad**
+**Opciones**
 
 - **Solo nativo** : solo nativo
 - Solo **administrado** : solo administrado
-- Mezclado mixto
+- **Mixed** Mezclado mixto
 - **Auto-auto** automática
 - **Script-script**
 

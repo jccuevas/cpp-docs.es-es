@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
-ms.openlocfilehash: 698dbfe77c82ac2f0425ed1c1bff4d917ed86f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd6a9ebc58845e88e5e82a4e29f5ccc2a46bebfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160481"
 ---
-# <a name="varianttclear"></a>_variant_t::Clear
+# <a name="_variant_tclear"></a>_variant_t::Clear
 
 **Específicos de Microsoft**
 
-Borra el encapsulado `VARIANT` objeto.
+Borra el objeto de `VARIANT` encapsulado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,12 +28,12 @@ Borra el encapsulado `VARIANT` objeto.
 void Clear( );
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las llamadas `VariantClear` en encapsulado `VARIANT` objeto.
+Llama a `VariantClear` en el objeto `VARIANT` encapsulado.
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [_variant_t (Clase)](../cpp/variant-t-class.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516150"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172625"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Destinos de atributo (C++/CLI y C++/CX)
 
@@ -193,7 +193,7 @@ A continuación se muestra una lista de los destinos de atributo válidos:
     };
     ```
 
-Normalmente, un atributo precede directamente al elemento del lenguaje al que se aplica. En algunos casos, sin embargo, la posición de un atributo no es suficiente para determinar el destino previsto del atributo. Considere este ejemplo:
+Normalmente, un atributo precede directamente al elemento del lenguaje al que se aplica. En algunos casos, sin embargo, la posición de un atributo no es suficiente para determinar el destino previsto del atributo. En este ejemplo:
 
 ```cpp
 [Attr] int MyFn(double x)...
@@ -272,6 +272,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos definidos por el usuario](user-defined-attributes-cpp-component-extensions.md)

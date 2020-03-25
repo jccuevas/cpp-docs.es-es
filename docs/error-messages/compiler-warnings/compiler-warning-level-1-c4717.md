@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 1) C4717
+title: Advertencia del compilador (nivel 1) C4717
 ms.date: 11/04/2016
 f1_keywords:
 - C4717
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 40897e54601793431671bc14f855db43e905c656
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051345"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175293"
 ---
-# <a name="compiler-warning-level-1-c4717"></a>ADVERTENCIA del compilador (nivel 1) C4717
+# <a name="compiler-warning-level-1-c4717"></a>Advertencia del compilador (nivel 1) C4717
 
 ' función ': recursivo en todas las rutas de acceso de control. la función causará el desbordamiento de la pila en tiempo de ejecución
 

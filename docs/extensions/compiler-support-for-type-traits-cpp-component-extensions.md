@@ -61,12 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1bfb4308dc76e3393eceddf8dedd6d11e73adc17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516220"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172535"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Compatibilidad del compilador con rasgos de tipo (C++/CLI y C++/CX)
 
@@ -74,7 +74,7 @@ El compilador de Microsoft C++ admite *rasgos de tipo* para extensiones de C++/C
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los rasgos de tipo son especialmente útiles para los programadores que escriben las bibliotecas.
 
@@ -82,7 +82,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
 
 (En la lista siguiente, se escriben ejemplos de código solo en C++/CLI. Pero el rasgo de tipo correspondiente también se admite en C++/CX a menos que se indique lo contrario. El término "tipo de plataforma" hace referencia a tipos Windows Runtime o tipos Common Language Runtime).
 
-- `__has_assign(` *type* `)`
+- `__has_assign(` *tipo* `)`
 
    Devuelve **true** si el tipo de plataforma o nativo tiene un operador de asignación de copia.
 
@@ -96,7 +96,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_copy(` *type* `)`
+- `__has_copy(` *tipo* `)`
 
    Devuelve **true** si el tipo de plataforma o nativo tiene un constructor de copia.
 
@@ -110,9 +110,9 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_finalizer(` *type* `)`
+- `__has_finalizer(` *tipo* `)`
 
-   (No se admite en C++/CX). Devuelve **true** si el tipo CLR tiene un finalizador. Para más información, consulte [Destructores y finalizadores en Procedimiento: Definición y uso de clases y structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+   (No se admite C++en/CX.) Devuelve **true** si el tipo CLR tiene un finalizador. Consulte [destructores y finalizadores en cómo: definir y utilizar clases y Structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_nothrow_assign(` *type* `)`
+- `__has_nothrow_assign(` *tipo* `)`
 
    Devuelve **true** si un operador de asignación de copia tiene una especificación de excepción vacía.
 
@@ -143,7 +143,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_nothrow_constructor(` *type* `)`
+- `__has_nothrow_constructor(` *tipo* `)`
 
    Devuelve **true** si el constructor predeterminado tiene una especificación de excepción vacía.
 
@@ -159,7 +159,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_nothrow_copy(` *type* `)`
+- `__has_nothrow_copy(` *tipo* `)`
 
    Devuelve **true** si el constructor de copia tiene una especificación de excepción vacía.
 
@@ -175,7 +175,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_trivial_assign(` *type* `)`
+- `__has_trivial_assign(` *tipo* `)`
 
    Devuelve **true** si el tipo tiene un operador trivial de asignaciones generado por el compilador.
 
@@ -189,7 +189,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_trivial_constructor(` *type* `)`
+- `__has_trivial_constructor(` *tipo* `)`
 
    Devuelve **true** si el tipo tiene un constructor trivial generado por el compilador.
 
@@ -203,7 +203,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_trivial_copy(` *type* `)`
+- `__has_trivial_copy(` *tipo* `)`
 
    Devuelve **true** si el tipo tiene un constructor trivial de copia generado por el compilador.
 
@@ -217,7 +217,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_trivial_destructor(` *type* `)`
+- `__has_trivial_destructor(` *tipo* `)`
 
    Devuelve **true** si el tipo tiene un destructor trivial de generado por el compilador.
 
@@ -232,7 +232,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_user_destructor(` *type* `)`
+- `__has_user_destructor(` *tipo* `)`
 
    Devuelve **true** si el tipo de plataforma o nativo tiene un destructor declarado por el usuario.
 
@@ -249,7 +249,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__has_virtual_destructor(` *type* `)`
+- `__has_virtual_destructor(` *tipo* `)`
 
    Devuelve **true** si el tipo tiene un destructor virtual.
 
@@ -268,7 +268,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_abstract(` *type* `)`
+- `__is_abstract(` *tipo* `)`
 
    Devuelve **true** si el tipo es un tipo abstracto. Para más información sobre los tipos abstractos nativos, consulte [Clases abstractas](../cpp/abstract-classes-cpp.md).
 
@@ -308,7 +308,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_class(` *type* `)`
+- `__is_class(` *tipo* `)`
 
    Devuelve **true** si el tipo es una clase o un struct nativos.
 
@@ -322,7 +322,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_convertible_to(` `from` `,`  `to` `)`
+- `__is_convertible_to(` `from` `,``to` `)`
 
    Devuelve **true** si el primer tipo se puede convertir en el segundo tipo.
 
@@ -340,7 +340,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_delegate(` *type* `)`
+- `__is_delegate(` *tipo* `)`
 
    Devuelve **true** si `type` es un delegado. Para más información, consulte [delegate (C++/CLI y C++/CX)](delegate-cpp-component-extensions.md).
 
@@ -351,7 +351,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_empty(` *type* `)`
+- `__is_empty(` *tipo* `)`
 
    Devuelve **true** si el tipo no tiene ningún miembro de datos de instancia.
 
@@ -367,7 +367,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_enum(` *type* `)`
+- `__is_enum(` *tipo* `)`
 
    Devuelve **true** si el tipo es una enumeración nativa.
 
@@ -389,7 +389,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_interface_class(` *type* `)`
+- `__is_interface_class(` *tipo* `)`
 
    Devuelve **true** si se pasa una interfaz de plataforma. Para más información, consulte [interface class](interface-class-cpp-component-extensions.md).
 
@@ -403,7 +403,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_pod(` *type* `)`
+- `__is_pod(` *tipo* `)`
 
    Devuelve **true** si el tipo es una clase o unión sin constructor ni ningún miembro no estático privado o protegido, sin clases base y sin funciones virtuales. Vea el estándar de C++, secciones 8.5.1/1, 9/4 y 10 3.9 para más información sobre POD.
 
@@ -419,7 +419,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_polymorphic(` *type* `)`
+- `__is_polymorphic(` *tipo* `)`
 
    Devuelve **true** si un tipo nativo tiene funciones virtuales.
 
@@ -435,7 +435,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_ref_array(` *type* `)`
+- `__is_ref_array(` *tipo* `)`
 
    Devuelve **true** si se pasa una matriz de plataforma. Para más información, consulte [Matrices](arrays-cpp-component-extensions.md).
 
@@ -447,7 +447,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_ref_class(` *type* `)`
+- `__is_ref_class(` *tipo* `)`
 
    Devuelve **true** si se pasa una clase de referencia. Para más información sobre los tipos de referencia definidos por el usuario, consulte [Clases y structs](classes-and-structs-cpp-component-extensions.md).
 
@@ -460,7 +460,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_sealed(` *type* `)`
+- `__is_sealed(` *tipo* `)`
 
    Devuelve **true** si se pasa una tipo de plataforma o nativo marcado como sealed. Para más información, consulte [sealed](sealed-cpp-component-extensions.md).
 
@@ -471,7 +471,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_simple_value_class(` *type* `)`
+- `__is_simple_value_class(` *tipo* `)`
 
    Devuelve **true** si se pasa un tipo de valor que no contiene referencias al montón de recolección de elementos no utilizados. Para más información sobre los tipos de valores definidos por el usuario, consulte [Clases y structs](classes-and-structs-cpp-component-extensions.md).
 
@@ -489,7 +489,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_union(` *type* `)`
+- `__is_union(` *tipo* `)`
 
    Devuelve **true** si un tipo es una unión.
 
@@ -506,7 +506,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
     }
     ```
 
-- `__is_value_class(` *type* `)`
+- `__is_value_class(` *tipo* `)`
 
    Devuelve **true** si se pasa un tipo de valor. Para más información sobre los tipos de valores definidos por el usuario, consulte [Clases y structs](classes-and-structs-cpp-component-extensions.md).
 
@@ -520,7 +520,7 @@ En la tabla siguiente se muestran los rasgos de tipo que admite el compilador. T
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El rasgo de tipo `__has_finalizer(`*type*`)` no se admite porque esta plataforma no es compatible con los finalizadores.
 
@@ -530,7 +530,7 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 (No hay ninguna observación específica de la plataforma para esta característica).
 
@@ -568,6 +568,6 @@ int main () {
 R is a ref class
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

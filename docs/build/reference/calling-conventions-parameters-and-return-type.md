@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169752"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Convenciones de llamada, parámetros y tipo de valor devuelto
 
@@ -27,12 +27,12 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Parámetros
 
 *pidd*<br/>
-Un `const` puntero a un `ImgDelayDescr` que contiene los desplazamientos de diversos datos relacionados con la importación, una marca de tiempo para obtener información de enlace y un conjunto de atributos que proporcionan información adicional sobre el contenido del descriptor. Actualmente no hay un solo atributo, `dlattrRva`, lo que indica que las direcciones del descriptor son direcciones virtuales relativas. Para obtener más información, consulte las declaraciones de *delayimp.h*.
+`const` puntero a una `ImgDelayDescr` que contiene los desplazamientos de varios datos relacionados con la importación, una marca de tiempo para la información de enlace y un conjunto de atributos que proporcionan más información sobre el contenido del descriptor. Actualmente solo hay un atributo, `dlattrRva`, que indica que las direcciones del descriptor son direcciones virtuales relativas. Para obtener más información, consulte las declaraciones en *Delayimp. h*.
 
-Para obtener la definición de la `PCImgDelayDescr` estructura, vea [definiciones de estructura y constante](structure-and-constant-definitions.md).
+Para obtener la definición de la estructura de `PCImgDelayDescr`, vea [definiciones de estructura y constante](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
-Un puntero a la ranura de la tabla de direcciones de carga importación de retraso (IAT) se actualiza con la dirección de la función importada. La rutina auxiliar necesita almacenar el mismo valor que devuelve en esta ubicación.
+Un puntero a la ranura de la tabla de direcciones de importación de carga retrasada (IAT) que se actualiza con la dirección de la función importada. La rutina auxiliar necesita almacenar el mismo valor que devuelve en esta ubicación.
 
 ## <a name="expected-return-values"></a>Valores devueltos esperados
 
@@ -46,15 +46,15 @@ Si la función no se ejecuta correctamente, generará una excepción y devolver�
 
 - Error de `GetProcAddress`.
 
-Es su responsabilidad administrar estas excepciones.
+Es su responsabilidad controlar estas excepciones.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La convención de llamada de la función del asistente es `__stdcall`. El tipo del valor devuelto no es relevante, por lo que se usa FARPROC. Esta función tiene vinculación de C.
 
 El valor devuelto del asistente de carga retrasada tiene que almacenarse en la ubicación del puntero de función transferida, salvo que quiera que la rutina del asistente se use como enlace de notificación. En ese caso, su código será el responsable de buscar el puntero de función adecuado que deba devolver. Entonces, el código thunk generado por el enlazador tomará ese valor devuelto como el destino real de la importación y saltará a él directamente.
 
-## <a name="sample"></a>Ejemplo
+## <a name="sample"></a>Muestra
 
 El siguiente código muestra cómo implementar una función de enlace simple.
 
@@ -135,6 +135,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Descripción de la función auxiliar](understanding-the-helper-function.md)

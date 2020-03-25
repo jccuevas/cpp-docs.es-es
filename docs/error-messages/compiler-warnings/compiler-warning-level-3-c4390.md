@@ -1,19 +1,19 @@
 ---
-title: ADVERTENCIA del compilador (nivel 3) C4390
+title: Advertencia del compilador (nivel 3) C4390
 ms.date: 11/04/2016
 f1_keywords:
 - C4390
 helpviewer_keywords:
 - C4390
 ms.assetid: c95c2f1b-9bce-4b1f-a80c-565d4cde0b1e
-ms.openlocfilehash: 8402c6a2d0fcbb4704b833ac7ae2b070c7af3a48
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 63150f4ca801d3c377c7bc09b58a778bebf02b46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051587"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198684"
 ---
-# <a name="compiler-warning-level-3-c4390"></a>ADVERTENCIA del compilador (nivel 3) C4390
+# <a name="compiler-warning-level-3-c4390"></a>Advertencia del compilador (nivel 3) C4390
 
 '; ': se encontró una instrucción controlada vacía; ¿es esta la intención?
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: dbf186fa699e8faf85385fd322482a4373b3fd60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 01658c6146706d8ea7bfd70d002efcfff88031b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171598"
 ---
 # <a name="__getmainargs-__wgetmainargs"></a>__getmainargs, __wgetmainargs
 
@@ -73,7 +73,7 @@ Otra información que se pasa al archivo DLL de CRT.
 
 0 si es correcto; un valor negativo si no lo es.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Use `__getmainargs` en plataformas de caracteres no anchos y `__wgetmainargs` en plataformas de caracteres anchos (Unicode).
 

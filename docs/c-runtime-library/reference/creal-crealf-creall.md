@@ -33,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dcdf60fee6d57b5561b72b477aa1a8bb31f35f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942593"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171221"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -66,19 +66,19 @@ Número complejo.
 
 La parte real de *z*.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **CREAL** que toman los valores **_Fcomplex** o **_Lcomplex** y devolver valores de tipo **float** o **Long Double** . En un programa de C, **CREAL** siempre toma un valor **_Dcomplex** y devuelve un valor **Double** .
+Dado C++ que permite las sobrecargas, puede llamar a sobrecargas de **creal** que toman **_Fcomplex** o **_Lcomplex** valores, y devuelven valores de tipo **float** o **Long Double** . En un programa de C, **CREAL** siempre toma un valor **_Dcomplex** y devuelve un valor **Double** .
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
+|**CREAL**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
-Los tipos **_Fcomplex**, **_Dcomplex**y **_Lcomplex** son equivalentes específicos de Microsoft de los tipos C99 nativos no implementados **float _Complex**, **Double _Complex**y **Long Double _Complex**, respectivamente. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Los tipos **_Fcomplex**, **_Dcomplex**y **_Lcomplex** son equivalentes específicos de Microsoft de los tipos de C99 nativo no implementados **float _Complex**, **Double _Complex**y **Long Double _Complex**, respectivamente. Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>

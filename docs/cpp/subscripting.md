@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 376cacc3f70995c271a29b741ad266049da45785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160897"
 ---
 # <a name="subscripting"></a>Subíndices
 
-El operador de subíndice (**[]**), como el operador de llamada de función, se considera un operador binario. El operador de subíndice debe ser una función miembro no estática que tome un único argumento. Este argumento puede ser de cualquier tipo y designa el subíndice de la matriz deseado.
+El operador de subíndice ( **[]** ), al igual que el operador de llamada a función, se considera un operador binario. El operador de subíndice debe ser una función miembro no estática que tome un único argumento. Este argumento puede ser de cualquier tipo y designa el subíndice de la matriz deseado.
 
 ## <a name="example"></a>Ejemplo
 
@@ -91,10 +91,10 @@ Element: [10] = 10
 
 ## <a name="comments"></a>Comentarios
 
-Cuando `i` llega a 10 en el programa anterior, **operator []** detecta que un subíndice fuera de los límites se está usando y emite un mensaje de error.
+Cuando `i` llega a 10 en el programa anterior, el **operador []** detecta que se está usando un subíndice fuera del límite y emite un mensaje de error.
 
-Tenga en cuenta que la función **operator []** devuelve un tipo de referencia. Esto lo convierte en un valor L, que permite utilizar expresiones con subíndice en cada lado de los operadores de asignación.
+Tenga en cuenta que el operador de función **[]** devuelve un tipo de referencia. Esto lo convierte en un valor L, que permite utilizar expresiones con subíndice en cada lado de los operadores de asignación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Sobrecarga de operadores](../cpp/operator-overloading.md)

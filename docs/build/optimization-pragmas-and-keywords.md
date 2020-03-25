@@ -6,39 +6,39 @@ helpviewer_keywords:
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-ms.openlocfilehash: db9af687c7de560b0012ceea50a7cbfcc7d5de9c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 192564d475da121a874b5a40de62b37d7f934ce7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341205"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169804"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Directivas pragma y palabras clave de optimización
 
-Varias directivas pragma que usar en el código de C o C++ y palabras clave afectan a la optimización:
+Varias palabras clave y pragmas que se usan en el código C C++ o afectan a la optimización:
 
 - [__asm](../assembler/inline/asm.md)
 
 - [__assume](../intrinsics/assume.md)
 
-- [inline, __inline, o \__forceinline](../cpp/inline-functions-cpp.md)
+- [Inline, __inline o \__forceinline](../cpp/inline-functions-cpp.md)
 
 - [#pragma auto_inline](../preprocessor/auto-inline.md)
 
 - [#pragma check_stack](../preprocessor/check-stack.md)
 
-- [#pragma (función)](../preprocessor/function-c-cpp.md)
+- [#pragma función)](../preprocessor/function-c-cpp.md)
 
 - [#pragma inline_depth](../preprocessor/inline-depth.md)
 
 - [#pragma inline_recursion](../preprocessor/inline-recursion.md)
 
-- [#pragma intrinsic](../preprocessor/intrinsic.md)
+- [intrínseco #pragma](../preprocessor/intrinsic.md)
 
-- [#pragma optimize](../preprocessor/optimize.md)
+- [#pragma optimizar](../preprocessor/optimize.md)
 
-- [palabra clave Register](../cpp/storage-classes-cpp.md#register)
+- [Register (palabra clave)](../cpp/storage-classes-cpp.md#register)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Optimizar el código](optimizing-your-code.md)

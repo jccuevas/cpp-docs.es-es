@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857858"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171416"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -67,7 +67,7 @@ long double abs( long double n );   // C++ only
 float abs( float n );   // C++ only
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
 *n*<br/>
 Valor numérico.
@@ -76,13 +76,13 @@ Valor numérico.
 
 Las funciones **ABS**, **Labs**, **llabs** y **_abs64** devuelven el valor absoluto del parámetro *n*. No se devuelve ningún error.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ABS** que toman y devuelven valores **Long** **, Long** **Long**, **float**, **Double**y **Long** **Double** . Estas sobrecargas se definen en el encabezado \<cmath>. En un programa de C, **ABS** siempre toma y devuelve un valor **int**.
 
 **Específico de Microsoft**: dado que el intervalo de enteros negativos que se puede representar mediante un tipo entero es mayor que el intervalo de enteros positivos que se puede representar mediante ese tipo, es posible proporcionar un argumento a estas funciones que no se pueden convertir. Si el tipo de valor devuelto no puede representar el valor absoluto del argumento, las funciones **ABS** devuelven el valor del argumento sin modificar. En concreto, `abs(INT_MIN)` devuelve `INT_MIN`, `labs(LONG_MIN)` devuelve `LONG_MIN`, `llabs(LLONG_MIN)` devuelve `LLONG_MIN` y `_abs64(_I64_MIN)` devuelve `_I64_MIN`. Esto significa que las funciones **ABS** no se pueden utilizar para garantizar un valor positivo.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C necesario|Encabezado C++ necesario|
 |-------------|-----------------------|---------------------------|
@@ -148,7 +148,7 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>

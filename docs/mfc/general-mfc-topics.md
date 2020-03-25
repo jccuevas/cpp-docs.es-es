@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 571be8300f46ceecdc65df92d35c731bec96a92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095857"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169990"
 ---
 # <a name="general-mfc-topics"></a>Temas generales de MFC
 
@@ -23,7 +23,7 @@ El marco de trabajo de MFC es un enfoque eficaz que permite compilar sobre el tr
 
 ## <a name="in-this-section"></a>En esta sección
 
-`MFC Samples`, que se proporcionan en [los C++ ejemplos de Visual](../overview/visual-cpp-samples.md)
+[Ejemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples)
 
 [Uso de los archivos de código fuente de MFC](../mfc/using-the-mfc-source-files.md)
 
@@ -33,7 +33,7 @@ El marco de trabajo de MFC es un enfoque eficaz que permite compilar sobre el tr
 
 [Compilación en el marco](../mfc/building-on-the-framework.md)
 
-[CWinApp: La clase Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp: la clase Application](../mfc/cwinapp-the-application-class.md)
 
 [Plantillas de documento y el proceso de creación de documentos y vistas](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ El marco de trabajo de MFC es un enfoque eficaz que permite compilar sobre el tr
 
 [Requisitos de compilación para los controles comunes de Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Procedimientos: Agregar compatibilidad con el Administrador de reinicio](../mfc/how-to-add-restart-manager-support.md)
+[Procedimiento para agregar compatibilidad con el Administrador de reinicio](../mfc/how-to-add-restart-manager-support.md)
 
 [Diseño dinámico](../mfc/dynamic-layout.md)
 
@@ -55,6 +55,6 @@ Para obtener información general sobre la documentación de referencia de MFC, 
 
 Para obtener información sobre ATL, vea [referencia de Active Template Library](../atl/atl-class-overview.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Trabajo con objetos de ventana](../mfc/working-with-window-objects.md)

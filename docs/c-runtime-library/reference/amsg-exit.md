@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-ms.openlocfilehash: 2d577bfcf0584ef982ab43ff98674d0cfadd14ba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 31979a3181dc57644f1e6877277884e55cebf733
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939698"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170946"
 ---
 # <a name="_amsg_exit"></a>_amsg_exit
 
@@ -45,7 +45,7 @@ void _amsg_exit ( int rterrnum );
 *rterrnum*<br/>
 Número de identificación de un mensaje de error en tiempo de ejecución definido por el sistema.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta función emite el mensaje de error en tiempo de ejecución para **stderr** en aplicaciones de consola o muestra un mensaje en un cuadro de mensaje en aplicaciones de Windows. En modo de depuración, puede invocar al depurador antes de salir.
 

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: fbb2bd68f589630608e341b944b4201c12d67211
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516180"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172651"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Tipos de parámetros de atributo (C++/CLI y C++/CX)
 
@@ -32,7 +32,7 @@ El compilador deben conocer los valores pasados a los atributos en tiempo de com
 
 - **wchar_t**
 
-- `char*` o `wchar_t*` o `System::String*`
+- `char*`, `wchar_t*` o `System::String*`
 
 - `System::Type ^`
 
@@ -122,6 +122,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos definidos por el usuario](user-defined-attributes-cpp-component-extensions.md)

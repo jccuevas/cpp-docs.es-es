@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193659"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Error grave de NMAKE U1078
 
-desbordamiento constante en 'expresión'
+desbordamiento constante en ' expresión '
 
-La expresión dada contiene una constante que supera el intervalo de-2.147.483.648 a 2.147.483.647. La constante aparecía en una de las situaciones siguientes:
+La expresión dada contenía una constante que superó el intervalo de-2.147.483.648 a 2.147.483.647. La constante apareció en una de las siguientes situaciones:
 
-- Una expresión especificada con una directiva de preprocesamiento
+- Expresión especificada con una directiva de preprocesamiento
 
-- Un nivel de error especificado con el guión (**-**) modificador de comandos
+- Un nivel de error especificado con el modificador de comando Dash ( **-** )

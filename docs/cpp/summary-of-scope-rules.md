@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266912"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160884"
 ---
 # <a name="summary-of-scope-rules"></a>Resumen de reglas de ámbito
 
-El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en que se determina la sobrecarga). Si el nombre indica una función, la función no debe ser ambigua respecto al número y tipo de parámetros. Si el nombre se mantiene no ambiguo, [acceso a miembros](../cpp/member-access-control-cpp.md) se aplican las reglas.
+El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en que se determina la sobrecarga). Si el nombre indica una función, la función no debe ser ambigua respecto al número y tipo de parámetros. Si el nombre sigue siendo inequívoco, se aplican las reglas [de acceso a miembros](../cpp/member-access-control-cpp.md) .
 
 ## <a name="constructor-initializers"></a>Inicializadores del constructor
 
-[Los inicializadores de constructor](constructors-cpp.md#member_init_list) se evalúan en el ámbito de bloque más externo del constructor para el que se especifican. Por lo tanto, pueden usar los nombres de parámetro del constructor.
+Los [inicializadores de constructor](constructors-cpp.md#member_init_list) se evalúan en el ámbito del bloque más externo del constructor para el que se especifican. Por lo tanto, pueden usar los nombres de parámetro del constructor.
 
 ## <a name="global-names"></a>Nombres globales
 
@@ -29,15 +29,15 @@ Un nombre de un objeto, una función o un enumerador es global si se presenta fu
 
 - Resolución de ámbito (`::`)
 
-- Selección de miembro para objetos y referencias (**.**)
+- Selección de miembros para objetos y referencias ( **.** )
 
-- Selección de miembro para punteros (**->**)
+- Selección de miembros para punteros ( **->** )
 
 ## <a name="qualified-names"></a>Nombres completos
 
 Los nombres utilizados con el operador binario de resolución de ámbito (`::`) se denominan “nombres completos”. El nombre especificado detrás del operador binario de resolución de ámbito debe ser un miembro de la clase especificada a la izquierda del operador o un miembro de su clase o clases base.
 
-Los nombres especificados detrás del operador de selección de miembro (**.** o **->**) deben ser miembros del tipo de clase del objeto especificado a la izquierda del operador o miembros de su clase o clases base. Los nombres especificados a la derecha del operador de selección de miembro (**->**) también pueden ser objetos de otro tipo de clase, siempre que el lado izquierdo de **->** es un objeto de clase y que la clase define un operador de selección de miembro sobrecargado (**->**) que se evalúa como un puntero a algún otro tipo de clase. (Esta especificación se explica con más detalle en [acceso a miembros de clase](../cpp/member-access.md).)
+Nombres especificados después del operador de selección de miembro ( **.** o **->** ) deben ser miembros del tipo de clase del objeto especificado a la izquierda del operador o de sus clases base. Los nombres especificados a la derecha del operador de selección de miembros ( **->** ) también pueden ser objetos de otro tipo de clase, siempre que el lado izquierdo de **->** sea un objeto de clase y que la clase defina un operador de selección de miembro ( **->** ) sobrecargado que se evalúe como un puntero a algún otro tipo de clase. (Esta disposición se describe con más detalle en [acceso a miembros de clase](../cpp/member-access.md)).
 
 El compilador busca los nombres en el orden siguiente y se detiene cuando encuentra el nombre:
 
@@ -57,11 +57,11 @@ Sin embargo, puede modificar este orden de búsqueda de la forma siguiente:
 
 1. Los nombres precedidos por `::` obligan a que la búsqueda se inicie en el ámbito global.
 
-1. Los nombres precedidos por la **clase**, **struct**, y **unión** palabras clave forzar al compilador que busque sólo **clase**,  **struct**, o **unión** nombres.
+1. Los nombres precedidos por las palabras clave **Class**, **struct**y **Union** obligan al compilador a buscar solo los nombres de **clase**, **estructura**o **Unión** .
 
-1. Los nombres en el lado izquierdo del operador de resolución de ámbito (`::`) solo puede ser **clase**, **struct**, **espacio de nombres**, o **unión**nombres.
+1. Los nombres del lado izquierdo del operador de resolución de ámbito (`::`) solo pueden ser de **clase**, **struct**, **espacio de nombres**o **Unión** .
 
-Si el nombre hace referencia a un miembro no estático pero se utiliza en una función miembro estática, se genera un mensaje de error. De forma similar, si el nombre hace referencia a cualquier miembro no estático en una clase contenedora, un mensaje de error se genera porque las clases contenidas no tienen clase contenedora **esto** punteros.
+Si el nombre hace referencia a un miembro no estático pero se utiliza en una función miembro estática, se genera un mensaje de error. Del mismo modo, si el nombre hace referencia a cualquier miembro no estático en una clase envolvente, se genera un mensaje de error porque las clases cerradas no tienen **este** puntero de clase envolvente.
 
 ## <a name="function-parameter-names"></a>Nombres de parámetro de la función
 
@@ -71,6 +71,6 @@ Los nombres de los parámetros de función en las declaraciones de función (pro
 
 Los parámetros predeterminados están en el ámbito del parámetro para el que son el parámetro predeterminado, como se describe en los dos párrafos anteriores. Sin embargo, no pueden acceder a variables locales o miembros de clase no estáticos. Los parámetros predeterminados se evalúan en el punto de la llamada de función, pero se evalúan en el ámbito original de la declaración de función. Por tanto, los parámetros predeterminados de funciones miembro siempre se evalúan en el ámbito de la clase.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Herencia](../cpp/inheritance-cpp.md)

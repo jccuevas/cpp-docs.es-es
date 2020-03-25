@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1314
 ms.assetid: 0b5cd599-61ea-4ac7-8f25-c6d3a8b14655
-ms.openlocfilehash: 6ff30ba92614983783395024ba2ee82a8f8b8b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe13bd65eb66ed553d93b30a85fa9bcecfda856f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183610"
 ---
 # <a name="linker-tools-error-lnk1314"></a>Error de las herramientas del vinculador LNK1314
 
-no válida o dañada tabla de símbolos COFF (estático indefinido o label (símbolo))
+tabla de símbolos COFF no válida o dañada (símbolo de etiqueta o estático sin definir)
 
-El contenido generado por el compilador para una sección en el objeto dado parece estar dañado.
+Parece que el contenido generado por el compilador para una sección del objeto dado está dañado.
 
 Este error puede representar un error del compilador.

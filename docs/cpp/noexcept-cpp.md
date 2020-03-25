@@ -4,12 +4,12 @@ ms.date: 11/19/2019
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: 5e8d58ed246b0143dc3d3be545cd796a4c3d60ed
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: cc669a43ff9acbb98ce970c21cba5ac9cdc5b732
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245628"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161053"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "74245628"
 *expresión constante*<br/>
 Expresión constante de tipo **bool** que representa si el conjunto de posibles tipos de excepción está vacío. La versión incondicional es equivalente a `noexcept(true)`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Una *expresión noexception* es un tipo de *especificación de excepción*, un sufijo de una declaración de función que representa un conjunto de tipos que puede coincidir con un controlador de excepciones para cualquier excepción que sale de una función. Operador condicional unario `noexcept(`*constant_expression*`)` donde *constant_expression* produce **true**y su sinónimo incondicional **noexception**, especifica que el conjunto de posibles tipos de excepción que pueden salir de una función está vacío. Es decir, la función nunca produce una excepción y nunca permite que se propague una excepción fuera de su ámbito. El operador `noexcept(`*constant_expression*`)` donde *constant_expression* produce **false**o la ausencia de una especificación de excepción (distinta de para un destructor o una función de desasignación) indica que el conjunto de posibles excepciones que pueden salir de la función es el conjunto de todos los tipos.
 
@@ -44,7 +44,7 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Prácticas C++ recomendadas modernas para excepciones y control de errores](errors-and-exception-handling-modern-cpp.md)<br/>
 [Especificaciones de excepciones (Throw, noexception)](exception-specifications-throw-cpp.md)
