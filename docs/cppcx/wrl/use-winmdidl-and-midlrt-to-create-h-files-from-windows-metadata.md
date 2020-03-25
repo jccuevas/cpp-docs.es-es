@@ -3,12 +3,12 @@ title: 'Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metad
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: bceb4aff22f6ebba9c8705b3b5a55d0478f244c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791728"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213543"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows
 
@@ -36,7 +36,7 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 Impide que se muestre en la consola el mensaje de copyright y el número de versión de winmdidl.
 
 **/suppressversioncheck**<br/>
-No usado.
+No se usa.
 
 **/Time**<br/>
 Muestra el tiempo de ejecución total en el resultado de la consola.
@@ -44,7 +44,7 @@ Muestra el tiempo de ejecución total en el resultado de la consola.
 **/outdir:** <em>dir</em><br/>
 Especifica un directorio de salida. Si la ruta de acceso contiene espacios en blanco, utilice comillas. El directorio de salida predeterminado es *\<unidad >* : \usuarios\\ *\<username >* \AppData\Local\VirtualStore\Program files (x86) \microsoft Visual Studio 12,0\\.
 
-**/banner:** <em>file</em><br/>
+**/banner:** <em>archivo</em><br/>
 Especifica un archivo que contiene el texto personalizado que se va a anteponer al mensaje de copyright predeterminado y al número de versión de winmdidl en la parte superior del archivo .idl generado. Si la ruta de acceso contiene espacios en blanco, utilice comillas.
 
 **/utf8**<br/>
@@ -71,7 +71,7 @@ A continuación, se ejecuta midlrt en el archivo IDL generado. Observe que el ar
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El archivo de salida de una operación de winmdidl tiene el mismo nombre que el archivo de entrada, pero tiene la extensión de nombre de archivo .idl.
 

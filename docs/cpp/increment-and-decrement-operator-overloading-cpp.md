@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d64f0af994f88d0f4ecd3a5921de4a16b8bdaaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183573"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178294"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Sobrecarga de operadores de incremento y decremento (C++)
 
@@ -22,10 +22,10 @@ Los operadores de incremento y decremento pertenecen a una categoría especial p
 
 - Predecremento y postdecremento
 
-Cuando escriba funciones de operador sobrecargadas, puede resultarle útil implementar versiones distintas para las versiones de prefijo y de postfijo de estos operadores. Para distinguir entre los dos, se observa la siguiente regla: La forma de prefijo del operador se declara exactamente la misma manera que cualquier otro operador unario; la forma de postfijo acepta un argumento adicional de tipo **int**.
+Cuando escriba funciones de operador sobrecargadas, puede resultarle útil implementar versiones distintas para las versiones de prefijo y de postfijo de estos operadores. Para distinguir entre los dos, se observa la siguiente regla: el formato de prefijo del operador se declara exactamente de la misma manera que cualquier otro operador unario; el formato de postfijo acepta un argumento adicional de tipo **int**.
 
 > [!NOTE]
->  Al especificar un operador sobrecargado para la forma del operador de incremento o decremento de postfijo, el argumento adicional debe ser de tipo **int**; especificar cualquier otro tipo genera un error.
+>  Al especificar un operador sobrecargado para la forma de postfijo del operador de incremento o decremento, el argumento adicional debe ser de tipo **int**; Si se especifica cualquier otro tipo, se genera un error.
 
 En el ejemplo siguiente se muestra cómo definir operadores de incremento y decremento de prefijo y de postfijo para la clase `Point`:
 
@@ -97,7 +97,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement
 ```
 
-El argumento de tipo **int** que indica la forma de postfijo de incremento o el operador de decremento no se utiliza normalmente para pasar argumentos. Normalmente contiene el valor 0. Sin embargo, se puede utilizar del modo siguiente:
+El argumento de tipo **int** que denota la forma de postfijo del operador de incremento o decremento no se usa normalmente para pasar argumentos. Normalmente contiene el valor 0. Sin embargo, se puede utilizar del modo siguiente:
 
 ```cpp
 // increment_and_decrement2.cpp
@@ -124,8 +124,8 @@ int main()
 }
 ```
 
-No hay ninguna sintaxis para usar los operadores de incremento y decremento para pasar estos valores que no sea la invocación explícita, como se muestra en el código anterior. Una manera más sencilla para implementar esta funcionalidad es sobrecargar el operador de suma y asignación (**+=**).
+No hay ninguna sintaxis para usar los operadores de incremento y decremento para pasar estos valores que no sea la invocación explícita, como se muestra en el código anterior. Una manera más sencilla de implementar esta funcionalidad es sobrecargar el operador de suma y asignación ( **+=** ).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Sobrecarga de operadores](../cpp/operator-overloading.md)

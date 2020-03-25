@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501550"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166983"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -28,7 +28,7 @@ Establece el nombre del archivo de ayuda para una biblioteca de tipos.
 *filename*<br/>
 Nombre del archivo que contiene los temas de ayuda.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **HelpFile** C++ tiene la misma funcionalidad que el atributo MIDL de [HelpFile](/windows/win32/Midl/helpfile) .
 
@@ -43,13 +43,13 @@ Vea el ejemplo de [módulo](module-cpp.md) para obtener un ejemplo de cómo usar
 |||
 |-|-|
 |**Se aplica a**|**interface**, **typedef**, **Class**, Method, **Property**|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>

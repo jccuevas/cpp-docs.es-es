@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161170"
 ---
 # <a name="nested-class-declarations"></a>Declaraciones de clase anidadas
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` y `BufferedIO::BufferedOutput` se declaran dentro de `BufferedIO`. Estos nombres de clase no son visibles fuera del ámbito de la clase `BufferedIO`. Sin embargo, un objeto de tipo `BufferedIO` no contiene objetos de los tipos `BufferedInput` o `BufferedOutput`.
+`BufferedIO::BufferedInput` y `BufferedIO::BufferedOutput` se declaran en `BufferedIO`. Estos nombres de clase no son visibles fuera del ámbito de la clase `BufferedIO`. Sin embargo, un objeto de tipo `BufferedIO` no contiene objetos de los tipos `BufferedInput` o `BufferedOutput`.
 
 Las clases anidadas pueden utilizar directamente nombres, nombres de tipo, nombres de miembros estáticos y enumeradores solo de la clase envolvente. Para usar nombres de otros miembros de clase, debe utilizar punteros, referencias o nombres de objeto.
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-En el ejemplo anterior, el *qualified-type-name* sintaxis se utiliza para declarar el nombre de función. La declaración:
+En el ejemplo anterior, se utiliza la sintaxis *Qualified-type-name* para declarar el nombre de la función. La declaración:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración usa la *qualified-type-name* sintaxis, construcciones de la forma siguiente son posibles:
+significa “la función `read` que es miembro de la clase `BufferedInput` que está en el ámbito de la clase `BufferedIO`.” Dado que esta declaración usa la sintaxis *Qualified-type-name* , son posibles las construcciones de la forma siguiente:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-La declaración anterior es equivalente al anterior, pero usa un **typedef** nombre en lugar de los nombres de clase.
+La declaración anterior es equivalente a la anterior, pero usa un nombre **typedef** en lugar de los nombres de clase.
 
 ## <a name="friend-functions-in-nested-classes"></a>Funciones friend en clases anidadas
 
@@ -206,6 +206,6 @@ int GetExtendedErrorStatus( char *message )
 
 Con la interfaz anterior, varias clases pueden utilizar los servicios de esta función pasando una ubicación de memoria en la que desean que se copie el mensaje de error.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases y structs](../cpp/classes-and-structs-cpp.md)

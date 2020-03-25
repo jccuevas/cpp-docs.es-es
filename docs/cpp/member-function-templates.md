@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: 6955d755897d326479d2b3789edb02ff66806175
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345970"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177986"
 ---
 # <a name="member-function-templates"></a>Plantillas de función miembro
 
@@ -85,7 +85,7 @@ No se permite que las clases locales tengan plantillas de miembro.
 
 Las funciones de plantilla de miembro no pueden ser funciones virtuales y no pueden invalidar funciones virtuales de una clase base cuando se declaran con el mismo nombre que una función virtual de clase base.
 
-El ejemplo siguiente muestra una conversión definida por el usuario con plantilla:
+En el ejemplo siguiente se muestra una conversión definida por el usuario con plantilla:
 
 ```cpp
 // templated_user_defined_conversions.cpp
@@ -105,6 +105,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de función](../cpp/function-templates.md)

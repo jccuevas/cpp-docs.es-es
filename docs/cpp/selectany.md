@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: a6bf4076dfecbd29035716285f52c0a9faf81067
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38346e41c1e943e9bfda70668a163c630a0b9599
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267302"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178878"
 ---
 # <a name="selectany"></a>selectany
 
@@ -26,22 +26,22 @@ Indica al compilador que el elemento de datos globales declarado (variable u obj
 __declspec( selectany ) declarator
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-En tiempo de vinculación, si se ven varias definiciones de un COMDAT, el vinculador selecciona una y descarta el resto. Si la opción del vinculador [/OPT: ref](../build/reference/opt-optimizations.md) (optimizaciones) está seleccionada, se producirá la eliminación de COMDAT quitar todos los elementos de datos sin referencia en la salida del vinculador.
+En tiempo de vinculación, si se ven varias definiciones de un COMDAT, el vinculador selecciona una y descarta el resto. Si se selecciona la opción de vinculador [/OPT: Ref](../build/reference/opt-optimizations.md) (optimizaciones), se producirá la eliminación de COMDAT para quitar todos los elementos de datos sin referencia en la salida del vinculador.
 
 Los constructores y la asignación mediante una función global o métodos estáticos en la declaración no crean una referencia y no impedirán la eliminación de /OPT:REF. No se debe depender de los efectos secundarios de ese código si no existen otras referencias a los datos.
 
-De forma dinámica los objetos globales inicializados, **selectany** código de inicialización de un objeto sin referencia, así, se descartarán.
+En el caso de los objetos globales inicializados dinámicamente, **selectany** descartará también el código de inicialización de un objeto sin referencia.
 
-Un elemento de datos globales se puede inicializar normalmente solo una vez en un proyecto EXE o DLL. **selectany** puede usarse en la inicialización de datos globales definidos por los encabezados cuando el mismo encabezado aparece en más de un archivo de código fuente. **selectany** está disponible en los compiladores de C y C++.
+Un elemento de datos globales se puede inicializar normalmente solo una vez en un proyecto EXE o DLL. **selectany** se puede usar para inicializar los datos globales definidos por encabezados cuando el mismo encabezado aparece en más de un archivo de código fuente. **selectany** está disponible en los compiladores C++ C y.
 
 > [!NOTE]
->  **selectany** sólo puede aplicarse a la inicialización real de elementos de datos globales externamente visibles.
+>  **selectany** solo se puede aplicar a la inicialización real de elementos de datos globales que son visibles externamente.
 
 ## <a name="example"></a>Ejemplo
 
-Este código muestra cómo usar el **selectany** atributo:
+Este código muestra cómo usar el atributo **selectany** :
 
 ```cpp
 //Correct - x1 is initialized and externally visible
@@ -75,7 +75,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>Ejemplo
 
-Este código muestra cómo usar el **selectany** atributo para garantizar el plegamiento de COMDAT de datos cuando también se utiliza el [/OPT: ICF](../build/reference/opt-optimizations.md) opción del vinculador. Tenga en cuenta que los datos deben estar marcados con **selectany** y se coloca en un **const** sección (solo lectura). Debe especificar explícitamente la sección de solo lectura.
+Este código muestra cómo usar el atributo **selectany** para garantizar el plegamiento de COMDAT de datos cuando también se usa la opción del vinculador [/OPT: ICF](../build/reference/opt-optimizations.md) . Tenga en cuenta que los datos se deben marcar con **selectany** y colocarlos en una sección **const** (ReadOnly). Debe especificar explícitamente la sección de solo lectura.
 
 ```cpp
 // selectany2.cpp
@@ -90,7 +90,7 @@ int main() {
 
 **FIN de Específicos de Microsoft**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

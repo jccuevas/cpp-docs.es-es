@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::Nil
 ms.assetid: ea6dddc1-2bd0-44eb-804e-477572215712
-ms.openlocfilehash: 143b5133589198341cb68378778631e6a78af006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6f71c120e62a11881cf071879ed8a151a9b46b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379082"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213674"
 ---
 # <a name="nil-structure"></a>Nil (Estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -22,9 +22,9 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 struct Nil;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Se utiliza para indicar un parámetro de plantilla opcional no especificado.
+Se usa para indicar un parámetro de plantilla opcional no especificado.
 
 **Nil** es una estructura vacía.
 
@@ -34,10 +34,10 @@ Se utiliza para indicar un parámetro de plantilla opcional no especificado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** implements.h
+**Encabezado:** implementa. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 8c659f23d6828616c4a48522b61330336e994cbb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0fb85a3f5642bc5fffcad29892ca15bb13a1ce0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166919"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -23,7 +23,7 @@ Indica que se notificará inmediatamente a la base de datos todos los cambios ef
 [immediatebind]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **immediatebind** C++ tiene la misma funcionalidad que el atributo MIDL [immediatebind](/windows/win32/Midl/immediatebind) .
 
@@ -38,13 +38,13 @@ Vea [enlazable](bindable.md) para obtener un ejemplo de cómo usar **immediatebi
 |||
 |-|-|
 |**Se aplica a**|Método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>

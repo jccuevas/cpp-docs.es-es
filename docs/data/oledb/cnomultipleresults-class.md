@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 793b820264d001fbfbf7920fd322a55b98e90f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211723"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults (Clase)
 
-Usar como un argumento de plantilla (*TMultiple*) a [CCommand](../../data/oledb/ccommand-class.md) para crear un comando optimizado que controla un único resultado de conjunto.
+Se usa como un argumento de plantilla (*TMultiple*) en [CCommand](../../data/oledb/ccommand-class.md) para crear un comando optimizado que controla un conjunto de resultados único.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,15 +25,15 @@ Usar como un argumento de plantilla (*TMultiple*) a [CCommand](../../data/oledb/
 class CNoMultipleResults
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Si desea que un comando para controlar varios conjuntos de resultados, use [CMultipleResults](../../data/oledb/cmultipleresults-class.md) en su lugar.
+Si desea que un comando controle varios conjuntos de resultados, use [cmultipleresults (](../../data/oledb/cmultipleresults-class.md) en su lugar.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldbcli.h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

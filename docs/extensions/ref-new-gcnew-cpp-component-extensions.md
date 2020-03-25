@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-ms.openlocfilehash: f3dd0b73e300b44cb4f35e42683725813453d7de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: f7269a62d7899df4eb89f6dd9487310c0fda0b4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516650"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181816"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new, gcnew (C++/CLI y C++/CX)
 
@@ -87,6 +87,6 @@ int main()
 32
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408542"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163029"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Advertencia del compilador (nivel 1) C4325
 
-> los atributos de sección estándar '*sección*' omite
+> se han omitido los atributos de la sección estándar '*sección*'
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 No puede cambiar los atributos de una sección estándar. Por ejemplo:
 
@@ -25,30 +25,30 @@ No puede cambiar los atributos de una sección estándar. Por ejemplo:
 #pragma section(".sdata", long)
 ```
 
-Esto sobrescribirá la `.sdata` sección estándar que utiliza el **corto** tipo de datos con el **largo** tipo de datos.
+Esto sobrescribiría la sección estándar `.sdata` que utiliza el tipo de datos **Short** con el tipo de datos **Long** .
 
-Incluyen secciones estándar cuyos atributos no pueden cambiar,
+Las secciones estándar cuyos atributos no se pueden cambiar son:
 
 - .data
 
 - .sdata
 
-- .bss
+- . BSS
 
 - .sbss
 
 - .text
 
-- .const
+- . const
 
 - .sconst
 
-- .rdata
+- . rdata
 
 - .srdata
 
-Las secciones adicionales pueden agregarse más adelante.
+Se pueden agregar secciones adicionales más adelante.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [section](../../preprocessor/section.md)

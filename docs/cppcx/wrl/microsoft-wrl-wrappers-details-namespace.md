@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - Details namespace
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
-ms.openlocfilehash: deccd4519b2ddf18725dca5af13b94ac79d6e280
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005fa79d413708f630b0a6aebbc06782086c81b3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392016"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213764"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details (Espacio de nombres)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,27 +30,27 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 namespace Microsoft::WRL::Wrappers::Details;
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Clases
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[SyncLockT (clase)](synclockt-class.md)|Representa un tipo que puede tardar exclusivo o propiedad compartida de un recurso.|
-|[SyncLockWithStatusT (clase)](synclockwithstatust-class.md)|Representa un tipo que puede tardar exclusivo o propiedad compartida de un recurso.|
+|[SyncLockT (clase)](synclockt-class.md)|Representa un tipo que puede tomar la propiedad exclusiva o compartida de un recurso.|
+|[SyncLockWithStatusT (clase)](synclockwithstatust-class.md)|Representa un tipo que puede tomar la propiedad exclusiva o compartida de un recurso.|
 
 ### <a name="methods"></a>Métodos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CompareStringOrdinal (método)](comparestringordinal-method.md)|Compara dos especificado `HSTRING` objetos y devuelve un entero que indica su posición relativa en un criterio de ordenación.|
+|[CompareStringOrdinal (método)](comparestringordinal-method.md)|Compara dos objetos `HSTRING` especificados y devuelve un entero que indica su posición relativa en un criterio de ordenación.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** corewrappers.h
+**Encabezado:** corewrappers. h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers::Details
+**Espacio de nombres:** Microsoft:: WRL:: wrappers::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Wrappers (espacio de nombres)](microsoft-wrl-wrappers-namespace.md)

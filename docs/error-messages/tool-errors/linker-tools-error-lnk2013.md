@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194751"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Error de las herramientas del vinculador LNK2013
 
@@ -19,7 +19,7 @@ Desbordamiento de la corrección tipo de corrección. 'symbol name' de destino f
 
 El vinculador no puede ajustar la dirección o desplazamiento requeridos en la instrucción dada, porque el símbolo de destino se encuentra demasiado lejos de la ubicación de la instrucción.
 
-Puede resolver este problema creando varias imágenes o mediante el [/Order](../../build/reference/order-put-functions-in-order.md) opción para la instrucción y el destino estén más cerca.
+Puede resolver este problema mediante la creación de varias imágenes o mediante la opción [/Order](../../build/reference/order-put-functions-in-order.md) , de modo que la instrucción y el destino estén más juntos.
 
 Cuando el nombre del símbolo es un símbolo definido por el usuario (y no uno generado por el compilador) también pueden probarse las siguientes acciones para resolver el error:
 

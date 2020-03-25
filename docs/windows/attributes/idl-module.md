@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514675"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168049"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -29,7 +29,7 @@ function declaration
 *name*<br/>
 Un nombre definido por el usuario para el bloque de código que aparecerá en el archivo. idl.
 
-*dllname*<br/>
+*DllName*<br/>
 Opta El archivo. dll que contiene la exportación.
 
 *uuid*<br/>
@@ -53,7 +53,7 @@ Opta No se puede llamar a los miembros de la biblioteca arbitrariamente. Consult
 *Declaración de función*<br/>
 Función que se va a definir.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **idl_module** C++ permite especificar el punto de entrada en un archivo. dll, lo que permite importar desde un archivo. dll.
 
@@ -61,7 +61,7 @@ El atributo **idl_module** tiene una funcionalidad similar al atributo MIDL del 
 
 Puede exportar cualquier elemento de un objeto COM que pueda exportar desde un archivo. dll colocando un punto de entrada de DLL en el bloque de biblioteca de un archivo. idl.
 
-Debe usar **idl_module** en dos pasos. En primer lugar, debe definir un par de nombre/DLL. A continuación, al usar **idl_module** para especificar un punto de entrada, especifique el nombre y los atributos adicionales.
+Debe usar **idl_module** en dos pasos. En primer lugar, debe definir un par de nombre/DLL. A continuación, cuando use **idl_module** para especificar un punto de entrada, especifique el nombre y los atributos adicionales.
 
 ## <a name="example"></a>Ejemplo
 
@@ -83,13 +83,13 @@ void FuncName(int i);
 |||
 |-|-|
 |**Se aplica a**|En cualquier lugar|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190695"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Error del compilador de recursos RW2002
 
@@ -69,7 +69,7 @@ Error de análisis
 
 1. **Se esperaba un nombre de clase de control**
 
-   El `class` campo de una instrucción de **control** en la instrucción **Dialog** debe ser uno de los siguientes tipos: BUTTON, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC o definidos por el usuario. Asegúrese de que la clase está escrita correctamente.
+   El campo `class` de una instrucción de **control** en la instrucción **Dialog** debe ser uno de los siguientes tipos: Button, ComboBox, Edit, ListBox, ScrollBar, static o definido por el usuario. Asegúrese de que la clase está escrita correctamente.
 
 1. **Se esperaba un nombre de fuente**
 
@@ -85,7 +85,7 @@ Error de análisis
 
 1. **Valor de comando numérico esperado**
 
-   El compilador de recursos esperaba un campo *idvalue* numérico en la instrucción **Accelerators** . Asegúrese de que ha usado una `#define` constante para especificar el valor y que la constante está escrita correctamente.
+   El compilador de recursos esperaba un campo *idvalue* numérico en la instrucción **Accelerators** . Asegúrese de que ha usado una constante `#define` para especificar el valor y que la constante está escrita correctamente.
 
 1. **Se esperaba una constante numérica en la tabla de cadenas**
 
@@ -109,7 +109,7 @@ Error de análisis
 
 1. **Se espera un número para el identificador**
 
-   Se espera un número para `id` el campo de una instrucción de control en la instrucción de **cuadro de diálogo** . Asegúrese de que tiene un número o `#define` una instrucción para el ID. de control.
+   Se espera un número para el campo de `id` de una instrucción de control en la instrucción de **cuadro de diálogo** . Asegúrese de que tiene un número o una instrucción `#define` para el ID. de control.
 
 1. **Se espera una cadena entrecomillada en una clase de cuadro de diálogo**
 
@@ -141,7 +141,7 @@ Error de análisis
 
 1. **Tipo de control no válido**
 
-   Cada instrucción de control de una instrucción **Dialog** debe ser una de las siguientes: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, SCROLLBAR. Asegúrese de que estas instrucciones de control están escritas correctamente.
+   Cada instrucción de control de una instrucción **Dialog** debe ser uno de los siguientes: CheckBox, ComboBox, control, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, Icon, ListBox, LTEXT, PUSHBUTTON, RADIOBUTTON, RText, ScrollBar. Asegúrese de que estas instrucciones de control están escritas correctamente.
 
 1. **Tipo no válido**
 

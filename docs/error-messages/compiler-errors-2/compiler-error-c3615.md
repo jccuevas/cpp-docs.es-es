@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1a5b6edbc87e14de267cf962dc2b1a71dd6be12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200543"
 ---
 # <a name="compiler-error-c3615"></a>Error del compilador C3615
 
-> la función constexpr '*función*' no se puede dar lugar a una expresión constante
+> la función constexpr '*function*' no puede dar como resultado una expresión constante
 
-La función *función* no se puede evaluar como `constexpr` en tiempo de compilación. Para ser `constexpr`, una función solo puede llamar a otro `constexpr` funciones.
+No se pudo evaluar la *función* de función como `constexpr` en tiempo de compilación. Para ser `constexpr`, una función solo puede llamar a otras funciones de `constexpr`.
 
 ## <a name="example"></a>Ejemplo
 
-Visual Studio 2017 genera correctamente un error cuando el operando izquierdo de una operación de evaluación condicional no es válido en un `constexpr` contexto. El siguiente código se compila en Visual Studio 2015, pero no en Visual Studio 2017.
+Visual Studio 2017 genera correctamente un error cuando el operando izquierdo de una operación de evaluación condicional no es válido en un contexto de `constexpr`. El código siguiente se compila en Visual Studio 2015, pero no en Visual Studio 2017.
 
 ```cpp
 // C3615.cpp
@@ -39,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-Para corregir este problema, declare el `array::size()` funcionar como `constexpr` o quitar el `constexpr` calificador `f`.
+Para corregir este problema, declare la función `array::size()` como `constexpr` o quite el calificador `constexpr` de `f`.

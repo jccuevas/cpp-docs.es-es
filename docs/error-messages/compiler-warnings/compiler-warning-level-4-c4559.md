@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4559
 ms.assetid: ed542f60-454d-45cb-85da-987ede61b1ab
-ms.openlocfilehash: afb4fb493c7c3e34ca691720a30d74517b0ab5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0788824dd4180476d81d9682f99fb95883b8c4f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198346"
 ---
 # <a name="compiler-warning-level-4-c4559"></a>Advertencia del compilador (nivel 4) C4559
 
-> '*función*': redefinición; el __declspec ganancias de función (*modificador*)
+> '*función*': nueva definición; la función obtiene __declspec (*modificador*)
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Una función volvió a definir o declarar de nuevo y la segunda definición o declaración agrega un **__declspec** modificador (*modificador*). La advertencia es informativa. Para corregir esta advertencia, elimine una de las definiciones.
+Se redefinió o se volvió a declarar una función y la segunda definición o declaración agregó un modificador **__declspec** (*modificador*). Esta advertencia es informativa. Para corregir esta advertencia, elimine una de las definiciones.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente genera C4559:
+En el ejemplo siguiente se genera C4559:
 
 ```cpp
 // C4559.cpp

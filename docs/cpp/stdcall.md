@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857286"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178547"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -21,9 +21,9 @@ La Convención de llamada de **__stdcall** se usa para llamar a funciones de la 
 
 ## <a name="syntax"></a>Sintaxis
 
-> *return-type* **\_\_stdcall** *function-name*[ **(** *argument-list* **)** ]
+> *return-type* **\_\_Stdcall** *function-Name*[ **(** *lista de argumentos* **)** ]
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 En la lista siguiente se muestra la implementación de esta convención de llamada.
 
@@ -33,7 +33,7 @@ En la lista siguiente se muestra la implementación de esta convención de llama
 |Convención para pasar argumentos|Por valor, a menos que se pase un puntero o un tipo de referencia.|
 |Responsabilidad de mantenimiento de pila|La función a la que se llama saca sus propios argumentos de la pila.|
 |Convención de creación de nombres representativos|Un subrayado (_) precede al nombre. El nombre va seguido del signo @ seguido del número de bytes (en decimal) en la lista de argumentos. Por consiguiente, la función declarada como `int func( int a, double b )` se representa de la manera siguiente: `_func@12`|
-|Convención de traducción de mayúsculas y minúsculas|Ninguno|
+|Convención de traducción de mayúsculas y minúsculas|None|
 
 La opción del compilador [/gz](../build/reference/gd-gr-gv-gz-calling-convention.md) especifica **__stdcall** para todas las funciones no declaradas explícitamente con otra Convención de llamada.
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+este
 
 ```cpp
 void CMyClass::mymethod() { return; }
@@ -74,7 +74,7 @@ En el ejemplo siguiente, el uso de **__stdcall** da como resultado que todos los
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Paso de argumentos y convenciones de nomenclatura](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

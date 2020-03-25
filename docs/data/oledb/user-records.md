@@ -15,17 +15,17 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: c9c1126f0e8248f31ac739bb1d939f811bda678d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209448"
 ---
 # <a name="user-records"></a>Registros de usuario
 
 > [!NOTE]
-> El Asistente para consumidores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente. Para obtener más información, consulte [Crear un consumidor sin utilizar un asistente](creating-a-consumer-without-using-a-wizard.md).
+> El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente. Para obtener más información, consulte [Crear un consumidor sin utilizar un asistente](creating-a-consumer-without-using-a-wizard.md).
 
 Para usar un descriptor de acceso estático (es decir, se deriva un descriptor de acceso de `CAccessor`), el consumidor debe tener un registro de usuario. El registro de usuario es una clase C++ que contiene los elementos de datos que controlan la entrada o salida. El **Asistente para consumidores OLE DB ATL** genera un registro de usuario para el consumidor. Puede agregar métodos al registro de usuario para realizar tareas opcionales como el control de comandos.
 
@@ -88,6 +88,6 @@ END_ACCESSOR_MAP()
 };
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

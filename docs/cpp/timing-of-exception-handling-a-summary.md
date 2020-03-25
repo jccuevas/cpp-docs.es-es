@@ -11,12 +11,12 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3ed2e02412bd84663674a2df2c4454d21e83575a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246328"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188121"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Temporización del control de excepciones: Resumen
 
@@ -47,7 +47,7 @@ Cuando la causa de la interrupción es una excepción, el sistema debe ejecutar 
 
    - El control se pasa a la línea de código después del final de este controlador de excepciones.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Escribir un controlador de finalización](../cpp/writing-a-termination-handler.md)<br/>
 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

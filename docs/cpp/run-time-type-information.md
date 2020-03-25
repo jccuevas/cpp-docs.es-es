@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: 1d11ee3ea472f935120c59f0faefee905361ee97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195274d7bcef0ff4d82383a8ec828ca9267573b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267407"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178943"
 ---
 # <a name="run-time-type-information"></a>Información de tipos en tiempo de ejecución
 
@@ -24,18 +24,18 @@ Por razones de claridad, esta discusión de RTTI se limita casi totalmente a pun
 
 Hay tres elementos principales del lenguaje C++ para la información en tiempo de ejecución:
 
-- El [dynamic_cast](../cpp/dynamic-cast-operator.md) operador.
+- El operador [dynamic_cast](../cpp/dynamic-cast-operator.md) .
 
    Se usa para la conversión de tipos polimórficos.
 
-- El [typeid](../cpp/typeid-operator.md) operador.
+- El operador [typeid](../cpp/typeid-operator.md) .
 
    Se utiliza para identificar el tipo exacto de un objeto.
 
-- El [type_info](../cpp/type-info-class.md) clase.
+- La clase [type_info](../cpp/type-info-class.md) .
 
-   Utilizado para almacenar la información de tipo devuelta por la **typeid** operador.
+   Se usa para contener la información de tipo devuelta por el operador **typeid** .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión](../cpp/casting.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4316
 ms.assetid: 10371f01-aeb8-40ac-a290-59e63efa5ad4
-ms.openlocfilehash: 5f895a231c8b32d76e4ccd3c15ffae5717d8017f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d920cb3dc967854d1a507d06ce31fde6a670434
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198853"
 ---
 # <a name="compiler-warning-level-3-c4316"></a>Advertencia del compilador (nivel 3) C4316
 
-No se puede alinear asignado en el montón de objeto para este tipo.
+Es posible que el objeto asignado en el montón no esté alineado para este tipo.
 
-Un objeto demasiado alineado asignado mediante `operator new` no puede tener la alineación especificada. Invalidar [new (operador)](../../c-runtime-library/operator-new-crt.md) y [operador delete](../../c-runtime-library/operator-delete-crt.md) para los tipos demasiado alineados para que usen las rutinas de asignación alineadas, por ejemplo, [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) y [_aligned_free](../../c-runtime-library/reference/aligned-free.md). El ejemplo siguiente genera C4316:
+Un objeto sobrealineado asignado mediante `operator new` puede no tener la alineación especificada. Invalide los [operadores New](../../c-runtime-library/operator-new-crt.md) y [Delete](../../c-runtime-library/operator-delete-crt.md) para los tipos que se alinean en exceso para que usen las rutinas de asignación alineadas, por ejemplo, [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) y [_aligned_free](../../c-runtime-library/reference/aligned-free.md). En el ejemplo siguiente se genera C4316:
 
 ```cpp
 // C4316.cpp

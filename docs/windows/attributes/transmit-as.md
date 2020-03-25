@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214492"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -28,7 +28,7 @@ Indica al compilador que asocie un tipo presentado que las aplicaciones cliente 
 *type*<br/>
 Especifica el tipo de datos que se transmite entre el cliente y el servidor.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **transmit_as** C++ tiene la misma funcionalidad que el atributo MIDL [transmit_as](/windows/win32/Midl/transmit-as) .
 
@@ -71,13 +71,13 @@ struct _TREE_NODE_TYPE * right;
 |||
 |-|-|
 |**Se aplica a**|**typedef**|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

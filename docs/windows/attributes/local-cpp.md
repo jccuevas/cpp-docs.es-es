@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514416"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214752"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -23,13 +23,13 @@ Cuando se usa en el encabezado de la interfaz, permite usar el compilador MIDL c
 [local]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **local** C++ tiene la misma funcionalidad que el atributo MIDL [local](/windows/win32/Midl/local) .
 
 ## <a name="example"></a>Ejemplo
 
-Vea [call_as](call-as.md) para obtener un ejemplo de cómo usar **local**.
+Consulte [call_as](call-as.md) para obtener un ejemplo de cómo usar **local**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,13 +38,13 @@ Vea [call_as](call-as.md) para obtener un ejemplo de cómo usar **local**.
 |||
 |-|-|
 |**Se aplica a**|**interface**, método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|`dispinterface`|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de interfaz](interface-attributes.md)<br/>

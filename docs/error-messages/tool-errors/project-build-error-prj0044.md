@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0044
 ms.assetid: 5d78c45a-f9e9-4d2b-a3b6-5a5d1421ab84
-ms.openlocfilehash: 3d9fd25dc5b39de69735c7d3d5cf0a6bb64c0482
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab2fd5f6562ac85c9c86cafc851315c21cd28da3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346793"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192111"
 ---
 # <a name="project-build-error-prj0044"></a>Error PRJ0044 al compilar el proyecto
 
-La propiedad 'Dependencias adicionales' para la regla de compilación personalizada 'rule' asignada al archivo 'archivo' no es válida. La propiedad contenía una cadena 'string' que se evalúa en 'value'.
+La propiedad ' dependencias adicionales ' de la regla de compilación personalizada ' regla ' asignada al archivo ' archivo ' no es válida. La propiedad contenía una cadena 'string' que se evalúa en 'value'.
 
-El **dependencias adicionales** propiedad evaluado como una cadena vacía, o en una cadena que contiene caracteres no válidos (es decir, cualquier carácter que no pueden estar en un nombre de archivo o directorio). Las reglas de compilación personalizadas necesitan la salida de la acción de compilación.
+La propiedad **dependencias adicionales** se evaluó como una cadena vacía o en una cadena que contenía caracteres no válidos (cualquier carácter que no pudiera estar en un nombre de archivo o directorio). Las reglas de compilación personalizadas necesitan la salida de la acción de compilación.
 
-Para obtener más información, consulte [Specifying Custom Build Tools](../../build/specifying-custom-build-tools.md).
+Para obtener más información, vea [especificar las herramientas de compilación personalizadas](../../build/specifying-custom-build-tools.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Errores y advertencias de compilación del proyecto (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

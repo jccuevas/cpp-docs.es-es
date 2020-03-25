@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: 8edfadefdacf94685952d31f2eaf83e8593eaef8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7847de072b2c0d5b95597e88f9ebf7e2ad63e180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386114"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180958"
 ---
 # <a name="class-member-overview"></a>Información general sobre miembros de clase
 
-Una clase o struct está compuesta por sus miembros. Las funciones miembro son las encargadas de realizar el trabajo de la clase a la que pertenecen. El estado que mantienen se almacena en sus miembros de datos. Inicialización de los miembros se realiza mediante constructores y el trabajo de limpieza tales como la liberación de memoria y de los recursos se realiza mediante los destructores. En C++11 y versiones posteriores, los miembros de datos pueden (y normalmente deberían) inicializarse en el punto en el que se declaran.
+Una clase o struct está compuesta por sus miembros. Las funciones miembro son las encargadas de realizar el trabajo de la clase a la que pertenecen. El estado que mantienen se almacena en sus miembros de datos. La inicialización de los miembros se realiza mediante constructores y el trabajo de limpieza, como la liberación de memoria y la liberación de recursos, se realiza mediante destructores. En C++11 y versiones posteriores, los miembros de datos pueden (y normalmente deberían) inicializarse en el punto en el que se declaran.
 
 ## <a name="kinds-of-class-members"></a>Tipos de miembros de clase
 
@@ -26,7 +26,7 @@ La lista completa de categorías de miembros es la siguiente:
 
 - [Información general de las funciones miembro](overview-of-member-functions.md).
 
-- [Los miembros de datos](static-members-cpp.md) tipos definidos por incluidos tipos integrados y otro usuario.
+- [Miembros de datos](static-members-cpp.md) , incluidos los tipos integrados y otros tipos definidos por el usuario.
 
 - Operadores
 
@@ -40,7 +40,7 @@ La lista completa de categorías de miembros es la siguiente:
 
 - [Amigos](../cpp/friend-cpp.md).
 
-- [Alias y definiciones de tipo](../cpp/aliases-and-typedefs-cpp.md).
+- [Alias y typedefs](../cpp/aliases-and-typedefs-cpp.md).
 
     > [!NOTE]
     >  Se incluyen Friends en la lista anterior porque están contenidos en la declaración de clase. Sin embargo, no son miembros de clase verdaderos, porque no están en el ámbito de la clase.
@@ -92,11 +92,11 @@ int TestRun::_instances{ 0 };
 
 ## <a name="member-accessibility"></a>Accesibilidad de miembros
 
-Los miembros de una clase se declaran en la lista de miembros. La lista de miembros de una clase se puede dividir en cualquier número de **privada**, **protegido** y **pública** secciones mediante palabras clave conocidas como especificadores de acceso.  Dos puntos **:** debe seguir el especificador de acceso.  Estas secciones no necesitan ser contiguas, es decir, cualquiera de estas palabras clave puede aparecer varias veces en la lista de miembros.  La palabra clave designa el acceso de todos los miembros hacia arriba hasta el especificador de acceso siguiente o la llave de cierre. Para obtener más información, consulte [Control de acceso de miembro (C++)](../cpp/member-access-control-cpp.md).
+Los miembros de una clase se declaran en la lista de miembros. La lista de miembros de una clase se puede dividir en cualquier número de secciones **privadas**, **protegidas** y **públicas** mediante palabras clave conocidas como especificadores de acceso.  Dos puntos **:** deben seguir el especificador de acceso.  Estas secciones no necesitan ser contiguas, es decir, cualquiera de estas palabras clave puede aparecer varias veces en la lista de miembros.  La palabra clave designa el acceso de todos los miembros hacia arriba hasta el especificador de acceso siguiente o la llave de cierre. Para obtener más información, vea [Access Control deC++miembro ()](../cpp/member-access-control-cpp.md).
 
 ## <a name="static-members"></a>Miembros estáticos
 
-Un miembro de datos se puede declarar como static, lo que significa que todos los objetos de la clase tienen acceso a la misma copia del mismo. Una función miembro puede declararse como static, en cuyo caso solo puede acceder a los miembros de datos estáticos de la clase (y no tiene ningún *esto* puntero). Para obtener más información, consulte [miembros de datos estáticos](../cpp/static-members-cpp.md).
+Un miembro de datos se puede declarar como static, lo que significa que todos los objetos de la clase tienen acceso a la misma copia del mismo. Una función miembro se puede declarar como estática, en cuyo caso solo puede tener acceso a los miembros de datos estáticos de la clase (y no tiene *este* puntero). Para obtener más información, vea [miembros de datos estáticos](../cpp/static-members-cpp.md).
 
 ## <a name="special-member-functions"></a>Funciones miembro especiales
 
@@ -104,17 +104,17 @@ Las funciones miembro especiales son funciones que el compilador proporciona aut
 
 1. Constructor predeterminado
 
-1. Constructor de copias
+1. Constructor de copia
 
-1. **(C ++ 11)**  Constructor de movimiento
+1. **(C++ 11)** Constructor de movimiento
 
 1. Operador de asignación de copia
 
-1. **(C ++ 11)**  Operador de asignación de movimiento
+1. **(C++ 11)** Operador de asignación de movimiento
 
 1. Destructor
 
-Para obtener más información, consulte [funciones miembro especiales](../cpp/special-member-functions.md).
+Para obtener más información, vea [funciones miembro especiales](../cpp/special-member-functions.md).
 
 ## <a name="memberwise-initialization"></a>Inicialización miembro a miembro
 
@@ -142,7 +142,7 @@ int main()
 
 Si un miembro recibe un valor en un constructor, ese valor sobrescribe el valor con el que se inicializó el miembro en el punto de declaración.
 
-Solo hay una copia compartida de los miembros de datos estáticos para todos los objetos de un tipo de clase determinado. Los miembros de datos estáticos se deben definir y se pueden inicializar en el ámbito de archivo. (Para obtener más información acerca de los miembros de datos estáticos, vea [miembros de datos estáticos](../cpp/static-members-cpp.md).) En el ejemplo siguiente se muestra cómo se realizan estas inicializaciones:
+Solo hay una copia compartida de los miembros de datos estáticos para todos los objetos de un tipo de clase determinado. Los miembros de datos estáticos se deben definir y se pueden inicializar en el ámbito de archivo. (Para obtener más información acerca de los miembros de datos estáticos, vea [miembros de datos estáticos](../cpp/static-members-cpp.md)). En el ejemplo siguiente se muestra cómo realizar estas inicializaciones:
 
 ```cpp
 // class_members2.cpp
@@ -170,6 +170,6 @@ int CanInit2::j = i;
 > [!NOTE]
 >  El nombre de clase, `CanInit2`, debe preceder a `i` para especificar que el `i` definido es un miembro de la clase `CanInit2`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases y structs](../cpp/classes-and-structs-cpp.md)

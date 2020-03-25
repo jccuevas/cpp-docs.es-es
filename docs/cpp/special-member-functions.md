@@ -9,27 +9,27 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-ms.openlocfilehash: 3b26628fd18749bd19819fe787888fd3264a79d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15a0e50774bbc4e70912a31f9a57ea0439f2c12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178696"
 ---
 # <a name="special-member-functions"></a>Funciones miembro especiales
 
-El *funciones miembro especiales* es de clase (o struct) las funciones miembro que, en algunos casos, el compilador genera automáticamente para usted. Estas funciones son la [constructor predeterminado](constructors-cpp.md#default_constructors), el [destructor](destructors-cpp.md), [constructor de copias y el operador de asignación de copia](copy-constructors-and-copy-assignment-operators-cpp.md)y el [constructor de movimiento y operador de asignación de movimiento](move-constructors-and-move-assignment-operators-cpp.md). Si la clase no define una o varias de las funciones miembro especiales, el compilador implícitamente puede declarar y definir las funciones que se usan. Se llama a las implementaciones generadas por el compilador la *predeterminada* funciones miembro especiales. El compilador no genera funciones si no son necesarios.
+Las *funciones miembro especiales* son funciones miembro de clase (o struct) que, en ciertos casos, el compilador genera automáticamente. Estas funciones son el [constructor predeterminado](constructors-cpp.md#default_constructors), el [destructor](destructors-cpp.md), el [constructor de copias y el operador de asignación de copia](copy-constructors-and-copy-assignment-operators-cpp.md), y el [constructor de movimiento y el operador de asignación de movimiento](move-constructors-and-move-assignment-operators-cpp.md). Si la clase no define una o varias funciones miembro especiales, el compilador puede declarar implícitamente y definir las funciones que se usan. Las implementaciones generadas por el compilador se denominan funciones miembro especiales *predeterminadas* . El compilador no genera funciones si no son necesarias.
 
-Puede declarar explícitamente una función miembro especial de forma predeterminada mediante el uso de la **= default** palabra clave. Esto hace que el compilador definir la función solo si es necesario, de la misma manera que si la función no se declaró en absoluto.
+Puede declarar explícitamente una función miembro especial predeterminada mediante la palabra clave **default =** . Esto hace que el compilador defina la función solo si es necesario, de la misma manera que si la función no se declarara en absoluto.
 
-En algunos casos, el compilador puede generar *eliminado* funciones miembro especiales, lo que no están definidos y, por tanto, no puede llamar. Esto puede ocurrir en casos donde una llamada a una función miembro especial determinado en una clase no tiene sentido, tiene otras propiedades de la clase. Para evitar explícitamente que la generación automática de una función miembro especial, puede declararlo como eliminadas mediante el uso de la **= delete** palabra clave.
+En algunos casos, el compilador puede generar funciones miembro especiales *eliminadas* , que no están definidas y, por lo tanto, no se pueden llamar. Esto puede ocurrir en los casos en los que una llamada a una función miembro especial determinada en una clase no tiene sentido, dadas otras propiedades de la clase. Para evitar explícitamente la generación automática de una función miembro especial, puede declararla como eliminada mediante la palabra clave **= Delete** .
 
-El compilador genera un *constructor predeterminado*, un constructor que no toma ningún argumento, solo cuando no se ha declarado ningún otro constructor. Si se ha declarado únicamente un constructor que toma parámetros, el código que intenta llamar a un constructor predeterminado, el compilador generar un mensaje de error. El constructor predeterminado generado por el compilador realiza simple member-wise [inicialización predeterminada](initializers.md#default_initialization) del objeto. Inicialización predeterminada deja todas las variables miembro en un estado indeterminado.
+El compilador genera un *constructor predeterminado*, un constructor que no toma ningún argumento, solo cuando no se ha declarado ningún otro constructor. Si ha declarado solo un constructor que toma parámetros, el código que intenta llamar a un constructor predeterminado hace que el compilador genere un mensaje de error. El constructor predeterminado generado por el compilador realiza una [inicialización predeterminada de modo](initializers.md#default_initialization) miembro simple del objeto. La inicialización predeterminada deja todas las variables de miembro en un estado indeterminado.
 
-El destructor predeterminado realiza automáticamente miembro a miembro destrucción del objeto. Es virtual solo si un destructor de clase base es virtual.
+El destructor predeterminado realiza la destrucción de los miembros del objeto. Solo es virtual si un destructor de clase base es virtual.
 
-La copia de forma predeterminada y la construcción de movimiento y las operaciones de asignación miembro a miembro del patrón de bits de realizar copia o mueve de miembros de datos no estáticos. Mover las operaciones solo se generan cuando no se declaran ningún destructor u operaciones de mover o copiar. Un constructor de copias predeterminado solo se genera cuando no se declara ningún constructor de copias. Se eliminó implícitamente si se declara una operación de movimiento. Un operador de asignación de copia predeterminado se genera solo cuando no se declara explícitamente ningún operador de asignación de copia. Se eliminó implícitamente si se declara una operación de movimiento.
+Las operaciones de asignación y construcción de copia y movimiento predeterminadas realizan copias de patrón de bits de modo de miembro o movimientos de miembros de datos no estáticos. Las operaciones de movimiento solo se generan cuando no se declaran las operaciones de desplazamiento o de copia. Un constructor de copias predeterminado solo se genera cuando no se declara ningún constructor de copias. Se elimina implícitamente si se declara una operación de movimiento. Un operador de asignación de copia predeterminado solo se genera cuando no se declara explícitamente ningún operador de asignación de copia. Se elimina implícitamente si se declara una operación de movimiento.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia del lenguaje C++](cpp-language-reference.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3555
 ms.assetid: b4311bd3-851b-479a-9965-d03f39dd8fd4
-ms.openlocfilehash: 6545f708fd23b9f3a292ab8fa86087b9e67b3623
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f5b3ba45d64b23cdfb4d157193e826ac0c90998f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200595"
 ---
 # <a name="compiler-error-c3555"></a>Error del compilador C3555
 
@@ -22,7 +22,7 @@ El argumento para el especificador de tipo `decltype(`*expression*`)` no es una 
 > [!NOTE]
 >  No es probable que se produzca el error C3555. Si el compilador emite C3555, probablemente es porque se ha producido un error interno del compilador.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Error del compilador C3556](../../error-messages/compiler-errors-2/compiler-error-c3556.md)<br/>
 [Error irrecuperable C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)

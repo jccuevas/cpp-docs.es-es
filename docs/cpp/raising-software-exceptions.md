@@ -13,12 +13,12 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: 7c58ae2e2b6635345a162d11d2b75a9865d37751
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179138"
 ---
 # <a name="raising-software-exceptions"></a>Producir excepciones de software
 
@@ -71,7 +71,7 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Escribir un controlador de excepciones](../cpp/writing-an-exception-handler.md)<br/>
 [Control de excepciones estructurado (CC++/)](../cpp/structured-exception-handling-c-cpp.md)

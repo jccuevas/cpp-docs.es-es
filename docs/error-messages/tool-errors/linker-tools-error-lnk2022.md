@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
-ms.openlocfilehash: e55202274c5ec3982f784ad6cdf074a5a99e922f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d30dad6f8ad146ff467eb4eaf32b21dd6950d25f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345332"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194647"
 ---
 # <a name="linker-tools-error-lnk2022"></a>Error de las herramientas del vinculador LNK2022
 
-> Error de la operación de metadatos (*HRESULT*): *error_message*
+> error en la operación de metadatos (*HRESULT*): *error_message*
 
-El vinculador detectó un error al combinar los metadatos. Para vincular correctamente, se deben resolver los errores de metadatos.
+El enlazador detectó un error al mezclar metadatos. Los errores de metadatos se deben resolver para vincularse correctamente.
 
-Una forma de diagnosticar el problema es ejecutar **ildasm-tokens** en los archivos objeto para averiguar qué tipos tienen los tokens se enumeran en `error_message`y ver las diferencias.  En los metadatos, los dos tipos diferentes con el mismo nombre no es válido, incluso si el atributo LayoutType es diferente.
+Una manera de diagnosticar este problema es ejecutar **Ildasm-tokens** en los archivos objeto para buscar qué tipos tienen los tokens enumerados en `error_message`y buscar diferencias.  En los metadatos, dos tipos diferentes con el mismo nombre no son válidos, incluso si el atributo Just LayoutType es diferente.
 
-Una razón para LNK2022 es cuando un tipo (por ejemplo, un struct) existe en varias operaciones de compilación con el mismo nombre pero con definiciones en conflicto, y cuando se compila con [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  En este caso, asegúrese de que el tipo tiene una definición idéntica en todos los elementos.  Aparece el nombre de tipo en `error_message`.
+Una razón para LNK2022 es cuando un tipo (como un struct) existe en varios compilandos con el mismo nombre, pero con definiciones en conflicto, y al compilar con [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  En este caso, asegúrese de que el tipo tiene una definición idéntica en todos los compilandos.  El nombre del tipo se muestra en `error_message`.
 
-Otra causa posible de LNK2022 es cuando el vinculador busca un archivo de metadatos en una ubicación diferente que no se especificó para el compilador (con [#using](../../preprocessor/hash-using-directive-cpp.md) ). Asegúrese de que el archivo de metadatos (.dll o .netmodule) está en la misma ubicación cuando se pasan al vinculador, igual que cuando que se pasó al compilador.
+Otra causa posible de LNK2022 es cuando el vinculador encuentra un archivo de metadatos en una ubicación diferente de la que se especificó en el compilador (con [#using](../../preprocessor/hash-using-directive-cpp.md) ). Asegúrese de que el archivo de metadatos (. dll o. netmodule) está en la misma ubicación cuando se pasa al enlazador, tal y como estaba cuando se pasó al compilador.
 
-Al compilar una aplicación ATL, el uso de la macro `_ATL_MIXED` se requiere en todos los elementos, si se usa en al menos uno.
+Al compilar una aplicación ATL, el uso de la macro `_ATL_MIXED` es necesario en todos los compilandos de elementos, si se utiliza en al menos uno.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente define un tipo vacío.
+En el ejemplo siguiente se define un tipo vacío.
 
 ```cpp
 // LNK2022_a.cpp
@@ -39,9 +39,9 @@ public ref class Test {};
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra que no se puede vincular dos archivos de código fuente que contienen tipos del mismo nombre pero definiciones diferentes.
+Este ejemplo muestra que no se pueden vincular dos archivos de código fuente que contengan tipos del mismo nombre pero diferentes definiciones.
 
-El ejemplo siguiente genera el error LNK2022.
+En el ejemplo siguiente se genera LNK2022.
 
 ```cpp
 // LNK2022_b.cpp

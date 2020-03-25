@@ -5,20 +5,20 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cabe5e92a496181d60536d7274eca388aba5c068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856105"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195479"
 ---
 # <a name="global-constants-in-c"></a>Constantes globales en C++
 
-Constantes globales de C++ tienen vinculación estática. Esto es diferente de C. Si intenta usar un global constante en C++ en varios archivos obtendrá un error externo sin resolver. El compilador optimiza constantes globales, sin dejar espacio reservado para la variable.
+C++las constantes globales tienen vinculación estática. Es diferente de C. Si intenta usar una constante global en C++ en varios archivos, obtendrá un error externo sin resolver. El compilador optimiza las constantes globales, sin dejar espacio reservado para la variable.
 
-Una manera de resolver este error consiste en incluir las inicializaciones constantes en un archivo de encabezado e incluir dicho encabezado en los archivos CPP cuando sea necesario, como si fuera un prototipo de función. Otra posibilidad es hacer que la variable no constante y utilizar una referencia constante al evaluarla.
+Una manera de resolver este error es incluir las inicializaciones const en un archivo de encabezado e incluir dicho encabezado en los archivos CPP cuando sea necesario, como si fuera un prototipo de función. Otra posibilidad es hacer que la variable no sea constante y usar una referencia constante al evaluarla.
 
-El ejemplo siguiente genera C2019:
+En el ejemplo siguiente se genera C2019:
 
 ```cpp
 // global_constants.cpp
@@ -43,6 +43,6 @@ void test() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

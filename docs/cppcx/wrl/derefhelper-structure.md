@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 96b7e83a854765fb872b87d062928311731cfd26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43453d3162de697fa1cfcf0581953c91bbe3934f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398568"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214050"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,19 +31,19 @@ struct DerefHelper<T*>;
 ### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-Un parámetro de plantilla.
+Parámetro de plantilla.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Representa un puntero sin referencia a la `T*` parámetro de plantilla.
+Representa un puntero desreferenciado al parámetro de plantilla `T*`.
 
-**DerefHelper** se utiliza en una expresión como: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
+**Derefhelper (** se utiliza en una expresión como: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a>Typedefs públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |`DerefType`|Identificador del parámetro de plantilla desreferenciado `T*`.|
 
@@ -53,10 +53,10 @@ Representa un puntero sin referencia a la `T*` parámetro de plantilla.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** async.h
+**Encabezado:** Async. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

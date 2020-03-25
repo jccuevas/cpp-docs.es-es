@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - D8045
 ms.assetid: 01c8808c-bac1-4b4d-8a90-b595f95e9318
-ms.openlocfilehash: 7964c2539b5358d2d946e530c4ee75110857446d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05a2d3851e58062e1e326781a223e2f4b0346620
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196851"
 ---
 # <a name="command-line-error-d8045"></a>Error de la línea de comandos D8045
 
-no se puede compilar el archivo de C 'archivo' con la opción /clr
+no se puede compilar el archivo de C ' file ' con la opción/CLR
 
-Sólo archivos de código de C++ fuente pueden pasarse a una compilación que usa **/CLR**.  Use **/TP** para compilar un archivo .c como un archivo .cpp; vea [/TC, / TP, / TC, /TP (Especificar tipo de archivo de origen)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) para obtener más información.
+Solo C++ los archivos de código fuente se pueden pasar a una compilación que utiliza **/CLR**.  Use **/TP** para compilar un archivo. c como archivo. cpp; vea [/TC,/TP,/TC,/TP (especificar el tipo de archivo de origen)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) para obtener más información.
 
-Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Para obtener más información, consulta [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-También puede producirse D8045 si compila una aplicación ATL con Visual C++. Vea [Cómo: Migrar a/CLR](../../dotnet/how-to-migrate-to-clr.md) para obtener más información.
+D8045 también se puede producir si se compila una aplicación ATL mediante C++visual. Consulte [Cómo: migrar a/CLR](../../dotnet/how-to-migrate-to-clr.md) para obtener más información.

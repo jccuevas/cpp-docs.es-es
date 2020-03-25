@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - BK1517
 ms.assetid: 24391f42-0a3e-40a9-9991-c8b9a6a7b1c7
-ms.openlocfilehash: 455e028a72cce132c49e0d0d778628ee21bf3a0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c99d21828512c063703edf541c017843708da5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380531"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197528"
 ---
 # <a name="bscmake-error-bk1517"></a>Error de BSCMAKE BK1517
 
-archivo de código fuente para archivo .sbr compilado con /Yc e /Yu
+archivo de código fuente de sbrfile compilado con/YC y/Yu
 
-El archivo .sbr hace referencia a sí mismo. Probablemente se recompila con /Yu después de compilar con/Yc. Restablecer la opción del compilador para el archivo de origen/Yc, a continuación, seleccione **recompilar** para generar los nuevos archivos. sbr. No se vuelva a compilar el archivo de código fuente con /Yu.
+El archivo. SBR hace referencia a sí mismo. Probablemente se volvió a compilar con/Yu después de compilar con/YC. Restablezca la opción del compilador para el archivo de origen en/YC y, a continuación, seleccione **volver** a generar para generar nuevos archivos. SBR. No volver a compilar el archivo de origen con/Yu.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301527"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179775"
 ---
 # <a name="function-call-operator-"></a>Operador de llamada de función: ()
 
@@ -28,7 +28,7 @@ postfix-expression
 ( [argument-expression-list ] )
 ```
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Los argumentos del operador de llamada de función son cero o más expresiones separadas por comas (los argumentos reales de la función).
 
@@ -176,7 +176,7 @@ int main() {
 
 Las funciones se pueden llamar de forma recursiva. Para obtener más información acerca de las declaraciones de función, vea [funciones](functions-cpp.md). El material relacionado está en [unidades de traducción y vinculación](../cpp/program-and-linkage-cpp.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones postfijas](../cpp/postfix-expressions.md)<br/>
 [Operadores integrados de C++, precedencia y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f25f15148621d7092858577825dbdd6caa1ae0be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514595"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166801"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -23,7 +23,7 @@ Indica que se va a pasar un parámetro del procedimiento que realiza la llamada 
 [in]
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **in** C++ tiene la misma funcionalidad que el atributo MIDL [en](/windows/win32/Midl/in) .
 
@@ -38,13 +38,13 @@ Vea [enlazable](bindable.md) para obtener un ejemplo de cómo usar **en**.
 |||
 |-|-|
 |**Se aplica a**|Parámetro de interfaz, método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|**retval**|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>

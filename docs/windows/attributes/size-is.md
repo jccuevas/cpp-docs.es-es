@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166255"
 ---
 # <a name="size_is"></a>size_is
 
@@ -28,9 +28,9 @@ Especifique el tamaño de la memoria asignada para punteros de tamaño, punteros
 *expression*<br/>
 Tamaño de la memoria asignada para los punteros de tamaño.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El atributo **size_is** C++ tiene la misma funcionalidad que el atributo MIDL de [size_is](/windows/win32/Midl/size-is) .
+El atributo **size_is** C++ tiene la misma funcionalidad que el atributo MIDL [size_is](/windows/win32/Midl/size-is) .
 
 ## <a name="example"></a>Ejemplo
 
@@ -43,13 +43,13 @@ Vea el ejemplo de [first_is](first-is.md) para obtener un ejemplo de cómo espec
 |||
 |-|-|
 |**Se aplica a**|Campo en **struct** o **Union**, parámetro de interfaz, método de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|`max_is`|
 
 Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>

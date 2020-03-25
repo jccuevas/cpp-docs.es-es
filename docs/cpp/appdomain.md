@@ -7,30 +7,30 @@ helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-ms.openlocfilehash: 3f83841565eb6a097f306129fe8f6d121f837c27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ac74e8774204b316712a15975f7af3fb8835a9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184501"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181491"
 ---
 # <a name="appdomain"></a>appdomain
 
-Especifica que cada dominio de aplicación de la aplicación administrada debe tener una copia propia de una variable global determinada o de una variable miembro static. Consulte [dominios de aplicación y Visual C++](../dotnet/application-domains-and-visual-cpp.md) para obtener más información.
+Especifica que cada dominio de aplicación de la aplicación administrada debe tener una copia propia de una variable global determinada o de una variable miembro static. Vea [dominios de aplicación y C++ visual](../dotnet/application-domains-and-visual-cpp.md) para obtener más información.
 
 Cada dominio de aplicación tiene su propia copia de una variable por appdomain. Un constructor de una variable appdomain se ejecuta cuando se carga un ensamblado en un dominio de aplicación, y se ejecuta el destructor cuando se descarga el dominio de aplicación.
 
-Si desea que todos los dominios de aplicación de un proceso de Common Language Runtime compartan una variable global, utilice el modificador `__declspec(process)`. `__declspec(process)` está activada de forma predeterminada en [/CLR](../build/reference/clr-common-language-runtime-compilation.md). El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+Si desea que todos los dominios de aplicación de un proceso de Common Language Runtime compartan una variable global, utilice el modificador `__declspec(process)`. de forma predeterminada, `__declspec(process)` está en vigor en [/CLR](../build/reference/clr-common-language-runtime-compilation.md). Las opciones del compilador **/clr: Pure** y **/clr: Safe** están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017.
 
-`__declspec(appdomain)` solo es válida cuando uno de los **/CLR** opciones del compilador se usa. Solo una variable global, una variable miembro estática o una variable local estática se pueden marcar con `__declspec(appdomain)`. Es un error aplicar `__declspec(appdomain)` a miembros estáticos de tipos administrados, porque siempre tienen este comportamiento.
+`__declspec(appdomain)` solo es válido cuando se usa una de las opciones del compilador **/CLR** . Solo una variable global, una variable miembro estática o una variable local estática se pueden marcar con `__declspec(appdomain)`. Es un error aplicar `__declspec(appdomain)` a miembros estáticos de tipos administrados, porque siempre tienen este comportamiento.
 
-Uso de `__declspec(appdomain)` es similar a usar [almacenamiento Local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md). Los subprocesos tienen su propio almacenamiento, como los dominios de aplicación. Al usar `__declspec(appdomain)`, se garantiza que la variable global tiene su propio almacenamiento en cada dominio de aplicación creado para esta aplicación.
+El uso de `__declspec(appdomain)` es similar al uso de [almacenamiento local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md). Los subprocesos tienen su propio almacenamiento, como los dominios de aplicación. Al usar `__declspec(appdomain)`, se garantiza que la variable global tiene su propio almacenamiento en cada dominio de aplicación creado para esta aplicación.
 
-Existen limitaciones para la combinación de variables de dominio de aplicación; por proceso y por consulte [proceso](../cpp/process.md) para obtener más información.
+Existen limitaciones para mezclar el uso de las variables por proceso y por AppDomain; Vea el [proceso](../cpp/process.md) para obtener más información.
 
 Por ejemplo, en el inicio del programa, primero se inicializan todas las variables por proceso y, después, todas las variables por appdomain. Por consiguiente, cuando se inicializa una variable por proceso, esta no puede depender del valor de cualquier variable de dominio por aplicación. No se recomienda combinar el uso (asignación) de variables por appdomain y por proceso.
 
-Para obtener información sobre cómo llamar a una función en un dominio de aplicación específica, consulte [call_in_appdomain (función)](../dotnet/call-in-appdomain-function.md).
+Para obtener información sobre cómo llamar a una función en un dominio de aplicación específico, vea [Call_in_appdomain función](../dotnet/call-in-appdomain-function.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -134,7 +134,7 @@ __declspec(appdomain) CGlobal::~CGlobal destructor
 __declspec(process) CGlobal::~CGlobal destructor
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [__declspec](../cpp/declspec.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1085
 ms.assetid: f2766365-d09b-4299-8a98-12e5aca98568
-ms.openlocfilehash: d3060d01beb7ce8fda3890186b1a891fb33e1021
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b6cc63894607de94c8da455754f98937e92677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208777"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204066"
 ---
 # <a name="fatal-error-c1085"></a>Error irrecuperable C1085
 
-No se puede escribir el archivo tipodearchivo: 'archivo': mensaje
+No se puede escribir en el archivo filetype: ' file ': mensaje
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:
 
-1. Unidad es de solo lectura.
+1. La unidad es de solo lectura.
 
-1. Unidad está llena.
+1. La unidad está llena.
 
 1. Infracción de uso compartido.
 

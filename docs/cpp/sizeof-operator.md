@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 9edd6420193fbc1ff6013c545b294851ce105848
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc1165cf1df3933575013906d1b24673467f0b36
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267224"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178722"
 ---
 # <a name="sizeof-operator"></a>sizeof (Operador)
 
-Genera el tamaño de su operando con respecto al tamaño del tipo **char**.
+Da como resultado el tamaño de su operando con respecto al tamaño del tipo **Char**.
 
 > [!NOTE]
->  Para obtener información sobre la `sizeof ...` operador, consulte [puntos suspensivos y plantillas Variádicas](../cpp/ellipses-and-variadic-templates.md).
+>  Para obtener información sobre el operador `sizeof ...`, consulte [las plantillas Ellipse y variádicas](../cpp/ellipses-and-variadic-templates.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,17 +27,17 @@ sizeof unary-expression
 sizeof  ( type-name )
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El resultado de la **sizeof** operador es de tipo `size_t`, un tipo entero definido en el archivo de inclusión \<stddef.h >. Este operador permite no tener que especificar tamaños de datos dependientes del equipo en los programas.
+El resultado del operador **sizeof** es de tipo `size_t`, un tipo entero definido en el archivo de inclusión \<stddef. h >. Este operador permite no tener que especificar tamaños de datos dependientes del equipo en los programas.
 
-El operando situado a **sizeof** puede ser uno de los siguientes:
+El operando de **sizeof** puede ser uno de los siguientes:
 
 - Nombre de tipo. Para usar **sizeof** con un nombre de tipo, el nombre debe ir entre paréntesis.
 
-- Una expresión. Cuando se usa con una expresión, **sizeof** se puede especificar con o sin paréntesis. La expresión no se evalúa.
+- Expresión. Cuando se utiliza con una expresión, **sizeof** se puede especificar con o sin paréntesis. La expresión no se evalúa.
 
-Cuando el **sizeof** operador se aplica a un objeto de tipo **char**, genera 1. Cuando el **sizeof** operador se aplica a una matriz, genera el número total de bytes en dicha matriz, no el tamaño del puntero representado por el identificador de matriz. Para obtener el tamaño del puntero representado por el identificador de matriz, páselo como un parámetro a una función que usa **sizeof**. Por ejemplo:
+Cuando el operador **sizeof** se aplica a un objeto de tipo **Char**, produce 1. Cuando se aplica el operador **sizeof** a una matriz, se produce el número total de bytes de esa matriz, no el tamaño del puntero representado por el identificador de matriz. Para obtener el tamaño del puntero representado por el identificador de matriz, páselo como parámetro a una función que utiliza **sizeof**. Por ejemplo:
 
 ## <a name="example"></a>Ejemplo
 
@@ -63,7 +63,7 @@ int main()
 }
 ```
 
-## <a name="sample-output"></a>Resultados del ejemplo
+## <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 The size of a char is: 1
@@ -71,19 +71,19 @@ The length of Hello, world! is: 14
 The size of the pointer is 4
 ```
 
-Cuando el **sizeof** operador se aplica a un **clase**, **struct**, o **unión** tipo, el resultado es el número de bytes de un objeto de ese tipo, además de cualquier relleno agregado a alinear los miembros en los límites de palabra. El resultado no corresponde necesariamente al tamaño que se calcula agregando los requisitos de almacenamiento de los miembros individuales. El [/Zp](../build/reference/zp-struct-member-alignment.md) opción del compilador y el [pack](../preprocessor/pack.md) pragma afectan a los límites de alineación de miembros.
+Cuando el operador **sizeof** se aplica a un tipo **Class**, **struct**o **Union** , el resultado es el número de bytes de un objeto de ese tipo, además del relleno agregado para alinear los miembros en los límites de palabras. El resultado no corresponde necesariamente al tamaño que se calcula agregando los requisitos de almacenamiento de los miembros individuales. La opción del compilador [/ZP](../build/reference/zp-struct-member-alignment.md) y el pragma [Pack](../preprocessor/pack.md) afectan a los límites de alineación de los miembros.
 
-El **sizeof** operador nunca genera 0, incluso para una clase vacía.
+El operador **sizeof** nunca produce 0, ni siquiera para una clase vacía.
 
-El **sizeof** operador no se puede usar con los operandos siguientes:
+El operador **sizeof** no se puede usar con los siguientes operandos:
 
-- Funciones. (Sin embargo, **sizeof** se pueden aplicar a punteros a funciones.)
+- Funciones. (Sin embargo, **sizeof** se puede aplicar a punteros a funciones).
 
 - Campos de bits.
 
 - Clases no definidas.
 
-- El tipo **void**.
+- Tipo **void**.
 
 - Matrices asignadas dinámicamente.
 
@@ -93,17 +93,17 @@ El **sizeof** operador no se puede usar con los operandos siguientes:
 
 - Nombres entre paréntesis de tipos incompletos.
 
-Cuando el **sizeof** operador se aplica a una referencia, el resultado es el mismo que si **sizeof** hubiera aplicado el propio objeto.
+Cuando el operador **sizeof** se aplica a una referencia, el resultado es el mismo que si se hubiera aplicado **sizeof** al propio objeto.
 
-Si una matriz sin tamaño es el último elemento de una estructura, el **sizeof** operador devuelve el tamaño de la estructura sin la matriz.
+Si una matriz sin tamaño es el último elemento de una estructura, el operador **sizeof** devuelve el tamaño de la estructura sin la matriz.
 
-El **sizeof** operador a menudo se usa para calcular el número de elementos en una matriz mediante una expresión de formato:
+El operador **sizeof** se usa a menudo para calcular el número de elementos de una matriz mediante una expresión con el formato:
 
 ```cpp
 sizeof array / sizeof array[0]
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Expresiones con operadores unarios](../cpp/expressions-with-unary-operators.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)

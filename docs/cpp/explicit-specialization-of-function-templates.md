@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: 3d91383f895f1a8be983efe42f685419ca988823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184281"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179996"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Especialización explícita de las plantillas de función
 
@@ -23,7 +23,7 @@ Con una plantilla de función, puede definir un comportamiento especial para un 
 template<> void MySwap(double a, double b);
 ```
 
-Esta declaración permite definir una función diferente para **doble** variables. Al igual que las funciones que no son de plantilla, las conversiones de tipos estándar (por ejemplo, promover una variable de tipo **float** a **doble**) se aplican.
+Esta declaración permite definir una función diferente para las variables **dobles** . Al igual que las funciones que no son de plantilla, se aplican las conversiones de tipo estándar (como la promoción de una variable de tipo **float** a **Double**).
 
 ## <a name="example"></a>Ejemplo
 
@@ -51,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Plantillas de función](../cpp/function-templates.md)

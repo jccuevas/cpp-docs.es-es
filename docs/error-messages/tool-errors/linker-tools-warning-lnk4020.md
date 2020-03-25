@@ -5,17 +5,17 @@ f1_keywords:
 - LNK4020
 helpviewer_keywords:
 - LNK4020
-ms.openlocfilehash: 7810fd9a97a8f6e22ad362819a024358a9f4b07c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e818909cc0b590b0f7727846cfd7b469e8bc0e3f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194231"
 ---
 # <a name="linker-tools-warning-lnk4020"></a>Advertencia de las herramientas del vinculador LNK4020
 
-> en un registro de tipo '*filename*' está dañado; pueden que algunos símbolos y tipos de no ser accesibles desde el depurador
+> un registro de tipo en '*nombreDeArchivo*' está dañado; es posible que algunos símbolos y tipos no sean accesibles desde el depurador
 
-El archivo PDB *filename* tiene un registro de tipo está dañado.
+El *nombre* de archivo PDB tiene un registro de tipo dañado.
 
-Este problema suele ser secundario a otros problemas de compilación; a menos que este es el primer número de compilación notificadas, tratar con otros errores y advertencias de la primera. Si este es el primer problema notificado, deberá limpiar los directorios de compilación y vuelva a compilar el proyecto. Si utiliza los procesos de compilación paralela, vea si el error persiste al serializar la compilación.
+Este problema suele ser secundario de otros problemas de compilación; a menos que este sea el primer problema de compilación, trate primero los otros errores y advertencias. Si este es el primer problema detectado, es posible que deba limpiar los directorios de compilación y volver a compilar el proyecto. Si utiliza procesos de compilación en paralelo, consulte si el error persiste al serializar la compilación.

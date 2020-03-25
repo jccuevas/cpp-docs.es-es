@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398152"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213569"
 ---
 # <a name="swap-function-wrl"></a>Swap (función) (WRL)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Es compatible con la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -35,16 +35,16 @@ Segundo argumento.
 
 ## <a name="return-value"></a>Valor devuelto
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Intercambia los valores de los dos argumentos especificados.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** internal.h
+**Encabezado:** Internal. h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft:: WRL::D etalles
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

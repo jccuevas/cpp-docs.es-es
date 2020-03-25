@@ -8,26 +8,26 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 207dcc92cd308052e4e5e7265bf0632c5096bed4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8ea949653c7e62f39ab9d1b181c419cf51fe3cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209838"
 ---
 # <a name="provider-support-for-bookmarks"></a>Compatibilidad del proveedor con los marcadores
 
-El ejemplo de este tema agrega la `IRowsetLocate` interfaz a la `CCustomRowset` clase. En casi todos los casos, primero debe agregar una interfaz a un objeto COM existente. A continuación, puede probarla mediante la adición de más llamadas de las plantillas de consumidor. El ejemplo se muestra cómo:
+En el ejemplo de este tema se agrega la interfaz de `IRowsetLocate` a la clase `CCustomRowset`. En casi todos los casos, se empieza agregando una interfaz a un objeto COM existente. Después, puede probarlo agregando más llamadas desde las plantillas de consumidor. En el ejemplo se muestra cómo:
 
 - Agregar una interfaz a un proveedor.
 
-- Determinar dinámicamente las columnas que se devuelven al consumidor.
+- Determinar dinámicamente las columnas que se van a devolver al consumidor.
 
 - Agregar compatibilidad con marcadores.
 
-La interfaz `IRowsetLocate` hereda de la interfaz `IRowset` . Para agregar la `IRowsetLocate` de la interfaz, heredar `CCustomRowset` desde [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).
+La interfaz `IRowsetLocate` hereda de la interfaz `IRowset` . Para agregar la interfaz `IRowsetLocate`, herede `CCustomRowset` de [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).
 
-Agregar el `IRowsetLocate` interfaz es un poco diferente de la mayoría de las interfaces. Para hacer que la línea VTABLEs de OLE DB, plantillas de proveedores tienen un parámetro de plantilla para controlar la interfaz derivada. El código siguiente muestra la nueva lista de herencia:
+Agregar la interfaz `IRowsetLocate` es un poco diferente de la mayoría de las interfaces. Para que las VTABLEs estén alineadas, las plantillas de proveedor OLE DB tienen un parámetro de plantilla para controlar la interfaz derivada. En el código siguiente se muestra la nueva lista de herencia:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -40,9 +40,9 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-El cuarto, quinto y sexto parámetros se agregan todos ellos. En este ejemplo utiliza los valores predeterminados para el cuarto y quinto, pero especifique `IRowsetLocateImpl` como el sexto parámetro. `IRowsetLocateImpl` es una clase de plantilla OLE DB que toma dos parámetros de plantilla: estos enlazan la `IRowsetLocate` interfaz a la `CCustomRowset` clase. Para agregar la mayoría de las interfaces, puede omitir este paso y mover a la siguiente. Solo el `IRowsetLocate` y `IRowsetScroll` interfaces deben tratarse de esta manera.
+Se agregan los parámetros cuarto, quinto y sexto. En este ejemplo se usan los valores predeterminados para los parámetros cuarto y quinto, pero se especifica `IRowsetLocateImpl` como el sexto parámetro. `IRowsetLocateImpl` es una OLE DB clase de plantilla que toma dos parámetros de plantilla: enlazan la interfaz de `IRowsetLocate` a la clase `CCustomRowset`. Para agregar la mayoría de las interfaces, puede omitir este paso y pasar a la siguiente. Solo las interfaces `IRowsetLocate` y `IRowsetScroll` deben administrarse de esta manera.
 
-A continuación, deberá indicar el `CCustomRowset` para llamar a `QueryInterface` para el `IRowsetLocate` interfaz. Agregue la línea `COM_INTERFACE_ENTRY(IRowsetLocate)` al mapa. El mapa de interfaz para `CCustomRowset` debe aparecer como se muestra en el código siguiente:
+A continuación, debe indicar al `CCustomRowset` que llame a `QueryInterface` para la interfaz de `IRowsetLocate`. Agregue la línea `COM_INTERFACE_ENTRY(IRowsetLocate)` al mapa. El mapa de interfaz para `CCustomRowset` debe aparecer como se muestra en el código siguiente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -56,11 +56,11 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-También deberá enlazar el mapa en el `CRowsetImpl` clase. Agregue la macro COM_INTERFACE_ENTRY_CHAIN para enlazar el `CRowsetImpl` mapa. Además, debe crear una definición de tipo denominada `RowsetBaseClass` que consta de la información de herencia. Esta definición de tipo es arbitrario y se puede omitir.
+También debe enlazar la asignación a la clase `CRowsetImpl`. Agregue la macro COM_INTERFACE_ENTRY_CHAIN que se va a enlazar en el mapa de `CRowsetImpl`. Además, cree una definición de tipo llamada `RowsetBaseClass` que conste de la información de herencia. Esta definición de tipo es arbitraria y se puede omitir.
 
-Por último, controle el `IColumnsInfo::GetColumnsInfo` llamar. Las macros PROVIDER_COLUMN_ENTRY utilizaría normalmente para hacer esto. Sin embargo, un consumidor desea utilizar marcadores. Debe poder cambiar las columnas que devuelve el proveedor dependiendo de si el consumidor solicita un marcador.
+Por último, controle la llamada `IColumnsInfo::GetColumnsInfo`. Normalmente usaría el PROVIDER_COLUMN_ENTRY macros para hacerlo. Sin embargo, es posible que un consumidor quiera usar marcadores. Debe poder cambiar las columnas que devuelve el proveedor dependiendo de si el consumidor solicita un marcador.
 
-Para controlar la `IColumnsInfo::GetColumnsInfo` llamar, elimine el mapa PROVIDER_COLUMN el `CTextData` clase. La macro PROVIDER_COLUMN_MAP define una función `GetColumnInfo`. Definir las suyas propias `GetColumnInfo` función. La declaración de función debe tener este aspecto:
+Para controlar la llamada `IColumnsInfo::GetColumnsInfo`, elimine el mapa de PROVIDER_COLUMN en la clase `CTextData`. La macro PROVIDER_COLUMN_MAP define una función `GetColumnInfo`. Defina su propia `GetColumnInfo` función. La declaración de la función debe tener el siguiente aspecto:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-A continuación, implemente el `GetColumnInfo` funcionando en el *personalizado*RS.cpp archivo como sigue:
+A continuación, implemente la función `GetColumnInfo` en el archivo RS. cpp *personalizado*como se indica a continuación:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,11 +148,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo` comprueba primero si una propiedad denominada `DBPROP_IRowsetLocate` está establecido. OLE DB tiene propiedades para cada una de las interfaces opcionales del objeto de conjunto de filas. Si el consumidor desea usar una de estas interfaces opcionales, Establece una propiedad en true. El proveedor, a continuación, puede comprobar esta propiedad y tomar medidas especiales que se basan en.
+`GetColumnInfo` primero comprueba si se ha establecido una propiedad denominada `DBPROP_IRowsetLocate`. OLE DB tiene propiedades para cada una de las interfaces opcionales del objeto de conjunto de filas. Si el consumidor desea utilizar una de estas interfaces opcionales, establece una propiedad en true. Después, el proveedor puede comprobar esta propiedad y realizar una acción especial basada en ella.
 
-En su implementación, obtenga la propiedad mediante el puntero al objeto de comando. El `pThis` puntero representa la clase de conjunto de filas o un comando. Dado que utiliza plantillas, debe pasarlo como un **void** puntero o el código no se compila.
+En la implementación de, obtiene la propiedad mediante el puntero al objeto de comando. El puntero `pThis` representa el conjunto de filas o la clase de comando. Dado que usa plantillas aquí, tiene que pasarlo como un puntero **void** o el código no se compila.
 
-Especifique una matriz estática para contener la información de columna. Si el consumidor no desea que la columna de marcador, se desperdicia una entrada de la matriz. Puede asignar dinámicamente esta matriz, pero tendría que asegurarse de que lo destruirá correctamente. En este ejemplo se define y utiliza las macros ADD_COLUMN_ENTRY y ADD_COLUMN_ENTRY_EX para insertar la información en la matriz. Puede agregar las macros para los *personalizado*RS. Archivo de H tal como se muestra en el código siguiente:
+Especifique una matriz estática para almacenar la información de la columna. Si el consumidor no desea la columna de marcador, se desperdicia una entrada en la matriz. Puede asignar dinámicamente esta matriz, pero debe asegurarse de que la destruya correctamente. Este ejemplo define y utiliza las macros ADD_COLUMN_ENTRY y ADD_COLUMN_ENTRY_EX para insertar la información en la matriz. Puede Agregar las macros al RS *personalizado*. H, tal como se muestra en el código siguiente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -183,7 +183,7 @@ Especifique una matriz estática para contener la información de columna. Si el
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;
 ```
 
-Para probar el código en el consumidor, deberá realizar algunos cambios a la `OnRun` controlador. El primer cambio a la función es que agregar código para agregar una propiedad a la propiedad establecida. El código establece el `DBPROP_IRowsetLocate` en true, por lo tanto, indica que el proveedor que desea la columna de marcador. El `OnRun` código del controlador debería aparecer como sigue:
+Para probar el código en el consumidor, debe realizar algunos cambios en el controlador de `OnRun`. El primer cambio en la función es que se agrega código para agregar una propiedad al conjunto de propiedades. El código establece la propiedad `DBPROP_IRowsetLocate` en true, lo que indica al proveedor que desea la columna de marcador. El código del controlador de `OnRun` debe aparecer de la siguiente manera:
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -235,9 +235,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }
 ```
 
-El **mientras** bucle contiene código para llamar a la `Compare` método en el `IRowsetLocate` interfaz. El código que se debe pasar siempre porque se están comparando los mismos marcadores. Además, almacene un marcador en una variable temporal para que pueda usar después la **mientras** bucle de llamar a la `MoveToBookmark` función en las plantillas de consumidor. El `MoveToBookmark` llamadas de función el `GetRowsAt` método `IRowsetLocate`.
+El bucle **While** contiene código para llamar al método `Compare` en la interfaz `IRowsetLocate`. El código que debe pasar siempre porque está comparando los mismos marcadores exactos. Además, almacene un marcador en una variable temporal para que pueda usarlo después de que el bucle **While** termine de llamar a la función `MoveToBookmark` en las plantillas de consumidor. La función `MoveToBookmark` llama al método `GetRowsAt` en `IRowsetLocate`.
 
-También deberá actualizar el registro de usuario en el consumidor. Agregue una entrada en la clase para controlar un marcador y una entrada en COLUMN_MAP:
+También debe actualizar el registro de usuario en el consumidor. Agregue una entrada en la clase para controlar un marcador y una entrada en el COLUMN_MAP:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -262,8 +262,8 @@ END_ACCESSOR_MAP()
 };
 ```
 
-Cuando se ha actualizado el código, debe ser capaz de generar y ejecutar el proveedor con el `IRowsetLocate` interfaz.
+Cuando haya actualizado el código, debería poder compilar y ejecutar el proveedor con la interfaz `IRowsetLocate`.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Técnicas avanzadas para proveedores](../../data/oledb/advanced-provider-techniques.md)

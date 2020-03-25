@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: 854f998e31cfec577fb6ff0fb3d82dc1499f88bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f437f87861293cb6048ed6acb05428c466b3f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303840"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214206"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory (Clase)
 
-Representa un generador de activación de apartamento sencillo que implementa [FtmBase](ftmbase-class.md).
+Representa un generador de activación compatible con apartamento que implementa [FtmBase](ftmbase-class.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -36,11 +36,11 @@ class AgileActivationFactory :
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** module.h
+**Encabezado:** Module. h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)<br/>
 [ActivationFactory (clase)](activationfactory-class.md)

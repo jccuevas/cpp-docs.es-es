@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214854"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -28,7 +28,7 @@ Permite la especificación de un valor predeterminado para un parámetro opciona
 *value*<br/>
 Valor predeterminado del parámetro.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El atributo **DefaultValue** C++ tiene la misma funcionalidad que el atributo MIDL [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
@@ -61,13 +61,13 @@ __interface IFireTabCtrl : IDispatch {
 |||
 |-|-|
 |**Se aplica a**|Parámetro de interfaz|
-|**Reiterativo**|Sin|
+|**Reiterativo**|No|
 |**Atributos requeridos**|None|
 |**Atributos no válidos**|None|
 
 Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>

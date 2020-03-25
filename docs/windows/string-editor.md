@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514720"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214414"
 ---
 # <a name="string-editor-c"></a>Editor de cadenasC++()
 
@@ -58,7 +58,7 @@ El **Editor de cadenas** le permite:
 
 1. Abra la tabla de cadenas haciendo doble clic en su icono en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Vaya a menú **Editar** > **Buscar y reemplazar** y elija **Buscar**.
+1. Vaya a menú **editar** > **Buscar y reemplazar** y elija **Buscar**.
 
 1. En el cuadro **Buscar** , seleccione una cadena de búsqueda anterior en la lista desplegable o escriba el texto del título o el identificador de recurso de la cadena que desea buscar.
 
@@ -69,13 +69,13 @@ El **Editor de cadenas** le permite:
 >
 > Escriba una expresión regular para que coincida con un patrón o seleccione el botón que se encuentra a la derecha del cuadro **Buscar** para mostrar una lista de expresiones de búsqueda normales. Al seleccionar una expresión de esta lista, se sustituye por el texto de búsqueda en el cuadro **Buscar** .
 >
-> Si utiliza expresiones regulares, asegúrese de **usar: La casilla** expresiones regulares está activada.
+> Si utiliza expresiones regulares, asegúrese de que la casilla **usar expresiones regulares** está activada.
 
 ### <a name="to-add-or-delete-a-string-resource"></a>Para agregar o eliminar un recurso de cadena
 
 Puede insertar o eliminar entradas rápidamente en la tabla de cadenas mediante el **Editor de cadenas**. Las nuevas cadenas se colocan al final de la tabla y reciben el siguiente identificador disponible. Puede editar las propiedades **ID**, **Value**o **Caption** en el [ventana Propiedades](/visualstudio/ide/reference/properties-window) según sea necesario.
 
-El **Editor de cadenas** se asegura de que no se use un identificador que ya esté en uso. Si selecciona un identificador que ya está en uso, el **Editor de cadenas** le notificará y, a continuación, asignará un `IDS_STRING58113`identificador único genérico, por ejemplo.
+El **Editor de cadenas** se asegura de que no se use un identificador que ya esté en uso. Si selecciona un identificador que ya está en uso, el **Editor de cadenas** le notificará y, a continuación, asignará un identificador único genérico, por ejemplo `IDS_STRING58113`.
 
 #### <a name="to-add-a-string-table-entry"></a>Para agregar una entrada de tabla de cadenas
 
@@ -96,7 +96,7 @@ El **Editor de cadenas** se asegura de que no se use un identificador que ya est
 
 Seleccione la entrada que desea eliminar y realice una de las siguientes acciones:
 
-- Vaya a menú **Editar** > **eliminar**.
+- Vaya a menú **editar** > **eliminar**.
 
 - Haga clic con el botón derecho en la cadena que desea eliminar y elija **eliminar**.
 
@@ -142,7 +142,7 @@ Puede utilizar la edición en contexto para cambiar las propiedades **ID**, **Va
 
 1. En la [ventana Propiedades](/visualstudio/ide/reference/properties-window), escriba un nuevo valor para la propiedad que desee cambiar.
 
-1. Presione **ENTRAR**.
+1. Presione **Entrar**.
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Para agregar formato o caracteres especiales a un recurso de cadena
 
@@ -154,12 +154,12 @@ Puede utilizar la edición en contexto para cambiar las propiedades **ID**, **Va
 
    |Para obtener esto...|Escriba este...|
    |-----------------|---------------|
-   | Nueva línea | \\n |
+   | Línea nueva | \\n |
    | Retorno de carro | \\r |
-   | Tab | \\h |
+   | Pestaña | \\t |
    | Barra diagonal inversa (\\) | \\\\ |
    | Carácter ASCII | \\DDD (notación octal) |
-   | Alerta (campana) | \\un |
+   | Alerta (campana) | \\a |
 
    > [!NOTE]
    > El **Editor de cadenas** no admite el conjunto completo de caracteres de ASCI con escape. Solo se pueden usar los enumerados anteriormente.
@@ -168,9 +168,9 @@ Puede utilizar la edición en contexto para cambiar las propiedades **ID**, **Va
 
 Win32
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Cadenas](../windows/resource-editors.md)
-[de editores de recursos](/windows/win32/menurc/strings)<br/>
+[Editores de recursos](../windows/resource-editors.md)
+[cadenas](/windows/win32/menurc/strings)<br/>
 [Acerca de las cadenas](/windows/win32/menurc/about-strings)<br/>
 [Personalizar los diseños de ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

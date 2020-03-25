@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244509"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179177"
 ---
-# <a name="raise"></a>__raise
+# <a name="__raise"></a>__raise
 
 Resalta el sitio de llamada de un evento.
 
@@ -24,11 +24,11 @@ Resalta el sitio de llamada de un evento.
 __raise method-declarator;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-En código administrado, un evento solo se puede generar desde dentro de la clase donde se define. Consulte [evento](../extensions/event-cpp-component-extensions.md) para obtener más información.
+En código administrado, un evento solo se puede generar desde dentro de la clase donde se define. Vea el [evento](../extensions/event-cpp-component-extensions.md) para obtener más información.
 
-La palabra clave **__raise** genera un error que se genera si se llama a un no evento.
+La palabra clave **__raise** provoca que se emita un error si se llama a un evento que no es de.
 
 > [!NOTE]
 >  Una clase o struct basada en plantilla no puede contener eventos.
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [Control de eventos](../cpp/event-handling.md)<br/>

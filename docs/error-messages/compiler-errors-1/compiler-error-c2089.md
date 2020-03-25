@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2089
 ms.assetid: 7c777775-5535-4eea-b6a2-340b71af9560
-ms.openlocfilehash: 0705d9a47dd5574f8a134ae5021d35ecd6f15597
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a188f68717805bf17b473916183ee1bb24964e2e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257678"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207706"
 ---
 # <a name="compiler-error-c2089"></a>Error del compilador C2089
 
-'identifier': 'class-key' demasiado grande
+' Identifier ': ' Class-Key ' demasiado grande
 
-La estructura o unión especificadas supera el límite de 4GB.
+La estructura o unión especificada supera el límite de 4 GB.
