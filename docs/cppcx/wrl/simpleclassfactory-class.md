@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 9a4c169944d56b693efa681bf7089636477012ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403095"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373558"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (clase)
 
@@ -32,11 +32,11 @@ class SimpleClassFactory : public ClassFactory<>;
 *Base*<br/>
 Una clase base.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La clase base debe proporcionar un constructor predeterminado.
 
-En el ejemplo de código siguiente se muestra cómo usar `SimpleClassFactory` con el [ActivatableClassWithFactoryEx](activatableclass-macros.md) macro.
+En el ejemplo de código `SimpleClassFactory` siguiente se muestra cómo utilizar con el [ActivatableClassWithFactoryEx](activatableclass-macros.md) macro.
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -44,9 +44,9 @@ En el ejemplo de código siguiente se muestra cómo usar `SimpleClassFactory` co
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[SimpleClassFactory::CreateInstance (método)](#createinstance)|Crea una instancia de la interfaz especificada.|
+|[SimpleClassFactory::CreateInstance (Método)](#createinstance)|Crea una instancia de la interfaz especificada.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -76,9 +76,9 @@ En el ejemplo de código siguiente se muestra cómo usar `SimpleClassFactory` co
 
 **Encabezado:** module.h
 
-**Espacio de nombres**: Microsoft::WRL
+**Espacio de nombres:** Microsoft::WRL
 
-## <a name="createinstance"></a>Simpleclassfactory (método)
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory::CreateInstance Método
 
 Crea una instancia de la interfaz especificada.
 
@@ -93,20 +93,20 @@ STDMETHOD( CreateInstance )(
 #### <a name="parameters"></a>Parámetros
 
 *pUnkOuter*<br/>
-Debe ser `nullptr`; en caso contrario, el valor devuelto es CLASS_E_NOAGGREGATION.
+Debe `nullptr`ser ; de lo contrario, el valor devuelto es CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory no admite la agregación. Si se admite la agregación y el objeto se crea formaba parte de un agregado, *pUnkOuter* sería un puntero al control `IUnknown` interfaz del agregado.
+SimpleClassFactory no admite la agregación. Si se admitiera la agregación y el objeto que se crea formaba `IUnknown` parte de un agregado, *pUnkOuter* sería un puntero a la interfaz de control del agregado.
 
 *riid*<br/>
-Identificador del objeto para crear la interfaz.
+ID de interfaz del objeto que se va a crear.
 
 *ppvObject*<br/>
-Cuando finalice esta operación, puntero a una instancia del objeto especificado por el *riid* parámetro.
+Cuando se completa esta operación, puntero a una instancia del objeto especificado por el *parámetro riid.*
 
 ### <a name="return-value"></a>Valor devuelto
 
 S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si `__WRL_STRICT__` está definido, se genera un error de aserción si no se deriva de la clase base especificada en el parámetro de plantilla de clase [RuntimeClass](runtimeclass-class.md), o no está configurado con el ClassicCom o WinRtClassicComMix [ RuntimeClassType](runtimeclasstype-enumeration.md) valor de enumeración.
+Si `__WRL_STRICT__` se define, se emite un error de aserción si la clase base especificada en el parámetro de plantilla de clase no se deriva de [RuntimeClass](runtimeclass-class.md)o no está configurada con el valor de enumeración ClassicCom o WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md) .

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: dd34206741ba8fee8b283e22b6e8eefb3b3efb0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5deb89e795d1886ca316886ae1ea260ce1f36fd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398594"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372586"
 ---
 # <a name="criticalsection-class"></a>CriticalSection (clase)
 
-Representa un objeto de sección crítica.
+Representa un objeto de sección crítico.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,24 +40,24 @@ class CriticalSection;
 
 ### <a name="constructor"></a>Constructor
 
-Name                                                        | Descripción
+Nombre                                                        | Descripción
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::CriticalSection](#criticalsection)        | Inicializa un objeto de sincronización que es similar a un objeto de exclusión mutua, pero se puede usar solo los subprocesos de un único proceso.
-[CriticalSection::~CriticalSection](#tilde-criticalsection) | Desinicializa y destruye actual `CriticalSection` objeto.
+[CriticalSection::CriticalSection](#criticalsection)        | Inicializa un objeto de sincronización que es similar a un objeto mutex, pero solo los subprocesos de un único proceso pueden usarlo.
+[CriticalSection::-CriticalSection](#tilde-criticalsection) | Desinicializa y destruye `CriticalSection` el objeto actual.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                                 | Descripción
+Nombre                                 | Descripción
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
 [CriticalSection::IsValid](#isvalid) | Indica si la sección crítica actual es válida.
-[CriticalSection::Lock](#lock)       | Espera a que la propiedad del objeto especificado de sección crítica. La función devuelve cuando el subproceso de llamada se concede la propiedad.
-[CriticalSection::TryLock](#trylock) | Intenta entrar en una sección crítica sin bloquear. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión de la sección crítica.
+[CriticalSection::Bloqueo](#lock)       | Espera la propiedad del objeto de sección crítica especificado. La función devuelve cuando se concede la propiedad al subproceso que realiza la llamada.
+[CriticalSection::TryLock](#trylock) | Intenta entrar en una sección crítica sin bloquear. Si la llamada se realiza correctamente, el subproceso que realiza la llamada toma la propiedad de la sección crítica.
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-Name                        | Descripción
+Nombre                        | Descripción
 --------------------------- | ----------------------------------------
-[CriticalSection::cs_](#cs) | Declara a un miembro de datos de la sección crítica.
+[CriticalSection::cs_](#cs) | Declara un miembro de datos de sección crítica.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -67,19 +67,19 @@ Name                        | Descripción
 
 **Encabezado:** corewrappers.h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers
+**Espacio de nombres:** Microsoft::WRL::Wrappers
 
-## <a name="tilde-criticalsection"></a>CriticalSection::~CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>CriticalSection::-CriticalSection
 
-Desinicializa y destruye actual `CriticalSection` objeto.
+Desinicializa y destruye `CriticalSection` el objeto actual.
 
 ```cpp
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsection"></a>CriticalSection::CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>CriticalSection::CriticalSection
 
-Inicializa un objeto de sincronización que es similar a un objeto de exclusión mutua, pero se puede usar solo los subprocesos de un único proceso.
+Inicializa un objeto de sincronización que es similar a un objeto mutex, pero solo los subprocesos de un único proceso pueden usarlo.
 
 ```cpp
 explicit CriticalSection(
@@ -90,25 +90,25 @@ explicit CriticalSection(
 ### <a name="parameters"></a>Parámetros
 
 *spincount*<br/>
-El recuento circular para el objeto de sección crítica. El valor predeterminado es 0.
+El recuento de giros para el objeto de sección crítica. El valor predeterminado es 0.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Para obtener más información acerca de las secciones críticas y spincounts, consulte el `InitializeCriticalSectionAndSpinCount` funcionando en la `Synchronization` sección de la documentación de API de Windows.
+Para obtener más información acerca de las `InitializeCriticalSectionAndSpinCount` secciones `Synchronization` críticas y los espincounts, consulte la función en la sección de la documenation de la API de Windows.
 
-## <a name="cs"></a>CriticalSection::cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a>CriticalSection::cs_
 
-Declara a un miembro de datos de la sección crítica.
+Declara un miembro de datos de sección crítica.
 
 ```cpp
 CRITICAL_SECTION cs_;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Este miembro de datos está protegida.
+Este miembro de datos está protegido.
 
-## <a name="isvalid"></a>CriticalSection::IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>CriticalSection::IsValid
 
 Indica si la sección crítica actual es válida.
 
@@ -120,9 +120,9 @@ bool IsValid() const;
 
 De forma predeterminada, siempre devuelve **true**.
 
-## <a name="lock"></a>CriticalSection::Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a>CriticalSection::Bloqueo
 
-Espera a que la propiedad del objeto especificado de sección crítica. La función devuelve cuando el subproceso de llamada se concede la propiedad.
+Espera la propiedad del objeto de sección crítica especificado. La función devuelve cuando se concede la propiedad al subproceso que realiza la llamada.
 
 ```cpp
 SyncLock Lock();
@@ -135,19 +135,19 @@ SyncLock Lock();
 ### <a name="parameters"></a>Parámetros
 
 *cs*<br/>
-Un objeto de sección crítica especificado por el usuario.
+Objeto de sección crítica especificado por el usuario.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un objeto de bloqueo que puede usarse para desbloquear la sección crítica actual.
+Objeto de bloqueo que se puede utilizar para desbloquear la sección crítica actual.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera `Lock` el objeto de sección crítica actual afecta a la función. El segundo `Lock` función afecta a una sección crítica especificado por el usuario.
+La `Lock` primera función afecta al objeto de sección crítica actual. La `Lock` segunda función afecta a una sección crítica especificada por el usuario.
 
-## <a name="trylock"></a>CriticalSection::TryLock
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a>CriticalSection::TryLock
 
-Intenta entrar en una sección crítica sin bloquear. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión de la sección crítica.
+Intenta entrar en una sección crítica sin bloquear. Si la llamada se realiza correctamente, el subproceso que realiza la llamada toma la propiedad de la sección crítica.
 
 ```cpp
 SyncLock TryLock();
@@ -160,12 +160,12 @@ static SyncLock TryLock(
 ### <a name="parameters"></a>Parámetros
 
 *cs*<br/>
-Un objeto de sección crítica especificado por el usuario.
+Objeto de sección crítica especificado por el usuario.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor distinto de cero si la sección crítica está escrita correctamente o el subproceso actual ya posee la sección crítica. Cero si otro subproceso ya posee la sección crítica.
+Un valor distinto de cero si la sección crítica se ha introducido correctamente o el subproceso actual ya posee la sección crítica. Cero si otro subproceso ya posee la sección crítica.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera `TryLock` el objeto de sección crítica actual afecta a la función. El segundo `TryLock` función afecta a una sección crítica especificado por el usuario.
+La `TryLock` primera función afecta al objeto de sección crítica actual. La `TryLock` segunda función afecta a una sección crítica especificada por el usuario.

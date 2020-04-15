@@ -8,24 +8,24 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9730e7baf9589c4b05a60703c619aae2e941bdec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372755"
 ---
 # <a name="sdi-and-mdi"></a>SDI y MDI
 
-MFC facilita trabajar con la interfaz de único documento (SDI) y las aplicaciones de interfaz de múltiples documentos (MDI).
+MFC facilita el trabajo con aplicaciones de interfaz de documento único (SDI) e interfaz de varios documentos (MDI).
 
-Las aplicaciones SDI permiten sólo una ventana de marco de documento abierto a la vez. Las aplicaciones MDI permiten documento varias ventanas de marco esté abierto en la misma instancia de una aplicación. Una aplicación MDI tiene una ventana dentro de lo múltiples MDI, se pueden abrir ventanas secundarias, que son ventanas de marco a sí mismos, que contiene un documento independiente. En algunas aplicaciones, las ventanas secundarias pueden ser de tipos diferentes, como chart de windows y windows de la hoja de cálculo. En ese caso, puede cambiar la barra de menús que se activan ventanas secundarias MDI de diferentes tipos.
+Las aplicaciones SDI solo permiten una ventana de marco de documento abierta a la vez. Las aplicaciones MDI permiten que se abran varias ventanas de marco de documento en la misma instancia de una aplicación. Una aplicación MDI tiene una ventana dentro de la cual se pueden abrir varias ventanas secundarias MDI, que son ventanas de marco, cada una con un documento independiente. En algunas aplicaciones, las ventanas secundarias pueden ser de diferentes tipos, como ventanas de gráficos y ventanas de hoja de cálculo. En ese caso, la barra de menús puede cambiar a medida que se activan las ventanas secundarias MDI de diferentes tipos.
 
 > [!NOTE]
->  En Windows 95 y versiones posteriores, las aplicaciones normalmente son SDI porque el sistema operativo ha adoptado una vista "centrado en documentos".
+> En Windows 95 y versiones posteriores, las aplicaciones suelen ser SDI porque el sistema operativo ha adoptado una vista "centrada en documentos".
 
-Para obtener más información, consulte [documentos, vistas y el marco de trabajo](../mfc/documents-views-and-the-framework.md).
+Para obtener más información, vea [Documentos, vistas y marco de trabajo](../mfc/documents-views-and-the-framework.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Uso de las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

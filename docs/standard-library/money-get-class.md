@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: d882edd5ce55b15d03512ca9a55a49bc3424ee7a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ac85e99bfb834fd970a804269f25ec9f20960a23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687667"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375908"
 ---
 # <a name="money_get-class"></a>money_get (Clase)
 
-La plantilla de clase describe un objeto que puede actuar como una faceta de configuración regional para controlar las conversiones de secuencias de tipo `CharType` a valores monetarios.
+La plantilla de clase describe un objeto que puede servir como una `CharType` faceta de configuración regional para controlar las conversiones de secuencias de tipo a valores monetarios.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -36,13 +36,13 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *CharType*
+*CharType*\
 Tipo usado dentro de un programa para codificar los caracteres de una configuración regional.
 
-@No__t_1 *InputIterator*
+*InputIterator*\
 Tipo de iterador del que las funciones get leen su entrada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Como ocurre con cualquier faceta de configuración regional, el identificador de objeto estático tiene un valor almacenado inicial de cero. El primer intento de acceso a su valor almacenado almacena un valor positivo único en **id.**
 
@@ -52,9 +52,9 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 |-|-|
 |[money_get](#money_get)|Constructor de objetos de tipo `money_get` que se usan para extraer valores numéricos de secuencias que representan valores monetarios.|
 
-### <a name="typedefs"></a>Definiciones de tipo
+### <a name="typedefs"></a>Typedefs
 
-|Nombre de tipo|Descripción|
+|Nombre del tipo|Descripción|
 |-|-|
 |[char_type](#char_type)|Tipo que se usa para describir un carácter empleado por una configuración regional.|
 |[iter_type](#iter_type)|Tipo que describe un iterador de entrada.|
@@ -62,7 +62,7 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|Descripción|
+|Función de miembro|Descripción|
 |-|-|
 |[do_get](#do_get)|Función virtual a la que se llama para extraer un valor numérico de una secuencia de caracteres que representa un valor monetario.|
 |[get](#get)|Extrae un valor numérico de una secuencia de caracteres que representa un valor monetario.|
@@ -73,7 +73,7 @@ Como ocurre con cualquier faceta de configuración regional, el identificador de
 
 **Espacio de nombres:** std
 
-## <a name="char_type"></a> money_get::char_type
+## <a name="money_getchar_type"></a><a name="char_type"></a>money_get::char_type
 
 Tipo que se usa para describir un carácter empleado por una configuración regional.
 
@@ -81,11 +81,11 @@ Tipo que se usa para describir un carácter empleado por una configuración regi
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla *CharType*.
 
-## <a name="do_get"></a> money_get::do_get
+## <a name="money_getdo_get"></a><a name="do_get"></a>money_get::do_get
 
 Función virtual a la que se llama para extraer un valor numérico de una secuencia de caracteres que representa un valor monetario.
 
@@ -105,37 +105,37 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*Primero*\
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*última* \
+*Última*\
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-@No__t_1 *Intl*
+*Intl*\
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-@No__t_1 *Iosbase*
+*Pérdida*\
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-@No__t_1 de *Estado*
+*Estado*\
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente o no.
 
-\ *Val*
+*Val*\
 Una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un iterador de entrada que se dirige al primer elemento más allá del campo de entrada monetario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-La primera función miembro virtual protegida intenta hacer coincidir los elementos secuenciales, empezando al principio de la secuencia [ `first`, `last`) hasta que reconoce un campo de entrada monetario completo y que no esté vacío. Si se realiza correctamente, convierte este campo en una secuencia de uno o más dígitos decimales, de manera opcional precedida por un signo menos (`-`), para representar la cantidad y almacena el resultado en el objeto [string_type](#string_type) *Val*. Devuelve un iterador que designa el primer elemento más allá del campo de entrada monetario. De lo contrario, la función almacena una secuencia vacía en *Val* y establece `ios_base::failbit` en el *Estado*. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de campo de entrada monetario válido. En cualquier caso, si el valor devuelto es igual a `last`, la función establece `ios_base::eofbit` en `State`.
+La primera función miembro virtual protegida intenta hacer coincidir los elementos secuenciales, empezando al principio de la secuencia [ `first`, `last`) hasta que reconoce un campo de entrada monetario completo y que no esté vacío. Si se realiza correctamente, convierte este campo en una secuencia de uno o `-`más dígitos decimales, opcionalmente precedido por un signo menos ( ), para representar la cantidad y almacena el resultado en el [string_type](#string_type) objeto *val*. Devuelve un iterador que designa el primer elemento más allá del campo de entrada monetario. De lo contrario, la función `ios_base::failbit` almacena una secuencia vacía en *val* y establece en *State*. Devuelve un iterador que designa el primer elemento más allá de cualquier prefijo de campo de entrada monetario válido. En cualquier caso, si el valor devuelto es igual a `last`, la función establece `ios_base::eofbit` en `State`.
 
-La segunda función miembro virtual protegida se comporta igual que la primera, salvo que, si se ejecuta correctamente, convierte la secuencia de dígitos con signo opcional en un valor de tipo **Long Double** y almacena ese valor en *Val*.
+La segunda función miembro protegido virtual se comporta igual que la primera, excepto que si se realiza correctamente, convierte la secuencia de dígitos con signo opcional en un valor de tipo **long double** y almacena ese valor en *val*.
 
 El formato de un campo de entrada monetario se determina por la [faceta de configuración regional](../standard-library/locale-class.md#facet_class)**fac** devuelta mediante la llamada eficaz a [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
-De manera específica:
+Concretamente:
 
 - **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) determina el orden en el que aparecen los componentes del campo.
 
@@ -145,7 +145,7 @@ De manera específica:
 
 - **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) determina la secuencia de elementos que constituye un signo negativo.
 
-- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) determina cómo se agrupan los dígitos a la izquierda de cualquier separador decimal.
+- **fac**. [agrupación](../standard-library/moneypunct-class.md#grouping) determina cómo se agrupan los dígitos a la izquierda de cualquier punto decimal.
 
 - **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) determina el elemento que separa grupos de dígitos a la izquierda de cualquier separador decimal.
 
@@ -165,7 +165,7 @@ Coincide con el espacio en blanco arbitrario donde el elemento igual a **money_b
 
 Vea el ejemplo de [get](#get), que llama a `do_get`.
 
-## <a name="get"></a> money_get::get
+## <a name="money_getget"></a><a name="get"></a>money_get::get
 
 Extrae un valor numérico de una secuencia de caracteres que representa un valor monetario.
 
@@ -187,31 +187,31 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parámetros
 
-*primer* \
+*Primero*\
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*última* \
+*Última*\
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-@No__t_1 *Intl*
+*Intl*\
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-@No__t_1 *Iosbase*
+*Pérdida*\
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
-@No__t_1 de *Estado*
+*Estado*\
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-\ *Val*
+*Val*\
 Una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un iterador de entrada que se dirige al primer elemento más allá del campo de entrada monetario.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Ambas funciones miembro devuelven [do_get](#do_get) `(first, last, Intl, Iosbase, State, val)`.
+Ambas funciones miembro devuelven [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -262,7 +262,7 @@ int main( )
 };
 ```
 
-## <a name="iter_type"></a> money_get::iter_type
+## <a name="money_getiter_type"></a><a name="iter_type"></a>money_get::iter_type
 
 Tipo que describe un iterador de entrada.
 
@@ -270,11 +270,11 @@ Tipo que describe un iterador de entrada.
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 El tipo es un sinónimo del parámetro de plantilla **InputIterator**.
 
-## <a name="money_get"></a> money_get::money_get
+## <a name="money_getmoney_get"></a><a name="money_get"></a>money_get::money_get
 
 Constructor de objetos de tipo `money_get` que se usan para extraer valores numéricos de secuencias que representan valores monetarios.
 
@@ -284,10 +284,10 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *_Refs*
+*_Refs*\
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Los valores posibles para el parámetro *_Refs* y su importancia son:
 
@@ -295,13 +295,13 @@ Los valores posibles para el parámetro *_Refs* y su importancia son:
 
 - 1: la vigencia del objeto se debe administrar de manera manual.
 
-- \> 1: estos valores no están definidos.
+- \>1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
-El constructor inicializa su objeto base con **locale::** [Facet](../standard-library/locale-class.md#facet_class)( *_Refs*).
+El constructor inicializa su objeto base con la[faceta](../standard-library/locale-class.md#facet_class) **locale::**(*_Refs*).
 
-## <a name="string_type"></a> money_get::string_type
+## <a name="money_getstring_type"></a><a name="string_type"></a>money_get::string_type
 
 Un tipo que describe una cadena que contiene caracteres de tipo **CharType**.
 
@@ -309,12 +309,12 @@ Un tipo que describe una cadena que contiene caracteres de tipo **CharType**.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El tipo describe una especialización de la plantilla de clase [basic_string](../standard-library/basic-string-class.md).
+El tipo describe una especialización de plantilla de clase [basic_string](../standard-library/basic-string-class.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<locale>](../standard-library/locale.md)\
-[facet (Clase)](../standard-library/locale-class.md#facet_class)\
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<>de la localidad](../standard-library/locale.md)\
+[faceta Clase](../standard-library/locale-class.md#facet_class)\
+[Seguridad de roscas en la biblioteca estándar C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

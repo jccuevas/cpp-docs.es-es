@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::cookie data member
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 507d35179b9fa86399e56b18171800f41eaf1f10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398503"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371480"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (estructura)
 
-Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows runtime y no está diseñada para usarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,18 +28,18 @@ Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiemp
 struct FactoryCache;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Contiene la ubicación de un generador de clases y un valor que identifica un registrados wrt o el objeto COM de la clase.
+Contiene la ubicación de un generador de clases y un valor que identifica un wrt registrado o un objeto de clase COM.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-Name                              | Descripción
+Nombre                              | Descripción
 --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
-[FactoryCache::cookie](#cookie)   | Contiene un valor que identifica un objeto de clase en tiempo de ejecución de Windows o COM registrado y se utiliza posteriormente para anular el registro del objeto.
-[FactoryCache::factory](#factory) | Apunta a un generador de clases COM o en tiempo de ejecución de Windows.
+[FactoryCache::cookie](#cookie)   | Contiene un valor que identifica un objeto de clase COM o Windows Runtime registrado y, más adelante, se usa para anular el registro del objeto.
+[FactoryCache::factory](#factory) | Apunta a un generador de clases com y en tiempo de ejecución de Windows.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -49,11 +49,11 @@ Name                              | Descripción
 
 **Encabezado:** module.h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft::WRL::Details
 
-## <a name="cookie"></a>FactoryCache::cookie
+## <a name="factorycachecookie"></a><a name="cookie"></a>FactoryCache::cookie
 
-Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows runtime y no está diseñada para usarse directamente desde el código.
 
 ```cpp
 union {
@@ -62,18 +62,18 @@ union {
 } cookie;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Contiene un valor que identifica un objeto de clase en tiempo de ejecución de Windows o COM registrado y se utiliza posteriormente para anular el registro del objeto.
+Contiene un valor que identifica un objeto de clase COM o Windows Runtime registrado y, más adelante, se usa para anular el registro del objeto.
 
-## <a name="factory"></a>FactoryCache::factory
+## <a name="factorycachefactory"></a><a name="factory"></a>FactoryCache::factory
 
-Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows runtime y no está diseñada para usarse directamente desde el código.
 
 ```cpp
 IUnknown* factory;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Apunta a un generador de clases COM o en tiempo de ejecución de Windows.
+Apunta a un generador de clases com y en tiempo de ejecución de Windows.

@@ -22,96 +22,96 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29f5f815b62835aedbca1f79b797f826ea53d83b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306397"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370454"
 ---
 # <a name="template-based-classes"></a>Clases basadas en plantillas
 
-En este artículo se explica las clases de colección basadas en plantillas de seguridad de tipos en MFC 3.0 y versiones posteriores. Uso de estas plantillas para crear colecciones seguras para el tipo es más conveniente y ayuda a proporciona seguridad de tipos de forma más eficaz que el uso de las clases de colección no basadas en plantillas.
+En este artículo se explican las clases de colección basadas en plantillas con seguridad de tipos en MFC versión 3.0 y versiones posteriores. El uso de estas plantillas para crear colecciones con seguridad de tipos es más conveniente y ayuda a proporcionar seguridad de tipos de forma más eficaz que el uso de las clases de colección no basadas en plantillas.
 
-MFC predefine dos categorías de colecciones basadas en la plantilla:
+MFC predefine dos categorías de colecciones basadas en plantillas:
 
-- [Simple clases de matriz, lista y mapa](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
+- [Clases simples de matriz, lista y mapa](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
    `CArray`, `CList`, `CMap`
 
-- [Las matrices, listas y mapas de punteros con tipo](#_core_using_typed.2d.pointer_collection_templates)
+- [Matrices, listas y mapas de punteros con tipo](#_core_using_typed.2d.pointer_collection_templates)
 
    `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
-Las clases de colección simple se derivan de la clase `CObject`, por lo que heredan de la serialización, la creación dinámica y otras propiedades de `CObject`. Las clases de colección de puntero con tipo requieren que se especifique la clase se deriva de, que debe ser una de las colecciones de puntero sin plantilla predefinidas por MFC, como `CPtrList` o `CPtrArray`. La nueva clase de colección se hereda de la clase base especificada, y las funciones miembro de la nueva clase usan encapsulado las llamadas a los miembros de clase base para exigir la seguridad de tipos.
+Las clases de colección `CObject`simples se derivan de la clase, por `CObject`lo que heredan la serialización, la creación dinámica y otras propiedades de . Las clases de colección de punteros con tipo requieren que especifique la clase de la `CPtrList` que `CPtrArray`deriva, que debe ser una de las colecciones de punteros que no son de plantilla predefinidas por MFC, como o . La nueva clase de colección hereda de la clase base especificada y las funciones miembro de la nueva clase usan llamadas encapsuladas a los miembros de la clase base para aplicar la seguridad de tipos.
 
-Para obtener más información acerca de las plantillas de C++, vea [plantillas](../cpp/templates-cpp.md) en el *referencia del lenguaje C++*.
+Para obtener más información acerca de las plantillas C++, consulte [Plantillas](../cpp/templates-cpp.md) en la Referencia de *idioma C++.*
 
-##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> Uso de matriz Simple, lista y mapa plantillas
+## <a name="using-simple-array-list-and-map-templates"></a><a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>Uso de plantillas simples de matriz, lista y mapa
 
-Para usar las plantillas de colección simple, debe saber qué tipo de datos puede almacenar en estas colecciones y qué parámetros se deben usar en las declaraciones de la colección.
+Para usar las plantillas de colección simples, debe saber qué tipo de datos puede almacenar en estas colecciones y qué parámetros usar en las declaraciones de colección.
 
-###  <a name="_core_simple_array_and_list_usage"></a> Uso de la lista y matriz simple
+### <a name="simple-array-and-list-usage"></a><a name="_core_simple_array_and_list_usage"></a>Uso simple de matrices y listas
 
-La matriz simple y clases de lista, [CArray](../mfc/reference/carray-class.md) y [CList](../mfc/reference/clist-class.md), toman dos parámetros: *TIPO* y `ARG_TYPE`. Estas clases pueden almacenar cualquier tipo de datos que se especifica en el *tipo* parámetro:
+Las clases de matriz y lista simples, [CArray](../mfc/reference/carray-class.md) `ARG_TYPE`y [CList](../mfc/reference/clist-class.md), toman dos parámetros: *TYPE* y . Estas clases pueden almacenar cualquier tipo de datos, que especifique en el parámetro *TYPE:*
 
-- Tipos de datos fundamentales de C++, como **int**, **char**, y **float**
+- Tipos de datos C++ fundamentales, como **int**, **char**y **float**
 
-- Las clases y estructuras de C++
+- Estructuras y clases C++
 
-- Otros tipos que se definen
+- Otros tipos que defina
 
-Por comodidad y la eficacia, puede usar el *ARG_TYPE* parámetro para especificar el tipo de argumentos de función. Normalmente, se especifica *ARG_TYPE* como una referencia al tipo indicado en el *tipo* parámetro. Por ejemplo:
+Para mayor comodidad y eficiencia, puede utilizar el parámetro *ARG_TYPE* para especificar el tipo de argumentos de función. Normalmente, se especifica *ARG_TYPE* como referencia al tipo que nombró en el parámetro *TYPE.* Por ejemplo:
 
 [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]
 
-El primer ejemplo declara una colección de matrices, `myArray`, que contiene **int**s. El segundo ejemplo declara una colección de lista, `myList`, que almacena `CPerson` objetos. Determinadas funciones miembro de las clases de colección aceptan argumentos cuyo tipo se especifica mediante el *ARG_TYPE* parámetro de plantilla. Por ejemplo, el `Add` función miembro de clase `CArray` toma un *ARG_TYPE* argumento:
+El primer ejemplo declara una `myArray`colección de matrices, , que contiene **int**s. El segundo ejemplo declara una `myList`colección `CPerson` de listas, , que almacena objetos. Ciertas funciones miembro de las clases de colección toman argumentos cuyo tipo se especifica mediante el *ARG_TYPE* parámetro de plantilla. Por ejemplo, `Add` la función miembro de class `CArray` toma un argumento *ARG_TYPE:*
 
 [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]
 
-###  <a name="_core_simple_map_usage"></a> Uso de asignación simple
+### <a name="simple-map-usage"></a><a name="_core_simple_map_usage"></a>Uso simple del mapa
 
-La clase de mapa sencilla [CMap](../mfc/reference/cmap-class.md), toma cuatro parámetros: *CLAVE*, *ARG_KEY*, *valor*, y *ARG_VALUE*. Al igual que las clases de matriz y lista, las clases de mapa pueden almacenar cualquier tipo de datos. A diferencia de las matrices y listas, que se indizan y ordenan los datos que almacenan, mapas de asocian las claves y valores: Tener acceso a un valor almacenado en un mapa especificando la clave asociada al valor. El *clave* parámetro especifica el tipo de datos de las claves utilizadas para tener acceso a datos almacenados en el mapa. Si el tipo de *clave* es una estructura o clase, el *ARG_KEY* parámetro normalmente es una referencia al tipo especificado en *clave*. El *valor* parámetro especifica el tipo de los elementos almacenados en el mapa. Si el tipo de *ARG_VALUE* es una estructura o clase, el *ARG_VALUE* parámetro normalmente es una referencia al tipo especificado en *valor*. Por ejemplo:
+La clase de mapa simple, [CMap](../mfc/reference/cmap-class.md), toma cuatro parámetros: *KEY*, *ARG_KEY*, *VALUE*y *ARG_VALUE*. Al igual que las clases de matriz y lista, las clases de mapa pueden almacenar cualquier tipo de datos. A diferencia de las matrices y listas, que indexan y ordenan los datos que almacenan, los mapas asocian claves y valores: se accede a un valor almacenado en un mapa especificando la clave asociada del valor. El parámetro *KEY* especifica el tipo de datos de las claves utilizadas para acceder a los datos almacenados en el mapa. Si el tipo de *KEY* es una estructura o clase, el parámetro *ARG_KEY* suele ser una referencia al tipo especificado en *KEY*. El parámetro *VALUE* especifica el tipo de los elementos almacenados en el mapa. Si el tipo de *ARG_VALUE* es una estructura o clase, el parámetro *ARG_VALUE* suele ser una referencia al tipo especificado en *VALUE*. Por ejemplo:
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
-El primer ejemplo almacena `MY_STRUCT` valores, tiene acceso a ellos por **int** claves y devuelve acceso `MY_STRUCT` elementos por referencia. El segundo ejemplo almacena `CPerson` valores, tiene acceso a ellos por `CString` de claves y la devuelve referencias a elementos que se tiene acceso. En este ejemplo podría representar una libreta de direcciones simple, en el que se buscan personas por apellido.
+El primer `MY_STRUCT` ejemplo almacena valores, los tiene acceso `MY_STRUCT` mediante claves **int** y devuelve los elementos a los que se tiene acceso por referencia. El segundo `CPerson` ejemplo almacena valores, `CString` los tiene acceso mediante claves y devuelve referencias a los elementos a los que se tiene acceso. Este ejemplo puede representar una libreta de direcciones simple, en la que se buscan personas por apellido.
 
-Dado que el *clave* parámetro es de tipo `CString` y el *KEY_TYPE* parámetro es de tipo `LPCSTR`, las claves se almacenan en el mapa como elementos de tipo `CString` , pero se hace referencia en las funciones como `SetAt` mediante punteros de tipo `LPCSTR`. Por ejemplo:
+Dado *KEY* que el parámetro `CString` KEY es de `LPCSTR`tipo y el parámetro *KEY_TYPE* es `CString` de tipo , las `SetAt` claves se `LPCSTR`almacenan en el mapa como elementos de tipo, pero se hace referencia a ellas en funciones como a través de punteros de tipo . Por ejemplo:
 
 [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]
 
-##  <a name="_core_using_typed.2d.pointer_collection_templates"></a> Uso de plantillas de la colección de puntero con tipo
+## <a name="using-typed-pointer-collection-templates"></a><a name="_core_using_typed.2d.pointer_collection_templates"></a>Uso de plantillas de colección de puntero sin tipo
 
-Para usar las plantillas de la colección de puntero con tipo, debe saber qué tipos de datos puede almacenar en estas colecciones y qué parámetros se deben usar en las declaraciones de la colección.
+Para usar las plantillas de colección de punteros con tipo, debe saber qué tipos de datos puede almacenar en estas colecciones y qué parámetros usar en las declaraciones de colección.
 
-###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Matriz de puntero con tipo y el uso de la lista
+### <a name="typed-pointer-array-and-list-usage"></a><a name="_core_typed.2d.pointer_array_and_list_usage"></a>Uso de la lista y la matriz de punteros con tipo
 
-La matriz de puntero con tipo y clases de lista, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) y [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), toman dos parámetros: *$Base_class* y *tipo*. Estas clases pueden almacenar cualquier tipo de datos que se especifica en el *tipo* parámetro. Se derivan de una de las clases de colección no es de plantilla que almacena punteros; Especifique esta clase base en *$base_class*. Para las matrices, usar `CObArray` o `CPtrArray`. Para listas, usar `CObList` o `CPtrList`.
+Las clases de lista y matriz de puntero con tipo, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) y [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), toman dos parámetros: *BASE_CLASS* y *TYPE*. Estas clases pueden almacenar cualquier tipo de datos, que especifique en el parámetro *TYPE.* Se derivan de una de las clases de colección que no son de plantilla que almacena punteros; especifique esta clase base en *BASE_CLASS*. Para matrices, `CObArray` utilice `CPtrArray`o . Para las listas, utilice `CObList` `CPtrList`o .
 
-De hecho, cuando se declara una colección basada en, por ejemplo `CObList`, la nueva clase hereda no solo los miembros de su clase base, pero también declara un número de miembros adicionales de seguridad de tipos de funciones y operadores que ayudan a proporcionar seguridad de tipos encapsulando llamadas a los miembros de clase base. Estas encapsulaciones administran todas las conversión de tipo necesaria. Por ejemplo:
+En efecto, cuando se declara una `CObList`colección basada en, por ejemplo , la nueva clase no solo hereda los miembros de su clase base, sino que también declara una serie de operadores y funciones miembro con seguridad de tipos adicionales que ayudan a proporcionar seguridad de tipos encapsulando llamadas a los miembros de la clase base. Estas encapsulaciones administran toda la conversión de tipos necesaria. Por ejemplo:
 
 [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]
 
-El primer ejemplo declara una matriz de puntero con tipo, `myArray`, derivada de `CObArray`. La matriz almacena y devuelve punteros a `CPerson` objetos (donde `CPerson` es una clase derivada de `CObject`). Puede llamar a cualquiera `CObArray` función miembro, o puede llamar al nuevo con seguridad de tipos `GetAt` y `ElementAt` las funciones o utilizar la seguridad de tipos **[]** operador.
+En el primer ejemplo se declara `myArray`una matriz `CObArray`de puntero con tipo, , derivada de . La matriz almacena y `CPerson` devuelve punteros a objetos (donde `CPerson` se deriva una clase de `CObject`). Puede llamar `CObArray` a cualquier función miembro, o `GetAt` puede `ElementAt` llamar a la nueva clase segura y funciones o utilizar el operador de tipo seguro **[ ].**
 
-El segundo ejemplo declara una lista de puntero con tipo, `myList`, derivada de `CPtrList`. La lista almacena y devuelve punteros a `MY_STRUCT` objetos. Una clase según `CPtrList` se usa para almacenar punteros a objetos no derivados de `CObject`. `CTypedPtrList` tiene un número de funciones miembro de la seguridad de tipos: `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, y `GetAt`.
+El segundo ejemplo declara una lista `myList`de punteros `CPtrList`con tipo, , derivada de . La lista almacena y `MY_STRUCT` devuelve punteros a objetos. Una clase `CPtrList` basada en se utiliza para almacenar punteros a objetos no derivados de `CObject`. `CTypedPtrList`tiene una serie de funciones `GetHead` `GetTail`miembro `RemoveHead` `RemoveTail`con `GetNext` `GetPrev`seguridad `GetAt`de tipos: , , , , , , , y .
 
-###  <a name="_core_typed.2d.pointer_map_usage"></a> Uso de mapa de puntero con tipo
+### <a name="typed-pointer-map-usage"></a><a name="_core_typed.2d.pointer_map_usage"></a>Uso del mapa de puntero con tipo
 
-La clase map de puntero con tipo, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), toma tres parámetros: *$Base_class*, *clave*, y *valor*. El *$base_class* parámetro especifica la clase del que se deriva la nueva clase: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, y así sucesivamente. *CLAVE* es análogo a *clave* en `CMap`: Especifica el tipo de la clave utilizada para las búsquedas. *VALOR* es análogo a *valor* en `CMap`: Especifica el tipo de objeto almacenado en el mapa. Por ejemplo:
+La clase de mapa de puntero con tipo, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), toma tres parámetros: *BASE_CLASS*, *KEY*y *VALUE*. El parámetro *BASE_CLASS* especifica la clase de la `CMapPtrToWord` `CMapPtrToPtr`que `CMapStringToPtr` `CMapWordToPtr`se `CMapStringToOb`deriva la nueva clase: , , , , , , , , etc. *KEY* es análogo *KEY* a `CMap`KEY en : Especifica el tipo de clave utilizada para las búsquedas. *VALUE* es análogo *VALUE* a `CMap`VALUE en : Especifica el tipo de objeto almacenado en el mapa. Por ejemplo:
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
-El primer ejemplo es un mapa basado en `CMapPtrToPtr` : usa `CString` claves asignadas a punteros a `MY_STRUCT`. Puede buscar un puntero almacenado mediante una llamada a un tipo seguro `Lookup` función miembro. Puede usar el **[]** operador para buscar un puntero almacenado y agregarlo si no se encuentra. Y puede recorrer en iteración la asignación mediante la seguridad de tipos `GetNextAssoc` función. También puede llamar otro miembro de las funciones de clase `CMapPtrToPtr`.
+El primer ejemplo es `CMapPtrToPtr` un mapa `CString` basado en — `MY_STRUCT`utiliza claves asignadas a punteros a . Puede buscar un puntero almacenado mediante una `Lookup` llamada a una función miembro con seguridad de tipos. Puede utilizar el operador **[ ]** para buscar un puntero almacenado y agregarlo si no se encuentra. Y puede iterar el mapa utilizando la función de tipo seguro. `GetNextAssoc` También puede llamar a otras `CMapPtrToPtr`funciones miembro de la clase .
 
-El segundo ejemplo es un mapa basado en `CMapStringToOb` : utiliza las claves de cadena asignadas a punteros almacenados a `CMyObject` objetos. Puede usar los mismos miembros con seguridad de tipos se describe en el párrafo anterior, o puede llamar a los miembros de clase `CMapStringToOb`.
+El segundo ejemplo es `CMapStringToOb` un mapa basado en: utiliza `CMyObject` claves de cadena asignadas a punteros almacenados a objetos. Puede usar los mismos miembros con seguridad de tipos descritos `CMapStringToOb`en el párrafo anterior o puede llamar a los miembros de la clase .
 
 > [!NOTE]
->  Si especifica un **clase** o **struct** tipo para el *valor* parámetro, en lugar de un puntero o referencia al tipo, la clase o estructura debe tener un constructor de copias.
+> Si especifica una **clase** o un tipo **de estructura** para el parámetro *VALUE,* en lugar de un puntero o una referencia al tipo, la clase o estructura debe tener un constructor de copias.
 
-Para obtener más información, consulte [cómo hacer que una colección segura para el tipo](../mfc/how-to-make-a-type-safe-collection.md).
+Para obtener más información, consulte [Cómo crear una colección con seguridad](../mfc/how-to-make-a-type-safe-collection.md)de tipos .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Colecciones](../mfc/collections.md)

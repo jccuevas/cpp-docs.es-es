@@ -12,32 +12,32 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c4b2b21bbfa19fb73997f8475cfa9a4047dc0ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324264"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371799"
 ---
 # <a name="reading-and-writing-files"></a>Leer y escribir en archivos
 
-Si ha usado las funciones de administración de archivos de biblioteca en tiempo de ejecución de C, MFC, leer y escribir operaciones le resultarán familiar. En este artículo se describe directamente de lectura y escritura directamente a un `CFile` objeto. Se pueden también almacenar en búfer de E/S de archivos con la [CArchive](../mfc/reference/carchive-class.md) clase.
+Si ha utilizado las funciones de control de archivos de biblioteca en tiempo de ejecución de C, las operaciones de lectura y escritura de MFC le resultarán familiares. En este artículo se describe la `CFile` lectura directamente de un objeto y escribirlo directamente. También puede realizar E/S de archivos almacenados en búfer con la clase [CArchive.](../mfc/reference/carchive-class.md)
 
 #### <a name="to-read-from-and-write-to-the-file"></a>Para leer y escribir en el archivo
 
-1. Use la `Read` y `Write` las funciones miembro para leer y escribir datos en el archivo.
+1. Utilice `Read` las `Write` funciones miembro y para leer y escribir datos en el archivo.
 
-     -o bien-
+     o bien
 
-1. El `Seek` también está disponible para mover a un desplazamiento específico dentro del archivo de la función miembro.
+1. La `Seek` función miembro también está disponible para pasar a un desplazamiento específico dentro del archivo.
 
-`Read` toma un puntero a un búfer y el número de bytes que se leen y devuelve el número real de bytes leídos. Si el número necesario de bytes no se puede leer porque final de archivo (EOF) se alcanza, se devuelve el número real de bytes leídos. Si se produce cualquier error de lectura, se produce una excepción. `Write` es similar a `Read`, pero no se devuelve el número de bytes escritos. Si se produce un error de escritura, incluidas no escribir todos los bytes especificados, se produce una excepción. Si tiene un válido `CFile` de objeto, puede leer o escribir en él, tal como se muestra en el ejemplo siguiente:
+`Read`toma un puntero a un búfer y el número de bytes para leer y devuelve el número real de bytes que se leyeron. Si no se pudo leer el número necesario de bytes porque se alcanza el final del archivo (EOF), se devuelve el número real de bytes leídos. Si se produce algún error de lectura, se produce una excepción. `Write`es similar `Read`a , pero no se devuelve el número de bytes escritos. Si se produce un error de escritura, incluido no escribir todos los bytes especificados, se produce una excepción. Si tiene un `CFile` objeto válido, puede leerlo o escribir en él como se muestra en el ejemplo siguiente:
 
 [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]
 
 > [!NOTE]
->  Normalmente debe llevar a cabo operaciones de entrada/salida dentro de un **intente**/**catch** bloque de control de excepciones. Para obtener más información, consulte [de control de excepciones (MFC)](../mfc/exception-handling-in-mfc.md).
+> Normalmente debe llevar a cabo operaciones de entrada/salida dentro de un bloque de control de excepciones **try**/**catch.** Para obtener más información, vea [Control de excepciones (MFC)](../mfc/exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Archivos](../mfc/files-in-mfc.md)

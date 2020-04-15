@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cd7dc8467d07f53b0c741f98743a471df6f6c944
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446199"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372098"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution (Clase)
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-\ *RealType*
-El tipo de resultado de punto flotante, el valor predeterminado es **Double**. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
+*RealType*\
+El tipo de resultado de punto flotante, por defecto **es double**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Observaciones
 
@@ -106,7 +106,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -214,11 +214,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<> aleatorio
+**Encabezado:** \<random>
 
 **Espacio de nombres:** std
 
-## <a name="piecewise_constant_distribution"></a> piecewise_constant_distribution::piecewise_constant_distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::piecewise_constant_distribution
 
 Construye la distribución.
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-*primer*\
+*primeroI*\
 Un iterador de entrada del primer elemento del intervalo de distribución.
 
-*última*\
+*por último*\
 Un iterador de entrada del último elemento del intervalo de distribución.
 
-\ *firstW*
+*firstW*\
 Un iterador de entrada del primer elemento del intervalo de pesos.
 
-*intervalos*\
+*Intervalos*\
 [initializer_list](../cpp/initializers.md) con los intervalos de la distribución.
 
-*recuento*\
+*Contar*\
 Número de elementos del intervalo de distribución.
 
 *xmin*\
 Valor mínimo del intervalo de distribución.
 
-*xmax*\
+*Xmax*\
 Valor máximo del intervalo de distribución. Debe ser mayor que *xmin*.
 
-\ *weightfunc*
-Objeto que representa la función de probabilidad de la distribución. Tanto el parámetro como el valor devuelto deben poder convertirse en **Double**.
+*weightfunc*\
+Objeto que representa la función de probabilidad de la distribución. Tanto el parámetro como el valor devuelto deben ser convertibles a **double**.
 
-\ *PARM*
+*Parmesana*\
 La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Observaciones
@@ -298,7 +298,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-construye un objeto de distribución con intervalos de los *intervalos* de la lista de inicializadores y pesos generados a partir de la función *weightfunc*.
+construye un objeto de distribución con intervalos a partir de los *intervalos* de lista de inicializadores y las ponderaciones generadas a partir de la función *weightfunc*.
 
 El constructor definido como
 
@@ -308,7 +308,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-construye un objeto de distribución con intervalos de *recuento* distribuidos uniformemente sobre [`xmin,xmax`], asignando los pesos de cada intervalo según la función *weightfunc*, y *weightfunc* debe aceptar un parámetro y tener un valor devuelto, y ambos se pueden convertir a `double`. **Condición previa:** `xmin < xmax`
+construye un objeto de distribución con intervalos de *recuento* distribuidos uniformemente en [ `xmin,xmax`], asignando cada ponderación de intervalo según `double`la función *weightfunc*, y *weightfunc* debe aceptar un parámetro y tener un valor devuelto, ambos convertibles a . **Condición previa:**`xmin < xmax`
 
 El constructor definido como
 
@@ -316,9 +316,9 @@ El constructor definido como
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-construye un objeto de distribución mediante *PARM* como la estructura de parámetros almacenados.
+construye un objeto de distribución utilizando *parm* como estructura de parámetros almacenada.
 
-## <a name="param_type"></a> piecewise_constant_distribution::param_type
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::param_type
 
 Almacena todos los parámetros de la distribución.
 
@@ -344,11 +344,11 @@ Vea los parámetros del constructor para [piecewise_constant_distribution](#piec
 
 ### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `xmin < xmax`
+**Condición previa:**`xmin < xmax`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
 ## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)\
+[\<>al azar](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

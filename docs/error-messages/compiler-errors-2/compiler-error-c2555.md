@@ -1,39 +1,48 @@
 ---
 title: Error del compilador C2555
-ms.date: 11/04/2016
+description: Referencia para el error del compilador C2555 de Visual Studio C++.
+ms.date: 03/30/2020
 f1_keywords:
 - C2555
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-ms.openlocfilehash: ebf3e4a3aff48311edd5fb95b01a7b2d23990231
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fe0e6379e783387506e6098c9b14a047baa8e6c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202429"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374171"
 ---
 # <a name="compiler-error-c2555"></a>Error del compilador C2555
 
-' Class1:: function1 ': el tipo de valor devuelto de la función virtual de invalidación es distinto y no es covariante de ' clase2:: función2 '
+> '*class1*::*function1*': reemplazando el tipo de retorno de función virtual difiere y no es covariante de '*class2*::*function2*'
 
-Una función virtual y una función de reemplazo derivada tienen listas de parámetros idénticas pero diferentes tipos de valor devueltos. Una función de invalidación en una clase derivada no puede diferir de una función virtual en una clase base solo por su tipo de valor devuelto.
+Una función virtual y una función de reemplazo derivada tienen listas de parámetros idénticas pero tipos de valor devuelto diferentes.
 
-Para resolver este error, convierta el valor devuelto después de llamar a la función virtual.
+## <a name="remarks"></a>Observaciones
 
-También puede ver este error Si compila con/CLR.   Por ejemplo, el equivalente C++ visual de la siguiente C# declaración:
+En C++, una función de reemplazo en una clase derivada no puede diferir solo por el tipo de valor devuelto de una función virtual en una clase base.
 
-```
+Hay una excepción a esta regla para ciertos tipos de valor devuelto. Cuando una clase derivada reemplaza una clase base pública, puede devolver un puntero o una referencia a la clase derivada en lugar de un puntero o referencia de clase base. Estos tipos de valor devuelto se denominan *covariante,* porque varían junto con el tipo. Esta excepción de regla no permite tipos covariante de referencia a puntero o puntero a puntero.
+
+Una forma de resolver el error es devolver el mismo tipo que la clase base. A continuación, convierta el valor devuelto después de llamar a la función virtual. Otro es también cambiar la lista de parámetros, para hacer que la función miembro de clase derivada una sobrecarga en lugar de una invalidación.
+
+## <a name="examples"></a>Ejemplos
+
+Es posible que vea este **`/clr`** error si compila con . Por ejemplo, el c+ equivalente a la siguiente declaración de C-:
+
+```csharp
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);
 ```
 
 is
 
-```
+```cpp
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];
 ```
 
-En el ejemplo siguiente se genera C2555:
+El ejemplo siguiente genera C2555:
 
 ```cpp
 // C2555.cpp
@@ -46,3 +55,5 @@ struct Y : X {
    void func2();   // OK
 };
 ```
+
+Para solucionarlo, cambie el `Y::func` `void`tipo de valor devuelto de a .

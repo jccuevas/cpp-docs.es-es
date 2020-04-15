@@ -1,6 +1,6 @@
 ---
-title: Enumeración CALLBACK_CODE
-description: El C++ SDK de Build insights CALLBACK_CODE referencia de enumeración.
+title: CALLBACK_CODE enum
+description: El SDK de C++ Build Insights CALLBACK_CODE referencia enum.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 68eaa9aa04d2f0a55ac12fb7dde14a080188a38d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: d0d3dcc70040f562cd40755188e545f709a807b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334095"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329193"
 ---
-# <a name="callback_code-enum"></a>Enumeración CALLBACK_CODE
+# <a name="callback_code-enum"></a>CALLBACK_CODE enum
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La enumeración `CALLBACK_CODE` se utiliza para controlar el flujo de una sesión de análisis o de registro. Devuelve un valor CALLBACK_CODE de las funciones de [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) o [RELOG_CALLBACKS](relog-callbacks-struct.md) para controlar lo que debe ocurrir a continuación.
+La `CALLBACK_CODE` enumeración se utiliza para controlar el flujo de una sesión de análisis o relogging. Devuelve un valor CALLBACK_CODE de las funciones [de ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) o [RELOG_CALLBACKS](relog-callbacks-struct.md) para controlar lo que debe suceder a continuación.
 
 ## <a name="members"></a>Miembros
 
-| Name | Valor | Descripción |
+| Nombre | Value | Descripción |
 |--|--|--|
-| `CALLBACK_CODE_ANALYSIS_SUCCESS` | 1 (0x00000001) | Continuar el análisis actual o la sesión de registro con normalidad. |
-| `CALLBACK_CODE_ANALYSIS_FAILURE` | 2 (0x00000002) | Cancele el análisis actual o la sesión de registro y señale un error. |
-| `CALLBACK_CODE_ANALYSIS_CANCEL` | 4 (0x00000004) | Cancela la sesión de análisis o de registro actual. |
+| `CALLBACK_CODE_ANALYSIS_SUCCESS` | 1 (0x00000001) | Continúe la sesión actual de análisis o recorrección normalmente. |
+| `CALLBACK_CODE_ANALYSIS_FAILURE` | 2 (0x00000002) | Cancele la sesión de análisis o recorrección actual y señale un error. |
+| `CALLBACK_CODE_ANALYSIS_CANCEL` | 4 (0x00000004) | Cancele el análisis actual o la sesión de reregistro. |
 
 ::: moniker-end

@@ -1,5 +1,5 @@
 ---
-title: CMemFile (clase)
+title: Clase CMemFile
 ms.date: 11/04/2016
 f1_keywords:
 - CMemFile
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: a57f4e245ca1e93ec0edd454a7f407aeda5beca4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 46937795499fd9f697f9778c263a1ee011777c0d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370019"
 ---
-# <a name="cmemfile-class"></a>CMemFile (clase)
+# <a name="cmemfile-class"></a>Clase CMemFile
 
-El [CFile](../../mfc/reference/cfile-class.md)-clase derivada que admite archivos de memoria.
+La clase derivada de [CFile](../../mfc/reference/cfile-class.md)que admite archivos de memoria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,44 +43,44 @@ class CMemFile : public CFile
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMemFile::CMemFile](#cmemfile)|Construye un objeto de archivo de memoria.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMemFile::Attach](#attach)|Asocia un bloque de memoria a `CMemFile`.|
-|[CMemFile::Detach](#detach)|Desasocia el bloque de memoria de `CMemFile` y devuelve un puntero al bloque de memoria desasociado.|
+|[CMemFile::Attach](#attach)|Asocia un bloque de `CMemFile`memoria a .|
+|[CMemFile::Detach](#detach)|Separa el bloque de `CMemFile` memoria y devuelve un puntero al bloque de memoria separado.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMemFile::Alloc](#alloc)|Invalide para modificar el comportamiento de asignación de memoria.|
-|[CMemFile::Free](#free)|Invalide para modificar el comportamiento de desasignación de memoria.|
-|[CMemFile::GrowFile](#growfile)|Invalide para modificar el comportamiento cuando un archivo.|
-|[CMemFile::Memcpy](#memcpy)|Invalide para modificar el comportamiento de copia de memoria al leer y escribir archivos.|
-|[CMemFile::Realloc](#realloc)|Invalide para modificar el comportamiento de la reasignación de memoria.|
+|[CMemFile::Alloc](#alloc)|Reemplazar para modificar el comportamiento de asignación de memoria.|
+|[CMemFile::Gratis](#free)|Reemplazar para modificar el comportamiento de desasignación de memoria.|
+|[CMemFile::GrowFile](#growfile)|Reemplazar para modificar el comportamiento al crear un archivo.|
+|[CMemFile::Memcpy](#memcpy)|Reemplazar para modificar el comportamiento de copia de memoria al leer y escribir archivos.|
+|[CMemFile::Realloc](#realloc)|Reemplazar para modificar el comportamiento de reasignación de memoria.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estos archivos de memoria se comportan como los archivos de disco, salvo que el archivo se almacena en la memoria RAM en lugar de en disco. Un archivo de memoria es útil para el almacenamiento temporal rápido o para la transferencia de bytes sin formato o los objetos serializados entre procesos independientes.
+Estos archivos de memoria se comportan como archivos de disco, excepto que el archivo se almacena en RAM en lugar de en el disco. Un archivo de memoria es útil para el almacenamiento temporal rápido o para transferir bytes sin procesar u objetos serializados entre procesos independientes.
 
-`CMemFile` los objetos pueden asignar automáticamente su propia memoria o puede adjuntar su propio bloque de memoria para el `CMemFile` objeto mediante una llamada a [adjuntar](#attach). En cualquier caso, se asigna memoria para aumentar automáticamente el archivo de memoria en `nGrowBytes`-tamaño incrementos si `nGrowBytes` no es cero.
+`CMemFile`los objetos pueden asignar automáticamente su propia memoria `CMemFile` o puede adjuntar su propio bloque de memoria al objeto llamando a [Attach](#attach). En cualquier caso, la memoria para aumentar `nGrowBytes`el archivo `nGrowBytes` de memoria automáticamente se asigna en incrementos de tamaño si no es cero.
 
-El bloque de memoria se eliminarán automáticamente tras la destrucción de la `CMemFile` objeto si la memoria se asignó originalmente por el `CMemFile` objeto; en caso contrario, es responsable de desasignar la memoria que adjunta al objeto.
+El bloque de memoria se eliminará `CMemFile` automáticamente tras la destrucción `CMemFile` del objeto si el objeto asignó originalmente la memoria; de lo contrario, usted es responsable de desasignar la memoria que adjuntó al objeto.
 
-Puede tener acceso el bloque de memoria a través del puntero proporcionado cuando se separa de la `CMemFile` objeto mediante una llamada a [Detach](#detach).
+Puede tener acceso al bloque de memoria a través del puntero proporcionado al separarlo del `CMemFile` objeto llamando a [Separar](#detach).
 
-El uso más común de `CMemFile` consiste en crear un `CMemFile` objeto y su uso mediante una llamada a [CFile](../../mfc/reference/cfile-class.md) funciones miembro. Tenga en cuenta que la creación un `CMemFile` lo abre automáticamente: no se llame a [CFile::Open](../../mfc/reference/cfile-class.md#open), que se usa solo para archivos de disco. Dado que `CMemFile` no usa un archivo de disco, el miembro de datos `CFile::m_hFile` no se utiliza.
+El uso más `CMemFile` común de `CMemFile` es crear un objeto y usarlo mediante una llamada a [CFile](../../mfc/reference/cfile-class.md) funciones miembro. Tenga en `CMemFile` cuenta que la creación de un lo abre automáticamente: no se llama a [CFile::Open](../../mfc/reference/cfile-class.md#open), que solo se utiliza para archivos de disco. Dado `CMemFile` que no usa un archivo `CFile::m_hFile` de disco, no se usa el miembro de datos.
 
-El `CFile` funciones miembro [duplicar](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), y [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) no se implementan para `CMemFile`. Si se llama a estas funciones en un `CMemFile` objeto, obtendrá un [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+Las `CFile` funciones miembro [Duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange)y `CMemFile` [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) no se implementan para . Si llama a estas `CMemFile` funciones en un objeto, obtendrá una [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-`CMemFile` usa las funciones de biblioteca de tiempo de ejecución [malloc](../../c-runtime-library/reference/malloc.md), [realloc](../../c-runtime-library/reference/realloc.md), y [libre](../../c-runtime-library/reference/free.md) para asignar, reasignar y desasignar memoria; y la función intrínseca [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) al bloque de memoria de copia al leer y escribir. Si desea cambiar este comportamiento o el comportamiento cuando `CMemFile` crece a un archivo, derive su propia clase de `CMemFile` e invalidar las funciones adecuadas.
+`CMemFile`utiliza las funciones de biblioteca en tiempo de ejecución [malloc](../../c-runtime-library/reference/malloc.md), [realloc](../../c-runtime-library/reference/realloc.md)y [free](../../c-runtime-library/reference/free.md) para asignar, reasignar y desasignar memoria; y el [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) intrínseco para bloquear la memoria de copia al leer y escribir. Si desea cambiar este comportamiento o el `CMemFile` comportamiento cuando crece un `CMemFile` archivo, derive su propia clase de las funciones adecuadas e invalide las funciones adecuadas.
 
-Para obtener más información sobre `CMemFile`, consulte los artículos [archivos en MFC](../../mfc/files-in-mfc.md) y [administración de memoria (MFC)](../../mfc/memory-management.md) y vea [manejo de archivos](../../c-runtime-library/file-handling.md) en el *tiempo de ejecución Referencia de la biblioteca*.
+Para obtener `CMemFile`más información sobre , vea los artículos [Archivos en MFC](../../mfc/files-in-mfc.md) y Administración de memoria [(MFC)](../../mfc/memory-management.md) y [Control](../../c-runtime-library/file-handling.md) de archivos en la referencia de la biblioteca en tiempo *de ejecución*.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -94,9 +94,9 @@ Para obtener más información sobre `CMemFile`, consulte los artículos [archiv
 
 **Encabezado:** afx.h
 
-##  <a name="alloc"></a>  CMemFile::Alloc
+## <a name="cmemfilealloc"></a><a name="alloc"></a>CMemFile::Alloc
 
-Esta función se invoca `CMemFile` funciones miembro.
+Las funciones `CMemFile` miembro llaman a esta función.
 
 ```
 virtual BYTE* Alloc(SIZE_T nBytes);
@@ -105,21 +105,21 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ### <a name="parameters"></a>Parámetros
 
 *nBytes*<br/>
-Número de bytes de asignación de memoria.
+Número de bytes de memoria que se asignarán.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al bloque de memoria que se ha asignado, o NULL si no se pudo la asignación.
+Puntero al bloque de memoria asignado, o NULL si se produjo un error en la asignación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Reemplace esta función para implementar la asignación de memoria personalizado. Si reemplaza esta función, probablemente deseará reemplazar [gratis](#free) y [Realloc](#realloc) también.
+Invalide esta función para implementar la asignación de memoria personalizada. Si invalida esta función, probablemente querrá reemplazar [Free](#free) y [Realloc](#realloc) también.
 
-La implementación predeterminada usa la función de biblioteca de tiempo de ejecución [malloc](../../c-runtime-library/reference/malloc.md) para asignar memoria.
+La implementación predeterminada utiliza la función [malloc](../../c-runtime-library/reference/malloc.md) de biblioteca en tiempo de ejecución para asignar memoria.
 
-##  <a name="attach"></a>  CMemFile::Attach
+## <a name="cmemfileattach"></a><a name="attach"></a>CMemFile::Attach
 
-Llame a esta función para adjuntar un bloque de memoria a `CMemFile`.
+Llame a esta función para `CMemFile`adjuntar un bloque de memoria a .
 
 ```
 void Attach(
@@ -131,25 +131,25 @@ void Attach(
 ### <a name="parameters"></a>Parámetros
 
 *lpBuffer*<br/>
-Puntero al búfer que se adjuntará a `CMemFile`.
+Puntero al búfer que `CMemFile`se va a asociar a .
 
 *nBufferSize*<br/>
-Un entero que especifica el tamaño del búfer en bytes.
+Entero que especifica el tamaño del búfer en bytes.
 
 *nGrowBytes*<br/>
-El incremento de la asignación de memoria en bytes.
+El incremento de asignación de memoria en bytes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Esto hace que `CMemFile` para usar el bloque de memoria que el archivo de memoria.
+Esto `CMemFile` hace que se utilice el bloque de memoria como archivo de memoria.
 
-Si *nGrowBytes* es 0, `CMemFile` establecerá la longitud del archivo en *nBufferSize*. Esto significa que los datos del bloque de memoria antes de se ha adjuntado a `CMemFile` se usará como el archivo. No pueden crecer los archivos de memoria creados de esta manera.
+Si *nGrowBytes* es `CMemFile` 0, establecerá la longitud del archivo en *nBufferSize*. Esto significa que los datos del bloque `CMemFile` de memoria antes de que se adjuntaran se utilizarán como archivo. Los archivos de memoria creados de esta manera no se pueden cultivar.
 
-Dado que el archivo no puede ser crece, tenga cuidado para no generar `CMemFile` para intentar expandir el archivo. Por ejemplo, no llame a la `CMemFile` invalidaciones de [CFile:Write](../../mfc/reference/cfile-class.md#write) para escribir más allá del final o no llame a [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) con una longitud mayor *nBufferSize*.
+Puesto que el archivo no se `CMemFile` puede cultivar, tenga cuidado de no hacer para intentar hacer crecer el archivo. Por ejemplo, no llame `CMemFile` a las invalidaciones de [CFile:Write](../../mfc/reference/cfile-class.md#write) para escribir más allá del final o no llame a [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) con una longitud mayor que *nBufferSize*.
 
-Si *nGrowBytes* es mayor que 0, `CMemFile` pasará por alto el contenido del bloque de memoria que se haya asociado. Tendrá que escribir el contenido del archivo de memoria desde cero mediante el `CMemFile` la invalidación de `CFile::Write`. Si se intenta escribir más allá del final del archivo aumente o disminuya el archivo mediante una llamada a la `CMemFile` la invalidación de `CFile::SetLength`, `CMemFile` aumentará la asignación de memoria en incrementos de *nGrowBytes*. Aumentar la asignación de memoria se producirá un error si el bloque de memoria que se pasa a `Attach` no se ha asignado con un método compatible con [Alloc](#alloc). Para que sea compatible con la implementación predeterminada de `Alloc`, debe asignar la memoria con la función de biblioteca de tiempo de ejecución [malloc](../../c-runtime-library/reference/malloc.md) o [calloc](../../c-runtime-library/reference/calloc.md).
+Si *nGrowBytes* es mayor `CMemFile` que 0, omitirá el contenido del bloque de memoria que ha adjuntado. Tendrás que escribir el contenido del archivo de `CMemFile` memoria `CFile::Write`desde cero usando la invalidación de . Si intenta escribir más allá del final del archivo `CMemFile` o `CFile::SetLength`aumentar `CMemFile` el archivo llamando a la invalidación de , aumentará la asignación de memoria en incrementos de *nGrowBytes*. Si el bloque de memoria al `Attach` que pasa no se ha asignado con un método compatible con [Alloc,](#alloc)se producirá un error al aumentar la asignación de memoria. Para ser compatible con `Alloc`la implementación predeterminada de , debe asignar la memoria con la función de biblioteca en tiempo de ejecución [malloc](../../c-runtime-library/reference/malloc.md) o [calloc](../../c-runtime-library/reference/calloc.md).
 
-##  <a name="cmemfile"></a>  CMemFile::CMemFile
+## <a name="cmemfilecmemfile"></a><a name="cmemfile"></a>CMemFile::CMemFile
 
 La primera sobrecarga abre un archivo de memoria vacío.
 
@@ -165,26 +165,26 @@ CMemFile(
 ### <a name="parameters"></a>Parámetros
 
 *nGrowBytes*<br/>
-El incremento de la asignación de memoria en bytes.
+El incremento de asignación de memoria en bytes.
 
-*lpBuffe*r puntero a un búfer que recibe información del tamaño *nBufferSize*.
+*lpBuffe*r Puntero a un búfer que recibe información del tamaño *nBufferSize*.
 
 *nBufferSize*<br/>
-Un entero que especifica el tamaño del búfer del archivo, en bytes.
+Entero que especifica el tamaño del búfer de archivos, en bytes.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Tenga en cuenta que el archivo se abre en el constructor y que no debe llamar [CFile::Open](../../mfc/reference/cfile-class.md#open).
+Tenga en cuenta que el constructor abre el archivo y que no debe llamar a [CFile::Open](../../mfc/reference/cfile-class.md#open).
 
-La segunda sobrecarga actúa igual como si se usa el primer constructor y se llama inmediatamente a [adjuntar](#attach) con los mismos parámetros. Para obtener información más detallada, vea `Attach`.
+La segunda sobrecarga actúa igual que si se utiliza el primer constructor y se llama inmediatamente [Attach](#attach) con los mismos parámetros. Para obtener información detallada, vea `Attach`.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]
 
-##  <a name="detach"></a>  CMemFile::Detach
+## <a name="cmemfiledetach"></a><a name="detach"></a>CMemFile::Detach
 
-Llame a esta función para obtener un puntero al bloque de memoria que usa `CMemFile`.
+Llame a esta función para obtener un `CMemFile`puntero al bloque de memoria que está utilizando .
 
 ```
 BYTE* Detach();
@@ -192,15 +192,15 @@ BYTE* Detach();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al bloque de memoria que contiene el contenido del archivo de memoria.
+Puntero al bloque de memoria que contiene el contenido del archivo de memoria.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llamar a esta función también se cierra el `CMemFile`. Puede volver a adjuntar el bloque de memoria `CMemFile` mediante una llamada a [adjuntar](#attach). Si desea volver a adjuntar el archivo y usar los datos en él, debe llamar a [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) para obtener la longitud del archivo antes de llamar a `Detach`. Tenga en cuenta que si se conecta a un bloque de memoria `CMemFile` para que pueda usar sus datos ( `nGrowBytes` == 0), entonces no podrá crecer el archivo de memoria.
+Al llamar a esta `CMemFile`función también se cierra el archivo . Puede volver a adjuntar `CMemFile` el bloque de memoria llamando a [Attach](#attach). Si desea volver a adjuntar el archivo y utilizar los datos en él, debe llamar a `Detach` [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) para obtener la longitud del archivo antes de llamar a . Tenga en cuenta que si `CMemFile` se adjunta un bloque `nGrowBytes` de memoria para que pueda utilizar sus datos ( .
 
-##  <a name="free"></a>  CMemFile::Free
+## <a name="cmemfilefree"></a><a name="free"></a>CMemFile::Gratis
 
-Esta función se invoca `CMemFile` funciones miembro.
+Las funciones `CMemFile` miembro llaman a esta función.
 
 ```
 virtual void Free(BYTE* lpMem);
@@ -209,15 +209,15 @@ virtual void Free(BYTE* lpMem);
 ### <a name="parameters"></a>Parámetros
 
 *lpMem*<br/>
-Puntero a la memoria que se va a cancelar la asignación.
+Puntero a la memoria que se va a desasignar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Reemplace esta función para implementar la desasignación de memoria personalizado. Si reemplaza esta función, probablemente deseará reemplazar [Alloc](#alloc) y [Realloc](#realloc) también.
+Invalide esta función para implementar la desasignación de memoria personalizada. Si invalida esta función, probablemente también querrá invalidar [Alloc](#alloc) y [Realloc.](#realloc)
 
-##  <a name="growfile"></a>  CMemFile::GrowFile
+## <a name="cmemfilegrowfile"></a><a name="growfile"></a>CMemFile::GrowFile
 
-Esta función se invoca por algunos de los `CMemFile` funciones miembro.
+Esta función es llamada `CMemFile` por varias de las funciones miembro.
 
 ```
 virtual void GrowFile(SIZE_T dwNewLen);
@@ -228,13 +228,13 @@ virtual void GrowFile(SIZE_T dwNewLen);
 *dwNewLen*<br/>
 Nuevo tamaño del archivo de memoria.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Puede invalidar si desea cambiar cómo `CMemFile` crece su archivo. La implementación predeterminada llama [Realloc](#realloc) crezca un bloque existente (o [Alloc](#alloc) para crear un bloque de memoria), la asignación de memoria en múltiplos de la `nGrowBytes` valor especificado en el constructor o [Adjuntar](#attach) llamar.
+Puede invalidarlo si desea cambiar `CMemFile` el tamaño de su archivo. La implementación predeterminada llama a [Realloc](#realloc) para que crezca un bloque existente (o `nGrowBytes` [Alloc](#alloc) para crear un bloque de memoria), asignando memoria en múltiplos del valor especificado en el constructor o [Attach](#attach) llamada.
 
-##  <a name="memcpy"></a>  CMemFile::Memcpy
+## <a name="cmemfilememcpy"></a><a name="memcpy"></a>CMemFile::Memcpy
 
-Esta función se llama mediante el `CMemFile` invalidaciones de [CFile:: Read](../../mfc/reference/cfile-class.md#read) y [CFile::Write](../../mfc/reference/cfile-class.md#write) para transferir datos hacia y desde el archivo de memoria.
+Las invalidaciones de `CMemFile` [CFile::Read](../../mfc/reference/cfile-class.md#read) y [CFile::Write](../../mfc/reference/cfile-class.md#write) llaman a esta función para transferir datos desde y hacia el archivo de memoria.
 
 ```
 virtual BYTE* Memcpy(
@@ -246,7 +246,7 @@ virtual BYTE* Memcpy(
 ### <a name="parameters"></a>Parámetros
 
 *lpMemTarget*<br/>
-Puntero al bloque de memoria en la que se copiará la memoria de origen.
+Puntero al bloque de memoria en el que se copiará la memoria de origen.
 
 *lpMemSource*<br/>
 Puntero al bloque de memoria de origen.
@@ -258,13 +258,13 @@ Número de bytes que se van a copiar.
 
 Una copia de *lpMemTarget*.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Reemplace esta función si desea cambiar la forma en que `CMemFile` estas copias de la memoria.
+Reemplace esta función si desea `CMemFile` cambiar la forma en que realiza estas copias de memoria.
 
-##  <a name="realloc"></a>  CMemFile::Realloc
+## <a name="cmemfilerealloc"></a><a name="realloc"></a>CMemFile::Realloc
 
-Esta función se invoca `CMemFile` funciones miembro.
+Las funciones `CMemFile` miembro llaman a esta función.
 
 ```
 virtual BYTE* Realloc(
@@ -275,20 +275,20 @@ virtual BYTE* Realloc(
 ### <a name="parameters"></a>Parámetros
 
 *lpMem*<br/>
-Un puntero al bloque de memoria se asignen de nuevo.
+Puntero al bloque de memoria que se va a reasignar.
 
 *nBytes*<br/>
-Nuevo tamaño de bloque de memoria.
+Nuevo tamaño para el bloque de memoria.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero al bloque de memoria reasignado (y, posiblemente, trasladado), o NULL si no se pudo la reasignación.
+Un puntero al bloque de memoria que se redondeó (y posiblemente se movió) o NULL si se produjo un error en la reasignación.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Reemplace esta función para implementar la reasignación de memoria personalizado. Si reemplaza esta función, probablemente deseará reemplazar [Alloc](#alloc) y [gratis](#free) también.
+Invalide esta función para implementar la reasignación de memoria personalizada. Si invalida esta función, probablemente también querrá invalidar [Alloc](#alloc) y [Free.](#free)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CFile (clase)](../../mfc/reference/cfile-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

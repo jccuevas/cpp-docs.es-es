@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-ms.openlocfilehash: 50c958a092478f4b9ec4e94f9e5e973a74c334c2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 31c04c303e7e253ec4de41bf076130d19232aac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372268"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Clase CLinearTransitionFromSpeed
 
@@ -35,26 +35,26 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Construye un objeto de transición de velocidad lineal y lo inicializa con la velocidad y el valor final.|
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Construye un objeto de transición de velocidad lineal y lo inicializa con velocidad y valor final.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulada. (Invalida [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)).|
+|[CLinearTransitionFromSpeed::Create](#create)|Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado. (Reemplaza [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Valor de la variable de animación al final de la transición.|
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Valor absoluto de la velocidad de la variable.|
+|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|El valor de la variable de animación al final de la transición.|
+|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|El valor absoluto de la velocidad de la variable.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Durante una transición de velocidad lineal, el valor de la variable de animación cambia a una velocidad especificada. La duración de la transición viene determinada por la diferencia entre el valor inicial y el valor final especificado. Dado que todas las transiciones se borran automáticamente, se recomienda asignarlas mediante el operador new. CAnimationController:: AnimateGroup crea el objeto COM encapsulado IUIAnimationTransition, hasta que sea NULL. Cambiar las variables de miembro después de la creación de este objeto COM no tiene ningún efecto.
+Durante una transición de velocidad lineal, el valor de la variable de animación cambia a una velocidad especificada. La duración de la transición viene determinada por la diferencia entre el valor inicial y el valor final especificado. Dado que todas las transiciones se borran automáticamente, se recomienda asignarlas mediante el operador new. CAnimationController::AnimateGroup crea el objeto COM IUIAnimationTransition encapsulado, hasta que es NULL. Cambiar las variables miembro después de la creación de este objeto COM no tiene ningún efecto.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -68,9 +68,9 @@ Durante una transición de velocidad lineal, el valor de la variable de animaci�
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
+## <a name="clineartransitionfromspeedclineartransitionfromspeed"></a><a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
 
-Construye un objeto de transición de velocidad lineal y lo inicializa con la velocidad y el valor final.
+Construye un objeto de transición de velocidad lineal y lo inicializa con velocidad y valor final.
 
 ```
 CLinearTransitionFromSpeed(
@@ -81,14 +81,14 @@ CLinearTransitionFromSpeed(
 ### <a name="parameters"></a>Parámetros
 
 *dblSpeed*<br/>
-Valor absoluto de la velocidad de la variable.
+El valor absoluto de la velocidad de la variable.
 
 *dblFinalValue*<br/>
-Valor de la variable de animación al final de la transición.
+El valor de la variable de animación al final de la transición.
 
-##  <a name="create"></a>  CLinearTransitionFromSpeed::Create
+## <a name="clineartransitionfromspeedcreate"></a><a name="create"></a>CLinearTransitionFromSpeed::Create
 
-Llama a la biblioteca de transición para crear el objeto COM de transición encapsulada.
+Llama a la biblioteca de transición para crear un objeto COM de transición encapsulado.
 
 ```
 virtual BOOL Create(
@@ -103,24 +103,24 @@ Puntero a una [interfaz IUIAnimationTransitionLibrary](/windows/win32/api/uianim
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si la transición se crea correctamente; en caso contrario, FALSE.
+TRUESi la transición se crea correctamente; de lo contrario FALSO.
 
-##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue
+## <a name="clineartransitionfromspeedm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue
 
-Valor de la variable de animación al final de la transición.
+El valor de la variable de animación al final de la transición.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed
+## <a name="clineartransitionfromspeedm_dblspeed"></a><a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed
 
-Valor absoluto de la velocidad de la variable.
+El valor absoluto de la velocidad de la variable.
 
 ```
 DOUBLE m_dblSpeed;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

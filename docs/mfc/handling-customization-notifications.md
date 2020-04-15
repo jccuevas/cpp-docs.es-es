@@ -47,18 +47,18 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: dc34f3eaa4b085b9d8acbaf47b21cf1825627100
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67f40d0dc50a853a39cb9b60a938d8eafe8293c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240708"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370491"
 ---
 # <a name="handling-customization-notifications"></a>Control de notificaciones de personalización
 
 Un control común de barra de herramientas de Windows tiene características de personalización integradas, incluyendo un cuadro de diálogo de personalización definido por el sistema que permite insertar, eliminar o reorganizar botones de la barra de herramientas. La aplicación determina si las características de personalización están disponibles y controla la medida en que el usuario puede personalizar la barra de herramientas.
 
-Puede realizar estas características de personalización disponibles en el usuario proporcionando la barra de herramientas del **CCS_ADJUSTABLE** estilo. Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) .
+Puede hacer que estas características de personalización estén disponibles para el usuario dando a la barra de herramientas el estilo **CCS_ADJUSTABLE.** Las características de personalización permiten al usuario arrastrar un botón a una nueva posición o quitar un botón arrastrándolo fuera de la barra de herramientas. Además, el usuario puede hacer doble clic en la barra de herramientas para mostrar el cuadro de diálogo **Personalizar barra de herramientas** , que permite al usuario agregar, eliminar y reorganizar botones de la barra de herramientas. La aplicación puede mostrar el cuadro de diálogo mediante la función de miembro [Personalizar](../mfc/reference/ctoolbarctrl-class.md#customize) .
 
 El control de barra de herramientas envía mensajes de notificación a la ventana primaria en cada paso del proceso de personalización. Si el usuario mantiene presionada la tecla MAYÚS y comienza a arrastrar un botón, la barra de herramientas controla automáticamente la operación de arrastre. La barra de herramientas envía el mensaje de notificación **TBN_QUERYDELETE** a la ventana primaria para determinar si se puede eliminar el botón. La operación de arrastre termina si la ventana primaria devuelve **FALSE**. De lo contrario, la barra de herramientas captura la entrada del mouse y espera a que el usuario suelte el botón del mouse.
 
@@ -120,25 +120,25 @@ typedef struct tagNMHDR {
 
    Identificador del control que envía la notificación.
 
-- **code**
+- **Código**
 
    Código de notificación. Este miembro puede ser un valor específico para un tipo de control, como **TBN_BEGINADJUST** o **TTN_NEEDTEXT**, o bien ser uno de los valores de notificación comunes que se enumeran a continuación:
 
-   - **NM_CLICK** El usuario hizo clic con el botón izquierdo del mouse en el control.
+  - **NM_CLICK** El usuario hizo clic con el botón izquierdo del mouse en el control.
 
-   - **NM_DBCLICK** El usuario hizo doble clic con el botón izquierdo del mouse en el control.
+  - **NM_DBCLICK** El usuario hizo doble clic con el botón izquierdo del mouse en el control.
 
-   - **NM_KILLFOCUS** El control perdió el foco de entrada.
+  - **NM_KILLFOCUS** El control perdió el foco de entrada.
 
-   - **NM_OUTOFMEMORY** El control no pudo completar una operación porque no hay suficiente memoria disponible.
+  - **NM_OUTOFMEMORY** El control no pudo completar una operación porque no hay suficiente memoria disponible.
 
-   - **NM_RCLICK** El usuario hizo clic con el botón derecho del mouse en el control.
+  - **NM_RCLICK** El usuario hizo clic con el botón derecho del mouse en el control.
 
-   - **NM_RDBCLICK** El usuario hizo doble clic con el botón derecho del mouse en el control.
+  - **NM_RDBCLICK** El usuario hizo doble clic con el botón derecho del mouse en el control.
 
-   - **NM_RETURN** El control tiene el foco de entrada y el usuario presionó la tecla ENTRAR.
+  - **NM_RETURN** El control tiene el foco de entrada y el usuario presionó la tecla ENTRAR.
 
-   - **NM_SETFOCUS** El control recibió el foco de entrada.
+  - **NM_SETFOCUS** El control recibió el foco de entrada.
 
 La estructura **TBNOTIFY** contiene los siguientes miembros:
 
@@ -162,7 +162,7 @@ typedef struct {
 
 - **tbButton**
 
-   **TBBUTTON** estructura que contiene información sobre el botón de barra de herramientas asociada con la notificación.
+   **Estructura TBBUTTON** que contiene información sobre el botón de barra de herramientas asociado a la notificación.
 
 - **cchText**
 
@@ -212,9 +212,9 @@ Las notificaciones que la barra de herramientas envía son las siguientes:
 
 - **TBN_TOOLBARCHANGE**
 
-   Se envía cuando el usuario personalice un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
+   Se envía después de que el usuario ha personalizado un control de barra de herramientas. El puntero apunta a una estructura **NMHDR** que contiene información sobre el mensaje de notificación. El controlador no tiene que devolver ningún valor específico.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Uso de CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
+[Usar CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)

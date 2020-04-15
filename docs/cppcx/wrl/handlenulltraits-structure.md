@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398386"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371470"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits (estructura)
 
-Define las características comunes de un identificador sin inicializar.
+Define las características comunes de un identificador no inicializado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,15 +32,15 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-Name   | Descripción
+Nombre   | Descripción
 ------ | ---------------------
-`Type` | Un sinónimo de identificador.
+`Type` | Sinónimo de HANDLE.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                                                  | Descripción
+Nombre                                                  | Descripción
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Close](#close)                     | Cierra el identificador especificado.
+[HANDLENullTraits::Cerrar](#close)                     | Cierra el identificador especificado.
 [HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Representa un identificador no válido.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
@@ -51,9 +51,9 @@ Name                                                  | Descripción
 
 **Encabezado:** corewrappers.h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers::HandleTraits
+**Espacio de nombres:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Cerrar
 
 Cierra el identificador especificado.
 
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parámetros
 
-*h*<br/>
-Para cerrar el identificador.
+*H*<br/>
+El mango para cerrar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si controlar *h* cerrado correctamente; en caso contrario, **false**.
+**true** si el manejador *h* cerró correctamente; de lo contrario, **false**.
 
-## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
 
 Representa un identificador no válido.
 

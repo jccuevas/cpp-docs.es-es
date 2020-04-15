@@ -15,18 +15,18 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: f2948564b9008f9a89c89d58e3249b20b3dc2ffd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5d8cec0a4ba1580e7ac5fb0e3b81052de08223fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370718"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Varios tipos de documentos, vistas y ventanas de marco
 
 La relación estándar entre un documento, su vista y su ventana de marco se describe en [Document/View Creation](../mfc/document-view-creation.md)(Creación de documentos/vistas). Muchas aplicaciones admiten un único tipo de documento (aunque probablemente permitan que haya muchos documentos abiertos de ese tipo) con una sola vista en el documento y una sola ventana de marco por documento. Pero puede que algunas aplicaciones necesiten modificar uno o varios de estos valores predeterminados.
 
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué quieres saber más sobre
 
 - [Multiple document types](#_core_multiple_document_types)
 
@@ -36,7 +36,7 @@ La relación estándar entre un documento, su vista y su ventana de marco se des
 
 - [Ventanas divisoras](#_core_splitter_windows)
 
-##  <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a> Multiple Document Types
+## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>Múltiples tipos de documentos
 
 El Asistente para aplicaciones MFC crea una clase de documento único automáticamente. Sin embargo, en algunos casos puede que necesite admitir más de un tipo de documento, por ejemplo, si la aplicación necesita hojas de cálculo y gráficos. Cada tipo de documento viene representado por su propia clase de documento y, probablemente, también por su propia clase de vista. Cuando el usuario elige el comando Archivo Nuevo, se abre un cuadro de diálogo en el marco de trabajo donde se enumeran los tipos de documento admitidos. Después, se crea un documento del tipo que el usuario haya elegido. Cada tipo de documento se administra mediante su propio objeto de plantilla de documento.
 
@@ -44,7 +44,7 @@ Para crear más clases de documento, vea [Adding a Class](../ide/adding-a-class-
 
 Para que el marco de trabajo sepa de la existencia de la clase de documento adicional, debe agregar una segunda llamada a [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) en la invalidación [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) de la clase de aplicación. Para obtener más información, vea [Document Templates](../mfc/document-templates-and-the-document-view-creation-process.md)(Plantillas de documento).
 
-##  <a name="multiple-views"></a><a name="_core_multiple_views"></a> Multiple Views
+## <a name="multiple-views"></a><a name="_core_multiple_views"></a>Múltiples vistas
 
 Varios documentos necesitan una sola vista, pero se puede admitir más de una vista de un documento. Para ayudarle a implementar varias vistas, un objeto de documento conserva una lista de sus vistas, proporciona funciones miembro para agregar o quitar vistas y, asimismo, proporciona la función miembro [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) para permitir que varias vistas sepan cuándo han cambiado los datos del documento.
 
@@ -64,18 +64,18 @@ MFC admite tres interfaces de usuario comunes que requieren varias vistas en el 
 
 En la siguiente imagen, dividida en las partes a, b y c, se muestran los tres modelos de interfaz de usuario en el orden descrito anteriormente.
 
-![Varias&#45;interfaces de usuario de vista](../mfc/media/vc37a71.gif "Varias&#45;interfaces de usuario de vista") <br/>
+![Múltiples&#45;ver interfaces de usuario](../mfc/media/vc37a71.gif "Múltiples&#45;ver interfaces de usuario") <br/>
 Interfaces de usuarios de varias vistas
 
 Para proporcionar estos modelos, el marco de trabajo implementa el comando Nueva ventana y proporciona la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como se describe en [Ventanas divisoras](#_core_splitter_windows). Se pueden implementar otros modelos teniendo estos como punto de partida. Para ver programas de ejemplo que ilustran distintas configuraciones de vistas, ventanas de marco y divisores, vea [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples)(Ejemplos de MFC).
 
 Para obtener más información sobre `UpdateAllViews`, vea la clase [CView](../mfc/reference/cview-class.md) en *MFC Reference* (Referencia de MFC), así como [Scribble sample](../overview/visual-cpp-samples.md)(Ejemplo de Scribble).
 
-##  <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
+## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>Múltiples ventanas de marco
 
 Puede usar el comando Nueva ventana del menú Ventana de las aplicaciones MDI para crear una segunda ventana de marco en el mismo documento. Para obtener más información, vea el primer modelo de la imagen Interfaces de usuarios de varias vistas.
 
-##  <a name="splitter-windows"></a><a name="_core_splitter_windows"></a> Splitter Windows
+## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>Splitter Windows
 
 En una ventana divisora, la ventana se divide (o puede dividirse) en dos o más paneles desplazables. Un control divisor (o "cuadro de división") del marco de ventana, situado junto a las barras de desplazamiento, permite ajustar los tamaños relativos de los paneles. Cada panel es una vista en el mismo documento. En los divisores "dinámicos", las vistas pertenecen a la misma clase, como se aprecia en la parte b de la imagen Interfaces de usuarios de varias vistas. En los divisores "estáticos", las vistas pueden pertenecer a clases diferentes. Las ventanas divisoras de ambos tipos son compatibles con la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
@@ -87,4 +87,4 @@ Para obtener más información, vea la clase [CSplitterWnd](../mfc/reference/csp
 
 ## <a name="see-also"></a>Consulte también
 
-[Arquitectura documento/vista](../mfc/document-view-architecture.md)
+[Arquitectura de documento/vista](../mfc/document-view-architecture.md)

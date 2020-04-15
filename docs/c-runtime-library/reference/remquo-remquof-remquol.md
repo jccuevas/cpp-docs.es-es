@@ -1,10 +1,13 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remquof
 - remquo
 - remquol
+- _o_remquo
+- _o_remquof
+- _o_remquol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332840"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -56,24 +60,26 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Parámetros
 
-*numer*<br/>
+*Número*<br/>
 Numerador.
 
 *denom*<br/>
 Denominador.
 
-*quo*<br/>
+*Quo*<br/>
 Puntero a un entero para almacenar un valor que tiene el signo y la magnitud aproximada del cociente.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**remquo (** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **Remquo (** devuelve un Nan silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf** , vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0.0, **remquo** devuelve un NaN silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf,** véase [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **remquo (** calcula el resto de punto flotante *f* de *x* / *y* como *x* = *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+La función **remquo** calcula el resto de punto flotante *f* de *x* / *y* de modo que *x* = *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*, y el valor absoluto de *f* es menor que el valor absoluto de *y*.
 
-C++permite la sobrecarga, de modo que puede llamar a las sobrecargas de **remquo (** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **remquo (** siempre toma dos argumentos **Double** y devuelve un **valor Double**.
+C++ permite la sobrecarga, por lo que puede llamar a sobrecargas de **remquo** que toman y devuelven **valores float** o **long** **double.** En un programa C, **remquo** siempre toma dos argumentos **dobles** y devuelve un **doble**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -81,7 +87,7 @@ C++permite la sobrecarga, de modo que puede llamar a las sobrecargas de **remquo
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -108,7 +114,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 Approximate signed quotient is -3
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

@@ -11,58 +11,58 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: 38642906b0973730149ed0de5381519f06d69fe5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71592584d4ecdd3169ad894861a97fa668c04ee8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442028"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370957"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dos maneras de crear un objeto CArchive
 
-Hay dos maneras de crear un objeto `CArchive`:
+Hay dos formas de `CArchive` crear un objeto:
 
-- [Creación implícita de un objeto CArchive a través del marco](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
+- [Creación implícita de un objeto CArchive a través del marco de trabajo](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
 
 - [Creación explícita de un objeto CArchive](#_core_explicit_creation_of_a_carchive_object)
 
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Creación implícita de un objeto CArchive a través del marco
+## <a name="implicit-creation-of-a-carchive-object-via-the-framework"></a><a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Creación implícita de un objeto CArchive a través del marco de trabajo
 
-La manera más común y más sencilla es dejar que el marco de trabajo cree un `CArchive` objeto para el documento en nombre de los comandos guardar, guardar como y abrir en el menú archivo.
+La forma más común y sencilla es permitir `CArchive` que el marco de trabajo cree un objeto para el documento en nombre de los comandos Guardar, Guardar como y Abrir del menú Archivo.
 
-Este es el marco de trabajo cuando el usuario de la aplicación emite el comando Guardar como en el menú Archivo:
+Esto es lo que hace el marco de trabajo cuando el usuario de la aplicación emite el comando Guardar como del menú Archivo:
 
 1. Presenta el cuadro de diálogo **Guardar como** y obtiene el nombre de archivo del usuario.
 
-1. Abre el archivo denominado por el usuario como un objeto de `CFile`.
+1. Abre el archivo nombrado por `CFile` el usuario como un objeto.
 
-1. Crea un objeto `CArchive` que apunta a este objeto `CFile`. Al crear el objeto `CArchive`, el marco de trabajo establece el modo en "Store" (escritura, serialización), en lugar de "Load" (lectura, deserialización).
+1. Crea `CArchive` un objeto que `CFile` apunta a este objeto. Al crear `CArchive` el objeto, el marco de trabajo establece el modo en "store" (escribir, serializar), en lugar de "load" (leer, deserializar).
 
-1. Llama a la función `Serialize` definida en la clase derivada de `CDocument`, pasándole una referencia al objeto `CArchive`.
+1. Llama `Serialize` a la `CDocument`función definida en la clase `CArchive` derivada, pasándole una referencia al objeto.
 
-La función `Serialize` del documento escribe los datos en el objeto `CArchive`, tal y como se explica en breve. Al volver de la función `Serialize`, el marco de trabajo destruye el objeto `CArchive` y, a continuación, el objeto `CFile`.
+A continuación, `Serialize` la función del `CArchive` documento escribe datos en el objeto, como se explica en breve. Al volver `Serialize` de la función, `CArchive` el marco `CFile` de trabajo destruye el objeto y, a continuación, el objeto.
 
-Por lo tanto, si permite que el marco de trabajo cree el objeto de `CArchive` para el documento, lo único que tiene que hacer es implementar la función de `Serialize` del documento que escribe y lee en el archivo. También tiene que implementar `Serialize` para cualquier objeto derivado de `CObject`que la función `Serialize` del documento, a su vez, se serializa de forma directa o indirecta.
+Por lo tanto, si `CArchive` permite que el marco de trabajo cree el `Serialize` objeto para el documento, todo lo que tiene que hacer es implementar la función del documento que escribe y lee en y desde el archivo. También tiene que `Serialize` implementar `CObject`para cualquier objeto derivado `Serialize` que la función del documento a su vez serializa directa o indirectamente.
 
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Creación explícita de un objeto CArchive
+## <a name="explicit-creation-of-a-carchive-object"></a><a name="_core_explicit_creation_of_a_carchive_object"></a>Creación explícita de un objeto CArchive
 
-Además de serializar un documento a través del marco de trabajo, hay otras ocasiones en las que es posible que necesite un objeto `CArchive`. Por ejemplo, es posible que desee serializar datos hacia y desde el portapapeles, representado por un objeto `CSharedFile`. O bien, puede que desee usar una interfaz de usuario para guardar un archivo diferente del proporcionado por el marco. En este caso, puede crear explícitamente un objeto de `CArchive`. Esto se hace de la misma manera que el marco de trabajo, mediante el procedimiento siguiente.
+Además de serializar un documento a través del `CArchive` marco de trabajo, hay otras ocasiones en las que es posible que necesite un objeto. Por ejemplo, es posible que desee serializar datos `CSharedFile` hacia y desde el Portapapeles, representado por un objeto. O bien, es posible que desee utilizar una interfaz de usuario para guardar un archivo que es diferente del que ofrece el marco de trabajo. En este caso, puede crear `CArchive` explícitamente un objeto. Esto se hace de la misma manera que lo hace el marco de trabajo, mediante el siguiente procedimiento.
 
-#### <a name="to-explicitly-create-a-carchive-object"></a>Para crear explícitamente un objeto CArchive
+#### <a name="to-explicitly-create-a-carchive-object"></a>Para crear explícitamente un CArchive objeto
 
-1. Construya un objeto de `CFile` o un objeto derivado de `CFile`.
+1. Construir `CFile` un objeto o un `CFile`objeto derivado de .
 
-1. Pase el objeto `CFile` al constructor de `CArchive`, como se muestra en el ejemplo siguiente:
+1. Pase `CFile` el objeto al `CArchive`constructor para , como se muestra en el ejemplo siguiente:
 
    [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-   El segundo argumento del constructor `CArchive` es un valor enumerado que especifica si el archivo se utilizará para almacenar o cargar datos en el archivo o desde él. La función `Serialize` de un objeto comprueba este estado mediante una llamada a la función `IsStoring` para el objeto de almacenamiento.
+   El segundo argumento `CArchive` para el constructor es un valor enumerado que especifica si el archivo se usará para almacenar o cargar datos desde o hacia el archivo. La `Serialize` función de un objeto comprueba `IsStoring` este estado llamando a la función para el objeto de archivado.
 
-Cuando haya terminado de almacenar o cargar datos en el objeto `CArchive`, ciérrelo. Aunque los objetos `CArchive` (y `CFile`) cerrarán automáticamente el archivo (y el archivo), se recomienda hacerlo explícitamente, ya que facilita la recuperación de los errores. Para obtener más información sobre el control de errores, vea el artículo [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Cuando haya terminado de almacenar o cargar `CArchive` datos desde o hacia el objeto, ciérrelos. Aunque `CArchive` los `CFile`objetos (y ) cerrarán automáticamente el archivo (y el archivo), es recomendable hacerlo explícitamente, ya que facilita la recuperación de errores. Para obtener más información sobre el control de errores, vea el artículo [Excepciones: captura y eliminación](../mfc/exceptions-catching-and-deleting-exceptions.md)de excepciones .
 
 #### <a name="to-close-the-carchive-object"></a>Para cerrar el objeto CArchive
 
-1. En el ejemplo siguiente se muestra cómo cerrar el objeto `CArchive`:
+1. En el ejemplo siguiente se `CArchive` muestra cómo cerrar el objeto:
 
    [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 

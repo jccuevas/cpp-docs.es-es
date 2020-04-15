@@ -9,43 +9,43 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4e159cc1b6918843d4a164dcca88500eb7b038
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151869"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374609"
 ---
 # <a name="clipboard-adding-other-formats"></a>Portapapeles: Agregar otros formatos
 
-En este tema se explica cómo expandir la lista de formatos admitidos, especialmente para la compatibilidad con OLE. El tema [Portapapeles: Copiar y pegar datos](../mfc/clipboard-copying-and-pasting-data.md) describe la implementación mínima necesaria para admitir copiando y pegando mediante el Portapapeles. Si esto es todo lo que implemente, son los únicos formatos que se coloca en el Portapapeles **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**y posiblemente **CF_LINKSOURCE**. La mayoría de las aplicaciones necesitará más formatos del Portapapeles que estos tres.
+En este tema se explica cómo expandir la lista de formatos admitidos, especialmente para la compatibilidad con OLE. El tema [Portapapeles: Copiar y pegar datos](../mfc/clipboard-copying-and-pasting-data.md) describe la implementación mínima necesaria para admitir la copia y pegado desde el Portapapeles. Si esto es todo lo que implementa, los únicos formatos colocados en el Portapapeles son **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, y posiblemente **CF_LINKSOURCE**. La mayoría de las aplicaciones necesitarán más formatos en el Portapapeles que estos tres.
 
-##  <a name="_core_registering_custom_formats"></a> Registrar formatos personalizados
+## <a name="registering-custom-formats"></a><a name="_core_registering_custom_formats"></a>Registro de formatos personalizados
 
-Para crear sus propios formatos personalizados, siga el mismo procedimiento que utilizaría para registrar cualquier formato de Portapapeles personalizado: pase el nombre de formato que desea la **RegisterClipboardFormat** funcionar y utilizar su valor devuelto como el identificador de formato.
+Para crear sus propios formatos personalizados, siga el mismo procedimiento que usaría al registrar cualquier formato de Portapapeles personalizado: pase el nombre del formato a la función **RegisterClipboardFormat** y use su valor devuelto como identificador de formato.
 
-##  <a name="_core_placing_formats_on_the_clipboard"></a> Colocar formatos en el Portapapeles
+## <a name="placing-formats-on-the-clipboard"></a><a name="_core_placing_formats_on_the_clipboard"></a>Colocación de formatos en el Portapapeles
 
-Para agregar más formatos a los que se encuentran en el Portapapeles, se debe reemplazar el `OnGetClipboardData` función de la clase que deriva de cualquiera `COleClientItem` o `COleServerItem` (dependiendo de si los datos que se van a copiarse están nativos). En esta función, debe utilizar el siguiente procedimiento.
+Para agregar más formatos a los colocados `OnGetClipboardData` en el Portapapeles, `COleClientItem` `COleServerItem` debe invalidar la función en la clase derivada de cualquiera o (dependiendo de si los datos que se van a copiar son nativos). En esta función, debe utilizar el siguiente procedimiento.
 
 #### <a name="to-place-formats-on-the-clipboard"></a>Para colocar formatos en el Portapapeles
 
 1. Crear un objeto `COleDataSource`.
 
-1. Pase este origen de datos a una función que agrega sus formatos de datos nativo a la lista de formatos compatibles mediante una llamada a `COleDataSource::CacheGlobalData`.
+1. Pase este origen de datos a una función que agregue los `COleDataSource::CacheGlobalData`formatos de datos nativos a la lista de formatos admitidos llamando a .
 
-1. Agregar los formatos estándar mediante una llamada a `COleDataSource::CacheGlobalData` para cada formato estándar que desee admitir.
+1. Agregue formatos `COleDataSource::CacheGlobalData` estándar llamando a cada formato estándar que desee admitir.
 
-Esta técnica se usa en el programa de ejemplo OLE de MFC [HIERSVR](../overview/visual-cpp-samples.md) (examine el `OnGetClipboardData` función miembro de la **CServerItem** clase). La única diferencia en este ejemplo es que el paso tres no está implementado porque HIERSVR es compatible con ningún otros formatos estándares.
+Esta técnica se utiliza en el programa de `OnGetClipboardData` ejemplo OLE de MFC [HIERSVR](../overview/visual-cpp-samples.md) (examinar la función miembro de la **CServerItem** clase). La única diferencia en este ejemplo es que el paso tres no se implementa porque HIERSVR no admite otros formatos estándar.
 
-### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+### <a name="what-do-you-want-to-know-more-about"></a>¿Qué quieres saber más sobre
 
-- [Transferencia de datos uniformes y orígenes de datos y objetos de datos OLE](../mfc/data-objects-and-data-sources-ole.md)
+- [Objetos de datos OLE y orígenes de datos y transferencia de datos uniforme](../mfc/data-objects-and-data-sources-ole.md)
 
-- [Arrastrar y colocar OLE](../mfc/drag-and-drop-ole.md)
+- [Funciones OLE de arrastrar y colocar](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Portapapeles: usar el mecanismo del Portapapeles de OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[Portapapeles: Usar el mecanismo del Portapapeles de OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
