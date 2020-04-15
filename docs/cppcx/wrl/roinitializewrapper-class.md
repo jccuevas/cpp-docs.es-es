@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-ms.openlocfilehash: b43d5bb2f553d298584ab2ae497c22637d3beb0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eba9162f17b98d13a9caf956b4f110b89dd81c37
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403209"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371227"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper (Clase)
 
-Inicializa el tiempo de ejecución de Windows.
+Inicializa Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,24 +30,24 @@ Inicializa el tiempo de ejecución de Windows.
 class RoInitializeWrapper;
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`RoInitializeWrapper` es una ventaja que inicializa el tiempo de ejecución de Windows y devuelve un HRESULT que indica si la operación fue correcta. Dado que el destructor de clase llama a `::Windows::Foundation::Uninitialize`, las instancias de `RoInitializeWrapper` debe declararse en el ámbito global o de nivel superior.
+`RoInitializeWrapper`es una comodidad que inicializa Windows Runtime y devuelve un HRESULT que indica si la operación se realizó correctamente. Dado que el `::Windows::Foundation::Uninitialize`destructor de `RoInitializeWrapper` clase llama a , las instancias de deben declararse en el ámbito global o de nivel superior.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-Name                                                                    | Descripción
+Nombre                                                                    | Descripción
 ----------------------------------------------------------------------- | -----------------------------------------------------------------
 [RoInitializeWrapper::RoInitializeWrapper](#roinitializewrapper)        | Inicializa una nueva instancia de la clase `RoInitializeWrapper`.
-[RoInitializeWrapper::~RoInitializeWrapper](#tilde-roinitializewrapper) | Destruye la instancia actual de la `RoInitializeWrapper` clase.
+[RoInitializeWrapper::-RoInitializeWrapper](#tilde-roinitializewrapper) | Destruye la instancia actual `RoInitializeWrapper` de la clase.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-Name                                       | Descripción
+Nombre                                       | Descripción
 ------------------------------------------ | ------------------------------------------------------------------------
-[RoInitializeWrapper::HRESULT()](#hresult) | Recupera el valor HRESULT producido por la `RoInitializeWrapper` constructor.
+[RoInitializeWrapper::HRESULT()](#hresult) | Recupera el HRESULT generado `RoInitializeWrapper` por el constructor.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -57,17 +57,17 @@ Name                                       | Descripción
 
 **Encabezado:** corewrappers.h
 
-**Espacio de nombres**: Microsoft::WRL::Wrappers
+**Espacio de nombres:** Microsoft::WRL::Wrappers
 
-## <a name="hresult"></a>RoInitializeWrapper::HRESULT()
+## <a name="roinitializewrapperhresult"></a><a name="hresult"></a>RoInitializeWrapper::HRESULT()
 
-Recupera el valor HRESULT producido por la última `RoInitializeWrapper` constructor.
+Recupera el valor HRESULT generado `RoInitializeWrapper` por el último constructor.
 
 ```cpp
 operator HRESULT()
 ```
 
-## <a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
 
 Inicializa una nueva instancia de la clase `RoInitializeWrapper`.
 
@@ -77,21 +77,21 @@ RoInitializeWrapper(RO_INIT_TYPE flags)
 
 ### <a name="parameters"></a>Parámetros
 
-*flags*<br/>
-Una de las enumeraciones RO_INIT_TYPE, que especifica la compatibilidad proporcionada por el tiempo de ejecución de Windows.
+*Banderas*<br/>
+Una de las enumeraciones RO_INIT_TYPE, que especifica la compatibilidad proporcionada por Windows Runtime.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El `RoInitializeWrapper` clase invoca `Windows::Foundation::Initialize(flags)`.
+La `RoInitializeWrapper` clase `Windows::Foundation::Initialize(flags)`invoca .
 
-## <a name="tilde-roinitializewrapper"></a>RoInitializeWrapper::~RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="tilde-roinitializewrapper"></a>RoInitializeWrapper::-RoInitializeWrapper
 
-Desinicializa el tiempo de ejecución de Windows.
+Uninitializes el tiempo de ejecución de Windows.
 
 ```cpp
 ~RoInitializeWrapper()
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-El `RoInitializeWrapper` clase invoca `Windows::Foundation::Uninitialize()`.
+La `RoInitializeWrapper` clase `Windows::Foundation::Uninitialize()`invoca .

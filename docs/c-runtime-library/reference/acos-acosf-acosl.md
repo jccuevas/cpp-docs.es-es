@@ -1,10 +1,11 @@
 ---
 title: acos, acosf, acosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acosf
 - acos
 - acosl
+- _o_acos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348967"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -60,14 +62,14 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
-Valor comprendido entre-1 y 1, para el que se va a calcular el arcocoseno (el coseno inverso).
+*X*<br/>
+Valor entre -1 y 1, para el que se calcula la arccosina (el coseno inverso).
 
 ## <a name="return-value"></a>Valor devuelto
 
-La función **ACOS** devuelve el arcocoseno de *x* en el intervalo comprendido entre 0 y π radianes.
+La función **acos** devuelve la arccosina de *x* en el rango de 0 a los radianes.
 
-De forma predeterminada, si *x* es menor que-1 o mayor que 1, **ACOS** devuelve un valor indefinido.
+De forma predeterminada, si *x* es menor que -1 o mayor que 1, **acos** devuelve un indefinido.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
@@ -77,13 +79,15 @@ De forma predeterminada, si *x* es menor que-1 o mayor que 1, **ACOS** devuelve 
 
 ## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **ACOS** que toman y devuelven los tipos **float** y **Long** **Double** . En un programa de C, **ACOS** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **acos** que toman y devuelven **tipos float** y **long** **double.** En un programa C, **acos** siempre toma y devuelve un **doble**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|Encabezados opcionales|
 |-------------|---------------------|----------------------|
-|**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Ejemplo
 

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-ms.openlocfilehash: 4305d9b1db297eebcb189d2fad98b8c634ed1133
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 8080becf1a1a153322bfd03cbd7006eaf2ce4e13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908037"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356576"
 ---
 # <a name="message-maps-mfc"></a>Mapas de mensajes (MFC)
 
-En esta sección de la referencia se enumeran todas las [macros de asignación de mensajes](../../mfc/reference/message-map-macros-mfc.md) y todas las entradas de mapa de mensajes [CWnd](../../mfc/reference/cwnd-class.md) junto con los prototipos de función miembro correspondientes:
+Esta sección de la referencia enumera todas las macros de [asignación](../../mfc/reference/message-map-macros-mfc.md) de mensajes y todas las entradas de mapa de mensajes [CWnd](../../mfc/reference/cwnd-class.md) junto con los prototipos de función miembro correspondientes:
 
-|Categoría|DESCRIPCIÓN|
+|Category|Descripción|
 |--------------|-----------------|
-|En\_el controlador de mensajes de comando|Controla `WM_COMMAND` los mensajes generados por las selecciones de menú del usuario o las teclas de acceso del menú.|
-|[Controladores de mensajes de notificación de ventana secundaria](../../mfc/reference/child-window-notification-message-handlers.md)|Controlan los mensajes de notificación de las ventanas secundarias.|
-|[Controladores de mensajes de WM_](../../mfc/reference/handlers-for-wm-messages.md)|Controlar `WM_` mensajes, `WM_PAINT`como.|
+|ON\_COMMAND Controlador de mensajes|Controla los `WM_COMMAND` mensajes generados por las selecciones de menú de usuario o las teclas de acceso al menú.|
+|[Controladores de mensajes de ventanas secundarias](../../mfc/reference/child-window-notification-message-handlers.md)|Controlan los mensajes de notificación de las ventanas secundarias.|
+|[controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)|Controlar `WM_` mensajes, `WM_PAINT`como .|
 |[Controladores de mensajes definidos por el usuario](../../mfc/reference/user-defined-handlers.md)|Controlan los mensajes definidos por el usuario.|
 
-(Para obtener una explicación de la terminología y las convenciones que se usan en esta referencia, consulte [Cómo usar la referencia cruzada del mapa de mensajes](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)).
+(Para obtener una explicación de la terminología y las convenciones utilizadas en esta referencia, consulte [Cómo utilizar la referencia cruzada](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)del mapa de mensajes .)
 
 Puesto que Windows es un sistema operativo orientado a mensajes, una gran parte de la programación para el entorno Windows implica el control de mensajes. Cada vez que tiene lugar un evento como una pulsación de tecla o un clic del mouse, se envía un mensaje a la aplicación, que debe controlar el evento.
 
@@ -33,7 +33,7 @@ La biblioteca MFC (Microsoft Foundation Class) proporciona un modelo de programa
 
 [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]
 
-La macro `ON_COMMAND` se utiliza para controlar los mensajes de comando generados por los menús, los botones y las teclas de aceleración. Hay [macros](../../mfc/reference/message-map-macros-mfc.md) disponibles para asignar lo siguiente:
+La macro `ON_COMMAND` se utiliza para controlar los mensajes de comando generados por los menús, los botones y las teclas de aceleración. [Las macros](../../mfc/reference/message-map-macros-mfc.md) están disponibles para asignar lo siguiente:
 
 ## <a name="windows-messages"></a>Mensajes de Windows
 
@@ -55,13 +55,13 @@ La macro `ON_COMMAND` se utiliza para controlar los mensajes de comando generado
 
 - Notificaciones del control
 
-Aunque las macros de mapa de mensajes son importantes, en general no es necesario utilizarlas directamente. Esto se debe a que el [Asistente para clases](mfc-class-wizard.md) crea automáticamente entradas de mapa de mensajes en los archivos de código fuente cuando se usa para asociar las funciones de control de mensajes a los mensajes. Siempre que desee editar o agregar una entrada de mapa de mensajes, puede usar el Asistente para clases.
+Aunque las macros de mapa de mensajes son importantes, en general no es necesario utilizarlas directamente. Esto se debe a que el [Asistente para clases](mfc-class-wizard.md) crea automáticamente entradas de mapa de mensajes en los archivos de origen cuando se utiliza para asociar funciones de control de mensajes con mensajes. Cada vez que desee editar o agregar una entrada de mapa de mensajes, puede utilizar el Asistente para clases.
 
 > [!NOTE]
->  El Asistente para clases no admite intervalos de mapa de mensajes. Debe escribir estas entradas de mapa de mensajes manualmente.
+> El Asistente para clases no admite intervalos de mapa de mensajes. Debe escribir estas entradas de mapa de mensajes manualmente.
 
 Sin embargo, los mapas de mensajes son una parte importante de la biblioteca MFC (Microsoft Foundation Class). Debe entender lo que hacen y consultar la documentación que se proporciona sobre ellos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

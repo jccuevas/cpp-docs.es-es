@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 029edea59f29534491232d5d99353ccb093447bd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450244"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376533"
 ---
-# <a name="syncshared-class"></a>sync_shared (Clase)
+# <a name="sync_shared-class"></a>sync_shared (Clase)
 
-Describe un [filtro de sincronización](../standard-library/allocators-header.md) que usa una exclusión mutua para controlar el acceso a un objeto de caché compartido por todos los asignadores.
+Describe un filtro de [sincronización](../standard-library/allocators-header.md) que usa una exclusión mutua para controlar el acceso a un objeto de caché compartido por todos los asignadores.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,15 +32,15 @@ class sync_shared
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
-|*Caché*|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Memoria caché*|El tipo de caché asociado al filtro de sincronización. Puede ser [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) o [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funciones miembro
 
-|Función miembro|DESCRIPCIÓN|
+|Función de miembro|Descripción|
 |-|-|
-|[allocate](#allocate)|Asigna un bloque de memoria.|
+|[Asignar](#allocate)|Asigna un bloque de memoria.|
 |[deallocate](#deallocate)|Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.|
 |[equals](#equals)|Compara dos cachés para determinar si son iguales.|
 
@@ -50,7 +50,7 @@ class sync_shared
 
 **Espacio de nombres:** stdext
 
-## <a name="allocate"></a>  sync_shared::allocate
+## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared::asignar
 
 Asigna un bloque de memoria.
 
@@ -60,7 +60,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
 |*count*|El número de elementos de la matriz que se van a asignar.|
 
@@ -68,11 +68,11 @@ void *allocate(std::size_t count);
 
 Un puntero al objeto asignado.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 La función miembro bloquea la exclusión mutua, llama a `cache.allocate(count)`, desbloquea la exclusión mutua y devuelve el resultado de la llamada anterior a `cache.allocate(count)`. `cache` representa el objeto de caché actual.
 
-## <a name="deallocate"></a>  sync_shared::deallocate
+## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared::deallocate
 
 Libera un número especificado de objetos del almacenamiento, a partir de la posición especificada.
 
@@ -82,16 +82,16 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
-|*ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
+|*Ptr*|Un puntero al primer objeto que se va a desasignar del almacenamiento.|
 |*count*|El número de objetos que se van a desasignar del almacenamiento.|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Esta función miembro bloquea la exclusión mutua, llama a `cache.deallocate(ptr, count)`, donde `cache` representa el objeto de caché y, después, desbloquea la exclusión mutua.
 
-## <a name="equals"></a>  sync_shared::equals
+## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared::igual es
 
 Compara dos cachés para determinar si son iguales.
 
@@ -101,17 +101,17 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="parameters"></a>Parámetros
 
-|Parámetro|DESCRIPCIÓN|
+|Parámetro|Descripción|
 |---------------|-----------------|
-|*Caché*|El tipo de caché asociado al filtro de sincronización.|
-|*Otros problemas*|La caché para comparar la igualdad.|
+|*Memoria caché*|El tipo de caché asociado al filtro de sincronización.|
+|*Otros*|La caché para comparar la igualdad.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el resultado de `cache.equals(Other.cache)`, donde `cache` representa el objeto de caché, es **true**; en caso contrario, **false**.
+**true** si el `cache.equals(Other.cache)`resultado `cache` de , donde representa el objeto de caché, es **true**; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<asignadores>](../standard-library/allocators-header.md)

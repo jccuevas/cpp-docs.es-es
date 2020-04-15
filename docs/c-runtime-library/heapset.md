@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300266"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351269"
 ---
 # <a name="_heapset"></a>_heapset
 
 Comprueba que los montones mantienen una coherencia mínima y establece las entradas libres a un valor especificado.
 
 > [!IMPORTANT]
->  Esta función está obsoleta. A partir de Visual Studio 2015, no está disponible en CRT.
+> Esta función está obsoleta. A partir de Visual Studio 2015, no está disponible en CRT.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -47,9 +47,9 @@ int _heapset(
 );
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Parámetros
 
-*fill*<br/>
+*Llenar*<br/>
 Carácter de relleno.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -65,19 +65,19 @@ Carácter de relleno.
 
 Además, si se produce un error, `_heapset` establece `errno` en `ENOSYS`.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La función `_heapset` muestra las ubicaciones de memoria libre o los nodos que se han sobrescrito accidentalmente.
 
-`_heapset` comprueba la coherencia mínima en el montón y, después, establece cada byte de las entradas libres del montón al valor `fill` . Este valor conocido muestra las ubicaciones de memoria del montón que contienen nodos libres y las que contienen datos que se escribieron involuntariamente en la memoria liberada. Si el sistema operativo no admite `_heapset`(por ejemplo Windows 98), la función devuelve `_HEAPOK` y establece `errno` en `ENOSYS`.
+`_heapset` comprueba la coherencia mínima en el montón y, después, establece cada byte de las entradas libres del montón al valor `fill` . Este valor conocido muestra las ubicaciones de memoria del montón que contienen nodos libres y las que contienen datos que se escribieron involuntariamente en la memoria liberada. Si el sistema operativo no admite `_heapset` (por ejemplo, Windows 98), la función devuelve `_HEAPOK` y establece `errno` en `ENOSYS`.
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|Encabezado opcional|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-Para obtener más información de compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md) en la Introducción.
+Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../c-runtime-library/compatibility.md) en la introducción.
 
 ## <a name="example"></a>Ejemplo
 
@@ -121,7 +121,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asignación de memoria](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>

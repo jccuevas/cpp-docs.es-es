@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInheritanceHelper structure
 - Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-ms.openlocfilehash: c37a0eb74fd65b3d349d5b8b7c792fbaf7d1ac9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3650cfb70ffc12572b3965534eff4e1f2ecb2cf5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398087"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374225"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -32,13 +32,13 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="parameters"></a>Parámetros
 
-*I*<br/>
+*Ⅰ*<br/>
 Un tipo.
 
 *Base*<br/>
 Otro tipo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Comprueba si una interfaz se deriva de otra interfaz.
 
@@ -46,9 +46,9 @@ Comprueba si una interfaz se deriva de otra interfaz.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                                       | Descripción
+Nombre                                       | Descripción
 ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
-[VerifyInheritanceHelper::Verify](#verify) | Prueba de las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.
+[VerifyInheritanceHelper::Verify](#verify) | Prueba las dos interfaces especificadas por los parámetros de plantilla actuales y determina si una interfaz se deriva de la otra.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -58,18 +58,18 @@ Name                                       | Descripción
 
 **Encabezado:** implements.h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft::WRL::Details
 
-## <a name="verify"></a>VerifyInheritanceHelper::Verify
+## <a name="verifyinheritancehelperverify"></a><a name="verify"></a>VerifyInheritanceHelper::Verify
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 static void Verify();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Prueba de las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.
+Prueba las dos interfaces especificadas por los parámetros de plantilla actuales y determina si una interfaz se deriva de la otra.
 
-Se genera un error si una interfaz no se derive de la otra.
+Se emite un error si una interfaz no se deriva de la otra.

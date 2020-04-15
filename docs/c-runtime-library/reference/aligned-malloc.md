@@ -1,8 +1,9 @@
 ---
 title: _aligned_malloc
-ms.date: 12/11/2019
+ms.date: 4/2/2020
 api_name:
 - _aligned_malloc
+- _o__aligned_malloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300136"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350615"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -46,29 +48,31 @@ void * _aligned_malloc(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-*size*<br/>
+*Tamaño*<br/>
 Tamaño de la asignación de memoria solicitada.
 
-*alignment*<br/>
+*Alineación*<br/>
 Valor de la alineación, que debe ser un entero potencia de 2.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Puntero al bloque de memoria que se asignó o NULL si se produjo un error en la operación. El puntero es un múltiplo de la *alineación*.
+Puntero al bloque de memoria asignado o NULL si se produjo un error en la operación. El puntero es un múltiplo de *alineación*.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 **_aligned_malloc** se basa en [malloc](malloc.md).
 
-**_aligned_malloc** está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no modifica las variables globales y que el puntero devuelto no tiene alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
+**_aligned_malloc** está `__declspec(noalias)` `__declspec(restrict)`marcado y , lo que significa que se garantiza que la función no modifique las variables globales y que el puntero devuelto no tenga alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
 
-Esta función establece `errno` en `ENOMEM` si se produce un error en la asignación de memoria o si el tamaño solicitado es mayor que `_HEAP_MAXREQ`. Para obtener más información sobre `errno`, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc** valida sus parámetros. Si la *alineación* no es una potencia de 2 o *el tamaño* es cero, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve NULL y establece `errno` en `EINVAL`.
+Esta función establece `errno` en `ENOMEM` si se produce un error en la asignación de memoria o si el tamaño solicitado es mayor que `_HEAP_MAXREQ`. Para obtener más información sobre `errno`, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_malloc** valida sus parámetros. Si *la alineación* no es una potencia de 2 o *el tamaño* es cero, esta función invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta `errno` función devuelve NULL y se establece en `EINVAL`.
 
-Use [_aligned_free](aligned-free.md) para cancelar la asignación de la memoria obtenida por **_aligned_malloc** y `_aligned_offset_malloc`. No utilice `free`, que no recupere correctamente la memoria alineada y puede dar lugar a errores difíciles de diagnosticar.
+Utilice [_aligned_free](aligned-free.md) para desasignar la `_aligned_offset_malloc`memoria obtenida por **_aligned_malloc** y . No utilice `free`, que no recupera la memoria alineada correctamente y puede conducir a errores difíciles de diagnosticar.
 
-## <a name="requirements"></a>Requisitos de
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -156,6 +160,6 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 This pointer, 3280891, is offset by 5 on alignment of 16
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Alineación de datos](../../c-runtime-library/data-alignment.md)

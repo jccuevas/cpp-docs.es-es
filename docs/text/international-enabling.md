@@ -8,37 +8,37 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 22f2dba49e894e93cb6791d76a65730f3269199e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6c645bafef87ed0b2d43903f4752ef659d79f89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410621"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375801"
 ---
 # <a name="international-enabling"></a>Internacionalización
 
-Código de C y C++ más tradicional hace suposiciones sobre la manipulación de cadenas y caracteres que no funcionan bien para aplicaciones internacionales. Aunque MFC y la biblioteca en tiempo de ejecución son compatibles con Unicode o MBCS, todavía hay trabajo para que pueda hacer. Para guiarle, esta sección explica el significado de "internacionalización" en Visual C++:
+La mayoría del código C y C+ tradicional hace suposiciones sobre la manipulación de caracteres y cadenas que no funcionan bien para aplicaciones internacionales. Aunque MFC y la biblioteca en tiempo de ejecución admiten Unicode o MBCS, todavía hay trabajo que hacer. Para guiarlo, en esta sección se explica el significado de "habilitación internacional" en Visual C++:
 
-- Unicode y MBCS se habilitan por medio de los tipos de datos portables en MFC listas de parámetros de función y tipos de valor devuelto. Estos tipos se definen condicionalmente de forma apropiada, dependiendo de si la compilación define el símbolo `_UNICODE` o el símbolo `_MBCS` (lo que significa DBCS). Variantes diferentes de las bibliotecas MFC se vinculan automáticamente con la aplicación, dependiendo de cuál de estos dos símbolos define la compilación.
+- Unicode y MBCS se habilitan mediante tipos de datos portátiles en listas de parámetros de función MFC y tipos de valor devuelto. Estos tipos se definen condicionalmente de las maneras adecuadas, dependiendo de si la compilación define el símbolo `_UNICODE` o el símbolo `_MBCS` (lo que significa DBCS). Diferentes variantes de las bibliotecas MFC se vinculan automáticamente con la aplicación, dependiendo de cuál de estos dos símbolos defina la compilación.
 
-- Código de la biblioteca de clases utiliza funciones portables en tiempo de ejecución y otros medios para garantizar el comportamiento correcto de MBCS o Unicode.
+- El código de la biblioteca de clases utiliza funciones portátiles en tiempo de ejecución y otros medios para garantizar un comportamiento correcto de Unicode o MBCS.
 
 - Todavía debe controlar ciertos tipos de tareas de internacionalización en el código:
 
-   - Use las mismas funciones de tiempo de ejecución portables que hagan que MFC portables en cada entorno.
+  - Utilice las mismas funciones portátiles en tiempo de ejecución que hacen que MFC sea portátil en cualquier entorno.
 
-   - Hacer que cadenas literales y caracteres portables en cada entorno, mediante la `_T` macro. Para obtener más información, consulte [asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+  - Haga que las cadenas literales y `_T` los caracteres sean portátiles en cualquier entorno, utilizando la macro. Para obtener más información, consulte [Asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
-   - Tomar precauciones al analizar cadenas en MBCS. Estas precauciones no son necesarios en Unicode. Para obtener más información, consulte [sugerencias de programación para MBCS](../text/mbcs-programming-tips.md).
+  - Tome precauciones al analizar cadenas en MBCS. Estas precauciones no son necesarias en Unicode. Para obtener más información, consulte Consejos de programación de [MBCS](../text/mbcs-programming-tips.md).
 
-   - Tenga cuidado si mezcla ANSI (8 bits) y caracteres de Unicode (16 bits) en la aplicación. Es posible usar caracteres ANSI en algunas partes del programa y caracteres Unicode en otras, pero no se pueden mezclar en la misma cadena.
+  - Tenga cuidado si mezcla caracteres ANSI (8 bits) y Unicode (16 bits) en la aplicación. Es posible utilizar caracteres ANSI en algunas partes del programa y caracteres Unicode en otras, pero no se pueden mezclar en la misma cadena.
 
-   - Hacer que las cadenas no codifique de forma rígida en la aplicación. En su lugar, hacerlos recursos STRINGTABLE agregándolas al archivo .rc de la aplicación. A continuación, se puede localizar su aplicación sin necesidad de cambios de código fuente o recompilación. Para obtener más información acerca de los recursos STRINGTABLE, vea [Editor de cadenas](../windows/string-editor.md).
+  - No codifique cadenas de disco duro en la aplicación. En su lugar, constérdelos con recursos STRINGTABLE agregándolos al archivo .rc de la aplicación. A continuación, la aplicación se puede localizar sin necesidad de cambios en el código fuente o recompilación. Para obtener más información acerca de los recursos STRINGTABLE, vea [Editor de cadenas](../windows/string-editor.md).
 
 > [!NOTE]
->  Juegos de caracteres de Europa y MBCS tienen algunos caracteres, como las letras acentuadas, con códigos de carácter mayores que 0 x 80. Dado que la mayoría del código utiliza caracteres con signo, estos caracteres mayores que 0 x 80 son signos al convertir a **int**. Se trata de un problema para la indización de matriz porque los caracteres extendidos de inicio de sesión que sean negativos índices fuera de la matriz. Idiomas que utilizan MBCS, como el japonés, también son únicos. Dado que un carácter puede consistir en 1 o 2 bytes, siempre debe manipular ambos bytes al mismo tiempo.
+> Los conjuntos de caracteres europeos y MBCS tienen algunos caracteres, como letras acentuadas, con códigos de caracteres superiores a 0x80. Dado que la mayoría del código utiliza caracteres firmados, estos caracteres mayores que 0x80 se extienden por signo cuando se convierten a **int**. Esto es un problema para la indexación de matrices porque los caracteres de signo extendido, siendo negativos, se indizan fuera de la matriz. Los idiomas que utilizan MBCS, como el japonés, también son únicos. Dado que un carácter puede constar de 1 o 2 bytes, siempre debe manipular ambos bytes al mismo tiempo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Unicode y MBCS](../text/unicode-and-mbcs.md)<br/>
-[Estrategias de internacionalización](../text/internationalization-strategies.md)
+[Estrategias de Internacionalización](../text/internationalization-strategies.md)

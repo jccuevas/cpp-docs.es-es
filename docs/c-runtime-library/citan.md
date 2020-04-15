@@ -1,8 +1,9 @@
 ---
 title: _CItan
-ms.date: 04/11/2018
+ms.date: 4/2/2020
 api_name:
 - _CItan
+- _o__CItan
 api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-ms.openlocfilehash: e509d785648148e51004950076147b69c2db18ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8c6cc0a51d6ef2132172164306b84f73799da729
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940460"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349363"
 ---
 # <a name="_citan"></a>_CItan
 
@@ -40,17 +42,19 @@ Calcula la tangente del valor superior de la pila de punto flotante.
 void __cdecl _CItan();
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta versión de la función [tan](../c-runtime-library/reference/tan-tanf-tanl.md) tiene una convención de llamada especializada que el compilador entiende. La función acelera la ejecución porque evita que se generen copias y ayuda con la asignación de registros.
 
 El valor resultante se inserta en la parte superior de la pila de punto flotante.
 
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 **Plataforma:** x86
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)<br/>

@@ -1,10 +1,13 @@
 ---
 title: acosh, acoshf, acoshl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acoshf
 - acosh
 - acoshl
+- _o_acosh
+- _o_acoshf
+- _o_acoshl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350842"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -59,29 +63,31 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **Acosh** devuelven el coseno hiperbólico inverso (coseno hiperbólico de arco) de *x*. Estas funciones son válidas en el dominio *x* ≥ 1. Si *x* es menor que 1, `errno` se establece en `EDOM` y el resultado es un Nan silencioso. Si *x* es Nan, indefinido o infinito, se devuelve el mismo valor.
+Las **funciones acosh** devuelven el coseno hiberbólico inverso (coseno hiperbólico de arco) de *x*. Estas funciones son válidas sobre el dominio *x* á 1. Si *x* es menor `errno` que `EDOM` 1, se establece en y el resultado es un NaN silencioso. Si *x* es un NaN silencioso, indefinido o infinito, se devuelve el mismo valor.
 
-|Entrada|Excepción SEH|Excepción de `_matherr`|
+|Entrada|Excepción SEH|Excepción de`_matherr`|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|None|None|
 |*x* < 1|None|None|
 
 ## <a name="remarks"></a>Observaciones
 
-Al C++usar, puede llamar a las sobrecargas de **Acosh** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **Acosh** siempre toma y devuelve **Double**.
+Cuando se utiliza C++, puede llamar a sobrecargas de **acosh** que toman y devuelven **valores float** o **long** **double.** En un programa C, **acosh** siempre toma y devuelve **double**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**Acosh**, **acoshf (** , **acoshl**|\<math.h>|\<cmath>|
+|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

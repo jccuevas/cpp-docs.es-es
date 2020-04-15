@@ -1,11 +1,15 @@
 ---
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
+- _o__mbscat_s
+- _o__mbscat_s_l
+- _o_strcat_s
+- _o_wcscat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,19 +43,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 458c8ef4c69630b92f39c6ca13a538a1ba7ec72a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355428"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Anexa una cadena. Estas versiones de [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** y **_mbscat_s_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** y **_mbscat_s_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -121,13 +126,13 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |*strDestination*|*numberOfElements*|*strSource*|Valor devuelto|Contenido de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null** o sin terminar|any|any|**EINVAL**|no modificado|
-|any|any|**NULL**|**EINVAL**|*strDestination*[0] establecido en 0|
-|any|0, o demasiado pequeño|any|**ERANGE**|*strDestination*[0] establecido en 0|
+|**NULL** o sin terminar|cualquiera|cualquiera|**EINVAL**|no modificado|
+|cualquiera|cualquiera|**Null**|**EINVAL**|*strDestination*[0] establecido en 0|
+|cualquiera|0, o demasiado pequeño|cualquiera|**ERANGE**|*strDestination*[0] establecido en 0|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **strcat_s** anexa *strSource* a *strDestination* y termina la cadena resultante con un carácter nulo. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDestination*. El comportamiento de **strcat_s** no está definido si las cadenas de origen y de destino se superponen.
+La función **strcat_s** anexa *strSource* a *strDestination* y termina la cadena resultante con un carácter nulo. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDestination*. El comportamiento de **strcat_s** es indefinido si las cadenas de origen y destino se superponen.
 
 Observe que el segundo parámetro es el tamaño total del búfer, no el tamaño restante:
 
@@ -138,15 +143,17 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** y **_mbscat_s** son versiones de caracteres anchos y multibyte de **strcat_s**. Los argumentos y el valor devuelto de **wcscat_s** son cadenas de caracteres anchos; los de **_mbscat_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcscat_s** y **_mbscat_s** son versiones de caracteres anchos y multibyte de **strcat_s.** Los argumentos y el valor devuelto de **wcscat_s** son cadenas de caracteres anchos; las de **_mbscat_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-Si *strDestination* es un puntero nulo o no termina en null, o si *strSource* es un puntero **nulo** , o si la cadena de destino es demasiado pequeña, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**.
+Si *strDestination* es un puntero nulo, o no está terminado en null, o si *strSource* es un puntero **NULL,** o si la cadena de destino es demasiado pequeña, se invoca el controlador de parámetros no válidos, como se describe en [validación](../../c-runtime-library/parameter-validation.md)de parámetros . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y **establecen errno en** **EINVAL**.
 
-Las versiones de las funciones que tienen el sufijo **_L** tienen el mismo comportamiento, pero utilizan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de las funciones que tienen el **sufijo _l** tienen el mismo comportamiento, pero usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -168,9 +175,9 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 Vea el ejemplo de código de [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
