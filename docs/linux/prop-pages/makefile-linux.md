@@ -3,10 +3,10 @@ title: Propiedades generales (proyecto de archivos Make de C++ para Linux) | Mic
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
 ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79446153"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Propiedades del proyecto de archivos Make (C++ para Linux)

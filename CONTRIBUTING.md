@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e2b88bb1c60c97c9f63caacfb98ba87e0443e799
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b15a09fa450995c55cc6e7313c51db4a3ba3f48a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509444"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316624"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -14,11 +14,11 @@ En este tema, comprobará cuál es el proceso básico para agregar o actualizar 
 
 Abordaremos lo siguiente:
 
-* [Proceso de contribución](#process-for-contributing)
-* [Qué se debe hacer y qué no](#dos-and-donts)
-* [Creación de los documentos](#building-the-docs)
-* [Contribución a los ejemplos](#contributing-to-samples)
-* [Contrato de licencia de colaboración](#contributor-license-agreement)
+- [Proceso de contribución](#process-for-contributing)
+- [Qué se debe hacer y qué no](#dos-and-donts)
+- [Creación de los documentos](#building-the-docs)
+- [Contribución a los ejemplos](#contributing-to-samples)
+- [Contrato de licencia de colaboración](#contributor-license-agreement)
 
 ## <a name="process-for-contributing"></a>Proceso de contribución
 

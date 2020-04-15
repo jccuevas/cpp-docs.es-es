@@ -4,12 +4,12 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079247"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366796"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Herramientas y características de C++ en las ediciones de Visual Studio
 
@@ -41,9 +41,11 @@ Visual Studio incluye las siguientes cargas de trabajo para el desarrollo de C++
 ### <a name="desktop-development-with-c"></a>Desarrollo para el escritorio con C++
 
 Incluye:
+
 - Características principales de escritorio para C++
 
 Componentes opcionales:
+
 - MSVC v142 - VS 2019 C++ x64/x86 Build Tools (v14.21)
 - SDK de Windows 10 (10.0.17763.0)
 - Depurador Just-In-Time
@@ -68,17 +70,20 @@ Componentes opcionales:
 ### <a name="linux-development-with-c"></a>Desarrollo para Linux con C++
 
 Incluye:
+
 - Características principales de C++
 - Entorno de tiempo de ejecución de C de Windows Universal
 - C++ for Linux Development
 
 Componentes opcionales:
+
 - Herramientas de CMake en C++ para Linux
 - Herramientas de desarrollo insertadas e IoT
 
 ### <a name="universal-windows-platform-development"></a>Desarrollo de la Plataforma universal de Windows
 
 Incluye:
+
 - Blend para Visual Studio
 - .NET Native y .NET Standard
 - Administrador de paquetes de NuGet
@@ -86,6 +91,7 @@ Incluye:
 - SDK de Windows 10 (10.0.17763.0)
 
 Componentes opcionales:
+
 - IntelliCode
 - IntelliTrace (solo Enterprise)
 - Conectividad del dispositivo USB
@@ -100,12 +106,14 @@ Componentes opcionales:
 ### <a name="c-game-development"></a>Desarrollo de juegos de C++
 
 Incluye:
+
 - Características principales de C++
 - Entorno de tiempo de ejecución de C de Windows Universal
 - Actualización de C++ 2019 Redistributable
 - MSVC v142 - VS 2019 C++ x64/x86 Build Tools (v14.21)
 
 Componentes opcionales:
+
 - Herramientas de generación de perfiles de C++
 - SDK de Windows 10 (10.0.17763.0)
 - IntelliCode
@@ -120,10 +128,12 @@ Componentes opcionales:
 ### <a name="mobile-development-with-c"></a>Desarrollo móvil con C++
 
 Incluye:
+
 - Características principales de C++
 - Programa de instalación de Android SDK (nivel de API 25) (instalación local para desarrollo móvil con C++)
 
 Componentes opcionales:
+
 - Android NDK (R16B)
 - Apache Ant (1.9.3)
 - Herramientas de desarrollo de Android en C ++
@@ -172,6 +182,7 @@ Puede instalar estos componentes con independencia de cualquier carga de trabajo
 Las siguientes plantillas de proyecto están disponibles dependiendo de las cargas de trabajo que haya instalado.
 
 Escritorio de Windows:
+
 - Proyecto vacío
 - Aplicación de consola
 - Asistente para escritorio de Windows
@@ -192,6 +203,7 @@ Escritorio de Windows:
 - Google Test
 
 Plataforma universal de Windows (C++/CX):
+
 - Aplicación vacía
 - Aplicación XAML y DirectX 11
 - Aplicación de DirectX 11
@@ -203,6 +215,7 @@ Plataforma universal de Windows (C++/CX):
 - Proyecto de paquete de aplicación de Windows
 
 Linux:
+
 - Aplicación de consola (Linux)
 - Proyecto vacío (Linux)
 - Blink para Raspberry Pi

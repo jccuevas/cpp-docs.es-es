@@ -162,7 +162,7 @@
       href: specifying-the-threading-model-for-a-project-atl.md
     - name: Clases de módulo de ATL
       href: atl-module-classes.md
-    - name: Servicios de ATL
+    - name: servicios ATL
       expanded: false
       items:
         - name: Servicios de ATL
@@ -234,7 +234,7 @@
       items:
         - name: Componente de registro de ATL (Registrador)
           href: atl-registry-component-registrar.md
-        - name: Crear scripts del registrador
+        - name: Creación de scripts de registrador
           expanded: false
           items:
             - name: Crear scripts del registrador
