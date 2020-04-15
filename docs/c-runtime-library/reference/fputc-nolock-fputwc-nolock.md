@@ -1,9 +1,11 @@
 ---
 title: _fputc_nolock, _fputwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fputwc_nolock
 - _fputc_nolock
+- _o__fputc_nolock
+- _o__fputwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: e49191dfd6e4d360a8dd3123d6a84320b4de8a08
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f1ad79a1517783a48de887ccf2294d7a8018f70e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956949"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346253"
 ---
 # <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -62,21 +65,23 @@ wint_t _fputwc_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*C*<br/>
 Carácter que se va a escribir.
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Cada una de estas funciones devuelve el carácter escrito. Para obtener información sobre errores, consulte [fputc, fputwc](fputc-fputwc.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**_fputc_nolock** y **_fputwc_nolock** son idénticos a **fputc** y **fputwc**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_fputc_nolock** y **_fputwc_nolock** son idénticos a **fputc** y **fputwc**, respectivamente, excepto que no están protegidos contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
-Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_nolock** no admite actualmente la salida en un flujo Unicode.
+Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_nolock** no admite actualmente la salida en una secuencia UNICODE.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -91,7 +96,7 @@ Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Se deben redirigir los identificadores de flujo estándar que están asociados a la consola (**stdin**, **stdout**y **stderr**) antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la Plataforma universal de Windows (UWP). Los identificadores de secuencia estándar asociados a la consola **(stdin,** **stdout**y **stderr)** deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -118,7 +123,7 @@ int main( void )
 This is a test of _fputc_nolock!!
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>

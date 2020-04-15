@@ -1,8 +1,9 @@
 ---
 title: rewind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rewind
+- _o_rewind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949276"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338088"
 ---
 # <a name="rewind"></a>rewind
 
@@ -48,30 +50,32 @@ void rewind(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **Rewind** cambia la posición del puntero de archivo asociado al *flujo* al principio del archivo. Una llamada a **rewind** es similar a
+La función **rebobinar** cambia la posición del puntero de archivo asociado a la *secuencia* al principio del archivo. Una llamada a **rewind** es similar a
 
-**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
+**(void) fseek(** _stream_**, 0L, SEEK_SET );**
 
-Sin embargo, a diferencia de [fseek](fseek-fseeki64.md), el **rebobinado** borra los indicadores de error de la secuencia, así como el indicador de fin de archivo. Además, a diferencia de [fseek](fseek-fseeki64.md), el **rebobinado** no devuelve un valor para indicar si el puntero se ha colocado correctamente.
+Sin embargo, a diferencia de [fseek](fseek-fseeki64.md), **rewind** borra los indicadores de error para la secuencia, así como el indicador de fin de archivo. Además, a diferencia de [fseek](fseek-fseeki64.md), **rewind** no devuelve un valor para indicar si el puntero se movió correctamente.
 
-Para borrar el búfer del teclado, use el **rebobinado** con la secuencia **stdin**, que está asociada con el teclado de forma predeterminada.
+Para borrar el búfer del teclado, utilice **rebobinar** con la secuencia **stdin**, que está asociada con el teclado de forma predeterminada.
 
-Si Stream es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** se establece en **EINVAL**.
+Si stream es un puntero **NULL,** se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve y **errno** se establece en **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**rewind**|\<stdio.h>|
+|**Rebobinado**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -110,13 +114,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Output
 
 ```Output
 The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>

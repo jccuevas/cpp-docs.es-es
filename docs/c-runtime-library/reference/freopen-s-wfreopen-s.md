@@ -1,9 +1,11 @@
 ---
 title: freopen_s, _wfreopen_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wfreopen_s
 - freopen_s
+- _o__wfreopen_s
+- _o_freopen_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 30cd1612045a9f9a69e6ac856a601bac3101467f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a24e34ead905d2f704bfbf4d829064c656272e97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956700"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345917"
 ---
 # <a name="freopen_s-_wfreopen_s"></a>freopen_s, _wfreopen_s
 
@@ -68,21 +71,23 @@ Puntero al puntero de archivo que la llamada va a proporcionar.
 *path*<br/>
 Ruta de acceso del nuevo archivo.
 
-*mode*<br/>
+*Modo*<br/>
 Tipo de acceso permitido.
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Cada una de estas funciones devuelve un código de error. Si se produce un error, el archivo original se cierra.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **freopen_s** cierra el archivo asociado actualmente a *Stream* y reasigna *Stream* al archivo especificado por *path*. **_wfreopen_s** es una versión con caracteres anchos de **_freopen_s**; los argumentos de *modo* y *ruta de acceso* a **_wfreopen_s** son cadenas de caracteres anchos. **_wfreopen_s** y **_freopen_s** se comportan de manera idéntica.
+La función **freopen_s** cierra el archivo asociado actualmente a *la secuencia* y reasigna la *secuencia* al archivo especificado por *path*. **_wfreopen_s** es una versión de caracteres anchos de **_freopen_s;** los argumentos *de ruta* de acceso y *modo* para **_wfreopen_s** son cadenas de caracteres anchos. **_wfreopen_s** y **_freopen_s** comportarse de forma idéntica de lo contrario.
 
-Si alguno de los valores de *pFile*, *path*, *mode*o *Stream* son **null**, o si *path* es una cadena vacía, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven **EINVAL**.
+Si cualquiera de *pFile*, *path*, *mode*o *stream* son **NULL**, o si *path* es una cadena vacía, estas funciones invocan el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven **EINVAL**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -90,33 +95,33 @@ Si alguno de los valores de *pFile*, *path*, *mode*o *Stream* son **null**, o si
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
-**freopen_s** se suele usar para redirigir los archivos previamente abiertos **stdin**, **stdout**y **stderr** a los archivos especificados por el usuario. El nuevo archivo asociado a *Stream* se abre con el *modo*, que es una cadena de caracteres que especifica el tipo de acceso solicitado para el archivo, como se indica a continuación:
+**freopen_s** se utiliza normalmente para redirigir los archivos preabiertos **stdin**, **stdout**y **stderr** a los archivos especificados por el usuario. El nuevo archivo asociado a *la secuencia* se abre con *mode*, que es una cadena de caracteres que especifica el tipo de acceso solicitado para el archivo, como se indica a continuación:
 
-|*mode*|Access|
+|*Modo*|Acceso|
 |-|-|
-| **"r"** | Abre para lectura. Si el archivo no existe o no se encuentra, se produce un error en la llamada a **freopen_s** . |
-| **"w"** | Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido. |
-| **"a"** | Abre para escritura al final del archivo (anexo) sin eliminar el marcador de fin de archivo (EOF) antes de que se escriban nuevos datos en el archivo. Crea el archivo si no existe. |
+| **"R"** | Abre para lectura. Si el archivo no existe o no se puede encontrar, se produce un error en la **llamada freopen_s.** |
+| **"W"** | Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido. |
+| **"A"** | Abre para escritura al final del archivo (anexo) sin eliminar el marcador de fin de archivo (EOF) antes de que se escriban nuevos datos en el archivo. Crea el archivo si no existe. |
 | **"r+"** | Abre para lectura y escritura. El archivo debe existir. |
 | **"w+"** | Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido. |
 | **"a+"** | Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe. |
 
-Use los tipos **"w"** y **"w +"** con cuidado, ya que pueden destruir archivos existentes.
+Utilice los tipos **"w"** y **"w+"** con cuidado, ya que pueden destruir los archivos existentes.
 
-Cuando un archivo se abre con el tipo de acceso **"a"** o **"a +"** , todas las operaciones de escritura tienen lugar al final del archivo. Aunque se puede cambiar la posición del puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), el puntero de archivo siempre se desplaza al final del archivo antes de que se realice cualquier operación de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse.
+Cuando se abre un archivo con el tipo de acceso **"a"** o **"a+",** todas las operaciones de escritura tienen lugar al final del archivo. Aunque el puntero de archivo se puede cambiar de posición mediante [fseek](fseek-fseeki64.md) o [rebobinado](rewind.md), el puntero de archivo siempre se mueve de nuevo al final del archivo antes de que se lleve a cabo cualquier operación de escritura. Por lo tanto, los datos existentes no se pueden sobrescribir.
 
-El modo **"a"** no quita el marcador EOF antes de anexar al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. El modo **"a +"** quita el marcador EOF antes de anexar al archivo. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El modo **"a +"** es necesario para anexar a un archivo de secuencia que termina con el marcador EOF Ctrl + Z.
+El modo **"a"** no elimina el marcador EOF antes de anexar al archivo. Una vez realizado el anexado, el comando TYPE de MS-DOS solo muestra los datos hasta el marcador EOF original, y no los datos anexados al archivo. El modo **"a+"** elimina el marcador EOF antes de anexar al archivo. Después de anexar, el comando TYPE de MS-DOS muestra todos los datos del archivo. El modo **"a+"** es necesario para anexar a un archivo de secuencia que se termina con el marcador EOF CTRL+Z.
 
-Cuando se especifica el tipo de acceso **"r +"** , **"w +"** o **"a +"** , se permiten la lectura y la escritura (se dice que el archivo está abierto para "actualización"). En cambio, si se cambia entre lectura y escritura, debe haber una operación intermedia [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md). Si se desea, se puede especificar la posición actual para la operación [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) . Además de los valores anteriores, se puede incluir uno de los siguientes caracteres en la cadena de *modo* para especificar el modo de traducción para las nuevas líneas.
+Cuando se especifica el tipo de acceso **"r+"**, **"w+"** o **"a+",** se permiten tanto la lectura como la escritura (se dice que el archivo está abierto para "actualización"). En cambio, si se cambia entre lectura y escritura, debe haber una operación intermedia [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md). La posición actual se puede especificar para la operación [fsetpos](fsetpos.md) o [fseek,](fseek-fseeki64.md) si lo desea. Además de los valores anteriores, se puede incluir uno de los siguientes caracteres en la cadena de *modo* para especificar el modo de traducción para las nuevas líneas.
 
-|modificador de *modo*|Modo de traducción|
+|modificador *de modo*|Modo de traducción|
 |-|-|
-| **t** | Abra en modo de texto (traducido). |
-| **b** | Abrir en modo binario (sin traducir); se suprimen las traducciones que implican caracteres de retorno de carro y avance de línea. |
+| **T** | Abra en modo de texto (traducido). |
+| **B** | Abrir en modo binario (sin traducir); se suprimen las traducciones que implican caracteres de retorno de carro y de avance de línea. |
 
-En el modo de texto (traducido), las combinaciones de retorno de carro y avance de línea (CR-LF) se traducen en caracteres de avance de línea (LF) en la entrada; Los caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura o para escritura y lectura con **"a +"** , la biblioteca en tiempo de ejecución comprueba si hay un Ctrl + Z al final del archivo y lo quita, si es posible. Esto se hace porque el uso de [fseek](fseek-fseeki64.md) y [ftell](ftell-ftelli64.md) para desplace dentro de un archivo puede hacer que [fseek](fseek-fseeki64.md) se comporte de forma incorrecta cerca del final del archivo. La opción **t** es una extensión de Microsoft que no se debe usar si se desea disponer de portabilidad ANSI.
+En el modo de texto (traducido), las combinaciones de avance de línea de retorno de carro (CR-LF) se traducen en caracteres de alimentación de línea única (LF) en la entrada; Los caracteres LF se traducen a combinaciones CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para leer o para escribir y leer con **"a+",** la biblioteca en tiempo de ejecución comprueba si hay CTRL+Z al final del archivo y la elimina, si es posible. Esto se hace porque el uso de [fseek](fseek-fseeki64.md) y [ftell](ftell-ftelli64.md) para moverse dentro de un archivo puede hacer que [fseek](fseek-fseeki64.md) se comporte incorrectamente cerca del final del archivo. La opción **t** es una extensión de Microsoft que no se debe utilizar cuando se desea la portabilidad ANSI.
 
-Si **t** o **b** no se especifican en el *modo*, el modo de traducción predeterminado se define mediante la variable global [_fmode](../../c-runtime-library/fmode.md). Si **t** o **b** tiene como prefijo el argumento, la función produce un error y devuelve **null**.
+Si **t** o **b** no se da en *modo*, el modo de traducción predeterminado se define mediante la variable global [_fmode](../../c-runtime-library/fmode.md). Si **t** o **b** tiene como prefijo el argumento, se produce un error en la función y devuelve **NULL**.
 
 Para obtener una descripción de los modos de texto y binario, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
@@ -127,7 +132,7 @@ Para obtener una descripción de los modos de texto y binario, consulte [E/S de 
 |**freopen_s**|\<stdio.h>|
 |**_wfreopen_s**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la Plataforma universal de Windows (UWP). Los identificadores de secuencia estándar asociados a la consola, **stdin,** **stdout**y **stderr**, deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -164,7 +169,7 @@ successfully reassigned
 This will go to the file 'freopen.out'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [freopen, _wfreopen](freopen-wfreopen.md)<br/>

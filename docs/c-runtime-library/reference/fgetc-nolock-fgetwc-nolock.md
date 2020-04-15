@@ -1,9 +1,11 @@
 ---
 title: _fgetc_nolock, _fgetwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fgetc_nolock
 - _fgetwc_nolock
+- _o__fgetc_nolock
+- _o__fgetwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 5bc2ff8e8ca36a9c6acee821d1507767f4b1a0d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8d0fea4a663828eb0997bc5ccc43b800d0d1e513
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940882"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346945"
 ---
 # <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock, _fgetwc_nolock
 
@@ -62,16 +65,18 @@ wint_t _fgetwc_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Consulte [fgetc, fgetwc](fgetc-fgetwc.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-**_fgetc_nolock** y **_fgetwc_nolock** son idénticos a **fgetc** y **fgetwc**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_fgetc_nolock** y **_fgetwc_nolock** son idénticos a **fgetc** y **fgetwc**, respectivamente, excepto que no están protegidos de interferencias por otros hilos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -86,7 +91,7 @@ Consulte [fgetc, fgetwc](fgetc-fgetwc.md).
 |**_fgetc_nolock**|\<stdio.h>|
 |**_fgetwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -131,14 +136,14 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Output
 
 ```Output
 Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

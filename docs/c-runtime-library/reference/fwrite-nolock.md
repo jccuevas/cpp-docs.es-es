@@ -1,8 +1,9 @@
 ---
 title: _fwrite_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fwrite_nolock
+- _o__fwrite_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 035ee1d958c6ea6a13481d92311733ded9ed5f2c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9623606cb79dc4c0ac988960545faf3d91c42f9d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956204"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345454"
 ---
 # <a name="_fwrite_nolock"></a>_fwrite_nolock
 
@@ -51,25 +53,27 @@ size_t _fwrite_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*Búfer*<br/>
 Puntero a los datos que se van a escribir.
 
-*size*<br/>
+*Tamaño*<br/>
 Tamaño del elemento en bytes.
 
 *count*<br/>
 Número máximo de elementos que se va a escribir.
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Igual que [fwrite](fwrite.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta función es una versión que no es de bloqueo de **fwrite**. Es idéntico a **fwrite** , salvo que no está protegido frente a interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Esta función es una versión no bloqueante de **fwrite**. Es idéntico a **fwrite,** excepto que no está protegido de interferencias por otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,13 +81,13 @@ Esta función es una versión que no es de bloqueo de **fwrite**. Es idéntico a
 |--------------|---------------------|
 |**_fwrite_nolock**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Consulte el ejemplo de [fread](fread.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fread](fread.md)<br/>

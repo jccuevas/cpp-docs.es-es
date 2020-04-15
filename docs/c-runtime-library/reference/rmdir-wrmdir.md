@@ -1,9 +1,11 @@
 ---
 title: _rmdir, _wrmdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wrmdir
 - _rmdir
+- _o__rmdir
+- _o__wrmdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949217"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338068"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
@@ -65,7 +68,7 @@ Ruta de acceso del directorio que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de-1 indica un error y **errno** se establece en uno de los siguientes valores:
+Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de -1 indica un error y **errno** se establece en uno de los siguientes valores:
 
 |valor de errno|Condición|
 |-|-|
@@ -75,11 +78,13 @@ Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_rmdir** elimina el directorio especificado por *dirname*. El directorio debe estar vacío y no debe ser el directorio de trabajo actual ni el directorio raíz.
 
-**_wrmdir** es una versión con caracteres anchos de **_rmdir**; el argumento *dirname* para **_wrmdir** es una cadena de caracteres anchos. **_wrmdir** y **_rmdir** se comportan de manera idéntica.
+**_wrmdir** es una versión de caracteres anchos de **_rmdir;** el argumento *dirname* que **se va** a _wrmdir es una cadena de caracteres anchos. **_wrmdir** y **_rmdir** comportarse de forma idéntica de lo contrario.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -94,7 +99,7 @@ La función **_rmdir** elimina el directorio especificado por *dirname*. El dire
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -104,7 +109,7 @@ Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-ru
 
 Vea el ejemplo de [_mkdir](mkdir-wmkdir.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _getdrives
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdrives
+- _o__getdrives
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 0733cc00523bb3a7bb019453cc94183a5c2b87e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955076"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344291"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -51,13 +53,17 @@ unsigned long _getdrives( void );
 
 Si la función se realiza correctamente, el valor devuelto es una máscara de bits que representa las unidades de disco disponibles actualmente. La posición de bit 0 (el bit menos significativo) es la unidad A, la posición de bit 1 es la unidad B, la posición de bit 2 es la unidad C y así sucesivamente. Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, llame a **GetLastError**.
 
+## <a name="remarks"></a>Observaciones
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -105,6 +111,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>

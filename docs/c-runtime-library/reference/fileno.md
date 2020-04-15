@@ -1,8 +1,9 @@
 ---
 title: _fileno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fileno
+- _o__fileno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec4f08e499efe82b0ee35235e6e2d86dbb9bab66
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957202"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346837"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -48,21 +50,23 @@ int _fileno(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_fileno** devuelve el descriptor de archivo. No se devuelve ningún error. El resultado es undefined si *Stream* no especifica un archivo abierto. Si Stream es **null**, **_fileno** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** en **EINVAL**.
+**_fileno** devuelve el descriptor de archivo. No se devuelve ningún error. El resultado es indefinido si *la secuencia* no especifica un archivo abierto. Si stream es **NULL**, **_fileno** invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** en **EINVAL**.
 
 Para obtener más información sobre estos y otros códigos error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Si **stdout** o **stderr** no están asociados a un flujo de salida (por ejemplo, en una aplicación de Windows sin una ventana de consola), el descriptor de archivo devuelto es-2. En versiones anteriores, el descriptor de archivo devuelto era -1. Este cambio permite que las aplicaciones distingan esta condición de un error.
+> Si **stdout** o **stderr** no está asociado a una secuencia de salida (por ejemplo, en una aplicación de Windows sin una ventana de consola), el descriptor de archivo devuelto es -2. En versiones anteriores, el descriptor de archivo devuelto era -1. Este cambio permite que las aplicaciones distingan esta condición de un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La rutina **_fileno** devuelve el descriptor de archivo asociado actualmente a la *secuencia*. Esta rutina se implementa como función y como macro. Para obtener información sobre cómo elegir una implementación, consulte [Elegir entre funciones y macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+La rutina **_fileno** devuelve el descriptor de archivo asociado actualmente a *stream*. Esta rutina se implementa como función y como macro. Para obtener información sobre cómo elegir una implementación, consulte [Elegir entre funciones y macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,7 +74,7 @@ La rutina **_fileno** devuelve el descriptor de archivo asociado actualmente a l
 |--------------|---------------------|
 |**_fileno**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -96,7 +100,7 @@ The file descriptor for stdout is 1
 The file descriptor for stderr is 2
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>

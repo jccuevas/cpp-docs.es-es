@@ -1,10 +1,11 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347553"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -68,20 +70,22 @@ long double fabsl(
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **FABS** devuelven el valor absoluto del argumento *x*. No se devuelve ningún error.
+Las **funciones fabs** devuelven el valor absoluto del argumento *x*. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-C++permite las sobrecargas, de modo que puede llamar a las sobrecargas de FABS \<si incluye el encabezado de > cmath. En un programa de C, **FABS** siempre toma y devuelve un **valor Double**.
+C++ permite la sobrecarga, por lo que puede llamar \<a sobrecargas de **fabs** si incluye el encabezado cmath>. En un programa C, **fabs** siempre toma y devuelve un **doble**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,13 +93,13 @@ C++permite las sobrecargas, de modo que puede llamar a las sobrecargas de FABS \
 |--------------|-----------------------|---------------------------|
 |**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
 Consulte el ejemplo de [abs](abs-labs-llabs-abs64.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

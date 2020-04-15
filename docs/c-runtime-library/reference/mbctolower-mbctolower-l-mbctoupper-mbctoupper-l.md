@@ -1,11 +1,15 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49915a4017040200afca950cee5e1ac31184c589
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341061"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -80,7 +85,7 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*C*<br/>
 Carácter multibyte que se va a convertir.
 
 *locale*<br/>
@@ -88,20 +93,22 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve el carácter convertido *c*, si es posible. En caso contrario, devuelve el carácter *c* sin modificar.
+Cada una de estas funciones devuelve el carácter convertido *c*, si es posible. De lo contrario, devuelve el carácter *c* sin cambios.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las funciones prueban un carácter *c* y, si es posible, aplican una de las conversiones siguientes.
+Las funciones prueban un carácter *c* y, si es posible, aplican una de las siguientes conversiones.
 
 |Rutinas|Convierte|
 |--------------|--------------|
 |**_mbctolower**, **_mbctolower_l**|Carácter en mayúscula en carácter en minúscula.|
 |**_mbctoupper**, **_mbctoupper_l**|Carácter en minúscula en carácter en mayúscula.|
 
-El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo **_L** usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el sufijo **_L** es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **sufijo _l** utiliza la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el sufijo **_l** es idéntica, excepto que utiliza el parámetro de configuración regional pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En versiones anteriores, **_mbctolower** se llamaba **jtolower**y **_mbctoupper** se llamaba **jtoupper**. Para código nuevo, use los nombres nuevos.
+En versiones anteriores, **_mbctolower** se llamaba **jtolower,** y **_mbctoupper** se llamaba **jtoupper**. Para código nuevo, use los nombres nuevos.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -119,9 +126,9 @@ En versiones anteriores, **_mbctolower** se llamaba **jtolower**y **_mbctoupper*
 |**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
 |**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

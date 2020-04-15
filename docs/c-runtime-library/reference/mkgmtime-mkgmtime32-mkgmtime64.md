@@ -1,11 +1,13 @@
 ---
 title: _mkgmtime, _mkgmtime32, _mkgmtime64
-description: Describe las funciones de la biblioteca en tiempo de ejecución de _mkgmtime, _mkgmtime32 y _mkgmtime64 y proporciona ejemplos de cómo usarlas.
-ms.date: 12/04/2019
+description: Describe las funciones de biblioteca en tiempo de ejecución de _mkgmtime, _mkgmtime32 y _mkgmtime64 de C y proporciona ejemplos de cómo usarlas.
+ms.date: 4/2/2020
 api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
+- _o__mkgmtime32
+- _o__mkgmtime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e8b3170fc0413a878777035fd76aac5eefa7b6bf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857741"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338771"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
 
-Convierte una hora UTC representada por un **struct** **TM** en una hora UTC representada por un tipo de **time_t** .
+Convierte una hora UTC representada por una **struct** **tm** a una hora UTC representada por un tipo **de time_t.**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -65,26 +68,28 @@ __time64_t _mkgmtime64(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-\ *timeptr*
-Puntero a la hora UTC como **struct** **TM** que se va a convertir.
+*timeptr*\
+Un puntero a la hora UTC como una **estructura** **tm** para convertir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cantidad de tipo **__time32_t** o **__time64_t** que representa el número de segundos transcurridos desde la medianoche del 1 de enero de 1970, en hora universal coordinada (UTC). Si la fecha está fuera del intervalo (vea la sección comentarios) o la entrada no se puede interpretar como una hora válida, el valor devuelto es-1.
+Una cantidad de **tipo __time32_t** o **__time64_t** que representa el número de segundos transcurridos desde la medianoche, 1 de enero de 1970, en la hora universal coordinada (UTC). Si la fecha está fuera del rango (consulte la sección Comentarios) o la entrada no se puede interpretar como una hora válida, el valor devuelto es -1.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Las funciones **_mkgmtime32** y **_mkgmtime64** convierten una hora UTC en un tipo de **__time32_t** o **__time64_t** que representa la hora en UTC. Para convertir una hora local a la hora UTC, use **mktime**, **_mktime32**y **_mktime64** en su lugar.
+Las funciones **_mkgmtime32** y **_mkgmtime64** convierten una hora UTC en un tipo **de __time32_t** o **__time64_t** que representa la hora en UTC. Para convertir una hora local a hora UTC, utilice **mktime**, **_mktime32**y **_mktime64** en su lugar.
 
-**_mkgmtime** es una función insertada que se evalúa como **_mkgmtime64**y **time_t** es equivalente a **__time64_t**. Si necesita forzar al compilador a interpretar **time_t** como la **time_t**de 32 bits anterior, puede definir **_USE_32BIT_TIME_T**. No se recomienda porque la aplicación puede producir un error después del 18 de enero de 2038, el intervalo máximo de un **time_t**de 32 bits. No está permitida en las plataformas de 64 bits.
+**_mkgmtime** es una función en línea que se evalúa como **_mkgmtime64**y **time_t** equivalente a **__time64_t**. Si necesita forzar al compilador a interpretar **time_t** como el **antiguo time_t**de 32 bits, puede definir **_USE_32BIT_TIME_T**. No se recomienda, ya que la aplicación podría fallar después del 18 de enero de 2038, el intervalo máximo de un **time_t**de 32 bits. No está permitido en absoluto en plataformas de 64 bits.
 
-La estructura de tiempo pasada se cambia como se indica a continuación, de la misma manera en que la **_mktime** funciones: los campos **tm_wday** y **tm_yday** se establecen en nuevos valores basados en los valores de **tm_mday** y **tm_year**. Dado que se supone que la hora es UTC, se omite el campo **tm_isdst** .
+La estructura de tiempo que se pasa se cambia de la siguiente manera, de la misma manera que cambia las funciones **_mktime:** los campos **tm_wday** y **tm_yday** se establecen en nuevos valores en función de los valores de **tm_mday** y **tm_year**. Dado que se supone que la hora es UTC, se omite el campo **tm_isdst.**
 
-El intervalo de la función **_mkgmtime32** va desde la medianoche del 1 de enero de 1970, hora utc a 23:59:59 del 18 de enero de 2038, UTC. El intervalo de **_mkgmtime64** va desde la medianoche del 1 de enero de 1970, utc a 23:59:59, 31 de diciembre de 3000, UTC. Una fecha fuera del intervalo da como resultado un valor devuelto de-1. El intervalo de **_mkgmtime** depende de si se define **_USE_32BIT_TIME_T** . Cuando no se define, que es el valor predeterminado, el intervalo es igual que **_mkgmtime64**. De lo contrario, el intervalo se limita al intervalo de 32 bits de **_mkgmtime32**.
+El rango de la función **_mkgmtime32** es de medianoche, 1 de enero de 1970, UTC a 23:59:59 enero 18, 2038, UTC. El rango de **_mkgmtime64** es de medianoche, 1 de enero de 1970, UTC a 23:59:59, 31 de diciembre de 3000, UTC. Una fecha fuera del intervalo da como resultado un valor devuelto de -1. El intervalo de **_mkgmtime** depende de si se define **_USE_32BIT_TIME_T.** Cuando no está definido, que es el valor predeterminado, el intervalo es el mismo que **_mkgmtime64**. De lo contrario, el intervalo se limita al rango de 32 bits de **_mkgmtime32**.
 
-Tanto **gmtime** como **localtime** usan un búfer estático común para la conversión. Si proporciona este búfer a **_mkgmtime**, se destruye el contenido anterior.
+Tanto **gmtime** como **localtime** utilizan un búfer estático común para la conversión. Si proporciona este búfer a **_mkgmtime**, se destruye el contenido anterior.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -133,7 +138,7 @@ Local Time: Thu Feb 15 17:14:52 2007
 Greenwich Mean Time: Fri Feb 16 01:14:52 2007
 ```
 
-En el ejemplo siguiente se muestra cómo rellenar la estructura incompleta mediante **_mkgmtime**. Calcula valores para el día de la semana y para el año.
+En el ejemplo siguiente se muestra cómo se rellena la estructura incompleta con **_mkgmtime**. Calcula los valores para el día de la semana y del año.
 
 ```C
 // crt_mkgmtime2.c
@@ -177,9 +182,9 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 t.tm_yday = 42
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Administración del tiempo](../../c-runtime-library/time-management.md)\
+[Gestión del tiempo](../../c-runtime-library/time-management.md)\
 [asctime, _wasctime](asctime-wasctime.md)\
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)\
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)\

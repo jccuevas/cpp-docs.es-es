@@ -1,10 +1,12 @@
 ---
 title: _getcwd, _wgetcwd
-description: Funciones de la biblioteca en tiempo de ejecución de C _getcwd, _wgetcwd obtener el directorio de trabajo actual.
-ms.date: 09/24/2019
+description: C Las funciones de la biblioteca en tiempo de ejecución _getcwd, _wgetcwd obtener el directorio de trabajo actual.
+ms.date: 4/2/2020
 api_name:
 - _wgetcwd
 - _getcwd
+- _o__getcwd
+- _o__wgetcwd
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: bc19a416ebebeb901e8dbb435971e6d5f33e4067
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274625"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344441"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -63,27 +66,29 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>Parámetros
 
-*búfer*\
+*Búfer*\
 Ubicación de almacenamiento de la ruta de acceso.
 
-*Maxlen*\
-Longitud máxima de la ruta de acceso en caracteres: **Char** para **_getcwd** y **wchar_t** para **_wgetcwd**.
+*maxlen*\
+Longitud máxima de la ruta de acceso en caracteres: **char** para **_getcwd** y **wchar_t** para **_wgetcwd**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero al *búfer*. Un valor devuelto **null** indica un error y **errno** se establece en **ENOMEM**, lo que indica que no hay memoria suficiente para asignar *Maxlen* bytes (cuando se proporciona un argumento **null** como *buffer*) o a **ERANGE** , que indica que la ruta de acceso tiene más de *Maxlen* caracteres. Si *Maxlen* es menor o igual que cero, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Devuelve un puntero al *búfer*. Un valor devuelto **NULL** indica un error y **errno** se establece en **ENOMEM**, lo que indica que no hay memoria suficiente para asignar bytes *maxlen* (cuando se proporciona un argumento **NULL** como *búfer),* o en **ERANGE**, lo que indica que la ruta de acceso es más larga que los caracteres *maxlen.* Si *maxlen* es menor o igual que cero, esta función invoca un controlador de parámetros no válido, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_getcwd** obtiene la ruta de acceso completa del directorio de trabajo actual para la unidad predeterminada y la almacena en el *búfer*. El argumento de entero *Maxlen* especifica la longitud máxima de la ruta de acceso. Se produce un error si la longitud de la ruta de acceso (incluido el carácter nulo de terminación) supera el valor de *Maxlen*. El argumento de *búfer* puede ser **null**; se asigna automáticamente un búfer de al menos el tamaño *Maxlen* (más solo si es necesario), mediante **malloc**, para almacenar la ruta de acceso. Este búfer se puede liberar más adelante llamando a **Free** y pasándole el valor devuelto de **_getcwd** (un puntero al búfer asignado).
+La función **_getcwd** obtiene la ruta de acceso completa del directorio de trabajo actual para la unidad predeterminada y la almacena en el *búfer.* El argumento entero *maxlen* especifica la longitud máxima de la ruta de acceso. Se produce un error si la longitud de la ruta de acceso (incluido el carácter nulo de terminación) supera *maxlen*. El argumento *buffer* puede ser **NULL**; un búfer de al menos tamaño *maxlen* (más solo si es necesario) se asigna automáticamente, utilizando **malloc,** para almacenar la ruta. Este búfer se puede liberar más adelante llamando a **free** y pasándole el **valor devuelto _getcwd** (un puntero al búfer asignado).
 
-**_getcwd** devuelve una cadena que representa la ruta de acceso del directorio de trabajo actual. Si el directorio de trabajo actual es la raíz, la cadena finaliza con una barra diagonal`\`inversa (). Si el directorio de trabajo actual es un directorio distinto de la raíz, la cadena finaliza con el nombre de directorio y no con una barra diagonal inversa.
+**_getcwd** devuelve una cadena que representa la ruta de acceso del directorio de trabajo actual. Si el directorio de trabajo actual es la raíz, la cadena termina con una barra diagonal inversa (`\`). Si el directorio de trabajo actual es un directorio distinto de la raíz, la cadena finaliza con el nombre de directorio y no con una barra diagonal inversa.
 
-**_wgetcwd** es una versión con caracteres anchos de **_getcwd**; el argumento de *búfer* y el valor devuelto de **_wgetcwd** son cadenas de caracteres anchos. **_wgetcwd** y **_getcwd** se comportan de manera idéntica.
+**_wgetcwd** es una versión de caracteres anchos de **_getcwd;** el argumento *de búfer* y el valor devuelto de **_wgetcwd** son cadenas de caracteres anchos. **_wgetcwd** y **_getcwd** comportarse de forma idéntica de lo contrario.
 
-Cuando se definen **_ Debug y _** **crtdbg_map_alloc** , las llamadas a **_getcwd** y **_wgetcwd** se reemplazan por llamadas a **_getcwd_dbg** y **_wgetcwd_dbg** para permitir la depuración de asignaciones de memoria. Para obtener más información, vea [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+Cuando se definen **_DEBUG** y **_CRTDBG_MAP_ALLOC,** las llamadas a **_getcwd** y **_wgetcwd** se reemplazan por llamadas a **_getcwd_dbg** y **_wgetcwd_dbg** para permitir la depuración de asignaciones de memoria. Para obtener más información, vea [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -98,7 +103,7 @@ Cuando se definen **_ Debug y _** **crtdbg_map_alloc** , las llamadas a **_getcw
 |**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<direct.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -135,9 +140,9 @@ int main( void )
 C:\Code
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de directorio](../../c-runtime-library/directory-control.md)\
+[Control de directorios](../../c-runtime-library/directory-control.md)\
 [_chdir, _wchdir](chdir-wchdir.md)\
 [_mkdir, _wmkdir](mkdir-wmkdir.md)\
 [_rmdir, _wrmdir](rmdir-wrmdir.md)

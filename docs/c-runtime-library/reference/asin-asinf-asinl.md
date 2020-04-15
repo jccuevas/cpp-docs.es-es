@@ -1,10 +1,11 @@
 ---
 title: asin, asinf, asinl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinf
 - asinl
 - asin
+- _o_asin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943649"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334131"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -58,24 +60,26 @@ long double asin( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor cuyo arcoseno se va a calcular.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La función **Asin** devuelve el arcoseno (la función sinusoidal inversa) de *x* en el intervalo-π/2 a π/2 radianes.
+La función **asin** devuelve el arcoseno (la función de seno inverso) de *x* en el rango - s/2 a 2 radianes.
 
-De forma predeterminada, si *x* es menor que-1 o mayor que 1, **Asin** devuelve un valor indefinido.
+De forma predeterminada, si *x* es menor que -1 o mayor que 1, **asin** devuelve un indefinido.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**INVALID**|**_DOMAIN**|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
-|&#124;x&#124;>1|**INVALID**|**_DOMAIN**|
+|± ∞|**No válido**|**_DOMAIN**|
+|• **QNAN**, **IND**|None|**_DOMAIN**|
+|&#124;x&#124;>1|**No válido**|**_DOMAIN**|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Asin** con valores **float** y **Long** **Double** . En un programa de C, **Asin** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **asin** con valores **float** y **long** **double.** En un programa C, **asin** siempre toma y devuelve un **doble**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -87,7 +91,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Asin**
 
 Para obtener más información, consulte [acos, acosf, acosl](acos-acosf-acosl.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

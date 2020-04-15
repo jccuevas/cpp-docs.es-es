@@ -1,8 +1,9 @@
 ---
 title: fflush
-ms.date: 09/11/2019
+ms.date: 4/2/2020
 api_name:
 - fflush
+- _o_fflush
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 401f715e99e6304f0726c8b9c96a71d9582dbc1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077339"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347164"
 ---
 # <a name="fflush"></a>fflush
 
@@ -47,7 +49,7 @@ int fflush(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -55,19 +57,21 @@ Puntero a la estructura **FILE**.
 **fflush** devuelve 0 si el búfer se ha vaciado correctamente. También se devuelve el valor 0 en los casos en que la secuencia especificada no tiene ningún búfer o solo se abre para lectura. Un valor devuelto de **EOF** indica un error.
 
 > [!NOTE]
-> Si **fflush** devuelve **EOF**, es posible que se hayan perdido datos debido a un error de escritura. Al configurar un controlador de errores crítico, es más seguro desactivar el almacenamiento en búfer con la función **setvbuf (** o usar rutinas de e/s de bajo nivel, como **_open**, **_close**y **_write** en lugar de las funciones de e/s de secuencias.
+> Si **fflush** devuelve **EOF,** es posible que se hayan perdido datos debido a un error de escritura. Al configurar un controlador de errores crítico, es más seguro desactivar el almacenamiento en búfer con la función **setvbuf** o utilizar rutinas de E/S de bajo nivel como **_open**, **_close**y **_write** en lugar de las funciones de E/S de secuencia.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **fflush** vacía el *flujo*de la secuencia. Si la secuencia se ha abierto en modo de escritura, o se ha abierto en modo de actualización y la última operación ha sido una operación de escritura, el contenido del búfer de la secuencia se escribe en el archivo o dispositivo subyacentes y el búfer se descarta. Si la secuencia se abrió en modo de lectura, o si la secuencia no tiene ningún búfer, la llamada a **fflush** no tiene ningún efecto y se conserva cualquier búfer. Una llamada a **fflush** niega el efecto de cualquier llamada anterior a **ungetc** para la secuencia. La secuencia sigue abierta después de la llamada.
+La función **fflush** vacía la *secuencia*de flujo . Si la secuencia se ha abierto en modo de escritura, o se ha abierto en modo de actualización y la última operación ha sido una operación de escritura, el contenido del búfer de la secuencia se escribe en el archivo o dispositivo subyacentes y el búfer se descarta. Si la secuencia se abrió en modo de lectura, o si la secuencia no tiene búfer, la llamada a **fflush** no tiene ningún efecto y se conserva cualquier búfer. Una llamada a **fflush** niega el efecto de cualquier llamada anterior a **ungetc** para la secuencia. La secuencia sigue abierta después de la llamada.
 
-Si *Stream* es **null**, el comportamiento es el mismo que una llamada a **fflush** en cada flujo abierto. Se vacían todas las secuencias abiertas en modo de escritura y en modo de actualización en las que la última operación ha sido de escritura. La llamada no tiene ningún efecto en otras secuencias.
+Si *stream* es **NULL**, el comportamiento es el mismo que una llamada a **fflush** en cada secuencia abierta. Se vacían todas las secuencias abiertas en modo de escritura y en modo de actualización en las que la última operación ha sido de escritura. La llamada no tiene ningún efecto en otras secuencias.
 
-Normalmente, el sistema operativo mantiene los búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra una secuencia o cuando un programa finaliza con normalidad sin cerrar la secuencia. La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escriben directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a COMMODE.OBJ. En el archivo ejecutable resultante, las llamadas a **_flushall** escriben el contenido de todos los búferes en el disco. COMMODE. OBJ solo afecta a **_flushall** y **fflush** .
+Normalmente, el sistema operativo mantiene los búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra una secuencia o cuando un programa finaliza con normalidad sin cerrar la secuencia. La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escriben directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a COMMODE.OBJ. En el archivo ejecutable resultante, las llamadas a **_flushall** escribir el contenido de todos los búferes en el disco. COMMODE.OBJ solo afecta **_flushall** y **fflush.**
 
 Para obtener información sobre cómo controlar la característica de confirmación en disco, consulte [E/S de secuencia](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) y [_fdopen](fdopen-wfdopen.md).
 
-Esta función bloquea el subproceso de llamada y por lo tanto es segura para subprocesos. Para obtener una versión que no sea de bloqueo, consulte **_fflush_nolock**.
+Esta función bloquea el subproceso de llamada y por lo tanto es segura para subprocesos. Para obtener una versión sin bloqueo, consulte **_fflush_nolock**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +79,7 @@ Esta función bloquea el subproceso de llamada y por lo tanto es segura para sub
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

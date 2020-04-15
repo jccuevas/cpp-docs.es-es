@@ -1,9 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333153"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -68,7 +70,7 @@ Tamaño del búfer de destino.
 Objeto de origen.
 
 *count*<br/>
-Número de bytes (**memmove_s**) o caracteres (**wmemmove_s**) que se van a copiar.
+Número de bytes (**memmove_s**) o caracteres (**wmemmove_s**) para copiar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -78,15 +80,17 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |*dest*|*numberOfElements*|*src*|Valor devuelto|Contenido de *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|no modificado|
-|any|any|**NULL**|**EINVAL**|no modificado|
-|any|< *contabiliza*|any|**ERANGE**|no modificado|
+|**Null**|cualquiera|cualquiera|**EINVAL**|no modificado|
+|cualquiera|cualquiera|**Null**|**EINVAL**|no modificado|
+|cualquiera|< *Contar*|cualquiera|**ERANGE**|no modificado|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Copia los bytes de *número* de caracteres de *src* a *dest*. Si algunas regiones del área de origen y de destino se superponen, **memmove_s** garantiza que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.
+Copia los bytes de *recuento* de caracteres de *src* a *dest*. Si algunas regiones del área de origen y el destino se superponen, **memmove_s** garantiza que los bytes de origen originales de la región superpuesta se copien antes de sobrescribirse.
 
-Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecen **errno** en **EINVAL**.
+Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válido, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y **establecen errno en** **EINVAL**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -95,7 +99,7 @@ Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado 
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -126,14 +130,14 @@ int main()
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Output
 
 ```Output
 Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación del búfer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _fread_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fread_nolock
+- _o__fread_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 2d896e3809d22c0f2752ef67c89233652bdade19
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97b37b4fee85a827faa4b309741afe56d8d0cbb9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956870"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346098"
 ---
 # <a name="_fread_nolock"></a>_fread_nolock
 
@@ -53,25 +55,27 @@ size_t _fread_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*buffer*<br/>
+*Búfer*<br/>
 Ubicación de almacenamiento de los datos.
 
-*size*<br/>
+*Tamaño*<br/>
 Tamaño del elemento en bytes.
 
 *count*<br/>
 Número máximo de elementos que se va a leer.
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Consulte [fread](fread.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta función es una versión que no es de bloqueo de **fread**. Es idéntico a **fread** , salvo que no está protegido frente a interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Esta función es una versión no bloqueante de **fread**. Es idéntico a **fread** excepto que no está protegido de interferencias por otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -79,9 +83,9 @@ Esta función es una versión que no es de bloqueo de **fread**. Es idéntico a 
 |--------------|---------------------|
 |**_fread_nolock**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

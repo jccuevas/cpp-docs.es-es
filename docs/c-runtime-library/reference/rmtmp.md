@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338032"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -53,7 +55,9 @@ int _rmtmp( void );
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_rmtmp** limpia todos los archivos temporales del directorio actual. La función quita solo los archivos creados por **tmpfile**; Úselo solo en el mismo directorio en el que se crearon los archivos temporales.
+La función **_rmtmp** limpia todos los archivos temporales del directorio actual. La función elimina solo los archivos creados por **tmpfile**; utilizarlo sólo en el mismo directorio en el que se crearon los archivos temporales.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -61,7 +65,7 @@ La función **_rmtmp** limpia todos los archivos temporales del directorio actua
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

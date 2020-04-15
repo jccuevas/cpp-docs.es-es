@@ -1,6 +1,6 @@
 ---
 title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fstat32
 - _fstat64
@@ -8,6 +8,10 @@ api_name:
 - _fstat
 - _fstat64i32
 - _fstat32i64
+- _o__fstat32
+- _o__fstat32i64
+- _o__fstat64
+- _o__fstat64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 1ab71071fdf5578295cfcd72f79930787e634d5f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 02d297fec2ada545a8b693abacfecc7981149dae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956462"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345670"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -94,44 +99,46 @@ int _fstat64i32(
 
 ### <a name="parameters"></a>Parámetros
 
-*fd*<br/>
+*Fd*<br/>
 Descriptor del archivo abierto.
 
-*buffer*<br/>
+*Búfer*<br/>
 Puntero a la estructura en que se van a almacenar los resultados.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve 0 si se obtiene la información de estado de archivo. Un valor devuelto de-1 indica un error. Si el descriptor de archivo no es válido o el *búfer* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EBADF**, en el caso de un descriptor de archivo no válido o en **EINVAL**, si *buffer* es **null**.
+Devuelve 0 si se obtiene la información de estado de archivo. Un valor devuelto de -1 indica un error. Si el descriptor de archivo no es válido o *el búfer* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EBADF**, en el caso de un descriptor de archivo no válido, o en **EINVAL**, si *buffer* es **NULL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_fstat** obtiene información sobre el archivo abierto asociado a *FD* y lo almacena en la estructura a la que apunta el *búfer*. La estructura **_stat** , definida en SYS\Stat.h, contiene los siguientes campos.
+La función **_fstat** obtiene información sobre el archivo abierto asociado a *fd* y lo almacena en la estructura señalada por *buffer*. La estructura **_stat,** definida en SYS-Stat.h, contiene los siguientes campos.
 
 |Campo|Significado|
 |-|-|
 | **st_atime** | Hora del último acceso al archivo. |
 | **st_ctime** | Hora de creación del archivo. |
-| **st_dev** | Si es un dispositivo, *FD*; de lo contrario, es 0. |
-| **st_mode** | Máscara de bits para información de modo de archivo. El bit **_S_IFCHR** se establece si *FD* hace referencia a un dispositivo. El bit **_S_IFREG** se establece si *FD* hace referencia a un archivo normal. Los bits de lectura y escritura se establecen según el modo de permiso del archivo. **_S_IFCHR** y otras constantes se definen en SYS\Stat.h. |
+| **st_dev** | Si un dispositivo, *fd*; de lo contrario 0. |
+| **st_mode** | Máscara de bits para información de modo de archivo. El **bit _S_IFCHR** se establece si *fd* hace referencia a un dispositivo. El bit **_S_IFREG** se establece si *fd* hace referencia a un archivo normal. Los bits de lectura y escritura se establecen según el modo de permiso del archivo. **_S_IFCHR** y otras constantes se definen en SYS-Stat.h. |
 | **st_mtime** | Hora de la última modificación del archivo. |
 | **st_nlink** | Siempre 1 en sistemas de archivos que no son NTFS. |
-| **st_rdev** | Si es un dispositivo, *FD*; de lo contrario, es 0. |
+| **st_rdev** | Si un dispositivo, *fd*; de lo contrario 0. |
 | **st_size** | Tamaño del archivo en bytes. |
 
-Si *FD* hace referencia a un dispositivo, los campos **st_atime**, **st_ctime**, **st_mtime**y **st_size** no son significativos.
+Si *fd* hace referencia a un dispositivo, los campos **st_atime**, **st_ctime**, **st_mtime**y **st_size** no son significativos.
 
 Dado que Stat.h usa el tipo [_dev_t](../../c-runtime-library/standard-types.md), que se define en Types.h, debe incluirse Types.h antes de Stat.h en el código.
 
-**_fstat64**, que usa la estructura **__stat64** , permite expresar fechas de creación de archivos hasta 23:59:59, 31 de diciembre de 3000, UTC; mientras que las demás funciones solo representan fechas hasta el 23:59:59 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
+**_fstat64**, que utiliza la estructura **__stat64,** permite que las fechas de creación de archivos se expresen hasta las 23:59:59, 31 de diciembre de 3000, UTC; mientras que las otras funciones sólo representan fechas hasta las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 
-Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y longitudes de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tipo de tiempo utilizado. el segundo sufijo es **I32** o **i64**, que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits.
+Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y longitudes de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tipo de tiempo utilizado; el segundo sufijo es **i32** o **i64,** lo que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits.
 
-**_fstat** es equivalente a **_fstat64i32**y **struct** **_stat** contiene una hora de 64 bits. Esto es así a menos que se defina **_USE_32BIT_TIME_T** , en cuyo caso el comportamiento anterior está en vigor; **_fstat** usa una hora de 32 bits y **struct** **_stat** contiene un tiempo de 32 bits. Lo mismo se cumple para **_fstati64**.
+**_fstat** es equivalente a **_fstat64i32**y **struct** **_stat** contiene un tiempo de 64 bits. Esto es cierto a menos que se defina **_USE_32BIT_TIME_T,** en cuyo caso el comportamiento antiguo está en vigor; **_fstat** utiliza un tiempo de 32 bits y **struct** **_stat** contiene un tiempo de 32 bits. Lo mismo es cierto para **_fstati64**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Tipo de tiempo y variaciones de tipo de longitud de archivo de _stat
 
-|Funciones|¿_USE_32BIT_TIME_T definida?|Tipo de tiempo|Tipo de longitud de archivo|
+|Functions|¿_USE_32BIT_TIME_T definida?|Tipo de tiempo|Tipo de longitud de archivo|
 |---------------|------------------------------------|---------------|----------------------|
 |**_fstat**|No definida|64 bits|32 bits|
 |**_fstat**|Definido|32 bits|32 bits|
@@ -153,7 +160,7 @@ Las variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits y lon
 |**_fstat32i64**|\<sys/stat.h> y \<sys/types.h>|
 |**_fstat64i32**|\<sys/stat.h> y \<sys/types.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -220,7 +227,7 @@ File size     : 16
 Time modified : Wed May 07 15:25:11 2003
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

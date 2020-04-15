@@ -1,10 +1,12 @@
 ---
 title: _set_app_type
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_app_type
+- _o__set_app_type
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -13,12 +15,12 @@ f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 9791cff55ccd55c32d124ab89cc43ab54c0f9c69
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957922"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360968"
 ---
 # <a name="_set_app_type"></a>_set_app_type
 
@@ -44,15 +46,17 @@ void __cdecl _set_app_type(
 *appType*<br/>
 Valor que indica el tipo de aplicación. Los valores posibles son:
 
-|Valor|DESCRIPCIÓN|
+|Value|Descripción|
 |----------------|-----------------|
 |_crt_unknown_app|Tipo de aplicación desconocido.|
 |_crt_console_app|Aplicación de consola (línea de comandos).|
 |_crt_gui_app|Aplicación GUI (Windows).|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Normalmente, no es necesario llamar a esta función. Forma parte del código de inicio en tiempo de ejecución de C que se ejecuta antes de llamar a `main` en la aplicación.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

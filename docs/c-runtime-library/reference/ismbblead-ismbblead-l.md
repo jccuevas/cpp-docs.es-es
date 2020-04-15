@@ -1,10 +1,12 @@
 ---
 title: _ismbblead, _ismbblead_l
-description: Describe las funciones _ismbblead y _ismbblead_l de la biblioteca en tiempo de ejecución de Microsoft C (CRT).
-ms.date: 01/08/2020
+description: Describe las funciones de _ismbblead y _ismbblead_l de la biblioteca en tiempo de ejecución de Microsoft C (CRT).
+ms.date: 4/2/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
+- _o__ismbblead
+- _o__ismbblead_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: ee3085d49a27f2f3c97c6578463cf3a0598b73c7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755040"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343576"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
-Prueba un carácter para determinar si es un byte inicial de un carácter multibyte.
+Prueba un carácter para determinar si es un byte principal de un carácter multibyte.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -59,35 +62,37 @@ int _ismbblead_l(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-*c*\
+*C*\
 Entero que se va a probar.
 
-\ de *configuración regional*
+*Configuración regional*\
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Devuelve un valor distinto de cero si el entero *c* es el primer byte de un carácter multibyte.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Los caracteres multibyte constan de un byte inicial seguido de un byte final. Los bytes iniciales se distinguen por encontrarse en un rango concreto de un juego de caracteres determinado. Por ejemplo, en la página de códigos 932 solo, los bytes iniciales van de 0x81-0x9F y 0xE0-0xFC.
+Los caracteres multibyte constan de un byte inicial seguido de un byte final. Los bytes iniciales se distinguen por encontrarse en un rango concreto de un juego de caracteres determinado. Por ejemplo, solo en la página de códigos 932, los bytes iniciales van desde 0x81 - 0x9F y 0xE0 - 0xFC.
 
-**_ismbblead** usa la configuración regional actual para el comportamiento dependiente de la configuración regional. **_ismbblead_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbblead** utiliza la configuración regional actual para el comportamiento dependiente de la configuración regional. **_ismbblead_l** es idéntica, excepto que utiliza la configuración regional pasada en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Cuando la configuración regional es UTF-8, **_ismbblead** y **_ismbblead_l** siempre devuelven 0 (false), tanto si *c* es un byte inicial como si no.
+Cuando la configuración regional es UTF-8, **_ismbblead** y **_ismbblead_l** siempre devuelven 0 (false), si *c* es un byte de cliente potencial o no.
 
-**_ismbblead** y **_ismbblead_l** son específicos de Microsoft, no forman parte de la biblioteca estándar de C. No se recomienda usarlas donde quiera código portable. Para la compatibilidad estándar de C, use **mbrlen** en su lugar.
+**_ismbblead** y **_ismbblead_l** son específicos de Microsoft, no parte de la biblioteca Estándar de C. No recomendamos que los use donde desee código portátil. Para la compatibilidad con Standard C, utilice **mbrlen** en su lugar.
 
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones rutinarias de texto genérico
 
 |Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Siempre devuelve false|**_ismbblead**|Siempre devuelve false|
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|Encabezado opcional|
 |-------------|---------------------|---------------------|
@@ -98,8 +103,8 @@ Cuando la configuración regional es UTF-8, **_ismbblead** y **_ismbblead_l** si
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-\ de [clasificación de bytes](../../c-runtime-library/byte-classification.md)
-[_ismbb rutinas](../../c-runtime-library/ismbb-routines.md)\
+[Clasificación de bytes](../../c-runtime-library/byte-classification.md)\
+[rutinas _ismbb](../../c-runtime-library/ismbb-routines.md)\
 [mbrlen](mbrlen.md)

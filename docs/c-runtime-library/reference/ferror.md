@@ -1,8 +1,9 @@
 ---
 title: ferror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ferror
+- _o_ferror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 4efb1b01ac94f1cb2d28bffb1f09b594a0e71479
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e424ffe3f113e50e318d9198bd5f06aaec96852a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347289"
 ---
 # <a name="ferror"></a>ferror
 
@@ -47,18 +49,20 @@ int ferror(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si no se ha producido ningún error en la *secuencia*, **ferror** devuelve 0. De lo contrario, devuelve un valor distinto de cero. Si Stream es **null**, **ferror** invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve 0.
+Si no se ha producido ningún error en la *secuencia,* **ferror** devuelve 0. De lo contrario, devuelve un valor distinto de cero. Si stream es **NULL**, **ferror** invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno en** **EINVAL** y devuelve 0.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La rutina **ferror** (implementada como una función y como una macro) comprueba si hay un error de lectura o escritura en el archivo asociado a la *secuencia*. Si se ha producido un error, el indicador de error del flujo permanece establecido hasta que la secuencia se cierra o se rebobina, o hasta que se llama a **clearerr** en ella.
+La rutina **ferror** (implementada como una función y como una macro) comprueba si hay un error de lectura o escritura en el archivo asociado con *stream*. Si se ha producido un error, el indicador de error de la secuencia permanece establecido hasta que la secuencia se cierra o se vuelve a enrollar, o hasta que se llama **a clearerr** en él.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -72,9 +76,9 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 
 Consulte el ejemplo de [feof](feof.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de errores](../../c-runtime-library/error-handling-crt.md)<br/>
+[Manejo de errores](../../c-runtime-library/error-handling-crt.md)<br/>
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>

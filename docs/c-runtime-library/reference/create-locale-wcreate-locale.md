@@ -1,10 +1,12 @@
 ---
 title: _create_locale, _wcreate_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _create_locale
 - __create_locale
 - _wcreate_locale
+- _o__create_locale
+- _o__wcreate_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
-ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
+ms.openlocfilehash: 611eaf342776b9a0f57c4f55c52a841c3fd13fb5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348254"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -57,7 +60,7 @@ _locale_t _wcreate_locale(
 
 ### <a name="parameters"></a>Parámetros
 
-*category*<br/>
+*Categoría*<br/>
 Categoría.
 
 *locale*<br/>
@@ -65,34 +68,36 @@ Especificador de la configuración regional.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se especifica una configuración *regional* y una *categoría* válidas, devuelve la configuración regional especificada como un objeto **_locale_t** . La configuración regional actual del programa no cambia.
+Si se proporciona una *configuración regional* y una *categoría* válidas, devuelve la configuración regional especificada como un objeto **_locale_t.** La configuración regional actual del programa no cambia.
 
 ## <a name="remarks"></a>Observaciones
 
-La función **_create_locale** permite crear un objeto que representa determinados valores específicos de la región, para su uso en versiones específicas de la configuración regional de muchas funciones de CRT (funciones con el sufijo **_L** ). El comportamiento es similar a **setlocale**, salvo que en lugar de aplicar la configuración regional especificada al entorno actual, la configuración se guarda en una **_locale_t** estructura que se devuelve. La estructura de **_locale_t** se debe liberar mediante [_free_locale](free-locale.md) cuando ya no se necesite.
+La función **_create_locale** permite crear un objeto que representa determinadas configuraciones específicas de la región, para su uso en versiones específicas de la configuración regional de muchas funciones CRT (funciones con el **sufijo _l).** El comportamiento es similar a **setlocale**, excepto que en lugar de aplicar la configuración regional especificada al entorno actual, la configuración se guarda en una estructura **_locale_t** que se devuelve. La estructura **_locale_t** debe liberarse utilizando [_free_locale](free-locale.md) cuando ya no sea necesario.
 
-**_wcreate_locale** es una versión con caracteres anchos de **_create_locale**; el argumento de *configuración regional* para **_wcreate_locale** es una cadena de caracteres anchos. **_wcreate_locale** y **_create_locale** se comportan de manera idéntica.
+**_wcreate_locale** es una versión de caracteres anchos de **_create_locale;** el argumento *de configuración* regional para **_wcreate_locale** es una cadena de caracteres anchos. **_wcreate_locale** y **_create_locale** comportarse de forma idéntica de lo contrario.
 
-El argumento *Category* especifica las partes del comportamiento específico de la configuración regional que se ven afectados. Las marcas que se usan para la *categoría* y las partes del programa a las que afectan son las siguientes:
+El argumento *category* especifica las partes del comportamiento específico de la configuración regional que se ven afectadas. Las banderas utilizadas para la *categoría* y las partes del programa que afectan son como se muestra en esta tabla:
 
-| marca de *categoría* | Afecta a |
+| bandera *de categoría* | Afecta a |
 |-----------------|---------|
 | **LC_ALL** |Todas las categorías, como se indica a continuación. |
-| **LC_COLLATE** |Las funciones **strcoll (** , **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**y **wcsxfrm** . |
+| **LC_COLLATE** |Las **funciones strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**y **wcsxfrm.** |
 | **LC_CTYPE** | Las funciones de control de caracteres (excepto **isdigit**, **isxdigit**, **mbstowcs**y **mbtowc**, que no se ven afectadas). |
-| **LC_MONETARY** | Información de formato de moneda devuelta por la función **localeconv** . |
-| **LC_NUMERIC** | Carácter de separador decimal para las rutinas de salida con formato (por ejemplo, **printf**), para las rutinas de conversión de datos y para la información de formato no monetaria devuelta por **localeconv**. Además del carácter de separador decimal, **LC_NUMERIC** establece el separador de miles y la cadena de control de agrupación devueltas por [localeconv](localeconv.md). |
-| **LC_TIME** | Las funciones **strftime** y **wcsftime** . |
+| **LC_MONETARY** | Información de formato monetario devuelta por la función **localeconv.** |
+| **LC_NUMERIC** | Carácter de punto decimal para las rutinas de salida con formato (como **printf**), para las rutinas de conversión de datos y para la información de formato no monetario devuelta por **localeconv**. Además del carácter decimal, **LC_NUMERIC** establece el separador de miles y la cadena de control de agrupación devuelta por [localeconv](localeconv.md). |
+| **LC_TIME** | Las funciones **strftime** y **wcsftime.** |
 
-Esta función valida los parámetros de *configuración regional* y de *categoría* . Si el parámetro de categoría no es ninguno de los valores especificados en la tabla anterior o si la *configuración regional* es **null**, la función devuelve **null**.
+Esta función valida la *categoría* y los parámetros de *configuración regional.* Si el parámetro category no es uno de los valores especificados en la tabla anterior o si *la configuración regional* es **NULL**, la función devuelve **NULL**.
 
-El argumento de *configuración regional* es un puntero a una cadena que especifica la configuración regional. Para obtener información sobre el formato del argumento de *configuración regional* , consulte [nombres de configuración regional, idiomas y cadenas de país o región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
+El argumento *de configuración* regional es un puntero a una cadena que especifica la configuración regional. Para obtener información sobre el formato del argumento *de configuración regional,* vea Nombres de [configuración regional, idiomas y cadenas](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)de país o región .
 
-El argumento de *configuración regional* puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y un código de país o región, una página de códigos, una cadena de idioma, un código de país o región y una página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles incluye todo lo que admiten los NLS API de Windows. El conjunto de nombres de configuración regional que admite **_create_locale** se describe en [nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). El conjunto de cadenas de idioma y de país o región que admite **_create_locale** se enumeran en cadenas de [idioma](../../c-runtime-library/language-strings.md) y [cadenas de país o región](../../c-runtime-library/country-region-strings.md).
+El argumento *de configuración* regional puede tomar un nombre de configuración regional, una cadena de idioma, una cadena de idioma y un código de país o región, una página de códigos o una cadena de idioma, un código de país o región y una página de códigos. El conjunto de nombres de configuración regional, idiomas, códigos de país o región y páginas de códigos disponibles incluye todos los que son compatibles con la API de Windows NLS. El conjunto de nombres de configuración regional admitidos por **_create_locale** se describen en Nombres de [configuración regional, idiomas y cadenas](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)de país o región . El conjunto de cadenas de idioma y país o región admitidos por **_create_locale** se enumeran en [Cadenas](../../c-runtime-library/language-strings.md) de idioma y Cadenas de [país/región](../../c-runtime-library/country-region-strings.md).
 
 Para obtener más información sobre la configuración regional, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
-El nombre anterior de esta función, **__create_locale** (con dos subrayados iniciales), ha quedado en desuso.
+El nombre anterior de esta función, **__create_locale** (con dos guiones bajos iniciales), ha quedado en desuso.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -101,7 +106,7 @@ El nombre anterior de esta función, **__create_locale** (con dos subrayados ini
 |**_create_locale**|\<locale.h>|
 |**_wcreate_locale**|\<locale.h> o \<wchar.h>|
 
-Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -168,8 +173,8 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ## <a name="see-also"></a>Consulte también
 
 [Nombres de configuración regional, idiomas y cadenas de país/región](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Cadenas de idioma](../../c-runtime-library/language-strings.md)<br/>
-[Country/Region Strings](../../c-runtime-library/country-region-strings.md)<br/>
+[Language Strings](../../c-runtime-library/language-strings.md)<br/>
+[Cadenas de país y región](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
@@ -181,7 +186,7 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [_setmbcp](setmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[strcoll (funciones)](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funciones strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

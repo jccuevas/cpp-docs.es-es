@@ -1,8 +1,9 @@
 ---
 title: _flushall
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _flushall
+- _o__flushall
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: dce7412ccc19d4870494851d366c059ff01de16a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 93181c0fe941a1c5e259e706771495666329bcb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957140"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346620"
 ---
 # <a name="_flushall"></a>_flushall
 
@@ -46,17 +48,19 @@ int _flushall( void );
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_flushall** devuelve el número de flujos abiertos (entrada y salida). No se devuelve ningún error.
+**_flushall** devuelve el número de secuencias abiertas (entrada y salida). No se devuelve ningún error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-De forma predeterminada, la función **_flushall** escribe en los archivos adecuados el contenido de todos los búferes asociados a los flujos de salida abiertos. Se borra el contenido actual de todos los búferes asociados a los flujos de entrada abiertos. Normalmente, el sistema operativo mantiene estos búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra un flujo o cuando un programa finaliza con normalidad sin cerrar flujos.
+De forma predeterminada, la función **_flushall** escribe en los archivos adecuados el contenido de todos los búferes asociados con las secuencias de salida abiertas. Se borra el contenido actual de todos los búferes asociados a los flujos de entrada abiertos. Normalmente, el sistema operativo mantiene estos búferes y determina el momento óptimo para escribir los datos automáticamente en el disco: cuando el búfer está lleno, cuando se cierra un flujo o cuando un programa finaliza con normalidad sin cerrar flujos.
 
-Si una lectura sigue una llamada a **_flushall**, los nuevos datos se leen de los archivos de entrada en los búferes. Todas las secuencias permanecen abiertas después de la llamada a **_flushall**.
+Si una lectura sigue a una llamada a **_flushall**, se leen nuevos datos de los archivos de entrada en los búferes. Todas las secuencias permanecen abiertas después de la llamada a **_flushall**.
 
-La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escribe directamente en el disco y no en los búferes del sistema operativo. Sin tener que volver a escribir un programa existente, puede habilitar esta característica vinculando los archivos objeto del programa a Commode.obj. En el archivo ejecutable resultante, las llamadas a **_flushall** escriben el contenido de todos los búferes en el disco. Commode. obj solo afecta a **_flushall** y [fflush](fflush.md) .
+La característica de confirmación en disco de la biblioteca en tiempo de ejecución permite asegurarse de que los datos críticos se escribe directamente en el disco y no en los búferes del sistema operativo. Sin reescribir un programa existente, puede habilitar esta función vinculando los archivos de objetodel con Commode.obj. En el archivo ejecutable resultante, las llamadas a **_flushall** escribir el contenido de todos los búferes en el disco. Commode.obj solo afecta **a _flushall** y [fflush.](fflush.md)
 
 Para obtener información sobre cómo controlar la característica de confirmación en disco, consulte [E/S de secuencia](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) y [_fdopen](fdopen-wfdopen.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -64,7 +68,7 @@ Para obtener información sobre cómo controlar la característica de confirmaci
 |--------------|---------------------|
 |**_flushall**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -88,7 +92,7 @@ int main( void )
 There were 3 streams flushed
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [_commit](commit.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _msize
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _msize
+- _o__msize
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d5f62bd6111a305c18b0ee19bb6d3e90f2ddb49
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951434"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338667"
 ---
 # <a name="_msize"></a>_msize
 
@@ -55,13 +57,15 @@ Puntero al bloque de memoria.
 
 **_msize** devuelve el tamaño (en bytes) como un entero sin signo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **_msize** devuelve el tamaño, en bytes, del bloque de memoria asignado por una llamada a **calloc**, **malloc**o **realloc**.
 
-Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución de C, **_msize** se resuelve como [_msize_dbg](msize-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
+Cuando la aplicación está vinculada con una versión de depuración de las bibliotecas en tiempo de ejecución de C, **_msize** se resuelve [en _msize_dbg](msize-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Esta función valida su parámetro. Si *memblock* es un puntero nulo, **_msize** invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece **errno** en **EINVAL** y devuelve-1.
+Esta función valida su parámetro. Si *memblock* es un puntero nulo, **_msize** invoca un controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece **errno en** **EINVAL** y devuelve -1.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -69,7 +73,7 @@ Esta función valida su parámetro. Si *memblock* es un puntero nulo, **_msize**
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -79,7 +83,7 @@ Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-ru
 
 Vea el ejemplo de [realloc](realloc.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

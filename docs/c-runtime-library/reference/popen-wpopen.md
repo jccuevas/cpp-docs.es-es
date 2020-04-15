@@ -1,10 +1,12 @@
 ---
 title: _popen, _wpopen
-description: Una referencia para las funciones de la biblioteca en tiempo de ejecución de Microsoft C (CRT) _popen y _wpopen.
-ms.date: 01/28/2020
+description: Una referencia para las funciones _popen de _wpopenbiblioteca en tiempo de ejecución de Microsoft C (CRT) y .
+ms.date: 4/2/2020
 api_name:
 - _popen
 - _wpopen
+- _o__popen
+- _o__wpopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894325"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338514"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -73,35 +76,37 @@ FILE *_wpopen(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-\ de *comandos*
+*Comando*\
 Comando que se va a ejecutar.
 
-\ *modo*
+*Modo*\
 Modo del flujo devuelto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error se debe a un parámetro no válido, **errno** se establece en **EINVAL**. Vea los modos válidos en la sección de comentarios.
+Devuelve un flujo asociado a un extremo de la canalización creada. El otro extremo de la canalización se asocia a la entrada o salida estándar del comando generado. Las funciones devuelven **NULL** si se produce un error. Si el error se debe a un parámetro no válido, **errno** se establece **en EINVAL**. Vea los modos válidos en la sección de comentarios.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-La función **_popen** crea una canalización. A continuación, ejecuta de forma asincrónica una copia generada del procesador de comandos y usa el *comando* como línea de comandos. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
+La función **_popen** crea una tubería. A continuación, ejecuta de forma asincrónica una copia generada del procesador de comandos y utiliza el *comando* como línea de comandos. La cadena de caracteres *mode* especifica el tipo de acceso solicitado, como se indica a continuación.
 
 |Modo de acceso|Descripción|
 |-|-|
-|**"r"**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
-|**"w"**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
-|**"b"**|Abrir en modo binario.|
-|**"t"**|Abrir en modo de texto.|
+|**"R"**|El proceso de llamada puede leer la salida estándar del comando generado mediante el flujo devuelto.|
+|**"W"**|El proceso de llamada puede escribir en la entrada estándar del comando generado mediante el flujo devuelto.|
+|**"B"**|Abrir en modo binario.|
+|**"T"**|Abrir en modo de texto.|
 
 > [!NOTE]
-> Si se usa en un programa de Windows, la función **_popen** devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y la salida, vea [crear un proceso secundario con entrada y salida redirigidas](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el Windows SDK.
+> Si se utiliza en un programa de Windows, la función **_popen** devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. **_popen** funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirige la entrada y la salida, consulte [Creación de un proceso secundario con entrada y salida redirigidas](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) en el Windows SDK.
 
-**_wpopen** es una versión con caracteres anchos de **_popen**; el argumento de *ruta de acceso* para **_wpopen** es una cadena de caracteres anchos. **_wpopen** y **_popen** se comportan de manera idéntica.
+**_wpopen** es una versión de caracteres anchos de **_popen;** el argumento *path* to **_wpopen** es una cadena de caracteres anchos. **_wpopen** y _popen comportarse **de** forma idéntica de lo contrario.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -109,7 +114,7 @@ La función **_popen** crea una canalización. A continuación, ejecuta de forma
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -166,7 +171,7 @@ int main( void )
 }
 ```
 
-Esta salida supone que hay un solo archivo en el directorio actual que tiene una extensión de nombre de archivo `.c`.
+En esta salida se supone que solo hay un `.c` archivo en el directorio actual que tiene una extensión de nombre de archivo.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -181,8 +186,8 @@ Directory of D:\proj\console\test1
 Process returned 0
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-\ [de control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)
+[Control de procesos y medio ambiente](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

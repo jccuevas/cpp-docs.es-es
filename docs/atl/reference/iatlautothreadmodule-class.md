@@ -1,5 +1,5 @@
 ---
-title: IAtlAutoThreadModule (clase)
+title: Clase IAtlAutoThreadModule
 ms.date: 11/04/2016
 f1_keywords:
 - IAtlAutoThreadModule
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAtlAutoThreadModule class
 ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
-ms.openlocfilehash: f65ce43f3e88e1bbff0d2fc012b4ca75d77efc80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4528ca4e4d72518f4da9f30e7aa71d951ddaf5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276372"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330072"
 ---
-# <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule (clase)
+# <a name="iatlautothreadmodule-class"></a>Clase IAtlAutoThreadModule
 
-Esta clase representa una interfaz para un `CreateInstance` método.
+Esta clase representa una `CreateInstance` interfaz para un método.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -27,14 +27,14 @@ Esta clase representa una interfaz para un `CreateInstance` método.
 __interface IAtlAutoThreadModule
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La clase [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) deriva `IAtlAutoThreadModule`, usarlo para proporcionar código para crear un objeto y recuperar un puntero de interfaz.
+La clase [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) `IAtlAutoThreadModule`deriva de , utilizándola para proporcionar código para crear un objeto y recuperar un puntero de interfaz.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlbase.h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general de clases](../../atl/atl-class-overview.md)
