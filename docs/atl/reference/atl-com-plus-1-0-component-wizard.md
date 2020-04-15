@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075281"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321688"
 ---
 # <a name="atl-com-10-component-wizard"></a>Asistente para componentes ATL COM+ 1.0
 
@@ -31,7 +31,7 @@ A partir de Visual Studio 2008, el script de registro producido por este asiste
 
 ## <a name="names"></a>nombres
 
-Especifique los nombres para el objeto, la interfaz y las clases que se van a agregar al proyecto. Excepto en el caso de **Nombre corto**, el resto de los cuadros se pueden editar independientemente de los demás. Si cambia el texto para **Nombre corto**, el cambio se reflejará en los nombres del resto de los cuadros de esta página. Si cambia el nombre **Coclase** en la sección de COM, el cambio se refleja en los cuadros **Tipo** y **ProgID**, pero el nombre **Interfaz** no cambia. Este comportamiento de nomenclatura se ha diseñado para facilitarle la identificación de todos los nombres a medida que desarrolla su control.
+Especifique los nombres para el objeto, la interfaz y las clases que se van a agregar al proyecto. Excepto en el caso de **Nombre corto**, el resto de los cuadros se pueden editar independientemente de los demás. Si cambia el texto para **Nombre corto**, el cambio se refleja en los nombres del resto de los cuadros de esta página. Si cambia el nombre **Coclase** en la sección de COM, el cambio se refleja en los cuadros **Tipo** y **ProgID**, pero el nombre **Interfaz** no cambia. Este comportamiento de nomenclatura se ha diseñado para facilitarle la identificación de todos los nombres a medida que desarrolla su control.
 
 - **Nombre corto**
 
@@ -57,9 +57,9 @@ Especifique los nombres para el objeto, la interfaz y las clases que se van a ag
 
    Indica si el objeto usa atributos. Si agrega un objeto a un proyecto ATL con atributos, esta opción estará activada y no se podrá cambiar. Es decir, solo puede agregar objetos con atributos a un proyecto creado con compatibilidad con atributos.
 
-   Si selecciona esta opción para un proyecto ATL sin compatibilidad con atributos, el asistente le pedirá que especifique si desea agregar dicha compatibilidad al proyecto.
+   Si selecciona esta opción para un proyecto ATL sin compatibilidad con atributos, el asistente le pide que especifique si desea agregar dicha compatibilidad al proyecto.
 
-   Cualquier objeto que agregue después de establecer esta opción se designará como atributos de forma predeterminada (la casilla de verificación está seleccionada). Puede borrar este cuadro para agregar un objeto que no usa atributos.
+   Cualquier objeto que agregue después de establecer esta opción se designará como atributos de forma predeterminada (la casilla de verificación está seleccionada). Puede borrar esta casilla para agregar un objeto que no usa atributos.
 
    Consulte [Configuración de la aplicación, Asistente para proyectos ATL](../../atl/reference/application-settings-atl-project-wizard.md) y [Mecanismos básicos de los atributos](../../windows/basic-mechanics-of-attributes.md) para obtener más información.
 
@@ -67,12 +67,12 @@ Especifique los nombres para el objeto, la interfaz y las clases que se van a ag
 
 Proporciona información sobre la funcionalidad COM del objeto.
 
-- **Coclass**
+- **Coclase**
 
    Establece el nombre de la clase de componente que contiene una lista de interfaces que admite el objeto.
 
 > [!NOTE]
->  Si crea su proyecto mediante atributos o indica en esta página del asistente que el componente COM+ 1.0 usa atributos, no puede cambiar esta opción porque ATL no incluye el atributo `coclass`.
+> Si crea su proyecto mediante atributos o indica en esta página del asistente que el componente COM+ 1.0 usa atributos, no puede cambiar esta opción porque ATL no incluye el atributo `coclass`.
 
 - **Tipo**
 
@@ -82,7 +82,7 @@ Proporciona información sobre la funcionalidad COM del objeto.
 
    Establece la interfaz que crea para el objeto. Esta interfaz contiene sus métodos personalizados.
 
-- **ProgID**
+- **Progid**
 
    Establece el nombre que pueden usar los contenedores en lugar del CLSID del objeto.
 

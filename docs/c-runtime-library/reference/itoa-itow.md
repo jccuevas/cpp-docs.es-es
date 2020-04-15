@@ -1,6 +1,6 @@
 ---
 title: _itoa, _itow funciones
-ms.date: 08/19/2019
+ms.date: 4/2/2020
 api_name:
 - itoa
 - _itoa
@@ -15,6 +15,16 @@ api_name:
 - _ultow
 - _i64tow
 - _ui64tow
+- _o__i64toa
+- _o__i64tow
+- _o__itoa
+- _o__itow
+- _o__ltoa
+- _o__ltow
+- _o__ui64toa
+- _o__ui64tow
+- _o__ultoa
+- _o__ultow
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -28,6 +38,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -102,16 +113,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: a4e429b51e4157b49086d2425bec2698a724a0e0
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 0cc084076c5e39843ecc1afa08671ce6b2f06d1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898784"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342711"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Convierte un entero en cadena. Hay disponibles versiones más seguras de estas funciones; vea [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
+Convierte un entero en cadena. Hay disponibles versiones más seguras de estas funciones; ver [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -166,45 +177,47 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
    int radix );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Número que se va a convertir.
 
-*buffer*<br/>
+*Búfer*<br/>
 Búfer que contiene el resultado de la conversión.
 
-*radix*<br/>
-Base que se va a usar para la conversión de *valor*, que debe estar en el intervalo 2-36.
+*Radix*<br/>
+La base que se utilizará para la conversión de *value*, que debe estar en el rango 2-36.
 
-*size*<br/>
+*Tamaño*<br/>
 Longitud del búfer en unidades del tipo de carácter. Este parámetro se deduce del argumento *buffer* en C++.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un puntero al *búfer*. No se devuelve ningún error.
+Cada una de estas funciones devuelve un puntero al *búfer.* No se devuelve ningún error.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Las funciones **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa** convierten los dígitos del argumento de *valor* dado en una cadena de caracteres terminada en NULL y almacenan el resultado (hasta 33 caracteres para **_itoa**, **_ltoa**y **_ultoa**y 65 para **_i64toa** y **_ui64toa**) en el *búfer*. Si la *base* es igual a 10 y el *valor* es negativo, el primer carácter de la cadena almacenada es el signo menos ( **-** ). Las funciones **_itow**, **_ltow**, **_ultow**, **_i64tow**y **_ui64tow** son versiones de caracteres anchos de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa**, respectivamente.
+Las funciones **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa** convierten los dígitos del argumento de *valor* dado en una cadena de caracteres terminada en null y almacenan el resultado (hasta 33 caracteres para **_itoa**, **_ltoa**y **_ultoa**y 65 para **_i64toa** y **_ui64toa)** en *el búfer*. Si *radix* es igual a 10 y *value* es negativo, el**-** primer carácter de la cadena almacenada es el signo menos ( ). Las funciones **_itow**, **_ltow**, **_ultow**, **_i64tow**y **_ui64tow** son versiones de caracteres anchos de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**y **_ui64toa**, respectivamente.
 
 > [!IMPORTANT]
-> Estas funciones pueden escribir más allá del final de un búfer que es demasiado pequeño. Para evitar las saturaciones del búfer, asegúrese de que el *búfer* sea lo suficientemente grande como para contener los dígitos convertidos más el carácter nulo final y un carácter de signo. El uso incorrecto de estas funciones puede provocar serios problemas de seguridad en el código.
+> Estas funciones pueden escribir más allá del final de un búfer que es demasiado pequeño. Para evitar saturaciones de búfer, asegúrese de que *el búfer* es lo suficientemente grande como para contener los dígitos convertidos más el carácter nulo final y un carácter de signo. El uso indebido de estas funciones puede causar problemas de seguridad graves en el código.
 
-Debido a su potencial de problemas de seguridad, de forma predeterminada, estas funciones causan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **esta función o variable puede no ser segura. Considere la posibilidad de usar** *safe_function* **en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS.** Se recomienda cambiar el código fuente para usar el *safe_function* sugerido por el mensaje de advertencia. Las funciones más seguras no escriben más caracteres que el tamaño de búfer especificado. Para obtener más información, vea [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
+Debido a su potencial para problemas de seguridad, de forma predeterminada, estas funciones causan advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Esta función o variable puede no ser segura. Considere usar** *safe_function* en **su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS.** Le recomendamos que cambie el código fuente para usar los *safe_function* sugeridos por el mensaje de advertencia. Las funciones más seguras no escriben más caracteres que el tamaño de búfer especificado. Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
 
-Para usar estas funciones sin la advertencia de desuso, defina la macro de preprocesador **_CRT_SECURE_NO_WARNINGS** antes de incluir los encabezados de CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando la opción del compilador **/D_CRT_SECURE_NO_WARNINGS** al comando **cl** . En caso contrario, defina la macro en los archivos de código fuente. Si usa encabezados precompilados, defina la macro en la parte superior del encabezado precompilado include File, *PCH. h* (*stdafx. h* en Visual Studio 2017 y versiones anteriores). Para definir la macro en el código fuente, use una directiva de **#define** antes de incluir cualquier encabezado de CRT, como en este ejemplo:
+Para utilizar estas funciones sin la advertencia de desuso, defina la macro de preprocesador **_CRT_SECURE_NO_WARNINGS** antes de incluir los encabezados CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando la opción del compilador **/D_CRT_SECURE_NO_WARNINGS** al comando **cl.** De lo contrario, defina la macro en los archivos de origen. Si usa encabezados precompilados, defina la macro en la parte superior del archivo de inclusión de encabezado precompilado, *pch.h* (*stdafx.h* en Visual Studio 2017 y versiones anteriores). Para definir la macro en el código fuente, utilice una directiva **#define** antes de incluir cualquier encabezado CRT, como en este ejemplo:
 
 ```C
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan sus homólogos más seguros. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan a sus homólogos más seguros. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
-Los nombres POSIX **itoa**, **ltoa**y **ultoa** existen como alias para las funciones **_itoa**, **_ltoa**y **_ultoa** . Los nombres POSIX están en desuso porque no siguen las convenciones de nombre de función global específicas de la implementación de ISO C. De forma predeterminada, estas funciones causan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **el nombre POSIX de este elemento está en desuso. En su lugar, use ISO C y C++ el nombre compatible:** *new_name*. Se recomienda cambiar el código fuente para usar las versiones más seguras de estas funciones, **_itoa_s**, **_ltoa_s**o **_ultoa_s**. Para obtener más información, vea [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
+Los nombres POSIX **itoa**, **ltoa**y **ultoa** existen como alias para las funciones **_itoa**, **_ltoa**y **_ultoa.** Los nombres POSIX están en desuso porque no siguen las convenciones de nombre de función global específicas de la implementación de ISO C. De forma predeterminada, estas funciones causan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **El nombre POSIX para este elemento está en desuso. En su lugar, utilice el nombre conforme a ISO C y C++:** *new_name*. Le recomendamos que cambie el código fuente para utilizar las versiones más seguras de estas funciones, **_itoa_s,** **_ltoa_s**o **_ultoa_s.** Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
 
-En cuanto a la portabilidad del código fuente, puede que prefiera conservar los nombres POSIX en el código. Para usar estas funciones sin la advertencia de desuso, defina las macros de preprocesador **_CRT_NONSTDC_NO_WARNINGS** y **_CRT_SECURE_NO_WARNINGS** antes de incluir los encabezados de CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando las opciones del compilador **/D_CRT_SECURE_NO_WARNINGS** y **/D_CRT_NONSTDC_NO_WARNINGS** al comando **cl** . En caso contrario, defina las macros en los archivos de código fuente. Si usa encabezados precompilados, defina las macros en la parte superior del archivo de inclusión del encabezado precompilado. Para definir las macros en el código fuente, utilice las directivas de **#define** antes de incluir cualquier encabezado de CRT, como en este ejemplo:
+Para la portabilidad del código fuente, es posible que prefiera conservar los nombres POSIX en el código. Para utilizar estas funciones sin la advertencia de desuso, defina las macros de preprocesador **_CRT_NONSTDC_NO_WARNINGS** y **_CRT_SECURE_NO_WARNINGS** antes de incluir los encabezados CRT. Puede hacerlo en la línea de comandos de un símbolo del sistema para desarrolladores agregando las opciones del compilador **/D_CRT_SECURE_NO_WARNINGS** y **/D_CRT_NONSTDC_NO_WARNINGS** al comando **cl.** De lo contrario, defina las macros en los archivos de origen. Si utiliza encabezados precompilados, defina las macros en la parte superior del archivo de inclusión de encabezado precompilado. Para definir las macros en el código fuente, utilice **directivas #define** antes de incluir cualquier encabezado CRT, como en este ejemplo:
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -212,22 +225,22 @@ En cuanto a la portabilidad del código fuente, puede que prefiera conservar los
 #include <stdlib.h>
 ```
 
-### <a name="maximum-conversion-count-macros"></a>Macros de recuento de conversión máximo
+### <a name="maximum-conversion-count-macros"></a>Macros de recuento máximo de conversiones
 
-Para ayudarle a crear búferes seguros para las conversiones, CRT incluye algunas macros útiles. Estos definen el tamaño del búfer necesario para convertir el valor más largo posible de cada tipo entero, incluidos el carácter nulo y el terminador null, para varias bases comunes. Para asegurarse de que el búfer de conversión es lo suficientemente grande como para recibir cualquier conversión en la base *especificada por la base,* utilice una de estas macros definidas al asignar el búfer. Esto ayuda a evitar errores de saturación del búfer al convertir tipos enteros en cadenas. Estas macros se definen al incluir stdlib. h o WCHAR. h en el origen.
+Para ayudarle a crear búferes seguros para las conversiones, el CRT incluye algunas macros convenientes. Estos definen el tamaño del búfer necesario para convertir el valor más largo posible de cada tipo entero, incluido el terminador nulo y el carácter de signo, para varias bases comunes. Para asegurarse de que el búfer de conversión es lo suficientemente grande como para recibir cualquier conversión en la base especificada por *radix*, utilice una de estas macros definidas al asignar el búfer. Esto ayuda a evitar errores de saturación de búfer al convertir tipos enteros en cadenas. Estas macros se definen cuando se incluye stdlib.h o wchar.h en el origen.
 
-Para usar una de estas macros en una función de conversión de cadenas, declare el búfer de conversión del tipo de carácter adecuado y use el valor de la macro para el tipo entero y base como dimensión de búfer. En esta tabla se enumeran las macros adecuadas para cada función de las bases enumeradas:
+Para utilizar una de estas macros en una función de conversión de cadena, declare el búfer de conversión del tipo de carácter adecuado y utilice el valor de macro para el tipo entero y base como dimensión de búfer. En esta tabla se enumeran las macros adecuadas para cada función para las bases enumeradas:
 
 ||||
 |-|-|-|
-|Funciones|radix|Macros|
+|Functions|radix|Macros|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-En este ejemplo se usa una macro de recuento de conversión para definir un búfer lo suficientemente grande como para contener un largo **sin signo** en base 2:
+En este ejemplo se utiliza una macro de recuento de conversiones para definir un búfer lo suficientemente grande como para contener un **largo largo sin signo** en la base 2:
 
 ```cpp
 #include <wchar.h>
@@ -249,19 +262,19 @@ int main()
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
 |**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
-|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itoa**, **_ltoa**, **_ultoa _ltoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
 |**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> o \<wchar.h>|
 
 Estas funciones y macros son específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra el uso de algunas de las funciones de conversión de enteros. Observe el uso de la macro **_CRT_SECURE_NO_WARNINGS** para silenciar la advertencia C4996.
+En este ejemplo se muestra el uso de algunas de las funciones de conversión de enteros. Tenga en cuenta el uso de la macro **_CRT_SECURE_NO_WARNINGS** para silenciar la advertencia C4996.
 
 ```C
 // crt_itoa.c
@@ -336,7 +349,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s, _itow_s funciones](itoa-s-itow-s.md)<br/>
+[_itoa_s, funciones _itow_s](itoa-s-itow-s.md)<br/>

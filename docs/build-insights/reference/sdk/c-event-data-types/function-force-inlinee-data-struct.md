@@ -1,6 +1,6 @@
 ---
-title: Estructura de FUNCTION_FORCE_INLINEE_DATA
-description: El C++ SDK de Build insights FUNCTION_FORCE_INLINEE_DATA referencia de estructura.
+title: estructura FUNCTION_FORCE_INLINEE_DATA
+description: El SDK de C++ Build Insights FUNCTION_FORCE_INLINEE_DATA referencia de estructura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3d6929f2f16e9b1bd79b7fb8b383b40e031268bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a4781c9157130cb46e92906017af98710f5637b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335151"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325495"
 ---
-# <a name="function_force_inlinee_data-structure"></a>Estructura de FUNCTION_FORCE_INLINEE_DATA
+# <a name="function_force_inlinee_data-structure"></a>estructura FUNCTION_FORCE_INLINEE_DATA
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La estructura `FUNCTION_FORCE_INLINEE_DATA` describe una función insertada en el forzado.
+La `FUNCTION_FORCE_INLINEE_DATA` estructura describe una función de inlineación de fuerza.
 
 ## <a name="syntax"></a>Sintaxis
 

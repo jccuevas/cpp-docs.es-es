@@ -1,5 +1,5 @@
 ---
-title: Macros de depuración e informe de errores
+title: Depuración y macros de informes de errores
 ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -11,30 +11,30 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 69ab6e17bfb1ec85ddb5b8c19c18010a9b4f3df6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423169"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330185"
 ---
-# <a name="debugging-and-error-reporting-macros"></a>Macros de depuración e informe de errores
+# <a name="debugging-and-error-reporting-macros"></a>Depuración y macros de informes de errores
 
-Estas macros proporcionan funciones de depuración y seguimiento útiles.
+Estas macros proporcionan instalaciones útiles de depuración y seguimiento.
 
 |||
 |-|-|
-|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Escribe en la ventana de salida cualquier fuga de interfaz que se detecta cuando se llama a `_Module.Term`.|
-|[_ATL_DEBUG_QI](#_atl_debug_qi)|Escribe todas las llamadas a `QueryInterface` en la ventana de salida.|
-|[ATLASSERT](#atlassert)|Realiza la misma funcionalidad que la macro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) que se encuentra en la biblioteca en tiempo de ejecución de C.|
-|[ATLENSURE](#atlensure)|Realiza la validación de parámetros. Llamar a `AtlThrow` si es necesario|
-|[ATLTRACENOTIMPL](#atltracenotimpl)|Envía un mensaje al dispositivo de volcado que indica que la función especificada no está implementada.|
-|[ATLTRACE](#atltrace)|Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según las marcas y los niveles indicados. Se incluye para la compatibilidad con versiones anteriores.|
-|[ATLTRACE2](#atltrace2)|Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según las marcas y los niveles indicados.|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Escribe, en la ventana de salida, cualquier `_Module.Term` pérdida de interfaz que se detecta cuando se llama.|
+|[_ATL_DEBUG_QI](#_atl_debug_qi)|Escribe todas las `QueryInterface` llamadas a la ventana de salida.|
+|[ATLASSERT](#atlassert)|Realiza la misma funcionalidad que la macro [de _ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) que se encuentra en la biblioteca en tiempo de ejecución de C.|
+|[ATLENSURE](#atlensure)|Realiza la validación de parámetros. Llame `AtlThrow` si es necesario|
+|[ATLTRACENOTIMPL](#atltracenotimpl)|Envía un mensaje al dispositivo de volcado de que no se implementa la función especificada.|
+|[ATLTRACE](#atltrace)|Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según los indicadores y niveles indicados. Incluido para compatibilidad con versiones anteriores.|
+|[ATLTRACE2](#atltrace2)|Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según los indicadores y niveles indicados.|
 
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
 
-Defina esta macro antes de incluir los archivos de encabezado ATL para realizar el seguimiento de todas `AddRef` y `Release` llamadas en las interfaces de los componentes a la ventana de salida.
+Defina esta macro antes de incluir los `AddRef` `Release` archivos de encabezado ATL para rastrear todo y las llamadas en las interfaces de los componentes a la ventana de salida.
 
 ```
 #define _ATL_DEBUG_INTERFACES
@@ -42,30 +42,30 @@ Defina esta macro antes de incluir los archivos de encabezado ATL para realizar 
 
 ### <a name="remarks"></a>Observaciones
 
-El resultado del seguimiento aparecerá como se muestra a continuación:
+La salida de seguimiento aparecerá como se muestra a continuación:
 
 `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`
 
-La primera parte de cada seguimiento siempre se `ATL: QIThunk`. A continuación se indica un valor que identifica el *código thunk* de la interfaz concreta que se está usando. Un código thunk de interfaz es un objeto que se usa para mantener un recuento de referencias y proporcionar la funcionalidad de seguimiento que se usa aquí. Se crea un nuevo código thunk de interfaz en cada llamada a `QueryInterface` excepto para las solicitudes de la interfaz de `IUnknown` (en este caso, se devuelve el mismo código thunk cada vez que se cumplan las reglas de identidad de COM).
+La primera parte de cada `ATL: QIThunk`seguimiento siempre será . A continuación se encuentra un valor que identifica la interfaz concreta *thunk* que se está utilizando. Un thunk de interfaz es un objeto utilizado para mantener un recuento de referencias y proporcionar la capacidad de seguimiento utilizada aquí. Se crea un nuevo thunk `QueryInterface` de interfaz en `IUnknown` cada llamada a excepto para las solicitudes de la interfaz (en este caso, el mismo thunk se devuelve cada vez para cumplir con las reglas de identidad de COM).
 
-A continuación, verá `AddRef` o `Release` que indica el método al que se llamó. A continuación, verá un valor que identifica el objeto cuyo recuento de referencias de interfaz ha cambiado. El valor de seguimiento es el puntero **this** del objeto.
+A continuación, `AddRef` verá `Release` o indicaqué qué método se llamó. A continuación, verá un valor que identifica el objeto cuyo recuento de referencias de interfaz se ha cambiado. El valor rastreado es el puntero **this** del objeto.
 
-El recuento de referencias del que se realiza el seguimiento es el recuento de referencias en ese código thunk después de llamar a `AddRef` o `Release`. Tenga en cuenta que este recuento de referencias puede no coincidir con el recuento de referencias para el objeto. Cada thunk mantiene su propio recuento de referencias para ayudarle a cumplir todas las reglas de recuento de referencias de COM.
+El recuento de referencias que se rastrea es `AddRef` el `Release` recuento de referencias en ese thunk después o se llamó. Tenga en cuenta que es posible que este recuento de referencias no coincida con el recuento de referencias del objeto. Cada thunk mantiene su propio recuento de referencias para ayudarle a cumplir plenamente con las reglas de recuento de referencias de COM.
 
-La parte final de la información a la que se realiza el seguimiento es el nombre del objeto y la interfaz que se ve afectada por el `AddRef` o `Release` llamada.
+La última información rastreada es el nombre del objeto y `AddRef` `Release` la interfaz que se ve afectada por la llamada o.
 
-Las pérdidas de interfaz que se detectan cuando se cierra el servidor y se llama a `_Module.Term` se registrarán de la siguiente manera:
+Cualquier fuga de interfaz que se detecte cuando el servidor se apaga y `_Module.Term` se llama será registrado así:
 
 `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`
 
-La información que se proporciona aquí se asigna directamente a la información proporcionada en las instrucciones de seguimiento anteriores, por lo que puede examinar los recuentos de referencias durante todo el ciclo de vida de un código thunk de interfaz. Además, se obtiene una indicación del número máximo de referencias en el código thunk de la interfaz.
+La información proporcionada aquí se asigna directamente a la información proporcionada en las instrucciones de seguimiento anteriores, por lo que puede examinar los recuentos de referencias durante toda la vida útil de un thunk de interfaz. Además, obtendrá una indicación del recuento máximo de referencias en ese thunk de interfaz.
 
 > [!NOTE]
-> _ATL_DEBUG_INTERFACES puede usarse en las compilaciones comerciales.
+> _ATL_DEBUG_INTERFACES se puede utilizar en compilaciones comerciales.
 
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
 
-Escribe todas las llamadas a `QueryInterface` en la ventana de salida.
+Escribe todas las `QueryInterface` llamadas a la ventana de salida.
 
 ```
 #define _ATL_DEBUG_QI
@@ -73,13 +73,13 @@ Escribe todas las llamadas a `QueryInterface` en la ventana de salida.
 
 ### <a name="remarks"></a>Observaciones
 
-Si se produce un error en una llamada a `QueryInterface`, se mostrará la ventana de salida:
+Si una `QueryInterface` llamada falla, se mostrará la ventana de salida:
 
-*nombre de interfaz* - `failed`
+*nombre de la interfaz* - `failed`
 
-##  <a name="atlassert"></a>ATLASSERT
+## <a name="atlassert"></a><a name="atlassert"></a>ATLASSERT
 
-La macro ATLASSERT realiza la misma funcionalidad que la macro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) que se encuentra en la biblioteca en tiempo de ejecución de C.
+La macro ATLASSERT realiza la misma funcionalidad que la macro [de _ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) que se encuentra en la biblioteca en tiempo de ejecución de C.
 
 ```
 ATLASSERT(booleanExpression);
@@ -88,17 +88,17 @@ ATLASSERT(booleanExpression);
 ### <a name="parameters"></a>Parámetros
 
 *booleanExpression*<br/>
-Expresión (incluidos los punteros) que se evalúa como un valor distinto de cero o 0.
+Expresión (incluidos los punteros) que se evalúa como distinto de cero o 0.
 
 ### <a name="remarks"></a>Observaciones
 
-En las compilaciones de depuración, ATLASSERT evalúa *booleanExpression* y genera un informe de depuración cuando el resultado es false.
+En compilaciones de depuración, ATLASSERT evalúa *booleanExpression* y genera un informe de depuración cuando el resultado es false.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atldef. h
+**Encabezado:** atldef.h
 
-##  <a name="atlensure"></a>ATLENSURE
+## <a name="atlensure"></a><a name="atlensure"></a>ATLENSURE
 
 Esta macro se utiliza para validar los parámetros pasados a una función.
 
@@ -112,20 +112,20 @@ ATLENSURE_THROW(booleanExpression, hr);
 *booleanExpression*<br/>
 Especifica una expresión booleana que se va a probar.
 
-*hora*<br/>
+*Hr*<br/>
 Especifica un código de error que se va a devolver.
 
 ### <a name="remarks"></a>Observaciones
 
-Estas macros proporcionan un mecanismo para detectar y notificar al usuario sobre el uso incorrecto de parámetros.
+Estas macros proporcionan un mecanismo para detectar y notificar al usuario el uso incorrecto de parámetros.
 
-La macro llama a ATLASSERT y, si la condición no funciona, llama a `AtlThrow`.
+La macro llama a ATLASSERT `AtlThrow`y si se produce un error en la condición llama a .
 
-En el caso de ATLENSURE, se llama a `AtlThrow` con E_FAIL.
+En el caso de `AtlThrow` ATLENSURE, se llama con E_FAIL.
 
-En el caso de ATLENSURE_THROW, se llama a `AtlThrow` con el HRESULT especificado.
+En el caso `AtlThrow` de ATLENSURE_THROW, se llama con el HRESULT especificado.
 
-La diferencia entre ATLENSURE y ATLASSERT es que ATLENSURE inicia una excepción en las compilaciones de versión, así como en las compilaciones de depuración.
+La diferencia entre ATLENSURE y ATLASSERT es que ATLENSURE produce una excepción en las compilaciones de versión, así como en las compilaciones de depuración.
 
 ### <a name="example"></a>Ejemplo
 
@@ -135,9 +135,9 @@ La diferencia entre ATLENSURE y ATLASSERT es que ATLENSURE inicia una excepción
 
 **Encabezado:** afx.h
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL
+## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>ATLTRACENOTIMPL
 
-En las compilaciones de depuración de ATL, envía la cadena " *FuncName* no se ha implementado" al dispositivo de volcado y devuelve E_NOTIMPL.
+En las compilaciones de depuración de ATL, envía la cadena " *funcname* is not implemented" al dispositivo de volcado y devuelve E_NOTIMPL.
 
 ```
 ATLTRACENOTIMPL(funcname);
@@ -145,12 +145,12 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Parámetros
 
-*funcName*<br/>
-de Cadena que contiene el nombre de la función que no está implementada.
+*funcname*<br/>
+[en] Cadena que contiene el nombre de la función que no se implementa.
 
 ### <a name="remarks"></a>Observaciones
 
-En las compilaciones de versión, simplemente devuelve E_NOTIMPL.
+En las compilaciones de lanzamiento, simplemente devuelve E_NOTIMPL.
 
 ### <a name="example"></a>Ejemplo
 
@@ -158,11 +158,11 @@ En las compilaciones de versión, simplemente devuelve E_NOTIMPL.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atltrace. h
+**Encabezado:** atltrace.h
 
-##  <a name="atltrace"></a>ATLTRACE
+## <a name="atltrace"></a><a name="atltrace"></a>ATLTRACE
 
-Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según las marcas y los niveles indicados. Se incluye para la compatibilidad con versiones anteriores.
+Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según los indicadores y niveles indicados. Incluido para compatibilidad con versiones anteriores.
 
 ```
 ATLTRACE(exp);
@@ -175,25 +175,25 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Parámetros
 
-*exp*<br/>
-de Cadena y variables que se van a enviar a la ventana de salida o a cualquier aplicación que capture estos mensajes.
+*Exp*<br/>
+[en] La cadena y las variables que se enviarán a la ventana de salida o a cualquier aplicación que atrape estos mensajes.
 
-*category*<br/>
-de Tipo de evento o método en el que se va a notificar. Vea los comentarios para obtener una lista de categorías.
+*Categoría*<br/>
+[en] Tipo de evento o método sobre el que se debe notificar. Consulte las observaciones para obtener una lista de categorías.
 
-*level*<br/>
-de Nivel de seguimiento que se va a notificar. Vea los comentarios para obtener más información.
+*Nivel*<br/>
+[en] El nivel de seguimiento que se debe notificar. Consulte las Observaciones para obtener más información.
 
 *lpszFormat*<br/>
-de Cadena con formato que se va a enviar al dispositivo de volcado.
+[en] Cadena con formato que se va a enviar al dispositivo de volcado.
 
 ### <a name="remarks"></a>Observaciones
 
-Consulte [ATLTRACE2](#atltrace2) para obtener una descripción de ATLTRACE. ATLTRACE y ATLTRACE2 tienen el mismo comportamiento, ATLTRACE se incluye por motivos de compatibilidad con versiones anteriores.
+Consulte [ATLTRACE2](#atltrace2) para obtener una descripción de ATLTRACE. ATLTRACE y ATLTRACE2 tienen el mismo comportamiento, ATLTRACE se incluye por compatibilidad con versiones anteriores.
 
-##  <a name="atltrace2"></a>ATLTRACE2
+## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
 
-Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según las marcas y los niveles indicados.
+Notifica advertencias a un dispositivo de salida, como la ventana del depurador, según los indicadores y niveles indicados.
 
 ```
 ATLTRACE2(exp);
@@ -206,78 +206,78 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Parámetros
 
-*exp*<br/>
-de Cadena que se va a enviar a la ventana de salida o a cualquier aplicación que capture estos mensajes.
+*Exp*<br/>
+[en] Cadena que se va a enviar a la ventana de salida o a cualquier aplicación que atrape estos mensajes.
 
-*category*<br/>
-de Tipo de evento o método en el que se va a notificar. Vea los comentarios para obtener una lista de categorías.
+*Categoría*<br/>
+[en] Tipo de evento o método sobre el que se debe notificar. Consulte las observaciones para obtener una lista de categorías.
 
-*level*<br/>
-de Nivel de seguimiento que se va a notificar. Vea los comentarios para obtener más información.
+*Nivel*<br/>
+[en] El nivel de seguimiento que se debe notificar. Consulte las Observaciones para obtener más información.
 
 *lpszFormat*<br/>
-de Cadena de formato de estilo `printf`que se va a usar para crear una cadena que se va a enviar al dispositivo de volcado.
+[en] Cadena `printf`de formato -style que se va a usar para crear una cadena que se va a enviar al dispositivo de volcado.
 
 ### <a name="remarks"></a>Observaciones
 
-La forma abreviada de ATLTRACE2 escribe una cadena en la ventana de salida del depurador. La segunda forma de ATLTRACE2 también escribe la salida en la ventana de salida del depurador, pero está sujeta a la configuración de la herramienta de seguimiento de ATL/MFC (vea el [ejemplo ATLTraceTool](../../overview/visual-cpp-samples.md)). Por ejemplo, si establece el *nivel* 4 y la herramienta de seguimiento de ATL/MFC en el nivel 0, no verá el mensaje. *LEVEL* puede ser 0, 1, 2, 3 o 4. El valor predeterminado, 0, solo informa de los problemas más graves.
+La forma abreviada de ATLTRACE2 escribe una cadena en la ventana de salida del depurador. La segunda forma de ATLTRACE2 también escribe la salida en la ventana de salida del depurador, pero está sujeta a la configuración de la herramienta de seguimiento ATL/MFC (consulte Ejemplo de [ATLTraceTool](../../overview/visual-cpp-samples.md)). Por ejemplo, si establece el *nivel* en 4 y la herramienta de seguimiento ATL/MFC en el nivel 0, no verá el mensaje. *puede* ser 0, 1, 2, 3 o 4. El valor predeterminado, 0, sólo informa de los problemas más graves.
 
-El parámetro *Category* muestra las marcas de seguimiento que se van a establecer. Estas marcas se corresponden con los tipos de métodos a los que desea informar. En las tablas siguientes se enumeran las marcas de seguimiento válidas que puede usar para el parámetro *Category* .
+El parámetro *category* enumera los indicadores de seguimiento que se han establecido. Estos indicadores corresponden a los tipos de métodos para los que desea informar. En las tablas siguientes se enumeran los indicadores de seguimiento válidos que puede utilizar para el parámetro *category.*
 
-### <a name="atl-trace-flags"></a>Marcas de seguimiento de ATL
+### <a name="atl-trace-flags"></a>Indicadores de seguimiento ATL
 
 |Categoría ATL|Descripción|
 |------------------|-----------------|
-|`atlTraceGeneral`|Informes en todas las aplicaciones ATL. El valor predeterminado.|
+|`atlTraceGeneral`|Informes sobre todas las aplicaciones ATL. El valor predeterminado.|
 |`atlTraceCOM`|Informes sobre métodos COM.|
 |`atlTraceQI`|Informes sobre llamadas QueryInterface.|
-|`atlTraceRegistrar`|Informa sobre el registro de objetos.|
-|`atlTraceRefcount`|Informes sobre el cambio del recuento de referencias.|
-|`atlTraceWindowing`|Informes de métodos de Windows; por ejemplo, informa de un identificador de mapa de mensajes no válido.|
-|`atlTraceControls`|Informes sobre controles; por ejemplo, los informes cuando se destruye un control o su ventana.|
-|`atlTraceHosting`|Informes que hospedan mensajes; por ejemplo, informa cuando se activa un cliente en un contenedor.|
-|`atlTraceDBClient`|Informes sobre OLE DB plantilla de consumidor; por ejemplo, cuando se produce un error en una llamada a GetData, la salida puede contener HRESULT.|
-|`atlTraceDBProvider`|Informes sobre OLE DB plantilla de proveedor; por ejemplo, informa de si se ha producido un error en la creación de una columna.|
-|`atlTraceSnapin`|Informes de la aplicación de complemento MMC.|
+|`atlTraceRegistrar`|Informes sobre el registro de objetos.|
+|`atlTraceRefcount`|Informes sobre el cambio de recuento de referencias.|
+|`atlTraceWindowing`|Informes sobre métodos de Windows; por ejemplo, notifica un ID de mapa de mensajes no válido.|
+|`atlTraceControls`|Informes sobre controles; por ejemplo, informa cuando se destruye un control o su ventana.|
+|`atlTraceHosting`|Informes de mensajes de hospedaje; por ejemplo, informa cuando se activa un cliente en un contenedor.|
+|`atlTraceDBClient`|Informes sobre la plantilla de consumidor OLE DB; por ejemplo, cuando se produce un error en una llamada a GetData, la salida puede contener el valor HRESULT.|
+|`atlTraceDBProvider`|Informes sobre la plantilla de proveedor OLE DB; por ejemplo, informes si se produjo un error en la creación de una columna.|
+|`atlTraceSnapin`|Informes para la aplicación MMC SnapIn.|
 |`atlTraceNotImpl`|Informa de que la función indicada no está implementada.|
-|`atlTraceAllocation`|Informa de los mensajes impresos por las herramientas de depuración de memoria en atldbgmem. h.|
+|`atlTraceAllocation`|Informa de los mensajes impresos por las herramientas de depuración de memoria en atldbgmem.h.|
 
-### <a name="mfc-trace-flags"></a>Marcas de seguimiento de MFC
+### <a name="mfc-trace-flags"></a>Indicadores de seguimiento de MFC
 
 |Categoría MFC|Descripción|
 |------------------|-----------------|
-|`traceAppMsg`|Uso general, mensajes MFC. Siempre se recomienda.|
+|`traceAppMsg`|Propósito general, mensajes MFC. Siempre recomendado.|
 |`traceDumpContext`|Mensajes de [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|
 |`traceWinMsg`|Mensajes del código de control de mensajes de MFC.|
 |`traceMemory`|Mensajes del código de administración de memoria de MFC.|
 |`traceCmdRouting`|Mensajes del código de enrutamiento de comandos de Windows de MFC.|
-|`traceHtml`|Mensajes del compatible con el cuadro de diálogo DHTML de MFC.|
-|`traceSocket`|Mensajes de la compatibilidad con sockets de MFC.|
-|`traceOle`|Mensajes de la compatibilidad OLE de MFC.|
+|`traceHtml`|Mensajes de compatibilidad con cuadros de diálogo DHTML de MFC.|
+|`traceSocket`|Mensajes de compatibilidad con sockets de MFC.|
+|`traceOle`|Mensajes de compatibilidad con OLE de MFC.|
 |`traceDatabase`|Mensajes de compatibilidad con bases de datos de MFC.|
-|`traceInternet`|Mensajes del soporte técnico de Internet de MFC.|
+|`traceInternet`|Mensajes de compatibilidad con Internet de MFC.|
 
-Para declarar una categoría de seguimiento personalizada, declare una instancia global de la clase `CTraceCategory` como se indica a continuación:
+Para declarar una categoría de seguimiento personalizada, declare una instancia global de la clase de la `CTraceCategory` siguiente manera:
 
 [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]
 
-El nombre de la categoría, MY_CATEGORY en este ejemplo, es el nombre que se especifica para el parámetro *Category* . El primer parámetro es el nombre de la categoría que aparecerá en la herramienta de seguimiento de ATL/MFC. El segundo parámetro es el nivel de seguimiento predeterminado. Este parámetro es opcional y el nivel de seguimiento predeterminado es 0.
+El nombre de categoría, MY_CATEGORY en este ejemplo, es el nombre que especifique para el parámetro *category.* El primer parámetro es el nombre de categoría que aparecerá en la herramienta de seguimiento ATL/MFC. El segundo parámetro es el nivel de seguimiento predeterminado. Este parámetro es opcional y el nivel de seguimiento predeterminado es 0.
 
-Para usar una categoría definida por el usuario:
+Para utilizar una categoría definida por el usuario:
 
 [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]
 
-Para especificar que desea filtrar los mensajes de seguimiento, inserte las definiciones de estas macros en stdafx. h antes de la instrucción `#include <atlbase.h>`.
+Para especificar que desea filtrar los mensajes de seguimiento, inserte definiciones para `#include <atlbase.h>` estas macros en Stdafx.h antes de la instrucción.
 
-Como alternativa, puede establecer el filtro en las directivas de preprocesador en el cuadro de diálogo **páginas de propiedades** . Haga clic en la pestaña **preprocesador** y, a continuación, inserte el global en el cuadro de edición **definiciones del preprocesador** .
+Como alternativa, puede establecer el filtro en las directivas de preprocesador en el cuadro de diálogo **Páginas** de propiedades. Haga clic en la ficha **Preprocesador** y, a continuación, inserte el global en el cuadro de edición Definiciones de **preprocesador.**
 
-ATLBase. h contiene las definiciones predeterminadas de las macros ATLTRACE2 y estas definiciones se usarán si no se definen estos símbolos antes de que ATLBase. h se procese.
+Atlbase.h contiene definiciones predeterminadas de las macros ATLTRACE2 y estas definiciones se utilizarán si no define estos símbolos antes de que se procese atlbase.h.
 
-En las compilaciones de versión, ATLTRACE2 se compila en `(void) 0`.
+En las compilaciones de versiones, `(void) 0`ATLTRACE2 compila en .
 
-ATLTRACE2 limita el contenido de la cadena que se va a enviar al dispositivo de volcado a un máximo de 1023 caracteres, después de aplicar el formato.
+ATLTRACE2 limita el contenido de la cadena que se enviará al dispositivo de volcado a no más de 1023 caracteres, después de formatear.
 
-ATLTRACE y ATLTRACE2 tienen el mismo comportamiento, ATLTRACE se incluye por motivos de compatibilidad con versiones anteriores.
+ATLTRACE y ATLTRACE2 tienen el mismo comportamiento, ATLTRACE se incluye por compatibilidad con versiones anteriores.
 
 ### <a name="example"></a>Ejemplo
 
@@ -286,4 +286,4 @@ ATLTRACE y ATLTRACE2 tienen el mismo comportamiento, ATLTRACE se incluye por mot
 ## <a name="see-also"></a>Consulte también
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
-[Funciones globales de depuración e informe de errores](../../atl/reference/debugging-and-error-reporting-global-functions.md)
+[Depuración e informe de errores funciones globales](../../atl/reference/debugging-and-error-reporting-global-functions.md)

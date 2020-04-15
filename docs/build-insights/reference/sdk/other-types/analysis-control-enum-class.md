@@ -1,6 +1,6 @@
 ---
-title: AnalysisControl (clase de enumeración)
-description: La C++ referencia de enumeración ANALYSISCONTROL del SDK de Build Insights.
+title: AnalysisControl clase enum
+description: La referencia de enumeración AnalysisControl del SDK de C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: cf162c11e0a7109b8d733dab79df80782398e14d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: e9431f878390127f2cefbe8f0ee42ca509e147de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334125"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323641"
 ---
-# <a name="analysiscontrol-enum-class"></a>AnalysisControl (clase de enumeración)
+# <a name="analysiscontrol-enum-class"></a>AnalysisControl clase enum
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La clase de enumeración `AnalysisControl` se utiliza para controlar el flujo de una sesión de análisis o de registro. Devuelve un código `AnalysisControl` de una función miembro [IAnalyzer](ianalyzer-class.md) o [IRelogger](irelogger-class.md) para controlar lo que debe ocurrir a continuación.
+La `AnalysisControl` clase enum se utiliza para controlar el flujo de una sesión de análisis o relogging. Devuelve `AnalysisControl` un código de una función miembro [IAnalyzer](ianalyzer-class.md) o [IRelogger](irelogger-class.md) para controlar lo que debe suceder a continuación.
 
 ## <a name="members"></a>Miembros
 
 |  |  |
 |--|--|
-| `BLOCK` | Evita que el evento actual se propague más en el grupo de analizador o de reregistrador. |
-| `CANCEL` | Cancela la sesión de análisis o de registro actual. |
-| `CONTINUE` | Continuar el análisis actual o la sesión de registro con normalidad. Propagar el evento actual al siguiente miembro del grupo de analizador o de reregistrador. |
-| `FAILURE` | Cancele el análisis actual o la sesión de registro y señale un error. |
+| `BLOCK` | Impide que el evento actual se propague más en el analizador o grupo de reregistradores. |
+| `CANCEL` | Cancele el análisis actual o la sesión de reregistro. |
+| `CONTINUE` | Continúe la sesión actual de análisis o recorrección normalmente. Propague el evento actual al siguiente analizador o miembro del grupo de registrador. |
+| `FAILURE` | Cancele la sesión de análisis o recorrección actual y señale un error. |
 
 ::: moniker-end

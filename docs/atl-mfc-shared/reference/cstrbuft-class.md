@@ -1,5 +1,5 @@
 ---
-title: CStrBufT (clase)
+title: Clase CStrBufT
 ms.date: 10/18/2018
 f1_keywords:
 - CStrBufT
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84c67aa8ea819f420368a72a2374f800f3d89055
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317644"
 ---
-# <a name="cstrbuft-class"></a>CStrBufT (clase)
+# <a name="cstrbuft-class"></a>Clase CStrBufT
 
-Esta clase proporciona la limpieza de recursos automática para `GetBuffer` y `ReleaseBuffer` llama en una existente `CStringT` objeto.
+Esta clase proporciona limpieza `GetBuffer` `ReleaseBuffer` automática de `CStringT` recursos para y llamadas a un objeto existente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,73 +34,73 @@ class CStrBufT
 #### <a name="parameters"></a>Parámetros
 
 *TCharType*<br/>
-El tipo de carácter de la `CStrBufT` clase. Puede ser uno de los siguientes:
+El tipo de `CStrBufT` carácter de la clase. Puede ser uno de los siguientes:
 
-- **char** (para las cadenas de caracteres ANSI)
+- **char** (para cadenas de caracteres ANSI)
 
 - **wchar_t** (para cadenas de caracteres Unicode)
 
-- TCHAR (para las cadenas de caracteres ANSI y Unicode)
+- TCHAR (para cadenas de caracteres ANSI y Unicode)
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|PCXSTR|Un puntero a una constante de cadena.|
+|PCXSTR|Un puntero a una cadena constante.|
 |PXSTR|Un puntero a una cadena.|
-|`StringType`|El tipo de cadena cuyo búfer se manipular las especializaciones de esta plantilla de clase.|
+|`StringType`|El tipo de cadena cuyo búfer debe ser manipulado por las especializaciones de esta plantilla de clase.|
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CStrBufT::CStrBufT](#cstrbuft)|El constructor para el objeto de búfer de cadena.|
+|[CStrBufT::CStrBufT](#cstrbuft)|El constructor del objeto de búfer de cadena.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CStrBufT::SetLength](#setlength)|Establece la longitud del búfer de caracteres del objeto string asociado.|
+|[CStrBufT::SetLength](#setlength)|Establece la longitud del búfer de caracteres del objeto de cadena asociado.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Recupera un **const** puntero al búfer de caracteres del objeto string asociado.|
-|[CStrBufT::operator PXSTR](#operator_pxstr)|Recupera un puntero al búfer de caracteres del objeto string asociado.|
+|[CStrBufT::operador PCXSTR](#operator_pcxstr)|Recupera un puntero **const** al búfer de caracteres del objeto de cadena asociado.|
+|[CStrBufT::operador PXSTR](#operator_pxstr)|Recupera un puntero al búfer de caracteres del objeto de cadena asociado.|
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CStrBufT::AUTO_LENGTH](#auto_length)|Determinar automáticamente la nueva longitud de la cadena de la versión.|
-|[CStrBufT::SET_LENGTH](#set_length)|Establecer la longitud del objeto de cadena en tiempo de GetBuffer|
+|[CStrBufT::AUTO_LENGTH](#auto_length)|Determine automáticamente la nueva longitud de la cadena en el momento del lanzamiento.|
+|[CStrBufT::SET_LENGTH](#set_length)|Establezca la longitud del objeto de cadena en el tiempo GetBuffer|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta clase se utiliza como una clase contenedora para reemplazar las llamadas a [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) y [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), o [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) y `ReleaseBuffer`.
+Esta clase se utiliza como clase contenedora para reemplazar llamadas a [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) y [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), o [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) y `ReleaseBuffer`.
 
-Diseñado principalmente como una clase auxiliar, `CStrBufT` proporciona una manera cómoda para trabajar con el búfer de caracteres de un objeto de cadena sin preocuparse por cómo un desarrollador o cuándo se debe llamar a `ReleaseBuffer`. Esto es posible porque el objeto contenedor queda fuera del ámbito de forma natural en el caso de una excepción o varias rutas de código existente; provoca que su destructor liberar el recurso de cadena.
+Principalmente diseñado como una `CStrBufT` clase auxiliar, proporciona una manera conveniente para que un desarrollador trabaje con `ReleaseBuffer`el búfer de caracteres de un objeto de cadena sin preocuparse por cómo o cuándo llamar a . Esto es posible porque el objeto contenedor sale del ámbito de forma natural en el caso de una excepción o varias rutas de acceso de código de salida; haciendo que su destructor libere el recurso de cadena.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlsimpstr.h
 
-##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH
+## <a name="cstrbuftauto_length"></a><a name="auto_length"></a>CStrBufT::AUTO_LENGTH
 
-Determinar automáticamente la nueva longitud de la cadena de la versión.
+Determine automáticamente la nueva longitud de la cadena en el momento del lanzamiento.
 
 ```
 static const DWORD AUTO_LENGTH = 0x01;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Determinar automáticamente la nueva longitud de la cadena de la versión. Debe ser la cadena terminada en null.
+Determine automáticamente la nueva longitud de la cadena en el momento del lanzamiento. La cadena debe estar terminada en null.
 
-##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT
+## <a name="cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT
 
 Construye un objeto de búfer.
 
@@ -111,28 +111,28 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
-El objeto de cadena asociado con el búfer. Normalmente, el desarrollador usará las definiciones de tipos predefinidos de `CStrBuf` (variante de TCHAR), `CStrBufA` (**char** variante) y `CStrBufW` (**wchar_t** variante).
+*Str*<br/>
+El objeto de cadena asociado al búfer. Normalmente, el desarrollador utilizará las definiciones `CStrBuf` de tipo predefinidas de (variante TCHAR), `CStrBufA` (variante**char)** y `CStrBufW` (**wchar_t** variante).
 
 *nMinLength*<br/>
 La longitud mínima del búfer de caracteres.
 
 *dwFlags*<br/>
-Determina si la longitud de cadena se determina automáticamente. Puede ser uno de los siguientes:
+Determina si la longitud de la cadena se determina automáticamente. Puede ser uno de los siguientes:
 
-- Longitud de cadena AUTO_LENGTH es automáticamente determina cuándo [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) se llama. Debe ser la cadena terminada en null. Valor predeterminado.
+- AUTO_LENGTH longitud de cadena se determina automáticamente cuando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) se llama. La cadena debe estar terminada en null. Valor predeterminado.
 
-- Longitud de la cadena SET_LENGTH se establece cuando [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) se llama.
+- SET_LENGTH longitud de cadena se establece cuando [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) se llama.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Crea un búfer de cadena para el objeto de cadena asociado. Durante la construcción, [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) o [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) se llama.
 
-Tenga en cuenta que el constructor de copias es **privada**.
+Tenga en cuenta que el constructor de copias es **privado.**
 
-##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR
+## <a name="cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT::operador PCXSTR
 
-Accede directamente a caracteres almacenados en el objeto de cadena asociado como una cadena de estilo C.
+Accede directamente a los caracteres almacenados en el objeto de cadena asociado como una cadena de estilo C.
 
 ```
 operator PCXSTR() const throw();
@@ -140,15 +140,15 @@ operator PCXSTR() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a los datos de la cadena de carácter.
+Puntero de carácter a los datos de la cadena.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Llame a esta función para devolver un puntero al búfer de caracteres de un objeto de cadena. No se puede cambiar el contenido del objeto de cadena con este puntero.
+Llame a esta función para devolver un puntero al búfer de caracteres de un objeto de cadena. El contenido del objeto de cadena no se puede cambiar con este puntero.
 
-##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR
+## <a name="cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::operador PXSTR
 
-Accede directamente a caracteres almacenados en el objeto de cadena asociado como una cadena de estilo C.
+Accede directamente a los caracteres almacenados en el objeto de cadena asociado como una cadena de estilo C.
 
 ```
 operator PXSTR() throw();
@@ -156,21 +156,21 @@ operator PXSTR() throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a los datos de la cadena de carácter.
+Puntero de carácter a los datos de la cadena.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Llame a esta función para devolver un puntero al búfer de caracteres de un objeto de cadena. El desarrollador puede cambiar el contenido del objeto de cadena con este puntero.
 
-##  <a name="pcxstr"></a>  CStrBufT::PCXSTR
+## <a name="cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR
 
-Un puntero a una constante de cadena.
+Un puntero a una cadena constante.
 
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```
 
-##  <a name="pxstr"></a>  CStrBufT::PXSTR
+## <a name="cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR
 
 Un puntero a una cadena.
 
@@ -178,21 +178,21 @@ Un puntero a una cadena.
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```
 
-##  <a name="set_length"></a>  CStrBufT::SET_LENGTH
+## <a name="cstrbuftset_length"></a><a name="set_length"></a>CStrBufT::SET_LENGTH
 
-Establecer la longitud del objeto de cadena en `GetBuffer` tiempo.
+Establezca la longitud del `GetBuffer` objeto de cadena en el momento.
 
 ```
 static const DWORD SET_LENGTH = 0x02;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Establecer la longitud del objeto de cadena en el momento de GetBuffer.
+Establezca la longitud del objeto de cadena en el momento GetBuffer.
 
-Determina si [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) y [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) se llama cuando se construye el objeto de búfer de cadena.
+Determina si [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) y [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) se llaman cuando se construye el objeto de búfer de cadena.
 
-##  <a name="setlength"></a>  CStrBufT::SetLength
+## <a name="cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength
 
 Establece la longitud del búfer de caracteres.
 
@@ -202,29 +202,29 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parámetros
 
-*nLength*<br/>
+*nLongitud*<br/>
 La nueva longitud del búfer de caracteres del objeto de cadena.
 
 > [!NOTE]
->  Debe ser menor o igual que la longitud de búfer mínimo especificada en el constructor de `CStrBufT`.
+> Debe ser menor o igual que la longitud de `CStrBufT`búfer mínima especificada en el constructor de .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Llame a esta función para establecer la longitud de la cadena representada por el objeto de búfer.
 
-##  <a name="stringtype"></a>  CStrBufT::StringType
+## <a name="cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType
 
-El tipo de cadena cuyo búfer se manipular las especializaciones de esta plantilla de clase.
+El tipo de cadena cuyo búfer debe ser manipulado por las especializaciones de esta plantilla de clase.
 
 ```
 typedef CSimpleStringT<TCharType> StringType;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-`TCharType` es el carácter utilizado para especializar la plantilla de clase.
+`TCharType`es el tipo de carácter utilizado para especializar la plantilla de clase.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Clases compartidas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

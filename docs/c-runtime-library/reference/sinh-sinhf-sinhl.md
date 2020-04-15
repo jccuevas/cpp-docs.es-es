@@ -1,10 +1,12 @@
 ---
 title: sinh, sinhf, sinhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
+- sinh
 - sinhl
 - sinhf
 - sinhl
+- _o_sinh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4a8ffd1dbce112272f04241a2502c5df63f163a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318671"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -60,23 +63,25 @@ long double sinh(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **Sinh** devuelven el seno hiperbólico de *x*. De forma predeterminada, si el resultado es demasiado grande, **Sinh** establece **errno** en **ERANGE** y devuelve ±**HUGE_VAL**.
+Las funciones **sinh** devuelven el seno hiperbólico de *x*. De forma predeterminada, si el resultado es demasiado grande, **sinh** establece **errno** en **ERANGE** y devuelve el valor de**HUGE_VAL**.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|None|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
+|&#124;x&#124; 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
 
 Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **SENOH** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **SENOH** siempre toma y devuelve **Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **sinh** que toman y devuelven **valores float** o **long** **double.** En un programa C, **sinh** siempre toma y devuelve **double**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,7 +89,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **SENOH*
 |-|-|-|
 |**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -115,7 +120,7 @@ sinh( 1.570796 ) = 2.301299
 cosh( 1.570796 ) = 2.509178
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

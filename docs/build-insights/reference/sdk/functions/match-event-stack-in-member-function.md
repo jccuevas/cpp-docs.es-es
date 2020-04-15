@@ -1,6 +1,6 @@
 ---
 title: MatchEventStackInMemberFunction
-description: La C++ referencia de la función MATCHEVENTSTACKINMEMBERFUNCTION del SDK de Build Insights.
+description: Referencia de la función MatchEventStackInMemberFunction del SDK de compilación de C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323885"
 ---
 # <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La función `MatchEventStackInMemberFunction` se usa para hacer coincidir una pila de eventos con una jerarquía de eventos concreta, que se describe en la lista de parámetros de una función miembro. Las jerarquías coincidentes se reenvían a la función miembro para su posterior procesamiento. Para obtener más información sobre eventos, pilas de eventos y jerarquías, vea [tabla de eventos](../event-table.md).
+La `MatchEventStackInMemberFunction` función se utiliza para hacer coincidir una pila de eventos con una jerarquía de eventos específica, descrita por la lista de parámetros de una función miembro. Las jerarquías coincidentes se reenvían a la función miembro para su posterior procesamiento. Para obtener más información sobre eventos, pilas de eventos y jerarquías, consulte Tabla de [eventos](../event-table.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *TInterface*
-Tipo que contiene la función miembro.
+*TInterface*\
+El tipo que contiene la función miembro.
 
-\ *TReturn*
+*TReturn*\
 El tipo de valor devuelto de la función miembro.
 
-*T1*,...,\ *T10*
-Tipos que describen la jerarquía de eventos que se va a comparar.
+*T1*, ..., *T10*\
+Los tipos que describen la jerarquía de eventos que se va a hacer coincidir.
 
-\ *TExtraParams*
+*TExtraParams*\
 Los tipos de los parámetros adicionales aceptados por la función miembro y los tipos de jerarquía de eventos.
 
-\ *TExtraArgs*
-Tipos de los argumentos adicionales que se pasaron a `MatchEventStackInMemberFunction`.
+*TExtraArgs*\
+Los tipos de los argumentos `MatchEventStackInMemberFunction`adicionales que se pasaron a .
 
-\ *eventStack*
-Pila de eventos que debe coincidir con la jerarquía de tipos de evento descrita por *T1* a *T10*.
+*eventStack*\
+La pila de eventos que debe coincidir con la jerarquía de tipos de evento descrita por *T1* a *T10.*
 
-\ *objectPtr*
-Un puntero a un objeto en el que se llama a *memberFunc* .
+*objectPtr*\
+Puntero a un objeto en el que se llama a *memberFunc.*
 
-\ *memberFunc*
-Función miembro que describe la jerarquía de tipos de evento que debe coincidir.
+*memberFunc*\
+La función miembro que describe la jerarquía de tipos de evento que se va a coincidir.
 
-\ *Extraargs*
-Los argumentos que se reenvían de la ruta a *memberFunc* junto con los parámetros de la jerarquía de tipos de evento.
+*extraArgs*\
+Los argumentos que se reenvían perfectamente a *memberFunc* junto con los parámetros de jerarquía de tipo de evento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor **booleano** que es **true** si la coincidencia se realizó correctamente, o **false** en caso contrario.
+Un valor **bool** que es **true** si la coincidencia se realizó correctamente, o **false** en caso contrario.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-El último evento de *eventStack* siempre coincide con la última entrada de la jerarquía de tipos de evento para que coincida. Todos los demás tipos de la jerarquía de tipos de evento pueden coincidir con cualquier posición en *eventStack* excepto en la última, siempre que estén en el mismo orden.
+El último evento de *eventStack* siempre coincide con la última entrada de la jerarquía de tipos de evento que debe coincidir. Todos los demás tipos de la jerarquía de tipos de evento pueden coincidir con cualquier posición de *eventStack* excepto la última, siempre que estén en el mismo orden.
 
-Los tipos de evento que se van a usar para los parámetros *T1* a *T10* se seleccionan de una lista de *clases de captura*. Para obtener una lista de eventos y las clases de captura que puede usar para hacerlos coincidir, consulte [tabla de eventos](../event-table.md).
+Los tipos de eventos que se van a utilizar para los parámetros *T1* a *T10* se seleccionan de una lista de clases de *captura.* Para obtener una lista de eventos y las clases de captura que puede usar para hacer coincidirlos, consulte [la tabla](../event-table.md)de eventos .
 
 ## <a name="example"></a>Ejemplo
 
