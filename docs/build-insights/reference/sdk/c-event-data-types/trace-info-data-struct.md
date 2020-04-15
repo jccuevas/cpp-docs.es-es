@@ -1,6 +1,6 @@
 ---
-title: Estructura de TRACE_INFO_DATA
-description: El C++ SDK de Build insights TRACE_INFO_DATA referencia de estructura.
+title: estructura TRACE_INFO_DATA
+description: El SDK de C++ Build Insights TRACE_INFO_DATA referencia de estructura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 04cb5c013bca8879507983d169b38e5af0f1322b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 70ae17a376f79cad7a669d81e482f551afd0ec62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325275"
 ---
-# <a name="trace_info_data-structure"></a>Estructura de TRACE_INFO_DATA
+# <a name="trace_info_data-structure"></a>estructura TRACE_INFO_DATA
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La estructura `TRACE_INFO_DATA` describe un seguimiento que se está analizando o reregistrando.
+La `TRACE_INFO_DATA` estructura describe un seguimiento que se está analizando o reregistrando.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -44,13 +44,13 @@ typedef struct TRACE_INFO_DATA_TAG
 
 |  |  |
 |--|--|
-| `LogicalProcessorCount` | El número de procesadores lógicos en el equipo en el que se recopiló el seguimiento. |
-| `TickFrequency` | Número de TICs por segundo que se van a usar al evaluar una duración medida en pasos. |
+| `LogicalProcessorCount` | El número de procesadores lógicos en la máquina donde se recopiló el seguimiento. |
+| `TickFrequency` | El número de ticks por segundo que se utilizarán al evaluar una duración medida en ticks. |
 | `StartTimestamp` | Este campo se establece en un valor de tick capturado en el momento en que se inició el seguimiento. |
 | `StopTimestamp` | Este campo se establece en un valor de tick capturado en el momento en que se detuvo el seguimiento. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Reste `StartTimestamp` de `StopTimestamp` para obtener el número de pasos transcurridos durante todo el seguimiento. Utilice `TickFrequency` para convertir el valor resultante en una unidad de tiempo. Para obtener un ejemplo en el que se convierten TICs en unidades de tiempo, vea [EVENT_DATA](event-data-struct.md).
+`StartTimestamp` Restar `StopTimestamp` de para obtener el número de ticks transcurridos durante todo el seguimiento. Se `TickFrequency` utiliza para convertir el valor resultante en una unidad de tiempo. Para obtener un ejemplo que convierte ticks en unidades de tiempo, consulte [EVENT_DATA](event-data-struct.md).
 
 ::: moniker-end

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3811fdcf278129ee72872ea489b42f8389957761
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178462"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359340"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicaciones de escritorio de MFC
 
-La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office. Para obtener documentación sobre la propia plataforma Windows, consulte la [documentación de Windows](/windows/index). Para obtener información sobre cómo compilar aplicaciones de Windows en sin MFC, vea C++ [compilar aplicaciones de Windows de escritorio mediante la API de Win32](/windows/win32/index).
+La biblioteca de Microsoft Foundation Class (MFC) proporciona un contenedor orientado a objetos en gran parte de las API de Win32 y de COM. Aunque se puede usar para crear aplicaciones de escritorio muy simples, es muy útil cuando se necesita desarrollar interfaces de usuario más complejas con varios controles. Puede usar MFC para crear aplicaciones con interfaces de usuario de estilo Office. Para obtener documentación sobre la propia plataforma Windows, consulte la documentación de [Windows.](/windows/index) Para obtener información sobre la creación de aplicaciones de Windows en C++ sin MFC, vea Compilar aplicaciones de escritorio de Windows mediante la API de [Win32](/windows/win32/index).
 
 La referencia de MFC incluye las clases, las funciones globales, las variables globales y las macros que constituyen la biblioteca MFC (Microsoft Foundation Class).
 
@@ -28,9 +28,9 @@ La documentación de cada clase incluye información general sobre la clase, un 
 Los miembros de clase públicos y protegidos se documentan solo cuando se utilizan normalmente en programas de aplicación o clases derivadas. Vea los archivos de encabezado de clase para obtener una lista completa de miembros de clase.
 
 > [!IMPORTANT]
->  Las clases MFC y sus miembros no se pueden usar en aplicaciones que se ejecutan en el entorno de Windows Runtime.
+> Las clases MFC y sus miembros no se pueden usar en aplicaciones que se ejecutan en el entorno de Windows en tiempo de ejecución.
 >
->  Las bibliotecas MFC (DLL) para la codificación de caracteres multibyte (MBCS) ya no se incluyen en Visual Studio, pero están disponibles como complemento de Visual Studio. Para obtener más información, vea [complemento dll de MBCS para MFC](mfc-mbcs-dll-add-on.md).
+> Las bibliotecas MFC (DLL) para la codificación de caracteres multibyte (MBCS) ya no se incluyen en Visual Studio, pero están disponibles como complemento de Visual Studio. Para obtener más información, vea [Complemento DLL MBCS de MFC](mfc-mbcs-dll-add-on.md).
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -40,7 +40,7 @@ Artículos conceptuales sobre temas de MFC.
 [Gráfico de jerarquías](hierarchy-chart.md)<br/>
 Detalla visualmente las relaciones entre clases en la biblioteca de clases.
 
-[Información general sobre clases](class-library-overview.md)<br/>
+[Información general de clases](class-library-overview.md)<br/>
 Muestra las clases de la biblioteca MFC por categorías.
 
 [Tutoriales](walkthroughs-mfc.md)<br/>
@@ -67,15 +67,15 @@ Proporciona vínculos a las estructuras, los estilos, las devoluciones de llamad
 [Asistentes y cuadros de diálogo de MFC](reference/mfc-wizards-and-dialog-boxes.md)<br/>
 Guía sobre las características de Visual Studio para crear aplicaciones MFC.
 
-[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
+[Trabajar con archivos de recursos](../windows/working-with-resource-files.md)<br/>
 Cómo usar archivos de recursos para administrar datos de la interfaz de usuario (IU) estáticos, como las cadenas de la IU y el diseño de los cuadros de diálogo.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Categorías de gráfico de jerarquías](hierarchy-chart-categories.md)<br/>
+[Categorías de gráficos de jerarquía](hierarchy-chart-categories.md)<br/>
 Describe el gráfico de jerarquías de MFC por categoría.
 
-[Clases compartidas de ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
+[Clases compartidas ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Proporciona vínculos a las clases que se comparten entre MFC y ATL.
 
 [Ejemplos de MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>

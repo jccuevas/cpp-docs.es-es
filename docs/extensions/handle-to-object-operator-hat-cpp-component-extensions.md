@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516700"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358329"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Identificador a un operador de objeto (^) (C++/CLI y C++/CX)
 
-El *declarador del identificador* (`^`, acento circunflejo), modifica el tipo [specifier](../cpp/overview-of-declarators.md) para indicar que el objeto declarado debe eliminarse automáticamente cuando el sistema determina que el objeto ya no es accesible.
+El *declarador* de`^`identificador ( , pronunciado "hat"), modifica el [especificador](../cpp/overview-of-declarators.md) de tipo para que signifique que el objeto declarado debe eliminarse automáticamente cuando el sistema determina que el objeto ya no es accesible.
 
 ## <a name="accessing-the-declared-object"></a>Acceso al objeto declarado
 
@@ -38,7 +38,7 @@ El sistema utiliza el mecanismo del *recolector de elementos no utilizados* de C
 
 Dado que los punteros de C++ nativo (`*`) y las referencias (`&`) no son referencias administradas, el recolector de elementos no utilizados no puede actualizar de manera automática las direcciones a las que apuntan. Para solucionar este problema, utilice el declarador de identificador para especificar una variable que el recolector de elementos no utilizados reconozca y pueda actualizar automáticamente.
 
-Para obtener más información, vea [Cómo: Declarar controladores en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
+Para obtener más información, vea [Cómo: Declarar identificadores en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Ejemplos
 
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-En este ejemplo se muestra que no se puede enlazar una referencia nativa (`&`) a un miembro **int** de un tipo administrado, ya que **int** se podría almacenar en el montón de recolección de elementos no utilizados y las referencias nativas no realizan un seguimiento del movimiento de objetos en el montón administrado. La solución es utilizar una variable local o cambiar `&` a `%`, convirtiéndola en una referencia de seguimiento.
+Este ejemplo muestra que`&`una referencia nativa ( ) no se puede enlazar a un miembro **int** de un tipo administrado, ya que el **int** podría almacenarse en el montón de recolección de elementos no utilizados y las referencias nativas no realizan un seguimiento del movimiento de objetos en el montón administrado. La solución es utilizar una variable local o cambiar `&` a `%`, convirtiéndola en una referencia de seguimiento.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -221,7 +221,7 @@ int main() {
 
 Opción del compilador: `/clr`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Extensiones de componentes para .NET y UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Operador de referencia de seguimiento](tracking-reference-operator-cpp-component-extensions.md)

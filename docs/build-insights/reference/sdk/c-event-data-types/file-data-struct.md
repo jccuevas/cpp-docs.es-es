@@ -1,6 +1,6 @@
 ---
-title: Estructura de FILE_DATA
-description: El C++ SDK de Build insights FILE_DATA referencia de estructura.
+title: estructura FILE_DATA
+description: El SDK de C++ Build Insights FILE_DATA referencia de estructura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72cae8c8eb81bdb8d94897c46c5af90c89e92ab4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6b7b0129c54fa4b1d5285bafb38761da45bab4e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335199"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325586"
 ---
-# <a name="file_data-structure"></a>Estructura de FILE_DATA
+# <a name="file_data-structure"></a>estructura FILE_DATA
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La estructura `FILE_DATA` describe un archivo de entrada o salida.
+La `FILE_DATA` estructura describe una entrada o salida de archivo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,7 +42,7 @@ typedef struct FILE_DATA_TAG
 
 |  |  |
 |--|--|
-| `Path` | La ruta de acceso absoluta del archivo |
-| `TypeCode` | Código que describe el tipo del archivo. Para obtener más información, vea [FILE_TYPE_CODE](file-type-code-enum.md). |
+| `Path` | Ruta absoluta del archivo |
+| `TypeCode` | Código que describe el tipo del archivo. Para obtener más información, consulte [FILE_TYPE_CODE](file-type-code-enum.md). |
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
 title: MatchEvent
-description: La C++ referencia de la función MATCHEVENT del SDK de Build Insights.
+description: Referencia de la función MatchEvent del SDK de C+++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f8022953e2f56f7c8917f161b094c50e0c5ecbdf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 0c60653641c676716bcdd60865433773da79325f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334359"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323855"
 ---
 # <a name="matchevent"></a>MatchEvent
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La función `MatchEvent` se usa para hacer coincidir un evento con una lista de tipos de evento. Si el evento coincide con un tipo de la lista, se reenvía a un controlador para su posterior procesamiento.
+La `MatchEvent` función se utiliza para hacer coincidir un evento con una lista de tipos de eventos. Si el evento coincide con un tipo de la lista, se reenvía a un controlador para su posterior procesamiento.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,34 +43,34 @@ bool MatchEvent(
 
 ### <a name="parameters"></a>Parámetros
 
-\ *TEvent*
-El primer tipo de evento que desea comparar.
+*TEvent*\
+El primer tipo de evento que desea que coincida.
 
-\ *TEvents*
-Los tipos de evento restantes que desea buscar.
+*TEvents*\
+Los tipos de eventos restantes que desea que coincidan.
 
-\ *TCallable*
-Tipo que admite `operator()`. Para obtener más información sobre qué argumentos se pasan a este operador, vea la descripción del parámetro al que se *puede llamar* .
+*TCallable*\
+Un tipo `operator()`que admite . Para obtener más información sobre qué argumentos se pasan a este operador, vea la descripción del parámetro *invocable.*
 
-\ *TExtraArgs*
-Tipos de los argumentos adicionales que se pasaron a `MatchEvent`.
+*TExtraArgs*\
+Los tipos de los argumentos `MatchEvent`adicionales que se pasaron a .
 
-*event*\
-Evento que debe coincidir con los tipos de evento descritos por *TEvent* y *TEvents*.
+*Evento*\
+Evento que se va a hacer coincidir con los tipos de eventos descritos por *TEvent* y *TEvents*.
 
-\ *invocable*
-`MatchEvent` invoca a *Callable* después de que coincida correctamente el evento con cualquiera de los tipos de evento descritos por *TEvent* y *TEvents*. El primer argumento pasado a *Callable* es un valor r del tipo de evento coincidente. El paquete de parámetros de *extraargs* se reenvía de forma perfecta en el resto de los parámetros de a los que se *puede llamar*.  
+*Accesible*\
+`MatchEvent`invoca *a los que se puede llamar* después de hacer coincidir correctamente el evento con cualquiera de los tipos de eventos descritos por *TEvent* y *TEvents*. El primer argumento pasado a *callable* es un valor r del tipo de evento coincidente. El paquete de parámetros *extraArgs* se reenvía perfectamente en los parámetros restantes de *callable*.  
 
-\ *Extraargs*
-Los argumentos que se reenvían de la ruta a la que se *puede llamar* junto con el tipo de evento coincidente.
+*extraArgs*\
+Los argumentos que se reenvían perfectamente a *invocables* junto con el tipo de evento coincidente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor **booleano** que es **true** si la coincidencia se realizó correctamente, o **false** en caso contrario.
+Un valor **bool** que es **true** si la coincidencia se realizó correctamente, o **false** en caso contrario.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Los tipos de evento que se van a usar para los parámetros *TEvent* y *TEvents* se seleccionan de una lista de *clases de captura*. Para obtener una lista de eventos y las clases de captura que puede usar para hacerlos coincidir, consulte [tabla de eventos](../event-table.md).
+Los tipos de eventos que se van a utilizar para los parámetros *TEvent* y *TEvents* se seleccionan de una lista de clases de *captura.* Para obtener una lista de eventos y las clases de captura que puede usar para hacer coincidirlos, consulte [la tabla](../event-table.md)de eventos .
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,11 +1,13 @@
 ---
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
+- _o__mbsspnp
+- _o__mbsspnp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c45fc42fb9edce1b82b0910f8aae81d4058d5974
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946680"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317019"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Devuelve un puntero al primer carácter de una cadena determinada que no esté en otra cadena determinada.
 
 > [!IMPORTANT]
-> **_mbsspnp** y **_mbsspnp_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** y **_mbsspnp_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -83,7 +86,7 @@ unsigned char *_mbsspnp_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*Str*<br/>
 Cadena terminada en NULL que se va a buscar.
 
 *charset*<br/>
@@ -94,13 +97,15 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_strspnp**, **_wcsspnp**y **_mbsspnp** devuelven un puntero al primer carácter de *Str* que no pertenece al conjunto de caracteres de *CharSet*. Cada una de estas funciones devuelve **null** si *Str* consta exclusivamente de caracteres del *juego*de caracteres. Para cada una de estas rutinas, no hay ningún valor devuelto reservado para indicar un error.
+**_strspnp**, **_wcsspnp**y **_mbsspnp** devuelven un puntero al primer carácter de *str* que no pertenece al conjunto de caracteres del conjunto de *caracteres*. Cada una de estas funciones devuelve **NULL** si *str* consta enteramente de caracteres de *charset*. Para cada una de estas rutinas, no hay ningún valor devuelto reservado para indicar un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_mbsspnp** devuelve un puntero al carácter multibyte que es el primer carácter de *Str* que no pertenece al Juego de caracteres de *CharSet*. **_mbsspnp** reconoce secuencias de caracteres multibyte según la [Página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. En la búsqueda no se incluyen los caracteres nulos de finalización.
+La función **_mbsspnp** devuelve un puntero al carácter multibyte que es el primer carácter de *str* que no pertenece al conjunto de caracteres del conjunto de *caracteres*. **_mbsspnp** reconoce las secuencias de caracteres multibyte según la página de [códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. En la búsqueda no se incluyen los caracteres nulos de finalización.
 
-Si *Str* o *CharSet* es un puntero nulo, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **null** y establece **errno** en **EINVAL**.
+Si *str* o *charset* es un puntero nulo, esta función invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **NULL** y establece **errno** en **EINVAL**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -108,9 +113,9 @@ Si *Str* o *CharSet* es un puntero nulo, esta función invoca el controlador de 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** y **_wcsspnp** son versiones de caracteres de un solo byte y caracteres anchos de **_mbsspnp**. **_strspnp** y **_wcsspnp** se comportan de manera idéntica a **_mbsspnp** ; de lo contrario, se proporcionan solo para esta asignación y no se deben usar por ninguna otra razón. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** y **_wcsspnp** son versiones de caracteres de un solo byte y caracteres anchos de **_mbsspnp.** **_strspnp** y _wcsspnp comportarse **de** forma idéntica a **_mbsspnp** de lo contrario; se proporcionan únicamente para esta asignación y no deben utilizarse por ningún otro motivo. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** es idéntico, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** es idéntica, excepto que utiliza el parámetro de configuración regional pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -120,7 +125,7 @@ Si *Str* o *CharSet* es un puntero nulo, esta función invoca el controlador de 
 |**_strspnp**|\<tchar.h>|
 |**_wcsspnp**|\<tchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -138,15 +143,15 @@ int main( void ) {
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Output
 
 ```Output
 abbage
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

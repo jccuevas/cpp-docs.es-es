@@ -7,20 +7,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146487"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334580"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Consideraciones para escribir código de prólogo y epílogo
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
-Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante que comprenda cómo se diseña el marco de pila. También es útil saber utilizar la constante predefinida **__LOCAL_SIZE**.
+Antes de escribir sus propias secuencias de código de prólogo y epílogo, es importante comprender cómo se establece el marco de pila. También es útil saber cómo utilizar la constante predefinida **__LOCAL_SIZE.**
 
-##  <a name="_clang_c_stack_frame_layout"></a> Diseño del marco de pila de C
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Diseño de marco CStack
 
 En este ejemplo se muestra el código de prólogo estándar que puede aparecer en una función de 32 bits:
 
@@ -42,7 +42,7 @@ ret                          ; Return from function
 
 La pila siempre va de mayor a menor (de las direcciones de memoria superiores a las inferiores). El puntero base (`ebp`) señala al valor insertado de `ebp`. El área de variables locales comienza en `ebp-2`. Para tener acceso a las variables locales, calcule un desplazamiento de `ebp` restando el valor apropiado a `ebp`.
 
-##  <a name="_clang_the___local_size_constant"></a> La constante __LOCAL_SIZE
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a> La constante __LOCAL_SIZE
 
 El compilador proporciona una constante, **__LOCAL_SIZE**, para su uso en el bloque de ensamblador alineado del código de prólogo de la función. Esta constante se utiliza para asignar espacio para las variables locales del marco de pila en código de prólogo personalizado.
 
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Funciones naked](../c-language/naked-functions.md)
+[Funciones desnudas](../c-language/naked-functions.md)
