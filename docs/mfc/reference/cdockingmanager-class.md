@@ -1,5 +1,5 @@
 ---
-title: Clase CDockingManager
+title: CDockingManager (clase)
 ms.date: 11/04/2016
 f1_keywords:
 - CDockingManager
@@ -160,14 +160,14 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 8709b3a4eb3f57a3d2700ad7aaed16df994245c5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425956"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375582"
 ---
-# <a name="cdockingmanager-class"></a>Clase CDockingManager
+# <a name="cdockingmanager-class"></a>CDockingManager (clase)
 
 Implementa la funcionalidad básica que controla el diseño de acoplamiento en una ventana de marco principal.
 
@@ -177,108 +177,108 @@ Implementa la funcionalidad básica que controla el diseño de acoplamiento en u
 class CDockingManager : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Crea un panel de acoplamiento y lo agrega a la lista de barras de control.|
-|[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Agrega un identificador a un panel de barras a la lista de paneles de barra de pestañas MDI ocultos.|
-|[CDockingManager::AddMiniFrame](#addminiframe)|Agrega un marco a la lista de fotogramas.|
+|[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Agrega un identificador a un panel de barras a la lista de paneles de barras con pestañas MDI ocultos.|
+|[CDockingManager::AddMiniFrame](#addminiframe)|Añade un fotograma a la lista de mini fotogramas.|
 |[CDockingManager::AddPane](#addpane)|Registra un panel con el administrador de acoplamiento.|
-|[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|Vuelve a calcular y ajusta el diseño de todos los paneles en una ventana de marco.|
-|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|Hace que el mensaje de WM_NCCALCSIZE se envíe a todos los paneles y `CPaneFrameWnd` ventanas.|
+|[CDockingManager::AdjustDockingLayout](#adjustdockinglayout)|Recalcula y ajusta el diseño de todos los paneles de una ventana de marco.|
+|[CDockingManager::AdjustPaneFrames](#adjustpaneframes)|Hace que el mensaje de WM_NCCALCSIZE `CPaneFrameWnd` se envíe a todos los paneles y ventanas.|
 |[CDockingManager::AdjustRectToClientArea](#adjustrecttoclientarea)|Ajusta la alineación de un rectángulo.|
-|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|Cambia el tamaño de un panel acoplable en modo Ocultar automáticamente para que tome el ancho o el alto completo del área cliente del marco entre los sitios acoplados.|
-|[CDockingManager::AutoHidePane](#autohidepane)|Crea una barra de herramientas ocultar automáticamente.|
-|[CDockingManager::BringBarsToTop](#bringbarstotop)|Coloca en la parte superior las barras acopladas que tienen la alineación especificada.|
-|[CDockingManager::BuildPanesMenu](#buildpanesmenu)|Agrega nombres de paneles y barras de herramientas de acoplamiento a un menú.|
+|[CDockingManager::AlignAutoHidePane](#alignautohidepane)|Cambia el tamaño de un panel de acoplamiento en modo de ocultación automática para que tome todo el ancho o alto del área de cliente del marco rodeado de sitios de acoplamiento.|
+|[CDockingManager::AutoHidePane](#autohidepane)|Crea una barra de herramientas de ocultación automática.|
+|[CDockingManager::BringBarsToTop](#bringbarstotop)|Trae las barras acopladas que tienen la alineación especificada a la parte superior.|
+|[CDockingManager::BuildPanesMenu](#buildpanesmenu)|Agrega nombres de paneles de acoplamiento y barras de herramientas a un menú.|
 |[CDockingManager::CalcExpectedDockedRect](#calcexpecteddockedrect)|Calcula el rectángulo esperado de una ventana acoplada.|
-|[CDockingManager:: Create](#create)|Crea un administrador de acoplamiento.|
-|[CDockingManager::D eterminePaneAndStatus](#determinepaneandstatus)|Determina el panel que contiene un punto determinado y su estado de acoplamiento.|
-|[CDockingManager::D isableRestoreDockState](#disablerestoredockstate)|Habilita o deshabilita la carga del diseño de acoplamiento del registro.|
-|[CDockingManager::D ockPane](#dockpane)|Acopla un panel a otro panel o a una ventana de marco.|
-|[CDockingManager::D ockPaneLeftOf](#dockpaneleftof)|Acopla un panel a la izquierda de otro panel.|
+|[CDockingManager::Crear](#create)|Crea un administrador de acoplamiento.|
+|[CDockingManager::DeterminePaneAndStatus](#determinepaneandstatus)|Determina el panel que contiene un punto determinado y su estado de acoplamiento.|
+|[CDockingManager::DisableRestoreDockState](#disablerestoredockstate)|Habilita o deshabilita la carga del diseño de acoplamiento desde el registro.|
+|[CDockingManager::DockPane](#dockpane)|Acopla un panel a otro panel o a una ventana de marco.|
+|[CDockingManager::DockPaneLeftOf](#dockpaneleftof)|Acopla un panel a la izquierda de otro panel.|
 |[CDockingManager::EnableAutoHidePanes](#enableautohidepanes)|Habilita el acoplamiento del panel al marco principal, crea un panel de acoplamiento y lo agrega a la lista de barras de control.|
-|[CDockingManager:: EnableDocking](#enabledocking)|Crea un panel de acoplamiento y permite acoplar el panel en el marco principal.|
-|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|Muestra un botón adicional que abre un menú emergente en los títulos de todos los paneles de acoplamiento.|
-|[CDockingManager::EnablePaneContextMenu](#enablepanecontextmenu)|Indica a la biblioteca que muestre un menú contextual especial que tenga una lista de barras de herramientas de la aplicación y paneles de acoplamiento cuando el usuario haga clic con el botón secundario del mouse y la biblioteca esté procesando el mensaje de WM_CONTEXTMENU.|
-|[CDockingManager::FindDockSite](#finddocksite)|Recupera el panel de barra que se encuentra en la posición especificada y que tiene la alineación especificada.|
-|[CDockingManager::FindDockSiteByPane](#finddocksitebypane)|Devuelve el panel de barra que tiene el identificador del panel de la barra de destino.|
-|[CDockingManager::FindPaneByID](#findpanebyid)|Busca un panel por el ID. de control especificado.|
-|[CDockingManager::FixupVirtualRects](#fixupvirtualrects)|Confirma todas las posiciones de la barra de herramientas actual en rectángulos virtuales.|
+|[CDockingManager::EnableDocking](#enabledocking)|Crea un panel de acoplamiento y habilita el acoplamiento del panel al marco principal.|
+|[CDockingManager::EnableDockSiteMenu](#enabledocksitemenu)|Muestra un botón adicional que abre un menú emergente en los subtítulos de todos los paneles de acoplamiento.|
+|[CDockingManager::EnablePaneContextMenu](#enablepanecontextmenu)|Indica a la biblioteca que muestre un menú contextual especial que tenga una lista de barras de herramientas de la aplicación y paneles de acoplamiento cuando el usuario haga clic en el botón derecho del ratón y la biblioteca esté procesando el mensaje WM_CONTEXTMENU.|
+|[CDockingManager::FindDockSite](#finddocksite)|Recupera el panel de barras que se encuentra en la posición especificada y que tiene la alineación especificada.|
+|[CDockingManager::FindDockSiteByPane](#finddocksitebypane)|Devuelve el panel de barras que tiene el identificador del panel de la barra de destino.|
+|[CDockingManager::FindPaneByID](#findpanebyid)|Busca un panel por el identificador de control especificado.|
+|[CDockingManager::FixupVirtualRects](#fixupvirtualrects)|Confirma todas las posiciones actuales de la barra de herramientas en rectángulos virtuales.|
 |[CDockingManager::FrameFromPoint](#framefrompoint)|Devuelve el marco que contiene el punto especificado.|
-|[CDockingManager::GetClientAreaBounds](#getclientareabounds)|Obtiene el rectángulo que contiene los límites del área cliente.|
+|[CDockingManager::GetClientAreaBounds](#getclientareabounds)|Obtiene el rectángulo que contiene los límites del área de cliente.|
 |[CDockingManager::GetDockingMode](#getdockingmode)|Devuelve el modo de acoplamiento actual.|
 |[CDockingManager::GetDockSiteFrameWnd](#getdocksiteframewnd)|Obtiene un puntero al marco de la ventana primaria.|
 |[CDockingManager::GetEnabledAutoHideAlignment](#getenabledautohidealignment)|Devuelve la alineación habilitada de los paneles.|
 |[CDockingManager::GetMiniFrames](#getminiframes)|Obtiene una lista de miniframes.|
 |[CDockingManager::GetOuterEdgeBounds](#getouteredgebounds)|Obtiene un rectángulo que contiene los bordes exteriores del marco.|
-|[CDockingManager::GetPaneList](#getpanelist)|Devuelve una lista de los paneles que pertenecen al administrador de acoplamiento. Esto incluye todos los paneles flotantes.|
+|[CDockingManager::GetPaneList](#getpanelist)|Devuelve una lista de paneles que pertenecen al administrador de acoplamiento. Esto incluye todos los paneles flotantes.|
 |[CDockingManager::GetSmartDockingManager](#getsmartdockingmanager)|Recupera un puntero al administrador de acoplamiento inteligente.|
 |[CDockingManager::GetSmartDockingManagerPermanent](#getsmartdockingmanagerpermanent)|Recupera un puntero al administrador de acoplamiento inteligente.|
 |[CDockingManager::GetSmartDockingParams](#getsmartdockingparams)|Devuelve los parámetros de acoplamiento inteligente para el administrador de acoplamiento.|
-|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|Un método estático que devuelve un tema que se usa para mostrar los marcadores de acoplamiento inteligente.|
-|[CDockingManager::HideAutoHidePanes](#hideautohidepanes)|Oculta un panel que está en modo de ocultación automáticamente.|
+|[CDockingManager::GetSmartDockingTheme](#getsmartdockingtheme)|Método estático que devuelve un tema utilizado para mostrar marcadores de acoplamiento inteligentes.|
+|[CDockingManager::HideAutoHidePanes](#hideautohidepanes)|Oculta un panel que está en modo de ocultación automática.|
 |[CDockingManager::InsertDockSite](#insertdocksite)|Crea un panel de acoplamiento y lo inserta en la lista de barras de control.|
 |[CDockingManager::InsertPane](#insertpane)|Inserta un panel de control en la lista de barras de control.|
-|[CDockingManager::IsDockSiteMenu](#isdocksitemenu)|Especifica si se muestra un menú emergente en los títulos de todos los paneles.|
+|[CDockingManager::IsDockSiteMenu](#isdocksitemenu)|Especifica si se muestra un menú emergente en los subtítulos de todos los paneles.|
 |[CDockingManager::IsInAdjustLayout](#isinadjustlayout)|Determina si se ajustan los diseños de todos los paneles.|
-|[CDockingManager::IsOLEContainerMode](#isolecontainermode)|Especifica si el administrador de acoplamiento está en modo de contenedor OLE.|
+|[CDockingManager::IsOLEContainerMode](#isolecontainermode)|Especifica si el administrador de acoplamiento está en modo contenedor OLE.|
 |[CDockingManager::IsPointNearDockSite](#ispointneardocksite)|Determina si un punto especificado está cerca del sitio de acoplamiento.|
 |[CDockingManager::IsPrintPreviewValid](#isprintpreviewvalid)|Determina si el modo de vista previa de impresión está establecido.|
-|[CDockingManager:: LoadState](#loadstate)|Carga el estado del administrador de acoplamiento desde el registro.|
-|[CDockingManager::LockUpdate](#lockupdate)|Bloquea la ventana especificada.|
-|[CDockingManager::OnActivateFrame](#onactivateframe)|Lo llama el marco de trabajo cuando la ventana de marco se activa o se desactiva.|
+|[CDockingManager::LoadState](#loadstate)|Carga el estado del administrador de acoplamiento desde el registro.|
+|[CDockingManager::LockUpdate](#lockupdate)|Bloquea la ventana dada.|
+|[CDockingManager::OnActivateFrame](#onactivateframe)|Llamado por el marco de trabajo cuando la ventana de marco se activa o se desactiva.|
 |[CDockingManager::OnClosePopupMenu](#onclosepopupmenu)|Lo llama el marco cuando un menú emergente activo procesa un mensaje WM_DESTROY.|
-|[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|Lo llama el marco de trabajo para desplace una ventana de marco reducido.|
-|[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|Lo llama el marco de trabajo cuando crea un menú que tiene una lista de paneles.|
-|[CDockingManager::P aneFromPoint](#panefrompoint)|Devuelve el panel que contiene el punto especificado.|
-|[CDockingManager::P rocessPaneContextMenuCommand](#processpanecontextmenucommand)|Lo llama el marco de trabajo para activar o desactivar una casilla para el comando especificado y volver a calcular el diseño de un panel mostrado.|
+|[CDockingManager::OnMoveMiniFrame](#onmoveminiframe)|Llamado por el marco de trabajo para mover una ventana de marco pequeño.|
+|[CDockingManager::OnPaneContextMenu](#onpanecontextmenu)|Llamado por el marco de trabajo cuando crea un menú que tiene una lista de paneles.|
+|[CDockingManager::PaneFromPoint](#panefrompoint)|Devuelve el panel que contiene el punto especificado.|
+|[CDockingManager::ProcessPaneContextMenuCommand](#processpanecontextmenucommand)|Llamado por el marco de trabajo para activar o desactivar una casilla de verificación para el comando especificado y volver a calcular el diseño de un panel mostrado.|
 |[CDockingManager::RecalcLayout](#recalclayout)|Vuelve a calcular el diseño interno de los controles presentes en la lista de controles.|
-|[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Libera los contenedores de paneles vacíos.|
-|[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Quita el panel de la barra oculta especificado.|
-|[CDockingManager::RemoveMiniFrame](#removeminiframe)|Quita un marco especificado de la lista de fotogramas minis.|
+|[CDockingManager::ReleaseEmptyPaneContainers](#releaseemptypanecontainers)|Libera los contenedores de panel vacíos.|
+|[CDockingManager::RemoveHiddenMDITabbedBar](#removehiddenmditabbedbar)|Quita el panel de barras ocultas especificado.|
+|[CDockingManager::RemoveMiniFrame](#removeminiframe)|Elimina un fotograma especificado de la lista de mini fotogramas.|
 |[CDockingManager::RemovePaneFromDockManager](#removepanefromdockmanager)|Anula el registro de un panel y lo quita de la lista en el administrador de acoplamiento.|
 |[CDockingManager::ReplacePane](#replacepane)|Reemplaza un panel con otro.|
-|[CDockingManager::ResortMiniFramesForZOrder](#resortminiframesforzorder)|Reordena los fotogramas de la lista de fotogramas.|
-|[CDockingManager:: SaveState](#savestate)|Guarda el estado del administrador de acoplamiento en el registro.|
-|[CDockingManager::SendMessageToMiniFrames](#sendmessagetominiframes)|Envía el mensaje especificado a todos los fotogramas.|
-|[CDockingManager:: Serialize](#serialize)|Escribe el administrador de acoplamiento en un archivo. (Invalida [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)).|
+|[CDockingManager::ResortMiniFramesForZOrder](#resortminiframesforzorder)|Resorts los marcos en la lista de mini marcos.|
+|[CDockingManager::SaveState](#savestate)|Guarda el estado del administrador de acoplamiento en el registro.|
+|[CDockingManager::SendMessageToMiniFrames](#sendmessagetominiframes)|Envía el mensaje especificado a todas las mini tramas.|
+|[CDockingManager::Serialize](#serialize)|Escribe el administrador de acoplamiento en un archivo. (Invalida [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)).|
 |[CDockingManager::SetAutohideZOrder](#setautohidezorder)|Establece el tamaño, el ancho y el alto de las barras de control y el panel especificado.|
 |[CDockingManager::SetDockingMode](#setdockingmode)|Establece el modo de acoplamiento.|
-|[CDockingManager::SetDockState](#setdockstate)|Establece el estado de acoplamiento de las barras de control, los fotogramas y las barras de ocultación automáticamente.|
+|[CDockingManager::SetDockState](#setdockstate)|Establece el estado de acoplamiento de las barras de control, los minifotogramas y las barras de ocultación automática.|
 |[CDockingManager::SetPrintPreviewMode](#setprintpreviewmode)|Establece el modo de vista previa de impresión de las barras que se muestran en la vista previa de impresión.|
-|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|Establece los parámetros que definen el comportamiento de la función de acoplamiento inteligente.|
-|[CDockingManager::ShowDelayShowMiniFrames](#showdelayshowminiframes)|Muestra u oculta las ventanas de los fotogramas.|
-|[CDockingManager::ShowPanes](#showpanes)|Muestra u oculta los paneles del control y las barras de ocultación automáticamente.|
-|[CDockingManager::StartSDocking](#startsdocking)|Inicia el acoplamiento inteligente de la ventana especificada según la alineación del administrador de acoplamiento inteligente.|
+|[CDockingManager::SetSmartDockingParams](#setsmartdockingparams)|Establece los parámetros que definen el comportamiento del acoplamiento inteligente.|
+|[CDockingManager::ShowDelayShowMiniFrames](#showdelayshowminiframes)|Muestra u oculta las ventanas de los minimarcos.|
+|[CDockingManager::ShowPanes](#showpanes)|Muestra u oculta los paneles del control y las barras de ocultación automática.|
+|[CDockingManager::StartSDocking](#startsdocking)|Inicia el acoplamiento inteligente de la ventana especificada de acuerdo con la alineación del administrador de acoplamiento inteligente.|
 |[CDockingManager::StopSDocking](#stopsdocking)|Detiene el acoplamiento inteligente.|
 
 ### <a name="data-members"></a>Miembros de datos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Especifica si el administrador de acoplamiento oculta los paneles en el modo de contenedor OLE.|
-|[CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal)|Especifica el modo de acoplamiento global.|
-|[CDockingManager:: m_nDockSensitivity](#m_ndocksensitivity)|Especifica la sensibilidad de acoplamiento.|
-|[CDockingManager:: m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Especifica el tiempo, en milisegundos, antes de que un panel acoplable se acople en el modo de acoplamiento inmediato.|
-|[CDockingManager:: m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Especifica el tiempo, en milisegundos, antes de que una barra de herramientas esté acoplada a la ventana de marco principal.|
+|[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Especifica si el administrador de acoplamiento oculta los paneles en modo contenedor OLE.|
+|[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Especifica el modo de acoplamiento global.|
+|[CDockingManager::m_nDockSensitivity](#m_ndocksensitivity)|Especifica la sensibilidad de acoplamiento.|
+|[CDockingManager::m_nTimeOutBeforeDockingBarDock](#m_ntimeoutbeforedockingbardock)|Especifica el tiempo, en milisegundos, antes de que un panel de acoplamiento se acopla en modo de acoplamiento inmediato.|
+|[CDockingManager::m_nTimeOutBeforeToolBarDock](#m_ntimeoutbeforetoolbardock)|Especifica el tiempo, en milisegundos, antes de que una barra de herramientas se acopla a la ventana de marco principal.|
 
 ## <a name="remarks"></a>Observaciones
 
 La ventana de marco principal crea e inicializa esta clase automáticamente.
 
-El objeto de administrador de acoplamiento contiene una lista de todos los paneles que se encuentran en el diseño de acoplamiento y también una lista de todas las ventanas de [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) que pertenecen a la ventana de marco principal.
+El objeto de administrador de acoplamiento contiene una lista de todos los paneles que se encuentran en el diseño de acoplamiento y también una lista de todas las ventanas [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) que pertenecen a la ventana de marco principal.
 
-La clase `CDockingManager` implementa algunos servicios que puede usar para buscar un panel o una ventana de `CPaneFrameWnd`. Normalmente no se llaman directamente a estos servicios porque se incluyen en el objeto de la ventana de marco principal. Para obtener más información, consulte [clase CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+La `CDockingManager` clase implementa algunos servicios que puede usar `CPaneFrameWnd` para buscar un panel o una ventana. Normalmente no se llama a estos servicios directamente porque están envueltos en el objeto de ventana de marco principal. Para obtener más información, vea [CPaneFrameWnd (Clase)](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="customization-tips"></a>Sugerencias de personalización
 
-Las siguientes sugerencias se aplican a los objetos de `CDockingManager`:
+Las siguientes sugerencias se aplican a los `CDockingManager` objetos:
 
-- La [clase CDockingManager](../../mfc/reference/cdockingmanager-class.md) admite estos modos de acoplamiento:
+- [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) admite estos modos de acoplamiento:
 
   - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
@@ -286,13 +286,13 @@ Las siguientes sugerencias se aplican a los objetos de `CDockingManager`:
 
   - `AFX_DOCK_TYPE::DT_SMART`
 
-  Estos modos de acoplamiento se definen mediante [CDockingManager:: m_dockModeGlobal](#m_dockmodeglobal) y se establecen mediante una llamada a [CDockingManager:: SetDockingMode](#setdockingmode).
+  Estos modos de acoplamiento se definen mediante [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) y se establecen mediante una llamada a [CDockingManager::SetDockingMode](#setdockingmode).
 
-- Si desea crear un panel que no sea flotante y que no se pueda cambiar de tamaño, llame al método [CDockingManager:: AddPane](#addpane) . Este método registra el panel con el administrador de acoplamiento, que es responsable del diseño del panel.
+- Si desea crear un panel no flotante, no redimensionable, llame a la [CDockingManager::AddPane](#addpane) método. Este método registra el panel con el administrador de acoplamiento, que es responsable del diseño del panel.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar varios métodos en la clase `CDockingManager` para configurar un objeto `CDockingManager`. En el ejemplo se muestra cómo mostrar un botón adicional que abre un menú emergente en los títulos de todos los paneles de acoplamiento y cómo establecer el modo de acoplamiento del objeto. Este fragmento de código forma parte del [ejemplo de demostración de Visual Studio](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra `CDockingManager` cómo utilizar `CDockingManager` varios métodos en la clase para configurar un objeto. En el ejemplo se muestra cómo mostrar un botón adicional que abre un menú emergente en los subtítulos de todos los paneles de acoplamiento y cómo establecer el modo de acoplamiento del objeto. Este fragmento de código forma parte del [ejemplo de demostración](../../overview/visual-cpp-samples.md)de Visual Studio.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 
@@ -304,9 +304,9 @@ En el ejemplo siguiente se muestra cómo utilizar varios métodos en la clase `C
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxDockingManager. h
+**Encabezado:** afxDockingManager.h
 
-##  <a name="adddocksite"></a>CDockingManager::AddDockSite
+## <a name="cdockingmanageradddocksite"></a><a name="adddocksite"></a>CDockingManager::AddDockSite
 
 Crea un panel de acoplamiento y lo agrega a la lista de barras de control.
 
@@ -319,18 +319,18 @@ BOOL AddDockSite(
 ### <a name="parameters"></a>Parámetros
 
 *info*<br/>
-de Referencia a una estructura de información que contiene la alineación del panel de acoplamiento.
+[en] Una referencia a una estructura de información que contiene la alineación del panel de acoplamiento.
 
 *ppDockBar*<br/>
-enuncia Un puntero a un puntero al nuevo panel de acoplamiento.
+[fuera] Un puntero a un puntero al nuevo panel de acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel de acoplamiento se creó correctamente; De lo contrario, FALSE.
+TRUESi el panel de acoplamiento se creó correctamente; FALSE en caso contrario.
 
-##  <a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar
+## <a name="cdockingmanageraddhiddenmditabbedbar"></a><a name="addhiddenmditabbedbar"></a>CDockingManager::AddHiddenMDITabbedBar
 
-Agrega un identificador a un panel de barras a la lista de paneles de barra de pestañas MDI ocultos.
+Agrega un identificador a un panel de barras a la lista de paneles de barras con pestañas MDI ocultos.
 
 ```
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
@@ -339,9 +339,9 @@ void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ### <a name="parameters"></a>Parámetros
 
 *pBar*<br/>
-de Un puntero a un panel de barra
+[en] Un puntero a un panel de barras
 
-##  <a name="addpane"></a>CDockingManager::AddPane
+## <a name="cdockingmanageraddpane"></a><a name="addpane"></a>CDockingManager::AddPane
 
 Registra un panel con el administrador de acoplamiento.
 
@@ -356,28 +356,28 @@ BOOL AddPane(
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-[in, out] Especifica el panel que se va a agregar al administrador de acoplamiento.
+[adentro, fuera] Especifica el panel que se va a agregar al administrador de acoplamiento.
 
 *bTail*<br/>
-de TRUE para agregar el panel al final de la lista de paneles para el administrador de acoplamiento; en caso contrario, FALSE.
+[en] TRUE para agregar el panel al final de la lista de paneles para el administrador de acoplamiento; de lo contrario, FALSE.
 
 *bAutoHide*<br/>
-de Solo para uso interno. Use siempre el valor predeterminado FALSE.
+[en] Sólo para uso interno. Utilice siempre el valor predeterminado FALSE.
 
 *bInsertForOuterEdge*<br/>
-de Solo para uso interno. Use siempre el valor predeterminado FALSE.
+[en] Sólo para uso interno. Utilice siempre el valor predeterminado FALSE.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se registró correctamente con el administrador de acoplamiento; en caso contrario, FALSE.
+TRUESi el panel se registró correctamente con el administrador de acoplamiento; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método para registrar paneles no flotantes y sin tamaño con el administrador de acoplamiento. Si no registra los paneles, no aparecerán correctamente cuando se disponga del administrador de acoplamiento.
+Llame a este método para registrar paneles no flotantes y no redimensionables con el administrador de acoplamiento. Si no registra los paneles, no aparecerán correctamente cuando se haya diseñado el administrador de acoplamiento.
 
-##  <a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout
+## <a name="cdockingmanageradjustdockinglayout"></a><a name="adjustdockinglayout"></a>CDockingManager::AdjustDockingLayout
 
-Vuelve a calcular y ajusta el diseño de todos los paneles en una ventana de marco.
+Recalcula y ajusta el diseño de todos los paneles de una ventana de marco.
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -386,13 +386,13 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Parámetros
 
 *hdwp*<br/>
-de Especifica la estructura de posición de la ventana diferida. Para obtener más información, vea [Tipos de datos de Windows](/windows/win32/WinProg/windows-data-types).
+[en] Especifica la estructura de posición de la ventana diferida. Para obtener más información, vea [Tipos de datos de Windows](/windows/win32/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="addminiframe"></a>CDockingManager::AddMiniFrame
+## <a name="cdockingmanageraddminiframe"></a><a name="addminiframe"></a>CDockingManager::AddMiniFrame
 
-Agrega un marco a la lista de fotogramas.
+Añade un fotograma a la lista de mini fotogramas.
 
 ```
 virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
@@ -401,15 +401,15 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-de Un puntero a un marco.
+[en] Un puntero a un marco.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el marco no está en la lista de Marcos reducidos y se ha agregado correctamente; De lo contrario, FALSE.
+TRUESi el marco no está en la lista de mini fotogramas y se agregó correctamente; FALSE en caso contrario.
 
-##  <a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames
+## <a name="cdockingmanageradjustpaneframes"></a><a name="adjustpaneframes"></a>CDockingManager::AdjustPaneFrames
 
-Hace que el mensaje de WM_NCCALCSIZE se envíe a todos los paneles y `CPaneFrameWnd` ventanas.
+Hace que el mensaje de WM_NCCALCSIZE `CPaneFrameWnd` se envíe a todos los paneles y ventanas.
 
 ```
 virtual void AdjustPaneFrames();
@@ -417,7 +417,7 @@ virtual void AdjustPaneFrames();
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea
+## <a name="cdockingmanageradjustrecttoclientarea"></a><a name="adjustrecttoclientarea"></a>CDockingManager::AdjustRectToClientArea
 
 Ajusta la alineación de un rectángulo.
 
@@ -430,18 +430,18 @@ virtual BOOL AdjustRectToClientArea(
 ### <a name="parameters"></a>Parámetros
 
 *rectResult*<br/>
-de Referencia a un objeto `CRect`
+[en] Una referencia `CRect` a un objeto
 
 *dwAlignment*<br/>
-de Alineación del objeto `CRect`
+[en] La alineación `CRect` del objeto
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se ajustó la alineación del objeto `CRect`; De lo contrario, FALSE.
+TRUESi se ha `CRect` ajustado la alineación del objeto; FALSE en caso contrario.
 
 ### <a name="remarks"></a>Observaciones
 
-El parámetro *dwAlignment* puede tener uno de los valores siguientes:
+El parámetro *dwAlignment* puede tener uno de los siguientes valores:
 
 - CBRS_ALIGN_TOP
 
@@ -451,9 +451,9 @@ El parámetro *dwAlignment* puede tener uno de los valores siguientes:
 
 - CBRS_ALIGN_RIGHT
 
-##  <a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane
+## <a name="cdockingmanageralignautohidepane"></a><a name="alignautohidepane"></a>CDockingManager::AlignAutoHidePane
 
-Cambia el tamaño de un panel acoplable en modo Ocultar automáticamente para que tome el ancho o el alto completo del área cliente del marco entre los sitios acoplados.
+Cambia el tamaño de un panel de acoplamiento en modo de ocultación automática para que tome todo el ancho o alto del área de cliente del marco rodeado de sitios de acoplamiento.
 
 ```
 void AlignAutoHidePane(
@@ -464,14 +464,14 @@ void AlignAutoHidePane(
 ### <a name="parameters"></a>Parámetros
 
 *pDefaultSlider*<br/>
-de Panel de control deslizante de acoplamiento.
+[en] El panel deslizante de acoplamiento.
 
 *bIsVisible*<br/>
-de TRUE si está visible el panel de acoplamiento; De lo contrario, FALSE.
+[en] TRUESi el panel de acoplamiento está visible; FALSE en caso contrario.
 
-##  <a name="autohidepane"></a>CDockingManager::AutoHidePane
+## <a name="cdockingmanagerautohidepane"></a><a name="autohidepane"></a>CDockingManager::AutoHidePane
 
-Crea una barra de herramientas ocultar automáticamente.
+Crea una barra de herramientas de ocultación automática.
 
 ```
 CMFCAutoHideToolBar* AutoHidePane(
@@ -482,18 +482,18 @@ CMFCAutoHideToolBar* AutoHidePane(
 ### <a name="parameters"></a>Parámetros
 
 *pBar*<br/>
-de Puntero al panel de barra.
+[en] Un puntero al panel de la barra.
 
 *pCurrAutoHideToolBar*<br/>
-de Puntero a una barra de herramientas ocultar automáticamente.
+[en] Puntero a una barra de herramientas de ocultación automática.
 
 ### <a name="return-value"></a>Valor devuelto
 
-NULL si no se creó la barra de herramientas ocultar automáticamente; de lo contrario, un puntero a la nueva barra de herramientas.
+NULL si no se creó la barra de herramientas de ocultación automática; de lo contrario, un puntero a la nueva barra de herramientas.
 
-##  <a name="bringbarstotop"></a>CDockingManager::BringBarsToTop
+## <a name="cdockingmanagerbringbarstotop"></a><a name="bringbarstotop"></a>CDockingManager::BringBarsToTop
 
-Coloca en la parte superior las barras acopladas que tienen la alineación especificada.
+Trae las barras acopladas que tienen la alineación especificada a la parte superior.
 
 ```
 void BringBarsToTop(
@@ -504,14 +504,14 @@ void BringBarsToTop(
 ### <a name="parameters"></a>Parámetros
 
 *dwAlignment*<br/>
-de Alineación de las barras de acoplamiento que se llevan a la parte superior de otras ventanas.
+[en] La alineación de las barras de acoplamiento que se llevan a la parte superior de otras ventanas.
 
 *bExcludeDockedBars*<br/>
-de TRUE para excluir la posición de las barras acopladas en la parte superior; en caso contrario, FALSE.
+[en] TRUE para excluir las barras acopladas de estar en la parte superior; de lo contrario FALSO.
 
-##  <a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu
+## <a name="cdockingmanagerbuildpanesmenu"></a><a name="buildpanesmenu"></a>CDockingManager::BuildPanesMenu
 
-Agrega nombres de paneles y barras de herramientas de acoplamiento a un menú.
+Agrega nombres de paneles de acoplamiento y barras de herramientas a un menú.
 
 ```
 void BuildPanesMenu(
@@ -521,13 +521,13 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*MENU*<br/>
-de Un menú para agregar los nombres de los paneles y barras de herramientas de acoplamiento.
+*Menú*<br/>
+[en] Un menú para agregar los nombres de los paneles de acoplamiento y las barras de herramientas.
 
 *bToolbarsOnly*<br/>
-de TRUE para agregar solo nombres de barras de herramientas al menú; De lo contrario, FALSE.
+[en] TRUE para agregar solo nombres de barra de herramientas al menú; FALSE en caso contrario.
 
-##  <a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect
+## <a name="cdockingmanagercalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CDockingManager::CalcExpectedDockedRect
 
 Calcula el rectángulo esperado de una ventana acoplada.
 
@@ -543,25 +543,25 @@ void CalcExpectedDockedRect(
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-de Puntero a la ventana que se va a acoplar.
+[en] Un puntero a la ventana que se está acoplando.
 
 *ptMouse*<br/>
-de La ubicación del mouse.
+[en] La ubicación del ratón.
 
 *rectResult*<br/>
-enuncia Rectángulo calculado.
+[fuera] El rectángulo calculado.
 
 *bDrawTab*<br/>
-de TRUE para dibujar una pestaña; en caso contrario, FALSE.
+[en] TRUE para dibujar una pestaña; de lo contrario FALSO.
 
 *ppTargetBar*<br/>
-enuncia Un puntero a un puntero al panel de destino.
+[fuera] Puntero a un puntero al panel de destino.
 
 ### <a name="remarks"></a>Observaciones
 
-Este método calcula el rectángulo que ocuparía una ventana si un usuario arrastrase la ventana hasta el punto especificado por *ptMouse* y lo acoplaba allí.
+Este método calcula el rectángulo que ocuparía una ventana si un usuario arrastra la ventana al punto especificado por *ptMouse* y la acopla allí.
 
-##  <a name="create"></a>CDockingManager:: Create
+## <a name="cdockingmanagercreate"></a><a name="create"></a>CDockingManager::Crear
 
 Crea un administrador de acoplamiento.
 
@@ -572,13 +572,13 @@ BOOL Create(CFrameWnd* pParentWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pParentWnd*<br/>
-de Puntero al marco primario del administrador de acoplamiento. Este valor no debe ser NULL.
+[en] Un puntero al marco primario del administrador de acoplamiento. Este valor no debe ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE siempre.
+VERDADERO siempre.
 
-##  <a name="determinepaneandstatus"></a>CDockingManager::D eterminePaneAndStatus
+## <a name="cdockingmanagerdeterminepaneandstatus"></a><a name="determinepaneandstatus"></a>CDockingManager::DeterminePaneAndStatus
 
 Determina el panel que contiene un punto determinado y su estado de acoplamiento.
 
@@ -594,23 +594,23 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 ### <a name="parameters"></a>Parámetros
 
-*pt*<br/>
-de Ubicación del panel que se va a comprobar.
+*Pt*<br/>
+[en] La ubicación del panel que se debe comprobar.
 
-*nSensitivity*<br/>
-de Valor para aumentar el rectángulo de la ventana de cada panel activado. Un panel cumple los criterios de búsqueda si el punto especificado se encuentra en esta mayor región.
+*nSensibilidad*<br/>
+[en] El valor para aumentar el rectángulo de ventana de cada panel activado. Un panel cumple los criterios de búsqueda si el punto dado está en esta región aumentada.
 
 *dwEnabledAlignment*<br/>
-de Alineación del panel de acoplamiento.
+[en] Alineación del panel de acoplamiento.
 
 *ppTargetBar*<br/>
-enuncia Un puntero a un puntero al panel de destino.
+[fuera] Puntero a un puntero al panel de destino.
 
 *pBarToIgnore*<br/>
-de Panel que omite el método.
+[en] El panel que omite el método.
 
 *pBarToDock*<br/>
-de Panel que está acoplado.
+[en] El panel que está acoplado.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -620,16 +620,16 @@ El estado de acoplamiento.
 
 El estado de acoplamiento puede ser uno de los siguientes valores:
 
-|AFX_CS_STATUS valor|Significado|
+|valor AFX_CS_STATUS|Significado|
 |---------------------------|-------------|
 |CS_NOTHING|El puntero no está sobre un sitio de acoplamiento. Por lo tanto, mantenga el panel flotante.|
-|CS_DOCK_IMMEDIATELY|El puntero está sobre el sitio de acoplamiento en el modo inmediato (el estilo de DT_IMMEDIATE está habilitado), por lo que el panel debe acoplarse inmediatamente.|
-|CS_DELAY_DOCK|El puntero está sobre un sitio de acoplamiento que es otro panel acoplable o es un borde del marco principal.|
-|CS_DELAY_DOCK_TO_TAB|El puntero se encuentra sobre un sitio de acoplamiento que hace que el panel se acople en una ventana con pestañas. Esto se produce cuando el mouse está encima de un título de otro panel de acoplamiento o de un área de ficha de un panel con pestañas.|
+|CS_DOCK_IMMEDIATELY|El puntero está sobre el sitio de acoplamiento en el modo inmediato (DT_IMMEDIATE estilo está habilitado), por lo que el panel debe acoplarse inmediatamente.|
+|CS_DELAY_DOCK|El puntero está sobre un sitio de acoplamiento que es otro panel de acoplamiento o es un borde del marco principal.|
+|CS_DELAY_DOCK_TO_TAB|El puntero está sobre un sitio de acoplamiento que hace que el panel se acopla en una ventana con fichas. Esto ocurre cuando el mouse está sobre un título de otro panel de acoplamiento o sobre un área de ficha de un panel con fichas.|
 
-##  <a name="disablerestoredockstate"></a>CDockingManager::D isableRestoreDockState
+## <a name="cdockingmanagerdisablerestoredockstate"></a><a name="disablerestoredockstate"></a>CDockingManager::DisableRestoreDockState
 
-Habilita o deshabilita la carga del diseño de acoplamiento del registro.
+Habilita o deshabilita la carga del diseño de acoplamiento desde el registro.
 
 ```
 void DisableRestoreDockState(BOOL bDisable = TRUE);
@@ -637,14 +637,14 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bDeshabilite*<br/>
-de TRUE para deshabilitar la carga del diseño de acoplamiento del registro; en caso contrario, FALSE.
+*bDesactivar*<br/>
+[en] TRUE para deshabilitar la carga del diseño de acoplamiento desde el registro; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método cuando deba conservar el diseño actual de paneles de acoplamiento y barras de herramientas cuando se cargue el estado de la aplicación.
+Llame a este método cuando debe conservar el diseño actual de los paneles de acoplamiento y barras de herramientas cuando se carga el estado de la aplicación.
 
-##  <a name="dockpane"></a>CDockingManager::D ockPane
+## <a name="cdockingmanagerdockpane"></a><a name="dockpane"></a>CDockingManager::DockPane
 
 Acopla un panel a otro panel o a una ventana de marco.
 
@@ -658,15 +658,15 @@ void DockPane(
 ### <a name="parameters"></a>Parámetros
 
 *pBar*<br/>
-de Un puntero a un panel de barra para acoplarlo.
+[en] Puntero a un panel de barras al que acoplar.
 
 *nDockBarID*<br/>
-de Identificador de la barra que se va a acoplar.
+[en] El identificador de la barra para atracar.
 
 *lpRect*<br/>
-de Rectángulo de destino.
+[en] El rectángulo de destino.
 
-##  <a name="dockpaneleftof"></a>CDockingManager::D ockPaneLeftOf
+## <a name="cdockingmanagerdockpaneleftof"></a><a name="dockpaneleftof"></a>CDockingManager::DockPaneLeftOf
 
 Acopla un panel a la izquierda de otro panel.
 
@@ -679,16 +679,16 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>Parámetros
 
 *pBarToDock*<br/>
-de Puntero al panel que se va a acoplar a la izquierda de *pTargetBar*.
+[en] Puntero al panel que se va a acoplar a la izquierda de *pTargetBar*.
 
 *pTargetBar*<br/>
-de Puntero al panel de destino.
+[en] Un puntero al panel de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se ha acoplado correctamente; en caso contrario, FALSE.
+TRUESi el panel se acopla correctamente; de lo contrario, FALSE.
 
-##  <a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes
+## <a name="cdockingmanagerenableautohidepanes"></a><a name="enableautohidepanes"></a>CDockingManager::EnableAutoHidePanes
 
 Habilita el acoplamiento del panel al marco principal, crea un panel de acoplamiento y lo agrega a la lista de barras de control.
 
@@ -699,15 +699,15 @@ BOOL EnableAutoHidePanes(DWORD dwStyle);
 ### <a name="parameters"></a>Parámetros
 
 *dwStyle*<br/>
-de Alineación de acoplamiento.
+[en] La alineación de acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel de acoplamiento se creó correctamente; De lo contrario, FALSE.
+TRUESi el panel de acoplamiento se creó correctamente; FALSE en caso contrario.
 
-##  <a name="enabledocking"></a>CDockingManager:: EnableDocking
+## <a name="cdockingmanagerenabledocking"></a><a name="enabledocking"></a>CDockingManager::EnableDocking
 
-Crea un panel de acoplamiento y permite acoplar el panel en el marco principal.
+Crea un panel de acoplamiento y habilita el acoplamiento del panel al marco principal.
 
 ```
 BOOL EnableDocking(DWORD dwStyle);
@@ -716,15 +716,15 @@ BOOL EnableDocking(DWORD dwStyle);
 ### <a name="parameters"></a>Parámetros
 
 *dwStyle*<br/>
-de Alineación de acoplamiento.
+[en] La alineación de acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel de acoplamiento se creó correctamente; De lo contrario, FALSE.
+TRUESi el panel de acoplamiento se creó correctamente; FALSE en caso contrario.
 
-##  <a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu
+## <a name="cdockingmanagerenabledocksitemenu"></a><a name="enabledocksitemenu"></a>CDockingManager::EnableDockSiteMenu
 
-Muestra un botón adicional que abre un menú emergente en los títulos de todos los paneles de acoplamiento.
+Muestra un botón adicional que abre un menú emergente en los subtítulos de todos los paneles de acoplamiento.
 
 ```
 static void EnableDockSiteMenu(BOOL bEnable = TRUE);
@@ -732,26 +732,26 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
-de TRUE para habilitar el menú de sitio de Dock; en caso contrario, FALSE.
+*bHabilitar*<br/>
+[en] TRUE para habilitar el menú del sitio de acoplamiento; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-En el menú sitio de acoplamiento se muestran las siguientes opciones para cambiar el estado de acoplamiento del panel:
+El menú del sitio de acoplamiento muestra las siguientes opciones para cambiar el estado de acoplamiento del panel:
 
-- `Floating`: flota un panel
+- `Floating`- Flota un panel
 
-- `Docking`: acopla un panel en el marco principal en la ubicación en la que se ha acoplado el panel por última vez.
+- `Docking`- Acopla un panel en el marco principal en la ubicación donde se acoplaron por última vez el panel
 
-- `AutoHide`: cambia el panel al modo de ocultar automáticamente
+- `AutoHide`- Cambia el panel al modo de ocultación automática
 
-- `Hide`: oculta un panel
+- `Hide`- Oculta un panel
 
 De forma predeterminada, este menú no se muestra.
 
-##  <a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu
+## <a name="cdockingmanagerenablepanecontextmenu"></a><a name="enablepanecontextmenu"></a>CDockingManager::EnablePaneContextMenu
 
-Indica a la biblioteca que muestre un menú contextual especial que tenga una lista de barras de herramientas de la aplicación y paneles de acoplamiento cuando el usuario haga clic con el botón secundario del mouse y la biblioteca esté procesando el mensaje de WM_CONTEXTMENU.
+Indica a la biblioteca que muestre un menú contextual especial que tenga una lista de barras de herramientas de la aplicación y paneles de acoplamiento cuando el usuario haga clic en el botón derecho del ratón y la biblioteca esté procesando el mensaje WM_CONTEXTMENU.
 
 ```
 void EnablePaneContextMenu(
@@ -763,21 +763,21 @@ void EnablePaneContextMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
-de Si es TRUE, la biblioteca activa la compatibilidad con el menú contextual automático; Si es FALSE, la biblioteca desactiva la compatibilidad con el menú contextual automático.
+*bHabilitar*<br/>
+[en] Si es TRUE, la biblioteca activa la compatibilidad con el menú contextual automático; si FALSE la biblioteca desactiva la compatibilidad con el menú contextual automático.
 
 *uiCustomizeCmd*<br/>
-de Identificador de comando para el elemento **personalizar** en el menú.
+[en] Un identificador de comando para el elemento **Personalizar** del menú.
 
 *strCustomizeText*<br/>
-de Texto del elemento que se va a **personalizar** .
+[en] El texto del elemento **Personalizar.**
 
 *bToolbarsOnly*<br/>
-de Si es TRUE, el menú muestra solo una lista de barras de herramientas de la aplicación; Si es FALSE, la biblioteca agrega paneles de acoplamiento de aplicaciones a esta lista.
+[en] Si es TRUE, el menú muestra solo una lista de barras de herramientas de la aplicación; si FALSE, la biblioteca agrega paneles de acoplamiento de aplicaciones a esta lista.
 
-##  <a name="finddocksite"></a>CDockingManager::FindDockSite
+## <a name="cdockingmanagerfinddocksite"></a><a name="finddocksite"></a>CDockingManager::FindDockSite
 
-Recupera el panel de barra que se encuentra en la posición especificada y que tiene la alineación especificada.
+Recupera el panel de barras que se encuentra en la posición especificada y que tiene la alineación especificada.
 
 ```
 virtual CDockSite* FindDockSite(
@@ -788,18 +788,18 @@ virtual CDockSite* FindDockSite(
 ### <a name="parameters"></a>Parámetros
 
 *dwAlignment*<br/>
-de Alineación del panel de barras.
+[en] Alineación del panel de barras.
 
-*más cercado*<br/>
-de Si es TRUE, recupere la barra en la posición del encabezado en la lista de barras de control. De lo contrario, recupere la barra en la posición de la cola en la lista de barras de control.
+*bOuter*<br/>
+[en] Si es TRUE, recupere la barra en la posición principal de la lista de barras de control. De lo contrario, recupere la barra en la posición de la cola en la lista de barras de control.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Panel acoplable que tiene la alineación especificada; De lo contrario, NULL.
+El panel de acoplamiento que tiene la alineación especificada; NULL en caso contrario.
 
-##  <a name="findpanebyid"></a>CDockingManager::FindPaneByID
+## <a name="cdockingmanagerfindpanebyid"></a><a name="findpanebyid"></a>CDockingManager::FindPaneByID
 
-Busca un panel por el ID. de control especificado.
+Busca un panel por el identificador de control especificado.
 
 ```
 virtual CBasePane* FindPaneByID(
@@ -810,20 +810,20 @@ virtual CBasePane* FindPaneByID(
 ### <a name="parameters"></a>Parámetros
 
 *uBarID*<br/>
-de Especifica el identificador de control del panel que se va a buscar.
+[en] Especifica el identificador de control del panel que se va a buscar.
 
 *bSearchMiniFrames*<br/>
-de TRUE para incluir todos los paneles flotantes en la búsqueda. FALSE para incluir solo los paneles acoplados.
+[en] TRUE para incluir todos los paneles flotantes en la búsqueda. FALSE para incluir solo los paneles acoplados.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El objeto [a cbasepane](../../mfc/reference/cbasepane-class.md) que tiene el identificador de control especificado, o null si no se encuentra el panel especificado.
+El [CBasePane](../../mfc/reference/cbasepane-class.md) objeto que tiene el identificador de control especificado, o NULL si no se encuentra el panel especificado.
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane
+## <a name="cdockingmanagerfinddocksitebypane"></a><a name="finddocksitebypane"></a>CDockingManager::FindDockSiteByPane
 
-Devuelve el panel de barra que tiene el identificador del panel de la barra de destino.
+Devuelve el panel de barras que tiene el identificador del panel de la barra de destino.
 
 ```
 virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
@@ -832,15 +832,15 @@ virtual CDockSite* FindDockSiteByPane(CPane* pTargetBar);
 ### <a name="parameters"></a>Parámetros
 
 *pTargetBar*<br/>
-de Puntero al panel de la barra de destino.
+[en] Un puntero al panel de la barra de destino.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El panel de barra que tiene el identificador del panel de la barra de destino; ES NULL si no existe tal panel de barra.
+El panel de barras que tiene el identificador del panel de la barra de destino; NULL si no existe ningún panel de barras de este tipo.
 
-##  <a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects
+## <a name="cdockingmanagerfixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockingManager::FixupVirtualRects
 
-Confirma todas las posiciones de la barra de herramientas actual en rectángulos virtuales.
+Confirma todas las posiciones actuales de la barra de herramientas en rectángulos virtuales.
 
 ```
 virtual void FixupVirtualRects();
@@ -848,9 +848,9 @@ virtual void FixupVirtualRects();
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando el usuario empieza a arrastrar una barra de herramientas, la aplicación recuerda su posición original en el *rectángulo virtual*. Cuando el usuario mueve una barra de herramientas por su sitio de acoplamiento, la barra de herramientas puede desplazarse por otras barras de herramientas. Las posiciones originales de las otras barras de herramientas se almacenan en los rectángulos virtuales correspondientes.
+Cuando el usuario comienza a arrastrar una barra de herramientas, la aplicación recuerda su posición original en el *rectángulo virtual.* Cuando el usuario mueve una barra de herramientas a través de su sitio de acoplamiento, la barra de herramientas puede cambiar otras barras de herramientas. Las posiciones originales de las otras barras de herramientas se almacenan en los rectángulos virtuales correspondientes.
 
-##  <a name="framefrompoint"></a>CDockingManager::FrameFromPoint
+## <a name="cdockingmanagerframefrompoint"></a><a name="framefrompoint"></a>CDockingManager::FrameFromPoint
 
 Devuelve el marco que contiene el punto especificado.
 
@@ -863,22 +863,22 @@ virtual CPaneFrameWnd* FrameFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*pt*<br/>
-de Especifica el punto, en coordenadas de la pantalla, que se va a comprobar.
+*Pt*<br/>
+[en] Especifica el punto, en coordenadas de pantalla, que se va a comprobar.
 
 *pFrameToExclude*<br/>
-de Puntero a un marco que se va a excluir.
+[en] Puntero a un marco que se van a excluir.
 
 *bFloatMultiOnly*<br/>
-de TRUE para excluir fotogramas que no sean instancias de `CMultiPaneFrameWnd`; De lo contrario, FALSE.
+[en] TRUE para excluir fotogramas que `CMultiPaneFrameWnd`no son instancias de ; FALSE en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Marco que contiene el punto especificado; De lo contrario, NULL.
+El marco que contiene el punto dado; NULL en caso contrario.
 
-##  <a name="getclientareabounds"></a>CDockingManager::GetClientAreaBounds
+## <a name="cdockingmanagergetclientareabounds"></a><a name="getclientareabounds"></a>CDockingManager::GetClientAreaBounds
 
-Obtiene el rectángulo que contiene los límites del área cliente.
+Obtiene el rectángulo que contiene los límites del área de cliente.
 
 ```
 CRect GetClientAreaBounds() const;
@@ -889,13 +889,13 @@ void GetClientAreaBounds(CRect& rcClient);
 ### <a name="parameters"></a>Parámetros
 
 *rcClient*<br/>
-enuncia Referencia al rectángulo que contiene los límites del área cliente.
+[fuera] Una referencia al rectángulo que contiene los límites del área de cliente.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Rectángulo que contiene los límites del área cliente.
+El rectángulo que contiene los límites del área de cliente.
 
-##  <a name="getdockingmode"></a>CDockingManager::GetDockingMode
+## <a name="cdockingmanagergetdockingmode"></a><a name="getdockingmode"></a>CDockingManager::GetDockingMode
 
 Devuelve el modo de acoplamiento actual.
 
@@ -905,7 +905,7 @@ static AFX_DOCK_TYPE GetDockingMode();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor de enumerador que representa el modo de acoplamiento actual. Puede ser uno de los siguientes valores:
+Valor de enumerador que representa el modo de acoplamiento actual. Puede ser uno de los siguientes valores:
 
 - DT_STANDARD
 
@@ -915,9 +915,9 @@ Un valor de enumerador que representa el modo de acoplamiento actual. Puede ser 
 
 ### <a name="remarks"></a>Observaciones
 
-Para establecer el modo de acoplamiento, llame a [CDockingManager:: SetDockingMode](#setdockingmode).
+Para establecer el modo de acoplamiento, llame a [CDockingManager::SetDockingMode](#setdockingmode).
 
-##  <a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd
+## <a name="cdockingmanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>CDockingManager::GetDockSiteFrameWnd
 
 Obtiene un puntero al marco de la ventana primaria.
 
@@ -927,9 +927,9 @@ CFrameWnd* GetDockSiteFrameWnd() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al marco de la ventana primaria.
+Un puntero al marco de la ventana principal.
 
-##  <a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment
+## <a name="cdockingmanagergetenabledautohidealignment"></a><a name="getenabledautohidealignment"></a>CDockingManager::GetEnabledAutoHideAlignment
 
 Devuelve la alineación habilitada de los paneles.
 
@@ -939,13 +939,13 @@ DWORD GetEnabledAutoHideAlignment() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Combinación bit a bit de marcas de CBRS_ALIGN_, o 0 si los paneles de ocultar automáticamente no están habilitados. Para obtener más información, vea [CFrameWnd:: EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
+Una combinación bit a bit de CBRS_ALIGN_ marcas, o 0 si los paneles de ocultación automática no están habilitados. Para obtener más información, vea [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking).
 
 ### <a name="remarks"></a>Observaciones
 
-El método devuelve la alineación habilitada para ocultar automáticamente las barras de control. Para habilitar las barras ocultas automáticamente, llame a [CFrameWndEx:: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
+El método devuelve la alineación habilitada para las barras de control de ocultación automática. Para habilitar las barras de ocultación automática, llame a [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes).
 
-##  <a name="getminiframes"></a>CDockingManager::GetMiniFrames
+## <a name="cdockingmanagergetminiframes"></a><a name="getminiframes"></a>CDockingManager::GetMiniFrames
 
 Obtiene una lista de miniframes.
 
@@ -955,9 +955,9 @@ const CObList& GetMiniFrames() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una lista de miniframes que contienen las barras de control que pertenecen al administrador de acoplamiento.
+Una lista de minitramas que contienen las barras de control que pertenecen al administrador de acoplamiento.
 
-##  <a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBounds
+## <a name="cdockingmanagergetouteredgebounds"></a><a name="getouteredgebounds"></a>CDockingManager::GetOuterEdgeBounds
 
 Obtiene un rectángulo que contiene los bordes exteriores del marco.
 
@@ -969,9 +969,9 @@ CRect GetOuterEdgeBounds() const;
 
 Rectángulo que contiene los bordes exteriores del marco.
 
-##  <a name="getpanelist"></a>CDockingManager::GetPaneList
+## <a name="cdockingmanagergetpanelist"></a><a name="getpanelist"></a>CDockingManager::GetPaneList
 
-Devuelve una lista de los paneles que pertenecen al administrador de acoplamiento. Esto incluye todos los paneles flotantes.
+Devuelve una lista de paneles que pertenecen al administrador de acoplamiento. Esto incluye todos los paneles flotantes.
 
 ```
 void GetPaneList(
@@ -984,24 +984,24 @@ void GetPaneList(
 ### <a name="parameters"></a>Parámetros
 
 *lstBars*<br/>
-[in, out] Contiene todos los paneles del administrador de acoplamiento actual.
+[adentro, fuera] Contiene todos los paneles del administrador de acoplamiento actual.
 
 *bIncludeAutohide*<br/>
-de TRUE para incluir los paneles que se encuentran en modo de ocultación automáticamente; en caso contrario, FALSE.
+[en] TRUE para incluir los paneles que están en modo de ocultación automática; de lo contrario, FALSE.
 
 *pRTCFilter*<br/>
-de Si no es NULL, la lista devuelta contiene paneles solo de la clase en tiempo de ejecución especificada.
+[en] Si no es NULL, la lista devuelta contiene paneles solo de la clase de tiempo de ejecución especificada.
 
 *bIncludeTabs*<br/>
-de TRUE para incluir pestañas; en caso contrario, FALSE.
+[en] TRUE para incluir pestañas; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-Si hay paneles con pestañas en el administrador de acoplamiento, el método devuelve punteros a objetos de la [clase CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md) y debe enumerar las fichas explícitamente.
+Si hay paneles con fichas en el administrador de acoplamiento, el método devuelve punteros a [CBaseTabbedPane clase](../../mfc/reference/cbasetabbedpane-class.md) objetos y debe enumerar las fichas explícitamente.
 
-Use *pRTCFilter* para obtener una clase determinada de paneles. Por ejemplo, puede obtener únicamente barras de herramientas estableciendo este valor de manera adecuada.
+Use *pRTCFilter* para obtener una clase determinada de paneles. Por ejemplo, solo puede obtener barras de herramientas estableciendo este valor de forma adecuada.
 
-##  <a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager
+## <a name="cdockingmanagergetsmartdockingmanager"></a><a name="getsmartdockingmanager"></a>CDockingManager::GetSmartDockingManager
 
 Recupera un puntero al administrador de acoplamiento inteligente.
 
@@ -1011,9 +1011,9 @@ CSmartDockingManager* GetSmartDockingManager();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al administrador de acoplamiento inteligente.
+Un puntero al administrador de acoplamiento inteligente.
 
-##  <a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent
+## <a name="cdockingmanagergetsmartdockingmanagerpermanent"></a><a name="getsmartdockingmanagerpermanent"></a>CDockingManager::GetSmartDockingManagerPermanent
 
 Recupera un puntero al administrador de acoplamiento inteligente.
 
@@ -1023,9 +1023,9 @@ CSmartDockingManager* GetSmartDockingManagerPermanent() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al administrador de acoplamiento inteligente.
+Un puntero al administrador de acoplamiento inteligente.
 
-##  <a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams
+## <a name="cdockingmanagergetsmartdockingparams"></a><a name="getsmartdockingparams"></a>CDockingManager::GetSmartDockingParams
 
 Devuelve los parámetros de acoplamiento inteligente para el administrador de acoplamiento.
 
@@ -1035,13 +1035,13 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 ### <a name="return-value"></a>Valor devuelto
 
-La clase que contiene los parámetros de acoplamiento inteligente para el administrador de acoplamiento actual. Para obtener más información, consulte [clase CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md).
+La clase que contiene los parámetros de acoplamiento inteligente para el administrador de acoplamiento actual. Para obtener más información, vea [CSmartDockingInfo (Clase)](../../mfc/reference/csmartdockinginfo-class.md).
 
 ### <a name="remarks"></a>Observaciones
 
-##  <a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes
+## <a name="cdockingmanagerhideautohidepanes"></a><a name="hideautohidepanes"></a>CDockingManager::HideAutoHidePanes
 
-Oculta un panel que está en modo de ocultación automáticamente.
+Oculta un panel que está en modo de ocultación automática.
 
 ```
 void HideAutoHidePanes(
@@ -1052,12 +1052,12 @@ void HideAutoHidePanes(
 ### <a name="parameters"></a>Parámetros
 
 *pBarToExclude*<br/>
-de Puntero a una barra que se va a excluir de la ocultación.
+[en] Puntero a una barra para excluirde de la ocultación.
 
-*bImmediately*<br/>
-de TRUE para ocultar el panel inmediatamente; FALSE para ocultar el panel con el efecto de ocultar automáticamente.
+*bInmediatamente*<br/>
+[en] TRUE para ocultar el panel inmediatamente; FALSE para ocultar el panel con el efecto de ocultación automática.
 
-##  <a name="insertdocksite"></a>CDockingManager::InsertDockSite
+## <a name="cdockingmanagerinsertdocksite"></a><a name="insertdocksite"></a>CDockingManager::InsertDockSite
 
 Crea un panel de acoplamiento y lo inserta en la lista de barras de control.
 
@@ -1071,19 +1071,19 @@ BOOL InsertDockSite(
 ### <a name="parameters"></a>Parámetros
 
 *info*<br/>
-de Estructura que contiene la información de alineación sobre el panel de acoplamiento.
+[en] Estructura que contiene la información de alineación sobre el panel de acoplamiento.
 
 *dwAlignToInsertAfter*<br/>
-de Alineación del panel de acoplamiento.
+[en] Alineación del panel de acoplamiento.
 
 *ppDockBar*<br/>
-enuncia Un puntero a un puntero a un panel de acoplamiento.
+[fuera] Puntero a un puntero a un panel de acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel de acoplamiento se creó correctamente; De lo contrario, FALSE.
+TRUESi el panel de acoplamiento se creó correctamente; FALSE en caso contrario.
 
-##  <a name="insertpane"></a>CDockingManager::InsertPane
+## <a name="cdockingmanagerinsertpane"></a><a name="insertpane"></a>CDockingManager::InsertPane
 
 Inserta un panel de control en la lista de barras de control.
 
@@ -1097,25 +1097,25 @@ BOOL InsertPane(
 ### <a name="parameters"></a>Parámetros
 
 *pControlBar*<br/>
-de Un puntero a un panel de control.
+[en] Un puntero a un panel de control.
 
 *pTarget*<br/>
-de Un puntero a un panel de destino.
+[en] Un puntero a un panel de destino.
 
-*bAfter*<br/>
-de TRUE para insertar el panel después de la posición del panel de destino; De lo contrario, FALSE.
+*bDespués*<br/>
+[en] TRUE para insertar el panel después de la posición del panel de destino; FALSE en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel de control se ha agregado correctamente a la lista de barras de control; De lo contrario, FALSE.
+TRUESi el panel de control se agrega correctamente a la lista de barras de control; FALSE en caso contrario.
 
 ### <a name="remarks"></a>Observaciones
 
 Este método devuelve false si el panel de control ya está en la lista de barras de control o si el panel de destino no existe en la lista de barras de control.
 
-##  <a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu
+## <a name="cdockingmanagerisdocksitemenu"></a><a name="isdocksitemenu"></a>CDockingManager::IsDockSiteMenu
 
-Especifica si se muestra un menú emergente en los títulos de todos los paneles.
+Especifica si se muestra un menú emergente en los subtítulos de todos los paneles.
 
 ```
 static BOOL IsDockSiteMenu();
@@ -1123,13 +1123,13 @@ static BOOL IsDockSiteMenu();
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se muestra un menú de sitio de acoplamiento en los títulos de todos los paneles de acoplamiento; en caso contrario, FALSE.
+TRUESi se muestra un menú de sitio de acoplamiento en los subtítulos de todos los paneles de acoplamiento; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-Puede habilitar el menú sitio de Dock llamando a [CDockingManager:: EnableDockSiteMenu](#enabledocksitemenu).
+Puede habilitar el menú de sitio de acoplamiento llamando a [CDockingManager::EnableDockSiteMenu](#enabledocksitemenu).
 
-##  <a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout
+## <a name="cdockingmanagerisinadjustlayout"></a><a name="isinadjustlayout"></a>CDockingManager::IsInAdjustLayout
 
 Determina si se ajustan los diseños de todos los paneles.
 
@@ -1139,11 +1139,11 @@ BOOL IsInAdjustLayout() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se ajustan los diseños de todos los paneles; De lo contrario, FALSE.
+TRUESi se ajustan los diseños de todos los paneles; FALSE en caso contrario.
 
-##  <a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode
+## <a name="cdockingmanagerisolecontainermode"></a><a name="isolecontainermode"></a>CDockingManager::IsOLEContainerMode
 
-Especifica si el administrador de acoplamiento está en modo de contenedor OLE.
+Especifica si el administrador de acoplamiento está en modo contenedor OLE.
 
 ```
 BOOL IsOLEContainerMode() const;
@@ -1151,13 +1151,13 @@ BOOL IsOLEContainerMode() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el administrador de acoplamiento está en modo de contenedor OLE; en caso contrario, FALSE.
+TRUESi el administrador de acoplamiento está en modo contenedor OLE; de lo contrario, FALSE.
 
 ### <a name="remarks"></a>Observaciones
 
-En el modo de contenedor OLE, se ocultan todos los paneles de acoplamiento y las barras de herramientas de la aplicación. Los paneles también se ocultan en este modo si ha establecido [CDockingManager:: m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) en true.
+En el modo contenedor OLE, todos los paneles de acoplamiento y las barras de herramientas de la aplicación están ocultos. Los paneles también se ocultan en este modo si ha establecido [CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode) en TRUE.
 
-##  <a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite
+## <a name="cdockingmanagerispointneardocksite"></a><a name="ispointneardocksite"></a>CDockingManager::IsPointNearDockSite
 
 Determina si un punto especificado está cerca del sitio de acoplamiento.
 
@@ -1170,20 +1170,20 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-de El punto especificado.
+*Punto*<br/>
+[en] El punto especificado.
 
 *dwBarAlignment*<br/>
-enuncia Especifica a qué borde está cerca el punto. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM.
+[fuera] Especifica qué arista está cerca el punto. Los valores posibles son CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP y CBRS_ALIGN_BOTTOM.
 
 *bOuterEdge*<br/>
-enuncia TRUE si el punto está cerca del borde exterior del sitio de acoplamiento; De lo contrario, FALSE.
+[fuera] TRUESi el punto está cerca del borde exterior del sitio de acoplamiento; FALSE en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el punto está cerca del sitio de acoplamiento; en caso contrario, FALSE.
+TRUESi el punto está cerca del sitio de acoplamiento; de lo contrario FALSO.
 
-##  <a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid
+## <a name="cdockingmanagerisprintpreviewvalid"></a><a name="isprintpreviewvalid"></a>CDockingManager::IsPrintPreviewValid
 
 Determina si el modo de vista previa de impresión está establecido.
 
@@ -1193,9 +1193,9 @@ BOOL IsPrintPreviewValid() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si está establecido el modo de vista previa de impresión; De lo contrario, FALSE.
+TRUESi se establece el modo de vista previa de impresión; FALSE en caso contrario.
 
-##  <a name="loadstate"></a>CDockingManager:: LoadState
+## <a name="cdockingmanagerloadstate"></a><a name="loadstate"></a>CDockingManager::LoadState
 
 Carga el estado del administrador de acoplamiento desde el registro.
 
@@ -1208,18 +1208,18 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-de Nombre del perfil.
+[en] Nombre del perfil.
 
 *uiID*<br/>
-de Identificador del administrador de acoplamiento.
+[en] El identificador del administrador de acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el estado del administrador de acoplamiento se cargó correctamente; en caso contrario, FALSE.
+TRUESi el estado del administrador de acoplamiento se cargó correctamente; de lo contrario FALSO.
 
-##  <a name="lockupdate"></a>CDockingManager::LockUpdate
+## <a name="cdockingmanagerlockupdate"></a><a name="lockupdate"></a>CDockingManager::LockUpdate
 
-Bloquea la ventana especificada.
+Bloquea la ventana dada.
 
 ```
 void LockUpdate(BOOL bLock);
@@ -1227,16 +1227,16 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Parámetros
 
-*Sin*<br/>
-de TRUE si la ventana está bloqueada; De lo contrario, FALSE.
+*Bloquear*<br/>
+[en] TRUESi la ventana está bloqueada; FALSE en caso contrario.
 
 ### <a name="remarks"></a>Observaciones
 
-Cuando una ventana está bloqueada, no se puede desplace y no se puede volver a dibujar.
+Cuando una ventana está bloqueada, no se puede mover y no se puede volver a dibujar.
 
-##  <a name="m_bhidedockingbarsincontainermode"></a>CDockingManager:: m_bHideDockingBarsInContainerMode
+## <a name="cdockingmanagerm_bhidedockingbarsincontainermode"></a><a name="m_bhidedockingbarsincontainermode"></a>CDockingManager::m_bHideDockingBarsInContainerMode
 
-Especifica si el administrador de acoplamiento oculta los paneles en el modo de contenedor OLE.
+Especifica si el administrador de acoplamiento oculta los paneles en modo contenedor OLE.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
@@ -1244,9 +1244,9 @@ AFX_IMPORT_DATA static BOOL m_bHideDockingBarsInContainerMode;
 
 ### <a name="remarks"></a>Observaciones
 
-Establezca este valor en FALSE si desea mantener visibles todos los paneles acoplados al marco principal cuando la aplicación está en modo de contenedor OLE. De forma predeterminada, este valor es TRUE.
+Establezca este valor en FALSE si desea mantener todos los paneles acoplados al marco principal visibles cuando la aplicación está en modo contenedor OLE. De forma predeterminada, este valor es TRUE.
 
-##  <a name="m_dockmodeglobal"></a>CDockingManager:: m_dockModeGlobal
+## <a name="cdockingmanagerm_dockmodeglobal"></a><a name="m_dockmodeglobal"></a>CDockingManager::m_dockModeGlobal
 
 Especifica el modo de acoplamiento global.
 
@@ -1256,9 +1256,9 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 
 ### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, cada panel de acoplamiento utiliza este modo de acoplamiento. Para obtener más información sobre los valores en los que se puede establecer este campo, vea [a cbasepane:: GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
+De forma predeterminada, cada panel de acoplamiento utiliza este modo de acoplamiento. Para obtener más información acerca de los valores en los que se puede establecer este campo, vea [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
 
-##  <a name="m_ndocksensitivity"></a>CDockingManager:: m_nDockSensitivity
+## <a name="cdockingmanagerm_ndocksensitivity"></a><a name="m_ndocksensitivity"></a>CDockingManager::m_nDockSensitivity
 
 Especifica la sensibilidad de acoplamiento.
 
@@ -1268,11 +1268,11 @@ AFX_IMPORT_DATA static int m_nDockSensitivity;
 
 ### <a name="remarks"></a>Observaciones
 
-La sensibilidad de acoplamiento define cómo cerrar un panel flotante puede enfocarse en un panel acoplable, un sitio de acoplamiento u otro panel antes de que el marco cambie su estado a acoplado.
+La sensibilidad de acoplamiento define qué tan cerca puede acercarse un panel flotante a un panel de acoplamiento, sitio de acoplamiento u otro panel antes de que el marco de trabajo cambie su estado a acoplado.
 
-##  <a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager:: m_nTimeOutBeforeDockingBarDock
+## <a name="cdockingmanagerm_ntimeoutbeforedockingbardock"></a><a name="m_ntimeoutbeforedockingbardock"></a>CDockingManager::m_nTimeOutBeforeDockingBarDock
 
-Especifica el tiempo, en milisegundos, antes de que un panel acoplable se acople en el modo de acoplamiento inmediato.
+Especifica el tiempo, en milisegundos, antes de que un panel de acoplamiento se acopla en modo de acoplamiento inmediato.
 
 ```
 static UINT m_nTimeOutBeforeDockingBarDock;
@@ -1280,11 +1280,11 @@ static UINT m_nTimeOutBeforeDockingBarDock;
 
 ### <a name="remarks"></a>Observaciones
 
-Antes de acoplar un panel, el marco de trabajo espera la cantidad de tiempo especificada. Esto evita que el panel se acople accidentalmente a una ubicación mientras el usuario todavía lo está arrastrando.
+Antes de acoplar un panel, el marco de trabajo espera el período de tiempo especificado. Esto evita que el panel se acopla accidentalmente a una ubicación mientras el usuario todavía lo arrastra.
 
-##  <a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager:: m_nTimeOutBeforeToolBarDock
+## <a name="cdockingmanagerm_ntimeoutbeforetoolbardock"></a><a name="m_ntimeoutbeforetoolbardock"></a>CDockingManager::m_nTimeOutBeforeToolBarDock
 
-Especifica el tiempo, en milisegundos, antes de que una barra de herramientas esté acoplada a la ventana de marco principal.
+Especifica el tiempo, en milisegundos, antes de que una barra de herramientas se acopla a la ventana de marco principal.
 
 ```
 static UINT m_nTimeOutBeforeToolBarDock;
@@ -1292,11 +1292,11 @@ static UINT m_nTimeOutBeforeToolBarDock;
 
 ### <a name="remarks"></a>Observaciones
 
-Antes de que una barra de herramientas esté acoplada, el marco de trabajo espera la cantidad de tiempo especificada. Esto evita que la barra de herramientas se acople accidentalmente a una ubicación mientras el usuario todavía lo está arrastrando.
+Antes de acoplar una barra de herramientas, el marco de trabajo espera el período de tiempo especificado. Esto evita que la barra de herramientas se acose accidentalmente a una ubicación mientras el usuario todavía la arrastra.
 
-##  <a name="onactivateframe"></a>CDockingManager::OnActivateFrame
+## <a name="cdockingmanageronactivateframe"></a><a name="onactivateframe"></a>CDockingManager::OnActivateFrame
 
-Lo llama el marco de trabajo cuando la ventana de marco se activa o se desactiva.
+Llamado por el marco de trabajo cuando la ventana de marco se activa o se desactiva.
 
 ```
 virtual void OnActivateFrame(BOOL bActivate);
@@ -1304,10 +1304,10 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 ### <a name="parameters"></a>Parámetros
 
-*bActivate*<br/>
-de Si es TRUE, la ventana de marco se activa; Si es FALSE, la ventana de marco está desactivada.
+*bActivar*<br/>
+[en] Si es TRUE, la ventana de marco se activa; si FALSE, la ventana de marco está desactivada.
 
-##  <a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu
+## <a name="cdockingmanageronclosepopupmenu"></a><a name="onclosepopupmenu"></a>CDockingManager::OnClosePopupMenu
 
 Lo llama el marco cuando un menú emergente activo procesa un mensaje WM_DESTROY.
 
@@ -1317,11 +1317,11 @@ void OnClosePopupMenu();
 
 ### <a name="remarks"></a>Observaciones
 
-El marco de trabajo envía un mensaje de WM_DESTROY cuando está a punto de cerrar la ventana principal actual. Invalide este método para controlar las notificaciones de `CMFCPopupMenu` objetos que pertenecen a la ventana de marco cuando un objeto `CMFCPopupMenu` procesa un mensaje de WM_DESTROY.
+El marco de trabajo envía un mensaje de WM_DESTROY cuando está a punto de cerrar la ventana principal actual. Invalide este método para `CMFCPopupMenu` controlar las notificaciones de `CMFCPopupMenu` objetos que pertenecen a la ventana de marco cuando un objeto procesa un mensaje de WM_DESTROY.
 
-##  <a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame
+## <a name="cdockingmanageronmoveminiframe"></a><a name="onmoveminiframe"></a>CDockingManager::OnMoveMiniFrame
 
-Lo llama el marco de trabajo para desplace una ventana de marco reducido.
+Llamado por el marco de trabajo para mover una ventana de marco pequeño.
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -1330,15 +1330,15 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>Parámetros
 
 *pFrame*<br/>
-de Puntero a una ventana de marco reducido.
+[en] Un puntero a una ventana de marco pequeño.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el método se ejecuta correctamente; en caso contrario, FALSE.
+TRUESi el método se realiza correctamente; de lo contrario FALSO.
 
-##  <a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu
+## <a name="cdockingmanageronpanecontextmenu"></a><a name="onpanecontextmenu"></a>CDockingManager::OnPaneContextMenu
 
-Lo llama el marco de trabajo cuando crea un menú que tiene una lista de paneles.
+Llamado por el marco de trabajo cuando crea un menú que tiene una lista de paneles.
 
 ```
 void OnPaneContextMenu(CPoint point);
@@ -1346,10 +1346,10 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-de Especifica la ubicación del menú.
+*Punto*<br/>
+[en] Especifica la ubicación del menú.
 
-##  <a name="panefrompoint"></a>CDockingManager::P aneFromPoint
+## <a name="cdockingmanagerpanefrompoint"></a><a name="panefrompoint"></a>CDockingManager::PaneFromPoint
 
 Devuelve el panel que contiene el punto especificado.
 
@@ -1372,38 +1372,38 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*Elija*<br/>
-de Especifica el punto, en coordenadas de la pantalla, que se va a comprobar.
+*Punto*<br/>
+[en] Especifica el punto, en coordenadas de pantalla, que se va a comprobar.
 
-*nSensitivity*<br/>
-de Valor para aumentar el rectángulo de la ventana de cada panel activado. Un panel cumple los criterios de búsqueda si el punto especificado se encuentra en esta región no plana.
+*nSensibilidad*<br/>
+[en] El valor para inflar el rectángulo de ventana de cada panel activado. Un panel cumple los criterios de búsqueda si el punto especificado se encuentra en esta región inflada.
 
 *bExactBar*<br/>
-de TRUE para omitir el parámetro *nSensitivity* ; en caso contrario, FALSE.
+[en] TRUE para omitir el *nSensitivity* parámetro; de lo contrario, FALSE.
 
 *pRTCBarType*<br/>
-de Si no es NULL, el método busca solo los paneles del tipo especificado.
+[en] Si no es NULL, el método busca solo los paneles del tipo especificado.
 
 *bCheckVisibility*<br/>
-de TRUE para comprobar solo los paneles visibles; en caso contrario, FALSE.
+[en] TRUE para comprobar solo los paneles visibles; de lo contrario, FALSE.
 
 *dwAlignment*<br/>
-enuncia Si un panel se encuentra en el punto especificado, este parámetro contiene el lado del panel más cercano al punto especificado. Para obtener más información, vea la sección Comentarios.
+[fuera] Si se encuentra un panel en el punto especificado, este parámetro contiene el lado del panel que estaba más cerca del punto especificado. Para obtener más información, vea la sección Comentarios.
 
 *pBarToIgnore*<br/>
-de Si no es NULL, el método omite los paneles especificados por este parámetro.
+[en] Si no es NULL, el método omite los paneles especificados por este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Objeto derivado de [a cbasepane](../../mfc/reference/cbasepane-class.md)que contiene el punto especificado, o null si no se encuentra ningún panel.
+El [CBasePane](../../mfc/reference/cbasepane-class.md)-objeto derivado que contiene el punto dado, o NULL si no se encontró ningún panel.
 
 ### <a name="remarks"></a>Observaciones
 
 Cuando se devuelve la función y se encuentra un panel, *dwAlignment* contiene la alineación del punto especificado. Por ejemplo, si el punto estaba más cerca de la parte superior del panel, *dwAlignment* se establece en CBRS_ALIGN_TOP.
 
-##  <a name="processpanecontextmenucommand"></a>CDockingManager::P rocessPaneContextMenuCommand
+## <a name="cdockingmanagerprocesspanecontextmenucommand"></a><a name="processpanecontextmenucommand"></a>CDockingManager::ProcessPaneContextMenuCommand
 
-Lo llama el marco de trabajo para activar o desactivar una casilla para el comando especificado y volver a calcular el diseño de un panel mostrado.
+Llamado por el marco de trabajo para activar o desactivar una casilla de verificación para el comando especificado y volver a calcular el diseño de un panel mostrado.
 
 ```
 BOOL ProcessPaneContextMenuCommand(
@@ -1416,22 +1416,22 @@ BOOL ProcessPaneContextMenuCommand(
 ### <a name="parameters"></a>Parámetros
 
 *nID*<br/>
-de Identificador de una barra de controles del menú.
+[en] El identificador de una barra de control en el menú.
 
-*nCode*<br/>
-de Código de notificación de comandos.
+*nCódigo*<br/>
+[en] El código de notificación de comandos.
 
 *pExtra*<br/>
-de Puntero a void que se convierte en un puntero a `CCmdUI` si *nCode* es CN_UPDATE_COMMAND_UI.
+[en] Puntero a void que se convierte `CCmdUI` en un puntero a si *nCode* es CN_UPDATE_COMMAND_UI.
 
 *pHandlerInfo*<br/>
-de Puntero a una estructura de información. Este parámetro no se utiliza.
+[en] Un puntero a una estructura de información. Este parámetro no se utiliza.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si *pEXtra* no es NULL y *nCode* es igual a CN_UPDATE_COMMAND_UI, o bien, si hay una barra de control con el *nID*especificado.
+TRUESi *pEXtra* no es NULL y *nCode* es igual a CN_UPDATE_COMMAND_UI, o si hay una barra de control con el *nID*especificado.
 
-##  <a name="recalclayout"></a>CDockingManager::RecalcLayout
+## <a name="cdockingmanagerrecalclayout"></a><a name="recalclayout"></a>CDockingManager::RecalcLayout
 
 Vuelve a calcular el diseño interno de los controles presentes en la lista de controles.
 
@@ -1441,20 +1441,20 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bNotify*<br/>
-de Este parámetro no se utiliza.
+*bNotificar*<br/>
+[en] Este parámetro no se utiliza.
 
-##  <a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers
+## <a name="cdockingmanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CDockingManager::ReleaseEmptyPaneContainers
 
-Libera los contenedores de paneles vacíos.
+Libera los contenedores de panel vacíos.
 
 ```
 void ReleaseEmptyPaneContainers();
 ```
 
-##  <a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar
+## <a name="cdockingmanagerremovehiddenmditabbedbar"></a><a name="removehiddenmditabbedbar"></a>CDockingManager::RemoveHiddenMDITabbedBar
 
-Quita el panel de la barra oculta especificado.
+Quita el panel de barras ocultas especificado.
 
 ```
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
@@ -1463,11 +1463,11 @@ void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ### <a name="parameters"></a>Parámetros
 
 *pBar*<br/>
-de Un puntero a un panel de barra que se va a quitar.
+[en] Puntero a un panel de barras para quitar.
 
-##  <a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame
+## <a name="cdockingmanagerremoveminiframe"></a><a name="removeminiframe"></a>CDockingManager::RemoveMiniFrame
 
-Quita un marco especificado de la lista de fotogramas minis.
+Elimina un fotograma especificado de la lista de mini fotogramas.
 
 ```
 virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
@@ -1476,13 +1476,13 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-de Puntero a un marco que se va a quitar.
+[en] Puntero a un marco que se va a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si se quita el marco especificado; De lo contrario, FALSE.
+TRUESi se quita el marco especificado; FALSE en caso contrario.
 
-##  <a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager
+## <a name="cdockingmanagerremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>CDockingManager::RemovePaneFromDockManager
 
 Anula el registro de un panel y lo quita de la lista en el administrador de acoplamiento.
 
@@ -1498,21 +1498,21 @@ void RemovePaneFromDockManager(
 ### <a name="parameters"></a>Parámetros
 
 *pWnd*<br/>
-de Un puntero a un panel que se va a quitar.
+[en] Puntero a un panel que se va a quitar.
 
 *bDestroy*<br/>
-de Si es TRUE, se destruye el panel que se ha quitado.
+[en] Si es TRUE, se destruye el panel quitado.
 
 *bAdjustLayout*<br/>
-de Si es TRUE, ajuste el diseño de acoplamiento inmediatamente.
+[en] Si es TRUE, ajuste el diseño de acoplamiento inmediatamente.
 
 *bAutoHide*<br/>
-de Si es TRUE, el panel se quita de la lista de barras de ocultación automáticamente. Si es FALSE, el panel se quita de la lista de paneles normales.
+[en] Si es TRUE, el panel se quita de la lista de barras de ocultación automática. Si FALSE, el panel se quita de la lista de paneles normales.
 
 *pBarReplacement*<br/>
-de Un puntero a un panel que reemplaza al panel que se ha quitado.
+[en] Puntero a un panel que reemplaza el panel quitado.
 
-##  <a name="replacepane"></a>CDockingManager::ReplacePane
+## <a name="cdockingmanagerreplacepane"></a><a name="replacepane"></a>CDockingManager::ReplacePane
 
 Reemplaza un panel con otro.
 
@@ -1525,24 +1525,24 @@ BOOL ReplacePane(
 ### <a name="parameters"></a>Parámetros
 
 *pOriginalBar*<br/>
-de Puntero al panel original.
+[en] Un puntero al panel original.
 
 *pNewBar*<br/>
-de Un puntero al panel que reemplaza al panel original.
+[en] Puntero al panel que reemplaza el panel original.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el panel se ha reemplazado correctamente; De lo contrario, FALSE.
+TRUESi el panel se reemplaza correctamente; FALSE en caso contrario.
 
-##  <a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder
+## <a name="cdockingmanagerresortminiframesforzorder"></a><a name="resortminiframesforzorder"></a>CDockingManager::ResortMiniFramesForZOrder
 
-Reordena los fotogramas de la lista de fotogramas.
+Resorts los marcos en la lista de mini marcos.
 
 ```
 void ResortMiniFramesForZOrder();
 ```
 
-##  <a name="savestate"></a>CDockingManager:: SaveState
+## <a name="cdockingmanagersavestate"></a><a name="savestate"></a>CDockingManager::SaveState
 
 Guarda el estado del administrador de acoplamiento en el registro.
 
@@ -1555,22 +1555,22 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parámetros
 
 *lpszProfileName*<br/>
-de Ruta de acceso a una clave del registro.
+[en] Una ruta de acceso a una clave del Registro.
 
 *uiID*<br/>
-de IDENTIFICADOR del administrador de acoplamiento.
+[en] El ID del administrador de acoplamiento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE si el estado se ha guardado correctamente; en caso contrario, FALSE.
+TRUESi el estado se guardó correctamente; de lo contrario FALSO.
 
 ### <a name="remarks"></a>Observaciones
 
-Guardar el estado del administrador de acoplamiento en el registro implica guardar los Estados de las barras de control, los Estados de las barras de ocultación y los Estados de los fotogramas que se encuentran en el administrador de acoplamiento.
+Guardar el estado del administrador de acoplamiento en el registro implica guardar los estados de las barras de control, los estados de las barras de ocultación automática y los estados de los mini fotogramas presentes en el administrador de acoplamiento.
 
-##  <a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames
+## <a name="cdockingmanagersendmessagetominiframes"></a><a name="sendmessagetominiframes"></a>CDockingManager::SendMessageToMiniFrames
 
-Envía el mensaje especificado a todos los fotogramas.
+Envía el mensaje especificado a todas las mini tramas.
 
 ```
 BOOL SendMessageToMiniFrames(
@@ -1582,19 +1582,19 @@ BOOL SendMessageToMiniFrames(
 ### <a name="parameters"></a>Parámetros
 
 *uMessage*<br/>
-de Mensaje que se va a enviar.
+[en] El mensaje que se va a enviar.
 
 *wParam*<br/>
-de Información adicional dependiente del mensaje.
+[en] Información adicional dependiente del mensaje.
 
 *lParam*<br/>
-de Información adicional dependiente del mensaje.
+[en] Información adicional dependiente del mensaje.
 
 ### <a name="return-value"></a>Valor devuelto
 
-TRUE siempre.
+VERDADERO siempre.
 
-##  <a name="serialize"></a>CDockingManager:: Serialize
+## <a name="cdockingmanagerserialize"></a><a name="serialize"></a>CDockingManager::Serialize
 
 Escribe el administrador de acoplamiento en un archivo.
 
@@ -1604,14 +1604,14 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*analítico*<br/>
-de Referencia a un objeto de almacenamiento.
+*ar*<br/>
+[en] Una referencia a un objeto de archivado.
 
 ### <a name="remarks"></a>Observaciones
 
-Escribir el administrador de acoplamiento en un archivo implica determinar el número de barras de control de acoplamiento y controles deslizantes, y escribir las barras de control, los fotogramas, las barras de ocultación y las barras de pestañas MDI en el archivo.
+Escribir el administrador de acoplamiento en un archivo implica determinar el número de barras de control de acoplamiento y controles deslizantes, y escribir las barras de control, los mini fotogramas, las barras de ocultación automática y las barras con pestañas MDI en el archivo.
 
-##  <a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder
+## <a name="cdockingmanagersetautohidezorder"></a><a name="setautohidezorder"></a>CDockingManager::SetAutohideZOrder
 
 Establece el tamaño, el ancho y el alto de las barras de control y el panel especificado.
 
@@ -1622,9 +1622,9 @@ void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ### <a name="parameters"></a>Parámetros
 
 *pAHDockingBar*<br/>
-de Un puntero a un panel acoplable.
+[en] Puntero a un panel acoplable.
 
-##  <a name="setdockingmode"></a>CDockingManager::SetDockingMode
+## <a name="cdockingmanagersetdockingmode"></a><a name="setdockingmode"></a>CDockingManager::SetDockingMode
 
 Establece el modo de acoplamiento.
 
@@ -1639,30 +1639,30 @@ static void SetDockingMode(
 *dockMode*<br/>
 Especifica el nuevo modo de acoplamiento. Para obtener más información, vea la sección Comentarios.
 
-*diccionarios*<br/>
-Especifica el tema que se va a usar para los marcadores de acoplamiento inteligente. Puede ser uno de los valores enumerados siguientes: AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
+*Tema*<br/>
+Especifica el tema que se utilizará para los marcadores de acoplamiento inteligentes. Puede ser uno de los siguientes valores enumerados: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Observaciones
 
 Llame a este método estático para establecer el modo de acoplamiento.
 
-*dockMode* puede tener uno de los siguientes valores:
+*dockMode* puede ser uno de los siguientes valores:
 
-- DT_STANDARD modo de acoplamiento estándar tal como se implementa en Visual Studio .NET 2003. Los paneles se arrastran sin un contexto de arrastre.
+- DT_STANDARD: modo de acoplamiento estándar tal como se implementa en Visual Studio .NET 2003. Los paneles se arrastran sin un contexto de arrastre.
 
-- DT_IMMEDIATE: modo de acoplamiento inmediato tal como se implementa en Microsoft Visio. Los paneles se arrastran con un contexto de arrastre, pero no se muestran marcadores.
+- DT_IMMEDIATE: modo de acoplamiento inmediato tal como se implementa en Microsoft Visio. Los paneles se arrastran con un contexto de arrastre, pero no se muestra ningún marcador.
 
-- DT_SMART: modo de acoplamiento inteligente tal y como se implementa en Visual Studio 2005. Los paneles se arrastran con un contexto de arrastre y se muestran marcadores inteligentes que muestran dónde se puede acoplar el panel.
+- DT_SMART: modo de acoplamiento inteligente tal como se implementa en Visual Studio 2005. Los paneles se arrastran con un contexto de arrastre y se muestran marcadores inteligentes que muestran dónde se puede acoplar el panel.
 
-##  <a name="setdockstate"></a>CDockingManager::SetDockState
+## <a name="cdockingmanagersetdockstate"></a><a name="setdockstate"></a>CDockingManager::SetDockState
 
-Establece el estado de acoplamiento de las barras de control, los fotogramas y las barras de ocultación automáticamente.
+Establece el estado de acoplamiento de las barras de control, los minifotogramas y las barras de ocultación automática.
 
 ```
 virtual void SetDockState();
 ```
 
-##  <a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode
+## <a name="cdockingmanagersetprintpreviewmode"></a><a name="setprintpreviewmode"></a>CDockingManager::SetPrintPreviewMode
 
 Establece el modo de vista previa de impresión de las barras que se muestran en la vista previa de impresión.
 
@@ -1674,15 +1674,15 @@ void SetPrintPreviewMode(
 
 ### <a name="parameters"></a>Parámetros
 
-*bPreview*<br/>
-de TRUE si está establecido el modo de vista previa de impresión; De lo contrario, FALSE.
+*bVista previa*<br/>
+[en] TRUESi se establece el modo de vista previa de impresión; FALSE en caso contrario.
 
 *pState*<br/>
-de Un puntero a un estado de vista previa. Este parámetro no se utiliza.
+[en] Un puntero a un estado de vista previa. Este parámetro no se utiliza.
 
-##  <a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams
+## <a name="cdockingmanagersetsmartdockingparams"></a><a name="setsmartdockingparams"></a>CDockingManager::SetSmartDockingParams
 
-Establece los parámetros que definen el comportamiento de la función de acoplamiento inteligente.
+Establece los parámetros que definen el comportamiento del acoplamiento inteligente.
 
 ```
 static void SetSmartDockingParams(CSmartDockingInfo& params);
@@ -1691,17 +1691,17 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 ### <a name="parameters"></a>Parámetros
 
 *params*<br/>
-[in, out] Define los parámetros para el acoplamiento inteligente.
+[adentro, fuera] Define los parámetros para el acoplamiento inteligente.
 
 ### <a name="remarks"></a>Observaciones
 
-Llame a este método si desea personalizar el aspecto, el color o la forma de los marcadores de acoplamiento inteligente.
+Llame a este método si desea personalizar la apariencia, el color o la forma de los marcadores de acoplamiento inteligente.
 
-Para usar el aspecto predeterminado de los marcadores de acoplamiento inteligente, pase una instancia no inicializada de la [clase CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) a los *parámetros*.
+Para utilizar la búsqueda predeterminada de marcadores de acoplamiento inteligente, pase una instancia no inicializada de [CSmartDockingInfo (clase)](../../mfc/reference/csmartdockinginfo-class.md) a *params*.
 
-##  <a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames
+## <a name="cdockingmanagershowdelayshowminiframes"></a><a name="showdelayshowminiframes"></a>CDockingManager::ShowDelayShowMiniFrames
 
-Muestra u oculta las ventanas de los fotogramas.
+Muestra u oculta las ventanas de los minimarcos.
 
 ```
 void ShowDelayShowMiniFrames(BOOL bshow);
@@ -1709,12 +1709,12 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bShow*<br/>
-de TRUE para activar la ventana del marco mostrado; FALSE para ocultar la ventana del marco.
+*bMostrar*<br/>
+[en] TRUE para activar la ventana del fotograma mostrado; FALSE para ocultar la ventana del marco.
 
-##  <a name="showpanes"></a>CDockingManager::ShowPanes
+## <a name="cdockingmanagershowpanes"></a><a name="showpanes"></a>CDockingManager::ShowPanes
 
-Muestra u oculta los paneles del control y las barras de ocultación automáticamente.
+Muestra u oculta los paneles del control y las barras de ocultación automática.
 
 ```
 virtual BOOL ShowPanes(BOOL bShow);
@@ -1722,16 +1722,16 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bShow*<br/>
-de TRUE para mostrar los paneles; FALSE para ocultar los paneles.
+*bMostrar*<br/>
+[en] TRUE para mostrar los paneles; FALSE para ocultar los paneles.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Siempre FALSE.
 
-##  <a name="startsdocking"></a>CDockingManager::StartSDocking
+## <a name="cdockingmanagerstartsdocking"></a><a name="startsdocking"></a>CDockingManager::StartSDocking
 
-Inicia el acoplamiento inteligente de la ventana especificada según la alineación del administrador de acoplamiento inteligente.
+Inicia el acoplamiento inteligente de la ventana especificada de acuerdo con la alineación del administrador de acoplamiento inteligente.
 
 ```
 void StartSDocking(CWnd* pDockingWnd);
@@ -1740,9 +1740,9 @@ void StartSDocking(CWnd* pDockingWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pDockingWnd*<br/>
-de Puntero a una ventana que se va a acoplar.
+[en] Puntero a una ventana para acoplar.
 
-##  <a name="stopsdocking"></a>CDockingManager::StopSDocking
+## <a name="cdockingmanagerstopsdocking"></a><a name="stopsdocking"></a>CDockingManager::StopSDocking
 
 Detiene el acoplamiento inteligente.
 
@@ -1750,9 +1750,9 @@ Detiene el acoplamiento inteligente.
 void StopSDocking();
 ```
 
-##  <a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme
+## <a name="cdockingmanagergetsmartdockingtheme"></a><a name="getsmartdockingtheme"></a>CDockingManager::GetSmartDockingTheme
 
-Un método estático que devuelve un tema que se usa para mostrar los marcadores de acoplamiento inteligente.
+Método estático que devuelve un tema utilizado para mostrar marcadores de acoplamiento inteligentes.
 
 ```
 static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
@@ -1760,7 +1760,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve uno de los valores enumerados siguientes: AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
+Devuelve uno de los siguientes valores enumerados: AFX_SDT_DEFAULT, AFX_SDT_VS2005 AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Observaciones
 
@@ -1768,7 +1768,7 @@ Devuelve uno de los valores enumerados siguientes: AFX_SDT_DEFAULT, AFX_SDT_VS20
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
-[CFrameWndEx (clase)](../../mfc/reference/cframewndex-class.md)<br/>
+[Clase CObject](../../mfc/reference/cobject-class.md)<br/>
+[Clase CFrameWndEx](../../mfc/reference/cframewndex-class.md)<br/>
 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
 [CPaneFrameWnd (clase)](../../mfc/reference/cpaneframewnd-class.md)

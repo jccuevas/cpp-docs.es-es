@@ -1,10 +1,11 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tanh
 - tanhf
 - tanhl
+- _o_tanh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957531"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362624"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -59,20 +61,22 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Las funciones **tanh** devuelven la tangente hiperbólica de *x*. No se devuelve ningún error.
 
-|Entrada|Excepción SEH|**Matherr** Excepcional|
+|Entrada|Excepción SEH|**Matherr** Excepción|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **tanh** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **tanh** siempre toma y devuelve **Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **tanh** que toman y devuelven **valores float** o **long** **double.** En un programa C, **tanh** siempre toma y devuelve **el doble.**
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -80,7 +84,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **tanh**
 |-------------|---------------------|-|
 |**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -110,7 +114,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

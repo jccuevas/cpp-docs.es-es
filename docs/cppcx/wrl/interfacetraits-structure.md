@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: e8222ccaca9572331412b90e696829568eedcf8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371370"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (estructura)
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,37 +51,37 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 El nombre de una interfaz.
 
 *CloakedType*<br/>
-Para `RuntimeClass`, `Implements` y `ChainInterfaces`, admite la interfaz que no estará en la lista de identificadores de interfaz.
+Para `RuntimeClass` `Implements` , `ChainInterfaces`y , una interfaz que no estará en la lista de iDs de interfaz admitidos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Características comunes de implementa de una interfaz.
+Implementa características comunes de una interfaz.
 
-La segunda plantilla es una especialización para interfaces encubiertas. La tercera plantilla es una especialización para parámetros Nil.
+La segunda plantilla es una especialización para interfaces ocultas. La tercera plantilla es una especialización para parámetros Nil.
 
 ## <a name="members"></a>Miembros
 
-### <a name="public-typedefs"></a>Definiciones de tipos públicas
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>Tipos públicos
 
-Name   | Descripción
+Nombre   | Descripción
 ------ | ------------------------------------------
-`Base` | Un sinónimo para el *I0* parámetro de plantilla.
+`Base` | Sinónimo del parámetro de plantilla *I0.*
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                                                   | Descripción
+Nombre                                                   | Descripción
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[InterfaceTraits::CanCastTo](#cancastto)               | Indica si el puntero especificado se puede convertir en un puntero a `Base`.
-[InterfaceTraits::CastToBase](#casttobase)             | Convierte el puntero especificado a un puntero a `Base`.
-[InterfaceTraits::CastToUnknown](#casttounknown)       | Convierte el puntero especificado a un puntero a `IUnknown`.
-[InterfaceTraits::FillArrayWithIid](#fillarraywithiid) | Asigna el identificador de interfaz de `Base` al elemento de matriz especificado por el argumento de índice.
-[InterfaceTraits::Verify](#verify)                     | Comprueba que `Base` se deriva correctamente.
+[InterfaceTraits::CanCastTo](#cancastto)               | Indica si el puntero especificado se puede `Base`convertir en un puntero a .
+[InterfaceTraits::CastToBase](#casttobase)             | Convierte el puntero especificado a `Base`un puntero a .
+[InterfaceTraits::CastToUnknown](#casttounknown)       | Convierte el puntero especificado a `IUnknown`un puntero a .
+[InterfaceTraits::FillArrayWithIid](#fillarraywithiid) | Asigna el identificador `Base` de interfaz al elemento de matriz especificado por el argumento index.
+[InterfaceTraits::Verificar](#verify)                     | Comprueba que `Base` se deriva correctamente.
 
 ### <a name="public-constants"></a>Constantes públicas
 
-Name                                   | Descripción
+Nombre                                   | Descripción
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[InterfaceTraits::IidCount](#iidcount) | Contiene el número de identificadores asociados con la actual interfaz `InterfaceTraits` objeto.
+[InterfaceTraits::IidCount](#iidcount) | Contiene el número de identificadores de `InterfaceTraits` interfaz asociados al objeto actual.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -91,11 +91,11 @@ Name                                   | Descripción
 
 **Encabezado:** implements.h
 
-**Espacio de nombres**: Microsoft::WRL::Details
+**Espacio de nombres:** Microsoft::WRL::Details
 
-## <a name="cancastto"></a>InterfaceTraits::CanCastTo
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits::CanCastTo
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 template<typename T>
@@ -108,28 +108,28 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*<br/>
+*Ptr*<br/>
 El nombre de un puntero a un tipo.
 
 *riid*<br/>
-El identificador de interfaz de `Base`.
+El ID `Base`de interfaz de .
 
-*ppv*<br/>
-Si esta operación se realiza correctamente, *ppv* apunta a la interfaz especificada por `Base`. En caso contrario, *ppv* está establecido en `nullptr`.
+*Ppv*<br/>
+Si esta operación se realiza correctamente, *ppv* apunta a la interfaz especificada por `Base`. De lo contrario, `nullptr` *ppv* se establece en .
 
 ### <a name="return-value"></a>Valor devuelto
 
-**True** si esta operación se realiza correctamente y *ptr* se convierte en un puntero a `Base`; en caso contrario, **false**.
+**true** si esta operación es correcta y `Base` *ptr* se convierte en un puntero a ; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Indica si el puntero especificado se puede convertir en un puntero a `Base`.
+Indica si el puntero especificado se puede `Base`convertir en un puntero a .
 
-Para obtener más información acerca de `Base`, consulte el [Typedefs pública](#public-typedefs) sección.
+Para obtener `Base`más información acerca de , consulte la sección [Public Typedefs.](#public-typedefs)
 
-## <a name="casttobase"></a>InterfaceTraits::CastToBase
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits::CastToBase
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 template<typename T>
@@ -143,22 +143,22 @@ static __forceinline Base* CastToBase(
 *T*<br/>
 El tipo de parámetro *ptr*.
 
-*ptr*<br/>
+*Ptr*<br/>
 Puntero a un tipo *T*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a `Base`.
+Puntero a `Base`.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Convierte el puntero especificado a un puntero a `Base`.
+Convierte el puntero especificado a `Base`un puntero a .
 
-Para obtener más información acerca de `Base`, consulte el [Typedefs pública](#public-typedefs) sección.
+Para obtener `Base`más información acerca de , consulte la sección [Public Typedefs.](#public-typedefs)
 
-## <a name="casttounknown"></a>InterfaceTraits::CastToUnknown
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits::CastToUnknown
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 template<typename T>
@@ -172,22 +172,22 @@ static __forceinline IUnknown* CastToUnknown(
 *T*<br/>
 El tipo de parámetro *ptr*.
 
-*ptr*<br/>
+*Ptr*<br/>
 Puntero al tipo *T*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a la interfaz IUnknown del que `Base` derivada.
+Puntero a la IUnknown de la que `Base` se deriva.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Convierte el puntero especificado a un puntero a `IUnknown`.
+Convierte el puntero especificado a `IUnknown`un puntero a .
 
-Para obtener más información acerca de `Base`, consulte el [Typedefs pública](#public-typedefs) sección.
+Para obtener `Base`más información acerca de , consulte la sección [Public Typedefs.](#public-typedefs)
 
-## <a name="fillarraywithiid"></a>InterfaceTraits::FillArrayWithIid
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits::FillArrayWithIid
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -198,42 +198,42 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parámetros
 
-*index*<br/>
+*índice*<br/>
 Puntero a un campo que contiene un valor de índice de base cero.
 
 *iids*<br/>
-Una matriz de identificadores de interfaz.
+Una matriz de interfaces.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Asigna el identificador de interfaz de `Base` al elemento de matriz especificado por el argumento de índice.
+Asigna el identificador `Base` de interfaz al elemento de matriz especificado por el argumento index.
 
-Al contrario que el nombre de esta API, se modifica el elemento de solo matriz; no toda la matriz.
+Contrariamente al nombre de esta API, solo se modifica un elemento de matriz; no toda la matriz.
 
-Para obtener más información acerca de `Base`, consulte el [Typedefs pública](#public-typedefs) sección.
+Para obtener `Base`más información acerca de , consulte la sección [Public Typedefs.](#public-typedefs)
 
-## <a name="iidcount"></a>InterfaceTraits::IidCount
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits::IidCount
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 static const unsigned long IidCount = 1;
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Contiene el número de identificadores asociados con la actual interfaz `InterfaceTraits` objeto.
+Contiene el número de identificadores de `InterfaceTraits` interfaz asociados al objeto actual.
 
-## <a name="verify"></a>InterfaceTraits::Verify
+## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits::Verificar
 
-Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+Admite la infraestructura WRL y no está diseñado para usarse directamente desde el código.
 
 ```cpp
 __forceinline static void Verify();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Comprueba que `Base` se deriva correctamente.
 
-Para obtener más información acerca de `Base`, consulte el [Typedefs pública](#public-typedefs) sección.
+Para obtener `Base`más información acerca de , consulte la sección [Public Typedefs.](#public-typedefs)

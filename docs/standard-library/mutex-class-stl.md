@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 099cf17db7b99f9cd1d953a603db70f75c33358e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 84e6e3a46903a204444df9886556ae2c563304a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457066"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364844"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex (Clase, biblioteca estándar de C++)
 
@@ -37,27 +37,27 @@ class mutex;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[mutex](#mutex)|Construye un objeto `mutex`.|
+|[exclusión mutua](#mutex)|Construye un objeto `mutex`.|
 |[mutex::~mutex Destructor](#dtormutex_destructor)|Libera todos los recursos utilizados por el objeto `mutex`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[lock](#lock)|Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.|
+|[Cerradura](#lock)|Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.|
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador de exclusión mutua.|
 |[try_lock](#try_lock)|Intenta obtener la propiedad de `mutex` sin bloquearlo.|
-|[unlock](#unlock)|Libera la propiedad de `mutex`.|
+|[Desbloquear](#unlock)|Libera la propiedad de `mutex`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<exclusión mutua >
+**Encabezado:** \<> de exclusión mutua
 
 **Espacio de nombres:** std
 
-## <a name="lock"></a>  mutex::lock
+## <a name="mutexlock"></a><a name="lock"></a>mutex::lock
 
 Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.
 
@@ -65,11 +65,11 @@ Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad
 void lock();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el comportamiento es indefinido.
 
-## <a name="mutex"></a> mutex::mutex (Constructor)
+## <a name="mutexmutex-constructor"></a><a name="mutex"></a>mutex::mutex Constructor
 
 Crea un objeto `mutex` que no está bloqueado.
 
@@ -77,7 +77,7 @@ Crea un objeto `mutex` que no está bloqueado.
 constexpr mutex() noexcept;
 ```
 
-## <a name="dtormutex_destructor"></a> mutex::~mutex (Destructor)
+## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>mutex::-mutex Destructor
 
 Libera todos los recursos usados por el objeto `mutex`.
 
@@ -85,11 +85,11 @@ Libera todos los recursos usados por el objeto `mutex`.
 ~mutex();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.
 
-## <a name="native_handle"></a>mutex:: native_handle
+## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex::native_handle
 
 Devuelve el tipo específico de la implementación que representa el identificador de exclusión mutua. El controlador de exclusión mutua puede usarse en aspectos específicos de la implementación.
 
@@ -101,7 +101,7 @@ native_handle_type native_handle();
 
 `native_handle_type` se define como un `Concurrency::critical_section *` que se convierte en `void *`.
 
-## <a name="try_lock"></a>  mutex::try_lock
+## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex::try_lock
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -111,13 +111,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valor devuelto
 
-**true** si el método obtiene correctamente la `mutex`propiedad de; de lo contrario, **false**.
+**true** si el método obtiene correctamente `mutex`la propiedad de la ; de lo contrario, **false**.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el comportamiento es indefinido.
 
-## <a name="unlock"></a>  mutex::unlock
+## <a name="mutexunlock"></a><a name="unlock"></a>mutex::unlock
 
 Libera la propiedad de `mutex`.
 
@@ -125,11 +125,11 @@ Libera la propiedad de `mutex`.
 void unlock();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Si el subproceso que realiza la llamada no posee `mutex`, el comportamiento es indefinido.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[\<>de exclusión mutua](../standard-library/mutex.md)

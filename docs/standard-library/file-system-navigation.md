@@ -1,17 +1,18 @@
 ---
 title: Exploración del sistema de archivos
-ms.date: 11/04/2016
+description: Cómo utilizar las API del sistema de archivos de biblioteca estándar De C++ para navegar por el sistema de archivos.
+ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368427"
 ---
 # <a name="file-system-navigation"></a>Exploración del sistema de archivos
 
-El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve **false** en Windows.
+El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Dado que es multiplataforma, contiene API que no son relevantes para los sistemas Windows. Por ejemplo, `is_fifo(const path&)` siempre devuelve **false** en Windows.
 
 ## <a name="overview"></a>Información general
 
@@ -23,7 +24,7 @@ Use las API \<filesystem> para las siguientes tareas:
 
 - Componer, descomponer y comparar rutas de acceso.
 
-- Crear, copiar y eliminar directorios.
+- crear, copiar y eliminar directorios
 
 - Copiar y eliminar archivos.
 
@@ -33,7 +34,7 @@ Para obtener más información sobre el E/S de archivo que utilice la biblioteca
 
 ### <a name="constructing-and-composing-paths"></a>Crear y componer rutas de acceso
 
-Desde Windows XP las rutas de acceso de Windows se almacenan de forma nativa en Unicode. La clase [path](../standard-library/path-class.md) realiza automáticamente todas las conversiones de cadena necesarias. Acepta argumentos de matrices de caracteres anchos y estrechos, así como los tipos `std::string` y `std::wstring` con formato UTF8 o UTF16. La clase `path` también normaliza automáticamente los separadores de ruta de acceso. Puede utilizar una sola barra diagonal como separador de directorios en los argumentos del constructor. Esto le permite utilizar las mismas cadenas para almacenar rutas de acceso tanto en entornos Windows como UNIX:
+Desde Windows XP las rutas de acceso de Windows se almacenan de forma nativa en Unicode. La clase [path](../standard-library/path-class.md) realiza automáticamente todas las conversiones de cadena necesarias. Acepta argumentos de matrices de caracteres anchas y estrechas, y ambos `std::string` y `std::wstring` tipos con formato UTF8 o UTF16. La clase `path` también normaliza automáticamente los separadores de ruta de acceso. Puede utilizar una sola barra diagonal como separador de directorios en los argumentos del constructor. Este separador le permite utilizar las mismas cadenas para almacenar rutas de acceso en entornos Windows y UNIX:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -41,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Para concatenar dos rutas de acceso, puede usar los operadores sobrecargados `/` y `/=` , que son análogos a los operadores `+` y `+=` en `std::string` y `std::wstring`. Si no lo hace, el objeto `path` proporcionará los separadores de forma cómoda.
+Para concatenar dos rutas de acceso, puede usar los operadores sobrecargados `/` y `/=` , que son análogos a los operadores `+` y `+=` en `std::string` y `std::wstring`. El `path` objeto proporcionará convenientemente los separadores si no lo hace.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -50,18 +51,18 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>Examinar rutas de acceso
 
-La clase path tiene varios métodos que devuelven información acerca de diversas partes de la propia ruta, a diferencia de la entidad del sistema de archivos a la que podría hacer referencia. Puede obtener, entre otros, la raíz, la ruta de acceso relativa, el nombre de archivo o la extensión de archivo. Puede iterar sobre un objeto de ruta de acceso para examinar todas las carpetas de la jerarquía. En el siguiente ejemplo se muestra cómo realizar una iteración en una ruta de acceso (no en el directorio al que hace referencia) y recuperar información acerca de sus partes.
+La clase path tiene varios métodos que devuelven información sobre varias partes de la ruta de acceso. Esta información es distinta de la información sobre la entidad del sistema de archivos a la que podría hacer referencia. Puede obtener, entre otros, la raíz, la ruta de acceso relativa, el nombre de archivo o la extensión de archivo. Puede iterar sobre un objeto de ruta de acceso para examinar todas las carpetas de la jerarquía. En el ejemplo siguiente se muestra cómo iterar sobre un objeto de ruta de acceso. Y, cómo recuperar información sobre sus partes.
 
 ```cpp
 // filesystem_path_example.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <sstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
 wstring DisplayPathInfo()
 {
@@ -88,7 +89,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -119,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>Comparar rutas de acceso
 
-La clase `path` sobrecarga los mismos operadores de comparación que `std::string` y `std::wstring`. Cuando se comparan dos rutas de acceso, se realiza una comparación de cadenas una vez que se han normalizado los separadores. Si falta una barra diagonal final (o barra diagonal inversa), no se agrega y afecta a la comparación. En el siguiente ejemplo se muestra cómo se comparan los valores de ruta de acceso:
+La clase `path` sobrecarga los mismos operadores de comparación que `std::string` y `std::wstring`. Cuando se comparan dos rutas de acceso, se realiza una comparación de cadenas después de normalizar los separadores. Si falta una barra diagonal final (o barra diagonal inversa), no se agrega y eso afecta a la comparación. En el siguiente ejemplo se muestra cómo se comparan los valores de ruta de acceso:
 
 ```cpp
 wstring ComparePaths()
@@ -154,22 +155,22 @@ Para ejecutar este código, péguelo en el ejemplo anterior completo antes de `m
 
 ### <a name="converting-between-path-and-string-types"></a>Convertir entre tipos de ruta de acceso y de cadena
 
-Un objeto `path` se puede convertir implícitamente a `std::wstring` o `std::string`. Esto significa que puede pasar una ruta de acceso a funciones como [wofstream::open](../standard-library/basic-ofstream-class.md#open), tal como se muestra en este ejemplo:
+Un objeto `path` se puede convertir implícitamente a `std::wstring` o `std::string`. Significa que usted puede pasar una trayectoria a las funciones tales como [wofstream::open,](../standard-library/basic-ofstream-class.md#open)tal y como se muestra en de este ejemplo:
 
 ```cpp
 // filesystem_path_conversion.cpp
-// compile by using: /EHsc
+// compile by using: /EHsc /W4 /permissive- /std:c++17 (or /std:c++latest)
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 
 using namespace std;
-using namespace std::experimental::filesystem;
+using namespace std::filesystem;
 
-int main(int argc, char* argv[])
+int main()
 {
-    wchar_t* p = L"C:/Users/Public/Documents";
+    const wchar_t* p{ L"C:/Users/Public/Documents" };
     path filePath(p);
 
     filePath /= L"NewFile.txt";
@@ -209,4 +210,4 @@ Press Enter to exit
 
 El encabezado \<filesystem> proporciona el tipo [directory_iterator](../standard-library/directory-iterator-class.md) para iterar en directorios individuales y la clase [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) para iterar de manera recursiva en un directorio y sus subdirectorios. Después de crear un iterador pasándole un objeto `path` , el iterador apunta al primer elemento directory_entry de la ruta de acceso. Cree el iterador de fin llamando al constructor predeterminado.
 
-Cuando se itera en un directorio, se puede encontrar con varios tipos de elementos, incluyendo directorios, archivos, vínculos simbólicos y archivos de socket. El `directory_iterator` devuelve sus elementos como objetos [directory_entry](../standard-library/directory-entry-class.md).
+Al recorrer en iteración un directorio, hay varios tipos de elementos que puede descubrir. Estos elementos incluyen directorios, archivos, vínculos simbólicos, archivos de socket y otros. El `directory_iterator` devuelve sus elementos como objetos [directory_entry](../standard-library/directory-entry-class.md).

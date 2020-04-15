@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944939"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320443"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,18 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>Parámetros
 
-*wchar*<br/>
+*Wchar*<br/>
 Valor que se va a traducir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **wctob** convierte correctamente un carácter ancho, devuelve su representación de caracteres multibyte, solo si el carácter multibyte tiene una longitud exacta de un byte. Si **wctob** encuentra un carácter ancho que no se puede convertir en un carácter multibyte o el carácter multibyte no tiene exactamente un byte de longitud, devuelve-1.
+Si **wctob** convierte correctamente un carácter ancho, devuelve su representación de caracteres multibyte, solo si el carácter multibyte tiene exactamente un byte de largo. Si **wctob** encuentra un carácter ancho que no puede convertir a un carácter multibyte o el carácter multibyte no es exactamente de un byte de largo, devuelve un -1.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **wctob** convierte un carácter ancho incluido en *WCHAR* en el carácter multibyte correspondiente pasado por el valor devuelto **int** , si el carácter multibyte tiene una longitud exacta de un byte.
+La función **wctob** convierte un carácter ancho contenido en *wchar* en el carácter multibyte correspondiente pasado por el valor **int** devuelto, si el carácter multibyte tiene exactamente un byte de largo.
 
-Si **wctob** no tuvo éxito y no se encontró ningún carácter multibyte correspondiente, la función establece **errno** en **EILSEQ** y devuelve-1.
+Si **wctob** no tuvo éxito y no se encontró ningún carácter multibyte correspondiente, la función establece **errno en** **EILSEQ** y devuelve -1.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,11 +70,11 @@ Si **wctob** no tuvo éxito y no se encontró ningún carácter multibyte corres
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra el comportamiento de la función **wcstombs** .
+Este programa ilustra el comportamiento de la función **wcstombs.**
 
 ```C
 // crt_wctob.c
@@ -102,7 +106,7 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>

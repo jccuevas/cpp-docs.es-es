@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 455db433aff1c1aa241beeb6e2435807959b7dd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317148"
 ---
 # <a name="front_insert_iterator-class"></a>front_insert_iterator (Clase)
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parámetros
 
-\ de *contenedor*
+*Contenedor*\
 El tipo de contenedor en cuyo inicio `front_insert_iterator` va a insertar los elementos.
 
 ## <a name="remarks"></a>Observaciones
@@ -48,23 +48,23 @@ El contenedor debe satisfacer los requisitos para una secuencia de inserción en
 |Nombre del tipo|Descripción|
 |-|-|
 |[container_type](#container_type)|Tipo que representa el contenedor en el que se va a hacer una inserción inicial.|
-|[reference](#reference)|Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.|
+|[Referencia](#reference)|Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.|
 
 ### <a name="operators"></a>Operadores
 
 |Operator|Descripción|
 |-|-|
-|[operator*](#op_star)|Operador de desreferencia usado para implementar la expresión de iterador de salida \* `i` = `x` para una inserción inicial.|
-|[operator++](#op_add_add)|Incrementa el `front_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|
-|[operator=](#op_eq)|Operador de asignación usado para implementar la expresión de iterador de salida \* `i` = `x` para una inserción inicial.|
+|[operador*](#op_star)|Operador de desreferenciación utilizado \* `i`  =  `x` para implementar la expresión de iterador de salida para una inserción frontal.|
+|[operador++](#op_add_add)|Incrementa el `front_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.|
+|[operador](#op_eq)|Operador de asignación utilizado \* `i`  =  `x` para implementar la expresión de iterador de salida para una inserción frontal.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<iterator>
+**Encabezado** \<: iterador>
 
 **Espacio de nombres:** std
 
-## <a name="container_type"></a>  front_insert_iterator::container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator::container_type
 
 Tipo que representa el contenedor en el que se va a hacer una inserción inicial.
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator::front_insert_iterator
 
 Crea un iterador que puede insertar elementos en el inicio de un objeto contenedor especificado.
 
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>front_insert_iterator:: Operator\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator::operador\*
 
 Desreferencia el iterador de inserción que devuelve el elemento al que se dirige.
 
@@ -183,7 +183,7 @@ La función miembro devuelve el valor del elemento al que se dirige.
 
 ### <a name="remarks"></a>Observaciones
 
-Se usa para implementar la expresión de iterador de salida **\*Iter** = **value**. Si `Iter` es un iterador que direcciona un elemento de una secuencia, **\*Iter** = **valor** reemplaza a ese elemento con Value y no cambia el número total de elementos de la secuencia.
+Se utiliza para implementar la expresión = **value** ** \*** de iterador de salida Iter value . Si `Iter` es un iterador que direcciona un elemento de una secuencia, el = **value** ** \*** valor de Iter reemplaza ese elemento por valor y no cambia el número total de elementos de la secuencia.
 
 ### <a name="example"></a>Ejemplo
 
@@ -230,7 +230,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_add_add"></a>  front_insert_iterator::operator++
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator::operador++
 
 Incrementa el `back_insert_iterator` a la siguiente ubicación en la que puede almacenarse un valor.
 
@@ -281,7 +281,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="op_eq"></a>  front_insert_iterator::operator=
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator::operador ?
 
 Anexa (inserta) un valor en el principio del contenedor.
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parámetros
 
-\ *Val*
+*Val*\
 Valor que se va a asignar al contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -343,7 +343,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="reference"></a>  front_insert_iterator::reference
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator::referencia
 
 Tipo que proporciona una referencia a un elemento de una secuencia controlada por el contenedor asociado.
 
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>Consulte también
 
-[\<iterator>](../standard-library/iterator.md)\
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+[\<iterador>](../standard-library/iterator.md)\
+[Seguridad de roscas en la biblioteca estándar C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referencia de la biblioteca estándar C++](../standard-library/cpp-standard-library-reference.md)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216959"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368198"
 ---
 # <a name="__assume"></a>__assume
 
-**Específicos de Microsoft**
+**Microsoft Specific**
 
 Pasa una sugerencia al optimizador.
 
@@ -31,29 +31,29 @@ __assume(
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresiones*\
+*Expresión*\
 Cualquier expresión que se supone que se evalúa como verdadera.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El optimizador supone que la condición representada por `expression` es verdadera en el punto donde aparece la palabra clave y sigue siendo verdadera hasta que se modifica `expression` (por ejemplo, mediante la asignación a una variable). El uso selectivo de las sugerencias que `__assume` pasa al optimizador puede mejorar la optimización.
 
 Si la instrucción `__assume` se escribe como una contradicción (es decir, una expresión que siempre se evalúa como falsa), siempre se trata como `__assume(0)`. Si el código no se comporta como se esperaba, asegúrese de que la `expression` que ha definido es válida y verdadera, como se describió anteriormente. Para obtener más información sobre el comportamiento `__assume(0)` esperado, vea la sección Comentarios más adelante.
 
 > [!WARNING]
->  Un programa no debe contener una instrucción `__assume` no válida en una ruta accesible. Si el compilador puede acceder a una instrucción `__assume` no válida, el programa podría ocasionar un comportamiento impredecible y potencialmente peligroso.
+> Un programa no debe contener una instrucción `__assume` no válida en una ruta accesible. Si el compilador puede acceder a una instrucción `__assume` no válida, el programa podría ocasionar un comportamiento impredecible y potencialmente peligroso.
 
 `__assume` no es un auténtico intrínseco. No tiene que declararse como una función y no se puede utilizar en una directiva `#pragma intrinsic`. Aunque no se genera ningún código, el código generado por el optimizador se ve afectado.
 
-Use `__assume` en una [aserción](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo cuando no se pueda recuperar la aserción. No utilice `__assume` en una aserción que tenga código de recuperación de errores posterior, ya que el compilador podría optimizar el código de control de errores.
+Utilícelo `__assume` en un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo cuando la aserción no sea recuperable. No utilice `__assume` en una aserción que tenga código de recuperación de errores posterior, ya que el compilador podría optimizar el código de control de errores.
 
 La instrucción `__assume(0)` es un caso especial. Utilice `__assume(0)` para indicar una ruta de acceso de código que no está disponible. En el ejemplo siguiente se muestra cómo utilizar `__assume(0)` para indicar que no se puede alcanzar el caso predeterminado de una instrucción switch. Muestra el uso más típico de `__assume(0)`.
 
-Por compatibilidad con versiones anteriores, **_assume** es un sinónimo de _ _ assume a menos que se especifique la opción del compilador [/za \(Disable Language Extensions](../build/reference/za-ze-disable-language-extensions.md) .
+Por compatibilidad con versiones anteriores, **_assume** es un sinónimo de **__assume** a menos que se especifique la opción del compilador [/Za \(Disable language extensions).](../build/reference/za-ze-disable-language-extensions.md)
 
 ## <a name="requirements"></a>Requisitos
 
-|Función intrínseca|Arquitectura|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__assume`|x86, ARM, x64, ARM64|
 
@@ -114,9 +114,9 @@ Desgraciadamente, este uso de `assert` impide que el compilador realice la optim
       NODEFAULT;
 ```
 
-**FIN de Específicos de Microsoft**
+**END Microsoft Specific**
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Intrínsecos del compilador](../intrinsics/compiler-intrinsics.md)\
 [Palabras clave](../cpp/keywords-cpp.md)

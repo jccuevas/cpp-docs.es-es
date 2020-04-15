@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f30e6f78b0988b791617ee0926cf649377972ce2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410098"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368813"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton (clase)
 
-La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos más recientes del usuario. Los usuarios pueden seleccionar uno o varios de los comandos más recientes en la lista desplegable para rehacer o deshacer.
+La `CMFCRibbonUndoButton` clase implementa un botón de lista desplegable que contiene los comandos de usuario más recientes. Los usuarios pueden seleccionar uno o varios de los comandos más recientes de la lista desplegable para rehacerlos o deshacerlos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,26 +37,26 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construye un nuevo `CMFCRibbonUndoButton` objeto con el identificador de comando que especifique, etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.|
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construye un `CMFCRibbonUndoButton` nuevo objeto mediante el identificador de comando que especifique, la etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Agrega una nueva acción a la lista de acciones.|
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Borra la lista de acciones, que es la lista desplegable.|
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determina el número de elementos que el usuario seleccionado en la lista desplegable.|
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determina el número de elementos que un usuario seleccionó en la lista desplegable.|
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indica si el objeto contiene un menú.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La `CMFCRibbonUndoButton` clase utiliza una pila para representar la lista desplegable.
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCRibbonUndoButton` de clases y agregue una nueva acción a la lista de acciones. Este fragmento de código forma parte de la [ejemplo Gadgets de la cinta de opciones](../../overview/visual-cpp-samples.md).
+En el ejemplo siguiente se muestra `CMFCRibbonUndoButton` cómo construir un objeto de la clase y agregar una nueva acción a la lista de acciones. Este fragmento de código forma parte del [ejemplo Deretos](../../overview/visual-cpp-samples.md)de la cinta de opciones.
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 
@@ -76,7 +76,7 @@ En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCRibbonUn
 
 **Encabezado:** afxribbonundobutton.h
 
-##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction
+## <a name="cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction
 
 Agrega una nueva acción a la lista de acciones.
 
@@ -87,9 +87,9 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ### <a name="parameters"></a>Parámetros
 
 *lpszLabel*<br/>
-[in] La etiqueta de acción que se mostrará en la lista desplegable.
+[en] La etiqueta de acción que se mostrará en la lista desplegable.
 
-##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList
+## <a name="cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList
 
 Borra la lista de acciones, que es la lista desplegable.
 
@@ -97,9 +97,9 @@ Borra la lista de acciones, que es la lista desplegable.
 void CleanUpUndoList();
 ```
 
-##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton
+## <a name="cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton
 
-Construye un nuevo `CMFCRibbonUndoButton` objeto con el identificador de comando que especifique, etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.
+Construye un `CMFCRibbonUndoButton` nuevo objeto mediante el identificador de comando que especifique, la etiqueta de texto y las imágenes de la lista de imágenes del objeto primario.
 
 ```
 CMFCRibbonUndoButton(
@@ -117,23 +117,23 @@ CMFCRibbonUndoButton(
 ### <a name="parameters"></a>Parámetros
 
 *nID*<br/>
-[in] Especifica el identificador de comando.
+[en] Especifica el identificador de comando.
 
 *lpszText*<br/>
-[in] Especifica la etiqueta de texto del botón.
+[en] Especifica la etiqueta de texto del botón.
 
 *nSmallImageIndex*<br/>
-[in] Índice de base cero en la lista de imágenes del objeto primario para la imagen del botón pequeño.
+[en] El índice de base cero en la lista de imágenes del objeto primario para la imagen pequeña del botón.
 
 *nLargeImageIndex*<br/>
-[in] Índice de base cero en la lista de imágenes del objeto primario para el de la imagen grande del botón.
+[en] El índice de base cero en la lista de imágenes del objeto primario para la imagen grande del botón.
 
 *hIcon*<br/>
-[in] Identificador de un icono que se puede usar como imagen de un botón.
+[en] Identificador de un icono que puede usar como imagen de un botón.
 
-##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber
+## <a name="cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber
 
-Determina el número de elementos que el usuario seleccionado en la lista desplegable.
+Determina el número de elementos que un usuario seleccionó en la lista desplegable.
 
 ```
 int GetActionNumber() const;
@@ -141,9 +141,9 @@ int GetActionNumber() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-El número de elementos que el usuario seleccionado.
+El número de elementos que ha seleccionado un usuario.
 
-##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu
+## <a name="cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu
 
 Indica si el objeto contiene un menú.
 
@@ -155,11 +155,11 @@ virtual BOOL HasMenu() const;
 
 Siempre devuelve TRUE.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonGallery (clase)](../../mfc/reference/cmfcribbongallery-class.md)<br/>
+[CMFCRibbonGallery (Clase)](../../mfc/reference/cmfcribbongallery-class.md)<br/>
 [CMFCRibbonButton (clase)](../../mfc/reference/cmfcribbonbutton-class.md)

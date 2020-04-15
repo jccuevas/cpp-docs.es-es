@@ -14,18 +14,18 @@ helpviewer_keywords:
 - CMFCDesktopAlertDialog [MFC], HasFocus
 - CMFCDesktopAlertDialog [MFC], PreTranslateMessage
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
-ms.openlocfilehash: 02086e09ca3229fae28359b1ea81e4708c5d1865
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 479959e9b021255e309caf6fee02588a8cd8f1d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403716"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367652"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog (clase)
 
-El `CMFCDesktopAlertDialog` clase se utiliza junto con el [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) para mostrar un cuadro de diálogo personalizado en una ventana emergente.
+La `CMFCDesktopAlertDialog` clase se utiliza junto con la [CMFCDesktopAlertWnd clase](../../mfc/reference/cmfcdesktopalertwnd-class.md) para mostrar un cuadro de diálogo personalizado en una ventana emergente.
 
-Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
+Para obtener más información, vea el código fuente ubicado en la carpeta **VC\\atlmfc\\src\\mfc** de la instalación de Visual Studio.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,14 +37,14 @@ class CMFCDesktopAlertDialog : public CDialogEx
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
 |[CMFCDesktopAlertDialog::CreateFromParams](#createfromparams)||
 |[CMFCDesktopAlertDialog::GetDlgSize](#getdlgsize)||
 |[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||
 |[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(Invalida `CDialogEx::PreTranslateMessage`).|
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Lleve a cabo los pasos siguientes para mostrar un cuadro de diálogo personalizado en una ventana emergente:
 
@@ -52,7 +52,7 @@ Lleve a cabo los pasos siguientes para mostrar un cuadro de diálogo personaliza
 
 1. Crear una plantilla de cuadro de diálogo secundario en los recursos del proyecto.
 
-1. Llame a [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) con el identificador de recurso de la plantilla de cuadro de diálogo y un puntero a la información de clase en tiempo de ejecución de la clase derivada como parámetros.
+1. Llame a [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) con el identificador de recurso de la plantilla de cuadro de diálogo y un puntero a la información de clase en tiempo de ejecución de la clase derivada como parámetros.
 
 1. Programar el cuadro de diálogo personalizado para tratar todas las notificaciones que proceden de los controles hospedados o programar los controles hospedados para tratar directamente estas notificaciones.
 
@@ -74,7 +74,7 @@ Lleve a cabo los pasos siguientes para mostrar un cuadro de diálogo personaliza
 
 **Encabezado:** afxDesktopAlertDialog.h
 
-##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams
+## <a name="cmfcdesktopalertdialogcreatefromparams"></a><a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams
 
 ```
 BOOL CreateFromParams(
@@ -84,15 +84,15 @@ BOOL CreateFromParams(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *params*<br/>
+[en] *params*<br/>
 
-[in] *pParent*<br/>
+[en] *pParent*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize
+## <a name="cmfcdesktopalertdialoggetdlgsize"></a><a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize
 
 ```
 CSize GetDlgSize();
@@ -100,9 +100,9 @@ CSize GetDlgSize();
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus
+## <a name="cmfcdesktopalertdialoghasfocus"></a><a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus
 
 ```
 BOOL HasFocus() const;
@@ -110,9 +110,9 @@ BOOL HasFocus() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage
+## <a name="cmfcdesktopalertdialogpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -120,16 +120,16 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pMsg*<br/>
+[en] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDesktopAlertWnd (clase)](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
-[CMFCDesktopAlertWndInfo (clase)](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
+[CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
+[CMFCDesktopAlertWndInfo Clase](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
 [CDialogEx (clase)](../../mfc/reference/cdialogex-class.md)

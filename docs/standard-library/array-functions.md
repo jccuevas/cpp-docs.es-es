@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364939"
 ---
 # <a name="ltarraygt-functions"></a>Funciones &lt;array&gt;
 
-El encabezado \<> de matriz incluye dos funciones no miembro, `get` y `swap`, que operan en objetos de **matriz** .
+El \<encabezado de> de matriz `get` `swap`incluye dos funciones que no son miembros y , que funcionan en objetos de **matriz.**
 
 |||
 |-|-|
 |[get](#get)|[swap](#swap)|
 
-## <a name="get"></a>  get
+## <a name="get"></a><a name="get"></a>Obtener
 
 Devuelve una referencia al elemento especificado de la matriz.
 
@@ -51,7 +51,7 @@ El tipo de un elemento.
 *N*\
 Número de elementos de la matriz.
 
-\ *ARR*
+*Arr*\
 La matriz de la que se selecciona.
 
 ### <a name="example"></a>Ejemplo
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>Intercambio
 
-Una especialización de plantilla no miembro de `std::swap` que intercambia dos objetos de **matriz** .
+Una especialización de `std::swap` plantilla no miembro de que intercambia dos objetos de **matriz.**
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,16 +97,16 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *Ty*
+*Ty*\
 El tipo de un elemento.
 
 *N*\
 Se refiere al tamaño de la matriz.
 
-\ *izquierda*
+*Izquierda*\
 Primera matriz que se va a intercambiar.
 
-\ *derecha*
+*Correcto*\
 Segunda matriz que se va a intercambiar.
 
 ### <a name="remarks"></a>Observaciones
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Consulte también
 
-[\<array>](../standard-library/array.md)
+[\<matriz>](../standard-library/array.md)

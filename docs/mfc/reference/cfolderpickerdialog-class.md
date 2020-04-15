@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: 435c91082fa901f0bc9726316f0358fc5a669b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396202"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373871"
 ---
 # <a name="cfolderpickerdialog-class"></a>Clase CFolderPickerDialog
 
-Clase CFolderPickerDialog implementa CFileDialog en el modo de selector de carpeta.
+CFolderPickerDialog clase implementa CFileDialog en el modo de selector de carpetas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,12 +29,12 @@ class CFolderPickerDialog : public CFileDialog;
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CFolderPickerDialog::~CFolderPickerDialog](#_dtorcfolderpickerdialog)|Destructor.|
+|[CFolderPickerDialog::-CFolderPickerDialog](#_dtorcfolderpickerdialog)|Destructor.|
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Constructor.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -56,7 +56,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 **Encabezado:** afxdlgs.h
 
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog
 
 Constructor.
 
@@ -74,17 +74,17 @@ explicit CFolderPickerDialog(
 Carpeta inicial.
 
 *dwFlags*<br/>
-Una combinación de uno o más marcadores que le permiten personalizar el cuadro de diálogo.
+Una combinación de uno o más indicadores que le permiten personalizar el cuadro de diálogo.
 
 *pParentWnd*<br/>
-Un puntero a la ventana de primario o el propietario del objeto de cuadro de diálogo.
+Puntero a la ventana principal o propietaria del objeto de cuadro de diálogo.
 
 *dwSize*<br/>
 El tamaño de la estructura OPENFILENAME.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog::~CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog::-CFolderPickerDialog
 
 Destructor.
 
@@ -92,8 +92,8 @@ Destructor.
 virtual ~CFolderPickerDialog();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Clases](../../mfc/reference/mfc-classes.md)

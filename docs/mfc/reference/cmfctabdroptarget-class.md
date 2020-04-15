@@ -1,5 +1,5 @@
 ---
-title: Clase CMFCTabDropTarget
+title: CMFCTabDropTarget (Clase)
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabDropTarget
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d0090386b1ebb4d89b9a7613a0b2a28529decbe5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 83432fdb90fe28214fb1faaf843556deb2f44750
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127436"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367355"
 ---
-# <a name="cmfctabdroptarget-class"></a>Clase CMFCTabDropTarget
+# <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget (Clase)
 
 Proporciona el mecanismo de comunicación entre un control de ficha y las bibliotecas OLE.
 
@@ -33,7 +33,7 @@ Proporciona el mecanismo de comunicación entre un control de ficha y las biblio
 class CMFCTabDropTarget : public COleDropTarget
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
@@ -47,17 +47,17 @@ class CMFCTabDropTarget : public COleDropTarget
 |||
 |-|-|
 |Nombre|Descripción|
-|[CMFCTabDropTarget:: OnDragEnter](#ondragenter)|Lo llama el marco de trabajo cuando el usuario arrastra un objeto a una ventana de tabulación. (Invalida [COleDropTarget:: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)).|
-|[CMFCTabDropTarget:: OnDragLeave](#ondragleave)|Lo llama el marco de trabajo cuando el usuario arrastra un objeto fuera de la ventana de pestaña que tiene el foco. (Invalida [COleDropTarget:: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave)).|
-|[CMFCTabDropTarget:: OnDragOver](#ondragover)|Lo llama el marco de trabajo cuando el usuario arrastra un objeto a la ventana de pestaña que tiene el foco. (Invalida [COleDropTarget:: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)).|
-|[CMFCTabDropTarget::OnDropEx](#ondropex)|Lo llama el marco de trabajo cuando el usuario suelta el botón del mouse al final de una operación de arrastre. (Invalida [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)).|
-|[CMFCTabDropTarget:: Register](#register)|Registra el control como un que puede ser el destino de una operación OLE de arrastrar y colocar.|
+|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Llamado por el marco de trabajo cuando el usuario arrastra un objeto a una ventana de ficha. (Reemplaza [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
+|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Llamado por el marco de trabajo cuando el usuario arrastra un objeto fuera de la ventana de ficha que tiene el foco. (Reemplaza [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
+|[CMFCTabDropTarget::OnDragOver](#ondragover)|Llamado por el marco de trabajo cuando el usuario arrastra un objeto a la ventana de ficha que tiene el foco. (Reemplaza [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
+|[CMFCTabDropTarget::OnDropEx](#ondropex)|Llamado por el marco de trabajo cuando el usuario suelta el botón del mouse al final de una operación de arrastre. (Reemplaza [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|
+|[CMFCTabDropTarget::Register](#register)|Registra el control como uno que puede ser el destino de una operación de arrastrar y colocar OLE.|
 
 ### <a name="remarks"></a>Observaciones
 
-Esta clase proporciona compatibilidad de arrastrar y colocar con la clase `CMFCBaseTabCtrl`. Si la aplicación inicializa las bibliotecas OLE mediante la función [AfxOleInit](ole-initialization.md#afxoleinit) , `CMFCBaseTabCtrl` objetos se registran en las operaciones de arrastrar y colocar.
+Esta clase proporciona compatibilidad con arrastrar `CMFCBaseTabCtrl` y colocar a la clase. Si la aplicación inicializa las bibliotecas OLE mediante la `CMFCBaseTabCtrl` función [AfxOleInit,](ole-initialization.md#afxoleinit) los objetos se registran para las operaciones de arrastrar y colocar.
 
-La clase `CMFCTabDropTarget` extiende su clase base mediante la tabulación que está bajo el cursor cuando se produce una operación de arrastre activa. Para obtener más información sobre las operaciones de arrastrar y colocar, vea [arrastrar y colocar de OLE](../../mfc/drag-and-drop-ole.md).
+La `CMFCTabDropTarget` clase extiende su clase base haciendo que la pestaña que está debajo del cursor cuando se produce una operación de arrastre activa. Para obtener más información acerca de las operaciones de arrastrar y colocar, vea [arrastrar y colocar OLE](../../mfc/drag-and-drop-ole.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -79,9 +79,9 @@ En el ejemplo siguiente se muestra cómo construir un objeto `CMFCTabDropTarget`
 
 **Encabezado:** afxbasetabctrl.h
 
-##  <a name="ondragenter"></a>CMFCTabDropTarget:: OnDragEnter
+## <a name="cmfctabdroptargetondragenter"></a><a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter
 
-Lo llama el marco de trabajo cuando el usuario arrastra un objeto a una ventana de tabulación.
+Llamado por el marco de trabajo cuando el usuario arrastra un objeto a una ventana de ficha.
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -97,13 +97,13 @@ virtual DROPEFFECT OnDragEnter(
 |-|-|
 |Parámetro|Descripción|
 |*pWnd*|[in] Sin utilizar.|
-|*pDataObject*|de Puntero al objeto que el usuario arrastra.|
-|*dwKeyState*|de Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de los siguientes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|
-|*Elija*|de Ubicación del cursor en coordenadas de cliente.|
+|*pDataObject*|[en] Puntero al objeto que arrastra el usuario.|
+|*dwKeyState*|[en] Contiene el estado de las teclas modificadoras. Esta es una combinación de cualquier número de los siguientes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|
+|*Punto*|[en] La ubicación del cursor en las coordenadas de cliente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Efecto que se produce si la colocación se produce en la ubicación especificada por *Point*. Puede ser uno o varios de los siguientes:
+El efecto que se produce si la colocación se produce en la ubicación especificada por *el punto*. Puede ser uno o más de los siguientes:
 
 - DROPEFFECT_NONE
 
@@ -117,13 +117,13 @@ Efecto que se produce si la colocación se produce en la ubicación especificada
 
 ### <a name="remarks"></a>Observaciones
 
-Este método devuelve DROPEFFECT_NONE si el marco de la barra de herramientas no está en modo de personalización o el formato de datos del portapapeles no está disponible. De lo contrario, devuelve el resultado de llamar a `CMFCBaseTabCtrl::OnDragEnter` con los parámetros proporcionados.
+Este método devuelve DROPEFFECT_NONE si el marco de trabajo de la barra de herramientas no está en modo de personalización o el formato de datos del Portapapeles no está disponible. De lo contrario, devuelve `CMFCBaseTabCtrl::OnDragEnter` el resultado de llamar con los parámetros proporcionados.
 
-Para obtener más información sobre el modo de personalización, vea [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obtener más información sobre los formatos de datos del portapapeles, vea [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Para obtener más información sobre el modo de personalización, vea [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obtener más información acerca de los formatos de datos del Portapapeles, vea [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="ondragleave"></a>CMFCTabDropTarget:: OnDragLeave
+## <a name="cmfctabdroptargetondragleave"></a><a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave
 
-Lo llama el marco de trabajo cuando el usuario arrastra un objeto fuera de la ventana de pestaña que tiene el foco.
+Llamado por el marco de trabajo cuando el usuario arrastra un objeto fuera de la ventana de ficha que tiene el foco.
 
 ```
 virtual void OnDragLeave(CWnd* pWnd);
@@ -138,11 +138,11 @@ virtual void OnDragLeave(CWnd* pWnd);
 
 ### <a name="remarks"></a>Observaciones
 
-Este método llama al método `CMFCBaseTabCtrl::OnDragLeave` para realizar la operación de arrastre.
+Este método `CMFCBaseTabCtrl::OnDragLeave` llama al método para realizar la operación de arrastre.
 
-##  <a name="ondragover"></a>CMFCTabDropTarget:: OnDragOver
+## <a name="cmfctabdroptargetondragover"></a><a name="ondragover"></a>CMFCTabDropTarget::OnDragOver
 
-Lo llama el marco de trabajo cuando el usuario arrastra un objeto a la ventana de pestaña que tiene el foco.
+Llamado por el marco de trabajo cuando el usuario arrastra un objeto a la ventana de ficha que tiene el foco.
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -158,13 +158,13 @@ virtual DROPEFFECT OnDragOver(
 |-|-|
 |Parámetro|Descripción|
 |*pWnd*|[in] Sin utilizar.|
-|*pDataObject*|de Puntero al objeto que el usuario arrastra.|
-|*dwKeyState*|de Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de los siguientes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|
-|*Elija*|de Ubicación del puntero del mouse en coordenadas de cliente.|
+|*pDataObject*|[en] Puntero al objeto que arrastra el usuario.|
+|*dwKeyState*|[en] Contiene el estado de las teclas modificadoras. Esta es una combinación de cualquier número de los siguientes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|
+|*Punto*|[en] La ubicación del puntero del mouse en las coordenadas de cliente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Efecto que se produce si la colocación se produce en la ubicación especificada por *Point*. Puede ser uno o varios de los siguientes:
+El efecto que se produce si la colocación se produce en la ubicación especificada por *el punto*. Puede ser uno o más de los siguientes:
 
 - DROPEFFECT_NONE
 
@@ -178,13 +178,13 @@ Efecto que se produce si la colocación se produce en la ubicación especificada
 
 ### <a name="remarks"></a>Observaciones
 
-Este método hace que la pestaña que se encuentra debajo del cursor cuando se produce una operación de arrastre activa. Devuelve DROPEFFECT_NONE si el marco de la barra de herramientas no está en modo de personalización o el formato de datos del portapapeles no está disponible. De lo contrario, devuelve el resultado de llamar a `CMFCBaseTabCtrl::OnDragOver` con los parámetros proporcionados.
+Este método hace que la pestaña que está debajo del cursor cuando se produce una operación de arrastre activa. Devuelve DROPEFFECT_NONE si el marco de la barra de herramientas no está en modo de personalización o el formato de datos del Portapapeles no está disponible. De lo contrario, devuelve `CMFCBaseTabCtrl::OnDragOver` el resultado de llamar con los parámetros proporcionados.
 
-Para obtener más información sobre el modo de personalización, vea [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obtener más información sobre los formatos de datos del portapapeles, vea [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Para obtener más información sobre el modo de personalización, vea [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obtener más información acerca de los formatos de datos del Portapapeles, vea [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx
+## <a name="cmfctabdroptargetondropex"></a><a name="ondropex"></a>CMFCTabDropTarget::OnDropEx
 
-Lo llama el marco de trabajo cuando el usuario suelta el botón del mouse al final de una operación de arrastre.
+Llamado por el marco de trabajo cuando el usuario suelta el botón del mouse al final de una operación de arrastre.
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -201,14 +201,14 @@ virtual DROPEFFECT OnDropEx(
 |-|-|
 |Parámetro|Descripción|
 |*pWnd*|[in] Sin utilizar.|
-|*pDataObject*|de Puntero al objeto que el usuario arrastra.|
-|*dropEffect*|de La operación Drop predeterminada.|
-|*Plegable*|[in] Sin utilizar.|
-|*Elija*|de Ubicación del puntero del mouse en coordenadas de cliente.|
+|*pDataObject*|[en] Puntero al objeto que arrastra el usuario.|
+|*dropEffect*|[en] La operación de colocación predeterminada.|
+|*dropList*|[in] Sin utilizar.|
+|*Punto*|[en] La ubicación del puntero del mouse en las coordenadas de cliente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Efecto de eliminación resultante. Puede ser uno o varios de los siguientes:
+El efecto de caída resultante. Puede ser uno o más de los siguientes:
 
 - DROPEFFECT_NONE
 
@@ -222,13 +222,13 @@ Efecto de eliminación resultante. Puede ser uno o varios de los siguientes:
 
 ### <a name="remarks"></a>Observaciones
 
-Este método llama `CMFCBaseTabCtrl::OnDrop` si el marco de la barra de herramientas está en modo de personalización y el formato de datos del Portapapeles está disponible. Si la llamada a `CMFCBaseTabCtrl::OnDrop` devuelve un valor distinto de cero, este método devuelve el efecto de colocación predeterminado especificado por *dropEffect*. De lo contrario, este método devuelve DROPEFFECT_NONE. Para obtener más información sobre los efectos de colocación, vea [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
+Este método `CMFCBaseTabCtrl::OnDrop` llama si el marco de la barra de herramientas está en modo de personalización y el formato de datos del Portapapeles está disponible. Si la `CMFCBaseTabCtrl::OnDrop` llamada a devuelve un valor distinto de cero, este método devuelve el efecto de colocación predeterminado especificado por *dropEffect*. De lo contrario, este método devuelve DROPEFFECT_NONE. Para obtener más información acerca de los efectos de colocación, vea [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).
 
-Para obtener más información sobre el modo de personalización, vea [CMFCToolBar:: IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obtener más información sobre los formatos de datos del portapapeles, vea [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
+Para obtener más información sobre el modo de personalización, vea [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Para obtener más información acerca de los formatos de datos del Portapapeles, vea [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).
 
-##  <a name="register"></a>CMFCTabDropTarget:: Register
+## <a name="cmfctabdroptargetregister"></a><a name="register"></a>CMFCTabDropTarget::Register
 
-Registra el control como un que puede ser el destino de una operación OLE de arrastrar y colocar.
+Registra el control como uno que puede ser el destino de una operación de arrastrar y colocar OLE.
 
 ```
 BOOL Register(CMFCBaseTabCtrl *pOwner);
@@ -239,18 +239,18 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||
 |-|-|
 |Parámetro|Descripción|
-|*pOwner*|de Control de ficha que se va a registrar como destino de colocación.|
+|*pOwner*|[en] El control de ficha para registrarse como destino de colocación.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Distinto de cero si el registro se realizó correctamente; de lo contrario, es 0.
+Distinto de cero si el registro se realizó correctamente; de lo contrario 0.
 
 ### <a name="remarks"></a>Observaciones
 
-Este método llama a [COleDropTarget:: Register](../../mfc/reference/coledroptarget-class.md#register) para registrar el control para las operaciones de arrastrar y colocar.
+Este método llama a [COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register) para registrar el control para las operaciones de arrastrar y colocar.
 
 ## <a name="see-also"></a>Consulte también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[Arrastrar y colocar de OLE](../../mfc/drag-and-drop-ole.md)
+[Funciones OLE de arrastrar y colocar](../../mfc/drag-and-drop-ole.md)

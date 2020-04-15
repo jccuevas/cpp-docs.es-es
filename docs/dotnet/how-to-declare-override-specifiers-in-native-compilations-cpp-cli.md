@@ -1,28 +1,28 @@
 ---
-title: Procedimiento Declarar especificadores de invalidación (C++ / c++ / CLI)
+title: 'Cómo: Declarar especificadores de invalidación (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387427"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374452"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedimiento Declarar especificadores de invalidación en compilaciones nativas (C++ / c++ / CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Cómo: Declarar especificadores de invalidación en las compilaciones nativas (C++/CLI)
 
-[sellado](../extensions/sealed-cpp-component-extensions.md), [abstracta](../extensions/abstract-cpp-component-extensions.md), y [invalidar](../extensions/override-cpp-component-extensions.md) están disponibles en las compilaciones que no usan **/ZW** o [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+[sealed](../extensions/sealed-cpp-component-extensions.md), [abstract](../extensions/abstract-cpp-component-extensions.md)e [override](../extensions/override-cpp-component-extensions.md) están disponibles en compilaciones que no utilizan **/ZW** o [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
->  El ISO C ++ 11 estándar lenguaje tiene la [invalidar](../cpp/override-specifier.md) identificador y el [final](../cpp/final-specifier.md) identificador y ambos se admiten en Visual Studio, Use `final` en lugar de `sealed` en el código que está pensado para se compila como sólo nativo.
+> El lenguaje ISO C++11 Standard tiene el identificador de [invalidación](../cpp/override-specifier.md) `final` y `sealed` el identificador [final,](../cpp/final-specifier.md) y ambos se admiten en Visual Studio Use en lugar de en el código que está destinado a compilarse como solo nativo.
 
 ## <a name="example"></a>Ejemplo
 
 ### <a name="description"></a>Descripción
 
-El ejemplo siguiente muestra que `sealed` es válida en compilaciones nativas.
+En el ejemplo `sealed` siguiente se muestra que es válido en compilaciones nativas.
 
 ### <a name="code"></a>Código
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="description"></a>Descripción
 
-En el ejemplo siguiente se muestra que `override` es válida en compilaciones nativas.
+En el ejemplo `override` siguiente se muestra que es válido en compilaciones nativas.
 
 ### <a name="code"></a>Código
 
@@ -73,7 +73,7 @@ public:
 
 ### <a name="description"></a>Descripción
 
-En este ejemplo se muestra que `abstract` es válida en compilaciones nativas.
+Este ejemplo `abstract` muestra que es válido en compilaciones nativas.
 
 ### <a name="code"></a>Código
 
@@ -86,6 +86,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Especificadores de invalidación](../extensions/override-specifiers-cpp-component-extensions.md)

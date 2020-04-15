@@ -1,6 +1,6 @@
 ---
 title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsset
 - _mbsset
@@ -8,6 +8,9 @@ api_name:
 - _strset
 - _wcsset_l
 - _mbsset_l
+- _o__mbsset
+- _o__mbsset_l
+- _o__wcsset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +67,19 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 7f8674467c0d02143e6edf1e4e95c6ee3e20c4b5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 53a4fa3fecd021b42ec2b69b804cde35570b1a6d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946767"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316893"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
 Establece los caracteres de una cadena en un carácter. Hay disponibles versiones más seguras de estas funciones; vea [_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsset** y **_mbsset_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset** y **_mbsset_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -111,10 +115,10 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*Str*<br/>
 Cadena terminada en NULL que se va a establecer.
 
-*c*<br/>
+*C*<br/>
 Especificación de carácter.
 
 *locale*<br/>
@@ -124,16 +128,18 @@ Configuración regional que se va a usar.
 
 Devuelve un puntero a la cadena modificada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_strset** establece todos los caracteres (excepto el carácter nulo de terminación) de *Str* en *c*, convertidos en **Char**. **_wcsset** y **_mbsset_l** son versiones de caracteres anchos y multibyte de **_strset**, y los tipos de datos de los argumentos y los valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_strset** establece todos los caracteres (excepto el carácter nulo de terminación) de *str* en *c*, convertidos en **char**. **_wcsset** y **_mbsset_l** son versiones de caracteres anchos y multibyte de **_strset**y los tipos de datos de los argumentos y valores devueltos varían en consecuencia. Por lo demás, estas funciones se comportan exactamente igual.
 
-**_mbsset** valida sus parámetros. Si *Str* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsset** devuelve **null** y establece **errno** en **EINVAL**. **_strset** y **_wcsset** no validan sus parámetros.
+**_mbsset** valida sus parámetros. Si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsset** devuelve **NULL** y establece **errno** en **EINVAL**. **_strset** y **_wcsset** no validan sus parámetros.
 
-El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen el sufijo **_L** usan la configuración regional actual y las que tienen el sufijo **_L** usan en su lugar el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la configuración de la **LC_CTYPE** configuración de categoría de la configuración regional; ver [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, excepto que las que no tienen el **sufijo _l** utilizan la configuración regional actual y las que tienen el **_l** sufijo en su lugar utilizan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -152,7 +158,7 @@ El valor de salida se ve afectado por la configuración de la categoría **LC_CT
 |**_wcsset_l**|\<tchar.h>|
 |**_mbsset**, **_mbsset_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -178,9 +184,9 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>
 [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
