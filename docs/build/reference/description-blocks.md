@@ -1,22 +1,22 @@
 ---
 title: Bloques de descripción
-description: NMAKE usa bloques de descripción para asociar los destinos, las dependencias y los comandos en un archivo make.
+description: NMAKE utiliza bloques de descripción para asociar destinos, dependencias y comandos en un archivo make.
 ms.date: 10/29/2019
 helpviewer_keywords:
 - description blocks
 - NMAKE program, description blocks
 - blocks, description
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
-ms.openlocfilehash: fb9cf4400c96b588e8704e972dd29ab27f41cae9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e4e80b59d3d30b3b34c55b40d337ef5c078e6404
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422785"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322259"
 ---
 # <a name="description-blocks"></a>Bloques de descripción
 
-Los bloques de Descripción forman el núcleo de un archivo make. Describen los *destinos*, o archivos que se van a crear, y sus *dependencias*, los archivos necesarios para crear los destinos. Un bloque de descripción puede incluir *comandos*, que describen cómo crear los destinos a partir de las dependencias. Un bloque de descripción es una línea de dependencia, seguido opcionalmente por un bloque de comandos:
+Los bloques de descripción forman el núcleo de un archivo make. Describen los *destinos*o archivos que se van a crear y sus *dependencias,* los archivos necesarios para crear los destinos. Un bloque de descripción puede incluir *comandos,* que describen cómo crear los destinos a partir de las dependencias. Un bloque de descripción es una línea de dependencia, opcionalmente seguida de un bloque de comandos:
 
 ```makefile
 targets... : dependents...
@@ -25,25 +25,25 @@ targets... : dependents...
 
 ## <a name="dependency-lines"></a>Líneas de dependencia
 
-Una *línea de dependencia* especifica uno o más destinos, y cero o más dependientes. Si un destino no existe o tiene una marca de tiempo anterior a un dependiente, NMAKE ejecuta los comandos en el bloque de comandos. NMAKE también ejecuta el bloque de comandos si el destino es un [pseudodestino](pseudotargets.md). A continuación se muestra una línea de dependencia de ejemplo:
+Una línea de *dependencia* especifica uno o varios destinos y cero o más dependientes. Si un destino no existe o tiene una marca de tiempo anterior a una dependiente, NMAKE ejecuta los comandos en el bloque de comandos. NMAKE también ejecuta el bloque de comandos si el destino es un [pseudodestino.](pseudotargets.md) Este es un ejemplo de línea de dependencia:
 
 ```makefile
 hi_bye.exe : hello.obj goodbye.obj helper.lib
 ```
 
-En esta línea de dependencia, `hi_bye.exe` es el destino. Sus dependencias son `hello.obj`, `goodbye.obj`y `helper.lib`. La línea de dependencia indica a NMAKE que compile el destino cada vez que `hello.obj`, `goodbye.obj`o `helper.lib` ha cambiado más recientemente que `hi_bye.exe`.
+En esta línea `hi_bye.exe` de dependencia, es el destino. Sus dependencias `hello.obj` `goodbye.obj`son `helper.lib`, , y . La línea de dependencia indica a `hello.obj`NMAKE que cree el destino cada vez que , `goodbye.obj`, o `helper.lib` que haya cambiado más recientemente que `hi_bye.exe`.
 
-Un destino debe estar al principio de la línea. No se puede aplicar sangría a los espacios ni a las tabulaciones. Use un signo de dos puntos (`:`) para separar los destinos de los dependientes. Se permiten espacios o tabulaciones entre los destinos, el separador de dos puntos (`:`) y los dependientes. Para dividir la línea de dependencia, use una barra diagonal inversa (`\`) después de un destino o dependiente.
+Un objetivo debe estar al principio de la línea. No se puede sangrar con espacios o pestañas. Utilice dos`:`puntos ( ) para separar los destinos de los dependientes. Se permiten espacios o pestañas entre`:`destinos, el separador de dos puntos ( ) y dependientes. Para dividir la línea de dependencia, utilice una barra diagonal inversa (`\`) después de un destino o dependiente.
 
-Antes de ejecutar los bloques de comandos, NMAKE examina todas las dependencias y cualquier regla de inferencia aplicable para crear un *árbol de dependencias*. Un árbol de dependencia especifica los pasos necesarios para actualizar completamente el destino. NMAKE comprueba de forma recursiva si un dependiente es en sí mismo un destino en otra lista de dependencias. Después de compilar el árbol de dependencias, NMAKE comprueba las marcas de tiempo. Si los dependientes del árbol son más recientes que el destino, NMAKE crea el destino.
+Antes de ejecutar bloques de comandos, NMAKE examina todas las dependencias y las reglas de inferencia aplicables para crear un árbol de *dependencias.* Un árbol de dependencias especifica los pasos necesarios para actualizar completamente el destino. NMAKE comprueba recursivamente si un dependiente es en sí mismo un destino en otra lista de dependencias. Después de compilar el árbol de dependencias, NMAKE comprueba las marcas de tiempo. Si los dependientes del árbol son más recientes que el destino, NMAKE crea el destino.
 
-## <a name="targets"></a> Destinos
+## <a name="targets"></a><a name="targets"></a>Objetivos
 
-La sección de destinos de una línea de dependencia especifica uno o varios destinos. Un destino puede ser cualquier nombre de archivo, nombre de directorio o [pseudodestino](pseudotargets.md)válidos. Separe varios destinos mediante el uso de uno o varios espacios o tabulaciones. Los destinos no distinguen mayúsculas de minúsculas. Se permiten rutas de acceso con nombres de archivo. Un destino y su ruta de acceso no pueden superar los 256 caracteres. Si el destino que va delante del signo de dos puntos es un carácter único, use un espacio de separación. De lo contrario, NMAKE interpreta la combinación de letras dos puntos como un especificador de unidad.
+La sección de destinos de una línea de dependencia especifica uno o varios destinos. Un destino puede ser cualquier nombre de archivo válido, nombre de directorio o [pseudodestino.](pseudotargets.md) Separe varios destinos mediante uno o varios espacios o pestañas. Los objetivos no distinguen mayúsculas de minúsculas. Las rutas de acceso se permiten con nombres de archivo. Un destino y su ruta de acceso no pueden superar los 256 caracteres. Si el destino que precede a los dos puntos es un solo carácter, utilice un espacio de separación. De lo contrario, NMAKE interpreta la combinación de letras y dos puntos como un especificador de unidad.
 
-### <a name="multiple-targets"></a>Varios destinos
+### <a name="multiple-targets"></a><a name="multiple-targets"></a>Múltiples objetivos
 
-NMAKE evalúa varios destinos en una sola dependencia como si se hubieran especificado en un bloque de Descripción independiente.
+NMAKE evalúa varios destinos en una sola dependencia como si cada uno se especificara en un bloque de descripción independiente.
 
 Por ejemplo, esta regla:
 
@@ -62,9 +62,9 @@ leap.exe : jump.obj
    echo Building...
 ```
 
-### <a name="cumulative-dependencies"></a>Dependencias acumulativas
+### <a name="cumulative-dependencies"></a><a name="cumulative-dependencies"></a>Dependencias acumuladas
 
-Las dependencias son acumulativas en un bloque de descripción, si un destino se repite.
+Las dependencias son acumulativas en un bloque de descripción, si se repite un destino.
 
 Por ejemplo, este conjunto de reglas,
 
@@ -81,7 +81,7 @@ bounce.exe : jump.obj up.obj
    echo Building bounce.exe...
 ```
 
-Cuando hay varios destinos en varias líneas de dependencia en un solo bloque de descripción, NMAKE los evalúa como si se hubieran especificado en un bloque de Descripción independiente. Sin embargo, solo los destinos de la última línea de dependencia usan el bloque de comandos. NMAKE intenta utilizar una regla de inferencia para los otros destinos.
+Cuando tiene varios destinos en varias líneas de dependencia en un único bloque de descripción, NMAKE los evalúa como si cada uno se especificara en un bloque de descripción independiente. Sin embargo, solo los destinos de la última línea de dependencia utilizan el bloque de comandos. NMAKE intenta usar una regla de inferencia para los demás destinos.
 
 Por ejemplo, este conjunto de reglas,
 
@@ -104,9 +104,9 @@ climb.exe : up.obj
    echo Building bounce.exe...
 ```
 
-### <a name="targets-in-multiple-description-blocks"></a>Destinos en bloques de Descripción múltiples
+### <a name="targets-in-multiple-description-blocks"></a><a name="targets-in-multiple-description-blocks"></a>Objetivos en varios bloques de descripción
 
-Para actualizar un destino en más de un bloque de Descripción mediante comandos diferentes, especifique dos dos puntos consecutivos (::) entre destinos y dependientes.
+Para actualizar un destino en más de un bloque de descripción mediante comandos diferentes, especifique dos dos puntos consecutivos (::) entre objetivos y dependientes.
 
 ```makefile
 target.lib :: one.asm two.asm three.asm
@@ -117,9 +117,9 @@ target.lib :: four.c five.c
     lib target four.obj five.obj
 ```
 
-### <a name="dependency-side-effects"></a>Efectos secundarios de dependencia
+### <a name="dependency-side-effects"></a><a name="dependency-side-effects"></a>Efectos secundarios de la dependencia
 
-Puede especificar un destino con dos puntos (:) en dos líneas de dependencia en ubicaciones diferentes. Si los comandos aparecen después de solo una de las líneas, NMAKE interpreta las dependencias como si fueran adyacentes o combinadas. No invoca una regla de inferencia para la dependencia que no tiene comandos. En su lugar, NMAKE supone que las dependencias pertenecen a un bloque de Descripción y ejecuta los comandos especificados con la otra dependencia. Tenga en cuenta este conjunto de reglas:
+Puede especificar un destino con dos puntos (:) en dos líneas de dependencia en diferentes ubicaciones. Si los comandos aparecen después de solo una de las líneas, NMAKE interpreta las dependencias como si las líneas fueran adyacentes o combinadas. No invoca una regla de inferencia para la dependencia que no tiene comandos. En su lugar, NMAKE asume que las dependencias pertenecen a un bloque de descripción y ejecuta los comandos especificados con la otra dependencia. Considere este conjunto de reglas:
 
 ```makefile
 bounce.exe : jump.obj
@@ -135,7 +135,7 @@ bounce.exe : jump.obj up.obj
    echo Building bounce.exe...
 ```
 
-Este efecto no se produce si se usa un signo de dos puntos (`::`). Por ejemplo, este conjunto de reglas:
+Este efecto no se produce si`::`se utiliza un doble signo ( ). Por ejemplo, este conjunto de reglas:
 
 ```makefile
 bounce.exe :: jump.obj
@@ -154,15 +154,15 @@ bounce.exe : up.obj
 # invokes an inference rule
 ```
 
-### <a name="pseudotargets"></a>Pseudodestinos
+### <a name="pseudotargets"></a><a name="pseudotargets"></a>Pseudotargets
 
-Un *pseudodestino* es una etiqueta utilizada en lugar de un nombre de archivo en una línea de dependencia. Se interpreta como un archivo que no existe y, por tanto, no está actualizado. NMAKE supone que la marca de tiempo de un pseudodestino es la misma que la más reciente de todos sus elementos dependientes. Si no tiene dependientes, se supone la hora actual. Si se usa un pseudodestino como destino, siempre se ejecutan sus comandos. Un pseudodestino utilizado como dependiente también debe aparecer como un destino en otra dependencia. Sin embargo, esa dependencia no necesita tener un bloque de comandos.
+Un *pseudodestino* es una etiqueta utilizada en lugar de un nombre de archivo en una línea de dependencia. Se interpreta como un archivo que no existe, y también está desactualizado. NMAKE asume que la marca de tiempo de un pseudodestino es la misma que la más reciente de todos sus dependientes. Si no tiene dependientes, se asume la hora actual. Si se utiliza un pseudodestino como destino, sus comandos siempre se ejecutan. Un pseudodestino utilizado como dependiente también debe aparecer como destino en otra dependencia. Sin embargo, esa dependencia no necesita tener un bloque de comandos.
 
-Los nombres de pseudodestino siguen las reglas de sintaxis de nombre de archivo para los destinos. Sin embargo, si el nombre no tiene una extensión, puede superar el límite de 8 caracteres para los nombres de archivo y puede tener una longitud de hasta 256 caracteres.
+Los nombres de pseudodestino siguen las reglas de sintaxis de nombre de archivo para los destinos. Sin embargo, si el nombre no tiene una extensión, puede superar el límite de 8 caracteres para los nombres de archivo y puede tener hasta 256 caracteres.
 
-Pseudodestinos son útiles cuando se desea que NMAKE compile más de un destino automáticamente. NMAKE solo compila los destinos especificados en la línea de comandos. O bien, si no se especifica ningún destino de línea de comandos, solo se genera el primer destino en la primera dependencia del archivo make. Puede indicar a NMAKE que cree varios destinos sin enumerarlos individualmente en la línea de comandos. Escriba un bloque de descripción con una dependencia que contenga un pseudodestino y enumere los destinos que desea compilar como dependientes. Después, coloque primero este bloque de descripción en el archivo make o especifique el pseudodestino en la línea de comandos de NMAKE.
+Los pseudodestinos son útiles cuando se desea que NMAKE cree más de un destino automáticamente. NMAKE solo genera los destinos especificados en la línea de comandos. O bien, si no se especifica ningún destino de línea de comandos, solo compila el primer destino de la primera dependencia del archivo make. Puede indicar a NMAKE que cree varios destinos sin enumerarlos individualmente en la línea de comandos. Escriba un bloque de descripción con una dependencia que contenga un pseudodestino y enumere los destinos que desea crear como sus dependientes. A continuación, coloque este bloque de descripción primero en el archivo make o especifique el pseudodestino en la línea de comandos NMAKE.
 
-En este ejemplo, la actualización es un pseudodestino.
+En este ejemplo, UPDATE es un pseudodestino.
 
 ```makefile
 UPDATE : *.*
@@ -171,7 +171,7 @@ UPDATE : *.*
 
 Cuando se evalúa UPDATE, NMAKE copia todos los archivos del directorio actual en la unidad y el directorio especificados.
 
-En el siguiente archivo make, el pseudodestino `all` compila `project1.exe` y `project2.exe` si `all` o no se especifica ningún destino en la línea de comandos. El pseudodestino `setenv` cambia la variable de entorno LIB antes de que se actualicen los archivos de `.exe`:
+En el siguiente archivo makefile, el `all` pseudodestino se compila y `project1.exe` `project2.exe` si se especifica uno `all` o ningún destino en la línea de comandos. El pseudodestino `setenv` cambia la variable `.exe` de entorno LIB antes de que se actualicen los archivos:
 
 ```makefile
 all : setenv project1.exe project2.exe
@@ -186,23 +186,23 @@ setenv :
     set LIB=\project\lib
 ```
 
-## <a name="dependents"></a>Dependientes
+## <a name="dependents"></a><a name="dependents"></a>Dependientes
 
-En una línea de dependencia, especifique cero o más dependientes después del signo de dos puntos (`:`) o dos puntos dobles (`::`), con cualquier nombre de archivo o [pseudodestino](pseudotargets.md)válidos. Separe varios dependientes mediante el uso de uno o varios espacios o tabulaciones. Los elementos dependientes no distinguen mayúsculas de minúsculas. Se permiten rutas de acceso con nombres de archivo.
+En una línea de dependencia, especifique cero`:`o más dependientes después de los dos puntos ( ) o dos puntos (`::`), utilizando cualquier nombre de archivo válido o [pseudodestino](pseudotargets.md). Separe varios dependientes mediante uno o varios espacios o pestañas. Los dependientes no distinguen mayúsculas de minúsculas. Las rutas de acceso se permiten con nombres de archivo.
 
-### <a name="inferred-dependents"></a>Dependientes inferidos
+### <a name="inferred-dependents"></a><a name="inferred-dependents"></a>Dependientes inferidos
 
-Junto con los dependientes que se enumeran explícitamente en la línea de dependencia, NMAKE puede suponer un *dependiente deducido*. Un dependiente deducido se deriva de una regla de inferencia y se evalúa antes que los dependientes explícitos. Cuando un dependiente deducido no está actualizado en comparación con su destino, NMAKE invoca el bloque de comandos para la dependencia. Si un dependiente deducido no existe o no está actualizado respecto a sus propios dependientes, NMAKE actualiza primero el dependiente deducido. Para obtener más información sobre los dependientes inferidos, vea [reglas de inferencia](inference-rules.md).
+Junto con los dependientes que enumera explícitamente en la línea de dependencia, NMAKE puede asumir un *dependiente deducido.* Un dependiente deducido se deriva de una regla de inferencia y se evalúa antes que los dependientes explícitos. Cuando un dependiente deducido está desactualizado en comparación con su destino, NMAKE invoca el bloque de comandos para la dependencia. Si un dependiente inferido no existe o está desactualizado en comparación con sus propios dependientes, NMAKE primero actualiza el dependiente inferido. Para obtener más información acerca de los dependientes inferidos, consulte Reglas de [inferencia](inference-rules.md).
 
-### <a name="search-paths-for-dependents"></a>Rutas de acceso de búsqueda para dependientes
+### <a name="search-paths-for-dependents"></a><a name="search-paths-for-dependents"></a>Buscar rutas de búsqueda de dependientes
 
-Puede especificar una ruta de acceso de búsqueda opcional para cada dependiente. Esta es la sintaxis para especificar un conjunto de directorios para buscar:
+Puede especificar una ruta de búsqueda opcional para cada dependiente. Esta es la sintaxis para especificar un conjunto de directorios para buscar:
 
-> **{** _directorio_\[ **;** _directorio_...] **}** _dependiente_
+> **•**_directorio_\[**;** _directorio_...] **•**_dependiente_
 
-Incluya los nombres de directorio entre llaves (`{ }`). Separe varios directorios con un punto y coma (`;`). No se permiten espacios ni pestañas. NMAKE busca primero el dependiente en el directorio actual y, a continuación, en la lista de directorios en el orden especificado. Puede usar una macro para especificar parte o la totalidad de una ruta de acceso de búsqueda. Solo el dependiente especificado usa esta ruta de acceso de búsqueda.
+Incluya los nombres de`{ }`directorio entre llaves ( ). Separe varios directorios con`;`un punto y coma ( ). No se permiten espacios ni pestañas. NMAKE busca el dependiente primero en el directorio actual y, a continuación, en la lista de directorios en el orden especificado. Puede utilizar una macro para especificar parte o la totalidad de una ruta de búsqueda. Solo el dependiente especificado utiliza esta ruta de búsqueda.
 
-#### <a name="directory-search-path-example"></a>Ejemplo de ruta de búsqueda de directorio
+#### <a name="directory-search-path-example"></a>Ejemplo de ruta de búsqueda de directorios
 
 Esta línea de dependencia muestra cómo crear una especificación de directorio para una búsqueda:
 
@@ -210,7 +210,7 @@ Esta línea de dependencia muestra cómo crear una especificación de directorio
 reverse.exe : {\src\omega;e:\repo\backwards}retro.obj
 ```
 
-El `reverse.exe` de destino tiene un `retro.obj`dependiente. La lista entre llaves especifica dos directorios. NMAKE busca primero `retro.obj` en el directorio actual. Si no existe, NMAKE busca en el directorio de `\src\omega` y, a continuación, en el directorio de `e:\repo\backwards`.
+El `reverse.exe` destino tiene `retro.obj`uno dependiente, . La lista cerrada de llaves especifica dos directorios. NMAKE busca `retro.obj` primero en el directorio actual. Si no está allí, NMAKE `\src\omega` busca en `e:\repo\backwards` el directorio y, a continuación, en el directorio.
 
 ## <a name="see-also"></a>Consulte también
 

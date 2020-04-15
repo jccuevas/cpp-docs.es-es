@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: d993a349d38342bda30a83dfdbe25577953799b3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 43f914a52666788fc0bf394d9d14830b28f5adc7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497534"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321039"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Clase CComCachedTearOffObject
 
-Esta clase implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para una interfaz de recorte.
+Esta clase implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para una interfaz de desmontaje.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,41 +39,41 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parámetros
 
-*contained*<br/>
-La clase de recorte, derivada de `CComTearOffObjectBase` y las interfaces que desea que admita el objeto de recorte.
+*Contenido*<br/>
+Su clase de desmontaje, derivada de `CComTearOffObjectBase` y las interfaces que desea que su objeto de desmontaje para admitir.
 
 ## <a name="members"></a>Miembros
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|El constructor.|
-|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|Destructor.|
+|[CcomCachedTearOffObject::ccomCachedTearOffObject](#ccomcachedtearoffobject)|El constructor.|
+|[CComCachedTearOffObject::-CcomCachedTearOffObject](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CComCachedTearOffObject::AddRef](#addref)|Incrementa el recuento de referencias de `CComCachedTearOffObject` un objeto.|
-|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Llama al `m_contained::FinalConstruct` método de la clase de recorte.|
-|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Llama al `m_contained::FinalRelease` método de la clase de recorte.|
-|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Devuelve un puntero al `IUnknown` `CComCachedTearOffObject` del objeto o a la interfaz solicitada en la clase de recorte (la clase `contained`).|
-|[CComCachedTearOffObject::Release](#release)|Disminuye el recuento de referencias para `CComCachedTearOffObject` un objeto y lo destruye si el recuento de referencias es 0.|
+|[CComCachedTearOffObject::AddRef](#addref)|Incrementa el recuento `CComCachedTearOffObject` de referencias de un objeto.|
+|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Llama `m_contained::FinalConstruct` al método (método de la clase tear-off").|
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Llama `m_contained::FinalRelease` al método (método de la clase tear-off").|
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Devuelve un puntero `IUnknown` al `CComCachedTearOffObject` objeto o a la interfaz solicitada en `contained`la clase de desmontaje (la clase ).|
+|[CComCachedTearOffObject::Release](#release)|Disminuye el recuento de referencias `CComCachedTearOffObject` de un objeto y lo destruye si el recuento de referencias es 0.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|NOMBRE|DESCRIPCIÓN|
+|Nombre|Descripción|
 |----------|-----------------|
-|[CComCachedTearOffObject::m_contained](#m_contained)|Objeto derivado de la clase Tear (la clase `contained`). `CComContainedObject`|
+|[CcomCachedTearOffObject::m_contained](#m_contained)|Objeto `CComContainedObject` derivado de la clase tear-off `contained`(la clase ).|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-`CComCachedTearOffObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para una interfaz de recorte. Esta clase difiere `CComTearOffObject` de en que `CComCachedTearOffObject` tiene su propio `IUnknown`, independiente de la del objeto del `IUnknown` propietario (el propietario es el objeto para el que se crea el recorte). `CComCachedTearOffObject`mantiene su propio recuento de referencias `IUnknown` en su y se elimina una vez que su recuento de referencias es cero. Sin embargo, si realiza una consulta para cualquiera de las interfaces interrumpidas, se incrementará el recuento de `IUnknown` referencias del objeto del propietario.
+`CComCachedTearOffObject`implementa [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) para una interfaz de desmontaje. Esta clase difiere `CComTearOffObject` de `CComCachedTearOffObject` que `IUnknown`tiene su propio , `IUnknown` independiente del objeto propietario (el propietario es el objeto para el que se crea el desmontaje). `CComCachedTearOffObject`mantiene su propio recuento `IUnknown` de referencias en su y se elimina a sí mismo una vez que su recuento de referencias es cero. Sin embargo, si consulta cualquiera de sus interfaces de desmontaje, se incrementará el recuento de referencias de los objetos propietarios. `IUnknown`
 
-Si ya `CComCachedTearOffObject` se ha creado una instancia del objeto que implementa el recorte y la interfaz de recorte se consulta de nuevo, se `CComCachedTearOffObject` reutiliza el mismo objeto. En cambio, si `CComTearOffObject` se consulta de nuevo una interfaz de recorte implementada por mediante el objeto propietario, se creará una instancia de otra. `CComTearOffObject`
+Si `CComCachedTearOffObject` el objeto que implementa el desmontaje ya se ha creado una `CComCachedTearOffObject` instancia y se vuelve a consultar la interfaz de desmontaje, se reutiliza el mismo objeto. En cambio, si se vuelve a `CComTearOffObject` consultar una interfaz de desmontaje implementada por a a a través del objeto propietario, se creará una instancia de otra. `CComTearOffObject`
 
-La clase propietaria debe implementar `FinalRelease` y llamar `Release` a en `CComCachedTearOffObject`la memoria `IUnknown` caché para, lo que disminuirá su recuento de referencias. Esto hará `CComCachedTearOffObject` `FinalRelease` que se llame a y se elimine el recorte.
+La clase de `FinalRelease` propietario `Release` debe `IUnknown` implementar `CComCachedTearOffObject`y llamar a la caché para el , lo que disminuirá su recuento de referencias. Esto hará `CComCachedTearOffObject`que `FinalRelease` se llame y elimine el desmontaje.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -87,11 +87,11 @@ La clase propietaria debe implementar `FinalRelease` y llamar `Release` a en `CC
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlcom. h
+**Encabezado:** atlcom.h
 
-##  <a name="addref"></a>  CComCachedTearOffObject::AddRef
+## <a name="ccomcachedtearoffobjectaddref"></a><a name="addref"></a>CComCachedTearOffObject::AddRef
 
-Incrementa el recuento de referencias del `CComCachedTearOffObject` objeto en 1.
+Incrementa el recuento `CComCachedTearOffObject` de referencias del objeto en 1.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,9 +99,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un valor que puede ser útil para los diagnósticos y las pruebas.
+Un valor que puede ser útil para diagnósticos y pruebas.
 
-##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="ccomcachedtearoffobject"></a>CcomCachedTearOffObject::ccomCachedTearOffObject
 
 El constructor.
 
@@ -111,14 +111,14 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*pv*<br/>
-de Puntero a la `IUnknown` `CComCachedTearOffObject`de.
+*Pv*<br/>
+[en] Puntero a `IUnknown` la `CComCachedTearOffObject`de la .
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Inicializa el `CComContainedObject` miembro, [m_contained](#m_contained).
 
-##  <a name="dtor"></a>  CComCachedTearOffObject::~CComCachedTearOffObject
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="dtor"></a>CComCachedTearOffObject::-CcomCachedTearOffObject
 
 Destructor.
 
@@ -126,13 +126,13 @@ Destructor.
 ~CComCachedTearOffObject();
 ```
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
 Libera todos los recursos asignados y llama a [FinalRelease](#finalrelease).
 
-##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct
+## <a name="ccomcachedtearoffobjectfinalconstruct"></a><a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct
 
-Llamadas `m_contained::FinalConstruct` a Create `m_contained`, el `CComContainedObject` objeto>que`contained`se usa para tener acceso a la interfaz implementada por la clase Tear. < 
+`m_contained::FinalConstruct` Llamadas `m_contained`para `CComContainedObject` <  `contained` crear , el objeto> utilizado para tener acceso a la interfaz implementada por la clase de desmontaje.
 
 ```
 HRESULT FinalConstruct();
@@ -140,19 +140,19 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor HRESULT estándar.
+Un valor HRESULT estándar.
 
-##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease
+## <a name="ccomcachedtearoffobjectfinalrelease"></a><a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease
 
-Llamadas `m_contained::FinalRelease` a Free `m_contained`, el `CComContainedObject` < objeto >. `contained`
+`m_contained::FinalRelease` Llamadas `m_contained`a `CComContainedObject` <  `contained` free , el objeto>.
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained
+## <a name="ccomcachedtearoffobjectm_contained"></a><a name="m_contained"></a>CcomCachedTearOffObject::m_contained
 
-Objeto [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) derivado de la clase Tear.
+Un [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objeto derivado de la clase de desmontaje.
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -160,14 +160,14 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parámetros
 
-*contained*<br/>
-de La clase de recorte, derivada de `CComTearOffObjectBase` y las interfaces que desea que admita el objeto de recorte.
+*Contenido*<br/>
+[en] Su clase de desmontaje, derivada de `CComTearOffObjectBase` y las interfaces que desea que su objeto de desmontaje para admitir.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Los métodos `m_contained` heredados se usan para tener acceso a la interfaz de recorte en la clase de recorte a través de los objetos, `FinalConstruct`y `QueryInterface` `FinalRelease`del objeto recortado en caché.
+Los `m_contained` métodos heredados se utilizan para tener acceso a la interfaz de desmontaje de la clase de desmontaje a través de los objetos de desmontaje almacenados en `QueryInterface`caché, `FinalConstruct`, y `FinalRelease`.
 
-##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface
+## <a name="ccomcachedtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface
 
 Recupera un puntero a la interfaz solicitada.
 
@@ -177,23 +177,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parámetros
 
-*iid*<br/>
-de GUID de la interfaz que se solicita.
+*Iid*<br/>
+[en] GUID de la interfaz que se solicita.
 
 *ppvObject*<br/>
-enuncia Puntero al puntero de interfaz identificado por *IID*, o null si no se encuentra la interfaz.
+[fuera] Un puntero al puntero de interfaz identificado por *iid*, o NULL si no se encuentra la interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Valor HRESULT estándar.
+Un valor HRESULT estándar.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Si la interfaz solicitada `IUnknown`es, devuelve un puntero `CComCachedTearOffObject`a su propio `IUnknown` e incrementa el recuento de referencias. De lo contrario, consulta la interfaz en la clase de recorte mediante el método [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) heredado de `CComObjectRootEx`.
+Si la interfaz solicitada es `IUnknown` `CComCachedTearOffObject`, devuelve `IUnknown` un puntero a 's own e incrementa el recuento de referencias. De lo contrario, consulta la interfaz de la clase de `CComObjectRootEx`desmontaje mediante el método [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) heredado de .
 
-##  <a name="release"></a>  CComCachedTearOffObject::Release
+## <a name="ccomcachedtearoffobjectrelease"></a><a name="release"></a>CComCachedTearOffObject::Release
 
-Disminuye el recuento de referencias en 1 y, si el recuento de referencias es 0, `CComCachedTearOffObject` elimina el objeto.
+Disminuye el recuento de referencias en 1 y, si el `CComCachedTearOffObject` recuento de referencias es 0, elimina el objeto.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,10 +201,10 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valor devuelto
 
-En las compilaciones que no son de depuración, siempre devuelve 0. En compilaciones de depuración, devuelve un valor que puede ser útil para diagnósticos o pruebas.
+En compilaciones que no son de depuración, siempre devuelve 0. En compilaciones de depuración, devuelve un valor que puede ser útil para diagnósticos o pruebas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[CComTearOffObject (clase)](../../atl/reference/ccomtearoffobject-class.md)<br/>
-[CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[Información general sobre clases](../../atl/atl-class-overview.md)
+[Clase CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[Clase CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[Información general de clases](../../atl/atl-class-overview.md)
