@@ -25,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360916"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
 Personaliza los formatos de salida que usan las funciones de E/S con formato.
 
 > [!IMPORTANT]
->  Esta función está obsoleta. A partir de Visual Studio 2015, no está disponible en CRT.
+> Esta función está obsoleta. A partir de Visual Studio 2015, no está disponible en CRT.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,14 +49,14 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>Parámetros
 
-*format*<br/>
+*Formato*<br/>
 [in] Un valor que representa el formato que se utilizará.
 
 ## <a name="return-value"></a>Valor devuelto
 
 El formato de salida anterior.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 `_set_output_format` se usa para configurar la salida de funciones de E/S con formato tales como [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). En la actualidad, la única convención de formato que esta función puede cambiar es el número de dígitos que se muestran en los exponentes de la salida de números de punto flotante.
 
@@ -70,7 +70,7 @@ Para habilitar los exponentes de dos dígitos, llame a esta función con el par�
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-Para obtener más información de compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md) en la Introducción.
+Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../c-runtime-library/compatibility.md) en la introducción.
 
 ## <a name="example"></a>Ejemplo
 
@@ -122,7 +122,7 @@ int main()
 1.211E-005  2.306E-112
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_get_output_format](../c-runtime-library/get-output-format.md)

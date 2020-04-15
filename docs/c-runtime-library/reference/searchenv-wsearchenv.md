@@ -1,9 +1,11 @@
 ---
 title: _searchenv, _wsearchenv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _searchenv
 - _wsearchenv
+- _o__searchenv
+- _o__wsearchenv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 22a8ca8fa7e56a84289d7e90ffb519073f006b5c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948769"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332393"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -80,32 +83,34 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*<br/>
+*Nombre*<br/>
 Nombre del archivo que se va a buscar.
 
-*varname*<br/>
+*Varname*<br/>
 Entorno en el que se va a buscar.
 
-*pathname*<br/>
+*Ruta*<br/>
 Búfer en el que se va a almacenar la ruta de acceso completa.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La rutina **_searchenv** busca el archivo de destino en el dominio especificado. La variable *varname* puede ser cualquier variable de entorno o definida por el usuario (por ejemplo, Path, **lib**o **include**) que especifique una lista de rutas de **acceso**de directorio. Dado que **_searchenv** distingue entre mayúsculas y minúsculas, *varname* debe coincidir con las mayúsculas y minúsculas de la variable de entorno.
+El **_searchenv** busca el archivo de destino en el dominio especificado. La variable *varname* puede ser cualquier entorno o variable definida por el usuario (por ejemplo, **PATH**, **LIB**o **INCLUDE)** que especifique una lista de rutas de directorio. Dado que **_searchenv** distingue mayúsculas de minúsculas, *varname* debe coincidir con el caso de la variable de entorno.
 
-En primer lugar, la rutina busca el archivo en el directorio de trabajo actual. Si no lo encuentra aquí, lo busca en los directorios que especifica la variable de entorno. Si el archivo de destino se encuentra en uno de esos directorios, la ruta de acceso recién creada se copia en el *directorio*. Si no se encuentra el archivo *filename* , *PathName* contiene una cadena terminada en NULL vacía.
+En primer lugar, la rutina busca el archivo en el directorio de trabajo actual. Si no lo encuentra aquí, lo busca en los directorios que especifica la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso recién creada se copia en *pathname*. Si no se encuentra el archivo de nombre de *archivo,* *pathname* contiene una cadena vacía terminada en null.
 
-El *búfer del nombre de ruta de* acceso debe tener al menos un carácter _ **MAX_PATH** para dar cabida a la longitud total del nombre de la ruta de acceso construida. De lo contrario, **_searchenv** podría saturar el búfer de *ruta de directorio* y producir un comportamiento inesperado.
+El búfer *pathname* debe tener al menos **_MAX_PATH** caracteres de longitud para dar cabida a la longitud completa del nombre de ruta de acceso construido. De lo contrario, **_searchenv** podría invadido el búfer *de nombre* de ruta de acceso y provocar un comportamiento inesperado.
 
-**_wsearchenv** es una versión con caracteres anchos de **_searchenv**y los argumentos para **_wsearchenv** son cadenas de caracteres anchos. **_wsearchenv** y **_searchenv** se comportan de manera idéntica.
+**_wsearchenv** es una versión de caracteres anchos de **_searchenv**y los argumentos de **_wsearchenv** son cadenas de caracteres anchos. **_wsearchenv** y **_searchenv** comportarse de forma idéntica de lo contrario.
 
 Si *filename* es una cadena vacía, estas funciones devuelven **ENOENT**.
 
-Si *filename* o *PathName* es un puntero **nulo** , se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven-1 y establecen **errno** en **EINVAL**.
+Si *filename* o *pathname* es un puntero **NULL,** se invoca el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y **establecen errno en** **EINVAL**.
 
-Para obtener más información sobre **errno** y códigos de error, vea [errno (constantes](../../c-runtime-library/errno-constants.md)).
+Para obtener más información acerca de **errno** y códigos de error, vea [errno Constants](../../c-runtime-library/errno-constants.md).
 
-En C++, estas funciones tienen sobrecargas de plantilla que invocan a los homólogos más recientes y seguros de dichas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, estas funciones tienen sobrecargas de plantilla que invocan a los homólogos más recientes y seguros de dichas funciones. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -120,7 +125,7 @@ En C++, estas funciones tienen sobrecargas de plantilla que invocan a los homól
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -154,7 +159,7 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>
 [getenv, _wgetenv](getenv-wgetenv.md)<br/>

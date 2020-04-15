@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948275"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332074"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -47,17 +49,19 @@ void setbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
-*buffer*<br/>
+*Búfer*<br/>
 Búfer asignado por el usuario.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **setbuf** controla el almacenamiento en búfer de la *secuencia*. El argumento de *secuencia* debe hacer referencia a un archivo abierto que no se ha leído o escrito. Si el argumento de *búfer* es **null**, el flujo no se almacena en búfer. De lo contrario, el búfer debe apuntar a una matriz de caracteres de longitud **BUFSIZ**, donde **BUFSIZ** es el tamaño del búfer tal y como se define en stdio. C. Para el almacenamiento en búfer de E/S se usa el búfer especificado por el usuario, y no el búfer predeterminado asignado por el sistema para la secuencia especificada. La secuencia **stderr** no se almacena en búfer de forma predeterminada, pero puede usar **setbuf** para asignar búferes a **stderr**.
+La función **setbuf** controla el almacenamiento en búfer para *la secuencia*. El argumento *stream* debe hacer referencia a un archivo abierto que no se ha leído ni escrito. Si el argumento *de búfer* es **NULL**, la secuencia no está almacenada en búfer. Si no es así, el búfer debe apuntar a una matriz de caracteres de longitud **BUFSIZ**, donde **BUFSIZ** es el tamaño del búfer tal como se define en STDIO. H. Para el almacenamiento en búfer de E/S se usa el búfer especificado por el usuario, y no el búfer predeterminado asignado por el sistema para la secuencia especificada. La secuencia **stderr** no está almacenada en búfer de forma predeterminada, pero puede utilizar **setbuf** para asignar búferes a **stderr**.
 
-**setbuf** se ha reemplazado por [setvbuf (](setvbuf.md), que es la rutina preferida para el nuevo código. A diferencia de **setvbuf (** , **setbuf** no tiene forma de generar informes de errores. **setvbuf (** también le permite controlar el modo de almacenamiento en búfer y el tamaño del búfer. **setbuf** existe por compatibilidad con el código existente.
+**setbuf** ha sido reemplazado por [setvbuf](setvbuf.md), que es la rutina preferida para el nuevo código. A diferencia de **setvbuf**, **setbuf** no tiene forma de notificar errores. **setvbuf** también le permite controlar tanto el modo de almacenamiento en búfer como el tamaño del búfer. **setbuf** existe para la compatibilidad con el código existente.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -106,7 +110,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

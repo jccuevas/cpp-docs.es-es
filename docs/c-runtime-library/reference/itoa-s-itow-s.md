@@ -1,6 +1,6 @@
 ---
-title: _itoa_s, _itow_s (funciones)
-ms.date: 03/21/2018
+title: _itoa_s, funciones _itow_s
+ms.date: 4/2/2020
 api_name:
 - _itoa_s
 - _ltoa_s
@@ -12,6 +12,16 @@ api_name:
 - _ultow_s
 - _i64tow_s
 - _ui64tow_s
+- _o__i64toa_s
+- _o__i64tow_s
+- _o__itoa_s
+- _o__itow_s
+- _o__ltoa_s
+- _o__ltow_s
+- _o__ui64toa_s
+- _o__ui64tow_s
+- _o__ultoa_s
+- _o__ultow_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,6 +35,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -79,16 +90,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f392bb1dbcafd1666d082163190c4e988c7f1ab1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625066"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342613"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s _ui64tow_s
 
-Convierte un entero en cadena. Estas son versiones de [_itoa, _itow funciones](itoa-itow.md) con mejoras de seguridad, como se describe en [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convierte un entero en cadena. Estas son versiones del [_itoa, _itow funciones](itoa-itow.md) con mejoras de seguridad como se describe en Características de seguridad [en el CRT.](../../c-runtime-library/security-features-in-the-crt.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -135,44 +146,46 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Número que se va a convertir.
 
-*buffer*<br/>
+*Búfer*<br/>
 Búfer de salida que contiene el resultado de la conversión.
 
-*size*<br/>
+*Tamaño*<br/>
 Tamaño del *búfer* en caracteres o caracteres anchos.
 
-*radix*<br/>
-Base o base numérica que se va a usar para convertir el *valor*, que debe estar en el intervalo 2-36.
+*Radix*<br/>
+El radio o base numérica que se va a utilizar para convertir el *valor,* que debe estar en el rango 2-36.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si se cumple alguna de las siguientes condiciones, la función invoca un controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
-### <a name="error-conditions"></a>Condiciones de error
+### <a name="error-conditions"></a>Condiciones del error
 
-|valor|buffer|size|radix|Volver|
+|value|buffer|tamaño|radix|Valor devuelto|
 |-----------|------------|----------------------|-----------|------------|
-|any|**NULL**|any|any|**EINVAL**|
-|any|any|<=0|any|**EINVAL**|
-|any|any|<= longitud de la cadena de resultados necesaria|any|**EINVAL**|
-|any|any|any|*base* < 2 o *base* > 36|**EINVAL**|
+|cualquiera|**Null**|cualquiera|cualquiera|**EINVAL**|
+|cualquiera|cualquiera|<=0|cualquiera|**EINVAL**|
+|cualquiera|cualquiera|<= longitud de la cadena de resultados necesaria|cualquiera|**EINVAL**|
+|cualquiera|cualquiera|cualquiera|*radix* < 2 o *radix* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemas de seguridad
 
-Estas funciones pueden generar una infracción de acceso si el *búfer* no apunta a una memoria válida y no es **null**, o si la longitud del búfer no es suficientemente larga para contener la cadena de resultado.
+Estas funciones pueden generar una infracción de acceso si *el búfer* no apunta a la memoria válida y no es **NULL,** o si la longitud del búfer no es lo suficientemente larga como para contener la cadena de resultado.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Excepto en el caso de los parámetros y el valor devuelto, las familias de funciones **_itoa_s** y **_itow_s** tienen el mismo comportamiento que las versiones de **_itow** y **_itoa** menos seguras correspondientes.
+A excepción de los parámetros y el valor devuelto, las familias de funciones **_itoa_s** y **_itow_s** tienen el mismo comportamiento que las versiones de **_itoa** y **_itow** menos seguras.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-CRT incluye macros prácticas para definir el tamaño del búfer necesario para convertir el valor más largo posible de cada tipo entero, incluidos el carácter de terminador nulo y el carácter de signo, para varias bases comunes. Para obtener más información, vea [macros de número máximo de conversiones](itoa-itow.md#maximum-conversion-count-macros).
+El CRT incluye macros convenientes para definir el tamaño del búfer necesario para convertir el valor más largo posible de cada tipo entero, incluido el terminador nulo y el carácter de signo, para varias bases comunes. Para obtener información, consulte Macros de recuento máximo de [conversiones](itoa-itow.md#maximum-conversion-count-macros).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -188,14 +201,14 @@ CRT incluye macros prácticas para definir el tamaño del búfer necesario para 
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
-|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> o \<wchar.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s** **,** **_i64toa_s**, _ui64toa_s|\<stdlib.h>|
+|**_itow_s**, **_ltow_s**, **_ultow_s** **_i64tow_s** **,** _ui64tow_s|\<stdlib.h> o \<wchar.h>|
 
 Estas funciones son específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra el uso de algunas de las funciones de conversión de enteros. Tenga en cuenta que la macro [_countof](countof-macro.md) solo funciona para determinar el tamaño del búfer cuando la declaración de la matriz es visible para el compilador y no para los parámetros que se han desechado a punteros.
+En este ejemplo se muestra el uso de algunas de las funciones de conversión de enteros. Tenga en cuenta que la [macro _countof](countof-macro.md) solo funciona para determinar el tamaño del búfer cuando la declaración de matriz es visible para el compilador y no para los parámetros que se han deteriorado a punteros.
 
 ```C
 // crt_itoa_s.c
@@ -263,7 +276,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa, _itow (funciones)](itoa-itow.md)<br/>
+[_itoa, _itow funciones](itoa-itow.md)<br/>

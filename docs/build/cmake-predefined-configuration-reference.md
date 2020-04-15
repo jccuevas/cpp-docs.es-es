@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169843"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323004"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configuraciones de compilación predefinidas de CMake
 
@@ -22,6 +22,7 @@ Los proyectos de CMake se admiten en Visual Studio 2017 y versiones posteriores.
 ::: moniker range=">=vs-2017"
 
 En un proyecto de CMake, las configuraciones de compilación se almacenan en un archivo CMakeSettings.json. Cuando se selecciona **Administrar configuraciones** en la lista desplegable de configuración de compilación en la barra de herramientas principal, aparece un cuadro de diálogo que muestra las configuraciones predeterminadas de CMake disponibles en Visual Studio:
+
 - Depuración x86
 - Versión x86
 - Depuración x64
@@ -33,7 +34,7 @@ En un proyecto de CMake, las configuraciones de compilación se almacenan en un 
 - Depuración MinGW
 - Versión MinGW
 
-Al elegir una configuración, se agrega al archivo *CMakeSettings. JSON* en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto. Para obtener información sobre las propiedades de configuración, consulte [referencia de CMakeSettings](cmakesettings-reference.md).
+Al elegir una configuración, se agrega al archivo *CMakeSettings.json* en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto. Para obtener información sobre las propiedades de configuración, vea [CMakeSettings reference](cmakesettings-reference.md).
 
 ## <a name="linux-predefined-build-configurations"></a>Configuraciones de compilación predefinidas de Linux
 
@@ -358,25 +359,25 @@ Estas opciones permiten ejecutar comandos en el sistema remoto antes y después 
 En un proyecto de CMake, las configuraciones de compilación se almacenan en un archivo CMakeSettings.json. Cuando se selecciona **Administrar configuraciones** en la lista desplegable de configuración de compilación en la barra de herramientas principal, aparece un cuadro de diálogo que muestra las configuraciones predeterminadas de CMake disponibles en Visual Studio:
 
 - Depuración x86
-- depuración de Clang x86
+- x86 Clang Debug
 - Versión x86
-- Versión Clang x86
+- x86 Clang Release
 - Depuración x64
-- depuración de Clang x64
+- x64 Clang Debug
 - Versión x64
-- Versión de Clang x64
+- x64 Clang Release
 - Depuración Linux
 - Versión Linux
 - Linux-Clang-Debug
-- Linux-Clang-versión
+- Linux-Clang-Release
 - Caché existente (remoto)
 - Caché existente
 - Depuración MinGW
 - Versión MinGW
-- Depuración de WSL
-- Versión de WSL
-- Depuración de WSL Clang
-- Versión de WSL Clang
+- WSL Debug
+- Versión WSL
+- WSL Clang Debug
+- WSL Clang Release
 - Clang
 
 Al elegir una configuración, se agrega al archivo CMakeSettings.json en la carpeta raíz del proyecto. Después, puede usarla para compilar el proyecto.
@@ -694,11 +695,12 @@ Al elegir una configuración, se agrega al archivo CMakeSettings.json en la carp
 ```
 
 ::: moniker-end
+
 ## <a name="see-also"></a>Consulte también
 
-[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/>
-[Conexión al equipo remoto de Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Conexión al equipo remoto Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Configuración de sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
 [Implementación, ejecución y depuración del proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referencia de configuración predefinida de CMake](cmake-predefined-configuration-reference.md)<br/>

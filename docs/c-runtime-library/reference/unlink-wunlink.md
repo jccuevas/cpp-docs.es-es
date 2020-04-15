@@ -1,9 +1,11 @@
 ---
 title: _unlink, _wunlink
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _unlink
 - _wunlink
+- _o__unlink
+- _o__wunlink
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ffc1a64c60d41246773d5e262523000355b0de3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361271"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
-Elimina un archivo.
+Elimine un archivo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -59,18 +62,20 @@ int _wunlink(
 
 ### <a name="parameters"></a>Parámetros
 
-*filename*<br/>
+*Nombre*<br/>
 Nombre del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se realiza correctamente. De lo contrario, la función devuelve-1 y establece **errno** en **EACCES**, lo que significa que la ruta de acceso especifica un archivo de solo lectura o un directorio, o **ENOENT**, lo que significa que no se encuentra el archivo o la ruta de acceso.
+Cada una de estas funciones devuelve 0 si se realiza correctamente. De lo contrario, la función devuelve -1 y establece **errno en** **EACCES**, lo que significa que la ruta de acceso especifica un archivo de solo lectura o un directorio, o en **ENOENT**, lo que significa que no se encuentra el archivo o la ruta de acceso.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_unlink** elimina el archivo especificado por *filename*. **_wunlink** es una versión con caracteres anchos de **_unlink**; el argumento *filename* para **_wunlink** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+La función **_unlink** elimina el archivo especificado por *filename*. **_wunlink** es una versión de caracteres anchos de **_unlink;** el argumento *filename* que **se va** a _wunlink es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -85,7 +90,7 @@ La función **_unlink** elimina el archivo especificado por *filename*. **_wunli
 |**_unlink**|\<io.h> y \<stdio.h>|
 |**_wunlink**|\<io.h> o \<wchar.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="code-example"></a>Ejemplo de código
 
@@ -111,13 +116,13 @@ int main( void )
 This file will be deleted.
 ```
 
-### <a name="sample-output"></a>Resultados del ejemplo
+### <a name="sample-output"></a>Salida de ejemplo
 
 ```Output
 Deleted 'CRT_UNLINK.TXT'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

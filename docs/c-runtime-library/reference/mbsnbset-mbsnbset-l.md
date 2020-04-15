@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset, _mbsnbset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset
 - _mbsnbset_l
+- _o__mbsnbset
+- _o__mbsnbset_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 57c6d1a81c9aac817b0028e8eccad38d03b0eef7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952167"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340544"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
@@ -67,10 +70,10 @@ unsigned char *_mbsnbset_l(
 
 ### <a name="parameters"></a>Parámetros
 
-*str*<br/>
+*Str*<br/>
 Cadena que se va a modificar.
 
-*c*<br/>
+*C*<br/>
 Valor del carácter de un solo byte o multibyte.
 
 *count*<br/>
@@ -81,19 +84,21 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_mbsnbset** devuelve un puntero a la cadena modificada.
+**_mbsnbset** devuelve un puntero a la cadena alterada.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las funciones **_mbsnbset** y **_mbsnbset_l** establecen, como máximo, el primer *número* de bytes de *Str* a *c*. Si el *recuento* es mayor que la longitud de *Str*, se usa la longitud de *Str* en lugar de *Count*. Si *c* es un carácter multibyte y no se puede establecer totalmente en el último byte especificado por *Count*, el último byte se rellena con un carácter en blanco. **_mbsnbset** y **_mbsnbset_l** no colocan un carácter nulo de terminación al final de *Str*.
+Las funciones **_mbsnbset** y **_mbsnbset_l** establecen, como máximo, los primeros bytes de *recuento* de *str* a *c*. Si *count* es mayor que la longitud de *str*, se utiliza la longitud de *str* en lugar de *count*. Si *c* es un carácter multibyte y no se puede establecer completamente en el último byte especificado por *count*, el último byte se rellena con un carácter en blanco. **_mbsnbset** y **_mbsnbset_l** no coloca un null de terminación al final de *str*.
 
-**_mbsnbset** y **_mbsnbset_l** son similares a **_mbsnset**, excepto en que se establecen los bytes de *recuento* en lugar de los caracteres de *recuento* de *c*.
+**_mbsnbset** y **_mbsnbset_l** es similar a **_mbsnset**, excepto que establece bytes de *recuento* en lugar de *caracteres* de recuento de *c*.
 
-Si *Str* es **null** o *Count* es cero, esta función genera una excepción de parámetro no válido, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve **null**. Además, si *c* no es un carácter multibyte válido, **errno** se establece en **EINVAL** y se usa un espacio en su lugar.
+Si *str* es **NULL** o *count* es cero, esta función genera una excepción de parámetro no válida como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece **en EINVAL** y la función devuelve **NULL**. Además, si *c* no es un carácter multibyte válido, **errno** se establece en **EINVAL** y se utiliza un espacio en su lugar.
 
-El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión **_mbsnbset** de esta función usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión de **_mbsnbset_l** es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La **versión _mbsnbset** de esta función utiliza la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión **_mbsnbset_l** es idéntica, excepto que utiliza el parámetro de configuración regional pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 **Nota de seguridad** Esta API crea la posible amenaza de un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -109,7 +114,7 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 |**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -130,16 +135,16 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Resultados
+### <a name="output"></a>Output
 
 ```Output
 Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

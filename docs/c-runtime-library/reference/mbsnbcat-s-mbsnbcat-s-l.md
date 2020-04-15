@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcat_s, _mbsnbcat_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
+- _o__mbsnbcat_s
+- _o__mbsnbcat_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: a148f4be503ee793e4e36855233edfc8fa8f165a
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b4a9540025ad039458203eec1cc950187b6316a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624335"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340783"
 ---
 # <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
@@ -86,13 +89,13 @@ errno_t _mbsnbcat_s_l(
 Cadena de destino de caracteres multibyte terminada en NULL.
 
 *sizeInBytes*<br/>
-Tamaño del búfer de *destino* en bytes.
+Tamaño del búfer *dest* en bytes.
 
 *src*<br/>
 Cadena de origen de caracteres multibyte terminada en NULL.
 
 *count*<br/>
-Número de bytes de *src* que se van a anexar al *destino*.
+Número de bytes de *src* a anexar a *dest*.
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -105,21 +108,23 @@ Cero si es correcto; en caso contrario, código de error.
 
 |**Dest**|*sizeInBytes*|*src*|Valor devuelto|
 |------------|-------------------|-----------|------------------|
-|**NULL**|any|any|**EINVAL**|
-|Cualquiera|<= 0|any|**EINVAL**|
-|Cualquiera|any|**NULL**|**EINVAL**|
+|**Null**|cualquiera|cualquiera|**EINVAL**|
+|Any|<= 0|cualquiera|**EINVAL**|
+|Any|cualquiera|**Null**|**EINVAL**|
 
 Si se produce alguna de las condiciones de error, la función genera un error de parámetro no válido, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función devuelve **EINVAL** y establece **errno** en **EINVAL**.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_mbsnbcat_s** anexa a *dest*, como máximo, el primer *número* de bytes de *src*. Si el byte que precede inmediatamente al carácter nulo de *dest* es un byte inicial, lo sobrescribe el byte inicial de *src*. De lo contrario, el byte inicial de *src* sobrescribe el carácter nulo de finalización de *dest*. Si aparece un byte nulo en *src* antes de que se anexen bytes de *recuento* , **_mbsnbcat_s** anexa todos los bytes de *src*, hasta el carácter nulo. Si el *recuento* es mayor que la longitud de *src*, se usa la longitud de *src* en lugar de *Count*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+La función **_mbsnbcat_s** se anexa a *dest*, como máximo, los primeros bytes de *recuento* de *src*. Si el byte que precede inmediatamente al carácter nulo en *dest* es un byte inicial, se sobrescribe con el byte inicial de *src*. De lo contrario, el byte inicial de *src* sobrescribe el carácter nulo de terminación de *dest*. Si aparece un byte nulo en *src* antes de *anexar* bytes de recuento, **_mbsnbcat_s** anexa todos los bytes de *src*, hasta el carácter nulo. Si *count* es mayor que la longitud de *src*, la longitud de *src* se utiliza en lugar de *count*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen el sufijo **_L** usan la configuración regional actual y las que tienen el sufijo **_L** usan en su lugar el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la configuración de la **LC_CTYPE** configuración de categoría de la configuración regional; ver [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, excepto que las que no tienen el **sufijo _l** utilizan la configuración regional actual y las que tienen el **_l** sufijo en su lugar utilizan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden inferir automáticamente la longitud de búfer, lo que elimina la necesidad de especificar un argumento de tamaño, y pueden usar automáticamente funciones más recientes y seguras para reemplazar las funciones anteriores no seguras. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -137,9 +142,9 @@ Las versiones de la biblioteca de depuración de estas funciones rellenan primer
 
 Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>

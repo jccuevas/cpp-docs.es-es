@@ -1,10 +1,13 @@
 ---
 title: remainder, remainderf, remainderl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remainderl
 - remainder
 - remainderf
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949424"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332867"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -56,29 +60,31 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Numerador.
 
-*y*<br/>
+*y y*<br/>
 Denominador.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **resto** devuelve un Nan silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf** , vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+El resto de punto flotante de *x* / *y*. Si el valor de *y* es 0.0, **el resto** devuelve un NaN silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf,** véase [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las funciones de **resto** calculan el resto de punto *flotante de* *x* / *y* como *x* = *n* \* *y* + *r*, donde *n* es el entero más cercano de valor a *x* / *y* y *n*es incluso cuando &#124; *n* - *x* / *y* &#124; = 1/2. Cuando *r* = 0, *r* tiene el mismo signo que *x*.
+Las funciones **de resto** calculan el resto de punto flotante *r* de *x* / *y* de modo que *x* = *n* \* *y* + *r*, donde *n*es el entero más cercano en valor a *x* / *y* y *n*es incluso siempre que &#124; *n* - *x* / *y* &#124; a 1/2. Cuando *r* es 0, *r* tiene el mismo signo que *x*.
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **resto** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **resto** siempre toma dos argumentos **dobles** y devuelve un **valor Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **resto** que toman y devuelven **valores float** o **long** **double.** En un programa C, **el resto** siempre toma dos argumentos **dobles** y devuelve un **valor doble**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado necesario (C)|Encabezado necesario (C++)|
 |--------------|---------------------|-|
-|**remainder**, **remainderf**, **remainderl**|\<math.h>|\<cmath> o \<math.h>|
+|**resto,** **resto,** **resto**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -102,7 +108,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>

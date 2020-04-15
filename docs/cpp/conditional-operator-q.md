@@ -1,5 +1,5 @@
 ---
-title: 'Operador condicional: &quest;:'
+title: 'Operador condicional: &quest; :'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8c00db06ed5c0347cb9c720e35bd3e517df2a13c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4ba4c80d40450fd5975b047a1a4fca63146c5773
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189590"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337262"
 ---
-# <a name="conditional-operator-quest-"></a>Operador condicional: &quest;:
+# <a name="conditional-operator-quest-"></a>Operador condicional: &quest; :
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,7 +25,7 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>Observaciones
 
-El operador condicional ( **?:** ) es un operador ternario (toma tres operandos). El operador condicional funciona del modo siguiente:
+El operador condicional (**? :**) es un operador ternario (se necesitan tres operandos). El operador condicional funciona del modo siguiente:
 
 - El primer operando se convierte implícitamente en **bool**. Se evalúa y todos los efectos secundarios se completan antes de continuar.
 
@@ -39,7 +39,7 @@ Las expresiones condicionales tienen asociatividad de derecha a izquierda. El pr
 
 - Si ambos operandos son del mismo tipo, el resultado es de ese tipo.
 
-- Si ambos operandos son de tipos aritméticos o de enumeración, se realizan las conversiones aritméticas habituales (que se describen en [conversiones estándar](standard-conversions.md)) para convertirlos a un tipo común.
+- Si ambos operandos son de tipos aritméticos o de enumeración, se realizan las conversiones aritméticas habituales (cubiertas en [Conversiones estándar)](standard-conversions.md)para convertirlos a un tipo común.
 
 - Si ambos operandos son de tipos de puntero o si uno es de un tipo de puntero y el otro es una expresión de constante que se evalúa como 0, las conversiones de puntero se realizan para convertirlos a un tipo común.
 
@@ -54,7 +54,7 @@ Las expresiones condicionales tienen asociatividad de derecha a izquierda. El pr
 Las combinaciones de los operandos segundo y tercero no incluidos en la lista anterior no son válidas. El tipo del resultado es el tipo común, y es un valor L si tanto el segundo como el tercer operando son del mismo tipo y ambos son valores l.
 
 > [!WARNING]
->  Si los tipos de los operandos segundo y tercero no son idénticos, se invocan reglas de conversión de tipo complejo, como se especifica en el estándar de C++. Estas conversiones pueden provocar un comportamiento inesperado, incluida la creación y destrucción de objetos temporales. Por esta razón, recomendamos encarecidamente (1) evitar el uso de tipos definidos por el usuario como operandos con el operador condicional, o (2) si utiliza tipos definidos por el usuario, convertir explícitamente cada operando a un tipo común.
+> Si los tipos de los operandos segundo y tercero no son idénticos, se invocan reglas de conversión de tipo complejo, como se especifica en el estándar de C++. Estas conversiones pueden provocar un comportamiento inesperado, incluida la creación y destrucción de objetos temporales. Por esta razón, recomendamos encarecidamente (1) evitar el uso de tipos definidos por el usuario como operandos con el operador condicional, o (2) si utiliza tipos definidos por el usuario, convertir explícitamente cada operando a un tipo común.
 
 ## <a name="example"></a>Ejemplo
 

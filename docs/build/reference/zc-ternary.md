@@ -7,32 +7,32 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 5c38a09b92b4173ca962412a413abc283db590ff
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 7c95f061e195ccf7fef8a6a21d193b257baa5f39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335678"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (Exigir reglas de operador condicionales)
 
-Habilitar la aplicación C++ de reglas estándar para los tipos y la calificación const o volatile (CV) de los operandos segundo y tercero en una expresión de operador condicional.
+Habilite la aplicación de las reglas estándar de C++ para los tipos y la calificación const o volatile (cv) del segundo y tercer operando en una expresión de operador condicional.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/Zc: ternario** [ **-** ]
+> **/Zc:ternario****-**[ ]
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-A partir de Visual Studio 2017, el compilador admite C++ el comportamiento de *operador condicional* estándar ( **?:** ). También se conoce como el *operador ternario*. El C++ estándar requiere operandos ternarios que cumplan una de estas tres condiciones: Los operandos deben ser del mismo tipo y de una calificación **const** o **volatile** (la calificación CV), o solo un operando debe ser convertible de forma no ambigua al mismo tipo y a la clasificación CV que el otro. O bien, uno o ambos operandos deben ser una expresión Throw. En las versiones anteriores a Visual Studio 2017 versión 15,5, el compilador permitía conversiones que el estándar considera ambiguas.
+A partir de Visual Studio 2017, el compilador admite el comportamiento del *operador condicional* estándar C++ (**?:**). También se conoce como el *operador ternario.* El estándar C++ requiere que los operandos ternarios cumplan una de tres condiciones: los operandos deben ser del mismo tipo y **const** o **calificación volátil** (calificación cv), o sólo un operando debe ser inequívocamente convertible al mismo tipo y cv-calificación que el otro. O bien, uno o ambos operandos deben ser una expresión throw. En versiones anteriores a Visual Studio 2017 versión 15.5, el compilador permitía conversiones que el estándar considera ambiguas.
 
-Cuando se especifica la opción **/Zc: ternario** , el compilador se ajusta al estándar. Rechaza el código que no cumple las reglas de los tipos coincidentes y la calificación CV de los operandos segundo y tercero.
+Cuando se especifica la opción **/Zc:ternary,** el compilador se ajusta al estándar. Rechaza el código que no cumple las reglas para los tipos coincidentes y la calificación cv del segundo y tercer operando.
 
-La opción **/Zc: ternaria** está desactivada de forma predeterminada en Visual Studio 2017. Use **/Zc: ternario** para habilitar el comportamiento de ajuste, o **/Zc: ternario** para especificar explícitamente el comportamiento anterior del compilador no compatible. La opción [/permissive-](permissive-standards-conformance.md) habilita implícitamente esta opción, pero se puede invalidar mediante **/Zc: ternaria-** .
+La opción **/Zc:ternary** está desactivada de forma predeterminada en Visual Studio 2017. Use **/Zc:ternary** para habilitar el comportamiento conforme o **/Zc:ternary-** para especificar explícitamente el comportamiento del compilador no conforme anterior. La opción [/permissive-](permissive-standards-conformance.md) habilita implícitamente esta opción, pero se puede invalidar mediante **/Zc:ternary-**.
 
 ### <a name="examples"></a>Ejemplos
 
-Este ejemplo muestra cómo una clase que proporciona la inicialización no explícita desde un tipo y la conversión a un tipo, puede conducir a conversiones ambiguas. El compilador acepta este código de forma predeterminada, pero se rechaza cuando se especifica **/Zc: ternario** o **/permissive-** .
+En este ejemplo se muestra cómo una clase que proporciona la inicialización no explícita de un tipo y la conversión a un tipo puede dar lugar a conversiones ambiguas. Este código es aceptado por el compilador de forma predeterminada, pero rechazado cuando se especifica **/Zc:ternary** o **/permissive-.**
 
 ```cpp
 // zcternary1.cpp
@@ -56,9 +56,9 @@ int main()
 }
 ```
 
-Para corregir este código, realice una conversión explícita al tipo común preferido o Evite una dirección de conversión de tipos. Puede evitar que el compilador coincida con una conversión de tipos haciendo que la conversión sea explícita.
+Para corregir este código, realice una conversión explícita al tipo común preferido o impida una dirección de conversión de tipos. Puede evitar que el compilador coincida con una conversión de tipos haciendo que la conversión sea explícita.
 
-Una excepción importante a este patrón común es cuando el tipo de los operandos es uno de los tipos de cadena terminada en null, como `const char*`, `const char16_t*`, etc. También puede reproducir el efecto con tipos de matriz y los tipos de puntero en los que se decaigan. El comportamiento cuando el segundo o el tercer operando `?:` real es un literal de cadena del tipo correspondiente depende del estándar del lenguaje utilizado. En este caso, c++ 17 ha cambiado la semántica de C++ 14. Como resultado, el compilador acepta el código del ejemplo siguiente en el **/STD predeterminado: c++ 14**, pero lo rechaza cuando se especifica **/STD: c++ 17**.
+Una excepción importante a este patrón común es cuando el tipo de los `const char*`operandos es uno de los tipos de cadena terminadas en null, como , `const char16_t*`, etc. También puede reproducir el efecto con tipos de matriz y los tipos de puntero a los que se descomponen. El comportamiento cuando el segundo `?:` o tercer operando real es un literal de cadena de tipo correspondiente depende del estándar de lenguaje utilizado. C++17 ha cambiado la semántica para este caso de C++14. Como resultado, el compilador acepta el código del ejemplo siguiente en el valor predeterminado **/std:c++14**, pero lo rechaza al especificar **/std:c++17**.
 
 ```cpp
 // zcternary2.cpp
@@ -80,7 +80,7 @@ int main()
 
 Para corregir este código, convierta uno de los operandos explícitamente.
 
-En **/Zc: ternario**, el compilador rechaza los operadores condicionales en los que uno de los argumentos es de tipo **void**y el otro no es una expresión Throw. Un uso común de este patrón es en macros similares a las de ASERCIÓN:
+En **/Zc:ternary**, el compilador rechaza los operadores condicionales donde uno de los argumentos es de tipo **void**y el otro no es una expresión throw. Un uso común de este patrón es en macros similares a ASSERT:
 
 ```cpp
 // zcternary3.cpp
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-La solución típica es reemplazar el argumento no void por `void()`.
+La solución típica es reemplazar el `void()`argumento non-void por .
 
-Este ejemplo muestra el código que genera un error en las dos opciones **/Zc: ternaria** y **/Zc: ternario-** :
+Este ejemplo muestra código que genera un error en **/Zc:ternary** y **/Zc:ternary-**:
 
 ```cpp
 // zcternary4.cpp
@@ -114,14 +114,14 @@ int main() {
 }
 ```
 
-Este código dio este error anteriormente:
+Este código anteriormente daba este error:
 
 ```Output
 error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37033>' to 'foo::<lambda_717fca3fc65510deea10bc47e2b06be4>'
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-Con **/Zc: ternario**, el motivo del error se vuelve más claro. Se puede utilizar cualquiera de las distintas convenciones de llamada definidas por la implementación para generar cada expresión lambda. Sin embargo, el compilador no tiene ninguna regla de preferencias para eliminar la ambigüedad de las posibles firmas lambda. La nueva salida tiene el siguiente aspecto:
+Con **/Zc:ternary**, la razón del error se vuelve más clara. Se podría usar cualquiera de varias convenciones de llamada definidas por la implementación para generar cada lambda. Sin embargo, el compilador no tiene ninguna regla de preferencia para desambiguar las posibles firmas lambda. La nueva salida tiene este aspecto:
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -132,7 +132,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-Una fuente común de problemas encontrados por **/Zc: ternario** procede de los operadores condicionales usados en la Metaprogramación de la plantilla. Algunos de los tipos de resultados cambian en este modificador. En el ejemplo siguiente se muestran dos casos en los que **/Zc: ternaria** cambia el tipo de resultado de una expresión condicional en un contexto que no es de Metaprogramación:
+Una fuente común de problemas encontrados por **/Zc:ternary** proviene de operadores condicionales utilizados en la metaprogramación de plantillas. Algunos de los tipos de resultados cambian bajo este Switch. En el ejemplo siguiente se muestran dos casos en los que **/Zc:ternary** cambia el tipo de resultado de una expresión condicional en un contexto que no es de programación meta:
 
 ```cpp
 // zcternary5.cpp
@@ -147,18 +147,18 @@ int main(int argc, char**) {
 }
 ```
 
-La solución típica es aplicar un `std::remove_reference` rasgo en el tipo de resultado, donde sea necesario para conservar el comportamiento anterior.
+La solución típica `std::remove_reference` es aplicar un rasgo en el tipo de resultado, donde sea necesario para conservar el comportamiento anterior.
 
 Para obtener más información sobre los problemas de conformidad de Visual C++, vea [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione la página de propiedades **Propiedades de configuración** > **C/C++**  > **Línea de comandos**.
+1. Seleccione la página de**propiedades** **De propiedades** > de configuración**C/C++.** > 
 
-1. Modifique la propiedad **opciones adicionales** para incluir **/Zc: ternario** o **/Zc: ternario** y, después, elija **Aceptar**.
+1. Modifique la propiedad **Opciones adicionales** para incluir **/Zc:ternary** o **/Zc:ternary-** y, a continuación, elija **OK**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [/Zc (Ajuste)](zc-conformance.md)
