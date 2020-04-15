@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300315"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351662"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec, _wexec (Funciones)
 
@@ -83,7 +83,7 @@ La última letra del nombre de función determina la variación.
 |`p`|La variable de entorno `PATH` se usa para buscar el archivo que se va a ejecutar.|
 |`v`|`argv`, una matriz de punteros a los argumentos de la línea de comandos, se pasa a `_exec`. Se suele usar cuando el número de parámetros del proceso nuevo es variable.|
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cada función `_exec` carga y ejecuta un proceso nuevo. Todas las funciones `_exec` usan la misma función del sistema operativo ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). Las funciones `_exec` controlan automáticamente argumentos de cadena de caracteres multibyte como sea necesario, reconociendo las secuencias de caracteres multibyte en función de la página de códigos multibyte actualmente en uso. Las funciones `_wexec` son versiones con caracteres anchos de las funciones `_exec`. Las funciones `_wexec` se comportan de forma idéntica a las funciones correspondientes de la familia de `_exec`, salvo que no controlan cadenas de caracteres multibyte.
 
@@ -105,10 +105,10 @@ El parámetro de `cmdname` especifica el archivo que se va a ejecutar como nuevo
 Los parámetros se pasan al proceso nuevo con uno o varios punteros a cadenas de caracteres como parámetros en la llamada a `_exec`. Estas cadenas de caracteres forman la lista de parámetros para el nuevo proceso. La longitud total de la configuración de entorno heredada y las cadenas que forman la lista de parámetros del nuevo proceso no debe ser mayor de 32 kilobytes. El carácter de terminación nulo (“\0”) de cada cadena no se incluye en el recuento, pero los caracteres de espacio (que se insertan automáticamente para separar los parámetros) sí se cuentan.
 
 > [!NOTE]
->  Los espacios insertados en cadenas pueden generar un comportamiento inesperado; por ejemplo, si se pasa a `_exec` la cadena `"hi there"`, el nuevo proceso obtendrá dos argumentos, `"hi"` y `"there"`. Si se deseaba que el nuevo proceso abriera un archivo denominado “hi there”, el proceso produciría un error. Para evitarlo, escriba la cadena entre comillas: `"\"hi there\""`.
+> Los espacios insertados en cadenas pueden generar un comportamiento inesperado; por ejemplo, si se pasa a `_exec` la cadena `"hi there"`, el nuevo proceso obtendrá dos argumentos, `"hi"` y `"there"`. Si se deseaba que el nuevo proceso abriera un archivo denominado “hi there”, el proceso produciría un error. Para evitarlo, escriba la cadena entre comillas: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  No pase datos proporcionados por el usuario a `_exec` sin comprobar expresamente su contenido. `_exec` dará lugar a una llamada a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), por lo que debe tener presente que los nombres de ruta de acceso incompletos podrían dar lugar a vulnerabilidades de seguridad.
+> No pase datos proporcionados por el usuario a `_exec` sin comprobar expresamente su contenido. `_exec` dará lugar a una llamada a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), por lo que debe tener presente que los nombres de ruta de acceso incompletos podrían dar lugar a vulnerabilidades de seguridad.
 
 Las funciones `_exec` validan sus parámetros. Si los parámetros esperados son punteros nulos, cadenas vacías o se omiten, las funciones `_exec` invocan el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven -1. No se ejecuta ningún proceso nuevo.
 
@@ -118,7 +118,7 @@ Las llamadas a `_execl`, `_execle`, `_execlp` y `_execlpe` se suelen usar cuando
 
 Las llamadas a `_execv`, `_execve`, `_execvp` y `_execvpe` son útiles cuando el número de parámetros para el nuevo proceso es variable. Los punteros a los parámetros se pasan como matriz, `argv`. El parámetro `argv`[0] suele ser un puntero a `cmdname`. Los parámetros de `argv`[1] a `argv`[`n`] señalan a las cadenas de caracteres que forman la nueva lista de parámetros. El parámetro `argv`[`n`+1] debe ser un puntero **NULL** para marcar el final de la lista de parámetros.
 
-Los archivos que están abiertos cuando se realiza una llamada a `_exec` permanecen abiertos en el nuevo proceso. En llamadas a `_execl`, `_execlp`, `_execv` y `_execvp`, el nuevo proceso hereda el entorno del proceso de llamada. Las llamadas a `_execle`, `_execlpe`, `_execve` y `_execvpe` modifican el entorno del nuevo proceso pasando una lista de configuración de entorno con el parámetro `envp`. `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena terminada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Tenga en cuenta que `value` no está entre comillas dobles). El último elemento de la matriz de `envp` debe ser **null**. Cuando `envp` es **NULL**, el proceso nuevo hereda la configuración del entorno del proceso que realiza la llamada.
+Los archivos que están abiertos cuando se realiza una llamada a `_exec` permanecen abiertos en el nuevo proceso. En llamadas a `_execl`, `_execlp`, `_execv` y `_execvp`, el nuevo proceso hereda el entorno del proceso de llamada. Las llamadas a `_execle`, `_execlpe`, `_execve` y `_execvpe` modifican el entorno del nuevo proceso pasando una lista de configuración de entorno con el parámetro `envp`. `envp` es una matriz de punteros de caracteres, en la que cada elemento (salvo el elemento final) señala a una cadena terminada en NULL que define una variable de entorno. Esta cadena suele tener el formato `NAME`=`value`, donde `NAME` es el nombre de una variable de entorno y `value` es el valor de cadena en el que se establece la variable. (Tenga `value` en cuenta que no está entre comillas dobles.) El elemento final `envp` de la matriz debe ser **NULL**. Cuando `envp` es **NULL**, el proceso nuevo hereda la configuración del entorno del proceso que realiza la llamada.
 
 Un programa que se ejecuta con una de las funciones `_exec` se carga siempre en la memoria como si el campo de asignación máxima del encabezado del archivo .exe del programa estuviera establecido en el valor predeterminado 0xFFFFH.
 
@@ -232,16 +232,16 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 **Encabezado:** process.h
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de proceso y de entorno](../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](../c-runtime-library/reference/abort.md)<br/>
+[Control de Procesos y Medio Ambiente](../c-runtime-library/process-and-environment-control.md)<br/>
+[Aborta](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn, _wspawn (funciones)](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funciones _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

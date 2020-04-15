@@ -1,10 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355585"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -67,22 +69,24 @@ long double sqrtl(
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante no negativo
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **sqrt** que toman tipos **float** o **Long** **Double** . En un programa de C, **sqrt** siempre toma y devuelve **Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **sqrt** que toman **tipos float** o **long** **double.** En un programa C, **sqrt** siempre toma y devuelve **double**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **sqrt** devuelven la raíz cuadrada de *x*. De forma predeterminada, si *x* es negativo, **sqrt** devuelve un Nan indefinido.
+Las funciones **sqrt** devuelven la raíz cuadrada de *x*. De forma predeterminada, si *x* es negativo, **sqrt** devuelve un NaN indefinido.
 
-|Entrada|Excepción SEH|**_matherr** Excepcional|
+|Entrada|Excepción SEH|**_matherr** Excepción|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|ninguna|_DOMAIN|
-|- ∞|ninguna|_DOMAIN|
-|x<0|ninguna|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
+|- ∞|None|_DOMAIN|
+|x<0|None|_DOMAIN|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -90,7 +94,7 @@ Las funciones **sqrt** devuelven la raíz cuadrada de *x*. De forma predetermina
 |--------------|--------------|------------------|
 |**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
 
-Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -117,7 +121,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

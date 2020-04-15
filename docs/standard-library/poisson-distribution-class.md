@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: fd1464c099d6f666b53387326c1dd863048defdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372048"
 ---
 # <a name="poisson_distribution-class"></a>poisson_distribution (Clase)
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-@No__t_1 *IntType*
-El tipo de resultado entero, el valor predeterminado es **int**. Para ver los tipos posibles, vea [\<random >](../standard-library/random.md).
+*IntType*\
+El tipo de resultado entero, el valor predeterminado es **int**. Para ver los tipos posibles, consulte [ \<>aleatorias ](../standard-library/random.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La plantilla de clase describe una distribución que genera valores de un tipo entero especificado por el usuario con una distribución de Poisson. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
+La plantilla de clase describe una distribución que produce valores de un tipo entero especificado por el usuario con una distribución de Poisson. La tabla siguiente incluye vínculos a artículos sobre miembros individuales.
 
 ||||
 |-|-|-|
@@ -89,7 +89,7 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
 
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
 
-Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
+Para obtener más información acerca de las clases de distribución y sus miembros, vea [ \<>aleatorias ](../standard-library/random.md).
 
 Para obtener información detallada sobre la distribución de Poisson, vea el artículo de Wolfram MathWorld sobre la [distribución de Poisson](https://go.microsoft.com/fwlink/p/?linkid=401112).
 
@@ -196,7 +196,7 @@ Distribution for 100 samples:
 
 **Espacio de nombres:** std
 
-## <a name="poisson_distribution"></a> poisson_distribution::poisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::poisson_distribution
 
 Construye la distribución.
 
@@ -207,21 +207,21 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parámetros
 
-\ *promedio*
+*Decir*\
 El parámetro de distribución `mean`.
 
-\ *PARM*
+*Parmesana*\
 La estructura de parámetros utilizada para construir la distribución.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < mean`
+**Condición previa:**`0.0 < mean`
 
 El primer constructor crea un objeto cuyo valor `mean` almacenado contiene el valor *mean*.
 
 El segundo constructor crea un objeto cuyos parámetros almacenados se inicializan desde *parm*. Los parámetros actuales de una distribución existente se pueden obtener y definir llamando a la función miembro `param()`.
 
-## <a name="param_type"></a> poisson_distribution::param_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::param_type
 
 Almacena los parámetros de la distribución.
 
@@ -240,12 +240,12 @@ struct param_type {
 
 Vea los parámetros del constructor para [poisson_distribution](#poisson_distribution).
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-**Condición previa:** `0.0 < mean`
+**Condición previa:**`0.0 < mean`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[\<random>](../standard-library/random.md)
+[\<>al azar](../standard-library/random.md)

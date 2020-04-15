@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d8b6f4e0f0b5bca41f8d895415fff4003231ad1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425284"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373602"
 ---
 # <a name="ltostreamgt-operators"></a>Operadores &lt;ostream&gt;
 
 ||
 |-|
-|[operator&lt;&lt;](#op_lt_lt)|
+|[Operador&lt;&lt;](#op_lt_lt)|
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operador&lt;&lt;
 
 Escribe varios tipos en la secuencia.
 
@@ -89,13 +89,13 @@ El tipo de elemento.
 *_Ostr*\
 Objeto `basic_ostream` .
 
-\ *Str*
+*Str*\
 Una cadena de caracteres.
 
 *_Tr*\
 Rasgos de los caracteres.
 
-\ *Val*
+*Val*\
 El tipo
 
 ### <a name="return-value"></a>Valor devuelto
@@ -104,7 +104,7 @@ Flujo.
 
 ### <a name="remarks"></a>Observaciones
 
-La clase `basic_ostream` también define varios operadores de inserción. Para obtener más información, vea [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
+La clase `basic_ostream` también define varios operadores de inserción. Para obtener más información, consulte [basic_ostream::operator&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 
 La función de plantilla
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-determina la longitud N = `traits_type::`[longitud](../standard-library/char-traits-struct.md#length)(`str`) de la secuencia que comienza en *Str*e inserta la secuencia. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), entonces la función también inserta una repetición de `_Ostr.width` - N caracteres de relleno. La repetición precede la secuencia si (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). De otro modo, la repetición sigue la secuencia. La función devuelve *_Ostr*.
+determina la longitud `traits_type::`N`str`- [longitud](../standard-library/char-traits-struct.md#length)( ) de la secuencia que comienza en *str*, e inserta la secuencia. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), entonces la función también inserta una repetición de `_Ostr.width` - N caracteres de relleno. La repetición precede a`_Ostr`la secuencia si ( . [banderas](../standard-library/ios-base-class.md#flags)  &  `adjustfield` !- [izquierda](../standard-library/ios-functions.md#left). De otro modo, la repetición sigue la secuencia. La función devuelve *_Ostr*.
 
 La función de plantilla
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-salvo que cada elemento *_Ch* de la secuencia que comienza en *Str* se convierte en un objeto de tipo `Elem` mediante una llamada a `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[Wide](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
+excepto que cada elemento *_Ch* de la secuencia que comienza `Elem` en `_Ostr.` *str* se`_Ch`convierte en un objeto de tipo llamando a [put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( )).
 
 La función de plantilla
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-a excepción de que *_Ch* se convierte en un objeto de tipo `Elem` mediante una llamada a `_Ostr.put`(`_Ostr.widen`(`_Ch`)).
+excepto que *_Ch* se convierte `Elem` en `_Ostr.put`un `_Ostr.widen` `_Ch`objeto de tipo llamando a ( ( ( )).
 
 La función de plantilla
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(No tiene que ampliar *_Ch* antes de insertarlo).
+(No tiene que ampliar *_Ch* antes de insertarlo.)
 
 La función de plantilla
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-Devuelve `_Ostr` < < (`const char *`) `str`.
+devuelve `_Ostr` `const char *` << ( `str`) .
 
 La función de plantilla
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-Devuelve `_Ostr` < < (`char`) `_Ch`.
+devuelve `_Ostr` `char` << ( `_Ch`) .
 
 La función de plantilla:
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-Devuelve `_Ostr` < < (`const char *`) `str`.
+devuelve `_Ostr` `const char *` << ( `str`) .
 
 La función de plantilla:
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-Devuelve `_Ostr` < < (`char`) `_Ch`.
+devuelve `_Ostr` `char` << ( `_Ch`) .
 
 La función de plantilla:
 
@@ -261,7 +261,7 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-Devuelve `_Ostr` `<<` `val` (y convierte una [referencia RValue](../cpp/rvalue-reference-declarator-amp-amp.md) en `_Ostr` a un valor l en el proceso).
+devuelve `_Ostr` `<<` `val` (y convierte una [referencia a un valor R](../cpp/rvalue-reference-declarator-amp-amp.md) para `_Ostr` en un valor L en el proceso).
 
 ### <a name="example"></a>Ejemplo
 
@@ -269,4 +269,4 @@ Vea [flush](../standard-library/ostream-functions.md#flush) para obtener un ejem
 
 ## <a name="see-also"></a>Consulte también
 
-[\<ostream>](../standard-library/ostream.md)
+[\<>ostream](../standard-library/ostream.md)

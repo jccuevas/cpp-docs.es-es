@@ -1,10 +1,13 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinh
 - asinhf
 - asinhl
+- _o_asinh
+- _o_asinhf
+- _o_asinhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939641"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350472"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -56,28 +60,30 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **Asinh** devuelven el seno hiperbólico inverso (seno hiperbólico de arco) de *x*. Esta función es válida en el dominio de punto flotante. Si *x* es Nan, indefinido o infinito, se devuelve el mismo valor.
+Las funciones **asinh** devuelven el seno hiberbólico inverso (arco seno hiperbólico) de *x*. Esta función es válida en el dominio de punto flotante. Si *x* es un NaN silencioso, indefinido o infinito, se devuelve el mismo valor.
 
-|Entrada|Excepción SEH|**_matherr** Excepcional|
+|Entrada|Excepción SEH|**_matherr** Excepción|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|ninguna|ninguna|
+|± QNAN, IND, INF|None|None|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Al C++usar, puede llamar a las sobrecargas de **Asinh** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **Asinh** siempre toma y devuelve **Double**.
+Cuando se utiliza C++, puede llamar a sobrecargas de **asinh** que toman y devuelven **valores float** o **long** **double.** En un programa C, **asinh** siempre toma y devuelve **double**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado C necesario|Encabezado C++ necesario|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<CMATH > o \<Math. h <|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<> de \<cmath o math.h<|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -107,7 +113,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

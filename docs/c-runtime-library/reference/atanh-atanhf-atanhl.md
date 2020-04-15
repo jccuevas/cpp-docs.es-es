@@ -1,10 +1,13 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atanhl
 - atanhf
 - atanh
+- _o_atanh
+- _o_atanhf
+- _o_atanhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939596"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350134"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -56,21 +60,23 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **atanh** devuelven la tangente hiperbólico inversa (arcotangente hiperbólica) de *x*. Si *x* es mayor que 1 o menor que-1, **errno** se establece en **EDOM** y el resultado es un Nan silencioso. Si *x* es igual a 1 o-1, se devuelve un valor infinito positivo o negativo, respectivamente, y **errno** se establece en **ERANGE**.
+Las funciones **atanh** devuelven la tangente hiberbólica inversa (tangente hiperbólica de arco) de *x*. Si *x* es mayor que 1, o menor que -1, **errno** se establece en **EDOM** y el resultado es un NaN silencioso. Si *x* es igual a 1 o -1, se devuelve un infinito positivo o negativo, respectivamente, y **errno** se establece en **ERANGE**.
 
-|Entrada|Excepción SEH|**Matherr** Excepcional|
+|Entrada|Excepción SEH|**Matherr** Excepción|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|ninguna|ninguna|
-|*X* ≥ 1; *x* ≤ -1|ninguna|ninguna|
+|± QNAN,IND|None|None|
+|*X* x 1; *x* - -1|None|None|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **atanh** que toman y devuelven valores de tipo **float** o **Long** **Double** . En un programa de C, **atanh** siempre toma y devuelve **Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **atanh** que toman y devuelven **valores float** o **long** **double.** En un programa C, **atanh** siempre toma y devuelve **double**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,7 +84,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **atanh*
 |--------------|--------------|------------------|
 |**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> o \<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -108,7 +114,7 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

@@ -1,19 +1,19 @@
 ---
 title: Formato de cadena y de E/S (C++ moderno)
-description: Opciones de e/s de cadena con formato disponibles C++en moderno.
+description: Opciones para E/S de cadena con formato disponibles en C+++ moderno.
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 7ea858a8a8126d3754783edee0dd3ea5409e5f73
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: a3fc93b0baf414759eb50c787c4057fb85dcb370
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898825"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375770"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formato de cadena y de E/S (C++ moderno)
 
-C++[\<iostream >](../standard-library/iostream.md) clases, funciones y operadores admiten la e/s de cadena con formato. Por ejemplo, el código siguiente muestra cómo establecer `cout` para dar formato a un entero para que se genere en hexadecimal. En primer lugar, guarda el estado actual para restablecerlo después, porque una vez que el estado de formato se pasa a `cout`, permanece así hasta que se cambia. No solo se aplica a una línea de código.
+C++ [ \<iostream>](../standard-library/iostream.md) clases, funciones y operadores admiten E/S de cadena con formato. Por ejemplo, el código siguiente `cout` muestra cómo establecer un formato de un entero para que la salida sea hexadecimal. En primer lugar, guarda el estado actual para restablecerlo después, porque una vez que el estado de formato se pasa a `cout`, se mantiene de esa manera hasta que se cambia. No solo se aplica a la única línea de código.
 
 ```cpp
 #include <iostream>
@@ -39,23 +39,23 @@ int main()
 }
 ```
 
-Este enfoque tiene seguridad de tipos y es extensible, pero también es complejo y detallado.
+Este enfoque es seguro para tipos y extensible, pero también es complejo y detallado.
 
-## <a name="alternative-format-options"></a>Opciones de formato alternativas
+## <a name="alternative-format-options"></a>Opciones de formato alternativo
 
-Como alternativa, puede usar `Boost.Format` de las bibliotecas de Boost C++ , aunque no sea estándar. Puede descargar cualquier biblioteca de Boost desde el sitio web de [Boost](https://www.boost.org/) .
+Como alternativa, puedes `Boost.Format` usarlas en las bibliotecas Boost C++, aunque no sea estándar. Puedes descargar cualquier biblioteca de Boost desde el sitio web de [Boost.](https://www.boost.org/)
 
-Algunas de las ventajas de `Boost.Format` son las siguientes:
+Algunas ventajas de `Boost.Format` son:
 
-- Safe: Safe-Type y produce una excepción para los errores, por ejemplo, la especificación de demasiados o demasiados elementos.
+- Seguro: tipo seguro y produce una excepción para errores, por ejemplo, la especificación de demasiados o demasiados elementos.
 
-- Extensible: funciona para cualquier tipo con el que se pueda hacer streaming.
+- Extensible: funciona para cualquier tipo que se pueda transmitir.
 
-- Práctico: POSIX estándar y cadenas de formato similares.
+- Conveniente: POSIX estándar y cadenas de formato similares.
 
-Aunque `Boost.Format` está basado en C++ [\<iostream >](../standard-library/iostream-programming.md) instalaciones, que son seguras y extensibles, no están optimizadas para el rendimiento. Cuando requiera la optimización del rendimiento, considere la posibilidad de usar [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) y [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), que son rápidas y fáciles de usar. Sin embargo, no son extensibles ni seguros frente a las vulnerabilidades. (Las versiones seguras existen, pero incurren en una ligera disminución del rendimiento. Para obtener más información, vea [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) y [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+Aunque `Boost.Format` se basa en las instalaciones de>De C++ [ \<iostream,](../standard-library/iostream-programming.md) que son seguras y extensibles, no están optimizadas para el rendimiento. Cuando necesite una optimización del rendimiento, tenga en cuenta C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) y [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), que son rápidos y fáciles de usar. Sin embargo, no son extensibles ni seguras de vulnerabilidades. (Existen versiones seguras, pero incurren en una ligera penalización del rendimiento. Para obtener más información, vea [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) y [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
-El código siguiente muestra algunas de las características de formato de Boost.
+El código siguiente muestra algunas de las características de formato Boost.
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
@@ -67,11 +67,11 @@ El código siguiente muestra algunas de las características de formato de Boost
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Bienvenido de nuevo aC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<iostream>](../standard-library/iostream.md)<br/>
-[\<limits>](../standard-library/limits.md)<br/>
-[\<iomanip>](../standard-library/iomanip.md)
+[Bienvenido de nuevo a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Referencia del idioma C++](../cpp/cpp-language-reference.md)<br/>
+[Biblioteca estándar C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<>iostream](../standard-library/iostream.md)<br/>
+[\<límites>](../standard-library/limits.md)<br/>
+[\<>iomanip](../standard-library/iomanip.md)

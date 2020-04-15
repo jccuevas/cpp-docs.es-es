@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 94177a27a1f99a8c9c37b7fce3f697fd0088b7c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 45ae414c318376b2c4d787498e9a288a0037af83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212594"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358092"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transacción: Realizar una transacción en un conjunto de registros (ODBC)
 
 En este tema se explica cómo realizar una transacción en un conjunto de registros.
 
 > [!NOTE]
->  Solo se admite un nivel de transacciones; no se pueden anidar transacciones.
+> Solo se admite un nivel de transacciones; no se pueden anidar transacciones.
 
 #### <a name="to-perform-a-transaction-in-a-recordset"></a>Para realizar una transacción en un conjunto de registros
 
-1. Llame a la función miembro `BeginTrans` del objeto `CDatabase`.
+1. Llame `CDatabase` a la `BeginTrans` función miembro del objeto.
 
-1. Si no ha implementado la obtención masiva de filas, llame a las funciones miembro `AddNew/Update`, `Edit/Update`y `Delete` de uno o más objetos de conjunto de registros de la misma base de datos tantas veces como sea necesario. Para obtener más información, vea [conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si ha implementado la obtención masiva de filas, debe escribir sus propias funciones para actualizar el origen de datos.
+1. Si no ha implementado la obtención `AddNew/Update`masiva `Edit/Update`de `Delete` filas, llame a las funciones , , y miembro de uno o varios objetos de conjunto de registros de la misma base de datos tantas veces como sea necesario. Para obtener más información, vea [Conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si ha implementado la obtención masiva de filas, debe escribir sus propias funciones para actualizar el origen de datos.
 
-1. Por último, llame a la función miembro `CommitTrans` del objeto `CDatabase`. Si se produce un error en una de las actualizaciones o decide cancelar los cambios, llame a su función miembro `Rollback`.
+1. Por último, `CDatabase` llame `CommitTrans` a la función miembro del objeto. Si se produce un error en una de las actualizaciones o decide cancelar los cambios, llame a su `Rollback` función miembro.
 
-En el ejemplo siguiente se usan dos conjuntos de registros para eliminar la inscripción de un estudiante de una base de datos de registro escolar y quitar el estudiante de todas las clases en las que el estudiante está inscrito. Dado que las llamadas `Delete` en ambos conjuntos de registros deben ejecutarse correctamente, se requiere una transacción. En el ejemplo se supone la existencia de `m_dbStudentReg`, una variable miembro de tipo `CDatabase` ya está conectada al origen de datos y las clases de conjunto de registros `CEnrollmentSet` y `CStudentSet`. La variable `strStudentID` contiene un valor obtenido del usuario.
+En el ejemplo siguiente se usan dos conjuntos de registros para eliminar la inscripción de un alumno de una base de datos de registro de la escuela, quitando el alumno de todas las clases en las que está inscrito el alumno. Dado `Delete` que las llamadas de ambos conjuntos de registros deben realizarse correctamente, se requiere una transacción. En el ejemplo se `m_dbStudentReg`supone la existencia `CDatabase` de , una variable miembro `CEnrollmentSet` de `CStudentSet`tipo ya conectada al origen de datos y las clases de conjunto de registros y . La `strStudentID` variable contiene un valor obtenido del usuario.
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,11 +79,11 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
->  Llamar a `BeginTrans` de nuevo sin llamar a `CommitTrans` o `Rollback` es un error.
+> Llamar `BeginTrans` de `CommitTrans` nuevo `Rollback` sin llamar o es un error.
 
 ## <a name="see-also"></a>Consulte también
 
 [Transacción (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transacción: Cómo afectan las transacciones a las actualizaciones (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
-[CDatabase (clase)](../../mfc/reference/cdatabase-class.md)<br/>
-[CRecordset (clase)](../../mfc/reference/crecordset-class.md)
+[Clase CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Clase CRecordset](../../mfc/reference/crecordset-class.md)

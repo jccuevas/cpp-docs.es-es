@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs
+- _o_wcsrtombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af22a7d55c5f4958db6962e98f212fb5bb89e61e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945048"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328057"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -67,27 +69,29 @@ Indirectamente apunta a la ubicación de la cadena de caracteres anchos que se v
 Número de caracteres que se van a convertir.
 
 *mbstate*<br/>
-Un puntero a un objeto de estado de la conversión **mbstate_t** .
+Puntero a un objeto de estado de conversión **mbstate_t.**
 
 ## <a name="return-value"></a>Valor devuelto
 
 Devuelve el número de bytes convertidos correctamente, sin incluir el byte nulo de finalización (si lo hubiera), de lo contrario, -1 si se ha producido un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **wcsrtombs** convierte una cadena de caracteres anchos, comenzando en el estado de conversión especificado incluido en *mbstate*, de los valores a los que se señala indirectamente en *wcstr*, en la dirección de *mbstr*. La conversión continuará para cada carácter hasta que: después de que se encuentre un carácter ancho de terminación null, cuando se encuentre un carácter no correspondiente o cuando el siguiente carácter exceda el límite contenido en *Count*. Si **wcsrtombs** detecta el carácter nulo de caracteres anchos (L ' \ 0 ') antes o cuando se produce el *recuento* , lo convierte en un 0 de 8 bits y se detiene.
+La función **wcsrtombs** convierte una cadena de caracteres anchos, comenzando en el estado de conversión especificado contenido en *mbstate*, a partir de los valores indirectos señalados en *wcstr*, en la dirección de *mbstr*. La conversión continuará para cada carácter hasta que: después de que se encuentre un carácter ancho de terminación nulo, cuando se encuentre un carácter no correspondiente o cuando el siguiente carácter supere el límite contenido en *count*. Si **wcsrtombs** encuentra el carácter nulo de caracteres anchos (L'-0') antes o cuando se produce el *recuento,* lo convierte en un 0 de 8 bits y se detiene.
 
-Por lo tanto, la cadena de caracteres multibyte en *mbstr* está terminada en NULL solo si **wcsrtombs** encuentra un carácter ancho nulo durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcsrtombs** es indefinido. **wcsrtombs** se ve afectado por la categoría LC_TYPE de la configuración regional actual.
+Por lo tanto, la cadena de caracteres multibyte en *mbstr* termina en null solo si **wcsrtombs** encuentra un carácter nulo de caracteres anchos durante la conversión. Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcsrtombs** es indefinido. **wcsrtombs** se ve afectado por la categoría LC_TYPE de la configuración regional actual.
 
-La función **wcsrtombs** difiere de [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) por su reinicio. El estado de la conversión se almacena en *mbstate* para las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación usaría **wcsrlen** en lugar de **wcsnlen**, si se usara una llamada subsiguiente a **wcsrtombs** en lugar de **wcstombs**.
+La función **wcsrtombs** difiere de [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* para las llamadas posteriores a la misma u otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables.  Por ejemplo, una aplicación usaría **wcsrlen** en lugar de **wcsnlen**, si se utilizara una llamada posterior a **wcsrtombs** en lugar de **wcstombs**.
 
-Si el argumento *mbstr* es **null**, **wcsrtombs** devuelve el tamaño necesario en bytes de la cadena de destino. Si *mbstate* es null, se usa el estado de conversión **mbstate_t** interno. Si la secuencia de caracteres *WCHAR* no tiene una representación de caracteres multibyte correspondiente, se devuelve-1 y **errno** se establece en **EILSEQ**.
+Si el argumento *mbstr* es **NULL**, **wcsrtombs** devuelve el tamaño necesario en bytes de la cadena de destino. Si *mbstate* es null, se utiliza el estado de conversión **de mbstate_t** interno. Si la secuencia de caracteres *wchar* no tiene una representación de caracteres multibyte correspondiente, se devuelve un -1 y el **errno** se establece en **EILSEQ**.
 
-En C++, esta función tiene una sobrecarga de plantilla que invoca una contrapartida más nueva y segura de la función. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, esta función tiene una sobrecarga de plantilla que invoca una contrapartida más nueva y segura de la función. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Excepciones
 
-La función **wcsrtombs** es segura para subprocesos siempre y cuando ninguna función del subproceso actual llame a **setlocale** mientras se ejecuta esta función y el valor de *mbstate* no sea NULL.
+La función **wcsrtombs** es segura para subprocesos múltiples, siempre que ninguna función del subproceso actual llame a **setlocale** mientras se ejecuta esta función y el *mbstate* no es null.
 
 ## <a name="example"></a>Ejemplo
 
@@ -141,7 +145,7 @@ The string was successfuly converted.
 |-------------|---------------------|
 |**wcsrtombs**|\<wchar.h>|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Configuración regional](../../c-runtime-library/locale.md)<br/>

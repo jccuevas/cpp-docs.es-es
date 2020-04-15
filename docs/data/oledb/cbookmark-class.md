@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212243"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359336"
 ---
 # <a name="cbookmark-class"></a>CBookmark (Clase)
 
@@ -89,20 +89,20 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="parameters"></a>Parámetros
 
-*nSize*<br/>
-Tamaño del búfer de marcador en bytes. Cuando *nSize* es cero, el búfer de marcador se creará dinámicamente en tiempo de ejecución.
+*nTamaño*<br/>
+El tamaño del búfer de marcadores en bytes. Cuando *nSize* es cero, el búfer de marcadorse se creará dinámicamente en tiempo de ejecución.
 
 ## <a name="requirements"></a>Requisitos
 
 **Encabezado:** atldbcli.h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="methods"></a>Métodos
 
 |||
 |-|-|
-|[CBookmark](#cbookmark)|Constructor|
+|[CBookmark](#cbookmark)|El constructor|
 |[GetBuffer](#getbuffer)|Recupera el puntero al búfer.|
 |[GetSize](#getsize)|Recupera el tamaño del búfer en bytes.|
 |[SetBookmark](#setbookmark)|Establece el valor del marcador.|
@@ -111,13 +111,13 @@ Tamaño del búfer de marcador en bytes. Cuando *nSize* es cero, el búfer de ma
 
 |||
 |-|-|
-|[operador =](#operator)|Asigna una clase `CBookmark` a otra.|
+|[operador a la operadora de la red](#operator)|Asigna una `CBookmark` clase a otra.|
 
 ## <a name="remarks"></a>Observaciones
 
-`CBookmark<0>` es una especialización de plantilla de `CBookmark`; su búfer se crea dinámicamente en tiempo de ejecución.
+`CBookmark<0>`es una especialización de plantilla de `CBookmark`; su búfer se crea dinámicamente en tiempo de ejecución.
 
-## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark:: CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark::CBookmark
 
 El constructor.
 
@@ -130,19 +130,19 @@ CBookmark(DBLENGTH nSize);
 
 #### <a name="parameters"></a>Parámetros
 
-*nSize*<br/>
-de Tamaño del búfer de marcador en bytes.
+*nTamaño*<br/>
+[en] Tamaño del búfer de marcadores en bytes.
 
 ### <a name="remarks"></a>Observaciones
 
 La primera función establece el búfer en NULL y el tamaño del búfer en 0. La segunda función establece el tamaño del búfer en *nSize*y el búfer en una matriz de bytes de *nSize* bytes.
 
 > [!NOTE]
->  Esta función solo está disponible en `CBookmark<0>`.
+> Esta función solo `CBookmark<0>`está disponible en .
 
-## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark:: GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark::GetBuffer
 
-Recupera el puntero al búfer del marcador.
+Recupera el puntero al búfer de marcadores.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -152,11 +152,11 @@ virtual BYTE* GetBuffer() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero al búfer del marcador.
+Un puntero al búfer de marcadores.
 
-## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark:: se obtiene
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark::GetSize
 
-Recupera el tamaño del búfer del marcador.
+Recupera el tamaño del búfer de marcadores.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -166,11 +166,11 @@ virtual DBLENGTH GetSize() const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-El tamaño del búfer en bytes.
+Tamaño del búfer en bytes.
 
-## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark:: SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark::SetBookmark
 
-Copia el valor de marcador al que se hace referencia en *pBuffer* en el búfer de `CBookmark` y establece el tamaño del búfer en *nSize*.
+Copia el valor de marcador `CBookmark` al que hace referencia *pBuffer en* el búfer y establece el tamaño del búfer en *nSize*.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -180,23 +180,23 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 #### <a name="parameters"></a>Parámetros
 
-*nSize*<br/>
-de Tamaño del búfer del marcador.
+*nTamaño*<br/>
+[en] El tamaño del búfer de marcadores.
 
 *pBuffer*<br/>
-de Puntero a la matriz de bytes que contiene el valor del marcador.
+[en] Puntero a la matriz de bytes que contiene el valor del marcador.
 
 ### <a name="return-value"></a>Valor devuelto
 
-HRESULT estándar.
+Un HRESULT estándar.
 
 ### <a name="remarks"></a>Observaciones
 
-Esta función solo está disponible en `CBookmark<0>`.
+Esta función solo `CBookmark<0>`está disponible en .
 
-## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark:: Operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark::operador ?
 
-Asigna un objeto `CBookmark` a otro.
+Asigna un `CBookmark` objeto a otro.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -206,7 +206,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>Observaciones
 
-Este operador solo es necesario en `CBookmark<0>`.
+Este operador solo `CBookmark<0>`es necesario en .
 
 ## <a name="see-also"></a>Consulte también
 

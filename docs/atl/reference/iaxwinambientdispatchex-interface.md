@@ -1,5 +1,5 @@
 ---
-title: IAxWinAmbientDispatchEx (interfaz)
+title: Interfaz IAxWinAmbientDispatchEx
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinAmbientDispatchEx
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4816846801e388619db62998ec979a1100916ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276099"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329978"
 ---
-# <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx (interfaz)
+# <a name="iaxwinambientdispatchex-interface"></a>Interfaz IAxWinAmbientDispatchEx
 
-Esta interfaz implementa las propiedades de ambiente complementarias para un control hospedado.
+Esta interfaz implementa propiedades ambientales suplementarias para un control hospedado.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -34,33 +34,33 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 |||
 |-|-|
-|[SetAmbientDispatch](#setambientdispatch)|Este método se llama para complementar la interfaz de la propiedad de ambiente predeterminada con una interfaz definida por el usuario.|
+|[SetAmbientDispatch](#setambientdispatch)|Se llama a este método para complementar la interfaz de propiedad ambiental predeterminada con una interfaz definida por el usuario.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Esta interfaz se incluyen en las aplicaciones de ATL que se vinculan estáticamente con ATL y el host de controles ActiveX, especialmente los controles ActiveX que tiene las propiedades de ambiente. Sin incluir esta interfaz generará esta aserción: "¿Olvidó pasar el LIBID en ejecución"
+Incluya esta interfaz en aplicaciones ATL que están vinculadas estáticamente a ATL y hospedan controles ActiveX, especialmente controles ActiveX que tienen propiedades ambientales. Sin incluir esta interfaz generará esta aserción: "¿Olvidó pasar el LIBID a CComModule::Init"
 
-Esta interfaz se expone mediante los objetos que hospeda los controles ActiveX de ATL. Deriva [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` agrega un método que permite complementar la interfaz de propiedad de ambiente proporcionada por ATL con uno propio.
+Esta interfaz se expone mediante objetos de hospedaje de control ActiveX de ATL. Derivado de [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` agrega un método que le permite complementar la interfaz de propiedad ambiental proporcionada por ATL con una propia.
 
-<xref:System.Windows.Forms.AxHost> se intentará cargar la información de tipo sobre `IAxWinAmbientDispatch` y `IAxWinAmbientDispatchEx` desde la biblioteca de tipos que contiene el código.
+<xref:System.Windows.Forms.AxHost>intentará cargar información de `IAxWinAmbientDispatch` `IAxWinAmbientDispatchEx` tipo sobre y desde la biblioteca de tipos que contiene el código.
 
-Si vincula a ATL90.dll, **AXHost** cargará la información de tipo de la biblioteca de tipos en el archivo DLL.
+Si está vinculando a ATL90.dll, **AXHost** cargará la información de tipo de la biblioteca de tipos en el archivo DLL.
 
-Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener más detalles.
+Consulte [Hosting ActiveX Controls Using ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener más detalles.
 
 ## <a name="requirements"></a>Requisitos
 
-La definición de esta interfaz está disponible en varios formatos, como se muestra en la tabla siguiente.
+La definición de esta interfaz está disponible en varios formularios, como se muestra en la tabla siguiente.
 
 |Tipo de definición|Archivo|
 |---------------------|----------|
-|IDL|atliface.idl|
-|Biblioteca de tipos|ATL.dll|
-|C++|atliface.h (que también se incluye en ATLBase.h)|
+|Idl|atliface.idl|
+|Biblioteca de tipos|Atl.dll|
+|C++|atliface.h (también incluido en ATLBase.h)|
 
-##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch
+## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch
 
-Este método se llama para complementar la interfaz de la propiedad de ambiente predeterminada con una interfaz definida por el usuario.
+Se llama a este método para complementar la interfaz de propiedad ambiental predeterminada con una interfaz definida por el usuario.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
@@ -73,12 +73,12 @@ Puntero a la nueva interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
+Devuelve S_OK en caso de éxito o un error HRESULT en caso de error.
 
-### <a name="remarks"></a>Comentarios
+### <a name="remarks"></a>Observaciones
 
-Cuando `SetAmbientDispatch` se denomina con un puntero a una nueva interfaz, se usará esta nueva interfaz para invocar las propiedades o métodos más frecuentes para el control hospedado, si dichas propiedades no se han proporcionado por [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
+Cuando `SetAmbientDispatch` se llama con un puntero a una nueva interfaz, esta nueva interfaz se usará para invocar las propiedades o métodos solicitados por el control hospedado, si [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)no proporciona ya esas propiedades.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[IAxWinAmbientDispatch (interfaz)](../../atl/reference/iaxwinambientdispatch-interface.md)
+[Interfaz IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)

@@ -1,11 +1,13 @@
 ---
 title: _strdec, _wcsdec, _mbsdec, _mbsdec_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsdec
 - _strdec
 - _mbsdec
 - _mbsdec_l
+- _o__mbsdec
+- _o__mbsdec_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: ffb2b81f5ce5a251fb931099a1023a441ca4d496
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 57f8b092518c97e33b3972a569513fe678d168e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958211"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359795"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
 Hace retroceder el puntero de cadena un carácter.
 
 > [!IMPORTANT]
-> **mbsdec** y **mbsdec_l** no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdec** y **mbsdec_l** no se pueden usar en aplicaciones que se ejecutan en Windows Runtime. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -82,28 +85,30 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parámetros
 
 *start*<br/>
-Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) de la cadena de origen; *Start* debe preceder a *Current* en la cadena de origen.
+Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) en la cadena de origen; *start* debe preceder a *la corriente* en la cadena de origen.
 
-*current*<br/>
-Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) de la cadena de origen; *Current* debe seguir a *Start* en la cadena de origen.
+*Actual*<br/>
+Puntero a cualquier carácter (o para **_mbsdec** y **_mbsdec_l**, el primer byte de cualquier carácter multibyte) en la cadena de origen; *actual* debe seguir *el inicio* en la cadena de origen.
 
 *locale*<br/>
 Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**y **_wcsdec** devuelven un puntero al carácter que precede inmediatamente a *Current*; **_mbsdec** devuelve **null** si el valor de *Start* es mayor o igual que el de *Current*. **_tcsdec** se asigna a una de estas funciones y su valor devuelto depende de la asignación.
+**_mbsdec**, **_mbsdec_l**, **_strdec**y **_wcsdec** devuelven un puntero al carácter que precede inmediatamente a *current*; **_mbsdec** devuelve **NULL** si el valor de *start* es mayor o igual que el de *current*. **_tcsdec** se asigna a una de estas funciones y su valor devuelto depende de la asignación.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Las funciones **_mbsdec** y **_mbsdec_l** devuelven un puntero al primer byte del carácter multibyte que precede inmediatamente a *Current* en la cadena que contiene *Start*.
+Las funciones **_mbsdec** y **_mbsdec_l** devuelven un puntero al primer byte del carácter multibyte que precede inmediatamente a *current* en la cadena que contiene *start*.
 
-El valor de salida se ve afectado por la configuración de la categoría **LC_CTYPE** de la configuración regional. vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información.  **_mbsdec** reconoce secuencias de caracteres multibyte según la configuración regional que se esté usando actualmente, mientras que **_mbsdec_l** es idéntico, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la configuración de la **LC_CTYPE** configuración de categoría de la configuración regional; ver [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información.  **_mbsdec** reconoce las secuencias de caracteres multibyte según la configuración regional que está actualmente en uso, mientras que **_mbsdec_l** es idéntica, excepto que en su lugar usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si el valor de *Start* o *Current* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** en **EINVAL**.
+Si *start* o *current* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **EINVAL** y establece **errno** en **EINVAL**.
 
 > [!IMPORTANT]
 > Estas funciones pueden ser vulnerables a amenazas de saturación del búfer. Las saturaciones del búfer se pueden usar para ataques del sistema, ya que pueden producir una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](/windows/win32/SecBP/avoiding-buffer-overruns)(Evitar saturaciones del búfer).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -111,7 +116,7 @@ Si el valor de *Start* o *Current* es **null**, se invoca el controlador de par�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** y **_wcsdec** son versiones de caracteres de un solo byte y caracteres anchos de **_mbsdec** y **_mbsdec_l**. **_strdec** y **_wcsdec** se proporcionan solo para esta asignación y no se deben usar en caso contrario.
+**_strdec** y **_wcsdec** son versiones de caracteres de un solo byte y caracteres anchos de **_mbsdec** y **_mbsdec_l.** **_strdec** y **_wcsdec** solo se proporcionan para esta asignación y no se deben utilizar de otro modo.
 
 Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
@@ -124,7 +129,7 @@ Para obtener más información, vea [Usar asignaciones de texto genérico](../..
 |**_strdec**|\<tchar.h>||
 |**_wcsdec**|\<tchar.h>||
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -181,9 +186,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulación de cuerdas](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

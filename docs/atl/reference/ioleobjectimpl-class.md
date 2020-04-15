@@ -49,19 +49,19 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: ded158b0ec862de5b0d0b23dd4b9edb50ad577ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 86d82aea2e92eb99903284abe4ac03478369616c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423061"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326525"
 ---
 # <a name="ioleobjectimpl-class"></a>Clase IOleObjectImpl
 
-Esta clase implementa `IUnknown` y es la interfaz principal a través de la cual un contenedor se comunica con un control.
+Esta clase `IUnknown` implementa y es la interfaz principal a través de la cual un contenedor se comunica con un control.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el Windows Runtime.
+> Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en Windows Runtime.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -73,60 +73,60 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 #### <a name="parameters"></a>Parámetros
 
 *T*<br/>
-La clase, derivada de `IOleObjectImpl`.
+Su clase, derivada `IOleObjectImpl`de .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nombre|Descripción|
 |----------|-----------------|
-|[IOleObjectImpl:: Advise](#advise)|Establece una conexión de consulta con el control.|
-|[IOleObjectImpl:: Close](#close)|Cambia el estado del control de Running a Loaded.|
-|[IOleObjectImpl::D oVerb](#doverb)|Indica al control que realice una de sus acciones enumeradas.|
-|[IOleObjectImpl::D oVerbDiscardUndo](#doverbdiscardundo)|Indica al control que descarte cualquier estado de deshacer que está manteniendo.|
-|[IOleObjectImpl::D oVerbHide](#doverbhide)|Indica al control que quite su interfaz de usuario de la vista.|
-|[IOleObjectImpl::D oVerbInPlaceActivate](#doverbinplaceactivate)|Ejecuta el control e instala su ventana, pero no instala la interfaz de usuario del control.|
-|[IOleObjectImpl::D oVerbOpen](#doverbopen)|Hace que el control esté abierto y editado en una ventana independiente.|
-|[IOleObjectImpl::D oVerbPrimary](#doverbprimary)|Realiza la acción especificada cuando el usuario hace doble clic en el control. El control define la acción, normalmente para activar el control en contexto.|
-|[IOleObjectImpl::D oVerbShow](#doverbshow)|Muestra un control recién insertado al usuario.|
-|[IOleObjectImpl::D oVerbUIActivate](#doverbuiactivate)|Activa el control en contexto y muestra la interfaz de usuario del control, como los menús y las barras de herramientas.|
-|[IOleObjectImpl::EnumAdvise](#enumadvise)|Enumera las conexiones de consulta del control.|
-|[IOleObjectImpl::EnumVerbs](#enumverbs)|Enumera las acciones del control.|
-|[IOleObjectImpl::GetClientSite](#getclientsite)|Recupera el sitio del cliente del control.|
-|[IOleObjectImpl::GetClipboardData](#getclipboarddata)|Recupera los datos del portapapeles. La implementación de ATL devuelve E_NOTIMPL.|
-|[IOleObjectImpl::GetExtent](#getextent)|Recupera la extensión del área de presentación del control.|
+|[IOleObjectImpl::Advise](#advise)|Establece una conexión de asesoramiento con el control.|
+|[IOleObjectImpl::Cerrar](#close)|Cambia el estado del control de la ejecución a la carga.|
+|[IOleObjectImpl::DoVerb](#doverb)|Indica al control que realice una de sus acciones enumeradas.|
+|[IOleObjectImpl::DoVerbDiscardUndo](#doverbdiscardundo)|Indica al control que descarte cualquier estado de deshacer que esté manteniendo.|
+|[IOleObjectImpl::DoVerbHide](#doverbhide)|Indica al control que quite su interfaz de usuario de la vista.|
+|[IOleObjectImpl::DoVerbInPlaceActivate](#doverbinplaceactivate)|Ejecuta el control e instala su ventana, pero no instala la interfaz de usuario del control.|
+|[IOleObjectImpl::DoVerbOpen](#doverbopen)|Hace que el control se edite abiertamente en una ventana independiente.|
+|[IOleObjectImpl::DoVerbPrimary](#doverbprimary)|Realiza la acción especificada cuando el usuario hace doble clic en el control. El control define la acción, normalmente para activar el control in situ.|
+|[IOleObjectImpl::DoVerbShow](#doverbshow)|Muestra un control recién insertado al usuario.|
+|[IOleObjectImpl::DoVerbUIActivate](#doverbuiactivate)|Activa el control in situ y muestra la interfaz de usuario del control, como menús y barras de herramientas.|
+|[IOleObjectImpl::EnumAdvise](#enumadvise)|Enumera las conexiones de asesoramiento del control.|
+|[IOleObjectImpl::EnumVerbs](#enumverbs)|Enumera las acciones para el control.|
+|[IOleObjectImpl::GetClientSite](#getclientsite)|Recupera el sitio de cliente del control.|
+|[IOleObjectImpl::GetClipboardData](#getclipboarddata)|Recupera datos del Portapapeles. La implementación de ATL devuelve E_NOTIMPL.|
+|[IOleObjectImpl::GetExtent](#getextent)|Recupera la extensión del área de visualización del control.|
 |[IOleObjectImpl::GetMiscStatus](#getmiscstatus)|Recupera el estado del control.|
-|[IOleObjectImpl::GetMoniker](#getmoniker)|Recupera el moniker del control. La implementación de ATL devuelve E_NOTIMPL.|
+|[IOleObjectImpl::GetMoniker](#getmoniker)|Recupera el apodo del control. La implementación de ATL devuelve E_NOTIMPL.|
 |[IOleObjectImpl::GetUserClassID](#getuserclassid)|Recupera el identificador de clase del control.|
-|[IOleObjectImpl::GetUserType](#getusertype)|Recupera el nombre del tipo de usuario del control.|
+|[IOleObjectImpl::GetUserType](#getusertype)|Recupera el nombre de tipo de usuario del control.|
 |[IOleObjectImpl::InitFromData](#initfromdata)|Inicializa el control a partir de los datos seleccionados. La implementación de ATL devuelve E_NOTIMPL.|
-|[IOleObjectImpl::IsUpToDate](#isuptodate)|Comprueba si el control está actualizado. La implementación de ATL Devuelve S_OK.|
-|[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|Lo llama [DoVerbDiscardUndo](#doverbdiscardundo) después de descartar el estado de la operación de deshacer.|
-|[IOleObjectImpl::OnPostVerbHide](#onpostverbhide)|Llamado por [DoVerbHide](#doverbhide) una vez oculto el control.|
-|[IOleObjectImpl::OnPostVerbInPlaceActivate](#onpostverbinplaceactivate)|Lo llama [DoVerbInPlaceActivate](#doverbinplaceactivate) una vez que se activa el control en contexto.|
-|[IOleObjectImpl::OnPostVerbOpen](#onpostverbopen)|Lo llama [DoVerbOpen](#doverbopen) después de que el control se ha abierto para editarlo en una ventana independiente.|
-|[IOleObjectImpl::OnPostVerbShow](#onpostverbshow)|Lo llama [DoVerbShow](#doverbshow) una vez que se ha hecho visible el control.|
-|[IOleObjectImpl::OnPostVerbUIActivate](#onpostverbuiactivate)|Llamado por [DoVerbUIActivate](#doverbuiactivate) una vez activada la interfaz de usuario del control.|
-|[IOleObjectImpl::OnPreVerbDiscardUndo](#onpreverbdiscardundo)|Llamado por [DoVerbDiscardUndo](#doverbdiscardundo) antes de que se descarte el estado de deshacer.|
-|[IOleObjectImpl::OnPreVerbHide](#onpreverbhide)|Lo llama [DoVerbHide](#doverbhide) antes de que se oculte el control.|
-|[IOleObjectImpl::OnPreVerbInPlaceActivate](#onpreverbinplaceactivate)|Lo llama [DoVerbInPlaceActivate](#doverbinplaceactivate) antes de que se active el control en contexto.|
-|[IOleObjectImpl::OnPreVerbOpen](#onpreverbopen)|Lo llama [DoVerbOpen](#doverbopen) antes de que el control se haya abierto para editarlo en una ventana independiente.|
-|[IOleObjectImpl::OnPreVerbShow](#onpreverbshow)|Lo llama [DoVerbShow](#doverbshow) antes de que se haya hecho visible el control.|
-|[IOleObjectImpl::OnPreVerbUIActivate](#onpreverbuiactivate)|Lo llama [DoVerbUIActivate](#doverbuiactivate) antes de que se haya activado la interfaz de usuario del control.|
-|[IOleObjectImpl::SetClientSite](#setclientsite)|Indica al control sobre su sitio de cliente en el contenedor.|
-|[IOleObjectImpl::SetColorScheme](#setcolorscheme)|Recomienda una combinación de colores para la aplicación del control, si la hay. La implementación de ATL devuelve E_NOTIMPL.|
-|[IOleObjectImpl:: SetExtent](#setextent)|Establece la extensión del área de presentación del control.|
-|[IOleObjectImpl::SetHostNames](#sethostnames)|Indica al control los nombres de la aplicación contenedora y del documento contenedor.|
-|[IOleObjectImpl::SetMoniker](#setmoniker)|Indica al control cuál es su moniker. La implementación de ATL devuelve E_NOTIMPL.|
-|[IOleObjectImpl:: unaconseje](#unadvise)|Elimina una conexión de consulta con el control.|
-|[IOleObjectImpl:: Update](#update)|Actualiza el control. La implementación de ATL Devuelve S_OK.|
+|[IOleObjectImpl::IsUpToDate](#isuptodate)|Comprueba si el control está actualizado. La implementación de ATL devuelve S_OK.|
+|[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|Llamado por [DoVerbDiscardUndo](#doverbdiscardundo) después de que se descarta el estado de deshacer.|
+|[IOleObjectImpl::OnPostVerbHide](#onpostverbhide)|Llamado por [DoVerbHide](#doverbhide) después de que el control está oculto.|
+|[IOleObjectImpl::OnPostVerbInPlaceActivate](#onpostverbinplaceactivate)|Llamado por [DoVerbInPlaceActivate](#doverbinplaceactivate) después de que el control se activa en su lugar.|
+|[IOleObjectImpl::OnPostVerbOpen](#onpostverbopen)|Llamado por [DoVerbOpen](#doverbopen) después de que el control se ha abierto para su edición en una ventana independiente.|
+|[IOleObjectImpl::OnPostVerbShow](#onpostverbshow)|Llamado por [DoVerbShow](#doverbshow) después de que el control se ha hecho visible.|
+|[IOleObjectImpl::OnPostVerbUIActivate](#onpostverbuiactivate)|Llamado por [DoVerbUIActivate](#doverbuiactivate) después de que se ha activado la interfaz de usuario del control.|
+|[IOleObjectImpl::OnPreverbDiscardUndo](#onpreverbdiscardundo)|Llamado por [DoVerbDiscardUndo](#doverbdiscardundo) antes de que se descarte el estado de deshacer.|
+|[IOleObjectImpl::OnPreverbHide](#onpreverbhide)|Llamado por [DoVerbHide](#doverbhide) antes de que el control esté oculto.|
+|[IOleObjectImpl::OnPreverbInPlaceActivate](#onpreverbinplaceactivate)|Llamado por [DoVerbInPlaceActivate](#doverbinplaceactivate) antes de que el control se active en su lugar.|
+|[IOleObjectImpl::OnPreVerbOpen](#onpreverbopen)|Llamado por [DoVerbOpen](#doverbopen) antes de que el control se ha abierto para su edición en una ventana independiente.|
+|[IOleObjectImpl::OnPreVerbShow](#onpreverbshow)|Llamado por [DoVerbShow](#doverbshow) antes de que el control se haya hecho visible.|
+|[IOleObjectImpl::OnPreVerbUIActivate](#onpreverbuiactivate)|Llamado por [DoVerbUIActivate](#doverbuiactivate) antes de que se haya activado la interfaz de usuario del control.|
+|[IOleObjectImpl::SetClientSite](#setclientsite)|Indica el control sobre su sitio de cliente en el contenedor.|
+|[IOleObjectImpl::SetColorScheme](#setcolorscheme)|Recomienda un esquema de color a la aplicación del control, si existe. La implementación de ATL devuelve E_NOTIMPL.|
+|[IOleObjectImpl::SetExtent](#setextent)|Establece la extensión del área de visualización del control.|
+|[IOleObjectImpl::SetHostNames](#sethostnames)|Indica al control los nombres de la aplicación contenedora y el documento contenedor.|
+|[IOleObjectImpl::SetMoniker](#setmoniker)|Le dice al control cuál es su apodo. La implementación de ATL devuelve E_NOTIMPL.|
+|[IOleObjectImpl::Unadvise](#unadvise)|Elimina una conexión de aviso con el control.|
+|[IOleObjectImpl::Update](#update)|Actualiza el control. La implementación de ATL devuelve S_OK.|
 
 ## <a name="remarks"></a>Observaciones
 
-La interfaz [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) es la interfaz principal a través de la cual un contenedor se comunica con un control. La clase `IOleObjectImpl` proporciona una implementación predeterminada de esta interfaz e implementa `IUnknown` enviando información al dispositivo de volcado en las compilaciones de depuración.
+La interfaz [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) es la interfaz principal a través de la cual un contenedor se comunica con un control. Clase `IOleObjectImpl` proporciona una implementación predeterminada `IUnknown` de esta interfaz e implementa mediante el envío de información al dispositivo de volcado en compilaciones de depuración.
 
-**Artículos relacionados** [tutorial de ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)
+**Artículos relacionados** [Tutorial ATL](../../atl/active-template-library-atl-tutorial.md), [Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -136,11 +136,11 @@ La interfaz [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) es la i
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlctl. h
+**Encabezado:** atlctl.h
 
-##  <a name="advise"></a>IOleObjectImpl:: Advise
+## <a name="ioleobjectimpladvise"></a><a name="advise"></a>IOleObjectImpl::Advise
 
-Establece una conexión de consulta con el control.
+Establece una conexión de asesoramiento con el control.
 
 ```
 STDMETHOD(Advise)(
@@ -150,11 +150,11 @@ STDMETHOD(Advise)(
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) en el Windows SDK.
+Consulte [IOleObject::Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) en el Windows SDK.
 
-##  <a name="close"></a>IOleObjectImpl:: Close
+## <a name="ioleobjectimplclose"></a><a name="close"></a>IOleObjectImpl::Cerrar
 
-Cambia el estado del control de Running a Loaded.
+Cambia el estado del control de la ejecución a la carga.
 
 ```
 STDMETHOD(Close)(DWORD dwSaveOption);
@@ -162,13 +162,13 @@ STDMETHOD(Close)(DWORD dwSaveOption);
 
 ### <a name="remarks"></a>Observaciones
 
-Desactiva el control y destruye la ventana de control si existe. Si el miembro de datos de la clase de control [CComControlBase:: m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) es true y el parámetro *dwSaveOption* es OLECLOSE_SAVEIFDIRTY o OLECLOSE_PROMPTSAVE, las propiedades del control se guardan antes de cerrarse.
+Desactiva el control y destruye la ventana de control si existe. Si el miembro de datos de clase de control [CComControlBase::m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) es TRUE y el *dwSaveOption* parámetro es OLECLOSE_SAVEIFDIRTY o OLECLOSE_PROMPTSAVE, las propiedades del control se guardan antes de cerrar.
 
-Los punteros mantenidos en los miembros de datos de la clase de control [CComControlBase:: m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) y [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) se liberan, y los miembros de datos [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase:: m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)y [CComControlBase:: m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) se establecen en false.
+Los punteros mantenidos en los miembros de datos de la clase de control [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) y [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) se liberan y los miembros de datos [CComControlBase::m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)) y [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) se establecen en FALSE.
 
-Vea [IOleObject:: Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) en el Windows SDK.
+Consulte [IOleObject::Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) en el Windows SDK.
 
-##  <a name="doverb"></a>IOleObjectImpl::D oVerb
+## <a name="ioleobjectimpldoverb"></a><a name="doverb"></a>IOleObjectImpl::DoVerb
 
 Indica al control que realice una de sus acciones enumeradas.
 
@@ -184,24 +184,24 @@ STDMETHOD(DoVerb)(
 
 ### <a name="remarks"></a>Observaciones
 
-Dependiendo del valor de `iVerb`, una de las funciones auxiliares de `DoVerb` ATL se denomina de la siguiente manera:
+Dependiendo del valor `iVerb`de , se `DoVerb` llama a una de las funciones auxiliares de ATL de la siguiente manera:
 
-|*iVerb* Valor|Función auxiliar Doverb denominada|
+|*iVerb* Valor|Función auxiliar DoVerb llamada|
 |-------------------|-----------------------------------|
 |OLEIVERB_DISCARDUNDOSTATE|[DoVerbDiscardUndo](#doverbdiscardundo)|
 |OLEIVERB_HIDE|[DoVerbHide](#doverbhide)|
 |OLEIVERB_INPLACEACTIVATE|[DoVerbInPlaceActivate](#doverbinplaceactivate)|
 |OLEIVERB_OPEN|[DoVerbOpen](#doverbopen)|
 |OLEIVERB_PRIMARY|[DoVerbPrimary](#doverbprimary)|
-|OLEIVERB_PROPERTIES|[CComControlBase::D oVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
+|OLEIVERB_PROPERTIES|[CComControlBase::DoVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|
 
-Vea [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) en el Windows SDK.
+Consulte [IOleObject::DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) en el Windows SDK.
 
-##  <a name="doverbdiscardundo"></a>IOleObjectImpl::D oVerbDiscardUndo
+## <a name="ioleobjectimpldoverbdiscardundo"></a><a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo
 
-Indica al control que descarte cualquier estado de deshacer que está manteniendo.
+Indica al control que descarte cualquier estado de deshacer que esté manteniendo.
 
 ```
 HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
@@ -210,16 +210,16 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="parameters"></a>Parámetros
 
 *prcPosRec*<br/>
-de Puntero al rectángulo en el que el contenedor desea dibujar el control.
+[en] Puntero al rectángulo que el contenedor desea que el control se dibuje en.
 
 *hwndParent*<br/>
-de Identificador de la ventana que contiene el control.
+[en] Identificador de la ventana que contiene el control.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve S_OK.
 
-##  <a name="doverbhide"></a>IOleObjectImpl::D oVerbHide
+## <a name="ioleobjectimpldoverbhide"></a><a name="doverbhide"></a>IOleObjectImpl::DoVerbHide
 
 Desactiva y quita la interfaz de usuario del control y oculta el control.
 
@@ -230,16 +230,16 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="parameters"></a>Parámetros
 
 *prcPosRec*<br/>
-de Puntero al rectángulo en el que el contenedor desea dibujar el control.
+[en] Puntero al rectángulo que el contenedor desea que el control se dibuje en.
 
 *hwndParent*<br/>
-de Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
+[en] Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve S_OK.
 
-##  <a name="doverbinplaceactivate"></a>IOleObjectImpl::D oVerbInPlaceActivate
+## <a name="ioleobjectimpldoverbinplaceactivate"></a><a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate
 
 Ejecuta el control e instala su ventana, pero no instala la interfaz de usuario del control.
 
@@ -250,10 +250,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="parameters"></a>Parámetros
 
 *prcPosRec*<br/>
-de Puntero al rectángulo en el que el contenedor desea dibujar el control.
+[en] Puntero al rectángulo que el contenedor desea que el control se dibuje en.
 
 *hwndParent*<br/>
-de Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
+[en] Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -261,11 +261,11 @@ Uno de los valores HRESULT estándar.
 
 ### <a name="remarks"></a>Observaciones
 
-Activa el control en contexto mediante una llamada a [CComControlBase:: InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). A menos que el miembro de datos de la clase de control `m_bWindowOnly` sea TRUE, `DoVerbInPlaceActivate` primero intenta activar el control como un control sin ventana (solo es posible si el contenedor admite [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Si se produce un error, la función intenta activar el control con características extendidas (posible únicamente si el contenedor admite [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Si se produce un error, la función intenta activar el control sin características extendidas (solo es posible si el contenedor admite [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). Si la activación se realiza correctamente, la función notifica al contenedor que se ha activado el control.
+Activa el control en su lugar mediante una llamada a [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). A menos que el `m_bWindowOnly` miembro de `DoVerbInPlaceActivate` datos de la clase de control sea TRUE, primero intenta activar el control como un control sin ventanas (posible solo si el contenedor admite [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Si se produce un error, la función intenta activar el control con características extendidas (solo es posible si el contenedor admite [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Si se produce un error, la función intenta activar el control sin características extendidas (solo es posible si el contenedor admite [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). Si la activación se realiza correctamente, la función notifica al contenedor que se ha activado el control.
 
-##  <a name="doverbopen"></a>IOleObjectImpl::D oVerbOpen
+## <a name="ioleobjectimpldoverbopen"></a><a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen
 
-Hace que el control esté abierto y editado en una ventana independiente.
+Hace que el control se edite abiertamente en una ventana independiente.
 
 ```
 HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
@@ -274,18 +274,18 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="parameters"></a>Parámetros
 
 *prcPosRec*<br/>
-de Puntero al rectángulo en el que el contenedor desea dibujar el control.
+[en] Puntero al rectángulo que el contenedor desea que el control se dibuje en.
 
 *hwndParent*<br/>
-de Identificador de la ventana que contiene el control.
+[en] Identificador de la ventana que contiene el control.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve S_OK.
 
-##  <a name="doverbprimary"></a>IOleObjectImpl::D oVerbPrimary
+## <a name="ioleobjectimpldoverbprimary"></a><a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary
 
-Define la acción que se realiza cuando el usuario hace doble clic en el control.
+Define la acción realizada cuando el usuario hace doble clic en el control.
 
 ```
 HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
@@ -294,10 +294,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ### <a name="parameters"></a>Parámetros
 
 *prcPosRec*<br/>
-de Puntero al rectángulo en el que el contenedor desea dibujar el control.
+[en] Puntero al rectángulo que el contenedor desea que el control se dibuje en.
 
 *hwndParent*<br/>
-de Identificador de la ventana que contiene el control.
+[en] Identificador de la ventana que contiene el control.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -305,11 +305,11 @@ Uno de los valores HRESULT estándar.
 
 ### <a name="remarks"></a>Observaciones
 
-De forma predeterminada, se establece para mostrar las páginas de propiedades. Puede invalidar esto en la clase de control para invocar un comportamiento diferente al hacer doble clic; por ejemplo, reproduzca un vídeo o vaya activo.
+De forma predeterminada, se establece para mostrar las páginas de propiedades. Puede invalidar esto en la clase de control para invocar un comportamiento diferente al hacer doble clic; por ejemplo, reproducir un vídeo o ir activo en el lugar.
 
-##  <a name="doverbshow"></a>IOleObjectImpl::D oVerbShow
+## <a name="ioleobjectimpldoverbshow"></a><a name="doverbshow"></a>IOleObjectImpl::DoVerbShow
 
-Indica al contenedor que haga que el control sea visible.
+Indica al contenedor que haga visible el control.
 
 ```
 HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -318,18 +318,18 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="parameters"></a>Parámetros
 
 *prcPosRec*<br/>
-de Puntero al rectángulo en el que el contenedor desea dibujar el control.
+[en] Puntero al rectángulo que el contenedor desea que el control se dibuje en.
 
 *hwndParent*<br/>
-de Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
+[en] Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Uno de los valores HRESULT estándar.
 
-##  <a name="doverbuiactivate"></a>IOleObjectImpl::D oVerbUIActivate
+## <a name="ioleobjectimpldoverbuiactivate"></a><a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate
 
-Activa la interfaz de usuario del control y notifica al contenedor que sus menús se van a reemplazar por menús compuestos.
+Activa la interfaz de usuario del control y notifica al contenedor que sus menús se reemplazan por menús compuestos.
 
 ```
 HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -338,18 +338,18 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="parameters"></a>Parámetros
 
 *prcPosRec*<br/>
-de Puntero al rectángulo en el que el contenedor desea dibujar el control.
+[en] Puntero al rectángulo que el contenedor desea que el control se dibuje en.
 
 *hwndParent*<br/>
-de Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
+[en] Identificador de la ventana que contiene el control. No se utiliza en la implementación de ATL.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Uno de los valores HRESULT estándar.
 
-##  <a name="enumadvise"></a>IOleObjectImpl::EnumAdvise
+## <a name="ioleobjectimplenumadvise"></a><a name="enumadvise"></a>IOleObjectImpl::EnumAdvise
 
-Proporciona una enumeración de conexiones de consulta registradas para este control.
+Proporciona una enumeración de conexiones de aviso registradas para este control.
 
 ```
 STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
@@ -357,11 +357,11 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: EnumAdvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) en el Windows SDK.
+Consulte [IOleObject::EnumAdvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) en el Windows SDK.
 
-##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs
+## <a name="ioleobjectimplenumverbs"></a><a name="enumverbs"></a>IOleObjectImpl::EnumVerbs
 
-Proporciona una enumeración de acciones registradas (verbos) para este control llamando a `OleRegEnumVerbs`.
+Proporciona una enumeración de acciones registradas (verbos) para este control mediante una llamada a `OleRegEnumVerbs`.
 
 ```
 STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
@@ -369,13 +369,13 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ### <a name="remarks"></a>Observaciones
 
-Puede Agregar verbos al archivo. RGS del proyecto. Por ejemplo, vea CIRCCTL. RGS en el ejemplo [Circ](../../overview/visual-cpp-samples.md) .
+Puede agregar verbos al archivo .rgs del proyecto. Por ejemplo, consulte CIRCCTL. RGS en la muestra [CIRC.](../../overview/visual-cpp-samples.md)
 
-Vea [IOleObject:: EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) en el Windows SDK.
+Consulte [IOleObject::EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) en el Windows SDK.
 
-##  <a name="getclientsite"></a>IOleObjectImpl::GetClientSite
+## <a name="ioleobjectimplgetclientsite"></a><a name="getclientsite"></a>IOleObjectImpl::GetClientSite
 
-Coloca el puntero en el miembro de datos de la clase de control [CComControlBase:: m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) en *ppClientSite* e incrementa el recuento de referencias en el puntero.
+Coloca el puntero en el miembro de datos de clase de control [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) en *ppClientSite* e incrementa el recuento de referencias en el puntero.
 
 ```
 STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
@@ -383,11 +383,11 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: GetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) en el Windows SDK.
+Consulte [IOleObject::GetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) en el Windows SDK.
 
-##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData
+## <a name="ioleobjectimplgetclipboarddata"></a><a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData
 
-Recupera los datos del portapapeles.
+Recupera datos del Portapapeles.
 
 ```
 STDMETHOD(GetClipboardData)(
@@ -401,11 +401,11 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: GetClipboardData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) en el Windows SDK.
+Consulte [IOleObject::GetClipboardData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) en el Windows SDK.
 
-##  <a name="getextent"></a>IOleObjectImpl::GetExtent
+## <a name="ioleobjectimplgetextent"></a><a name="getextent"></a>IOleObjectImpl::GetExtent
 
-Recupera el tamaño de presentación de un control en ejecución en unidades HIMETRIC (0,01 milímetro por unidad).
+Recupera el tamaño de visualización de un control en ejecución en unidades HIMETRIC (0,01 milímetros por unidad).
 
 ```
 STDMETHOD(GetExtent)(
@@ -415,13 +415,13 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>Observaciones
 
-El tamaño se almacena en el miembro de datos de la clase de control [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
+El tamaño se almacena en el miembro de datos de clase de control [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
 
-Vea [IOleObject:: GetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) en el Windows SDK.
+Consulte [IOleObject::GetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) en el Windows SDK.
 
-##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus
+## <a name="ioleobjectimplgetmiscstatus"></a><a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus
 
-Devuelve un puntero a la información de estado registrada para el control mediante una llamada a `OleRegGetMiscStatus`.
+Devuelve un puntero a la información `OleRegGetMiscStatus`de estado registrada para el control mediante una llamada a .
 
 ```
 STDMETHOD(GetMiscStatus)(
@@ -431,13 +431,13 @@ STDMETHOD(GetMiscStatus)(
 
 ### <a name="remarks"></a>Observaciones
 
-La información de estado incluye los comportamientos que admiten los datos de presentación y de control. Puede agregar información de estado al archivo. RGS del proyecto.
+La información de estado incluye comportamientos admitidos por los datos de control y presentación. Puede agregar información de estado al archivo .rgs del proyecto.
 
-Vea [IOleObject:: GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) en el Windows SDK.
+Consulte [IOleObject::GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) en el Windows SDK.
 
-##  <a name="getmoniker"></a>IOleObjectImpl::GetMoniker
+## <a name="ioleobjectimplgetmoniker"></a><a name="getmoniker"></a>IOleObjectImpl::GetMoniker
 
-Recupera el moniker del control.
+Recupera el apodo del control.
 
 ```
 STDMETHOD(GetMoniker)(
@@ -452,9 +452,9 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: GetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) en el Windows SDK.
+Consulte [IOleObject::GetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) en el Windows SDK.
 
-##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID
+## <a name="ioleobjectimplgetuserclassid"></a><a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID
 
 Devuelve el identificador de clase del control.
 
@@ -464,11 +464,11 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: GetUserClassID](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) en el Windows SDK.
+Vea [IOleObject::GetUserClassID](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) en el Windows SDK.
 
-##  <a name="getusertype"></a>IOleObjectImpl::GetUserType
+## <a name="ioleobjectimplgetusertype"></a><a name="getusertype"></a>IOleObjectImpl::GetUserType
 
-Devuelve el nombre de tipo de usuario del control mediante una llamada a `OleRegGetUserType`.
+Devuelve el nombre de tipo de `OleRegGetUserType`usuario del control llamando a .
 
 ```
 STDMETHOD(GetUserType)(
@@ -478,11 +478,11 @@ STDMETHOD(GetUserType)(
 
 ### <a name="remarks"></a>Observaciones
 
-El nombre de tipo de usuario se usa para la presentación en elementos de interfaz de usuario como menús y cuadros de diálogo. Puede cambiar el nombre del tipo de usuario en el archivo. RGS del proyecto.
+El nombre de tipo de usuario se utiliza para mostrar en elementos de interfaces de usuario como menús y cuadros de diálogo. Puede cambiar el nombre de tipo de usuario en el archivo .rgs del proyecto.
 
-Vea [IOleObject:: GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) en el Windows SDK.
+Consulte [IOleObject::GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) en el Windows SDK.
 
-##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData
+## <a name="ioleobjectimplinitfromdata"></a><a name="initfromdata"></a>IOleObjectImpl::InitFromData
 
 Inicializa el control a partir de los datos seleccionados.
 
@@ -499,9 +499,9 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) en el Windows SDK.
+Consulte [IOleObject::InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) en el Windows SDK.
 
-##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate
+## <a name="ioleobjectimplisuptodate"></a><a name="isuptodate"></a>IOleObjectImpl::IsUpToDate
 
 Comprueba si el control está actualizado.
 
@@ -515,11 +515,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: IsUpToDate](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) en el Windows SDK.
+Consulte [IOleObject::IsUpToDate](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) en el Windows SDK.
 
-##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo
+## <a name="ioleobjectimplonpostverbdiscardundo"></a><a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo
 
-Lo llama [DoVerbDiscardUndo](#doverbdiscardundo) después de descartar el estado de la operación de deshacer.
+Llamado por [DoVerbDiscardUndo](#doverbdiscardundo) después de que se descarta el estado de deshacer.
 
 ```
 HRESULT OnPostVerbDiscardUndo();
@@ -531,11 +531,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide este método con el código que desea ejecutar después de descartar el estado de deshacer.
+Invalide este método con el código que desea ejecutar después de que se descarte el estado de deshacer.
 
-##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide
+## <a name="ioleobjectimplonpostverbhide"></a><a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide
 
-Llamado por [DoVerbHide](#doverbhide) una vez oculto el control.
+Llamado por [DoVerbHide](#doverbhide) después de que el control está oculto.
 
 ```
 HRESULT OnPostVerbHide();
@@ -547,11 +547,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide este método con el código que desea ejecutar después de que se oculte el control.
+Invalide este método con el código que desea ejecutar después de que el control está oculto.
 
-##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate
+## <a name="ioleobjectimplonpostverbinplaceactivate"></a><a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate
 
-Lo llama [DoVerbInPlaceActivate](#doverbinplaceactivate) una vez que se activa el control en contexto.
+Llamado por [DoVerbInPlaceActivate](#doverbinplaceactivate) después de que el control se activa en su lugar.
 
 ```
 HRESULT OnPostVerbInPlaceActivate();
@@ -563,11 +563,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide este método con el código que desea ejecutar después de activar el control en contexto.
+Invalide este método con el código que desea ejecutar después de activar el control en su lugar.
 
-##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen
+## <a name="ioleobjectimplonpostverbopen"></a><a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen
 
-Lo llama [DoVerbOpen](#doverbopen) después de que el control se ha abierto para editarlo en una ventana independiente.
+Llamado por [DoVerbOpen](#doverbopen) después de que el control se ha abierto para su edición en una ventana independiente.
 
 ```
 HRESULT OnPostVerbOpen();
@@ -579,11 +579,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide este método con el código que desea ejecutar después de que el control se haya abierto para editarlo en una ventana independiente.
+Invalide este método con el código que desea ejecutar después de que el control se ha abierto para su edición en una ventana independiente.
 
-##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow
+## <a name="ioleobjectimplonpostverbshow"></a><a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow
 
-Lo llama [DoVerbShow](#doverbshow) una vez que se ha hecho visible el control.
+Llamado por [DoVerbShow](#doverbshow) después de que el control se ha hecho visible.
 
 ```
 HRESULT OnPostVerbShow();
@@ -595,11 +595,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide este método con el código que desea ejecutar después de que se haya hecho visible el control.
+Invalide este método con el código que desea ejecutar después de que el control se ha hecho visible.
 
-##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate
+## <a name="ioleobjectimplonpostverbuiactivate"></a><a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate
 
-Llamado por [DoVerbUIActivate](#doverbuiactivate) una vez activada la interfaz de usuario del control.
+Llamado por [DoVerbUIActivate](#doverbuiactivate) después de que se ha activado la interfaz de usuario del control.
 
 ```
 HRESULT OnPostVerbUIActivate();
@@ -611,9 +611,9 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Invalide este método con el código que desea ejecutar después de que se haya activado la interfaz de usuario del control.
+Invalide este método con el código que desea ejecutar después de activar la interfaz de usuario del control.
 
-##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo
+## <a name="ioleobjectimplonpreverbdiscardundo"></a><a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreverbDiscardUndo
 
 Llamado por [DoVerbDiscardUndo](#doverbdiscardundo) antes de que se descarte el estado de deshacer.
 
@@ -627,11 +627,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Para evitar que se descarte el estado de deshacer, Invalide este método para devolver un error HRESULT.
+Para evitar que se descarte el estado de deshacer, invalide este método para devolver un error HRESULT.
 
-##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide
+## <a name="ioleobjectimplonpreverbhide"></a><a name="onpreverbhide"></a>IOleObjectImpl::OnPreverbHide
 
-Lo llama [DoVerbHide](#doverbhide) antes de que se oculte el control.
+Llamado por [DoVerbHide](#doverbhide) antes de que el control esté oculto.
 
 ```
 HRESULT OnPreVerbHide();
@@ -643,11 +643,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Para evitar que se oculte el control, Invalide este método para devolver un error HRESULT.
+Para evitar que el control se osintie, invalide este método para devolver un error HRESULT.
 
-##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate
+## <a name="ioleobjectimplonpreverbinplaceactivate"></a><a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreverbInPlaceActivate
 
-Lo llama [DoVerbInPlaceActivate](#doverbinplaceactivate) antes de que se active el control en contexto.
+Llamado por [DoVerbInPlaceActivate](#doverbinplaceactivate) antes de que el control se active en su lugar.
 
 ```
 HRESULT OnPreVerbInPlaceActivate();
@@ -659,11 +659,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Para evitar que el control se active en su lugar, Invalide este método para devolver un error HRESULT.
+Para evitar que el control se active en su lugar, invalide este método para devolver un error HRESULT.
 
-##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen
+## <a name="ioleobjectimplonpreverbopen"></a><a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen
 
-Lo llama [DoVerbOpen](#doverbopen) antes de que el control se haya abierto para editarlo en una ventana independiente.
+Llamado por [DoVerbOpen](#doverbopen) antes de que el control se ha abierto para su edición en una ventana independiente.
 
 ```
 HRESULT OnPreVerbOpen();
@@ -675,11 +675,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Para evitar que el control se abra para su edición en una ventana independiente, Invalide este método para devolver un error HRESULT.
+Para evitar que el control se abra para su edición en una ventana independiente, invalide este método para devolver un error HRESULT.
 
-##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow
+## <a name="ioleobjectimplonpreverbshow"></a><a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow
 
-Lo llama [DoVerbShow](#doverbshow) antes de que se haya hecho visible el control.
+Llamado por [DoVerbShow](#doverbshow) antes de que el control se haya hecho visible.
 
 ```
 HRESULT OnPreVerbShow();
@@ -691,11 +691,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Para evitar que el control se haga visible, Invalide este método para devolver un error HRESULT.
+Para evitar que el control se haga visible, invalide este método para devolver un error HRESULT.
 
-##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate
+## <a name="ioleobjectimplonpreverbuiactivate"></a><a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate
 
-Lo llama [DoVerbUIActivate](#doverbuiactivate) antes de que se haya activado la interfaz de usuario del control.
+Llamado por [DoVerbUIActivate](#doverbuiactivate) antes de que se haya activado la interfaz de usuario del control.
 
 ```
 HRESULT OnPreVerbUIActivate();
@@ -707,11 +707,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Para evitar que la interfaz de usuario del control se active, Invalide este método para devolver un error HRESULT.
+Para evitar que se active la interfaz de usuario del control, invalide este método para devolver un error HRESULT.
 
-##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite
+## <a name="ioleobjectimplsetclientsite"></a><a name="setclientsite"></a>IOleObjectImpl::SetClientSite
 
-Indica al control sobre su sitio de cliente en el contenedor.
+Indica el control sobre su sitio de cliente en el contenedor.
 
 ```
 STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
@@ -719,13 +719,13 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 
 ### <a name="remarks"></a>Observaciones
 
-Después, el método devuelve S_OK.
+A continuación, el método devuelve S_OK.
 
-Vea [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) en el Windows SDK.
+Consulte [IOleObject::SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) en el Windows SDK.
 
-##  <a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme
+## <a name="ioleobjectimplsetcolorscheme"></a><a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme
 
-Recomienda una combinación de colores para la aplicación del control, si la hay.
+Recomienda un esquema de color a la aplicación del control, si existe.
 
 ```
 STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
@@ -737,11 +737,11 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) en el Windows SDK.
+Consulte [IOleObject::SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) en el Windows SDK.
 
-##  <a name="setextent"></a>IOleObjectImpl:: SetExtent
+## <a name="ioleobjectimplsetextent"></a><a name="setextent"></a>IOleObjectImpl::SetExtent
 
-Establece la extensión del área de presentación del control.
+Establece la extensión del área de visualización del control.
 
 ```
 STDMETHOD(SetExtent)(
@@ -751,17 +751,17 @@ STDMETHOD(SetExtent)(
 
 ### <a name="remarks"></a>Observaciones
 
-De lo contrario, `SetExtent` almacena el valor al que apunta `psizel` en el miembro de datos de la clase de control [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Este valor se encuentra en unidades HIMETRIC (0,01 milímetro por unidad).
+De `SetExtent` lo contrario, almacena `psizel` el valor al que apunta el miembro de datos de clase de control [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Este valor está en unidades HIMETRIC (0,01 milímetros por unidad).
 
-Si el miembro de datos de la clase de control [CComControlBase:: m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) es TRUE, `SetExtent` también almacena el valor al que apunta `psizel` en el miembro de datos de la clase de control [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
+Si el miembro de datos de clase de `SetExtent` control [CComControlBase::m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) es TRUE, también almacena el valor al que apunta `psizel` el miembro de datos de clase de control [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
 
-Si el miembro de datos de la clase de control [CComControlBase:: m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) es TRUE, `SetExtent` llama a `SendOnDataChange` y `SendOnViewChange` para notificar a todos los receptores de consulta registrados con el titular de la notificación de que el tamaño del control ha cambiado.
+Si el miembro de datos de clase de `SetExtent` control `SendOnDataChange` `SendOnViewChange` [CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) es TRUE, llama y para notificar a todos los receptores de aviso registrados con el titular de advertencia que el tamaño del control ha cambiado.
 
-Consulte [IOleObject:: SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) en el Windows SDK.
+Consulte [IOleObject::SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) en el Windows SDK.
 
-##  <a name="sethostnames"></a>IOleObjectImpl::SetHostNames
+## <a name="ioleobjectimplsethostnames"></a><a name="sethostnames"></a>IOleObjectImpl::SetHostNames
 
-Indica al control los nombres de la aplicación contenedora y del documento contenedor.
+Indica al control los nombres de la aplicación contenedora y el documento contenedor.
 
 ```
 STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainerObj */);
@@ -773,11 +773,11 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) en el Windows SDK.
+Consulte [IOleObject::SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) en el Windows SDK.
 
-##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker
+## <a name="ioleobjectimplsetmoniker"></a><a name="setmoniker"></a>IOleObjectImpl::SetMoniker
 
-Indica al control cuál es su moniker.
+Le dice al control cuál es su apodo.
 
 ```
 STDMETHOD(SetMoniker)(
@@ -791,11 +791,11 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) en el Windows SDK.
+Consulte [IOleObject::SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) en el Windows SDK.
 
-##  <a name="unadvise"></a>IOleObjectImpl:: unaconseje
+## <a name="ioleobjectimplunadvise"></a><a name="unadvise"></a>IOleObjectImpl::Unadvise
 
-Elimina la conexión de consulta almacenada en el miembro de datos `m_spOleAdviseHolder` de la clase de control.
+Elimina la conexión de aviso almacenada `m_spOleAdviseHolder` en el miembro de datos de la clase de control.
 
 ```
 STDMETHOD(Unadvise)(DWORD dwConnection);
@@ -803,9 +803,9 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: unvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) en el Windows SDK.
+Consulte [IOleObject::Unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) en el Windows SDK.
 
-##  <a name="update"></a>IOleObjectImpl:: Update
+## <a name="ioleobjectimplupdate"></a><a name="update"></a>IOleObjectImpl::Update
 
 Actualiza el control.
 
@@ -819,10 +819,10 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Observaciones
 
-Vea [IOleObject:: Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) en el Windows SDK.
+Consulte [IOleObject::Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) en el Windows SDK.
 
 ## <a name="see-also"></a>Consulte también
 
-[CComControl (clase)](../../atl/reference/ccomcontrol-class.md)<br/>
+[Clase CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Interfaces de controles ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
-[Información general sobre clases](../../atl/atl-class-overview.md)
+[Información general de clases](../../atl/atl-class-overview.md)

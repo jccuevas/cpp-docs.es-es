@@ -1,8 +1,9 @@
 ---
 title: _aligned_free
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_free
+- _o__aligned_free
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: 0fa28be550050a7eec2a515cfb47d98fb26591d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6e5f0dcd0bbea436ecdad7abb1fd6fc948f80dc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170974"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350716"
 ---
 # <a name="_aligned_free"></a>_aligned_free
 
@@ -52,9 +54,11 @@ Puntero al bloque de memoria que se devolvió a las funciones `_aligned_malloc` 
 
 ## <a name="remarks"></a>Observaciones
 
-**_aligned_free** está marcado como `__declspec(noalias)`, lo que significa que se garantiza que la función no modifica las variables globales. Para obtener más información, consulte [noalias](../../cpp/noalias.md).
+**_aligned_free** está `__declspec(noalias)`marcada, lo que significa que se garantiza que la función no modifique las variables globales. Para obtener más información, consulte [noalias](../../cpp/noalias.md).
 
-Esta función no valida su parámetro, a diferencia de las demás funciones _aligned de CRT. Si *memblock* es un puntero nulo, esta función simplemente no realiza ninguna acción. No modifica `errno` ni invoca al controlador de parámetros no válidos. Si se produce un error en la función debido a que no usa funciones _aligned previamente para asignar el bloque de memoria o se produce un error de alineación de memoria debido a algún desastre imprevisto, la función genera un informe de depuración de [_RPT, _RPTF, _RPTW, _RPTFW (Macros)](rpt-rptf-rptw-rptfw-macros.md).
+Esta función no valida su parámetro, a diferencia de las demás funciones _aligned de CRT. Si *memblock* es un puntero NULL, esta función simplemente no realiza ninguna acción. No modifica `errno` ni invoca al controlador de parámetros no válidos. Si se produce un error en la función debido a que no usa funciones _aligned previamente para asignar el bloque de memoria o se produce un error de alineación de memoria debido a algún desastre imprevisto, la función genera un informe de depuración de [_RPT, _RPTF, _RPTW, _RPTFW (Macros)](rpt-rptf-rptw-rptfw-macros.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

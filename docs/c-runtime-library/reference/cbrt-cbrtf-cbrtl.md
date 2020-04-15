@@ -1,10 +1,12 @@
 ---
 title: cbrt, cbrtf, cbrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cbrt
 - cbrtf
 - cbrtl
+- _o_cbrt
+- _o_cbrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939287"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333567"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -63,20 +66,22 @@ long double cbrtl(
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **cbrt (** devuelven la raíz del cubo de *x*.
+Las funciones **cbrt** devuelven la raíz de cubo de *x*.
 
-|Entrada|Excepción SEH|**_matherr** Excepcional|
+|Entrada|Excepción SEH|**_matherr** Excepción|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|ninguna|ninguna|
+|± ∞, QNAN, IND|None|None|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **cbrt (** que toman tipos **float** o **Long** **Double** . En un programa de C, **cbrt (** siempre toma y devuelve **Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **cbrt** que toman **tipos float** o **long** **double.** En un programa C, **cbrt** siempre toma y devuelve **double**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,7 +89,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **cbrt (
 |--------------|--------------|------------------|
 |**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -110,7 +115,7 @@ int main( void )
 The cube root of -64.64 is -4.013289
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

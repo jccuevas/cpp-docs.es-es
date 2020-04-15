@@ -1,9 +1,11 @@
 ---
 title: _spawnve, _wspawnve
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _spawnve
 - _wspawnve
+- _o__spawnve
+- _o__wspawnve
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 37f8b6737fbd2b36c1482790a34dc386936b704b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 0f546185039bb1503af40d5f690fd8d8c172a679
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442716"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355865"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve, _wspawnve
 
@@ -66,26 +69,26 @@ intptr_t _wspawnve(
 
 ### <a name="parameters"></a>Parámetros
 
-*mode*<br/>
+*Modo*<br/>
 Modo de ejecución para un proceso de llamada.
 
 *cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
-*argv*<br/>
-Matriz de punteros a argumentos. El argumento *argv*[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido, y *argv*[1] a *argv*[**n**] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento *argv*[**n** + 1] debe ser un puntero **nulo** para marcar el final de la lista de argumentos.
+*Argv*<br/>
+Matriz de punteros a argumentos. El argumento *argv*[0] suele ser un puntero a una ruta de acceso en modo real o al nombre del programa en modo protegido, y *argv*[1] a *argv*[**n**] son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. El argumento *argv*[**n** +1] debe ser un puntero **NULL** para marcar el final de la lista de argumentos.
 
 *envp*<br/>
 Matriz de punteros a la configuración del entorno.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de una **_spawnve** o **_wspawnve** sincrónica ( **_P_WAIT** especificado para el *modo*) es el estado de salida del nuevo proceso. El valor devuelto de una **_spawnve** o **_wspawnve** asincrónica ( **_P_NOWAIT** o **_P_NOWAITO** especificados para el *modo*) es el identificador del proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la rutina de **salida** con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de-1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los valores siguientes.
+El valor devuelto de un **_spawnve** sincrónico o **_wspawnve** **(_P_WAIT** especificado para el *modo)* es el estado de salida del nuevo proceso. El valor devuelto de un **_spawnve** asincrónico o **_wspawnve** (**_P_NOWAIT** o **_P_NOWAITO** especificado para el *modo*) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la rutina de **salida** con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los siguientes valores.
 
 |||
 |-|-|
 | **E2BIG** | La lista de argumentos supera los 1024 bytes. |
-| **EINVAL** | el argumento del *modo* no es válido. |
+| **EINVAL** | *argumento mode* no es válido. |
 | **ENOENT** | El archivo o la ruta de acceso no se encuentra. |
 | **ENOEXEC** | El archivo especificado no es ejecutable o no tiene un formato de archivo ejecutable válido. |
 | **ENOMEM** | Memoria insuficiente para ejecutar el nuevo proceso. |
@@ -96,7 +99,9 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 Cada una de estas funciones crea y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno.
 
-Estas funciones validan sus parámetros. Si *cmdname* o *argv* es un puntero nulo, o si *argv* apunta a un puntero nulo, o *argv*[0] es una cadena vacía, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL**y devuelven-1. No se genera ningún proceso nuevo.
+Estas funciones validan sus parámetros. Si *cmdname* o *argv* es un puntero nulo, o si *argv* apunta a puntero nulo, o *argv*[0] es una cadena vacía, se invoca el controlador de parámetros no válidos, como se describe en [Validación](../../c-runtime-library/parameter-validation.md)de parámetros . Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,19 +110,19 @@ Estas funciones validan sus parámetros. Si *cmdname* o *argv* es un puntero nul
 |**_spawnve**|\<stdio.h> o \<process.h>|
 |**_wspawnve**|\<stdio.h> o \<wchar.h>|
 
-Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
-Vea el ejemplo de [_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md).
+Consulte el ejemplo de [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 
 ## <a name="see-also"></a>Consulte también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[Control de Procesos y Medio Ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_spawn, funciones _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[Aborta](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec (funciones)](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
