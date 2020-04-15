@@ -1,8 +1,9 @@
 ---
 title: _pipe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pipe
+- _o__pipe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: bd0107fac28deef94716ff0ce65dd5423a1ececa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5bac435bed26decee0069f5814d1f3d25a54470a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951002"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338495"
 ---
 # <a name="_pipe"></a>_pipe
 
@@ -65,33 +67,35 @@ Modo de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la operación se realiza correctamente, devuelve 0. Devuelve-1 para indicar un error. En el error, **errno** se establece en uno de estos valores:
+Si la operación se realiza correctamente, devuelve 0. Devuelve -1 para indicar un error. En el error, **errno** se fija a uno de estos valores:
 
 - **EMFILE**, que indica que no hay más descriptores de archivo disponibles.
 
-- **Enfile**, que indica un desbordamiento de tabla de archivo de sistema.
+- **ENFILE**, que indica un desbordamiento de tabla de archivos del sistema.
 
-- **EINVAL**, que indica que la matriz *PFD* es un puntero nulo o que se ha pasado un valor no válido para *textmode* .
+- **EINVAL**, que indica que la matriz *pfds* es un puntero nulo o que se ha pasado un valor no válido para *el modo de texto.*
 
-Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre estos y otros códigos devueltos, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_pipe** crea una *canalización*, que es un canal de e/s artificial que un programa usa para pasar información a otros programas. Una canalización se parece a un archivo porque tiene un puntero de archivo, un descriptor de archivo, o las dos cosas, y con se puede leer o escribir mediante las funciones de entrada y salida estándar de la biblioteca estándar. Sin embargo, una canalización no representa un archivo o un dispositivo específico. En lugar de ello, representa almacenamiento temporal en memoria que es independiente de la propia memoria del programa y que el sistema operativo controla totalmente.
+La función **_pipe** crea una *tubería,* que es un canal de E/S artificial que un programa utiliza para pasar información a otros programas. Una canalización se parece a un archivo porque tiene un puntero de archivo, un descriptor de archivo, o las dos cosas, y con se puede leer o escribir mediante las funciones de entrada y salida estándar de la biblioteca estándar. Sin embargo, una canalización no representa un archivo o un dispositivo específico. En lugar de ello, representa almacenamiento temporal en memoria que es independiente de la propia memoria del programa y que el sistema operativo controla totalmente.
 
-**_pipe** es similar a _ **Open** , pero abre la canalización para lectura y escritura, y devuelve dos descriptores de archivo en lugar de uno. El programa puede usar los dos extremos de la canalización, o cerrar la que no necesita. Por ejemplo, el procesador de comandos de Windows crea una canalización cuando ejecuta un comando como **PROGRAM1** | **PROGRAM2**.
+**_pipe** se asemeja **a _open** pero abre la canalización para leer y escribir y devuelve dos descriptores de archivo en lugar de uno. El programa puede usar los dos extremos de la canalización, o cerrar la que no necesita. Por ejemplo, el procesador de comandos de Windows crea una canalización cuando ejecuta un comando como **PROGRAM1** | **PROGRAM2**.
 
-El descriptor de salida estándar de **PROGRAM1** se adjunta al descriptor de escritura de la canalización. El descriptor de entrada estándar de **PROGRAM2** se adjunta al descriptor de lectura de la canalización. Así no es necesario crear archivos temporales para pasar información a otros programas.
+El descriptor de salida estándar de **PROGRAM1** se adjunta al descriptor de escritura de la canalización. El descriptor de entrada estándar de **PROGRAM2** se adjunta al descriptor de lectura de la tubería. Así no es necesario crear archivos temporales para pasar información a otros programas.
 
-La función **_pipe** devuelve dos descriptores de archivo a la canalización en el argumento *PFD* . El elemento *PFD*[0] contiene el descriptor de lectura y el elemento *PFD*[1] contiene el descriptor de escritura. Los descriptores de archivo de canalización se usan de la misma forma que otros descriptores de archivo. (Las funciones de entrada y salida de nivel inferior _ **Read** y _ **Write** pueden leer y escribir en una canalización). Para detectar la condición de final de canalización, compruebe si hay una solicitud _ **Read** que devuelve 0 como el número de bytes leídos.
+La función **_pipe** devuelve dos descriptores de archivo a la canalización en el argumento *pfds.* El elemento *pfds*[0] contiene el descriptor de lectura y el elemento *pfds*[1] contiene el descriptor de escritura. Los descriptores de archivo de canalización se usan de la misma forma que otros descriptores de archivo. (Las funciones de entrada y salida de bajo nivel **_read** y **_write** pueden leer y escribir en una tubería.) Para detectar la condición de fin de tubería, compruebe si hay una solicitud **de _read** que devuelve 0 como el número de bytes leídos.
 
-El argumento *psize* especifica la cantidad de memoria, en bytes, que se va a reservar para la canalización. El argumento *textmode* especifica el modo de traducción de la canalización. La constante de manifiesto **_O_TEXT** especifica una traducción de texto y la constante **_O_BINARY** especifica la traducción binaria. (Vea [fopen, _wfopen](fopen-wfopen.md) para ver una descripción de los modos de texto y binario.) Si el argumento *textmode* es 0, **_pipe** usa el modo de traducción predeterminado especificado por la variable de modo predeterminado [_fmode](../../c-runtime-library/fmode.md).
+El argumento *psize* especifica la cantidad de memoria, en bytes, que se debe reservar para la canalización. El argumento *textmode* especifica el modo de traducción de la tubería. La constante de manifiesto **_O_TEXT** especifica una traducción de texto y la constante **_O_BINARY** especifica la traducción binaria. (Véase [fopen, _wfopen](fopen-wfopen.md) para obtener una descripción de los modos de texto y binario.) Si el argumento *textmode* es 0, **_pipe** utiliza el modo de traducción predeterminado especificado por la variable de modo predeterminado [_fmode](../../c-runtime-library/fmode.md).
 
-En programas multiproceso, no se realiza ningún bloqueo. Los descriptores de archivo que se devuelven se abren recientemente y no se debe hacer referencia a ellos en ningún subproceso hasta que se complete la llamada **_pipe** .
+En programas multiproceso, no se realiza ningún bloqueo. Los descriptores de archivo que se devuelven se abren recientemente y ningún subproceso debe hacer referencia hasta que se complete la **llamada _pipe.**
 
-Para usar la función **_pipe** para la comunicación entre un proceso primario y un proceso secundario, cada proceso solo debe tener un descriptor abierto en la canalización. Los descriptores deben ser opuestos: si el elemento primario tiene un descriptor de lectura abierto, el elemento secundario debe tener abierto un descriptor de escritura. La forma más fácil de hacerlo es a OR bit a **|** bit () la marca **_O_NOINHERIT** con *textmode*. A continuación, use **_dup** o **_dup2** para crear una copia heredable del descriptor de canalización que desee pasar al elemento secundario. Cierre el descriptor original y, a continuación, genere el proceso secundario. Después de la llamada de generación, cierre el descriptor duplicado en el proceso primario. Para obtener más información, vea el ejemplo 2 que figura más adelante en este artículo.
+Para utilizar la función **_pipe** para comunicarse entre un proceso primario y un proceso secundario, cada proceso debe tener solo un descriptor abierto en la canalización. Los descriptores deben ser opuestos: si el elemento primario tiene un descriptor de lectura abierto, el elemento secundario debe tener abierto un descriptor de escritura. La forma más fácil de hacerlo es**|** bit a bit o ( ) el **indicador _O_NOINHERIT** con *textmode*. A continuación, utilice **_dup** o **_dup2** para crear una copia heredable del descriptor de canalización que desea pasar al elemento secundario. Cierre el descriptor original y, a continuación, genere el proceso secundario. Después de la llamada de generación, cierre el descriptor duplicado en el proceso primario. Para obtener más información, vea el ejemplo 2 que figura más adelante en este artículo.
 
-En el sistema operativo Windows, una canalización se destruye cuando se han cerrado todos sus descriptores. (Cuando se han cerrado todos los descriptores de lectura en la canalización, si se escribe en la canalización se produce un error). Todas las operaciones de lectura y escritura en la canalización esperan hasta que hay suficientes datos o suficiente espacio en búfer para llevar a cabo la solicitud de E/S.
+En el sistema operativo Windows, una canalización se destruye cuando se han cerrado todos sus descriptores. (Si se han cerrado todos los descriptores de lectura de la tubería, al escribir en la canalización se produce un error.) Todas las operaciones de lectura y escritura en la canalización esperan hasta que haya suficientes datos o suficiente espacio en el búfer para completar la solicitud de E/S.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -99,11 +103,11 @@ En el sistema operativo Windows, una canalización se destruye cuando se han cer
 |-------------|---------------------|---------------------|
 |**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
 
-1 para las definiciones de **_O_BINARY** y **_O_TEXT** .
+1 Para **definiciones de _O_BINARY** y **_O_TEXT.**
 
-2 definiciones de **errno** .
+2 definiciones **de errno.**
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 
@@ -343,7 +347,7 @@ This is speaker beep number 9...
 This is speaker beep number 10...
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Control de Procesos y Medio Ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

@@ -1,10 +1,13 @@
 ---
 title: round, roundf, roundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - round
 - roundl
 - roundf
+- _o_round
+- _o_roundf
+- _o_roundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337987"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -63,28 +67,30 @@ long double roundl(
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **Round** devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
+Las funciones **round** devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|• **QNAN**, **IND**|None|**_DOMAIN**|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **Round** que toman y devuelven valores **float** y **Long** **Double** . En un programa de C, **Round** siempre toma y devuelve un **valor Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **valores redondos** que toman y devuelven **float** y **long** **double.** En un programa C, **la ronda** siempre toma y devuelve un **doble**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|**round**, **roundf**, **roundl**|\<math.h>|
+|**redondo,** **redondo**, **redondo**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -122,7 +128,7 @@ roundl(2.500000) is 3
 roundl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

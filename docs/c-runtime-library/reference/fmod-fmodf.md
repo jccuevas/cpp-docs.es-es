@@ -1,10 +1,11 @@
 ---
 title: fmod, fmodf, fmodl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957076"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346557"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -75,13 +77,15 @@ Valores de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**FMOD** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **FMOD** devuelve un Nan silencioso. Para obtener información sobre la representación de un NaN silencioso por la familia **printf** , vea [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0.0, **fmod** devuelve un NaN silencioso. Para obtener información sobre la representación de un NaN silencioso por parte de la familia **printf,** consulte [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La **función FMOD** calcula el resto de punto flotante *f* de *x* / *y* como *x* = *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+La función **fmod** calcula el resto de punto flotante *f* de *x* / *y* de modo que *x* = *i* \* *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*, y el valor absoluto de *f* es menor que el valor absoluto de *y*.
 
-C++permite la sobrecarga, de modo que puede llamar a las sobrecargas de **FMOD** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **FMOD** siempre toma dos argumentos **Double** y devuelve un **valor Double**.
+C++ permite la sobrecarga, por lo que puede llamar a sobrecargas de **fmod** que toman y devuelven **valores float** y **long** **double.** En un programa C, **fmod** siempre toma dos argumentos **dobles** y devuelve un **double**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -89,7 +93,7 @@ C++permite la sobrecarga, de modo que puede llamar a las sobrecargas de **FMOD**
 |--------------|---------------------|
 |**fmod**, **fmodf**, **fmodl**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -113,7 +117,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: Estructura de EVENT_DATA
-description: El C++ SDK de Build insights EVENT_DATA referencia de estructura.
+title: estructura EVENT_DATA
+description: El SDK de C++ Build Insights EVENT_DATA referencia de estructura.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 572cbdaba346ddb77b665b5677b978c83a80aa3d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8ce396febe278c5e7c34fe170939c9522913f92a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422911"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325606"
 ---
-# <a name="event_data-structure"></a>Estructura de EVENT_DATA
+# <a name="event_data-structure"></a>estructura EVENT_DATA
 
 ::: moniker range="<=vs-2015"
 
-El C++ SDK de Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control selector de versión de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019.
+El SDK de C++ Build Insights es compatible con Visual Studio 2017 y versiones posteriores. Para ver la documentación de estas versiones, establezca el control Selector de **versiones** de Visual Studio para este artículo en Visual Studio 2017 o Visual Studio 2019. Se encuentra en la parte superior de la tabla de contenido de esta página.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La estructura `EVENT_DATA` describe un evento recibido de una sesión de análisis o de registro. Estas sesiones se inician mediante una llamada a las funciones [Analyze](../functions/analyze.md), [analyzea](../functions/analyze-a.md), [AnalyzeW](../functions/analyze-w.md), [relog](../functions/relog.md), [RelogA](../functions/relog-a.md)o [RelogW](../functions/relog-w.md) .
+La `EVENT_DATA` estructura describe un evento recibido de una sesión de análisis o recorrección. Estas sesiones se inician llamando a las funciones [Analizar](../functions/analyze.md), [AnalizarA](../functions/analyze-a.md), [AnalizarW](../functions/analyze-w.md), [Relog,](../functions/relog.md) [RelogA](../functions/relog-a.md)o [RelogW.](../functions/relog-w.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -56,34 +56,34 @@ typedef struct EVENT_DATA_TAG
 } EVENT_DATA;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
 |  |  |
 |--|--|
 | `EventId` | Número que identifica el evento. Para obtener una lista de identificadores de eventos, vea [EVENT_ID](event-id-enum.md). |
-| `EventInstanceId` | Número que identifica de forma única el evento actual dentro de un seguimiento. Este valor no cambia cuando se analiza varias veces el mismo seguimiento o el registro del mismo. Utilice este campo para identificar el mismo evento en varios análisis o para que el registro pase sobre el mismo seguimiento. |
-| `TickFrequency` | Número de TICs por segundo que se van a usar al evaluar una duración medida en pasos. |
-| `StartTimestamp` | Cuando el evento es una *actividad*, este campo se establece en un valor de tick capturado en el momento en que se inició la actividad. Si este evento es un *evento simple*, este campo se establece en un valor de tick capturado en el momento en que se produjo el evento. |
-| `StopTimestamp` | Cuando el evento es una *actividad*, este campo se establece en un valor de tick capturado en el momento en que se detuvo la actividad. Si el evento de detención todavía no se ha recibido para esta actividad, este campo se establece en cero. Si este evento es un *evento simple*, este campo se establece en cero. |
-| `ExclusiveDurationTicks` | Si este evento es una *actividad*, este campo se establece en el número de pasos que se produjeron directamente en esta actividad. Se excluye el número de pasos que se produjeron en una actividad secundaria. Este campo se establece en cero para *los eventos simples*. |
-| `CPUTicks` | Si este evento es una *actividad*, este campo se establece en el número de TICs de CPU que se produjeron durante esta actividad. Una marca de la CPU es diferente de una marca normal. Los tics de CPU solo se cuentan cuando la CPU ejecuta código en una actividad. Los tics de CPU no se cuentan cuando el subproceso asociado a la actividad está en suspensión. Este campo se establece en cero para *los eventos simples*. |
-| `ExclusiveCPUTicks` | Este campo tiene el mismo significado que `CPUTicks`, salvo que no incluye los tics de CPU que se produjeron en las actividades secundarias. Este campo se establece en cero para *los eventos simples*. |
-| `WallClockTimeResponsibilityTicks` | Si este evento es una *actividad*, este campo se establece en un contador que representa la contribución de esta actividad a la hora general del reloj de la pared. Un paso de responsabilidad de reloj en la pared es diferente de un TIC normal. Los tics de responsabilidad de reloj en la pared tienen en cuenta el paralelismo entre las actividades. Por ejemplo, dos actividades paralelas pueden tener una duración de 50 TICs y la misma hora de inicio y detención. En este caso, se asignará a ambos una responsabilidad de tiempo de reloj de 25 TICs. Este campo se establece en cero para *los eventos simples*. |
-| `ExclusiveWallClockTimeResponsibilityTicks` | Este campo tiene el mismo significado que `WallClockTimeResponsibilityTicks`, salvo que no incluye los tics de responsabilidad de tiempo de reloj de la pared de las actividades secundarias. Este campo se establece en cero para *los eventos simples*. |
-| `Data` | Apunta a datos adicionales almacenados en el evento. El tipo de datos señalado es diferente, dependiendo del campo `EventId`. |
+| `EventInstanceId` | Número que identifica de forma única el evento actual dentro de un seguimiento. Este valor no cambia al analizar o volver a registrar el mismo seguimiento varias veces. Utilice este campo para identificar el mismo evento en varios pasos de análisis o relogging sobre el mismo seguimiento. |
+| `TickFrequency` | El número de ticks por segundo que se utilizarán al evaluar una duración medida en ticks. |
+| `StartTimestamp` | Cuando el evento es una *actividad,* este campo se establece en un valor de tick capturado en el momento en que se inició la actividad. Si este evento es un *evento simple,* este campo se establece en un valor de tick capturado en el momento en que se produjo el evento. |
+| `StopTimestamp` | Cuando el evento es una *actividad,* este campo se establece en un valor de tick capturado en el momento en que se detuvo la actividad. Si el evento stop aún no se ha recibido para esta actividad, este campo se establece en cero. Si este evento es un *evento simple,* este campo se establece en cero. |
+| `ExclusiveDurationTicks` | Si este evento es una *actividad*, este campo se establece en el número de ticks que se produjeron directamente en esta actividad. Se excluye el número de ticks que se produjeron en una actividad secundaria. Este campo se establece en cero para *Eventos simples*. |
+| `CPUTicks` | Si este evento es una *actividad,* este campo se establece en el número de ticks de CPU que se produjeron durante esta actividad. Un tick de CPU es diferente de un tick normal. Los ticks de CPU solo se cuentan cuando la CPU está ejecutando código en una actividad. Los ticks de CPU no se cuentan cuando el subproceso asociado a la actividad está en suspensión. Este campo se establece en cero para *Eventos simples*. |
+| `ExclusiveCPUTicks` | Este campo tiene el `CPUTicks`mismo significado que , excepto que no incluye los ticks de CPU que se produjeron en las actividades infantiles. Este campo se establece en cero para *Eventos simples*. |
+| `WallClockTimeResponsibilityTicks` | Si este evento es una *actividad*, este campo se establece en un recuento de ticks que representa la contribución de esta actividad a la hora general del reloj de pared. Un tick de responsabilidad de tiempo de reloj de pared es diferente de un tick normal. Las garrapatas de responsabilidad de tiempo de reloj de pared tienen en cuenta el paralelismo entre las actividades. Por ejemplo, dos actividades paralelas pueden tener una duración de 50 ticks y la misma hora de inicio y parada. En este caso, a ambos se les asignará una responsabilidad de tiempo de reloj de pared de 25 ticks. Este campo se establece en cero para *Eventos simples*. |
+| `ExclusiveWallClockTimeResponsibilityTicks` | Este campo tiene el `WallClockTimeResponsibilityTicks`mismo significado que , excepto que no incluye los ticks de responsabilidad de tiempo de reloj de pared de las actividades de los niños. Este campo se establece en cero para *Eventos simples*. |
+| `Data` | Apunta a datos adicionales almacenados en el evento. El tipo de datos a los que `EventId` se señala es diferente, dependiendo del campo. |
 | `ProcessId` | Identificador del proceso en el que se produjo el evento. |
 | `ThreadId` | Identificador del subproceso en el que se produjo el evento. |
-| `ProcessorIndex` | Número de CPU con índice cero en el que se produjo el evento. |
-| `EventName` | Cadena ANSI que contiene el nombre de la entidad identificada por `EventId`. |
-| `EventWideName` | Cadena de tipo ancho que contiene el nombre de la entidad identificada por `EventId`. |
+| `ProcessorIndex` | El número de CPU indexado a cero en el que se produjo el evento. |
+| `EventName` | Cadena ANSI que contiene el nombre `EventId`de la entidad identificada por . |
+| `EventWideName` | Cadena amplia que contiene el nombre `EventId`de la entidad identificada por . |
 
 ## <a name="remarks"></a>Observaciones
 
-Muchos campos de `EVENT_DATA` contienen recuentos de pasos. C++Build Insights usa el contador de rendimiento de la ventana como un origen de TICs. Se debe usar un recuento de pasos con el campo `TickFrequency` para convertirlo en una unidad de tiempo adecuada, como segundos. Vea el ejemplo siguiente para realizar esta conversión. `EVENT_DATA` no contiene un campo para el recuento de pasos normal de una actividad. Para obtener este valor, reste `StartTimestamp` de `StopTimestamp`. `EVENT_DATA` es una estructura que está pensada para que la usen los usuarios de la API de C. En C++ el caso de los usuarios de la API, las clases como [eventos](../cpp-event-data-types/event.md) realizan conversiones de tiempo automáticamente.
+Muchos campos `EVENT_DATA` en contienen recuentos de ticks. C++ Build Insights utiliza el contador de rendimiento de Window como fuente de ticks. Se debe utilizar un `TickFrequency` recuento de ticks con el campo para convertirlo en una unidad de tiempo adecuada, como segundos. Consulte el ejemplo siguiente para realizar esta conversión. `EVENT_DATA`no contiene un campo para el recuento regular de ticks de una actividad. Para obtener este `StartTimestamp` valor, reste de `StopTimestamp`. `EVENT_DATA`es una estructura que está destinada a ser utilizada por los usuarios de la API de C. Para los usuarios de la API de C++, clases como [Event](../cpp-event-data-types/event.md) do time conversions automáticamente.
 
-El valor de `EVENT_DATA` campo `Data` depende del valor de su campo `EventId`. El valor de `Data` se describe en la tabla siguiente. Algunos identificadores de entidad pueden faltar en la tabla siguiente. En este caso, el campo de `Data` se establece en `nullptr` o en cero.
+El valor `EVENT_DATA` `Data` del campo depende del `EventId` valor de su campo. El valor `Data` de se describe en la tabla siguiente. Es posible que falten algunos identificadores de entidad en la tabla siguiente. En este caso, el `Data` `nullptr` campo se establece en o cero.
 
-| Valor de `EventId` | Tipo al que apunta `Data` |
+| Valor de `EventId` | Tipo señalado por`Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
@@ -103,7 +103,7 @@ El valor de `EVENT_DATA` campo `Data` depende del valor de su campo `EventId`. E
 | `EVENT_ID_SYMBOL_NAME` | [SYMBOL_NAME_DATA](symbol-name-data-struct.md) |
 | `EVENT_ID_TEMPLATE_INSTANTIATION` | [TEMPLATE_INSTANTIATION_DATA](template-instantiation-data-struct.md) |
 
-## <a name="tick-conversion-example"></a>Ejemplo de conversión de tick
+## <a name="tick-conversion-example"></a>Ejemplo de conversión de ticks
 
 ```cpp
 //

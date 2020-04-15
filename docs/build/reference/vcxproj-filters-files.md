@@ -1,32 +1,32 @@
 ---
-title: Archivos vcxproj. filters
+title: Archivos Vcxproj.filters
 ms.date: 09/25/2019
-description: Use filtros archivos en proyectos de C++ Visual Studio para definir carpetas lógicas personalizadas para archivos en explorador de soluciones
+description: Usar archivos de filtros en proyectos de Visual Studio C++ para definir carpetas lógicas personalizadas para archivos en el Explorador de soluciones
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 57735246b543680243994b99b8c05c9ad1211f38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078274"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335935"
 ---
-# <a name="vcxprojfilters-files"></a>Archivos vcxproj. filters
+# <a name="vcxprojfilters-files"></a>archivos vcxproj.filters
 
-El archivo de *filtros* (\*. vcxproj. filters) es un archivo XML en formato MSBuild que se encuentra en la carpeta raíz del proyecto. Especifica los tipos de archivo que entran en la carpeta lógica de **Explorador de soluciones**. En la ilustración siguiente, los archivos *. cpp* se encuentran en el nodo **archivos de código fuente** . los *archivos. h* están en el nodo **archivos de encabezado** y los archivos *. ico* y *. RC* están en **archivos de recursos**. Esta ubicación se controla mediante el archivo de filtros.
+El archivo\* *de filtros* ( .vcxproj.filters) es un archivo XML en formato MSBuild que se encuentra en la carpeta raíz del proyecto. Especifica qué tipos de archivo entran en qué carpeta lógica del Explorador de **soluciones.** En la siguiente ilustración, los archivos *.cpp* se encuentran en el nodo Archivos de **origen.** los archivos *.h* se encuentran en el nodo **Archivos** de encabezado y los archivos *.ico* y *.rc* se encuentran en **Archivos de**recursos . Esta ubicación se controla mediante el archivo de filtros.
 
-![Carpetas lógicas en Explorador de soluciones](media/solution-explorer-filters.png)
+![Carpetas lógicas en el Explorador de soluciones](media/solution-explorer-filters.png)
 
-## <a name="creating-a-custom-filters-file"></a>Crear un archivo de filtros personalizados
+## <a name="creating-a-custom-filters-file"></a>Creación de un archivo de filtros personalizado
 
-Visual Studio crea este archivo automáticamente. En el caso de las aplicaciones de escritorio, las carpetas lógicas (filtros) predefinidas son: **archivos de código fuente**, **archivos de encabezado** y **archivos de recursos**. Otros tipos de proyecto, como UWP, pueden tener un conjunto diferente de carpetas predeterminadas. Visual Studio asigna automáticamente tipos de archivo conocidos a cada carpeta. Si desea crear un filtro con un nombre personalizado o un filtro que contiene tipos de archivo personalizados, puede crear su propio archivo de filtros en la carpeta raíz del proyecto o en un filtro existente. (**Las referencias** y las **dependencias externas** son carpetas especiales que no participan en el filtrado).
+Visual Studio crea este archivo automáticamente. Para aplicaciones de escritorio, las carpetas lógicas predefinidas (filtros) son: Archivos de **origen,** Archivos de **encabezado** y **Archivos de**recursos . Otros tipos de proyecto, como UWP, pueden tener un conjunto diferente de carpetas predeterminadas. Visual Studio asigna automáticamente tipos de archivo conocidos a cada carpeta. Si desea crear un filtro con un nombre personalizado o un filtro que contiene tipos de archivo personalizados, puede crear su propio archivo de filtros en la carpeta raíz del proyecto o en un filtro existente. (**Las referencias** y las **dependencias externas** son carpetas especiales que no participan en el filtrado.)
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra el archivo de filtros del ejemplo que se muestra anteriormente. Tiene una jerarquía plana; en otras palabras, no hay carpetas lógicas anidadas. El nodo `UniqueIdentifier` es opcional. Permite que las interfaces de automatización de Visual Studio encuentren el filtro. `Extensions` también es opcional. Cuando se agrega un nuevo archivo a un proyecto, se agrega al filtro de nivel superior con una extensión de archivo coincidente. Para agregar un archivo a un filtro concreto, haga clic con el botón derecho en el filtro y elija **Agregar nuevo elemento**.
+En el ejemplo siguiente se muestra el archivo de filtros para la demostración de ejemplo anteriormente. Tiene una jerarquía plana; en otras palabras, no hay carpetas lógicas anidadas. El nodo `UniqueIdentifier` es opcional. Permite que las interfaces de automatización de Visual Studio busquen el filtro. `Extensions`también es opcional. Cuando se agrega un nuevo archivo a un proyecto, se agrega al filtro superior con una extensión de archivo coincidente. Para agregar un archivo a un filtro específico, haga clic con el botón derecho en el filtro y elija **Agregar nuevo elemento**.
 
-La `ItemGroup` que contiene los nodos de `ClInclude` se crea cuando se inicia el proyecto por primera vez. Si va a generar sus propios archivos vcxproj, asegúrese de que todos los elementos de proyecto también tienen una entrada en el archivo de filtros. Los valores de un nodo de `ClInclude` invalidan el filtrado predeterminado en función de las extensiones de archivo. Al usar Visual Studio para agregar un nuevo elemento al proyecto, el IDE agregará una entrada de archivo individual en el archivo de filtros. El filtro no se reasigna automáticamente si cambia la extensión del archivo.
+El `ItemGroup` que `ClInclude` contiene los nodos se crea cuando se inicia el proyecto por primera vez. Si está generando sus propios archivos vcxproj, asegúrese de que todos los elementos del proyecto también tienen una entrada en el archivo de filtros. Los valores `ClInclude` de un nodo invalidan el filtrado predeterminado basado en extensiones de archivo. Cuando se usa Visual Studio para agregar un nuevo elemento al proyecto, el IDE agregará una entrada de archivo individual en el archivo de filtros. El filtro no se reasigna automáticamente si cambia la extensión del archivo.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +91,7 @@ La `ItemGroup` que contiene los nodos de `ClInclude` se crea cuando se inicia el
 </Project>
 ```
 
-Para crear carpetas lógicas anidadas, declare todos los nodos en los filtros `ItemGroup` como se muestra a continuación. Cada nodo secundario debe declarar la ruta de acceso lógica completa al elemento primario superior. En el ejemplo siguiente, se debe declarar un `ParentFilter` vacío porque se hace referencia a él en nodos posteriores.
+Para crear carpetas lógicas anidadas, declare todos los nodos de los filtros `ItemGroup` como se muestra a continuación. Cada nodo secundario debe declarar la ruta de acceso lógica completa al elemento primario superior. En el ejemplo siguiente, se debe declarar un vacío `ParentFilter` porque se hace referencia a él en nodos posteriores.
 
 ```xml
   <ItemGroup>

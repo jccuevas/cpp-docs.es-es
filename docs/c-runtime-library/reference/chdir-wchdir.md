@@ -1,9 +1,11 @@
 ---
 title: _chdir, _wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333382"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -64,19 +67,21 @@ Ruta de acceso del nuevo directorio de trabajo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Estas funciones devuelven un valor de 0 si se ejecutan correctamente. Un valor devuelto de-1 indica un error. Si no se encuentra la ruta de acceso especificada, **errno** se establece en **ENOENT**. Si *dirname* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y la función devuelve-1.
+Estas funciones devuelven un valor de 0 si se ejecutan correctamente. Un valor devuelto de -1 indica un error. Si no se pudo encontrar la ruta de acceso especificada, **errno** se establece **en ENOENT**. Si *dirname* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece **en EINVAL** y la función devuelve -1.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_chdir** cambia el directorio de trabajo actual al directorio especificado por *dirname*. El parámetro *dirname* debe hacer referencia a un directorio existente. Esta función puede cambiar el directorio de trabajo actual de cualquier unidad. Si se especifica una nueva letra de unidad en *dirname*, la letra de unidad predeterminada también se cambia. Por ejemplo, si A es la letra de unidad predeterminada y \BIN es el directorio de trabajo actual, la siguiente llamada cambia el directorio de trabajo actual a la unidad C y establece C como nueva unidad predeterminada:
+La función **_chdir** cambia el directorio de trabajo actual al directorio especificado por *dirname*. El parámetro *dirname* debe hacer referencia a un directorio existente. Esta función puede cambiar el directorio de trabajo actual de cualquier unidad. Si se especifica una nueva letra de unidad en *dirname*, también se cambia la letra de unidad predeterminada. Por ejemplo, si A es la letra de unidad predeterminada y \BIN es el directorio de trabajo actual, la siguiente llamada cambia el directorio de trabajo actual a la unidad C y establece C como nueva unidad predeterminada:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Al usar el carácter de barra diagonal inversa opcional **&#92;** () en las rutas de acceso, debe colocar dos barras **&#92;** diagonales inversas () en un literal de cadena de C **&#92;** para representar una sola barra diagonal inversa ().
+Cuando se utiliza el carácter de barra diagonal inversa opcional (**&#92;**) en las rutas de acceso, debe colocar dos barras diagonales inversas (**&#92;&#92;**) en un literal de cadena C para representar una sola barra diagonal inversa (**&#92;**).
 
-**_wchdir** es una versión con caracteres anchos de **_chdir**; el argumento *dirname* para **_wchdir** es una cadena de caracteres anchos. **_wchdir** y **_chdir** se comportan de manera idéntica.
+**_wchdir** es una versión de caracteres anchos de **_chdir;** el argumento *dirname* para **_wchdir** es una cadena de caracteres anchos. **_wchdir** y **_chdir** comportarse de forma idéntica de lo contrario.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Asignación de rutina de texto genérico:
 
@@ -91,7 +96,7 @@ Al usar el carácter de barra diagonal inversa opcional **&#92;** () en las ruta
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> o \<wchar.h>|\<errno.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -152,7 +157,7 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de directorio](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

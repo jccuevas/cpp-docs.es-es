@@ -1,8 +1,9 @@
 ---
 title: _ecvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _ecvt
+- _o__ecvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9f91733c566c1782d5ccfc9a7c01e490a5915a85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e1760d5c68e650f6fbf44866d4e368b9d6233b6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942045"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348026"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Convierte un número **Double** en una cadena. Existe una versión más segura disponible de esta función; consulte [_ecvt_s](ecvt-s.md).
+Convierte un número **doble** en una cadena. Existe una versión más segura disponible de esta función; consulte [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -57,7 +59,7 @@ Número que se va a convertir.
 *count*<br/>
 Número de dígitos almacenados.
 
-*dec*<br/>
+*Diciembre*<br/>
 Posición del separador decimal almacenada.
 
 *sign*<br/>
@@ -65,21 +67,23 @@ Signo del número que se convierte.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ecvt** devuelve un puntero a la cadena de dígitos; **Es null** si se produjo un error.
+**_ecvt** devuelve un puntero a la cadena de dígitos; **NULL** si se ha producido un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_ecvt** convierte un número de punto flotante en una cadena de caracteres. El parámetro de *valor* es el número de punto flotante que se va a convertir. Esta función almacena hasta un *número* de dígitos del *valor* como una cadena y anexa un carácter nulo (' \ 0 '). Si el número de dígitos en el *valor* supera *Count*, se redondea el dígito de orden inferior. Si hay menos de dígitos de *recuento* , la cadena se rellena con ceros.
+La función **_ecvt** convierte un número de punto flotante en una cadena de caracteres. El parámetro *value* es el número de punto flotante que se va a convertir. Esta función se almacena hasta *contar* los dígitos de *valor* como una cadena y anexa un carácter nulo ('-0'). Si el número de dígitos en el *valor* supera el *recuento,* se redondea el dígito de orden inferior. Si hay menos dígitos de *recuento,* la cadena se rellena con ceros.
 
-El número total de dígitos devueltos por **_ecvt** no superará **_CVTBUFSIZE**.
+El número total de dígitos devueltos por **_ecvt** no excederá **_CVTBUFSIZE**.
 
-Solo se almacenan dígitos en la cadena. La posición del separador decimal y el signo de *valor* se pueden obtener de *Dec* y *firmar* después de la llamada. El parámetro *Dec* apunta a un valor entero que proporciona la posición del separador decimal con respecto al principio de la cadena. Un valor entero de 0 o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El parámetro *Sign* apunta a un entero que indica el signo del número convertido. Si el valor entero es 0, el número es positivo. De lo contrario, el número es negativo.
+Solo se almacenan dígitos en la cadena. La posición del punto decimal y el signo de *valor* se pueden obtener de *dec* y *sign* después de la llamada. El parámetro *dec* apunta a un valor entero que da la posición del punto decimal con respecto al principio de la cadena. Un valor entero de 0 o negativo indica que el separador decimal se encuentra a la izquierda del primer dígito. El parámetro *sign* apunta a un entero que indica el signo del número convertido. Si el valor entero es 0, el número es positivo. De lo contrario, el número es negativo.
 
-La diferencia entre **_ecvt** y **_fcvt** está en la interpretación del parámetro *Count* . **_ecvt** interpreta *Count* como el número total de dígitos de la cadena de salida, mientras que **_fcvt** interpreta *Count* como el número de dígitos después del separador decimal.
+La diferencia entre **_ecvt** y **_fcvt** está en la interpretación del parámetro *count.* **_ecvt** interpreta *count* como el número total de dígitos en la cadena de salida, mientras que **_fcvt** interpreta *count* como el número de dígitos después del punto decimal.
 
-**_ecvt** y **_fcvt** usan un solo búfer asignado estáticamente para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
+**_ecvt** y **_fcvt** utilizar un único búfer asignado estáticamente para la conversión. Cada llamada a una de estas rutinas destruye el resultado de la llamada anterior.
 
-Esta función valida sus parámetros. Si *Dec* o *Sign* es **null**, o *Count* es 0, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve **null** .
+Esta función valida sus parámetros. Si *dec* o *sign* es **NULL**, o *count* es 0, se invoca el controlador de parámetros no válidos, como se describe en validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** se establece en **EINVAL** y se devuelve **NULL.**
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -87,7 +91,7 @@ Esta función valida sus parámetros. Si *Dec* o *Sign* es **null**, o *Count* e
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -118,7 +122,7 @@ int main( void )
 source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>

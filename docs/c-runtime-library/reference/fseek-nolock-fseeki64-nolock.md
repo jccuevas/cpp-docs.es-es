@@ -1,9 +1,11 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fseek_nolock
 - _fseeki64_nolock
+- _o__fseek_nolock
+- _o__fseeki64_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3533e7897e9c460d3be73b8907a6bd3c96f6888f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345732"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -61,22 +64,24 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parámetros
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 *offset*<br/>
 Número de bytes de *origin*.
 
-*origin*<br/>
+*Origen*<br/>
 Posición inicial.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Igual que [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectivamente.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Estas funciones son las versiones sin bloqueo de [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectivamente. Son idénticos a [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md) , salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+Estas funciones son las versiones sin bloqueo de [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectivamente. Estos son idénticos a [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md) excepto que no están protegidos de interferencias por otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,11 +89,11 @@ Estas funciones son las versiones sin bloqueo de [fseek](fseek-fseeki64.md) y [_
 |--------------|---------------------|
 |**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>
 [_lseek, _lseeki64](lseek-lseeki64.md)<br/>
-[rewind](rewind.md)<br/>
+[Rebobinado](rewind.md)<br/>

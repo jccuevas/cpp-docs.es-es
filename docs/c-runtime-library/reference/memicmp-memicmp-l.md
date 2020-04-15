@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951837"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333238"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -77,18 +80,20 @@ El valor devuelto indica la relación entre los búferes.
 
 |Valor devuelto|Relación de los primeros count bytes de buf1 y buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* es menor que *buffer2*.|
+|< 0|*buffer1* menor que *buffer2*.|
 |0|*buffer1* idéntico a *buffer2*.|
 |> 0|*buffer1* mayor que *buffer2*.|
-|**_NLSCMPERROR**|Error.|
+|**_NLSCMPERROR**|Se produjo un error.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_memicmp** compara los primeros caracteres de *recuento* de los dos búferes *buffer1* y *buffer2* byte por byte. La comparación no distingue entre mayúsculas y minúsculas.
+La función **_memicmp** compara los primeros caracteres de *recuento* de los dos búferes *buffer1* y *buffer2* byte a byte. La comparación no distingue entre mayúsculas y minúsculas.
 
-Si *buffer1* o *buffer2* es un puntero nulo, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** en **EINVAL**.
+Si *buffer1* o *buffer2* es un puntero nulo, esta función invoca un controlador de parámetros no válido, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **_NLSCMPERROR** y establece **errno** en **EINVAL**.
 
-**_memicmp** usa la configuración regional actual para el comportamiento dependiente de la configuración regional; **_memicmp_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_memicmp** utiliza la configuración regional actual para el comportamiento dependiente de la configuración regional; **_memicmp_l** es idéntica, excepto que utiliza la configuración regional pasada en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -97,7 +102,7 @@ Si *buffer1* o *buffer2* es un puntero nulo, esta función invoca un controlador
 |**_memicmp**|\<memory.h> o \<string.h>|
 |**_memicmp_l**|\<memory.h> o \<string.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -134,7 +139,7 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Manipulación del búfer](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

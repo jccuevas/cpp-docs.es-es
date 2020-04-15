@@ -1,9 +1,11 @@
 ---
 title: ungetc, ungetwc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ungetwc
 - ungetc
+- _o_ungetc
+- _o_ungetwc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: f3b6c6ed3fe8ff5976afa1da2ed437e25c923b99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 484af7b72f860a8a9d12cf0b62444871caad4675
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361296"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -57,29 +60,31 @@ wint_t ungetwc(
 
 ### <a name="parameters"></a>Parámetros
 
-*c*<br/>
+*C*<br/>
 Carácter que se va a devolver.
 
-*stream*<br/>
+*Corriente*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y **ungetc** devuelve **EOF**; **ungetwc** devuelve **WEOF**. Si *Stream* es **null**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve **EOF** o **WEOF** y **errno** se establece en **EINVAL**.
+Si se realiza correctamente, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no se puede retroceder o si no se ha leído ningún carácter, la secuencia de entrada no cambia y **ungetc** devuelve **EOF**; **ungetwc** devuelve **WEOF**. Si *stream* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve **EOF** o **WEOF** y **errno** se establece **en EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **ungetc** vuelve a colocar el carácter *c* en la *secuencia* y borra el indicador de fin de archivo. El flujo debe estar abierto para lectura. Una operación de lectura subsiguiente en el *flujo* comienza con *c*. Se omite un intento de presionar **EOF** en la secuencia mediante **ungetc** .
+La función **ungetc** inserta el carácter *c* de nuevo en la *secuencia* y borra el indicador de fin de archivo. El flujo debe estar abierto para lectura. Una operación de lectura posterior en *la secuencia* comienza con *c*. Se omite un intento de insertar **EOF** en la secuencia mediante **ungetc.**
 
-Los caracteres colocados en la secuencia por **ungetc** se pueden borrar si se llama a **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**o [rebobinar](rewind.md) antes de que se lea el carácter de la secuencia. El indicador de posición de archivo tendrá el valor que tenía antes de que se volvieran a insertar los caracteres. El almacenamiento externo correspondiente al flujo no cambia. En una llamada a **ungetc** correcta en una secuencia de texto, el indicador de posición de archivo no se especifica hasta que se leen o se descartan todos los caracteres que se han vuelto a insertar. En cada llamada a **ungetc** correcta en una secuencia binaria, se reduce el indicador de posición de archivo. Si su valor era 0 antes de una llamada, el valor queda sin definir después de la llamada.
+Los caracteres colocados en la secuencia por **ungetc** se pueden borrar si se llama a **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**o [rewind](rewind.md) antes de que el carácter se lea de la secuencia. El indicador de posición de archivo tendrá el valor que tenía antes de que se volvieran a insertar los caracteres. El almacenamiento externo correspondiente al flujo no cambia. En una llamada **ungetc** correcta en una secuencia de texto, el indicador de posición de archivo no se especifica hasta que se leen o descartan todos los caracteres insertados. En cada llamada **ungetc** correcta contra una secuencia binaria, el indicador de posición de archivo se reduce; si su valor era 0 antes de una llamada, el valor es indefinido después de la llamada.
 
-Los resultados son imprevisibles si se llama a **ungetc** dos veces sin una operación de lectura o de posicionamiento de archivo entre las dos llamadas. Después de una llamada a **fscanf**, se puede producir un error en una llamada a **ungetc** a menos que se haya realizado otra operación de lectura (por ejemplo, **GETC**). Esto se debe a que **fscanf** en sí llama a **ungetc**.
+Los resultados son impredecibles si se llama a **ungetc** dos veces sin una operación de lectura o posicionamiento de archivos entre las dos llamadas. Después de una llamada a **fscanf**, una llamada a **ungetc** puede fallar a menos que se haya realizado otra operación de lectura (como **getc ).** Esto se debe a que **fscanf** llama **ungetc**.
 
-**ungetwc** es una versión con caracteres anchos de **ungetc**. Sin embargo, en cada llamada a **ungetwc** correcta en un flujo de texto o binario, el valor del indicador de posición de archivo no se especifica hasta que se leen o se descartan todos los caracteres que se han vuelto a insertar.
+**ungetwc** es una versión de caracteres anchos de **ungetc**. Sin embargo, en cada llamada **ungetwc** correcta contra un texto o una secuencia binaria, el valor del indicador de posición de archivo no se especifica hasta que se leen o descartan todos los caracteres de represión.
 
 Estas funciones son seguras para subprocesos y bloquean los datos confidenciales durante la ejecución. Para obtener una versión que no es de bloqueo, vea [_ungetc_nolock, _ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md).
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -94,7 +99,7 @@ Estas funciones son seguras para subprocesos y bloquean los datos confidenciales
 |**ungetc**|\<stdio.h>|
 |**ungetwc**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de Plataforma universal de Windows (UWP). Los identificadores de flujo estándar que están asociados a la consola, **stdin**, **stdout**y **stderr**deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la Plataforma universal de Windows (UWP). Los identificadores de secuencia estándar asociados a la consola, **stdin,** **stdout**y **stderr**, deben redirigirse antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones para UWP. Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -130,7 +135,7 @@ int main( void )
 Next character in stream = 'a'
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

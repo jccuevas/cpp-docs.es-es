@@ -1,10 +1,12 @@
 ---
 title: getenv, _wgetenv
-description: Describe la biblioteca en tiempo de ejecución de Microsoft C getenv y _wgetenv funciones.
-ms.date: 01/15/2020
+description: Describe la biblioteca getenv en _wgetenv tiempo de ejecución de Microsoft C y las funciones.
+ms.date: 4/2/2020
 api_name:
 - getenv
 - _wgetenv
+- _o__wgetenv
+- _o_getenv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -53,14 +56,14 @@ no-loc:
 - _tzset
 - _dupenv_s
 - _wdupenv_s
-ms.openlocfilehash: 5e06e0c66d1ee60a067c2e27fedb5ca1dca7109a
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: c9d7f7e1a2c5d6b15aee2f7f972a30cc0c90115c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344250"
 ---
-# <a name="opno-locgetenv-opno-loc_wgetenv"></a>getenv, _wgetenv
+# <a name="getenv-_wgetenv"></a>getenv, _wgetenv
 
 Obtiene un valor del entorno actual. Hay disponibles versiones más seguras de estas funciones; vea [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
@@ -78,34 +81,36 @@ wchar_t *_wgetenv(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Parámetros
 
-*varname*<br/>
+*Varname*<br/>
 Nombre de la variable de entorno.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la entrada de la tabla de entorno que contiene *varname*. No es seguro modificar el valor de la variable de entorno con el puntero devuelto. Utilice la función [_putenv](putenv-wputenv.md) para modificar el valor de una variable de entorno. El valor devuelto es **null** si *varname* no se encuentra en la tabla de entorno.
+Devuelve un puntero a la entrada de tabla de entorno que contiene *varname*. No es seguro modificar el valor de la variable de entorno con el puntero devuelto. Utilice la función [_putenv](putenv-wputenv.md) para modificar el valor de una variable de entorno. El valor devuelto es **NULL** si *varname* no se encuentra en la tabla de entorno.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-La función **getenv** busca la lista de variables de entorno para *varname*. **getenv** no distingue entre mayúsculas y minúsculas en el sistema operativo Windows. **getenv** y **_putenv** usar la copia del entorno al que apunta la variable global **_environ** para tener acceso al entorno. **getenv** solo funciona en las estructuras de datos a las que puede tener acceso la biblioteca en tiempo de ejecución y no en el "segmento" del entorno que el sistema operativo crea para el proceso. Por lo tanto, los programas que usan el argumento *envp* para [main](../../cpp/main-function-command-line-args.md) o [wmain](../../cpp/main-function-command-line-args.md) pueden recuperar información no válida.
+La función **getenv** busca *varname*en la lista de variables de entorno. **getenv** no distingue mayúsculas de minúsculas en el sistema operativo Windows. **getenv** y **_putenv** utilizan la copia del entorno a la que apunta la variable global **_environ** para acceder al entorno. **getenv** solo funciona en las estructuras de datos accesibles para la biblioteca en tiempo de ejecución y no en el "segmento" del entorno creado para el proceso por el sistema operativo. Por lo tanto, los programas que utilizan el argumento *envp* para [main](../../cpp/main-function-command-line-args.md) o [wmain](../../cpp/main-function-command-line-args.md) pueden recuperar información no válida.
 
-Si *varname* es **null**, esta función invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** en **EINVAL** y devuelve **null**.
+Si *varname* es **NULL**, esta función invoca un controlador de parámetros no válido, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno en** **EINVAL** y devuelve **NULL**.
 
-**_wgetenv** es una versión con caracteres anchos de **getenv** ; el argumento y el valor devuelto de **_wgetenv** son cadenas de caracteres anchos. La variable global **_wenviron** es una versión con caracteres anchos de **_environ** .
+**_wgetenv** es una versión de caracteres anchos de **getenv**; el argumento y el valor devuelto de **_wgetenv** son cadenas de caracteres anchos. La variable global **_wenviron** es una versión de caracteres anchos de **_environ**.
 
-En un programa MBCS (por ejemplo, en un programa de ASCII de SBCS), **_wenviron** inicialmente es **null** porque el entorno se compone de cadenas de caracteres multibyte. Después, en la primera llamada a [_wputenv](putenv-wputenv.md), o en la primera llamada a **_wgetenv** si ya existe un entorno (MBCS), se crea un entorno de cadena de caracteres anchos correspondiente y, a continuación, se señala mediante **_wenviron** .
+En un programa MBCS (por ejemplo, en un programa ASCII SBCS), **_wenviron** es inicialmente **NULL** porque el entorno se compone de cadenas de caracteres multibyte. A continuación, en la primera llamada a [_wputenv](putenv-wputenv.md), o en la primera llamada a **_wgetenv** si ya existe un entorno (MBCS), se crea un entorno de cadena de caracteres anchos correspondiente y, a continuación, se señala a **_wenviron**.
 
-De forma similar en un programa de Unicode ( **_wmain**), **_environ** es inicialmente **null** porque el entorno se compone de cadenas de caracteres anchos. Después, en la primera llamada a **_putenv** , o en la primera llamada a **getenv** si ya existe un entorno (Unicode), se crea un entorno de MBCS correspondiente y, a continuación, se señala mediante **_environ** .
+De forma similar en un programa Unicode (**_wmain**), **_environ** es inicialmente **NULL** porque el entorno se compone de cadenas de caracteres anchos. A continuación, en la primera llamada a **_putenv**, o en la primera llamada a **getenv** si ya existe un entorno (Unicode), se crea un entorno MBCS correspondiente y, a continuación, se señala a **_environ**.
 
-Si dos copias del entorno (MBCS y Unicode) existen simultáneamente en un programa, el sistema en tiempo de ejecución debe mantener las dos copias, lo que ralentiza el tiempo de ejecución. Por ejemplo, cada vez que llame a **_putenv** , también se ejecuta automáticamente una llamada a **_wputenv** , de modo que se correspondan las dos cadenas de entorno.
+Si dos copias del entorno (MBCS y Unicode) existen simultáneamente en un programa, el sistema en tiempo de ejecución debe mantener las dos copias, lo que ralentiza el tiempo de ejecución. Por ejemplo, cada vez que se llama a **_putenv**, una llamada a **_wputenv** también se ejecuta automáticamente, de modo que las dos cadenas de entorno corresponden.
 
 > [!CAUTION]
 > En raras ocasiones, cuando el sistema en tiempo de ejecución mantiene una versión Unicode y una versión multibyte del entorno, las dos versiones del entorno podrían no corresponderse exactamente. La razón es que, aunque cualquier cadena de caracteres multibyte se asigna a una cadena de Unicode única, la asignación de una cadena de Unicode única a una cadena de caracteres multibyte no es necesariamente única. Para obtener más información, vea [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> Las familias de funciones de **_putenv** y **_getenv** no son seguras para subprocesos. **_getenv** podría devolver un puntero de cadena mientras **_putenv** está modificando la cadena, lo que provoca errores aleatorios. Asegúrese de que las llamadas a estas funciones están sincronizadas.
+> Las **_putenv** y **_getenv** familias de funciones no son seguras para subprocesos. **_getenv** podría devolver un puntero de cadena mientras **_putenv** está modificando la cadena, lo que provoca errores aleatorios. Asegúrese de que las llamadas a estas funciones están sincronizadas.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -113,9 +118,9 @@ Si dos copias del entorno (MBCS y Unicode) existen simultáneamente en un progra
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
-Para comprobar o cambiar el valor de la variable de entorno **TZ** , use **getenv** , **_putenv** y **_tzset** según sea necesario. Para obtener más información acerca de **TZ**, consulte [_tzset](tzset.md) y [_daylight, timezone y _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Para comprobar o cambiar el valor de la variable de entorno **TZ,** utilice **getenv**, **_putenv** y **_tzset** según sea necesario. Para obtener más información acerca de **TZ**, consulte [_tzset](tzset.md) y [_daylight, zona horaria y _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
-## <a name="requirements"></a>Requisitos de
+## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
@@ -166,8 +171,8 @@ Original LIB variable is: C:\progra~1\devstu~1\vc\lib
 New LIB variable is: c:\mylib;c:\yourlib
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Control de proceso y entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_putenv, _wputenv](putenv-wputenv.md)<br/>
 [Constantes de entorno](../../c-runtime-library/environmental-constants.md)<br/>

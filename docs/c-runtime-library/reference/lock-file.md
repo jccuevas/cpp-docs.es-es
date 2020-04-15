@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953311"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342106"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Bloquea un objeto de **archivo** para garantizar la coherencia de los subprocesos que obtienen acceso al objeto de **archivo** al mismo tiempo.
+Bloquea un objeto **FILE** para garantizar la coherencia de los subprocesos que tienen acceso al objeto **FILE** simultáneamente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parámetros
 
-*file*<br/>
+*archivo*<br/>
 Identificador de archivo.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-La función **_lock_file** bloquea el objeto de **archivo** especificado por el *archivo*. El archivo subyacente no está bloqueado por **_lock_file**. Use [_unlock_file](unlock-file.md) para liberar el bloqueo en el archivo. Las llamadas a **_lock_file** y **_unlock_file** deben coincidir en un subproceso.
+La función **_lock_file** bloquea el objeto **FILE** especificado por *file*. El archivo subyacente no está bloqueado por **_lock_file**. Use [_unlock_file](unlock-file.md) para liberar el bloqueo en el archivo. Las llamadas a **_lock_file** y **_unlock_file** deben coincidir en un subproceso.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -59,7 +63,7 @@ La función **_lock_file** bloquea el objeto de **archivo** especificado por el 
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Control de archivos](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

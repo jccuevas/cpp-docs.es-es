@@ -1,9 +1,10 @@
 ---
 title: _fpclass, _fpclassf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fpclass
 - _fpclassf
+- _o__fpclass
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170220"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346286"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -58,7 +60,7 @@ int _fpclassf(
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -69,10 +71,10 @@ Las funciones **_fpclass** y **_fpclassf** devuelven un valor entero que indica 
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|NaN de señalización|
 |**_FPCLASS_QNAN**|NaN reservado|
-|**_FPCLASS_NINF**|Infinito negativo (-INF)|
+|**_FPCLASS_NINF**|Infinito negativo ( -INF)|
 |**_FPCLASS_NN**|Negativo normalizado distinto de cero|
 |**_FPCLASS_ND**|Negativo no normalizado|
-|**_FPCLASS_NZ**|Cero negativo (-0)|
+|**_FPCLASS_NZ**|Cero negativo ( - 0)|
 |**_FPCLASS_PZ**|Cero positivo (+0)|
 |**_FPCLASS_PD**|Positivo no normalizado|
 |**_FPCLASS_PN**|Positivo normalizado distinto de cero|
@@ -81,6 +83,8 @@ Las funciones **_fpclass** y **_fpclassf** devuelven un valor entero que indica 
 ## <a name="remarks"></a>Observaciones
 
 Las funciones **_fpclass** y **_fpclassf** son específicas de Microsoft. Son similares a [fpclassify](fpclassify.md), pero devuelven información más detallada sobre el argumento. La función **_fpclassf** solo está disponible cuando se compila para la plataforma x64.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,9 +1,11 @@
 ---
 title: _execvpe, _wexecvpe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _execvpe
 - _wexecvpe
+- _o__execvpe
+- _o__wexecvpe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: dd2e4c91affe211cc58a2f1c147646172f3f34c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443012"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347646"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -64,7 +67,7 @@ intptr_t _wexecvpe(
 *cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
-*argv*<br/>
+*Argv*<br/>
 Matriz de punteros a parámetros.
 
 *envp*<br/>
@@ -72,7 +75,7 @@ Matriz de punteros a la configuración del entorno.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de-1 indica un error, en cuyo caso se establece la variable global **errno** .
+Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de -1 indica un error, en cuyo caso se establece la variable global **errno.**
 
 |valor **errno**|Descripción|
 |-------------------|-----------------|
@@ -83,13 +86,15 @@ Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. 
 |**ENOEXEC**|El archivo especificado no es ejecutable o tiene un formato de archivo ejecutable no válido.|
 |**ENOMEM**|No hay memoria suficiente para ejecutar el nuevo proceso; la memoria disponible se ha dañado o existe un bloque no válido que indica que el proceso de llamada no se asignó correctamente.|
 
-Para obtener más información sobre estos y otros códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre estos y otros códigos devueltos, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno. Estas funciones usan la variable de entorno **path** para buscar el archivo que se va a ejecutar.
+Cada una de estas funciones carga y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno. Estas funciones utilizan la variable de entorno **PATH** para buscar el archivo que se va a ejecutar.
 
-Las funciones **_execvpe** validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, un puntero a una matriz vacía o un puntero a una matriz que contiene una cadena vacía como primer argumento, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** en **EINVAL** y devuelven-1. No se inicia ningún proceso.
+Las funciones **_execvpe** validan sus parámetros. Si *cmdname* es un puntero nulo, o si *argv* es un puntero nulo, un puntero a una matriz vacía o un puntero a una matriz que contiene una cadena vacía como primer argumento, estas funciones invocan el controlador de parámetros no válidos, como se describe en Validación de [parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno en** **EINVAL** y devuelven -1. No se inicia ningún proceso.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -98,7 +103,7 @@ Las funciones **_execvpe** validan sus parámetros. Si *cmdname* es un puntero n
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> o \<wchar.h>|\<errno.h>|
 
-Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -106,11 +111,11 @@ Consulte el ejemplo de [Funciones _exec y _wexec](../../c-runtime-library/exec-w
 
 ## <a name="see-also"></a>Consulte también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec, _wexec (funciones)](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[Control de Procesos y Medio Ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, _wexec funciones](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[Aborta](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, funciones _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

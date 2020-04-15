@@ -1,6 +1,6 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - llround
 - llroundf
@@ -8,6 +8,12 @@ api_name:
 - lroundf
 - lround
 - lroundl
+- _o_llround
+- _o_llroundf
+- _o_llroundl
+- _o_lround
+- _o_lroundf
+- _o_lroundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e73ae490fcd3e7d88228136b57d34491f0150764
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953005"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341633"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -87,20 +94,22 @@ long long llroundl(
 
 ### <a name="parameters"></a>Parámetros
 
-*x*<br/>
+*X*<br/>
 Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Las funciones **lround** y **llround** devuelven **el entero** **Long o Long Long** a *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
+Las funciones **lround** y **llround** devuelven el entero **largo** o **long** **largo** más cercano a *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|• **QNAN**, **IND**|None|**_DOMAIN**|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **lround** o **llround** que toman y devuelven valores de tipo **float** y **Long** **Double** . En un programa de C, **lround** y **llround** siempre toman y devuelven un **valor Double**.
+Dado que C++ permite la sobrecarga, puede llamar a sobrecargas de **lround** o **llround** que toman y devuelven **valores float** y **long** **double.** En un programa C, **lround** y **llround** siempre toman y devuelven un **doble**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -108,7 +117,7 @@ Dado C++ que permite las sobrecargas, puede llamar a las sobrecargas de **lround
 |-------------|---------------------|
 |**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -146,7 +155,7 @@ lroundl(3.500000) is 4
 lroundl(-3.500000) is -4
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

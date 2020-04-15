@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 05f87cbb6061e205f9731d2a903ce52a2482b214
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79094865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336715"
 ---
 # <a name="slice-class"></a>slice (Clase)
 
@@ -25,7 +25,7 @@ Una clase de utilidad para valarray que se usa para definir subconjuntos unidime
 
 ## <a name="remarks"></a>Observaciones
 
-La clase almacena los parámetros que caracterizan a un objeto de tipo [slice_array](../standard-library/slice-array-class.md). El subconjunto de una valarray se crea indirectamente cuando un objeto de clase slice aparece como argumento para un objeto de clase [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Los valores almacenados que especifican el subconjunto seleccionado de la valarray primaria incluyen:
+La clase almacena los parámetros que caracterizan a un objeto de tipo [slice_array](../standard-library/slice-array-class.md). El subconjunto de una valarray se crea indirectamente cuando un objeto de clase slice aparece como argumento para un objeto de clase [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Los valores almacenados que especifican el subconjunto seleccionado de la valarray primaria incluyen:
 
 - Índice inicial de la valarray.
 
@@ -41,23 +41,23 @@ Las operaciones en valarrays solo se garantizan si los subconjuntos de origen y 
 
 |Constructor|Descripción|
 |-|-|
-|[slice](#slice)|Define un subconjunto de un `valarray` que consta de un número de elementos equidistantes y que comienzan en un elemento especificado.|
+|[Rebanada](#slice)|Define un subconjunto de un `valarray` que consta de un número de elementos equidistantes y que comienzan en un elemento especificado.|
 
 ### <a name="member-functions"></a>Funciones miembro
 
 |Función de miembro|Descripción|
 |-|-|
-|[size](#size)|Busca el número de elementos de un segmento de una `valarray`.|
+|[Tamaño](#size)|Busca el número de elementos de un segmento de una `valarray`.|
 |[start](#start)|Busca el índice inicial de un segmento de una `valarray`.|
-|[stride](#stride)|Busca la distancia entre los elementos de un segmento de una `valarray`.|
+|[Paso](#stride)|Busca la distancia entre los elementos de un segmento de una `valarray`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<valarray >
+**Encabezado:** \<valarray>
 
 **Espacio de nombres:** std
 
-## <a name="size"></a>  slice::size
+## <a name="slicesize"></a><a name="size"></a>rebanada::tamaño
 
 Busca el número de elementos de un segmento de una valarray.
 
@@ -121,7 +121,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.
 ```
 
-## <a name="slice"></a>  slice::slice
+## <a name="sliceslice"></a><a name="slice"></a>rebanada::slice
 
 Define un subconjunto de una valarray que consta de un número de elementos equidistantes y que comienzan en un elemento especificado.
 
@@ -142,12 +142,12 @@ El índice de valarray del primer elemento del subconjunto.
 *_Len*\
 El número de elementos del subconjunto.
 
-\ *STRIDE*
+*Paso*\
 La distancia entre los elementos del subconjunto.
 
 ### <a name="return-value"></a>Valor devuelto
 
-El constructor predeterminado almacena ceros para el índice de inicio, la longitud total y el intervalo. El segundo constructor almacena *_StartIndex* para el índice de inicio, *_Len* para la longitud total y *STRIDE* para el intervalo.
+El constructor predeterminado almacena ceros para el índice de inicio, la longitud total y el intervalo. El segundo constructor almacena *_StartIndex* para el índice inicial, *_Len* para la longitud total y *zancada* para la zancada.
 
 ### <a name="remarks"></a>Observaciones
 
@@ -194,7 +194,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```
 
-## <a name="start"></a>  slice::start
+## <a name="slicestart"></a><a name="start"></a>rebanada::start
 
 Busca el índice inicial de un segmento de una valarray.
 
@@ -252,7 +252,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.
 ```
 
-## <a name="stride"></a>  slice::stride
+## <a name="slicestride"></a><a name="stride"></a>rebanada::stride
 
 Busca la distancia entre los elementos de un segmento de una valarray.
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Consulte también
 
-[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Seguridad de roscas en la biblioteca estándar C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

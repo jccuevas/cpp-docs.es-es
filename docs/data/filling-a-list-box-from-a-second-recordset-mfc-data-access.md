@@ -10,19 +10,19 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8664e98c6668568918cc0e6504a38119d2e71428
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336918"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Llenar un cuadro de lista con datos de otro conjunto de registros (acceso a datos MFC)
 
 De manera predeterminada, una vista de registros está asociada con un único objeto de conjunto de registros, cuyos campos se asignan a los controles de la vista de registros. En ocasiones, podría interesarle colocar un cuadro de lista o un control de cuadro combinado en la vista de registros y rellenarlo con valores de otro objeto de conjunto de registros. El usuario puede utilizar el cuadro de lista para seleccionar una nueva categoría de información para que se muestre en la vista de registros. Este tema explica cómo y cuándo hacerlo.
 
 > [!TIP]
->  Tenga en cuenta que el proceso de llenar un cuadro combinado o un cuadro de lista desde un origen de datos puede ser lento. Tome precauciones para evitar llenar un control con un gran número de registros procedentes de un conjunto de registros.
+> Tenga en cuenta que el proceso de llenar un cuadro combinado o un cuadro de lista desde un origen de datos puede ser lento. Tome precauciones para evitar llenar un control con un gran número de registros procedentes de un conjunto de registros.
 
 El modelo de este tema consta de un conjunto de registros principal que llena los controles del formulario, y un conjunto de registros secundario que llena un cuadro de lista o un cuadro combinado. El hecho de seleccionar una cadena del cuadro de lista hace que el programa vuelva a consultar el conjunto de registros principal en función de lo que se haya seleccionado. El siguiente procedimiento utiliza un cuadro combinado, pero se aplica igualmente a un cuadro de lista.
 
@@ -30,11 +30,11 @@ El modelo de este tema consta de un conjunto de registros principal que llena lo
 
 1. Cree el objeto de conjunto de registros ([CRecordset](../mfc/reference/crecordset-class.md).
 
-1. Obtenga un puntero al objeto [CComboBox](../mfc/reference/ccombobox-class.md) para el control de cuadro combinado.
+1. Obtener un puntero a la [CComboBox](../mfc/reference/ccombobox-class.md) objeto para el control de cuadro combinado.
 
 1. Vacíe el cuadro combinado de cualquier contenido anterior.
 
-1. Desplácese por todos los registros del conjunto de registros, llamando a [CComboBox:: addString](../mfc/reference/ccombobox-class.md#addstring) para cada cadena del registro actual que desee agregar al cuadro combinado.
+1. Mover a través de todos los registros en el conjunto de registros, llamando a [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) para cada cadena del registro actual que desea agregar al cuadro combinado.
 
 1. Inicialice la selección en el cuadro combinado.
 

@@ -1,6 +1,6 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _hypotf
 - hypot
@@ -8,6 +8,9 @@ api_name:
 - _hypot
 - _hypotl
 - hypotl
+- _o__hypot
+- _o__hypotf
+- _o_hypot
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168751"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343957"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -87,15 +91,17 @@ Valores de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **hypot** devuelve la longitud de la hipotenusa; en el desbordamiento, **hypot** devuelve el archivo INF (infinito) y la variable **errno** se establece en **ERANGE**. Puede usar **_matherr** para modificar el control de errores.
+Si tiene éxito, **hypot** devuelve la longitud de la hipotenusa; en desbordamiento, **hypot** devuelve INF (infinito) y la variable **errno** se establece en **ERANGE**. Puede utilizar **_matherr** para modificar el control de errores.
 
-Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Observaciones
 
-Las funciones **hypot** calculan la longitud de la hipotenusa de un triángulo de la derecha, dada la longitud de los dos lados *x* *e y* (es decir, la raíz cuadrada de *x*<sup>2</sup> + *y*<sup>2</sup>).
+Las funciones de **hipótesis** calculan la longitud de la hipotenusa de un triángulo derecho, dada la longitud de los dos lados *x* e *y* (en otras palabras, la raíz cuadrada de *x*<sup>2</sup> + *y*<sup>2</sup>).
 
 Las versiones de las funciones que tienen un carácter de subrayado inicial se proporcionan por compatibilidad con estándares anteriores. Su comportamiento es idéntico al de las versiones sin carácter de subrayado inicial. Se recomienda el uso de las versiones sin carácter de subrayado inicial para código nuevo.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -103,7 +109,7 @@ Las versiones de las funciones que tienen un carácter de subrayado inicial se p
 |-------------|---------------------|
 |**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 
-Para más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener más información sobre compatibilidad, vea [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,10 +1,12 @@
 ---
 title: difftime, _difftime32, _difftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _difftime32
 - difftime
 - _difftime64
+- _o__difftime32
+- _o__difftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348131"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -64,17 +67,19 @@ Hora de inicio.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**difftime** devuelve el tiempo transcurrido en segundos, de *timeStart* a *timeEnd*. El valor devuelto es un número de punto flotante de precisión doble. Puede que el valor devuelto sea 0, que indica un error.
+**difftime** devuelve el tiempo transcurrido en segundos, desde *timeStart* hasta *timeEnd*. El valor devuelto es un número de punto flotante de precisión doble. Puede que el valor devuelto sea 0, que indica un error.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La función **difftime** calcula la diferencia entre los dos valores de tiempo proporcionados *timeStart* y *timeEnd*.
 
-El valor de tiempo proporcionado debe encajar en el intervalo de **time_t**. **time_t** es un valor de 64 bits. Por consiguiente, el final del intervalo se ha ampliado de las 23:59:59 horas del 18 de enero de 2038, UTC a las 23:59:59 horas del 31 de diciembre de 3000. El intervalo inferior de **time_t** sigue siendo la medianoche del 1 de enero de 1970.
+El valor de tiempo proporcionado debe ajustarse al rango de **time_t**. **time_t** es un valor de 64 bits. Por consiguiente, el final del intervalo se ha ampliado de las 23:59:59 horas del 18 de enero de 2038, UTC a las 23:59:59 horas del 31 de diciembre de 3000. El rango más bajo de **time_t** sigue siendo la medianoche, el 1 de enero de 1970.
 
-**difftime** es una función insertada que se evalúa como **_difftime32** o **_difftime64** , dependiendo de si se ha definido **_USE_32BIT_TIME_T** . Es posible usar _difftime32 y _difftime64 directamente para forzar el uso de un tamaño concreto del tipo de tiempo.
+**difftime** es una función en línea que se evalúa como **_difftime32** o **_difftime64** dependiendo de si se define **_USE_32BIT_TIME_T.** Es posible usar _difftime32 y _difftime64 directamente para forzar el uso de un tamaño concreto del tipo de tiempo.
 
-Estas funciones validan sus parámetros. Si alguno de los parámetros es cero o negativo, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven 0 y establecen **errno** en **EINVAL**.
+Estas funciones validan sus parámetros. Si alguno de los parámetros es cero o negativo, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven 0 y **establecen errno en** **EINVAL**.
+
+De forma predeterminada, el estado global de esta función se limita a la aplicación. Para cambiar esto, consulte [Estado global en el CRT](../global-state.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -84,7 +89,7 @@ Estas funciones validan sus parámetros. Si alguno de los parámetros es cero o 
 |**_difftime32**|\<time.h>|
 |**_difftime64**|\<time.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -142,8 +147,8 @@ Multiplying 2 floating point numbers 100 million times...
 Program takes      3 seconds.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[Administración de hora](../../c-runtime-library/time-management.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>
